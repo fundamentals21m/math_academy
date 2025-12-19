@@ -212,6 +212,29 @@ const QuizSystem = {
   score: 0,
   answered: false,
   answers: [],
+  shuffledCorrectIndex: 0,
+  shuffledOptions: [],
+
+  // Fisher-Yates shuffle that returns new array and tracks where correct answer moved
+  shuffleOptions(options, correctIndex) {
+    // Create array of {option, isCorrect} objects
+    const items = options.map((opt, i) => ({
+      option: opt,
+      isCorrect: i === correctIndex
+    }));
+
+    // Fisher-Yates shuffle
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+
+    // Find new correct index and extract options
+    const shuffledOptions = items.map(item => item.option);
+    const newCorrectIndex = items.findIndex(item => item.isCorrect);
+
+    return { shuffledOptions, correctIndex: newCorrectIndex };
+  },
 
   init() {
     this.currentQuestion = 0;
@@ -226,13 +249,18 @@ const QuizSystem = {
     const q = quizQuestions[this.currentQuestion];
     this.answered = false;
 
+    // Shuffle the options
+    const { shuffledOptions, correctIndex } = this.shuffleOptions(q.options, q.correct);
+    this.shuffledOptions = shuffledOptions;
+    this.shuffledCorrectIndex = correctIndex;
+
     document.getElementById('questionNumber').textContent = `Question ${this.currentQuestion + 1} of ${quizQuestions.length}`;
     document.getElementById('questionText').textContent = q.question;
 
     const optionsContainer = document.getElementById('optionsContainer');
     optionsContainer.innerHTML = '';
 
-    q.options.forEach((option, index) => {
+    this.shuffledOptions.forEach((option, index) => {
       const div = document.createElement('div');
       div.className = 'quiz-option';
       div.textContent = option;
@@ -256,19 +284,19 @@ const QuizSystem = {
     this.answers.push({
       question: this.currentQuestion,
       selected: index,
-      correct: q.correct
+      correct: this.shuffledCorrectIndex
     });
 
     options.forEach((opt, i) => {
       opt.onclick = null;
-      if (i === q.correct) {
+      if (i === this.shuffledCorrectIndex) {
         opt.classList.add('correct');
-      } else if (i === index && index !== q.correct) {
+      } else if (i === index && index !== this.shuffledCorrectIndex) {
         opt.classList.add('incorrect');
       }
     });
 
-    if (index === q.correct) {
+    if (index === this.shuffledCorrectIndex) {
       this.score++;
       feedback.className = 'quiz-feedback show correct';
       feedback.innerHTML = `<strong>Correct!</strong> ${q.explanation}`;
