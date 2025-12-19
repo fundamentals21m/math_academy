@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modular Arithmetic - Magic Internet Math</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 17%"></div>
+    </div>
+
+    <h1>Modular Arithmetic</h1>
+
+    <p>Modular arithmetic is sometimes called "clock arithmetic" because it works just like the hours on a clock. When you go past the maximum value, you wrap around to the beginning.</p>
+
+    <div class="callout callout-info">
+      <strong>Key Notation:</strong> We write <span class="math">a mod n</span> to mean "the remainder when a is divided by n". For example, 14 mod 12 = 2.
+    </div>
+
+    <h2>Interactive Clock</h2>
+
+    <p>This clock demonstrates how modular arithmetic works. Start at an hour, add more hours, and watch the hand wrap around:</p>
+
+    <div class="canvas-container">
+      <canvas id="clockCanvas" width="300" height="300"></canvas>
+
+      <div class="controls">
+        <div class="input-group">
+          <label for="startHour">Start:</label>
+          <input type="number" id="startHour" value="3" min="0" max="11">
+        </div>
+        <div class="input-group">
+          <label for="addHours">Add:</label>
+          <input type="number" id="addHours" value="5" min="0" max="24">
+        </div>
+        <div class="input-group">
+          <label for="clockMod">Mod:</label>
+          <select id="clockMod">
+            <option value="12" selected>12 (clock)</option>
+            <option value="7">7 (days)</option>
+            <option value="24">24 (military)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-primary" onclick="runClockDemo()">Calculate</button>
+        <button class="btn btn-secondary" onclick="resetClock()">Reset</button>
+      </div>
+
+      <div id="clockResult" class="output-panel" style="text-align: center; margin-top: 1rem;">
+        <span class="muted">Click "Calculate" to see the result...</span>
+      </div>
+    </div>
+
+    <h2>The Mod Operation</h2>
+
+    <p>The <strong>modulo</strong> operation gives you the remainder after division. Here's how it works:</p>
+
+    <div class="math-block">
+      a mod n = remainder when a is divided by n
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Examples</h3>
+        <ul style="font-family: monospace; line-height: 2;">
+          <li>17 mod 5 = 2 (because 17 = 3×5 + 2)</li>
+          <li>25 mod 7 = 4 (because 25 = 3×7 + 4)</li>
+          <li>100 mod 10 = 0 (divides evenly)</li>
+          <li>7 mod 12 = 7 (less than modulus)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Negative Numbers</h3>
+        <p>In cryptography, we always want positive remainders:</p>
+        <ul style="font-family: monospace; line-height: 2;">
+          <li>-1 mod 5 = 4 (not -1)</li>
+          <li>-3 mod 7 = 4 (wrap around)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Modular Calculator</h2>
+
+    <div class="demo-section">
+      <p>Try different modular operations:</p>
+
+      <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem;">
+        <input type="number" id="calcA" value="17" style="width: 80px; padding: 0.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text);">
+        <select id="calcOp" style="padding: 0.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text);">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">×</option>
+          <option value="^">^</option>
+        </select>
+        <input type="number" id="calcB" value="8" style="width: 80px; padding: 0.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text);">
+        <span style="color: var(--text-muted);">mod</span>
+        <input type="number" id="calcMod" value="5" min="2" style="width: 80px; padding: 0.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text);">
+        <button class="btn btn-primary btn-small" onclick="runCalculator()">Calculate</button>
+      </div>
+
+      <div id="calcResult" class="steps-container">
+        <span class="muted">Result will appear here...</span>
+      </div>
+    </div>
+
+    <h2>Congruence Notation</h2>
+
+    <p>Mathematicians use a special notation to say two numbers have the same remainder:</p>
+
+    <div class="math-block">
+      a ≡ b (mod n)
+    </div>
+
+    <p>This means "a and b have the same remainder when divided by n".</p>
+
+    <div class="card">
+      <h3>Examples of Congruence</h3>
+      <ul style="font-family: monospace; line-height: 2;">
+        <li>17 ≡ 2 (mod 5) because both give remainder 2</li>
+        <li>25 ≡ 4 (mod 7) because both give remainder 4</li>
+        <li>100 ≡ 0 (mod 10) because both give remainder 0</li>
+      </ul>
+    </div>
+
+    <h2>Powers in Modular Arithmetic</h2>
+
+    <p>Something fascinating happens when you compute powers mod n: the values eventually repeat! This cyclic behavior is crucial for cryptography.</p>
+
+    <div class="demo-section">
+      <h3>Power Table Generator</h3>
+      <p>See how powers of a number cycle through values:</p>
+
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="powerBase">Base:</label>
+          <input type="number" id="powerBase" value="2" min="2" max="20">
+        </div>
+        <div class="input-group">
+          <label for="powerMod">Mod:</label>
+          <input type="number" id="powerMod" value="7" min="2" max="30">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="generatePowerTable()">Generate</button>
+      </div>
+
+      <div id="powerTableContainer" style="overflow-x: auto; margin-top: 1rem;">
+        <!-- Table will be generated here -->
+      </div>
+    </div>
+
+    <h2>Why This Matters for Cryptography</h2>
+
+    <div class="callout callout-success">
+      <strong>The Key Insight:</strong> Modular arithmetic keeps numbers bounded. Even when computing enormous powers, the result never exceeds the modulus. This allows us to work with huge numbers efficiently.
+    </div>
+
+    <p>Cryptographic algorithms like RSA use modular arithmetic with numbers that have hundreds of digits. Without the "wrapping around" property, these calculations would be impossible.</p>
+
+    <div class="page-nav">
+      <a href="1-intro.html" class="btn btn-secondary">Previous: Introduction</a>
+      <a href="3-primes.html" class="btn btn-primary">Next: Prime Numbers</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/clockArithmetic.js"></script>
+  <script>
+    // Initialize clock demo
+    document.addEventListener('DOMContentLoaded', () => {
+      ClockDemo.init('clockCanvas');
+    });
+
+    async function runClockDemo() {
+      const start = parseInt(document.getElementById('startHour').value) || 0;
+      const add = parseInt(document.getElementById('addHours').value) || 0;
+      const mod = parseInt(document.getElementById('clockMod').value) || 12;
+
+      ClockDemo.setModulus(mod);
+      ClockDemo.state.currentHour = start % mod;
+      ClockDemo.draw();
+
+      const result = document.getElementById('clockResult');
+      result.innerHTML = `<span class="muted">Starting at ${start}...</span>`;
+
+      await MathUtils.delay(300);
+
+      await ClockDemo.addHours(add);
+
+      const finalHour = MathUtils.mod(start + add, mod);
+      result.innerHTML = `
+        <span class="success">${start} + ${add} = ${start + add}</span>
+        <span class="muted">${start + add} mod ${mod} = <strong>${finalHour}</strong></span>
+      `;
+    }
+
+    function resetClock() {
+      ClockDemo.reset();
+      document.getElementById('clockResult').innerHTML = '<span class="muted">Click "Calculate" to see the result...</span>';
+    }
+
+    function runCalculator() {
+      const a = parseInt(document.getElementById('calcA').value) || 0;
+      const b = parseInt(document.getElementById('calcB').value) || 0;
+      const op = document.getElementById('calcOp').value;
+      const mod = parseInt(document.getElementById('calcMod').value) || 2;
+
+      const { result, steps } = ModCalculator.calculate(a, b, op, mod);
+
+      const container = document.getElementById('calcResult');
+      container.innerHTML = '';
+
+      steps.forEach((step, i) => {
+        const div = document.createElement('div');
+        div.className = 'step' + (i === steps.length - 1 ? ' highlight' : '');
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'step-number';
+        numSpan.textContent = i + 1;
+
+        const contentSpan = document.createElement('span');
+        contentSpan.textContent = step;
+        if (i === steps.length - 1) {
+          contentSpan.className = 'step-result';
+        }
+
+        div.appendChild(numSpan);
+        div.appendChild(contentSpan);
+        container.appendChild(div);
+      });
+    }
+
+    function generatePowerTable() {
+      const base = parseInt(document.getElementById('powerBase').value) || 2;
+      const mod = parseInt(document.getElementById('powerMod').value) || 7;
+
+      const table = PowerTable.generate(base, mod);
+
+      const container = document.getElementById('powerTableContainer');
+
+      let html = '<table class="data-table"><thead><tr><th>Exponent</th><th>Expression</th><th>Result</th></tr></thead><tbody>';
+
+      table.forEach(row => {
+        const highlight = row.isRepeat ? ' style="background: rgba(34, 197, 94, 0.2);"' : '';
+        html += `<tr${highlight}>
+          <td>${row.exponent}</td>
+          <td>${base}<sup>${row.exponent}</sup> mod ${mod}</td>
+          <td>${row.value}${row.isRepeat ? ' (cycle!)' : ''}</td>
+        </tr>`;
+      });
+
+      html += '</tbody></table>';
+
+      if (table.length > 1 && table[table.length - 1].isRepeat) {
+        html += `<p style="color: var(--success); margin-top: 1rem;">The cycle length (order) is ${table.length - 1}.</p>`;
+      }
+
+      container.innerHTML = html;
+    }
+
+    // Generate initial power table
+    document.addEventListener('DOMContentLoaded', generatePowerTable);
+  </script>
+</body>
+</html>

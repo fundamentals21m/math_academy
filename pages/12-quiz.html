@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Magic Internet Math</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html">Lessons</a></li>
+        <li><a href="12-quiz.html" class="active">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" id="quizProgress" style="width: 0%"></div>
+    </div>
+
+    <h1>Final Quiz</h1>
+
+    <p>Test your understanding of the mathematics behind cryptography. This quiz covers all topics from the course.</p>
+
+    <div id="scoreDisplay" style="text-align: right; color: var(--text-muted); margin-bottom: 1rem;">Score: 0/0</div>
+
+    <div id="quizContainer">
+      <div class="quiz-question">
+        <div id="questionNumber" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Question 1 of 20</div>
+        <h3 id="questionText" style="margin-bottom: 1rem;"></h3>
+
+        <div id="optionsContainer" class="quiz-options"></div>
+
+        <div id="feedback" class="quiz-feedback"></div>
+
+        <div style="margin-top: 1rem; text-align: right;">
+          <button id="nextBtn" class="btn btn-primary" onclick="QuizSystem.nextQuestion()" style="display: none;">
+            Next Question
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-info" style="margin-top: 2rem;">
+      <strong>Topics Covered:</strong> Modular arithmetic, prime numbers, GCD, modular inverse, Euler's totient, modular exponentiation, discrete logarithms, RSA, Diffie-Hellman, and elliptic curves.
+    </div>
+
+    <div class="page-nav">
+      <a href="11-elliptic.html" class="btn btn-secondary">Back to Lessons</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/cryptoQuiz.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      QuizSystem.init();
+    });
+  </script>
+</body>
+</html>

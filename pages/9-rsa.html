@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSA Encryption - Magic Internet Math</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 75%"></div>
+    </div>
+
+    <h1>RSA Encryption</h1>
+
+    <p><strong>RSA</strong> (Rivest-Shamir-Adleman, 1977) is the most famous public-key cryptosystem. It combines all the math we've learned: primes, modular arithmetic, Euler's totient, and modular exponentiation.</p>
+
+    <div class="callout callout-info">
+      <strong>The Big Idea:</strong> Anyone can encrypt with your public key, but only you can decrypt with your private key. Security relies on the difficulty of factoring large numbers.
+    </div>
+
+    <h2>Key Generation</h2>
+
+    <div class="demo-section">
+      <p>Generate an RSA key pair from two prime numbers:</p>
+
+      <div class="controls" style="justify-content: flex-start; flex-wrap: wrap;">
+        <div class="input-group">
+          <label for="rsaP">p (prime):</label>
+          <input type="number" id="rsaP" value="61" min="2">
+        </div>
+        <div class="input-group">
+          <label for="rsaQ">q (prime):</label>
+          <input type="number" id="rsaQ" value="53" min="2">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="generateKeys()">Generate Keys</button>
+        <button class="btn btn-secondary btn-small" onclick="randomPrimes()">Random Primes</button>
+      </div>
+
+      <div id="keyGenSteps" class="steps-container" style="margin-top: 1rem;">
+        <span class="muted">Enter two primes to generate keys...</span>
+      </div>
+
+      <div id="keyDisplay" class="card-grid" style="display: none;">
+        <div class="card">
+          <h3>Public Key (share this)</h3>
+          <p style="font-family: monospace;">
+            e = <span id="pubE"></span><br>
+            n = <span id="pubN"></span>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Private Key (keep secret!)</h3>
+          <p style="font-family: monospace;">
+            d = <span id="privD"></span><br>
+            n = <span id="privN"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2>The RSA Algorithm</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Encryption</h3>
+        <div class="math-block" style="margin: 0.5rem 0;">c = m^e mod n</div>
+        <p>Anyone with the public key (e, n) can encrypt.</p>
+      </div>
+      <div class="card">
+        <h3>Decryption</h3>
+        <div class="math-block" style="margin: 0.5rem 0;">m = c^d mod n</div>
+        <p>Only the private key holder (d, n) can decrypt.</p>
+      </div>
+    </div>
+
+    <h2>Encrypt & Decrypt</h2>
+
+    <div class="demo-section">
+      <div class="card-grid">
+        <div class="card">
+          <h3>Encrypt</h3>
+          <div class="input-group">
+            <label for="encMsg">Message (number):</label>
+            <input type="number" id="encMsg" value="42" min="0">
+          </div>
+          <button class="btn btn-primary btn-small" onclick="encryptMessage()" style="margin-top: 0.5rem;">Encrypt</button>
+          <div id="encryptResult" class="output-panel" style="margin-top: 0.5rem;">
+            <span class="muted">Generate keys first...</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Decrypt</h3>
+          <div class="input-group">
+            <label for="decMsg">Ciphertext:</label>
+            <input type="number" id="decMsg" value="" min="0">
+          </div>
+          <button class="btn btn-primary btn-small" onclick="decryptMessage()" style="margin-top: 0.5rem;">Decrypt</button>
+          <div id="decryptResult" class="output-panel" style="margin-top: 0.5rem;">
+            <span class="muted">Generate keys first...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Why RSA Works</h2>
+
+    <p>The magic comes from Euler's theorem! Here's why decryption recovers the original message:</p>
+
+    <div class="card">
+      <ol style="margin-left: 1.5rem; color: var(--text-muted); line-height: 2;">
+        <li>We choose d such that e × d ≡ 1 (mod φ(n))</li>
+        <li>This means e × d = 1 + k × φ(n) for some integer k</li>
+        <li>Decryption: c^d = (m^e)^d = m^(e×d) = m^(1 + k×φ(n))</li>
+        <li>By Euler's theorem: m^φ(n) ≡ 1 (mod n)</li>
+        <li>So: m^(1 + k×φ(n)) = m × (m^φ(n))^k ≡ m × 1^k = m (mod n)</li>
+      </ol>
+    </div>
+
+    <h2>Security: The Factoring Challenge</h2>
+
+    <div class="demo-section">
+      <p>RSA security relies on the difficulty of factoring n. Try to "break" RSA by factoring:</p>
+
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="factorN">n:</label>
+          <input type="number" id="factorN" value="3233" min="2">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="tryFactor()">Factor</button>
+      </div>
+
+      <div id="factorResult" class="output-panel">
+        <span class="muted">Enter n to attempt factoring...</span>
+      </div>
+
+      <div class="callout callout-warning" style="margin-top: 1rem;">
+        <strong>Note:</strong> These small numbers are easy to factor. Real RSA uses 2048-bit primes (617 digits), making factoring computationally infeasible.
+      </div>
+    </div>
+
+    <h2>Real-World RSA</h2>
+
+    <div class="card">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Key Size</th>
+            <th>n has... digits</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: rgba(239, 68, 68, 0.1);">
+            <td>512-bit</td>
+            <td>~155</td>
+            <td>Broken (1999)</td>
+          </tr>
+          <tr style="background: rgba(245, 158, 11, 0.1);">
+            <td>1024-bit</td>
+            <td>~309</td>
+            <td>Deprecated</td>
+          </tr>
+          <tr style="background: rgba(34, 197, 94, 0.1);">
+            <td>2048-bit</td>
+            <td>~617</td>
+            <td>Standard today</td>
+          </tr>
+          <tr style="background: rgba(34, 197, 94, 0.1);">
+            <td>4096-bit</td>
+            <td>~1234</td>
+            <td>High security</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="page-nav">
+      <a href="8-discretelog.html" class="btn btn-secondary">Previous: Discrete Logarithms</a>
+      <a href="10-diffie-hellman.html" class="btn btn-primary">Next: Diffie-Hellman</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/rsa.js"></script>
+  <script>
+    let currentKeys = null;
+
+    function generateKeys() {
+      const p = parseInt(document.getElementById('rsaP').value);
+      const q = parseInt(document.getElementById('rsaQ').value);
+
+      const result = RSA.generateKeys(p, q);
+
+      const stepsContainer = document.getElementById('keyGenSteps');
+
+      if (result.error) {
+        stepsContainer.innerHTML = `<div class="step"><span class="step-number">!</span><span style="color: var(--error);">${result.error}</span></div>`;
+        document.getElementById('keyDisplay').style.display = 'none';
+        return;
+      }
+
+      currentKeys = result;
+
+      stepsContainer.innerHTML = '';
+      result.steps.forEach((step, i) => {
+        const div = document.createElement('div');
+        div.className = 'step' + (i === result.steps.length - 1 ? ' highlight' : '');
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'step-number';
+        numSpan.textContent = i + 1;
+
+        const contentSpan = document.createElement('span');
+        contentSpan.textContent = step;
+
+        div.appendChild(numSpan);
+        div.appendChild(contentSpan);
+        stepsContainer.appendChild(div);
+      });
+
+      // Display keys
+      document.getElementById('keyDisplay').style.display = 'grid';
+      document.getElementById('pubE').textContent = result.publicKey.e;
+      document.getElementById('pubN').textContent = result.publicKey.n;
+      document.getElementById('privD').textContent = result.privateKey.d;
+      document.getElementById('privN').textContent = result.privateKey.n;
+    }
+
+    function randomPrimes() {
+      const primes = RSADemo.generateRandomPrimes(6);
+      document.getElementById('rsaP').value = primes.p;
+      document.getElementById('rsaQ').value = primes.q;
+    }
+
+    function encryptMessage() {
+      if (!currentKeys) {
+        document.getElementById('encryptResult').innerHTML = '<span class="error">Generate keys first!</span>';
+        return;
+      }
+
+      const msg = parseInt(document.getElementById('encMsg').value);
+      const { e, n } = currentKeys.publicKey;
+
+      const result = RSA.encrypt(msg, e, n);
+
+      if (result.error) {
+        document.getElementById('encryptResult').innerHTML = `<span class="error">${result.error}</span>`;
+        return;
+      }
+
+      document.getElementById('encryptResult').innerHTML = result.steps.map(s =>
+        `<span class="muted">${s}</span>`
+      ).join('\n') + `\n<span class="success">Ciphertext: ${result.ciphertext}</span>`;
+
+      document.getElementById('decMsg').value = result.ciphertext;
+    }
+
+    function decryptMessage() {
+      if (!currentKeys) {
+        document.getElementById('decryptResult').innerHTML = '<span class="error">Generate keys first!</span>';
+        return;
+      }
+
+      const cipher = parseInt(document.getElementById('decMsg').value);
+      const { d, n } = currentKeys.privateKey;
+
+      const result = RSA.decrypt(cipher, d, n);
+
+      document.getElementById('decryptResult').innerHTML = result.steps.map(s =>
+        `<span class="muted">${s}</span>`
+      ).join('\n') + `\n<span class="success">Decrypted: ${result.message}</span>`;
+    }
+
+    function tryFactor() {
+      const n = parseInt(document.getElementById('factorN').value);
+
+      const result = FactoringDemo.factor(n);
+
+      if (result.found) {
+        document.getElementById('factorResult').innerHTML = `
+<span class="success">Factored!</span>
+<span class="muted">${n} = ${result.p} × ${result.q}</span>
+<span class="muted">Found in ${result.attempts} attempts (${result.time}ms)</span>
+        `;
+      } else {
+        document.getElementById('factorResult').innerHTML = `
+<span class="error">Not factored in ${result.attempts} attempts</span>
+<span class="muted">${result.time}ms</span>
+        `;
+      }
+    }
+
+    // Initialize with default keys
+    document.addEventListener('DOMContentLoaded', generateKeys);
+  </script>
+</body>
+</html>

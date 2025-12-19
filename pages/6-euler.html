@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euler's Totient Function - Magic Internet Math</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 50%"></div>
+    </div>
+
+    <h1>Euler's Totient Function</h1>
+
+    <p><strong>Euler's totient function</strong> φ(n) counts how many integers from 1 to n are coprime to n. This function is central to understanding RSA encryption.</p>
+
+    <div class="math-block">
+      φ(n) = count of integers k where 1 ≤ k ≤ n and GCD(k, n) = 1
+    </div>
+
+    <h2>Visualize the Totient</h2>
+
+    <div class="demo-section">
+      <p>See which numbers are coprime to n:</p>
+
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="vizN">n:</label>
+          <input type="number" id="vizN" value="12" min="2" max="50">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="visualizeTotient()">Visualize</button>
+      </div>
+
+      <div id="totientGrid" class="number-grid" style="margin-top: 1rem;"></div>
+
+      <div id="totientResult" class="output-panel" style="text-align: center;">
+        <span class="muted">Click "Visualize" to see coprime numbers...</span>
+      </div>
+    </div>
+
+    <h2>Computing φ(n)</h2>
+
+    <p>There are formulas for computing the totient without checking every number:</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>For Primes</h3>
+        <div class="math-block" style="margin: 0.5rem 0;">φ(p) = p - 1</div>
+        <p style="font-size: 0.9rem;">All numbers less than a prime are coprime to it.</p>
+      </div>
+      <div class="card">
+        <h3>For Prime Powers</h3>
+        <div class="math-block" style="margin: 0.5rem 0;">φ(p^k) = p^k - p^(k-1)</div>
+        <p style="font-size: 0.9rem;">Only multiples of p share a factor with p^k.</p>
+      </div>
+      <div class="card">
+        <h3>For Products</h3>
+        <div class="math-block" style="margin: 0.5rem 0;">φ(mn) = φ(m)φ(n)</div>
+        <p style="font-size: 0.9rem;">When GCD(m,n) = 1, totient is multiplicative.</p>
+      </div>
+    </div>
+
+    <h2>Totient Calculator</h2>
+
+    <div class="demo-section">
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="calcN">n:</label>
+          <input type="number" id="calcN" value="60" min="1">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="calculateTotient()">Calculate</button>
+      </div>
+
+      <div id="calcResult" class="steps-container">
+        <span class="muted">Enter a value to calculate its totient...</span>
+      </div>
+    </div>
+
+    <h2>Euler's Theorem</h2>
+
+    <p>Euler discovered a remarkable property: if GCD(a, n) = 1, then:</p>
+
+    <div class="math-block">
+      a^φ(n) ≡ 1 (mod n)
+    </div>
+
+    <p>This is a generalization of Fermat's Little Theorem and is the foundation of RSA's correctness!</p>
+
+    <div class="demo-section">
+      <h3>Verify Euler's Theorem</h3>
+
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="eulerA">a:</label>
+          <input type="number" id="eulerA" value="7" min="1">
+        </div>
+        <div class="input-group">
+          <label for="eulerN">n:</label>
+          <input type="number" id="eulerN" value="10" min="2">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="verifyEuler()">Verify</button>
+      </div>
+
+      <div id="eulerResult" class="steps-container">
+        <span class="muted">Enter values to verify Euler's theorem...</span>
+      </div>
+    </div>
+
+    <h2>RSA Connection</h2>
+
+    <div class="callout callout-success">
+      <strong>In RSA:</strong> For n = pq (product of two primes), we have φ(n) = (p-1)(q-1). This value is used to find the decryption exponent d. Euler's theorem guarantees that decryption correctly recovers the original message!
+    </div>
+
+    <div class="card">
+      <h3>Example: RSA with Small Primes</h3>
+      <ul style="margin-left: 1.5rem; color: var(--text-muted); line-height: 2; font-family: monospace;">
+        <li>p = 5, q = 7</li>
+        <li>n = 5 × 7 = 35</li>
+        <li>φ(n) = (5-1)(7-1) = 4 × 6 = 24</li>
+        <li>Choose e = 5 (coprime to 24)</li>
+        <li>Find d where 5d ≡ 1 (mod 24) → d = 5</li>
+      </ul>
+    </div>
+
+    <div class="page-nav">
+      <a href="5-inverse.html" class="btn btn-secondary">Previous: Modular Inverse</a>
+      <a href="7-modexp.html" class="btn btn-primary">Next: Modular Exponentiation</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/totient.js"></script>
+  <script>
+    function visualizeTotient() {
+      const n = parseInt(document.getElementById('vizN').value) || 2;
+      const data = TotientVisualizer.generate(n);
+
+      const grid = document.getElementById('totientGrid');
+      grid.innerHTML = '';
+
+      data.numbers.forEach(num => {
+        const cell = document.createElement('div');
+        cell.className = 'number-cell ' + (num.isCoprime ? 'coprime' : 'not-coprime');
+        cell.textContent = num.value;
+        cell.title = num.isCoprime ? `GCD(${num.value}, ${n}) = 1` : `GCD(${num.value}, ${n}) = ${num.gcd}`;
+        grid.appendChild(cell);
+      });
+
+      document.getElementById('totientResult').innerHTML = `
+        <span class="success">φ(${n}) = ${data.totient}</span>
+        <span class="muted">Coprime numbers: ${data.coprimes.join(', ')}</span>
+      `;
+    }
+
+    function calculateTotient() {
+      const n = parseInt(document.getElementById('calcN').value) || 1;
+      const result = TotientCalculator.calculate(n);
+
+      const container = document.getElementById('calcResult');
+      container.innerHTML = '';
+
+      result.steps.forEach((step, i) => {
+        const div = document.createElement('div');
+        const isLast = i === result.steps.length - 1;
+        div.className = 'step' + (isLast ? ' highlight' : '');
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'step-number';
+        numSpan.textContent = i + 1;
+
+        const contentSpan = document.createElement('span');
+        contentSpan.textContent = step;
+        if (isLast) contentSpan.className = 'step-result';
+
+        div.appendChild(numSpan);
+        div.appendChild(contentSpan);
+        container.appendChild(div);
+      });
+    }
+
+    function verifyEuler() {
+      const a = parseInt(document.getElementById('eulerA').value) || 1;
+      const n = parseInt(document.getElementById('eulerN').value) || 2;
+
+      const result = EulerTheoremDemo.verify(a, n);
+
+      const container = document.getElementById('eulerResult');
+
+      if (!result.valid) {
+        container.innerHTML = `<div class="step"><span class="step-number">!</span><span style="color: var(--error);">${result.reason}</span></div>`;
+        return;
+      }
+
+      container.innerHTML = '';
+
+      result.steps.forEach((step, i) => {
+        const div = document.createElement('div');
+        const isLast = i === result.steps.length - 1;
+        div.className = 'step' + (isLast ? ' highlight' : '');
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'step-number';
+        numSpan.textContent = i + 1;
+
+        const contentSpan = document.createElement('span');
+        contentSpan.textContent = step;
+        if (isLast) contentSpan.className = 'step-result';
+
+        div.appendChild(numSpan);
+        div.appendChild(contentSpan);
+        container.appendChild(div);
+      });
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      visualizeTotient();
+    });
+  </script>
+</body>
+</html>

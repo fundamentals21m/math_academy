@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCD & Euclidean Algorithm - Magic Internet Math</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 33%"></div>
+    </div>
+
+    <h1>GCD & Euclidean Algorithm</h1>
+
+    <p>The <strong>Greatest Common Divisor (GCD)</strong> of two numbers is the largest number that divides both of them evenly. The Euclidean algorithm is an ancient and elegant method to find it.</p>
+
+    <div class="callout callout-info">
+      <strong>Why GCD matters:</strong> Finding the GCD is essential for computing modular inverses, which are the key to RSA decryption.
+    </div>
+
+    <h2>The Euclidean Algorithm</h2>
+
+    <p>The algorithm is based on a simple observation: GCD(a, b) = GCD(b, a mod b). We keep applying this until we reach 0.</p>
+
+    <div class="canvas-container">
+      <canvas id="euclidCanvas" width="500" height="280"></canvas>
+
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="gcdA">a:</label>
+          <input type="number" id="gcdA" value="252" min="1">
+        </div>
+        <div class="input-group">
+          <label for="gcdB">b:</label>
+          <input type="number" id="gcdB" value="105" min="1">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="calculateGCD()">Calculate</button>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-secondary btn-small" onclick="stepGCD()">Step</button>
+        <button class="btn btn-secondary btn-small" onclick="runAllGCD()">Run All</button>
+        <button class="btn btn-secondary btn-small" onclick="resetGCD()">Reset</button>
+      </div>
+    </div>
+
+    <div id="gcdSteps" class="steps-container">
+      <span class="muted">Click "Calculate" to see the steps...</span>
+    </div>
+
+    <h2>How It Works</h2>
+
+    <p>Let's trace through an example: GCD(252, 105)</p>
+
+    <div class="card">
+      <ol style="margin-left: 1.5rem; color: var(--text-muted); line-height: 2.5; font-family: monospace;">
+        <li>252 = 105 × 2 + 42 → GCD(252, 105) = GCD(105, 42)</li>
+        <li>105 = 42 × 2 + 21 → GCD(105, 42) = GCD(42, 21)</li>
+        <li>42 = 21 × 2 + 0 → GCD(42, 21) = GCD(21, 0) = <strong>21</strong></li>
+      </ol>
+    </div>
+
+    <h2>Extended Euclidean Algorithm</h2>
+
+    <p>The <strong>extended</strong> version finds not just the GCD, but also coefficients x and y such that:</p>
+
+    <div class="math-block">
+      ax + by = GCD(a, b)
+    </div>
+
+    <p>This is called <strong>Bézout's Identity</strong>, and it's crucial for finding modular inverses!</p>
+
+    <div class="demo-section">
+      <h3>Extended GCD Calculator</h3>
+
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="extA">a:</label>
+          <input type="number" id="extA" value="35" min="1">
+        </div>
+        <div class="input-group">
+          <label for="extB">b:</label>
+          <input type="number" id="extB" value="15" min="1">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="calculateExtGCD()">Calculate</button>
+      </div>
+
+      <div id="extGcdResult" class="output-panel">
+        <span class="muted">Enter values to see the extended GCD...</span>
+      </div>
+    </div>
+
+    <h2>Coprimality</h2>
+
+    <p>Two numbers are <strong>coprime</strong> (or relatively prime) if their GCD is 1. This concept is fundamental to cryptography.</p>
+
+    <div class="demo-section">
+      <h3>Coprimality Checker</h3>
+
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="copA">a:</label>
+          <input type="number" id="copA" value="15" min="1">
+        </div>
+        <div class="input-group">
+          <label for="copB">b:</label>
+          <input type="number" id="copB" value="28" min="1">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="checkCoprime()">Check</button>
+      </div>
+
+      <div id="coprimeResult" class="output-panel">
+        <span class="muted">Enter values to check if they're coprime...</span>
+      </div>
+    </div>
+
+    <h2>Why This Matters</h2>
+
+    <div class="callout callout-success">
+      <strong>Connection to Cryptography:</strong> In RSA, we need to find a number e that is coprime to φ(n). The extended Euclidean algorithm then helps us find d, the decryption exponent, as the modular inverse of e.
+    </div>
+
+    <div class="page-nav">
+      <a href="3-primes.html" class="btn btn-secondary">Previous: Prime Numbers</a>
+      <a href="5-inverse.html" class="btn btn-primary">Next: Modular Inverse</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/euclidean.js"></script>
+  <script>
+    let gcdResult = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      EuclideanDemo.init('euclidCanvas');
+    });
+
+    function calculateGCD() {
+      const a = parseInt(document.getElementById('gcdA').value) || 1;
+      const b = parseInt(document.getElementById('gcdB').value) || 1;
+
+      gcdResult = EuclideanDemo.calculate(a, b);
+      displayGCDSteps();
+    }
+
+    function displayGCDSteps() {
+      const container = document.getElementById('gcdSteps');
+      container.innerHTML = '';
+
+      EuclideanDemo.state.steps.forEach((step, i) => {
+        const div = document.createElement('div');
+        div.className = 'step' + (step.isFinal ? ' highlight' : '');
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'step-number';
+        numSpan.textContent = step.isFinal ? '=' : (i + 1);
+
+        const contentSpan = document.createElement('span');
+        contentSpan.textContent = step.equation;
+        if (step.isFinal) contentSpan.className = 'step-result';
+
+        div.appendChild(numSpan);
+        div.appendChild(contentSpan);
+        container.appendChild(div);
+      });
+    }
+
+    function stepGCD() {
+      if (EuclideanDemo.state.steps.length === 0) {
+        calculateGCD();
+      }
+      EuclideanDemo.step();
+    }
+
+    function runAllGCD() {
+      if (EuclideanDemo.state.steps.length === 0) {
+        calculateGCD();
+      }
+      EuclideanDemo.runAll();
+    }
+
+    function resetGCD() {
+      EuclideanDemo.reset();
+    }
+
+    function calculateExtGCD() {
+      const a = parseInt(document.getElementById('extA').value) || 1;
+      const b = parseInt(document.getElementById('extB').value) || 1;
+
+      const result = ExtendedEuclidean.calculate(a, b);
+
+      const output = document.getElementById('extGcdResult');
+      output.innerHTML = `
+<span class="success">GCD(${a}, ${b}) = ${result.gcd}</span>
+
+<span class="muted">Bézout coefficients:</span>
+x = ${result.x}
+y = ${result.y}
+
+<span class="muted">Verification:</span>
+${result.verification}
+      `;
+    }
+
+    function checkCoprime() {
+      const a = parseInt(document.getElementById('copA').value) || 1;
+      const b = parseInt(document.getElementById('copB').value) || 1;
+
+      const gcd = MathUtils.gcd(a, b);
+      const output = document.getElementById('coprimeResult');
+
+      if (gcd === 1) {
+        output.innerHTML = `
+<span class="success">${a} and ${b} ARE coprime!</span>
+<span class="muted">GCD(${a}, ${b}) = 1</span>
+<span class="muted">They share no common factors other than 1.</span>
+        `;
+      } else {
+        output.innerHTML = `
+<span class="error">${a} and ${b} are NOT coprime.</span>
+<span class="muted">GCD(${a}, ${b}) = ${gcd}</span>
+<span class="muted">They share the factor ${gcd}.</span>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

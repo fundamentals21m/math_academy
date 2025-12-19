@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diffie-Hellman Key Exchange - Magic Internet Math</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 83%"></div>
+    </div>
+
+    <h1>Diffie-Hellman Key Exchange</h1>
+
+    <p><strong>Diffie-Hellman</strong> (1976) solved a fundamental problem: how can two people establish a shared secret over a public channel, even if an eavesdropper sees everything they exchange?</p>
+
+    <div class="callout callout-info">
+      <strong>The Magic:</strong> Alice and Bob each have a secret. They exchange public values, and both can compute the same shared secret, but an eavesdropper cannot!
+    </div>
+
+    <h2>The Paint Mixing Analogy</h2>
+
+    <p>Imagine mixing paints. It's easy to mix colors together, but nearly impossible to "unmix" them to recover the original colors.</p>
+
+    <div class="canvas-container">
+      <canvas id="paintCanvas" width="500" height="280"></canvas>
+
+      <div class="controls" style="justify-content: flex-start; flex-wrap: wrap;">
+        <div class="input-group">
+          <label for="publicHue">Public:</label>
+          <input type="range" id="publicHue" min="0" max="360" value="60" style="width: 80px;">
+        </div>
+        <div class="input-group">
+          <label for="aliceHue">Alice:</label>
+          <input type="range" id="aliceHue" min="0" max="360" value="0" style="width: 80px;">
+        </div>
+        <div class="input-group">
+          <label for="bobHue">Bob:</label>
+          <input type="range" id="bobHue" min="0" max="360" value="240" style="width: 80px;">
+        </div>
+        <button class="btn btn-secondary btn-small" onclick="updatePaint()">Update</button>
+      </div>
+    </div>
+
+    <h2>The Mathematics</h2>
+
+    <div class="card">
+      <ol style="margin-left: 1.5rem; color: var(--text-muted); line-height: 2.5;">
+        <li><strong>Public setup:</strong> Choose prime p and generator g</li>
+        <li><strong>Alice:</strong> Picks secret a, computes A = g^a mod p, sends A</li>
+        <li><strong>Bob:</strong> Picks secret b, computes B = g^b mod p, sends B</li>
+        <li><strong>Alice:</strong> Computes s = B^a mod p = g^(ab) mod p</li>
+        <li><strong>Bob:</strong> Computes s = A^b mod p = g^(ab) mod p</li>
+        <li><strong>Result:</strong> Both have the same shared secret s!</li>
+      </ol>
+    </div>
+
+    <h2>Key Exchange Simulator</h2>
+
+    <div class="demo-section">
+      <div class="controls" style="justify-content: flex-start; flex-wrap: wrap;">
+        <div class="input-group">
+          <label for="dhP">p (prime):</label>
+          <input type="number" id="dhP" value="23" min="2">
+        </div>
+        <div class="input-group">
+          <label for="dhG">g (generator):</label>
+          <input type="number" id="dhG" value="5" min="2">
+        </div>
+        <div class="input-group">
+          <label for="dhA">Alice's secret a:</label>
+          <input type="number" id="dhA" value="6" min="1">
+        </div>
+        <div class="input-group">
+          <label for="dhB">Bob's secret b:</label>
+          <input type="number" id="dhB" value="15" min="1">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="runExchange()">Run Exchange</button>
+      </div>
+
+      <div id="exchangeSteps" class="steps-container" style="margin-top: 1rem;">
+        <span class="muted">Click "Run Exchange" to see the protocol...</span>
+      </div>
+    </div>
+
+    <h2>What Eve Sees</h2>
+
+    <div class="demo-section">
+      <p>An eavesdropper (Eve) can see all public values, but cannot compute the shared secret:</p>
+
+      <div id="eveView" class="card" style="text-align: center;">
+        <span class="muted">Run an exchange to see Eve's view...</span>
+      </div>
+
+      <div class="callout callout-warning">
+        <strong>Eve's Problem:</strong> To compute g^(ab), Eve would need to find a from A = g^a mod p. This is the discrete logarithm problem, which is computationally hard for large primes!
+      </div>
+    </div>
+
+    <h2>Security Considerations</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Secure Against</h3>
+        <ul style="margin-left: 1rem; color: var(--text-muted);">
+          <li>Passive eavesdropping</li>
+          <li>Recording communications</li>
+          <li>Anyone who only sees p, g, A, B</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Vulnerable To</h3>
+        <ul style="margin-left: 1rem; color: var(--text-muted);">
+          <li>Man-in-the-middle attacks</li>
+          <li>Requires authentication</li>
+          <li>Often combined with signatures</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Real-World Usage</h2>
+
+    <div class="callout callout-success">
+      <strong>HTTPS, TLS, VPNs:</strong> Nearly every secure connection on the internet uses Diffie-Hellman (or its elliptic curve variant ECDH) to establish session keys. When you see the padlock in your browser, DH is working behind the scenes!
+    </div>
+
+    <div class="page-nav">
+      <a href="9-rsa.html" class="btn btn-secondary">Previous: RSA Encryption</a>
+      <a href="11-elliptic.html" class="btn btn-primary">Next: Elliptic Curves</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/diffieHellman.js"></script>
+  <script>
+    let lastExchange = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      PaintMixDemo.init('paintCanvas');
+      updatePaint();
+    });
+
+    function updatePaint() {
+      const publicHue = parseInt(document.getElementById('publicHue').value);
+      const aliceHue = parseInt(document.getElementById('aliceHue').value);
+      const bobHue = parseInt(document.getElementById('bobHue').value);
+
+      PaintMixDemo.setColors(publicHue, aliceHue, bobHue);
+    }
+
+    function runExchange() {
+      const p = parseInt(document.getElementById('dhP').value);
+      const g = parseInt(document.getElementById('dhG').value);
+      const a = parseInt(document.getElementById('dhA').value);
+      const b = parseInt(document.getElementById('dhB').value);
+
+      const result = DiffieHellman.exchange(p, g, a, b);
+      lastExchange = result;
+
+      const container = document.getElementById('exchangeSteps');
+      container.innerHTML = '';
+
+      result.steps.forEach((step, i) => {
+        const div = document.createElement('div');
+        const isResult = step.phase === 'result';
+        div.className = 'step' + (isResult ? ' highlight' : '');
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'step-number';
+
+        if (step.actor === 'Alice') {
+          numSpan.textContent = 'A';
+          numSpan.style.background = '#ec4899';
+        } else if (step.actor === 'Bob') {
+          numSpan.textContent = 'B';
+          numSpan.style.background = '#3b82f6';
+        } else {
+          numSpan.textContent = i + 1;
+        }
+
+        const contentSpan = document.createElement('span');
+        contentSpan.textContent = step.text;
+        if (isResult) contentSpan.className = 'step-result';
+
+        div.appendChild(numSpan);
+        div.appendChild(contentSpan);
+        container.appendChild(div);
+      });
+
+      // Update Eve's view
+      updateEveView();
+    }
+
+    function updateEveView() {
+      if (!lastExchange) return;
+
+      const eveDiv = document.getElementById('eveView');
+      eveDiv.innerHTML = `
+        <h3 style="color: var(--error);">Eve can see:</h3>
+        <p style="font-family: monospace;">
+          p = ${lastExchange.p}<br>
+          g = ${lastExchange.g}<br>
+          A = ${lastExchange.alicePublic} (Alice's public value)<br>
+          B = ${lastExchange.bobPublic} (Bob's public value)
+        </p>
+        <h3 style="color: var(--error); margin-top: 1rem;">Eve CANNOT compute:</h3>
+        <p style="font-family: monospace; color: var(--text-muted);">
+          a = ? (Alice's secret)<br>
+          b = ? (Bob's secret)<br>
+          s = ${lastExchange.sharedSecret} (shared secret)
+        </p>
+      `;
+    }
+
+    // Update paint on slider change
+    document.getElementById('publicHue').addEventListener('input', updatePaint);
+    document.getElementById('aliceHue').addEventListener('input', updatePaint);
+    document.getElementById('bobHue').addEventListener('input', updatePaint);
+  </script>
+</body>
+</html>

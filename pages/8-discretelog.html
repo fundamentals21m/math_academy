@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discrete Logarithms - Magic Internet Math</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 67%"></div>
+    </div>
+
+    <h1>Discrete Logarithms</h1>
+
+    <p>The <strong>discrete logarithm problem</strong> is the foundation of Diffie-Hellman key exchange and many other cryptographic protocols. It's easy to compute powers, but hard to find the exponent.</p>
+
+    <div class="math-block">
+      Given g, h, and p, find x such that g^x ≡ h (mod p)
+    </div>
+
+    <div class="callout callout-info">
+      <strong>The One-Way Property:</strong> Computing g^x mod p is fast (using square-and-multiply). But finding x given only the result? That's believed to be computationally hard for large primes.
+    </div>
+
+    <h2>One-Way Function Demo</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Forward (Easy)</h3>
+        <p>Compute g^x mod p:</p>
+        <div class="input-group">
+          <label>g:</label>
+          <input type="number" id="fwdG" value="5" min="2" style="width: 60px;">
+        </div>
+        <div class="input-group">
+          <label>x:</label>
+          <input type="number" id="fwdX" value="7" min="0" style="width: 60px;">
+        </div>
+        <div class="input-group">
+          <label>p:</label>
+          <input type="number" id="fwdP" value="23" min="2" style="width: 60px;">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="computeForward()">Compute</button>
+        <div id="forwardResult" class="output-panel" style="margin-top: 0.5rem;">
+          <span class="muted">Result appears here...</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Reverse (Hard)</h3>
+        <p>Find x given g^x = h mod p:</p>
+        <div class="input-group">
+          <label>g:</label>
+          <input type="number" id="revG" value="5" min="2" style="width: 60px;">
+        </div>
+        <div class="input-group">
+          <label>h:</label>
+          <input type="number" id="revH" value="17" min="1" style="width: 60px;">
+        </div>
+        <div class="input-group">
+          <label>p:</label>
+          <input type="number" id="revP" value="23" min="2" style="width: 60px;">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="computeReverse()">Find x</button>
+        <div id="reverseResult" class="output-panel" style="margin-top: 0.5rem;">
+          <span class="muted">Result appears here...</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>Power Table</h2>
+
+    <p>For small primes, we can see all powers of g mod p:</p>
+
+    <div class="demo-section">
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="tableG">g:</label>
+          <input type="number" id="tableG" value="2" min="2">
+        </div>
+        <div class="input-group">
+          <label for="tableP">p:</label>
+          <input type="number" id="tableP" value="11" min="2" max="50">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="generatePowerTable()">Generate</button>
+      </div>
+
+      <div id="powerTable" style="overflow-x: auto; margin-top: 1rem;"></div>
+    </div>
+
+    <h2>Discrete Log Puzzle</h2>
+
+    <div class="demo-section">
+      <p>Can you find the secret exponent x?</p>
+
+      <div class="controls" style="justify-content: flex-start; margin-bottom: 1rem;">
+        <select id="puzzleDifficulty" style="padding: 0.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text);">
+          <option value="easy">Easy (p < 25)</option>
+          <option value="medium">Medium (p < 50)</option>
+          <option value="hard">Hard (p < 75)</option>
+        </select>
+        <button class="btn btn-primary btn-small" onclick="newPuzzle()">New Puzzle</button>
+      </div>
+
+      <div id="puzzleDisplay" class="card" style="text-align: center;">
+        <span class="muted">Click "New Puzzle" to start...</span>
+      </div>
+
+      <div class="controls" style="margin-top: 1rem;">
+        <div class="input-group">
+          <label for="puzzleGuess">Your guess for x:</label>
+          <input type="number" id="puzzleGuess" min="0" style="width: 100px;">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="submitGuess()">Check</button>
+      </div>
+
+      <div id="puzzleResult" class="output-panel" style="text-align: center;">
+        <span class="muted">Enter your guess above...</span>
+      </div>
+    </div>
+
+    <h2>Why This Is Hard</h2>
+
+    <p>For small primes, we can find discrete logs by trying all possibilities. But as p grows:</p>
+
+    <div class="card">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Prime Size</th>
+            <th>Possibilities to Check</th>
+            <th>Time at 1 billion/sec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>20 bits</td>
+            <td>~1 million</td>
+            <td>0.001 seconds</td>
+          </tr>
+          <tr>
+            <td>40 bits</td>
+            <td>~1 trillion</td>
+            <td>~17 minutes</td>
+          </tr>
+          <tr>
+            <td>80 bits</td>
+            <td>~10^24</td>
+            <td>~31 million years</td>
+          </tr>
+          <tr style="background: rgba(239, 68, 68, 0.1);">
+            <td>2048 bits (DH)</td>
+            <td>~10^616</td>
+            <td>Longer than the universe</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-success">
+      <strong>Security Foundation:</strong> The difficulty of the discrete log problem is why Diffie-Hellman key exchange is secure. An eavesdropper sees g^a and g^b but cannot efficiently compute g^(ab) without knowing a or b.
+    </div>
+
+    <div class="page-nav">
+      <a href="7-modexp.html" class="btn btn-secondary">Previous: Modular Exponentiation</a>
+      <a href="9-rsa.html" class="btn btn-primary">Next: RSA Encryption</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/discreteLog.js"></script>
+  <script>
+    function computeForward() {
+      const g = parseInt(document.getElementById('fwdG').value) || 2;
+      const x = parseInt(document.getElementById('fwdX').value) || 0;
+      const p = parseInt(document.getElementById('fwdP').value) || 2;
+
+      const result = OneWayDemo.forward(g, x, p);
+
+      document.getElementById('forwardResult').innerHTML = `
+        <span class="success">${result.description}</span>
+        <span class="muted">Computed in ${result.time}ms</span>
+      `;
+    }
+
+    function computeReverse() {
+      const g = parseInt(document.getElementById('revG').value) || 2;
+      const h = parseInt(document.getElementById('revH').value) || 1;
+      const p = parseInt(document.getElementById('revP').value) || 2;
+
+      const result = OneWayDemo.reverse(g, h, p);
+
+      if (result.found) {
+        document.getElementById('reverseResult').innerHTML = `
+          <span class="success">Found x = ${result.x}</span>
+          <span class="muted">${result.attempts} attempts, ${result.time}ms</span>
+        `;
+      } else {
+        document.getElementById('reverseResult').innerHTML = `
+          <span class="error">Not found in ${result.attempts} attempts</span>
+          <span class="muted">${result.time}ms</span>
+        `;
+      }
+    }
+
+    function generatePowerTable() {
+      const g = parseInt(document.getElementById('tableG').value) || 2;
+      const p = parseInt(document.getElementById('tableP').value) || 11;
+
+      const table = DiscreteLogDemo.generateTable(g, p);
+
+      let html = '<table class="data-table"><thead><tr><th>x</th><th>' + g + '^x mod ' + p + '</th></tr></thead><tbody>';
+
+      table.forEach(row => {
+        html += `<tr><td>${row.exponent}</td><td>${row.value}</td></tr>`;
+      });
+
+      html += '</tbody></table>';
+
+      if (table.length < p) {
+        html += `<p style="color: var(--success); margin-top: 0.5rem;">Cycle length: ${table.length - 1}</p>`;
+      }
+
+      document.getElementById('powerTable').innerHTML = html;
+    }
+
+    function newPuzzle() {
+      const difficulty = document.getElementById('puzzleDifficulty').value;
+      const puzzle = DLogPuzzle.generate(difficulty);
+
+      document.getElementById('puzzleDisplay').innerHTML = `
+        <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">Find x such that:</p>
+        <p style="font-family: monospace; font-size: 1.25rem; color: var(--primary);">
+          ${puzzle.g}^x ≡ ${puzzle.h} (mod ${puzzle.p})
+        </p>
+        <p class="muted">Difficulty: ${puzzle.difficulty}</p>
+      `;
+
+      document.getElementById('puzzleGuess').value = '';
+      document.getElementById('puzzleResult').innerHTML = '<span class="muted">Enter your guess above...</span>';
+    }
+
+    function submitGuess() {
+      const guess = parseInt(document.getElementById('puzzleGuess').value);
+
+      if (isNaN(guess)) {
+        document.getElementById('puzzleResult').innerHTML = '<span class="error">Please enter a number</span>';
+        return;
+      }
+
+      const result = DLogPuzzle.guess(guess);
+
+      if (result.error) {
+        document.getElementById('puzzleResult').innerHTML = `<span class="error">${result.error}</span>`;
+        return;
+      }
+
+      if (result.correct) {
+        document.getElementById('puzzleResult').innerHTML = `
+          <span class="success">${result.message}</span>
+          <span class="muted">Solved in ${result.attempts} attempt(s)!</span>
+        `;
+      } else {
+        document.getElementById('puzzleResult').innerHTML = `
+          <span class="warning">${result.message}</span>
+          <span class="muted">Try again!</span>
+        `;
+      }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      generatePowerTable();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modular Inverse - Magic Internet Math</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 42%"></div>
+    </div>
+
+    <h1>Modular Inverse</h1>
+
+    <p>The <strong>modular inverse</strong> of a number a modulo n is a number x such that their product equals 1 (mod n). It's like division in modular arithmetic!</p>
+
+    <div class="math-block">
+      a × a⁻¹ ≡ 1 (mod n)
+    </div>
+
+    <div class="callout callout-info">
+      <strong>Key Insight:</strong> The modular inverse exists if and only if GCD(a, n) = 1. This is why the extended Euclidean algorithm is so important!
+    </div>
+
+    <h2>Inverse Calculator</h2>
+
+    <div class="demo-section">
+      <p>Find the modular inverse of a number:</p>
+
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="invA">a:</label>
+          <input type="number" id="invA" value="7" min="1">
+        </div>
+        <div class="input-group">
+          <label for="invN">mod n:</label>
+          <input type="number" id="invN" value="26" min="2">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="calculateInverse()">Find Inverse</button>
+      </div>
+
+      <div id="inverseResult" class="steps-container">
+        <span class="muted">Enter values to find the modular inverse...</span>
+      </div>
+    </div>
+
+    <h2>When Does an Inverse Exist?</h2>
+
+    <p>A number a has an inverse mod n only when a and n are <strong>coprime</strong> (GCD = 1).</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Inverse Exists</h3>
+        <ul style="font-family: monospace; line-height: 2;">
+          <li>3⁻¹ mod 7 = 5 (since 3×5 = 15 ≡ 1)</li>
+          <li>7⁻¹ mod 26 = 15 (since 7×15 = 105 ≡ 1)</li>
+          <li>5⁻¹ mod 12 = 5 (since 5×5 = 25 ≡ 1)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>No Inverse</h3>
+        <ul style="font-family: monospace; line-height: 2;">
+          <li>4⁻¹ mod 8 = ∅ (GCD = 4)</li>
+          <li>6⁻¹ mod 9 = ∅ (GCD = 3)</li>
+          <li>10⁻¹ mod 15 = ∅ (GCD = 5)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Inverse Table</h2>
+
+    <div class="demo-section">
+      <p>See which numbers have inverses for a given modulus:</p>
+
+      <div class="controls" style="justify-content: flex-start;">
+        <div class="input-group">
+          <label for="tableN">Modulus:</label>
+          <input type="number" id="tableN" value="12" min="2" max="30">
+        </div>
+        <button class="btn btn-primary btn-small" onclick="generateTable()">Generate Table</button>
+      </div>
+
+      <div id="inverseTable" style="overflow-x: auto; margin-top: 1rem;"></div>
+    </div>
+
+    <h2>Solving Linear Congruences</h2>
+
+    <p>The modular inverse helps us solve equations of the form:</p>
+
+    <div class="math-block">
+      ax ≡ b (mod n)
+    </div>
+
+    <p>If GCD(a, n) = 1, we can multiply both sides by a⁻¹ to get x ≡ a⁻¹b (mod n).</p>
+
+    <div class="demo-section">
+      <h3>Congruence Solver</h3>
+
+      <div class="controls" style="justify-content: flex-start; flex-wrap: wrap;">
+        <div class="input-group">
+          <label for="congA">a:</label>
+          <input type="number" id="congA" value="3" min="1">
+        </div>
+        <span style="color: var(--text-muted);">x ≡</span>
+        <div class="input-group">
+          <label for="congB">b:</label>
+          <input type="number" id="congB" value="5">
+        </div>
+        <span style="color: var(--text-muted);">(mod</span>
+        <div class="input-group">
+          <label for="congN">n:</label>
+          <input type="number" id="congN" value="7" min="2">
+        </div>
+        <span style="color: var(--text-muted);">)</span>
+        <button class="btn btn-primary btn-small" onclick="solveCongruence()">Solve</button>
+      </div>
+
+      <div id="congruenceResult" class="steps-container">
+        <span class="muted">Enter values to solve the congruence...</span>
+      </div>
+    </div>
+
+    <h2>Connection to RSA</h2>
+
+    <div class="callout callout-success">
+      <strong>In RSA:</strong> The decryption exponent d is the modular inverse of e mod φ(n). Finding d = e⁻¹ mod φ(n) is exactly what the extended Euclidean algorithm does!
+    </div>
+
+    <div class="page-nav">
+      <a href="4-gcd.html" class="btn btn-secondary">Previous: GCD & Euclidean</a>
+      <a href="6-euler.html" class="btn btn-primary">Next: Euler's Totient</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/modInverse.js"></script>
+  <script>
+    function calculateInverse() {
+      const a = parseInt(document.getElementById('invA').value) || 1;
+      const n = parseInt(document.getElementById('invN').value) || 2;
+
+      const result = InverseCalculator.calculate(a, n);
+
+      const container = document.getElementById('inverseResult');
+      container.innerHTML = '';
+
+      result.steps.forEach((step, i) => {
+        const div = document.createElement('div');
+        const isLast = i === result.steps.length - 1;
+        div.className = 'step' + (isLast ? ' highlight' : '');
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'step-number';
+        numSpan.textContent = i + 1;
+
+        const contentSpan = document.createElement('span');
+        contentSpan.textContent = step;
+        if (isLast && result.exists) contentSpan.className = 'step-result';
+        if (isLast && !result.exists) contentSpan.style.color = 'var(--error)';
+
+        div.appendChild(numSpan);
+        div.appendChild(contentSpan);
+        container.appendChild(div);
+      });
+    }
+
+    function generateTable() {
+      const n = parseInt(document.getElementById('tableN').value) || 2;
+      const table = InverseTable.generate(n);
+
+      const container = document.getElementById('inverseTable');
+
+      let html = '<table class="data-table"><thead><tr><th>a</th><th>GCD(a, ' + n + ')</th><th>a⁻¹ mod ' + n + '</th></tr></thead><tbody>';
+
+      table.forEach(row => {
+        const style = row.hasInverse ? '' : ' style="opacity: 0.5;"';
+        html += `<tr${style}>
+          <td>${row.value}</td>
+          <td>${row.hasInverse ? '1' : row.gcd}</td>
+          <td>${row.hasInverse ? row.inverse : '—'}</td>
+        </tr>`;
+      });
+
+      html += '</tbody></table>';
+
+      const count = table.filter(r => r.hasInverse).length;
+      html += `<p style="color: var(--text-muted); margin-top: 1rem;">${count} numbers have inverses mod ${n}. (This is φ(${n})!)</p>`;
+
+      container.innerHTML = html;
+    }
+
+    function solveCongruence() {
+      const a = parseInt(document.getElementById('congA').value) || 1;
+      const b = parseInt(document.getElementById('congB').value) || 0;
+      const n = parseInt(document.getElementById('congN').value) || 2;
+
+      const result = CongruenceSolver.solve(a, b, n);
+
+      const container = document.getElementById('congruenceResult');
+      container.innerHTML = '';
+
+      result.steps.forEach((step, i) => {
+        const div = document.createElement('div');
+        const isLast = i === result.steps.length - 1;
+        div.className = 'step' + (isLast ? ' highlight' : '');
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'step-number';
+        numSpan.textContent = i + 1;
+
+        const contentSpan = document.createElement('span');
+        contentSpan.textContent = step;
+        if (isLast && result.hasSolution) contentSpan.className = 'step-result';
+        if (isLast && !result.hasSolution) contentSpan.style.color = 'var(--error)';
+
+        div.appendChild(numSpan);
+        div.appendChild(contentSpan);
+        container.appendChild(div);
+      });
+    }
+
+    // Generate initial table
+    document.addEventListener('DOMContentLoaded', generateTable);
+  </script>
+</body>
+</html>

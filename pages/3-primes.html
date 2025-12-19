@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Numbers - Magic Internet Math</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 25%"></div>
+    </div>
+
+    <h1>Prime Numbers</h1>
+
+    <p>A <strong>prime number</strong> is a number greater than 1 that has no divisors other than 1 and itself. Primes are the fundamental building blocks of all integers.</p>
+
+    <div class="callout callout-info">
+      <strong>The Fundamental Theorem of Arithmetic:</strong> Every integer greater than 1 can be expressed as a unique product of prime numbers.
+    </div>
+
+    <h2>The Sieve of Eratosthenes</h2>
+
+    <p>This ancient algorithm, created over 2,000 years ago, efficiently finds all primes up to a given number. Watch as composites get crossed out:</p>
+
+    <div class="canvas-container">
+      <canvas id="sieveCanvas" width="500" height="320"></canvas>
+
+      <div class="controls">
+        <button class="btn btn-primary" id="sieveRunBtn" onclick="runSieve()">Run Sieve</button>
+        <button class="btn btn-secondary" onclick="stepSieve()">Step</button>
+        <button class="btn btn-secondary" onclick="resetSieve()">Reset</button>
+      </div>
+
+      <div id="sieveStatus" class="output-panel" style="text-align: center; margin-top: 1rem;">
+        <span class="muted">Click "Run Sieve" or "Step" to begin...</span>
+      </div>
+    </div>
+
+    <h2>Why Primes Matter for Cryptography</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Easy: Multiplication</h3>
+        <p>Given two large primes, multiplying them is fast:</p>
+        <p style="font-family: monospace; color: var(--success);">
+          61 × 53 = 3233<br>
+          (instant computation)
+        </p>
+      </div>
+      <div class="card">
+        <h3>Hard: Factoring</h3>
+        <p>Given the product, finding the primes is hard:</p>
+        <p style="font-family: monospace; color: var(--warning);">
+          3233 = ? × ?<br>
+          (must try many divisors)
+        </p>
+      </div>
+    </div>
+
+    <p>RSA encryption relies on this asymmetry. The public key contains a large number that is the product of two secret primes. Breaking the encryption requires factoring that number, which is computationally infeasible for large enough primes.</p>
+
+    <h2>Prime Checker</h2>
+
+    <div class="demo-section">
+      <p>Check if a number is prime:</p>
+
+      <div class="input-group">
+        <label for="primeInput">Number:</label>
+        <input type="number" id="primeInput" value="97" min="0" style="width: 150px;">
+        <button class="btn btn-primary btn-small" onclick="checkPrime()">Check</button>
+      </div>
+
+      <div id="primeResult" class="output-panel">
+        <span class="muted">Enter a number and click "Check"...</span>
+      </div>
+    </div>
+
+    <h2>Prime Factorization</h2>
+
+    <div class="demo-section">
+      <p>See how any number can be broken down into prime factors:</p>
+
+      <div class="input-group">
+        <label for="factorInput">Number:</label>
+        <input type="number" id="factorInput" value="360" min="2" style="width: 150px;">
+        <button class="btn btn-primary btn-small" onclick="factorize()">Factorize</button>
+      </div>
+
+      <div id="factorResult" class="steps-container">
+        <span class="muted">Enter a number to see its factorization...</span>
+      </div>
+    </div>
+
+    <h2>How Many Primes Are There?</h2>
+
+    <p>There are infinitely many primes! Euclid proved this around 300 BCE. The proof is elegant:</p>
+
+    <div class="card">
+      <h3>Euclid's Proof</h3>
+      <ol style="margin-left: 1.5rem; color: var(--text-muted); line-height: 2;">
+        <li>Assume there are only finitely many primes: p₁, p₂, ..., pₙ</li>
+        <li>Consider N = (p₁ × p₂ × ... × pₙ) + 1</li>
+        <li>N is not divisible by any of our primes (it leaves remainder 1)</li>
+        <li>So N is either prime itself, or divisible by a prime not in our list</li>
+        <li>Contradiction! There must be infinitely many primes.</li>
+      </ol>
+    </div>
+
+    <h2>The Prime Number Theorem</h2>
+
+    <p>While primes become rarer as numbers get larger, we know approximately how many primes there are below any given number:</p>
+
+    <div class="math-block">
+      π(n) ≈ n / ln(n)
+    </div>
+
+    <p>Where π(n) counts primes less than or equal to n. This means roughly 1 in every ln(n) numbers near n is prime.</p>
+
+    <div class="callout callout-success">
+      <strong>For Cryptography:</strong> To generate a 1024-bit prime (about 308 digits), we expect to test roughly 700 random odd numbers before finding a prime. Modern computers can do this quickly!
+    </div>
+
+    <div class="page-nav">
+      <a href="2-modular.html" class="btn btn-secondary">Previous: Modular Arithmetic</a>
+      <a href="4-gcd.html" class="btn btn-primary">Next: GCD & Euclidean Algorithm</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/primes.js"></script>
+  <script>
+    // Initialize sieve
+    document.addEventListener('DOMContentLoaded', () => {
+      SieveDemo.init('sieveCanvas', 100);
+    });
+
+    async function runSieve() {
+      const btn = document.getElementById('sieveRunBtn');
+      btn.disabled = true;
+      btn.textContent = 'Running...';
+
+      document.getElementById('sieveStatus').innerHTML = '<span class="muted">Finding primes...</span>';
+
+      await SieveDemo.run();
+
+      const primes = SieveDemo.getPrimes();
+      document.getElementById('sieveStatus').innerHTML = `
+        <span class="success">Found ${primes.length} primes!</span>
+        <span class="muted">First 20: ${primes.slice(0, 20).join(', ')}...</span>
+      `;
+
+      btn.disabled = false;
+      btn.textContent = 'Run Sieve';
+    }
+
+    async function stepSieve() {
+      const hasMore = await SieveDemo.step();
+      const current = SieveDemo.state.currentPrime;
+
+      if (!hasMore) {
+        const primes = SieveDemo.getPrimes();
+        document.getElementById('sieveStatus').innerHTML = `
+          <span class="success">Complete! Found ${primes.length} primes.</span>
+        `;
+      } else {
+        document.getElementById('sieveStatus').innerHTML = `
+          <span class="muted">Crossed out multiples of ${current - 1 > 1 ? current - 1 : 2}. Next: multiples of ${current}</span>
+        `;
+      }
+    }
+
+    function resetSieve() {
+      SieveDemo.reset();
+      document.getElementById('sieveStatus').innerHTML = '<span class="muted">Click "Run Sieve" or "Step" to begin...</span>';
+    }
+
+    function checkPrime() {
+      const n = parseInt(document.getElementById('primeInput').value);
+      const result = PrimeChecker.check(n);
+
+      const output = document.getElementById('primeResult');
+
+      if (result.isPrime) {
+        output.innerHTML = `
+          <span class="success">${n} is PRIME!</span>
+          <span class="muted">${result.reason}</span>
+        `;
+      } else {
+        output.innerHTML = `
+          <span class="error">${n} is NOT prime.</span>
+          <span class="muted">${result.reason}</span>
+          ${result.factor ? `<span class="muted">Smallest factor: ${result.factor}</span>` : ''}
+        `;
+      }
+    }
+
+    function factorize() {
+      const n = parseInt(document.getElementById('factorInput').value);
+      const result = Factorizer.factorize(n);
+
+      const container = document.getElementById('factorResult');
+
+      if (result.factors.length === 0) {
+        container.innerHTML = '<span class="error">Please enter a number 2 or greater.</span>';
+        return;
+      }
+
+      container.innerHTML = '';
+
+      result.steps.forEach((step, i) => {
+        const div = document.createElement('div');
+        div.className = 'step';
+
+        const numSpan = document.createElement('span');
+        numSpan.className = 'step-number';
+        numSpan.textContent = i + 1;
+
+        const contentSpan = document.createElement('span');
+        contentSpan.textContent = step;
+
+        div.appendChild(numSpan);
+        div.appendChild(contentSpan);
+        container.appendChild(div);
+      });
+
+      // Add final result
+      const finalDiv = document.createElement('div');
+      finalDiv.className = 'step highlight';
+
+      const numSpan = document.createElement('span');
+      numSpan.className = 'step-number';
+      numSpan.textContent = '=';
+
+      const contentSpan = document.createElement('span');
+      contentSpan.className = 'step-result';
+      contentSpan.textContent = `${n} = ${result.factorization}`;
+
+      finalDiv.appendChild(numSpan);
+      finalDiv.appendChild(contentSpan);
+      container.appendChild(finalDiv);
+    }
+  </script>
+</body>
+</html>
