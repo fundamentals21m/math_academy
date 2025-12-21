@@ -3,9 +3,19 @@
 const NumberSystems = {
   bits: [0, 0, 0, 0, 0, 0, 0, 0],
 
+  // Quiz state
+  quiz: {
+    questions: [],
+    currentQuestion: 0,
+    score: 0,
+    totalQuestions: 5,
+    answered: false
+  },
+
   init() {
     this.setupConverter();
     this.setupBitVisualizer();
+    this.startQuiz();
   },
 
   // Converter functionality
@@ -299,6 +309,311 @@ const NumberSystems = {
   randomBits() {
     this.bits = this.bits.map(() => Math.round(Math.random()));
     this.renderBits();
+  },
+
+  // ==================== Quiz Functionality ====================
+
+  startQuiz() {
+    // Check if quiz elements exist
+    if (!document.getElementById('quizQuestion')) return;
+
+    this.quiz.questions = this.generateQuizQuestions();
+    this.quiz.currentQuestion = 0;
+    this.quiz.score = 0;
+    this.quiz.answered = false;
+
+    document.getElementById('restartQuizBtn').style.display = 'none';
+    this.showQuizQuestion();
+  },
+
+  generateQuizQuestions() {
+    const questions = [];
+    const difficulties = ['easy', 'easy', 'medium', 'medium', 'hard'];
+
+    // Shuffle difficulties
+    for (let i = difficulties.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [difficulties[i], difficulties[j]] = [difficulties[j], difficulties[i]];
+    }
+
+    for (let i = 0; i < this.quiz.totalQuestions; i++) {
+      questions.push(this.generateQuestion(difficulties[i]));
+    }
+
+    return questions;
+  },
+
+  generateQuestion(difficulty) {
+    // Determine number range based on difficulty
+    let min, max;
+    switch (difficulty) {
+      case 'easy':
+        min = 1;
+        max = 15;
+        break;
+      case 'medium':
+        min = 16;
+        max = 255;
+        break;
+      case 'hard':
+        min = 256;
+        max = 4095;
+        break;
+    }
+
+    // Generate random number
+    const value = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    // Choose random conversion direction
+    const bases = ['binary', 'decimal', 'hex'];
+    const fromIndex = Math.floor(Math.random() * 3);
+    let toIndex = Math.floor(Math.random() * 3);
+    while (toIndex === fromIndex) {
+      toIndex = Math.floor(Math.random() * 3);
+    }
+
+    const fromBase = bases[fromIndex];
+    const toBase = bases[toIndex];
+
+    // Format the value in the "from" base
+    let fromValue;
+    switch (fromBase) {
+      case 'binary':
+        fromValue = value.toString(2);
+        break;
+      case 'decimal':
+        fromValue = value.toString(10);
+        break;
+      case 'hex':
+        fromValue = value.toString(16).toUpperCase();
+        break;
+    }
+
+    // Get the correct answer in the "to" base
+    let correctAnswer;
+    switch (toBase) {
+      case 'binary':
+        correctAnswer = value.toString(2);
+        break;
+      case 'decimal':
+        correctAnswer = value.toString(10);
+        break;
+      case 'hex':
+        correctAnswer = value.toString(16).toUpperCase();
+        break;
+    }
+
+    // Generate wrong answers
+    const options = this.generateOptions(value, toBase, correctAnswer);
+
+    return {
+      difficulty,
+      fromBase,
+      toBase,
+      fromValue,
+      correctAnswer,
+      options,
+      value
+    };
+  },
+
+  generateOptions(value, toBase, correctAnswer) {
+    const options = [correctAnswer];
+    const usedValues = new Set([value]);
+
+    // Generate 3 wrong answers
+    while (options.length < 4) {
+      // Generate a nearby wrong value
+      let offset;
+      if (value < 16) {
+        offset = Math.floor(Math.random() * 5) + 1;
+      } else if (value < 256) {
+        offset = Math.floor(Math.random() * 20) + 1;
+      } else {
+        offset = Math.floor(Math.random() * 100) + 1;
+      }
+
+      // Randomly add or subtract
+      const wrongValue = Math.random() < 0.5 ? value + offset : Math.max(1, value - offset);
+
+      if (usedValues.has(wrongValue)) continue;
+      usedValues.add(wrongValue);
+
+      let wrongAnswer;
+      switch (toBase) {
+        case 'binary':
+          wrongAnswer = wrongValue.toString(2);
+          break;
+        case 'decimal':
+          wrongAnswer = wrongValue.toString(10);
+          break;
+        case 'hex':
+          wrongAnswer = wrongValue.toString(16).toUpperCase();
+          break;
+      }
+
+      if (!options.includes(wrongAnswer)) {
+        options.push(wrongAnswer);
+      }
+    }
+
+    // Shuffle options
+    for (let i = options.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [options[i], options[j]] = [options[j], options[i]];
+    }
+
+    return options;
+  },
+
+  showQuizQuestion() {
+    const q = this.quiz.questions[this.quiz.currentQuestion];
+    this.quiz.answered = false;
+
+    // Update question number and progress
+    document.getElementById('quizQuestionNum').textContent =
+      `Question ${this.quiz.currentQuestion + 1} of ${this.quiz.totalQuestions}`;
+    document.getElementById('quizProgress').style.width =
+      `${(this.quiz.currentQuestion / this.quiz.totalQuestions) * 100}%`;
+    document.getElementById('quizScore').textContent =
+      `Score: ${this.quiz.score}/${this.quiz.currentQuestion}`;
+
+    // Show difficulty badge
+    const difficultyEl = document.getElementById('quizDifficulty');
+    difficultyEl.textContent = q.difficulty.charAt(0).toUpperCase() + q.difficulty.slice(1);
+    switch (q.difficulty) {
+      case 'easy':
+        difficultyEl.style.background = 'rgba(0, 255, 159, 0.2)';
+        difficultyEl.style.color = 'var(--neon-green)';
+        break;
+      case 'medium':
+        difficultyEl.style.background = 'rgba(255, 170, 0, 0.2)';
+        difficultyEl.style.color = 'var(--warning)';
+        break;
+      case 'hard':
+        difficultyEl.style.background = 'rgba(255, 51, 102, 0.2)';
+        difficultyEl.style.color = 'var(--error)';
+        break;
+    }
+
+    // Format base names nicely
+    const baseNames = {
+      binary: 'binary',
+      decimal: 'decimal',
+      hex: 'hexadecimal'
+    };
+
+    // Show question
+    document.getElementById('quizQuestion').innerHTML =
+      `Convert <span style="color: var(--neon-cyan); font-family: monospace; font-size: 1.3rem;">${q.fromValue}</span> from ${baseNames[q.fromBase]} to ${baseNames[q.toBase]}`;
+
+    // Show options
+    const optionsContainer = document.getElementById('quizOptions');
+    optionsContainer.innerHTML = '';
+
+    q.options.forEach((option, index) => {
+      const optionDiv = document.createElement('div');
+      optionDiv.className = 'quiz-option';
+      optionDiv.style.fontFamily = 'monospace';
+      optionDiv.textContent = option;
+      optionDiv.onclick = () => this.selectQuizOption(index);
+      optionsContainer.appendChild(optionDiv);
+    });
+
+    // Hide feedback and next button
+    document.getElementById('quizFeedback').className = 'quiz-feedback';
+    document.getElementById('quizFeedback').innerHTML = '';
+    document.getElementById('nextQuestionBtn').style.display = 'none';
+  },
+
+  selectQuizOption(index) {
+    if (this.quiz.answered) return;
+    this.quiz.answered = true;
+
+    const q = this.quiz.questions[this.quiz.currentQuestion];
+    const selectedOption = q.options[index];
+    const isCorrect = selectedOption === q.correctAnswer;
+
+    const options = document.querySelectorAll('#quizOptions .quiz-option');
+    const feedback = document.getElementById('quizFeedback');
+
+    // Mark correct and incorrect options
+    options.forEach((opt, i) => {
+      opt.onclick = null;
+      if (q.options[i] === q.correctAnswer) {
+        opt.classList.add('correct');
+      } else if (i === index) {
+        opt.classList.add('incorrect');
+      }
+    });
+
+    // Show feedback
+    if (isCorrect) {
+      this.quiz.score++;
+      feedback.className = 'quiz-feedback show correct';
+      feedback.innerHTML = `<strong>Correct!</strong> ${q.fromValue} (${q.fromBase}) = ${q.correctAnswer} (${q.toBase})`;
+    } else {
+      feedback.className = 'quiz-feedback show incorrect';
+      feedback.innerHTML = `<strong>Not quite.</strong> ${q.fromValue} (${q.fromBase}) = <strong>${q.correctAnswer}</strong> (${q.toBase})`;
+    }
+
+    // Update score display
+    document.getElementById('quizScore').textContent =
+      `Score: ${this.quiz.score}/${this.quiz.currentQuestion + 1}`;
+
+    // Show appropriate button
+    if (this.quiz.currentQuestion < this.quiz.totalQuestions - 1) {
+      document.getElementById('nextQuestionBtn').style.display = 'inline-block';
+    } else {
+      // Quiz complete
+      this.showQuizResults();
+    }
+  },
+
+  nextQuestion() {
+    this.quiz.currentQuestion++;
+    this.showQuizQuestion();
+  },
+
+  showQuizResults() {
+    const percentage = Math.round((this.quiz.score / this.quiz.totalQuestions) * 100);
+
+    // Update progress to 100%
+    document.getElementById('quizProgress').style.width = '100%';
+
+    let message, messageColor;
+    if (percentage === 100) {
+      message = "Perfect score! You've mastered number system conversions!";
+      messageColor = 'var(--neon-green)';
+    } else if (percentage >= 80) {
+      message = "Excellent work! You have a strong grasp of number conversions.";
+      messageColor = 'var(--neon-green)';
+    } else if (percentage >= 60) {
+      message = "Good effort! Practice a bit more with the converter above.";
+      messageColor = 'var(--warning)';
+    } else {
+      message = "Keep practicing! Use the interactive converter to build your skills.";
+      messageColor = 'var(--error)';
+    }
+
+    const feedback = document.getElementById('quizFeedback');
+    feedback.className = 'quiz-feedback show';
+    feedback.style.background = 'var(--bg-card)';
+    feedback.style.border = '1px solid var(--border)';
+    feedback.innerHTML = `
+      <div style="text-align: center;">
+        <div style="font-size: 2rem; font-weight: 700; color: ${messageColor}; margin-bottom: 0.5rem;">
+          ${this.quiz.score} / ${this.quiz.totalQuestions}
+        </div>
+        <div style="font-size: 1.5rem; color: var(--text-muted); margin-bottom: 1rem;">
+          ${percentage}%
+        </div>
+        <p style="color: ${messageColor};">${message}</p>
+      </div>
+    `;
+
+    document.getElementById('nextQuestionBtn').style.display = 'none';
+    document.getElementById('restartQuizBtn').style.display = 'inline-block';
   }
 };
 

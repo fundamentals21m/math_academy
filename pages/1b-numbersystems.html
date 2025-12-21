@@ -257,6 +257,37 @@
       <strong>Real Example:</strong> A Bitcoin address like <code style="color: var(--neon-green);">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</code> uses Base58 (similar to hex but with more characters) to represent a 160-bit hash.
     </div>
 
+    <h2>Test Your Knowledge</h2>
+
+    <div class="demo-section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 id="quizQuestionNum">Question 1 of 5</h3>
+        <div>
+          <span id="quizScore" style="color: var(--text-muted);">Score: 0/0</span>
+          <span id="quizDifficulty" style="margin-left: 1rem; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem;"></span>
+        </div>
+      </div>
+
+      <div class="progress-bar" style="margin-bottom: 1.5rem;">
+        <div class="progress-fill" id="quizProgress" style="width: 0%"></div>
+      </div>
+
+      <p id="quizQuestion" style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--text);"></p>
+
+      <div id="quizOptions" class="quiz-options"></div>
+
+      <div id="quizFeedback" class="quiz-feedback" style="margin-top: 1rem;"></div>
+
+      <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+        <button id="nextQuestionBtn" class="btn btn-primary" onclick="NumberSystems.nextQuestion()" style="display: none;">
+          Next Question
+        </button>
+        <button id="restartQuizBtn" class="btn btn-secondary" onclick="NumberSystems.startQuiz()" style="display: none;">
+          Try Again
+        </button>
+      </div>
+    </div>
+
     <div class="callout callout-success">
       <strong>Up Next:</strong> Now that you understand how numbers are represented, let's learn about modular arithmetic, the mathematical foundation of cryptography.
     </div>
