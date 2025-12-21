@@ -8,6 +8,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/main.css">
+  <style>
+    .calc-btn {
+      padding: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-card);
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .calc-btn:hover {
+      background: rgba(0, 245, 255, 0.1);
+      border-color: var(--neon-cyan);
+    }
+    .calc-btn:active {
+      transform: scale(0.95);
+    }
+    .calc-btn.calc-op {
+      color: var(--neon-cyan);
+    }
+    .calc-btn.calc-clear {
+      color: var(--error);
+    }
+    .calc-btn.calc-equals {
+      background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
+      color: var(--bg);
+      border: none;
+    }
+    .calc-btn.calc-equals:hover {
+      box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -294,6 +328,40 @@
         </div>
 
         <p id="quizQuestion" style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--text);"></p>
+
+        <!-- Calculator Widget -->
+        <details id="calculatorWidget" style="margin-bottom: 1.5rem;">
+          <summary style="cursor: pointer; color: var(--neon-cyan); font-size: 0.9rem; user-select: none;">
+            Show Calculator
+          </summary>
+          <div style="margin-top: 1rem; display: flex; justify-content: center;">
+            <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; width: 240px;">
+              <input type="text" id="calcDisplay" readonly
+                     style="width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--border); border-radius: 4px; padding: 0.75rem; font-family: monospace; font-size: 1.25rem; text-align: right; color: var(--neon-green); margin-bottom: 0.75rem;">
+              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem;">
+                <button class="calc-btn" onclick="NumberSystems.calcInput('7')">7</button>
+                <button class="calc-btn" onclick="NumberSystems.calcInput('8')">8</button>
+                <button class="calc-btn" onclick="NumberSystems.calcInput('9')">9</button>
+                <button class="calc-btn calc-op" onclick="NumberSystems.calcInput('/')">÷</button>
+                <button class="calc-btn" onclick="NumberSystems.calcInput('4')">4</button>
+                <button class="calc-btn" onclick="NumberSystems.calcInput('5')">5</button>
+                <button class="calc-btn" onclick="NumberSystems.calcInput('6')">6</button>
+                <button class="calc-btn calc-op" onclick="NumberSystems.calcInput('*')">×</button>
+                <button class="calc-btn" onclick="NumberSystems.calcInput('1')">1</button>
+                <button class="calc-btn" onclick="NumberSystems.calcInput('2')">2</button>
+                <button class="calc-btn" onclick="NumberSystems.calcInput('3')">3</button>
+                <button class="calc-btn calc-op" onclick="NumberSystems.calcInput('-')">−</button>
+                <button class="calc-btn" onclick="NumberSystems.calcInput('0')">0</button>
+                <button class="calc-btn" onclick="NumberSystems.calcNegate()">±</button>
+                <button class="calc-btn calc-op" onclick="NumberSystems.calcInput('**')">^</button>
+                <button class="calc-btn calc-op" onclick="NumberSystems.calcInput('+')">+</button>
+                <button class="calc-btn calc-clear" onclick="NumberSystems.calcClear()">C</button>
+                <button class="calc-btn" onclick="NumberSystems.calcBackspace()">⌫</button>
+                <button class="calc-btn calc-equals" style="grid-column: span 2;" onclick="NumberSystems.calcEquals()">=</button>
+              </div>
+            </div>
+          </div>
+        </details>
 
         <!-- Multiple choice options (for easy/medium) -->
         <div id="quizOptions" class="quiz-options"></div>

@@ -312,6 +312,76 @@ const NumberSystems = {
     this.renderBits();
   },
 
+  // ==================== Calculator Functionality ====================
+
+  calcExpression: '',
+
+  calcInput(value) {
+    this.calcExpression += value;
+    this.updateCalcDisplay();
+  },
+
+  calcClear() {
+    this.calcExpression = '';
+    this.updateCalcDisplay();
+  },
+
+  calcBackspace() {
+    // Handle removing ** (exponent) as a unit
+    if (this.calcExpression.endsWith('**')) {
+      this.calcExpression = this.calcExpression.slice(0, -2);
+    } else {
+      this.calcExpression = this.calcExpression.slice(0, -1);
+    }
+    this.updateCalcDisplay();
+  },
+
+  calcNegate() {
+    if (this.calcExpression === '' || this.calcExpression === '0') {
+      this.calcExpression = '-';
+    } else {
+      // Try to negate the last number
+      const match = this.calcExpression.match(/(-?\d+\.?\d*)$/);
+      if (match) {
+        const lastNum = match[1];
+        const prefix = this.calcExpression.slice(0, -lastNum.length);
+        if (lastNum.startsWith('-')) {
+          this.calcExpression = prefix + lastNum.slice(1);
+        } else {
+          this.calcExpression = prefix + '-' + lastNum;
+        }
+      }
+    }
+    this.updateCalcDisplay();
+  },
+
+  calcEquals() {
+    try {
+      // Evaluate the expression safely
+      const result = Function('"use strict"; return (' + this.calcExpression + ')')();
+      if (isFinite(result)) {
+        this.calcExpression = String(result);
+      } else {
+        this.calcExpression = 'Error';
+      }
+    } catch (e) {
+      this.calcExpression = 'Error';
+    }
+    this.updateCalcDisplay();
+  },
+
+  updateCalcDisplay() {
+    const display = document.getElementById('calcDisplay');
+    if (display) {
+      // Format display: replace ** with ^, * with ×, / with ÷
+      let formatted = this.calcExpression
+        .replace(/\*\*/g, '^')
+        .replace(/\*/g, '×')
+        .replace(/\//g, '÷');
+      display.value = formatted || '0';
+    }
+  },
+
   // ==================== Quiz Functionality ====================
 
   showDifficultySelect() {
