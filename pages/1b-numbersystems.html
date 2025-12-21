@@ -260,31 +260,64 @@
     <h2>Test Your Knowledge</h2>
 
     <div class="demo-section">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-        <h3 id="quizQuestionNum">Question 1 of 5</h3>
-        <div>
-          <span id="quizScore" style="color: var(--text-muted);">Score: 0/0</span>
-          <span id="quizDifficulty" style="margin-left: 1rem; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem;"></span>
+      <!-- Difficulty Selection -->
+      <div id="difficultySelect" style="text-align: center; margin-bottom: 1.5rem;">
+        <p style="margin-bottom: 1rem;">Choose your difficulty:</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary" onclick="NumberSystems.startQuiz('easy')" style="min-width: 120px;">
+            <span style="display: block; font-size: 1.1rem;">Easy</span>
+            <span style="font-size: 0.75rem; opacity: 0.7;">Numbers 1-15</span>
+          </button>
+          <button class="btn btn-secondary" onclick="NumberSystems.startQuiz('medium')" style="min-width: 120px;">
+            <span style="display: block; font-size: 1.1rem;">Medium</span>
+            <span style="font-size: 0.75rem; opacity: 0.7;">Numbers 16-255</span>
+          </button>
+          <button class="btn btn-secondary" onclick="NumberSystems.startQuiz('hard')" style="min-width: 120px;">
+            <span style="display: block; font-size: 1.1rem;">Hard</span>
+            <span style="font-size: 0.75rem; opacity: 0.7;">No multiple choice</span>
+          </button>
         </div>
       </div>
 
-      <div class="progress-bar" style="margin-bottom: 1.5rem;">
-        <div class="progress-fill" id="quizProgress" style="width: 0%"></div>
-      </div>
+      <!-- Quiz Content (hidden until difficulty selected) -->
+      <div id="quizContent" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3 id="quizQuestionNum">Question 1 of 5</h3>
+          <div>
+            <span id="quizScore" style="color: var(--text-muted);">Score: 0/0</span>
+            <span id="quizDifficulty" style="margin-left: 1rem; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem;"></span>
+          </div>
+        </div>
 
-      <p id="quizQuestion" style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--text);"></p>
+        <div class="progress-bar" style="margin-bottom: 1.5rem;">
+          <div class="progress-fill" id="quizProgress" style="width: 0%"></div>
+        </div>
 
-      <div id="quizOptions" class="quiz-options"></div>
+        <p id="quizQuestion" style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--text);"></p>
 
-      <div id="quizFeedback" class="quiz-feedback" style="margin-top: 1rem;"></div>
+        <!-- Multiple choice options (for easy/medium) -->
+        <div id="quizOptions" class="quiz-options"></div>
 
-      <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
-        <button id="nextQuestionBtn" class="btn btn-primary" onclick="NumberSystems.nextQuestion()" style="display: none;">
-          Next Question
-        </button>
-        <button id="restartQuizBtn" class="btn btn-secondary" onclick="NumberSystems.startQuiz()" style="display: none;">
-          Try Again
-        </button>
+        <!-- Text input (for hard mode) -->
+        <div id="quizInputContainer" style="display: none;">
+          <div class="input-group" style="justify-content: center;">
+            <input type="text" id="quizAnswerInput" placeholder="Type your answer..."
+                   style="width: 250px; font-family: monospace; font-size: 1.2rem; text-align: center;"
+                   onkeypress="if(event.key === 'Enter') NumberSystems.submitAnswer()">
+            <button class="btn btn-primary" onclick="NumberSystems.submitAnswer()">Submit</button>
+          </div>
+        </div>
+
+        <div id="quizFeedback" class="quiz-feedback" style="margin-top: 1rem;"></div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+          <button id="nextQuestionBtn" class="btn btn-primary" onclick="NumberSystems.nextQuestion()" style="display: none;">
+            Next Question
+          </button>
+          <button id="changeDifficultyBtn" class="btn btn-secondary" onclick="NumberSystems.showDifficultySelect()" style="display: none;">
+            Change Difficulty
+          </button>
+        </div>
       </div>
     </div>
 

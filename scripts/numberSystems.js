@@ -9,13 +9,14 @@ const NumberSystems = {
     currentQuestion: 0,
     score: 0,
     totalQuestions: 5,
-    answered: false
+    answered: false,
+    difficulty: 'easy' // 'easy', 'medium', or 'hard'
   },
 
   init() {
     this.setupConverter();
     this.setupBitVisualizer();
-    this.startQuiz();
+    // Don't auto-start quiz - wait for difficulty selection
   },
 
   // Converter functionality
@@ -313,31 +314,34 @@ const NumberSystems = {
 
   // ==================== Quiz Functionality ====================
 
-  startQuiz() {
+  showDifficultySelect() {
+    document.getElementById('difficultySelect').style.display = 'block';
+    document.getElementById('quizContent').style.display = 'none';
+  },
+
+  startQuiz(difficulty) {
     // Check if quiz elements exist
     if (!document.getElementById('quizQuestion')) return;
 
+    this.quiz.difficulty = difficulty || 'easy';
     this.quiz.questions = this.generateQuizQuestions();
     this.quiz.currentQuestion = 0;
     this.quiz.score = 0;
     this.quiz.answered = false;
 
-    document.getElementById('restartQuizBtn').style.display = 'none';
+    // Hide difficulty select, show quiz content
+    document.getElementById('difficultySelect').style.display = 'none';
+    document.getElementById('quizContent').style.display = 'block';
+    document.getElementById('changeDifficultyBtn').style.display = 'none';
+
     this.showQuizQuestion();
   },
 
   generateQuizQuestions() {
     const questions = [];
-    const difficulties = ['easy', 'easy', 'medium', 'medium', 'hard'];
-
-    // Shuffle difficulties
-    for (let i = difficulties.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [difficulties[i], difficulties[j]] = [difficulties[j], difficulties[i]];
-    }
 
     for (let i = 0; i < this.quiz.totalQuestions; i++) {
-      questions.push(this.generateQuestion(difficulties[i]));
+      questions.push(this.generateQuestion(this.quiz.difficulty));
     }
 
     return questions;
@@ -507,23 +511,78 @@ const NumberSystems = {
     document.getElementById('quizQuestion').innerHTML =
       `Convert <span style="color: var(--neon-cyan); font-family: monospace; font-size: 1.3rem;">${q.fromValue}</span> from ${baseNames[q.fromBase]} to ${baseNames[q.toBase]}`;
 
-    // Show options
     const optionsContainer = document.getElementById('quizOptions');
-    optionsContainer.innerHTML = '';
+    const inputContainer = document.getElementById('quizInputContainer');
 
-    q.options.forEach((option, index) => {
-      const optionDiv = document.createElement('div');
-      optionDiv.className = 'quiz-option';
-      optionDiv.style.fontFamily = 'monospace';
-      optionDiv.textContent = option;
-      optionDiv.onclick = () => this.selectQuizOption(index);
-      optionsContainer.appendChild(optionDiv);
-    });
+    // Show appropriate input method based on difficulty
+    if (this.quiz.difficulty === 'hard') {
+      // Hard mode: text input
+      optionsContainer.style.display = 'none';
+      inputContainer.style.display = 'block';
+      const answerInput = document.getElementById('quizAnswerInput');
+      answerInput.value = '';
+      answerInput.disabled = false;
+      answerInput.focus();
+    } else {
+      // Easy/Medium mode: multiple choice
+      optionsContainer.style.display = 'block';
+      inputContainer.style.display = 'none';
+      optionsContainer.innerHTML = '';
+
+      q.options.forEach((option, index) => {
+        const optionDiv = document.createElement('div');
+        optionDiv.className = 'quiz-option';
+        optionDiv.style.fontFamily = 'monospace';
+        optionDiv.textContent = option;
+        optionDiv.onclick = () => this.selectQuizOption(index);
+        optionsContainer.appendChild(optionDiv);
+      });
+    }
 
     // Hide feedback and next button
     document.getElementById('quizFeedback').className = 'quiz-feedback';
     document.getElementById('quizFeedback').innerHTML = '';
     document.getElementById('nextQuestionBtn').style.display = 'none';
+  },
+
+  // Submit answer for hard mode (text input)
+  submitAnswer() {
+    if (this.quiz.answered) return;
+
+    const answerInput = document.getElementById('quizAnswerInput');
+    const userAnswer = answerInput.value.trim().toUpperCase();
+
+    if (!userAnswer) return; // Don't submit empty answers
+
+    this.quiz.answered = true;
+    answerInput.disabled = true;
+
+    const q = this.quiz.questions[this.quiz.currentQuestion];
+    const correctAnswer = q.correctAnswer.toUpperCase();
+    const isCorrect = userAnswer === correctAnswer;
+
+    const feedback = document.getElementById('quizFeedback');
+
+    // Show feedback
+    if (isCorrect) {
+      this.quiz.score++;
+      feedback.className = 'quiz-feedback show correct';
+      feedback.innerHTML = `<strong>Correct!</strong> ${q.fromValue} (${q.fromBase}) = ${q.correctAnswer} (${q.toBase})`;
+    } else {
+      feedback.className = 'quiz-feedback show incorrect';
+      feedback.innerHTML = `<strong>Not quite.</strong> You answered: <span style="color: var(--error);">${userAnswer || '(empty)'}</span><br>${q.fromValue} (${q.fromBase}) = <strong>${q.correctAnswer}</strong> (${q.toBase})`;
+    }
+
+    // Update score display
+    document.getElementById('quizScore').textContent =
+      `Score: ${this.quiz.score}/${this.quiz.currentQuestion + 1}`;
+
+    // Show appropriate button
+    if (this.quiz.currentQuestion < this.quiz.totalQuestions - 1) {
+      document.getElementById('nextQuestionBtn').style.display = 'inline-block';
+    } else {
+      this.showQuizResults();
+    }
   },
 
   selectQuizOption(index) {
@@ -596,6 +655,11 @@ const NumberSystems = {
       messageColor = 'var(--error)';
     }
 
+    // Hide input container if in hard mode
+    if (this.quiz.difficulty === 'hard') {
+      document.getElementById('quizInputContainer').style.display = 'none';
+    }
+
     const feedback = document.getElementById('quizFeedback');
     feedback.className = 'quiz-feedback show';
     feedback.style.background = 'var(--bg-card)';
@@ -613,7 +677,7 @@ const NumberSystems = {
     `;
 
     document.getElementById('nextQuestionBtn').style.display = 'none';
-    document.getElementById('restartQuizBtn').style.display = 'inline-block';
+    document.getElementById('changeDifficultyBtn').style.display = 'inline-block';
   }
 };
 
