@@ -615,6 +615,34 @@ const NumberSystems = {
     document.getElementById('nextQuestionBtn').style.display = 'none';
   },
 
+  // Compare answers by parsing to integers based on target base
+  // This handles leading zeros (e.g., "0111" equals "111" in binary)
+  compareAnswers(userAnswer, correctAnswer, base) {
+    let userValue, correctValue;
+
+    switch (base) {
+      case 'binary':
+        if (!/^[01]+$/.test(userAnswer)) return false;
+        userValue = parseInt(userAnswer, 2);
+        correctValue = parseInt(correctAnswer, 2);
+        break;
+      case 'hex':
+        if (!/^[0-9A-F]+$/.test(userAnswer)) return false;
+        userValue = parseInt(userAnswer, 16);
+        correctValue = parseInt(correctAnswer, 16);
+        break;
+      case 'decimal':
+        if (!/^\d+$/.test(userAnswer)) return false;
+        userValue = parseInt(userAnswer, 10);
+        correctValue = parseInt(correctAnswer, 10);
+        break;
+      default:
+        return userAnswer === correctAnswer;
+    }
+
+    return userValue === correctValue;
+  },
+
   // Submit answer for hard mode (text input)
   submitAnswer() {
     if (this.quiz.answered) return;
@@ -629,7 +657,7 @@ const NumberSystems = {
 
     const q = this.quiz.questions[this.quiz.currentQuestion];
     const correctAnswer = q.correctAnswer.toUpperCase();
-    const isCorrect = userAnswer === correctAnswer;
+    const isCorrect = this.compareAnswers(userAnswer, correctAnswer, q.toBase);
 
     const feedback = document.getElementById('quizFeedback');
 
