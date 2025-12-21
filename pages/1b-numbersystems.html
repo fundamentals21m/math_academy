@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Systems - Magic Internet Math</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 12%"></div>
+    </div>
+
+    <h1>Number Systems: Binary, Decimal & Hex</h1>
+
+    <p>Before diving into cryptography, you need to speak the language of computers. Computers think in binary (1s and 0s), but humans prefer decimal (0-9). Hexadecimal (0-F) is a convenient middle ground used everywhere in cryptography.</p>
+
+    <div class="callout callout-info">
+      <strong>Why This Matters:</strong> Cryptographic keys, hashes, and addresses are almost always displayed in hexadecimal. Understanding these number systems is essential.
+    </div>
+
+    <h2>The Three Number Systems</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Binary (Base 2)</h3>
+        <p>Only two digits: <span style="color: var(--neon-cyan);">0</span> and <span style="color: var(--neon-cyan);">1</span></p>
+        <p>Each position is a power of 2</p>
+        <p style="font-family: monospace; color: var(--neon-green);">1010 = 8+0+2+0 = 10</p>
+      </div>
+      <div class="card">
+        <h3>Decimal (Base 10)</h3>
+        <p>Ten digits: <span style="color: var(--neon-cyan);">0-9</span></p>
+        <p>Each position is a power of 10</p>
+        <p style="font-family: monospace; color: var(--neon-green);">255 = 200+50+5</p>
+      </div>
+      <div class="card">
+        <h3>Hexadecimal (Base 16)</h3>
+        <p>Sixteen digits: <span style="color: var(--neon-cyan);">0-9, A-F</span></p>
+        <p>Each position is a power of 16</p>
+        <p style="font-family: monospace; color: var(--neon-green);">FF = 15×16 + 15 = 255</p>
+      </div>
+    </div>
+
+    <h2>Understanding Place Values</h2>
+
+    <p>In any number system, each position has a value based on the base raised to a power:</p>
+
+    <div class="demo-section">
+      <h3>Decimal: 425</h3>
+      <div class="steps-container">
+        <div class="step">
+          <span class="step-number">4</span>
+          <span>× 10² = 4 × 100 = <span class="step-result">400</span></span>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <span>× 10¹ = 2 × 10 = <span class="step-result">20</span></span>
+        </div>
+        <div class="step">
+          <span class="step-number">5</span>
+          <span>× 10⁰ = 5 × 1 = <span class="step-result">5</span></span>
+        </div>
+        <div class="step highlight">
+          <span>Total: 400 + 20 + 5 = <span class="step-result">425</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h3>Binary: 1101</h3>
+      <div class="steps-container">
+        <div class="step">
+          <span class="step-number">1</span>
+          <span>× 2³ = 1 × 8 = <span class="step-result">8</span></span>
+        </div>
+        <div class="step">
+          <span class="step-number">1</span>
+          <span>× 2² = 1 × 4 = <span class="step-result">4</span></span>
+        </div>
+        <div class="step">
+          <span class="step-number">0</span>
+          <span>× 2¹ = 0 × 2 = <span class="step-result">0</span></span>
+        </div>
+        <div class="step">
+          <span class="step-number">1</span>
+          <span>× 2⁰ = 1 × 1 = <span class="step-result">1</span></span>
+        </div>
+        <div class="step highlight">
+          <span>Total: 8 + 4 + 0 + 1 = <span class="step-result">13</span> (decimal)</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>Hexadecimal Digits</h2>
+
+    <p>Since hex needs 16 digits but we only have 0-9, we use letters A-F for values 10-15:</p>
+
+    <table class="data-table">
+      <tr>
+        <th>Hex</th>
+        <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+        <td>8</td><td>9</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td>
+      </tr>
+      <tr>
+        <th>Dec</th>
+        <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+        <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+      </tr>
+      <tr>
+        <th>Bin</th>
+        <td>0000</td><td>0001</td><td>0010</td><td>0011</td><td>0100</td><td>0101</td><td>0110</td><td>0111</td>
+        <td>1000</td><td>1001</td><td>1010</td><td>1011</td><td>1100</td><td>1101</td><td>1110</td><td>1111</td>
+      </tr>
+    </table>
+
+    <div class="callout callout-success">
+      <strong>Key Insight:</strong> Each hex digit represents exactly 4 binary digits. This makes converting between binary and hex very easy!
+    </div>
+
+    <h2>Try It: Interactive Converter</h2>
+
+    <div class="demo-section">
+      <h3>Convert Between Number Systems</h3>
+      <p>Enter a value in any field and the others will update automatically:</p>
+
+      <div style="display: grid; gap: 1rem; margin: 1.5rem 0;">
+        <div class="input-group">
+          <label for="decimalInput" style="min-width: 100px;">Decimal:</label>
+          <input type="text" id="decimalInput" placeholder="e.g., 255" style="width: 200px; font-family: monospace;">
+        </div>
+        <div class="input-group">
+          <label for="binaryInput" style="min-width: 100px;">Binary:</label>
+          <input type="text" id="binaryInput" placeholder="e.g., 11111111" style="width: 200px; font-family: monospace;">
+        </div>
+        <div class="input-group">
+          <label for="hexInput" style="min-width: 100px;">Hexadecimal:</label>
+          <input type="text" id="hexInput" placeholder="e.g., FF" style="width: 200px; font-family: monospace;">
+        </div>
+      </div>
+
+      <div id="conversionSteps" class="output-panel">
+        <span class="muted">Enter a number to see conversion steps...</span>
+      </div>
+    </div>
+
+    <h2>Converting Decimal to Binary</h2>
+
+    <p>To convert decimal to binary, repeatedly divide by 2 and track the remainders:</p>
+
+    <div class="demo-section">
+      <h3>Example: Convert 13 to Binary</h3>
+      <div class="steps-container">
+        <div class="step">13 ÷ 2 = 6 remainder <span class="step-result">1</span></div>
+        <div class="step">6 ÷ 2 = 3 remainder <span class="step-result">0</span></div>
+        <div class="step">3 ÷ 2 = 1 remainder <span class="step-result">1</span></div>
+        <div class="step">1 ÷ 2 = 0 remainder <span class="step-result">1</span></div>
+        <div class="step highlight">Read remainders bottom-up: <span class="step-result">1101</span></div>
+      </div>
+    </div>
+
+    <h2>Converting Decimal to Hex</h2>
+
+    <p>Same process, but divide by 16:</p>
+
+    <div class="demo-section">
+      <h3>Example: Convert 255 to Hex</h3>
+      <div class="steps-container">
+        <div class="step">255 ÷ 16 = 15 remainder <span class="step-result">15 (F)</span></div>
+        <div class="step">15 ÷ 16 = 0 remainder <span class="step-result">15 (F)</span></div>
+        <div class="step highlight">Read remainders bottom-up: <span class="step-result">FF</span></div>
+      </div>
+    </div>
+
+    <h2>Binary ↔ Hex Shortcut</h2>
+
+    <p>Since 16 = 2⁴, each hex digit maps to exactly 4 binary digits. This makes conversion easy:</p>
+
+    <div class="demo-section">
+      <h3>Example: Convert A7 (hex) to Binary</h3>
+      <div class="steps-container">
+        <div class="step">
+          <span class="step-number">A</span>
+          <span>= 10 = <span class="step-result">1010</span></span>
+        </div>
+        <div class="step">
+          <span class="step-number">7</span>
+          <span>= 7 = <span class="step-result">0111</span></span>
+        </div>
+        <div class="step highlight">Result: <span class="step-result">10100111</span></div>
+      </div>
+    </div>
+
+    <h2>Practice: Bit Visualization</h2>
+
+    <div class="demo-section">
+      <h3>8-Bit Binary Visualizer</h3>
+      <p>Click the bits to toggle them and see the decimal/hex values:</p>
+
+      <div id="bitVisualizer" style="display: flex; justify-content: center; gap: 0.5rem; margin: 1.5rem 0;">
+        <!-- Bits will be rendered by JavaScript -->
+      </div>
+
+      <div style="text-align: center; margin-top: 1rem;">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value" id="bitDecimal">0</div>
+            <div class="stat-label">Decimal</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="bitHex">00</div>
+            <div class="stat-label">Hexadecimal</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 1rem;">
+        <button class="btn btn-secondary btn-small" onclick="NumberSystems.clearBits()">Clear All</button>
+        <button class="btn btn-secondary btn-small" onclick="NumberSystems.setAllBits()">Set All</button>
+        <button class="btn btn-secondary btn-small" onclick="NumberSystems.randomBits()">Random</button>
+      </div>
+    </div>
+
+    <h2>Why Hex is Used in Cryptography</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Compact</h3>
+        <p>A 256-bit key is 64 hex characters vs 256 binary digits</p>
+      </div>
+      <div class="card">
+        <h3>Human Readable</h3>
+        <p>Easier to read, compare, and type than long binary strings</p>
+      </div>
+      <div class="card">
+        <h3>Byte Aligned</h3>
+        <p>2 hex digits = 1 byte = 8 bits. Perfect for computer memory!</p>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <strong>Real Example:</strong> A Bitcoin address like <code style="color: var(--neon-green);">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</code> uses Base58 (similar to hex but with more characters) to represent a 160-bit hash.
+    </div>
+
+    <div class="callout callout-success">
+      <strong>Up Next:</strong> Now that you understand how numbers are represented, let's learn about modular arithmetic, the mathematical foundation of cryptography.
+    </div>
+
+    <div class="page-nav">
+      <a href="1-intro.html" class="btn btn-secondary">Previous: Introduction</a>
+      <a href="2-modular.html" class="btn btn-primary">Next: Modular Arithmetic</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/numberSystems.js"></script>
+</body>
+</html>
