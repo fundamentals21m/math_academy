@@ -1,4 +1,4 @@
-// Number Systems Conversion Module
+// Numerical Bases Conversion Module
 
 const NumberSystems = {
   bits: [0, 0, 0, 0, 0, 0, 0, 0],
@@ -642,10 +642,10 @@ const NumberSystems = {
 
     let message, messageColor;
     if (percentage === 100) {
-      message = "Perfect score! You've mastered number system conversions!";
+      message = "Perfect score! You've mastered base conversions!";
       messageColor = 'var(--neon-green)';
     } else if (percentage >= 80) {
-      message = "Excellent work! You have a strong grasp of number conversions.";
+      message = "Excellent work! You have a strong grasp of base conversions.";
       messageColor = 'var(--neon-green)';
     } else if (percentage >= 60) {
       message = "Good effort! Practice a bit more with the converter above.";
