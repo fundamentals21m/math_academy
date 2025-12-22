@@ -329,6 +329,11 @@ const QuizSystem = {
   showResults() {
     const percentage = Math.round((this.score / quizQuestions.length) * 100);
 
+    // Report to gamification system
+    if (window.Gamification) {
+      window.Gamification.completeQuiz(this.score, quizQuestions.length);
+    }
+
     let message, messageClass;
     if (percentage === 100) {
       message = "Perfect score! You've mastered the mathematics of cryptography!";
@@ -344,6 +349,9 @@ const QuizSystem = {
       messageClass = 'error';
     }
 
+    // Calculate XP earned
+    const xpEarned = this.score * 5 + (percentage === 100 ? 100 : 0);
+
     document.getElementById('quizContainer').innerHTML = `
       <div class="card" style="text-align: center; padding: 3rem;">
         <h2>Quiz Complete!</h2>
@@ -355,6 +363,10 @@ const QuizSystem = {
           <div class="stat">
             <div class="stat-value">${percentage}%</div>
             <div class="stat-label">Score</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" style="color: var(--success);">+${xpEarned}</div>
+            <div class="stat-label">XP Earned</div>
           </div>
         </div>
         <p style="font-size: 1.1rem; color: var(--${messageClass});">${message}</p>
