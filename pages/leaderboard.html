@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard - Magic Internet Math</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+  <style>
+    .leaderboard-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .connect-section {
+      text-align: center;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 1rem;
+    }
+
+    .connect-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, var(--primary), #7c3aed);
+      color: white;
+      border: none;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .connect-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+    }
+
+    .connect-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .user-card {
+      padding: 1.5rem;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(168, 85, 247, 0.1));
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .user-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .user-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .user-info {
+      flex: 1;
+    }
+
+    .user-name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .user-npub {
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .user-rank {
+      text-align: right;
+    }
+
+    .user-rank-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .user-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(139, 92, 246, 0.2);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--warning);
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 0.25rem;
+      padding: 0.25rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 0.625rem 1rem;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .tab.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .tab:hover:not(.active) {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .leaderboard-table {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .leaderboard-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: background 0.2s;
+    }
+
+    .leaderboard-row:last-child {
+      border-bottom: none;
+    }
+
+    .leaderboard-row:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .leaderboard-row.current-user {
+      background: rgba(139, 92, 246, 0.1);
+      border-left: 3px solid var(--primary);
+    }
+
+    .rank-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+
+    .rank-1 {
+      background: rgba(251, 191, 36, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+
+    .rank-2 {
+      background: rgba(156, 163, 175, 0.2);
+      color: #9ca3af;
+      border: 1px solid rgba(156, 163, 175, 0.3);
+    }
+
+    .rank-3 {
+      background: rgba(251, 146, 60, 0.2);
+      color: #fb923c;
+      border: 1px solid rgba(251, 146, 60, 0.3);
+    }
+
+    .rank-default {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .row-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+
+    .row-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .row-name {
+      font-weight: 500;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .row-npub {
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .row-xp {
+      text-align: right;
+    }
+
+    .row-xp-value {
+      font-weight: 700;
+      color: var(--warning);
+    }
+
+    .row-xp-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .row-level {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .loading-skeleton {
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.7; }
+    }
+
+    .skeleton-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .skeleton-badge {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0.5rem;
+    }
+
+    .skeleton-avatar {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .skeleton-text {
+      height: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0.25rem;
+    }
+
+    .skeleton-text.short {
+      width: 100px;
+    }
+
+    .skeleton-text.medium {
+      width: 150px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-muted);
+    }
+
+    .error-message {
+      padding: 1rem;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 0.5rem;
+      color: #f87171;
+      margin-bottom: 1rem;
+    }
+
+    .extension-note {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+    }
+
+    .extension-note a {
+      color: var(--primary);
+    }
+
+    .disconnect-button {
+      padding: 0.375rem 0.75rem;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-muted);
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .disconnect-button:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html">Lessons</a></li>
+        <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="leaderboard-container">
+      <h1>Leaderboard</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">
+        Compete with other learners across all courses
+      </p>
+
+      <!-- Connect Section (shown when not authenticated) -->
+      <div id="connect-section" class="connect-section">
+        <h3>Connect to Join the Leaderboard</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          Link your Nostr identity to sync your progress and compete with other learners.
+        </p>
+        <button id="connect-button" class="connect-button">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          Connect with Nostr
+        </button>
+        <p class="extension-note" id="extension-note" style="display: none;">
+          No Nostr extension found. Install
+          <a href="https://github.com/nickytonline/nos2x" target="_blank">nos2x</a> or
+          <a href="https://getalby.com" target="_blank">Alby</a> to connect.
+        </p>
+      </div>
+
+      <!-- User Card (shown when authenticated) -->
+      <div id="user-card" class="user-card" style="display: none;">
+        <div class="user-card-header">
+          <div class="user-avatar" id="user-avatar">?</div>
+          <div class="user-info">
+            <div class="user-name" id="user-name">Loading...</div>
+            <div class="user-npub" id="user-npub">...</div>
+          </div>
+          <div class="user-rank">
+            <div class="user-rank-number" id="user-rank">#--</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Global Rank</div>
+          </div>
+          <button class="disconnect-button" id="disconnect-button">Disconnect</button>
+        </div>
+        <div class="user-stats">
+          <div class="stat-item">
+            <div class="stat-value" id="user-xp">0</div>
+            <div class="stat-label">Total XP</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="user-level">1</div>
+            <div class="stat-label">Level</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error Message -->
+      <div id="error-message" class="error-message" style="display: none;"></div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="overall">Overall</button>
+        <button class="tab" data-tab="ba">Basic Algebra</button>
+        <button class="tab" data-tab="crypto">Cryptography</button>
+        <button class="tab" data-tab="aa">Abstract Algebra</button>
+      </div>
+
+      <!-- Leaderboard Table -->
+      <div class="leaderboard-table" id="leaderboard-table">
+        <!-- Loading skeleton -->
+        <div id="loading-skeleton" class="loading-skeleton">
+          <div class="skeleton-row">
+            <div class="skeleton-badge"></div>
+            <div class="skeleton-avatar"></div>
+            <div style="flex: 1;">
+              <div class="skeleton-text medium" style="margin-bottom: 0.25rem;"></div>
+              <div class="skeleton-text short"></div>
+            </div>
+          </div>
+          <div class="skeleton-row">
+            <div class="skeleton-badge"></div>
+            <div class="skeleton-avatar"></div>
+            <div style="flex: 1;">
+              <div class="skeleton-text medium" style="margin-bottom: 0.25rem;"></div>
+              <div class="skeleton-text short"></div>
+            </div>
+          </div>
+          <div class="skeleton-row">
+            <div class="skeleton-badge"></div>
+            <div class="skeleton-avatar"></div>
+            <div style="flex: 1;">
+              <div class="skeleton-text medium" style="margin-bottom: 0.25rem;"></div>
+              <div class="skeleton-text short"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rankings will be inserted here -->
+        <div id="rankings-container"></div>
+
+        <!-- Empty state -->
+        <div id="empty-state" class="empty-state" style="display: none;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏆</div>
+          <p>No rankings yet</p>
+          <p style="font-size: 0.875rem;">Be the first to join the leaderboard!</p>
+        </div>
+      </div>
+
+      <p style="text-align: center; margin-top: 1rem; font-size: 0.75rem; color: var(--text-muted);">
+        Scores sync automatically when connected. Rankings update every few minutes.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Magic Internet Math</p>
+    <p>Making cryptography accessible through interactive learning.</p>
+  </footer>
+
+  <script type="module">
+    // Firebase configuration (placeholder - needs real config)
+    const FIREBASE_CONFIG = {
+      apiKey: 'YOUR_API_KEY',
+      authDomain: 'magic-internet-math.firebaseapp.com',
+      projectId: 'magic-internet-math',
+    };
+
+    // State
+    let currentTab = 'overall';
+    let isAuthenticated = false;
+    let userNpub = null;
+    let hasExtension = false;
+
+    // DOM elements
+    const connectSection = document.getElementById('connect-section');
+    const userCard = document.getElementById('user-card');
+    const connectButton = document.getElementById('connect-button');
+    const disconnectButton = document.getElementById('disconnect-button');
+    const extensionNote = document.getElementById('extension-note');
+    const errorMessage = document.getElementById('error-message');
+    const loadingSkeleton = document.getElementById('loading-skeleton');
+    const rankingsContainer = document.getElementById('rankings-container');
+    const emptyState = document.getElementById('empty-state');
+    const tabs = document.querySelectorAll('.tab');
+
+    // Check for Nostr extension
+    function checkNostrExtension() {
+      hasExtension = typeof window.nostr !== 'undefined';
+      if (!hasExtension) {
+        extensionNote.style.display = 'block';
+        connectButton.disabled = true;
+      }
+      return hasExtension;
+    }
+
+    // Shorten npub for display
+    function shortenNpub(npub, chars = 8) {
+      if (!npub || npub.length <= chars * 2 + 3) return npub;
+      return `${npub.slice(0, chars)}...${npub.slice(-chars)}`;
+    }
+
+    // Get rank badge class
+    function getRankBadgeClass(rank) {
+      if (rank === 1) return 'rank-1';
+      if (rank === 2) return 'rank-2';
+      if (rank === 3) return 'rank-3';
+      return 'rank-default';
+    }
+
+    // Get avatar gradient
+    function getAvatarGradient(rank) {
+      if (rank === 1) return 'linear-gradient(135deg, #fbbf24, #d97706)';
+      if (rank === 2) return 'linear-gradient(135deg, #9ca3af, #6b7280)';
+      if (rank === 3) return 'linear-gradient(135deg, #fb923c, #ea580c)';
+      return 'linear-gradient(135deg, #8b5cf6, #7c3aed)';
+    }
+
+    // Render leaderboard row
+    function renderRow(entry, isCurrentUser) {
+      const initial = entry.displayName?.[0]?.toUpperCase() || entry.npub?.[5]?.toUpperCase() || '?';
+      const name = entry.displayName || shortenNpub(entry.npub, 8);
+
+      return `
+        <div class="leaderboard-row ${isCurrentUser ? 'current-user' : ''}">
+          <div class="rank-badge ${getRankBadgeClass(entry.rank)}">
+            ${entry.rank <= 3 ? ['1st', '2nd', '3rd'][entry.rank - 1] : entry.rank}
+          </div>
+          <div class="row-avatar" style="background: ${getAvatarGradient(entry.rank)}">
+            ${initial}
+          </div>
+          <div class="row-info">
+            <div class="row-name">
+              ${name}
+              ${isCurrentUser ? '<span style="background: rgba(139, 92, 246, 0.2); color: #a78bfa; padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-size: 0.75rem; margin-left: 0.5rem;">You</span>' : ''}
+            </div>
+            ${entry.displayName ? `<div class="row-npub">${shortenNpub(entry.npub, 6)}</div>` : ''}
+          </div>
+          <div class="row-xp">
+            <div class="row-xp-value">${entry.xp.toLocaleString()} <span style="font-size: 0.75rem; color: var(--text-muted);">XP</span></div>
+            <div class="row-level">Level ${entry.level}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Load mock leaderboard data (replace with Firebase calls)
+    async function loadLeaderboard() {
+      loadingSkeleton.style.display = 'block';
+      rankingsContainer.innerHTML = '';
+      emptyState.style.display = 'none';
+      errorMessage.style.display = 'none';
+
+      try {
+        // Mock data - replace with actual Firebase calls
+        await new Promise(resolve => setTimeout(resolve, 500));
+
+        const mockData = [
+          { rank: 1, npub: 'npub1abc123def456...', displayName: 'Alice', xp: 12500, level: 15 },
+          { rank: 2, npub: 'npub1xyz789ghi012...', displayName: 'Bob', xp: 11200, level: 14 },
+          { rank: 3, npub: 'npub1mno345pqr678...', displayName: null, xp: 9800, level: 12 },
+          { rank: 4, npub: 'npub1stu901vwx234...', displayName: 'Charlie', xp: 8500, level: 11 },
+          { rank: 5, npub: 'npub1yza567bcd890...', displayName: 'Diana', xp: 7200, level: 10 },
+        ];
+
+        loadingSkeleton.style.display = 'none';
+
+        if (mockData.length === 0) {
+          emptyState.style.display = 'block';
+          return;
+        }
+
+        rankingsContainer.innerHTML = mockData
+          .map(entry => renderRow(entry, entry.npub === userNpub))
+          .join('');
+      } catch (error) {
+        loadingSkeleton.style.display = 'none';
+        errorMessage.textContent = error.message || 'Failed to load leaderboard';
+        errorMessage.style.display = 'block';
+      }
+    }
+
+    // Connect with Nostr
+    async function connect() {
+      if (!hasExtension) return;
+
+      connectButton.disabled = true;
+      connectButton.innerHTML = `
+        <span style="display: inline-block; width: 16px; height: 16px; border: 2px solid white; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;"></span>
+        Connecting...
+      `;
+
+      try {
+        // Get public key from extension
+        const pubkeyHex = await window.nostr.getPublicKey();
+
+        // For now, just show the user as connected (full Firebase auth would go here)
+        userNpub = `npub1${pubkeyHex.slice(0, 20)}...`;
+        isAuthenticated = true;
+
+        // Update UI
+        connectSection.style.display = 'none';
+        userCard.style.display = 'block';
+        document.getElementById('user-avatar').textContent = pubkeyHex[0].toUpperCase();
+        document.getElementById('user-name').textContent = shortenNpub(userNpub, 12);
+        document.getElementById('user-npub').textContent = shortenNpub(userNpub, 8);
+
+        // Load local XP
+        loadLocalXP();
+
+        // Reload leaderboard
+        loadLeaderboard();
+      } catch (error) {
+        errorMessage.textContent = error.message || 'Failed to connect';
+        errorMessage.style.display = 'block';
+      } finally {
+        connectButton.disabled = false;
+        connectButton.innerHTML = `
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          Connect with Nostr
+        `;
+      }
+    }
+
+    // Disconnect
+    function disconnect() {
+      isAuthenticated = false;
+      userNpub = null;
+      connectSection.style.display = 'block';
+      userCard.style.display = 'none';
+      loadLeaderboard();
+    }
+
+    // Load local XP from localStorage
+    function loadLocalXP() {
+      try {
+        const stored = localStorage.getItem('magic-internet-math-progress');
+        if (!stored) return;
+
+        const state = JSON.parse(stored);
+        let totalXP = 0;
+
+        // Calculate total XP from sections
+        if (state.sections) {
+          for (const sectionData of Object.values(state.sections)) {
+            const section = sectionData;
+            if (section.quizAttempts) {
+              for (const attempt of section.quizAttempts) {
+                if (attempt.xpEarned) totalXP += attempt.xpEarned;
+              }
+            }
+            if (section.visitedAt) totalXP += 10;
+            if (section.completedAt) totalXP += 25;
+            if (section.visualizationsInteracted) {
+              totalXP += section.visualizationsInteracted.length * 5;
+            }
+          }
+        }
+
+        const level = Math.floor(Math.sqrt(totalXP / 100)) + 1;
+
+        document.getElementById('user-xp').textContent = totalXP.toLocaleString();
+        document.getElementById('user-level').textContent = level;
+      } catch (error) {
+        console.error('Error loading local XP:', error);
+      }
+    }
+
+    // Tab switching
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentTab = tab.dataset.tab;
+        loadLeaderboard();
+      });
+    });
+
+    // Event listeners
+    connectButton.addEventListener('click', connect);
+    disconnectButton.addEventListener('click', disconnect);
+
+    // Initialize
+    checkNostrExtension();
+    loadLeaderboard();
+
+    // Add spinner animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
