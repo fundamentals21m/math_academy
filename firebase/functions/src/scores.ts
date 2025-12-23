@@ -13,18 +13,18 @@ interface ScoreUpdate {
  * Called by authenticated users to sync their local progress
  */
 export const syncScores = functions.https.onCall(
-  async (request): Promise<{ success: boolean; totalXP: number }> => {
-    if (!request.auth) {
+  async (
+    data: { scores?: ScoreUpdate[]; displayName?: string | null },
+    context
+  ): Promise<{ success: boolean; totalXP: number }> => {
+    if (!context.auth) {
       throw new functions.https.HttpsError(
         'unauthenticated',
         'Authentication required'
       );
     }
 
-    const { scores, displayName } = request.data as {
-      scores?: ScoreUpdate[];
-      displayName?: string | null;
-    };
+    const { scores, displayName } = data || {};
 
     if (!scores || !Array.isArray(scores)) {
       throw new functions.https.HttpsError(
@@ -33,7 +33,7 @@ export const syncScores = functions.https.onCall(
       );
     }
 
-    const npub = request.auth.uid;
+    const npub = context.auth.uid;
     const userRef = admin.firestore().collection('users').doc(npub);
     const userDoc = await userRef.get();
 
@@ -121,7 +121,10 @@ export const syncScores = functions.https.onCall(
  * Get leaderboard for a specific course or overall
  */
 export const getLeaderboard = functions.https.onCall(
-  async (request): Promise<{
+  async (
+    data: { courseId?: CourseId | 'overall'; limit?: number },
+    context
+  ): Promise<{
     rankings: Array<{
       rank: number;
       npub: string;
@@ -131,10 +134,7 @@ export const getLeaderboard = functions.https.onCall(
     }>;
     userRank: number | null;
   }> => {
-    const { courseId, limit = 50 } = request.data as {
-      courseId?: CourseId | 'overall';
-      limit?: number;
-    };
+    const { courseId, limit = 50 } = data || {};
 
     const validOptions = ['ba', 'crypto', 'aa', 'overall'];
     if (!courseId || !validOptions.includes(courseId)) {
@@ -226,8 +226,8 @@ export const getLeaderboard = functions.https.onCall(
 
     // Find user's rank if authenticated
     let userRank: number | null = null;
-    if (request.auth) {
-      const npub = request.auth.uid;
+    if (context.auth) {
+      const npub = context.auth.uid;
       const userIndex = rankings.findIndex(r => r.npub === npub);
 
       if (userIndex !== -1) {

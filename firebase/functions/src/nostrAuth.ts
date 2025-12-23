@@ -2,7 +2,7 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import { schnorr } from '@noble/curves/secp256k1';
 import { sha256 } from '@noble/hashes/sha256';
-import { bytesToHex, hexToBytes } from '@noble/hashes/utils';
+import { bytesToHex, hexToBytes, randomBytes } from '@noble/hashes/utils';
 
 const CHALLENGE_EXPIRY_MS = 5 * 60 * 1000; // 5 minutes
 
@@ -20,8 +20,8 @@ interface NostrEvent {
  * Generate a unique challenge for Nostr authentication
  */
 export const createChallenge = functions.https.onCall(
-  async (request): Promise<{ challenge: string; expiresAt: number }> => {
-    const { pubkeyHex } = request.data as { pubkeyHex?: string };
+  async (data: { pubkeyHex?: string }): Promise<{ challenge: string; expiresAt: number }> => {
+    const { pubkeyHex } = data || {};
 
     if (!pubkeyHex || typeof pubkeyHex !== 'string' || pubkeyHex.length !== 64) {
       throw new functions.https.HttpsError(
@@ -38,7 +38,7 @@ export const createChallenge = functions.https.onCall(
       );
     }
 
-    const challenge = bytesToHex(crypto.getRandomValues(new Uint8Array(32)));
+    const challenge = bytesToHex(randomBytes(32));
     const expiresAt = Date.now() + CHALLENGE_EXPIRY_MS;
 
     // Store challenge in Firestore
@@ -57,11 +57,8 @@ export const createChallenge = functions.https.onCall(
  * Verify Nostr signed event and return Firebase custom auth token
  */
 export const verifyNostrAndCreateToken = functions.https.onCall(
-  async (request): Promise<{ token: string; npub: string }> => {
-    const { signedEvent, challenge } = request.data as {
-      signedEvent?: NostrEvent;
-      challenge?: string;
-    };
+  async (data: { signedEvent?: NostrEvent; challenge?: string }): Promise<{ token: string; npub: string }> => {
+    const { signedEvent, challenge } = data || {};
 
     if (!signedEvent || !challenge) {
       throw new functions.https.HttpsError(

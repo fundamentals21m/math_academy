@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
-interface AuthData {
+interface AuthContext {
   uid: string;
   token?: Record<string, unknown>;
 }
@@ -9,7 +9,7 @@ interface AuthData {
 /**
  * Check if the caller is an admin
  */
-async function requireAdmin(auth: AuthData | undefined): Promise<void> {
+async function requireAdmin(auth: AuthContext | undefined): Promise<void> {
   if (!auth) {
     throw new functions.https.HttpsError(
       'unauthenticated',
@@ -34,13 +34,13 @@ async function requireAdmin(auth: AuthData | undefined): Promise<void> {
  * Ban a user from the leaderboard
  */
 export const banUser = functions.https.onCall(
-  async (request): Promise<{ success: boolean }> => {
-    await requireAdmin(request.auth);
+  async (
+    data: { targetNpub?: string; reason?: string },
+    context
+  ): Promise<{ success: boolean }> => {
+    await requireAdmin(context.auth);
 
-    const { targetNpub, reason } = request.data as {
-      targetNpub?: string;
-      reason?: string;
-    };
+    const { targetNpub, reason } = data || {};
 
     if (!targetNpub || typeof targetNpub !== 'string') {
       throw new functions.https.HttpsError(
@@ -70,7 +70,7 @@ export const banUser = functions.https.onCall(
     await userRef.update({
       banned: true,
       bannedAt: admin.firestore.FieldValue.serverTimestamp(),
-      bannedBy: request.auth!.uid,
+      bannedBy: context.auth!.uid,
       banReason: reason || null,
     });
 
@@ -78,7 +78,7 @@ export const banUser = functions.https.onCall(
     await admin.firestore().collection('adminLogs').add({
       action: 'ban',
       targetNpub,
-      adminNpub: request.auth!.uid,
+      adminNpub: context.auth!.uid,
       reason: reason || null,
       timestamp: admin.firestore.FieldValue.serverTimestamp(),
     });
@@ -91,10 +91,13 @@ export const banUser = functions.https.onCall(
  * Unban a user
  */
 export const unbanUser = functions.https.onCall(
-  async (request): Promise<{ success: boolean }> => {
-    await requireAdmin(request.auth);
+  async (
+    data: { targetNpub?: string },
+    context
+  ): Promise<{ success: boolean }> => {
+    await requireAdmin(context.auth);
 
-    const { targetNpub } = request.data as { targetNpub?: string };
+    const { targetNpub } = data || {};
 
     if (!targetNpub || typeof targetNpub !== 'string') {
       throw new functions.https.HttpsError(
@@ -116,14 +119,14 @@ export const unbanUser = functions.https.onCall(
     await userRef.update({
       banned: false,
       unbannedAt: admin.firestore.FieldValue.serverTimestamp(),
-      unbannedBy: request.auth!.uid,
+      unbannedBy: context.auth!.uid,
     });
 
     // Log the action
     await admin.firestore().collection('adminLogs').add({
       action: 'unban',
       targetNpub,
-      adminNpub: request.auth!.uid,
+      adminNpub: context.auth!.uid,
       timestamp: admin.firestore.FieldValue.serverTimestamp(),
     });
 
@@ -135,13 +138,13 @@ export const unbanUser = functions.https.onCall(
  * Reset a user's scores (for cheating)
  */
 export const resetUserScores = functions.https.onCall(
-  async (request): Promise<{ success: boolean }> => {
-    await requireAdmin(request.auth);
+  async (
+    data: { targetNpub?: string; reason?: string },
+    context
+  ): Promise<{ success: boolean }> => {
+    await requireAdmin(context.auth);
 
-    const { targetNpub, reason } = request.data as {
-      targetNpub?: string;
-      reason?: string;
-    };
+    const { targetNpub, reason } = data || {};
 
     if (!targetNpub || typeof targetNpub !== 'string') {
       throw new functions.https.HttpsError(
@@ -176,7 +179,7 @@ export const resetUserScores = functions.https.onCall(
       scores: { ba: 0, crypto: 0, aa: 0 },
       level: 1,
       scoresResetAt: admin.firestore.FieldValue.serverTimestamp(),
-      scoresResetBy: request.auth!.uid,
+      scoresResetBy: context.auth!.uid,
     });
 
     // Delete score documents
@@ -195,7 +198,7 @@ export const resetUserScores = functions.https.onCall(
     await admin.firestore().collection('adminLogs').add({
       action: 'reset_scores',
       targetNpub,
-      adminNpub: request.auth!.uid,
+      adminNpub: context.auth!.uid,
       reason: reason || null,
       timestamp: admin.firestore.FieldValue.serverTimestamp(),
     });
@@ -208,10 +211,13 @@ export const resetUserScores = functions.https.onCall(
  * Get admin logs
  */
 export const getAdminLogs = functions.https.onCall(
-  async (request): Promise<{ logs: unknown[] }> => {
-    await requireAdmin(request.auth);
+  async (
+    data: { limit?: number },
+    context
+  ): Promise<{ logs: unknown[] }> => {
+    await requireAdmin(context.auth);
 
-    const { limit = 50 } = request.data as { limit?: number };
+    const { limit = 50 } = data || {};
 
     const logsSnapshot = await admin.firestore()
       .collection('adminLogs')
