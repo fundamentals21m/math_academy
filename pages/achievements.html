@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements - Magic Internet Math</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+  <style>
+    .achievements-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .achievements-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .achievements-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 1rem;
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--warning);
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .achievements-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .achievement-card {
+      position: relative;
+      padding: 1rem 1.25rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: all 0.2s;
+    }
+
+    .achievement-card.unlocked {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(251, 146, 60, 0.05));
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+
+    .achievement-card.locked {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      opacity: 0.6;
+    }
+
+    .achievement-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .achievement-card.unlocked .achievement-icon {
+      background: rgba(251, 191, 36, 0.2);
+    }
+
+    .achievement-card.locked .achievement-icon {
+      background: rgba(255, 255, 255, 0.05);
+      filter: grayscale(1);
+    }
+
+    .achievement-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .achievement-name {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .achievement-card.unlocked .achievement-name {
+      color: var(--text-primary);
+    }
+
+    .achievement-card.locked .achievement-name {
+      color: var(--text-muted);
+    }
+
+    .achievement-description {
+      font-size: 0.875rem;
+    }
+
+    .achievement-card.unlocked .achievement-description {
+      color: var(--text-secondary);
+    }
+
+    .achievement-card.locked .achievement-description {
+      color: var(--text-muted);
+    }
+
+    .achievement-progress {
+      margin-top: 0.5rem;
+    }
+
+    .progress-bar-bg {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), #06b6d4);
+      border-radius: 3px;
+      transition: width 0.3s;
+    }
+
+    .progress-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .achievement-check {
+      color: #fbbf24;
+      flex-shrink: 0;
+    }
+
+    .achievement-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    .category-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .category-title:first-of-type {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html">Lessons</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="achievements.html" class="active">Achievements</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="achievements-container">
+      <div class="achievements-header">
+        <h1>Achievements</h1>
+        <p style="color: var(--text-muted);">
+          Track your progress and unlock achievements as you learn
+        </p>
+      </div>
+
+      <div class="achievements-stats">
+        <div class="stat-card">
+          <div class="stat-value" id="unlocked-count">0</div>
+          <div class="stat-label">Unlocked</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="total-xp">0</div>
+          <div class="stat-label">Total XP</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="current-streak">0</div>
+          <div class="stat-label">Day Streak</div>
+        </div>
+      </div>
+
+      <div class="achievements-grid" id="achievements-grid">
+        <!-- Achievements will be inserted here -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Magic Internet Math</p>
+    <p>Making cryptography accessible through interactive learning.</p>
+  </footer>
+
+  <script src="../scripts/gamification.js"></script>
+  <script>
+    // Achievement definitions with categories
+    const ACHIEVEMENT_DEFS = [
+      // Progress
+      { id: 'first-steps', name: 'First Steps', description: 'Complete your first lesson', icon: '🎯', category: 'progress' },
+      { id: 'explorer', name: 'Explorer', description: 'Visit lessons in all 3 courses', icon: '🧭', category: 'progress' },
+      { id: 'crypto-curious', name: 'Crypto Curious', description: 'Complete 5 cryptography lessons', icon: '🔐', category: 'progress', progressTarget: 5 },
+
+      // Mastery
+      { id: 'quiz-master', name: 'Quiz Master', description: 'Get 100% on any quiz', icon: '⭐', category: 'mastery' },
+      { id: 'math-master', name: 'Math Master', description: 'Reach level 10', icon: '🏆', category: 'mastery', progressTarget: 10 },
+
+      // Dedication
+      { id: 'streak-starter', name: 'Streak Starter', description: 'Maintain a 3-day streak', icon: '🔥', category: 'dedication', progressTarget: 3 },
+      { id: 'week-warrior', name: 'Week Warrior', description: 'Maintain a 7-day streak', icon: '💪', category: 'dedication', progressTarget: 7 },
+
+      // Exploration
+      { id: 'curious-mind', name: 'Curious Mind', description: 'Interact with 10 demos', icon: '🔬', category: 'exploration', progressTarget: 10 },
+    ];
+
+    const CATEGORIES = {
+      progress: 'Progress',
+      mastery: 'Mastery',
+      dedication: 'Dedication',
+      exploration: 'Exploration'
+    };
+
+    function getAchievementProgress(state, def) {
+      switch (def.id) {
+        case 'crypto-curious':
+          return state.user.sectionsCompleted.filter(id => id.startsWith('crypto:')).length;
+        case 'math-master':
+          return state.user.level;
+        case 'streak-starter':
+        case 'week-warrior':
+          return state.streak.currentStreak;
+        case 'curious-mind':
+          return state.user.visualizationsUsed || 0;
+        default:
+          return 0;
+      }
+    }
+
+    function renderAchievements() {
+      const state = window.Gamification?.state;
+      if (!state) return;
+
+      // Update stats
+      const unlockedCount = state.achievements.filter(a => a.unlockedAt).length;
+      document.getElementById('unlocked-count').textContent = unlockedCount;
+      document.getElementById('total-xp').textContent = state.user.totalXP.toLocaleString();
+      document.getElementById('current-streak').textContent = state.streak.currentStreak;
+
+      // Group by category
+      const byCategory = {};
+      for (const cat of Object.keys(CATEGORIES)) {
+        byCategory[cat] = [];
+      }
+
+      for (const def of ACHIEVEMENT_DEFS) {
+        const progress = state.achievements.find(a => a.id === def.id);
+        byCategory[def.category].push({
+          ...def,
+          unlockedAt: progress?.unlockedAt || null,
+          currentProgress: getAchievementProgress(state, def)
+        });
+      }
+
+      // Render
+      const grid = document.getElementById('achievements-grid');
+      grid.innerHTML = '';
+
+      for (const [category, achievements] of Object.entries(byCategory)) {
+        if (achievements.length === 0) continue;
+
+        // Category title
+        const title = document.createElement('h2');
+        title.className = 'category-title';
+        title.textContent = CATEGORIES[category];
+        grid.appendChild(title);
+
+        // Sort: unlocked first
+        achievements.sort((a, b) => {
+          if (a.unlockedAt && !b.unlockedAt) return -1;
+          if (!a.unlockedAt && b.unlockedAt) return 1;
+          return 0;
+        });
+
+        for (const achievement of achievements) {
+          const isUnlocked = achievement.unlockedAt !== null;
+          const hasProgress = achievement.progressTarget && !isUnlocked;
+          const progressPercent = hasProgress
+            ? Math.min(100, Math.round((achievement.currentProgress / achievement.progressTarget) * 100))
+            : 0;
+
+          const card = document.createElement('div');
+          card.className = `achievement-card ${isUnlocked ? 'unlocked' : 'locked'}`;
+
+          card.innerHTML = `
+            <div class="achievement-icon">${achievement.icon}</div>
+            <div class="achievement-info">
+              <div class="achievement-name">${achievement.name}</div>
+              <div class="achievement-description">${achievement.description}</div>
+              ${hasProgress ? `
+                <div class="achievement-progress">
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: ${progressPercent}%"></div>
+                  </div>
+                  <div class="progress-text">${achievement.currentProgress} / ${achievement.progressTarget}</div>
+                </div>
+              ` : ''}
+              ${isUnlocked ? `
+                <div class="achievement-date">Unlocked ${new Date(achievement.unlockedAt).toLocaleDateString()}</div>
+              ` : ''}
+            </div>
+            ${isUnlocked ? `
+              <div class="achievement-check">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            ` : ''}
+          `;
+
+          grid.appendChild(card);
+        }
+      }
+    }
+
+    // Wait for gamification to load then render
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(renderAchievements, 100);
+      });
+    } else {
+      setTimeout(renderAchievements, 100);
+    }
+  </script>
+</body>
+</html>
