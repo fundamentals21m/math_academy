@@ -183,11 +183,13 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
         // User is signed in
         setNpub(user.uid);
 
-        // Get custom claims from ID token
+        // Get custom claims from ID token (force refresh to get latest claims)
         try {
-          const tokenResult = await user.getIdTokenResult();
+          const tokenResult = await user.getIdTokenResult(true);
+          console.log('[NostrAuth] Token claims:', tokenResult.claims);
           setIsAdmin(tokenResult.claims.isAdmin === true);
-        } catch {
+        } catch (err) {
+          console.error('[NostrAuth] Error getting token:', err);
           setIsAdmin(false);
         }
 
