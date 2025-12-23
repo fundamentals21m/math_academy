@@ -4,22 +4,20 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // Single Page App redirect for GitHub Pages
-      // Converts /path to /?p=/path so index.html can handle it
-      const path = window.location.pathname;
-      const search = window.location.search;
-      const hash = window.location.hash;
-
-      // Redirect to index with path as query param
+      // Single Page App routing for GitHub Pages
+      // Redirect to index.html with the path as a query param
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
       window.location.replace(
-        window.location.origin + '/math_academy/ba/' +
-        '?p=' + encodeURIComponent(path.replace('/math_academy/ba/', '/')) +
-        (search ? '&' + search.slice(1) : '') +
+        window.location.origin + '/math_academy/ba/?p=' + 
+        encodeURIComponent(path.replace('/math_academy/ba', '')) + 
+        (search ? '&' + search.slice(1) : '') + 
         hash
       );
     </script>
   </head>
   <body>
-    Redirecting...
+    <p>Redirecting...</p>
   </body>
 </html>
