@@ -158,6 +158,10 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
           const profileName = profile.display_name || profile.name;
           if (profileName) {
             setDisplayNameState(profileName);
+            // Sync display name to Firebase
+            const syncManager = getSyncManager();
+            syncManager.setDisplayName(profileName);
+            syncManager.requestSync();
           }
           return;
         }
