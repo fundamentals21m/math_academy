@@ -484,12 +484,25 @@
   </footer>
 
   <script type="module">
-    // Firebase configuration (placeholder - needs real config)
+    // Firebase SDK imports
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js';
+    import { getAuth, signInWithCustomToken, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js';
+    import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.14.0/firebase-functions.js';
+
+    // Firebase configuration
     const FIREBASE_CONFIG = {
-      apiKey: 'YOUR_API_KEY',
-      authDomain: 'magic-internet-math.firebaseapp.com',
-      projectId: 'magic-internet-math',
+      apiKey: '***REMOVED***',
+      authDomain: 'magic-internet-math-96630.firebaseapp.com',
+      projectId: 'magic-internet-math-96630',
+      storageBucket: 'magic-internet-math-96630.firebasestorage.app',
+      messagingSenderId: '***REMOVED***',
+      appId: '1:***REMOVED***:web:072f6cb1724919360f94cb',
     };
+
+    // Initialize Firebase
+    const app = initializeApp(FIREBASE_CONFIG);
+    const auth = getAuth(app);
+    const functions = getFunctions(app);
 
     // State
     let currentTab = 'overall';
@@ -569,7 +582,7 @@
       `;
     }
 
-    // Load mock leaderboard data (replace with Firebase calls)
+    // Load leaderboard data from Firebase
     async function loadLeaderboard() {
       loadingSkeleton.style.display = 'block';
       rankingsContainer.innerHTML = '';
@@ -577,32 +590,104 @@
       errorMessage.style.display = 'none';
 
       try {
-        // Mock data - replace with actual Firebase calls
-        await new Promise(resolve => setTimeout(resolve, 500));
+        // Call the getLeaderboard Cloud Function
+        const getLeaderboard = httpsCallable(functions, 'getLeaderboard');
+        const result = await getLeaderboard({
+          courseId: currentTab === 'overall' ? undefined : currentTab,
+          limit: 50
+        });
 
-        const mockData = [
-          { rank: 1, npub: 'npub1abc123def456...', displayName: 'Alice', xp: 12500, level: 15 },
-          { rank: 2, npub: 'npub1xyz789ghi012...', displayName: 'Bob', xp: 11200, level: 14 },
-          { rank: 3, npub: 'npub1mno345pqr678...', displayName: null, xp: 9800, level: 12 },
-          { rank: 4, npub: 'npub1stu901vwx234...', displayName: 'Charlie', xp: 8500, level: 11 },
-          { rank: 5, npub: 'npub1yza567bcd890...', displayName: 'Diana', xp: 7200, level: 10 },
-        ];
+        const leaderboardData = result.data.leaderboard || [];
 
         loadingSkeleton.style.display = 'none';
 
-        if (mockData.length === 0) {
+        if (leaderboardData.length === 0) {
           emptyState.style.display = 'block';
           return;
         }
 
-        rankingsContainer.innerHTML = mockData
+        // Update user rank if found in leaderboard
+        if (userNpub) {
+          const userEntry = leaderboardData.find(entry => entry.npub === userNpub);
+          if (userEntry) {
+            document.getElementById('user-rank').textContent = `#${userEntry.rank}`;
+            document.getElementById('user-xp').textContent = userEntry.xp.toLocaleString();
+            document.getElementById('user-level').textContent = userEntry.level;
+          }
+        }
+
+        rankingsContainer.innerHTML = leaderboardData
           .map(entry => renderRow(entry, entry.npub === userNpub))
           .join('');
       } catch (error) {
+        console.error('Load leaderboard error:', error);
         loadingSkeleton.style.display = 'none';
         errorMessage.textContent = error.message || 'Failed to load leaderboard';
         errorMessage.style.display = 'block';
       }
+    }
+
+    // Hex to npub conversion (bech32)
+    function hexToNpub(hex) {
+      const ALPHABET = 'qpzry9x8gf2tvdw0s3jn54khce6mua7l';
+      const PREFIX = 'npub';
+
+      const bytes = [];
+      for (let i = 0; i < hex.length; i += 2) {
+        bytes.push(parseInt(hex.substr(i, 2), 16));
+      }
+
+      const bits = [];
+      for (const byte of bytes) {
+        for (let i = 7; i >= 0; i--) {
+          bits.push((byte >> i) & 1);
+        }
+      }
+
+      while (bits.length % 5 !== 0) bits.push(0);
+
+      const data = [];
+      for (let i = 0; i < bits.length; i += 5) {
+        let value = 0;
+        for (let j = 0; j < 5; j++) {
+          value = (value << 1) | bits[i + j];
+        }
+        data.push(value);
+      }
+
+      // Bech32 checksum
+      const GENERATOR = [0x3b6a57b2, 0x26508e6d, 0x1ea119fa, 0x3d4233dd, 0x2a1462b3];
+      function polymod(values) {
+        let chk = 1;
+        for (const v of values) {
+          const top = chk >> 25;
+          chk = ((chk & 0x1ffffff) << 5) ^ v;
+          for (let i = 0; i < 5; i++) {
+            if ((top >> i) & 1) chk ^= GENERATOR[i];
+          }
+        }
+        return chk;
+      }
+
+      function hrpExpand(hrp) {
+        const result = [];
+        for (const c of hrp) result.push(c.charCodeAt(0) >> 5);
+        result.push(0);
+        for (const c of hrp) result.push(c.charCodeAt(0) & 31);
+        return result;
+      }
+
+      const values = [...hrpExpand(PREFIX), ...data, 0, 0, 0, 0, 0, 0];
+      const mod = polymod(values) ^ 1;
+      const checksum = [];
+      for (let i = 0; i < 6; i++) {
+        checksum.push((mod >> (5 * (5 - i))) & 31);
+      }
+
+      let result = PREFIX + '1';
+      for (const d of data) result += ALPHABET[d];
+      for (const c of checksum) result += ALPHABET[c];
+      return result;
     }
 
     // Connect with Nostr
@@ -618,24 +703,47 @@
       try {
         // Get public key from extension
         const pubkeyHex = await window.nostr.getPublicKey();
+        const npub = hexToNpub(pubkeyHex);
 
-        // For now, just show the user as connected (full Firebase auth would go here)
-        userNpub = `npub1${pubkeyHex.slice(0, 20)}...`;
+        // Step 1: Request challenge from server
+        const createChallenge = httpsCallable(functions, 'createChallenge');
+        const challengeResult = await createChallenge({ pubkeyHex });
+        const challenge = challengeResult.data.challenge;
+
+        // Step 2: Sign the challenge
+        const unsignedEvent = {
+          kind: 22242,
+          created_at: Math.floor(Date.now() / 1000),
+          tags: [['challenge', challenge]],
+          content: challenge,
+        };
+        const signedEvent = await window.nostr.signEvent(unsignedEvent);
+
+        // Step 3: Verify signature and get Firebase token
+        const verifyNostr = httpsCallable(functions, 'verifyNostrAndCreateToken');
+        const verifyResult = await verifyNostr({ signedEvent, challenge });
+
+        // Step 4: Sign in to Firebase
+        await signInWithCustomToken(auth, verifyResult.data.token);
+
+        userNpub = npub;
         isAuthenticated = true;
 
         // Update UI
         connectSection.style.display = 'none';
         userCard.style.display = 'block';
-        document.getElementById('user-avatar').textContent = pubkeyHex[0].toUpperCase();
-        document.getElementById('user-name').textContent = shortenNpub(userNpub, 12);
-        document.getElementById('user-npub').textContent = shortenNpub(userNpub, 8);
+        document.getElementById('user-avatar').textContent = npub[5].toUpperCase();
+        document.getElementById('user-name').textContent = shortenNpub(npub, 12);
+        document.getElementById('user-npub').textContent = shortenNpub(npub, 8);
 
-        // Load local XP
+        // Load local XP and sync
         loadLocalXP();
+        syncScores();
 
         // Reload leaderboard
         loadLeaderboard();
       } catch (error) {
+        console.error('Connect error:', error);
         errorMessage.textContent = error.message || 'Failed to connect';
         errorMessage.style.display = 'block';
       } finally {
@@ -649,8 +757,56 @@
       }
     }
 
+    // Sync scores to Firebase
+    async function syncScores() {
+      if (!isAuthenticated) return;
+
+      try {
+        const stored = localStorage.getItem('magic-internet-math-progress');
+        if (!stored) return;
+
+        const state = JSON.parse(stored);
+        if (!state?.sections) return;
+
+        const scores = { ba: 0, crypto: 0, aa: 0 };
+
+        for (const [sectionId, sectionData] of Object.entries(state.sections)) {
+          const [coursePrefix] = sectionId.split(':');
+          if (!['ba', 'crypto', 'aa'].includes(coursePrefix)) continue;
+
+          const section = sectionData;
+          if (section.quizAttempts) {
+            for (const attempt of section.quizAttempts) {
+              if (attempt.xpEarned) scores[coursePrefix] += attempt.xpEarned;
+            }
+          }
+          if (section.visitedAt) scores[coursePrefix] += 10;
+          if (section.completedAt) scores[coursePrefix] += 25;
+          if (section.visualizationsInteracted) {
+            scores[coursePrefix] += section.visualizationsInteracted.length * 5;
+          }
+        }
+
+        const syncFn = httpsCallable(functions, 'syncScores');
+        await syncFn({
+          scores: [
+            { courseId: 'ba', xp: scores.ba },
+            { courseId: 'crypto', xp: scores.crypto },
+            { courseId: 'aa', xp: scores.aa },
+          ]
+        });
+      } catch (error) {
+        console.error('Sync error:', error);
+      }
+    }
+
     // Disconnect
-    function disconnect() {
+    async function disconnect() {
+      try {
+        await signOut(auth);
+      } catch (e) {
+        console.error('Sign out error:', e);
+      }
       isAuthenticated = false;
       userNpub = null;
       connectSection.style.display = 'block';
@@ -707,9 +863,33 @@
     connectButton.addEventListener('click', connect);
     disconnectButton.addEventListener('click', disconnect);
 
+    // Listen for auth state changes (handles page reload with existing session)
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in - extract npub from uid
+        userNpub = user.uid;
+        isAuthenticated = true;
+
+        connectSection.style.display = 'none';
+        userCard.style.display = 'block';
+        document.getElementById('user-avatar').textContent = userNpub[5]?.toUpperCase() || '?';
+        document.getElementById('user-name').textContent = shortenNpub(userNpub, 12);
+        document.getElementById('user-npub').textContent = shortenNpub(userNpub, 8);
+
+        loadLocalXP();
+        loadLeaderboard();
+      } else {
+        // User is signed out
+        isAuthenticated = false;
+        userNpub = null;
+        connectSection.style.display = 'block';
+        userCard.style.display = 'none';
+        loadLeaderboard();
+      }
+    });
+
     // Initialize
     checkNostrExtension();
-    loadLeaderboard();
 
     // Add spinner animation
     const style = document.createElement('style');
