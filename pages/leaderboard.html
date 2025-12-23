@@ -593,7 +593,7 @@
         // Call the getLeaderboard Cloud Function
         const getLeaderboard = httpsCallable(functions, 'getLeaderboard');
         const result = await getLeaderboard({
-          courseId: currentTab === 'overall' ? undefined : currentTab,
+          courseId: currentTab,
           limit: 50
         });
 
