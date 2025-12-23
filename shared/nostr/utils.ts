@@ -266,3 +266,126 @@ export function waitForNostrExtension(timeout: number = 3000): Promise<boolean> 
     }, 100);
   });
 }
+
+// Default relays to query for profiles
+const DEFAULT_RELAYS = [
+  'wss://relay.damus.io',
+  'wss://relay.nostr.band',
+  'wss://nos.lol',
+  'wss://relay.primal.net',
+];
+
+/**
+ * Nostr profile metadata (kind 0)
+ */
+export interface NostrProfile {
+  name?: string;
+  display_name?: string;
+  nip05?: string;
+  picture?: string;
+  about?: string;
+}
+
+/**
+ * Fetch profile from a single relay
+ */
+function fetchProfileFromRelay(
+  relayUrl: string,
+  pubkeyHex: string
+): Promise<NostrProfile | null> {
+  return new Promise((resolve) => {
+    const timeout = setTimeout(() => {
+      ws.close();
+      resolve(null);
+    }, 5000);
+
+    const ws = new WebSocket(relayUrl);
+    const subId = Math.random().toString(36).substring(2, 15);
+
+    ws.onopen = () => {
+      const req = JSON.stringify([
+        'REQ',
+        subId,
+        { kinds: [0], authors: [pubkeyHex], limit: 1 },
+      ]);
+      ws.send(req);
+    };
+
+    ws.onmessage = (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        if (data[0] === 'EVENT' && data[1] === subId) {
+          const content = JSON.parse(data[2].content);
+          clearTimeout(timeout);
+          ws.close();
+          resolve({
+            name: content.name || content.display_name,
+            display_name: content.display_name,
+            nip05: content.nip05,
+            picture: content.picture,
+            about: content.about,
+          });
+        } else if (data[0] === 'EOSE') {
+          clearTimeout(timeout);
+          ws.close();
+          resolve(null);
+        }
+      } catch {
+        // Ignore parse errors
+      }
+    };
+
+    ws.onerror = () => {
+      clearTimeout(timeout);
+      ws.close();
+      resolve(null);
+    };
+  });
+}
+
+/**
+ * Fetch a user's Nostr profile from relays
+ */
+export async function fetchNostrProfile(npub: string): Promise<NostrProfile | null> {
+  try {
+    const pubkeyHex = npubToHex(npub);
+
+    for (const relayUrl of DEFAULT_RELAYS) {
+      try {
+        const profile = await fetchProfileFromRelay(relayUrl, pubkeyHex);
+        if (profile) {
+          return profile;
+        }
+      } catch {
+        // Try next relay
+      }
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Fetch multiple profiles in parallel (with concurrency limit)
+ */
+export async function fetchNostrProfiles(
+  npubs: string[]
+): Promise<Map<string, NostrProfile>> {
+  const results = new Map<string, NostrProfile>();
+
+  // Fetch up to 10 profiles in parallel
+  const batchSize = 10;
+  for (let i = 0; i < npubs.length; i += batchSize) {
+    const batch = npubs.slice(i, i + batchSize);
+    const promises = batch.map(async (npub) => {
+      const profile = await fetchNostrProfile(npub);
+      if (profile) {
+        results.set(npub, profile);
+      }
+    });
+    await Promise.all(promises);
+  }
+
+  return results;
+}

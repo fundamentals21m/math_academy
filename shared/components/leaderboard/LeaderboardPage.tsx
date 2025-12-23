@@ -2,7 +2,7 @@
  * LeaderboardPage - Main leaderboard view with tabs for different courses
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { httpsCallable } from 'firebase/functions';
 import { getFirebaseFunctions, isFirebaseConfigured } from '../../firebase/config';
 import { useNostrAuth } from '../../contexts/NostrAuthContext';
@@ -11,6 +11,7 @@ import { LeaderboardTable } from './LeaderboardTable';
 import { UserRankCard } from './UserRankCard';
 import { AdminPanel } from './AdminPanel';
 import { getSyncManager } from '../../leaderboard/syncManager';
+import { fetchNostrProfiles, type NostrProfile } from '../../nostr/utils';
 import type { CourseId, LeaderboardRanking, LeaderboardResponse } from '../../leaderboard/types';
 
 type TabId = CourseId | 'overall';
@@ -35,6 +36,9 @@ export function LeaderboardPage({ className = '' }: LeaderboardPageProps) {
   const [error, setError] = useState<string | null>(null);
   const [editingName, setEditingName] = useState(false);
   const [nameInput, setNameInput] = useState(displayName || '');
+
+  // Cache for fetched Nostr profiles
+  const profileCache = useRef<Map<string, NostrProfile>>(new Map());
 
   // Load leaderboard data
   const loadLeaderboard = useCallback(async () => {
@@ -69,6 +73,42 @@ export function LeaderboardPage({ className = '' }: LeaderboardPageProps) {
   useEffect(() => {
     loadLeaderboard();
   }, [loadLeaderboard]);
+
+  // Fetch Nostr profiles for users without display names
+  useEffect(() => {
+    const fetchMissingProfiles = async () => {
+      // Find users without display names who aren't already cached
+      const npubsToFetch = rankings
+        .filter(r => !r.displayName && !profileCache.current.has(r.npub))
+        .map(r => r.npub);
+
+      if (npubsToFetch.length === 0) return;
+
+      // Fetch profiles from Nostr relays
+      const profiles = await fetchNostrProfiles(npubsToFetch);
+
+      // Update cache
+      profiles.forEach((profile, npub) => {
+        profileCache.current.set(npub, profile);
+      });
+
+      // Update rankings with fetched display names
+      if (profiles.size > 0) {
+        setRankings(prev => prev.map(r => {
+          const profile = profileCache.current.get(r.npub);
+          if (!r.displayName && profile) {
+            return {
+              ...r,
+              displayName: profile.display_name || profile.name || null,
+            };
+          }
+          return r;
+        }));
+      }
+    };
+
+    fetchMissingProfiles();
+  }, [rankings]);
 
   // Refresh leaderboard periodically (every 30 seconds)
   useEffect(() => {
