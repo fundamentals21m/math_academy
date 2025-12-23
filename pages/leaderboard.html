@@ -252,15 +252,22 @@
 
     .user-npub-full {
       font-family: monospace;
-      font-size: 0.65rem;
-      color: var(--text-muted);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
       word-break: break-all;
       cursor: pointer;
       transition: color 0.2s;
+      padding: 0.5rem 0.75rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .user-npub-full:hover {
-      color: var(--text-secondary);
+      color: var(--text-primary);
+      background: rgba(0, 0, 0, 0.4);
+      border-color: rgba(139, 92, 246, 0.3);
     }
 
     .nip05-badge {
@@ -388,6 +395,7 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="1-intro.html">Lessons</a></li>
         <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
         <li><a href="12-quiz.html">Quiz</a></li>
       </ul>
     </div>
@@ -431,7 +439,6 @@
                 <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
             </div>
-            <div class="user-npub-full" id="user-npub-full" title="Click to copy">...</div>
           </div>
           <div class="user-rank">
             <div class="user-rank-number" id="user-rank">#--</div>
@@ -439,6 +446,7 @@
           </div>
           <button class="disconnect-button" id="disconnect-button">Disconnect</button>
         </div>
+        <div class="user-npub-full" id="user-npub-full" title="Click to copy">...</div>
         <div class="user-stats">
           <div class="stat-item">
             <div class="stat-value" id="user-xp">0</div>
@@ -506,6 +514,46 @@
       <p style="text-align: center; margin-top: 1rem; font-size: 0.75rem; color: var(--text-muted);">
         Scores sync automatically when connected. Rankings update every few minutes.
       </p>
+
+      <!-- Admin Panel (shown for admins only) -->
+      <div id="admin-panel" style="display: none; margin-top: 2rem; padding: 1.5rem; background: rgba(251, 191, 36, 0.05); border: 1px solid rgba(251, 191, 36, 0.2); border-radius: 1rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+          <h3 style="color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" fill="#fbbf24" viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+            </svg>
+            Admin Panel
+          </h3>
+          <span style="font-size: 0.75rem; background: rgba(251, 191, 36, 0.2); color: #fbbf24; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">Admin</span>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Target User (npub)</label>
+          <input type="text" id="admin-target-npub" placeholder="npub1..." style="width: 100%; padding: 0.5rem 0.75rem; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; color: var(--text-primary); font-family: monospace; font-size: 0.875rem;">
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Reason (optional)</label>
+          <input type="text" id="admin-reason" placeholder="Reason for action" style="width: 100%; padding: 0.5rem 0.75rem; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; color: var(--text-primary); font-size: 0.875rem;">
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+          <button id="admin-ban-btn" style="flex: 1; padding: 0.5rem; background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 0.5rem; color: #f87171; font-weight: 500; cursor: pointer;">Ban User</button>
+          <button id="admin-unban-btn" style="flex: 1; padding: 0.5rem; background: rgba(34, 197, 94, 0.2); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 0.5rem; color: #4ade80; font-weight: 500; cursor: pointer;">Unban User</button>
+          <button id="admin-reset-btn" style="flex: 1; padding: 0.5rem; background: rgba(251, 146, 60, 0.2); border: 1px solid rgba(251, 146, 60, 0.3); border-radius: 0.5rem; color: #fb923c; font-weight: 500; cursor: pointer;">Reset Scores</button>
+        </div>
+
+        <div id="admin-message" style="display: none; padding: 0.75rem; border-radius: 0.5rem; font-size: 0.875rem; margin-bottom: 1rem;"></div>
+
+        <button id="admin-logs-toggle" style="width: 100%; padding: 0.5rem; background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.875rem;">
+          Show Admin Logs ▼
+        </button>
+
+        <div id="admin-logs" style="display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <h4 style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Recent Actions</h4>
+          <div id="admin-logs-list" style="max-height: 200px; overflow-y: auto;"></div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -542,6 +590,7 @@
     let userDisplayName = null;
     let userNip05 = null;
     let hasExtension = false;
+    let isAdmin = false;
 
     // Profile cache
     const profileCache = new Map();
@@ -1054,11 +1103,27 @@
     disconnectButton.addEventListener('click', disconnect);
 
     // Listen for auth state changes (handles page reload with existing session)
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, async (user) => {
       if (user) {
         // User is signed in - extract npub from uid
         userNpub = user.uid;
         isAuthenticated = true;
+
+        // Check admin status from token claims (force refresh to get latest)
+        try {
+          const tokenResult = await user.getIdTokenResult(true);
+          isAdmin = tokenResult.claims.isAdmin === true;
+          console.log('[Hub Leaderboard] isAdmin:', isAdmin);
+
+          // Show/hide admin panel
+          const adminPanel = document.getElementById('admin-panel');
+          if (adminPanel) {
+            adminPanel.style.display = isAdmin ? 'block' : 'none';
+          }
+        } catch (err) {
+          console.error('[Hub Leaderboard] Error getting token:', err);
+          isAdmin = false;
+        }
 
         connectSection.style.display = 'none';
         userCard.style.display = 'block';
@@ -1092,7 +1157,9 @@
         userNpub = null;
         userDisplayName = null;
         userNip05 = null;
+        isAdmin = false;
         document.getElementById('user-nip05').style.display = 'none';
+        document.getElementById('admin-panel').style.display = 'none';
         connectSection.style.display = 'block';
         userCard.style.display = 'none';
         loadLeaderboard();
@@ -1123,6 +1190,167 @@
       }
     `;
     document.head.appendChild(style);
+
+    // Admin panel functionality
+    const adminTargetNpub = document.getElementById('admin-target-npub');
+    const adminReason = document.getElementById('admin-reason');
+    const adminMessage = document.getElementById('admin-message');
+    const adminBanBtn = document.getElementById('admin-ban-btn');
+    const adminUnbanBtn = document.getElementById('admin-unban-btn');
+    const adminResetBtn = document.getElementById('admin-reset-btn');
+    const adminLogsToggle = document.getElementById('admin-logs-toggle');
+    const adminLogsSection = document.getElementById('admin-logs');
+    const adminLogsList = document.getElementById('admin-logs-list');
+
+    function showAdminMessage(message, isError = false) {
+      adminMessage.textContent = message;
+      adminMessage.style.display = 'block';
+      adminMessage.style.background = isError ? 'rgba(239, 68, 68, 0.1)' : 'rgba(34, 197, 94, 0.1)';
+      adminMessage.style.border = isError ? '1px solid rgba(239, 68, 68, 0.3)' : '1px solid rgba(34, 197, 94, 0.3)';
+      adminMessage.style.color = isError ? '#f87171' : '#4ade80';
+      setTimeout(() => { adminMessage.style.display = 'none'; }, 5000);
+    }
+
+    // Ban user
+    adminBanBtn?.addEventListener('click', async () => {
+      const targetNpub = adminTargetNpub.value.trim();
+      const reason = adminReason.value.trim();
+
+      if (!targetNpub) {
+        showAdminMessage('Please enter a target npub', true);
+        return;
+      }
+
+      adminBanBtn.disabled = true;
+      adminBanBtn.textContent = 'Banning...';
+
+      try {
+        const banUser = httpsCallable(functions, 'banUser');
+        await banUser({ targetNpub, reason });
+        showAdminMessage(`User ${shortenNpub(targetNpub)} has been banned`);
+        adminTargetNpub.value = '';
+        adminReason.value = '';
+        loadLeaderboard();
+      } catch (error) {
+        console.error('Ban error:', error);
+        showAdminMessage(error.message || 'Failed to ban user', true);
+      } finally {
+        adminBanBtn.disabled = false;
+        adminBanBtn.textContent = 'Ban User';
+      }
+    });
+
+    // Unban user
+    adminUnbanBtn?.addEventListener('click', async () => {
+      const targetNpub = adminTargetNpub.value.trim();
+      const reason = adminReason.value.trim();
+
+      if (!targetNpub) {
+        showAdminMessage('Please enter a target npub', true);
+        return;
+      }
+
+      adminUnbanBtn.disabled = true;
+      adminUnbanBtn.textContent = 'Unbanning...';
+
+      try {
+        const unbanUser = httpsCallable(functions, 'unbanUser');
+        await unbanUser({ targetNpub, reason });
+        showAdminMessage(`User ${shortenNpub(targetNpub)} has been unbanned`);
+        adminTargetNpub.value = '';
+        adminReason.value = '';
+        loadLeaderboard();
+      } catch (error) {
+        console.error('Unban error:', error);
+        showAdminMessage(error.message || 'Failed to unban user', true);
+      } finally {
+        adminUnbanBtn.disabled = false;
+        adminUnbanBtn.textContent = 'Unban User';
+      }
+    });
+
+    // Reset scores
+    adminResetBtn?.addEventListener('click', async () => {
+      const targetNpub = adminTargetNpub.value.trim();
+      const reason = adminReason.value.trim();
+
+      if (!targetNpub) {
+        showAdminMessage('Please enter a target npub', true);
+        return;
+      }
+
+      if (!confirm(`Are you sure you want to reset all scores for ${shortenNpub(targetNpub)}?`)) {
+        return;
+      }
+
+      adminResetBtn.disabled = true;
+      adminResetBtn.textContent = 'Resetting...';
+
+      try {
+        const resetUserScores = httpsCallable(functions, 'resetUserScores');
+        await resetUserScores({ targetNpub, reason });
+        showAdminMessage(`Scores reset for ${shortenNpub(targetNpub)}`);
+        adminTargetNpub.value = '';
+        adminReason.value = '';
+        loadLeaderboard();
+      } catch (error) {
+        console.error('Reset error:', error);
+        showAdminMessage(error.message || 'Failed to reset scores', true);
+      } finally {
+        adminResetBtn.disabled = false;
+        adminResetBtn.textContent = 'Reset Scores';
+      }
+    });
+
+    // Toggle admin logs
+    let logsLoaded = false;
+    adminLogsToggle?.addEventListener('click', async () => {
+      const isVisible = adminLogsSection.style.display !== 'none';
+
+      if (isVisible) {
+        adminLogsSection.style.display = 'none';
+        adminLogsToggle.textContent = 'Show Admin Logs ▼';
+      } else {
+        adminLogsSection.style.display = 'block';
+        adminLogsToggle.textContent = 'Hide Admin Logs ▲';
+
+        // Load logs if not already loaded
+        if (!logsLoaded) {
+          adminLogsList.innerHTML = '<div style="color: var(--text-muted); font-size: 0.875rem;">Loading logs...</div>';
+
+          try {
+            const getAdminLogs = httpsCallable(functions, 'getAdminLogs');
+            const result = await getAdminLogs({ limit: 20 });
+            const logs = result.data.logs || [];
+
+            if (logs.length === 0) {
+              adminLogsList.innerHTML = '<div style="color: var(--text-muted); font-size: 0.875rem;">No admin actions yet</div>';
+            } else {
+              adminLogsList.innerHTML = logs.map(log => `
+                <div style="padding: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: ${log.action === 'ban' ? '#f87171' : log.action === 'unban' ? '#4ade80' : '#fb923c'}; font-weight: 500;">
+                      ${log.action.toUpperCase()}
+                    </span>
+                    <span style="color: var(--text-muted); font-size: 0.7rem;">
+                      ${new Date(log.timestamp).toLocaleString()}
+                    </span>
+                  </div>
+                  <div style="color: var(--text-secondary); margin-top: 0.25rem;">
+                    Target: ${shortenNpub(log.targetNpub, 6)}
+                  </div>
+                  ${log.reason ? `<div style="color: var(--text-muted); font-style: italic; margin-top: 0.25rem;">"${log.reason}"</div>` : ''}
+                </div>
+              `).join('');
+            }
+            logsLoaded = true;
+          } catch (error) {
+            console.error('Load logs error:', error);
+            adminLogsList.innerHTML = '<div style="color: #f87171; font-size: 0.875rem;">Failed to load logs</div>';
+          }
+        }
+      }
+    });
   </script>
 </body>
 </html>

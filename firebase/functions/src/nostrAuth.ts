@@ -148,10 +148,16 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
       );
     }
 
+    // Set custom user claims (these persist and are refreshable via getIdTokenResult)
+    const isAdmin = userData?.isAdmin ?? false;
+    await admin.auth().setCustomUserClaims(npub, {
+      isAdmin,
+    });
+
     // Create Firebase custom token with npub as UID
     const token = await admin.auth().createCustomToken(npub, {
       pubkeyHex: signedEvent.pubkey.toLowerCase(),
-      isAdmin: userData?.isAdmin ?? false,
+      isAdmin,
     });
 
     return { token, npub };
