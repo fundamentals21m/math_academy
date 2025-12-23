@@ -5,8 +5,8 @@
 basic-algebra/
 abstract-algebra/
 
-# Shared library (bundled into apps)
-shared/
+# Shared library node_modules
+shared/node_modules/
 
 # Firebase
 firebase/functions/node_modules/
