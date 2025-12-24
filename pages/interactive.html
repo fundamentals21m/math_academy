@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Modules - Magic Internet Math</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+  <style>
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: block;
+    }
+    .module-card:hover {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 25px rgba(0, 245, 255, 0.15);
+      transform: translateY(-3px);
+    }
+    .module-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+    .module-icon.canvas { background: rgba(0, 245, 255, 0.15); }
+    .module-icon.calculator { background: rgba(0, 255, 159, 0.15); }
+    .module-icon.game { background: rgba(255, 0, 255, 0.15); }
+    .module-icon.table { background: rgba(255, 170, 0, 0.15); }
+    .module-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .module-desc {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .module-lesson {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--neon-cyan);
+      margin-top: 0.75rem;
+    }
+    .section-header {
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-header h2 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+    .section-header p {
+      margin: 0.5rem 0 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="../index.html" class="logo">Magic Internet Math</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="1-intro.html">Lessons</a></li>
+        <li><a href="theorems.html">Theorems</a></li>
+        <li><a href="interactive.html" class="active">Interactive</a></li>
+        <li><a href="12-quiz.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Interactive Modules</h1>
+
+    <p>Explore cryptographic concepts through hands-on visualizations and calculators. Each module provides real-time feedback to deepen your understanding.</p>
+
+    <!-- Canvas Visualizations -->
+    <div class="section-header">
+      <h2>Visual Animations</h2>
+      <p>Watch algorithms come to life with animated visualizations</p>
+    </div>
+
+    <div class="module-grid">
+      <a href="2-modular.html" class="module-card">
+        <div class="module-icon canvas">🕐</div>
+        <div class="module-title">Clock Arithmetic</div>
+        <div class="module-desc">Interactive clock showing how numbers wrap around in modular arithmetic.</div>
+        <div class="module-lesson">Lesson 2: Modular Arithmetic</div>
+      </a>
+
+      <a href="3-primes.html" class="module-card">
+        <div class="module-icon canvas">🔢</div>
+        <div class="module-title">Sieve of Eratosthenes</div>
+        <div class="module-desc">Watch the ancient algorithm find all primes by crossing out composites.</div>
+        <div class="module-lesson">Lesson 3: Prime Numbers</div>
+      </a>
+
+      <a href="4-gcd.html" class="module-card">
+        <div class="module-icon canvas">📊</div>
+        <div class="module-title">Euclidean Algorithm</div>
+        <div class="module-desc">Bar chart visualization of the GCD computation process.</div>
+        <div class="module-lesson">Lesson 4: GCD</div>
+      </a>
+
+      <a href="7-modexp.html" class="module-card">
+        <div class="module-icon canvas">⚡</div>
+        <div class="module-title">Square-and-Multiply</div>
+        <div class="module-desc">See how modular exponentiation uses binary representation for efficiency.</div>
+        <div class="module-lesson">Lesson 7: Modular Exponentiation</div>
+      </a>
+
+      <a href="10-diffie-hellman.html" class="module-card">
+        <div class="module-icon canvas">🎨</div>
+        <div class="module-title">Paint Mixing Analogy</div>
+        <div class="module-desc">Visual demonstration of key exchange using color mixing.</div>
+        <div class="module-lesson">Lesson 10: Diffie-Hellman</div>
+      </a>
+
+      <a href="11-elliptic.html" class="module-card">
+        <div class="module-icon canvas">📈</div>
+        <div class="module-title">Elliptic Curve Plotter</div>
+        <div class="module-desc">Plot points on an elliptic curve over a finite field.</div>
+        <div class="module-lesson">Lesson 11: Elliptic Curves</div>
+      </a>
+    </div>
+
+    <!-- Calculators -->
+    <div class="section-header">
+      <h2>Calculators</h2>
+      <p>Compute values with step-by-step explanations</p>
+    </div>
+
+    <div class="module-grid">
+      <a href="2-modular.html" class="module-card">
+        <div class="module-icon calculator">🧮</div>
+        <div class="module-title">Modular Calculator</div>
+        <div class="module-desc">Perform addition, subtraction, multiplication, and exponentiation mod n.</div>
+        <div class="module-lesson">Lesson 2: Modular Arithmetic</div>
+      </a>
+
+      <a href="3-primes.html" class="module-card">
+        <div class="module-icon calculator">✓</div>
+        <div class="module-title">Prime Checker</div>
+        <div class="module-desc">Test if any number is prime with factor analysis.</div>
+        <div class="module-lesson">Lesson 3: Prime Numbers</div>
+      </a>
+
+      <a href="3-primes.html" class="module-card">
+        <div class="module-icon calculator">🔍</div>
+        <div class="module-title">Prime Factorization</div>
+        <div class="module-desc">Break down any number into its prime factors step by step.</div>
+        <div class="module-lesson">Lesson 3: Prime Numbers</div>
+      </a>
+
+      <a href="4-gcd.html" class="module-card">
+        <div class="module-icon calculator">🔗</div>
+        <div class="module-title">Extended GCD Calculator</div>
+        <div class="module-desc">Find GCD and Bézout coefficients (ax + by = gcd).</div>
+        <div class="module-lesson">Lesson 4: GCD</div>
+      </a>
+
+      <a href="5-inverse.html" class="module-card">
+        <div class="module-icon calculator">⁻¹</div>
+        <div class="module-title">Inverse Calculator</div>
+        <div class="module-desc">Find the modular inverse of a number.</div>
+        <div class="module-lesson">Lesson 5: Modular Inverse</div>
+      </a>
+
+      <a href="6-euler.html" class="module-card">
+        <div class="module-icon calculator">φ</div>
+        <div class="module-title">Totient Calculator</div>
+        <div class="module-desc">Compute Euler's totient function with prime factorization.</div>
+        <div class="module-lesson">Lesson 6: Euler's Totient</div>
+      </a>
+
+      <a href="7-modexp.html" class="module-card">
+        <div class="module-icon calculator">^</div>
+        <div class="module-title">Modular Exponentiation</div>
+        <div class="module-desc">Efficiently compute large powers mod n.</div>
+        <div class="module-lesson">Lesson 7: Mod Exp</div>
+      </a>
+
+      <a href="11-elliptic.html" class="module-card">
+        <div class="module-icon calculator">+</div>
+        <div class="module-title">Point Addition</div>
+        <div class="module-desc">Add two points on an elliptic curve.</div>
+        <div class="module-lesson">Lesson 11: Elliptic Curves</div>
+      </a>
+
+      <a href="11-elliptic.html" class="module-card">
+        <div class="module-icon calculator">×</div>
+        <div class="module-title">Scalar Multiplication</div>
+        <div class="module-desc">Multiply a point by a scalar on an elliptic curve.</div>
+        <div class="module-lesson">Lesson 11: Elliptic Curves</div>
+      </a>
+    </div>
+
+    <!-- Tables & Visualizers -->
+    <div class="section-header">
+      <h2>Tables & Grids</h2>
+      <p>Explore patterns with interactive tables</p>
+    </div>
+
+    <div class="module-grid">
+      <a href="2-modular.html" class="module-card">
+        <div class="module-icon table">📋</div>
+        <div class="module-title">Power Table</div>
+        <div class="module-desc">See cyclic patterns in powers mod n.</div>
+        <div class="module-lesson">Lesson 2: Modular Arithmetic</div>
+      </a>
+
+      <a href="5-inverse.html" class="module-card">
+        <div class="module-icon table">📊</div>
+        <div class="module-title">Inverse Table</div>
+        <div class="module-desc">View all modular inverses for a given modulus.</div>
+        <div class="module-lesson">Lesson 5: Modular Inverse</div>
+      </a>
+
+      <a href="6-euler.html" class="module-card">
+        <div class="module-icon table">🔲</div>
+        <div class="module-title">Coprimality Grid</div>
+        <div class="module-desc">Visualize which numbers are coprime to n.</div>
+        <div class="module-lesson">Lesson 6: Euler's Totient</div>
+      </a>
+
+      <a href="8-discretelog.html" class="module-card">
+        <div class="module-icon table">🔄</div>
+        <div class="module-title">Discrete Log Table</div>
+        <div class="module-desc">All powers of a generator mod p.</div>
+        <div class="module-lesson">Lesson 8: Discrete Logarithms</div>
+      </a>
+    </div>
+
+    <!-- Cryptographic Demos -->
+    <div class="section-header">
+      <h2>Cryptographic Protocols</h2>
+      <p>Experience real cryptographic systems in action</p>
+    </div>
+
+    <div class="module-grid">
+      <a href="9-rsa.html" class="module-card">
+        <div class="module-icon game">🔐</div>
+        <div class="module-title">RSA Key Generation</div>
+        <div class="module-desc">Generate public and private key pairs from primes.</div>
+        <div class="module-lesson">Lesson 9: RSA</div>
+      </a>
+
+      <a href="9-rsa.html" class="module-card">
+        <div class="module-icon game">🔒</div>
+        <div class="module-title">RSA Encryption</div>
+        <div class="module-desc">Encrypt a message using the public key.</div>
+        <div class="module-lesson">Lesson 9: RSA</div>
+      </a>
+
+      <a href="9-rsa.html" class="module-card">
+        <div class="module-icon game">🔓</div>
+        <div class="module-title">RSA Decryption</div>
+        <div class="module-desc">Decrypt using the private key.</div>
+        <div class="module-lesson">Lesson 9: RSA</div>
+      </a>
+
+      <a href="10-diffie-hellman.html" class="module-card">
+        <div class="module-icon game">🤝</div>
+        <div class="module-title">Key Exchange Simulator</div>
+        <div class="module-desc">Simulate Alice and Bob establishing a shared secret.</div>
+        <div class="module-lesson">Lesson 10: Diffie-Hellman</div>
+      </a>
+
+      <a href="10-diffie-hellman.html" class="module-card">
+        <div class="module-icon game">👁️</div>
+        <div class="module-title">Eve's View</div>
+        <div class="module-desc">See what an eavesdropper can and cannot learn.</div>
+        <div class="module-lesson">Lesson 10: Diffie-Hellman</div>
+      </a>
+    </div>
+
+    <!-- Challenges -->
+    <div class="section-header">
+      <h2>Challenges & Games</h2>
+      <p>Test your skills with interactive puzzles</p>
+    </div>
+
+    <div class="module-grid">
+      <a href="1b-numericalbases.html" class="module-card">
+        <div class="module-icon game">🎮</div>
+        <div class="module-title">Binary Visualizer</div>
+        <div class="module-desc">Toggle bits and see decimal/hex values update.</div>
+        <div class="module-lesson">Lesson 1b: Number Systems</div>
+      </a>
+
+      <a href="1b-numericalbases.html" class="module-card">
+        <div class="module-icon game">🧩</div>
+        <div class="module-title">Base Conversion Quiz</div>
+        <div class="module-desc">Practice converting between number systems.</div>
+        <div class="module-lesson">Lesson 1b: Number Systems</div>
+      </a>
+
+      <a href="8-discretelog.html" class="module-card">
+        <div class="module-icon game">🎯</div>
+        <div class="module-title">Discrete Log Puzzle</div>
+        <div class="module-desc">Find the exponent x where g^x ≡ h (mod p).</div>
+        <div class="module-lesson">Lesson 8: Discrete Logarithms</div>
+      </a>
+
+      <a href="9-rsa.html" class="module-card">
+        <div class="module-icon game">💪</div>
+        <div class="module-title">RSA Factoring Challenge</div>
+        <div class="module-desc">Try to factor a semiprime and break the encryption.</div>
+        <div class="module-lesson">Lesson 9: RSA</div>
+      </a>
+    </div>
+
+    <div class="page-nav">
+      <a href="theorems.html" class="btn btn-secondary">Table of Theorems</a>
+      <a href="1-intro.html" class="btn btn-primary">Start Learning</a>
+    </div>
+  </main>
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/gamification.js"></script>
+  <script src="../scripts/sidebar.js"></script>
+</body>
+</html>

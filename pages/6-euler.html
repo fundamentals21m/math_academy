@@ -16,6 +16,8 @@
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="theorems.html">Theorems</a></li>
+        <li><a href="interactive.html">Interactive</a></li>
         <li><a href="12-quiz.html">Quiz</a></li>
       </ul>
     </div>
@@ -94,13 +96,32 @@
 
     <h2>Euler's Theorem</h2>
 
-    <p>Euler discovered a remarkable property: if GCD(a, n) = 1, then:</p>
-
-    <div class="math-block">
-      a^φ(n) ≡ 1 (mod n)
+    <div class="theorem" data-proof="euler-proof">
+      <div class="theorem-header">
+        <div>
+          <span class="theorem-label">Theorem</span>
+          <h3>Euler's Theorem</h3>
+        </div>
+      </div>
+      <div class="theorem-content">
+        <p>If GCD(a, n) = 1, then:</p>
+        <div class="math-block" style="margin: 1rem 0;">
+          a^φ(n) ≡ 1 (mod n)
+        </div>
+        <p style="margin-bottom: 0;">This is a generalization of Fermat's Little Theorem and is the foundation of RSA's correctness!</p>
+      </div>
     </div>
 
-    <p>This is a generalization of Fermat's Little Theorem and is the foundation of RSA's correctness!</p>
+    <div id="euler-proof">
+      <p><strong>Proof Sketch:</strong></p>
+      <ol>
+        <li>Let {r₁, r₂, ..., r_{φ(n)}} be the reduced residue system mod n (all integers coprime to n in [1, n-1]).</li>
+        <li>Since GCD(a, n) = 1, the set {a·r₁, a·r₂, ..., a·r_{φ(n)}} is also a reduced residue system mod n (just permuted).</li>
+        <li>Therefore: (a·r₁)(a·r₂)...(a·r_{φ(n)}) ≡ r₁·r₂·...·r_{φ(n)} (mod n)</li>
+        <li>This gives us: a^{φ(n)} · (r₁·r₂·...·r_{φ(n)}) ≡ r₁·r₂·...·r_{φ(n)} (mod n)</li>
+        <li>Since the product of all rᵢ is coprime to n, we can divide both sides to get a^{φ(n)} ≡ 1 (mod n).</li>
+      </ol>
+    </div>
 
     <div class="demo-section">
       <h3>Verify Euler's Theorem</h3>
