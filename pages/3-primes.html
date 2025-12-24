@@ -16,6 +16,8 @@
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="theorems.html">Theorems</a></li>
+        <li><a href="interactive.html">Interactive</a></li>
         <li><a href="12-quiz.html">Quiz</a></li>
       </ul>
     </div>
@@ -30,8 +32,22 @@
 
     <p>A <strong>prime number</strong> is a number greater than 1 that has no divisors other than 1 and itself. Primes are the fundamental building blocks of all integers.</p>
 
-    <div class="callout callout-info">
-      <strong>The Fundamental Theorem of Arithmetic:</strong> Every integer greater than 1 can be expressed as a unique product of prime numbers.
+    <div class="theorem" data-proof="fta-proof">
+      <div class="theorem-header">
+        <div>
+          <span class="theorem-label">Theorem</span>
+          <h3>Fundamental Theorem of Arithmetic</h3>
+        </div>
+      </div>
+      <div class="theorem-content">
+        <p>Every integer greater than 1 can be expressed as a unique product of prime numbers (up to reordering).</p>
+      </div>
+    </div>
+
+    <div id="fta-proof">
+      <p><strong>Proof Outline:</strong></p>
+      <p><em>Existence:</em> We prove by strong induction. For n = 2, we're done (2 is prime). For n > 2, either n is prime (done) or n = ab for 1 < a, b < n. By induction, both a and b have prime factorizations, so their product n does too.</p>
+      <p><em>Uniqueness:</em> Suppose n = p₁p₂...pₖ = q₁q₂...qₘ. Since p₁ divides the left side, it divides the right side. By Euclid's Lemma (if a prime divides a product, it divides at least one factor), p₁ divides some qⱼ. Since both are prime, p₁ = qⱼ. Cancel and repeat to show the factorizations are identical up to reordering.</p>
     </div>
 
     <h2>The Sieve of Eratosthenes</h2>
@@ -111,9 +127,21 @@
 
     <p>There are infinitely many primes! Euclid proved this around 300 BCE. The proof is elegant:</p>
 
-    <div class="card">
-      <h3>Euclid's Proof</h3>
-      <ol style="margin-left: 1.5rem; color: var(--text-muted); line-height: 2;">
+    <div class="theorem" data-proof="euclid-proof">
+      <div class="theorem-header">
+        <div>
+          <span class="theorem-label">Theorem</span>
+          <h3>Infinitude of Primes</h3>
+        </div>
+      </div>
+      <div class="theorem-content">
+        <p>There are infinitely many prime numbers.</p>
+      </div>
+    </div>
+
+    <div id="euclid-proof">
+      <p><strong>Euclid's Proof (circa 300 BCE):</strong></p>
+      <ol>
         <li>Assume there are only finitely many primes: p₁, p₂, ..., pₙ</li>
         <li>Consider N = (p₁ × p₂ × ... × pₙ) + 1</li>
         <li>N is not divisible by any of our primes (it leaves remainder 1)</li>

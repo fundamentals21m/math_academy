@@ -16,6 +16,8 @@
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="theorems.html">Theorems</a></li>
+        <li><a href="interactive.html">Interactive</a></li>
         <li><a href="12-quiz.html">Quiz</a></li>
       </ul>
     </div>
@@ -78,13 +80,30 @@
 
     <h2>Extended Euclidean Algorithm</h2>
 
-    <p>The <strong>extended</strong> version finds not just the GCD, but also coefficients x and y such that:</p>
+    <p>The <strong>extended</strong> version finds not just the GCD, but also coefficients x and y satisfying Bézout's Identity:</p>
 
-    <div class="math-block">
-      ax + by = GCD(a, b)
+    <div class="theorem" data-proof="bezout-proof">
+      <div class="theorem-header">
+        <div>
+          <span class="theorem-label">Theorem</span>
+          <h3>Bézout's Identity</h3>
+        </div>
+      </div>
+      <div class="theorem-content">
+        <p>For any integers a and b (not both zero), there exist integers x and y such that:</p>
+        <div class="math-block" style="margin: 1rem 0;">ax + by = GCD(a, b)</div>
+        <p style="margin-bottom: 0;">These coefficients are crucial for finding modular inverses!</p>
+      </div>
     </div>
 
-    <p>This is called <strong>Bézout's Identity</strong>, and it's crucial for finding modular inverses!</p>
+    <div id="bezout-proof">
+      <p><strong>Proof (by the Extended Euclidean Algorithm):</strong></p>
+      <p>We prove by strong induction on min(|a|, |b|).</p>
+      <p><em>Base case:</em> If b = 0, then GCD(a, 0) = |a| = a·1 + 0·0, so x = 1, y = 0 works.</p>
+      <p><em>Inductive step:</em> Assume the result holds for all pairs with smaller minimum. By the Euclidean algorithm, GCD(a, b) = GCD(b, a mod b). By induction, there exist x', y' with bx' + (a mod b)y' = GCD(b, a mod b).</p>
+      <p>Since a mod b = a - ⌊a/b⌋·b, we get: bx' + (a - ⌊a/b⌋·b)y' = a·y' + b·(x' - ⌊a/b⌋·y') = GCD(a, b).</p>
+      <p>So x = y' and y = x' - ⌊a/b⌋·y' satisfy ax + by = GCD(a, b).</p>
+    </div>
 
     <div class="demo-section">
       <h3>Extended GCD Calculator</h3>

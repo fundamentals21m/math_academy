@@ -16,6 +16,8 @@
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="1-intro.html" class="active">Lessons</a></li>
+        <li><a href="theorems.html">Theorems</a></li>
+        <li><a href="interactive.html">Interactive</a></li>
         <li><a href="12-quiz.html">Quiz</a></li>
       </ul>
     </div>
@@ -34,8 +36,23 @@
       a × a⁻¹ ≡ 1 (mod n)
     </div>
 
-    <div class="callout callout-info">
-      <strong>Key Insight:</strong> The modular inverse exists if and only if GCD(a, n) = 1. This is why the extended Euclidean algorithm is so important!
+    <div class="theorem" data-proof="inverse-existence-proof">
+      <div class="theorem-header">
+        <div>
+          <span class="theorem-label">Theorem</span>
+          <h3>Existence of Modular Inverse</h3>
+        </div>
+      </div>
+      <div class="theorem-content">
+        <p>The modular inverse of a (mod n) exists if and only if GCD(a, n) = 1.</p>
+      </div>
+    </div>
+
+    <div id="inverse-existence-proof">
+      <p><strong>Proof:</strong></p>
+      <p><em>(⇒ Direction)</em> Suppose a⁻¹ exists, so ax ≡ 1 (mod n) for some x. Then ax = 1 + kn for some integer k, meaning ax - kn = 1. Any common divisor of a and n must divide 1, so GCD(a, n) = 1.</p>
+      <p><em>(⇐ Direction)</em> Suppose GCD(a, n) = 1. By Bézout's Identity, there exist integers x, y such that ax + ny = 1. Taking this mod n: ax ≡ 1 (mod n), so x is the modular inverse of a.</p>
+      <p>This is why the extended Euclidean algorithm computes the inverse: it finds the Bézout coefficients!</p>
     </div>
 
     <h2>Inverse Calculator</h2>
