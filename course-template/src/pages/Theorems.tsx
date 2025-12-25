@@ -1,38 +1,31 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Header, Sidebar } from '@/components/layout';
 import { COURSE_NAME } from '@/config';
-import { theorems, getCategories, searchTheorems } from '@/data/theorems';
-import { curriculum } from '@/data/curriculum';
-
-// Helper to get section info
-const getSectionTitle = (sectionId: number): string => {
-  for (const part of curriculum) {
-    const section = part.sections.find((s) => s.id === sectionId);
-    if (section) return section.title;
-  }
-  return `Section ${sectionId}`;
-};
-
-// Group theorems by category
-const groupedTheorems = getCategories().map((category) => ({
-  category,
-  items: theorems.filter((t) => t.category === category),
-}));
+import { MathBlock } from '@/components/common/MathBlock';
+import { theorems, getCategories, searchTheorems, type TheoremEntry } from '@/data/theorems';
 
 export default function Theorems() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const filteredTheorems = searchQuery
     ? searchTheorems(searchQuery)
     : theorems;
 
-  const displayGroups = searchQuery
+  const groupedTheorems = searchQuery
     ? [{ category: 'Search Results', items: filteredTheorems }]
-    : groupedTheorems;
+    : getCategories().map((category) => ({
+        category,
+        items: theorems.filter((t) => t.category === category),
+      }));
 
-  // Type badge colors
+  const toggleProof = (id: string) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
   const typeColors: Record<string, string> = {
     theorem: 'text-amber-400 bg-amber-500/10',
     definition: 'text-blue-400 bg-blue-500/10',
@@ -73,7 +66,7 @@ export default function Theorems() {
           <div className="bg-gradient-to-br from-amber-500/10 to-dark-800/50 border border-amber-500/20 rounded-2xl p-4 mb-8">
             <p className="text-amber-300 text-sm">
               <span className="font-semibold">Tip:</span> Click any theorem to
-              go to its section. Many include interactive proofs!
+              go to its section. Many include expandable proofs with LaTeX!
             </p>
           </div>
 
@@ -99,7 +92,7 @@ export default function Theorems() {
                         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-500 to-orange-600 opacity-40 group-hover:opacity-100 transition-opacity" />
 
                         <div className="pl-3">
-                          <div className="flex items-center gap-2 mb-1 flex-wrap">
+                          <div className="flex items-center gap-2 mb-2 flex-wrap">
                             {theorem.type && (
                               <span
                                 className={`text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded ${
@@ -113,12 +106,20 @@ export default function Theorems() {
                             <span className="text-[10px] text-dark-500">
                               Section {theorem.sectionId}
                             </span>
-                            <span className="text-[10px] text-dark-600">
-                              {getSectionTitle(theorem.sectionId)}
-                            </span>
-                            {theorem.hasProof && (
-                              <span className="ml-auto text-[10px] text-amber-500/70 font-medium">
-                                Has Proof
+                            {theorem.sectionTitle && (
+                              <span className="text-[10px] text-dark-600">
+                                {theorem.sectionTitle}
+                              </span>
+                            )}
+                            {theorem.hasProof && theorem.proof && (
+                              <span
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  toggleProof(theorem.id);
+                                }}
+                                className="ml-auto text-[10px] text-amber-500/70 font-medium cursor-pointer hover:text-amber-400 transition-colors"
+                              >
+                                {expandedId === theorem.id ? 'Hide Proof' : 'View Proof'}
                               </span>
                             )}
                           </div>
@@ -130,6 +131,30 @@ export default function Theorems() {
                           <p className="text-sm text-dark-400 mt-1">
                             {theorem.statement}
                           </p>
+
+                          {/* Expandable proof section */}
+                          {theorem.hasProof && theorem.proof && (
+                            <div className="mt-3">
+                              <AnimatePresence>
+                                {expandedId === theorem.id ? (
+                                  <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: 'auto', opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                    className="overflow-hidden"
+                                  >
+                                    <div className="pt-4 border-t border-dark-700/50">
+                                      <h4 className="text-sm font-semibold text-amber-400 mb-2">
+                                        Proof:
+                                      </h4>
+                                      <MathBlock>{theorem.proof}</MathBlock>
+                                    </div>
+                                  </motion.div>
+                                ) : null}
+                              </AnimatePresence>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </Link>
@@ -161,17 +186,10 @@ export default function Theorems() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  d="M12 19l9 2-9-5-9-5 5-2-9 0-9 5 5 9 12 19 19 2 12 0 0 0 9 5-2-9-5-9 0-9 5-9-5 5-2 9 0 9-5"
                 />
               </svg>
               Interactive Modules
-            </Link>
-
-            <Link
-              to="/"
-              className="px-4 py-2 rounded-lg bg-primary-500/10 text-primary-400 hover:bg-primary-500/20 transition-colors"
-            >
-              Back to Home
             </Link>
           </div>
         </div>

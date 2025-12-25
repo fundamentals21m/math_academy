@@ -16,9 +16,12 @@ export type {
 } from './types';
 
 // Quiz types
-export type { QuizQuestion, SectionQuestions } from './quizTypes';
+export type { QuizQuestion, SectionQuestions, QuestionType, NumericRange, renderContent } from './quizTypes';
 
 export { XP_CONFIG, LEVEL_THRESHOLDS, DAILY_XP_GOAL } from './types';
+
+// LaTeX Parser
+export { parseLaTeX, renderLaTeX, type ParsedSegment } from './latexParser';
 
 // Context
 export { GamificationProvider, useGamification } from './GamificationContext';
