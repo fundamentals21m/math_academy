@@ -14,8 +14,14 @@ export { syncScores, getLeaderboard } from './scores';
 export { banUser, unbanUser, resetUserScores, getAdminLogs } from './admin';
 
 // Debug: Check and set admin status
+// The admin secret should be set via: firebase functions:config:set admin.secret="your-secret"
+// Access it with: functions.config().admin?.secret
 export const debugSetAdmin = functions.https.onCall(async (data: { npub: string; secret: string }) => {
-  if (data.secret !== 'phundamentals-admin-2024') {
+  const adminSecret = functions.config().admin?.secret;
+  if (!adminSecret) {
+    throw new functions.https.HttpsError('failed-precondition', 'Admin secret not configured. Run: firebase functions:config:set admin.secret="your-secret"');
+  }
+  if (data.secret !== adminSecret) {
     throw new functions.https.HttpsError('permission-denied', 'Invalid secret');
   }
 

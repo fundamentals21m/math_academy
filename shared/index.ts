@@ -17,3 +17,6 @@ export * from './leaderboard';
 
 // Contexts
 export * from './contexts';
+
+// Gamification
+export * from './gamification';
