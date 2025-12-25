@@ -426,8 +426,132 @@ function easeInOut(t) {
 }
 
 // ============================================
+// Proof Modal System
+// ============================================
+
+const ProofModal = {
+  overlay: null,
+  modal: null,
+
+  init() {
+    // Create modal overlay if it doesn't exist
+    if (!document.getElementById('proof-modal-overlay')) {
+      this.createModalElements();
+    }
+    this.overlay = document.getElementById('proof-modal-overlay');
+    this.modal = document.getElementById('proof-modal');
+
+    // Bind close handlers
+    this.overlay.addEventListener('click', (e) => {
+      if (e.target === this.overlay) {
+        this.close();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.overlay.classList.contains('active')) {
+        this.close();
+      }
+    });
+
+    // Initialize all theorem proof buttons
+    this.initButtons();
+  },
+
+  createModalElements() {
+    const overlay = document.createElement('div');
+    overlay.id = 'proof-modal-overlay';
+    overlay.className = 'proof-modal-overlay';
+    overlay.innerHTML = `
+      <div id="proof-modal" class="proof-modal">
+        <div class="proof-modal-header">
+          <div>
+            <span class="proof-label">Proof</span>
+            <h4 id="proof-modal-title"></h4>
+          </div>
+          <button class="proof-modal-close" onclick="ProofModal.close()">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div class="proof-modal-content" id="proof-modal-body"></div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  },
+
+  initButtons() {
+    document.querySelectorAll('.theorem[data-proof]').forEach(theorem => {
+      const proofId = theorem.dataset.proof;
+      const proofElement = document.getElementById(proofId);
+
+      if (proofElement) {
+        // Hide the proof content
+        proofElement.style.display = 'none';
+
+        // Add view proof button if not already present
+        if (!theorem.querySelector('.view-proof-btn')) {
+          const header = theorem.querySelector('.theorem-header') || theorem;
+          const btn = document.createElement('button');
+          btn.className = 'view-proof-btn';
+          btn.innerHTML = `
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            View Proof
+          `;
+          btn.onclick = () => this.open(theorem);
+
+          if (header.classList.contains('theorem-header')) {
+            header.appendChild(btn);
+          } else {
+            const headerDiv = document.createElement('div');
+            headerDiv.className = 'theorem-header';
+            headerDiv.appendChild(btn);
+            theorem.insertBefore(headerDiv, theorem.firstChild);
+          }
+        }
+      }
+    });
+  },
+
+  open(theorem) {
+    const title = theorem.querySelector('h3')?.textContent || 'Theorem';
+    const proofId = theorem.dataset.proof;
+    const proofElement = document.getElementById(proofId);
+
+    if (!proofElement) return;
+
+    document.getElementById('proof-modal-title').textContent = title;
+
+    const body = document.getElementById('proof-modal-body');
+    body.innerHTML = proofElement.innerHTML + `
+      <div class="proof-qed">
+        <span>∎ QED</span>
+      </div>
+    `;
+
+    this.overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  },
+
+  close() {
+    this.overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+};
+
+// Auto-initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  ProofModal.init();
+});
+
+// ============================================
 // Export for use in other modules
 // ============================================
+
+window.ProofModal = ProofModal;
 
 window.MathUtils = {
   // Basic
