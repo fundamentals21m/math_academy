@@ -880,6 +880,205 @@ canvas {
   text-shadow: var(--glow-sm) rgba(255, 0, 255, 0.5);
 }
 
+/* Theorem Blocks with Clickable Proofs */
+.theorem {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 170, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.theorem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--warning), #ff6b00);
+  border-radius: 12px 0 0 12px;
+}
+
+.theorem:hover {
+  box-shadow: 0 0 25px rgba(255, 170, 0, 0.15);
+}
+
+.theorem-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.theorem-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--warning);
+  text-shadow: 0 0 10px rgba(255, 170, 0, 0.5);
+}
+
+.theorem h3 {
+  margin: 0.25rem 0 0 0;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.theorem-content {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.view-proof-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--warning);
+  border-radius: 6px;
+  color: var(--warning);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.view-proof-btn:hover {
+  background: rgba(255, 170, 0, 0.1);
+  box-shadow: 0 0 15px rgba(255, 170, 0, 0.3);
+}
+
+.view-proof-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Proof Modal */
+.proof-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.proof-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.proof-modal {
+  background: var(--bg-light);
+  border: 1px solid rgba(255, 170, 0, 0.3);
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(255, 170, 0, 0.2);
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.proof-modal-overlay.active .proof-modal {
+  transform: scale(1) translateY(0);
+}
+
+.proof-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.proof-modal-header h4 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.proof-modal-header .proof-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--warning);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.proof-modal-close {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.proof-modal-close:hover {
+  background: rgba(255, 51, 102, 0.1);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.proof-modal-content {
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: calc(80vh - 120px);
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.proof-modal-content ol {
+  margin-left: 1.5rem;
+  padding-left: 0;
+}
+
+.proof-modal-content li {
+  margin-bottom: 0.75rem;
+}
+
+.proof-qed {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.proof-qed span {
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
 /* Callout Boxes */
 .callout {
   padding: 1rem 1.5rem;

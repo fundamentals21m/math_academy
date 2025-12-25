@@ -9,6 +9,7 @@ import {
   useState,
   useCallback,
   useEffect,
+  useMemo,
   type ReactNode,
 } from 'react';
 import { signInWithCustomToken, signOut, onAuthStateChanged, type User } from 'firebase/auth';
@@ -380,21 +381,39 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
     setError(null);
   }, []);
 
-  const value: NostrAuthContextValue = {
-    isAuthenticated: !!firebaseUser && !!npub,
-    isConnecting,
-    npub,
-    displayName,
-    nip05,
-    isAdmin,
-    error,
-    hasExtension,
-    extensionChecked,
-    connect,
-    disconnect,
-    setDisplayName,
-    clearError,
-  };
+  // Memoize the context value to prevent unnecessary re-renders
+  const value = useMemo<NostrAuthContextValue>(
+    () => ({
+      isAuthenticated: !!firebaseUser && !!npub,
+      isConnecting,
+      npub,
+      displayName,
+      nip05,
+      isAdmin,
+      error,
+      hasExtension,
+      extensionChecked,
+      connect,
+      disconnect,
+      setDisplayName,
+      clearError,
+    }),
+    [
+      firebaseUser,
+      npub,
+      isConnecting,
+      displayName,
+      nip05,
+      isAdmin,
+      error,
+      hasExtension,
+      extensionChecked,
+      connect,
+      disconnect,
+      setDisplayName,
+      clearError,
+    ]
+  );
 
   return (
     <NostrAuthContext.Provider value={value}>
