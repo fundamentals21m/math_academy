@@ -13,3 +13,4 @@ firebase/functions/node_modules/
 firebase/functions/lib/
 firebase/*.log
 firebase/functions/*.log
+.vercel
