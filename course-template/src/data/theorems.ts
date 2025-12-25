@@ -1,100 +1,66 @@
-/**
- * Theorem and Definition Entries
- *
- * This file contains all theorems, definitions, and important results
- * from the course. They are displayed on the Theorems page and can be
- * linked from individual sections.
- *
- * Guidelines:
- * - sectionId should match the section where the theorem is introduced
- * - Use LaTeX notation for mathematical statements
- * - Set hasProof: true if the section includes a proof
- * - Category helps organize theorems on the reference page
- */
-
 export interface TheoremEntry {
-  /** Unique identifier for the theorem */
+  /** Unique identifier for theorem */
   id: string;
   /** Display title (e.g., "Pythagorean Theorem") */
   title: string;
-  /** Mathematical statement of the theorem */
+  /** Mathematical statement of theorem - can contain LaTeX */
   statement: string;
   /** Section ID where this theorem is introduced */
   sectionId: number;
+  /** Section title for display */
+  sectionTitle?: string;
   /** Category for grouping (e.g., "Fundamentals", "Advanced") */
-  category: string;
-  /** Whether a proof is provided in the section */
+  category?: string;
+  /** Whether a proof is provided */
   hasProof?: boolean;
   /** Optional: Type of entry */
   type?: 'theorem' | 'definition' | 'lemma' | 'corollary' | 'proposition';
+  /** Optional: LaTeX-formatted proof content */
+  proof?: string;
 }
 
-// =============================================================================
-// THEOREMS AND DEFINITIONS
-// Organize by category or chapter for easier maintenance
-// =============================================================================
-
 export const theorems: TheoremEntry[] = [
-  // ---------------------------------------------------------------------------
-  // FUNDAMENTALS
-  // ---------------------------------------------------------------------------
   {
-    id: 'def-example',
-    title: 'Example Definition',
-    statement: 'This is an example definition that explains a key concept.',
-    sectionId: 0,
+    id: 'def-sample',
+    title: 'Sample Definition',
+    statement: 'A function $f: A \\to B$ is a mapping from set $A$ to set $B$.',
+    sectionId: 1,
     category: 'Fundamentals',
     type: 'definition',
   },
   {
-    id: 'thm-example',
-    title: 'Example Theorem',
-    statement: 'If condition A holds, then conclusion B follows.',
-    sectionId: 1,
+    id: 'thm-sample',
+    title: 'Sample Theorem',
+    statement: 'If $A \\subseteq B$ and $B \\subseteq A$, then $A = B$',
+    sectionId: 2,
     category: 'Fundamentals',
     type: 'theorem',
     hasProof: true,
+    proof: `
+      Let $x \\in A$. Since $A \\subseteq B$, we have $x \\in B$ by definition of subset.
+      Therefore, every element of $A$ is in $B$.
+      
+      Now, let $y \\in B$. Since $B \\subseteq A$, we have $y \\in A$ by definition.
+      Therefore, every element of $B$ is in $A$.
+      
+      Since $A \\subseteq B$ and $B \\subseteq A$, the two sets contain exactly the same elements.
+      Thus, $A = B$.
+    `,
   },
-
-  // ---------------------------------------------------------------------------
-  // CORE CONCEPTS
-  // ---------------------------------------------------------------------------
-  // Add theorems for Core Concepts chapter here
-
-  // ---------------------------------------------------------------------------
-  // ADVANCED TOPICS
-  // ---------------------------------------------------------------------------
-  // Add theorems for Advanced Topics chapter here
 ];
 
-// =============================================================================
-// HELPER FUNCTIONS
-// =============================================================================
-
-/**
- * Get theorems by category
- */
 export function getTheoremsByCategory(category: string): TheoremEntry[] {
   return theorems.filter((t) => t.category === category);
 }
 
-/**
- * Get theorems by section
- */
 export function getTheoremsBySection(sectionId: number): TheoremEntry[] {
   return theorems.filter((t) => t.sectionId === sectionId);
 }
 
-/**
- * Get all unique categories
- */
 export function getCategories(): string[] {
-  return [...new Set(theorems.map((t) => t.category))];
+  return [...new Set(theorems.map((t) => t.category).filter(Boolean))];
 }
 
-/**
- * Search theorems by title or statement
- */
 export function searchTheorems(query: string): TheoremEntry[] {
   const lowerQuery = query.toLowerCase();
   return theorems.filter(
