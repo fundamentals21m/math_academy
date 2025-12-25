@@ -56,6 +56,10 @@
       background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0.1) 100%);
     }
 
+    .course-card:nth-child(4) .course-icon {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    }
+
     .course-title {
       font-size: 1.5rem;
       font-weight: 700;
@@ -110,11 +114,8 @@
     <div class="nav-content">
       <a href="index.html" class="logo">Magic Internet Math</a>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="pages/1-intro.html">Lessons</a></li>
-        <li><a href="pages/theorems.html">Theorems</a></li>
-        <li><a href="pages/interactive.html">Interactive</a></li>
-        <li><a href="pages/leaderboard.html">Leaderboard</a></li>
+        <li><a href="index.html" class="active">Courses</a></li>
+        <li><a href="#leaderboard">Leaderboard</a></li>
       </ul>
     </div>
   </nav>
@@ -129,7 +130,7 @@
     </section>
 
     <h2 class="section-title">Choose Your Path</h2>
-    <p class="section-subtitle">Three courses, from foundations to advanced applications</p>
+    <p class="section-subtitle">Four courses, from foundations to advanced applications</p>
 
     <div class="courses-grid">
       <!-- Basic Algebra -->
@@ -148,7 +149,7 @@
       </a>
 
       <!-- Cryptography -->
-      <a href="pages/1-intro.html" class="course-card">
+      <a href="cryptography/index.html" class="course-card">
         <div class="course-icon">🔐</div>
         <h3 class="course-title">Cryptography Math</h3>
         <p class="course-description">
@@ -174,6 +175,21 @@
           <span class="course-tag">Groups & Rings</span>
           <span class="course-tag">Fields</span>
           <span class="course-tag">Advanced</span>
+        </div>
+      </a>
+
+      <!-- Linear Algebra -->
+      <a href="linalg-hub/index.html" class="course-card">
+        <div class="course-icon">&#x1F4D0;</div>
+        <h3 class="course-title">Linear Algebra</h3>
+        <p class="course-description">
+          Master vectors, matrices, and linear transformations. Based on Gilbert Strang's
+          Introduction to Linear Algebra, with interactive visualizations.
+        </p>
+        <div class="course-meta">
+          <span class="course-tag">Vectors & Matrices</span>
+          <span class="course-tag">Interactive</span>
+          <span class="course-tag">Intermediate</span>
         </div>
       </a>
     </div>
@@ -225,6 +241,13 @@
           </div>
           <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="aa-count">0 / 50 sections</div>
         </div>
+        <div class="card" style="padding: 1.5rem;">
+          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Linear Algebra</h4>
+          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
+            <div id="linalg-progress" style="height: 100%; background: linear-gradient(90deg, #06b6d4, #22d3ee); width: 0%; transition: width 0.5s;"></div>
+          </div>
+          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="linalg-count">0 / 0 sections</div>
+        </div>
       </div>
     </div>
 
@@ -232,6 +255,25 @@
       <strong>Start anywhere!</strong> Each course is self-contained. Begin with Basic Algebra for foundations,
       or jump into Cryptography if you're ready for applications.
     </div>
+
+    <!-- Global Leaderboard Section -->
+    <section id="leaderboard" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+      <h2 class="section-title">Global Leaderboard</h2>
+      <p class="section-subtitle">Top learners across all courses</p>
+
+      <div class="card" style="padding: 2rem; margin-top: 2rem;">
+        <div style="text-align: center; color: #94a3b8;">
+          <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+            Connect with Nostr to compete on the global leaderboard and track your progress across all courses.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="ba/index.html#/leaderboard" class="btn btn-secondary btn-small">Basic Algebra Leaderboard</a>
+            <a href="aa/index.html#/leaderboard" class="btn btn-secondary btn-small">Abstract Algebra Leaderboard</a>
+            <a href="linalg-hub/index.html#/leaderboard" class="btn btn-secondary btn-small">Linear Algebra Leaderboard</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script src="scripts/main.js"></script>
@@ -261,6 +303,7 @@
         const baCount = sections.filter(id => id.startsWith('ba:')).length;
         const cryptoCount = sections.filter(id => id.startsWith('crypto:')).length;
         const aaCount = sections.filter(id => id.startsWith('aa:')).length;
+        const linalgCount = sections.filter(id => id.startsWith('linalg:')).length;
 
         // Update progress bars
         document.getElementById('ba-progress').style.width = `${(baCount / 64) * 100}%`;
@@ -271,6 +314,9 @@
 
         document.getElementById('aa-progress').style.width = `${(aaCount / 50) * 100}%`;
         document.getElementById('aa-count').textContent = `${aaCount} / 50 sections`;
+
+        document.getElementById('linalg-progress').style.width = `${(linalgCount / 50) * 100}%`;
+        document.getElementById('linalg-count').textContent = `${linalgCount} / 50 sections`;
       } catch (e) {
         console.error('Failed to load progress:', e);
       }
