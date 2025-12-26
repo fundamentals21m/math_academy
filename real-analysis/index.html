@@ -199,11 +199,114 @@
             font-style: italic;
         }
 
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 280px;
+            background: #1e293b;
+            border-right: 1px solid #334155;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #10b981;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .sidebar-nav {
+            padding: 1rem 0;
+        }
+
+        .nav-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-section-title {
+            padding: 0.5rem 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-item:hover {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border-left-color: #10b981;
+        }
+
+        .nav-item.active {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border-left-color: #10b981;
+        }
+
+        .main-content {
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+
+        .section-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            padding: 0.5rem 1rem;
+            background: #334155;
+            color: #cbd5e1;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: #475569;
+            color: #f1f5f9;
+        }
+
         .footer {
             background: #0f172a;
             padding: 2rem 0;
             text-align: center;
             border-top: 1px solid #334155;
+        }
+        .footer p {
+            color: #64748b;
         }
 
         .footer p {
@@ -213,21 +316,57 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <div class="logo">📐 Introduction to Real Analysis</div>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <span>📐</span>
+                <span>Real Analysis</span>
+            </div>
         </div>
-    </header>
 
-    <section class="hero">
-        <div class="container">
+        <div class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Course</div>
+                <a href="#home" class="nav-item active" onclick="showSection('home')">Home</a>
+                <a href="#curriculum" class="nav-item" onclick="showSection('curriculum')">Curriculum</a>
+                <a href="#interactive" class="nav-item" onclick="showSection('interactive')">Interactive</a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Part 1: Foundations</div>
+                <a href="#section1" class="nav-item" onclick="showSection('section1')">1. Real Numbers</a>
+                <a href="#section2" class="nav-item" onclick="showSection('section2')">2. Induction</a>
+                <a href="#section3" class="nav-item" onclick="showSection('section3')">3. Sets</a>
+                <a href="#section4" class="nav-item" onclick="showSection('section4')">4. Functions</a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Part 2: Sequences & Series</div>
+                <a href="#section5" class="nav-item" onclick="showSection('section5')">5. Sequences & Limits</a>
+                <a href="#section6" class="nav-item" onclick="showSection('section6')">6. Infinite Series</a>
+                <a href="#section7" class="nav-item" onclick="showSection('section7')">7. Convergence Tests</a>
+                <a href="#section8" class="nav-item" onclick="showSection('section8')">8. Power Series</a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Resources</div>
+                <a href="https://real-analysis-eta.vercel.app" target="_blank" class="nav-item">Full Course →</a>
+                <a href="https://mathacademy-cyan.vercel.app" target="_blank" class="nav-item">All Courses →</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="container" id="home-section">
             <h1>Master Real Analysis</h1>
             <p>A rigorous introduction to the foundations of real analysis, covering limits, continuity, differentiation, and integration through formal mathematical proofs.</p>
-            <a href="#curriculum" class="btn">Explore Curriculum</a>
-            <a href="#interactive" class="btn">Try Interactive Demo</a>
+            <button onclick="showSection('curriculum')" class="btn">Explore Curriculum</button>
+            <button onclick="showSection('interactive')" class="btn">Try Interactive Demo</button>
         </div>
-    </section>
+    </div>
 
-    <section id="curriculum" class="section">
+    <div class="container section-container" id="curriculum-section" style="display: none;">
         <div class="container">
             <h2>Course Curriculum</h2>
             <div class="grid">
@@ -276,9 +415,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="interactive" class="section" style="background: #1e293b;">
+    <div class="container section-container" id="interactive-section" style="display: none; background: #1e293b;">
         <div class="container">
             <h2>Interactive Learning</h2>
 
@@ -313,43 +452,143 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="section">
-        <div class="container">
-            <h2>Why Real Analysis?</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Rigorous Foundations</h3>
-                    <p>Develop a deep understanding of the mathematical foundations that support calculus and advanced mathematics.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Proof-Based Thinking</h3>
-                    <p>Learn to construct and understand formal mathematical proofs, essential for advanced study in mathematics.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Problem-Solving Skills</h3>
-                    <p>Master techniques for solving complex mathematical problems with precision and clarity.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Advanced Applications</h3>
-                    <p>Apply real analysis concepts to physics, engineering, economics, and computer science.</p>
-                </div>
+    <!-- Section Content Containers -->
+    <div class="container section-container" id="section1-section" style="display: none;">
+        <h2>Section 1: The Real Number System</h2>
+        <div class="section-nav">
+            <h3>Part 1: Foundations</h3>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showSection('home')">← Back to Home</button>
+                <button class="nav-btn" onclick="showSection('section2')">Next: Induction →</button>
             </div>
         </div>
-    </section>
+        <p>Content for Section 1 will be added here...</p>
+    </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Math Academy - Introduction to Real Analysis Course</p>
-            <p>Based on Kenneth A. Ross's "Elementary Analysis"</p>
+    <div class="container section-container" id="section2-section" style="display: none;">
+        <h2>Section 2: Mathematical Induction</h2>
+        <div class="section-nav">
+            <h3>Part 1: Foundations</h3>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showSection('section1')">← Previous</button>
+                <button class="nav-btn" onclick="showSection('section3')">Next: Sets →</button>
+            </div>
         </div>
-    </footer>
+        <p>Content for Section 2 will be added here...</p>
+    </div>
+
+    <div class="container section-container" id="section3-section" style="display: none;">
+        <h2>Section 3: Finite and Infinite Sets</h2>
+        <div class="section-nav">
+            <h3>Part 1: Foundations</h3>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showSection('section2')">← Previous</button>
+                <button class="nav-btn" onclick="showSection('section4')">Next: Functions →</button>
+            </div>
+        </div>
+        <p>Content for Section 3 will be added here...</p>
+    </div>
+
+    <div class="container section-container" id="section4-section" style="display: none;">
+        <h2>Section 4: Functions and Relations</h2>
+        <div class="section-nav">
+            <h3>Part 1: Foundations</h3>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showSection('section3')">← Previous</button>
+                <button class="nav-btn" onclick="showSection('section5')">Next: Sequences →</button>
+            </div>
+        </div>
+        <p>Content for Section 4 will be added here...</p>
+    </div>
+
+    <div class="container section-container" id="section5-section" style="display: none;">
+        <h2>Section 5: Sequences and Their Limits</h2>
+        <div class="section-nav">
+            <h3>Part 2: Sequences and Series</h3>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showSection('section4')">← Previous</button>
+                <button class="nav-btn" onclick="showSection('section6')">Next: Series →</button>
+            </div>
+        </div>
+        <p>Content for Section 5 will be added here...</p>
+    </div>
+
+    <div class="container section-container" id="section6-section" style="display: none;">
+        <h2>Section 6: Infinite Series</h2>
+        <div class="section-nav">
+            <h3>Part 2: Sequences and Series</h3>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showSection('section5')">← Previous</button>
+                <button class="nav-btn" onclick="showSection('section7')">Next: Convergence →</button>
+            </div>
+        </div>
+        <p>Content for Section 6 will be added here...</p>
+    </div>
+
+    <div class="container section-container" id="section7-section" style="display: none;">
+        <h2>Section 7: Convergence Tests</h2>
+        <div class="section-nav">
+            <h3>Part 2: Sequences and Series</h3>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showSection('section6')">← Previous</button>
+                <button class="nav-btn" onclick="showSection('section8')">Next: Power Series →</button>
+            </div>
+        </div>
+        <p>Content for Section 7 will be added here...</p>
+    </div>
+
+    <div class="container section-container" id="section8-section" style="display: none;">
+        <h2>Section 8: Power Series</h2>
+        <div class="section-nav">
+            <h3>Part 2: Sequences and Series</h3>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showSection('section7')">← Previous</button>
+                <button class="nav-btn" onclick="showSection('home')">Back to Home →</button>
+            </div>
+        </div>
+        <p>Content for Section 8 will be added here...</p>
+    </div>
+
+    </div>
 
     <script>
+        // Section navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section-container');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Remove active class from all nav items
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionId + '-section');
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+
+            // Add active class to clicked nav item
+            const activeNav = document.querySelector(`a[href="#${sectionId}"]`);
+            if (activeNav) {
+                activeNav.classList.add('active');
+            }
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Initialize - show home section
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+        });
+
         // Interactive ε-δ demonstration
         const epsilonSlider = document.getElementById('epsilon');
         const deltaSlider = document.getElementById('delta');
@@ -359,48 +598,52 @@
         const xValue = document.getElementById('x-value');
         const result = document.getElementById('result');
 
-        function updateAnalysis() {
-            const epsilon = parseFloat(epsilonSlider.value);
-            const delta = parseFloat(deltaSlider.value);
-            const x = parseFloat(xSlider.value);
+        if (epsilonSlider && deltaSlider && xSlider) {
+            function updateAnalysis() {
+                const epsilon = parseFloat(epsilonSlider.value);
+                const delta = parseFloat(deltaSlider.value);
+                const x = parseFloat(xSlider.value);
 
-            // f(x) = 2x + 1, limit L = 5, a = 2
-            const fx = 2 * x + 1;
-            const L = 5;
-            const a = 2;
+                // f(x) = 2x + 1, limit L = 5, a = 2
+                const fx = 2 * x + 1;
+                const L = 5;
+                const a = 2;
 
-            const condition1 = Math.abs(fx - L) < epsilon;
-            const condition2 = Math.abs(x - a) < delta;
+                const condition1 = Math.abs(fx - L) < epsilon;
+                const condition2 = Math.abs(x - a) < delta;
 
-            epsilonValue.textContent = epsilon.toFixed(2);
-            deltaValue.textContent = delta.toFixed(2);
-            xValue.textContent = x.toFixed(2);
+                if (epsilonValue) epsilonValue.textContent = epsilon.toFixed(2);
+                if (deltaValue) deltaValue.textContent = delta.toFixed(2);
+                if (xValue) xValue.textContent = x.toFixed(2);
 
-            if (condition1 && condition2) {
-                result.className = 'result';
-                result.innerHTML = `
-                    <strong>✅ Condition Satisfied!</strong><br>
-                    |f(${x.toFixed(2)}) - 5| = ${Math.abs(fx - 5).toFixed(3)} < ${epsilon}<br>
-                    |${x.toFixed(2)} - 2| = ${Math.abs(x - 2).toFixed(3)} < ${delta}<br>
-                    The ε-δ definition holds for this point!
-                `;
-            } else {
-                result.className = 'result error';
-                result.innerHTML = `
-                    <strong>❌ Condition Not Satisfied</strong><br>
-                    |f(${x.toFixed(2)}) - 5| = ${Math.abs(fx - 5).toFixed(3)} ${Math.abs(fx - 5) < epsilon ? '≤' : '≱'} ${epsilon}<br>
-                    |${x.toFixed(2)} - 2| = ${Math.abs(x - 2).toFixed(3)} ${Math.abs(x - 2) < delta ? '≤' : '≱'} ${delta}<br>
-                    Try adjusting ε or δ to make both conditions true.
-                `;
+                if (result) {
+                    if (condition1 && condition2) {
+                        result.className = 'result';
+                        result.innerHTML = `
+                            <strong>✅ Condition Satisfied!</strong><br>
+                            |f(${x.toFixed(2)}) - 5| = ${Math.abs(fx - 5).toFixed(3)} < ${epsilon}<br>
+                            |${x.toFixed(2)} - 2| = ${Math.abs(x - 2).toFixed(3)} < ${delta}<br>
+                            The ε-δ definition holds for this point!
+                        `;
+                    } else {
+                        result.className = 'result error';
+                        result.innerHTML = `
+                            <strong>❌ Condition Not Satisfied</strong><br>
+                            |f(${x.toFixed(2)}) - 5| = ${Math.abs(fx - 5).toFixed(3)} ${Math.abs(fx - 5) < epsilon ? '≤' : '≱'} ${epsilon}<br>
+                            |${x.toFixed(2)} - 2| = ${Math.abs(x - 2).toFixed(3)} ${Math.abs(x - 2) < delta ? '≤' : '≱'} ${delta}<br>
+                            Try adjusting ε or δ to make both conditions true.
+                        `;
+                    }
+                }
             }
+
+            epsilonSlider.addEventListener('input', updateAnalysis);
+            deltaSlider.addEventListener('input', updateAnalysis);
+            xSlider.addEventListener('input', updateAnalysis);
+
+            // Initial update
+            updateAnalysis();
         }
-
-        epsilonSlider.addEventListener('input', updateAnalysis);
-        deltaSlider.addEventListener('input', updateAnalysis);
-        xSlider.addEventListener('input', updateAnalysis);
-
-        // Initial update
-        updateAnalysis();
     </script>
 </body>
 </html>
