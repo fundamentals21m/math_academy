@@ -9,7 +9,7 @@ import { isValidCourseId } from '../types/courses';
 import { SYNC_INTERVAL_MS, DEBOUNCE_MS, RATE_LIMIT_MS } from '../constants';
 import type { CourseId, ScoreUpdate, SyncPayload } from './types';
 import { getLogger } from '../utils/logger';
-// import { validateSectionData } from '../validation/schemas'; // Temporarily disabled to test circular dependency
+import { validateSectionData } from '../validation/schemas';
 import { XP_CONFIG } from '../gamification/types';
 
 const logger = getLogger('SyncManager');
@@ -28,7 +28,7 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
     const state = JSON.parse(stored);
     if (!state?.user || !state?.sections) return null;
 
-    const scores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0 };
+    const scores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, template: 0 };
 
     // Calculate XP per course from sections
     for (const [sectionId, sectionData] of Object.entries(state.sections)) {
@@ -37,12 +37,13 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
       if (!isValidCourseId(coursePrefix)) continue;
       const course = coursePrefix;
 
-      // Simple validation instead of schema validation to avoid circular dependencies
-      const section = sectionData as any; // Type assertion for now
-      if (!section) {
+      // Validate section data using schema
+      const validation = validateSectionData(sectionData);
+      if (!validation.valid || !validation.data) {
         logger.warn(`Invalid section data for ${sectionId}, skipping`);
         continue;
       }
+      const section = validation.data;
 
       // Add XP from quiz attempts
       if (section.quizAttempts) {
@@ -75,10 +76,11 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
       { courseId: 'aa', xp: scores.aa },
       { courseId: 'linalg', xp: scores.linalg },
       { courseId: 'advlinalg', xp: scores.advlinalg },
+      { courseId: 'template', xp: scores.template },
     ];
   } catch (error) {
     logger.error('Error extracting scores from storage:', error);
-    throw new Error(`Failed to extract scores from storage: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    return null;
   }
 }
 
@@ -252,7 +254,7 @@ export class SyncManager {
         acc[s.courseId] = s.xp;
         return acc;
       },
-      { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0 } as Record<CourseId, number>
+      { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, template: 0 } as Record<CourseId, number>
     );
   }
 }

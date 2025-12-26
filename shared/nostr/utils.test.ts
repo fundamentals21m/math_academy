@@ -133,13 +133,21 @@ describe('waitForNostrExtension', () => {
   });
   
   it('should return false after timeout if extension never appears', async () => {
+    // Mock Date.now since waitForNostrExtension uses it for timeout
+    const startTime = Date.now();
+    let currentTime = startTime;
+    vi.spyOn(Date, 'now').mockImplementation(() => currentTime);
+    
     const promise = waitForNostrExtension(100);
     
-    // Fast-forward past the timeout
+    // Advance both timers and mocked Date.now
+    currentTime = startTime + 150;
     await vi.advanceTimersByTimeAsync(150);
     
     const result = await promise;
     expect(result).toBe(false);
+    
+    vi.restoreAllMocks();
   });
   
   it('should return true if extension appears within timeout', async () => {

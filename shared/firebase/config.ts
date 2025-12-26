@@ -93,7 +93,7 @@ export function getFirebaseFunctions(): Functions {
  * Check if Firebase is configured
  */
 export function isFirebaseConfigured(): boolean {
-  return firebaseConfig.apiKey !== 'YOUR_API_KEY';
+  return !!firebaseConfig.apiKey && firebaseConfig.apiKey !== 'YOUR_API_KEY';
 }
 
 export { firebaseConfig };

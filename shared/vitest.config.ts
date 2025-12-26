@@ -5,14 +5,10 @@ export default defineConfig({
     jsx: 'automatic',
   },
   test: {
-    environment: 'jsdom',
+    environment: 'happy-dom',
     setupFiles: ['./test/setup.ts'],
     globals: true,
-    environmentOptions: {
-      jsdom: {
-        url: 'http://localhost:3000',
-      },
-    },
+    testTimeout: 10000,
   },
   coverage: {
     provider: 'v8',

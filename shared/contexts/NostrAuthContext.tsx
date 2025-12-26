@@ -26,7 +26,7 @@ import { AUTH_EVENT_KIND, type NostrEvent, type UnsignedNostrEvent } from '../no
 import { DEFAULT_RELAYS, EXTENSION_WAIT_MS } from '../constants';
 import { getSyncManager } from '../leaderboard/syncManager';
 import { getLogger } from '../utils/logger';
-// import { validateAuthState } from '../validation/schemas'; // Temporarily disabled to test circular dependency
+import { validateAuthState } from '../validation/schemas';
 
 const logger = getLogger('NostrAuth');
 
@@ -55,11 +55,6 @@ const NostrAuthContext = createContext<NostrAuthContextValue | null>(null);
 
 // Storage key for persisted auth state
 const AUTH_STORAGE_KEY = 'magic-internet-math-nostr-auth';
-
-interface StoredAuthState {
-  npub: string;
-  displayName: string | null;
-}
 
 export function NostrAuthProvider({ children }: { children: ReactNode }) {
   const [isConnecting, setIsConnecting] = useState(false);
@@ -136,13 +131,13 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
           const stored = localStorage.getItem(AUTH_STORAGE_KEY);
           if (stored) {
             const parsed = JSON.parse(stored);
-            // Simple validation instead of schema validation to avoid circular dependencies
-            if (!parsed || !parsed.npub) {
-              logger.warn('Invalid auth state in localStorage');
+            const validation = validateAuthState(parsed);
+            if (!validation.valid || !validation.data) {
+              logger.warn('Invalid auth state in localStorage:', validation.error);
               localStorage.removeItem(AUTH_STORAGE_KEY);
               return;
             }
-            if (parsed.npub === user.uid) {
+            if (validation.data.npub === user.uid) {
               setDisplayNameState(validation.data.displayName);
             }
           }

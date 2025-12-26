@@ -39,8 +39,12 @@ describe('AdminPanel', () => {
 
   it('should render when user is admin', () => {
     render(<AdminPanel />);
-    // Should render the admin panel
-    expect(screen.getByText(/ban user/i)).toBeDefined();
+    // Should render the admin panel title
+    expect(screen.getByText('Admin Panel')).toBeDefined();
+    // Should render all three action buttons
+    expect(screen.getByRole('button', { name: 'Ban User' })).toBeDefined();
+    expect(screen.getByRole('button', { name: 'Unban User' })).toBeDefined();
+    expect(screen.getByRole('button', { name: 'Reset Scores' })).toBeDefined();
   });
 
   describe('npub validation', () => {
@@ -48,7 +52,7 @@ describe('AdminPanel', () => {
       render(<AdminPanel />);
       
       // Find and click ban button without entering npub
-      const banButton = screen.getByText(/ban user/i);
+      const banButton = screen.getByRole('button', { name: 'Ban User' });
       fireEvent.click(banButton);
       
       await waitFor(() => {
@@ -64,7 +68,7 @@ describe('AdminPanel', () => {
       fireEvent.change(input, { target: { value: 'invalid-npub' } });
       
       // Click ban button
-      const banButton = screen.getByText(/ban user/i);
+      const banButton = screen.getByRole('button', { name: 'Ban User' });
       fireEvent.click(banButton);
       
       await waitFor(() => {
@@ -85,7 +89,7 @@ describe('AdminPanel', () => {
       fireEvent.change(input, { target: { value: validNpub } });
       
       // Click ban button
-      const banButton = screen.getByText(/ban user/i);
+      const banButton = screen.getByRole('button', { name: 'Ban User' });
       fireEvent.click(banButton);
       
       // Should not show validation error (might show loading or make API call)
@@ -106,7 +110,7 @@ describe('AdminPanel', () => {
       const input = screen.getByPlaceholderText(/npub1/i);
       fireEvent.change(input, { target: { value: validNpub } });
       
-      const banButton = screen.getByText(/ban user/i);
+      const banButton = screen.getByRole('button', { name: 'Ban User' });
       fireEvent.click(banButton);
       
       await waitFor(() => {
@@ -124,7 +128,7 @@ describe('AdminPanel', () => {
       const input = screen.getByPlaceholderText(/npub1/i);
       fireEvent.change(input, { target: { value: maliciousInput } });
       
-      const banButton = screen.getByText(/ban user/i);
+      const banButton = screen.getByRole('button', { name: 'Ban User' });
       fireEvent.click(banButton);
       
       // Should show validation error, not execute script
@@ -140,7 +144,7 @@ describe('AdminPanel', () => {
       const input = screen.getByPlaceholderText(/npub1/i);
       fireEvent.change(input, { target: { value: sqlInjection } });
       
-      const banButton = screen.getByText(/ban user/i);
+      const banButton = screen.getByRole('button', { name: 'Ban User' });
       fireEvent.click(banButton);
       
       await waitFor(() => {
@@ -161,7 +165,7 @@ describe('AdminPanel', () => {
       const input = screen.getByPlaceholderText(/npub1/i);
       fireEvent.change(input, { target: { value: validNpub } });
       
-      const banButton = screen.getByText(/ban user/i);
+      const banButton = screen.getByRole('button', { name: 'Ban User' });
       fireEvent.click(banButton);
       
       await waitFor(() => {

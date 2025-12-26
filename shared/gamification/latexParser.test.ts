@@ -87,12 +87,16 @@ describe('XSS Prevention', () => {
 
   it('should not execute javascript: URLs', () => {
     const result = renderLaTeX('<a href="javascript:alert(1)">click</a>');
-    expect(result).not.toContain('javascript:');
+    // The entire string is HTML-escaped, so no actual <a> tag exists
+    expect(result).not.toContain('<a ');
+    expect(result).toContain('&lt;a');
   });
 
   it('should sanitize event handlers', () => {
     const result = renderLaTeX('<div onclick="alert(1)">test</div>');
-    expect(result).not.toContain('onclick');
+    // The entire string is HTML-escaped, so no actual <div> tag exists
+    expect(result).not.toContain('<div ');
+    expect(result).toContain('&lt;div');
   });
 
   it('should escape quotes in text', () => {
@@ -114,23 +118,30 @@ describe('XSS Prevention', () => {
 
   it('should sanitize SVG-based XSS attempts', () => {
     const result = renderLaTeX('<svg onload="alert(1)"><circle r="10"/></svg>');
-    expect(result).not.toContain('onload');
+    // HTML escaping prevents the SVG from being executed - no raw < or > chars
+    expect(result).not.toContain('<svg');
+    expect(result).toContain('&lt;svg');
   });
 
   it('should handle data: URL attempts', () => {
     const result = renderLaTeX('<a href="data:text/html,<script>alert(1)</script>">link</a>');
-    // DOMPurify should strip or neutralize this
-    expect(result).not.toContain('data:text/html');
+    // HTML escaping prevents the anchor tag from being rendered
+    expect(result).not.toContain('<a href');
+    expect(result).toContain('&lt;a href');
   });
 
   it('should handle iframe injection attempts', () => {
     const result = renderLaTeX('<iframe src="https://evil.com"></iframe>');
+    // HTML escaping prevents iframe from being rendered
     expect(result).not.toContain('<iframe');
+    expect(result).toContain('&lt;iframe');
   });
 
   it('should handle style-based XSS', () => {
     const result = renderLaTeX('<div style="background:url(javascript:alert(1))">test</div>');
-    expect(result).not.toContain('javascript:');
+    // HTML escaping prevents the div from being rendered as HTML
+    expect(result).not.toContain('<div style');
+    expect(result).toContain('&lt;div style');
   });
 
   it('should handle encoded XSS attempts', () => {
