@@ -5,8 +5,13 @@
 basic-algebra/
 abstract-algebra/
 
-# Shared library node_modules
+# Node modules (all courses and shared)
+node_modules/
+*/node_modules/
 shared/node_modules/
+
+# Build outputs (kept separate from deployed assets)
+*/dist/
 
 # Firebase
 firebase/functions/node_modules/
@@ -14,3 +19,8 @@ firebase/functions/lib/
 firebase/*.log
 firebase/functions/*.log
 .vercel
+
+# Environment variables
+.env
+.env.local
+.env.*.local
