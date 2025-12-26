@@ -8,6 +8,7 @@ import { getFirebaseFunctions, isFirebaseConfigured } from '../../firebase/confi
 import { useNostrAuth } from '../../contexts/NostrAuthContext';
 import { shortenNpub } from '../../nostr/utils';
 import { getLogger } from '../../utils/logger';
+import { validateNpub } from '../../validation/schemas';
 
 const logger = getLogger('AdminPanel');
 
@@ -58,8 +59,16 @@ export function AdminPanel({ className = '' }: AdminPanelProps) {
 
   // Ban user
   const handleBan = async () => {
-    if (!targetNpub.trim()) {
-      setMessage({ type: 'error', text: 'Please enter a valid npub' });
+    const trimmedNpub = targetNpub.trim();
+    if (!trimmedNpub) {
+      setMessage({ type: 'error', text: 'Please enter an npub' });
+      return;
+    }
+
+    // Validate npub format before sending to API
+    const validation = validateNpub(trimmedNpub);
+    if (!validation.valid) {
+      setMessage({ type: 'error', text: validation.error || 'Invalid npub format' });
       return;
     }
 
@@ -90,8 +99,16 @@ export function AdminPanel({ className = '' }: AdminPanelProps) {
 
   // Unban user
   const handleUnban = async () => {
-    if (!targetNpub.trim()) {
-      setMessage({ type: 'error', text: 'Please enter a valid npub' });
+    const trimmedNpub = targetNpub.trim();
+    if (!trimmedNpub) {
+      setMessage({ type: 'error', text: 'Please enter an npub' });
+      return;
+    }
+
+    // Validate npub format before sending to API
+    const validation = validateNpub(trimmedNpub);
+    if (!validation.valid) {
+      setMessage({ type: 'error', text: validation.error || 'Invalid npub format' });
       return;
     }
 
@@ -121,8 +138,16 @@ export function AdminPanel({ className = '' }: AdminPanelProps) {
 
   // Reset user scores
   const handleResetScores = async () => {
-    if (!targetNpub.trim()) {
-      setMessage({ type: 'error', text: 'Please enter a valid npub' });
+    const trimmedNpub = targetNpub.trim();
+    if (!trimmedNpub) {
+      setMessage({ type: 'error', text: 'Please enter an npub' });
+      return;
+    }
+
+    // Validate npub format before sending to API
+    const validation = validateNpub(trimmedNpub);
+    if (!validation.valid) {
+      setMessage({ type: 'error', text: validation.error || 'Invalid npub format' });
       return;
     }
 
