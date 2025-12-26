@@ -13,6 +13,8 @@ interface UserRankCardProps {
     ba: number;
     crypto: number;
     aa: number;
+    linalg: number;
+    advlinalg: number;
   };
 }
 
@@ -109,21 +111,33 @@ export function UserRankCard({ rank, totalXP, level, courseXP }: UserRankCardPro
           <div className="grid grid-cols-3 gap-2">
             <div className="p-2 rounded-lg bg-dark-800/50 text-center">
               <div className="text-sm font-bold text-blue-400">
-                {courseXP.ba.toLocaleString()}
+                {(courseXP.ba || 0).toLocaleString()}
               </div>
               <div className="text-xs text-dark-500">Basic Algebra</div>
             </div>
             <div className="p-2 rounded-lg bg-dark-800/50 text-center">
               <div className="text-sm font-bold text-green-400">
-                {courseXP.crypto.toLocaleString()}
+                {(courseXP.crypto || 0).toLocaleString()}
               </div>
               <div className="text-xs text-dark-500">Cryptography</div>
             </div>
             <div className="p-2 rounded-lg bg-dark-800/50 text-center">
               <div className="text-sm font-bold text-purple-400">
-                {courseXP.aa.toLocaleString()}
+                {(courseXP.aa || 0).toLocaleString()}
               </div>
               <div className="text-xs text-dark-500">Abstract Algebra</div>
+            </div>
+            <div className="p-2 rounded-lg bg-dark-800/50 text-center">
+              <div className="text-sm font-bold text-cyan-400">
+                {(courseXP.linalg || 0).toLocaleString()}
+              </div>
+              <div className="text-xs text-dark-500">Linear Algebra</div>
+            </div>
+            <div className="p-2 rounded-lg bg-dark-800/50 text-center">
+              <div className="text-sm font-bold text-pink-400">
+                {(courseXP.advlinalg || 0).toLocaleString()}
+              </div>
+              <div className="text-xs text-dark-500">Adv. Linear Alg.</div>
             </div>
           </div>
         </div>

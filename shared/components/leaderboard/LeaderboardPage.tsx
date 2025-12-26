@@ -85,6 +85,8 @@ const TABS: { id: TabId; label: string; shortLabel: string }[] = [
   { id: 'ba', label: 'Basic Algebra', shortLabel: 'BA' },
   { id: 'crypto', label: 'Cryptography', shortLabel: 'Crypto' },
   { id: 'aa', label: 'Abstract Algebra', shortLabel: 'AA' },
+  { id: 'linalg', label: 'Linear Algebra', shortLabel: 'LinAlg' },
+  { id: 'advlinalg', label: 'Advanced Linear Algebra', shortLabel: 'AdvLinAlg' },
 ];
 
 interface LeaderboardPageProps {
@@ -195,7 +197,8 @@ export function LeaderboardPage({ className = '' }: LeaderboardPageProps) {
   const syncManager = getSyncManager();
   const localScores = syncManager.getLocalScores();
   const totalXP = localScores
-    ? localScores.ba + localScores.crypto + localScores.aa
+    ? (localScores.ba || 0) + (localScores.crypto || 0) + (localScores.aa || 0) +
+      (localScores.linalg || 0) + (localScores.advlinalg || 0)
     : 0;
   const level = Math.floor(Math.sqrt(totalXP / 100)) + 1;
 

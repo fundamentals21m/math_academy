@@ -8,7 +8,7 @@ import { getFirebaseFunctions, isFirebaseConfigured } from '../../firebase/confi
 import { useNostrAuth } from '../../contexts/NostrAuthContext';
 import { shortenNpub } from '../../nostr/utils';
 import { getLogger } from '../../utils/logger';
-// import { validateNpub } from '../../validation/schemas'; // Temporarily disabled to test circular dependency
+import { validateNpub } from '../../validation/schemas';
 
 const logger = getLogger('AdminPanel');
 
@@ -65,9 +65,10 @@ export function AdminPanel({ className = '' }: AdminPanelProps) {
       return;
     }
 
-    // Simple npub validation
-    if (!trimmedNpub.startsWith('npub1') || trimmedNpub.length < 10) {
-      setMessage({ type: 'error', text: 'Invalid npub format' });
+    // Validate npub using schema
+    const npubValidation = validateNpub(trimmedNpub);
+    if (!npubValidation.valid) {
+      setMessage({ type: 'error', text: npubValidation.error || 'Invalid npub format' });
       return;
     }
 
@@ -104,9 +105,10 @@ export function AdminPanel({ className = '' }: AdminPanelProps) {
       return;
     }
 
-    // Simple npub validation
-    if (!trimmedNpub.startsWith('npub1') || trimmedNpub.length < 10) {
-      setMessage({ type: 'error', text: 'Invalid npub format' });
+    // Validate npub using schema
+    const npubValidation = validateNpub(trimmedNpub);
+    if (!npubValidation.valid) {
+      setMessage({ type: 'error', text: npubValidation.error || 'Invalid npub format' });
       return;
     }
 
@@ -142,9 +144,10 @@ export function AdminPanel({ className = '' }: AdminPanelProps) {
       return;
     }
 
-    // Simple npub validation
-    if (!trimmedNpub.startsWith('npub1') || trimmedNpub.length < 10) {
-      setMessage({ type: 'error', text: 'Invalid npub format' });
+    // Validate npub using schema
+    const npubValidation = validateNpub(trimmedNpub);
+    if (!npubValidation.valid) {
+      setMessage({ type: 'error', text: npubValidation.error || 'Invalid npub format' });
       return;
     }
 

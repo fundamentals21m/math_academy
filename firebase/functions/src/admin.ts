@@ -176,7 +176,7 @@ export const resetUserScores = functions.https.onCall(
     // Reset user's scores
     batch.update(userRef, {
       totalXP: 0,
-      scores: { ba: 0, crypto: 0, aa: 0 },
+      scores: { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0 },
       level: 1,
       scoresResetAt: admin.firestore.FieldValue.serverTimestamp(),
       scoresResetBy: context.auth!.uid,

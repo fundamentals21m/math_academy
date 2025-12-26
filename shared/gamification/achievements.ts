@@ -42,6 +42,15 @@ export const ACHIEVEMENTS: AchievementDefinition[] = [
     check: (state) => Math.round((state.user.sectionsCompleted.length / 50) * 100),
     target: 50,
   },
+  {
+    id: 'course-complete',
+    title: 'Course Complete',
+    description: 'Complete 100% of the course',
+    category: 'progress',
+    xpReward: 200,
+    check: (state) => Math.round((state.user.sectionsCompleted.length / 50) * 100),
+    target: 100,
+  },
 
   // Mastery achievements
   {

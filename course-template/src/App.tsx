@@ -14,12 +14,12 @@ import InteractiveModules from '@/pages/InteractiveModules';
 // Example: import Section00 from '@/pages/sections/Section00';
 
 // Dynamic section loader for sections that exist
-const sectionComponents: Record<number, React.ComponentType> = {
-  // Add section components here as you create them:
-  // 0: Section00,
-  // 1: Section01,
-  // etc.
-};
+// Add section components here as you create them:
+// Example:
+// const sectionComponents: Record<number, React.ComponentType> = {
+//   0: Section00,
+//   1: Section01,
+// };
 
 function SectionRouter() {
   // This component handles dynamic section routing

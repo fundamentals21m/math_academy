@@ -22,5 +22,12 @@ service cloud.firestore {
       allow read: if true;
       allow write: if false;
     }
+
+    // Admin logs collection - only admins can read, writes only via Cloud Functions
+    match /adminLogs/{logId} {
+      allow read: if request.auth != null && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+      allow write: if false;
+    }
   }
 }

@@ -1,4 +1,7 @@
 import { z } from 'zod';
+import { getLogger } from '../utils/logger';
+
+const logger = getLogger('Validation');
 
 // =================================================================
 // VALIDATION SCHEMAS
@@ -12,7 +15,7 @@ export const NPUB_SCHEMA = z.string().regex(/^npub1[1-9ac-hjk-np-z46-9]+$/);
 
 export const DISPLAY_NAME_SCHEMA = z.string().min(1).max(50).regex(/^[a-zA-Z0-9\s\-\'\.]+$/);
 
-export const NOIP05_SCHEMA = z.string().regex(/^[a-zA-Z0-9\.\-_]+(@[a-zA-Z0-9\.\-_]+\.[a-zA-Z]{2,})?$/);
+export const NIP05_SCHEMA = z.string().regex(/^[a-zA-Z0-9\.\-_]+(@[a-zA-Z0-9\.\-_]+\.[a-zA-Z]{2,})?$/);
 
 export const CHALLENGE_SCHEMA = z.object({
   challenge: z.string().min(10).max(200),
@@ -56,7 +59,7 @@ export const SECTION_DATA_SCHEMA = z.object({
   timeSpentSeconds: z.number().int().min(0).optional(),
 });
 
-export const GAMIIFICATION_STATE_SCHEMA = z.object({
+export const GAMIFICATION_STATE_SCHEMA = z.object({
   user: z.object({
     totalXP: z.number().int().min(0),
     level: z.number().int().min(1).max(10),
@@ -176,7 +179,7 @@ export function validateDisplayName(name: string): { valid: boolean; error?: str
 }
 
 export function validateNip05(nip05: string): { valid: boolean; error?: string } {
-  const result = NOIP05_SCHEMA.safeParse(nip05);
+  const result = NIP05_SCHEMA.safeParse(nip05);
   if (result.success) return { valid: true };
   
   return { valid: false, error: 'Invalid NIP-05 format. Expected format: user@domain.com' };
@@ -184,13 +187,13 @@ export function validateNip05(nip05: string): { valid: boolean; error?: string }
 
 export function validateLocalStorageData(data: unknown): { valid: boolean; error?: string } {
   try {
-    const result = GAMIIFICATION_STATE_SCHEMA.safeParse(data);
+    const result = GAMIFICATION_STATE_SCHEMA.safeParse(data);
     if (result.success) return { valid: true };
 
-    console.warn('Invalid gamification state in localStorage: Invalid local storage data format', result.error);
+    logger.warn('Invalid gamification state in localStorage: Invalid local storage data format', result.error);
     return { valid: false, error: 'Invalid local storage data format' };
   } catch (error) {
-    console.error('Error validating localStorage data:', error);
+    logger.error('Error validating localStorage data:', error);
     return { valid: false, error: 'Validation error' };
   }
 }
