@@ -1,43 +1,41 @@
 // =============================================================================
 // COURSE CONFIGURATION
 // =============================================================================
-// This is the central configuration file for your course.
-// Update these values when creating a new course.
+// Cryptography Mathematics Course
 // =============================================================================
 
 import type { CourseId } from '@magic-internet-math/shared';
 
 /**
  * Course identifier - used for XP tracking, URLs, and storage keys
- * Examples: 'ba' (Basic Algebra), 'aa' (Abstract Algebra), 'crypto' (Cryptography)
  */
-export const COURSE_ID: CourseId = 'template';
+export const COURSE_ID: CourseId = 'crypto';
 
 /**
  * Human-readable course name
  */
-export const COURSE_NAME = 'Course Template';
+export const COURSE_NAME = 'Cryptography Mathematics';
 
 /**
  * Short description for meta tags and headers
  */
-export const COURSE_DESCRIPTION = 'An interactive course for learning mathematics';
+export const COURSE_DESCRIPTION = 'Learn the mathematics that powers modern encryption, from modular arithmetic to elliptic curves.';
 
 /**
  * Course accent color (used in headers, buttons, etc.)
  * Options: 'indigo', 'emerald', 'amber', 'rose', 'cyan'
  */
-export const COURSE_ACCENT = 'indigo';
+export const COURSE_ACCENT = 'cyan';
 
 /**
  * Course icon/emoji for visual identification
  */
-export const COURSE_ICON = '📚';
+export const COURSE_ICON = '🔐';
 
 /**
  * Base path for routing (must match vite.config.ts)
  */
-export const BASE_PATH = `/math_academy/${COURSE_ID}/`;
+export const BASE_PATH = '/cryptography/';
 
 /**
  * Hub URL - main Magic Internet Math landing page
