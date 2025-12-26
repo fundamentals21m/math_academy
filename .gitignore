@@ -24,3 +24,5 @@ firebase/functions/*.log
 .env
 .env.local
 .env.*.local
+advanced-linalg/
+linalg/
