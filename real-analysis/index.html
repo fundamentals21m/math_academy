@@ -1,27 +1,406 @@
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Real Analysis - Math Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- ================================================================== -->
-    <!-- COURSE CONFIGURATION - Update these values for your course         -->
-    <!-- ================================================================== -->
-    <title>Introduction to Real Analysis | Math Academy</title>
-    <meta name="description" content="A rigorous introduction to real analysis covering limits, continuity, differentiation, and integration through formal proofs" />
-    <!-- ================================================================== -->
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        .header {
+            background: #1e293b;
+            padding: 2rem 0;
+            border-bottom: 1px solid #334155;
+        }
 
-    <!-- KaTeX CSS for math rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-  </head>
-  <body class="bg-dark-950 text-dark-100">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #10b981;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            background: #10b981;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #059669;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #10b981;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #10b981;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #334155;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .interactive-demo {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .demo-controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .control-group {
+            background: #0f172a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .control-group label {
+            display: block;
+            font-weight: 600;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            background: #334155;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .result {
+            background: #065f46;
+            border: 1px solid #10b981;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .result.error {
+            background: #7f1d1d;
+            border-color: #ef4444;
+        }
+
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+
+        .footer {
+            background: #0f172a;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid #334155;
+        }
+
+        .footer p {
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">📐 Introduction to Real Analysis</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Master Real Analysis</h1>
+            <p>A rigorous introduction to the foundations of real analysis, covering limits, continuity, differentiation, and integration through formal mathematical proofs.</p>
+            <a href="#curriculum" class="btn">Explore Curriculum</a>
+            <a href="#interactive" class="btn">Try Interactive Demo</a>
+        </div>
+    </section>
+
+    <section id="curriculum" class="section">
+        <div class="container">
+            <h2>Course Curriculum</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Part 1: Foundations</h3>
+                    <p>Establish the rigorous foundation of real analysis with set theory and the real number system.</p>
+                    <ul class="feature-list">
+                        <li>The Real Number System & Axioms</li>
+                        <li>Mathematical Induction</li>
+                        <li>Finite and Infinite Sets</li>
+                        <li>Functions and Relations</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Part 2: Sequences & Series</h3>
+                    <p>Master the fundamental concepts of convergence and infinite processes.</p>
+                    <ul class="feature-list">
+                        <li>Sequences and Their Limits</li>
+                        <li>Infinite Series</li>
+                        <li>Convergence Tests</li>
+                        <li>Power Series</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Part 3: Continuity & Differentiation</h3>
+                    <p>Explore the core theorems of real analysis with rigorous proofs.</p>
+                    <ul class="feature-list">
+                        <li>ε-δ Definition of Limits</li>
+                        <li>Continuity Theorems</li>
+                        <li>Mean Value Theorem</li>
+                        <li>Taylor's Theorem</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Part 4: Integration</h3>
+                    <p>Complete your understanding with the Riemann integral and fundamental theorems.</p>
+                    <ul class="feature-list">
+                        <li>Riemann Integration</li>
+                        <li>Fundamental Theorem of Calculus</li>
+                        <li>Integration Techniques</li>
+                        <li>Advanced Applications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interactive" class="section" style="background: #1e293b;">
+        <div class="container">
+            <h2>Interactive Learning</h2>
+
+            <div class="interactive-demo">
+                <h3>ε-δ Limit Definition Explorer</h3>
+                <p>Explore the rigorous ε-δ definition of limits with this interactive demonstration.</p>
+
+                <div class="demo-controls">
+                    <div class="control-group">
+                        <label>ε (Error Tolerance): <span id="epsilon-value">0.50</span></label>
+                        <input type="range" id="epsilon" min="0.01" max="2" step="0.01" value="0.5">
+                    </div>
+                    <div class="control-group">
+                        <label>δ (Distance): <span id="delta-value">0.30</span></label>
+                        <input type="range" id="delta" min="0.01" max="1" step="0.01" value="0.3">
+                    </div>
+                </div>
+
+                <div class="demo-controls">
+                    <div class="control-group">
+                        <label>Test Point x: <span id="x-value">2.10</span></label>
+                        <input type="range" id="x-point" min="1.7" max="2.3" step="0.01" value="2.1">
+                    </div>
+                    <div class="control-group">
+                        <label>Function: f(x) = 2x + 1</label>
+                        <p>Lim<sub>x→2</sub> f(x) = 5</p>
+                    </div>
+                </div>
+
+                <div id="result" class="result">
+                    <strong>Analysis:</strong> Adjust ε and δ to see when the ε-δ condition holds for the limit definition.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Why Real Analysis?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Rigorous Foundations</h3>
+                    <p>Develop a deep understanding of the mathematical foundations that support calculus and advanced mathematics.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Proof-Based Thinking</h3>
+                    <p>Learn to construct and understand formal mathematical proofs, essential for advanced study in mathematics.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Problem-Solving Skills</h3>
+                    <p>Master techniques for solving complex mathematical problems with precision and clarity.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Advanced Applications</h3>
+                    <p>Apply real analysis concepts to physics, engineering, economics, and computer science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Math Academy - Introduction to Real Analysis Course</p>
+            <p>Based on Kenneth A. Ross's "Elementary Analysis"</p>
+        </div>
+    </footer>
+
+    <script>
+        // Interactive ε-δ demonstration
+        const epsilonSlider = document.getElementById('epsilon');
+        const deltaSlider = document.getElementById('delta');
+        const xSlider = document.getElementById('x-point');
+        const epsilonValue = document.getElementById('epsilon-value');
+        const deltaValue = document.getElementById('delta-value');
+        const xValue = document.getElementById('x-value');
+        const result = document.getElementById('result');
+
+        function updateAnalysis() {
+            const epsilon = parseFloat(epsilonSlider.value);
+            const delta = parseFloat(deltaSlider.value);
+            const x = parseFloat(xSlider.value);
+
+            // f(x) = 2x + 1, limit L = 5, a = 2
+            const fx = 2 * x + 1;
+            const L = 5;
+            const a = 2;
+
+            const condition1 = Math.abs(fx - L) < epsilon;
+            const condition2 = Math.abs(x - a) < delta;
+
+            epsilonValue.textContent = epsilon.toFixed(2);
+            deltaValue.textContent = delta.toFixed(2);
+            xValue.textContent = x.toFixed(2);
+
+            if (condition1 && condition2) {
+                result.className = 'result';
+                result.innerHTML = `
+                    <strong>✅ Condition Satisfied!</strong><br>
+                    |f(${x.toFixed(2)}) - 5| = ${Math.abs(fx - 5).toFixed(3)} < ${epsilon}<br>
+                    |${x.toFixed(2)} - 2| = ${Math.abs(x - 2).toFixed(3)} < ${delta}<br>
+                    The ε-δ definition holds for this point!
+                `;
+            } else {
+                result.className = 'result error';
+                result.innerHTML = `
+                    <strong>❌ Condition Not Satisfied</strong><br>
+                    |f(${x.toFixed(2)}) - 5| = ${Math.abs(fx - 5).toFixed(3)} ${Math.abs(fx - 5) < epsilon ? '≤' : '≱'} ${epsilon}<br>
+                    |${x.toFixed(2)} - 2| = ${Math.abs(x - 2).toFixed(3)} ${Math.abs(x - 2) < delta ? '≤' : '≱'} ${delta}<br>
+                    Try adjusting ε or δ to make both conditions true.
+                `;
+            }
+        }
+
+        epsilonSlider.addEventListener('input', updateAnalysis);
+        deltaSlider.addEventListener('input', updateAnalysis);
+        xSlider.addEventListener('input', updateAnalysis);
+
+        // Initial update
+        updateAnalysis();
+    </script>
+</body>
 </html>
