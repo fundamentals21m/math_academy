@@ -23,7 +23,7 @@ export const SIGNED_EVENT_SCHEMA = z.object({
   kind: z.number().int(),
   created_at: z.number().int().nonnegative(),
   tags: z.array(z.array(z.string())),
-  content: z.any(),
+  content: z.string(),
 });
 
 // =================================================================
@@ -114,12 +114,20 @@ export function sanitizeNumber(input: unknown, min: number = 0, max: number = Nu
   return Math.min(Math.max(num, min), max);
 }
 
-export function sanitizeUrl(input: string): string {
+/**
+ * Sanitize a URL string, returning null if invalid or using disallowed protocol.
+ * Only allows http: and https: protocols to prevent javascript: and data: attacks.
+ */
+export function sanitizeUrl(input: string): string | null {
   try {
     const url = new URL(input);
+    // Only allow safe protocols
+    if (!['http:', 'https:'].includes(url.protocol)) {
+      return null;
+    }
     return url.toString();
   } catch {
-    return input;
+    return null;
   }
 }
 
