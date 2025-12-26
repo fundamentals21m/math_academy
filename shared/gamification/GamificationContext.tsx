@@ -1,3 +1,9 @@
+/**
+ * Gamification context provider and hook.
+ * Manages XP, achievements, streaks, and progress tracking.
+ * @module gamification/GamificationContext
+ */
+
 import {
   createContext,
   useContext,
@@ -6,6 +12,7 @@ import {
   useCallback,
   useMemo,
   useState,
+  useRef,
   type ReactNode,
 } from 'react';
 import {
@@ -14,28 +21,34 @@ import {
   type Difficulty,
   type AchievementNotification,
   type CourseId,
-  XP_CONFIG,
 } from './types';
 import { loadState, saveState } from './storage';
 import { createDefaultState } from './defaults';
-import { calculateLevel, calculateXP } from './xpCalculator';
-import { updateStreak } from './streakManager';
-import { calculateMastery } from './masteryCalculator';
 import { checkAchievements } from './achievements';
-import { getLogger } from '../utils/logger';
+import { gamificationReducer } from './reducer';
 
-const logger = getLogger('Gamification');
+/** Debounce delay for achievement checks in milliseconds */
+const ACHIEVEMENT_CHECK_DEBOUNCE_MS = 500;
 
 // =============================================================================
 // CONTEXT TYPES
 // =============================================================================
 
+/**
+ * Value provided by the GamificationContext.
+ */
 interface GamificationContextValue {
+  /** Current gamification state */
   state: GamificationState;
+  /** Whether state is still loading from storage */
   isLoading: boolean;
+  /** Pending achievement notifications to display */
   notifications: AchievementNotification[];
+  /** Mark a section as visited (awards XP on first visit) */
   visitSection: (sectionId: number) => void;
+  /** Mark a section as completed (awards XP on first completion) */
   completeSection: (sectionId: number) => void;
+  /** Record a quiz attempt with score and difficulty */
   recordQuiz: (
     sectionId: number,
     difficulty: Difficulty,
@@ -43,212 +56,12 @@ interface GamificationContextValue {
     correctAnswers: number,
     totalQuestions: number
   ) => void;
+  /** Track visualization usage (awards XP on first use) */
   useVisualization: (sectionId: number, visualizationName: string) => void;
+  /** Dismiss an achievement notification */
   dismissNotification: (id: string) => void;
+  /** Reset all progress (development only) */
   resetProgress: () => void;
-}
-
-// =============================================================================
-// ACTIONS
-// =============================================================================
-
-type Action =
-  | { type: 'LOAD_STATE'; payload: GamificationState }
-  | { type: 'VISIT_SECTION'; payload: { sectionId: SectionId } }
-  | { type: 'COMPLETE_SECTION'; payload: { sectionId: SectionId } }
-  | { type: 'RECORD_QUIZ'; payload: { sectionId: SectionId; difficulty: Difficulty; score: number; correctAnswers: number; totalQuestions: number } }
-  | { type: 'USE_VISUALIZATION'; payload: { sectionId: SectionId; name: string } }
-  | { type: 'UPDATE_STREAK' }
-  | { type: 'RESET_PROGRESS' };
-
-// =============================================================================
-// REDUCER
-// =============================================================================
-
-function gamificationReducer(state: GamificationState, action: Action): GamificationState {
-  const now = new Date().toISOString();
-
-  switch (action.type) {
-    case 'LOAD_STATE':
-      return action.payload;
-
-    case 'VISIT_SECTION': {
-      const { sectionId } = action.payload;
-      const existing = state.sections[sectionId];
-
-      if (existing?.visitedAt) {
-        return state; // Already visited
-      }
-
-      const newXP = state.user.totalXP + XP_CONFIG.SECTION_VISIT;
-
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          totalXP: newXP,
-          level: calculateLevel(newXP),
-        },
-        sections: {
-          ...state.sections,
-          [sectionId]: {
-            sectionId,
-            visitedAt: now,
-            completedAt: existing?.completedAt ?? null,
-            timeSpentSeconds: existing?.timeSpentSeconds ?? 0,
-            quizAttempts: existing?.quizAttempts ?? [],
-            masteryLevel: existing?.masteryLevel ?? 'learning',
-            visualizationsInteracted: existing?.visualizationsInteracted ?? [],
-          },
-        },
-        dailyGoals: {
-          ...state.dailyGoals,
-          xpEarned: state.dailyGoals.xpEarned + XP_CONFIG.SECTION_VISIT,
-        },
-        lastUpdated: now,
-      };
-    }
-
-    case 'COMPLETE_SECTION': {
-      const { sectionId } = action.payload;
-      const existing = state.sections[sectionId];
-
-      if (existing?.completedAt) {
-        return state; // Already completed
-      }
-
-      // Guard against completing a section that was never visited
-      if (!existing) {
-        logger.warn(`Attempted to complete unvisited section: ${sectionId}`);
-        return state;
-      }
-
-      const newXP = state.user.totalXP + XP_CONFIG.SECTION_COMPLETE;
-      const newSectionsCompleted = [...state.user.sectionsCompleted, sectionId];
-
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          totalXP: newXP,
-          level: calculateLevel(newXP),
-          sectionsCompleted: newSectionsCompleted,
-        },
-        sections: {
-          ...state.sections,
-          [sectionId]: {
-            ...existing,
-            completedAt: now,
-            masteryLevel: calculateMastery(existing),
-          },
-        },
-        dailyGoals: {
-          ...state.dailyGoals,
-          xpEarned: state.dailyGoals.xpEarned + XP_CONFIG.SECTION_COMPLETE,
-        },
-        lastUpdated: now,
-      };
-    }
-
-    case 'RECORD_QUIZ': {
-      const { sectionId, difficulty, score, correctAnswers, totalQuestions } = action.payload;
-      const existing = state.sections[sectionId];
-
-      // Guard against recording quiz for unvisited section
-      if (!existing) {
-        logger.warn(`Section ${sectionId} was not visited before quiz`);
-        return state;
-      }
-
-      const baseXP = calculateXP(difficulty, score);
-      const isPerfect = correctAnswers === totalQuestions;
-      const xpEarned = isPerfect ? Math.round(baseXP * (1 + XP_CONFIG.QUIZ_PERFECT_BONUS)) : baseXP;
-      const newXP = state.user.totalXP + xpEarned;
-
-      const newAttempt = {
-        timestamp: now,
-        difficulty,
-        score,
-        correctAnswers,
-        totalQuestions,
-      };
-
-      const newAttempts = [...existing.quizAttempts, newAttempt];
-      const updatedSection = { ...existing, quizAttempts: newAttempts };
-
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          totalXP: newXP,
-          level: calculateLevel(newXP),
-          quizzesTaken: state.user.quizzesTaken + 1,
-          perfectQuizzes: isPerfect ? state.user.perfectQuizzes + 1 : state.user.perfectQuizzes,
-        },
-        sections: {
-          ...state.sections,
-          [sectionId]: {
-            ...updatedSection,
-            masteryLevel: calculateMastery(updatedSection),
-          },
-        },
-        dailyGoals: {
-          ...state.dailyGoals,
-          xpEarned: state.dailyGoals.xpEarned + xpEarned,
-        },
-        lastUpdated: now,
-      };
-    }
-
-    case 'USE_VISUALIZATION': {
-      const { sectionId, name } = action.payload;
-      const existing = state.sections[sectionId];
-
-      if (existing?.visualizationsInteracted.includes(name)) {
-        return state; // Already used this visualization
-      }
-
-      // Guard against using visualization for unvisited section
-      if (!existing) {
-        logger.warn(`Section ${sectionId} was not visited before visualization`);
-        return state;
-      }
-
-      const newXP = state.user.totalXP + XP_CONFIG.VISUALIZATION_USE;
-      const newVisualizations = [...existing.visualizationsInteracted, name];
-
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          totalXP: newXP,
-          level: calculateLevel(newXP),
-          visualizationsUsed: state.user.visualizationsUsed + 1,
-        },
-        sections: {
-          ...state.sections,
-          [sectionId]: {
-            ...existing,
-            visualizationsInteracted: newVisualizations,
-          },
-        },
-        dailyGoals: {
-          ...state.dailyGoals,
-          xpEarned: state.dailyGoals.xpEarned + XP_CONFIG.VISUALIZATION_USE,
-        },
-        lastUpdated: now,
-      };
-    }
-
-    case 'UPDATE_STREAK':
-      return updateStreak(state);
-
-    case 'RESET_PROGRESS':
-      return createDefaultState();
-
-    default:
-      return state;
-  }
 }
 
 // =============================================================================
@@ -257,17 +70,43 @@ function gamificationReducer(state: GamificationState, action: Action): Gamifica
 
 const GamificationContext = createContext<GamificationContextValue | null>(null);
 
+/**
+ * Props for the GamificationProvider component.
+ */
 interface GamificationProviderProps {
+  /** Child components that will have access to gamification context */
   children: ReactNode;
+  /** Course identifier for section ID generation */
   courseId: CourseId;
 }
 
+/**
+ * Provider component for gamification state management.
+ * Wraps the application to provide XP tracking, achievements, and progress.
+ *
+ * @example
+ * ```tsx
+ * function App() {
+ *   return (
+ *     <GamificationProvider courseId="crypto">
+ *       <YourApp />
+ *     </GamificationProvider>
+ *   );
+ * }
+ * ```
+ */
 export function GamificationProvider({ children, courseId }: GamificationProviderProps) {
   const [state, dispatch] = useReducer(gamificationReducer, createDefaultState());
   const [isLoading, setIsLoading] = useState(true);
   const [notifications, setNotifications] = useState<AchievementNotification[]>([]);
+  
+  // Ref for debouncing achievement checks
+  const achievementCheckTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Helper to create section ID - memoized with courseId
+  /**
+   * Create a section ID from a numeric section number.
+   * Memoized with courseId to prevent unnecessary recreations.
+   */
   const makeSectionId = useCallback(
     (numericId: number): SectionId => {
       return `${courseId}:${numericId}` as SectionId;
@@ -298,14 +137,29 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
     }
   }, [isLoading]);
 
-  // Check achievements on state changes
+  // Check achievements on state changes (debounced)
   useEffect(() => {
-    if (!isLoading) {
+    if (isLoading) return;
+
+    // Clear any pending achievement check
+    if (achievementCheckTimeoutRef.current) {
+      clearTimeout(achievementCheckTimeoutRef.current);
+    }
+
+    // Debounce achievement checks to avoid running on every state change
+    achievementCheckTimeoutRef.current = setTimeout(() => {
       const newAchievements = checkAchievements(state);
       if (newAchievements.length > 0) {
         setNotifications((prev) => [...prev, ...newAchievements]);
       }
-    }
+    }, ACHIEVEMENT_CHECK_DEBOUNCE_MS);
+
+    // Cleanup timeout on unmount or state change
+    return () => {
+      if (achievementCheckTimeoutRef.current) {
+        clearTimeout(achievementCheckTimeoutRef.current);
+      }
+    };
   }, [state, isLoading]);
 
   // Memoized action handlers
@@ -324,10 +178,22 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
   );
 
   const recordQuiz = useCallback(
-    (sectionId: number, difficulty: Difficulty, score: number, correctAnswers: number, totalQuestions: number) => {
+    (
+      sectionId: number,
+      difficulty: Difficulty,
+      score: number,
+      correctAnswers: number,
+      totalQuestions: number
+    ) => {
       dispatch({
         type: 'RECORD_QUIZ',
-        payload: { sectionId: makeSectionId(sectionId), difficulty, score, correctAnswers, totalQuestions },
+        payload: {
+          sectionId: makeSectionId(sectionId),
+          difficulty,
+          score,
+          correctAnswers,
+          totalQuestions,
+        },
       });
     },
     [makeSectionId]
@@ -335,7 +201,10 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
 
   const useVisualization = useCallback(
     (sectionId: number, name: string) => {
-      dispatch({ type: 'USE_VISUALIZATION', payload: { sectionId: makeSectionId(sectionId), name } });
+      dispatch({
+        type: 'USE_VISUALIZATION',
+        payload: { sectionId: makeSectionId(sectionId), name },
+      });
     },
     [makeSectionId]
   );
@@ -381,7 +250,37 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
   );
 }
 
-export function useGamification() {
+/**
+ * Hook to access gamification state and actions.
+ * Must be used within a GamificationProvider.
+ *
+ * @returns {GamificationContextValue} Object containing:
+ *   - state: Current gamification state (user progress, sections, achievements)
+ *   - isLoading: Whether state is still loading from storage
+ *   - notifications: Pending achievement notifications
+ *   - visitSection: Mark a section as visited (awards XP)
+ *   - completeSection: Mark a section as completed (awards XP)
+ *   - recordQuiz: Record quiz attempt and calculate XP
+ *   - useVisualization: Track visualization usage (awards XP)
+ *   - dismissNotification: Clear an achievement notification
+ *   - resetProgress: Reset all progress (development only)
+ *
+ * @throws {Error} If used outside of GamificationProvider
+ *
+ * @example
+ * ```tsx
+ * function QuizComponent() {
+ *   const { state, recordQuiz } = useGamification();
+ *
+ *   const handleSubmit = (score: number) => {
+ *     recordQuiz(1, 'medium', score, 8, 10);
+ *   };
+ *
+ *   return <div>Total XP: {state.user.totalXP}</div>;
+ * }
+ * ```
+ */
+export function useGamification(): GamificationContextValue {
   const context = useContext(GamificationContext);
   if (!context) {
     throw new Error('useGamification must be used within a GamificationProvider');

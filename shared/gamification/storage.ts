@@ -3,11 +3,16 @@ import { getLogger } from '../utils/logger';
 
 const logger = getLogger('Storage');
 
+/** localStorage key for gamification state */
 const STORAGE_KEY = 'magic-internet-math-progress';
+
+/** Current schema version for migration support */
 const CURRENT_VERSION = 2;
 
 /**
- * Check if localStorage is available
+ * Check if localStorage is available.
+ * Tests write/read/delete to ensure full functionality.
+ * @returns true if localStorage is available and functional
  */
 function isLocalStorageAvailable(): boolean {
   try {
@@ -21,7 +26,41 @@ function isLocalStorageAvailable(): boolean {
 }
 
 /**
- * Load gamification state from localStorage
+ * Validates that an object has the required GamificationState structure.
+ * Performs runtime type checking since JSON.parse returns unknown.
+ * @param data - The parsed JSON data to validate
+ * @returns true if data has required GamificationState fields
+ */
+function isValidGamificationState(data: unknown): data is GamificationState {
+  if (data === null || typeof data !== 'object') {
+    return false;
+  }
+
+  const obj = data as Record<string, unknown>;
+
+  // Check required top-level fields exist and have correct types
+  if (typeof obj.version !== 'number') return false;
+  if (typeof obj.user !== 'object' || obj.user === null) return false;
+  if (typeof obj.sections !== 'object' || obj.sections === null) return false;
+  if (typeof obj.streak !== 'object' || obj.streak === null) return false;
+
+  // Validate user object has required fields
+  const user = obj.user as Record<string, unknown>;
+  if (typeof user.totalXP !== 'number') return false;
+  if (typeof user.level !== 'number') return false;
+
+  // Validate streak object has required fields
+  const streak = obj.streak as Record<string, unknown>;
+  if (typeof streak.currentStreak !== 'number') return false;
+  if (typeof streak.longestStreak !== 'number') return false;
+
+  return true;
+}
+
+/**
+ * Load gamification state from localStorage.
+ * Handles JSON parsing, validation, and version migration.
+ * @returns The validated GamificationState or null if unavailable/invalid
  */
 export function loadState(): GamificationState | null {
   if (!isLocalStorageAvailable()) {
@@ -33,19 +72,19 @@ export function loadState(): GamificationState | null {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (!saved) return null;
 
-    const parsed = JSON.parse(saved) as GamificationState;
+    const parsed: unknown = JSON.parse(saved);
+
+    // Validate structure before type assertion
+    if (!isValidGamificationState(parsed)) {
+      logger.warn('Invalid gamification state structure in localStorage');
+      return null;
+    }
 
     // Version migration if needed
     if (parsed.version !== CURRENT_VERSION) {
       logger.info(`Migrating state from v${parsed.version} to v${CURRENT_VERSION}`);
       parsed.version = CURRENT_VERSION;
-      // Migration: ensure all required fields exist
-    }
-
-    // Basic validation - check required fields exist
-    if (!parsed.user || !parsed.sections || !parsed.streak) {
-      logger.warn('Invalid gamification state structure in localStorage');
-      return null;
+      // Future migrations can be added here
     }
 
     return parsed;

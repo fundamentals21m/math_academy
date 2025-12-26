@@ -103,6 +103,23 @@ export const ADMIN_LOG_SCHEMA = z.object({
 // INPUT SANITIZATION
 // =================================================================
 
+/**
+ * Sanitize a string by removing angle brackets and limiting length.
+ * Use for basic text inputs that shouldn't contain HTML.
+ *
+ * @param input - String to sanitize
+ * @param maxLength - Maximum allowed length (default: 100)
+ * @returns Sanitized string with < > removed, trimmed, and truncated
+ *
+ * @example
+ * ```ts
+ * sanitizeString('<script>alert(1)</script>');
+ * // Returns 'scriptalert(1)/script'
+ *
+ * sanitizeString('  Hello World  ', 5);
+ * // Returns 'Hello'
+ * ```
+ */
 export function sanitizeString(input: string, maxLength: number = 100): string {
   return input
     .replace(/[<>]/g, '')
@@ -110,6 +127,22 @@ export function sanitizeString(input: string, maxLength: number = 100): string {
     .trim();
 }
 
+/**
+ * Escape HTML special characters to prevent XSS.
+ * Converts < > " ' to their HTML entity equivalents.
+ *
+ * @param input - String containing potential HTML
+ * @returns HTML-escaped string safe for insertion into HTML
+ *
+ * @example
+ * ```ts
+ * sanitizeHtml('<script>alert("xss")</script>');
+ * // Returns '&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;'
+ *
+ * sanitizeHtml("It's a <test>");
+ * // Returns "It&#x27;s a &lt;test&gt;"
+ * ```
+ */
 export function sanitizeHtml(input: string): string {
   return input
     .replace(/</g, '&lt;')
@@ -119,6 +152,23 @@ export function sanitizeHtml(input: string): string {
     .substring(0, 1000);
 }
 
+/**
+ * Sanitize a number input, clamping to min/max range.
+ * Handles string inputs and returns min for invalid values.
+ *
+ * @param input - Value to sanitize (number, string, or unknown)
+ * @param min - Minimum allowed value (default: 0)
+ * @param max - Maximum allowed value (default: MAX_SAFE_INTEGER)
+ * @returns Sanitized number within the specified range
+ *
+ * @example
+ * ```ts
+ * sanitizeNumber(50, 0, 100);    // Returns 50
+ * sanitizeNumber('150', 0, 100); // Returns 100 (clamped to max)
+ * sanitizeNumber('invalid');     // Returns 0 (default min)
+ * sanitizeNumber(-10, 5, 100);   // Returns 5 (clamped to min)
+ * ```
+ */
 export function sanitizeNumber(input: unknown, min: number = 0, max: number = Number.MAX_SAFE_INTEGER): number {
   if (typeof input !== 'number' && typeof input !== 'string') {
     return min;
@@ -131,6 +181,24 @@ export function sanitizeNumber(input: unknown, min: number = 0, max: number = Nu
 /**
  * Sanitize a URL string, returning null if invalid or using disallowed protocol.
  * Only allows http: and https: protocols to prevent javascript: and data: attacks.
+ *
+ * @param input - URL string to validate
+ * @returns Normalized URL string, or null if invalid/unsafe
+ *
+ * @example
+ * ```ts
+ * sanitizeUrl('https://example.com/path');
+ * // Returns 'https://example.com/path'
+ *
+ * sanitizeUrl('javascript:alert(1)');
+ * // Returns null (blocked protocol)
+ *
+ * sanitizeUrl('data:text/html,<script>');
+ * // Returns null (blocked protocol)
+ *
+ * sanitizeUrl('not-a-url');
+ * // Returns null (invalid URL)
+ * ```
  */
 export function sanitizeUrl(input: string): string | null {
   try {

@@ -1,8 +1,14 @@
 import type { GamificationState } from './types';
 import { DAILY_XP_GOAL } from './types';
 
+/** Milliseconds in one day for date calculations */
+const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
 /**
- * Update streak based on current activity
+ * Update streak based on current activity.
+ * Handles daily goal resets, streak increments, and freeze usage.
+ * @param state - Current gamification state
+ * @returns Updated state with streak adjustments
  */
 export function updateStreak(state: GamificationState): GamificationState {
   const now = new Date();
@@ -40,7 +46,7 @@ export function updateStreak(state: GamificationState): GamificationState {
   }
 
   const lastDate = new Date(lastActivity);
-  const daysDiff = Math.floor((now.getTime() - lastDate.getTime()) / (1000 * 60 * 60 * 24));
+  const daysDiff = Math.floor((now.getTime() - lastDate.getTime()) / MS_PER_DAY);
 
   if (daysDiff === 0) {
     // Same day, no change needed
