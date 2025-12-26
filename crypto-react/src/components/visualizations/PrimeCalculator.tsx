@@ -164,7 +164,7 @@ export function PrimeCalculator({ className = '' }: Props) {
             >
               <h4 className="text-dark-200 font-medium mb-3">Checking divisibility:</h4>
               <div className="flex flex-wrap gap-2">
-                {divisorChecks.map((check, index) => (
+                {divisorChecks.map((check) => (
                   <motion.div
                     key={check.divisor}
                     initial={{ opacity: 0, scale: 0.8 }}

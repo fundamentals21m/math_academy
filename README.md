@@ -126,6 +126,32 @@ npm run test:ui
 npm run test:coverage
 ```
 
+## Security Features
+
+### Input Validation
+- **Nostr Keys**: Bech32 format validation for npub keys
+- **Display Names**: Length and character restrictions (1-50 chars)
+- **URLs**: HTTP/HTTPS protocols only (prevents javascript: attacks)
+- **Gamification Data**: Zod schema validation with proper error handling
+- **Local Storage**: Type-safe parsing with corruption recovery
+
+### XSS Protection
+- **LaTeX Rendering**: DOMPurify sanitization for mathematical content
+- **HTML Escaping**: Automatic escaping of text segments
+- **KaTeX Integration**: Safe mathematical expression rendering
+
+### Error Handling
+- **Global Error Context**: Centralized error management across courses
+- **Error Boundaries**: React error boundary components prevent crashes
+- **Structured Logging**: Consistent logging with proper severity levels
+- **User-Friendly Messages**: Clear error messages for end users
+
+### Authentication Security
+- **Challenge-Response**: Prevents replay attacks in Nostr authentication
+- **Token Expiration**: Short-lived challenges (5-minute expiry)
+- **Admin Authorization**: Role-based access control with database checks
+- **Action Logging**: All admin actions are logged for accountability
+
 ## Deployment
 
 - Vercel for frontend

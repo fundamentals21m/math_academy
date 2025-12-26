@@ -2,9 +2,8 @@ import { useEffect, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getSectionById, getPartBySectionId, getAdjacentSections, getTotalSections, getSectionIndex } from '@/data/curriculum';
-import { FEATURES, COURSE_ID } from '@/config';
+import { FEATURES } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
-import type { SectionId } from '@magic-internet-math/shared';
 
 interface LessonLayoutProps {
   sectionId: number;
