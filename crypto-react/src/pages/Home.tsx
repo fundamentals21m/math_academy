@@ -9,10 +9,10 @@ import type { SectionId } from '@magic-internet-math/shared';
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const gamification = FEATURES.gamification ? useGamification() : null;
+  const gamification = useGamification();
 
   const totalSections = getTotalSections();
-  const completedSections = gamification
+  const completedSections = FEATURES.gamification
     ? gamification.state.user.sectionsCompleted.filter((id) => id.startsWith(COURSE_ID)).length
     : 0;
   const progressPercent = Math.round((completedSections / totalSections) * 100);

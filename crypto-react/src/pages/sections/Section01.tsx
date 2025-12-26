@@ -1,8 +1,5 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
-import { Definition, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
-import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 // import { section01Quiz } from '@/data/quizzes'; // Quiz data not implemented yet
 
 export default function Section01() {

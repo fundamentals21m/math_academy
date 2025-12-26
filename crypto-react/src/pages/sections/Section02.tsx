@@ -47,8 +47,8 @@ export default function Section02() {
         on (1) and off (0). Each binary digit is called a <strong>bit</strong>.
       </p>
 
-      <Example>
-        <p>The binary number <Math>1011_2</Math> in decimal:</p>
+       <Example title="Binary to Decimal">
+         <p>The binary number <Math>1011_2</Math> in decimal:</p>
         <MathBlock>
           {`1011_2 = 1 \\times 2^3 + 0 \\times 2^2 + 1 \\times 2^1 + 1 \\times 2^0 = 8 + 0 + 2 + 1 = 11_{10}`}
         </MathBlock>
@@ -91,7 +91,7 @@ export default function Section02() {
       </div>
 
        <Example title="Hexadecimal to Decimal">
-         <p>The hexadecimal number <Math>2F_{16}</Math> in decimal:</p>
+          <p>The hexadecimal number <Math>{`2F_{16}`}</Math> in decimal:</p>
          <MathBlock>
            {`\\text{2F}_{16} = 2 \\times 16^1 + 15 \\times 16^0 = 32 + 15 = 47_{10}`}
          </MathBlock>
@@ -102,7 +102,7 @@ export default function Section02() {
        <Theorem title="Decimal to Binary Conversion" proof={
          <div>
            <p>This algorithm works because any number can be expressed as a sum of powers of 2.</p>
-           <MathBlock>n = b_k × 2^k + b_{k-1} × 2^{k-1} + ... + b_0 × 2^0</MathBlock>
+            <MathBlock>{`n = b_k \\times 2^k + b_{k-1} \\times 2^{k-1} + \\dots + b_0 \\times 2^0`}</MathBlock>
            <p>Where each b_i is either 0 or 1.</p>
          </div>
        }>
@@ -118,7 +118,7 @@ export default function Section02() {
            3 ÷ 2 = 1 remainder <span className="text-emerald-400">1</span><br />
            1 ÷ 2 = 0 remainder <span className="text-emerald-400">1</span>
          </div>
-         <p>Reading bottom to top: <Math>13_{10} = 1101_2</Math></p>
+          <p>Reading bottom to top: <Math>{`13_{10} = 1101_2`}</Math></p>
        </Example>
 
       <h2>Binary to Hex (and Back)</h2>
@@ -135,7 +135,7 @@ export default function Section02() {
            ↓&nbsp;&nbsp;&nbsp;&nbsp;↓<br />
            <span className="text-amber-400">B</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-amber-400">3</span>
          </div>
-         <p>So <Math>10110011_2 = B3_{16}</Math></p>
+          <p>So <Math>{`10110011_2 = B3_{16}`}</Math></p>
        </Example>
 
       <h2>Why Hex Matters for Cryptography</h2>
