@@ -13,11 +13,15 @@ import InteractiveModules from '@/pages/InteractiveModules';
 // Section pages - import all sections here
 import Section01 from '@/pages/sections/Section01';
 import Section02 from '@/pages/sections/Section02';
+import Section03 from '@/pages/sections/Section03';
+import Section04 from '@/pages/sections/Section04';
 
 // Dynamic section loader for sections that exist
 const sectionComponents: Record<number, React.ComponentType> = {
   1: Section01,
   2: Section02,
+  3: Section03,
+  4: Section04,
   // Add more sections as you create them
 };
 
