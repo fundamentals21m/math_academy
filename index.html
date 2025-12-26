@@ -60,6 +60,10 @@
       background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
     }
 
+    .course-card:nth-child(5) .course-icon {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.1) 100%);
+    }
+
     .course-title {
       font-size: 1.5rem;
       font-weight: 700;
@@ -179,7 +183,7 @@
       </a>
 
       <!-- Linear Algebra -->
-      <a href="linalg-hub/index.html" class="course-card">
+      <a href="https://linalg-pink.vercel.app" class="course-card">
         <div class="course-icon">&#x1F4D0;</div>
         <h3 class="course-title">Linear Algebra</h3>
         <p class="course-description">
@@ -190,6 +194,21 @@
           <span class="course-tag">Vectors & Matrices</span>
           <span class="course-tag">Interactive</span>
           <span class="course-tag">Intermediate</span>
+        </div>
+      </a>
+
+      <!-- Advanced Linear Algebra -->
+      <a href="https://advanced-linalg.vercel.app" class="course-card">
+        <div class="course-icon">&#x2133;</div>
+        <h3 class="course-title">Advanced Linear Algebra</h3>
+        <p class="course-description">
+          Deep dive into abstract linear algebra. Based on Hoffman & Kunze's classic text,
+          covering vector spaces, linear transformations, and canonical forms.
+        </p>
+        <div class="course-meta">
+          <span class="course-tag">10 Chapters</span>
+          <span class="course-tag">59 Sections</span>
+          <span class="course-tag">Advanced</span>
         </div>
       </a>
     </div>
@@ -246,7 +265,14 @@
           <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
             <div id="linalg-progress" style="height: 100%; background: linear-gradient(90deg, #06b6d4, #22d3ee); width: 0%; transition: width 0.5s;"></div>
           </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="linalg-count">0 / 0 sections</div>
+          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="linalg-count">0 / 19 sections</div>
+        </div>
+        <div class="card" style="padding: 1.5rem;">
+          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Advanced Linear Algebra</h4>
+          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
+            <div id="advlinalg-progress" style="height: 100%; background: linear-gradient(90deg, #a855f7, #c084fc); width: 0%; transition: width 0.5s;"></div>
+          </div>
+          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="advlinalg-count">0 / 59 sections</div>
         </div>
       </div>
     </div>
@@ -267,9 +293,10 @@
             Connect with Nostr to compete on the global leaderboard and track your progress across all courses.
           </p>
           <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="ba/index.html#/leaderboard" class="btn btn-secondary btn-small">Basic Algebra Leaderboard</a>
-            <a href="aa/index.html#/leaderboard" class="btn btn-secondary btn-small">Abstract Algebra Leaderboard</a>
-            <a href="linalg-hub/index.html#/leaderboard" class="btn btn-secondary btn-small">Linear Algebra Leaderboard</a>
+            <a href="ba/index.html#/leaderboard" class="btn btn-secondary btn-small">Basic Algebra</a>
+            <a href="aa/index.html#/leaderboard" class="btn btn-secondary btn-small">Abstract Algebra</a>
+            <a href="https://linalg-pink.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Linear Algebra</a>
+            <a href="https://advanced-linalg.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Advanced Linear Algebra</a>
           </div>
         </div>
       </div>
@@ -304,6 +331,7 @@
         const cryptoCount = sections.filter(id => id.startsWith('crypto:')).length;
         const aaCount = sections.filter(id => id.startsWith('aa:')).length;
         const linalgCount = sections.filter(id => id.startsWith('linalg:')).length;
+        const advlinalgCount = sections.filter(id => id.startsWith('advlinalg:')).length;
 
         // Update progress bars
         document.getElementById('ba-progress').style.width = `${(baCount / 64) * 100}%`;
@@ -315,8 +343,11 @@
         document.getElementById('aa-progress').style.width = `${(aaCount / 50) * 100}%`;
         document.getElementById('aa-count').textContent = `${aaCount} / 50 sections`;
 
-        document.getElementById('linalg-progress').style.width = `${(linalgCount / 50) * 100}%`;
-        document.getElementById('linalg-count').textContent = `${linalgCount} / 50 sections`;
+        document.getElementById('linalg-progress').style.width = `${(linalgCount / 19) * 100}%`;
+        document.getElementById('linalg-count').textContent = `${linalgCount} / 19 sections`;
+
+        document.getElementById('advlinalg-progress').style.width = `${(advlinalgCount / 59) * 100}%`;
+        document.getElementById('advlinalg-count').textContent = `${advlinalgCount} / 59 sections`;
       } catch (e) {
         console.error('Failed to load progress:', e);
       }
