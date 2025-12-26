@@ -102,7 +102,7 @@ export default function Section01() {
       </Example>
 
       <Example title="Archimedean Property">
-        <p>For any real numbers x, y > 0, there exists a natural number n such that n · x > y.</p>
+        <p>For any real numbers x, y &gt; 0, there exists a natural number n such that n · x &gt; y.</p>
         <p>This property distinguishes the reals from other ordered fields.</p>
       </Example>
 
