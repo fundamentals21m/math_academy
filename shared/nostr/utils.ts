@@ -4,6 +4,9 @@
  */
 
 import { DEFAULT_RELAYS, RELAY_TIMEOUT_MS } from '../constants';
+import { getLogger } from '../utils/logger';
+
+const logger = getLogger('NostrUtils');
 
 const BECH32_ALPHABET = 'qpzry9x8gf2tvdw0s3jn54khce6mua7l';
 const BECH32_GENERATOR = [0x3b6a57b2, 0x26508e6d, 0x1ea119fa, 0x3d4233dd, 0x2a1462b3];
@@ -282,36 +285,65 @@ export interface NostrProfile {
 
 /**
  * Fetch profile from a single relay
+ * 
+ * Implements proper WebSocket cleanup to prevent connection leaks.
  */
 export function fetchProfileFromRelay(
   relayUrl: string,
   pubkeyHex: string
 ): Promise<NostrProfile | null> {
   return new Promise((resolve) => {
-    const timeout = setTimeout(() => {
-      ws.close();
+    let cleaned = false;
+    let ws: WebSocket | null = null;
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+    // Cleanup function to prevent leaks and double-cleanup
+    const cleanup = () => {
+      if (cleaned) return;
+      cleaned = true;
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+      }
+      if (ws && ws.readyState !== WebSocket.CLOSED) {
+        ws.close();
+      }
+    };
+
+    timeoutId = setTimeout(() => {
+      logger.debug(`WebSocket timeout for relay: ${relayUrl}`);
+      cleanup();
       resolve(null);
     }, RELAY_TIMEOUT_MS);
 
-    const ws = new WebSocket(relayUrl);
+    try {
+      ws = new WebSocket(relayUrl);
+    } catch (err) {
+      logger.debug(`Failed to create WebSocket for relay ${relayUrl}:`, err);
+      cleanup();
+      resolve(null);
+      return;
+    }
+
     const subId = Math.random().toString(36).substring(2, 15);
 
     ws.onopen = () => {
+      if (cleaned) return;
       const req = JSON.stringify([
         'REQ',
         subId,
         { kinds: [0], authors: [pubkeyHex], limit: 1 },
       ]);
-      ws.send(req);
+      ws!.send(req);
     };
 
     ws.onmessage = (event) => {
+      if (cleaned) return;
       try {
         const data = JSON.parse(event.data);
         if (data[0] === 'EVENT' && data[1] === subId) {
           const content = JSON.parse(data[2].content);
-          clearTimeout(timeout);
-          ws.close();
+          cleanup();
           resolve({
             name: content.name || content.display_name,
             display_name: content.display_name,
@@ -320,19 +352,27 @@ export function fetchProfileFromRelay(
             about: content.about,
           });
         } else if (data[0] === 'EOSE') {
-          clearTimeout(timeout);
-          ws.close();
+          cleanup();
           resolve(null);
         }
-      } catch {
-        // Ignore parse errors
+      } catch (err) {
+        logger.debug(`Failed to parse WebSocket message from ${relayUrl}:`, err);
+        // Continue listening for valid messages
       }
     };
 
-    ws.onerror = () => {
-      clearTimeout(timeout);
-      ws.close();
+    ws.onerror = (err) => {
+      logger.debug(`WebSocket error for relay ${relayUrl}:`, err);
+      cleanup();
       resolve(null);
+    };
+
+    ws.onclose = () => {
+      // Ensure cleanup happens if connection closes unexpectedly
+      if (!cleaned) {
+        cleanup();
+        resolve(null);
+      }
     };
   });
 }
@@ -350,12 +390,15 @@ export async function fetchNostrProfile(npub: string): Promise<NostrProfile | nu
         if (profile) {
           return profile;
         }
-      } catch {
+      } catch (err) {
+        logger.debug(`Failed to fetch profile from relay ${relayUrl}:`, err);
         // Try next relay
       }
     }
+    logger.debug(`No profile found for npub across ${DEFAULT_RELAYS.length} relays`);
     return null;
-  } catch {
+  } catch (err) {
+    logger.debug('Failed to convert npub to hex:', err);
     return null;
   }
 }

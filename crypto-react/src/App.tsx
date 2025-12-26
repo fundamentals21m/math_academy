@@ -1,44 +1,46 @@
+import { lazy, Suspense } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
+import {
+  ErrorBoundary,
+  ErrorProvider,
+  ErrorDisplay,
+  LoadingSpinner,
+} from '@magic-internet-math/shared';
 import { AchievementToastContainer } from '@/components/gamification';
 import { FEATURES } from '@/config';
 
-// Pages
+// Eagerly load Home since it's the landing page
 import Home from '@/pages/Home';
-import Leaderboard from '@/pages/Leaderboard';
-import Theorems from '@/pages/Theorems';
-import InteractiveModules from '@/pages/InteractiveModules';
 
-// Section pages
-import Section01 from '@/pages/sections/Section01';
-import Section02 from '@/pages/sections/Section02';
-import Section03 from '@/pages/sections/Section03';
-import Section04 from '@/pages/sections/Section04';
-import Section05 from '@/pages/sections/Section05';
-import Section06 from '@/pages/sections/Section06';
-import Section07 from '@/pages/sections/Section07';
-import Section08 from '@/pages/sections/Section08';
-import Section09 from '@/pages/sections/Section09';
-import Section10 from '@/pages/sections/Section10';
-import Section11 from '@/pages/sections/Section11';
-import Section12 from '@/pages/sections/Section12';
+// Lazy load other pages - they're only needed when navigating to them
+const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
+const Theorems = lazy(() => import('@/pages/Theorems'));
+const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 
-// Dynamic section loader for sections that exist
-const sectionComponents: Record<number, React.ComponentType> = {
-  1: Section01,
-  2: Section02,
-  3: Section03,
-  4: Section04,
-  5: Section05,
-  6: Section06,
-  7: Section07,
-  8: Section08,
-  9: Section09,
-  10: Section10,
-  11: Section11,
-  12: Section12,
+// Lazy load all section pages - this is the biggest win for bundle size
+// Each section is only loaded when the user navigates to it
+const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentType }>> = {
+  1: () => import('@/pages/sections/Section01'),
+  2: () => import('@/pages/sections/Section02'),
+  3: () => import('@/pages/sections/Section03'),
+  4: () => import('@/pages/sections/Section04'),
+  5: () => import('@/pages/sections/Section05'),
+  6: () => import('@/pages/sections/Section06'),
+  7: () => import('@/pages/sections/Section07'),
+  8: () => import('@/pages/sections/Section08'),
+  9: () => import('@/pages/sections/Section09'),
+  10: () => import('@/pages/sections/Section10'),
+  11: () => import('@/pages/sections/Section11'),
+  12: () => import('@/pages/sections/Section12'),
 };
+
+// Create lazy components from loaders
+const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {};
+for (const [id, loader] of Object.entries(sectionLoaders)) {
+  sectionComponents[Number(id)] = lazy(loader);
+}
 
 function SectionRouter() {
   const { id } = useParams<{ id: string }>();
@@ -47,7 +49,11 @@ function SectionRouter() {
   const SectionComponent = sectionComponents[sectionId];
 
   if (SectionComponent) {
-    return <SectionComponent />;
+    return (
+      <Suspense fallback={<LoadingSpinner message="Loading section..." />}>
+        <SectionComponent />
+      </Suspense>
+    );
   }
 
   return (
@@ -67,18 +73,39 @@ function AppContent() {
         {/* Core routes */}
         <Route path="/" element={<Home />} />
 
-        {/* Feature-gated routes */}
+        {/* Feature-gated routes - lazy loaded */}
         {FEATURES.leaderboard && (
-          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route
+            path="/leaderboard"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading leaderboard..." />}>
+                <Leaderboard />
+              </Suspense>
+            }
+          />
         )}
         {FEATURES.theoremIndex && (
-          <Route path="/theorems" element={<Theorems />} />
+          <Route
+            path="/theorems"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading theorems..." />}>
+                <Theorems />
+              </Suspense>
+            }
+          />
         )}
         {FEATURES.interactiveModules && (
-          <Route path="/interactive" element={<InteractiveModules />} />
+          <Route
+            path="/interactive"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading modules..." />}>
+                <InteractiveModules />
+              </Suspense>
+            }
+          />
         )}
 
-        {/* Dynamic section routes */}
+        {/* Dynamic section routes - lazy loaded via SectionRouter */}
         <Route path="/section/:id" element={<SectionRouter />} />
 
         {/* Fallback */}
@@ -93,24 +120,29 @@ function AppContent() {
 
 export default function App() {
   return (
-    <HashRouter>
-      {FEATURES.nostrAuth ? (
-        <NostrAuthProvider>
-          {FEATURES.gamification ? (
+    <ErrorBoundary>
+      <ErrorProvider>
+        <HashRouter>
+          {FEATURES.nostrAuth ? (
+            <NostrAuthProvider>
+              {FEATURES.gamification ? (
+                <GamificationProvider>
+                  <AppContent />
+                </GamificationProvider>
+              ) : (
+                <AppContent />
+              )}
+            </NostrAuthProvider>
+          ) : FEATURES.gamification ? (
             <GamificationProvider>
               <AppContent />
             </GamificationProvider>
           ) : (
             <AppContent />
           )}
-        </NostrAuthProvider>
-      ) : FEATURES.gamification ? (
-        <GamificationProvider>
-          <AppContent />
-        </GamificationProvider>
-      ) : (
-        <AppContent />
-      )}
-    </HashRouter>
+        </HashRouter>
+        <ErrorDisplay />
+      </ErrorProvider>
+    </ErrorBoundary>
   );
 }
