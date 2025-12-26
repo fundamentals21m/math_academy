@@ -82,7 +82,7 @@ export const ADMIN_LOG_SCHEMA = z.object({
   action: z.string(),
   targetNpub: NPUB_SCHEMA.nullable(),
   performedBy: z.string(),
-  details: z.record(z.string(), z.any()).nullable(),
+  details: z.record(z.string(), z.unknown()).nullable(),
 });
 
 // =================================================================
