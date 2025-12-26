@@ -1,0 +1,239 @@
+import { LessonLayout } from '@/components/layout/LessonLayout';
+import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
+import { Math, MathBlock } from '@/components/common/MathBlock';
+import { Callout } from '@/components/common/Callout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section12Quiz } from '@/data/quizzes';
+
+export default function Section12() {
+  return (
+    <LessonLayout sectionId={12}>
+      <h2>Elliptic Curve Cryptography</h2>
+
+      <p>
+        Elliptic Curve Cryptography (ECC) is modern cryptography's secret weapon. It provides 
+        the same security as RSA but with dramatically smaller keys—a 256-bit ECC key is 
+        roughly equivalent to a 3072-bit RSA key!
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+        <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
+          <h3 className="text-lg font-semibold text-primary-400 mb-2">RSA Key Sizes</h3>
+          <ul className="text-dark-300 space-y-1 text-sm">
+            <li>1024 bits → 80-bit security</li>
+            <li>2048 bits → 112-bit security</li>
+            <li className="text-amber-400">3072 bits → 128-bit security</li>
+            <li>7680 bits → 192-bit security</li>
+          </ul>
+        </div>
+        <div className="bg-dark-800/50 rounded-xl p-4 border border-emerald-500/30">
+          <h3 className="text-lg font-semibold text-emerald-400 mb-2">ECC Key Sizes</h3>
+          <ul className="text-dark-300 space-y-1 text-sm">
+            <li>160 bits → 80-bit security</li>
+            <li>224 bits → 112-bit security</li>
+            <li className="text-emerald-400">256 bits → 128-bit security</li>
+            <li>384 bits → 192-bit security</li>
+          </ul>
+        </div>
+      </div>
+
+      <Callout type="info">
+        <strong>Why Smaller is Better:</strong> Smaller keys mean faster computations, 
+        less bandwidth, and lower power consumption—critical for mobile devices, IoT, 
+        and embedded systems.
+      </Callout>
+
+      <h2>What is an Elliptic Curve?</h2>
+
+      <Definition title="Elliptic Curve">
+        <p>
+          An elliptic curve over a finite field <Math>\mathbb{'{Z}'}_p</Math> is the set of 
+          points <Math>(x, y)</Math> satisfying:
+        </p>
+        <MathBlock>y^2 \equiv x^3 + ax + b \pmod{'{p}'}</MathBlock>
+        <p className="mt-2">
+          along with a special "point at infinity" <Math>\mathcal{'{O}'}</Math>.
+        </p>
+        <p className="mt-2 text-dark-400">
+          The curve must satisfy <Math>4a^3 + 27b^2 \neq 0</Math> (ensures no singularities).
+        </p>
+      </Definition>
+
+      <p>
+        Over the real numbers, these curves look like smooth curves. But in cryptography, 
+        we work over finite fields, where the "curve" is actually a scattered set of points.
+      </p>
+
+      <h2>Point Addition</h2>
+
+      <p>
+        The magic of elliptic curves is that points on the curve form a <strong>group</strong> under 
+        a special addition operation:
+      </p>
+
+      <Definition title="Elliptic Curve Point Addition">
+        <p>
+          Given points <Math>P</Math> and <Math>Q</Math> on the curve:
+        </p>
+        <ol className="list-decimal list-inside space-y-2 mt-3">
+          <li>Draw a line through <Math>P</Math> and <Math>Q</Math></li>
+          <li>This line intersects the curve at a third point <Math>R</Math></li>
+          <li>Reflect <Math>R</Math> across the x-axis to get <Math>P + Q</Math></li>
+        </ol>
+        <p className="mt-3 text-dark-400">
+          When <Math>P = Q</Math>, we use the tangent line at <Math>P</Math> (point doubling).
+        </p>
+      </Definition>
+
+      <Example title="Addition Formulas">
+        <p>For points <Math>P = (x_1, y_1)</Math> and <Math>Q = (x_2, y_2)</Math>:</p>
+        
+        <div className="bg-dark-900/50 rounded-lg p-4 mt-3 space-y-3">
+          <div>
+            <div className="text-dark-400 text-sm mb-1">Slope (when P ≠ Q):</div>
+            <MathBlock>\lambda = \frac{'{y_2 - y_1}'}{'{x_2 - x_1}'} \mod p</MathBlock>
+          </div>
+          <div>
+            <div className="text-dark-400 text-sm mb-1">Slope (when P = Q, point doubling):</div>
+            <MathBlock>\lambda = \frac{'{3x_1^2 + a}'}{'{2y_1}'} \mod p</MathBlock>
+          </div>
+          <div>
+            <div className="text-dark-400 text-sm mb-1">Result P + Q = (x₃, y₃):</div>
+            <MathBlock>x_3 = \lambda^2 - x_1 - x_2 \mod p</MathBlock>
+            <MathBlock>y_3 = \lambda(x_1 - x_3) - y_1 \mod p</MathBlock>
+          </div>
+        </div>
+      </Example>
+
+      <h2>Scalar Multiplication</h2>
+
+      <p>
+        The core operation in ECC is <strong>scalar multiplication</strong>: given a point <Math>P</Math> and 
+        an integer <Math>n</Math>, compute:
+      </p>
+
+      <MathBlock>nP = \underbrace{'{P + P + \\cdots + P}'}_{'{n \\text{ times}'}</MathBlock>
+
+      <p>
+        Using the "double-and-add" algorithm (similar to square-and-multiply), this is 
+        very efficient—even for huge values of <Math>n</Math>.
+      </p>
+
+      <h2>The Elliptic Curve Discrete Log Problem</h2>
+
+      <Theorem title="ECDLP Hardness">
+        <p>
+          Given a base point <Math>G</Math> and a point <Math>Q = nG</Math>, finding the 
+          scalar <Math>n</Math> is computationally infeasible for properly chosen curves.
+        </p>
+        <MathBlock>\text{'{Given }'} G \text{'{ and }'} Q = nG\text{'{, find }'} n \text{'{ (hard!)}'}</MathBlock>
+      </Theorem>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+        <div className="bg-dark-800/50 rounded-xl p-4 border border-emerald-500/30">
+          <h3 className="text-lg font-semibold text-emerald-400 mb-2">Easy Direction</h3>
+          <p className="text-dark-300 mb-2">Computing <Math>Q = nG</Math>:</p>
+          <p className="text-dark-400 text-sm">
+            Use double-and-add algorithm. Takes <Math>O(\log n)</Math> point operations.
+          </p>
+        </div>
+        <div className="bg-dark-800/50 rounded-xl p-4 border border-amber-500/30">
+          <h3 className="text-lg font-semibold text-amber-400 mb-2">Hard Direction</h3>
+          <p className="text-dark-300 mb-2">Finding <Math>n</Math> given <Math>G</Math> and <Math>Q</Math>:</p>
+          <p className="text-dark-400 text-sm">
+            Best known algorithms are <Math>O(\sqrt{'{n}'})</Math>. For 256-bit curves, this 
+            means ~2¹²⁸ operations.
+          </p>
+        </div>
+      </div>
+
+      <h2>Elliptic Curve Diffie-Hellman (ECDH)</h2>
+
+      <p>
+        ECDH works just like regular Diffie-Hellman, but with elliptic curve operations:
+      </p>
+
+      <div className="space-y-4 my-6">
+        <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
+          <h3 className="text-lg font-semibold text-primary-400 mb-2">Public Parameters</h3>
+          <p className="text-dark-300">
+            Curve parameters <Math>(p, a, b)</Math> and generator point <Math>G</Math>
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-dark-800/50 rounded-xl p-4 border border-blue-500/30">
+            <h3 className="text-lg font-semibold text-blue-400 mb-2">Alice</h3>
+            <p className="text-dark-300 text-sm">
+              Picks secret <Math>a</Math>, sends <Math>A = aG</Math>
+            </p>
+          </div>
+          <div className="bg-dark-800/50 rounded-xl p-4 border border-red-500/30">
+            <h3 className="text-lg font-semibold text-red-400 mb-2">Bob</h3>
+            <p className="text-dark-300 text-sm">
+              Picks secret <Math>b</Math>, sends <Math>B = bG</Math>
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-dark-800/50 rounded-xl p-4 border border-emerald-500/30">
+          <h3 className="text-lg font-semibold text-emerald-400 mb-2">Shared Secret</h3>
+          <p className="text-dark-300">
+            Alice computes <Math>aB = a(bG) = abG</Math><br />
+            Bob computes <Math>bA = b(aG) = abG</Math><br />
+            Both get the same point!
+          </p>
+        </div>
+      </div>
+
+      <h2>Bitcoin and secp256k1</h2>
+
+      <Callout type="info">
+        <strong>Real-World Curve:</strong> Bitcoin uses the secp256k1 curve, defined by:
+        <MathBlock>y^2 = x^3 + 7 \pmod{'{p}'}</MathBlock>
+        where <Math>p = 2^{'{256}'} - 2^{'{32}'} - 977</Math>
+      </Callout>
+
+      <p>
+        Every Bitcoin address is derived from an elliptic curve public key:
+      </p>
+
+      <ul className="list-disc list-inside space-y-2 my-6 text-dark-300">
+        <li>
+          <strong className="text-dark-100">Private key:</strong> A random 256-bit number <Math>k</Math>
+        </li>
+        <li>
+          <strong className="text-dark-100">Public key:</strong> The point <Math>K = kG</Math>
+        </li>
+        <li>
+          <strong className="text-dark-100">Address:</strong> Hash of the public key
+        </li>
+      </ul>
+
+      <p>
+        The ECDLP ensures that knowing <Math>K</Math> doesn't reveal <Math>k</Math>—your 
+        bitcoins are safe as long as your private key remains secret.
+      </p>
+
+      <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
+        <h3 className="text-lg font-semibold text-primary-400 mb-3">Why secp256k1?</h3>
+        <ul className="list-disc list-inside space-y-2 text-dark-300">
+          <li>Efficient implementation (special prime form)</li>
+          <li>Well-studied and believed secure</li>
+          <li>Parameters were chosen "verifiably at random" (reduces trust concerns)</li>
+          <li>256-bit security matches SHA-256 used elsewhere in Bitcoin</li>
+        </ul>
+      </div>
+
+      <Callout type="success">
+        <strong>Congratulations!</strong> You've now learned the mathematical foundations 
+        of modern cryptography—from modular arithmetic to RSA, Diffie-Hellman, and elliptic 
+        curves. These concepts protect trillions of dollars in transactions every day!
+      </Callout>
+
+      {/* TODO: Add elliptic curve visualization */}
+
+      <SectionQuiz sectionId={12} questions={section12Quiz} title="Elliptic Curve Cryptography Quiz" />
+    </LessonLayout>
+  );
+}
