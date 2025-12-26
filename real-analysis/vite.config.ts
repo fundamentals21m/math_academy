@@ -5,8 +5,9 @@ import path from 'path'
 // =============================================================================
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
-const COURSE_ID = 'template'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = `/math_academy/${COURSE_ID}/`
+// Course ID: 'linalg' - Short ID: 'ba', 'aa', 'crypto', etc.
+// Use '/' for standalone Vercel deployment
+const BASE_PATH = '/'
 // =============================================================================
 
 export default defineConfig({
@@ -20,12 +21,34 @@ export default defineConfig({
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
         '@data': path.resolve(__dirname, './src/data'),
-        // Monorepo shared package
-        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
+        // Shared package (local copy for standalone deployment)
+        '@magic-internet-math/shared': path.resolve(__dirname, './shared'),
+        // Ensure shared package can resolve katex from this package's node_modules
+        'katex': path.resolve(__dirname, './node_modules/katex'),
     },
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500, // Lower threshold to catch issues
+    rollupOptions: {
+      output: {
+        // Manual chunks for better caching and smaller initial load
+        manualChunks: {
+          // Core React libraries - changes rarely
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          // Math rendering - large but essential
+          'vendor-math': ['katex'],
+          // Animation library
+          'vendor-animation': ['framer-motion'],
+          // Firebase - only loaded when auth/leaderboard features are used
+          'vendor-firebase': [
+            'firebase/app',
+            'firebase/auth',
+            'firebase/firestore',
+            'firebase/functions',
+          ],
+        },
+      },
+    },
   },
   define: {
     // Firebase environment variables
