@@ -88,6 +88,7 @@ export interface LeaderboardUser {
     ba: number;
     crypto: number;
     aa: number;
+    linalg: number;
   };
   level: number;
   banned: boolean;
@@ -106,6 +107,6 @@ export interface LeaderboardEntry {
 }
 
 /**
- * Course identifiers
+ * Course identifiers - import from leaderboard/types for consistency
  */
-export type CourseId = 'ba' | 'crypto' | 'aa';
+export type { CourseId } from '../leaderboard/types';

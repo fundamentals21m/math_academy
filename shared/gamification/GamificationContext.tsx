@@ -22,6 +22,9 @@ import { calculateLevel, calculateXP } from './xpCalculator';
 import { updateStreak } from './streakManager';
 import { calculateMastery } from './masteryCalculator';
 import { checkAchievements } from './achievements';
+import { getLogger } from '../utils/logger';
+
+const logger = getLogger('Gamification');
 
 // =============================================================================
 // CONTEXT TYPES
@@ -116,7 +119,7 @@ function gamificationReducer(state: GamificationState, action: Action): Gamifica
 
       // Guard against completing a section that was never visited
       if (!existing) {
-        console.warn(`Section ${sectionId} was not visited before completion`);
+        logger.warn(`Attempted to complete unvisited section: ${sectionId}`);
         return state;
       }
 

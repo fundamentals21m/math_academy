@@ -7,6 +7,9 @@ import { httpsCallable } from 'firebase/functions';
 import { getFirebaseFunctions, isFirebaseConfigured } from '../../firebase/config';
 import { useNostrAuth } from '../../contexts/NostrAuthContext';
 import { shortenNpub } from '../../nostr/utils';
+import { getLogger } from '../../utils/logger';
+
+const logger = getLogger('AdminPanel');
 
 interface AdminLog {
   id: string;
@@ -43,7 +46,7 @@ export function AdminPanel({ className = '' }: AdminPanelProps) {
       const result = await getAdminLogs({ limit: 20 });
       setLogs(result.data.logs);
     } catch (error) {
-      console.error('Failed to load admin logs:', error);
+      logger.error('Failed to load admin logs:', error);
     }
   }, [isAdmin]);
 

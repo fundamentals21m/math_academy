@@ -3,6 +3,8 @@
  * bech32 encoding/decoding for npub/nsec/note
  */
 
+import { DEFAULT_RELAYS, RELAY_TIMEOUT_MS } from '../constants';
+
 const BECH32_ALPHABET = 'qpzry9x8gf2tvdw0s3jn54khce6mua7l';
 const BECH32_GENERATOR = [0x3b6a57b2, 0x26508e6d, 0x1ea119fa, 0x3d4233dd, 0x2a1462b3];
 
@@ -267,14 +269,6 @@ export function waitForNostrExtension(timeout: number = 3000): Promise<boolean> 
   });
 }
 
-// Default relays to query for profiles
-const DEFAULT_RELAYS = [
-  'wss://relay.damus.io',
-  'wss://relay.nostr.band',
-  'wss://nos.lol',
-  'wss://relay.primal.net',
-];
-
 /**
  * Nostr profile metadata (kind 0)
  */
@@ -289,7 +283,7 @@ export interface NostrProfile {
 /**
  * Fetch profile from a single relay
  */
-function fetchProfileFromRelay(
+export function fetchProfileFromRelay(
   relayUrl: string,
   pubkeyHex: string
 ): Promise<NostrProfile | null> {
@@ -297,7 +291,7 @@ function fetchProfileFromRelay(
     const timeout = setTimeout(() => {
       ws.close();
       resolve(null);
-    }, 5000);
+    }, RELAY_TIMEOUT_MS);
 
     const ws = new WebSocket(relayUrl);
     const subId = Math.random().toString(36).substring(2, 15);

@@ -43,7 +43,6 @@ export function NostrConnectButton({
       <div className={`flex flex-col items-center gap-2 ${className}`}>
         <button
           onClick={() => {
-            console.log('[NostrConnectButton] Button clicked!');
             connect();
           }}
           disabled={isConnecting || !hasExtension}

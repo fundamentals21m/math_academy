@@ -12,7 +12,71 @@ import { UserRankCard } from './UserRankCard';
 import { AdminPanel } from './AdminPanel';
 import { getSyncManager } from '../../leaderboard/syncManager';
 import { fetchNostrProfiles, type NostrProfile } from '../../nostr/utils';
+import { getLogger } from '../../utils/logger';
+import { REFRESH_INTERVAL_MS, LEADERBOARD_CACHE_EXPIRY_MS } from '../../constants';
 import type { CourseId, LeaderboardRanking, LeaderboardResponse } from '../../leaderboard/types';
+
+const logger = getLogger('Leaderboard');
+
+// =============================================================================
+// LEADERBOARD CACHING
+// =============================================================================
+
+const LEADERBOARD_CACHE_KEY = 'magic-internet-math-leaderboard-cache';
+
+interface CachedLeaderboard {
+  rankings: LeaderboardRanking[];
+  userRank: number | null;
+  timestamp: number;
+  tab: CourseId | 'overall';
+}
+
+function getCachedLeaderboard(tab: CourseId | 'overall'): CachedLeaderboard | null {
+  try {
+    const cached = localStorage.getItem(LEADERBOARD_CACHE_KEY);
+    if (!cached) return null;
+    const data = JSON.parse(cached) as CachedLeaderboard;
+    if (data.tab !== tab) return null;
+    if (Date.now() - data.timestamp > LEADERBOARD_CACHE_EXPIRY_MS) return null;
+    return data;
+  } catch {
+    return null;
+  }
+}
+
+function cacheLeaderboard(rankings: LeaderboardRanking[], userRank: number | null, tab: CourseId | 'overall'): void {
+  try {
+    const data: CachedLeaderboard = { rankings, userRank, timestamp: Date.now(), tab };
+    localStorage.setItem(LEADERBOARD_CACHE_KEY, JSON.stringify(data));
+  } catch {
+    // Ignore cache errors
+  }
+}
+
+/**
+ * Map Firebase error codes/messages to user-friendly messages
+ */
+function mapFirebaseError(err: unknown): string {
+  if (err instanceof Error) {
+    const message = err.message.toLowerCase();
+    if (message.includes('unauthenticated') || message.includes('not authenticated')) {
+      return 'Please connect your Nostr wallet to view the leaderboard.';
+    }
+    if (message.includes('permission') || message.includes('denied')) {
+      return 'You don\'t have permission to access this resource.';
+    }
+    if (message.includes('not-found') || message.includes('not found')) {
+      return 'The requested data was not found.';
+    }
+    if (message.includes('network') || message.includes('fetch') || message.includes('failed to fetch')) {
+      return 'Network error. Please check your connection and try again.';
+    }
+    if (message.includes('timeout') || message.includes('deadline')) {
+      return 'Request timed out. Please try again.';
+    }
+  }
+  return 'Failed to load leaderboard. Please try again.';
+}
 
 type TabId = CourseId | 'overall';
 
@@ -61,9 +125,20 @@ export function LeaderboardPage({ className = '' }: LeaderboardPageProps) {
       const result = await getLeaderboard({ courseId: activeTab, limit: 50 });
       setRankings(result.data.rankings);
       setUserRank(result.data.userRank);
+      // Cache successful response
+      cacheLeaderboard(result.data.rankings, result.data.userRank, activeTab);
     } catch (err) {
-      console.error('Failed to load leaderboard:', err);
-      setError(err instanceof Error ? err.message : 'Failed to load leaderboard');
+      logger.error('Failed to load leaderboard:', err);
+      
+      // Try to show cached data on error
+      const cached = getCachedLeaderboard(activeTab);
+      if (cached) {
+        setRankings(cached.rankings);
+        setUserRank(cached.userRank);
+        setError('Showing cached data. ' + mapFirebaseError(err));
+      } else {
+        setError(mapFirebaseError(err));
+      }
     } finally {
       setIsLoading(false);
     }
@@ -110,9 +185,9 @@ export function LeaderboardPage({ className = '' }: LeaderboardPageProps) {
     fetchMissingProfiles();
   }, [rankings]);
 
-  // Refresh leaderboard periodically (every 30 seconds)
+  // Refresh leaderboard periodically
   useEffect(() => {
-    const interval = setInterval(loadLeaderboard, 30000);
+    const interval = setInterval(loadLeaderboard, REFRESH_INTERVAL_MS);
     return () => clearInterval(interval);
   }, [loadLeaderboard]);
 
