@@ -156,7 +156,7 @@ function gamificationReducer(state: GamificationState, action: Action): Gamifica
 
       // Guard against recording quiz for unvisited section
       if (!existing) {
-        console.warn(`Section ${sectionId} was not visited before quiz`);
+        logger.warn(`Section ${sectionId} was not visited before quiz`);
         return state;
       }
 
@@ -210,7 +210,7 @@ function gamificationReducer(state: GamificationState, action: Action): Gamifica
 
       // Guard against using visualization for unvisited section
       if (!existing) {
-        console.warn(`Section ${sectionId} was not visited before visualization`);
+        logger.warn(`Section ${sectionId} was not visited before visualization`);
         return state;
       }
 

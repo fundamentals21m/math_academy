@@ -9,6 +9,8 @@ import { isValidCourseId } from '../types/courses';
 import { SYNC_INTERVAL_MS, DEBOUNCE_MS, RATE_LIMIT_MS } from '../constants';
 import type { CourseId, ScoreUpdate, SyncPayload } from './types';
 import { getLogger } from '../utils/logger';
+import { validateSectionData } from '../validation/schemas';
+import { XP_CONFIG } from '../gamification/types';
 
 const logger = getLogger('SyncManager');
 
@@ -35,12 +37,13 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
       if (!isValidCourseId(coursePrefix)) continue;
       const course = coursePrefix;
 
-      const section = sectionData as {
-        visitedAt?: string;
-        completedAt?: string;
-        quizAttempts?: Array<{ xpEarned?: number }>;
-        visualizationsInteracted?: string[];
-      };
+      // Validate section data structure
+      const validation = validateSectionData(sectionData);
+      if (!validation.valid || !validation.data) {
+        logger.warn(`Invalid section data for ${sectionId}, skipping`);
+        continue;
+      }
+      const section = validation.data;
 
       // Add XP from quiz attempts
       if (section.quizAttempts) {
@@ -51,19 +54,19 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
         }
       }
 
-      // Add XP for section visits (10 XP each)
+      // Add XP for section visits
       if (section.visitedAt) {
-        scores[course] += 10;
+        scores[course] += XP_CONFIG.SECTION_VISIT;
       }
 
-      // Add XP for section completion (25 XP each)
+      // Add XP for section completion
       if (section.completedAt) {
-        scores[course] += 25;
+        scores[course] += XP_CONFIG.SECTION_COMPLETE;
       }
 
-      // Add XP for visualizations (5 XP each)
+      // Add XP for visualizations
       if (section.visualizationsInteracted) {
-        scores[course] += section.visualizationsInteracted.length * 5;
+        scores[course] += section.visualizationsInteracted.length * XP_CONFIG.VISUALIZATION_USE;
       }
     }
 
