@@ -9,7 +9,7 @@ import { isValidCourseId } from '../types/courses';
 import { SYNC_INTERVAL_MS, DEBOUNCE_MS, RATE_LIMIT_MS } from '../constants';
 import type { CourseId, ScoreUpdate, SyncPayload } from './types';
 import { getLogger } from '../utils/logger';
-import { validateSectionData } from '../validation/schemas';
+// import { validateSectionData } from '../validation/schemas'; // Temporarily disabled to test circular dependency
 import { XP_CONFIG } from '../gamification/types';
 
 const logger = getLogger('SyncManager');
@@ -37,13 +37,12 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
       if (!isValidCourseId(coursePrefix)) continue;
       const course = coursePrefix;
 
-      // Validate section data structure
-      const validation = validateSectionData(sectionData);
-      if (!validation.valid || !validation.data) {
+      // Simple validation instead of schema validation to avoid circular dependencies
+      const section = sectionData as any; // Type assertion for now
+      if (!section) {
         logger.warn(`Invalid section data for ${sectionId}, skipping`);
         continue;
       }
-      const section = validation.data;
 
       // Add XP from quiz attempts
       if (section.quizAttempts) {
