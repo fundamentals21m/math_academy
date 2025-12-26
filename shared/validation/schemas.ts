@@ -35,23 +35,34 @@ export const AUTH_STATE_SCHEMA = z.object({
   displayName: DISPLAY_NAME_SCHEMA.nullable(),
 });
 
+// Schema for individual section data (used in syncManager)
+export const SECTION_DATA_SCHEMA = z.object({
+  visitedAt: z.string().nullable().optional(),
+  completedAt: z.string().nullable().optional(),
+  quizAttempts: z.array(z.object({
+    xpEarned: z.number().int().min(0).optional(),
+    score: z.number().min(0).max(100).optional(),
+    timestamp: z.string().optional(),
+    difficulty: z.enum(['easy', 'medium', 'hard']).optional(),
+    correctAnswers: z.number().int().min(0).optional(),
+    totalQuestions: z.number().int().min(1).optional(),
+  })).optional(),
+  visualizationsInteracted: z.array(z.string().max(100)).optional(),
+  masteryLevel: z.union([
+    z.number().int().min(0).max(3),
+    z.enum(['none', 'learning', 'familiar', 'mastered']),
+  ]).nullable().optional(),
+  sectionId: z.string().optional(),
+  timeSpentSeconds: z.number().int().min(0).optional(),
+});
+
 export const GAMIIFICATION_STATE_SCHEMA = z.object({
   user: z.object({
     totalXP: z.number().int().min(0),
     level: z.number().int().min(1).max(10),
     sectionsCompleted: z.array(STORAGE_KEY_SCHEMA),
   }),
-  sections: z.record(STORAGE_KEY_SCHEMA, z.object({
-    visitedAt: z.string().nullable(),
-    completedAt: z.string().nullable(),
-    quizAttempts: z.array(z.object({
-      xpEarned: z.number().int().min(0),
-      score: z.number().min(0).max(100),
-      timestamp: z.string(),
-    })),
-    visualizationsInteracted: z.array(z.string().max(100)),
-    masteryLevel: z.number().int().min(0).max(3).nullable(),
-  })),
+  sections: z.record(STORAGE_KEY_SCHEMA, SECTION_DATA_SCHEMA),
   dailyGoals: z.object({
     lastResetDate: z.string().nullable(),
     currentStreak: z.number().int().min(0),
@@ -176,4 +187,18 @@ export function validateLocalStorageData(data: unknown): { valid: boolean; error
   if (result.success) return { valid: true };
   
   return { valid: false, error: 'Invalid local storage data format' };
+}
+
+export function validateSectionData(data: unknown): { valid: boolean; data?: z.infer<typeof SECTION_DATA_SCHEMA>; error?: string } {
+  const result = SECTION_DATA_SCHEMA.safeParse(data);
+  if (result.success) return { valid: true, data: result.data };
+  
+  return { valid: false, error: 'Invalid section data format' };
+}
+
+export function validateAuthState(data: unknown): { valid: boolean; data?: z.infer<typeof AUTH_STATE_SCHEMA>; error?: string } {
+  const result = AUTH_STATE_SCHEMA.safeParse(data);
+  if (result.success) return { valid: true, data: result.data };
+  
+  return { valid: false, error: 'Invalid auth state format' };
 }
