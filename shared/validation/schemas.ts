@@ -183,10 +183,16 @@ export function validateNip05(nip05: string): { valid: boolean; error?: string }
 }
 
 export function validateLocalStorageData(data: unknown): { valid: boolean; error?: string } {
-  const result = GAMIIFICATION_STATE_SCHEMA.safeParse(data);
-  if (result.success) return { valid: true };
-  
-  return { valid: false, error: 'Invalid local storage data format' };
+  try {
+    const result = GAMIIFICATION_STATE_SCHEMA.safeParse(data);
+    if (result.success) return { valid: true };
+
+    console.warn('Invalid gamification state in localStorage: Invalid local storage data format', result.error);
+    return { valid: false, error: 'Invalid local storage data format' };
+  } catch (error) {
+    console.error('Error validating localStorage data:', error);
+    return { valid: false, error: 'Validation error' };
+  }
 }
 
 export function validateSectionData(data: unknown): { valid: boolean; data?: z.infer<typeof SECTION_DATA_SCHEMA>; error?: string } {
