@@ -1,4 +1,7 @@
 import type { GamificationState } from './types';
+import { getLogger } from '../utils/logger';
+
+const logger = getLogger('Storage');
 
 const STORAGE_KEY = 'magic-internet-math-progress';
 const CURRENT_VERSION = 2;
@@ -22,7 +25,7 @@ function isLocalStorageAvailable(): boolean {
  */
 export function loadState(): GamificationState | null {
   if (!isLocalStorageAvailable()) {
-    console.warn('localStorage is not available');
+    logger.warn('localStorage is not available');
     return null;
   }
 
@@ -34,14 +37,27 @@ export function loadState(): GamificationState | null {
 
     // Version migration if needed
     if (parsed.version !== CURRENT_VERSION) {
-      console.log(`Migrating state from v${parsed.version} to v${CURRENT_VERSION}`);
-      // Migration: ensure all required fields exist
+      logger.info(`Migrating state from v${parsed.version} to v${CURRENT_VERSION}`);
       parsed.version = CURRENT_VERSION;
+      // Migration: ensure all required fields exist
+    }
+
+    // Basic validation - check required fields exist
+    if (!parsed.user || !parsed.sections || !parsed.streak) {
+      logger.warn('Invalid gamification state structure in localStorage');
+      return null;
     }
 
     return parsed;
   } catch (error) {
-    console.error('Failed to load gamification state:', error);
+    logger.error('Failed to load gamification state:', error);
+    // Clear corrupted data to prevent persistent failures
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+      logger.info('Cleared corrupted gamification state from localStorage');
+    } catch {
+      // Ignore - if we can't remove it, we've already logged the original error
+    }
     return null;
   }
 }
@@ -51,14 +67,14 @@ export function loadState(): GamificationState | null {
  */
 export function saveState(state: GamificationState): void {
   if (!isLocalStorageAvailable()) {
-    console.warn('localStorage is not available, state not saved');
+    logger.warn('localStorage is not available, state not saved');
     return;
   }
 
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   } catch (error) {
-    console.error('Failed to save gamification state:', error);
+    logger.error('Failed to save gamification state:', error);
   }
 }
 
@@ -73,6 +89,6 @@ export function clearState(): void {
   try {
     localStorage.removeItem(STORAGE_KEY);
   } catch (error) {
-    console.error('Failed to clear gamification state:', error);
+    logger.error('Failed to clear gamification state:', error);
   }
 }

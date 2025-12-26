@@ -16,7 +16,8 @@ export type {
 } from './types';
 
 // Quiz types
-export type { QuizQuestion, SectionQuestions, QuestionType, NumericRange, renderContent } from './quizTypes';
+export type { QuizQuestion, SectionQuestions, QuestionType, NumericRange } from './quizTypes';
+export { renderContent } from './quizTypes';
 
 export { XP_CONFIG, LEVEL_THRESHOLDS, DAILY_XP_GOAL } from './types';
 

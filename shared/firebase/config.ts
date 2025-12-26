@@ -10,14 +10,14 @@ import { getAuth, type Auth } from 'firebase/auth';
 import { getFirestore, type Firestore } from 'firebase/firestore';
 import { getFunctions, type Functions, connectFunctionsEmulator } from 'firebase/functions';
 
-// Firebase configuration
+// Firebase configuration - loaded from environment variables
 const firebaseConfig = {
-  apiKey: '***REMOVED***',
-  authDomain: 'magic-internet-math-96630.firebaseapp.com',
-  projectId: 'magic-internet-math-96630',
-  storageBucket: 'magic-internet-math-96630.firebasestorage.app',
-  messagingSenderId: '***REMOVED***',
-  appId: '1:***REMOVED***:web:072f6cb1724919360f94cb',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || '',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || '',
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || '',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '',
 };
 
 // Check if we're in development mode
@@ -80,10 +80,8 @@ export function getFirebaseFunctions(): Functions {
       if (params.get('emulator') === 'true') {
         try {
           connectFunctionsEmulator(functions, 'localhost', 5001);
-          console.log('Connected to Firebase Functions emulator');
         } catch (e) {
           // Emulator may already be connected
-          console.log('Firebase Functions emulator connection:', e);
         }
       }
     }

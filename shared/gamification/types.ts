@@ -5,10 +5,9 @@
 // These types are used across all courses for consistent XP tracking.
 // =============================================================================
 
-/**
- * Course identifier type
- */
-export type CourseId = 'ba' | 'aa' | 'crypto' | 'linalg' | 'template' | string;
+// Re-export CourseId from single source of truth
+export { type CourseId, VALID_COURSE_IDS, isValidCourseId } from '../types/courses';
+import type { CourseId } from '../types/courses';
 
 /**
  * Section ID format: "courseId:sectionNumber" (e.g., "ba:5", "aa:12")

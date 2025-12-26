@@ -7,91 +7,28 @@ import {
   createContext,
   useContext,
   useState,
-  useCallback,
   useEffect,
+  useCallback,
   useMemo,
   type ReactNode,
 } from 'react';
 import { signInWithCustomToken, signOut, onAuthStateChanged, type User } from 'firebase/auth';
 import { httpsCallable } from 'firebase/functions';
 import { getFirebaseAuth, getFirebaseFunctions, isFirebaseConfigured } from '../firebase/config';
-import { hexToNpub, npubToHex, hasNostrExtension, waitForNostrExtension } from '../nostr/utils';
-import { AUTH_EVENT_KIND, type UnsignedNostrEvent, type NostrEvent } from '../nostr/types';
+import {
+  hexToNpub,
+  npubToHex,
+  hasNostrExtension,
+  waitForNostrExtension,
+  fetchProfileFromRelay,
+} from '../nostr/utils';
+import { AUTH_EVENT_KIND, type NostrEvent, type UnsignedNostrEvent } from '../nostr/types';
+import { DEFAULT_RELAYS, EXTENSION_WAIT_MS } from '../constants';
 import { getSyncManager } from '../leaderboard/syncManager';
+import { getLogger } from '../utils/logger';
+import { validateLocalStorageData } from '../validation/schemas';
 
-// Default relays to query for profile
-const DEFAULT_RELAYS = [
-  'wss://relay.damus.io',
-  'wss://relay.nostr.band',
-  'wss://nos.lol',
-  'wss://relay.primal.net',
-];
-
-// Nostr profile metadata (kind 0)
-interface NostrProfile {
-  name?: string;
-  display_name?: string;
-  nip05?: string;
-  picture?: string;
-  about?: string;
-}
-
-// Fetch profile from a single relay
-async function fetchProfileFromRelay(
-  relayUrl: string,
-  pubkeyHex: string
-): Promise<NostrProfile | null> {
-  return new Promise((resolve) => {
-    const timeout = setTimeout(() => {
-      ws.close();
-      resolve(null);
-    }, 5000);
-
-    const ws = new WebSocket(relayUrl);
-    const subId = Math.random().toString(36).substring(2, 15);
-
-    ws.onopen = () => {
-      // Request kind 0 (metadata) events for this pubkey
-      const req = JSON.stringify([
-        'REQ',
-        subId,
-        { kinds: [0], authors: [pubkeyHex], limit: 1 },
-      ]);
-      ws.send(req);
-    };
-
-    ws.onmessage = (event) => {
-      try {
-        const data = JSON.parse(event.data);
-        if (data[0] === 'EVENT' && data[1] === subId) {
-          const content = JSON.parse(data[2].content);
-          clearTimeout(timeout);
-          ws.close();
-          resolve({
-            name: content.name || content.display_name,
-            display_name: content.display_name,
-            nip05: content.nip05,
-            picture: content.picture,
-            about: content.about,
-          });
-        } else if (data[0] === 'EOSE') {
-          // End of stored events - no profile found
-          clearTimeout(timeout);
-          ws.close();
-          resolve(null);
-        }
-      } catch {
-        // Ignore parse errors
-      }
-    };
-
-    ws.onerror = () => {
-      clearTimeout(timeout);
-      ws.close();
-      resolve(null);
-    };
-  });
-}
+const logger = getLogger('NostrAuth');
 
 interface NostrAuthContextValue {
   // Auth state
@@ -138,7 +75,7 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
   // Check for Nostr extension on mount
   useEffect(() => {
     const checkExtension = async () => {
-      const found = await waitForNostrExtension(2000);
+      const found = await waitForNostrExtension(EXTENSION_WAIT_MS);
       setHasExtension(found);
       setExtensionChecked(true);
     };
@@ -167,7 +104,7 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
           return;
         }
       } catch (err) {
-        console.warn(`Failed to fetch profile from ${relayUrl}:`, err);
+          logger.warn(`Failed to fetch profile from ${relayUrl}:`, err);
       }
     }
   }, []);
@@ -184,27 +121,33 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
         // User is signed in
         setNpub(user.uid);
 
-        // Get custom claims from ID token (force refresh to get latest claims)
+         // Get custom claims from ID token (force refresh to get latest claims)
         try {
           const tokenResult = await user.getIdTokenResult(true);
-          console.log('[NostrAuth] Token claims:', tokenResult.claims);
+          logger.debug('Token claims:', tokenResult.claims);
           setIsAdmin(tokenResult.claims.isAdmin === true);
         } catch (err) {
-          console.error('[NostrAuth] Error getting token:', err);
+          logger.error('Error getting token:', err);
           setIsAdmin(false);
         }
 
-        // Restore display name from storage
+         // Restore display name from storage
         try {
           const stored = localStorage.getItem(AUTH_STORAGE_KEY);
           if (stored) {
             const state: StoredAuthState = JSON.parse(stored);
+            const validation = validateLocalStorageData(state);
+            if (!validation.valid) {
+              logger.warn('Invalid auth state in localStorage:', validation.error);
+              localStorage.removeItem(AUTH_STORAGE_KEY);
+              return;
+            }
             if (state.npub === user.uid) {
               setDisplayNameState(state.displayName);
             }
           }
-        } catch {
-          // Ignore storage errors
+        } catch (err) {
+          logger.debug('Storage read error:', err);
         }
 
         // Start sync manager
@@ -216,8 +159,8 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
         try {
           const pubkeyHex = npubToHex(user.uid);
           fetchNostrProfile(pubkeyHex);
-        } catch {
-          // Ignore conversion errors
+        } catch (err) {
+          logger.debug('Npub conversion error:', err);
         }
       } else {
         // User is signed out
@@ -238,25 +181,24 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
 
   // Connect with Nostr
   const connect = useCallback(async () => {
-    console.log('[NostrAuth] connect() called');
-    console.log('[NostrAuth] isFirebaseConfigured:', isFirebaseConfigured());
-    console.log('[NostrAuth] hasNostrExtension:', hasNostrExtension());
+    logger.debug('connect() called');
+    logger.debug('isFirebaseConfigured:', isFirebaseConfigured());
+    logger.debug('hasNostrExtension:', hasNostrExtension());
 
     if (!isFirebaseConfigured()) {
-      setError('Firebase is not configured. Please set up your Firebase project.');
-      console.log('[NostrAuth] Firebase not configured, returning');
+      logger.info('Firebase not configured, cannot connect');
       return;
     }
 
     if (!hasNostrExtension()) {
       setError('No Nostr extension found. Please install nos2x, Alby, or another NIP-07 extension.');
-      console.log('[NostrAuth] No extension found, returning');
+      logger.warn('No extension found, returning');
       return;
     }
 
-    setIsConnecting(true);
+       setIsConnecting(true);
     setError(null);
-    console.log('[NostrAuth] Starting connection...');
+    logger.info('Starting Nostr connection...');
 
     try {
       const nostr = window.nostr!;
@@ -300,21 +242,24 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
       const auth = getFirebaseAuth();
       await signInWithCustomToken(auth, verifyResult.data.token);
 
-      // Store auth state
-      try {
-        localStorage.setItem(
-          AUTH_STORAGE_KEY,
-          JSON.stringify({ npub: userNpub, displayName: null })
-        );
-      } catch {
-        // Ignore storage errors
+       // Store auth state
+       try {
+         const authState = { npub: userNpub, displayName: null };
+         localStorage.setItem(
+           AUTH_STORAGE_KEY,
+           JSON.stringify(authState)
+         );
+       } catch (err) {
+        logger.warn('Failed to store auth state:', err);
       }
 
       // Trigger initial sync
       const syncManager = getSyncManager();
-      syncManager.syncNow();
-    } catch (err) {
-      console.error('Nostr connect error:', err);
+      syncManager.syncNow().catch(err => {
+        logger.warn('Initial sync failed:', err);
+      });
+     } catch (err) {
+      logger.error('Nostr connect error:', err);
       setError(
         err instanceof Error
           ? err.message
@@ -336,15 +281,15 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
       // Clear stored auth state
       try {
         localStorage.removeItem(AUTH_STORAGE_KEY);
-      } catch {
-        // Ignore storage errors
+      } catch (err) {
+        logger.warn('Failed to clear auth state from storage:', err);
       }
 
       setNpub(null);
       setDisplayNameState(null);
       setIsAdmin(false);
     } catch (err) {
-      console.error('Disconnect error:', err);
+        logger.error('Disconnect error:', err);
       setError(
         err instanceof Error ? err.message : 'Failed to disconnect'
       );
@@ -363,8 +308,8 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
             AUTH_STORAGE_KEY,
             JSON.stringify({ npub, displayName: name })
           );
-        } catch {
-          // Ignore storage errors
+        } catch (err) {
+          logger.warn('Failed to update display name in storage:', err);
         }
       }
 

@@ -2,7 +2,9 @@
  * Leaderboard types shared across all apps
  */
 
-export type CourseId = 'ba' | 'crypto' | 'aa';
+// Re-export CourseId from single source of truth
+import type { CourseId } from '../types/courses';
+export { type CourseId, VALID_COURSE_IDS, isValidCourseId } from '../types/courses';
 
 /**
  * User profile stored in Firestore
