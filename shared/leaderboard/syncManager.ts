@@ -5,16 +5,15 @@
 
 import { httpsCallable } from 'firebase/functions';
 import { getFirebaseFunctions, isFirebaseConfigured } from '../firebase/config';
+import { isValidCourseId } from '../types/courses';
+import { SYNC_INTERVAL_MS, DEBOUNCE_MS, RATE_LIMIT_MS } from '../constants';
 import type { CourseId, ScoreUpdate, SyncPayload } from './types';
+import { getLogger } from '../utils/logger';
+
+const logger = getLogger('SyncManager');
 
 // Storage key for gamification state
 const STORAGE_KEY = 'magic-internet-math-progress';
-
-// Sync interval (5 minutes)
-const SYNC_INTERVAL_MS = 5 * 60 * 1000;
-
-// Debounce delay for immediate syncs
-const DEBOUNCE_MS = 2000;
 
 /**
  * Extract scores from localStorage gamification state
@@ -27,14 +26,14 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
     const state = JSON.parse(stored);
     if (!state?.user || !state?.sections) return null;
 
-    const scores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0 };
+    const scores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0 };
 
     // Calculate XP per course from sections
     for (const [sectionId, sectionData] of Object.entries(state.sections)) {
       const [coursePrefix] = sectionId.split(':');
-      const course = coursePrefix as CourseId;
 
-      if (!['ba', 'crypto', 'aa'].includes(course)) continue;
+      if (!isValidCourseId(coursePrefix)) continue;
+      const course = coursePrefix;
 
       const section = sectionData as {
         visitedAt?: string;
@@ -72,10 +71,12 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
       { courseId: 'ba', xp: scores.ba },
       { courseId: 'crypto', xp: scores.crypto },
       { courseId: 'aa', xp: scores.aa },
+      { courseId: 'linalg', xp: scores.linalg },
+      { courseId: 'advlinalg', xp: scores.advlinalg },
     ];
   } catch (error) {
-    console.error('Error extracting scores from storage:', error);
-    return null;
+    logger.error('Error extracting scores from storage:', error);
+    throw new Error(`Failed to extract scores from storage: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
 
@@ -100,7 +101,7 @@ export class SyncManager {
   }
 
   /**
-   * Set display name to sync with scores
+   * Set display name for sync payload
    */
   setDisplayName(name: string | null): void {
     this.displayName = name;
@@ -174,9 +175,9 @@ export class SyncManager {
       return { success: false, error: 'Firebase not configured' };
     }
 
-    // Rate limit: don't sync more than once every 30 seconds
+    // Rate limit: don't sync more often than RATE_LIMIT_MS
     const now = Date.now();
-    if (now - this.lastSyncTime < 30000) {
+    if (now - this.lastSyncTime < RATE_LIMIT_MS) {
       return { success: false, error: 'Rate limited' };
     }
 
@@ -201,13 +202,40 @@ export class SyncManager {
       this.lastSyncTime = now;
 
       return { success: result.data.success, totalXP: result.data.totalXP };
-    } catch (error) {
-      console.error('Sync failed:', error);
-      return {
-        success: false,
-        error: error instanceof Error ? error.message : 'Unknown error',
-      };
+     } catch (error) {
+       logger.error('Sync failed:', error);
+       return {
+         success: false,
+         error: error instanceof Error ? error.message : 'Unknown error',
+       };
+     }
+  }
+
+  /**
+   * Sync with exponential backoff retry
+   */
+  async syncWithRetry(maxRetries: number = 3): Promise<{ success: boolean; totalXP?: number; error?: string }> {
+    for (let attempt = 0; attempt < maxRetries; attempt++) {
+      const result = await this.syncNow();
+      if (result.success) return result;
+
+      // Don't retry on certain errors
+      if (result.error === 'Not authenticated' || 
+          result.error === 'No scores to sync' ||
+          result.error === 'Firebase not configured') {
+        return result;
+      }
+
+      // Wait before retry (exponential backoff: 1s, 2s, 4s)
+      if (attempt < maxRetries - 1) {
+        const delay = 1000 * Math.pow(2, attempt);
+        logger.debug(`Sync retry ${attempt + 1}/${maxRetries} in ${delay}ms`);
+        await new Promise(r => setTimeout(r, delay));
+        // Reset rate limit for retry
+        this.lastSyncTime = 0;
+      }
     }
+    return { success: false, error: 'Sync failed after multiple retries' };
   }
 
   /**
@@ -222,7 +250,7 @@ export class SyncManager {
         acc[s.courseId] = s.xp;
         return acc;
       },
-      { ba: 0, crypto: 0, aa: 0 } as Record<CourseId, number>
+      { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0 } as Record<CourseId, number>
     );
   }
 }
