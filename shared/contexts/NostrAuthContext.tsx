@@ -26,7 +26,7 @@ import { AUTH_EVENT_KIND, type NostrEvent, type UnsignedNostrEvent } from '../no
 import { DEFAULT_RELAYS, EXTENSION_WAIT_MS } from '../constants';
 import { getSyncManager } from '../leaderboard/syncManager';
 import { getLogger } from '../utils/logger';
-import { validateAuthState } from '../validation/schemas';
+// import { validateAuthState } from '../validation/schemas'; // Temporarily disabled to test circular dependency
 
 const logger = getLogger('NostrAuth');
 
@@ -136,13 +136,13 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
           const stored = localStorage.getItem(AUTH_STORAGE_KEY);
           if (stored) {
             const parsed = JSON.parse(stored);
-            const validation = validateAuthState(parsed);
-            if (!validation.valid || !validation.data) {
-              logger.warn('Invalid auth state in localStorage:', validation.error);
+            // Simple validation instead of schema validation to avoid circular dependencies
+            if (!parsed || !parsed.npub) {
+              logger.warn('Invalid auth state in localStorage');
               localStorage.removeItem(AUTH_STORAGE_KEY);
               return;
             }
-            if (validation.data.npub === user.uid) {
+            if (parsed.npub === user.uid) {
               setDisplayNameState(validation.data.displayName);
             }
           }
