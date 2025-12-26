@@ -64,6 +64,10 @@
       background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.1) 100%);
     }
 
+    .course-card:nth-child(6) .course-icon {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%);
+    }
+
     .course-title {
       font-size: 1.5rem;
       font-weight: 700;
@@ -211,6 +215,21 @@
           <span class="course-tag">Advanced</span>
         </div>
       </a>
+
+      <!-- Real Analysis -->
+      <a href="https://real-analysis-eta.vercel.app" class="course-card">
+        <div class="course-icon">📐</div>
+        <h3 class="course-title">Introduction to Real Analysis</h3>
+        <p class="course-description">
+          A rigorous introduction to real analysis covering limits, continuity, differentiation,
+          and integration through formal proofs. Based on Kenneth A. Ross's Elementary Analysis.
+        </p>
+        <div class="course-meta">
+          <span class="course-tag">4 Parts</span>
+          <span class="course-tag">15 Sections</span>
+          <span class="course-tag">Advanced</span>
+        </div>
+      </a>
     </div>
 
     <!-- Progress Dashboard -->
@@ -274,6 +293,13 @@
           </div>
           <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="advlinalg-count">0 / 59 sections</div>
         </div>
+        <div class="card" style="padding: 1.5rem;">
+          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Real Analysis</h4>
+          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
+            <div id="ra-progress" style="height: 100%; background: linear-gradient(90deg, #10b981, #34d399); width: 0%; transition: width 0.5s;"></div>
+          </div>
+          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="ra-count">0 / 15 sections</div>
+        </div>
       </div>
     </div>
 
@@ -297,6 +323,7 @@
             <a href="aa/index.html#/leaderboard" class="btn btn-secondary btn-small">Abstract Algebra</a>
             <a href="https://linalg-pink.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Linear Algebra</a>
             <a href="https://advanced-linalg.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Advanced Linear Algebra</a>
+            <a href="https://real-analysis-eta.vercel.app" class="btn btn-secondary btn-small">Real Analysis</a>
           </div>
         </div>
       </div>
@@ -331,6 +358,7 @@
         const aaCount = sections.filter(id => id.startsWith('aa:')).length;
         const linalgCount = sections.filter(id => id.startsWith('linalg:')).length;
         const advlinalgCount = sections.filter(id => id.startsWith('advlinalg:')).length;
+        const raCount = sections.filter(id => id.startsWith('ra:')).length;
 
         // Update progress bars
         document.getElementById('ba-progress').style.width = `${(baCount / 64) * 100}%`;
@@ -347,6 +375,9 @@
 
         document.getElementById('advlinalg-progress').style.width = `${(advlinalgCount / 59) * 100}%`;
         document.getElementById('advlinalg-count').textContent = `${advlinalgCount} / 59 sections`;
+
+        document.getElementById('ra-progress').style.width = `${(raCount / 15) * 100}%`;
+        document.getElementById('ra-count').textContent = `${raCount} / 15 sections`;
       } catch (e) {
         console.error('Failed to load progress:', e);
       }
