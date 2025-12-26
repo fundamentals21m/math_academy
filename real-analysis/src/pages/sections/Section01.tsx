@@ -96,7 +96,7 @@ export default function Section01() {
       </Theorem>
 
       <Example title="Supremum vs Maximum">
-        <p>The set S = {1, 2, 3, ..., n, ...} is bounded above but has no maximum element.</p>
+        <p>The set S = &#123;1, 2, 3, ..., n, ...&#125; is bounded above but has no maximum element.</p>
         <p>However, sup S = ∞ ∉ ℝ. This shows why we need the supremum in ℝ.</p>
       </Example>
 
