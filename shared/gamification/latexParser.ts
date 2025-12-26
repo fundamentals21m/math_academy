@@ -13,6 +13,18 @@ export interface ParsedSegment {
 }
 
 /**
+ * Escape HTML special characters to prevent XSS attacks
+ */
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+
+/**
  * Parse text containing LaTeX into segments
  */
 export function parseLaTeX(text: string): ParsedSegment[] {
@@ -26,7 +38,7 @@ export function parseLaTeX(text: string): ParsedSegment[] {
 
   // Check for display math first ($$...$$)
   const displayRegex = /\$\$([^$]*?)\$\$/g;
-  let match;
+  let match: RegExpExecArray | null;
   while ((match = displayRegex.exec(text)) !== null) {
     matches.push({
       type: 'display',
@@ -38,16 +50,17 @@ export function parseLaTeX(text: string): ParsedSegment[] {
 
   // Check for inline math ($...$), excluding already matched display math
   const inlineRegex = /\$([^$]+?)\$/g;
-  while ((match = inlineRegex.exec(text)) !== null) {
+  let inlineMatch: RegExpExecArray | null;
+  while ((inlineMatch = inlineRegex.exec(text)) !== null) {
     const isOverlappingDisplay = matches.some(m =>
-      match.index >= m.start && match.index < m.end
+      inlineMatch!.index >= m.start && inlineMatch!.index < m.end
     );
     if (!isOverlappingDisplay) {
       matches.push({
         type: 'inline',
-        latex: match[1],
-        start: match.index,
-        end: match.index + match[0].length,
+        latex: inlineMatch[1],
+        start: inlineMatch.index,
+        end: inlineMatch.index + inlineMatch[0].length,
       });
     }
   }
@@ -88,7 +101,8 @@ export function renderLaTeX(text: string): string {
 
   return segments.map(segment => {
     if (segment.type === 'text') {
-      return segment.content;
+      // Escape HTML in text segments to prevent XSS
+      return escapeHtml(segment.content);
     } else if (segment.type === 'inline-math') {
       try {
         return katex.renderToString(segment.content, {
