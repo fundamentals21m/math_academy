@@ -31,7 +31,7 @@ export function ErrorProvider({ children, onError }: ErrorProviderProps) {
   const addError = useCallback(
     (error: Omit<AppError, 'id' | 'timestamp'>) => {
       const newError: AppError = {
-        id: Math.random().toString(36).substring(2, 11),
+        id: crypto.randomUUID(),
         ...error,
         timestamp: new Date(),
         recoverable: error.recoverable ?? true,

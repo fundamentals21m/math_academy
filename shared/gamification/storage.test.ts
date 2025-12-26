@@ -48,14 +48,17 @@ describe('storage', () => {
     user: {
       totalXP: 1000,
       level: 3,
-      rank: 'Explorer',
-      dailyXP: 50,
-      weeklyXP: 300,
-      achievements: ['first-quiz'],
+      sectionsCompleted: ['crypto:1' as const],
+      partsCompleted: ['crypto:part-1'],
+      quizzesTaken: 5,
+      perfectQuizzes: 2,
+      visualizationsUsed: 10,
+      totalTimeSpentMinutes: 120,
+      joinedAt: '2024-01-01T00:00:00Z',
     },
     sections: {
-      'section-1': {
-        sectionId: 'section-1',
+      'crypto:1': {
+        sectionId: 'crypto:1' as const,
         visitedAt: '2024-01-01T00:00:00Z',
         completedAt: '2024-01-02T00:00:00Z',
         quizAttempts: [],
@@ -64,13 +67,28 @@ describe('storage', () => {
         timeSpentSeconds: 600,
       },
     },
+    achievements: [
+      {
+        id: 'first-quiz',
+        unlockedAt: '2024-01-01T00:00:00Z',
+        progress: 1,
+        target: 1,
+      },
+    ],
     streak: {
       currentStreak: 5,
       longestStreak: 10,
       lastActivityDate: '2024-01-15',
+      freezesRemaining: 2,
+      freezeUsedToday: false,
     },
-    lastUpdated: Date.now(),
-    courseId: 'crypto',
+    dailyGoals: {
+      date: '2024-01-15',
+      xpEarned: 50,
+      xpGoal: 100,
+      completed: false,
+    },
+    lastUpdated: '2024-01-15T12:00:00Z',
   });
 
   describe('loadState', () => {

@@ -1,17 +1,43 @@
 import type { GamificationState, AchievementNotification, AchievementCategory } from './types';
 
+/**
+ * Total number of sections in a course.
+ * Used for percentage-based achievement calculations.
+ */
+const TOTAL_SECTIONS = 50;
+
+/**
+ * Achievement definition with progress tracking.
+ */
 interface AchievementDefinition {
+  /** Unique identifier for the achievement */
   id: string;
+  /** Display title shown to users */
   title: string;
+  /** Description of how to earn the achievement */
   description: string;
+  /** Category for grouping achievements */
   category: AchievementCategory;
+  /** XP reward when achievement is unlocked */
   xpReward: number;
-  check: (state: GamificationState) => number; // Returns progress value
+  /** Function to calculate current progress toward target */
+  check: (state: GamificationState) => number;
+  /** Target value needed to unlock achievement */
   target: number;
 }
 
 /**
- * All achievement definitions
+ * Calculate course completion percentage.
+ * @param sectionsCompleted - Number of completed sections
+ * @returns Percentage complete (0-100)
+ */
+function calculateCourseProgress(sectionsCompleted: number): number {
+  return Math.round((sectionsCompleted / TOTAL_SECTIONS) * 100);
+}
+
+/**
+ * All achievement definitions.
+ * Achievements are grouped by category: progress, mastery, dedication, exploration.
  */
 export const ACHIEVEMENTS: AchievementDefinition[] = [
   // Progress achievements
@@ -39,7 +65,7 @@ export const ACHIEVEMENTS: AchievementDefinition[] = [
     description: 'Complete 50% of the course',
     category: 'progress',
     xpReward: 100,
-    check: (state) => Math.round((state.user.sectionsCompleted.length / 50) * 100),
+    check: (state) => calculateCourseProgress(state.user.sectionsCompleted.length),
     target: 50,
   },
   {
@@ -48,7 +74,7 @@ export const ACHIEVEMENTS: AchievementDefinition[] = [
     description: 'Complete 100% of the course',
     category: 'progress',
     xpReward: 200,
-    check: (state) => Math.round((state.user.sectionsCompleted.length / 50) * 100),
+    check: (state) => calculateCourseProgress(state.user.sectionsCompleted.length),
     target: 100,
   },
 

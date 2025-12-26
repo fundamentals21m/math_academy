@@ -27,6 +27,9 @@ export { parseLaTeX, renderLaTeX, type ParsedSegment } from './latexParser';
 // Context
 export { GamificationProvider, useGamification } from './GamificationContext';
 
+// Reducer (for advanced use cases)
+export { gamificationReducer, type GamificationAction } from './reducer';
+
 // Storage
 export { loadState, saveState, clearState } from './storage';
 

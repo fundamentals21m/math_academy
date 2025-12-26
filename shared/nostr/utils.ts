@@ -328,13 +328,13 @@ export function fetchProfileFromRelay(
     const subId = Math.random().toString(36).substring(2, 15);
 
     ws.onopen = () => {
-      if (cleaned) return;
+      if (cleaned || !ws) return;
       const req = JSON.stringify([
         'REQ',
         subId,
         { kinds: [0], authors: [pubkeyHex], limit: 1 },
       ]);
-      ws!.send(req);
+      ws.send(req);
     };
 
     ws.onmessage = (event) => {
