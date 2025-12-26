@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Header, Sidebar } from '@/components/layout';
 import { COURSE_NAME } from '@/config';
 import { MathBlock } from '@/components/common/MathBlock';
-import { theorems, getCategories, searchTheorems, type TheoremEntry } from '@/data/theorems';
+import { theorems, getCategories, searchTheorems } from '@/data/theorems';
 
 export default function Theorems() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

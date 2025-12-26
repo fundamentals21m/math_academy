@@ -62,7 +62,8 @@ export function RSADemo({ className = '' }: Props) {
   const [phi, setPhi] = useState<number>(0);
   const [e, setE] = useState<number>(17);
   const [d, setD] = useState<number>(0);
-  const [keysGenerated, setKeysGenerated] = useState(false);
+  // Derive keysGenerated from whether n and d are set (non-zero)
+  const keysGenerated = n > 0 && d > 0;
   const [keyError, setKeyError] = useState<string>('');
 
   // Encryption
@@ -73,55 +74,47 @@ export function RSADemo({ className = '' }: Props) {
   const [inputCiphertext, setInputCiphertext] = useState<number>(0);
   const [decryptedMessage, setDecryptedMessage] = useState<number | null>(null);
 
-  const generateKeys = () => {
-    setKeyError('');
-    setCiphertext(null);
-    setDecryptedMessage(null);
+   const generateKeys = () => {
+     setKeyError('');
+     resetEncryptionState();
 
-    // Validate primes
-    if (!isPrime(p)) {
-      setKeyError(`${p} is not a prime number`);
-      setKeysGenerated(false);
-      return;
-    }
-    if (!isPrime(q)) {
-      setKeyError(`${q} is not a prime number`);
-      setKeysGenerated(false);
-      return;
-    }
-    if (p === q) {
-      setKeyError('p and q must be different primes');
-      setKeysGenerated(false);
-      return;
-    }
+     // Validate primes
+     if (!isPrime(p)) {
+       setKeyError(`${p} is not a prime number`);
+       return;
+     }
+     if (!isPrime(q)) {
+       setKeyError(`${q} is not a prime number`);
+       return;
+     }
+     if (p === q) {
+       setKeyError('p and q must be different primes');
+       return;
+     }
 
-    const newN = p * q;
-    const newPhi = (p - 1) * (q - 1);
+     const newN = p * q;
+     const newPhi = (p - 1) * (q - 1);
 
-    // Validate e
-    if (e <= 1 || e >= newPhi) {
-      setKeyError(`e must be between 2 and ${newPhi - 1}`);
-      setKeysGenerated(false);
-      return;
-    }
-    if (gcd(e, newPhi) !== 1) {
-      setKeyError(`e (${e}) must be coprime with phi(n) (${newPhi})`);
-      setKeysGenerated(false);
-      return;
-    }
+     // Validate e
+     if (e <= 1 || e >= newPhi) {
+       setKeyError(`e must be between 2 and ${newPhi - 1}`);
+       return;
+     }
+     if (gcd(e, newPhi) !== 1) {
+       setKeyError(`e (${e}) must be coprime with phi(n) (${newPhi})`);
+       return;
+     }
 
-    const newD = modInverse(e, newPhi);
-    if (newD === -1) {
-      setKeyError('Could not compute modular inverse for d');
-      setKeysGenerated(false);
-      return;
-    }
+     const newD = modInverse(e, newPhi);
+     if (newD === -1) {
+       setKeyError('Could not compute modular inverse for d');
+       return;
+     }
 
-    setN(newN);
-    setPhi(newPhi);
-    setD(newD);
-    setKeysGenerated(true);
-  };
+     setN(newN);
+     setPhi(newPhi);
+     setD(newD);
+   };
 
   const encrypt = () => {
     if (!keysGenerated) return;
@@ -139,10 +132,14 @@ export function RSADemo({ className = '' }: Props) {
     setDecryptedMessage(m);
   };
 
-  useEffect(() => {
-    setKeysGenerated(false);
+  // Reset encryption/decryption state when keys change
+  const resetEncryptionState = () => {
     setCiphertext(null);
     setDecryptedMessage(null);
+  };
+
+  useEffect(() => {
+    resetEncryptionState();
   }, [p, q, e]);
 
   return (

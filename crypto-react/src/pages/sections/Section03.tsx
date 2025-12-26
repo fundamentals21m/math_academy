@@ -49,15 +49,15 @@ export default function Section03() {
       </div>
 
       <p>
-        When we add <Math>11 + 3</Math> on a 12-hour clock, we get 2. 
-        In mathematical notation, we write: <Math>11 + 3 \equiv 2 \pmod{12}</Math>
+        When we add <Math>{`11 + 3`}</Math> on a 12-hour clock, we get 2. 
+        In mathematical notation, we write: <Math>{`11 + 3 \\equiv 2 \\pmod{12}`}</Math>
       </p>
 
       <h2>The Mod Operation</h2>
 
       <Definition title="Modulo Operation">
-        For integers <Math>a</Math> and <Math>n</Math> (with <Math>n {'>'} 0</Math>), 
-        the expression <Math>a \bmod n</Math> gives the <strong>remainder</strong> when <Math>a</Math> is divided by <Math>n</Math>.
+        For integers <Math>{`a`}</Math> and <Math>{`n`}</Math> (with <Math>{`n > 0`}</Math>), 
+        the expression <Math>{`a \\bmod n`}</Math> gives the <strong>remainder</strong> when <Math>{`a`}</Math> is divided by <Math>{`n`}</Math>.
       </Definition>
 
       <MathBlock>
@@ -65,8 +65,8 @@ export default function Section03() {
       </MathBlock>
 
       <p>
-        Here, <Math>q</Math> is the quotient and <Math>r</Math> is the remainder. 
-        The mod operation returns <Math>r</Math>.
+        Here, <Math>{`q`}</Math> is the quotient and <Math>{`r`}</Math> is the remainder. 
+        The mod operation returns <Math>{`r`}</Math>.
       </p>
 
       <Example>

@@ -61,9 +61,9 @@ export default function Section10() {
           <p className="text-dark-300 mb-2">
             Find <Math>d</Math>, the modular inverse of <Math>e</Math> modulo <Math>\phi(n)</Math>:
           </p>
-          <MathBlock>d \equiv e^{'{-1}'} \pmod{'\{\\phi(n)\}'}</MathBlock>
+          <MathBlock>{`d \\equiv e^{-1} \\pmod{\\phi(n)}`}</MathBlock>
           <p className="text-dark-400 text-sm mt-2">
-            This means <Math>e \cdot d \equiv 1 \pmod{'\{\\phi(n)\}'}</Math>.
+            This means <Math>{`e \\cdot d \\equiv 1 \\pmod{\\phi(n)}`}</Math>.
           </p>
         </div>
       </div>
@@ -133,17 +133,17 @@ export default function Section10() {
         proof={
           <>
             <p>We need to show that decryption recovers the original message:</p>
-            <MathBlock>c^d \equiv (m^e)^d \equiv m^{'{ed}'} \pmod{'{n}'}</MathBlock>
+            <MathBlock>{`c^d \\equiv (m^e)^d \\equiv m^{ed} \\pmod{n}`}</MathBlock>
             <p className="mt-2">
-              Since <Math>ed \equiv 1 \pmod{'\{\\phi(n)\}'}</Math>, we have <Math>ed = 1 + k\phi(n)</Math> for 
+              Since <Math>{`ed \\equiv 1 \\pmod{\\phi(n)}`}</Math>, we have <Math>{`ed = 1 + k\\phi(n)`}</Math> for 
               some integer <Math>k</Math>.
             </p>
-            <MathBlock>m^{'{ed}'} = m^{'{1 + k\\phi(n)}'} = m \cdot (m^{'\{\\phi(n)\}'})^k</MathBlock>
+            <MathBlock>{`m^{ed} = m^{1 + k\\phi(n)} = m \\cdot (m^{\\phi(n)})^k`}</MathBlock>
             <p className="mt-2">
-              By Euler's theorem, <Math>m^{'\{\\phi(n)\}'} \equiv 1 \pmod{'{n}'}</Math> when <Math>\gcd(m,n) = 1</Math>.
+              By Euler's theorem, <Math>{`m^{\\phi(n)} \\equiv 1 \\pmod{n}`}</Math> when <Math>{`\\gcd(m,n) = 1`}</Math>.
             </p>
             <p className="mt-2">
-              Therefore: <Math>m^{'{ed}'} \equiv m \cdot 1^k \equiv m \pmod{'{n}'}</Math>
+              Therefore: <Math>{`m^{ed} \\equiv m \\cdot 1^k \\equiv m \\pmod{n}`}</Math>
             </p>
           </>
         }

@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { Math } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section11Quiz } from '@/data/quizzes';

@@ -1,5 +1,29 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 
+// NIP-07 Nostr extension interface
+interface NostrEvent {
+  id?: string;
+  pubkey: string;
+  created_at: number;
+  kind: number;
+  tags: string[][];
+  content: string;
+  sig?: string;
+}
+
+interface NostrExtension {
+  getPublicKey(): Promise<string>;
+  signEvent(event: NostrEvent): Promise<NostrEvent>;
+  getRelays?(): Promise<Record<string, { read: boolean; write: boolean }>>;
+}
+
+// Extend Window interface for Nostr
+declare global {
+  interface Window {
+    nostr?: NostrExtension;
+  }
+}
+
 // =============================================================================
 // NOSTR AUTH CONTEXT
 // =============================================================================
@@ -52,7 +76,10 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
 
     try {
       // Get public key from extension (NIP-07)
-      const pubkey = await (window as any).nostr.getPublicKey();
+      if (!window.nostr) {
+        throw new Error('Nostr extension not found. Please install a Nostr wallet like Alby or nos2x.');
+      }
+      const pubkey = await window.nostr.getPublicKey();
 
       // Convert to npub format (simplified - full implementation uses nostr-tools)
       const npubValue = `npub1${pubkey.slice(0, 59)}`;
