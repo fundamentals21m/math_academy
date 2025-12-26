@@ -3,6 +3,7 @@ import { Definition, Theorem, Example } from '@/components/common/ContentBlocks'
 import { Callout } from '@/components/common/Callout';
 import { Math, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { LimitVisualizer } from '@/components/common/LimitVisualizer';
 import { section01Questions } from '@/data/quizzes';
 
 export default function Section01() {
@@ -110,6 +111,24 @@ export default function Section01() {
         from the rationals. It ensures that limits exist and that we can complete the rational numbers to get the reals.
         This is fundamental to all of real analysis.
       </Callout>
+
+      <h3>Interactive: ε-δ Limit Definition</h3>
+      <p>
+        The ε-δ definition can be challenging to grasp intuitively. Use the interactive visualizer below
+        to explore how ε and δ work together to define limits.
+      </p>
+
+      <LimitVisualizer
+        func={(x) => 2 * x + 1}
+        limitValue={5}
+        a={2}
+        functionName="f"
+      />
+
+      <p className="mt-4 text-sm text-dark-400">
+        Try adjusting ε and δ to see when the condition |f(x) - L| &lt; ε holds for all x where |x - a| &lt; δ.
+        This demonstrates the rigorous definition of limits that underlies all of real analysis.
+      </p>
 
       <SectionQuiz
         sectionId={1}
