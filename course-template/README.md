@@ -68,33 +68,37 @@ export const curriculum: Part[] = [
 ## Directory Structure
 
 ```
-src/
-├── config/
-│   └── course.ts           # Course configuration
-├── components/
-│   ├── layout/             # Header, Sidebar, LessonLayout
-│   ├── common/             # Definition, Theorem, Example, MathBlock
-│   ├── gamification/       # XPDisplay, StreakBadge, MasteryIndicator
-│   ├── quiz/               # SectionQuiz
-│   └── visualizations/     # Interactive demos (add your own)
-├── contexts/
-│   └── GamificationContext.tsx
-├── data/
-│   ├── curriculum.ts       # Course structure
-│   └── quizzes/            # Quiz question files
-├── lib/
-│   └── gamification/       # XP, streaks, achievements logic
-├── pages/
-│   ├── Home.tsx
-│   ├── Theorems.tsx
-│   ├── InteractiveModules.tsx
-│   ├── Leaderboard.tsx
-│   └── sections/           # Section page components
-├── shared/
-│   ├── firebase/           # Firebase config
-│   └── contexts/           # NostrAuthContext
-└── types/
-    └── gamification.ts     # Type definitions
+my-course/
+├── chunks/                 # Symlink to ../books/[book-name] (optional)
+├── src/
+│   ├── config/
+│   │   └── course.ts           # Course configuration
+│   ├── components/
+│   │   ├── layout/             # Header, Sidebar, LessonLayout
+│   │   ├── common/             # Definition, Theorem, Example, MathBlock
+│   │   ├── gamification/       # XPDisplay, StreakBadge, MasteryIndicator
+│   │   ├── quiz/               # SectionQuiz
+│   │   └── visualizations/     # Interactive demos (add your own)
+│   ├── contexts/
+│   │   └── GamificationContext.tsx
+│   ├── data/
+│   │   ├── curriculum.ts       # Course structure
+│   │   └── quizzes/            # Quiz question files
+│   ├── lib/
+│   │   └── gamification/       # XP, streaks, achievements logic
+│   ├── pages/
+│   │   ├── Home.tsx
+│   │   ├── Theorems.tsx
+│   │   ├── InteractiveModules.tsx
+│   │   ├── Leaderboard.tsx
+│   │   └── sections/           # Section page components
+│   ├── shared/
+│   │   ├── firebase/           # Firebase config
+│   │   └── contexts/           # NostrAuthContext
+│   └── types/
+│       └── gamification.ts     # Type definitions
+├── vite.config.ts
+└── package.json
 ```
 
 ## Creating Sections
@@ -281,6 +285,26 @@ const firebaseConfig = {
   // ...
 };
 ```
+
+## Book Source Material (Optional)
+
+If your course uses a textbook as source material:
+
+1. **Chunk the PDF** into smaller files using the chunking scripts:
+   ```bash
+   # From the repo root
+   python chunk_pdf_by_size.py path/to/textbook.pdf books/my-book/
+   ```
+
+2. **Create a symlink** in your course directory:
+   ```bash
+   cd my-course
+   ln -s ../books/my-book chunks
+   ```
+
+3. **Reference chunks** in your development workflow via `chunks/`
+
+See `books/README.md` for more details on the books directory structure.
 
 ## Tech Stack
 

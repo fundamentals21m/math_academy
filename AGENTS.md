@@ -177,12 +177,32 @@ interface Section { id: number; title: string; slug: string; description: string
 interface Part { id: number; title: string; slug: string; sections: Section[]; }
 ```
 
+## Book Chunks
+
+PDF source materials are stored in `books/` (gitignored):
+
+```
+books/
+├── README.md            # Documentation for adding books
+├── four-pillars/        # Stillwell - Four Pillars of Geometry
+├── linalg-book/         # Hoffman & Kunze - Linear Algebra
+└── islr/                # James et al - Intro to Statistical Learning
+```
+
+When creating a new course with book source material:
+1. Add book chunks to `books/[book-name]/` using chunking scripts
+2. Create symlink in course: `ln -s ../books/[book-name] chunks`
+3. Reference chunks via the symlink in your course
+
+See `books/README.md` for detailed instructions.
+
 ## Common Tasks
 
 ### New Course
 1. Copy `course-template/` to new dir
 2. Update `src/config/course.ts`, `vite.config.ts`
 3. Define `curriculum.ts`, create sections, add quizzes
+4. If using book source: add chunks to `books/` and create symlink
 
 ### New Section
 1. Add to `curriculum.ts`
