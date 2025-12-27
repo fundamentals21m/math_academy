@@ -5,9 +5,9 @@ import path from 'path'
 // =============================================================================
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
-// Course ID: 'linalg' - Short ID: 'ba', 'aa', 'crypto', etc.
-// Use '/' for standalone Vercel deployment
-const BASE_PATH = '/'
+// Course ID: 'ra' - Short ID: 'ba', 'aa', 'crypto', etc.
+// Use '/ra/' for hub deployment, '/' for standalone Vercel deployment
+const BASE_PATH = '/ra/'
 // =============================================================================
 
 export default defineConfig({
