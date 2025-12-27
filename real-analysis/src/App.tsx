@@ -1,27 +1,23 @@
 import { lazy, Suspense } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
-import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
+import {
+  NostrAuthProvider,
+  ErrorBoundary,
+  ErrorProvider,
+  ErrorDisplay,
+  LoadingSpinner,
+} from '@magic-internet-math/shared';
 import { AchievementToastContainer } from '@/components/gamification';
 import { FEATURES } from '@/config';
 
-// Pages
+// Eagerly load Home since it's the landing page
 import Home from '@/pages/Home';
-import Leaderboard from '@/pages/Leaderboard';
-import Theorems from '@/pages/Theorems';
-import InteractiveModules from '@/pages/InteractiveModules';
 
-// Loading component for Suspense
-function LoadingSpinner() {
-  return (
-    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500 mx-auto mb-4"></div>
-        <p className="text-dark-400">Loading section...</p>
-      </div>
-    </div>
-  );
-}
+// Lazy load other pages - only loaded when navigating to them
+const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
+const Theorems = lazy(() => import('@/pages/Theorems'));
+const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 
 // Lazy load all section components for code splitting
 const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {
@@ -75,15 +71,36 @@ function AppContent() {
         {/* Core routes */}
         <Route path="/" element={<Home />} />
 
-        {/* Feature-gated routes */}
+        {/* Feature-gated routes - lazy loaded */}
         {FEATURES.leaderboard && (
-          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route
+            path="/leaderboard"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading leaderboard..." />}>
+                <Leaderboard />
+              </Suspense>
+            }
+          />
         )}
         {FEATURES.theoremIndex && (
-          <Route path="/theorems" element={<Theorems />} />
+          <Route
+            path="/theorems"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading theorems..." />}>
+                <Theorems />
+              </Suspense>
+            }
+          />
         )}
         {FEATURES.interactiveModules && (
-          <Route path="/interactive" element={<InteractiveModules />} />
+          <Route
+            path="/interactive"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading modules..." />}>
+                <InteractiveModules />
+              </Suspense>
+            }
+          />
         )}
 
         {/* Dynamic section routes */}
@@ -101,24 +118,29 @@ function AppContent() {
 
 export default function App() {
   return (
-    <HashRouter>
-      {FEATURES.nostrAuth ? (
-        <NostrAuthProvider>
-          {FEATURES.gamification ? (
+    <ErrorBoundary>
+      <ErrorProvider>
+        <HashRouter>
+          {FEATURES.nostrAuth ? (
+            <NostrAuthProvider>
+              {FEATURES.gamification ? (
+                <GamificationProvider>
+                  <AppContent />
+                </GamificationProvider>
+              ) : (
+                <AppContent />
+              )}
+            </NostrAuthProvider>
+          ) : FEATURES.gamification ? (
             <GamificationProvider>
               <AppContent />
             </GamificationProvider>
           ) : (
             <AppContent />
           )}
-        </NostrAuthProvider>
-      ) : FEATURES.gamification ? (
-        <GamificationProvider>
-          <AppContent />
-        </GamificationProvider>
-      ) : (
-        <AppContent />
-      )}
-    </HashRouter>
+        </HashRouter>
+        <ErrorDisplay />
+      </ErrorProvider>
+    </ErrorBoundary>
   );
 }

@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { RiemannVisualizer } from '@/components/common/RiemannVisualizer';
 import { section04Quiz } from '@/data/quizzes';
@@ -118,10 +118,9 @@ export default function Section04() {
       </p>
 
       <RiemannVisualizer
-        func={(x) => x * x}
+        func={(x: number) => x * x}
         a={0}
         b={1}
-        functionName="f"
         functionLatex="x^2"
       />
 

@@ -1,11 +1,10 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { useState, useMemo } from 'react';
+import { MathBlock } from '@/components/common/MathBlock';
 
 interface RiemannVisualizerProps {
   func: (x: number) => number;
   a: number;
   b: number;
-  functionName?: string;
   functionLatex?: string;
 }
 
@@ -15,7 +14,6 @@ export function RiemannVisualizer({
   func,
   a,
   b,
-  functionName = "f",
   functionLatex = "f(x)"
 }: RiemannVisualizerProps) {
   const [numRectangles, setNumRectangles] = useState(6);

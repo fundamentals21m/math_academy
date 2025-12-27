@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { LimitVisualizer } from '@/components/common/LimitVisualizer';
 import { section01Quiz } from '@/data/quizzes';
@@ -132,7 +132,7 @@ export default function Section01() {
 
       <SectionQuiz
         sectionId={1}
-        questions={section01Questions}
+        questions={section01Quiz}
         title="Real Number System Quiz"
       />
     </LessonLayout>
