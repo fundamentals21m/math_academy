@@ -20,8 +20,8 @@ export default defineConfig({
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
         '@data': path.resolve(__dirname, './src/data'),
-        // Monorepo shared package
-        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
+        // Shared package (local copy for standalone Vercel deployment)
+        '@magic-internet-math/shared': path.resolve(__dirname, './shared'),
     },
   },
   build: {
