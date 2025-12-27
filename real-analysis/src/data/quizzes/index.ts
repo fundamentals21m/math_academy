@@ -3,39 +3,52 @@
  *
  * Based on Kenneth A. Ross - Elementary Analysis
  * Export all section quizzes from this file.
- * Add new exports as you create quiz files for each section.
+ *
+ * Quiz Structure:
+ * - Each section has 60 questions (20 easy, 20 medium, 20 hard)
+ * - Each chapter has 20 hard questions covering all sections
  *
  * Usage in section components:
- *   import { section01Questions } from '@/data/quizzes';
- *   <SectionQuiz sectionId={1} questions={section01Questions} />
+ *   import { section01Quiz } from '@/data/quizzes';
+ *   <SectionQuiz sectionId={1} questions={section01Quiz} />
  */
 
 export type { QuizQuestion, SectionQuestions } from './types';
 
 // =============================================================================
 // SECTION QUIZ EXPORTS - REAL ANALYSIS COURSE
-// Add new section exports here as you create them
+// Each section quiz has { easy: [...], medium: [...], hard: [...] } structure
 // =============================================================================
 
 // Part 1: Foundations of Analysis
-export { section01Quiz } from './section01'; // Real Number System (by difficulty)
-export { section02Questions } from './chapter01'; // Mathematical Induction
-export { section03Questions } from './chapter01'; // Finite and Infinite Sets
-export { section04Questions } from './chapter01'; // Functions and Relations
+export { section01Quiz } from './section01'; // Real Number System
+export { section02Quiz } from './section02'; // Mathematical Induction
+export { section03Quiz } from './section03'; // Finite and Infinite Sets
+export { section04Quiz } from './section04'; // Functions and Relations
 
 // Part 2: Sequences and Series
-export { section05Questions } from './chapter02'; // Sequences and Limits
-export { section06Questions } from './chapter02'; // Infinite Series
-export { section07Questions } from './chapter02'; // Convergence Tests
-export { section08Questions } from './chapter02'; // Power Series
+export { section05Quiz } from './section05'; // Sequences and Limits
+export { section06Quiz } from './section06'; // Infinite Series
+export { section07Quiz } from './section07'; // Convergence Tests
+export { section08Quiz } from './section08'; // Power Series
 
 // Part 3: Continuity and Differentiation
-export { section09Questions } from './chapter03'; // Limits and Continuity
-export { section10Questions } from './chapter03'; // Continuous Functions
-export { section11Questions } from './chapter03'; // Differentiation
-export { section12Questions } from './chapter03'; // Derivative Applications
+export { section09Quiz } from './section09'; // Limits and Continuity
+export { section10Quiz } from './section10'; // Continuous Functions
+export { section11Quiz } from './section11'; // Differentiation
+export { section12Quiz } from './section12'; // Derivative Applications
 
 // Part 4: Integration and Advanced Topics
-export { section13Questions } from './chapter04'; // Riemann Integral
-export { section14Questions } from './chapter04'; // Fundamental Theorem
-export { section15Questions } from './chapter04'; // Sequences of Functions
+export { section13Quiz } from './section13'; // Riemann Integral
+export { section14Quiz } from './section14'; // Fundamental Theorem
+export { section15Quiz } from './section15'; // Sequences of Functions
+
+// =============================================================================
+// CHAPTER QUIZ EXPORTS
+// Each chapter quiz has 20 hard questions covering all sections in the chapter
+// =============================================================================
+
+export { chapter01Quiz } from './chapter01'; // Foundations of Analysis
+export { chapter02Quiz } from './chapter02'; // Sequences and Series
+export { chapter03Quiz } from './chapter03'; // Continuity and Differentiation
+export { chapter04Quiz } from './chapter04'; // Integration and Advanced Topics

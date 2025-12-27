@@ -1,175 +1,296 @@
-// Chapter 1: Foundations of Analysis
-// Based on Kenneth A. Ross - Elementary Analysis
 import type { QuizQuestion } from './types';
 
-// Section 1: The Real Number System
-export const section01Questions: QuizQuestion[] = [
+/**
+ * Chapter 1: Foundations of Analysis
+ * 20 Hard questions covering Sections 1-4:
+ * - Section 1: The Real Number System
+ * - Section 2: Mathematical Induction
+ * - Section 3: Finite and Infinite Sets
+ * - Section 4: Functions and Relations
+ */
+export const chapter01Quiz: QuizQuestion[] = [
+  // Section 1: The Real Number System
   {
-    id: 'ra-s01-q1',
-    question: 'Which of the following is NOT a property of the real numbers?',
+    id: 'ch01-h01',
+    type: 'multiple-choice',
+    question: 'The completeness axiom distinguishes $\\mathbb{R}$ from $\\mathbb{Q}$ because:',
     options: [
-      'Completeness (least upper bound property)',
-      'Archimedean property',
-      'Every Cauchy sequence converges',
-      'The rationals are dense in the reals'
-    ],
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'The rationals are dense in the reals, but this is a property of the reals, not something that is NOT a property. All options listed are actually properties of the real numbers.'
-  },
-  {
-    id: 'ra-s01-q2',
-    question: 'The least upper bound property states that:',
-    options: [
-      'Every non-empty set of real numbers has a maximum',
-      'Every non-empty set of real numbers bounded above has a supremum',
-      'Every Cauchy sequence converges to a real number',
-      'The reals are uncountably infinite'
-    ],
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The least upper bound property (completeness) states that every non-empty set of real numbers that is bounded above has a least upper bound (supremum).'
-  },
-  {
-    id: 'ra-s01-q3',
-    question: 'Which of these sets has the Archimedean property?',
-    options: [
-      'The natural numbers',
-      'The rational numbers',
-      'The real numbers',
-      'All of the above'
-    ],
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'The Archimedean property holds for the natural numbers, rationals, and reals. It states that for any two positive numbers a and b, there exists a natural number n such that na > b.'
-  }
-];
-
-// Section 2: Mathematical Induction
-export const section02Questions: QuizQuestion[] = [
-  {
-    id: 'ra-s02-q1',
-    question: 'Use mathematical induction to prove that the sum of the first n odd numbers equals n². What is the inductive hypothesis?',
-    options: [
-      'The sum of the first k odd numbers equals k²',
-      'The sum of the first n odd numbers equals n²',
-      'The nth odd number is 2n-1',
-      'The sum of the first n natural numbers equals n(n+1)/2'
+      '$\\mathbb{Q}$ has gaps where suprema should exist',
+      '$\\mathbb{Q}$ is finite',
+      '$\\mathbb{Q}$ is not ordered',
+      '$\\mathbb{Q}$ has no upper bounds'
     ],
     correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'In mathematical induction, we assume the statement holds for some arbitrary k (the inductive hypothesis), then prove it holds for k+1.'
+    difficulty: 'hard',
+    explanation: 'E.g., $\\{x \\in \\mathbb{Q} : x^2 < 2\\}$ has no supremum in $\\mathbb{Q}$; $\\sqrt{2}$ fills this gap in $\\mathbb{R}$.'
   },
   {
-    id: 'ra-s02-q2',
-    question: 'Which of these statements about mathematical induction is correct?',
+    id: 'ch01-h02',
+    type: 'multiple-choice',
+    question: 'The Archimedean property is equivalent to:',
     options: [
-      'It can only be used to prove statements about natural numbers',
-      'It requires proving the statement for infinitely many cases',
-      'It consists of a base case and an inductive step',
-      'It can only prove theorems, not identities'
+      '$\\mathbb{N}$ being unbounded in $\\mathbb{R}$',
+      'Every Cauchy sequence converging',
+      'The existence of $\\sqrt{2}$',
+      'The field axioms'
     ],
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Mathematical induction consists of two steps: proving the base case (usually n=1) and proving that if the statement holds for k, it holds for k+1.'
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Archimedean: for all $x \\in \\mathbb{R}$, there exists $n \\in \\mathbb{N}$ with $n > x$.'
   },
   {
-    id: 'ra-s02-q3',
-    question: 'Prove by induction: 1 + 3 + 5 + ... + (2n-1) = n². For the inductive step, the sum becomes:',
+    id: 'ch01-h03',
+    type: 'multiple-choice',
+    question: 'Dedekind cuts construct $\\mathbb{R}$ by:',
     options: [
-      'k² + (2(k+1)-1)',
-      'k² + 2k + 1',
-      'k² + 2(k+1) + 1',
-      '(k+1)²'
+      'Taking limits of sequences',
+      'Partitioning $\\mathbb{Q}$ into sets $(A, B)$ where every $a \\in A$ is less than every $b \\in B$',
+      'Adding $\\sqrt{2}$ to $\\mathbb{Q}$',
+      'Using infinite decimals'
     ],
     correctIndex: 1,
     difficulty: 'hard',
-    explanation: 'If the sum of first k odd numbers is k², then adding the next odd number (2(k+1)-1 = 2k+1) gives k² + 2k + 1 = (k+1)².'
-  }
-];
-
-// Section 3: Finite and Infinite Sets
-export const section03Questions: QuizQuestion[] = [
-  {
-    id: 'ra-s03-q1',
-    question: 'Which of these sets has the same cardinality as the natural numbers?',
-    options: [
-      'The integers',
-      'The rationals',
-      'The reals',
-      'The natural numbers themselves'
-    ],
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The natural numbers ℕ = {1, 2, 3, ...} have cardinality ℵ₀. The integers ℤ and rationals ℚ also have cardinality ℵ₀, but the question asks for the same cardinality as the naturals, which is themselves.'
+    explanation: 'Dedekind cuts: each real is a partition of rationals into lower and upper sets.'
   },
   {
-    id: 'ra-s03-q2',
-    question: 'Cantor\'s diagonal argument shows that:',
+    id: 'ch01-h04',
+    type: 'multiple-choice',
+    question: 'Cauchy\'s construction of $\\mathbb{R}$ uses:',
     options: [
-      'The rationals are countable',
-      'The reals are uncountable',
-      'The natural numbers are infinite',
-      'Every infinite set has a countable subset'
+      'Dedekind cuts',
+      'Equivalence classes of Cauchy sequences in $\\mathbb{Q}$',
+      'Infinite decimals',
+      'Continued fractions'
     ],
     correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Cantor\'s diagonal argument proves that the real numbers are uncountably infinite by constructing a real number not in any countable list of reals.'
+    difficulty: 'hard',
+    explanation: 'Cauchy: $\\mathbb{R}$ = equivalence classes of Cauchy sequences under the relation $(a_n) \\sim (b_n)$ iff $a_n - b_n \\to 0$.'
   },
   {
-    id: 'ra-s03-q3',
-    question: 'The cardinality of the continuum is:',
+    id: 'ch01-h05',
+    type: 'multiple-choice',
+    question: 'The infimum of a non-empty set $S$ bounded below is characterized by:',
     options: [
-      'ℵ₀ (aleph null)',
-      '2^ℵ₀',
-      'ℵ₁',
-      'Finite'
+      '$\\inf S \\in S$ always',
+      '$\\inf S$ is a lower bound, and for any $\\varepsilon > 0$, there exists $s \\in S$ with $s < \\inf S + \\varepsilon$',
+      '$\\inf S = -\\sup S$',
+      '$\\inf S$ is the smallest element of $S$'
     ],
     correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'The cardinality of the real numbers (the continuum) is 2^ℵ₀, which is strictly greater than ℵ₀ (the cardinality of the natural numbers).'
-  }
-];
-
-// Section 4: Functions and Relations
-export const section04Questions: QuizQuestion[] = [
+    difficulty: 'hard',
+    explanation: 'Infimum is the greatest lower bound: a lower bound that is $\\varepsilon$-close to $S$ for any $\\varepsilon > 0$.'
+  },
+  // Section 2: Mathematical Induction
   {
-    id: 'ra-s04-q1',
-    question: 'A function f: A → B is injective if:',
+    id: 'ch01-h06',
+    type: 'multiple-choice',
+    question: 'Strong induction differs from weak induction in that:',
     options: [
-      'f(a) = f(b) implies a = b for all a,b in A',
-      'For every b in B, there exists a in A such that f(a) = b',
-      'Both injective and surjective',
-      'Defined for all elements in A'
+      'It has no base case',
+      'The inductive hypothesis assumes $P(k)$ for all $k < n$, not just $P(n-1)$',
+      'It only works for even numbers',
+      'It requires two base cases'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Strong induction: assume $P(1), P(2), \\ldots, P(n-1)$ to prove $P(n)$.'
+  },
+  {
+    id: 'ch01-h07',
+    type: 'multiple-choice',
+    question: 'The Well-Ordering Principle states:',
+    options: [
+      'Every set of reals has a minimum',
+      'Every non-empty subset of $\\mathbb{N}$ has a least element',
+      '$\\mathbb{N}$ is bounded',
+      'Every sequence is monotonic'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Well-ordering: every non-empty subset of natural numbers has a minimum.'
+  },
+  {
+    id: 'ch01-h08',
+    type: 'multiple-choice',
+    question: 'The Well-Ordering Principle is equivalent to:',
+    options: [
+      'The Archimedean property only',
+      'Mathematical induction (both weak and strong)',
+      'The completeness axiom',
+      'The existence of rationals'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Well-ordering and mathematical induction are logically equivalent over the Peano axioms.'
+  },
+  {
+    id: 'ch01-h09',
+    type: 'multiple-choice',
+    question: 'To prove $n! > 2^n$ for $n \\geq 4$ by induction, the inductive step shows:',
+    options: [
+      '$(n+1)! = (n+1) \\cdot n! > (n+1) \\cdot 2^n > 2 \\cdot 2^n = 2^{n+1}$ for $n \\geq 4$',
+      '$n! = 2^n$',
+      'The statement is false',
+      'No induction is needed'
     ],
     correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'A function is injective (one-to-one) if different elements in the domain map to different elements in the codomain.'
+    difficulty: 'hard',
+    explanation: 'Key: $(n+1) > 2$ for $n \\geq 4$, so $(n+1) \\cdot 2^n > 2^{n+1}$.'
   },
   {
-    id: 'ra-s04-q2',
-    question: 'The composition of two functions f and g, denoted g ∘ f, is defined as:',
+    id: 'ch01-h10',
+    type: 'multiple-choice',
+    question: 'Structural induction generalizes mathematical induction to:',
     options: [
-      '(g ∘ f)(x) = f(g(x))',
-      '(g ∘ f)(x) = g(f(x))',
-      '(g ∘ f)(x) = f(x) + g(x)',
-      '(g ∘ f)(x) = f(x) · g(x)'
+      'Real numbers',
+      'Recursively defined structures (trees, formulas, etc.)',
+      'Continuous functions',
+      'Matrices'
     ],
     correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Function composition g ∘ f means "g after f", so (g ∘ f)(x) = g(f(x)).'
+    difficulty: 'hard',
+    explanation: 'Structural induction proves properties of recursively defined objects.'
+  },
+  // Section 3: Finite and Infinite Sets
+  {
+    id: 'ch01-h11',
+    type: 'multiple-choice',
+    question: 'Cantor\'s theorem states that for any set $A$:',
+    options: [
+      '$|A| = |\\mathcal{P}(A)|$',
+      '$|A| < |\\mathcal{P}(A)|$ (power set has strictly greater cardinality)',
+      '$A$ is countable',
+      '$A$ is finite'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Cantor: no surjection from $A$ to $\\mathcal{P}(A)$ exists (diagonal argument).'
   },
   {
-    id: 'ra-s04-q3',
-    question: 'A function has an inverse if and only if it is:',
+    id: 'ch01-h12',
+    type: 'multiple-choice',
+    question: 'The Schröder-Bernstein theorem states:',
     options: [
-      'Defined on the reals',
-      'Continuous',
-      'Bijective (both injective and surjective)',
-      'Differentiable'
+      'If $|A| \\leq |B|$ and $|B| \\leq |A|$, then $|A| = |B|$',
+      'Every infinite set is countable',
+      '$\\mathbb{R}$ is countable',
+      'All infinities are equal'
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Schröder-Bernstein: mutual injections imply bijection.'
+  },
+  {
+    id: 'ch01-h13',
+    type: 'multiple-choice',
+    question: 'The continuum hypothesis (CH) states:',
+    options: [
+      '$|\\mathbb{R}| = |\\mathbb{N}|$',
+      'There is no cardinality strictly between $|\\mathbb{N}|$ and $|\\mathbb{R}|$',
+      '$\\mathbb{R}$ is countable',
+      '$|\\mathbb{R}| = 2$'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'CH: no set has cardinality strictly between $\\aleph_0$ and $2^{\\aleph_0}$.'
+  },
+  {
+    id: 'ch01-h14',
+    type: 'multiple-choice',
+    question: 'The set of all finite subsets of $\\mathbb{N}$ is:',
+    options: [
+      'Uncountable',
+      'Countable',
+      'Finite',
+      'Empty'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Finite subsets of $\\mathbb{N}$: countable union of finite sets, hence countable.'
+  },
+  {
+    id: 'ch01-h15',
+    type: 'multiple-choice',
+    question: 'The cardinality of $\\mathbb{R}^n$ for any $n \\geq 1$ is:',
+    options: [
+      '$n \\cdot |\\mathbb{R}|$',
+      '$|\\mathbb{R}|$ (the continuum)',
+      '$|\\mathbb{N}|$',
+      'Depends on $n$'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$|\\mathbb{R}^n| = |\\mathbb{R}|^n = (2^{\\aleph_0})^n = 2^{\\aleph_0} = |\\mathbb{R}|$.'
+  },
+  // Section 4: Functions and Relations
+  {
+    id: 'ch01-h16',
+    type: 'multiple-choice',
+    question: 'A function $f: A \\to B$ is a bijection iff:',
+    options: [
+      '$f$ is injective',
+      '$f$ is surjective',
+      '$f$ has a two-sided inverse',
+      '$A = B$'
     ],
     correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'A function has an inverse if and only if it is bijective - both injective and surjective. This ensures the inverse is also a function.'
+    difficulty: 'hard',
+    explanation: 'Bijection $\\Leftrightarrow$ exists $g: B \\to A$ with $g \\circ f = \\text{id}_A$ and $f \\circ g = \\text{id}_B$.'
+  },
+  {
+    id: 'ch01-h17',
+    type: 'multiple-choice',
+    question: 'An equivalence relation must be:',
+    options: [
+      'Reflexive only',
+      'Symmetric only',
+      'Reflexive, symmetric, and transitive',
+      'A function'
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Equivalence relation: reflexive ($a \\sim a$), symmetric ($a \\sim b \\Rightarrow b \\sim a$), transitive.'
+  },
+  {
+    id: 'ch01-h18',
+    type: 'multiple-choice',
+    question: 'The kernel of a function $f: A \\to B$ is the equivalence relation:',
+    options: [
+      '$\\ker f = \\{(a, b) : f(a) = f(b)\\}$',
+      '$\\ker f = f^{-1}(0)$',
+      '$\\ker f = \\{f(a) : a \\in A\\}$',
+      '$\\ker f = A$'
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Kernel: pairs with same image; equivalence classes are fibers $f^{-1}(\\{y\\})$.'
+  },
+  {
+    id: 'ch01-h19',
+    type: 'multiple-choice',
+    question: 'If $f: A \\to B$ is injective and $g: B \\to C$ is injective, then $g \\circ f$:',
+    options: [
+      'May not be injective',
+      'Is injective',
+      'Is surjective',
+      'Is not defined'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Composition of injections: $g(f(a_1)) = g(f(a_2)) \\Rightarrow f(a_1) = f(a_2) \\Rightarrow a_1 = a_2$.'
+  },
+  {
+    id: 'ch01-h20',
+    type: 'multiple-choice',
+    question: 'The Axiom of Choice is equivalent to:',
+    options: [
+      'The Well-Ordering Theorem',
+      'The completeness of $\\mathbb{R}$',
+      'Mathematical induction',
+      'The Archimedean property'
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'AC, Well-Ordering, and Zorn\'s Lemma are equivalent in ZF set theory.'
   }
 ];

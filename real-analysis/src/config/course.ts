@@ -36,8 +36,9 @@ export const COURSE_ICON = '📐';
 
 /**
  * Base path for routing (must match vite.config.ts)
+ * Use '/' for standalone Vercel deployment
  */
-export const BASE_PATH = `/math_academy/${COURSE_ID}/`;
+export const BASE_PATH = '/';
 
 /**
  * Hub URL - main Magic Internet Math landing page
@@ -50,9 +51,9 @@ export const HUB_URL = 'https://mathacademy-cyan.vercel.app';
 export const LINKS = {
   hub: HUB_URL,
   home: '/',
-  leaderboard: `${BASE_PATH}#/leaderboard`,
-  theorems: `${BASE_PATH}#/theorems`,
-  interactive: `${BASE_PATH}#/interactive`,
+  leaderboard: '/leaderboard',
+  theorems: '/theorems',
+  interactive: '/interactive',
 } as const;
 
 /**
