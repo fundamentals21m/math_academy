@@ -26,7 +26,16 @@ export default function Section06() {
         </MathBlock>
       </Definition>
 
-      <Theorem title="Divergence Test">
+      <Theorem
+        title="Divergence Test"
+        proof={
+          <>
+            <p className="mb-3">Suppose Σaₙ = S converges. Let sₙ = a₁ + a₂ + ... + aₙ be the partial sums.</p>
+            <p className="mb-3">Then sₙ → S and sₙ₋₁ → S as n → ∞.</p>
+            <p className="mb-3">Since aₙ = sₙ - sₙ₋₁, we have aₙ → S - S = 0.</p>
+          </>
+        }
+      >
         <p>
           If <Math>{"\\sum a_n"}</Math> converges, then <Math>{"\\lim_{n \\to \\infty} a_n = 0"}</Math>.
         </p>
@@ -51,7 +60,16 @@ export default function Section06() {
 
       <h3>Geometric Series</h3>
 
-      <Theorem title="Geometric Series">
+      <Theorem
+        title="Geometric Series"
+        proof={
+          <>
+            <p className="mb-3">The partial sum is sₙ = 1 + r + r² + ... + rⁿ = (1 - rⁿ⁺¹)/(1 - r) for r ≠ 1.</p>
+            <p className="mb-3">If |r| &lt; 1, then rⁿ⁺¹ → 0 as n → ∞, so sₙ → 1/(1-r).</p>
+            <p className="mb-3">If |r| ≥ 1, then rⁿ does not converge to 0, so by the divergence test, the series diverges.</p>
+          </>
+        }
+      >
         <p>
           For <Math>{"|r| < 1"}</Math>, the geometric series converges:
         </p>
@@ -63,7 +81,18 @@ export default function Section06() {
 
       <h3>Positive Series</h3>
 
-      <Theorem title="Comparison Test">
+      <Theorem
+        title="Comparison Test"
+        proof={
+          <>
+            <p className="mb-3">Let Aₙ = Σᵢ₌₁ⁿ aᵢ and Bₙ = Σᵢ₌₁ⁿ bᵢ be partial sums.</p>
+            <p className="mb-3">Since aᵢ ≤ bᵢ for all i, we have Aₙ ≤ Bₙ for all n.</p>
+            <p className="mb-3">If Σbₙ converges to B, then Aₙ ≤ Bₙ ≤ B, so (Aₙ) is bounded above.</p>
+            <p className="mb-3">Since (Aₙ) is increasing (aₙ ≥ 0) and bounded, by the Monotone Convergence Theorem, Σaₙ converges.</p>
+            <p className="mb-3">The second statement follows by contrapositive.</p>
+          </>
+        }
+      >
         <p>
           Let <Math>{"0 \\leq a_n \\leq b_n"}</Math> for all <Math>{"n"}</Math>.
         </p>
@@ -73,7 +102,18 @@ export default function Section06() {
         </ul>
       </Theorem>
 
-      <Theorem title="Integral Test">
+      <Theorem
+        title="Integral Test"
+        proof={
+          <>
+            <p className="mb-3">Since f is decreasing, for x ∈ [n, n+1]: f(n+1) ≤ f(x) ≤ f(n).</p>
+            <p className="mb-3">Integrating: f(n+1) ≤ ∫ₙⁿ⁺¹ f(x)dx ≤ f(n).</p>
+            <p className="mb-3">Summing from n=1 to N-1: Σₙ₌₂ᴺ f(n) ≤ ∫₁ᴺ f(x)dx ≤ Σₙ₌₁ᴺ⁻¹ f(n).</p>
+            <p className="mb-3">If the integral converges, the partial sums are bounded, so the series converges.</p>
+            <p className="mb-3">If the series converges, the integral is bounded, so it converges.</p>
+          </>
+        }
+      >
         <p>
           Let <Math>{"f"}</Math> be positive, continuous, and decreasing on <Math>{"[1, \\infty)"}</Math>. Then:
         </p>

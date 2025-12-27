@@ -57,7 +57,16 @@ export default function Section04() {
         <p>Bijective functions establish a one-to-one correspondence between domain and codomain.</p>
       </Definition>
 
-      <Theorem title="Inverse Function Theorem">
+      <Theorem
+        title="Inverse Function Theorem"
+        proof={
+          <>
+            <p className="mb-3"><strong>(⇒)</strong> Suppose f⁻¹ exists. For injectivity: if f(a₁) = f(a₂), apply f⁻¹ to get a₁ = a₂. For surjectivity: given b ∈ B, let a = f⁻¹(b), then f(a) = b.</p>
+            <p className="mb-3"><strong>(⇐)</strong> Suppose f is bijective. For each b ∈ B, surjectivity gives some a with f(a) = b; injectivity ensures this a is unique. Define f⁻¹(b) = a.</p>
+            <p className="mb-3">Then f⁻¹(f(a)) = a by construction, and f(f⁻¹(b)) = f(a) = b. So f⁻¹ is a well-defined inverse.</p>
+          </>
+        }
+      >
         <p>A function f: A → B has an inverse f⁻¹: B → A if and only if f is bijective.</p>
         <p>The inverse satisfies: f⁻¹(f(a)) = a for all a ∈ A, and f(f⁻¹(b)) = b for all b ∈ B.</p>
       </Theorem>
@@ -71,7 +80,16 @@ export default function Section04() {
         </MathBlock>
       </Definition>
 
-      <Theorem title="Composition Properties">
+      <Theorem
+        title="Composition Properties"
+        proof={
+          <>
+            <p className="mb-3"><strong>Associativity:</strong> For any a ∈ A: ((h ∘ g) ∘ f)(a) = (h ∘ g)(f(a)) = h(g(f(a))) = h((g ∘ f)(a)) = (h ∘ (g ∘ f))(a).</p>
+            <p className="mb-3"><strong>Identity:</strong> (f ∘ id_A)(a) = f(id_A(a)) = f(a), so f ∘ id_A = f. Similarly for id_B ∘ f.</p>
+            <p className="mb-3"><strong>Inverses:</strong> (f⁻¹ ∘ f)(a) = f⁻¹(f(a)) = a = id_A(a). And (f ∘ f⁻¹)(b) = f(f⁻¹(b)) = b = id_B(b).</p>
+          </>
+        }
+      >
         <p>Function composition is associative: (h ∘ g) ∘ f = h ∘ (g ∘ f)</p>
         <p>Identity functions: f ∘ id_A = f and id_B ∘ f = f</p>
         <p>Inverses: If f is bijective, then (f⁻¹) ∘ f = id_A and f ∘ (f⁻¹) = id_B</p>
@@ -99,7 +117,18 @@ export default function Section04() {
         <p>"Same absolute value" on ℝ: not transitive!</p>
       </Example>
 
-      <Theorem title="Equivalence Classes">
+      <Theorem
+        title="Equivalence Classes"
+        proof={
+          <>
+            <p className="mb-3"><strong>Non-empty:</strong> By reflexivity, a ~ a, so a ∈ [a]. Thus each equivalence class is non-empty.</p>
+            <p className="mb-3"><strong>Covering:</strong> Every element a belongs to [a], so A = ∪ₐ[a].</p>
+            <p className="mb-3"><strong>Disjoint or equal:</strong> Suppose [a] ∩ [b] ≠ ∅. Let c ∈ [a] ∩ [b], so c ~ a and c ~ b.</p>
+            <p className="mb-3">For any x ∈ [a]: x ~ a, and a ~ c (by symmetry), and c ~ b. By transitivity, x ~ b, so x ∈ [b].</p>
+            <p className="mb-3">Similarly [b] ⊆ [a]. Therefore [a] = [b]. So distinct classes are disjoint.</p>
+          </>
+        }
+      >
         <p>Every equivalence relation ~ partitions A into disjoint <strong>equivalence classes</strong>.</p>
         <p>The equivalence class of a is [a] = &#123;x ∈ A : x ~ a&#125;</p>
       </Theorem>

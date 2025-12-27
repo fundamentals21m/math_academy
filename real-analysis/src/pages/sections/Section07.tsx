@@ -18,7 +18,17 @@ export default function Section07() {
 
       <h3>Ratio and Root Tests</h3>
 
-      <Theorem title="Ratio Test">
+      <Theorem
+        title="Ratio Test"
+        proof={
+          <>
+            <p className="mb-3">If L &lt; 1, choose r with L &lt; r &lt; 1. For large n: |aₙ₊₁/aₙ| &lt; r.</p>
+            <p className="mb-3">Then |aₙ| &lt; |aₙ| · rᴺ⁻ⁿ for n ≥ N, so Σ|aₙ| converges by comparison with geometric series Σrⁿ.</p>
+            <p className="mb-3">If L &gt; 1, then |aₙ₊₁| &gt; |aₙ| for large n, so aₙ ↛ 0, and the series diverges by the divergence test.</p>
+            <p className="mb-3">When L = 1: both Σ1/n (diverges) and Σ1/n² (converges) have ratio limit 1.</p>
+          </>
+        }
+      >
         <p>
           For a series <Math>\sum a_n</Math> with <Math>a_n \neq 0</Math>, let:
         </p>
@@ -32,7 +42,17 @@ export default function Section07() {
         </ul>
       </Theorem>
 
-      <Theorem title="Root Test">
+      <Theorem
+        title="Root Test"
+        proof={
+          <>
+            <p className="mb-3">If L &lt; 1, choose r with L &lt; r &lt; 1. Then |aₙ|^(1/n) &lt; r for all large n, so |aₙ| &lt; rⁿ.</p>
+            <p className="mb-3">By comparison with Σrⁿ (geometric, converges since r &lt; 1), Σ|aₙ| converges.</p>
+            <p className="mb-3">If L &gt; 1, then |aₙ|^(1/n) &gt; 1 infinitely often, so |aₙ| &gt; 1 infinitely often. Thus aₙ ↛ 0 and series diverges.</p>
+            <p className="mb-3">The root test uses limsup, making it slightly more powerful than the ratio test in some cases.</p>
+          </>
+        }
+      >
         <p>
           For a series <Math>\sum a_n</Math>, let:
         </p>
@@ -54,7 +74,18 @@ export default function Section07() {
 
       <h3>Alternating Series</h3>
 
-      <Theorem title="Alternating Series Test (Leibniz)">
+      <Theorem
+        title="Alternating Series Test (Leibniz)"
+        proof={
+          <>
+            <p className="mb-3">Consider partial sums sₙ = a₁ - a₂ + a₃ - ... ± aₙ.</p>
+            <p className="mb-3">The even partial sums s₂ₙ = (a₁ - a₂) + (a₃ - a₄) + ... are increasing (each parenthesis ≥ 0).</p>
+            <p className="mb-3">Also s₂ₙ = a₁ - (a₂ - a₃) - (a₄ - a₅) - ... ≤ a₁, so (s₂ₙ) is bounded above.</p>
+            <p className="mb-3">By Monotone Convergence, s₂ₙ → S for some S. Since s₂ₙ₊₁ = s₂ₙ + a₂ₙ₊₁ and a₂ₙ₊₁ → 0, s₂ₙ₊₁ → S also.</p>
+            <p className="mb-3">Therefore sₙ → S.</p>
+          </>
+        }
+      >
         <p>
           If <Math>(a_n)</Math> is a decreasing sequence with <Math>{"a_n \\to 0"}</Math>, then the
           alternating series converges:
@@ -81,7 +112,16 @@ export default function Section07() {
         </p>
       </Definition>
 
-      <Theorem title="Absolute Convergence Implies Convergence">
+      <Theorem
+        title="Absolute Convergence Implies Convergence"
+        proof={
+          <>
+            <p className="mb-3">Define aₙ⁺ = max(aₙ, 0) and aₙ⁻ = max(-aₙ, 0). Then aₙ = aₙ⁺ - aₙ⁻ and |aₙ| = aₙ⁺ + aₙ⁻.</p>
+            <p className="mb-3">Since 0 ≤ aₙ⁺ ≤ |aₙ| and 0 ≤ aₙ⁻ ≤ |aₙ|, by comparison both Σaₙ⁺ and Σaₙ⁻ converge.</p>
+            <p className="mb-3">Therefore Σaₙ = Σaₙ⁺ - Σaₙ⁻ converges by algebra of limits for series.</p>
+          </>
+        }
+      >
         <p>
           If <Math>\sum |a_n|</Math> converges, then <Math>\sum a_n</Math> converges.
         </p>

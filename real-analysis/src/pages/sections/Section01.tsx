@@ -62,7 +62,19 @@ export default function Section01() {
         </ul>
       </div>
 
-      <Theorem title="Uniqueness of Identities and Inverses">
+      <Theorem
+        title="Uniqueness of Identities and Inverses"
+        proof={
+          <>
+            <p className="mb-3"><strong>Uniqueness of additive identity:</strong> Suppose 0 and 0' are both additive identities. Then:</p>
+            <p className="ml-4 mb-2">0' = 0' + 0 = 0 + 0' = 0</p>
+            <p className="mb-3">The first equality uses that 0 is an identity; the second uses commutativity; the third uses that 0' is an identity.</p>
+            <p className="mb-3"><strong>Uniqueness of additive inverse:</strong> Suppose a + b = 0 and a + c = 0. Then:</p>
+            <p className="ml-4 mb-2">b = b + 0 = b + (a + c) = (b + a) + c = (a + b) + c = 0 + c = c</p>
+            <p className="mb-3"><strong>Uniqueness of multiplicative identity and inverse:</strong> Similar arguments apply using multiplication.</p>
+          </>
+        }
+      >
         <p>The additive identity 0 and multiplicative identity 1 are unique.</p>
         <p>Additive inverses are unique: if a + b = 0, then b = -a.</p>
         <p>Multiplicative inverses are unique: if a · b = 1, then b = a⁻¹.</p>

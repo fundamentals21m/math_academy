@@ -29,7 +29,18 @@ export default function Section09() {
         meaning we never evaluate at <Math>c</Math> itself. The limit depends only on behavior near <Math>c</Math>.
       </Callout>
 
-      <Theorem title="Sequential Characterization">
+      <Theorem
+        title="Sequential Characterization"
+        proof={
+          <>
+            <p className="mb-3"><strong>(⇒)</strong> Suppose lim(x→c) f(x) = L. Let xₙ → c with xₙ ≠ c.</p>
+            <p className="mb-3">Given ε &gt; 0, ∃δ: 0 &lt; |x - c| &lt; δ ⇒ |f(x) - L| &lt; ε.</p>
+            <p className="mb-3">Since xₙ → c, ∃N: n &gt; N ⇒ |xₙ - c| &lt; δ. Also xₙ ≠ c, so |f(xₙ) - L| &lt; ε for n &gt; N.</p>
+            <p className="mb-3"><strong>(⇐)</strong> Contrapositive: if lim ≠ L, ∃ε &gt; 0 such that for all δ, ∃x with 0 &lt; |x - c| &lt; δ but |f(x) - L| ≥ ε.</p>
+            <p className="mb-3">Taking δ = 1/n, get sequence xₙ → c but f(xₙ) ↛ L. Contradiction!</p>
+          </>
+        }
+      >
         <p>
           <Math>{"\\lim_{x \\to c} f(x) = L"}</Math> if and only if for every sequence <Math>(x_n)</Math>
           with <Math>{"x_n \\to c"}</Math> and <Math>x_n \neq c</Math>, we have <Math>{"f(x_n) \\to L"}</Math>.
@@ -69,7 +80,18 @@ export default function Section09() {
         This is crucial for exchanging limits with integrals.
       </Callout>
 
-      <Theorem title="Heine-Cantor Theorem">
+      <Theorem
+        title="Heine-Cantor Theorem"
+        proof={
+          <>
+            <p className="mb-3">Let f be continuous on compact K. Suppose f is not uniformly continuous.</p>
+            <p className="mb-3">Then ∃ε &gt; 0 and sequences (xₙ), (yₙ) in K with |xₙ - yₙ| &lt; 1/n but |f(xₙ) - f(yₙ)| ≥ ε.</p>
+            <p className="mb-3">By compactness (Bolzano-Weierstrass), (xₙ) has a convergent subsequence xₙₖ → x ∈ K.</p>
+            <p className="mb-3">Then yₙₖ → x also (since |xₙₖ - yₙₖ| → 0).</p>
+            <p className="mb-3">By continuity at x: f(xₙₖ) → f(x) and f(yₙₖ) → f(x). But |f(xₙₖ) - f(yₙₖ)| ≥ ε. Contradiction!</p>
+          </>
+        }
+      >
         <p>
           A continuous function on a compact set is uniformly continuous.
         </p>

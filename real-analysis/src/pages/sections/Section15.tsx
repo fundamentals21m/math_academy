@@ -47,14 +47,36 @@ export default function Section15() {
 
       <h3>Preservation Theorems</h3>
 
-      <Theorem title="Uniform Limit of Continuous Functions">
+      <Theorem
+        title="Uniform Limit of Continuous Functions"
+        proof={
+          <>
+            <p className="mb-3">Fix c and ε &gt; 0. By uniform convergence, ∃N: |fₙ(x) - f(x)| &lt; ε/3 for all x.</p>
+            <p className="mb-3">Since fₙ is continuous at c, ∃δ: |x - c| &lt; δ ⇒ |fₙ(x) - fₙ(c)| &lt; ε/3.</p>
+            <p className="mb-3">For |x - c| &lt; δ:</p>
+            <p className="mb-3">|f(x) - f(c)| ≤ |f(x) - fₙ(x)| + |fₙ(x) - fₙ(c)| + |fₙ(c) - f(c)| &lt; ε/3 + ε/3 + ε/3 = ε.</p>
+            <p className="mb-3">So f is continuous at c. Since c was arbitrary, f is continuous on S.</p>
+          </>
+        }
+      >
         <p>
           If <Math>{"(f_n)"}</Math> are continuous and <Math>{"f_n \\to f"}</Math> uniformly, then <Math>{"f"}</Math>
           is continuous.
         </p>
       </Theorem>
 
-      <Theorem title="Integration of Uniform Limit">
+      <Theorem
+        title="Integration of Uniform Limit"
+        proof={
+          <>
+            <p className="mb-3">By uniform convergence, given ε &gt; 0, ∃N: |fₙ(x) - f(x)| &lt; ε/(b-a) for all x and n &gt; N.</p>
+            <p className="mb-3">Then: |∫ₐᵇ fₙ - ∫ₐᵇ f| = |∫ₐᵇ (fₙ - f)| ≤ ∫ₐᵇ |fₙ - f|.</p>
+            <p className="mb-3">≤ [ε/(b-a)] · (b-a) = ε for n &gt; N.</p>
+            <p className="mb-3">Therefore lim ∫ₐᵇ fₙ = ∫ₐᵇ f.</p>
+            <p className="mb-3">This justifies exchanging limit and integral under uniform convergence.</p>
+          </>
+        }
+      >
         <p>
           If <Math>{"f_n \\to f"}</Math> uniformly on <Math>{"[a, b]"}</Math>, then:
         </p>
@@ -63,7 +85,18 @@ export default function Section15() {
         </MathBlock>
       </Theorem>
 
-      <Theorem title="Differentiation of Limit">
+      <Theorem
+        title="Differentiation of Limit"
+        proof={
+          <>
+            <p className="mb-3">By FTC2: fₙ(x) - fₙ(c) = ∫ₓᶜ fₙ'(t) dt for each n.</p>
+            <p className="mb-3">Since fₙ' → g uniformly, by integration of uniform limits:</p>
+            <p className="mb-3">lim[fₙ(x) - fₙ(c)] = lim ∫ₓᶜ fₙ' = ∫ₓᶜ g.</p>
+            <p className="mb-3">The left side equals f(x) - f(c) (pointwise convergence of fₙ).</p>
+            <p className="mb-3">So f(x) - f(c) = ∫ₓᶜ g. By FTC1, f'(x) = g(x).</p>
+          </>
+        }
+      >
         <p>
           If <Math>{"f_n \\to f"}</Math> pointwise, <Math>{"f_n' \\to g"}</Math> uniformly, and each <Math>{"f_n"}</Math>
           is differentiable, then <Math>{"f' = g"}</Math>.
@@ -77,7 +110,18 @@ export default function Section15() {
 
       <h3>Weierstrass M-Test</h3>
 
-      <Theorem title="Weierstrass M-Test">
+      <Theorem
+        title="Weierstrass M-Test"
+        proof={
+          <>
+            <p className="mb-3"><strong>Absolute convergence:</strong> For each x, |fₙ(x)| ≤ Mₙ, so Σ|fₙ(x)| ≤ ΣMₙ &lt; ∞.</p>
+            <p className="mb-3"><strong>Uniform convergence:</strong> Let Sₙ(x) = Σₖ₌₁ⁿ fₖ(x) and S(x) = Σfₖ(x).</p>
+            <p className="mb-3">|S(x) - Sₙ(x)| = |Σₖ₌ₙ₊₁^∞ fₖ(x)| ≤ Σₖ₌ₙ₊₁^∞ |fₖ(x)| ≤ Σₖ₌ₙ₊₁^∞ Mₖ.</p>
+            <p className="mb-3">The tail Σₖ₌ₙ₊₁^∞ Mₖ → 0 as n → ∞ (since ΣMₙ converges), independent of x.</p>
+            <p className="mb-3">So supₓ |S(x) - Sₙ(x)| → 0, i.e., Sₙ → S uniformly.</p>
+          </>
+        }
+      >
         <p>
           If <Math>{"|f_n(x)| \\leq M_n"}</Math> for all <Math>{"x \\in S"}</Math> and <Math>{"\\sum M_n < \\infty"}</Math>,
           then <Math>{"\\sum f_n"}</Math> converges uniformly and absolutely on <Math>{"S"}</Math>.
