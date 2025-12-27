@@ -1,9 +1,10 @@
-import { useEffect, type ReactNode } from 'react';
+import { useState, useEffect, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getSectionById, getPartBySectionId, getAdjacentSections, getTotalSections, getSectionIndex } from '@/data/curriculum';
 import { FEATURES } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
+import { Header, Sidebar } from '@/components/layout';
 
 interface LessonLayoutProps {
   sectionId: number;
@@ -11,6 +12,7 @@ interface LessonLayoutProps {
 }
 
 export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const section = getSectionById(sectionId);
   const part = getPartBySectionId(sectionId);
   const { prev, next } = getAdjacentSections(sectionId);
@@ -45,6 +47,8 @@ export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
 
   return (
     <div className="min-h-screen bg-dark-950">
+      <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} sidebarOpen={sidebarOpen} />
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       {/* Progress bar */}
       <div className="fixed top-16 left-0 right-0 z-30 h-1 bg-dark-800 lg:left-72">
         <motion.div
