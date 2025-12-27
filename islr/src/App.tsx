@@ -28,12 +28,14 @@ const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentTyp
   // Chapter 2: Statistical Learning
   2: () => import('@/pages/sections/Section02'),
   3: () => import('@/pages/sections/Section03'),
-  // 4: () => import('@/pages/sections/Section04'), // Lab: Intro to R
-  // 5: () => import('@/pages/sections/Section05'), // Ch2 Exercises
+  4: () => import('@/pages/sections/Section04'), // Lab: Intro to R
+  5: () => import('@/pages/sections/Section05'), // Ch2 Exercises
   // Chapter 3: Linear Regression
   6: () => import('@/pages/sections/Section06'),
-  // 7: () => import('@/pages/sections/Section07'), // Multiple Linear Regression
-  // 8: () => import('@/pages/sections/Section08'), // Regression Considerations
+  7: () => import('@/pages/sections/Section07'), // Multiple Linear Regression
+  8: () => import('@/pages/sections/Section08'), // Regression Considerations
+  9: () => import('@/pages/sections/Section09'), // The Marketing Plan
+  10: () => import('@/pages/sections/Section10'), // Comparison with KNN
   // ... continue adding sections as they are implemented
 };
 
