@@ -1,29 +1,62 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
+import {
+  ErrorBoundary,
+  ErrorProvider,
+  ErrorDisplay,
+  LoadingSpinner,
+} from '@magic-internet-math/shared';
 import { AchievementToastContainer } from '@/components/gamification';
 import { FEATURES } from '@/config';
 
-// Pages
+// Eagerly load Home since it's the landing page
 import Home from '@/pages/Home';
-import Leaderboard from '@/pages/Leaderboard';
-import Theorems from '@/pages/Theorems';
-import InteractiveModules from '@/pages/InteractiveModules';
 
-// Section pages - import all sections here
-// Example: import Section00 from '@/pages/sections/Section00';
+// Lazy load other pages - they're only needed when navigating to them
+const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
+const Theorems = lazy(() => import('@/pages/Theorems'));
+const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 
-// Dynamic section loader for sections that exist
-// Add section components here as you create them:
-// Example:
-// const sectionComponents: Record<number, React.ComponentType> = {
-//   0: Section00,
-//   1: Section01,
-// };
+// Lazy load all section pages - this is the biggest win for bundle size
+// Each section is only loaded when the user navigates to it
+// Add more sections as they are created
+const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentType }>> = {
+  // Chapter 1: Introduction
+  1: () => import('@/pages/sections/Section01'),
+  // Chapter 2: Statistical Learning
+  2: () => import('@/pages/sections/Section02'),
+  3: () => import('@/pages/sections/Section03'),
+  // 4: () => import('@/pages/sections/Section04'), // Lab: Intro to R
+  // 5: () => import('@/pages/sections/Section05'), // Ch2 Exercises
+  // Chapter 3: Linear Regression
+  6: () => import('@/pages/sections/Section06'),
+  // 7: () => import('@/pages/sections/Section07'), // Multiple Linear Regression
+  // 8: () => import('@/pages/sections/Section08'), // Regression Considerations
+  // ... continue adding sections as they are implemented
+};
+
+// Create lazy components from loaders
+const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {};
+for (const [id, loader] of Object.entries(sectionLoaders)) {
+  sectionComponents[Number(id)] = lazy(loader);
+}
 
 function SectionRouter() {
-  // This component handles dynamic section routing
-  // It will be replaced with actual section components as you build them
+  const { id } = useParams<{ id: string }>();
+  const sectionId = parseInt(id || '0', 10);
+
+  const SectionComponent = sectionComponents[sectionId];
+
+  if (SectionComponent) {
+    return (
+      <Suspense fallback={<LoadingSpinner message="Loading section..." />}>
+        <SectionComponent />
+      </Suspense>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-dark-950 flex items-center justify-center">
       <div className="text-center">
@@ -41,18 +74,39 @@ function AppContent() {
         {/* Core routes */}
         <Route path="/" element={<Home />} />
 
-        {/* Feature-gated routes */}
+        {/* Feature-gated routes - lazy loaded */}
         {FEATURES.leaderboard && (
-          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route
+            path="/leaderboard"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading leaderboard..." />}>
+                <Leaderboard />
+              </Suspense>
+            }
+          />
         )}
         {FEATURES.theoremIndex && (
-          <Route path="/theorems" element={<Theorems />} />
+          <Route
+            path="/theorems"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading theorems..." />}>
+                <Theorems />
+              </Suspense>
+            }
+          />
         )}
         {FEATURES.interactiveModules && (
-          <Route path="/interactive" element={<InteractiveModules />} />
+          <Route
+            path="/interactive"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading modules..." />}>
+                <InteractiveModules />
+              </Suspense>
+            }
+          />
         )}
 
-        {/* Dynamic section routes */}
+        {/* Dynamic section routes - lazy loaded via SectionRouter */}
         <Route path="/section/:id" element={<SectionRouter />} />
 
         {/* Fallback */}
@@ -67,24 +121,29 @@ function AppContent() {
 
 export default function App() {
   return (
-    <HashRouter>
-      {FEATURES.nostrAuth ? (
-        <NostrAuthProvider>
-          {FEATURES.gamification ? (
+    <ErrorBoundary>
+      <ErrorProvider>
+        <HashRouter>
+          {FEATURES.nostrAuth ? (
+            <NostrAuthProvider>
+              {FEATURES.gamification ? (
+                <GamificationProvider>
+                  <AppContent />
+                </GamificationProvider>
+              ) : (
+                <AppContent />
+              )}
+            </NostrAuthProvider>
+          ) : FEATURES.gamification ? (
             <GamificationProvider>
               <AppContent />
             </GamificationProvider>
           ) : (
             <AppContent />
           )}
-        </NostrAuthProvider>
-      ) : FEATURES.gamification ? (
-        <GamificationProvider>
-          <AppContent />
-        </GamificationProvider>
-      ) : (
-        <AppContent />
-      )}
-    </HashRouter>
+        </HashRouter>
+        <ErrorDisplay />
+      </ErrorProvider>
+    </ErrorBoundary>
   );
 }
