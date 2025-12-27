@@ -1,6 +1,9 @@
 .DS_Store
 .claude/
 
+# Book PDF chunks (large files, not tracked)
+books/
+
 # Development source directories (deployed builds are in ba/ and aa/)
 basic-algebra/
 abstract-algebra/
