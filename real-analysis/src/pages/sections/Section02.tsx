@@ -16,7 +16,19 @@ export default function Section02() {
         that it holds for the smallest case, and that if it holds for one case, it holds for the next.
       </p>
 
-      <Theorem title="Principle of Mathematical Induction">
+      <Theorem
+        title="Principle of Mathematical Induction"
+        proof={
+          <>
+            <p className="mb-3">We prove this using the Well-Ordering Principle (which is equivalent).</p>
+            <p className="mb-3">Suppose P(1) is true and P(k) ⇒ P(k+1) for all k, but P(n) fails for some n.</p>
+            <p className="mb-3">Let S = &#123;n ∈ ℕ : P(n) is false&#125;. By assumption, S is non-empty.</p>
+            <p className="mb-3">By Well-Ordering, S has a least element m. Since P(1) is true, m &gt; 1.</p>
+            <p className="mb-3">Thus m - 1 ∈ ℕ and m - 1 ∉ S (since m is least), so P(m-1) is true.</p>
+            <p className="mb-3">By the inductive step, P(m) is true. Contradiction! So S is empty.</p>
+          </>
+        }
+      >
         <p>Let P(n) be a statement about the natural number n. If:</p>
         <ol className="list-decimal list-inside space-y-2 mt-4">
           <li><strong>Base Case:</strong> P(1) is true</li>
@@ -60,7 +72,19 @@ export default function Section02() {
         to prove P(m+1). This is called strong induction and is equivalent to regular induction.
       </Callout>
 
-      <Theorem title="Well-Ordering Principle">
+      <Theorem
+        title="Well-Ordering Principle"
+        proof={
+          <>
+            <p className="mb-3">We prove this assuming Mathematical Induction.</p>
+            <p className="mb-3">Let S ⊆ ℕ be non-empty. Suppose S has no least element.</p>
+            <p className="mb-3">Let P(n) = "n ∉ S". We show P(n) holds for all n by induction.</p>
+            <p className="mb-3"><strong>Base:</strong> If 1 ∈ S, then 1 would be the least element (contradiction). So P(1) holds.</p>
+            <p className="mb-3"><strong>Inductive step:</strong> Assume P(k) for all k ≤ m. If m+1 ∈ S, then m+1 would be the least element of S (since no smaller natural is in S). Contradiction. So P(m+1) holds.</p>
+            <p className="mb-3">By strong induction, P(n) holds for all n, so S = ∅. Contradiction!</p>
+          </>
+        }
+      >
         <p>Every non-empty subset of natural numbers has a least element.</p>
         <p className="mt-2 text-sm text-dark-400">
           This principle is equivalent to the principle of mathematical induction.

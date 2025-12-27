@@ -40,22 +40,43 @@ export default function Section05() {
 
       <h3>Limit Theorems for Sequences</h3>
 
-      <Theorem title="Algebra of Limits">
+      <Theorem
+        title="Algebra of Limits"
+        proof={
+          <>
+            <p className="mb-3"><strong>Sum rule:</strong> Given ε &gt; 0, choose N₁ so n &gt; N₁ ⇒ |aₙ - L| &lt; ε/2, and N₂ so n &gt; N₂ ⇒ |bₙ - M| &lt; ε/2.</p>
+            <p className="mb-3">For n &gt; max(N₁, N₂): |(aₙ + bₙ) - (L + M)| ≤ |aₙ - L| + |bₙ - M| &lt; ε/2 + ε/2 = ε.</p>
+            <p className="mb-3"><strong>Product rule:</strong> Write aₙbₙ - LM = aₙ(bₙ - M) + M(aₙ - L). Since (aₙ) is convergent, it's bounded: |aₙ| ≤ K for some K.</p>
+            <p className="mb-3">Given ε &gt; 0, choose N so that |bₙ - M| &lt; ε/(2K) and |aₙ - L| &lt; ε/(2|M| + 1) for n &gt; N.</p>
+            <p className="mb-3">Then |aₙbₙ - LM| ≤ K · ε/(2K) + |M| · ε/(2|M| + 1) &lt; ε.</p>
+          </>
+        }
+      >
         <p>
-          If <Math>\lim a_n = L</Math> and <Math>\lim b_n = M</Math>, then:
+          If <Math>{"\\lim a_n = L"}</Math> and <Math>{"\\lim b_n = M"}</Math>, then:
         </p>
         <ul className="list-disc list-inside space-y-2 mt-4">
-          <li><Math>\lim (a_n + b_n) = L + M</Math></li>
-          <li><Math>\lim (a_n \cdot b_n) = L \cdot M</Math></li>
-          <li><Math>\lim (c \cdot a_n) = c \cdot L</Math> for any constant <Math>c</Math></li>
-          <li><Math>\lim (a_n / b_n) = L / M</Math> if <Math>M \neq 0</Math></li>
+          <li><Math>{"\\lim (a_n + b_n) = L + M"}</Math></li>
+          <li><Math>{"\\lim (a_n \\cdot b_n) = L \\cdot M"}</Math></li>
+          <li><Math>{"\\lim (c \\cdot a_n) = c \\cdot L"}</Math> for any constant <Math>c</Math></li>
+          <li><Math>{"\\lim (a_n / b_n) = L / M"}</Math> if <Math>{"M \\neq 0"}</Math></li>
         </ul>
       </Theorem>
 
-      <Theorem title="Squeeze Theorem">
+      <Theorem
+        title="Squeeze Theorem"
+        proof={
+          <>
+            <p className="mb-3">Given ε &gt; 0, since aₙ → L, ∃N₁: n &gt; N₁ ⇒ |aₙ - L| &lt; ε, i.e., L - ε &lt; aₙ.</p>
+            <p className="mb-3">Since cₙ → L, ∃N₂: n &gt; N₂ ⇒ |cₙ - L| &lt; ε, i.e., cₙ &lt; L + ε.</p>
+            <p className="mb-3">For n &gt; max(N₁, N₂): L - ε &lt; aₙ ≤ bₙ ≤ cₙ &lt; L + ε.</p>
+            <p className="mb-3">Thus |bₙ - L| &lt; ε, proving bₙ → L.</p>
+          </>
+        }
+      >
         <p>
-          If <Math>a_n \leq b_n \leq c_n</Math> for all <Math>n</Math> and <Math>\lim a_n = \lim c_n = L</Math>,
-          then <Math>\lim b_n = L</Math>.
+          If <Math>{"a_n \\leq b_n \\leq c_n"}</Math> for all <Math>n</Math> and <Math>{"\\lim a_n = \\lim c_n = L"}</Math>,
+          then <Math>{"\\lim b_n = L"}</Math>.
         </p>
       </Theorem>
 
@@ -71,7 +92,18 @@ export default function Section05() {
 
       <h3>Monotone Sequences</h3>
 
-      <Theorem title="Monotone Convergence Theorem">
+      <Theorem
+        title="Monotone Convergence Theorem"
+        proof={
+          <>
+            <p className="mb-3">Let (aₙ) be increasing and bounded above. Let L = sup&#123;aₙ : n ∈ ℕ&#125;.</p>
+            <p className="mb-3">Given ε &gt; 0, by definition of supremum, ∃N: L - ε &lt; aₙ ≤ L.</p>
+            <p className="mb-3">Since (aₙ) is increasing, for all n &gt; N: L - ε &lt; aₙ ≤ aₙ ≤ L.</p>
+            <p className="mb-3">Thus |aₙ - L| &lt; ε for n &gt; N, so aₙ → L = sup(aₙ).</p>
+            <p className="mb-3">The decreasing case is analogous using infimum.</p>
+          </>
+        }
+      >
         <p>
           Every bounded monotone sequence converges. Specifically:
         </p>

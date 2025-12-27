@@ -21,7 +21,16 @@ export default function Section03() {
         <p>A set S is <strong>infinite</strong> if it is not finite - it has "more elements than any natural number."</p>
       </Definition>
 
-      <Theorem title="Basic Properties of Finite Sets">
+      <Theorem
+        title="Basic Properties of Finite Sets"
+        proof={
+          <>
+            <p className="mb-3"><strong>Subset of finite set:</strong> Let S have n elements and T ⊆ S. Define an injection T → S (the inclusion). Since S is finite, T has at most n elements, hence is finite.</p>
+            <p className="mb-3"><strong>Union:</strong> Let |A| = m and |B| = n. Then |A ∪ B| ≤ |A| + |B| = m + n, a finite number. More precisely, |A ∪ B| = |A| + |B| - |A ∩ B|.</p>
+            <p className="mb-3"><strong>Cartesian product:</strong> If |A| = m and |B| = n, then A × B has exactly mn elements (each of m elements in A pairs with each of n elements in B).</p>
+          </>
+        }
+      >
         <p>Any subset of a finite set is finite.</p>
         <p>If S is finite and T ⊆ S, then T is finite.</p>
         <p>The union of two finite sets is finite.</p>
@@ -43,13 +52,33 @@ export default function Section03() {
 
       <h3>Countable and Uncountable Sets</h3>
 
-      <Theorem title="Countable Sets">
+      <Theorem
+        title="Countable Sets"
+        proof={
+          <>
+            <p className="mb-3"><strong>ℤ is countable:</strong> Define f: ℕ → ℤ by f(n) = n/2 if n is even, f(n) = -(n+1)/2 if n is odd. This gives 0, -1, 1, -2, 2, -3, 3, ... which is a bijection.</p>
+            <p className="mb-3"><strong>ℚ is countable:</strong> List positive rationals in a grid with p/q at row p, column q. Traverse diagonally: 1/1, 1/2, 2/1, 1/3, 2/2, 3/1, ... skipping duplicates. This enumerates all positive rationals. Include negatives similarly.</p>
+            <p className="mb-3">Key insight: A countable union of countable sets is countable (using a diagonal argument).</p>
+          </>
+        }
+      >
         <p>A set S is <strong>countable</strong> if it is finite or there exists a bijection between S and ℕ.</p>
         <p>The rational numbers ℚ are countable.</p>
         <p>The integers ℤ are countable.</p>
       </Theorem>
 
-      <Theorem title="The Real Numbers are Uncountable">
+      <Theorem
+        title="The Real Numbers are Uncountable"
+        proof={
+          <>
+            <p className="mb-3"><strong>Cantor's Diagonal Argument:</strong> Suppose (0,1) is countable. Then we can list all reals in (0,1) as r₁, r₂, r₃, ...</p>
+            <p className="mb-3">Write each rₙ in decimal: rₙ = 0.dₙ₁dₙ₂dₙ₃... (avoiding representations ending in all 9s).</p>
+            <p className="mb-3">Construct x = 0.x₁x₂x₃... where xₙ = 5 if dₙₙ ≠ 5, and xₙ = 6 if dₙₙ = 5.</p>
+            <p className="mb-3">Then x differs from rₙ in the n-th decimal place for all n. So x ∉ &#123;r₁, r₂, ...&#125;.</p>
+            <p className="mb-3">Contradiction! So (0,1) is uncountable, hence ℝ is uncountable.</p>
+          </>
+        }
+      >
         <p>The set of real numbers ℝ is uncountable - it cannot be put into one-to-one correspondence with ℕ.</p>
         <p>This is proven using Cantor's diagonal argument.</p>
       </Theorem>
@@ -77,7 +106,17 @@ export default function Section03() {
         <p>|P(S)| = 8 &gt; 3</p>
       </Example>
 
-      <Theorem title="Continuum Hypothesis">
+      <Theorem
+        title="Continuum Hypothesis"
+        proof={
+          <>
+            <p className="mb-3"><strong>Independence:</strong> Kurt Gödel (1940) showed CH is consistent with ZFC by constructing the constructible universe L where CH holds.</p>
+            <p className="mb-3">Paul Cohen (1963) showed ¬CH is also consistent with ZFC using forcing, constructing models where 2^ℵ₀ can be arbitrarily large.</p>
+            <p className="mb-3">Therefore CH can neither be proved nor disproved from ZFC axioms alone - it is independent.</p>
+            <p className="mb-3">This was one of the most important results in 20th century logic, showing fundamental limitations of axiomatic set theory.</p>
+          </>
+        }
+      >
         <p>There is no cardinal number strictly between ℵ₀ and 2^ℵ₀.</p>
         <p>This hypothesis is independent of ZFC (Zermelo-Fraenkel set theory with the Axiom of Choice).</p>
       </Theorem>

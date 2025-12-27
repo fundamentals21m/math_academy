@@ -25,7 +25,17 @@ export default function Section08() {
         </MathBlock>
       </Definition>
 
-      <Theorem title="Radius of Convergence">
+      <Theorem
+        title="Radius of Convergence"
+        proof={
+          <>
+            <p className="mb-3">Let R = 1/limsup|cₙ|^(1/n) (with R = ∞ if limsup = 0, R = 0 if limsup = ∞).</p>
+            <p className="mb-3">For |x - a| &lt; R: |cₙ(x-a)ⁿ|^(1/n) = |cₙ|^(1/n)|x-a| → L|x-a| &lt; 1 where L = limsup|cₙ|^(1/n).</p>
+            <p className="mb-3">By the root test, the series converges absolutely.</p>
+            <p className="mb-3">For |x - a| &gt; R: similarly, the root test shows divergence since L|x-a| &gt; 1.</p>
+          </>
+        }
+      >
         <p>
           For every power series <Math>{"\\sum c_n (x-a)^n"}</Math>, there exists <Math>{"R \\in [0, \\infty]"}</Math>
           called the radius of convergence such that:
@@ -37,7 +47,17 @@ export default function Section08() {
         </ul>
       </Theorem>
 
-      <Theorem title="Cauchy-Hadamard Formula">
+      <Theorem
+        title="Cauchy-Hadamard Formula"
+        proof={
+          <>
+            <p className="mb-3">This follows from the root test applied to Σcₙ(x-a)ⁿ.</p>
+            <p className="mb-3">The series converges when limsup|cₙ(x-a)ⁿ|^(1/n) = limsup|cₙ|^(1/n) · |x-a| &lt; 1.</p>
+            <p className="mb-3">This gives |x-a| &lt; 1/limsup|cₙ|^(1/n) = R.</p>
+            <p className="mb-3">The formula unifies the treatment: R = 0 means the series only converges at x = a; R = ∞ means it converges everywhere.</p>
+          </>
+        }
+      >
         <p>The radius of convergence is given by:</p>
         <MathBlock>
           {`\\frac{1}{R} = \\limsup_{n \\to \\infty} |c_n|^{1/n}`}
@@ -53,7 +73,17 @@ export default function Section08() {
 
       <h3>Properties of Power Series</h3>
 
-      <Theorem title="Differentiation and Integration">
+      <Theorem
+        title="Differentiation and Integration"
+        proof={
+          <>
+            <p className="mb-3"><strong>Radius preserved:</strong> For the derivative series Σncₙxⁿ⁻¹, note that n^(1/n) → 1.</p>
+            <p className="mb-3">So limsup|ncₙ|^(1/n) = limsup(n^(1/n)|cₙ|^(1/n)) = limsup|cₙ|^(1/n). Same radius!</p>
+            <p className="mb-3"><strong>Term-by-term validity:</strong> For |x| &lt; r &lt; R, the series Σncₙxⁿ⁻¹ converges uniformly on [-r, r].</p>
+            <p className="mb-3">By uniform convergence theorems, we can differentiate term by term, and the result equals the derivative of the sum.</p>
+          </>
+        }
+      >
         <p>
           Inside the interval of convergence, a power series can be differentiated and
           integrated term by term:
