@@ -129,8 +129,8 @@ export default function Section10() {
         </p>
         <ul className="space-y-2 text-dark-400 text-sm">
           <li><strong>p = 1:</strong> Need 10% of the range of each predictor → side length = 0.10</li>
-          <li><strong>p = 2:</strong> Need <Math>\sqrt{'{0.10}'}</Math> = 0.32 of each dimension</li>
-          <li><strong>p = 10:</strong> Need <Math>0.10^{'{1/10}'}</Math> = 0.79 of each dimension!</li>
+          <li><strong>p = 2:</strong> Need <Math>{`\\sqrt{0.10}`}</Math> = 0.32 of each dimension</li>
+          <li><strong>p = 10:</strong> Need <Math>{`0.10^{1/10}`}</Math> = 0.79 of each dimension!</li>
         </ul>
         <p className="mt-3 text-dark-500 text-sm">
           In high dimensions, to get any neighbors at all, we must look over almost the 

@@ -221,7 +221,7 @@ summary(lm.fit2)
         <h4 className="text-emerald-400 font-semibold mb-2">Detection & Solution</h4>
         <p className="text-dark-300 text-sm">
           Look for a funnel shape in the residual plot. Common solutions include transforming 
-          the response using <Math>\log(Y)</Math> or <Math>\sqrt{Y}</Math>.
+          the response using <Math>{`\\log(Y)`}</Math> or <Math>{`\\sqrt{Y}`}</Math>.
         </p>
       </div>
 
