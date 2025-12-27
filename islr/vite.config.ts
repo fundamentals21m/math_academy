@@ -6,7 +6,7 @@ import path from 'path'
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
 const COURSE_ID = 'islr'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = '/math_academy/islr-deploy/'
+const BASE_PATH = '/islr-deploy/'
 // =============================================================================
 
 export default defineConfig({
