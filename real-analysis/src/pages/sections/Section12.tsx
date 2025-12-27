@@ -22,12 +22,12 @@ export default function Section12() {
         title="Taylor's Theorem with Remainder"
         proof={
           <>
-            <p className="mb-3">Define F(t) = f(x) - Σₖ₌₀ⁿ [f⁽ᵏ⁾(t)/k!](x-t)ᵏ for t between a and x.</p>
-            <p className="mb-3">Note F(x) = f(x) - f(x) = 0 (all terms vanish when t = x).</p>
-            <p className="mb-3">Define G(t) = F(t) - [(x-t)/(x-a)]ⁿ⁺¹ F(a). Then G(a) = G(x) = 0.</p>
-            <p className="mb-3">By Rolle's Theorem, ∃ξ between a and x with G'(ξ) = 0.</p>
-            <p className="mb-3">Computing F'(t) (using product rule and cancellation): F'(t) = -f⁽ⁿ⁺¹⁾(t)(x-t)ⁿ/n!.</p>
-            <p className="mb-3">Solving G'(ξ) = 0 gives F(a) = f⁽ⁿ⁺¹⁾(ξ)(x-a)ⁿ⁺¹/(n+1)! = Rₙ(x).</p>
+            <p className="mb-3">Define <Math>{`F(t) = f(x) - \\sum_{k=0}^n \\frac{f^{(k)}(t)}{k!}(x-t)^k`}</Math> for <Math>{`t`}</Math> between <Math>{`a`}</Math> and <Math>{`x`}</Math>.</p>
+            <p className="mb-3">Note <Math>{`F(x) = f(x) - f(x) = 0`}</Math> (all terms vanish when <Math>{`t = x`}</Math>).</p>
+            <p className="mb-3">Define <Math>{`G(t) = F(t) - \\left(\\frac{x-t}{x-a}\\right)^{n+1} F(a)`}</Math>. Then <Math>{`G(a) = G(x) = 0`}</Math>.</p>
+            <p className="mb-3">By Rolle's Theorem, <Math>{`\\exists \\xi`}</Math> between <Math>{`a`}</Math> and <Math>{`x`}</Math> with <Math>{`G'(\\xi) = 0`}</Math>.</p>
+            <p className="mb-3">Computing <Math>{`F'(t)`}</Math> (using product rule and cancellation): <Math>{`F'(t) = -\\frac{f^{(n+1)}(t)}{n!}(x-t)^n`}</Math>.</p>
+            <p className="mb-3">Solving <Math>{`G'(\\xi) = 0`}</Math> gives <Math>{`F(a) = \\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x-a)^{n+1} = R_n(x)`}</Math>.</p>
           </>
         }
       >
@@ -58,11 +58,11 @@ export default function Section12() {
         title="L'Hôpital's Rule"
         proof={
           <>
-            <p className="mb-3"><strong>0/0 case:</strong> Extend f, g to c by f(c) = g(c) = 0. They're now continuous on [c, x].</p>
-            <p className="mb-3">By Cauchy's MVT: [f(x) - f(c)]/[g(x) - g(c)] = f'(ξ)/g'(ξ) for some ξ between c and x.</p>
-            <p className="mb-3">Since f(c) = g(c) = 0: f(x)/g(x) = f'(ξ)/g'(ξ).</p>
-            <p className="mb-3">As x → c, ξ → c also, so f(x)/g(x) → lim f'(x)/g'(x) (if this limit exists).</p>
-            <p className="mb-3">The ∞/∞ case requires a more delicate argument using the same theorem.</p>
+            <p className="mb-3"><strong>0/0 case:</strong> Extend <Math>{`f, g`}</Math> to <Math>{`c`}</Math> by <Math>{`f(c) = g(c) = 0`}</Math>. They're now continuous on <Math>{`[c, x]`}</Math>.</p>
+            <p className="mb-3">By Cauchy's MVT: <Math>{`\\frac{f(x) - f(c)}{g(x) - g(c)} = \\frac{f'(\\xi)}{g'(\\xi)}`}</Math> for some <Math>{`\\xi`}</Math> between <Math>{`c`}</Math> and <Math>{`x`}</Math>.</p>
+            <p className="mb-3">Since <Math>{`f(c) = g(c) = 0`}</Math>: <Math>{`\\frac{f(x)}{g(x)} = \\frac{f'(\\xi)}{g'(\\xi)}`}</Math>.</p>
+            <p className="mb-3">As <Math>{`x \\to c`}</Math>, <Math>{`\\xi \\to c`}</Math> also, so <Math>{`\\frac{f(x)}{g(x)} \\to \\lim \\frac{f'(x)}{g'(x)}`}</Math> (if this limit exists).</p>
+            <p className="mb-3">The <Math>{`\\infty/\\infty`}</Math> case requires a more delicate argument using the same theorem.</p>
           </>
         }
       >
@@ -87,11 +87,11 @@ export default function Section12() {
         title="Inverse Function Theorem (1D)"
         proof={
           <>
-            <p className="mb-3"><strong>Local invertibility:</strong> Since f'(c) ≠ 0 and f' is continuous, f' doesn't change sign near c.</p>
-            <p className="mb-3">So f is strictly monotone near c, hence injective, so f⁻¹ exists locally.</p>
-            <p className="mb-3"><strong>Derivative formula:</strong> By definition, if y = f(x), then f⁻¹(y) = x.</p>
-            <p className="mb-3">Differentiating both sides implicitly: (f⁻¹)'(y) · f'(x) = 1.</p>
-            <p className="mb-3">At y = f(c): (f⁻¹)'(f(c)) = 1/f'(c).</p>
+            <p className="mb-3"><strong>Local invertibility:</strong> Since <Math>{`f'(c) \\neq 0`}</Math> and <Math>{`f'`}</Math> is continuous, <Math>{`f'`}</Math> doesn't change sign near <Math>{`c`}</Math>.</p>
+            <p className="mb-3">So <Math>{`f`}</Math> is strictly monotone near <Math>{`c`}</Math>, hence injective, so <Math>{`f^{-1}`}</Math> exists locally.</p>
+            <p className="mb-3"><strong>Derivative formula:</strong> By definition, if <Math>{`y = f(x)`}</Math>, then <Math>{`f^{-1}(y) = x`}</Math>.</p>
+            <p className="mb-3">Differentiating both sides implicitly: <Math>{`(f^{-1})'(y) \\cdot f'(x) = 1`}</Math>.</p>
+            <p className="mb-3">At <Math>{`y = f(c)`}</Math>: <Math>{`(f^{-1})'(f(c)) = 1/f'(c)`}</Math>.</p>
           </>
         }
       >
@@ -119,11 +119,12 @@ export default function Section12() {
         title="Second Derivative Test for Convexity"
         proof={
           <>
-            <p className="mb-3">Let f'' ≥ 0 on I. For x, y ∈ I and t ∈ [0,1], let z = tx + (1-t)y.</p>
-            <p className="mb-3">By Taylor's theorem: f(x) = f(z) + f'(z)(x-z) + (1/2)f''(ξ₁)(x-z)² ≥ f(z) + f'(z)(x-z).</p>
-            <p className="mb-3">Similarly: f(y) ≥ f(z) + f'(z)(y-z).</p>
-            <p className="mb-3">Multiply first by t, second by (1-t), and add:</p>
-            <p className="mb-3">tf(x) + (1-t)f(y) ≥ f(z) + f'(z)[t(x-z) + (1-t)(y-z)] = f(z) = f(tx + (1-t)y).</p>
+            <p className="mb-3">Let <Math>{`f'' \\geq 0`}</Math> on <Math>{`I`}</Math>. For <Math>{`x, y \\in I`}</Math> and <Math>{`t \\in [0,1]`}</Math>, let <Math>{`z = tx + (1-t)y`}</Math>.</p>
+            <p className="mb-3">By Taylor's theorem:</p>
+            <MathBlock>{`f(x) = f(z) + f'(z)(x-z) + \\frac{1}{2}f''(\\xi_1)(x-z)^2 \\geq f(z) + f'(z)(x-z)`}</MathBlock>
+            <p className="mb-3">Similarly: <Math>{`f(y) \\geq f(z) + f'(z)(y-z)`}</Math>.</p>
+            <p className="mb-3">Multiply first by <Math>{`t`}</Math>, second by <Math>{`(1-t)`}</Math>, and add:</p>
+            <MathBlock>{`tf(x) + (1-t)f(y) \\geq f(z) + f'(z)[t(x-z) + (1-t)(y-z)] = f(z) = f(tx + (1-t)y)`}</MathBlock>
           </>
         }
       >

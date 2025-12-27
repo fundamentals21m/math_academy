@@ -33,11 +33,11 @@ export default function Section09() {
         title="Sequential Characterization"
         proof={
           <>
-            <p className="mb-3"><strong>(⇒)</strong> Suppose lim(x→c) f(x) = L. Let xₙ → c with xₙ ≠ c.</p>
-            <p className="mb-3">Given ε &gt; 0, ∃δ: 0 &lt; |x - c| &lt; δ ⇒ |f(x) - L| &lt; ε.</p>
-            <p className="mb-3">Since xₙ → c, ∃N: n &gt; N ⇒ |xₙ - c| &lt; δ. Also xₙ ≠ c, so |f(xₙ) - L| &lt; ε for n &gt; N.</p>
-            <p className="mb-3"><strong>(⇐)</strong> Contrapositive: if lim ≠ L, ∃ε &gt; 0 such that for all δ, ∃x with 0 &lt; |x - c| &lt; δ but |f(x) - L| ≥ ε.</p>
-            <p className="mb-3">Taking δ = 1/n, get sequence xₙ → c but f(xₙ) ↛ L. Contradiction!</p>
+            <p className="mb-3"><strong>(⇒)</strong> Suppose <Math>{`\\lim_{x \\to c} f(x) = L`}</Math>. Let <Math>{`x_n \\to c`}</Math> with <Math>{`x_n \\neq c`}</Math>.</p>
+            <p className="mb-3">Given <Math>{`\\varepsilon > 0`}</Math>, <Math>{`\\exists \\delta: 0 < |x - c| < \\delta \\Rightarrow |f(x) - L| < \\varepsilon`}</Math>.</p>
+            <p className="mb-3">Since <Math>{`x_n \\to c`}</Math>, <Math>{`\\exists N: n > N \\Rightarrow |x_n - c| < \\delta`}</Math>. Also <Math>{`x_n \\neq c`}</Math>, so <Math>{`|f(x_n) - L| < \\varepsilon`}</Math> for <Math>{`n > N`}</Math>.</p>
+            <p className="mb-3"><strong>(⇐)</strong> Contrapositive: if limit <Math>{`\\neq L`}</Math>, <Math>{`\\exists \\varepsilon > 0`}</Math> such that for all <Math>{`\\delta`}</Math>, <Math>{`\\exists x`}</Math> with <Math>{`0 < |x - c| < \\delta`}</Math> but <Math>{`|f(x) - L| \\geq \\varepsilon`}</Math>.</p>
+            <p className="mb-3">Taking <Math>{`\\delta = 1/n`}</Math>, get sequence <Math>{`x_n \\to c`}</Math> but <Math>{`f(x_n) \\not\\to L`}</Math>. Contradiction!</p>
           </>
         }
       >
@@ -84,11 +84,11 @@ export default function Section09() {
         title="Heine-Cantor Theorem"
         proof={
           <>
-            <p className="mb-3">Let f be continuous on compact K. Suppose f is not uniformly continuous.</p>
-            <p className="mb-3">Then ∃ε &gt; 0 and sequences (xₙ), (yₙ) in K with |xₙ - yₙ| &lt; 1/n but |f(xₙ) - f(yₙ)| ≥ ε.</p>
-            <p className="mb-3">By compactness (Bolzano-Weierstrass), (xₙ) has a convergent subsequence xₙₖ → x ∈ K.</p>
-            <p className="mb-3">Then yₙₖ → x also (since |xₙₖ - yₙₖ| → 0).</p>
-            <p className="mb-3">By continuity at x: f(xₙₖ) → f(x) and f(yₙₖ) → f(x). But |f(xₙₖ) - f(yₙₖ)| ≥ ε. Contradiction!</p>
+            <p className="mb-3">Let <Math>{`f`}</Math> be continuous on compact <Math>{`K`}</Math>. Suppose <Math>{`f`}</Math> is not uniformly continuous.</p>
+            <p className="mb-3">Then <Math>{`\\exists \\varepsilon > 0`}</Math> and sequences <Math>{`(x_n), (y_n)`}</Math> in <Math>{`K`}</Math> with <Math>{`|x_n - y_n| < 1/n`}</Math> but <Math>{`|f(x_n) - f(y_n)| \\geq \\varepsilon`}</Math>.</p>
+            <p className="mb-3">By compactness (Bolzano-Weierstrass), <Math>{`(x_n)`}</Math> has a convergent subsequence <Math>{`x_{n_k} \\to x \\in K`}</Math>.</p>
+            <p className="mb-3">Then <Math>{`y_{n_k} \\to x`}</Math> also (since <Math>{`|x_{n_k} - y_{n_k}| \\to 0`}</Math>).</p>
+            <p className="mb-3">By continuity at <Math>{`x`}</Math>: <Math>{`f(x_{n_k}) \\to f(x)`}</Math> and <Math>{`f(y_{n_k}) \\to f(x)`}</Math>. But <Math>{`|f(x_{n_k}) - f(y_{n_k})| \\geq \\varepsilon`}</Math>. Contradiction!</p>
           </>
         }
       >

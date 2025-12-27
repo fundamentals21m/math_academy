@@ -29,10 +29,10 @@ export default function Section08() {
         title="Radius of Convergence"
         proof={
           <>
-            <p className="mb-3">Let R = 1/limsup|cₙ|^(1/n) (with R = ∞ if limsup = 0, R = 0 if limsup = ∞).</p>
-            <p className="mb-3">For |x - a| &lt; R: |cₙ(x-a)ⁿ|^(1/n) = |cₙ|^(1/n)|x-a| → L|x-a| &lt; 1 where L = limsup|cₙ|^(1/n).</p>
+            <p className="mb-3">Let <Math>{`R = 1/\\limsup|c_n|^{1/n}`}</Math> (with <Math>{`R = \\infty`}</Math> if limsup <Math>{`= 0`}</Math>, <Math>{`R = 0`}</Math> if limsup <Math>{`= \\infty`}</Math>).</p>
+            <p className="mb-3">For <Math>{`|x - a| < R`}</Math>: <Math>{`|c_n(x-a)^n|^{1/n} = |c_n|^{1/n}|x-a| \\to L|x-a| < 1`}</Math> where <Math>{`L = \\limsup|c_n|^{1/n}`}</Math>.</p>
             <p className="mb-3">By the root test, the series converges absolutely.</p>
-            <p className="mb-3">For |x - a| &gt; R: similarly, the root test shows divergence since L|x-a| &gt; 1.</p>
+            <p className="mb-3">For <Math>{`|x - a| > R`}</Math>: similarly, the root test shows divergence since <Math>{`L|x-a| > 1`}</Math>.</p>
           </>
         }
       >
@@ -51,10 +51,11 @@ export default function Section08() {
         title="Cauchy-Hadamard Formula"
         proof={
           <>
-            <p className="mb-3">This follows from the root test applied to Σcₙ(x-a)ⁿ.</p>
-            <p className="mb-3">The series converges when limsup|cₙ(x-a)ⁿ|^(1/n) = limsup|cₙ|^(1/n) · |x-a| &lt; 1.</p>
-            <p className="mb-3">This gives |x-a| &lt; 1/limsup|cₙ|^(1/n) = R.</p>
-            <p className="mb-3">The formula unifies the treatment: R = 0 means the series only converges at x = a; R = ∞ means it converges everywhere.</p>
+            <p className="mb-3">This follows from the root test applied to <Math>{`\\sum c_n(x-a)^n`}</Math>.</p>
+            <p className="mb-3">The series converges when:</p>
+            <MathBlock>{`\\limsup|c_n(x-a)^n|^{1/n} = \\limsup|c_n|^{1/n} \\cdot |x-a| < 1`}</MathBlock>
+            <p className="mb-3">This gives <Math>{`|x-a| < 1/\\limsup|c_n|^{1/n} = R`}</Math>.</p>
+            <p className="mb-3">The formula unifies the treatment: <Math>{`R = 0`}</Math> means the series only converges at <Math>{`x = a`}</Math>; <Math>{`R = \\infty`}</Math> means it converges everywhere.</p>
           </>
         }
       >
@@ -77,9 +78,9 @@ export default function Section08() {
         title="Differentiation and Integration"
         proof={
           <>
-            <p className="mb-3"><strong>Radius preserved:</strong> For the derivative series Σncₙxⁿ⁻¹, note that n^(1/n) → 1.</p>
-            <p className="mb-3">So limsup|ncₙ|^(1/n) = limsup(n^(1/n)|cₙ|^(1/n)) = limsup|cₙ|^(1/n). Same radius!</p>
-            <p className="mb-3"><strong>Term-by-term validity:</strong> For |x| &lt; r &lt; R, the series Σncₙxⁿ⁻¹ converges uniformly on [-r, r].</p>
+            <p className="mb-3"><strong>Radius preserved:</strong> For the derivative series <Math>{`\\sum n c_n x^{n-1}`}</Math>, note that <Math>{`n^{1/n} \\to 1`}</Math>.</p>
+            <p className="mb-3">So <Math>{`\\limsup|nc_n|^{1/n} = \\limsup(n^{1/n}|c_n|^{1/n}) = \\limsup|c_n|^{1/n}`}</Math>. Same radius!</p>
+            <p className="mb-3"><strong>Term-by-term validity:</strong> For <Math>{`|x| < r < R`}</Math>, the series <Math>{`\\sum n c_n x^{n-1}`}</Math> converges uniformly on <Math>{`[-r, r]`}</Math>.</p>
             <p className="mb-3">By uniform convergence theorems, we can differentiate term by term, and the result equals the derivative of the sum.</p>
           </>
         }

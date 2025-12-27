@@ -30,9 +30,9 @@ export default function Section06() {
         title="Divergence Test"
         proof={
           <>
-            <p className="mb-3">Suppose Σaₙ = S converges. Let sₙ = a₁ + a₂ + ... + aₙ be the partial sums.</p>
-            <p className="mb-3">Then sₙ → S and sₙ₋₁ → S as n → ∞.</p>
-            <p className="mb-3">Since aₙ = sₙ - sₙ₋₁, we have aₙ → S - S = 0.</p>
+            <p className="mb-3">Suppose <Math>{`\\sum a_n = S`}</Math> converges. Let <Math>{`s_n = a_1 + a_2 + \\cdots + a_n`}</Math> be the partial sums.</p>
+            <p className="mb-3">Then <Math>{`s_n \\to S`}</Math> and <Math>{`s_{n-1} \\to S`}</Math> as <Math>{`n \\to \\infty`}</Math>.</p>
+            <p className="mb-3">Since <Math>{`a_n = s_n - s_{n-1}`}</Math>, we have <Math>{`a_n \\to S - S = 0`}</Math>.</p>
           </>
         }
       >
@@ -64,9 +64,10 @@ export default function Section06() {
         title="Geometric Series"
         proof={
           <>
-            <p className="mb-3">The partial sum is sₙ = 1 + r + r² + ... + rⁿ = (1 - rⁿ⁺¹)/(1 - r) for r ≠ 1.</p>
-            <p className="mb-3">If |r| &lt; 1, then rⁿ⁺¹ → 0 as n → ∞, so sₙ → 1/(1-r).</p>
-            <p className="mb-3">If |r| ≥ 1, then rⁿ does not converge to 0, so by the divergence test, the series diverges.</p>
+            <p className="mb-3">The partial sum is:</p>
+            <MathBlock>{`s_n = 1 + r + r^2 + \\cdots + r^n = \\frac{1 - r^{n+1}}{1 - r} \\quad \\text{for } r \\neq 1`}</MathBlock>
+            <p className="mb-3">If <Math>{`|r| < 1`}</Math>, then <Math>{`r^{n+1} \\to 0`}</Math> as <Math>{`n \\to \\infty`}</Math>, so <Math>{`s_n \\to \\frac{1}{1-r}`}</Math>.</p>
+            <p className="mb-3">If <Math>{`|r| \\geq 1`}</Math>, then <Math>{`r^n`}</Math> does not converge to 0, so by the divergence test, the series diverges.</p>
           </>
         }
       >
@@ -85,10 +86,10 @@ export default function Section06() {
         title="Comparison Test"
         proof={
           <>
-            <p className="mb-3">Let Aₙ = Σᵢ₌₁ⁿ aᵢ and Bₙ = Σᵢ₌₁ⁿ bᵢ be partial sums.</p>
-            <p className="mb-3">Since aᵢ ≤ bᵢ for all i, we have Aₙ ≤ Bₙ for all n.</p>
-            <p className="mb-3">If Σbₙ converges to B, then Aₙ ≤ Bₙ ≤ B, so (Aₙ) is bounded above.</p>
-            <p className="mb-3">Since (Aₙ) is increasing (aₙ ≥ 0) and bounded, by the Monotone Convergence Theorem, Σaₙ converges.</p>
+            <p className="mb-3">Let <Math>{`A_n = \\sum_{i=1}^n a_i`}</Math> and <Math>{`B_n = \\sum_{i=1}^n b_i`}</Math> be partial sums.</p>
+            <p className="mb-3">Since <Math>{`a_i \\leq b_i`}</Math> for all <Math>{`i`}</Math>, we have <Math>{`A_n \\leq B_n`}</Math> for all <Math>{`n`}</Math>.</p>
+            <p className="mb-3">If <Math>{`\\sum b_n`}</Math> converges to <Math>{`B`}</Math>, then <Math>{`A_n \\leq B_n \\leq B`}</Math>, so <Math>{`(A_n)`}</Math> is bounded above.</p>
+            <p className="mb-3">Since <Math>{`(A_n)`}</Math> is increasing (<Math>{`a_n \\geq 0`}</Math>) and bounded, by the Monotone Convergence Theorem, <Math>{`\\sum a_n`}</Math> converges.</p>
             <p className="mb-3">The second statement follows by contrapositive.</p>
           </>
         }
@@ -106,9 +107,11 @@ export default function Section06() {
         title="Integral Test"
         proof={
           <>
-            <p className="mb-3">Since f is decreasing, for x ∈ [n, n+1]: f(n+1) ≤ f(x) ≤ f(n).</p>
-            <p className="mb-3">Integrating: f(n+1) ≤ ∫ₙⁿ⁺¹ f(x)dx ≤ f(n).</p>
-            <p className="mb-3">Summing from n=1 to N-1: Σₙ₌₂ᴺ f(n) ≤ ∫₁ᴺ f(x)dx ≤ Σₙ₌₁ᴺ⁻¹ f(n).</p>
+            <p className="mb-3">Since <Math>{`f`}</Math> is decreasing, for <Math>{`x \\in [n, n+1]`}</Math>: <Math>{`f(n+1) \\leq f(x) \\leq f(n)`}</Math>.</p>
+            <p className="mb-3">Integrating:</p>
+            <MathBlock>{`f(n+1) \\leq \\int_n^{n+1} f(x)\\,dx \\leq f(n)`}</MathBlock>
+            <p className="mb-3">Summing from <Math>{`n=1`}</Math> to <Math>{`N-1`}</Math>:</p>
+            <MathBlock>{`\\sum_{n=2}^N f(n) \\leq \\int_1^N f(x)\\,dx \\leq \\sum_{n=1}^{N-1} f(n)`}</MathBlock>
             <p className="mb-3">If the integral converges, the partial sums are bounded, so the series converges.</p>
             <p className="mb-3">If the series converges, the integral is bounded, so it converges.</p>
           </>

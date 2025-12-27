@@ -47,12 +47,12 @@ export default function Section13() {
         title="Riemann's Criterion"
         proof={
           <>
-            <p className="mb-3"><strong>(⇐)</strong> Given ε &gt; 0, if U(f,P) - L(f,P) &lt; ε for some P, then:</p>
-            <p className="mb-3">inf U(f,P) - sup L(f,P) ≤ U(f,P) - L(f,P) &lt; ε.</p>
-            <p className="mb-3">Since ε is arbitrary, inf U = sup L, so f is integrable.</p>
-            <p className="mb-3"><strong>(⇒)</strong> If f is integrable with ∫f = I, then given ε &gt; 0:</p>
-            <p className="mb-3">∃P₁: U(f,P₁) &lt; I + ε/2 and ∃P₂: L(f,P₂) &gt; I - ε/2.</p>
-            <p className="mb-3">Let P = P₁ ∪ P₂. Then U(f,P) - L(f,P) &lt; ε.</p>
+            <p className="mb-3"><strong>(⇐)</strong> Given <Math>{`\\varepsilon > 0`}</Math>, if <Math>{`U(f,P) - L(f,P) < \\varepsilon`}</Math> for some <Math>{`P`}</Math>, then:</p>
+            <MathBlock>{`\\inf U(f,P) - \\sup L(f,P) \\leq U(f,P) - L(f,P) < \\varepsilon`}</MathBlock>
+            <p className="mb-3">Since <Math>{`\\varepsilon`}</Math> is arbitrary, <Math>{`\\inf U = \\sup L`}</Math>, so <Math>{`f`}</Math> is integrable.</p>
+            <p className="mb-3"><strong>(⇒)</strong> If <Math>{`f`}</Math> is integrable with <Math>{`\\int f = I`}</Math>, then given <Math>{`\\varepsilon > 0`}</Math>:</p>
+            <p className="mb-3"><Math>{`\\exists P_1: U(f,P_1) < I + \\varepsilon/2`}</Math> and <Math>{`\\exists P_2: L(f,P_2) > I - \\varepsilon/2`}</Math>.</p>
+            <p className="mb-3">Let <Math>{`P = P_1 \\cup P_2`}</Math>. Then <Math>{`U(f,P) - L(f,P) < \\varepsilon`}</Math>.</p>
           </>
         }
       >
@@ -68,11 +68,12 @@ export default function Section13() {
         title="Continuous Functions are Integrable"
         proof={
           <>
-            <p className="mb-3">Continuous f on compact [a,b] is uniformly continuous.</p>
-            <p className="mb-3">Given ε &gt; 0, ∃δ: |x - y| &lt; δ ⇒ |f(x) - f(y)| &lt; ε/(b-a).</p>
-            <p className="mb-3">Choose partition P with mesh &lt; δ. On each [xᵢ₋₁, xᵢ]: Mᵢ - mᵢ &lt; ε/(b-a).</p>
-            <p className="mb-3">Then U(f,P) - L(f,P) = Σ(Mᵢ - mᵢ)Δxᵢ &lt; [ε/(b-a)] · (b-a) = ε.</p>
-            <p className="mb-3">By Riemann's criterion, f is integrable.</p>
+            <p className="mb-3">Continuous <Math>{`f`}</Math> on compact <Math>{`[a,b]`}</Math> is uniformly continuous.</p>
+            <p className="mb-3">Given <Math>{`\\varepsilon > 0`}</Math>, <Math>{`\\exists \\delta: |x - y| < \\delta \\Rightarrow |f(x) - f(y)| < \\varepsilon/(b-a)`}</Math>.</p>
+            <p className="mb-3">Choose partition <Math>{`P`}</Math> with mesh <Math>{`< \\delta`}</Math>. On each <Math>{`[x_{i-1}, x_i]`}</Math>: <Math>{`M_i - m_i < \\varepsilon/(b-a)`}</Math>.</p>
+            <p className="mb-3">Then:</p>
+            <MathBlock>{`U(f,P) - L(f,P) = \\sum(M_i - m_i)\\Delta x_i < \\frac{\\varepsilon}{b-a} \\cdot (b-a) = \\varepsilon`}</MathBlock>
+            <p className="mb-3">By Riemann's criterion, <Math>{`f`}</Math> is integrable.</p>
           </>
         }
       >
@@ -85,11 +86,11 @@ export default function Section13() {
         title="Monotone Functions are Integrable"
         proof={
           <>
-            <p className="mb-3">WLOG assume f is increasing. For any partition P with n equal subintervals:</p>
-            <p className="mb-3">Mᵢ = f(xᵢ) and mᵢ = f(xᵢ₋₁) (by monotonicity).</p>
-            <p className="mb-3">U(f,P) - L(f,P) = Σ[f(xᵢ) - f(xᵢ₋₁)]·Δx = [f(b) - f(a)]·(b-a)/n.</p>
-            <p className="mb-3">This is a telescoping sum! Given ε &gt; 0, choose n &gt; [f(b) - f(a)](b-a)/ε.</p>
-            <p className="mb-3">Then U - L &lt; ε, so f is integrable by Riemann's criterion.</p>
+            <p className="mb-3">WLOG assume <Math>{`f`}</Math> is increasing. For any partition <Math>{`P`}</Math> with <Math>{`n`}</Math> equal subintervals:</p>
+            <p className="mb-3"><Math>{`M_i = f(x_i)`}</Math> and <Math>{`m_i = f(x_{i-1})`}</Math> (by monotonicity).</p>
+            <MathBlock>{`U(f,P) - L(f,P) = \\sum[f(x_i) - f(x_{i-1})] \\cdot \\Delta x = [f(b) - f(a)] \\cdot \\frac{b-a}{n}`}</MathBlock>
+            <p className="mb-3">This is a telescoping sum! Given <Math>{`\\varepsilon > 0`}</Math>, choose <Math>{`n > [f(b) - f(a)](b-a)/\\varepsilon`}</Math>.</p>
+            <p className="mb-3">Then <Math>{`U - L < \\varepsilon`}</Math>, so <Math>{`f`}</Math> is integrable by Riemann's criterion.</p>
           </>
         }
       >
@@ -102,10 +103,10 @@ export default function Section13() {
         title="Lebesgue's Criterion"
         proof={
           <>
-            <p className="mb-3">A set has measure zero if it can be covered by intervals with total length &lt; ε for any ε.</p>
-            <p className="mb-3"><strong>Key idea:</strong> The oscillation ω(x) = lim(δ→0) [sup f - inf f on (x-δ, x+δ)] measures discontinuity.</p>
-            <p className="mb-3">f is continuous at x iff ω(x) = 0.</p>
-            <p className="mb-3">The proof shows: f integrable ⟺ for all α &gt; 0, &#123;x : ω(x) ≥ α&#125; has measure zero ⟺ discontinuities have measure zero.</p>
+            <p className="mb-3">A set has measure zero if it can be covered by intervals with total length <Math>{`< \\varepsilon`}</Math> for any <Math>{`\\varepsilon`}</Math>.</p>
+            <p className="mb-3"><strong>Key idea:</strong> The oscillation <Math>{`\\omega(x) = \\lim_{\\delta \\to 0} [\\sup f - \\inf f \\text{ on } (x-\\delta, x+\\delta)]`}</Math> measures discontinuity.</p>
+            <p className="mb-3"><Math>{`f`}</Math> is continuous at <Math>{`x`}</Math> iff <Math>{`\\omega(x) = 0`}</Math>.</p>
+            <p className="mb-3">The proof shows: <Math>{`f`}</Math> integrable <Math>{`\\Leftrightarrow`}</Math> for all <Math>{`\\alpha > 0`}</Math>, <Math>{`\\{x : \\omega(x) \\geq \\alpha\\}`}</Math> has measure zero <Math>{`\\Leftrightarrow`}</Math> discontinuities have measure zero.</p>
             <p className="mb-3">This deep result connects Riemann's criterion to measure theory.</p>
           </>
         }

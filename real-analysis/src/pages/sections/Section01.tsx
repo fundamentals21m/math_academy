@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock } from '@/components/common/MathBlock';
+import { Math, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { LimitVisualizer } from '@/components/common/LimitVisualizer';
 import { section01Quiz } from '@/data/quizzes';
@@ -66,11 +66,11 @@ export default function Section01() {
         title="Uniqueness of Identities and Inverses"
         proof={
           <>
-            <p className="mb-3"><strong>Uniqueness of additive identity:</strong> Suppose 0 and 0' are both additive identities. Then:</p>
-            <p className="ml-4 mb-2">0' = 0' + 0 = 0 + 0' = 0</p>
-            <p className="mb-3">The first equality uses that 0 is an identity; the second uses commutativity; the third uses that 0' is an identity.</p>
-            <p className="mb-3"><strong>Uniqueness of additive inverse:</strong> Suppose a + b = 0 and a + c = 0. Then:</p>
-            <p className="ml-4 mb-2">b = b + 0 = b + (a + c) = (b + a) + c = (a + b) + c = 0 + c = c</p>
+            <p className="mb-3"><strong>Uniqueness of additive identity:</strong> Suppose <Math>{`0`}</Math> and <Math>{`0'`}</Math> are both additive identities. Then:</p>
+            <MathBlock>{`0' = 0' + 0 = 0 + 0' = 0`}</MathBlock>
+            <p className="mb-3">The first equality uses that <Math>{`0`}</Math> is an identity; the second uses commutativity; the third uses that <Math>{`0'`}</Math> is an identity.</p>
+            <p className="mb-3"><strong>Uniqueness of additive inverse:</strong> Suppose <Math>{`a + b = 0`}</Math> and <Math>{`a + c = 0`}</Math>. Then:</p>
+            <MathBlock>{`b = b + 0 = b + (a + c) = (b + a) + c = (a + b) + c = 0 + c = c`}</MathBlock>
             <p className="mb-3"><strong>Uniqueness of multiplicative identity and inverse:</strong> Similar arguments apply using multiplication.</p>
           </>
         }

@@ -20,11 +20,11 @@ export default function Section10() {
         title="Intermediate Value Theorem"
         proof={
           <>
-            <p className="mb-3">WLOG assume f(a) &lt; k &lt; f(b). Let S = &#123;x ∈ [a,b] : f(x) &lt; k&#125;.</p>
-            <p className="mb-3">S is non-empty (a ∈ S) and bounded above (by b). Let c = sup S.</p>
-            <p className="mb-3">By continuity, f(c) cannot be greater than k: if f(c) &gt; k, then by continuity f(x) &gt; k for x near c, contradicting c = sup S.</p>
-            <p className="mb-3">Similarly, f(c) cannot be less than k: if f(c) &lt; k, then f(x) &lt; k for x slightly greater than c, contradicting c = sup S.</p>
-            <p className="mb-3">Therefore f(c) = k.</p>
+            <p className="mb-3">WLOG assume <Math>{`f(a) < k < f(b)`}</Math>. Let <Math>{`S = \\{x \\in [a,b] : f(x) < k\\}`}</Math>.</p>
+            <p className="mb-3"><Math>{`S`}</Math> is non-empty (<Math>{`a \\in S`}</Math>) and bounded above (by <Math>{`b`}</Math>). Let <Math>{`c = \\sup S`}</Math>.</p>
+            <p className="mb-3">By continuity, <Math>{`f(c)`}</Math> cannot be greater than <Math>{`k`}</Math>: if <Math>{`f(c) > k`}</Math>, then by continuity <Math>{`f(x) > k`}</Math> for <Math>{`x`}</Math> near <Math>{`c`}</Math>, contradicting <Math>{`c = \\sup S`}</Math>.</p>
+            <p className="mb-3">Similarly, <Math>{`f(c)`}</Math> cannot be less than <Math>{`k`}</Math>: if <Math>{`f(c) < k`}</Math>, then <Math>{`f(x) < k`}</Math> for <Math>{`x`}</Math> slightly greater than <Math>{`c`}</Math>, contradicting <Math>{`c = \\sup S`}</Math>.</p>
+            <p className="mb-3">Therefore <Math>{`f(c) = k`}</Math>.</p>
           </>
         }
       >
@@ -52,11 +52,11 @@ export default function Section10() {
         title="Extreme Value Theorem"
         proof={
           <>
-            <p className="mb-3"><strong>Step 1 (Boundedness):</strong> Suppose f is unbounded. Then ∃xₙ with |f(xₙ)| → ∞.</p>
-            <p className="mb-3">By Bolzano-Weierstrass, (xₙ) has a convergent subsequence xₙₖ → c ∈ [a,b].</p>
-            <p className="mb-3">By continuity, f(xₙₖ) → f(c), contradicting |f(xₙₖ)| → ∞. So f is bounded.</p>
-            <p className="mb-3"><strong>Step 2 (Maximum attained):</strong> Let M = sup f. Choose (xₙ) with f(xₙ) → M.</p>
-            <p className="mb-3">By B-W, xₙₖ → c ∈ [a,b]. By continuity, f(c) = lim f(xₙₖ) = M. The minimum case is similar.</p>
+            <p className="mb-3"><strong>Step 1 (Boundedness):</strong> Suppose <Math>{`f`}</Math> is unbounded. Then <Math>{`\\exists x_n`}</Math> with <Math>{`|f(x_n)| \\to \\infty`}</Math>.</p>
+            <p className="mb-3">By Bolzano-Weierstrass, <Math>{`(x_n)`}</Math> has a convergent subsequence <Math>{`x_{n_k} \\to c \\in [a,b]`}</Math>.</p>
+            <p className="mb-3">By continuity, <Math>{`f(x_{n_k}) \\to f(c)`}</Math>, contradicting <Math>{`|f(x_{n_k})| \\to \\infty`}</Math>. So <Math>{`f`}</Math> is bounded.</p>
+            <p className="mb-3"><strong>Step 2 (Maximum attained):</strong> Let <Math>{`M = \\sup f`}</Math>. Choose <Math>{`(x_n)`}</Math> with <Math>{`f(x_n) \\to M`}</Math>.</p>
+            <p className="mb-3">By B-W, <Math>{`x_{n_k} \\to c \\in [a,b]`}</Math>. By continuity, <Math>{`f(c) = \\lim f(x_{n_k}) = M`}</Math>. The minimum case is similar.</p>
           </>
         }
       >
@@ -80,11 +80,11 @@ export default function Section10() {
         title="Image of Compact Set"
         proof={
           <>
-            <p className="mb-3">Let &#123;Uα&#125; be an open cover of f(K). For each α, f⁻¹(Uα) is open (continuity).</p>
-            <p className="mb-3">The collection &#123;f⁻¹(Uα)&#125; is an open cover of K.</p>
-            <p className="mb-3">By compactness of K, there's a finite subcover f⁻¹(Uα₁), ..., f⁻¹(Uαₙ).</p>
-            <p className="mb-3">Then Uα₁, ..., Uαₙ covers f(K). So f(K) is compact.</p>
-            <p className="mb-3">In ℝ, Heine-Borel: compact ⟺ closed and bounded.</p>
+            <p className="mb-3">Let <Math>{`\\{U_\\alpha\\}`}</Math> be an open cover of <Math>{`f(K)`}</Math>. For each <Math>{`\\alpha`}</Math>, <Math>{`f^{-1}(U_\\alpha)`}</Math> is open (continuity).</p>
+            <p className="mb-3">The collection <Math>{`\\{f^{-1}(U_\\alpha)\\}`}</Math> is an open cover of <Math>{`K`}</Math>.</p>
+            <p className="mb-3">By compactness of <Math>{`K`}</Math>, there's a finite subcover <Math>{`f^{-1}(U_{\\alpha_1}), \\ldots, f^{-1}(U_{\\alpha_n})`}</Math>.</p>
+            <p className="mb-3">Then <Math>{`U_{\\alpha_1}, \\ldots, U_{\\alpha_n}`}</Math> covers <Math>{`f(K)`}</Math>. So <Math>{`f(K)`}</Math> is compact.</p>
+            <p className="mb-3">In <Math>{`\\mathbb{R}`}</Math>, Heine-Borel: compact <Math>{`\\Leftrightarrow`}</Math> closed and bounded.</p>
           </>
         }
       >
@@ -99,11 +99,11 @@ export default function Section10() {
         title="Preservation of Connectedness"
         proof={
           <>
-            <p className="mb-3">Suppose f(S) is not connected: f(S) = A ∪ B with A, B nonempty, disjoint, and separated.</p>
-            <p className="mb-3">Then S = f⁻¹(A) ∪ f⁻¹(B) with f⁻¹(A) and f⁻¹(B) nonempty and disjoint.</p>
-            <p className="mb-3">Since f is continuous and A, B are separated, f⁻¹(A) and f⁻¹(B) are separated.</p>
-            <p className="mb-3">This contradicts S being connected. So f(S) is connected.</p>
-            <p className="mb-3">In ℝ, connected sets are exactly the intervals, so intervals map to intervals.</p>
+            <p className="mb-3">Suppose <Math>{`f(S)`}</Math> is not connected: <Math>{`f(S) = A \\cup B`}</Math> with <Math>{`A, B`}</Math> nonempty, disjoint, and separated.</p>
+            <p className="mb-3">Then <Math>{`S = f^{-1}(A) \\cup f^{-1}(B)`}</Math> with <Math>{`f^{-1}(A)`}</Math> and <Math>{`f^{-1}(B)`}</Math> nonempty and disjoint.</p>
+            <p className="mb-3">Since <Math>{`f`}</Math> is continuous and <Math>{`A, B`}</Math> are separated, <Math>{`f^{-1}(A)`}</Math> and <Math>{`f^{-1}(B)`}</Math> are separated.</p>
+            <p className="mb-3">This contradicts <Math>{`S`}</Math> being connected. So <Math>{`f(S)`}</Math> is connected.</p>
+            <p className="mb-3">In <Math>{`\\mathbb{R}`}</Math>, connected sets are exactly the intervals, so intervals map to intervals.</p>
           </>
         }
       >

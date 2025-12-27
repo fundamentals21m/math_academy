@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock } from '@/components/common/MathBlock';
+import { Math, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section02Quiz } from '@/data/quizzes';
 
@@ -21,11 +21,11 @@ export default function Section02() {
         proof={
           <>
             <p className="mb-3">We prove this using the Well-Ordering Principle (which is equivalent).</p>
-            <p className="mb-3">Suppose P(1) is true and P(k) ⇒ P(k+1) for all k, but P(n) fails for some n.</p>
-            <p className="mb-3">Let S = &#123;n ∈ ℕ : P(n) is false&#125;. By assumption, S is non-empty.</p>
-            <p className="mb-3">By Well-Ordering, S has a least element m. Since P(1) is true, m &gt; 1.</p>
-            <p className="mb-3">Thus m - 1 ∈ ℕ and m - 1 ∉ S (since m is least), so P(m-1) is true.</p>
-            <p className="mb-3">By the inductive step, P(m) is true. Contradiction! So S is empty.</p>
+            <p className="mb-3">Suppose <Math>{`P(1)`}</Math> is true and <Math>{`P(k) \\Rightarrow P(k+1)`}</Math> for all <Math>{`k`}</Math>, but <Math>{`P(n)`}</Math> fails for some <Math>{`n`}</Math>.</p>
+            <p className="mb-3">Let <Math>{`S = \\{n \\in \\mathbb{N} : P(n) \\text{ is false}\\}`}</Math>. By assumption, <Math>{`S`}</Math> is non-empty.</p>
+            <p className="mb-3">By Well-Ordering, <Math>{`S`}</Math> has a least element <Math>{`m`}</Math>. Since <Math>{`P(1)`}</Math> is true, <Math>{`m > 1`}</Math>.</p>
+            <p className="mb-3">Thus <Math>{`m - 1 \\in \\mathbb{N}`}</Math> and <Math>{`m - 1 \\notin S`}</Math> (since <Math>{`m`}</Math> is least), so <Math>{`P(m-1)`}</Math> is true.</p>
+            <p className="mb-3">By the inductive step, <Math>{`P(m)`}</Math> is true. Contradiction! So <Math>{`S`}</Math> is empty.</p>
           </>
         }
       >
@@ -77,11 +77,11 @@ export default function Section02() {
         proof={
           <>
             <p className="mb-3">We prove this assuming Mathematical Induction.</p>
-            <p className="mb-3">Let S ⊆ ℕ be non-empty. Suppose S has no least element.</p>
-            <p className="mb-3">Let P(n) = "n ∉ S". We show P(n) holds for all n by induction.</p>
-            <p className="mb-3"><strong>Base:</strong> If 1 ∈ S, then 1 would be the least element (contradiction). So P(1) holds.</p>
-            <p className="mb-3"><strong>Inductive step:</strong> Assume P(k) for all k ≤ m. If m+1 ∈ S, then m+1 would be the least element of S (since no smaller natural is in S). Contradiction. So P(m+1) holds.</p>
-            <p className="mb-3">By strong induction, P(n) holds for all n, so S = ∅. Contradiction!</p>
+            <p className="mb-3">Let <Math>{`S \\subseteq \\mathbb{N}`}</Math> be non-empty. Suppose <Math>{`S`}</Math> has no least element.</p>
+            <p className="mb-3">Let <Math>{`P(n)`}</Math> = "<Math>{`n \\notin S`}</Math>". We show <Math>{`P(n)`}</Math> holds for all <Math>{`n`}</Math> by induction.</p>
+            <p className="mb-3"><strong>Base:</strong> If <Math>{`1 \\in S`}</Math>, then 1 would be the least element (contradiction). So <Math>{`P(1)`}</Math> holds.</p>
+            <p className="mb-3"><strong>Inductive step:</strong> Assume <Math>{`P(k)`}</Math> for all <Math>{`k \\leq m`}</Math>. If <Math>{`m+1 \\in S`}</Math>, then <Math>{`m+1`}</Math> would be the least element of <Math>{`S`}</Math> (since no smaller natural is in <Math>{`S`}</Math>). Contradiction. So <Math>{`P(m+1)`}</Math> holds.</p>
+            <p className="mb-3">By strong induction, <Math>{`P(n)`}</Math> holds for all <Math>{`n`}</Math>, so <Math>{`S = \\emptyset`}</Math>. Contradiction!</p>
           </>
         }
       >
