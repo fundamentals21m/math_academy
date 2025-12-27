@@ -45,32 +45,74 @@
       margin-bottom: 1.5rem;
     }
 
-    .course-card:nth-child(1) .course-icon {
+    .level-section {
+      margin-top: 3rem;
+    }
+
+    .level-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .level-badge {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .level-badge.beginner {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.1) 100%);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .level-badge.intermediate {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0.1) 100%);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .level-badge.advanced {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.1) 100%);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .level-description {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    /* Beginner courses - green theme */
+    .level-beginner .course-card .course-icon {
       background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.1) 100%);
     }
 
-    .course-card:nth-child(2) .course-icon {
+    /* Intermediate courses - blue/purple theme */
+    .level-intermediate .course-card:nth-child(1) .course-icon {
       background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0.1) 100%);
     }
-
-    .course-card:nth-child(3) .course-icon {
-      background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0.1) 100%);
-    }
-
-    .course-card:nth-child(4) .course-icon {
+    .level-intermediate .course-card:nth-child(2) .course-icon {
       background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
     }
+    .level-intermediate .course-card:nth-child(3) .course-icon {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0.1) 100%);
+    }
+    .level-intermediate .course-card:nth-child(4) .course-icon {
+      background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(52, 211, 153, 0.1) 100%);
+    }
 
-    .course-card:nth-child(5) .course-icon {
+    /* Advanced courses - red/purple theme */
+    .level-advanced .course-card:nth-child(1) .course-icon {
       background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.1) 100%);
     }
-
-    .course-card:nth-child(6) .course-icon {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%);
-    }
-
-    .course-card:nth-child(7) .course-icon {
-      background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(52, 211, 153, 0.1) 100%);
+    .level-advanced .course-card:nth-child(2) .course-icon {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.1) 100%);
     }
 
     .course-title {
@@ -143,113 +185,131 @@
     </section>
 
     <h2 class="section-title">Choose Your Path</h2>
-    <p class="section-subtitle">Seven courses, from foundations to advanced applications</p>
+    <p class="section-subtitle">Seven courses organized by difficulty level</p>
 
-    <div class="courses-grid">
-      <!-- Basic Algebra -->
-      <a href="https://basic-algebra.vercel.app" target="_blank" class="course-card">
-        <div class="course-icon">x²</div>
-        <h3 class="course-title">Basic Algebra</h3>
-        <p class="course-description">
-          Master the fundamentals of algebra through interactive lessons and visualizations.
-          From integers to complex numbers, covering equations, functions, and more.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">17 Chapters</span>
-          <span class="course-tag">64 Sections</span>
-          <span class="course-tag">Beginner</span>
-        </div>
-      </a>
+    <!-- BEGINNER -->
+    <div class="level-section">
+      <div class="level-header">
+        <span class="level-badge beginner">Beginner</span>
+        <span class="level-description">Start here to build a strong foundation</span>
+      </div>
+      <div class="courses-grid level-beginner">
+        <!-- Basic Algebra -->
+        <a href="https://basic-algebra.vercel.app" target="_blank" class="course-card">
+          <div class="course-icon">x²</div>
+          <h3 class="course-title">Basic Algebra</h3>
+          <p class="course-description">
+            Master the fundamentals of algebra through interactive lessons and visualizations.
+            From integers to complex numbers, covering equations, functions, and more.
+          </p>
+          <div class="course-meta">
+            <span class="course-tag">17 Chapters</span>
+            <span class="course-tag">64 Sections</span>
+          </div>
+        </a>
+      </div>
+    </div>
 
-      <!-- Cryptography -->
-      <a href="cryptography/" class="course-card">
-        <div class="course-icon">🔐</div>
-        <h3 class="course-title">Cryptography Math</h3>
-        <p class="course-description">
-          Learn the mathematics that powers modern encryption. From modular arithmetic
-          to RSA and elliptic curves, discover how math keeps the internet secure.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">12 Lessons</span>
-          <span class="course-tag">Interactive</span>
-          <span class="course-tag">Intermediate</span>
-        </div>
-      </a>
+    <!-- INTERMEDIATE -->
+    <div class="level-section">
+      <div class="level-header">
+        <span class="level-badge intermediate">Intermediate</span>
+        <span class="level-description">Build on your foundation with applied mathematics</span>
+      </div>
+      <div class="courses-grid level-intermediate">
+        <!-- Cryptography -->
+        <a href="cryptography/" class="course-card">
+          <div class="course-icon">🔐</div>
+          <h3 class="course-title">Cryptography Math</h3>
+          <p class="course-description">
+            Learn the mathematics that powers modern encryption. From modular arithmetic
+            to RSA and elliptic curves, discover how math keeps the internet secure.
+          </p>
+          <div class="course-meta">
+            <span class="course-tag">12 Lessons</span>
+            <span class="course-tag">Interactive</span>
+          </div>
+        </a>
 
-      <!-- Abstract Algebra -->
-      <a href="aa/" class="course-card">
-        <div class="course-icon">G</div>
-        <h3 class="course-title">Abstract Algebra</h3>
-        <p class="course-description">
-          Explore the elegant world of algebraic structures. Groups, rings, fields,
-          and the deep patterns underlying all of mathematics.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">Groups & Rings</span>
-          <span class="course-tag">Fields</span>
-          <span class="course-tag">Advanced</span>
-        </div>
-      </a>
+        <!-- Linear Algebra -->
+        <a href="https://linalg-pink.vercel.app" class="course-card">
+          <div class="course-icon">&#x1F4D0;</div>
+          <h3 class="course-title">Linear Algebra</h3>
+          <p class="course-description">
+            Master vectors, matrices, and linear transformations. Based on Gilbert Strang's
+            Introduction to Linear Algebra, with interactive visualizations.
+          </p>
+          <div class="course-meta">
+            <span class="course-tag">Vectors & Matrices</span>
+            <span class="course-tag">Interactive</span>
+          </div>
+        </a>
 
-      <!-- Linear Algebra -->
-      <a href="https://linalg-pink.vercel.app" class="course-card">
-        <div class="course-icon">&#x1F4D0;</div>
-        <h3 class="course-title">Linear Algebra</h3>
-        <p class="course-description">
-          Master vectors, matrices, and linear transformations. Based on Gilbert Strang's
-          Introduction to Linear Algebra, with interactive visualizations.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">Vectors & Matrices</span>
-          <span class="course-tag">Interactive</span>
-          <span class="course-tag">Intermediate</span>
-        </div>
-      </a>
+        <!-- Abstract Algebra -->
+        <a href="aa/" class="course-card">
+          <div class="course-icon">G</div>
+          <h3 class="course-title">Abstract Algebra</h3>
+          <p class="course-description">
+            Explore the elegant world of algebraic structures. Groups, rings, fields,
+            and the deep patterns underlying all of mathematics.
+          </p>
+          <div class="course-meta">
+            <span class="course-tag">Groups & Rings</span>
+            <span class="course-tag">Fields</span>
+          </div>
+        </a>
 
-      <!-- Advanced Linear Algebra -->
-      <a href="https://advanced-linalg.vercel.app" class="course-card">
-        <div class="course-icon">&#x2133;</div>
-        <h3 class="course-title">Advanced Linear Algebra</h3>
-        <p class="course-description">
-          Deep dive into abstract linear algebra. Based on Hoffman & Kunze's classic text,
-          covering vector spaces, linear transformations, and canonical forms.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">10 Chapters</span>
-          <span class="course-tag">59 Sections</span>
-          <span class="course-tag">Advanced</span>
-        </div>
-      </a>
+        <!-- Introduction to Statistical Learning -->
+        <a href="islr-deploy/" class="course-card">
+          <div class="course-icon">📊</div>
+          <h3 class="course-title">Intro to Statistical Learning</h3>
+          <p class="course-description">
+            Master machine learning fundamentals with this interactive course based on James et al.'s
+            acclaimed textbook. From linear regression to deep learning, with interactive visualizations.
+          </p>
+          <div class="course-meta">
+            <span class="course-tag">13 Chapters</span>
+            <span class="course-tag">62 Sections</span>
+          </div>
+        </a>
+      </div>
+    </div>
 
-      <!-- Real Analysis -->
-      <a href="ra/" class="course-card">
-        <div class="course-icon">📐</div>
-        <h3 class="course-title">Introduction to Real Analysis</h3>
-        <p class="course-description">
-          A rigorous introduction to real analysis covering limits, continuity, differentiation,
-          and integration through formal proofs. Based on Kenneth A. Ross's Elementary Analysis.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">4 Parts</span>
-          <span class="course-tag">15 Sections</span>
-          <span class="course-tag">Advanced</span>
-        </div>
-      </a>
+    <!-- ADVANCED -->
+    <div class="level-section">
+      <div class="level-header">
+        <span class="level-badge advanced">Advanced</span>
+        <span class="level-description">Rigorous mathematics for the dedicated learner</span>
+      </div>
+      <div class="courses-grid level-advanced">
+        <!-- Advanced Linear Algebra -->
+        <a href="https://advanced-linalg.vercel.app" class="course-card">
+          <div class="course-icon">&#x2133;</div>
+          <h3 class="course-title">Advanced Linear Algebra</h3>
+          <p class="course-description">
+            Deep dive into abstract linear algebra. Based on Hoffman & Kunze's classic text,
+            covering vector spaces, linear transformations, and canonical forms.
+          </p>
+          <div class="course-meta">
+            <span class="course-tag">10 Chapters</span>
+            <span class="course-tag">59 Sections</span>
+          </div>
+        </a>
 
-      <!-- Introduction to Statistical Learning -->
-      <a href="islr-deploy/" class="course-card">
-        <div class="course-icon">📊</div>
-        <h3 class="course-title">Intro to Statistical Learning</h3>
-        <p class="course-description">
-          Master machine learning fundamentals with this interactive course based on James et al.'s
-          acclaimed textbook. From linear regression to deep learning, with interactive visualizations.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">13 Chapters</span>
-          <span class="course-tag">62 Sections</span>
-          <span class="course-tag">Intermediate</span>
-        </div>
-      </a>
+        <!-- Real Analysis -->
+        <a href="ra/" class="course-card">
+          <div class="course-icon">📐</div>
+          <h3 class="course-title">Introduction to Real Analysis</h3>
+          <p class="course-description">
+            A rigorous introduction to real analysis covering limits, continuity, differentiation,
+            and integration through formal proofs. Based on Kenneth A. Ross's Elementary Analysis.
+          </p>
+          <div class="course-meta">
+            <span class="course-tag">4 Parts</span>
+            <span class="course-tag">15 Sections</span>
+          </div>
+        </a>
+      </div>
     </div>
 
     <!-- Progress Dashboard -->
@@ -331,8 +391,8 @@
     </div>
 
     <div class="callout callout-info" style="margin-top: 3rem;">
-      <strong>Start anywhere!</strong> Each course is self-contained. Begin with Basic Algebra for foundations,
-      explore Cryptography for applications, or dive into Statistical Learning for data science.
+      <strong>Start with the basics!</strong> New to math? Begin with Basic Algebra to build your foundation.
+      Ready for more? Move through the levels at your own pace.
     </div>
 
     <!-- Global Leaderboard Section -->
