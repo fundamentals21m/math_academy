@@ -69,6 +69,10 @@
       background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%);
     }
 
+    .course-card:nth-child(7) .course-icon {
+      background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(52, 211, 153, 0.1) 100%);
+    }
+
     .course-title {
       font-size: 1.5rem;
       font-weight: 700;
@@ -139,7 +143,7 @@
     </section>
 
     <h2 class="section-title">Choose Your Path</h2>
-    <p class="section-subtitle">Six courses, from foundations to advanced applications</p>
+    <p class="section-subtitle">Seven courses, from foundations to advanced applications</p>
 
     <div class="courses-grid">
       <!-- Basic Algebra -->
@@ -231,6 +235,21 @@
           <span class="course-tag">Advanced</span>
         </div>
       </a>
+
+      <!-- Introduction to Statistical Learning -->
+      <a href="islr/" class="course-card">
+        <div class="course-icon">📊</div>
+        <h3 class="course-title">Intro to Statistical Learning</h3>
+        <p class="course-description">
+          Master machine learning fundamentals with this interactive course based on James et al.'s
+          acclaimed textbook. From linear regression to deep learning, with interactive visualizations.
+        </p>
+        <div class="course-meta">
+          <span class="course-tag">13 Chapters</span>
+          <span class="course-tag">62 Sections</span>
+          <span class="course-tag">Intermediate</span>
+        </div>
+      </a>
     </div>
 
     <!-- Progress Dashboard -->
@@ -301,6 +320,13 @@
           </div>
           <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="ra-count">0 / 15 sections</div>
         </div>
+        <div class="card" style="padding: 1.5rem;">
+          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Intro to Statistical Learning</h4>
+          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
+            <div id="islr-progress" style="height: 100%; background: linear-gradient(90deg, #34d399, #6ee7b7); width: 0%; transition: width 0.5s;"></div>
+          </div>
+          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="islr-count">0 / 62 sections</div>
+        </div>
       </div>
     </div>
 
@@ -325,6 +351,7 @@
             <a href="https://linalg-pink.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Linear Algebra</a>
             <a href="https://advanced-linalg.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Advanced Linear Algebra</a>
             <a href="https://real-analysis-eta.vercel.app" class="btn btn-secondary btn-small">Real Analysis</a>
+            <a href="islr/#/leaderboard" class="btn btn-secondary btn-small">Statistical Learning</a>
           </div>
         </div>
       </div>
@@ -360,6 +387,7 @@
         const linalgCount = sections.filter(id => id.startsWith('linalg:')).length;
         const advlinalgCount = sections.filter(id => id.startsWith('advlinalg:')).length;
         const raCount = sections.filter(id => id.startsWith('ra:')).length;
+        const islrCount = sections.filter(id => id.startsWith('islr:')).length;
 
         // Update progress bars
         document.getElementById('ba-progress').style.width = `${(baCount / 64) * 100}%`;
@@ -379,6 +407,9 @@
 
         document.getElementById('ra-progress').style.width = `${(raCount / 15) * 100}%`;
         document.getElementById('ra-count').textContent = `${raCount} / 15 sections`;
+
+        document.getElementById('islr-progress').style.width = `${(islrCount / 62) * 100}%`;
+        document.getElementById('islr-count').textContent = `${islrCount} / 62 sections`;
       } catch (e) {
         console.error('Failed to load progress:', e);
       }
