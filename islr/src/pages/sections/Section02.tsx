@@ -33,8 +33,8 @@ export default function Section02() {
 
       <p>
         Consider a study examining the relationship between years of education, seniority, 
-        and income. The response variable is <Math>Y = \text{income}</Math>, and the 
-        predictors are <Math>X_1 = \text{years of education}</Math> and <Math>X_2 = \text{seniority}</Math>.
+        and income. The response variable is <Math>{"Y = \\text{income}"}</Math>, and the 
+        predictors are <Math>{"X_1 = \\text{years of education}"}</Math> and <Math>{"X_2 = \\text{seniority}"}</Math>.
       </p>
 
       <Example title="Income Prediction">
