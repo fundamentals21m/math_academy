@@ -62,8 +62,8 @@
         rankings.forEach((entry, index) => {
           const rank = index + 1;
           const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
-          const displayName = entry.displayName || null;
-          const npub = entry.npub || 'Unknown';
+          const displayName = entry.displayName || 'Anonymous';
+          const npub = entry.npub || '';
           const xp = (entry.xp || entry.totalXP || 0).toLocaleString();
           const level = entry.level || 1;
 
@@ -73,11 +73,13 @@
                 ${medal || '#' + rank}
               </div>
               <div style="flex: 1; min-width: 0;">
-                ${displayName ? `<div style="color: #f1f5f9; font-weight: 500;">${displayName}</div>` : ''}
-                <div style="color: ${displayName ? '#64748b' : '#f1f5f9'}; font-size: ${displayName ? '0.7rem' : '0.8rem'}; font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${npub}</div>
-                <div style="color: #64748b; font-size: 0.75rem;">Level ${level}</div>
+                <div style="color: #f1f5f9; font-weight: 600; font-size: 1rem;">${displayName}</div>
+                <div style="color: #64748b; font-size: 0.65rem; font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px;">${npub}</div>
               </div>
-              <div style="color: #fbbf24; font-weight: 600; font-size: 1.1rem; white-space: nowrap; margin-left: 1rem;">${xp} XP</div>
+              <div style="text-align: right; margin-left: 1rem;">
+                <div style="color: #fbbf24; font-weight: 600; font-size: 1.1rem;">${xp} XP</div>
+                <div style="color: #64748b; font-size: 0.7rem;">Level ${level}</div>
+              </div>
             </div>
           `;
         });
