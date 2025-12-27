@@ -8,6 +8,87 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+    import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js';
+
+    // Firebase config (same as courses)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      authDomain: "magic-internet-math.firebaseapp.com",
+      projectId: "magic-internet-math",
+      storageBucket: "magic-internet-math.appspot.com",
+      messagingSenderId: "123456789",
+      appId: "1:123456789:web:xxxxxxxxxxxx"
+    };
+
+    // Make functions available globally
+    window.loadLeaderboard = async function() {
+      const tableEl = document.getElementById('leaderboard-table');
+      const statusEl = document.getElementById('leaderboard-status');
+
+      try {
+        const app = initializeApp(firebaseConfig);
+        const functions = getFunctions(app);
+        const getLeaderboard = httpsCallable(functions, 'getLeaderboard');
+
+        statusEl.textContent = 'Fetching...';
+        const result = await getLeaderboard({ courseId: 'overall', limit: 10 });
+        const rankings = result.data.rankings || [];
+
+        if (rankings.length === 0) {
+          tableEl.innerHTML = `
+            <div style="padding: 3rem; text-align: center; color: #64748b;">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
+              <p>No rankings yet. Be the first!</p>
+            </div>
+          `;
+          statusEl.textContent = 'No data';
+          return;
+        }
+
+        // Render leaderboard
+        let html = '';
+        rankings.forEach((entry, index) => {
+          const rank = index + 1;
+          const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
+          const name = entry.displayName || entry.npub?.slice(0, 12) + '...' || 'Anonymous';
+          const xp = entry.totalXP?.toLocaleString() || '0';
+
+          html += `
+            <div style="display: flex; align-items: center; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); ${rank <= 3 ? 'background: rgba(251, 191, 36, 0.05);' : ''}">
+              <div style="width: 40px; font-weight: 700; color: ${rank <= 3 ? '#fbbf24' : '#64748b'};">
+                ${medal || '#' + rank}
+              </div>
+              <div style="flex: 1; color: #f1f5f9; font-weight: 500;">${name}</div>
+              <div style="color: #fbbf24; font-weight: 600;">${xp} XP</div>
+            </div>
+          `;
+        });
+
+        tableEl.innerHTML = html;
+        statusEl.textContent = 'Updated just now';
+      } catch (error) {
+        console.error('Leaderboard error:', error);
+        tableEl.innerHTML = `
+          <div style="padding: 3rem; text-align: center; color: #64748b;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
+            <p style="margin-bottom: 1rem;">Visit any course leaderboard to see rankings</p>
+            <p style="font-size: 0.75rem; color: #475569;">Connect with Nostr to join the competition</p>
+          </div>
+        `;
+        statusEl.textContent = 'View in courses';
+      }
+    };
+
+    // Load on page ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', window.loadLeaderboard);
+    } else {
+      window.loadLeaderboard();
+    }
+  </script>
   <style>
     .courses-grid {
       display: grid;
@@ -396,23 +477,39 @@
     </div>
 
     <!-- Global Leaderboard Section -->
-    <section id="leaderboard" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-      <h2 class="section-title">Global Leaderboard</h2>
-      <p class="section-subtitle">Top learners across all courses</p>
+    <section id="leaderboard" class="level-section" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+      <div class="level-header">
+        <span class="level-badge" style="background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(251, 191, 36, 0.1) 100%); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3);">Leaderboard</span>
+        <span class="level-description">Compete with learners worldwide</span>
+      </div>
 
-      <div class="card" style="padding: 2rem; margin-top: 2rem;">
-        <div style="text-align: center; color: #94a3b8;">
-          <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-            Connect with Nostr to compete on the global leaderboard and track your progress across all courses.
-          </p>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://basic-algebra.vercel.app/#/leaderboard" target="_blank" class="btn btn-secondary btn-small">Basic Algebra</a>
-            <a href="aa/#/leaderboard" class="btn btn-secondary btn-small">Abstract Algebra</a>
-            <a href="https://linalg-pink.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Linear Algebra</a>
-            <a href="https://advanced-linalg.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Advanced Linear Algebra</a>
-            <a href="ra/#/leaderboard" class="btn btn-secondary btn-small">Real Analysis</a>
-            <a href="islr-deploy/#/leaderboard" class="btn btn-secondary btn-small">Statistical Learning</a>
+      <!-- Leaderboard Table -->
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: 1.5rem;">
+        <div style="padding: 1.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="margin: 0; color: #f1f5f9; font-size: 1.25rem;">Top Learners</h3>
+          <span id="leaderboard-status" style="font-size: 0.75rem; color: #64748b;">Loading...</span>
+        </div>
+
+        <div id="leaderboard-table" style="min-height: 200px;">
+          <!-- Leaderboard rows will be inserted here -->
+          <div style="padding: 3rem; text-align: center; color: #64748b;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
+            <p style="margin-bottom: 1rem;">Loading leaderboard...</p>
           </div>
+        </div>
+      </div>
+
+      <!-- Course Leaderboard Links -->
+      <div style="margin-top: 1.5rem;">
+        <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">View course-specific rankings:</p>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="https://basic-algebra.vercel.app/#/leaderboard" target="_blank" class="btn btn-secondary btn-small">Basic Algebra</a>
+          <a href="cryptography/#/leaderboard" class="btn btn-secondary btn-small">Cryptography</a>
+          <a href="https://linalg-pink.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Linear Algebra</a>
+          <a href="aa/#/leaderboard" class="btn btn-secondary btn-small">Abstract Algebra</a>
+          <a href="islr-deploy/#/leaderboard" class="btn btn-secondary btn-small">Statistical Learning</a>
+          <a href="https://advanced-linalg.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Advanced LinAlg</a>
+          <a href="ra/#/leaderboard" class="btn btn-secondary btn-small">Real Analysis</a>
         </div>
       </div>
     </section>
