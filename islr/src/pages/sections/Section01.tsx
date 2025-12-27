@@ -16,9 +16,9 @@ export default function Section01() {
       </p>
 
       <Callout type="info">
-        <strong>The Central Problem:</strong> Given a set of predictors <Math>X_1, X_2, \ldots, X_p</Math> and 
+        <strong>The Central Problem:</strong> Given a set of predictors <Math>{`X_1, X_2, \\ldots, X_p`}</Math> and 
         a response variable <Math>Y</Math>, we want to find a function <Math>f</Math> such 
-        that <Math>Y \approx f(X)</Math>.
+        that <Math>{`Y \\approx f(X)`}</Math>.
       </Callout>
 
       <h2>Applications of Statistical Learning</h2>
@@ -93,7 +93,7 @@ export default function Section01() {
         <p>
           In statistical learning, we typically have a set of <strong>input variables</strong> (also 
           called predictors, independent variables, features, or just variables), 
-          denoted <Math>X_1, X_2, \ldots, X_p</Math>.
+          denoted <Math>{`X_1, X_2, \\ldots, X_p`}</Math>.
         </p>
         <p className="mt-2">
           We also have an <strong>output variable</strong> (also called response or dependent variable), 
@@ -127,8 +127,8 @@ export default function Section01() {
         <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-xl p-5 border border-blue-500/20">
           <h3 className="text-lg font-semibold text-blue-400 mb-3">Unsupervised Learning</h3>
           <p className="text-dark-300 mb-3">
-            For every observation <Math>i = 1, \ldots, n</Math>, we observe measurements <Math>x_i</Math> but 
-            no associated response <Math>y_i</Math>.
+            For every observation <Math>{`i = 1, \\ldots, n`}</Math>, we observe measurements <Math>{`x_i`}</Math> but 
+            no associated response <Math>{`y_i`}</Math>.
           </p>
           <p className="text-dark-400 text-sm">
             <strong>Goal:</strong> Understand relationships between variables or between 
@@ -168,7 +168,7 @@ export default function Section01() {
       <h2>The General Model</h2>
 
       <p>
-        We assume there is some relationship between <Math>Y</Math> and <Math>X = (X_1, X_2, \ldots, X_p)</Math>, 
+        We assume there is some relationship between <Math>Y</Math> and <Math>{`X = (X_1, X_2, \\ldots, X_p)`}</Math>, 
         which can be written in the general form:
       </p>
 
@@ -176,12 +176,12 @@ export default function Section01() {
 
       <p>
         where <Math>f</Math> is some fixed but unknown function of <Math>X</Math>, 
-        and <Math>\epsilon</Math> is a random <em>error term</em> which is independent 
+        and <Math>{`\\epsilon`}</Math> is a random <em>error term</em> which is independent 
         of <Math>X</Math> and has mean zero.
       </p>
 
       <Callout type="warning">
-        <strong>The Error Term:</strong> The error term <Math>\epsilon</Math> captures 
+        <strong>The Error Term:</strong> The error term <Math>{`\\epsilon`}</Math> captures 
         measurement errors and other discrepancies. Even if we knew <Math>f</Math> exactly, 
         we could not perfectly predict <Math>Y</Math> because of this irreducible error.
       </Callout>
@@ -201,8 +201,8 @@ export default function Section01() {
           </p>
           <MathBlock>{`\\hat{Y} = \\hat{f}(X)`}</MathBlock>
           <p className="text-dark-400 text-sm mt-2">
-            Here <Math>\hat f</Math> is our estimate for <Math>f</Math>, 
-            and <Math>\hat Y</Math> is the resulting prediction for <Math>Y</Math>.
+            Here <Math>{`\\hat{f}`}</Math> is our estimate for <Math>f</Math>, 
+            and <Math>{`\\hat{Y}`}</Math> is the resulting prediction for <Math>Y</Math>.
           </p>
         </div>
 
