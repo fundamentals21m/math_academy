@@ -1,53 +1,876 @@
+// =============================================================================
+// ISLR THEOREMS AND DEFINITIONS INDEX
+// =============================================================================
+// Key definitions and theorems from "Introduction to Statistical Learning"
+// =============================================================================
+
 export interface TheoremEntry {
   /** Unique identifier for theorem */
   id: string;
-  /** Display title (e.g., "Pythagorean Theorem") */
+  /** Display title */
   title: string;
-  /** Mathematical statement of theorem - can contain LaTeX */
+  /** Mathematical statement - can contain LaTeX */
   statement: string;
   /** Section ID where this theorem is introduced */
   sectionId: number;
   /** Section title for display */
   sectionTitle?: string;
-  /** Category for grouping (e.g., "Fundamentals", "Advanced") */
+  /** Category for grouping */
   category?: string;
   /** Whether a proof is provided */
   hasProof?: boolean;
-  /** Optional: Type of entry */
-  type?: 'theorem' | 'definition' | 'lemma' | 'corollary' | 'proposition';
-  /** Optional: LaTeX-formatted proof content */
+  /** Type of entry */
+  type?: 'theorem' | 'definition' | 'lemma' | 'corollary' | 'proposition' | 'algorithm';
+  /** LaTeX-formatted proof content */
   proof?: string;
 }
 
 export const theorems: TheoremEntry[] = [
+  // ===========================================================================
+  // Chapter 2: Statistical Learning
+  // ===========================================================================
   {
-    id: 'def-sample',
-    title: 'Sample Definition',
-    statement: 'A function $f: A \\to B$ is a mapping from set $A$ to set $B$.',
-    sectionId: 1,
-    category: 'Fundamentals',
+    id: 'def-statistical-learning',
+    title: 'Statistical Learning',
+    statement: `Given a quantitative response $Y$ and $p$ predictors $X_1, X_2, \\ldots, X_p$, we assume there is some relationship $Y = f(X) + \\epsilon$ where $f$ is a fixed but unknown function and $\\epsilon$ is a random error term with mean zero.`,
+    sectionId: 2,
+    sectionTitle: 'What Is Statistical Learning?',
+    category: 'Foundations',
     type: 'definition',
   },
   {
-    id: 'thm-sample',
-    title: 'Sample Theorem',
-    statement: 'If $A \\subseteq B$ and $B \\subseteq A$, then $A = B$',
+    id: 'def-reducible-irreducible-error',
+    title: 'Reducible and Irreducible Error',
+    statement: `The accuracy of $\\hat{Y}$ as a prediction for $Y$ depends on reducible error (error from $\\hat{f}$ not being a perfect estimate of $f$) and irreducible error (error from $\\epsilon$, which cannot be predicted using $X$).`,
     sectionId: 2,
-    category: 'Fundamentals',
+    sectionTitle: 'What Is Statistical Learning?',
+    category: 'Foundations',
+    type: 'definition',
+  },
+  {
+    id: 'def-mse',
+    title: 'Mean Squared Error (MSE)',
+    statement: `The mean squared error for regression is $\\text{MSE} = \\frac{1}{n}\\sum_{i=1}^{n}(y_i - \\hat{f}(x_i))^2$ where $\\hat{f}(x_i)$ is the prediction for the $i$th observation.`,
+    sectionId: 3,
+    sectionTitle: 'Assessing Model Accuracy',
+    category: 'Model Assessment',
+    type: 'definition',
+  },
+  {
+    id: 'def-bias',
+    title: 'Bias',
+    statement: `Bias refers to the error introduced by approximating a real-world problem with a simplified model. More flexible models generally have lower bias.`,
+    sectionId: 3,
+    sectionTitle: 'Assessing Model Accuracy',
+    category: 'Model Assessment',
+    type: 'definition',
+  },
+  {
+    id: 'def-variance',
+    title: 'Variance',
+    statement: `Variance refers to the amount by which $\\hat{f}$ would change if we estimated it using a different training data set. More flexible models generally have higher variance.`,
+    sectionId: 3,
+    sectionTitle: 'Assessing Model Accuracy',
+    category: 'Model Assessment',
+    type: 'definition',
+  },
+  {
+    id: 'thm-bias-variance-decomposition',
+    title: 'Bias-Variance Decomposition',
+    statement: `For a given value $x_0$, the expected test MSE can be decomposed as: $E[(y_0 - \\hat{f}(x_0))^2] = \\text{Var}(\\hat{f}(x_0)) + [\\text{Bias}(\\hat{f}(x_0))]^2 + \\text{Var}(\\epsilon)$`,
+    sectionId: 3,
+    sectionTitle: 'Assessing Model Accuracy',
+    category: 'Model Assessment',
     type: 'theorem',
     hasProof: true,
-    proof: `
-      Let $x \\in A$. Since $A \\subseteq B$, we have $x \\in B$ by definition of subset.
-      Therefore, every element of $A$ is in $B$.
-      
-      Now, let $y \\in B$. Since $B \\subseteq A$, we have $y \\in A$ by definition.
-      Therefore, every element of $B$ is in $A$.
-      
-      Since $A \\subseteq B$ and $B \\subseteq A$, the two sets contain exactly the same elements.
-      Thus, $A = B$.
-    `,
+  },
+  {
+    id: 'def-bayes-classifier',
+    title: 'Bayes Classifier',
+    statement: `The Bayes classifier assigns each observation to the most likely class given its predictor values: $\\text{argmax}_j \\Pr(Y = j | X = x_0)$. This classifier minimizes the test error rate.`,
+    sectionId: 3,
+    sectionTitle: 'Assessing Model Accuracy',
+    category: 'Classification',
+    type: 'definition',
+  },
+  {
+    id: 'def-bayes-error-rate',
+    title: 'Bayes Error Rate',
+    statement: `The Bayes error rate is $1 - E[\\max_j \\Pr(Y = j | X)]$, the lowest possible test error rate for a given problem. It is analogous to the irreducible error.`,
+    sectionId: 3,
+    sectionTitle: 'Assessing Model Accuracy',
+    category: 'Classification',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 3: Linear Regression
+  // ===========================================================================
+  {
+    id: 'def-simple-linear-regression',
+    title: 'Simple Linear Regression',
+    statement: `Simple linear regression assumes $Y \\approx \\beta_0 + \\beta_1 X$ where $\\beta_0$ is the intercept and $\\beta_1$ is the slope.`,
+    sectionId: 6,
+    sectionTitle: 'Simple Linear Regression',
+    category: 'Linear Regression',
+    type: 'definition',
+  },
+  {
+    id: 'def-rss',
+    title: 'Residual Sum of Squares (RSS)',
+    statement: `$\\text{RSS} = \\sum_{i=1}^{n}(y_i - \\hat{y}_i)^2 = \\sum_{i=1}^{n}(y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)^2$`,
+    sectionId: 6,
+    sectionTitle: 'Simple Linear Regression',
+    category: 'Linear Regression',
+    type: 'definition',
+  },
+  {
+    id: 'def-ols-estimators',
+    title: 'OLS Coefficient Estimators',
+    statement: `The least squares coefficient estimates are: $\\hat{\\beta}_1 = \\frac{\\sum_{i=1}^{n}(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum_{i=1}^{n}(x_i - \\bar{x})^2}$ and $\\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x}$`,
+    sectionId: 6,
+    sectionTitle: 'Simple Linear Regression',
+    category: 'Linear Regression',
+    type: 'definition',
+  },
+  {
+    id: 'def-rse',
+    title: 'Residual Standard Error (RSE)',
+    statement: `$\\text{RSE} = \\sqrt{\\frac{1}{n-2}\\text{RSS}} = \\sqrt{\\frac{1}{n-2}\\sum_{i=1}^{n}(y_i - \\hat{y}_i)^2}$`,
+    sectionId: 6,
+    sectionTitle: 'Simple Linear Regression',
+    category: 'Linear Regression',
+    type: 'definition',
+  },
+  {
+    id: 'def-r-squared',
+    title: 'R-squared (Coefficient of Determination)',
+    statement: `$R^2 = \\frac{\\text{TSS} - \\text{RSS}}{\\text{TSS}} = 1 - \\frac{\\text{RSS}}{\\text{TSS}}$ where $\\text{TSS} = \\sum(y_i - \\bar{y})^2$. It measures the proportion of variance explained by the model.`,
+    sectionId: 6,
+    sectionTitle: 'Simple Linear Regression',
+    category: 'Linear Regression',
+    type: 'definition',
+  },
+  {
+    id: 'def-multiple-regression',
+    title: 'Multiple Linear Regression',
+    statement: `$Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\epsilon$ where each $\\beta_j$ represents the average effect on $Y$ of a one unit increase in $X_j$, holding all other predictors fixed.`,
+    sectionId: 7,
+    sectionTitle: 'Multiple Linear Regression',
+    category: 'Linear Regression',
+    type: 'definition',
+  },
+  {
+    id: 'def-f-statistic',
+    title: 'F-Statistic',
+    statement: `$F = \\frac{(\\text{TSS} - \\text{RSS})/p}{\\text{RSS}/(n-p-1)}$ tests $H_0: \\beta_1 = \\beta_2 = \\cdots = \\beta_p = 0$ versus $H_a$: at least one $\\beta_j$ is non-zero.`,
+    sectionId: 7,
+    sectionTitle: 'Multiple Linear Regression',
+    category: 'Linear Regression',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 4: Classification
+  // ===========================================================================
+  {
+    id: 'def-logistic-function',
+    title: 'Logistic Function',
+    statement: `$p(X) = \\frac{e^{\\beta_0 + \\beta_1 X}}{1 + e^{\\beta_0 + \\beta_1 X}}$ models the probability that $Y = 1$ given $X$, ensuring $0 \\leq p(X) \\leq 1$.`,
+    sectionId: 14,
+    sectionTitle: 'Logistic Regression',
+    category: 'Classification',
+    type: 'definition',
+  },
+  {
+    id: 'def-odds',
+    title: 'Odds',
+    statement: `$\\text{odds} = \\frac{p(X)}{1 - p(X)} = e^{\\beta_0 + \\beta_1 X}$. Odds can range from 0 to $\\infty$, with values close to 0 indicating very low probability and very high values indicating high probability.`,
+    sectionId: 14,
+    sectionTitle: 'Logistic Regression',
+    category: 'Classification',
+    type: 'definition',
+  },
+  {
+    id: 'def-log-odds',
+    title: 'Log-Odds (Logit)',
+    statement: `$\\log\\left(\\frac{p(X)}{1 - p(X)}\\right) = \\beta_0 + \\beta_1 X$. The logit is linear in $X$, so increasing $X$ by one unit changes the log-odds by $\\beta_1$.`,
+    sectionId: 14,
+    sectionTitle: 'Logistic Regression',
+    category: 'Classification',
+    type: 'definition',
+  },
+  {
+    id: 'def-lda',
+    title: 'Linear Discriminant Analysis (LDA)',
+    statement: `LDA models the distribution of $X$ within each class as normal with a class-specific mean $\\mu_k$ and common variance $\\sigma^2$, then uses Bayes' theorem to classify observations.`,
+    sectionId: 15,
+    sectionTitle: 'Generative Models for Classification',
+    category: 'Classification',
+    type: 'definition',
+  },
+  {
+    id: 'def-qda',
+    title: 'Quadratic Discriminant Analysis (QDA)',
+    statement: `QDA is similar to LDA but assumes each class has its own covariance matrix $\\Sigma_k$, resulting in quadratic decision boundaries.`,
+    sectionId: 15,
+    sectionTitle: 'Generative Models for Classification',
+    category: 'Classification',
+    type: 'definition',
+  },
+  {
+    id: 'def-naive-bayes',
+    title: 'Naive Bayes Classifier',
+    statement: `Naive Bayes assumes features are independent within each class: $f_k(x) = \\prod_{j=1}^{p} f_{kj}(x_j)$, greatly simplifying estimation.`,
+    sectionId: 15,
+    sectionTitle: 'Generative Models for Classification',
+    category: 'Classification',
+    type: 'definition',
+  },
+  {
+    id: 'def-sensitivity-specificity',
+    title: 'Sensitivity and Specificity',
+    statement: `Sensitivity = $\\frac{\\text{TP}}{\\text{TP} + \\text{FN}}$ (true positive rate). Specificity = $\\frac{\\text{TN}}{\\text{TN} + \\text{FP}}$ (true negative rate).`,
+    sectionId: 16,
+    sectionTitle: 'Comparison of Classification Methods',
+    category: 'Classification',
+    type: 'definition',
+  },
+  {
+    id: 'def-roc-auc',
+    title: 'ROC Curve and AUC',
+    statement: `The ROC curve plots sensitivity (true positive rate) vs. 1 - specificity (false positive rate) for all classification thresholds. AUC (area under the curve) summarizes overall classifier performance.`,
+    sectionId: 16,
+    sectionTitle: 'Comparison of Classification Methods',
+    category: 'Classification',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 5: Resampling Methods
+  // ===========================================================================
+  {
+    id: 'def-cross-validation',
+    title: 'Cross-Validation',
+    statement: `Cross-validation estimates test error by repeatedly holding out a subset of training observations, fitting the model on the remaining data, and calculating prediction error on the held-out data.`,
+    sectionId: 20,
+    sectionTitle: 'Cross-Validation',
+    category: 'Resampling',
+    type: 'definition',
+  },
+  {
+    id: 'def-loocv',
+    title: 'Leave-One-Out Cross-Validation (LOOCV)',
+    statement: `LOOCV uses a single observation as the validation set and the remaining $n-1$ observations as training set, repeated for each observation. $\\text{CV}_{(n)} = \\frac{1}{n}\\sum_{i=1}^{n}\\text{MSE}_i$`,
+    sectionId: 20,
+    sectionTitle: 'Cross-Validation',
+    category: 'Resampling',
+    type: 'definition',
+  },
+  {
+    id: 'def-k-fold-cv',
+    title: 'K-Fold Cross-Validation',
+    statement: `Divide observations into $k$ groups (folds). For each fold, treat it as validation set and train on remaining $k-1$ folds. $\\text{CV}_{(k)} = \\frac{1}{k}\\sum_{i=1}^{k}\\text{MSE}_i$`,
+    sectionId: 20,
+    sectionTitle: 'Cross-Validation',
+    category: 'Resampling',
+    type: 'definition',
+  },
+  {
+    id: 'def-bootstrap',
+    title: 'Bootstrap',
+    statement: `The bootstrap obtains distinct data sets by repeatedly sampling $n$ observations from the original data with replacement. Each bootstrap sample can be used to estimate variability of a statistic.`,
+    sectionId: 21,
+    sectionTitle: 'The Bootstrap',
+    category: 'Resampling',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 6: Model Selection and Regularization
+  // ===========================================================================
+  {
+    id: 'def-best-subset-selection',
+    title: 'Best Subset Selection',
+    statement: `Fit all $2^p$ possible models containing subsets of the $p$ predictors, then select the best model using cross-validated prediction error, AIC, BIC, or adjusted $R^2$.`,
+    sectionId: 24,
+    sectionTitle: 'Subset Selection',
+    category: 'Model Selection',
+    type: 'definition',
+  },
+  {
+    id: 'def-forward-stepwise',
+    title: 'Forward Stepwise Selection',
+    statement: `Start with null model, then repeatedly add the predictor that provides the greatest additional improvement to the fit, until all predictors are in the model.`,
+    sectionId: 24,
+    sectionTitle: 'Subset Selection',
+    category: 'Model Selection',
+    type: 'definition',
+  },
+  {
+    id: 'def-aic-bic',
+    title: 'AIC and BIC',
+    statement: `AIC $= \\frac{1}{n\\hat{\\sigma}^2}(\\text{RSS} + 2d\\hat{\\sigma}^2)$. BIC $= \\frac{1}{n}(\\text{RSS} + \\log(n)d\\hat{\\sigma}^2)$. BIC penalizes model complexity more heavily.`,
+    sectionId: 24,
+    sectionTitle: 'Subset Selection',
+    category: 'Model Selection',
+    type: 'definition',
+  },
+  {
+    id: 'def-ridge-regression',
+    title: 'Ridge Regression',
+    statement: `Ridge regression minimizes $\\sum_{i=1}^{n}(y_i - \\beta_0 - \\sum_{j=1}^{p}\\beta_j x_{ij})^2 + \\lambda\\sum_{j=1}^{p}\\beta_j^2$ where $\\lambda \\geq 0$ is the tuning parameter controlling the shrinkage penalty.`,
+    sectionId: 25,
+    sectionTitle: 'Shrinkage Methods',
+    category: 'Regularization',
+    type: 'definition',
+  },
+  {
+    id: 'def-lasso',
+    title: 'The Lasso',
+    statement: `The lasso minimizes $\\sum_{i=1}^{n}(y_i - \\beta_0 - \\sum_{j=1}^{p}\\beta_j x_{ij})^2 + \\lambda\\sum_{j=1}^{p}|\\beta_j|$. Unlike ridge, lasso can force coefficients exactly to zero, performing variable selection.`,
+    sectionId: 25,
+    sectionTitle: 'Shrinkage Methods',
+    category: 'Regularization',
+    type: 'definition',
+  },
+  {
+    id: 'def-elastic-net',
+    title: 'Elastic Net',
+    statement: `Elastic net combines ridge and lasso penalties: $\\lambda\\sum_{j=1}^{p}(\\alpha\\beta_j^2 + (1-\\alpha)|\\beta_j|)$ where $\\alpha \\in [0,1]$ controls the mix.`,
+    sectionId: 25,
+    sectionTitle: 'Shrinkage Methods',
+    category: 'Regularization',
+    type: 'definition',
+  },
+  {
+    id: 'def-pca',
+    title: 'Principal Components Analysis (PCA)',
+    statement: `PCA finds linear combinations $Z_m = \\sum_{j=1}^{p}\\phi_{jm}X_j$ that capture maximum variance, subject to orthogonality constraints. The first PC has largest variance, second PC has second largest, etc.`,
+    sectionId: 26,
+    sectionTitle: 'Dimension Reduction Methods',
+    category: 'Dimension Reduction',
+    type: 'definition',
+  },
+  {
+    id: 'def-pcr',
+    title: 'Principal Components Regression (PCR)',
+    statement: `PCR regresses $Y$ on $Z_1, \\ldots, Z_M$ where $M < p$ principal components are used. This reduces variance at the cost of potentially introducing bias.`,
+    sectionId: 26,
+    sectionTitle: 'Dimension Reduction Methods',
+    category: 'Dimension Reduction',
+    type: 'definition',
+  },
+  {
+    id: 'def-pls',
+    title: 'Partial Least Squares (PLS)',
+    statement: `PLS finds linear combinations $Z_m$ that have high correlation with $Y$ as well as high variance. Unlike PCR, PLS uses the response when computing directions.`,
+    sectionId: 26,
+    sectionTitle: 'Dimension Reduction Methods',
+    category: 'Dimension Reduction',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 7: Moving Beyond Linearity
+  // ===========================================================================
+  {
+    id: 'def-polynomial-regression',
+    title: 'Polynomial Regression',
+    statement: `$y_i = \\beta_0 + \\beta_1 x_i + \\beta_2 x_i^2 + \\cdots + \\beta_d x_i^d + \\epsilon_i$ extends linear regression by including polynomial terms of the predictors.`,
+    sectionId: 30,
+    sectionTitle: 'Polynomial and Step Functions',
+    category: 'Non-linear Methods',
+    type: 'definition',
+  },
+  {
+    id: 'def-step-function',
+    title: 'Step Function',
+    statement: `Step functions break the range of $X$ into bins and fit a constant in each bin: $y_i = \\beta_0 + \\beta_1 C_1(x_i) + \\cdots + \\beta_K C_K(x_i) + \\epsilon_i$ where $C_k(x)$ are indicator functions.`,
+    sectionId: 30,
+    sectionTitle: 'Polynomial and Step Functions',
+    category: 'Non-linear Methods',
+    type: 'definition',
+  },
+  {
+    id: 'def-spline',
+    title: 'Spline',
+    statement: `A spline of degree $d$ with knots at $\\xi_1, \\ldots, \\xi_K$ is a piecewise polynomial of degree $d$ that is continuous and has continuous derivatives up to order $d-1$ at each knot.`,
+    sectionId: 31,
+    sectionTitle: 'Splines',
+    category: 'Non-linear Methods',
+    type: 'definition',
+  },
+  {
+    id: 'def-natural-spline',
+    title: 'Natural Spline',
+    statement: `A natural spline is a regression spline with additional boundary constraints requiring the function to be linear beyond the boundary knots. This reduces variance at the boundaries.`,
+    sectionId: 31,
+    sectionTitle: 'Splines',
+    category: 'Non-linear Methods',
+    type: 'definition',
+  },
+  {
+    id: 'def-smoothing-spline',
+    title: 'Smoothing Spline',
+    statement: `A smoothing spline minimizes $\\sum_{i=1}^{n}(y_i - g(x_i))^2 + \\lambda\\int g''(t)^2 dt$ where $\\lambda$ controls the smoothness penalty.`,
+    sectionId: 32,
+    sectionTitle: 'Smoothing Splines and Local Regression',
+    category: 'Non-linear Methods',
+    type: 'definition',
+  },
+  {
+    id: 'def-gam',
+    title: 'Generalized Additive Model (GAM)',
+    statement: `$y_i = \\beta_0 + f_1(x_{i1}) + f_2(x_{i2}) + \\cdots + f_p(x_{ip}) + \\epsilon_i$ where each $f_j$ is a smooth non-linear function, allowing flexible relationships while maintaining additivity.`,
+    sectionId: 33,
+    sectionTitle: 'Generalized Additive Models',
+    category: 'Non-linear Methods',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 8: Tree-Based Methods
+  // ===========================================================================
+  {
+    id: 'def-decision-tree',
+    title: 'Decision Tree',
+    statement: `A decision tree recursively partitions the feature space into regions $R_1, \\ldots, R_J$ and predicts the same value for all observations in a region (mean for regression, mode for classification).`,
+    sectionId: 36,
+    sectionTitle: 'The Basics of Decision Trees',
+    category: 'Trees',
+    type: 'definition',
+  },
+  {
+    id: 'def-recursive-binary-splitting',
+    title: 'Recursive Binary Splitting',
+    statement: `At each step, select the predictor $X_j$ and cutpoint $s$ that minimize RSS: $\\sum_{i: x_i \\in R_1}(y_i - \\hat{y}_{R_1})^2 + \\sum_{i: x_i \\in R_2}(y_i - \\hat{y}_{R_2})^2$`,
+    sectionId: 36,
+    sectionTitle: 'The Basics of Decision Trees',
+    category: 'Trees',
+    type: 'algorithm',
+  },
+  {
+    id: 'def-gini-index',
+    title: 'Gini Index',
+    statement: `$G = \\sum_{k=1}^{K}\\hat{p}_{mk}(1 - \\hat{p}_{mk})$ measures node purity. $G$ is small when node is pure (contains mostly observations from one class).`,
+    sectionId: 36,
+    sectionTitle: 'The Basics of Decision Trees',
+    category: 'Trees',
+    type: 'definition',
+  },
+  {
+    id: 'def-entropy',
+    title: 'Entropy (Classification)',
+    statement: `$D = -\\sum_{k=1}^{K}\\hat{p}_{mk}\\log\\hat{p}_{mk}$ is an alternative to Gini for measuring node impurity. Like Gini, entropy is small when node is pure.`,
+    sectionId: 36,
+    sectionTitle: 'The Basics of Decision Trees',
+    category: 'Trees',
+    type: 'definition',
+  },
+  {
+    id: 'def-pruning',
+    title: 'Cost Complexity Pruning',
+    statement: `For each $\\alpha \\geq 0$, find subtree $T$ minimizing $\\sum_{m=1}^{|T|}\\sum_{i: x_i \\in R_m}(y_i - \\hat{y}_{R_m})^2 + \\alpha|T|$ where $|T|$ is number of terminal nodes.`,
+    sectionId: 36,
+    sectionTitle: 'The Basics of Decision Trees',
+    category: 'Trees',
+    type: 'definition',
+  },
+  {
+    id: 'def-bagging',
+    title: 'Bagging (Bootstrap Aggregation)',
+    statement: `Generate $B$ bootstrap samples, fit a tree to each, and average predictions: $\\hat{f}_{\\text{bag}}(x) = \\frac{1}{B}\\sum_{b=1}^{B}\\hat{f}^{*b}(x)$. This reduces variance.`,
+    sectionId: 37,
+    sectionTitle: 'Bagging, Random Forests, Boosting, and BART',
+    category: 'Ensemble Methods',
+    type: 'definition',
+  },
+  {
+    id: 'def-oob-error',
+    title: 'Out-of-Bag (OOB) Error',
+    statement: `Each bagged tree uses ~2/3 of observations. The remaining 1/3 (out-of-bag) can be used to estimate test error without cross-validation.`,
+    sectionId: 37,
+    sectionTitle: 'Bagging, Random Forests, Boosting, and BART',
+    category: 'Ensemble Methods',
+    type: 'definition',
+  },
+  {
+    id: 'def-random-forest',
+    title: 'Random Forest',
+    statement: `Like bagging, but at each split only a random subset of $m \\approx \\sqrt{p}$ predictors is considered. This decorrelates trees, reducing variance further.`,
+    sectionId: 37,
+    sectionTitle: 'Bagging, Random Forests, Boosting, and BART',
+    category: 'Ensemble Methods',
+    type: 'definition',
+  },
+  {
+    id: 'def-boosting',
+    title: 'Boosting',
+    statement: `Trees are grown sequentially: each tree is fit to the residuals from the previous trees. The final prediction is $\\hat{f}(x) = \\sum_{b=1}^{B}\\lambda\\hat{f}^b(x)$ where $\\lambda$ is a shrinkage parameter.`,
+    sectionId: 37,
+    sectionTitle: 'Bagging, Random Forests, Boosting, and BART',
+    category: 'Ensemble Methods',
+    type: 'definition',
+  },
+  {
+    id: 'def-variable-importance',
+    title: 'Variable Importance',
+    statement: `For bagged/RF trees, importance is measured by total decrease in RSS (regression) or Gini (classification) from splits on that variable, averaged over all trees.`,
+    sectionId: 37,
+    sectionTitle: 'Bagging, Random Forests, Boosting, and BART',
+    category: 'Ensemble Methods',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 9: Support Vector Machines
+  // ===========================================================================
+  {
+    id: 'def-hyperplane',
+    title: 'Hyperplane',
+    statement: `In $p$-dimensional space, a hyperplane is a $(p-1)$-dimensional flat subspace defined by $\\beta_0 + \\beta_1 X_1 + \\cdots + \\beta_p X_p = 0$.`,
+    sectionId: 40,
+    sectionTitle: 'Maximal Margin and Support Vector Classifiers',
+    category: 'SVM',
+    type: 'definition',
+  },
+  {
+    id: 'def-maximal-margin-classifier',
+    title: 'Maximal Margin Classifier',
+    statement: `The maximal margin classifier finds the hyperplane that has the largest perpendicular distance (margin) to the nearest training observations (support vectors).`,
+    sectionId: 40,
+    sectionTitle: 'Maximal Margin and Support Vector Classifiers',
+    category: 'SVM',
+    type: 'definition',
+  },
+  {
+    id: 'def-support-vector-classifier',
+    title: 'Support Vector Classifier (Soft Margin)',
+    statement: `Allows some observations to be on wrong side of margin or hyperplane, controlled by tuning parameter $C$. Larger $C$ = wider margin, more violations allowed.`,
+    sectionId: 40,
+    sectionTitle: 'Maximal Margin and Support Vector Classifiers',
+    category: 'SVM',
+    type: 'definition',
+  },
+  {
+    id: 'def-svm',
+    title: 'Support Vector Machine',
+    statement: `SVM extends the support vector classifier using kernels to handle non-linear boundaries: $f(x) = \\beta_0 + \\sum_{i \\in S}\\alpha_i K(x, x_i)$ where $K$ is a kernel function.`,
+    sectionId: 41,
+    sectionTitle: 'Support Vector Machines',
+    category: 'SVM',
+    type: 'definition',
+  },
+  {
+    id: 'def-kernel',
+    title: 'Kernel',
+    statement: `A kernel $K(x_i, x_{i'})$ quantifies similarity between observations. Common kernels: linear, polynomial $K(x_i, x_{i'}) = (1 + \\sum_{j=1}^p x_{ij}x_{i'j})^d$, radial (Gaussian).`,
+    sectionId: 41,
+    sectionTitle: 'Support Vector Machines',
+    category: 'SVM',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 10: Deep Learning
+  // ===========================================================================
+  {
+    id: 'def-neural-network',
+    title: 'Neural Network',
+    statement: `A neural network computes $f(X) = \\beta_0 + \\sum_{k=1}^{K}\\beta_k g(w_{k0} + \\sum_{j=1}^{p}w_{kj}X_j)$ where $g$ is an activation function and hidden units learn features from data.`,
+    sectionId: 45,
+    sectionTitle: 'Single and Multilayer Neural Networks',
+    category: 'Deep Learning',
+    type: 'definition',
+  },
+  {
+    id: 'def-activation-function',
+    title: 'Activation Function',
+    statement: `Common activations: sigmoid $\\sigma(v) = \\frac{1}{1+e^{-v}}$, ReLU $g(z) = \\max(0, z)$, and softmax for multi-class output.`,
+    sectionId: 45,
+    sectionTitle: 'Single and Multilayer Neural Networks',
+    category: 'Deep Learning',
+    type: 'definition',
+  },
+  {
+    id: 'def-hidden-layer',
+    title: 'Hidden Layer',
+    statement: `Hidden layers are intermediate layers between input and output. Deep networks have multiple hidden layers, enabling hierarchical feature learning.`,
+    sectionId: 45,
+    sectionTitle: 'Single and Multilayer Neural Networks',
+    category: 'Deep Learning',
+    type: 'definition',
+  },
+  {
+    id: 'def-backpropagation',
+    title: 'Backpropagation',
+    statement: `Backpropagation computes gradients of the loss with respect to weights by applying the chain rule layer by layer from output to input, enabling gradient descent optimization.`,
+    sectionId: 48,
+    sectionTitle: 'Fitting Neural Networks',
+    category: 'Deep Learning',
+    type: 'algorithm',
+  },
+  {
+    id: 'def-dropout',
+    title: 'Dropout',
+    statement: `Dropout randomly sets a fraction of hidden units to zero during training. This prevents co-adaptation and acts as regularization.`,
+    sectionId: 48,
+    sectionTitle: 'Fitting Neural Networks',
+    category: 'Deep Learning',
+    type: 'definition',
+  },
+  {
+    id: 'def-cnn',
+    title: 'Convolutional Neural Network (CNN)',
+    statement: `CNNs use convolutional layers that apply filters (kernels) to local regions of the input, learning translation-invariant features for image data.`,
+    sectionId: 46,
+    sectionTitle: 'Convolutional Neural Networks',
+    category: 'Deep Learning',
+    type: 'definition',
+  },
+  {
+    id: 'def-rnn',
+    title: 'Recurrent Neural Network (RNN)',
+    statement: `RNNs have connections that loop back, allowing information to persist across sequence steps. Variants like LSTM handle long-term dependencies.`,
+    sectionId: 47,
+    sectionTitle: 'Recurrent Neural Networks',
+    category: 'Deep Learning',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 11: Survival Analysis
+  // ===========================================================================
+  {
+    id: 'def-survival-time',
+    title: 'Survival Time',
+    statement: `The survival time $T$ is the time until an event of interest (death, failure, etc.) occurs. We observe $(Y_i, \\delta_i)$ where $Y_i = \\min(T_i, C_i)$ and $\\delta_i$ indicates if event was observed.`,
+    sectionId: 51,
+    sectionTitle: 'Survival and Censoring',
+    category: 'Survival Analysis',
+    type: 'definition',
+  },
+  {
+    id: 'def-censoring',
+    title: 'Censoring',
+    statement: `Censoring occurs when we don't observe the exact survival time. Right censoring: event hasn't occurred by end of study. Left censoring: event occurred before observation began.`,
+    sectionId: 51,
+    sectionTitle: 'Survival and Censoring',
+    category: 'Survival Analysis',
+    type: 'definition',
+  },
+  {
+    id: 'def-survival-function',
+    title: 'Survival Function',
+    statement: `$S(t) = \\Pr(T > t)$ gives the probability of surviving past time $t$. $S(t)$ is non-increasing with $S(0) = 1$ and $\\lim_{t \\to \\infty} S(t) = 0$.`,
+    sectionId: 51,
+    sectionTitle: 'Survival and Censoring',
+    category: 'Survival Analysis',
+    type: 'definition',
+  },
+  {
+    id: 'def-hazard-function',
+    title: 'Hazard Function',
+    statement: `$h(t) = \\lim_{\\Delta t \\to 0}\\frac{\\Pr(t < T \\leq t + \\Delta t | T > t)}{\\Delta t}$ is the instantaneous rate of event occurrence given survival to time $t$.`,
+    sectionId: 51,
+    sectionTitle: 'Survival and Censoring',
+    category: 'Survival Analysis',
+    type: 'definition',
+  },
+  {
+    id: 'def-kaplan-meier',
+    title: 'Kaplan-Meier Estimator',
+    statement: `$\\hat{S}(t) = \\prod_{j: t_j \\leq t}\\left(1 - \\frac{d_j}{r_j}\\right)$ where $d_j$ is number of events at time $t_j$ and $r_j$ is number at risk just before $t_j$.`,
+    sectionId: 51,
+    sectionTitle: 'Survival and Censoring',
+    category: 'Survival Analysis',
+    type: 'definition',
+  },
+  {
+    id: 'def-log-rank-test',
+    title: 'Log-Rank Test',
+    statement: `The log-rank test compares survival curves between groups by testing whether the hazard functions are equal across groups.`,
+    sectionId: 51,
+    sectionTitle: 'Survival and Censoring',
+    category: 'Survival Analysis',
+    type: 'definition',
+  },
+  {
+    id: 'def-cox-model',
+    title: 'Cox Proportional Hazards Model',
+    statement: `$h(t|x) = h_0(t)\\exp(\\beta_1 x_1 + \\cdots + \\beta_p x_p)$ where $h_0(t)$ is the baseline hazard. The hazard ratio $\\exp(\\beta_j)$ is constant over time.`,
+    sectionId: 52,
+    sectionTitle: 'Regression Models with Survival Response',
+    category: 'Survival Analysis',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 12: Unsupervised Learning
+  // ===========================================================================
+  {
+    id: 'def-unsupervised-learning',
+    title: 'Unsupervised Learning',
+    statement: `Unsupervised learning involves learning from data without a response variable. Goals include finding subgroups (clustering) or patterns (dimension reduction).`,
+    sectionId: 55,
+    sectionTitle: 'Principal Components Analysis',
+    category: 'Unsupervised',
+    type: 'definition',
+  },
+  {
+    id: 'def-pca-loading',
+    title: 'PCA Loadings',
+    statement: `The loadings $\\phi_{1}, \\ldots, \\phi_p$ define the first PC direction: $Z_1 = \\phi_{11}X_1 + \\cdots + \\phi_{p1}X_p$ subject to $\\sum_{j=1}^p \\phi_{j1}^2 = 1$.`,
+    sectionId: 55,
+    sectionTitle: 'Principal Components Analysis',
+    category: 'Unsupervised',
+    type: 'definition',
+  },
+  {
+    id: 'def-pca-scores',
+    title: 'PCA Scores',
+    statement: `The scores $z_{i1}, \\ldots, z_{in}$ are the projections of observations onto the PC direction. The first PC scores have the largest sample variance.`,
+    sectionId: 55,
+    sectionTitle: 'Principal Components Analysis',
+    category: 'Unsupervised',
+    type: 'definition',
+  },
+  {
+    id: 'def-proportion-variance-explained',
+    title: 'Proportion of Variance Explained (PVE)',
+    statement: `$\\text{PVE}_m = \\frac{\\sum_{i=1}^n z_{im}^2}{\\sum_{j=1}^p \\sum_{i=1}^n x_{ij}^2}$ measures how much of the total variance is captured by the $m$th principal component.`,
+    sectionId: 55,
+    sectionTitle: 'Principal Components Analysis',
+    category: 'Unsupervised',
+    type: 'definition',
+  },
+  {
+    id: 'def-k-means',
+    title: 'K-Means Clustering',
+    statement: `K-means partitions observations into $K$ clusters to minimize within-cluster variation: $\\min_{C_1,\\ldots,C_K}\\sum_{k=1}^K W(C_k)$ where $W(C_k) = \\frac{1}{|C_k|}\\sum_{i,i' \\in C_k}\\sum_{j=1}^p (x_{ij} - x_{i'j})^2$.`,
+    sectionId: 56,
+    sectionTitle: 'Clustering Methods',
+    category: 'Clustering',
+    type: 'definition',
+  },
+  {
+    id: 'alg-k-means',
+    title: 'K-Means Algorithm',
+    statement: `1. Randomly assign observations to clusters. 2. Compute cluster centroids. 3. Assign each observation to cluster with nearest centroid. 4. Repeat 2-3 until assignments stop changing.`,
+    sectionId: 56,
+    sectionTitle: 'Clustering Methods',
+    category: 'Clustering',
+    type: 'algorithm',
+  },
+  {
+    id: 'def-hierarchical-clustering',
+    title: 'Hierarchical Clustering',
+    statement: `Hierarchical clustering produces a tree-like dendrogram showing nested clusters. Bottom-up (agglomerative): start with $n$ clusters and merge. Top-down (divisive): start with 1 cluster and split.`,
+    sectionId: 56,
+    sectionTitle: 'Clustering Methods',
+    category: 'Clustering',
+    type: 'definition',
+  },
+  {
+    id: 'def-linkage',
+    title: 'Linkage',
+    statement: `Linkage defines distance between clusters: complete (max pairwise distance), single (min), average, or centroid. Choice affects dendrogram shape.`,
+    sectionId: 56,
+    sectionTitle: 'Clustering Methods',
+    category: 'Clustering',
+    type: 'definition',
+  },
+  {
+    id: 'def-dendrogram',
+    title: 'Dendrogram',
+    statement: `A dendrogram is a tree diagram showing the hierarchical relationship between clusters. Height indicates dissimilarity at which clusters merge.`,
+    sectionId: 56,
+    sectionTitle: 'Clustering Methods',
+    category: 'Clustering',
+    type: 'definition',
+  },
+
+  // ===========================================================================
+  // Chapter 13: Multiple Testing
+  // ===========================================================================
+  {
+    id: 'def-null-hypothesis',
+    title: 'Null Hypothesis',
+    statement: `The null hypothesis $H_0$ represents no effect or no difference. We compute a test statistic and p-value to assess evidence against $H_0$.`,
+    sectionId: 59,
+    sectionTitle: 'Hypothesis Testing Review',
+    category: 'Multiple Testing',
+    type: 'definition',
+  },
+  {
+    id: 'def-type-i-ii-errors',
+    title: 'Type I and Type II Errors',
+    statement: `Type I error: rejecting $H_0$ when it's true (false positive). Type II error: failing to reject $H_0$ when it's false (false negative). Power = 1 - Type II error rate.`,
+    sectionId: 59,
+    sectionTitle: 'Hypothesis Testing Review',
+    category: 'Multiple Testing',
+    type: 'definition',
+  },
+  {
+    id: 'def-p-value',
+    title: 'P-value',
+    statement: `The p-value is the probability of observing a test statistic at least as extreme as the one observed, assuming $H_0$ is true. Small p-values indicate evidence against $H_0$.`,
+    sectionId: 59,
+    sectionTitle: 'Hypothesis Testing Review',
+    category: 'Multiple Testing',
+    type: 'definition',
+  },
+  {
+    id: 'def-fwer',
+    title: 'Family-Wise Error Rate (FWER)',
+    statement: `FWER = $\\Pr(\\text{at least one Type I error})$. When testing $m$ hypotheses at level $\\alpha$, FWER can be much larger than $\\alpha$.`,
+    sectionId: 60,
+    sectionTitle: 'Family-Wise Error Rate and False Discovery Rate',
+    category: 'Multiple Testing',
+    type: 'definition',
+  },
+  {
+    id: 'def-bonferroni',
+    title: 'Bonferroni Correction',
+    statement: `Reject $H_{0j}$ if $p_j < \\alpha/m$. This controls FWER at level $\\alpha$ but can be very conservative when $m$ is large.`,
+    sectionId: 60,
+    sectionTitle: 'Family-Wise Error Rate and False Discovery Rate',
+    category: 'Multiple Testing',
+    type: 'definition',
+  },
+  {
+    id: 'def-holm',
+    title: 'Holm Step-Down Procedure',
+    statement: `Sort p-values: $p_{(1)} \\leq \\cdots \\leq p_{(m)}$. Reject $H_{0(j)}$ if $p_{(j)} < \\alpha/(m-j+1)$ for all $j \\leq L$, where $L$ is first index where condition fails.`,
+    sectionId: 60,
+    sectionTitle: 'Family-Wise Error Rate and False Discovery Rate',
+    category: 'Multiple Testing',
+    type: 'definition',
+  },
+  {
+    id: 'def-fdr',
+    title: 'False Discovery Rate (FDR)',
+    statement: `FDR = $E\\left[\\frac{V}{R}\\right]$ where $V$ is false positives and $R$ is total rejections ($V/R = 0$ if $R = 0$). FDR is less stringent than FWER.`,
+    sectionId: 60,
+    sectionTitle: 'Family-Wise Error Rate and False Discovery Rate',
+    category: 'Multiple Testing',
+    type: 'definition',
+  },
+  {
+    id: 'def-benjamini-hochberg',
+    title: 'Benjamini-Hochberg Procedure',
+    statement: `Sort p-values and find largest $j$ such that $p_{(j)} \\leq j \\cdot q/m$. Reject all $H_{0(i)}$ for $i \\leq j$. This controls FDR at level $q$.`,
+    sectionId: 60,
+    sectionTitle: 'Family-Wise Error Rate and False Discovery Rate',
+    category: 'Multiple Testing',
+    type: 'definition',
   },
 ];
+
+// =============================================================================
+// HELPER FUNCTIONS
+// =============================================================================
 
 export function getTheoremsByCategory(category: string): TheoremEntry[] {
   return theorems.filter((t) => t.category === category);
@@ -55,6 +878,10 @@ export function getTheoremsByCategory(category: string): TheoremEntry[] {
 
 export function getTheoremsBySection(sectionId: number): TheoremEntry[] {
   return theorems.filter((t) => t.sectionId === sectionId);
+}
+
+export function getTheoremsByType(type: TheoremEntry['type']): TheoremEntry[] {
+  return theorems.filter((t) => t.type === type);
 }
 
 export function getCategories(): string[] {
@@ -66,6 +893,11 @@ export function searchTheorems(query: string): TheoremEntry[] {
   return theorems.filter(
     (t) =>
       t.title.toLowerCase().includes(lowerQuery) ||
-      t.statement.toLowerCase().includes(lowerQuery)
+      t.statement.toLowerCase().includes(lowerQuery) ||
+      t.category?.toLowerCase().includes(lowerQuery)
   );
+}
+
+export function getTheoremById(id: string): TheoremEntry | undefined {
+  return theorems.find((t) => t.id === id);
 }
