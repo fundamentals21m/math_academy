@@ -25,7 +25,7 @@ export default function Section05() {
 
       <Definition title="Convergence of a Sequence">
         <p>
-          A sequence <Math>(a_n)</Math> converges to <Math>L \in \mathbb{R}</Math> if:
+          A sequence <Math>{"(a_n)"}</Math> converges to <Math>{"L \\in \\mathbb{R}"}</Math> if:
         </p>
         <MathBlock>
           {`\\forall \\varepsilon > 0, \\exists N \\in \\mathbb{N}: n > N \\Rightarrow |a_n - L| < \\varepsilon`}

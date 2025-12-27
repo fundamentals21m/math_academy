@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
-import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
+import { Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section02Quiz } from '@/data/quizzes';
 

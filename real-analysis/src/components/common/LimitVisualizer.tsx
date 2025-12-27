@@ -1,8 +1,8 @@
-import React, { useState, useCallback } from 'react';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { useState } from 'react';
+import { MathBlock } from '@/components/common/MathBlock';
 
 interface LimitVisualizerProps {
-  function: (x: number) => number;
+  func: (x: number) => number;
   limitValue: number;
   a: number;
   functionName?: string;

@@ -18,7 +18,7 @@ export default function Section13() {
 
       <Definition title="Partition">
         <p>
-          A partition <Math>P</Math> of <Math>[a, b]</Math> is a finite set of points:
+          A partition <Math>{"P"}</Math> of <Math>{"[a, b]"}</Math> is a finite set of points:
         </p>
         <MathBlock>
           {`P = \\{a = x_0 < x_1 < \\cdots < x_n = b\\}`}
@@ -26,27 +26,27 @@ export default function Section13() {
       </Definition>
 
       <Definition title="Upper and Lower Sums">
-        <p>For a bounded function <Math>f</Math> on <Math>[a, b]</Math> and partition <Math>P</Math>:</p>
+        <p>For a bounded function <Math>{"f"}</Math> on <Math>{"[a, b]"}</Math> and partition <Math>{"P"}</Math>:</p>
         <MathBlock>
           {`U(f, P) = \\sum_{i=1}^n M_i \\Delta x_i, \\quad L(f, P) = \\sum_{i=1}^n m_i \\Delta x_i`}
         </MathBlock>
-        <p>where <Math>M_i = \sup f</Math> and <Math>m_i = \inf f</Math> on <Math>[x_{i-1}, x_i]</Math>.</p>
+        <p>where <Math>{"M_i = \\sup f"}</Math> and <Math>{"m_i = \\inf f"}</Math> on <Math>{"[x_{i-1}, x_i]"}</Math>.</p>
       </Definition>
 
       <Definition title="Riemann Integrable">
         <p>
-          A bounded function <Math>f</Math> is Riemann integrable on <Math>[a, b]</Math> if:
+          A bounded function <Math>{"f"}</Math> is Riemann integrable on <Math>{"[a, b]"}</Math> if:
         </p>
         <MathBlock>
           {`\\sup_P L(f, P) = \\inf_P U(f, P)`}
         </MathBlock>
-        <p>The common value is <Math>\int_a^b f</Math>.</p>
+        <p>The common value is <Math>{"\\int_a^b f"}</Math>.</p>
       </Definition>
 
       <Theorem title="Riemann's Criterion">
         <p>
-          <Math>f</Math> is integrable iff for every <Math>{"\\varepsilon > 0"}</Math>, there exists
-          a partition <Math>P</Math> with <Math>{"U(f, P) - L(f, P) < \\varepsilon"}</Math>.
+          <Math>{"f"}</Math> is integrable iff for every <Math>{"\\varepsilon > 0"}</Math>, there exists
+          a partition <Math>{"P"}</Math> with <Math>{"U(f, P) - L(f, P) < \\varepsilon"}</Math>.
         </p>
       </Theorem>
 

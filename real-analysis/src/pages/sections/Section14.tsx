@@ -20,8 +20,8 @@ export default function Section14() {
 
       <Theorem title="First Fundamental Theorem of Calculus">
         <p>
-          Let <Math>f</Math> be continuous on <Math>[a, b]</Math>. Define <Math>F(x) = \int_a^x f(t)\,dt</Math>.
-          Then <Math>F</Math> is differentiable on <Math>(a, b)</Math> and:
+          Let <Math>{"f"}</Math> be continuous on <Math>{"[a, b]"}</Math>. Define <Math>{"F(x) = \\int_a^x f(t)\\,dt"}</Math>.
+          Then <Math>{"F"}</Math> is differentiable on <Math>{"(a, b)"}</Math> and:
         </p>
         <MathBlock>
           {`F'(x) = f(x)`}
@@ -29,16 +29,16 @@ export default function Section14() {
       </Theorem>
 
       <Callout type="info">
-        <strong>Interpretation:</strong> The integral function <Math>F</Math> is an antiderivative
-        of the integrand <Math>f</Math>. Differentiation undoes integration.
+        <strong>Interpretation:</strong> The integral function <Math>{"F"}</Math> is an antiderivative
+        of the integrand <Math>{"f"}</Math>. Differentiation undoes integration.
       </Callout>
 
       <h3>Second Fundamental Theorem</h3>
 
       <Theorem title="Second Fundamental Theorem of Calculus">
         <p>
-          If <Math>f</Math> is continuous on <Math>[a, b]</Math> and <Math>F</Math> is any antiderivative
-          of <Math>f</Math> (i.e., <Math>F' = f</Math>), then:
+          If <Math>{"f"}</Math> is continuous on <Math>{"[a, b]"}</Math> and <Math>{"F"}</Math> is any antiderivative
+          of <Math>{"f"}</Math> (i.e., <Math>{"F' = f"}</Math>), then:
         </p>
         <MathBlock>
           {`\\int_a^b f(x)\\,dx = F(b) - F(a)`}
@@ -46,8 +46,8 @@ export default function Section14() {
       </Theorem>
 
       <Example title="Computing Integrals">
-        <p>To evaluate <Math>\int_0^1 x^2\,dx</Math>:</p>
-        <p>An antiderivative of <Math>x^2</Math> is <Math>F(x) = x^3/3</Math>.</p>
+        <p>To evaluate <Math>{"\\int_0^1 x^2\\,dx"}</Math>:</p>
+        <p>An antiderivative of <Math>{"x^2"}</Math> is <Math>{"F(x) = x^3/3"}</Math>.</p>
         <MathBlock>
           {`\\int_0^1 x^2\\,dx = F(1) - F(0) = \\frac{1}{3} - 0 = \\frac{1}{3}`}
         </MathBlock>
@@ -57,7 +57,7 @@ export default function Section14() {
 
       <Theorem title="Leibniz Rule">
         <p>
-          If <Math>F(x) = \int_{'{a(x)}'}^{'{b(x)}'} f(t)\,dt</Math> with differentiable limits:
+          If <Math>{"F(x) = \\int_{a(x)}^{b(x)} f(t)\\,dt"}</Math> with differentiable limits:
         </p>
         <MathBlock>
           {`F'(x) = f(b(x)) \\cdot b'(x) - f(a(x)) \\cdot a'(x)`}
@@ -66,9 +66,9 @@ export default function Section14() {
 
       <Definition title="Absolute Continuity">
         <p>
-          A function <Math>F</Math> is absolutely continuous on <Math>[a, b]</Math> if for every
-          <Math>\varepsilon {'>'} 0</Math> there exists <Math>\delta {'>'} 0</Math> such that for any
-          finite collection of disjoint intervals <Math>(a_k, b_k)</Math> with total length <Math>{'<'} \delta</Math>:
+          A function <Math>{"F"}</Math> is absolutely continuous on <Math>{"[a, b]"}</Math> if for every
+          <Math>{"\\varepsilon > 0"}</Math> there exists <Math>{"\\delta > 0"}</Math> such that for any
+          finite collection of disjoint intervals <Math>{"(a_k, b_k)"}</Math> with total length <Math>{"< \\delta"}</Math>:
         </p>
         <MathBlock>
           {`\\sum |F(b_k) - F(a_k)| < \\varepsilon`}
@@ -77,7 +77,7 @@ export default function Section14() {
 
       <Callout type="important">
         <strong>Generalization:</strong> The FTC holds in full generality for absolutely continuous functions:
-        <Math>F</Math> is absolutely continuous iff <Math>F(x) = F(a) + \int_a^x F'(t)\,dt</Math>.
+        <Math>{"F"}</Math> is absolutely continuous iff <Math>{"F(x) = F(a) + \\int_a^x F'(t)\\,dt"}</Math>.
       </Callout>
 
       <Example title="Cantor Function">
