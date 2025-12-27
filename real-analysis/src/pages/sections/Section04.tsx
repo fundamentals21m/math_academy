@@ -4,7 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { Math, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { RiemannVisualizer } from '@/components/common/RiemannVisualizer';
-import { section04Questions } from '@/data/quizzes';
+import { section04Quiz } from '@/data/quizzes';
 
 export default function Section04() {
   return (
@@ -133,7 +133,7 @@ export default function Section04() {
 
       <SectionQuiz
         sectionId={4}
-        questions={section04Questions}
+        questions={section04Quiz}
         title="Functions and Relations Quiz"
       />
     </LessonLayout>

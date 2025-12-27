@@ -42,9 +42,9 @@ export default function Section11() {
       <Theorem title="Algebra of Derivatives">
         <p>If <Math>f</Math> and <Math>g</Math> are differentiable at <Math>c</Math>:</p>
         <ul className="list-disc list-inside space-y-2 mt-4">
-          <li><Math>(f + g)'(c) = f'(c) + g'(c)</Math></li>
-          <li><Math>(f \cdot g)'(c) = f'(c)g(c) + f(c)g'(c)</Math> (Product Rule)</li>
-          <li><Math>(f/g)'(c) = \frac{f'(c)g(c) - f(c)g'(c)}{g(c)^2}</Math> if <Math>g(c) \neq 0</Math></li>
+          <li><Math>{"(f + g)'(c) = f'(c) + g'(c)"}</Math></li>
+          <li><Math>{"(f \\cdot g)'(c) = f'(c)g(c) + f(c)g'(c)"}</Math> (Product Rule)</li>
+          <li><Math>{"(f/g)'(c) = \\frac{f'(c)g(c) - f(c)g'(c)}{g(c)^2}"}</Math> if <Math>g(c) \neq 0</Math></li>
         </ul>
       </Theorem>
 

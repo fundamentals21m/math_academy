@@ -17,7 +17,7 @@ export default function Section09() {
 
       <Definition title="Limit of a Function">
         <p>
-          We say <Math>\lim_{x \to c} f(x) = L</Math> if:
+          We say <Math>{"\\lim_{x \\to c} f(x) = L"}</Math> if:
         </p>
         <MathBlock>
           {`\\forall \\varepsilon > 0, \\exists \\delta > 0: 0 < |x - c| < \\delta \\Rightarrow |f(x) - L| < \\varepsilon`}
@@ -31,8 +31,8 @@ export default function Section09() {
 
       <Theorem title="Sequential Characterization">
         <p>
-          <Math>\lim_{x \to c} f(x) = L</Math> if and only if for every sequence <Math>(x_n)</Math>
-          with <Math>x_n \to c</Math> and <Math>x_n \neq c</Math>, we have <Math>f(x_n) \to L</Math>.
+          <Math>{"\\lim_{x \\to c} f(x) = L"}</Math> if and only if for every sequence <Math>(x_n)</Math>
+          with <Math>{"x_n \\to c"}</Math> and <Math>x_n \neq c</Math>, we have <Math>{"f(x_n) \\to L"}</Math>.
         </p>
       </Theorem>
 
@@ -45,7 +45,7 @@ export default function Section09() {
         <MathBlock>
           {`\\lim_{x \\to c} f(x) = f(c)`}
         </MathBlock>
-        <p>Equivalently, <Math>\forall \varepsilon > 0, \exists \delta > 0: |x - c| &lt; \delta \Rightarrow |f(x) - f(c)| &lt; \varepsilon</Math>.</p>
+        <p>Equivalently, <Math>{"\\forall \\varepsilon > 0, \\exists \\delta > 0: |x - c| < \\delta \\Rightarrow |f(x) - f(c)| < \\varepsilon"}</Math>.</p>
       </Definition>
 
       <Example title="Discontinuous Function">

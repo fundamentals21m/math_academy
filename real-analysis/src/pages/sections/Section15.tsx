@@ -34,7 +34,7 @@ export default function Section15() {
         <MathBlock>
           {`\\forall \\varepsilon > 0, \\exists N: n > N \\Rightarrow \\sup_{x \\in S} |f_n(x) - f(x)| < \\varepsilon`}
         </MathBlock>
-        <p>Equivalently, <Math>\|f_n - f\|_\infty \to 0</Math>.</p>
+        <p>Equivalently, <Math>{"\\|f_n - f\\|_\\infty \\to 0"}</Math>.</p>
       </Definition>
 
       <Example title="Non-Uniform Convergence">
@@ -49,14 +49,14 @@ export default function Section15() {
 
       <Theorem title="Uniform Limit of Continuous Functions">
         <p>
-          If <Math>(f_n)</Math> are continuous and <Math>f_n \to f</Math> uniformly, then <Math>f</Math>
+          If <Math>(f_n)</Math> are continuous and <Math>{"f_n \\to f"}</Math> uniformly, then <Math>f</Math>
           is continuous.
         </p>
       </Theorem>
 
       <Theorem title="Integration of Uniform Limit">
         <p>
-          If <Math>f_n \to f</Math> uniformly on <Math>[a, b]</Math>, then:
+          If <Math>{"f_n \\to f"}</Math> uniformly on <Math>[a, b]</Math>, then:
         </p>
         <MathBlock>
           {`\\int_a^b f = \\lim_{n \\to \\infty} \\int_a^b f_n`}
@@ -65,7 +65,7 @@ export default function Section15() {
 
       <Theorem title="Differentiation of Limit">
         <p>
-          If <Math>f_n \to f</Math> pointwise, <Math>f_n' \to g</Math> uniformly, and each <Math>f_n</Math>
+          If <Math>{"f_n \\to f"}</Math> pointwise, <Math>{"f_n' \\to g"}</Math> uniformly, and each <Math>f_n</Math>
           is differentiable, then <Math>f' = g</Math>.
         </p>
       </Theorem>

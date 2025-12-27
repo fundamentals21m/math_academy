@@ -18,8 +18,8 @@ export default function Section05() {
 
       <Definition title="Sequence">
         <p>
-          A sequence is a function <Math>a: \mathbb{N} \to \mathbb{R}</Math>. We write <Math>a_n</Math> for <Math>a(n)</Math>
-          and denote the sequence as <Math>(a_n)</Math> or <Math>\{a_n\}_{n=1}^\infty</Math>.
+          A sequence is a function <Math>{"a: \\mathbb{N} \\to \\mathbb{R}"}</Math>. We write <Math>a_n</Math> for <Math>a(n)</Math>
+          and denote the sequence as <Math>(a_n)</Math> or <Math>{"\\{a_n\\}_{n=1}^\\infty"}</Math>.
         </p>
       </Definition>
 
@@ -30,7 +30,7 @@ export default function Section05() {
         <MathBlock>
           {`\\forall \\varepsilon > 0, \\exists N \\in \\mathbb{N}: n > N \\Rightarrow |a_n - L| < \\varepsilon`}
         </MathBlock>
-        <p>We write <Math>\lim_{n \to \infty} a_n = L</Math> or <Math>a_n \to L</Math>.</p>
+        <p>We write <Math>{"\\lim_{n \\to \\infty} a_n = L"}</Math> or <Math>{"a_n \\to L"}</Math>.</p>
       </Definition>
 
       <Callout type="info">
@@ -60,9 +60,9 @@ export default function Section05() {
       </Theorem>
 
       <Example title="Convergent Sequence">
-        <p>Show that <Math>\lim_{n \to \infty} \frac{1}{n} = 0</Math>.</p>
+        <p>Show that <Math>{"\\lim_{n \\to \\infty} \\frac{1}{n} = 0"}</Math>.</p>
         <p className="mt-2">
-          Given <Math>\varepsilon > 0</Math>, choose <Math>N > 1/\varepsilon</Math>. Then for <Math>n > N</Math>:
+          Given <Math>{"\\varepsilon > 0"}</Math>, choose <Math>{"N > 1/\\varepsilon"}</Math>. Then for <Math>{"n > N"}</Math>:
         </p>
         <MathBlock>
           {`\\left| \\frac{1}{n} - 0 \\right| = \\frac{1}{n} < \\frac{1}{N} < \\varepsilon`}

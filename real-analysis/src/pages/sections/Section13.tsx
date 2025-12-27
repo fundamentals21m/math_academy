@@ -45,8 +45,8 @@ export default function Section13() {
 
       <Theorem title="Riemann's Criterion">
         <p>
-          <Math>f</Math> is integrable iff for every <Math>\varepsilon > 0</Math>, there exists
-          a partition <Math>P</Math> with <Math>U(f, P) - L(f, P) &lt; \varepsilon</Math>.
+          <Math>f</Math> is integrable iff for every <Math>{"\\varepsilon > 0"}</Math>, there exists
+          a partition <Math>P</Math> with <Math>{"U(f, P) - L(f, P) < \\varepsilon"}</Math>.
         </p>
       </Theorem>
 
