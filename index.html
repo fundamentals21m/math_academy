@@ -23,17 +23,25 @@
       appId: "1:***REMOVED***:web:072f6cb1724919360f94cb"
     };
 
+    // Firebase app instance (singleton)
+    let firebaseApp = null;
+
     // Make functions available globally
     window.loadLeaderboard = async function() {
       const tableEl = document.getElementById('leaderboard-table');
       const statusEl = document.getElementById('leaderboard-status');
 
       try {
-        const app = initializeApp(firebaseConfig);
-        const functions = getFunctions(app);
+        statusEl.textContent = 'Loading...';
+
+        // Initialize Firebase only once
+        if (!firebaseApp) {
+          firebaseApp = initializeApp(firebaseConfig);
+        }
+
+        const functions = getFunctions(firebaseApp);
         const getLeaderboard = httpsCallable(functions, 'getLeaderboard');
 
-        statusEl.textContent = 'Fetching...';
         const result = await getLeaderboard({ courseId: 'overall', limit: 10 });
         const rankings = result.data.rankings || [];
 
@@ -41,10 +49,11 @@
           tableEl.innerHTML = `
             <div style="padding: 3rem; text-align: center; color: #64748b;">
               <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
-              <p>No rankings yet. Be the first!</p>
+              <p style="margin-bottom: 0.5rem;">No rankings yet!</p>
+              <p style="font-size: 0.875rem;">Be the first - start a course and connect with Nostr.</p>
             </div>
           `;
-          statusEl.textContent = 'No data';
+          statusEl.textContent = 'Refresh';
           return;
         }
 
@@ -53,32 +62,38 @@
         rankings.forEach((entry, index) => {
           const rank = index + 1;
           const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
-          const name = entry.displayName || entry.npub?.slice(0, 12) + '...' || 'Anonymous';
-          const xp = entry.totalXP?.toLocaleString() || '0';
+          const displayName = entry.displayName || null;
+          const npub = entry.npub || 'Unknown';
+          const xp = (entry.xp || entry.totalXP || 0).toLocaleString();
+          const level = entry.level || 1;
 
           html += `
             <div style="display: flex; align-items: center; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); ${rank <= 3 ? 'background: rgba(251, 191, 36, 0.05);' : ''}">
-              <div style="width: 40px; font-weight: 700; color: ${rank <= 3 ? '#fbbf24' : '#64748b'};">
+              <div style="width: 50px; font-weight: 700; color: ${rank <= 3 ? '#fbbf24' : '#64748b'}; font-size: 1.1rem;">
                 ${medal || '#' + rank}
               </div>
-              <div style="flex: 1; color: #f1f5f9; font-weight: 500;">${name}</div>
-              <div style="color: #fbbf24; font-weight: 600;">${xp} XP</div>
+              <div style="flex: 1; min-width: 0;">
+                ${displayName ? `<div style="color: #f1f5f9; font-weight: 500;">${displayName}</div>` : ''}
+                <div style="color: ${displayName ? '#64748b' : '#f1f5f9'}; font-size: ${displayName ? '0.7rem' : '0.8rem'}; font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${npub}</div>
+                <div style="color: #64748b; font-size: 0.75rem;">Level ${level}</div>
+              </div>
+              <div style="color: #fbbf24; font-weight: 600; font-size: 1.1rem; white-space: nowrap; margin-left: 1rem;">${xp} XP</div>
             </div>
           `;
         });
 
         tableEl.innerHTML = html;
-        statusEl.textContent = 'Updated just now';
+        statusEl.textContent = 'Refresh';
       } catch (error) {
         console.error('Leaderboard error:', error);
         tableEl.innerHTML = `
           <div style="padding: 3rem; text-align: center; color: #64748b;">
             <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
-            <p style="margin-bottom: 1rem;">Visit any course leaderboard to see rankings</p>
-            <p style="font-size: 0.75rem; color: #475569;">Connect with Nostr to join the competition</p>
+            <p style="margin-bottom: 0.5rem;">Could not load leaderboard</p>
+            <p style="font-size: 0.875rem;">Check out course leaderboards below for rankings.</p>
           </div>
         `;
-        statusEl.textContent = 'View in courses';
+        statusEl.textContent = 'Retry';
       }
     };
 
@@ -487,7 +502,9 @@
       <div class="card" style="padding: 0; overflow: hidden; margin-top: 1.5rem;">
         <div style="padding: 1.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
           <h3 style="margin: 0; color: #f1f5f9; font-size: 1.25rem;">Top Learners</h3>
-          <span id="leaderboard-status" style="font-size: 0.75rem; color: #64748b;">Loading...</span>
+          <button onclick="window.loadLeaderboard()" style="font-size: 0.75rem; color: #64748b; background: none; border: 1px solid #374151; padding: 0.25rem 0.75rem; border-radius: 4px; cursor: pointer;" id="leaderboard-refresh">
+            <span id="leaderboard-status">Refresh</span>
+          </button>
         </div>
 
         <div id="leaderboard-table" style="min-height: 200px;">
@@ -497,6 +514,11 @@
             <p style="margin-bottom: 1rem;">Loading leaderboard...</p>
           </div>
         </div>
+      </div>
+
+      <!-- Connect prompt -->
+      <div class="callout callout-info" style="margin-top: 1.5rem;">
+        <strong>Want to join the leaderboard?</strong> Visit any course above and click "Connect with Nostr" to sync your progress and compete!
       </div>
 
       <!-- Course Leaderboard Links -->
