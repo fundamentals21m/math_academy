@@ -198,11 +198,35 @@ See `books/README.md` for detailed instructions.
 
 ## Common Tasks
 
+### Deploying to GitHub Pages Hub
+
+**CRITICAL**: Courses deployed to GitHub Pages (math_academy repo) MUST use the correct base path.
+
+The base path must be `/math_academy/{deploy-dir}/` (NOT just `/{deploy-dir}/`).
+
+**Use the deploy script** to build and deploy safely:
+```bash
+./scripts/deploy-to-hub.sh abstract-algebra aa
+./scripts/deploy-to-hub.sh basic-algebra ba
+```
+
+The script will:
+1. Verify `vite.config.ts` has the correct base path
+2. Build the course
+3. Copy to the deploy directory
+4. Verify the built files have correct paths
+
+**Manual verification**: Check `{deploy-dir}/index.html` contains `/math_academy/{deploy-dir}/assets/`:
+```bash
+grep "math_academy" aa/index.html  # Should show /math_academy/aa/assets/...
+```
+
 ### New Course
 1. Copy `course-template/` to new dir
 2. Update `src/config/course.ts`, `vite.config.ts`
 3. Define `curriculum.ts`, create sections, add quizzes
 4. If using book source: add chunks to `books/` and create symlink
+5. **For GitHub Pages deployment**: Set `base: '/math_academy/{deploy-dir}/'` in `vite.config.ts`
 
 ### New Section
 1. Add to `curriculum.ts`
