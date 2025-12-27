@@ -22,10 +22,10 @@ export default function Section07() {
         title="Ratio Test"
         proof={
           <>
-            <p className="mb-3">If L &lt; 1, choose r with L &lt; r &lt; 1. For large n: |aₙ₊₁/aₙ| &lt; r.</p>
-            <p className="mb-3">Then |aₙ| &lt; |aₙ| · rᴺ⁻ⁿ for n ≥ N, so Σ|aₙ| converges by comparison with geometric series Σrⁿ.</p>
-            <p className="mb-3">If L &gt; 1, then |aₙ₊₁| &gt; |aₙ| for large n, so aₙ ↛ 0, and the series diverges by the divergence test.</p>
-            <p className="mb-3">When L = 1: both Σ1/n (diverges) and Σ1/n² (converges) have ratio limit 1.</p>
+            <p className="mb-3">If <Math>{`L < 1`}</Math>, choose <Math>{`r`}</Math> with <Math>{`L < r < 1`}</Math>. For large <Math>{`n`}</Math>: <Math>{`|a_{n+1}/a_n| < r`}</Math>.</p>
+            <p className="mb-3">Then <Math>{`|a_n| < |a_N| \\cdot r^{n-N}`}</Math> for <Math>{`n \\geq N`}</Math>, so <Math>{`\\sum |a_n|`}</Math> converges by comparison with geometric series <Math>{`\\sum r^n`}</Math>.</p>
+            <p className="mb-3">If <Math>{`L > 1`}</Math>, then <Math>{`|a_{n+1}| > |a_n|`}</Math> for large <Math>{`n`}</Math>, so <Math>{`a_n \\not\\to 0`}</Math>, and the series diverges by the divergence test.</p>
+            <p className="mb-3">When <Math>{`L = 1`}</Math>: both <Math>{`\\sum 1/n`}</Math> (diverges) and <Math>{`\\sum 1/n^2`}</Math> (converges) have ratio limit 1.</p>
           </>
         }
       >
@@ -46,9 +46,9 @@ export default function Section07() {
         title="Root Test"
         proof={
           <>
-            <p className="mb-3">If L &lt; 1, choose r with L &lt; r &lt; 1. Then |aₙ|^(1/n) &lt; r for all large n, so |aₙ| &lt; rⁿ.</p>
-            <p className="mb-3">By comparison with Σrⁿ (geometric, converges since r &lt; 1), Σ|aₙ| converges.</p>
-            <p className="mb-3">If L &gt; 1, then |aₙ|^(1/n) &gt; 1 infinitely often, so |aₙ| &gt; 1 infinitely often. Thus aₙ ↛ 0 and series diverges.</p>
+            <p className="mb-3">If <Math>{`L < 1`}</Math>, choose <Math>{`r`}</Math> with <Math>{`L < r < 1`}</Math>. Then <Math>{`|a_n|^{1/n} < r`}</Math> for all large <Math>{`n`}</Math>, so <Math>{`|a_n| < r^n`}</Math>.</p>
+            <p className="mb-3">By comparison with <Math>{`\\sum r^n`}</Math> (geometric, converges since <Math>{`r < 1`}</Math>), <Math>{`\\sum |a_n|`}</Math> converges.</p>
+            <p className="mb-3">If <Math>{`L > 1`}</Math>, then <Math>{`|a_n|^{1/n} > 1`}</Math> infinitely often, so <Math>{`|a_n| > 1`}</Math> infinitely often. Thus <Math>{`a_n \\not\\to 0`}</Math> and series diverges.</p>
             <p className="mb-3">The root test uses limsup, making it slightly more powerful than the ratio test in some cases.</p>
           </>
         }
@@ -78,11 +78,11 @@ export default function Section07() {
         title="Alternating Series Test (Leibniz)"
         proof={
           <>
-            <p className="mb-3">Consider partial sums sₙ = a₁ - a₂ + a₃ - ... ± aₙ.</p>
-            <p className="mb-3">The even partial sums s₂ₙ = (a₁ - a₂) + (a₃ - a₄) + ... are increasing (each parenthesis ≥ 0).</p>
-            <p className="mb-3">Also s₂ₙ = a₁ - (a₂ - a₃) - (a₄ - a₅) - ... ≤ a₁, so (s₂ₙ) is bounded above.</p>
-            <p className="mb-3">By Monotone Convergence, s₂ₙ → S for some S. Since s₂ₙ₊₁ = s₂ₙ + a₂ₙ₊₁ and a₂ₙ₊₁ → 0, s₂ₙ₊₁ → S also.</p>
-            <p className="mb-3">Therefore sₙ → S.</p>
+            <p className="mb-3">Consider partial sums <Math>{`s_n = a_1 - a_2 + a_3 - \\cdots \\pm a_n`}</Math>.</p>
+            <p className="mb-3">The even partial sums <Math>{`s_{2n} = (a_1 - a_2) + (a_3 - a_4) + \\cdots`}</Math> are increasing (each parenthesis <Math>{`\\geq 0`}</Math>).</p>
+            <p className="mb-3">Also <Math>{`s_{2n} = a_1 - (a_2 - a_3) - (a_4 - a_5) - \\cdots \\leq a_1`}</Math>, so <Math>{`(s_{2n})`}</Math> is bounded above.</p>
+            <p className="mb-3">By Monotone Convergence, <Math>{`s_{2n} \\to S`}</Math> for some <Math>{`S`}</Math>. Since <Math>{`s_{2n+1} = s_{2n} + a_{2n+1}`}</Math> and <Math>{`a_{2n+1} \\to 0`}</Math>, <Math>{`s_{2n+1} \\to S`}</Math> also.</p>
+            <p className="mb-3">Therefore <Math>{`s_n \\to S`}</Math>.</p>
           </>
         }
       >
@@ -116,9 +116,9 @@ export default function Section07() {
         title="Absolute Convergence Implies Convergence"
         proof={
           <>
-            <p className="mb-3">Define aₙ⁺ = max(aₙ, 0) and aₙ⁻ = max(-aₙ, 0). Then aₙ = aₙ⁺ - aₙ⁻ and |aₙ| = aₙ⁺ + aₙ⁻.</p>
-            <p className="mb-3">Since 0 ≤ aₙ⁺ ≤ |aₙ| and 0 ≤ aₙ⁻ ≤ |aₙ|, by comparison both Σaₙ⁺ and Σaₙ⁻ converge.</p>
-            <p className="mb-3">Therefore Σaₙ = Σaₙ⁺ - Σaₙ⁻ converges by algebra of limits for series.</p>
+            <p className="mb-3">Define <Math>{`a_n^+ = \\max(a_n, 0)`}</Math> and <Math>{`a_n^- = \\max(-a_n, 0)`}</Math>. Then <Math>{`a_n = a_n^+ - a_n^-`}</Math> and <Math>{`|a_n| = a_n^+ + a_n^-`}</Math>.</p>
+            <p className="mb-3">Since <Math>{`0 \\leq a_n^+ \\leq |a_n|`}</Math> and <Math>{`0 \\leq a_n^- \\leq |a_n|`}</Math>, by comparison both <Math>{`\\sum a_n^+`}</Math> and <Math>{`\\sum a_n^-`}</Math> converge.</p>
+            <p className="mb-3">Therefore <Math>{`\\sum a_n = \\sum a_n^+ - \\sum a_n^-`}</Math> converges by algebra of limits for series.</p>
           </>
         }
       >

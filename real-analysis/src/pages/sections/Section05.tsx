@@ -44,11 +44,12 @@ export default function Section05() {
         title="Algebra of Limits"
         proof={
           <>
-            <p className="mb-3"><strong>Sum rule:</strong> Given ε &gt; 0, choose N₁ so n &gt; N₁ ⇒ |aₙ - L| &lt; ε/2, and N₂ so n &gt; N₂ ⇒ |bₙ - M| &lt; ε/2.</p>
-            <p className="mb-3">For n &gt; max(N₁, N₂): |(aₙ + bₙ) - (L + M)| ≤ |aₙ - L| + |bₙ - M| &lt; ε/2 + ε/2 = ε.</p>
-            <p className="mb-3"><strong>Product rule:</strong> Write aₙbₙ - LM = aₙ(bₙ - M) + M(aₙ - L). Since (aₙ) is convergent, it's bounded: |aₙ| ≤ K for some K.</p>
-            <p className="mb-3">Given ε &gt; 0, choose N so that |bₙ - M| &lt; ε/(2K) and |aₙ - L| &lt; ε/(2|M| + 1) for n &gt; N.</p>
-            <p className="mb-3">Then |aₙbₙ - LM| ≤ K · ε/(2K) + |M| · ε/(2|M| + 1) &lt; ε.</p>
+            <p className="mb-3"><strong>Sum rule:</strong> Given <Math>{`\\varepsilon > 0`}</Math>, choose <Math>{`N_1`}</Math> so <Math>{`n > N_1 \\Rightarrow |a_n - L| < \\varepsilon/2`}</Math>, and <Math>{`N_2`}</Math> so <Math>{`n > N_2 \\Rightarrow |b_n - M| < \\varepsilon/2`}</Math>.</p>
+            <p className="mb-3">For <Math>{`n > \\max(N_1, N_2)`}</Math>:</p>
+            <MathBlock>{`|(a_n + b_n) - (L + M)| \\leq |a_n - L| + |b_n - M| < \\varepsilon/2 + \\varepsilon/2 = \\varepsilon`}</MathBlock>
+            <p className="mb-3"><strong>Product rule:</strong> Write <Math>{`a_n b_n - LM = a_n(b_n - M) + M(a_n - L)`}</Math>. Since <Math>{`(a_n)`}</Math> is convergent, it's bounded: <Math>{`|a_n| \\leq K`}</Math> for some <Math>{`K`}</Math>.</p>
+            <p className="mb-3">Given <Math>{`\\varepsilon > 0`}</Math>, choose <Math>{`N`}</Math> so that <Math>{`|b_n - M| < \\varepsilon/(2K)`}</Math> and <Math>{`|a_n - L| < \\varepsilon/(2|M| + 1)`}</Math> for <Math>{`n > N`}</Math>.</p>
+            <p className="mb-3">Then <Math>{`|a_n b_n - LM| \\leq K \\cdot \\varepsilon/(2K) + |M| \\cdot \\varepsilon/(2|M| + 1) < \\varepsilon`}</Math>.</p>
           </>
         }
       >
@@ -67,10 +68,11 @@ export default function Section05() {
         title="Squeeze Theorem"
         proof={
           <>
-            <p className="mb-3">Given ε &gt; 0, since aₙ → L, ∃N₁: n &gt; N₁ ⇒ |aₙ - L| &lt; ε, i.e., L - ε &lt; aₙ.</p>
-            <p className="mb-3">Since cₙ → L, ∃N₂: n &gt; N₂ ⇒ |cₙ - L| &lt; ε, i.e., cₙ &lt; L + ε.</p>
-            <p className="mb-3">For n &gt; max(N₁, N₂): L - ε &lt; aₙ ≤ bₙ ≤ cₙ &lt; L + ε.</p>
-            <p className="mb-3">Thus |bₙ - L| &lt; ε, proving bₙ → L.</p>
+            <p className="mb-3">Given <Math>{`\\varepsilon > 0`}</Math>, since <Math>{`a_n \\to L`}</Math>, <Math>{`\\exists N_1: n > N_1 \\Rightarrow |a_n - L| < \\varepsilon`}</Math>, i.e., <Math>{`L - \\varepsilon < a_n`}</Math>.</p>
+            <p className="mb-3">Since <Math>{`c_n \\to L`}</Math>, <Math>{`\\exists N_2: n > N_2 \\Rightarrow |c_n - L| < \\varepsilon`}</Math>, i.e., <Math>{`c_n < L + \\varepsilon`}</Math>.</p>
+            <p className="mb-3">For <Math>{`n > \\max(N_1, N_2)`}</Math>:</p>
+            <MathBlock>{`L - \\varepsilon < a_n \\leq b_n \\leq c_n < L + \\varepsilon`}</MathBlock>
+            <p className="mb-3">Thus <Math>{`|b_n - L| < \\varepsilon`}</Math>, proving <Math>{`b_n \\to L`}</Math>.</p>
           </>
         }
       >
@@ -96,10 +98,10 @@ export default function Section05() {
         title="Monotone Convergence Theorem"
         proof={
           <>
-            <p className="mb-3">Let (aₙ) be increasing and bounded above. Let L = sup&#123;aₙ : n ∈ ℕ&#125;.</p>
-            <p className="mb-3">Given ε &gt; 0, by definition of supremum, ∃N: L - ε &lt; aₙ ≤ L.</p>
-            <p className="mb-3">Since (aₙ) is increasing, for all n &gt; N: L - ε &lt; aₙ ≤ aₙ ≤ L.</p>
-            <p className="mb-3">Thus |aₙ - L| &lt; ε for n &gt; N, so aₙ → L = sup(aₙ).</p>
+            <p className="mb-3">Let <Math>{`(a_n)`}</Math> be increasing and bounded above. Let <Math>{`L = \\sup\\{a_n : n \\in \\mathbb{N}\\}`}</Math>.</p>
+            <p className="mb-3">Given <Math>{`\\varepsilon > 0`}</Math>, by definition of supremum, <Math>{`\\exists N: L - \\varepsilon < a_N \\leq L`}</Math>.</p>
+            <p className="mb-3">Since <Math>{`(a_n)`}</Math> is increasing, for all <Math>{`n > N`}</Math>: <Math>{`L - \\varepsilon < a_N \\leq a_n \\leq L`}</Math>.</p>
+            <p className="mb-3">Thus <Math>{`|a_n - L| < \\varepsilon`}</Math> for <Math>{`n > N`}</Math>, so <Math>{`a_n \\to L = \\sup(a_n)`}</Math>.</p>
             <p className="mb-3">The decreasing case is analogous using infimum.</p>
           </>
         }

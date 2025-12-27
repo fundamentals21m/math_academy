@@ -51,11 +51,11 @@ export default function Section15() {
         title="Uniform Limit of Continuous Functions"
         proof={
           <>
-            <p className="mb-3">Fix c and ε &gt; 0. By uniform convergence, ∃N: |fₙ(x) - f(x)| &lt; ε/3 for all x.</p>
-            <p className="mb-3">Since fₙ is continuous at c, ∃δ: |x - c| &lt; δ ⇒ |fₙ(x) - fₙ(c)| &lt; ε/3.</p>
-            <p className="mb-3">For |x - c| &lt; δ:</p>
-            <p className="mb-3">|f(x) - f(c)| ≤ |f(x) - fₙ(x)| + |fₙ(x) - fₙ(c)| + |fₙ(c) - f(c)| &lt; ε/3 + ε/3 + ε/3 = ε.</p>
-            <p className="mb-3">So f is continuous at c. Since c was arbitrary, f is continuous on S.</p>
+            <p className="mb-3">Fix <Math>{`c`}</Math> and <Math>{`\\varepsilon > 0`}</Math>. By uniform convergence, <Math>{`\\exists N: |f_n(x) - f(x)| < \\varepsilon/3`}</Math> for all <Math>{`x`}</Math>.</p>
+            <p className="mb-3">Since <Math>{`f_N`}</Math> is continuous at <Math>{`c`}</Math>, <Math>{`\\exists \\delta: |x - c| < \\delta \\Rightarrow |f_N(x) - f_N(c)| < \\varepsilon/3`}</Math>.</p>
+            <p className="mb-3">For <Math>{`|x - c| < \\delta`}</Math>:</p>
+            <MathBlock>{`|f(x) - f(c)| \\leq |f(x) - f_N(x)| + |f_N(x) - f_N(c)| + |f_N(c) - f(c)| < \\frac{\\varepsilon}{3} + \\frac{\\varepsilon}{3} + \\frac{\\varepsilon}{3} = \\varepsilon`}</MathBlock>
+            <p className="mb-3">So <Math>{`f`}</Math> is continuous at <Math>{`c`}</Math>. Since <Math>{`c`}</Math> was arbitrary, <Math>{`f`}</Math> is continuous on <Math>{`S`}</Math>.</p>
           </>
         }
       >
@@ -69,10 +69,10 @@ export default function Section15() {
         title="Integration of Uniform Limit"
         proof={
           <>
-            <p className="mb-3">By uniform convergence, given ε &gt; 0, ∃N: |fₙ(x) - f(x)| &lt; ε/(b-a) for all x and n &gt; N.</p>
-            <p className="mb-3">Then: |∫ₐᵇ fₙ - ∫ₐᵇ f| = |∫ₐᵇ (fₙ - f)| ≤ ∫ₐᵇ |fₙ - f|.</p>
-            <p className="mb-3">≤ [ε/(b-a)] · (b-a) = ε for n &gt; N.</p>
-            <p className="mb-3">Therefore lim ∫ₐᵇ fₙ = ∫ₐᵇ f.</p>
+            <p className="mb-3">By uniform convergence, given <Math>{`\\varepsilon > 0`}</Math>, <Math>{`\\exists N: |f_n(x) - f(x)| < \\varepsilon/(b-a)`}</Math> for all <Math>{`x`}</Math> and <Math>{`n > N`}</Math>.</p>
+            <p className="mb-3">Then:</p>
+            <MathBlock>{`\\left|\\int_a^b f_n - \\int_a^b f\\right| = \\left|\\int_a^b (f_n - f)\\right| \\leq \\int_a^b |f_n - f| \\leq \\frac{\\varepsilon}{b-a} \\cdot (b-a) = \\varepsilon`}</MathBlock>
+            <p className="mb-3">for <Math>{`n > N`}</Math>. Therefore <Math>{`\\lim \\int_a^b f_n = \\int_a^b f`}</Math>.</p>
             <p className="mb-3">This justifies exchanging limit and integral under uniform convergence.</p>
           </>
         }
@@ -89,11 +89,11 @@ export default function Section15() {
         title="Differentiation of Limit"
         proof={
           <>
-            <p className="mb-3">By FTC2: fₙ(x) - fₙ(c) = ∫ₓᶜ fₙ'(t) dt for each n.</p>
-            <p className="mb-3">Since fₙ' → g uniformly, by integration of uniform limits:</p>
-            <p className="mb-3">lim[fₙ(x) - fₙ(c)] = lim ∫ₓᶜ fₙ' = ∫ₓᶜ g.</p>
-            <p className="mb-3">The left side equals f(x) - f(c) (pointwise convergence of fₙ).</p>
-            <p className="mb-3">So f(x) - f(c) = ∫ₓᶜ g. By FTC1, f'(x) = g(x).</p>
+            <p className="mb-3">By FTC2: <Math>{`f_n(x) - f_n(c) = \\int_c^x f_n'(t)\\,dt`}</Math> for each <Math>{`n`}</Math>.</p>
+            <p className="mb-3">Since <Math>{`f_n' \\to g`}</Math> uniformly, by integration of uniform limits:</p>
+            <MathBlock>{`\\lim[f_n(x) - f_n(c)] = \\lim \\int_c^x f_n' = \\int_c^x g`}</MathBlock>
+            <p className="mb-3">The left side equals <Math>{`f(x) - f(c)`}</Math> (pointwise convergence of <Math>{`f_n`}</Math>).</p>
+            <p className="mb-3">So <Math>{`f(x) - f(c) = \\int_c^x g`}</Math>. By FTC1, <Math>{`f'(x) = g(x)`}</Math>.</p>
           </>
         }
       >
@@ -114,11 +114,11 @@ export default function Section15() {
         title="Weierstrass M-Test"
         proof={
           <>
-            <p className="mb-3"><strong>Absolute convergence:</strong> For each x, |fₙ(x)| ≤ Mₙ, so Σ|fₙ(x)| ≤ ΣMₙ &lt; ∞.</p>
-            <p className="mb-3"><strong>Uniform convergence:</strong> Let Sₙ(x) = Σₖ₌₁ⁿ fₖ(x) and S(x) = Σfₖ(x).</p>
-            <p className="mb-3">|S(x) - Sₙ(x)| = |Σₖ₌ₙ₊₁^∞ fₖ(x)| ≤ Σₖ₌ₙ₊₁^∞ |fₖ(x)| ≤ Σₖ₌ₙ₊₁^∞ Mₖ.</p>
-            <p className="mb-3">The tail Σₖ₌ₙ₊₁^∞ Mₖ → 0 as n → ∞ (since ΣMₙ converges), independent of x.</p>
-            <p className="mb-3">So supₓ |S(x) - Sₙ(x)| → 0, i.e., Sₙ → S uniformly.</p>
+            <p className="mb-3"><strong>Absolute convergence:</strong> For each <Math>{`x`}</Math>, <Math>{`|f_n(x)| \\leq M_n`}</Math>, so <Math>{`\\sum|f_n(x)| \\leq \\sum M_n < \\infty`}</Math>.</p>
+            <p className="mb-3"><strong>Uniform convergence:</strong> Let <Math>{`S_n(x) = \\sum_{k=1}^n f_k(x)`}</Math> and <Math>{`S(x) = \\sum f_k(x)`}</Math>.</p>
+            <MathBlock>{`|S(x) - S_n(x)| = \\left|\\sum_{k=n+1}^\\infty f_k(x)\\right| \\leq \\sum_{k=n+1}^\\infty |f_k(x)| \\leq \\sum_{k=n+1}^\\infty M_k`}</MathBlock>
+            <p className="mb-3">The tail <Math>{`\\sum_{k=n+1}^\\infty M_k \\to 0`}</Math> as <Math>{`n \\to \\infty`}</Math> (since <Math>{`\\sum M_n`}</Math> converges), independent of <Math>{`x`}</Math>.</p>
+            <p className="mb-3">So <Math>{`\\sup_x |S(x) - S_n(x)| \\to 0`}</Math>, i.e., <Math>{`S_n \\to S`}</Math> uniformly.</p>
           </>
         }
       >

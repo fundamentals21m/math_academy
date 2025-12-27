@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
+import { Math, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section03Quiz } from '@/data/quizzes';
 
@@ -25,9 +26,9 @@ export default function Section03() {
         title="Basic Properties of Finite Sets"
         proof={
           <>
-            <p className="mb-3"><strong>Subset of finite set:</strong> Let S have n elements and T ⊆ S. Define an injection T → S (the inclusion). Since S is finite, T has at most n elements, hence is finite.</p>
-            <p className="mb-3"><strong>Union:</strong> Let |A| = m and |B| = n. Then |A ∪ B| ≤ |A| + |B| = m + n, a finite number. More precisely, |A ∪ B| = |A| + |B| - |A ∩ B|.</p>
-            <p className="mb-3"><strong>Cartesian product:</strong> If |A| = m and |B| = n, then A × B has exactly mn elements (each of m elements in A pairs with each of n elements in B).</p>
+            <p className="mb-3"><strong>Subset of finite set:</strong> Let <Math>{`S`}</Math> have <Math>{`n`}</Math> elements and <Math>{`T \\subseteq S`}</Math>. Define an injection <Math>{`T \\to S`}</Math> (the inclusion). Since <Math>{`S`}</Math> is finite, <Math>{`T`}</Math> has at most <Math>{`n`}</Math> elements, hence is finite.</p>
+            <p className="mb-3"><strong>Union:</strong> Let <Math>{`|A| = m`}</Math> and <Math>{`|B| = n`}</Math>. Then <Math>{`|A \\cup B| \\leq |A| + |B| = m + n`}</Math>, a finite number. More precisely, <Math>{`|A \\cup B| = |A| + |B| - |A \\cap B|`}</Math>.</p>
+            <p className="mb-3"><strong>Cartesian product:</strong> If <Math>{`|A| = m`}</Math> and <Math>{`|B| = n`}</Math>, then <Math>{`A \\times B`}</Math> has exactly <Math>{`mn`}</Math> elements.</p>
           </>
         }
       >
@@ -56,8 +57,8 @@ export default function Section03() {
         title="Countable Sets"
         proof={
           <>
-            <p className="mb-3"><strong>ℤ is countable:</strong> Define f: ℕ → ℤ by f(n) = n/2 if n is even, f(n) = -(n+1)/2 if n is odd. This gives 0, -1, 1, -2, 2, -3, 3, ... which is a bijection.</p>
-            <p className="mb-3"><strong>ℚ is countable:</strong> List positive rationals in a grid with p/q at row p, column q. Traverse diagonally: 1/1, 1/2, 2/1, 1/3, 2/2, 3/1, ... skipping duplicates. This enumerates all positive rationals. Include negatives similarly.</p>
+            <p className="mb-3"><strong><Math>{`\\mathbb{Z}`}</Math> is countable:</strong> Define <Math>{`f: \\mathbb{N} \\to \\mathbb{Z}`}</Math> by <Math>{`f(n) = n/2`}</Math> if <Math>{`n`}</Math> is even, <Math>{`f(n) = -(n+1)/2`}</Math> if <Math>{`n`}</Math> is odd. This gives <Math>{`0, -1, 1, -2, 2, -3, 3, \\ldots`}</Math> which is a bijection.</p>
+            <p className="mb-3"><strong><Math>{`\\mathbb{Q}`}</Math> is countable:</strong> List positive rationals in a grid with <Math>{`p/q`}</Math> at row <Math>{`p`}</Math>, column <Math>{`q`}</Math>. Traverse diagonally: <Math>{`1/1, 1/2, 2/1, 1/3, \\ldots`}</Math> skipping duplicates. This enumerates all positive rationals.</p>
             <p className="mb-3">Key insight: A countable union of countable sets is countable (using a diagonal argument).</p>
           </>
         }
@@ -71,11 +72,11 @@ export default function Section03() {
         title="The Real Numbers are Uncountable"
         proof={
           <>
-            <p className="mb-3"><strong>Cantor's Diagonal Argument:</strong> Suppose (0,1) is countable. Then we can list all reals in (0,1) as r₁, r₂, r₃, ...</p>
-            <p className="mb-3">Write each rₙ in decimal: rₙ = 0.dₙ₁dₙ₂dₙ₃... (avoiding representations ending in all 9s).</p>
-            <p className="mb-3">Construct x = 0.x₁x₂x₃... where xₙ = 5 if dₙₙ ≠ 5, and xₙ = 6 if dₙₙ = 5.</p>
-            <p className="mb-3">Then x differs from rₙ in the n-th decimal place for all n. So x ∉ &#123;r₁, r₂, ...&#125;.</p>
-            <p className="mb-3">Contradiction! So (0,1) is uncountable, hence ℝ is uncountable.</p>
+            <p className="mb-3"><strong>Cantor's Diagonal Argument:</strong> Suppose <Math>{`(0,1)`}</Math> is countable. Then we can list all reals in <Math>{`(0,1)`}</Math> as <Math>{`r_1, r_2, r_3, \\ldots`}</Math></p>
+            <p className="mb-3">Write each <Math>{`r_n`}</Math> in decimal: <Math>{`r_n = 0.d_{n1}d_{n2}d_{n3}\\ldots`}</Math> (avoiding representations ending in all 9s).</p>
+            <p className="mb-3">Construct <Math>{`x = 0.x_1x_2x_3\\ldots`}</Math> where <Math>{`x_n = 5`}</Math> if <Math>{`d_{nn} \\neq 5`}</Math>, and <Math>{`x_n = 6`}</Math> if <Math>{`d_{nn} = 5`}</Math>.</p>
+            <p className="mb-3">Then <Math>{`x`}</Math> differs from <Math>{`r_n`}</Math> in the <Math>{`n`}</Math>-th decimal place for all <Math>{`n`}</Math>. So <Math>{`x \\notin \\{r_1, r_2, \\ldots\\}`}</Math>.</p>
+            <p className="mb-3">Contradiction! So <Math>{`(0,1)`}</Math> is uncountable, hence <Math>{`\\mathbb{R}`}</Math> is uncountable.</p>
           </>
         }
       >
@@ -110,8 +111,8 @@ export default function Section03() {
         title="Continuum Hypothesis"
         proof={
           <>
-            <p className="mb-3"><strong>Independence:</strong> Kurt Gödel (1940) showed CH is consistent with ZFC by constructing the constructible universe L where CH holds.</p>
-            <p className="mb-3">Paul Cohen (1963) showed ¬CH is also consistent with ZFC using forcing, constructing models where 2^ℵ₀ can be arbitrarily large.</p>
+            <p className="mb-3"><strong>Independence:</strong> Kurt Gödel (1940) showed CH is consistent with ZFC by constructing the constructible universe <Math>{`L`}</Math> where CH holds.</p>
+            <p className="mb-3">Paul Cohen (1963) showed <Math>{`\\neg`}</Math>CH is also consistent with ZFC using forcing, constructing models where <Math>{`2^{\\aleph_0}`}</Math> can be arbitrarily large.</p>
             <p className="mb-3">Therefore CH can neither be proved nor disproved from ZFC axioms alone - it is independent.</p>
             <p className="mb-3">This was one of the most important results in 20th century logic, showing fundamental limitations of axiomatic set theory.</p>
           </>
