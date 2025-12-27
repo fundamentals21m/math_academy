@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/hub.css">
+
   <!-- Firebase SDK -->
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
@@ -106,167 +108,30 @@
       window.loadLeaderboard();
     }
   </script>
-  <style>
-    .courses-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
 
-    .course-card {
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
-      border: 1px solid rgba(99, 102, 241, 0.2);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
+  <!-- Hub Renderer -->
+  <script type="module">
+    import { renderCourseHub, renderLeaderboardLinks, getCourseCount } from './scripts/hubRenderer.js';
+    import { renderProgressDashboard } from './scripts/progressDashboard.js';
 
-    .course-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(99, 102, 241, 0.4);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+      // Render course sections
+      renderCourseHub('courses-container');
 
-    .course-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
+      // Render progress dashboard
+      renderProgressDashboard('progress-dashboard');
 
-    .level-section {
-      margin-top: 3rem;
-    }
+      // Render leaderboard links
+      renderLeaderboardLinks('leaderboard-links');
 
-    .level-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .level-badge {
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      font-size: 0.875rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .level-badge.beginner {
-      background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.1) 100%);
-      color: #4ade80;
-      border: 1px solid rgba(34, 197, 94, 0.3);
-    }
-
-    .level-badge.intermediate {
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0.1) 100%);
-      color: #818cf8;
-      border: 1px solid rgba(99, 102, 241, 0.3);
-    }
-
-    .level-badge.advanced {
-      background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.1) 100%);
-      color: #f87171;
-      border: 1px solid rgba(239, 68, 68, 0.3);
-    }
-
-    .level-description {
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-
-    /* Beginner courses - green theme */
-    .level-beginner .course-card .course-icon {
-      background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.1) 100%);
-    }
-
-    /* Intermediate courses - blue/purple theme */
-    .level-intermediate .course-card:nth-child(1) .course-icon {
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0.1) 100%);
-    }
-    .level-intermediate .course-card:nth-child(2) .course-icon {
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
-    }
-    .level-intermediate .course-card:nth-child(3) .course-icon {
-      background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0.1) 100%);
-    }
-    .level-intermediate .course-card:nth-child(4) .course-icon {
-      background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(52, 211, 153, 0.1) 100%);
-    }
-    .level-intermediate .course-card:nth-child(5) .course-icon {
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
-    }
-    .level-intermediate .course-card:nth-child(6) .course-icon {
-      background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(236, 72, 153, 0.1) 100%);
-    }
-
-    /* Advanced courses - red/purple theme */
-    .level-advanced .course-card:nth-child(1) .course-icon {
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.1) 100%);
-    }
-    .level-advanced .course-card:nth-child(2) .course-icon {
-      background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.1) 100%);
-    }
-
-    .course-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #f1f5f9;
-      margin-bottom: 0.75rem;
-    }
-
-    .course-description {
-      color: #94a3b8;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-      flex-grow: 1;
-    }
-
-    .course-meta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .course-tag {
-      font-size: 0.75rem;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      background: rgba(148, 163, 184, 0.1);
-      color: #94a3b8;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-      color: #94a3b8;
-      max-width: 600px;
-      margin: 0 auto 1rem;
-      line-height: 1.6;
-    }
-
-    .section-title {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: #f1f5f9;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-subtitle {
-      color: #64748b;
-      margin-bottom: 2rem;
-    }
-  </style>
+      // Update course count in subtitle
+      const count = getCourseCount();
+      const subtitle = document.getElementById('courses-subtitle');
+      if (subtitle) {
+        subtitle.textContent = `${count} courses organized by subject`;
+      }
+    });
+  </script>
 </head>
 <body>
   <nav>
@@ -289,252 +154,13 @@
     </section>
 
     <h2 class="section-title">Choose Your Path</h2>
-    <p class="section-subtitle">Nine courses organized by difficulty level</p>
+    <p class="section-subtitle" id="courses-subtitle">Courses organized by subject</p>
 
-    <!-- BEGINNER -->
-    <div class="level-section">
-      <div class="level-header">
-        <span class="level-badge beginner">Beginner</span>
-        <span class="level-description">Start here to build a strong foundation</span>
-      </div>
-      <div class="courses-grid level-beginner">
-        <!-- Basic Algebra -->
-        <a href="https://basic-algebra.vercel.app" target="_blank" class="course-card">
-          <div class="course-icon">x²</div>
-          <h3 class="course-title">Basic Algebra</h3>
-          <p class="course-description">
-            Master the fundamentals of algebra through interactive lessons and visualizations.
-            From integers to complex numbers, covering equations, functions, and more.
-          </p>
-          <div class="course-meta">
-            <span class="course-tag">17 Chapters</span>
-            <span class="course-tag">64 Sections</span>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- INTERMEDIATE -->
-    <div class="level-section">
-      <div class="level-header">
-        <span class="level-badge intermediate">Intermediate</span>
-        <span class="level-description">Build on your foundation with applied mathematics</span>
-      </div>
-      <div class="courses-grid level-intermediate">
-        <!-- Cryptography -->
-        <a href="cryptography/" class="course-card">
-          <div class="course-icon">🔐</div>
-          <h3 class="course-title">Cryptography Math</h3>
-          <p class="course-description">
-            Learn the mathematics that powers modern encryption. From modular arithmetic
-            to RSA and elliptic curves, discover how math keeps the internet secure.
-          </p>
-          <div class="course-meta">
-            <span class="course-tag">12 Lessons</span>
-            <span class="course-tag">Interactive</span>
-          </div>
-        </a>
-
-        <!-- Linear Algebra -->
-        <a href="https://linalg-pink.vercel.app" class="course-card">
-          <div class="course-icon">&#x1F4D0;</div>
-          <h3 class="course-title">Linear Algebra</h3>
-          <p class="course-description">
-            Master vectors, matrices, and linear transformations. Based on Gilbert Strang's
-            Introduction to Linear Algebra, with interactive visualizations.
-          </p>
-          <div class="course-meta">
-            <span class="course-tag">Vectors & Matrices</span>
-            <span class="course-tag">Interactive</span>
-          </div>
-        </a>
-
-        <!-- Calculus -->
-        <a href="calc1-deploy/" class="course-card">
-          <div class="course-icon">∫</div>
-          <h3 class="course-title">Calculus</h3>
-          <p class="course-description">
-            One-variable calculus with an introduction to linear algebra. Based on Tom M. Apostol's
-            classic textbook, covering integration, differentiation, and infinite series.
-          </p>
-          <div class="course-meta">
-            <span class="course-tag">17 Parts</span>
-            <span class="course-tag">101 Sections</span>
-          </div>
-        </a>
-
-        <!-- Calculus as a Liberal Art -->
-        <a href="https://calc-lib-art.vercel.app" class="course-card">
-          <div class="course-icon">📚</div>
-          <h3 class="course-title">Calculus as a Liberal Art</h3>
-          <p class="course-description">
-            Explore calculus through a liberal arts lens, emphasizing concepts, history, and
-            connections to broader human knowledge rather than computational techniques.
-          </p>
-          <div class="course-meta">
-            <span class="course-tag">Interactive</span>
-            <span class="course-tag">Conceptual</span>
-          </div>
-        </a>
-
-        <!-- Abstract Algebra -->
-        <a href="aa/" class="course-card">
-          <div class="course-icon">G</div>
-          <h3 class="course-title">Abstract Algebra</h3>
-          <p class="course-description">
-            Explore the elegant world of algebraic structures. Groups, rings, fields,
-            and the deep patterns underlying all of mathematics.
-          </p>
-          <div class="course-meta">
-            <span class="course-tag">Groups & Rings</span>
-            <span class="course-tag">Fields</span>
-          </div>
-        </a>
-
-        <!-- Introduction to Statistical Learning -->
-        <a href="islr-deploy/" class="course-card">
-          <div class="course-icon">📊</div>
-          <h3 class="course-title">Intro to Statistical Learning</h3>
-          <p class="course-description">
-            Master machine learning fundamentals with this interactive course based on James et al.'s
-            acclaimed textbook. From linear regression to deep learning, with interactive visualizations.
-          </p>
-          <div class="course-meta">
-            <span class="course-tag">13 Chapters</span>
-            <span class="course-tag">62 Sections</span>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- ADVANCED -->
-    <div class="level-section">
-      <div class="level-header">
-        <span class="level-badge advanced">Advanced</span>
-        <span class="level-description">Rigorous mathematics for the dedicated learner</span>
-      </div>
-      <div class="courses-grid level-advanced">
-        <!-- Advanced Linear Algebra -->
-        <a href="https://advanced-linalg.vercel.app" class="course-card">
-          <div class="course-icon">&#x2133;</div>
-          <h3 class="course-title">Advanced Linear Algebra</h3>
-          <p class="course-description">
-            Deep dive into abstract linear algebra. Based on Hoffman & Kunze's classic text,
-            covering vector spaces, linear transformations, and canonical forms.
-          </p>
-          <div class="course-meta">
-            <span class="course-tag">10 Chapters</span>
-            <span class="course-tag">59 Sections</span>
-          </div>
-        </a>
-
-        <!-- Real Analysis -->
-        <a href="https://real-analysis-eta.vercel.app" class="course-card">
-          <div class="course-icon">📐</div>
-          <h3 class="course-title">Introduction to Real Analysis</h3>
-          <p class="course-description">
-            A rigorous introduction to real analysis covering limits, continuity, differentiation,
-            and integration through formal proofs. Based on Kenneth A. Ross's Elementary Analysis.
-          </p>
-          <div class="course-meta">
-            <span class="course-tag">4 Parts</span>
-            <span class="course-tag">15 Sections</span>
-          </div>
-        </a>
-      </div>
-    </div>
+    <!-- Course sections rendered dynamically -->
+    <div id="courses-container"></div>
 
     <!-- Progress Dashboard -->
-    <div id="progress-dashboard" style="display: none; margin-top: 3rem;">
-      <h2 class="section-title">Your Progress</h2>
-      <p class="section-subtitle">Track your learning journey across all courses</p>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-        <div class="card" style="text-align: center; padding: 1.5rem;">
-          <div style="font-size: 2.5rem; font-weight: 700; color: #f59e0b;" id="total-xp">0</div>
-          <div style="color: #94a3b8; font-size: 0.875rem;">Total XP</div>
-        </div>
-        <div class="card" style="text-align: center; padding: 1.5rem;">
-          <div style="font-size: 2.5rem; font-weight: 700; color: #6366f1;" id="current-level">1</div>
-          <div style="color: #94a3b8; font-size: 0.875rem;">Level</div>
-        </div>
-        <div class="card" style="text-align: center; padding: 1.5rem;">
-          <div style="font-size: 2.5rem; font-weight: 700; color: #f97316;" id="current-streak">0</div>
-          <div style="color: #94a3b8; font-size: 0.875rem;">Day Streak</div>
-        </div>
-        <div class="card" style="text-align: center; padding: 1.5rem;">
-          <div style="font-size: 2.5rem; font-weight: 700; color: #22c55e;" id="sections-completed">0</div>
-          <div style="color: #94a3b8; font-size: 0.875rem;">Sections Completed</div>
-        </div>
-      </div>
-
-      <!-- Course Progress -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-        <div class="card" style="padding: 1.5rem;">
-          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Basic Algebra</h4>
-          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
-            <div id="ba-progress" style="height: 100%; background: linear-gradient(90deg, #22c55e, #4ade80); width: 0%; transition: width 0.5s;"></div>
-          </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="ba-count">0 / 64 sections</div>
-        </div>
-        <div class="card" style="padding: 1.5rem;">
-          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Cryptography</h4>
-          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
-            <div id="crypto-progress" style="height: 100%; background: linear-gradient(90deg, #6366f1, #818cf8); width: 0%; transition: width 0.5s;"></div>
-          </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="crypto-count">0 / 12 lessons</div>
-        </div>
-        <div class="card" style="padding: 1.5rem;">
-          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Abstract Algebra</h4>
-          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
-            <div id="aa-progress" style="height: 100%; background: linear-gradient(90deg, #f97316, #fb923c); width: 0%; transition: width 0.5s;"></div>
-          </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="aa-count">0 / 50 sections</div>
-        </div>
-        <div class="card" style="padding: 1.5rem;">
-          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Linear Algebra</h4>
-          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
-            <div id="linalg-progress" style="height: 100%; background: linear-gradient(90deg, #06b6d4, #22d3ee); width: 0%; transition: width 0.5s;"></div>
-          </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="linalg-count">0 / 19 sections</div>
-        </div>
-        <div class="card" style="padding: 1.5rem;">
-          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Advanced Linear Algebra</h4>
-          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
-            <div id="advlinalg-progress" style="height: 100%; background: linear-gradient(90deg, #a855f7, #c084fc); width: 0%; transition: width 0.5s;"></div>
-          </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="advlinalg-count">0 / 59 sections</div>
-        </div>
-        <div class="card" style="padding: 1.5rem;">
-          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Real Analysis</h4>
-          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
-            <div id="ra-progress" style="height: 100%; background: linear-gradient(90deg, #10b981, #34d399); width: 0%; transition: width 0.5s;"></div>
-          </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="ra-count">0 / 15 sections</div>
-        </div>
-        <div class="card" style="padding: 1.5rem;">
-          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Intro to Statistical Learning</h4>
-          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
-            <div id="islr-progress" style="height: 100%; background: linear-gradient(90deg, #34d399, #6ee7b7); width: 0%; transition: width 0.5s;"></div>
-          </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="islr-count">0 / 62 sections</div>
-        </div>
-        <div class="card" style="padding: 1.5rem;">
-          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Calculus</h4>
-          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
-            <div id="calc1-progress" style="height: 100%; background: linear-gradient(90deg, #f97316, #fb923c); width: 0%; transition: width 0.5s;"></div>
-          </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="calc1-count">0 / 101 sections</div>
-        </div>
-        <div class="card" style="padding: 1.5rem;">
-          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Calculus as a Liberal Art</h4>
-          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
-            <div id="calc_lib_art-progress" style="height: 100%; background: linear-gradient(90deg, #6366f1, #818cf8); width: 0%; transition: width 0.5s;"></div>
-          </div>
-          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="calc_lib_art-count">0 / 10 sections</div>
-        </div>
-      </div>
-    </div>
+    <div id="progress-dashboard" style="display: none;"></div>
 
     <div class="callout callout-info" style="margin-top: 3rem;">
       <strong>Start with the basics!</strong> New to math? Begin with Basic Algebra to build your foundation.
@@ -542,9 +168,9 @@
     </div>
 
     <!-- Global Leaderboard Section -->
-    <section id="leaderboard" class="level-section" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+    <section id="leaderboard" class="leaderboard-section">
       <div class="level-header">
-        <span class="level-badge" style="background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(251, 191, 36, 0.1) 100%); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3);">Leaderboard</span>
+        <span class="level-badge featured">Leaderboard</span>
         <span class="level-description">Compete with learners worldwide</span>
       </div>
 
@@ -574,86 +200,11 @@
       <!-- Course Leaderboard Links -->
       <div style="margin-top: 1.5rem;">
         <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">View course-specific rankings:</p>
-        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <a href="https://basic-algebra.vercel.app/#/leaderboard" target="_blank" class="btn btn-secondary btn-small">Basic Algebra</a>
-          <a href="cryptography/#/leaderboard" class="btn btn-secondary btn-small">Cryptography</a>
-          <a href="https://linalg-pink.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Linear Algebra</a>
-          <a href="aa/#/leaderboard" class="btn btn-secondary btn-small">Abstract Algebra</a>
-          <a href="islr-deploy/#/leaderboard" class="btn btn-secondary btn-small">Statistical Learning</a>
-          <a href="calc1-deploy/#/leaderboard" class="btn btn-secondary btn-small">Calculus</a>
-          <a href="https://calc-lib-art.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Calc Liberal Art</a>
-          <a href="https://advanced-linalg.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Advanced LinAlg</a>
-          <a href="https://real-analysis-eta.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Real Analysis</a>
+        <div id="leaderboard-links" class="leaderboard-links">
+          <!-- Rendered dynamically -->
         </div>
       </div>
     </section>
   </main>
-
-  <script>
-    // Load and display progress dashboard
-    (function() {
-      const STORAGE_KEY = 'magic-internet-math-progress';
-      const data = localStorage.getItem(STORAGE_KEY);
-
-      if (!data) return;
-
-      try {
-        const state = JSON.parse(data);
-        if (!state.user || state.user.totalXP === 0) return;
-
-        // Show dashboard
-        document.getElementById('progress-dashboard').style.display = 'block';
-
-        // Update stats
-        document.getElementById('total-xp').textContent = state.user.totalXP.toLocaleString();
-        document.getElementById('current-level').textContent = state.user.level;
-        document.getElementById('current-streak').textContent = state.streak?.currentStreak || 0;
-        document.getElementById('sections-completed').textContent = state.user.sectionsCompleted?.length || 0;
-
-        // Count sections per course
-        const sections = state.user.sectionsCompleted || [];
-        const baCount = sections.filter(id => id.startsWith('ba:')).length;
-        const cryptoCount = sections.filter(id => id.startsWith('crypto:')).length;
-        const aaCount = sections.filter(id => id.startsWith('aa:')).length;
-        const linalgCount = sections.filter(id => id.startsWith('linalg:')).length;
-        const advlinalgCount = sections.filter(id => id.startsWith('advlinalg:')).length;
-        const raCount = sections.filter(id => id.startsWith('ra:')).length;
-        const islrCount = sections.filter(id => id.startsWith('islr:')).length;
-        const calc1Count = sections.filter(id => id.startsWith('calc1:')).length;
-        const calcLibArtCount = sections.filter(id => id.startsWith('calc_lib_art:')).length;
-
-        // Update progress bars
-        document.getElementById('ba-progress').style.width = `${(baCount / 64) * 100}%`;
-        document.getElementById('ba-count').textContent = `${baCount} / 64 sections`;
-
-        document.getElementById('crypto-progress').style.width = `${(cryptoCount / 12) * 100}%`;
-        document.getElementById('crypto-count').textContent = `${cryptoCount} / 12 lessons`;
-
-        document.getElementById('aa-progress').style.width = `${(aaCount / 50) * 100}%`;
-        document.getElementById('aa-count').textContent = `${aaCount} / 50 sections`;
-
-        document.getElementById('linalg-progress').style.width = `${(linalgCount / 19) * 100}%`;
-        document.getElementById('linalg-count').textContent = `${linalgCount} / 19 sections`;
-
-        document.getElementById('advlinalg-progress').style.width = `${(advlinalgCount / 59) * 100}%`;
-        document.getElementById('advlinalg-count').textContent = `${advlinalgCount} / 59 sections`;
-
-        document.getElementById('ra-progress').style.width = `${(raCount / 15) * 100}%`;
-        document.getElementById('ra-count').textContent = `${raCount} / 15 sections`;
-
-        document.getElementById('islr-progress').style.width = `${(islrCount / 62) * 100}%`;
-        document.getElementById('islr-count').textContent = `${islrCount} / 62 sections`;
-
-        document.getElementById('calc1-progress').style.width = `${(calc1Count / 101) * 100}%`;
-        document.getElementById('calc1-count').textContent = `${calc1Count} / 101 sections`;
-
-        document.getElementById('calc_lib_art-progress').style.width = `${(calcLibArtCount / 10) * 100}%`;
-        document.getElementById('calc_lib_art-count').textContent = `${calcLibArtCount} / 10 sections`;
-      } catch (e) {
-        console.error('Failed to load progress:', e);
-      }
-    })();
-  </script>
 </body>
 </html>
-
