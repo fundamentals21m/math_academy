@@ -18,7 +18,7 @@ export type { QuizQuestion, SectionQuestions } from './types';
 // =============================================================================
 
 // Part 1: Foundations of Analysis
-export { section01Questions } from './chapter01'; // Real Number System
+export { section01Quiz } from './section01'; // Real Number System (by difficulty)
 export { section02Questions } from './chapter01'; // Mathematical Induction
 export { section03Questions } from './chapter01'; // Finite and Infinite Sets
 export { section04Questions } from './chapter01'; // Functions and Relations

@@ -3,22 +3,35 @@ import { motion } from 'framer-motion';
 import { FEATURES } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
 import { renderContent } from '@magic-internet-math/shared';
-import type { QuizQuestion, QuestionType } from '@magic-internet-math/shared';
+import type { QuizQuestion, QuestionType, Difficulty } from '@magic-internet-math/shared';
 
 // Re-export types for convenience
-export type { QuizQuestion, QuestionType } from '@magic-internet-math/shared';
+export type { QuizQuestion, QuestionType, Difficulty } from '@magic-internet-math/shared';
+
+// Section quiz data structure with difficulty levels
+export interface SectionQuizData {
+  easy: QuizQuestion[];
+  medium: QuizQuestion[];
+  hard: QuizQuestion[];
+}
 
 interface SectionQuizProps {
   sectionId: number;
-  questions: QuizQuestion[];
+  questions: SectionQuizData | QuizQuestion[];
   title?: string;
 }
+
+const QUESTIONS_PER_QUIZ = 5;
 
 export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: SectionQuizProps) {
   // Always call hook unconditionally, then conditionally use the result
   const gamificationContext = useGamification();
   const gamification = FEATURES.gamification ? gamificationContext : null;
   
+  // Determine if we have the new structured format or legacy flat array
+  const isStructuredFormat = !Array.isArray(questions) && 'easy' in questions;
+  
+  const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty>('medium');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [numericAnswer, setNumericAnswer] = useState<number | null>(null);
@@ -27,16 +40,45 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState<boolean[]>([]);
   const [isComplete, setIsComplete] = useState(false);
+  const [quizStarted, setQuizStarted] = useState(!isStructuredFormat); // Auto-start for legacy format
   const [numericError, setNumericError] = useState('');
 
-  // Randomize questions on mount, take 5
+  // Get questions for selected difficulty and randomize
   const shuffledQuestions = useMemo(() => {
-    return [...questions].sort(() => globalThis.Math.random() - 0.5).slice(0, 5);
-  }, [questions]);
+    let questionPool: QuizQuestion[];
+    
+    if (isStructuredFormat) {
+      const structuredQuestions = questions as SectionQuizData;
+      questionPool = structuredQuestions[selectedDifficulty] || [];
+    } else {
+      questionPool = questions as QuizQuestion[];
+    }
+    
+    return [...questionPool]
+      .sort(() => globalThis.Math.random() - 0.5)
+      .slice(0, QUESTIONS_PER_QUIZ);
+  }, [questions, selectedDifficulty, isStructuredFormat, quizStarted]);
 
   const currentQuestion = shuffledQuestions[currentIndex];
   const totalQuestions = shuffledQuestions.length;
   const questionType: QuestionType = currentQuestion?.type ?? 'multiple-choice';
+
+  const handleDifficultySelect = (difficulty: Difficulty) => {
+    setSelectedDifficulty(difficulty);
+  };
+
+  const handleStartQuiz = () => {
+    setQuizStarted(true);
+    setCurrentIndex(0);
+    setSelectedAnswer(null);
+    setNumericAnswer(null);
+    setTextAnswer('');
+    setShowResult(false);
+    setScore(0);
+    setAnswers([]);
+    setIsComplete(false);
+    setNumericError('');
+  };
 
   const handleMultipleChoiceAnswer = (answerIndex: number) => {
     if (selectedAnswer !== null) return;
@@ -121,7 +163,7 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
         
         gamification.recordQuiz(
           sectionId,
-          currentQuestion.difficulty,
+          selectedDifficulty,
           finalPercentage,
           finalScore,
           totalQuestions
@@ -131,6 +173,10 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   };
 
   const handleRetry = () => {
+    if (isStructuredFormat) {
+      // Go back to difficulty selection
+      setQuizStarted(false);
+    }
     setCurrentIndex(0);
     setSelectedAnswer(null);
     setNumericAnswer(null);
@@ -141,6 +187,72 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
     setIsComplete(false);
     setNumericError('');
   };
+
+  // Difficulty selection screen (only for structured format)
+  if (isStructuredFormat && !quizStarted) {
+    const structuredQuestions = questions as SectionQuizData;
+    
+    return (
+      <div className="mt-12 p-6 rounded-2xl bg-dark-800/50 border border-dark-700/50">
+        <h3 className="text-xl font-semibold text-dark-100 mb-6">{title}</h3>
+        
+        <p className="text-dark-300 mb-6">
+          Select a difficulty level. You'll answer {QUESTIONS_PER_QUIZ} randomly selected questions.
+        </p>
+        
+        <div className="grid grid-cols-3 gap-4 mb-6">
+          <button
+            onClick={() => handleDifficultySelect('easy')}
+            className={`p-4 rounded-xl border-2 transition-all ${
+              selectedDifficulty === 'easy'
+                ? 'border-emerald-500 bg-emerald-500/20 text-emerald-300'
+                : 'border-dark-600 bg-dark-700/50 text-dark-300 hover:border-dark-500'
+            }`}
+          >
+            <div className="text-2xl mb-2">Easy</div>
+            <div className="text-sm opacity-75">
+              {structuredQuestions.easy?.length || 0} questions
+            </div>
+          </button>
+          
+          <button
+            onClick={() => handleDifficultySelect('medium')}
+            className={`p-4 rounded-xl border-2 transition-all ${
+              selectedDifficulty === 'medium'
+                ? 'border-amber-500 bg-amber-500/20 text-amber-300'
+                : 'border-dark-600 bg-dark-700/50 text-dark-300 hover:border-dark-500'
+            }`}
+          >
+            <div className="text-2xl mb-2">Medium</div>
+            <div className="text-sm opacity-75">
+              {structuredQuestions.medium?.length || 0} questions
+            </div>
+          </button>
+          
+          <button
+            onClick={() => handleDifficultySelect('hard')}
+            className={`p-4 rounded-xl border-2 transition-all ${
+              selectedDifficulty === 'hard'
+                ? 'border-red-500 bg-red-500/20 text-red-300'
+                : 'border-dark-600 bg-dark-700/50 text-dark-300 hover:border-dark-500'
+            }`}
+          >
+            <div className="text-2xl mb-2">Hard</div>
+            <div className="text-sm opacity-75">
+              {structuredQuestions.hard?.length || 0} questions
+            </div>
+          </button>
+        </div>
+        
+        <button
+          onClick={handleStartQuiz}
+          className="w-full py-3 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium transition-colors"
+        >
+          Start Quiz
+        </button>
+      </div>
+    );
+  }
 
   if (isComplete) {
     const finalScore = answers.filter(Boolean).length;
@@ -153,6 +265,12 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
             {percentage >= 80 ? '🎉' : percentage >= 60 ? '👍' : '📚'}
           </div>
           <h3 className="text-2xl font-bold text-dark-100 mb-2">Quiz Complete!</h3>
+          <p className="text-dark-400 mb-2">
+            Difficulty: <span className={`font-medium ${
+              selectedDifficulty === 'easy' ? 'text-emerald-400' :
+              selectedDifficulty === 'medium' ? 'text-amber-400' : 'text-red-400'
+            }`}>{selectedDifficulty.charAt(0).toUpperCase() + selectedDifficulty.slice(1)}</span>
+          </p>
           <p className="text-dark-400 mb-6">
             You scored {finalScore} out of {totalQuestions} ({percentage}%)
           </p>
@@ -170,9 +288,25 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
             onClick={handleRetry}
             className="px-6 py-3 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium transition-colors"
           >
-            Try Again
+            {isStructuredFormat ? 'Try Different Difficulty' : 'Try Again'}
           </button>
         </div>
+      </div>
+    );
+  }
+
+  if (!currentQuestion) {
+    return (
+      <div className="mt-12 p-6 rounded-2xl bg-dark-800/50 border border-dark-700/50">
+        <p className="text-dark-400 text-center">No questions available for this difficulty level.</p>
+        {isStructuredFormat && (
+          <button
+            onClick={handleRetry}
+            className="mt-4 w-full py-3 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium transition-colors"
+          >
+            Choose Different Difficulty
+          </button>
+        )}
       </div>
     );
   }
@@ -200,14 +334,14 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
       <div className="mb-4">
         <span
           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-            currentQuestion.difficulty === 'easy'
+            selectedDifficulty === 'easy'
               ? 'bg-emerald-500/20 text-emerald-400'
-              : currentQuestion.difficulty === 'medium'
+              : selectedDifficulty === 'medium'
               ? 'bg-amber-500/20 text-amber-400'
               : 'bg-red-500/20 text-red-400'
           }`}
         >
-          {currentQuestion.difficulty.charAt(0).toUpperCase() + currentQuestion.difficulty.slice(1)}
+          {selectedDifficulty.charAt(0).toUpperCase() + selectedDifficulty.slice(1)}
         </span>
       </div>
 
