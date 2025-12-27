@@ -3,7 +3,7 @@ import { Definition, Theorem, Example } from '@/components/common/ContentBlocks'
 import { Callout } from '@/components/common/Callout';
 import { Math, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
-import { section02Questions } from '@/data/quizzes';
+import { section02Quiz } from '@/data/quizzes';
 
 export default function Section02() {
   return (
@@ -83,7 +83,7 @@ export default function Section02() {
 
       <SectionQuiz
         sectionId={2}
-        questions={section02Questions}
+        questions={section02Quiz}
         title="Mathematical Induction Quiz"
       />
     </LessonLayout>

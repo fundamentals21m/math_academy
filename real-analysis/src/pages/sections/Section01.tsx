@@ -4,7 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { Math, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { LimitVisualizer } from '@/components/common/LimitVisualizer';
-import { section01Questions } from '@/data/quizzes';
+import { section01Quiz } from '@/data/quizzes';
 
 export default function Section01() {
   return (

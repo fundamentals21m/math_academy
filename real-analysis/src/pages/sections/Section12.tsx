@@ -44,8 +44,8 @@ export default function Section12() {
 
       <Theorem title="L'Hôpital's Rule">
         <p>
-          If <Math>\lim_{'{x \\to c}'} f(x) = \lim_{'{x \\to c}'} g(x) = 0</Math> (or both <Math>\pm\infty</Math>),
-          and if <Math>\lim_{'{x \\to c}'} \frac{'{f\'(x)}'}{'{g\'(x)}'}</Math> exists, then:
+          If <Math>{"\\lim_{x \\to c} f(x) = \\lim_{x \\to c} g(x) = 0"}</Math> (or both <Math>\pm\infty</Math>),
+          and if <Math>{"\\lim_{x \\to c} \\frac{f'(x)}{g'(x)}"}</Math> exists, then:
         </p>
         <MathBlock>
           {`\\lim_{x \\to c} \\frac{f(x)}{g(x)} = \\lim_{x \\to c} \\frac{f'(x)}{g'(x)}`}

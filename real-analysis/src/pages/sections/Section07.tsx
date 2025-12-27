@@ -56,7 +56,7 @@ export default function Section07() {
 
       <Theorem title="Alternating Series Test (Leibniz)">
         <p>
-          If <Math>(a_n)</Math> is a decreasing sequence with <Math>a_n \to 0</Math>, then the
+          If <Math>(a_n)</Math> is a decreasing sequence with <Math>{"a_n \\to 0"}</Math>, then the
           alternating series converges:
         </p>
         <MathBlock>

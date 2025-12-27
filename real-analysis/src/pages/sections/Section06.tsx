@@ -28,21 +28,21 @@ export default function Section06() {
 
       <Theorem title="Divergence Test">
         <p>
-          If <Math>\sum a_n</Math> converges, then <Math>\lim_{n \to \infty} a_n = 0</Math>.
+          If <Math>\sum a_n</Math> converges, then <Math>{"\\lim_{n \\to \\infty} a_n = 0"}</Math>.
         </p>
         <p className="mt-2 text-dark-400">
-          Contrapositive: If <Math>a_n \not\to 0</Math>, then <Math>\sum a_n</Math> diverges.
+          Contrapositive: If <Math>{"a_n \\not\\to 0"}</Math>, then <Math>\sum a_n</Math> diverges.
         </p>
       </Theorem>
 
       <Callout type="warning">
-        <strong>Common Mistake:</strong> The converse is false! Just because <Math>a_n \to 0</Math>
+        <strong>Common Mistake:</strong> The converse is false! Just because <Math>{"a_n \\to 0"}</Math>
         does not mean <Math>\sum a_n</Math> converges. The harmonic series is the classic counterexample.
       </Callout>
 
       <Example title="Harmonic Series Diverges">
         <p>
-          The series <Math>\sum_{n=1}^\infty \frac{1}{n}</Math> diverges despite <Math>1/n \to 0</Math>.
+          The series <Math>{"\\sum_{n=1}^\\infty \\frac{1}{n}"}</Math> diverges despite <Math>{"1/n \\to 0"}</Math>.
         </p>
         <MathBlock>
           {`1 + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} + \\cdots = \\infty`}

@@ -3,7 +3,7 @@ import { Definition, Theorem, Example } from '@/components/common/ContentBlocks'
 import { Callout } from '@/components/common/Callout';
 import { Math, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
-import { section03Questions } from '@/data/quizzes';
+import { section03Quiz } from '@/data/quizzes';
 
 export default function Section03() {
   return (
@@ -75,7 +75,7 @@ export default function Section03() {
       <Example title="Power Set Cardinality">
         <p>Let S = &#123;1, 2, 3&#125;, |S| = 3</p>
         <p>Power set P(S) = &#123;∅, &#123;1&#125;, &#123;2&#125;, &#123;3&#125;, &#123;1,2&#125;, &#123;1,3&#125;, &#123;2,3&#125;, &#123;1,2,3&#125;&#125;</p>
-        <p>|P(S)| = 8 > 3</p>
+        <p>|P(S)| = 8 &gt; 3</p>
       </Example>
 
       <Theorem title="Continuum Hypothesis">
@@ -90,7 +90,7 @@ export default function Section03() {
 
       <SectionQuiz
         sectionId={3}
-        questions={section03Questions}
+        questions={section03Quiz}
         title="Finite and Infinite Sets Quiz"
       />
     </LessonLayout>
