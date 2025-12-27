@@ -1,4 +1,5 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
 import { AchievementToastContainer } from '@/components/gamification';
@@ -10,31 +11,60 @@ import Leaderboard from '@/pages/Leaderboard';
 import Theorems from '@/pages/Theorems';
 import InteractiveModules from '@/pages/InteractiveModules';
 
-// Section pages - import all sections here
-import Section01 from '@/pages/sections/Section01';
-import Section02 from '@/pages/sections/Section02';
-import Section03 from '@/pages/sections/Section03';
-import Section04 from '@/pages/sections/Section04';
-
-// Dynamic section loader for sections that exist
-const sectionComponents: Record<number, React.ComponentType> = {
-  1: Section01,
-  2: Section02,
-  3: Section03,
-  4: Section04,
-  // Add more sections as you create them
-};
-
-function SectionRouter() {
-  // This component handles dynamic section routing
-  // It will be replaced with actual section components as you build them
+// Loading component for Suspense
+function LoadingSpinner() {
   return (
     <div className="min-h-screen bg-dark-950 flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
-        <p className="text-dark-400">This section is not yet implemented.</p>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500 mx-auto mb-4"></div>
+        <p className="text-dark-400">Loading section...</p>
       </div>
     </div>
+  );
+}
+
+// Lazy load all section components for code splitting
+const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {
+  1: lazy(() => import('@/pages/sections/Section01')),
+  2: lazy(() => import('@/pages/sections/Section02')),
+  3: lazy(() => import('@/pages/sections/Section03')),
+  4: lazy(() => import('@/pages/sections/Section04')),
+  5: lazy(() => import('@/pages/sections/Section05')),
+  6: lazy(() => import('@/pages/sections/Section06')),
+  7: lazy(() => import('@/pages/sections/Section07')),
+  8: lazy(() => import('@/pages/sections/Section08')),
+  9: lazy(() => import('@/pages/sections/Section09')),
+  10: lazy(() => import('@/pages/sections/Section10')),
+  11: lazy(() => import('@/pages/sections/Section11')),
+  12: lazy(() => import('@/pages/sections/Section12')),
+  13: lazy(() => import('@/pages/sections/Section13')),
+  14: lazy(() => import('@/pages/sections/Section14')),
+  15: lazy(() => import('@/pages/sections/Section15')),
+};
+
+function SectionRouter() {
+  const { id } = useParams<{ id: string }>();
+  const sectionId = parseInt(id || '0', 10);
+  const SectionComponent = sectionComponents[sectionId];
+
+  if (!SectionComponent) {
+    return (
+      <div className="min-h-screen bg-dark-950 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
+          <p className="text-dark-400">Section {id} does not exist or is not yet implemented.</p>
+          <a href="/" className="mt-4 inline-block text-primary-400 hover:text-primary-300">
+            Return to Home
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <Suspense fallback={<LoadingSpinner />}>
+      <SectionComponent />
+    </Suspense>
   );
 }
 
