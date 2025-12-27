@@ -204,6 +204,12 @@
     .level-intermediate .course-card:nth-child(4) .course-icon {
       background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(52, 211, 153, 0.1) 100%);
     }
+    .level-intermediate .course-card:nth-child(5) .course-icon {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
+    }
+    .level-intermediate .course-card:nth-child(6) .course-icon {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(236, 72, 153, 0.1) 100%);
+    }
 
     /* Advanced courses - red/purple theme */
     .level-advanced .course-card:nth-child(1) .course-icon {
@@ -283,7 +289,7 @@
     </section>
 
     <h2 class="section-title">Choose Your Path</h2>
-    <p class="section-subtitle">Eight courses organized by difficulty level</p>
+    <p class="section-subtitle">Nine courses organized by difficulty level</p>
 
     <!-- BEGINNER -->
     <div class="level-section">
@@ -354,6 +360,20 @@
           <div class="course-meta">
             <span class="course-tag">17 Parts</span>
             <span class="course-tag">101 Sections</span>
+          </div>
+        </a>
+
+        <!-- Calculus as a Liberal Art -->
+        <a href="https://calc-lib-art.vercel.app" class="course-card">
+          <div class="course-icon">📚</div>
+          <h3 class="course-title">Calculus as a Liberal Art</h3>
+          <p class="course-description">
+            Explore calculus through a liberal arts lens, emphasizing concepts, history, and
+            connections to broader human knowledge rather than computational techniques.
+          </p>
+          <div class="course-meta">
+            <span class="course-tag">Interactive</span>
+            <span class="course-tag">Conceptual</span>
           </div>
         </a>
 
@@ -506,6 +526,13 @@
           </div>
           <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="calc1-count">0 / 101 sections</div>
         </div>
+        <div class="card" style="padding: 1.5rem;">
+          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Calculus as a Liberal Art</h4>
+          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
+            <div id="calc_lib_art-progress" style="height: 100%; background: linear-gradient(90deg, #6366f1, #818cf8); width: 0%; transition: width 0.5s;"></div>
+          </div>
+          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="calc_lib_art-count">0 / 10 sections</div>
+        </div>
       </div>
     </div>
 
@@ -554,6 +581,7 @@
           <a href="aa/#/leaderboard" class="btn btn-secondary btn-small">Abstract Algebra</a>
           <a href="islr-deploy/#/leaderboard" class="btn btn-secondary btn-small">Statistical Learning</a>
           <a href="calc1-deploy/#/leaderboard" class="btn btn-secondary btn-small">Calculus</a>
+          <a href="https://calc-lib-art.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Calc Liberal Art</a>
           <a href="https://advanced-linalg.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Advanced LinAlg</a>
           <a href="https://real-analysis-eta.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Real Analysis</a>
         </div>
@@ -592,6 +620,7 @@
         const raCount = sections.filter(id => id.startsWith('ra:')).length;
         const islrCount = sections.filter(id => id.startsWith('islr:')).length;
         const calc1Count = sections.filter(id => id.startsWith('calc1:')).length;
+        const calcLibArtCount = sections.filter(id => id.startsWith('calc_lib_art:')).length;
 
         // Update progress bars
         document.getElementById('ba-progress').style.width = `${(baCount / 64) * 100}%`;
@@ -617,6 +646,9 @@
 
         document.getElementById('calc1-progress').style.width = `${(calc1Count / 101) * 100}%`;
         document.getElementById('calc1-count').textContent = `${calc1Count} / 101 sections`;
+
+        document.getElementById('calc_lib_art-progress').style.width = `${(calcLibArtCount / 10) * 100}%`;
+        document.getElementById('calc_lib_art-count').textContent = `${calcLibArtCount} / 10 sections`;
       } catch (e) {
         console.error('Failed to load progress:', e);
       }
