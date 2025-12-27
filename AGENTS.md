@@ -244,3 +244,33 @@ React 19, Vite 5.4, TypeScript 5.9, Tailwind 3.4, Vitest, KaTeX, D3.js, Framer M
 - Use `@vitest-environment happy-dom` for React component tests
 - Use `@vitest-environment node` for pure function tests
 - Mock Firebase and external services in tests
+
+### Firebase Functions Testing
+- Tests located in `firebase/functions/test/`
+- Run with `npm run test:run` from `firebase/functions/`
+- Uses Vitest with mocked Firebase Admin SDK
+- Tests cover: admin functions, scores, Nostr authentication
+
+### Coverage Reports
+- Requires Node 20+ (coverage uses `node:inspector/promises`)
+- Run `npm run test:coverage` in `shared/` directory
+- Current Node 18 users will see a helpful message with instructions
+
+## Repository Size & Git LFS
+
+**Current status (Dec 2024):** Git LFS is NOT needed
+
+- Repository size: ~44 MB (well under GitHub's 1 GB limit)
+- PDFs in `books/` are gitignored (not tracked)
+- Built assets use content hashing (old builds auto-cleanup)
+- Font files (~2 MB) are static and rarely change
+
+**When to consider Git LFS:**
+- If `.git` directory exceeds 500 MB
+- If adding large binary assets that change frequently
+- If GitHub warns about repository size
+
+**What's tracked in deployed builds:**
+- `aa/`, `ba/`, `cryptography/` - Built course sites
+- `linalg-deploy/`, `advanced-linalg-deploy/` - Linear algebra builds
+- KaTeX font files (~2 MB total across builds)
