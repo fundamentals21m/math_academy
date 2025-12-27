@@ -283,7 +283,7 @@
     </section>
 
     <h2 class="section-title">Choose Your Path</h2>
-    <p class="section-subtitle">Seven courses organized by difficulty level</p>
+    <p class="section-subtitle">Eight courses organized by difficulty level</p>
 
     <!-- BEGINNER -->
     <div class="level-section">
@@ -340,6 +340,20 @@
           <div class="course-meta">
             <span class="course-tag">Vectors & Matrices</span>
             <span class="course-tag">Interactive</span>
+          </div>
+        </a>
+
+        <!-- Calculus -->
+        <a href="calc1-deploy/" class="course-card">
+          <div class="course-icon">∫</div>
+          <h3 class="course-title">Calculus</h3>
+          <p class="course-description">
+            One-variable calculus with an introduction to linear algebra. Based on Tom M. Apostol's
+            classic textbook, covering integration, differentiation, and infinite series.
+          </p>
+          <div class="course-meta">
+            <span class="course-tag">17 Parts</span>
+            <span class="course-tag">101 Sections</span>
           </div>
         </a>
 
@@ -485,6 +499,13 @@
           </div>
           <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="islr-count">0 / 62 sections</div>
         </div>
+        <div class="card" style="padding: 1.5rem;">
+          <h4 style="color: #f1f5f9; margin-bottom: 0.5rem;">Calculus</h4>
+          <div style="height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden;">
+            <div id="calc1-progress" style="height: 100%; background: linear-gradient(90deg, #f97316, #fb923c); width: 0%; transition: width 0.5s;"></div>
+          </div>
+          <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;" id="calc1-count">0 / 101 sections</div>
+        </div>
       </div>
     </div>
 
@@ -532,6 +553,7 @@
           <a href="https://linalg-pink.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Linear Algebra</a>
           <a href="aa/#/leaderboard" class="btn btn-secondary btn-small">Abstract Algebra</a>
           <a href="islr-deploy/#/leaderboard" class="btn btn-secondary btn-small">Statistical Learning</a>
+          <a href="calc1-deploy/#/leaderboard" class="btn btn-secondary btn-small">Calculus</a>
           <a href="https://advanced-linalg.vercel.app/#/leaderboard" class="btn btn-secondary btn-small">Advanced LinAlg</a>
           <a href="ra/#/leaderboard" class="btn btn-secondary btn-small">Real Analysis</a>
         </div>
@@ -569,6 +591,7 @@
         const advlinalgCount = sections.filter(id => id.startsWith('advlinalg:')).length;
         const raCount = sections.filter(id => id.startsWith('ra:')).length;
         const islrCount = sections.filter(id => id.startsWith('islr:')).length;
+        const calc1Count = sections.filter(id => id.startsWith('calc1:')).length;
 
         // Update progress bars
         document.getElementById('ba-progress').style.width = `${(baCount / 64) * 100}%`;
@@ -591,6 +614,9 @@
 
         document.getElementById('islr-progress').style.width = `${(islrCount / 62) * 100}%`;
         document.getElementById('islr-count').textContent = `${islrCount} / 62 sections`;
+
+        document.getElementById('calc1-progress').style.width = `${(calc1Count / 101) * 100}%`;
+        document.getElementById('calc1-count').textContent = `${calc1Count} / 101 sections`;
       } catch (e) {
         console.error('Failed to load progress:', e);
       }
