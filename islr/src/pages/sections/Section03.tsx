@@ -215,7 +215,7 @@ export default function Section03() {
         <MathBlock>{`\\Pr(Y = j \\,|\\, X = x_0)`}</MathBlock>
         <p className="mt-2">
           In a two-class problem where there are only two possible response values (0 or 1), 
-          the Bayes classifier corresponds to predicting class 1 if <Math>\Pr(Y = 1 | X = x_0) > 0.5</Math>, 
+          the Bayes classifier corresponds to predicting class 1 if <Math>{"\\Pr(Y = 1 | X = x_0) > 0.5"}</Math>, 
           and class 0 otherwise.
         </p>
       </Definition>

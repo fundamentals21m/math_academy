@@ -136,7 +136,7 @@ export default function Section06() {
         <MathBlock>{`\\text{SE}(\\hat{\\beta}_0)^2 = \\sigma^2 \\left[ \\frac{1}{n} + \\frac{\\bar{x}^2}{\\sum_{i=1}^{n}(x_i - \\bar{x})^2} \\right]`}</MathBlock>
         <MathBlock>{`\\text{SE}(\\hat{\\beta}_1)^2 = \\frac{\\sigma^2}{\\sum_{i=1}^{n}(x_i - \\bar{x})^2}`}</MathBlock>
         <p className="mt-2">
-          where <Math>\sigma^2 = \text{Var}(\epsilon)</Math>. In practice, <Math>\sigma</Math> is 
+          where <Math>{"\\sigma^2 = \\text{Var}(\\epsilon)"}</Math>. In practice, <Math>\sigma</Math> is 
           estimated using the <em>residual standard error</em>:
         </p>
         <MathBlock>{`\\text{RSE} = \\sqrt{\\frac{\\text{RSS}}{n-2}}`}</MathBlock>
