@@ -71,7 +71,15 @@ export function renderCourseHub(containerId, options = {}) {
     sectionsHtml += renderSection(section);
     // Insert featured content placeholder after specified section
     if (insertFeaturedContentAfter && section.id === insertFeaturedContentAfter) {
-      sectionsHtml += '<div id="featured-content-inline"></div>';
+      sectionsHtml += `
+        <div class="featured-section">
+          <div class="level-header">
+            <span class="level-badge featured">Featured</span>
+            <span class="level-description">Mathematical wonder</span>
+          </div>
+          <div id="featured-content-inline"></div>
+        </div>
+      `;
     }
   });
 
