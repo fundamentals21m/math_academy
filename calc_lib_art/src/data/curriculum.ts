@@ -1,8 +1,8 @@
 // =============================================================================
-// CURRICULUM STRUCTURE
+// CURRICULUM STRUCTURE - Calculus as a Liberal Art
 // =============================================================================
-// Define your course structure here. The curriculum is organized by Parts,
-// where each Part contains multiple Sections.
+// A conceptual journey through calculus emphasizing ideas, history, and
+// connections to philosophy, art, and the broader human experience.
 // =============================================================================
 
 /**
@@ -30,68 +30,142 @@ export interface Part {
  */
 export const curriculum: Part[] = [
   // ==========================================================================
-  // EXAMPLE CURRICULUM - Replace with your course content
+  // PART 1: THE QUEST TO UNDERSTAND CHANGE
   // ==========================================================================
   {
     id: 1,
-    title: 'Introduction',
-    slug: 'introduction',
+    title: 'The Quest to Understand Change',
+    slug: 'understanding-change',
     sections: [
       {
         id: 0,
-        title: 'Welcome',
-        slug: 'welcome',
-        description: 'Introduction to the course and learning objectives.',
+        title: 'What is Calculus?',
+        slug: 'what-is-calculus',
+        description: 'The big picture: why calculus matters and what questions it answers.',
       },
       {
         id: 1,
-        title: 'Prerequisites',
-        slug: 'prerequisites',
-        description: 'What you need to know before starting this course.',
+        title: "Zeno's Paradoxes",
+        slug: 'zenos-paradoxes',
+        description: 'Ancient puzzles about motion, infinity, and the nature of space and time.',
+      },
+      {
+        id: 2,
+        title: 'Infinity and the Infinitesimal',
+        slug: 'infinity-infinitesimal',
+        description: 'The controversial idea of infinitely small quantities that revolutionized mathematics.',
       },
     ],
   },
+  // ==========================================================================
+  // PART 2: THE BIRTH OF CALCULUS
+  // ==========================================================================
   {
     id: 2,
-    title: 'Core Concepts',
-    slug: 'core-concepts',
+    title: 'The Birth of Calculus',
+    slug: 'birth-of-calculus',
     sections: [
       {
-        id: 2,
-        title: 'Fundamentals',
-        slug: 'fundamentals',
-        description: 'The building blocks of the subject.',
-      },
-      {
         id: 3,
-        title: 'Key Definitions',
-        slug: 'key-definitions',
-        description: 'Important terms and their meanings.',
+        title: 'Newton and the Falling Apple',
+        slug: 'newton',
+        description: 'How Isaac Newton invented calculus to understand gravity and motion.',
       },
       {
         id: 4,
-        title: 'Basic Theorems',
-        slug: 'basic-theorems',
-        description: 'Foundational theorems and proofs.',
+        title: 'Leibniz and the Art of Notation',
+        slug: 'leibniz',
+        description: 'The philosopher who gave calculus its language and symbols.',
+      },
+      {
+        id: 5,
+        title: 'The Great Controversy',
+        slug: 'controversy',
+        description: 'The bitter priority dispute that divided mathematics for a century.',
       },
     ],
   },
+  // ==========================================================================
+  // PART 3: THE DERIVATIVE - CAPTURING CHANGE
+  // ==========================================================================
   {
     id: 3,
-    title: 'Advanced Topics',
-    slug: 'advanced-topics',
+    title: 'The Derivative',
+    slug: 'derivative',
     sections: [
       {
-        id: 5,
-        title: 'Applications',
-        slug: 'applications',
-        description: 'Real-world applications of the concepts.',
+        id: 6,
+        title: 'The Tangent Problem',
+        slug: 'tangent-problem',
+        description: 'How do we measure the direction of a curve at a single point?',
       },
       {
-        id: 6,
-        title: 'Problem Solving',
-        slug: 'problem-solving',
-        description: 'Techniques for solving complex problems.',
+        id: 7,
+        title: 'Instantaneous Velocity',
+        slug: 'instantaneous-velocity',
+        description: 'The philosophical puzzle of motion at an instant.',
+      },
+      {
+        id: 8,
+        title: 'The Meaning of the Derivative',
+        slug: 'meaning-of-derivative',
+        description: 'Understanding rates of change as a fundamental concept.',
+      },
+    ],
+  },
+  // ==========================================================================
+  // PART 4: THE INTEGRAL - ACCUMULATION
+  // ==========================================================================
+  {
+    id: 4,
+    title: 'The Integral',
+    slug: 'integral',
+    sections: [
+      {
+        id: 9,
+        title: 'The Area Problem',
+        slug: 'area-problem',
+        description: 'Measuring curved regions through infinite subdivision.',
+      },
+      {
+        id: 10,
+        title: 'Accumulation and Totals',
+        slug: 'accumulation',
+        description: 'How integration captures the sum of infinitely many infinitesimal parts.',
+      },
+      {
+        id: 11,
+        title: 'The Fundamental Theorem',
+        slug: 'fundamental-theorem',
+        description: 'The profound connection between derivatives and integrals.',
+      },
+    ],
+  },
+  // ==========================================================================
+  // PART 5: CALCULUS IN THE WORLD
+  // ==========================================================================
+  {
+    id: 5,
+    title: 'Calculus in the World',
+    slug: 'calculus-in-world',
+    sections: [
+      {
+        id: 12,
+        title: 'Calculus and Physics',
+        slug: 'calculus-physics',
+        description: 'How calculus became the language of the physical universe.',
+      },
+      {
+        id: 13,
+        title: 'Calculus in Art and Music',
+        slug: 'calculus-art-music',
+        description: 'Hidden mathematical patterns in creative expression.',
+      },
+      {
+        id: 14,
+        title: 'The Unreasonable Effectiveness',
+        slug: 'unreasonable-effectiveness',
+        description: 'Why does mathematics describe reality so perfectly?',
       },
     ],
   },
