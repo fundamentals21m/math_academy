@@ -4,6 +4,7 @@ import { Math as MathInline, MathBlock } from '../../components/common/MathBlock
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section13Questions } from '../../data/quizzes';
+import { FourierWaves } from '../../components/visualizations';
 
 export default function Section13() {
   return (
@@ -90,6 +91,9 @@ export default function Section13() {
           entirely new sounds.
         </p>
       </Callout>
+
+      {/* Interactive Visualization */}
+      <FourierWaves />
 
       {/* Visual Arts */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Curves in Visual Art</h2>

@@ -5,6 +5,7 @@ import { Definition, Theorem } from '../../components/common/ContentBlocks';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section02Questions } from '../../data/quizzes';
+import { InfiniteSeriesVisualizer } from '../../components/visualizations';
 
 export default function Section02() {
   return (
@@ -152,6 +153,9 @@ export default function Section02() {
         The limit exists and equals <MathInline>{'2x'}</MathInline>, even though we never actually
         let <MathInline>{'\\Delta x'}</MathInline> equal zero.
       </p>
+
+      {/* Interactive Visualization */}
+      <InfiniteSeriesVisualizer />
 
       {/* Cantor's Revolution */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Cantor's Revolution: Sizes of Infinity</h2>

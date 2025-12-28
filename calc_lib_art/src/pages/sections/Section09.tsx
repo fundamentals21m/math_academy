@@ -4,6 +4,7 @@ import { Math as MathInline, MathBlock } from '../../components/common/MathBlock
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section09Questions } from '../../data/quizzes';
+import { RiemannSumExplorer } from '../../components/visualizations';
 
 export default function Section09() {
   return (
@@ -140,6 +141,9 @@ export default function Section09() {
           of each rectangle.
         </p>
       </Callout>
+
+      {/* Interactive Visualization */}
+      <RiemannSumExplorer />
 
       {/* A Concrete Example */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Example: Area Under a Parabola</h2>

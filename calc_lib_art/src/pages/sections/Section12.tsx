@@ -4,6 +4,7 @@ import { Math as MathInline, MathBlock } from '../../components/common/MathBlock
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section12Questions } from '../../data/quizzes';
+import { PhysicsCalculus } from '../../components/visualizations';
 
 export default function Section12() {
   return (
@@ -88,6 +89,9 @@ export default function Section12() {
           </div>
         </Card>
       </CardGrid>
+
+      {/* Interactive Visualization */}
+      <PhysicsCalculus />
 
       {/* Electromagnetism */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Maxwell's Equations</h2>

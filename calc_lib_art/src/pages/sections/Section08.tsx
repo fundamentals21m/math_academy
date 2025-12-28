@@ -5,6 +5,7 @@ import { Definition } from '../../components/common/ContentBlocks';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section08Questions } from '../../data/quizzes';
+import { DerivativeExplorer } from '../../components/visualizations';
 
 export default function Section08() {
   return (
@@ -78,6 +79,9 @@ export default function Section08() {
           </p>
         </Card>
       </CardGrid>
+
+      {/* Interactive Visualization */}
+      <DerivativeExplorer />
 
       {/* The Derivative as Sensitivity */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Sensitivity Analysis</h2>

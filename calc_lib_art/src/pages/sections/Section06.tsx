@@ -4,6 +4,7 @@ import { Math as MathInline, MathBlock } from '../../components/common/MathBlock
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section06Questions } from '../../data/quizzes';
+import { SecantToTangent } from '../../components/visualizations';
 
 export default function Section06() {
   return (
@@ -89,6 +90,9 @@ export default function Section06() {
       </p>
 
       <MathBlock>{`m_{\\text{tangent}} = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}`}</MathBlock>
+
+      {/* Interactive Visualization */}
+      <SecantToTangent />
 
       <Callout type="success">
         <p>

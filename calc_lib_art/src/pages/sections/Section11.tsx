@@ -5,6 +5,7 @@ import { Theorem } from '../../components/common/ContentBlocks';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section11Questions } from '../../data/quizzes';
+import { FundamentalTheoremDemo } from '../../components/visualizations';
 
 export default function Section11() {
   return (
@@ -61,6 +62,9 @@ export default function Section11() {
         endpoints</strong>. This turns the impossible (adding up infinitely many infinitesimal
         pieces) into the straightforward (subtract two numbers).
       </p>
+
+      {/* Interactive Visualization */}
+      <FundamentalTheoremDemo />
 
       {/* Why It's Revolutionary */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Why This Changes Everything</h2>
