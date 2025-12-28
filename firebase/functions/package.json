@@ -2,7 +2,6 @@
   "name": "magic-internet-math-functions",
   "version": "1.0.0",
   "description": "Cloud Functions for Magic Internet Math leaderboard",
-  "type": "module",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
