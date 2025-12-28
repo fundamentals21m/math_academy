@@ -5,8 +5,8 @@ import path from 'path'
 // =============================================================================
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
-const COURSE_ID = 'islr'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = '/islr-deploy/'
+const COURSE_ID = 'calc1'  // Short ID: 'ba', 'aa', 'crypto', etc.
+const BASE_PATH = `/${COURSE_ID}-deploy/`  // For Vercel hub deployment
 // =============================================================================
 
 export default defineConfig({
@@ -20,8 +20,6 @@ export default defineConfig({
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
         '@data': path.resolve(__dirname, './src/data'),
-        // Keep for backward compatibility
-        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
     },
   },
   build: {
