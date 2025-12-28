@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
-type CourseId = 'ba' | 'crypto' | 'aa' | 'linalg' | 'advlinalg';
+type CourseId = 'ba' | 'crypto' | 'aa' | 'linalg' | 'advlinalg' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art';
 
 interface ScoreUpdate {
   courseId: CourseId;
@@ -52,9 +52,9 @@ export const syncScores = functions.https.onCall(
       );
     }
 
-    const validCourses: CourseId[] = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg'];
+    const validCourses: CourseId[] = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art'];
     const batch = admin.firestore().batch();
-    const userScores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0 };
+    const userScores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0 };
 
     for (const score of scores) {
       if (!validCourses.includes(score.courseId)) {
@@ -88,7 +88,7 @@ export const syncScores = functions.https.onCall(
     }
 
     // Calculate total XP
-    const totalXP = userScores.ba + userScores.crypto + userScores.aa + userScores.linalg + userScores.advlinalg;
+    const totalXP = Object.values(userScores).reduce((sum, xp) => sum + xp, 0);
 
     // Calculate level (simple formula: level = floor(sqrt(totalXP / 100)) + 1)
     const level = Math.floor(Math.sqrt(totalXP / 100)) + 1;
@@ -136,11 +136,11 @@ export const getLeaderboard = functions.https.onCall(
   }> => {
     const { courseId, limit = 50 } = data || {};
 
-    const validOptions = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'overall'];
+    const validOptions = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'overall'];
     if (!courseId || !validOptions.includes(courseId)) {
       throw new functions.https.HttpsError(
         'invalid-argument',
-        'courseId must be "ba", "crypto", "aa", "linalg", "advlinalg", or "overall"'
+        'courseId must be a valid course ID or "overall"'
       );
     }
 

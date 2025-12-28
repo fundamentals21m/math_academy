@@ -170,6 +170,7 @@ function handleRecordQuiz(
     score,
     correctAnswers,
     totalQuestions,
+    xpEarned,
   };
 
   const newAttempts = [...existing.quizAttempts, newAttempt];
