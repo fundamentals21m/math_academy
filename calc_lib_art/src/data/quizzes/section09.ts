@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section09Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the basic idea of a Riemann sum?',
+    options: [
+      'Adding two numbers',
+      'Approximating area under a curve using rectangles',
+      'Finding the slope of a curve',
+      'Dividing a number into prime factors'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Riemann sums approximate the area under a curve by dividing the region into thin rectangles and adding up their areas.',
+  },
+  {
+    id: 2,
+    type: 'text',
+    question: 'What ancient mathematician developed the "method of exhaustion" to find areas of curved regions?',
+    correctAnswer: 'Archimedes',
+    difficulty: 'medium',
+    explanation: 'Archimedes used the method of exhaustion around 250 BCE to find areas like that of a parabolic segment, approximating with polygons.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What happens to a Riemann sum as the number of rectangles increases?',
+    options: [
+      'It becomes less accurate',
+      'It approaches the exact area (the integral)',
+      'It stays the same',
+      'It becomes infinite'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'As we use more and thinner rectangles, the Riemann sum gets closer to the true area. The limit of this process is the definite integral.',
+  },
+  {
+    id: 4,
+    type: 'numeric',
+    question: 'What is the value of $\\int_0^1 x^2 \\, dx$?',
+    correctAnswer: 0.33,
+    numericRange: { min: 0, max: 1, precision: 2 },
+    difficulty: 'medium',
+    explanation: 'The integral of $x^2$ from 0 to 1 equals $\\frac{x^3}{3}\\big|_0^1 = \\frac{1}{3} \\approx 0.33$.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What does the integral symbol $\\int$ represent?',
+    options: [
+      'Infinity',
+      'An elongated S for "sum" (adding infinitely many pieces)',
+      'The number $i$',
+      'Integration is impossible'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Leibniz designed $\\int$ as an elongated S for "summa" (sum), representing the sum of infinitely many infinitesimal pieces.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'When the function $f(x)$ is negative, what does the integral compute?',
+    options: [
+      'The same positive area',
+      'Signed (negative) area—below the x-axis counts as negative',
+      'Zero',
+      'The integral is undefined'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Integrals compute signed area: positive above the x-axis, negative below. This allows increases and decreases to cancel when computing net change.',
+  },
+];

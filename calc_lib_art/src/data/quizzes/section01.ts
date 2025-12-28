@@ -1,0 +1,82 @@
+import type { QuizQuestion } from './types';
+
+export const section01Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'In the Achilles and the Tortoise paradox, what is the main puzzle?',
+    options: [
+      'How can a tortoise be faster than Achilles?',
+      'How can Achilles ever catch the tortoise if he must first reach where it was?',
+      'Why does Achilles give the tortoise a head start?',
+      'How can Achilles run without moving?'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The paradox asks how Achilles can ever catch the tortoise when, logically, he must first reach where it was, by which time it has moved ahead—an infinite sequence of catching up.',
+  },
+  {
+    id: 2,
+    type: 'text',
+    question: 'Who was the ancient Greek philosopher who formulated the famous paradoxes about motion and infinity?',
+    correctAnswer: 'Zeno',
+    difficulty: 'easy',
+    explanation: 'Zeno of Elea (c. 490–430 BCE) formulated paradoxes that challenged the concepts of motion, space, and infinity.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The Dichotomy Paradox argues that to travel any distance, you must first:',
+    options: [
+      'Rest for an infinite time',
+      'Travel half the distance, then half of what remains, forever',
+      'Move faster than light',
+      'Travel in a circle'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Dichotomy says you must travel half the distance, then half of the remainder, and so on infinitely—seemingly making motion impossible.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The Arrow Paradox questions how an arrow can be moving if:',
+    options: [
+      'It is too heavy to fly',
+      'At each instant it occupies a fixed position',
+      'The bow is not strong enough',
+      'Time does not exist'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Arrow Paradox notes that at any single instant, the arrow occupies a definite position—indistinguishable from being at rest. How then can it be "moving"?',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'How does calculus resolve Zeno\'s paradoxes about infinite sequences?',
+    options: [
+      'By proving motion is impossible',
+      'By showing that infinite series can have finite sums',
+      'By ignoring the paradoxes',
+      'By proving time is discrete'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Calculus shows that an infinite series of terms can converge to a finite value. For example, $1/2 + 1/4 + 1/8 + \\ldots = 1$, resolving the apparent paradox.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What mathematical concept was missing in Zeno\'s time that later resolved his paradoxes?',
+    options: [
+      'Negative numbers',
+      'The concept of limits and convergent series',
+      'Complex numbers',
+      'Matrix multiplication'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Zeno lacked the concept of limits and convergent infinite series, which show how infinitely many terms can add to a finite sum.',
+  },
+];
