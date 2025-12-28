@@ -1,6 +1,8 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
+import { SectionQuiz } from '../../components/quiz';
+import { section05Questions } from '../../data/quizzes';
 
 export default function Section05() {
   return (
@@ -255,6 +257,9 @@ export default function Section05() {
           </li>
         </ul>
       </div>
+
+      {/* Section Quiz */}
+      <SectionQuiz sectionId={5} questions={section05Questions} />
     </LessonLayout>
   );
 }

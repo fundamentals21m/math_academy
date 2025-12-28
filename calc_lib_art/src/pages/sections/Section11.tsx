@@ -3,6 +3,8 @@ import { Callout } from '../../components/common/Callout';
 import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
 import { Theorem } from '../../components/common/ContentBlocks';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
+import { SectionQuiz } from '../../components/quiz';
+import { section11Questions } from '../../data/quizzes';
 
 export default function Section11() {
   return (
@@ -256,6 +258,9 @@ export default function Section11() {
           </li>
         </ul>
       </div>
+
+      {/* Section Quiz */}
+      <SectionQuiz sectionId={11} questions={section11Questions} />
     </LessonLayout>
   );
 }
