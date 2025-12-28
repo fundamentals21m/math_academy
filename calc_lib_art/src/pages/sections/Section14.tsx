@@ -4,6 +4,7 @@ import { Math as MathInline } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section14Questions } from '../../data/quizzes';
+import { MathNatureConnection } from '../../components/visualizations';
 
 export default function Section14() {
   return (
@@ -147,6 +148,9 @@ export default function Section14() {
           </p>
         </Card>
       </CardGrid>
+
+      {/* Interactive Visualization */}
+      <MathNatureConnection />
 
       {/* Possible Explanations */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Possible Explanations</h2>

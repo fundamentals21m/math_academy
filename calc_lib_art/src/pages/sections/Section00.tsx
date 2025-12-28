@@ -4,6 +4,7 @@ import { Math as MathInline, MathBlock } from '../../components/common/MathBlock
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section00Questions } from '../../data/quizzes';
+import { CalculusDualView } from '../../components/visualizations';
 
 export default function Section00() {
   return (
@@ -112,6 +113,9 @@ export default function Section00() {
           the Fundamental Theorem of Calculus, is what makes the subject so powerful.
         </p>
       </Callout>
+
+      {/* Interactive Visualization */}
+      <CalculusDualView />
 
       {/* Why Liberal Arts? */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Calculus as a Liberal Art</h2>

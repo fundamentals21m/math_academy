@@ -4,6 +4,7 @@ import { Math as MathInline, MathBlock } from '../../components/common/MathBlock
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section07Questions } from '../../data/quizzes';
+import { InstantaneousVelocity } from '../../components/visualizations';
 
 export default function Section07() {
   return (
@@ -88,6 +89,9 @@ export default function Section07() {
           That limiting value is the instantaneous velocity.
         </p>
       </Callout>
+
+      {/* Interactive Visualization */}
+      <InstantaneousVelocity />
 
       {/* Galileo's Experiment */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Galileo's Falling Bodies</h2>

@@ -14,8 +14,8 @@ export default defineConfig({
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
         '@data': path.resolve(__dirname, './src/data'),
-        // Monorepo shared package
-        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
+        // Local shared package (standalone deployment)
+        '@magic-internet-math/shared': path.resolve(__dirname, './src/shared'),
     },
   },
   build: {

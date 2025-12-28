@@ -4,6 +4,7 @@ import { Math as MathInline, MathBlock } from '../../components/common/MathBlock
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section10Questions } from '../../data/quizzes';
+import { AccumulationFunction } from '../../components/visualizations';
 
 export default function Section10() {
   return (
@@ -93,6 +94,9 @@ export default function Section10() {
           </p>
         </Card>
       </CardGrid>
+
+      {/* Interactive Visualization */}
+      <AccumulationFunction />
 
       {/* Real-World Accumulation */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Accumulation Everywhere</h2>

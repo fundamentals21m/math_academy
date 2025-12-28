@@ -5,6 +5,7 @@ import { Definition, Theorem } from '../../components/common/ContentBlocks';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section01Questions } from '../../data/quizzes';
+import { AchillesTortoiseRace } from '../../components/visualizations';
 
 export default function Section01() {
   return (
@@ -94,6 +95,9 @@ export default function Section01() {
         reasoning? The paradox forces us to confront a deep question: <strong>Can infinitely
         many steps be completed?</strong>
       </p>
+
+      {/* Interactive Visualization */}
+      <AchillesTortoiseRace />
 
       {/* The Dichotomy */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">The Dichotomy Paradox</h2>

@@ -4,6 +4,7 @@ import { Math as MathInline, MathBlock } from '../../components/common/MathBlock
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section04Questions } from '../../data/quizzes';
+import { LeibnizNotation } from '../../components/visualizations';
 
 export default function Section04() {
   return (
@@ -114,6 +115,9 @@ export default function Section04() {
           mnemonic that usually gives the right answer.
         </p>
       </Callout>
+
+      {/* Interactive Visualization */}
+      <LeibnizNotation />
 
       {/* Comparison */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Newton vs. Leibniz: A Comparison</h2>

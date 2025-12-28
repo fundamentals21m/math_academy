@@ -4,6 +4,7 @@ import { Math as MathInline, MathBlock } from '../../components/common/MathBlock
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section03Questions } from '../../data/quizzes';
+import { NewtonFluxions } from '../../components/visualizations';
 
 export default function Section03() {
   return (
@@ -86,6 +87,9 @@ export default function Section03() {
       </p>
 
       <MathBlock>{`\\text{Position: } x \\quad \\longrightarrow \\quad \\text{Velocity: } \\dot{x} \\quad \\longrightarrow \\quad \\text{Acceleration: } \\ddot{x}`}</MathBlock>
+
+      {/* Interactive Visualization */}
+      <NewtonFluxions />
 
       {/* Newton's Laws */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Physics Written in Calculus</h2>

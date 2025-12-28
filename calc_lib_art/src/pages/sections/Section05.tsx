@@ -3,6 +3,7 @@ import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section05Questions } from '../../data/quizzes';
+import { PriorityTimeline } from '../../components/visualizations';
 
 export default function Section05() {
   return (
@@ -23,6 +24,9 @@ export default function Section05() {
           geniuses; both were also petty, vindictive, and ultimately diminished by the dispute.
         </p>
       </Callout>
+
+      {/* Interactive Visualization */}
+      <PriorityTimeline />
 
       {/* The Timeline */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">Timeline of Discovery</h2>
