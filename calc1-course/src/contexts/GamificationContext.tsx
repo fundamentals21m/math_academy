@@ -10,7 +10,7 @@ import { COURSE_ID } from '@/config';
 import {
   GamificationProvider as SharedGamificationProvider,
   useGamification,
-} from '@shared/gamification';
+} from '@shared/gamification/GamificationContext';
 
 // Re-export the hook directly
 export { useGamification };

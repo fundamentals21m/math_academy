@@ -5,34 +5,34 @@
 // Update these values when creating a new course.
 // =============================================================================
 
-import type { CourseId } from '@shared/gamification';
+import type { CourseId } from '@shared/types/courses';
 
 /**
  * Course identifier - used for XP tracking, URLs, and storage keys
  * Examples: 'ba' (Basic Algebra), 'aa' (Abstract Algebra), 'crypto' (Cryptography)
  */
-export const COURSE_ID: CourseId = 'calc_lib_art';
+export const COURSE_ID: CourseId = 'calc1';
 
 /**
  * Human-readable course name
  */
-export const COURSE_NAME = 'Calculus as a Liberal Art';
+export const COURSE_NAME = 'Calculus';
 
 /**
  * Short description for meta tags and headers
  */
-export const COURSE_DESCRIPTION = 'An interactive course exploring calculus through a liberal arts lens';
+export const COURSE_DESCRIPTION = 'An interactive course based on Tom M. Apostol\'s Calculus, Volume 1';
 
 /**
  * Course accent color (used in headers, buttons, etc.)
  * Options: 'indigo', 'emerald', 'amber', 'rose', 'cyan'
  */
-export const COURSE_ACCENT = 'indigo';
+export const COURSE_ACCENT = 'cyan';
 
 /**
  * Course icon/emoji for visual identification
  */
-export const COURSE_ICON = '📚';
+export const COURSE_ICON = '∫';
 
 /**
  * Base path for routing (must match vite.config.ts)

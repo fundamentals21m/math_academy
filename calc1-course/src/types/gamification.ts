@@ -11,7 +11,7 @@ export type {
   AchievementCategory,
   Difficulty,
   SectionId,
-} from '@shared/gamification';
+} from '@shared/gamification/types';
 
 // Alias for backward compatibility
-export type { Difficulty as QuizDifficulty } from '@shared/gamification';
+export type { Difficulty as QuizDifficulty } from '@shared/gamification/types';
