@@ -1,0 +1,31 @@
+name: Daily Leaderboard Post
+
+on:
+  schedule:
+    # Run daily at noon UTC (7am EST, 4am PST)
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    # Allow manual trigger from GitHub Actions UI
+
+jobs:
+  post-leaderboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: scripts/nostr-bot
+        run: npm install
+
+      - name: Post leaderboard to Nostr
+        working-directory: scripts/nostr-bot
+        env:
+          NOSTR_BOT_NSEC: ${{ secrets.NOSTR_BOT_NSEC }}
+        run: node index.js
