@@ -54,15 +54,27 @@ function renderSection(section) {
 /**
  * Render all course sections into a container
  * @param {string} containerId - ID of the container element
+ * @param {Object} [options] - Rendering options
+ * @param {string} [options.insertFeaturedContentAfter] - Section ID after which to insert featured content placeholder
  */
-export function renderCourseHub(containerId) {
+export function renderCourseHub(containerId, options = {}) {
   const container = document.getElementById(containerId);
   if (!container) {
     console.error(`Container #${containerId} not found`);
     return;
   }
 
-  const sectionsHtml = SECTIONS.map(renderSection).join('');
+  const { insertFeaturedContentAfter } = options;
+
+  let sectionsHtml = '';
+  SECTIONS.forEach(section => {
+    sectionsHtml += renderSection(section);
+    // Insert featured content placeholder after specified section
+    if (insertFeaturedContentAfter && section.id === insertFeaturedContentAfter) {
+      sectionsHtml += '<div id="featured-content-inline"></div>';
+    }
+  });
+
   container.innerHTML = sectionsHtml;
 }
 
