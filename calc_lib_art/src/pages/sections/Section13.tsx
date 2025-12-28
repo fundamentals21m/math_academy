@@ -2,6 +2,8 @@ import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
+import { SectionQuiz } from '../../components/quiz';
+import { section13Questions } from '../../data/quizzes';
 
 export default function Section13() {
   return (
@@ -284,6 +286,9 @@ export default function Section13() {
           </li>
         </ul>
       </div>
+
+      {/* Section Quiz */}
+      <SectionQuiz sectionId={13} questions={section13Questions} />
     </LessonLayout>
   );
 }
