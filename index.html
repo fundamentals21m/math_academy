@@ -132,10 +132,14 @@
   <script type="module">
     import { renderCourseHub, renderLeaderboardLinks, getCourseCount } from './scripts/hubRenderer.js';
     import { renderProgressDashboard } from './scripts/progressDashboard.js';
+    import { renderCardinalityViz } from './scripts/cardinalityViz.js';
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Render course sections
-      renderCourseHub('courses-container');
+      // Render course sections (with placeholder for featured content after 'featured' section)
+      renderCourseHub('courses-container', { insertFeaturedContentAfter: 'featured' });
+
+      // Render featured content visualization into the inline placeholder
+      renderCardinalityViz('featured-content-inline');
 
       // Render progress dashboard
       renderProgressDashboard('progress-dashboard');
@@ -175,7 +179,7 @@
     <h2 class="section-title">Choose Your Path</h2>
     <p class="section-subtitle" id="courses-subtitle">Courses organized by subject</p>
 
-    <!-- Course sections rendered dynamically -->
+    <!-- Course sections rendered dynamically (includes inline featured content) -->
     <div id="courses-container"></div>
 
     <!-- Progress Dashboard -->
