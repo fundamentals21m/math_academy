@@ -38,6 +38,7 @@ export interface QuizAttempt {
   score: number;
   correctAnswers: number;
   totalQuestions: number;
+  xpEarned: number;
 }
 
 /**

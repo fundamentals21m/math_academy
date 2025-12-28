@@ -28,8 +28,8 @@ export const WEBSOCKET_TIMEOUT_MS = 3000;
 // SYNC INTERVALS
 // =============================================================================
 
-/** Periodic sync interval for background syncing (5 minutes) */
-export const SYNC_INTERVAL_MS = 5 * 60 * 1000;
+/** Periodic sync interval for background syncing (30 seconds) */
+export const SYNC_INTERVAL_MS = 30 * 1000;
 
 /** Debounce delay for immediate sync requests */
 export const DEBOUNCE_MS = 2000;
