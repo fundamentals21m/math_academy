@@ -12,6 +12,7 @@
 
 import { fetchLeaderboard } from './fetchLeaderboard.js';
 import { postToNostr } from './postToNostr.js';
+import { enrichWithNostrProfiles } from './fetchNostrProfiles.js';
 
 const HUB_URL = 'https://mathacademy-cyan.vercel.app';
 
@@ -68,8 +69,11 @@ async function main() {
   }
 
   console.log('Fetching leaderboard...');
-  const rankings = await fetchLeaderboard();
+  let rankings = await fetchLeaderboard();
   console.log(`Got ${rankings.length} rankings`);
+
+  console.log('Enriching with Nostr profiles...');
+  rankings = await enrichWithNostrProfiles(rankings);
 
   const post = formatLeaderboardPost(rankings);
 
