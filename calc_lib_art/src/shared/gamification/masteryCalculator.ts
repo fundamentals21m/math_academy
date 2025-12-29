@@ -21,11 +21,11 @@ export function calculateMastery(section: SectionProgress): MasteryLevel {
   const perfectCount = quizAttempts.filter((a) => a.score === 100).length;
 
   // Mastery criteria:
-  // - Mastered: 2+ perfect scores, or avg >= 90 with 3+ attempts
+  // - Mastered: any perfect score (100%), or avg >= 90 with 3+ attempts
   // - Familiar: best score >= 80, or avg >= 70 with 2+ attempts
   // - Learning: any other case
 
-  if (perfectCount >= 2 || (avgScore >= 90 && quizAttempts.length >= 3)) {
+  if (perfectCount >= 1 || (avgScore >= 90 && quizAttempts.length >= 3)) {
     return 'mastered';
   }
 
