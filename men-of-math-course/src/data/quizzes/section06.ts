@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section06Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What famous triangle of numbers is named after Pascal?',
+    options: [
+      'The Pythagorean triangle',
+      'Pascal\'s Triangle',
+      'The Bermuda Triangle',
+      'The Golden Triangle'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Pascal\'s Triangle displays binomial coefficients and has many remarkable properties.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Each entry in Pascal\'s Triangle equals:',
+    options: [
+      'The product of the two entries above it',
+      'The sum of the two entries above it',
+      'The difference of the two entries above it',
+      'The average of the two entries above it'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Each entry is the sum of the two entries directly above it, giving the binomial coefficient formula.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Pascal\'s Wager is an argument concerning:',
+    options: [
+      'Mathematical probability',
+      'The existence of God',
+      'The nature of infinity',
+      'Scientific method'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Pascal\'s Wager argues it is rational to believe in God based on expected value reasoning.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What mechanical calculating device did Pascal invent as a teenager?',
+    options: [
+      'The slide rule',
+      'The Pascaline (mechanical calculator)',
+      'The abacus',
+      'The difference engine'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'At 19, Pascal invented the Pascaline, a mechanical calculator to help his father with tax calculations.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'At what age did Pascal die?',
+    correctAnswer: 39,
+    numericRange: { min: 0, max: 100, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'Pascal died in 1662 at the age of 39, having accomplished remarkable work in mathematics, physics, and philosophy.',
+  },
+  {
+    id: 6,
+    type: 'text',
+    question: 'The SI unit of pressure is named after Pascal. What is its symbol?',
+    correctAnswer: 'Pa',
+    difficulty: 'easy',
+    explanation: 'The pascal (Pa) is the SI unit of pressure, named for Blaise Pascal\'s work on fluid mechanics.',
+  },
+];

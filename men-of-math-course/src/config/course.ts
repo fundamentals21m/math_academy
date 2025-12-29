@@ -36,8 +36,9 @@ export const COURSE_ICON = '📚';
 
 /**
  * Base path for routing (must match vite.config.ts)
+ * Note: Uses hyphenated version for URLs while COURSE_ID uses underscore for storage
  */
-export const BASE_PATH = `/math_academy/${COURSE_ID}/`;
+export const BASE_PATH = '/math_academy/men-of-math/';
 
 /**
  * Hub URL - main Magic Internet Math landing page
