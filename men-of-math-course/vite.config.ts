@@ -5,7 +5,7 @@ import path from 'path'
 // =============================================================================
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
-const COURSE_ID = 'men_of_math'  // Short ID: 'ba', 'aa', 'crypto', etc.
+const COURSE_ID = 'men-of-math'  // Short ID: 'ba', 'aa', 'crypto', etc.
 const BASE_PATH = `/math_academy/${COURSE_ID}/`
 // =============================================================================
 
