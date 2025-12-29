@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section10Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, Algorithm } from '@/components/common/ContentBlocks';
 import { Math, MathBlock } from '@/components/common/MathBlock';
@@ -251,7 +253,7 @@ export default function Section10() {
         for qualitative response variables.
       </Callout>
 
-      {/* <SectionQuiz sectionId={10} questions={section10Quiz} title="KNN Comparison Quiz" /> */}
+      <SectionQuiz sectionId={10} questions={section10Quiz} title="KNN Comparison Quiz" />
     </LessonLayout>
   );
 }

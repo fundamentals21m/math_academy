@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section05Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Math, MathBlock } from '@/components/common/MathBlock';
 
@@ -221,7 +223,7 @@ export default function Section05() {
         quality, and make predictions.
       </Callout>
 
-      {/* <SectionQuiz sectionId={5} questions={section05Quiz} title="Chapter 2 Review Quiz" /> */}
+      <SectionQuiz sectionId={5} questions={section05Quiz} title="Chapter 2 Review Quiz" />
     </LessonLayout>
   );
 }

@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section02Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Math, MathBlock } from '@/components/common/MathBlock';
@@ -351,7 +353,7 @@ export default function Section02() {
         bias-variance tradeoff.
       </Callout>
 
-      {/* <SectionQuiz sectionId={2} questions={section02Quiz} title="Statistical Learning Quiz" /> */}
+      <SectionQuiz sectionId={2} questions={section02Quiz} title="Statistical Learning Quiz" />
     </LessonLayout>
   );
 }

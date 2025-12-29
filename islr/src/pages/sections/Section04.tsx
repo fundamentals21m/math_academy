@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section04Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { RCodeBlock } from '@/components/common/ContentBlocks';
 
@@ -337,7 +339,7 @@ example(plot)`}
         we'll use throughout this course is available in the ISLR2 package.
       </Callout>
 
-      {/* <SectionQuiz sectionId={4} questions={section04Quiz} title="R Basics Quiz" /> */}
+      <SectionQuiz sectionId={4} questions={section04Quiz} title="R Basics Quiz" />
     </LessonLayout>
   );
 }

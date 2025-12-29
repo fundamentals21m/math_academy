@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section08Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Example, RCodeBlock } from '@/components/common/ContentBlocks';
 import { Math, MathBlock } from '@/components/common/MathBlock';
@@ -314,7 +316,7 @@ hatvalues(lm.fit)`}
         neighbors.
       </Callout>
 
-      {/* <SectionQuiz sectionId={8} questions={section08Quiz} title="Regression Considerations Quiz" /> */}
+      <SectionQuiz sectionId={8} questions={section08Quiz} title="Regression Considerations Quiz" />
     </LessonLayout>
   );
 }

@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section09Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Example, RCodeBlock } from '@/components/common/ContentBlocks';
 import { Math, MathBlock } from '@/components/common/MathBlock';
@@ -286,7 +288,7 @@ predict(lm.fit.int, new.data, interval = "prediction")`}
         data-driven recommendations.
       </Callout>
 
-      {/* <SectionQuiz sectionId={9} questions={section09Quiz} title="Marketing Plan Quiz" /> */}
+      <SectionQuiz sectionId={9} questions={section09Quiz} title="Marketing Plan Quiz" />
     </LessonLayout>
   );
 }

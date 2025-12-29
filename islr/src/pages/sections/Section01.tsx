@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section01Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition } from '@/components/common/ContentBlocks';
 import { Math, MathBlock } from '@/components/common/MathBlock';
@@ -247,7 +249,7 @@ export default function Section01() {
         error, and understanding how we estimate the unknown function <Math>f</Math>.
       </Callout>
 
-      {/* <SectionQuiz sectionId={1} questions={section01Quiz} title="Introduction Quiz" /> */}
+      <SectionQuiz sectionId={1} questions={section01Quiz} title="Introduction Quiz" />
     </LessonLayout>
   );
 }
