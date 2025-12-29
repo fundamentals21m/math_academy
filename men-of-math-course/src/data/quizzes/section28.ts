@@ -1,0 +1,83 @@
+import type { QuizQuestion } from './types';
+
+export const section28Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Leopold Kronecker is famous for saying "God made the integers; all else is the work of:',
+    options: [
+      'Nature',
+      'Man',
+      'The devil',
+      'Mathematicians'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Kronecker\'s quote reflects his belief that only integers are truly fundamental in mathematics.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Kronecker advocated for which philosophical position in mathematics?',
+    options: [
+      'Platonism',
+      'Constructivism/Finitism',
+      'Formalism',
+      'Logicism'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Kronecker believed mathematics should only use constructive methods and finite processes.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Kronecker opposed which mathematician\'s work on infinite sets?',
+    options: [
+      'Gauss',
+      'Cantor',
+      'Weierstrass',
+      'Euler'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Kronecker famously opposed Cantor\'s theory of infinite sets, calling it illegitimate.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The Kronecker delta $\\delta_{ij}$ equals:',
+    options: [
+      'Always 1',
+      '1 if $i=j$, 0 otherwise',
+      'Always 0',
+      '$i + j$'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Kronecker delta is 1 when indices are equal and 0 otherwise.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Kronecker made major contributions to:',
+    options: [
+      'Topology',
+      'Algebraic number theory',
+      'Statistics',
+      'Geometry'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Kronecker worked extensively on algebraic number theory and algebra.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'What is the value of the Kronecker delta $\\delta_{3,3}$?',
+    correctAnswer: 1,
+    numericRange: { min: 0, max: 2, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'Since both indices are equal (3=3), $\\delta_{3,3} = 1$.',
+  },
+];
