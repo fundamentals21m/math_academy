@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { FEATURES } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
-import { renderContent } from '@magic-internet-math/shared';
+import { renderContent, calculateXP, XP_CONFIG } from '@magic-internet-math/shared';
 import type { QuizQuestion, QuestionType } from '@magic-internet-math/shared';
 
 // Re-export types for convenience
@@ -28,6 +28,7 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   const [answers, setAnswers] = useState<boolean[]>([]);
   const [isComplete, setIsComplete] = useState(false);
   const [numericError, setNumericError] = useState('');
+  const [earnedXP, setEarnedXP] = useState(0);
 
   // Randomize questions on mount, take 5
   const shuffledQuestions = useMemo(() => {
@@ -53,7 +54,7 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   };
 
   const handleNumericAnswer = () => {
-    if (numericAnswer === null) {
+    if (numericAnswer === null || Number.isNaN(numericAnswer)) {
       setNumericError('Please enter a number');
       return;
     }
@@ -111,14 +112,21 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
       // Quiz complete
       setIsComplete(true);
 
+      const finalScore = score + (showResult ? (
+        questionType === 'multiple-choice' && selectedAnswer === currentQuestion.correctIndex ? 1 :
+        questionType === 'numeric' && numericAnswer === currentQuestion.correctAnswer ? 1 :
+        questionType === 'text' && textAnswer.toLowerCase() === String(currentQuestion.correctAnswer ?? '').toLowerCase() ? 1 : 0
+      ) : 0);
+      const finalPercentage = globalThis.Math.round((finalScore / totalQuestions) * 100);
+
+      // Calculate XP earned
+      let xpEarned = calculateXP(currentQuestion.difficulty, finalPercentage);
+      if (finalPercentage === 100) {
+        xpEarned = globalThis.Math.round(xpEarned * (1 + XP_CONFIG.QUIZ_PERFECT_BONUS));
+      }
+      setEarnedXP(xpEarned);
+
       if (gamification) {
-        const finalScore = score + (showResult ? (
-          questionType === 'multiple-choice' && selectedAnswer === currentQuestion.correctIndex ? 1 :
-          questionType === 'numeric' && numericAnswer === currentQuestion.correctAnswer ? 1 :
-          questionType === 'text' && textAnswer.toLowerCase() === String(currentQuestion.correctAnswer ?? '').toLowerCase() ? 1 : 0
-        ) : 0);
-        const finalPercentage = globalThis.Math.round((finalScore / totalQuestions) * 100);
-        
         gamification.recordQuiz(
           sectionId,
           currentQuestion.difficulty,
@@ -140,6 +148,7 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
     setAnswers([]);
     setIsComplete(false);
     setNumericError('');
+    setEarnedXP(0);
   };
 
   if (isComplete) {
@@ -153,9 +162,25 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
             {percentage >= 80 ? '🎉' : percentage >= 60 ? '👍' : '📚'}
           </div>
           <h3 className="text-2xl font-bold text-dark-100 mb-2">Quiz Complete!</h3>
-          <p className="text-dark-400 mb-6">
+          <p className="text-dark-400 mb-4">
             You scored {finalScore} out of {totalQuestions} ({percentage}%)
           </p>
+
+          {/* XP Earned */}
+          {FEATURES.gamification && earnedXP > 0 && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/20 border border-amber-500/30 mb-4"
+            >
+              <span className="text-2xl">⭐</span>
+              <span className="text-amber-300 font-bold text-lg">+{earnedXP} XP</span>
+              {percentage === 100 && (
+                <span className="text-amber-400 text-sm">(Perfect bonus!)</span>
+              )}
+            </motion.div>
+          )}
+
           <div className="flex items-center justify-center gap-2 mb-6">
             {answers.map((correct, i) => (
               <div
@@ -261,7 +286,10 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
             min={currentQuestion.numericRange?.min}
             max={currentQuestion.numericRange?.max}
             value={numericAnswer ?? ''}
-            onChange={(e) => setNumericAnswer(parseFloat(e.target.value) || null)}
+            onChange={(e) => {
+              const val = e.target.value;
+              setNumericAnswer(val === '' ? null : parseFloat(val));
+            }}
             disabled={showResult}
             className="w-full px-4 py-3 rounded-xl bg-dark-800 border border-dark-700 text-dark-100 placeholder-dark-500 focus:outline-none focus:border-primary-500 transition-colors"
             placeholder="Enter your answer..."
@@ -271,7 +299,7 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
           )}
           <button
             onClick={handleNumericAnswer}
-            disabled={showResult || numericAnswer === null}
+            disabled={showResult || numericAnswer === null || Number.isNaN(numericAnswer)}
             className="w-full py-3 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-medium transition-colors disabled:bg-dark-600 disabled:cursor-not-allowed"
           >
             Check Answer
