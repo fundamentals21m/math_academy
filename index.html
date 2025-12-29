@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
   <title>Magic Internet Math</title>
   <meta name="description" content="Interactive courses covering the mathematics that powers modern technology, from foundational algebra to the cryptography securing the internet.">
 
@@ -48,6 +49,23 @@
     let firebaseApp = null;
 
     // Make functions available globally
+    window.getUserScores = async function(npub) {
+      try {
+        // Initialize Firebase only once
+        if (!firebaseApp) {
+          firebaseApp = initializeApp(firebaseConfig);
+        }
+
+        const functions = getFunctions(firebaseApp);
+        const getUserScoresFn = httpsCallable(functions, 'getUserScores');
+        const result = await getUserScoresFn({ npub });
+        return result.data;
+      } catch (error) {
+        console.error('getUserScores error:', error);
+        throw error;
+      }
+    };
+
     window.loadLeaderboard = async function() {
       const tableEl = document.getElementById('leaderboard-table');
       const statusEl = document.getElementById('leaderboard-status');

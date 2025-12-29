@@ -1,0 +1,113 @@
+import type { QuizQuestion } from './types';
+
+export const section31Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is a Dedekind cut?',
+    options: [
+      'A method for dividing integers',
+      'A partition of rational numbers into two sets',
+      'A technique for solving equations',
+      'A way to count infinite sets'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A Dedekind cut is a partition of the rational numbers $\\mathbb{Q}$ into a lower set $L$ and an upper set $U$, used to construct real numbers.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What property distinguishes an irrational Dedekind cut from a rational one?',
+    options: [
+      'The lower set is empty',
+      'The upper set is finite',
+      'The lower set has no maximum and the upper set has no minimum',
+      'Both sets are countable'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For an irrational cut (like $\\sqrt{2}$), the lower set has no maximum and the upper set has no minimum.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What mathematical structure did Dedekind invent to restore unique factorization in algebraic number rings?',
+    options: [
+      'Groups',
+      'Ideals',
+      'Fields',
+      'Matrices'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Dedekind invented ideals so that even when elements fail to factor uniquely, ideals always factor uniquely into prime ideals.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'According to Dedekind\'s definition, when is a set infinite?',
+    options: [
+      'When it has more than a million elements',
+      'When it cannot be counted',
+      'When it can be put in bijection with a proper subset of itself',
+      'When it contains irrational numbers'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A set is Dedekind-infinite if and only if it can be matched one-to-one with a proper subset of itself.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'In Dedekind\'s construction of natural numbers, what represents the number 0?',
+    options: [
+      'The set $\\{1\\}$',
+      'The empty set $\\emptyset$',
+      'The set of all integers',
+      'The number 1'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In the set-theoretic construction, 0 is represented by the empty set $\\emptyset$.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What is the successor of a natural number $n$ in Dedekind\'s construction?',
+    options: [
+      '$n + 1$',
+      '$n \\cup \\{n\\}$',
+      '$\\{n\\}$',
+      '$2n$'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The successor $S(n) = n \\cup \\{n\\}$, so each natural number is the set of all smaller natural numbers.',
+  },
+  {
+    id: 7,
+    type: 'numeric',
+    question: 'How old was Dedekind when he died?',
+    correctAnswer: 84,
+    numericRange: { min: 0, max: 120, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'Dedekind lived from 1831 to 1916, dying at the age of 84.',
+  },
+  {
+    id: 8,
+    type: 'text',
+    question: 'What property of the real numbers does the Dedekind cut construction establish that the rationals lack?',
+    correctAnswer: 'completeness',
+    difficulty: 'medium',
+    explanation: 'The Dedekind cut construction shows that $\\mathbb{R}$ is complete (has no gaps), while $\\mathbb{Q}$ is not.',
+  },
+  {
+    id: 9,
+    type: 'text',
+    question: 'What famous mathematician was Dedekind\'s doctoral advisor?',
+    correctAnswer: 'Gauss',
+    difficulty: 'medium',
+    explanation: 'Dedekind studied under Carl Friedrich Gauss at Gottingen.',
+  },
+];

@@ -49,6 +49,12 @@ export const SECTIONS = [
     subtitle: 'Algebraic structures and systems',
     style: 'subject'
   },
+  {
+    id: 'history',
+    title: 'Math History',
+    subtitle: 'The stories behind the mathematics',
+    style: 'subject'
+  },
 ];
 
 /** @type {Course[]} */
@@ -109,7 +115,7 @@ export const COURSES = [
     icon: '∫',
     url: 'calc1-deploy/',
     tags: ['17 Parts', '101 Sections'],
-    sections: ['featured', 'calculus'],
+    sections: ['calculus'],
     totalSections: 101,
     progressPrefix: 'calc1:',
     leaderboardUrl: 'calc1-deploy/#/leaderboard',
@@ -192,6 +198,22 @@ export const COURSES = [
     leaderboardUrl: 'aa/#/leaderboard',
     shortName: 'Abstract Algebra',
     progressGradient: 'linear-gradient(90deg, #f97316, #fb923c)',
+  },
+
+  // MATH HISTORY
+  {
+    id: 'mom',
+    title: 'Men of Mathematics',
+    description: "Journey through 2500 years of mathematical history based on E.T. Bell's classic. From Zeno to Poincaré, discover the lives and ideas of history's greatest mathematicians.",
+    icon: '📜',
+    url: 'men-of-math/',
+    tags: ['34 Sections', 'Interactive'],
+    sections: ['history'],
+    totalSections: 34,
+    progressPrefix: 'mom:',
+    leaderboardUrl: 'men-of-math/#/leaderboard',
+    shortName: 'Men of Math',
+    progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)',
   },
 ];
 
