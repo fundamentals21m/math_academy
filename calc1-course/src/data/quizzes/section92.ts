@@ -1,0 +1,83 @@
+import type { QuizQuestion } from './types';
+
+export const section92Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'An inner product on a real vector space satisfies:',
+    options: [
+      'Only $\\langle \\mathbf{u}, \\mathbf{v} \\rangle = \\langle \\mathbf{v}, \\mathbf{u} \\rangle$',
+      'Symmetry, linearity, and positive definiteness',
+      'Only $\\langle \\mathbf{v}, \\mathbf{v} \\rangle \\geq 0$',
+      '$\\langle \\mathbf{u}, \\mathbf{v} \\rangle = 0$ always'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Inner product: symmetric, linear, positive definite.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The standard inner product on $\\mathbb{R}^n$ is:',
+    options: [
+      '$\\mathbf{u} + \\mathbf{v}$',
+      '$\\mathbf{u} \\cdot \\mathbf{v} = \\sum u_i v_i$',
+      '$\\mathbf{u} \\times \\mathbf{v}$',
+      '$|\\mathbf{u}| |\\mathbf{v}|$'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Standard inner product = dot product.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The norm induced by an inner product is:',
+    options: [
+      '$\\langle \\mathbf{v}, \\mathbf{v} \\rangle$',
+      '$\\sqrt{\\langle \\mathbf{v}, \\mathbf{v} \\rangle}$',
+      '$|\\langle \\mathbf{v}, \\mathbf{v} \\rangle|$',
+      '$\\langle \\mathbf{v}, \\mathbf{v} \\rangle^2$'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Norm = $\\|\\mathbf{v}\\| = \\sqrt{\\langle \\mathbf{v}, \\mathbf{v} \\rangle}$.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'A Euclidean space is:',
+    options: [
+      'Any vector space',
+      'A finite-dimensional inner product space over $\\mathbb{R}$',
+      'Infinite-dimensional only',
+      'A space without inner product'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Euclidean space: finite-dimensional real inner product space.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The parallelogram law states:',
+    options: [
+      '$\\|\\mathbf{u} + \\mathbf{v}\\| = \\|\\mathbf{u}\\| + \\|\\mathbf{v}\\|$',
+      '$\\|\\mathbf{u} + \\mathbf{v}\\|^2 + \\|\\mathbf{u} - \\mathbf{v}\\|^2 = 2\\|\\mathbf{u}\\|^2 + 2\\|\\mathbf{v}\\|^2$',
+      '$\\|\\mathbf{u} \\times \\mathbf{v}\\| = \\|\\mathbf{u}\\| \\|\\mathbf{v}\\|$',
+      '$\\|\\mathbf{u}\\| = \\|\\mathbf{v}\\|$'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Parallelogram law: sum of squares of diagonals = 2 × sum of squares of sides.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'In standard $\\mathbb{R}^2$, what is $\\|(3, 4)\\|$?',
+    correctAnswer: 5,
+    numericRange: { min: 4, max: 6, precision: 0 },
+    difficulty: 'easy',
+    explanation: '$\\sqrt{9 + 16} = 5$.',
+  },
+];

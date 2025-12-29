@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section90Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'A subspace of a vector space must:',
+    options: [
+      'Contain all vectors',
+      'Be closed under addition and scalar multiplication',
+      'Be finite',
+      'Have the same dimension as the parent space'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Subspace: closed under vector space operations, contains zero.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The zero vector subspace $\\{\\mathbf{0}\\}$ has dimension:',
+    options: [
+      '$0$',
+      '$1$',
+      'Undefined',
+      'Infinite'
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The trivial subspace has dimension 0.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'In $\\mathbb{R}^3$, a plane through the origin is:',
+    options: [
+      'Not a subspace',
+      'A subspace of dimension 2',
+      'A subspace of dimension 3',
+      'A subspace of dimension 1'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Plane through origin in $\\mathbb{R}^3$ is a 2D subspace.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The set $\\{(x, y) : x + y = 1\\}$ in $\\mathbb{R}^2$ is:',
+    options: [
+      'A subspace',
+      'Not a subspace (doesn\'t contain origin)',
+      'All of $\\mathbb{R}^2$',
+      'Empty'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$x + y = 1$ doesn\'t pass through origin, so not a subspace.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The intersection of two subspaces is:',
+    options: [
+      'Not necessarily a subspace',
+      'Always a subspace',
+      'Always empty',
+      'The whole space'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Intersection of subspaces is a subspace.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The solution set of $A\\mathbf{x} = \\mathbf{0}$ (null space) is:',
+    options: [
+      'Never a subspace',
+      'A subspace',
+      'Always the whole space',
+      'Always trivial'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Null space is a subspace (homogeneous solutions).',
+  },
+];
