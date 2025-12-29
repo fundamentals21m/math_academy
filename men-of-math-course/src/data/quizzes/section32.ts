@@ -1,0 +1,127 @@
+import type { QuizQuestion } from './types';
+
+export const section32Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What did Poincare discover about the three-body problem?',
+    options: [
+      'It has a simple closed-form solution',
+      'It can exhibit chaotic behavior',
+      'It is equivalent to the two-body problem',
+      'It has exactly three solutions'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Poincare discovered that the three-body problem can exhibit chaos, where tiny changes in initial conditions lead to vastly different outcomes.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Which branch of mathematics did Poincare essentially create?',
+    options: [
+      'Number theory',
+      'Algebraic topology',
+      'Linear algebra',
+      'Calculus'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Poincare founded algebraic topology, using algebraic structures (like the fundamental group) to study topological spaces.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What does the fundamental group $\\pi_1(X)$ measure?',
+    options: [
+      'The volume of a space',
+      'The number of dimensions',
+      'How loops can be deformed within a space',
+      'The curvature of a surface'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The fundamental group captures information about loops in a space and whether they can be continuously shrunk to a point.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'In the Poincare disk model, what are geodesics (straight lines)?',
+    options: [
+      'Actual straight lines',
+      'Circles centered at the origin',
+      'Circular arcs perpendicular to the boundary',
+      'Spirals'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'In the Poincare disk model of hyperbolic geometry, geodesics appear as circular arcs that meet the boundary at right angles.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What does the Poincare Recurrence Theorem state?',
+    options: [
+      'All systems eventually stop moving',
+      'Energy is always conserved',
+      'Almost every state will return arbitrarily close to itself',
+      'Chaos is impossible in closed systems'
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The theorem states that in a bounded phase space with volume-preserving dynamics, almost every orbit returns arbitrarily close to its starting point.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The Poincare Conjecture was about which type of manifold?',
+    options: [
+      '2-dimensional surfaces',
+      '3-dimensional manifolds',
+      '4-dimensional spacetime',
+      'Infinite-dimensional spaces'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Poincare Conjecture states that every simply connected, closed 3-manifold is homeomorphic to the 3-sphere.',
+  },
+  {
+    id: 7,
+    type: 'multiple-choice',
+    question: 'Who proved the Poincare Conjecture?',
+    options: [
+      'Henri Poincare',
+      'David Hilbert',
+      'Grigori Perelman',
+      'Andrew Wiles'
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Grigori Perelman proved the Poincare Conjecture in 2003 using Ricci flow techniques.',
+  },
+  {
+    id: 8,
+    type: 'numeric',
+    question: 'In what year did Poincare die?',
+    correctAnswer: 1912,
+    numericRange: { min: 1800, max: 2000, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'Poincare died in 1912 at the age of 58.',
+  },
+  {
+    id: 9,
+    type: 'text',
+    question: 'Poincare is often called "the last" what kind of mathematician?',
+    correctAnswer: 'universalist',
+    difficulty: 'medium',
+    explanation: 'Poincare is called "the last universalist" because he mastered virtually all branches of mathematics of his time.',
+  },
+  {
+    id: 10,
+    type: 'text',
+    question: 'What geometric space has angle sum less than 180 degrees in triangles?',
+    correctAnswer: 'hyperbolic',
+    difficulty: 'medium',
+    explanation: 'In hyperbolic geometry (modeled by the Poincare disk), triangles have angle sum less than 180 degrees.',
+  },
+];
