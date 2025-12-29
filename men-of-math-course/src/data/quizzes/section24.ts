@@ -1,0 +1,83 @@
+import type { QuizQuestion } from './types';
+
+export const section24Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Arthur Cayley proved that every matrix satisfies:',
+    options: [
+      'The identity equation',
+      'Its own characteristic equation',
+      'A linear equation',
+      'The determinant equation'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Cayley-Hamilton theorem states every square matrix satisfies its own characteristic polynomial.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Cayley is considered the founder of:',
+    options: [
+      'Analysis',
+      'Abstract algebra and matrix theory',
+      'Topology',
+      'Number theory'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Cayley pioneered abstract algebra and formalized matrix theory as a distinct mathematical discipline.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Cayley numbers are another name for:',
+    options: [
+      'Complex numbers',
+      'Octonions',
+      'Quaternions',
+      'Real numbers'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Cayley numbers (octonions) are 8-dimensional numbers extending quaternions.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Cayley worked professionally as a:',
+    options: [
+      'Professor only',
+      'Lawyer before becoming a professor',
+      'Engineer',
+      'Physician'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cayley practiced law for 14 years while doing mathematics before becoming a professor at Cambridge.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Cayley graphs visualize:',
+    options: [
+      'Functions',
+      'Group structures',
+      'Number patterns',
+      'Physical systems'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cayley graphs represent group elements as vertices with edges showing multiplication by generators.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'How many dimensions do Cayley numbers (octonions) have?',
+    correctAnswer: 8,
+    numericRange: { min: 6, max: 10, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'Octonions (Cayley numbers) are 8-dimensional, extending quaternions (4D) and complex numbers (2D).',
+  },
+];
