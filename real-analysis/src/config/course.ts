@@ -32,7 +32,7 @@ export const COURSE_ACCENT = 'emerald';
 /**
  * Course icon/emoji for visual identification
  */
-export const COURSE_ICON = '📐';
+export const COURSE_ICON = 'ε';
 
 /**
  * Base path for routing (must match vite.config.ts)
