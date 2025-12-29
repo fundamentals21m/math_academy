@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section07Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, RCodeBlock } from '@/components/common/ContentBlocks';
 import { Math, MathBlock } from '@/components/common/MathBlock';
@@ -292,7 +294,7 @@ anova(lm.fit1, lm.fit)`}
         non-linearity and outliers.
       </Callout>
 
-      {/* <SectionQuiz sectionId={7} questions={section07Quiz} title="Multiple Regression Quiz" /> */}
+      <SectionQuiz sectionId={7} questions={section07Quiz} title="Multiple Regression Quiz" />
     </LessonLayout>
   );
 }

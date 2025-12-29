@@ -1,0 +1,172 @@
+import type { QuizQuestion } from './types';
+
+export const section03Quiz: QuizQuestion[] = [
+  // Easy questions
+  {
+    id: 's03-e01',
+    type: 'multiple-choice',
+    question: 'What does MSE stand for in statistical learning?',
+    options: ['Maximum Squared Error', 'Mean Squared Error', 'Minimum Standard Error', 'Model Selection Estimate'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'MSE stands for Mean Squared Error: $\\text{MSE} = \\frac{1}{n}\\sum_{i=1}^{n}(y_i - \\hat{f}(x_i))^2$',
+  },
+  {
+    id: 's03-e02',
+    type: 'multiple-choice',
+    question: 'Which error rate are we most interested in when evaluating a model?',
+    options: ['Training error', 'Test error', 'Validation error', 'Cross-validation error'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'We care most about test error - how well our model performs on new, unseen data - not how well it fits the training data.',
+  },
+  {
+    id: 's03-e03',
+    type: 'multiple-choice',
+    question: 'When a model fits the training data very well but performs poorly on test data, this is called:',
+    options: ['Underfitting', 'Overfitting', 'Regularization', 'Cross-validation'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Overfitting occurs when a model learns patterns specific to the training data (including noise) that do not generalize to new data.',
+  },
+  {
+    id: 's03-e04',
+    type: 'text',
+    question: 'In KNN classification, what does "K" represent? (answer: "number of neighbors" or just "neighbors")',
+    correctAnswer: 'neighbors',
+    difficulty: 'easy',
+    explanation: 'K is the number of nearest neighbors used to classify a new observation. The prediction is based on the majority class among these K neighbors.',
+  },
+  {
+    id: 's03-e05',
+    type: 'multiple-choice',
+    question: 'The Bayes classifier assigns an observation to the class with:',
+    options: [
+      'The lowest probability',
+      'The highest conditional probability',
+      'The average probability',
+      'A random probability'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Bayes classifier assigns each observation to the class $j$ that maximizes $P(Y=j|X=x_0)$.',
+  },
+  // Medium questions
+  {
+    id: 's03-m01',
+    type: 'multiple-choice',
+    question: 'As model flexibility increases, what typically happens to training MSE?',
+    options: [
+      'It increases',
+      'It decreases',
+      'It stays constant',
+      'It first decreases then increases'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Training MSE monotonically decreases with flexibility because more flexible models can fit the training data more closely.',
+  },
+  {
+    id: 's03-m02',
+    type: 'multiple-choice',
+    question: 'As model flexibility increases, what typically happens to test MSE?',
+    options: [
+      'It monotonically increases',
+      'It monotonically decreases',
+      'It first decreases then increases (U-shape)',
+      'It stays constant'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Test MSE typically has a U-shape: it decreases initially as bias drops, then increases as variance dominates (overfitting).',
+  },
+  {
+    id: 's03-m03',
+    type: 'multiple-choice',
+    question: 'In KNN classification with K=1, what is the training error rate?',
+    options: ['100%', '50%', '0%', 'It depends on the data'],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'With K=1, each training point is its own nearest neighbor, so every training observation is classified correctly (0% error).',
+  },
+  {
+    id: 's03-m04',
+    type: 'multiple-choice',
+    question: 'A model with high bias typically:',
+    options: [
+      'Fits the training data too closely',
+      'Misses important patterns in the data',
+      'Has very different predictions for different training sets',
+      'Achieves optimal test error'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'High bias means the model is too simple to capture the true relationship, systematically missing patterns (underfitting).',
+  },
+  {
+    id: 's03-m05',
+    type: 'numeric',
+    question: 'If the training error rate is 5% and the test error rate is 25%, approximately how much worse is the model on new data? (Enter as a ratio, e.g., 5 for "5 times worse")',
+    correctAnswer: 5,
+    numericRange: { min: 1, max: 10, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'The test error (25%) is 5 times the training error (5%), indicating significant overfitting.',
+  },
+  // Hard questions
+  {
+    id: 's03-h01',
+    type: 'multiple-choice',
+    question: 'The Bayes error rate is analogous to which concept in regression?',
+    options: [
+      'Training error',
+      'Reducible error',
+      'Irreducible error',
+      'R-squared'
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The Bayes error rate is the best achievable error rate, analogous to irreducible error - it represents inherent uncertainty that no classifier can overcome.',
+  },
+  {
+    id: 's03-h02',
+    type: 'multiple-choice',
+    question: 'In a two-class problem, the Bayes decision boundary occurs where:',
+    options: [
+      '$P(Y=1|X) = 1$',
+      '$P(Y=1|X) = P(Y=0|X) = 0.5$',
+      '$P(Y=1|X) = 0$',
+      'The training error is minimized'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Bayes boundary is where the conditional probabilities are equal. At this point, both classes are equally likely given the predictors.',
+  },
+  {
+    id: 's03-h03',
+    type: 'multiple-choice',
+    question: 'Why can\'t we use the Bayes classifier in practice?',
+    options: [
+      'It is too computationally expensive',
+      'It requires knowing the true conditional distribution of Y given X',
+      'It only works for regression problems',
+      'It always overfits'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Bayes classifier requires knowing $P(Y=j|X)$ exactly, which is never known in practice. We must estimate it from data.',
+  },
+  {
+    id: 's03-h04',
+    type: 'multiple-choice',
+    question: 'Choosing a very small K in KNN is most likely to result in:',
+    options: [
+      'High bias, low variance',
+      'Low bias, high variance',
+      'High bias, high variance',
+      'Optimal predictions'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Small K = very flexible = low bias (can fit complex boundaries) but high variance (sensitive to individual training points).',
+  },
+];

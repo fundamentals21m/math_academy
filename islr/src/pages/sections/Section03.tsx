@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section03Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, Algorithm } from '@/components/common/ContentBlocks';
 import { Math, MathBlock } from '@/components/common/MathBlock';
@@ -308,7 +310,7 @@ export default function Section03() {
         that, we'll dive into linear regression—the foundation of many more advanced methods.
       </Callout>
 
-      {/* <SectionQuiz sectionId={3} questions={section03Quiz} title="Model Accuracy Quiz" /> */}
+      <SectionQuiz sectionId={3} questions={section03Quiz} title="Model Accuracy Quiz" />
     </LessonLayout>
   );
 }

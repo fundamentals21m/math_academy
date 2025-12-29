@@ -1,4 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { section06Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, RCodeBlock } from '@/components/common/ContentBlocks';
 import { Math, MathBlock } from '@/components/common/MathBlock';
@@ -323,7 +325,7 @@ predict(lm.fit, data.frame(TV = c(50, 100, 150)))`}
         predictors <Math>{`X_1, X_2, \\ldots, X_p`}</Math>.
       </Callout>
 
-      {/* <SectionQuiz sectionId={6} questions={section06Quiz} title="Simple Linear Regression Quiz" /> */}
+      <SectionQuiz sectionId={6} questions={section06Quiz} title="Simple Linear Regression Quiz" />
     </LessonLayout>
   );
 }
