@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
 import { AchievementToastContainer } from '@/components/gamification';
+import { Header } from '@/components/layout/Header';
+import { Sidebar } from '@/components/layout/Sidebar';
 import { FEATURES } from '@/config';
 
 // Pages
@@ -21,6 +24,26 @@ import InteractiveModules from '@/pages/InteractiveModules';
 //   1: Section01,
 // };
 
+function AppLayout({ children }: { children: React.ReactNode }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-dark-950">
+      <Header
+        sidebarOpen={sidebarOpen}
+        onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+      />
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+      <main className="pt-16 lg:pl-72">
+        {children}
+      </main>
+    </div>
+  );
+}
+
 function SectionRouter() {
   // This component handles dynamic section routing
   // It will be replaced with actual section components as you build them
@@ -37,27 +60,29 @@ function SectionRouter() {
 function AppContent() {
   return (
     <>
-      <Routes>
-        {/* Core routes */}
-        <Route path="/" element={<Home />} />
+      <AppLayout>
+        <Routes>
+          {/* Core routes */}
+          <Route path="/" element={<Home />} />
 
-        {/* Feature-gated routes */}
-        {FEATURES.leaderboard && (
-          <Route path="/leaderboard" element={<Leaderboard />} />
-        )}
-        {FEATURES.theoremIndex && (
-          <Route path="/theorems" element={<Theorems />} />
-        )}
-        {FEATURES.interactiveModules && (
-          <Route path="/interactive" element={<InteractiveModules />} />
-        )}
+          {/* Feature-gated routes */}
+          {FEATURES.leaderboard && (
+            <Route path="/leaderboard" element={<Leaderboard />} />
+          )}
+          {FEATURES.theoremIndex && (
+            <Route path="/theorems" element={<Theorems />} />
+          )}
+          {FEATURES.interactiveModules && (
+            <Route path="/interactive" element={<InteractiveModules />} />
+          )}
 
-        {/* Dynamic section routes */}
-        <Route path="/section/:id" element={<SectionRouter />} />
+          {/* Dynamic section routes */}
+          <Route path="/section/:id" element={<SectionRouter />} />
 
-        {/* Fallback */}
-        <Route path="*" element={<Home />} />
-      </Routes>
+          {/* Fallback */}
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </AppLayout>
 
       {/* Global achievement notifications */}
       {FEATURES.gamification && <AchievementToastContainer />}

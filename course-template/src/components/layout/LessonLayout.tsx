@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { getSectionById, getPartBySectionId, getAdjacentSections, getTotalSections, getSectionIndex } from '@/data/curriculum';
 import { FEATURES } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { getQuizQuestions } from '@/data/quizzes/quizMap';
 
 interface LessonLayoutProps {
   sectionId: number;
@@ -44,7 +46,7 @@ export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
   const progressPercent = ((sectionIndex + 1) / totalSections) * 100;
 
   return (
-    <div className="min-h-screen bg-dark-950">
+    <div>
       {/* Progress bar */}
       <div className="fixed top-16 left-0 right-0 z-30 h-1 bg-dark-800 lg:left-72">
         <motion.div
@@ -56,7 +58,7 @@ export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
       </div>
 
       {/* Main content */}
-      <main className="pt-20 pb-24 px-4 lg:pl-80 lg:pr-8">
+      <main className="pt-4 pb-24 px-4 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumb */}
           <nav className="mb-6 flex items-center gap-2 text-sm text-dark-400">
@@ -88,6 +90,15 @@ export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
           <article className="prose prose-invert prose-lg max-w-none">
             {children}
           </article>
+
+          {/* Section Quiz */}
+          {(() => {
+            const questions = getQuizQuestions(sectionId);
+            if (questions && questions.length > 0) {
+              return <SectionQuiz sectionId={sectionId} questions={questions} />;
+            }
+            return null;
+          })()}
 
           {/* Navigation */}
           <nav className="mt-16 flex items-center justify-between gap-4 pt-8 border-t border-dark-800">
