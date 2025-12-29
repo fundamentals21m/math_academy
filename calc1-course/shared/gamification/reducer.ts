@@ -143,6 +143,7 @@ function handleCompleteSection(
 /**
  * Handle recording a quiz attempt.
  * Calculates XP based on difficulty and score, with perfect bonus.
+ * Marks section as completed on perfect score.
  */
 function handleRecordQuiz(
   state: GamificationState,
@@ -162,7 +163,11 @@ function handleRecordQuiz(
   const xpEarned = isPerfect
     ? Math.round(baseXP * (1 + XP_CONFIG.QUIZ_PERFECT_BONUS))
     : baseXP;
-  const newXP = state.user.totalXP + xpEarned;
+
+  // Add section completion XP if perfect and not already completed
+  const isNewCompletion = isPerfect && !existing.completedAt;
+  const completionXP = isNewCompletion ? XP_CONFIG.SECTION_COMPLETE : 0;
+  const newXP = state.user.totalXP + xpEarned + completionXP;
 
   const newAttempt = {
     timestamp: now,
@@ -174,7 +179,16 @@ function handleRecordQuiz(
   };
 
   const newAttempts = [...existing.quizAttempts, newAttempt];
-  const updatedSection = { ...existing, quizAttempts: newAttempts };
+  const updatedSection = {
+    ...existing,
+    quizAttempts: newAttempts,
+    completedAt: isPerfect ? (existing.completedAt ?? now) : existing.completedAt,
+  };
+
+  // Add to sectionsCompleted if perfect and not already there
+  const newSectionsCompleted = isNewCompletion
+    ? [...state.user.sectionsCompleted, sectionId]
+    : state.user.sectionsCompleted;
 
   return {
     ...state,
@@ -184,6 +198,7 @@ function handleRecordQuiz(
       level: calculateLevel(newXP),
       quizzesTaken: state.user.quizzesTaken + 1,
       perfectQuizzes: isPerfect ? state.user.perfectQuizzes + 1 : state.user.perfectQuizzes,
+      sectionsCompleted: newSectionsCompleted,
     },
     sections: {
       ...state.sections,
@@ -194,7 +209,7 @@ function handleRecordQuiz(
     },
     dailyGoals: {
       ...state.dailyGoals,
-      xpEarned: state.dailyGoals.xpEarned + xpEarned,
+      xpEarned: state.dailyGoals.xpEarned + xpEarned + completionXP,
     },
     lastUpdated: now,
   };
