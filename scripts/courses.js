@@ -109,7 +109,7 @@ export const COURSES = [
     icon: '∫',
     url: 'calc1-deploy/',
     tags: ['17 Parts', '101 Sections'],
-    sections: ['calculus'],
+    sections: ['featured', 'calculus'],
     totalSections: 101,
     progressPrefix: 'calc1:',
     leaderboardUrl: 'calc1-deploy/#/leaderboard',
