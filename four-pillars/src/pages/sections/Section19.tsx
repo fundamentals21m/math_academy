@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { AngleSlopeDemo } from '@/components/visualizations/chapter3';
 
 export default function Section19() {
   return (
@@ -178,6 +179,8 @@ export default function Section19() {
           a rotation through angle θ₂, deduce the addition formulas for cos and sin.
         </p>
       </div>
+
+      <AngleSlopeDemo className="my-6" />
 
       <SectionQuiz
         sectionId={19}

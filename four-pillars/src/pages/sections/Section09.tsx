@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { AreaTransformDemo } from '@/components/visualizations/chapter2';
 
 export default function Section09() {
   return (
@@ -183,6 +184,8 @@ export default function Section09() {
           triangles of equal area.
         </p>
       </div>
+
+      <AreaTransformDemo className="my-6" />
 
       <SectionQuiz
         sectionId={9}

@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { LinearIndependenceDemo } from '@/components/visualizations/chapter4';
 
 export default function Section24() {
   return (
@@ -146,6 +147,8 @@ export default function Section24() {
           Prove your vector Desargues theorem with the help of the vector Thales theorem.
         </p>
       </div>
+
+      <LinearIndependenceDemo className="my-6" />
 
       <SectionQuiz
         sectionId={24}

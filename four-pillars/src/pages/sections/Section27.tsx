@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { DotProductAngleDemo } from '@/components/visualizations/chapter4';
 
 export default function Section27() {
   return (
@@ -180,6 +181,8 @@ export default function Section27() {
           and <strong>v</strong> − <strong>u</strong>, and hence are perpendicular.
         </p>
       </div>
+
+      <DotProductAngleDemo className="my-6" />
 
       <SectionQuiz
         sectionId={27}
