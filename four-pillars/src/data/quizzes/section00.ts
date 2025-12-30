@@ -6,7 +6,7 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $x^2$ when $x=3$?',
     options: ['$3$', '$6$', '$9$', '$12$'],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$3^2 = 9$',
   },
