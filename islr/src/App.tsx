@@ -1,6 +1,8 @@
-import { lazy, Suspense, Component, ReactNode } from 'react';
+import { lazy, Suspense, Component, ReactNode, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
+import { Header } from '@/components/layout/Header';
+import { Sidebar } from '@/components/layout/Sidebar';
 
 // Simple LoadingSpinner component
 function LoadingSpinner({ message = 'Loading...' }: { message?: string }) {
@@ -95,9 +97,29 @@ function SectionRouter() {
   );
 }
 
+function AppLayout({ children }: { children: React.ReactNode }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-dark-950">
+      <Header
+        sidebarOpen={sidebarOpen}
+        onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+      />
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+      <main className="pt-16 lg:pl-72">
+        {children}
+      </main>
+    </div>
+  );
+}
+
 function AppContent() {
   return (
-    <>
+    <AppLayout>
       <Routes>
         {/* Core routes */}
         <Route path="/" element={<Home />} />
@@ -126,8 +148,7 @@ function AppContent() {
         {/* Fallback */}
         <Route path="*" element={<Home />} />
       </Routes>
-
-    </>
+    </AppLayout>
   );
 }
 
