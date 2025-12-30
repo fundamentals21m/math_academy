@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
@@ -9,6 +9,8 @@ import {
   LoadingSpinner,
 } from '@magic-internet-math/shared';
 import { AchievementToastContainer } from '@/components/gamification';
+import { Header } from '@/components/layout/Header';
+import { Sidebar } from '@/components/layout/Sidebar';
 import { FEATURES } from '@/config';
 
 // Eagerly load Home since it's the landing page
@@ -66,51 +68,73 @@ function SectionRouter() {
   );
 }
 
+function AppLayout({ children }: { children: React.ReactNode }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-dark-950">
+      <Header
+        sidebarOpen={sidebarOpen}
+        onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+      />
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+      <main className="pt-16 lg:pl-72">
+        {children}
+      </main>
+    </div>
+  );
+}
+
 function AppContent() {
   return (
     <>
-      <Routes>
-        {/* Core routes */}
-        <Route path="/" element={<Home />} />
+      <AppLayout>
+        <Routes>
+          {/* Core routes */}
+          <Route path="/" element={<Home />} />
 
-        {/* Feature-gated routes - lazy loaded */}
-        {FEATURES.leaderboard && (
-          <Route
-            path="/leaderboard"
-            element={
-              <Suspense fallback={<LoadingSpinner message="Loading leaderboard..." />}>
-                <Leaderboard />
-              </Suspense>
-            }
-          />
-        )}
-        {FEATURES.theoremIndex && (
-          <Route
-            path="/theorems"
-            element={
-              <Suspense fallback={<LoadingSpinner message="Loading theorems..." />}>
-                <Theorems />
-              </Suspense>
-            }
-          />
-        )}
-        {FEATURES.interactiveModules && (
-          <Route
-            path="/interactive"
-            element={
-              <Suspense fallback={<LoadingSpinner message="Loading modules..." />}>
-                <InteractiveModules />
-              </Suspense>
-            }
-          />
-        )}
+          {/* Feature-gated routes - lazy loaded */}
+          {FEATURES.leaderboard && (
+            <Route
+              path="/leaderboard"
+              element={
+                <Suspense fallback={<LoadingSpinner message="Loading leaderboard..." />}>
+                  <Leaderboard />
+                </Suspense>
+              }
+            />
+          )}
+          {FEATURES.theoremIndex && (
+            <Route
+              path="/theorems"
+              element={
+                <Suspense fallback={<LoadingSpinner message="Loading theorems..." />}>
+                  <Theorems />
+                </Suspense>
+              }
+            />
+          )}
+          {FEATURES.interactiveModules && (
+            <Route
+              path="/interactive"
+              element={
+                <Suspense fallback={<LoadingSpinner message="Loading modules..." />}>
+                  <InteractiveModules />
+                </Suspense>
+              }
+            />
+          )}
 
-        {/* Dynamic section routes - lazy loaded via SectionRouter */}
-        <Route path="/section/:id" element={<SectionRouter />} />
+          {/* Dynamic section routes - lazy loaded via SectionRouter */}
+          <Route path="/section/:id" element={<SectionRouter />} />
 
-        {/* Fallback */}
-        <Route path="*" element={<Home />} />
-      </Routes>
+          {/* Fallback */}
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </AppLayout>
 
       {/* Global achievement notifications */}
       {FEATURES.gamification && <AchievementToastContainer />}
