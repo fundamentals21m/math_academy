@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { HomogeneousCoordinatesDemo } from '@/components/visualizations/chapter5';
 
 export default function Section34() {
   return (
@@ -164,6 +165,8 @@ a_2x + b_2y + c_2z &= 0
           solved Exercise 5.4.1. Why?
         </p>
       </div>
+
+      <HomogeneousCoordinatesDemo className="my-6" />
 
       <SectionQuiz
         sectionId={34}

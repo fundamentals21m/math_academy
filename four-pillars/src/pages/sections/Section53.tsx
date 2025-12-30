@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { QuaternionRotationDemo } from '@/components/visualizations/chapter7';
 
 export default function Section53() {
   return (
@@ -192,6 +193,8 @@ export default function Section53() {
           90° rotation about the x-axis using quaternions.
         </p>
       </div>
+
+      <QuaternionRotationDemo className="my-6" />
 
       <SectionQuiz
         sectionId={53}

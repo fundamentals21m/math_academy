@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { VectorTransformDemo } from '@/components/visualizations/chapter7';
 
 export default function Section49() {
   return (
@@ -200,6 +201,8 @@ export default function Section49() {
           followed by rotation by 90° about the origin.
         </p>
       </div>
+
+      <VectorTransformDemo className="my-6" />
 
       <SectionQuiz
         sectionId={49}

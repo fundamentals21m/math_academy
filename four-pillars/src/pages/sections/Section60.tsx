@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { NonEuclideanLinesDemo } from '@/components/visualizations/chapter8';
 
 export default function Section60() {
   return (
@@ -209,6 +210,8 @@ export default function Section60() {
           a Möbius transformation, then f(L₁) and f(L₂) intersect at f(P).
         </p>
       </div>
+
+      <NonEuclideanLinesDemo className="my-6" />
 
       <SectionQuiz
         sectionId={60}
