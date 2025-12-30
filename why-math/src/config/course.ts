@@ -37,7 +37,7 @@ export const COURSE_ICON = '📚';
 /**
  * Base path for routing (must match vite.config.ts)
  */
-export const BASE_PATH = '/';
+export const BASE_PATH = '/why-math-deploy/';
 
 /**
  * Hub URL - main Magic Internet Math landing page
@@ -60,8 +60,8 @@ export const LINKS = {
  */
 export const FEATURES = {
   gamification: true,
-  leaderboard: true,
-  nostrAuth: true,
+  leaderboard: false,
+  nostrAuth: false,
   quizzes: true,
   interactiveModules: true,
   theoremIndex: true,
