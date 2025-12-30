@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { PerspectiveProjectionDemo } from '@/components/visualizations/chapter5';
 
 export default function Section32() {
   return (
@@ -118,6 +119,8 @@ export default function Section32() {
           perspective view of the plane filled with congruent hexagons.
         </p>
       </div>
+
+      <PerspectiveProjectionDemo className="my-6" />
 
       <SectionQuiz
         sectionId={32}

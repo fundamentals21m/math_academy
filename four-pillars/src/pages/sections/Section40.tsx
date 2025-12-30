@@ -3,6 +3,7 @@ import { Definition, Theorem } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { PappusTheoremDemo, DesarguesTheoremDemo } from '@/components/visualizations/chapter6';
 
 export default function Section40() {
   return (
@@ -201,6 +202,10 @@ export default function Section40() {
           does not satisfy even the little Desargues theorem. Explain why.
         </p>
       </div>
+
+      <PappusTheoremDemo className="my-6" />
+
+      <DesarguesTheoremDemo className="my-6" />
 
       <SectionQuiz
         sectionId={40}

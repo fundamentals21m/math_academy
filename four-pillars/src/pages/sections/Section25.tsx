@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { TriangleCentersDemo } from '@/components/visualizations/chapter4';
 
 export default function Section25() {
   return (
@@ -175,6 +176,8 @@ export default function Section25() {
           of the opposite face is ¼(<strong>t</strong> + <strong>u</strong> + <strong>v</strong> + <strong>w</strong>).
         </p>
       </div>
+
+      <TriangleCentersDemo className="my-6" />
 
       <SectionQuiz
         sectionId={25}

@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { ReflectionCompositionDemo, SymmetryGroupDemo } from '@/components/visualizations/chapter7';
 
 export default function Section50() {
   return (
@@ -194,6 +195,10 @@ export default function Section50() {
           transformation.
         </p>
       </div>
+
+      <ReflectionCompositionDemo className="my-6" />
+
+      <SymmetryGroupDemo className="my-6" />
 
       <SectionQuiz
         sectionId={50}
