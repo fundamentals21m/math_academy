@@ -1,8 +1,12 @@
+export { DistributiveLawVisualizer } from './DistributiveLawVisualizer';
+export { PrimeFactorizationVisualizer } from './PrimeFactorizationVisualizer';
 export { PythagoreanExplorer } from './PythagoreanExplorer';
+export { EquationBalanceVisualizer } from './EquationBalanceVisualizer';
 export { ParabolaGrapher } from './ParabolaGrapher';
 export { CompoundInterestVisualizer } from './CompoundInterestVisualizer';
 export { HalfLifeVisualizer } from './HalfLifeVisualizer';
 export { ScalingVisualizer } from './ScalingVisualizer';
+export { VectorAdditionVisualizer } from './VectorAdditionVisualizer';
 export { TimeDilationVisualizer } from './TimeDilationVisualizer';
 export { BinaryConverter } from './BinaryConverter';
 export { VennDiagramVisualizer } from './VennDiagramVisualizer';
