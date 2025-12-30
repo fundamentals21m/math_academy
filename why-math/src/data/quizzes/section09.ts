@@ -1,0 +1,134 @@
+import type { QuizQuestion } from './types';
+
+export const section09Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Einstein\'s postulate about the speed of light states that:',
+    options: [
+      'Light speed varies depending on the source\'s motion',
+      'Light speed is constant relative to any observer moving at constant velocity',
+      'Light speed is infinite',
+      'Light speed depends on the medium only'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Einstein postulated that light travels at speed $c$ relative to any observer in uniform motion.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'According to special relativity, two events that are simultaneous for one observer:',
+    options: [
+      'Are simultaneous for all observers',
+      'May not be simultaneous for a moving observer',
+      'Cannot be measured',
+      'Must occur at the same location'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Simultaneity is relative—events simultaneous in one frame may not be in another moving frame.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The time dilation formula states that a moving clock runs slower by factor:',
+    options: [
+      '$v/c$',
+      '$\\sqrt{1 - (v/c)^2}$',
+      '$1 - v/c$',
+      '$(v/c)^2$'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
+  },
+  {
+    id: 4,
+    type: 'numeric',
+    question: 'At 60% of the speed of light, what percentage of normal time passes on the spaceship? (Round to nearest percent)',
+    correctAnswer: 80,
+    numericRange: { min: 0, max: 100, precision: 0 },
+    difficulty: 'medium',
+    explanation: '$\\sqrt{1 - 0.6^2} = \\sqrt{0.64} = 0.8 = 80\\%$.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Muons created in the upper atmosphere reach Earth because:',
+    options: [
+      'They travel faster than light',
+      'Time dilation extends their lifetime in our reference frame',
+      'They are created at lower altitudes',
+      'Gravity accelerates them'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'From our perspective, fast-moving muons live longer due to time dilation, allowing them to reach Earth.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The Lorentz-Fitzgerald contraction means that moving objects appear:',
+    options: [
+      'Longer in the direction of motion',
+      'Shorter in the direction of motion',
+      'Wider perpendicular to motion',
+      'Unchanged in all dimensions'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Objects appear contracted (shorter) in the direction of motion by factor $\\sqrt{1 - (v/c)^2}$.',
+  },
+  {
+    id: 7,
+    type: 'numeric',
+    question: 'A 100-meter spaceship passes at 80% of light speed. How long does it appear to us in meters?',
+    correctAnswer: 60,
+    numericRange: { min: 0, max: 100, precision: 0 },
+    difficulty: 'medium',
+    explanation: '$d = 100\\sqrt{1 - 0.8^2} = 100\\sqrt{0.36} = 100 \\times 0.6 = 60$ meters.',
+  },
+  {
+    id: 8,
+    type: 'multiple-choice',
+    question: 'From the muon\'s perspective, it reaches Earth because:',
+    options: [
+      'It lives longer',
+      'The distance to Earth is contracted',
+      'Earth moves toward it faster',
+      'Time speeds up for it'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'From the muon\'s frame, Earth rushes toward it and the distance is length-contracted, so it arrives within its short lifetime.',
+  },
+  {
+    id: 9,
+    type: 'multiple-choice',
+    question: 'According to relativity, what is impossible?',
+    options: [
+      'Time travel to the future',
+      'Length contraction',
+      'Traveling faster than light',
+      'Simultaneous events'
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Nothing can travel faster than the speed of light $c$—it is the cosmic speed limit.',
+  },
+  {
+    id: 10,
+    type: 'multiple-choice',
+    question: 'The Einstein-Langevin clock uses:',
+    options: [
+      'Pendulum swings',
+      'Light bouncing between mirrors',
+      'Atomic vibrations',
+      'Sand falling through glass'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Einstein-Langevin clock uses a light flash bouncing between mirrors to measure time precisely.',
+  },
+];

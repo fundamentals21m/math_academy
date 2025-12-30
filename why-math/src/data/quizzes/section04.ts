@@ -1,0 +1,119 @@
+import type { QuizQuestion } from './types';
+
+export const section04Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The four-step method for solving word problems is:',
+    options: [
+      'Read, Write, Check, Submit',
+      'Define x, Translate, Solve, Check',
+      'Guess, Test, Revise, Confirm',
+      'Add, Subtract, Multiply, Divide'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The four-step method: Define x (state the unknown), Translate (make an equation), Solve, Check.',
+  },
+  {
+    id: 2,
+    type: 'numeric',
+    question: 'One repairman has worked 5 years longer than another. Together they have 23 years of experience. How many years has the newer repairman worked?',
+    correctAnswer: 9,
+    numericRange: { min: 0, max: 50, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'Let $x$ = newer. Then $x + (x+5) = 23$, so $2x + 5 = 23$, $2x = 18$, $x = 9$.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The fundamental distance-rate-time formula is:',
+    options: [
+      'Distance = Rate + Time',
+      'Distance = Rate × Time',
+      'Distance = Rate / Time',
+      'Distance = Rate - Time'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Distance = Rate × Time, or $d = rt$.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'A car travels 180 miles at 60 mph, then returns at 45 mph. What is the average speed for the entire trip?',
+    options: [
+      '52.5 mph (the average of 60 and 45)',
+      '51.4 mph (total distance / total time)',
+      '50 mph',
+      '55 mph'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Time going: 3 hrs. Time returning: 4 hrs. Total: 360 miles in 7 hrs = 51.4 mph. Average speed is NOT the average of the two speeds!',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'A radiator has 12 quarts of 20% antifreeze. How many quarts of pure antifreeze must be added to get a 50% solution?',
+    correctAnswer: 7.2,
+    numericRange: { min: 0, max: 20, precision: 1 },
+    difficulty: 'hard',
+    explanation: 'Initial antifreeze: 2.4 qt. $\\frac{2.4 + x}{12 + x} = 0.50$. Solving: $2.4 + x = 6 + 0.5x$, so $0.5x = 3.6$, $x = 7.2$.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'At what temperature (in degrees) are Celsius and Fahrenheit readings equal?',
+    correctAnswer: -40,
+    numericRange: { min: -100, max: 100, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'Set $C = F$ in $F = \\frac{9}{5}C + 32$: $C = \\frac{9}{5}C + 32$, so $-\\frac{4}{5}C = 32$, $C = -40$.',
+  },
+  {
+    id: 7,
+    type: 'multiple-choice',
+    question: 'The Law of the Lever states that for balance:',
+    options: [
+      'Weight₁ + Distance₁ = Weight₂ + Distance₂',
+      'Weight₁ × Distance₁ = Weight₂ × Distance₂',
+      'Weight₁ / Distance₁ = Weight₂ / Distance₂',
+      'Weight₁ - Distance₁ = Weight₂ - Distance₂'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Law of the Lever: $W_1 \\times d_1 = W_2 \\times d_2$.',
+  },
+  {
+    id: 8,
+    type: 'numeric',
+    question: 'A 120-lb person sits 6 feet from the fulcrum. How many feet from the fulcrum should a 90-lb person sit to balance?',
+    correctAnswer: 8,
+    numericRange: { min: 0, max: 20, precision: 0 },
+    difficulty: 'medium',
+    explanation: '$120 \\times 6 = 90 \\times x$. So $x = \\frac{720}{90} = 8$ feet.',
+  },
+  {
+    id: 9,
+    type: 'multiple-choice',
+    question: 'Convert 100°C to Fahrenheit:',
+    options: [
+      '180°F',
+      '212°F',
+      '100°F',
+      '132°F'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$F = \\frac{9}{5}(100) + 32 = 180 + 32 = 212°F$.',
+  },
+  {
+    id: 10,
+    type: 'numeric',
+    question: 'If 1 Canadian dollar equals $0.82 US, and you receive $123 US, how many Canadian dollars did you exchange?',
+    correctAnswer: 150,
+    numericRange: { min: 0, max: 300, precision: 0 },
+    difficulty: 'medium',
+    explanation: '$0.82x = 123$, so $x = \\frac{123}{0.82} = 150$ Canadian dollars.',
+  },
+];
