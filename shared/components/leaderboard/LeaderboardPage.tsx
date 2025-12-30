@@ -87,6 +87,11 @@ const TABS: { id: TabId; label: string; shortLabel: string }[] = [
   { id: 'aa', label: 'Abstract Algebra', shortLabel: 'AA' },
   { id: 'linalg', label: 'Linear Algebra', shortLabel: 'LinAlg' },
   { id: 'advlinalg', label: 'Advanced Linear Algebra', shortLabel: 'AdvLinAlg' },
+  { id: 'islr', label: 'Statistical Learning', shortLabel: 'ISLR' },
+  { id: 'ra', label: 'Real Analysis', shortLabel: 'RA' },
+  { id: 'calc1', label: 'Calculus I', shortLabel: 'Calc1' },
+  { id: 'calc_lib_art', label: 'Calculus (Liberal Arts)', shortLabel: 'CalcLA' },
+  { id: 'men_of_math', label: 'Men of Mathematics', shortLabel: 'MoM' },
 ];
 
 interface LeaderboardPageProps {
@@ -197,8 +202,7 @@ export function LeaderboardPage({ className = '' }: LeaderboardPageProps) {
   const syncManager = getSyncManager();
   const localScores = syncManager.getLocalScores();
   const totalXP = localScores
-    ? (localScores.ba || 0) + (localScores.crypto || 0) + (localScores.aa || 0) +
-      (localScores.linalg || 0) + (localScores.advlinalg || 0)
+    ? Object.values(localScores).reduce((sum, xp) => sum + (xp || 0), 0)
     : 0;
   const level = Math.floor(Math.sqrt(totalXP / 100)) + 1;
 
