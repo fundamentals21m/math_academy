@@ -98,6 +98,21 @@ export const COURSES = [
 
   // BEGINNERS
   {
+    id: 'calc_easy',
+    title: 'Calculus Made Easy',
+    description: "Master calculus through Silvanus P. Thompson's timeless classic. From functions to integration, learn calculus the way it was meant to be taught—simply and clearly.",
+    icon: '∂',
+    url: 'https://calceasy-green.vercel.app',
+    tags: ['26 Sections', 'Interactive'],
+    sections: ['beginners', 'calculus'],
+    totalSections: 26,
+    progressPrefix: 'calc_easy:',
+    leaderboardUrl: 'https://calceasy-green.vercel.app/#/leaderboard',
+    shortName: 'Calculus Easy',
+    external: true,
+    progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
+  },
+  {
     id: 'ba',
     title: 'Basic Algebra',
     description: 'Master the fundamentals of algebra through interactive lessons and visualizations. From integers to complex numbers, covering equations, functions, and more.',
@@ -111,6 +126,21 @@ export const COURSES = [
     shortName: 'Basic Algebra',
     external: true,
     progressGradient: 'linear-gradient(90deg, #22c55e, #4ade80)',
+  },
+  {
+    id: 'wm',
+    title: 'Why Math?',
+    description: "Discover the real reasons behind mathematical concepts with R.D. Driver's classic textbook. From arithmetic to infinity, understand why math works the way it does.",
+    icon: '📚',
+    url: 'https://why-math.vercel.app',
+    tags: ['8 Parts', '13 Sections'],
+    sections: ['beginners'],
+    totalSections: 13,
+    progressPrefix: 'wm:',
+    leaderboardUrl: 'https://why-math.vercel.app/#/leaderboard',
+    shortName: 'Why Math?',
+    external: true,
+    progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
   },
 
   // CALCULUS
