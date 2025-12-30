@@ -39,6 +39,15 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   const totalQuestions = shuffledQuestions.length;
   const questionType: QuestionType = currentQuestion?.type ?? 'multiple-choice';
 
+  // Early return if no questions available
+  if (!currentQuestion && !isComplete) {
+    return (
+      <div className="mt-12 p-6 rounded-2xl bg-dark-800/50 border border-dark-700/50">
+        <p className="text-dark-400 text-center">No quiz questions available for this section.</p>
+      </div>
+    );
+  }
+
   const handleMultipleChoiceAnswer = (answerIndex: number) => {
     if (selectedAnswer !== null) return;
 
