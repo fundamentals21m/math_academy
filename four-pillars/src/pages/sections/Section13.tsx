@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { CircleAngleTheorem } from '@/components/visualizations/chapter2';
 
 export default function Section13() {
   return (
@@ -223,6 +224,8 @@ export default function Section13() {
           a segment of length 1/φ.
         </p>
       </div>
+
+      <CircleAngleTheorem className="my-6" />
 
       <SectionQuiz
         sectionId={13}

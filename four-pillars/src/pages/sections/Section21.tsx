@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { IsometryTransformDemo } from '@/components/visualizations/chapter3';
 
 export default function Section21() {
   return (
@@ -193,6 +194,8 @@ export default function Section21() {
           reflections is a glide reflection.
         </p>
       </div>
+
+      <IsometryTransformDemo className="my-6" />
 
       <SectionQuiz
         sectionId={21}

@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { VectorOperationsDemo } from '@/components/visualizations/chapter4';
 
 export default function Section26() {
   return (
@@ -172,6 +173,8 @@ export default function Section26() {
           zero for a rhombus.
         </p>
       </div>
+
+      <VectorOperationsDemo className="my-6" />
 
       <SectionQuiz
         sectionId={26}
