@@ -6,7 +6,9 @@ import path from 'path'
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
 const COURSE_ID = 'four-pillars'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = `/${COURSE_ID}/`
+// For Vercel deployment at root domain (e.g., four-pillars.vercel.app), use '/'
+// For GitHub Pages subdirectory, use '/math_academy/{deploy-dir}/'
+const BASE_PATH = '/'
 // =============================================================================
 
 export default defineConfig({
