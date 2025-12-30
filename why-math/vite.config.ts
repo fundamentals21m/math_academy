@@ -6,7 +6,7 @@ import path from 'path'
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
 const COURSE_ID = 'wm'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = '/'  // Root path for Vercel deployment
+const BASE_PATH = '/why-math-deploy/'  // Subdirectory of main HUB
 // =============================================================================
 
 export default defineConfig({
