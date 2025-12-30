@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { CoordinatePlaneExplorer } from '@/components/visualizations/chapter3';
 
 export default function Section16() {
   return (
@@ -212,6 +213,8 @@ export default function Section16() {
           is vertical?
         </p>
       </div>
+
+      <CoordinatePlaneExplorer className="my-6" />
 
       <SectionQuiz
         sectionId={16}

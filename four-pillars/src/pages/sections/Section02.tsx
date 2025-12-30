@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { CompassConstructionDemo } from '@/components/visualizations/chapter1';
 
 export default function Section02() {
   return (
@@ -262,6 +263,8 @@ export default function Section02() {
         algebra in geometry. It enables us to multiply and divide line segments, as we
         will see in the next section.
       </Callout>
+
+      <CompassConstructionDemo className="my-6" />
 
       <SectionQuiz
         sectionId={2}
