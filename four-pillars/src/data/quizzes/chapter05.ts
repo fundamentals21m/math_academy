@@ -252,6 +252,90 @@ export const section34Questions: QuizQuestion[] = [
     difficulty: 'medium',
     explanation: 'Points with $z = 0$ are the "points at infinity" which together form the line at infinity in $\\mathbb{R}P^2$.',
   },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'To find the "line" through two "points" $(x_1, y_1, z_1)$ and $(x_2, y_2, z_2)$ in $\\mathbb{R}P^2$, you solve:',
+    options: [
+      'A quadratic equation in $a, b, c$',
+      'Two linear equations $ax_1 + by_1 + cz_1 = 0$ and $ax_2 + by_2 + cz_2 = 0$',
+      'The equation $x_1 x_2 + y_1 y_2 + z_1 z_2 = 0$',
+      'No solution is needed; just connect the points'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The coefficients $(a, b, c)$ of the line must satisfy both $ax_1 + by_1 + cz_1 = 0$ and $ax_2 + by_2 + cz_2 = 0$, giving a family of solutions $(ta, tb, tc)$.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What makes the complex projective plane $\\mathbb{C}P^2$ different from $\\mathbb{R}P^2$?',
+    options: [
+      'It has different axioms',
+      'The coordinates $x, y, z$ and scalar $t$ are complex numbers instead of real',
+      'Lines are defined by non-homogeneous equations',
+      'It has no points at infinity'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In $\\mathbb{C}P^2$, the coordinates are complex numbers and $t$ ranges over nonzero complex numbers. The algebraic structure and axioms remain the same.',
+  },
+  {
+    id: 7,
+    type: 'multiple-choice',
+    question: 'In $\\mathbb{R}P^3$ (projective 3-space), a "point" is represented by:',
+    options: [
+      'A triple $(x, y, z)$',
+      'A quadruple $(w, x, y, z)$ with multiples $(tw, tx, ty, tz)$ representing the same point',
+      'A pair $(x, y)$',
+      'A single coordinate $x$'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In $\\mathbb{R}P^3$, points are represented by quadruples $(w, x, y, z)$ not all zero, with $(tw, tx, ty, tz)$ representing the same point for any $t \\neq 0$.',
+  },
+  {
+    id: 8,
+    type: 'multiple-choice',
+    question: 'In $\\mathbb{R}P^3$, what is a "line"?',
+    options: [
+      'A 1-dimensional subspace (line through O) in $\\mathbb{R}^4$',
+      'A 2-dimensional subspace (plane through O) in $\\mathbb{R}^4$',
+      'A 3-dimensional subspace in $\\mathbb{R}^4$',
+      'A circle in $\\mathbb{R}^4$'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'In $\\mathbb{R}P^3$, a "line" is a plane through the origin in $\\mathbb{R}^4$, spanned by two linearly independent vectors.',
+  },
+  {
+    id: 9,
+    type: 'multiple-choice',
+    question: 'Which property holds in $\\mathbb{R}P^3$?',
+    options: [
+      'Two "points" determine a unique "plane"',
+      'Two "planes" have a unique "point" in common',
+      'Two "planes" have a unique "line" in common',
+      'Three "planes" always have a common "line"'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'In $\\mathbb{R}P^3$, any two distinct "planes" intersect in exactly one "line." This follows from linear algebra: two 3-dimensional subspaces of $\\mathbb{R}^4$ through O intersect in a 2-dimensional subspace.',
+  },
+  {
+    id: 10,
+    type: 'multiple-choice',
+    question: 'Why is the equation $ax + by + cz = 0$ called "homogeneous"?',
+    options: [
+      'Because all terms have the same degree (degree 1)',
+      'Because the coefficients $a, b, c$ are equal',
+      'Because it has a unique solution',
+      'Because it describes a sphere'
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A homogeneous equation has all terms of the same degree. In $ax + by + cz = 0$, each term has degree 1. This ensures that if $(x, y, z)$ is a solution, so is $(tx, ty, tz)$ for any $t$.',
+  },
 ];
 
 // Section 35: Projection
