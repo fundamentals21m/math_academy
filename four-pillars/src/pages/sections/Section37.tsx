@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { CrossRatioExplorer } from '@/components/visualizations/chapter5';
 
 export default function Section37() {
   return (
@@ -149,6 +150,8 @@ export default function Section37() {
           separated by distances 1, e, and e².
         </p>
       </div>
+
+      <CrossRatioExplorer className="my-6" />
 
       <SectionQuiz
         sectionId={37}

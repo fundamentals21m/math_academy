@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { AnglePreservationDemo } from '@/components/visualizations/chapter8';
 
 export default function Section61() {
   return (
@@ -213,6 +214,8 @@ export default function Section61() {
           (clockwise angles become counterclockwise).
         </p>
       </div>
+
+      <AnglePreservationDemo className="my-6" />
 
       <SectionQuiz
         sectionId={61}
