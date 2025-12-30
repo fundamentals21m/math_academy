@@ -50,6 +50,12 @@ export const SECTIONS = [
     style: 'subject'
   },
   {
+    id: 'geometry',
+    title: 'Geometry',
+    subtitle: 'Euclidean and non-Euclidean geometry',
+    style: 'subject'
+  },
+  {
     id: 'history',
     title: 'Math History',
     subtitle: 'The stories behind the mathematics',
@@ -198,6 +204,23 @@ export const COURSES = [
     leaderboardUrl: 'aa/#/leaderboard',
     shortName: 'Abstract Algebra',
     progressGradient: 'linear-gradient(90deg, #f97316, #fb923c)',
+  },
+
+  // GEOMETRY
+  {
+    id: 'four_pillars',
+    title: 'The Four Pillars of Geometry',
+    description: "Explore geometry from four perspectives: Euclidean constructions, coordinates, projective geometry, and transformations. Based on John Stillwell's classic textbook.",
+    icon: '🔺',
+    url: 'https://four-pillars.vercel.app',
+    tags: ['8 Chapters', '66 Sections'],
+    sections: ['geometry'],
+    totalSections: 66,
+    progressPrefix: 'four_pillars:',
+    leaderboardUrl: 'https://four-pillars.vercel.app/#/leaderboard',
+    shortName: 'Four Pillars',
+    external: true,
+    progressGradient: 'linear-gradient(90deg, #ec4899, #f472b6)',
   },
 
   // MATH HISTORY
