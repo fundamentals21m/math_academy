@@ -1,21 +1,46 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, Component, ReactNode } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
-import { GamificationProvider } from '@/contexts/GamificationContext';
-import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
-import {
-  ErrorBoundary,
-  ErrorProvider,
-  ErrorDisplay,
-  LoadingSpinner,
-} from '@magic-internet-math/shared';
-import { AchievementToastContainer } from '@/components/gamification';
-import { FEATURES } from '@/config';
+
+// Simple LoadingSpinner component
+function LoadingSpinner({ message = 'Loading...' }: { message?: string }) {
+  return (
+    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+        <p className="text-dark-400">{message}</p>
+      </div>
+    </div>
+  );
+}
+
+// Simple ErrorBoundary component
+class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean; error?: Error }> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-dark-950 flex items-center justify-center p-4">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-red-400 mb-2">Something went wrong</h1>
+            <p className="text-dark-400">{this.state.error?.message}</p>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 // Eagerly load Home since it's the landing page
 import Home from '@/pages/Home';
 
 // Lazy load other pages - they're only needed when navigating to them
-const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
 const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 
@@ -76,37 +101,23 @@ function AppContent() {
         {/* Core routes */}
         <Route path="/" element={<Home />} />
 
-        {/* Feature-gated routes - lazy loaded */}
-        {FEATURES.leaderboard && (
-          <Route
-            path="/leaderboard"
-            element={
-              <Suspense fallback={<LoadingSpinner message="Loading leaderboard..." />}>
-                <Leaderboard />
-              </Suspense>
-            }
-          />
-        )}
-        {FEATURES.theoremIndex && (
-          <Route
-            path="/theorems"
-            element={
-              <Suspense fallback={<LoadingSpinner message="Loading theorems..." />}>
-                <Theorems />
-              </Suspense>
-            }
-          />
-        )}
-        {FEATURES.interactiveModules && (
-          <Route
-            path="/interactive"
-            element={
-              <Suspense fallback={<LoadingSpinner message="Loading modules..." />}>
-                <InteractiveModules />
-              </Suspense>
-            }
-          />
-        )}
+        {/* Feature routes - lazy loaded */}
+        <Route
+          path="/theorems"
+          element={
+            <Suspense fallback={<LoadingSpinner message="Loading theorems..." />}>
+              <Theorems />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/interactive"
+          element={
+            <Suspense fallback={<LoadingSpinner message="Loading modules..." />}>
+              <InteractiveModules />
+            </Suspense>
+          }
+        />
 
         {/* Dynamic section routes - lazy loaded via SectionRouter */}
         <Route path="/section/:id" element={<SectionRouter />} />
@@ -115,8 +126,6 @@ function AppContent() {
         <Route path="*" element={<Home />} />
       </Routes>
 
-      {/* Global achievement notifications */}
-      {FEATURES.gamification && <AchievementToastContainer />}
     </>
   );
 }
@@ -124,28 +133,9 @@ function AppContent() {
 export default function App() {
   return (
     <ErrorBoundary>
-      <ErrorProvider>
-        <HashRouter>
-          {FEATURES.nostrAuth ? (
-            <NostrAuthProvider>
-              {FEATURES.gamification ? (
-                <GamificationProvider>
-                  <AppContent />
-                </GamificationProvider>
-              ) : (
-                <AppContent />
-              )}
-            </NostrAuthProvider>
-          ) : FEATURES.gamification ? (
-            <GamificationProvider>
-              <AppContent />
-            </GamificationProvider>
-          ) : (
-            <AppContent />
-          )}
-        </HashRouter>
-        <ErrorDisplay />
-      </ErrorProvider>
+      <HashRouter>
+        <AppContent />
+      </HashRouter>
     </ErrorBoundary>
   );
 }

@@ -87,6 +87,11 @@ const TABS: { id: TabId; label: string; shortLabel: string }[] = [
   { id: 'aa', label: 'Abstract Algebra', shortLabel: 'AA' },
   { id: 'linalg', label: 'Linear Algebra', shortLabel: 'LinAlg' },
   { id: 'advlinalg', label: 'Advanced Linear Algebra', shortLabel: 'AdvLinAlg' },
+  { id: 'islr', label: 'Statistical Learning', shortLabel: 'ISLR' },
+  { id: 'ra', label: 'Real Analysis', shortLabel: 'RA' },
+  { id: 'calc1', label: 'Calculus I', shortLabel: 'Calc1' },
+  { id: 'calc_lib_art', label: 'Calculus (Liberal Arts)', shortLabel: 'CalcLA' },
+  { id: 'calc_easy', label: 'Calculus Made Easy', shortLabel: 'CalcEasy' },
 ];
 
 interface LeaderboardPageProps {

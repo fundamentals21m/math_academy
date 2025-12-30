@@ -92,6 +92,7 @@ const TABS: { id: TabId; label: string; shortLabel: string }[] = [
   { id: 'calc1', label: 'Calculus I', shortLabel: 'Calc1' },
   { id: 'calc_lib_art', label: 'Calculus (Liberal Arts)', shortLabel: 'CalcLA' },
   { id: 'men_of_math', label: 'Men of Mathematics', shortLabel: 'MoM' },
+  { id: 'calc_easy', label: 'Calculus Made Easy', shortLabel: 'CalcEasy' },
 ];
 
 interface LeaderboardPageProps {
