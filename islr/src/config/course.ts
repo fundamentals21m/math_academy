@@ -59,9 +59,9 @@ export const LINKS = {
  * Feature flags - enable/disable features per course
  */
 export const FEATURES = {
-  gamification: true,
-  leaderboard: true,
-  nostrAuth: true,
+  gamification: false,
+  leaderboard: false,
+  nostrAuth: false,
   quizzes: true,
   interactiveModules: true,
   theoremIndex: true,

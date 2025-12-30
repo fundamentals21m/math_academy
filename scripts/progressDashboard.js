@@ -1,9 +1,11 @@
 /**
  * Progress Dashboard - Displays user progress across all courses
+ * Reads from localStorage for local progress and Firebase for cross-domain sync
  */
 import { COURSES } from './courses.js';
 
 const STORAGE_KEY = 'magic-internet-math-progress';
+const NOSTR_AUTH_KEY = 'nostr-auth';
 
 /**
  * Render the progress stats (XP, Level, Streak, Sections)
@@ -69,17 +71,85 @@ function renderCourseProgressGrid(sectionsCompleted) {
 }
 
 /**
+ * Try to get Nostr auth from localStorage
+ */
+function getNostrAuth() {
+  try {
+    const auth = localStorage.getItem(NOSTR_AUTH_KEY);
+    if (auth) {
+      return JSON.parse(auth);
+    }
+  } catch (e) {
+    console.error('Failed to parse Nostr auth:', e);
+  }
+  return null;
+}
+
+/**
+ * Render course progress from Firebase scores
+ */
+function renderCourseProgressFromScores(scores) {
+  const cardsHtml = COURSES.map(course => {
+    // Find score for this course
+    const courseScore = scores.find(s => s.courseId === course.id);
+    const xp = courseScore?.xp || 0;
+    // Estimate sections based on XP (rough approximation: ~50 XP per section)
+    const estimatedSections = Math.min(Math.floor(xp / 50), course.totalSections);
+    return renderCourseProgress(course, estimatedSections);
+  }).join('');
+
+  return `<div class="progress-courses-grid">${cardsHtml}</div>`;
+}
+
+/**
  * Initialize and render the progress dashboard
  * @param {string} containerId - ID of the container element
  */
-export function renderProgressDashboard(containerId) {
+export async function renderProgressDashboard(containerId) {
   const container = document.getElementById(containerId);
   if (!container) {
     console.error(`Container #${containerId} not found`);
     return;
   }
 
+  // First try localStorage (for same-domain progress)
   const data = localStorage.getItem(STORAGE_KEY);
+
+  // Check for Nostr auth to fetch from Firebase
+  const nostrAuth = getNostrAuth();
+
+  if (nostrAuth?.npub && window.getUserScores) {
+    // User is authenticated with Nostr - fetch from Firebase
+    try {
+      const result = await window.getUserScores(nostrAuth.npub);
+      if (result && result.scores && result.scores.length > 0) {
+        const totalXP = result.scores.reduce((sum, s) => sum + (s.xp || 0), 0);
+        const level = Math.floor(totalXP / 500) + 1;
+
+        const state = {
+          user: {
+            totalXP,
+            level,
+            sectionsCompleted: []
+          },
+          streak: { currentStreak: 0 }
+        };
+
+        container.innerHTML = `
+          <h2 class="section-title">Your Progress</h2>
+          <p class="section-subtitle">Track your learning journey across all courses</p>
+          ${renderProgressStats(state)}
+          ${renderCourseProgressFromScores(result.scores)}
+        `;
+        container.style.display = 'block';
+        return;
+      }
+    } catch (e) {
+      console.error('Failed to fetch scores from Firebase:', e);
+    }
+  }
+
+  // Fallback to localStorage
   if (!data) {
     container.style.display = 'none';
     return;
