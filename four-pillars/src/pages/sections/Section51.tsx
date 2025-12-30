@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { SphericalGeometryDemo } from '@/components/visualizations/chapter7';
 
 export default function Section51() {
   return (
@@ -207,6 +208,8 @@ export default function Section51() {
           Q = (0, 1, 0) on the unit sphere is π/2.
         </p>
       </div>
+
+      <SphericalGeometryDemo className="my-6" />
 
       <SectionQuiz
         sectionId={51}

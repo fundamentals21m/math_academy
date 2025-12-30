@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { BasicIsometriesDemo } from '@/components/visualizations/chapter3';
 
 export default function Section20() {
   return (
@@ -212,6 +213,8 @@ export default function Section20() {
           θ/2 is a rotation through angle θ, about the point of intersection.
         </p>
       </div>
+
+      <BasicIsometriesDemo className="my-6" />
 
       <SectionQuiz
         sectionId={20}
