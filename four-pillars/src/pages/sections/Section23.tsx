@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { VectorBasicsDemo } from '@/components/visualizations/chapter4';
 
 export default function Section23() {
   return (
@@ -156,6 +157,8 @@ export default function Section23() {
           Is it a rotation of ℝ³ when every vector is multiplied by −1?
         </p>
       </div>
+
+      <VectorBasicsDemo className="my-6" />
 
       <SectionQuiz
         sectionId={23}

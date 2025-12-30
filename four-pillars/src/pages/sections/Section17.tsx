@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { DistanceExplorer } from '@/components/visualizations/chapter3';
 
 export default function Section17() {
   return (
@@ -186,6 +187,8 @@ export default function Section17() {
           y₂ ≠ 0, and hence that the triangle inequality holds in this case.
         </p>
       </div>
+
+      <DistanceExplorer className="my-6" />
 
       <SectionQuiz
         sectionId={17}
