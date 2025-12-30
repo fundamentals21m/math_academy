@@ -1,0 +1,212 @@
+import { LessonLayout } from '@/components/layout/LessonLayout';
+import { Definition, Theorem } from '@/components/common/ContentBlocks';
+import { Callout } from '@/components/common/Callout';
+import { SectionQuiz } from '@/components/quiz/SectionQuiz';
+import { quizMap } from '@/data/quizzes';
+
+export default function Section40() {
+  return (
+    <LessonLayout sectionId={40}>
+      <h2>Pappus and Desargues Revisited</h2>
+
+      <p>
+        In this chapter, geometry fights back against the forces of arithmetization.
+        We show that coordinates need not be brought into geometry from outside—they
+        can be defined by purely geometric means. Moreover, the geometry required to
+        define coordinates and their arithmetic is <em>simpler</em> than Euclid's
+        geometry. It is the projective geometry introduced in the previous chapter,
+        but we have to build it from scratch using properties of straight lines alone.
+      </p>
+
+      <Callout type="info">
+        <strong>Chapter Goal:</strong> We take the Pappus and Desargues theorems as
+        axioms, and use them to define coordinates. The coordinates are points on a
+        projective line, and we add and multiply them by constructions like those in
+        Chapter 1. The main problem is to prove that our addition and multiplication
+        operations satisfy the field axioms—this is where Pappus and Desargues are crucial.
+      </Callout>
+
+      <h3>From Euclidean to Projective Form</h3>
+
+      <p>
+        The theorems of Pappus and Desargues stated in Chapters 1 and 4 had a similar
+        form: If two particular pairs of lines are parallel, then a third pair is
+        parallel. Because parallel lines meet on the horizon, these theorems also say
+        that if two particular pairs of lines meet on the horizon, then so does a third
+        pair. And because the horizon is not different from any other line, these
+        theorems are really about three pairs of lines having their intersections on
+        the same line.
+      </p>
+
+      <h3>The Projective Pappus Theorem</h3>
+
+      <Theorem title="Projective Pappus Theorem">
+        <p>
+          Six points, lying alternately on two straight lines, form a hexagon whose
+          three pairs of opposite sides meet on a line.
+        </p>
+        <p className="mt-2 text-slate-300">
+          The six vertices of the hexagon lie on two lines, and the opposite sides
+          are shown as three pairs: black, gray, and dotted. The line L on which each
+          of the three pairs meet can be oriented in any direction—it is simply a line
+          determined by the configuration.
+        </p>
+      </Theorem>
+
+      <Definition title="Incidence Theorem">
+        <p>
+          The Pappus theorem is called <strong>projective</strong> because it involves
+          only the concepts of points, lines, and meetings between them. Meetings
+          between geometric objects are called <strong>incidences</strong>, and for
+          this reason, the Pappus theorem is also called an <strong>incidence theorem</strong>.
+        </p>
+        <p className="mt-2">
+          The three axioms of a projective plane, given in Section 5.3, are the simplest
+          examples of incidence theorems.
+        </p>
+      </Definition>
+
+      <h3>The Projective Desargues Theorem</h3>
+
+      <p>
+        The projective Desargues theorem is another incidence theorem. It concerns the
+        pairs of corresponding sides of two triangles that are in perspective from a
+        point P—meaning that each pair of corresponding vertices lies on a line through P.
+      </p>
+
+      <Theorem title="Projective Desargues Theorem">
+        <p>
+          If two triangles are in perspective from a point, then their pairs of
+          corresponding sides meet on a line.
+        </p>
+        <p className="mt-2 text-slate-300">
+          The three corresponding pairs of sides each meet on a common line L. This
+          is a purely projective statement involving only incidence relations.
+        </p>
+      </Theorem>
+
+      <h3>The Little Desargues Theorem</h3>
+
+      <p>
+        An important special case of the Desargues theorem has the center of projection
+        P on the line L where the corresponding sides of the triangles meet.
+      </p>
+
+      <Theorem title="Little Desargues Theorem">
+        <p>
+          If two triangles are in perspective from a point P, and if two pairs of
+          corresponding sides meet on a line L through P, then the third pair of
+          corresponding sides also meets on L.
+        </p>
+      </Theorem>
+
+      <h3>Why These Theorems Cannot Be Proved from Basic Axioms</h3>
+
+      <p>
+        Because the projective Pappus and Desargues theorems involve only incidence
+        concepts, one would like proofs of them that involve only the three axioms
+        for a projective plane given in Section 5.3. Unfortunately, this is not
+        possible, because there are examples of projective planes <em>not</em> satisfying
+        the Pappus and Desargues theorems.
+      </p>
+
+      <Callout type="warning">
+        <strong>The Moulton Plane:</strong> A projective plane where the Desargues
+        theorem is false. Its "points" are ordinary points of ℝ², together with a
+        point at infinity for each family of parallel "lines." However, the "lines"
+        of the Moulton plane are not all ordinary lines—each "line" with positive
+        slope is a broken line consisting of a half line of slope k &gt; 0 below the
+        x-axis, joined to a half line of slope k/2 above the x-axis.
+      </Callout>
+
+      <h3>Pappian Planes</h3>
+
+      <p>
+        What we can do is take the Pappus and Desargues theorems as new axioms.
+        Together with the original three axioms for projective planes, these two
+        new axioms apply to a broad class of projective planes called
+        <strong> Pappian planes</strong>.
+      </p>
+
+      <Definition title="Pappian Plane">
+        <p>
+          A projective plane that satisfies the three projective plane axioms together
+          with the Pappus and Desargues theorems is called a <strong>Pappian plane</strong>.
+        </p>
+        <p className="mt-2">
+          The Pappian planes include ℝP² and many other planes, but not all projective
+          planes. They turn out to be the planes with coordinates satisfying the same
+          laws of algebra as the real numbers—the field axioms.
+        </p>
+      </Definition>
+
+      <h3>The Goal of This Chapter</h3>
+
+      <p>
+        The object of this chapter is to show how coordinates arise when the Pappus
+        and Desargues theorems hold, and why they satisfy the field axioms. In doing
+        so, we will see that projective geometry is simpler than algebra in a certain
+        sense, because we use only five geometric axioms to derive the nine field axioms.
+      </p>
+
+      <div className="bg-slate-800/50 p-4 rounded-lg my-6">
+        <h4 className="font-semibold text-blue-400 mb-3">Key Relationships</h4>
+        <ul className="list-disc list-inside space-y-2">
+          <li>
+            <strong>Pappus</strong> implies the commutative law of multiplication: ab = ba
+          </li>
+          <li>
+            <strong>Desargues</strong> implies the associative law of multiplication: a(bc) = (ab)c
+          </li>
+        </ul>
+      </div>
+
+      <h3>Exercises</h3>
+
+      <div className="bg-slate-800/50 p-4 rounded-lg my-6">
+        <h4 className="font-semibold text-blue-400 mb-3">Exercise 6.1.1</h4>
+        <p className="text-slate-300">
+          In the Moulton plane, find where the "line" from (0, −1) to (2, 1/2) meets
+          the x-axis.
+        </p>
+      </div>
+
+      <div className="bg-slate-800/50 p-4 rounded-lg my-6">
+        <h4 className="font-semibold text-blue-400 mb-3">Exercise 6.1.2</h4>
+        <p className="text-slate-300">
+          Explain why any two "points" of the Moulton plane lie on a unique "line."
+        </p>
+      </div>
+
+      <div className="bg-slate-800/50 p-4 rounded-lg my-6">
+        <h4 className="font-semibold text-blue-400 mb-3">Exercise 6.1.3</h4>
+        <p className="text-slate-300">
+          Explain why any two "lines" of the Moulton plane meet in a unique "point."
+          (Parallel "lines" have a common "point at infinity" by definition, so do not
+          worry about them.)
+        </p>
+      </div>
+
+      <div className="bg-slate-800/50 p-4 rounded-lg my-6">
+        <h4 className="font-semibold text-blue-400 mb-3">Exercise 6.1.4</h4>
+        <p className="text-slate-300">
+          Give four "points" in the Moulton plane, no three of which lie on the same "line."
+        </p>
+      </div>
+
+      <div className="bg-slate-800/50 p-4 rounded-lg my-6">
+        <h4 className="font-semibold text-blue-400 mb-3">Exercise 6.1.5</h4>
+        <p className="text-slate-300">
+          The Moulton plane satisfies the three axioms of a projective plane. But it
+          does not satisfy even the little Desargues theorem. Explain why.
+        </p>
+      </div>
+
+      <SectionQuiz
+        sectionId={40}
+        questions={quizMap[40] || []}
+        title="Pappus and Desargues Revisited Quiz"
+      />
+    </LessonLayout>
+  );
+}
