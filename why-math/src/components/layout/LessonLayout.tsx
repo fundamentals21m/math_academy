@@ -48,7 +48,7 @@ export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
   return (
     <div>
       {/* Progress bar */}
-      <div className="fixed top-16 left-0 right-0 z-30 h-1 bg-dark-800 lg:left-72">
+      <div className="fixed top-16 left-0 right-0 z-30 h-1 bg-dark-800 lg:left-72 pointer-events-none">
         <motion.div
           className="h-full bg-gradient-to-r from-primary-500 to-primary-400"
           initial={{ width: 0 }}

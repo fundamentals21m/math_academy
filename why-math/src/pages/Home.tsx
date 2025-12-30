@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Header, Sidebar } from '@/components/layout';
 import { curriculum, getTotalSections } from '@/data/curriculum';
 import { COURSE_NAME, COURSE_DESCRIPTION, COURSE_ICON, FEATURES, COURSE_ID } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
 import { XPDisplay, StreakBadge } from '@/components/gamification';
 
 export default function Home() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   // Always call hook unconditionally, then conditionally use the result
   const gamificationContext = useGamification();
   const gamification = FEATURES.gamification ? gamificationContext : null;
@@ -19,11 +16,8 @@ export default function Home() {
   const progressPercent = Math.round((completedSections / totalSections) * 100);
 
   return (
-    <div className="min-h-screen bg-dark-950">
-      <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} sidebarOpen={sidebarOpen} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-
-      <main className="pt-20 pb-12 px-4 lg:pl-80 lg:pr-8">
+    <div className="pb-12 px-4 lg:px-8">
+      <div className="pt-4">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-12">
@@ -126,7 +120,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
