@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
-type CourseId = 'ba' | 'crypto' | 'aa' | 'linalg' | 'advlinalg' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art';
+type CourseId = 'ba' | 'crypto' | 'aa' | 'linalg' | 'advlinalg' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art' | 'men_of_math';
 
 interface ScoreUpdate {
   courseId: CourseId;
@@ -27,11 +27,14 @@ export const syncScores = functions.https.onCall(
     const { scores, displayName } = data || {};
 
     if (!scores || !Array.isArray(scores)) {
+      console.error('syncScores: scores is not an array:', typeof scores, scores);
       throw new functions.https.HttpsError(
         'invalid-argument',
         'scores must be an array'
       );
     }
+
+    console.log('syncScores: received scores:', JSON.stringify(scores));
 
     const npub = context.auth.uid;
     const userRef = admin.firestore().collection('users').doc(npub);
@@ -52,12 +55,13 @@ export const syncScores = functions.https.onCall(
       );
     }
 
-    const validCourses: CourseId[] = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art'];
+    const validCourses: CourseId[] = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'men_of_math'];
     const batch = admin.firestore().batch();
-    const userScores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0 };
+    const userScores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, men_of_math: 0 };
 
     for (const score of scores) {
       if (!validCourses.includes(score.courseId)) {
+        console.error('syncScores: invalid courseId:', score.courseId, 'valid:', validCourses);
         throw new functions.https.HttpsError(
           'invalid-argument',
           `Invalid courseId: ${score.courseId}`
@@ -65,9 +69,10 @@ export const syncScores = functions.https.onCall(
       }
 
       if (typeof score.xp !== 'number' || score.xp < 0) {
+        console.error('syncScores: invalid xp for', score.courseId, ':', score.xp, typeof score.xp);
         throw new functions.https.HttpsError(
           'invalid-argument',
-          'xp must be a non-negative number'
+          `xp must be a non-negative number for ${score.courseId}: got ${score.xp}`
         );
       }
 
@@ -136,7 +141,7 @@ export const getLeaderboard = functions.https.onCall(
   }> => {
     const { courseId, limit = 50 } = data || {};
 
-    const validOptions = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'overall'];
+    const validOptions = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'men_of_math', 'overall'];
     if (!courseId || !validOptions.includes(courseId)) {
       throw new functions.https.HttpsError(
         'invalid-argument',
@@ -273,5 +278,56 @@ export const getLeaderboard = functions.https.onCall(
     }
 
     return { rankings, userRank };
+  }
+);
+
+/**
+ * Get a user's scores by npub (public - for Hub progress display)
+ * Returns the user's course-by-course XP breakdown
+ */
+export const getUserScores = functions.https.onCall(
+  async (
+    data: { npub: string },
+    _context
+  ): Promise<{
+    found: boolean;
+    scores?: Record<CourseId, number>;
+    totalXP?: number;
+    level?: number;
+    displayName?: string | null;
+  }> => {
+    const { npub } = data || {};
+
+    if (!npub || typeof npub !== 'string') {
+      throw new functions.https.HttpsError(
+        'invalid-argument',
+        'npub is required'
+      );
+    }
+
+    // Fetch user document
+    const userDoc = await admin.firestore()
+      .collection('users')
+      .doc(npub)
+      .get();
+
+    if (!userDoc.exists) {
+      return { found: false };
+    }
+
+    const userData = userDoc.data()!;
+
+    // Don't return data for banned users
+    if (userData.banned) {
+      return { found: false };
+    }
+
+    return {
+      found: true,
+      scores: userData.scores || { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, men_of_math: 0 },
+      totalXP: userData.totalXP || 0,
+      level: userData.level || 1,
+      displayName: userData.displayName || null,
+    };
   }
 );
