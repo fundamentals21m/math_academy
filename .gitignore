@@ -29,3 +29,7 @@ firebase/functions/*.log
 .env.*.local
 advanced-linalg/
 linalg/
+
+# Working files
+calc_easy_pdfs/
+why_math_chunks/
