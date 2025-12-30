@@ -1,0 +1,129 @@
+import type { QuizQuestion } from './types';
+
+export const section06Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'A geometric sequence has the form:',
+    options: [
+      '$a, a+r, a+2r, a+3r, ...$',
+      '$a, ar, ar^2, ar^3, ...$',
+      '$a, a^2, a^3, a^4, ...$',
+      '$a, 2a, 3a, 4a, ...$'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A geometric sequence multiplies each term by a fixed ratio $r$: $a, ar, ar^2, ar^3, ...$',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The half-life formula for radioactive decay is:',
+    options: [
+      '$Q = Q_0 - \\frac{t}{h}$',
+      '$Q = Q_0 \\times \\frac{t}{h}$',
+      '$Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}$',
+      '$Q = Q_0 \\left(\\frac{1}{2}\\right)^{h/t}$'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'After $t$ time units with half-life $h$: $Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}$.',
+  },
+  {
+    id: 3,
+    type: 'numeric',
+    question: 'Radium has a half-life of 1600 years. How many grams remain of 100 grams after 4800 years?',
+    correctAnswer: 12.5,
+    numericRange: { min: 0, max: 100, precision: 1 },
+    difficulty: 'medium',
+    explanation: '4800 years = 3 half-lives. $Q = 100 \\times (1/2)^3 = 100 \\times 1/8 = 12.5$ grams.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The compound interest formula $A = P(1+i)^n$ models:',
+    options: [
+      'Linear growth',
+      'Exponential growth',
+      'Constant value',
+      'Logarithmic growth'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Compound interest produces exponential growth because the base $(1+i)$ is raised to a power.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'What is $\\$1000$ at 8% compounded annually for 10 years? (Round to nearest dollar)',
+    correctAnswer: 2159,
+    numericRange: { min: 1000, max: 3000, precision: 0 },
+    difficulty: 'medium',
+    explanation: '$A = 1000(1.08)^{10} \\approx \\$2158.92 \\approx \\$2159$.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What does $r^{1/2}$ equal?',
+    options: [
+      '$r \\div 2$',
+      '$\\sqrt{r}$',
+      '$r^2$',
+      '$2r$'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'By the laws of exponents, $r^{1/2} = \\sqrt{r}$ (the square root of $r$).',
+  },
+  {
+    id: 7,
+    type: 'multiple-choice',
+    question: 'The sum of an infinite geometric series $a + ar + ar^2 + ...$ when $|r| < 1$ is:',
+    options: [
+      '$\\frac{a}{r}$',
+      '$\\frac{a}{1-r}$',
+      '$\\frac{1-r}{a}$',
+      '$a(1-r)$'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'When $|r| < 1$, the infinite geometric series sums to $\\frac{a}{1-r}$.',
+  },
+  {
+    id: 8,
+    type: 'multiple-choice',
+    question: 'Express $0.\\overline{3}$ (0.333...) as a fraction:',
+    options: [
+      '$\\frac{3}{10}$',
+      '$\\frac{1}{3}$',
+      '$\\frac{3}{9}$',
+      'Both B and C'
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$0.\\overline{3} = \\frac{3/10}{1 - 1/10} = \\frac{3/10}{9/10} = \\frac{3}{9} = \\frac{1}{3}$.',
+  },
+  {
+    id: 9,
+    type: 'numeric',
+    question: 'A ball dropped from 5 ft bounces to 2/3 of its previous height. What is the total distance traveled (in feet)?',
+    correctAnswer: 25,
+    numericRange: { min: 0, max: 100, precision: 0 },
+    difficulty: 'hard',
+    explanation: 'Total = $5 + \\frac{20/3}{1 - 2/3} = 5 + 20 = 25$ feet.',
+  },
+  {
+    id: 10,
+    type: 'multiple-choice',
+    question: 'Why do pyramid schemes inevitably collapse?',
+    options: [
+      'The government stops them',
+      'Exponential growth quickly exceeds the population',
+      'People lose interest',
+      'The ratio $r$ becomes less than 1'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Geometric growth (e.g., each person recruits 5 more) quickly requires more participants than exist on Earth.',
+  },
+];
