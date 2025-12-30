@@ -1,5 +1,6 @@
 import { lazy, Suspense, Component, ReactNode } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
+import { GamificationProvider } from '@/contexts/GamificationContext';
 
 // Simple LoadingSpinner component
 function LoadingSpinner({ message = 'Loading...' }: { message?: string }) {
@@ -133,9 +134,11 @@ function AppContent() {
 export default function App() {
   return (
     <ErrorBoundary>
-      <HashRouter>
-        <AppContent />
-      </HashRouter>
+      <GamificationProvider>
+        <HashRouter>
+          <AppContent />
+        </HashRouter>
+      </GamificationProvider>
     </ErrorBoundary>
   );
 }
