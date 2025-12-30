@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { ThalesProofDemo } from '@/components/visualizations/chapter2';
 
 export default function Section11() {
   return (
@@ -206,6 +207,8 @@ export default function Section11() {
           of a given segment.
         </p>
       </div>
+
+      <ThalesProofDemo className="my-6" />
 
       <SectionQuiz
         sectionId={11}

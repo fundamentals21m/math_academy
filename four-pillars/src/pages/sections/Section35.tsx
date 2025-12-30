@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { CentralProjectionDemo } from '@/components/visualizations/chapter5';
 
 export default function Section35() {
   return (
@@ -133,6 +134,8 @@ export default function Section35() {
           line is represented by a function of the form f(x) = ax + b.
         </p>
       </div>
+
+      <CentralProjectionDemo className="my-6" />
 
       <SectionQuiz
         sectionId={35}

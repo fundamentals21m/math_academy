@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { LineCircleIntersection } from '@/components/visualizations/chapter3';
 
 export default function Section18() {
   return (
@@ -175,6 +176,8 @@ export default function Section18() {
           equations of the circles should have some geometric meaning. What is it?
         </p>
       </div>
+
+      <LineCircleIntersection className="my-6" />
 
       <SectionQuiz
         sectionId={18}

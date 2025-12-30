@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { TriangleInequalityDemo } from '@/components/visualizations/chapter4';
 
 export default function Section28() {
   return (
@@ -187,6 +188,8 @@ export default function Section28() {
           explain why B² − 4AC ≤ 0.
         </p>
       </div>
+
+      <TriangleInequalityDemo className="my-6" />
 
       <SectionQuiz
         sectionId={28}

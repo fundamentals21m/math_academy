@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { EquilateralTriangleConstruction } from '@/components/visualizations/chapter1';
 
 export default function Section01() {
   return (
@@ -207,6 +208,8 @@ export default function Section01() {
           These are all prime numbers. But no larger prime numbers of this form are known!
         </p>
       </Theorem>
+
+      <EquilateralTriangleConstruction className="my-6" />
 
       <SectionQuiz
         sectionId={1}
