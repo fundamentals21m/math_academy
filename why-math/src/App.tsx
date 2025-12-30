@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
@@ -9,6 +9,7 @@ import {
   LoadingSpinner,
 } from '@magic-internet-math/shared';
 import { AchievementToastContainer } from '@/components/gamification';
+import { Header, Sidebar } from '@/components/layout';
 import { FEATURES } from '@/config';
 
 // Eagerly load Home since it's the landing page
@@ -67,9 +68,29 @@ function SectionRouter() {
   );
 }
 
+function AppLayout({ children }: { children: React.ReactNode }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-dark-950">
+      <Header
+        sidebarOpen={sidebarOpen}
+        onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+      />
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+      <main className="pt-16 lg:pl-72">
+        {children}
+      </main>
+    </div>
+  );
+}
+
 function AppContent() {
   return (
-    <>
+    <AppLayout>
       <Routes>
         {/* Core routes */}
         <Route path="/" element={<Home />} />
@@ -115,7 +136,7 @@ function AppContent() {
 
       {/* Global achievement notifications */}
       {FEATURES.gamification && <AchievementToastContainer />}
-    </>
+    </AppLayout>
   );
 }
 
