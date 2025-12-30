@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { ThalesTheoremDemo } from '@/components/visualizations/chapter1';
 
 export default function Section04() {
   return (
@@ -257,6 +258,8 @@ export default function Section04() {
         again in more general form when we study projective geometry in Chapter 5. They
         play a fundamental role in understanding the relationship between geometry and algebra.
       </Callout>
+
+      <ThalesTheoremDemo className="my-6" />
 
       <SectionQuiz
         sectionId={4}

@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { CrossRatioDemo } from '@/components/visualizations/chapter5';
 
 export default function Section38() {
   return (
@@ -187,6 +188,8 @@ export default function Section38() {
           either of the first two, the middle two, or the last two variables.
         </p>
       </div>
+
+      <CrossRatioDemo className="my-6" />
 
       <SectionQuiz
         sectionId={38}
