@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { HyperbolicDistanceVisualizer } from '@/components/visualizations/chapter8';
 
 export default function Section62() {
   return (
@@ -145,6 +146,8 @@ export default function Section62() {
           These curved paths are the non-Euclidean lines.
         </p>
       </div>
+
+      <HyperbolicDistanceVisualizer className="my-6" />
 
       <h3>Distance to the Boundary</h3>
 

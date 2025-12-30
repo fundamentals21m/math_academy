@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { UpperHalfPlaneExplorer } from '@/components/visualizations/chapter8';
 
 export default function Section57() {
   return (
@@ -83,6 +84,8 @@ export default function Section57() {
           lines" in hyperbolic geometry.
         </p>
       </div>
+
+      <UpperHalfPlaneExplorer className="my-6" />
 
       <h3>Uniqueness of Non-Euclidean Lines</h3>
 

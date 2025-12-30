@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { MobiusTransformDemo } from '@/components/visualizations/chapter8';
 
 export default function Section59() {
   return (
@@ -99,6 +100,8 @@ export default function Section59() {
           For example: i → 1/(-i) = -1/i = i (fixed), and 2i → 1/(-2i) = i/2.
         </p>
       </div>
+
+      <MobiusTransformDemo className="my-6" />
 
       <h3>Reflections in Non-Euclidean Lines</h3>
 

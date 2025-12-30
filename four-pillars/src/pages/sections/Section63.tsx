@@ -4,6 +4,7 @@ import { Callout } from '@/components/common/Callout';
 import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
+import { HyperbolicIsometriesDemo } from '@/components/visualizations/chapter8';
 
 export default function Section63() {
   return (
@@ -190,6 +191,8 @@ export default function Section63() {
           </tbody>
         </table>
       </div>
+
+      <HyperbolicIsometriesDemo className="my-6" />
 
       <h3>The Trace Criterion</h3>
 
