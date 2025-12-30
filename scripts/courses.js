@@ -116,7 +116,7 @@ export const COURSES = [
   // CALCULUS
   {
     id: 'calc1',
-    title: 'Calculus',
+    title: 'Intermediate Calculus',
     description: "One-variable calculus with an introduction to linear algebra. Based on Tom M. Apostol's classic textbook, covering integration, differentiation, and infinite series.",
     icon: '∫',
     url: 'calc1-deploy/',
@@ -125,7 +125,7 @@ export const COURSES = [
     totalSections: 101,
     progressPrefix: 'calc1:',
     leaderboardUrl: 'calc1-deploy/#/leaderboard',
-    shortName: 'Calculus',
+    shortName: 'Intermediate Calculus',
     progressGradient: 'linear-gradient(90deg, #f97316, #fb923c)',
   },
   {
