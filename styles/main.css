@@ -1277,6 +1277,18 @@ canvas {
     display: none;
   }
 
+  nav .nav-content {
+    gap: 1rem;
+  }
+
+  nav .logo {
+    font-size: 1rem;
+  }
+
+  #nostr-auth-container {
+    margin-left: auto;
+  }
+
   .stats {
     gap: 1rem;
   }
