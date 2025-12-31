@@ -45,18 +45,18 @@
       appId: "1:***REMOVED***:web:072f6cb1724919360f94cb"
     };
 
-    // Firebase app instance (singleton)
-    let firebaseApp = null;
+    // Firebase app instance (singleton) - make it global for nostrAuth.js
+    window.firebaseApp = null;
 
     // Make functions available globally
     window.getUserScores = async function(npub) {
       try {
         // Initialize Firebase only once
-        if (!firebaseApp) {
-          firebaseApp = initializeApp(firebaseConfig);
+        if (!window.firebaseApp) {
+          window.firebaseApp = initializeApp(firebaseConfig);
         }
 
-        const functions = getFunctions(firebaseApp);
+        const functions = getFunctions(window.firebaseApp);
         const getUserScoresFn = httpsCallable(functions, 'getUserScores');
         const result = await getUserScoresFn({ npub });
         return result.data;
@@ -74,11 +74,11 @@
         statusEl.textContent = 'Loading...';
 
         // Initialize Firebase only once
-        if (!firebaseApp) {
-          firebaseApp = initializeApp(firebaseConfig);
+        if (!window.firebaseApp) {
+          window.firebaseApp = initializeApp(firebaseConfig);
         }
 
-        const functions = getFunctions(firebaseApp);
+        const functions = getFunctions(window.firebaseApp);
         const getLeaderboard = httpsCallable(functions, 'getLeaderboard');
 
         const result = await getLeaderboard({ courseId: 'overall', limit: 10 });
@@ -146,6 +146,9 @@
     }
   </script>
 
+  <!-- Nostr Auth -->
+  <script type="module" src="./scripts/nostrAuth.js"></script>
+
   <!-- Hub Renderer -->
   <script type="module">
     import { renderCourseHub, renderLeaderboardLinks, getCourseCount } from './scripts/hubRenderer.js';
@@ -182,6 +185,7 @@
         <li><a href="index.html" class="active">Courses</a></li>
         <li><a href="#leaderboard">Leaderboard</a></li>
       </ul>
+      <div id="nostr-auth-container" style="margin-left: auto;"></div>
     </div>
   </nav>
 
@@ -235,7 +239,7 @@
 
       <!-- Connect prompt -->
       <div class="callout callout-info" style="margin-top: 1.5rem;">
-        <strong>Want to join the leaderboard?</strong> Visit any course above and click "Connect with Nostr" to sync your progress and compete!
+        <strong>Want to join the leaderboard?</strong> Click "Connect with Nostr" in the top right to sync your progress across all courses and compete!
       </div>
 
       <!-- Course Leaderboard Links -->
