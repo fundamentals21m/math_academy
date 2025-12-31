@@ -11,7 +11,7 @@ import type { CourseId } from '@magic-internet-math/shared';
  * Course identifier - used for XP tracking, URLs, and storage keys
  * Examples: 'ba' (Basic Algebra), 'aa' (Abstract Algebra), 'crypto' (Cryptography)
  */
-export const COURSE_ID: CourseId = 'men_of_math';
+export const COURSE_ID: CourseId = 'mom';
 
 /**
  * Human-readable course name
