@@ -98,7 +98,7 @@ export const COURSES = [
   // BEGINNERS
   {
     id: 'calc_easy',
-    title: 'Calculus Made Easy',
+    title: 'Beginner Calculus',
     description: "Master calculus through Silvanus P. Thompson's timeless classic. From functions to integration, learn calculus the way it was meant to be taught—simply and clearly.",
     icon: '∂',
     url: 'calceasy-deploy/',
@@ -107,7 +107,7 @@ export const COURSES = [
     totalSections: 26,
     progressPrefix: 'calc_easy:',
     leaderboardUrl: 'calceasy-deploy/#/leaderboard',
-    shortName: 'Calculus Easy',
+    shortName: 'Beginner Calculus',
     progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
   },
   {
