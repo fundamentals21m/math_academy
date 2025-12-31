@@ -27,8 +27,6 @@ firebase/functions/*.log
 .env
 .env.local
 .env.*.local
-advanced-linalg/
-linalg/
 
 # Working files
 calc_easy_pdfs/
