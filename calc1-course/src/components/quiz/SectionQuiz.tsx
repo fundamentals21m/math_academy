@@ -151,6 +151,11 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
     setEarnedXP(0);
   };
 
+  // Guard against empty questions array
+  if (!questions || questions.length === 0 || !currentQuestion) {
+    return null;
+  }
+
   if (isComplete) {
     const finalScore = answers.filter(Boolean).length;
     const percentage = globalThis.Math.round((finalScore / totalQuestions) * 100);
