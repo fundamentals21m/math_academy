@@ -165,9 +165,9 @@ function updateAuthUI() {
 
   if (authState.isConnecting) {
     container.innerHTML = `
-      <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 8px;">
-        <div style="width: 20px; height: 20px; border: 2px solid #6366f1; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-        <span style="color: #a5b4fc;">Connecting...</span>
+      <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.75rem; background: rgba(0, 245, 255, 0.1); border: 1px solid rgba(0, 245, 255, 0.3); border-radius: 6px;">
+        <div style="width: 14px; height: 14px; border: 2px solid #00f5ff; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        <span style="color: #00f5ff; font-size: 0.8rem;">Connecting...</span>
       </div>
       <style>
         @keyframes spin {
@@ -179,16 +179,13 @@ function updateAuthUI() {
   }
 
   if (authState.isAuthenticated) {
-    const displayText = authState.displayName || shortenNpub(authState.npub);
+    const displayText = authState.displayName || shortenNpub(authState.npub, 6);
     container.innerHTML = `
-      <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 8px;">
-        <span style="color: #22c55e; font-size: 1.25rem;">&#10003;</span>
-        <div>
-          <div style="color: #f1f5f9; font-weight: 500;">${displayText}</div>
-          <div style="color: #64748b; font-size: 0.7rem; font-family: monospace;">${shortenNpub(authState.npub, 12)}</div>
-        </div>
-        <button onclick="window.nostrAuthDisconnect()" style="margin-left: auto; font-size: 0.75rem; color: #64748b; background: none; border: 1px solid #374151; padding: 0.25rem 0.75rem; border-radius: 4px; cursor: pointer;">
-          Disconnect
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="color: #00ff9f; font-size: 0.9rem;">⚡</span>
+        <span style="color: #e8e8ff; font-size: 0.85rem; font-weight: 500;">${displayText}</span>
+        <button onclick="window.nostrAuthDisconnect()" style="font-size: 0.7rem; color: #8888aa; background: none; border: 1px solid rgba(0, 245, 255, 0.2); padding: 0.2rem 0.5rem; border-radius: 4px; cursor: pointer; margin-left: 0.25rem;" onmouseover="this.style.borderColor='rgba(0, 245, 255, 0.5)'" onmouseout="this.style.borderColor='rgba(0, 245, 255, 0.2)'">
+          ✕
         </button>
       </div>
     `;
@@ -197,28 +194,25 @@ function updateAuthUI() {
 
   if (!authState.extensionChecked) {
     container.innerHTML = `
-      <div style="color: #64748b; font-size: 0.875rem;">Checking for Nostr extension...</div>
+      <span style="color: #8888aa; font-size: 0.8rem;">...</span>
     `;
     return;
   }
 
   if (!authState.hasExtension) {
     container.innerHTML = `
-      <div style="padding: 1rem; background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 8px;">
-        <div style="color: #fbbf24; font-weight: 500; margin-bottom: 0.5rem;">Nostr Extension Required</div>
-        <p style="color: #94a3b8; font-size: 0.875rem; margin: 0;">
-          Install a NIP-07 extension like <a href="https://getalby.com" target="_blank" style="color: #6366f1;">Alby</a> or
-          <a href="https://github.com/nicolgit/nos2x" target="_blank" style="color: #6366f1;">nos2x</a> to connect.
-        </p>
-      </div>
+      <a href="https://getalby.com" target="_blank" style="display: flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.75rem; background: rgba(255, 170, 0, 0.1); border: 1px solid rgba(255, 170, 0, 0.3); border-radius: 6px; color: #ffaa00; font-size: 0.8rem; text-decoration: none;" title="Install Alby or nos2x extension">
+        <span>⚡</span>
+        <span>Get Nostr</span>
+      </a>
     `;
     return;
   }
 
   container.innerHTML = `
-    <button onclick="window.nostrAuthConnect()" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); border: none; border-radius: 8px; color: white; font-weight: 500; cursor: pointer; font-size: 1rem;">
-      <span style="font-size: 1.25rem;">&#9889;</span>
-      Connect with Nostr
+    <button onclick="window.nostrAuthConnect()" style="display: flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.75rem; background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(191, 0, 255, 0.1)); border: 1px solid rgba(0, 245, 255, 0.3); border-radius: 6px; color: #00f5ff; font-weight: 500; cursor: pointer; font-size: 0.8rem; transition: all 0.2s;" onmouseover="this.style.borderColor='rgba(0, 245, 255, 0.6)'; this.style.boxShadow='0 0 15px rgba(0, 245, 255, 0.2)'" onmouseout="this.style.borderColor='rgba(0, 245, 255, 0.3)'; this.style.boxShadow='none'">
+      <span>⚡</span>
+      <span>Connect</span>
     </button>
   `;
 }
