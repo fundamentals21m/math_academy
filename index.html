@@ -187,9 +187,26 @@
           <li><a href="#leaderboard">Leaderboard</a></li>
         </ul>
         <div id="nostr-auth-container"></div>
+        <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Courses</a>
+      <a href="#leaderboard" onclick="toggleMobileMenu()">Leaderboard</a>
+    </div>
   </nav>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const hamburger = document.querySelector('.hamburger');
+      menu.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    }
+  </script>
 
   <main class="container">
     <section class="hero">
