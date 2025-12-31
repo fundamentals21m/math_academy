@@ -21,6 +21,46 @@ export type { QuizQuestion, SectionQuestions } from './types';
 export { section00Questions } from './section00';
 import { section00Questions } from './section00';
 
+// Chapter 1: Straightedge and Compass (Sections 1-5)
+export {
+  section01Questions,
+  section02Questions,
+  section03Questions,
+  section04Questions,
+  section05Questions,
+} from './chapter01';
+import {
+  section01Questions,
+  section02Questions,
+  section03Questions,
+  section04Questions,
+  section05Questions,
+} from './chapter01';
+
+// Chapter 2: Euclid's Approach to Geometry (Sections 6-14)
+export {
+  section06Questions,
+  section07Questions,
+  section08Questions,
+  section09Questions,
+  section10Questions,
+  section11Questions,
+  section12Questions,
+  section13Questions,
+  section14Questions,
+} from './chapter02';
+import {
+  section06Questions,
+  section07Questions,
+  section08Questions,
+  section09Questions,
+  section10Questions,
+  section11Questions,
+  section12Questions,
+  section13Questions,
+  section14Questions,
+} from './chapter02';
+
 // Chapter 3: Coordinates (Sections 15-22)
 export {
   section15Questions,
@@ -165,6 +205,22 @@ import {
 
 export const quizMap: Record<number, QuizQuestion[]> = {
   0: section00Questions,
+  // Chapter 1: Straightedge and Compass
+  1: section01Questions,
+  2: section02Questions,
+  3: section03Questions,
+  4: section04Questions,
+  5: section05Questions,
+  // Chapter 2: Euclid's Approach to Geometry
+  6: section06Questions,
+  7: section07Questions,
+  8: section08Questions,
+  9: section09Questions,
+  10: section10Questions,
+  11: section11Questions,
+  12: section12Questions,
+  13: section13Questions,
+  14: section14Questions,
   // Chapter 3: Coordinates
   15: section15Questions,
   16: section16Questions,
