@@ -362,10 +362,28 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
   );
 }
 
+// Default context for when NostrAuthProvider is not present
+const defaultNostrAuthContext: NostrAuthContextValue = {
+  isAuthenticated: false,
+  isConnecting: false,
+  npub: null,
+  displayName: null,
+  nip05: null,
+  isAdmin: false,
+  error: null,
+  hasExtension: false,
+  extensionChecked: true,
+  connect: async () => {},
+  disconnect: async () => {},
+  setDisplayName: () => {},
+  clearError: () => {},
+};
+
 export function useNostrAuth() {
   const context = useContext(NostrAuthContext);
+  // Return default context if provider is not present (nostrAuth feature disabled)
   if (!context) {
-    throw new Error('useNostrAuth must be used within NostrAuthProvider');
+    return defaultNostrAuthContext;
   }
   return context;
 }
