@@ -59,8 +59,8 @@ export const LINKS = {
  */
 export const FEATURES = {
   gamification: true,
-  leaderboard: false,
-  nostrAuth: false,
+  leaderboard: true,
+  nostrAuth: true,
   quizzes: true,
   interactiveModules: true,
   theoremIndex: true,
