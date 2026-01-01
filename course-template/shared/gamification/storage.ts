@@ -48,6 +48,8 @@ function isValidGamificationState(data: unknown): data is GamificationState {
   const user = obj.user as Record<string, unknown>;
   if (typeof user.totalXP !== 'number') return false;
   if (typeof user.level !== 'number') return false;
+  if (!Array.isArray(user.sectionsCompleted)) return false;
+  if (!Array.isArray(user.chaptersCompleted)) return false;
 
   // Validate streak object has required fields
   const streak = obj.streak as Record<string, unknown>;
