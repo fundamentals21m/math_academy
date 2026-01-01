@@ -12,6 +12,7 @@ import Home from '@/pages/Home';
 import Leaderboard from '@/pages/Leaderboard';
 import Theorems from '@/pages/Theorems';
 import InteractiveModules from '@/pages/InteractiveModules';
+import SectionQuizPage from '@/pages/SectionQuizPage';
 
 // Section pages - Chapter 1: Straightedge and Compass
 import Section00 from '@/pages/sections/Section00';
@@ -223,6 +224,9 @@ function AppContent() {
           {Object.entries(sectionComponents).map(([id, Component]) => (
             <Route key={id} path={`/section/${id}`} element={<Component />} />
           ))}
+
+          {/* Quiz routes */}
+          <Route path="/quiz/section/:id" element={<SectionQuizPage />} />
 
           {/* Fallback for non-existent sections */}
           <Route path="/section/:id" element={<SectionNotFound />} />

@@ -1,11 +1,8 @@
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { curriculum } from '@/data/curriculum';
-import { FEATURES } from '@/config';
+import { FEATURES, COURSE_ID } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
 import { MasteryIndicator } from '@/components/gamification';
-import { COURSE_ID } from '@/config';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -13,56 +10,48 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const [expandedParts, setExpandedParts] = useState<Set<number>>(new Set([1]));
   // Always call the hook unconditionally, then conditionally use the result
   const gamificationContext = useGamification();
   const gamification = FEATURES.gamification ? gamificationContext : null;
 
-  const togglePart = (partId: number) => {
-    setExpandedParts((prev) => {
-      const next = new Set(prev);
-      if (next.has(partId)) {
-        next.delete(partId);
-      } else {
-        next.add(partId);
-      }
-      return next;
-    });
-  };
-
+  // Get mastery level for a section
   const getMasteryLevel = (sectionId: number) => {
     if (!gamification) return 'none';
     const id = `${COURSE_ID}:${sectionId}` as const;
     return gamification.state.sections[id]?.masteryLevel ?? 'none';
   };
 
+  // Check if section is completed
+  const isCompleted = (sectionId: number) => {
+    if (!gamification) return false;
+    const id = `${COURSE_ID}:${sectionId}`;
+    return gamification.state.user.sectionsCompleted.includes(id);
+  };
+
   return (
     <>
-      {/* Backdrop */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-          />
-        )}
-      </AnimatePresence>
+      {/* Overlay for mobile */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-dark-950/80 backdrop-blur-sm z-40 lg:hidden"
+          onClick={onClose}
+        />
+      )}
 
       {/* Sidebar */}
       <aside
         className={`
-          fixed top-16 left-0 bottom-0 z-40
-          w-72 bg-dark-900 border-r border-dark-800
-          transform transition-transform duration-300 ease-in-out
+          fixed top-16 left-0 bottom-0 w-72 bg-dark-900/95 backdrop-blur-xl border-r border-dark-700/50
+          overflow-y-auto scrollbar-thin z-40
+          transform transition-transform duration-300 ease-out
           ${isOpen ? 'translate-x-0' : '-translate-x-full'}
           lg:translate-x-0
-          overflow-y-auto
         `}
       >
-        <nav className="p-4">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/[0.02] to-transparent pointer-events-none" />
+
+        <nav className="relative p-4">
           {/* Reference Section */}
           <div className="mb-6">
             <div className="flex items-center gap-2 px-3 py-2 mb-2">
@@ -78,16 +67,30 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <li>
                   <NavLink
                     to="/theorems"
+                    onClick={() => onClose()}
                     className={({ isActive }) =>
-                      `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                      `group flex items-center gap-3 px-3 py-2.5 text-sm rounded-xl transition-all duration-200 ${
                         isActive
-                          ? 'bg-primary-500/10 text-primary-400'
-                          : 'text-dark-300 hover:bg-dark-800 hover:text-dark-100'
+                          ? 'text-amber-400 bg-amber-500/10 shadow-sm shadow-amber-500/5'
+                          : 'text-dark-400 hover:text-dark-100 hover:bg-dark-800/50'
                       }`
                     }
                   >
-                    <span className="text-lg">📜</span>
-                    Theorems
+                    {({ isActive }) => (
+                      <>
+                        <span className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs transition-all duration-200 ${
+                          isActive
+                            ? 'bg-amber-500/20 text-amber-400'
+                            : 'bg-dark-800/50 text-dark-500 group-hover:bg-dark-700/50 group-hover:text-dark-300'
+                        }`}>
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </span>
+                        <span className="truncate flex-1">Theorems</span>
+                        {isActive && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-amber-400" />}
+                      </>
+                    )}
                   </NavLink>
                 </li>
               )}
@@ -95,95 +98,91 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <li>
                   <NavLink
                     to="/interactive"
+                    onClick={() => onClose()}
                     className={({ isActive }) =>
-                      `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                      `group flex items-center gap-3 px-3 py-2.5 text-sm rounded-xl transition-all duration-200 ${
                         isActive
-                          ? 'bg-primary-500/10 text-primary-400'
-                          : 'text-dark-300 hover:bg-dark-800 hover:text-dark-100'
+                          ? 'text-cyan-400 bg-cyan-500/10 shadow-sm shadow-cyan-500/5'
+                          : 'text-dark-400 hover:text-dark-100 hover:bg-dark-800/50'
                       }`
                     }
                   >
-                    <span className="text-lg">🎮</span>
-                    Interactive Modules
+                    {({ isActive }) => (
+                      <>
+                        <span className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs transition-all duration-200 ${
+                          isActive
+                            ? 'bg-cyan-500/20 text-cyan-400'
+                            : 'bg-dark-800/50 text-dark-500 group-hover:bg-dark-700/50 group-hover:text-dark-300'
+                        }`}>
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                        </span>
+                        <span className="truncate flex-1">Interactive Modules</span>
+                        {isActive && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-cyan-400" />}
+                      </>
+                    )}
                   </NavLink>
                 </li>
               )}
             </ul>
           </div>
 
-          {/* Curriculum Parts */}
-          <div className="space-y-2">
-            {curriculum.map((part) => (
-              <div key={part.id}>
-                {/* Part Header */}
-                <button
-                  onClick={() => togglePart(part.id)}
-                  className="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-dark-800 transition-colors"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-primary-500/20 to-primary-600/10 flex items-center justify-center">
-                      <span className="text-xs font-bold text-primary-400">
-                        {part.id}
-                      </span>
-                    </div>
-                    <span className="text-sm font-medium text-dark-200">
-                      {part.title}
-                    </span>
-                  </div>
-                  <svg
-                    className={`w-4 h-4 text-dark-500 transition-transform ${
-                      expandedParts.has(part.id) ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                {/* Section List */}
-                <AnimatePresence>
-                  {expandedParts.has(part.id) && (
-                    <motion.ul
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="ml-4 mt-1 space-y-0.5 overflow-hidden"
-                    >
-                      {part.sections.map((section) => (
-                        <li key={section.id}>
-                          <NavLink
-                            to={`/section/${section.id}`}
-                            onClick={() => {
-                              if (window.innerWidth < 1024) onClose();
-                            }}
-                            className={({ isActive }) =>
-                              `flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-colors ${
-                                isActive
-                                  ? 'bg-primary-500/10 text-primary-400'
-                                  : 'text-dark-400 hover:bg-dark-800 hover:text-dark-200'
-                              }`
-                            }
-                          >
-                            <span className="truncate">{section.title}</span>
-                            {FEATURES.gamification && (
-                              <MasteryIndicator level={getMasteryLevel(section.id)} />
-                            )}
-                          </NavLink>
-                        </li>
-                      ))}
-                    </motion.ul>
-                  )}
-                </AnimatePresence>
+          {curriculum.map((part) => (
+            <div key={`part-${part.id}`} className="mb-6">
+              <div className="flex items-center gap-2 px-3 py-2 mb-2">
+                <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-primary-500/20 to-cyan-500/10 flex items-center justify-center">
+                  <span className="text-xs font-bold text-primary-400">{part.id}</span>
+                </div>
+                <span className="text-xs font-bold uppercase tracking-wider text-dark-500 truncate">
+                  {part.title}
+                </span>
               </div>
-            ))}
-          </div>
+
+              <ul className="space-y-0.5">
+                {part.sections.map((section) => (
+                  <li key={section.id}>
+                    <NavLink
+                      to={`/section/${section.id}`}
+                      onClick={() => onClose()}
+                      className={({ isActive }) =>
+                        `group flex items-center gap-3 px-3 py-2.5 text-sm rounded-xl transition-all duration-200 ${
+                          isActive
+                          ? 'text-primary-400 bg-primary-500/10 shadow-sm shadow-primary-500/5'
+                          : 'text-dark-400 hover:text-dark-100 hover:bg-dark-800/50'
+                        }`
+                      }
+                    >
+                      {({ isActive }) => {
+                        const mastery = getMasteryLevel(section.id);
+                        const completed = isCompleted(section.id);
+                        return (
+                          <>
+                            <span className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs font-medium transition-all duration-200 ${
+                              isActive
+                              ? 'bg-primary-500/20 text-primary-400'
+                              : completed
+                              ? 'bg-emerald-500/20 text-emerald-400'
+                              : 'bg-dark-800/50 text-dark-500 group-hover:bg-dark-700/50 group-hover:text-dark-300'
+                            }`}>
+                              {completed ? '✓' : section.id}
+                            </span>
+                            <span className="truncate flex-1">{section.title}</span>
+                            <div className="ml-auto flex items-center gap-1">
+                              {FEATURES.gamification && mastery !== 'none' && <MasteryIndicator level={mastery} />}
+                              {isActive && (
+                                <div className="w-1.5 h-1.5 rounded-full bg-primary-400" />
+                              )}
+                            </div>
+                          </>
+                        );
+                      }}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </nav>
       </aside>
     </>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { COURSE_NAME, COURSE_ICON, FEATURES, HUB_URL } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
-import { XPDisplay, StreakBadge } from '@/components/gamification';
+import { XPDisplay, StreakBadge, ProgressBackup } from '@/components/gamification';
 import { NostrConnectButton } from '@shared/components/leaderboard/NostrConnectButton';
 
 interface HeaderProps {
@@ -96,7 +96,7 @@ export function Header({ onToggleSidebar, sidebarOpen }: HeaderProps) {
           )}
         </nav>
 
-        {/* Right: Gamification stats and Nostr connect */}
+        {/* Right: Gamification stats, backup, and Nostr connect */}
         <div className="flex items-center gap-4">
           {FEATURES.gamification && gamification && (
             <>
@@ -107,6 +107,7 @@ export function Header({ onToggleSidebar, sidebarOpen }: HeaderProps) {
               />
             </>
           )}
+          {FEATURES.gamification && <ProgressBackup />}
           {FEATURES.leaderboard && (
             <NostrConnectButton showDisplayName={false} />
           )}

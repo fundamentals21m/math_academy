@@ -10,7 +10,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/advlinalg-deploy/',
   resolve: {
     alias: {
         '@': path.resolve(__dirname, './src'),

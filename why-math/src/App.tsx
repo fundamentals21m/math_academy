@@ -19,6 +19,7 @@ import Home from '@/pages/Home';
 const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
 const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
+const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
 
 // Lazy load all section pages - this is the biggest win for bundle size
 // Each section is only loaded when the user navigates to it
@@ -129,6 +130,16 @@ function AppContent() {
 
         {/* Dynamic section routes - lazy loaded via SectionRouter */}
         <Route path="/section/:id" element={<SectionRouter />} />
+
+        {/* Section quiz route */}
+        <Route
+          path="/quiz/section/:id"
+          element={
+            <Suspense fallback={<LoadingSpinner message="Loading quiz..." />}>
+              <SectionQuizPage />
+            </Suspense>
+          }
+        />
 
         {/* Fallback */}
         <Route path="*" element={<Home />} />

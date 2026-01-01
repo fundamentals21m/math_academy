@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { COURSE_NAME, COURSE_ICON, FEATURES, HUB_URL } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
-import { XPDisplay, StreakBadge } from '@/components/gamification';
+import { XPDisplay, StreakBadge, ProgressBackup } from '@/components/gamification';
 
 interface HeaderProps {
   onToggleSidebar: () => void;
@@ -95,16 +95,19 @@ export function Header({ onToggleSidebar, sidebarOpen }: HeaderProps) {
           )}
         </nav>
 
-        {/* Right: Gamification stats */}
-        {FEATURES.gamification && gamification && (
-          <div className="flex items-center gap-4">
-            <StreakBadge streak={gamification.state.streak.currentStreak} />
-            <XPDisplay
-              xp={gamification.state.user.totalXP}
-              level={gamification.state.user.level}
-            />
-          </div>
-        )}
+        {/* Right: Gamification stats and backup */}
+        <div className="flex items-center gap-4">
+          {FEATURES.gamification && gamification && (
+            <>
+              <StreakBadge streak={gamification.state.streak.currentStreak} />
+              <XPDisplay
+                xp={gamification.state.user.totalXP}
+                level={gamification.state.user.level}
+              />
+            </>
+          )}
+          {FEATURES.gamification && <ProgressBackup />}
+        </div>
       </div>
     </header>
   );

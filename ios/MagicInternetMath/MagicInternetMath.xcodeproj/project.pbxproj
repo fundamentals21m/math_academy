@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		067AA7668BBC077FE0199D92 /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389792C68EA5DBFE38B34742 /* ProgressService.swift */; };
+		0D659DA9F76D5B6E9C9BE924 /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA17F0C1A7600D11938307 /* CourseListView.swift */; };
+		1250DE45F4EA4D2BE142D6E0 /* LeaderboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452B22E67B8F2A4A984C1F5 /* LeaderboardService.swift */; };
+		161C8D0836E12CC1FD07D019 /* CourseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D0F28E8AEA8104A12B9409 /* CourseDataService.swift */; };
+		2960394BC952D5F00A368D95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35F6EB136C59806C8103864 /* LaunchScreen.storyboard */; };
+		3F7B1C769922C949B6BC6E20 /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3730D02B00FCDB5601540A1 /* CourseCardView.swift */; };
+		423AE328FDA5607AF30DD84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA7762A713A63338A13A173 /* Assets.xcassets */; };
+		6018E4BF2DA5B09DCE8641F5 /* NostrAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5859266BBF9AC4B390E3D8 /* NostrAuthService.swift */; };
+		642D6CD266691A08B3AB9900 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A9E0926E9EC3DBF027D770 /* Course.swift */; };
+		70B76836E7107D0900C01B64 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4743F285BD05D34E0A943F6 /* Section.swift */; };
+		72C3E9FC92B198101707C31B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843586ED25C8001A19B57D5D /* Theme.swift */; };
+		74C04CBCBFEAA23D4B4C846D /* CourseWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACC59530F6A1EC994E1B177 /* CourseWebView.swift */; };
+		8D4D0BF0D0C89B433EE01627 /* NostrUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE23BDBCF887C3770EAE537 /* NostrUtils.swift */; };
+		9D8831F35F2A6A666CEFCEF2 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A26226C5637906F005FEF /* LeaderboardView.swift */; };
+		CD9746BA1925C293E54F0E5B /* LeaderboardEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A9518DA7DE94D4622F82F /* LeaderboardEntry.swift */; };
+		D1BC16CAFCF66374E3EA85C4 /* MagicInternetMathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F897E6031257CF8E4152B7DE /* MagicInternetMathApp.swift */; };
+		D7875B10D28597DB0759F209 /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = 04068F238BD3960844CCE78D /* courses.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04068F238BD3960844CCE78D /* courses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
+		13999D56F9C91781602E9053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1E1A26226C5637906F005FEF /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		2BE23BDBCF887C3770EAE537 /* NostrUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostrUtils.swift; sourceTree = "<group>"; };
+		389792C68EA5DBFE38B34742 /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressService.swift; sourceTree = "<group>"; };
+		39D0F28E8AEA8104A12B9409 /* CourseDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDataService.swift; sourceTree = "<group>"; };
+		3C5859266BBF9AC4B390E3D8 /* NostrAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostrAuthService.swift; sourceTree = "<group>"; };
+		5452B22E67B8F2A4A984C1F5 /* LeaderboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardService.swift; sourceTree = "<group>"; };
+		55BA17F0C1A7600D11938307 /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
+		843586ED25C8001A19B57D5D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		911FF04F07F41CB635AEB2CA /* MagicInternetMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicInternetMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A35F6EB136C59806C8103864 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4743F285BD05D34E0A943F6 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		A6A9E0926E9EC3DBF027D770 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		B3730D02B00FCDB5601540A1 /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
+		BACC59530F6A1EC994E1B177 /* CourseWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseWebView.swift; sourceTree = "<group>"; };
+		CA4A9518DA7DE94D4622F82F /* LeaderboardEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardEntry.swift; sourceTree = "<group>"; };
+		CDA7762A713A63338A13A173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F897E6031257CF8E4152B7DE /* MagicInternetMathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicInternetMathApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		062FE4137166C4FE49B65641 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				843586ED25C8001A19B57D5D /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		0FDDBD1590023F1C782B4648 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A6A9E0926E9EC3DBF027D770 /* Course.swift */,
+				CA4A9518DA7DE94D4622F82F /* LeaderboardEntry.swift */,
+				A4743F285BD05D34E0A943F6 /* Section.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		14F5446D7CE1D16C081C99E9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				39D0F28E8AEA8104A12B9409 /* CourseDataService.swift */,
+				5452B22E67B8F2A4A984C1F5 /* LeaderboardService.swift */,
+				3C5859266BBF9AC4B390E3D8 /* NostrAuthService.swift */,
+				389792C68EA5DBFE38B34742 /* ProgressService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2FCF3012CEC00CF1798680CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDA7762A713A63338A13A173 /* Assets.xcassets */,
+				04068F238BD3960844CCE78D /* courses.json */,
+				13999D56F9C91781602E9053 /* Info.plist */,
+				A35F6EB136C59806C8103864 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3021CA9B65BAB1D7B1DF670D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3730D02B00FCDB5601540A1 /* CourseCardView.swift */,
+				55BA17F0C1A7600D11938307 /* CourseListView.swift */,
+				BACC59530F6A1EC994E1B177 /* CourseWebView.swift */,
+				1E1A26226C5637906F005FEF /* LeaderboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A0FC9BE01B171119F6BB2EB /* MagicInternetMath */ = {
+			isa = PBXGroup;
+			children = (
+				AF14EA58EC11CCE7BC530E44 /* App */,
+				0FDDBD1590023F1C782B4648 /* Models */,
+				2FCF3012CEC00CF1798680CC /* Resources */,
+				14F5446D7CE1D16C081C99E9 /* Services */,
+				062FE4137166C4FE49B65641 /* Theme */,
+				D632D7AAF81D1A377ECA9767 /* Utils */,
+				3021CA9B65BAB1D7B1DF670D /* Views */,
+			);
+			path = MagicInternetMath;
+			sourceTree = "<group>";
+		};
+		52CDD453F63A0BDE633575C8 = {
+			isa = PBXGroup;
+			children = (
+				4A0FC9BE01B171119F6BB2EB /* MagicInternetMath */,
+				F1CFAB4D8276313D009825B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF14EA58EC11CCE7BC530E44 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F897E6031257CF8E4152B7DE /* MagicInternetMathApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D632D7AAF81D1A377ECA9767 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2BE23BDBCF887C3770EAE537 /* NostrUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F1CFAB4D8276313D009825B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				911FF04F07F41CB635AEB2CA /* MagicInternetMath.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDDECA6F9F02C81C67E1D272 /* MagicInternetMath */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2117E60C75F814044CAA2716 /* Build configuration list for PBXNativeTarget "MagicInternetMath" */;
+			buildPhases = (
+				A4784AA15B5C0DFC1A775F46 /* Sources */,
+				B94D0D166A8AA202718BB9FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicInternetMath;
+			packageProductDependencies = (
+			);
+			productName = MagicInternetMath;
+			productReference = 911FF04F07F41CB635AEB2CA /* MagicInternetMath.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8C5733A85544BF6EDA1D511 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = B8F883D1C7BE284E26EC4E62 /* Build configuration list for PBXProject "MagicInternetMath" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 52CDD453F63A0BDE633575C8;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDDECA6F9F02C81C67E1D272 /* MagicInternetMath */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B94D0D166A8AA202718BB9FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423AE328FDA5607AF30DD84B /* Assets.xcassets in Resources */,
+				2960394BC952D5F00A368D95 /* LaunchScreen.storyboard in Resources */,
+				D7875B10D28597DB0759F209 /* courses.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4784AA15B5C0DFC1A775F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				642D6CD266691A08B3AB9900 /* Course.swift in Sources */,
+				3F7B1C769922C949B6BC6E20 /* CourseCardView.swift in Sources */,
+				161C8D0836E12CC1FD07D019 /* CourseDataService.swift in Sources */,
+				0D659DA9F76D5B6E9C9BE924 /* CourseListView.swift in Sources */,
+				74C04CBCBFEAA23D4B4C846D /* CourseWebView.swift in Sources */,
+				CD9746BA1925C293E54F0E5B /* LeaderboardEntry.swift in Sources */,
+				1250DE45F4EA4D2BE142D6E0 /* LeaderboardService.swift in Sources */,
+				9D8831F35F2A6A666CEFCEF2 /* LeaderboardView.swift in Sources */,
+				D1BC16CAFCF66374E3EA85C4 /* MagicInternetMathApp.swift in Sources */,
+				6018E4BF2DA5B09DCE8641F5 /* NostrAuthService.swift in Sources */,
+				8D4D0BF0D0C89B433EE01627 /* NostrUtils.swift in Sources */,
+				067AA7668BBC077FE0199D92 /* ProgressService.swift in Sources */,
+				70B76836E7107D0900C01B64 /* Section.swift in Sources */,
+				72C3E9FC92B198101707C31B /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		09DB0CB2587E8FA87269E6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35ZWUWQKFR;
+				INFOPLIST_FILE = MagicInternetMath/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magicinternetmath.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0B1DFFA9B9C1D98B8E1438D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD4D26350F20B41667244327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35ZWUWQKFR;
+				INFOPLIST_FILE = MagicInternetMath/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magicinternetmath.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2F32987FA6A44E05EBA8E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2117E60C75F814044CAA2716 /* Build configuration list for PBXNativeTarget "MagicInternetMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD4D26350F20B41667244327 /* Debug */,
+				09DB0CB2587E8FA87269E6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B8F883D1C7BE284E26EC4E62 /* Build configuration list for PBXProject "MagicInternetMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B1DFFA9B9C1D98B8E1438D3 /* Debug */,
+				F2F32987FA6A44E05EBA8E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8C5733A85544BF6EDA1D511 /* Project object */;
+}

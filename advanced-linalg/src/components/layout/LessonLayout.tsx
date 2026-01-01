@@ -1,11 +1,8 @@
-import { useState, useEffect, type ReactNode } from 'react';
+import { type ReactNode, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { getSectionById, getPartBySectionId, getAdjacentSections, getTotalSections, getSectionIndex } from '@/data/curriculum';
-import { FEATURES, COURSE_ID } from '@/config';
-import { useGamification } from '@/contexts/GamificationContext';
-import { Header, Sidebar } from '@/components/layout';
-import type { SectionId } from '@magic-internet-math/shared';
+import { FEATURES } from '@/config';
+import { useGamification, makeSectionId } from '@/contexts/GamificationContext';
 
 interface LessonLayoutProps {
   sectionId: number;
@@ -13,7 +10,6 @@ interface LessonLayoutProps {
 }
 
 export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const section = getSectionById(sectionId);
   const part = getPartBySectionId(sectionId);
   const { prev, next } = getAdjacentSections(sectionId);
@@ -31,15 +27,12 @@ export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
     }
   }, [sectionId, gamification]);
 
+  const isCompleted = gamification?.state.user.sectionsCompleted.includes(makeSectionId(sectionId)) ?? false;
+
   if (!section || !part) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-dark-950">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
-          <Link to="/" className="text-primary-400 hover:text-primary-300">
-            Return to Home
-          </Link>
-        </div>
+      <div className="flex items-center justify-center min-h-[50vh]">
+        <p className="text-dark-400">Section not found</p>
       </div>
     );
   }
@@ -47,63 +40,94 @@ export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
   const progressPercent = ((sectionIndex + 1) / totalSections) * 100;
 
   return (
-    <div className="min-h-screen bg-dark-950">
-      <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} sidebarOpen={sidebarOpen} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+    <div className="min-h-screen relative">
+      {/* Subtle background decoration */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-500/[0.02] rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-cyan-500/[0.02] rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2" />
+      </div>
 
       {/* Progress bar */}
-      <div className="fixed top-16 left-0 right-0 z-30 h-1 bg-dark-800 lg:left-72">
-        <motion.div
-          className="h-full bg-gradient-to-r from-primary-500 to-primary-400"
-          initial={{ width: 0 }}
-          animate={{ width: `${progressPercent}%` }}
-          transition={{ duration: 0.5 }}
+      <div className="sticky top-16 z-30 h-1 bg-dark-900/80 backdrop-blur">
+        <div
+          className="h-full bg-gradient-to-r from-primary-600 via-primary-500 to-cyan-400 transition-all duration-500 ease-out"
+          style={{ width: `${progressPercent}%` }}
         />
       </div>
 
+      {/* Breadcrumb */}
+      <div className="relative py-4 px-6 border-b border-dark-800/50 bg-dark-950/50 backdrop-blur-sm">
+        <nav className="max-w-4xl mx-auto flex items-center gap-2 text-sm">
+          <Link to="/" className="text-dark-500 hover:text-dark-300 transition-colors flex items-center gap-1">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Home
+          </Link>
+          <svg className="w-4 h-4 text-dark-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+          <span className="text-dark-500">
+            Part {part.id}
+          </span>
+          <svg className="w-4 h-4 text-dark-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+          <span className="text-dark-300 font-medium">§{section.id}</span>
+        </nav>
+      </div>
+
       {/* Main content */}
-      <main className="pt-20 pb-24 px-4 lg:pl-80 lg:pr-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Breadcrumb */}
-          <nav className="mb-6 flex items-center gap-2 text-sm text-dark-400">
-            <Link to="/" className="hover:text-dark-200 transition-colors">
-              Home
-            </Link>
-            <span>/</span>
-            <span className="text-dark-500">{part.title}</span>
-            <span>/</span>
-            <span className="text-dark-200">{section.title}</span>
-          </nav>
+      <article className="relative max-w-4xl mx-auto px-6 py-12">
+        {/* Section header */}
+        <header className="mb-14">
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 text-sm font-semibold bg-gradient-to-r from-primary-500/20 to-primary-600/10 text-primary-400 rounded-full border border-primary-500/20">
+              <span className="w-2 h-2 rounded-full bg-primary-400" />
+              Section {section.id}
+            </span>
+            <span className="text-dark-500 text-sm">
+              Part {part.id}: {part.title}
+            </span>
+          </div>
 
-          {/* Section header */}
-          <header className="mb-8">
-            <div className="flex items-center gap-3 mb-2">
-              <span className="text-sm font-medium text-primary-400">
-                Section {sectionId}
-              </span>
-              <span className="text-dark-600">•</span>
-              <span className="text-sm text-dark-500">{part.title}</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <span className="text-gradient">{section.title}</span>
+          </h1>
+
+          <p className="text-xl text-dark-400 leading-relaxed max-w-3xl">
+            {section.description}
+          </p>
+
+          {/* Decorative line */}
+          <div className="mt-10 flex items-center gap-4">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-dark-700 to-transparent" />
+            <div className="flex gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-500/50" />
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-500/30" />
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-500/10" />
             </div>
-            <h1 className="text-3xl font-bold text-dark-100 mb-3">
-              {section.title}
-            </h1>
-            <p className="text-dark-400 text-lg">{section.description}</p>
-          </header>
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-dark-700 to-transparent" />
+          </div>
+        </header>
 
-          {/* Content */}
-          <article className="prose prose-invert prose-lg max-w-none">
-            {children}
-          </article>
+        {/* Lesson content */}
+        <div className="prose prose-invert prose-lg max-w-none space-y-6">
+          {children}
+        </div>
+      </article>
 
-          {/* Navigation */}
-          <nav className="mt-16 flex items-center justify-between gap-4 pt-8 border-t border-dark-800">
-            {prev ? (
-              <Link
-                to={`/section/${prev.id}`}
-                className="flex items-center gap-2 px-4 py-3 rounded-xl bg-dark-800/50 hover:bg-dark-800 transition-colors group"
-              >
+      {/* Navigation */}
+      <nav className="relative max-w-4xl mx-auto px-6 py-12 border-t border-dark-800/50">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {prev ? (
+            <Link
+              to={`/section/${prev.id}`}
+              className="group flex items-center gap-4 p-5 rounded-2xl bg-dark-900/40 backdrop-blur border border-dark-700/40 hover:bg-dark-800/50 hover:border-dark-600/50 transition-all duration-300"
+            >
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-dark-800/60 group-hover:bg-primary-500/20 transition-all duration-300">
                 <svg
-                  className="w-5 h-5 text-dark-400 group-hover:text-dark-200 transition-colors"
+                  className="w-5 h-5 text-dark-400 group-hover:text-primary-400 group-hover:-translate-x-0.5 transition-all duration-300"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -115,30 +139,26 @@ export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
                     d="M15 19l-7-7 7-7"
                   />
                 </svg>
-                <div className="text-left">
-                  <div className="text-xs text-dark-500">Previous</div>
-                  <div className="text-sm text-dark-200 group-hover:text-dark-100">
-                    {prev.title}
-                  </div>
-                </div>
-              </Link>
-            ) : (
-              <div />
-            )}
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold uppercase tracking-wider text-dark-500 mb-1">Previous</p>
+                <p className="text-dark-200 group-hover:text-primary-400 transition-colors font-medium truncate">
+                  {prev.title}
+                </p>
+              </div>
+            </Link>
+          ) : (
+            <div />
+          )}
 
-            {next ? (
-              <Link
-                to={`/section/${next.id}`}
-                className="flex items-center gap-2 px-4 py-3 rounded-xl bg-dark-800/50 hover:bg-dark-800 transition-colors group"
-              >
-                <div className="text-right">
-                  <div className="text-xs text-dark-500">Next</div>
-                  <div className="text-sm text-dark-200 group-hover:text-dark-100">
-                    {next.title}
-                  </div>
-                </div>
+          {next ? (
+            <Link
+              to={`/section/${next.id}`}
+              className="group flex items-center gap-4 p-5 rounded-2xl bg-dark-900/40 backdrop-blur border border-dark-700/40 hover:bg-dark-800/50 hover:border-dark-600/50 transition-all duration-300 md:flex-row-reverse md:text-right"
+            >
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-dark-800/60 group-hover:bg-primary-500/20 transition-all duration-300">
                 <svg
-                  className="w-5 h-5 text-dark-400 group-hover:text-dark-200 transition-colors"
+                  className="w-5 h-5 text-dark-400 group-hover:text-primary-400 group-hover:translate-x-0.5 transition-all duration-300"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -150,31 +170,42 @@ export function LessonLayout({ sectionId, children }: LessonLayoutProps) {
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </Link>
-            ) : (
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold uppercase tracking-wider text-dark-500 mb-1">Next</p>
+                <p className="text-dark-200 group-hover:text-primary-400 transition-colors font-medium truncate">
+                  {next.title}
+                </p>
+              </div>
+            </Link>
+          ) : (
+            <div className="flex flex-col gap-3">
+              {FEATURES.gamification && !isCompleted && (
+                <button
+                  onClick={() => gamification?.completeSection(sectionId)}
+                  className="group flex items-center justify-center gap-3 p-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-semibold shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:shadow-emerald-500/30 hover:scale-[1.02] transition-all duration-300"
+                >
+                  <span>Mark Complete</span>
+                  <span className="text-emerald-200 text-sm">+25 XP</span>
+                </button>
+              )}
               <Link
                 to="/"
-                className="flex items-center gap-2 px-4 py-3 rounded-xl bg-primary-500/10 hover:bg-primary-500/20 transition-colors text-primary-400"
+                className={`group flex items-center justify-center gap-3 p-5 rounded-2xl font-semibold transition-all duration-300 ${
+                  isCompleted
+                    ? 'bg-gradient-to-r from-primary-600 to-primary-500 text-white shadow-lg shadow-primary-500/20 hover:shadow-xl hover:shadow-primary-500/30 hover:scale-[1.02]'
+                    : 'bg-dark-800/60 text-dark-300 hover:bg-dark-700/60'
+                }`}
               >
-                <span>Complete Course</span>
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
+                <span>{isCompleted ? 'Course Complete!' : 'Return Home'}</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isCompleted ? "M5 13l4 4L19 7" : "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"} />
                 </svg>
               </Link>
-            )}
-          </nav>
+            </div>
+          )}
         </div>
-      </main>
+      </nav>
     </div>
   );
 }
