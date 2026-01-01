@@ -6,8 +6,8 @@ import path from 'path'
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
 const COURSE_ID = 'calc_easy'  // Short ID: 'ba', 'aa', 'crypto', etc.
-// Use root path for standalone Vercel deployment
-const BASE_PATH = '/'
+// Use subdirectory path for hub deployment
+const BASE_PATH = '/calceasy-deploy/'
 // =============================================================================
 
 export default defineConfig({

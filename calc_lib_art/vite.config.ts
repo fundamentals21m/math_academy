@@ -2,10 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-// Use '/' for standalone Vercel deployment, '/calc_lib_art/' for hub
+// Use '/' for standalone Vercel deployment, '/calc-lib-art-deploy/' for hub
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/calc-lib-art-deploy/',
   resolve: {
     alias: {
         '@': path.resolve(__dirname, './src'),

@@ -48,6 +48,8 @@ function isValidGamificationState(data: unknown): data is GamificationState {
   const user = obj.user as Record<string, unknown>;
   if (typeof user.totalXP !== 'number') return false;
   if (typeof user.level !== 'number') return false;
+  if (!Array.isArray(user.sectionsCompleted)) return false;
+  if (!Array.isArray(user.chaptersCompleted)) return false;
 
   // Validate streak object has required fields
   const streak = obj.streak as Record<string, unknown>;
@@ -130,4 +132,151 @@ export function clearState(): void {
   } catch (error) {
     logger.error('Failed to clear gamification state:', error);
   }
+}
+
+// =============================================================================
+// PROGRESS BACKUP/RESTORE
+// =============================================================================
+
+/**
+ * Backup file metadata
+ */
+export interface ProgressBackup {
+  version: number;
+  exportedAt: string;
+  source: string;
+  state: GamificationState;
+}
+
+const BACKUP_VERSION = 1;
+
+/**
+ * Export progress data as a downloadable JSON file
+ */
+export function exportProgress(): void {
+  const state = loadState();
+  if (!state) {
+    logger.warn('No progress data to export');
+    return;
+  }
+
+  const backup: ProgressBackup = {
+    version: BACKUP_VERSION,
+    exportedAt: new Date().toISOString(),
+    source: window.location.hostname,
+    state,
+  };
+
+  const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `math-progress-backup-${new Date().toISOString().split('T')[0]}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  logger.info('Progress exported successfully');
+}
+
+/**
+ * Validates that an object is a valid ProgressBackup
+ */
+function isValidProgressBackup(data: unknown): data is ProgressBackup {
+  if (data === null || typeof data !== 'object') {
+    return false;
+  }
+
+  const obj = data as Record<string, unknown>;
+
+  if (typeof obj.version !== 'number') return false;
+  if (typeof obj.exportedAt !== 'string') return false;
+  if (typeof obj.source !== 'string') return false;
+  if (!isValidGamificationState(obj.state)) return false;
+
+  return true;
+}
+
+/**
+ * Import result with status and message
+ */
+export interface ImportResult {
+  success: boolean;
+  message: string;
+  xpImported?: number;
+}
+
+/**
+ * Import progress from a JSON file
+ * @param file - The File object from file input
+ * @returns Promise with import result
+ */
+export async function importProgress(file: File): Promise<ImportResult> {
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+
+    reader.onload = (event) => {
+      try {
+        const text = event.target?.result;
+        if (typeof text !== 'string') {
+          resolve({ success: false, message: 'Failed to read file' });
+          return;
+        }
+
+        const data: unknown = JSON.parse(text);
+
+        if (!isValidProgressBackup(data)) {
+          resolve({ success: false, message: 'Invalid backup file format' });
+          return;
+        }
+
+        // Check for existing progress
+        const existingState = loadState();
+        const existingXP = existingState?.user.totalXP ?? 0;
+        const importXP = data.state.user.totalXP;
+
+        if (existingXP > importXP) {
+          resolve({
+            success: false,
+            message: `Current progress (${existingXP} XP) is higher than backup (${importXP} XP). Import cancelled.`
+          });
+          return;
+        }
+
+        // Save the imported state
+        saveState(data.state);
+
+        logger.info(`Progress imported: ${importXP} XP from backup dated ${data.exportedAt}`);
+        resolve({
+          success: true,
+          message: `Successfully restored ${importXP} XP!`,
+          xpImported: importXP
+        });
+      } catch (error) {
+        logger.error('Failed to parse backup file:', error);
+        resolve({ success: false, message: 'Failed to parse backup file. Please check the file format.' });
+      }
+    };
+
+    reader.onerror = () => {
+      resolve({ success: false, message: 'Failed to read file' });
+    };
+
+    reader.readAsText(file);
+  });
+}
+
+/**
+ * Get progress summary for display
+ */
+export function getProgressSummary(): { totalXP: number; level: number; sectionsCompleted: number } | null {
+  const state = loadState();
+  if (!state) return null;
+
+  return {
+    totalXP: state.user.totalXP,
+    level: state.user.level,
+    sectionsCompleted: state.user.sectionsCompleted.length
+  };
 }

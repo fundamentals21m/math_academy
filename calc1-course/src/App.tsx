@@ -12,6 +12,7 @@ import Home from '@/pages/Home';
 import Leaderboard from '@/pages/Leaderboard';
 import Theorems from '@/pages/Theorems';
 import InteractiveModules from '@/pages/InteractiveModules';
+import SectionQuizPage from '@/pages/SectionQuizPage';
 
 // Section pages - import all sections here
 import Section00 from '@/pages/sections/Section00';
@@ -285,6 +286,9 @@ function AppContent() {
 
           {/* Dynamic section routes */}
           <Route path="/section/:id" element={<SectionRouter />} />
+
+          {/* Quiz routes */}
+          <Route path="/quiz/section/:id" element={<SectionQuizPage />} />
 
           {/* Fallback */}
           <Route path="*" element={<Home />} />

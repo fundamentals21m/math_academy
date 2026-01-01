@@ -15,6 +15,14 @@ import {
 // Re-export the hook directly
 export { useGamification };
 
+// Course prefix for section IDs
+const COURSE_PREFIX = COURSE_ID;
+
+// Helper to create a full section ID from a numeric ID
+export function makeSectionId(numericId: number): string {
+  return `${COURSE_PREFIX}:${numericId}`;
+}
+
 // Wrapper component that injects the course ID
 export function GamificationProvider({ children }: { children: ReactNode }) {
   return (
