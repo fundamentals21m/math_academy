@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { LimitVisualizer } from '@/components/common/LimitVisualizer';
 import { section01Quiz } from '@/data/quizzes';
@@ -66,10 +66,10 @@ export default function Section01() {
         title="Uniqueness of Identities and Inverses"
         proof={
           <>
-            <p className="mb-3"><strong>Uniqueness of additive identity:</strong> Suppose <Math>{`0`}</Math> and <Math>{`0'`}</Math> are both additive identities. Then:</p>
+            <p className="mb-3"><strong>Uniqueness of additive identity:</strong> Suppose <InlineMath>{`0`}</InlineMath> and <InlineMath>{`0'`}</InlineMath> are both additive identities. Then:</p>
             <MathBlock>{`0' = 0' + 0 = 0 + 0' = 0`}</MathBlock>
-            <p className="mb-3">The first equality uses that <Math>{`0`}</Math> is an identity; the second uses commutativity; the third uses that <Math>{`0'`}</Math> is an identity.</p>
-            <p className="mb-3"><strong>Uniqueness of additive inverse:</strong> Suppose <Math>{`a + b = 0`}</Math> and <Math>{`a + c = 0`}</Math>. Then:</p>
+            <p className="mb-3">The first equality uses that <InlineMath>{`0`}</InlineMath> is an identity; the second uses commutativity; the third uses that <InlineMath>{`0'`}</InlineMath> is an identity.</p>
+            <p className="mb-3"><strong>Uniqueness of additive inverse:</strong> Suppose <InlineMath>{`a + b = 0`}</InlineMath> and <InlineMath>{`a + c = 0`}</InlineMath>. Then:</p>
             <MathBlock>{`b = b + 0 = b + (a + c) = (b + a) + c = (a + b) + c = 0 + c = c`}</MathBlock>
             <p className="mb-3"><strong>Uniqueness of multiplicative identity and inverse:</strong> Similar arguments apply using multiplication.</p>
           </>

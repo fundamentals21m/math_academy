@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { VectorAdditionVisualizer } from '@/components/visualizations';
 
 export default function Section08() {
@@ -26,14 +26,14 @@ export default function Section08() {
       <p>
         If a passenger on a train walks 10 feet forward while the train travels
         500 feet forward, then from the point of view of an observer on the ground,
-        the passenger has moved <Math>{`500 + 10 = 510`}</Math> feet forward.
+        the passenger has moved <InlineMath>{`500 + 10 = 510`}</InlineMath> feet forward.
       </p>
 
       <p>
-        Similarly, if a plane flies with air speed <Math>v</Math> in air moving in the
-        same direction with speed <Math>w</Math>, the plane has speed <Math>{`v + w`}</Math> relative
+        Similarly, if a plane flies with air speed <InlineMath>v</InlineMath> in air moving in the
+        same direction with speed <InlineMath>w</InlineMath>, the plane has speed <InlineMath>{`v + w`}</InlineMath> relative
         to the ground. If the plane turns around and flies against the wind, it has
-        speed <Math>{`v - w`}</Math> relative to the ground.
+        speed <InlineMath>{`v - w`}</InlineMath> relative to the ground.
       </p>
 
       <Callout type="info">
@@ -57,7 +57,7 @@ export default function Section08() {
         </p>
         <MathBlock>{`d^2 = 40^2 + 30^2 = 1600 + 900 = 2500`}</MathBlock>
         <p className="mt-2 text-emerald-400">
-          Thus <Math>{`d = 50`}</Math> feet.
+          Thus <InlineMath>{`d = 50`}</InlineMath> feet.
         </p>
       </div>
 
@@ -86,7 +86,7 @@ export default function Section08() {
         </p>
         <MathBlock>{`d^2 = 3^2 + 4^2 = 9 + 16 = 25`}</MathBlock>
         <p className="mt-2 text-emerald-400">
-          So <Math>{`d = 5`}</Math> ft/sec relative to the bank.
+          So <InlineMath>{`d = 5`}</InlineMath> ft/sec relative to the bank.
         </p>
       </div>
 
@@ -106,7 +106,7 @@ export default function Section08() {
         </p>
         <MathBlock>{`3^2 + s^2 = 4^2 \\quad \\Rightarrow \\quad s^2 = 16 - 9 = 7`}</MathBlock>
         <p className="mt-2 text-emerald-400">
-          So <Math>{`s = \\sqrt{7} \\approx 2.65`}</Math> ft/sec.
+          So <InlineMath>{`s = \\sqrt{7} \\approx 2.65`}</InlineMath> ft/sec.
         </p>
       </div>
 
@@ -127,8 +127,8 @@ export default function Section08() {
       <MathBlock>{`c \\approx 1100 \\text{ feet/second (750 mph)}`}</MathBlock>
 
       <Callout type="info">
-        <strong>Wavelength and Frequency:</strong> The frequency <Math>f</Math> is the
-        number of complete cycles per second. The wavelength <Math>l</Math> is the
+        <strong>Wavelength and Frequency:</strong> The frequency <InlineMath>f</InlineMath> is the
+        number of complete cycles per second. The wavelength <InlineMath>l</InlineMath> is the
         distance between consecutive high-pressure zones:
         <MathBlock>{`l = \\frac{c}{f} \\quad \\text{or} \\quad f = \\frac{c}{l}`}</MathBlock>
         High frequencies correspond to short wavelengths; low frequencies to long wavelengths.
@@ -137,7 +137,7 @@ export default function Section08() {
       <h3>Moving Observer</h3>
 
       <p>
-        If an observer moves <em>toward</em> a stationary source at speed <Math>v</Math>,
+        If an observer moves <em>toward</em> a stationary source at speed <InlineMath>v</InlineMath>,
         they encounter the pressure waves more frequently:
       </p>
 
@@ -167,7 +167,7 @@ export default function Section08() {
       <p>
         When the <em>source</em> moves, it actually produces a shorter wavelength
         ahead of its position and a longer wavelength behind. For a source moving
-        at speed <Math>v</Math>:
+        at speed <InlineMath>v</InlineMath>:
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -190,13 +190,13 @@ export default function Section08() {
         <p className="mt-2">Using the formulas:</p>
         <MathBlock>{`\\left(1 + \\frac{v}{c}\\right)f \\approx 329.6 \\quad \\text{and} \\quad \\left(1 - \\frac{v}{c}\\right)f \\approx 261.6`}</MathBlock>
         <p className="mt-2">
-          Adding: <Math>{`2f \\approx 591.2`}</Math>, so <Math>{`f \\approx 295.6`}</Math> Hz.
+          Adding: <InlineMath>{`2f \\approx 591.2`}</InlineMath>, so <InlineMath>{`f \\approx 295.6`}</InlineMath> Hz.
         </p>
         <p className="mt-2">
-          Subtracting: <Math>{`2(v/c)f \\approx 68`}</Math>, so <Math>{`v \\approx 126.5`}</Math> ft/sec.
+          Subtracting: <InlineMath>{`2(v/c)f \\approx 68`}</InlineMath>, so <InlineMath>{`v \\approx 126.5`}</InlineMath> ft/sec.
         </p>
         <p className="mt-2 text-emerald-400">
-          Converting: <Math>{`v \\approx 126.5 \\times \\frac{3600}{5280} \\approx 86`}</Math> mph.
+          Converting: <InlineMath>{`v \\approx 126.5 \\times \\frac{3600}{5280} \\approx 86`}</InlineMath> mph.
         </p>
       </div>
 
@@ -210,14 +210,14 @@ export default function Section08() {
       </p>
 
       <p>
-        Light waves propagate at <Math>{`c = 186,000`}</Math> miles/second. The same
+        Light waves propagate at <InlineMath>{`c = 186,000`}</InlineMath> miles/second. The same
         formulas apply, giving the famous <em>red shift</em> observed in light from
         receding galaxies.
       </p>
 
       <Callout type="warning">
         <strong>Radar Speed Detectors:</strong> Police radar sends out a radio wave
-        at frequency <Math>f</Math>. The reflected wave from an approaching vehicle
+        at frequency <InlineMath>f</InlineMath>. The reflected wave from an approaching vehicle
         returns at frequency:
         <MathBlock>{`f' = \\left(1 + 2\\frac{v}{c}\\right)f`}</MathBlock>
         The factor of 2 occurs because the target acts as both a moving receiver
@@ -244,11 +244,11 @@ export default function Section08() {
         </p>
         <MathBlock>{`a^2 + a^2 = 30^2 \\quad \\Rightarrow \\quad a = \\frac{30}{\\sqrt{2}} = 15\\sqrt{2}`}</MathBlock>
         <p className="mt-2">
-          Total displacement has legs <Math>{`40 + 15\\sqrt{2}`}</Math> east and <Math>{`15\\sqrt{2}`}</Math> north:
+          Total displacement has legs <InlineMath>{`40 + 15\\sqrt{2}`}</InlineMath> east and <InlineMath>{`15\\sqrt{2}`}</InlineMath> north:
         </p>
         <MathBlock>{`d^2 = (40 + 15\\sqrt{2})^2 + (15\\sqrt{2})^2 \\approx 4197`}</MathBlock>
         <p className="mt-2 text-emerald-400">
-          Thus <Math>{`d \\approx 64.8`}</Math> feet.
+          Thus <InlineMath>{`d \\approx 64.8`}</InlineMath> feet.
         </p>
       </div>
 
@@ -259,15 +259,15 @@ export default function Section08() {
           your starting point?
         </p>
         <p className="mt-2">
-          The 2-mile northwest vector decomposes into <Math>{`a = \\sqrt{2}`}</Math> miles
-          west and <Math>{`\\sqrt{2}`}</Math> miles north.
+          The 2-mile northwest vector decomposes into <InlineMath>{`a = \\sqrt{2}`}</InlineMath> miles
+          west and <InlineMath>{`\\sqrt{2}`}</InlineMath> miles north.
         </p>
         <p className="mt-2">
-          Net effect: <Math>{`\\sqrt{2} - 1`}</Math> miles west and <Math>{`\\sqrt{2}`}</Math> miles north:
+          Net effect: <InlineMath>{`\\sqrt{2} - 1`}</InlineMath> miles west and <InlineMath>{`\\sqrt{2}`}</InlineMath> miles north:
         </p>
         <MathBlock>{`d^2 = (\\sqrt{2} - 1)^2 + (\\sqrt{2})^2 = 5 - 2\\sqrt{2} \\approx 2.17`}</MathBlock>
         <p className="mt-2 text-emerald-400">
-          Thus <Math>{`d \\approx 1.47`}</Math> miles.
+          Thus <InlineMath>{`d \\approx 1.47`}</InlineMath> miles.
         </p>
       </div>
 
@@ -286,10 +286,10 @@ export default function Section08() {
       </p>
 
       <p>
-        When approaching from a distance, the observer hears <Math>{`f' \\approx (1 + v/c)f`}</Math>.
+        When approaching from a distance, the observer hears <InlineMath>{`f' \\approx (1 + v/c)f`}</InlineMath>.
         As the train gets closer, the component toward the observer decreases,
         causing the frequency to drop smoothly until eventually the observer hears
-        <Math>{`f'' \\approx (1 - v/c)f`}</Math> as it departs.
+        <InlineMath>{`f'' \\approx (1 - v/c)f`}</InlineMath> as it departs.
       </p>
 
       <h3>Force Vectors and Sailing</h3>
@@ -317,7 +317,7 @@ export default function Section08() {
         They can be added geometrically by placing them tip-to-tail, forming a
         parallelogram. The Doppler effect explains why moving sources produce
         higher frequencies ahead and lower frequencies behind—the key formulas
-        involve the ratio <Math>{`v/c`}</Math>. Decomposing vectors into components
+        involve the ratio <InlineMath>{`v/c`}</InlineMath>. Decomposing vectors into components
         helps solve complex problems and explains phenomena from river crossings
         to sailing into the wind.
       </Callout>

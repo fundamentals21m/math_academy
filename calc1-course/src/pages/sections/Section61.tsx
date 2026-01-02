@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section61() {
@@ -16,7 +16,7 @@ export default function Section61() {
       <Callout type="definition" title="Complex Plane">
         <p>
           The <strong>complex plane</strong> (or <strong>Argand plane</strong>) represents
-          each complex number <MathInline>{`z = a + bi`}</MathInline> as the point <MathInline>{`(a, b)`}</MathInline>.
+          each complex number <InlineMath>{`z = a + bi`}</InlineMath> as the point <InlineMath>{`(a, b)`}</InlineMath>.
         </p>
         <ul className="list-disc pl-6 space-y-1 mt-2">
           <li>The horizontal axis is the <strong>real axis</strong></li>
@@ -29,11 +29,11 @@ export default function Section61() {
       <Callout type="example" title="Example 1: Plotting Complex Numbers">
         <p>Plot the following in the complex plane:</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`z_1 = 3 + 2i`}</MathInline> → point <MathInline>{`(3, 2)`}</MathInline></li>
-          <li><MathInline>{`z_2 = -1 + 4i`}</MathInline> → point <MathInline>{`(-1, 4)`}</MathInline></li>
-          <li><MathInline>{`z_3 = 2 - 3i`}</MathInline> → point <MathInline>{`(2, -3)`}</MathInline></li>
-          <li><MathInline>{`z_4 = -2i`}</MathInline> → point <MathInline>{`(0, -2)`}</MathInline> (on imaginary axis)</li>
-          <li><MathInline>{`z_5 = 4`}</MathInline> → point <MathInline>{`(4, 0)`}</MathInline> (on real axis)</li>
+          <li><InlineMath>{`z_1 = 3 + 2i`}</InlineMath> → point <InlineMath>{`(3, 2)`}</InlineMath></li>
+          <li><InlineMath>{`z_2 = -1 + 4i`}</InlineMath> → point <InlineMath>{`(-1, 4)`}</InlineMath></li>
+          <li><InlineMath>{`z_3 = 2 - 3i`}</InlineMath> → point <InlineMath>{`(2, -3)`}</InlineMath></li>
+          <li><InlineMath>{`z_4 = -2i`}</InlineMath> → point <InlineMath>{`(0, -2)`}</InlineMath> (on imaginary axis)</li>
+          <li><InlineMath>{`z_5 = 4`}</InlineMath> → point <InlineMath>{`(4, 0)`}</InlineMath> (on real axis)</li>
         </ul>
       </Callout>
 
@@ -42,37 +42,37 @@ export default function Section61() {
       <Callout type="definition" title="Modulus (Absolute Value)">
         <p>
           The <strong>modulus</strong> (or <strong>absolute value</strong>) of
-          <MathInline>{`z = a + bi`}</MathInline> is its distance from the origin:
+          <InlineMath>{`z = a + bi`}</InlineMath> is its distance from the origin:
         </p>
         <MathBlock>{`|z| = \\sqrt{a^2 + b^2}`}</MathBlock>
         <p>
-          Equivalently, <MathInline>{`|z| = \\sqrt{z \\cdot \\bar{z}}`}</MathInline>.
+          Equivalently, <InlineMath>{`|z| = \\sqrt{z \\cdot \\bar{z}}`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 2: Computing Modulus">
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`|3 + 4i| = \\sqrt{9 + 16} = \\sqrt{25} = 5`}</MathInline></li>
-          <li><MathInline>{`|1 - i| = \\sqrt{1 + 1} = \\sqrt{2}`}</MathInline></li>
-          <li><MathInline>{`|-5| = 5`}</MathInline> (for real numbers, agrees with usual absolute value)</li>
-          <li><MathInline>{`|3i| = 3`}</MathInline></li>
+          <li><InlineMath>{`|3 + 4i| = \\sqrt{9 + 16} = \\sqrt{25} = 5`}</InlineMath></li>
+          <li><InlineMath>{`|1 - i| = \\sqrt{1 + 1} = \\sqrt{2}`}</InlineMath></li>
+          <li><InlineMath>{`|-5| = 5`}</InlineMath> (for real numbers, agrees with usual absolute value)</li>
+          <li><InlineMath>{`|3i| = 3`}</InlineMath></li>
         </ul>
       </Callout>
 
       <Callout type="theorem" title="Properties of Modulus">
-        <p>For any complex numbers <MathInline>{`z, w`}</MathInline>:</p>
+        <p>For any complex numbers <InlineMath>{`z, w`}</InlineMath>:</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`|z| \\geq 0`}</MathInline>, with equality iff <MathInline>{`z = 0`}</MathInline></li>
-          <li><MathInline>{`|\\bar{z}| = |z|`}</MathInline></li>
-          <li><MathInline>{`|zw| = |z| \\cdot |w|`}</MathInline> (multiplicative)</li>
-          <li><MathInline>{`\\left|\\frac{z}{w}\\right| = \\frac{|z|}{|w|}`}</MathInline> for <MathInline>{`w \\neq 0`}</MathInline></li>
-          <li><MathInline>{`|z + w| \\leq |z| + |w|`}</MathInline> (triangle inequality)</li>
-          <li><MathInline>{`||z| - |w|| \\leq |z - w|`}</MathInline> (reverse triangle inequality)</li>
+          <li><InlineMath>{`|z| \\geq 0`}</InlineMath>, with equality iff <InlineMath>{`z = 0`}</InlineMath></li>
+          <li><InlineMath>{`|\\bar{z}| = |z|`}</InlineMath></li>
+          <li><InlineMath>{`|zw| = |z| \\cdot |w|`}</InlineMath> (multiplicative)</li>
+          <li><InlineMath>{`\\left|\\frac{z}{w}\\right| = \\frac{|z|}{|w|}`}</InlineMath> for <InlineMath>{`w \\neq 0`}</InlineMath></li>
+          <li><InlineMath>{`|z + w| \\leq |z| + |w|`}</InlineMath> (triangle inequality)</li>
+          <li><InlineMath>{`||z| - |w|| \\leq |z - w|`}</InlineMath> (reverse triangle inequality)</li>
         </ul>
       </Callout>
 
       <Callout type="example" title="Example 3: Multiplicative Property">
-        <p>Verify <MathInline>{`|zw| = |z||w|`}</MathInline> for <MathInline>{`z = 1 + 2i`}</MathInline> and <MathInline>{`w = 3 - i`}</MathInline>.</p>
+        <p>Verify <InlineMath>{`|zw| = |z||w|`}</InlineMath> for <InlineMath>{`z = 1 + 2i`}</InlineMath> and <InlineMath>{`w = 3 - i`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`zw = (1 + 2i)(3 - i) = 3 - i + 6i - 2i^2 = 3 + 5i + 2 = 5 + 5i`}</MathBlock>
         <MathBlock>{`|zw| = |5 + 5i| = \\sqrt{25 + 25} = \\sqrt{50} = 5\\sqrt{2}`}</MathBlock>
@@ -85,47 +85,47 @@ export default function Section61() {
 
       <Callout type="definition" title="Argument">
         <p>
-          The <strong>argument</strong> of a nonzero complex number <MathInline>{`z`}</MathInline>,
-          denoted <MathInline>{`\\arg(z)`}</MathInline>, is the angle <MathInline>{`\\theta`}</MathInline> that
-          the line from the origin to <MathInline>{`z`}</MathInline> makes with the positive real axis.
+          The <strong>argument</strong> of a nonzero complex number <InlineMath>{`z`}</InlineMath>,
+          denoted <InlineMath>{`\\arg(z)`}</InlineMath>, is the angle <InlineMath>{`\\theta`}</InlineMath> that
+          the line from the origin to <InlineMath>{`z`}</InlineMath> makes with the positive real axis.
         </p>
         <MathBlock>{`\\theta = \\arg(z) \\quad \\text{where} \\quad \\tan\\theta = \\frac{b}{a}`}</MathBlock>
         <p>
-          The argument is determined up to multiples of <MathInline>{`2\\pi`}</MathInline>.
+          The argument is determined up to multiples of <InlineMath>{`2\\pi`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="definition" title="Principal Argument">
         <p>
-          The <strong>principal argument</strong> <MathInline>{`\\text{Arg}(z)`}</MathInline> is
-          the unique value of <MathInline>{`\\arg(z)`}</MathInline> in the interval <MathInline>{`(-\\pi, \\pi]`}</MathInline>.
+          The <strong>principal argument</strong> <InlineMath>{`\\text{Arg}(z)`}</InlineMath> is
+          the unique value of <InlineMath>{`\\arg(z)`}</InlineMath> in the interval <InlineMath>{`(-\\pi, \\pi]`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="Finding the Argument">
-        <p>For <MathInline>{`z = a + bi`}</MathInline>:</p>
+        <p>For <InlineMath>{`z = a + bi`}</InlineMath>:</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li>If <MathInline>{`a > 0`}</MathInline>: <MathInline>{`\\theta = \\arctan(b/a)`}</MathInline></li>
-          <li>If <MathInline>{`a < 0, b \\geq 0`}</MathInline>: <MathInline>{`\\theta = \\arctan(b/a) + \\pi`}</MathInline></li>
-          <li>If <MathInline>{`a < 0, b < 0`}</MathInline>: <MathInline>{`\\theta = \\arctan(b/a) - \\pi`}</MathInline></li>
-          <li>If <MathInline>{`a = 0, b > 0`}</MathInline>: <MathInline>{`\\theta = \\pi/2`}</MathInline></li>
-          <li>If <MathInline>{`a = 0, b < 0`}</MathInline>: <MathInline>{`\\theta = -\\pi/2`}</MathInline></li>
+          <li>If <InlineMath>{`a > 0`}</InlineMath>: <InlineMath>{`\\theta = \\arctan(b/a)`}</InlineMath></li>
+          <li>If <InlineMath>{`a < 0, b \\geq 0`}</InlineMath>: <InlineMath>{`\\theta = \\arctan(b/a) + \\pi`}</InlineMath></li>
+          <li>If <InlineMath>{`a < 0, b < 0`}</InlineMath>: <InlineMath>{`\\theta = \\arctan(b/a) - \\pi`}</InlineMath></li>
+          <li>If <InlineMath>{`a = 0, b > 0`}</InlineMath>: <InlineMath>{`\\theta = \\pi/2`}</InlineMath></li>
+          <li>If <InlineMath>{`a = 0, b < 0`}</InlineMath>: <InlineMath>{`\\theta = -\\pi/2`}</InlineMath></li>
         </ul>
       </Callout>
 
       <Callout type="example" title="Example 4: Finding Arguments">
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <MathInline>{`z = 1 + i`}</MathInline>: <MathInline>{`\\theta = \\arctan(1/1) = \\pi/4`}</MathInline>
+            <InlineMath>{`z = 1 + i`}</InlineMath>: <InlineMath>{`\\theta = \\arctan(1/1) = \\pi/4`}</InlineMath>
           </li>
           <li>
-            <MathInline>{`z = -1 + i`}</MathInline>: In second quadrant, <MathInline>{`\\theta = \\pi - \\pi/4 = 3\\pi/4`}</MathInline>
+            <InlineMath>{`z = -1 + i`}</InlineMath>: In second quadrant, <InlineMath>{`\\theta = \\pi - \\pi/4 = 3\\pi/4`}</InlineMath>
           </li>
           <li>
-            <MathInline>{`z = -1 - i`}</MathInline>: In third quadrant, <MathInline>{`\\theta = -3\\pi/4`}</MathInline> (principal value)
+            <InlineMath>{`z = -1 - i`}</InlineMath>: In third quadrant, <InlineMath>{`\\theta = -3\\pi/4`}</InlineMath> (principal value)
           </li>
           <li>
-            <MathInline>{`z = \\sqrt{3} + i`}</MathInline>: <MathInline>{`\\theta = \\arctan(1/\\sqrt{3}) = \\pi/6`}</MathInline>
+            <InlineMath>{`z = \\sqrt{3} + i`}</InlineMath>: <InlineMath>{`\\theta = \\arctan(1/\\sqrt{3}) = \\pi/6`}</InlineMath>
           </li>
         </ul>
       </Callout>
@@ -138,7 +138,7 @@ export default function Section61() {
         </p>
         <MathBlock>{`z = r(\\cos\\theta + i\\sin\\theta)`}</MathBlock>
         <p>
-          where <MathInline>{`r = |z|`}</MathInline> is the modulus and <MathInline>{`\\theta = \\arg(z)`}</MathInline>
+          where <InlineMath>{`r = |z|`}</InlineMath> is the modulus and <InlineMath>{`\\theta = \\arg(z)`}</InlineMath>
           is the argument.
         </p>
       </Callout>
@@ -151,7 +151,7 @@ export default function Section61() {
       </Callout>
 
       <Callout type="example" title="Example 5: Converting to Polar Form">
-        <p>Write <MathInline>{`z = 1 + \\sqrt{3}i`}</MathInline> in polar form.</p>
+        <p>Write <InlineMath>{`z = 1 + \\sqrt{3}i`}</InlineMath> in polar form.</p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`r = |z| = \\sqrt{1 + 3} = 2`}</MathBlock>
         <MathBlock>{`\\theta = \\arctan\\left(\\frac{\\sqrt{3}}{1}\\right) = \\frac{\\pi}{3}`}</MathBlock>
@@ -161,7 +161,7 @@ export default function Section61() {
 
       <Callout type="example" title="Example 6: Converting to Rectangular Form">
         <p>
-          Write <MathInline>{`z = 4(\\cos\\frac{5\\pi}{6} + i\\sin\\frac{5\\pi}{6})`}</MathInline> in
+          Write <InlineMath>{`z = 4(\\cos\\frac{5\\pi}{6} + i\\sin\\frac{5\\pi}{6})`}</InlineMath> in
           rectangular form.
         </p>
         <p><strong>Solution:</strong></p>
@@ -173,8 +173,8 @@ export default function Section61() {
 
       <Callout type="theorem" title="Multiplication in Polar Form">
         <p>
-          If <MathInline>{`z_1 = r_1(\\cos\\theta_1 + i\\sin\\theta_1)`}</MathInline> and
-          <MathInline>{`z_2 = r_2(\\cos\\theta_2 + i\\sin\\theta_2)`}</MathInline>, then:
+          If <InlineMath>{`z_1 = r_1(\\cos\\theta_1 + i\\sin\\theta_1)`}</InlineMath> and
+          <InlineMath>{`z_2 = r_2(\\cos\\theta_2 + i\\sin\\theta_2)`}</InlineMath>, then:
         </p>
         <MathBlock>{`z_1 z_2 = r_1 r_2 [\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)]`}</MathBlock>
         <p>
@@ -191,8 +191,8 @@ export default function Section61() {
 
       <Callout type="example" title="Example 7: Multiplication">
         <p>
-          Compute <MathInline>{`z_1 z_2`}</MathInline> where <MathInline>{`z_1 = 2(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4})`}</MathInline>
-          and <MathInline>{`z_2 = 3(\\cos\\frac{\\pi}{6} + i\\sin\\frac{\\pi}{6})`}</MathInline>.
+          Compute <InlineMath>{`z_1 z_2`}</InlineMath> where <InlineMath>{`z_1 = 2(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4})`}</InlineMath>
+          and <InlineMath>{`z_2 = 3(\\cos\\frac{\\pi}{6} + i\\sin\\frac{\\pi}{6})`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`z_1 z_2 = (2)(3)\\left[\\cos\\left(\\frac{\\pi}{4} + \\frac{\\pi}{6}\\right) + i\\sin\\left(\\frac{\\pi}{4} + \\frac{\\pi}{6}\\right)\\right]`}</MathBlock>
@@ -203,43 +203,43 @@ export default function Section61() {
 
       <Callout type="info" title="Addition">
         <p>
-          Adding <MathInline>{`z_1 + z_2`}</MathInline> corresponds to vector addition:
+          Adding <InlineMath>{`z_1 + z_2`}</InlineMath> corresponds to vector addition:
           place the vectors head-to-tail, forming a parallelogram.
         </p>
       </Callout>
 
       <Callout type="info" title="Multiplication by a Real Number">
         <p>
-          Multiplying <MathInline>{`z`}</MathInline> by a positive real <MathInline>{`r`}</MathInline>
-          scales the distance from the origin by factor <MathInline>{`r`}</MathInline>.
-          Multiplying by <MathInline>{`-1`}</MathInline> reflects through the origin.
+          Multiplying <InlineMath>{`z`}</InlineMath> by a positive real <InlineMath>{`r`}</InlineMath>
+          scales the distance from the origin by factor <InlineMath>{`r`}</InlineMath>.
+          Multiplying by <InlineMath>{`-1`}</InlineMath> reflects through the origin.
         </p>
       </Callout>
 
       <Callout type="info" title="Multiplication by i">
         <p>
-          Multiplying by <MathInline>{`i`}</MathInline> rotates by <MathInline>{`90°`}</MathInline>
+          Multiplying by <InlineMath>{`i`}</InlineMath> rotates by <InlineMath>{`90°`}</InlineMath>
           counterclockwise:
         </p>
         <MathBlock>{`i \\cdot (a + bi) = -b + ai`}</MathBlock>
         <p>
-          The point <MathInline>{`(a, b)`}</MathInline> becomes <MathInline>{`(-b, a)`}</MathInline>.
+          The point <InlineMath>{`(a, b)`}</InlineMath> becomes <InlineMath>{`(-b, a)`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="General Multiplication">
         <p>
-          Multiplying <MathInline>{`z`}</MathInline> by <MathInline>{`w = r(\\cos\\theta + i\\sin\\theta)`}</MathInline>:
+          Multiplying <InlineMath>{`z`}</InlineMath> by <InlineMath>{`w = r(\\cos\\theta + i\\sin\\theta)`}</InlineMath>:
         </p>
         <ul className="list-disc pl-6 space-y-1">
-          <li>Scales the distance from origin by <MathInline>{`r`}</MathInline></li>
-          <li>Rotates counterclockwise by angle <MathInline>{`\\theta`}</MathInline></li>
+          <li>Scales the distance from origin by <InlineMath>{`r`}</InlineMath></li>
+          <li>Rotates counterclockwise by angle <InlineMath>{`\\theta`}</InlineMath></li>
         </ul>
       </Callout>
 
       <Callout type="info" title="Conjugation">
         <p>
-          Taking the conjugate <MathInline>{`\\bar{z}`}</MathInline> reflects <MathInline>{`z`}</MathInline>
+          Taking the conjugate <InlineMath>{`\\bar{z}`}</InlineMath> reflects <InlineMath>{`z`}</InlineMath>
           across the real axis.
         </p>
       </Callout>
@@ -248,31 +248,31 @@ export default function Section61() {
 
       <Callout type="example" title="Example 8: Circle Centered at Origin">
         <p>
-          The set <MathInline>{`|z| = 2`}</MathInline> is the circle of radius 2 centered at
+          The set <InlineMath>{`|z| = 2`}</InlineMath> is the circle of radius 2 centered at
           the origin.
         </p>
         <p>
-          More generally, <MathInline>{`|z| = r`}</MathInline> is the circle of radius <MathInline>{`r`}</MathInline>
+          More generally, <InlineMath>{`|z| = r`}</InlineMath> is the circle of radius <InlineMath>{`r`}</InlineMath>
           centered at the origin.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 9: Circle Centered at a Point">
-        <p>Describe the set <MathInline>{`|z - (3 + 2i)| = 4`}</MathInline>.</p>
+        <p>Describe the set <InlineMath>{`|z - (3 + 2i)| = 4`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>
-          This is the set of all <MathInline>{`z`}</MathInline> whose distance from <MathInline>{`3 + 2i`}</MathInline>
-          is 4. It's a circle of radius 4 centered at <MathInline>{`(3, 2)`}</MathInline>.
+          This is the set of all <InlineMath>{`z`}</InlineMath> whose distance from <InlineMath>{`3 + 2i`}</InlineMath>
+          is 4. It's a circle of radius 4 centered at <InlineMath>{`(3, 2)`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 10: Perpendicular Bisector">
-        <p>Describe the set <MathInline>{`|z - 1| = |z + 1|`}</MathInline>.</p>
+        <p>Describe the set <InlineMath>{`|z - 1| = |z + 1|`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>
-          This is the set of points equidistant from <MathInline>{`1`}</MathInline> and <MathInline>{`-1`}</MathInline>.
-          This is the perpendicular bisector of the segment from <MathInline>{`-1`}</MathInline> to <MathInline>{`1`}</MathInline>,
-          which is the imaginary axis: <MathInline>{`\\text{Re}(z) = 0`}</MathInline>.
+          This is the set of points equidistant from <InlineMath>{`1`}</InlineMath> and <InlineMath>{`-1`}</InlineMath>.
+          This is the perpendicular bisector of the segment from <InlineMath>{`-1`}</InlineMath> to <InlineMath>{`1`}</InlineMath>,
+          which is the imaginary axis: <InlineMath>{`\\text{Re}(z) = 0`}</InlineMath>.
         </p>
       </Callout>
 
@@ -280,13 +280,13 @@ export default function Section61() {
 
       <Callout type="theorem" title="Distance Between Complex Numbers">
         <p>
-          The distance between <MathInline>{`z_1`}</MathInline> and <MathInline>{`z_2`}</MathInline> is:
+          The distance between <InlineMath>{`z_1`}</InlineMath> and <InlineMath>{`z_2`}</InlineMath> is:
         </p>
         <MathBlock>{`d(z_1, z_2) = |z_1 - z_2|`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 11: Computing Distance">
-        <p>Find the distance between <MathInline>{`z_1 = 2 + 5i`}</MathInline> and <MathInline>{`z_2 = -1 + i`}</MathInline>.</p>
+        <p>Find the distance between <InlineMath>{`z_1 = 2 + 5i`}</InlineMath> and <InlineMath>{`z_2 = -1 + i`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`|z_1 - z_2| = |(2 + 5i) - (-1 + i)| = |3 + 4i| = 5`}</MathBlock>
       </Callout>
@@ -294,16 +294,16 @@ export default function Section61() {
       <h2>Summary</h2>
       <ul>
         <li>
-          <strong>Complex plane:</strong> <MathInline>{`z = a + bi`}</MathInline> corresponds to point <MathInline>{`(a, b)`}</MathInline>
+          <strong>Complex plane:</strong> <InlineMath>{`z = a + bi`}</InlineMath> corresponds to point <InlineMath>{`(a, b)`}</InlineMath>
         </li>
         <li>
-          <strong>Modulus:</strong> <MathInline>{`|z| = \\sqrt{a^2 + b^2}`}</MathInline> (distance from origin)
+          <strong>Modulus:</strong> <InlineMath>{`|z| = \\sqrt{a^2 + b^2}`}</InlineMath> (distance from origin)
         </li>
         <li>
-          <strong>Argument:</strong> <MathInline>{`\\arg(z)`}</MathInline> is the angle from positive real axis
+          <strong>Argument:</strong> <InlineMath>{`\\arg(z)`}</InlineMath> is the angle from positive real axis
         </li>
         <li>
-          <strong>Polar form:</strong> <MathInline>{`z = r(\\cos\\theta + i\\sin\\theta)`}</MathInline>
+          <strong>Polar form:</strong> <InlineMath>{`z = r(\\cos\\theta + i\\sin\\theta)`}</InlineMath>
         </li>
         <li>
           <strong>Multiplication:</strong> Multiply moduli, add arguments
@@ -318,7 +318,7 @@ export default function Section61() {
           <strong>Conjugate:</strong> Reflect across real axis
         </li>
         <li>
-          <strong>Distance:</strong> <MathInline>{`d(z_1, z_2) = |z_1 - z_2|`}</MathInline>
+          <strong>Distance:</strong> <InlineMath>{`d(z_1, z_2) = |z_1 - z_2|`}</InlineMath>
         </li>
       </ul>
     </LessonLayout>

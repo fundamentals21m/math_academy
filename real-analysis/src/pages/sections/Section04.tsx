@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { RiemannVisualizer } from '@/components/common/RiemannVisualizer';
 import { section04Quiz } from '@/data/quizzes';
@@ -61,9 +61,9 @@ export default function Section04() {
         title="Inverse Function Theorem"
         proof={
           <>
-            <p className="mb-3"><strong>(⇒)</strong> Suppose <Math>{`f^{-1}`}</Math> exists. For injectivity: if <Math>{`f(a_1) = f(a_2)`}</Math>, apply <Math>{`f^{-1}`}</Math> to get <Math>{`a_1 = a_2`}</Math>. For surjectivity: given <Math>{`b \\in B`}</Math>, let <Math>{`a = f^{-1}(b)`}</Math>, then <Math>{`f(a) = b`}</Math>.</p>
-            <p className="mb-3"><strong>(⇐)</strong> Suppose <Math>{`f`}</Math> is bijective. For each <Math>{`b \\in B`}</Math>, surjectivity gives some <Math>{`a`}</Math> with <Math>{`f(a) = b`}</Math>; injectivity ensures this <Math>{`a`}</Math> is unique. Define <Math>{`f^{-1}(b) = a`}</Math>.</p>
-            <p className="mb-3">Then <Math>{`f^{-1}(f(a)) = a`}</Math> by construction, and <Math>{`f(f^{-1}(b)) = f(a) = b`}</Math>. So <Math>{`f^{-1}`}</Math> is a well-defined inverse.</p>
+            <p className="mb-3"><strong>(⇒)</strong> Suppose <InlineMath>{`f^{-1}`}</InlineMath> exists. For injectivity: if <InlineMath>{`f(a_1) = f(a_2)`}</InlineMath>, apply <InlineMath>{`f^{-1}`}</InlineMath> to get <InlineMath>{`a_1 = a_2`}</InlineMath>. For surjectivity: given <InlineMath>{`b \\in B`}</InlineMath>, let <InlineMath>{`a = f^{-1}(b)`}</InlineMath>, then <InlineMath>{`f(a) = b`}</InlineMath>.</p>
+            <p className="mb-3"><strong>(⇐)</strong> Suppose <InlineMath>{`f`}</InlineMath> is bijective. For each <InlineMath>{`b \\in B`}</InlineMath>, surjectivity gives some <InlineMath>{`a`}</InlineMath> with <InlineMath>{`f(a) = b`}</InlineMath>; injectivity ensures this <InlineMath>{`a`}</InlineMath> is unique. Define <InlineMath>{`f^{-1}(b) = a`}</InlineMath>.</p>
+            <p className="mb-3">Then <InlineMath>{`f^{-1}(f(a)) = a`}</InlineMath> by construction, and <InlineMath>{`f(f^{-1}(b)) = f(a) = b`}</InlineMath>. So <InlineMath>{`f^{-1}`}</InlineMath> is a well-defined inverse.</p>
           </>
         }
       >
@@ -84,10 +84,10 @@ export default function Section04() {
         title="Composition Properties"
         proof={
           <>
-            <p className="mb-3"><strong>Associativity:</strong> For any <Math>{`a \\in A`}</Math>:</p>
+            <p className="mb-3"><strong>Associativity:</strong> For any <InlineMath>{`a \\in A`}</InlineMath>:</p>
             <MathBlock>{`((h \\circ g) \\circ f)(a) = (h \\circ g)(f(a)) = h(g(f(a))) = h((g \\circ f)(a)) = (h \\circ (g \\circ f))(a)`}</MathBlock>
-            <p className="mb-3"><strong>Identity:</strong> <Math>{`(f \\circ \\text{id}_A)(a) = f(\\text{id}_A(a)) = f(a)`}</Math>, so <Math>{`f \\circ \\text{id}_A = f`}</Math>. Similarly for <Math>{`\\text{id}_B \\circ f`}</Math>.</p>
-            <p className="mb-3"><strong>Inverses:</strong> <Math>{`(f^{-1} \\circ f)(a) = f^{-1}(f(a)) = a = \\text{id}_A(a)`}</Math>. And <Math>{`(f \\circ f^{-1})(b) = f(f^{-1}(b)) = b = \\text{id}_B(b)`}</Math>.</p>
+            <p className="mb-3"><strong>Identity:</strong> <InlineMath>{`(f \\circ \\text{id}_A)(a) = f(\\text{id}_A(a)) = f(a)`}</InlineMath>, so <InlineMath>{`f \\circ \\text{id}_A = f`}</InlineMath>. Similarly for <InlineMath>{`\\text{id}_B \\circ f`}</InlineMath>.</p>
+            <p className="mb-3"><strong>Inverses:</strong> <InlineMath>{`(f^{-1} \\circ f)(a) = f^{-1}(f(a)) = a = \\text{id}_A(a)`}</InlineMath>. And <InlineMath>{`(f \\circ f^{-1})(b) = f(f^{-1}(b)) = b = \\text{id}_B(b)`}</InlineMath>.</p>
           </>
         }
       >
@@ -122,11 +122,11 @@ export default function Section04() {
         title="Equivalence Classes"
         proof={
           <>
-            <p className="mb-3"><strong>Non-empty:</strong> By reflexivity, <Math>{`a \\sim a`}</Math>, so <Math>{`a \\in [a]`}</Math>. Thus each equivalence class is non-empty.</p>
-            <p className="mb-3"><strong>Covering:</strong> Every element <Math>{`a`}</Math> belongs to <Math>{`[a]`}</Math>, so <Math>{`A = \\bigcup_a [a]`}</Math>.</p>
-            <p className="mb-3"><strong>Disjoint or equal:</strong> Suppose <Math>{`[a] \\cap [b] \\neq \\emptyset`}</Math>. Let <Math>{`c \\in [a] \\cap [b]`}</Math>, so <Math>{`c \\sim a`}</Math> and <Math>{`c \\sim b`}</Math>.</p>
-            <p className="mb-3">For any <Math>{`x \\in [a]`}</Math>: <Math>{`x \\sim a`}</Math>, and <Math>{`a \\sim c`}</Math> (by symmetry), and <Math>{`c \\sim b`}</Math>. By transitivity, <Math>{`x \\sim b`}</Math>, so <Math>{`x \\in [b]`}</Math>.</p>
-            <p className="mb-3">Similarly <Math>{`[b] \\subseteq [a]`}</Math>. Therefore <Math>{`[a] = [b]`}</Math>. So distinct classes are disjoint.</p>
+            <p className="mb-3"><strong>Non-empty:</strong> By reflexivity, <InlineMath>{`a \\sim a`}</InlineMath>, so <InlineMath>{`a \\in [a]`}</InlineMath>. Thus each equivalence class is non-empty.</p>
+            <p className="mb-3"><strong>Covering:</strong> Every element <InlineMath>{`a`}</InlineMath> belongs to <InlineMath>{`[a]`}</InlineMath>, so <InlineMath>{`A = \\bigcup_a [a]`}</InlineMath>.</p>
+            <p className="mb-3"><strong>Disjoint or equal:</strong> Suppose <InlineMath>{`[a] \\cap [b] \\neq \\emptyset`}</InlineMath>. Let <InlineMath>{`c \\in [a] \\cap [b]`}</InlineMath>, so <InlineMath>{`c \\sim a`}</InlineMath> and <InlineMath>{`c \\sim b`}</InlineMath>.</p>
+            <p className="mb-3">For any <InlineMath>{`x \\in [a]`}</InlineMath>: <InlineMath>{`x \\sim a`}</InlineMath>, and <InlineMath>{`a \\sim c`}</InlineMath> (by symmetry), and <InlineMath>{`c \\sim b`}</InlineMath>. By transitivity, <InlineMath>{`x \\sim b`}</InlineMath>, so <InlineMath>{`x \\in [b]`}</InlineMath>.</p>
+            <p className="mb-3">Similarly <InlineMath>{`[b] \\subseteq [a]`}</InlineMath>. Therefore <InlineMath>{`[a] = [b]`}</InlineMath>. So distinct classes are disjoint.</p>
           </>
         }
       >

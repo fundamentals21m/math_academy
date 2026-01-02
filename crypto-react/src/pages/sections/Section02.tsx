@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section02Quiz } from '@/data/quizzes';
@@ -48,7 +48,7 @@ export default function Section02() {
       </p>
 
        <Example title="Binary to Decimal">
-         <p>The binary number <Math>1011_2</Math> in decimal:</p>
+         <p>The binary number <InlineMath>1011_2</InlineMath> in decimal:</p>
         <MathBlock>
           {`1011_2 = 1 \\times 2^3 + 0 \\times 2^2 + 1 \\times 2^1 + 1 \\times 2^0 = 8 + 0 + 2 + 1 = 11_{10}`}
         </MathBlock>
@@ -91,7 +91,7 @@ export default function Section02() {
       </div>
 
        <Example title="Hexadecimal to Decimal">
-          <p>The hexadecimal number <Math>{`2F_{16}`}</Math> in decimal:</p>
+          <p>The hexadecimal number <InlineMath>{`2F_{16}`}</InlineMath> in decimal:</p>
          <MathBlock>
            {`\\text{2F}_{16} = 2 \\times 16^1 + 15 \\times 16^0 = 32 + 15 = 47_{10}`}
          </MathBlock>
@@ -118,24 +118,24 @@ export default function Section02() {
            3 ÷ 2 = 1 remainder <span className="text-emerald-400">1</span><br />
            1 ÷ 2 = 0 remainder <span className="text-emerald-400">1</span>
          </div>
-          <p>Reading bottom to top: <Math>{`13_{10} = 1101_2`}</Math></p>
+          <p>Reading bottom to top: <InlineMath>{`13_{10} = 1101_2`}</InlineMath></p>
        </Example>
 
       <h2>Binary to Hex (and Back)</h2>
 
       <p>
-        Converting between binary and hex is easy because <Math>16 = 2^4</Math>. 
+        Converting between binary and hex is easy because <InlineMath>16 = 2^4</InlineMath>. 
         Each hex digit corresponds to exactly 4 binary digits:
       </p>
 
        <Example title="Binary to Hexadecimal Example">
-         <p>Convert <Math>10110011_2</Math> to hexadecimal:</p>
+         <p>Convert <InlineMath>10110011_2</InlineMath> to hexadecimal:</p>
          <div className="font-mono text-sm bg-dark-700/50 rounded-lg p-4 my-2">
            1011 0011<br />
            ↓&nbsp;&nbsp;&nbsp;&nbsp;↓<br />
            <span className="text-amber-400">B</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-amber-400">3</span>
          </div>
-          <p>So <Math>{`10110011_2 = B3_{16}`}</Math></p>
+          <p>So <InlineMath>{`10110011_2 = B3_{16}`}</InlineMath></p>
        </Example>
 
       <h2>Why Hex Matters for Cryptography</h2>
@@ -155,7 +155,7 @@ export default function Section02() {
 
       <p>
         This is hexadecimal! Each character represents 4 bits, so this 32-character 
-        hash represents <Math>32 \times 4 = 128</Math> bits of data. 
+        hash represents <InlineMath>{`32 \\times 4 = 128`}</InlineMath> bits of data. 
         In binary, this would be 128 characters of 0s and 1s—much harder to read and copy.
       </p>
 

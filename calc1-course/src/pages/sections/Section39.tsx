@@ -1,14 +1,14 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section39() {
   return (
     <LessonLayout sectionId={39}>
       <p>
         In elementary algebra, logarithms are typically defined using exponents: if
-        <MathInline>{`b^u = x`}</MathInline>, then <MathInline>{`u = \\log_b x`}</MathInline>. However,
-        this approach requires first defining what <MathInline>{`b^u`}</MathInline> means for
+        <InlineMath>{`b^u = x`}</InlineMath>, then <InlineMath>{`u = \\log_b x`}</InlineMath>. However,
+        this approach requires first defining what <InlineMath>{`b^u`}</InlineMath> means for
         irrational exponents—a surprisingly difficult task.
       </p>
 
@@ -32,7 +32,7 @@ export default function Section39() {
         </p>
         <MathBlock>{`f(x) = c \\int_1^x \\frac{1}{t} \\, dt`}</MathBlock>
         <p>
-          for some constant <MathInline>{`c`}</MathInline>. This motivates defining the logarithm
+          for some constant <InlineMath>{`c`}</InlineMath>. This motivates defining the logarithm
           as an integral.
         </p>
       </Callout>
@@ -41,22 +41,22 @@ export default function Section39() {
 
       <Callout type="definition" title="The Natural Logarithm">
         <p>
-          If <MathInline>{`x`}</MathInline> is a positive real number, we define the
-          <strong> natural logarithm</strong> of <MathInline>{`x`}</MathInline>, denoted
-          <MathInline>{`\\ln x`}</MathInline> (or <MathInline>{`\\log x`}</MathInline>), by the integral:
+          If <InlineMath>{`x`}</InlineMath> is a positive real number, we define the
+          <strong> natural logarithm</strong> of <InlineMath>{`x`}</InlineMath>, denoted
+          <InlineMath>{`\\ln x`}</InlineMath> (or <InlineMath>{`\\log x`}</InlineMath>), by the integral:
         </p>
         <MathBlock>{`\\ln x = \\int_1^x \\frac{1}{t} \\, dt.`}</MathBlock>
       </Callout>
 
       <Callout type="info" title="Geometric Interpretation">
         <p>
-          When <MathInline>{`x > 1`}</MathInline>, <MathInline>{`\\ln x`}</MathInline> represents the
-          area under the curve <MathInline>{`y = 1/t`}</MathInline> from <MathInline>{`t = 1`}</MathInline>
-          to <MathInline>{`t = x`}</MathInline>.
+          When <InlineMath>{`x > 1`}</InlineMath>, <InlineMath>{`\\ln x`}</InlineMath> represents the
+          area under the curve <InlineMath>{`y = 1/t`}</InlineMath> from <InlineMath>{`t = 1`}</InlineMath>
+          to <InlineMath>{`t = x`}</InlineMath>.
         </p>
         <p>
-          When <MathInline>{`0 < x < 1`}</MathInline>, the integral is negative (since we integrate
-          "backwards"), so <MathInline>{`\\ln x < 0`}</MathInline>.
+          When <InlineMath>{`0 < x < 1`}</InlineMath>, the integral is negative (since we integrate
+          "backwards"), so <InlineMath>{`\\ln x < 0`}</InlineMath>.
         </p>
       </Callout>
 
@@ -64,33 +64,33 @@ export default function Section39() {
 
       <Callout type="theorem" title="Theorem 6.1: Properties of the Natural Logarithm">
         <p>The logarithm function has the following properties:</p>
-        <p><strong>(a)</strong> <MathInline>{`\\ln 1 = 0`}</MathInline></p>
+        <p><strong>(a)</strong> <InlineMath>{`\\ln 1 = 0`}</InlineMath></p>
         <p>
-          <strong>(b)</strong> <MathInline>{`\\displaystyle \\frac{d}{dx} \\ln x = \\frac{1}{x}`}</MathInline>
-          for every <MathInline>{`x > 0`}</MathInline>
+          <strong>(b)</strong> <InlineMath>{`\\displaystyle \\frac{d}{dx} \\ln x = \\frac{1}{x}`}</InlineMath>
+          for every <InlineMath>{`x > 0`}</InlineMath>
         </p>
         <p>
-          <strong>(c)</strong> <MathInline>{`\\ln(ab) = \\ln a + \\ln b`}</MathInline> for every
-          <MathInline>{`a > 0`}</MathInline>, <MathInline>{`b > 0`}</MathInline>
+          <strong>(c)</strong> <InlineMath>{`\\ln(ab) = \\ln a + \\ln b`}</InlineMath> for every
+          <InlineMath>{`a > 0`}</InlineMath>, <InlineMath>{`b > 0`}</InlineMath>
         </p>
       </Callout>
 
       <Callout type="info" title="Proof">
         <p>
           <strong>(a)</strong> From the definition:
-          <MathInline>{`\\ln 1 = \\int_1^1 \\frac{1}{t} \\, dt = 0`}</MathInline>.
+          <InlineMath>{`\\ln 1 = \\int_1^1 \\frac{1}{t} \\, dt = 0`}</InlineMath>.
         </p>
         <p>
           <strong>(b)</strong> By the First Fundamental Theorem of Calculus, the derivative
-          of <MathInline>{`\\int_1^x \\frac{1}{t} \\, dt`}</MathInline> is <MathInline>{`\\frac{1}{x}`}</MathInline>.
+          of <InlineMath>{`\\int_1^x \\frac{1}{t} \\, dt`}</InlineMath> is <InlineMath>{`\\frac{1}{x}`}</InlineMath>.
         </p>
         <p>
           <strong>(c)</strong> We write:
         </p>
         <MathBlock>{`\\ln(ab) = \\int_1^{ab} \\frac{1}{t} \\, dt = \\int_1^a \\frac{1}{t} \\, dt + \\int_a^{ab} \\frac{1}{t} \\, dt = \\ln a + \\int_a^{ab} \\frac{1}{t} \\, dt.`}</MathBlock>
         <p>
-          In the last integral, substitute <MathInline>{`u = t/a`}</MathInline>,
-          <MathInline>{`du = dt/a`}</MathInline>:
+          In the last integral, substitute <InlineMath>{`u = t/a`}</InlineMath>,
+          <InlineMath>{`du = dt/a`}</InlineMath>:
         </p>
         <MathBlock>{`\\int_a^{ab} \\frac{1}{t} \\, dt = \\int_1^b \\frac{1}{u} \\, du = \\ln b.`}</MathBlock>
       </Callout>
@@ -113,30 +113,30 @@ export default function Section39() {
       <Callout type="info" title="Graph Properties">
         <ul>
           <li>
-            <strong>Domain:</strong> <MathInline>{`(0, \\infty)`}</MathInline> — only positive numbers
+            <strong>Domain:</strong> <InlineMath>{`(0, \\infty)`}</InlineMath> — only positive numbers
           </li>
           <li>
-            <strong>Range:</strong> <MathInline>{`(-\\infty, \\infty)`}</MathInline> — all real numbers
+            <strong>Range:</strong> <InlineMath>{`(-\\infty, \\infty)`}</InlineMath> — all real numbers
           </li>
           <li>
-            <strong>Passes through:</strong> <MathInline>{`(1, 0)`}</MathInline> since
-            <MathInline>{`\\ln 1 = 0`}</MathInline>
+            <strong>Passes through:</strong> <InlineMath>{`(1, 0)`}</InlineMath> since
+            <InlineMath>{`\\ln 1 = 0`}</InlineMath>
           </li>
           <li>
-            <strong>Strictly increasing:</strong> <MathInline>{`\\ln' x = 1/x > 0`}</MathInline>
-            for all <MathInline>{`x > 0`}</MathInline>
+            <strong>Strictly increasing:</strong> <InlineMath>{`\\ln' x = 1/x > 0`}</InlineMath>
+            for all <InlineMath>{`x > 0`}</InlineMath>
           </li>
           <li>
-            <strong>Concave down:</strong> <MathInline>{`\\ln'' x = -1/x^2 < 0`}</MathInline>
+            <strong>Concave down:</strong> <InlineMath>{`\\ln'' x = -1/x^2 < 0`}</InlineMath>
           </li>
           <li>
-            <strong>Slope at x = 1:</strong> <MathInline>{`\\ln'(1) = 1`}</MathInline>
+            <strong>Slope at x = 1:</strong> <InlineMath>{`\\ln'(1) = 1`}</InlineMath>
           </li>
           <li>
-            As <MathInline>{`x \\to 0^+`}</MathInline>: <MathInline>{`\\ln x \\to -\\infty`}</MathInline>
+            As <InlineMath>{`x \\to 0^+`}</InlineMath>: <InlineMath>{`\\ln x \\to -\\infty`}</InlineMath>
           </li>
           <li>
-            As <MathInline>{`x \\to \\infty`}</MathInline>: <MathInline>{`\\ln x \\to \\infty`}</MathInline>
+            As <InlineMath>{`x \\to \\infty`}</InlineMath>: <InlineMath>{`\\ln x \\to \\infty`}</InlineMath>
             (but slowly)
           </li>
         </ul>
@@ -146,15 +146,15 @@ export default function Section39() {
 
       <Callout type="info" title="No Upper or Lower Bound">
         <p>
-          Although <MathInline>{`\\ln x`}</MathInline> grows slowly, it has no upper bound.
+          Although <InlineMath>{`\\ln x`}</InlineMath> grows slowly, it has no upper bound.
           Using the functional equation:
         </p>
         <MathBlock>{`\\ln(2^n) = n \\ln 2.`}</MathBlock>
         <p>
-          Since <MathInline>{`\\ln 2 > 0`}</MathInline>, we can make <MathInline>{`\\ln(2^n)`}</MathInline>
-          as large as we like by choosing <MathInline>{`n`}</MathInline> large enough.
+          Since <InlineMath>{`\\ln 2 > 0`}</InlineMath>, we can make <InlineMath>{`\\ln(2^n)`}</InlineMath>
+          as large as we like by choosing <InlineMath>{`n`}</InlineMath> large enough.
         </p>
-        <p>Similarly, since <MathInline>{`\\ln(1/a) = -\\ln a`}</MathInline>:</p>
+        <p>Similarly, since <InlineMath>{`\\ln(1/a) = -\\ln a`}</InlineMath>:</p>
         <MathBlock>{`\\ln\\left(\\frac{1}{2^n}\\right) = -n \\ln 2 \\to -\\infty.`}</MathBlock>
         <p>So the logarithm takes all real values, positive and negative.</p>
       </Callout>
@@ -163,31 +163,31 @@ export default function Section39() {
 
       <Callout type="theorem" title="Theorem 6.2">
         <p>
-          For every real number <MathInline>{`b`}</MathInline>, there is exactly one positive
-          real number <MathInline>{`a`}</MathInline> such that <MathInline>{`\\ln a = b`}</MathInline>.
+          For every real number <InlineMath>{`b`}</InlineMath>, there is exactly one positive
+          real number <InlineMath>{`a`}</InlineMath> such that <InlineMath>{`\\ln a = b`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="definition" title="Definition of e">
         <p>
-          We denote by <MathInline>{`e`}</MathInline> that unique number for which:
+          We denote by <InlineMath>{`e`}</InlineMath> that unique number for which:
         </p>
         <MathBlock>{`\\ln e = 1.`}</MathBlock>
         <p>
-          Equivalently, <MathInline>{`e`}</MathInline> is the unique number such that:
+          Equivalently, <InlineMath>{`e`}</InlineMath> is the unique number such that:
         </p>
         <MathBlock>{`\\int_1^e \\frac{1}{t} \\, dt = 1.`}</MathBlock>
       </Callout>
 
       <Callout type="info" title="The Value of e">
         <p>
-          The number <MathInline>{`e`}</MathInline>, like <MathInline>{`\\pi`}</MathInline>, is one of
+          The number <InlineMath>{`e`}</InlineMath>, like <InlineMath>{`\\pi`}</InlineMath>, is one of
           the most important constants in mathematics. Its value, correct to ten decimal
           places, is:
         </p>
         <MathBlock>{`e \\approx 2.7182818285.`}</MathBlock>
         <p>
-          It can be proved that <MathInline>{`e`}</MathInline> is <strong>irrational</strong>
+          It can be proved that <InlineMath>{`e`}</InlineMath> is <strong>irrational</strong>
           (and even transcendental). Natural logarithms are sometimes called
           <strong> Napierian logarithms</strong> after John Napier (1550–1617), who invented
           logarithms.
@@ -202,13 +202,13 @@ export default function Section39() {
         </p>
         <MathBlock>{`\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C \\quad (n \\neq -1).`}</MathBlock>
         <p>
-          The case <MathInline>{`n = -1`}</MathInline> was excluded because it would give
+          The case <InlineMath>{`n = -1`}</InlineMath> was excluded because it would give
           division by zero. Now we can fill this gap:
         </p>
         <MathBlock>{`\\int \\frac{1}{x} \\, dx = \\ln x + C \\quad (x > 0).`}</MathBlock>
         <p>
-          More generally, for any differentiable function <MathInline>{`u = f(x)`}</MathInline>
-          with <MathInline>{`f(x) > 0`}</MathInline>:
+          More generally, for any differentiable function <InlineMath>{`u = f(x)`}</InlineMath>
+          with <InlineMath>{`f(x) > 0`}</InlineMath>:
         </p>
         <MathBlock>{`\\int \\frac{f'(x)}{f(x)} \\, dx = \\ln f(x) + C.`}</MathBlock>
       </Callout>
@@ -219,8 +219,8 @@ export default function Section39() {
         </p>
         <MathBlock>{`\\int \\frac{1}{x} \\, dx = \\ln |x| + C \\quad (x \\neq 0).`}</MathBlock>
         <p>
-          This works because <MathInline>{`\\frac{d}{dx} \\ln |x| = \\frac{1}{x}`}</MathInline>
-          for all <MathInline>{`x \\neq 0`}</MathInline>.
+          This works because <InlineMath>{`\\frac{d}{dx} \\ln |x| = \\frac{1}{x}`}</InlineMath>
+          for all <InlineMath>{`x \\neq 0`}</InlineMath>.
         </p>
       </Callout>
 
@@ -229,16 +229,16 @@ export default function Section39() {
       <Callout type="example" title="Example 1: Basic Computations">
         <p>Using the properties of logarithms:</p>
         <ul>
-          <li><MathInline>{`\\ln e = 1`}</MathInline> (by definition)</li>
-          <li><MathInline>{`\\ln e^2 = 2 \\ln e = 2`}</MathInline></li>
-          <li><MathInline>{`\\ln \\sqrt{e} = \\ln e^{1/2} = \\frac{1}{2}`}</MathInline></li>
-          <li><MathInline>{`\\ln(1/e) = -\\ln e = -1`}</MathInline></li>
+          <li><InlineMath>{`\\ln e = 1`}</InlineMath> (by definition)</li>
+          <li><InlineMath>{`\\ln e^2 = 2 \\ln e = 2`}</InlineMath></li>
+          <li><InlineMath>{`\\ln \\sqrt{e} = \\ln e^{1/2} = \\frac{1}{2}`}</InlineMath></li>
+          <li><InlineMath>{`\\ln(1/e) = -\\ln e = -1`}</InlineMath></li>
         </ul>
       </Callout>
 
       <Callout type="example" title="Example 2: Derivative of ln(x²+1)">
         <p>
-          Find <MathInline>{`\\frac{d}{dx} \\ln(x^2 + 1)`}</MathInline>.
+          Find <InlineMath>{`\\frac{d}{dx} \\ln(x^2 + 1)`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong> Using the chain rule:</p>
         <MathBlock>{`\\frac{d}{dx} \\ln(x^2 + 1) = \\frac{1}{x^2 + 1} \\cdot 2x = \\frac{2x}{x^2 + 1}.`}</MathBlock>
@@ -246,26 +246,26 @@ export default function Section39() {
 
       <Callout type="example" title="Example 3: Integration">
         <p>
-          Evaluate <MathInline>{`\\int \\frac{x}{x^2 + 1} \\, dx`}</MathInline>.
+          Evaluate <InlineMath>{`\\int \\frac{x}{x^2 + 1} \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Let <MathInline>{`u = x^2 + 1`}</MathInline>, so <MathInline>{`du = 2x \\, dx`}</MathInline>:
+          Let <InlineMath>{`u = x^2 + 1`}</InlineMath>, so <InlineMath>{`du = 2x \\, dx`}</InlineMath>:
         </p>
         <MathBlock>{`\\int \\frac{x}{x^2 + 1} \\, dx = \\frac{1}{2} \\int \\frac{du}{u} = \\frac{1}{2} \\ln|u| + C = \\frac{1}{2} \\ln(x^2 + 1) + C.`}</MathBlock>
         <p>
-          (We dropped the absolute value since <MathInline>{`x^2 + 1 > 0`}</MathInline> always.)
+          (We dropped the absolute value since <InlineMath>{`x^2 + 1 > 0`}</InlineMath> always.)
         </p>
       </Callout>
 
       <Callout type="example" title="Example 4: Integrating tan x">
         <p>
-          Evaluate <MathInline>{`\\int \\tan x \\, dx`}</MathInline>.
+          Evaluate <InlineMath>{`\\int \\tan x \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`\\int \\tan x \\, dx = \\int \\frac{\\sin x}{\\cos x} \\, dx.`}</MathBlock>
         <p>
-          Let <MathInline>{`u = \\cos x`}</MathInline>, so <MathInline>{`du = -\\sin x \\, dx`}</MathInline>:
+          Let <InlineMath>{`u = \\cos x`}</InlineMath>, so <InlineMath>{`du = -\\sin x \\, dx`}</InlineMath>:
         </p>
         <MathBlock>{`\\int \\frac{\\sin x}{\\cos x} \\, dx = -\\int \\frac{du}{u} = -\\ln|u| + C = -\\ln|\\cos x| + C = \\ln|\\sec x| + C.`}</MathBlock>
       </Callout>
@@ -277,25 +277,25 @@ export default function Section39() {
           <MathBlock>{`\\ln x = \\int_1^x \\frac{1}{t} \\, dt \\quad (x > 0).`}</MathBlock>
         </li>
         <li>
-          <strong>Key properties:</strong> <MathInline>{`\\ln 1 = 0`}</MathInline>,
-          <MathInline>{`(\\ln x)' = 1/x`}</MathInline>, and
-          <MathInline>{`\\ln(ab) = \\ln a + \\ln b`}</MathInline>.
+          <strong>Key properties:</strong> <InlineMath>{`\\ln 1 = 0`}</InlineMath>,
+          <InlineMath>{`(\\ln x)' = 1/x`}</InlineMath>, and
+          <InlineMath>{`\\ln(ab) = \\ln a + \\ln b`}</InlineMath>.
         </li>
         <li>
-          The number <MathInline>{`e \\approx 2.718`}</MathInline> is defined by
-          <MathInline>{`\\ln e = 1`}</MathInline>.
+          The number <InlineMath>{`e \\approx 2.718`}</InlineMath> is defined by
+          <InlineMath>{`\\ln e = 1`}</InlineMath>.
         </li>
         <li>
           The logarithm is <strong>strictly increasing</strong> and <strong>concave down</strong>,
-          with domain <MathInline>{`(0, \\infty)`}</MathInline> and range
-          <MathInline>{`(-\\infty, \\infty)`}</MathInline>.
+          with domain <InlineMath>{`(0, \\infty)`}</InlineMath> and range
+          <InlineMath>{`(-\\infty, \\infty)`}</InlineMath>.
         </li>
         <li>
-          The integration formula <MathInline>{`\\int \\frac{1}{x} \\, dx = \\ln|x| + C`}</MathInline>
+          The integration formula <InlineMath>{`\\int \\frac{1}{x} \\, dx = \\ln|x| + C`}</InlineMath>
           fills the gap in the power rule.
         </li>
         <li>
-          For composite functions: <MathInline>{`\\int \\frac{f'(x)}{f(x)} \\, dx = \\ln|f(x)| + C`}</MathInline>.
+          For composite functions: <InlineMath>{`\\int \\frac{f'(x)}{f(x)} \\, dx = \\ln|f(x)| + C`}</InlineMath>.
         </li>
       </ul>
     </LessonLayout>

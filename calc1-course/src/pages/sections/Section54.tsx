@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section54() {
@@ -15,18 +15,18 @@ export default function Section54() {
 
       <Callout type="theorem" title="The Exponential Model">
         <p>
-          If a quantity <MathInline>{`y(t)`}</MathInline> changes at a rate proportional to its
+          If a quantity <InlineMath>{`y(t)`}</InlineMath> changes at a rate proportional to its
           current value, then:
         </p>
         <MathBlock>{`\\frac{dy}{dt} = ky`}</MathBlock>
         <p>
-          where <MathInline>{`k`}</MathInline> is the <strong>growth constant</strong>
-          (<MathInline>{`k > 0`}</MathInline>) or <strong>decay constant</strong>
-          (<MathInline>{`k < 0`}</MathInline>).
+          where <InlineMath>{`k`}</InlineMath> is the <strong>growth constant</strong>
+          (<InlineMath>{`k > 0`}</InlineMath>) or <strong>decay constant</strong>
+          (<InlineMath>{`k < 0`}</InlineMath>).
         </p>
         <p>The solution is:</p>
         <MathBlock>{`y(t) = y_0 e^{kt}`}</MathBlock>
-        <p>where <MathInline>{`y_0 = y(0)`}</MathInline> is the initial value.</p>
+        <p>where <InlineMath>{`y_0 = y(0)`}</InlineMath> is the initial value.</p>
       </Callout>
 
       <h3>Population Growth</h3>
@@ -38,16 +38,16 @@ export default function Section54() {
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Model: <MathInline>{`P(t) = P_0 e^{kt}`}</MathInline> with <MathInline>{`P_0 = 1000`}</MathInline>.
+          Model: <InlineMath>{`P(t) = P_0 e^{kt}`}</InlineMath> with <InlineMath>{`P_0 = 1000`}</InlineMath>.
         </p>
         <p>
-          Find <MathInline>{`k`}</MathInline>: <MathInline>{`P(3) = 2000`}</MathInline>, so:
+          Find <InlineMath>{`k`}</InlineMath>: <InlineMath>{`P(3) = 2000`}</InlineMath>, so:
         </p>
         <MathBlock>{`2000 = 1000e^{3k} \\quad \\Rightarrow \\quad e^{3k} = 2 \\quad \\Rightarrow \\quad k = \\frac{\\ln 2}{3}`}</MathBlock>
         <p>
-          Therefore <MathInline>{`P(t) = 1000 \\cdot 2^{t/3}`}</MathInline>.
+          Therefore <InlineMath>{`P(t) = 1000 \\cdot 2^{t/3}`}</InlineMath>.
         </p>
-        <p>At <MathInline>{`t = 8`}</MathInline>:</p>
+        <p>At <InlineMath>{`t = 8`}</InlineMath>:</p>
         <MathBlock>{`P(8) = 1000 \\cdot 2^{8/3} = 1000 \\cdot 2^{2.67} \\approx 6350 \\text{ bacteria}`}</MathBlock>
       </Callout>
 
@@ -55,7 +55,7 @@ export default function Section54() {
 
       <Callout type="definition" title="Half-Life">
         <p>
-          The <strong>half-life</strong> <MathInline>{`t_{1/2}`}</MathInline> is the time required
+          The <strong>half-life</strong> <InlineMath>{`t_{1/2}`}</InlineMath> is the time required
           for half of a radioactive substance to decay:
         </p>
         <MathBlock>{`t_{1/2} = \\frac{\\ln 2}{|k|}`}</MathBlock>
@@ -68,14 +68,14 @@ export default function Section54() {
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Find <MathInline>{`k`}</MathInline>: From <MathInline>{`t_{1/2} = \\frac{\\ln 2}{|k|}`}</MathInline>:
+          Find <InlineMath>{`k`}</InlineMath>: From <InlineMath>{`t_{1/2} = \\frac{\\ln 2}{|k|}`}</InlineMath>:
         </p>
         <MathBlock>{`k = -\\frac{\\ln 2}{5730}`}</MathBlock>
         <p>
-          (negative because decay). The model is <MathInline>{`y(t) = y_0 e^{kt}`}</MathInline>.
+          (negative because decay). The model is <InlineMath>{`y(t) = y_0 e^{kt}`}</InlineMath>.
         </p>
         <p>
-          When <MathInline>{`y(t) = 0.20 y_0`}</MathInline>:
+          When <InlineMath>{`y(t) = 0.20 y_0`}</InlineMath>:
         </p>
         <MathBlock>{`0.20 = e^{kt} \\quad \\Rightarrow \\quad kt = \\ln(0.20) \\quad \\Rightarrow \\quad t = \\frac{\\ln(0.20)}{k}`}</MathBlock>
         <MathBlock>{`t = \\frac{\\ln(0.20)}{-\\ln 2 / 5730} = \\frac{5730 \\ln 5}{\\ln 2} \\approx 13{,}300 \\text{ years}`}</MathBlock>
@@ -88,7 +88,7 @@ export default function Section54() {
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          From <MathInline>{`0.75 = e^{10k}`}</MathInline>:
+          From <InlineMath>{`0.75 = e^{10k}`}</InlineMath>:
         </p>
         <MathBlock>{`k = \\frac{\\ln(0.75)}{10} = \\frac{-\\ln(4/3)}{10}`}</MathBlock>
         <p>Half-life:</p>
@@ -104,19 +104,19 @@ export default function Section54() {
         </p>
         <MathBlock>{`\\frac{dT}{dt} = -k(T - T_a)`}</MathBlock>
         <p>
-          where <MathInline>{`T`}</MathInline> is the object's temperature, <MathInline>{`T_a`}</MathInline> is
-          the ambient temperature, and <MathInline>{`k > 0`}</MathInline>.
+          where <InlineMath>{`T`}</InlineMath> is the object's temperature, <InlineMath>{`T_a`}</InlineMath> is
+          the ambient temperature, and <InlineMath>{`k > 0`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="Solution">
         <p>
-          Let <MathInline>{`u = T - T_a`}</MathInline>. Then <MathInline>{`\\frac{du}{dt} = -ku`}</MathInline>,
-          giving <MathInline>{`u = u_0 e^{-kt}`}</MathInline>.
+          Let <InlineMath>{`u = T - T_a`}</InlineMath>. Then <InlineMath>{`\\frac{du}{dt} = -ku`}</InlineMath>,
+          giving <InlineMath>{`u = u_0 e^{-kt}`}</InlineMath>.
         </p>
         <MathBlock>{`T(t) = T_a + (T_0 - T_a)e^{-kt}`}</MathBlock>
         <p>
-          where <MathInline>{`T_0 = T(0)`}</MathInline> is the initial temperature.
+          where <InlineMath>{`T_0 = T(0)`}</InlineMath> is the initial temperature.
         </p>
       </Callout>
 
@@ -127,13 +127,13 @@ export default function Section54() {
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          <MathInline>{`T_a = 20`}</MathInline>, <MathInline>{`T_0 = 95`}</MathInline>, so:
+          <InlineMath>{`T_a = 20`}</InlineMath>, <InlineMath>{`T_0 = 95`}</InlineMath>, so:
         </p>
         <MathBlock>{`T(t) = 20 + 75e^{-kt}`}</MathBlock>
-        <p>Use <MathInline>{`T(5) = 80`}</MathInline> to find <MathInline>{`k`}</MathInline>:</p>
+        <p>Use <InlineMath>{`T(5) = 80`}</InlineMath> to find <InlineMath>{`k`}</InlineMath>:</p>
         <MathBlock>{`80 = 20 + 75e^{-5k} \\quad \\Rightarrow \\quad 60 = 75e^{-5k} \\quad \\Rightarrow \\quad e^{-5k} = 0.8`}</MathBlock>
         <MathBlock>{`k = -\\frac{\\ln(0.8)}{5} = \\frac{\\ln(1.25)}{5} \\approx 0.0446`}</MathBlock>
-        <p>Find <MathInline>{`t`}</MathInline> when <MathInline>{`T = 50`}</MathInline>:</p>
+        <p>Find <InlineMath>{`t`}</InlineMath> when <InlineMath>{`T = 50`}</InlineMath>:</p>
         <MathBlock>{`50 = 20 + 75e^{-kt} \\quad \\Rightarrow \\quad e^{-kt} = \\frac{30}{75} = 0.4`}</MathBlock>
         <MathBlock>{`t = -\\frac{\\ln(0.4)}{k} = \\frac{\\ln(2.5)}{0.0446} \\approx 20.5 \\text{ minutes}`}</MathBlock>
       </Callout>
@@ -145,16 +145,16 @@ export default function Section54() {
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          <MathInline>{`T_a = 70`}</MathInline>, so <MathInline>{`T(t) = 70 + (T_0 - 70)e^{-kt}`}</MathInline>.
+          <InlineMath>{`T_a = 70`}</InlineMath>, so <InlineMath>{`T(t) = 70 + (T_0 - 70)e^{-kt}`}</InlineMath>.
         </p>
-        <p>Let <MathInline>{`t = 0`}</MathInline> be 10 PM. Then:</p>
+        <p>Let <InlineMath>{`t = 0`}</InlineMath> be 10 PM. Then:</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`T(0) = 85`}</MathInline>, so <MathInline>{`T_0 - 70 = 15`}</MathInline></li>
-          <li><MathInline>{`T(1) = 80`}</MathInline>, so <MathInline>{`80 = 70 + 15e^{-k}`}</MathInline></li>
+          <li><InlineMath>{`T(0) = 85`}</InlineMath>, so <InlineMath>{`T_0 - 70 = 15`}</InlineMath></li>
+          <li><InlineMath>{`T(1) = 80`}</InlineMath>, so <InlineMath>{`80 = 70 + 15e^{-k}`}</InlineMath></li>
         </ul>
         <MathBlock>{`e^{-k} = \\frac{10}{15} = \\frac{2}{3} \\quad \\Rightarrow \\quad k = \\ln(1.5) \\approx 0.405`}</MathBlock>
         <p>
-          At death, <MathInline>{`T = 98.6`}</MathInline>. Let <MathInline>{`\\tau`}</MathInline> be hours
+          At death, <InlineMath>{`T = 98.6`}</InlineMath>. Let <InlineMath>{`\\tau`}</InlineMath> be hours
           before 10 PM when death occurred:
         </p>
         <MathBlock>{`85 = 70 + (98.6 - 70)e^{-k\\tau}`}</MathBlock>
@@ -172,7 +172,7 @@ export default function Section54() {
 
       <Callout type="theorem" title="Mixing Model">
         <p>
-          If <MathInline>{`y(t)`}</MathInline> is the amount of solute in the tank at time <MathInline>{`t`}</MathInline>:
+          If <InlineMath>{`y(t)`}</InlineMath> is the amount of solute in the tank at time <InlineMath>{`t`}</InlineMath>:
         </p>
         <MathBlock>{`\\frac{dy}{dt} = (\\text{rate in}) - (\\text{rate out})`}</MathBlock>
         <p>where:</p>
@@ -191,19 +191,19 @@ export default function Section54() {
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Let <MathInline>{`y(t)`}</MathInline> = kg of salt at time <MathInline>{`t`}</MathInline>.
+          Let <InlineMath>{`y(t)`}</InlineMath> = kg of salt at time <InlineMath>{`t`}</InlineMath>.
           Volume stays constant at 100 L.
         </p>
         <ul className="list-disc pl-6 space-y-1">
-          <li>Rate in: <MathInline>{`5 \\times 0 = 0`}</MathInline> kg/min (fresh water)</li>
-          <li>Rate out: <MathInline>{`5 \\times \\frac{y}{100} = \\frac{y}{20}`}</MathInline> kg/min</li>
+          <li>Rate in: <InlineMath>{`5 \\times 0 = 0`}</InlineMath> kg/min (fresh water)</li>
+          <li>Rate out: <InlineMath>{`5 \\times \\frac{y}{100} = \\frac{y}{20}`}</InlineMath> kg/min</li>
         </ul>
         <MathBlock>{`\\frac{dy}{dt} = -\\frac{y}{20}`}</MathBlock>
         <p>
-          This is exponential decay with <MathInline>{`k = -1/20`}</MathInline>:
+          This is exponential decay with <InlineMath>{`k = -1/20`}</InlineMath>:
         </p>
         <MathBlock>{`y(t) = 50e^{-t/20}`}</MathBlock>
-        <p>At <MathInline>{`t = 20`}</MathInline>:</p>
+        <p>At <InlineMath>{`t = 20`}</InlineMath>:</p>
         <MathBlock>{`y(20) = 50e^{-1} \\approx 18.4 \\text{ kg}`}</MathBlock>
       </Callout>
 
@@ -214,25 +214,25 @@ export default function Section54() {
         </p>
         <p><strong>Solution:</strong></p>
         <ul className="list-disc pl-6 space-y-1">
-          <li>Rate in: <MathInline>{`4 \\times 0.5 = 2`}</MathInline> kg/min</li>
-          <li>Rate out: <MathInline>{`4 \\times \\frac{y}{200} = \\frac{y}{50}`}</MathInline> kg/min</li>
+          <li>Rate in: <InlineMath>{`4 \\times 0.5 = 2`}</InlineMath> kg/min</li>
+          <li>Rate out: <InlineMath>{`4 \\times \\frac{y}{200} = \\frac{y}{50}`}</InlineMath> kg/min</li>
         </ul>
         <MathBlock>{`\\frac{dy}{dt} = 2 - \\frac{y}{50}`}</MathBlock>
-        <p>Rewrite in standard form: <MathInline>{`y' + \\frac{1}{50}y = 2`}</MathInline></p>
+        <p>Rewrite in standard form: <InlineMath>{`y' + \\frac{1}{50}y = 2`}</InlineMath></p>
         <p>
-          Integrating factor: <MathInline>{`\\mu = e^{t/50}`}</MathInline>.
+          Integrating factor: <InlineMath>{`\\mu = e^{t/50}`}</InlineMath>.
         </p>
         <MathBlock>{`(e^{t/50}y)' = 2e^{t/50}`}</MathBlock>
         <MathBlock>{`e^{t/50}y = 100e^{t/50} + C`}</MathBlock>
         <MathBlock>{`y = 100 + Ce^{-t/50}`}</MathBlock>
         <p>
-          Initial condition <MathInline>{`y(0) = 0`}</MathInline>: <MathInline>{`C = -100`}</MathInline>.
+          Initial condition <InlineMath>{`y(0) = 0`}</InlineMath>: <InlineMath>{`C = -100`}</InlineMath>.
         </p>
         <MathBlock>{`y(t) = 100(1 - e^{-t/50})`}</MathBlock>
-        <p>At <MathInline>{`t = 30`}</MathInline>:</p>
+        <p>At <InlineMath>{`t = 30`}</InlineMath>:</p>
         <MathBlock>{`y(30) = 100(1 - e^{-0.6}) \\approx 45.1 \\text{ kg}`}</MathBlock>
         <p>
-          Note: As <MathInline>{`t \\to \\infty`}</MathInline>, <MathInline>{`y \\to 100`}</MathInline> kg,
+          Note: As <InlineMath>{`t \\to \\infty`}</InlineMath>, <InlineMath>{`y \\to 100`}</InlineMath> kg,
           which is the equilibrium (0.5 kg/L × 200 L).
         </p>
       </Callout>
@@ -244,22 +244,22 @@ export default function Section54() {
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Volume changes: <MathInline>{`V(t) = 100 + (3-2)t = 100 + t`}</MathInline> L.
+          Volume changes: <InlineMath>{`V(t) = 100 + (3-2)t = 100 + t`}</InlineMath> L.
         </p>
         <ul className="list-disc pl-6 space-y-1">
-          <li>Rate in: <MathInline>{`3 \\times 1 = 3`}</MathInline> kg/min</li>
-          <li>Rate out: <MathInline>{`2 \\times \\frac{y}{100+t}`}</MathInline> kg/min</li>
+          <li>Rate in: <InlineMath>{`3 \\times 1 = 3`}</InlineMath> kg/min</li>
+          <li>Rate out: <InlineMath>{`2 \\times \\frac{y}{100+t}`}</InlineMath> kg/min</li>
         </ul>
         <MathBlock>{`\\frac{dy}{dt} = 3 - \\frac{2y}{100+t}`}</MathBlock>
-        <p>Standard form: <MathInline>{`y' + \\frac{2}{100+t}y = 3`}</MathInline></p>
+        <p>Standard form: <InlineMath>{`y' + \\frac{2}{100+t}y = 3`}</InlineMath></p>
         <p>
-          Integrating factor: <MathInline>{`\\mu = e^{2\\ln(100+t)} = (100+t)^2`}</MathInline>.
+          Integrating factor: <InlineMath>{`\\mu = e^{2\\ln(100+t)} = (100+t)^2`}</InlineMath>.
         </p>
         <MathBlock>{`((100+t)^2 y)' = 3(100+t)^2`}</MathBlock>
         <MathBlock>{`(100+t)^2 y = (100+t)^3 + C`}</MathBlock>
         <MathBlock>{`y = (100+t) + \\frac{C}{(100+t)^2}`}</MathBlock>
         <p>
-          Initial condition <MathInline>{`y(0) = 20`}</MathInline>:
+          Initial condition <InlineMath>{`y(0) = 20`}</InlineMath>:
         </p>
         <MathBlock>{`20 = 100 + \\frac{C}{10000} \\quad \\Rightarrow \\quad C = -800000`}</MathBlock>
         <MathBlock>{`y(t) = (100+t) - \\frac{800000}{(100+t)^2}`}</MathBlock>
@@ -269,7 +269,7 @@ export default function Section54() {
 
       <Callout type="theorem" title="Continuous Compounding">
         <p>
-          If money grows at annual rate <MathInline>{`r`}</MathInline> compounded continuously:
+          If money grows at annual rate <InlineMath>{`r`}</InlineMath> compounded continuously:
         </p>
         <MathBlock>{`\\frac{dA}{dt} = rA \\quad \\Rightarrow \\quad A(t) = A_0 e^{rt}`}</MathBlock>
       </Callout>
@@ -281,7 +281,7 @@ export default function Section54() {
         </p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`A(t) = 10000e^{0.05t}`}</MathBlock>
-        <p>Want <MathInline>{`A(t) = 20000`}</MathInline>:</p>
+        <p>Want <InlineMath>{`A(t) = 20000`}</InlineMath>:</p>
         <MathBlock>{`20000 = 10000e^{0.05t} \\quad \\Rightarrow \\quad e^{0.05t} = 2`}</MathBlock>
         <MathBlock>{`t = \\frac{\\ln 2}{0.05} = 20\\ln 2 \\approx 13.9 \\text{ years}`}</MathBlock>
       </Callout>
@@ -289,22 +289,22 @@ export default function Section54() {
       <h2>Summary</h2>
       <ul>
         <li>
-          <strong>Exponential model:</strong> <MathInline>{`dy/dt = ky`}</MathInline> has solution <MathInline>{`y = y_0 e^{kt}`}</MathInline>
+          <strong>Exponential model:</strong> <InlineMath>{`dy/dt = ky`}</InlineMath> has solution <InlineMath>{`y = y_0 e^{kt}`}</InlineMath>
         </li>
         <li>
-          <strong>Half-life:</strong> <MathInline>{`t_{1/2} = \\ln 2 / |k|`}</MathInline>
+          <strong>Half-life:</strong> <InlineMath>{`t_{1/2} = \\ln 2 / |k|`}</InlineMath>
         </li>
         <li>
-          <strong>Doubling time:</strong> <MathInline>{`t_d = \\ln 2 / k`}</MathInline> (for growth)
+          <strong>Doubling time:</strong> <InlineMath>{`t_d = \\ln 2 / k`}</InlineMath> (for growth)
         </li>
         <li>
-          <strong>Newton's cooling:</strong> <MathInline>{`T(t) = T_a + (T_0 - T_a)e^{-kt}`}</MathInline>
+          <strong>Newton's cooling:</strong> <InlineMath>{`T(t) = T_a + (T_0 - T_a)e^{-kt}`}</InlineMath>
         </li>
         <li>
           <strong>Mixing problems:</strong> Rate equation balances inflow and outflow
         </li>
         <li>
-          <strong>Compound interest:</strong> <MathInline>{`A = A_0 e^{rt}`}</MathInline> for continuous compounding
+          <strong>Compound interest:</strong> <InlineMath>{`A = A_0 e^{rt}`}</InlineMath> for continuous compounding
         </li>
         <li>
           <strong>General approach:</strong> Set up the differential equation from physical principles, then solve

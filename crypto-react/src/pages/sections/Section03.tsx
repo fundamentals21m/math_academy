@@ -1,9 +1,17 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section03Quiz } from '@/data/quizzes';
+
+// Pre-calculate clock positions to avoid Math shadowing issues
+const clockPositions = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num, i) => {
+  const angle = (i * 30 - 90) * (Math.PI / 180);
+  const x = 50 + 38 * Math.cos(angle);
+  const y = 50 + 38 * Math.sin(angle);
+  return { num, x, y };
+});
 
 export default function Section03() {
   return (
@@ -11,15 +19,15 @@ export default function Section03() {
       <h2>Modular Arithmetic: Clock Math</h2>
 
       <p>
-        Modular arithmetic is perhaps the most important mathematical tool in cryptography. 
+        Modular arithmetic is perhaps the most important mathematical tool in cryptography.
         The good news? You already understand it intuitively—it's just like telling time on a clock.
       </p>
 
       <h2>The Clock Analogy</h2>
 
       <p>
-        On a 12-hour clock, what time is it 3 hours after 11 o'clock? 
-        Not 14 o'clock—we "wrap around" to get 2 o'clock. 
+        On a 12-hour clock, what time is it 3 hours after 11 o'clock?
+        Not 14 o'clock—we "wrap around" to get 2 o'clock.
         This is modular arithmetic in action!
       </p>
 
@@ -27,11 +35,7 @@ export default function Section03() {
 
       <div className="flex justify-center my-8">
         <div className="relative w-48 h-48 rounded-full border-4 border-primary-500 bg-dark-800">
-          {[12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num, i) => {
-            const angle = (i * 30 - 90) * (globalThis.Math.PI / 180);
-            const x = 50 + 38 * globalThis.Math.cos(angle);
-            const y = 50 + 38 * globalThis.Math.sin(angle);
-            return (
+          {clockPositions.map(({ num, x, y }) => (
               <span
                 key={num}
                 className="absolute text-sm font-bold text-primary-400"
@@ -43,21 +47,20 @@ export default function Section03() {
               >
                 {num}
               </span>
-            );
-          })}
+            ))}
         </div>
       </div>
 
       <p>
-        When we add <Math>{`11 + 3`}</Math> on a 12-hour clock, we get 2. 
-        In mathematical notation, we write: <Math>{`11 + 3 \\equiv 2 \\pmod{12}`}</Math>
+        When we add <InlineMath>{`11 + 3`}</InlineMath> on a 12-hour clock, we get 2. 
+        In mathematical notation, we write: <InlineMath>{`11 + 3 \\equiv 2 \\pmod{12}`}</InlineMath>
       </p>
 
       <h2>The Mod Operation</h2>
 
       <Definition title="Modulo Operation">
-        For integers <Math>{`a`}</Math> and <Math>{`n`}</Math> (with <Math>{`n > 0`}</Math>), 
-        the expression <Math>{`a \\bmod n`}</Math> gives the <strong>remainder</strong> when <Math>{`a`}</Math> is divided by <Math>{`n`}</Math>.
+        For integers <InlineMath>{`a`}</InlineMath> and <InlineMath>{`n`}</InlineMath> (with <InlineMath>{`n > 0`}</InlineMath>), 
+        the expression <InlineMath>{`a \\bmod n`}</InlineMath> gives the <strong>remainder</strong> when <InlineMath>{`a`}</InlineMath> is divided by <InlineMath>{`n`}</InlineMath>.
       </Definition>
 
       <MathBlock>
@@ -65,27 +68,27 @@ export default function Section03() {
       </MathBlock>
 
       <p>
-        Here, <Math>{`q`}</Math> is the quotient and <Math>{`r`}</Math> is the remainder. 
-        The mod operation returns <Math>{`r`}</Math>.
+        Here, <InlineMath>{`q`}</InlineMath> is the quotient and <InlineMath>{`r`}</InlineMath> is the remainder. 
+        The mod operation returns <InlineMath>{`r`}</InlineMath>.
       </p>
 
       <Example>
-        <p>Calculate <Math>17 \bmod 5</Math>:</p>
+        <p>Calculate <InlineMath>{`17 \\bmod 5`}</InlineMath>:</p>
         <MathBlock>
           {`17 = 3 \\times 5 + 2`}
         </MathBlock>
         <p>
-          The remainder is 2, so <Math>17 \bmod 5 = 2</Math>
+          The remainder is 2, so <InlineMath>{`17 \\bmod 5 = 2`}</InlineMath>
         </p>
       </Example>
 
       <Example>
-        <p>Calculate <Math>25 \bmod 7</Math>:</p>
+        <p>Calculate <InlineMath>{`25 \\bmod 7`}</InlineMath>:</p>
         <MathBlock>
           {`25 = 3 \\times 7 + 4`}
         </MathBlock>
         <p>
-          The remainder is 4, so <Math>25 \bmod 7 = 4</Math>
+          The remainder is 4, so <InlineMath>{`25 \\bmod 7 = 4`}</InlineMath>
         </p>
       </Example>
 
@@ -98,21 +101,21 @@ export default function Section03() {
       </Callout>
 
       <Definition title="Mod with Negative Numbers">
-        For negative numbers, we want the result to be in the range <Math>[0, n-1]</Math>. 
-        If the standard remainder is negative, add <Math>n</Math> to make it positive.
+        For negative numbers, we want the result to be in the range <InlineMath>[0, n-1]</InlineMath>. 
+        If the standard remainder is negative, add <InlineMath>n</InlineMath> to make it positive.
       </Definition>
 
       <Example>
-        <p>Calculate <Math>-1 \bmod 5</Math>:</p>
+        <p>Calculate <InlineMath>{`-1 \\bmod 5`}</InlineMath>:</p>
         <p>
-          We need to find a number <Math>r</Math> where <Math>0 \le r {'<'} 5</Math> such 
-          that <Math>-1 = q \times 5 + r</Math>.
+          We need to find a number <InlineMath>{`r`}</InlineMath> where <InlineMath>{`0 \\le r < 5`}</InlineMath> such
+          that <InlineMath>{`-1 = q \\times 5 + r`}</InlineMath>.
         </p>
         <MathBlock>
           {`-1 = (-1) \\times 5 + 4`}
         </MathBlock>
         <p>
-          So <Math>-1 \bmod 5 = 4</Math>
+          So <InlineMath>{`-1 \\bmod 5 = 4`}</InlineMath>
         </p>
       </Example>
 
@@ -123,13 +126,13 @@ export default function Section03() {
       <h2>Congruence Notation</h2>
 
       <Definition title="Congruence">
-        We say <Math>a</Math> is <strong>congruent</strong> to <Math>b</Math> modulo <Math>n</Math>, 
-        written <Math>a \equiv b \pmod{n}</Math>, if <Math>n</Math> divides <Math>(a - b)</Math>.
+        We say <InlineMath>a</InlineMath> is <strong>congruent</strong> to <InlineMath>b</InlineMath> modulo <InlineMath>n</InlineMath>, 
+        written <InlineMath>{`a \\equiv b \\pmod{n}`}</InlineMath>, if <InlineMath>n</InlineMath> divides <InlineMath>(a - b)</InlineMath>.
       </Definition>
 
       <p>
-        Equivalently, <Math>a \equiv b \pmod{n}</Math> means <Math>a</Math> and <Math>b</Math> have 
-        the same remainder when divided by <Math>n</Math>.
+        Equivalently, <InlineMath>{`a \\equiv b \\pmod{n}`}</InlineMath> means <InlineMath>a</InlineMath> and <InlineMath>b</InlineMath> have 
+        the same remainder when divided by <InlineMath>n</InlineMath>.
       </p>
 
       <Example>
@@ -137,10 +140,10 @@ export default function Section03() {
           {`17 \\equiv 2 \\pmod{5}`}
         </MathBlock>
         <p>
-          Because <Math>17 - 2 = 15</Math>, and <Math>5</Math> divides <Math>15</Math>.
+          Because <InlineMath>17 - 2 = 15</InlineMath>, and <InlineMath>5</InlineMath> divides <InlineMath>15</InlineMath>.
         </p>
         <p className="mt-2">
-          Also, <Math>17 \bmod 5 = 2</Math> and <Math>2 \bmod 5 = 2</Math>—same remainder!
+          Also, <InlineMath>{`17 \\bmod 5 = 2`}</InlineMath> and <InlineMath>{`2 \\bmod 5 = 2`}</InlineMath>—same remainder!
         </p>
       </Example>
 
@@ -157,14 +160,14 @@ export default function Section03() {
       </Theorem>
 
       <p>
-        This means we can reduce numbers mod <Math>n</Math> at any point during a calculation, 
+        This means we can reduce numbers mod <InlineMath>n</InlineMath> at any point during a calculation, 
         which is crucial for handling large numbers in cryptography.
       </p>
 
       <h2>Powers Cycle in Mod</h2>
 
       <p>
-        An important property: when we raise a number to successive powers mod <Math>n</Math>, 
+        An important property: when we raise a number to successive powers mod <InlineMath>n</InlineMath>, 
         the results eventually repeat in a cycle.
       </p>
 
@@ -179,7 +182,7 @@ export default function Section03() {
           </div>
         </div>
         <p>
-          The pattern <Math>{`\\{2, 4, 1\\}`}</Math> repeats! This cycling behavior is 
+          The pattern <InlineMath>{`\\{2, 4, 1\\}`}</InlineMath> repeats! This cycling behavior is 
           fundamental to cryptographic algorithms.
         </p>
       </Example>

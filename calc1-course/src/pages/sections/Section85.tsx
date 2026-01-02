@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section85() {
@@ -8,7 +8,7 @@ export default function Section85() {
       <h1>Velocity and Acceleration</h1>
 
       <p>
-        When a particle moves along a curve described by <MathInline>{`\\mathbf{r}(t)`}</MathInline>, the
+        When a particle moves along a curve described by <InlineMath>{`\\mathbf{r}(t)`}</InlineMath>, the
         derivatives of this position function give us the <strong>velocity</strong> and <strong>acceleration</strong>—vector
         quantities that describe both the speed and direction of motion.
       </p>
@@ -17,7 +17,7 @@ export default function Section85() {
 
       <Callout type="definition" title="Velocity Vector">
         <p>
-          If <MathInline>{`\\mathbf{r}(t)`}</MathInline> is the position of a particle at time <MathInline>{`t`}</MathInline>,
+          If <InlineMath>{`\\mathbf{r}(t)`}</InlineMath> is the position of a particle at time <InlineMath>{`t`}</InlineMath>,
           the <strong>velocity</strong> is:
         </p>
         <MathBlock>{`\\mathbf{v}(t) = \\mathbf{r}'(t) = \\frac{d\\mathbf{r}}{dt}`}</MathBlock>
@@ -38,15 +38,15 @@ export default function Section85() {
 
       <Callout type="example" title="Circular Motion">
         <p>
-          A particle moves on a circle of radius <MathInline>{`R`}</MathInline> with constant angular
-          speed <MathInline>{`\\omega`}</MathInline>:
+          A particle moves on a circle of radius <InlineMath>{`R`}</InlineMath> with constant angular
+          speed <InlineMath>{`\\omega`}</InlineMath>:
         </p>
         <MathBlock>{`\\mathbf{r}(t) = (R\\cos(\\omega t), R\\sin(\\omega t))`}</MathBlock>
         <p><strong>Velocity:</strong></p>
         <MathBlock>{`\\mathbf{v}(t) = (-R\\omega\\sin(\\omega t), R\\omega\\cos(\\omega t))`}</MathBlock>
         <p><strong>Speed:</strong></p>
         <MathBlock>{`v = \\sqrt{R^2\\omega^2\\sin^2(\\omega t) + R^2\\omega^2\\cos^2(\\omega t)} = R\\omega`}</MathBlock>
-        <p>The speed is constant, equal to <MathInline>{`R\\omega`}</MathInline>.</p>
+        <p>The speed is constant, equal to <InlineMath>{`R\\omega`}</InlineMath>.</p>
       </Callout>
 
       <h2>Acceleration</h2>
@@ -66,21 +66,21 @@ export default function Section85() {
         <MathBlock>{`\\mathbf{a}(t) = (-R\\omega^2\\cos(\\omega t), -R\\omega^2\\sin(\\omega t)) = -\\omega^2\\mathbf{r}(t)`}</MathBlock>
         <p>
           The acceleration points toward the center (centripetal acceleration) with
-          magnitude <MathInline>{`|\\mathbf{a}| = R\\omega^2 = v^2/R`}</MathInline>.
+          magnitude <InlineMath>{`|\\mathbf{a}| = R\\omega^2 = v^2/R`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Projectile Motion">
         <p>
-          A projectile launched with initial velocity <MathInline>{`\\mathbf{v}_0 = (v_0\\cos\\theta, v_0\\sin\\theta)`}</MathInline> under
-          gravity <MathInline>{`g`}</MathInline>:
+          A projectile launched with initial velocity <InlineMath>{`\\mathbf{v}_0 = (v_0\\cos\\theta, v_0\\sin\\theta)`}</InlineMath> under
+          gravity <InlineMath>{`g`}</InlineMath>:
         </p>
         <MathBlock>{`\\mathbf{a}(t) = (0, -g)`}</MathBlock>
         <MathBlock>{`\\mathbf{v}(t) = (v_0\\cos\\theta, v_0\\sin\\theta - gt)`}</MathBlock>
         <MathBlock>{`\\mathbf{r}(t) = (v_0 t\\cos\\theta, v_0 t\\sin\\theta - \\frac{1}{2}gt^2)`}</MathBlock>
         <p>
-          The path is a parabola. Maximum height occurs when <MathInline>{`v_y = 0`}</MathInline>,
-          i.e., at <MathInline>{`t = v_0\\sin\\theta/g`}</MathInline>.
+          The path is a parabola. Maximum height occurs when <InlineMath>{`v_y = 0`}</InlineMath>,
+          i.e., at <InlineMath>{`t = v_0\\sin\\theta/g`}</InlineMath>.
         </p>
       </Callout>
 
@@ -98,16 +98,16 @@ export default function Section85() {
         <p>where:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <MathInline>{`\\mathbf{T}`}</MathInline> is the unit tangent vector
+            <InlineMath>{`\\mathbf{T}`}</InlineMath> is the unit tangent vector
           </li>
           <li>
-            <MathInline>{`\\mathbf{N}`}</MathInline> is the unit normal vector (perpendicular to <MathInline>{`\\mathbf{T}`}</MathInline>, pointing toward the center of curvature)
+            <InlineMath>{`\\mathbf{N}`}</InlineMath> is the unit normal vector (perpendicular to <InlineMath>{`\\mathbf{T}`}</InlineMath>, pointing toward the center of curvature)
           </li>
           <li>
-            <MathInline>{`a_T`}</MathInline> is the <strong>tangential acceleration</strong>
+            <InlineMath>{`a_T`}</InlineMath> is the <strong>tangential acceleration</strong>
           </li>
           <li>
-            <MathInline>{`a_N`}</MathInline> is the <strong>normal acceleration</strong>
+            <InlineMath>{`a_N`}</InlineMath> is the <strong>normal acceleration</strong>
           </li>
         </ul>
       </Callout>
@@ -117,24 +117,24 @@ export default function Section85() {
         <MathBlock>{`a_T = \\frac{d|\\mathbf{v}|}{dt} = \\frac{\\mathbf{v} \\cdot \\mathbf{a}}{|\\mathbf{v}|}`}</MathBlock>
         <p><strong>Normal acceleration</strong> (centripetal):</p>
         <MathBlock>{`a_N = \\sqrt{|\\mathbf{a}|^2 - a_T^2} = \\frac{|\\mathbf{v} \\times \\mathbf{a}|}{|\\mathbf{v}|}`}</MathBlock>
-        <p>Or in terms of curvature <MathInline>{`\\kappa`}</MathInline> and speed <MathInline>{`v`}</MathInline>:</p>
+        <p>Or in terms of curvature <InlineMath>{`\\kappa`}</InlineMath> and speed <InlineMath>{`v`}</InlineMath>:</p>
         <MathBlock>{`a_N = \\kappa v^2`}</MathBlock>
       </Callout>
 
       <Callout type="info" title="Physical Interpretation">
         <ul className="list-disc pl-6 space-y-2">
-          <li><MathInline>{`a_T`}</MathInline> changes the <strong>speed</strong>: speeding up (<MathInline>{`a_T > 0`}</MathInline>) or slowing down (<MathInline>{`a_T < 0`}</MathInline>)</li>
-          <li><MathInline>{`a_N`}</MathInline> changes the <strong>direction</strong>: it's always perpendicular to velocity and causes turning</li>
+          <li><InlineMath>{`a_T`}</InlineMath> changes the <strong>speed</strong>: speeding up (<InlineMath>{`a_T > 0`}</InlineMath>) or slowing down (<InlineMath>{`a_T < 0`}</InlineMath>)</li>
+          <li><InlineMath>{`a_N`}</InlineMath> changes the <strong>direction</strong>: it's always perpendicular to velocity and causes turning</li>
         </ul>
       </Callout>
 
       <Callout type="example" title="Computing Components">
         <p>
-          For <MathInline>{`\\mathbf{r}(t) = (t, t^2, t^3)`}</MathInline>, find <MathInline>{`a_T`}</MathInline> and <MathInline>{`a_N`}</MathInline> at <MathInline>{`t = 1`}</MathInline>.
+          For <InlineMath>{`\\mathbf{r}(t) = (t, t^2, t^3)`}</InlineMath>, find <InlineMath>{`a_T`}</InlineMath> and <InlineMath>{`a_N`}</InlineMath> at <InlineMath>{`t = 1`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`\\mathbf{v}(t) = (1, 2t, 3t^2), \\quad \\mathbf{a}(t) = (0, 2, 6t)`}</MathBlock>
-        <p>At <MathInline>{`t = 1`}</MathInline>:</p>
+        <p>At <InlineMath>{`t = 1`}</InlineMath>:</p>
         <MathBlock>{`\\mathbf{v}(1) = (1, 2, 3), \\quad \\mathbf{a}(1) = (0, 2, 6)`}</MathBlock>
         <MathBlock>{`|\\mathbf{v}| = \\sqrt{1 + 4 + 9} = \\sqrt{14}`}</MathBlock>
         <MathBlock>{`\\mathbf{v} \\cdot \\mathbf{a} = 0 + 4 + 18 = 22`}</MathBlock>
@@ -147,7 +147,7 @@ export default function Section85() {
 
       <Callout type="theorem" title="Constant Speed Motion">
         <p>
-          If a particle moves with constant speed (<MathInline>{`|\\mathbf{v}| = c`}</MathInline>), then:
+          If a particle moves with constant speed (<InlineMath>{`|\\mathbf{v}| = c`}</InlineMath>), then:
         </p>
         <MathBlock>{`a_T = 0, \\quad \\mathbf{a} = a_N\\mathbf{N}`}</MathBlock>
         <p>
@@ -156,10 +156,10 @@ export default function Section85() {
       </Callout>
 
       <Callout type="info" title="Proof">
-        <p>If <MathInline>{`|\\mathbf{v}|^2 = \\mathbf{v} \\cdot \\mathbf{v} = c^2`}</MathInline>, differentiate:</p>
+        <p>If <InlineMath>{`|\\mathbf{v}|^2 = \\mathbf{v} \\cdot \\mathbf{v} = c^2`}</InlineMath>, differentiate:</p>
         <MathBlock>{`\\frac{d}{dt}(\\mathbf{v} \\cdot \\mathbf{v}) = 2\\mathbf{v} \\cdot \\mathbf{a} = 0`}</MathBlock>
         <p>
-          So <MathInline>{`\\mathbf{v} \\cdot \\mathbf{a} = 0`}</MathInline>, meaning <MathInline>{`\\mathbf{a} \\perp \\mathbf{v}`}</MathInline>.
+          So <InlineMath>{`\\mathbf{v} \\cdot \\mathbf{a} = 0`}</InlineMath>, meaning <InlineMath>{`\\mathbf{a} \\perp \\mathbf{v}`}</InlineMath>.
         </p>
       </Callout>
 
@@ -177,8 +177,8 @@ export default function Section85() {
 
       <Callout type="example" title="Force on a Particle">
         <p>
-          A 2 kg particle moves along <MathInline>{`\\mathbf{r}(t) = (\\cos t, \\sin t, t)`}</MathInline>.
-          Find the force at <MathInline>{`t = 0`}</MathInline>.
+          A 2 kg particle moves along <InlineMath>{`\\mathbf{r}(t) = (\\cos t, \\sin t, t)`}</InlineMath>.
+          Find the force at <InlineMath>{`t = 0`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`\\mathbf{v}(t) = (-\\sin t, \\cos t, 1)`}</MathBlock>
@@ -191,27 +191,27 @@ export default function Section85() {
 
       <Callout type="example" title="Range of a Projectile">
         <p>
-          Find the range of a projectile launched at angle <MathInline>{`\\theta`}</MathInline> with
-          initial speed <MathInline>{`v_0`}</MathInline>.
+          Find the range of a projectile launched at angle <InlineMath>{`\\theta`}</InlineMath> with
+          initial speed <InlineMath>{`v_0`}</InlineMath>.
         </p>
-        <p><strong>Solution:</strong> The projectile lands when <MathInline>{`y = 0`}</MathInline>:</p>
+        <p><strong>Solution:</strong> The projectile lands when <InlineMath>{`y = 0`}</InlineMath>:</p>
         <MathBlock>{`v_0 t\\sin\\theta - \\frac{1}{2}gt^2 = 0`}</MathBlock>
         <MathBlock>{`t(v_0\\sin\\theta - \\frac{1}{2}gt) = 0`}</MathBlock>
-        <p>Landing time: <MathInline>{`t = \\frac{2v_0\\sin\\theta}{g}`}</MathInline></p>
+        <p>Landing time: <InlineMath>{`t = \\frac{2v_0\\sin\\theta}{g}`}</InlineMath></p>
         <p>Range:</p>
         <MathBlock>{`R = v_0\\cos\\theta \\cdot \\frac{2v_0\\sin\\theta}{g} = \\frac{v_0^2 \\sin(2\\theta)}{g}`}</MathBlock>
         <p>
-          Maximum range occurs at <MathInline>{`\\theta = 45°`}</MathInline>, giving <MathInline>{`R_{\\max} = v_0^2/g`}</MathInline>.
+          Maximum range occurs at <InlineMath>{`\\theta = 45°`}</InlineMath>, giving <InlineMath>{`R_{\\max} = v_0^2/g`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Centripetal Force">
         <p>
-          A car of mass <MathInline>{`m`}</MathInline> rounds a curve of radius <MathInline>{`R`}</MathInline> at
-          speed <MathInline>{`v`}</MathInline>. What friction force is required?
+          A car of mass <InlineMath>{`m`}</InlineMath> rounds a curve of radius <InlineMath>{`R`}</InlineMath> at
+          speed <InlineMath>{`v`}</InlineMath>. What friction force is required?
         </p>
         <p><strong>Solution:</strong></p>
-        <p>The normal acceleration is <MathInline>{`a_N = v^2/R`}</MathInline>.</p>
+        <p>The normal acceleration is <InlineMath>{`a_N = v^2/R`}</InlineMath>.</p>
         <p>The required centripetal force is:</p>
         <MathBlock>{`F = ma_N = \\frac{mv^2}{R}`}</MathBlock>
         <p>This force must be provided by friction between the tires and road.</p>
@@ -230,8 +230,8 @@ export default function Section85() {
 
       <Callout type="info" title="Conservation of Angular Momentum">
         <p>
-          This is equivalent to conservation of angular momentum <MathInline>{`\\mathbf{L} = m\\mathbf{r} \\times \\mathbf{v}`}</MathInline>.
-          For a central force, <MathInline>{`\\mathbf{F} \\parallel \\mathbf{r}`}</MathInline>, so:
+          This is equivalent to conservation of angular momentum <InlineMath>{`\\mathbf{L} = m\\mathbf{r} \\times \\mathbf{v}`}</InlineMath>.
+          For a central force, <InlineMath>{`\\mathbf{F} \\parallel \\mathbf{r}`}</InlineMath>, so:
         </p>
         <MathBlock>{`\\frac{d\\mathbf{L}}{dt} = \\mathbf{r} \\times \\mathbf{F} = \\mathbf{0}`}</MathBlock>
       </Callout>
@@ -239,15 +239,15 @@ export default function Section85() {
       <h2>Summary</h2>
 
       <Callout type="info" title="Key Formulas">
-        <p><strong>Position:</strong> <MathInline>{`\\mathbf{r}(t)`}</MathInline></p>
-        <p><strong>Velocity:</strong> <MathInline>{`\\mathbf{v}(t) = \\mathbf{r}'(t)`}</MathInline></p>
-        <p><strong>Speed:</strong> <MathInline>{`v = |\\mathbf{v}|`}</MathInline></p>
-        <p><strong>Acceleration:</strong> <MathInline>{`\\mathbf{a}(t) = \\mathbf{v}'(t) = \\mathbf{r}''(t)`}</MathInline></p>
-        <p><strong>Decomposition:</strong> <MathInline>{`\\mathbf{a} = a_T\\mathbf{T} + a_N\\mathbf{N}`}</MathInline></p>
-        <p><strong>Tangential:</strong> <MathInline>{`a_T = \\frac{\\mathbf{v} \\cdot \\mathbf{a}}{|\\mathbf{v}|} = \\frac{dv}{dt}`}</MathInline></p>
-        <p><strong>Normal:</strong> <MathInline>{`a_N = \\kappa v^2 = \\frac{v^2}{R}`}</MathInline> (for circular arc of radius <MathInline>{`R`}</MathInline>)</p>
-        <p><strong>Newton's law:</strong> <MathInline>{`\\mathbf{F} = m\\mathbf{a}`}</MathInline></p>
-        <p><strong>Projectile range:</strong> <MathInline>{`R = \\frac{v_0^2\\sin(2\\theta)}{g}`}</MathInline></p>
+        <p><strong>Position:</strong> <InlineMath>{`\\mathbf{r}(t)`}</InlineMath></p>
+        <p><strong>Velocity:</strong> <InlineMath>{`\\mathbf{v}(t) = \\mathbf{r}'(t)`}</InlineMath></p>
+        <p><strong>Speed:</strong> <InlineMath>{`v = |\\mathbf{v}|`}</InlineMath></p>
+        <p><strong>Acceleration:</strong> <InlineMath>{`\\mathbf{a}(t) = \\mathbf{v}'(t) = \\mathbf{r}''(t)`}</InlineMath></p>
+        <p><strong>Decomposition:</strong> <InlineMath>{`\\mathbf{a} = a_T\\mathbf{T} + a_N\\mathbf{N}`}</InlineMath></p>
+        <p><strong>Tangential:</strong> <InlineMath>{`a_T = \\frac{\\mathbf{v} \\cdot \\mathbf{a}}{|\\mathbf{v}|} = \\frac{dv}{dt}`}</InlineMath></p>
+        <p><strong>Normal:</strong> <InlineMath>{`a_N = \\kappa v^2 = \\frac{v^2}{R}`}</InlineMath> (for circular arc of radius <InlineMath>{`R`}</InlineMath>)</p>
+        <p><strong>Newton's law:</strong> <InlineMath>{`\\mathbf{F} = m\\mathbf{a}`}</InlineMath></p>
+        <p><strong>Projectile range:</strong> <InlineMath>{`R = \\frac{v_0^2\\sin(2\\theta)}{g}`}</InlineMath></p>
       </Callout>
     </LessonLayout>
   );

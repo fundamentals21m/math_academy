@@ -1,28 +1,28 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section12() {
   return (
     <LessonLayout sectionId={12}>
       {/* Introduction */}
       <p>
-        The <strong>nullspace</strong> of a matrix <Math>A</Math> contains all solutions to <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math>.
-        It is a subspace that tells us about the "hidden" structure of <Math>A</Math>.
+        The <strong>nullspace</strong> of a matrix <InlineMath>A</InlineMath> contains all solutions to <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath>.
+        It is a subspace that tells us about the "hidden" structure of <InlineMath>A</InlineMath>.
       </p>
 
       <h2>Definition of the Nullspace</h2>
 
       <Definition title="Nullspace" className="my-6">
         <p>
-          The <strong>nullspace</strong> of <Math>A</Math>, written <Math>N(A)</Math>, is the set of all solutions
-          to <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math>:
+          The <strong>nullspace</strong> of <InlineMath>A</InlineMath>, written <InlineMath>N(A)</InlineMath>, is the set of all solutions
+          to <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath>:
         </p>
         <MathBlock>
           {`N(A) = \\{ \\mathbf{x} : A\\mathbf{x} = \\mathbf{0} \\}`}
         </MathBlock>
         <p className="mt-2">
-          The nullspace is always a subspace of <Math>{`\\mathbf{R}^n`}</Math> (where <Math>A</Math> is <Math>m \times n</Math>).
+          The nullspace is always a subspace of <InlineMath>{`\\mathbf{R}^n`}</InlineMath> (where <InlineMath>A</InlineMath> is <InlineMath>m \times n</InlineMath>).
         </p>
       </Definition>
 
@@ -32,18 +32,18 @@ export default function Section12() {
           {`A\\mathbf{x} = \\begin{bmatrix} 1 & 2 \\\\ 3 & 8 \\end{bmatrix}\\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Elimination gives <Math>x_1 = 0</Math> and <Math>x_2 = 0</Math>. The nullspace is <Math>{`N(A) = \\mathbf{Z}`}</Math> (just the zero vector).
+          Elimination gives <InlineMath>x_1 = 0</InlineMath> and <InlineMath>x_2 = 0</InlineMath>. The nullspace is <InlineMath>{`N(A) = \\mathbf{Z}`}</InlineMath> (just the zero vector).
         </p>
         <p className="mt-2 text-primary-400">
-          <Math>A</Math> is invertible, so the only solution to <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math> is <Math>{`\\mathbf{x} = \\mathbf{0}`}</Math>.
+          <InlineMath>A</InlineMath> is invertible, so the only solution to <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath> is <InlineMath>{`\\mathbf{x} = \\mathbf{0}`}</InlineMath>.
         </p>
       </Example>
 
       <h2>Rectangular Matrices and Free Variables</h2>
 
       <p>
-        When <Math>A</Math> has more columns than rows (more unknowns than equations), the nullspace is bigger
-        than just <Math>{`\\mathbf{0}`}</Math>. Some variables are <strong>free</strong>.
+        When <InlineMath>A</InlineMath> has more columns than rows (more unknowns than equations), the nullspace is bigger
+        than just <InlineMath>{`\\mathbf{0}`}</InlineMath>. Some variables are <strong>free</strong>.
       </p>
 
       <Example title="Nullspace with Free Variables" className="my-6">
@@ -54,10 +54,10 @@ export default function Section12() {
           Pivots are in columns 1 and 2. Columns 3 and 4 are <strong>free columns</strong>.
         </p>
         <p className="mt-2">
-          Set <Math>x_3 = 1, x_4 = 0</Math>: special solution <Math>{`\\mathbf{s}_1 = (-2, 0, 1, 0)`}</Math>
+          Set <InlineMath>x_3 = 1, x_4 = 0</InlineMath>: special solution <InlineMath>{`\\mathbf{s}_1 = (-2, 0, 1, 0)`}</InlineMath>
         </p>
         <p className="mt-2">
-          Set <Math>x_3 = 0, x_4 = 1</Math>: special solution <Math>{`\\mathbf{s}_2 = (0, -2, 0, 1)`}</Math>
+          Set <InlineMath>x_3 = 0, x_4 = 1</InlineMath>: special solution <InlineMath>{`\\mathbf{s}_2 = (0, -2, 0, 1)`}</InlineMath>
         </p>
       </Example>
 
@@ -65,7 +65,7 @@ export default function Section12() {
 
       <Definition title="Reduced Row Echelon Form (RREF)" className="my-6">
         <p>
-          The <strong>reduced row echelon form</strong> <Math>{`R = \\text{rref}(A)`}</Math> has:
+          The <strong>reduced row echelon form</strong> <InlineMath>{`R = \\text{rref}(A)`}</InlineMath> has:
         </p>
         <ol className="list-decimal list-inside mt-2 space-y-1">
           <li>Zeros <strong>above</strong> and below each pivot</li>
@@ -75,7 +75,7 @@ export default function Section12() {
           {`R = \\begin{bmatrix} 1 & 0 & 2 & 0 \\\\ 0 & 1 & 0 & 2 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          The pivot columns of <Math>R</Math> contain the identity matrix <Math>I</Math>.
+          The pivot columns of <InlineMath>R</InlineMath> contain the identity matrix <InlineMath>I</InlineMath>.
         </p>
       </Definition>
 
@@ -84,15 +84,15 @@ export default function Section12() {
         className="my-6"
         proof={
           <>
-            <p>In the reduced row echelon form <Math>R</Math>, each pivot column contains exactly one 1 (the pivot) with zeros elsewhere. The remaining <Math>n - r</Math> columns are free columns.</p>
-            <p className="mt-2">To solve <Math>{`R\\mathbf{x} = \\mathbf{0}`}</Math>, we can assign any value to a free variable. Setting one free variable to 1 and all others to 0 forces specific values for the pivot variables (determined by the free column).</p>
-            <p className="mt-2">This gives <Math>n - r</Math> linearly independent special solutions—one for each free variable. Any solution to <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math> is a linear combination of these special solutions, so <Math>{`\\dim N(A) = n - r`}</Math>.</p>
+            <p>In the reduced row echelon form <InlineMath>R</InlineMath>, each pivot column contains exactly one 1 (the pivot) with zeros elsewhere. The remaining <InlineMath>n - r</InlineMath> columns are free columns.</p>
+            <p className="mt-2">To solve <InlineMath>{`R\\mathbf{x} = \\mathbf{0}`}</InlineMath>, we can assign any value to a free variable. Setting one free variable to 1 and all others to 0 forces specific values for the pivot variables (determined by the free column).</p>
+            <p className="mt-2">This gives <InlineMath>n - r</InlineMath> linearly independent special solutions—one for each free variable. Any solution to <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath> is a linear combination of these special solutions, so <InlineMath>{`\\dim N(A) = n - r`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          If <Math>R</Math> has <Math>r</Math> pivots in an <Math>m \times n</Math> matrix, there are <Math>n - r</Math> free
-          variables and <Math>n - r</Math> special solutions in the nullspace.
+          If <InlineMath>R</InlineMath> has <InlineMath>r</InlineMath> pivots in an <InlineMath>m \times n</InlineMath> matrix, there are <InlineMath>n - r</InlineMath> free
+          variables and <InlineMath>n - r</InlineMath> special solutions in the nullspace.
         </p>
         <MathBlock>
           {`\\dim N(A) = n - r`}
@@ -103,8 +103,8 @@ export default function Section12() {
 
       <Definition title="Nullspace Matrix N" className="my-6">
         <p>
-          The columns of the <strong>nullspace matrix</strong> <Math>N</Math> are the special solutions.
-          Every solution to <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math> is a combination of these columns:
+          The columns of the <strong>nullspace matrix</strong> <InlineMath>N</InlineMath> are the special solutions.
+          Every solution to <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath> is a combination of these columns:
         </p>
         <MathBlock>
           {`\\mathbf{x} = c_1\\mathbf{s}_1 + c_2\\mathbf{s}_2 + \\cdots + c_{n-r}\\mathbf{s}_{n-r}`}
@@ -117,11 +117,11 @@ export default function Section12() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>The nullspace <Math>N(A)</Math> is all solutions to <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math>. It is a subspace of <Math>{`\\mathbf{R}^n`}</Math>.</span>
+            <span>The nullspace <InlineMath>N(A)</InlineMath> is all solutions to <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath>. It is a subspace of <InlineMath>{`\\mathbf{R}^n`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Elimination produces the echelon form <Math>U</Math> and (going further) <Math>{`R = \\text{rref}(A)`}</Math>.</span>
+            <span>Elimination produces the echelon form <InlineMath>U</InlineMath> and (going further) <InlineMath>{`R = \\text{rref}(A)`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
@@ -129,11 +129,11 @@ export default function Section12() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>Each free variable produces one <strong>special solution</strong> to <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math>.</span>
+            <span>Each free variable produces one <strong>special solution</strong> to <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>If there are <Math>r</Math> pivots, the nullspace has dimension <Math>n - r</Math>.</span>
+            <span>If there are <InlineMath>r</InlineMath> pivots, the nullspace has dimension <InlineMath>n - r</InlineMath>.</span>
           </li>
         </ul>
       </div>

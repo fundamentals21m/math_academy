@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section10() {
   return (
@@ -17,9 +17,9 @@ export default function Section10() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Extending Integration Beyond Step Functions</h2>
 
       <p className="text-dark-200 mb-4">
-        The strategy is simple: approximate a function <MathInline>{'f'}</MathInline> from
-        below by step functions <MathInline>{'s'}</MathInline> and from above by step functions{' '}
-        <MathInline>{'t'}</MathInline>, so that:
+        The strategy is simple: approximate a function <InlineMath>{'f'}</InlineMath> from
+        below by step functions <InlineMath>{'s'}</InlineMath> and from above by step functions{' '}
+        <InlineMath>{'t'}</InlineMath>, so that:
       </p>
 
       <MathBlock>{'s(x) \\leq f(x) \\leq t(x)'}</MathBlock>
@@ -31,38 +31,38 @@ export default function Section10() {
       <MathBlock>{'\\int_a^b s(x)\\,dx \\leq \\int_a^b t(x)\\,dx'}</MathBlock>
 
       <p className="text-dark-200 mb-6">
-        If the integral of <MathInline>{'f'}</MathInline> is to satisfy the comparison theorem,
-        it must lie between <MathInline>{'\\int_a^b s(x)\\,dx'}</MathInline> and{' '}
-        <MathInline>{'\\int_a^b t(x)\\,dx'}</MathInline> for <em>every</em> such pair{' '}
-        <MathInline>{'s'}</MathInline> and <MathInline>{'t'}</MathInline>. If there is exactly
-        one such number, we define it to be the integral of <MathInline>{'f'}</MathInline>.
+        If the integral of <InlineMath>{'f'}</InlineMath> is to satisfy the comparison theorem,
+        it must lie between <InlineMath>{'\\int_a^b s(x)\\,dx'}</InlineMath> and{' '}
+        <InlineMath>{'\\int_a^b t(x)\\,dx'}</InlineMath> for <em>every</em> such pair{' '}
+        <InlineMath>{'s'}</InlineMath> and <InlineMath>{'t'}</InlineMath>. If there is exactly
+        one such number, we define it to be the integral of <InlineMath>{'f'}</InlineMath>.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Bounded Functions</h2>
 
       <p className="text-dark-200 mb-4">
         There's one obstacle: not every function can be approximated from above and below
-        by step functions. Consider <MathInline>{'f(x) = 1/x'}</MathInline> near the origin—it
+        by step functions. Consider <InlineMath>{'f(x) = 1/x'}</InlineMath> near the origin—it
         takes arbitrarily large values, so no step function can bound it from above.
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Bounded Function</p>
         <p className="mb-2">
-          A function <MathInline>{'f'}</MathInline> is <strong>bounded</strong> on{' '}
-          <MathInline>{'[a, b]'}</MathInline> if there exists a number <MathInline>{'M > 0'}</MathInline>{' '}
+          A function <InlineMath>{'f'}</InlineMath> is <strong>bounded</strong> on{' '}
+          <InlineMath>{'[a, b]'}</InlineMath> if there exists a number <InlineMath>{'M > 0'}</InlineMath>{' '}
           such that:
         </p>
         <MathBlock>{'-M \\leq f(x) \\leq M \\quad \\text{for every } x \\in [a, b]'}</MathBlock>
         <p className="mt-2">
-          Equivalently, <MathInline>{'|f(x)| \\leq M'}</MathInline> for all{' '}
-          <MathInline>{'x'}</MathInline> in <MathInline>{'[a, b]'}</MathInline>.
+          Equivalently, <InlineMath>{'|f(x)| \\leq M'}</InlineMath> for all{' '}
+          <InlineMath>{'x'}</InlineMath> in <InlineMath>{'[a, b]'}</InlineMath>.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-6">
         Geometrically, a bounded function's graph lies between the horizontal lines{' '}
-        <MathInline>{'y = -M'}</MathInline> and <MathInline>{'y = M'}</MathInline>. We can
+        <InlineMath>{'y = -M'}</InlineMath> and <InlineMath>{'y = M'}</InlineMath>. We can
         always surround such a function by step functions.
       </p>
 
@@ -71,31 +71,31 @@ export default function Section10() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Integral of a Bounded Function</p>
         <p className="mb-2">
-          Let <MathInline>{'f'}</MathInline> be bounded on <MathInline>{'[a, b]'}</MathInline>.
-          Let <MathInline>{'s'}</MathInline> and <MathInline>{'t'}</MathInline> denote arbitrary
-          step functions on <MathInline>{'[a, b]'}</MathInline> satisfying:
+          Let <InlineMath>{'f'}</InlineMath> be bounded on <InlineMath>{'[a, b]'}</InlineMath>.
+          Let <InlineMath>{'s'}</InlineMath> and <InlineMath>{'t'}</InlineMath> denote arbitrary
+          step functions on <InlineMath>{'[a, b]'}</InlineMath> satisfying:
         </p>
         <MathBlock>{'s(x) \\leq f(x) \\leq t(x) \\quad \\text{for every } x \\in [a, b]'}</MathBlock>
         <p className="mt-2 mb-2">
-          If there is <strong>one and only one</strong> number <MathInline>{'I'}</MathInline> such that:
+          If there is <strong>one and only one</strong> number <InlineMath>{'I'}</InlineMath> such that:
         </p>
         <MathBlock>{'\\int_a^b s(x)\\,dx \\leq I \\leq \\int_a^b t(x)\\,dx'}</MathBlock>
         <p className="mt-2">
-          for every pair of step functions <MathInline>{'s'}</MathInline> and{' '}
-          <MathInline>{'t'}</MathInline> satisfying the above inequalities, then{' '}
-          <MathInline>{'I'}</MathInline> is called the <strong>integral</strong> of{' '}
-          <MathInline>{'f'}</MathInline> from <MathInline>{'a'}</MathInline> to{' '}
-          <MathInline>{'b'}</MathInline>, denoted <MathInline>{'\\int_a^b f(x)\\,dx'}</MathInline>.
+          for every pair of step functions <InlineMath>{'s'}</InlineMath> and{' '}
+          <InlineMath>{'t'}</InlineMath> satisfying the above inequalities, then{' '}
+          <InlineMath>{'I'}</InlineMath> is called the <strong>integral</strong> of{' '}
+          <InlineMath>{'f'}</InlineMath> from <InlineMath>{'a'}</InlineMath> to{' '}
+          <InlineMath>{'b'}</InlineMath>, denoted <InlineMath>{'\\int_a^b f(x)\\,dx'}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info">
         <p className="font-semibold mb-2">Terminology</p>
         <ul className="list-disc list-inside space-y-1">
-          <li>When such an <MathInline>{'I'}</MathInline> exists, <MathInline>{'f'}</MathInline> is said to be <strong>integrable</strong> on <MathInline>{'[a, b]'}</MathInline></li>
-          <li>The function <MathInline>{'f'}</MathInline> is called the <strong>integrand</strong></li>
-          <li>The numbers <MathInline>{'a'}</MathInline> and <MathInline>{'b'}</MathInline> are the <strong>limits of integration</strong></li>
-          <li>The interval <MathInline>{'[a, b]'}</MathInline> is the <strong>interval of integration</strong></li>
+          <li>When such an <InlineMath>{'I'}</InlineMath> exists, <InlineMath>{'f'}</InlineMath> is said to be <strong>integrable</strong> on <InlineMath>{'[a, b]'}</InlineMath></li>
+          <li>The function <InlineMath>{'f'}</InlineMath> is called the <strong>integrand</strong></li>
+          <li>The numbers <InlineMath>{'a'}</InlineMath> and <InlineMath>{'b'}</InlineMath> are the <strong>limits of integration</strong></li>
+          <li>The interval <InlineMath>{'[a, b]'}</InlineMath> is the <strong>interval of integration</strong></li>
         </ul>
       </Callout>
 
@@ -103,10 +103,10 @@ export default function Section10() {
 
       <p className="text-dark-200 mb-4">
         To analyze when a function is integrable, we introduce two key concepts. Assume{' '}
-        <MathInline>{'f'}</MathInline> is bounded on <MathInline>{'[a, b]'}</MathInline>.
-        We write <MathInline>{'s \\leq f \\leq t'}</MathInline> to mean <MathInline>{'s'}</MathInline>{' '}
-        is <em>below</em> <MathInline>{'f'}</MathInline> and <MathInline>{'t'}</MathInline> is{' '}
-        <em>above</em> <MathInline>{'f'}</MathInline>.
+        <InlineMath>{'f'}</InlineMath> is bounded on <InlineMath>{'[a, b]'}</InlineMath>.
+        We write <InlineMath>{'s \\leq f \\leq t'}</InlineMath> to mean <InlineMath>{'s'}</InlineMath>{' '}
+        is <em>below</em> <InlineMath>{'f'}</InlineMath> and <InlineMath>{'t'}</InlineMath> is{' '}
+        <em>above</em> <InlineMath>{'f'}</InlineMath>.
       </p>
 
       <p className="text-dark-200 mb-4">
@@ -118,20 +118,20 @@ export default function Section10() {
       <MathBlock>{'T = \\left\\{ \\int_a^b t(x)\\,dx \\,\\Big|\\, f \\leq t \\right\\}'}</MathBlock>
 
       <p className="text-dark-200 mb-4">
-        Both sets are nonempty (since <MathInline>{'f'}</MathInline> is bounded), and every
-        number in <MathInline>{'S'}</MathInline> is less than every number in{' '}
-        <MathInline>{'T'}</MathInline>. By the completeness axiom, <MathInline>{'S'}</MathInline>{' '}
-        has a supremum and <MathInline>{'T'}</MathInline> has an infimum.
+        Both sets are nonempty (since <InlineMath>{'f'}</InlineMath> is bounded), and every
+        number in <InlineMath>{'S'}</InlineMath> is less than every number in{' '}
+        <InlineMath>{'T'}</InlineMath>. By the completeness axiom, <InlineMath>{'S'}</InlineMath>{' '}
+        has a supremum and <InlineMath>{'T'}</InlineMath> has an infimum.
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Lower and Upper Integrals</p>
         <p className="mb-2">
-          The <strong>lower integral</strong> of <MathInline>{'f'}</MathInline> is:
+          The <strong>lower integral</strong> of <InlineMath>{'f'}</InlineMath> is:
         </p>
         <MathBlock>{'\\underline{I}(f) = \\sup \\left\\{ \\int_a^b s(x)\\,dx \\,\\Big|\\, s \\leq f \\right\\}'}</MathBlock>
         <p className="mt-3 mb-2">
-          The <strong>upper integral</strong> of <MathInline>{'f'}</MathInline> is:
+          The <strong>upper integral</strong> of <InlineMath>{'f'}</InlineMath> is:
         </p>
         <MathBlock>{'\\overline{I}(f) = \\inf \\left\\{ \\int_a^b t(x)\\,dx \\,\\Big|\\, f \\leq t \\right\\}'}</MathBlock>
       </Callout>
@@ -141,29 +141,29 @@ export default function Section10() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.9</p>
         <p className="mb-2">
-          Every bounded function <MathInline>{'f'}</MathInline> on <MathInline>{'[a, b]'}</MathInline>{' '}
-          has a lower integral <MathInline>{'\\underline{I}(f)'}</MathInline> and an upper integral{' '}
-          <MathInline>{'\\overline{I}(f)'}</MathInline> satisfying:
+          Every bounded function <InlineMath>{'f'}</InlineMath> on <InlineMath>{'[a, b]'}</InlineMath>{' '}
+          has a lower integral <InlineMath>{'\\underline{I}(f)'}</InlineMath> and an upper integral{' '}
+          <InlineMath>{'\\overline{I}(f)'}</InlineMath> satisfying:
         </p>
         <MathBlock>{'\\int_a^b s(x)\\,dx \\leq \\underline{I}(f) \\leq \\overline{I}(f) \\leq \\int_a^b t(x)\\,dx'}</MathBlock>
         <p className="mt-2 mb-2">
-          for all step functions <MathInline>{'s'}</MathInline> and <MathInline>{'t'}</MathInline>{' '}
-          with <MathInline>{'s \\leq f \\leq t'}</MathInline>.
+          for all step functions <InlineMath>{'s'}</InlineMath> and <InlineMath>{'t'}</InlineMath>{' '}
+          with <InlineMath>{'s \\leq f \\leq t'}</InlineMath>.
         </p>
         <p>
-          The function <MathInline>{'f'}</MathInline> is <strong>integrable</strong> on{' '}
-          <MathInline>{'[a, b]'}</MathInline> if and only if:
+          The function <InlineMath>{'f'}</InlineMath> is <strong>integrable</strong> on{' '}
+          <InlineMath>{'[a, b]'}</InlineMath> if and only if:
         </p>
         <MathBlock>{'\\underline{I}(f) = \\overline{I}(f)'}</MathBlock>
         <p className="mt-2">
-          in which case <MathInline>{'\\int_a^b f(x)\\,dx = \\underline{I}(f) = \\overline{I}(f)'}</MathInline>.
+          in which case <InlineMath>{'\\int_a^b f(x)\\,dx = \\underline{I}(f) = \\overline{I}(f)'}</InlineMath>.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-6">
         The key insight: a bounded function is integrable precisely when its upper and lower
         integrals coincide. The "gap" between them measures how well step functions can
-        approximate <MathInline>{'f'}</MathInline>.
+        approximate <InlineMath>{'f'}</InlineMath>.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Geometric Interpretation</h2>
@@ -175,23 +175,23 @@ export default function Section10() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.10 (Area of Ordinate Set)</p>
         <p className="mb-2">
-          Let <MathInline>{'f'}</MathInline> be a nonnegative function, integrable on{' '}
-          <MathInline>{'[a, b]'}</MathInline>. Let <MathInline>{'Q'}</MathInline> be the ordinate
-          set of <MathInline>{'f'}</MathInline>:
+          Let <InlineMath>{'f'}</InlineMath> be a nonnegative function, integrable on{' '}
+          <InlineMath>{'[a, b]'}</InlineMath>. Let <InlineMath>{'Q'}</InlineMath> be the ordinate
+          set of <InlineMath>{'f'}</InlineMath>:
         </p>
         <MathBlock>{'Q = \\{(x, y) \\mid a \\leq x \\leq b, \\, 0 \\leq y \\leq f(x)\\}'}</MathBlock>
         <p className="mt-2">
-          Then <MathInline>{'Q'}</MathInline> is measurable and its area equals{' '}
-          <MathInline>{'\\int_a^b f(x)\\,dx'}</MathInline>.
+          Then <InlineMath>{'Q'}</InlineMath> is measurable and its area equals{' '}
+          <InlineMath>{'\\int_a^b f(x)\\,dx'}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.11 (Graph Has Zero Area)</p>
         <p>
-          Let <MathInline>{'f'}</MathInline> be a nonnegative, integrable function on{' '}
-          <MathInline>{'[a, b]'}</MathInline>. The graph of <MathInline>{'f'}</MathInline>,
-          namely <MathInline>{'\\{(x, y) \\mid a \\leq x \\leq b, \\, y = f(x)\\}'}</MathInline>,
+          Let <InlineMath>{'f'}</InlineMath> be a nonnegative, integrable function on{' '}
+          <InlineMath>{'[a, b]'}</InlineMath>. The graph of <InlineMath>{'f'}</InlineMath>,
+          namely <InlineMath>{'\\{(x, y) \\mid a \\leq x \\leq b, \\, y = f(x)\\}'}</InlineMath>,
           is measurable and has area equal to 0.
         </p>
       </Callout>
@@ -206,12 +206,12 @@ export default function Section10() {
         <p className="font-semibold mb-2">Integration Conventions</p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            If <MathInline>{'a < b'}</MathInline>, then:{' '}
-            <MathInline>{'\\int_b^a f(x)\\,dx = -\\int_a^b f(x)\\,dx'}</MathInline>
+            If <InlineMath>{'a < b'}</InlineMath>, then:{' '}
+            <InlineMath>{'\\int_b^a f(x)\\,dx = -\\int_a^b f(x)\\,dx'}</InlineMath>
           </li>
           <li>
-            For any <MathInline>{'a'}</MathInline>:{' '}
-            <MathInline>{'\\int_a^a f(x)\\,dx = 0'}</MathInline>
+            For any <InlineMath>{'a'}</InlineMath>:{' '}
+            <InlineMath>{'\\int_a^a f(x)\\,dx = 0'}</InlineMath>
           </li>
         </ul>
       </Callout>
@@ -251,10 +251,10 @@ export default function Section10() {
 
       <p className="text-dark-200 mb-4">
         We extend integration from step functions to bounded functions by approximation.
-        The lower integral <MathInline>{'\\underline{I}(f)'}</MathInline> is the supremum of
-        integrals of step functions below <MathInline>{'f'}</MathInline>; the upper integral{' '}
-        <MathInline>{'\\overline{I}(f)'}</MathInline> is the infimum of integrals of step
-        functions above <MathInline>{'f'}</MathInline>. A bounded function is integrable if
+        The lower integral <InlineMath>{'\\underline{I}(f)'}</InlineMath> is the supremum of
+        integrals of step functions below <InlineMath>{'f'}</InlineMath>; the upper integral{' '}
+        <InlineMath>{'\\overline{I}(f)'}</InlineMath> is the infimum of integrals of step
+        functions above <InlineMath>{'f'}</InlineMath>. A bounded function is integrable if
         and only if these two quantities are equal. This approach, rooted in Archimedes'
         method of exhaustion, provides a rigorous foundation for integration.
       </p>

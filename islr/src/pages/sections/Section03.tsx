@@ -3,7 +3,7 @@ import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section03Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, Algorithm } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { BiasVarianceTradeoff } from '@/components/visualizers/BiasVarianceTradeoff';
 
 export default function Section03() {
@@ -28,8 +28,8 @@ export default function Section03() {
       <Definition title="Mean Squared Error (MSE)">
         <MathBlock>{`\\text{MSE} = \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{f}(x_i))^2`}</MathBlock>
         <p className="mt-2">
-          where <Math>\hat f(x_i)</Math> is the prediction that <Math>\hat f</Math> gives 
-          for the <Math>i</Math>th observation.
+          where <InlineMath>\hat f(x_i)</InlineMath> is the prediction that <InlineMath>\hat f</InlineMath> gives 
+          for the <InlineMath>i</InlineMath>th observation.
         </p>
         <p className="mt-2">
           The MSE will be small if the predicted responses are very close to the true 
@@ -63,37 +63,37 @@ export default function Section03() {
         <p className="mt-2">
           This happens because our statistical learning procedure is working too hard to 
           find patterns in the training data, and may be picking up patterns that are 
-          just caused by random chance rather than true properties of <Math>f</Math>.
+          just caused by random chance rather than true properties of <InlineMath>f</InlineMath>.
         </p>
       </Example>
 
       <h2>The Bias-Variance Trade-Off</h2>
 
       <p>
-        The expected test MSE for a given value <Math>x_0</Math> can always be decomposed 
-        into the sum of three fundamental quantities: the <em>variance</em> of <Math>\hat f(x_0)</Math>, 
-        the squared <em>bias</em> of <Math>\hat f(x_0)</Math>, and the variance of the 
-        error terms <Math>\epsilon</Math>.
+        The expected test MSE for a given value <InlineMath>x_0</InlineMath> can always be decomposed 
+        into the sum of three fundamental quantities: the <em>variance</em> of <InlineMath>\hat f(x_0)</InlineMath>, 
+        the squared <em>bias</em> of <InlineMath>\hat f(x_0)</InlineMath>, and the variance of the 
+        error terms <InlineMath>\epsilon</InlineMath>.
       </p>
 
       <Theorem title="Bias-Variance Decomposition">
         <MathBlock>{`E\\left[(y_0 - \\hat{f}(x_0))^2\\right] = \\text{Var}(\\hat{f}(x_0)) + [\\text{Bias}(\\hat{f}(x_0))]^2 + \\text{Var}(\\epsilon)`}</MathBlock>
         <p className="mt-3">
-          Here the notation <Math>E[(y_0 - \hat f(x_0))^2]</Math> defines the <em>expected test MSE</em> 
-          at <Math>x_0</Math>, and refers to the average test MSE that we would obtain 
-          if we repeatedly estimated <Math>f</Math> using a large number of training sets, 
-          and tested each at <Math>x_0</Math>.
+          Here the notation <InlineMath>E[(y_0 - \hat f(x_0))^2]</InlineMath> defines the <em>expected test MSE</em> 
+          at <InlineMath>x_0</InlineMath>, and refers to the average test MSE that we would obtain 
+          if we repeatedly estimated <InlineMath>f</InlineMath> using a large number of training sets, 
+          and tested each at <InlineMath>x_0</InlineMath>.
         </p>
       </Theorem>
 
       <Definition title="Variance">
         <p>
-          <strong>Variance</strong> refers to the amount by which <Math>\hat f</Math> would 
+          <strong>Variance</strong> refers to the amount by which <InlineMath>\hat f</InlineMath> would 
           change if we estimated it using a different training data set.
         </p>
         <p className="mt-2">
           Since the training data are used to fit the statistical learning method, different 
-          training data sets will result in a different <Math>\hat f</Math>. Ideally, the 
+          training data sets will result in a different <InlineMath>\hat f</InlineMath>. Ideally, the 
           estimate should not vary too much between training sets.
         </p>
         <p className="mt-2 text-dark-400">
@@ -108,7 +108,7 @@ export default function Section03() {
         </p>
         <p className="mt-2">
           For example, linear regression assumes that there is a linear relationship 
-          between <Math>Y</Math> and <Math>X</Math>. It is unlikely that any real-life 
+          between <InlineMath>Y</InlineMath> and <InlineMath>X</InlineMath>. It is unlikely that any real-life 
           problem truly has such a simple linear relationship, and so the linear regression 
           will introduce some bias.
         </p>
@@ -166,25 +166,25 @@ export default function Section03() {
 
       <p>
         The concepts discussed so far have focused on the regression setting. We now 
-        consider the classification setting, where the response variable <Math>Y</Math> is 
+        consider the classification setting, where the response variable <InlineMath>Y</InlineMath> is 
         qualitative.
       </p>
 
       <h3>Training Error Rate</h3>
 
       <p>
-        The most common approach for quantifying the accuracy of our estimate <Math>\hat f</Math> is 
+        The most common approach for quantifying the accuracy of our estimate <InlineMath>\hat f</InlineMath> is 
         the <em>training error rate</em>, the proportion of mistakes made when applying 
-        <Math>\hat f</Math> to the training observations:
+        <InlineMath>\hat f</InlineMath> to the training observations:
       </p>
 
       <Definition title="Training Error Rate">
         <MathBlock>{`\\frac{1}{n} \\sum_{i=1}^{n} I(y_i \\neq \\hat{y}_i)`}</MathBlock>
         <p className="mt-2">
-          Here <Math>\hat y_i</Math> is the predicted class label for the <Math>i</Math>th 
-          observation using <Math>\hat f</Math>, and <Math>I(y_i \neq \hat y_i)</Math> is 
-          an <em>indicator variable</em> that equals 1 if <Math>y_i \neq \hat y_i</Math> and 
-          zero if <Math>y_i = \hat y_i</Math>.
+          Here <InlineMath>\hat y_i</InlineMath> is the predicted class label for the <InlineMath>i</InlineMath>th 
+          observation using <InlineMath>\hat f</InlineMath>, and <InlineMath>I(y_i \neq \hat y_i)</InlineMath> is 
+          an <em>indicator variable</em> that equals 1 if <InlineMath>y_i \neq \hat y_i</InlineMath> and 
+          zero if <InlineMath>y_i = \hat y_i</InlineMath>.
         </p>
       </Definition>
 
@@ -196,8 +196,8 @@ export default function Section03() {
       <Definition title="Test Error Rate">
         <MathBlock>{`\\text{Ave}(I(y_0 \\neq \\hat{y}_0))`}</MathBlock>
         <p className="mt-2">
-          where <Math>\hat y_0</Math> is the predicted class label that results from applying 
-          the classifier to the test observation with predictor <Math>x_0</Math>.
+          where <InlineMath>\hat y_0</InlineMath> is the predicted class label that results from applying 
+          the classifier to the test observation with predictor <InlineMath>x_0</InlineMath>.
         </p>
       </Definition>
 
@@ -211,13 +211,13 @@ export default function Section03() {
 
       <Definition title="Bayes Classifier">
         <p>
-          The Bayes classifier assigns a test observation with predictor vector <Math>x_0</Math> to 
-          the class <Math>j</Math> for which the conditional probability is largest:
+          The Bayes classifier assigns a test observation with predictor vector <InlineMath>x_0</InlineMath> to 
+          the class <InlineMath>j</InlineMath> for which the conditional probability is largest:
         </p>
         <MathBlock>{`\\Pr(Y = j \\,|\\, X = x_0)`}</MathBlock>
         <p className="mt-2">
           In a two-class problem where there are only two possible response values (0 or 1), 
-          the Bayes classifier corresponds to predicting class 1 if <Math>{"\\Pr(Y = 1 | X = x_0) > 0.5"}</Math>, 
+          the Bayes classifier corresponds to predicting class 1 if <InlineMath>{"\\Pr(Y = 1 | X = x_0) > 0.5"}</InlineMath>, 
           and class 0 otherwise.
         </p>
       </Definition>
@@ -236,7 +236,7 @@ export default function Section03() {
 
       <Callout type="warning">
         <strong>In Practice:</strong> For real data, we do not know the conditional 
-        distribution of <Math>Y</Math> given <Math>X</Math>, so computing the Bayes 
+        distribution of <InlineMath>Y</InlineMath> given <InlineMath>X</InlineMath>, so computing the Bayes 
         classifier is impossible. The Bayes classifier serves as an unattainable gold 
         standard against which to compare other methods.
       </Callout>
@@ -245,25 +245,25 @@ export default function Section03() {
 
       <p>
         One of the most intuitive classifiers is <em>K-Nearest Neighbors</em> (KNN). Given 
-        a positive integer <Math>K</Math> and a test observation <Math>x_0</Math>, the KNN 
-        classifier first identifies the <Math>K</Math> points in the training data that 
-        are closest to <Math>x_0</Math>, then estimates the conditional probability as the 
+        a positive integer <InlineMath>K</InlineMath> and a test observation <InlineMath>x_0</InlineMath>, the KNN 
+        classifier first identifies the <InlineMath>K</InlineMath> points in the training data that 
+        are closest to <InlineMath>x_0</InlineMath>, then estimates the conditional probability as the 
         fraction of points in this neighborhood belonging to each class.
       </p>
 
       <Algorithm title="K-Nearest Neighbors Classifier">
         <ol className="list-decimal list-inside space-y-2">
-          <li>Given a test observation <Math>x_0</Math>, identify the <Math>K</Math> training 
-              observations closest to <Math>x_0</Math> (call this set <Math>\mathcal N_0</Math>)</li>
-          <li>Estimate the conditional probability for class <Math>j</Math> as:
+          <li>Given a test observation <InlineMath>x_0</InlineMath>, identify the <InlineMath>K</InlineMath> training 
+              observations closest to <InlineMath>x_0</InlineMath> (call this set <InlineMath>\mathcal N_0</InlineMath>)</li>
+          <li>Estimate the conditional probability for class <InlineMath>j</InlineMath> as:
             <MathBlock>{`\\Pr(Y = j \\,|\\, X = x_0) = \\frac{1}{K} \\sum_{i \\in \\mathcal{N}_0} I(y_i = j)`}</MathBlock>
           </li>
-          <li>Apply Bayes rule: classify <Math>x_0</Math> to the class with the largest probability</li>
+          <li>Apply Bayes rule: classify <InlineMath>x_0</InlineMath> to the class with the largest probability</li>
         </ol>
       </Algorithm>
 
       <p>
-        The choice of <Math>K</Math> has a drastic effect on the KNN classifier:
+        The choice of <InlineMath>K</InlineMath> has a drastic effect on the KNN classifier:
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -288,7 +288,7 @@ export default function Section03() {
       <Callout type="success">
         <strong>Connection to Regression:</strong> Just as in regression, there is a 
         bias-variance trade-off in classification. The training error rate declines as 
-        <Math>K</Math> decreases (more flexibility), but the test error rate may not.
+        <InlineMath>K</InlineMath> decreases (more flexibility), but the test error rate may not.
       </Callout>
 
       <h2>Summary</h2>

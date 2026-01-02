@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section09() {
   return (
@@ -16,13 +16,13 @@ export default function Section09() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Definition of the Integral</h2>
 
       <p className="text-dark-200 mb-4">
-        Let <MathInline>{'s'}</MathInline> be a step function defined on{' '}
-        <MathInline>{'[a, b]'}</MathInline>, and let{' '}
-        <MathInline>{'P = \\{x_0, x_1, \\ldots, x_n\\}'}</MathInline> be a partition of{' '}
-        <MathInline>{'[a, b]'}</MathInline> such that <MathInline>{'s'}</MathInline> is constant
-        on the open subintervals of <MathInline>{'P'}</MathInline>. Denote by{' '}
-        <MathInline>{'s_k'}</MathInline> the constant value that <MathInline>{'s'}</MathInline>{' '}
-        takes in the <MathInline>{'k'}</MathInline>th open subinterval:
+        Let <InlineMath>{'s'}</InlineMath> be a step function defined on{' '}
+        <InlineMath>{'[a, b]'}</InlineMath>, and let{' '}
+        <InlineMath>{'P = \\{x_0, x_1, \\ldots, x_n\\}'}</InlineMath> be a partition of{' '}
+        <InlineMath>{'[a, b]'}</InlineMath> such that <InlineMath>{'s'}</InlineMath> is constant
+        on the open subintervals of <InlineMath>{'P'}</InlineMath>. Denote by{' '}
+        <InlineMath>{'s_k'}</InlineMath> the constant value that <InlineMath>{'s'}</InlineMath>{' '}
+        takes in the <InlineMath>{'k'}</InlineMath>th open subinterval:
       </p>
 
       <MathBlock>{'s(x) = s_k \\quad \\text{if} \\quad x_{k-1} < x < x_k, \\quad k = 1, 2, \\ldots, n'}</MathBlock>
@@ -30,14 +30,14 @@ export default function Section09() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Definition: Integral of a Step Function</p>
         <p className="mb-2">
-          The <strong>integral</strong> of <MathInline>{'s'}</MathInline> from{' '}
-          <MathInline>{'a'}</MathInline> to <MathInline>{'b'}</MathInline>, denoted by{' '}
-          <MathInline>{'\\int_a^b s(x)\\,dx'}</MathInline>, is defined by:
+          The <strong>integral</strong> of <InlineMath>{'s'}</InlineMath> from{' '}
+          <InlineMath>{'a'}</InlineMath> to <InlineMath>{'b'}</InlineMath>, denoted by{' '}
+          <InlineMath>{'\\int_a^b s(x)\\,dx'}</InlineMath>, is defined by:
         </p>
         <MathBlock>{'\\int_a^b s(x)\\,dx = \\sum_{k=1}^{n} s_k \\cdot (x_k - x_{k-1})'}</MathBlock>
         <p className="mt-2">
-          To compute the integral, we multiply each constant value <MathInline>{'s_k'}</MathInline>{' '}
-          by the length of the <MathInline>{'k'}</MathInline>th subinterval, then add all these
+          To compute the integral, we multiply each constant value <InlineMath>{'s_k'}</InlineMath>{' '}
+          by the length of the <InlineMath>{'k'}</InlineMath>th subinterval, then add all these
           products together.
         </p>
       </Callout>
@@ -45,27 +45,27 @@ export default function Section09() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Key Observations</h3>
 
       <p className="text-dark-200 mb-4">
-        The values of <MathInline>{'s'}</MathInline> at the subdivision points are <em>immaterial</em>{' '}
-        since they do not appear in the formula. In particular, if <MathInline>{'s'}</MathInline>{' '}
-        is constant on the open interval <MathInline>{'(a, b)'}</MathInline>, say{' '}
-        <MathInline>{'s(x) = c'}</MathInline> for <MathInline>{'a < x < b'}</MathInline>, then:
+        The values of <InlineMath>{'s'}</InlineMath> at the subdivision points are <em>immaterial</em>{' '}
+        since they do not appear in the formula. In particular, if <InlineMath>{'s'}</InlineMath>{' '}
+        is constant on the open interval <InlineMath>{'(a, b)'}</InlineMath>, say{' '}
+        <InlineMath>{'s(x) = c'}</InlineMath> for <InlineMath>{'a < x < b'}</InlineMath>, then:
       </p>
 
       <MathBlock>{'\\int_a^b s(x)\\,dx = c \\sum_{k=1}^{n}(x_k - x_{k-1}) = c(b - a)'}</MathBlock>
 
       <p className="text-dark-200 mb-6">
-        regardless of the values <MathInline>{'s(a)'}</MathInline> and{' '}
-        <MathInline>{'s(b)'}</MathInline>.
+        regardless of the values <InlineMath>{'s(a)'}</InlineMath> and{' '}
+        <InlineMath>{'s(b)'}</InlineMath>.
       </p>
 
       <Callout type="info">
         <p className="font-semibold mb-2">Geometric Interpretation</p>
         <p>
-          If <MathInline>{'c > 0'}</MathInline> and <MathInline>{'s(x) = c'}</MathInline> for all{' '}
-          <MathInline>{'x'}</MathInline> in <MathInline>{'[a, b]'}</MathInline>, the ordinate set
-          is a rectangle of base <MathInline>{'b - a'}</MathInline> and altitude{' '}
-          <MathInline>{'c'}</MathInline>. The integral <MathInline>{'c(b - a)'}</MathInline> is
-          the area of this rectangle. Changing the value of <MathInline>{'s'}</MathInline> at
+          If <InlineMath>{'c > 0'}</InlineMath> and <InlineMath>{'s(x) = c'}</InlineMath> for all{' '}
+          <InlineMath>{'x'}</InlineMath> in <InlineMath>{'[a, b]'}</InlineMath>, the ordinate set
+          is a rectangle of base <InlineMath>{'b - a'}</InlineMath> and altitude{' '}
+          <InlineMath>{'c'}</InlineMath>. The integral <InlineMath>{'c(b - a)'}</InlineMath> is
+          the area of this rectangle. Changing the value of <InlineMath>{'s'}</InlineMath> at
           endpoints changes the ordinate set but does not alter the integral.
         </p>
       </Callout>
@@ -73,10 +73,10 @@ export default function Section09() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Computing an Integral</p>
         <p className="mb-2">
-          Consider a step function <MathInline>{'s'}</MathInline> on <MathInline>{'[1, 6]'}</MathInline>{' '}
-          that takes constant values 2, 1, and <MathInline>{'\\frac{9}{4}'}</MathInline> on the
-          open intervals <MathInline>{'(1, 2)'}</MathInline>, <MathInline>{'(2, 5)'}</MathInline>,
-          and <MathInline>{'(5, 6)'}</MathInline> respectively. Its integral is:
+          Consider a step function <InlineMath>{'s'}</InlineMath> on <InlineMath>{'[1, 6]'}</InlineMath>{' '}
+          that takes constant values 2, 1, and <InlineMath>{'\\frac{9}{4}'}</InlineMath> on the
+          open intervals <InlineMath>{'(1, 2)'}</InlineMath>, <InlineMath>{'(2, 5)'}</InlineMath>,
+          and <InlineMath>{'(5, 6)'}</InlineMath> respectively. Its integral is:
         </p>
         <MathBlock>{'\\int_1^6 s(x)\\,dx = 2 \\cdot (2-1) + 1 \\cdot (5-2) + \\frac{9}{4} \\cdot (6-5) = 2 + 3 + \\frac{9}{4} = \\frac{29}{4}'}</MathBlock>
       </Callout>
@@ -85,22 +85,22 @@ export default function Section09() {
 
       <p className="text-dark-200 mb-4">
         The integral formula is <strong>independent</strong> of the choice of partition{' '}
-        <MathInline>{'P'}</MathInline>, as long as <MathInline>{'s'}</MathInline> is constant
-        on the open subintervals of <MathInline>{'P'}</MathInline>.
+        <InlineMath>{'P'}</InlineMath>, as long as <InlineMath>{'s'}</InlineMath> is constant
+        on the open subintervals of <InlineMath>{'P'}</InlineMath>.
       </p>
 
       <Callout type="info">
         <p className="font-semibold mb-2">Why Refinements Don't Change the Integral</p>
         <p className="mb-2">
-          Suppose we refine <MathInline>{'P'}</MathInline> to <MathInline>{"P'"}</MathInline> by
-          inserting one new point <MathInline>{'t'}</MathInline> where{' '}
-          <MathInline>{'x_0 < t < x_1'}</MathInline>. The first term{' '}
-          <MathInline>{'s_1(x_1 - x_0)'}</MathInline> is replaced by:
+          Suppose we refine <InlineMath>{'P'}</InlineMath> to <InlineMath>{"P'"}</InlineMath> by
+          inserting one new point <InlineMath>{'t'}</InlineMath> where{' '}
+          <InlineMath>{'x_0 < t < x_1'}</InlineMath>. The first term{' '}
+          <InlineMath>{'s_1(x_1 - x_0)'}</InlineMath> is replaced by:
         </p>
         <MathBlock>{'s_1(t - x_0) + s_1(x_1 - t) = s_1(x_1 - x_0)'}</MathBlock>
         <p>
           The sum is unchanged. By inserting new points one at a time, we see the integral
-          is the same for all refinements of <MathInline>{'P'}</MathInline>.
+          is the same for all refinements of <InlineMath>{'P'}</InlineMath>.
         </p>
       </Callout>
 
@@ -132,15 +132,15 @@ export default function Section09() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.3 (Homogeneous Property)</p>
         <p className="mb-2">
-          If all function values are multiplied by a constant <MathInline>{'c'}</MathInline>,
-          the integral is also multiplied by <MathInline>{'c'}</MathInline>:
+          If all function values are multiplied by a constant <InlineMath>{'c'}</InlineMath>,
+          the integral is also multiplied by <InlineMath>{'c'}</InlineMath>:
         </p>
         <MathBlock>{'\\int_a^b c \\cdot s(x)\\,dx = c \\int_a^b s(x)\\,dx'}</MathBlock>
       </Callout>
 
       <p className="text-dark-200 mb-6">
         Geometrically, scaling the height of the ordinate set by factor{' '}
-        <MathInline>{'c'}</MathInline> scales the area by the same factor.
+        <InlineMath>{'c'}</InlineMath> scales the area by the same factor.
       </p>
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Linearity Property</h3>
@@ -152,7 +152,7 @@ export default function Section09() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.4 (Linearity Property)</p>
         <p className="mb-2">
-          For any real numbers <MathInline>{'c_1'}</MathInline> and <MathInline>{'c_2'}</MathInline>:
+          For any real numbers <InlineMath>{'c_1'}</InlineMath> and <InlineMath>{'c_2'}</InlineMath>:
         </p>
         <MathBlock>{'\\int_a^b [c_1 s(x) + c_2 t(x)]\\,dx = c_1 \\int_a^b s(x)\\,dx + c_2 \\int_a^b t(x)\\,dx'}</MathBlock>
       </Callout>
@@ -162,8 +162,8 @@ export default function Section09() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.5 (Comparison Theorem)</p>
         <p className="mb-2">
-          If <MathInline>{'s(x) < t(x)'}</MathInline> for every <MathInline>{'x'}</MathInline> in{' '}
-          <MathInline>{'[a, b]'}</MathInline>, then:
+          If <InlineMath>{'s(x) < t(x)'}</InlineMath> for every <InlineMath>{'x'}</InlineMath> in{' '}
+          <InlineMath>{'[a, b]'}</InlineMath>, then:
         </p>
         <MathBlock>{'\\int_a^b s(x)\\,dx < \\int_a^b t(x)\\,dx'}</MathBlock>
       </Callout>
@@ -182,7 +182,7 @@ export default function Section09() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.6 (Additivity over Intervals)</p>
         <p className="mb-2">
-          If <MathInline>{'a < c < b'}</MathInline>, then:
+          If <InlineMath>{'a < c < b'}</InlineMath>, then:
         </p>
         <MathBlock>{'\\int_a^c s(x)\\,dx + \\int_c^b s(x)\\,dx = \\int_a^b s(x)\\,dx'}</MathBlock>
       </Callout>
@@ -201,9 +201,9 @@ export default function Section09() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.7 (Translation Invariance)</p>
         <p className="mb-2">
-          If <MathInline>{'s'}</MathInline> is defined on <MathInline>{'[a, b]'}</MathInline> and{' '}
-          <MathInline>{'t(x) = s(x - c)'}</MathInline>, then <MathInline>{'t'}</MathInline> is
-          defined on <MathInline>{'[a + c, b + c]'}</MathInline> and:
+          If <InlineMath>{'s'}</InlineMath> is defined on <InlineMath>{'[a, b]'}</InlineMath> and{' '}
+          <InlineMath>{'t(x) = s(x - c)'}</InlineMath>, then <InlineMath>{'t'}</InlineMath> is
+          defined on <InlineMath>{'[a + c, b + c]'}</InlineMath> and:
         </p>
         <MathBlock>{'\\int_{a+c}^{b+c} t(x)\\,dx = \\int_a^b s(x)\\,dx'}</MathBlock>
       </Callout>
@@ -238,9 +238,9 @@ export default function Section09() {
       <Callout type="info">
         <p className="font-semibold mb-2">Signed Area</p>
         <p>
-          When <MathInline>{'s_k < 0'}</MathInline>, the product{' '}
-          <MathInline>{'s_k(x_k - x_{k-1})'}</MathInline> is negative. The integral accounts
-          for regions below the <MathInline>{'x'}</MathInline>-axis with negative area, giving
+          When <InlineMath>{'s_k < 0'}</InlineMath>, the product{' '}
+          <InlineMath>{'s_k(x_k - x_{k-1})'}</InlineMath> is negative. The integral accounts
+          for regions below the <InlineMath>{'x'}</InlineMath>-axis with negative area, giving
           a "signed area" interpretation.
         </p>
       </Callout>
@@ -248,9 +248,9 @@ export default function Section09() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Summary</h2>
 
       <p className="text-dark-200 mb-4">
-        The integral of a step function <MathInline>{'s'}</MathInline> on{' '}
-        <MathInline>{'[a, b]'}</MathInline> is defined as the sum{' '}
-        <MathInline>{'\\sum s_k(x_k - x_{k-1})'}</MathInline>, multiplying each constant value
+        The integral of a step function <InlineMath>{'s'}</InlineMath> on{' '}
+        <InlineMath>{'[a, b]'}</InlineMath> is defined as the sum{' '}
+        <InlineMath>{'\\sum s_k(x_k - x_{k-1})'}</InlineMath>, multiplying each constant value
         by its interval length. This definition is independent of the choice of partition and
         satisfies key properties: additivity, homogeneity, linearity, comparison, interval
         additivity, and translation invariance. These properties form the foundation for

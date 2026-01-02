@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section03Questions } from '../../data/quizzes';
@@ -81,9 +81,9 @@ export default function Section03() {
       </CardGrid>
 
       <p className="text-dark-200 my-6">
-        If position is <MathInline>{'x'}</MathInline>, then velocity is its fluxion{' '}
-        <MathInline>{'\\dot{x}'}</MathInline>, and acceleration is the fluxion of the fluxion:{' '}
-        <MathInline>{'\\ddot{x}'}</MathInline>.
+        If position is <InlineMath>{'x'}</InlineMath>, then velocity is its fluxion{' '}
+        <InlineMath>{'\\dot{x}'}</InlineMath>, and acceleration is the fluxion of the fluxion:{' '}
+        <InlineMath>{'\\ddot{x}'}</InlineMath>.
       </p>
 
       <MathBlock>{`\\text{Position: } x \\quad \\longrightarrow \\quad \\text{Velocity: } \\dot{x} \\quad \\longrightarrow \\quad \\text{Acceleration: } \\ddot{x}`}</MathBlock>

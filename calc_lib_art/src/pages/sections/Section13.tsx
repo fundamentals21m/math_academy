@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section13Questions } from '../../data/quizzes';
@@ -74,12 +74,12 @@ export default function Section13() {
       <div className="bg-dark-800 rounded-xl p-6 mb-6">
         <p className="text-dark-200 mb-4">
           When you pluck a string, it vibrates at its fundamental frequency{' '}
-          <MathInline>{'f'}</MathInline> and also at multiples:{' '}
-          <MathInline>{'2f, 3f, 4f, \\ldots'}</MathInline>
+          <InlineMath>{'f'}</InlineMath> and also at multiples:{' '}
+          <InlineMath>{'2f, 3f, 4f, \\ldots'}</InlineMath>
         </p>
         <MathBlock>{`y(x,t) = \\sum_{n=1}^{\\infty} A_n \\sin\\left(\\frac{n\\pi x}{L}\\right)\\cos(n\\omega t)`}</MathBlock>
         <p className="text-dark-200 mt-4">
-          The relative strengths of these harmonics (the <MathInline>{'A_n'}</MathInline> values)
+          The relative strengths of these harmonics (the <InlineMath>{'A_n'}</InlineMath> values)
           determine the instrument's characteristic sound—its <em>timbre</em>.
         </p>
       </div>
@@ -109,7 +109,7 @@ export default function Section13() {
           <MathBlock>{`y = a\\cosh\\left(\\frac{x}{a}\\right)`}</MathBlock>
           <p className="text-dark-200 mt-3 text-sm">
             The shape of a hanging chain. Used in architecture from ancient arches to the
-            Gateway Arch in St. Louis. Its derivative involves <MathInline>{'\\sinh'}</MathInline>.
+            Gateway Arch in St. Louis. Its derivative involves <InlineMath>{'\\sinh'}</InlineMath>.
           </p>
         </div>
 
@@ -204,7 +204,7 @@ export default function Section13() {
           <CardHeader title="Edge Detection" />
           <p className="text-sm text-dark-300">
             Finding edges in images uses derivatives—specifically, the gradient{' '}
-            <MathInline>{'\\nabla I'}</MathInline>. Where the image intensity changes rapidly,
+            <InlineMath>{'\\nabla I'}</InlineMath>. Where the image intensity changes rapidly,
             there's an edge.
           </p>
         </Card>
@@ -212,7 +212,7 @@ export default function Section13() {
           <CardHeader title="Blur and Sharpening" />
           <p className="text-sm text-dark-300">
             Gaussian blur is convolution with a function. Sharpening uses the Laplacian{' '}
-            <MathInline>{'\\nabla^2 I'}</MathInline>—second derivatives that detect edges.
+            <InlineMath>{'\\nabla^2 I'}</InlineMath>—second derivatives that detect edges.
           </p>
         </Card>
         <Card>

@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section49() {
   return (
@@ -21,10 +21,10 @@ export default function Section49() {
           {`y = X\\boldsymbol{\\beta} + \\boldsymbol{\\varepsilon}`}
         </MathBlock>
         <p className="mt-2">
-          <Math>y</Math> = response vector (<Math>n \times 1</Math>)<br />
-          <Math>X</Math> = design matrix (<Math>n \times p</Math>)<br />
-          <Math>{`\\boldsymbol{\\\\beta}`}</Math> = unknown coefficients (<Math>p \times 1</Math>)<br />
-          <Math>{`\\boldsymbol{\\\\varepsilon}`}</Math> = random errors
+          <InlineMath>y</InlineMath> = response vector (<InlineMath>n \times 1</InlineMath>)<br />
+          <InlineMath>X</InlineMath> = design matrix (<InlineMath>n \times p</InlineMath>)<br />
+          <InlineMath>{`\\boldsymbol{\\\\beta}`}</InlineMath> = unknown coefficients (<InlineMath>p \times 1</InlineMath>)<br />
+          <InlineMath>{`\\boldsymbol{\\\\varepsilon}`}</InlineMath> = random errors
         </p>
       </Definition>
 
@@ -35,16 +35,16 @@ export default function Section49() {
         className="my-6"
         proof={
           <>
-            <p><strong>Minimize squared error:</strong> Let <Math>{`f(\\boldsymbol{\\beta}) = \\|\\mathbf{y} - X\\boldsymbol{\\beta}\\|^2 = (\\mathbf{y} - X\\boldsymbol{\\beta})^T(\\mathbf{y} - X\\boldsymbol{\\beta})`}</Math>.</p>
-            <p className="mt-2"><strong>Expand:</strong> <Math>{`f = \\mathbf{y}^T\\mathbf{y} - 2\\boldsymbol{\\beta}^T X^T \\mathbf{y} + \\boldsymbol{\\beta}^T X^T X \\boldsymbol{\\beta}`}</Math>.</p>
-            <p className="mt-2"><strong>Take derivative:</strong> <Math>{`\\frac{\\partial f}{\\partial \\boldsymbol{\\beta}} = -2X^T\\mathbf{y} + 2X^TX\\boldsymbol{\\beta} = 0`}</Math>.</p>
-            <p className="mt-2"><strong>Solve:</strong> <Math>{`X^TX\\hat{\\boldsymbol{\\beta}} = X^T\\mathbf{y}`}</Math>, giving <Math>{`\\hat{\\boldsymbol{\\beta}} = (X^TX)^{-1}X^T\\mathbf{y}`}</Math>.</p>
-            <p className="mt-2"><strong>Projection view:</strong> The error <Math>{`\\mathbf{e} = \\mathbf{y} - X\\hat{\\boldsymbol{\\beta}}`}</Math> satisfies <Math>{`X^T\\mathbf{e} = 0`}</Math>, meaning <Math>{`\\mathbf{e}`}</Math> is orthogonal to <Math>C(X)</Math>.</p>
+            <p><strong>Minimize squared error:</strong> Let <InlineMath>{`f(\\boldsymbol{\\beta}) = \\|\\mathbf{y} - X\\boldsymbol{\\beta}\\|^2 = (\\mathbf{y} - X\\boldsymbol{\\beta})^T(\\mathbf{y} - X\\boldsymbol{\\beta})`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Expand:</strong> <InlineMath>{`f = \\mathbf{y}^T\\mathbf{y} - 2\\boldsymbol{\\beta}^T X^T \\mathbf{y} + \\boldsymbol{\\beta}^T X^T X \\boldsymbol{\\beta}`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Take derivative:</strong> <InlineMath>{`\\frac{\\partial f}{\\partial \\boldsymbol{\\beta}} = -2X^T\\mathbf{y} + 2X^TX\\boldsymbol{\\beta} = 0`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Solve:</strong> <InlineMath>{`X^TX\\hat{\\boldsymbol{\\beta}} = X^T\\mathbf{y}`}</InlineMath>, giving <InlineMath>{`\\hat{\\boldsymbol{\\beta}} = (X^TX)^{-1}X^T\\mathbf{y}`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Projection view:</strong> The error <InlineMath>{`\\mathbf{e} = \\mathbf{y} - X\\hat{\\boldsymbol{\\beta}}`}</InlineMath> satisfies <InlineMath>{`X^T\\mathbf{e} = 0`}</InlineMath>, meaning <InlineMath>{`\\mathbf{e}`}</InlineMath> is orthogonal to <InlineMath>C(X)</InlineMath>.</p>
           </>
         }
       >
         <p>
-          The <strong>least squares estimate</strong> <Math>{`\\hat{\\boldsymbol{\\beta}}`}</Math> minimizes <Math>{`\\|y - X\\boldsymbol{\\beta}\\|^2`}</Math>:
+          The <strong>least squares estimate</strong> <InlineMath>{`\\hat{\\boldsymbol{\\beta}}`}</InlineMath> minimizes <InlineMath>{`\\|y - X\\boldsymbol{\\beta}\\|^2`}</InlineMath>:
         </p>
         <MathBlock>
           {`X^TX\\hat{\\boldsymbol{\\beta}} = X^Ty`}
@@ -53,13 +53,13 @@ export default function Section49() {
           {`\\hat{\\boldsymbol{\\beta}} = (X^TX)^{-1}X^Ty`}
         </MathBlock>
         <p className="mt-2 text-primary-400">
-          This is exactly the projection formula! <Math>{`\\hat{y} = X\\hat{\\boldsymbol{\\beta}}`}</Math> is the projection of <Math>y</Math> onto <Math>C(X)</Math>.
+          This is exactly the projection formula! <InlineMath>{`\\hat{y} = X\\hat{\\boldsymbol{\\beta}}`}</InlineMath> is the projection of <InlineMath>y</InlineMath> onto <InlineMath>C(X)</InlineMath>.
         </p>
       </Theorem>
 
       <Example title="Simple Linear Regression" className="my-6">
         <p>
-          For <Math>y = \beta_0 + \beta_1 x</Math>, the design matrix is:
+          For <InlineMath>y = \beta_0 + \beta_1 x</InlineMath>, the design matrix is:
         </p>
         <MathBlock>
           {`X = \\begin{bmatrix} 1 & x_1 \\\\ 1 & x_2 \\\\ \\vdots & \\vdots \\\\ 1 & x_n \\end{bmatrix}`}
@@ -76,17 +76,17 @@ export default function Section49() {
         className="my-6"
         proof={
           <>
-            <p><strong>Hat matrix:</strong> <Math>H = X(X^TX)^{-1}X^T</Math> satisfies <Math>H^2 = H</Math> (idempotent) and <Math>H^T = H</Math> (symmetric).</p>
+            <p><strong>Hat matrix:</strong> <InlineMath>H = X(X^TX)^{-1}X^T</InlineMath> satisfies <InlineMath>H^2 = H</InlineMath> (idempotent) and <InlineMath>H^T = H</InlineMath> (symmetric).</p>
             <p className="mt-2">These are the defining properties of an orthogonal projection matrix.</p>
-            <p className="mt-2"><strong>Projects onto C(X):</strong> For any <Math>{`\\mathbf{v} \\in C(X)`}</Math>, write <Math>{`\\mathbf{v} = X\\mathbf{c}`}</Math>. Then <Math>{`H\\mathbf{v} = X(X^TX)^{-1}X^TX\\mathbf{c} = X\\mathbf{c} = \\mathbf{v}`}</Math>.</p>
-            <p className="mt-2"><strong>Orthogonal residuals:</strong> <Math>{`\\mathbf{e} = (I-H)\\mathbf{y}`}</Math>. Since <Math>{`(I-H)H = 0`}</Math>, the residual is orthogonal to the fitted values and hence to <Math>{`C(X)`}</Math>.</p>
+            <p className="mt-2"><strong>Projects onto C(X):</strong> For any <InlineMath>{`\\mathbf{v} \\in C(X)`}</InlineMath>, write <InlineMath>{`\\mathbf{v} = X\\mathbf{c}`}</InlineMath>. Then <InlineMath>{`H\\mathbf{v} = X(X^TX)^{-1}X^TX\\mathbf{c} = X\\mathbf{c} = \\mathbf{v}`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Orthogonal residuals:</strong> <InlineMath>{`\\mathbf{e} = (I-H)\\mathbf{y}`}</InlineMath>. Since <InlineMath>{`(I-H)H = 0`}</InlineMath>, the residual is orthogonal to the fitted values and hence to <InlineMath>{`C(X)`}</InlineMath>.</p>
           </>
         }
       >
         <ul className="list-disc list-inside space-y-2">
-          <li><Math>{`\\hat{y} = X(X^TX)^{-1}X^Ty`}</Math> = projection of <Math>y</Math> onto column space of <Math>X</Math></li>
-          <li><Math>{`H = X(X^TX)^{-1}X^T`}</Math> = "hat matrix" (projection matrix)</li>
-          <li>Residuals <Math>{`e = y - \\hat{y}`}</Math> are orthogonal to columns of <Math>X</Math></li>
+          <li><InlineMath>{`\\hat{y} = X(X^TX)^{-1}X^Ty`}</InlineMath> = projection of <InlineMath>y</InlineMath> onto column space of <InlineMath>X</InlineMath></li>
+          <li><InlineMath>{`H = X(X^TX)^{-1}X^T`}</InlineMath> = "hat matrix" (projection matrix)</li>
+          <li>Residuals <InlineMath>{`e = y - \\hat{y}`}</InlineMath> are orthogonal to columns of <InlineMath>X</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -97,22 +97,22 @@ export default function Section49() {
         className="my-6"
         proof={
           <>
-            <p><strong>Setup:</strong> <Math>{`\\hat{\\boldsymbol{\\beta}} = (X^TX)^{-1}X^T\\mathbf{y} = (X^TX)^{-1}X^T(X\\boldsymbol{\\beta} + \\boldsymbol{\\varepsilon}) = \\boldsymbol{\\beta} + (X^TX)^{-1}X^T\\boldsymbol{\\varepsilon}`}</Math>.</p>
-            <p className="mt-2"><strong>Apply covariance transformation:</strong> Since <Math>{`\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta} = (X^TX)^{-1}X^T\\boldsymbol{\\varepsilon}`}</Math>:</p>
+            <p><strong>Setup:</strong> <InlineMath>{`\\hat{\\boldsymbol{\\beta}} = (X^TX)^{-1}X^T\\mathbf{y} = (X^TX)^{-1}X^T(X\\boldsymbol{\\beta} + \\boldsymbol{\\varepsilon}) = \\boldsymbol{\\beta} + (X^TX)^{-1}X^T\\boldsymbol{\\varepsilon}`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Apply covariance transformation:</strong> Since <InlineMath>{`\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta} = (X^TX)^{-1}X^T\\boldsymbol{\\varepsilon}`}</InlineMath>:</p>
             <MathBlock>{`\\text{Cov}(\\hat{\\boldsymbol{\\beta}}) = (X^TX)^{-1}X^T \\cdot \\text{Cov}(\\boldsymbol{\\varepsilon}) \\cdot X(X^TX)^{-1}`}</MathBlock>
-            <p className="mt-2">With <Math>{`\\text{Cov}(\\boldsymbol{\\varepsilon}) = \\sigma^2 I`}</Math>:</p>
+            <p className="mt-2">With <InlineMath>{`\\text{Cov}(\\boldsymbol{\\varepsilon}) = \\sigma^2 I`}</InlineMath>:</p>
             <MathBlock>{`= \\sigma^2 (X^TX)^{-1}X^TX(X^TX)^{-1} = \\sigma^2(X^TX)^{-1}`}</MathBlock>
           </>
         }
       >
         <p>
-          If <Math>{`\\text{Cov}(\\boldsymbol{\\\\varepsilon}) = \\sigma^2 I`}</Math>:
+          If <InlineMath>{`\\text{Cov}(\\boldsymbol{\\\\varepsilon}) = \\sigma^2 I`}</InlineMath>:
         </p>
         <MathBlock>
           {`\\text{Cov}(\\hat{\\boldsymbol{\\beta}}) = \\sigma^2(X^TX)^{-1}`}
         </MathBlock>
         <p className="mt-2">
-          The estimate <Math>{`\\hat{\\sigma}^2 = \\|e\\|^2/(n-p)`}</Math> from residuals.
+          The estimate <InlineMath>{`\\hat{\\sigma}^2 = \\|e\\|^2/(n-p)`}</InlineMath> from residuals.
         </p>
       </Theorem>
 
@@ -123,14 +123,14 @@ export default function Section49() {
           {`R^2 = 1 - \\frac{\\|e\\|^2}{\\|y - \\bar{y}\\|^2} = \\frac{\\|\\hat{y} - \\bar{y}\\|^2}{\\|y - \\bar{y}\\|^2}`}
         </MathBlock>
         <p className="mt-2">
-          <Math>R^2</Math> = fraction of variance explained by the model (0 to 1).
+          <InlineMath>R^2</InlineMath> = fraction of variance explained by the model (0 to 1).
         </p>
       </Definition>
 
       <div className="bg-dark-800/50 rounded-xl p-4 my-6 border border-primary-500/20">
         <p className="font-semibold text-primary-400 mb-2">Pythagorean Theorem in Regression</p>
         <p className="text-dark-300 text-sm">
-          <Math>{`\\|y - \\bar{y}\\|^2 = \\|\\hat{y} - \\bar{y}\\|^2 + \\|e\\|^2`}</Math><br /><br />
+          <InlineMath>{`\\|y - \\bar{y}\\|^2 = \\|\\hat{y} - \\bar{y}\\|^2 + \\|e\\|^2`}</InlineMath><br /><br />
           Total variance = Explained variance + Unexplained variance<br />
           This is orthogonal decomposition!
         </p>
@@ -140,12 +140,12 @@ export default function Section49() {
 
       <Example title="Multiple Regression" className="my-6">
         <p>
-          With multiple predictors <Math>y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots</Math>:
+          With multiple predictors <InlineMath>y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots</InlineMath>:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li>Coefficients account for other variables (partial effects)</li>
-          <li>Multicollinearity: if columns of <Math>X</Math> are nearly dependent, <Math>{`(X^TX)^{-1}`}</Math> is ill-conditioned</li>
-          <li>Regularization (ridge regression) adds <Math>\lambda I</Math> to stabilize</li>
+          <li>Multicollinearity: if columns of <InlineMath>X</InlineMath> are nearly dependent, <InlineMath>{`(X^TX)^{-1}`}</InlineMath> is ill-conditioned</li>
+          <li>Regularization (ridge regression) adds <InlineMath>\lambda I</InlineMath> to stabilize</li>
         </ul>
       </Example>
 
@@ -155,23 +155,23 @@ export default function Section49() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Least squares: <Math>{`\\hat{\\boldsymbol{\\beta}} = (X^TX)^{-1}X^Ty`}</Math>.</span>
+            <span>Least squares: <InlineMath>{`\\hat{\\boldsymbol{\\beta}} = (X^TX)^{-1}X^Ty`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span><Math>{`\\hat{y}`}</Math> is the projection of <Math>y</Math> onto column space of <Math>X</Math>.</span>
+            <span><InlineMath>{`\\hat{y}`}</InlineMath> is the projection of <InlineMath>y</InlineMath> onto column space of <InlineMath>X</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>Residuals <Math>e</Math> are orthogonal to columns of <Math>X</Math>.</span>
+            <span>Residuals <InlineMath>e</InlineMath> are orthogonal to columns of <InlineMath>X</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span><Math>R^2</Math> = fraction of variance explained.</span>
+            <span><InlineMath>R^2</InlineMath> = fraction of variance explained.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>Variance of <Math>{`\\hat{\\boldsymbol{\\beta}}`}</Math>: <Math>{`\\sigma^2(X^TX)^{-1}`}</Math>.</span>
+            <span>Variance of <InlineMath>{`\\hat{\\boldsymbol{\\beta}}`}</InlineMath>: <InlineMath>{`\\sigma^2(X^TX)^{-1}`}</InlineMath>.</span>
           </li>
         </ul>
       </div>

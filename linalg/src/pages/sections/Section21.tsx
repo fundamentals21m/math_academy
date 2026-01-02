@@ -1,13 +1,13 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section21() {
   return (
     <LessonLayout sectionId={21}>
       {/* Introduction */}
       <p>
-        There are two formulas for determinants: the <strong>big formula</strong> with <Math>n!</Math> terms,
+        There are two formulas for determinants: the <strong>big formula</strong> with <InlineMath>n!</InlineMath> terms,
         and the <strong>cofactor formula</strong> that expands along any row or column.
       </p>
 
@@ -15,14 +15,14 @@ export default function Section21() {
 
       <Definition title="Determinant by Permutations" className="my-6">
         <p>
-          The determinant of an <Math>n \times n</Math> matrix is a sum of <Math>n!</Math> products:
+          The determinant of an <InlineMath>n \times n</InlineMath> matrix is a sum of <InlineMath>n!</InlineMath> products:
         </p>
         <MathBlock>
           {`\\det A = \\sum_{\\text{permutations } P} (\\pm 1) \\cdot a_{1\\alpha} a_{2\\beta} a_{3\\gamma} \\cdots a_{n\\omega}`}
         </MathBlock>
         <p className="mt-2">
           Each term uses one entry from each row and each column. The sign depends on whether
-          the permutation <Math>(\alpha, \beta, \gamma, \ldots, \omega)</Math> is even or odd.
+          the permutation <InlineMath>(\alpha, \beta, \gamma, \ldots, \omega)</InlineMath> is even or odd.
         </p>
       </Definition>
 
@@ -39,18 +39,18 @@ export default function Section21() {
 
       <Definition title="Cofactor" className="my-6">
         <p>
-          The <strong>cofactor</strong> <Math>{`C_{ij}`}</Math> of entry <Math>{`a_{ij}`}</Math> is:
+          The <strong>cofactor</strong> <InlineMath>{`C_{ij}`}</InlineMath> of entry <InlineMath>{`a_{ij}`}</InlineMath> is:
         </p>
         <MathBlock>
           {`C_{ij} = (-1)^{i+j} \\det M_{ij}`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>{`M_{ij}`}</Math> is the <Math>(n-1) \times (n-1)</Math> matrix with row <Math>i</Math> and column <Math>j</Math> deleted.
+          where <InlineMath>{`M_{ij}`}</InlineMath> is the <InlineMath>(n-1) \times (n-1)</InlineMath> matrix with row <InlineMath>i</InlineMath> and column <InlineMath>j</InlineMath> deleted.
         </p>
       </Definition>
 
       <Example title="Computing a Cofactor" className="my-6">
-        <p>For entry <Math>{`a_{12}`}</Math> in the first row, second column:</p>
+        <p>For entry <InlineMath>{`a_{12}`}</InlineMath> in the first row, second column:</p>
         <MathBlock>
           {`C_{12} = (-1)^{1+2} \\det \\begin{bmatrix} d & f \\\\ g & i \\end{bmatrix} = -(di - fg)`}
         </MathBlock>
@@ -63,11 +63,11 @@ export default function Section21() {
         className="my-6"
         proof={
           <>
-            <p>Use property 3 (linearity in each row). Row <Math>i</Math> can be written as:</p>
+            <p>Use property 3 (linearity in each row). Row <InlineMath>i</InlineMath> can be written as:</p>
             <MathBlock>{`\\text{row}_i = a_{i1}\\mathbf{e}_1 + a_{i2}\\mathbf{e}_2 + \\cdots + a_{in}\\mathbf{e}_n`}</MathBlock>
-            <p className="mt-2">By linearity: <Math>\det A</Math> = sum of <Math>n</Math> determinants, each with row <Math>i</Math> replaced by <Math>{`a_{ij}\\mathbf{e}_j`}</Math>.</p>
-            <p className="mt-2">The determinant with <Math>{`\\mathbf{e}_j`}</Math> in row <Math>i</Math> equals <Math>{`(-1)^{i+j} \\det M_{ij} = C_{ij}`}</Math> (after moving that 1 to position <Math>(i,j)</Math> via row/column exchanges).</p>
-            <p className="mt-2">Each term contributes <Math>{`a_{ij} C_{ij}`}</Math>, giving the cofactor formula.</p>
+            <p className="mt-2">By linearity: <InlineMath>\det A</InlineMath> = sum of <InlineMath>n</InlineMath> determinants, each with row <InlineMath>i</InlineMath> replaced by <InlineMath>{`a_{ij}\\mathbf{e}_j`}</InlineMath>.</p>
+            <p className="mt-2">The determinant with <InlineMath>{`\\mathbf{e}_j`}</InlineMath> in row <InlineMath>i</InlineMath> equals <InlineMath>{`(-1)^{i+j} \\det M_{ij} = C_{ij}`}</InlineMath> (after moving that 1 to position <InlineMath>(i,j)</InlineMath> via row/column exchanges).</p>
+            <p className="mt-2">Each term contributes <InlineMath>{`a_{ij} C_{ij}`}</InlineMath>, giving the cofactor formula.</p>
           </>
         }
       >
@@ -106,19 +106,19 @@ export default function Section21() {
           {`\\det \\begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 2 & 3 & 0 & 0 \\\\ 4 & 5 & 6 & 0 \\\\ 7 & 8 & 9 & 10 \\end{bmatrix} = 1 \\cdot 3 \\cdot 6 \\cdot 10 = 180`}
         </MathBlock>
         <p className="mt-2">
-          For triangular matrices, cofactor expansion confirms: <Math>\det A</Math> = product of diagonal entries.
+          For triangular matrices, cofactor expansion confirms: <InlineMath>\det A</InlineMath> = product of diagonal entries.
         </p>
       </Example>
 
       <h2>The Checkerboard of Signs</h2>
 
       <div className="bg-dark-800/50 rounded-xl p-4 my-6 border border-primary-500/20">
-        <p className="font-semibold text-primary-400 mb-3">Sign Pattern <Math>{`(-1)^{i+j}`}</Math></p>
+        <p className="font-semibold text-primary-400 mb-3">Sign Pattern <InlineMath>{`(-1)^{i+j}`}</InlineMath></p>
         <MathBlock>
           {`\\begin{bmatrix} + & - & + & - \\\\ - & + & - & + \\\\ + & - & + & - \\\\ - & + & - & + \\end{bmatrix}`}
         </MathBlock>
         <p className="text-dark-400 text-sm mt-2">
-          The cofactor <Math>{`C_{ij}`}</Math> has the sign at position <Math>(i, j)</Math>.
+          The cofactor <InlineMath>{`C_{ij}`}</InlineMath> has the sign at position <InlineMath>(i, j)</InlineMath>.
         </p>
       </div>
 
@@ -128,19 +128,19 @@ export default function Section21() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>The "big formula" has <Math>n!</Math> terms, one for each permutation.</span>
+            <span>The "big formula" has <InlineMath>n!</InlineMath> terms, one for each permutation.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Each term has one entry from each row and column, with sign <Math>\pm 1</Math>.</span>
+            <span>Each term has one entry from each row and column, with sign <InlineMath>\pm 1</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>Cofactor <Math>{`C_{ij} = (-1)^{i+j} \\det M_{ij}`}</Math> (delete row <Math>i</Math>, column <Math>j</Math>).</span>
+            <span>Cofactor <InlineMath>{`C_{ij} = (-1)^{i+j} \\det M_{ij}`}</InlineMath> (delete row <InlineMath>i</InlineMath>, column <InlineMath>j</InlineMath>).</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>Cofactor expansion: <Math>{`\\det A = a_{i1}C_{i1} + \\cdots + a_{in}C_{in}`}</Math> (any row <Math>i</Math>).</span>
+            <span>Cofactor expansion: <InlineMath>{`\\det A = a_{i1}C_{i1} + \\cdots + a_{in}C_{in}`}</InlineMath> (any row <InlineMath>i</InlineMath>).</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>

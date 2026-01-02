@@ -10,14 +10,14 @@ import { getAuth, type Auth } from 'firebase/auth';
 import { getFirestore, type Firestore } from 'firebase/firestore';
 import { getFunctions, type Functions, connectFunctionsEmulator } from 'firebase/functions';
 
-// Firebase configuration - loaded from environment variables
+// Firebase configuration - hardcoded for production builds
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || '',
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || '',
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || '',
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '',
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || '',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || 'AIzaSyAW6S712bLLkP-iCmB4URv44sst9wLBXQQ',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'magic-internet-math-96630.firebaseapp.com',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'magic-internet-math-96630',
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'magic-internet-math-96630.appspot.com',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '863101072402',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '1:863101072402:web:072f6cb1724919360f94cb',
 };
 
 // Check if we're in development mode
@@ -93,7 +93,7 @@ export function getFirebaseFunctions(): Functions {
  * Check if Firebase is configured
  */
 export function isFirebaseConfigured(): boolean {
-  return !!firebaseConfig.apiKey && firebaseConfig.apiKey !== 'YOUR_API_KEY';
+  return !!firebaseConfig.apiKey && firebaseConfig.apiKey.length > 10;
 }
 
 export { firebaseConfig };

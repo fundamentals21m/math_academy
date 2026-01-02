@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { LessonLayout } from '@/components/layout';
-import { Callout, Card, CardGrid, MathBlock, Math } from '@/components/common';
+import { Callout, Card, CardGrid, MathBlock, InlineMath } from '@/components/common';
 
 // Cayley-Hamilton Theorem Demo
 function CayleyHamiltonDemo() {

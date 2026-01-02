@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section18() {
   return (
@@ -16,39 +16,39 @@ export default function Section18() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">The Integral as a Function of the Upper Limit</h2>
 
       <p className="text-dark-200 mb-4">
-        Assume <MathInline>{'f'}</MathInline> is a function such that the integral{' '}
-        <MathInline>{'\\int_a^x f(t)\\,dt'}</MathInline> exists for each{' '}
-        <MathInline>{'x'}</MathInline> in an interval <MathInline>{'[a, b]'}</MathInline>. We keep{' '}
-        <MathInline>{'a'}</MathInline> and <MathInline>{'f'}</MathInline> fixed and study this
-        integral as a function of <MathInline>{'x'}</MathInline>.
+        Assume <InlineMath>{'f'}</InlineMath> is a function such that the integral{' '}
+        <InlineMath>{'\\int_a^x f(t)\\,dt'}</InlineMath> exists for each{' '}
+        <InlineMath>{'x'}</InlineMath> in an interval <InlineMath>{'[a, b]'}</InlineMath>. We keep{' '}
+        <InlineMath>{'a'}</InlineMath> and <InlineMath>{'f'}</InlineMath> fixed and study this
+        integral as a function of <InlineMath>{'x'}</InlineMath>.
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Indefinite Integral</p>
         <p className="mb-2">
-          Define the function <MathInline>{'A'}</MathInline> by:
+          Define the function <InlineMath>{'A'}</InlineMath> by:
         </p>
         <MathBlock>{'A(x) = \\int_a^x f(t)\\,dt \\quad \\text{if } a \\leq x \\leq b'}</MathBlock>
         <p className="mt-2">
-          This function <MathInline>{'A'}</MathInline> is called an <strong>indefinite integral</strong>{' '}
-          of <MathInline>{'f'}</MathInline>, and is said to be obtained from{' '}
-          <MathInline>{'f'}</MathInline> by integration.
+          This function <InlineMath>{'A'}</InlineMath> is called an <strong>indefinite integral</strong>{' '}
+          of <InlineMath>{'f'}</InlineMath>, and is said to be obtained from{' '}
+          <InlineMath>{'f'}</InlineMath> by integration.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-4">
         We say <em>an</em> indefinite integral rather than <em>the</em> indefinite integral because{' '}
-        <MathInline>{'A'}</MathInline> also depends on the lower limit{' '}
-        <MathInline>{'a'}</MathInline>. Different values of <MathInline>{'a'}</MathInline> lead to
+        <InlineMath>{'A'}</InlineMath> also depends on the lower limit{' '}
+        <InlineMath>{'a'}</InlineMath>. Different values of <InlineMath>{'a'}</InlineMath> lead to
         different functions.
       </p>
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Indefinite Integrals Differ by a Constant</h3>
 
       <p className="text-dark-200 mb-4">
-        If we use a different lower limit, say <MathInline>{'c'}</MathInline>, and define another
-        indefinite integral <MathInline>{'F'}</MathInline> by{' '}
-        <MathInline>{'F(x) = \\int_c^x f(t)\\,dt'}</MathInline>, then by the additive property:
+        If we use a different lower limit, say <InlineMath>{'c'}</InlineMath>, and define another
+        indefinite integral <InlineMath>{'F'}</InlineMath> by{' '}
+        <InlineMath>{'F(x) = \\int_c^x f(t)\\,dt'}</InlineMath>, then by the additive property:
       </p>
 
       <MathBlock>{'A(x) - F(x) = \\int_a^x f(t)\\,dt - \\int_c^x f(t)\\,dt = \\int_a^c f(t)\\,dt'}</MathBlock>
@@ -64,14 +64,14 @@ export default function Section18() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Evaluating Definite Integrals</h2>
 
       <p className="text-dark-200 mb-4">
-        When an indefinite integral of <MathInline>{'f'}</MathInline> is known, the value of a
+        When an indefinite integral of <InlineMath>{'f'}</InlineMath> is known, the value of a
         definite integral may be evaluated by a simple subtraction.
       </p>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Power Functions</p>
         <p className="mb-2">
-          From Theorem 1.15, for nonnegative integer <MathInline>{'n'}</MathInline>:
+          From Theorem 1.15, for nonnegative integer <InlineMath>{'n'}</InlineMath>:
         </p>
         <MathBlock>{'\\int_0^x t^n\\,dt = \\frac{x^{n+1}}{n+1}'}</MathBlock>
         <p className="mt-2 mb-2">The additive property gives:</p>
@@ -81,7 +81,7 @@ export default function Section18() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Evaluation Notation</h3>
 
       <p className="text-dark-200 mb-4">
-        In general, if <MathInline>{'F(x) = \\int_c^x f(t)\\,dt'}</MathInline>, then:
+        In general, if <InlineMath>{'F(x) = \\int_c^x f(t)\\,dt'}</InlineMath>, then:
       </p>
 
       <MathBlock>{'\\int_a^b f(t)\\,dt = \\int_c^b f(t)\\,dt - \\int_c^a f(t)\\,dt = F(b) - F(a)'}</MathBlock>
@@ -89,14 +89,14 @@ export default function Section18() {
       <Callout type="info">
         <p className="font-semibold mb-2">Evaluation Notation</p>
         <p className="mb-2">
-          We use the special symbol <MathInline>{'F(x)\\Big|_a^b'}</MathInline> to denote the
-          difference <MathInline>{'F(b) - F(a)'}</MathInline>:
+          We use the special symbol <InlineMath>{'F(x)\\Big|_a^b'}</InlineMath> to denote the
+          difference <InlineMath>{'F(b) - F(a)'}</InlineMath>:
         </p>
         <MathBlock>{'\\int_a^b f(x)\\,dx = F(x)\\Big|_a^b = F(b) - F(a)'}</MathBlock>
         <p className="mt-2">
-          A different choice of <MathInline>{'c'}</MathInline> merely changes{' '}
-          <MathInline>{'F(x)'}</MathInline> by a constant; this does not alter the difference{' '}
-          <MathInline>{'F(b) - F(a)'}</MathInline> because the constant cancels in the subtraction.
+          A different choice of <InlineMath>{'c'}</InlineMath> merely changes{' '}
+          <InlineMath>{'F(x)'}</InlineMath> by a constant; this does not alter the difference{' '}
+          <InlineMath>{'F(b) - F(a)'}</InlineMath> because the constant cancels in the subtraction.
         </p>
       </Callout>
 
@@ -104,20 +104,20 @@ export default function Section18() {
 
       <p className="text-dark-200 mb-4">
         There is a simple geometric relationship between a function{' '}
-        <MathInline>{'f'}</MathInline> and its indefinite integrals:
+        <InlineMath>{'f'}</InlineMath> and its indefinite integrals:
       </p>
 
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
-          If <MathInline>{'f'}</MathInline> is <strong>nonnegative</strong>, then{' '}
-          <MathInline>{'A(x)'}</MathInline> equals the area of the region under the graph of{' '}
-          <MathInline>{'f'}</MathInline> from <MathInline>{'a'}</MathInline> to{' '}
-          <MathInline>{'x'}</MathInline>
+          If <InlineMath>{'f'}</InlineMath> is <strong>nonnegative</strong>, then{' '}
+          <InlineMath>{'A(x)'}</InlineMath> equals the area of the region under the graph of{' '}
+          <InlineMath>{'f'}</InlineMath> from <InlineMath>{'a'}</InlineMath> to{' '}
+          <InlineMath>{'x'}</InlineMath>
         </li>
         <li>
-          If <MathInline>{'f'}</MathInline> takes both <strong>positive and negative</strong> values,
-          then <MathInline>{'A(x)'}</MathInline> gives the sum of areas above the{' '}
-          <MathInline>{'x'}</MathInline>-axis minus the sum of areas below it
+          If <InlineMath>{'f'}</InlineMath> takes both <strong>positive and negative</strong> values,
+          then <InlineMath>{'A(x)'}</InlineMath> gives the sum of areas above the{' '}
+          <InlineMath>{'x'}</InlineMath>-axis minus the sum of areas below it
         </li>
       </ul>
 
@@ -129,21 +129,21 @@ export default function Section18() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Properties of Indefinite Integrals</h2>
 
       <p className="text-dark-200 mb-4">
-        A special property of <MathInline>{'f'}</MathInline> often implies a corresponding property
+        A special property of <InlineMath>{'f'}</InlineMath> often implies a corresponding property
         of its indefinite integral.
       </p>
 
       <Callout type="theorem">
         <p className="font-semibold mb-2">Monotonicity of the Indefinite Integral</p>
         <p className="mb-2">
-          If <MathInline>{'f'}</MathInline> is nonnegative on <MathInline>{'[a, b]'}</MathInline>,
-          then the indefinite integral <MathInline>{'A'}</MathInline> is increasing, since for{' '}
-          <MathInline>{'a \\leq x < y \\leq b'}</MathInline>:
+          If <InlineMath>{'f'}</InlineMath> is nonnegative on <InlineMath>{'[a, b]'}</InlineMath>,
+          then the indefinite integral <InlineMath>{'A'}</InlineMath> is increasing, since for{' '}
+          <InlineMath>{'a \\leq x < y \\leq b'}</InlineMath>:
         </p>
         <MathBlock>{'A(y) - A(x) = \\int_a^y f(t)\\,dt - \\int_a^x f(t)\\,dt = \\int_x^y f(t)\\,dt \\geq 0'}</MathBlock>
         <p className="mt-2">
           Geometrically: the area under a nonnegative function cannot decrease as{' '}
-          <MathInline>{'x'}</MathInline> increases.
+          <InlineMath>{'x'}</InlineMath> increases.
         </p>
       </Callout>
 
@@ -156,16 +156,16 @@ export default function Section18() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Convex and Concave Functions</p>
         <p className="mb-2">
-          A function <MathInline>{'g'}</MathInline> is said to be <strong>convex</strong> on an
-          interval <MathInline>{'[a, b]'}</MathInline> if, for all <MathInline>{'x'}</MathInline>{' '}
-          and <MathInline>{'y'}</MathInline> in <MathInline>{'[a, b]'}</MathInline> and for every{' '}
-          <MathInline>{'\\alpha'}</MathInline> satisfying{' '}
-          <MathInline>{'0 < \\alpha < 1'}</MathInline>:
+          A function <InlineMath>{'g'}</InlineMath> is said to be <strong>convex</strong> on an
+          interval <InlineMath>{'[a, b]'}</InlineMath> if, for all <InlineMath>{'x'}</InlineMath>{' '}
+          and <InlineMath>{'y'}</InlineMath> in <InlineMath>{'[a, b]'}</InlineMath> and for every{' '}
+          <InlineMath>{'\\alpha'}</InlineMath> satisfying{' '}
+          <InlineMath>{'0 < \\alpha < 1'}</InlineMath>:
         </p>
         <MathBlock>{'g(z) \\leq \\alpha g(y) + (1 - \\alpha)g(x), \\quad \\text{where } z = \\alpha y + (1 - \\alpha)x'}</MathBlock>
         <p className="mt-3 mb-2">
-          We say <MathInline>{'g'}</MathInline> is <strong>concave</strong> on{' '}
-          <MathInline>{'[a, b]'}</MathInline> if the reverse inequality holds:
+          We say <InlineMath>{'g'}</InlineMath> is <strong>concave</strong> on{' '}
+          <InlineMath>{'[a, b]'}</InlineMath> if the reverse inequality holds:
         </p>
         <MathBlock>{'g(z) \\geq \\alpha g(y) + (1 - \\alpha)g(x)'}</MathBlock>
       </Callout>
@@ -176,17 +176,17 @@ export default function Section18() {
 
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
-          The point <MathInline>{'z = \\alpha y + (1 - \\alpha)x'}</MathInline> divides the interval{' '}
-          <MathInline>{'[x, y]'}</MathInline> into two subintervals, with{' '}
-          <MathInline>{'[x, z]'}</MathInline> having length <MathInline>{'\\alpha'}</MathInline>{' '}
-          times that of <MathInline>{'[x, y]'}</MathInline>
+          The point <InlineMath>{'z = \\alpha y + (1 - \\alpha)x'}</InlineMath> divides the interval{' '}
+          <InlineMath>{'[x, y]'}</InlineMath> into two subintervals, with{' '}
+          <InlineMath>{'[x, z]'}</InlineMath> having length <InlineMath>{'\\alpha'}</InlineMath>{' '}
+          times that of <InlineMath>{'[x, y]'}</InlineMath>
         </li>
         <li>
-          <strong>Convex:</strong> The graph of <MathInline>{'g'}</MathInline> never goes{' '}
+          <strong>Convex:</strong> The graph of <InlineMath>{'g'}</InlineMath> never goes{' '}
           <em>above</em> the chord joining any two points (graph bends upward)
         </li>
         <li>
-          <strong>Concave:</strong> The graph of <MathInline>{'g'}</MathInline> never goes{' '}
+          <strong>Concave:</strong> The graph of <InlineMath>{'g'}</InlineMath> never goes{' '}
           <em>below</em> the chord (graph bends downward)
         </li>
       </ul>
@@ -194,55 +194,55 @@ export default function Section18() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 2.9 (Convexity of Indefinite Integrals)</p>
         <p>
-          Let <MathInline>{'A(x) = \\int_a^x f(t)\\,dt'}</MathInline>. Then{' '}
-          <MathInline>{'A'}</MathInline> is <strong>convex</strong> on every interval where{' '}
-          <MathInline>{'f'}</MathInline> is increasing, and <strong>concave</strong> on every
-          interval where <MathInline>{'f'}</MathInline> is decreasing.
+          Let <InlineMath>{'A(x) = \\int_a^x f(t)\\,dt'}</InlineMath>. Then{' '}
+          <InlineMath>{'A'}</InlineMath> is <strong>convex</strong> on every interval where{' '}
+          <InlineMath>{'f'}</InlineMath> is increasing, and <strong>concave</strong> on every
+          interval where <InlineMath>{'f'}</InlineMath> is decreasing.
         </p>
       </Callout>
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Proof Sketch</h3>
 
       <p className="text-dark-200 mb-4">
-        Assume <MathInline>{'f'}</MathInline> is increasing on <MathInline>{'[a, b]'}</MathInline>,
-        choose <MathInline>{'x < y'}</MathInline>, and let{' '}
-        <MathInline>{'z = \\alpha y + (1 - \\alpha)x'}</MathInline>. We need to prove:
+        Assume <InlineMath>{'f'}</InlineMath> is increasing on <InlineMath>{'[a, b]'}</InlineMath>,
+        choose <InlineMath>{'x < y'}</InlineMath>, and let{' '}
+        <InlineMath>{'z = \\alpha y + (1 - \\alpha)x'}</InlineMath>. We need to prove:
       </p>
 
       <MathBlock>{'(1 - \\alpha)\\int_x^z f(t)\\,dt \\leq \\alpha \\int_z^y f(t)\\,dt'}</MathBlock>
 
       <p className="text-dark-200 mb-4">
-        Since <MathInline>{'f'}</MathInline> is increasing:
+        Since <InlineMath>{'f'}</InlineMath> is increasing:
       </p>
 
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
-          <MathInline>{'f(t) \\leq f(z)'}</MathInline> for{' '}
-          <MathInline>{'x \\leq t \\leq z'}</MathInline>
+          <InlineMath>{'f(t) \\leq f(z)'}</InlineMath> for{' '}
+          <InlineMath>{'x \\leq t \\leq z'}</InlineMath>
         </li>
         <li>
-          <MathInline>{'f(z) \\leq f(t)'}</MathInline> for{' '}
-          <MathInline>{'z \\leq t \\leq y'}</MathInline>
+          <InlineMath>{'f(z) \\leq f(t)'}</InlineMath> for{' '}
+          <InlineMath>{'z \\leq t \\leq y'}</InlineMath>
         </li>
       </ul>
 
       <p className="text-dark-200 mb-4">
         Integrating these inequalities and using{' '}
-        <MathInline>{'(1 - \\alpha)(z - x) = \\alpha(y - z)'}</MathInline> completes the proof.
-        When <MathInline>{'f'}</MathInline> is decreasing, apply the result to{' '}
-        <MathInline>{'-f'}</MathInline>.
+        <InlineMath>{'(1 - \\alpha)(z - x) = \\alpha(y - z)'}</InlineMath> completes the proof.
+        When <InlineMath>{'f'}</InlineMath> is decreasing, apply the result to{' '}
+        <InlineMath>{'-f'}</InlineMath>.
       </p>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Sine Function</p>
         <p className="mb-2">
           The cosine function decreases in the interval{' '}
-          <MathInline>{'[0, \\pi]'}</MathInline>. Since{' '}
-          <MathInline>{'\\sin x = \\int_0^x \\cos t\\,dt'}</MathInline>, the graph of the sine
-          function is <strong>concave</strong> in <MathInline>{'[0, \\pi]'}</MathInline>.
+          <InlineMath>{'[0, \\pi]'}</InlineMath>. Since{' '}
+          <InlineMath>{'\\sin x = \\int_0^x \\cos t\\,dt'}</InlineMath>, the graph of the sine
+          function is <strong>concave</strong> in <InlineMath>{'[0, \\pi]'}</InlineMath>.
         </p>
         <p>
-          In <MathInline>{'[\\pi, 2\\pi]'}</MathInline>, the cosine increases, so the sine
+          In <InlineMath>{'[\\pi, 2\\pi]'}</InlineMath>, the cosine increases, so the sine
           function is <strong>convex</strong>.
         </p>
       </Callout>
@@ -250,15 +250,15 @@ export default function Section18() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Indefinite Integral of Step Functions</h2>
 
       <p className="text-dark-200 mb-4">
-        Consider the greatest-integer function <MathInline>{'f(x) = [x]'}</MathInline> and its
-        indefinite integral <MathInline>{'A(x) = \\int_0^x [t]\\,dt'}</MathInline>.
+        Consider the greatest-integer function <InlineMath>{'f(x) = [x]'}</InlineMath> and its
+        indefinite integral <InlineMath>{'A(x) = \\int_0^x [t]\\,dt'}</InlineMath>.
       </p>
 
       <Callout type="info">
         <p className="font-semibold mb-2">Piecewise Linear Property</p>
         <p className="mb-2">
-          On those intervals where <MathInline>{'f'}</MathInline> is constant, the function{' '}
-          <MathInline>{'A'}</MathInline> is linear. We describe this by saying:
+          On those intervals where <InlineMath>{'f'}</InlineMath> is constant, the function{' '}
+          <InlineMath>{'A'}</InlineMath> is linear. We describe this by saying:
         </p>
         <p className="font-medium">
           The integral of a step function is piecewise linear.
@@ -266,10 +266,10 @@ export default function Section18() {
       </Callout>
 
       <p className="text-dark-200 mb-4">
-        Observe that while the graph of the step function <MathInline>{'f'}</MathInline> is made
+        Observe that while the graph of the step function <InlineMath>{'f'}</InlineMath> is made
         up of disconnected line segments with sudden jumps, the corresponding indefinite integral
-        does <em>not</em> exhibit this behavior. A small change in <MathInline>{'x'}</MathInline>{' '}
-        produces only a small change in <MathInline>{'A(x)'}</MathInline>.
+        does <em>not</em> exhibit this behavior. A small change in <InlineMath>{'x'}</InlineMath>{' '}
+        produces only a small change in <InlineMath>{'A(x)'}</InlineMath>.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Continuity of Indefinite Integrals</h2>
@@ -283,9 +283,9 @@ export default function Section18() {
       <Callout type="info">
         <p className="font-semibold mb-2">Preview: Continuity</p>
         <p>
-          Even when <MathInline>{'f'}</MathInline> has jump discontinuities (like the
+          Even when <InlineMath>{'f'}</InlineMath> has jump discontinuities (like the
           greatest-integer function), its indefinite integral{' '}
-          <MathInline>{'A(x) = \\int_a^x f(t)\\,dt'}</MathInline> is always continuous. The
+          <InlineMath>{'A(x) = \\int_a^x f(t)\\,dt'}</InlineMath> is always continuous. The
           integration process "smooths out" the discontinuities.
         </p>
       </Callout>
@@ -295,7 +295,7 @@ export default function Section18() {
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
           <strong>Indefinite integral:</strong>{' '}
-          <MathInline>{'A(x) = \\int_a^x f(t)\\,dt'}</MathInline> is a function of the upper limit
+          <InlineMath>{'A(x) = \\int_a^x f(t)\\,dt'}</InlineMath> is a function of the upper limit
         </li>
         <li>
           <strong>Uniqueness:</strong> Two indefinite integrals of the same function differ only by
@@ -303,16 +303,16 @@ export default function Section18() {
         </li>
         <li>
           <strong>Evaluation:</strong>{' '}
-          <MathInline>{'\\int_a^b f(x)\\,dx = F(b) - F(a)'}</MathInline>
+          <InlineMath>{'\\int_a^b f(x)\\,dx = F(b) - F(a)'}</InlineMath>
         </li>
         <li>
-          <strong>Monotonicity:</strong> If <MathInline>{'f \\geq 0'}</MathInline>, then{' '}
-          <MathInline>{'A'}</MathInline> is increasing
+          <strong>Monotonicity:</strong> If <InlineMath>{'f \\geq 0'}</InlineMath>, then{' '}
+          <InlineMath>{'A'}</InlineMath> is increasing
         </li>
         <li>
-          <strong>Convexity:</strong> If <MathInline>{'f'}</MathInline> is increasing,{' '}
-          <MathInline>{'A'}</MathInline> is convex; if <MathInline>{'f'}</MathInline> is
-          decreasing, <MathInline>{'A'}</MathInline> is concave
+          <strong>Convexity:</strong> If <InlineMath>{'f'}</InlineMath> is increasing,{' '}
+          <InlineMath>{'A'}</InlineMath> is convex; if <InlineMath>{'f'}</InlineMath> is
+          decreasing, <InlineMath>{'A'}</InlineMath> is concave
         </li>
         <li>
           <strong>Step functions:</strong> The integral of a step function is piecewise linear

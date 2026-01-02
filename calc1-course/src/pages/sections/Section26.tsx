@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section26() {
   return (
@@ -83,23 +83,23 @@ export default function Section26() {
           by gravity so that it moves up and back along a straight line.
         </p>
         <p>
-          Let <MathInline>{`f(t)`}</MathInline> denote the height in feet that the projectile attains
-          <MathInline>{`t`}</MathInline> seconds after firing. If the force of gravity were not acting
+          Let <InlineMath>{`f(t)`}</InlineMath> denote the height in feet that the projectile attains
+          <InlineMath>{`t`}</InlineMath> seconds after firing. If the force of gravity were not acting
           on it, the projectile would continue to move upward with a constant velocity, traveling
-          a distance of 144 feet every second, and at time <MathInline>{`t`}</MathInline> we would have
-          <MathInline>{`f(t) = 144t`}</MathInline>.
+          a distance of 144 feet every second, and at time <InlineMath>{`t`}</InlineMath> we would have
+          <InlineMath>{`f(t) = 144t`}</InlineMath>.
         </p>
         <p>
           In actual practice, gravity causes the projectile to slow down until its velocity
           decreases to zero and then it drops back to earth. Physical experiments suggest that
-          as long as the projectile is aloft, its height <MathInline>{`f(t)`}</MathInline> is given by:
+          as long as the projectile is aloft, its height <InlineMath>{`f(t)`}</InlineMath> is given by:
         </p>
         <MathBlock>{`f(t) = 144t - 16t^2.`}</MathBlock>
         <p>
-          The term <MathInline>{`-16t^2`}</MathInline> is due to the influence of gravity. Note that
-          <MathInline>{`f(t) = 0`}</MathInline> when <MathInline>{`t = 0`}</MathInline> and when
-          <MathInline>{`t = 9`}</MathInline>. This means the projectile returns to earth after 9 seconds,
-          and formula is valid only for <MathInline>{`0 \\leq t \\leq 9`}</MathInline>.
+          The term <InlineMath>{`-16t^2`}</InlineMath> is due to the influence of gravity. Note that
+          <InlineMath>{`f(t) = 0`}</InlineMath> when <InlineMath>{`t = 0`}</InlineMath> and when
+          <InlineMath>{`t = 9`}</InlineMath>. This means the projectile returns to earth after 9 seconds,
+          and formula is valid only for <InlineMath>{`0 \\leq t \\leq 9`}</InlineMath>.
         </p>
       </Callout>
 
@@ -111,103 +111,103 @@ export default function Section26() {
       </p>
       <p>
         We introduce first the notion of <strong>average velocity</strong> during a time interval,
-        say from time <MathInline>{`t`}</MathInline> to time <MathInline>{`t + h`}</MathInline>:
+        say from time <InlineMath>{`t`}</InlineMath> to time <InlineMath>{`t + h`}</InlineMath>:
       </p>
 
       <Callout type="definition" title="Average Velocity">
         <MathBlock>{`\\text{Average velocity} = \\frac{\\text{change in distance during time interval}}{\\text{length of time interval}} = \\frac{f(t + h) - f(t)}{h}.`}</MathBlock>
         <p>
           This quotient, called a <strong>difference quotient</strong>, is a number which may
-          be calculated whenever both <MathInline>{`t`}</MathInline> and <MathInline>{`t + h`}</MathInline> are
-          in the interval <MathInline>{`[0, 9]`}</MathInline>. The number <MathInline>{`h`}</MathInline> may be
+          be calculated whenever both <InlineMath>{`t`}</InlineMath> and <InlineMath>{`t + h`}</InlineMath> are
+          in the interval <InlineMath>{`[0, 9]`}</InlineMath>. The number <InlineMath>{`h`}</InlineMath> may be
           positive or negative, but not zero.
         </p>
       </Callout>
 
       <h2>From Average to Instantaneous</h2>
       <p>
-        Let us keep <MathInline>{`t`}</MathInline> fixed and see what happens to the difference quotient
-        as we take values of <MathInline>{`h`}</MathInline> with smaller and smaller absolute value.
+        Let us keep <InlineMath>{`t`}</InlineMath> fixed and see what happens to the difference quotient
+        as we take values of <InlineMath>{`h`}</InlineMath> with smaller and smaller absolute value.
       </p>
 
       <Callout type="example" title="Calculation at t = 2">
         <p>
-          Consider the instant <MathInline>{`t = 2`}</MathInline>. The height after 2 seconds is:
+          Consider the instant <InlineMath>{`t = 2`}</InlineMath>. The height after 2 seconds is:
         </p>
         <MathBlock>{`f(2) = 288 - 64 = 224 \\text{ feet}.`}</MathBlock>
         <p>
-          At time <MathInline>{`t = 2 + h`}</MathInline>, the height is:
+          At time <InlineMath>{`t = 2 + h`}</InlineMath>, the height is:
         </p>
         <MathBlock>{`f(2 + h) = 144(2 + h) - 16(2 + h)^2 = 224 + 80h - 16h^2.`}</MathBlock>
         <p>
-          Therefore the average velocity in the interval from <MathInline>{`t = 2`}</MathInline> to
-          <MathInline>{`t = 2 + h`}</MathInline> is:
+          Therefore the average velocity in the interval from <InlineMath>{`t = 2`}</InlineMath> to
+          <InlineMath>{`t = 2 + h`}</InlineMath> is:
         </p>
         <MathBlock>{`\\frac{f(2 + h) - f(2)}{h} = \\frac{80h - 16h^2}{h} = 80 - 16h.`}</MathBlock>
       </Callout>
 
       <p>
-        As we take values of <MathInline>{`h`}</MathInline> with smaller and smaller absolute value,
-        this average velocity gets closer and closer to <MathInline>{`80`}</MathInline>:
+        As we take values of <InlineMath>{`h`}</InlineMath> with smaller and smaller absolute value,
+        this average velocity gets closer and closer to <InlineMath>{`80`}</InlineMath>:
       </p>
       <ul>
-        <li>When <MathInline>{`h = 0.1`}</MathInline>, average velocity = 78.4</li>
-        <li>When <MathInline>{`h = 0.001`}</MathInline>, average velocity = 79.984</li>
-        <li>When <MathInline>{`h = 0.00001`}</MathInline>, average velocity = 79.99984</li>
-        <li>When <MathInline>{`h = -0.00001`}</MathInline>, average velocity = 80.00016</li>
+        <li>When <InlineMath>{`h = 0.1`}</InlineMath>, average velocity = 78.4</li>
+        <li>When <InlineMath>{`h = 0.001`}</InlineMath>, average velocity = 79.984</li>
+        <li>When <InlineMath>{`h = 0.00001`}</InlineMath>, average velocity = 79.99984</li>
+        <li>When <InlineMath>{`h = -0.00001`}</InlineMath>, average velocity = 80.00016</li>
       </ul>
       <p>
         The important thing is that we can make the average velocity as close to 80 as we please
-        by taking <MathInline>{`|h|`}</MathInline> sufficiently small. The average velocity approaches
-        80 as a limit when <MathInline>{`h`}</MathInline> approaches zero. It seems natural to call this
-        limiting value the <strong>instantaneous velocity</strong> at time <MathInline>{`t = 2`}</MathInline>.
+        by taking <InlineMath>{`|h|`}</InlineMath> sufficiently small. The average velocity approaches
+        80 as a limit when <InlineMath>{`h`}</InlineMath> approaches zero. It seems natural to call this
+        limiting value the <strong>instantaneous velocity</strong> at time <InlineMath>{`t = 2`}</InlineMath>.
       </p>
 
       <h2>The General Velocity Formula</h2>
       <p>
         The same kind of calculation can be carried out for any other instant. The average
-        velocity for an arbitrary time interval from <MathInline>{`t`}</MathInline> to
-        <MathInline>{`t + h`}</MathInline> is:
+        velocity for an arbitrary time interval from <InlineMath>{`t`}</InlineMath> to
+        <InlineMath>{`t + h`}</InlineMath> is:
       </p>
 
       <MathBlock>{`\\frac{f(t + h) - f(t)}{h} = \\frac{[144(t + h) - 16(t + h)^2] - [144t - 16t^2]}{h} = 144 - 32t - 16h.`}</MathBlock>
 
       <p>
-        When <MathInline>{`h`}</MathInline> approaches zero, the expression on the right approaches
-        <MathInline>{`144 - 32t`}</MathInline> as a limit, and this limit is defined to be the
-        <strong>instantaneous velocity</strong> at time <MathInline>{`t`}</MathInline>. If we denote
-        the instantaneous velocity by <MathInline>{`v(t)`}</MathInline>, we may write:
+        When <InlineMath>{`h`}</InlineMath> approaches zero, the expression on the right approaches
+        <InlineMath>{`144 - 32t`}</InlineMath> as a limit, and this limit is defined to be the
+        <strong>instantaneous velocity</strong> at time <InlineMath>{`t`}</InlineMath>. If we denote
+        the instantaneous velocity by <InlineMath>{`v(t)`}</InlineMath>, we may write:
       </p>
 
       <MathBlock>{`v(t) = 144 - 32t.`}</MathBlock>
 
       <h2>Position Function vs. Velocity Function</h2>
       <p>
-        The formula <MathInline>{`f(t) = 144t - 16t^2`}</MathInline> defines a function <MathInline>{`f`}</MathInline>
+        The formula <InlineMath>{`f(t) = 144t - 16t^2`}</InlineMath> defines a function <InlineMath>{`f`}</InlineMath>
         which tells us <em>how high</em> the projectile is at each instant—the <strong>position
-        function</strong>. Its domain is the closed interval <MathInline>{`[0, 9]`}</MathInline>.
+        function</strong>. Its domain is the closed interval <InlineMath>{`[0, 9]`}</InlineMath>.
       </p>
       <p>
-        The formula <MathInline>{`v(t) = 144 - 32t`}</MathInline> defines a new function <MathInline>{`v`}</MathInline>
+        The formula <InlineMath>{`v(t) = 144 - 32t`}</InlineMath> defines a new function <InlineMath>{`v`}</InlineMath>
         which tells us <em>how fast</em> the projectile is moving at each instant—the
         <strong>velocity function</strong>.
       </p>
 
       <Callout type="info" title="Interpreting the Velocity">
         <p>
-          As <MathInline>{`t`}</MathInline> increases from 0 to 9:
+          As <InlineMath>{`t`}</InlineMath> increases from 0 to 9:
         </p>
         <ul>
-          <li><MathInline>{`v(t)`}</MathInline> decreases steadily from <MathInline>{`v(0) = 144`}</MathInline> to <MathInline>{`v(9) = -144`}</MathInline></li>
-          <li>When <MathInline>{`v(t) = 0`}</MathInline>, solving <MathInline>{`144 = 32t`}</MathInline> gives <MathInline>{`t = 9/2 = 4.5`}</MathInline> seconds</li>
-          <li>At <MathInline>{`t = 4.5`}</MathInline>, the projectile is momentarily at rest at height <MathInline>{`f(4.5) = 324`}</MathInline> feet</li>
-          <li>When <MathInline>{`t > 4.5`}</MathInline>, the velocity is negative, indicating the height is decreasing</li>
+          <li><InlineMath>{`v(t)`}</InlineMath> decreases steadily from <InlineMath>{`v(0) = 144`}</InlineMath> to <InlineMath>{`v(9) = -144`}</InlineMath></li>
+          <li>When <InlineMath>{`v(t) = 0`}</InlineMath>, solving <InlineMath>{`144 = 32t`}</InlineMath> gives <InlineMath>{`t = 9/2 = 4.5`}</InlineMath> seconds</li>
+          <li>At <InlineMath>{`t = 4.5`}</InlineMath>, the projectile is momentarily at rest at height <InlineMath>{`f(4.5) = 324`}</InlineMath> feet</li>
+          <li>When <InlineMath>{`t > 4.5`}</InlineMath>, the velocity is negative, indicating the height is decreasing</li>
         </ul>
       </Callout>
 
       <h2>The Limit Process</h2>
       <p>
-        The limit process by which <MathInline>{`v(t)`}</MathInline> is obtained from the difference
+        The limit process by which <InlineMath>{`v(t)`}</InlineMath> is obtained from the difference
         quotient is written symbolically as:
       </p>
 
@@ -216,8 +216,8 @@ export default function Section26() {
         <p>
           This equation is used to define velocity not only for this particular example but,
           more generally, for any particle moving along a straight line, provided the position
-          function <MathInline>{`f`}</MathInline> is such that the difference quotient tends to a
-          definite limit as <MathInline>{`h`}</MathInline> approaches zero.
+          function <InlineMath>{`f`}</InlineMath> is such that the difference quotient tends to a
+          definite limit as <InlineMath>{`h`}</InlineMath> approaches zero.
         </p>
       </Callout>
 
@@ -231,8 +231,8 @@ export default function Section26() {
       <MathBlock>{`f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}.`}</MathBlock>
 
       <p>
-        The velocity <MathInline>{`v(t)`}</MathInline> is simply the derivative of the position function
-        <MathInline>{`f(t)`}</MathInline>. This is often described by saying that <strong>velocity is
+        The velocity <InlineMath>{`v(t)`}</InlineMath> is simply the derivative of the position function
+        <InlineMath>{`f(t)`}</InlineMath>. This is often described by saying that <strong>velocity is
         the rate of change of position with respect to time</strong>.
       </p>
 

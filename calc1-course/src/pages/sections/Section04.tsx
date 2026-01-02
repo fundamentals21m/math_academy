@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section04() {
   return (
@@ -17,19 +17,19 @@ export default function Section04() {
 
       <p className="text-dark-200 mb-4">
         Before stating the general principle, let's examine a concrete example.
-        Consider the formula for the sum of the first <MathInline>{'n'}</MathInline> squares:
+        Consider the formula for the sum of the first <InlineMath>{'n'}</InlineMath> squares:
       </p>
 
       <MathBlock>{'1^2 + 2^2 + 3^2 + \\cdots + n^2 = \\frac{n(n+1)(2n+1)}{6}'}</MathBlock>
 
       <p className="text-dark-200 mb-4">
-        We can verify this formula for small values of <MathInline>{'n'}</MathInline>:
+        We can verify this formula for small values of <InlineMath>{'n'}</InlineMath>:
       </p>
 
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
-        <li>For <MathInline>{'n = 1'}</MathInline>: <MathInline>{'1^2 = 1'}</MathInline> and <MathInline>{'\\frac{1 \\cdot 2 \\cdot 3}{6} = 1'}</MathInline> ✓</li>
-        <li>For <MathInline>{'n = 2'}</MathInline>: <MathInline>{'1 + 4 = 5'}</MathInline> and <MathInline>{'\\frac{2 \\cdot 3 \\cdot 5}{6} = 5'}</MathInline> ✓</li>
-        <li>For <MathInline>{'n = 3'}</MathInline>: <MathInline>{'1 + 4 + 9 = 14'}</MathInline> and <MathInline>{'\\frac{3 \\cdot 4 \\cdot 7}{6} = 14'}</MathInline> ✓</li>
+        <li>For <InlineMath>{'n = 1'}</InlineMath>: <InlineMath>{'1^2 = 1'}</InlineMath> and <InlineMath>{'\\frac{1 \\cdot 2 \\cdot 3}{6} = 1'}</InlineMath> ✓</li>
+        <li>For <InlineMath>{'n = 2'}</InlineMath>: <InlineMath>{'1 + 4 = 5'}</InlineMath> and <InlineMath>{'\\frac{2 \\cdot 3 \\cdot 5}{6} = 5'}</InlineMath> ✓</li>
+        <li>For <InlineMath>{'n = 3'}</InlineMath>: <InlineMath>{'1 + 4 + 9 = 14'}</InlineMath> and <InlineMath>{'\\frac{3 \\cdot 4 \\cdot 7}{6} = 14'}</InlineMath> ✓</li>
       </ul>
 
       <p className="text-dark-200 mb-6">
@@ -48,17 +48,17 @@ export default function Section04() {
         <p className="font-semibold mb-2">Two Steps of Mathematical Induction</p>
         <p className="mb-2">
           <strong>Step 1 (Base Case):</strong> Prove that the statement is true
-          for <MathInline>{'n = 1'}</MathInline>.
+          for <InlineMath>{'n = 1'}</InlineMath>.
         </p>
         <p>
           <strong>Step 2 (Inductive Step):</strong> Prove that <em>if</em> the
-          statement is true for <MathInline>{'n = k'}</MathInline>, <em>then</em> it is
-          also true for <MathInline>{'n = k + 1'}</MathInline>.
+          statement is true for <InlineMath>{'n = k'}</InlineMath>, <em>then</em> it is
+          also true for <InlineMath>{'n = k + 1'}</InlineMath>.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-4">
-        Let's apply this to our sum of squares formula. Let <MathInline>{'A(n)'}</MathInline>{' '}
+        Let's apply this to our sum of squares formula. Let <InlineMath>{'A(n)'}</InlineMath>{' '}
         denote the assertion that
       </p>
 
@@ -66,20 +66,20 @@ export default function Section04() {
 
       <Callout type="example">
         <p className="font-semibold mb-2">Proof: Sum of Squares Formula</p>
-        <p className="mb-2"><strong>Base Case:</strong> We verify <MathInline>{'A(1)'}</MathInline>:</p>
+        <p className="mb-2"><strong>Base Case:</strong> We verify <InlineMath>{'A(1)'}</InlineMath>:</p>
         <MathBlock>{'1^2 = 1 = \\frac{1 \\cdot 2 \\cdot 3}{6}'}</MathBlock>
-        <p className="mb-4">So <MathInline>{'A(1)'}</MathInline> is true.</p>
+        <p className="mb-4">So <InlineMath>{'A(1)'}</InlineMath> is true.</p>
 
-        <p className="mb-2"><strong>Inductive Step:</strong> Assume <MathInline>{'A(k)'}</MathInline> is true for some positive integer <MathInline>{'k'}</MathInline>:</p>
+        <p className="mb-2"><strong>Inductive Step:</strong> Assume <InlineMath>{'A(k)'}</InlineMath> is true for some positive integer <InlineMath>{'k'}</InlineMath>:</p>
         <MathBlock>{'1^2 + 2^2 + \\cdots + k^2 = \\frac{k(k+1)(2k+1)}{6}'}</MathBlock>
 
-        <p className="mb-2">We must prove <MathInline>{'A(k+1)'}</MathInline>, i.e., that</p>
+        <p className="mb-2">We must prove <InlineMath>{'A(k+1)'}</InlineMath>, i.e., that</p>
         <MathBlock>{'1^2 + 2^2 + \\cdots + k^2 + (k+1)^2 = \\frac{(k+1)(k+2)(2k+3)}{6}'}</MathBlock>
 
         <p className="mb-2">Starting with the left side and using the inductive hypothesis:</p>
         <MathBlock>{'\\begin{aligned} 1^2 + \\cdots + k^2 + (k+1)^2 &= \\frac{k(k+1)(2k+1)}{6} + (k+1)^2 \\[8pt] &= \\frac{k(k+1)(2k+1) + 6(k+1)^2}{6} \\[8pt] &= \\frac{(k+1)[k(2k+1) + 6(k+1)]}{6} \\[8pt] &= \\frac{(k+1)(2k^2 + 7k + 6)}{6} \\[8pt] &= \\frac{(k+1)(k+2)(2k+3)}{6} \\end{aligned}'}</MathBlock>
 
-        <p>This is exactly <MathInline>{'A(k+1)'}</MathInline>, completing the proof.</p>
+        <p>This is exactly <InlineMath>{'A(k+1)'}</InlineMath>, completing the proof.</p>
       </Callout>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">The Formal Statement</h2>
@@ -91,15 +91,15 @@ export default function Section04() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem I.36 (Principle of Mathematical Induction)</p>
         <p className="mb-2">
-          Let <MathInline>{'S'}</MathInline> be a set of positive integers with the
+          Let <InlineMath>{'S'}</InlineMath> be a set of positive integers with the
           following properties:
         </p>
         <ol className="list-decimal list-inside mb-2 space-y-1">
-          <li>The number <MathInline>{'1'}</MathInline> belongs to <MathInline>{'S'}</MathInline>.</li>
-          <li>If an integer <MathInline>{'k'}</MathInline> belongs to <MathInline>{'S'}</MathInline>, then so does <MathInline>{'k + 1'}</MathInline>.</li>
+          <li>The number <InlineMath>{'1'}</InlineMath> belongs to <InlineMath>{'S'}</InlineMath>.</li>
+          <li>If an integer <InlineMath>{'k'}</InlineMath> belongs to <InlineMath>{'S'}</InlineMath>, then so does <InlineMath>{'k + 1'}</InlineMath>.</li>
         </ol>
         <p>
-          Then <MathInline>{'S'}</MathInline> contains every positive integer.
+          Then <InlineMath>{'S'}</InlineMath> contains every positive integer.
         </p>
       </Callout>
 
@@ -113,10 +113,10 @@ export default function Section04() {
       <Callout type="info">
         <p className="font-semibold mb-2">The Inductive Hypothesis</p>
         <p>
-          In the inductive step, we assume the statement is true for <MathInline>{'n = k'}</MathInline>.
+          In the inductive step, we assume the statement is true for <InlineMath>{'n = k'}</InlineMath>.
           This assumption is called the <strong>inductive hypothesis</strong>. It is{' '}
           <em>not</em> circular reasoning—we are proving a conditional statement:
-          "if true for <MathInline>{'k'}</MathInline>, then true for <MathInline>{'k+1'}</MathInline>."
+          "if true for <InlineMath>{'k'}</InlineMath>, then true for <InlineMath>{'k+1'}</InlineMath>."
         </p>
       </Callout>
 
@@ -142,10 +142,10 @@ export default function Section04() {
       <Callout type="example">
         <p className="font-semibold mb-2">Using Well-Ordering for Proof</p>
         <p>
-          To prove a statement <MathInline>{'A(n)'}</MathInline> using well-ordering,
-          suppose <MathInline>{'A(n)'}</MathInline> fails for some positive integer.
+          To prove a statement <InlineMath>{'A(n)'}</InlineMath> using well-ordering,
+          suppose <InlineMath>{'A(n)'}</InlineMath> fails for some positive integer.
           Then the set of counterexamples is nonempty and has a smallest
-          element <MathInline>{'m'}</MathInline>. Show this leads to a contradiction
+          element <InlineMath>{'m'}</InlineMath>. Show this leads to a contradiction
           (often by constructing a smaller counterexample), proving no
           counterexamples exist.
         </p>
@@ -156,9 +156,9 @@ export default function Section04() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Starting at a Different Base</h3>
 
       <p className="text-dark-200 mb-4">
-        Induction need not start at <MathInline>{'n = 1'}</MathInline>. If we want to
-        prove <MathInline>{'A(n)'}</MathInline> for all integers <MathInline>{'n \\geq n_0'}</MathInline>,
-        we verify <MathInline>{'A(n_0)'}</MathInline> in the base case.
+        Induction need not start at <InlineMath>{'n = 1'}</InlineMath>. If we want to
+        prove <InlineMath>{'A(n)'}</InlineMath> for all integers <InlineMath>{'n \\geq n_0'}</InlineMath>,
+        we verify <InlineMath>{'A(n_0)'}</InlineMath> in the base case.
       </p>
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Strong Induction</h3>
@@ -166,25 +166,25 @@ export default function Section04() {
       <p className="text-dark-200 mb-4">
         In <strong>strong induction</strong> (also called complete induction),
         the inductive step assumes the statement is true for <em>all</em> values
-        from <MathInline>{'n_0'}</MathInline> up to <MathInline>{'k'}</MathInline>, then proves
-        it for <MathInline>{'k + 1'}</MathInline>:
+        from <InlineMath>{'n_0'}</InlineMath> up to <InlineMath>{'k'}</InlineMath>, then proves
+        it for <InlineMath>{'k + 1'}</InlineMath>:
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Strong Induction</p>
         <p className="mb-2">
-          <strong>Base Case:</strong> Prove <MathInline>{'A(n_0)'}</MathInline>.
+          <strong>Base Case:</strong> Prove <InlineMath>{'A(n_0)'}</InlineMath>.
         </p>
         <p>
-          <strong>Inductive Step:</strong> Prove that if <MathInline>{'A(j)'}</MathInline>{' '}
-          is true for all <MathInline>{'n_0 \\leq j \\leq k'}</MathInline>, then{' '}
-          <MathInline>{'A(k+1)'}</MathInline> is true.
+          <strong>Inductive Step:</strong> Prove that if <InlineMath>{'A(j)'}</InlineMath>{' '}
+          is true for all <InlineMath>{'n_0 \\leq j \\leq k'}</InlineMath>, then{' '}
+          <InlineMath>{'A(k+1)'}</InlineMath> is true.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-6">
-        Strong induction is particularly useful when proving <MathInline>{'A(k+1)'}</MathInline>{' '}
-        requires knowing more than just <MathInline>{'A(k)'}</MathInline>.
+        Strong induction is particularly useful when proving <InlineMath>{'A(k+1)'}</InlineMath>{' '}
+        requires knowing more than just <InlineMath>{'A(k)'}</InlineMath>.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Common Pitfalls</h2>
@@ -198,12 +198,12 @@ export default function Section04() {
           </li>
           <li>
             <strong>Circular reasoning:</strong> In the inductive step, you assume{' '}
-            <MathInline>{'A(k)'}</MathInline> and prove <MathInline>{'A(k+1)'}</MathInline>. Never
+            <InlineMath>{'A(k)'}</InlineMath> and prove <InlineMath>{'A(k+1)'}</InlineMath>. Never
             assume what you're trying to prove.
           </li>
           <li>
             <strong>Invalid base case:</strong> Ensure the base case actually works.
-            A flawed formula might accidentally satisfy <MathInline>{'n = 1'}</MathInline>{' '}
+            A flawed formula might accidentally satisfy <InlineMath>{'n = 1'}</InlineMath>{' '}
             but fail the inductive step.
           </li>
         </ul>

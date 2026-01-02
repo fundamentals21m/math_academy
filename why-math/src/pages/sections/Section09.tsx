@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { TimeDilationVisualizer } from '@/components/visualizations';
 
 export default function Section09() {
@@ -52,7 +52,7 @@ export default function Section09() {
 
       <Callout type="info">
         <strong>The Speed of Light:</strong> Light propagates at approximately{' '}
-        <Math>{`c \\approx 186,000`}</Math> miles per second. This is fast but finite,
+        <InlineMath>{`c \\approx 186,000`}</InlineMath> miles per second. This is fast but finite,
         meaning light from distant objects takes measurable time to reach us.
       </Callout>
 
@@ -72,7 +72,7 @@ export default function Section09() {
 
       <Callout type="success">
         <strong>Einstein's Postulate (1905):</strong> Light from whatever source propagates
-        with the speed <Math>c</Math> (approximately 186,000 miles per second) relative to
+        with the speed <InlineMath>c</InlineMath> (approximately 186,000 miles per second) relative to
         <em> any</em> observer who can be considered "stationary" or any observer moving
         with constant velocity relative to a stationary one.
       </Callout>
@@ -91,7 +91,7 @@ export default function Section09() {
 
       <p>
         Imagine this experiment: Observer A stands beside railroad tracks watching a train
-        go by at speed <Math>v</Math>. Observer B rides in the middle of the train, carrying
+        go by at speed <InlineMath>v</InlineMath>. Observer B rides in the middle of the train, carrying
         a flash gun. At each end of the train is a "slave" flash that fires when it receives
         B's signal.
       </p>
@@ -105,14 +105,14 @@ export default function Section09() {
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-primary-400 font-semibold">Observer B (on train):</p>
           <p className="mt-2">
-            Yes! Her light signal traveled at speed <Math>c</Math> relative to the train,
+            Yes! Her light signal traveled at speed <InlineMath>c</InlineMath> relative to the train,
             an equal distance to both slave flashes. They fired simultaneously.
           </p>
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-primary-400 font-semibold">Observer A (on ground):</p>
           <p className="mt-2">
-            No! The signal propagates at speed <Math>c</Math> relative to ground,
+            No! The signal propagates at speed <InlineMath>c</InlineMath> relative to ground,
             but the rear flash is moving toward it while the front moves away.
             The rear fires first!
           </p>
@@ -128,17 +128,17 @@ export default function Section09() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: Time Difference Calculation</p>
         <p className="mt-2">
-          If the distance between the slave flashes is <Math>{`2d = 0.93`}</Math> miles
-          and the train moves at <Math>{`v = 134`}</Math> mph, what is the time difference
+          If the distance between the slave flashes is <InlineMath>{`2d = 0.93`}</InlineMath> miles
+          and the train moves at <InlineMath>{`v = 134`}</InlineMath> mph, what is the time difference
           between their firings according to observer A?
         </p>
         <p className="mt-2">
-          The signal reaches the rear flash in time <Math>{`t_1 = d/(c+v)`}</Math> and
-          the front flash in time <Math>{`t_2 = d/(c-v)`}</Math>. The difference is:
+          The signal reaches the rear flash in time <InlineMath>{`t_1 = d/(c+v)`}</InlineMath> and
+          the front flash in time <InlineMath>{`t_2 = d/(c-v)`}</InlineMath>. The difference is:
         </p>
         <MathBlock>{`t_2 - t_1 = \\frac{d}{c-v} - \\frac{d}{c+v} = \\frac{2dv}{c^2 - v^2} \\approx \\frac{2dv}{c^2}`}</MathBlock>
         <p className="mt-2">
-          With <Math>{`v = 134/3600 \\approx 0.0372`}</Math> miles/second:
+          With <InlineMath>{`v = 134/3600 \\approx 0.0372`}</InlineMath> miles/second:
         </p>
         <MathBlock>{`\\frac{(0.93)(0.0372)}{(186,000)^2} \\approx 10^{-12} \\text{ second}`}</MathBlock>
         <p className="mt-2 text-emerald-400">
@@ -160,7 +160,7 @@ export default function Section09() {
       <p>
         Since the speed of light is constant, we can construct a precise clock by
         attaching a light source and mirror at either end of a rigid rod of length{' '}
-        <Math>d</Math>. The basic unit of time is the round-trip time for a light flash
+        <InlineMath>d</InlineMath>. The basic unit of time is the round-trip time for a light flash
         to travel from source to mirror and back.
       </p>
 
@@ -170,27 +170,27 @@ export default function Section09() {
 
       <p>
         Consider the clock aligned at right angles to the direction of motion. The owner
-        of the clock says the light flash requires time <Math>{`t'`}</Math> to reach the
-        mirror and time <Math>{`t'`}</Math> to return, where <Math>{`ct' = d`}</Math>.
+        of the clock says the light flash requires time <InlineMath>{`t'`}</InlineMath> to reach the
+        mirror and time <InlineMath>{`t'`}</InlineMath> to return, where <InlineMath>{`ct' = d`}</InlineMath>.
       </p>
 
       <p>
         But the stationary observer argues that since the space ship was moving while
         the light traveled, the trip in each direction requires longer, say time{' '}
-        <Math>{`t > t'`}</Math>. By the Pythagorean Theorem:
+        <InlineMath>{`t > t'`}</InlineMath>. By the Pythagorean Theorem:
       </p>
 
       <MathBlock>{`(ct)^2 = d^2 + (vt)^2`}</MathBlock>
 
       <p>
-        Substituting <Math>{`d = ct'`}</Math> and solving:
+        Substituting <InlineMath>{`d = ct'`}</InlineMath> and solving:
       </p>
 
       <MathBlock>{`t = \\frac{t'}{\\sqrt{1 - (v/c)^2}}`}</MathBlock>
 
       <Callout type="success">
         <strong>Time Dilation:</strong> A moving clock runs <em>slower</em> than a
-        stationary clock by the factor <Math>{`\\sqrt{1 - (v/c)^2}`}</Math>. This applies
+        stationary clock by the factor <InlineMath>{`\\sqrt{1 - (v/c)^2}`}</InlineMath>. This applies
         to all clocks—mechanical, atomic, and even biological "clocks."
       </Callout>
 
@@ -200,7 +200,7 @@ export default function Section09() {
           If a space ship is traveling at 60% of the speed of light, how "slow" are its clocks?
         </p>
         <p className="mt-2">
-          Since <Math>{`v = 0.6c`}</Math>, a time period <Math>t</Math> for a stationary
+          Since <InlineMath>{`v = 0.6c`}</InlineMath>, a time period <InlineMath>t</InlineMath> for a stationary
           observer corresponds to:
         </p>
         <MathBlock>{`t' = t\\sqrt{1 - (0.6)^2} = t\\sqrt{0.64} = 0.8t`}</MathBlock>
@@ -235,7 +235,7 @@ export default function Section09() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: Muon at 99.9% Light Speed</p>
         <p className="mt-2">
-          If a muon travels at <Math>{`v = 0.999c`}</Math>, how long would it live and
+          If a muon travels at <InlineMath>{`v = 0.999c`}</InlineMath>, how long would it live and
           how far could it travel?
         </p>
         <p className="mt-2">
@@ -243,7 +243,7 @@ export default function Section09() {
         </p>
         <MathBlock>{`t = \\frac{2.2 \\times 10^{-6}}{\\sqrt{1 - (0.999)^2}} = \\frac{2.2 \\times 10^{-6}}{\\sqrt{0.002}} \\approx 5 \\times 10^{-5} \\text{ seconds}`}</MathBlock>
         <p className="mt-2 text-emerald-400">
-          About 50 microseconds—during which it travels approximately <Math>{`186,000 \\times 50 \\times 10^{-6} = 9.3`}</Math> miles!
+          About 50 microseconds—during which it travels approximately <InlineMath>{`186,000 \\times 50 \\times 10^{-6} = 9.3`}</InlineMath> miles!
         </p>
       </div>
 
@@ -259,7 +259,7 @@ export default function Section09() {
       <p>
         Consider the Einstein-Langevin clock positioned lengthwise in the space ship
         (parallel to the direction of motion). The space traveler sees length{' '}
-        <Math>{`d'`}</Math>, while the stationary observer sees length <Math>d</Math>.
+        <InlineMath>{`d'`}</InlineMath>, while the stationary observer sees length <InlineMath>d</InlineMath>.
       </p>
 
       <p>
@@ -271,7 +271,7 @@ export default function Section09() {
       <Callout type="success">
         <strong>Lorentz-Fitzgerald Contraction:</strong> All moving objects are
         "contracted" in the direction of motion by the factor{' '}
-        <Math>{`\\sqrt{1 - (v/c)^2}`}</Math> from the point of view of a stationary
+        <InlineMath>{`\\sqrt{1 - (v/c)^2}`}</InlineMath> from the point of view of a stationary
         observer. Dimensions perpendicular to motion are unchanged.
       </Callout>
 
@@ -296,20 +296,20 @@ export default function Section09() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: The Muon's Perspective</p>
         <p className="mt-2">
-          A muon is produced 9 miles above Earth, moving at <Math>{`v = 0.999c`}</Math>.
+          A muon is produced 9 miles above Earth, moving at <InlineMath>{`v = 0.999c`}</InlineMath>.
         </p>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-dark-700/50 p-3 rounded-lg">
             <p className="text-primary-400 font-semibold">Earth's Viewpoint:</p>
             <p className="mt-1 text-sm">
-              The muon lives <Math>{`\\approx 50`}</Math> microseconds, traveling{' '}
-              <Math>{`\\approx 9.3`}</Math> miles. No surprise it reaches Earth!
+              The muon lives <InlineMath>{`\\approx 50`}</InlineMath> microseconds, traveling{' '}
+              <InlineMath>{`\\approx 9.3`}</InlineMath> miles. No surprise it reaches Earth!
             </p>
           </div>
           <div className="bg-dark-700/50 p-3 rounded-lg">
             <p className="text-primary-400 font-semibold">Muon's Viewpoint:</p>
             <p className="mt-1 text-sm">
-              The Earth rushes toward it at <Math>{`0.999c`}</Math>. The 9-mile distance
+              The Earth rushes toward it at <InlineMath>{`0.999c`}</InlineMath>. The 9-mile distance
               is contracted to:
             </p>
             <MathBlock>{`9\\sqrt{1-(0.999)^2} \\approx 0.4 \\text{ miles}`}</MathBlock>
@@ -348,9 +348,9 @@ export default function Section09() {
         is constant for all observers leads to revolutionary conclusions:
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li><strong>Simultaneity is relative:</strong> Events simultaneous for one observer may not be for another</li>
-          <li><strong>Time dilation:</strong> Moving clocks run slow by factor <Math>{`\\sqrt{1-(v/c)^2}`}</Math></li>
+          <li><strong>Time dilation:</strong> Moving clocks run slow by factor <InlineMath>{`\\sqrt{1-(v/c)^2}`}</InlineMath></li>
           <li><strong>Length contraction:</strong> Moving objects are shortened by the same factor</li>
-          <li><strong>Nothing travels faster than light:</strong> The speed <Math>c</Math> is the cosmic speed limit</li>
+          <li><strong>Nothing travels faster than light:</strong> The speed <InlineMath>c</InlineMath> is the cosmic speed limit</li>
         </ul>
       </Callout>
     </LessonLayout>

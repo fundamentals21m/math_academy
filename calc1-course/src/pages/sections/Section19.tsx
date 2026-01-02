@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section19() {
   return (
@@ -39,40 +39,40 @@ export default function Section19() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Neighborhood of a Point</p>
         <p className="mb-2">
-          Any open interval containing a point <MathInline>{'p'}</MathInline> as its midpoint
-          is called a <strong>neighborhood</strong> of <MathInline>{'p'}</MathInline>.
+          Any open interval containing a point <InlineMath>{'p'}</InlineMath> as its midpoint
+          is called a <strong>neighborhood</strong> of <InlineMath>{'p'}</InlineMath>.
         </p>
         <p className="mb-2">
-          We denote neighborhoods by <MathInline>{'N(p)'}</MathInline>,{' '}
-          <MathInline>{'N_1(p)'}</MathInline>, <MathInline>{'N_2(p)'}</MathInline>, etc.
+          We denote neighborhoods by <InlineMath>{'N(p)'}</InlineMath>,{' '}
+          <InlineMath>{'N_1(p)'}</InlineMath>, <InlineMath>{'N_2(p)'}</InlineMath>, etc.
         </p>
         <p>
-          The neighborhood <MathInline>{'N(p; r)'}</MathInline> with <strong>radius</strong>{' '}
-          <MathInline>{'r > 0'}</MathInline> consists of all points{' '}
-          <MathInline>{'x'}</MathInline> satisfying:
+          The neighborhood <InlineMath>{'N(p; r)'}</InlineMath> with <strong>radius</strong>{' '}
+          <InlineMath>{'r > 0'}</InlineMath> consists of all points{' '}
+          <InlineMath>{'x'}</InlineMath> satisfying:
         </p>
         <MathBlock>{'|x - p| < r \\quad \\Leftrightarrow \\quad p - r < x < p + r'}</MathBlock>
       </Callout>
 
       <p className="text-dark-200 mb-4">
-        In other words, <MathInline>{'N(p; r)'}</MathInline> consists of all points whose
-        distance from <MathInline>{'p'}</MathInline> is less than <MathInline>{'r'}</MathInline>.
+        In other words, <InlineMath>{'N(p; r)'}</InlineMath> consists of all points whose
+        distance from <InlineMath>{'p'}</InlineMath> is less than <InlineMath>{'r'}</InlineMath>.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">The Definition of Limit</h2>
 
       <p className="text-dark-200 mb-4">
-        Let <MathInline>{'f'}</MathInline> be a function defined in some open interval containing
-        a point <MathInline>{'p'}</MathInline>, although we do not insist that{' '}
-        <MathInline>{'f'}</MathInline> be defined at <MathInline>{'p'}</MathInline> itself.
+        Let <InlineMath>{'f'}</InlineMath> be a function defined in some open interval containing
+        a point <InlineMath>{'p'}</InlineMath>, although we do not insist that{' '}
+        <InlineMath>{'f'}</InlineMath> be defined at <InlineMath>{'p'}</InlineMath> itself.
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Limit of a Function (Neighborhood Form)</p>
         <p className="mb-2">
-          The symbolism <MathInline>{'\\lim_{x \\to p} f(x) = A'}</MathInline> means that for
-          every neighborhood <MathInline>{'N_1(A)'}</MathInline> there is some neighborhood{' '}
-          <MathInline>{'N_2(p)'}</MathInline> such that:
+          The symbolism <InlineMath>{'\\lim_{x \\to p} f(x) = A'}</InlineMath> means that for
+          every neighborhood <InlineMath>{'N_1(A)'}</InlineMath> there is some neighborhood{' '}
+          <InlineMath>{'N_2(p)'}</InlineMath> such that:
         </p>
         <MathBlock>{'f(x) \\in N_1(A) \\quad \\text{whenever} \\quad x \\in N_2(p) \\text{ and } x \\neq p'}</MathBlock>
       </Callout>
@@ -83,19 +83,19 @@ export default function Section19() {
 
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
-          <MathInline>{'N_1(A)'}</MathInline> tells us how close we wish{' '}
-          <MathInline>{'f(x)'}</MathInline> to be to the limit <MathInline>{'A'}</MathInline>
+          <InlineMath>{'N_1(A)'}</InlineMath> tells us how close we wish{' '}
+          <InlineMath>{'f(x)'}</InlineMath> to be to the limit <InlineMath>{'A'}</InlineMath>
         </li>
         <li>
-          <MathInline>{'N_2(p)'}</MathInline> tells us how close <MathInline>{'x'}</MathInline>{' '}
-          should be to <MathInline>{'p'}</MathInline> so that{' '}
-          <MathInline>{'f(x)'}</MathInline> will be within <MathInline>{'N_1(A)'}</MathInline>
+          <InlineMath>{'N_2(p)'}</InlineMath> tells us how close <InlineMath>{'x'}</InlineMath>{' '}
+          should be to <InlineMath>{'p'}</InlineMath> so that{' '}
+          <InlineMath>{'f(x)'}</InlineMath> will be within <InlineMath>{'N_1(A)'}</InlineMath>
         </li>
       </ul>
 
       <p className="text-dark-200 mb-4">
-        The essential part: for <em>every</em> <MathInline>{'N_1(A)'}</MathInline>, no matter
-        how small, there is <em>some</em> neighborhood <MathInline>{'N_2(p)'}</MathInline> to
+        The essential part: for <em>every</em> <InlineMath>{'N_1(A)'}</InlineMath>, no matter
+        how small, there is <em>some</em> neighborhood <InlineMath>{'N_2(p)'}</InlineMath> to
         satisfy the condition.
       </p>
 
@@ -104,17 +104,17 @@ export default function Section19() {
       <p className="text-dark-200 mb-4">
         The definition of limit can also be formulated in terms of the <em>radii</em> of the
         neighborhoods. It is customary to denote the radius of{' '}
-        <MathInline>{'N_1(A)'}</MathInline> by <MathInline>{'\\varepsilon'}</MathInline>{' '}
-        (epsilon) and the radius of <MathInline>{'N_2(p)'}</MathInline> by{' '}
-        <MathInline>{'\\delta'}</MathInline> (delta).
+        <InlineMath>{'N_1(A)'}</InlineMath> by <InlineMath>{'\\varepsilon'}</InlineMath>{' '}
+        (epsilon) and the radius of <InlineMath>{'N_2(p)'}</InlineMath> by{' '}
+        <InlineMath>{'\\delta'}</InlineMath> (delta).
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Limit of a Function (ε-δ Form)</p>
         <p className="mb-2">
-          The symbol <MathInline>{'\\lim_{x \\to p} f(x) = A'}</MathInline> means that for every{' '}
-          <MathInline>{'\\varepsilon > 0'}</MathInline>, there is a{' '}
-          <MathInline>{'\\delta > 0'}</MathInline> such that:
+          The symbol <InlineMath>{'\\lim_{x \\to p} f(x) = A'}</InlineMath> means that for every{' '}
+          <InlineMath>{'\\varepsilon > 0'}</InlineMath>, there is a{' '}
+          <InlineMath>{'\\delta > 0'}</InlineMath> such that:
         </p>
         <MathBlock>{'|f(x) - A| < \\varepsilon \\quad \\text{whenever} \\quad 0 < |x - p| < \\delta'}</MathBlock>
       </Callout>
@@ -130,27 +130,27 @@ export default function Section19() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example 1: Limit of a Constant Function</p>
         <p className="mb-2">
-          Let <MathInline>{'f(x) = c'}</MathInline> for all <MathInline>{'x'}</MathInline>.
-          For every <MathInline>{'p'}</MathInline>:
+          Let <InlineMath>{'f(x) = c'}</InlineMath> for all <InlineMath>{'x'}</InlineMath>.
+          For every <InlineMath>{'p'}</InlineMath>:
         </p>
         <MathBlock>{'\\lim_{x \\to p} c = c'}</MathBlock>
         <p className="mt-2">
-          Given any neighborhood <MathInline>{'N_1(c)'}</MathInline>, relation is trivially
-          satisfied for any choice of <MathInline>{'N_2(p)'}</MathInline> because{' '}
-          <MathInline>{'f(x) = c'}</MathInline> for all <MathInline>{'x'}</MathInline>.
+          Given any neighborhood <InlineMath>{'N_1(c)'}</InlineMath>, relation is trivially
+          satisfied for any choice of <InlineMath>{'N_2(p)'}</InlineMath> because{' '}
+          <InlineMath>{'f(x) = c'}</InlineMath> for all <InlineMath>{'x'}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Example 2: Limit of the Identity Function</p>
         <p className="mb-2">
-          Let <MathInline>{'f(x) = x'}</MathInline> for all <MathInline>{'x'}</MathInline>.
-          For every <MathInline>{'p'}</MathInline>:
+          Let <InlineMath>{'f(x) = x'}</InlineMath> for all <InlineMath>{'x'}</InlineMath>.
+          For every <InlineMath>{'p'}</InlineMath>:
         </p>
         <MathBlock>{'\\lim_{x \\to p} x = p'}</MathBlock>
         <p className="mt-2">
-          Choose any neighborhood <MathInline>{'N_1(p)'}</MathInline> and take{' '}
-          <MathInline>{'N_2(p) = N_1(p)'}</MathInline>. Then the relation is trivially satisfied.
+          Choose any neighborhood <InlineMath>{'N_1(p)'}</InlineMath> and take{' '}
+          <InlineMath>{'N_2(p) = N_1(p)'}</InlineMath>. Then the relation is trivially satisfied.
         </p>
       </Callout>
 
@@ -163,23 +163,23 @@ export default function Section19() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Right-Hand and Left-Hand Limits</p>
         <p className="mb-2">
-          If <MathInline>{'f(x) \\to A'}</MathInline> as{' '}
-          <MathInline>{'x \\to p'}</MathInline> through values <strong>greater than</strong>{' '}
-          <MathInline>{'p'}</MathInline>, we write:
+          If <InlineMath>{'f(x) \\to A'}</InlineMath> as{' '}
+          <InlineMath>{'x \\to p'}</InlineMath> through values <strong>greater than</strong>{' '}
+          <InlineMath>{'p'}</InlineMath>, we write:
         </p>
         <MathBlock>{'\\lim_{x \\to p^+} f(x) = A \\quad \\text{(right-hand limit)}'}</MathBlock>
         <p className="mt-2 mb-2">
-          If <MathInline>{'f(x) \\to A'}</MathInline> as{' '}
-          <MathInline>{'x \\to p'}</MathInline> through values <strong>less than</strong>{' '}
-          <MathInline>{'p'}</MathInline>, we write:
+          If <InlineMath>{'f(x) \\to A'}</InlineMath> as{' '}
+          <InlineMath>{'x \\to p'}</InlineMath> through values <strong>less than</strong>{' '}
+          <InlineMath>{'p'}</InlineMath>, we write:
         </p>
         <MathBlock>{'\\lim_{x \\to p^-} f(x) = A \\quad \\text{(left-hand limit)}'}</MathBlock>
       </Callout>
 
       <p className="text-dark-200 mb-4">
-        If <MathInline>{'f'}</MathInline> has a limit <MathInline>{'A'}</MathInline> at{' '}
-        <MathInline>{'p'}</MathInline>, then it also has a right-hand limit and a left-hand
-        limit at <MathInline>{'p'}</MathInline>, both equal to <MathInline>{'A'}</MathInline>.
+        If <InlineMath>{'f'}</InlineMath> has a limit <InlineMath>{'A'}</InlineMath> at{' '}
+        <InlineMath>{'p'}</InlineMath>, then it also has a right-hand limit and a left-hand
+        limit at <InlineMath>{'p'}</InlineMath>, both equal to <InlineMath>{'A'}</InlineMath>.
         But a function can have unequal one-sided limits, in which case the (two-sided) limit
         does not exist.
       </p>
@@ -187,22 +187,22 @@ export default function Section19() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example 3: Greatest-Integer Function</p>
         <p className="mb-2">
-          Let <MathInline>{'f(x) = [x]'}</MathInline> and let <MathInline>{'p'}</MathInline> be
-          any integer. For <MathInline>{'x'}</MathInline> near <MathInline>{'p'}</MathInline>:
+          Let <InlineMath>{'f(x) = [x]'}</InlineMath> and let <InlineMath>{'p'}</InlineMath> be
+          any integer. For <InlineMath>{'x'}</InlineMath> near <InlineMath>{'p'}</InlineMath>:
         </p>
         <ul className="list-disc list-inside space-y-1 mb-2">
           <li>
-            If <MathInline>{'x < p'}</MathInline>, then{' '}
-            <MathInline>{'f(x) = p - 1'}</MathInline>
+            If <InlineMath>{'x < p'}</InlineMath>, then{' '}
+            <InlineMath>{'f(x) = p - 1'}</InlineMath>
           </li>
           <li>
-            If <MathInline>{'x > p'}</MathInline>, then{' '}
-            <MathInline>{'f(x) = p'}</MathInline>
+            If <InlineMath>{'x > p'}</InlineMath>, then{' '}
+            <InlineMath>{'f(x) = p'}</InlineMath>
           </li>
         </ul>
         <MathBlock>{'\\lim_{x \\to p^-} [x] = p - 1, \\quad \\lim_{x \\to p^+} [x] = p'}</MathBlock>
         <p className="mt-2">
-          Since these are unequal, <MathInline>{'\\lim_{x \\to p} [x]'}</MathInline> does not
+          Since these are unequal, <InlineMath>{'\\lim_{x \\to p} [x]'}</InlineMath> does not
           exist at integers.
         </p>
       </Callout>
@@ -211,8 +211,8 @@ export default function Section19() {
 
       <p className="text-dark-200 mb-4">
         In the definition of limit, we made no assertion about the behavior of{' '}
-        <MathInline>{'f'}</MathInline> at the point <MathInline>{'p'}</MathInline> itself.
-        Even if <MathInline>{'f'}</MathInline> is defined at <MathInline>{'p'}</MathInline>,
+        <InlineMath>{'f'}</InlineMath> at the point <InlineMath>{'p'}</InlineMath> itself.
+        Even if <InlineMath>{'f'}</InlineMath> is defined at <InlineMath>{'p'}</InlineMath>,
         its value there need not equal the limit. However, when both conditions hold, we have
         continuity.
       </p>
@@ -220,15 +220,15 @@ export default function Section19() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Continuity at a Point</p>
         <p className="mb-2">
-          A function <MathInline>{'f'}</MathInline> is said to be <strong>continuous</strong>{' '}
-          at a point <MathInline>{'p'}</MathInline> if:
+          A function <InlineMath>{'f'}</InlineMath> is said to be <strong>continuous</strong>{' '}
+          at a point <InlineMath>{'p'}</InlineMath> if:
         </p>
         <ol className="list-decimal list-inside space-y-1">
           <li>
-            <MathInline>{'f'}</MathInline> is defined at <MathInline>{'p'}</MathInline>, and
+            <InlineMath>{'f'}</InlineMath> is defined at <InlineMath>{'p'}</InlineMath>, and
           </li>
           <li>
-            <MathInline>{'\\displaystyle\\lim_{x \\to p} f(x) = f(p)'}</MathInline>
+            <InlineMath>{'\\displaystyle\\lim_{x \\to p} f(x) = f(p)'}</InlineMath>
           </li>
         </ol>
       </Callout>
@@ -236,14 +236,14 @@ export default function Section19() {
       <Callout type="info">
         <p className="font-semibold mb-2">Continuity in ε-δ Form</p>
         <p className="mb-2">
-          A function <MathInline>{'f'}</MathInline> is continuous at{' '}
-          <MathInline>{'p'}</MathInline> if for every <MathInline>{'\\varepsilon > 0'}</MathInline>{' '}
-          there is a <MathInline>{'\\delta > 0'}</MathInline> such that:
+          A function <InlineMath>{'f'}</InlineMath> is continuous at{' '}
+          <InlineMath>{'p'}</InlineMath> if for every <InlineMath>{'\\varepsilon > 0'}</InlineMath>{' '}
+          there is a <InlineMath>{'\\delta > 0'}</InlineMath> such that:
         </p>
         <MathBlock>{'|f(x) - f(p)| < \\varepsilon \\quad \\text{whenever} \\quad |x - p| < \\delta'}</MathBlock>
         <p className="mt-2">
-          Note: Unlike the limit definition, we don't need <MathInline>{'x \\neq p'}</MathInline>{' '}
-          here because <MathInline>{'f(p)'}</MathInline> always belongs to any neighborhood
+          Note: Unlike the limit definition, we don't need <InlineMath>{'x \\neq p'}</InlineMath>{' '}
+          here because <InlineMath>{'f(p)'}</InlineMath> always belongs to any neighborhood
           of itself.
         </p>
       </Callout>
@@ -255,7 +255,7 @@ export default function Section19() {
         <p>
           A discontinuity where the right-hand and left-hand limits both exist but are unequal.
           Such discontinuities <em>cannot</em> be removed by simply changing the value of{' '}
-          <MathInline>{'f'}</MathInline> at one point.
+          <InlineMath>{'f'}</InlineMath> at one point.
         </p>
       </Callout>
 
@@ -263,8 +263,8 @@ export default function Section19() {
         <p className="font-semibold mb-2">Infinite Discontinuity</p>
         <p>
           A discontinuity where the function takes arbitrarily large values near the point.
-          For example, <MathInline>{'f(x) = 1/x^2'}</MathInline> (with{' '}
-          <MathInline>{'f(0) = 0'}</MathInline>) has an infinite discontinuity at 0.
+          For example, <InlineMath>{'f(x) = 1/x^2'}</InlineMath> (with{' '}
+          <InlineMath>{'f(0) = 0'}</InlineMath>) has an infinite discontinuity at 0.
         </p>
       </Callout>
 
@@ -272,7 +272,7 @@ export default function Section19() {
         <p className="font-semibold mb-2">Removable Discontinuity</p>
         <p>
           A discontinuity where the limit exists but is not equal to{' '}
-          <MathInline>{'f(p)'}</MathInline>. Such discontinuities <em>can</em> be removed by
+          <InlineMath>{'f(p)'}</InlineMath>. Such discontinuities <em>can</em> be removed by
           redefining the function at that point to equal the limit.
         </p>
       </Callout>
@@ -282,8 +282,8 @@ export default function Section19() {
       <Callout type="example">
         <p className="font-semibold mb-2">Constant Functions are Continuous Everywhere</p>
         <p>
-          If <MathInline>{'f(x) = c'}</MathInline> for all <MathInline>{'x'}</MathInline>, then
-          for every <MathInline>{'p'}</MathInline>:
+          If <InlineMath>{'f(x) = c'}</InlineMath> for all <InlineMath>{'x'}</InlineMath>, then
+          for every <InlineMath>{'p'}</InlineMath>:
         </p>
         <MathBlock>{'\\lim_{x \\to p} f(x) = \\lim_{x \\to p} c = c = f(p)'}</MathBlock>
       </Callout>
@@ -291,8 +291,8 @@ export default function Section19() {
       <Callout type="example">
         <p className="font-semibold mb-2">The Identity Function is Continuous Everywhere</p>
         <p>
-          If <MathInline>{'f(x) = x'}</MathInline> for all <MathInline>{'x'}</MathInline>, then
-          for every <MathInline>{'p'}</MathInline>:
+          If <InlineMath>{'f(x) = x'}</InlineMath> for all <InlineMath>{'x'}</InlineMath>, then
+          for every <InlineMath>{'p'}</InlineMath>:
         </p>
         <MathBlock>{'\\lim_{x \\to p} f(x) = \\lim_{x \\to p} x = p = f(p)'}</MathBlock>
       </Callout>
@@ -300,11 +300,11 @@ export default function Section19() {
       <Callout type="example">
         <p className="font-semibold mb-2">Greatest-Integer Function</p>
         <p className="mb-2">
-          <MathInline>{'f(x) = [x]'}</MathInline> is continuous at every point{' '}
-          <MathInline>{'p'}</MathInline> which is <em>not</em> an integer. At integers, it has
+          <InlineMath>{'f(x) = [x]'}</InlineMath> is continuous at every point{' '}
+          <InlineMath>{'p'}</InlineMath> which is <em>not</em> an integer. At integers, it has
           jump discontinuities. Since the right-hand limit equals{' '}
-          <MathInline>{'f(p)'}</MathInline> at each integer, we say{' '}
-          <MathInline>{'f'}</MathInline> is <strong>continuous from the right</strong> at integers.
+          <InlineMath>{'f(p)'}</InlineMath> at each integer, we say{' '}
+          <InlineMath>{'f'}</InlineMath> is <strong>continuous from the right</strong> at integers.
         </p>
       </Callout>
 
@@ -312,24 +312,24 @@ export default function Section19() {
 
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
-          <strong>Neighborhood:</strong> <MathInline>{'N(p; r) = \\{x : |x - p| < r\\}'}</MathInline>
+          <strong>Neighborhood:</strong> <InlineMath>{'N(p; r) = \\{x : |x - p| < r\\}'}</InlineMath>
         </li>
         <li>
-          <strong>Limit:</strong> <MathInline>{'\\lim_{x \\to p} f(x) = A'}</MathInline> means
-          for every <MathInline>{'\\varepsilon > 0'}</MathInline>, there exists{' '}
-          <MathInline>{'\\delta > 0'}</MathInline> such that{' '}
-          <MathInline>{'|f(x) - A| < \\varepsilon'}</MathInline> whenever{' '}
-          <MathInline>{'0 < |x - p| < \\delta'}</MathInline>
+          <strong>Limit:</strong> <InlineMath>{'\\lim_{x \\to p} f(x) = A'}</InlineMath> means
+          for every <InlineMath>{'\\varepsilon > 0'}</InlineMath>, there exists{' '}
+          <InlineMath>{'\\delta > 0'}</InlineMath> such that{' '}
+          <InlineMath>{'|f(x) - A| < \\varepsilon'}</InlineMath> whenever{' '}
+          <InlineMath>{'0 < |x - p| < \\delta'}</InlineMath>
         </li>
         <li>
-          <strong>One-sided limits:</strong> Restrict <MathInline>{'x'}</MathInline> to be
-          greater than (<MathInline>{'p^+'}</MathInline>) or less than (
-          <MathInline>{'p^-'}</MathInline>) the point
+          <strong>One-sided limits:</strong> Restrict <InlineMath>{'x'}</InlineMath> to be
+          greater than (<InlineMath>{'p^+'}</InlineMath>) or less than (
+          <InlineMath>{'p^-'}</InlineMath>) the point
         </li>
         <li>
-          <strong>Continuity:</strong> <MathInline>{'f'}</MathInline> is continuous at{' '}
-          <MathInline>{'p'}</MathInline> if <MathInline>{'f(p)'}</MathInline> exists and{' '}
-          <MathInline>{'\\lim_{x \\to p} f(x) = f(p)'}</MathInline>
+          <strong>Continuity:</strong> <InlineMath>{'f'}</InlineMath> is continuous at{' '}
+          <InlineMath>{'p'}</InlineMath> if <InlineMath>{'f(p)'}</InlineMath> exists and{' '}
+          <InlineMath>{'\\lim_{x \\to p} f(x) = f(p)'}</InlineMath>
         </li>
         <li>
           <strong>Discontinuities:</strong> Jump (one-sided limits differ), infinite (unbounded

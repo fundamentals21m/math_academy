@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section02() {
   return (
@@ -9,22 +9,22 @@ export default function Section02() {
       <p>
         The <strong>dot product</strong> (or inner product) of two vectors is one of the most important
         operations in linear algebra. It gives us a way to compute <strong>lengths</strong> and <strong>angles</strong>.
-        This section introduces the dot product <Math>{`\\mathbf{v} \\cdot \\mathbf{w}`}</Math> and connects it to
-        the length <Math>{`\\|\\mathbf{v}\\|`}</Math>.
+        This section introduces the dot product <InlineMath>{`\\mathbf{v} \\cdot \\mathbf{w}`}</InlineMath> and connects it to
+        the length <InlineMath>{`\\|\\mathbf{v}\\|`}</InlineMath>.
       </p>
 
       <h2>The Dot Product</h2>
 
       <Definition title="Dot Product" className="my-6">
         <p>
-          The <strong>dot product</strong> of <Math>{`\\mathbf{v} = \\begin{bmatrix} v_1 \\\\ v_2 \\end{bmatrix}`}</Math> and{` `}
-          <Math>{`\\mathbf{w} = \\begin{bmatrix} w_1 \\\\ w_2 \\end{bmatrix}`}</Math> is:
+          The <strong>dot product</strong> of <InlineMath>{`\\mathbf{v} = \\begin{bmatrix} v_1 \\\\ v_2 \\end{bmatrix}`}</InlineMath> and{` `}
+          <InlineMath>{`\\mathbf{w} = \\begin{bmatrix} w_1 \\\\ w_2 \\end{bmatrix}`}</InlineMath> is:
         </p>
         <MathBlock>
           {`\\mathbf{v} \\cdot \\mathbf{w} = v_1 w_1 + v_2 w_2`}
         </MathBlock>
         <p className="mt-2">
-          For vectors in <Math>{`\\mathbb{R}^n`}</Math> with <Math>n</Math> components:
+          For vectors in <InlineMath>{`\\mathbb{R}^n`}</InlineMath> with <InlineMath>n</InlineMath> components:
         </p>
         <MathBlock>
           {`\\mathbf{v} \\cdot \\mathbf{w} = v_1 w_1 + v_2 w_2 + \\cdots + v_n w_n`}
@@ -32,19 +32,19 @@ export default function Section02() {
       </Definition>
 
       <p>
-        The main point: For <Math>{`\\mathbf{v} \\cdot \\mathbf{w}`}</Math>, multiply each <Math>v_i</Math> times <Math>w_i</Math>.
-        Then <Math>{`\\mathbf{v} \\cdot \\mathbf{w} = v_1w_1 + \\cdots + v_nw_n`}</Math>.
+        The main point: For <InlineMath>{`\\mathbf{v} \\cdot \\mathbf{w}`}</InlineMath>, multiply each <InlineMath>v_i</InlineMath> times <InlineMath>w_i</InlineMath>.
+        Then <InlineMath>{`\\mathbf{v} \\cdot \\mathbf{w} = v_1w_1 + \\cdots + v_nw_n`}</InlineMath>.
       </p>
 
       <Example title="Computing a Dot Product" className="my-6">
         <p>
-          The dot product of <Math>{`\\mathbf{v} = (1, 2)`}</Math> and <Math>{`\\mathbf{w} = (3, 1)`}</Math> is:
+          The dot product of <InlineMath>{`\\mathbf{v} = (1, 2)`}</InlineMath> and <InlineMath>{`\\mathbf{w} = (3, 1)`}</InlineMath> is:
         </p>
         <MathBlock>
           {`\\mathbf{v} \\cdot \\mathbf{w} = (1)(3) + (2)(1) = 3 + 2 = 5`}
         </MathBlock>
         <p className="mt-2">
-          Note that <Math>{`\\mathbf{w} \\cdot \\mathbf{v}`}</Math> is also 5. The order of <Math>{`\\mathbf{v}`}</Math> and <Math>{`\\mathbf{w}`}</Math> makes no difference!
+          Note that <InlineMath>{`\\mathbf{w} \\cdot \\mathbf{v}`}</InlineMath> is also 5. The order of <InlineMath>{`\\mathbf{v}`}</InlineMath> and <InlineMath>{`\\mathbf{w}`}</InlineMath> makes no difference!
         </p>
       </Example>
 
@@ -54,11 +54,11 @@ export default function Section02() {
         proof={
           <>
             <p>
-              Let <Math>{`\\mathbf{v} = (v_1, v_2, \\ldots, v_n)`}</Math> and <Math>{`\\mathbf{w} = (w_1, w_2, \\ldots, w_n)`}</Math>.
+              Let <InlineMath>{`\\mathbf{v} = (v_1, v_2, \\ldots, v_n)`}</InlineMath> and <InlineMath>{`\\mathbf{w} = (w_1, w_2, \\ldots, w_n)`}</InlineMath>.
             </p>
             <p>By definition of the dot product:</p>
             <MathBlock>{`\\mathbf{v} \\cdot \\mathbf{w} = v_1w_1 + v_2w_2 + \\cdots + v_nw_n`}</MathBlock>
-            <p>Since multiplication of real numbers is commutative (<Math>v_iw_i = w_iv_i</Math>):</p>
+            <p>Since multiplication of real numbers is commutative (<InlineMath>v_iw_i = w_iv_i</InlineMath>):</p>
             <MathBlock>{`= w_1v_1 + w_2v_2 + \\cdots + w_nv_n = \\mathbf{w} \\cdot \\mathbf{v}`}</MathBlock>
           </>
         }
@@ -74,8 +74,8 @@ export default function Section02() {
       <h2>Lengths and Unit Vectors</h2>
 
       <p>
-        An important case is the dot product of a vector <em>with itself</em>. In this case <Math>{`\\mathbf{v}`}</Math> equals <Math>{`\\mathbf{w}`}</Math>.
-        When the vector is <Math>{`\\mathbf{v} = (1, 2, 3)`}</Math>, the dot product with itself is:
+        An important case is the dot product of a vector <em>with itself</em>. In this case <InlineMath>{`\\mathbf{v}`}</InlineMath> equals <InlineMath>{`\\mathbf{w}`}</InlineMath>.
+        When the vector is <InlineMath>{`\\mathbf{v} = (1, 2, 3)`}</InlineMath>, the dot product with itself is:
       </p>
 
       <MathBlock className="my-4">
@@ -83,13 +83,13 @@ export default function Section02() {
       </MathBlock>
 
       <p>
-        Instead of a 90° angle between vectors we have 0°. The answer is not zero because <Math>{`\\mathbf{v}`}</Math> is not
-        perpendicular to itself. The dot product <Math>{`\\mathbf{v} \\cdot \\mathbf{v}`}</Math> gives the <em>length of <Math>{`\\mathbf{v}`}</Math> squared</em>.
+        Instead of a 90° angle between vectors we have 0°. The answer is not zero because <InlineMath>{`\\mathbf{v}`}</InlineMath> is not
+        perpendicular to itself. The dot product <InlineMath>{`\\mathbf{v} \\cdot \\mathbf{v}`}</InlineMath> gives the <em>length of <InlineMath>{`\\mathbf{v}`}</InlineMath> squared</em>.
       </p>
 
       <Definition title="Length (Norm) of a Vector" className="my-6">
         <p>
-          The <strong>length</strong> (or <strong>norm</strong>) <Math>{`\\|\\mathbf{v}\\|`}</Math> of a vector <Math>{`\\mathbf{v}`}</Math> is the square root of <Math>{`\\mathbf{v} \\cdot \\mathbf{v}`}</Math>:
+          The <strong>length</strong> (or <strong>norm</strong>) <InlineMath>{`\\|\\mathbf{v}\\|`}</InlineMath> of a vector <InlineMath>{`\\mathbf{v}`}</InlineMath> is the square root of <InlineMath>{`\\mathbf{v} \\cdot \\mathbf{v}`}</InlineMath>:
         </p>
         <MathBlock>
           {`\\text{length} = \\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + v_2^2 + \\cdots + v_n^2}`}
@@ -98,14 +98,14 @@ export default function Section02() {
 
       <Example title="Computing Vector Length" className="my-6">
         <p>
-          In two dimensions, the length of <Math>{`\\mathbf{v} = (1, 2)`}</Math> is <Math>{`\\sqrt{1^2 + 2^2} = \\sqrt{5}`}</Math>.
+          In two dimensions, the length of <InlineMath>{`\\mathbf{v} = (1, 2)`}</InlineMath> is <InlineMath>{`\\sqrt{1^2 + 2^2} = \\sqrt{5}`}</InlineMath>.
         </p>
         <p className="mt-2">
-          In three dimensions, the length of <Math>{`\\mathbf{v} = (1, 2, 3)`}</Math> is <Math>{`\\|\\mathbf{v}\\| = \\sqrt{14}`}</Math>.
+          In three dimensions, the length of <InlineMath>{`\\mathbf{v} = (1, 2, 3)`}</InlineMath> is <InlineMath>{`\\|\\mathbf{v}\\| = \\sqrt{14}`}</InlineMath>.
         </p>
         <p className="mt-2">
           This is just the ordinary length of the arrow that represents the vector. The Pythagoras
-          formula <Math>a^2 + b^2 = c^2</Math> connects the three sides: <Math>1^2 + 2^2 = {`\\|\\mathbf{v}\\|^2`}</Math>.
+          formula <InlineMath>a^2 + b^2 = c^2</InlineMath> connects the three sides: <InlineMath>1^2 + 2^2 = {`\\|\\mathbf{v}\\|^2`}</InlineMath>.
         </p>
       </Example>
 
@@ -118,7 +118,7 @@ export default function Section02() {
 
       <Definition title="Unit Vector" className="my-6">
         <p>
-          A <strong>unit vector</strong> <Math>{`\\mathbf{u}`}</Math> is a vector whose length equals one:
+          A <strong>unit vector</strong> <InlineMath>{`\\mathbf{u}`}</InlineMath> is a vector whose length equals one:
         </p>
         <MathBlock>
           {`\\|\\mathbf{u}\\| = 1 \\quad \\text{which means} \\quad \\mathbf{u} \\cdot \\mathbf{u} = 1`}
@@ -127,20 +127,20 @@ export default function Section02() {
 
       <Example title="Creating a Unit Vector" className="my-6">
         <p>
-          An example in four dimensions is <Math>{`\\mathbf{u} = \\left(\\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2}\\right)`}</Math>.
+          An example in four dimensions is <InlineMath>{`\\mathbf{u} = \\left(\\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2}\\right)`}</InlineMath>.
           Then:
         </p>
         <MathBlock>
           {`\\mathbf{u} \\cdot \\mathbf{u} = \\frac{1}{4} + \\frac{1}{4} + \\frac{1}{4} + \\frac{1}{4} = 1`}
         </MathBlock>
         <p className="mt-2">
-          We divided <Math>{`\\mathbf{v} = (1, 1, 1, 1)`}</Math> by its length <Math>{`\\|\\mathbf{v}\\| = 2`}</Math> to get this unit vector.
+          We divided <InlineMath>{`\\mathbf{v} = (1, 1, 1, 1)`}</InlineMath> by its length <InlineMath>{`\\|\\mathbf{v}\\| = 2`}</InlineMath> to get this unit vector.
         </p>
       </Example>
 
       <p>
-        The standard unit vectors along the <Math>x</Math> and <Math>y</Math> axes are written <Math>{`\\mathbf{i}`}</Math> and <Math>{`\\mathbf{j}`}</Math>.
-        In the <Math>xy</Math> plane, the unit vector that makes an angle "theta" with the <Math>x</Math> axis is <Math>(\cos\theta, \sin\theta)</Math>:
+        The standard unit vectors along the <InlineMath>x</InlineMath> and <InlineMath>y</InlineMath> axes are written <InlineMath>{`\\mathbf{i}`}</InlineMath> and <InlineMath>{`\\mathbf{j}`}</InlineMath>.
+        In the <InlineMath>xy</InlineMath> plane, the unit vector that makes an angle "theta" with the <InlineMath>x</InlineMath> axis is <InlineMath>(\cos\theta, \sin\theta)</InlineMath>:
       </p>
 
       <MathBlock className="my-4">
@@ -148,15 +148,15 @@ export default function Section02() {
       </MathBlock>
 
       <p>
-        When <Math>\theta = 0</Math>, the horizontal vector <Math>{`\\mathbf{u}`}</Math> is <Math>{`\\mathbf{i}`}</Math>.
-        When <Math>{`\\theta = 90°`}</Math> (or <Math>{`\\frac{\\pi}{2}`}</Math> radians), the vertical vector is <Math>{`\\mathbf{j}`}</Math>.
-        At any angle, the components <Math>\cos\theta</Math> and <Math>\sin\theta</Math> produce <Math>{`\\mathbf{u} \\cdot \\mathbf{u} = 1`}</Math> because <Math>\cos^2\theta + \sin^2\theta = 1</Math>.
+        When <InlineMath>\theta = 0</InlineMath>, the horizontal vector <InlineMath>{`\\mathbf{u}`}</InlineMath> is <InlineMath>{`\\mathbf{i}`}</InlineMath>.
+        When <InlineMath>{`\\theta = 90°`}</InlineMath> (or <InlineMath>{`\\frac{\\pi}{2}`}</InlineMath> radians), the vertical vector is <InlineMath>{`\\mathbf{j}`}</InlineMath>.
+        At any angle, the components <InlineMath>\cos\theta</InlineMath> and <InlineMath>\sin\theta</InlineMath> produce <InlineMath>{`\\mathbf{u} \\cdot \\mathbf{u} = 1`}</InlineMath> because <InlineMath>\cos^2\theta + \sin^2\theta = 1</InlineMath>.
       </p>
 
       <h2>The Angle Between Two Vectors</h2>
 
       <p>
-        The dot product <Math>{`\\mathbf{v} \\cdot \\mathbf{w}`}</Math> reveals something important about the <em>angle</em> between <Math>{`\\mathbf{v}`}</Math> and <Math>{`\\mathbf{w}`}</Math>.
+        The dot product <InlineMath>{`\\mathbf{v} \\cdot \\mathbf{w}`}</InlineMath> reveals something important about the <em>angle</em> between <InlineMath>{`\\mathbf{v}`}</InlineMath> and <InlineMath>{`\\mathbf{w}`}</InlineMath>.
       </p>
 
       <Theorem
@@ -165,7 +165,7 @@ export default function Section02() {
         proof={
           <>
             <p>
-              Consider the triangle formed by vectors <Math>{`\\mathbf{v}`}</Math>, <Math>{`\\mathbf{w}`}</Math>, and <Math>{`\\mathbf{v} - \\mathbf{w}`}</Math>.
+              Consider the triangle formed by vectors <InlineMath>{`\\mathbf{v}`}</InlineMath>, <InlineMath>{`\\mathbf{w}`}</InlineMath>, and <InlineMath>{`\\mathbf{v} - \\mathbf{w}`}</InlineMath>.
               By the Law of Cosines:
             </p>
             <MathBlock>{`\\|\\mathbf{v} - \\mathbf{w}\\|^2 = \\|\\mathbf{v}\\|^2 + \\|\\mathbf{w}\\|^2 - 2\\|\\mathbf{v}\\|\\|\\mathbf{w}\\|\\cos\\theta`}</MathBlock>
@@ -181,7 +181,7 @@ export default function Section02() {
         }
       >
         <p>
-          If <Math>\theta</Math> is the angle between vectors <Math>{`\\mathbf{v}`}</Math> and <Math>{`\\mathbf{w}`}</Math>, then:
+          If <InlineMath>\theta</InlineMath> is the angle between vectors <InlineMath>{`\\mathbf{v}`}</InlineMath> and <InlineMath>{`\\mathbf{w}`}</InlineMath>, then:
         </p>
         <MathBlock>
           {`\\mathbf{v} \\cdot \\mathbf{w} = \\|\\mathbf{v}\\| \\|\\mathbf{w}\\| \\cos\\theta`}
@@ -197,13 +197,13 @@ export default function Section02() {
       <h2>Perpendicular Vectors</h2>
 
       <p>
-        When <Math>{`\\mathbf{v}`}</Math> and <Math>{`\\mathbf{w}`}</Math> are perpendicular, the angle between them is 90°.
-        Since <Math>\cos 90° = 0</Math>, the dot product is zero.
+        When <InlineMath>{`\\mathbf{v}`}</InlineMath> and <InlineMath>{`\\mathbf{w}`}</InlineMath> are perpendicular, the angle between them is 90°.
+        Since <InlineMath>\cos 90° = 0</InlineMath>, the dot product is zero.
       </p>
 
       <Definition title="Perpendicular (Orthogonal) Vectors" className="my-6">
         <p>
-          Two vectors <Math>{`\\mathbf{v}`}</Math> and <Math>{`\\mathbf{w}`}</Math> are <strong>perpendicular</strong> (or <strong>orthogonal</strong>) if and only if:
+          Two vectors <InlineMath>{`\\mathbf{v}`}</InlineMath> and <InlineMath>{`\\mathbf{w}`}</InlineMath> are <strong>perpendicular</strong> (or <strong>orthogonal</strong>) if and only if:
         </p>
         <MathBlock>
           {`\\mathbf{v} \\cdot \\mathbf{w} = 0`}
@@ -212,8 +212,8 @@ export default function Section02() {
 
       <Example title="Perpendicular Vectors" className="my-6">
         <p>
-          The vectors <Math>{`\\mathbf{v} = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}`}</Math> and{` `}
-          <Math>{`\\mathbf{w} = \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix}`}</Math> are perpendicular because:
+          The vectors <InlineMath>{`\\mathbf{v} = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}`}</InlineMath> and{` `}
+          <InlineMath>{`\\mathbf{w} = \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix}`}</InlineMath> are perpendicular because:
         </p>
         <MathBlock>
           {`\\mathbf{v} \\cdot \\mathbf{w} = (1)(-2) + (2)(1) = -2 + 2 = 0`}
@@ -226,23 +226,23 @@ export default function Section02() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>The dot product <Math>{`\\mathbf{v} \\cdot \\mathbf{w}`}</Math> multiplies each component <Math>v_i</Math> by <Math>w_i</Math> and adds all <Math>v_iw_i</Math>.</span>
+            <span>The dot product <InlineMath>{`\\mathbf{v} \\cdot \\mathbf{w}`}</InlineMath> multiplies each component <InlineMath>v_i</InlineMath> by <InlineMath>w_i</InlineMath> and adds all <InlineMath>v_iw_i</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>The length <Math>{`\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}}`}</Math> is the square root of the dot product with itself.</span>
+            <span>The length <InlineMath>{`\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}}`}</InlineMath> is the square root of the dot product with itself.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>A unit vector <Math>{`\\mathbf{u}`}</Math> has length <Math>{`\\|\\mathbf{u}\\| = 1`}</Math>. To create a unit vector from any <Math>{`\\mathbf{v}`}</Math>, divide by its length: <Math>{`\\mathbf{u} = \\mathbf{v}/\\|\\mathbf{v}\\|`}</Math>.</span>
+            <span>A unit vector <InlineMath>{`\\mathbf{u}`}</InlineMath> has length <InlineMath>{`\\|\\mathbf{u}\\| = 1`}</InlineMath>. To create a unit vector from any <InlineMath>{`\\mathbf{v}`}</InlineMath>, divide by its length: <InlineMath>{`\\mathbf{u} = \\mathbf{v}/\\|\\mathbf{v}\\|`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span><Math>{`\\mathbf{v} \\cdot \\mathbf{w} = 0`}</Math> when <Math>{`\\mathbf{v}`}</Math> and <Math>{`\\mathbf{w}`}</Math> are perpendicular (orthogonal).</span>
+            <span><InlineMath>{`\\mathbf{v} \\cdot \\mathbf{w} = 0`}</InlineMath> when <InlineMath>{`\\mathbf{v}`}</InlineMath> and <InlineMath>{`\\mathbf{w}`}</InlineMath> are perpendicular (orthogonal).</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>The cosine of the angle between <Math>{`\\mathbf{v}`}</Math> and <Math>{`\\mathbf{w}`}</Math> is <Math>{`\\cos\\theta = \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{v}\\| \\|\\mathbf{w}\\|}`}</Math>.</span>
+            <span>The cosine of the angle between <InlineMath>{`\\mathbf{v}`}</InlineMath> and <InlineMath>{`\\mathbf{w}`}</InlineMath> is <InlineMath>{`\\cos\\theta = \\frac{\\mathbf{v} \\cdot \\mathbf{w}}{\\|\\mathbf{v}\\| \\|\\mathbf{w}\\|}`}</InlineMath>.</span>
           </li>
         </ul>
       </div>

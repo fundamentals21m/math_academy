@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section02Quiz } from '@/data/quizzes';
 
@@ -21,11 +21,11 @@ export default function Section02() {
         proof={
           <>
             <p className="mb-3">We prove this using the Well-Ordering Principle (which is equivalent).</p>
-            <p className="mb-3">Suppose <Math>{`P(1)`}</Math> is true and <Math>{`P(k) \\Rightarrow P(k+1)`}</Math> for all <Math>{`k`}</Math>, but <Math>{`P(n)`}</Math> fails for some <Math>{`n`}</Math>.</p>
-            <p className="mb-3">Let <Math>{`S = \\{n \\in \\mathbb{N} : P(n) \\text{ is false}\\}`}</Math>. By assumption, <Math>{`S`}</Math> is non-empty.</p>
-            <p className="mb-3">By Well-Ordering, <Math>{`S`}</Math> has a least element <Math>{`m`}</Math>. Since <Math>{`P(1)`}</Math> is true, <Math>{`m > 1`}</Math>.</p>
-            <p className="mb-3">Thus <Math>{`m - 1 \\in \\mathbb{N}`}</Math> and <Math>{`m - 1 \\notin S`}</Math> (since <Math>{`m`}</Math> is least), so <Math>{`P(m-1)`}</Math> is true.</p>
-            <p className="mb-3">By the inductive step, <Math>{`P(m)`}</Math> is true. Contradiction! So <Math>{`S`}</Math> is empty.</p>
+            <p className="mb-3">Suppose <InlineMath>{`P(1)`}</InlineMath> is true and <InlineMath>{`P(k) \\Rightarrow P(k+1)`}</InlineMath> for all <InlineMath>{`k`}</InlineMath>, but <InlineMath>{`P(n)`}</InlineMath> fails for some <InlineMath>{`n`}</InlineMath>.</p>
+            <p className="mb-3">Let <InlineMath>{`S = \\{n \\in \\mathbb{N} : P(n) \\text{ is false}\\}`}</InlineMath>. By assumption, <InlineMath>{`S`}</InlineMath> is non-empty.</p>
+            <p className="mb-3">By Well-Ordering, <InlineMath>{`S`}</InlineMath> has a least element <InlineMath>{`m`}</InlineMath>. Since <InlineMath>{`P(1)`}</InlineMath> is true, <InlineMath>{`m > 1`}</InlineMath>.</p>
+            <p className="mb-3">Thus <InlineMath>{`m - 1 \\in \\mathbb{N}`}</InlineMath> and <InlineMath>{`m - 1 \\notin S`}</InlineMath> (since <InlineMath>{`m`}</InlineMath> is least), so <InlineMath>{`P(m-1)`}</InlineMath> is true.</p>
+            <p className="mb-3">By the inductive step, <InlineMath>{`P(m)`}</InlineMath> is true. Contradiction! So <InlineMath>{`S`}</InlineMath> is empty.</p>
           </>
         }
       >
@@ -77,11 +77,11 @@ export default function Section02() {
         proof={
           <>
             <p className="mb-3">We prove this assuming Mathematical Induction.</p>
-            <p className="mb-3">Let <Math>{`S \\subseteq \\mathbb{N}`}</Math> be non-empty. Suppose <Math>{`S`}</Math> has no least element.</p>
-            <p className="mb-3">Let <Math>{`P(n)`}</Math> = "<Math>{`n \\notin S`}</Math>". We show <Math>{`P(n)`}</Math> holds for all <Math>{`n`}</Math> by induction.</p>
-            <p className="mb-3"><strong>Base:</strong> If <Math>{`1 \\in S`}</Math>, then 1 would be the least element (contradiction). So <Math>{`P(1)`}</Math> holds.</p>
-            <p className="mb-3"><strong>Inductive step:</strong> Assume <Math>{`P(k)`}</Math> for all <Math>{`k \\leq m`}</Math>. If <Math>{`m+1 \\in S`}</Math>, then <Math>{`m+1`}</Math> would be the least element of <Math>{`S`}</Math> (since no smaller natural is in <Math>{`S`}</Math>). Contradiction. So <Math>{`P(m+1)`}</Math> holds.</p>
-            <p className="mb-3">By strong induction, <Math>{`P(n)`}</Math> holds for all <Math>{`n`}</Math>, so <Math>{`S = \\emptyset`}</Math>. Contradiction!</p>
+            <p className="mb-3">Let <InlineMath>{`S \\subseteq \\mathbb{N}`}</InlineMath> be non-empty. Suppose <InlineMath>{`S`}</InlineMath> has no least element.</p>
+            <p className="mb-3">Let <InlineMath>{`P(n)`}</InlineMath> = "<InlineMath>{`n \\notin S`}</InlineMath>". We show <InlineMath>{`P(n)`}</InlineMath> holds for all <InlineMath>{`n`}</InlineMath> by induction.</p>
+            <p className="mb-3"><strong>Base:</strong> If <InlineMath>{`1 \\in S`}</InlineMath>, then 1 would be the least element (contradiction). So <InlineMath>{`P(1)`}</InlineMath> holds.</p>
+            <p className="mb-3"><strong>Inductive step:</strong> Assume <InlineMath>{`P(k)`}</InlineMath> for all <InlineMath>{`k \\leq m`}</InlineMath>. If <InlineMath>{`m+1 \\in S`}</InlineMath>, then <InlineMath>{`m+1`}</InlineMath> would be the least element of <InlineMath>{`S`}</InlineMath> (since no smaller natural is in <InlineMath>{`S`}</InlineMath>). Contradiction. So <InlineMath>{`P(m+1)`}</InlineMath> holds.</p>
+            <p className="mb-3">By strong induction, <InlineMath>{`P(n)`}</InlineMath> holds for all <InlineMath>{`n`}</InlineMath>, so <InlineMath>{`S = \\emptyset`}</InlineMath>. Contradiction!</p>
           </>
         }
       >

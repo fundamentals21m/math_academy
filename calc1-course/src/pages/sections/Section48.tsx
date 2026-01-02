@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section48() {
@@ -16,27 +16,27 @@ export default function Section48() {
 
       <Callout type="definition" title="The o-Notation">
         <p>
-          Let <MathInline>{`f`}</MathInline> and <MathInline>{`g`}</MathInline> be functions defined near
-          a point <MathInline>{`a`}</MathInline> (or for large <MathInline>{`x`}</MathInline>). We write:
+          Let <InlineMath>{`f`}</InlineMath> and <InlineMath>{`g`}</InlineMath> be functions defined near
+          a point <InlineMath>{`a`}</InlineMath> (or for large <InlineMath>{`x`}</InlineMath>). We write:
         </p>
         <MathBlock>{`f(x) = o(g(x)) \\quad \\text{as } x \\to a`}</MathBlock>
         <p>
-          (read "<MathInline>{`f`}</MathInline> is little-o of <MathInline>{`g`}</MathInline>") to mean:
+          (read "<InlineMath>{`f`}</InlineMath> is little-o of <InlineMath>{`g`}</InlineMath>") to mean:
         </p>
         <MathBlock>{`\\lim_{x \\to a} \\frac{f(x)}{g(x)} = 0`}</MathBlock>
         <p>
-          In other words, <MathInline>{`f(x)`}</MathInline> goes to zero <em>faster</em> than
-          <MathInline>{`g(x)`}</MathInline> as <MathInline>{`x \\to a`}</MathInline>.
+          In other words, <InlineMath>{`f(x)`}</InlineMath> goes to zero <em>faster</em> than
+          <InlineMath>{`g(x)`}</InlineMath> as <InlineMath>{`x \\to a`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="Intuition">
         <p>
-          The statement <MathInline>{`f(x) = o(g(x))`}</MathInline> means that <MathInline>{`f(x)`}</MathInline>
-          becomes negligible compared to <MathInline>{`g(x)`}</MathInline>. More precisely,
-          <MathInline>{`|f(x)|`}</MathInline> can be made arbitrarily small relative
-          to <MathInline>{`|g(x)|`}</MathInline> by taking <MathInline>{`x`}</MathInline> sufficiently
-          close to <MathInline>{`a`}</MathInline>.
+          The statement <InlineMath>{`f(x) = o(g(x))`}</InlineMath> means that <InlineMath>{`f(x)`}</InlineMath>
+          becomes negligible compared to <InlineMath>{`g(x)`}</InlineMath>. More precisely,
+          <InlineMath>{`|f(x)|`}</InlineMath> can be made arbitrarily small relative
+          to <InlineMath>{`|g(x)|`}</InlineMath> by taking <InlineMath>{`x`}</InlineMath> sufficiently
+          close to <InlineMath>{`a`}</InlineMath>.
         </p>
       </Callout>
 
@@ -44,30 +44,30 @@ export default function Section48() {
 
       <Callout type="example" title="Example 1: Powers of x">
         <p>
-          As <MathInline>{`x \\to 0`}</MathInline>:
+          As <InlineMath>{`x \\to 0`}</InlineMath>:
         </p>
         <MathBlock>{`x^2 = o(x)`}</MathBlock>
         <p><strong>Proof:</strong></p>
         <MathBlock>{`\\lim_{x \\to 0} \\frac{x^2}{x} = \\lim_{x \\to 0} x = 0`}</MathBlock>
         <p>
-          More generally, <MathInline>{`x^n = o(x^m)`}</MathInline> whenever <MathInline>{`n > m`}</MathInline>.
+          More generally, <InlineMath>{`x^n = o(x^m)`}</InlineMath> whenever <InlineMath>{`n > m`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 2: Higher Powers">
         <p>
-          As <MathInline>{`x \\to 0`}</MathInline>:
+          As <InlineMath>{`x \\to 0`}</InlineMath>:
         </p>
         <MathBlock>{`x^3 = o(x^2), \\quad x^{10} = o(x^5), \\quad x^{100} = o(x)`}</MathBlock>
         <p>
-          In general, higher powers of <MathInline>{`x`}</MathInline> are "smaller" than lower powers
-          as <MathInline>{`x \\to 0`}</MathInline>.
+          In general, higher powers of <InlineMath>{`x`}</InlineMath> are "smaller" than lower powers
+          as <InlineMath>{`x \\to 0`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 3: Trigonometric Functions">
         <p>
-          As <MathInline>{`x \\to 0`}</MathInline>:
+          As <InlineMath>{`x \\to 0`}</InlineMath>:
         </p>
         <MathBlock>{`\\sin x - x = o(x)`}</MathBlock>
         <p><strong>Proof:</strong></p>
@@ -76,7 +76,7 @@ export default function Section48() {
 
       <Callout type="example" title="Example 4: A Sharper Statement">
         <p>
-          We can be more precise: as <MathInline>{`x \\to 0`}</MathInline>:
+          We can be more precise: as <InlineMath>{`x \\to 0`}</InlineMath>:
         </p>
         <MathBlock>{`\\sin x - x = o(x^2)`}</MathBlock>
         <p><strong>Proof:</strong></p>
@@ -92,67 +92,67 @@ export default function Section48() {
 
       <Callout type="theorem" title="Taylor's Formula (o-form)">
         <p>
-          If <MathInline>{`f`}</MathInline> has <MathInline>{`n`}</MathInline> derivatives at <MathInline>{`a`}</MathInline>, then:
+          If <InlineMath>{`f`}</InlineMath> has <InlineMath>{`n`}</InlineMath> derivatives at <InlineMath>{`a`}</InlineMath>, then:
         </p>
         <MathBlock>{`f(x) = f(a) + f'(a)(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + \\cdots + \\frac{f^{(n)}(a)}{n!}(x-a)^n + o((x-a)^n)`}</MathBlock>
-        <p>as <MathInline>{`x \\to a`}</MathInline>.</p>
+        <p>as <InlineMath>{`x \\to a`}</InlineMath>.</p>
       </Callout>
 
       <p>
-        The term <MathInline>{`o((x-a)^n)`}</MathInline> captures the remainder—it says that the
-        error goes to zero faster than <MathInline>{`(x-a)^n`}</MathInline>.
+        The term <InlineMath>{`o((x-a)^n)`}</InlineMath> captures the remainder—it says that the
+        error goes to zero faster than <InlineMath>{`(x-a)^n`}</InlineMath>.
       </p>
 
       <Callout type="example" title="Example 5: Taylor Formula for e^x">
-        <p>As <MathInline>{`x \\to 0`}</MathInline>:</p>
+        <p>As <InlineMath>{`x \\to 0`}</InlineMath>:</p>
         <MathBlock>{`e^x = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + o(x^3)`}</MathBlock>
         <p>
           This says the error in the cubic approximation is smaller than any constant
-          multiple of <MathInline>{`x^3`}</MathInline> for <MathInline>{`x`}</MathInline> near 0.
+          multiple of <InlineMath>{`x^3`}</InlineMath> for <InlineMath>{`x`}</InlineMath> near 0.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 6: Taylor Formula for sin x">
-        <p>As <MathInline>{`x \\to 0`}</MathInline>:</p>
+        <p>As <InlineMath>{`x \\to 0`}</InlineMath>:</p>
         <MathBlock>{`\\sin x = x - \\frac{x^3}{6} + \\frac{x^5}{120} + o(x^5)`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 7: Taylor Formula for cos x">
-        <p>As <MathInline>{`x \\to 0`}</MathInline>:</p>
+        <p>As <InlineMath>{`x \\to 0`}</InlineMath>:</p>
         <MathBlock>{`\\cos x = 1 - \\frac{x^2}{2} + \\frac{x^4}{24} + o(x^4)`}</MathBlock>
       </Callout>
 
       <h2>Algebraic Properties of o-Notation</h2>
 
       <Callout type="theorem" title="Rules for o-Notation">
-        <p>As <MathInline>{`x \\to a`}</MathInline>:</p>
+        <p>As <InlineMath>{`x \\to a`}</InlineMath>:</p>
         <ol className="list-decimal pl-6 space-y-2">
           <li>
-            <strong>Constant multiple:</strong> <MathInline>{`c \\cdot o(g(x)) = o(g(x))`}</MathInline> for any constant <MathInline>{`c`}</MathInline>.
+            <strong>Constant multiple:</strong> <InlineMath>{`c \\cdot o(g(x)) = o(g(x))`}</InlineMath> for any constant <InlineMath>{`c`}</InlineMath>.
           </li>
           <li>
-            <strong>Sum:</strong> <MathInline>{`o(g(x)) + o(g(x)) = o(g(x))`}</MathInline>.
+            <strong>Sum:</strong> <InlineMath>{`o(g(x)) + o(g(x)) = o(g(x))`}</InlineMath>.
           </li>
           <li>
-            <strong>Product:</strong> <MathInline>{`o(f(x)) \\cdot o(g(x)) = o(f(x)g(x))`}</MathInline>.
+            <strong>Product:</strong> <InlineMath>{`o(f(x)) \\cdot o(g(x)) = o(f(x)g(x))`}</InlineMath>.
           </li>
           <li>
-            <strong>Product with function:</strong> <MathInline>{`f(x) \\cdot o(g(x)) = o(f(x)g(x))`}</MathInline>.
+            <strong>Product with function:</strong> <InlineMath>{`f(x) \\cdot o(g(x)) = o(f(x)g(x))`}</InlineMath>.
           </li>
           <li>
-            <strong>Transitivity:</strong> If <MathInline>{`f = o(g)`}</MathInline> and <MathInline>{`g = o(h)`}</MathInline>, then <MathInline>{`f = o(h)`}</MathInline>.
+            <strong>Transitivity:</strong> If <InlineMath>{`f = o(g)`}</InlineMath> and <InlineMath>{`g = o(h)`}</InlineMath>, then <InlineMath>{`f = o(h)`}</InlineMath>.
           </li>
           <li>
-            <strong>Absorption:</strong> <MathInline>{`o(x^n) + o(x^m) = o(x^{\\min(n,m)})`}</MathInline> as <MathInline>{`x \\to 0`}</MathInline>.
+            <strong>Absorption:</strong> <InlineMath>{`o(x^n) + o(x^m) = o(x^{\\min(n,m)})`}</InlineMath> as <InlineMath>{`x \\to 0`}</InlineMath>.
           </li>
         </ol>
       </Callout>
 
       <Callout type="example" title="Example 8: Using the Rules">
-        <p>Simplify <MathInline>{`x^2 + o(x^3) + o(x^2)`}</MathInline> as <MathInline>{`x \\to 0`}</MathInline>.</p>
+        <p>Simplify <InlineMath>{`x^2 + o(x^3) + o(x^2)`}</InlineMath> as <InlineMath>{`x \\to 0`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>
-          Since <MathInline>{`o(x^3) = o(x^2)`}</MathInline> (higher powers are absorbed), we have:
+          Since <InlineMath>{`o(x^3) = o(x^2)`}</InlineMath> (higher powers are absorbed), we have:
         </p>
         <MathBlock>{`x^2 + o(x^3) + o(x^2) = x^2 + o(x^2)`}</MathBlock>
       </Callout>
@@ -165,7 +165,7 @@ export default function Section48() {
       </p>
 
       <Callout type="example" title="Example 9: A Classic Limit">
-        <p>Evaluate <MathInline>{`\\displaystyle\\lim_{x \\to 0} \\frac{\\sin x - x}{x^3}`}</MathInline>.</p>
+        <p>Evaluate <InlineMath>{`\\displaystyle\\lim_{x \\to 0} \\frac{\\sin x - x}{x^3}`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>Using the Taylor expansion:</p>
         <MathBlock>{`\\sin x = x - \\frac{x^3}{6} + o(x^3)`}</MathBlock>
@@ -173,13 +173,13 @@ export default function Section48() {
         <MathBlock>{`\\sin x - x = -\\frac{x^3}{6} + o(x^3)`}</MathBlock>
         <MathBlock>{`\\frac{\\sin x - x}{x^3} = \\frac{-\\frac{x^3}{6} + o(x^3)}{x^3} = -\\frac{1}{6} + o(1)`}</MathBlock>
         <p>
-          As <MathInline>{`x \\to 0`}</MathInline>, the <MathInline>{`o(1)`}</MathInline> term vanishes:
+          As <InlineMath>{`x \\to 0`}</InlineMath>, the <InlineMath>{`o(1)`}</InlineMath> term vanishes:
         </p>
         <MathBlock>{`\\lim_{x \\to 0} \\frac{\\sin x - x}{x^3} = -\\frac{1}{6}`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 10: Another Limit">
-        <p>Evaluate <MathInline>{`\\displaystyle\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2}`}</MathInline>.</p>
+        <p>Evaluate <InlineMath>{`\\displaystyle\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2}`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`e^x = 1 + x + \\frac{x^2}{2} + o(x^2)`}</MathBlock>
         <MathBlock>{`e^x - 1 - x = \\frac{x^2}{2} + o(x^2)`}</MathBlock>
@@ -187,7 +187,7 @@ export default function Section48() {
       </Callout>
 
       <Callout type="example" title="Example 11: Combining Multiple Expansions">
-        <p>Evaluate <MathInline>{`\\displaystyle\\lim_{x \\to 0} \\frac{1 - \\cos x}{x \\sin x}`}</MathInline>.</p>
+        <p>Evaluate <InlineMath>{`\\displaystyle\\lim_{x \\to 0} \\frac{1 - \\cos x}{x \\sin x}`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>Expand both numerator and denominator:</p>
         <MathBlock>{`\\cos x = 1 - \\frac{x^2}{2} + o(x^2) \\quad \\Rightarrow \\quad 1 - \\cos x = \\frac{x^2}{2} + o(x^2)`}</MathBlock>
@@ -197,15 +197,15 @@ export default function Section48() {
       </Callout>
 
       <Callout type="example" title="Example 12: A More Complex Limit">
-        <p>Evaluate <MathInline>{`\\displaystyle\\lim_{x \\to 0} \\frac{\\tan x - \\sin x}{x^3}`}</MathInline>.</p>
+        <p>Evaluate <InlineMath>{`\\displaystyle\\lim_{x \\to 0} \\frac{\\tan x - \\sin x}{x^3}`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>We need expansions to sufficient order:</p>
         <MathBlock>{`\\sin x = x - \\frac{x^3}{6} + o(x^3)`}</MathBlock>
         <MathBlock>{`\\cos x = 1 - \\frac{x^2}{2} + o(x^2)`}</MathBlock>
-        <p>For <MathInline>{`\\tan x = \\frac{\\sin x}{\\cos x}`}</MathInline>, we use:</p>
+        <p>For <InlineMath>{`\\tan x = \\frac{\\sin x}{\\cos x}`}</InlineMath>, we use:</p>
         <MathBlock>{`\\frac{1}{\\cos x} = \\frac{1}{1 - \\frac{x^2}{2} + o(x^2)} = 1 + \\frac{x^2}{2} + o(x^2)`}</MathBlock>
         <p>
-          (using <MathInline>{`\\frac{1}{1-u} = 1 + u + o(u)`}</MathInline> with <MathInline>{`u = \\frac{x^2}{2} + o(x^2)`}</MathInline>)
+          (using <InlineMath>{`\\frac{1}{1-u} = 1 + u + o(u)`}</InlineMath> with <InlineMath>{`u = \\frac{x^2}{2} + o(x^2)`}</InlineMath>)
         </p>
         <MathBlock>{`\\tan x = \\sin x \\cdot \\frac{1}{\\cos x} = \\left(x - \\frac{x^3}{6} + o(x^3)\\right)\\left(1 + \\frac{x^2}{2} + o(x^2)\\right)`}</MathBlock>
         <MathBlock>{`= x + \\frac{x^3}{2} - \\frac{x^3}{6} + o(x^3) = x + \\frac{x^3}{3} + o(x^3)`}</MathBlock>
@@ -218,24 +218,24 @@ export default function Section48() {
 
       <Callout type="definition" title="Big-O Notation">
         <p>
-          A related notation is <strong>big-O</strong>: we write <MathInline>{`f(x) = O(g(x))`}</MathInline>
-          as <MathInline>{`x \\to a`}</MathInline> if there exist constants <MathInline>{`M > 0`}</MathInline>
-          and <MathInline>{`\\delta > 0`}</MathInline> such that:
+          A related notation is <strong>big-O</strong>: we write <InlineMath>{`f(x) = O(g(x))`}</InlineMath>
+          as <InlineMath>{`x \\to a`}</InlineMath> if there exist constants <InlineMath>{`M > 0`}</InlineMath>
+          and <InlineMath>{`\\delta > 0`}</InlineMath> such that:
         </p>
         <MathBlock>{`|f(x)| \\leq M|g(x)| \\quad \\text{for } 0 < |x - a| < \\delta`}</MathBlock>
         <p>
-          This means <MathInline>{`f(x)`}</MathInline> is <em>bounded</em> by a constant multiple
-          of <MathInline>{`g(x)`}</MathInline>, rather than being negligible.
+          This means <InlineMath>{`f(x)`}</InlineMath> is <em>bounded</em> by a constant multiple
+          of <InlineMath>{`g(x)`}</InlineMath>, rather than being negligible.
         </p>
       </Callout>
 
       <Callout type="info" title="Comparison: o vs O">
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`f = o(g)`}</MathInline>: <MathInline>{`f`}</MathInline> grows <em>slower</em> than <MathInline>{`g`}</MathInline> (ratio → 0)</li>
-          <li><MathInline>{`f = O(g)`}</MathInline>: <MathInline>{`f`}</MathInline> grows <em>no faster</em> than <MathInline>{`g`}</MathInline> (ratio bounded)</li>
+          <li><InlineMath>{`f = o(g)`}</InlineMath>: <InlineMath>{`f`}</InlineMath> grows <em>slower</em> than <InlineMath>{`g`}</InlineMath> (ratio → 0)</li>
+          <li><InlineMath>{`f = O(g)`}</InlineMath>: <InlineMath>{`f`}</InlineMath> grows <em>no faster</em> than <InlineMath>{`g`}</InlineMath> (ratio bounded)</li>
         </ul>
         <p className="mt-2">
-          For example: <MathInline>{`x^2 = o(x)`}</MathInline> but <MathInline>{`2x = O(x)`}</MathInline> as <MathInline>{`x \\to 0`}</MathInline>.
+          For example: <InlineMath>{`x^2 = o(x)`}</InlineMath> but <InlineMath>{`2x = O(x)`}</InlineMath> as <InlineMath>{`x \\to 0`}</InlineMath>.
         </p>
       </Callout>
 
@@ -256,16 +256,16 @@ export default function Section48() {
       <h2>Summary</h2>
       <ul>
         <li>
-          <strong>Definition:</strong> <MathInline>{`f(x) = o(g(x))`}</MathInline> means
-          <MathInline>{`\\lim \\frac{f(x)}{g(x)} = 0`}</MathInline>.
+          <strong>Definition:</strong> <InlineMath>{`f(x) = o(g(x))`}</InlineMath> means
+          <InlineMath>{`\\lim \\frac{f(x)}{g(x)} = 0`}</InlineMath>.
         </li>
         <li>
-          <strong>Intuition:</strong> <MathInline>{`f`}</MathInline> is negligible compared
-          to <MathInline>{`g`}</MathInline>.
+          <strong>Intuition:</strong> <InlineMath>{`f`}</InlineMath> is negligible compared
+          to <InlineMath>{`g`}</InlineMath>.
         </li>
         <li>
-          <strong>Taylor's formula:</strong> <MathInline>{`f(x) = T_n(x) + o((x-a)^n)`}</MathInline>
-          expresses that the remainder is smaller than <MathInline>{`(x-a)^n`}</MathInline>.
+          <strong>Taylor's formula:</strong> <InlineMath>{`f(x) = T_n(x) + o((x-a)^n)`}</InlineMath>
+          expresses that the remainder is smaller than <InlineMath>{`(x-a)^n`}</InlineMath>.
         </li>
         <li>
           <strong>Algebraic rules:</strong> The o-notation obeys useful rules for
@@ -276,8 +276,8 @@ export default function Section48() {
           o-notation, simplify, and read off the limit.
         </li>
         <li>
-          <strong>Big-O:</strong> <MathInline>{`f = O(g)`}</MathInline> means <MathInline>{`f`}</MathInline>
-          is bounded by a multiple of <MathInline>{`g`}</MathInline> (weaker than little-o).
+          <strong>Big-O:</strong> <InlineMath>{`f = O(g)`}</InlineMath> means <InlineMath>{`f`}</InlineMath>
+          is bounded by a multiple of <InlineMath>{`g`}</InlineMath> (weaker than little-o).
         </li>
       </ul>
     </LessonLayout>

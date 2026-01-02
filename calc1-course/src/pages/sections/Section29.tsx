@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section29() {
   return (
@@ -13,36 +13,36 @@ export default function Section29() {
 
       <h2>The Difference Quotient as Slope</h2>
       <p>
-        Consider the graph of a function <MathInline>{`f`}</MathInline> with two points
-        <MathInline>{`P`}</MathInline> and <MathInline>{`Q`}</MathInline> having coordinates
-        <MathInline>{`(x, f(x))`}</MathInline> and <MathInline>{`(x + h, f(x + h))`}</MathInline>,
-        respectively. The line through <MathInline>{`P`}</MathInline> and <MathInline>{`Q`}</MathInline>
+        Consider the graph of a function <InlineMath>{`f`}</InlineMath> with two points
+        <InlineMath>{`P`}</InlineMath> and <InlineMath>{`Q`}</InlineMath> having coordinates
+        <InlineMath>{`(x, f(x))`}</InlineMath> and <InlineMath>{`(x + h, f(x + h))`}</InlineMath>,
+        respectively. The line through <InlineMath>{`P`}</InlineMath> and <InlineMath>{`Q`}</InlineMath>
         is called a <strong>secant line</strong>.
       </p>
 
       <p>
-        Consider the right triangle with hypotenuse <MathInline>{`PQ`}</MathInline>. Its vertical
-        leg has length <MathInline>{`f(x + h) - f(x)`}</MathInline>, representing the change in
-        <MathInline>{`y`}</MathInline>-values. The horizontal leg has length <MathInline>{`h`}</MathInline>.
+        Consider the right triangle with hypotenuse <InlineMath>{`PQ`}</InlineMath>. Its vertical
+        leg has length <InlineMath>{`f(x + h) - f(x)`}</InlineMath>, representing the change in
+        <InlineMath>{`y`}</InlineMath>-values. The horizontal leg has length <InlineMath>{`h`}</InlineMath>.
         Therefore, the difference quotient:
       </p>
 
       <MathBlock>{`\\frac{f(x + h) - f(x)}{h}`}</MathBlock>
 
       <p>
-        represents the trigonometric tangent of the angle <MathInline>{`\\alpha`}</MathInline> that
-        the line <MathInline>{`PQ`}</MathInline> makes with the horizontal.
+        represents the trigonometric tangent of the angle <InlineMath>{`\\alpha`}</InlineMath> that
+        the line <InlineMath>{`PQ`}</InlineMath> makes with the horizontal.
       </p>
 
       <Callout type="definition" title="Slope of a Line">
         <p>
-          The real number <MathInline>{`\\tan \\alpha`}</MathInline> is called the <strong>slope</strong>
-          of the line through <MathInline>{`P`}</MathInline> and <MathInline>{`Q`}</MathInline>, and it
+          The real number <InlineMath>{`\\tan \\alpha`}</InlineMath> is called the <strong>slope</strong>
+          of the line through <InlineMath>{`P`}</InlineMath> and <InlineMath>{`Q`}</InlineMath>, and it
           provides a way of measuring the "steepness" of this line.
         </p>
         <p>
-          For a linear function <MathInline>{`f(x) = mx + b`}</MathInline>, the difference quotient
-          always equals <MathInline>{`m`}</MathInline>, so <MathInline>{`m`}</MathInline> is the slope of
+          For a linear function <InlineMath>{`f(x) = mx + b`}</InlineMath>, the difference quotient
+          always equals <InlineMath>{`m`}</InlineMath>, so <InlineMath>{`m`}</InlineMath> is the slope of
           the line.
         </p>
       </Callout>
@@ -53,63 +53,63 @@ export default function Section29() {
       </p>
       <ul>
         <li>
-          <strong>Horizontal line</strong> (<MathInline>{`\\alpha = 0`}</MathInline>): The slope is
-          <MathInline>{`\\tan 0 = 0`}</MathInline>.
+          <strong>Horizontal line</strong> (<InlineMath>{`\\alpha = 0`}</InlineMath>): The slope is
+          <InlineMath>{`\\tan 0 = 0`}</InlineMath>.
         </li>
         <li>
-          <strong>Rising line</strong> (<MathInline>{`0 < \\alpha < \\pi/2`}</MathInline>): The slope
+          <strong>Rising line</strong> (<InlineMath>{`0 < \\alpha < \\pi/2`}</InlineMath>): The slope
           is <em>positive</em>. The line rises as we move from left to right.
         </li>
         <li>
-          <strong>Falling line</strong> (<MathInline>{`\\pi/2 < \\alpha < \\pi`}</MathInline>): The
+          <strong>Falling line</strong> (<InlineMath>{`\\pi/2 < \\alpha < \\pi`}</InlineMath>): The
           slope is <em>negative</em>. The line falls as we move from left to right.
         </li>
         <li>
-          <strong>Slope 1</strong> (<MathInline>{`\\alpha = \\pi/4`}</MathInline>): The line makes a
+          <strong>Slope 1</strong> (<InlineMath>{`\\alpha = \\pi/4`}</InlineMath>): The line makes a
           45° angle with the horizontal.
         </li>
         <li>
-          <strong>Vertical line</strong> (<MathInline>{`\\alpha = \\pi/2`}</MathInline>): Since
-          <MathInline>{`\\tan(\\pi/2)`}</MathInline> is undefined, we say vertical lines have
+          <strong>Vertical line</strong> (<InlineMath>{`\\alpha = \\pi/2`}</InlineMath>): Since
+          <InlineMath>{`\\tan(\\pi/2)`}</InlineMath> is undefined, we say vertical lines have
           <em>no slope</em>.
         </li>
       </ul>
 
       <h2>The Tangent Line</h2>
       <p>
-        Suppose <MathInline>{`f`}</MathInline> has a derivative at <MathInline>{`x`}</MathInline>. This
-        means that the difference quotient approaches the limit <MathInline>{`f'(x)`}</MathInline>
-        as <MathInline>{`h \\to 0`}</MathInline>. When interpreted geometrically:
+        Suppose <InlineMath>{`f`}</InlineMath> has a derivative at <InlineMath>{`x`}</InlineMath>. This
+        means that the difference quotient approaches the limit <InlineMath>{`f'(x)`}</InlineMath>
+        as <InlineMath>{`h \\to 0`}</InlineMath>. When interpreted geometrically:
       </p>
       <ul>
-        <li>As <MathInline>{`h`}</MathInline> gets closer to 0, the point <MathInline>{`P`}</MathInline> remains fixed</li>
-        <li><MathInline>{`Q`}</MathInline> moves along the curve toward <MathInline>{`P`}</MathInline></li>
-        <li>The secant line through <MathInline>{`PQ`}</MathInline> rotates, approaching a limiting position</li>
-        <li>The slope of this secant line approaches <MathInline>{`f'(x)`}</MathInline></li>
+        <li>As <InlineMath>{`h`}</InlineMath> gets closer to 0, the point <InlineMath>{`P`}</InlineMath> remains fixed</li>
+        <li><InlineMath>{`Q`}</InlineMath> moves along the curve toward <InlineMath>{`P`}</InlineMath></li>
+        <li>The secant line through <InlineMath>{`PQ`}</InlineMath> rotates, approaching a limiting position</li>
+        <li>The slope of this secant line approaches <InlineMath>{`f'(x)`}</InlineMath></li>
       </ul>
 
       <Callout type="definition" title="Slope of a Curve and Tangent Line">
         <p>
-          The <strong>slope of the curve</strong> at point <MathInline>{`P = (x, f(x))`}</MathInline>
-          is defined to be the number <MathInline>{`f'(x)`}</MathInline>.
+          The <strong>slope of the curve</strong> at point <InlineMath>{`P = (x, f(x))`}</InlineMath>
+          is defined to be the number <InlineMath>{`f'(x)`}</InlineMath>.
         </p>
         <p>
-          The line through <MathInline>{`P`}</MathInline> having slope <MathInline>{`f'(x)`}</MathInline>
-          is called the <strong>tangent line</strong> to the curve at <MathInline>{`P`}</MathInline>.
+          The line through <InlineMath>{`P`}</InlineMath> having slope <InlineMath>{`f'(x)`}</InlineMath>
+          is called the <strong>tangent line</strong> to the curve at <InlineMath>{`P`}</InlineMath>.
         </p>
       </Callout>
 
       <h2>Equation of the Tangent Line</h2>
       <p>
-        At a point <MathInline>{`(a, f(a))`}</MathInline> on the graph where the derivative exists,
-        the tangent line has slope <MathInline>{`f'(a)`}</MathInline>. Using the point-slope form
+        At a point <InlineMath>{`(a, f(a))`}</InlineMath> on the graph where the derivative exists,
+        the tangent line has slope <InlineMath>{`f'(a)`}</InlineMath>. Using the point-slope form
         of a line:
       </p>
 
       <Callout type="info" title="Tangent Line Equation">
         <p>
-          The equation of the tangent line to <MathInline>{`y = f(x)`}</MathInline> at the point
-          <MathInline>{`(a, f(a))`}</MathInline> is:
+          The equation of the tangent line to <InlineMath>{`y = f(x)`}</InlineMath> at the point
+          <InlineMath>{`(a, f(a))`}</InlineMath> is:
         </p>
         <MathBlock>{`y - f(a) = f'(a)(x - a)`}</MathBlock>
         <p>or equivalently:</p>
@@ -118,12 +118,12 @@ export default function Section29() {
 
       <Callout type="example" title="Example: Tangent to a Parabola">
         <p>
-          Find the equation of the tangent line to <MathInline>{`f(x) = x^2`}</MathInline> at the
-          point <MathInline>{`(2, 4)`}</MathInline>.
+          Find the equation of the tangent line to <InlineMath>{`f(x) = x^2`}</InlineMath> at the
+          point <InlineMath>{`(2, 4)`}</InlineMath>.
         </p>
         <p>
-          <strong>Solution:</strong> We have <MathInline>{`f'(x) = 2x`}</MathInline>, so
-          <MathInline>{`f'(2) = 4`}</MathInline>. The tangent line is:
+          <strong>Solution:</strong> We have <InlineMath>{`f'(x) = 2x`}</InlineMath>, so
+          <InlineMath>{`f'(2) = 4`}</InlineMath>. The tangent line is:
         </p>
         <MathBlock>{`y - 4 = 4(x - 2) \\quad \\Rightarrow \\quad y = 4x - 4.`}</MathBlock>
       </Callout>
@@ -137,32 +137,32 @@ export default function Section29() {
       <Callout type="info" title="Interpreting the Sign of f'(x)">
         <ul>
           <li>
-            <strong><MathInline>{`f'(x) > 0`}</MathInline></strong>: The graph is <em>rising</em>
-            (increasing) in the vicinity of <MathInline>{`x`}</MathInline> as we move from left to right.
+            <strong><InlineMath>{`f'(x) > 0`}</InlineMath></strong>: The graph is <em>rising</em>
+            (increasing) in the vicinity of <InlineMath>{`x`}</InlineMath> as we move from left to right.
           </li>
           <li>
-            <strong><MathInline>{`f'(x) < 0`}</MathInline></strong>: The graph is <em>falling</em>
-            (decreasing) in the vicinity of <MathInline>{`x`}</MathInline>.
+            <strong><InlineMath>{`f'(x) < 0`}</InlineMath></strong>: The graph is <em>falling</em>
+            (decreasing) in the vicinity of <InlineMath>{`x`}</InlineMath>.
           </li>
           <li>
-            <strong><MathInline>{`f'(x) = 0`}</MathInline></strong>: The tangent line is
-            <em>horizontal</em> at <MathInline>{`x`}</MathInline>.
+            <strong><InlineMath>{`f'(x) = 0`}</InlineMath></strong>: The tangent line is
+            <em>horizontal</em> at <InlineMath>{`x`}</InlineMath>.
           </li>
         </ul>
       </Callout>
 
       <p>
         At a maximum or minimum of the function, the slope must be zero. Fermat was the
-        first to notice that points where <MathInline>{`f`}</MathInline> has a maximum or minimum
-        must occur among the roots of the equation <MathInline>{`f'(x) = 0`}</MathInline>.
+        first to notice that points where <InlineMath>{`f`}</InlineMath> has a maximum or minimum
+        must occur among the roots of the equation <InlineMath>{`f'(x) = 0`}</InlineMath>.
       </p>
 
       <Callout type="info" title="Important Observation">
         <p>
-          It is important to realize that <MathInline>{`f'(x) = 0`}</MathInline> may also occur at
+          It is important to realize that <InlineMath>{`f'(x) = 0`}</InlineMath> may also occur at
           points where there is <em>no</em> maximum or minimum. For example, the function
-          <MathInline>{`f(x) = x^3`}</MathInline> has <MathInline>{`f'(0) = 0`}</MathInline>, but
-          <MathInline>{`x = 0`}</MathInline> is neither a maximum nor a minimum—it is an
+          <InlineMath>{`f(x) = x^3`}</InlineMath> has <InlineMath>{`f'(0) = 0`}</InlineMath>, but
+          <InlineMath>{`x = 0`}</InlineMath> is neither a maximum nor a minimum—it is an
           <strong>inflection point</strong> where the tangent line crosses the graph.
         </p>
       </Callout>
@@ -179,7 +179,7 @@ export default function Section29() {
         </p>
         <p>
           <strong>Perpendicular lines:</strong> Two nonvertical lines with slopes
-          <MathInline>{`m_1`}</MathInline> and <MathInline>{`m_2`}</MathInline> are perpendicular if
+          <InlineMath>{`m_1`}</InlineMath> and <InlineMath>{`m_2`}</InlineMath> are perpendicular if
           and only if:
         </p>
         <MathBlock>{`m_1 \\cdot m_2 = -1`}</MathBlock>
@@ -191,11 +191,11 @@ export default function Section29() {
       <Callout type="example" title="Example: Normal Line">
         <p>
           The line perpendicular to the tangent at a point is called the <strong>normal line</strong>.
-          Find the equation of the normal line to <MathInline>{`f(x) = x^2`}</MathInline> at <MathInline>{`(2, 4)`}</MathInline>.
+          Find the equation of the normal line to <InlineMath>{`f(x) = x^2`}</InlineMath> at <InlineMath>{`(2, 4)`}</InlineMath>.
         </p>
         <p>
-          <strong>Solution:</strong> The tangent has slope <MathInline>{`f'(2) = 4`}</MathInline>.
-          The normal line has slope <MathInline>{`-1/4`}</MathInline> (negative reciprocal). Thus:
+          <strong>Solution:</strong> The tangent has slope <InlineMath>{`f'(2) = 4`}</InlineMath>.
+          The normal line has slope <InlineMath>{`-1/4`}</InlineMath> (negative reciprocal). Thus:
         </p>
         <MathBlock>{`y - 4 = -\\frac{1}{4}(x - 2) \\quad \\Rightarrow \\quad y = -\\frac{1}{4}x + \\frac{9}{2}.`}</MathBlock>
       </Callout>
@@ -206,28 +206,28 @@ export default function Section29() {
       </p>
 
       <Callout type="info" title="Common Derivative Notations">
-        <p><strong>Lagrange notation:</strong> <MathInline>{`f'(x)`}</MathInline>, <MathInline>{`f''(x)`}</MathInline>, <MathInline>{`f^{(n)}(x)`}</MathInline></p>
+        <p><strong>Lagrange notation:</strong> <InlineMath>{`f'(x)`}</InlineMath>, <InlineMath>{`f''(x)`}</InlineMath>, <InlineMath>{`f^{(n)}(x)`}</InlineMath></p>
         <p>
-          Emphasizes that the derivative is a new function obtained from <MathInline>{`f`}</MathInline>.
-          If <MathInline>{`y = f(x)`}</MathInline>, we also write <MathInline>{`y'`}</MathInline>, <MathInline>{`y''`}</MathInline>, etc.
+          Emphasizes that the derivative is a new function obtained from <InlineMath>{`f`}</InlineMath>.
+          If <InlineMath>{`y = f(x)`}</InlineMath>, we also write <InlineMath>{`y'`}</InlineMath>, <InlineMath>{`y''`}</InlineMath>, etc.
         </p>
 
-        <p><strong>Newton notation:</strong> <MathInline>{`\\dot{y}`}</MathInline>, <MathInline>{`\\ddot{y}`}</MathInline></p>
+        <p><strong>Newton notation:</strong> <InlineMath>{`\\dot{y}`}</InlineMath>, <InlineMath>{`\\ddot{y}`}</InlineMath></p>
         <p>
           Often used for derivatives with respect to time, especially for velocity and acceleration.
         </p>
 
-        <p><strong>Operator notation:</strong> <MathInline>{`Df`}</MathInline>, <MathInline>{`D^2f`}</MathInline>, <MathInline>{`D^nf`}</MathInline></p>
+        <p><strong>Operator notation:</strong> <InlineMath>{`Df`}</InlineMath>, <InlineMath>{`D^2f`}</InlineMath>, <InlineMath>{`D^nf`}</InlineMath></p>
         <p>
-          The symbol <MathInline>{`D`}</MathInline> is called a <strong>differentiation operator</strong>.
-          It suggests that <MathInline>{`Df`}</MathInline> is obtained from <MathInline>{`f`}</MathInline>
+          The symbol <InlineMath>{`D`}</InlineMath> is called a <strong>differentiation operator</strong>.
+          It suggests that <InlineMath>{`Df`}</InlineMath> is obtained from <InlineMath>{`f`}</InlineMath>
           by the operation of differentiation.
         </p>
 
-        <p><strong>Leibniz notation:</strong> <MathInline>{`\\dfrac{dy}{dx}`}</MathInline>, <MathInline>{`\\dfrac{d^2y}{dx^2}`}</MathInline>, <MathInline>{`\\dfrac{d^ny}{dx^n}`}</MathInline></p>
+        <p><strong>Leibniz notation:</strong> <InlineMath>{`\\dfrac{dy}{dx}`}</InlineMath>, <InlineMath>{`\\dfrac{d^2y}{dx^2}`}</InlineMath>, <InlineMath>{`\\dfrac{d^ny}{dx^n}`}</InlineMath></p>
         <p>
-          Originated from writing <MathInline>{`\\Delta y / \\Delta x`}</MathInline> for the difference
-          quotient and <MathInline>{`dy/dx`}</MathInline> for its limit. Useful when working with
+          Originated from writing <InlineMath>{`\\Delta y / \\Delta x`}</InlineMath> for the difference
+          quotient and <InlineMath>{`dy/dx`}</InlineMath> for its limit. Useful when working with
           related rates and the chain rule.
         </p>
       </Callout>
@@ -255,30 +255,30 @@ export default function Section29() {
       <h2>Summary</h2>
       <ul>
         <li>
-          The <strong>difference quotient</strong> <MathInline>{`[f(x+h) - f(x)]/h`}</MathInline>
+          The <strong>difference quotient</strong> <InlineMath>{`[f(x+h) - f(x)]/h`}</InlineMath>
           represents the slope of the <strong>secant line</strong> through two points on
           the graph.
         </li>
         <li>
-          The <strong>derivative</strong> <MathInline>{`f'(x)`}</MathInline> represents the slope
+          The <strong>derivative</strong> <InlineMath>{`f'(x)`}</InlineMath> represents the slope
           of the <strong>tangent line</strong> at a point—the limiting position of secant
           lines as the second point approaches the first.
         </li>
         <li>
-          The tangent line to <MathInline>{`y = f(x)`}</MathInline> at <MathInline>{`(a, f(a))`}</MathInline>
-          has equation <MathInline>{`y = f(a) + f'(a)(x - a)`}</MathInline>.
+          The tangent line to <InlineMath>{`y = f(x)`}</InlineMath> at <InlineMath>{`(a, f(a))`}</InlineMath>
+          has equation <InlineMath>{`y = f(a) + f'(a)(x - a)`}</InlineMath>.
         </li>
         <li>
-          <MathInline>{`f'(x) > 0`}</MathInline> means the graph is rising; <MathInline>{`f'(x) < 0`}</MathInline>
-          means falling; <MathInline>{`f'(x) = 0`}</MathInline> means horizontal tangent.
+          <InlineMath>{`f'(x) > 0`}</InlineMath> means the graph is rising; <InlineMath>{`f'(x) < 0`}</InlineMath>
+          means falling; <InlineMath>{`f'(x) = 0`}</InlineMath> means horizontal tangent.
         </li>
         <li>
           Parallel lines have equal slopes; perpendicular lines have slopes whose product
-          is <MathInline>{`-1`}</MathInline>.
+          is <InlineMath>{`-1`}</InlineMath>.
         </li>
         <li>
-          Various notations exist: <MathInline>{`f'(x)`}</MathInline>, <MathInline>{`y'`}</MathInline>,
-          <MathInline>{`Df(x)`}</MathInline>, and <MathInline>{`dy/dx`}</MathInline> all represent the
+          Various notations exist: <InlineMath>{`f'(x)`}</InlineMath>, <InlineMath>{`y'`}</InlineMath>,
+          <InlineMath>{`Df(x)`}</InlineMath>, and <InlineMath>{`dy/dx`}</InlineMath> all represent the
           same derivative.
         </li>
       </ul>

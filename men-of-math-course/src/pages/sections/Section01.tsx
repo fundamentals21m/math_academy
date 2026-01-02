@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
-import { MathBlock, Math as MathInline } from '../../components/common/MathBlock';
+import { MathBlock, InlineMath } from '../../components/common/MathBlock';
 
 // Achilles and Tortoise Race Visualization
 function AchillesTortoiseRace() {
@@ -282,7 +282,7 @@ function ArrowParadox() {
           <p className="text-sm text-dark-400">
             <strong>Resolution:</strong> Motion is not about positions at instants,
             but about the <em>limit</em> of position as time intervals shrink to zero.
-            Velocity is defined as a derivative: <MathInline>{`v = \\lim_{\\Delta t \\to 0} \\frac{\\Delta x}{\\Delta t}`}</MathInline>
+            Velocity is defined as a derivative: <InlineMath>{`v = \\lim_{\\Delta t \\to 0} \\frac{\\Delta x}{\\Delta t}`}</InlineMath>
           </p>
         </div>
       </div>
@@ -399,7 +399,7 @@ function DichotomyParadox() {
         )}
 
         <p className="text-sm text-dark-400 mt-3">
-          Infinitely many steps, but: <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{1}{2^n} = 1`}</MathInline>
+          Infinitely many steps, but: <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{1}{2^n} = 1`}</InlineMath>
         </p>
       </div>
     </div>

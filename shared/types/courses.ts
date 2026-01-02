@@ -5,12 +5,12 @@
 /**
  * Valid course identifiers for production use
  */
-export type CourseId = 'ba' | 'aa' | 'crypto' | 'linalg' | 'advlinalg' | 'template' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art' | 'calc_easy' | 'wm' | 'four_pillars' | 'mom';
+export type CourseId = 'ba' | 'aa' | 'crypto' | 'linalg' | 'advlinalg' | 'template' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art' | 'calc_easy' | 'wm' | 'four_pillars' | 'mom' | 'euclid';
 
 /**
  * Array of valid course IDs for runtime validation
  */
-export const VALID_COURSE_IDS: readonly CourseId[] = ['ba', 'aa', 'crypto', 'linalg', 'advlinalg', 'template', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom'] as const;
+export const VALID_COURSE_IDS: readonly CourseId[] = ['ba', 'aa', 'crypto', 'linalg', 'advlinalg', 'template', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom', 'euclid'] as const;
 
 /**
  * Type guard to check if a string is a valid CourseId

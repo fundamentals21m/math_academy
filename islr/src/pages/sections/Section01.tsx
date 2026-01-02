@@ -3,7 +3,7 @@ import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section01Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section01() {
   return (
@@ -18,9 +18,9 @@ export default function Section01() {
       </p>
 
       <Callout type="info">
-        <strong>The Central Problem:</strong> Given a set of predictors <Math>{`X_1, X_2, \\ldots, X_p`}</Math> and 
-        a response variable <Math>Y</Math>, we want to find a function <Math>f</Math> such 
-        that <Math>{`Y \\approx f(X)`}</Math>.
+        <strong>The Central Problem:</strong> Given a set of predictors <InlineMath>{`X_1, X_2, \\ldots, X_p`}</InlineMath> and 
+        a response variable <InlineMath>Y</InlineMath>, we want to find a function <InlineMath>f</InlineMath> such 
+        that <InlineMath>{`Y \\approx f(X)`}</InlineMath>.
       </Callout>
 
       <h2>Applications of Statistical Learning</h2>
@@ -95,11 +95,11 @@ export default function Section01() {
         <p>
           In statistical learning, we typically have a set of <strong>input variables</strong> (also 
           called predictors, independent variables, features, or just variables), 
-          denoted <Math>{`X_1, X_2, \\ldots, X_p`}</Math>.
+          denoted <InlineMath>{`X_1, X_2, \\ldots, X_p`}</InlineMath>.
         </p>
         <p className="mt-2">
           We also have an <strong>output variable</strong> (also called response or dependent variable), 
-          denoted <Math>Y</Math>.
+          denoted <InlineMath>Y</InlineMath>.
         </p>
       </Definition>
 
@@ -113,8 +113,8 @@ export default function Section01() {
         <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 rounded-xl p-5 border border-emerald-500/20">
           <h3 className="text-lg font-semibold text-emerald-400 mb-3">Supervised Learning</h3>
           <p className="text-dark-300 mb-3">
-            For each observation of the predictor measurements <Math>x_i</Math>, there is 
-            an associated response measurement <Math>y_i</Math>.
+            For each observation of the predictor measurements <InlineMath>x_i</InlineMath>, there is 
+            an associated response measurement <InlineMath>y_i</InlineMath>.
           </p>
           <p className="text-dark-400 text-sm">
             <strong>Goal:</strong> Fit a model that relates the response to the predictors, 
@@ -129,8 +129,8 @@ export default function Section01() {
         <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-xl p-5 border border-blue-500/20">
           <h3 className="text-lg font-semibold text-blue-400 mb-3">Unsupervised Learning</h3>
           <p className="text-dark-300 mb-3">
-            For every observation <Math>{`i = 1, \\ldots, n`}</Math>, we observe measurements <Math>{`x_i`}</Math> but 
-            no associated response <Math>{`y_i`}</Math>.
+            For every observation <InlineMath>{`i = 1, \\ldots, n`}</InlineMath>, we observe measurements <InlineMath>{`x_i`}</InlineMath> but 
+            no associated response <InlineMath>{`y_i`}</InlineMath>.
           </p>
           <p className="text-dark-400 text-sm">
             <strong>Goal:</strong> Understand relationships between variables or between 
@@ -148,7 +148,7 @@ export default function Section01() {
       <p>
         Variables can be characterized as either <em>quantitative</em> or <em>qualitative</em>. 
         Quantitative variables take on numerical values, while qualitative variables take on 
-        values in one of <Math>K</Math> different classes or categories.
+        values in one of <InlineMath>K</InlineMath> different classes or categories.
       </p>
 
       <Definition title="Regression and Classification Problems">
@@ -170,49 +170,49 @@ export default function Section01() {
       <h2>The General Model</h2>
 
       <p>
-        We assume there is some relationship between <Math>Y</Math> and <Math>{`X = (X_1, X_2, \\ldots, X_p)`}</Math>, 
+        We assume there is some relationship between <InlineMath>Y</InlineMath> and <InlineMath>{`X = (X_1, X_2, \\ldots, X_p)`}</InlineMath>, 
         which can be written in the general form:
       </p>
 
       <MathBlock>{`Y = f(X) + \\epsilon`}</MathBlock>
 
       <p>
-        where <Math>f</Math> is some fixed but unknown function of <Math>X</Math>, 
-        and <Math>{`\\epsilon`}</Math> is a random <em>error term</em> which is independent 
-        of <Math>X</Math> and has mean zero.
+        where <InlineMath>f</InlineMath> is some fixed but unknown function of <InlineMath>X</InlineMath>, 
+        and <InlineMath>{`\\epsilon`}</InlineMath> is a random <em>error term</em> which is independent 
+        of <InlineMath>X</InlineMath> and has mean zero.
       </p>
 
       <Callout type="warning">
-        <strong>The Error Term:</strong> The error term <Math>{`\\epsilon`}</Math> captures 
-        measurement errors and other discrepancies. Even if we knew <Math>f</Math> exactly, 
-        we could not perfectly predict <Math>Y</Math> because of this irreducible error.
+        <strong>The Error Term:</strong> The error term <InlineMath>{`\\epsilon`}</InlineMath> captures 
+        measurement errors and other discrepancies. Even if we knew <InlineMath>f</InlineMath> exactly, 
+        we could not perfectly predict <InlineMath>Y</InlineMath> because of this irreducible error.
       </Callout>
 
-      <h2>Why Estimate <Math>f</Math>?</h2>
+      <h2>Why Estimate <InlineMath>f</InlineMath>?</h2>
 
       <p>
-        There are two main reasons we may wish to estimate <Math>f</Math>: prediction and inference.
+        There are two main reasons we may wish to estimate <InlineMath>f</InlineMath>: prediction and inference.
       </p>
 
       <div className="space-y-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-emerald-400 mb-2">Prediction</h3>
           <p className="text-dark-300 mb-2">
-            In many situations, a set of inputs <Math>X</Math> are readily available, but the 
-            output <Math>Y</Math> cannot be easily obtained. We can predict <Math>Y</Math> using:
+            In many situations, a set of inputs <InlineMath>X</InlineMath> are readily available, but the 
+            output <InlineMath>Y</InlineMath> cannot be easily obtained. We can predict <InlineMath>Y</InlineMath> using:
           </p>
           <MathBlock>{`\\hat{Y} = \\hat{f}(X)`}</MathBlock>
           <p className="text-dark-400 text-sm mt-2">
-            Here <Math>{`\\hat{f}`}</Math> is our estimate for <Math>f</Math>, 
-            and <Math>{`\\hat{Y}`}</Math> is the resulting prediction for <Math>Y</Math>.
+            Here <InlineMath>{`\\hat{f}`}</InlineMath> is our estimate for <InlineMath>f</InlineMath>, 
+            and <InlineMath>{`\\hat{Y}`}</InlineMath> is the resulting prediction for <InlineMath>Y</InlineMath>.
           </p>
         </div>
 
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-blue-400 mb-2">Inference</h3>
           <p className="text-dark-300 mb-2">
-            We often want to understand the <em>way</em> that <Math>Y</Math> is affected 
-            as <Math>X</Math> changes. We want to understand the relationship, not just make predictions.
+            We often want to understand the <em>way</em> that <InlineMath>Y</InlineMath> is affected 
+            as <InlineMath>X</InlineMath> changes. We want to understand the relationship, not just make predictions.
           </p>
           <ul className="list-disc list-inside text-dark-400 text-sm mt-2 space-y-1">
             <li>Which predictors are associated with the response?</li>
@@ -246,7 +246,7 @@ export default function Section01() {
       <Callout type="success">
         <strong>Ready to begin?</strong> In the next section, we'll dive deeper into 
         what statistical learning is, exploring the key concepts of reducible and irreducible 
-        error, and understanding how we estimate the unknown function <Math>f</Math>.
+        error, and understanding how we estimate the unknown function <InlineMath>f</InlineMath>.
       </Callout>
 
       <SectionQuiz sectionId={1} questions={section01Quiz} title="Introduction Quiz" />

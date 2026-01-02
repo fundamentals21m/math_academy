@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
-import { MathBlock, Math as MathInline } from '../../components/common/MathBlock';
+import { MathBlock, InlineMath } from '../../components/common/MathBlock';
 
 // Fermat's Last Theorem Explorer
 function FermatLastTheorem() {
@@ -657,7 +657,7 @@ export default function Section05() {
 
       <p className="mb-4">
         In the margin of his copy of Diophantus's <em>Arithmetica</em>, Fermat wrote
-        that the equation <MathInline>x^n + y^n = z^n</MathInline> has no positive integer
+        that the equation <InlineMath>x^n + y^n = z^n</InlineMath> has no positive integer
         solutions when n {">"} 2. His famous claim that he had a "truly marvelous proof"
         has never been believed by mathematicians—the actual proof, by Andrew Wiles in 1995,
         required entirely modern techniques.
@@ -775,7 +775,7 @@ export default function Section05() {
         <div className="bg-dark-800 p-4 rounded-lg">
           <h4 className="font-semibold text-amber-400 mb-2">Fermat Numbers</h4>
           <p className="text-sm text-dark-300">
-            <MathInline>{'F_n = 2^{2^n} + 1'}</MathInline>. Fermat conjectured all are prime.
+            <InlineMath>{'F_n = 2^{2^n} + 1'}</InlineMath>. Fermat conjectured all are prime.
             Wrong! F₅ = 4294967297 = 641 × 6700417, found by Euler.
           </p>
         </div>
@@ -833,14 +833,14 @@ export default function Section05() {
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
             <span>
-              Fermat's Last Theorem—<MathInline>x^n + y^n = z^n</MathInline> has no positive
+              Fermat's Last Theorem—<InlineMath>x^n + y^n = z^n</InlineMath> has no positive
               integer solutions for n {">"} 2—remained unproved for 358 years until Andrew Wiles (1995).
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
             <span>
-              Fermat's Little Theorem (<MathInline>{'a^{p-1} \\equiv 1 \\pmod{p}'}</MathInline>)
+              Fermat's Little Theorem (<InlineMath>{'a^{p-1} \\equiv 1 \\pmod{p}'}</InlineMath>)
               is fundamental to modern cryptography and internet security.
             </span>
           </li>

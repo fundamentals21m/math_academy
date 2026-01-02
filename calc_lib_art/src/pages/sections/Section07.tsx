@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section07Questions } from '../../data/quizzes';
@@ -68,7 +68,7 @@ export default function Section07() {
           <MathBlock>{`v_{\\text{avg}} = \\frac{\\Delta x}{\\Delta t} = \\frac{x(t + \\Delta t) - x(t)}{\\Delta t}`}</MathBlock>
           <p className="text-dark-200 mt-4">
             This is well-defined for any interval, no matter how small (as long as{' '}
-            <MathInline>{'\\Delta t \\neq 0'}</MathInline>).
+            <InlineMath>{'\\Delta t \\neq 0'}</InlineMath>).
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export default function Section07() {
           <MathBlock>{`v = \\lim_{\\Delta t \\to 0} \\frac{x(t + \\Delta t) - x(t)}{\\Delta t}`}</MathBlock>
           <p className="text-dark-200 mt-4">
             The limit of average velocities as the time interval shrinks to zero. This is the
-            derivative <MathInline>{'dx/dt'}</MathInline>.
+            derivative <InlineMath>{'dx/dt'}</InlineMath>.
           </p>
         </div>
       </div>
@@ -98,8 +98,8 @@ export default function Section07() {
 
       <p className="text-dark-200 mb-6">
         Galileo discovered that falling objects follow the law{' '}
-        <MathInline>{'x(t) = \\frac{1}{2}gt^2'}</MathInline>, where{' '}
-        <MathInline>{'g \\approx 9.8'}</MathInline> m/s². Let's find the instantaneous velocity.
+        <InlineMath>{'x(t) = \\frac{1}{2}gt^2'}</InlineMath>, where{' '}
+        <InlineMath>{'g \\approx 9.8'}</InlineMath> m/s². Let's find the instantaneous velocity.
       </p>
 
       <div className="space-y-4 mb-8">
@@ -136,7 +136,7 @@ export default function Section07() {
       </div>
 
       <p className="text-dark-200 mb-6">
-        The instantaneous velocity of a falling object is <MathInline>{'v = gt'}</MathInline>.
+        The instantaneous velocity of a falling object is <InlineMath>{'v = gt'}</InlineMath>.
         After 1 second, it's moving at about 9.8 m/s. After 2 seconds, 19.6 m/s. The velocity
         grows linearly with time—a profound result that Galileo discovered experimentally.
       </p>
@@ -167,9 +167,9 @@ export default function Section07() {
       </CardGrid>
 
       <p className="text-dark-200 my-6">
-        For our falling object: position is <MathInline>{'\\frac{1}{2}gt^2'}</MathInline>,
-        velocity is <MathInline>{'gt'}</MathInline>, and acceleration is just{' '}
-        <MathInline>{'g'}</MathInline>—constant, as Galileo discovered.
+        For our falling object: position is <InlineMath>{'\\frac{1}{2}gt^2'}</InlineMath>,
+        velocity is <InlineMath>{'gt'}</InlineMath>, and acceleration is just{' '}
+        <InlineMath>{'g'}</InlineMath>—constant, as Galileo discovered.
       </p>
 
       {/* The Philosophical Resolution */}

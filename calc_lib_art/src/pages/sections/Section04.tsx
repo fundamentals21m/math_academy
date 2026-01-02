@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section04Questions } from '../../data/quizzes';
@@ -81,8 +81,8 @@ export default function Section04() {
           <MathBlock>{`\\frac{dy}{dx}`}</MathBlock>
           <p className="text-dark-200 mt-4 mb-2">
             Leibniz wrote the derivative as a ratio of infinitesimals: the infinitely small
-            change in <MathInline>{'y'}</MathInline> divided by the infinitely small change
-            in <MathInline>{'x'}</MathInline>.
+            change in <InlineMath>{'y'}</InlineMath> divided by the infinitely small change
+            in <InlineMath>{'x'}</InlineMath>.
           </p>
           <p className="text-sm text-dark-400">
             This notation suggests correctly that derivatives behave like fractions—you can
@@ -96,7 +96,7 @@ export default function Section04() {
           <p className="text-dark-200 mt-4 mb-2">
             The integral sign ∫ is an elongated S, for "summa" (Latin for sum). It represents
             the sum of infinitely many infinitesimal rectangles of height{' '}
-            <MathInline>{'y'}</MathInline> and width <MathInline>{'dx'}</MathInline>.
+            <InlineMath>{'y'}</InlineMath> and width <InlineMath>{'dx'}</InlineMath>.
           </p>
           <p className="text-sm text-dark-400">
             The notation visually captures the idea: we're adding up (∫) little pieces (y·dx).
@@ -111,7 +111,7 @@ export default function Section04() {
         </p>
         <MathBlock>{`\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}`}</MathBlock>
         <p className="mt-2">
-          The <MathInline>{'du'}</MathInline>'s "cancel"—not rigorously true, but a powerful
+          The <InlineMath>{'du'}</InlineMath>'s "cancel"—not rigorously true, but a powerful
           mnemonic that usually gives the right answer.
         </p>
       </Callout>
@@ -134,8 +134,8 @@ export default function Section04() {
           <tbody className="text-dark-300">
             <tr className="border-b border-dark-700">
               <td className="p-3 font-semibold">Notation</td>
-              <td className="p-3"><MathInline>{'\\dot{x}, \\ddot{x}'}</MathInline></td>
-              <td className="p-3"><MathInline>{'\\frac{dx}{dt}, \\frac{d^2x}{dt^2}'}</MathInline></td>
+              <td className="p-3"><InlineMath>{'\\dot{x}, \\ddot{x}'}</InlineMath></td>
+              <td className="p-3"><InlineMath>{'\\frac{dx}{dt}, \\frac{d^2x}{dt^2}'}</InlineMath></td>
             </tr>
             <tr className="border-b border-dark-700">
               <td className="p-3 font-semibold">Viewpoint</td>

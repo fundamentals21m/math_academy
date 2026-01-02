@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { EquationBalanceVisualizer } from '@/components/visualizations';
 
 export default function Section04() {
@@ -40,15 +40,15 @@ export default function Section04() {
           the other. Together they have 23 years of experience. How long has each worked there?
         </p>
         <div className="mt-4 space-y-2">
-          <p><strong className="text-primary-400">Step 1:</strong> Let <Math>x</Math> = years the newer repairman has worked</p>
-          <p>Then <Math>{`x + 5`}</Math> = years the senior repairman has worked</p>
+          <p><strong className="text-primary-400">Step 1:</strong> Let <InlineMath>x</InlineMath> = years the newer repairman has worked</p>
+          <p>Then <InlineMath>{`x + 5`}</InlineMath> = years the senior repairman has worked</p>
           <p><strong className="text-primary-400">Step 2:</strong> Total experience equation:</p>
           <MathBlock>{`x + (x + 5) = 23`}</MathBlock>
           <p><strong className="text-primary-400">Step 3:</strong> Solve:</p>
           <MathBlock>{`2x + 5 = 23`}</MathBlock>
           <MathBlock>{`2x = 18`}</MathBlock>
           <MathBlock>{`x = 9`}</MathBlock>
-          <p><strong className="text-primary-400">Step 4:</strong> Check: <Math>{`9 + 14 = 23`}</Math> ✓</p>
+          <p><strong className="text-primary-400">Step 4:</strong> Check: <InlineMath>{`9 + 14 = 23`}</InlineMath> ✓</p>
           <p className="text-emerald-400 mt-2">
             The newer repairman has 9 years; the senior has 14 years.
           </p>
@@ -64,12 +64,12 @@ export default function Section04() {
           some Canadian dollars and receive $123 US, how many Canadian dollars did you exchange?
         </p>
         <div className="mt-4 space-y-2">
-          <p><strong className="text-primary-400">Step 1:</strong> Let <Math>x</Math> = number of Canadian dollars exchanged</p>
+          <p><strong className="text-primary-400">Step 1:</strong> Let <InlineMath>x</InlineMath> = number of Canadian dollars exchanged</p>
           <p><strong className="text-primary-400">Step 2:</strong> Exchange rate equation:</p>
           <MathBlock>{`0.82x = 123`}</MathBlock>
           <p><strong className="text-primary-400">Step 3:</strong> Solve:</p>
           <MathBlock>{`x = \\frac{123}{0.82} = 150`}</MathBlock>
-          <p><strong className="text-primary-400">Step 4:</strong> Check: <Math>{`150 \\times 0.82 = 123`}</Math> ✓</p>
+          <p><strong className="text-primary-400">Step 4:</strong> Check: <InlineMath>{`150 \\times 0.82 = 123`}</InlineMath> ✓</p>
           <p className="text-emerald-400 mt-2">
             You exchanged 150 Canadian dollars.
           </p>
@@ -83,7 +83,7 @@ export default function Section04() {
       <Callout type="info">
         <strong>The Fundamental Formula:</strong>
         <MathBlock>{`\\text{Distance} = \\text{Rate} \\times \\text{Time}`}</MathBlock>
-        Or equivalently: <Math>{`d = rt`}</Math>
+        Or equivalently: <InlineMath>{`d = rt`}</InlineMath>
       </Callout>
 
       <h3>Example 3: Average Speed</h3>
@@ -96,13 +96,13 @@ export default function Section04() {
         </p>
         <div className="mt-4 space-y-2">
           <p><strong className="text-primary-400">Analysis:</strong></p>
-          <p>Time going: <Math>{`\\frac{180}{60} = 3`}</Math> hours</p>
-          <p>Time returning: <Math>{`\\frac{180}{45} = 4`}</Math> hours</p>
-          <p>Total distance: <Math>{`180 + 180 = 360`}</Math> miles</p>
-          <p>Total time: <Math>{`3 + 4 = 7`}</Math> hours</p>
+          <p>Time going: <InlineMath>{`\\frac{180}{60} = 3`}</InlineMath> hours</p>
+          <p>Time returning: <InlineMath>{`\\frac{180}{45} = 4`}</InlineMath> hours</p>
+          <p>Total distance: <InlineMath>{`180 + 180 = 360`}</InlineMath> miles</p>
+          <p>Total time: <InlineMath>{`3 + 4 = 7`}</InlineMath> hours</p>
           <MathBlock>{`\\text{Average speed} = \\frac{360}{7} \\approx 51.4 \\text{ mph}`}</MathBlock>
           <p className="text-rose-400 mt-2">
-            <strong>Note:</strong> The average speed is NOT <Math>{`\\frac{60 + 45}{2} = 52.5`}</Math> mph!
+            <strong>Note:</strong> The average speed is NOT <InlineMath>{`\\frac{60 + 45}{2} = 52.5`}</InlineMath> mph!
             Average speed is total distance divided by total time.
           </p>
         </div>
@@ -124,10 +124,10 @@ export default function Section04() {
           must be added to obtain a 50% solution?
         </p>
         <div className="mt-4 space-y-2">
-          <p><strong className="text-primary-400">Step 1:</strong> Let <Math>x</Math> = quarts of pure antifreeze to add</p>
+          <p><strong className="text-primary-400">Step 1:</strong> Let <InlineMath>x</InlineMath> = quarts of pure antifreeze to add</p>
           <p><strong className="text-primary-400">Step 2:</strong> Set up the equation:</p>
           <p className="text-dark-300">
-            Initial antifreeze: <Math>{`0.20 \\times 12 = 2.4`}</Math> quarts
+            Initial antifreeze: <InlineMath>{`0.20 \\times 12 = 2.4`}</InlineMath> quarts
           </p>
           <p className="text-dark-300">
             After adding x quarts of pure antifreeze:
@@ -138,7 +138,7 @@ export default function Section04() {
           <MathBlock>{`2.4 + x = 6 + 0.5x`}</MathBlock>
           <MathBlock>{`0.5x = 3.6`}</MathBlock>
           <MathBlock>{`x = 7.2`}</MathBlock>
-          <p><strong className="text-primary-400">Step 4:</strong> Check: <Math>{`\\frac{2.4 + 7.2}{12 + 7.2} = \\frac{9.6}{19.2} = 0.50`}</Math> ✓</p>
+          <p><strong className="text-primary-400">Step 4:</strong> Check: <InlineMath>{`\\frac{2.4 + 7.2}{12 + 7.2} = \\frac{9.6}{19.2} = 0.50`}</InlineMath> ✓</p>
           <p className="text-emerald-400 mt-2">
             Add 7.2 quarts of pure antifreeze.
           </p>
@@ -165,7 +165,7 @@ export default function Section04() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: When Are They Equal?</p>
         <p>At what temperature do Celsius and Fahrenheit readings coincide?</p>
-        <p className="mt-2">Set <Math>{`F = C`}</Math>:</p>
+        <p className="mt-2">Set <InlineMath>{`F = C`}</InlineMath>:</p>
         <MathBlock>{`C = \\frac{9}{5}C + 32`}</MathBlock>
         <MathBlock>{`C - \\frac{9}{5}C = 32`}</MathBlock>
         <MathBlock>{`-\\frac{4}{5}C = 32`}</MathBlock>

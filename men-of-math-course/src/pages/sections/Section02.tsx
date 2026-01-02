@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
-import { MathBlock, Math as MathInline } from '../../components/common/MathBlock';
+import { MathBlock, InlineMath } from '../../components/common/MathBlock';
 
 // Method of Exhaustion - Circle Area Visualization
 function MethodOfExhaustion() {
@@ -613,9 +613,9 @@ export default function Section02() {
       </MathBlock>
 
       <p className="my-4">
-        In other words, no matter how small <MathInline>a</MathInline> is compared to{' '}
-        <MathInline>b</MathInline>, you can always add enough copies of{' '}
-        <MathInline>a</MathInline> to exceed <MathInline>b</MathInline>. This rules
+        In other words, no matter how small <InlineMath>a</InlineMath> is compared to{' '}
+        <InlineMath>b</InlineMath>, you can always add enough copies of{' '}
+        <InlineMath>a</InlineMath> to exceed <InlineMath>b</InlineMath>. This rules
         out infinitesimals—quantities smaller than any fraction of a given magnitude.
       </p>
 

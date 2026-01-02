@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
-import { MathBlock, Math as MathInline } from '../../components/common/MathBlock';
+import { MathBlock, InlineMath } from '../../components/common/MathBlock';
 
 // Binary Number System Demo
 function BinaryDemo() {
@@ -839,8 +839,8 @@ export default function Section08() {
       <p className="mb-4">
         Leibniz developed calculus independently of Newton in the 1670s. While Newton
         kept his methods secret, Leibniz published in 1684 and 1686, introducing the
-        notation we use today: <MathInline>dy/dx</MathInline> for derivatives and{' '}
-        <MathInline>\int</MathInline> for integrals.
+        notation we use today: <InlineMath>dy/dx</InlineMath> for derivatives and{' '}
+        <InlineMath>\int</InlineMath> for integrals.
       </p>
 
       <NotationComparison />

@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { VennDiagramVisualizer } from '@/components/visualizations';
 
 export default function Section11() {
@@ -24,23 +24,23 @@ export default function Section11() {
 
       <p>
         A <strong>set</strong> is any well-defined collection of objects or concepts, called
-        the <em>members</em> (or elements or points) of the set. A set <Math>S</Math> can be
-        described by listing its members in braces <Math>{`\\{ \\}`}</Math>.
+        the <em>members</em> (or elements or points) of the set. A set <InlineMath>S</InlineMath> can be
+        described by listing its members in braces <InlineMath>{`\\{ \\}`}</InlineMath>.
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Examples of Sets</p>
         <ul className="list-disc list-inside mt-2 space-y-1 text-dark-300">
-          <li><Math>{`\\{1, 2, 3, 4, 5, 6\\}`}</Math> — the first six positive integers</li>
-          <li><Math>{`\\{a, e, i, o, u\\}`}</Math> — the vowels in the English alphabet</li>
-          <li><Math>{`\\{h, t\\}`}</Math> — possible outcomes when tossing a coin (h = heads, t = tails)</li>
+          <li><InlineMath>{`\\{1, 2, 3, 4, 5, 6\\}`}</InlineMath> — the first six positive integers</li>
+          <li><InlineMath>{`\\{a, e, i, o, u\\}`}</InlineMath> — the vowels in the English alphabet</li>
+          <li><InlineMath>{`\\{h, t\\}`}</InlineMath> — possible outcomes when tossing a coin (h = heads, t = tails)</li>
         </ul>
       </div>
 
       <Callout type="info">
         <strong>Order Doesn't Matter:</strong> The order in which members of a set
-        are listed is immaterial. Thus <Math>{`\\{1, 2, 3\\}`}</Math> is the same as{' '}
-        <Math>{`\\{2, 1, 3\\}`}</Math>, and <Math>{`\\{h, t\\}`}</Math> equals <Math>{`\\{t, h\\}`}</Math>.
+        are listed is immaterial. Thus <InlineMath>{`\\{1, 2, 3\\}`}</InlineMath> is the same as{' '}
+        <InlineMath>{`\\{2, 1, 3\\}`}</InlineMath>, and <InlineMath>{`\\{h, t\\}`}</InlineMath> equals <InlineMath>{`\\{t, h\\}`}</InlineMath>.
       </Callout>
 
       <h3>Set-Builder Notation</h3>
@@ -52,16 +52,16 @@ export default function Section11() {
       <MathBlock>{`\\{x : \\text{property or properties of } x\\}`}</MathBlock>
 
       <p>
-        Here <Math>x</Math> represents a member of the set, and after the colon comes
+        Here <InlineMath>x</InlineMath> represents a member of the set, and after the colon comes
         the exact property that characterizes membership.
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: Set-Builder Notation</p>
         <ul className="list-disc list-inside mt-2 space-y-2 text-dark-300">
-          <li><Math>{`\\{n : n \\text{ is an integer}, 1 \\leq n \\leq 100\\}`}</Math> — all integers from 1 to 100</li>
-          <li><Math>{`\\{x : x^2 = 2\\}`}</Math> — the set <Math>{`\\{\\sqrt{2}, -\\sqrt{2}\\}`}</Math></li>
-          <li><Math>{`\\{y : y \\text{ is an integer}, 0 \\leq y \\leq 4\\}`}</Math> — equivalent to <Math>{`\\{0, 1, 2, 3, 4\\}`}</Math></li>
+          <li><InlineMath>{`\\{n : n \\text{ is an integer}, 1 \\leq n \\leq 100\\}`}</InlineMath> — all integers from 1 to 100</li>
+          <li><InlineMath>{`\\{x : x^2 = 2\\}`}</InlineMath> — the set <InlineMath>{`\\{\\sqrt{2}, -\\sqrt{2}\\}`}</InlineMath></li>
+          <li><InlineMath>{`\\{y : y \\text{ is an integer}, 0 \\leq y \\leq 4\\}`}</InlineMath> — equivalent to <InlineMath>{`\\{0, 1, 2, 3, 4\\}`}</InlineMath></li>
         </ul>
       </div>
 
@@ -78,7 +78,7 @@ export default function Section11() {
           penny came up heads and the dime came up tails.
         </p>
         <p className="mt-2 text-emerald-400">
-          The set of all possible outcomes: <Math>{`\\{(h,h), (h,t), (t,h), (t,t)\\}`}</Math>
+          The set of all possible outcomes: <InlineMath>{`\\{(h,h), (h,t), (t,h), (t,t)\\}`}</InlineMath>
         </p>
       </div>
 
@@ -97,14 +97,14 @@ export default function Section11() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
-          <p className="text-primary-400 font-semibold">Union: <Math>{`A \\cup B`}</Math></p>
+          <p className="text-primary-400 font-semibold">Union: <InlineMath>{`A \\cup B`}</InlineMath></p>
           <p className="mt-2 text-dark-300">
             The set of all elements belonging to <em>either</em> A or B (or both).
             "A union B" combines everything from both sets.
           </p>
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
-          <p className="text-primary-400 font-semibold">Intersection: <Math>{`A \\cap B`}</Math></p>
+          <p className="text-primary-400 font-semibold">Intersection: <InlineMath>{`A \\cap B`}</InlineMath></p>
           <p className="mt-2 text-dark-300">
             The set of elements belonging to <em>both</em> A and B.
             "A intersect B" contains only what's common to both sets.
@@ -115,14 +115,14 @@ export default function Section11() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: Union and Intersection</p>
         <p className="mt-2">
-          Let <Math>{`A = \\{1, 2, 3\\}`}</Math>, <Math>{`B = \\{2, 3, 5\\}`}</Math>, and <Math>{`C = \\{1, 7\\}`}</Math>. Then:
+          Let <InlineMath>{`A = \\{1, 2, 3\\}`}</InlineMath>, <InlineMath>{`B = \\{2, 3, 5\\}`}</InlineMath>, and <InlineMath>{`C = \\{1, 7\\}`}</InlineMath>. Then:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1 text-dark-300">
-          <li><Math>{`A \\cup B = \\{1, 2, 3, 5\\}`}</Math></li>
-          <li><Math>{`A \\cup C = \\{1, 2, 3, 7\\}`}</Math></li>
-          <li><Math>{`A \\cap B = \\{2, 3\\}`}</Math></li>
-          <li><Math>{`A \\cap C = \\{1\\}`}</Math></li>
-          <li><Math>{`B \\cap C = \\emptyset`}</Math> (the empty set—no common elements)</li>
+          <li><InlineMath>{`A \\cup B = \\{1, 2, 3, 5\\}`}</InlineMath></li>
+          <li><InlineMath>{`A \\cup C = \\{1, 2, 3, 7\\}`}</InlineMath></li>
+          <li><InlineMath>{`A \\cap B = \\{2, 3\\}`}</InlineMath></li>
+          <li><InlineMath>{`A \\cap C = \\{1\\}`}</InlineMath></li>
+          <li><InlineMath>{`B \\cap C = \\emptyset`}</InlineMath> (the empty set—no common elements)</li>
         </ul>
       </div>
 
@@ -131,26 +131,26 @@ export default function Section11() {
       <h3>Special Sets and Notation</h3>
 
       <p>
-        The <strong>empty set</strong>, denoted <Math>{`\\emptyset`}</Math>, contains no elements.
+        The <strong>empty set</strong>, denoted <InlineMath>{`\\emptyset`}</InlineMath>, contains no elements.
         Two sets are <strong>disjoint</strong> if they have no elements in common
         (their intersection is the empty set).
       </p>
 
       <p>
-        The notation <Math>{`x \\in A`}</Math> means "x is a member of A," while{' '}
-        <Math>{`x \\notin B`}</Math> means "x is not a member of B."
+        The notation <InlineMath>{`x \\in A`}</InlineMath> means "x is a member of A," while{' '}
+        <InlineMath>{`x \\notin B`}</InlineMath> means "x is not a member of B."
       </p>
 
       <p>
-        Set <Math>A</Math> is a <strong>subset</strong> of <Math>B</Math>, written{' '}
-        <Math>{`A \\subset B`}</Math>, if every member of <Math>A</Math> also belongs to <Math>B</Math>.
+        Set <InlineMath>A</InlineMath> is a <strong>subset</strong> of <InlineMath>B</InlineMath>, written{' '}
+        <InlineMath>{`A \\subset B`}</InlineMath>, if every member of <InlineMath>A</InlineMath> also belongs to <InlineMath>B</InlineMath>.
       </p>
 
       <Callout type="info">
-        <strong>Complement:</strong> Given a "universal set" or space <Math>S</Math>, the
-        complement of A, denoted <Math>{`A^c`}</Math>, is the set of all members of S
-        that are <em>not</em> in A. For any set A: <Math>{`A \\cap A^c = \\emptyset`}</Math> and{' '}
-        <Math>{`A \\cup A^c = S`}</Math>.
+        <strong>Complement:</strong> Given a "universal set" or space <InlineMath>S</InlineMath>, the
+        complement of A, denoted <InlineMath>{`A^c`}</InlineMath>, is the set of all members of S
+        that are <em>not</em> in A. For any set A: <InlineMath>{`A \\cap A^c = \\emptyset`}</InlineMath> and{' '}
+        <InlineMath>{`A \\cup A^c = S`}</InlineMath>.
       </Callout>
 
       <h2>11.2 Counting</h2>
@@ -162,8 +162,8 @@ export default function Section11() {
       </p>
 
       <p>
-        For a set <Math>A</Math> with finitely many members, <Math>{`n(A)`}</Math> denotes
-        the number of members of <Math>A</Math>.
+        For a set <InlineMath>A</InlineMath> with finitely many members, <InlineMath>{`n(A)`}</InlineMath> denotes
+        the number of members of <InlineMath>A</InlineMath>.
       </p>
 
       <h3>The Multiplication Principle</h3>
@@ -215,8 +215,8 @@ export default function Section11() {
       </div>
 
       <Callout type="success">
-        <strong>Factorial Notation:</strong> The number of permutations of <Math>k</Math> distinct
-        objects is <Math>{`k! = 1 \\times 2 \\times 3 \\times \\cdots \\times k`}</Math>,
+        <strong>Factorial Notation:</strong> The number of permutations of <InlineMath>k</InlineMath> distinct
+        objects is <InlineMath>{`k! = 1 \\times 2 \\times 3 \\times \\cdots \\times k`}</InlineMath>,
         pronounced "k factorial." So 5! = 120, and 3! = 6.
       </Callout>
 
@@ -249,21 +249,21 @@ export default function Section11() {
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-primary-400 font-semibold">Permutations</p>
           <p className="mt-2 text-dark-300">
-            Ordered selections of <Math>k</Math> items from <Math>p</Math> objects:
+            Ordered selections of <InlineMath>k</InlineMath> items from <InlineMath>p</InlineMath> objects:
           </p>
           <MathBlock>{`p(p-1)(p-2)\\cdots(p-k+1)`}</MathBlock>
           <p className="mt-2 text-dark-400 text-sm">
-            Can also be written as <Math>{`\\frac{p!}{(p-k)!}`}</Math>
+            Can also be written as <InlineMath>{`\\frac{p!}{(p-k)!}`}</InlineMath>
           </p>
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-primary-400 font-semibold">Combinations</p>
           <p className="mt-2 text-dark-300">
-            Unordered selections of <Math>k</Math> items from <Math>p</Math> objects:
+            Unordered selections of <InlineMath>k</InlineMath> items from <InlineMath>p</InlineMath> objects:
           </p>
           <MathBlock>{`\\frac{p(p-1)(p-2)\\cdots(p-k+1)}{k!}`}</MathBlock>
           <p className="mt-2 text-dark-400 text-sm">
-            Often written as <Math>{`\\binom{p}{k}`}</Math> or "p choose k"
+            Often written as <InlineMath>{`\\binom{p}{k}`}</InlineMath> or "p choose k"
           </p>
         </div>
       </div>
@@ -282,12 +282,12 @@ export default function Section11() {
       <Callout type="success">
         <strong>Chapter Summary:</strong> Sets are collections of objects, described
         by listing elements or specifying properties. Key operations include union
-        (<Math>{`\\cup`}</Math>) and intersection (<Math>{`\\cap`}</Math>).
+        (<InlineMath>{`\\cup`}</InlineMath>) and intersection (<InlineMath>{`\\cap`}</InlineMath>).
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li><strong>Multiplication principle:</strong> Fill k slots with m₁, m₂, ..., mₖ choices gives m₁ × m₂ × ... × mₖ outcomes</li>
-          <li><strong>Permutations:</strong> Ordered arrangements of k from n objects: <Math>{`n!/(n-k)!`}</Math></li>
-          <li><strong>Combinations:</strong> Unordered selections of k from n objects: <Math>{`n!/(k!(n-k)!)`}</Math></li>
-          <li><strong>Factorial:</strong> <Math>{`k! = 1 \\times 2 \\times \\cdots \\times k`}</Math></li>
+          <li><strong>Permutations:</strong> Ordered arrangements of k from n objects: <InlineMath>{`n!/(n-k)!`}</InlineMath></li>
+          <li><strong>Combinations:</strong> Unordered selections of k from n objects: <InlineMath>{`n!/(k!(n-k)!)`}</InlineMath></li>
+          <li><strong>Factorial:</strong> <InlineMath>{`k! = 1 \\times 2 \\times \\cdots \\times k`}</InlineMath></li>
         </ul>
       </Callout>
     </LessonLayout>

@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Definition } from '../../components/common/ContentBlocks';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
@@ -30,19 +30,19 @@ export default function Section08() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">The Formal Definition</h2>
 
       <Definition title="The Derivative">
-        The derivative of a function <MathInline>{'f'}</MathInline> at a point{' '}
-        <MathInline>{'x = a'}</MathInline> is defined as:
+        The derivative of a function <InlineMath>{'f'}</InlineMath> at a point{' '}
+        <InlineMath>{'x = a'}</InlineMath> is defined as:
         <MathBlock>{`f'(a) = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}`}</MathBlock>
         provided this limit exists. We also write{' '}
-        <MathInline>{'\\frac{df}{dx}'}</MathInline> or{' '}
-        <MathInline>{'\\frac{d}{dx}f(x)'}</MathInline> for the derivative.
+        <InlineMath>{'\\frac{df}{dx}'}</InlineMath> or{' '}
+        <InlineMath>{'\\frac{d}{dx}f(x)'}</InlineMath> for the derivative.
       </Definition>
 
       <p className="text-dark-200 my-6">
-        The expression <MathInline>{'\\frac{f(a+h) - f(a)}{h}'}</MathInline> is called the{' '}
+        The expression <InlineMath>{'\\frac{f(a+h) - f(a)}{h}'}</InlineMath> is called the{' '}
         <strong>difference quotient</strong>. It measures the average rate of change of{' '}
-        <MathInline>{'f'}</MathInline> over the interval from <MathInline>{'a'}</MathInline>{' '}
-        to <MathInline>{'a+h'}</MathInline>. The derivative is what this rate "settles down to"
+        <InlineMath>{'f'}</InlineMath> over the interval from <InlineMath>{'a'}</InlineMath>{' '}
+        to <InlineMath>{'a+h'}</InlineMath>. The derivative is what this rate "settles down to"
         as the interval shrinks.
       </p>
 
@@ -53,22 +53,22 @@ export default function Section08() {
         <Card>
           <CardHeader title="Geometric" />
           <p className="text-sm text-dark-300">
-            Slope of the tangent line to the graph of <MathInline>{'f'}</MathInline> at the
-            point <MathInline>{'(a, f(a))'}</MathInline>.
+            Slope of the tangent line to the graph of <InlineMath>{'f'}</InlineMath> at the
+            point <InlineMath>{'(a, f(a))'}</InlineMath>.
           </p>
         </Card>
         <Card>
           <CardHeader title="Physical" />
           <p className="text-sm text-dark-300">
-            Instantaneous rate of change. If <MathInline>{'f(t)'}</MathInline> is position,
-            then <MathInline>{'f\'(t)'}</MathInline> is velocity.
+            Instantaneous rate of change. If <InlineMath>{'f(t)'}</InlineMath> is position,
+            then <InlineMath>{'f\'(t)'}</InlineMath> is velocity.
           </p>
         </Card>
         <Card>
           <CardHeader title="Analytical" />
           <p className="text-sm text-dark-300">
-            Best linear approximation: near <MathInline>{'a'}</MathInline>, we have{' '}
-            <MathInline>{'f(x) \\approx f(a) + f\'(a)(x-a)'}</MathInline>.
+            Best linear approximation: near <InlineMath>{'a'}</InlineMath>, we have{' '}
+            <InlineMath>{'f(x) \\approx f(a) + f\'(a)(x-a)'}</InlineMath>.
           </p>
         </Card>
         <Card>
@@ -88,17 +88,17 @@ export default function Section08() {
 
       <p className="text-dark-200 mb-6">
         Perhaps the most powerful interpretation: the derivative measures <strong>sensitivity</strong>.
-        If <MathInline>{'f\'(a) = 3'}</MathInline>, then near <MathInline>{'x = a'}</MathInline>,
-        a small change <MathInline>{'\\Delta x'}</MathInline> in the input produces approximately{' '}
-        <MathInline>{'3 \\cdot \\Delta x'}</MathInline> change in the output.
+        If <InlineMath>{'f\'(a) = 3'}</InlineMath>, then near <InlineMath>{'x = a'}</InlineMath>,
+        a small change <InlineMath>{'\\Delta x'}</InlineMath> in the input produces approximately{' '}
+        <InlineMath>{'3 \\cdot \\Delta x'}</InlineMath> change in the output.
       </p>
 
       <div className="bg-dark-800 rounded-xl p-6 mb-6">
         <h4 className="text-lg font-semibold text-primary-300 mb-4">Example: Temperature Sensitivity</h4>
         <p className="text-dark-200 mb-4">
-          Suppose <MathInline>{'C(t)'}</MathInline> gives the cost of heating a building when
-          the outside temperature is <MathInline>{'t'}</MathInline> degrees. If{' '}
-          <MathInline>{'C\'(20) = -15'}</MathInline> dollars per degree, this means:
+          Suppose <InlineMath>{'C(t)'}</InlineMath> gives the cost of heating a building when
+          the outside temperature is <InlineMath>{'t'}</InlineMath> degrees. If{' '}
+          <InlineMath>{'C\'(20) = -15'}</InlineMath> dollars per degree, this means:
         </p>
         <ul className="space-y-2 text-dark-300">
           <li className="flex items-start gap-2">
@@ -128,7 +128,7 @@ export default function Section08() {
         <div className="bg-gradient-to-br from-red-900/30 to-red-800/10 border border-red-700/30 rounded-xl p-6">
           <h4 className="text-lg font-semibold text-red-300 mb-3">Corners</h4>
           <p className="text-dark-200 text-sm mb-2">
-            Example: <MathInline>{'f(x) = |x|'}</MathInline> at <MathInline>{'x = 0'}</MathInline>
+            Example: <InlineMath>{'f(x) = |x|'}</InlineMath> at <InlineMath>{'x = 0'}</InlineMath>
           </p>
           <p className="text-dark-400 text-xs">
             The left and right slopes don't match. The tangent would have to point two
@@ -139,7 +139,7 @@ export default function Section08() {
         <div className="bg-gradient-to-br from-amber-900/30 to-amber-800/10 border border-amber-700/30 rounded-xl p-6">
           <h4 className="text-lg font-semibold text-amber-300 mb-3">Cusps</h4>
           <p className="text-dark-200 text-sm mb-2">
-            Example: <MathInline>{'f(x) = x^{2/3}'}</MathInline> at <MathInline>{'x = 0'}</MathInline>
+            Example: <InlineMath>{'f(x) = x^{2/3}'}</InlineMath> at <InlineMath>{'x = 0'}</InlineMath>
           </p>
           <p className="text-dark-400 text-xs">
             The curve comes to a sharp point where the tangent would be vertical.
@@ -161,7 +161,7 @@ export default function Section08() {
         <p>
           <strong>Differentiable ⇒ Continuous:</strong> If a function has a derivative at a
           point, it must be continuous there. But the converse is false—continuous functions
-          can fail to be differentiable (like <MathInline>{'|x|'}</MathInline> at 0).
+          can fail to be differentiable (like <InlineMath>{'|x|'}</InlineMath> at 0).
         </p>
       </Callout>
 
@@ -194,21 +194,21 @@ export default function Section08() {
       </div>
 
       <p className="text-dark-200 mb-6">
-        In physics, if position is <MathInline>{'x(t)'}</MathInline>:
+        In physics, if position is <InlineMath>{'x(t)'}</InlineMath>:
       </p>
 
       <ul className="space-y-2 text-dark-200 mb-6">
         <li className="flex items-start gap-2">
           <span className="text-emerald-400">•</span>
-          <strong>Velocity</strong> <MathInline>{'v = x\''}</MathInline> — how fast position changes
+          <strong>Velocity</strong> <InlineMath>{'v = x\''}</InlineMath> — how fast position changes
         </li>
         <li className="flex items-start gap-2">
           <span className="text-emerald-400">•</span>
-          <strong>Acceleration</strong> <MathInline>{'a = x\'\''}</MathInline> — how fast velocity changes
+          <strong>Acceleration</strong> <InlineMath>{'a = x\'\''}</InlineMath> — how fast velocity changes
         </li>
         <li className="flex items-start gap-2">
           <span className="text-emerald-400">•</span>
-          <strong>Jerk</strong> <MathInline>{'j = x\'\'\''}</MathInline> — how fast acceleration changes (important for ride comfort!)
+          <strong>Jerk</strong> <InlineMath>{'j = x\'\'\''}</InlineMath> — how fast acceleration changes (important for ride comfort!)
         </li>
       </ul>
 
@@ -243,7 +243,7 @@ export default function Section08() {
 
       <Callout type="success">
         <p>
-          <strong>Inflection Points:</strong> Where <MathInline>{'f\'\''}</MathInline> changes
+          <strong>Inflection Points:</strong> Where <InlineMath>{'f\'\''}</InlineMath> changes
           sign, the curve changes from concave up to concave down (or vice versa). These are
           inflection points—moments where the character of the change itself changes.
         </p>
@@ -258,8 +258,8 @@ export default function Section08() {
           <div>
             <p className="font-semibold">Marginal Cost</p>
             <p className="text-sm text-dark-400">
-              <MathInline>{'C\'(x)'}</MathInline> = cost of producing one more unit when you're
-              already making <MathInline>{'x'}</MathInline> units.
+              <InlineMath>{'C\'(x)'}</InlineMath> = cost of producing one more unit when you're
+              already making <InlineMath>{'x'}</InlineMath> units.
             </p>
           </div>
         </div>
@@ -268,7 +268,7 @@ export default function Section08() {
           <div>
             <p className="font-semibold">Growth Rate</p>
             <p className="text-sm text-dark-400">
-              <MathInline>{'P\'(t)/P(t)'}</MathInline> = relative growth rate of a population
+              <InlineMath>{'P\'(t)/P(t)'}</InlineMath> = relative growth rate of a population
               (percentage change per unit time).
             </p>
           </div>
@@ -278,7 +278,7 @@ export default function Section08() {
           <div>
             <p className="font-semibold">Electrical Current</p>
             <p className="text-sm text-dark-400">
-              <MathInline>{'I = dQ/dt'}</MathInline> = rate of flow of electric charge.
+              <InlineMath>{'I = dQ/dt'}</InlineMath> = rate of flow of electric charge.
             </p>
           </div>
         </div>
@@ -287,7 +287,7 @@ export default function Section08() {
           <div>
             <p className="font-semibold">Reaction Rates</p>
             <p className="text-sm text-dark-400">
-              <MathInline>{'d[A]/dt'}</MathInline> = rate of change of concentration in a
+              <InlineMath>{'d[A]/dt'}</InlineMath> = rate of change of concentration in a
               chemical reaction.
             </p>
           </div>

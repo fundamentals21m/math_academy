@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section09Quiz } from '@/data/quizzes';
 
@@ -17,7 +17,7 @@ export default function Section09() {
 
       <Definition title="Limit of a Function">
         <p>
-          We say <Math>{"\\lim_{x \\to c} f(x) = L"}</Math> if:
+          We say <InlineMath>{"\\lim_{x \\to c} f(x) = L"}</InlineMath> if:
         </p>
         <MathBlock>
           {`\\forall \\varepsilon > 0, \\exists \\delta > 0: 0 < |x - c| < \\delta \\Rightarrow |f(x) - L| < \\varepsilon`}
@@ -25,25 +25,25 @@ export default function Section09() {
       </Definition>
 
       <Callout type="info">
-        <strong>Key Difference from Sequences:</strong> We require <Math>0 &lt; |x - c|</Math>,
-        meaning we never evaluate at <Math>c</Math> itself. The limit depends only on behavior near <Math>c</Math>.
+        <strong>Key Difference from Sequences:</strong> We require <InlineMath>0 &lt; |x - c|</InlineMath>,
+        meaning we never evaluate at <InlineMath>c</InlineMath> itself. The limit depends only on behavior near <InlineMath>c</InlineMath>.
       </Callout>
 
       <Theorem
         title="Sequential Characterization"
         proof={
           <>
-            <p className="mb-3"><strong>(⇒)</strong> Suppose <Math>{`\\lim_{x \\to c} f(x) = L`}</Math>. Let <Math>{`x_n \\to c`}</Math> with <Math>{`x_n \\neq c`}</Math>.</p>
-            <p className="mb-3">Given <Math>{`\\varepsilon > 0`}</Math>, <Math>{`\\exists \\delta: 0 < |x - c| < \\delta \\Rightarrow |f(x) - L| < \\varepsilon`}</Math>.</p>
-            <p className="mb-3">Since <Math>{`x_n \\to c`}</Math>, <Math>{`\\exists N: n > N \\Rightarrow |x_n - c| < \\delta`}</Math>. Also <Math>{`x_n \\neq c`}</Math>, so <Math>{`|f(x_n) - L| < \\varepsilon`}</Math> for <Math>{`n > N`}</Math>.</p>
-            <p className="mb-3"><strong>(⇐)</strong> Contrapositive: if limit <Math>{`\\neq L`}</Math>, <Math>{`\\exists \\varepsilon > 0`}</Math> such that for all <Math>{`\\delta`}</Math>, <Math>{`\\exists x`}</Math> with <Math>{`0 < |x - c| < \\delta`}</Math> but <Math>{`|f(x) - L| \\geq \\varepsilon`}</Math>.</p>
-            <p className="mb-3">Taking <Math>{`\\delta = 1/n`}</Math>, get sequence <Math>{`x_n \\to c`}</Math> but <Math>{`f(x_n) \\not\\to L`}</Math>. Contradiction!</p>
+            <p className="mb-3"><strong>(⇒)</strong> Suppose <InlineMath>{`\\lim_{x \\to c} f(x) = L`}</InlineMath>. Let <InlineMath>{`x_n \\to c`}</InlineMath> with <InlineMath>{`x_n \\neq c`}</InlineMath>.</p>
+            <p className="mb-3">Given <InlineMath>{`\\varepsilon > 0`}</InlineMath>, <InlineMath>{`\\exists \\delta: 0 < |x - c| < \\delta \\Rightarrow |f(x) - L| < \\varepsilon`}</InlineMath>.</p>
+            <p className="mb-3">Since <InlineMath>{`x_n \\to c`}</InlineMath>, <InlineMath>{`\\exists N: n > N \\Rightarrow |x_n - c| < \\delta`}</InlineMath>. Also <InlineMath>{`x_n \\neq c`}</InlineMath>, so <InlineMath>{`|f(x_n) - L| < \\varepsilon`}</InlineMath> for <InlineMath>{`n > N`}</InlineMath>.</p>
+            <p className="mb-3"><strong>(⇐)</strong> Contrapositive: if limit <InlineMath>{`\\neq L`}</InlineMath>, <InlineMath>{`\\exists \\varepsilon > 0`}</InlineMath> such that for all <InlineMath>{`\\delta`}</InlineMath>, <InlineMath>{`\\exists x`}</InlineMath> with <InlineMath>{`0 < |x - c| < \\delta`}</InlineMath> but <InlineMath>{`|f(x) - L| \\geq \\varepsilon`}</InlineMath>.</p>
+            <p className="mb-3">Taking <InlineMath>{`\\delta = 1/n`}</InlineMath>, get sequence <InlineMath>{`x_n \\to c`}</InlineMath> but <InlineMath>{`f(x_n) \\not\\to L`}</InlineMath>. Contradiction!</p>
           </>
         }
       >
         <p>
-          <Math>{"\\lim_{x \\to c} f(x) = L"}</Math> if and only if for every sequence <Math>(x_n)</Math>
-          with <Math>{"x_n \\to c"}</Math> and <Math>x_n \neq c</Math>, we have <Math>{"f(x_n) \\to L"}</Math>.
+          <InlineMath>{"\\lim_{x \\to c} f(x) = L"}</InlineMath> if and only if for every sequence <InlineMath>(x_n)</InlineMath>
+          with <InlineMath>{"x_n \\to c"}</InlineMath> and <InlineMath>x_n \neq c</InlineMath>, we have <InlineMath>{"f(x_n) \\to L"}</InlineMath>.
         </p>
       </Theorem>
 
@@ -51,24 +51,24 @@ export default function Section09() {
 
       <Definition title="Continuity at a Point">
         <p>
-          A function <Math>f</Math> is continuous at <Math>c</Math> if:
+          A function <InlineMath>f</InlineMath> is continuous at <InlineMath>c</InlineMath> if:
         </p>
         <MathBlock>
           {`\\lim_{x \\to c} f(x) = f(c)`}
         </MathBlock>
-        <p>Equivalently, <Math>{"\\forall \\varepsilon > 0, \\exists \\delta > 0: |x - c| < \\delta \\Rightarrow |f(x) - f(c)| < \\varepsilon"}</Math>.</p>
+        <p>Equivalently, <InlineMath>{"\\forall \\varepsilon > 0, \\exists \\delta > 0: |x - c| < \\delta \\Rightarrow |f(x) - f(c)| < \\varepsilon"}</InlineMath>.</p>
       </Definition>
 
       <Example title="Discontinuous Function">
-        <p>The function <Math>f(x) = \sin(1/x)</Math> for <Math>x \neq 0</Math> has no limit at 0,
-        since it oscillates infinitely. There is no way to define <Math>f(0)</Math> to make <Math>f</Math> continuous.</p>
+        <p>The function <InlineMath>f(x) = \sin(1/x)</InlineMath> for <InlineMath>x \neq 0</InlineMath> has no limit at 0,
+        since it oscillates infinitely. There is no way to define <InlineMath>f(0)</InlineMath> to make <InlineMath>f</InlineMath> continuous.</p>
       </Example>
 
       <h3>Uniform Continuity</h3>
 
       <Definition title="Uniform Continuity">
         <p>
-          A function <Math>f</Math> is uniformly continuous on <Math>S</Math> if:
+          A function <InlineMath>f</InlineMath> is uniformly continuous on <InlineMath>S</InlineMath> if:
         </p>
         <MathBlock>
           {`\\forall \\varepsilon > 0, \\exists \\delta > 0: |x - y| < \\delta \\Rightarrow |f(x) - f(y)| < \\varepsilon \\text{ for all } x, y \\in S`}
@@ -84,11 +84,11 @@ export default function Section09() {
         title="Heine-Cantor Theorem"
         proof={
           <>
-            <p className="mb-3">Let <Math>{`f`}</Math> be continuous on compact <Math>{`K`}</Math>. Suppose <Math>{`f`}</Math> is not uniformly continuous.</p>
-            <p className="mb-3">Then <Math>{`\\exists \\varepsilon > 0`}</Math> and sequences <Math>{`(x_n), (y_n)`}</Math> in <Math>{`K`}</Math> with <Math>{`|x_n - y_n| < 1/n`}</Math> but <Math>{`|f(x_n) - f(y_n)| \\geq \\varepsilon`}</Math>.</p>
-            <p className="mb-3">By compactness (Bolzano-Weierstrass), <Math>{`(x_n)`}</Math> has a convergent subsequence <Math>{`x_{n_k} \\to x \\in K`}</Math>.</p>
-            <p className="mb-3">Then <Math>{`y_{n_k} \\to x`}</Math> also (since <Math>{`|x_{n_k} - y_{n_k}| \\to 0`}</Math>).</p>
-            <p className="mb-3">By continuity at <Math>{`x`}</Math>: <Math>{`f(x_{n_k}) \\to f(x)`}</Math> and <Math>{`f(y_{n_k}) \\to f(x)`}</Math>. But <Math>{`|f(x_{n_k}) - f(y_{n_k})| \\geq \\varepsilon`}</Math>. Contradiction!</p>
+            <p className="mb-3">Let <InlineMath>{`f`}</InlineMath> be continuous on compact <InlineMath>{`K`}</InlineMath>. Suppose <InlineMath>{`f`}</InlineMath> is not uniformly continuous.</p>
+            <p className="mb-3">Then <InlineMath>{`\\exists \\varepsilon > 0`}</InlineMath> and sequences <InlineMath>{`(x_n), (y_n)`}</InlineMath> in <InlineMath>{`K`}</InlineMath> with <InlineMath>{`|x_n - y_n| < 1/n`}</InlineMath> but <InlineMath>{`|f(x_n) - f(y_n)| \\geq \\varepsilon`}</InlineMath>.</p>
+            <p className="mb-3">By compactness (Bolzano-Weierstrass), <InlineMath>{`(x_n)`}</InlineMath> has a convergent subsequence <InlineMath>{`x_{n_k} \\to x \\in K`}</InlineMath>.</p>
+            <p className="mb-3">Then <InlineMath>{`y_{n_k} \\to x`}</InlineMath> also (since <InlineMath>{`|x_{n_k} - y_{n_k}| \\to 0`}</InlineMath>).</p>
+            <p className="mb-3">By continuity at <InlineMath>{`x`}</InlineMath>: <InlineMath>{`f(x_{n_k}) \\to f(x)`}</InlineMath> and <InlineMath>{`f(y_{n_k}) \\to f(x)`}</InlineMath>. But <InlineMath>{`|f(x_{n_k}) - f(y_{n_k})| \\geq \\varepsilon`}</InlineMath>. Contradiction!</p>
           </>
         }
       >

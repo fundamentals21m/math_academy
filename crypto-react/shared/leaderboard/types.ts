@@ -65,6 +65,7 @@ export interface ScoreUpdate {
 export interface SyncPayload {
   scores: ScoreUpdate[];
   displayName?: string | null;
+  totalXP?: number;  // Authoritative total from localStorage (includes bonuses)
 }
 
 /**

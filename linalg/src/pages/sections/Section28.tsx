@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section28() {
   return (
@@ -16,13 +16,13 @@ export default function Section28() {
 
       <Definition title="Image Matrix" className="my-6">
         <p>
-          A grayscale image with <Math>m</Math> rows and <Math>n</Math> columns is an <Math>m \times n</Math> matrix:
+          A grayscale image with <InlineMath>m</InlineMath> rows and <InlineMath>n</InlineMath> columns is an <InlineMath>m \times n</InlineMath> matrix:
         </p>
         <MathBlock>
           {`A = \\begin{bmatrix} a_{11} & a_{12} & \\cdots & a_{1n} \\\\ a_{21} & a_{22} & \\cdots & a_{2n} \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ a_{m1} & a_{m2} & \\cdots & a_{mn} \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Each entry <Math>{`a_{ij}`}</Math> is a pixel intensity (0 = black, 255 = white for 8-bit images).
+          Each entry <InlineMath>{`a_{ij}`}</InlineMath> is a pixel intensity (0 = black, 255 = white for 8-bit images).
         </p>
       </Definition>
 
@@ -33,26 +33,26 @@ export default function Section28() {
         className="my-6"
         proof={
           <>
-            <p>The SVD exists for any matrix. The construction uses eigenvalues of <Math>A^TA</Math> and <Math>AA^T</Math>:</p>
-            <p className="mt-2"><strong>Step 1:</strong> <Math>A^TA</Math> is symmetric and positive semidefinite, so it has orthonormal eigenvectors <Math>v_i</Math> with eigenvalues <Math>\lambda_i \geq 0</Math>.</p>
-            <p className="mt-2"><strong>Step 2:</strong> Define <Math>{`\\sigma_i = \\sqrt{\\lambda_i}`}</Math> and order so <Math>{`\\sigma_1 \\geq \\sigma_2 \\geq \\cdots \\geq 0`}</Math>.</p>
-            <p className="mt-2"><strong>Step 3:</strong> For nonzero <Math>\sigma_i</Math>, define <Math>{`u_i = Av_i/\\sigma_i`}</Math>. These are orthonormal since:</p>
+            <p>The SVD exists for any matrix. The construction uses eigenvalues of <InlineMath>A^TA</InlineMath> and <InlineMath>AA^T</InlineMath>:</p>
+            <p className="mt-2"><strong>Step 1:</strong> <InlineMath>A^TA</InlineMath> is symmetric and positive semidefinite, so it has orthonormal eigenvectors <InlineMath>v_i</InlineMath> with eigenvalues <InlineMath>\lambda_i \geq 0</InlineMath>.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Define <InlineMath>{`\\sigma_i = \\sqrt{\\lambda_i}`}</InlineMath> and order so <InlineMath>{`\\sigma_1 \\geq \\sigma_2 \\geq \\cdots \\geq 0`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Step 3:</strong> For nonzero <InlineMath>\sigma_i</InlineMath>, define <InlineMath>{`u_i = Av_i/\\sigma_i`}</InlineMath>. These are orthonormal since:</p>
             <MathBlock>{`u_i^T u_j = \\frac{(Av_i)^T(Av_j)}{\\sigma_i\\sigma_j} = \\frac{v_i^T A^T A v_j}{\\sigma_i\\sigma_j} = \\frac{\\lambda_j v_i^T v_j}{\\sigma_i\\sigma_j} = \\delta_{ij}`}</MathBlock>
-            <p className="mt-2"><strong>Step 4:</strong> Extend <Math>{`\\{u_1, \\ldots, u_r\\}`}</Math> to an orthonormal basis of <Math>{`\\mathbb{R}^m`}</Math>. Then <Math>{`AV = U\\Sigma`}</Math>, giving <Math>{`A = U\\Sigma V^T`}</Math>.</p>
+            <p className="mt-2"><strong>Step 4:</strong> Extend <InlineMath>{`\\{u_1, \\ldots, u_r\\}`}</InlineMath> to an orthonormal basis of <InlineMath>{`\\mathbb{R}^m`}</InlineMath>. Then <InlineMath>{`AV = U\\Sigma`}</InlineMath>, giving <InlineMath>{`A = U\\Sigma V^T`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          Any <Math>m \times n</Math> matrix <Math>A</Math> can be factored as:
+          Any <InlineMath>m \times n</InlineMath> matrix <InlineMath>A</InlineMath> can be factored as:
         </p>
         <MathBlock>
           {`A = U\\Sigma V^T`}
         </MathBlock>
         <p className="mt-2">where:</p>
         <ul className="list-disc list-inside space-y-1">
-          <li><Math>U</Math> is <Math>m \times m</Math> orthogonal (left singular vectors)</li>
-          <li><Math>\Sigma</Math> is <Math>m \times n</Math> diagonal (singular values <Math>\sigma_1 \geq \sigma_2 \geq \cdots \geq 0</Math>)</li>
-          <li><Math>V</Math> is <Math>n \times n</Math> orthogonal (right singular vectors)</li>
+          <li><InlineMath>U</InlineMath> is <InlineMath>m \times m</InlineMath> orthogonal (left singular vectors)</li>
+          <li><InlineMath>\Sigma</InlineMath> is <InlineMath>m \times n</InlineMath> diagonal (singular values <InlineMath>\sigma_1 \geq \sigma_2 \geq \cdots \geq 0</InlineMath>)</li>
+          <li><InlineMath>V</InlineMath> is <InlineMath>n \times n</InlineMath> orthogonal (right singular vectors)</li>
         </ul>
       </Theorem>
 
@@ -63,24 +63,24 @@ export default function Section28() {
         className="my-6"
         proof={
           <>
-            <p>We prove this for the Frobenius norm. For any rank-<Math>k</Math> matrix <Math>B</Math>:</p>
+            <p>We prove this for the Frobenius norm. For any rank-<InlineMath>k</InlineMath> matrix <InlineMath>B</InlineMath>:</p>
             <MathBlock>{`\\|A - B\\|_F^2 = \\sum_{i,j}(a_{ij} - b_{ij})^2`}</MathBlock>
-            <p className="mt-2">Using orthogonal invariance of the Frobenius norm and the SVD <Math>{`A = U\\Sigma V^T`}</Math>:</p>
+            <p className="mt-2">Using orthogonal invariance of the Frobenius norm and the SVD <InlineMath>{`A = U\\Sigma V^T`}</InlineMath>:</p>
             <MathBlock>{`\\|A - B\\|_F^2 = \\|U^T(A-B)V\\|_F^2 = \\|\\Sigma - U^TBV\\|_F^2`}</MathBlock>
-            <p className="mt-2">Let <Math>{`C = U^TBV`}</Math>. Since <Math>B</Math> has rank <Math>k</Math>, so does <Math>C</Math>.</p>
-            <p className="mt-2">The minimum <Math>{`\\|\\Sigma - C\\|_F^2`}</Math> over rank-<Math>k</Math> matrices <Math>C</Math> is achieved when <Math>C</Math> keeps the first <Math>k</Math> diagonal entries of <Math>\Sigma</Math> and zeros the rest:</p>
+            <p className="mt-2">Let <InlineMath>{`C = U^TBV`}</InlineMath>. Since <InlineMath>B</InlineMath> has rank <InlineMath>k</InlineMath>, so does <InlineMath>C</InlineMath>.</p>
+            <p className="mt-2">The minimum <InlineMath>{`\\|\\Sigma - C\\|_F^2`}</InlineMath> over rank-<InlineMath>k</InlineMath> matrices <InlineMath>C</InlineMath> is achieved when <InlineMath>C</InlineMath> keeps the first <InlineMath>k</InlineMath> diagonal entries of <InlineMath>\Sigma</InlineMath> and zeros the rest:</p>
             <MathBlock>{`\\|A - A_k\\|_F^2 = \\sigma_{k+1}^2 + \\cdots + \\sigma_r^2`}</MathBlock>
           </>
         }
       >
         <p>
-          The best rank-<Math>k</Math> approximation to <Math>A</Math> uses the first <Math>k</Math> singular values:
+          The best rank-<InlineMath>k</InlineMath> approximation to <InlineMath>A</InlineMath> uses the first <InlineMath>k</InlineMath> singular values:
         </p>
         <MathBlock>
           {`A_k = \\sum_{i=1}^{k} \\sigma_i \\mathbf{u}_i \\mathbf{v}_i^T`}
         </MathBlock>
         <p className="mt-2">
-          This minimizes <Math>\|A - A_k\|</Math> over all rank-<Math>k</Math> matrices.
+          This minimizes <InlineMath>\|A - A_k\|</InlineMath> over all rank-<InlineMath>k</InlineMath> matrices.
         </p>
       </Theorem>
 
@@ -93,8 +93,8 @@ export default function Section28() {
         </p>
         <ul className="list-disc list-inside mt-2">
           <li>50 singular values</li>
-          <li>50 columns of <Math>U</Math> (50,000 numbers)</li>
-          <li>50 columns of <Math>V</Math> (50,000 numbers)</li>
+          <li>50 columns of <InlineMath>U</InlineMath> (50,000 numbers)</li>
+          <li>50 columns of <InlineMath>V</InlineMath> (50,000 numbers)</li>
         </ul>
         <p className="mt-2 text-primary-400">
           Total: ~100,000 numbers = 90% compression!
@@ -105,13 +105,13 @@ export default function Section28() {
 
       <Definition title="Outer Product Form" className="my-6">
         <p>
-          The SVD writes <Math>A</Math> as a sum of rank-one matrices:
+          The SVD writes <InlineMath>A</InlineMath> as a sum of rank-one matrices:
         </p>
         <MathBlock>
           {`A = \\sigma_1 \\mathbf{u}_1 \\mathbf{v}_1^T + \\sigma_2 \\mathbf{u}_2 \\mathbf{v}_2^T + \\cdots + \\sigma_r \\mathbf{u}_r \\mathbf{v}_r^T`}
         </MathBlock>
         <p className="mt-2">
-          Each <Math>{`\\mathbf{u}_i \\mathbf{v}_i^T`}</Math> is an <Math>m \times n</Math> matrix with rank 1.
+          Each <InlineMath>{`\\mathbf{u}_i \\mathbf{v}_i^T`}</InlineMath> is an <InlineMath>m \times n</InlineMath> matrix with rank 1.
           The singular values tell us the importance of each component.
         </p>
       </Definition>
@@ -133,21 +133,21 @@ export default function Section28() {
         className="my-6"
         proof={
           <>
-            <p>From the SVD <Math>{`A = U\\Sigma V^T`}</Math>, compute <Math>A^TA</Math> and <Math>AA^T</Math>:</p>
+            <p>From the SVD <InlineMath>{`A = U\\Sigma V^T`}</InlineMath>, compute <InlineMath>A^TA</InlineMath> and <InlineMath>AA^T</InlineMath>:</p>
             <MathBlock>{`A^TA = (V\\Sigma^T U^T)(U\\Sigma V^T) = V\\Sigma^T\\Sigma V^T`}</MathBlock>
-            <p className="mt-2">Since <Math>{`U^TU = I`}</Math>. The matrix <Math>{`\\Sigma^T\\Sigma`}</Math> is diagonal with entries <Math>\\sigma_i^2</Math>.</p>
-            <p className="mt-2">Thus <Math>A^TAV = V(\\Sigma^T\\Sigma)</Math>, showing that columns of <Math>V</Math> are eigenvectors of <Math>A^TA</Math> with eigenvalues <Math>\\sigma_i^2</Math>.</p>
+            <p className="mt-2">Since <InlineMath>{`U^TU = I`}</InlineMath>. The matrix <InlineMath>{`\\Sigma^T\\Sigma`}</InlineMath> is diagonal with entries <InlineMath>\\sigma_i^2</InlineMath>.</p>
+            <p className="mt-2">Thus <InlineMath>A^TAV = V(\\Sigma^T\\Sigma)</InlineMath>, showing that columns of <InlineMath>V</InlineMath> are eigenvectors of <InlineMath>A^TA</InlineMath> with eigenvalues <InlineMath>\\sigma_i^2</InlineMath>.</p>
             <p className="mt-2">Similarly:</p>
             <MathBlock>{`AA^T = (U\\Sigma V^T)(V\\Sigma^T U^T) = U\\Sigma\\Sigma^T U^T`}</MathBlock>
-            <p className="mt-2">So columns of <Math>U</Math> are eigenvectors of <Math>AA^T</Math> with the same eigenvalues <Math>\\sigma_i^2</Math>.</p>
+            <p className="mt-2">So columns of <InlineMath>U</InlineMath> are eigenvectors of <InlineMath>AA^T</InlineMath> with the same eigenvalues <InlineMath>\\sigma_i^2</InlineMath>.</p>
           </>
         }
       >
         <p>The SVD is computed using eigenvalues:</p>
         <ul className="list-disc list-inside space-y-2">
-          <li><Math>A^TA = V\Sigma^T\Sigma V^T</Math> — the <Math>v_i</Math> are eigenvectors of <Math>A^TA</Math></li>
-          <li><Math>AA^T = U\Sigma\Sigma^T U^T</Math> — the <Math>u_i</Math> are eigenvectors of <Math>AA^T</Math></li>
-          <li><Math>{`\\sigma_i = \\sqrt{\\lambda_i}`}</Math> where <Math>\lambda_i</Math> are eigenvalues of <Math>A^TA</Math></li>
+          <li><InlineMath>A^TA = V\Sigma^T\Sigma V^T</InlineMath> — the <InlineMath>v_i</InlineMath> are eigenvectors of <InlineMath>A^TA</InlineMath></li>
+          <li><InlineMath>AA^T = U\Sigma\Sigma^T U^T</InlineMath> — the <InlineMath>u_i</InlineMath> are eigenvectors of <InlineMath>AA^T</InlineMath></li>
+          <li><InlineMath>{`\\sigma_i = \\sqrt{\\lambda_i}`}</InlineMath> where <InlineMath>\lambda_i</InlineMath> are eigenvalues of <InlineMath>A^TA</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -156,13 +156,13 @@ export default function Section28() {
           {`A = \\begin{bmatrix} 4 & 0 \\\\ 3 & -5 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          <Math>{`A^TA = \\begin{bmatrix} 25 & -15 \\\\\\\\ -15 & 25 \\end{bmatrix}`}</Math>
+          <InlineMath>{`A^TA = \\begin{bmatrix} 25 & -15 \\\\\\\\ -15 & 25 \\end{bmatrix}`}</InlineMath>
         </p>
         <p className="mt-2">
-          Eigenvalues of <Math>A^TA</Math>: <Math>\lambda_1 = 40</Math>, <Math>\lambda_2 = 10</Math>
+          Eigenvalues of <InlineMath>A^TA</InlineMath>: <InlineMath>\lambda_1 = 40</InlineMath>, <InlineMath>\lambda_2 = 10</InlineMath>
         </p>
         <p className="mt-2">
-          Singular values: <Math>{`\\sigma_1 = \\sqrt{40} \\approx 6.32`}</Math>, <Math>{`\\sigma_2 = \\sqrt{10} \\approx 3.16`}</Math>
+          Singular values: <InlineMath>{`\\sigma_1 = \\sqrt{40} \\approx 6.32`}</InlineMath>, <InlineMath>{`\\sigma_2 = \\sqrt{10} \\approx 3.16`}</InlineMath>
         </p>
       </Example>
 
@@ -176,11 +176,11 @@ export default function Section28() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span><Math>A = U\Sigma V^T</Math> decomposes any matrix into orthogonal and diagonal parts.</span>
+            <span><InlineMath>A = U\Sigma V^T</InlineMath> decomposes any matrix into orthogonal and diagonal parts.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>The best rank-<Math>k</Math> approximation uses the <Math>k</Math> largest singular values.</span>
+            <span>The best rank-<InlineMath>k</InlineMath> approximation uses the <InlineMath>k</InlineMath> largest singular values.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
@@ -188,7 +188,7 @@ export default function Section28() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>Singular values come from eigenvalues of <Math>A^TA</Math>.</span>
+            <span>Singular values come from eigenvalues of <InlineMath>A^TA</InlineMath>.</span>
           </li>
         </ul>
       </div>

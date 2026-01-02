@@ -3,7 +3,7 @@ import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section10Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, Algorithm } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section10() {
   return (
@@ -12,24 +12,24 @@ export default function Section10() {
 
       <p>
         Linear regression is an example of a <em>parametric</em> approach—we assume a specific 
-        functional form (linear) for <Math>f(X)</Math>. An alternative is a <em>non-parametric</em> approach, 
-        which makes fewer assumptions about the form of <Math>f</Math>. One of the simplest 
+        functional form (linear) for <InlineMath>f(X)</InlineMath>. An alternative is a <em>non-parametric</em> approach, 
+        which makes fewer assumptions about the form of <InlineMath>f</InlineMath>. One of the simplest 
         non-parametric methods is <strong>K-nearest neighbors</strong> (KNN) regression.
       </p>
 
       <h2>K-Nearest Neighbors Regression</h2>
 
       <p>
-        KNN regression identifies the <Math>K</Math> training observations that are closest 
-        to a test observation <Math>x_0</Math> and estimates <Math>f(x_0)</Math> using the 
+        KNN regression identifies the <InlineMath>K</InlineMath> training observations that are closest 
+        to a test observation <InlineMath>x_0</InlineMath> and estimates <InlineMath>f(x_0)</InlineMath> using the 
         average of their response values.
       </p>
 
       <Algorithm title="KNN Regression">
-        <p>Given a value for <Math>K</Math> and a prediction point <Math>x_0</Math>:</p>
+        <p>Given a value for <InlineMath>K</InlineMath> and a prediction point <InlineMath>x_0</InlineMath>:</p>
         <ol className="list-decimal list-inside mt-2 space-y-2">
-          <li>Identify the <Math>K</Math> training observations closest to <Math>x_0</Math> (call this set <Math>{`\\mathcal{N}_0`}</Math>)</li>
-          <li>Estimate <Math>f(x_0)</Math> as the average of the responses in <Math>{`\\mathcal{N}_0`}</Math>:
+          <li>Identify the <InlineMath>K</InlineMath> training observations closest to <InlineMath>x_0</InlineMath> (call this set <InlineMath>{`\\mathcal{N}_0`}</InlineMath>)</li>
+          <li>Estimate <InlineMath>f(x_0)</InlineMath> as the average of the responses in <InlineMath>{`\\mathcal{N}_0`}</InlineMath>:
             <MathBlock>{`\\hat{f}(x_0) = \\frac{1}{K} \\sum_{i \\in \\mathcal{N}_0} y_i`}</MathBlock>
           </li>
         </ol>
@@ -38,7 +38,7 @@ export default function Section10() {
       <h3>Choosing K</h3>
 
       <p>
-        The choice of <Math>K</Math> controls the flexibility of the KNN fit:
+        The choice of <InlineMath>K</InlineMath> controls the flexibility of the KNN fit:
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -65,7 +65,7 @@ export default function Section10() {
       <h2>Comparing KNN and Linear Regression</h2>
 
       <p>
-        Which method is better? The answer depends on the true relationship between <Math>X</Math> and <Math>Y</Math>.
+        Which method is better? The answer depends on the true relationship between <InlineMath>X</InlineMath> and <InlineMath>Y</InlineMath>.
       </p>
 
       <h3>When Linear Regression Wins</h3>
@@ -76,7 +76,7 @@ export default function Section10() {
           will outperform KNN because:
         </p>
         <ul className="list-disc list-inside text-dark-300 mt-2 space-y-1">
-          <li>Linear regression makes the correct assumption about <Math>f</Math></li>
+          <li>Linear regression makes the correct assumption about <InlineMath>f</InlineMath></li>
           <li>KNN estimates are inherently more variable</li>
           <li>Linear regression uses all data points to estimate the relationship</li>
         </ul>
@@ -95,7 +95,7 @@ export default function Section10() {
         <ul className="list-disc list-inside text-dark-300 mt-2 space-y-1">
           <li>Linear regression's bias dominates, leading to poor predictions</li>
           <li>KNN can adapt to the non-linearity</li>
-          <li>With enough data, KNN can closely approximate any <Math>f</Math></li>
+          <li>With enough data, KNN can closely approximate any <InlineMath>f</InlineMath></li>
         </ul>
         <p className="mt-2 text-dark-400 text-sm">
           However, KNN requires more data to achieve good performance in non-linear settings.
@@ -106,13 +106,13 @@ export default function Section10() {
 
       <p>
         A major limitation of KNN is that it suffers from the <em>curse of dimensionality</em>. 
-        As the number of predictors <Math>p</Math> grows, the performance of KNN rapidly deteriorates.
+        As the number of predictors <InlineMath>p</InlineMath> grows, the performance of KNN rapidly deteriorates.
       </p>
 
       <Theorem title="The Curse of Dimensionality">
         <p>
           In high dimensions, even a large training set may not provide many "nearby" 
-          observations. As <Math>p</Math> increases:
+          observations. As <InlineMath>p</InlineMath> increases:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li>The nearest neighbors become increasingly far away</li>
@@ -120,7 +120,7 @@ export default function Section10() {
           <li>The bias of KNN increases</li>
         </ul>
         <p className="mt-2">
-          With <Math>p = 20</Math> predictors, KNN often performs poorly even with large <Math>n</Math>.
+          With <InlineMath>p = 20</InlineMath> predictors, KNN often performs poorly even with large <InlineMath>n</InlineMath>.
         </p>
       </Theorem>
 
@@ -131,8 +131,8 @@ export default function Section10() {
         </p>
         <ul className="space-y-2 text-dark-400 text-sm">
           <li><strong>p = 1:</strong> Need 10% of the range of each predictor → side length = 0.10</li>
-          <li><strong>p = 2:</strong> Need <Math>{`\\sqrt{0.10}`}</Math> = 0.32 of each dimension</li>
-          <li><strong>p = 10:</strong> Need <Math>{`0.10^{1/10}`}</Math> = 0.79 of each dimension!</li>
+          <li><strong>p = 2:</strong> Need <InlineMath>{`\\sqrt{0.10}`}</InlineMath> = 0.32 of each dimension</li>
+          <li><strong>p = 10:</strong> Need <InlineMath>{`0.10^{1/10}`}</InlineMath> = 0.79 of each dimension!</li>
         </ul>
         <p className="mt-3 text-dark-500 text-sm">
           In high dimensions, to get any neighbors at all, we must look over almost the 
@@ -147,7 +147,7 @@ export default function Section10() {
           <h4 className="text-emerald-400 font-semibold mb-2">Use Linear Regression When:</h4>
           <ul className="list-disc list-inside text-dark-300 text-sm space-y-1">
             <li>The relationship is approximately linear</li>
-            <li>You have many predictors (high <Math>p</Math>)</li>
+            <li>You have many predictors (high <InlineMath>p</InlineMath>)</li>
             <li>Interpretability is important</li>
             <li>You have limited training data</li>
             <li>You need to understand which predictors matter</li>
@@ -158,7 +158,7 @@ export default function Section10() {
           <h4 className="text-blue-400 font-semibold mb-2">Consider KNN When:</h4>
           <ul className="list-disc list-inside text-dark-300 text-sm space-y-1">
             <li>The relationship is highly non-linear</li>
-            <li>You have few predictors (small <Math>p</Math>)</li>
+            <li>You have few predictors (small <InlineMath>p</InlineMath>)</li>
             <li>You have abundant training data</li>
             <li>Interpretability is less important than prediction accuracy</li>
             <li>You don't want to specify a functional form</li>
@@ -231,18 +231,18 @@ export default function Section10() {
         </li>
         <li>
           <strong>KNN regression</strong> is non-parametric: it makes no assumptions about 
-          the form of <Math>f</Math>
+          the form of <InlineMath>f</InlineMath>
         </li>
         <li>
           Linear regression tends to outperform KNN when the relationship is linear or 
-          when <Math>p</Math> is large (curse of dimensionality)
+          when <InlineMath>p</InlineMath> is large (curse of dimensionality)
         </li>
         <li>
           KNN can outperform linear regression when the relationship is highly non-linear 
-          and <Math>p</Math> is small
+          and <InlineMath>p</InlineMath> is small
         </li>
         <li>
-          The optimal choice of <Math>K</Math> in KNN involves a bias-variance tradeoff
+          The optimal choice of <InlineMath>K</InlineMath> in KNN involves a bias-variance tradeoff
         </li>
       </ul>
 

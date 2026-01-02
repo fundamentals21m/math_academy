@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section31() {
   return (
@@ -18,35 +18,35 @@ export default function Section31() {
         className="my-6"
         proof={
           <>
-            <p>Let <Math>{`\\mathbf{x}`}</Math> be any vector. Using <Math>{`A = U\\Sigma V^T`}</Math>:</p>
-            <p className="mt-2"><strong>Step 1:</strong> <Math>{`\\mathbf{y} = V^T\\mathbf{x}`}</Math> expresses <Math>{`\\mathbf{x}`}</Math> in the basis of right singular vectors. Since <Math>V</Math> is orthogonal, this is a rotation/reflection.</p>
-            <p className="mt-2"><strong>Step 2:</strong> <Math>{`\\mathbf{z} = \\Sigma\\mathbf{y}`}</Math> stretches component <Math>i</Math> by <Math>\\sigma_i</Math>. Components beyond rank <Math>r</Math> become zero.</p>
-            <p className="mt-2"><strong>Step 3:</strong> <Math>{`A\\mathbf{x} = U\\mathbf{z}`}</Math> rotates from coordinate axes to the left singular vector basis.</p>
-            <p className="mt-2">Composing: <Math>{`A\\mathbf{x} = U(\\Sigma(V^T\\mathbf{x}))`}</Math>. The transformation decomposes into: rotation → scaling → rotation.</p>
+            <p>Let <InlineMath>{`\\mathbf{x}`}</InlineMath> be any vector. Using <InlineMath>{`A = U\\Sigma V^T`}</InlineMath>:</p>
+            <p className="mt-2"><strong>Step 1:</strong> <InlineMath>{`\\mathbf{y} = V^T\\mathbf{x}`}</InlineMath> expresses <InlineMath>{`\\mathbf{x}`}</InlineMath> in the basis of right singular vectors. Since <InlineMath>V</InlineMath> is orthogonal, this is a rotation/reflection.</p>
+            <p className="mt-2"><strong>Step 2:</strong> <InlineMath>{`\\mathbf{z} = \\Sigma\\mathbf{y}`}</InlineMath> stretches component <InlineMath>i</InlineMath> by <InlineMath>\\sigma_i</InlineMath>. Components beyond rank <InlineMath>r</InlineMath> become zero.</p>
+            <p className="mt-2"><strong>Step 3:</strong> <InlineMath>{`A\\mathbf{x} = U\\mathbf{z}`}</InlineMath> rotates from coordinate axes to the left singular vector basis.</p>
+            <p className="mt-2">Composing: <InlineMath>{`A\\mathbf{x} = U(\\Sigma(V^T\\mathbf{x}))`}</InlineMath>. The transformation decomposes into: rotation → scaling → rotation.</p>
           </>
         }
       >
         <p>
-          The factorization <Math>A = U\Sigma V^T</Math> means:
+          The factorization <InlineMath>A = U\Sigma V^T</InlineMath> means:
         </p>
         <MathBlock>
           {`A\\mathbf{x} = U(\\Sigma(V^T\\mathbf{x}))`}
         </MathBlock>
         <ol className="list-decimal list-inside mt-2 space-y-2">
-          <li><Math>V^T</Math>: Rotate/reflect to align with coordinate axes</li>
-          <li><Math>\Sigma</Math>: Stretch by <Math>\sigma_i</Math> along each axis</li>
-          <li><Math>U</Math>: Rotate/reflect to final position</li>
+          <li><InlineMath>V^T</InlineMath>: Rotate/reflect to align with coordinate axes</li>
+          <li><InlineMath>\Sigma</InlineMath>: Stretch by <InlineMath>\sigma_i</InlineMath> along each axis</li>
+          <li><InlineMath>U</InlineMath>: Rotate/reflect to final position</li>
         </ol>
       </Theorem>
 
       <Example title="Unit Circle to Ellipse" className="my-6">
         <p>
-          A 2×2 matrix <Math>A</Math> maps the unit circle to an ellipse:
+          A 2×2 matrix <InlineMath>A</InlineMath> maps the unit circle to an ellipse:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>The ellipse has semi-axes of lengths <Math>\sigma_1</Math> and <Math>\sigma_2</Math></li>
-          <li>The axes point in directions <Math>u_1</Math> and <Math>u_2</Math></li>
-          <li>The preimages of these axes on the circle are <Math>v_1</Math> and <Math>v_2</Math></li>
+          <li>The ellipse has semi-axes of lengths <InlineMath>\sigma_1</InlineMath> and <InlineMath>\sigma_2</InlineMath></li>
+          <li>The axes point in directions <InlineMath>u_1</InlineMath> and <InlineMath>u_2</InlineMath></li>
+          <li>The preimages of these axes on the circle are <InlineMath>v_1</InlineMath> and <InlineMath>v_2</InlineMath></li>
         </ul>
         <p className="mt-2 text-primary-400">
           Singular values are the semi-axis lengths of the output ellipse!
@@ -63,7 +63,7 @@ export default function Section31() {
           {`\\|A\\|_2 = \\sigma_1 = \\max_{\\mathbf{x} \\neq 0} \\frac{\\|A\\mathbf{x}\\|}{\\|\\mathbf{x}\\|}`}
         </MathBlock>
         <p className="mt-2">
-          The largest singular value is the maximum "stretching factor" of <Math>A</Math>.
+          The largest singular value is the maximum "stretching factor" of <InlineMath>A</InlineMath>.
         </p>
       </Definition>
 
@@ -89,15 +89,15 @@ export default function Section31() {
           {`\\kappa(A) = \\frac{\\sigma_1}{\\sigma_r} = \\|A\\|_2 \\|A^{-1}\\|_2`}
         </MathBlock>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li><Math>\kappa \approx 1</Math>: well-conditioned (nearly orthogonal)</li>
-          <li><Math>\kappa \gg 1</Math>: ill-conditioned (nearly singular)</li>
+          <li><InlineMath>\kappa \approx 1</InlineMath>: well-conditioned (nearly orthogonal)</li>
+          <li><InlineMath>\kappa \gg 1</InlineMath>: ill-conditioned (nearly singular)</li>
         </ul>
       </Definition>
 
       <div className="bg-dark-800/50 rounded-xl p-4 my-6 border border-amber-500/20">
         <p className="font-semibold text-amber-400 mb-2">Numerical Sensitivity</p>
         <p className="text-dark-300 text-sm">
-          If <Math>\kappa(A) = 10^6</Math>, solving <Math>Ax = b</Math> can lose about 6 digits
+          If <InlineMath>\kappa(A) = 10^6</InlineMath>, solving <InlineMath>Ax = b</InlineMath> can lose about 6 digits
           of accuracy due to roundoff. Watch out for ill-conditioned systems!
         </p>
       </div>
@@ -109,28 +109,28 @@ export default function Section31() {
         className="my-6"
         proof={
           <>
-            <p>Define <Math>{`A^+ = V\\Sigma^+ U^T`}</Math> where <Math>\\Sigma^+</Math> is <Math>n \\times m</Math> with entries <Math>1/\\sigma_i</Math> for nonzero <Math>\\sigma_i</Math>.</p>
-            <p className="mt-2"><strong>For invertible <Math>A</Math>:</strong> All <Math>{`\\sigma_i > 0`}</Math>, so <Math>{`\\Sigma^+ = \\Sigma^{-1}`}</Math>. Then:</p>
+            <p>Define <InlineMath>{`A^+ = V\\Sigma^+ U^T`}</InlineMath> where <InlineMath>\\Sigma^+</InlineMath> is <InlineMath>n \\times m</InlineMath> with entries <InlineMath>1/\\sigma_i</InlineMath> for nonzero <InlineMath>\\sigma_i</InlineMath>.</p>
+            <p className="mt-2"><strong>For invertible <InlineMath>A</InlineMath>:</strong> All <InlineMath>{`\\sigma_i > 0`}</InlineMath>, so <InlineMath>{`\\Sigma^+ = \\Sigma^{-1}`}</InlineMath>. Then:</p>
             <MathBlock>{`A^+ = V\\Sigma^{-1}U^T = (U\\Sigma V^T)^{-1} = A^{-1}`}</MathBlock>
-            <p className="mt-2"><strong>Least-squares:</strong> The normal equations <Math>{`A^TAx = A^Tb`}</Math> have solution:</p>
+            <p className="mt-2"><strong>Least-squares:</strong> The normal equations <InlineMath>{`A^TAx = A^Tb`}</InlineMath> have solution:</p>
             <MathBlock>{`x = (A^TA)^{-1}A^Tb = (V\\Sigma^T\\Sigma V^T)^{-1}V\\Sigma^T U^T b`}</MathBlock>
-            <p className="mt-2">When <Math>A</Math> has full column rank, this simplifies to <Math>{`x = V(\\Sigma^T\\Sigma)^{-1}\\Sigma^T U^T b = A^+b`}</Math>.</p>
-            <p className="mt-2">For rank-deficient <Math>A</Math>, <Math>A^+b</Math> gives the minimum-norm least-squares solution.</p>
+            <p className="mt-2">When <InlineMath>A</InlineMath> has full column rank, this simplifies to <InlineMath>{`x = V(\\Sigma^T\\Sigma)^{-1}\\Sigma^T U^T b = A^+b`}</InlineMath>.</p>
+            <p className="mt-2">For rank-deficient <InlineMath>A</InlineMath>, <InlineMath>A^+b</InlineMath> gives the minimum-norm least-squares solution.</p>
           </>
         }
       >
         <p>
-          The <strong>pseudoinverse</strong> of <Math>A</Math> is:
+          The <strong>pseudoinverse</strong> of <InlineMath>A</InlineMath> is:
         </p>
         <MathBlock>
           {`A^+ = V\\Sigma^+ U^T`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>\Sigma^+</Math> has <Math>1/\sigma_i</Math> on the diagonal (for nonzero <Math>\sigma_i</Math>).
+          where <InlineMath>\Sigma^+</InlineMath> has <InlineMath>1/\sigma_i</InlineMath> on the diagonal (for nonzero <InlineMath>\sigma_i</InlineMath>).
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>If <Math>A</Math> is invertible: <Math>{`A^+ = A^{-1}`}</Math></li>
-          <li>For any <Math>A</Math>: <Math>A^+b</Math> is the least-squares solution to <Math>Ax = b</Math></li>
+          <li>If <InlineMath>A</InlineMath> is invertible: <InlineMath>{`A^+ = A^{-1}`}</InlineMath></li>
+          <li>For any <InlineMath>A</InlineMath>: <InlineMath>A^+b</InlineMath> is the least-squares solution to <InlineMath>Ax = b</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -139,7 +139,7 @@ export default function Section31() {
           {`A = \\begin{bmatrix} 1 & 2 \\\\ 2 & 4 \\end{bmatrix} = \\sigma_1 u_1 v_1^T`}
         </MathBlock>
         <p className="mt-2">
-          With <Math>\sigma_1 = 5</Math>:
+          With <InlineMath>\sigma_1 = 5</InlineMath>:
         </p>
         <MathBlock>
           {`A^+ = \\frac{1}{\\sigma_1} v_1 u_1^T = \\frac{1}{25}\\begin{bmatrix} 1 & 2 \\\\ 2 & 4 \\end{bmatrix}`}
@@ -153,14 +153,14 @@ export default function Section31() {
         className="my-6"
         proof={
           <>
-            <p>Starting from the SVD <Math>{`A = U\\Sigma V^T`}</Math>, insert <Math>{`I = VV^T`}</Math>:</p>
+            <p>Starting from the SVD <InlineMath>{`A = U\\Sigma V^T`}</InlineMath>, insert <InlineMath>{`I = VV^T`}</InlineMath>:</p>
             <MathBlock>{`A = U\\Sigma V^T = (UV^T)(V\\Sigma V^T) = QS`}</MathBlock>
-            <p className="mt-2"><strong><Math>Q = UV^T</Math> is orthogonal:</strong></p>
+            <p className="mt-2"><strong><InlineMath>Q = UV^T</InlineMath> is orthogonal:</strong></p>
             <MathBlock>{`Q^TQ = (UV^T)^T(UV^T) = VU^TUV^T = VV^T = I`}</MathBlock>
-            <p className="mt-2"><strong><Math>{`S = V\\Sigma V^T`}</Math> is symmetric positive semidefinite:</strong></p>
-            <p>• Symmetric: <Math>{`S^T = (V\\Sigma V^T)^T = V\\Sigma^T V^T = V\\Sigma V^T = S`}</Math></p>
-            <p>• Positive semidefinite: <Math>{`x^TSx = x^TV\\Sigma V^Tx = (V^Tx)^T\\Sigma(V^Tx) = \\sum \\sigma_i y_i^2 \\geq 0`}</Math></p>
-            <p className="mt-2">Note: <Math>{`S^2 = V\\Sigma^2 V^T = A^TA`}</Math>, so <Math>{`S = \\sqrt{A^TA}`}</Math>.</p>
+            <p className="mt-2"><strong><InlineMath>{`S = V\\Sigma V^T`}</InlineMath> is symmetric positive semidefinite:</strong></p>
+            <p>• Symmetric: <InlineMath>{`S^T = (V\\Sigma V^T)^T = V\\Sigma^T V^T = V\\Sigma V^T = S`}</InlineMath></p>
+            <p>• Positive semidefinite: <InlineMath>{`x^TSx = x^TV\\Sigma V^Tx = (V^Tx)^T\\Sigma(V^Tx) = \\sum \\sigma_i y_i^2 \\geq 0`}</InlineMath></p>
+            <p className="mt-2">Note: <InlineMath>{`S^2 = V\\Sigma^2 V^T = A^TA`}</InlineMath>, so <InlineMath>{`S = \\sqrt{A^TA}`}</InlineMath>.</p>
           </>
         }
       >
@@ -171,11 +171,11 @@ export default function Section31() {
           {`A = QS = (UV^T)(V\\Sigma V^T)`}
         </MathBlock>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li><Math>Q = UV^T</Math> is orthogonal (rotation/reflection)</li>
-          <li><Math>S = V\Sigma V^T</Math> is symmetric positive semidefinite (stretching)</li>
+          <li><InlineMath>Q = UV^T</InlineMath> is orthogonal (rotation/reflection)</li>
+          <li><InlineMath>S = V\Sigma V^T</InlineMath> is symmetric positive semidefinite (stretching)</li>
         </ul>
         <p className="mt-2">
-          Like polar form for complex numbers: <Math>{`z = re^{i\\\\theta} = (\\text{rotation})(\\text{scaling})`}</Math>.
+          Like polar form for complex numbers: <InlineMath>{`z = re^{i\\\\theta} = (\\text{rotation})(\\text{scaling})`}</InlineMath>.
         </p>
       </Theorem>
 
@@ -185,7 +185,7 @@ export default function Section31() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span><Math>A = U\Sigma V^T</Math>: rotate, stretch along axes, rotate again.</span>
+            <span><InlineMath>A = U\Sigma V^T</InlineMath>: rotate, stretch along axes, rotate again.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
@@ -193,15 +193,15 @@ export default function Section31() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span><Math>\|A\|_2 = \sigma_1</Math>; <Math>{`\\|A\\|_F = \\sqrt{\\\\sum \\sigma_i^2}`}</Math>.</span>
+            <span><InlineMath>\|A\|_2 = \sigma_1</InlineMath>; <InlineMath>{`\\|A\\|_F = \\sqrt{\\\\sum \\sigma_i^2}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>Condition number <Math>\kappa = \sigma_1/\sigma_r</Math> measures sensitivity to errors.</span>
+            <span>Condition number <InlineMath>\kappa = \sigma_1/\sigma_r</InlineMath> measures sensitivity to errors.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>Pseudoinverse: <Math>A^+ = V\Sigma^+ U^T</Math> solves least-squares problems.</span>
+            <span>Pseudoinverse: <InlineMath>A^+ = V\Sigma^+ U^T</InlineMath> solves least-squares problems.</span>
           </li>
         </ul>
       </div>

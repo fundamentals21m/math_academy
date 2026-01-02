@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section98() {
@@ -17,8 +17,8 @@ export default function Section98() {
 
       <Callout type="definition" title="Matrix Addition">
         <p>
-          For <MathInline>{`m \\times n`}</MathInline> matrices <MathInline>{`A`}</MathInline> and <MathInline>{`B`}</MathInline>,
-          their <strong>sum</strong> <MathInline>{`A + B`}</MathInline> is the <MathInline>{`m \\times n`}</MathInline> matrix with:
+          For <InlineMath>{`m \\times n`}</InlineMath> matrices <InlineMath>{`A`}</InlineMath> and <InlineMath>{`B`}</InlineMath>,
+          their <strong>sum</strong> <InlineMath>{`A + B`}</InlineMath> is the <InlineMath>{`m \\times n`}</InlineMath> matrix with:
         </p>
         <MathBlock>{`(A + B)_{ij} = A_{ij} + B_{ij}`}</MathBlock>
         <p>Addition is performed entry by entry.</p>
@@ -29,12 +29,12 @@ export default function Section98() {
       </Callout>
 
       <Callout type="theorem" title="Properties of Addition">
-        <p>For <MathInline>{`m \\times n`}</MathInline> matrices <MathInline>{`A, B, C`}</MathInline>:</p>
+        <p>For <InlineMath>{`m \\times n`}</InlineMath> matrices <InlineMath>{`A, B, C`}</InlineMath>:</p>
         <ol className="list-decimal pl-6 space-y-2">
-          <li><strong>Commutative:</strong> <MathInline>{`A + B = B + A`}</MathInline></li>
-          <li><strong>Associative:</strong> <MathInline>{`(A + B) + C = A + (B + C)`}</MathInline></li>
-          <li><strong>Zero element:</strong> <MathInline>{`A + O = A`}</MathInline> where <MathInline>{`O`}</MathInline> is the zero matrix</li>
-          <li><strong>Additive inverse:</strong> <MathInline>{`A + (-A) = O`}</MathInline></li>
+          <li><strong>Commutative:</strong> <InlineMath>{`A + B = B + A`}</InlineMath></li>
+          <li><strong>Associative:</strong> <InlineMath>{`(A + B) + C = A + (B + C)`}</InlineMath></li>
+          <li><strong>Zero element:</strong> <InlineMath>{`A + O = A`}</InlineMath> where <InlineMath>{`O`}</InlineMath> is the zero matrix</li>
+          <li><strong>Additive inverse:</strong> <InlineMath>{`A + (-A) = O`}</InlineMath></li>
         </ol>
       </Callout>
 
@@ -42,7 +42,7 @@ export default function Section98() {
 
       <Callout type="definition" title="Scalar Multiplication">
         <p>
-          For a scalar <MathInline>{`c`}</MathInline> and matrix <MathInline>{`A`}</MathInline>, the <strong>scalar multiple</strong> <MathInline>{`cA`}</MathInline> has:
+          For a scalar <InlineMath>{`c`}</InlineMath> and matrix <InlineMath>{`A`}</InlineMath>, the <strong>scalar multiple</strong> <InlineMath>{`cA`}</InlineMath> has:
         </p>
         <MathBlock>{`(cA)_{ij} = c \\cdot A_{ij}`}</MathBlock>
       </Callout>
@@ -52,12 +52,12 @@ export default function Section98() {
       </Callout>
 
       <Callout type="theorem" title="Properties of Scalar Multiplication">
-        <p>For scalars <MathInline>{`c, d`}</MathInline> and matrices <MathInline>{`A, B`}</MathInline>:</p>
+        <p>For scalars <InlineMath>{`c, d`}</InlineMath> and matrices <InlineMath>{`A, B`}</InlineMath>:</p>
         <ol className="list-decimal pl-6 space-y-2">
-          <li><MathInline>{`c(A + B) = cA + cB`}</MathInline></li>
-          <li><MathInline>{`(c + d)A = cA + dA`}</MathInline></li>
-          <li><MathInline>{`c(dA) = (cd)A`}</MathInline></li>
-          <li><MathInline>{`1 \\cdot A = A`}</MathInline></li>
+          <li><InlineMath>{`c(A + B) = cA + cB`}</InlineMath></li>
+          <li><InlineMath>{`(c + d)A = cA + dA`}</InlineMath></li>
+          <li><InlineMath>{`c(dA) = (cd)A`}</InlineMath></li>
+          <li><InlineMath>{`1 \\cdot A = A`}</InlineMath></li>
         </ol>
       </Callout>
 
@@ -65,19 +65,19 @@ export default function Section98() {
 
       <Callout type="definition" title="Matrix Multiplication">
         <p>
-          For an <MathInline>{`m \\times n`}</MathInline> matrix <MathInline>{`A`}</MathInline> and an <MathInline>{`n \\times p`}</MathInline> matrix <MathInline>{`B`}</MathInline>,
-          the <strong>product</strong> <MathInline>{`AB`}</MathInline> is an <MathInline>{`m \\times p`}</MathInline> matrix with:
+          For an <InlineMath>{`m \\times n`}</InlineMath> matrix <InlineMath>{`A`}</InlineMath> and an <InlineMath>{`n \\times p`}</InlineMath> matrix <InlineMath>{`B`}</InlineMath>,
+          the <strong>product</strong> <InlineMath>{`AB`}</InlineMath> is an <InlineMath>{`m \\times p`}</InlineMath> matrix with:
         </p>
         <MathBlock>{`(AB)_{ij} = \\sum_{k=1}^{n} A_{ik} B_{kj} = A_{i1}B_{1j} + A_{i2}B_{2j} + \\cdots + A_{in}B_{nj}`}</MathBlock>
         <p>
-          The <MathInline>{`(i, j)`}</MathInline> entry is the dot product of row <MathInline>{`i`}</MathInline> of <MathInline>{`A`}</MathInline> with
-          column <MathInline>{`j`}</MathInline> of <MathInline>{`B`}</MathInline>.
+          The <InlineMath>{`(i, j)`}</InlineMath> entry is the dot product of row <InlineMath>{`i`}</InlineMath> of <InlineMath>{`A`}</InlineMath> with
+          column <InlineMath>{`j`}</InlineMath> of <InlineMath>{`B`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="Size Requirement">
         <p>
-          <MathInline>{`AB`}</MathInline> is defined only when <strong>columns of <MathInline>{`A`}</MathInline></strong> = <strong>rows of <MathInline>{`B`}</MathInline></strong>.
+          <InlineMath>{`AB`}</InlineMath> is defined only when <strong>columns of <InlineMath>{`A`}</InlineMath></strong> = <strong>rows of <InlineMath>{`B`}</InlineMath></strong>.
         </p>
         <MathBlock>{`(m \\times n)(n \\times p) = (m \\times p)`}</MathBlock>
       </Callout>
@@ -96,11 +96,11 @@ export default function Section98() {
       <Callout type="theorem" title="Algebraic Properties">
         <p>For matrices of compatible sizes:</p>
         <ol className="list-decimal pl-6 space-y-2">
-          <li><strong>Associative:</strong> <MathInline>{`(AB)C = A(BC)`}</MathInline></li>
-          <li><strong>Left distributive:</strong> <MathInline>{`A(B + C) = AB + AC`}</MathInline></li>
-          <li><strong>Right distributive:</strong> <MathInline>{`(A + B)C = AC + BC`}</MathInline></li>
-          <li><strong>Scalar:</strong> <MathInline>{`c(AB) = (cA)B = A(cB)`}</MathInline></li>
-          <li><strong>Identity:</strong> <MathInline>{`I_m A = A = A I_n`}</MathInline> for <MathInline>{`m \\times n`}</MathInline> matrix <MathInline>{`A`}</MathInline></li>
+          <li><strong>Associative:</strong> <InlineMath>{`(AB)C = A(BC)`}</InlineMath></li>
+          <li><strong>Left distributive:</strong> <InlineMath>{`A(B + C) = AB + AC`}</InlineMath></li>
+          <li><strong>Right distributive:</strong> <InlineMath>{`(A + B)C = AC + BC`}</InlineMath></li>
+          <li><strong>Scalar:</strong> <InlineMath>{`c(AB) = (cA)B = A(cB)`}</InlineMath></li>
+          <li><strong>Identity:</strong> <InlineMath>{`I_m A = A = A I_n`}</InlineMath> for <InlineMath>{`m \\times n`}</InlineMath> matrix <InlineMath>{`A`}</InlineMath></li>
         </ol>
       </Callout>
 
@@ -115,14 +115,14 @@ export default function Section98() {
       <Callout type="example" title="Non-Commutativity">
         <MathBlock>{`AB = \\begin{pmatrix} 1 & 0 \\ 0 & 0 \\end{pmatrix} \\begin{pmatrix} 0 & 1 \\ 0 & 0 \\end{pmatrix} = \\begin{pmatrix} 0 & 1 \\ 0 & 0 \\end{pmatrix}`}</MathBlock>
         <MathBlock>{`BA = \\begin{pmatrix} 0 & 1 \\ 0 & 0 \\end{pmatrix} \\begin{pmatrix} 1 & 0 \\ 0 & 0 \\end{pmatrix} = \\begin{pmatrix} 0 & 0 \\ 0 & 0 \\end{pmatrix}`}</MathBlock>
-        <p><MathInline>{`AB \\neq BA`}</MathInline></p>
+        <p><InlineMath>{`AB \\neq BA`}</InlineMath></p>
       </Callout>
 
       <h2>Special Matrices</h2>
 
       <Callout type="definition" title="Identity Matrix">
         <p>
-          The <MathInline>{`n \\times n`}</MathInline> <strong>identity matrix</strong> <MathInline>{`I_n`}</MathInline> has:
+          The <InlineMath>{`n \\times n`}</InlineMath> <strong>identity matrix</strong> <InlineMath>{`I_n`}</InlineMath> has:
         </p>
         <MathBlock>{`(I_n)_{ij} = \\delta_{ij} = \\begin{cases} 1 & i = j \\ 0 & i \\neq j \\end{cases}`}</MathBlock>
         <MathBlock>{`I_3 = \\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \\end{pmatrix}`}</MathBlock>
@@ -130,7 +130,7 @@ export default function Section98() {
 
       <Callout type="definition" title="Zero Matrix">
         <p>
-          The <MathInline>{`m \\times n`}</MathInline> <strong>zero matrix</strong> <MathInline>{`O`}</MathInline> has all entries equal to 0.
+          The <InlineMath>{`m \\times n`}</InlineMath> <strong>zero matrix</strong> <InlineMath>{`O`}</InlineMath> has all entries equal to 0.
         </p>
         <MathBlock>{`AO = O, \\quad OB = O`}</MathBlock>
       </Callout>
@@ -144,9 +144,9 @@ export default function Section98() {
 
       <Callout type="theorem" title="Diagonal Matrix Properties">
         <ul className="list-disc pl-6 space-y-2">
-          <li>Diagonal matrices commute: <MathInline>{`D_1 D_2 = D_2 D_1`}</MathInline></li>
-          <li><MathInline>{`\\text{diag}(d_1, \\ldots, d_n) \\cdot \\text{diag}(e_1, \\ldots, e_n) = \\text{diag}(d_1 e_1, \\ldots, d_n e_n)`}</MathInline></li>
-          <li><MathInline>{`D^k = \\text{diag}(d_1^k, \\ldots, d_n^k)`}</MathInline></li>
+          <li>Diagonal matrices commute: <InlineMath>{`D_1 D_2 = D_2 D_1`}</InlineMath></li>
+          <li><InlineMath>{`\\text{diag}(d_1, \\ldots, d_n) \\cdot \\text{diag}(e_1, \\ldots, e_n) = \\text{diag}(d_1 e_1, \\ldots, d_n e_n)`}</InlineMath></li>
+          <li><InlineMath>{`D^k = \\text{diag}(d_1^k, \\ldots, d_n^k)`}</InlineMath></li>
         </ul>
       </Callout>
 
@@ -154,8 +154,8 @@ export default function Section98() {
 
       <Callout type="definition" title="Transpose">
         <p>
-          The <strong>transpose</strong> of an <MathInline>{`m \\times n`}</MathInline> matrix <MathInline>{`A`}</MathInline> is the
-          <MathInline>{`n \\times m`}</MathInline> matrix <MathInline>{`A^T`}</MathInline> with:
+          The <strong>transpose</strong> of an <InlineMath>{`m \\times n`}</InlineMath> matrix <InlineMath>{`A`}</InlineMath> is the
+          <InlineMath>{`n \\times m`}</InlineMath> matrix <InlineMath>{`A^T`}</InlineMath> with:
         </p>
         <MathBlock>{`(A^T)_{ij} = A_{ji}`}</MathBlock>
         <p>Rows become columns and columns become rows.</p>
@@ -167,37 +167,37 @@ export default function Section98() {
 
       <Callout type="theorem" title="Properties of Transpose">
         <ol className="list-decimal pl-6 space-y-2">
-          <li><MathInline>{`(A^T)^T = A`}</MathInline></li>
-          <li><MathInline>{`(A + B)^T = A^T + B^T`}</MathInline></li>
-          <li><MathInline>{`(cA)^T = cA^T`}</MathInline></li>
-          <li><MathInline>{`(AB)^T = B^T A^T`}</MathInline> (order reverses!)</li>
+          <li><InlineMath>{`(A^T)^T = A`}</InlineMath></li>
+          <li><InlineMath>{`(A + B)^T = A^T + B^T`}</InlineMath></li>
+          <li><InlineMath>{`(cA)^T = cA^T`}</InlineMath></li>
+          <li><InlineMath>{`(AB)^T = B^T A^T`}</InlineMath> (order reverses!)</li>
         </ol>
       </Callout>
 
       <Callout type="definition" title="Symmetric Matrix">
         <p>
-          A matrix <MathInline>{`A`}</MathInline> is <strong>symmetric</strong> if <MathInline>{`A^T = A`}</MathInline>.
+          A matrix <InlineMath>{`A`}</InlineMath> is <strong>symmetric</strong> if <InlineMath>{`A^T = A`}</InlineMath>.
         </p>
         <p>
-          It is <strong>skew-symmetric</strong> if <MathInline>{`A^T = -A`}</MathInline>.
+          It is <strong>skew-symmetric</strong> if <InlineMath>{`A^T = -A`}</InlineMath>.
         </p>
       </Callout>
 
       <h2>Matrix Powers</h2>
 
       <Callout type="definition" title="Matrix Powers">
-        <p>For a square matrix <MathInline>{`A`}</MathInline>:</p>
+        <p>For a square matrix <InlineMath>{`A`}</InlineMath>:</p>
         <MathBlock>{`A^0 = I, \\quad A^1 = A, \\quad A^k = \\underbrace{A \\cdot A \\cdots A}_{k \\text{ times}}`}</MathBlock>
       </Callout>
 
       <Callout type="theorem" title="Power Laws">
         <ul className="list-disc pl-6 space-y-2">
-          <li><MathInline>{`A^m A^n = A^{m+n}`}</MathInline></li>
-          <li><MathInline>{`(A^m)^n = A^{mn}`}</MathInline></li>
-          <li><MathInline>{`(A^k)^T = (A^T)^k`}</MathInline></li>
+          <li><InlineMath>{`A^m A^n = A^{m+n}`}</InlineMath></li>
+          <li><InlineMath>{`(A^m)^n = A^{mn}`}</InlineMath></li>
+          <li><InlineMath>{`(A^k)^T = (A^T)^k`}</InlineMath></li>
         </ul>
         <p className="mt-2">
-          <strong>Warning:</strong> <MathInline>{`(AB)^k \\neq A^k B^k`}</MathInline> in general (unless <MathInline>{`A`}</MathInline> and <MathInline>{`B`}</MathInline> commute).
+          <strong>Warning:</strong> <InlineMath>{`(AB)^k \\neq A^k B^k`}</InlineMath> in general (unless <InlineMath>{`A`}</InlineMath> and <InlineMath>{`B`}</InlineMath> commute).
         </p>
       </Callout>
 
@@ -208,7 +208,7 @@ export default function Section98() {
           A <strong>block matrix</strong> is partitioned into smaller matrices (blocks):
         </p>
         <MathBlock>{`M = \\begin{pmatrix} A & B \\ C & D \\end{pmatrix}`}</MathBlock>
-        <p>where <MathInline>{`A, B, C, D`}</MathInline> are matrices of compatible sizes.</p>
+        <p>where <InlineMath>{`A, B, C, D`}</InlineMath> are matrices of compatible sizes.</p>
       </Callout>
 
       <Callout type="theorem" title="Block Multiplication">
@@ -223,18 +223,18 @@ export default function Section98() {
 
       <Callout type="definition" title="Trace">
         <p>
-          The <strong>trace</strong> of a square matrix <MathInline>{`A`}</MathInline> is the sum of diagonal entries:
+          The <strong>trace</strong> of a square matrix <InlineMath>{`A`}</InlineMath> is the sum of diagonal entries:
         </p>
         <MathBlock>{`\\text{tr}(A) = \\sum_{i=1}^{n} A_{ii} = A_{11} + A_{22} + \\cdots + A_{nn}`}</MathBlock>
       </Callout>
 
       <Callout type="theorem" title="Properties of Trace">
         <ol className="list-decimal pl-6 space-y-2">
-          <li><MathInline>{`\\text{tr}(A + B) = \\text{tr}(A) + \\text{tr}(B)`}</MathInline></li>
-          <li><MathInline>{`\\text{tr}(cA) = c \\cdot \\text{tr}(A)`}</MathInline></li>
-          <li><MathInline>{`\\text{tr}(A^T) = \\text{tr}(A)`}</MathInline></li>
-          <li><MathInline>{`\\text{tr}(AB) = \\text{tr}(BA)`}</MathInline> (cyclic property)</li>
-          <li><MathInline>{`\\text{tr}(ABC) = \\text{tr}(BCA) = \\text{tr}(CAB)`}</MathInline></li>
+          <li><InlineMath>{`\\text{tr}(A + B) = \\text{tr}(A) + \\text{tr}(B)`}</InlineMath></li>
+          <li><InlineMath>{`\\text{tr}(cA) = c \\cdot \\text{tr}(A)`}</InlineMath></li>
+          <li><InlineMath>{`\\text{tr}(A^T) = \\text{tr}(A)`}</InlineMath></li>
+          <li><InlineMath>{`\\text{tr}(AB) = \\text{tr}(BA)`}</InlineMath> (cyclic property)</li>
+          <li><InlineMath>{`\\text{tr}(ABC) = \\text{tr}(BCA) = \\text{tr}(CAB)`}</InlineMath></li>
         </ol>
       </Callout>
 
@@ -243,36 +243,36 @@ export default function Section98() {
       <Callout type="theorem" title="Operations Correspond">
         <p>Matrix operations correspond to transformation operations:</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li><MathInline>{`[S + T] = [S] + [T]`}</MathInline></li>
-          <li><MathInline>{`[cT] = c[T]`}</MathInline></li>
-          <li><MathInline>{`[S \\circ T] = [S][T]`}</MathInline> (composition ↔ multiplication)</li>
-          <li><MathInline>{`[T^{-1}] = [T]^{-1}`}</MathInline></li>
+          <li><InlineMath>{`[S + T] = [S] + [T]`}</InlineMath></li>
+          <li><InlineMath>{`[cT] = c[T]`}</InlineMath></li>
+          <li><InlineMath>{`[S \\circ T] = [S][T]`}</InlineMath> (composition ↔ multiplication)</li>
+          <li><InlineMath>{`[T^{-1}] = [T]^{-1}`}</InlineMath></li>
         </ul>
       </Callout>
 
       <h2>Summary</h2>
 
       <Callout type="info" title="Key Operations">
-        <p><strong>Addition:</strong> <MathInline>{`(A + B)_{ij} = A_{ij} + B_{ij}`}</MathInline> (same size matrices)</p>
+        <p><strong>Addition:</strong> <InlineMath>{`(A + B)_{ij} = A_{ij} + B_{ij}`}</InlineMath> (same size matrices)</p>
 
-        <p className="mt-3"><strong>Scalar multiplication:</strong> <MathInline>{`(cA)_{ij} = c \\cdot A_{ij}`}</MathInline></p>
+        <p className="mt-3"><strong>Scalar multiplication:</strong> <InlineMath>{`(cA)_{ij} = c \\cdot A_{ij}`}</InlineMath></p>
 
         <p className="mt-3"><strong>Matrix multiplication:</strong></p>
         <MathBlock>{`(AB)_{ij} = \\sum_k A_{ik} B_{kj}`}</MathBlock>
         <ul className="list-disc pl-6 space-y-1">
           <li>Requires matching inner dimensions</li>
-          <li>NOT commutative: <MathInline>{`AB \\neq BA`}</MathInline></li>
-          <li>Associative: <MathInline>{`(AB)C = A(BC)`}</MathInline></li>
+          <li>NOT commutative: <InlineMath>{`AB \\neq BA`}</InlineMath></li>
+          <li>Associative: <InlineMath>{`(AB)C = A(BC)`}</InlineMath></li>
         </ul>
 
-        <p className="mt-3"><strong>Transpose:</strong> <MathInline>{`(A^T)_{ij} = A_{ji}`}</MathInline></p>
+        <p className="mt-3"><strong>Transpose:</strong> <InlineMath>{`(A^T)_{ij} = A_{ji}`}</InlineMath></p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`(AB)^T = B^T A^T`}</MathInline></li>
+          <li><InlineMath>{`(AB)^T = B^T A^T`}</InlineMath></li>
         </ul>
 
-        <p className="mt-3"><strong>Trace:</strong> <MathInline>{`\\text{tr}(A) = \\sum A_{ii}`}</MathInline></p>
+        <p className="mt-3"><strong>Trace:</strong> <InlineMath>{`\\text{tr}(A) = \\sum A_{ii}`}</InlineMath></p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`\\text{tr}(AB) = \\text{tr}(BA)`}</MathInline></li>
+          <li><InlineMath>{`\\text{tr}(AB) = \\text{tr}(BA)`}</InlineMath></li>
         </ul>
       </Callout>
     </LessonLayout>

@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section39() {
   return (
@@ -21,8 +21,8 @@ export default function Section39() {
           {`K\\mathbf{u} = \\mathbf{f}`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>K</Math> is the <strong>stiffness matrix</strong>, <Math>{`\\mathbf{u}`}</Math> are displacements,
-          and <Math>{`\\mathbf{f}`}</Math> are forces.
+          where <InlineMath>K</InlineMath> is the <strong>stiffness matrix</strong>, <InlineMath>{`\\mathbf{u}`}</InlineMath> are displacements,
+          and <InlineMath>{`\\mathbf{f}`}</InlineMath> are forces.
         </p>
       </Definition>
 
@@ -31,25 +31,25 @@ export default function Section39() {
         className="my-6"
         proof={
           <>
-            <p><strong>Symmetric (Maxwell-Betti):</strong> The force at node <Math>i</Math> due to unit displacement at node <Math>j</Math> equals the force at <Math>j</Math> due to unit displacement at <Math>i</Math>.</p>
-            <p className="mt-2">Physically: <Math>{`K_{ij}`}</Math> = work done by force at <Math>i</Math> when <Math>j</Math> moves = <Math>{`K_{ji}`}</Math> by reciprocity.</p>
+            <p><strong>Symmetric (Maxwell-Betti):</strong> The force at node <InlineMath>i</InlineMath> due to unit displacement at node <InlineMath>j</InlineMath> equals the force at <InlineMath>j</InlineMath> due to unit displacement at <InlineMath>i</InlineMath>.</p>
+            <p className="mt-2">Physically: <InlineMath>{`K_{ij}`}</InlineMath> = work done by force at <InlineMath>i</InlineMath> when <InlineMath>j</InlineMath> moves = <InlineMath>{`K_{ji}`}</InlineMath> by reciprocity.</p>
             <p className="mt-2"><strong>Positive semidefinite:</strong> The strain energy stored in the structure is:</p>
             <MathBlock>{`U = \\frac{1}{2}\\mathbf{u}^T K \\mathbf{u} = \\frac{1}{2}\\sum_{\\text{elements}} k_e (\\Delta u_e)^2 \\geq 0`}</MathBlock>
-            <p className="mt-2">Energy is always nonnegative, so <Math>K</Math> is positive semidefinite.</p>
-            <p className="mt-2"><strong>Positive definite when constrained:</strong> Zero energy implies zero deformation. If rigid body motions (translations, rotations) are constrained, the only zero-energy state is <Math>{`\\mathbf{u} = \\mathbf{0}`}</Math>, so <Math>K</Math> becomes positive definite.</p>
+            <p className="mt-2">Energy is always nonnegative, so <InlineMath>K</InlineMath> is positive semidefinite.</p>
+            <p className="mt-2"><strong>Positive definite when constrained:</strong> Zero energy implies zero deformation. If rigid body motions (translations, rotations) are constrained, the only zero-energy state is <InlineMath>{`\\mathbf{u} = \\mathbf{0}`}</InlineMath>, so <InlineMath>K</InlineMath> becomes positive definite.</p>
           </>
         }
       >
         <p>Physical stiffness matrices are:</p>
         <ul className="list-disc list-inside space-y-1">
-          <li><strong>Symmetric:</strong> <Math>K = K^T</Math> (Maxwell-Betti reciprocity)</li>
-          <li><strong>Positive semidefinite:</strong> Energy <Math>{`\\mathbf{u}^T K \\mathbf{u} \\geq 0`}</Math></li>
+          <li><strong>Symmetric:</strong> <InlineMath>K = K^T</InlineMath> (Maxwell-Betti reciprocity)</li>
+          <li><strong>Positive semidefinite:</strong> Energy <InlineMath>{`\\mathbf{u}^T K \\mathbf{u} \\geq 0`}</InlineMath></li>
           <li><strong>Positive definite</strong> when rigid body motions are constrained</li>
         </ul>
       </Theorem>
 
       <Example title="Spring System" className="my-6">
-        <p>Three masses connected by two springs with constants <Math>k_1, k_2</Math>:</p>
+        <p>Three masses connected by two springs with constants <InlineMath>k_1, k_2</InlineMath>:</p>
         <MathBlock>
           {`K = \\begin{bmatrix} k_1 & -k_1 & 0 \\\\ -k_1 & k_1+k_2 & -k_2 \\\\ 0 & -k_2 & k_2 \\end{bmatrix}`}
         </MathBlock>
@@ -68,7 +68,7 @@ export default function Section39() {
           {`K = \\sum_{e=1}^{N} A_e^T K_e A_e`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>K_e</Math> is the element stiffness and <Math>A_e</Math> maps element DOFs to global DOFs.
+          where <InlineMath>K_e</InlineMath> is the element stiffness and <InlineMath>A_e</InlineMath> maps element DOFs to global DOFs.
         </p>
       </Definition>
 
@@ -79,11 +79,11 @@ export default function Section39() {
         className="my-6"
         proof={
           <>
-            <p><strong>Step 1:</strong> The incidence matrix <Math>A</Math> encodes the graph structure. For edge <Math>e</Math> from node <Math>j</Math> to node <Math>k</Math>: voltage difference = <Math>{`v_k - v_j = (A\\mathbf{v})_e`}</Math>.</p>
-            <p className="mt-2"><strong>Step 2 (Ohm's law):</strong> Current on edge <Math>e</Math> is <Math>{`i_e = c_e (A\\mathbf{v})_e`}</Math>. In matrix form: <Math>{`\\mathbf{i}_{\\text{edge}} = CA\\mathbf{v}`}</Math>.</p>
+            <p><strong>Step 1:</strong> The incidence matrix <InlineMath>A</InlineMath> encodes the graph structure. For edge <InlineMath>e</InlineMath> from node <InlineMath>j</InlineMath> to node <InlineMath>k</InlineMath>: voltage difference = <InlineMath>{`v_k - v_j = (A\\mathbf{v})_e`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Step 2 (Ohm's law):</strong> Current on edge <InlineMath>e</InlineMath> is <InlineMath>{`i_e = c_e (A\\mathbf{v})_e`}</InlineMath>. In matrix form: <InlineMath>{`\\mathbf{i}_{\\text{edge}} = CA\\mathbf{v}`}</InlineMath>.</p>
             <p className="mt-2"><strong>Step 3 (Kirchhoff's current law):</strong> Current into each node sums to zero (plus external sources):</p>
             <MathBlock>{`A^T \\mathbf{i}_{\\text{edge}} = A^T C A \\mathbf{v} = \\mathbf{i}_{\\text{ext}}`}</MathBlock>
-            <p className="mt-2">The matrix <Math>A^TCA</Math> is the weighted graph Laplacian.</p>
+            <p className="mt-2">The matrix <InlineMath>A^TCA</InlineMath> is the weighted graph Laplacian.</p>
           </>
         }
       >
@@ -94,20 +94,20 @@ export default function Section39() {
           {`A^T C A \\mathbf{v} = \\mathbf{i}`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>A</Math> is the incidence matrix, <Math>C</Math> is diagonal conductances,
-          <Math>{`\\mathbf{v}`}</Math> are node voltages, and <Math>{`\\mathbf{i}`}</Math> are current sources.
+          where <InlineMath>A</InlineMath> is the incidence matrix, <InlineMath>C</InlineMath> is diagonal conductances,
+          <InlineMath>{`\\mathbf{v}`}</InlineMath> are node voltages, and <InlineMath>{`\\mathbf{i}`}</InlineMath> are current sources.
         </p>
       </Theorem>
 
       <Example title="Resistor Network" className="my-6">
         <p>
-          For resistors with conductances <Math>g_1, g_2, g_3</Math> forming a Y-network:
+          For resistors with conductances <InlineMath>g_1, g_2, g_3</InlineMath> forming a Y-network:
         </p>
         <MathBlock>
           {`G = A^T \\begin{bmatrix} g_1 & 0 & 0 \\\\ 0 & g_2 & 0 \\\\ 0 & 0 & g_3 \\end{bmatrix} A`}
         </MathBlock>
         <p className="mt-2">
-          The conductance matrix <Math>G</Math> is the weighted graph Laplacian.
+          The conductance matrix <InlineMath>G</InlineMath> is the weighted graph Laplacian.
         </p>
       </Example>
 
@@ -121,8 +121,8 @@ export default function Section39() {
           {`K\\mathbf{u} = \\omega^2 M\\mathbf{u}`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>M</Math> is the mass matrix. Natural frequencies are <Math>{`\\omega = \\sqrt{\\lambda}`}</Math>
-          where <Math>\lambda</Math> are eigenvalues of <Math>{`M^{-1}K`}</Math>.
+          where <InlineMath>M</InlineMath> is the mass matrix. Natural frequencies are <InlineMath>{`\\omega = \\sqrt{\\lambda}`}</InlineMath>
+          where <InlineMath>\lambda</InlineMath> are eigenvalues of <InlineMath>{`M^{-1}K`}</InlineMath>.
         </p>
       </Definition>
 
@@ -149,7 +149,7 @@ export default function Section39() {
           {`\\mathbf{y} = C\\mathbf{x} + D\\mathbf{u}`}
         </MathBlock>
         <p className="mt-2">
-          Eigenvalues of <Math>A</Math> determine stability. System is stable if all eigenvalues
+          Eigenvalues of <InlineMath>A</InlineMath> determine stability. System is stable if all eigenvalues
           have negative real parts.
         </p>
       </Definition>
@@ -160,7 +160,7 @@ export default function Section39() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Stiffness matrix <Math>K</Math> relates forces to displacements: <Math>{`K\\mathbf{u} = \\mathbf{f}`}</Math>.</span>
+            <span>Stiffness matrix <InlineMath>K</InlineMath> relates forces to displacements: <InlineMath>{`K\\mathbf{u} = \\mathbf{f}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
@@ -172,11 +172,11 @@ export default function Section39() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>Natural frequencies come from eigenvalue problem <Math>{`K\\mathbf{u} = \\omega^2 M\\mathbf{u}`}</Math>.</span>
+            <span>Natural frequencies come from eigenvalue problem <InlineMath>{`K\\mathbf{u} = \\omega^2 M\\mathbf{u}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>Control systems: eigenvalues of <Math>A</Math> determine stability.</span>
+            <span>Control systems: eigenvalues of <InlineMath>A</InlineMath> determine stability.</span>
           </li>
         </ul>
       </div>

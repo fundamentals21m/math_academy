@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section88() {
@@ -28,7 +28,7 @@ export default function Section88() {
           </li>
           <li>
             <strong>Law of Periods:</strong> The square of the orbital period is proportional
-            to the cube of the semi-major axis: <MathInline>{`T^2 \\propto a^3`}</MathInline>.
+            to the cube of the semi-major axis: <InlineMath>{`T^2 \\propto a^3`}</InlineMath>.
           </li>
         </ol>
       </Callout>
@@ -37,13 +37,13 @@ export default function Section88() {
 
       <Callout type="theorem" title="Universal Gravitation">
         <p>
-          The gravitational force on a planet of mass <MathInline>{`m`}</MathInline> due to the
-          Sun of mass <MathInline>{`M`}</MathInline> is:
+          The gravitational force on a planet of mass <InlineMath>{`m`}</InlineMath> due to the
+          Sun of mass <InlineMath>{`M`}</InlineMath> is:
         </p>
         <MathBlock>{`\\mathbf{F} = -\\frac{GMm}{r^2}\\hat{\\mathbf{r}} = -\\frac{GMm}{r^3}\\mathbf{r}`}</MathBlock>
         <p>
-          where <MathInline>{`G`}</MathInline> is the gravitational constant, <MathInline>{`r = \\|\\mathbf{r}\\|`}</MathInline>,
-          and <MathInline>{`\\hat{\\mathbf{r}} = \\mathbf{r}/r`}</MathInline> is the unit radial vector.
+          where <InlineMath>{`G`}</InlineMath> is the gravitational constant, <InlineMath>{`r = \\|\\mathbf{r}\\|`}</InlineMath>,
+          and <InlineMath>{`\\hat{\\mathbf{r}} = \\mathbf{r}/r`}</InlineMath> is the unit radial vector.
         </p>
       </Callout>
 
@@ -62,27 +62,27 @@ export default function Section88() {
         </p>
         <MathBlock>{`\\mathbf{h} = \\mathbf{r} \\times \\mathbf{v}`}</MathBlock>
         <p>
-          where <MathInline>{`\\mathbf{r}`}</MathInline> is the position and <MathInline>{`\\mathbf{v} = \\dot{\\mathbf{r}}`}</MathInline> is
+          where <InlineMath>{`\\mathbf{r}`}</InlineMath> is the position and <InlineMath>{`\\mathbf{v} = \\dot{\\mathbf{r}}`}</InlineMath> is
           the velocity.
         </p>
       </Callout>
 
       <Callout type="theorem" title="Conservation of Angular Momentum">
-        <p>For a central force, angular momentum is conserved: <MathInline>{`\\dot{\\mathbf{h}} = \\mathbf{0}`}</MathInline>.</p>
+        <p>For a central force, angular momentum is conserved: <InlineMath>{`\\dot{\\mathbf{h}} = \\mathbf{0}`}</InlineMath>.</p>
         <p><strong>Proof:</strong></p>
         <MathBlock>{`\\dot{\\mathbf{h}} = \\frac{d}{dt}(\\mathbf{r} \\times \\mathbf{v}) = \\dot{\\mathbf{r}} \\times \\mathbf{v} + \\mathbf{r} \\times \\dot{\\mathbf{v}}`}</MathBlock>
         <MathBlock>{`= \\mathbf{v} \\times \\mathbf{v} + \\mathbf{r} \\times \\mathbf{a}`}</MathBlock>
         <p>
-          The first term is zero. For gravity, <MathInline>{`\\mathbf{a} \\parallel \\mathbf{r}`}</MathInline>,
-          so <MathInline>{`\\mathbf{r} \\times \\mathbf{a} = \\mathbf{0}`}</MathInline>.
+          The first term is zero. For gravity, <InlineMath>{`\\mathbf{a} \\parallel \\mathbf{r}`}</InlineMath>,
+          so <InlineMath>{`\\mathbf{r} \\times \\mathbf{a} = \\mathbf{0}`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="theorem" title="Motion in a Plane">
         <p>
-          Since <MathInline>{`\\mathbf{h}`}</MathInline> is constant and <MathInline>{`\\mathbf{r} \\cdot \\mathbf{h} = 0`}</MathInline>,
-          the position vector <MathInline>{`\\mathbf{r}`}</MathInline> always lies in a fixed plane
-          perpendicular to <MathInline>{`\\mathbf{h}`}</MathInline>.
+          Since <InlineMath>{`\\mathbf{h}`}</InlineMath> is constant and <InlineMath>{`\\mathbf{r} \\cdot \\mathbf{h} = 0`}</InlineMath>,
+          the position vector <InlineMath>{`\\mathbf{r}`}</InlineMath> always lies in a fixed plane
+          perpendicular to <InlineMath>{`\\mathbf{h}`}</InlineMath>.
         </p>
         <p>
           <strong>Planetary orbits are planar.</strong>
@@ -97,13 +97,13 @@ export default function Section88() {
         </p>
         <MathBlock>{`\\frac{dA}{dt} = \\frac{1}{2}\\|\\mathbf{r} \\times \\mathbf{v}\\| = \\frac{1}{2}h`}</MathBlock>
         <p>
-          where <MathInline>{`h = \\|\\mathbf{h}\\|`}</MathInline> is constant. This proves Kepler's second law.
+          where <InlineMath>{`h = \\|\\mathbf{h}\\|`}</InlineMath> is constant. This proves Kepler's second law.
         </p>
       </Callout>
 
       <Callout type="info" title="Geometric Interpretation">
         <p>
-          In a small time <MathInline>{`dt`}</MathInline>, the planet moves from <MathInline>{`\\mathbf{r}`}</MathInline> to <MathInline>{`\\mathbf{r} + \\mathbf{v}\\,dt`}</MathInline>.
+          In a small time <InlineMath>{`dt`}</InlineMath>, the planet moves from <InlineMath>{`\\mathbf{r}`}</InlineMath> to <InlineMath>{`\\mathbf{r} + \\mathbf{v}\\,dt`}</InlineMath>.
           The area of the triangle swept out is approximately:
         </p>
         <MathBlock>{`dA = \\frac{1}{2}\\|\\mathbf{r} \\times (\\mathbf{v}\\,dt)\\| = \\frac{1}{2}\\|\\mathbf{r} \\times \\mathbf{v}\\|\\,dt`}</MathBlock>
@@ -117,7 +117,7 @@ export default function Section88() {
         </p>
         <MathBlock>{`r = \\frac{h^2/GM}{1 + e\\cos\\theta}`}</MathBlock>
         <p>
-          where <MathInline>{`e`}</MathInline> is the eccentricity and <MathInline>{`\\theta`}</MathInline> is
+          where <InlineMath>{`e`}</InlineMath> is the eccentricity and <InlineMath>{`\\theta`}</InlineMath> is
           measured from the perihelion (closest approach to the Sun).
         </p>
       </Callout>
@@ -125,27 +125,27 @@ export default function Section88() {
       <Callout type="info" title="Conic Sections">
         <p>This is the polar equation of a conic section with focus at the origin:</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li><MathInline>{`e = 0`}</MathInline>: Circle</li>
-          <li><MathInline>{`0 < e < 1`}</MathInline>: Ellipse (bound orbit)</li>
-          <li><MathInline>{`e = 1`}</MathInline>: Parabola (escape trajectory)</li>
-          <li><MathInline>{`e > 1`}</MathInline>: Hyperbola (unbound orbit)</li>
+          <li><InlineMath>{`e = 0`}</InlineMath>: Circle</li>
+          <li><InlineMath>{`0 < e < 1`}</InlineMath>: Ellipse (bound orbit)</li>
+          <li><InlineMath>{`e = 1`}</InlineMath>: Parabola (escape trajectory)</li>
+          <li><InlineMath>{`e > 1`}</InlineMath>: Hyperbola (unbound orbit)</li>
         </ul>
-        <p>This proves Kepler's first law for <MathInline>{`e < 1`}</MathInline>.</p>
+        <p>This proves Kepler's first law for <InlineMath>{`e < 1`}</InlineMath>.</p>
       </Callout>
 
       <h2>Deriving the Orbit Equation</h2>
 
       <Callout type="info" title="Key Steps">
-        <p>Starting from Newton's law <MathInline>{`\\mathbf{a} = -\\frac{GM}{r^2}\\hat{\\mathbf{r}}`}</MathInline>:</p>
+        <p>Starting from Newton's law <InlineMath>{`\\mathbf{a} = -\\frac{GM}{r^2}\\hat{\\mathbf{r}}`}</InlineMath>:</p>
         <ol className="list-decimal pl-6 space-y-2">
           <li>
-            Define <MathInline>{`\\mathbf{e} = \\frac{\\mathbf{v} \\times \\mathbf{h}}{GM} - \\hat{\\mathbf{r}}`}</MathInline> (the eccentricity vector)
+            Define <InlineMath>{`\\mathbf{e} = \\frac{\\mathbf{v} \\times \\mathbf{h}}{GM} - \\hat{\\mathbf{r}}`}</InlineMath> (the eccentricity vector)
           </li>
-          <li>Show that <MathInline>{`\\dot{\\mathbf{e}} = \\mathbf{0}`}</MathInline> (constant)</li>
+          <li>Show that <InlineMath>{`\\dot{\\mathbf{e}} = \\mathbf{0}`}</InlineMath> (constant)</li>
           <li>
-            Take <MathInline>{`\\mathbf{r} \\cdot \\mathbf{e}`}</MathInline> and use <MathInline>{`\\mathbf{r} \\cdot (\\mathbf{v} \\times \\mathbf{h}) = (\\mathbf{r} \\times \\mathbf{v}) \\cdot \\mathbf{h} = h^2`}</MathInline>
+            Take <InlineMath>{`\\mathbf{r} \\cdot \\mathbf{e}`}</InlineMath> and use <InlineMath>{`\\mathbf{r} \\cdot (\\mathbf{v} \\times \\mathbf{h}) = (\\mathbf{r} \\times \\mathbf{v}) \\cdot \\mathbf{h} = h^2`}</InlineMath>
           </li>
-          <li>Obtain <MathInline>{`r(1 + e\\cos\\theta) = h^2/GM`}</MathInline></li>
+          <li>Obtain <InlineMath>{`r(1 + e\\cos\\theta) = h^2/GM`}</InlineMath></li>
         </ol>
       </Callout>
 
@@ -154,17 +154,17 @@ export default function Section88() {
       <Callout type="definition" title="Key Orbital Parameters">
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Semi-major axis</strong> <MathInline>{`a`}</MathInline>: Half the longest diameter of the ellipse
+            <strong>Semi-major axis</strong> <InlineMath>{`a`}</InlineMath>: Half the longest diameter of the ellipse
           </li>
           <li>
-            <strong>Eccentricity</strong> <MathInline>{`e`}</MathInline>: Measures deviation from circular
-            (<MathInline>{`e = 0`}</MathInline> is a circle)
+            <strong>Eccentricity</strong> <InlineMath>{`e`}</InlineMath>: Measures deviation from circular
+            (<InlineMath>{`e = 0`}</InlineMath> is a circle)
           </li>
           <li>
-            <strong>Perihelion</strong>: Closest point to Sun, at distance <MathInline>{`r_p = a(1-e)`}</MathInline>
+            <strong>Perihelion</strong>: Closest point to Sun, at distance <InlineMath>{`r_p = a(1-e)`}</InlineMath>
           </li>
           <li>
-            <strong>Aphelion</strong>: Farthest point from Sun, at distance <MathInline>{`r_a = a(1+e)`}</MathInline>
+            <strong>Aphelion</strong>: Farthest point from Sun, at distance <InlineMath>{`r_a = a(1+e)`}</InlineMath>
           </li>
         </ul>
       </Callout>
@@ -179,24 +179,24 @@ export default function Section88() {
 
       <Callout type="theorem" title="Period of an Orbit">
         <p>
-          The orbital period <MathInline>{`T`}</MathInline> is the total time for one revolution.
-          The area of the ellipse is <MathInline>{`\\pi ab`}</MathInline> where <MathInline>{`b = a\\sqrt{1-e^2}`}</MathInline>.
+          The orbital period <InlineMath>{`T`}</InlineMath> is the total time for one revolution.
+          The area of the ellipse is <InlineMath>{`\\pi ab`}</InlineMath> where <InlineMath>{`b = a\\sqrt{1-e^2}`}</InlineMath>.
         </p>
         <MathBlock>{`T = \\frac{\\text{Total area}}{\\text{Areal velocity}} = \\frac{\\pi ab}{h/2} = \\frac{2\\pi ab}{h}`}</MathBlock>
-        <p>Using <MathInline>{`h^2 = GMa(1-e^2)`}</MathInline> and <MathInline>{`b = a\\sqrt{1-e^2}`}</MathInline>:</p>
+        <p>Using <InlineMath>{`h^2 = GMa(1-e^2)`}</InlineMath> and <InlineMath>{`b = a\\sqrt{1-e^2}`}</InlineMath>:</p>
         <MathBlock>{`T^2 = \\frac{4\\pi^2 a^3}{GM}`}</MathBlock>
       </Callout>
 
       <Callout type="info" title="Kepler's Third Law">
-        <p>This confirms Kepler's third law: <MathInline>{`T^2 \\propto a^3`}</MathInline>.</p>
-        <p>The constant of proportionality depends only on <MathInline>{`GM`}</MathInline>, not on the planet.</p>
+        <p>This confirms Kepler's third law: <InlineMath>{`T^2 \\propto a^3`}</InlineMath>.</p>
+        <p>The constant of proportionality depends only on <InlineMath>{`GM`}</InlineMath>, not on the planet.</p>
         <MathBlock>{`\\frac{T^2}{a^3} = \\frac{4\\pi^2}{GM} \\approx 2.97 \\times 10^{-19} \\text{ s}^2/\\text{m}^3`}</MathBlock>
         <p>(for the Sun).</p>
       </Callout>
 
       <Callout type="example" title="Earth's Orbit">
         <p>
-          For Earth: <MathInline>{`a \\approx 1.50 \\times 10^{11}`}</MathInline> m, <MathInline>{`T \\approx 3.16 \\times 10^7`}</MathInline> s (1 year).
+          For Earth: <InlineMath>{`a \\approx 1.50 \\times 10^{11}`}</InlineMath> m, <InlineMath>{`T \\approx 3.16 \\times 10^7`}</InlineMath> s (1 year).
         </p>
         <MathBlock>{`\\frac{T^2}{a^3} = \\frac{(3.16 \\times 10^7)^2}{(1.50 \\times 10^{11})^3} \\approx 2.96 \\times 10^{-19}`}</MathBlock>
         <p>This matches the theoretical value.</p>
@@ -207,12 +207,12 @@ export default function Section88() {
       <Callout type="theorem" title="Orbital Energy">
         <p>The total mechanical energy per unit mass is:</p>
         <MathBlock>{`E = \\frac{1}{2}v^2 - \\frac{GM}{r} = -\\frac{GM}{2a}`}</MathBlock>
-        <p>For bound orbits (<MathInline>{`e < 1`}</MathInline>), <MathInline>{`E < 0`}</MathInline>.</p>
+        <p>For bound orbits (<InlineMath>{`e < 1`}</InlineMath>), <InlineMath>{`E < 0`}</InlineMath>.</p>
       </Callout>
 
       <Callout type="theorem" title="Vis-Viva Equation">
         <p>
-          The orbital speed at distance <MathInline>{`r`}</MathInline> from the Sun is:
+          The orbital speed at distance <InlineMath>{`r`}</InlineMath> from the Sun is:
         </p>
         <MathBlock>{`v^2 = GM\\left(\\frac{2}{r} - \\frac{1}{a}\\right)`}</MathBlock>
         <p>This relates speed to position for any point in the orbit.</p>
@@ -220,26 +220,26 @@ export default function Section88() {
 
       <Callout type="example" title="Escape Velocity">
         <p>
-          For a parabolic orbit (<MathInline>{`e = 1`}</MathInline>, <MathInline>{`a \\to \\infty`}</MathInline>),
+          For a parabolic orbit (<InlineMath>{`e = 1`}</InlineMath>, <InlineMath>{`a \\to \\infty`}</InlineMath>),
           the energy is exactly zero:
         </p>
         <MathBlock>{`E = \\frac{1}{2}v^2 - \\frac{GM}{r} = 0`}</MathBlock>
-        <p>The escape velocity from distance <MathInline>{`r`}</MathInline> is:</p>
+        <p>The escape velocity from distance <InlineMath>{`r`}</InlineMath> is:</p>
         <MathBlock>{`v_{\\text{esc}} = \\sqrt{\\frac{2GM}{r}}`}</MathBlock>
-        <p>From Earth's surface (<MathInline>{`r = R_E`}</MathInline>): <MathInline>{`v_{\\text{esc}} \\approx 11.2`}</MathInline> km/s.</p>
+        <p>From Earth's surface (<InlineMath>{`r = R_E`}</InlineMath>): <InlineMath>{`v_{\\text{esc}} \\approx 11.2`}</InlineMath> km/s.</p>
       </Callout>
 
       <h2>Circular Orbits</h2>
 
       <Callout type="theorem" title="Circular Orbital Velocity">
-        <p>For a circular orbit of radius <MathInline>{`r`}</MathInline>:</p>
+        <p>For a circular orbit of radius <InlineMath>{`r`}</InlineMath>:</p>
         <MathBlock>{`v_{\\text{circ}} = \\sqrt{\\frac{GM}{r}}`}</MathBlock>
-        <p>This is <MathInline>{`1/\\sqrt{2}`}</MathInline> times the escape velocity at the same radius.</p>
+        <p>This is <InlineMath>{`1/\\sqrt{2}`}</InlineMath> times the escape velocity at the same radius.</p>
       </Callout>
 
       <Callout type="example" title="Low Earth Orbit">
         <p>
-          For a satellite at altitude 400 km above Earth (<MathInline>{`r \\approx 6.77 \\times 10^6`}</MathInline> m):
+          For a satellite at altitude 400 km above Earth (<InlineMath>{`r \\approx 6.77 \\times 10^6`}</InlineMath> m):
         </p>
         <MathBlock>{`v_{\\text{circ}} = \\sqrt{\\frac{3.99 \\times 10^{14}}{6.77 \\times 10^6}} \\approx 7.67 \\text{ km/s}`}</MathBlock>
         <MathBlock>{`T = \\frac{2\\pi r}{v} \\approx 92.4 \\text{ minutes}`}</MathBlock>
@@ -251,18 +251,18 @@ export default function Section88() {
         <p><strong>Kepler's Laws:</strong></p>
         <ol className="list-decimal pl-6 space-y-1">
           <li>Orbits are ellipses with Sun at one focus</li>
-          <li>Equal areas in equal times: <MathInline>{`dA/dt = h/2 = \\text{const}`}</MathInline></li>
-          <li><MathInline>{`T^2 = 4\\pi^2 a^3/(GM)`}</MathInline></li>
+          <li>Equal areas in equal times: <InlineMath>{`dA/dt = h/2 = \\text{const}`}</InlineMath></li>
+          <li><InlineMath>{`T^2 = 4\\pi^2 a^3/(GM)`}</InlineMath></li>
         </ol>
 
         <p className="mt-4"><strong>Orbital Mechanics:</strong></p>
         <ul className="list-disc pl-6 space-y-1">
-          <li>Angular momentum: <MathInline>{`\\mathbf{h} = \\mathbf{r} \\times \\mathbf{v}`}</MathInline> (conserved)</li>
-          <li>Orbit equation: <MathInline>{`r = \\frac{h^2/GM}{1 + e\\cos\\theta}`}</MathInline></li>
-          <li>Energy: <MathInline>{`E = -GM/(2a)`}</MathInline></li>
-          <li>Vis-viva: <MathInline>{`v^2 = GM(2/r - 1/a)`}</MathInline></li>
-          <li>Escape velocity: <MathInline>{`v_{\\text{esc}} = \\sqrt{2GM/r}`}</MathInline></li>
-          <li>Circular velocity: <MathInline>{`v_{\\text{circ}} = \\sqrt{GM/r}`}</MathInline></li>
+          <li>Angular momentum: <InlineMath>{`\\mathbf{h} = \\mathbf{r} \\times \\mathbf{v}`}</InlineMath> (conserved)</li>
+          <li>Orbit equation: <InlineMath>{`r = \\frac{h^2/GM}{1 + e\\cos\\theta}`}</InlineMath></li>
+          <li>Energy: <InlineMath>{`E = -GM/(2a)`}</InlineMath></li>
+          <li>Vis-viva: <InlineMath>{`v^2 = GM(2/r - 1/a)`}</InlineMath></li>
+          <li>Escape velocity: <InlineMath>{`v_{\\text{esc}} = \\sqrt{2GM/r}`}</InlineMath></li>
+          <li>Circular velocity: <InlineMath>{`v_{\\text{circ}} = \\sqrt{GM/r}`}</InlineMath></li>
         </ul>
       </Callout>
     </LessonLayout>

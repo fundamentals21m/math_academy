@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section07Quiz } from '@/data/quizzes';
@@ -11,21 +11,21 @@ export default function Section07() {
       <h2>Counting Numbers with Inverses</h2>
 
       <p>
-        Euler's totient function, denoted <Math>{'\\varphi(n)'}</Math> (phi of n), counts 
+        Euler's totient function, denoted <InlineMath>{'\\varphi(n)'}</InlineMath> (phi of n), counts 
         how many integers from 1 to n are coprime to n. This seemingly simple counting 
         function turns out to be absolutely essential for RSA encryption.
       </p>
 
       <Definition title="Euler's Totient Function">
         <p>
-          For a positive integer <Math>n</Math>, the <strong>totient function</strong>{' '}
-          <Math>{'\\varphi(n)'}</Math> is defined as:
+          For a positive integer <InlineMath>n</InlineMath>, the <strong>totient function</strong>{' '}
+          <InlineMath>{'\\varphi(n)'}</InlineMath> is defined as:
         </p>
         <MathBlock>
           {`\\varphi(n) = |\\{k : 1 \\leq k \\leq n \\text{ and } \\gcd(k, n) = 1\\}|`}
         </MathBlock>
         <p className="mt-2">
-          In other words, <Math>{'\\varphi(n)'}</Math> counts how many integers in the 
+          In other words, <InlineMath>{'\\varphi(n)'}</InlineMath> counts how many integers in the 
           range [1, n] have a modular inverse modulo n.
         </p>
       </Definition>
@@ -83,7 +83,7 @@ export default function Section07() {
           </div>
         </div>
         <p className="mt-4">
-          The coprime numbers are: 1, 5, 7, 11. So <Math>{'\\varphi(12) = 4'}</Math>.
+          The coprime numbers are: 1, 5, 7, 11. So <InlineMath>{'\\varphi(12) = 4'}</InlineMath>.
         </p>
       </Example>
 
@@ -148,12 +148,12 @@ export default function Section07() {
         proof={
           <>
             <p>
-              Let <Math>{'\\{r_1, r_2, \\ldots, r_{\\varphi(n)}\\}'}</Math> be the complete 
+              Let <InlineMath>{'\\{r_1, r_2, \\ldots, r_{\\varphi(n)}\\}'}</InlineMath> be the complete 
               set of residues coprime to n (called a reduced residue system).
             </p>
             <p className="mt-2">
-              Since <Math>{'\\gcd(a, n) = 1'}</Math>, multiplying each <Math>{'r_i'}</Math> by{' '}
-              <Math>a</Math> permutes this set: <Math>{'\\{ar_1, ar_2, \\ldots, ar_{\\varphi(n)}\\}'}</Math>{' '}
+              Since <InlineMath>{'\\gcd(a, n) = 1'}</InlineMath>, multiplying each <InlineMath>{'r_i'}</InlineMath> by{' '}
+              <InlineMath>a</InlineMath> permutes this set: <InlineMath>{'\\{ar_1, ar_2, \\ldots, ar_{\\varphi(n)}\\}'}</InlineMath>{' '}
               is the same set (mod n), just reordered.
             </p>
             <p className="mt-2">
@@ -169,7 +169,7 @@ export default function Section07() {
               {`a^{\\varphi(n)} \\cdot (r_1 r_2 \\cdots r_{\\varphi(n)}) \\equiv r_1 r_2 \\cdots r_{\\varphi(n)} \\pmod{n}`}
             </MathBlock>
             <p className="mt-2">
-              Since each <Math>{'r_i'}</Math> is coprime to n, their product is also coprime 
+              Since each <InlineMath>{'r_i'}</InlineMath> is coprime to n, their product is also coprime 
               to n and has an inverse. Multiply both sides by this inverse:
             </p>
             <MathBlock>
@@ -179,7 +179,7 @@ export default function Section07() {
         }
       >
         <p>
-          If <Math>{'\\gcd(a, n) = 1'}</Math>, then:
+          If <InlineMath>{'\\gcd(a, n) = 1'}</InlineMath>, then:
         </p>
         <MathBlock>
           {`a^{\\varphi(n)} \\equiv 1 \\pmod{n}`}
@@ -188,52 +188,52 @@ export default function Section07() {
 
       <Example title="Euler's Theorem in Action">
         <p>
-          Let's verify with <Math>a = 3</Math> and <Math>n = 10</Math>:
+          Let's verify with <InlineMath>a = 3</InlineMath> and <InlineMath>n = 10</InlineMath>:
         </p>
         <div className="mt-4 space-y-2">
           <div className="p-3 bg-dark-800/50 rounded-lg">
-            <Math>{'\\varphi(10) = \\varphi(2 \\times 5) = (2-1)(5-1) = 4'}</Math>
+            <InlineMath>{'\\varphi(10) = \\varphi(2 \\times 5) = (2-1)(5-1) = 4'}</InlineMath>
           </div>
           <div className="p-3 bg-dark-800/50 rounded-lg">
-            <Math>{'3^4 = 81 = 8 \\times 10 + 1 \\equiv 1 \\pmod{10}'}</Math> ✓
+            <InlineMath>{'3^4 = 81 = 8 \\times 10 + 1 \\equiv 1 \\pmod{10}'}</InlineMath> ✓
           </div>
         </div>
       </Example>
 
       <Theorem title="Fermat's Little Theorem (Special Case)">
         <p>
-          When <Math>n = p</Math> is prime, we have <Math>{'\\varphi(p) = p - 1'}</Math>, 
+          When <InlineMath>n = p</InlineMath> is prime, we have <InlineMath>{'\\varphi(p) = p - 1'}</InlineMath>, 
           so Euler's Theorem becomes:
         </p>
         <MathBlock>
           {`a^{p-1} \\equiv 1 \\pmod{p}`}
         </MathBlock>
         <p className="mt-2">
-          Equivalently: <Math>{'a^p \\equiv a \\pmod{p}'}</Math> for any <Math>a</Math>.
+          Equivalently: <InlineMath>{'a^p \\equiv a \\pmod{p}'}</InlineMath> for any <InlineMath>a</InlineMath>.
         </p>
       </Theorem>
 
       <Callout type="info">
         <strong>Why This Matters for RSA:</strong>
         <p className="mt-2">
-          In RSA, we encrypt message <Math>m</Math> to get ciphertext <Math>{'c = m^e \\mod n'}</Math>, 
-          where <Math>{'n = pq'}</Math>. To decrypt, we need <Math>{'c^d = m'}</Math>.
+          In RSA, we encrypt message <InlineMath>m</InlineMath> to get ciphertext <InlineMath>{'c = m^e \\mod n'}</InlineMath>, 
+          where <InlineMath>{'n = pq'}</InlineMath>. To decrypt, we need <InlineMath>{'c^d = m'}</InlineMath>.
         </p>
         <p className="mt-2">
-          By Euler's Theorem, if <Math>{'ed \\equiv 1 \\pmod{\\varphi(n)}'}</Math>, then:
+          By Euler's Theorem, if <InlineMath>{'ed \\equiv 1 \\pmod{\\varphi(n)}'}</InlineMath>, then:
         </p>
         <MathBlock>
           {`c^d = m^{ed} = m^{1 + k\\varphi(n)} = m \\cdot (m^{\\varphi(n)})^k \\equiv m \\cdot 1^k = m \\pmod{n}`}
         </MathBlock>
         <p className="mt-2">
-          This is why computing <Math>{'\\varphi(n) = (p-1)(q-1)'}</Math> is essential for 
+          This is why computing <InlineMath>{'\\varphi(n) = (p-1)(q-1)'}</InlineMath> is essential for 
           generating RSA keys!
         </p>
       </Callout>
 
       <Callout type="success">
         <strong>Coming Up:</strong> We'll learn how to efficiently compute{' '}
-        <Math>{'a^{huge} \\mod n'}</Math> using the square-and-multiply algorithm—essential 
+        <InlineMath>{'a^{huge} \\mod n'}</InlineMath> using the square-and-multiply algorithm—essential 
         for practical RSA encryption.
       </Callout>
 

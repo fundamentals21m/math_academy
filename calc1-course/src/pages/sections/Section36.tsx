@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section36() {
   return (
@@ -8,8 +8,8 @@ export default function Section36() {
       <p>
         The first fundamental theorem told us that differentiating an indefinite integral
         gives back the original function. Now we explore the reverse question: if we know
-        a function whose derivative is <MathInline>{`f`}</MathInline>, can we use it to evaluate
-        integrals of <MathInline>{`f`}</MathInline>?
+        a function whose derivative is <InlineMath>{`f`}</InlineMath>, can we use it to evaluate
+        integrals of <InlineMath>{`f`}</InlineMath>?
       </p>
 
       <p>
@@ -22,23 +22,23 @@ export default function Section36() {
 
       <Callout type="definition" title="Primitive (Antiderivative)">
         <p>
-          A function <MathInline>{`P`}</MathInline> is called a <strong>primitive</strong> (or
-          <strong> antiderivative</strong>) of <MathInline>{`f`}</MathInline> on an interval
-          <MathInline>{`[a, b]`}</MathInline> if <MathInline>{`P`}</MathInline> is continuous on
-          <MathInline>{`[a, b]`}</MathInline> and if
+          A function <InlineMath>{`P`}</InlineMath> is called a <strong>primitive</strong> (or
+          <strong> antiderivative</strong>) of <InlineMath>{`f`}</InlineMath> on an interval
+          <InlineMath>{`[a, b]`}</InlineMath> if <InlineMath>{`P`}</InlineMath> is continuous on
+          <InlineMath>{`[a, b]`}</InlineMath> and if
         </p>
         <MathBlock>{`P'(x) = f(x)`}</MathBlock>
         <p>
-          for all <MathInline>{`x`}</MathInline> in the open interval <MathInline>{`(a, b)`}</MathInline>.
+          for all <InlineMath>{`x`}</InlineMath> in the open interval <InlineMath>{`(a, b)`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="Primitives Differ by Constants">
         <p>
-          If <MathInline>{`P`}</MathInline> is a primitive of <MathInline>{`f`}</MathInline>, then so is
-          <MathInline>{`P + C`}</MathInline> for any constant <MathInline>{`C`}</MathInline>. Conversely,
-          if <MathInline>{`P`}</MathInline> and <MathInline>{`Q`}</MathInline> are both primitives of
-          <MathInline>{`f`}</MathInline> on an interval, then they differ by a constant:
+          If <InlineMath>{`P`}</InlineMath> is a primitive of <InlineMath>{`f`}</InlineMath>, then so is
+          <InlineMath>{`P + C`}</InlineMath> for any constant <InlineMath>{`C`}</InlineMath>. Conversely,
+          if <InlineMath>{`P`}</InlineMath> and <InlineMath>{`Q`}</InlineMath> are both primitives of
+          <InlineMath>{`f`}</InlineMath> on an interval, then they differ by a constant:
         </p>
         <MathBlock>{`Q(x) - P(x) = C \\quad \\text{for all } x \\text{ in the interval.}`}</MathBlock>
         <p>
@@ -51,9 +51,9 @@ export default function Section36() {
 
       <Callout type="theorem" title="Theorem 5.3 (Second Fundamental Theorem of Calculus)">
         <p>
-          Assume <MathInline>{`f`}</MathInline> is integrable on <MathInline>{`[a, b]`}</MathInline> and
-          let <MathInline>{`P`}</MathInline> be a primitive of <MathInline>{`f`}</MathInline> on
-          <MathInline>{`[a, b]`}</MathInline>. Then we have:
+          Assume <InlineMath>{`f`}</InlineMath> is integrable on <InlineMath>{`[a, b]`}</InlineMath> and
+          let <InlineMath>{`P`}</InlineMath> be a primitive of <InlineMath>{`f`}</InlineMath> on
+          <InlineMath>{`[a, b]`}</InlineMath>. Then we have:
         </p>
         <MathBlock>{`\\int_a^b f(x) \\, dx = P(b) - P(a).`}</MathBlock>
       </Callout>
@@ -74,27 +74,27 @@ export default function Section36() {
 
       <Callout type="info" title="Proof">
         <p>
-          Since <MathInline>{`f`}</MathInline> is integrable, we can define the indefinite integral:
+          Since <InlineMath>{`f`}</InlineMath> is integrable, we can define the indefinite integral:
         </p>
         <MathBlock>{`A(x) = \\int_a^x f(t) \\, dt.`}</MathBlock>
         <p>
-          By the first fundamental theorem, <MathInline>{`A'(x) = f(x)`}</MathInline> at points where
-          <MathInline>{`f`}</MathInline> is continuous. Since <MathInline>{`P'(x) = f(x)`}</MathInline> as well,
+          By the first fundamental theorem, <InlineMath>{`A'(x) = f(x)`}</InlineMath> at points where
+          <InlineMath>{`f`}</InlineMath> is continuous. Since <InlineMath>{`P'(x) = f(x)`}</InlineMath> as well,
           we have:
         </p>
         <MathBlock>{`A'(x) = P'(x)`}</MathBlock>
         <p>
-          wherever <MathInline>{`f`}</MathInline> is continuous. This means
-          <MathInline>{`A(x) - P(x)`}</MathInline> has derivative zero at such points. By a theorem
-          from differential calculus, this implies <MathInline>{`A(x) - P(x) = C`}</MathInline> for
-          some constant <MathInline>{`C`}</MathInline>.
+          wherever <InlineMath>{`f`}</InlineMath> is continuous. This means
+          <InlineMath>{`A(x) - P(x)`}</InlineMath> has derivative zero at such points. By a theorem
+          from differential calculus, this implies <InlineMath>{`A(x) - P(x) = C`}</InlineMath> for
+          some constant <InlineMath>{`C`}</InlineMath>.
         </p>
         <p>
-          Setting <MathInline>{`x = a`}</MathInline>:
+          Setting <InlineMath>{`x = a`}</InlineMath>:
         </p>
         <MathBlock>{`A(a) - P(a) = C \\implies 0 - P(a) = C \\implies C = -P(a).`}</MathBlock>
         <p>
-          Therefore <MathInline>{`A(x) = P(x) - P(a)`}</MathInline>. Setting <MathInline>{`x = b`}</MathInline>:
+          Therefore <InlineMath>{`A(x) = P(x) - P(a)`}</InlineMath>. Setting <InlineMath>{`x = b`}</InlineMath>:
         </p>
         <MathBlock>{`\\int_a^b f(t) \\, dt = A(b) = P(b) - P(a).`}</MathBlock>
       </Callout>
@@ -103,7 +103,7 @@ export default function Section36() {
 
       <Callout type="info" title="Evaluation Notation">
         <p>
-          The difference <MathInline>{`P(b) - P(a)`}</MathInline> is often written using
+          The difference <InlineMath>{`P(b) - P(a)`}</InlineMath> is often written using
           bracket notation:
         </p>
         <MathBlock>{`P(x) \\Big|_a^b = P(b) - P(a)`}</MathBlock>
@@ -121,26 +121,26 @@ export default function Section36() {
 
       <Callout type="example" title="Example 1: Integration of Powers">
         <p>
-          Evaluate <MathInline>{`\\int_a^b x^n \\, dx`}</MathInline> for <MathInline>{`n = 0, 1, 2, \\ldots`}</MathInline>
+          Evaluate <InlineMath>{`\\int_a^b x^n \\, dx`}</InlineMath> for <InlineMath>{`n = 0, 1, 2, \\ldots`}</InlineMath>
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          A primitive of <MathInline>{`f(x) = x^n`}</MathInline> is:
+          A primitive of <InlineMath>{`f(x) = x^n`}</InlineMath> is:
         </p>
         <MathBlock>{`P(x) = \\frac{x^{n+1}}{n+1}`}</MathBlock>
         <p>
-          since <MathInline>{`P'(x) = x^n`}</MathInline>. By the second fundamental theorem:
+          since <InlineMath>{`P'(x) = x^n`}</InlineMath>. By the second fundamental theorem:
         </p>
         <MathBlock>{`\\int_a^b x^n \\, dx = \\frac{x^{n+1}}{n+1} \\Big|_a^b = \\frac{b^{n+1} - a^{n+1}}{n+1}.`}</MathBlock>
         <p>
-          This formula also holds for all rational exponents <MathInline>{`n \\neq -1`}</MathInline>,
-          provided the integrand is defined on <MathInline>{`[a, b]`}</MathInline>.
+          This formula also holds for all rational exponents <InlineMath>{`n \\neq -1`}</InlineMath>,
+          provided the integrand is defined on <InlineMath>{`[a, b]`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 2: Integration of Sine and Cosine">
         <p>
-          Since <MathInline>{`(\\sin x)' = \\cos x`}</MathInline> and <MathInline>{`(\\cos x)' = -\\sin x`}</MathInline>:
+          Since <InlineMath>{`(\\sin x)' = \\cos x`}</InlineMath> and <InlineMath>{`(\\cos x)' = -\\sin x`}</InlineMath>:
         </p>
         <MathBlock>{`\\int_a^b \\cos x \\, dx = \\sin x \\Big|_a^b = \\sin b - \\sin a`}</MathBlock>
         <MathBlock>{`\\int_a^b \\sin x \\, dx = -\\cos x \\Big|_a^b = \\cos a - \\cos b`}</MathBlock>
@@ -152,11 +152,11 @@ export default function Section36() {
 
       <Callout type="example" title="Example 3: Square Root">
         <p>
-          Evaluate <MathInline>{`\\int_a^b \\frac{1}{\\sqrt{x}} \\, dx`}</MathInline> for <MathInline>{`0 < a < b`}</MathInline>.
+          Evaluate <InlineMath>{`\\int_a^b \\frac{1}{\\sqrt{x}} \\, dx`}</InlineMath> for <InlineMath>{`0 < a < b`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Write <MathInline>{`1/\\sqrt{x} = x^{-1/2}`}</MathInline>. With <MathInline>{`n = -1/2`}</MathInline>:
+          Write <InlineMath>{`1/\\sqrt{x} = x^{-1/2}`}</InlineMath>. With <InlineMath>{`n = -1/2`}</InlineMath>:
         </p>
         <MathBlock>{`\\int_a^b x^{-1/2} \\, dx = \\frac{x^{1/2}}{1/2} \\Big|_a^b = 2\\sqrt{x} \\Big|_a^b = 2(\\sqrt{b} - \\sqrt{a}).`}</MathBlock>
       </Callout>
@@ -165,16 +165,16 @@ export default function Section36() {
 
       <Callout type="info" title="The Exceptional Case">
         <p>
-          The power rule <MathInline>{`\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C`}</MathInline> fails
-          when <MathInline>{`n = -1`}</MathInline> because the denominator becomes zero. Nevertheless,
-          there exists a function <MathInline>{`P`}</MathInline> whose derivative is
-          <MathInline>{`P'(x) = 1/x`}</MathInline>. We can exhibit such a function using an indefinite
+          The power rule <InlineMath>{`\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C`}</InlineMath> fails
+          when <InlineMath>{`n = -1`}</InlineMath> because the denominator becomes zero. Nevertheless,
+          there exists a function <InlineMath>{`P`}</InlineMath> whose derivative is
+          <InlineMath>{`P'(x) = 1/x`}</InlineMath>. We can exhibit such a function using an indefinite
           integral:
         </p>
         <MathBlock>{`P(x) = \\int_1^x \\frac{1}{t} \\, dt \\quad \\text{for } x > 0.`}</MathBlock>
         <p>
-          This integral exists because <MathInline>{`1/t`}</MathInline> is monotonic on
-          <MathInline>{`[1, x]`}</MathInline>. The function so defined is called the
+          This integral exists because <InlineMath>{`1/t`}</InlineMath> is monotonic on
+          <InlineMath>{`[1, x]`}</InlineMath>. The function so defined is called the
           <strong> natural logarithm</strong>. Its properties are developed in the next chapter.
         </p>
       </Callout>
@@ -183,13 +183,13 @@ export default function Section36() {
 
       <Callout type="definition" title="Indefinite Integral Notation">
         <p>
-          Leibniz introduced the symbol <MathInline>{`\\int f(x) \\, dx`}</MathInline> (without limits)
-          to denote a general primitive of <MathInline>{`f`}</MathInline>. The equation:
+          Leibniz introduced the symbol <InlineMath>{`\\int f(x) \\, dx`}</InlineMath> (without limits)
+          to denote a general primitive of <InlineMath>{`f`}</InlineMath>. The equation:
         </p>
         <MathBlock>{`\\int f(x) \\, dx = P(x) + C`}</MathBlock>
         <p>
-          is an alternative way of writing <MathInline>{`P'(x) = f(x)`}</MathInline>. The symbol
-          <MathInline>{`C`}</MathInline> represents an arbitrary constant, so the equation really
+          is an alternative way of writing <InlineMath>{`P'(x) = f(x)`}</InlineMath>. The symbol
+          <InlineMath>{`C`}</InlineMath> represents an arbitrary constant, so the equation really
           describes a whole family of functions.
         </p>
       </Callout>
@@ -200,7 +200,7 @@ export default function Section36() {
         </p>
         <MathBlock>{`\\int f(x) \\, dx = \\int_c^x f(t) \\, dt + C`}</MathBlock>
         <p>
-          meaning that every primitive of <MathInline>{`f`}</MathInline> is an indefinite integral
+          meaning that every primitive of <InlineMath>{`f`}</InlineMath> is an indefinite integral
           plus a constant.
         </p>
         <p>
@@ -217,27 +217,27 @@ export default function Section36() {
 
       <Callout type="info" title="Properties from the Second Fundamental Theorem">
         <p>
-          If <MathInline>{`f`}</MathInline> has a continuous derivative <MathInline>{`f'`}</MathInline> on
-          an open interval <MathInline>{`I`}</MathInline>, the second fundamental theorem states:
+          If <InlineMath>{`f`}</InlineMath> has a continuous derivative <InlineMath>{`f'`}</InlineMath> on
+          an open interval <InlineMath>{`I`}</InlineMath>, the second fundamental theorem states:
         </p>
         <MathBlock>{`f(x) = f(c) + \\int_c^x f'(t) \\, dt`}</MathBlock>
         <p>
-          for every choice of <MathInline>{`x`}</MathInline> and <MathInline>{`c`}</MathInline> in
-          <MathInline>{`I`}</MathInline>. This lets us deduce properties of <MathInline>{`f`}</MathInline>
-          from properties of <MathInline>{`f'`}</MathInline>:
+          for every choice of <InlineMath>{`x`}</InlineMath> and <InlineMath>{`c`}</InlineMath> in
+          <InlineMath>{`I`}</InlineMath>. This lets us deduce properties of <InlineMath>{`f`}</InlineMath>
+          from properties of <InlineMath>{`f'`}</InlineMath>:
         </p>
         <ul>
           <li>
-            If <MathInline>{`f' \\geq 0`}</MathInline> on <MathInline>{`I`}</MathInline>, then
-            <MathInline>{`f`}</MathInline> is <strong>increasing</strong> on <MathInline>{`I`}</MathInline>.
+            If <InlineMath>{`f' \\geq 0`}</InlineMath> on <InlineMath>{`I`}</InlineMath>, then
+            <InlineMath>{`f`}</InlineMath> is <strong>increasing</strong> on <InlineMath>{`I`}</InlineMath>.
           </li>
           <li>
-            If <MathInline>{`f'`}</MathInline> is <strong>increasing</strong> on <MathInline>{`I`}</MathInline>,
-            then <MathInline>{`f`}</MathInline> is <strong>convex</strong> on <MathInline>{`I`}</MathInline>.
+            If <InlineMath>{`f'`}</InlineMath> is <strong>increasing</strong> on <InlineMath>{`I`}</InlineMath>,
+            then <InlineMath>{`f`}</InlineMath> is <strong>convex</strong> on <InlineMath>{`I`}</InlineMath>.
           </li>
           <li>
-            If <MathInline>{`f'`}</MathInline> is <strong>decreasing</strong> on <MathInline>{`I`}</MathInline>,
-            then <MathInline>{`f`}</MathInline> is <strong>concave</strong> on <MathInline>{`I`}</MathInline>.
+            If <InlineMath>{`f'`}</InlineMath> is <strong>decreasing</strong> on <InlineMath>{`I`}</InlineMath>,
+            then <InlineMath>{`f`}</InlineMath> is <strong>concave</strong> on <InlineMath>{`I`}</InlineMath>.
           </li>
         </ul>
       </Callout>
@@ -284,17 +284,17 @@ export default function Section36() {
       <h2>Summary</h2>
       <ul>
         <li>
-          A <strong>primitive</strong> of <MathInline>{`f`}</MathInline> is a function
-          <MathInline>{`P`}</MathInline> with <MathInline>{`P'(x) = f(x)`}</MathInline>.
+          A <strong>primitive</strong> of <InlineMath>{`f`}</InlineMath> is a function
+          <InlineMath>{`P`}</InlineMath> with <InlineMath>{`P'(x) = f(x)`}</InlineMath>.
         </li>
         <li>
-          <strong>Second Fundamental Theorem:</strong> If <MathInline>{`P`}</MathInline> is a
-          primitive of <MathInline>{`f`}</MathInline>, then
-          <MathInline>{`\\int_a^b f(x) \\, dx = P(b) - P(a)`}</MathInline>.
+          <strong>Second Fundamental Theorem:</strong> If <InlineMath>{`P`}</InlineMath> is a
+          primitive of <InlineMath>{`f`}</InlineMath>, then
+          <InlineMath>{`\\int_a^b f(x) \\, dx = P(b) - P(a)`}</InlineMath>.
         </li>
         <li>
-          The <strong>Leibniz notation</strong> <MathInline>{`\\int f(x) \\, dx = P(x) + C`}</MathInline>
-          represents the general primitive of <MathInline>{`f`}</MathInline>.
+          The <strong>Leibniz notation</strong> <InlineMath>{`\\int f(x) \\, dx = P(x) + C`}</InlineMath>
+          represents the general primitive of <InlineMath>{`f`}</InlineMath>.
         </li>
         <li>
           The fundamental theorems show that <strong>differentiation and integration are
@@ -304,7 +304,7 @@ export default function Section36() {
           Every differentiation formula yields an integration formula when read in reverse.
         </li>
         <li>
-          The case <MathInline>{`n = -1`}</MathInline> (integrating <MathInline>{`1/x`}</MathInline>)
+          The case <InlineMath>{`n = -1`}</InlineMath> (integrating <InlineMath>{`1/x`}</InlineMath>)
           leads to the <strong>natural logarithm</strong>.
         </li>
       </ul>

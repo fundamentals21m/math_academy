@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
-import { MathBlock, Math as MathInline } from '../../components/common/MathBlock';
+import { MathBlock, InlineMath } from '../../components/common/MathBlock';
 
 // Pascal's Triangle Interactive
 function PascalsTriangle() {
@@ -140,7 +140,7 @@ function PascalsTriangle() {
             <li>• Row sums: powers of 2</li>
             <li>• Diagonal sums: Fibonacci numbers</li>
             <li>• Even numbers form Sierpiński triangle</li>
-            <li>• Entry = <MathInline>{'\\binom{n}{k} = \\frac{n!}{k!(n-k)!}'}</MathInline></li>
+            <li>• Entry = <InlineMath>{'\\binom{n}{k} = \\frac{n!}{k!(n-k)!}'}</InlineMath></li>
           </ul>
         </div>
       </div>
@@ -339,7 +339,7 @@ function CoinFlipProbability() {
         </h5>
         <div className="space-y-2 text-sm">
           <p className="text-dark-300">
-            Ways to get {targetHeads} heads: <MathInline>{'\\binom{' + flips + '}{' + targetHeads + '}'}</MathInline> = <span className="text-emerald-400 font-bold">{ways}</span>
+            Ways to get {targetHeads} heads: <InlineMath>{'\\binom{' + flips + '}{' + targetHeads + '}'}</InlineMath> = <span className="text-emerald-400 font-bold">{ways}</span>
           </p>
           <p className="text-dark-300">
             Total outcomes: 2^{flips} = <span className="text-amber-400">{totalOutcomes}</span>

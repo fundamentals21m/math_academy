@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline } from '../../components/common/MathBlock';
+import { InlineMath } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 
 export default function Section00() {
@@ -44,14 +44,14 @@ export default function Section00() {
           <CardHeader title="Geometric Optimization" />
           <p className="text-sm text-dark-300">
             What is the radius of the smallest circular disk that can cover every isosceles
-            triangle of a given perimeter <MathInline>{'L'}</MathInline>?
+            triangle of a given perimeter <InlineMath>{'L'}</InlineMath>?
           </p>
         </Card>
         <Card>
           <CardHeader title="Volume Calculation" />
           <p className="text-sm text-dark-300">
-            What volume of material is removed from a solid sphere of radius <MathInline>{'2r'}</MathInline> if
-            a hole of radius <MathInline>{'r'}</MathInline> is drilled through the center?
+            What volume of material is removed from a solid sphere of radius <InlineMath>{'2r'}</InlineMath> if
+            a hole of radius <InlineMath>{'r'}</InlineMath> is drilled through the center?
           </p>
         </Card>
         <Card>
@@ -76,7 +76,7 @@ export default function Section00() {
         <Callout type="definition">
           <p className="font-semibold text-lg mb-2">Problem 1: The Area Problem</p>
           <p>
-            Given a curve <MathInline>{'C'}</MathInline> above a horizontal base line,
+            Given a curve <InlineMath>{'C'}</InlineMath> above a horizontal base line,
             <strong> assign a number which measures the area</strong> of the region below
             the curve and above the base.
           </p>
@@ -88,7 +88,7 @@ export default function Section00() {
         <Callout type="definition">
           <p className="font-semibold text-lg mb-2">Problem 2: The Tangent Problem</p>
           <p>
-            Given a curve <MathInline>{'C'}</MathInline> and a line drawn tangent to it,
+            Given a curve <InlineMath>{'C'}</InlineMath> and a line drawn tangent to it,
             <strong> assign a number which measures the steepness</strong> of this tangent line.
           </p>
           <p className="text-sm text-dark-400 mt-2">

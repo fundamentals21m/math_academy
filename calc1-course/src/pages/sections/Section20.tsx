@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section20() {
   return (
@@ -18,27 +18,27 @@ export default function Section20() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 3.1 (Algebraic Properties of Limits)</p>
         <p className="mb-3">
-          Let <MathInline>{'f'}</MathInline> and <MathInline>{'g'}</MathInline> be functions such
-          that <MathInline>{'\\lim_{x \\to p} f(x) = A'}</MathInline> and{' '}
-          <MathInline>{'\\lim_{x \\to p} g(x) = B'}</MathInline>. Then:
+          Let <InlineMath>{'f'}</InlineMath> and <InlineMath>{'g'}</InlineMath> be functions such
+          that <InlineMath>{'\\lim_{x \\to p} f(x) = A'}</InlineMath> and{' '}
+          <InlineMath>{'\\lim_{x \\to p} g(x) = B'}</InlineMath>. Then:
         </p>
         <ol className="list-decimal list-inside space-y-2">
           <li>
             <strong>Sum:</strong>{' '}
-            <MathInline>{'\\lim_{x \\to p} [f(x) + g(x)] = A + B'}</MathInline>
+            <InlineMath>{'\\lim_{x \\to p} [f(x) + g(x)] = A + B'}</InlineMath>
           </li>
           <li>
             <strong>Difference:</strong>{' '}
-            <MathInline>{'\\lim_{x \\to p} [f(x) - g(x)] = A - B'}</MathInline>
+            <InlineMath>{'\\lim_{x \\to p} [f(x) - g(x)] = A - B'}</InlineMath>
           </li>
           <li>
             <strong>Product:</strong>{' '}
-            <MathInline>{'\\lim_{x \\to p} [f(x) \\cdot g(x)] = A \\cdot B'}</MathInline>
+            <InlineMath>{'\\lim_{x \\to p} [f(x) \\cdot g(x)] = A \\cdot B'}</InlineMath>
           </li>
           <li>
             <strong>Quotient:</strong>{' '}
-            <MathInline>{'\\lim_{x \\to p} \\frac{f(x)}{g(x)} = \\frac{A}{B}'}</MathInline>{' '}
-            if <MathInline>{'B \\neq 0'}</MathInline>
+            <InlineMath>{'\\lim_{x \\to p} \\frac{f(x)}{g(x)} = \\frac{A}{B}'}</InlineMath>{' '}
+            if <InlineMath>{'B \\neq 0'}</InlineMath>
           </li>
         </ol>
       </Callout>
@@ -46,8 +46,8 @@ export default function Section20() {
       <Callout type="info">
         <p className="font-semibold mb-2">Important Special Case</p>
         <p>
-          When <MathInline>{'f'}</MathInline> is constant, say{' '}
-          <MathInline>{'f(x) = A'}</MathInline> for all <MathInline>{'x'}</MathInline>, the
+          When <InlineMath>{'f'}</InlineMath> is constant, say{' '}
+          <InlineMath>{'f(x) = A'}</InlineMath> for all <InlineMath>{'x'}</InlineMath>, the
           product rule becomes:
         </p>
         <MathBlock>{'\\lim_{x \\to p} A \\cdot g(x) = A \\cdot B'}</MathBlock>
@@ -71,35 +71,35 @@ export default function Section20() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 3.2 (Continuity of Algebraic Combinations)</p>
         <p>
-          Let <MathInline>{'f'}</MathInline> and <MathInline>{'g'}</MathInline> be continuous at
-          a point <MathInline>{'p'}</MathInline>. Then:
+          Let <InlineMath>{'f'}</InlineMath> and <InlineMath>{'g'}</InlineMath> be continuous at
+          a point <InlineMath>{'p'}</InlineMath>. Then:
         </p>
         <ul className="list-disc list-inside space-y-1 mt-2">
           <li>
-            The sum <MathInline>{'f + g'}</MathInline> is continuous at{' '}
-            <MathInline>{'p'}</MathInline>
+            The sum <InlineMath>{'f + g'}</InlineMath> is continuous at{' '}
+            <InlineMath>{'p'}</InlineMath>
           </li>
           <li>
-            The difference <MathInline>{'f - g'}</MathInline> is continuous at{' '}
-            <MathInline>{'p'}</MathInline>
+            The difference <InlineMath>{'f - g'}</InlineMath> is continuous at{' '}
+            <InlineMath>{'p'}</InlineMath>
           </li>
           <li>
-            The product <MathInline>{'f \\cdot g'}</MathInline> is continuous at{' '}
-            <MathInline>{'p'}</MathInline>
+            The product <InlineMath>{'f \\cdot g'}</InlineMath> is continuous at{' '}
+            <InlineMath>{'p'}</InlineMath>
           </li>
           <li>
-            The quotient <MathInline>{'f/g'}</MathInline> is continuous at{' '}
-            <MathInline>{'p'}</MathInline> if <MathInline>{'g(p) \\neq 0'}</MathInline>
+            The quotient <InlineMath>{'f/g'}</InlineMath> is continuous at{' '}
+            <InlineMath>{'p'}</InlineMath> if <InlineMath>{'g(p) \\neq 0'}</InlineMath>
           </li>
         </ul>
       </Callout>
 
       <p className="text-dark-200 mb-4">
-        <strong>Proof:</strong> Since <MathInline>{'f'}</MathInline> and{' '}
-        <MathInline>{'g'}</MathInline> are continuous at <MathInline>{'p'}</MathInline>, we have{' '}
-        <MathInline>{'\\lim_{x \\to p} f(x) = f(p)'}</MathInline> and{' '}
-        <MathInline>{'\\lim_{x \\to p} g(x) = g(p)'}</MathInline>. Apply Theorem 3.1 with{' '}
-        <MathInline>{'A = f(p)'}</MathInline> and <MathInline>{'B = g(p)'}</MathInline>.
+        <strong>Proof:</strong> Since <InlineMath>{'f'}</InlineMath> and{' '}
+        <InlineMath>{'g'}</InlineMath> are continuous at <InlineMath>{'p'}</InlineMath>, we have{' '}
+        <InlineMath>{'\\lim_{x \\to p} f(x) = f(p)'}</InlineMath> and{' '}
+        <InlineMath>{'\\lim_{x \\to p} g(x) = g(p)'}</InlineMath>. Apply Theorem 3.1 with{' '}
+        <InlineMath>{'A = f(p)'}</InlineMath> and <InlineMath>{'B = g(p)'}</InlineMath>.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Continuity of Polynomials and Rational Functions</h2>
@@ -112,15 +112,15 @@ export default function Section20() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example 1: Continuity of Polynomials</p>
         <p className="mb-2">
-          Taking <MathInline>{'f(x) = g(x) = x'}</MathInline>, the product rule proves that{' '}
-          <MathInline>{'x^2'}</MathInline> is continuous everywhere. By induction, for every
-          real <MathInline>{'c'}</MathInline> and positive integer <MathInline>{'n'}</MathInline>,
-          the function <MathInline>{'f(x) = cx^n'}</MathInline> is continuous for all{' '}
-          <MathInline>{'x'}</MathInline>.
+          Taking <InlineMath>{'f(x) = g(x) = x'}</InlineMath>, the product rule proves that{' '}
+          <InlineMath>{'x^2'}</InlineMath> is continuous everywhere. By induction, for every
+          real <InlineMath>{'c'}</InlineMath> and positive integer <InlineMath>{'n'}</InlineMath>,
+          the function <InlineMath>{'f(x) = cx^n'}</InlineMath> is continuous for all{' '}
+          <InlineMath>{'x'}</InlineMath>.
         </p>
         <p>
           Since sums of continuous functions are continuous, every polynomial{' '}
-          <MathInline>{'p(x) = \\sum_{k=0}^n c_k x^k'}</MathInline> is continuous at all points.
+          <InlineMath>{'p(x) = \\sum_{k=0}^n c_k x^k'}</InlineMath> is continuous at all points.
         </p>
       </Callout>
 
@@ -131,14 +131,14 @@ export default function Section20() {
         </p>
         <MathBlock>{'r(x) = \\frac{p(x)}{q(x)}'}</MathBlock>
         <p className="mt-2 mb-2">
-          The function <MathInline>{'r'}</MathInline> is defined for all real{' '}
-          <MathInline>{'x'}</MathInline> for which{' '}
-          <MathInline>{'q(x) \\neq 0'}</MathInline>. Since quotients of continuous functions are
+          The function <InlineMath>{'r'}</InlineMath> is defined for all real{' '}
+          <InlineMath>{'x'}</InlineMath> for which{' '}
+          <InlineMath>{'q(x) \\neq 0'}</InlineMath>. Since quotients of continuous functions are
           continuous, every rational function is continuous wherever it is defined.
         </p>
         <p>
-          Example: <MathInline>{'r(x) = 1/x'}</MathInline> is continuous everywhere except at{' '}
-          <MathInline>{'x = 0'}</MathInline>, where it fails to be defined.
+          Example: <InlineMath>{'r(x) = 1/x'}</InlineMath> is continuous everywhere except at{' '}
+          <InlineMath>{'x = 0'}</InlineMath>, where it fails to be defined.
         </p>
       </Callout>
 
@@ -152,20 +152,20 @@ export default function Section20() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 3.3 (Squeezing Principle)</p>
         <p className="mb-2">
-          Suppose that <MathInline>{'f(x) \\leq g(x) \\leq h(x)'}</MathInline> for all{' '}
-          <MathInline>{'x \\neq p'}</MathInline> in some neighborhood{' '}
-          <MathInline>{'N(p)'}</MathInline>. Suppose also that:
+          Suppose that <InlineMath>{'f(x) \\leq g(x) \\leq h(x)'}</InlineMath> for all{' '}
+          <InlineMath>{'x \\neq p'}</InlineMath> in some neighborhood{' '}
+          <InlineMath>{'N(p)'}</InlineMath>. Suppose also that:
         </p>
         <MathBlock>{'\\lim_{x \\to p} f(x) = \\lim_{x \\to p} h(x) = a'}</MathBlock>
         <p className="mt-2">
-          Then <MathInline>{'\\lim_{x \\to p} g(x) = a'}</MathInline> as well.
+          Then <InlineMath>{'\\lim_{x \\to p} g(x) = a'}</InlineMath> as well.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-4">
         The squeezing principle is useful because it is often possible to find squeezing
-        functions <MathInline>{'f'}</MathInline> and <MathInline>{'h'}</MathInline> that are
-        easier to deal with than <MathInline>{'g'}</MathInline>.
+        functions <InlineMath>{'f'}</InlineMath> and <InlineMath>{'h'}</InlineMath> that are
+        easier to deal with than <InlineMath>{'g'}</InlineMath>.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Continuity of Indefinite Integrals</h2>
@@ -173,14 +173,14 @@ export default function Section20() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 3.4 (Continuity of Indefinite Integrals)</p>
         <p className="mb-2">
-          Assume <MathInline>{'f'}</MathInline> is integrable on{' '}
-          <MathInline>{'[a, x]'}</MathInline> for every <MathInline>{'x'}</MathInline> in{' '}
-          <MathInline>{'[a, b]'}</MathInline>, and let:
+          Assume <InlineMath>{'f'}</InlineMath> is integrable on{' '}
+          <InlineMath>{'[a, x]'}</InlineMath> for every <InlineMath>{'x'}</InlineMath> in{' '}
+          <InlineMath>{'[a, b]'}</InlineMath>, and let:
         </p>
         <MathBlock>{'A(x) = \\int_a^x f(t)\\,dt'}</MathBlock>
         <p className="mt-2">
-          Then the indefinite integral <MathInline>{'A'}</MathInline> is continuous at each
-          point of <MathInline>{'[a, b]'}</MathInline>. (At each endpoint we have one-sided
+          Then the indefinite integral <InlineMath>{'A'}</InlineMath> is continuous at each
+          point of <InlineMath>{'[a, b]'}</InlineMath>. (At each endpoint we have one-sided
           continuity.)
         </p>
       </Callout>
@@ -188,23 +188,23 @@ export default function Section20() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Proof Sketch</h3>
 
       <p className="text-dark-200 mb-4">
-        Choose <MathInline>{'p'}</MathInline> in <MathInline>{'[a, b]'}</MathInline>. We have:
+        Choose <InlineMath>{'p'}</InlineMath> in <InlineMath>{'[a, b]'}</InlineMath>. We have:
       </p>
 
       <MathBlock>{'A(x) - A(p) = \\int_p^x f(t)\\,dt'}</MathBlock>
 
       <p className="text-dark-200 mb-4">
-        Since <MathInline>{'f'}</MathInline> is bounded on <MathInline>{'[a, b]'}</MathInline>,
-        there is a constant <MathInline>{'M > 0'}</MathInline> such that{' '}
-        <MathInline>{'-M \\leq f(t) \\leq M'}</MathInline> for all <MathInline>{'t'}</MathInline>.
+        Since <InlineMath>{'f'}</InlineMath> is bounded on <InlineMath>{'[a, b]'}</InlineMath>,
+        there is a constant <InlineMath>{'M > 0'}</InlineMath> such that{' '}
+        <InlineMath>{'-M \\leq f(t) \\leq M'}</InlineMath> for all <InlineMath>{'t'}</InlineMath>.
         Integrating these inequalities gives:
       </p>
 
       <MathBlock>{'-M|x - p| \\leq A(x) - A(p) \\leq M|x - p|'}</MathBlock>
 
       <p className="text-dark-200 mb-4">
-        Letting <MathInline>{'x \\to p'}</MathInline> and applying the squeezing principle, we
-        find <MathInline>{'A(x) \\to A(p)'}</MathInline>.
+        Letting <InlineMath>{'x \\to p'}</InlineMath> and applying the squeezing principle, we
+        find <InlineMath>{'A(x) \\to A(p)'}</InlineMath>.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Continuity of Trigonometric Functions</h2>
@@ -235,7 +235,7 @@ export default function Section20() {
 
       <p className="text-dark-200 mb-4">
         <strong>Proof:</strong> Since the denominator approaches 0 as{' '}
-        <MathInline>{'x \\to 0'}</MathInline>, we cannot apply the quotient theorem directly.
+        <InlineMath>{'x \\to 0'}</InlineMath>, we cannot apply the quotient theorem directly.
         Instead, we use the squeezing principle.
       </p>
 
@@ -246,30 +246,30 @@ export default function Section20() {
       <MathBlock>{'0 < \\cos x < \\frac{\\sin x}{x} < \\frac{1}{\\cos x}'}</MathBlock>
 
       <p className="text-dark-200 mb-4">
-        This is valid for <MathInline>{'0 < |x| < \\frac{\\pi}{2}'}</MathInline>. As{' '}
-        <MathInline>{'x \\to 0'}</MathInline>:
+        This is valid for <InlineMath>{'0 < |x| < \\frac{\\pi}{2}'}</InlineMath>. As{' '}
+        <InlineMath>{'x \\to 0'}</InlineMath>:
       </p>
 
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
-          <MathInline>{'\\cos x \\to 1'}</MathInline> (since cosine is continuous at 0)
+          <InlineMath>{'\\cos x \\to 1'}</InlineMath> (since cosine is continuous at 0)
         </li>
         <li>
-          <MathInline>{'\\frac{1}{\\cos x} \\to 1'}</MathInline>
+          <InlineMath>{'\\frac{1}{\\cos x} \\to 1'}</InlineMath>
         </li>
       </ul>
 
       <p className="text-dark-200 mb-4">
         By the squeezing principle,{' '}
-        <MathInline>{'\\frac{\\sin x}{x} \\to 1'}</MathInline>.
+        <InlineMath>{'\\frac{\\sin x}{x} \\to 1'}</InlineMath>.
       </p>
 
       <Callout type="info">
         <p className="font-semibold mb-2">Removing the Discontinuity</p>
         <p>
-          If we define <MathInline>{'f(x) = (\\sin x)/x'}</MathInline> for{' '}
-          <MathInline>{'x \\neq 0'}</MathInline> and <MathInline>{'f(0) = 1'}</MathInline>,
-          then <MathInline>{'f'}</MathInline> is continuous everywhere.
+          If we define <InlineMath>{'f(x) = (\\sin x)/x'}</InlineMath> for{' '}
+          <InlineMath>{'x \\neq 0'}</InlineMath> and <InlineMath>{'f(0) = 1'}</InlineMath>,
+          then <InlineMath>{'f'}</InlineMath> is continuous everywhere.
         </p>
       </Callout>
 
@@ -283,19 +283,19 @@ export default function Section20() {
         <MathBlock>{'\\int_0^x t^{1/n}\\,dt = \\frac{x^{1+1/n}}{1 + 1/n}'}</MathBlock>
         <p className="mt-2 mb-2">
           Using Theorems 3.4 and 3.1, the function{' '}
-          <MathInline>{'A(x) = x^{1+1/n}'}</MathInline> is continuous for all{' '}
-          <MathInline>{'p > 0'}</MathInline>.
+          <InlineMath>{'A(x) = x^{1+1/n}'}</InlineMath> is continuous for all{' '}
+          <InlineMath>{'p > 0'}</InlineMath>.
         </p>
         <p className="mb-2">
-          Now let <MathInline>{'g(x) = x^{1/n} = A(x)/x'}</MathInline> for{' '}
-          <MathInline>{'x > 0'}</MathInline>. Since <MathInline>{'g'}</MathInline> is a quotient
-          of continuous functions, it is continuous for all <MathInline>{'p > 0'}</MathInline>.
+          Now let <InlineMath>{'g(x) = x^{1/n} = A(x)/x'}</InlineMath> for{' '}
+          <InlineMath>{'x > 0'}</InlineMath>. Since <InlineMath>{'g'}</InlineMath> is a quotient
+          of continuous functions, it is continuous for all <InlineMath>{'p > 0'}</InlineMath>.
         </p>
         <p>
-          More generally, <MathInline>{'f(x) = x^{m/n}'}</MathInline> (where{' '}
-          <MathInline>{'m'}</MathInline> is a positive integer) is a product of continuous
-          functions, hence continuous for all <MathInline>{'p > 0'}</MathInline>. At{' '}
-          <MathInline>{'p = 0'}</MathInline>, we have right-hand continuity.
+          More generally, <InlineMath>{'f(x) = x^{m/n}'}</InlineMath> (where{' '}
+          <InlineMath>{'m'}</InlineMath> is a positive integer) is a product of continuous
+          functions, hence continuous for all <InlineMath>{'p > 0'}</InlineMath>. At{' '}
+          <InlineMath>{'p = 0'}</InlineMath>, we have right-hand continuity.
         </p>
       </Callout>
 
@@ -304,16 +304,16 @@ export default function Section20() {
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
           <strong>Limit of sum:</strong>{' '}
-          <MathInline>{'\\lim (f + g) = \\lim f + \\lim g'}</MathInline>
+          <InlineMath>{'\\lim (f + g) = \\lim f + \\lim g'}</InlineMath>
         </li>
         <li>
           <strong>Limit of product:</strong>{' '}
-          <MathInline>{'\\lim (f \\cdot g) = \\lim f \\cdot \\lim g'}</MathInline>
+          <InlineMath>{'\\lim (f \\cdot g) = \\lim f \\cdot \\lim g'}</InlineMath>
         </li>
         <li>
           <strong>Limit of quotient:</strong>{' '}
-          <MathInline>{'\\lim (f/g) = (\\lim f)/(\\lim g)'}</MathInline> when{' '}
-          <MathInline>{'\\lim g \\neq 0'}</MathInline>
+          <InlineMath>{'\\lim (f/g) = (\\lim f)/(\\lim g)'}</InlineMath> when{' '}
+          <InlineMath>{'\\lim g \\neq 0'}</InlineMath>
         </li>
         <li>
           <strong>Continuity preserved:</strong> Sums, differences, products, and quotients of
@@ -327,16 +327,16 @@ export default function Section20() {
         </li>
         <li>
           <strong>Squeezing principle:</strong> If{' '}
-          <MathInline>{'f \\leq g \\leq h'}</MathInline> and{' '}
-          <MathInline>{'\\lim f = \\lim h = a'}</MathInline>, then{' '}
-          <MathInline>{'\\lim g = a'}</MathInline>
+          <InlineMath>{'f \\leq g \\leq h'}</InlineMath> and{' '}
+          <InlineMath>{'\\lim f = \\lim h = a'}</InlineMath>, then{' '}
+          <InlineMath>{'\\lim g = a'}</InlineMath>
         </li>
         <li>
           <strong>Indefinite integrals:</strong> Always continuous
         </li>
         <li>
           <strong>Key limit:</strong>{' '}
-          <MathInline>{'\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1'}</MathInline>
+          <InlineMath>{'\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1'}</InlineMath>
         </li>
       </ul>
 

@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section02Quiz } from '@/data/quizzes';
 
@@ -13,7 +13,7 @@ export default function Section02() {
       <p>
         A <strong>vector space</strong> is the fundamental structure of linear algebra. It captures
         the essence of what it means to add objects and scale them, abstracting away from the
-        specific setting of arrows in <Math>{`\\mathbb{R}`}^n</Math> to a purely algebraic framework.
+        specific setting of arrows in <InlineMath>{`\\mathbb{R}`}^n</InlineMath> to a purely algebraic framework.
       </p>
 
       <Callout type="info">
@@ -27,49 +27,49 @@ export default function Section02() {
 
       <Definition title="Vector Space">
         <p>
-          A <strong>vector space</strong> over a field <Math>F</Math> is a set <Math>V</Math> together
+          A <strong>vector space</strong> over a field <InlineMath>F</InlineMath> is a set <InlineMath>V</InlineMath> together
           with two operations:
         </p>
         <ul className="list-disc list-inside text-dark-300 my-3">
-          <li><strong>Vector addition:</strong> <Math>+: V \times V \to V</Math></li>
-          <li><strong>Scalar multiplication:</strong> <Math>\cdot: F \times V \to V</Math></li>
+          <li><strong>Vector addition:</strong> <InlineMath>+: V \times V \to V</InlineMath></li>
+          <li><strong>Scalar multiplication:</strong> <InlineMath>\cdot: F \times V \to V</InlineMath></li>
         </ul>
-        <p>satisfying the following axioms for all <Math>u, v, w \in V</Math> and <Math>c, d \in F</Math>:</p>
+        <p>satisfying the following axioms for all <InlineMath>u, v, w \in V</InlineMath> and <InlineMath>c, d \in F</InlineMath>:</p>
         
         <div className="mt-4 space-y-3">
           <div className="p-3 bg-dark-800/50 rounded-lg">
             <h4 className="text-sm font-semibold text-blue-400 mb-2">Vector Addition Axioms</h4>
             <ul className="list-disc list-inside text-dark-300 space-y-1 text-sm">
-              <li><strong>V1 (Commutativity):</strong> <Math>u + v = v + u</Math></li>
-              <li><strong>V2 (Associativity):</strong> <Math>(u + v) + w = u + (v + w)</Math></li>
-              <li><strong>V3 (Zero vector):</strong> There exists <Math>{`\\mathbf{0}`} \in V</Math> such that <Math>v + {`\\mathbf{0}`} = v</Math></li>
-              <li><strong>V4 (Additive inverses):</strong> For each <Math>v</Math>, there exists <Math>-v</Math> such that <Math>v + (-v) = {`\\mathbf{0}`}</Math></li>
+              <li><strong>V1 (Commutativity):</strong> <InlineMath>u + v = v + u</InlineMath></li>
+              <li><strong>V2 (Associativity):</strong> <InlineMath>(u + v) + w = u + (v + w)</InlineMath></li>
+              <li><strong>V3 (Zero vector):</strong> There exists <InlineMath>{`\\mathbf{0}`} \in V</InlineMath> such that <InlineMath>v + {`\\mathbf{0}`} = v</InlineMath></li>
+              <li><strong>V4 (Additive inverses):</strong> For each <InlineMath>v</InlineMath>, there exists <InlineMath>-v</InlineMath> such that <InlineMath>v + (-v) = {`\\mathbf{0}`}</InlineMath></li>
             </ul>
           </div>
           <div className="p-3 bg-dark-800/50 rounded-lg">
             <h4 className="text-sm font-semibold text-blue-400 mb-2">Scalar Multiplication Axioms</h4>
             <ul className="list-disc list-inside text-dark-300 space-y-1 text-sm">
-              <li><strong>V5 (Identity):</strong> <Math>1 \cdot v = v</Math></li>
-              <li><strong>V6 (Associativity):</strong> <Math>(cd)v = c(dv)</Math></li>
-              <li><strong>V7 (Distributivity over vectors):</strong> <Math>c(u + v) = cu + cv</Math></li>
-              <li><strong>V8 (Distributivity over scalars):</strong> <Math>(c + d)v = cv + dv</Math></li>
+              <li><strong>V5 (Identity):</strong> <InlineMath>1 \cdot v = v</InlineMath></li>
+              <li><strong>V6 (Associativity):</strong> <InlineMath>(cd)v = c(dv)</InlineMath></li>
+              <li><strong>V7 (Distributivity over vectors):</strong> <InlineMath>c(u + v) = cu + cv</InlineMath></li>
+              <li><strong>V8 (Distributivity over scalars):</strong> <InlineMath>(c + d)v = cv + dv</InlineMath></li>
             </ul>
           </div>
         </div>
       </Definition>
 
       <Callout type="warning">
-        <strong>Important Distinction:</strong> Elements of <Math>V</Math> are called <strong>vectors</strong>,
-        while elements of <Math>F</Math> are called <strong>scalars</strong>. Don't confuse them!
-        The zero vector <Math>{`\\mathbf{0}`}</Math> is not the same as the scalar <Math>0</Math>.
+        <strong>Important Distinction:</strong> Elements of <InlineMath>V</InlineMath> are called <strong>vectors</strong>,
+        while elements of <InlineMath>F</InlineMath> are called <strong>scalars</strong>. Don't confuse them!
+        The zero vector <InlineMath>{`\\mathbf{0}`}</InlineMath> is not the same as the scalar <InlineMath>0</InlineMath>.
       </Callout>
 
-      <h2>The Canonical Example: <Math>{`\\mathbb{R}`}^n</Math></h2>
+      <h2>The Canonical Example: <InlineMath>{`\\mathbb{R}`}^n</InlineMath></h2>
 
       <Example title="n-Dimensional Real Space">
         <p>
-          The set <Math>{`\\mathbb{R}`}^n = {`\\{(x_1, x_2, \\ldots, x_n) : x_i \\in \\mathbb{R}\\}`}</Math> is
-          a vector space over <Math>{`\\mathbb{R}`}</Math> with:
+          The set <InlineMath>{`\\mathbb{R}`}^n = {`\\{(x_1, x_2, \\ldots, x_n) : x_i \\in \\mathbb{R}\\}`}</InlineMath> is
+          a vector space over <InlineMath>{`\\mathbb{R}`}</InlineMath> with:
         </p>
         <MathBlock>{`
           (x_1, \\ldots, x_n) + (y_1, \\ldots, y_n) = (x_1 + y_1, \\ldots, x_n + y_n)
@@ -78,7 +78,7 @@ export default function Section02() {
           c(x_1, \\ldots, x_n) = (cx_1, \\ldots, cx_n)
         `}</MathBlock>
         <p className="mt-2">
-          The zero vector is <Math>{`\\mathbf{0}`} = (0, 0, \ldots, 0)</Math>.
+          The zero vector is <InlineMath>{`\\mathbf{0}`} = (0, 0, \ldots, 0)</InlineMath>.
         </p>
       </Example>
 
@@ -86,33 +86,33 @@ export default function Section02() {
 
       <Example title="The Polynomial Space P_n(F)">
         <p>
-          The set of all polynomials of degree at most <Math>n</Math> with coefficients in <Math>F</Math>:
+          The set of all polynomials of degree at most <InlineMath>n</InlineMath> with coefficients in <InlineMath>F</InlineMath>:
         </p>
         <MathBlock>{`
           P_n(F) = \\{a_0 + a_1 x + a_2 x^2 + \\cdots + a_n x^n : a_i \\in F\\}
         `}</MathBlock>
         <p className="mt-2">
           This is a vector space with the usual polynomial addition and scalar multiplication.
-          The zero vector is the zero polynomial, and <Math>\dim(P_n(F)) = n + 1</Math>.
+          The zero vector is the zero polynomial, and <InlineMath>\dim(P_n(F)) = n + 1</InlineMath>.
         </p>
       </Example>
 
       <Example title="The Matrix Space M_{m×n}(F)">
         <p>
-          The set of all <Math>m \times n</Math> matrices with entries in <Math>F</Math> is a
+          The set of all <InlineMath>m \times n</InlineMath> matrices with entries in <InlineMath>F</InlineMath> is a
           vector space with entry-wise operations:
         </p>
         <MathBlock>{`
           (A + B)_{ij} = A_{ij} + B_{ij}, \\quad (cA)_{ij} = c \\cdot A_{ij}
         `}</MathBlock>
         <p className="mt-2">
-          The zero vector is the zero matrix. This space has dimension <Math>mn</Math>.
+          The zero vector is the zero matrix. This space has dimension <InlineMath>mn</InlineMath>.
         </p>
       </Example>
 
       <Example title="Function Spaces">
         <p>
-          Let <Math>F^S</Math> denote all functions from a set <Math>S</Math> to a field <Math>F</Math>.
+          Let <InlineMath>F^S</InlineMath> denote all functions from a set <InlineMath>S</InlineMath> to a field <InlineMath>F</InlineMath>.
           With pointwise operations:
         </p>
         <MathBlock>{`
@@ -122,8 +122,8 @@ export default function Section02() {
           This is a vector space. Special cases include:
         </p>
         <ul className="list-disc list-inside text-dark-300 mt-2 space-y-1">
-          <li><Math>\mathcal{'{C}'}({`\\mathbb{R}`})</Math> = continuous functions on <Math>{`\\mathbb{R}`}</Math></li>
-          <li><Math>\mathcal{'{C}'}^\infty({`\\mathbb{R}`})</Math> = infinitely differentiable functions</li>
+          <li><InlineMath>\mathcal{'{C}'}({`\\mathbb{R}`})</InlineMath> = continuous functions on <InlineMath>{`\\mathbb{R}`}</InlineMath></li>
+          <li><InlineMath>\mathcal{'{C}'}^\infty({`\\mathbb{R}`})</InlineMath> = infinitely differentiable functions</li>
           <li>Solution spaces of differential equations</li>
         </ul>
       </Example>
@@ -135,18 +135,18 @@ export default function Section02() {
         proof={
           <>
             <p>
-              Suppose <Math>{`\\mathbf{0}`}</Math> and <Math>{`\\mathbf{0}`}'</Math> are both zero vectors. Then:
+              Suppose <InlineMath>{`\\mathbf{0}`}</InlineMath> and <InlineMath>{`\\mathbf{0}`}'</InlineMath> are both zero vectors. Then:
             </p>
             <MathBlock>{`\\mathbf{0} = \\mathbf{0} + \\mathbf{0}' = \\mathbf{0}'`}</MathBlock>
             <p>
-              The first equality uses that <Math>{`\\mathbf{0}`}'</Math> is a zero vector, and the
-              second uses that <Math>{`\\mathbf{0}`}</Math> is a zero vector.
+              The first equality uses that <InlineMath>{`\\mathbf{0}`}'</InlineMath> is a zero vector, and the
+              second uses that <InlineMath>{`\\mathbf{0}`}</InlineMath> is a zero vector.
             </p>
           </>
         }
       >
         <p>
-          Every vector space has exactly one zero vector <Math>{`\\mathbf{0}`}</Math>.
+          Every vector space has exactly one zero vector <InlineMath>{`\\mathbf{0}`}</InlineMath>.
         </p>
       </Theorem>
 
@@ -154,16 +154,16 @@ export default function Section02() {
         title="Scalar Zero Property"
         proof={
           <>
-            <p>For any <Math>v \in V</Math>:</p>
+            <p>For any <InlineMath>v \in V</InlineMath>:</p>
             <MathBlock>{`0 \\cdot v = (0 + 0) \\cdot v = 0 \\cdot v + 0 \\cdot v`}</MathBlock>
             <p className="mt-2">
-              Adding <Math>-(0 \cdot v)</Math> to both sides gives <Math>{`\\mathbf{0}`} = 0 \cdot v</Math>.
+              Adding <InlineMath>-(0 \cdot v)</InlineMath> to both sides gives <InlineMath>{`\\mathbf{0}`} = 0 \cdot v</InlineMath>.
             </p>
           </>
         }
       >
         <p>
-          For any vector <Math>v</Math> in a vector space: <Math>0 \cdot v = {`\\mathbf{0}`}</Math>.
+          For any vector <InlineMath>v</InlineMath> in a vector space: <InlineMath>0 \cdot v = {`\\mathbf{0}`}</InlineMath>.
         </p>
       </Theorem>
 
@@ -171,16 +171,16 @@ export default function Section02() {
         title="Negative Scalar Property"
         proof={
           <>
-            <p>We show <Math>(-1) \cdot v + v = {`\\mathbf{0}`}</Math>:</p>
+            <p>We show <InlineMath>(-1) \cdot v + v = {`\\mathbf{0}`}</InlineMath>:</p>
             <MathBlock>{`(-1) \\cdot v + v = (-1) \\cdot v + 1 \\cdot v = ((-1) + 1) \\cdot v = 0 \\cdot v = \\mathbf{0}`}</MathBlock>
             <p className="mt-2">
-              Therefore <Math>(-1) \cdot v</Math> is the additive inverse of <Math>v</Math>, i.e., <Math>(-1) \cdot v = -v</Math>.
+              Therefore <InlineMath>(-1) \cdot v</InlineMath> is the additive inverse of <InlineMath>v</InlineMath>, i.e., <InlineMath>(-1) \cdot v = -v</InlineMath>.
             </p>
           </>
         }
       >
         <p>
-          For any vector <Math>v</Math>: <Math>(-1) \cdot v = -v</Math>.
+          For any vector <InlineMath>v</InlineMath>: <InlineMath>(-1) \cdot v = -v</InlineMath>.
         </p>
       </Theorem>
 
@@ -188,15 +188,15 @@ export default function Section02() {
         title="Zero Product Rule"
         proof={
           <>
-            <p><strong>Case 1:</strong> If <Math>c = 0</Math>, we already proved <Math>0 \cdot v = {`\\mathbf{0}`}</Math>.</p>
-            <p className="mt-2"><strong>Case 2:</strong> If <Math>v = {`\\mathbf{0}`}</Math>:</p>
+            <p><strong>Case 1:</strong> If <InlineMath>c = 0</InlineMath>, we already proved <InlineMath>0 \cdot v = {`\\mathbf{0}`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Case 2:</strong> If <InlineMath>v = {`\\mathbf{0}`}</InlineMath>:</p>
             <MathBlock>{`c \\cdot \\mathbf{0} = c \\cdot (\\mathbf{0} + \\mathbf{0}) = c \\cdot \\mathbf{0} + c \\cdot \\mathbf{0}`}</MathBlock>
-            <p>Adding <Math>-(c \cdot {`\\mathbf{0}`})</Math> gives <Math>c \cdot {`\\mathbf{0}`} = {`\\mathbf{0}`}</Math>.</p>
+            <p>Adding <InlineMath>-(c \cdot {`\\mathbf{0}`})</InlineMath> gives <InlineMath>c \cdot {`\\mathbf{0}`} = {`\\mathbf{0}`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          <Math>c \cdot v = {`\\mathbf{0}`}</Math> if and only if <Math>c = 0</Math> or <Math>v = {`\\mathbf{0}`}</Math>.
+          <InlineMath>c \cdot v = {`\\mathbf{0}`}</InlineMath> if and only if <InlineMath>c = 0</InlineMath> or <InlineMath>v = {`\\mathbf{0}`}</InlineMath>.
         </p>
       </Theorem>
 
@@ -211,7 +211,7 @@ export default function Section02() {
         <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-xl">
           <h4 className="font-semibold text-red-400">Non-Example: Positive Real Numbers</h4>
           <p className="text-dark-300 mt-2">
-            <Math>{`\\mathbb{R}`}^+ = {`\\{x \\in \\mathbb{R} : x > 0\\}`}</Math> with usual addition is
+            <InlineMath>{`\\mathbb{R}`}^+ = {`\\{x \\in \\mathbb{R} : x > 0\\}`}</InlineMath> with usual addition is
             NOT a vector space: it's not closed under addition (but it has no zero element, and
             no additive inverses).
           </p>
@@ -220,7 +220,7 @@ export default function Section02() {
         <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-xl">
           <h4 className="font-semibold text-red-400">Non-Example: First Quadrant</h4>
           <p className="text-dark-300 mt-2">
-            <Math>{`\\{(x, y) : x \\geq 0, y \\geq 0\\}`}</Math> is NOT a vector space: it's not
+            <InlineMath>{`\\{(x, y) : x \\geq 0, y \\geq 0\\}`}</InlineMath> is NOT a vector space: it's not
             closed under scalar multiplication by negative numbers.
           </p>
         </div>
@@ -228,7 +228,7 @@ export default function Section02() {
         <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-xl">
           <h4 className="font-semibold text-red-400">Non-Example: Affine Subsets</h4>
           <p className="text-dark-300 mt-2">
-            A line not passing through the origin in <Math>{`\\mathbb{R}`}^2</Math> is NOT a
+            A line not passing through the origin in <InlineMath>{`\\mathbb{R}`}^2</InlineMath> is NOT a
             vector space: it doesn't contain the zero vector.
           </p>
         </div>
@@ -238,14 +238,14 @@ export default function Section02() {
 
       <Example title="C^n as a Complex Vector Space">
         <p>
-          <Math>{`\\mathbb{C}`}^n</Math> is a vector space over <Math>{`\\mathbb{C}`}</Math> with the
-          obvious operations. But it can also be viewed as a vector space over <Math>{`\\mathbb{R}`}</Math>!
+          <InlineMath>{`\\mathbb{C}`}^n</InlineMath> is a vector space over <InlineMath>{`\\mathbb{C}`}</InlineMath> with the
+          obvious operations. But it can also be viewed as a vector space over <InlineMath>{`\\mathbb{R}`}</InlineMath>!
         </p>
         <p className="mt-2">
-          When viewed over <Math>{`\\mathbb{R}`}</Math>, the dimension doubles: <Math>\dim_{`\\mathbb{R}`}({`\\mathbb{C}`}^n) = 2n</Math>.
+          When viewed over <InlineMath>{`\\mathbb{R}`}</InlineMath>, the dimension doubles: <InlineMath>\dim_{`\\mathbb{R}`}({`\\mathbb{C}`}^n) = 2n</InlineMath>.
         </p>
         <p className="mt-2">
-          For example, <Math>{`\\mathbb{C}`}</Math> over <Math>{`\\mathbb{R}`}</Math> has basis <Math>{`\\{1, i\\}`}</Math>.
+          For example, <InlineMath>{`\\mathbb{C}`}</InlineMath> over <InlineMath>{`\\mathbb{R}`}</InlineMath> has basis <InlineMath>{`\\{1, i\\}`}</InlineMath>.
         </p>
       </Example>
 
@@ -253,8 +253,8 @@ export default function Section02() {
         <h3 className="text-lg font-semibold text-dark-100 mb-2">Key Takeaways</h3>
         <ul className="list-disc list-inside text-dark-300 space-y-1">
           <li>A vector space has 8 axioms: 4 for addition, 4 for scalar multiplication</li>
-          <li>Key examples: <Math>{`\\mathbb{R}`}^n</Math>, polynomials <Math>P_n(F)</Math>, matrices <Math>M_{'m×n'}(F)</Math>, function spaces</li>
-          <li>The zero vector is unique, and <Math>0 \cdot v = {`\\mathbf{0}`}</Math> for any <Math>v</Math></li>
+          <li>Key examples: <InlineMath>{`\\mathbb{R}`}^n</InlineMath>, polynomials <InlineMath>P_n(F)</InlineMath>, matrices <InlineMath>M_{'m×n'}(F)</InlineMath>, function spaces</li>
+          <li>The zero vector is unique, and <InlineMath>0 \cdot v = {`\\mathbf{0}`}</InlineMath> for any <InlineMath>v</InlineMath></li>
           <li>The same set can be a vector space over different fields with different dimensions</li>
           <li>Not every set with operations is a vector space - check all axioms!</li>
         </ul>

@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Definition, Theorem } from '../../components/common/ContentBlocks';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
@@ -175,23 +175,23 @@ export default function Section01() {
       </CardGrid>
 
       <Definition title="Convergent Series">
-        An infinite series <MathInline>{'a_1 + a_2 + a_3 + \\cdots'}</MathInline> is said to
-        <strong> converge</strong> if the partial sums <MathInline>{'S_n = a_1 + a_2 + \\cdots + a_n'}</MathInline> approach
-        a finite limit <MathInline>{'S'}</MathInline> as <MathInline>{'n \\to \\infty'}</MathInline>.
+        An infinite series <InlineMath>{'a_1 + a_2 + a_3 + \\cdots'}</InlineMath> is said to
+        <strong> converge</strong> if the partial sums <InlineMath>{'S_n = a_1 + a_2 + \\cdots + a_n'}</InlineMath> approach
+        a finite limit <InlineMath>{'S'}</InlineMath> as <InlineMath>{'n \\to \\infty'}</InlineMath>.
       </Definition>
 
       <Theorem
         title="Geometric Series"
         proof={
           <div>
-            <p className="mb-2">Let <MathInline>{'S = 1 + r + r^2 + r^3 + \\cdots'}</MathInline></p>
-            <p className="mb-2">Then <MathInline>{'rS = r + r^2 + r^3 + \\cdots'}</MathInline></p>
-            <p className="mb-2">Subtracting: <MathInline>{'S - rS = 1'}</MathInline></p>
-            <p>Therefore: <MathInline>{'S = \\frac{1}{1-r}'}</MathInline></p>
+            <p className="mb-2">Let <InlineMath>{'S = 1 + r + r^2 + r^3 + \\cdots'}</InlineMath></p>
+            <p className="mb-2">Then <InlineMath>{'rS = r + r^2 + r^3 + \\cdots'}</InlineMath></p>
+            <p className="mb-2">Subtracting: <InlineMath>{'S - rS = 1'}</InlineMath></p>
+            <p>Therefore: <InlineMath>{'S = \\frac{1}{1-r}'}</InlineMath></p>
           </div>
         }
       >
-        For <MathInline>{'|r| < 1'}</MathInline>, the infinite geometric series converges:
+        For <InlineMath>{'|r| < 1'}</InlineMath>, the infinite geometric series converges:
         <MathBlock>{`1 + r + r^2 + r^3 + \\cdots = \\frac{1}{1-r}`}</MathBlock>
       </Theorem>
 

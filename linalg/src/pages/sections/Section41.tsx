@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section41() {
   return (
@@ -26,7 +26,7 @@ export default function Section41() {
           {`A\\mathbf{x} = \\mathbf{b}, \\quad \\mathbf{x} \\geq \\mathbf{0}`}
         </MathBlock>
         <p className="mt-2">
-          <Math>{`\\mathbf{c}`}</Math> = cost vector, <Math>A</Math> = constraint matrix, <Math>{`\\mathbf{b}`}</Math> = requirements.
+          <InlineMath>{`\\mathbf{c}`}</InlineMath> = cost vector, <InlineMath>A</InlineMath> = constraint matrix, <InlineMath>{`\\mathbf{b}`}</InlineMath> = requirements.
         </p>
       </Definition>
 
@@ -52,16 +52,16 @@ export default function Section41() {
         className="my-6"
         proof={
           <>
-            <p><strong>Convexity:</strong> The constraints <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> and <Math>{`\\mathbf{x} \\geq \\mathbf{0}`}</Math> define an intersection of half-spaces, which is convex.</p>
-            <p className="mt-2"><strong>Optimum at vertex:</strong> Suppose <Math>{`\\mathbf{x}^*`}</Math> is optimal but not a vertex. Then <Math>{`\\mathbf{x}^* = \\alpha \\mathbf{y} + (1-\\alpha)\\mathbf{z}`}</Math> for feasible <Math>{`\\mathbf{y}, \\mathbf{z}`}</Math>.</p>
-            <p className="mt-2">The objective value <Math>{`\\mathbf{c}^T\\mathbf{x}^* = \\alpha \\mathbf{c}^T\\mathbf{y} + (1-\\alpha)\\mathbf{c}^T\\mathbf{z}`}</Math>.</p>
-            <p className="mt-2">If <Math>{`\\mathbf{x}^*`}</Math> is optimal, both <Math>{`\\mathbf{y}`}</Math> and <Math>{`\\mathbf{z}`}</Math> must also be optimal (otherwise we could improve). Continue until we reach a vertex.</p>
-            <p className="mt-2"><strong>Vertex = basic solution:</strong> A vertex is an extreme point where <Math>n - m</Math> variables are zero (the basic structure).</p>
+            <p><strong>Convexity:</strong> The constraints <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> and <InlineMath>{`\\mathbf{x} \\geq \\mathbf{0}`}</InlineMath> define an intersection of half-spaces, which is convex.</p>
+            <p className="mt-2"><strong>Optimum at vertex:</strong> Suppose <InlineMath>{`\\mathbf{x}^*`}</InlineMath> is optimal but not a vertex. Then <InlineMath>{`\\mathbf{x}^* = \\alpha \\mathbf{y} + (1-\\alpha)\\mathbf{z}`}</InlineMath> for feasible <InlineMath>{`\\mathbf{y}, \\mathbf{z}`}</InlineMath>.</p>
+            <p className="mt-2">The objective value <InlineMath>{`\\mathbf{c}^T\\mathbf{x}^* = \\alpha \\mathbf{c}^T\\mathbf{y} + (1-\\alpha)\\mathbf{c}^T\\mathbf{z}`}</InlineMath>.</p>
+            <p className="mt-2">If <InlineMath>{`\\mathbf{x}^*`}</InlineMath> is optimal, both <InlineMath>{`\\mathbf{y}`}</InlineMath> and <InlineMath>{`\\mathbf{z}`}</InlineMath> must also be optimal (otherwise we could improve). Continue until we reach a vertex.</p>
+            <p className="mt-2"><strong>Vertex = basic solution:</strong> A vertex is an extreme point where <InlineMath>n - m</InlineMath> variables are zero (the basic structure).</p>
           </>
         }
       >
         <ul className="list-disc list-inside space-y-2">
-          <li>The <strong>feasible region</strong> (set of valid <Math>{`\\mathbf{x}`}</Math>) is a convex polyhedron</li>
+          <li>The <strong>feasible region</strong> (set of valid <InlineMath>{`\\mathbf{x}`}</InlineMath>) is a convex polyhedron</li>
           <li>If an optimal solution exists, it occurs at a <strong>vertex</strong> (corner)</li>
           <li>A vertex corresponds to a <strong>basic feasible solution</strong></li>
         </ul>
@@ -69,15 +69,15 @@ export default function Section41() {
 
       <Definition title="Basic Feasible Solution" className="my-6">
         <p>
-          For <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> with <Math>A</Math> being <Math>m \times n</Math> (<Math>m &lt; n</Math>):
+          For <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> with <InlineMath>A</InlineMath> being <InlineMath>m \times n</InlineMath> (<InlineMath>m &lt; n</InlineMath>):
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>Choose <Math>m</Math> columns of <Math>A</Math> to form basis <Math>B</Math></li>
+          <li>Choose <InlineMath>m</InlineMath> columns of <InlineMath>A</InlineMath> to form basis <InlineMath>B</InlineMath></li>
           <li>Set remaining variables to zero</li>
-          <li>Solve <Math>{`B\\mathbf{x}_B = \\mathbf{b}`}</Math></li>
+          <li>Solve <InlineMath>{`B\\mathbf{x}_B = \\mathbf{b}`}</InlineMath></li>
         </ul>
         <p className="mt-2">
-          <strong>Basic:</strong> <Math>m</Math> variables nonzero. <strong>Feasible:</strong> <Math>{`\\mathbf{x} \\geq 0`}</Math>.
+          <strong>Basic:</strong> <InlineMath>m</InlineMath> variables nonzero. <strong>Feasible:</strong> <InlineMath>{`\\mathbf{x} \\geq 0`}</InlineMath>.
         </p>
       </Definition>
 
@@ -89,10 +89,10 @@ export default function Section41() {
         proof={
           <>
             <p><strong>Correctness:</strong> At each step, we check if the current solution is optimal by examining the reduced costs.</p>
-            <p className="mt-2">If all reduced costs <Math>{`\\bar{c}_j \\geq 0`}</Math> for a minimization problem, we're at an optimum.</p>
+            <p className="mt-2">If all reduced costs <InlineMath>{`\\bar{c}_j \\geq 0`}</InlineMath> for a minimization problem, we're at an optimum.</p>
             <p className="mt-2"><strong>Progress:</strong> Each pivot moves to an adjacent vertex. The objective strictly improves (assuming non-degeneracy).</p>
-            <p className="mt-2"><strong>Termination:</strong> There are finitely many vertices (at most <Math>{`\\binom{n}{m}`}</Math>). Since we never revisit a vertex (objective improves), the algorithm terminates.</p>
-            <p className="mt-2"><strong>Adjacent vertices:</strong> Two vertices are adjacent if they share <Math>m-1</Math> basic variables. Moving between them = one variable enters, one leaves.</p>
+            <p className="mt-2"><strong>Termination:</strong> There are finitely many vertices (at most <InlineMath>{`\\binom{n}{m}`}</InlineMath>). Since we never revisit a vertex (objective improves), the algorithm terminates.</p>
+            <p className="mt-2"><strong>Adjacent vertices:</strong> Two vertices are adjacent if they share <InlineMath>m-1</InlineMath> basic variables. Moving between them = one variable enters, one leaves.</p>
           </>
         }
       >
@@ -122,10 +122,10 @@ export default function Section41() {
         className="my-6"
         proof={
           <>
-            <p><strong>Weak duality:</strong> For any feasible <Math>{`\\mathbf{x}`}</Math> (primal) and <Math>{`\\mathbf{y}`}</Math> (dual):</p>
+            <p><strong>Weak duality:</strong> For any feasible <InlineMath>{`\\mathbf{x}`}</InlineMath> (primal) and <InlineMath>{`\\mathbf{y}`}</InlineMath> (dual):</p>
             <MathBlock>{`\\mathbf{c}^T\\mathbf{x} \\geq \\mathbf{y}^T A \\mathbf{x} \\geq \\mathbf{y}^T \\mathbf{b} = \\mathbf{b}^T\\mathbf{y}`}</MathBlock>
-            <p className="mt-2">The first inequality uses <Math>{`A^T\\mathbf{y} \\leq \\mathbf{c}`}</Math>; the second uses <Math>{`A\\mathbf{x} \\geq \\mathbf{b}`}</Math>.</p>
-            <p className="mt-2"><strong>Strong duality:</strong> At optimality, the KKT conditions give <Math>{`\\mathbf{c}^T\\mathbf{x}^* = \\mathbf{b}^T\\mathbf{y}^*`}</Math>.</p>
+            <p className="mt-2">The first inequality uses <InlineMath>{`A^T\\mathbf{y} \\leq \\mathbf{c}`}</InlineMath>; the second uses <InlineMath>{`A\\mathbf{x} \\geq \\mathbf{b}`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Strong duality:</strong> At optimality, the KKT conditions give <InlineMath>{`\\mathbf{c}^T\\mathbf{x}^* = \\mathbf{b}^T\\mathbf{y}^*`}</InlineMath>.</p>
             <p className="mt-2">The gap closes because complementary slackness holds: if a constraint is not tight, the corresponding dual variable is zero.</p>
           </>
         }
@@ -163,7 +163,7 @@ export default function Section41() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>LP: minimize <Math>{`\\mathbf{c}^T\\mathbf{x}`}</Math> subject to <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math>, <Math>{`\\mathbf{x} \\geq 0`}</Math>.</span>
+            <span>LP: minimize <InlineMath>{`\\mathbf{c}^T\\mathbf{x}`}</InlineMath> subject to <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath>, <InlineMath>{`\\mathbf{x} \\geq 0`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>

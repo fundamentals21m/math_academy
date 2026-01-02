@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section48() {
   return (
@@ -15,7 +15,7 @@ export default function Section48() {
 
       <Definition title="Mean Vector" className="my-6">
         <p>
-          For a random vector <Math>{`\\mathbf{X} = (X_1, \\ldots, X_n)^T`}</Math>:
+          For a random vector <InlineMath>{`\\mathbf{X} = (X_1, \\ldots, X_n)^T`}</InlineMath>:
         </p>
         <MathBlock>
           {`\\boldsymbol{\\mu} = E[\\mathbf{X}] = \\begin{bmatrix} E[X_1] \\\\ \\vdots \\\\ E[X_n] \\end{bmatrix}`}
@@ -42,18 +42,18 @@ export default function Section48() {
         className="my-6"
         proof={
           <>
-            <p><strong>Symmetric:</strong> <Math>{`\\Sigma_{ij} = \\text{Cov}(X_i, X_j) = E[(X_i - \\mu_i)(X_j - \\mu_j)]`}</Math>.</p>
-            <p className="mt-2">Since the product is commutative: <Math>{`\\Sigma_{ij} = \\Sigma_{ji}`}</Math>, so <Math>{`\\Sigma = \\Sigma^T`}</Math>.</p>
-            <p className="mt-2"><strong>Positive semidefinite:</strong> For any vector <Math>{`\\mathbf{a}`}</Math>:</p>
+            <p><strong>Symmetric:</strong> <InlineMath>{`\\Sigma_{ij} = \\text{Cov}(X_i, X_j) = E[(X_i - \\mu_i)(X_j - \\mu_j)]`}</InlineMath>.</p>
+            <p className="mt-2">Since the product is commutative: <InlineMath>{`\\Sigma_{ij} = \\Sigma_{ji}`}</InlineMath>, so <InlineMath>{`\\Sigma = \\Sigma^T`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Positive semidefinite:</strong> For any vector <InlineMath>{`\\mathbf{a}`}</InlineMath>:</p>
             <MathBlock>{`\\mathbf{a}^T\\Sigma\\mathbf{a} = \\mathbf{a}^T E[(\\mathbf{X}-\\boldsymbol{\\mu})(\\mathbf{X}-\\boldsymbol{\\mu})^T]\\mathbf{a} = E[\\mathbf{a}^T(\\mathbf{X}-\\boldsymbol{\\mu})(\\mathbf{X}-\\boldsymbol{\\mu})^T\\mathbf{a}]`}</MathBlock>
-            <p className="mt-2">Let <Math>{`Y = \\mathbf{a}^T(\\mathbf{X}-\\boldsymbol{\\mu})`}</Math>. Then <Math>{`\\mathbf{a}^T\\Sigma\\mathbf{a} = E[Y^2] = \\text{Var}(Y) \\geq 0`}</Math>.</p>
+            <p className="mt-2">Let <InlineMath>{`Y = \\mathbf{a}^T(\\mathbf{X}-\\boldsymbol{\\mu})`}</InlineMath>. Then <InlineMath>{`\\mathbf{a}^T\\Sigma\\mathbf{a} = E[Y^2] = \\text{Var}(Y) \\geq 0`}</InlineMath>.</p>
           </>
         }
       >
-        <p>The covariance matrix <Math>\Sigma</Math> is:</p>
+        <p>The covariance matrix <InlineMath>\Sigma</InlineMath> is:</p>
         <ul className="list-disc list-inside space-y-1">
-          <li><strong>Symmetric:</strong> <Math>\Sigma = \Sigma^T</Math></li>
-          <li><strong>Positive semidefinite:</strong> <Math>{`\\mathbf{a}^T\\Sigma\\mathbf{a} \\geq 0`}</Math> for all <Math>{`\\mathbf{a}`}</Math></li>
+          <li><strong>Symmetric:</strong> <InlineMath>\Sigma = \Sigma^T</InlineMath></li>
+          <li><strong>Positive semidefinite:</strong> <InlineMath>{`\\mathbf{a}^T\\Sigma\\mathbf{a} \\geq 0`}</InlineMath> for all <InlineMath>{`\\mathbf{a}`}</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -66,13 +66,13 @@ export default function Section48() {
           <>
             <p><strong>Mean:</strong> Using linearity of expectation:</p>
             <MathBlock>{`E[\\mathbf{Y}] = E[A\\mathbf{X} + \\mathbf{b}] = AE[\\mathbf{X}] + \\mathbf{b}`}</MathBlock>
-            <p className="mt-2"><strong>Covariance:</strong> Let <Math>{`\\boldsymbol{\\mu}_Y = E[\\mathbf{Y}]`}</Math>. Then <Math>{`\\mathbf{Y} - \\boldsymbol{\\mu}_Y = A(\\mathbf{X} - \\boldsymbol{\\mu}_X)`}</Math>.</p>
+            <p className="mt-2"><strong>Covariance:</strong> Let <InlineMath>{`\\boldsymbol{\\mu}_Y = E[\\mathbf{Y}]`}</InlineMath>. Then <InlineMath>{`\\mathbf{Y} - \\boldsymbol{\\mu}_Y = A(\\mathbf{X} - \\boldsymbol{\\mu}_X)`}</InlineMath>.</p>
             <MathBlock>{`\\text{Cov}(\\mathbf{Y}) = E[(\\mathbf{Y} - \\boldsymbol{\\mu}_Y)(\\mathbf{Y} - \\boldsymbol{\\mu}_Y)^T]`}</MathBlock>
             <MathBlock>{`= E[A(\\mathbf{X} - \\boldsymbol{\\mu}_X)(\\mathbf{X} - \\boldsymbol{\\mu}_X)^T A^T] = A\\Sigma_X A^T`}</MathBlock>
           </>
         }
       >
-        <p>If <Math>{`\\mathbf{Y} = A\\mathbf{X} + \\mathbf{b}`}</Math>:</p>
+        <p>If <InlineMath>{`\\mathbf{Y} = A\\mathbf{X} + \\mathbf{b}`}</InlineMath>:</p>
         <MathBlock>
           {`E[\\mathbf{Y}] = AE[\\mathbf{X}] + \\mathbf{b}`}
         </MathBlock>
@@ -83,7 +83,7 @@ export default function Section48() {
 
       <Example title="Portfolio Variance" className="my-6">
         <p>
-          For portfolio return <Math>{`R = w_1R_1 + w_2R_2 = \\mathbf{w}^T\\mathbf{R}`}</Math>:
+          For portfolio return <InlineMath>{`R = w_1R_1 + w_2R_2 = \\mathbf{w}^T\\mathbf{R}`}</InlineMath>:
         </p>
         <MathBlock>
           {`\\text{Var}(R) = \\mathbf{w}^T\\Sigma\\mathbf{w}`}
@@ -97,13 +97,13 @@ export default function Section48() {
 
       <Definition title="Multivariate Normal" className="my-6">
         <p>
-          <Math>{`\\mathbf{X} \\sim N(\\boldsymbol{\\mu}, \\Sigma)`}</Math> has density:
+          <InlineMath>{`\\mathbf{X} \\sim N(\\boldsymbol{\\mu}, \\Sigma)`}</InlineMath> has density:
         </p>
         <MathBlock>
           {`f(\\mathbf{x}) = \\frac{1}{(2\\pi)^{n/2}|\\Sigma|^{1/2}} \\exp\\left(-\\frac{1}{2}(\\mathbf{x}-\\boldsymbol{\\mu})^T\\Sigma^{-1}(\\mathbf{x}-\\boldsymbol{\\mu})\\right)`}
         </MathBlock>
         <p className="mt-2">
-          The exponent is a quadratic form with matrix <Math>{`\\Sigma^{-1}`}</Math>.
+          The exponent is a quadratic form with matrix <InlineMath>{`\\Sigma^{-1}`}</InlineMath>.
         </p>
       </Definition>
 
@@ -112,27 +112,27 @@ export default function Section48() {
         className="my-6"
         proof={
           <>
-            <p><strong>Constant density contours:</strong> The density is constant when the exponent <Math>{`(\\mathbf{x}-\\boldsymbol{\\mu})^T\\Sigma^{-1}(\\mathbf{x}-\\boldsymbol{\\mu}) = c^2`}</Math> is constant.</p>
-            <p className="mt-2">This is the equation of an ellipsoid centered at <Math>{`\\boldsymbol{\\mu}`}</Math>.</p>
-            <p className="mt-2"><strong>Principal axes:</strong> Diagonalize <Math>{`\\Sigma = Q\\Lambda Q^T`}</Math>. In transformed coordinates <Math>{`\\mathbf{y} = Q^T(\\mathbf{x} - \\boldsymbol{\\mu})`}</Math>:</p>
+            <p><strong>Constant density contours:</strong> The density is constant when the exponent <InlineMath>{`(\\mathbf{x}-\\boldsymbol{\\mu})^T\\Sigma^{-1}(\\mathbf{x}-\\boldsymbol{\\mu}) = c^2`}</InlineMath> is constant.</p>
+            <p className="mt-2">This is the equation of an ellipsoid centered at <InlineMath>{`\\boldsymbol{\\mu}`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Principal axes:</strong> Diagonalize <InlineMath>{`\\Sigma = Q\\Lambda Q^T`}</InlineMath>. In transformed coordinates <InlineMath>{`\\mathbf{y} = Q^T(\\mathbf{x} - \\boldsymbol{\\mu})`}</InlineMath>:</p>
             <MathBlock>{`\\mathbf{y}^T\\Lambda^{-1}\\mathbf{y} = \\sum_i \\frac{y_i^2}{\\lambda_i} = c^2`}</MathBlock>
-            <p className="mt-2">This is an axis-aligned ellipsoid with semi-axes <Math>{`c\\sqrt{\\lambda_i}`}</Math>. The eigenvectors of <Math>{`\\Sigma`}</Math> give the principal directions.</p>
+            <p className="mt-2">This is an axis-aligned ellipsoid with semi-axes <InlineMath>{`c\\sqrt{\\lambda_i}`}</InlineMath>. The eigenvectors of <InlineMath>{`\\Sigma`}</InlineMath> give the principal directions.</p>
           </>
         }
       >
         <p>
-          Contours of constant density are ellipsoids. The eigendecomposition <Math>\Sigma = Q\Lambda Q^T</Math>:
+          Contours of constant density are ellipsoids. The eigendecomposition <InlineMath>\Sigma = Q\Lambda Q^T</InlineMath>:
         </p>
         <ul className="list-disc list-inside space-y-1">
-          <li><strong>Eigenvectors <Math>Q</Math>:</strong> principal axes of the ellipsoid</li>
-          <li><strong>Eigenvalues <Math>\Lambda</Math>:</strong> squared semi-axis lengths</li>
+          <li><strong>Eigenvectors <InlineMath>Q</InlineMath>:</strong> principal axes of the ellipsoid</li>
+          <li><strong>Eigenvalues <InlineMath>\Lambda</InlineMath>:</strong> squared semi-axis lengths</li>
         </ul>
       </Theorem>
 
       <div className="bg-dark-800/50 rounded-xl p-4 my-6 border border-primary-500/20">
         <p className="font-semibold text-primary-400 mb-2">Mahalanobis Distance</p>
         <p className="text-dark-300 text-sm">
-          The <strong>Mahalanobis distance</strong> measures how far <Math>{`\\mathbf{x}`}</Math> is from <Math>{`\\boldsymbol{\\mu}`}</Math>,
+          The <strong>Mahalanobis distance</strong> measures how far <InlineMath>{`\\mathbf{x}`}</InlineMath> is from <InlineMath>{`\\boldsymbol{\\mu}`}</InlineMath>,
           accounting for correlation:
         </p>
         <MathBlock>
@@ -144,7 +144,7 @@ export default function Section48() {
 
       <Definition title="Sample Mean and Covariance" className="my-6">
         <p>
-          Given data <Math>{`\\mathbf{x}_1, \\ldots, \\mathbf{x}_n`}</Math>:
+          Given data <InlineMath>{`\\mathbf{x}_1, \\ldots, \\mathbf{x}_n`}</InlineMath>:
         </p>
         <MathBlock>
           {`\\bar{\\mathbf{x}} = \\frac{1}{n}\\sum_{i=1}^n \\mathbf{x}_i`}
@@ -153,7 +153,7 @@ export default function Section48() {
           {`S = \\frac{1}{n-1}\\sum_{i=1}^n (\\mathbf{x}_i - \\bar{\\mathbf{x}})(\\mathbf{x}_i - \\bar{\\mathbf{x}})^T = \\frac{1}{n-1}X_c^TX_c`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>X_c</Math> is the centered data matrix.
+          where <InlineMath>X_c</InlineMath> is the centered data matrix.
         </p>
       </Definition>
 
@@ -163,11 +163,11 @@ export default function Section48() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Covariance matrix <Math>\Sigma</Math> is symmetric positive semidefinite.</span>
+            <span>Covariance matrix <InlineMath>\Sigma</InlineMath> is symmetric positive semidefinite.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Linear transform: <Math>{`\\text{Cov}(A\\mathbf{X}) = A\\Sigma A^T`}</Math>.</span>
+            <span>Linear transform: <InlineMath>{`\\text{Cov}(A\\mathbf{X}) = A\\Sigma A^T`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
@@ -175,11 +175,11 @@ export default function Section48() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>Mahalanobis distance uses <Math>{`\\Sigma^{-1}`}</Math> to account for correlation.</span>
+            <span>Mahalanobis distance uses <InlineMath>{`\\Sigma^{-1}`}</InlineMath> to account for correlation.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>Sample covariance: <Math>{`S = \\frac{1}{n-1}X_c^TX_c`}</Math>.</span>
+            <span>Sample covariance: <InlineMath>{`S = \\frac{1}{n-1}X_c^TX_c`}</InlineMath>.</span>
           </li>
         </ul>
       </div>

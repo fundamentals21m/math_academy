@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section03Quiz } from '@/data/quizzes';
 
@@ -26,9 +26,9 @@ export default function Section03() {
         title="Basic Properties of Finite Sets"
         proof={
           <>
-            <p className="mb-3"><strong>Subset of finite set:</strong> Let <Math>{`S`}</Math> have <Math>{`n`}</Math> elements and <Math>{`T \\subseteq S`}</Math>. Define an injection <Math>{`T \\to S`}</Math> (the inclusion). Since <Math>{`S`}</Math> is finite, <Math>{`T`}</Math> has at most <Math>{`n`}</Math> elements, hence is finite.</p>
-            <p className="mb-3"><strong>Union:</strong> Let <Math>{`|A| = m`}</Math> and <Math>{`|B| = n`}</Math>. Then <Math>{`|A \\cup B| \\leq |A| + |B| = m + n`}</Math>, a finite number. More precisely, <Math>{`|A \\cup B| = |A| + |B| - |A \\cap B|`}</Math>.</p>
-            <p className="mb-3"><strong>Cartesian product:</strong> If <Math>{`|A| = m`}</Math> and <Math>{`|B| = n`}</Math>, then <Math>{`A \\times B`}</Math> has exactly <Math>{`mn`}</Math> elements.</p>
+            <p className="mb-3"><strong>Subset of finite set:</strong> Let <InlineMath>{`S`}</InlineMath> have <InlineMath>{`n`}</InlineMath> elements and <InlineMath>{`T \\subseteq S`}</InlineMath>. Define an injection <InlineMath>{`T \\to S`}</InlineMath> (the inclusion). Since <InlineMath>{`S`}</InlineMath> is finite, <InlineMath>{`T`}</InlineMath> has at most <InlineMath>{`n`}</InlineMath> elements, hence is finite.</p>
+            <p className="mb-3"><strong>Union:</strong> Let <InlineMath>{`|A| = m`}</InlineMath> and <InlineMath>{`|B| = n`}</InlineMath>. Then <InlineMath>{`|A \\cup B| \\leq |A| + |B| = m + n`}</InlineMath>, a finite number. More precisely, <InlineMath>{`|A \\cup B| = |A| + |B| - |A \\cap B|`}</InlineMath>.</p>
+            <p className="mb-3"><strong>Cartesian product:</strong> If <InlineMath>{`|A| = m`}</InlineMath> and <InlineMath>{`|B| = n`}</InlineMath>, then <InlineMath>{`A \\times B`}</InlineMath> has exactly <InlineMath>{`mn`}</InlineMath> elements.</p>
           </>
         }
       >
@@ -57,8 +57,8 @@ export default function Section03() {
         title="Countable Sets"
         proof={
           <>
-            <p className="mb-3"><strong><Math>{`\\mathbb{Z}`}</Math> is countable:</strong> Define <Math>{`f: \\mathbb{N} \\to \\mathbb{Z}`}</Math> by <Math>{`f(n) = n/2`}</Math> if <Math>{`n`}</Math> is even, <Math>{`f(n) = -(n+1)/2`}</Math> if <Math>{`n`}</Math> is odd. This gives <Math>{`0, -1, 1, -2, 2, -3, 3, \\ldots`}</Math> which is a bijection.</p>
-            <p className="mb-3"><strong><Math>{`\\mathbb{Q}`}</Math> is countable:</strong> List positive rationals in a grid with <Math>{`p/q`}</Math> at row <Math>{`p`}</Math>, column <Math>{`q`}</Math>. Traverse diagonally: <Math>{`1/1, 1/2, 2/1, 1/3, \\ldots`}</Math> skipping duplicates. This enumerates all positive rationals.</p>
+            <p className="mb-3"><strong><InlineMath>{`\\mathbb{Z}`}</InlineMath> is countable:</strong> Define <InlineMath>{`f: \\mathbb{N} \\to \\mathbb{Z}`}</InlineMath> by <InlineMath>{`f(n) = n/2`}</InlineMath> if <InlineMath>{`n`}</InlineMath> is even, <InlineMath>{`f(n) = -(n+1)/2`}</InlineMath> if <InlineMath>{`n`}</InlineMath> is odd. This gives <InlineMath>{`0, -1, 1, -2, 2, -3, 3, \\ldots`}</InlineMath> which is a bijection.</p>
+            <p className="mb-3"><strong><InlineMath>{`\\mathbb{Q}`}</InlineMath> is countable:</strong> List positive rationals in a grid with <InlineMath>{`p/q`}</InlineMath> at row <InlineMath>{`p`}</InlineMath>, column <InlineMath>{`q`}</InlineMath>. Traverse diagonally: <InlineMath>{`1/1, 1/2, 2/1, 1/3, \\ldots`}</InlineMath> skipping duplicates. This enumerates all positive rationals.</p>
             <p className="mb-3">Key insight: A countable union of countable sets is countable (using a diagonal argument).</p>
           </>
         }
@@ -72,11 +72,11 @@ export default function Section03() {
         title="The Real Numbers are Uncountable"
         proof={
           <>
-            <p className="mb-3"><strong>Cantor's Diagonal Argument:</strong> Suppose <Math>{`(0,1)`}</Math> is countable. Then we can list all reals in <Math>{`(0,1)`}</Math> as <Math>{`r_1, r_2, r_3, \\ldots`}</Math></p>
-            <p className="mb-3">Write each <Math>{`r_n`}</Math> in decimal: <Math>{`r_n = 0.d_{n1}d_{n2}d_{n3}\\ldots`}</Math> (avoiding representations ending in all 9s).</p>
-            <p className="mb-3">Construct <Math>{`x = 0.x_1x_2x_3\\ldots`}</Math> where <Math>{`x_n = 5`}</Math> if <Math>{`d_{nn} \\neq 5`}</Math>, and <Math>{`x_n = 6`}</Math> if <Math>{`d_{nn} = 5`}</Math>.</p>
-            <p className="mb-3">Then <Math>{`x`}</Math> differs from <Math>{`r_n`}</Math> in the <Math>{`n`}</Math>-th decimal place for all <Math>{`n`}</Math>. So <Math>{`x \\notin \\{r_1, r_2, \\ldots\\}`}</Math>.</p>
-            <p className="mb-3">Contradiction! So <Math>{`(0,1)`}</Math> is uncountable, hence <Math>{`\\mathbb{R}`}</Math> is uncountable.</p>
+            <p className="mb-3"><strong>Cantor's Diagonal Argument:</strong> Suppose <InlineMath>{`(0,1)`}</InlineMath> is countable. Then we can list all reals in <InlineMath>{`(0,1)`}</InlineMath> as <InlineMath>{`r_1, r_2, r_3, \\ldots`}</InlineMath></p>
+            <p className="mb-3">Write each <InlineMath>{`r_n`}</InlineMath> in decimal: <InlineMath>{`r_n = 0.d_{n1}d_{n2}d_{n3}\\ldots`}</InlineMath> (avoiding representations ending in all 9s).</p>
+            <p className="mb-3">Construct <InlineMath>{`x = 0.x_1x_2x_3\\ldots`}</InlineMath> where <InlineMath>{`x_n = 5`}</InlineMath> if <InlineMath>{`d_{nn} \\neq 5`}</InlineMath>, and <InlineMath>{`x_n = 6`}</InlineMath> if <InlineMath>{`d_{nn} = 5`}</InlineMath>.</p>
+            <p className="mb-3">Then <InlineMath>{`x`}</InlineMath> differs from <InlineMath>{`r_n`}</InlineMath> in the <InlineMath>{`n`}</InlineMath>-th decimal place for all <InlineMath>{`n`}</InlineMath>. So <InlineMath>{`x \\notin \\{r_1, r_2, \\ldots\\}`}</InlineMath>.</p>
+            <p className="mb-3">Contradiction! So <InlineMath>{`(0,1)`}</InlineMath> is uncountable, hence <InlineMath>{`\\mathbb{R}`}</InlineMath> is uncountable.</p>
           </>
         }
       >
@@ -111,8 +111,8 @@ export default function Section03() {
         title="Continuum Hypothesis"
         proof={
           <>
-            <p className="mb-3"><strong>Independence:</strong> Kurt Gödel (1940) showed CH is consistent with ZFC by constructing the constructible universe <Math>{`L`}</Math> where CH holds.</p>
-            <p className="mb-3">Paul Cohen (1963) showed <Math>{`\\neg`}</Math>CH is also consistent with ZFC using forcing, constructing models where <Math>{`2^{\\aleph_0}`}</Math> can be arbitrarily large.</p>
+            <p className="mb-3"><strong>Independence:</strong> Kurt Gödel (1940) showed CH is consistent with ZFC by constructing the constructible universe <InlineMath>{`L`}</InlineMath> where CH holds.</p>
+            <p className="mb-3">Paul Cohen (1963) showed <InlineMath>{`\\neg`}</InlineMath>CH is also consistent with ZFC using forcing, constructing models where <InlineMath>{`2^{\\aleph_0}`}</InlineMath> can be arbitrarily large.</p>
             <p className="mb-3">Therefore CH can neither be proved nor disproved from ZFC axioms alone - it is independent.</p>
             <p className="mb-3">This was one of the most important results in 20th century logic, showing fundamental limitations of axiomatic set theory.</p>
           </>

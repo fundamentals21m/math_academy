@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section34() {
   return (
@@ -15,28 +15,28 @@ export default function Section34() {
 
       <Definition title="Change of Basis Matrix" className="my-6">
         <p>
-          If <Math>V</Math> has two bases <Math>{`\\mathcal{B} = \\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_n\\}`}</Math> and
-          <Math>{`\\mathcal{C} = \\{\\mathbf{w}_1, \\ldots, \\mathbf{w}_n\\}`}</Math>, the <strong>change of basis matrix</strong>
-          <Math>P</Math> converts coordinates:
+          If <InlineMath>V</InlineMath> has two bases <InlineMath>{`\\mathcal{B} = \\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_n\\}`}</InlineMath> and
+          <InlineMath>{`\\mathcal{C} = \\{\\mathbf{w}_1, \\ldots, \\mathbf{w}_n\\}`}</InlineMath>, the <strong>change of basis matrix</strong>
+          <InlineMath>P</InlineMath> converts coordinates:
         </p>
         <MathBlock>
           {`[\\mathbf{x}]_\\mathcal{C} = P^{-1}[\\mathbf{x}]_\\mathcal{B}`}
         </MathBlock>
         <p className="mt-2">
-          Column <Math>j</Math> of <Math>P</Math> contains the coordinates of <Math>{`\\mathbf{v}_j`}</Math> in basis <Math>{`\\mathcal{C}`}</Math>.
+          Column <InlineMath>j</InlineMath> of <InlineMath>P</InlineMath> contains the coordinates of <InlineMath>{`\\mathbf{v}_j`}</InlineMath> in basis <InlineMath>{`\\mathcal{C}`}</InlineMath>.
         </p>
       </Definition>
 
       <Example title="Changing to a New Basis" className="my-6">
         <p>
-          Old basis: <Math>{`\\mathbf{v}_1 = (1, 0)`}</Math>, <Math>{`\\mathbf{v}_2 = (0, 1)`}</Math> (standard)<br />
-          New basis: <Math>{`\\mathbf{w}_1 = (1, 1)`}</Math>, <Math>{`\\mathbf{w}_2 = (1, -1)`}</Math>
+          Old basis: <InlineMath>{`\\mathbf{v}_1 = (1, 0)`}</InlineMath>, <InlineMath>{`\\mathbf{v}_2 = (0, 1)`}</InlineMath> (standard)<br />
+          New basis: <InlineMath>{`\\mathbf{w}_1 = (1, 1)`}</InlineMath>, <InlineMath>{`\\mathbf{w}_2 = (1, -1)`}</InlineMath>
         </p>
         <MathBlock>
           {`P = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}, \\quad P^{-1} = \\frac{1}{2}\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          The vector <Math>(3, 1)</Math> in standard basis has coordinates <Math>(2, 1)</Math> in the new basis.
+          The vector <InlineMath>(3, 1)</InlineMath> in standard basis has coordinates <InlineMath>(2, 1)</InlineMath> in the new basis.
         </p>
       </Example>
 
@@ -44,13 +44,13 @@ export default function Section34() {
 
       <Definition title="Similar Matrices" className="my-6">
         <p>
-          Matrices <Math>A</Math> and <Math>B</Math> are <strong>similar</strong> if:
+          Matrices <InlineMath>A</InlineMath> and <InlineMath>B</InlineMath> are <strong>similar</strong> if:
         </p>
         <MathBlock>
           {`B = M^{-1}AM`}
         </MathBlock>
         <p className="mt-2">
-          for some invertible matrix <Math>M</Math>. They represent the <strong>same transformation</strong>
+          for some invertible matrix <InlineMath>M</InlineMath>. They represent the <strong>same transformation</strong>
           in different bases.
         </p>
       </Definition>
@@ -60,24 +60,24 @@ export default function Section34() {
         className="my-6"
         proof={
           <>
-            <p>Let <Math>{`[\\mathbf{x}]_{\\mathcal{B}}`}</Math> denote coordinates in basis <Math>{`\\mathcal{B}`}</Math>.</p>
-            <p className="mt-2">In basis <Math>{`\\mathcal{B}`}</Math>: <Math>{`[T(\\mathbf{x})]_{\\mathcal{B}} = A[\\mathbf{x}]_{\\mathcal{B}}`}</Math>.</p>
-            <p className="mt-2">The change of basis matrix <Math>P</Math> satisfies: <Math>{`[\\mathbf{x}]_{\\mathcal{B}} = P[\\mathbf{x}]_{\\mathcal{C}}`}</Math>.</p>
-            <p className="mt-2">In basis <Math>{`\\mathcal{C}`}</Math>:</p>
+            <p>Let <InlineMath>{`[\\mathbf{x}]_{\\mathcal{B}}`}</InlineMath> denote coordinates in basis <InlineMath>{`\\mathcal{B}`}</InlineMath>.</p>
+            <p className="mt-2">In basis <InlineMath>{`\\mathcal{B}`}</InlineMath>: <InlineMath>{`[T(\\mathbf{x})]_{\\mathcal{B}} = A[\\mathbf{x}]_{\\mathcal{B}}`}</InlineMath>.</p>
+            <p className="mt-2">The change of basis matrix <InlineMath>P</InlineMath> satisfies: <InlineMath>{`[\\mathbf{x}]_{\\mathcal{B}} = P[\\mathbf{x}]_{\\mathcal{C}}`}</InlineMath>.</p>
+            <p className="mt-2">In basis <InlineMath>{`\\mathcal{C}`}</InlineMath>:</p>
             <MathBlock>{`[T(\\mathbf{x})]_{\\mathcal{C}} = P^{-1}[T(\\mathbf{x})]_{\\mathcal{B}} = P^{-1}A[\\mathbf{x}]_{\\mathcal{B}} = P^{-1}A(P[\\mathbf{x}]_{\\mathcal{C}}) = (P^{-1}AP)[\\mathbf{x}]_{\\mathcal{C}}`}</MathBlock>
-            <p className="mt-2">Therefore the matrix in basis <Math>{`\\mathcal{C}`}</Math> is <Math>{`B = P^{-1}AP`}</Math>.</p>
+            <p className="mt-2">Therefore the matrix in basis <InlineMath>{`\\mathcal{C}`}</InlineMath> is <InlineMath>{`B = P^{-1}AP`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          If <Math>A</Math> is the matrix of <Math>T</Math> in basis <Math>{`\\mathcal{B}`}</Math> and
-          <Math>B</Math> is the matrix in basis <Math>{`\\mathcal{C}`}</Math>:
+          If <InlineMath>A</InlineMath> is the matrix of <InlineMath>T</InlineMath> in basis <InlineMath>{`\\mathcal{B}`}</InlineMath> and
+          <InlineMath>B</InlineMath> is the matrix in basis <InlineMath>{`\\mathcal{C}`}</InlineMath>:
         </p>
         <MathBlock>
           {`B = P^{-1}AP`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>P</Math> is the change of basis matrix from <Math>{`\\mathcal{B}`}</Math> to <Math>{`\\mathcal{C}`}</Math>.
+          where <InlineMath>P</InlineMath> is the change of basis matrix from <InlineMath>{`\\mathcal{B}`}</InlineMath> to <InlineMath>{`\\mathcal{C}`}</InlineMath>.
         </p>
       </Theorem>
 
@@ -88,26 +88,26 @@ export default function Section34() {
         className="my-6"
         proof={
           <>
-            <p>Let <Math>{`X = [\\mathbf{x}_1 \\cdots \\mathbf{x}_n]`}</Math> where <Math>{`A\\mathbf{x}_i = \\lambda_i \\mathbf{x}_i`}</Math>.</p>
-            <p className="mt-2">In the standard basis, the transformation has matrix <Math>A</Math>.</p>
-            <p className="mt-2">In the eigenvector basis <Math>{`\\{\\mathbf{x}_1, \\ldots, \\mathbf{x}_n\\}`}</Math>:</p>
-            <p className="mt-2">• <Math>X</Math> is the change of basis matrix from eigenvector basis to standard basis</p>
-            <p className="mt-2">• By the change of basis theorem: <Math>{`\\Lambda = X^{-1}AX`}</Math></p>
-            <p className="mt-2">In the eigenvector basis, <Math>{`T(\\mathbf{x}_i) = \\lambda_i \\mathbf{x}_i`}</Math>, so the matrix is diagonal:</p>
+            <p>Let <InlineMath>{`X = [\\mathbf{x}_1 \\cdots \\mathbf{x}_n]`}</InlineMath> where <InlineMath>{`A\\mathbf{x}_i = \\lambda_i \\mathbf{x}_i`}</InlineMath>.</p>
+            <p className="mt-2">In the standard basis, the transformation has matrix <InlineMath>A</InlineMath>.</p>
+            <p className="mt-2">In the eigenvector basis <InlineMath>{`\\{\\mathbf{x}_1, \\ldots, \\mathbf{x}_n\\}`}</InlineMath>:</p>
+            <p className="mt-2">• <InlineMath>X</InlineMath> is the change of basis matrix from eigenvector basis to standard basis</p>
+            <p className="mt-2">• By the change of basis theorem: <InlineMath>{`\\Lambda = X^{-1}AX`}</InlineMath></p>
+            <p className="mt-2">In the eigenvector basis, <InlineMath>{`T(\\mathbf{x}_i) = \\lambda_i \\mathbf{x}_i`}</InlineMath>, so the matrix is diagonal:</p>
             <MathBlock>{`\\Lambda = \\begin{bmatrix} \\lambda_1 & & 0 \\\\ & \\ddots & \\\\ 0 & & \\lambda_n \\end{bmatrix}`}</MathBlock>
             <p className="mt-2">Each eigenvector coordinate is simply scaled by its eigenvalue.</p>
           </>
         }
       >
         <p>
-          If <Math>{`A = X\\Lambda X^{-1}`}</Math> (diagonalization), then:
+          If <InlineMath>{`A = X\\Lambda X^{-1}`}</InlineMath> (diagonalization), then:
         </p>
         <ul className="list-disc list-inside space-y-2">
-          <li><Math>X</Math> is the change of basis matrix to eigenvector basis</li>
-          <li><Math>\Lambda</Math> is the matrix of <Math>T</Math> in the eigenvector basis</li>
+          <li><InlineMath>X</InlineMath> is the change of basis matrix to eigenvector basis</li>
+          <li><InlineMath>\Lambda</InlineMath> is the matrix of <InlineMath>T</InlineMath> in the eigenvector basis</li>
         </ul>
         <p className="mt-2 text-primary-400">
-          In the eigenvector basis, <Math>T</Math> just scales each coordinate!
+          In the eigenvector basis, <InlineMath>T</InlineMath> just scales each coordinate!
         </p>
       </Theorem>
 
@@ -116,11 +116,11 @@ export default function Section34() {
           {`A = \\begin{bmatrix} 1 & 2 \\\\ 0 & 3 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Eigenvalues: <Math>\lambda_1 = 1</Math>, <Math>\lambda_2 = 3</Math><br />
-          Eigenvectors: <Math>{`\\mathbf{x}_1 = (1, 0)`}</Math>, <Math>{`\\mathbf{x}_2 = (1, 1)`}</Math>
+          Eigenvalues: <InlineMath>\lambda_1 = 1</InlineMath>, <InlineMath>\lambda_2 = 3</InlineMath><br />
+          Eigenvectors: <InlineMath>{`\\mathbf{x}_1 = (1, 0)`}</InlineMath>, <InlineMath>{`\\mathbf{x}_2 = (1, 1)`}</InlineMath>
         </p>
         <p className="mt-2">
-          In eigenvector basis: <Math>{`\\Lambda = \\begin{bmatrix} 1 & 0 \\\\\\\\ 0 & 3 \\end{bmatrix}`}</Math>
+          In eigenvector basis: <InlineMath>{`\\Lambda = \\begin{bmatrix} 1 & 0 \\\\\\\\ 0 & 3 \\end{bmatrix}`}</InlineMath>
         </p>
       </Example>
 
@@ -131,13 +131,13 @@ export default function Section34() {
         className="my-6"
         proof={
           <>
-            <p>Let <Math>B = P^{-1}AP</Math>.</p>
-            <p className="mt-2"><strong>Eigenvalues:</strong> <Math>\\det(B - \\lambda I) = \\det(P^{-1}AP - \\lambda P^{-1}P) = \\det(P^{-1}(A - \\lambda I)P)</Math></p>
+            <p>Let <InlineMath>B = P^{-1}AP</InlineMath>.</p>
+            <p className="mt-2"><strong>Eigenvalues:</strong> <InlineMath>\\det(B - \\lambda I) = \\det(P^{-1}AP - \\lambda P^{-1}P) = \\det(P^{-1}(A - \\lambda I)P)</InlineMath></p>
             <MathBlock>{`= \\det(P^{-1})\\det(A - \\lambda I)\\det(P) = \\det(A - \\lambda I)`}</MathBlock>
             <p className="mt-2">Same characteristic polynomial ⟹ same eigenvalues.</p>
-            <p className="mt-2"><strong>Determinant:</strong> <Math>\\det B = \\det(P^{-1}AP) = \\det(P^{-1})\\det(A)\\det(P) = \\det A</Math>.</p>
-            <p className="mt-2"><strong>Trace:</strong> <Math>{`\\text{tr}(B) = \\text{tr}(P^{-1}AP) = \\text{tr}(APP^{-1}) = \\text{tr}(A)`}</Math> (using <Math>{`\\text{tr}(XY) = \\text{tr}(YX)`}</Math>).</p>
-            <p className="mt-2"><strong>Rank:</strong> <Math>{`B\\mathbf{x} = \\mathbf{0}`}</Math> iff <Math>{`P^{-1}AP\\mathbf{x} = \\mathbf{0}`}</Math> iff <Math>{`A(P\\mathbf{x}) = \\mathbf{0}`}</Math>. Since <Math>P</Math> is invertible, <Math>{`\\dim N(B) = \\dim N(A)`}</Math>, so <Math>{`\\text{rank}(B) = \\text{rank}(A)`}</Math>.</p>
+            <p className="mt-2"><strong>Determinant:</strong> <InlineMath>\\det B = \\det(P^{-1}AP) = \\det(P^{-1})\\det(A)\\det(P) = \\det A</InlineMath>.</p>
+            <p className="mt-2"><strong>Trace:</strong> <InlineMath>{`\\text{tr}(B) = \\text{tr}(P^{-1}AP) = \\text{tr}(APP^{-1}) = \\text{tr}(A)`}</InlineMath> (using <InlineMath>{`\\text{tr}(XY) = \\text{tr}(YX)`}</InlineMath>).</p>
+            <p className="mt-2"><strong>Rank:</strong> <InlineMath>{`B\\mathbf{x} = \\mathbf{0}`}</InlineMath> iff <InlineMath>{`P^{-1}AP\\mathbf{x} = \\mathbf{0}`}</InlineMath> iff <InlineMath>{`A(P\\mathbf{x}) = \\mathbf{0}`}</InlineMath>. Since <InlineMath>P</InlineMath> is invertible, <InlineMath>{`\\dim N(B) = \\dim N(A)`}</InlineMath>, so <InlineMath>{`\\text{rank}(B) = \\text{rank}(A)`}</InlineMath>.</p>
           </>
         }
       >
@@ -160,9 +160,9 @@ export default function Section34() {
           The goal is to find a basis where the matrix is as simple as possible:
         </p>
         <ul className="list-disc list-inside text-dark-300 text-sm mt-2 space-y-1">
-          <li><strong>Diagonal:</strong> If <Math>A</Math> is diagonalizable</li>
+          <li><strong>Diagonal:</strong> If <InlineMath>A</InlineMath> is diagonalizable</li>
           <li><strong>Jordan form:</strong> If not diagonalizable, the "next best" form</li>
-          <li><strong>SVD bases:</strong> Different bases for input and output, giving <Math>\Sigma</Math></li>
+          <li><strong>SVD bases:</strong> Different bases for input and output, giving <InlineMath>\Sigma</InlineMath></li>
         </ul>
       </div>
 
@@ -170,15 +170,15 @@ export default function Section34() {
 
       <Example title="The Action of Similarity" className="my-6">
         <p>
-          To compute <Math>{`B\\mathbf{y}`}</Math> where <Math>{`B = P^{-1}AP`}</Math>:
+          To compute <InlineMath>{`B\\mathbf{y}`}</InlineMath> where <InlineMath>{`B = P^{-1}AP`}</InlineMath>:
         </p>
         <MathBlock>
           {`B\\mathbf{y} = P^{-1}A(P\\mathbf{y})`}
         </MathBlock>
         <ol className="list-decimal list-inside mt-2 space-y-1">
-          <li>Convert <Math>{`\\mathbf{y}`}</Math> to original basis: <Math>{`\\mathbf{x} = P\\mathbf{y}`}</Math></li>
-          <li>Apply original transformation: <Math>{`A\\mathbf{x}`}</Math></li>
-          <li>Convert back to new basis: <Math>{`P^{-1}(A\\mathbf{x})`}</Math></li>
+          <li>Convert <InlineMath>{`\\mathbf{y}`}</InlineMath> to original basis: <InlineMath>{`\\mathbf{x} = P\\mathbf{y}`}</InlineMath></li>
+          <li>Apply original transformation: <InlineMath>{`A\\mathbf{x}`}</InlineMath></li>
+          <li>Convert back to new basis: <InlineMath>{`P^{-1}(A\\mathbf{x})`}</InlineMath></li>
         </ol>
       </Example>
 
@@ -188,11 +188,11 @@ export default function Section34() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Change of basis: <Math>{`[x]_{\\mathcal{C}} = P^{-1}[x]_{\\mathcal{B}}`}</Math>.</span>
+            <span>Change of basis: <InlineMath>{`[x]_{\\mathcal{C}} = P^{-1}[x]_{\\mathcal{B}}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Similar matrices: <Math>{`B = P^{-1}AP`}</Math> (same transformation, different basis).</span>
+            <span>Similar matrices: <InlineMath>{`B = P^{-1}AP`}</InlineMath> (same transformation, different basis).</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
