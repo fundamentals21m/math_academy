@@ -1,13 +1,13 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section13() {
   return (
     <LessonLayout sectionId={13}>
       {/* Introduction */}
       <p>
-        Now we solve <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> when <Math>{`\\mathbf{b} \\neq \\mathbf{0}`}</Math>. The complete
+        Now we solve <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> when <InlineMath>{`\\mathbf{b} \\neq \\mathbf{0}`}</InlineMath>. The complete
         solution combines one <strong>particular solution</strong> with the general <strong>nullspace solution</strong>.
       </p>
 
@@ -18,64 +18,64 @@ export default function Section13() {
         className="my-6"
         proof={
           <>
-            <p><strong>Every such vector is a solution:</strong> If <Math>{`A\\mathbf{x}_p = \\mathbf{b}`}</Math> and <Math>{`A\\mathbf{x}_n = \\mathbf{0}`}</Math>, then:</p>
+            <p><strong>Every such vector is a solution:</strong> If <InlineMath>{`A\\mathbf{x}_p = \\mathbf{b}`}</InlineMath> and <InlineMath>{`A\\mathbf{x}_n = \\mathbf{0}`}</InlineMath>, then:</p>
             <MathBlock>{`A(\\mathbf{x}_p + \\mathbf{x}_n) = A\\mathbf{x}_p + A\\mathbf{x}_n = \\mathbf{b} + \\mathbf{0} = \\mathbf{b}`}</MathBlock>
-            <p className="mt-2"><strong>Every solution has this form:</strong> Suppose <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math>. Then:</p>
+            <p className="mt-2"><strong>Every solution has this form:</strong> Suppose <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath>. Then:</p>
             <MathBlock>{`A(\\mathbf{x} - \\mathbf{x}_p) = A\\mathbf{x} - A\\mathbf{x}_p = \\mathbf{b} - \\mathbf{b} = \\mathbf{0}`}</MathBlock>
-            <p>So <Math>{`\\mathbf{x} - \\mathbf{x}_p`}</Math> is in the nullspace, meaning <Math>{`\\mathbf{x} = \\mathbf{x}_p + \\mathbf{x}_n`}</Math> for some <Math>{`\\mathbf{x}_n \\in N(A)`}</Math>.</p>
+            <p>So <InlineMath>{`\\mathbf{x} - \\mathbf{x}_p`}</InlineMath> is in the nullspace, meaning <InlineMath>{`\\mathbf{x} = \\mathbf{x}_p + \\mathbf{x}_n`}</InlineMath> for some <InlineMath>{`\\mathbf{x}_n \\in N(A)`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          The complete solution to <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> is:
+          The complete solution to <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> is:
         </p>
         <MathBlock>
           {`\\mathbf{x} = \\mathbf{x}_p + \\mathbf{x}_n`}
         </MathBlock>
         <p className="mt-2">
-          <Math>{`\\mathbf{x}_p`}</Math> = one <strong>particular solution</strong> (any solution to <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math>)<br />
-          <Math>{`\\mathbf{x}_n`}</Math> = general solution to <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math> (the nullspace)
+          <InlineMath>{`\\mathbf{x}_p`}</InlineMath> = one <strong>particular solution</strong> (any solution to <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath>)<br />
+          <InlineMath>{`\\mathbf{x}_n`}</InlineMath> = general solution to <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath> (the nullspace)
         </p>
       </Theorem>
 
       <p>
-        Why does this work? If <Math>{`A\\mathbf{x}_p = \\mathbf{b}`}</Math> and <Math>{`A\\mathbf{x}_n = \\mathbf{0}`}</Math>, then
-        <Math>{`A(\\mathbf{x}_p + \\mathbf{x}_n) = \\mathbf{b} + \\mathbf{0} = \\mathbf{b}`}</Math>.
+        Why does this work? If <InlineMath>{`A\\mathbf{x}_p = \\mathbf{b}`}</InlineMath> and <InlineMath>{`A\\mathbf{x}_n = \\mathbf{0}`}</InlineMath>, then
+        <InlineMath>{`A(\\mathbf{x}_p + \\mathbf{x}_n) = \\mathbf{b} + \\mathbf{0} = \\mathbf{b}`}</InlineMath>.
       </p>
 
       <h2>The Augmented Matrix</h2>
 
       <Definition title="Augmented Matrix" className="my-6">
         <p>
-          To solve <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math>, we augment <Math>A</Math> with <Math>{`\\mathbf{b}`}</Math>:
+          To solve <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath>, we augment <InlineMath>A</InlineMath> with <InlineMath>{`\\mathbf{b}`}</InlineMath>:
         </p>
         <MathBlock>
           {`[A \\mid \\mathbf{b}] = \\begin{bmatrix} 1 & 3 & 0 & 2 & 1 \\\\ 0 & 0 & 1 & 4 & 6 \\\\ 1 & 3 & 1 & 6 & 7 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Apply elimination to <Math>{`[A \\mid \\mathbf{b}]`}</Math> to reach <Math>{`[R \\mid \\mathbf{d}]`}</Math>.
+          Apply elimination to <InlineMath>{`[A \\mid \\mathbf{b}]`}</InlineMath> to reach <InlineMath>{`[R \\mid \\mathbf{d}]`}</InlineMath>.
         </p>
       </Definition>
 
-      <h2>When Is <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> Solvable?</h2>
+      <h2>When Is <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> Solvable?</h2>
 
       <Theorem
         title="Solvability Conditions"
         className="my-6"
         proof={
           <>
-            <p><strong>Condition 1:</strong> <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> means <Math>{`\\mathbf{b}`}</Math> is a linear combination of the columns of <Math>A</Math>. By definition, this is exactly the column space <Math>C(A)</Math>.</p>
-            <p className="mt-2"><strong>Condition 2:</strong> A zero row in <Math>R</Math> means that row was a combination of other rows. When we apply the same operations to <Math>{`[A \\mid \\mathbf{b}]`}</Math>, if <Math>{`\\mathbf{b}`}</Math> is in <Math>C(A)</Math>, the corresponding entry in <Math>{`\\mathbf{d}`}</Math> must be zero.</p>
-            <p className="mt-2">Conversely, a zero row in <Math>R</Math> with nonzero entry in <Math>{`\\mathbf{d}`}</Math> gives an equation <Math>0 = c</Math> where <Math>c \neq 0</Math>, which is impossible. So the system has no solution.</p>
+            <p><strong>Condition 1:</strong> <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> means <InlineMath>{`\\mathbf{b}`}</InlineMath> is a linear combination of the columns of <InlineMath>A</InlineMath>. By definition, this is exactly the column space <InlineMath>C(A)</InlineMath>.</p>
+            <p className="mt-2"><strong>Condition 2:</strong> A zero row in <InlineMath>R</InlineMath> means that row was a combination of other rows. When we apply the same operations to <InlineMath>{`[A \\mid \\mathbf{b}]`}</InlineMath>, if <InlineMath>{`\\mathbf{b}`}</InlineMath> is in <InlineMath>C(A)</InlineMath>, the corresponding entry in <InlineMath>{`\\mathbf{d}`}</InlineMath> must be zero.</p>
+            <p className="mt-2">Conversely, a zero row in <InlineMath>R</InlineMath> with nonzero entry in <InlineMath>{`\\mathbf{d}`}</InlineMath> gives an equation <InlineMath>0 = c</InlineMath> where <InlineMath>c \neq 0</InlineMath>, which is impossible. So the system has no solution.</p>
           </>
         }
       >
         <p>
-          <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> is solvable if and only if:
+          <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> is solvable if and only if:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li><Math>{`\\mathbf{b}`}</Math> is in the column space <Math>C(A)</Math></li>
-          <li>If a row of <Math>R</Math> is all zeros, the same row of <Math>{`\\mathbf{d}`}</Math> must be zero</li>
+          <li><InlineMath>{`\\mathbf{b}`}</InlineMath> is in the column space <InlineMath>C(A)</InlineMath></li>
+          <li>If a row of <InlineMath>R</InlineMath> is all zeros, the same row of <InlineMath>{`\\mathbf{d}`}</InlineMath> must be zero</li>
         </ul>
       </Theorem>
 
@@ -84,10 +84,10 @@ export default function Section13() {
           {`[R \\mid \\mathbf{d}] = \\begin{bmatrix} 1 & 3 & 0 & 2 & 1 \\\\ 0 & 0 & 1 & 4 & 6 \\\\ 0 & 0 & 0 & 0 & 0 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Row 3 has all zeros in <Math>R</Math> and zero in <Math>{`\\mathbf{d}`}</Math>. The system <strong>is solvable</strong>.
+          Row 3 has all zeros in <InlineMath>R</InlineMath> and zero in <InlineMath>{`\\mathbf{d}`}</InlineMath>. The system <strong>is solvable</strong>.
         </p>
         <p className="mt-2 text-amber-400">
-          If the last entry were nonzero (like <Math>0 = 5</Math>), the system would have <strong>no solution</strong>.
+          If the last entry were nonzero (like <InlineMath>0 = 5</InlineMath>), the system would have <strong>no solution</strong>.
         </p>
       </Example>
 
@@ -95,16 +95,16 @@ export default function Section13() {
 
       <Definition title="Particular Solution" className="my-6">
         <p>
-          To find <Math>{`\\mathbf{x}_p`}</Math>: set all <strong>free variables to zero</strong> and solve for the pivot variables.
+          To find <InlineMath>{`\\mathbf{x}_p`}</InlineMath>: set all <strong>free variables to zero</strong> and solve for the pivot variables.
         </p>
       </Definition>
 
       <Example title="Finding x_p" className="my-6">
-        <p>From the system above with free variables <Math>x_2, x_4</Math>:</p>
+        <p>From the system above with free variables <InlineMath>x_2, x_4</InlineMath>:</p>
         <MathBlock>
           {`x_2 = 0, \\quad x_4 = 0`}
         </MathBlock>
-        <p className="mt-2">Then from <Math>{`R\\mathbf{x} = \\mathbf{d}`}</Math>:</p>
+        <p className="mt-2">Then from <InlineMath>{`R\\mathbf{x} = \\mathbf{d}`}</InlineMath>:</p>
         <MathBlock>
           {`x_1 + 3(0) + 2(0) = 1 \\Rightarrow x_1 = 1`}
         </MathBlock>
@@ -112,30 +112,30 @@ export default function Section13() {
           {`x_3 + 4(0) = 6 \\Rightarrow x_3 = 6`}
         </MathBlock>
         <p className="mt-2">
-          Particular solution: <Math>{`\\mathbf{x}_p = (1, 0, 6, 0)`}</Math>
+          Particular solution: <InlineMath>{`\\mathbf{x}_p = (1, 0, 6, 0)`}</InlineMath>
         </p>
       </Example>
 
       <h2>The Four Cases</h2>
 
       <div className="bg-dark-800/50 rounded-xl p-4 my-6 border border-primary-500/20">
-        <p className="font-semibold text-primary-400 mb-3">Number of solutions to <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math>:</p>
+        <p className="font-semibold text-primary-400 mb-3">Number of solutions to <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath>:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div className="bg-dark-900/50 p-3 rounded-lg">
-            <p className="text-emerald-400 font-semibold"><Math>r = m = n</Math></p>
+            <p className="text-emerald-400 font-semibold"><InlineMath>r = m = n</InlineMath></p>
             <p className="text-dark-300">Square, full rank: <strong>1 solution</strong></p>
           </div>
           <div className="bg-dark-900/50 p-3 rounded-lg">
-            <p className="text-amber-400 font-semibold"><Math>r = m &lt; n</Math></p>
-            <p className="text-dark-300">Short, wide: <Math>\infty</Math> <strong>solutions</strong></p>
+            <p className="text-amber-400 font-semibold"><InlineMath>r = m &lt; n</InlineMath></p>
+            <p className="text-dark-300">Short, wide: <InlineMath>\infty</InlineMath> <strong>solutions</strong></p>
           </div>
           <div className="bg-dark-900/50 p-3 rounded-lg">
-            <p className="text-cyan-400 font-semibold"><Math>r = n &lt; m</Math></p>
+            <p className="text-cyan-400 font-semibold"><InlineMath>r = n &lt; m</InlineMath></p>
             <p className="text-dark-300">Tall, thin: <strong>0 or 1 solution</strong></p>
           </div>
           <div className="bg-dark-900/50 p-3 rounded-lg">
-            <p className="text-rose-400 font-semibold"><Math>r &lt; m, r &lt; n</Math></p>
-            <p className="text-dark-300">Not full rank: <strong>0 or </strong><Math>\infty</Math></p>
+            <p className="text-rose-400 font-semibold"><InlineMath>r &lt; m, r &lt; n</InlineMath></p>
+            <p className="text-dark-300">Not full rank: <strong>0 or </strong><InlineMath>\infty</InlineMath></p>
           </div>
         </div>
       </div>
@@ -145,18 +145,18 @@ export default function Section13() {
         className="my-6"
         proof={
           <>
-            <p><strong><Math>r = n</Math>:</strong> All columns are pivot columns, so there are no free columns and no free variables. The nullspace is just <Math>{`\\{\\mathbf{0}\\}`}</Math>, giving at most one solution.</p>
-            <p className="mt-2"><strong><Math>r = m</Math>:</strong> There are <Math>r = m</Math> pivots, one in each row of <Math>R</Math>. No row is all zeros, so the solvability condition is always satisfied for any <Math>{`\\mathbf{b}`}</Math>.</p>
-            <p className="mt-2"><strong><Math>r &lt; n</Math>:</strong> There are <Math>n - r &gt; 0</Math> free variables. If a particular solution exists, we can add any nullspace vector (a nontrivial subspace) to get infinitely many solutions.</p>
-            <p className="mt-2"><strong><Math>r &lt; m</Math>:</strong> Some rows of <Math>R</Math> are all zeros. For most choices of <Math>{`\\mathbf{b}`}</Math>, the corresponding entries of <Math>{`\\mathbf{d}`}</Math> will be nonzero, making the system unsolvable.</p>
+            <p><strong><InlineMath>r = n</InlineMath>:</strong> All columns are pivot columns, so there are no free columns and no free variables. The nullspace is just <InlineMath>{`\\{\\mathbf{0}\\}`}</InlineMath>, giving at most one solution.</p>
+            <p className="mt-2"><strong><InlineMath>r = m</InlineMath>:</strong> There are <InlineMath>r = m</InlineMath> pivots, one in each row of <InlineMath>R</InlineMath>. No row is all zeros, so the solvability condition is always satisfied for any <InlineMath>{`\\mathbf{b}`}</InlineMath>.</p>
+            <p className="mt-2"><strong><InlineMath>r &lt; n</InlineMath>:</strong> There are <InlineMath>n - r &gt; 0</InlineMath> free variables. If a particular solution exists, we can add any nullspace vector (a nontrivial subspace) to get infinitely many solutions.</p>
+            <p className="mt-2"><strong><InlineMath>r &lt; m</InlineMath>:</strong> Some rows of <InlineMath>R</InlineMath> are all zeros. For most choices of <InlineMath>{`\\mathbf{b}`}</InlineMath>, the corresponding entries of <InlineMath>{`\\mathbf{d}`}</InlineMath> will be nonzero, making the system unsolvable.</p>
           </>
         }
       >
         <ul className="list-disc list-inside space-y-2">
-          <li><Math>r = n</Math> means <strong>no free variables</strong>: at most 1 solution</li>
-          <li><Math>r = m</Math> means <strong>every <Math>{`\\mathbf{b}`}</Math> is solvable</strong></li>
-          <li><Math>r &lt; n</Math> means <strong>free variables exist</strong>: <Math>\infty</Math> solutions (if solvable)</li>
-          <li><Math>r &lt; m</Math> means <strong>some <Math>{`\\mathbf{b}`}</Math> have no solution</strong></li>
+          <li><InlineMath>r = n</InlineMath> means <strong>no free variables</strong>: at most 1 solution</li>
+          <li><InlineMath>r = m</InlineMath> means <strong>every <InlineMath>{`\\mathbf{b}`}</InlineMath> is solvable</strong></li>
+          <li><InlineMath>r &lt; n</InlineMath> means <strong>free variables exist</strong>: <InlineMath>\infty</InlineMath> solutions (if solvable)</li>
+          <li><InlineMath>r &lt; m</InlineMath> means <strong>some <InlineMath>{`\\mathbf{b}`}</InlineMath> have no solution</strong></li>
         </ul>
       </Theorem>
 
@@ -166,23 +166,23 @@ export default function Section13() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Complete solution: <Math>{`\\mathbf{x} = \\mathbf{x}_p + \\mathbf{x}_n`}</Math> (particular + nullspace).</span>
+            <span>Complete solution: <InlineMath>{`\\mathbf{x} = \\mathbf{x}_p + \\mathbf{x}_n`}</InlineMath> (particular + nullspace).</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Elimination on <Math>{`[A \\mid \\mathbf{b}]`}</Math> leads to <Math>{`[R \\mid \\mathbf{d}]`}</Math>.</span>
+            <span>Elimination on <InlineMath>{`[A \\mid \\mathbf{b}]`}</InlineMath> leads to <InlineMath>{`[R \\mid \\mathbf{d}]`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span><Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> is solvable when all zero rows of <Math>R</Math> have zeros in <Math>{`\\mathbf{d}`}</Math>.</span>
+            <span><InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> is solvable when all zero rows of <InlineMath>R</InlineMath> have zeros in <InlineMath>{`\\mathbf{d}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>For <Math>{`\\mathbf{x}_p`}</Math>: set free variables to zero, solve for pivot variables.</span>
+            <span>For <InlineMath>{`\\mathbf{x}_p`}</InlineMath>: set free variables to zero, solve for pivot variables.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>The rank <Math>r</Math> determines existence (<Math>r = m</Math>) and uniqueness (<Math>r = n</Math>).</span>
+            <span>The rank <InlineMath>r</InlineMath> determines existence (<InlineMath>r = m</InlineMath>) and uniqueness (<InlineMath>r = n</InlineMath>).</span>
           </li>
         </ul>
       </div>

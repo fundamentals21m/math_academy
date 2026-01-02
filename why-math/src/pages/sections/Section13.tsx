@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { CantorDiagonalVisualizer } from '@/components/visualizations';
 
 export default function Section13() {
@@ -43,7 +43,7 @@ export default function Section13() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: Comparing Finite Sets</p>
         <p className="mt-2">
-          The sets <Math>{`A = \\{a, b, c, d, e\\}`}</Math> and <Math>{`B = \\{r, s, t, u, v\\}`}</Math>{' '}
+          The sets <InlineMath>{`A = \\{a, b, c, d, e\\}`}</InlineMath> and <InlineMath>{`B = \\{r, s, t, u, v\\}`}</InlineMath>{' '}
           have the same cardinality since there is the following one-to-one correspondence:
         </p>
         <div className="mt-2 text-center font-mono">
@@ -52,7 +52,7 @@ export default function Section13() {
         <p className="mt-2 text-dark-300">
           Each element of A is paired with exactly one element of B, and vice versa.
           The number of different one-to-one correspondences between these sets is{' '}
-          <Math>{`5! = 120`}</Math>.
+          <InlineMath>{`5! = 120`}</InlineMath>.
         </p>
       </div>
 
@@ -64,8 +64,8 @@ export default function Section13() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: Nonnegative Integers vs. Positive Integers</p>
         <p className="mt-2">
-          Show that the set of all nonnegative integers <Math>{`A = \\{0, 1, 2, 3, ...\\}`}</Math>{' '}
-          has the same cardinality as the set of all positive integers <Math>{`N = \\{1, 2, 3, 4, ...\\}`}</Math>.
+          Show that the set of all nonnegative integers <InlineMath>{`A = \\{0, 1, 2, 3, ...\\}`}</InlineMath>{' '}
+          has the same cardinality as the set of all positive integers <InlineMath>{`N = \\{1, 2, 3, 4, ...\\}`}</InlineMath>.
         </p>
         <p className="mt-2">
           <strong>Solution:</strong> Display a one-to-one correspondence:
@@ -81,12 +81,12 @@ export default function Section13() {
       </div>
 
       <Callout type="info">
-        <strong>Definition:</strong> If the elements of a set <Math>A</Math> can be put
-        into one-to-one correspondence with the positive integers <Math>N</Math>, then
-        the set <Math>A</Math> is said to be <strong>countably infinite</strong>. This
+        <strong>Definition:</strong> If the elements of a set <InlineMath>A</InlineMath> can be put
+        into one-to-one correspondence with the positive integers <InlineMath>N</InlineMath>, then
+        the set <InlineMath>A</InlineMath> is said to be <strong>countably infinite</strong>. This
         is denoted symbolically by:
         <MathBlock>{`n(A) = \\aleph_0`}</MathBlock>
-        where <Math>{`\\aleph_0`}</Math> is pronounced "aleph nought" (or "aleph null").
+        where <InlineMath>{`\\aleph_0`}</InlineMath> is pronounced "aleph nought" (or "aleph null").
       </Callout>
 
       <p>
@@ -96,7 +96,7 @@ export default function Section13() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: All Integers Are Countable</p>
         <p className="mt-2">
-          Show that the set of <em>all</em> integers <Math>{`Z = \\{..., -2, -1, 0, 1, 2, ...\\}`}</Math>{' '}
+          Show that the set of <em>all</em> integers <InlineMath>{`Z = \\{..., -2, -1, 0, 1, 2, ...\\}`}</InlineMath>{' '}
           is countable.
         </p>
         <p className="mt-2">
@@ -114,8 +114,8 @@ export default function Section13() {
       </div>
 
       <Callout type="success">
-        <strong>Theorem A:</strong> If <Math>A</Math> and <Math>B</Math> are countable
-        sets, then <Math>{`A \\cup B`}</Math> is also countable.
+        <strong>Theorem A:</strong> If <InlineMath>A</InlineMath> and <InlineMath>B</InlineMath> are countable
+        sets, then <InlineMath>{`A \\cup B`}</InlineMath> is also countable.
       </Callout>
 
       <h2>13.2 Countably Many Countable Sets</h2>
@@ -132,7 +132,7 @@ export default function Section13() {
 
       <p>
         The proof uses a clever "diagonal" enumeration. Given sets{' '}
-        <Math>{`A_1, A_2, A_3, ...`}</Math>, list their elements in a grid and then
+        <InlineMath>{`A_1, A_2, A_3, ...`}</InlineMath>, list their elements in a grid and then
         traverse diagonally:
       </p>
 
@@ -141,8 +141,8 @@ export default function Section13() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: Rationals in [0, 1] Are Countable</p>
         <p className="mt-2">
-          Show that the set of all rational numbers <Math>x</Math> such that{' '}
-          <Math>{`0 \\leq x \\leq 1`}</Math> is countable.
+          Show that the set of all rational numbers <InlineMath>x</InlineMath> such that{' '}
+          <InlineMath>{`0 \\leq x \\leq 1`}</InlineMath> is countable.
         </p>
         <p className="mt-2">
           <strong>Solution:</strong> List them systematically (skipping duplicates):
@@ -156,9 +156,9 @@ export default function Section13() {
           Consider the positive rationals as the union of sets:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1 text-dark-300">
-          <li><Math>{`A_1 = \\{1, 2, 3, ...\\}`}</Math></li>
-          <li><Math>{`A_2 = \\{\\frac{1}{2}, \\frac{3}{2}, \\frac{5}{2}, ...\\}`}</Math></li>
-          <li><Math>{`A_3 = \\{\\frac{1}{3}, \\frac{2}{3}, \\frac{4}{3}, ...\\}`}</Math></li>
+          <li><InlineMath>{`A_1 = \\{1, 2, 3, ...\\}`}</InlineMath></li>
+          <li><InlineMath>{`A_2 = \\{\\frac{1}{2}, \\frac{3}{2}, \\frac{5}{2}, ...\\}`}</InlineMath></li>
+          <li><InlineMath>{`A_3 = \\{\\frac{1}{3}, \\frac{2}{3}, \\frac{4}{3}, ...\\}`}</InlineMath></li>
         </ul>
         <p className="mt-2 text-emerald-400">
           By Theorem B, their union (all positive rationals) is countable!
@@ -183,7 +183,7 @@ export default function Section13() {
       </p>
 
       <Callout type="warning">
-        <strong>Theorem C (Cantor, 1891):</strong> The set <Math>{`[0, 1)`}</Math> is uncountable.
+        <strong>Theorem C (Cantor, 1891):</strong> The set <InlineMath>{`[0, 1)`}</InlineMath> is uncountable.
       </Callout>
 
       <p>
@@ -195,22 +195,22 @@ export default function Section13() {
         <p className="font-semibold text-indigo-400">Cantor's Diagonal Argument</p>
         <p className="mt-2">
           <strong>Proof:</strong> Suppose (for contradiction) that there is a complete list
-          of all real numbers in <Math>{`[0, 1)`}</Math>:
+          of all real numbers in <InlineMath>{`[0, 1)`}</InlineMath>:
         </p>
         <MathBlock>{`x_1 = 0.a_{11}a_{12}a_{13}...`}</MathBlock>
         <MathBlock>{`x_2 = 0.a_{21}a_{22}a_{23}...`}</MathBlock>
         <MathBlock>{`x_3 = 0.a_{31}a_{32}a_{33}...`}</MathBlock>
         <p className="mt-2">
-          Now construct a number <Math>x = 0.b_1b_2b_3...</Math> where each digit{' '}
-          <Math>{`b_i`}</Math> is chosen to be <em>different</em> from the diagonal digit{' '}
-          <Math>{`a_{ii}`}</Math>.
+          Now construct a number <InlineMath>x = 0.b_1b_2b_3...</InlineMath> where each digit{' '}
+          <InlineMath>{`b_i`}</InlineMath> is chosen to be <em>different</em> from the diagonal digit{' '}
+          <InlineMath>{`a_{ii}`}</InlineMath>.
         </p>
         <p className="mt-2">
-          Then <Math>x</Math> differs from <Math>{`x_1`}</Math> in the first decimal place,
-          from <Math>{`x_2`}</Math> in the second, from <Math>{`x_3`}</Math> in the third, etc.
+          Then <InlineMath>x</InlineMath> differs from <InlineMath>{`x_1`}</InlineMath> in the first decimal place,
+          from <InlineMath>{`x_2`}</InlineMath> in the second, from <InlineMath>{`x_3`}</InlineMath> in the third, etc.
         </p>
         <p className="mt-2 text-emerald-400">
-          So <Math>x</Math> is not in the list! Contradiction. The list cannot be complete.
+          So <InlineMath>x</InlineMath> is not in the list! Contradiction. The list cannot be complete.
         </p>
       </div>
 
@@ -219,7 +219,7 @@ export default function Section13() {
       <Callout type="success">
         <strong>Corollary:</strong> The irrational numbers are uncountable.
         <p className="mt-2">
-          <em>Proof:</em> If the irrationals were countable, then <Math>{`[0, 1)`}</Math> would
+          <em>Proof:</em> If the irrationals were countable, then <InlineMath>{`[0, 1)`}</InlineMath> would
           be the union of two countable sets (rationals and irrationals) and would be countable
           itself. But Theorem C says it's not!
         </p>
@@ -236,42 +236,42 @@ export default function Section13() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Different Sizes of Infinity</p>
         <p className="mt-2">
-          The set of all real numbers <Math>{`(-\\infty, \\infty)`}</Math> has the same
-          cardinality as any interval like <Math>{`(0, 1)`}</Math>—shown via geometric
+          The set of all real numbers <InlineMath>{`(-\\infty, \\infty)`}</InlineMath> has the same
+          cardinality as any interval like <InlineMath>{`(0, 1)`}</InlineMath>—shown via geometric
           constructions using similar triangles.
         </p>
         <p className="mt-2">
-          This cardinality is denoted <Math>{`\\aleph_1`}</Math> (pronounced "aleph one"):
+          This cardinality is denoted <InlineMath>{`\\aleph_1`}</InlineMath> (pronounced "aleph one"):
         </p>
         <MathBlock>{`n((-\\infty, \\infty)) = \\aleph_1`}</MathBlock>
         <p className="mt-2 text-emerald-400">
-          Thus <Math>{`\\aleph_1`}</Math> is another infinity—one that is "bigger than"{' '}
-          <Math>{`\\aleph_0`}</Math>!
+          Thus <InlineMath>{`\\aleph_1`}</InlineMath> is another infinity—one that is "bigger than"{' '}
+          <InlineMath>{`\\aleph_0`}</InlineMath>!
         </p>
       </div>
 
       <Callout type="info">
         <strong>Mind-Bending Fact:</strong> It can be shown that there are always
         infinities "bigger than" any given infinity. The hierarchy of infinities continues
-        forever: <Math>{`\\aleph_0 < \\aleph_1 < \\aleph_2 < ...`}</Math>
+        forever: <InlineMath>{`\\aleph_0 < \\aleph_1 < \\aleph_2 < ...`}</InlineMath>
       </Callout>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
-          <p className="text-primary-400 font-semibold">Countable (<Math>{`\\aleph_0`}</Math>)</p>
+          <p className="text-primary-400 font-semibold">Countable (<InlineMath>{`\\aleph_0`}</InlineMath>)</p>
           <ul className="list-disc list-inside mt-2 space-y-1 text-dark-300">
-            <li>Natural numbers <Math>N</Math></li>
-            <li>Integers <Math>Z</Math></li>
-            <li>Rational numbers <Math>Q</Math></li>
+            <li>Natural numbers <InlineMath>N</InlineMath></li>
+            <li>Integers <InlineMath>Z</InlineMath></li>
+            <li>Rational numbers <InlineMath>Q</InlineMath></li>
             <li>Algebraic numbers</li>
           </ul>
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
-          <p className="text-primary-400 font-semibold">Uncountable (<Math>{`\\aleph_1`}</Math>)</p>
+          <p className="text-primary-400 font-semibold">Uncountable (<InlineMath>{`\\aleph_1`}</InlineMath>)</p>
           <ul className="list-disc list-inside mt-2 space-y-1 text-dark-300">
-            <li>Real numbers <Math>R</Math></li>
+            <li>Real numbers <InlineMath>R</InlineMath></li>
             <li>Irrational numbers</li>
-            <li>Any interval <Math>{`(a, b)`}</Math></li>
+            <li>Any interval <InlineMath>{`(a, b)`}</InlineMath></li>
             <li>Points on a line</li>
           </ul>
         </div>
@@ -282,11 +282,11 @@ export default function Section13() {
         of infinite sets using one-to-one correspondences.
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li><strong>Same cardinality:</strong> Sets that can be put into one-to-one correspondence</li>
-          <li><strong>Countable:</strong> Sets that can be listed (finite or in correspondence with <Math>N</Math>)</li>
-          <li><strong>Aleph nought (<Math>{`\\aleph_0`}</Math>):</strong> The cardinality of countably infinite sets</li>
-          <li><strong>Rationals are countable:</strong> Despite being dense, <Math>Q</Math> has cardinality <Math>{`\\aleph_0`}</Math></li>
-          <li><strong>Reals are uncountable:</strong> Cantor's diagonal argument proves <Math>R</Math> cannot be listed</li>
-          <li><strong>Multiple infinities:</strong> <Math>{`\\aleph_0 < \\aleph_1 < \\aleph_2 < ...`}</Math></li>
+          <li><strong>Countable:</strong> Sets that can be listed (finite or in correspondence with <InlineMath>N</InlineMath>)</li>
+          <li><strong>Aleph nought (<InlineMath>{`\\aleph_0`}</InlineMath>):</strong> The cardinality of countably infinite sets</li>
+          <li><strong>Rationals are countable:</strong> Despite being dense, <InlineMath>Q</InlineMath> has cardinality <InlineMath>{`\\aleph_0`}</InlineMath></li>
+          <li><strong>Reals are uncountable:</strong> Cantor's diagonal argument proves <InlineMath>R</InlineMath> cannot be listed</li>
+          <li><strong>Multiple infinities:</strong> <InlineMath>{`\\aleph_0 < \\aleph_1 < \\aleph_2 < ...`}</InlineMath></li>
         </ul>
       </Callout>
     </LessonLayout>

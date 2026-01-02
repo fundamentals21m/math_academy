@@ -146,6 +146,29 @@
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
 }
 
+/* Geometry section - pink theme */
+[data-section="geometry"] .course-icon {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(236, 72, 153, 0.1) 100%);
+}
+
+/* History section - amber theme */
+[data-section="history"] .course-icon {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.1) 100%);
+}
+
+/* Seminal Works section - deep amber/gold theme for classical texts */
+[data-section="seminal"] .course-icon {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%);
+}
+
+[data-section="seminal"] .course-card {
+  border-color: rgba(217, 119, 6, 0.2);
+}
+
+[data-section="seminal"] .course-card:hover {
+  border-color: rgba(217, 119, 6, 0.4);
+}
+
 /* Hero Section */
 .hero-subtitle {
   font-size: 1.25rem;
@@ -211,14 +234,14 @@
   margin-bottom: 0.5rem;
 }
 
-.progress-bar-container {
+.hub-progress-bar-container {
   height: 8px;
   background: rgba(148, 163, 184, 0.2);
   border-radius: 4px;
   overflow: hidden;
 }
 
-.progress-bar {
+.hub-progress-bar-fill {
   height: 100%;
   width: 0%;
   transition: width 0.5s;

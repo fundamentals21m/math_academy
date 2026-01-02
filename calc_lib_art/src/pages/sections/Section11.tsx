@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Theorem } from '../../components/common/ContentBlocks';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
@@ -36,24 +36,24 @@ export default function Section11() {
       </p>
 
       <Theorem title="Fundamental Theorem of Calculus (Part 1)">
-        If <MathInline>{'f'}</MathInline> is continuous on <MathInline>{'[a, b]'}</MathInline>,
+        If <InlineMath>{'f'}</InlineMath> is continuous on <InlineMath>{'[a, b]'}</InlineMath>,
         and we define:
         <MathBlock>{`F(x) = \\int_a^x f(t)\\,dt`}</MathBlock>
-        then <MathInline>{'F'}</MathInline> is differentiable and:
+        then <InlineMath>{'F'}</InlineMath> is differentiable and:
         <MathBlock>{`F'(x) = f(x)`}</MathBlock>
       </Theorem>
 
       <p className="text-dark-200 my-6">
         In words: <strong>the derivative of an accumulation function is the original function</strong>.
-        If you're accumulating something at rate <MathInline>{'f(x)'}</MathInline>, then the
-        rate of change of your total is exactly <MathInline>{'f(x)'}</MathInline>. This seems
+        If you're accumulating something at rate <InlineMath>{'f(x)'}</InlineMath>, then the
+        rate of change of your total is exactly <InlineMath>{'f(x)'}</InlineMath>. This seems
         almost tautological—and that's the beauty. It's deeply true.
       </p>
 
       <Theorem title="Fundamental Theorem of Calculus (Part 2)">
-        If <MathInline>{'f'}</MathInline> is continuous on <MathInline>{'[a, b]'}</MathInline>,
-        and <MathInline>{'F'}</MathInline> is any antiderivative of <MathInline>{'f'}</MathInline>{' '}
-        (meaning <MathInline>{'F\' = f'}</MathInline>), then:
+        If <InlineMath>{'f'}</InlineMath> is continuous on <InlineMath>{'[a, b]'}</InlineMath>,
+        and <InlineMath>{'F'}</InlineMath> is any antiderivative of <InlineMath>{'f'}</InlineMath>{' '}
+        (meaning <InlineMath>{'F\' = f'}</InlineMath>), then:
         <MathBlock>{`\\int_a^b f(x)\\,dx = F(b) - F(a)`}</MathBlock>
       </Theorem>
 
@@ -80,8 +80,8 @@ export default function Section11() {
           <div>
             <p className="font-semibold">Find an antiderivative</p>
             <p className="text-sm text-dark-400">
-              Look for a function <MathInline>{'F'}</MathInline> whose derivative is{' '}
-              <MathInline>{'f'}</MathInline>.
+              Look for a function <InlineMath>{'F'}</InlineMath> whose derivative is{' '}
+              <InlineMath>{'f'}</InlineMath>.
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function Section11() {
           <div>
             <p className="font-semibold">Evaluate at endpoints</p>
             <p className="text-sm text-dark-400">
-              Compute <MathInline>{'F(b) - F(a)'}</MathInline>.
+              Compute <InlineMath>{'F(b) - F(a)'}</InlineMath>.
             </p>
           </div>
         </div>
@@ -109,17 +109,17 @@ export default function Section11() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Example: Area Under a Parabola</h2>
 
       <p className="text-dark-200 mb-6">
-        Let's compute <MathInline>{'\\int_0^1 x^2\\,dx'}</MathInline> using the Fundamental Theorem.
+        Let's compute <InlineMath>{'\\int_0^1 x^2\\,dx'}</InlineMath> using the Fundamental Theorem.
       </p>
 
       <div className="bg-dark-800 rounded-xl p-6 mb-6">
         <p className="text-dark-200 mb-4">
           <strong>Find an antiderivative:</strong> We need{' '}
-          <MathInline>{'F\'(x) = x^2'}</MathInline>.
+          <InlineMath>{'F\'(x) = x^2'}</InlineMath>.
         </p>
         <p className="text-dark-200 mb-4">
-          Try <MathInline>{'F(x) = \\frac{x^3}{3}'}</MathInline>. Check:{' '}
-          <MathInline>{'F\'(x) = x^2'}</MathInline>. ✓
+          Try <InlineMath>{'F(x) = \\frac{x^3}{3}'}</InlineMath>. Check:{' '}
+          <InlineMath>{'F\'(x) = x^2'}</InlineMath>. ✓
         </p>
         <p className="text-dark-200 mb-4">
           <strong>Evaluate at endpoints:</strong>
@@ -151,7 +151,7 @@ export default function Section11() {
           </p>
           <MathBlock>{`\\int_a^x f'(t)\\,dt = f(x) - f(a)`}</MathBlock>
           <p className="text-xs text-dark-500 mt-2">
-            (Up to the initial value <MathInline>{'f(a)'}</MathInline>)
+            (Up to the initial value <InlineMath>{'f(a)'}</InlineMath>)
           </p>
         </Card>
         <Card>
@@ -183,10 +183,10 @@ export default function Section11() {
         <MathBlock>{`\\int_a^b F'(x)\\,dx = F(b) - F(a)`}</MathBlock>
         <p className="text-dark-200 mt-4">
           The integral of a rate of change equals the net change. If{' '}
-          <MathInline>{'F\'(x)'}</MathInline> tells you how fast <MathInline>{'F'}</MathInline>{' '}
-          is changing at each instant, then integrating <MathInline>{'F\''}</MathInline> from{' '}
-          <MathInline>{'a'}</MathInline> to <MathInline>{'b'}</MathInline> tells you the total
-          change in <MathInline>{'F'}</MathInline> over that interval.
+          <InlineMath>{'F\'(x)'}</InlineMath> tells you how fast <InlineMath>{'F'}</InlineMath>{' '}
+          is changing at each instant, then integrating <InlineMath>{'F\''}</InlineMath> from{' '}
+          <InlineMath>{'a'}</InlineMath> to <InlineMath>{'b'}</InlineMath> tells you the total
+          change in <InlineMath>{'F'}</InlineMath> over that interval.
         </p>
       </div>
 
@@ -196,7 +196,7 @@ export default function Section11() {
           <div>
             <p className="font-semibold">Position from Velocity</p>
             <p className="text-sm text-dark-400">
-              <MathInline>{'\\int_a^b v(t)\\,dt = x(b) - x(a)'}</MathInline> = displacement
+              <InlineMath>{'\\int_a^b v(t)\\,dt = x(b) - x(a)'}</InlineMath> = displacement
             </p>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function Section11() {
           <div>
             <p className="font-semibold">Population from Birth Rate</p>
             <p className="text-sm text-dark-400">
-              <MathInline>{'\\int_a^b r(t)\\,dt = P(b) - P(a)'}</MathInline> = population change
+              <InlineMath>{'\\int_a^b r(t)\\,dt = P(b) - P(a)'}</InlineMath> = population change
             </p>
           </div>
         </div>
@@ -214,7 +214,7 @@ export default function Section11() {
           <div>
             <p className="font-semibold">Wealth from Income</p>
             <p className="text-sm text-dark-400">
-              <MathInline>{'\\int_a^b I(t)\\,dt = W(b) - W(a)'}</MathInline> = wealth change
+              <InlineMath>{'\\int_a^b I(t)\\,dt = W(b) - W(a)'}</InlineMath> = wealth change
             </p>
           </div>
         </div>
@@ -233,7 +233,7 @@ export default function Section11() {
       <Callout type="warning">
         <p>
           <strong>The Catch:</strong> The Fundamental Theorem only helps if you can find an
-          antiderivative. For many functions (like <MathInline>{'e^{-x^2}'}</MathInline>),
+          antiderivative. For many functions (like <InlineMath>{'e^{-x^2}'}</InlineMath>),
           no "nice" antiderivative exists. In such cases, we must resort to numerical methods
           or express answers in terms of new special functions.
         </p>

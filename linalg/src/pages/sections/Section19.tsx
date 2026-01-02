@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section19() {
   return (
@@ -8,14 +8,14 @@ export default function Section19() {
       {/* Introduction */}
       <p>
         <strong>Orthonormal</strong> vectors make computations beautiful. <strong>Gram-Schmidt</strong> takes
-        any basis and produces an orthonormal one. The result is the <Math>QR</Math> factorization.
+        any basis and produces an orthonormal one. The result is the <InlineMath>QR</InlineMath> factorization.
       </p>
 
       <h2>Orthonormal Vectors</h2>
 
       <Definition title="Orthonormal Vectors" className="my-6">
         <p>
-          Vectors <Math>{`\\mathbf{q}_1, \\mathbf{q}_2, \\ldots, \\mathbf{q}_n`}</Math> are <strong>orthonormal</strong> if:
+          Vectors <InlineMath>{`\\mathbf{q}_1, \\mathbf{q}_2, \\ldots, \\mathbf{q}_n`}</InlineMath> are <strong>orthonormal</strong> if:
         </p>
         <MathBlock>
           {`\\mathbf{q}_i^T\\mathbf{q}_j = \\begin{cases} 0 & i \\neq j \\text{ (orthogonal)} \\\\ 1 & i = j \\text{ (unit length)} \\end{cases}`}
@@ -27,7 +27,7 @@ export default function Section19() {
           {`\\mathbf{q}_1 = \\begin{bmatrix} \\cos\\theta \\\\ \\sin\\theta \\end{bmatrix}, \\quad \\mathbf{q}_2 = \\begin{bmatrix} -\\sin\\theta \\\\ \\cos\\theta \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Check: <Math>{`\\mathbf{q}_1^T\\mathbf{q}_2 = -\\cos\\theta\\sin\\theta + \\sin\\theta\\cos\\theta = 0`}</Math> ✓
+          Check: <InlineMath>{`\\mathbf{q}_1^T\\mathbf{q}_2 = -\\cos\\theta\\sin\\theta + \\sin\\theta\\cos\\theta = 0`}</InlineMath> ✓
         </p>
       </Example>
 
@@ -35,13 +35,13 @@ export default function Section19() {
 
       <Definition title="Orthogonal Matrix Q" className="my-6">
         <p>
-          A matrix <Math>Q</Math> is <strong>orthogonal</strong> if its columns are orthonormal. Then:
+          A matrix <InlineMath>Q</InlineMath> is <strong>orthogonal</strong> if its columns are orthonormal. Then:
         </p>
         <MathBlock>
           {`Q^TQ = I`}
         </MathBlock>
         <p className="mt-2">
-          If <Math>Q</Math> is square, then <Math>{`Q^T = Q^{-1}`}</Math>.
+          If <InlineMath>Q</InlineMath> is square, then <InlineMath>{`Q^T = Q^{-1}`}</InlineMath>.
         </p>
       </Definition>
 
@@ -54,15 +54,15 @@ export default function Section19() {
             <MathBlock>{`\\|Q\\mathbf{x}\\|^2 = (Q\\mathbf{x})^T(Q\\mathbf{x}) = \\mathbf{x}^TQ^TQ\\mathbf{x} = \\mathbf{x}^TI\\mathbf{x} = \\|\\mathbf{x}\\|^2`}</MathBlock>
             <p className="mt-2"><strong>Preserves dot product:</strong></p>
             <MathBlock>{`(Q\\mathbf{x})^T(Q\\mathbf{y}) = \\mathbf{x}^TQ^TQ\\mathbf{y} = \\mathbf{x}^TI\\mathbf{y} = \\mathbf{x}^T\\mathbf{y}`}</MathBlock>
-            <p className="mt-2"><strong>Square Q:</strong> If <Math>Q</Math> is square with <Math>Q^TQ = I</Math>, then <Math>Q</Math> is invertible with <Math>{`Q^{-1} = Q^T`}</Math>. Then <Math>QQ^T = Q(Q^{-1}) = I</Math>.</p>
+            <p className="mt-2"><strong>Square Q:</strong> If <InlineMath>Q</InlineMath> is square with <InlineMath>Q^TQ = I</InlineMath>, then <InlineMath>Q</InlineMath> is invertible with <InlineMath>{`Q^{-1} = Q^T`}</InlineMath>. Then <InlineMath>QQ^T = Q(Q^{-1}) = I</InlineMath>.</p>
           </>
         }
       >
         <ul className="list-disc list-inside space-y-2">
-          <li><Math>Q^TQ = I</Math> (columns are orthonormal)</li>
-          <li><Math>{`\\|Q\\mathbf{x}\\| = \\|\\mathbf{x}\\|`}</Math> (preserves length)</li>
-          <li><Math>{`(Q\\mathbf{x})^T(Q\\mathbf{y}) = \\mathbf{x}^T\\mathbf{y}`}</Math> (preserves dot product)</li>
-          <li>If square: <Math>QQ^T = I</Math> and <Math>{`Q^{-1} = Q^T`}</Math></li>
+          <li><InlineMath>Q^TQ = I</InlineMath> (columns are orthonormal)</li>
+          <li><InlineMath>{`\\|Q\\mathbf{x}\\| = \\|\\mathbf{x}\\|`}</InlineMath> (preserves length)</li>
+          <li><InlineMath>{`(Q\\mathbf{x})^T(Q\\mathbf{y}) = \\mathbf{x}^T\\mathbf{y}`}</InlineMath> (preserves dot product)</li>
+          <li>If square: <InlineMath>QQ^T = I</InlineMath> and <InlineMath>{`Q^{-1} = Q^T`}</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -73,23 +73,23 @@ export default function Section19() {
         className="my-6"
         proof={
           <>
-            <p>The general projection formula is <Math>{`P = A(A^TA)^{-1}A^T`}</Math>.</p>
-            <p className="mt-2">When <Math>A = Q</Math> has orthonormal columns, <Math>Q^TQ = I</Math>, so:</p>
+            <p>The general projection formula is <InlineMath>{`P = A(A^TA)^{-1}A^T`}</InlineMath>.</p>
+            <p className="mt-2">When <InlineMath>A = Q</InlineMath> has orthonormal columns, <InlineMath>Q^TQ = I</InlineMath>, so:</p>
             <MathBlock>{`P = Q(Q^TQ)^{-1}Q^T = QI^{-1}Q^T = QQ^T`}</MathBlock>
-            <p className="mt-2">For the least squares solution <Math>{`\\hat{x}`}</Math>:</p>
+            <p className="mt-2">For the least squares solution <InlineMath>{`\\hat{x}`}</InlineMath>:</p>
             <MathBlock>{`Q^TQ\\hat{x} = Q^T\\mathbf{b} \\quad \\Rightarrow \\quad I\\hat{x} = Q^T\\mathbf{b} \\quad \\Rightarrow \\quad \\hat{x} = Q^T\\mathbf{b}`}</MathBlock>
             <p>No matrix inversion needed!</p>
           </>
         }
       >
         <p>
-          When <Math>Q</Math> has orthonormal columns, the projection formula simplifies:
+          When <InlineMath>Q</InlineMath> has orthonormal columns, the projection formula simplifies:
         </p>
         <MathBlock>
           {`P = Q(Q^TQ)^{-1}Q^T = QQ^T`}
         </MathBlock>
         <p className="mt-2">
-          And <Math>{`\\hat{x} = Q^T\\mathbf{b}`}</Math> (no matrix to invert!).
+          And <InlineMath>{`\\hat{x} = Q^T\\mathbf{b}`}</InlineMath> (no matrix to invert!).
         </p>
       </Theorem>
 
@@ -97,20 +97,20 @@ export default function Section19() {
 
       <Definition title="Gram-Schmidt" className="my-6">
         <p>
-          <strong>Gram-Schmidt</strong> converts independent vectors <Math>{`\\mathbf{a}, \\mathbf{b}, \\mathbf{c}, \\ldots`}</Math>
-          into orthonormal vectors <Math>{`\\mathbf{q}_1, \\mathbf{q}_2, \\mathbf{q}_3, \\ldots`}</Math>
+          <strong>Gram-Schmidt</strong> converts independent vectors <InlineMath>{`\\mathbf{a}, \\mathbf{b}, \\mathbf{c}, \\ldots`}</InlineMath>
+          into orthonormal vectors <InlineMath>{`\\mathbf{q}_1, \\mathbf{q}_2, \\mathbf{q}_3, \\ldots`}</InlineMath>
         </p>
       </Definition>
 
       <div className="bg-dark-800/50 rounded-xl p-4 my-6 border border-primary-500/20">
         <p className="font-semibold text-primary-400 mb-3">Gram-Schmidt Algorithm:</p>
         <div className="space-y-3 text-sm">
-          <p><strong>Step 1:</strong> <Math>{`\\mathbf{A} = \\mathbf{a}`}</Math>, then <Math>{`\\mathbf{q}_1 = \\mathbf{A}/\\|\\mathbf{A}\\|`}</Math></p>
-          <p><strong>Step 2:</strong> <Math>{`\\mathbf{B} = \\mathbf{b} - (\\mathbf{q}_1^T\\mathbf{b})\\mathbf{q}_1`}</Math>, then <Math>{`\\mathbf{q}_2 = \\mathbf{B}/\\|\\mathbf{B}\\|`}</Math></p>
-          <p><strong>Step 3:</strong> <Math>{`\\mathbf{C} = \\mathbf{c} - (\\mathbf{q}_1^T\\mathbf{c})\\mathbf{q}_1 - (\\mathbf{q}_2^T\\mathbf{c})\\mathbf{q}_2`}</Math>, then <Math>{`\\mathbf{q}_3 = \\mathbf{C}/\\|\\mathbf{C}\\|`}</Math></p>
+          <p><strong>Step 1:</strong> <InlineMath>{`\\mathbf{A} = \\mathbf{a}`}</InlineMath>, then <InlineMath>{`\\mathbf{q}_1 = \\mathbf{A}/\\|\\mathbf{A}\\|`}</InlineMath></p>
+          <p><strong>Step 2:</strong> <InlineMath>{`\\mathbf{B} = \\mathbf{b} - (\\mathbf{q}_1^T\\mathbf{b})\\mathbf{q}_1`}</InlineMath>, then <InlineMath>{`\\mathbf{q}_2 = \\mathbf{B}/\\|\\mathbf{B}\\|`}</InlineMath></p>
+          <p><strong>Step 3:</strong> <InlineMath>{`\\mathbf{C} = \\mathbf{c} - (\\mathbf{q}_1^T\\mathbf{c})\\mathbf{q}_1 - (\\mathbf{q}_2^T\\mathbf{c})\\mathbf{q}_2`}</InlineMath>, then <InlineMath>{`\\mathbf{q}_3 = \\mathbf{C}/\\|\\mathbf{C}\\|`}</InlineMath></p>
         </div>
         <p className="text-dark-400 text-sm mt-3">
-          Each step subtracts projections onto earlier <Math>{`\\mathbf{q}`}</Math>'s, making the result orthogonal.
+          Each step subtracts projections onto earlier <InlineMath>{`\\mathbf{q}`}</InlineMath>'s, making the result orthogonal.
         </p>
       </div>
 
@@ -123,7 +123,7 @@ export default function Section19() {
         <MathBlock>
           {`\\mathbf{q}_1 = \\frac{\\mathbf{a}}{\\|\\mathbf{a}\\|} = \\frac{1}{\\sqrt{2}}\\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix}`}
         </MathBlock>
-        <p className="mt-2"><strong>Step 2:</strong> Subtract projection of <Math>{`\\mathbf{b}`}</Math> onto <Math>{`\\mathbf{q}_1`}</Math>:</p>
+        <p className="mt-2"><strong>Step 2:</strong> Subtract projection of <InlineMath>{`\\mathbf{b}`}</InlineMath> onto <InlineMath>{`\\mathbf{q}_1`}</InlineMath>:</p>
         <MathBlock>
           {`\\mathbf{B} = \\mathbf{b} - (\\mathbf{q}_1^T\\mathbf{b})\\mathbf{q}_1 = \\begin{bmatrix} 2 \\\\ 0 \\\\ -2 \\end{bmatrix} - \\frac{2}{\\sqrt{2}} \\cdot \\frac{1}{\\sqrt{2}}\\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 1 \\\\ -2 \\end{bmatrix}`}
         </MathBlock>
@@ -139,21 +139,21 @@ export default function Section19() {
         className="my-6"
         proof={
           <>
-            <p>Gram-Schmidt expresses each column <Math>{`\\mathbf{a}_j`}</Math> of <Math>A</Math> in terms of <Math>{`\\mathbf{q}_1, \\ldots, \\mathbf{q}_j`}</Math>:</p>
+            <p>Gram-Schmidt expresses each column <InlineMath>{`\\mathbf{a}_j`}</InlineMath> of <InlineMath>A</InlineMath> in terms of <InlineMath>{`\\mathbf{q}_1, \\ldots, \\mathbf{q}_j`}</InlineMath>:</p>
             <MathBlock>{`\\mathbf{a}_j = (\\mathbf{q}_1^T\\mathbf{a}_j)\\mathbf{q}_1 + (\\mathbf{q}_2^T\\mathbf{a}_j)\\mathbf{q}_2 + \\cdots + (\\mathbf{q}_j^T\\mathbf{a}_j)\\mathbf{q}_j`}</MathBlock>
-            <p className="mt-2">In matrix form: <Math>A = QR</Math> where <Math>{`R_{ij} = \\mathbf{q}_i^T\\mathbf{a}_j`}</Math>.</p>
-            <p className="mt-2"><strong>Why R is upper triangular:</strong> For <Math>i &gt; j</Math>, vector <Math>{`\\mathbf{q}_i`}</Math> is orthogonal to <Math>{`\\mathbf{a}_1, \\ldots, \\mathbf{a}_j`}</Math> (since Gram-Schmidt subtracts projections). So <Math>{`R_{ij} = \\mathbf{q}_i^T\\mathbf{a}_j = 0`}</Math> when <Math>i &gt; j</Math>.</p>
+            <p className="mt-2">In matrix form: <InlineMath>A = QR</InlineMath> where <InlineMath>{`R_{ij} = \\mathbf{q}_i^T\\mathbf{a}_j`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Why R is upper triangular:</strong> For <InlineMath>i &gt; j</InlineMath>, vector <InlineMath>{`\\mathbf{q}_i`}</InlineMath> is orthogonal to <InlineMath>{`\\mathbf{a}_1, \\ldots, \\mathbf{a}_j`}</InlineMath> (since Gram-Schmidt subtracts projections). So <InlineMath>{`R_{ij} = \\mathbf{q}_i^T\\mathbf{a}_j = 0`}</InlineMath> when <InlineMath>i &gt; j</InlineMath>.</p>
           </>
         }
       >
         <p>
-          Gram-Schmidt produces the factorization <Math>A = QR</Math>:
+          Gram-Schmidt produces the factorization <InlineMath>A = QR</InlineMath>:
         </p>
         <MathBlock>
           {`A = QR \\quad \\text{where } Q \\text{ is orthonormal, } R \\text{ is upper triangular}`}
         </MathBlock>
         <p className="mt-2">
-          <Math>R = Q^TA</Math> is upper triangular because later <Math>{`\\mathbf{q}`}</Math>'s are orthogonal to earlier <Math>{`\\mathbf{a}`}</Math>'s.
+          <InlineMath>R = Q^TA</InlineMath> is upper triangular because later <InlineMath>{`\\mathbf{q}`}</InlineMath>'s are orthogonal to earlier <InlineMath>{`\\mathbf{a}`}</InlineMath>'s.
         </p>
       </Theorem>
 
@@ -163,15 +163,15 @@ export default function Section19() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Orthonormal vectors: <Math>{`\\mathbf{q}_i^T\\mathbf{q}_j = 0`}</Math> for <Math>i \neq j</Math>, and <Math>{`\\|\\mathbf{q}_i\\| = 1`}</Math>.</span>
+            <span>Orthonormal vectors: <InlineMath>{`\\mathbf{q}_i^T\\mathbf{q}_j = 0`}</InlineMath> for <InlineMath>i \neq j</InlineMath>, and <InlineMath>{`\\|\\mathbf{q}_i\\| = 1`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Orthogonal matrix: <Math>Q^TQ = I</Math>. If square: <Math>{`Q^{-1} = Q^T`}</Math>.</span>
+            <span>Orthogonal matrix: <InlineMath>Q^TQ = I</InlineMath>. If square: <InlineMath>{`Q^{-1} = Q^T`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>Projections simplify: <Math>P = QQ^T</Math> and <Math>{`\\hat{x} = Q^T\\mathbf{b}`}</Math>.</span>
+            <span>Projections simplify: <InlineMath>P = QQ^T</InlineMath> and <InlineMath>{`\\hat{x} = Q^T\\mathbf{b}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
@@ -179,7 +179,7 @@ export default function Section19() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span><Math>A = QR</Math>: <Math>Q</Math> has orthonormal columns, <Math>R</Math> is upper triangular.</span>
+            <span><InlineMath>A = QR</InlineMath>: <InlineMath>Q</InlineMath> has orthonormal columns, <InlineMath>R</InlineMath> is upper triangular.</span>
           </li>
         </ul>
       </div>

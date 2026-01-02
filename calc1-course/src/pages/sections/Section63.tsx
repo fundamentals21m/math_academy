@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section63() {
@@ -15,28 +15,28 @@ export default function Section63() {
 
       <Callout type="definition" title="Complex-Valued Function">
         <p>
-          A <strong>complex-valued function</strong> of a real variable <MathInline>{`t`}</MathInline>
+          A <strong>complex-valued function</strong> of a real variable <InlineMath>{`t`}</InlineMath>
           has the form:
         </p>
         <MathBlock>{`f(t) = u(t) + iv(t)`}</MathBlock>
         <p>
-          where <MathInline>{`u(t)`}</MathInline> and <MathInline>{`v(t)`}</MathInline> are real-valued functions,
-          called the <strong>real</strong> and <strong>imaginary parts</strong> of <MathInline>{`f`}</MathInline>.
+          where <InlineMath>{`u(t)`}</InlineMath> and <InlineMath>{`v(t)`}</InlineMath> are real-valued functions,
+          called the <strong>real</strong> and <strong>imaginary parts</strong> of <InlineMath>{`f`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 1: Complex-Valued Functions">
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <MathInline>{`f(t) = e^{it} = \\cos t + i\\sin t`}</MathInline>
-            <br />Real part: <MathInline>{`\\cos t`}</MathInline>, Imaginary part: <MathInline>{`\\sin t`}</MathInline>
+            <InlineMath>{`f(t) = e^{it} = \\cos t + i\\sin t`}</InlineMath>
+            <br />Real part: <InlineMath>{`\\cos t`}</InlineMath>, Imaginary part: <InlineMath>{`\\sin t`}</InlineMath>
           </li>
           <li>
-            <MathInline>{`f(t) = t^2 + it^3`}</MathInline>
-            <br />Real part: <MathInline>{`t^2`}</MathInline>, Imaginary part: <MathInline>{`t^3`}</MathInline>
+            <InlineMath>{`f(t) = t^2 + it^3`}</InlineMath>
+            <br />Real part: <InlineMath>{`t^2`}</InlineMath>, Imaginary part: <InlineMath>{`t^3`}</InlineMath>
           </li>
           <li>
-            <MathInline>{`f(t) = e^{(2+3i)t}`}</MathInline>
+            <InlineMath>{`f(t) = e^{(2+3i)t}`}</InlineMath>
             <br />This requires expansion using Euler's formula
           </li>
         </ul>
@@ -46,7 +46,7 @@ export default function Section63() {
 
       <Callout type="definition" title="Derivative of Complex-Valued Function">
         <p>
-          The derivative of <MathInline>{`f(t) = u(t) + iv(t)`}</MathInline> is defined component-wise:
+          The derivative of <InlineMath>{`f(t) = u(t) + iv(t)`}</InlineMath> is defined component-wise:
         </p>
         <MathBlock>{`f'(t) = u'(t) + iv'(t)`}</MathBlock>
         <p>
@@ -55,25 +55,25 @@ export default function Section63() {
       </Callout>
 
       <Callout type="theorem" title="Differentiation Rules">
-        <p>For complex-valued functions <MathInline>{`f`}</MathInline> and <MathInline>{`g`}</MathInline>:</p>
+        <p>For complex-valued functions <InlineMath>{`f`}</InlineMath> and <InlineMath>{`g`}</InlineMath>:</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`(f + g)' = f' + g'`}</MathInline></li>
-          <li><MathInline>{`(cf)' = cf'`}</MathInline> for any complex constant <MathInline>{`c`}</MathInline></li>
-          <li><MathInline>{`(fg)' = f'g + fg'`}</MathInline></li>
-          <li><MathInline>{`(f/g)' = (f'g - fg')/g^2`}</MathInline></li>
-          <li><MathInline>{`(f \\circ g)' = (f' \\circ g) \\cdot g'`}</MathInline> (chain rule)</li>
+          <li><InlineMath>{`(f + g)' = f' + g'`}</InlineMath></li>
+          <li><InlineMath>{`(cf)' = cf'`}</InlineMath> for any complex constant <InlineMath>{`c`}</InlineMath></li>
+          <li><InlineMath>{`(fg)' = f'g + fg'`}</InlineMath></li>
+          <li><InlineMath>{`(f/g)' = (f'g - fg')/g^2`}</InlineMath></li>
+          <li><InlineMath>{`(f \\circ g)' = (f' \\circ g) \\cdot g'`}</InlineMath> (chain rule)</li>
         </ul>
       </Callout>
 
       <Callout type="theorem" title="Exponential Rule">
         <p>
-          For any complex constant <MathInline>{`\\lambda = a + bi`}</MathInline>:
+          For any complex constant <InlineMath>{`\\lambda = a + bi`}</InlineMath>:
         </p>
         <MathBlock>{`\\frac{d}{dt}e^{\\lambda t} = \\lambda e^{\\lambda t}`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 2: Differentiating e^(it)">
-        <p>Verify that <MathInline>{`\\frac{d}{dt}e^{it} = ie^{it}`}</MathInline>.</p>
+        <p>Verify that <InlineMath>{`\\frac{d}{dt}e^{it} = ie^{it}`}</InlineMath>.</p>
         <p><strong>Method 1 (Direct):</strong></p>
         <MathBlock>{`\\frac{d}{dt}e^{it} = ie^{it}`}</MathBlock>
         <p><strong>Method 2 (Component-wise):</strong></p>
@@ -83,7 +83,7 @@ export default function Section63() {
       </Callout>
 
       <Callout type="example" title="Example 3: Complex Exponential">
-        <p>Differentiate <MathInline>{`f(t) = e^{(2+3i)t}`}</MathInline>.</p>
+        <p>Differentiate <InlineMath>{`f(t) = e^{(2+3i)t}`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`f'(t) = (2 + 3i)e^{(2+3i)t}`}</MathBlock>
         <p>To express in terms of real and imaginary parts:</p>
@@ -96,14 +96,14 @@ export default function Section63() {
 
       <Callout type="definition" title="Integral of Complex-Valued Function">
         <p>
-          The integral of <MathInline>{`f(t) = u(t) + iv(t)`}</MathInline> is defined component-wise:
+          The integral of <InlineMath>{`f(t) = u(t) + iv(t)`}</InlineMath> is defined component-wise:
         </p>
         <MathBlock>{`\\int f(t)\\,dt = \\int u(t)\\,dt + i\\int v(t)\\,dt`}</MathBlock>
       </Callout>
 
       <Callout type="theorem" title="Exponential Integral">
         <p>
-          For any complex constant <MathInline>{`\\lambda \\neq 0`}</MathInline>:
+          For any complex constant <InlineMath>{`\\lambda \\neq 0`}</InlineMath>:
         </p>
         <MathBlock>{`\\int e^{\\lambda t}\\,dt = \\frac{1}{\\lambda}e^{\\lambda t} + C`}</MathBlock>
       </Callout>
@@ -115,7 +115,7 @@ export default function Section63() {
       </Callout>
 
       <Callout type="example" title="Example 5: Definite Integral">
-        <p>Evaluate <MathInline>{`\\int_0^\\pi e^{it}\\,dt`}</MathInline>.</p>
+        <p>Evaluate <InlineMath>{`\\int_0^\\pi e^{it}\\,dt`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`\\int_0^\\pi e^{it}\\,dt = \\left[-ie^{it}\\right]_0^\\pi = -ie^{i\\pi} - (-ie^0)`}</MathBlock>
         <MathBlock>{`= -i(-1) + i(1) = i + i = 2i`}</MathBlock>
@@ -134,14 +134,14 @@ export default function Section63() {
       </Callout>
 
       <Callout type="example" title="Example 6: Using Complex Methods">
-        <p>Find <MathInline>{`\\int e^{2t}\\cos 3t\\,dt`}</MathInline>.</p>
+        <p>Find <InlineMath>{`\\int e^{2t}\\cos 3t\\,dt`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>
-          Note that <MathInline>{`e^{2t}\\cos 3t = \\text{Re}(e^{2t}e^{3it}) = \\text{Re}(e^{(2+3i)t})`}</MathInline>.
+          Note that <InlineMath>{`e^{2t}\\cos 3t = \\text{Re}(e^{2t}e^{3it}) = \\text{Re}(e^{(2+3i)t})`}</InlineMath>.
         </p>
         <p>Compute the complex integral:</p>
         <MathBlock>{`\\int e^{(2+3i)t}\\,dt = \\frac{1}{2+3i}e^{(2+3i)t}`}</MathBlock>
-        <p>Simplify <MathInline>{`\\frac{1}{2+3i}`}</MathInline>:</p>
+        <p>Simplify <InlineMath>{`\\frac{1}{2+3i}`}</InlineMath>:</p>
         <MathBlock>{`\\frac{1}{2+3i} = \\frac{2-3i}{(2+3i)(2-3i)} = \\frac{2-3i}{13}`}</MathBlock>
         <p>So:</p>
         <MathBlock>{`\\int e^{(2+3i)t}\\,dt = \\frac{2-3i}{13}e^{(2+3i)t}`}</MathBlock>
@@ -160,29 +160,29 @@ export default function Section63() {
 
       <Callout type="theorem" title="Complex Solutions of Real ODEs">
         <p>
-          If <MathInline>{`y = f(t)`}</MathInline> is a complex-valued solution of a linear ODE
-          with real coefficients, then both <MathInline>{`\\text{Re}(f)`}</MathInline> and
-          <MathInline>{`\\text{Im}(f)`}</MathInline> are real solutions.
+          If <InlineMath>{`y = f(t)`}</InlineMath> is a complex-valued solution of a linear ODE
+          with real coefficients, then both <InlineMath>{`\\text{Re}(f)`}</InlineMath> and
+          <InlineMath>{`\\text{Im}(f)`}</InlineMath> are real solutions.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 8: Second-Order ODE">
         <p>
-          Solve <MathInline>{`y'' + 4y = 0`}</MathInline> using complex exponentials.
+          Solve <InlineMath>{`y'' + 4y = 0`}</InlineMath> using complex exponentials.
         </p>
         <p><strong>Solution:</strong></p>
-        <p>Try <MathInline>{`y = e^{rt}`}</MathInline>:</p>
+        <p>Try <InlineMath>{`y = e^{rt}`}</InlineMath>:</p>
         <MathBlock>{`r^2 e^{rt} + 4e^{rt} = 0 \\quad \\Rightarrow \\quad r^2 + 4 = 0`}</MathBlock>
         <MathBlock>{`r = \\pm 2i`}</MathBlock>
-        <p>Complex solutions: <MathInline>{`e^{2it}`}</MathInline> and <MathInline>{`e^{-2it}`}</MathInline></p>
-        <p>Real solutions from <MathInline>{`e^{2it} = \\cos 2t + i\\sin 2t`}</MathInline>:</p>
+        <p>Complex solutions: <InlineMath>{`e^{2it}`}</InlineMath> and <InlineMath>{`e^{-2it}`}</InlineMath></p>
+        <p>Real solutions from <InlineMath>{`e^{2it} = \\cos 2t + i\\sin 2t`}</InlineMath>:</p>
         <MathBlock>{`y_1 = \\cos 2t, \\quad y_2 = \\sin 2t`}</MathBlock>
         <p>General solution:</p>
         <MathBlock>{`y = c_1\\cos 2t + c_2\\sin 2t`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 9: Damped Oscillation">
-        <p>Solve <MathInline>{`y'' + 2y' + 5y = 0`}</MathInline>.</p>
+        <p>Solve <InlineMath>{`y'' + 2y' + 5y = 0`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>Characteristic equation:</p>
         <MathBlock>{`r^2 + 2r + 5 = 0 \\quad \\Rightarrow \\quad r = \\frac{-2 \\pm \\sqrt{4-20}}{2} = -1 \\pm 2i`}</MathBlock>
@@ -197,13 +197,13 @@ export default function Section63() {
       <h2>Forced Oscillations</h2>
 
       <Callout type="example" title="Example 10: Nonhomogeneous Equation">
-        <p>Find a particular solution of <MathInline>{`y'' + 4y = \\cos 3t`}</MathInline>.</p>
+        <p>Find a particular solution of <InlineMath>{`y'' + 4y = \\cos 3t`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>
-          Since <MathInline>{`\\cos 3t = \\text{Re}(e^{3it})`}</MathInline>, solve the complex equation:
+          Since <InlineMath>{`\\cos 3t = \\text{Re}(e^{3it})`}</InlineMath>, solve the complex equation:
         </p>
         <MathBlock>{`y'' + 4y = e^{3it}`}</MathBlock>
-        <p>Try <MathInline>{`y_p = Ae^{3it}`}</MathInline>:</p>
+        <p>Try <InlineMath>{`y_p = Ae^{3it}`}</InlineMath>:</p>
         <MathBlock>{`(3i)^2 Ae^{3it} + 4Ae^{3it} = e^{3it}`}</MathBlock>
         <MathBlock>{`-9A + 4A = 1 \\quad \\Rightarrow \\quad A = -\\frac{1}{5}`}</MathBlock>
         <p>Complex particular solution:</p>
@@ -216,18 +216,18 @@ export default function Section63() {
 
       <Callout type="theorem" title="Linearity of Re and Im">
         <p>
-          The operations <MathInline>{`\\text{Re}`}</MathInline> and <MathInline>{`\\text{Im}`}</MathInline>
+          The operations <InlineMath>{`\\text{Re}`}</InlineMath> and <InlineMath>{`\\text{Im}`}</InlineMath>
           are linear:
         </p>
         <MathBlock>{`\\text{Re}(f + g) = \\text{Re}(f) + \\text{Re}(g)`}</MathBlock>
         <MathBlock>{`\\text{Re}(cf) = c \\cdot \\text{Re}(f) \\quad \\text{for real } c`}</MathBlock>
-        <p>Similarly for <MathInline>{`\\text{Im}`}</MathInline>.</p>
+        <p>Similarly for <InlineMath>{`\\text{Im}`}</InlineMath>.</p>
       </Callout>
 
       <Callout type="theorem" title="Derivatives and Integrals Commute with Re/Im">
         <MathBlock>{`\\text{Re}(f') = (\\text{Re}\\,f)'`}</MathBlock>
         <MathBlock>{`\\text{Re}\\left(\\int f\\,dt\\right) = \\int \\text{Re}(f)\\,dt`}</MathBlock>
-        <p>Similarly for <MathInline>{`\\text{Im}`}</MathInline>.</p>
+        <p>Similarly for <InlineMath>{`\\text{Im}`}</InlineMath>.</p>
       </Callout>
 
       <h2>Euler's Formula Applications</h2>
@@ -242,7 +242,7 @@ export default function Section63() {
       </Callout>
 
       <Callout type="example" title="Example 12: Product of Sines">
-        <p>Find <MathInline>{`\\int \\sin^2 t\\,dt`}</MathInline> using exponentials.</p>
+        <p>Find <InlineMath>{`\\int \\sin^2 t\\,dt`}</InlineMath> using exponentials.</p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`\\sin^2 t = \\left(\\frac{e^{it} - e^{-it}}{2i}\\right)^2 = \\frac{e^{2it} - 2 + e^{-2it}}{-4}`}</MathBlock>
         <MathBlock>{`= \\frac{-e^{2it} + 2 - e^{-2it}}{4} = \\frac{1}{2} - \\frac{e^{2it} + e^{-2it}}{4}`}</MathBlock>
@@ -254,25 +254,25 @@ export default function Section63() {
       <h2>Summary</h2>
       <ul>
         <li>
-          <strong>Complex-valued function:</strong> <MathInline>{`f(t) = u(t) + iv(t)`}</MathInline>
+          <strong>Complex-valued function:</strong> <InlineMath>{`f(t) = u(t) + iv(t)`}</InlineMath>
         </li>
         <li>
-          <strong>Differentiation:</strong> <MathInline>{`f' = u' + iv'`}</MathInline> (component-wise)
+          <strong>Differentiation:</strong> <InlineMath>{`f' = u' + iv'`}</InlineMath> (component-wise)
         </li>
         <li>
-          <strong>Integration:</strong> <MathInline>{`\\int f = \\int u + i\\int v`}</MathInline> (component-wise)
+          <strong>Integration:</strong> <InlineMath>{`\\int f = \\int u + i\\int v`}</InlineMath> (component-wise)
         </li>
         <li>
-          <strong>Exponential rule:</strong> <MathInline>{`\\frac{d}{dt}e^{\\lambda t} = \\lambda e^{\\lambda t}`}</MathInline>
+          <strong>Exponential rule:</strong> <InlineMath>{`\\frac{d}{dt}e^{\\lambda t} = \\lambda e^{\\lambda t}`}</InlineMath>
         </li>
         <li>
-          <strong>Strategy:</strong> Use <MathInline>{`e^{(a+bi)t}`}</MathInline> to find integrals involving <MathInline>{`e^{at}\\cos bt`}</MathInline> and <MathInline>{`e^{at}\\sin bt`}</MathInline>
+          <strong>Strategy:</strong> Use <InlineMath>{`e^{(a+bi)t}`}</InlineMath> to find integrals involving <InlineMath>{`e^{at}\\cos bt`}</InlineMath> and <InlineMath>{`e^{at}\\sin bt`}</InlineMath>
         </li>
         <li>
-          <strong>ODEs:</strong> Complex roots <MathInline>{`\\alpha \\pm \\beta i`}</MathInline> give solutions <MathInline>{`e^{\\alpha t}\\cos\\beta t`}</MathInline> and <MathInline>{`e^{\\alpha t}\\sin\\beta t`}</MathInline>
+          <strong>ODEs:</strong> Complex roots <InlineMath>{`\\alpha \\pm \\beta i`}</InlineMath> give solutions <InlineMath>{`e^{\\alpha t}\\cos\\beta t`}</InlineMath> and <InlineMath>{`e^{\\alpha t}\\sin\\beta t`}</InlineMath>
         </li>
         <li>
-          <strong>Trig identities:</strong> <MathInline>{`\\cos\\theta = \\frac{e^{i\\theta} + e^{-i\\theta}}{2}`}</MathInline>, <MathInline>{`\\sin\\theta = \\frac{e^{i\\theta} - e^{-i\\theta}}{2i}`}</MathInline>
+          <strong>Trig identities:</strong> <InlineMath>{`\\cos\\theta = \\frac{e^{i\\theta} + e^{-i\\theta}}{2}`}</InlineMath>, <InlineMath>{`\\sin\\theta = \\frac{e^{i\\theta} - e^{-i\\theta}}{2i}`}</InlineMath>
         </li>
       </ul>
     </LessonLayout>

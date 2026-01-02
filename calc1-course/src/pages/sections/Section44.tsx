@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section44() {
   return (
@@ -16,8 +16,8 @@ export default function Section44() {
 
       <Callout type="definition" title="Definition of Arcsine">
         <p>
-          The sine function is strictly increasing on <MathInline>{`[-\\pi/2, \\pi/2]`}</MathInline>,
-          where it takes all values in <MathInline>{`[-1, 1]`}</MathInline>. We define the
+          The sine function is strictly increasing on <InlineMath>{`[-\\pi/2, \\pi/2]`}</InlineMath>,
+          where it takes all values in <InlineMath>{`[-1, 1]`}</InlineMath>. We define the
           <strong> arcsine</strong> (or <strong>inverse sine</strong>) by:
         </p>
         <MathBlock>{`u = \\arcsin v \\quad \\text{means} \\quad v = \\sin u \\quad \\text{and} \\quad -\\frac{\\pi}{2} \\leq u \\leq \\frac{\\pi}{2}.`}</MathBlock>
@@ -25,10 +25,10 @@ export default function Section44() {
 
       <Callout type="info" title="Properties of Arcsine">
         <ul>
-          <li><strong>Domain:</strong> <MathInline>{`[-1, 1]`}</MathInline></li>
-          <li><strong>Range:</strong> <MathInline>{`[-\\pi/2, \\pi/2]`}</MathInline></li>
-          <li><strong>Key values:</strong> <MathInline>{`\\arcsin 0 = 0`}</MathInline>, <MathInline>{`\\arcsin 1 = \\pi/2`}</MathInline>, <MathInline>{`\\arcsin(-1) = -\\pi/2`}</MathInline></li>
-          <li><strong>Odd function:</strong> <MathInline>{`\\arcsin(-x) = -\\arcsin x`}</MathInline></li>
+          <li><strong>Domain:</strong> <InlineMath>{`[-1, 1]`}</InlineMath></li>
+          <li><strong>Range:</strong> <InlineMath>{`[-\\pi/2, \\pi/2]`}</InlineMath></li>
+          <li><strong>Key values:</strong> <InlineMath>{`\\arcsin 0 = 0`}</InlineMath>, <InlineMath>{`\\arcsin 1 = \\pi/2`}</InlineMath>, <InlineMath>{`\\arcsin(-1) = -\\pi/2`}</InlineMath></li>
+          <li><strong>Odd function:</strong> <InlineMath>{`\\arcsin(-x) = -\\arcsin x`}</InlineMath></li>
         </ul>
       </Callout>
 
@@ -38,16 +38,16 @@ export default function Section44() {
 
       <Callout type="info" title="Proof">
         <p>
-          If <MathInline>{`y = \\arcsin x`}</MathInline>, then <MathInline>{`x = \\sin y`}</MathInline> where
-          <MathInline>{`-\\pi/2 \\leq y \\leq \\pi/2`}</MathInline>. By the inverse function theorem:
+          If <InlineMath>{`y = \\arcsin x`}</InlineMath>, then <InlineMath>{`x = \\sin y`}</InlineMath> where
+          <InlineMath>{`-\\pi/2 \\leq y \\leq \\pi/2`}</InlineMath>. By the inverse function theorem:
         </p>
         <MathBlock>{`\\frac{dy}{dx} = \\frac{1}{dx/dy} = \\frac{1}{\\cos y}.`}</MathBlock>
         <p>
-          Since <MathInline>{`\\cos y \\geq 0`}</MathInline> on <MathInline>{`[-\\pi/2, \\pi/2]`}</MathInline>:
+          Since <InlineMath>{`\\cos y \\geq 0`}</InlineMath> on <InlineMath>{`[-\\pi/2, \\pi/2]`}</InlineMath>:
         </p>
         <MathBlock>{`\\cos y = \\sqrt{1 - \\sin^2 y} = \\sqrt{1 - x^2}.`}</MathBlock>
         <p>
-          Therefore <MathInline>{`\\frac{d}{dx} \\arcsin x = \\frac{1}{\\sqrt{1 - x^2}}`}</MathInline>.
+          Therefore <InlineMath>{`\\frac{d}{dx} \\arcsin x = \\frac{1}{\\sqrt{1 - x^2}}`}</InlineMath>.
         </p>
       </Callout>
 
@@ -61,17 +61,17 @@ export default function Section44() {
 
       <Callout type="definition" title="Definition of Arccosine">
         <p>
-          The cosine is strictly decreasing on <MathInline>{`[0, \\pi]`}</MathInline>, where it
-          takes all values in <MathInline>{`[-1, 1]`}</MathInline>. We define:
+          The cosine is strictly decreasing on <InlineMath>{`[0, \\pi]`}</InlineMath>, where it
+          takes all values in <InlineMath>{`[-1, 1]`}</InlineMath>. We define:
         </p>
         <MathBlock>{`u = \\arccos v \\quad \\text{means} \\quad v = \\cos u \\quad \\text{and} \\quad 0 \\leq u \\leq \\pi.`}</MathBlock>
       </Callout>
 
       <Callout type="info" title="Properties of Arccosine">
         <ul>
-          <li><strong>Domain:</strong> <MathInline>{`[-1, 1]`}</MathInline></li>
-          <li><strong>Range:</strong> <MathInline>{`[0, \\pi]`}</MathInline></li>
-          <li><strong>Key values:</strong> <MathInline>{`\\arccos 0 = \\pi/2`}</MathInline>, <MathInline>{`\\arccos 1 = 0`}</MathInline>, <MathInline>{`\\arccos(-1) = \\pi`}</MathInline></li>
+          <li><strong>Domain:</strong> <InlineMath>{`[-1, 1]`}</InlineMath></li>
+          <li><strong>Range:</strong> <InlineMath>{`[0, \\pi]`}</InlineMath></li>
+          <li><strong>Key values:</strong> <InlineMath>{`\\arccos 0 = \\pi/2`}</InlineMath>, <InlineMath>{`\\arccos 1 = 0`}</InlineMath>, <InlineMath>{`\\arccos(-1) = \\pi`}</InlineMath></li>
         </ul>
       </Callout>
 
@@ -82,7 +82,7 @@ export default function Section44() {
       <Callout type="theorem" title="Relationship Between Arcsin and Arccos">
         <MathBlock>{`\\arcsin x + \\arccos x = \\frac{\\pi}{2} \\quad \\text{for all } x \\in [-1, 1].`}</MathBlock>
         <p>
-          This follows from the identity <MathInline>{`\\sin(\\pi/2 - \\theta) = \\cos \\theta`}</MathInline>.
+          This follows from the identity <InlineMath>{`\\sin(\\pi/2 - \\theta) = \\cos \\theta`}</InlineMath>.
         </p>
       </Callout>
 
@@ -90,7 +90,7 @@ export default function Section44() {
 
       <Callout type="definition" title="Definition of Arctangent">
         <p>
-          The tangent is strictly increasing on <MathInline>{`(-\\pi/2, \\pi/2)`}</MathInline>,
+          The tangent is strictly increasing on <InlineMath>{`(-\\pi/2, \\pi/2)`}</InlineMath>,
           where it takes all real values. We define:
         </p>
         <MathBlock>{`u = \\arctan v \\quad \\text{means} \\quad v = \\tan u \\quad \\text{and} \\quad -\\frac{\\pi}{2} < u < \\frac{\\pi}{2}.`}</MathBlock>
@@ -98,11 +98,11 @@ export default function Section44() {
 
       <Callout type="info" title="Properties of Arctangent">
         <ul>
-          <li><strong>Domain:</strong> All real numbers <MathInline>{`(-\\infty, \\infty)`}</MathInline></li>
-          <li><strong>Range:</strong> <MathInline>{`(-\\pi/2, \\pi/2)`}</MathInline></li>
-          <li><strong>Key values:</strong> <MathInline>{`\\arctan 0 = 0`}</MathInline>, <MathInline>{`\\arctan 1 = \\pi/4`}</MathInline>, <MathInline>{`\\arctan(-1) = -\\pi/4`}</MathInline></li>
-          <li><strong>Odd function:</strong> <MathInline>{`\\arctan(-x) = -\\arctan x`}</MathInline></li>
-          <li><strong>Horizontal asymptotes:</strong> <MathInline>{`\\lim_{x \\to \\pm\\infty} \\arctan x = \\pm\\pi/2`}</MathInline></li>
+          <li><strong>Domain:</strong> All real numbers <InlineMath>{`(-\\infty, \\infty)`}</InlineMath></li>
+          <li><strong>Range:</strong> <InlineMath>{`(-\\pi/2, \\pi/2)`}</InlineMath></li>
+          <li><strong>Key values:</strong> <InlineMath>{`\\arctan 0 = 0`}</InlineMath>, <InlineMath>{`\\arctan 1 = \\pi/4`}</InlineMath>, <InlineMath>{`\\arctan(-1) = -\\pi/4`}</InlineMath></li>
+          <li><strong>Odd function:</strong> <InlineMath>{`\\arctan(-x) = -\\arctan x`}</InlineMath></li>
+          <li><strong>Horizontal asymptotes:</strong> <InlineMath>{`\\lim_{x \\to \\pm\\infty} \\arctan x = \\pm\\pi/2`}</InlineMath></li>
         </ul>
       </Callout>
 
@@ -112,7 +112,7 @@ export default function Section44() {
 
       <Callout type="info" title="Proof">
         <p>
-          If <MathInline>{`y = \\arctan x`}</MathInline>, then <MathInline>{`x = \\tan y`}</MathInline>.
+          If <InlineMath>{`y = \\arctan x`}</InlineMath>, then <InlineMath>{`x = \\tan y`}</InlineMath>.
           By the inverse function theorem:
         </p>
         <MathBlock>{`\\frac{dy}{dx} = \\frac{1}{dx/dy} = \\frac{1}{\\sec^2 y} = \\frac{1}{1 + \\tan^2 y} = \\frac{1}{1 + x^2}.`}</MathBlock>
@@ -154,7 +154,7 @@ export default function Section44() {
         <p>
           The "co-" functions (arccos, arccot, arccsc) have derivatives that are the
           <em>negatives</em> of their counterparts (arcsin, arctan, arcsec). This is because
-          each pair sums to a constant (<MathInline>{`\\pi/2`}</MathInline>).
+          each pair sums to a constant (<InlineMath>{`\\pi/2`}</InlineMath>).
         </p>
       </Callout>
 
@@ -176,29 +176,29 @@ export default function Section44() {
 
       <Callout type="example" title="Example 1: Basic Values">
         <p>Evaluate the following:</p>
-        <p><strong>(a)</strong> <MathInline>{`\\arcsin(\\frac{1}{2})`}</MathInline></p>
+        <p><strong>(a)</strong> <InlineMath>{`\\arcsin(\\frac{1}{2})`}</InlineMath></p>
         <p>
-          We need <MathInline>{`u`}</MathInline> such that <MathInline>{`\\sin u = \\frac{1}{2}`}</MathInline>
-          and <MathInline>{`-\\frac{\\pi}{2} \\leq u \\leq \\frac{\\pi}{2}`}</MathInline>.
-          Answer: <MathInline>{`\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}`}</MathInline>.
+          We need <InlineMath>{`u`}</InlineMath> such that <InlineMath>{`\\sin u = \\frac{1}{2}`}</InlineMath>
+          and <InlineMath>{`-\\frac{\\pi}{2} \\leq u \\leq \\frac{\\pi}{2}`}</InlineMath>.
+          Answer: <InlineMath>{`\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}`}</InlineMath>.
         </p>
-        <p><strong>(b)</strong> <MathInline>{`\\arccos(-\\frac{\\sqrt{2}}{2})`}</MathInline></p>
+        <p><strong>(b)</strong> <InlineMath>{`\\arccos(-\\frac{\\sqrt{2}}{2})`}</InlineMath></p>
         <p>
-          We need <MathInline>{`u`}</MathInline> such that <MathInline>{`\\cos u = -\\frac{\\sqrt{2}}{2}`}</MathInline>
-          and <MathInline>{`0 \\leq u \\leq \\pi`}</MathInline>.
-          Answer: <MathInline>{`\\arccos(-\\frac{\\sqrt{2}}{2}) = \\frac{3\\pi}{4}`}</MathInline>.
+          We need <InlineMath>{`u`}</InlineMath> such that <InlineMath>{`\\cos u = -\\frac{\\sqrt{2}}{2}`}</InlineMath>
+          and <InlineMath>{`0 \\leq u \\leq \\pi`}</InlineMath>.
+          Answer: <InlineMath>{`\\arccos(-\\frac{\\sqrt{2}}{2}) = \\frac{3\\pi}{4}`}</InlineMath>.
         </p>
-        <p><strong>(c)</strong> <MathInline>{`\\arctan(\\sqrt{3})`}</MathInline></p>
+        <p><strong>(c)</strong> <InlineMath>{`\\arctan(\\sqrt{3})`}</InlineMath></p>
         <p>
-          We need <MathInline>{`u`}</MathInline> such that <MathInline>{`\\tan u = \\sqrt{3}`}</MathInline>
-          and <MathInline>{`-\\frac{\\pi}{2} < u < \\frac{\\pi}{2}`}</MathInline>.
-          Answer: <MathInline>{`\\arctan(\\sqrt{3}) = \\frac{\\pi}{3}`}</MathInline>.
+          We need <InlineMath>{`u`}</InlineMath> such that <InlineMath>{`\\tan u = \\sqrt{3}`}</InlineMath>
+          and <InlineMath>{`-\\frac{\\pi}{2} < u < \\frac{\\pi}{2}`}</InlineMath>.
+          Answer: <InlineMath>{`\\arctan(\\sqrt{3}) = \\frac{\\pi}{3}`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 2: Differentiation with Chain Rule">
         <p>
-          Find <MathInline>{`\\frac{d}{dx} \\arcsin(2x)`}</MathInline>.
+          Find <InlineMath>{`\\frac{d}{dx} \\arcsin(2x)`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong> By the chain rule:</p>
         <MathBlock>{`\\frac{d}{dx} \\arcsin(2x) = \\frac{1}{\\sqrt{1-(2x)^2}} \\cdot 2 = \\frac{2}{\\sqrt{1-4x^2}}.`}</MathBlock>
@@ -206,7 +206,7 @@ export default function Section44() {
 
       <Callout type="example" title="Example 3: Differentiation">
         <p>
-          Find <MathInline>{`\\frac{d}{dx} \\arctan(e^x)`}</MathInline>.
+          Find <InlineMath>{`\\frac{d}{dx} \\arctan(e^x)`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`\\frac{d}{dx} \\arctan(e^x) = \\frac{1}{1+(e^x)^2} \\cdot e^x = \\frac{e^x}{1+e^{2x}}.`}</MathBlock>
@@ -214,50 +214,50 @@ export default function Section44() {
 
       <Callout type="example" title="Example 4: Integration">
         <p>
-          Evaluate <MathInline>{`\\int \\frac{dx}{\\sqrt{9-x^2}}`}</MathInline>.
+          Evaluate <InlineMath>{`\\int \\frac{dx}{\\sqrt{9-x^2}}`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          This matches <MathInline>{`\\int \\frac{dx}{\\sqrt{a^2-x^2}}`}</MathInline> with <MathInline>{`a = 3`}</MathInline>:
+          This matches <InlineMath>{`\\int \\frac{dx}{\\sqrt{a^2-x^2}}`}</InlineMath> with <InlineMath>{`a = 3`}</InlineMath>:
         </p>
         <MathBlock>{`\\int \\frac{dx}{\\sqrt{9-x^2}} = \\arcsin\\frac{x}{3} + C.`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 5: Integration">
         <p>
-          Evaluate <MathInline>{`\\int \\frac{dx}{4+x^2}`}</MathInline>.
+          Evaluate <InlineMath>{`\\int \\frac{dx}{4+x^2}`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          This matches <MathInline>{`\\int \\frac{dx}{a^2+x^2}`}</MathInline> with <MathInline>{`a = 2`}</MathInline>:
+          This matches <InlineMath>{`\\int \\frac{dx}{a^2+x^2}`}</InlineMath> with <InlineMath>{`a = 2`}</InlineMath>:
         </p>
         <MathBlock>{`\\int \\frac{dx}{4+x^2} = \\frac{1}{2}\\arctan\\frac{x}{2} + C.`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 6: Completing the Square">
         <p>
-          Evaluate <MathInline>{`\\int \\frac{dx}{x^2+4x+5}`}</MathInline>.
+          Evaluate <InlineMath>{`\\int \\frac{dx}{x^2+4x+5}`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>Complete the square in the denominator:</p>
         <MathBlock>{`x^2 + 4x + 5 = (x^2 + 4x + 4) + 1 = (x+2)^2 + 1.`}</MathBlock>
-        <p>Let <MathInline>{`u = x + 2`}</MathInline>, so <MathInline>{`du = dx`}</MathInline>:</p>
+        <p>Let <InlineMath>{`u = x + 2`}</InlineMath>, so <InlineMath>{`du = dx`}</InlineMath>:</p>
         <MathBlock>{`\\int \\frac{dx}{(x+2)^2+1} = \\int \\frac{du}{u^2+1} = \\arctan u + C = \\arctan(x+2) + C.`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 7: Integration by Parts">
         <p>
-          Evaluate <MathInline>{`\\int \\arcsin x \\, dx`}</MathInline>.
+          Evaluate <InlineMath>{`\\int \\arcsin x \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Let <MathInline>{`u = \\arcsin x`}</MathInline> and <MathInline>{`dv = dx`}</MathInline>:
+          Let <InlineMath>{`u = \\arcsin x`}</InlineMath> and <InlineMath>{`dv = dx`}</InlineMath>:
         </p>
         <MathBlock>{`du = \\frac{dx}{\\sqrt{1-x^2}}, \\quad v = x`}</MathBlock>
         <MathBlock>{`\\int \\arcsin x \\, dx = x \\arcsin x - \\int \\frac{x \\, dx}{\\sqrt{1-x^2}}.`}</MathBlock>
         <p>
-          For the remaining integral, let <MathInline>{`w = 1 - x^2`}</MathInline>,
-          <MathInline>{`dw = -2x \\, dx`}</MathInline>:
+          For the remaining integral, let <InlineMath>{`w = 1 - x^2`}</InlineMath>,
+          <InlineMath>{`dw = -2x \\, dx`}</InlineMath>:
         </p>
         <MathBlock>{`\\int \\frac{x \\, dx}{\\sqrt{1-x^2}} = -\\frac{1}{2} \\int w^{-1/2} \\, dw = -\\sqrt{w} + C = -\\sqrt{1-x^2} + C.`}</MathBlock>
         <p>Therefore:</p>
@@ -266,16 +266,16 @@ export default function Section44() {
 
       <Callout type="example" title="Example 8: Integration by Parts">
         <p>
-          Evaluate <MathInline>{`\\int \\arctan x \\, dx`}</MathInline>.
+          Evaluate <InlineMath>{`\\int \\arctan x \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Let <MathInline>{`u = \\arctan x`}</MathInline> and <MathInline>{`dv = dx`}</MathInline>:
+          Let <InlineMath>{`u = \\arctan x`}</InlineMath> and <InlineMath>{`dv = dx`}</InlineMath>:
         </p>
         <MathBlock>{`du = \\frac{dx}{1+x^2}, \\quad v = x`}</MathBlock>
         <MathBlock>{`\\int \\arctan x \\, dx = x \\arctan x - \\int \\frac{x \\, dx}{1+x^2}.`}</MathBlock>
         <p>
-          For the remaining integral, let <MathInline>{`w = 1 + x^2`}</MathInline>:
+          For the remaining integral, let <InlineMath>{`w = 1 + x^2`}</InlineMath>:
         </p>
         <MathBlock>{`\\int \\frac{x \\, dx}{1+x^2} = \\frac{1}{2} \\ln(1+x^2) + C.`}</MathBlock>
         <p>Therefore:</p>
@@ -286,11 +286,11 @@ export default function Section44() {
 
       <Callout type="example" title="A Formula for π">
         <p>
-          Since <MathInline>{`\\int_0^1 \\frac{dx}{1+x^2} = \\arctan x \\Big|_0^1 = \\arctan 1 - \\arctan 0 = \\frac{\\pi}{4}`}</MathInline>:
+          Since <InlineMath>{`\\int_0^1 \\frac{dx}{1+x^2} = \\arctan x \\Big|_0^1 = \\arctan 1 - \\arctan 0 = \\frac{\\pi}{4}`}</InlineMath>:
         </p>
         <MathBlock>{`\\pi = 4 \\int_0^1 \\frac{dx}{1+x^2}.`}</MathBlock>
         <p>
-          This integral can be used to compute <MathInline>{`\\pi`}</MathInline> numerically.
+          This integral can be used to compute <InlineMath>{`\\pi`}</InlineMath> numerically.
         </p>
       </Callout>
 
@@ -299,16 +299,16 @@ export default function Section44() {
       <Callout type="info" title="Key Features">
         <ul>
           <li>
-            <strong>arcsin x:</strong> Domain <MathInline>{`[-1,1]`}</MathInline>, range
-            <MathInline>{`[-\\pi/2, \\pi/2]`}</MathInline>, passes through origin, increasing.
+            <strong>arcsin x:</strong> Domain <InlineMath>{`[-1,1]`}</InlineMath>, range
+            <InlineMath>{`[-\\pi/2, \\pi/2]`}</InlineMath>, passes through origin, increasing.
           </li>
           <li>
-            <strong>arccos x:</strong> Domain <MathInline>{`[-1,1]`}</MathInline>, range
-            <MathInline>{`[0, \\pi]`}</MathInline>, passes through <MathInline>{`(1, 0)`}</MathInline>, decreasing.
+            <strong>arccos x:</strong> Domain <InlineMath>{`[-1,1]`}</InlineMath>, range
+            <InlineMath>{`[0, \\pi]`}</InlineMath>, passes through <InlineMath>{`(1, 0)`}</InlineMath>, decreasing.
           </li>
           <li>
-            <strong>arctan x:</strong> Domain <MathInline>{`(-\\infty, \\infty)`}</MathInline>, range
-            <MathInline>{`(-\\pi/2, \\pi/2)`}</MathInline>, horizontal asymptotes at <MathInline>{`y = \\pm\\pi/2`}</MathInline>.
+            <strong>arctan x:</strong> Domain <InlineMath>{`(-\\infty, \\infty)`}</InlineMath>, range
+            <InlineMath>{`(-\\pi/2, \\pi/2)`}</InlineMath>, horizontal asymptotes at <InlineMath>{`y = \\pm\\pi/2`}</InlineMath>.
           </li>
         </ul>
       </Callout>
@@ -316,35 +316,35 @@ export default function Section44() {
       <h2>Summary</h2>
       <ul>
         <li>
-          <strong>Arcsine:</strong> <MathInline>{`y = \\arcsin x`}</MathInline> means
-          <MathInline>{`x = \\sin y`}</MathInline> with <MathInline>{`-\\frac{\\pi}{2} \\leq y \\leq \\frac{\\pi}{2}`}</MathInline>.
+          <strong>Arcsine:</strong> <InlineMath>{`y = \\arcsin x`}</InlineMath> means
+          <InlineMath>{`x = \\sin y`}</InlineMath> with <InlineMath>{`-\\frac{\\pi}{2} \\leq y \\leq \\frac{\\pi}{2}`}</InlineMath>.
         </li>
         <li>
-          <strong>Arccosine:</strong> <MathInline>{`y = \\arccos x`}</MathInline> means
-          <MathInline>{`x = \\cos y`}</MathInline> with <MathInline>{`0 \\leq y \\leq \\pi`}</MathInline>.
+          <strong>Arccosine:</strong> <InlineMath>{`y = \\arccos x`}</InlineMath> means
+          <InlineMath>{`x = \\cos y`}</InlineMath> with <InlineMath>{`0 \\leq y \\leq \\pi`}</InlineMath>.
         </li>
         <li>
-          <strong>Arctangent:</strong> <MathInline>{`y = \\arctan x`}</MathInline> means
-          <MathInline>{`x = \\tan y`}</MathInline> with <MathInline>{`-\\frac{\\pi}{2} < y < \\frac{\\pi}{2}`}</MathInline>.
+          <strong>Arctangent:</strong> <InlineMath>{`y = \\arctan x`}</InlineMath> means
+          <InlineMath>{`x = \\tan y`}</InlineMath> with <InlineMath>{`-\\frac{\\pi}{2} < y < \\frac{\\pi}{2}`}</InlineMath>.
         </li>
         <li>
           <strong>Key derivatives:</strong>
-          <MathInline>{`(\\arcsin x)' = \\frac{1}{\\sqrt{1-x^2}}`}</MathInline>,
-          <MathInline>{`(\\arccos x)' = \\frac{-1}{\\sqrt{1-x^2}}`}</MathInline>,
-          <MathInline>{`(\\arctan x)' = \\frac{1}{1+x^2}`}</MathInline>.
+          <InlineMath>{`(\\arcsin x)' = \\frac{1}{\\sqrt{1-x^2}}`}</InlineMath>,
+          <InlineMath>{`(\\arccos x)' = \\frac{-1}{\\sqrt{1-x^2}}`}</InlineMath>,
+          <InlineMath>{`(\\arctan x)' = \\frac{1}{1+x^2}`}</InlineMath>.
         </li>
         <li>
           <strong>Key integrals:</strong>
-          <MathInline>{`\\int \\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C`}</MathInline>,
-          <MathInline>{`\\int \\frac{dx}{1+x^2} = \\arctan x + C`}</MathInline>.
+          <InlineMath>{`\\int \\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C`}</InlineMath>,
+          <InlineMath>{`\\int \\frac{dx}{1+x^2} = \\arctan x + C`}</InlineMath>.
         </li>
         <li>
-          <strong>Relationship:</strong> <MathInline>{`\\arcsin x + \\arccos x = \\frac{\\pi}{2}`}</MathInline>.
+          <strong>Relationship:</strong> <InlineMath>{`\\arcsin x + \\arccos x = \\frac{\\pi}{2}`}</InlineMath>.
         </li>
         <li>
           <strong>Integration by parts:</strong>
-          <MathInline>{`\\int \\arcsin x \\, dx = x\\arcsin x + \\sqrt{1-x^2} + C`}</MathInline>,
-          <MathInline>{`\\int \\arctan x \\, dx = x\\arctan x - \\frac{1}{2}\\ln(1+x^2) + C`}</MathInline>.
+          <InlineMath>{`\\int \\arcsin x \\, dx = x\\arcsin x + \\sqrt{1-x^2} + C`}</InlineMath>,
+          <InlineMath>{`\\int \\arctan x \\, dx = x\\arctan x - \\frac{1}{2}\\ln(1+x^2) + C`}</InlineMath>.
         </li>
       </ul>
     </LessonLayout>

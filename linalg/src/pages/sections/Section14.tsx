@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section14() {
   return (
@@ -15,7 +15,7 @@ export default function Section14() {
 
       <Definition title="Linear Independence" className="my-6">
         <p>
-          Vectors <Math>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_n`}</Math> are <strong>linearly independent</strong> if:
+          Vectors <InlineMath>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_n`}</InlineMath> are <strong>linearly independent</strong> if:
         </p>
         <MathBlock>
           {`c_1\\mathbf{v}_1 + c_2\\mathbf{v}_2 + \\cdots + c_n\\mathbf{v}_n = \\mathbf{0} \\quad \\text{only when all } c_i = 0`}
@@ -30,16 +30,16 @@ export default function Section14() {
         className="my-6"
         proof={
           <>
-            <p>Let the columns of <Math>A</Math> be <Math>{`\\mathbf{a}_1, \\ldots, \\mathbf{a}_n`}</Math>. The equation <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math> is:</p>
+            <p>Let the columns of <InlineMath>A</InlineMath> be <InlineMath>{`\\mathbf{a}_1, \\ldots, \\mathbf{a}_n`}</InlineMath>. The equation <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath> is:</p>
             <MathBlock>{`x_1\\mathbf{a}_1 + x_2\\mathbf{a}_2 + \\cdots + x_n\\mathbf{a}_n = \\mathbf{0}`}</MathBlock>
-            <p className="mt-2"><strong>(⟹)</strong> If the columns are independent, then the only way this linear combination can equal zero is with all <Math>x_i = 0</Math>. So <Math>{`N(A) = \\{\\mathbf{0}\\}`}</Math>.</p>
-            <p className="mt-2"><strong>(⟸)</strong> If <Math>{`N(A) = \\{\\mathbf{0}\\}`}</Math>, then the only solution is <Math>{`\\mathbf{x} = \\mathbf{0}`}</Math>, meaning the only linear combination giving zero has all coefficients zero. This is the definition of independence.</p>
+            <p className="mt-2"><strong>(⟹)</strong> If the columns are independent, then the only way this linear combination can equal zero is with all <InlineMath>x_i = 0</InlineMath>. So <InlineMath>{`N(A) = \\{\\mathbf{0}\\}`}</InlineMath>.</p>
+            <p className="mt-2"><strong>(⟸)</strong> If <InlineMath>{`N(A) = \\{\\mathbf{0}\\}`}</InlineMath>, then the only solution is <InlineMath>{`\\mathbf{x} = \\mathbf{0}`}</InlineMath>, meaning the only linear combination giving zero has all coefficients zero. This is the definition of independence.</p>
           </>
         }
       >
         <p>
-          The columns of <Math>A</Math> are linearly independent if and only if <Math>{`N(A) = \\mathbf{Z}`}</Math>
-          (only <Math>{`\\mathbf{x} = \\mathbf{0}`}</Math> solves <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math>).
+          The columns of <InlineMath>A</InlineMath> are linearly independent if and only if <InlineMath>{`N(A) = \\mathbf{Z}`}</InlineMath>
+          (only <InlineMath>{`\\mathbf{x} = \\mathbf{0}`}</InlineMath> solves <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath>).
         </p>
       </Theorem>
 
@@ -49,8 +49,8 @@ export default function Section14() {
           {`\\mathbf{v}_1 = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}, \\quad \\mathbf{v}_2 = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}, \\quad \\mathbf{v}_3 = \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          <strong>No!</strong> Because <Math>{`\\mathbf{v}_1 + \\mathbf{v}_2 - \\mathbf{v}_3 = \\mathbf{0}`}</Math>.
-          Three vectors in <Math>{`\\mathbf{R}^2`}</Math> must be dependent.
+          <strong>No!</strong> Because <InlineMath>{`\\mathbf{v}_1 + \\mathbf{v}_2 - \\mathbf{v}_3 = \\mathbf{0}`}</InlineMath>.
+          Three vectors in <InlineMath>{`\\mathbf{R}^2`}</InlineMath> must be dependent.
         </p>
       </Example>
 
@@ -58,8 +58,8 @@ export default function Section14() {
 
       <Definition title="Span" className="my-6">
         <p>
-          Vectors <Math>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_n`}</Math> <strong>span</strong> a space <Math>S</Math> if every
-          vector in <Math>S</Math> is a linear combination of them:
+          Vectors <InlineMath>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_n`}</InlineMath> <strong>span</strong> a space <InlineMath>S</InlineMath> if every
+          vector in <InlineMath>S</InlineMath> is a linear combination of them:
         </p>
         <MathBlock>
           {`S = \\text{span}(\\mathbf{v}_1, \\ldots, \\mathbf{v}_n) = \\{ c_1\\mathbf{v}_1 + \\cdots + c_n\\mathbf{v}_n \\}`}
@@ -70,25 +70,25 @@ export default function Section14() {
 
       <Definition title="Basis" className="my-6">
         <p>
-          A <strong>basis</strong> for a vector space <Math>V</Math> is a set of vectors that:
+          A <strong>basis</strong> for a vector space <InlineMath>V</InlineMath> is a set of vectors that:
         </p>
         <ol className="list-decimal list-inside mt-2 space-y-1">
           <li>Are <strong>linearly independent</strong></li>
-          <li><strong>Span</strong> the space <Math>V</Math></li>
+          <li><strong>Span</strong> the space <InlineMath>V</InlineMath></li>
         </ol>
         <p className="mt-2 text-primary-400">
-          Every vector in <Math>V</Math> is a <strong>unique</strong> combination of basis vectors.
+          Every vector in <InlineMath>V</InlineMath> is a <strong>unique</strong> combination of basis vectors.
         </p>
       </Definition>
 
       <Example title="Standard Basis for R^n" className="my-6">
-        <p>The standard basis for <Math>{`\\mathbf{R}^3`}</Math>:</p>
+        <p>The standard basis for <InlineMath>{`\\mathbf{R}^3`}</InlineMath>:</p>
         <MathBlock>
           {`\\mathbf{e}_1 = \\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}, \\quad \\mathbf{e}_2 = \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}, \\quad \\mathbf{e}_3 = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Together they form the identity matrix <Math>I</Math>. Any <Math>{`\\mathbf{v} = (v_1, v_2, v_3)`}</Math> is
-          <Math>{`v_1\\mathbf{e}_1 + v_2\\mathbf{e}_2 + v_3\\mathbf{e}_3`}</Math>.
+          Together they form the identity matrix <InlineMath>I</InlineMath>. Any <InlineMath>{`\\mathbf{v} = (v_1, v_2, v_3)`}</InlineMath> is
+          <InlineMath>{`v_1\\mathbf{e}_1 + v_2\\mathbf{e}_2 + v_3\\mathbf{e}_3`}</InlineMath>.
         </p>
       </Example>
 
@@ -99,26 +99,26 @@ export default function Section14() {
         className="my-6"
         proof={
           <>
-            <p>Suppose <Math>{`\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_m\\}`}</Math> and <Math>{`\\{\\mathbf{w}_1, \\ldots, \\mathbf{w}_n\\}`}</Math> are both bases for <Math>V</Math>.</p>
-            <p className="mt-2">Since the <Math>{`\\mathbf{v}`}</Math>'s span <Math>V</Math>, we can write each <Math>{`\\mathbf{w}_j`}</Math> as a combination. Since the <Math>{`\\mathbf{w}`}</Math>'s are independent and written in terms of <Math>m</Math> vectors, we must have <Math>n \leq m</Math>.</p>
-            <p className="mt-2">By the same argument with roles reversed: since the <Math>{`\\mathbf{w}`}</Math>'s span <Math>V</Math> and the <Math>{`\\mathbf{v}`}</Math>'s are independent, we have <Math>m \leq n</Math>.</p>
-            <p className="mt-2">Together: <Math>m = n</Math>. All bases have the same size.</p>
+            <p>Suppose <InlineMath>{`\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_m\\}`}</InlineMath> and <InlineMath>{`\\{\\mathbf{w}_1, \\ldots, \\mathbf{w}_n\\}`}</InlineMath> are both bases for <InlineMath>V</InlineMath>.</p>
+            <p className="mt-2">Since the <InlineMath>{`\\mathbf{v}`}</InlineMath>'s span <InlineMath>V</InlineMath>, we can write each <InlineMath>{`\\mathbf{w}_j`}</InlineMath> as a combination. Since the <InlineMath>{`\\mathbf{w}`}</InlineMath>'s are independent and written in terms of <InlineMath>m</InlineMath> vectors, we must have <InlineMath>n \leq m</InlineMath>.</p>
+            <p className="mt-2">By the same argument with roles reversed: since the <InlineMath>{`\\mathbf{w}`}</InlineMath>'s span <InlineMath>V</InlineMath> and the <InlineMath>{`\\mathbf{v}`}</InlineMath>'s are independent, we have <InlineMath>m \leq n</InlineMath>.</p>
+            <p className="mt-2">Together: <InlineMath>m = n</InlineMath>. All bases have the same size.</p>
           </>
         }
       >
         <p>
-          All bases for a vector space <Math>V</Math> have the <strong>same number of vectors</strong>.
-          This number is the <strong>dimension</strong> of <Math>V</Math>, written <Math>\dim(V)</Math>.
+          All bases for a vector space <InlineMath>V</InlineMath> have the <strong>same number of vectors</strong>.
+          This number is the <strong>dimension</strong> of <InlineMath>V</InlineMath>, written <InlineMath>\dim(V)</InlineMath>.
         </p>
       </Theorem>
 
       <div className="bg-dark-800/50 rounded-xl p-4 my-6 border border-amber-500/20">
         <p className="font-semibold text-amber-400 mb-2">Important Examples</p>
         <ul className="space-y-1 text-dark-300">
-          <li><Math>{`\\dim(\\mathbf{R}^n) = n`}</Math></li>
-          <li>The zero space <Math>{`\\mathbf{Z}`}</Math> has dimension <Math>0</Math></li>
-          <li>A line through the origin in <Math>{`\\mathbf{R}^3`}</Math> has dimension <Math>1</Math></li>
-          <li>A plane through the origin in <Math>{`\\mathbf{R}^3`}</Math> has dimension <Math>2</Math></li>
+          <li><InlineMath>{`\\dim(\\mathbf{R}^n) = n`}</InlineMath></li>
+          <li>The zero space <InlineMath>{`\\mathbf{Z}`}</InlineMath> has dimension <InlineMath>0</InlineMath></li>
+          <li>A line through the origin in <InlineMath>{`\\mathbf{R}^3`}</InlineMath> has dimension <InlineMath>1</InlineMath></li>
+          <li>A plane through the origin in <InlineMath>{`\\mathbf{R}^3`}</InlineMath> has dimension <InlineMath>2</InlineMath></li>
         </ul>
       </div>
 
@@ -129,17 +129,17 @@ export default function Section14() {
         className="my-6"
         proof={
           <>
-            <p><strong>Independence:</strong> The pivot columns of <Math>A</Math> correspond to the pivot columns of <Math>R</Math>. In <Math>R</Math>, these columns contain the identity matrix <Math>I_r</Math> (after extracting pivot rows), so they're independent. Row operations preserve linear relationships, so the pivot columns of <Math>A</Math> are also independent.</p>
-            <p className="mt-2"><strong>Spanning:</strong> Each free column of <Math>R</Math> is a combination of pivot columns (visible directly from <Math>R</Math>). Since the same relationships hold in <Math>A</Math>, every column of <Math>A</Math> is a combination of pivot columns. Thus the pivot columns span <Math>C(A)</Math>.</p>
-            <p className="mt-2">With <Math>r</Math> pivot columns forming a basis, <Math>{`\\dim C(A) = r`}</Math>.</p>
+            <p><strong>Independence:</strong> The pivot columns of <InlineMath>A</InlineMath> correspond to the pivot columns of <InlineMath>R</InlineMath>. In <InlineMath>R</InlineMath>, these columns contain the identity matrix <InlineMath>I_r</InlineMath> (after extracting pivot rows), so they're independent. Row operations preserve linear relationships, so the pivot columns of <InlineMath>A</InlineMath> are also independent.</p>
+            <p className="mt-2"><strong>Spanning:</strong> Each free column of <InlineMath>R</InlineMath> is a combination of pivot columns (visible directly from <InlineMath>R</InlineMath>). Since the same relationships hold in <InlineMath>A</InlineMath>, every column of <InlineMath>A</InlineMath> is a combination of pivot columns. Thus the pivot columns span <InlineMath>C(A)</InlineMath>.</p>
+            <p className="mt-2">With <InlineMath>r</InlineMath> pivot columns forming a basis, <InlineMath>{`\\dim C(A) = r`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          The <strong>pivot columns of <Math>A</Math></strong> are a basis for the column space <Math>C(A)</Math>.
+          The <strong>pivot columns of <InlineMath>A</InlineMath></strong> are a basis for the column space <InlineMath>C(A)</InlineMath>.
         </p>
         <p className="mt-2">
-          The <strong>dimension of <Math>C(A)</Math></strong> equals the number of pivots = the <strong>rank</strong> <Math>r</Math>.
+          The <strong>dimension of <InlineMath>C(A)</InlineMath></strong> equals the number of pivots = the <strong>rank</strong> <InlineMath>r</InlineMath>.
         </p>
       </Theorem>
 
@@ -148,13 +148,13 @@ export default function Section14() {
           {`A = \\begin{bmatrix} 1 & 3 & 3 & 2 \\\\ 2 & 6 & 9 & 7 \\\\ -1 & -3 & 3 & 4 \\end{bmatrix} \\rightarrow U = \\begin{bmatrix} 1 & 3 & 3 & 2 \\\\ 0 & 0 & 3 & 3 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Pivots in columns 1 and 3. A basis for <Math>C(A)</Math> is columns 1 and 3 of <Math>A</Math>:
+          Pivots in columns 1 and 3. A basis for <InlineMath>C(A)</InlineMath> is columns 1 and 3 of <InlineMath>A</InlineMath>:
         </p>
         <MathBlock>
           {`\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ -1 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 9 \\\\ 3 \\end{bmatrix} \\right\\}`}
         </MathBlock>
         <p className="mt-2 text-amber-400">
-          Use the original columns of <Math>A</Math>, not of <Math>U</Math>!
+          Use the original columns of <InlineMath>A</InlineMath>, not of <InlineMath>U</InlineMath>!
         </p>
       </Example>
 
@@ -164,11 +164,11 @@ export default function Section14() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Columns of <Math>A</Math> are independent if <Math>{`\\mathbf{x} = \\mathbf{0}`}</Math> is the only solution to <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math>.</span>
+            <span>Columns of <InlineMath>A</InlineMath> are independent if <InlineMath>{`\\mathbf{x} = \\mathbf{0}`}</InlineMath> is the only solution to <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Vectors <Math>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_r`}</Math> span a space if their combinations fill that space.</span>
+            <span>Vectors <InlineMath>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_r`}</InlineMath> span a space if their combinations fill that space.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
@@ -180,7 +180,7 @@ export default function Section14() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>The pivot columns are a basis for <Math>C(A)</Math>. The dimension is <Math>r</Math>.</span>
+            <span>The pivot columns are a basis for <InlineMath>C(A)</InlineMath>. The dimension is <InlineMath>r</InlineMath>.</span>
           </li>
         </ul>
       </div>

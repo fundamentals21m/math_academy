@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section04Quiz } from '@/data/quizzes';
@@ -33,16 +33,16 @@ export default function Section04() {
       <h2>Testing for Primality</h2>
 
       <p>
-        To check if a number <Math>n</Math> is prime, we only need to test divisibility 
-        by numbers up to <Math>\sqrt{'{n}'}</Math>. Why? If <Math>n = a \times b</Math> and 
-        both factors are greater than <Math>\sqrt{'{n}'}</Math>, then <Math>a \times b {'>'} n</Math>, 
+        To check if a number <InlineMath>n</InlineMath> is prime, we only need to test divisibility 
+        by numbers up to <InlineMath>{`\\sqrt{n}`}</InlineMath>. Why? If <InlineMath>{`n = a \\times b`}</InlineMath> and
+        both factors are greater than <InlineMath>{`\\sqrt{n}`}</InlineMath>, then <InlineMath>{`a \\times b > n`}</InlineMath>, 
         which is a contradiction.
       </p>
 
       <Example>
         <p>Is 37 prime?</p>
         <p>
-          We check divisibility by primes up to <Math>\sqrt{'{37}'} \approx 6.08</Math>.
+          We check divisibility by primes up to <InlineMath>{`\\sqrt{37} \\approx 6.08`}</InlineMath>.
         </p>
         <div className="font-mono bg-dark-700/50 rounded-lg p-4 my-2">
           37 ÷ 2 = 18.5 (not divisible)<br />
@@ -88,11 +88,11 @@ export default function Section04() {
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Sieve Algorithm</h3>
         <ol className="list-decimal list-inside space-y-2 text-dark-300">
-          <li>Write down all numbers from 2 to <Math>n</Math></li>
+          <li>Write down all numbers from 2 to <InlineMath>n</InlineMath></li>
           <li>Start with the first unmarked number (2)</li>
           <li>Mark all multiples of this number as composite (not prime)</li>
           <li>Move to the next unmarked number</li>
-          <li>Repeat until you've processed all numbers up to <Math>\sqrt{'{n}'}</Math></li>
+          <li>Repeat until you've processed all numbers up to <InlineMath>{`\\sqrt{n}`}</InlineMath></li>
           <li>All remaining unmarked numbers are prime</li>
         </ol>
       </div>
@@ -154,14 +154,14 @@ export default function Section04() {
       </div>
 
       <Theorem title="The Factoring Problem">
-        Given a large number <Math>n = p \times q</Math> where <Math>p</Math> and <Math>q</Math> are 
-        large primes, there is no known efficient algorithm to find <Math>p</Math> and <Math>q</Math>.
+        Given a large number <InlineMath>{`n = p \\times q`}</InlineMath> where <InlineMath>{`p`}</InlineMath> and <InlineMath>{`q`}</InlineMath> are
+        large primes, there is no known efficient algorithm to find <InlineMath>{`p`}</InlineMath> and <InlineMath>{`q`}</InlineMath>.
       </Theorem>
 
       <p>
         This asymmetry—easy to multiply, hard to factor—is the foundation of RSA encryption. 
-        The public key contains <Math>n</Math>, but only someone who knows the secret 
-        primes <Math>p</Math> and <Math>q</Math> can decrypt messages.
+        The public key contains <InlineMath>n</InlineMath>, but only someone who knows the secret 
+        primes <InlineMath>p</InlineMath> and <InlineMath>q</InlineMath> can decrypt messages.
       </p>
 
       <Callout type="warning">

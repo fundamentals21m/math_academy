@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section10Questions } from '../../data/quizzes';
@@ -30,14 +30,14 @@ export default function Section10() {
 
       <p className="text-dark-200 mb-6">
         Suppose you're filling a bathtub. The rate at which water flows is{' '}
-        <MathInline>{'r(t)'}</MathInline> liters per minute. How much water is in the tub
+        <InlineMath>{'r(t)'}</InlineMath> liters per minute. How much water is in the tub
         after 10 minutes?
       </p>
 
       <div className="bg-dark-800 rounded-xl p-6 mb-6">
         <h4 className="text-lg font-semibold text-primary-300 mb-4">If the rate is constant:</h4>
         <p className="text-dark-200 mb-2">
-          At 5 liters/minute for 10 minutes: <MathInline>{'5 \\times 10 = 50'}</MathInline> liters.
+          At 5 liters/minute for 10 minutes: <InlineMath>{'5 \\times 10 = 50'}</InlineMath> liters.
         </p>
         <p className="text-dark-200">
           Simple multiplication works when the rate doesn't change.
@@ -69,15 +69,15 @@ export default function Section10() {
 
       <p className="text-dark-200 my-6">
         This is the <strong>accumulation function</strong>: it tells you how much has accumulated
-        from the starting point <MathInline>{'a'}</MathInline> up to any point{' '}
-        <MathInline>{'x'}</MathInline>.
+        from the starting point <InlineMath>{'a'}</InlineMath> up to any point{' '}
+        <InlineMath>{'x'}</InlineMath>.
       </p>
 
       <CardGrid>
         <Card>
           <CardHeader title="At x = a" />
           <p className="text-sm text-dark-300">
-            <MathInline>{'F(a) = \\int_a^a f(t)\\,dt = 0'}</MathInline>
+            <InlineMath>{'F(a) = \\int_a^a f(t)\\,dt = 0'}</InlineMath>
           </p>
           <p className="text-xs text-dark-500 mt-2">
             Nothing has accumulated yet at the starting point.
@@ -86,11 +86,11 @@ export default function Section10() {
         <Card>
           <CardHeader title="As x increases" />
           <p className="text-sm text-dark-300">
-            <MathInline>{'F(x)'}</MathInline> grows (if <MathInline>{'f > 0'}</MathInline>)
+            <InlineMath>{'F(x)'}</InlineMath> grows (if <InlineMath>{'f > 0'}</InlineMath>)
             as we accumulate more and more.
           </p>
           <p className="text-xs text-dark-500 mt-2">
-            The rate of growth is exactly <MathInline>{'f(x)'}</MathInline>.
+            The rate of growth is exactly <InlineMath>{'f(x)'}</InlineMath>.
           </p>
         </Card>
       </CardGrid>
@@ -107,8 +107,8 @@ export default function Section10() {
           <div>
             <p className="font-semibold">Distance from Velocity</p>
             <p className="text-sm text-dark-400">
-              If <MathInline>{'v(t)'}</MathInline> is velocity, then{' '}
-              <MathInline>{'\\int_0^T v(t)\\,dt'}</MathInline> is total displacement. The
+              If <InlineMath>{'v(t)'}</InlineMath> is velocity, then{' '}
+              <InlineMath>{'\\int_0^T v(t)\\,dt'}</InlineMath> is total displacement. The
               odometer reading is an integral of the speedometer reading.
             </p>
           </div>
@@ -118,8 +118,8 @@ export default function Section10() {
           <div>
             <p className="font-semibold">Volume from Flow Rate</p>
             <p className="text-sm text-dark-400">
-              If water flows at rate <MathInline>{'r(t)'}</MathInline> liters/sec, then{' '}
-              <MathInline>{'\\int_0^T r(t)\\,dt'}</MathInline> gives total liters. Every water
+              If water flows at rate <InlineMath>{'r(t)'}</InlineMath> liters/sec, then{' '}
+              <InlineMath>{'\\int_0^T r(t)\\,dt'}</InlineMath> gives total liters. Every water
               meter computes an integral.
             </p>
           </div>
@@ -129,8 +129,8 @@ export default function Section10() {
           <div>
             <p className="font-semibold">Total Revenue from Sales Rate</p>
             <p className="text-sm text-dark-400">
-              If <MathInline>{'R(t)'}</MathInline> is revenue per day, then{' '}
-              <MathInline>{'\\int_0^{365} R(t)\\,dt'}</MathInline> gives yearly revenue.
+              If <InlineMath>{'R(t)'}</InlineMath> is revenue per day, then{' '}
+              <InlineMath>{'\\int_0^{365} R(t)\\,dt'}</InlineMath> gives yearly revenue.
             </p>
           </div>
         </div>
@@ -139,8 +139,8 @@ export default function Section10() {
           <div>
             <p className="font-semibold">Population Growth</p>
             <p className="text-sm text-dark-400">
-              If <MathInline>{'b(t) - d(t)'}</MathInline> is net birth rate, then{' '}
-              <MathInline>{'\\int_0^T (b - d)\\,dt'}</MathInline> gives population change.
+              If <InlineMath>{'b(t) - d(t)'}</InlineMath> is net birth rate, then{' '}
+              <InlineMath>{'\\int_0^T (b - d)\\,dt'}</InlineMath> gives population change.
             </p>
           </div>
         </div>
@@ -149,8 +149,8 @@ export default function Section10() {
           <div>
             <p className="font-semibold">Energy from Power</p>
             <p className="text-sm text-dark-400">
-              If <MathInline>{'P(t)'}</MathInline> is power (watts), then{' '}
-              <MathInline>{'\\int_0^T P(t)\\,dt'}</MathInline> gives energy (joules). Your
+              If <InlineMath>{'P(t)'}</InlineMath> is power (watts), then{' '}
+              <InlineMath>{'\\int_0^T P(t)\\,dt'}</InlineMath> gives energy (joules). Your
               electric bill is an integral.
             </p>
           </div>
@@ -272,15 +272,15 @@ export default function Section10() {
       <ul className="space-y-2 text-dark-200 mb-6">
         <li className="flex items-center gap-3">
           <span className="text-primary-400">•</span>
-          Sum <MathInline>{'\\to'}</MathInline> Integral
+          Sum <InlineMath>{'\\to'}</InlineMath> Integral
         </li>
         <li className="flex items-center gap-3">
           <span className="text-primary-400">•</span>
-          Sequence <MathInline>{'\\to'}</MathInline> Function
+          Sequence <InlineMath>{'\\to'}</InlineMath> Function
         </li>
         <li className="flex items-center gap-3">
           <span className="text-primary-400">•</span>
-          Difference <MathInline>{'\\to'}</MathInline> Derivative
+          Difference <InlineMath>{'\\to'}</InlineMath> Derivative
         </li>
       </ul>
 

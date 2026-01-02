@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section10Quiz } from '@/data/quizzes';
@@ -34,7 +34,7 @@ export default function Section10() {
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-primary-400 mb-2">Step 1: Choose Two Large Primes</h3>
           <p className="text-dark-300">
-            Select two distinct large prime numbers <Math>p</Math> and <Math>q</Math> (in practice, 
+            Select two distinct large prime numbers <InlineMath>p</InlineMath> and <InlineMath>q</InlineMath> (in practice, 
             each about 1024 bits).
           </p>
         </div>
@@ -42,28 +42,28 @@ export default function Section10() {
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-primary-400 mb-2">Step 2: Compute n and φ(n)</h3>
           <p className="text-dark-300 mb-2">Calculate:</p>
-          <MathBlock>n = p \cdot q</MathBlock>
-          <MathBlock>\phi(n) = (p-1)(q-1)</MathBlock>
+          <MathBlock>{`n = p \\cdot q`}</MathBlock>
+          <MathBlock>{`\\phi(n) = (p-1)(q-1)`}</MathBlock>
         </div>
 
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-primary-400 mb-2">Step 3: Choose Public Exponent</h3>
           <p className="text-dark-300">
-            Select <Math>e</Math> such that <Math>1 {'<'} e {'<'} \phi(n)</Math> and <Math>\gcd(e, \phi(n)) = 1</Math>.
+            Select <InlineMath>e</InlineMath> such that <InlineMath>{`1 < e < \\phi(n)`}</InlineMath> and <InlineMath>{`\\gcd(e, \\phi(n)) = 1`}</InlineMath>.
           </p>
           <p className="text-dark-400 text-sm mt-2">
-            Common choice: <Math>e = 65537</Math> (fast and secure).
+            Common choice: <InlineMath>e = 65537</InlineMath> (fast and secure).
           </p>
         </div>
 
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-primary-400 mb-2">Step 4: Compute Private Exponent</h3>
           <p className="text-dark-300 mb-2">
-            Find <Math>d</Math>, the modular inverse of <Math>e</Math> modulo <Math>\phi(n)</Math>:
+            Find <InlineMath>d</InlineMath>, the modular inverse of <InlineMath>e</InlineMath> modulo <InlineMath>{`\\phi(n)`}</InlineMath>:
           </p>
           <MathBlock>{`d \\equiv e^{-1} \\pmod{\\phi(n)}`}</MathBlock>
           <p className="text-dark-400 text-sm mt-2">
-            This means <Math>{`e \\cdot d \\equiv 1 \\pmod{\\phi(n)}`}</Math>.
+            This means <InlineMath>{`e \\cdot d \\equiv 1 \\pmod{\\phi(n)}`}</InlineMath>.
           </p>
         </div>
       </div>
@@ -71,11 +71,11 @@ export default function Section10() {
       <Definition title="RSA Key Pair">
         <div className="space-y-3">
           <p>
-            <strong className="text-emerald-400">Public Key:</strong> The pair <Math>(e, n)</Math> — 
+            <strong className="text-emerald-400">Public Key:</strong> The pair <InlineMath>(e, n)</InlineMath> — 
             shared with everyone.
           </p>
           <p>
-            <strong className="text-amber-400">Private Key:</strong> The pair <Math>(d, n)</Math> — 
+            <strong className="text-amber-400">Private Key:</strong> The pair <InlineMath>(d, n)</InlineMath> — 
             kept secret by the owner.
           </p>
         </div>
@@ -86,16 +86,16 @@ export default function Section10() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-emerald-500/30">
           <h3 className="text-lg font-semibold text-emerald-400 mb-2">Encrypt (with public key)</h3>
-          <p className="text-dark-300 mb-2">To encrypt message <Math>m</Math>:</p>
-          <MathBlock>c = m^e \mod n</MathBlock>
+          <p className="text-dark-300 mb-2">To encrypt message <InlineMath>m</InlineMath>:</p>
+          <MathBlock>{`c = m^e \\mod n`}</MathBlock>
           <p className="text-dark-400 text-sm mt-2">
             Anyone can do this using the public key.
           </p>
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-amber-500/30">
           <h3 className="text-lg font-semibold text-amber-400 mb-2">Decrypt (with private key)</h3>
-          <p className="text-dark-300 mb-2">To decrypt ciphertext <Math>c</Math>:</p>
-          <MathBlock>m = c^d \mod n</MathBlock>
+          <p className="text-dark-300 mb-2">To decrypt ciphertext <InlineMath>c</InlineMath>:</p>
+          <MathBlock>{`m = c^d \\mod n`}</MathBlock>
           <p className="text-dark-400 text-sm mt-2">
             Only the private key holder can do this.
           </p>
@@ -135,24 +135,24 @@ export default function Section10() {
             <p>We need to show that decryption recovers the original message:</p>
             <MathBlock>{`c^d \\equiv (m^e)^d \\equiv m^{ed} \\pmod{n}`}</MathBlock>
             <p className="mt-2">
-              Since <Math>{`ed \\equiv 1 \\pmod{\\phi(n)}`}</Math>, we have <Math>{`ed = 1 + k\\phi(n)`}</Math> for 
-              some integer <Math>k</Math>.
+              Since <InlineMath>{`ed \\equiv 1 \\pmod{\\phi(n)}`}</InlineMath>, we have <InlineMath>{`ed = 1 + k\\phi(n)`}</InlineMath> for 
+              some integer <InlineMath>k</InlineMath>.
             </p>
             <MathBlock>{`m^{ed} = m^{1 + k\\phi(n)} = m \\cdot (m^{\\phi(n)})^k`}</MathBlock>
             <p className="mt-2">
-              By Euler's theorem, <Math>{`m^{\\phi(n)} \\equiv 1 \\pmod{n}`}</Math> when <Math>{`\\gcd(m,n) = 1`}</Math>.
+              By Euler's theorem, <InlineMath>{`m^{\\phi(n)} \\equiv 1 \\pmod{n}`}</InlineMath> when <InlineMath>{`\\gcd(m,n) = 1`}</InlineMath>.
             </p>
             <p className="mt-2">
-              Therefore: <Math>{`m^{ed} \\equiv m \\cdot 1^k \\equiv m \\pmod{n}`}</Math>
+              Therefore: <InlineMath>{`m^{ed} \\equiv m \\cdot 1^k \\equiv m \\pmod{n}`}</InlineMath>
             </p>
           </>
         }
       >
         <p>
-          For any message <Math>m</Math> with <Math>0 {'<'} m {'<'} n</Math>, decrypting the 
-          encryption of <Math>m</Math> returns <Math>m</Math>:
+          For any message <InlineMath>m</InlineMath> with <InlineMath>0 {'<'} m {'<'} n</InlineMath>, decrypting the 
+          encryption of <InlineMath>m</InlineMath> returns <InlineMath>m</InlineMath>:
         </p>
-        <MathBlock>(m^e)^d \equiv m \pmod{'{n}'}</MathBlock>
+        <MathBlock>{`(m^e)^d \\equiv m \\pmod{n}`}</MathBlock>
       </Theorem>
 
       <h2>Security of RSA</h2>
@@ -162,17 +162,17 @@ export default function Section10() {
       </p>
 
       <Callout type="warning">
-        <strong>The Factoring Problem:</strong> Given <Math>n = p \cdot q</Math> where <Math>p</Math> and <Math>q</Math> are 
-        large primes, finding <Math>p</Math> and <Math>q</Math> is computationally infeasible.
+        <strong>The Factoring Problem:</strong> Given <InlineMath>{`n = p \\cdot q`}</InlineMath> where <InlineMath>{`p`}</InlineMath> and <InlineMath>{`q`}</InlineMath> are
+        large primes, finding <InlineMath>{`p`}</InlineMath> and <InlineMath>{`q`}</InlineMath> is computationally infeasible.
       </Callout>
 
       <p>
-        If an attacker could factor <Math>n</Math>, they could:
+        If an attacker could factor <InlineMath>n</InlineMath>, they could:
       </p>
 
       <ul className="list-disc list-inside space-y-2 my-6 text-dark-300">
-        <li>Compute <Math>\phi(n) = (p-1)(q-1)</Math></li>
-        <li>Find <Math>d = e^{'{-1}'} \mod \phi(n)</Math></li>
+        <li>Compute <InlineMath>{`\\phi(n) = (p-1)(q-1)`}</InlineMath></li>
+        <li>Find <InlineMath>{`d = e^{-1} \\mod \\phi(n)`}</InlineMath></li>
         <li>Decrypt any message!</li>
       </ul>
 

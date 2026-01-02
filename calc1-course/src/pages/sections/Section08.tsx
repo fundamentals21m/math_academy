@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section08() {
   return (
@@ -23,8 +23,8 @@ export default function Section08() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Partition</p>
         <p className="mb-2">
-          A <strong>partition</strong> <MathInline>{'P'}</MathInline> of a closed interval{' '}
-          <MathInline>{'[a, b]'}</MathInline> is a finite collection of points
+          A <strong>partition</strong> <InlineMath>{'P'}</InlineMath> of a closed interval{' '}
+          <InlineMath>{'[a, b]'}</InlineMath> is a finite collection of points
         </p>
         <MathBlock>{'P = \\{x_0, x_1, x_2, \\ldots, x_n\\}'}</MathBlock>
         <p className="mt-2">satisfying</p>
@@ -32,23 +32,23 @@ export default function Section08() {
       </Callout>
 
       <p className="text-dark-200 mb-4">
-        The partition <MathInline>{'P'}</MathInline> determines <MathInline>{'n'}</MathInline>{' '}
+        The partition <InlineMath>{'P'}</InlineMath> determines <InlineMath>{'n'}</InlineMath>{' '}
         closed subintervals:
       </p>
 
       <MathBlock>{'[x_0, x_1], \\, [x_1, x_2], \\, \\ldots, \\, [x_{n-1}, x_n]'}</MathBlock>
 
       <p className="text-dark-200 mb-6">
-        The <MathInline>{'k'}</MathInline>th closed subinterval is{' '}
-        <MathInline>{'[x_{k-1}, x_k]'}</MathInline>, and the corresponding open subinterval
-        is <MathInline>{'(x_{k-1}, x_k)'}</MathInline>.
+        The <InlineMath>{'k'}</InlineMath>th closed subinterval is{' '}
+        <InlineMath>{'[x_{k-1}, x_k]'}</InlineMath>, and the corresponding open subinterval
+        is <InlineMath>{'(x_{k-1}, x_k)'}</InlineMath>.
       </p>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Example: A Partition of [0, 4]</p>
         <p className="mb-2">
-          The set <MathInline>{'P = \\{0, 1, 2, 3, 4\\}'}</MathInline> is a partition of{' '}
-          <MathInline>{'[0, 4]'}</MathInline> into 4 subintervals:
+          The set <InlineMath>{'P = \\{0, 1, 2, 3, 4\\}'}</InlineMath> is a partition of{' '}
+          <InlineMath>{'[0, 4]'}</InlineMath> into 4 subintervals:
         </p>
         <MathBlock>{'[0, 1], \\, [1, 2], \\, [2, 3], \\, [3, 4]'}</MathBlock>
       </Callout>
@@ -62,19 +62,19 @@ export default function Section08() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Refinement</p>
         <p>
-          A partition <MathInline>{"P'"}</MathInline> is called a <strong>refinement</strong>{' '}
-          of <MathInline>{'P'}</MathInline> (and is said to be <em>finer</em> than{' '}
-          <MathInline>{'P'}</MathInline>) if <MathInline>{"P'"}</MathInline> contains all
-          the points of <MathInline>{'P'}</MathInline> plus possibly additional points.
+          A partition <InlineMath>{"P'"}</InlineMath> is called a <strong>refinement</strong>{' '}
+          of <InlineMath>{'P'}</InlineMath> (and is said to be <em>finer</em> than{' '}
+          <InlineMath>{'P'}</InlineMath>) if <InlineMath>{"P'"}</InlineMath> contains all
+          the points of <InlineMath>{'P'}</InlineMath> plus possibly additional points.
         </p>
       </Callout>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Refinement</p>
         <p>
-          If <MathInline>{'P = \\{0, 1, 2, 3, 4\\}'}</MathInline>, then{' '}
-          <MathInline>{"P' = \\{0, \\frac{3}{4}, 1, \\sqrt{2}, 2, 3, \\frac{7}{2}, 4\\}"}</MathInline>{' '}
-          is a refinement of <MathInline>{'P'}</MathInline>.
+          If <InlineMath>{'P = \\{0, 1, 2, 3, 4\\}'}</InlineMath>, then{' '}
+          <InlineMath>{"P' = \\{0, \\frac{3}{4}, 1, \\sqrt{2}, 2, 3, \\frac{7}{2}, 4\\}"}</InlineMath>{' '}
+          is a refinement of <InlineMath>{'P'}</InlineMath>.
         </p>
       </Callout>
 
@@ -87,24 +87,24 @@ export default function Section08() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Step Function</p>
         <p className="mb-2">
-          A function <MathInline>{'s'}</MathInline> whose domain is a closed interval{' '}
-          <MathInline>{'[a, b]'}</MathInline> is called a <strong>step function</strong>{' '}
-          if there exists a partition <MathInline>{'P = \\{x_0, x_1, \\ldots, x_n\\}'}</MathInline>{' '}
-          of <MathInline>{'[a, b]'}</MathInline> such that <MathInline>{'s'}</MathInline> is
-          constant on each open subinterval of <MathInline>{'P'}</MathInline>.
+          A function <InlineMath>{'s'}</InlineMath> whose domain is a closed interval{' '}
+          <InlineMath>{'[a, b]'}</InlineMath> is called a <strong>step function</strong>{' '}
+          if there exists a partition <InlineMath>{'P = \\{x_0, x_1, \\ldots, x_n\\}'}</InlineMath>{' '}
+          of <InlineMath>{'[a, b]'}</InlineMath> such that <InlineMath>{'s'}</InlineMath> is
+          constant on each open subinterval of <InlineMath>{'P'}</InlineMath>.
         </p>
         <p>
-          That is, for each <MathInline>{'k = 1, 2, \\ldots, n'}</MathInline>, there is a
-          constant <MathInline>{'s_k'}</MathInline> such that:
+          That is, for each <InlineMath>{'k = 1, 2, \\ldots, n'}</InlineMath>, there is a
+          constant <InlineMath>{'s_k'}</InlineMath> such that:
         </p>
         <MathBlock>{'s(x) = s_k \\quad \\text{if} \\quad x_{k-1} < x < x_k'}</MathBlock>
       </Callout>
 
       <p className="text-dark-200 mb-6">
         Step functions are also called <strong>piecewise constant functions</strong>.
-        Note that at the endpoints <MathInline>{'x_{k-1}'}</MathInline> and{' '}
-        <MathInline>{'x_k'}</MathInline>, the function must have some well-defined value,
-        but it need not equal <MathInline>{'s_k'}</MathInline>.
+        Note that at the endpoints <InlineMath>{'x_{k-1}'}</InlineMath> and{' '}
+        <InlineMath>{'x_k'}</InlineMath>, the function must have some well-defined value,
+        but it need not equal <InlineMath>{'s_k'}</InlineMath>.
       </p>
 
       <Callout type="example">
@@ -112,9 +112,9 @@ export default function Section08() {
         <p>
           Consider a postage function where the cost is 5 cents for every ounce or fraction
           thereof. For mail weighing up to 4 ounces, the function takes values 1, 2, 3, 4
-          (number of 5-cent stamps) on the intervals <MathInline>{'(0, 1]'}</MathInline>,{' '}
-          <MathInline>{'(1, 2]'}</MathInline>, <MathInline>{'(2, 3]'}</MathInline>,{' '}
-          <MathInline>{'(3, 4]'}</MathInline>. This is a step function.
+          (number of 5-cent stamps) on the intervals <InlineMath>{'(0, 1]'}</InlineMath>,{' '}
+          <InlineMath>{'(1, 2]'}</InlineMath>, <InlineMath>{'(2, 3]'}</InlineMath>,{' '}
+          <InlineMath>{'(3, 4]'}</InlineMath>. This is a step function.
         </p>
       </Callout>
 
@@ -122,8 +122,8 @@ export default function Section08() {
         <p className="font-semibold mb-2">Key Property</p>
         <p>
           If a step function is constant on the open subintervals of a partition{' '}
-          <MathInline>{'P'}</MathInline>, then it is also constant on the open subintervals
-          of every refinement <MathInline>{"P'"}</MathInline> of <MathInline>{'P'}</MathInline>.
+          <InlineMath>{'P'}</InlineMath>, then it is also constant on the open subintervals
+          of every refinement <InlineMath>{"P'"}</InlineMath> of <InlineMath>{'P'}</InlineMath>.
         </p>
       </Callout>
 
@@ -136,20 +136,20 @@ export default function Section08() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Greatest Integer Function</p>
         <p>
-          For any real number <MathInline>{'x'}</MathInline>, the symbol{' '}
-          <MathInline>{'[x]'}</MathInline> (also written <MathInline>{'\\lfloor x \\rfloor'}</MathInline>)
+          For any real number <InlineMath>{'x'}</InlineMath>, the symbol{' '}
+          <InlineMath>{'[x]'}</InlineMath> (also written <InlineMath>{'\\lfloor x \\rfloor'}</InlineMath>)
           denotes the <strong>greatest integer less than or equal to</strong>{' '}
-          <MathInline>{'x'}</MathInline>.
+          <InlineMath>{'x'}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Examples</p>
         <ul className="list-disc list-inside space-y-1">
-          <li><MathInline>{'[3.7] = 3'}</MathInline></li>
-          <li><MathInline>{'[5] = 5'}</MathInline></li>
-          <li><MathInline>{'[-2.3] = -3'}</MathInline></li>
-          <li><MathInline>{'[\\pi] = 3'}</MathInline></li>
+          <li><InlineMath>{'[3.7] = 3'}</InlineMath></li>
+          <li><InlineMath>{'[5] = 5'}</InlineMath></li>
+          <li><InlineMath>{'[-2.3] = -3'}</InlineMath></li>
+          <li><InlineMath>{'[\\pi] = 3'}</InlineMath></li>
         </ul>
       </Callout>
 
@@ -161,17 +161,17 @@ export default function Section08() {
         <p className="font-semibold mb-2">Properties of [x]</p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <MathInline>{'[x + n] = [x] + n'}</MathInline> for any integer <MathInline>{'n'}</MathInline>
+            <InlineMath>{'[x + n] = [x] + n'}</InlineMath> for any integer <InlineMath>{'n'}</InlineMath>
           </li>
           <li>
-            <MathInline>{'[-x] = -[x]'}</MathInline> if <MathInline>{'x'}</MathInline> is an integer;{' '}
-            <MathInline>{'[-x] = -[x] - 1'}</MathInline> otherwise
+            <InlineMath>{'[-x] = -[x]'}</InlineMath> if <InlineMath>{'x'}</InlineMath> is an integer;{' '}
+            <InlineMath>{'[-x] = -[x] - 1'}</InlineMath> otherwise
           </li>
           <li>
-            <MathInline>{'[x + y] = [x] + [y]'}</MathInline> or <MathInline>{'[x] + [y] + 1'}</MathInline>
+            <InlineMath>{'[x + y] = [x] + [y]'}</InlineMath> or <InlineMath>{'[x] + [y] + 1'}</InlineMath>
           </li>
           <li>
-            <MathInline>{'[2x] = [x] + [x + \\frac{1}{2}]'}</MathInline>
+            <InlineMath>{'[2x] = [x] + [x + \\frac{1}{2}]'}</InlineMath>
           </li>
         </ul>
       </Callout>
@@ -185,8 +185,8 @@ export default function Section08() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Sum of Step Functions</h3>
 
       <p className="text-dark-200 mb-4">
-        If <MathInline>{'s'}</MathInline> and <MathInline>{'t'}</MathInline> are step functions
-        on <MathInline>{'[a, b]'}</MathInline>, their sum <MathInline>{'u = s + t'}</MathInline>{' '}
+        If <InlineMath>{'s'}</InlineMath> and <InlineMath>{'t'}</InlineMath> are step functions
+        on <InlineMath>{'[a, b]'}</InlineMath>, their sum <InlineMath>{'u = s + t'}</InlineMath>{' '}
         is defined by:
       </p>
 
@@ -195,28 +195,28 @@ export default function Section08() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Sum of Step Functions</p>
         <p>
-          The sum of two step functions is also a step function. If <MathInline>{'s'}</MathInline>{' '}
-          is constant on the open subintervals of <MathInline>{'P_1'}</MathInline> and{' '}
-          <MathInline>{'t'}</MathInline> is constant on the open subintervals of{' '}
-          <MathInline>{'P_2'}</MathInline>, then <MathInline>{'s + t'}</MathInline> is constant
+          The sum of two step functions is also a step function. If <InlineMath>{'s'}</InlineMath>{' '}
+          is constant on the open subintervals of <InlineMath>{'P_1'}</InlineMath> and{' '}
+          <InlineMath>{'t'}</InlineMath> is constant on the open subintervals of{' '}
+          <InlineMath>{'P_2'}</InlineMath>, then <InlineMath>{'s + t'}</InlineMath> is constant
           on the open subintervals of the <strong>common refinement</strong> of{' '}
-          <MathInline>{'P_1'}</MathInline> and <MathInline>{'P_2'}</MathInline>.
+          <InlineMath>{'P_1'}</InlineMath> and <InlineMath>{'P_2'}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Common Refinement</p>
         <p>
-          The <strong>common refinement</strong> of partitions <MathInline>{'P_1'}</MathInline>{' '}
-          and <MathInline>{'P_2'}</MathInline> is the partition containing all points from
-          both <MathInline>{'P_1'}</MathInline> and <MathInline>{'P_2'}</MathInline>.
+          The <strong>common refinement</strong> of partitions <InlineMath>{'P_1'}</InlineMath>{' '}
+          and <InlineMath>{'P_2'}</InlineMath> is the partition containing all points from
+          both <InlineMath>{'P_1'}</InlineMath> and <InlineMath>{'P_2'}</InlineMath>.
         </p>
       </Callout>
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Product of Step Functions</h3>
 
       <p className="text-dark-200 mb-4">
-        Similarly, the product <MathInline>{'v = s \\cdot t'}</MathInline> is defined by:
+        Similarly, the product <InlineMath>{'v = s \\cdot t'}</InlineMath> is defined by:
       </p>
 
       <MathBlock>{'v(x) = s(x) \\cdot t(x) \\quad \\text{for } a \\leq x \\leq b'}</MathBlock>
@@ -229,8 +229,8 @@ export default function Section08() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Scalar Multiplication</h3>
 
       <p className="text-dark-200 mb-4">
-        An important special case: if <MathInline>{'t(x) = c'}</MathInline> is constant
-        throughout <MathInline>{'[a, b]'}</MathInline>, then <MathInline>{'(s \\cdot t)(x) = c \\cdot s(x)'}</MathInline>.
+        An important special case: if <InlineMath>{'t(x) = c'}</InlineMath> is constant
+        throughout <InlineMath>{'[a, b]'}</InlineMath>, then <InlineMath>{'(s \\cdot t)(x) = c \\cdot s(x)'}</InlineMath>.
         This is called <strong>scalar multiplication</strong> of a step function by a constant.
       </p>
 
@@ -243,17 +243,17 @@ export default function Section08() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Characteristic Function</p>
         <p className="mb-2">
-          The <strong>characteristic function</strong> <MathInline>{'\\chi_S'}</MathInline>{' '}
-          of a set <MathInline>{'S'}</MathInline> is defined by:
+          The <strong>characteristic function</strong> <InlineMath>{'\\chi_S'}</InlineMath>{' '}
+          of a set <InlineMath>{'S'}</InlineMath> is defined by:
         </p>
         <MathBlock>{'\\chi_S(x) = \\begin{cases} 1 & \\text{if } x \\in S \\ 0 & \\text{if } x \\notin S \\end{cases}'}</MathBlock>
       </Callout>
 
       <p className="text-dark-200 mb-6">
         Every step function can be written as a <strong>linear combination</strong> of
-        characteristic functions of intervals. If <MathInline>{'s'}</MathInline> takes
-        constant value <MathInline>{'c_k'}</MathInline> on the <MathInline>{'k'}</MathInline>th
-        open subinterval <MathInline>{'I_k'}</MathInline>, then:
+        characteristic functions of intervals. If <InlineMath>{'s'}</InlineMath> takes
+        constant value <InlineMath>{'c_k'}</InlineMath> on the <InlineMath>{'k'}</InlineMath>th
+        open subinterval <InlineMath>{'I_k'}</InlineMath>, then:
       </p>
 
       <MathBlock>{'s(x) = \\sum_{k=1}^{n} c_k \\chi_{I_k}(x)'}</MathBlock>

@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section03() {
   return (
@@ -8,16 +8,16 @@ export default function Section03() {
       {/* Introduction */}
       <p>
         This section starts with vectors and combines them using <strong>matrices</strong>.
-        A matrix is a rectangular array of numbers. The matrix <Math>A</Math> "acts on" a vector <Math>{`\\mathbf{x}`}</Math> to
-        produce the output <Math>{`A\\mathbf{x}`}</Math>. This is the key operation of linear algebra.
+        A matrix is a rectangular array of numbers. The matrix <InlineMath>A</InlineMath> "acts on" a vector <InlineMath>{`\\mathbf{x}`}</InlineMath> to
+        produce the output <InlineMath>{`A\\mathbf{x}`}</InlineMath>. This is the key operation of linear algebra.
       </p>
 
       <h2>What is a Matrix?</h2>
 
       <Definition title="Matrix" className="my-6">
         <p>
-          A <strong>matrix</strong> is a rectangular array of numbers with <Math>m</Math> rows and <Math>n</Math> columns.
-          We say <Math>A</Math> is an "<Math>m</Math> by <Math>n</Math>" matrix, written as <Math>m \times n</Math>.
+          A <strong>matrix</strong> is a rectangular array of numbers with <InlineMath>m</InlineMath> rows and <InlineMath>n</InlineMath> columns.
+          We say <InlineMath>A</InlineMath> is an "<InlineMath>m</InlineMath> by <InlineMath>n</InlineMath>" matrix, written as <InlineMath>m \times n</InlineMath>.
         </p>
         <MathBlock>
           {`A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\\\ 5 & 6 \\end{bmatrix} \\quad \\text{is a } 3 \\times 2 \\text{ matrix: } m = 3 \\text{ rows and } n = 2 \\text{ columns.}`}
@@ -27,34 +27,34 @@ export default function Section03() {
       <h2>Matrix Times Vector</h2>
 
       <p>
-        The most important operation is multiplying a matrix <Math>A</Math> by a vector <Math>{`\\mathbf{x}`}</Math>.
-        There are <em>two ways</em> to think about <Math>{`A\\mathbf{x}`}</Math>:
+        The most important operation is multiplying a matrix <InlineMath>A</InlineMath> by a vector <InlineMath>{`\\mathbf{x}`}</InlineMath>.
+        There are <em>two ways</em> to think about <InlineMath>{`A\\mathbf{x}`}</InlineMath>:
       </p>
 
       <div className="grid md:grid-cols-2 gap-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-primary-500/20">
           <p className="font-semibold text-primary-400 mb-2">Column Picture</p>
           <p className="text-dark-300 text-sm">
-            <Math>{`A\\mathbf{x}`}</Math> is a <strong>linear combination of the columns</strong> of <Math>A</Math>.
+            <InlineMath>{`A\\mathbf{x}`}</InlineMath> is a <strong>linear combination of the columns</strong> of <InlineMath>A</InlineMath>.
           </p>
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-amber-500/20">
           <p className="font-semibold text-amber-400 mb-2">Row Picture</p>
           <p className="text-dark-300 text-sm">
-            Each component of <Math>{`A\\mathbf{x}`}</Math> is a <strong>dot product</strong> of a row with <Math>{`\\mathbf{x}`}</Math>.
+            Each component of <InlineMath>{`A\\mathbf{x}`}</InlineMath> is a <strong>dot product</strong> of a row with <InlineMath>{`\\mathbf{x}`}</InlineMath>.
           </p>
         </div>
       </div>
 
       <Definition title="Matrix-Vector Multiplication (Column View)" className="my-6">
         <p>
-          If <Math>A</Math> has columns <Math>{`\\mathbf{u}, \\mathbf{v}, \\mathbf{w}`}</Math> and <Math>{`\\mathbf{x} = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix}`}</Math>, then:
+          If <InlineMath>A</InlineMath> has columns <InlineMath>{`\\mathbf{u}, \\mathbf{v}, \\mathbf{w}`}</InlineMath> and <InlineMath>{`\\mathbf{x} = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix}`}</InlineMath>, then:
         </p>
         <MathBlock>
           {`A\\mathbf{x} = x_1\\mathbf{u} + x_2\\mathbf{v} + x_3\\mathbf{w}`}
         </MathBlock>
         <p className="mt-2">
-          The output <Math>{`A\\mathbf{x}`}</Math> is a <strong>combination of the columns</strong> of <Math>A</Math>.
+          The output <InlineMath>{`A\\mathbf{x}`}</InlineMath> is a <strong>combination of the columns</strong> of <InlineMath>A</InlineMath>.
         </p>
       </Definition>
 
@@ -66,7 +66,7 @@ export default function Section03() {
           {`A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\\\ 5 & 6 \\end{bmatrix} \\quad \\text{and} \\quad \\mathbf{x} = \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          The product <Math>{`A\\mathbf{x}`}</Math> is a combination of the two columns:
+          The product <InlineMath>{`A\\mathbf{x}`}</InlineMath> is a combination of the two columns:
         </p>
         <MathBlock>
           {`A\\mathbf{x} = x_1 \\begin{bmatrix} 1 \\\\ 3 \\\\ 5 \\end{bmatrix} + x_2 \\begin{bmatrix} 2 \\\\ 4 \\\\ 6 \\end{bmatrix}`}
@@ -76,7 +76,7 @@ export default function Section03() {
       <h2>Row Picture: Dot Products</h2>
 
       <p>
-        Another way to compute <Math>{`A\\mathbf{x}`}</Math>: each component is a <strong>dot product</strong> of a row of <Math>A</Math> with <Math>{`\\mathbf{x}`}</Math>.
+        Another way to compute <InlineMath>{`A\\mathbf{x}`}</InlineMath>: each component is a <strong>dot product</strong> of a row of <InlineMath>A</InlineMath> with <InlineMath>{`\\mathbf{x}`}</InlineMath>.
       </p>
 
       <Example title="Matrix Times Vector (Dot Products with Rows)" className="my-6">
@@ -84,20 +84,20 @@ export default function Section03() {
           {`\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\\\ 5 & 6 \\end{bmatrix} \\begin{bmatrix} 7 \\\\ 8 \\end{bmatrix} = \\begin{bmatrix} 1 \\cdot 7 + 2 \\cdot 8 \\\\ 3 \\cdot 7 + 4 \\cdot 8 \\\\ 5 \\cdot 7 + 6 \\cdot 8 \\end{bmatrix} = \\begin{bmatrix} 23 \\\\ 53 \\\\ 83 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Each entry is the dot product of one row with the vector <Math>(7, 8)</Math>.
+          Each entry is the dot product of one row with the vector <InlineMath>(7, 8)</InlineMath>.
         </p>
       </Example>
 
-      <h2>Linear Equations <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math></h2>
+      <h2>Linear Equations <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath></h2>
 
       <p>
         Now comes the central problem of linear algebra: <strong>solving equations</strong>.
-        Given a matrix <Math>A</Math> and a vector <Math>{`\\mathbf{b}`}</Math>, find <Math>{`\\mathbf{x}`}</Math> so that <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math>.
+        Given a matrix <InlineMath>A</InlineMath> and a vector <InlineMath>{`\\mathbf{b}`}</InlineMath>, find <InlineMath>{`\\mathbf{x}`}</InlineMath> so that <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath>.
       </p>
 
       <Definition title="System of Linear Equations" className="my-6">
         <p>
-          The matrix equation <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> represents a <strong>system of linear equations</strong>:
+          The matrix equation <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> represents a <strong>system of linear equations</strong>:
         </p>
         <MathBlock>
           {`\\begin{bmatrix} 2 & 5 \\\\ 3 & 7 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} b_1 \\\\ b_2 \\end{bmatrix} \\quad \\text{replaces} \\quad \\begin{cases} 2x_1 + 5x_2 = b_1 \\\\ 3x_1 + 7x_2 = b_2 \\end{cases}`}
@@ -105,27 +105,27 @@ export default function Section03() {
       </Definition>
 
       <p>
-        This is the <em>inverse problem</em>—to find the input <Math>{`\\mathbf{x}`}</Math> that gives the desired output <Math>{`\\mathbf{b} = A\\mathbf{x}`}</Math>.
-        The old question was: compute the linear combination <Math>{`x_1\\mathbf{u} + x_2\\mathbf{v} + x_3\\mathbf{w}`}</Math> to find <Math>{`\\mathbf{b}`}</Math>.
-        The new question is: which combination of <Math>{`\\mathbf{u}, \\mathbf{v}, \\mathbf{w}`}</Math> produces a particular vector <Math>{`\\mathbf{b}`}</Math>?
+        This is the <em>inverse problem</em>—to find the input <InlineMath>{`\\mathbf{x}`}</InlineMath> that gives the desired output <InlineMath>{`\\mathbf{b} = A\\mathbf{x}`}</InlineMath>.
+        The old question was: compute the linear combination <InlineMath>{`x_1\\mathbf{u} + x_2\\mathbf{v} + x_3\\mathbf{w}`}</InlineMath> to find <InlineMath>{`\\mathbf{b}`}</InlineMath>.
+        The new question is: which combination of <InlineMath>{`\\mathbf{u}, \\mathbf{v}, \\mathbf{w}`}</InlineMath> produces a particular vector <InlineMath>{`\\mathbf{b}`}</InlineMath>?
       </p>
 
       <h2>The Inverse Matrix</h2>
 
       <p>
-        The solution to <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> can be written as <Math>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</Math>, if <Math>A</Math> has an inverse.
-        But some matrices don't allow <Math>{`A^{-1}`}</Math>!
+        The solution to <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> can be written as <InlineMath>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</InlineMath>, if <InlineMath>A</InlineMath> has an inverse.
+        But some matrices don't allow <InlineMath>{`A^{-1}`}</InlineMath>!
       </p>
 
       <Definition title="Inverse Matrix" className="my-6">
         <p>
-          A matrix <Math>A</Math> is <strong>invertible</strong> if there exists a matrix <Math>{`A^{-1}`}</Math> such that:
+          A matrix <InlineMath>A</InlineMath> is <strong>invertible</strong> if there exists a matrix <InlineMath>{`A^{-1}`}</InlineMath> such that:
         </p>
         <MathBlock>
           {`A^{-1}A = I \\quad \\text{and} \\quad AA^{-1} = I`}
         </MathBlock>
         <p className="mt-2">
-          When <Math>A</Math> is invertible, the solution to <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> is:
+          When <InlineMath>A</InlineMath> is invertible, the solution to <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> is:
         </p>
         <MathBlock>
           {`\\mathbf{x} = A^{-1}\\mathbf{b}`}
@@ -134,13 +134,13 @@ export default function Section03() {
 
       <Example title="A Difference Matrix and Its Inverse" className="my-6">
         <p>
-          The "difference matrix" <Math>A</Math> and its inverse <Math>{`A^{-1}`}</Math> (the "sum matrix"):
+          The "difference matrix" <InlineMath>A</InlineMath> and its inverse <InlineMath>{`A^{-1}`}</InlineMath> (the "sum matrix"):
         </p>
         <MathBlock>
           {`A = \\begin{bmatrix} 1 & 0 & 0 \\\\ -1 & 1 & 0 \\\\ 0 & -1 & 1 \\end{bmatrix} \\quad \\text{has inverse} \\quad A^{-1} = \\begin{bmatrix} 1 & 0 & 0 \\\\ 1 & 1 & 0 \\\\ 1 & 1 & 1 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          The matrix <Math>A</Math> takes <em>differences</em>. The inverse <Math>{`A^{-1}`}</Math> takes <em>sums</em>.
+          The matrix <InlineMath>A</InlineMath> takes <em>differences</em>. The inverse <InlineMath>{`A^{-1}`}</InlineMath> takes <em>sums</em>.
         </p>
       </Example>
 
@@ -149,30 +149,30 @@ export default function Section03() {
         className="my-6"
         proof={
           <>
-            <p><strong>Existence:</strong> Given any <Math>{`\\mathbf{b}`}</Math>, set <Math>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</Math>. Then:</p>
+            <p><strong>Existence:</strong> Given any <InlineMath>{`\\mathbf{b}`}</InlineMath>, set <InlineMath>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</InlineMath>. Then:</p>
             <MathBlock>{`A\\mathbf{x} = A(A^{-1}\\mathbf{b}) = (AA^{-1})\\mathbf{b} = I\\mathbf{b} = \\mathbf{b}`}</MathBlock>
-            <p>So <Math>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</Math> is indeed a solution.</p>
-            <p className="mt-3"><strong>Uniqueness:</strong> Suppose <Math>{`\\mathbf{x}_1`}</Math> and <Math>{`\\mathbf{x}_2`}</Math> are both solutions:</p>
+            <p>So <InlineMath>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</InlineMath> is indeed a solution.</p>
+            <p className="mt-3"><strong>Uniqueness:</strong> Suppose <InlineMath>{`\\mathbf{x}_1`}</InlineMath> and <InlineMath>{`\\mathbf{x}_2`}</InlineMath> are both solutions:</p>
             <MathBlock>{`A\\mathbf{x}_1 = \\mathbf{b} \\quad \\text{and} \\quad A\\mathbf{x}_2 = \\mathbf{b}`}</MathBlock>
-            <p>Multiplying both sides by <Math>{`A^{-1}`}</Math>:</p>
+            <p>Multiplying both sides by <InlineMath>{`A^{-1}`}</InlineMath>:</p>
             <MathBlock>{`\\mathbf{x}_1 = A^{-1}\\mathbf{b} = \\mathbf{x}_2`}</MathBlock>
             <p>Therefore, the solution is unique.</p>
           </>
         }
       >
         <p>
-          For an invertible matrix <Math>A</Math>:
+          For an invertible matrix <InlineMath>A</InlineMath>:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>For every <Math>{`\\mathbf{b}`}</Math> there is <strong>one solution</strong> to <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math>.</li>
-          <li>The matrix <Math>{`A^{-1}`}</Math> produces <Math>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</Math>.</li>
+          <li>For every <InlineMath>{`\\mathbf{b}`}</InlineMath> there is <strong>one solution</strong> to <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath>.</li>
+          <li>The matrix <InlineMath>{`A^{-1}`}</InlineMath> produces <InlineMath>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</InlineMath>.</li>
         </ul>
       </Theorem>
 
       <h2>When There Is No Inverse</h2>
 
       <p>
-        Not all matrices are invertible. When <Math>A</Math> is not invertible, the system <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> either has:
+        Not all matrices are invertible. When <InlineMath>A</InlineMath> is not invertible, the system <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> either has:
       </p>
 
       <ul className="list-disc list-inside my-4 space-y-2 text-dark-300">
@@ -182,14 +182,14 @@ export default function Section03() {
 
       <Example title="A Non-Invertible Matrix" className="my-6">
         <p>
-          The cyclic difference matrix <Math>C</Math> is not invertible:
+          The cyclic difference matrix <InlineMath>C</InlineMath> is not invertible:
         </p>
         <MathBlock>
           {`C\\mathbf{x} = \\begin{bmatrix} 1 & 0 & -1 \\\\ -1 & 1 & 0 \\\\ 0 & -1 & 1 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} x_1 - x_3 \\\\ x_2 - x_1 \\\\ x_3 - x_2 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          When <Math>{`C\\mathbf{x} = \\mathbf{0}`}</Math>, every constant vector <Math>{`\\mathbf{x} = (c, c, c)`}</Math> is a solution!
-          There are <strong>infinitely many solutions</strong> to <Math>{`C\\mathbf{x} = \\mathbf{0}`}</Math>.
+          When <InlineMath>{`C\\mathbf{x} = \\mathbf{0}`}</InlineMath>, every constant vector <InlineMath>{`\\mathbf{x} = (c, c, c)`}</InlineMath> is a solution!
+          There are <strong>infinitely many solutions</strong> to <InlineMath>{`C\\mathbf{x} = \\mathbf{0}`}</InlineMath>.
         </p>
       </Example>
 
@@ -199,23 +199,23 @@ export default function Section03() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>A matrix <Math>A</Math> with <Math>m</Math> rows and <Math>n</Math> columns multiplies a vector <Math>{`\\mathbf{x}`}</Math> with <Math>n</Math> components to produce <Math>{`A\\mathbf{x}`}</Math> with <Math>m</Math> components.</span>
+            <span>A matrix <InlineMath>A</InlineMath> with <InlineMath>m</InlineMath> rows and <InlineMath>n</InlineMath> columns multiplies a vector <InlineMath>{`\\mathbf{x}`}</InlineMath> with <InlineMath>n</InlineMath> components to produce <InlineMath>{`A\\mathbf{x}`}</InlineMath> with <InlineMath>m</InlineMath> components.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span><Math>{`A\\mathbf{x}`}</Math> is a <strong>combination of the columns</strong> of <Math>A</Math>. The coefficients are the components of <Math>{`\\mathbf{x}`}</Math>.</span>
+            <span><InlineMath>{`A\\mathbf{x}`}</InlineMath> is a <strong>combination of the columns</strong> of <InlineMath>A</InlineMath>. The coefficients are the components of <InlineMath>{`\\mathbf{x}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>Each component of <Math>{`A\\mathbf{x}`}</Math> is the <strong>dot product</strong> of a row of <Math>A</Math> with the vector <Math>{`\\mathbf{x}`}</Math>.</span>
+            <span>Each component of <InlineMath>{`A\\mathbf{x}`}</InlineMath> is the <strong>dot product</strong> of a row of <InlineMath>A</InlineMath> with the vector <InlineMath>{`\\mathbf{x}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>The equation <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> asks: which combination of columns gives <Math>{`\\mathbf{b}`}</Math>?</span>
+            <span>The equation <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> asks: which combination of columns gives <InlineMath>{`\\mathbf{b}`}</InlineMath>?</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>
-            <span>If <Math>A</Math> is invertible, the solution is <Math>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</Math>. But not all matrices have inverses!</span>
+            <span>If <InlineMath>A</InlineMath> is invertible, the solution is <InlineMath>{`\\mathbf{x} = A^{-1}\\mathbf{b}`}</InlineMath>. But not all matrices have inverses!</span>
           </li>
         </ul>
       </div>

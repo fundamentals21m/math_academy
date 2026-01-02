@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section12Questions } from '../../data/quizzes';
@@ -47,7 +47,7 @@ export default function Section12() {
       </div>
 
       <p className="text-dark-200 mb-6">
-        Combined with the law of gravity (<MathInline>{'F = Gm_1m_2/r^2'}</MathInline>), Newton
+        Combined with the law of gravity (<InlineMath>{'F = Gm_1m_2/r^2'}</InlineMath>), Newton
         could derive Kepler's laws of planetary motion, explain the tides, predict the return
         of comets, and much more—all from a few basic principles expressed through calculus.
       </p>
@@ -59,33 +59,33 @@ export default function Section12() {
         <Card>
           <CardHeader title="Position, Velocity, Acceleration" />
           <div className="space-y-2 text-sm text-dark-300">
-            <p><MathInline>{'x(t)'}</MathInline> — position</p>
-            <p><MathInline>{'v(t) = \\frac{dx}{dt}'}</MathInline> — velocity</p>
-            <p><MathInline>{'a(t) = \\frac{dv}{dt} = \\frac{d^2x}{dt^2}'}</MathInline> — acceleration</p>
+            <p><InlineMath>{'x(t)'}</InlineMath> — position</p>
+            <p><InlineMath>{'v(t) = \\frac{dx}{dt}'}</InlineMath> — velocity</p>
+            <p><InlineMath>{'a(t) = \\frac{dv}{dt} = \\frac{d^2x}{dt^2}'}</InlineMath> — acceleration</p>
           </div>
         </Card>
         <Card>
           <CardHeader title="Work and Energy" />
           <div className="space-y-2 text-sm text-dark-300">
-            <p><MathInline>{'W = \\int F\\,dx'}</MathInline> — work</p>
-            <p><MathInline>{'KE = \\frac{1}{2}mv^2'}</MathInline> — kinetic energy</p>
-            <p><MathInline>{'P = \\frac{dW}{dt}'}</MathInline> — power</p>
+            <p><InlineMath>{'W = \\int F\\,dx'}</InlineMath> — work</p>
+            <p><InlineMath>{'KE = \\frac{1}{2}mv^2'}</InlineMath> — kinetic energy</p>
+            <p><InlineMath>{'P = \\frac{dW}{dt}'}</InlineMath> — power</p>
           </div>
         </Card>
         <Card>
           <CardHeader title="Momentum" />
           <div className="space-y-2 text-sm text-dark-300">
-            <p><MathInline>{'p = mv'}</MathInline> — momentum</p>
-            <p><MathInline>{'F = \\frac{dp}{dt}'}</MathInline> — Newton's law (general form)</p>
-            <p>Impulse = <MathInline>{'\\int F\\,dt'}</MathInline></p>
+            <p><InlineMath>{'p = mv'}</InlineMath> — momentum</p>
+            <p><InlineMath>{'F = \\frac{dp}{dt}'}</InlineMath> — Newton's law (general form)</p>
+            <p>Impulse = <InlineMath>{'\\int F\\,dt'}</InlineMath></p>
           </div>
         </Card>
         <Card>
           <CardHeader title="Rotation" />
           <div className="space-y-2 text-sm text-dark-300">
-            <p><MathInline>{'\\omega = \\frac{d\\theta}{dt}'}</MathInline> — angular velocity</p>
-            <p><MathInline>{'\\alpha = \\frac{d\\omega}{dt}'}</MathInline> — angular acceleration</p>
-            <p><MathInline>{'\\tau = I\\alpha'}</MathInline> — torque equation</p>
+            <p><InlineMath>{'\\omega = \\frac{d\\theta}{dt}'}</InlineMath> — angular velocity</p>
+            <p><InlineMath>{'\\alpha = \\frac{d\\omega}{dt}'}</InlineMath> — angular acceleration</p>
+            <p><InlineMath>{'\\tau = I\\alpha'}</InlineMath> — torque equation</p>
           </div>
         </Card>
       </CardGrid>
@@ -172,7 +172,7 @@ export default function Section12() {
         <h4 className="text-lg font-semibold text-purple-300 mb-4">Schrödinger Equation</h4>
         <MathBlock>{`i\\hbar \\frac{\\partial \\Psi}{\\partial t} = -\\frac{\\hbar^2}{2m}\\nabla^2\\Psi + V\\Psi`}</MathBlock>
         <p className="text-dark-200 mt-4">
-          This equation determines how the wave function <MathInline>{'\\Psi'}</MathInline>{' '}
+          This equation determines how the wave function <InlineMath>{'\\Psi'}</InlineMath>{' '}
           evolves in time. The wave function's absolute square gives the probability of
           finding a particle at any location.
         </p>

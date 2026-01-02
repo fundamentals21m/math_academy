@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { BinaryConverter } from '@/components/visualizations';
 
 export default function Section10() {
@@ -50,12 +50,12 @@ export default function Section10() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: Converting Binary to Decimal</p>
         <p className="mt-2">
-          The binary number <Math>{`10110`}</Math> represents:
+          The binary number <InlineMath>{`10110`}</InlineMath> represents:
         </p>
         <MathBlock>{`1 \\times 2^4 + 0 \\times 2^3 + 1 \\times 2^2 + 1 \\times 2^1 + 0 \\times 2^0`}</MathBlock>
         <MathBlock>{`= 16 + 0 + 4 + 2 + 0 = 22`}</MathBlock>
         <p className="mt-2 text-emerald-400">
-          So <Math>{`10110_2 = 22_{10}`}</Math> (the subscripts indicate the base).
+          So <InlineMath>{`10110_2 = 22_{10}`}</InlineMath> (the subscripts indicate the base).
         </p>
       </div>
 
@@ -99,14 +99,14 @@ export default function Section10() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: Convert 22 to Binary</p>
         <div className="mt-2 font-mono text-dark-300 space-y-1">
-          <p><Math>{`22 \\div 2 = 11`}</Math> remainder <Math>0</Math></p>
-          <p><Math>{`11 \\div 2 = 5`}</Math> remainder <Math>1</Math></p>
-          <p><Math>{`5 \\div 2 = 2`}</Math> remainder <Math>1</Math></p>
-          <p><Math>{`2 \\div 2 = 1`}</Math> remainder <Math>0</Math></p>
-          <p><Math>{`1 \\div 2 = 0`}</Math> remainder <Math>1</Math></p>
+          <p><InlineMath>{`22 \\div 2 = 11`}</InlineMath> remainder <InlineMath>0</InlineMath></p>
+          <p><InlineMath>{`11 \\div 2 = 5`}</InlineMath> remainder <InlineMath>1</InlineMath></p>
+          <p><InlineMath>{`5 \\div 2 = 2`}</InlineMath> remainder <InlineMath>1</InlineMath></p>
+          <p><InlineMath>{`2 \\div 2 = 1`}</InlineMath> remainder <InlineMath>0</InlineMath></p>
+          <p><InlineMath>{`1 \\div 2 = 0`}</InlineMath> remainder <InlineMath>1</InlineMath></p>
         </div>
         <p className="mt-2 text-emerald-400">
-          Reading remainders from bottom to top: <Math>{`22_{10} = 10110_2`}</Math>
+          Reading remainders from bottom to top: <InlineMath>{`22_{10} = 10110_2`}</InlineMath>
         </p>
       </div>
 
@@ -143,7 +143,7 @@ export default function Section10() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: Binary Addition</p>
         <p className="mt-2">
-          Add <Math>{`101_2`}</Math> and <Math>{`110_2`}</Math> (that's 5 + 6 in decimal):
+          Add <InlineMath>{`101_2`}</InlineMath> and <InlineMath>{`110_2`}</InlineMath> (that's 5 + 6 in decimal):
         </p>
         <pre className="mt-2 font-mono text-dark-300 text-center">
 {`    101
@@ -152,7 +152,7 @@ export default function Section10() {
    1011`}
         </pre>
         <p className="mt-2 text-emerald-400">
-          Result: <Math>{`1011_2 = 11_{10}`}</Math> ✓
+          Result: <InlineMath>{`1011_2 = 11_{10}`}</InlineMath> ✓
         </p>
       </div>
 
@@ -174,7 +174,7 @@ export default function Section10() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: Binary Subtraction</p>
         <p className="mt-2">
-          Compute <Math>{`1011_2 - 110_2`}</Math> (that's 11 − 6 in decimal):
+          Compute <InlineMath>{`1011_2 - 110_2`}</InlineMath> (that's 11 − 6 in decimal):
         </p>
         <pre className="mt-2 font-mono text-dark-300 text-center">
 {`    1011
@@ -183,7 +183,7 @@ export default function Section10() {
     101`}
         </pre>
         <p className="mt-2 text-emerald-400">
-          Result: <Math>{`101_2 = 5_{10}`}</Math> ✓
+          Result: <InlineMath>{`101_2 = 5_{10}`}</InlineMath> ✓
         </p>
       </div>
 
@@ -208,29 +208,29 @@ export default function Section10() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: Binary Division</p>
         <p className="mt-2">
-          Compute <Math>{`1011_2 \\div 11_2`}</Math> (that's 11 ÷ 3 in decimal):
+          Compute <InlineMath>{`1011_2 \\div 11_2`}</InlineMath> (that's 11 ÷ 3 in decimal):
         </p>
         <p className="mt-2">
-          Using long division, we find: <Math>{`1011 \\div 11 = 11`}</Math> remainder <Math>10</Math>
+          Using long division, we find: <InlineMath>{`1011 \\div 11 = 11`}</InlineMath> remainder <InlineMath>10</InlineMath>
         </p>
         <p className="mt-2 text-emerald-400">
-          So <Math>{`11 \\div 3 = 3`}</Math> remainder <Math>2</Math> ✓
+          So <InlineMath>{`11 \\div 3 = 3`}</InlineMath> remainder <InlineMath>2</InlineMath> ✓
         </p>
       </div>
 
       <h3>Repeating Binaries</h3>
 
       <p>
-        Just as <Math>{`1/3 = 0.333...`}</Math> in decimal, some fractions produce
+        Just as <InlineMath>{`1/3 = 0.333...`}</InlineMath> in decimal, some fractions produce
         repeating patterns in binary:
       </p>
 
       <MathBlock>{`\\frac{1}{3} = 0.\\overline{01}_2 = 0.010101..._2`}</MathBlock>
 
       <p>
-        You can verify this: <Math>{`0.01_2 + 0.0001_2 + 0.000001_2 + \\cdots`}</Math> is
-        a geometric series with first term <Math>{`1/4`}</Math> and ratio <Math>{`1/4`}</Math>,
-        summing to <Math>{`(1/4)/(1-1/4) = 1/3`}</Math>.
+        You can verify this: <InlineMath>{`0.01_2 + 0.0001_2 + 0.000001_2 + \\cdots`}</InlineMath> is
+        a geometric series with first term <InlineMath>{`1/4`}</InlineMath> and ratio <InlineMath>{`1/4`}</InlineMath>,
+        summing to <InlineMath>{`(1/4)/(1-1/4) = 1/3`}</InlineMath>.
       </p>
 
       <h2>10.3 Applications</h2>
@@ -299,7 +299,7 @@ export default function Section10() {
           </table>
         </div>
         <p className="mt-2">
-          With eight bits per character, we can represent <Math>{`2^8 = 256`}</Math> distinct
+          With eight bits per character, we can represent <InlineMath>{`2^8 = 256`}</InlineMath> distinct
           characters—enough for uppercase, lowercase, digits, punctuation, and special symbols!
         </p>
       </div>
@@ -346,7 +346,7 @@ export default function Section10() {
         <p className="font-semibold text-indigo-400">Why Morse Code Needs 4 Symbols</p>
         <p className="mt-2">
           You might think that with three symbols (dot, dash, off), you'd only need
-          sequences of length 3 to represent 26 letters (since <Math>{`3^3 = 27 > 26`}</Math>).
+          sequences of length 3 to represent 26 letters (since <InlineMath>{`3^3 = 27 > 26`}</InlineMath>).
         </p>
         <p className="mt-2">
           But there's a practical problem: you cannot signal "off" at the <em>beginning</em> of

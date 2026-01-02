@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { PythagoreanExplorer } from '@/components/visualizations';
 
 export default function Section03() {
@@ -18,8 +18,8 @@ export default function Section03() {
       <h2>3.1 The Pythagorean Theorem</h2>
 
       <Callout type="success">
-        <strong>Theorem:</strong> In a right triangle with legs of length <Math>a</Math> and
-        <Math>b</Math> and hypotenuse of length <Math>c</Math>:
+        <strong>Theorem:</strong> In a right triangle with legs of length <InlineMath>a</InlineMath> and
+        <InlineMath>b</InlineMath> and hypotenuse of length <InlineMath>c</InlineMath>:
         <MathBlock>{`a^2 + b^2 = c^2`}</MathBlock>
       </Callout>
 
@@ -53,7 +53,7 @@ export default function Section03() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Proof Outline</p>
         <p className="mt-2">
-          Arrange two copies of a right triangle with legs <Math>a</Math> and <Math>b</Math>
+          Arrange two copies of a right triangle with legs <InlineMath>a</InlineMath> and <InlineMath>b</InlineMath>
           to form a trapezoid. The area can be computed two ways:
         </p>
         <p className="mt-2">
@@ -74,7 +74,7 @@ export default function Section03() {
 
       <h3>The Converse</h3>
       <p>
-        The converse is also true: if <Math>{`a^2 + b^2 = c^2`}</Math> for a triangle with
+        The converse is also true: if <InlineMath>{`a^2 + b^2 = c^2`}</InlineMath> for a triangle with
         sides a, b, and c, then the triangle is a right triangle (with the right angle
         opposite side c).
       </p>
@@ -82,7 +82,7 @@ export default function Section03() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: Testing a Triangle</p>
         <p>Is a triangle with sides 5, 12, and 13 a right triangle?</p>
-        <p className="mt-2">Check: <Math>{`5^2 + 12^2 = 25 + 144 = 169 = 13^2`}</Math> ✓</p>
+        <p className="mt-2">Check: <InlineMath>{`5^2 + 12^2 = 25 + 144 = 169 = 13^2`}</InlineMath> ✓</p>
         <p className="text-emerald-400">Yes, it's a right triangle.</p>
       </div>
 
@@ -90,42 +90,42 @@ export default function Section03() {
 
       <p>
         The Pythagorean theorem tells us that a square with side 1 has a diagonal of
-        length <Math>{`\\sqrt{2}`}</Math>. But what kind of number is <Math>{`\\sqrt{2}`}</Math>?
+        length <InlineMath>{`\\sqrt{2}`}</InlineMath>. But what kind of number is <InlineMath>{`\\sqrt{2}`}</InlineMath>?
       </p>
 
       <Callout type="success">
-        <strong>Theorem:</strong> <Math>{`\\sqrt{2}`}</Math> is irrational.
+        <strong>Theorem:</strong> <InlineMath>{`\\sqrt{2}`}</InlineMath> is irrational.
       </Callout>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Proof by Contradiction</p>
         <p className="mt-2">
-          Suppose <Math>{`\\sqrt{2}`}</Math> were rational. Then we could write:
+          Suppose <InlineMath>{`\\sqrt{2}`}</InlineMath> were rational. Then we could write:
         </p>
         <MathBlock>{`\\sqrt{2} = \\frac{p}{q}`}</MathBlock>
         <p>
-          where <Math>p</Math> and <Math>q</Math> are integers with no common factors
+          where <InlineMath>p</InlineMath> and <InlineMath>q</InlineMath> are integers with no common factors
           (the fraction is in lowest terms).
         </p>
         <p className="mt-2">Squaring both sides:</p>
         <MathBlock>{`2 = \\frac{p^2}{q^2} \\quad \\Rightarrow \\quad 2q^2 = p^2`}</MathBlock>
         <p className="mt-2">
-          This means <Math>{`p^2`}</Math> is even. But if <Math>{`p^2`}</Math> is even,
-          then <Math>p</Math> itself must be even (the square of an odd number is odd).
+          This means <InlineMath>{`p^2`}</InlineMath> is even. But if <InlineMath>{`p^2`}</InlineMath> is even,
+          then <InlineMath>p</InlineMath> itself must be even (the square of an odd number is odd).
         </p>
         <p className="mt-2">
-          Write <Math>{`p = 2k`}</Math> for some integer <Math>k</Math>. Then:
+          Write <InlineMath>{`p = 2k`}</InlineMath> for some integer <InlineMath>k</InlineMath>. Then:
         </p>
         <MathBlock>{`2q^2 = (2k)^2 = 4k^2 \\quad \\Rightarrow \\quad q^2 = 2k^2`}</MathBlock>
         <p className="mt-2">
-          So <Math>{`q^2`}</Math> is also even, meaning <Math>q</Math> is even.
+          So <InlineMath>{`q^2`}</InlineMath> is also even, meaning <InlineMath>q</InlineMath> is even.
         </p>
         <p className="mt-2 text-rose-400">
-          <strong>Contradiction!</strong> Both <Math>p</Math> and <Math>q</Math> are even,
+          <strong>Contradiction!</strong> Both <InlineMath>p</InlineMath> and <InlineMath>q</InlineMath> are even,
           so they have a common factor of 2. But we assumed the fraction was in lowest terms.
         </p>
         <p className="mt-2 text-emerald-400">
-          Therefore, our assumption was wrong: <Math>{`\\sqrt{2}`}</Math> cannot be rational.
+          Therefore, our assumption was wrong: <InlineMath>{`\\sqrt{2}`}</InlineMath> cannot be rational.
         </p>
       </div>
 
@@ -147,34 +147,34 @@ export default function Section03() {
       <h2>3.3 Computation by Successive Approximation</h2>
 
       <p>
-        Since <Math>{`\\sqrt{2}`}</Math> is irrational, we can never write its exact decimal
+        Since <InlineMath>{`\\sqrt{2}`}</InlineMath> is irrational, we can never write its exact decimal
         expansion. However, we can approximate it to any desired accuracy using a simple
         method known to the Babylonians.
       </p>
 
       <Callout type="info">
-        <strong>Babylonian Method:</strong> To approximate <Math>{`\\sqrt{N}`}</Math>, start
-        with a guess <Math>{`x_0`}</Math> and iterate:
+        <strong>Babylonian Method:</strong> To approximate <InlineMath>{`\\sqrt{N}`}</InlineMath>, start
+        with a guess <InlineMath>{`x_0`}</InlineMath> and iterate:
         <MathBlock>{`x_{n+1} = \\frac{1}{2}\\left(x_n + \\frac{N}{x_n}\\right)`}</MathBlock>
       </Callout>
 
       <p>
-        This works because if <Math>{`x_n`}</Math> is an overestimate of <Math>{`\\sqrt{N}`}</Math>,
-        then <Math>{`\\frac{N}{x_n}`}</Math> is an underestimate, and vice versa. Their average
+        This works because if <InlineMath>{`x_n`}</InlineMath> is an overestimate of <InlineMath>{`\\sqrt{N}`}</InlineMath>,
+        then <InlineMath>{`\\frac{N}{x_n}`}</InlineMath> is an underestimate, and vice versa. Their average
         gives a better approximation.
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
-        <p className="font-semibold text-amber-400">Example: Approximating <Math>{`\\sqrt{2}`}</Math></p>
-        <p>Start with <Math>{`x_0 = 1`}</Math>:</p>
+        <p className="font-semibold text-amber-400">Example: Approximating <InlineMath>{`\\sqrt{2}`}</InlineMath></p>
+        <p>Start with <InlineMath>{`x_0 = 1`}</InlineMath>:</p>
         <div className="mt-2 font-mono text-dark-300 space-y-1">
-          <p><Math>{`x_1 = \\frac{1}{2}\\left(1 + \\frac{2}{1}\\right) = 1.5`}</Math></p>
-          <p><Math>{`x_2 = \\frac{1}{2}\\left(1.5 + \\frac{2}{1.5}\\right) = 1.41\\overline{6}`}</Math></p>
-          <p><Math>{`x_3 = \\frac{1}{2}\\left(1.41\\overline{6} + \\frac{2}{1.41\\overline{6}}\\right) \\approx 1.41421568`}</Math></p>
+          <p><InlineMath>{`x_1 = \\frac{1}{2}\\left(1 + \\frac{2}{1}\\right) = 1.5`}</InlineMath></p>
+          <p><InlineMath>{`x_2 = \\frac{1}{2}\\left(1.5 + \\frac{2}{1.5}\\right) = 1.41\\overline{6}`}</InlineMath></p>
+          <p><InlineMath>{`x_3 = \\frac{1}{2}\\left(1.41\\overline{6} + \\frac{2}{1.41\\overline{6}}\\right) \\approx 1.41421568`}</InlineMath></p>
         </div>
         <p className="mt-2 text-emerald-400">
           After just 3 iterations, we have 5 correct decimal places!
-          (<Math>{`\\sqrt{2} \\approx 1.41421356...`}</Math>)
+          (<InlineMath>{`\\sqrt{2} \\approx 1.41421356...`}</InlineMath>)
         </p>
       </div>
 
@@ -187,7 +187,7 @@ export default function Section03() {
 
       <h3>Pythagorean Triples</h3>
       <p>
-        While <Math>{`\\sqrt{2}`}</Math> is irrational, there are infinitely many right
+        While <InlineMath>{`\\sqrt{2}`}</InlineMath> is irrational, there are infinitely many right
         triangles with all integer sides. These are called <strong>Pythagorean triples</strong>.
       </p>
 
@@ -212,13 +212,13 @@ export default function Section03() {
       </p>
       <MathBlock>{`a = m^2 - n^2, \\quad b = 2mn, \\quad c = m^2 + n^2`}</MathBlock>
       <p>
-        where <Math>{`m > n > 0`}</Math> are coprime integers of opposite parity.
+        where <InlineMath>{`m > n > 0`}</InlineMath> are coprime integers of opposite parity.
       </p>
 
       <Callout type="success">
-        <strong>Chapter Summary:</strong> The Pythagorean theorem <Math>{`a^2 + b^2 = c^2`}</Math>
+        <strong>Chapter Summary:</strong> The Pythagorean theorem <InlineMath>{`a^2 + b^2 = c^2`}</InlineMath>
         connects the sides of right triangles. It led to the revolutionary discovery that
-        <Math>{`\\sqrt{2}`}</Math> is irrational—a number that cannot be expressed as a
+        <InlineMath>{`\\sqrt{2}`}</InlineMath> is irrational—a number that cannot be expressed as a
         fraction. The Babylonian method gives us a practical way to approximate such
         numbers with remarkable efficiency. In the next chapter, we'll use algebra to
         solve equations systematically.

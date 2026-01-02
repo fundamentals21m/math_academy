@@ -18,9 +18,9 @@ function flattenChildren(children: ReactNode): string {
 
 /**
  * Inline math component - renders LaTeX within text
- * Usage: <Math>x^2 + y^2 = z^2</Math>
+ * Usage: <InlineMath>x^2 + y^2 = z^2</InlineMath>
  */
-export function Math({ children, className = '' }: MathProps) {
+export function InlineMath({ children, className = '' }: MathProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const latex = flattenChildren(children);
 

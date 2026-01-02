@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section38() {
   return (
@@ -14,7 +14,7 @@ export default function Section38() {
       <h2>The Product Rule in Reverse</h2>
 
       <p>
-        Recall the product rule: if <MathInline>{`h(x) = f(x)g(x)`}</MathInline>, then
+        Recall the product rule: if <InlineMath>{`h(x) = f(x)g(x)`}</InlineMath>, then
       </p>
       <MathBlock>{`h'(x) = f(x)g'(x) + f'(x)g(x).`}</MathBlock>
 
@@ -28,9 +28,9 @@ export default function Section38() {
       <Callout type="theorem" title="Integration by Parts Formula">
         <MathBlock>{`\\int f(x)g'(x) \\, dx = f(x)g(x) - \\int f'(x)g(x) \\, dx + C`}</MathBlock>
         <p>
-          This formula transfers the difficulty from integrating <MathInline>{`f(x)g'(x)`}</MathInline>
-          to integrating <MathInline>{`f'(x)g(x)`}</MathInline>. If <MathInline>{`f`}</MathInline> and
-          <MathInline>{`g`}</MathInline> are properly chosen, this second integral may be easier
+          This formula transfers the difficulty from integrating <InlineMath>{`f(x)g'(x)`}</InlineMath>
+          to integrating <InlineMath>{`f'(x)g(x)`}</InlineMath>. If <InlineMath>{`f`}</InlineMath> and
+          <InlineMath>{`g`}</InlineMath> are properly chosen, this second integral may be easier
           to evaluate.
         </p>
       </Callout>
@@ -64,7 +64,7 @@ export default function Section38() {
 
       <Callout type="example" title="Example 1: x cos x">
         <p>
-          Integrate <MathInline>{`\\int x \\cos x \\, dx`}</MathInline>.
+          Integrate <InlineMath>{`\\int x \\cos x \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>Choose:</p>
@@ -73,19 +73,19 @@ export default function Section38() {
         <p>Applying the formula:</p>
         <MathBlock>{`\\int x \\cos x \\, dx = x \\sin x - \\int \\sin x \\, dx + C = x \\sin x + \\cos x + C.`}</MathBlock>
         <p>
-          <em>Verification:</em> Differentiating <MathInline>{`x \\sin x + \\cos x`}</MathInline> gives
-          <MathInline>{`\\sin x + x \\cos x - \\sin x = x \\cos x`}</MathInline>. ✓
+          <em>Verification:</em> Differentiating <InlineMath>{`x \\sin x + \\cos x`}</InlineMath> gives
+          <InlineMath>{`\\sin x + x \\cos x - \\sin x = x \\cos x`}</InlineMath>. ✓
         </p>
       </Callout>
 
       <Callout type="info" title="Why This Choice Works">
         <p>
-          We chose <MathInline>{`u = x`}</MathInline> because differentiating <MathInline>{`x`}</MathInline>
-          gives the simpler function <MathInline>{`1`}</MathInline>. We chose
-          <MathInline>{`dv = \\cos x \\, dx`}</MathInline> because we can easily integrate it.
+          We chose <InlineMath>{`u = x`}</InlineMath> because differentiating <InlineMath>{`x`}</InlineMath>
+          gives the simpler function <InlineMath>{`1`}</InlineMath>. We chose
+          <InlineMath>{`dv = \\cos x \\, dx`}</InlineMath> because we can easily integrate it.
         </p>
         <p>
-          Had we chosen <MathInline>{`u = \\cos x`}</MathInline> and <MathInline>{`dv = x \\, dx`}</MathInline>,
+          Had we chosen <InlineMath>{`u = \\cos x`}</InlineMath> and <InlineMath>{`dv = x \\, dx`}</InlineMath>,
           we would have gotten:
         </p>
         <MathBlock>{`\\int x \\cos x \\, dx = \\frac{x^2}{2} \\cos x + \\frac{1}{2} \\int x^2 \\sin x \\, dx,`}</MathBlock>
@@ -96,26 +96,26 @@ export default function Section38() {
 
       <Callout type="example" title="Example 2: x sin x">
         <p>
-          Integrate <MathInline>{`\\int x \\sin x \\, dx`}</MathInline>.
+          Integrate <InlineMath>{`\\int x \\sin x \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
-        <p>Choose <MathInline>{`u = x`}</MathInline> and <MathInline>{`dv = \\sin x \\, dx`}</MathInline>:</p>
+        <p>Choose <InlineMath>{`u = x`}</InlineMath> and <InlineMath>{`dv = \\sin x \\, dx`}</InlineMath>:</p>
         <MathBlock>{`du = dx, \\quad v = -\\cos x`}</MathBlock>
         <MathBlock>{`\\int x \\sin x \\, dx = -x \\cos x - \\int (-\\cos x) \\, dx = -x \\cos x + \\sin x + C.`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 3: Repeated Integration by Parts">
         <p>
-          Integrate <MathInline>{`\\int x^2 \\cos x \\, dx`}</MathInline>.
+          Integrate <InlineMath>{`\\int x^2 \\cos x \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Choose <MathInline>{`u = x^2`}</MathInline> and <MathInline>{`dv = \\cos x \\, dx`}</MathInline>:
+          Choose <InlineMath>{`u = x^2`}</InlineMath> and <InlineMath>{`dv = \\cos x \\, dx`}</InlineMath>:
         </p>
         <MathBlock>{`du = 2x \\, dx, \\quad v = \\sin x`}</MathBlock>
         <MathBlock>{`\\int x^2 \\cos x \\, dx = x^2 \\sin x - 2\\int x \\sin x \\, dx.`}</MathBlock>
         <p>
-          The remaining integral <MathInline>{`\\int x \\sin x \\, dx`}</MathInline> requires another
+          The remaining integral <InlineMath>{`\\int x \\sin x \\, dx`}</InlineMath> requires another
           application of integration by parts (see Example 2):
         </p>
         <MathBlock>{`\\int x \\sin x \\, dx = -x \\cos x + \\sin x + C.`}</MathBlock>
@@ -125,11 +125,11 @@ export default function Section38() {
 
       <Callout type="example" title="Example 4: x² sin x">
         <p>
-          Integrate <MathInline>{`\\int x^2 \\sin x \\, dx`}</MathInline>.
+          Integrate <InlineMath>{`\\int x^2 \\sin x \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          Choose <MathInline>{`u = x^2`}</MathInline> and <MathInline>{`dv = \\sin x \\, dx`}</MathInline>:
+          Choose <InlineMath>{`u = x^2`}</InlineMath> and <InlineMath>{`dv = \\sin x \\, dx`}</InlineMath>:
         </p>
         <MathBlock>{`du = 2x \\, dx, \\quad v = -\\cos x`}</MathBlock>
         <MathBlock>{`\\int x^2 \\sin x \\, dx = -x^2 \\cos x + 2\\int x \\cos x \\, dx.`}</MathBlock>
@@ -142,8 +142,8 @@ export default function Section38() {
       <Callout type="info" title="A Cautionary Example">
         <p>
           Sometimes integration by parts leads back to the original integral without progress.
-          Consider <MathInline>{`\\int x^{-1} \\, dx`}</MathInline> with <MathInline>{`u = x`}</MathInline>
-          and <MathInline>{`dv = x^{-2} \\, dx`}</MathInline>:
+          Consider <InlineMath>{`\\int x^{-1} \\, dx`}</InlineMath> with <InlineMath>{`u = x`}</InlineMath>
+          and <InlineMath>{`dv = x^{-2} \\, dx`}</InlineMath>:
         </p>
         <MathBlock>{`du = dx, \\quad v = -x^{-1}`}</MathBlock>
         <MathBlock>{`\\int x^{-1} \\, dx = x \\cdot (-x^{-1}) - \\int (-x^{-1}) \\, dx + C = -1 + \\int x^{-1} \\, dx + C.`}</MathBlock>
@@ -152,8 +152,8 @@ export default function Section38() {
           always lead to a simpler integral.
         </p>
         <p>
-          <strong>Warning:</strong> If we ignore the constant <MathInline>{`C`}</MathInline>,
-          this equation would falsely imply <MathInline>{`0 = -1`}</MathInline>!
+          <strong>Warning:</strong> If we ignore the constant <InlineMath>{`C`}</InlineMath>,
+          this equation would falsely imply <InlineMath>{`0 = -1`}</InlineMath>!
         </p>
       </Callout>
 
@@ -166,17 +166,17 @@ export default function Section38() {
 
       <Callout type="example" title="Reduction Formula for sin^n x">
         <p>
-          Starting with <MathInline>{`\\int \\sin^n x \\, dx`}</MathInline>, let
-          <MathInline>{`u = \\sin^{n-1} x`}</MathInline> and <MathInline>{`dv = \\sin x \\, dx`}</MathInline>:
+          Starting with <InlineMath>{`\\int \\sin^n x \\, dx`}</InlineMath>, let
+          <InlineMath>{`u = \\sin^{n-1} x`}</InlineMath> and <InlineMath>{`dv = \\sin x \\, dx`}</InlineMath>:
         </p>
         <MathBlock>{`du = (n-1)\\sin^{n-2} x \\cos x \\, dx, \\quad v = -\\cos x`}</MathBlock>
         <p>Applying integration by parts:</p>
         <MathBlock>{`\\int \\sin^n x \\, dx = -\\sin^{n-1} x \\cos x + (n-1) \\int \\sin^{n-2} x \\cos^2 x \\, dx.`}</MathBlock>
         <p>
-          Using <MathInline>{`\\cos^2 x = 1 - \\sin^2 x`}</MathInline>:
+          Using <InlineMath>{`\\cos^2 x = 1 - \\sin^2 x`}</InlineMath>:
         </p>
         <MathBlock>{`\\int \\sin^n x \\, dx = -\\sin^{n-1} x \\cos x + (n-1) \\int \\sin^{n-2} x \\, dx - (n-1) \\int \\sin^n x \\, dx.`}</MathBlock>
-        <p>Solving for <MathInline>{`\\int \\sin^n x \\, dx`}</MathInline>:</p>
+        <p>Solving for <InlineMath>{`\\int \\sin^n x \\, dx`}</InlineMath>:</p>
         <MathBlock>{`\\int \\sin^n x \\, dx = -\\frac{\\sin^{n-1} x \\cos x}{n} + \\frac{n-1}{n} \\int \\sin^{n-2} x \\, dx.`}</MathBlock>
       </Callout>
 
@@ -187,14 +187,14 @@ export default function Section38() {
 
       <Callout type="example" title="Example 5: Using the Reduction Formula">
         <p>
-          Evaluate <MathInline>{`\\int_0^{\\pi/2} \\sin^2 x \\, dx`}</MathInline>.
+          Evaluate <InlineMath>{`\\int_0^{\\pi/2} \\sin^2 x \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
-        <p>Using the reduction formula with <MathInline>{`n = 2`}</MathInline>:</p>
+        <p>Using the reduction formula with <InlineMath>{`n = 2`}</InlineMath>:</p>
         <MathBlock>{`\\int \\sin^2 x \\, dx = -\\frac{\\sin x \\cos x}{2} + \\frac{1}{2} \\int 1 \\, dx = -\\frac{\\sin x \\cos x}{2} + \\frac{x}{2} + C.`}</MathBlock>
-        <p>Using the identity <MathInline>{`\\sin x \\cos x = \\frac{1}{2}\\sin 2x`}</MathInline>:</p>
+        <p>Using the identity <InlineMath>{`\\sin x \\cos x = \\frac{1}{2}\\sin 2x`}</InlineMath>:</p>
         <MathBlock>{`\\int \\sin^2 x \\, dx = \\frac{x}{2} - \\frac{\\sin 2x}{4} + C.`}</MathBlock>
-        <p>Evaluating from <MathInline>{`0`}</MathInline> to <MathInline>{`\\pi/2`}</MathInline>:</p>
+        <p>Evaluating from <InlineMath>{`0`}</InlineMath> to <InlineMath>{`\\pi/2`}</InlineMath>:</p>
         <MathBlock>{`\\int_0^{\\pi/2} \\sin^2 x \\, dx = \\left(\\frac{\\pi/2}{2} - \\frac{\\sin \\pi}{4}\\right) - \\left(0 - 0\\right) = \\frac{\\pi}{4}.`}</MathBlock>
       </Callout>
 
@@ -202,8 +202,8 @@ export default function Section38() {
 
       <Callout type="info" title="The LIATE Rule">
         <p>
-          A helpful mnemonic for choosing <MathInline>{`u`}</MathInline> is <strong>LIATE</strong>,
-          which lists function types in order of preference for <MathInline>{`u`}</MathInline>:
+          A helpful mnemonic for choosing <InlineMath>{`u`}</InlineMath> is <strong>LIATE</strong>,
+          which lists function types in order of preference for <InlineMath>{`u`}</InlineMath>:
         </p>
         <ol>
           <li><strong>L</strong>ogarithmic functions (ln x, etc.)</li>
@@ -213,31 +213,31 @@ export default function Section38() {
           <li><strong>E</strong>xponential functions (eˣ, etc.)</li>
         </ol>
         <p>
-          Choose <MathInline>{`u`}</MathInline> to be whichever function type appears first in
-          LIATE. The remaining factor becomes <MathInline>{`dv`}</MathInline>.
+          Choose <InlineMath>{`u`}</InlineMath> to be whichever function type appears first in
+          LIATE. The remaining factor becomes <InlineMath>{`dv`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="General Guidelines">
         <ul>
           <li>
-            Choose <MathInline>{`u`}</MathInline> so that <MathInline>{`du`}</MathInline> is simpler
-            than <MathInline>{`u`}</MathInline>.
+            Choose <InlineMath>{`u`}</InlineMath> so that <InlineMath>{`du`}</InlineMath> is simpler
+            than <InlineMath>{`u`}</InlineMath>.
           </li>
           <li>
-            Choose <MathInline>{`dv`}</MathInline> so that <MathInline>{`v = \\int dv`}</MathInline> is
+            Choose <InlineMath>{`dv`}</InlineMath> so that <InlineMath>{`v = \\int dv`}</InlineMath> is
             easy to compute.
           </li>
           <li>
-            The goal is to make <MathInline>{`\\int v \\, du`}</MathInline> simpler than
-            <MathInline>{`\\int u \\, dv`}</MathInline>.
+            The goal is to make <InlineMath>{`\\int v \\, du`}</InlineMath> simpler than
+            <InlineMath>{`\\int u \\, dv`}</InlineMath>.
           </li>
           <li>
             For products of polynomials with sin, cos, or exponentials, let the polynomial
-            be <MathInline>{`u`}</MathInline>.
+            be <InlineMath>{`u`}</InlineMath>.
           </li>
           <li>
-            Sometimes multiple applications are needed (as in <MathInline>{`x^2 \\cos x`}</MathInline>).
+            Sometimes multiple applications are needed (as in <InlineMath>{`x^2 \\cos x`}</InlineMath>).
           </li>
         </ul>
       </Callout>
@@ -246,10 +246,10 @@ export default function Section38() {
 
       <Callout type="example" title="Example 6: Definite Integral">
         <p>
-          Evaluate <MathInline>{`\\int_0^{\\pi} x \\sin x \\, dx`}</MathInline>.
+          Evaluate <InlineMath>{`\\int_0^{\\pi} x \\sin x \\, dx`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
-        <p>Let <MathInline>{`u = x`}</MathInline> and <MathInline>{`dv = \\sin x \\, dx`}</MathInline>:</p>
+        <p>Let <InlineMath>{`u = x`}</InlineMath> and <InlineMath>{`dv = \\sin x \\, dx`}</InlineMath>:</p>
         <MathBlock>{`\\int_0^{\\pi} x \\sin x \\, dx = \\left[-x \\cos x\\right]_0^{\\pi} + \\int_0^{\\pi} \\cos x \\, dx`}</MathBlock>
         <MathBlock>{`= \\left[-\\pi \\cos \\pi - 0\\right] + \\left[\\sin x\\right]_0^{\\pi}`}</MathBlock>
         <MathBlock>{`= -\\pi(-1) + (\\sin \\pi - \\sin 0) = \\pi + 0 = \\pi.`}</MathBlock>
@@ -280,7 +280,7 @@ export default function Section38() {
         </li>
         <li>
           For <strong>definite integrals</strong>:
-          <MathInline>{`\\int_a^b u \\, dv = uv \\big|_a^b - \\int_a^b v \\, du`}</MathInline>.
+          <InlineMath>{`\\int_a^b u \\, dv = uv \\big|_a^b - \\int_a^b v \\, du`}</InlineMath>.
         </li>
       </ul>
     </LessonLayout>

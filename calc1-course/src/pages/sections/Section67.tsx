@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section67() {
@@ -21,16 +21,16 @@ export default function Section67() {
         </p>
         <MathBlock>{`\\sum_{n=1}^{\\infty} (-1)^{n+1} b_n = b_1 - b_2 + b_3 - b_4 + \\cdots`}</MathBlock>
         <p>
-          or <MathInline>{`\\sum (-1)^n b_n = -b_1 + b_2 - b_3 + \\cdots`}</MathInline>,
-          where <MathInline>{`b_n > 0`}</MathInline>.
+          or <InlineMath>{`\\sum (-1)^n b_n = -b_1 + b_2 - b_3 + \\cdots`}</InlineMath>,
+          where <InlineMath>{`b_n > 0`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 1: Common Alternating Series">
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots`}</MathInline> (alternating harmonic)</li>
-          <li><MathInline>{`\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{n!} = 1 - 1 + \\frac{1}{2} - \\frac{1}{6} + \\cdots = \\frac{1}{e}`}</MathInline></li>
-          <li><MathInline>{`\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots = \\frac{\\pi}{4}`}</MathInline></li>
+          <li><InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots`}</InlineMath> (alternating harmonic)</li>
+          <li><InlineMath>{`\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{n!} = 1 - 1 + \\frac{1}{2} - \\frac{1}{6} + \\cdots = \\frac{1}{e}`}</InlineMath></li>
+          <li><InlineMath>{`\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots = \\frac{\\pi}{4}`}</InlineMath></li>
         </ul>
       </Callout>
 
@@ -38,12 +38,12 @@ export default function Section67() {
 
       <Callout type="theorem" title="Alternating Series Test (Leibniz Test)">
         <p>
-          The alternating series <MathInline>{`\\sum (-1)^{n+1} b_n`}</MathInline> converges if:
+          The alternating series <InlineMath>{`\\sum (-1)^{n+1} b_n`}</InlineMath> converges if:
         </p>
         <ol className="list-decimal pl-6 space-y-1">
-          <li><MathInline>{`b_n > 0`}</MathInline> for all <MathInline>{`n`}</MathInline></li>
-          <li><MathInline>{`b_{n+1} \\leq b_n`}</MathInline> (terms decrease in absolute value)</li>
-          <li><MathInline>{`\\lim_{n \\to \\infty} b_n = 0`}</MathInline></li>
+          <li><InlineMath>{`b_n > 0`}</InlineMath> for all <InlineMath>{`n`}</InlineMath></li>
+          <li><InlineMath>{`b_{n+1} \\leq b_n`}</InlineMath> (terms decrease in absolute value)</li>
+          <li><InlineMath>{`\\lim_{n \\to \\infty} b_n = 0`}</InlineMath></li>
         </ol>
       </Callout>
 
@@ -56,24 +56,24 @@ export default function Section67() {
       </Callout>
 
       <Callout type="example" title="Example 2: Alternating Harmonic Series">
-        <p>Show that <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}`}</MathInline> converges.</p>
+        <p>Show that <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}`}</InlineMath> converges.</p>
         <p><strong>Solution:</strong></p>
-        <p>Let <MathInline>{`b_n = \\frac{1}{n}`}</MathInline>. Check the conditions:</p>
+        <p>Let <InlineMath>{`b_n = \\frac{1}{n}`}</InlineMath>. Check the conditions:</p>
         <ol className="list-decimal pl-6 space-y-1">
-          <li><MathInline>{`b_n = \\frac{1}{n} > 0`}</MathInline> ✓</li>
-          <li><MathInline>{`b_{n+1} = \\frac{1}{n+1} < \\frac{1}{n} = b_n`}</MathInline> ✓</li>
-          <li><MathInline>{`\\lim_{n \\to \\infty} \\frac{1}{n} = 0`}</MathInline> ✓</li>
+          <li><InlineMath>{`b_n = \\frac{1}{n} > 0`}</InlineMath> ✓</li>
+          <li><InlineMath>{`b_{n+1} = \\frac{1}{n+1} < \\frac{1}{n} = b_n`}</InlineMath> ✓</li>
+          <li><InlineMath>{`\\lim_{n \\to \\infty} \\frac{1}{n} = 0`}</InlineMath> ✓</li>
         </ol>
         <p>
           By the alternating series test, the series converges.
-          (It converges to <MathInline>{`\\ln 2`}</MathInline>.)
+          (It converges to <InlineMath>{`\\ln 2`}</InlineMath>.)
         </p>
       </Callout>
 
       <Callout type="example" title="Example 3: Another Alternating Series">
-        <p>Does <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{n+1}`}</MathInline> converge?</p>
+        <p>Does <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{n+1}`}</InlineMath> converge?</p>
         <p><strong>Solution:</strong></p>
-        <p>Check if <MathInline>{`b_n = \\frac{n}{n+1} \\to 0`}</MathInline>:</p>
+        <p>Check if <InlineMath>{`b_n = \\frac{n}{n+1} \\to 0`}</InlineMath>:</p>
         <MathBlock>{`\\lim_{n \\to \\infty} \\frac{n}{n+1} = 1 \\neq 0`}</MathBlock>
         <p>
           The limit is not zero, so the series <strong>diverges</strong> by the
@@ -82,13 +82,13 @@ export default function Section67() {
       </Callout>
 
       <Callout type="example" title="Example 4: Checking Decreasing">
-        <p>Does <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^2 + 1}`}</MathInline> converge?</p>
+        <p>Does <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^2 + 1}`}</InlineMath> converge?</p>
         <p><strong>Solution:</strong></p>
-        <p>Let <MathInline>{`b_n = \\frac{1}{n^2 + 1}`}</MathInline>.</p>
+        <p>Let <InlineMath>{`b_n = \\frac{1}{n^2 + 1}`}</InlineMath>.</p>
         <ol className="list-decimal pl-6 space-y-1">
-          <li><MathInline>{`b_n > 0`}</MathInline> ✓</li>
-          <li><MathInline>{`b_{n+1} = \\frac{1}{(n+1)^2 + 1} < \\frac{1}{n^2 + 1} = b_n`}</MathInline> ✓ (since denominator increases)</li>
-          <li><MathInline>{`\\lim_{n \\to \\infty} \\frac{1}{n^2+1} = 0`}</MathInline> ✓</li>
+          <li><InlineMath>{`b_n > 0`}</InlineMath> ✓</li>
+          <li><InlineMath>{`b_{n+1} = \\frac{1}{(n+1)^2 + 1} < \\frac{1}{n^2 + 1} = b_n`}</InlineMath> ✓ (since denominator increases)</li>
+          <li><InlineMath>{`\\lim_{n \\to \\infty} \\frac{1}{n^2+1} = 0`}</InlineMath> ✓</li>
         </ol>
         <p>The series converges by the alternating series test.</p>
       </Callout>
@@ -97,32 +97,32 @@ export default function Section67() {
 
       <Callout type="theorem" title="Alternating Series Remainder">
         <p>
-          If an alternating series <MathInline>{`\\sum (-1)^{n+1} b_n`}</MathInline> satisfies the
-          conditions of the Leibniz test and converges to <MathInline>{`S`}</MathInline>, then:
+          If an alternating series <InlineMath>{`\\sum (-1)^{n+1} b_n`}</InlineMath> satisfies the
+          conditions of the Leibniz test and converges to <InlineMath>{`S`}</InlineMath>, then:
         </p>
         <MathBlock>{`|S - S_N| \\leq b_{N+1}`}</MathBlock>
         <p>
-          The error in using <MathInline>{`S_N`}</MathInline> to approximate <MathInline>{`S`}</MathInline> is
+          The error in using <InlineMath>{`S_N`}</InlineMath> to approximate <InlineMath>{`S`}</InlineMath> is
           at most the absolute value of the first omitted term.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 5: Error Bound">
         <p>
-          Approximate <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n!}`}</MathInline> with
+          Approximate <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n!}`}</InlineMath> with
           error less than 0.001.
         </p>
         <p><strong>Solution:</strong></p>
-        <p>We need <MathInline>{`b_{N+1} = \\frac{1}{(N+1)!} < 0.001`}</MathInline>.</p>
+        <p>We need <InlineMath>{`b_{N+1} = \\frac{1}{(N+1)!} < 0.001`}</InlineMath>.</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`6! = 720`}</MathInline>, so <MathInline>{`1/720 \\approx 0.00139`}</MathInline></li>
-          <li><MathInline>{`7! = 5040`}</MathInline>, so <MathInline>{`1/5040 \\approx 0.0002`}</MathInline></li>
+          <li><InlineMath>{`6! = 720`}</InlineMath>, so <InlineMath>{`1/720 \\approx 0.00139`}</InlineMath></li>
+          <li><InlineMath>{`7! = 5040`}</InlineMath>, so <InlineMath>{`1/5040 \\approx 0.0002`}</InlineMath></li>
         </ul>
-        <p>We need <MathInline>{`N = 6`}</MathInline> terms:</p>
+        <p>We need <InlineMath>{`N = 6`}</InlineMath> terms:</p>
         <MathBlock>{`S_6 = 1 - 1 + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} + \\frac{1}{720}`}</MathBlock>
         <MathBlock>{`\\approx 0.368056`}</MathBlock>
         <p>
-          (The exact value is <MathInline>{`1/e \\approx 0.367879`}</MathInline>.)
+          (The exact value is <InlineMath>{`1/e \\approx 0.367879`}</InlineMath>.)
         </p>
       </Callout>
 
@@ -130,22 +130,22 @@ export default function Section67() {
 
       <Callout type="definition" title="Absolute Convergence">
         <p>
-          A series <MathInline>{`\\sum a_n`}</MathInline> <strong>converges absolutely</strong> if
-          <MathInline>{`\\sum |a_n|`}</MathInline> converges.
+          A series <InlineMath>{`\\sum a_n`}</InlineMath> <strong>converges absolutely</strong> if
+          <InlineMath>{`\\sum |a_n|`}</InlineMath> converges.
         </p>
       </Callout>
 
       <Callout type="definition" title="Conditional Convergence">
         <p>
           A series <strong>converges conditionally</strong> if it converges but
-          does not converge absolutely (i.e., <MathInline>{`\\sum a_n`}</MathInline> converges
-          but <MathInline>{`\\sum |a_n|`}</MathInline> diverges).
+          does not converge absolutely (i.e., <InlineMath>{`\\sum a_n`}</InlineMath> converges
+          but <InlineMath>{`\\sum |a_n|`}</InlineMath> diverges).
         </p>
       </Callout>
 
       <Callout type="theorem" title="Absolute Convergence Implies Convergence">
         <p>
-          If <MathInline>{`\\sum |a_n|`}</MathInline> converges, then <MathInline>{`\\sum a_n`}</MathInline> converges.
+          If <InlineMath>{`\\sum |a_n|`}</InlineMath> converges, then <InlineMath>{`\\sum a_n`}</InlineMath> converges.
         </p>
         <p className="mt-2">
           In other words: absolute convergence ⟹ convergence.
@@ -160,13 +160,13 @@ export default function Section67() {
       </Callout>
 
       <Callout type="example" title="Example 6: Classifying Convergence">
-        <p>Classify the convergence of <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}`}</MathInline>.</p>
+        <p>Classify the convergence of <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>
           The series converges by the alternating series test (Example 2).
         </p>
         <p>
-          Check absolute convergence: <MathInline>{`\\sum \\left|\\frac{(-1)^{n+1}}{n}\\right| = \\sum \\frac{1}{n}`}</MathInline>
+          Check absolute convergence: <InlineMath>{`\\sum \\left|\\frac{(-1)^{n+1}}{n}\\right| = \\sum \\frac{1}{n}`}</InlineMath>
           is the harmonic series, which diverges.
         </p>
         <p>
@@ -175,10 +175,10 @@ export default function Section67() {
       </Callout>
 
       <Callout type="example" title="Example 7: Absolute Convergence">
-        <p>Classify the convergence of <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n^2}`}</MathInline>.</p>
+        <p>Classify the convergence of <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n^2}`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>
-          Check absolute convergence: <MathInline>{`\\sum \\left|\\frac{(-1)^n}{n^2}\\right| = \\sum \\frac{1}{n^2}`}</MathInline>
+          Check absolute convergence: <InlineMath>{`\\sum \\left|\\frac{(-1)^n}{n^2}\\right| = \\sum \\frac{1}{n^2}`}</InlineMath>
           converges (p-series with p = 2).
         </p>
         <p>
@@ -188,16 +188,16 @@ export default function Section67() {
       </Callout>
 
       <Callout type="example" title="Example 8: Another Classification">
-        <p>Classify <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{\\sqrt{n}}`}</MathInline>.</p>
+        <p>Classify <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{\\sqrt{n}}`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
-        <p><strong>Convergence:</strong> Let <MathInline>{`b_n = 1/\\sqrt{n}`}</MathInline>.</p>
+        <p><strong>Convergence:</strong> Let <InlineMath>{`b_n = 1/\\sqrt{n}`}</InlineMath>.</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`b_n > 0`}</MathInline> ✓</li>
-          <li><MathInline>{`b_{n+1} < b_n`}</MathInline> ✓</li>
-          <li><MathInline>{`b_n \\to 0`}</MathInline> ✓</li>
+          <li><InlineMath>{`b_n > 0`}</InlineMath> ✓</li>
+          <li><InlineMath>{`b_{n+1} < b_n`}</InlineMath> ✓</li>
+          <li><InlineMath>{`b_n \\to 0`}</InlineMath> ✓</li>
         </ul>
         <p>Converges by alternating series test.</p>
-        <p><strong>Absolute convergence:</strong> <MathInline>{`\\sum \\frac{1}{\\sqrt{n}}`}</MathInline> is a p-series with p = 1/2 &lt; 1, so it diverges.</p>
+        <p><strong>Absolute convergence:</strong> <InlineMath>{`\\sum \\frac{1}{\\sqrt{n}}`}</InlineMath> is a p-series with p = 1/2 &lt; 1, so it diverges.</p>
         <p>The series <strong>converges conditionally</strong>.</p>
       </Callout>
 
@@ -205,11 +205,11 @@ export default function Section67() {
 
       <Callout type="theorem" title="Rearrangement Theorem">
         <p>
-          If <MathInline>{`\\sum a_n`}</MathInline> converges <strong>absolutely</strong>,
+          If <InlineMath>{`\\sum a_n`}</InlineMath> converges <strong>absolutely</strong>,
           any rearrangement of the terms converges to the same sum.
         </p>
         <p className="mt-2">
-          If <MathInline>{`\\sum a_n`}</MathInline> converges <strong>conditionally</strong>,
+          If <InlineMath>{`\\sum a_n`}</InlineMath> converges <strong>conditionally</strong>,
           the terms can be rearranged to converge to any value, or to diverge!
         </p>
       </Callout>
@@ -227,7 +227,7 @@ export default function Section67() {
       <Callout type="info" title="Strategy for Mixed-Sign Series">
         <p>For a series with terms of varying signs:</p>
         <ol className="list-decimal pl-6 space-y-1">
-          <li>First, check if <MathInline>{`\\sum |a_n|`}</MathInline> converges (absolute convergence)</li>
+          <li>First, check if <InlineMath>{`\\sum |a_n|`}</InlineMath> converges (absolute convergence)</li>
           <li>If yes, the original series converges absolutely</li>
           <li>If no, look for alternating structure or other patterns</li>
           <li>Apply the alternating series test if applicable</li>
@@ -235,26 +235,26 @@ export default function Section67() {
       </Callout>
 
       <Callout type="example" title="Example 9: Using Absolute Convergence">
-        <p>Does <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{\\sin n}{n^2}`}</MathInline> converge?</p>
+        <p>Does <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{\\sin n}{n^2}`}</InlineMath> converge?</p>
         <p><strong>Solution:</strong></p>
         <p>The terms aren't strictly alternating, but:</p>
         <MathBlock>{`\\left|\\frac{\\sin n}{n^2}\\right| \\leq \\frac{1}{n^2}`}</MathBlock>
         <p>
-          Since <MathInline>{`\\sum \\frac{1}{n^2}`}</MathInline> converges, by comparison,
-          <MathInline>{`\\sum \\left|\\frac{\\sin n}{n^2}\\right|`}</MathInline> converges.
+          Since <InlineMath>{`\\sum \\frac{1}{n^2}`}</InlineMath> converges, by comparison,
+          <InlineMath>{`\\sum \\left|\\frac{\\sin n}{n^2}\\right|`}</InlineMath> converges.
         </p>
         <p>
-          Therefore <MathInline>{`\\sum \\frac{\\sin n}{n^2}`}</MathInline> <strong>converges absolutely</strong>.
+          Therefore <InlineMath>{`\\sum \\frac{\\sin n}{n^2}`}</InlineMath> <strong>converges absolutely</strong>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 10: Ratio Test for Absolute Convergence">
-        <p>Does <MathInline>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{2^n}`}</MathInline> converge?</p>
+        <p>Does <InlineMath>{`\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{2^n}`}</InlineMath> converge?</p>
         <p><strong>Solution:</strong></p>
         <p>Test for absolute convergence using the ratio test:</p>
         <MathBlock>{`\\frac{|a_{n+1}|}{|a_n|} = \\frac{(n+1)/2^{n+1}}{n/2^n} = \\frac{n+1}{2n} \\to \\frac{1}{2}`}</MathBlock>
         <p>
-          Since <MathInline>{`\\frac{1}{2} < 1`}</MathInline>, the series converges absolutely.
+          Since <InlineMath>{`\\frac{1}{2} < 1`}</InlineMath>, the series converges absolutely.
         </p>
       </Callout>
 
@@ -265,8 +265,8 @@ export default function Section67() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-dark-700">
-                <th className="text-left p-2"><MathInline>{`\\sum |a_n|`}</MathInline></th>
-                <th className="text-left p-2"><MathInline>{`\\sum a_n`}</MathInline></th>
+                <th className="text-left p-2"><InlineMath>{`\\sum |a_n|`}</InlineMath></th>
+                <th className="text-left p-2"><InlineMath>{`\\sum a_n`}</InlineMath></th>
                 <th className="text-left p-2">Classification</th>
               </tr>
             </thead>
@@ -290,7 +290,7 @@ export default function Section67() {
           </table>
         </div>
         <p className="mt-2">
-          Note: If <MathInline>{`\\sum |a_n|`}</MathInline> converges, <MathInline>{`\\sum a_n`}</MathInline> must converge.
+          Note: If <InlineMath>{`\\sum |a_n|`}</InlineMath> converges, <InlineMath>{`\\sum a_n`}</InlineMath> must converge.
         </p>
       </Callout>
 
@@ -300,16 +300,16 @@ export default function Section67() {
           <strong>Alternating series:</strong> Terms alternate in sign
         </li>
         <li>
-          <strong>Leibniz test:</strong> If <MathInline>{`b_n \\downarrow 0`}</MathInline>, then <MathInline>{`\\sum (-1)^{n+1} b_n`}</MathInline> converges
+          <strong>Leibniz test:</strong> If <InlineMath>{`b_n \\downarrow 0`}</InlineMath>, then <InlineMath>{`\\sum (-1)^{n+1} b_n`}</InlineMath> converges
         </li>
         <li>
-          <strong>Error bound:</strong> <MathInline>{`|S - S_N| \\leq b_{N+1}`}</MathInline>
+          <strong>Error bound:</strong> <InlineMath>{`|S - S_N| \\leq b_{N+1}`}</InlineMath>
         </li>
         <li>
-          <strong>Absolute convergence:</strong> <MathInline>{`\\sum |a_n|`}</MathInline> converges
+          <strong>Absolute convergence:</strong> <InlineMath>{`\\sum |a_n|`}</InlineMath> converges
         </li>
         <li>
-          <strong>Conditional convergence:</strong> <MathInline>{`\\sum a_n`}</MathInline> converges but <MathInline>{`\\sum |a_n|`}</MathInline> diverges
+          <strong>Conditional convergence:</strong> <InlineMath>{`\\sum a_n`}</InlineMath> converges but <InlineMath>{`\\sum |a_n|`}</InlineMath> diverges
         </li>
         <li>
           <strong>Key fact:</strong> Absolute convergence ⟹ convergence (not conversely)

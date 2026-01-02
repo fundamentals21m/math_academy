@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section00Questions } from '../../data/quizzes';
@@ -184,7 +184,7 @@ export default function Section00() {
 
       <p className="text-dark-200 my-4">
         After 1 second, it has fallen 16 feet. After 2 seconds, 64 feet. After 3 seconds, 144 feet.
-        But what is its <em>instantaneous velocity</em> at exactly <MathInline>t = 2</MathInline>?
+        But what is its <em>instantaneous velocity</em> at exactly <InlineMath>t = 2</InlineMath>?
       </p>
 
       <p className="text-dark-200 mb-4">
@@ -195,7 +195,7 @@ export default function Section00() {
       <MathBlock>{`v(t) = \\frac{d}{dt}(16t^2) = 32t`}</MathBlock>
 
       <p className="text-dark-200 my-4">
-        At <MathInline>t = 2</MathInline> seconds, the ball is falling at exactly 64 feet per second.
+        At <InlineMath>t = 2</InlineMath> seconds, the ball is falling at exactly 64 feet per second.
         This is the power of the derivative.
       </p>
 

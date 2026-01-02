@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section05() {
   return (
@@ -10,42 +10,42 @@ export default function Section05() {
       <p className="text-dark-200 mb-6">
         When working with sums of many terms, writing out each term becomes tedious
         and impractical. Summation notation provides a compact and powerful way to
-        express such sums using the Greek letter sigma (<MathInline>{'\\Sigma'}</MathInline>).
+        express such sums using the Greek letter sigma (<InlineMath>{'\\Sigma'}</InlineMath>).
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">The Sigma Notation</h2>
 
       <p className="text-dark-200 mb-4">
-        Consider the sum of the first <MathInline>{'n'}</MathInline> squares:
+        Consider the sum of the first <InlineMath>{'n'}</InlineMath> squares:
       </p>
 
       <MathBlock>{'1^2 + 2^2 + 3^2 + \\cdots + n^2'}</MathBlock>
 
       <p className="text-dark-200 mb-4">
-        A typical term in this sum has the form <MathInline>{'k^2'}</MathInline>, and we
-        get all the terms by letting <MathInline>{'k'}</MathInline> run through the
-        values <MathInline>{'1, 2, 3, \\ldots, n'}</MathInline>. Using summation notation,
+        A typical term in this sum has the form <InlineMath>{'k^2'}</InlineMath>, and we
+        get all the terms by letting <InlineMath>{'k'}</InlineMath> run through the
+        values <InlineMath>{'1, 2, 3, \\ldots, n'}</InlineMath>. Using summation notation,
         we write:
       </p>
 
       <MathBlock>{'\\sum_{k=1}^{n} k^2'}</MathBlock>
 
       <p className="text-dark-200 mb-6">
-        This symbol is read: "The sum of <MathInline>{'k^2'}</MathInline> for{' '}
-        <MathInline>{'k'}</MathInline> running from 1 to <MathInline>{'n'}</MathInline>."
+        This symbol is read: "The sum of <InlineMath>{'k^2'}</InlineMath> for{' '}
+        <InlineMath>{'k'}</InlineMath> running from 1 to <InlineMath>{'n'}</InlineMath>."
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Summation Notation</p>
         <p className="mb-2">
-          The expression <MathInline>{'\\sum_{k=1}^{n} a_k'}</MathInline> represents
+          The expression <InlineMath>{'\\sum_{k=1}^{n} a_k'}</InlineMath> represents
           the sum:
         </p>
         <MathBlock>{'a_1 + a_2 + a_3 + \\cdots + a_n'}</MathBlock>
         <p>
-          The letter <MathInline>{'k'}</MathInline> is called the <strong>index of summation</strong>{' '}
+          The letter <InlineMath>{'k'}</InlineMath> is called the <strong>index of summation</strong>{' '}
           (or <strong>dummy index</strong>). The numbers below and above the sigma indicate the
-          range of values taken by <MathInline>{'k'}</MathInline>.
+          range of values taken by <InlineMath>{'k'}</InlineMath>.
         </p>
       </Callout>
 
@@ -58,7 +58,7 @@ export default function Section05() {
       <MathBlock>{'\\sum_{k=1}^{n} k^2 = \\sum_{i=1}^{n} i^2 = \\sum_{j=1}^{n} j^2 = \\sum_{m=1}^{n} m^2'}</MathBlock>
 
       <p className="text-dark-200 mb-6">
-        Just avoid using a letter already in use (like <MathInline>{'n'}</MathInline> in this example).
+        Just avoid using a letter already in use (like <InlineMath>{'n'}</InlineMath> in this example).
       </p>
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Different Starting Points</h3>
@@ -111,42 +111,42 @@ export default function Section05() {
 
       <Callout type="example">
         <p className="font-semibold mb-2">Geometric Series</p>
-        <p className="mb-2">For <MathInline>{'x \\neq 1'}</MathInline>:</p>
+        <p className="mb-2">For <InlineMath>{'x \\neq 1'}</InlineMath>:</p>
         <MathBlock>{'\\sum_{k=0}^{n} x^k = \\frac{1 - x^{n+1}}{1 - x}'}</MathBlock>
-        <p>When <MathInline>{'x = 1'}</MathInline>, the sum equals <MathInline>{'n + 1'}</MathInline>.</p>
+        <p>When <InlineMath>{'x = 1'}</InlineMath>, the sum equals <InlineMath>{'n + 1'}</InlineMath>.</p>
       </Callout>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Absolute Values</h2>
 
       <p className="text-dark-200 mb-4">
-        The <strong>absolute value</strong> of a real number <MathInline>{'x'}</MathInline>,
-        denoted <MathInline>{'|x|'}</MathInline>, is defined as:
+        The <strong>absolute value</strong> of a real number <InlineMath>{'x'}</InlineMath>,
+        denoted <InlineMath>{'|x|'}</InlineMath>, is defined as:
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Absolute Value</p>
         <MathBlock>{'|x| = \\begin{cases} x & \\text{if } x \\geq 0 \\ -x & \\text{if } x < 0 \\end{cases}'}</MathBlock>
         <p className="mt-2">
-          Geometrically, <MathInline>{'|x|'}</MathInline> represents the <strong>distance</strong>{' '}
-          from <MathInline>{'x'}</MathInline> to 0 on the number line.
+          Geometrically, <InlineMath>{'|x|'}</InlineMath> represents the <strong>distance</strong>{' '}
+          from <InlineMath>{'x'}</InlineMath> to 0 on the number line.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-4">
-        Note that <MathInline>{'-|x| \\leq x \\leq |x|'}</MathInline> for all real <MathInline>{'x'}</MathInline>.
+        Note that <InlineMath>{'-|x| \\leq x \\leq |x|'}</InlineMath> for all real <InlineMath>{'x'}</InlineMath>.
       </p>
 
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem I.38</p>
         <p>
-          If <MathInline>{'a > 0'}</MathInline>, then <MathInline>{'|x| \\leq a'}</MathInline> if
-          and only if <MathInline>{'-a \\leq x \\leq a'}</MathInline>.
+          If <InlineMath>{'a > 0'}</InlineMath>, then <InlineMath>{'|x| \\leq a'}</InlineMath> if
+          and only if <InlineMath>{'-a \\leq x \\leq a'}</InlineMath>.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-6">
-        This theorem says that <MathInline>{'|x| \\leq a'}</MathInline> means{' '}
-        <MathInline>{'x'}</MathInline> lies within distance <MathInline>{'a'}</MathInline> of
+        This theorem says that <InlineMath>{'|x| \\leq a'}</InlineMath> means{' '}
+        <InlineMath>{'x'}</InlineMath> lies within distance <InlineMath>{'a'}</InlineMath> of
         the origin.
       </p>
 
@@ -158,7 +158,7 @@ export default function Section05() {
 
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem I.39 (Triangle Inequality)</p>
-        <p className="mb-2">For arbitrary real numbers <MathInline>{'x'}</MathInline> and <MathInline>{'y'}</MathInline>:</p>
+        <p className="mb-2">For arbitrary real numbers <InlineMath>{'x'}</InlineMath> and <InlineMath>{'y'}</InlineMath>:</p>
         <MathBlock>{'|x + y| \\leq |x| + |y|'}</MathBlock>
       </Callout>
 
@@ -174,19 +174,19 @@ export default function Section05() {
       <Callout type="example">
         <p className="font-semibold mb-2">Proof of the Triangle Inequality</p>
         <p className="mb-2">
-          Starting from <MathInline>{'-|x| \\leq x \\leq |x|'}</MathInline> and{' '}
-          <MathInline>{'-|y| \\leq y \\leq |y|'}</MathInline>, add these inequalities:
+          Starting from <InlineMath>{'-|x| \\leq x \\leq |x|'}</InlineMath> and{' '}
+          <InlineMath>{'-|y| \\leq y \\leq |y|'}</InlineMath>, add these inequalities:
         </p>
         <MathBlock>{'-(|x| + |y|) \\leq x + y \\leq |x| + |y|'}</MathBlock>
         <p>
-          By Theorem I.38, this means <MathInline>{'|x + y| \\leq |x| + |y|'}</MathInline>.
+          By Theorem I.38, this means <InlineMath>{'|x + y| \\leq |x| + |y|'}</InlineMath>.
         </p>
       </Callout>
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Alternative Form</h3>
 
       <p className="text-dark-200 mb-4">
-        Taking <MathInline>{'x = a - c'}</MathInline> and <MathInline>{'y = c - b'}</MathInline>,
+        Taking <InlineMath>{'x = a - c'}</InlineMath> and <InlineMath>{'y = c - b'}</InlineMath>,
         the triangle inequality becomes:
       </p>
 
@@ -199,12 +199,12 @@ export default function Section05() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Extended Triangle Inequality</h3>
 
       <p className="text-dark-200 mb-4">
-        Using mathematical induction, we can extend the triangle inequality to <MathInline>{'n'}</MathInline> terms:
+        Using mathematical induction, we can extend the triangle inequality to <InlineMath>{'n'}</InlineMath> terms:
       </p>
 
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem I.40 (Generalized Triangle Inequality)</p>
-        <p className="mb-2">For arbitrary real numbers <MathInline>{'a_1, a_2, \\ldots, a_n'}</MathInline>:</p>
+        <p className="mb-2">For arbitrary real numbers <InlineMath>{'a_1, a_2, \\ldots, a_n'}</InlineMath>:</p>
         <MathBlock>{'\\left| \\sum_{k=1}^{n} a_k \\right| \\leq \\sum_{k=1}^{n} |a_k|'}</MathBlock>
       </Callout>
 
@@ -217,16 +217,16 @@ export default function Section05() {
       <Callout type="info">
         <p className="font-semibold mb-2">Key Properties</p>
         <ul className="list-disc list-inside space-y-2">
-          <li><MathInline>{'|x| = 0'}</MathInline> if and only if <MathInline>{'x = 0'}</MathInline></li>
-          <li><MathInline>{'|-x| = |x|'}</MathInline></li>
-          <li><MathInline>{'|x - y| = |y - x|'}</MathInline></li>
-          <li><MathInline>{'|x|^2 = x^2'}</MathInline></li>
-          <li><MathInline>{'|x| = \\sqrt{x^2}'}</MathInline></li>
-          <li><MathInline>{'|xy| = |x| \\cdot |y|'}</MathInline></li>
-          <li><MathInline>{'|x/y| = |x|/|y|'}</MathInline> if <MathInline>{'y \\neq 0'}</MathInline></li>
-          <li><MathInline>{'|x - y| \\leq |x| + |y|'}</MathInline></li>
-          <li><MathInline>{'|x| - |y| \\leq |x - y|'}</MathInline> (reverse triangle inequality)</li>
-          <li><MathInline>{'\\big| |x| - |y| \\big| \\leq |x - y|'}</MathInline></li>
+          <li><InlineMath>{'|x| = 0'}</InlineMath> if and only if <InlineMath>{'x = 0'}</InlineMath></li>
+          <li><InlineMath>{'|-x| = |x|'}</InlineMath></li>
+          <li><InlineMath>{'|x - y| = |y - x|'}</InlineMath></li>
+          <li><InlineMath>{'|x|^2 = x^2'}</InlineMath></li>
+          <li><InlineMath>{'|x| = \\sqrt{x^2}'}</InlineMath></li>
+          <li><InlineMath>{'|xy| = |x| \\cdot |y|'}</InlineMath></li>
+          <li><InlineMath>{'|x/y| = |x|/|y|'}</InlineMath> if <InlineMath>{'y \\neq 0'}</InlineMath></li>
+          <li><InlineMath>{'|x - y| \\leq |x| + |y|'}</InlineMath></li>
+          <li><InlineMath>{'|x| - |y| \\leq |x - y|'}</InlineMath> (reverse triangle inequality)</li>
+          <li><InlineMath>{'\\big| |x| - |y| \\big| \\leq |x - y|'}</InlineMath></li>
         </ul>
       </Callout>
 
@@ -240,13 +240,13 @@ export default function Section05() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem I.41 (Cauchy-Schwarz Inequality)</p>
         <p className="mb-2">
-          If <MathInline>{'a_1, \\ldots, a_n'}</MathInline> and <MathInline>{'b_1, \\ldots, b_n'}</MathInline>{' '}
+          If <InlineMath>{'a_1, \\ldots, a_n'}</InlineMath> and <InlineMath>{'b_1, \\ldots, b_n'}</InlineMath>{' '}
           are arbitrary real numbers, then:
         </p>
         <MathBlock>{'\\left( \\sum_{k=1}^{n} a_k b_k \\right)^2 \\leq \\left( \\sum_{k=1}^{n} a_k^2 \\right) \\left( \\sum_{k=1}^{n} b_k^2 \\right)'}</MathBlock>
         <p className="mt-2">
-          Equality holds if and only if there exists a real number <MathInline>{'x'}</MathInline>{' '}
-          such that <MathInline>{'a_k x + b_k = 0'}</MathInline> for each <MathInline>{'k'}</MathInline>.
+          Equality holds if and only if there exists a real number <InlineMath>{'x'}</InlineMath>{' '}
+          such that <InlineMath>{'a_k x + b_k = 0'}</InlineMath> for each <InlineMath>{'k'}</InlineMath>.
         </p>
       </Callout>
 
@@ -256,7 +256,7 @@ export default function Section05() {
         Summation notation provides a compact way to write sums, with key properties
         (additive, homogeneous, telescoping) that simplify calculations. Absolute
         values measure distance from zero and satisfy the crucial triangle inequality{' '}
-        <MathInline>{'|x + y| \\leq |x| + |y|'}</MathInline>. These tools are fundamental
+        <InlineMath>{'|x + y| \\leq |x| + |y|'}</InlineMath>. These tools are fundamental
         throughout calculus, appearing in limits, series, and error estimates.
       </p>
     </LessonLayout>

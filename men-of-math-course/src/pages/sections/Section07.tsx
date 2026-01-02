@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
-import { MathBlock, Math as MathInline } from '../../components/common/MathBlock';
+import { MathBlock, InlineMath } from '../../components/common/MathBlock';
 
 // Fluxions (Derivatives) Visualization
 function FluxionsDemo() {
@@ -336,7 +336,7 @@ function NewtonsMethod() {
       <p className="text-sm text-dark-300 mb-4">
         Newton developed a powerful method for finding roots: start with a guess x₀,
         draw the tangent line at that point, and use where it crosses the x-axis as
-        your next guess. The formula: <MathInline>{'x_{n+1} = x_n - \\frac{f(x_n)}{f\'(x_n)}'}</MathInline>
+        your next guess. The formula: <InlineMath>{'x_{n+1} = x_n - \\frac{f(x_n)}{f\'(x_n)}'}</InlineMath>
       </p>
 
       <canvas

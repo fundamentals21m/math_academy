@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section01() {
   return (
@@ -25,20 +25,20 @@ export default function Section01() {
       <h3 className="text-xl font-semibold mt-8 mb-4">The Parabolic Segment</h3>
 
       <p className="text-dark-200 mb-4">
-        Consider the region under the parabola <MathInline>{'y = x^2'}</MathInline> from{' '}
-        <MathInline>{'x = 0'}</MathInline> to <MathInline>{'x = b'}</MathInline>. If we choose
-        an arbitrary point on the base at distance <MathInline>{'x'}</MathInline> from the origin,
-        then the vertical distance (ordinate) from this point to the curve is <MathInline>{'x^2'}</MathInline>.
+        Consider the region under the parabola <InlineMath>{'y = x^2'}</InlineMath> from{' '}
+        <InlineMath>{'x = 0'}</InlineMath> to <InlineMath>{'x = b'}</InlineMath>. If we choose
+        an arbitrary point on the base at distance <InlineMath>{'x'}</InlineMath> from the origin,
+        then the vertical distance (ordinate) from this point to the curve is <InlineMath>{'x^2'}</InlineMath>.
       </p>
 
       <Callout type="definition">
         <p>
           <strong>Parabolic Segment:</strong> The region bounded by the parabola{' '}
-          <MathInline>{'y = x^2'}</MathInline>, the <MathInline>{'x'}</MathInline>-axis, and the
-          vertical line <MathInline>{'x = b'}</MathInline>.
+          <InlineMath>{'y = x^2'}</InlineMath>, the <InlineMath>{'x'}</InlineMath>-axis, and the
+          vertical line <InlineMath>{'x = b'}</InlineMath>.
         </p>
         <p className="mt-2">
-          The base has length <MathInline>{'b'}</MathInline> and the altitude is <MathInline>{'b^2'}</MathInline>.
+          The base has length <InlineMath>{'b'}</InlineMath> and the altitude is <InlineMath>{'b^2'}</InlineMath>.
         </p>
       </Callout>
 
@@ -46,26 +46,26 @@ export default function Section01() {
       <h3 className="text-xl font-semibold mt-8 mb-4">Approximation by Rectangles</h3>
 
       <p className="text-dark-200 mb-4">
-        We approximate the area by dividing the base into <MathInline>{'n'}</MathInline> equal
-        parts, each of width <MathInline>{'b/n'}</MathInline>. On each subinterval, we construct
+        We approximate the area by dividing the base into <InlineMath>{'n'}</InlineMath> equal
+        parts, each of width <InlineMath>{'b/n'}</InlineMath>. On each subinterval, we construct
         a rectangle whose height equals the ordinate at the left endpoint.
       </p>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Setting Up the Approximation</p>
         <p>
-          The <MathInline>{'k'}</MathInline>-th rectangle (for <MathInline>{'k = 0, 1, 2, \\ldots, n-1'}</MathInline>)
+          The <InlineMath>{'k'}</InlineMath>-th rectangle (for <InlineMath>{'k = 0, 1, 2, \\ldots, n-1'}</InlineMath>)
           has:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>Base: <MathInline>{'b/n'}</MathInline></li>
-          <li>Height: <MathInline>{'\\left(\\frac{kb}{n}\\right)^2 = \\frac{k^2 b^2}{n^2}'}</MathInline></li>
-          <li>Area: <MathInline>{'\\frac{b}{n} \\cdot \\frac{k^2 b^2}{n^2} = \\frac{k^2 b^3}{n^3}'}</MathInline></li>
+          <li>Base: <InlineMath>{'b/n'}</InlineMath></li>
+          <li>Height: <InlineMath>{'\\left(\\frac{kb}{n}\\right)^2 = \\frac{k^2 b^2}{n^2}'}</InlineMath></li>
+          <li>Area: <InlineMath>{'\\frac{b}{n} \\cdot \\frac{k^2 b^2}{n^2} = \\frac{k^2 b^3}{n^3}'}</InlineMath></li>
         </ul>
       </Callout>
 
       <p className="text-dark-200 mt-4 mb-4">
-        The sum of all <MathInline>{'n'}</MathInline> rectangles gives us an approximation to the area:
+        The sum of all <InlineMath>{'n'}</InlineMath> rectangles gives us an approximation to the area:
       </p>
 
       <MathBlock>
@@ -76,7 +76,7 @@ export default function Section01() {
       <h3 className="text-xl font-semibold mt-8 mb-4">The Sum of Squares Formula</h3>
 
       <p className="text-dark-200 mb-4">
-        To evaluate this sum, we need the formula for the sum of the first <MathInline>{'n-1'}</MathInline> squares:
+        To evaluate this sum, we need the formula for the sum of the first <InlineMath>{'n-1'}</InlineMath> squares:
       </p>
 
       <Callout type="theorem">
@@ -87,7 +87,7 @@ export default function Section01() {
       </Callout>
 
       <p className="text-dark-200 mt-4 mb-4">
-        Substituting this into our expression for <MathInline>{'S_n'}</MathInline>:
+        Substituting this into our expression for <InlineMath>{'S_n'}</InlineMath>:
       </p>
 
       <MathBlock>
@@ -98,7 +98,7 @@ export default function Section01() {
       <h3 className="text-xl font-semibold mt-8 mb-4">Taking the Limit</h3>
 
       <p className="text-dark-200 mb-4">
-        As <MathInline>{'n \\to \\infty'}</MathInline>, the rectangles become narrower and their
+        As <InlineMath>{'n \\to \\infty'}</InlineMath>, the rectangles become narrower and their
         union approximates the parabolic region more closely. Let's simplify:
       </p>
 
@@ -111,7 +111,7 @@ export default function Section01() {
       </MathBlock>
 
       <p className="text-dark-200 mt-4 mb-4">
-        As <MathInline>{'n \\to \\infty'}</MathInline>, both <MathInline>{'1/n \\to 0'}</MathInline>, so:
+        As <InlineMath>{'n \\to \\infty'}</InlineMath>, both <InlineMath>{'1/n \\to 0'}</InlineMath>, so:
       </p>
 
       <Callout type="theorem">
@@ -120,8 +120,8 @@ export default function Section01() {
           {'\\text{Area} = \\lim_{n \\to \\infty} S_n = \\frac{b^3}{6} \\cdot 1 \\cdot 2 = \\frac{b^3}{3}'}
         </MathBlock>
         <p className="mt-2 text-sm text-dark-400">
-          The area under the parabola <MathInline>{'y = x^2'}</MathInline> from <MathInline>{'0'}</MathInline> to{' '}
-          <MathInline>{'b'}</MathInline> is exactly <MathInline>{'b^3/3'}</MathInline>.
+          The area under the parabola <InlineMath>{'y = x^2'}</InlineMath> from <InlineMath>{'0'}</InlineMath> to{' '}
+          <InlineMath>{'b'}</InlineMath> is exactly <InlineMath>{'b^3/3'}</InlineMath>.
         </p>
       </Callout>
 
@@ -138,7 +138,7 @@ export default function Section01() {
 
       <Callout type="info">
         <p>
-          The integral sign <MathInline>{'\\int'}</MathInline> (an elongated "S" for "sum") was
+          The integral sign <InlineMath>{'\\int'}</InlineMath> (an elongated "S" for "sum") was
           introduced by Leibniz. The method of exhaustion foreshadows exactly how we will
           define the integral: as a limit of sums of rectangular areas.
         </p>
@@ -195,14 +195,14 @@ export default function Section01() {
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
             <span>
-              For the parabola <MathInline>{'y = x^2'}</MathInline>, dividing <MathInline>{'[0, b]'}</MathInline> into{' '}
-              <MathInline>{'n'}</MathInline> parts and summing rectangle areas leads to the sum of squares.
+              For the parabola <InlineMath>{'y = x^2'}</InlineMath>, dividing <InlineMath>{'[0, b]'}</InlineMath> into{' '}
+              <InlineMath>{'n'}</InlineMath> parts and summing rectangle areas leads to the sum of squares.
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
             <span>
-              Taking <MathInline>{'n \\to \\infty'}</MathInline> gives the exact area: <MathInline>{'b^3/3'}</MathInline>.
+              Taking <InlineMath>{'n \\to \\infty'}</InlineMath> gives the exact area: <InlineMath>{'b^3/3'}</InlineMath>.
             </span>
           </li>
           <li className="flex items-start gap-3">

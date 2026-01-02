@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { PrimeFactorizationVisualizer } from '@/components/visualizations';
 
 export default function Section02() {
@@ -65,12 +65,12 @@ export default function Section02() {
         <p className="font-semibold text-amber-400">Example: Prime Factorization</p>
         <p>Find the prime factorization of 171.</p>
         <p className="mt-2">
-          171 is odd (not divisible by 2). Check 3: <Math>{`1 + 7 + 1 = 9`}</Math>, which is
+          171 is odd (not divisible by 2). Check 3: <InlineMath>{`1 + 7 + 1 = 9`}</InlineMath>, which is
           divisible by 3.
         </p>
         <MathBlock>{`171 = 3 \\times 57`}</MathBlock>
         <p>
-          Is 57 divisible by 3? <Math>{`5 + 7 = 12`}</Math>, yes!
+          Is 57 divisible by 3? <InlineMath>{`5 + 7 = 12`}</InlineMath>, yes!
         </p>
         <MathBlock>{`57 = 3 \\times 19`}</MathBlock>
         <p>19 is prime, so:</p>
@@ -108,14 +108,14 @@ export default function Section02() {
 
       <h3>Application: Simplifying Fractions</h3>
       <p>
-        To reduce a fraction <Math>{`\\frac{a}{b}`}</Math> to lowest terms, divide both
+        To reduce a fraction <InlineMath>{`\\frac{a}{b}`}</InlineMath> to lowest terms, divide both
         numerator and denominator by their GCF.
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example</p>
         <p>
-          Simplify <Math>{`\\frac{252}{105}`}</Math>:
+          Simplify <InlineMath>{`\\frac{252}{105}`}</InlineMath>:
         </p>
         <MathBlock>{`\\frac{252}{105} = \\frac{252 \\div 21}{105 \\div 21} = \\frac{12}{5}`}</MathBlock>
       </div>
@@ -124,13 +124,13 @@ export default function Section02() {
 
       <Callout type="info">
         <strong>Definition:</strong> A <strong>rational number</strong> is any number that can
-        be expressed as a ratio <Math>{`\\frac{p}{q}`}</Math> where p and q are integers
-        and <Math>{`q \\neq 0`}</Math>.
+        be expressed as a ratio <InlineMath>{`\\frac{p}{q}`}</InlineMath> where p and q are integers
+        and <InlineMath>{`q \\neq 0`}</InlineMath>.
       </Callout>
 
       <p>
-        Examples of rationals: <Math>{`\\frac{3}{4}`}</Math>, <Math>{`-\\frac{7}{2}`}</Math>,
-        <Math>{`5 = \\frac{5}{1}`}</Math>, <Math>{`0.333... = \\frac{1}{3}`}</Math>
+        Examples of rationals: <InlineMath>{`\\frac{3}{4}`}</InlineMath>, <InlineMath>{`-\\frac{7}{2}`}</InlineMath>,
+        <InlineMath>{`5 = \\frac{5}{1}`}</InlineMath>, <InlineMath>{`0.333... = \\frac{1}{3}`}</InlineMath>
       </p>
 
       <h3>Decimal Representations</h3>
@@ -142,13 +142,13 @@ export default function Section02() {
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-primary-400 font-semibold mb-2">Terminating</p>
           <p className="text-dark-300">
-            <Math>{`\\frac{3}{8} = 0.375`}</Math>
+            <InlineMath>{`\\frac{3}{8} = 0.375`}</InlineMath>
           </p>
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-primary-400 font-semibold mb-2">Repeating</p>
           <p className="text-dark-300">
-            <Math>{`\\frac{2}{11} = 0.\\overline{18} = 0.181818...`}</Math>
+            <InlineMath>{`\\frac{2}{11} = 0.\\overline{18} = 0.181818...`}</InlineMath>
           </p>
         </div>
       </div>
@@ -162,14 +162,14 @@ export default function Section02() {
       </Callout>
 
       <p>
-        Famous irrationals include <Math>{`\\sqrt{2}`}</Math>, <Math>{`\\pi`}</Math>, and <Math>e</Math>.
-        We'll prove that <Math>{`\\sqrt{2}`}</Math> is irrational in the next chapter.
+        Famous irrationals include <InlineMath>{`\\sqrt{2}`}</InlineMath>, <InlineMath>{`\\pi`}</InlineMath>, and <InlineMath>e</InlineMath>.
+        We'll prove that <InlineMath>{`\\sqrt{2}`}</InlineMath> is irrational in the next chapter.
       </p>
 
       <h3>Why This Distinction Matters</h3>
       <p>
         The Pythagoreans believed all quantities could be expressed as ratios of whole numbers.
-        The discovery that <Math>{`\\sqrt{2}`}</Math> is irrational was reportedly so disturbing
+        The discovery that <InlineMath>{`\\sqrt{2}`}</InlineMath> is irrational was reportedly so disturbing
         that they tried to keep it secret. Legend has it that Hippasus, who revealed the proof,
         was drowned at sea for his transgression!
       </p>
@@ -184,9 +184,9 @@ export default function Section02() {
         <strong>Chapter Summary:</strong> Prime numbers provide the unique factorization of
         every integer. The Euclidean algorithm efficiently finds greatest common factors,
         which helps us simplify fractions. Rational numbers have terminating or repeating
-        decimals, while irrationals—like <Math>{`\\sqrt{2}`}</Math>—cannot be expressed as
+        decimals, while irrationals—like <InlineMath>{`\\sqrt{2}`}</InlineMath>—cannot be expressed as
         fractions at all. In the next chapter, we'll explore the Pythagorean theorem and
-        prove this remarkable fact about <Math>{`\\sqrt{2}`}</Math>.
+        prove this remarkable fact about <InlineMath>{`\\sqrt{2}`}</InlineMath>.
       </Callout>
     </LessonLayout>
   );

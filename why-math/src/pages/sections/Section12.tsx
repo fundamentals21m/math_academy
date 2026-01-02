@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { ProbabilitySimulator } from '@/components/visualizations';
 
 export default function Section12() {
@@ -27,23 +27,23 @@ export default function Section12() {
       <p>
         We have already encountered the set of possible outcomes when tossing coins
         or rolling dice. In probability theory, this set is called the{' '}
-        <strong>sample space</strong>, denoted <Math>S</Math>.
+        <strong>sample space</strong>, denoted <InlineMath>S</InlineMath>.
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: Coin and Dice Sample Spaces</p>
         <ul className="list-disc list-inside mt-2 space-y-2 text-dark-300">
           <li>
-            Tossing one coin: <Math>{`S = \\{h, t\\}`}</Math>, where <Math>{`n(S) = 2`}</Math>
+            Tossing one coin: <InlineMath>{`S = \\{h, t\\}`}</InlineMath>, where <InlineMath>{`n(S) = 2`}</InlineMath>
           </li>
           <li>
-            Tossing two coins: <Math>{`S = \\{(h,h), (h,t), (t,h), (t,t)\\}`}</Math>, where <Math>{`n(S) = 4`}</Math>
+            Tossing two coins: <InlineMath>{`S = \\{(h,h), (h,t), (t,h), (t,t)\\}`}</InlineMath>, where <InlineMath>{`n(S) = 4`}</InlineMath>
           </li>
           <li>
-            Rolling one die: <Math>{`S = \\{1, 2, 3, 4, 5, 6\\}`}</Math>, where <Math>{`n(S) = 6`}</Math>
+            Rolling one die: <InlineMath>{`S = \\{1, 2, 3, 4, 5, 6\\}`}</InlineMath>, where <InlineMath>{`n(S) = 6`}</InlineMath>
           </li>
           <li>
-            Rolling two dice: <Math>{`n(S) = 36`}</Math> (ordered pairs of outcomes)
+            Rolling two dice: <InlineMath>{`n(S) = 36`}</InlineMath> (ordered pairs of outcomes)
           </li>
         </ul>
       </div>
@@ -51,21 +51,21 @@ export default function Section12() {
       <h3>Events</h3>
 
       <p>
-        An <strong>event</strong> is any subset <Math>A</Math> of the sample space{' '}
-        <Math>S</Math>. Saying "event A occurs" means the outcome of the experiment
-        is a member of <Math>A</Math>.
+        An <strong>event</strong> is any subset <InlineMath>A</InlineMath> of the sample space{' '}
+        <InlineMath>S</InlineMath>. Saying "event A occurs" means the outcome of the experiment
+        is a member of <InlineMath>A</InlineMath>.
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: Events When Rolling Two Dice</p>
         <p className="mt-2">
-          Let <Math>A</Math> = "the sum of the two dice is 7."
+          Let <InlineMath>A</InlineMath> = "the sum of the two dice is 7."
         </p>
         <p className="mt-2">
-          <Math>{`A = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}`}</Math>
+          <InlineMath>{`A = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}`}</InlineMath>
         </p>
         <p className="mt-2 text-emerald-400">
-          Since <Math>{`n(A) = 6`}</Math> and <Math>{`n(S) = 36`}</Math>, there are
+          Since <InlineMath>{`n(A) = 6`}</InlineMath> and <InlineMath>{`n(S) = 36`}</InlineMath>, there are
           6 ways to get a sum of 7 out of 36 equally likely outcomes.
         </p>
       </div>
@@ -74,7 +74,7 @@ export default function Section12() {
 
       <p>
         When all outcomes in a sample space are <em>equally likely</em>, we define
-        the probability of an event <Math>A</Math> as:
+        the probability of an event <InlineMath>A</InlineMath> as:
       </p>
 
       <MathBlock>{`P(A) = \\frac{n(A)}{n(S)} = \\frac{\\text{number of favorable outcomes}}{\\text{total number of outcomes}}`}</MathBlock>
@@ -103,7 +103,7 @@ export default function Section12() {
           What is the probability of rolling a sum of 11 with two fair dice?
         </p>
         <p className="mt-2">
-          The outcomes that give 11 are: <Math>{`\\{(5,6), (6,5)\\}`}</Math>
+          The outcomes that give 11 are: <InlineMath>{`\\{(5,6), (6,5)\\}`}</InlineMath>
         </p>
         <MathBlock>{`P(\\text{sum} = 11) = \\frac{2}{36} = \\frac{1}{18} \\approx 0.056`}</MathBlock>
       </div>
@@ -141,9 +141,9 @@ export default function Section12() {
       <h2>12.2 Mutually Exclusive Events</h2>
 
       <p>
-        Two events <Math>A</Math> and <Math>B</Math> are <strong>mutually exclusive</strong>{' '}
+        Two events <InlineMath>A</InlineMath> and <InlineMath>B</InlineMath> are <strong>mutually exclusive</strong>{' '}
         (or disjoint) if they cannot both occur—that is, if{' '}
-        <Math>{`A \\cap B = \\emptyset`}</Math>.
+        <InlineMath>{`A \\cap B = \\emptyset`}</InlineMath>.
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
@@ -151,10 +151,10 @@ export default function Section12() {
         <p className="mt-2">When rolling a single die:</p>
         <ul className="list-disc list-inside mt-2 space-y-1 text-dark-300">
           <li>
-            <Math>{`A = \\{1, 2\\}`}</Math> (rolling 1 or 2)
+            <InlineMath>{`A = \\{1, 2\\}`}</InlineMath> (rolling 1 or 2)
           </li>
           <li>
-            <Math>{`B = \\{5, 6\\}`}</Math> (rolling 5 or 6)
+            <InlineMath>{`B = \\{5, 6\\}`}</InlineMath> (rolling 5 or 6)
           </li>
         </ul>
         <p className="mt-2 text-emerald-400">
@@ -163,8 +163,8 @@ export default function Section12() {
       </div>
 
       <Callout type="success">
-        <strong>Addition Rule for Mutually Exclusive Events:</strong> If <Math>A</Math>{' '}
-        and <Math>B</Math> are mutually exclusive, then:
+        <strong>Addition Rule for Mutually Exclusive Events:</strong> If <InlineMath>A</InlineMath>{' '}
+        and <InlineMath>B</InlineMath> are mutually exclusive, then:
         <MathBlock>{`P(A \\cup B) = P(A) + P(B)`}</MathBlock>
         The probability that <em>either</em> A <em>or</em> B occurs is the sum of
         their individual probabilities.
@@ -173,8 +173,8 @@ export default function Section12() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">Example: Rolling Low or High</p>
         <p className="mt-2">
-          With <Math>{`A = \\{1, 2\\}`}</Math> and <Math>{`B = \\{5, 6\\}`}</Math>, what is{' '}
-          <Math>{`P(A \\cup B)`}</Math>?
+          With <InlineMath>{`A = \\{1, 2\\}`}</InlineMath> and <InlineMath>{`B = \\{5, 6\\}`}</InlineMath>, what is{' '}
+          <InlineMath>{`P(A \\cup B)`}</InlineMath>?
         </p>
         <MathBlock>{`P(A \\cup B) = P(A) + P(B) = \\frac{2}{6} + \\frac{2}{6} = \\frac{4}{6} = \\frac{2}{3}`}</MathBlock>
       </div>
@@ -192,12 +192,12 @@ export default function Section12() {
           What is the probability of drawing a card that is either a heart or a face card?
         </p>
         <p className="mt-2">
-          Let <Math>H</Math> = drawing a heart, <Math>F</Math> = drawing a face card.
+          Let <InlineMath>H</InlineMath> = drawing a heart, <InlineMath>F</InlineMath> = drawing a face card.
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1 text-dark-300">
-          <li><Math>{`n(H) = 13`}</Math> (13 hearts)</li>
-          <li><Math>{`n(F) = 12`}</Math> (12 face cards)</li>
-          <li><Math>{`n(H \\cap F) = 3`}</Math> (J, Q, K of hearts)</li>
+          <li><InlineMath>{`n(H) = 13`}</InlineMath> (13 hearts)</li>
+          <li><InlineMath>{`n(F) = 12`}</InlineMath> (12 face cards)</li>
+          <li><InlineMath>{`n(H \\cap F) = 3`}</InlineMath> (J, Q, K of hearts)</li>
         </ul>
         <p className="mt-2">
           If we just add 13 + 12, we count the 3 face-card hearts twice!
@@ -242,7 +242,7 @@ export default function Section12() {
           <MathBlock>{`P(A \\cup B) = P(A) + P(B) - P(A \\cap B)`}</MathBlock>
           <p className="mt-2 text-dark-300">
             The probability of A <em>or</em> B equals the sum minus the overlap.
-            (For mutually exclusive events, <Math>{`P(A \\cap B) = 0`}</Math>.)
+            (For mutually exclusive events, <InlineMath>{`P(A \\cap B) = 0`}</InlineMath>.)
           </p>
         </div>
 
@@ -259,7 +259,7 @@ export default function Section12() {
       <h3>Complement Rule</h3>
 
       <p>
-        A useful consequence of these rules involves the complement <Math>{`A^c`}</Math>{' '}
+        A useful consequence of these rules involves the complement <InlineMath>{`A^c`}</InlineMath>{' '}
         (all outcomes <em>not</em> in A):
       </p>
 
@@ -368,14 +368,14 @@ export default function Section12() {
       <h3>The Birthday Problem</h3>
 
       <p>
-        A famous probability puzzle: In a group of <Math>n</Math> people, what is the
+        A famous probability puzzle: In a group of <InlineMath>n</InlineMath> people, what is the
         probability that at least two share the same birthday?
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: 23 People</p>
         <p className="mt-2">
-          It's easier to compute the complement—the probability that all <Math>n</Math>{' '}
+          It's easier to compute the complement—the probability that all <InlineMath>n</InlineMath>{' '}
           people have <em>different</em> birthdays.
         </p>
         <p className="mt-2">
@@ -383,7 +383,7 @@ export default function Section12() {
         </p>
         <MathBlock>{`P(\\text{all different}) = \\frac{365}{365} \\cdot \\frac{364}{365} \\cdot \\frac{363}{365} \\cdots \\frac{365-n+1}{365}`}</MathBlock>
         <p className="mt-2">
-          For <Math>{`n = 23`}</Math>:
+          For <InlineMath>{`n = 23`}</InlineMath>:
         </p>
         <MathBlock>{`P(\\text{all different}) \\approx 0.493`}</MathBlock>
         <MathBlock>{`P(\\text{at least one match}) = 1 - 0.493 \\approx 0.507`}</MathBlock>
@@ -402,13 +402,13 @@ export default function Section12() {
         <strong>Chapter Summary:</strong> Probability provides a mathematical framework
         for analyzing uncertain events.
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li><strong>Sample space:</strong> The set <Math>S</Math> of all possible outcomes</li>
+          <li><strong>Sample space:</strong> The set <InlineMath>S</InlineMath> of all possible outcomes</li>
           <li><strong>Event:</strong> Any subset of the sample space</li>
-          <li><strong>Probability:</strong> <Math>{`P(A) = n(A)/n(S)`}</Math> for equally likely outcomes</li>
-          <li><strong>Addition rule:</strong> <Math>{`P(A \\cup B) = P(A) + P(B) - P(A \\cap B)`}</Math></li>
-          <li><strong>Multiplication rule:</strong> <Math>{`P(A \\cap B) = P(A) \\cdot P(B \\mid A)`}</Math></li>
-          <li><strong>Complement:</strong> <Math>{`P(A^c) = 1 - P(A)`}</Math></li>
-          <li><strong>Independence:</strong> <Math>{`P(A \\cap B) = P(A) \\cdot P(B)`}</Math> when events don't affect each other</li>
+          <li><strong>Probability:</strong> <InlineMath>{`P(A) = n(A)/n(S)`}</InlineMath> for equally likely outcomes</li>
+          <li><strong>Addition rule:</strong> <InlineMath>{`P(A \\cup B) = P(A) + P(B) - P(A \\cap B)`}</InlineMath></li>
+          <li><strong>Multiplication rule:</strong> <InlineMath>{`P(A \\cap B) = P(A) \\cdot P(B \\mid A)`}</InlineMath></li>
+          <li><strong>Complement:</strong> <InlineMath>{`P(A^c) = 1 - P(A)`}</InlineMath></li>
+          <li><strong>Independence:</strong> <InlineMath>{`P(A \\cap B) = P(A) \\cdot P(B)`}</InlineMath> when events don't affect each other</li>
         </ul>
       </Callout>
     </LessonLayout>

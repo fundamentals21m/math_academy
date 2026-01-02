@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
-import { MathBlock, Math as MathInline } from '../../components/common/MathBlock';
+import { MathBlock, InlineMath } from '../../components/common/MathBlock';
 
 // Interactive Cartesian Coordinate System
 function CartesianPlane() {
@@ -820,9 +820,9 @@ export default function Section04() {
         <div className="bg-dark-800 p-4 rounded-lg">
           <h4 className="font-semibold text-amber-400 mb-2">Modern Notation</h4>
           <ul className="text-sm text-dark-300 space-y-1">
-            <li>• <MathInline>x, y, z</MathInline> for unknowns</li>
-            <li>• <MathInline>a, b, c</MathInline> for constants</li>
-            <li>• <MathInline>x^2, x^3</MathInline> for powers (exponential notation)</li>
+            <li>• <InlineMath>x, y, z</InlineMath> for unknowns</li>
+            <li>• <InlineMath>a, b, c</InlineMath> for constants</li>
+            <li>• <InlineMath>x^2, x^3</InlineMath> for powers (exponential notation)</li>
             <li>• Equations written as we write them today</li>
           </ul>
         </div>
@@ -1012,7 +1012,7 @@ export default function Section04() {
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
             <span>
-              Descartes introduced modern algebraic notation: <MathInline>x^2</MathInline>,
+              Descartes introduced modern algebraic notation: <InlineMath>x^2</InlineMath>,
               variables x, y, z for unknowns, and equations as we write them today.
             </span>
           </li>

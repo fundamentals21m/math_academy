@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
-import { MathBlock, Math as MathInline } from '../../components/common/MathBlock';
+import { MathBlock, InlineMath } from '../../components/common/MathBlock';
 
 // Central Limit Theorem Demo
 function CentralLimitTheorem() {
@@ -911,7 +911,7 @@ export default function Section12() {
       <Callout type="success">
         <p>
           <strong>The Laplace Transform:</strong> Laplace also developed the transform that
-          bears his name: <MathInline>{'F(s) = \\int_0^\\infty f(t)e^{-st}dt'}</MathInline>.
+          bears his name: <InlineMath>{'F(s) = \\int_0^\\infty f(t)e^{-st}dt'}</InlineMath>.
           This converts differential equations into algebraic equations, making them much
           easier to solve—essential in engineering and physics.
         </p>

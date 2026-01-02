@@ -1,40 +1,40 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section09() {
   return (
     <LessonLayout sectionId={9}>
       {/* Introduction */}
       <p>
-        The <strong>LU factorization</strong> expresses elimination as matrix multiplication: <Math>A = LU</Math>.
-        Here <Math>L</Math> is lower triangular (from the multipliers) and <Math>U</Math> is upper triangular (from elimination).
+        The <strong>LU factorization</strong> expresses elimination as matrix multiplication: <InlineMath>A = LU</InlineMath>.
+        Here <InlineMath>L</InlineMath> is lower triangular (from the multipliers) and <InlineMath>U</InlineMath> is upper triangular (from elimination).
       </p>
 
       <h2>From Elimination to Factorization</h2>
 
       <p>
-        Elimination transforms <Math>A</Math> to <Math>U</Math>: we have <Math>EA = U</Math>. Solving for <Math>A</Math> gives <Math>{`A = E^{-1}U = LU`}</Math>.
+        Elimination transforms <InlineMath>A</InlineMath> to <InlineMath>U</InlineMath>: we have <InlineMath>EA = U</InlineMath>. Solving for <InlineMath>A</InlineMath> gives <InlineMath>{`A = E^{-1}U = LU`}</InlineMath>.
       </p>
 
       <Definition title="LU Factorization" className="my-6">
         <p>
-          If elimination on <Math>A</Math> requires no row exchanges, then <Math>A</Math> factors into:
+          If elimination on <InlineMath>A</InlineMath> requires no row exchanges, then <InlineMath>A</InlineMath> factors into:
         </p>
         <MathBlock>
           {`A = LU`}
         </MathBlock>
         <p className="mt-2">
-          <Math>L</Math> is <strong>lower triangular</strong> with 1's on the diagonal.<br />
-          <Math>U</Math> is <strong>upper triangular</strong> with the pivots on its diagonal.
+          <InlineMath>L</InlineMath> is <strong>lower triangular</strong> with 1's on the diagonal.<br />
+          <InlineMath>U</InlineMath> is <strong>upper triangular</strong> with the pivots on its diagonal.
         </p>
       </Definition>
 
-      <h2>Where Does <Math>L</Math> Come From?</h2>
+      <h2>Where Does <InlineMath>L</InlineMath> Come From?</h2>
 
       <p>
-        The entries of <Math>L</Math> are the <strong>multipliers</strong> <Math>{`\\ell_{ij}`}</Math> from elimination.
-        Below the diagonal of <Math>L</Math>, entry <Math>(i, j)</Math> is <Math>{`\\ell_{ij}`}</Math>.
+        The entries of <InlineMath>L</InlineMath> are the <strong>multipliers</strong> <InlineMath>{`\\ell_{ij}`}</InlineMath> from elimination.
+        Below the diagonal of <InlineMath>L</InlineMath>, entry <InlineMath>(i, j)</InlineMath> is <InlineMath>{`\\ell_{ij}`}</InlineMath>.
       </p>
 
       <Example title="LU Factorization Example" className="my-6">
@@ -45,28 +45,28 @@ export default function Section09() {
           {`L = \\begin{bmatrix} 1 & 0 \\\\ 3 & 1 \\end{bmatrix} \\quad U = \\begin{bmatrix} 2 & 1 \\\\ 0 & 4 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Check: <Math>{`LU = \\begin{bmatrix} 2 & 1 \\\\ 6 & 7 \\end{bmatrix} = A`}</Math> ✓
+          Check: <InlineMath>{`LU = \\begin{bmatrix} 2 & 1 \\\\ 6 & 7 \\end{bmatrix} = A`}</InlineMath> ✓
         </p>
       </Example>
 
-      <h2>Solving <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> with <Math>LU</Math></h2>
+      <h2>Solving <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> with <InlineMath>LU</InlineMath></h2>
 
       <p>
-        Once we have <Math>A = LU</Math>, solving <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> becomes two triangular systems:
+        Once we have <InlineMath>A = LU</InlineMath>, solving <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> becomes two triangular systems:
       </p>
 
       <Definition title="Two-Step Solution" className="my-6">
         <ol className="list-decimal list-inside space-y-2">
-          <li><strong>Forward substitution:</strong> Solve <Math>{`L\\mathbf{c} = \\mathbf{b}`}</Math> for <Math>{`\\mathbf{c}`}</Math>.</li>
-          <li><strong>Back substitution:</strong> Solve <Math>{`U\\mathbf{x} = \\mathbf{c}`}</Math> for <Math>{`\\mathbf{x}`}</Math>.</li>
+          <li><strong>Forward substitution:</strong> Solve <InlineMath>{`L\\mathbf{c} = \\mathbf{b}`}</InlineMath> for <InlineMath>{`\\mathbf{c}`}</InlineMath>.</li>
+          <li><strong>Back substitution:</strong> Solve <InlineMath>{`U\\mathbf{x} = \\mathbf{c}`}</InlineMath> for <InlineMath>{`\\mathbf{x}`}</InlineMath>.</li>
         </ol>
       </Definition>
 
       <h2>Why Factor?</h2>
 
       <p>
-        For a single <Math>{`\\mathbf{b}`}</Math>, elimination and <Math>LU</Math> do the same work. But if you need to solve
-        <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> for <em>many different</em> <Math>{`\\mathbf{b}`}</Math>'s, the <Math>LU</Math> factorization is computed once and reused!
+        For a single <InlineMath>{`\\mathbf{b}`}</InlineMath>, elimination and <InlineMath>LU</InlineMath> do the same work. But if you need to solve
+        <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> for <em>many different</em> <InlineMath>{`\\mathbf{b}`}</InlineMath>'s, the <InlineMath>LU</InlineMath> factorization is computed once and reused!
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-4 my-6 border border-amber-500/20">
@@ -86,22 +86,22 @@ export default function Section09() {
         className="my-6"
         proof={
           <>
-            <p>At step <Math>k</Math> of elimination, we work on an <Math>(n-k+1) \times (n-k+1)</Math> submatrix.</p>
-            <p className="mt-2">The work at step <Math>k</Math> is approximately <Math>(n-k)^2</Math> operations (one multiplication and subtraction for each entry below and to the right of pivot <Math>k</Math>).</p>
+            <p>At step <InlineMath>k</InlineMath> of elimination, we work on an <InlineMath>(n-k+1) \times (n-k+1)</InlineMath> submatrix.</p>
+            <p className="mt-2">The work at step <InlineMath>k</InlineMath> is approximately <InlineMath>(n-k)^2</InlineMath> operations (one multiplication and subtraction for each entry below and to the right of pivot <InlineMath>k</InlineMath>).</p>
             <p className="mt-2">Total work:</p>
             <MathBlock>{`\\sum_{k=1}^{n-1}(n-k)^2 = (n-1)^2 + (n-2)^2 + \\cdots + 1^2 = \\frac{(n-1)n(2n-1)}{6} \\approx \\frac{n^3}{3}`}</MathBlock>
-            <p>For back/forward substitution: each of the <Math>n</Math> equations involves about <Math>n</Math> operations, giving <Math>n^2</Math> total.</p>
+            <p>For back/forward substitution: each of the <InlineMath>n</InlineMath> equations involves about <InlineMath>n</InlineMath> operations, giving <InlineMath>n^2</InlineMath> total.</p>
           </>
         }
       >
         <p>
-          For an <Math>n \times n</Math> matrix, elimination requires approximately:
+          For an <InlineMath>n \times n</InlineMath> matrix, elimination requires approximately:
         </p>
         <MathBlock>
           {`\\frac{n^3}{3} \\text{ multiplications/subtractions (to find } L \\text{ and } U\\text{)}`}
         </MathBlock>
         <p className="mt-2">
-          Each solve <Math>{`L\\mathbf{c} = \\mathbf{b}`}</Math> and <Math>{`U\\mathbf{x} = \\mathbf{c}`}</Math> requires only <Math>n^2</Math> operations.
+          Each solve <InlineMath>{`L\\mathbf{c} = \\mathbf{b}`}</InlineMath> and <InlineMath>{`U\\mathbf{x} = \\mathbf{c}`}</InlineMath> requires only <InlineMath>n^2</InlineMath> operations.
         </p>
       </Theorem>
 
@@ -111,15 +111,15 @@ export default function Section09() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span><Math>A = LU</Math>: <Math>L</Math> is lower triangular (1's on diagonal, multipliers below), <Math>U</Math> is upper triangular (pivots on diagonal).</span>
+            <span><InlineMath>A = LU</InlineMath>: <InlineMath>L</InlineMath> is lower triangular (1's on diagonal, multipliers below), <InlineMath>U</InlineMath> is upper triangular (pivots on diagonal).</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Solve <Math>{`A\\mathbf{x} = \\mathbf{b}`}</Math> in two steps: <Math>{`L\\mathbf{c} = \\mathbf{b}`}</Math> then <Math>{`U\\mathbf{x} = \\mathbf{c}`}</Math>.</span>
+            <span>Solve <InlineMath>{`A\\mathbf{x} = \\mathbf{b}`}</InlineMath> in two steps: <InlineMath>{`L\\mathbf{c} = \\mathbf{b}`}</InlineMath> then <InlineMath>{`U\\mathbf{x} = \\mathbf{c}`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>Factoring costs <Math>n^3/3</Math> operations; each solve costs <Math>n^2</Math> operations.</span>
+            <span>Factoring costs <InlineMath>n^3/3</InlineMath> operations; each solve costs <InlineMath>n^2</InlineMath> operations.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>

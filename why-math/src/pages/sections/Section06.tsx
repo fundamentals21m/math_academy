@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { CompoundInterestVisualizer, HalfLifeVisualizer } from '@/components/visualizations';
 
 export default function Section06() {
@@ -20,13 +20,13 @@ export default function Section06() {
 
       <p>
         A <strong>geometric sequence</strong> is a sequence of numbers where each term
-        is obtained by multiplying the previous term by a fixed ratio <Math>r</Math>:
+        is obtained by multiplying the previous term by a fixed ratio <InlineMath>r</InlineMath>:
       </p>
 
       <MathBlock>{`a, \\quad ar, \\quad ar^2, \\quad ar^3, \\quad ar^4, \\quad \\ldots`}</MathBlock>
 
       <p>
-        The term after <Math>n</Math> steps is <Math>{`ar^n`}</Math>. This simple pattern
+        The term after <InlineMath>n</InlineMath> steps is <InlineMath>{`ar^n`}</InlineMath>. This simple pattern
         appears in an astonishing variety of contexts.
       </p>
 
@@ -42,11 +42,11 @@ export default function Section06() {
         <p className="mt-2">The sequence is:</p>
         <MathBlock>{`1, 5, 25, 125, 625, \\ldots`}</MathBlock>
         <p>
-          This is geometric with <Math>a = 1</Math> and <Math>r = 5</Math>. After 8 weeks,
-          the number of new participants is <Math>{`5^8 = 390,625`}</Math>.
+          This is geometric with <InlineMath>a = 1</InlineMath> and <InlineMath>r = 5</InlineMath>. After 8 weeks,
+          the number of new participants is <InlineMath>{`5^8 = 390,625`}</InlineMath>.
         </p>
         <p className="mt-2 text-rose-400">
-          The total involved would be <Math>{`1 + 5 + 5^2 + \\cdots + 5^8 = 488,281`}</Math> people!
+          The total involved would be <InlineMath>{`1 + 5 + 5^2 + \\cdots + 5^8 = 488,281`}</InlineMath> people!
         </p>
       </div>
 
@@ -64,10 +64,10 @@ export default function Section06() {
       </p>
 
       <Callout type="success">
-        <strong>Half-Life Formula:</strong> If the half-life is <Math>h</Math> time units,
-        then after <Math>t</Math> time units, the quantity remaining is:
+        <strong>Half-Life Formula:</strong> If the half-life is <InlineMath>h</InlineMath> time units,
+        then after <InlineMath>t</InlineMath> time units, the quantity remaining is:
         <MathBlock>{`Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}`}</MathBlock>
-        where <Math>{`Q_0`}</Math> is the initial quantity.
+        where <InlineMath>{`Q_0`}</InlineMath> is the initial quantity.
       </Callout>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
@@ -77,7 +77,7 @@ export default function Section06() {
           remains after 4800 years?
         </p>
         <p className="mt-2">
-          Since <Math>{`4800 = 3 \\times 1600`}</Math>, we have 3 half-lives:
+          Since <InlineMath>{`4800 = 3 \\times 1600`}</InlineMath>, we have 3 half-lives:
         </p>
         <MathBlock>{`Q = 100 \\cdot \\left(\\frac{1}{2}\\right)^3 = 100 \\cdot \\frac{1}{8} = 12.5 \\text{ grams}`}</MathBlock>
       </div>
@@ -88,10 +88,10 @@ export default function Section06() {
 
       <p>
         When a hot object cools in a room, the temperature drop follows a geometric
-        pattern. If the room temperature is <Math>R</Math> and the object starts at
-        temperature <Math>{`T_0`}</Math>, after each time interval the excess temperature
-        <Math>{`(T - R)`}</Math> is multiplied by a constant factor <Math>r</Math> (where{' '}
-        <Math>{`0 < r < 1`}</Math>).
+        pattern. If the room temperature is <InlineMath>R</InlineMath> and the object starts at
+        temperature <InlineMath>{`T_0`}</InlineMath>, after each time interval the excess temperature
+        <InlineMath>{`(T - R)`}</InlineMath> is multiplied by a constant factor <InlineMath>r</InlineMath> (where{' '}
+        <InlineMath>{`0 < r < 1`}</InlineMath>).
       </p>
 
       <h2>6.2 More on Half-Lives</h2>
@@ -99,13 +99,13 @@ export default function Section06() {
       <h3>Fractional Exponents</h3>
 
       <p>
-        What does <Math>{`r^{1/2}`}</Math> mean? If we want the laws of exponents to hold,
+        What does <InlineMath>{`r^{1/2}`}</InlineMath> mean? If we want the laws of exponents to hold,
         we need:
       </p>
       <MathBlock>{`r^{1/2} \\cdot r^{1/2} = r^{1/2 + 1/2} = r^1 = r`}</MathBlock>
 
       <p>
-        So <Math>{`r^{1/2}`}</Math> must be the square root of <Math>r</Math>. More generally:
+        So <InlineMath>{`r^{1/2}`}</InlineMath> must be the square root of <InlineMath>r</InlineMath>. More generally:
       </p>
 
       <Callout type="info">
@@ -130,7 +130,7 @@ export default function Section06() {
         <p className="mt-2">We need to solve:</p>
         <MathBlock>{`\\left(\\frac{1}{2}\\right)^{t/5730} = 0.70`}</MathBlock>
         <p className="mt-2">
-          Using logarithms (covered later), we find <Math>{`t \\approx 2950`}</Math> years.
+          Using logarithms (covered later), we find <InlineMath>{`t \\approx 2950`}</InlineMath> years.
         </p>
       </div>
 
@@ -142,8 +142,8 @@ export default function Section06() {
       </p>
 
       <Callout type="success">
-        <strong>Compound Interest Formula:</strong> If principal <Math>P</Math> is invested
-        at annual interest rate <Math>I</Math>% compounded annually for <Math>n</Math> years:
+        <strong>Compound Interest Formula:</strong> If principal <InlineMath>P</InlineMath> is invested
+        at annual interest rate <InlineMath>I</InlineMath>% compounded annually for <InlineMath>n</InlineMath> years:
         <MathBlock>{`A = P(1 + i)^n \\quad \\text{where } i = I/100`}</MathBlock>
       </Callout>
 
@@ -167,8 +167,8 @@ export default function Section06() {
 
       <p>
         Interest can be compounded more frequently than annually. If the annual rate
-        is <Math>I</Math>% and interest is compounded <Math>k</Math> times per year,
-        then after <Math>n</Math> years:
+        is <InlineMath>I</InlineMath>% and interest is compounded <InlineMath>k</InlineMath> times per year,
+        then after <InlineMath>n</InlineMath> years:
       </p>
 
       <MathBlock>{`A = P\\left(1 + \\frac{i}{k}\\right)^{kn}`}</MathBlock>
@@ -201,7 +201,7 @@ export default function Section06() {
       <ul className="list-disc list-inside space-y-2 my-4 text-dark-300">
         <li>
           <strong className="text-primary-400">Inflation:</strong> If prices rise 5% per
-          year, then after 20 years, prices are <Math>{`(1.05)^{20} \\approx 2.65`}</Math> times
+          year, then after 20 years, prices are <InlineMath>{`(1.05)^{20} \\approx 2.65`}</InlineMath> times
           as high.
         </li>
         <li>
@@ -243,7 +243,7 @@ export default function Section06() {
       <Callout type="success">
         <strong>Theorem:</strong> If an investor's tax rate remains fixed, an IRA effectively
         makes the accumulated interest tax-free compared to an ordinary investment account.
-        The mathematics: <Math>{`P(1+i)^n(1-t) = P(1-t)(1+i)^n`}</Math> by the commutative law.
+        The mathematics: <InlineMath>{`P(1+i)^n(1-t) = P(1-t)(1+i)^n`}</InlineMath> by the commutative law.
       </Callout>
 
       <h2>6.5 Geometric Series—The "Sum" of a Geometric Sequence</h2>
@@ -258,13 +258,13 @@ export default function Section06() {
       <h3>Finite Sums</h3>
 
       <p>
-        First, let's find the sum of the first <Math>{`n+1`}</Math> terms:
+        First, let's find the sum of the first <InlineMath>{`n+1`}</InlineMath> terms:
       </p>
       <MathBlock>{`S_n = a + ar + ar^2 + \\cdots + ar^n`}</MathBlock>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-indigo-500">
         <p className="font-semibold text-indigo-400">The Clever Trick</p>
-        <p className="mt-2">Multiply <Math>{`S_n`}</Math> by <Math>r</Math> and subtract:</p>
+        <p className="mt-2">Multiply <InlineMath>{`S_n`}</InlineMath> by <InlineMath>r</InlineMath> and subtract:</p>
         <MathBlock>{`\\begin{aligned}
 S_n &= a + ar + ar^2 + \\cdots + ar^n \\\\
 rS_n &= \\quad\\; ar + ar^2 + \\cdots + ar^n + ar^{n+1} \\\\
@@ -278,23 +278,23 @@ S_n - rS_n &= a - ar^{n+1}
       <h3>Infinite Series</h3>
 
       <p>
-        When <Math>{`|r| < 1`}</Math>, the powers <Math>{`r^n`}</Math> approach zero as{' '}
-        <Math>n</Math> grows. So <Math>{`S_n`}</Math> approaches a finite limit:
+        When <InlineMath>{`|r| < 1`}</InlineMath>, the powers <InlineMath>{`r^n`}</InlineMath> approach zero as{' '}
+        <InlineMath>n</InlineMath> grows. So <InlineMath>{`S_n`}</InlineMath> approaches a finite limit:
       </p>
 
       <Callout type="success">
-        <strong>Sum of an Infinite Geometric Series:</strong> When <Math>{`|r| < 1`}</Math>:
+        <strong>Sum of an Infinite Geometric Series:</strong> When <InlineMath>{`|r| < 1`}</InlineMath>:
         <MathBlock>{`a + ar + ar^2 + ar^3 + \\cdots = \\frac{a}{1-r}`}</MathBlock>
       </Callout>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: Repeating Decimals</p>
         <p className="mt-2">
-          Express <Math>{`0.\\overline{3} = 0.3333\\ldots`}</Math> as a fraction.
+          Express <InlineMath>{`0.\\overline{3} = 0.3333\\ldots`}</InlineMath> as a fraction.
         </p>
         <MathBlock>{`0.\\overline{3} = \\frac{3}{10} + \\frac{3}{100} + \\frac{3}{1000} + \\cdots`}</MathBlock>
         <p className="mt-2">
-          This is geometric with <Math>{`a = 3/10`}</Math> and <Math>{`r = 1/10`}</Math>:
+          This is geometric with <InlineMath>{`a = 3/10`}</InlineMath> and <InlineMath>{`r = 1/10`}</InlineMath>:
         </p>
         <MathBlock>{`S = \\frac{3/10}{1 - 1/10} = \\frac{3/10}{9/10} = \\frac{3}{9} = \\frac{1}{3}`}</MathBlock>
       </div>
@@ -302,22 +302,22 @@ S_n - rS_n &= a - ar^{n+1}
       <h3>The Bouncing Ball</h3>
 
       <p>
-        A ball dropped from height <Math>h</Math> bounces back to <Math>rh</Math>{' '}
-        (where <Math>{`0 < r < 1`}</Math>), then to <Math>{`r^2h`}</Math>, and so on.
+        A ball dropped from height <InlineMath>h</InlineMath> bounces back to <InlineMath>rh</InlineMath>{' '}
+        (where <InlineMath>{`0 < r < 1`}</InlineMath>), then to <InlineMath>{`r^2h`}</InlineMath>, and so on.
         How far does it travel in total?
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example: Total Distance</p>
         <p className="mt-2">
-          A ball dropped from 5 feet bounces back to <Math>{`\\frac{2}{3}`}</Math> of its
+          A ball dropped from 5 feet bounces back to <InlineMath>{`\\frac{2}{3}`}</InlineMath> of its
           previous height each time.
         </p>
         <p className="mt-2">Total distance:</p>
         <MathBlock>{`5 + 10\\left(\\frac{2}{3}\\right) + 10\\left(\\frac{2}{3}\\right)^2 + 10\\left(\\frac{2}{3}\\right)^3 + \\cdots`}</MathBlock>
         <p className="mt-2">
-          The series part (after the initial 5) has <Math>{`a = 20/3`}</Math> and{' '}
-          <Math>{`r = 2/3`}</Math>:
+          The series part (after the initial 5) has <InlineMath>{`a = 20/3`}</InlineMath> and{' '}
+          <InlineMath>{`r = 2/3`}</InlineMath>:
         </p>
         <MathBlock>{`5 + \\frac{20/3}{1 - 2/3} = 5 + \\frac{20/3}{1/3} = 5 + 20 = 25 \\text{ feet}`}</MathBlock>
         <p className="mt-2 text-emerald-400">
@@ -328,17 +328,17 @@ S_n - rS_n &= a - ar^{n+1}
       <Callout type="info">
         <strong>Surprising Fact:</strong> The ball also bounces for only a <em>finite</em>{' '}
         amount of time! This follows from the fact that the times between bounces also
-        form a geometric series (each bounce takes <Math>{`\\sqrt{r}`}</Math> times as
+        form a geometric series (each bounce takes <InlineMath>{`\\sqrt{r}`}</InlineMath> times as
         long as the previous one).
       </Callout>
 
       <Callout type="success">
-        <strong>Chapter Summary:</strong> Geometric sequences <Math>{`a, ar, ar^2, \\ldots`}</Math>{' '}
+        <strong>Chapter Summary:</strong> Geometric sequences <InlineMath>{`a, ar, ar^2, \\ldots`}</InlineMath>{' '}
         model exponential growth and decay throughout science and finance. The half-life
-        formula <Math>{`Q = Q_0(1/2)^{t/h}`}</Math> describes radioactive decay and carbon
-        dating. Compound interest <Math>{`A = P(1+i)^n`}</Math> shows how money grows
-        exponentially. When <Math>{`|r| < 1`}</Math>, the infinite geometric series sums
-        to <Math>{`a/(1-r)`}</Math>, explaining repeating decimals and bounded infinite
+        formula <InlineMath>{`Q = Q_0(1/2)^{t/h}`}</InlineMath> describes radioactive decay and carbon
+        dating. Compound interest <InlineMath>{`A = P(1+i)^n`}</InlineMath> shows how money grows
+        exponentially. When <InlineMath>{`|r| < 1`}</InlineMath>, the infinite geometric series sums
+        to <InlineMath>{`a/(1-r)`}</InlineMath>, explaining repeating decimals and bounded infinite
         processes like bouncing balls.
       </Callout>
     </LessonLayout>

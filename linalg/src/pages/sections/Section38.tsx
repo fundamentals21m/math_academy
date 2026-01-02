@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section38() {
   return (
@@ -16,14 +16,14 @@ export default function Section38() {
 
       <Definition title="Incidence Matrix" className="my-6">
         <p>
-          For a graph with <Math>n</Math> nodes and <Math>m</Math> edges, the <strong>incidence matrix</strong>
-          <Math>A</Math> is <Math>m \times n</Math>:
+          For a graph with <InlineMath>n</InlineMath> nodes and <InlineMath>m</InlineMath> edges, the <strong>incidence matrix</strong>
+          <InlineMath>A</InlineMath> is <InlineMath>m \times n</InlineMath>:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li>Row for each edge</li>
           <li>Column for each node</li>
-          <li><Math>{`A_{ij} = -1`}</Math> if edge <Math>i</Math> starts at node <Math>j</Math></li>
-          <li><Math>{`A_{ij} = +1`}</Math> if edge <Math>i</Math> ends at node <Math>j</Math></li>
+          <li><InlineMath>{`A_{ij} = -1`}</InlineMath> if edge <InlineMath>i</InlineMath> starts at node <InlineMath>j</InlineMath></li>
+          <li><InlineMath>{`A_{ij} = +1`}</InlineMath> if edge <InlineMath>i</InlineMath> ends at node <InlineMath>j</InlineMath></li>
         </ul>
       </Definition>
 
@@ -46,15 +46,15 @@ export default function Section38() {
         className="my-6"
         proof={
           <>
-            <p>For edge <Math>e</Math> from node <Math>i</Math> to node <Math>j</Math>, row <Math>e</Math> of <Math>A</Math> has <Math>-1</Math> at column <Math>i</Math> and <Math>+1</Math> at column <Math>j</Math>.</p>
-            <p className="mt-2">Thus <Math>{`(A\\mathbf{x})_e = x_j - x_i`}</Math> = voltage difference across edge <Math>e</Math>.</p>
-            <p className="mt-2"><strong>Nullspace:</strong> <Math>{`A\\mathbf{x} = \\mathbf{0}`}</Math> means all voltage differences are zero: <Math>{`x_j = x_i`}</Math> for all edges.</p>
-            <p className="mt-2">In a connected graph, this implies all <Math>{`x_i`}</Math> are equal. Thus <Math>{`N(A) = \\text{span}(\\mathbf{1})`}</Math> where <Math>{`\\mathbf{1} = (1, 1, \\ldots, 1)^T`}</Math>.</p>
+            <p>For edge <InlineMath>e</InlineMath> from node <InlineMath>i</InlineMath> to node <InlineMath>j</InlineMath>, row <InlineMath>e</InlineMath> of <InlineMath>A</InlineMath> has <InlineMath>-1</InlineMath> at column <InlineMath>i</InlineMath> and <InlineMath>+1</InlineMath> at column <InlineMath>j</InlineMath>.</p>
+            <p className="mt-2">Thus <InlineMath>{`(A\\mathbf{x})_e = x_j - x_i`}</InlineMath> = voltage difference across edge <InlineMath>e</InlineMath>.</p>
+            <p className="mt-2"><strong>Nullspace:</strong> <InlineMath>{`A\\mathbf{x} = \\mathbf{0}`}</InlineMath> means all voltage differences are zero: <InlineMath>{`x_j = x_i`}</InlineMath> for all edges.</p>
+            <p className="mt-2">In a connected graph, this implies all <InlineMath>{`x_i`}</InlineMath> are equal. Thus <InlineMath>{`N(A) = \\text{span}(\\mathbf{1})`}</InlineMath> where <InlineMath>{`\\mathbf{1} = (1, 1, \\ldots, 1)^T`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          If <Math>{`\\mathbf{x}`}</Math> represents voltages at nodes and <Math>{`\\mathbf{y} = A\\mathbf{x}`}</Math>
+          If <InlineMath>{`\\mathbf{x}`}</InlineMath> represents voltages at nodes and <InlineMath>{`\\mathbf{y} = A\\mathbf{x}`}</InlineMath>
           represents voltage differences across edges:
         </p>
         <MathBlock>
@@ -70,16 +70,16 @@ export default function Section38() {
         className="my-6"
         proof={
           <>
-            <p>Column <Math>j</Math> of <Math>A^T</Math> = row <Math>j</Math> of <Math>A</Math> corresponds to node <Math>j</Math>.</p>
-            <p className="mt-2">The entry <Math>{`(A^T)_{je}`}</Math> is <Math>-1</Math> if edge <Math>e</Math> leaves node <Math>j</Math>, <Math>+1</Math> if it enters.</p>
-            <p className="mt-2">Thus <Math>{`(A^T\\mathbf{f})_j = \\sum_e A_{ej}f_e`}</Math> = (current in) − (current out) at node <Math>j</Math>.</p>
-            <p className="mt-2"><strong>Left nullspace:</strong> <Math>{`A^T\\mathbf{f} = \\mathbf{0}`}</Math> means current is conserved at every node.</p>
-            <p className="mt-2">Such <Math>{`\\mathbf{f}`}</Math> corresponds to current flowing around loops (cycles) in the graph. The dimension equals the number of independent loops = <Math>m - n + 1</Math> for a connected graph.</p>
+            <p>Column <InlineMath>j</InlineMath> of <InlineMath>A^T</InlineMath> = row <InlineMath>j</InlineMath> of <InlineMath>A</InlineMath> corresponds to node <InlineMath>j</InlineMath>.</p>
+            <p className="mt-2">The entry <InlineMath>{`(A^T)_{je}`}</InlineMath> is <InlineMath>-1</InlineMath> if edge <InlineMath>e</InlineMath> leaves node <InlineMath>j</InlineMath>, <InlineMath>+1</InlineMath> if it enters.</p>
+            <p className="mt-2">Thus <InlineMath>{`(A^T\\mathbf{f})_j = \\sum_e A_{ej}f_e`}</InlineMath> = (current in) − (current out) at node <InlineMath>j</InlineMath>.</p>
+            <p className="mt-2"><strong>Left nullspace:</strong> <InlineMath>{`A^T\\mathbf{f} = \\mathbf{0}`}</InlineMath> means current is conserved at every node.</p>
+            <p className="mt-2">Such <InlineMath>{`\\mathbf{f}`}</InlineMath> corresponds to current flowing around loops (cycles) in the graph. The dimension equals the number of independent loops = <InlineMath>m - n + 1</InlineMath> for a connected graph.</p>
           </>
         }
       >
         <p>
-          If <Math>{`\\mathbf{f}`}</Math> represents currents on edges:
+          If <InlineMath>{`\\mathbf{f}`}</InlineMath> represents currents on edges:
         </p>
         <MathBlock>
           {`A^T\\mathbf{f} = \\mathbf{0} \\quad \\text{(current balance at each node)}`}
@@ -99,9 +99,9 @@ export default function Section38() {
           {`L = A^TA`}
         </MathBlock>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li><Math>{`L_{ii}`}</Math> = degree of node <Math>i</Math></li>
-          <li><Math>{`L_{ij} = -1`}</Math> if nodes <Math>i</Math> and <Math>j</Math> are connected</li>
-          <li><Math>{`L_{ij} = 0`}</Math> otherwise</li>
+          <li><InlineMath>{`L_{ii}`}</InlineMath> = degree of node <InlineMath>i</InlineMath></li>
+          <li><InlineMath>{`L_{ij} = -1`}</InlineMath> if nodes <InlineMath>i</InlineMath> and <InlineMath>j</InlineMath> are connected</li>
+          <li><InlineMath>{`L_{ij} = 0`}</InlineMath> otherwise</li>
         </ul>
       </Definition>
 
@@ -119,17 +119,17 @@ export default function Section38() {
         className="my-6"
         proof={
           <>
-            <p><strong>Symmetric:</strong> <Math>{`(A^TA)^T = A^TA`}</Math>.</p>
-            <p className="mt-2"><strong>Positive semidefinite:</strong> <Math>{`\\mathbf{x}^TL\\mathbf{x} = \\mathbf{x}^TA^TA\\mathbf{x} = \\|A\\mathbf{x}\\|^2 \\geq 0`}</Math>.</p>
-            <p className="mt-2"><strong>Zero eigenvalue:</strong> <Math>{`L\\mathbf{1} = A^TA\\mathbf{1} = A^T\\mathbf{0} = \\mathbf{0}`}</Math> since each row of <Math>A</Math> has entries summing to 0.</p>
-            <p className="mt-2"><strong>Connected components:</strong> <Math>{`\\lambda = 0`}</Math> iff <Math>{`\\mathbf{x} \\in N(A)`}</Math>. For a connected graph, <Math>{`N(A) = \\text{span}(\\mathbf{1})`}</Math>. For <Math>k</Math> components, <Math>{`\\dim N(A) = k`}</Math>.</p>
-            <p className="mt-2"><strong>Algebraic connectivity:</strong> <Math>{`\\lambda_2 > 0`}</Math> iff the graph is connected. Larger <Math>{`\\lambda_2`}</Math> means the graph is "more connected" (harder to partition).</p>
+            <p><strong>Symmetric:</strong> <InlineMath>{`(A^TA)^T = A^TA`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Positive semidefinite:</strong> <InlineMath>{`\\mathbf{x}^TL\\mathbf{x} = \\mathbf{x}^TA^TA\\mathbf{x} = \\|A\\mathbf{x}\\|^2 \\geq 0`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Zero eigenvalue:</strong> <InlineMath>{`L\\mathbf{1} = A^TA\\mathbf{1} = A^T\\mathbf{0} = \\mathbf{0}`}</InlineMath> since each row of <InlineMath>A</InlineMath> has entries summing to 0.</p>
+            <p className="mt-2"><strong>Connected components:</strong> <InlineMath>{`\\lambda = 0`}</InlineMath> iff <InlineMath>{`\\mathbf{x} \\in N(A)`}</InlineMath>. For a connected graph, <InlineMath>{`N(A) = \\text{span}(\\mathbf{1})`}</InlineMath>. For <InlineMath>k</InlineMath> components, <InlineMath>{`\\dim N(A) = k`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Algebraic connectivity:</strong> <InlineMath>{`\\lambda_2 > 0`}</InlineMath> iff the graph is connected. Larger <InlineMath>{`\\lambda_2`}</InlineMath> means the graph is "more connected" (harder to partition).</p>
           </>
         }
       >
         <ul className="list-disc list-inside space-y-2">
-          <li><Math>L</Math> is symmetric positive semidefinite</li>
-          <li>Smallest eigenvalue is 0, with eigenvector <Math>{`\\mathbf{1} = (1, 1, \\ldots, 1)`}</Math></li>
+          <li><InlineMath>L</InlineMath> is symmetric positive semidefinite</li>
+          <li>Smallest eigenvalue is 0, with eigenvector <InlineMath>{`\\mathbf{1} = (1, 1, \\ldots, 1)`}</InlineMath></li>
           <li>Number of zero eigenvalues = number of connected components</li>
           <li>Second smallest eigenvalue (<strong>algebraic connectivity</strong>) measures how connected the graph is</li>
         </ul>
@@ -139,13 +139,13 @@ export default function Section38() {
 
       <Definition title="Adjacency Matrix" className="my-6">
         <p>
-          The <strong>adjacency matrix</strong> <Math>B</Math> has:
+          The <strong>adjacency matrix</strong> <InlineMath>B</InlineMath> has:
         </p>
         <MathBlock>
           {`B_{ij} = \\begin{cases} 1 & \\text{if edge between } i \\text{ and } j \\\\ 0 & \\text{otherwise} \\end{cases}`}
         </MathBlock>
         <p className="mt-2">
-          <Math>L = D - B</Math> where <Math>D</Math> is the diagonal degree matrix.
+          <InlineMath>L = D - B</InlineMath> where <InlineMath>D</InlineMath> is the diagonal degree matrix.
         </p>
       </Definition>
 
@@ -153,8 +153,8 @@ export default function Section38() {
         <p className="font-semibold text-primary-400 mb-2">Graph Applications</p>
         <ul className="list-disc list-inside text-dark-300 text-sm space-y-1">
           <li><strong>PageRank:</strong> Eigenvalues of web link matrix</li>
-          <li><strong>Spectral clustering:</strong> Use eigenvectors of <Math>L</Math> to cluster nodes</li>
-          <li><strong>Network flow:</strong> Solve <Math>{`A^TA\\mathbf{x} = \\mathbf{b}`}</Math></li>
+          <li><strong>Spectral clustering:</strong> Use eigenvectors of <InlineMath>L</InlineMath> to cluster nodes</li>
+          <li><strong>Network flow:</strong> Solve <InlineMath>{`A^TA\\mathbf{x} = \\mathbf{b}`}</InlineMath></li>
           <li><strong>Random walks:</strong> Powers of transition matrix</li>
         </ul>
       </div>
@@ -165,19 +165,19 @@ export default function Section38() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Incidence matrix <Math>A</Math>: rows = edges, columns = nodes.</span>
+            <span>Incidence matrix <InlineMath>A</InlineMath>: rows = edges, columns = nodes.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span><Math>N(A)</Math> = constant voltages; <Math>N(A^T)</Math> = loop currents.</span>
+            <span><InlineMath>N(A)</InlineMath> = constant voltages; <InlineMath>N(A^T)</InlineMath> = loop currents.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>Graph Laplacian <Math>L = A^TA</Math> is symmetric positive semidefinite.</span>
+            <span>Graph Laplacian <InlineMath>L = A^TA</InlineMath> is symmetric positive semidefinite.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>Zero eigenvalues of <Math>L</Math> count connected components.</span>
+            <span>Zero eigenvalues of <InlineMath>L</InlineMath> count connected components.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>

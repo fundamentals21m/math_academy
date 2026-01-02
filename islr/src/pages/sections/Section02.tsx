@@ -3,7 +3,7 @@ import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section02Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section02() {
   return (
@@ -11,9 +11,9 @@ export default function Section02() {
       <h2>The Statistical Learning Framework</h2>
 
       <p>
-        Suppose we observe a quantitative response <Math>Y</Math> and <Math>p</Math> different 
-        predictors, <Math>X_1, X_2, \ldots, X_p</Math>. We assume that there is some 
-        relationship between <Math>Y</Math> and <Math>X = (X_1, X_2, \ldots, X_p)</Math>, 
+        Suppose we observe a quantitative response <InlineMath>Y</InlineMath> and <InlineMath>p</InlineMath> different 
+        predictors, <InlineMath>X_1, X_2, \ldots, X_p</InlineMath>. We assume that there is some 
+        relationship between <InlineMath>Y</InlineMath> and <InlineMath>X = (X_1, X_2, \ldots, X_p)</InlineMath>, 
         which can be written in the very general form:
       </p>
 
@@ -21,13 +21,13 @@ export default function Section02() {
 
       <Definition title="The Statistical Learning Model">
         <p>
-          Here <Math>f</Math> is some fixed but unknown function of <Math>X_1, \ldots, X_p</Math>, 
-          and <Math>\epsilon</Math> is a random <em>error term</em>, which is independent 
-          of <Math>X</Math> and has mean zero.
+          Here <InlineMath>f</InlineMath> is some fixed but unknown function of <InlineMath>X_1, \ldots, X_p</InlineMath>, 
+          and <InlineMath>\epsilon</InlineMath> is a random <em>error term</em>, which is independent 
+          of <InlineMath>X</InlineMath> and has mean zero.
         </p>
         <p className="mt-2">
-          In this formulation, <Math>f</Math> represents the <em>systematic</em> information 
-          that <Math>X</Math> provides about <Math>Y</Math>.
+          In this formulation, <InlineMath>f</InlineMath> represents the <em>systematic</em> information 
+          that <InlineMath>X</InlineMath> provides about <InlineMath>Y</InlineMath>.
         </p>
       </Definition>
 
@@ -35,8 +35,8 @@ export default function Section02() {
 
       <p>
         Consider a study examining the relationship between years of education, seniority, 
-        and income. The response variable is <Math>{"Y = \\text{income}"}</Math>, and the 
-        predictors are <Math>{"X_1 = \\text{years of education}"}</Math> and <Math>{"X_2 = \\text{seniority}"}</Math>.
+        and income. The response variable is <InlineMath>{"Y = \\text{income}"}</InlineMath>, and the 
+        predictors are <InlineMath>{"X_1 = \\text{years of education}"}</InlineMath> and <InlineMath>{"X_2 = \\text{seniority}"}</InlineMath>.
       </p>
 
       <Example title="Income Prediction">
@@ -45,64 +45,64 @@ export default function Section02() {
         </p>
         <MathBlock>{`\\text{Income} = f(\\text{Education}, \\text{Seniority}) + \\epsilon`}</MathBlock>
         <p className="mt-2">
-          The function <Math>f</Math> might be a surface in 3D space, where different 
+          The function <InlineMath>f</InlineMath> might be a surface in 3D space, where different 
           combinations of education and seniority map to different expected incomes.
         </p>
       </Example>
 
-      <h2>Why Estimate <Math>f</Math>?</h2>
+      <h2>Why Estimate <InlineMath>f</InlineMath>?</h2>
 
       <p>
-        There are two main reasons we may wish to estimate <Math>f</Math>: <strong>prediction</strong> and <strong>inference</strong>. 
+        There are two main reasons we may wish to estimate <InlineMath>f</InlineMath>: <strong>prediction</strong> and <strong>inference</strong>. 
         Depending on whether our ultimate goal is prediction, inference, or some combination 
-        of the two, different methods for estimating <Math>f</Math> may be appropriate.
+        of the two, different methods for estimating <InlineMath>f</InlineMath> may be appropriate.
       </p>
 
       <h3>Prediction</h3>
 
       <p>
-        In many situations, a set of inputs <Math>X</Math> are readily available, but the 
-        output <Math>Y</Math> cannot be easily obtained. In this setting, since the error 
-        term averages to zero, we can predict <Math>Y</Math> using:
+        In many situations, a set of inputs <InlineMath>X</InlineMath> are readily available, but the 
+        output <InlineMath>Y</InlineMath> cannot be easily obtained. In this setting, since the error 
+        term averages to zero, we can predict <InlineMath>Y</InlineMath> using:
       </p>
 
       <MathBlock>{`\\hat{Y} = \\hat{f}(X)`}</MathBlock>
 
       <p>
-        where <Math>\hat f</Math> represents our estimate for <Math>f</Math>, 
-        and <Math>\hat Y</Math> represents the resulting prediction for <Math>Y</Math>.
+        where <InlineMath>\hat f</InlineMath> represents our estimate for <InlineMath>f</InlineMath>, 
+        and <InlineMath>\hat Y</InlineMath> represents the resulting prediction for <InlineMath>Y</InlineMath>.
       </p>
 
       <Definition title="Reducible and Irreducible Error">
         <p>
-          The accuracy of <Math>\hat Y</Math> as a prediction for <Math>Y</Math> depends 
+          The accuracy of <InlineMath>\hat Y</InlineMath> as a prediction for <InlineMath>Y</InlineMath> depends 
           on two quantities:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li>
-            <strong>Reducible error:</strong> The error that arises because <Math>\hat f</Math> is 
-            not a perfect estimate for <Math>f</Math>. This can potentially be reduced by 
+            <strong>Reducible error:</strong> The error that arises because <InlineMath>\hat f</InlineMath> is 
+            not a perfect estimate for <InlineMath>f</InlineMath>. This can potentially be reduced by 
             using a more appropriate statistical learning technique.
           </li>
           <li>
-            <strong>Irreducible error:</strong> The error that arises from <Math>\epsilon</Math>. 
-            Even if we could perfectly estimate <Math>f</Math>, we could not perfectly 
-            predict <Math>Y</Math> because <Math>\epsilon</Math> cannot be predicted using <Math>X</Math>.
+            <strong>Irreducible error:</strong> The error that arises from <InlineMath>\epsilon</InlineMath>. 
+            Even if we could perfectly estimate <InlineMath>f</InlineMath>, we could not perfectly 
+            predict <InlineMath>Y</InlineMath> because <InlineMath>\epsilon</InlineMath> cannot be predicted using <InlineMath>X</InlineMath>.
           </li>
         </ul>
       </Definition>
 
       <p>
-        Why is the irreducible error larger than zero? The quantity <Math>\epsilon</Math> may 
-        contain unmeasured variables that are useful in predicting <Math>Y</Math>: since we 
-        don't measure them, <Math>f</Math> cannot use them for its prediction. It may also 
+        Why is the irreducible error larger than zero? The quantity <InlineMath>\epsilon</InlineMath> may 
+        contain unmeasured variables that are useful in predicting <InlineMath>Y</InlineMath>: since we 
+        don't measure them, <InlineMath>f</InlineMath> cannot use them for its prediction. It may also 
         contain unmeasurable variation.
       </p>
 
       <Theorem title="Decomposition of Expected Prediction Error">
         <p>
-          Consider a given estimate <Math>\hat f</Math> and a set of predictors <Math>X</Math>, 
-          which yields the prediction <Math>\hat Y = \hat f(X)</Math>. Assuming <Math>\hat f</Math> and <Math>X</Math> are 
+          Consider a given estimate <InlineMath>\hat f</InlineMath> and a set of predictors <InlineMath>X</InlineMath>, 
+          which yields the prediction <InlineMath>\hat Y = \hat f(X)</InlineMath>. Assuming <InlineMath>\hat f</InlineMath> and <InlineMath>X</InlineMath> are 
           fixed, we can show that:
         </p>
         <MathBlock>{`E[(Y - \\hat{Y})^2] = E[(f(X) + \\epsilon - \\hat{f}(X))^2]`}</MathBlock>
@@ -111,16 +111,16 @@ export default function Section02() {
 
       <Callout type="warning">
         <strong>Key Insight:</strong> The irreducible error provides an upper bound on the 
-        accuracy of our prediction for <Math>Y</Math>. This bound is almost always unknown 
+        accuracy of our prediction for <InlineMath>Y</InlineMath>. This bound is almost always unknown 
         in practice, but it reminds us that prediction will never be perfect.
       </Callout>
 
       <h3>Inference</h3>
 
       <p>
-        We are often interested in understanding the <em>relationship</em> between <Math>X</Math> and <Math>Y</Math>, 
-        rather than just predicting <Math>Y</Math>. In this situation we wish to 
-        estimate <Math>f</Math>, but our goal is not necessarily to make predictions.
+        We are often interested in understanding the <em>relationship</em> between <InlineMath>X</InlineMath> and <InlineMath>Y</InlineMath>, 
+        rather than just predicting <InlineMath>Y</InlineMath>. In this situation we wish to 
+        estimate <InlineMath>f</InlineMath>, but our goal is not necessarily to make predictions.
       </p>
 
       <p>We instead want to understand:</p>
@@ -130,14 +130,14 @@ export default function Section02() {
           <h4 className="text-emerald-400 font-semibold mb-2">Which predictors are associated with the response?</h4>
           <p className="text-dark-300 text-sm">
             It is often the case that only a small fraction of the available predictors 
-            are substantially associated with <Math>Y</Math>. Identifying these predictors 
+            are substantially associated with <InlineMath>Y</InlineMath>. Identifying these predictors 
             is often valuable.
           </p>
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h4 className="text-blue-400 font-semibold mb-2">What is the relationship between the response and each predictor?</h4>
           <p className="text-dark-300 text-sm">
-            Some predictors may have a positive relationship with <Math>Y</Math>, while 
+            Some predictors may have a positive relationship with <InlineMath>Y</InlineMath>, while 
             others have a negative relationship. The relationship may also depend on the 
             values of other predictors.
           </p>
@@ -151,11 +151,11 @@ export default function Section02() {
         </div>
       </div>
 
-      <h2>How Do We Estimate <Math>f</Math>?</h2>
+      <h2>How Do We Estimate <InlineMath>f</InlineMath>?</h2>
 
       <p>
         Our goal is to apply a statistical learning method to the training data in order 
-        to estimate the unknown function <Math>f</Math>. In broad terms, most statistical 
+        to estimate the unknown function <InlineMath>f</InlineMath>. In broad terms, most statistical 
         learning methods can be characterized as either <em>parametric</em> or <em>non-parametric</em>.
       </p>
 
@@ -169,9 +169,9 @@ export default function Section02() {
         <h4 className="text-blue-400 font-semibold mb-3">Two-Step Parametric Approach</h4>
         <ol className="list-decimal list-inside space-y-3 text-dark-300">
           <li>
-            <strong>Make an assumption about the functional form of <Math>f</Math>.</strong>
+            <strong>Make an assumption about the functional form of <InlineMath>f</InlineMath>.</strong>
             <p className="ml-6 mt-1 text-dark-400 text-sm">
-              For example, we might assume that <Math>f</Math> is linear in <Math>X</Math>:
+              For example, we might assume that <InlineMath>f</InlineMath> is linear in <InlineMath>X</InlineMath>:
             </p>
             <div className="ml-6 mt-2">
               <MathBlock>{`f(X) = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p`}</MathBlock>
@@ -180,7 +180,7 @@ export default function Section02() {
           <li>
             <strong>Use the training data to <em>fit</em> or <em>train</em> the model.</strong>
             <p className="ml-6 mt-1 text-dark-400 text-sm">
-              Estimate the parameters <Math>\beta_0, \beta_1, \ldots, \beta_p</Math> such that:
+              Estimate the parameters <InlineMath>\beta_0, \beta_1, \ldots, \beta_p</InlineMath> such that:
             </p>
             <div className="ml-6 mt-2">
               <MathBlock>{`Y \\approx \\beta_0 + \\beta_1 X_1 + \\cdots + \\beta_p X_p`}</MathBlock>
@@ -191,10 +191,10 @@ export default function Section02() {
 
       <Callout type="info">
         <strong>Advantage:</strong> Estimating a set of parameters is much simpler than 
-        fitting an entirely arbitrary function <Math>f</Math>.
+        fitting an entirely arbitrary function <InlineMath>f</InlineMath>.
         <br /><br />
         <strong>Disadvantage:</strong> The model we choose will usually not match the true 
-        unknown form of <Math>f</Math>. If the chosen model is too far from the true <Math>f</Math>, 
+        unknown form of <InlineMath>f</InlineMath>. If the chosen model is too far from the true <InlineMath>f</InlineMath>, 
         our estimate will be poor.
       </Callout>
 
@@ -202,7 +202,7 @@ export default function Section02() {
 
       <p>
         Non-parametric methods do not make explicit assumptions about the functional form 
-        of <Math>f</Math>. Instead, they seek an estimate of <Math>f</Math> that gets as 
+        of <InlineMath>f</InlineMath>. Instead, they seek an estimate of <InlineMath>f</InlineMath> that gets as 
         close to the data points as possible without being too rough or wiggly.
       </p>
 
@@ -210,7 +210,7 @@ export default function Section02() {
         <div className="bg-dark-800/50 rounded-xl p-4 border border-emerald-500/30">
           <h4 className="text-emerald-400 font-semibold mb-2">Advantages</h4>
           <ul className="list-disc list-inside text-dark-300 text-sm space-y-1">
-            <li>Can accurately fit a wider range of shapes for <Math>f</Math></li>
+            <li>Can accurately fit a wider range of shapes for <InlineMath>f</InlineMath></li>
             <li>No assumptions about functional form needed</li>
             <li>More flexible than parametric approaches</li>
           </ul>
@@ -270,8 +270,8 @@ export default function Section02() {
 
       <Definition title="Supervised Learning">
         <p>
-          For each observation of the predictor measurement(s) <Math>x_i</Math>, <Math>i = 1, \ldots, n</Math>, 
-          there is an associated response measurement <Math>y_i</Math>.
+          For each observation of the predictor measurement(s) <InlineMath>x_i</InlineMath>, <InlineMath>i = 1, \ldots, n</InlineMath>, 
+          there is an associated response measurement <InlineMath>y_i</InlineMath>.
         </p>
         <p className="mt-2">
           We wish to fit a model that relates the response to the predictors, with the aim 
@@ -282,8 +282,8 @@ export default function Section02() {
 
       <Definition title="Unsupervised Learning">
         <p>
-          For every observation <Math>i = 1, \ldots, n</Math>, we observe a vector of 
-          measurements <Math>x_i</Math> but no associated response <Math>y_i</Math>.
+          For every observation <InlineMath>i = 1, \ldots, n</InlineMath>, we observe a vector of 
+          measurements <InlineMath>x_i</InlineMath> but no associated response <InlineMath>y_i</InlineMath>.
         </p>
         <p className="mt-2">
           We cannot fit a linear regression model since there is no response variable to predict. 
@@ -295,7 +295,7 @@ export default function Section02() {
       <Example title="Clustering">
         <p>
           One important tool in unsupervised learning is <em>cluster analysis</em>. The goal 
-          is to ascertain, on the basis of <Math>x_1, \ldots, x_n</Math>, whether the 
+          is to ascertain, on the basis of <InlineMath>x_1, \ldots, x_n</InlineMath>, whether the 
           observations fall into relatively distinct groups.
         </p>
         <p className="mt-2">
@@ -326,7 +326,7 @@ export default function Section02() {
         <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-xl p-5 border border-blue-500/20">
           <h4 className="text-blue-400 font-semibold mb-2">Qualitative Variables</h4>
           <p className="text-dark-300 text-sm mb-2">
-            Take on values in one of <Math>K</Math> different classes. Examples:
+            Take on values in one of <InlineMath>K</InlineMath> different classes. Examples:
           </p>
           <ul className="list-disc list-inside text-dark-400 text-sm">
             <li>Gender (male/female)</li>

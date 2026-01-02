@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section15Quiz } from '@/data/quizzes';
 
@@ -19,29 +19,29 @@ export default function Section15() {
 
       <Definition title="Pointwise Convergence">
         <p>
-          A sequence <Math>{"(f_n)"}</Math> converges pointwise to <Math>{"f"}</Math> on <Math>{"S"}</Math> if:
+          A sequence <InlineMath>{"(f_n)"}</InlineMath> converges pointwise to <InlineMath>{"f"}</InlineMath> on <InlineMath>{"S"}</InlineMath> if:
         </p>
         <MathBlock>
           {`\\forall x \\in S, \\forall \\varepsilon > 0, \\exists N: n > N \\Rightarrow |f_n(x) - f(x)| < \\varepsilon`}
         </MathBlock>
-        <p>Here <Math>{"N"}</Math> may depend on both <Math>{"\\varepsilon"}</Math> and <Math>{"x"}</Math>.</p>
+        <p>Here <InlineMath>{"N"}</InlineMath> may depend on both <InlineMath>{"\\varepsilon"}</InlineMath> and <InlineMath>{"x"}</InlineMath>.</p>
       </Definition>
 
       <Definition title="Uniform Convergence">
         <p>
-          A sequence <Math>{"(f_n)"}</Math> converges uniformly to <Math>{"f"}</Math> on <Math>{"S"}</Math> if:
+          A sequence <InlineMath>{"(f_n)"}</InlineMath> converges uniformly to <InlineMath>{"f"}</InlineMath> on <InlineMath>{"S"}</InlineMath> if:
         </p>
         <MathBlock>
           {`\\forall \\varepsilon > 0, \\exists N: n > N \\Rightarrow \\sup_{x \\in S} |f_n(x) - f(x)| < \\varepsilon`}
         </MathBlock>
-        <p>Equivalently, <Math>{"\\|f_n - f\\|_\\infty \\to 0"}</Math>.</p>
+        <p>Equivalently, <InlineMath>{"\\|f_n - f\\|_\\infty \\to 0"}</InlineMath>.</p>
       </Definition>
 
       <Example title="Non-Uniform Convergence">
         <p>
-          Let <Math>{"f_n(x) = x^n"}</Math> on <Math>{"[0, 1]"}</Math>. Pointwise limit is <Math>{"f(x) = 0"}</Math>
-          for <Math>{"x < 1"}</Math> and <Math>{"f(1) = 1"}</Math>. But convergence is not uniform:
-          continuous <Math>{"f_n"}</Math> converge to discontinuous <Math>{"f"}</Math>.
+          Let <InlineMath>{"f_n(x) = x^n"}</InlineMath> on <InlineMath>{"[0, 1]"}</InlineMath>. Pointwise limit is <InlineMath>{"f(x) = 0"}</InlineMath>
+          for <InlineMath>{"x < 1"}</InlineMath> and <InlineMath>{"f(1) = 1"}</InlineMath>. But convergence is not uniform:
+          continuous <InlineMath>{"f_n"}</InlineMath> converge to discontinuous <InlineMath>{"f"}</InlineMath>.
         </p>
       </Example>
 
@@ -51,16 +51,16 @@ export default function Section15() {
         title="Uniform Limit of Continuous Functions"
         proof={
           <>
-            <p className="mb-3">Fix <Math>{`c`}</Math> and <Math>{`\\varepsilon > 0`}</Math>. By uniform convergence, <Math>{`\\exists N: |f_n(x) - f(x)| < \\varepsilon/3`}</Math> for all <Math>{`x`}</Math>.</p>
-            <p className="mb-3">Since <Math>{`f_N`}</Math> is continuous at <Math>{`c`}</Math>, <Math>{`\\exists \\delta: |x - c| < \\delta \\Rightarrow |f_N(x) - f_N(c)| < \\varepsilon/3`}</Math>.</p>
-            <p className="mb-3">For <Math>{`|x - c| < \\delta`}</Math>:</p>
+            <p className="mb-3">Fix <InlineMath>{`c`}</InlineMath> and <InlineMath>{`\\varepsilon > 0`}</InlineMath>. By uniform convergence, <InlineMath>{`\\exists N: |f_n(x) - f(x)| < \\varepsilon/3`}</InlineMath> for all <InlineMath>{`x`}</InlineMath>.</p>
+            <p className="mb-3">Since <InlineMath>{`f_N`}</InlineMath> is continuous at <InlineMath>{`c`}</InlineMath>, <InlineMath>{`\\exists \\delta: |x - c| < \\delta \\Rightarrow |f_N(x) - f_N(c)| < \\varepsilon/3`}</InlineMath>.</p>
+            <p className="mb-3">For <InlineMath>{`|x - c| < \\delta`}</InlineMath>:</p>
             <MathBlock>{`|f(x) - f(c)| \\leq |f(x) - f_N(x)| + |f_N(x) - f_N(c)| + |f_N(c) - f(c)| < \\frac{\\varepsilon}{3} + \\frac{\\varepsilon}{3} + \\frac{\\varepsilon}{3} = \\varepsilon`}</MathBlock>
-            <p className="mb-3">So <Math>{`f`}</Math> is continuous at <Math>{`c`}</Math>. Since <Math>{`c`}</Math> was arbitrary, <Math>{`f`}</Math> is continuous on <Math>{`S`}</Math>.</p>
+            <p className="mb-3">So <InlineMath>{`f`}</InlineMath> is continuous at <InlineMath>{`c`}</InlineMath>. Since <InlineMath>{`c`}</InlineMath> was arbitrary, <InlineMath>{`f`}</InlineMath> is continuous on <InlineMath>{`S`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          If <Math>{"(f_n)"}</Math> are continuous and <Math>{"f_n \\to f"}</Math> uniformly, then <Math>{"f"}</Math>
+          If <InlineMath>{"(f_n)"}</InlineMath> are continuous and <InlineMath>{"f_n \\to f"}</InlineMath> uniformly, then <InlineMath>{"f"}</InlineMath>
           is continuous.
         </p>
       </Theorem>
@@ -69,16 +69,16 @@ export default function Section15() {
         title="Integration of Uniform Limit"
         proof={
           <>
-            <p className="mb-3">By uniform convergence, given <Math>{`\\varepsilon > 0`}</Math>, <Math>{`\\exists N: |f_n(x) - f(x)| < \\varepsilon/(b-a)`}</Math> for all <Math>{`x`}</Math> and <Math>{`n > N`}</Math>.</p>
+            <p className="mb-3">By uniform convergence, given <InlineMath>{`\\varepsilon > 0`}</InlineMath>, <InlineMath>{`\\exists N: |f_n(x) - f(x)| < \\varepsilon/(b-a)`}</InlineMath> for all <InlineMath>{`x`}</InlineMath> and <InlineMath>{`n > N`}</InlineMath>.</p>
             <p className="mb-3">Then:</p>
             <MathBlock>{`\\left|\\int_a^b f_n - \\int_a^b f\\right| = \\left|\\int_a^b (f_n - f)\\right| \\leq \\int_a^b |f_n - f| \\leq \\frac{\\varepsilon}{b-a} \\cdot (b-a) = \\varepsilon`}</MathBlock>
-            <p className="mb-3">for <Math>{`n > N`}</Math>. Therefore <Math>{`\\lim \\int_a^b f_n = \\int_a^b f`}</Math>.</p>
+            <p className="mb-3">for <InlineMath>{`n > N`}</InlineMath>. Therefore <InlineMath>{`\\lim \\int_a^b f_n = \\int_a^b f`}</InlineMath>.</p>
             <p className="mb-3">This justifies exchanging limit and integral under uniform convergence.</p>
           </>
         }
       >
         <p>
-          If <Math>{"f_n \\to f"}</Math> uniformly on <Math>{"[a, b]"}</Math>, then:
+          If <InlineMath>{"f_n \\to f"}</InlineMath> uniformly on <InlineMath>{"[a, b]"}</InlineMath>, then:
         </p>
         <MathBlock>
           {`\\int_a^b f = \\lim_{n \\to \\infty} \\int_a^b f_n`}
@@ -89,17 +89,17 @@ export default function Section15() {
         title="Differentiation of Limit"
         proof={
           <>
-            <p className="mb-3">By FTC2: <Math>{`f_n(x) - f_n(c) = \\int_c^x f_n'(t)\\,dt`}</Math> for each <Math>{`n`}</Math>.</p>
-            <p className="mb-3">Since <Math>{`f_n' \\to g`}</Math> uniformly, by integration of uniform limits:</p>
+            <p className="mb-3">By FTC2: <InlineMath>{`f_n(x) - f_n(c) = \\int_c^x f_n'(t)\\,dt`}</InlineMath> for each <InlineMath>{`n`}</InlineMath>.</p>
+            <p className="mb-3">Since <InlineMath>{`f_n' \\to g`}</InlineMath> uniformly, by integration of uniform limits:</p>
             <MathBlock>{`\\lim[f_n(x) - f_n(c)] = \\lim \\int_c^x f_n' = \\int_c^x g`}</MathBlock>
-            <p className="mb-3">The left side equals <Math>{`f(x) - f(c)`}</Math> (pointwise convergence of <Math>{`f_n`}</Math>).</p>
-            <p className="mb-3">So <Math>{`f(x) - f(c) = \\int_c^x g`}</Math>. By FTC1, <Math>{`f'(x) = g(x)`}</Math>.</p>
+            <p className="mb-3">The left side equals <InlineMath>{`f(x) - f(c)`}</InlineMath> (pointwise convergence of <InlineMath>{`f_n`}</InlineMath>).</p>
+            <p className="mb-3">So <InlineMath>{`f(x) - f(c) = \\int_c^x g`}</InlineMath>. By FTC1, <InlineMath>{`f'(x) = g(x)`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          If <Math>{"f_n \\to f"}</Math> pointwise, <Math>{"f_n' \\to g"}</Math> uniformly, and each <Math>{"f_n"}</Math>
-          is differentiable, then <Math>{"f' = g"}</Math>.
+          If <InlineMath>{"f_n \\to f"}</InlineMath> pointwise, <InlineMath>{"f_n' \\to g"}</InlineMath> uniformly, and each <InlineMath>{"f_n"}</InlineMath>
+          is differentiable, then <InlineMath>{"f' = g"}</InlineMath>.
         </p>
       </Theorem>
 
@@ -114,24 +114,24 @@ export default function Section15() {
         title="Weierstrass M-Test"
         proof={
           <>
-            <p className="mb-3"><strong>Absolute convergence:</strong> For each <Math>{`x`}</Math>, <Math>{`|f_n(x)| \\leq M_n`}</Math>, so <Math>{`\\sum|f_n(x)| \\leq \\sum M_n < \\infty`}</Math>.</p>
-            <p className="mb-3"><strong>Uniform convergence:</strong> Let <Math>{`S_n(x) = \\sum_{k=1}^n f_k(x)`}</Math> and <Math>{`S(x) = \\sum f_k(x)`}</Math>.</p>
+            <p className="mb-3"><strong>Absolute convergence:</strong> For each <InlineMath>{`x`}</InlineMath>, <InlineMath>{`|f_n(x)| \\leq M_n`}</InlineMath>, so <InlineMath>{`\\sum|f_n(x)| \\leq \\sum M_n < \\infty`}</InlineMath>.</p>
+            <p className="mb-3"><strong>Uniform convergence:</strong> Let <InlineMath>{`S_n(x) = \\sum_{k=1}^n f_k(x)`}</InlineMath> and <InlineMath>{`S(x) = \\sum f_k(x)`}</InlineMath>.</p>
             <MathBlock>{`|S(x) - S_n(x)| = \\left|\\sum_{k=n+1}^\\infty f_k(x)\\right| \\leq \\sum_{k=n+1}^\\infty |f_k(x)| \\leq \\sum_{k=n+1}^\\infty M_k`}</MathBlock>
-            <p className="mb-3">The tail <Math>{`\\sum_{k=n+1}^\\infty M_k \\to 0`}</Math> as <Math>{`n \\to \\infty`}</Math> (since <Math>{`\\sum M_n`}</Math> converges), independent of <Math>{`x`}</Math>.</p>
-            <p className="mb-3">So <Math>{`\\sup_x |S(x) - S_n(x)| \\to 0`}</Math>, i.e., <Math>{`S_n \\to S`}</Math> uniformly.</p>
+            <p className="mb-3">The tail <InlineMath>{`\\sum_{k=n+1}^\\infty M_k \\to 0`}</InlineMath> as <InlineMath>{`n \\to \\infty`}</InlineMath> (since <InlineMath>{`\\sum M_n`}</InlineMath> converges), independent of <InlineMath>{`x`}</InlineMath>.</p>
+            <p className="mb-3">So <InlineMath>{`\\sup_x |S(x) - S_n(x)| \\to 0`}</InlineMath>, i.e., <InlineMath>{`S_n \\to S`}</InlineMath> uniformly.</p>
           </>
         }
       >
         <p>
-          If <Math>{"|f_n(x)| \\leq M_n"}</Math> for all <Math>{"x \\in S"}</Math> and <Math>{"\\sum M_n < \\infty"}</Math>,
-          then <Math>{"\\sum f_n"}</Math> converges uniformly and absolutely on <Math>{"S"}</Math>.
+          If <InlineMath>{"|f_n(x)| \\leq M_n"}</InlineMath> for all <InlineMath>{"x \\in S"}</InlineMath> and <InlineMath>{"\\sum M_n < \\infty"}</InlineMath>,
+          then <InlineMath>{"\\sum f_n"}</InlineMath> converges uniformly and absolutely on <InlineMath>{"S"}</InlineMath>.
         </p>
       </Theorem>
 
       <Example title="Uniform Convergence of Power Series">
         <p>
-          The series <Math>{"\\sum \\frac{x^n}{n!}"}</Math> converges uniformly on <Math>{"[-R, R]"}</Math>
-          for any <Math>{"R > 0"}</Math>, since <Math>{"|x^n/n!| \\leq R^n/n!"}</Math> and <Math>{"\\sum R^n/n! = e^R"}</Math>.
+          The series <InlineMath>{"\\sum \\frac{x^n}{n!}"}</InlineMath> converges uniformly on <InlineMath>{"[-R, R]"}</InlineMath>
+          for any <InlineMath>{"R > 0"}</InlineMath>, since <InlineMath>{"|x^n/n!| \\leq R^n/n!"}</InlineMath> and <InlineMath>{"\\sum R^n/n! = e^R"}</InlineMath>.
         </p>
       </Example>
 

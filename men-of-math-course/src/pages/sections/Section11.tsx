@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
-import { MathBlock, Math as MathInline } from '../../components/common/MathBlock';
+import { MathBlock, InlineMath } from '../../components/common/MathBlock';
 
 // Lagrangian Mechanics - Pendulum
 function LagrangianPendulum() {

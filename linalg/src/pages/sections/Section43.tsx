@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section43() {
   return (
@@ -14,15 +14,15 @@ export default function Section43() {
       <h2>2D Transformations</h2>
 
       <Definition title="Basic 2D Matrices" className="my-6">
-        <p><strong>Rotation</strong> by angle <Math>\theta</Math>:</p>
+        <p><strong>Rotation</strong> by angle <InlineMath>\theta</InlineMath>:</p>
         <MathBlock>
           {`R_\\theta = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{bmatrix}`}
         </MathBlock>
-        <p className="mt-2"><strong>Scaling</strong> by factors <Math>s_x, s_y</Math>:</p>
+        <p className="mt-2"><strong>Scaling</strong> by factors <InlineMath>s_x, s_y</InlineMath>:</p>
         <MathBlock>
           {`S = \\begin{bmatrix} s_x & 0 \\\\ 0 & s_y \\end{bmatrix}`}
         </MathBlock>
-        <p className="mt-2"><strong>Reflection</strong> across <Math>x</Math>-axis:</p>
+        <p className="mt-2"><strong>Reflection</strong> across <InlineMath>x</InlineMath>-axis:</p>
         <MathBlock>
           {`F = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}`}
         </MathBlock>
@@ -37,7 +37,7 @@ export default function Section43() {
         <MathBlock>
           {`(x, y) \\to \\begin{bmatrix} x \\\\ y \\\\ 1 \\end{bmatrix}`}
         </MathBlock>
-        <p className="mt-2">Translation by <Math>(t_x, t_y)</Math>:</p>
+        <p className="mt-2">Translation by <InlineMath>(t_x, t_y)</InlineMath>:</p>
         <MathBlock>
           {`T = \\begin{bmatrix} 1 & 0 & t_x \\\\ 0 & 1 & t_y \\\\ 0 & 0 & 1 \\end{bmatrix}`}
         </MathBlock>
@@ -45,10 +45,10 @@ export default function Section43() {
 
       <Example title="Rotate Around a Point" className="my-6">
         <p>
-          To rotate around point <Math>(a, b)</Math>:
+          To rotate around point <InlineMath>(a, b)</InlineMath>:
         </p>
         <ol className="list-decimal list-inside space-y-1">
-          <li>Translate <Math>(a, b)</Math> to origin</li>
+          <li>Translate <InlineMath>(a, b)</InlineMath> to origin</li>
           <li>Rotate</li>
           <li>Translate back</li>
         </ol>
@@ -65,7 +65,7 @@ export default function Section43() {
           {`R_z(\\theta) = \\begin{bmatrix} \\cos\\theta & -\\sin\\theta & 0 \\\\ \\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Similar matrices for rotation around <Math>x</Math> and <Math>y</Math> axes.
+          Similar matrices for rotation around <InlineMath>x</InlineMath> and <InlineMath>y</InlineMath> axes.
         </p>
       </Definition>
 
@@ -76,17 +76,17 @@ export default function Section43() {
           <>
             <p><strong>Orthogonal:</strong> Rotations preserve lengths and angles. In 2D, verify directly:</p>
             <MathBlock>{`R_\\theta^T R_\\theta = \\begin{bmatrix} \\cos\\theta & \\sin\\theta \\\\ -\\sin\\theta & \\cos\\theta \\end{bmatrix} \\begin{bmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{bmatrix} = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}`}</MathBlock>
-            <p className="mt-2">Using <Math>{`\\cos^2\\theta + \\sin^2\\theta = 1`}</Math>.</p>
-            <p className="mt-2"><strong>Determinant 1:</strong> <Math>{`\\det R_\\theta = \\cos^2\\theta + \\sin^2\\theta = 1`}</Math>.</p>
+            <p className="mt-2">Using <InlineMath>{`\\cos^2\\theta + \\sin^2\\theta = 1`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Determinant 1:</strong> <InlineMath>{`\\det R_\\theta = \\cos^2\\theta + \\sin^2\\theta = 1`}</InlineMath>.</p>
             <p className="mt-2">The determinant being +1 (not -1) means orientation is preserved (no reflection).</p>
-            <p className="mt-2"><strong>Inverse = transpose:</strong> From <Math>{`R^TR = I`}</Math>, we have <Math>{`R^T = R^{-1}`}</Math>. Geometrically, rotating by <Math>{`-\\theta`}</Math> undoes rotation by <Math>{`\\theta`}</Math>, and <Math>{`R_{-\\theta} = R_\\theta^T`}</Math>.</p>
+            <p className="mt-2"><strong>Inverse = transpose:</strong> From <InlineMath>{`R^TR = I`}</InlineMath>, we have <InlineMath>{`R^T = R^{-1}`}</InlineMath>. Geometrically, rotating by <InlineMath>{`-\\theta`}</InlineMath> undoes rotation by <InlineMath>{`\\theta`}</InlineMath>, and <InlineMath>{`R_{-\\theta} = R_\\theta^T`}</InlineMath>.</p>
           </>
         }
       >
         <ul className="list-disc list-inside space-y-1">
-          <li><strong>Orthogonal:</strong> <Math>R^TR = I</Math></li>
-          <li><strong>Determinant 1:</strong> <Math>\det R = 1</Math> (preserves orientation)</li>
-          <li><strong>Inverse = transpose:</strong> <Math>{`R^{-1} = R^T`}</Math></li>
+          <li><strong>Orthogonal:</strong> <InlineMath>R^TR = I</InlineMath></li>
+          <li><strong>Determinant 1:</strong> <InlineMath>\det R = 1</InlineMath> (preserves orientation)</li>
+          <li><strong>Inverse = transpose:</strong> <InlineMath>{`R^{-1} = R^T`}</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -94,7 +94,7 @@ export default function Section43() {
 
       <Definition title="Perspective Projection" className="my-6">
         <p>
-          Project 3D points onto a 2D image plane at distance <Math>d</Math>:
+          Project 3D points onto a 2D image plane at distance <InlineMath>d</InlineMath>:
         </p>
         <MathBlock>
           {`(x, y, z) \\to \\left(\\frac{dx}{z}, \\frac{dy}{z}\\right)`}
@@ -107,7 +107,7 @@ export default function Section43() {
 
       <Example title="Orthographic Projection" className="my-6">
         <p>
-          Simply drop the <Math>z</Math>-coordinate (parallel projection):
+          Simply drop the <InlineMath>z</InlineMath>-coordinate (parallel projection):
         </p>
         <MathBlock>
           {`P_{\\text{orth}} = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\end{bmatrix}`}

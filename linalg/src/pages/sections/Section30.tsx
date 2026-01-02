@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section30() {
   return (
@@ -15,7 +15,7 @@ export default function Section30() {
 
       <Definition title="Centered Data Matrix" className="my-6">
         <p>
-          Given <Math>n</Math> data points in <Math>{`\\mathbb{R}^m`}</Math>, form the data matrix:
+          Given <InlineMath>n</InlineMath> data points in <InlineMath>{`\\mathbb{R}^m`}</InlineMath>, form the data matrix:
         </p>
         <MathBlock>
           {`A = \\begin{bmatrix} | & | & & | \\\\ \\mathbf{a}_1 & \\mathbf{a}_2 & \\cdots & \\mathbf{a}_n \\\\ | & | & & | \\end{bmatrix}`}
@@ -38,7 +38,7 @@ export default function Section30() {
           {`S = \\frac{1}{n-1}AA^T`}
         </MathBlock>
         <p className="mt-2">
-          <Math>{`S_{ij}`}</Math> measures how variables <Math>i</Math> and <Math>j</Math> vary together.
+          <InlineMath>{`S_{ij}`}</InlineMath> measures how variables <InlineMath>i</InlineMath> and <InlineMath>j</InlineMath> vary together.
           Diagonal entries are variances.
         </p>
       </Definition>
@@ -50,25 +50,25 @@ export default function Section30() {
         className="my-6"
         proof={
           <>
-            <p>The variance of centered data projected onto unit vector <Math>q</Math> is:</p>
+            <p>The variance of centered data projected onto unit vector <InlineMath>q</InlineMath> is:</p>
             <MathBlock>{`\\text{Var}_q = \\frac{1}{n-1}\\sum_{i=1}^n (q^T a_i)^2 = \\frac{1}{n-1}q^T A A^T q = q^T S q`}</MathBlock>
-            <p className="mt-2">To maximize variance subject to <Math>\\|q\\| = 1</Math>, use Lagrange multipliers:</p>
+            <p className="mt-2">To maximize variance subject to <InlineMath>\\|q\\| = 1</InlineMath>, use Lagrange multipliers:</p>
             <MathBlock>{`\\nabla(q^T S q - \\lambda(q^T q - 1)) = 0 \\implies 2Sq = 2\\lambda q`}</MathBlock>
-            <p className="mt-2">So the maximum variance is achieved at eigenvectors of <Math>S</Math>. The eigenvalue <Math>\\lambda</Math> equals the variance: <Math>q^T S q = q^T (\\lambda q) = \\lambda</Math>.</p>
-            <p className="mt-2">The largest eigenvalue <Math>\\lambda_1</Math> gives maximum variance with eigenvector <Math>q_1</Math>. The second PC <Math>q_2</Math> is orthogonal to <Math>q_1</Math> (since eigenvectors of symmetric matrices are orthogonal) and maximizes variance in the orthogonal complement.</p>
+            <p className="mt-2">So the maximum variance is achieved at eigenvectors of <InlineMath>S</InlineMath>. The eigenvalue <InlineMath>\\lambda</InlineMath> equals the variance: <InlineMath>q^T S q = q^T (\\lambda q) = \\lambda</InlineMath>.</p>
+            <p className="mt-2">The largest eigenvalue <InlineMath>\\lambda_1</InlineMath> gives maximum variance with eigenvector <InlineMath>q_1</InlineMath>. The second PC <InlineMath>q_2</InlineMath> is orthogonal to <InlineMath>q_1</InlineMath> (since eigenvectors of symmetric matrices are orthogonal) and maximizes variance in the orthogonal complement.</p>
           </>
         }
       >
         <p>
-          The <strong>principal components</strong> are the eigenvectors of the covariance matrix <Math>S</Math>:
+          The <strong>principal components</strong> are the eigenvectors of the covariance matrix <InlineMath>S</InlineMath>:
         </p>
         <MathBlock>
           {`S = Q\\Lambda Q^T`}
         </MathBlock>
         <ul className="list-disc list-inside mt-2 space-y-2">
-          <li>The first PC <Math>q_1</Math> points in the direction of maximum variance</li>
-          <li>The second PC <Math>q_2</Math> is orthogonal to <Math>q_1</Math> with next-highest variance</li>
-          <li>Eigenvalue <Math>\lambda_i</Math> = variance in direction <Math>q_i</Math></li>
+          <li>The first PC <InlineMath>q_1</InlineMath> points in the direction of maximum variance</li>
+          <li>The second PC <InlineMath>q_2</InlineMath> is orthogonal to <InlineMath>q_1</InlineMath> with next-highest variance</li>
+          <li>Eigenvalue <InlineMath>\lambda_i</InlineMath> = variance in direction <InlineMath>q_i</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -79,7 +79,7 @@ export default function Section30() {
         <ul className="list-disc list-inside mt-2">
           <li><strong>First PC:</strong> direction along the long axis of the ellipse</li>
           <li><strong>Second PC:</strong> perpendicular, along the short axis</li>
-          <li>The ratio <Math>\lambda_1/\lambda_2</Math> tells how elongated the ellipse is</li>
+          <li>The ratio <InlineMath>\lambda_1/\lambda_2</InlineMath> tells how elongated the ellipse is</li>
         </ul>
       </Example>
 
@@ -90,22 +90,22 @@ export default function Section30() {
         className="my-6"
         proof={
           <>
-            <p>Given <Math>{`A = U\\Sigma V^T`}</Math>, the covariance matrix is:</p>
+            <p>Given <InlineMath>{`A = U\\Sigma V^T`}</InlineMath>, the covariance matrix is:</p>
             <MathBlock>{`S = \\frac{1}{n-1}AA^T = \\frac{1}{n-1}U\\Sigma V^T V \\Sigma^T U^T = \\frac{1}{n-1}U(\\Sigma\\Sigma^T)U^T`}</MathBlock>
-            <p className="mt-2">This is a spectral decomposition: columns of <Math>U</Math> are eigenvectors of <Math>S</Math>, with eigenvalues <Math>{`\\lambda_i = \\sigma_i^2/(n-1)`}</Math>.</p>
-            <p className="mt-2">For the projected coordinates, if we project data point <Math>a_i</Math> onto PC <Math>u_j</Math>:</p>
+            <p className="mt-2">This is a spectral decomposition: columns of <InlineMath>U</InlineMath> are eigenvectors of <InlineMath>S</InlineMath>, with eigenvalues <InlineMath>{`\\lambda_i = \\sigma_i^2/(n-1)`}</InlineMath>.</p>
+            <p className="mt-2">For the projected coordinates, if we project data point <InlineMath>a_i</InlineMath> onto PC <InlineMath>u_j</InlineMath>:</p>
             <MathBlock>{`\\text{score}_{ij} = u_j^T a_i`}</MathBlock>
-            <p className="mt-2">In matrix form: <Math>{`U^T A = U^T U \\Sigma V^T = \\Sigma V^T`}</Math>. So the matrix of scores is <Math>{`\\Sigma V^T`}</Math>.</p>
+            <p className="mt-2">In matrix form: <InlineMath>{`U^T A = U^T U \\Sigma V^T = \\Sigma V^T`}</InlineMath>. So the matrix of scores is <InlineMath>{`\\Sigma V^T`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          If <Math>A = U\Sigma V^T</Math> is the SVD of the centered data matrix:
+          If <InlineMath>A = U\Sigma V^T</InlineMath> is the SVD of the centered data matrix:
         </p>
         <ul className="list-disc list-inside space-y-2">
-          <li>Principal components are the columns of <Math>U</Math></li>
-          <li>Singular values relate to eigenvalues: <Math>\lambda_i = \sigma_i^2/(n-1)</Math></li>
-          <li>The coordinates in the new basis are <Math>\Sigma V^T</Math></li>
+          <li>Principal components are the columns of <InlineMath>U</InlineMath></li>
+          <li>Singular values relate to eigenvalues: <InlineMath>\lambda_i = \sigma_i^2/(n-1)</InlineMath></li>
+          <li>The coordinates in the new basis are <InlineMath>\Sigma V^T</InlineMath></li>
         </ul>
         <p className="mt-2 text-primary-400">
           PCA via SVD is numerically more stable than eigendecomposition.
@@ -116,14 +116,14 @@ export default function Section30() {
 
       <Definition title="Low-Dimensional Projection" className="my-6">
         <p>
-          To reduce from <Math>m</Math> dimensions to <Math>k</Math>:
+          To reduce from <InlineMath>m</InlineMath> dimensions to <InlineMath>k</InlineMath>:
         </p>
         <MathBlock>
           {`\\mathbf{y} = Q_k^T \\mathbf{x}`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>Q_k</Math> contains the first <Math>k</Math> principal components.
-          The <strong>reconstruction</strong> is <Math>{`\\hat{\\mathbf{x}} = Q_k \\mathbf{y}`}</Math>.
+          where <InlineMath>Q_k</InlineMath> contains the first <InlineMath>k</InlineMath> principal components.
+          The <strong>reconstruction</strong> is <InlineMath>{`\\hat{\\mathbf{x}} = Q_k \\mathbf{y}`}</InlineMath>.
         </p>
       </Definition>
 
@@ -134,17 +134,17 @@ export default function Section30() {
           <>
             <p>The total variance equals the sum of all eigenvalues:</p>
             <MathBlock>{`\\text{Total variance} = \\text{tr}(S) = \\lambda_1 + \\cdots + \\lambda_m`}</MathBlock>
-            <p className="mt-2">When we project onto the first <Math>k</Math> PCs, the reconstruction is:</p>
+            <p className="mt-2">When we project onto the first <InlineMath>k</InlineMath> PCs, the reconstruction is:</p>
             <MathBlock>{`\\hat{A} = Q_k Q_k^T A`}</MathBlock>
-            <p className="mt-2">By the Eckart-Young theorem, this minimizes <Math>{`\\|A - \\hat{A}\\|_F^2`}</Math>.</p>
-            <p className="mt-2">The variance captured by the first <Math>k</Math> components is <Math>{`\\lambda_1 + \\cdots + \\lambda_k`}</Math>. The reconstruction error in variance is <Math>{`\\lambda_{k+1} + \\cdots + \\lambda_m`}</Math>.</p>
+            <p className="mt-2">By the Eckart-Young theorem, this minimizes <InlineMath>{`\\|A - \\hat{A}\\|_F^2`}</InlineMath>.</p>
+            <p className="mt-2">The variance captured by the first <InlineMath>k</InlineMath> components is <InlineMath>{`\\lambda_1 + \\cdots + \\lambda_k`}</InlineMath>. The reconstruction error in variance is <InlineMath>{`\\lambda_{k+1} + \\cdots + \\lambda_m`}</InlineMath>.</p>
             <p className="mt-2">Thus the fraction of variance retained is:</p>
             <MathBlock>{`\\frac{\\lambda_1 + \\cdots + \\lambda_k}{\\lambda_1 + \\cdots + \\lambda_m} = \\frac{\\sigma_1^2 + \\cdots + \\sigma_k^2}{\\sigma_1^2 + \\cdots + \\sigma_m^2}`}</MathBlock>
           </>
         }
       >
         <p>
-          The first <Math>k</Math> principal components give the best <Math>k</Math>-dimensional
+          The first <InlineMath>k</InlineMath> principal components give the best <InlineMath>k</InlineMath>-dimensional
           representation of the data (in the least-squares sense).
         </p>
         <MathBlock>
@@ -188,11 +188,11 @@ export default function Section30() {
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>Compute PCA via SVD: <Math>A = U\Sigma V^T</Math>, PCs are columns of <Math>U</Math>.</span>
+            <span>Compute PCA via SVD: <InlineMath>A = U\Sigma V^T</InlineMath>, PCs are columns of <InlineMath>U</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>Reduce dimensions by keeping only the first <Math>k</Math> components.</span>
+            <span>Reduce dimensions by keeping only the first <InlineMath>k</InlineMath> components.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>

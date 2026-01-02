@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section09Quiz } from '@/data/quizzes';
@@ -18,13 +18,13 @@ export default function Section09() {
 
       <Definition title="Discrete Logarithm">
         <p>
-          Given a prime <Math>p</Math>, a generator <Math>g</Math>, and a 
-          value <Math>h</Math>, the <strong>discrete logarithm</strong> of <Math>h</Math> base <Math>g</Math> modulo <Math>p</Math> is 
-          the integer <Math>x</Math> such that:
+          Given a prime <InlineMath>p</InlineMath>, a generator <InlineMath>g</InlineMath>, and a 
+          value <InlineMath>h</InlineMath>, the <strong>discrete logarithm</strong> of <InlineMath>h</InlineMath> base <InlineMath>g</InlineMath> modulo <InlineMath>p</InlineMath> is 
+          the integer <InlineMath>x</InlineMath> such that:
         </p>
-        <MathBlock>g^x \equiv h \pmod{p}</MathBlock>
+        <MathBlock>{`g^x \\equiv h \\pmod{p}`}</MathBlock>
         <p>
-          We write <Math>x = \log_g h \pmod{p}</Math>.
+          We write <InlineMath>{`x = \\log_g h \\pmod{p}`}</InlineMath>.
         </p>
       </Definition>
 
@@ -38,7 +38,7 @@ export default function Section09() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-emerald-400 mb-2">Forward Direction (Easy)</h3>
-          <p className="text-dark-300 mb-2">Computing <Math>g^x \mod p</Math>:</p>
+          <p className="text-dark-300 mb-2">Computing <InlineMath>{`g^x \\mod p`}</InlineMath>:</p>
           <p className="font-mono text-emerald-400">3^5 mod 17 = 5</p>
           <p className="text-dark-400 text-sm mt-2">
             Uses modular exponentiation. Even for huge numbers, this takes milliseconds.
@@ -46,7 +46,7 @@ export default function Section09() {
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-amber-400 mb-2">Reverse Direction (Hard)</h3>
-          <p className="text-dark-300 mb-2">Finding <Math>x</Math> given <Math>g^x \mod p</Math>:</p>
+          <p className="text-dark-300 mb-2">Finding <InlineMath>x</InlineMath> given <InlineMath>{`g^x \\mod p`}</InlineMath>:</p>
           <p className="font-mono text-amber-400">3^? mod 17 = 5</p>
           <p className="text-dark-400 text-sm mt-2">
             No efficient algorithm known! For large primes, this could take billions of years.
@@ -64,7 +64,7 @@ export default function Section09() {
 
       <p>
         To understand why discrete logarithms are hard, let's look at how powers cycle 
-        through values. With <Math>g = 3</Math> and <Math>p = 17</Math>:
+        through values. With <InlineMath>g = 3</InlineMath> and <InlineMath>p = 17</InlineMath>:
       </p>
 
       <div className="overflow-x-auto my-6">
@@ -84,7 +84,7 @@ export default function Section09() {
           </thead>
           <tbody>
             <tr className="border-b border-dark-800">
-              <td className="px-3 py-2 text-dark-400"><Math>3^x \mod 17</Math></td>
+              <td className="px-3 py-2 text-dark-400"><InlineMath>{`3^x \\mod 17`}</InlineMath></td>
               <td className="px-3 py-2 font-mono">1</td>
               <td className="px-3 py-2 font-mono">3</td>
               <td className="px-3 py-2 font-mono">9</td>
@@ -99,12 +99,12 @@ export default function Section09() {
       </div>
 
       <p>
-        Notice how the values jump around unpredictably. If I tell you <Math>3^x \equiv 5 \pmod{'{17}'}</Math>, 
-        finding <Math>x = 5</Math> requires checking each power—there's no pattern to exploit.
+        Notice how the values jump around unpredictably. If I tell you <InlineMath>{`3^x \\equiv 5 \\pmod{17}`}</InlineMath>,
+        finding <InlineMath>{`x = 5`}</InlineMath> requires checking each power—there's no pattern to exploit.
       </p>
 
       <Example title="Solving a Small Discrete Log">
-        <p>Find <Math>x</Math> where <Math>2^x \equiv 11 \pmod{'{13}'}</Math>.</p>
+        <p>Find <InlineMath>{`x`}</InlineMath> where <InlineMath>{`2^x \\equiv 11 \\pmod{13}`}</InlineMath>.</p>
         <p className="mt-2">For small numbers, we can compute powers of 2 mod 13:</p>
         <div className="bg-dark-900/50 rounded-lg p-3 mt-3 font-mono text-sm">
           <div>2^1 = 2</div>
@@ -116,7 +116,7 @@ export default function Section09() {
           <div className="text-emerald-400">2^7 = 24 ≡ 11 (mod 13) ✓</div>
         </div>
         <p className="mt-3">
-          So <Math>x = 7</Math>. But imagine if <Math>p</Math> had 300 digits—checking each 
+          So <InlineMath>x = 7</InlineMath>. But imagine if <InlineMath>p</InlineMath> had 300 digits—checking each 
           power would take longer than the age of the universe!
         </p>
       </Example>
@@ -125,7 +125,7 @@ export default function Section09() {
 
       <Theorem title="Discrete Log Hardness Assumption">
         <p>
-          For a prime <Math>p</Math> with 2048+ bits and a generator <Math>g</Math>, 
+          For a prime <InlineMath>p</InlineMath> with 2048+ bits and a generator <InlineMath>g</InlineMath>, 
           there is no known algorithm that can solve the discrete logarithm problem 
           in polynomial time.
         </p>
@@ -137,13 +137,13 @@ export default function Section09() {
 
       <ul className="list-disc list-inside space-y-2 my-6 text-dark-300">
         <li>
-          <strong className="text-dark-100">Baby-step Giant-step:</strong> <Math>O(\sqrt{'{p}'})</Math> time and space
+          <strong className="text-dark-100">Baby-step Giant-step:</strong> <InlineMath>{`O(\\sqrt{p})`}</InlineMath> time and space
         </li>
         <li>
-          <strong className="text-dark-100">Pollard's rho:</strong> <Math>O(\sqrt{'{p}'})</Math> time, constant space
+          <strong className="text-dark-100">Pollard's rho:</strong> <InlineMath>{`O(\\sqrt{p})`}</InlineMath> time, constant space
         </li>
         <li>
-          <strong className="text-dark-100">Index calculus:</strong> Sub-exponential, but still infeasible for large <Math>p</Math>
+          <strong className="text-dark-100">Index calculus:</strong> Sub-exponential, but still infeasible for large <InlineMath>p</InlineMath>
         </li>
       </ul>
 

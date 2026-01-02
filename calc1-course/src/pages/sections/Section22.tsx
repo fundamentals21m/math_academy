@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section22() {
   return (
@@ -25,18 +25,18 @@ export default function Section22() {
 
       <h2>Bolzano's Theorem</h2>
       <p>
-        Consider the graph of a continuous function <MathInline>{`f`}</MathInline> that lies below the
-        <MathInline>{`x`}</MathInline>-axis at <MathInline>{`x = a`}</MathInline> and above the axis at
-        <MathInline>{`x = b`}</MathInline>. Intuitively, the curve must cross the axis somewhere between
-        <MathInline>{`a`}</MathInline> and <MathInline>{`b`}</MathInline>. Bolzano's theorem makes this precise.
+        Consider the graph of a continuous function <InlineMath>{`f`}</InlineMath> that lies below the
+        <InlineMath>{`x`}</InlineMath>-axis at <InlineMath>{`x = a`}</InlineMath> and above the axis at
+        <InlineMath>{`x = b`}</InlineMath>. Intuitively, the curve must cross the axis somewhere between
+        <InlineMath>{`a`}</InlineMath> and <InlineMath>{`b`}</InlineMath>. Bolzano's theorem makes this precise.
       </p>
 
       <Callout type="theorem" title="Theorem 3.6 (Bolzano's Theorem)">
         <p>
-          Let <MathInline>{`f`}</MathInline> be continuous at each point of a closed interval
-          <MathInline>{`[a, b]`}</MathInline> and assume that <MathInline>{`f(a)`}</MathInline> and
-          <MathInline>{`f(b)`}</MathInline> have opposite signs. Then there is at least one
-          <MathInline>{`c`}</MathInline> in the open interval <MathInline>{`(a, b)`}</MathInline> such that
+          Let <InlineMath>{`f`}</InlineMath> be continuous at each point of a closed interval
+          <InlineMath>{`[a, b]`}</InlineMath> and assume that <InlineMath>{`f(a)`}</InlineMath> and
+          <InlineMath>{`f(b)`}</InlineMath> have opposite signs. Then there is at least one
+          <InlineMath>{`c`}</InlineMath> in the open interval <InlineMath>{`(a, b)`}</InlineMath> such that
         </p>
         <MathBlock>{`f(c) = 0.`}</MathBlock>
       </Callout>
@@ -49,28 +49,28 @@ export default function Section22() {
 
       <Callout type="theorem" title="Theorem 3.7 (Sign-Preserving Property)">
         <p>
-          Let <MathInline>{`f`}</MathInline> be continuous at <MathInline>{`c`}</MathInline> and suppose
-          that <MathInline>{`f(c) \\neq 0`}</MathInline>. Then there is an interval
-          <MathInline>{`(c - \\delta, c + \\delta)`}</MathInline> about <MathInline>{`c`}</MathInline> in which
-          <MathInline>{`f`}</MathInline> has the same sign as <MathInline>{`f(c)`}</MathInline>.
+          Let <InlineMath>{`f`}</InlineMath> be continuous at <InlineMath>{`c`}</InlineMath> and suppose
+          that <InlineMath>{`f(c) \\neq 0`}</InlineMath>. Then there is an interval
+          <InlineMath>{`(c - \\delta, c + \\delta)`}</InlineMath> about <InlineMath>{`c`}</InlineMath> in which
+          <InlineMath>{`f`}</InlineMath> has the same sign as <InlineMath>{`f(c)`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="Proof of Sign-Preserving Property">
         <p>
-          Suppose <MathInline>{`f(c) > 0`}</MathInline>. By continuity, for every
-          <MathInline>{`\\epsilon > 0`}</MathInline> there is a <MathInline>{`\\delta > 0`}</MathInline> such that
+          Suppose <InlineMath>{`f(c) > 0`}</InlineMath>. By continuity, for every
+          <InlineMath>{`\\epsilon > 0`}</InlineMath> there is a <InlineMath>{`\\delta > 0`}</InlineMath> such that
         </p>
         <MathBlock>{`f(c) - \\epsilon < f(x) < f(c) + \\epsilon \\quad \\text{whenever} \\quad c - \\delta < x < c + \\delta.`}</MathBlock>
         <p>
-          If we take the <MathInline>{`\\delta`}</MathInline> corresponding to
-          <MathInline>{`\\epsilon = f(c)/2`}</MathInline> (this <MathInline>{`\\epsilon`}</MathInline> is positive), then:
+          If we take the <InlineMath>{`\\delta`}</InlineMath> corresponding to
+          <InlineMath>{`\\epsilon = f(c)/2`}</InlineMath> (this <InlineMath>{`\\epsilon`}</InlineMath> is positive), then:
         </p>
         <MathBlock>{`\\frac{1}{2}f(c) < f(x) < \\frac{3}{2}f(c) \\quad \\text{whenever} \\quad c - \\delta < x < c + \\delta.`}</MathBlock>
         <p>
-          Therefore <MathInline>{`f(x) > 0`}</MathInline> in this interval, so <MathInline>{`f(x)`}</MathInline> and
-          <MathInline>{`f(c)`}</MathInline> have the same sign. A similar argument works when
-          <MathInline>{`f(c) < 0`}</MathInline>.
+          Therefore <InlineMath>{`f(x) > 0`}</InlineMath> in this interval, so <InlineMath>{`f(x)`}</InlineMath> and
+          <InlineMath>{`f(c)`}</InlineMath> have the same sign. A similar argument works when
+          <InlineMath>{`f(c) < 0`}</InlineMath>.
         </p>
       </Callout>
 
@@ -81,44 +81,44 @@ export default function Section22() {
 
       <Callout type="info" title="Proof">
         <p>
-          To be specific, assume <MathInline>{`f(a) < 0`}</MathInline> and <MathInline>{`f(b) > 0`}</MathInline>.
-          There may be many values of <MathInline>{`x`}</MathInline> between <MathInline>{`a`}</MathInline> and
-          <MathInline>{`b`}</MathInline> for which <MathInline>{`f(x) = 0`}</MathInline>. Our problem is to find one.
-          We shall do this by finding the largest <MathInline>{`x`}</MathInline> for which <MathInline>{`f(x) = 0`}</MathInline>.
+          To be specific, assume <InlineMath>{`f(a) < 0`}</InlineMath> and <InlineMath>{`f(b) > 0`}</InlineMath>.
+          There may be many values of <InlineMath>{`x`}</InlineMath> between <InlineMath>{`a`}</InlineMath> and
+          <InlineMath>{`b`}</InlineMath> for which <InlineMath>{`f(x) = 0`}</InlineMath>. Our problem is to find one.
+          We shall do this by finding the largest <InlineMath>{`x`}</InlineMath> for which <InlineMath>{`f(x) = 0`}</InlineMath>.
         </p>
         <p>
-          Let <MathInline>{`S`}</MathInline> denote the set of all those points <MathInline>{`x`}</MathInline> in
-          the interval <MathInline>{`[a, b]`}</MathInline> for which <MathInline>{`f(x) \\leq 0`}</MathInline>.
-          There is at least one point in <MathInline>{`S`}</MathInline> because <MathInline>{`f(a) < 0`}</MathInline>.
-          Therefore <MathInline>{`S`}</MathInline> is a nonempty set. Also, <MathInline>{`S`}</MathInline> is bounded
-          above since all of <MathInline>{`S`}</MathInline> lies within <MathInline>{`[a, b]`}</MathInline>, so
-          <MathInline>{`S`}</MathInline> has a supremum. Let <MathInline>{`c = \\sup S`}</MathInline>.
-          We shall prove that <MathInline>{`f(c) = 0`}</MathInline>.
+          Let <InlineMath>{`S`}</InlineMath> denote the set of all those points <InlineMath>{`x`}</InlineMath> in
+          the interval <InlineMath>{`[a, b]`}</InlineMath> for which <InlineMath>{`f(x) \\leq 0`}</InlineMath>.
+          There is at least one point in <InlineMath>{`S`}</InlineMath> because <InlineMath>{`f(a) < 0`}</InlineMath>.
+          Therefore <InlineMath>{`S`}</InlineMath> is a nonempty set. Also, <InlineMath>{`S`}</InlineMath> is bounded
+          above since all of <InlineMath>{`S`}</InlineMath> lies within <InlineMath>{`[a, b]`}</InlineMath>, so
+          <InlineMath>{`S`}</InlineMath> has a supremum. Let <InlineMath>{`c = \\sup S`}</InlineMath>.
+          We shall prove that <InlineMath>{`f(c) = 0`}</InlineMath>.
         </p>
         <p>
-          There are only three possibilities: <MathInline>{`f(c) > 0`}</MathInline>,
-          <MathInline>{`f(c) < 0`}</MathInline>, and <MathInline>{`f(c) = 0`}</MathInline>.
+          There are only three possibilities: <InlineMath>{`f(c) > 0`}</InlineMath>,
+          <InlineMath>{`f(c) < 0`}</InlineMath>, and <InlineMath>{`f(c) = 0`}</InlineMath>.
         </p>
         <p>
-          <strong>Case 1:</strong> If <MathInline>{`f(c) > 0`}</MathInline>, there is an interval
-          <MathInline>{`(c - \\delta, c + \\delta)`}</MathInline> in which <MathInline>{`f`}</MathInline> is positive.
-          Therefore no points of <MathInline>{`S`}</MathInline> can lie to the right of
-          <MathInline>{`c - \\delta`}</MathInline>, and hence <MathInline>{`c - \\delta`}</MathInline> is an upper
-          bound for the set <MathInline>{`S`}</MathInline>. But <MathInline>{`c - \\delta < c`}</MathInline>, and
-          <MathInline>{`c`}</MathInline> is the <em>least</em> upper bound of <MathInline>{`S`}</MathInline>.
-          Therefore the inequality <MathInline>{`f(c) > 0`}</MathInline> is impossible.
+          <strong>Case 1:</strong> If <InlineMath>{`f(c) > 0`}</InlineMath>, there is an interval
+          <InlineMath>{`(c - \\delta, c + \\delta)`}</InlineMath> in which <InlineMath>{`f`}</InlineMath> is positive.
+          Therefore no points of <InlineMath>{`S`}</InlineMath> can lie to the right of
+          <InlineMath>{`c - \\delta`}</InlineMath>, and hence <InlineMath>{`c - \\delta`}</InlineMath> is an upper
+          bound for the set <InlineMath>{`S`}</InlineMath>. But <InlineMath>{`c - \\delta < c`}</InlineMath>, and
+          <InlineMath>{`c`}</InlineMath> is the <em>least</em> upper bound of <InlineMath>{`S`}</InlineMath>.
+          Therefore the inequality <InlineMath>{`f(c) > 0`}</InlineMath> is impossible.
         </p>
         <p>
-          <strong>Case 2:</strong> If <MathInline>{`f(c) < 0`}</MathInline>, there is an interval
-          <MathInline>{`(c - \\delta, c + \\delta)`}</MathInline> in which <MathInline>{`f`}</MathInline> is negative.
-          Hence <MathInline>{`f(x) < 0`}</MathInline> for some <MathInline>{`x > c`}</MathInline>, contradicting
-          the fact that <MathInline>{`c`}</MathInline> is an upper bound for <MathInline>{`S`}</MathInline>.
-          Therefore <MathInline>{`f(c) < 0`}</MathInline> is also impossible.
+          <strong>Case 2:</strong> If <InlineMath>{`f(c) < 0`}</InlineMath>, there is an interval
+          <InlineMath>{`(c - \\delta, c + \\delta)`}</InlineMath> in which <InlineMath>{`f`}</InlineMath> is negative.
+          Hence <InlineMath>{`f(x) < 0`}</InlineMath> for some <InlineMath>{`x > c`}</InlineMath>, contradicting
+          the fact that <InlineMath>{`c`}</InlineMath> is an upper bound for <InlineMath>{`S`}</InlineMath>.
+          Therefore <InlineMath>{`f(c) < 0`}</InlineMath> is also impossible.
         </p>
         <p>
-          <strong>Conclusion:</strong> The only remaining possibility is <MathInline>{`f(c) = 0`}</MathInline>.
-          Also, <MathInline>{`a < c < b`}</MathInline> because <MathInline>{`f(a) < 0`}</MathInline> and
-          <MathInline>{`f(b) > 0`}</MathInline>. This proves Bolzano's theorem.
+          <strong>Conclusion:</strong> The only remaining possibility is <InlineMath>{`f(c) = 0`}</InlineMath>.
+          Also, <InlineMath>{`a < c < b`}</InlineMath> because <InlineMath>{`f(a) < 0`}</InlineMath> and
+          <InlineMath>{`f(b) > 0`}</InlineMath>. This proves Bolzano's theorem.
         </p>
       </Callout>
 
@@ -130,106 +130,106 @@ export default function Section22() {
 
       <Callout type="theorem" title="Theorem 3.8 (Intermediate Value Theorem)">
         <p>
-          Let <MathInline>{`f`}</MathInline> be continuous at each point of a closed interval
-          <MathInline>{`[a, b]`}</MathInline>. Choose two arbitrary points <MathInline>{`x_1 < x_2`}</MathInline> in
-          <MathInline>{`[a, b]`}</MathInline> such that <MathInline>{`f(x_1) \\neq f(x_2)`}</MathInline>.
-          Then <MathInline>{`f`}</MathInline> takes on every value between <MathInline>{`f(x_1)`}</MathInline> and
-          <MathInline>{`f(x_2)`}</MathInline> somewhere in the interval <MathInline>{`(x_1, x_2)`}</MathInline>.
+          Let <InlineMath>{`f`}</InlineMath> be continuous at each point of a closed interval
+          <InlineMath>{`[a, b]`}</InlineMath>. Choose two arbitrary points <InlineMath>{`x_1 < x_2`}</InlineMath> in
+          <InlineMath>{`[a, b]`}</InlineMath> such that <InlineMath>{`f(x_1) \\neq f(x_2)`}</InlineMath>.
+          Then <InlineMath>{`f`}</InlineMath> takes on every value between <InlineMath>{`f(x_1)`}</InlineMath> and
+          <InlineMath>{`f(x_2)`}</InlineMath> somewhere in the interval <InlineMath>{`(x_1, x_2)`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="Proof">
         <p>
-          Suppose <MathInline>{`f(x_1) < f(x_2)`}</MathInline> and let <MathInline>{`k`}</MathInline> be any value
-          between <MathInline>{`f(x_1)`}</MathInline> and <MathInline>{`f(x_2)`}</MathInline>. Let <MathInline>{`g`}</MathInline> be
-          the function defined on <MathInline>{`[x_1, x_2]`}</MathInline> as follows:
+          Suppose <InlineMath>{`f(x_1) < f(x_2)`}</InlineMath> and let <InlineMath>{`k`}</InlineMath> be any value
+          between <InlineMath>{`f(x_1)`}</InlineMath> and <InlineMath>{`f(x_2)`}</InlineMath>. Let <InlineMath>{`g`}</InlineMath> be
+          the function defined on <InlineMath>{`[x_1, x_2]`}</InlineMath> as follows:
         </p>
         <MathBlock>{`g(x) = f(x) - k.`}</MathBlock>
         <p>
-          Then <MathInline>{`g`}</MathInline> is continuous at each point of <MathInline>{`[x_1, x_2]`}</MathInline>, and we have:
+          Then <InlineMath>{`g`}</InlineMath> is continuous at each point of <InlineMath>{`[x_1, x_2]`}</InlineMath>, and we have:
         </p>
         <MathBlock>{`g(x_1) = f(x_1) - k < 0, \\qquad g(x_2) = f(x_2) - k > 0.`}</MathBlock>
         <p>
-          Applying Bolzano's theorem to <MathInline>{`g`}</MathInline>, we have <MathInline>{`g(c) = 0`}</MathInline> for
-          some <MathInline>{`c`}</MathInline> between <MathInline>{`x_1`}</MathInline> and <MathInline>{`x_2`}</MathInline>.
-          But this means <MathInline>{`f(c) = k`}</MathInline>, and the proof is complete.
+          Applying Bolzano's theorem to <InlineMath>{`g`}</InlineMath>, we have <InlineMath>{`g(c) = 0`}</InlineMath> for
+          some <InlineMath>{`c`}</InlineMath> between <InlineMath>{`x_1`}</InlineMath> and <InlineMath>{`x_2`}</InlineMath>.
+          But this means <InlineMath>{`f(c) = k`}</InlineMath>, and the proof is complete.
         </p>
       </Callout>
 
       <Callout type="info" title="Important Note">
         <p>
           In both Bolzano's theorem and the intermediate value theorem, it is assumed that
-          <MathInline>{`f`}</MathInline> is continuous at <em>each point</em> of <MathInline>{`[a, b]`}</MathInline>,
-          including the endpoints <MathInline>{`a`}</MathInline> and <MathInline>{`b`}</MathInline>. Continuity at
-          both endpoints is necessary. For example, if <MathInline>{`f`}</MathInline> is continuous everywhere
-          in <MathInline>{`[a, b]`}</MathInline> except at <MathInline>{`a`}</MathInline>, with <MathInline>{`f(a)`}</MathInline> negative
-          and <MathInline>{`f(b)`}</MathInline> positive, there may be no <MathInline>{`x`}</MathInline> in
-          <MathInline>{`[a, b]`}</MathInline> for which <MathInline>{`f(x) = 0`}</MathInline>.
+          <InlineMath>{`f`}</InlineMath> is continuous at <em>each point</em> of <InlineMath>{`[a, b]`}</InlineMath>,
+          including the endpoints <InlineMath>{`a`}</InlineMath> and <InlineMath>{`b`}</InlineMath>. Continuity at
+          both endpoints is necessary. For example, if <InlineMath>{`f`}</InlineMath> is continuous everywhere
+          in <InlineMath>{`[a, b]`}</InlineMath> except at <InlineMath>{`a`}</InlineMath>, with <InlineMath>{`f(a)`}</InlineMath> negative
+          and <InlineMath>{`f(b)`}</InlineMath> positive, there may be no <InlineMath>{`x`}</InlineMath> in
+          <InlineMath>{`[a, b]`}</InlineMath> for which <InlineMath>{`f(x) = 0`}</InlineMath>.
         </p>
       </Callout>
 
       <h2>Application: Existence of nth Roots</h2>
       <p>
         The intermediate value theorem provides a rigorous proof that every positive real number
-        has a positive <MathInline>{`n`}</MathInline>th root.
+        has a positive <InlineMath>{`n`}</InlineMath>th root.
       </p>
 
       <Callout type="theorem" title="Theorem 3.9 (Existence of nth Roots)">
         <p>
-          If <MathInline>{`n`}</MathInline> is a positive integer and if <MathInline>{`a > 0`}</MathInline>,
-          then there is exactly one positive <MathInline>{`b`}</MathInline> such that <MathInline>{`b^n = a`}</MathInline>.
+          If <InlineMath>{`n`}</InlineMath> is a positive integer and if <InlineMath>{`a > 0`}</InlineMath>,
+          then there is exactly one positive <InlineMath>{`b`}</InlineMath> such that <InlineMath>{`b^n = a`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="info" title="Proof">
         <p>
-          Choose <MathInline>{`c > 1`}</MathInline> such that <MathInline>{`0 < a < c`}</MathInline>, and consider
-          the function <MathInline>{`f`}</MathInline> defined on the interval <MathInline>{`[0, c]`}</MathInline> by
-          the equation <MathInline>{`f(x) = x^n`}</MathInline>. This function is continuous on
-          <MathInline>{`[0, c]`}</MathInline>, and at the endpoints we have:
+          Choose <InlineMath>{`c > 1`}</InlineMath> such that <InlineMath>{`0 < a < c`}</InlineMath>, and consider
+          the function <InlineMath>{`f`}</InlineMath> defined on the interval <InlineMath>{`[0, c]`}</InlineMath> by
+          the equation <InlineMath>{`f(x) = x^n`}</InlineMath>. This function is continuous on
+          <InlineMath>{`[0, c]`}</InlineMath>, and at the endpoints we have:
         </p>
         <MathBlock>{`f(0) = 0, \\qquad f(c) = c^n.`}</MathBlock>
         <p>
-          Since <MathInline>{`0 < a < c < c^n`}</MathInline>, the given number <MathInline>{`a`}</MathInline> lies
-          between the function values <MathInline>{`f(0)`}</MathInline> and <MathInline>{`f(c)`}</MathInline>.
-          Therefore, by the intermediate value theorem, we have <MathInline>{`f(x) = a`}</MathInline> for
-          some <MathInline>{`x`}</MathInline> in <MathInline>{`(0, c)`}</MathInline>, say for <MathInline>{`x = b`}</MathInline>.
-          This proves the existence of at least one positive <MathInline>{`b`}</MathInline> such that
-          <MathInline>{`b^n = a`}</MathInline>.
+          Since <InlineMath>{`0 < a < c < c^n`}</InlineMath>, the given number <InlineMath>{`a`}</InlineMath> lies
+          between the function values <InlineMath>{`f(0)`}</InlineMath> and <InlineMath>{`f(c)`}</InlineMath>.
+          Therefore, by the intermediate value theorem, we have <InlineMath>{`f(x) = a`}</InlineMath> for
+          some <InlineMath>{`x`}</InlineMath> in <InlineMath>{`(0, c)`}</InlineMath>, say for <InlineMath>{`x = b`}</InlineMath>.
+          This proves the existence of at least one positive <InlineMath>{`b`}</InlineMath> such that
+          <InlineMath>{`b^n = a`}</InlineMath>.
         </p>
         <p>
-          There cannot be more than one such <MathInline>{`b`}</MathInline> because <MathInline>{`f`}</MathInline> is
-          strictly increasing on <MathInline>{`[0, c]`}</MathInline>. This completes the proof.
+          There cannot be more than one such <InlineMath>{`b`}</InlineMath> because <InlineMath>{`f`}</InlineMath> is
+          strictly increasing on <InlineMath>{`[0, c]`}</InlineMath>. This completes the proof.
         </p>
       </Callout>
 
       <h2>Application: Fixed Points</h2>
       <p>
         Another beautiful application of Bolzano's theorem concerns <strong>fixed points</strong>.
-        A fixed point of a function <MathInline>{`f`}</MathInline> is a point <MathInline>{`c`}</MathInline> such
-        that <MathInline>{`f(c) = c`}</MathInline>.
+        A fixed point of a function <InlineMath>{`f`}</InlineMath> is a point <InlineMath>{`c`}</InlineMath> such
+        that <InlineMath>{`f(c) = c`}</InlineMath>.
       </p>
 
       <Callout type="example" title="Fixed Point Theorem">
         <p>
-          Let <MathInline>{`f`}</MathInline> be a real-valued function which is continuous on the closed
-          interval <MathInline>{`[0, 1]`}</MathInline>. Assume that <MathInline>{`0 \\leq f(x) \\leq 1`}</MathInline> for
-          each <MathInline>{`x`}</MathInline> in <MathInline>{`[0, 1]`}</MathInline>. Then there is at least one
-          point <MathInline>{`c`}</MathInline> in <MathInline>{`[0, 1]`}</MathInline> for which <MathInline>{`f(c) = c`}</MathInline>.
+          Let <InlineMath>{`f`}</InlineMath> be a real-valued function which is continuous on the closed
+          interval <InlineMath>{`[0, 1]`}</InlineMath>. Assume that <InlineMath>{`0 \\leq f(x) \\leq 1`}</InlineMath> for
+          each <InlineMath>{`x`}</InlineMath> in <InlineMath>{`[0, 1]`}</InlineMath>. Then there is at least one
+          point <InlineMath>{`c`}</InlineMath> in <InlineMath>{`[0, 1]`}</InlineMath> for which <InlineMath>{`f(c) = c`}</InlineMath>.
         </p>
         <p>
-          <strong>Proof:</strong> Consider the function <MathInline>{`g(x) = f(x) - x`}</MathInline>.
-          Then <MathInline>{`g`}</MathInline> is continuous on <MathInline>{`[0, 1]`}</MathInline>. We have:
+          <strong>Proof:</strong> Consider the function <InlineMath>{`g(x) = f(x) - x`}</InlineMath>.
+          Then <InlineMath>{`g`}</InlineMath> is continuous on <InlineMath>{`[0, 1]`}</InlineMath>. We have:
         </p>
         <MathBlock>{`g(0) = f(0) - 0 = f(0) \\geq 0`}</MathBlock>
         <MathBlock>{`g(1) = f(1) - 1 \\leq 0`}</MathBlock>
         <p>
-          (since <MathInline>{`f(0) \\geq 0`}</MathInline> and <MathInline>{`f(1) \\leq 1`}</MathInline>).
-          If <MathInline>{`g(0) = 0`}</MathInline>, then <MathInline>{`c = 0`}</MathInline> is a fixed point.
-          If <MathInline>{`g(1) = 0`}</MathInline>, then <MathInline>{`c = 1`}</MathInline> is a fixed point.
-          Otherwise, <MathInline>{`g(0) > 0`}</MathInline> and <MathInline>{`g(1) < 0`}</MathInline>, so by Bolzano's
-          theorem, <MathInline>{`g(c) = 0`}</MathInline> for some <MathInline>{`c`}</MathInline> in <MathInline>{`(0, 1)`}</MathInline>.
-          This means <MathInline>{`f(c) = c`}</MathInline>.
+          (since <InlineMath>{`f(0) \\geq 0`}</InlineMath> and <InlineMath>{`f(1) \\leq 1`}</InlineMath>).
+          If <InlineMath>{`g(0) = 0`}</InlineMath>, then <InlineMath>{`c = 0`}</InlineMath> is a fixed point.
+          If <InlineMath>{`g(1) = 0`}</InlineMath>, then <InlineMath>{`c = 1`}</InlineMath> is a fixed point.
+          Otherwise, <InlineMath>{`g(0) > 0`}</InlineMath> and <InlineMath>{`g(1) < 0`}</InlineMath>, so by Bolzano's
+          theorem, <InlineMath>{`g(c) = 0`}</InlineMath> for some <InlineMath>{`c`}</InlineMath> in <InlineMath>{`(0, 1)`}</InlineMath>.
+          This means <InlineMath>{`f(c) = c`}</InlineMath>.
         </p>
       </Callout>
 
@@ -242,28 +242,28 @@ export default function Section22() {
       <h2>Using Bolzano's Theorem to Isolate Roots</h2>
       <p>
         Bolzano's theorem provides a practical method for locating roots of equations.
-        If <MathInline>{`f`}</MathInline> is continuous and we can find values <MathInline>{`a`}</MathInline> and
-        <MathInline>{`b`}</MathInline> where <MathInline>{`f(a)`}</MathInline> and <MathInline>{`f(b)`}</MathInline> have
-        opposite signs, then we know there is at least one root in <MathInline>{`(a, b)`}</MathInline>.
+        If <InlineMath>{`f`}</InlineMath> is continuous and we can find values <InlineMath>{`a`}</InlineMath> and
+        <InlineMath>{`b`}</InlineMath> where <InlineMath>{`f(a)`}</InlineMath> and <InlineMath>{`f(b)`}</InlineMath> have
+        opposite signs, then we know there is at least one root in <InlineMath>{`(a, b)`}</InlineMath>.
       </p>
 
       <Callout type="example" title="Example: Root of a Polynomial">
         <p>
-          Let <MathInline>{`f`}</MathInline> be a polynomial of degree <MathInline>{`n`}</MathInline>, say
+          Let <InlineMath>{`f`}</InlineMath> be a polynomial of degree <InlineMath>{`n`}</InlineMath>, say
         </p>
         <MathBlock>{`f(x) = \\sum_{k=0}^{n} c_k x^k`}</MathBlock>
         <p>
-          such that the first and last coefficients <MathInline>{`c_0`}</MathInline> and
-          <MathInline>{`c_n`}</MathInline> have opposite signs. Then <MathInline>{`f(x) = 0`}</MathInline> for
-          at least one positive <MathInline>{`x`}</MathInline>.
+          such that the first and last coefficients <InlineMath>{`c_0`}</InlineMath> and
+          <InlineMath>{`c_n`}</InlineMath> have opposite signs. Then <InlineMath>{`f(x) = 0`}</InlineMath> for
+          at least one positive <InlineMath>{`x`}</InlineMath>.
         </p>
         <p>
-          <strong>Proof:</strong> We have <MathInline>{`f(0) = c_0`}</MathInline>. For large
-          <MathInline>{`x`}</MathInline>, the sign of <MathInline>{`f(x)`}</MathInline> is determined by the
-          leading term <MathInline>{`c_n x^n`}</MathInline>, which has the same sign as <MathInline>{`c_n`}</MathInline>.
-          Since <MathInline>{`c_0`}</MathInline> and <MathInline>{`c_n`}</MathInline> have opposite signs,
-          <MathInline>{`f(0)`}</MathInline> and <MathInline>{`f(x)`}</MathInline> (for large <MathInline>{`x`}</MathInline>)
-          have opposite signs. By Bolzano's theorem, there is a root between <MathInline>{`0`}</MathInline> and
+          <strong>Proof:</strong> We have <InlineMath>{`f(0) = c_0`}</InlineMath>. For large
+          <InlineMath>{`x`}</InlineMath>, the sign of <InlineMath>{`f(x)`}</InlineMath> is determined by the
+          leading term <InlineMath>{`c_n x^n`}</InlineMath>, which has the same sign as <InlineMath>{`c_n`}</InlineMath>.
+          Since <InlineMath>{`c_0`}</InlineMath> and <InlineMath>{`c_n`}</InlineMath> have opposite signs,
+          <InlineMath>{`f(0)`}</InlineMath> and <InlineMath>{`f(x)`}</InlineMath> (for large <InlineMath>{`x`}</InlineMath>)
+          have opposite signs. By Bolzano's theorem, there is a root between <InlineMath>{`0`}</InlineMath> and
           this large value.
         </p>
       </Callout>
@@ -275,14 +275,14 @@ export default function Section22() {
 
       <Callout type="example" title="Counterexample">
         <p>
-          Let <MathInline>{`f(x) = \\tan x`}</MathInline>. Although <MathInline>{`f(\\pi/4) = 1`}</MathInline> and
-          <MathInline>{`f(3\\pi/4) = -1`}</MathInline>, there is no <MathInline>{`x`}</MathInline> in the interval
-          <MathInline>{`[\\pi/4, 3\\pi/4]`}</MathInline> such that <MathInline>{`f(x) = 0`}</MathInline>.
+          Let <InlineMath>{`f(x) = \\tan x`}</InlineMath>. Although <InlineMath>{`f(\\pi/4) = 1`}</InlineMath> and
+          <InlineMath>{`f(3\\pi/4) = -1`}</InlineMath>, there is no <InlineMath>{`x`}</InlineMath> in the interval
+          <InlineMath>{`[\\pi/4, 3\\pi/4]`}</InlineMath> such that <InlineMath>{`f(x) = 0`}</InlineMath>.
         </p>
         <p>
-          This does not contradict Bolzano's theorem because <MathInline>{`f`}</MathInline> is not continuous
-          on the entire interval <MathInline>{`[\\pi/4, 3\\pi/4]`}</MathInline>—it has a discontinuity at
-          <MathInline>{`x = \\pi/2`}</MathInline> where the tangent function is undefined.
+          This does not contradict Bolzano's theorem because <InlineMath>{`f`}</InlineMath> is not continuous
+          on the entire interval <InlineMath>{`[\\pi/4, 3\\pi/4]`}</InlineMath>—it has a discontinuity at
+          <InlineMath>{`x = \\pi/2`}</InlineMath> where the tangent function is undefined.
         </p>
       </Callout>
 
@@ -295,11 +295,11 @@ export default function Section22() {
       <ul>
         <li>
           <strong>Existence of roots:</strong> We can guarantee solutions to equations
-          <MathInline>{`f(x) = 0`}</MathInline> without explicitly finding them.
+          <InlineMath>{`f(x) = 0`}</InlineMath> without explicitly finding them.
         </li>
         <li>
           <strong>Existence of nth roots:</strong> Every positive number has a unique positive
-          <MathInline>{`n`}</MathInline>th root.
+          <InlineMath>{`n`}</InlineMath>th root.
         </li>
         <li>
           <strong>Fixed points:</strong> Certain continuous functions must have fixed points.
@@ -310,7 +310,7 @@ export default function Section22() {
       </ul>
       <p>
         The proofs rely crucially on the completeness of the real numbers (the least-upper-bound
-        axiom), illustrating how the foundational properties of <MathInline>{`\\mathbb{R}`}</MathInline>
+        axiom), illustrating how the foundational properties of <InlineMath>{`\\mathbb{R}`}</InlineMath>
         determine the behavior of continuous functions.
       </p>
     </LessonLayout>

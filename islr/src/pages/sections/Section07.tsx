@@ -3,7 +3,7 @@ import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section07Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, RCodeBlock } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section07() {
   return (
@@ -23,20 +23,20 @@ export default function Section07() {
         </p>
         <MathBlock>{`Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\epsilon`}</MathBlock>
         <p className="mt-2">
-          where <Math>X_j</Math> represents the <Math>j</Math>th predictor 
-          and <Math>\beta_j</Math> quantifies the association between that predictor and the response.
+          where <InlineMath>X_j</InlineMath> represents the <InlineMath>j</InlineMath>th predictor 
+          and <InlineMath>\beta_j</InlineMath> quantifies the association between that predictor and the response.
         </p>
         <p className="mt-2">
-          We interpret <Math>\beta_j</Math> as the <em>average</em> effect on <Math>Y</Math> of 
-          a one unit increase in <Math>X_j</Math>, <strong>holding all other predictors fixed</strong>.
+          We interpret <InlineMath>\beta_j</InlineMath> as the <em>average</em> effect on <InlineMath>Y</InlineMath> of 
+          a one unit increase in <InlineMath>X_j</InlineMath>, <strong>holding all other predictors fixed</strong>.
         </p>
       </Definition>
 
       <h2>Estimating the Regression Coefficients</h2>
 
       <p>
-        As with simple linear regression, the coefficients <Math>\beta_0, \beta_1, \ldots, \beta_p</Math> are 
-        unknown and must be estimated. Given estimates <Math>\hat\beta_0, \hat\beta_1, \ldots, \hat\beta_p</Math>, 
+        As with simple linear regression, the coefficients <InlineMath>\beta_0, \beta_1, \ldots, \beta_p</InlineMath> are 
+        unknown and must be estimated. Given estimates <InlineMath>\hat\beta_0, \hat\beta_1, \ldots, \hat\beta_p</InlineMath>, 
         we can make predictions using:
       </p>
 
@@ -54,7 +54,7 @@ export default function Section07() {
       <Callout type="info">
         <strong>Matrix Formulation:</strong> Unlike simple linear regression, the formulas for 
         the least squares coefficient estimates in multiple regression are most conveniently 
-        expressed using matrix algebra. In matrix form: <Math>{"\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{y}"}</Math>
+        expressed using matrix algebra. In matrix form: <InlineMath>{"\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{y}"}</InlineMath>
       </Callout>
 
       <Example title="Advertising Data with Multiple Predictors">
@@ -80,7 +80,7 @@ export default function Section07() {
         <div className="p-4 bg-dark-800/50 rounded-xl border border-dark-700">
           <h4 className="text-emerald-400 font-semibold mb-2">1. Is at least one predictor useful?</h4>
           <p className="text-dark-300 text-sm">
-            We test <Math>{"H_0: \\beta_1 = \\beta_2 = \\cdots = \\beta_p = 0"}</Math> using the F-statistic.
+            We test <InlineMath>{"H_0: \\beta_1 = \\beta_2 = \\cdots = \\beta_p = 0"}</InlineMath> using the F-statistic.
           </p>
         </div>
         <div className="p-4 bg-dark-800/50 rounded-xl border border-dark-700">
@@ -92,7 +92,7 @@ export default function Section07() {
         <div className="p-4 bg-dark-800/50 rounded-xl border border-dark-700">
           <h4 className="text-amber-400 font-semibold mb-2">3. How well does the model fit?</h4>
           <p className="text-dark-300 text-sm">
-            Use <Math>R^2</Math> and RSE to assess overall model quality.
+            Use <InlineMath>R^2</InlineMath> and RSE to assess overall model quality.
           </p>
         </div>
         <div className="p-4 bg-dark-800/50 rounded-xl border border-dark-700">
@@ -112,16 +112,16 @@ export default function Section07() {
       <Definition title="F-Statistic">
         <MathBlock>{`F = \\frac{(\\text{TSS} - \\text{RSS})/p}{\\text{RSS}/(n - p - 1)}`}</MathBlock>
         <p className="mt-2">
-          where TSS = <Math>{`\\sum(y_i - \\bar{y})^2`}</Math> and RSS = <Math>{`\\sum(y_i - \\hat{y}_i)^2`}</Math>.
+          where TSS = <InlineMath>{`\\sum(y_i - \\bar{y})^2`}</InlineMath> and RSS = <InlineMath>{`\\sum(y_i - \\hat{y}_i)^2`}</InlineMath>.
         </p>
         <p className="mt-2">
-          If <Math>H_0</Math> is true and the errors are normally distributed, <Math>F</Math> follows 
-          an F-distribution with <Math>(p, n-p-1)</Math> degrees of freedom.
+          If <InlineMath>H_0</InlineMath> is true and the errors are normally distributed, <InlineMath>F</InlineMath> follows 
+          an F-distribution with <InlineMath>(p, n-p-1)</InlineMath> degrees of freedom.
         </p>
       </Definition>
 
       <Callout type="warning">
-        <strong>Why not just use individual t-tests?</strong> When <Math>p</Math> is large, about 
+        <strong>Why not just use individual t-tests?</strong> When <InlineMath>p</InlineMath> is large, about 
         5% of p-values will be below 0.05 by chance alone! The F-test avoids this multiple 
         testing problem by testing all coefficients simultaneously.
       </Callout>
@@ -130,8 +130,8 @@ export default function Section07() {
 
       <p>
         The task of determining which predictors are associated with the response is referred 
-        to as <em>variable selection</em>. There are <Math>2^p</Math> possible models containing 
-        subsets of the <Math>p</Math> predictors!
+        to as <em>variable selection</em>. There are <InlineMath>2^p</InlineMath> possible models containing 
+        subsets of the <InlineMath>p</InlineMath> predictors!
       </p>
 
       <p>Common approaches include:</p>
@@ -149,16 +149,16 @@ export default function Section07() {
       <Definition title="R² for Multiple Regression">
         <MathBlock>{`R^2 = 1 - \\frac{\\text{RSS}}{\\text{TSS}} = \\frac{\\text{TSS} - \\text{RSS}}{\\text{TSS}}`}</MathBlock>
         <p className="mt-2">
-          As in simple regression, <Math>R^2</Math> measures the proportion of variance explained 
-          by the model. However, <Math>R^2</Math> will <em>always</em> increase when more variables 
+          As in simple regression, <InlineMath>R^2</InlineMath> measures the proportion of variance explained 
+          by the model. However, <InlineMath>R^2</InlineMath> will <em>always</em> increase when more variables 
           are added, even if those variables are not truly associated with the response!
         </p>
       </Definition>
 
       <Callout type="info">
         <strong>Adjusted R²:</strong> To account for the number of predictors, we can use 
-        <Math>{"\\text{Adjusted } R^2 = 1 - \\frac{\\text{RSS}/(n-p-1)}{\\text{TSS}/(n-1)}"}</Math>. 
-        Unlike <Math>R^2</Math>, adjusted <Math>R^2</Math> can decrease if we add uninformative predictors.
+        <InlineMath>{"\\text{Adjusted } R^2 = 1 - \\frac{\\text{RSS}/(n-p-1)}{\\text{TSS}/(n-1)}"}</InlineMath>. 
+        Unlike <InlineMath>R^2</InlineMath>, adjusted <InlineMath>R^2</InlineMath> can decrease if we add uninformative predictors.
       </Callout>
 
       <Example title="Advertising Model Comparison">
@@ -191,7 +191,7 @@ export default function Section07() {
           </table>
         </div>
         <p className="text-dark-400 text-sm">
-          Adding newspaper to the model barely improves <Math>R^2</Math> and actually increases RSE slightly!
+          Adding newspaper to the model barely improves <InlineMath>R^2</InlineMath> and actually increases RSE slightly!
         </p>
       </Example>
 
@@ -281,9 +281,9 @@ anova(lm.fit1, lm.fit)`}
       </p>
 
       <ul className="list-disc list-inside text-dark-300 space-y-2 my-4">
-        <li>Each coefficient <Math>\beta_j</Math> represents the effect of <Math>X_j</Math> holding other predictors fixed</li>
+        <li>Each coefficient <InlineMath>\beta_j</InlineMath> represents the effect of <InlineMath>X_j</InlineMath> holding other predictors fixed</li>
         <li>The F-statistic tests whether at least one predictor is useful</li>
-        <li><Math>R^2</Math> always increases with more predictors; use adjusted <Math>R^2</Math> for comparison</li>
+        <li><InlineMath>R^2</InlineMath> always increases with more predictors; use adjusted <InlineMath>R^2</InlineMath> for comparison</li>
         <li>Correlation among predictors can make interpretation challenging</li>
         <li>Variable selection helps identify the most important predictors</li>
       </ul>

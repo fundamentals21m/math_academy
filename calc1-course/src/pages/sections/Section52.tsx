@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section52() {
@@ -17,8 +17,8 @@ export default function Section52() {
       <Callout type="definition" title="Differential Equation">
         <p>
           A <strong>differential equation</strong> is an equation that relates a
-          function <MathInline>{`y = f(x)`}</MathInline> to one or more of its derivatives
-          <MathInline>{`y', y'', y''', \\ldots`}</MathInline>
+          function <InlineMath>{`y = f(x)`}</InlineMath> to one or more of its derivatives
+          <InlineMath>{`y', y'', y''', \\ldots`}</InlineMath>
         </p>
         <p>Examples:</p>
         <MathBlock>{`y' = 2x`}</MathBlock>
@@ -30,7 +30,7 @@ export default function Section52() {
       <Callout type="info" title="Why Study Differential Equations?">
         <p>
           Many natural phenomena are described by rates of change. Newton's second
-          law <MathInline>{`F = ma`}</MathInline> relates force to the second derivative
+          law <InlineMath>{`F = ma`}</InlineMath> relates force to the second derivative
           of position. Population growth relates the rate of change to the current
           population. Heat flow, wave propagation, electrical circuits—all are
           modeled by differential equations.
@@ -45,9 +45,9 @@ export default function Section52() {
           derivative that appears in the equation.
         </p>
         <ul className="list-disc pl-6 space-y-1 mt-2">
-          <li><MathInline>{`y' = x^2`}</MathInline> — first order</li>
-          <li><MathInline>{`y'' + y = 0`}</MathInline> — second order</li>
-          <li><MathInline>{`y''' - y' + y = \\sin x`}</MathInline> — third order</li>
+          <li><InlineMath>{`y' = x^2`}</InlineMath> — first order</li>
+          <li><InlineMath>{`y'' + y = 0`}</InlineMath> — second order</li>
+          <li><InlineMath>{`y''' - y' + y = \\sin x`}</InlineMath> — third order</li>
         </ul>
       </Callout>
 
@@ -58,8 +58,8 @@ export default function Section52() {
           involves partial derivatives of a function of several variables.
         </p>
         <p className="mt-2">
-          In this course, we focus on ODEs. The equation <MathInline>{`y' = xy`}</MathInline>
-          is an ODE, while <MathInline>{`\\frac{\\partial u}{\\partial t} = \\frac{\\partial^2 u}{\\partial x^2}`}</MathInline>
+          In this course, we focus on ODEs. The equation <InlineMath>{`y' = xy`}</InlineMath>
+          is an ODE, while <InlineMath>{`\\frac{\\partial u}{\\partial t} = \\frac{\\partial^2 u}{\\partial x^2}`}</InlineMath>
           (the heat equation) is a PDE.
         </p>
       </Callout>
@@ -71,9 +71,9 @@ export default function Section52() {
           together. Otherwise, it is <strong>nonlinear</strong>.
         </p>
         <ul className="list-disc pl-6 space-y-1 mt-2">
-          <li><MathInline>{`y'' + 3y' + 2y = x`}</MathInline> — linear</li>
-          <li><MathInline>{`y' = y^2`}</MathInline> — nonlinear (because of <MathInline>{`y^2`}</MathInline>)</li>
-          <li><MathInline>{`yy' = x`}</MathInline> — nonlinear (product of <MathInline>{`y`}</MathInline> and <MathInline>{`y'`}</MathInline>)</li>
+          <li><InlineMath>{`y'' + 3y' + 2y = x`}</InlineMath> — linear</li>
+          <li><InlineMath>{`y' = y^2`}</InlineMath> — nonlinear (because of <InlineMath>{`y^2`}</InlineMath>)</li>
+          <li><InlineMath>{`yy' = x`}</InlineMath> — nonlinear (product of <InlineMath>{`y`}</InlineMath> and <InlineMath>{`y'`}</InlineMath>)</li>
         </ul>
       </Callout>
 
@@ -81,58 +81,58 @@ export default function Section52() {
 
       <Callout type="definition" title="Solution">
         <p>
-          A <strong>solution</strong> of a differential equation on an interval <MathInline>{`I`}</MathInline>
-          is a function <MathInline>{`y = f(x)`}</MathInline> that satisfies the equation for
-          all <MathInline>{`x`}</MathInline> in <MathInline>{`I`}</MathInline>.
+          A <strong>solution</strong> of a differential equation on an interval <InlineMath>{`I`}</InlineMath>
+          is a function <InlineMath>{`y = f(x)`}</InlineMath> that satisfies the equation for
+          all <InlineMath>{`x`}</InlineMath> in <InlineMath>{`I`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 1: Verifying a Solution">
         <p>
-          Verify that <MathInline>{`y = e^{2x}`}</MathInline> is a solution of <MathInline>{`y' = 2y`}</MathInline>.
+          Verify that <InlineMath>{`y = e^{2x}`}</InlineMath> is a solution of <InlineMath>{`y' = 2y`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          If <MathInline>{`y = e^{2x}`}</MathInline>, then <MathInline>{`y' = 2e^{2x}`}</MathInline>.
+          If <InlineMath>{`y = e^{2x}`}</InlineMath>, then <InlineMath>{`y' = 2e^{2x}`}</InlineMath>.
         </p>
         <p>
-          Also, <MathInline>{`2y = 2e^{2x}`}</MathInline>.
+          Also, <InlineMath>{`2y = 2e^{2x}`}</InlineMath>.
         </p>
         <p>
-          Since <MathInline>{`y' = 2y`}</MathInline>, the function <MathInline>{`y = e^{2x}`}</MathInline> is indeed a solution.
+          Since <InlineMath>{`y' = 2y`}</InlineMath>, the function <InlineMath>{`y = e^{2x}`}</InlineMath> is indeed a solution.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 2: A Family of Solutions">
         <p>
-          Show that <MathInline>{`y = Ce^{2x}`}</MathInline> is a solution of <MathInline>{`y' = 2y`}</MathInline>
-          for any constant <MathInline>{`C`}</MathInline>.
+          Show that <InlineMath>{`y = Ce^{2x}`}</InlineMath> is a solution of <InlineMath>{`y' = 2y`}</InlineMath>
+          for any constant <InlineMath>{`C`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          If <MathInline>{`y = Ce^{2x}`}</MathInline>, then <MathInline>{`y' = 2Ce^{2x} = 2y`}</MathInline>.
+          If <InlineMath>{`y = Ce^{2x}`}</InlineMath>, then <InlineMath>{`y' = 2Ce^{2x} = 2y`}</InlineMath>.
         </p>
         <p>
-          This works for any value of <MathInline>{`C`}</MathInline>. We call <MathInline>{`y = Ce^{2x}`}</MathInline>
+          This works for any value of <InlineMath>{`C`}</InlineMath>. We call <InlineMath>{`y = Ce^{2x}`}</InlineMath>
           the <strong>general solution</strong>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 3: Second-Order Equation">
         <p>
-          Verify that <MathInline>{`y = \\sin x`}</MathInline> and <MathInline>{`y = \\cos x`}</MathInline> are
-          both solutions of <MathInline>{`y'' + y = 0`}</MathInline>.
+          Verify that <InlineMath>{`y = \\sin x`}</InlineMath> and <InlineMath>{`y = \\cos x`}</InlineMath> are
+          both solutions of <InlineMath>{`y'' + y = 0`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          For <MathInline>{`y = \\sin x`}</MathInline>: <MathInline>{`y' = \\cos x`}</MathInline>,
-          <MathInline>{`y'' = -\\sin x`}</MathInline>.
-          Thus <MathInline>{`y'' + y = -\\sin x + \\sin x = 0`}</MathInline>. ✓
+          For <InlineMath>{`y = \\sin x`}</InlineMath>: <InlineMath>{`y' = \\cos x`}</InlineMath>,
+          <InlineMath>{`y'' = -\\sin x`}</InlineMath>.
+          Thus <InlineMath>{`y'' + y = -\\sin x + \\sin x = 0`}</InlineMath>. ✓
         </p>
         <p>
-          For <MathInline>{`y = \\cos x`}</MathInline>: <MathInline>{`y' = -\\sin x`}</MathInline>,
-          <MathInline>{`y'' = -\\cos x`}</MathInline>.
-          Thus <MathInline>{`y'' + y = -\\cos x + \\cos x = 0`}</MathInline>. ✓
+          For <InlineMath>{`y = \\cos x`}</InlineMath>: <InlineMath>{`y' = -\\sin x`}</InlineMath>,
+          <InlineMath>{`y'' = -\\cos x`}</InlineMath>.
+          Thus <InlineMath>{`y'' + y = -\\cos x + \\cos x = 0`}</InlineMath>. ✓
         </p>
       </Callout>
 
@@ -146,7 +146,7 @@ export default function Section52() {
         <ul className="list-disc pl-6 space-y-1 mt-2">
           <li>A first-order equation typically has one arbitrary constant</li>
           <li>A second-order equation typically has two arbitrary constants</li>
-          <li>An <MathInline>{`n`}</MathInline>th-order equation typically has <MathInline>{`n`}</MathInline> constants</li>
+          <li>An <InlineMath>{`n`}</InlineMath>th-order equation typically has <InlineMath>{`n`}</InlineMath> constants</li>
         </ul>
       </Callout>
 
@@ -159,17 +159,17 @@ export default function Section52() {
 
       <Callout type="example" title="Example 4: General to Particular">
         <p>
-          The general solution of <MathInline>{`y'' + y = 0`}</MathInline> is:
+          The general solution of <InlineMath>{`y'' + y = 0`}</InlineMath> is:
         </p>
         <MathBlock>{`y = A\\cos x + B\\sin x`}</MathBlock>
         <p>
-          where <MathInline>{`A`}</MathInline> and <MathInline>{`B`}</MathInline> are arbitrary constants.
+          where <InlineMath>{`A`}</InlineMath> and <InlineMath>{`B`}</InlineMath> are arbitrary constants.
         </p>
         <p>Particular solutions include:</p>
         <ul className="list-disc pl-6 space-y-1">
-          <li><MathInline>{`y = \\cos x`}</MathInline> (when <MathInline>{`A = 1, B = 0`}</MathInline>)</li>
-          <li><MathInline>{`y = \\sin x`}</MathInline> (when <MathInline>{`A = 0, B = 1`}</MathInline>)</li>
-          <li><MathInline>{`y = 3\\cos x - 2\\sin x`}</MathInline> (when <MathInline>{`A = 3, B = -2`}</MathInline>)</li>
+          <li><InlineMath>{`y = \\cos x`}</InlineMath> (when <InlineMath>{`A = 1, B = 0`}</InlineMath>)</li>
+          <li><InlineMath>{`y = \\sin x`}</InlineMath> (when <InlineMath>{`A = 0, B = 1`}</InlineMath>)</li>
+          <li><InlineMath>{`y = 3\\cos x - 2\\sin x`}</InlineMath> (when <InlineMath>{`A = 3, B = -2`}</InlineMath>)</li>
         </ul>
       </Callout>
 
@@ -194,36 +194,36 @@ export default function Section52() {
 
       <Callout type="example" title="Example 5: Solving an IVP">
         <p>
-          Solve the initial value problem: <MathInline>{`y' = 2y`}</MathInline>, <MathInline>{`y(0) = 3`}</MathInline>.
+          Solve the initial value problem: <InlineMath>{`y' = 2y`}</InlineMath>, <InlineMath>{`y(0) = 3`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          The general solution is <MathInline>{`y = Ce^{2x}`}</MathInline>.
+          The general solution is <InlineMath>{`y = Ce^{2x}`}</InlineMath>.
         </p>
         <p>
-          Apply the initial condition: <MathInline>{`y(0) = Ce^0 = C = 3`}</MathInline>.
+          Apply the initial condition: <InlineMath>{`y(0) = Ce^0 = C = 3`}</InlineMath>.
         </p>
         <p>
-          Therefore, the particular solution is <MathInline>{`y = 3e^{2x}`}</MathInline>.
+          Therefore, the particular solution is <InlineMath>{`y = 3e^{2x}`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 6: Second-Order IVP">
         <p>
-          Solve: <MathInline>{`y'' + y = 0`}</MathInline>, <MathInline>{`y(0) = 1`}</MathInline>, <MathInline>{`y'(0) = 2`}</MathInline>.
+          Solve: <InlineMath>{`y'' + y = 0`}</InlineMath>, <InlineMath>{`y(0) = 1`}</InlineMath>, <InlineMath>{`y'(0) = 2`}</InlineMath>.
         </p>
         <p><strong>Solution:</strong></p>
         <p>
-          General solution: <MathInline>{`y = A\\cos x + B\\sin x`}</MathInline>.
+          General solution: <InlineMath>{`y = A\\cos x + B\\sin x`}</InlineMath>.
         </p>
         <p>
-          <MathInline>{`y(0) = A\\cos 0 + B\\sin 0 = A = 1`}</MathInline>.
+          <InlineMath>{`y(0) = A\\cos 0 + B\\sin 0 = A = 1`}</InlineMath>.
         </p>
         <p>
-          <MathInline>{`y' = -A\\sin x + B\\cos x`}</MathInline>, so <MathInline>{`y'(0) = B = 2`}</MathInline>.
+          <InlineMath>{`y' = -A\\sin x + B\\cos x`}</InlineMath>, so <InlineMath>{`y'(0) = B = 2`}</InlineMath>.
         </p>
         <p>
-          Particular solution: <MathInline>{`y = \\cos x + 2\\sin x`}</MathInline>.
+          Particular solution: <InlineMath>{`y = \\cos x + 2\\sin x`}</InlineMath>.
         </p>
       </Callout>
 
@@ -234,41 +234,41 @@ export default function Section52() {
       </p>
 
       <Callout type="example" title="Example 7: Direct Integration">
-        <p>Solve <MathInline>{`y' = x^2 + 1`}</MathInline>.</p>
+        <p>Solve <InlineMath>{`y' = x^2 + 1`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
-        <p>Integrate both sides with respect to <MathInline>{`x`}</MathInline>:</p>
+        <p>Integrate both sides with respect to <InlineMath>{`x`}</InlineMath>:</p>
         <MathBlock>{`y = \\int (x^2 + 1)\\,dx = \\frac{x^3}{3} + x + C`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="Example 8: With Initial Condition">
-        <p>Solve <MathInline>{`y' = \\sin x`}</MathInline>, <MathInline>{`y(0) = 2`}</MathInline>.</p>
+        <p>Solve <InlineMath>{`y' = \\sin x`}</InlineMath>, <InlineMath>{`y(0) = 2`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <MathBlock>{`y = \\int \\sin x\\,dx = -\\cos x + C`}</MathBlock>
         <p>
-          Initial condition: <MathInline>{`y(0) = -\\cos 0 + C = -1 + C = 2`}</MathInline>,
-          so <MathInline>{`C = 3`}</MathInline>.
+          Initial condition: <InlineMath>{`y(0) = -\\cos 0 + C = -1 + C = 2`}</InlineMath>,
+          so <InlineMath>{`C = 3`}</InlineMath>.
         </p>
         <p>
-          Solution: <MathInline>{`y = -\\cos x + 3`}</MathInline>.
+          Solution: <InlineMath>{`y = -\\cos x + 3`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Example 9: Second-Order by Integration">
-        <p>Solve <MathInline>{`y'' = 6x`}</MathInline>, <MathInline>{`y(0) = 1`}</MathInline>, <MathInline>{`y'(0) = 4`}</MathInline>.</p>
+        <p>Solve <InlineMath>{`y'' = 6x`}</InlineMath>, <InlineMath>{`y(0) = 1`}</InlineMath>, <InlineMath>{`y'(0) = 4`}</InlineMath>.</p>
         <p><strong>Solution:</strong></p>
         <p>First integration:</p>
         <MathBlock>{`y' = \\int 6x\\,dx = 3x^2 + C_1`}</MathBlock>
         <p>
-          <MathInline>{`y'(0) = 0 + C_1 = 4`}</MathInline>, so <MathInline>{`C_1 = 4`}</MathInline>.
-          Thus <MathInline>{`y' = 3x^2 + 4`}</MathInline>.
+          <InlineMath>{`y'(0) = 0 + C_1 = 4`}</InlineMath>, so <InlineMath>{`C_1 = 4`}</InlineMath>.
+          Thus <InlineMath>{`y' = 3x^2 + 4`}</InlineMath>.
         </p>
         <p>Second integration:</p>
         <MathBlock>{`y = \\int (3x^2 + 4)\\,dx = x^3 + 4x + C_2`}</MathBlock>
         <p>
-          <MathInline>{`y(0) = 0 + 0 + C_2 = 1`}</MathInline>, so <MathInline>{`C_2 = 1`}</MathInline>.
+          <InlineMath>{`y(0) = 0 + 0 + C_2 = 1`}</InlineMath>, so <InlineMath>{`C_2 = 1`}</InlineMath>.
         </p>
         <p>
-          Solution: <MathInline>{`y = x^3 + 4x + 1`}</MathInline>.
+          Solution: <InlineMath>{`y = x^3 + 4x + 1`}</InlineMath>.
         </p>
       </Callout>
 
@@ -276,15 +276,15 @@ export default function Section52() {
 
       <Callout type="theorem" title="Existence and Uniqueness (Informal)">
         <p>
-          Under reasonable conditions on <MathInline>{`f(x,y)`}</MathInline>, the initial value problem
+          Under reasonable conditions on <InlineMath>{`f(x,y)`}</InlineMath>, the initial value problem
         </p>
         <MathBlock>{`y' = f(x, y), \\quad y(x_0) = y_0`}</MathBlock>
         <p>
-          has a unique solution in some interval containing <MathInline>{`x_0`}</MathInline>.
+          has a unique solution in some interval containing <InlineMath>{`x_0`}</InlineMath>.
         </p>
         <p className="mt-2">
-          The precise conditions involve continuity of <MathInline>{`f`}</MathInline> and
-          <MathInline>{`\\frac{\\partial f}{\\partial y}`}</MathInline>, but for most equations
+          The precise conditions involve continuity of <InlineMath>{`f`}</InlineMath> and
+          <InlineMath>{`\\frac{\\partial f}{\\partial y}`}</InlineMath>, but for most equations
           we encounter, existence and uniqueness hold.
         </p>
       </Callout>
@@ -304,16 +304,16 @@ export default function Section52() {
         <p>Differential equations can be written in various equivalent ways:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Prime notation:</strong> <MathInline>{`y' = f(x,y)`}</MathInline> or <MathInline>{`y'' + y = 0`}</MathInline>
+            <strong>Prime notation:</strong> <InlineMath>{`y' = f(x,y)`}</InlineMath> or <InlineMath>{`y'' + y = 0`}</InlineMath>
           </li>
           <li>
-            <strong>Leibniz notation:</strong> <MathInline>{`\\frac{dy}{dx} = f(x,y)`}</MathInline> or <MathInline>{`\\frac{d^2y}{dx^2} + y = 0`}</MathInline>
+            <strong>Leibniz notation:</strong> <InlineMath>{`\\frac{dy}{dx} = f(x,y)`}</InlineMath> or <InlineMath>{`\\frac{d^2y}{dx^2} + y = 0`}</InlineMath>
           </li>
           <li>
-            <strong>Operator notation:</strong> <MathInline>{`Dy = f(x,y)`}</MathInline> where <MathInline>{`D = \\frac{d}{dx}`}</MathInline>
+            <strong>Operator notation:</strong> <InlineMath>{`Dy = f(x,y)`}</InlineMath> where <InlineMath>{`D = \\frac{d}{dx}`}</InlineMath>
           </li>
           <li>
-            <strong>Dot notation (for time):</strong> <MathInline>{`\\dot{y} = f(t,y)`}</MathInline> means <MathInline>{`\\frac{dy}{dt}`}</MathInline>
+            <strong>Dot notation (for time):</strong> <InlineMath>{`\\dot{y} = f(t,y)`}</InlineMath> means <InlineMath>{`\\frac{dy}{dt}`}</InlineMath>
           </li>
         </ul>
       </Callout>

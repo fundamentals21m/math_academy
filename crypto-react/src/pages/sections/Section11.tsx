@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math } from '@/components/common/MathBlock';
+import { InlineMath } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section11Quiz } from '@/data/quizzes';
@@ -80,22 +80,22 @@ export default function Section11() {
 
       <Definition title="Diffie-Hellman Key Exchange">
         <p className="mb-3">
-          Alice and Bob agree on public parameters: a large prime <Math>p</Math> and a 
-          generator <Math>g</Math>.
+          Alice and Bob agree on public parameters: a large prime <InlineMath>p</InlineMath> and a 
+          generator <InlineMath>g</InlineMath>.
         </p>
         <ol className="list-decimal list-inside space-y-2">
-          <li>Alice picks secret <Math>a</Math>, computes <Math>A = g^a \mod p</Math>, sends <Math>A</Math> to Bob</li>
-          <li>Bob picks secret <Math>b</Math>, computes <Math>B = g^b \mod p</Math>, sends <Math>B</Math> to Alice</li>
-          <li>Alice computes <Math>s = B^a \mod p = g^{'{ab}'} \mod p</Math></li>
-          <li>Bob computes <Math>s = A^b \mod p = g^{'{ab}'} \mod p</Math></li>
+          <li>Alice picks secret <InlineMath>{`a`}</InlineMath>, computes <InlineMath>{`A = g^a \\mod p`}</InlineMath>, sends <InlineMath>{`A`}</InlineMath> to Bob</li>
+          <li>Bob picks secret <InlineMath>{`b`}</InlineMath>, computes <InlineMath>{`B = g^b \\mod p`}</InlineMath>, sends <InlineMath>{`B`}</InlineMath> to Alice</li>
+          <li>Alice computes <InlineMath>{`s = B^a \\mod p = g^{ab} \\mod p`}</InlineMath></li>
+          <li>Bob computes <InlineMath>{`s = A^b \\mod p = g^{ab} \\mod p`}</InlineMath></li>
         </ol>
         <p className="mt-3">
-          Both now share the secret <Math>s = g^{'{ab}'} \mod p</Math>!
+          Both now share the secret <InlineMath>{`s = g^{ab} \\mod p`}</InlineMath>!
         </p>
       </Definition>
 
       <Example title="Complete Key Exchange">
-        <p>Let's walk through with small numbers: <Math>p = 23</Math>, <Math>g = 5</Math></p>
+        <p>Let's walk through with small numbers: <InlineMath>p = 23</InlineMath>, <InlineMath>g = 5</InlineMath></p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div className="bg-dark-900/50 rounded-lg p-3 font-mono text-sm space-y-1 border border-blue-500/30">
@@ -130,7 +130,7 @@ export default function Section11() {
         </div>
 
         <p className="mt-3 text-emerald-400">
-          Both compute the same shared secret: <Math>s = 2</Math>
+          Both compute the same shared secret: <InlineMath>s = 2</InlineMath>
         </p>
       </Example>
 
@@ -148,37 +148,37 @@ export default function Section11() {
           </thead>
           <tbody>
             <tr className="border-b border-dark-800">
-              <td className="px-3 py-2">Public prime <Math>p</Math></td>
+              <td className="px-3 py-2">Public prime <InlineMath>p</InlineMath></td>
               <td className="px-3 py-2 font-mono">23</td>
               <td className="px-3 py-2 text-emerald-400">Yes</td>
             </tr>
             <tr className="border-b border-dark-800">
-              <td className="px-3 py-2">Generator <Math>g</Math></td>
+              <td className="px-3 py-2">Generator <InlineMath>g</InlineMath></td>
               <td className="px-3 py-2 font-mono">5</td>
               <td className="px-3 py-2 text-emerald-400">Yes</td>
             </tr>
             <tr className="border-b border-dark-800">
-              <td className="px-3 py-2">Alice's public value <Math>A</Math></td>
+              <td className="px-3 py-2">Alice's public value <InlineMath>A</InlineMath></td>
               <td className="px-3 py-2 font-mono">8</td>
               <td className="px-3 py-2 text-emerald-400">Yes</td>
             </tr>
             <tr className="border-b border-dark-800">
-              <td className="px-3 py-2">Bob's public value <Math>B</Math></td>
+              <td className="px-3 py-2">Bob's public value <InlineMath>B</InlineMath></td>
               <td className="px-3 py-2 font-mono">19</td>
               <td className="px-3 py-2 text-emerald-400">Yes</td>
             </tr>
             <tr className="border-b border-dark-800">
-              <td className="px-3 py-2">Alice's secret <Math>a</Math></td>
+              <td className="px-3 py-2">Alice's secret <InlineMath>a</InlineMath></td>
               <td className="px-3 py-2 font-mono">6</td>
               <td className="px-3 py-2 text-red-400">No</td>
             </tr>
             <tr className="border-b border-dark-800">
-              <td className="px-3 py-2">Bob's secret <Math>b</Math></td>
+              <td className="px-3 py-2">Bob's secret <InlineMath>b</InlineMath></td>
               <td className="px-3 py-2 font-mono">15</td>
               <td className="px-3 py-2 text-red-400">No</td>
             </tr>
             <tr>
-              <td className="px-3 py-2">Shared secret <Math>s</Math></td>
+              <td className="px-3 py-2">Shared secret <InlineMath>s</InlineMath></td>
               <td className="px-3 py-2 font-mono">2</td>
               <td className="px-3 py-2 text-red-400">No</td>
             </tr>
@@ -188,7 +188,7 @@ export default function Section11() {
 
       <Theorem title="Diffie-Hellman Security">
         <p>
-          To find the shared secret <Math>s = g^{'{ab}'}</Math> from the public values <Math>g^a</Math> and <Math>g^b</Math>, 
+          To find the shared secret <InlineMath>{`s = g^{ab}`}</InlineMath> from the public values <InlineMath>{`g^a`}</InlineMath> and <InlineMath>{`g^b`}</InlineMath>, 
           Eve would need to solve the <strong>Computational Diffie-Hellman (CDH) problem</strong>—which 
           is believed to be as hard as the discrete logarithm problem.
         </p>

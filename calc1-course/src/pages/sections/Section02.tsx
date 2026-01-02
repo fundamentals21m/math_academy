@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section02() {
   return (
@@ -46,16 +46,16 @@ export default function Section02() {
       <h3 className="text-xl font-semibold mt-8 mb-4">Notation for Sets</h3>
 
       <p className="text-dark-200 mb-4">
-        Sets are usually denoted by capital letters: <MathInline>{'A, B, C, \\ldots, X, Y, Z'}</MathInline>.
-        Elements are designated by lower-case letters: <MathInline>{'a, b, c, \\ldots, x, y, z'}</MathInline>.
+        Sets are usually denoted by capital letters: <InlineMath>{'A, B, C, \\ldots, X, Y, Z'}</InlineMath>.
+        Elements are designated by lower-case letters: <InlineMath>{'a, b, c, \\ldots, x, y, z'}</InlineMath>.
       </p>
 
       <p className="text-dark-200 mb-4">
-        We use the special notation <MathInline>{'x \\in S'}</MathInline> to mean
-        "<MathInline>{'x'}</MathInline> is an element of <MathInline>{'S'}</MathInline>" or
-        "<MathInline>{'x'}</MathInline> belongs to <MathInline>{'S'}</MathInline>."
-        If <MathInline>{'x'}</MathInline> does not belong to <MathInline>{'S'}</MathInline>, we
-        write <MathInline>{'x \\notin S'}</MathInline>.
+        We use the special notation <InlineMath>{'x \\in S'}</InlineMath> to mean
+        "<InlineMath>{'x'}</InlineMath> is an element of <InlineMath>{'S'}</InlineMath>" or
+        "<InlineMath>{'x'}</InlineMath> belongs to <InlineMath>{'S'}</InlineMath>."
+        If <InlineMath>{'x'}</InlineMath> does not belong to <InlineMath>{'S'}</InlineMath>, we
+        write <InlineMath>{'x \\notin S'}</InlineMath>.
       </p>
 
       <Callout type="example">
@@ -65,10 +65,10 @@ export default function Section02() {
         </p>
         <ul className="list-disc list-inside space-y-1 text-sm">
           <li>
-            The set of positive even integers less than 10: <MathInline>{'\\{2, 4, 6, 8\\}'}</MathInline>
+            The set of positive even integers less than 10: <InlineMath>{'\\{2, 4, 6, 8\\}'}</InlineMath>
           </li>
           <li>
-            The set of all positive even integers: <MathInline>{'\\{2, 4, 6, \\ldots\\}'}</MathInline>
+            The set of all positive even integers: <InlineMath>{'\\{2, 4, 6, \\ldots\\}'}</InlineMath>
           </li>
         </ul>
         <p className="mt-2 text-sm text-dark-400">
@@ -80,24 +80,24 @@ export default function Section02() {
       <h3 className="text-xl font-semibold mt-8 mb-4">Set-Builder Notation</h3>
 
       <p className="text-dark-200 mb-4">
-        The notation <MathInline>{'\\{x \\mid x \\in S \\text{ and } x \\text{ satisfies } P\\}'}</MathInline> designates
-        the set of all elements <MathInline>{'x'}</MathInline> in <MathInline>{'S'}</MathInline> which
-        satisfy the property <MathInline>{'P'}</MathInline>.
+        The notation <InlineMath>{'\\{x \\mid x \\in S \\text{ and } x \\text{ satisfies } P\\}'}</InlineMath> designates
+        the set of all elements <InlineMath>{'x'}</InlineMath> in <InlineMath>{'S'}</InlineMath> which
+        satisfy the property <InlineMath>{'P'}</InlineMath>.
       </p>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Examples of Set-Builder Notation</p>
         <ul className="space-y-2 text-sm">
           <li>
-            <MathInline>{'\\{x \\mid x > 0\\}'}</MathInline> — the set of all positive real numbers
+            <InlineMath>{'\\{x \\mid x > 0\\}'}</InlineMath> — the set of all positive real numbers
           </li>
           <li>
-            <MathInline>{'\\{x \\mid x \\text{ is a positive even integer}\\}'}</MathInline> — same as <MathInline>{'\\{2, 4, 6, \\ldots\\}'}</MathInline>
+            <InlineMath>{'\\{x \\mid x \\text{ is a positive even integer}\\}'}</InlineMath> — same as <InlineMath>{'\\{2, 4, 6, \\ldots\\}'}</InlineMath>
           </li>
         </ul>
         <p className="mt-2 text-dark-400">
-          The letter <MathInline>{'x'}</MathInline> is a dummy variable:
-          <MathInline>{'\\{x \\mid x > 0\\} = \\{y \\mid y > 0\\} = \\{t \\mid t > 0\\}'}</MathInline>
+          The letter <InlineMath>{'x'}</InlineMath> is a dummy variable:
+          <InlineMath>{'\\{x \\mid x > 0\\} = \\{y \\mid y > 0\\} = \\{t \\mid t > 0\\}'}</InlineMath>
         </p>
       </Callout>
 
@@ -107,11 +107,11 @@ export default function Section02() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Definition of Set Equality</p>
         <p>
-          Two sets <MathInline>{'A'}</MathInline> and <MathInline>{'B'}</MathInline> are said to
+          Two sets <InlineMath>{'A'}</InlineMath> and <InlineMath>{'B'}</InlineMath> are said to
           be <strong>equal</strong> (or identical) if they consist of exactly the same elements,
-          in which case we write <MathInline>{'A = B'}</MathInline>. If one of the sets contains
+          in which case we write <InlineMath>{'A = B'}</InlineMath>. If one of the sets contains
           an element not in the other, we say the sets are <strong>unequal</strong> and write{' '}
-          <MathInline>{'A \\neq B'}</MathInline>.
+          <InlineMath>{'A \\neq B'}</InlineMath>.
         </p>
       </Callout>
 
@@ -119,7 +119,7 @@ export default function Section02() {
         <div className="p-4 bg-dark-800 rounded-lg">
           <p className="font-semibold text-primary-400">Example 1</p>
           <p className="text-dark-300 text-sm mt-1">
-            The sets <MathInline>{'\\{2, 4, 6, 8\\}'}</MathInline> and <MathInline>{'\\{2, 8, 6, 4\\}'}</MathInline> are
+            The sets <InlineMath>{'\\{2, 4, 6, 8\\}'}</InlineMath> and <InlineMath>{'\\{2, 8, 6, 4\\}'}</InlineMath> are
             equal since they both consist of the four integers 2, 4, 6, and 8.
             <span className="text-dark-400 block mt-1">
               The order in which elements appear is irrelevant.
@@ -129,7 +129,7 @@ export default function Section02() {
         <div className="p-4 bg-dark-800 rounded-lg">
           <p className="font-semibold text-primary-400">Example 2</p>
           <p className="text-dark-300 text-sm mt-1">
-            The sets <MathInline>{'\\{2, 4, 6, 8\\}'}</MathInline> and <MathInline>{'\\{2, 2, 4, 4, 6, 8\\}'}</MathInline> are
+            The sets <InlineMath>{'\\{2, 4, 6, 8\\}'}</InlineMath> and <InlineMath>{'\\{2, 2, 4, 4, 6, 8\\}'}</InlineMath> are
             equal. Both contain only the elements 2, 4, 6, 8 and no others.
             <span className="text-dark-400 block mt-1">
               Repeated listings don't change the set.
@@ -144,7 +144,7 @@ export default function Section02() {
       <p className="text-dark-200 mb-4">
         It is possible for a set to contain no elements whatsoever. This set is called the{' '}
         <strong>empty set</strong> or the <strong>void set</strong>, and is denoted by the
-        symbol <MathInline>{'\\varnothing'}</MathInline>.
+        symbol <InlineMath>{'\\varnothing'}</InlineMath>.
       </p>
 
       <Callout type="info">
@@ -158,13 +158,13 @@ export default function Section02() {
       <Callout type="warning">
         <p className="font-semibold mb-2">Important Distinction</p>
         <p>
-          We must distinguish between an element <MathInline>{'x'}</MathInline> and the
-          set <MathInline>{'\\{x\\}'}</MathInline> whose only element is <MathInline>{'x'}</MathInline>.
-          In particular, <MathInline>{'\\varnothing \\neq \\{\\varnothing\\}'}</MathInline>:
+          We must distinguish between an element <InlineMath>{'x'}</InlineMath> and the
+          set <InlineMath>{'\\{x\\}'}</InlineMath> whose only element is <InlineMath>{'x'}</InlineMath>.
+          In particular, <InlineMath>{'\\varnothing \\neq \\{\\varnothing\\}'}</InlineMath>:
         </p>
         <ul className="list-disc list-inside mt-2 text-sm">
-          <li><MathInline>{'\\varnothing'}</MathInline> contains no elements</li>
-          <li><MathInline>{'\\{\\varnothing\\}'}</MathInline> has one element, namely <MathInline>{'\\varnothing'}</MathInline></li>
+          <li><InlineMath>{'\\varnothing'}</InlineMath> contains no elements</li>
+          <li><InlineMath>{'\\{\\varnothing\\}'}</InlineMath> has one element, namely <InlineMath>{'\\varnothing'}</InlineMath></li>
         </ul>
       </Callout>
 
@@ -172,21 +172,21 @@ export default function Section02() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Subsets</h2>
 
       <p className="text-dark-200 mb-4">
-        From a given set <MathInline>{'S'}</MathInline> we may form new sets, called{' '}
-        <strong>subsets</strong> of <MathInline>{'S'}</MathInline>.
+        From a given set <InlineMath>{'S'}</InlineMath> we may form new sets, called{' '}
+        <strong>subsets</strong> of <InlineMath>{'S'}</InlineMath>.
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Definition of a Subset</p>
         <p>
-          A set <MathInline>{'A'}</MathInline> is said to be a <strong>subset</strong> of a
-          set <MathInline>{'B'}</MathInline>, and we write <MathInline>{'A \\subseteq B'}</MathInline>,
-          whenever every element of <MathInline>{'A'}</MathInline> also belongs to <MathInline>{'B'}</MathInline>.
+          A set <InlineMath>{'A'}</InlineMath> is said to be a <strong>subset</strong> of a
+          set <InlineMath>{'B'}</InlineMath>, and we write <InlineMath>{'A \\subseteq B'}</InlineMath>,
+          whenever every element of <InlineMath>{'A'}</InlineMath> also belongs to <InlineMath>{'B'}</InlineMath>.
         </p>
         <p className="mt-2">
-          We also say that <MathInline>{'A'}</MathInline> is <em>contained in</em> <MathInline>{'B'}</MathInline> or
-          that <MathInline>{'B'}</MathInline> <em>contains</em> <MathInline>{'A'}</MathInline>.
-          The relation <MathInline>{'\\subseteq'}</MathInline> is referred to as <strong>set inclusion</strong>.
+          We also say that <InlineMath>{'A'}</InlineMath> is <em>contained in</em> <InlineMath>{'B'}</InlineMath> or
+          that <InlineMath>{'B'}</InlineMath> <em>contains</em> <InlineMath>{'A'}</InlineMath>.
+          The relation <InlineMath>{'\\subseteq'}</InlineMath> is referred to as <strong>set inclusion</strong>.
         </p>
       </Callout>
 
@@ -196,14 +196,14 @@ export default function Section02() {
           {'A = B \\quad \\text{if and only if} \\quad A \\subseteq B \\text{ and } B \\subseteq A'}
         </MathBlock>
         <p className="mt-2 text-sm text-dark-400">
-          If <MathInline>{'A \\subseteq B'}</MathInline> but <MathInline>{'A \\neq B'}</MathInline>,
-          then <MathInline>{'A'}</MathInline> is a <strong>proper subset</strong> of <MathInline>{'B'}</MathInline>,
-          written <MathInline>{'A \\subset B'}</MathInline>.
+          If <InlineMath>{'A \\subseteq B'}</InlineMath> but <InlineMath>{'A \\neq B'}</InlineMath>,
+          then <InlineMath>{'A'}</InlineMath> is a <strong>proper subset</strong> of <InlineMath>{'B'}</InlineMath>,
+          written <InlineMath>{'A \\subset B'}</InlineMath>.
         </p>
       </Callout>
 
       <p className="text-dark-200 mt-4 mb-4">
-        We will consider <MathInline>{'\\varnothing'}</MathInline> to be a subset of every set.
+        We will consider <InlineMath>{'\\varnothing'}</InlineMath> to be a subset of every set.
       </p>
 
       {/* Set Operations */}
@@ -215,15 +215,15 @@ export default function Section02() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Definition of Union</p>
         <p>
-          From two given sets <MathInline>{'A'}</MathInline> and <MathInline>{'B'}</MathInline>,
-          we can form a new set called the <strong>union</strong> of <MathInline>{'A'}</MathInline> and <MathInline>{'B'}</MathInline>,
-          denoted <MathInline>{'A \\cup B'}</MathInline> (read: "A union B").
+          From two given sets <InlineMath>{'A'}</InlineMath> and <InlineMath>{'B'}</InlineMath>,
+          we can form a new set called the <strong>union</strong> of <InlineMath>{'A'}</InlineMath> and <InlineMath>{'B'}</InlineMath>,
+          denoted <InlineMath>{'A \\cup B'}</InlineMath> (read: "A union B").
         </p>
         <MathBlock>
           {'A \\cup B = \\{x \\mid x \\in A \\text{ or } x \\in B\\}'}
         </MathBlock>
         <p className="mt-2 text-sm text-dark-400">
-          The union is the set of all elements which belong to at least one of the sets <MathInline>{'A'}</MathInline> or <MathInline>{'B'}</MathInline>.
+          The union is the set of all elements which belong to at least one of the sets <InlineMath>{'A'}</InlineMath> or <InlineMath>{'B'}</InlineMath>.
         </p>
       </Callout>
 
@@ -233,9 +233,9 @@ export default function Section02() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Definition of Intersection</p>
         <p>
-          The <strong>intersection</strong> of <MathInline>{'A'}</MathInline> and <MathInline>{'B'}</MathInline>,
-          denoted <MathInline>{'A \\cap B'}</MathInline> (read: "A intersection B"), is the set of
-          elements common to both <MathInline>{'A'}</MathInline> and <MathInline>{'B'}</MathInline>.
+          The <strong>intersection</strong> of <InlineMath>{'A'}</InlineMath> and <InlineMath>{'B'}</InlineMath>,
+          denoted <InlineMath>{'A \\cap B'}</InlineMath> (read: "A intersection B"), is the set of
+          elements common to both <InlineMath>{'A'}</InlineMath> and <InlineMath>{'B'}</InlineMath>.
         </p>
         <MathBlock>
           {'A \\cap B = \\{x \\mid x \\in A \\text{ and } x \\in B\\}'}
@@ -245,9 +245,9 @@ export default function Section02() {
       <Callout type="info">
         <p className="font-semibold mb-2">Disjoint Sets</p>
         <p>
-          Two sets <MathInline>{'A'}</MathInline> and <MathInline>{'B'}</MathInline> are said to
+          Two sets <InlineMath>{'A'}</InlineMath> and <InlineMath>{'B'}</InlineMath> are said to
           be <strong>disjoint</strong> if they have no elements in common, that is,
-          if <MathInline>{'A \\cap B = \\varnothing'}</MathInline>.
+          if <InlineMath>{'A \\cap B = \\varnothing'}</InlineMath>.
         </p>
       </Callout>
 
@@ -257,10 +257,10 @@ export default function Section02() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Definition of Set Difference</p>
         <p>
-          If <MathInline>{'A'}</MathInline> and <MathInline>{'B'}</MathInline> are sets, the{' '}
-          <strong>difference</strong> <MathInline>{'A - B'}</MathInline> (also called the{' '}
-          <em>complement of <MathInline>{'B'}</MathInline> relative to <MathInline>{'A'}</MathInline></em>)
-          is the set of all elements of <MathInline>{'A'}</MathInline> which are not in <MathInline>{'B'}</MathInline>.
+          If <InlineMath>{'A'}</InlineMath> and <InlineMath>{'B'}</InlineMath> are sets, the{' '}
+          <strong>difference</strong> <InlineMath>{'A - B'}</InlineMath> (also called the{' '}
+          <em>complement of <InlineMath>{'B'}</InlineMath> relative to <InlineMath>{'A'}</InlineMath></em>)
+          is the set of all elements of <InlineMath>{'A'}</InlineMath> which are not in <InlineMath>{'B'}</InlineMath>.
         </p>
         <MathBlock>
           {'A - B = \\{x \\mid x \\in A \\text{ and } x \\notin B\\}'}
@@ -302,16 +302,16 @@ export default function Section02() {
         <p className="font-semibold text-primary-400 mb-2">Additional Properties</p>
         <div className="grid md:grid-cols-2 gap-4 text-sm">
           <div>
-            <p className="text-dark-300"><MathInline>{'A \\cup A = A'}</MathInline></p>
-            <p className="text-dark-300"><MathInline>{'A \\cap A = A'}</MathInline></p>
-            <p className="text-dark-300"><MathInline>{'A \\cup \\varnothing = A'}</MathInline></p>
-            <p className="text-dark-300"><MathInline>{'A \\cap \\varnothing = \\varnothing'}</MathInline></p>
+            <p className="text-dark-300"><InlineMath>{'A \\cup A = A'}</InlineMath></p>
+            <p className="text-dark-300"><InlineMath>{'A \\cap A = A'}</InlineMath></p>
+            <p className="text-dark-300"><InlineMath>{'A \\cup \\varnothing = A'}</InlineMath></p>
+            <p className="text-dark-300"><InlineMath>{'A \\cap \\varnothing = \\varnothing'}</InlineMath></p>
           </div>
           <div>
-            <p className="text-dark-300"><MathInline>{'A \\subseteq A \\cup B'}</MathInline></p>
-            <p className="text-dark-300"><MathInline>{'A \\cap B \\subseteq A'}</MathInline></p>
-            <p className="text-dark-300"><MathInline>{'A \\cup (A \\cap B) = A'}</MathInline></p>
-            <p className="text-dark-300"><MathInline>{'A \\cap (A \\cup B) = A'}</MathInline></p>
+            <p className="text-dark-300"><InlineMath>{'A \\subseteq A \\cup B'}</InlineMath></p>
+            <p className="text-dark-300"><InlineMath>{'A \\cap B \\subseteq A'}</InlineMath></p>
+            <p className="text-dark-300"><InlineMath>{'A \\cup (A \\cap B) = A'}</InlineMath></p>
+            <p className="text-dark-300"><InlineMath>{'A \\cap (A \\cup B) = A'}</InlineMath></p>
           </div>
         </div>
       </div>
@@ -340,8 +340,8 @@ export default function Section02() {
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
             <span>
-              A <strong>set</strong> is a collection of objects (elements). We write <MathInline>{'x \\in S'}</MathInline> if{' '}
-              <MathInline>{'x'}</MathInline> belongs to <MathInline>{'S'}</MathInline>.
+              A <strong>set</strong> is a collection of objects (elements). We write <InlineMath>{'x \\in S'}</InlineMath> if{' '}
+              <InlineMath>{'x'}</InlineMath> belongs to <InlineMath>{'S'}</InlineMath>.
             </span>
           </li>
           <li className="flex items-start gap-3">
@@ -354,17 +354,17 @@ export default function Section02() {
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
             <span>
-              <MathInline>{'A \\subseteq B'}</MathInline> means every element of <MathInline>{'A'}</MathInline> is
-              also in <MathInline>{'B'}</MathInline>. The empty set <MathInline>{'\\varnothing'}</MathInline> is
+              <InlineMath>{'A \\subseteq B'}</InlineMath> means every element of <InlineMath>{'A'}</InlineMath> is
+              also in <InlineMath>{'B'}</InlineMath>. The empty set <InlineMath>{'\\varnothing'}</InlineMath> is
               a subset of every set.
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
             <span>
-              The three main operations are <strong>union</strong> (<MathInline>{'\\cup'}</MathInline>),{' '}
-              <strong>intersection</strong> (<MathInline>{'\\cap'}</MathInline>), and{' '}
-              <strong>difference</strong> (<MathInline>{'-'}</MathInline>).
+              The three main operations are <strong>union</strong> (<InlineMath>{'\\cup'}</InlineMath>),{' '}
+              <strong>intersection</strong> (<InlineMath>{'\\cap'}</InlineMath>), and{' '}
+              <strong>difference</strong> (<InlineMath>{'-'}</InlineMath>).
             </span>
           </li>
           <li className="flex items-start gap-3">

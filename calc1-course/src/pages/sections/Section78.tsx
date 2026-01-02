@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section78() {
@@ -17,17 +17,17 @@ export default function Section78() {
 
       <Callout type="definition" title="Linear Independence">
         <p>
-          Vectors <MathInline>{`\\mathbf{v}_1, \\mathbf{v}_2, \\ldots, \\mathbf{v}_k`}</MathInline> in <MathInline>{`\\mathbb{R}^n`}</MathInline> are
+          Vectors <InlineMath>{`\\mathbf{v}_1, \\mathbf{v}_2, \\ldots, \\mathbf{v}_k`}</InlineMath> in <InlineMath>{`\\mathbb{R}^n`}</InlineMath> are
           <strong> linearly independent</strong> if the only solution to:
         </p>
         <MathBlock>{`c_1\\mathbf{v}_1 + c_2\\mathbf{v}_2 + \\cdots + c_k\\mathbf{v}_k = \\mathbf{0}`}</MathBlock>
-        <p>is the trivial solution <MathInline>{`c_1 = c_2 = \\cdots = c_k = 0`}</MathInline>.</p>
+        <p>is the trivial solution <InlineMath>{`c_1 = c_2 = \\cdots = c_k = 0`}</InlineMath>.</p>
       </Callout>
 
       <Callout type="definition" title="Linear Dependence">
         <p>
           Vectors are <strong>linearly dependent</strong> if they are not linearly independent—that is,
-          if there exist scalars <MathInline>{`c_1, \\ldots, c_k`}</MathInline>, not all zero, such that:
+          if there exist scalars <InlineMath>{`c_1, \\ldots, c_k`}</InlineMath>, not all zero, such that:
         </p>
         <MathBlock>{`c_1\\mathbf{v}_1 + c_2\\mathbf{v}_2 + \\cdots + c_k\\mathbf{v}_k = \\mathbf{0}`}</MathBlock>
       </Callout>
@@ -35,31 +35,31 @@ export default function Section78() {
       <h2>Testing for Linear Independence</h2>
 
       <Callout type="example" title="Two Vectors in ℝ²">
-        <p>Are <MathInline>{`\\mathbf{v}_1 = (1, 2)`}</MathInline> and <MathInline>{`\\mathbf{v}_2 = (3, 5)`}</MathInline> linearly independent?</p>
-        <p><strong>Solution:</strong> Set up <MathInline>{`c_1(1, 2) + c_2(3, 5) = (0, 0)`}</MathInline>:</p>
+        <p>Are <InlineMath>{`\\mathbf{v}_1 = (1, 2)`}</InlineMath> and <InlineMath>{`\\mathbf{v}_2 = (3, 5)`}</InlineMath> linearly independent?</p>
+        <p><strong>Solution:</strong> Set up <InlineMath>{`c_1(1, 2) + c_2(3, 5) = (0, 0)`}</InlineMath>:</p>
         <MathBlock>{`c_1 + 3c_2 = 0`}</MathBlock>
         <MathBlock>{`2c_1 + 5c_2 = 0`}</MathBlock>
-        <p>From the first equation: <MathInline>{`c_1 = -3c_2`}</MathInline>. Substituting:</p>
+        <p>From the first equation: <InlineMath>{`c_1 = -3c_2`}</InlineMath>. Substituting:</p>
         <MathBlock>{`2(-3c_2) + 5c_2 = -6c_2 + 5c_2 = -c_2 = 0`}</MathBlock>
-        <p>So <MathInline>{`c_2 = 0`}</MathInline> and thus <MathInline>{`c_1 = 0`}</MathInline>. Only the trivial solution exists.</p>
+        <p>So <InlineMath>{`c_2 = 0`}</InlineMath> and thus <InlineMath>{`c_1 = 0`}</InlineMath>. Only the trivial solution exists.</p>
         <p>The vectors are <strong>linearly independent</strong>.</p>
       </Callout>
 
       <Callout type="example" title="Linearly Dependent Vectors">
-        <p>Are <MathInline>{`\\mathbf{v}_1 = (1, 2)`}</MathInline> and <MathInline>{`\\mathbf{v}_2 = (2, 4)`}</MathInline> linearly independent?</p>
-        <p><strong>Solution:</strong> Notice that <MathInline>{`\\mathbf{v}_2 = 2\\mathbf{v}_1`}</MathInline>, so:</p>
+        <p>Are <InlineMath>{`\\mathbf{v}_1 = (1, 2)`}</InlineMath> and <InlineMath>{`\\mathbf{v}_2 = (2, 4)`}</InlineMath> linearly independent?</p>
+        <p><strong>Solution:</strong> Notice that <InlineMath>{`\\mathbf{v}_2 = 2\\mathbf{v}_1`}</InlineMath>, so:</p>
         <MathBlock>{`2\\mathbf{v}_1 - 1\\mathbf{v}_2 = 2(1, 2) - (2, 4) = (0, 0)`}</MathBlock>
         <p>
-          This is a nontrivial linear combination (with <MathInline>{`c_1 = 2, c_2 = -1`}</MathInline>) that equals zero.
+          This is a nontrivial linear combination (with <InlineMath>{`c_1 = 2, c_2 = -1`}</InlineMath>) that equals zero.
         </p>
         <p>The vectors are <strong>linearly dependent</strong>.</p>
       </Callout>
 
       <Callout type="example" title="Three Vectors in ℝ³">
-        <p>Are <MathInline>{`(1, 0, 0)`}</MathInline>, <MathInline>{`(0, 1, 0)`}</MathInline>, <MathInline>{`(0, 0, 1)`}</MathInline> linearly independent?</p>
-        <p><strong>Solution:</strong> Set <MathInline>{`c_1(1, 0, 0) + c_2(0, 1, 0) + c_3(0, 0, 1) = (0, 0, 0)`}</MathInline>:</p>
+        <p>Are <InlineMath>{`(1, 0, 0)`}</InlineMath>, <InlineMath>{`(0, 1, 0)`}</InlineMath>, <InlineMath>{`(0, 0, 1)`}</InlineMath> linearly independent?</p>
+        <p><strong>Solution:</strong> Set <InlineMath>{`c_1(1, 0, 0) + c_2(0, 1, 0) + c_3(0, 0, 1) = (0, 0, 0)`}</InlineMath>:</p>
         <MathBlock>{`(c_1, c_2, c_3) = (0, 0, 0)`}</MathBlock>
-        <p>This immediately gives <MathInline>{`c_1 = c_2 = c_3 = 0`}</MathInline>.</p>
+        <p>This immediately gives <InlineMath>{`c_1 = c_2 = c_3 = 0`}</InlineMath>.</p>
         <p>The standard basis vectors are <strong>linearly independent</strong>.</p>
       </Callout>
 
@@ -68,7 +68,7 @@ export default function Section78() {
       <Callout type="info" title="Geometric Meaning">
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Two vectors</strong> are linearly dependent iff they are parallel (one is a scalar multiple of the other)</li>
-          <li><strong>Three vectors</strong> in <MathInline>{`\\mathbb{R}^3`}</MathInline> are linearly dependent iff they lie in a common plane through the origin</li>
+          <li><strong>Three vectors</strong> in <InlineMath>{`\\mathbb{R}^3`}</InlineMath> are linearly dependent iff they lie in a common plane through the origin</li>
           <li>In general, vectors are dependent iff one can be written as a linear combination of the others</li>
         </ul>
       </Callout>
@@ -80,40 +80,40 @@ export default function Section78() {
           <li>Any set containing the zero vector is linearly dependent</li>
           <li>A single nonzero vector is linearly independent</li>
           <li>Two vectors are linearly dependent iff one is a scalar multiple of the other</li>
-          <li>If <MathInline>{`\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\}`}</MathInline> is linearly independent, so is any subset</li>
-          <li>If <MathInline>{`\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\}`}</MathInline> is linearly dependent, so is any larger set containing it</li>
+          <li>If <InlineMath>{`\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\}`}</InlineMath> is linearly independent, so is any subset</li>
+          <li>If <InlineMath>{`\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\}`}</InlineMath> is linearly dependent, so is any larger set containing it</li>
         </ol>
       </Callout>
 
       <Callout type="theorem" title="Dependence and Span">
         <p>
-          The vectors <MathInline>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_k`}</MathInline> are linearly dependent if and only if
+          The vectors <InlineMath>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_k`}</InlineMath> are linearly dependent if and only if
           at least one vector can be written as a linear combination of the others:
         </p>
         <MathBlock>{`\\mathbf{v}_j \\in \\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_{j-1}, \\mathbf{v}_{j+1}, \\ldots, \\mathbf{v}_k\\}`}</MathBlock>
-        <p>for some <MathInline>{`j`}</MathInline>.</p>
+        <p>for some <InlineMath>{`j`}</InlineMath>.</p>
       </Callout>
 
       <h2>Maximum Independent Sets</h2>
 
       <Callout type="theorem" title="Size Limit on Independent Sets">
         <p>
-          In <MathInline>{`\\mathbb{R}^n`}</MathInline>, any linearly independent set has at most <MathInline>{`n`}</MathInline> vectors.
+          In <InlineMath>{`\\mathbb{R}^n`}</InlineMath>, any linearly independent set has at most <InlineMath>{`n`}</InlineMath> vectors.
         </p>
         <p>
-          Equivalently, any set of more than <MathInline>{`n`}</MathInline> vectors in <MathInline>{`\\mathbb{R}^n`}</MathInline> must
+          Equivalently, any set of more than <InlineMath>{`n`}</InlineMath> vectors in <InlineMath>{`\\mathbb{R}^n`}</InlineMath> must
           be linearly dependent.
         </p>
       </Callout>
 
       <Callout type="example" title="Four Vectors in ℝ³">
         <p>
-          Any four vectors in <MathInline>{`\\mathbb{R}^3`}</MathInline> are automatically linearly dependent,
+          Any four vectors in <InlineMath>{`\\mathbb{R}^3`}</InlineMath> are automatically linearly dependent,
           regardless of what they are.
         </p>
         <p>
-          For instance, <MathInline>{`(1,0,0), (0,1,0), (0,0,1), (1,1,1)`}</MathInline> must be dependent.
-          Indeed: <MathInline>{`(1,1,1) = (1,0,0) + (0,1,0) + (0,0,1)`}</MathInline>.
+          For instance, <InlineMath>{`(1,0,0), (0,1,0), (0,0,1), (1,1,1)`}</InlineMath> must be dependent.
+          Indeed: <InlineMath>{`(1,1,1) = (1,0,0) + (0,1,0) + (0,0,1)`}</InlineMath>.
         </p>
       </Callout>
 
@@ -121,11 +121,11 @@ export default function Section78() {
 
       <Callout type="definition" title="Basis">
         <p>
-          A <strong>basis</strong> for <MathInline>{`\\mathbb{R}^n`}</MathInline> is a set of vectors that is:
+          A <strong>basis</strong> for <InlineMath>{`\\mathbb{R}^n`}</InlineMath> is a set of vectors that is:
         </p>
         <ol className="list-decimal pl-6 space-y-2">
           <li><strong>Linearly independent</strong></li>
-          <li><strong>Spans</strong> <MathInline>{`\\mathbb{R}^n`}</MathInline></li>
+          <li><strong>Spans</strong> <InlineMath>{`\\mathbb{R}^n`}</InlineMath></li>
         </ol>
         <p>
           A basis provides a "coordinate system"—every vector can be written uniquely as a linear
@@ -135,48 +135,48 @@ export default function Section78() {
 
       <Callout type="example" title="Standard Basis">
         <p>
-          The standard basis for <MathInline>{`\\mathbb{R}^n`}</MathInline> is <MathInline>{`\\{\\mathbf{e}_1, \\mathbf{e}_2, \\ldots, \\mathbf{e}_n\\}`}</MathInline>:
+          The standard basis for <InlineMath>{`\\mathbb{R}^n`}</InlineMath> is <InlineMath>{`\\{\\mathbf{e}_1, \\mathbf{e}_2, \\ldots, \\mathbf{e}_n\\}`}</InlineMath>:
         </p>
         <MathBlock>{`\\mathbf{e}_1 = (1, 0, \\ldots, 0), \\quad \\mathbf{e}_2 = (0, 1, \\ldots, 0), \\quad \\ldots, \\quad \\mathbf{e}_n = (0, 0, \\ldots, 1)`}</MathBlock>
-        <p>These are linearly independent and span <MathInline>{`\\mathbb{R}^n`}</MathInline>.</p>
+        <p>These are linearly independent and span <InlineMath>{`\\mathbb{R}^n`}</InlineMath>.</p>
       </Callout>
 
       <Callout type="example" title="Non-Standard Basis for ℝ²">
         <p>
-          The vectors <MathInline>{`\\mathbf{u} = (1, 1)`}</MathInline> and <MathInline>{`\\mathbf{v} = (1, -1)`}</MathInline> form
-          a basis for <MathInline>{`\\mathbb{R}^2`}</MathInline>.
+          The vectors <InlineMath>{`\\mathbf{u} = (1, 1)`}</InlineMath> and <InlineMath>{`\\mathbf{v} = (1, -1)`}</InlineMath> form
+          a basis for <InlineMath>{`\\mathbb{R}^2`}</InlineMath>.
         </p>
-        <p><strong>Independence:</strong> <MathInline>{`c_1(1,1) + c_2(1,-1) = (0,0)`}</MathInline> gives <MathInline>{`c_1 + c_2 = 0`}</MathInline> and <MathInline>{`c_1 - c_2 = 0`}</MathInline>, so <MathInline>{`c_1 = c_2 = 0`}</MathInline>. ✓</p>
-        <p><strong>Spanning:</strong> For any <MathInline>{`(a, b)`}</MathInline>:</p>
+        <p><strong>Independence:</strong> <InlineMath>{`c_1(1,1) + c_2(1,-1) = (0,0)`}</InlineMath> gives <InlineMath>{`c_1 + c_2 = 0`}</InlineMath> and <InlineMath>{`c_1 - c_2 = 0`}</InlineMath>, so <InlineMath>{`c_1 = c_2 = 0`}</InlineMath>. ✓</p>
+        <p><strong>Spanning:</strong> For any <InlineMath>{`(a, b)`}</InlineMath>:</p>
         <MathBlock>{`(a, b) = \\frac{a+b}{2}(1, 1) + \\frac{a-b}{2}(1, -1)`}</MathBlock>
-        <p>Every vector in <MathInline>{`\\mathbb{R}^2`}</MathInline> is a unique linear combination of <MathInline>{`\\mathbf{u}`}</MathInline> and <MathInline>{`\\mathbf{v}`}</MathInline>. ✓</p>
+        <p>Every vector in <InlineMath>{`\\mathbb{R}^2`}</InlineMath> is a unique linear combination of <InlineMath>{`\\mathbf{u}`}</InlineMath> and <InlineMath>{`\\mathbf{v}`}</InlineMath>. ✓</p>
       </Callout>
 
       <h2>Dimension</h2>
 
       <Callout type="theorem" title="Dimension Theorem">
         <p>
-          Every basis for <MathInline>{`\\mathbb{R}^n`}</MathInline> contains exactly <MathInline>{`n`}</MathInline> vectors.
+          Every basis for <InlineMath>{`\\mathbb{R}^n`}</InlineMath> contains exactly <InlineMath>{`n`}</InlineMath> vectors.
         </p>
         <p>
-          We say <MathInline>{`\\mathbb{R}^n`}</MathInline> has <strong>dimension</strong> <MathInline>{`n`}</MathInline>.
+          We say <InlineMath>{`\\mathbb{R}^n`}</InlineMath> has <strong>dimension</strong> <InlineMath>{`n`}</InlineMath>.
         </p>
       </Callout>
 
       <p>
-        This remarkable fact means the "size" of <MathInline>{`\\mathbb{R}^n`}</MathInline> is intrinsic—it doesn't
+        This remarkable fact means the "size" of <InlineMath>{`\\mathbb{R}^n`}</InlineMath> is intrinsic—it doesn't
         depend on which basis we choose.
       </p>
 
       <Callout type="info" title="Basis Characterizations">
-        <p>For a set of <MathInline>{`n`}</MathInline> vectors in <MathInline>{`\\mathbb{R}^n`}</MathInline>, the following are equivalent:</p>
+        <p>For a set of <InlineMath>{`n`}</InlineMath> vectors in <InlineMath>{`\\mathbb{R}^n`}</InlineMath>, the following are equivalent:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>The vectors form a basis</li>
           <li>The vectors are linearly independent</li>
-          <li>The vectors span <MathInline>{`\\mathbb{R}^n`}</MathInline></li>
+          <li>The vectors span <InlineMath>{`\\mathbb{R}^n`}</InlineMath></li>
         </ul>
         <p>
-          For exactly <MathInline>{`n`}</MathInline> vectors, any one of these properties implies the other two!
+          For exactly <InlineMath>{`n`}</InlineMath> vectors, any one of these properties implies the other two!
         </p>
       </Callout>
 
@@ -184,30 +184,30 @@ export default function Section78() {
 
       <Callout type="example" title="Coordinates in a Non-Standard Basis">
         <p>
-          Express <MathInline>{`(5, 3)`}</MathInline> in terms of the basis <MathInline>{`\\{(1, 1), (1, -1)\\}`}</MathInline>.
+          Express <InlineMath>{`(5, 3)`}</InlineMath> in terms of the basis <InlineMath>{`\\{(1, 1), (1, -1)\\}`}</InlineMath>.
         </p>
-        <p><strong>Solution:</strong> Find <MathInline>{`c_1, c_2`}</MathInline> such that:</p>
+        <p><strong>Solution:</strong> Find <InlineMath>{`c_1, c_2`}</InlineMath> such that:</p>
         <MathBlock>{`c_1(1, 1) + c_2(1, -1) = (5, 3)`}</MathBlock>
         <MathBlock>{`c_1 + c_2 = 5, \\quad c_1 - c_2 = 3`}</MathBlock>
-        <p>Adding: <MathInline>{`2c_1 = 8`}</MathInline>, so <MathInline>{`c_1 = 4`}</MathInline>. Then <MathInline>{`c_2 = 1`}</MathInline>.</p>
+        <p>Adding: <InlineMath>{`2c_1 = 8`}</InlineMath>, so <InlineMath>{`c_1 = 4`}</InlineMath>. Then <InlineMath>{`c_2 = 1`}</InlineMath>.</p>
         <p>
-          The coordinates of <MathInline>{`(5, 3)`}</MathInline> with respect to this basis are <MathInline>{`(4, 1)`}</MathInline>.
+          The coordinates of <InlineMath>{`(5, 3)`}</InlineMath> with respect to this basis are <InlineMath>{`(4, 1)`}</InlineMath>.
         </p>
       </Callout>
 
       <h2>Summary</h2>
 
       <Callout type="info" title="Key Concepts">
-        <p><strong>Linearly independent:</strong> Only <MathInline>{`c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k = \\mathbf{0}`}</MathInline> implies all <MathInline>{`c_i = 0`}</MathInline></p>
-        <p><strong>Linearly dependent:</strong> Some nontrivial combination equals <MathInline>{`\\mathbf{0}`}</MathInline></p>
+        <p><strong>Linearly independent:</strong> Only <InlineMath>{`c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k = \\mathbf{0}`}</InlineMath> implies all <InlineMath>{`c_i = 0`}</InlineMath></p>
+        <p><strong>Linearly dependent:</strong> Some nontrivial combination equals <InlineMath>{`\\mathbf{0}`}</InlineMath></p>
         <p><strong>Geometric test:</strong></p>
         <ul className="list-disc pl-6 space-y-1">
           <li>2 vectors: dependent iff parallel</li>
-          <li>3 vectors in <MathInline>{`\\mathbb{R}^3`}</MathInline>: dependent iff coplanar</li>
+          <li>3 vectors in <InlineMath>{`\\mathbb{R}^3`}</InlineMath>: dependent iff coplanar</li>
         </ul>
         <p><strong>Basis:</strong> Linearly independent + spans the space</p>
-        <p><strong>Dimension:</strong> <MathInline>{`\\dim(\\mathbb{R}^n) = n`}</MathInline> (number of vectors in any basis)</p>
-        <p><strong>Key fact:</strong> In <MathInline>{`\\mathbb{R}^n`}</MathInline>, at most <MathInline>{`n`}</MathInline> vectors can be independent</p>
+        <p><strong>Dimension:</strong> <InlineMath>{`\\dim(\\mathbb{R}^n) = n`}</InlineMath> (number of vectors in any basis)</p>
+        <p><strong>Key fact:</strong> In <InlineMath>{`\\mathbb{R}^n`}</InlineMath>, at most <InlineMath>{`n`}</InlineMath> vectors can be independent</p>
       </Callout>
     </LessonLayout>
   );

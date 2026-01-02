@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section06Questions } from '../../data/quizzes';
@@ -71,20 +71,20 @@ export default function Section06() {
         <h4 className="text-lg font-semibold text-primary-300 mb-4">The Secant Line</h4>
         <p className="text-dark-200 mb-4">
           A <strong>secant line</strong> passes through two points on a curve. If our curve is{' '}
-          <MathInline>{'y = f(x)'}</MathInline>, and we pick two points at{' '}
-          <MathInline>{'x = a'}</MathInline> and <MathInline>{'x = a + h'}</MathInline>, the
+          <InlineMath>{'y = f(x)'}</InlineMath>, and we pick two points at{' '}
+          <InlineMath>{'x = a'}</InlineMath> and <InlineMath>{'x = a + h'}</InlineMath>, the
           slope of the secant is:
         </p>
         <MathBlock>{`m_{\\text{secant}} = \\frac{f(a+h) - f(a)}{h}`}</MathBlock>
         <p className="text-dark-200 mt-4">
-          This is just "rise over run"—the change in <MathInline>{'y'}</MathInline> divided by
-          the change in <MathInline>{'x'}</MathInline>.
+          This is just "rise over run"—the change in <InlineMath>{'y'}</InlineMath> divided by
+          the change in <InlineMath>{'x'}</InlineMath>.
         </p>
       </div>
 
       <p className="text-dark-200 mb-6">
         Now imagine sliding the second point closer and closer to the first. As{' '}
-        <MathInline>{'h'}</MathInline> gets smaller, the secant line rotates, approaching
+        <InlineMath>{'h'}</InlineMath> gets smaller, the secant line rotates, approaching
         the tangent line. The tangent is what the secant "wants to become" as the two points
         merge into one.
       </p>
@@ -97,8 +97,8 @@ export default function Section06() {
       <Callout type="success">
         <p>
           <strong>The Birth of the Derivative:</strong> This limit—when it exists—is called
-          the <em>derivative</em> of <MathInline>{'f'}</MathInline> at{' '}
-          <MathInline>{'x = a'}</MathInline>. It gives the slope of the tangent line, which
+          the <em>derivative</em> of <InlineMath>{'f'}</InlineMath> at{' '}
+          <InlineMath>{'x = a'}</InlineMath>. It gives the slope of the tangent line, which
           tells us the instantaneous rate of change of the function.
         </p>
       </Callout>
@@ -107,8 +107,8 @@ export default function Section06() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">A Concrete Example</h2>
 
       <p className="text-dark-200 mb-6">
-        Let's find the tangent line to <MathInline>{'y = x^2'}</MathInline> at the point{' '}
-        <MathInline>{'(2, 4)'}</MathInline>.
+        Let's find the tangent line to <InlineMath>{'y = x^2'}</InlineMath> at the point{' '}
+        <InlineMath>{'(2, 4)'}</InlineMath>.
       </p>
 
       <div className="space-y-4 mb-8">
@@ -136,8 +136,8 @@ export default function Section06() {
       </div>
 
       <p className="text-dark-200 mb-6">
-        The tangent line at <MathInline>{'(2, 4)'}</MathInline> has slope 4. Its equation is{' '}
-        <MathInline>{'y - 4 = 4(x - 2)'}</MathInline>, or <MathInline>{'y = 4x - 4'}</MathInline>.
+        The tangent line at <InlineMath>{'(2, 4)'}</InlineMath> has slope 4. Its equation is{' '}
+        <InlineMath>{'y - 4 = 4(x - 2)'}</InlineMath>, or <InlineMath>{'y = 4x - 4'}</InlineMath>.
       </p>
 
       {/* The Geometric Meaning */}

@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section09Questions } from '../../data/quizzes';
@@ -45,8 +45,8 @@ export default function Section09() {
 
       <p className="text-dark-200 my-6">
         But a curved boundary doesn't play by these rules. How much area lies under the curve{' '}
-        <MathInline>{'y = x^2'}</MathInline> from <MathInline>{'x = 0'}</MathInline> to{' '}
-        <MathInline>{'x = 1'}</MathInline>? There's no simple formula—or is there?
+        <InlineMath>{'y = x^2'}</InlineMath> from <InlineMath>{'x = 0'}</InlineMath> to{' '}
+        <InlineMath>{'x = 1'}</InlineMath>? There's no simple formula—or is there?
       </p>
 
       {/* Archimedes' Method */}
@@ -81,7 +81,7 @@ export default function Section09() {
 
       <p className="text-dark-200 mb-6">
         Using this method, Archimedes proved that the area of a parabolic segment is exactly{' '}
-        <MathInline>{'\\frac{4}{3}'}</MathInline> times the area of an inscribed triangle—a
+        <InlineMath>{'\\frac{4}{3}'}</InlineMath> times the area of an inscribed triangle—a
         result that still amazes mathematicians today.
       </p>
 
@@ -90,8 +90,8 @@ export default function Section09() {
 
       <p className="text-dark-200 mb-6">
         Today we formalize Archimedes' method using <strong>Riemann sums</strong>. To find the
-        area under <MathInline>{'y = f(x)'}</MathInline> from <MathInline>{'x = a'}</MathInline>{' '}
-        to <MathInline>{'x = b'}</MathInline>:
+        area under <InlineMath>{'y = f(x)'}</InlineMath> from <InlineMath>{'x = a'}</InlineMath>{' '}
+        to <InlineMath>{'x = b'}</InlineMath>:
       </p>
 
       <div className="space-y-4 mb-8">
@@ -100,9 +100,9 @@ export default function Section09() {
           <div>
             <p className="font-semibold">Divide into strips</p>
             <p className="text-sm text-dark-400">
-              Split the interval <MathInline>{'[a, b]'}</MathInline> into{' '}
-              <MathInline>{'n'}</MathInline> equal pieces, each of width{' '}
-              <MathInline>{'\\Delta x = \\frac{b-a}{n}'}</MathInline>.
+              Split the interval <InlineMath>{'[a, b]'}</InlineMath> into{' '}
+              <InlineMath>{'n'}</InlineMath> equal pieces, each of width{' '}
+              <InlineMath>{'\\Delta x = \\frac{b-a}{n}'}</InlineMath>.
             </p>
           </div>
         </div>
@@ -111,9 +111,9 @@ export default function Section09() {
           <div>
             <p className="font-semibold">Build rectangles</p>
             <p className="text-sm text-dark-400">
-              For each strip, make a rectangle with width <MathInline>{'\\Delta x'}</MathInline>{' '}
-              and height <MathInline>{'f(x_i)'}</MathInline> for some point{' '}
-              <MathInline>{'x_i'}</MathInline> in that strip.
+              For each strip, make a rectangle with width <InlineMath>{'\\Delta x'}</InlineMath>{' '}
+              and height <InlineMath>{'f(x_i)'}</InlineMath> for some point{' '}
+              <InlineMath>{'x_i'}</InlineMath> in that strip.
             </p>
           </div>
         </div>
@@ -136,8 +136,8 @@ export default function Section09() {
       <Callout type="success">
         <p>
           <strong>The Integral Symbol:</strong> Leibniz wrote this limit as{' '}
-          <MathInline>{'\\int_a^b f(x)\\,dx'}</MathInline>. The elongated S (∫) stands for "summa"
-          (sum), and <MathInline>{'dx'}</MathInline> represents the infinitesimally thin width
+          <InlineMath>{'\\int_a^b f(x)\\,dx'}</InlineMath>. The elongated S (∫) stands for "summa"
+          (sum), and <InlineMath>{'dx'}</InlineMath> represents the infinitesimally thin width
           of each rectangle.
         </p>
       </Callout>
@@ -149,29 +149,29 @@ export default function Section09() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Example: Area Under a Parabola</h2>
 
       <p className="text-dark-200 mb-6">
-        Let's find the area under <MathInline>{'y = x^2'}</MathInline> from 0 to 1 using
+        Let's find the area under <InlineMath>{'y = x^2'}</InlineMath> from 0 to 1 using
         Riemann sums.
       </p>
 
       <div className="bg-dark-800 rounded-xl p-6 mb-6">
         <p className="text-dark-200 mb-4">
-          Using right endpoints with <MathInline>{'n'}</MathInline> rectangles:
+          Using right endpoints with <InlineMath>{'n'}</InlineMath> rectangles:
         </p>
         <MathBlock>{`\\sum_{i=1}^{n} \\left(\\frac{i}{n}\\right)^2 \\cdot \\frac{1}{n} = \\frac{1}{n^3} \\sum_{i=1}^{n} i^2`}</MathBlock>
         <p className="text-dark-200 my-4">
-          Using the formula <MathInline>{'\\sum_{i=1}^{n} i^2 = \\frac{n(n+1)(2n+1)}{6}'}</MathInline>:
+          Using the formula <InlineMath>{'\\sum_{i=1}^{n} i^2 = \\frac{n(n+1)(2n+1)}{6}'}</InlineMath>:
         </p>
         <MathBlock>{`= \\frac{1}{n^3} \\cdot \\frac{n(n+1)(2n+1)}{6} = \\frac{(n+1)(2n+1)}{6n^2}`}</MathBlock>
         <p className="text-dark-200 my-4">
-          As <MathInline>{'n \\to \\infty'}</MathInline>:
+          As <InlineMath>{'n \\to \\infty'}</InlineMath>:
         </p>
         <MathBlock>{`\\lim_{n \\to \\infty} \\frac{(n+1)(2n+1)}{6n^2} = \\lim_{n \\to \\infty} \\frac{2n^2 + 3n + 1}{6n^2} = \\frac{2}{6} = \\frac{1}{3}`}</MathBlock>
       </div>
 
       <p className="text-dark-200 mb-6">
-        The area under <MathInline>{'y = x^2'}</MathInline> from 0 to 1 is exactly{' '}
-        <MathInline>{'\\frac{1}{3}'}</MathInline>. This is what{' '}
-        <MathInline>{'\\int_0^1 x^2\\,dx = \\frac{1}{3}'}</MathInline> means.
+        The area under <InlineMath>{'y = x^2'}</InlineMath> from 0 to 1 is exactly{' '}
+        <InlineMath>{'\\frac{1}{3}'}</InlineMath>. This is what{' '}
+        <InlineMath>{'\\int_0^1 x^2\\,dx = \\frac{1}{3}'}</InlineMath> means.
       </p>
 
       {/* Beyond Area */}
@@ -186,7 +186,7 @@ export default function Section09() {
           <h4 className="text-lg font-semibold text-blue-300 mb-3">Total Distance</h4>
           <MathBlock>{`\\int_a^b |v(t)|\\,dt`}</MathBlock>
           <p className="text-dark-200 mt-3 text-sm">
-            If <MathInline>{'v(t)'}</MathInline> is velocity, this gives total distance traveled
+            If <InlineMath>{'v(t)'}</InlineMath> is velocity, this gives total distance traveled
             (accounting for direction changes).
           </p>
         </div>
@@ -238,7 +238,7 @@ export default function Section09() {
           "The integral is a machine that turns zero times infinity into something sensible."
         </p>
         <p className="text-dark-200">
-          Each thin slice has width <MathInline>{'dx \\to 0'}</MathInline>, but there are
+          Each thin slice has width <InlineMath>{'dx \\to 0'}</InlineMath>, but there are
           infinitely many of them. The product—handled carefully through limits—yields exact
           results. This is the magic of calculus.
         </p>

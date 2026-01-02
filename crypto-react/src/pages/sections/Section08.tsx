@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section08Quiz } from '@/data/quizzes';
@@ -11,20 +11,20 @@ export default function Section08() {
       <h2>The Problem of Huge Exponents</h2>
 
       <p>
-        In RSA encryption, we need to compute things like <Math>{'m^{65537} \\mod n'}</Math> where{' '}
-        <Math>n</Math> might be a 2048-bit number. Computing this naively would require 
+        In RSA encryption, we need to compute things like <InlineMath>{'m^{65537} \\mod n'}</InlineMath> where{' '}
+        <InlineMath>n</InlineMath> might be a 2048-bit number. Computing this naively would require 
         65,536 multiplications—and with 600-digit numbers!
       </p>
 
       <Callout type="warning">
-        <strong>The Challenge:</strong> How do we compute <Math>{'a^b \\mod n'}</Math> efficiently 
-        when <Math>b</Math> could be astronomically large?
+        <strong>The Challenge:</strong> How do we compute <InlineMath>{'a^b \\mod n'}</InlineMath> efficiently 
+        when <InlineMath>b</InlineMath> could be astronomically large?
       </Callout>
 
       <p>
         The answer is the <strong>square-and-multiply</strong> algorithm (also called 
         binary exponentiation or exponentiation by squaring). It reduces the number of 
-        operations from <Math>{'O(b)'}</Math> to <Math>{'O(\\log b)'}</Math>—an enormous speedup.
+        operations from <InlineMath>{'O(b)'}</InlineMath> to <InlineMath>{'O(\\log b)'}</InlineMath>—an enormous speedup.
       </p>
 
       <h2>The Key Insight</h2>
@@ -64,23 +64,23 @@ export default function Section08() {
       </div>
 
       <Definition title="Square-and-Multiply Algorithm">
-        <p>To compute <Math>{'a^b \\mod n'}</Math>:</p>
+        <p>To compute <InlineMath>{'a^b \\mod n'}</InlineMath>:</p>
         <ol className="list-decimal list-inside mt-3 space-y-1">
-          <li>Write <Math>b</Math> in binary: <Math>{'b = (b_k b_{k-1} \\cdots b_1 b_0)_2'}</Math></li>
+          <li>Write <InlineMath>b</InlineMath> in binary: <InlineMath>{'b = (b_k b_{k-1} \\cdots b_1 b_0)_2'}</InlineMath></li>
           <li>Start with result = 1</li>
           <li>For each bit from left to right:
             <ul className="list-disc list-inside ml-4 mt-1">
               <li>Square the result (always)</li>
-              <li>If the bit is 1, multiply by <Math>a</Math></li>
+              <li>If the bit is 1, multiply by <InlineMath>a</InlineMath></li>
             </ul>
           </li>
-          <li>Take mod <Math>n</Math> after each operation to keep numbers small</li>
+          <li>Take mod <InlineMath>n</InlineMath> after each operation to keep numbers small</li>
         </ol>
       </Definition>
 
       <Example title="Computing 3^13 mod 7">
         <p>
-          First, convert 13 to binary: <Math>{'13 = (1101)_2'}</Math>
+          First, convert 13 to binary: <InlineMath>{'13 = (1101)_2'}</InlineMath>
         </p>
         <p className="mt-2">
           Process each bit from left to right:
@@ -136,10 +136,10 @@ export default function Section08() {
           </table>
         </div>
         <p className="mt-4">
-          Therefore, <Math>{'3^{13} \\equiv 3 \\pmod{7}'}</Math>.
+          Therefore, <InlineMath>{'3^{13} \\equiv 3 \\pmod{7}'}</InlineMath>.
         </p>
         <p className="mt-2 text-dark-400">
-          Verification: <Math>{'3^{13} = 1594323 = 227760 \\times 7 + 3'}</Math> ✓
+          Verification: <InlineMath>{'3^{13} = 1594323 = 227760 \\times 7 + 3'}</InlineMath> ✓
         </p>
       </Example>
 
@@ -151,19 +151,19 @@ export default function Section08() {
           <div className="p-4 bg-dark-800/50 rounded-xl">
             <h4 className="font-semibold text-red-400 mb-2">Naive Method: O(b)</h4>
             <p className="text-dark-300 text-sm">
-              Multiply <Math>a</Math> by itself <Math>b</Math> times.
+              Multiply <InlineMath>a</InlineMath> by itself <InlineMath>b</InlineMath> times.
             </p>
             <p className="text-dark-400 text-sm mt-2">
-              For <Math>{'b = 2^{1000}'}</Math>, need ~10^301 operations!
+              For <InlineMath>{'b = 2^{1000}'}</InlineMath>, need ~10^301 operations!
             </p>
           </div>
           <div className="p-4 bg-dark-800/50 rounded-xl">
             <h4 className="font-semibold text-emerald-400 mb-2">Square-and-Multiply: O(log b)</h4>
             <p className="text-dark-300 text-sm">
-              Only <Math>{'\\lfloor \\log_2 b \\rfloor'}</Math> iterations needed.
+              Only <InlineMath>{'\\lfloor \\log_2 b \\rfloor'}</InlineMath> iterations needed.
             </p>
             <p className="text-dark-400 text-sm mt-2">
-              For <Math>{'b = 2^{1000}'}</Math>, need only 1000 operations!
+              For <InlineMath>{'b = 2^{1000}'}</InlineMath>, need only 1000 operations!
             </p>
           </div>
         </div>
@@ -174,7 +174,7 @@ export default function Section08() {
 
       <Example title="A Larger Example: 5^117 mod 19">
         <p>
-          Binary: <Math>{'117 = (1110101)_2'}</Math> = 64 + 32 + 16 + 4 + 1
+          Binary: <InlineMath>{'117 = (1110101)_2'}</InlineMath> = 64 + 32 + 16 + 4 + 1
         </p>
         <div className="mt-4 space-y-1 font-mono text-sm">
           <div className="grid grid-cols-4 gap-2 p-2 bg-dark-800/30 rounded">
@@ -221,31 +221,31 @@ export default function Section08() {
           </div>
         </div>
         <p className="mt-4">
-          Result: <Math>{'5^{117} \\equiv 1 \\pmod{19}'}</Math>
+          Result: <InlineMath>{'5^{117} \\equiv 1 \\pmod{19}'}</InlineMath>
         </p>
         <p className="text-dark-400 text-sm mt-2">
-          Note: This confirms Fermat's Little Theorem since <Math>{'117 = 6 \\times 18 + 9'}</Math> and{' '}
-          <Math>{'5^{18} \\equiv 1 \\pmod{19}'}</Math>.
+          Note: This confirms Fermat's Little Theorem since <InlineMath>{'117 = 6 \\times 18 + 9'}</InlineMath> and{' '}
+          <InlineMath>{'5^{18} \\equiv 1 \\pmod{19}'}</InlineMath>.
         </p>
       </Example>
 
       <Theorem title="Complexity Analysis">
         <p>
-          For computing <Math>{'a^b \\mod n'}</Math>:
+          For computing <InlineMath>{'a^b \\mod n'}</InlineMath>:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>Number of iterations: <Math>{'\\lfloor \\log_2 b \\rfloor + 1'}</Math></li>
+          <li>Number of iterations: <InlineMath>{'\\lfloor \\log_2 b \\rfloor + 1'}</InlineMath></li>
           <li>Each iteration: at most 2 multiplications + 1 modular reduction</li>
-          <li>Total multiplications: <Math>{'O(\\log b)'}</Math></li>
+          <li>Total multiplications: <InlineMath>{'O(\\log b)'}</InlineMath></li>
         </ul>
         <p className="mt-2">
           If we use fast multiplication algorithms, this becomes{' '}
-          <Math>{'O((\\log b)(\\log n)^2)'}</Math> bit operations.
+          <InlineMath>{'O((\\log b)(\\log n)^2)'}</InlineMath> bit operations.
         </p>
       </Theorem>
 
       <Callout type="info">
-        <strong>Implementation Tip:</strong> Always reduce mod <Math>n</Math> after 
+        <strong>Implementation Tip:</strong> Always reduce mod <InlineMath>n</InlineMath> after 
         every multiplication to keep intermediate results small. This prevents overflow 
         and keeps the algorithm fast.
       </Callout>

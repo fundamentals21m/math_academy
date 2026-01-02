@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section07() {
   return (
@@ -18,21 +18,21 @@ export default function Section07() {
         className="my-6"
         proof={
           <>
-            <p><strong>Associativity:</strong> We verify entry-by-entry. The <Math>(i,j)</Math> entry of <Math>(AB)C</Math> is:</p>
+            <p><strong>Associativity:</strong> We verify entry-by-entry. The <InlineMath>(i,j)</InlineMath> entry of <InlineMath>(AB)C</InlineMath> is:</p>
             <MathBlock>{`\\sum_k (AB)_{ik} c_{kj} = \\sum_k \\left(\\sum_l a_{il}b_{lk}\\right) c_{kj} = \\sum_l \\sum_k a_{il}b_{lk}c_{kj}`}</MathBlock>
-            <p>The <Math>(i,j)</Math> entry of <Math>A(BC)</Math> is:</p>
+            <p>The <InlineMath>(i,j)</InlineMath> entry of <InlineMath>A(BC)</InlineMath> is:</p>
             <MathBlock>{`\\sum_l a_{il}(BC)_{lj} = \\sum_l a_{il}\\left(\\sum_k b_{lk}c_{kj}\\right) = \\sum_l \\sum_k a_{il}b_{lk}c_{kj}`}</MathBlock>
-            <p>These are equal, so <Math>(AB)C = A(BC)</Math>.</p>
-            <p className="mt-2"><strong>Distributivity:</strong> <Math>{`(A(B+C))_{ij} = \\sum_k a_{ik}(b_{kj}+c_{kj}) = \\sum_k a_{ik}b_{kj} + \\sum_k a_{ik}c_{kj} = (AB)_{ij} + (AC)_{ij}`}</Math></p>
-            <p className="mt-2"><strong>Non-commutativity:</strong> Counterexample shown below proves <Math>AB \neq BA</Math> in general.</p>
+            <p>These are equal, so <InlineMath>(AB)C = A(BC)</InlineMath>.</p>
+            <p className="mt-2"><strong>Distributivity:</strong> <InlineMath>{`(A(B+C))_{ij} = \\sum_k a_{ik}(b_{kj}+c_{kj}) = \\sum_k a_{ik}b_{kj} + \\sum_k a_{ik}c_{kj} = (AB)_{ij} + (AC)_{ij}`}</InlineMath></p>
+            <p className="mt-2"><strong>Non-commutativity:</strong> Counterexample shown below proves <InlineMath>AB \neq BA</InlineMath> in general.</p>
           </>
         }
       >
         <p>For matrices of compatible sizes:</p>
         <ul className="list-disc list-inside mt-2 space-y-2">
-          <li><strong>Associative:</strong> <Math>A(BC) = (AB)C</Math></li>
-          <li><strong>Distributive:</strong> <Math>A(B + C) = AB + AC</Math> and <Math>(A + B)C = AC + BC</Math></li>
-          <li><strong className="text-amber-400">NOT Commutative:</strong> In general, <Math>AB \neq BA</Math></li>
+          <li><strong>Associative:</strong> <InlineMath>A(BC) = (AB)C</InlineMath></li>
+          <li><strong>Distributive:</strong> <InlineMath>A(B + C) = AB + AC</InlineMath> and <InlineMath>(A + B)C = AC + BC</InlineMath></li>
+          <li><strong className="text-amber-400">NOT Commutative:</strong> In general, <InlineMath>AB \neq BA</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -44,38 +44,38 @@ export default function Section07() {
           {`BA = \\begin{bmatrix} 0 & 0 \\\\ 1 & 0 \\end{bmatrix}\\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 1 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          <Math>AB \neq BA</Math> — the order matters!
+          <InlineMath>AB \neq BA</InlineMath> — the order matters!
         </p>
       </Example>
 
-      <h2>Four Ways to Multiply <Math>AB</Math></h2>
+      <h2>Four Ways to Multiply <InlineMath>AB</InlineMath></h2>
 
       <div className="space-y-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-primary-500/20">
           <p className="font-semibold text-primary-400 mb-2">1. Row times Column (Standard)</p>
           <p className="text-dark-300 text-sm">
-            <Math>{`(AB)_{ij}`}</Math> = (row <Math>i</Math> of <Math>A</Math>) <Math>\cdot</Math> (column <Math>j</Math> of <Math>B</Math>)
+            <InlineMath>{`(AB)_{ij}`}</InlineMath> = (row <InlineMath>i</InlineMath> of <InlineMath>A</InlineMath>) <InlineMath>\cdot</InlineMath> (column <InlineMath>j</InlineMath> of <InlineMath>B</InlineMath>)
           </p>
         </div>
 
         <div className="bg-dark-800/50 rounded-xl p-4 border border-amber-500/20">
-          <p className="font-semibold text-amber-400 mb-2">2. Columns of <Math>AB</Math></p>
+          <p className="font-semibold text-amber-400 mb-2">2. Columns of <InlineMath>AB</InlineMath></p>
           <p className="text-dark-300 text-sm">
-            Each column of <Math>AB</Math> is <Math>A</Math> times a column of <Math>B</Math>.
+            Each column of <InlineMath>AB</InlineMath> is <InlineMath>A</InlineMath> times a column of <InlineMath>B</InlineMath>.
           </p>
         </div>
 
         <div className="bg-dark-800/50 rounded-xl p-4 border border-emerald-500/20">
-          <p className="font-semibold text-emerald-400 mb-2">3. Rows of <Math>AB</Math></p>
+          <p className="font-semibold text-emerald-400 mb-2">3. Rows of <InlineMath>AB</InlineMath></p>
           <p className="text-dark-300 text-sm">
-            Each row of <Math>AB</Math> is a row of <Math>A</Math> times <Math>B</Math>.
+            Each row of <InlineMath>AB</InlineMath> is a row of <InlineMath>A</InlineMath> times <InlineMath>B</InlineMath>.
           </p>
         </div>
 
         <div className="bg-dark-800/50 rounded-xl p-4 border border-cyan-500/20">
           <p className="font-semibold text-cyan-400 mb-2">4. Column times Row</p>
           <p className="text-dark-300 text-sm">
-            <Math>AB</Math> = sum of (column <Math>k</Math> of <Math>A</Math>) times (row <Math>k</Math> of <Math>B</Math>).
+            <InlineMath>AB</InlineMath> = sum of (column <InlineMath>k</InlineMath> of <InlineMath>A</InlineMath>) times (row <InlineMath>k</InlineMath> of <InlineMath>B</InlineMath>).
           </p>
         </div>
       </div>
@@ -96,13 +96,13 @@ export default function Section07() {
 
       <Definition title="Matrix Powers" className="my-6">
         <p>
-          For a square matrix <Math>A</Math>, powers are defined naturally:
+          For a square matrix <InlineMath>A</InlineMath>, powers are defined naturally:
         </p>
         <MathBlock>
           {`A^2 = AA, \\quad A^3 = AAA, \\quad A^p = \\underbrace{A \\cdot A \\cdots A}_{p \\text{ times}}`}
         </MathBlock>
         <p className="mt-2">
-          Also <Math>A^0 = I</Math> (the identity matrix) and <Math>{`A^{-1}`}</Math> is the inverse (if it exists).
+          Also <InlineMath>A^0 = I</InlineMath> (the identity matrix) and <InlineMath>{`A^{-1}`}</InlineMath> is the inverse (if it exists).
         </p>
       </Definition>
 
@@ -112,15 +112,15 @@ export default function Section07() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Matrix multiplication is <strong>associative</strong>: <Math>(AB)C = A(BC)</Math>.</span>
+            <span>Matrix multiplication is <strong>associative</strong>: <InlineMath>(AB)C = A(BC)</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Matrix multiplication is <strong>NOT commutative</strong>: <Math>AB \neq BA</Math> in general.</span>
+            <span>Matrix multiplication is <strong>NOT commutative</strong>: <InlineMath>AB \neq BA</InlineMath> in general.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span><Math>AB</Math> can be computed four ways: row×col, by columns, by rows, or col×row.</span>
+            <span><InlineMath>AB</InlineMath> can be computed four ways: row×col, by columns, by rows, or col×row.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>

@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section15() {
   return (
@@ -16,27 +16,27 @@ export default function Section15() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Definition of Polar Coordinates</h2>
 
       <p className="text-dark-200 mb-4">
-        Let <MathInline>{'P'}</MathInline> be a point distinct from the origin. The line segment
-        joining <MathInline>{'P'}</MathInline> to the origin has some length{' '}
-        <MathInline>{'r > 0'}</MathInline> and makes an angle of <MathInline>{'\\theta'}</MathInline>{' '}
-        radians with the positive <MathInline>{'x'}</MathInline>-axis.
+        Let <InlineMath>{'P'}</InlineMath> be a point distinct from the origin. The line segment
+        joining <InlineMath>{'P'}</InlineMath> to the origin has some length{' '}
+        <InlineMath>{'r > 0'}</InlineMath> and makes an angle of <InlineMath>{'\\theta'}</InlineMath>{' '}
+        radians with the positive <InlineMath>{'x'}</InlineMath>-axis.
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Polar Coordinates</p>
         <p className="mb-2">
-          The two numbers <MathInline>{'r'}</MathInline> and <MathInline>{'\\theta'}</MathInline> are
-          called <strong>polar coordinates</strong> of <MathInline>{'P'}</MathInline>. They are
-          related to the rectangular coordinates <MathInline>{'(x, y)'}</MathInline> by:
+          The two numbers <InlineMath>{'r'}</InlineMath> and <InlineMath>{'\\theta'}</InlineMath> are
+          called <strong>polar coordinates</strong> of <InlineMath>{'P'}</InlineMath>. They are
+          related to the rectangular coordinates <InlineMath>{'(x, y)'}</InlineMath> by:
         </p>
         <MathBlock>{'x = r\\cos\\theta, \\quad y = r\\sin\\theta'}</MathBlock>
         <ul className="list-disc list-inside mt-3 space-y-1">
           <li>
-            <MathInline>{'r'}</MathInline> is the <strong>radial distance</strong> of{' '}
-            <MathInline>{'P'}</MathInline> from the origin
+            <InlineMath>{'r'}</InlineMath> is the <strong>radial distance</strong> of{' '}
+            <InlineMath>{'P'}</InlineMath> from the origin
           </li>
           <li>
-            <MathInline>{'\\theta'}</MathInline> is a <strong>polar angle</strong>
+            <InlineMath>{'\\theta'}</InlineMath> is a <strong>polar angle</strong>
           </li>
         </ul>
       </Callout>
@@ -45,24 +45,24 @@ export default function Section15() {
 
       <p className="text-dark-200 mb-4">
         Unlike rectangular coordinates, polar coordinates are <em>not unique</em>. If{' '}
-        <MathInline>{'\\theta'}</MathInline> is a polar angle for <MathInline>{'P'}</MathInline>,
-        then so is <MathInline>{'\\theta + 2n\\pi'}</MathInline> for any integer{' '}
-        <MathInline>{'n'}</MathInline>.
+        <InlineMath>{'\\theta'}</InlineMath> is a polar angle for <InlineMath>{'P'}</InlineMath>,
+        then so is <InlineMath>{'\\theta + 2n\\pi'}</InlineMath> for any integer{' '}
+        <InlineMath>{'n'}</InlineMath>.
       </p>
 
       <Callout type="info">
         <p className="font-semibold mb-2">Key Properties</p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            The radial distance is unique: <MathInline>{'r = \\sqrt{x^2 + y^2}'}</MathInline>
+            The radial distance is unique: <InlineMath>{'r = \\sqrt{x^2 + y^2}'}</InlineMath>
           </li>
           <li>
             The polar angle is determined only up to multiples of{' '}
-            <MathInline>{'2\\pi'}</MathInline>
+            <InlineMath>{'2\\pi'}</InlineMath>
           </li>
           <li>
-            At the origin, <MathInline>{'r = 0'}</MathInline> and <em>any</em> value of{' '}
-            <MathInline>{'\\theta'}</MathInline> may be used
+            At the origin, <InlineMath>{'r = 0'}</InlineMath> and <em>any</em> value of{' '}
+            <InlineMath>{'\\theta'}</InlineMath> may be used
           </li>
         </ul>
       </Callout>
@@ -70,38 +70,38 @@ export default function Section15() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Graphs in Polar Coordinates</h2>
 
       <p className="text-dark-200 mb-4">
-        Let <MathInline>{'f'}</MathInline> be a nonnegative function defined on an interval{' '}
-        <MathInline>{'[a, b]'}</MathInline>. The set of all points with polar coordinates{' '}
-        <MathInline>{'(r, \\theta)'}</MathInline> satisfying <MathInline>{'r = f(\\theta)'}</MathInline>{' '}
-        is called the <strong>graph of <MathInline>{'f'}</MathInline> in polar coordinates</strong>.
+        Let <InlineMath>{'f'}</InlineMath> be a nonnegative function defined on an interval{' '}
+        <InlineMath>{'[a, b]'}</InlineMath>. The set of all points with polar coordinates{' '}
+        <InlineMath>{'(r, \\theta)'}</InlineMath> satisfying <InlineMath>{'r = f(\\theta)'}</InlineMath>{' '}
+        is called the <strong>graph of <InlineMath>{'f'}</InlineMath> in polar coordinates</strong>.
       </p>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Circle</p>
         <p className="mb-2">
-          The circle with Cartesian equation <MathInline>{'x^2 + y^2 = 4'}</MathInline> has the
-          simpler polar equation <MathInline>{'r = 2'}</MathInline>.
+          The circle with Cartesian equation <InlineMath>{'x^2 + y^2 = 4'}</InlineMath> has the
+          simpler polar equation <InlineMath>{'r = 2'}</InlineMath>.
         </p>
         <p>
-          In general, a circle of radius <MathInline>{'c'}</MathInline> centered at the origin has
-          polar equation <MathInline>{'r = c'}</MathInline>.
+          In general, a circle of radius <InlineMath>{'c'}</InlineMath> centered at the origin has
+          polar equation <InlineMath>{'r = c'}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Figure-Eight Curve</p>
         <p className="mb-2">
-          Consider the curve with Cartesian equation <MathInline>{'(x^2 + y^2)^3 = y^2'}</MathInline>.
+          Consider the curve with Cartesian equation <InlineMath>{'(x^2 + y^2)^3 = y^2'}</InlineMath>.
         </p>
         <p className="mb-2">
-          Using <MathInline>{'x^2 + y^2 = r^2'}</MathInline> and <MathInline>{'y = r\\sin\\theta'}</MathInline>:
+          Using <InlineMath>{'x^2 + y^2 = r^2'}</InlineMath> and <InlineMath>{'y = r\\sin\\theta'}</InlineMath>:
         </p>
         <MathBlock>{'r^6 = r^2\\sin^2\\theta \\implies r^2 = |\\sin\\theta| \\implies r = \\sqrt{|\\sin\\theta|}'}</MathBlock>
         <p className="mt-2">
           This polar equation makes the curve much easier to sketch: as{' '}
-          <MathInline>{'\\theta'}</MathInline> varies from <MathInline>{'0'}</MathInline> to{' '}
-          <MathInline>{'\\pi/2'}</MathInline>, <MathInline>{'\\sin\\theta'}</MathInline> increases
-          from 0 to 1, so <MathInline>{'r'}</MathInline> increases from 0 to 1.
+          <InlineMath>{'\\theta'}</InlineMath> varies from <InlineMath>{'0'}</InlineMath> to{' '}
+          <InlineMath>{'\\pi/2'}</InlineMath>, <InlineMath>{'\\sin\\theta'}</InlineMath> increases
+          from 0 to 1, so <InlineMath>{'r'}</InlineMath> increases from 0 to 1.
         </p>
       </Callout>
 
@@ -115,11 +115,11 @@ export default function Section15() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Radial Set</p>
         <p className="mb-2">
-          Let <MathInline>{'f'}</MathInline> be a nonnegative function on{' '}
-          <MathInline>{'[a, b]'}</MathInline>, where <MathInline>{'0 \\leq b - a \\leq 2\\pi'}</MathInline>.
-          The <strong>radial set</strong> of <MathInline>{'f'}</MathInline> over{' '}
-          <MathInline>{'[a, b]'}</MathInline> is the set of all points with polar coordinates{' '}
-          <MathInline>{'(r, \\theta)'}</MathInline> satisfying:
+          Let <InlineMath>{'f'}</InlineMath> be a nonnegative function on{' '}
+          <InlineMath>{'[a, b]'}</InlineMath>, where <InlineMath>{'0 \\leq b - a \\leq 2\\pi'}</InlineMath>.
+          The <strong>radial set</strong> of <InlineMath>{'f'}</InlineMath> over{' '}
+          <InlineMath>{'[a, b]'}</InlineMath> is the set of all points with polar coordinates{' '}
+          <InlineMath>{'(r, \\theta)'}</InlineMath> satisfying:
         </p>
         <MathBlock>{'0 \\leq r \\leq f(\\theta), \\quad a \\leq \\theta \\leq b'}</MathBlock>
       </Callout>
@@ -127,9 +127,9 @@ export default function Section15() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Area of a Circular Sector</h3>
 
       <p className="text-dark-200 mb-4">
-        If <MathInline>{'f'}</MathInline> is constant on <MathInline>{'[a, b]'}</MathInline>, say{' '}
-        <MathInline>{'f(\\theta) = c'}</MathInline>, its radial set is a circular sector of radius{' '}
-        <MathInline>{'c'}</MathInline> subtending an angle of <MathInline>{'b - a'}</MathInline> radians.
+        If <InlineMath>{'f'}</InlineMath> is constant on <InlineMath>{'[a, b]'}</InlineMath>, say{' '}
+        <InlineMath>{'f(\\theta) = c'}</InlineMath>, its radial set is a circular sector of radius{' '}
+        <InlineMath>{'c'}</InlineMath> subtending an angle of <InlineMath>{'b - a'}</InlineMath> radians.
         By our definition of angular measure, this sector has area:
       </p>
 
@@ -138,7 +138,7 @@ export default function Section15() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Area for Step Functions</h3>
 
       <p className="text-dark-200 mb-4">
-        If <MathInline>{'s'}</MathInline> is a step function constant on subintervals, its radial
+        If <InlineMath>{'s'}</InlineMath> is a step function constant on subintervals, its radial
         set is a union of circular sectors. The total area is:
       </p>
 
@@ -149,12 +149,12 @@ export default function Section15() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 2.6 (Area in Polar Coordinates)</p>
         <p className="mb-2">
-          Let <MathInline>{'R'}</MathInline> denote the radial set of a nonnegative function{' '}
-          <MathInline>{'f'}</MathInline> over an interval <MathInline>{'[a, b]'}</MathInline>, where{' '}
-          <MathInline>{'0 \\leq b - a \\leq 2\\pi'}</MathInline>, and assume that{' '}
-          <MathInline>{'R'}</MathInline> is measurable. If <MathInline>{'f^2'}</MathInline> is
-          integrable on <MathInline>{'[a, b]'}</MathInline>, the area of{' '}
-          <MathInline>{'R'}</MathInline> is given by:
+          Let <InlineMath>{'R'}</InlineMath> denote the radial set of a nonnegative function{' '}
+          <InlineMath>{'f'}</InlineMath> over an interval <InlineMath>{'[a, b]'}</InlineMath>, where{' '}
+          <InlineMath>{'0 \\leq b - a \\leq 2\\pi'}</InlineMath>, and assume that{' '}
+          <InlineMath>{'R'}</InlineMath> is measurable. If <InlineMath>{'f^2'}</InlineMath> is
+          integrable on <InlineMath>{'[a, b]'}</InlineMath>, the area of{' '}
+          <InlineMath>{'R'}</InlineMath> is given by:
         </p>
         <MathBlock>{'a(R) = \\frac{1}{2}\\int_a^b f^2(\\theta)\\,d\\theta'}</MathBlock>
       </Callout>
@@ -162,19 +162,19 @@ export default function Section15() {
       <h3 className="text-xl font-semibold mt-6 mb-3">Proof Idea</h3>
 
       <p className="text-dark-200 mb-4">
-        Choose step functions <MathInline>{'s'}</MathInline> and <MathInline>{'t'}</MathInline> with{' '}
-        <MathInline>{'0 \\leq s(\\theta) \\leq f(\\theta) \\leq t(\\theta)'}</MathInline>. Their
-        radial sets <MathInline>{'S'}</MathInline> and <MathInline>{'T'}</MathInline> satisfy{' '}
-        <MathInline>{'S \\subseteq R \\subseteq T'}</MathInline>. By the monotone property of area:
+        Choose step functions <InlineMath>{'s'}</InlineMath> and <InlineMath>{'t'}</InlineMath> with{' '}
+        <InlineMath>{'0 \\leq s(\\theta) \\leq f(\\theta) \\leq t(\\theta)'}</InlineMath>. Their
+        radial sets <InlineMath>{'S'}</InlineMath> and <InlineMath>{'T'}</InlineMath> satisfy{' '}
+        <InlineMath>{'S \\subseteq R \\subseteq T'}</InlineMath>. By the monotone property of area:
       </p>
 
       <MathBlock>{'\\frac{1}{2}\\int_a^b s^2(\\theta)\\,d\\theta \\leq a(R) \\leq \\frac{1}{2}\\int_a^b t^2(\\theta)\\,d\\theta'}</MathBlock>
 
       <p className="text-dark-200 mb-6">
-        Since <MathInline>{'s^2'}</MathInline> and <MathInline>{'t^2'}</MathInline> are arbitrary
-        step functions with <MathInline>{'s^2 \\leq f^2 \\leq t^2'}</MathInline>, and{' '}
-        <MathInline>{'f^2'}</MathInline> is integrable, we must have{' '}
-        <MathInline>{'2a(R) = \\int_a^b f^2(\\theta)\\,d\\theta'}</MathInline>.
+        Since <InlineMath>{'s^2'}</InlineMath> and <InlineMath>{'t^2'}</InlineMath> are arbitrary
+        step functions with <InlineMath>{'s^2 \\leq f^2 \\leq t^2'}</InlineMath>, and{' '}
+        <InlineMath>{'f^2'}</InlineMath> is integrable, we must have{' '}
+        <InlineMath>{'2a(R) = \\int_a^b f^2(\\theta)\\,d\\theta'}</InlineMath>.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Worked Examples</h2>
@@ -182,13 +182,13 @@ export default function Section15() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Area of the Figure-Eight</p>
         <p className="mb-2">
-          Find the area enclosed by the figure-eight curve <MathInline>{'r = \\sqrt{|\\sin\\theta|}'}</MathInline>.
+          Find the area enclosed by the figure-eight curve <InlineMath>{'r = \\sqrt{|\\sin\\theta|}'}</InlineMath>.
         </p>
         <p className="mt-3 mb-2"><strong>Solution:</strong></p>
         <p className="mb-2">
           By symmetry, we calculate the area in the first quadrant and multiply by 4. For{' '}
-          <MathInline>{'0 \\leq \\theta \\leq \\pi/2'}</MathInline>, we have{' '}
-          <MathInline>{'f^2(\\theta) = |\\sin\\theta| = \\sin\\theta'}</MathInline>:
+          <InlineMath>{'0 \\leq \\theta \\leq \\pi/2'}</InlineMath>, we have{' '}
+          <InlineMath>{'f^2(\\theta) = |\\sin\\theta| = \\sin\\theta'}</InlineMath>:
         </p>
         <MathBlock>{'a(R) = 4 \\cdot \\frac{1}{2}\\int_0^{\\pi/2} \\sin\\theta\\,d\\theta = 2\\int_0^{\\pi/2} \\sin\\theta\\,d\\theta'}</MathBlock>
         <MathBlock>{'= 2\\left[-\\cos\\theta\\right]_0^{\\pi/2} = 2\\left(0 - (-1)\\right) = 2'}</MathBlock>
@@ -197,12 +197,12 @@ export default function Section15() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Area of a Cardioid</p>
         <p className="mb-2">
-          The cardioid has polar equation <MathInline>{'r = 1 + \\cos\\theta'}</MathInline> for{' '}
-          <MathInline>{'0 \\leq \\theta \\leq 2\\pi'}</MathInline>. Its area is:
+          The cardioid has polar equation <InlineMath>{'r = 1 + \\cos\\theta'}</InlineMath> for{' '}
+          <InlineMath>{'0 \\leq \\theta \\leq 2\\pi'}</InlineMath>. Its area is:
         </p>
         <MathBlock>{'a(R) = \\frac{1}{2}\\int_0^{2\\pi} (1 + \\cos\\theta)^2\\,d\\theta'}</MathBlock>
         <p className="mt-2 mb-2">
-          Expanding <MathInline>{'(1 + \\cos\\theta)^2 = 1 + 2\\cos\\theta + \\cos^2\\theta'}</MathInline>:
+          Expanding <InlineMath>{'(1 + \\cos\\theta)^2 = 1 + 2\\cos\\theta + \\cos^2\\theta'}</InlineMath>:
         </p>
         <MathBlock>{'= \\frac{1}{2}\\int_0^{2\\pi} \\left(1 + 2\\cos\\theta + \\frac{1 + \\cos 2\\theta}{2}\\right)d\\theta'}</MathBlock>
         <MathBlock>{'= \\frac{1}{2}\\left[\\theta + 2\\sin\\theta + \\frac{\\theta}{2} + \\frac{\\sin 2\\theta}{4}\\right]_0^{2\\pi} = \\frac{1}{2} \\cdot \\frac{3}{2} \\cdot 2\\pi = \\frac{3\\pi}{2}'}</MathBlock>
@@ -217,7 +217,7 @@ export default function Section15() {
         <p className="mt-3 mb-2"><strong>Rectangular to Polar:</strong></p>
         <MathBlock>{'r = \\sqrt{x^2 + y^2}, \\quad \\tan\\theta = \\frac{y}{x} \\text{ (for } x \\neq 0\\text{)}'}</MathBlock>
         <p className="mt-2 text-sm">
-          Note: When finding <MathInline>{'\\theta'}</MathInline>, consider which quadrant the point
+          Note: When finding <InlineMath>{'\\theta'}</InlineMath>, consider which quadrant the point
           is in to determine the correct angle.
         </p>
       </Callout>
@@ -226,21 +226,21 @@ export default function Section15() {
 
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
-          <strong>Polar coordinates:</strong> <MathInline>{'(r, \\theta)'}</MathInline> where{' '}
-          <MathInline>{'r'}</MathInline> is radial distance and <MathInline>{'\\theta'}</MathInline>{' '}
-          is angle from positive <MathInline>{'x'}</MathInline>-axis
+          <strong>Polar coordinates:</strong> <InlineMath>{'(r, \\theta)'}</InlineMath> where{' '}
+          <InlineMath>{'r'}</InlineMath> is radial distance and <InlineMath>{'\\theta'}</InlineMath>{' '}
+          is angle from positive <InlineMath>{'x'}</InlineMath>-axis
         </li>
         <li>
-          <strong>Conversion:</strong> <MathInline>{'x = r\\cos\\theta'}</MathInline>,{' '}
-          <MathInline>{'y = r\\sin\\theta'}</MathInline>
+          <strong>Conversion:</strong> <InlineMath>{'x = r\\cos\\theta'}</InlineMath>,{' '}
+          <InlineMath>{'y = r\\sin\\theta'}</InlineMath>
         </li>
         <li>
-          <strong>Non-uniqueness:</strong> <MathInline>{'\\theta'}</MathInline> is determined only
-          up to multiples of <MathInline>{'2\\pi'}</MathInline>
+          <strong>Non-uniqueness:</strong> <InlineMath>{'\\theta'}</InlineMath> is determined only
+          up to multiples of <InlineMath>{'2\\pi'}</InlineMath>
         </li>
         <li>
           <strong>Area formula:</strong>{' '}
-          <MathInline>{'a(R) = \\frac{1}{2}\\int_a^b f^2(\\theta)\\,d\\theta'}</MathInline>
+          <InlineMath>{'a(R) = \\frac{1}{2}\\int_a^b f^2(\\theta)\\,d\\theta'}</InlineMath>
         </li>
       </ul>
 

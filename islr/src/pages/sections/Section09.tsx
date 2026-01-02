@@ -3,7 +3,7 @@ import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section09Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Example, RCodeBlock } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section09() {
   return (
@@ -149,7 +149,7 @@ newspaper   -0.01273562  0.0106607`}
       <h2>Step 4: How Good Is the Model?</h2>
 
       <p>
-        We assess model accuracy using <Math>R^2</Math> and RSE:
+        We assess model accuracy using <InlineMath>R^2</InlineMath> and RSE:
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
@@ -194,7 +194,7 @@ Multiple R-squared:  0.9678,	Adjusted R-squared:  0.9673`}
 summary(lm.fit.int)`}
         </RCodeBlock>
         <p className="mt-3 text-dark-300">
-          The interaction term is highly significant (p &lt; 0.0001), and <Math>R^2</Math> increases 
+          The interaction term is highly significant (p &lt; 0.0001), and <InlineMath>R^2</InlineMath> increases 
           from 0.897 to 0.968. This confirms strong synergy between TV and radio advertising.
         </p>
       </Example>

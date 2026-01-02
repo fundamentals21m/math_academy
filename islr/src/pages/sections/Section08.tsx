@@ -3,7 +3,7 @@ import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section08Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Example, RCodeBlock } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section08() {
   return (
@@ -37,8 +37,8 @@ export default function Section08() {
         </p>
         <MathBlock>{`y_i = \\beta_0 + \\beta_1 x_i + \\epsilon_i = \\begin{cases} \\beta_0 + \\beta_1 + \\epsilon_i & \\text{if female} \\\\ \\beta_0 + \\epsilon_i & \\text{if male} \\end{cases}`}</MathBlock>
         <p className="mt-2">
-          Here <Math>\beta_0</Math> is the average value for males (the <em>baseline</em>), 
-          and <Math>\beta_1</Math> is the difference between females and males.
+          Here <InlineMath>\beta_0</InlineMath> is the average value for males (the <em>baseline</em>), 
+          and <InlineMath>\beta_1</InlineMath> is the difference between females and males.
         </p>
       </Definition>
 
@@ -58,7 +58,7 @@ export default function Section08() {
       <MathBlock>{`y_i = \\beta_0 + \\beta_1 x_{i1} + \\beta_2 x_{i2} + \\epsilon_i`}</MathBlock>
 
       <Callout type="info">
-        <strong>Baseline Category:</strong> With <Math>k</Math> levels, we create <Math>k-1</Math> dummy 
+        <strong>Baseline Category:</strong> With <InlineMath>k</InlineMath> levels, we create <InlineMath>k-1</InlineMath> dummy 
         variables. The level without a dummy variable is the <em>baseline</em>. The coefficients 
         represent differences from this baseline.
       </Callout>
@@ -99,8 +99,8 @@ summary(lm.fit)
         </p>
         <MathBlock>{`Y = \\beta_0 + (\\beta_1 + \\beta_3 X_2) X_1 + \\beta_2 X_2 + \\epsilon`}</MathBlock>
         <p className="mt-2">
-          The effect of <Math>X_1</Math> on <Math>Y</Math> is now <Math>\beta_1 + \beta_3 X_2</Math>, 
-          which depends on <Math>X_2</Math>.
+          The effect of <InlineMath>X_1</InlineMath> on <InlineMath>Y</InlineMath> is now <InlineMath>\beta_1 + \beta_3 X_2</InlineMath>, 
+          which depends on <InlineMath>X_2</InlineMath>.
         </p>
       </Definition>
 
@@ -111,7 +111,7 @@ summary(lm.fit)
         </p>
         <MathBlock>{`\\text{sales} = \\beta_0 + \\beta_1 \\times \\text{TV} + \\beta_2 \\times \\text{radio} + \\beta_3 \\times (\\text{TV} \\times \\text{radio}) + \\epsilon`}</MathBlock>
         <p className="mt-2">
-          The coefficient <Math>\beta_3</Math> for the interaction term is positive and highly 
+          The coefficient <InlineMath>\beta_3</InlineMath> for the interaction term is positive and highly 
           significant, confirming that TV and radio advertising are more effective together than 
           the sum of their individual effects.
         </p>
@@ -153,7 +153,7 @@ summary(lm.fit)
         <MathBlock>{`y_i = \\beta_0 + \\beta_1 x_i + \\beta_2 x_i^2 + \\cdots + \\beta_d x_i^d + \\epsilon_i`}</MathBlock>
         <p className="mt-2">
           This is still a <em>linear</em> model because it is linear in the coefficients 
-          <Math>\beta_0, \beta_1, \ldots, \beta_d</Math>. The predictors are <Math>x, x^2, \ldots, x^d</Math>.
+          <InlineMath>\beta_0, \beta_1, \ldots, \beta_d</InlineMath>. The predictors are <InlineMath>x, x^2, \ldots, x^d</InlineMath>.
         </p>
       </Definition>
 
@@ -192,7 +192,7 @@ summary(lm.fit2)
       <div className="p-4 bg-dark-800/50 rounded-xl border border-dark-700 my-4">
         <h4 className="text-emerald-400 font-semibold mb-2">Detection</h4>
         <p className="text-dark-300 text-sm">
-          Plot residuals <Math>e_i = y_i - \hat y_i</Math> against fitted values <Math>\hat y_i</Math>. 
+          Plot residuals <InlineMath>e_i = y_i - \hat y_i</InlineMath> against fitted values <InlineMath>\hat y_i</InlineMath>. 
           Look for patterns—a curved pattern suggests non-linearity.
         </p>
       </div>
@@ -215,7 +215,7 @@ summary(lm.fit2)
       <h3>3. Non-constant Variance (Heteroscedasticity)</h3>
 
       <p>
-        We assume <Math>{"\\text{Var}(\\epsilon_i) = \\sigma^2"}</Math> is constant. If the variance 
+        We assume <InlineMath>{"\\text{Var}(\\epsilon_i) = \\sigma^2"}</InlineMath> is constant. If the variance 
         of errors increases with the response, we have <em>heteroscedasticity</em>.
       </p>
 
@@ -223,15 +223,15 @@ summary(lm.fit2)
         <h4 className="text-emerald-400 font-semibold mb-2">Detection & Solution</h4>
         <p className="text-dark-300 text-sm">
           Look for a funnel shape in the residual plot. Common solutions include transforming 
-          the response using <Math>{`\\log(Y)`}</Math> or <Math>{`\\sqrt{Y}`}</Math>.
+          the response using <InlineMath>{`\\log(Y)`}</InlineMath> or <InlineMath>{`\\sqrt{Y}`}</InlineMath>.
         </p>
       </div>
 
       <h3>4. Outliers</h3>
 
       <p>
-        An <em>outlier</em> is a point for which <Math>y_i</Math> is far from the value predicted 
-        by the model. Outliers can have large effects on RSE and <Math>R^2</Math>.
+        An <em>outlier</em> is a point for which <InlineMath>y_i</InlineMath> is far from the value predicted 
+        by the model. Outliers can have large effects on RSE and <InlineMath>R^2</InlineMath>.
       </p>
 
       <div className="p-4 bg-dark-800/50 rounded-xl border border-dark-700 my-4">
@@ -251,11 +251,11 @@ summary(lm.fit2)
 
       <Definition title="Leverage Statistic">
         <p>
-          The leverage statistic <Math>h_i</Math> quantifies the leverage of observation <Math>i</Math>. 
-          It always lies between <Math>1/n</Math> and 1, and the average leverage is <Math>(p+1)/n</Math>.
+          The leverage statistic <InlineMath>h_i</InlineMath> quantifies the leverage of observation <InlineMath>i</InlineMath>. 
+          It always lies between <InlineMath>1/n</InlineMath> and 1, and the average leverage is <InlineMath>(p+1)/n</InlineMath>.
         </p>
         <p className="mt-2">
-          Observations with <Math>h_i</Math> greatly exceeding <Math>(p+1)/n</Math> are high-leverage points.
+          Observations with <InlineMath>h_i</InlineMath> greatly exceeding <InlineMath>(p+1)/n</InlineMath> are high-leverage points.
         </p>
       </Definition>
 
@@ -273,7 +273,7 @@ summary(lm.fit2)
         </p>
         <MathBlock>{`\\text{VIF}(\\hat{\\beta}_j) = \\frac{1}{1 - R^2_{X_j | X_{-j}}}`}</MathBlock>
         <p className="mt-2">
-          where <Math>{"R^2_{X_j | X_{-j}}"}</Math> is the <Math>R^2</Math> from regressing <Math>X_j</Math> onto 
+          where <InlineMath>{"R^2_{X_j | X_{-j}}"}</InlineMath> is the <InlineMath>R^2</InlineMath> from regressing <InlineMath>X_j</InlineMath> onto 
           all other predictors. A VIF of 1 indicates no collinearity; values exceeding 5 or 10 
           indicate problematic collinearity.
         </p>

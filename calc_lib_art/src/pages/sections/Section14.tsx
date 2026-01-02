@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline } from '../../components/common/MathBlock';
+import { InlineMath } from '../../components/common/MathBlock';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
 import { section14Questions } from '../../data/quizzes';
@@ -76,7 +76,7 @@ export default function Section14() {
           <span className="text-primary-400 font-mono text-sm whitespace-nowrap">Complex Numbers</span>
           <div>
             <p className="text-dark-200">
-              Invented to solve cubic equations, <MathInline>{'i = \\sqrt{-1}'}</MathInline> seemed
+              Invented to solve cubic equations, <InlineMath>{'i = \\sqrt{-1}'}</InlineMath> seemed
               like a mathematical fiction. It turns out to be essential for quantum mechanics.
             </p>
           </div>

@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, Math } from '@/components/common/MathBlock';
+import { MathBlock, InlineMath } from '@/components/common/MathBlock';
 import { DistributiveLawVisualizer } from '@/components/visualizations';
 
 export default function Section01() {
@@ -38,7 +38,7 @@ export default function Section01() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example</p>
         <p>
-          <Math>{`3 + 5 = 5 + 3 = 8`}</Math> and <Math>{`4 \\times 7 = 7 \\times 4 = 28`}</Math>
+          <InlineMath>{`3 + 5 = 5 + 3 = 8`}</InlineMath> and <InlineMath>{`4 \\times 7 = 7 \\times 4 = 28`}</InlineMath>
         </p>
       </div>
 
@@ -58,10 +58,10 @@ export default function Section01() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example</p>
         <p>
-          <Math>{`3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27`}</Math>
+          <InlineMath>{`3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27`}</InlineMath>
         </p>
         <p className="mt-2 text-dark-300">
-          Verify: <Math>{`3 \\times 9 = 27`}</Math> ✓
+          Verify: <InlineMath>{`3 \\times 9 = 27`}</InlineMath> ✓
         </p>
       </div>
 
@@ -91,7 +91,7 @@ export default function Section01() {
       <MathBlock>{`\\frac{a}{c} + \\frac{b}{c} = \\frac{a + b}{c}`}</MathBlock>
 
       <h3>Laws of Exponents</h3>
-      <p>For any base <Math>a</Math> and exponents <Math>m, n</Math>:</p>
+      <p>For any base <InlineMath>a</InlineMath> and exponents <InlineMath>m, n</InlineMath>:</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
@@ -116,12 +116,12 @@ export default function Section01() {
 
       <p>
         The word "percent" means "per hundred." Thus 25% means 25 per hundred, or
-        <Math>{`\\frac{25}{100} = 0.25`}</Math>.
+        <InlineMath>{`\\frac{25}{100} = 0.25`}</InlineMath>.
       </p>
 
       <Callout type="success">
-        <strong>Key Insight:</strong> To find <Math>p\%</Math> of a quantity <Math>Q</Math>,
-        multiply: <Math>{`\\frac{p}{100} \\times Q`}</Math>
+        <strong>Key Insight:</strong> To find <InlineMath>p\%</InlineMath> of a quantity <InlineMath>Q</InlineMath>,
+        multiply: <InlineMath>{`\\frac{p}{100} \\times Q`}</InlineMath>
       </Callout>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
@@ -130,10 +130,10 @@ export default function Section01() {
           If an item costs $80 and sales tax is 7.5%, what is the total?
         </p>
         <p className="mt-2">
-          Tax = <Math>{`0.075 \\times 80 = \\$6.00`}</Math>
+          Tax = <InlineMath>{`0.075 \\times 80 = \\$6.00`}</InlineMath>
         </p>
         <p>
-          Total = <Math>{`\\$80 + \\$6 = \\$86`}</Math>
+          Total = <InlineMath>{`\\$80 + \\$6 = \\$86`}</InlineMath>
         </p>
       </div>
 
@@ -167,10 +167,10 @@ export default function Section01() {
           Which is a better deal: 12 ounces for $2.40 or 20 ounces for $3.60?
         </p>
         <p className="mt-2">
-          12 oz for $2.40: <Math>{`\\frac{\\$2.40}{12\\text{ oz}} = \\$0.20/\\text{oz}`}</Math>
+          12 oz for $2.40: <InlineMath>{`\\frac{\\$2.40}{12\\text{ oz}} = \\$0.20/\\text{oz}`}</InlineMath>
         </p>
         <p>
-          20 oz for $3.60: <Math>{`\\frac{\\$3.60}{20\\text{ oz}} = \\$0.18/\\text{oz}`}</Math>
+          20 oz for $3.60: <InlineMath>{`\\frac{\\$3.60}{20\\text{ oz}} = \\$0.18/\\text{oz}`}</InlineMath>
         </p>
         <p className="mt-2 text-emerald-400">
           The 20 oz option is the better deal (lower price per ounce).
@@ -179,8 +179,8 @@ export default function Section01() {
 
       <h3>Proportions</h3>
       <p>
-        A proportion states that two ratios are equal. If <Math>{`\\frac{a}{b} = \\frac{c}{d}`}</Math>,
-        then <Math>{`a \\times d = b \\times c`}</Math> (cross-multiplication).
+        A proportion states that two ratios are equal. If <InlineMath>{`\\frac{a}{b} = \\frac{c}{d}`}</InlineMath>,
+        then <InlineMath>{`a \\times d = b \\times c`}</InlineMath> (cross-multiplication).
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
@@ -191,10 +191,10 @@ export default function Section01() {
         </p>
         <MathBlock>{`\\frac{1\\text{ in}}{50\\text{ mi}} = \\frac{3.5\\text{ in}}{x\\text{ mi}}`}</MathBlock>
         <p className="mt-2">
-          Cross-multiply: <Math>{`1 \\times x = 50 \\times 3.5`}</Math>
+          Cross-multiply: <InlineMath>{`1 \\times x = 50 \\times 3.5`}</InlineMath>
         </p>
         <p>
-          Therefore: <Math>{`x = 175\\text{ miles}`}</Math>
+          Therefore: <InlineMath>{`x = 175\\text{ miles}`}</InlineMath>
         </p>
       </div>
 
@@ -215,11 +215,11 @@ export default function Section01() {
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Example</p>
-        <p>Evaluate: <Math>{`3 + 4 \\times 2^2`}</Math></p>
+        <p>Evaluate: <InlineMath>{`3 + 4 \\times 2^2`}</InlineMath></p>
         <ol className="list-decimal list-inside mt-2 text-dark-300">
-          <li>Exponent: <Math>{`2^2 = 4`}</Math></li>
-          <li>Multiplication: <Math>{`4 \\times 4 = 16`}</Math></li>
-          <li>Addition: <Math>{`3 + 16 = 19`}</Math></li>
+          <li>Exponent: <InlineMath>{`2^2 = 4`}</InlineMath></li>
+          <li>Multiplication: <InlineMath>{`4 \\times 4 = 16`}</InlineMath></li>
+          <li>Addition: <InlineMath>{`3 + 16 = 19`}</InlineMath></li>
         </ol>
       </div>
 

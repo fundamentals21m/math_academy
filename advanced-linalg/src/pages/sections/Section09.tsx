@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section09Quiz } from '@/data/quizzes';
 
@@ -17,21 +17,21 @@ export default function Section09() {
       </p>
 
       <Callout type="info">
-        <strong>Geometric Meaning:</strong> For a matrix <Math>A</Math>, <Math>|\det(A)|</Math> gives
-        the factor by which <Math>A</Math> scales volumes, and <Math>{`\\text{sign}`}(\det(A))</Math> indicates
-        whether <Math>A</Math> preserves or reverses orientation.
+        <strong>Geometric Meaning:</strong> For a matrix <InlineMath>A</InlineMath>, <InlineMath>|\det(A)|</InlineMath> gives
+        the factor by which <InlineMath>A</InlineMath> scales volumes, and <InlineMath>{`\\text{sign}`}(\det(A))</InlineMath> indicates
+        whether <InlineMath>A</InlineMath> preserves or reverses orientation.
       </Callout>
 
       <h2>Axiomatic Definition</h2>
 
       <Definition title="Determinant (Axiomatic)">
         <p>
-          The <strong>determinant</strong> is the unique function <Math>\det: M_n(F) \to F</Math> satisfying:
+          The <strong>determinant</strong> is the unique function <InlineMath>\det: M_n(F) \to F</InlineMath> satisfying:
         </p>
         <ol className="list-decimal list-inside text-dark-300 mt-2">
           <li><strong>Multilinear in columns:</strong> Linear in each column when others are fixed</li>
-          <li><strong>Alternating:</strong> <Math>\det(A) = 0</Math> if two columns are equal</li>
-          <li><strong>Normalized:</strong> <Math>\det(I) = 1</Math></li>
+          <li><strong>Alternating:</strong> <InlineMath>\det(A) = 0</InlineMath> if two columns are equal</li>
+          <li><strong>Normalized:</strong> <InlineMath>\det(I) = 1</InlineMath></li>
         </ol>
       </Definition>
 
@@ -40,8 +40,8 @@ export default function Section09() {
         <ul className="list-disc list-inside text-dark-300 mt-2 space-y-1">
           <li>Swapping two columns negates the determinant</li>
           <li>Adding a multiple of one column to another doesn't change det</li>
-          <li>Scaling a column by <Math>c</Math> scales det by <Math>c</Math></li>
-          <li>If any column is zero, <Math>\det = 0</Math></li>
+          <li>Scaling a column by <InlineMath>c</InlineMath> scales det by <InlineMath>c</InlineMath></li>
+          <li>If any column is zero, <InlineMath>\det = 0</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -51,7 +51,7 @@ export default function Section09() {
         <MathBlock>{`\\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc`}</MathBlock>
         <p className="mt-2">
           <strong>Geometric interpretation:</strong> This is the signed area of the parallelogram
-          spanned by <Math>(a, c)</Math> and <Math>(b, d)</Math>.
+          spanned by <InlineMath>(a, c)</InlineMath> and <InlineMath>(b, d)</InlineMath>.
         </p>
       </Example>
 
@@ -65,16 +65,16 @@ export default function Section09() {
 
       <Definition title="Cofactor Expansion">
         <p>
-          The <strong>cofactor</strong> of entry <Math>a_{'ij'}</Math> is <Math>C_{'ij'} = (-1)^{'{i+j}'} M_{'ij'}</Math>,
-          where <Math>M_{'ij'}</Math> is the <strong>minor</strong> — the determinant of the <Math>(n-1) \times (n-1)</Math>
-          matrix obtained by deleting row <Math>i</Math> and column <Math>j</Math>.
+          The <strong>cofactor</strong> of entry <InlineMath>a_{'ij'}</InlineMath> is <InlineMath>C_{'ij'} = (-1)^{'{i+j}'} M_{'ij'}</InlineMath>,
+          where <InlineMath>M_{'ij'}</InlineMath> is the <strong>minor</strong> — the determinant of the <InlineMath>(n-1) \times (n-1)</InlineMath>
+          matrix obtained by deleting row <InlineMath>i</InlineMath> and column <InlineMath>j</InlineMath>.
         </p>
       </Definition>
 
       <Theorem title="Cofactor Expansion">
-        <p>The determinant can be computed by expansion along any row <Math>i</Math>:</p>
+        <p>The determinant can be computed by expansion along any row <InlineMath>i</InlineMath>:</p>
         <MathBlock>{`\\det(A) = \\sum_{j=1}^n a_{ij} C_{ij} = \\sum_{j=1}^n a_{ij} (-1)^{i+j} M_{ij}`}</MathBlock>
-        <p className="mt-2">Or along any column <Math>j</Math>:</p>
+        <p className="mt-2">Or along any column <InlineMath>j</InlineMath>:</p>
         <MathBlock>{`\\det(A) = \\sum_{i=1}^n a_{ij} C_{ij}`}</MathBlock>
       </Theorem>
 
@@ -94,54 +94,54 @@ export default function Section09() {
         proof={
           <>
             <p>
-              Both <Math>\det(A)</Math> and <Math>\det(A^T)</Math> can be computed using the same permutation
+              Both <InlineMath>\det(A)</InlineMath> and <InlineMath>\det(A^T)</InlineMath> can be computed using the same permutation
               formula. The symmetry of the formula gives equality.
             </p>
           </>
         }
       >
-        <p><Math>\det(A^T) = \det(A)</Math></p>
+        <p><InlineMath>\det(A^T) = \det(A)</InlineMath></p>
       </Theorem>
 
       <Theorem
         title="Determinant Product Rule"
         proof={
           <>
-            <p>Consider <Math>\phi(A) = \det(AB) / \det(B)</Math> when <Math>\det(B) \neq 0</Math>.</p>
-            <p className="mt-2"><Math>\phi</Math> is multilinear and alternating in the columns of <Math>A</Math>.</p>
-            <p className="mt-2">Since <Math>\phi(I) = \det(B)/\det(B) = 1</Math>, by uniqueness: <Math>\phi(A) = \det(A)</Math>.</p>
-            <p className="mt-2">So <Math>\det(AB) = \det(A)\det(B)</Math>.</p>
+            <p>Consider <InlineMath>\phi(A) = \det(AB) / \det(B)</InlineMath> when <InlineMath>\det(B) \neq 0</InlineMath>.</p>
+            <p className="mt-2"><InlineMath>\phi</InlineMath> is multilinear and alternating in the columns of <InlineMath>A</InlineMath>.</p>
+            <p className="mt-2">Since <InlineMath>\phi(I) = \det(B)/\det(B) = 1</InlineMath>, by uniqueness: <InlineMath>\phi(A) = \det(A)</InlineMath>.</p>
+            <p className="mt-2">So <InlineMath>\det(AB) = \det(A)\det(B)</InlineMath>.</p>
           </>
         }
       >
-        <p><Math>\det(AB) = \det(A) \det(B)</Math></p>
+        <p><InlineMath>\det(AB) = \det(A) \det(B)</InlineMath></p>
       </Theorem>
 
       <Theorem
         title="Invertibility Criterion"
         proof={
           <>
-            <p><strong>(⇒)</strong> If <Math>A</Math> is invertible, then <Math>AA^{'{-1}'} = I</Math>.</p>
+            <p><strong>(⇒)</strong> If <InlineMath>A</InlineMath> is invertible, then <InlineMath>AA^{'{-1}'} = I</InlineMath>.</p>
             <MathBlock>{`\\det(A)\\det(A^{-1}) = \\det(I) = 1`}</MathBlock>
-            <p>So <Math>\det(A) \neq 0</Math>.</p>
-            <p className="mt-2"><strong>(⇐)</strong> If <Math>\det(A) \neq 0</Math>, the columns are linearly independent (otherwise <Math>\det = 0</Math>), so <Math>A</Math> has full rank and is invertible.</p>
+            <p>So <InlineMath>\det(A) \neq 0</InlineMath>.</p>
+            <p className="mt-2"><strong>(⇐)</strong> If <InlineMath>\det(A) \neq 0</InlineMath>, the columns are linearly independent (otherwise <InlineMath>\det = 0</InlineMath>), so <InlineMath>A</InlineMath> has full rank and is invertible.</p>
           </>
         }
       >
         <p>
-          A square matrix <Math>A</Math> is invertible if and only if <Math>\det(A) \neq 0</Math>.
+          A square matrix <InlineMath>A</InlineMath> is invertible if and only if <InlineMath>\det(A) \neq 0</InlineMath>.
         </p>
       </Theorem>
 
       <Theorem title="Determinant of Inverse">
-        <p>If <Math>A</Math> is invertible: <Math>\det(A^{'{-1}'}) = 1/\det(A)</Math></p>
+        <p>If <InlineMath>A</InlineMath> is invertible: <InlineMath>\det(A^{'{-1}'}) = 1/\det(A)</InlineMath></p>
       </Theorem>
 
       <h2>The Adjugate Matrix</h2>
 
       <Definition title="Adjugate (Classical Adjoint)">
         <p>
-          The <strong>adjugate</strong> of <Math>A</Math>, denoted <Math>{`\\text{adj}`}(A)</Math>, is the
+          The <strong>adjugate</strong> of <InlineMath>A</InlineMath>, denoted <InlineMath>{`\\text{adj}`}(A)</InlineMath>, is the
           transpose of the cofactor matrix:
         </p>
         <MathBlock>{`\\text{adj}(A)_{ij} = C_{ji}`}</MathBlock>
@@ -149,9 +149,9 @@ export default function Section09() {
 
       <Theorem title="Inverse via Adjugate">
         <p>
-          <Math>A \cdot {`\\text{adj}`}(A) = \det(A) \cdot I</Math>
+          <InlineMath>A \cdot {`\\text{adj}`}(A) = \det(A) \cdot I</InlineMath>
         </p>
-        <p className="mt-2">If <Math>A</Math> is invertible:</p>
+        <p className="mt-2">If <InlineMath>A</InlineMath> is invertible:</p>
         <MathBlock>{`A^{-1} = \\frac{1}{\\det(A)} \\text{adj}(A)`}</MathBlock>
       </Theorem>
 
@@ -161,22 +161,22 @@ export default function Section09() {
         title="Cramer's Rule"
         proof={
           <>
-            <p>Let <Math>A_i</Math> be <Math>A</Math> with column <Math>i</Math> replaced by <Math>{`\\mathbf{b}`}</Math>.</p>
-            <p className="mt-2">Using the adjugate formula for <Math>A^{'{-1}'}</Math>:</p>
+            <p>Let <InlineMath>A_i</InlineMath> be <InlineMath>A</InlineMath> with column <InlineMath>i</InlineMath> replaced by <InlineMath>{`\\mathbf{b}`}</InlineMath>.</p>
+            <p className="mt-2">Using the adjugate formula for <InlineMath>A^{'{-1}'}</InlineMath>:</p>
             <MathBlock>{`x_i = (A^{-1}\\mathbf{b})_i = \\frac{1}{\\det(A)} \\sum_j (\\text{adj}(A))_{ij} b_j = \\frac{1}{\\det(A)} \\sum_j C_{ji} b_j`}</MathBlock>
             <p className="mt-2">
-              The sum <Math>\sum_j C_{'ji'} b_j</Math> is exactly the cofactor expansion of <Math>\det(A_i)</Math>
-              along column <Math>i</Math>.
+              The sum <InlineMath>\sum_j C_{'ji'} b_j</InlineMath> is exactly the cofactor expansion of <InlineMath>\det(A_i)</InlineMath>
+              along column <InlineMath>i</InlineMath>.
             </p>
           </>
         }
       >
         <p>
-          If <Math>A</Math> is invertible and <Math>A{`\\mathbf{x}`} = {`\\mathbf{b}`}</Math>, then:
+          If <InlineMath>A</InlineMath> is invertible and <InlineMath>A{`\\mathbf{x}`} = {`\\mathbf{b}`}</InlineMath>, then:
         </p>
         <MathBlock>{`x_i = \\frac{\\det(A_i)}{\\det(A)}`}</MathBlock>
         <p className="mt-2">
-          where <Math>A_i</Math> is <Math>A</Math> with column <Math>i</Math> replaced by <Math>{`\\mathbf{b}`}</Math>.
+          where <InlineMath>A_i</InlineMath> is <InlineMath>A</InlineMath> with column <InlineMath>i</InlineMath> replaced by <InlineMath>{`\\mathbf{b}`}</InlineMath>.
         </p>
       </Theorem>
 
@@ -191,30 +191,30 @@ export default function Section09() {
 
       <Callout type="warning">
         <strong>Practical Note:</strong> Cramer's Rule is elegant but computationally expensive
-        (<Math>O(n!)</Math> naive, <Math>O(n^4)</Math> with smart cofactor computation). For practical
-        computation, Gaussian elimination (<Math>O(n^3)</Math>) is preferred.
+        (<InlineMath>O(n!)</InlineMath> naive, <InlineMath>O(n^4)</InlineMath> with smart cofactor computation). For practical
+        computation, Gaussian elimination (<InlineMath>O(n^3)</InlineMath>) is preferred.
       </Callout>
 
       <h2>Special Matrices</h2>
 
       <Theorem title="Determinant of Special Matrices">
         <ul className="list-disc list-inside text-dark-300 mt-2 space-y-2">
-          <li><strong>Triangular matrix:</strong> <Math>\det = </Math> product of diagonal entries</li>
-          <li><strong>Diagonal matrix:</strong> <Math>\det = </Math> product of diagonal entries</li>
-          <li><strong>Block triangular:</strong> <Math>\det\begin{'{pmatrix}'} A & * \\ 0 & B \end{'{pmatrix}'} = \det(A) \det(B)</Math></li>
-          <li><strong>Orthogonal matrix:</strong> <Math>\det = \pm 1</Math></li>
+          <li><strong>Triangular matrix:</strong> <InlineMath>\det = </InlineMath> product of diagonal entries</li>
+          <li><strong>Diagonal matrix:</strong> <InlineMath>\det = </InlineMath> product of diagonal entries</li>
+          <li><strong>Block triangular:</strong> <InlineMath>\det\begin{'{pmatrix}'} A & * \\ 0 & B \end{'{pmatrix}'} = \det(A) \det(B)</InlineMath></li>
+          <li><strong>Orthogonal matrix:</strong> <InlineMath>\det = \pm 1</InlineMath></li>
         </ul>
       </Theorem>
 
       <div className="mt-8 p-4 rounded-xl bg-dark-800/50 border border-dark-700">
         <h3 className="text-lg font-semibold text-dark-100 mb-2">Key Takeaways</h3>
         <ul className="list-disc list-inside text-dark-300 space-y-1">
-          <li>Determinant is multilinear, alternating, normalized (<Math>\det(I) = 1</Math>)</li>
+          <li>Determinant is multilinear, alternating, normalized (<InlineMath>\det(I) = 1</InlineMath>)</li>
           <li>Cofactor expansion works along any row or column</li>
-          <li><Math>\det(AB) = \det(A)\det(B)</Math> and <Math>\det(A^T) = \det(A)</Math></li>
-          <li><Math>A</Math> is invertible iff <Math>\det(A) \neq 0</Math></li>
-          <li>Cramer's Rule: <Math>x_i = \det(A_i) / \det(A)</Math></li>
-          <li><Math>|\det(A)|</Math> = volume scaling factor; sign = orientation</li>
+          <li><InlineMath>\det(AB) = \det(A)\det(B)</InlineMath> and <InlineMath>\det(A^T) = \det(A)</InlineMath></li>
+          <li><InlineMath>A</InlineMath> is invertible iff <InlineMath>\det(A) \neq 0</InlineMath></li>
+          <li>Cramer's Rule: <InlineMath>x_i = \det(A_i) / \det(A)</InlineMath></li>
+          <li><InlineMath>|\det(A)|</InlineMath> = volume scaling factor; sign = orientation</li>
         </ul>
       </div>
 

@@ -61,6 +61,12 @@ export const SECTIONS = [
     subtitle: 'The stories behind the mathematics',
     style: 'subject'
   },
+  {
+    id: 'seminal',
+    title: 'Seminal Works',
+    subtitle: 'Foundational texts that shaped mathematics',
+    style: 'subject'
+  },
 ];
 
 /** @type {Course[]} */
@@ -244,6 +250,36 @@ export const COURSES = [
     progressGradient: 'linear-gradient(90deg, #ec4899, #f472b6)',
   },
 
+  // SEMINAL WORKS
+  {
+    id: 'euclid',
+    title: "Euclid's Elements",
+    description: "The foundational text of Western mathematics. Study all 13 books covering plane geometry, proportions, number theory, and solid geometry through interactive propositions and proofs.",
+    icon: '📜',
+    url: 'https://euclid-deploy.vercel.app/',
+    tags: ['13 Books', '64 Sections'],
+    sections: ['featured', 'seminal', 'geometry'],
+    totalSections: 64,
+    progressPrefix: 'euclid:',
+    leaderboardUrl: 'https://euclid-deploy.vercel.app/#/leaderboard',
+    shortName: 'Elements',
+    progressGradient: 'linear-gradient(90deg, #d97706, #f59e0b)',
+  },
+  {
+    id: 'gauss',
+    title: "Disquisitiones Arithmeticae",
+    description: "Gauss's foundational 1801 treatise that systematized number theory. Study congruences, quadratic residues, quadratic forms, and the construction of regular polygons.",
+    icon: '🔢',
+    url: 'gauss-deploy/',
+    tags: ['7 Sections', 'Number Theory'],
+    sections: ['seminal'],
+    totalSections: 7,
+    progressPrefix: 'gauss:',
+    leaderboardUrl: 'gauss-deploy/#/leaderboard',
+    shortName: 'Disquisitiones',
+    progressGradient: 'linear-gradient(90deg, #d97706, #f59e0b)',
+  },
+
   // MATH HISTORY
   {
     id: 'mom',
@@ -258,6 +294,20 @@ export const COURSES = [
     leaderboardUrl: 'men-of-math/#/leaderboard',
     shortName: 'Men of Math',
     progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)',
+  },
+  {
+    id: 'thales',
+    title: 'The Heritage of Thales',
+    description: "Journey through 2,500 years of mathematical history and foundations. From ancient Egypt through Greek mathematics, the Renaissance, and into modern foundations including set theory, logic, and category theory.",
+    icon: '🏛️',
+    url: 'thales-deploy/',
+    tags: ['11 Parts', '66 Sections'],
+    sections: ['history'],
+    totalSections: 66,
+    progressPrefix: 'thales:',
+    leaderboardUrl: 'thales-deploy/#/leaderboard',
+    shortName: 'Heritage of Thales',
+    progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
   },
 ];
 

@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section36() {
   return (
@@ -16,13 +16,13 @@ export default function Section36() {
 
       <Definition title="Conjugate Transpose (Hermitian Adjoint)" className="my-6">
         <p>
-          The <strong>conjugate transpose</strong> of matrix <Math>A</Math> is:
+          The <strong>conjugate transpose</strong> of matrix <InlineMath>A</InlineMath> is:
         </p>
         <MathBlock>
           {`A^H = \\bar{A}^T = (\\bar{A})^T = (A^T)^{\\bar{}}`}
         </MathBlock>
         <p className="mt-2">
-          Also written as <Math>A^*</Math>. Take transpose AND conjugate each entry.
+          Also written as <InlineMath>A^*</InlineMath>. Take transpose AND conjugate each entry.
         </p>
       </Definition>
 
@@ -36,13 +36,13 @@ export default function Section36() {
 
       <Definition title="Hermitian Matrix" className="my-6">
         <p>
-          A matrix <Math>A</Math> is <strong>Hermitian</strong> if:
+          A matrix <InlineMath>A</InlineMath> is <strong>Hermitian</strong> if:
         </p>
         <MathBlock>
           {`A^H = A`}
         </MathBlock>
         <p className="mt-2">
-          Diagonal entries must be real. Off-diagonal entries satisfy <Math>{`a_{ij} = \\bar{a}_{ji}`}</Math>.
+          Diagonal entries must be real. Off-diagonal entries satisfy <InlineMath>{`a_{ij} = \\bar{a}_{ji}`}</InlineMath>.
         </p>
       </Definition>
 
@@ -51,16 +51,16 @@ export default function Section36() {
         className="my-6"
         proof={
           <>
-            <p><strong>Real eigenvalues:</strong> If <Math>{`A\\mathbf{x} = \\lambda\\mathbf{x}`}</Math>, take the conjugate transpose:</p>
+            <p><strong>Real eigenvalues:</strong> If <InlineMath>{`A\\mathbf{x} = \\lambda\\mathbf{x}`}</InlineMath>, take the conjugate transpose:</p>
             <MathBlock>{`(A\\mathbf{x})^H = (\\lambda\\mathbf{x})^H \\implies \\mathbf{x}^H A^H = \\bar{\\lambda}\\mathbf{x}^H`}</MathBlock>
-            <p className="mt-2">Since <Math>{`A^H = A`}</Math>: <Math>{`\\mathbf{x}^H A = \\bar{\\lambda}\\mathbf{x}^H`}</Math>. Multiply on the right by <Math>{`\\mathbf{x}`}</Math>:</p>
+            <p className="mt-2">Since <InlineMath>{`A^H = A`}</InlineMath>: <InlineMath>{`\\mathbf{x}^H A = \\bar{\\lambda}\\mathbf{x}^H`}</InlineMath>. Multiply on the right by <InlineMath>{`\\mathbf{x}`}</InlineMath>:</p>
             <MathBlock>{`\\mathbf{x}^H A\\mathbf{x} = \\bar{\\lambda}\\mathbf{x}^H\\mathbf{x} = \\lambda\\mathbf{x}^H\\mathbf{x}`}</MathBlock>
-            <p className="mt-2">Since <Math>{`\\mathbf{x}^H\\mathbf{x} = \\|\\mathbf{x}\\|^2 \\neq 0`}</Math>, we have <Math>{`\\lambda = \\bar{\\lambda}`}</Math>, so <Math>{`\\lambda`}</Math> is real.</p>
-            <p className="mt-2"><strong>Orthogonal eigenvectors:</strong> For distinct eigenvalues, similar to the symmetric case: <Math>{`\\lambda_1(\\mathbf{x}^H\\mathbf{y}) = \\lambda_2(\\mathbf{x}^H\\mathbf{y})`}</Math> implies <Math>{`\\mathbf{x}^H\\mathbf{y} = 0`}</Math>.</p>
+            <p className="mt-2">Since <InlineMath>{`\\mathbf{x}^H\\mathbf{x} = \\|\\mathbf{x}\\|^2 \\neq 0`}</InlineMath>, we have <InlineMath>{`\\lambda = \\bar{\\lambda}`}</InlineMath>, so <InlineMath>{`\\lambda`}</InlineMath> is real.</p>
+            <p className="mt-2"><strong>Orthogonal eigenvectors:</strong> For distinct eigenvalues, similar to the symmetric case: <InlineMath>{`\\lambda_1(\\mathbf{x}^H\\mathbf{y}) = \\lambda_2(\\mathbf{x}^H\\mathbf{y})`}</InlineMath> implies <InlineMath>{`\\mathbf{x}^H\\mathbf{y} = 0`}</InlineMath>.</p>
           </>
         }
       >
-        <p>If <Math>A = A^H</Math> (Hermitian), then:</p>
+        <p>If <InlineMath>A = A^H</InlineMath> (Hermitian), then:</p>
         <ol className="list-decimal list-inside space-y-2">
           <li>All eigenvalues are <strong>real</strong></li>
           <li>Eigenvectors can be chosen <strong>orthonormal</strong></li>
@@ -69,7 +69,7 @@ export default function Section36() {
           {`A = U\\Lambda U^H`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>U</Math> is unitary and <Math>\Lambda</Math> is real diagonal.
+          where <InlineMath>U</InlineMath> is unitary and <InlineMath>\Lambda</InlineMath> is real diagonal.
         </p>
       </Theorem>
 
@@ -78,7 +78,7 @@ export default function Section36() {
           {`A = \\begin{bmatrix} 2 & 1-i \\\\ 1+i & 3 \\end{bmatrix}`}
         </MathBlock>
         <p className="mt-2">
-          Diagonal entries 2 and 3 are real. Off-diagonal: <Math>1-i</Math> and <Math>{`\\overline{1-i} = 1+i`}</Math> ✓
+          Diagonal entries 2 and 3 are real. Off-diagonal: <InlineMath>1-i</InlineMath> and <InlineMath>{`\\overline{1-i} = 1+i`}</InlineMath> ✓
         </p>
         <p className="mt-2">
           Eigenvalues: both real (computed from characteristic polynomial).
@@ -89,13 +89,13 @@ export default function Section36() {
 
       <Definition title="Unitary Matrix" className="my-6">
         <p>
-          A matrix <Math>U</Math> is <strong>unitary</strong> if:
+          A matrix <InlineMath>U</InlineMath> is <strong>unitary</strong> if:
         </p>
         <MathBlock>
           {`U^H U = I \\quad \\Leftrightarrow \\quad U^{-1} = U^H`}
         </MathBlock>
         <p className="mt-2">
-          The columns form an orthonormal basis for <Math>{`\\mathbb{C}^n`}</Math>.
+          The columns form an orthonormal basis for <InlineMath>{`\\mathbb{C}^n`}</InlineMath>.
         </p>
       </Definition>
 
@@ -108,29 +108,29 @@ export default function Section36() {
             <MathBlock>{`\\|U\\mathbf{x}\\|^2 = (U\\mathbf{x})^H(U\\mathbf{x}) = \\mathbf{x}^H U^H U \\mathbf{x} = \\mathbf{x}^H I \\mathbf{x} = \\|\\mathbf{x}\\|^2`}</MathBlock>
             <p className="mt-2"><strong>Preserves inner products:</strong></p>
             <MathBlock>{`\\langle U\\mathbf{x}, U\\mathbf{y} \\rangle = (U\\mathbf{x})^H(U\\mathbf{y}) = \\mathbf{x}^H U^H U \\mathbf{y} = \\mathbf{x}^H \\mathbf{y} = \\langle \\mathbf{x}, \\mathbf{y} \\rangle`}</MathBlock>
-            <p className="mt-2"><strong>Eigenvalues on unit circle:</strong> If <Math>{`U\\mathbf{x} = \\lambda\\mathbf{x}`}</Math>:</p>
+            <p className="mt-2"><strong>Eigenvalues on unit circle:</strong> If <InlineMath>{`U\\mathbf{x} = \\lambda\\mathbf{x}`}</InlineMath>:</p>
             <MathBlock>{`\\|\\mathbf{x}\\| = \\|U\\mathbf{x}\\| = |\\lambda|\\|\\mathbf{x}\\| \\implies |\\lambda| = 1`}</MathBlock>
-            <p className="mt-2"><strong>Determinant:</strong> <Math>|\\det U|^2 = \\det(U^H)\\det(U) = \\det(U^H U) = \\det I = 1</Math>.</p>
+            <p className="mt-2"><strong>Determinant:</strong> <InlineMath>|\\det U|^2 = \\det(U^H)\\det(U) = \\det(U^H U) = \\det I = 1</InlineMath>.</p>
           </>
         }
       >
         <ul className="list-disc list-inside space-y-2">
-          <li><strong>Preserves lengths:</strong> <Math>{`\\|U\\mathbf{x}\\| = \\|\\mathbf{x}\\|`}</Math></li>
-          <li><strong>Preserves inner products:</strong> <Math>{`\\langle U\\mathbf{x}, U\\mathbf{y} \\rangle = \\langle \\mathbf{x}, \\mathbf{y} \\rangle`}</Math></li>
-          <li><strong>Eigenvalues:</strong> <Math>|\lambda| = 1</Math> (on unit circle)</li>
-          <li><strong>Determinant:</strong> <Math>|\det U| = 1</Math></li>
+          <li><strong>Preserves lengths:</strong> <InlineMath>{`\\|U\\mathbf{x}\\| = \\|\\mathbf{x}\\|`}</InlineMath></li>
+          <li><strong>Preserves inner products:</strong> <InlineMath>{`\\langle U\\mathbf{x}, U\\mathbf{y} \\rangle = \\langle \\mathbf{x}, \\mathbf{y} \\rangle`}</InlineMath></li>
+          <li><strong>Eigenvalues:</strong> <InlineMath>|\lambda| = 1</InlineMath> (on unit circle)</li>
+          <li><strong>Determinant:</strong> <InlineMath>|\det U| = 1</InlineMath></li>
         </ul>
       </Theorem>
 
       <Example title="Fourier Matrix" className="my-6">
         <p>
-          The <Math>n \times n</Math> Fourier matrix <Math>F_n</Math> (with normalization) is unitary:
+          The <InlineMath>n \times n</InlineMath> Fourier matrix <InlineMath>F_n</InlineMath> (with normalization) is unitary:
         </p>
         <MathBlock>
           {`(F_n)_{jk} = \\frac{1}{\\sqrt{n}} e^{2\\pi i jk/n} = \\frac{1}{\\sqrt{n}} \\omega^{jk}`}
         </MathBlock>
         <p className="mt-2">
-          where <Math>{`\\omega = e^{2\\\\pi i/n}`}</Math> is a primitive <Math>n</Math>th root of unity.
+          where <InlineMath>{`\\omega = e^{2\\\\pi i/n}`}</InlineMath> is a primitive <InlineMath>n</InlineMath>th root of unity.
         </p>
       </Example>
 
@@ -147,20 +147,20 @@ export default function Section36() {
           </thead>
           <tbody>
             <tr className="border-b border-dark-800">
-              <td className="py-2">Transpose <Math>A^T</Math></td>
-              <td className="py-2">Conjugate transpose <Math>A^H</Math></td>
+              <td className="py-2">Transpose <InlineMath>A^T</InlineMath></td>
+              <td className="py-2">Conjugate transpose <InlineMath>A^H</InlineMath></td>
             </tr>
             <tr className="border-b border-dark-800">
-              <td className="py-2">Symmetric <Math>A = A^T</Math></td>
-              <td className="py-2">Hermitian <Math>A = A^H</Math></td>
+              <td className="py-2">Symmetric <InlineMath>A = A^T</InlineMath></td>
+              <td className="py-2">Hermitian <InlineMath>A = A^H</InlineMath></td>
             </tr>
             <tr className="border-b border-dark-800">
-              <td className="py-2">Orthogonal <Math>Q^TQ = I</Math></td>
-              <td className="py-2">Unitary <Math>U^HU = I</Math></td>
+              <td className="py-2">Orthogonal <InlineMath>Q^TQ = I</InlineMath></td>
+              <td className="py-2">Unitary <InlineMath>U^HU = I</InlineMath></td>
             </tr>
             <tr>
-              <td className="py-2">Dot product <Math>x^Ty</Math></td>
-              <td className="py-2">Inner product <Math>x^Hy</Math></td>
+              <td className="py-2">Dot product <InlineMath>x^Ty</InlineMath></td>
+              <td className="py-2">Inner product <InlineMath>x^Hy</InlineMath></td>
             </tr>
           </tbody>
         </table>
@@ -170,7 +170,7 @@ export default function Section36() {
 
       <Definition title="Skew-Hermitian" className="my-6">
         <p>
-          A matrix is <strong>skew-Hermitian</strong> if <Math>A^H = -A</Math>.
+          A matrix is <strong>skew-Hermitian</strong> if <InlineMath>A^H = -A</InlineMath>.
         </p>
         <p className="mt-2">
           Eigenvalues are <strong>purely imaginary</strong> (on imaginary axis).
@@ -183,19 +183,19 @@ export default function Section36() {
         <ul className="space-y-3 text-dark-200">
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">1.</span>
-            <span>Conjugate transpose: <Math>{`A^H = \\bar{A}^T`}</Math>.</span>
+            <span>Conjugate transpose: <InlineMath>{`A^H = \\bar{A}^T`}</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
-            <span>Hermitian (<Math>A^H = A</Math>) has real eigenvalues and orthonormal eigenvectors.</span>
+            <span>Hermitian (<InlineMath>A^H = A</InlineMath>) has real eigenvalues and orthonormal eigenvectors.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">3.</span>
-            <span>Unitary (<Math>U^HU = I</Math>) preserves lengths and has <Math>|\lambda| = 1</Math>.</span>
+            <span>Unitary (<InlineMath>U^HU = I</InlineMath>) preserves lengths and has <InlineMath>|\lambda| = 1</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">4.</span>
-            <span>Spectral theorem: <Math>A = U\Lambda U^H</Math> for Hermitian <Math>A</Math>.</span>
+            <span>Spectral theorem: <InlineMath>A = U\Lambda U^H</InlineMath> for Hermitian <InlineMath>A</InlineMath>.</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">5.</span>

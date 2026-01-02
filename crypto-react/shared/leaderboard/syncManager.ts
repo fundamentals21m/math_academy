@@ -19,14 +19,18 @@ const STORAGE_KEY = 'magic-internet-math-progress';
 
 /**
  * Extract scores from localStorage gamification state
+ * Returns per-course scores AND the authoritative totalXP from localStorage
  */
-function extractScoresFromStorage(): ScoreUpdate[] | null {
+function extractScoresFromStorage(): { scores: ScoreUpdate[], totalXP: number } | null {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) return null;
 
     const state = JSON.parse(stored);
     if (!state?.user || !state?.sections) return null;
+
+    // Get the authoritative totalXP (includes all bonuses: quiz perfects, streaks, part completions)
+    const totalXP = state.user.totalXP || 0;
 
     const scores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, template: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, four_pillars: 0, wm: 0 };
 
@@ -70,21 +74,24 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
       }
     }
 
-    return [
-      { courseId: 'ba', xp: scores.ba },
-      { courseId: 'crypto', xp: scores.crypto },
-      { courseId: 'aa', xp: scores.aa },
-      { courseId: 'linalg', xp: scores.linalg },
-      { courseId: 'advlinalg', xp: scores.advlinalg },
-      { courseId: 'template', xp: scores.template },
-      { courseId: 'islr', xp: scores.islr },
-      { courseId: 'ra', xp: scores.ra },
-      { courseId: 'calc1', xp: scores.calc1 },
-      { courseId: 'calc_lib_art', xp: scores.calc_lib_art },
-      { courseId: 'calc_easy', xp: scores.calc_easy },
-      { courseId: 'four_pillars', xp: scores.four_pillars },
-      { courseId: 'wm', xp: scores.wm },
-    ];
+    return {
+      scores: [
+        { courseId: 'ba', xp: scores.ba },
+        { courseId: 'crypto', xp: scores.crypto },
+        { courseId: 'aa', xp: scores.aa },
+        { courseId: 'linalg', xp: scores.linalg },
+        { courseId: 'advlinalg', xp: scores.advlinalg },
+        { courseId: 'template', xp: scores.template },
+        { courseId: 'islr', xp: scores.islr },
+        { courseId: 'ra', xp: scores.ra },
+        { courseId: 'calc1', xp: scores.calc1 },
+        { courseId: 'calc_lib_art', xp: scores.calc_lib_art },
+        { courseId: 'calc_easy', xp: scores.calc_easy },
+        { courseId: 'four_pillars', xp: scores.four_pillars },
+        { courseId: 'wm', xp: scores.wm },
+      ],
+      totalXP,  // Include the authoritative total
+    };
   } catch (error) {
     logger.error('Error extracting scores from storage:', error);
     return null;
@@ -193,8 +200,8 @@ export class SyncManager {
     }
 
     try {
-      const scores = extractScoresFromStorage();
-      if (!scores) {
+      const extracted = extractScoresFromStorage();
+      if (!extracted) {
         return { success: false, error: 'No scores to sync' };
       }
 
@@ -204,7 +211,10 @@ export class SyncManager {
         'syncScores'
       );
 
-      const payload: SyncPayload = { scores };
+      const payload: SyncPayload = {
+        scores: extracted.scores,
+        totalXP: extracted.totalXP,  // Pass the authoritative total
+      };
       if (this.displayName !== undefined) {
         payload.displayName = this.displayName;
       }
@@ -253,10 +263,10 @@ export class SyncManager {
    * Get current local scores
    */
   getLocalScores(): Record<CourseId, number> | null {
-    const scores = extractScoresFromStorage();
-    if (!scores) return null;
+    const extracted = extractScoresFromStorage();
+    if (!extracted) return null;
 
-    return scores.reduce(
+    return extracted.scores.reduce(
       (acc, s) => {
         acc[s.courseId] = s.xp;
         return acc;

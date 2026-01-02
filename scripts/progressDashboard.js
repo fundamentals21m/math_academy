@@ -48,8 +48,8 @@ function renderCourseProgress(course, completedCount) {
   return `
     <div class="card progress-course-card">
       <h4 class="progress-course-title">${course.title}</h4>
-      <div class="progress-bar-container">
-        <div class="progress-bar" style="background: ${gradient}; width: ${percentage}%;"></div>
+      <div class="hub-progress-bar-container">
+        <div class="hub-progress-bar-fill" style="background: ${gradient}; width: ${percentage}%;"></div>
       </div>
       <div class="progress-count">${completedCount} / ${course.totalSections} ${unit}</div>
     </div>

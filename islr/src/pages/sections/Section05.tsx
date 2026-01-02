@@ -2,7 +2,7 @@ import { LessonLayout } from '@/components/layout/LessonLayout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section05Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section05() {
   return (
@@ -26,10 +26,10 @@ export default function Section05() {
             inflexible method. Justify your answer.
           </p>
           <ol className="list-alpha list-inside space-y-3 text-dark-400">
-            <li>The sample size <Math>n</Math> is extremely large, and the number of predictors <Math>p</Math> is small.</li>
-            <li>The number of predictors <Math>p</Math> is extremely large, and the number of observations <Math>n</Math> is small.</li>
+            <li>The sample size <InlineMath>n</InlineMath> is extremely large, and the number of predictors <InlineMath>p</InlineMath> is small.</li>
+            <li>The number of predictors <InlineMath>p</InlineMath> is extremely large, and the number of observations <InlineMath>n</InlineMath> is small.</li>
             <li>The relationship between the predictors and response is highly non-linear.</li>
-            <li>The variance of the error terms, i.e. <Math>{"\\sigma^2 = \\text{Var}(\\epsilon)"}</Math>, is extremely high.</li>
+            <li>The variance of the error terms, i.e. <InlineMath>{"\\sigma^2 = \\text{Var}(\\epsilon)"}</InlineMath>, is extremely high.</li>
           </ol>
           
           <div className="mt-4 p-4 bg-dark-900/50 rounded-lg">
@@ -47,7 +47,7 @@ export default function Section05() {
           <h3 className="text-lg font-semibold text-primary-400 mb-3">Exercise 2: Regression vs. Classification</h3>
           <p className="text-dark-300 mb-4">
             Explain whether each scenario is a classification or regression problem, and indicate 
-            whether we are most interested in inference or prediction. Finally, provide <Math>n</Math> and <Math>p</Math>.
+            whether we are most interested in inference or prediction. Finally, provide <InlineMath>n</InlineMath> and <InlineMath>p</InlineMath>.
           </p>
           <ol className="list-alpha list-inside space-y-3 text-dark-400">
             <li>

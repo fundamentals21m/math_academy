@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Definition, Theorem } from '../../components/common/ContentBlocks';
 import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { SectionQuiz } from '../../components/quiz';
@@ -76,7 +76,7 @@ export default function Section02() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">The Mysterious Infinitesimal</h2>
 
       <p className="text-dark-200 mb-6">
-        Imagine a quantity <MathInline>{'dx'}</MathInline> that is:
+        Imagine a quantity <InlineMath>{'dx'}</InlineMath> that is:
       </p>
 
       <div className="bg-dark-800 rounded-xl p-6 mb-6">
@@ -87,15 +87,15 @@ export default function Section02() {
           </li>
           <li className="flex items-center gap-2">
             <span className="text-emerald-400">✓</span>
-            Smaller than <MathInline>{'1/10'}</MathInline>
+            Smaller than <InlineMath>{'1/10'}</InlineMath>
           </li>
           <li className="flex items-center gap-2">
             <span className="text-emerald-400">✓</span>
-            Smaller than <MathInline>{'1/1000'}</MathInline>
+            Smaller than <InlineMath>{'1/1000'}</InlineMath>
           </li>
           <li className="flex items-center gap-2">
             <span className="text-emerald-400">✓</span>
-            Smaller than <MathInline>{'1/1000000'}</MathInline>
+            Smaller than <InlineMath>{'1/1000000'}</InlineMath>
           </li>
           <li className="flex items-center gap-2">
             <span className="text-emerald-400">✓</span>
@@ -114,14 +114,14 @@ export default function Section02() {
       <MathBlock>{`= \\frac{2x\\cdot dx + (dx)^2}{dx} = 2x + dx`}</MathBlock>
 
       <p className="text-dark-200 my-6">
-        Now, if <MathInline>{'dx'}</MathInline> is infinitesimally small, we simply drop it,
-        getting <MathInline>{'2x'}</MathInline>. This works! But is it rigorous?
+        Now, if <InlineMath>{'dx'}</InlineMath> is infinitesimally small, we simply drop it,
+        getting <InlineMath>{'2x'}</InlineMath>. This works! But is it rigorous?
       </p>
 
       <Callout type="warning">
         <p>
           <strong>The Bishop's Objection:</strong> In 1734, the philosopher George Berkeley
-          mocked infinitesimals as "the ghosts of departed quantities." If <MathInline>{'dx'}</MathInline> is
+          mocked infinitesimals as "the ghosts of departed quantities." If <InlineMath>{'dx'}</InlineMath> is
           not zero, how can we divide by it? If it is zero, how can we divide by it at all?
         </p>
       </Callout>
@@ -135,23 +135,23 @@ export default function Section02() {
       </p>
 
       <Definition title="Limit (Informal)">
-        We say that <MathInline>{'f(x)'}</MathInline> approaches the limit <MathInline>{'L'}</MathInline> as{' '}
-        <MathInline>{'x'}</MathInline> approaches <MathInline>{'a'}</MathInline> if we can make{' '}
-        <MathInline>{'f(x)'}</MathInline> as close to <MathInline>{'L'}</MathInline> as we like by
-        taking <MathInline>{'x'}</MathInline> sufficiently close to <MathInline>{'a'}</MathInline>.
+        We say that <InlineMath>{'f(x)'}</InlineMath> approaches the limit <InlineMath>{'L'}</InlineMath> as{' '}
+        <InlineMath>{'x'}</InlineMath> approaches <InlineMath>{'a'}</InlineMath> if we can make{' '}
+        <InlineMath>{'f(x)'}</InlineMath> as close to <InlineMath>{'L'}</InlineMath> as we like by
+        taking <InlineMath>{'x'}</InlineMath> sufficiently close to <InlineMath>{'a'}</InlineMath>.
       </Definition>
 
       <p className="text-dark-200 my-6">
-        Instead of saying <MathInline>{'dx'}</MathInline> "is" infinitesimal, we say: consider what
-        happens as <MathInline>{'\\Delta x'}</MathInline> gets smaller and smaller, <em>approaching</em> zero
+        Instead of saying <InlineMath>{'dx'}</InlineMath> "is" infinitesimal, we say: consider what
+        happens as <InlineMath>{'\\Delta x'}</InlineMath> gets smaller and smaller, <em>approaching</em> zero
         without ever reaching it.
       </p>
 
       <MathBlock>{`\\frac{d}{dx}(x^2) = \\lim_{\\Delta x \\to 0} \\frac{(x+\\Delta x)^2 - x^2}{\\Delta x} = \\lim_{\\Delta x \\to 0} (2x + \\Delta x) = 2x`}</MathBlock>
 
       <p className="text-dark-200 my-6">
-        The limit exists and equals <MathInline>{'2x'}</MathInline>, even though we never actually
-        let <MathInline>{'\\Delta x'}</MathInline> equal zero.
+        The limit exists and equals <InlineMath>{'2x'}</InlineMath>, even though we never actually
+        let <InlineMath>{'\\Delta x'}</InlineMath> equal zero.
       </p>
 
       {/* Interactive Visualization */}
@@ -174,7 +174,7 @@ export default function Section02() {
           </p>
           <p className="text-sm text-dark-400">
             Any set that can be put in one-to-one correspondence with ℕ has the same "size"
-            of infinity, denoted <MathInline>{'\\aleph_0'}</MathInline> (aleph-null).
+            of infinity, denoted <InlineMath>{'\\aleph_0'}</InlineMath> (aleph-null).
           </p>
         </div>
 
@@ -185,8 +185,8 @@ export default function Section02() {
             matter how you try, you cannot list all real numbers.
           </p>
           <p className="text-sm text-dark-400">
-            The "continuum" <MathInline>{'\\mathfrak{c}'}</MathInline> is a bigger infinity than{' '}
-            <MathInline>{'\\aleph_0'}</MathInline>. And there are infinitely many sizes of infinity!
+            The "continuum" <InlineMath>{'\\mathfrak{c}'}</InlineMath> is a bigger infinity than{' '}
+            <InlineMath>{'\\aleph_0'}</InlineMath>. And there are infinitely many sizes of infinity!
           </p>
         </div>
       </div>
@@ -251,8 +251,8 @@ export default function Section02() {
           <div>
             <p className="font-semibold">Infinity is Not a Number</p>
             <p className="text-sm text-dark-400">
-              We can't do arithmetic with ∞ the way we do with numbers. <MathInline>{'\\infty - \\infty'}</MathInline> and{' '}
-              <MathInline>{'\\infty / \\infty'}</MathInline> are undefined—they depend on context.
+              We can't do arithmetic with ∞ the way we do with numbers. <InlineMath>{'\\infty - \\infty'}</InlineMath> and{' '}
+              <InlineMath>{'\\infty / \\infty'}</InlineMath> are undefined—they depend on context.
             </p>
           </div>
         </div>

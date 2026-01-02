@@ -3,7 +3,7 @@ import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section06Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, RCodeBlock } from '@/components/common/ContentBlocks';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { LinearRegressionFitter } from '@/components/visualizers/LinearRegressionFitter';
 
 export default function Section06() {
@@ -13,42 +13,42 @@ export default function Section06() {
 
       <p>
         Simple linear regression is a very straightforward approach for predicting a 
-        quantitative response <Math>Y</Math> on the basis of a single predictor 
-        variable <Math>X</Math>. It assumes that there is approximately a linear 
-        relationship between <Math>X</Math> and <Math>Y</Math>.
+        quantitative response <InlineMath>Y</InlineMath> on the basis of a single predictor 
+        variable <InlineMath>X</InlineMath>. It assumes that there is approximately a linear 
+        relationship between <InlineMath>X</InlineMath> and <InlineMath>Y</InlineMath>.
       </p>
 
       <Definition title="Simple Linear Regression Model">
         <p>We can write this relationship as:</p>
         <MathBlock>{`Y \\approx \\beta_0 + \\beta_1 X`}</MathBlock>
         <p className="mt-2">
-          Here <Math>{`\\beta_0`}</Math> and <Math>{`\\beta_1`}</Math> are two unknown constants that 
+          Here <InlineMath>{`\\beta_0`}</InlineMath> and <InlineMath>{`\\beta_1`}</InlineMath> are two unknown constants that 
           represent the <em>intercept</em> and <em>slope</em> terms in the linear model.
         </p>
         <p className="mt-2">
-          Together, <Math>{`\\beta_0`}</Math> and <Math>{`\\beta_1`}</Math> are known as the model 
+          Together, <InlineMath>{`\\beta_0`}</InlineMath> and <InlineMath>{`\\beta_1`}</InlineMath> are known as the model 
           <strong> coefficients</strong> or <strong>parameters</strong>.
         </p>
       </Definition>
 
       <p>
-        Once we have used our training data to produce estimates <Math>{`\\hat{\\beta}_0`}</Math> and <Math>{`\\hat{\\beta}_1`}</Math> for 
+        Once we have used our training data to produce estimates <InlineMath>{`\\hat{\\beta}_0`}</InlineMath> and <InlineMath>{`\\hat{\\beta}_1`}</InlineMath> for 
         the model coefficients, we can predict future values using:
       </p>
 
       <MathBlock>{`\\hat{y} = \\hat{\\beta}_0 + \\hat{\\beta}_1 x`}</MathBlock>
 
       <p>
-        where <Math>{`\\hat{y}`}</Math> indicates a prediction of <Math>Y</Math> on the basis of <Math>{`X = x`}</Math>. 
+        where <InlineMath>{`\\hat{y}`}</InlineMath> indicates a prediction of <InlineMath>Y</InlineMath> on the basis of <InlineMath>{`X = x`}</InlineMath>. 
         The hat symbol denotes the estimated value.
       </p>
 
       <h2>Estimating the Coefficients</h2>
 
       <p>
-        Let <Math>{`(x_1, y_1), (x_2, y_2), \\ldots, (x_n, y_n)`}</Math> represent <Math>n</Math> observation 
-        pairs. We want to find coefficient estimates <Math>{`\\hat{\\beta}_0`}</Math> and <Math>{`\\hat{\\beta}_1`}</Math> such 
-        that the resulting line is as close as possible to the <Math>n</Math> data points.
+        Let <InlineMath>{`(x_1, y_1), (x_2, y_2), \\ldots, (x_n, y_n)`}</InlineMath> represent <InlineMath>n</InlineMath> observation 
+        pairs. We want to find coefficient estimates <InlineMath>{`\\hat{\\beta}_0`}</InlineMath> and <InlineMath>{`\\hat{\\beta}_1`}</InlineMath> such 
+        that the resulting line is as close as possible to the <InlineMath>n</InlineMath> data points.
       </p>
 
       <Definition title="Residual Sum of Squares (RSS)">
@@ -58,7 +58,7 @@ export default function Section06() {
         <MathBlock>{`\\text{RSS} = \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2 = \\sum_{i=1}^{n} (y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i)^2`}</MathBlock>
         <p className="mt-2">
           The RSS measures the total squared deviation between the observed 
-          values <Math>{`y_i`}</Math> and the values predicted by the linear model.
+          values <InlineMath>{`y_i`}</InlineMath> and the values predicted by the linear model.
         </p>
       </Definition>
 
@@ -80,7 +80,7 @@ export default function Section06() {
         <MathBlock>{`\\hat{\\beta}_1 = \\frac{\\sum_{i=1}^{n}(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum_{i=1}^{n}(x_i - \\bar{x})^2}`}</MathBlock>
         <MathBlock>{`\\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x}`}</MathBlock>
         <p className="mt-2">
-          where <Math>{`\\bar{y} = \\frac{1}{n}\\sum_{i=1}^n y_i`}</Math> and <Math>{`\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i`}</Math> are 
+          where <InlineMath>{`\\bar{y} = \\frac{1}{n}\\sum_{i=1}^n y_i`}</InlineMath> and <InlineMath>{`\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i`}</InlineMath> are 
           the sample means.
         </p>
       </Theorem>
@@ -100,27 +100,27 @@ export default function Section06() {
       <h2>Assessing the Accuracy of the Coefficient Estimates</h2>
 
       <p>
-        The true relationship between <Math>X</Math> and <Math>Y</Math> takes the form <Math>{`Y = f(X) + \\epsilon`}</Math> for 
-        some unknown function <Math>f</Math>. If <Math>f</Math> is approximated by a linear function, 
+        The true relationship between <InlineMath>X</InlineMath> and <InlineMath>Y</InlineMath> takes the form <InlineMath>{`Y = f(X) + \\epsilon`}</InlineMath> for 
+        some unknown function <InlineMath>f</InlineMath>. If <InlineMath>f</InlineMath> is approximated by a linear function, 
         we can write:
       </p>
 
       <MathBlock>{`Y = \\beta_0 + \\beta_1 X + \\epsilon`}</MathBlock>
 
       <p>
-        The error term <Math>{`\\epsilon`}</Math> is a catch-all for what we miss with this simple model: 
+        The error term <InlineMath>{`\\epsilon`}</InlineMath> is a catch-all for what we miss with this simple model: 
         the true relationship is probably not linear, there may be other variables that 
-        affect <Math>Y</Math>, and there may be measurement error.
+        affect <InlineMath>Y</InlineMath>, and there may be measurement error.
       </p>
 
       <Definition title="Population Regression Line">
         <p>
-          The model <Math>{`Y = \\beta_0 + \\beta_1 X + \\epsilon`}</Math> defines the <em>population 
+          The model <InlineMath>{`Y = \\beta_0 + \\beta_1 X + \\epsilon`}</InlineMath> defines the <em>population 
           regression line</em>, which is the best linear approximation to the true relationship 
-          between <Math>X</Math> and <Math>Y</Math>.
+          between <InlineMath>X</InlineMath> and <InlineMath>Y</InlineMath>.
         </p>
         <p className="mt-2">
-          The least squares regression line <Math>{`\\hat{y} = \\hat{\\beta}_0 + \\hat{\\beta}_1 x`}</Math> is 
+          The least squares regression line <InlineMath>{`\\hat{y} = \\hat{\\beta}_0 + \\hat{\\beta}_1 x`}</InlineMath> is 
           an estimate of this population line, based on our sample of observations.
         </p>
       </Definition>
@@ -128,7 +128,7 @@ export default function Section06() {
       <h3>Standard Errors</h3>
 
       <p>
-        If we estimate <Math>{`\\beta_0`}</Math> and <Math>{`\\beta_1`}</Math> using a large number of 
+        If we estimate <InlineMath>{`\\beta_0`}</InlineMath> and <InlineMath>{`\\beta_1`}</InlineMath> using a large number of 
         different data sets drawn from the same population, we would get different estimates 
         each time. The <em>standard error</em> tells us the average amount by which these 
         estimates differ from the actual value.
@@ -138,7 +138,7 @@ export default function Section06() {
         <MathBlock>{`\\text{SE}(\\hat{\\beta}_0)^2 = \\sigma^2 \\left[ \\frac{1}{n} + \\frac{\\bar{x}^2}{\\sum_{i=1}^{n}(x_i - \\bar{x})^2} \\right]`}</MathBlock>
         <MathBlock>{`\\text{SE}(\\hat{\\beta}_1)^2 = \\frac{\\sigma^2}{\\sum_{i=1}^{n}(x_i - \\bar{x})^2}`}</MathBlock>
         <p className="mt-2">
-          where <Math>{`\\sigma^2 = \\text{Var}(\\epsilon)`}</Math>. In practice, <Math>{`\\sigma`}</Math> is 
+          where <InlineMath>{`\\sigma^2 = \\text{Var}(\\epsilon)`}</InlineMath>. In practice, <InlineMath>{`\\sigma`}</InlineMath> is 
           estimated using the <em>residual standard error</em>:
         </p>
         <MathBlock>{`\\text{RSE} = \\sqrt{\\frac{\\text{RSS}}{n-2}}`}</MathBlock>
@@ -153,10 +153,10 @@ export default function Section06() {
       </p>
 
       <Definition title="95% Confidence Interval for Coefficients">
-        <p>For <Math>{`\\beta_1`}</Math>, the approximate 95% confidence interval is:</p>
+        <p>For <InlineMath>{`\\beta_1`}</InlineMath>, the approximate 95% confidence interval is:</p>
         <MathBlock>{`\\hat{\\beta}_1 \\pm 2 \\cdot \\text{SE}(\\hat{\\beta}_1)`}</MathBlock>
         <p className="mt-2">
-          Similarly for <Math>{`\\beta_0`}</Math>:
+          Similarly for <InlineMath>{`\\beta_0`}</InlineMath>:
         </p>
         <MathBlock>{`\\hat{\\beta}_0 \\pm 2 \\cdot \\text{SE}(\\hat{\\beta}_0)`}</MathBlock>
       </Definition>
@@ -180,7 +180,7 @@ export default function Section06() {
           </div>
         </div>
         <p className="text-dark-400 text-sm mt-4">
-          <Math>{`H_0`}</Math> corresponds to no relationship between <Math>X</Math> and <Math>Y</Math>.
+          <InlineMath>{`H_0`}</InlineMath> corresponds to no relationship between <InlineMath>X</InlineMath> and <InlineMath>Y</InlineMath>.
         </p>
       </div>
 
@@ -188,24 +188,24 @@ export default function Section06() {
         <p>To test the null hypothesis, we compute a <em>t-statistic</em>:</p>
         <MathBlock>{`t = \\frac{\\hat{\\beta}_1 - 0}{\\text{SE}(\\hat{\\beta}_1)} = \\frac{\\hat{\\beta}_1}{\\text{SE}(\\hat{\\beta}_1)}`}</MathBlock>
         <p className="mt-2">
-          This measures the number of standard deviations that <Math>{`\\hat{\\beta}_1`}</Math> is 
+          This measures the number of standard deviations that <InlineMath>{`\\hat{\\beta}_1`}</InlineMath> is 
           away from 0. If there truly is no relationship, we expect this to have 
-          a <Math>t</Math>-distribution with <Math>{`n-2`}</Math> degrees of freedom.
+          a <InlineMath>t</InlineMath>-distribution with <InlineMath>{`n-2`}</InlineMath> degrees of freedom.
         </p>
       </Definition>
 
       <Callout type="info">
         <strong>p-value:</strong> The p-value is the probability of observing a value 
-        of <Math>{`|t|`}</Math> equal to or larger than what we observed, assuming <Math>{`H_0`}</Math> is 
+        of <InlineMath>{`|t|`}</InlineMath> equal to or larger than what we observed, assuming <InlineMath>{`H_0`}</InlineMath> is 
         true. A small p-value indicates that it is unlikely to observe such a substantial 
-        association between <Math>X</Math> and <Math>Y</Math> due to chance alone.
+        association between <InlineMath>X</InlineMath> and <InlineMath>Y</InlineMath> due to chance alone.
       </Callout>
 
       <h2>Assessing the Accuracy of the Model</h2>
 
       <p>
         Once we have rejected the null hypothesis and concluded that there is a relationship 
-        between <Math>X</Math> and <Math>Y</Math>, we want to quantify how well the model fits 
+        between <InlineMath>X</InlineMath> and <InlineMath>Y</InlineMath>, we want to quantify how well the model fits 
         the data. Two related quantities are commonly used:
       </p>
 
@@ -214,14 +214,14 @@ export default function Section06() {
       <Definition title="Residual Standard Error">
         <MathBlock>{`\\text{RSE} = \\sqrt{\\frac{1}{n-2}\\text{RSS}} = \\sqrt{\\frac{1}{n-2}\\sum_{i=1}^{n}(y_i - \\hat{y}_i)^2}`}</MathBlock>
         <p className="mt-2">
-          The RSE is an estimate of the standard deviation of <Math>{`\\epsilon`}</Math>. Roughly 
+          The RSE is an estimate of the standard deviation of <InlineMath>{`\\epsilon`}</InlineMath>. Roughly 
           speaking, it is the average amount that the response will deviate from the true 
           regression line.
         </p>
       </Definition>
 
       <p>
-        The RSE is measured in the units of <Math>Y</Math>. In the advertising example, 
+        The RSE is measured in the units of <InlineMath>Y</InlineMath>. In the advertising example, 
         RSE = 3.26, meaning actual sales deviate from the true regression line by 
         approximately 3,260 units on average.
       </p>
@@ -231,12 +231,12 @@ export default function Section06() {
       <Definition title="R-squared">
         <MathBlock>{`R^2 = \\frac{\\text{TSS} - \\text{RSS}}{\\text{TSS}} = 1 - \\frac{\\text{RSS}}{\\text{TSS}}`}</MathBlock>
         <p className="mt-2">
-          where <strong>TSS</strong> (Total Sum of Squares) = <Math>{`\\sum(y_i - \\bar{y})^2`}</Math> measures 
-          the total variance in the response <Math>Y</Math>, and RSS measures the variance 
+          where <strong>TSS</strong> (Total Sum of Squares) = <InlineMath>{`\\sum(y_i - \\bar{y})^2`}</InlineMath> measures 
+          the total variance in the response <InlineMath>Y</InlineMath>, and RSS measures the variance 
           that is left unexplained after performing the regression.
         </p>
         <p className="mt-2">
-          Hence, <Math>R^2</Math> measures the <strong>proportion of variance explained</strong> by 
+          Hence, <InlineMath>R^2</InlineMath> measures the <strong>proportion of variance explained</strong> by 
           the model.
         </p>
       </Definition>
@@ -246,26 +246,26 @@ export default function Section06() {
         <ul className="space-y-2 text-dark-300">
           <li className="flex items-start gap-2">
             <span className="text-emerald-400 mt-1">→</span>
-            <span><Math>{`R^2 = 0`}</Math>: The model explains none of the variability in <Math>Y</Math></span>
+            <span><InlineMath>{`R^2 = 0`}</InlineMath>: The model explains none of the variability in <InlineMath>Y</InlineMath></span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-emerald-400 mt-1">→</span>
-            <span><Math>{`R^2 = 1`}</Math>: The model explains all of the variability in <Math>Y</Math></span>
+            <span><InlineMath>{`R^2 = 1`}</InlineMath>: The model explains all of the variability in <InlineMath>Y</InlineMath></span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-amber-400 mt-1">→</span>
-            <span><Math>{`R^2`}</Math> close to 1: Regression explains most of the variance (good fit)</span>
+            <span><InlineMath>{`R^2`}</InlineMath> close to 1: Regression explains most of the variance (good fit)</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-400 mt-1">→</span>
-            <span><Math>{`R^2`}</Math> close to 0: Regression explains little of the variance (poor fit)</span>
+            <span><InlineMath>{`R^2`}</InlineMath> close to 0: Regression explains little of the variance (poor fit)</span>
           </li>
         </ul>
       </div>
 
       <Callout type="warning">
         <strong>R² and Correlation:</strong> In simple linear regression with one predictor, 
-        <Math>{`R^2 = r^2`}</Math> where <Math>r</Math> is the correlation between <Math>X</Math> and <Math>Y</Math>. 
+        <InlineMath>{`R^2 = r^2`}</InlineMath> where <InlineMath>r</InlineMath> is the correlation between <InlineMath>X</InlineMath> and <InlineMath>Y</InlineMath>. 
         This relationship does not extend to multiple regression.
       </Callout>
 
@@ -313,16 +313,16 @@ predict(lm.fit, data.frame(TV = c(50, 100, 150)))`}
       </p>
 
       <ul className="list-disc list-inside text-dark-300 space-y-2 my-4">
-        <li>The model: <Math>{`Y = \\beta_0 + \\beta_1 X + \\epsilon`}</Math></li>
+        <li>The model: <InlineMath>{`Y = \\beta_0 + \\beta_1 X + \\epsilon`}</InlineMath></li>
         <li>Estimating coefficients by minimizing RSS (least squares)</li>
         <li>Standard errors, confidence intervals, and hypothesis tests</li>
-        <li>Assessing fit with RSE and <Math>{`R^2`}</Math></li>
+        <li>Assessing fit with RSE and <InlineMath>{`R^2`}</InlineMath></li>
       </ul>
 
       <Callout type="success">
         <strong>Next Steps:</strong> In the next section, we'll extend these ideas to 
-        <em>multiple linear regression</em>, where we predict <Math>Y</Math> using multiple 
-        predictors <Math>{`X_1, X_2, \\ldots, X_p`}</Math>.
+        <em>multiple linear regression</em>, where we predict <InlineMath>Y</InlineMath> using multiple 
+        predictors <InlineMath>{`X_1, X_2, \\ldots, X_p`}</InlineMath>.
       </Callout>
 
       <SectionQuiz sectionId={6} questions={section06Quiz} title="Simple Linear Regression Quiz" />

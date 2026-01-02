@@ -1,7 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { Math, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section07Quiz } from '@/data/quizzes';
 
@@ -22,23 +22,23 @@ export default function Section07() {
         title="Ratio Test"
         proof={
           <>
-            <p className="mb-3">If <Math>{`L < 1`}</Math>, choose <Math>{`r`}</Math> with <Math>{`L < r < 1`}</Math>. For large <Math>{`n`}</Math>: <Math>{`|a_{n+1}/a_n| < r`}</Math>.</p>
-            <p className="mb-3">Then <Math>{`|a_n| < |a_N| \\cdot r^{n-N}`}</Math> for <Math>{`n \\geq N`}</Math>, so <Math>{`\\sum |a_n|`}</Math> converges by comparison with geometric series <Math>{`\\sum r^n`}</Math>.</p>
-            <p className="mb-3">If <Math>{`L > 1`}</Math>, then <Math>{`|a_{n+1}| > |a_n|`}</Math> for large <Math>{`n`}</Math>, so <Math>{`a_n \\not\\to 0`}</Math>, and the series diverges by the divergence test.</p>
-            <p className="mb-3">When <Math>{`L = 1`}</Math>: both <Math>{`\\sum 1/n`}</Math> (diverges) and <Math>{`\\sum 1/n^2`}</Math> (converges) have ratio limit 1.</p>
+            <p className="mb-3">If <InlineMath>{`L < 1`}</InlineMath>, choose <InlineMath>{`r`}</InlineMath> with <InlineMath>{`L < r < 1`}</InlineMath>. For large <InlineMath>{`n`}</InlineMath>: <InlineMath>{`|a_{n+1}/a_n| < r`}</InlineMath>.</p>
+            <p className="mb-3">Then <InlineMath>{`|a_n| < |a_N| \\cdot r^{n-N}`}</InlineMath> for <InlineMath>{`n \\geq N`}</InlineMath>, so <InlineMath>{`\\sum |a_n|`}</InlineMath> converges by comparison with geometric series <InlineMath>{`\\sum r^n`}</InlineMath>.</p>
+            <p className="mb-3">If <InlineMath>{`L > 1`}</InlineMath>, then <InlineMath>{`|a_{n+1}| > |a_n|`}</InlineMath> for large <InlineMath>{`n`}</InlineMath>, so <InlineMath>{`a_n \\not\\to 0`}</InlineMath>, and the series diverges by the divergence test.</p>
+            <p className="mb-3">When <InlineMath>{`L = 1`}</InlineMath>: both <InlineMath>{`\\sum 1/n`}</InlineMath> (diverges) and <InlineMath>{`\\sum 1/n^2`}</InlineMath> (converges) have ratio limit 1.</p>
           </>
         }
       >
         <p>
-          For a series <Math>\sum a_n</Math> with <Math>a_n \neq 0</Math>, let:
+          For a series <InlineMath>\sum a_n</InlineMath> with <InlineMath>a_n \neq 0</InlineMath>, let:
         </p>
         <MathBlock>
           {`L = \\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|`}
         </MathBlock>
         <ul className="list-disc list-inside space-y-2 mt-4">
-          <li>If <Math>L &lt; 1</Math>, the series converges absolutely</li>
-          <li>If <Math>L &gt; 1</Math>, the series diverges</li>
-          <li>If <Math>L = 1</Math>, the test is inconclusive</li>
+          <li>If <InlineMath>L &lt; 1</InlineMath>, the series converges absolutely</li>
+          <li>If <InlineMath>L &gt; 1</InlineMath>, the series diverges</li>
+          <li>If <InlineMath>L = 1</InlineMath>, the test is inconclusive</li>
         </ul>
       </Theorem>
 
@@ -46,23 +46,23 @@ export default function Section07() {
         title="Root Test"
         proof={
           <>
-            <p className="mb-3">If <Math>{`L < 1`}</Math>, choose <Math>{`r`}</Math> with <Math>{`L < r < 1`}</Math>. Then <Math>{`|a_n|^{1/n} < r`}</Math> for all large <Math>{`n`}</Math>, so <Math>{`|a_n| < r^n`}</Math>.</p>
-            <p className="mb-3">By comparison with <Math>{`\\sum r^n`}</Math> (geometric, converges since <Math>{`r < 1`}</Math>), <Math>{`\\sum |a_n|`}</Math> converges.</p>
-            <p className="mb-3">If <Math>{`L > 1`}</Math>, then <Math>{`|a_n|^{1/n} > 1`}</Math> infinitely often, so <Math>{`|a_n| > 1`}</Math> infinitely often. Thus <Math>{`a_n \\not\\to 0`}</Math> and series diverges.</p>
+            <p className="mb-3">If <InlineMath>{`L < 1`}</InlineMath>, choose <InlineMath>{`r`}</InlineMath> with <InlineMath>{`L < r < 1`}</InlineMath>. Then <InlineMath>{`|a_n|^{1/n} < r`}</InlineMath> for all large <InlineMath>{`n`}</InlineMath>, so <InlineMath>{`|a_n| < r^n`}</InlineMath>.</p>
+            <p className="mb-3">By comparison with <InlineMath>{`\\sum r^n`}</InlineMath> (geometric, converges since <InlineMath>{`r < 1`}</InlineMath>), <InlineMath>{`\\sum |a_n|`}</InlineMath> converges.</p>
+            <p className="mb-3">If <InlineMath>{`L > 1`}</InlineMath>, then <InlineMath>{`|a_n|^{1/n} > 1`}</InlineMath> infinitely often, so <InlineMath>{`|a_n| > 1`}</InlineMath> infinitely often. Thus <InlineMath>{`a_n \\not\\to 0`}</InlineMath> and series diverges.</p>
             <p className="mb-3">The root test uses limsup, making it slightly more powerful than the ratio test in some cases.</p>
           </>
         }
       >
         <p>
-          For a series <Math>\sum a_n</Math>, let:
+          For a series <InlineMath>\sum a_n</InlineMath>, let:
         </p>
         <MathBlock>
           {`L = \\limsup_{n \\to \\infty} |a_n|^{1/n}`}
         </MathBlock>
         <ul className="list-disc list-inside space-y-2 mt-4">
-          <li>If <Math>L &lt; 1</Math>, the series converges absolutely</li>
-          <li>If <Math>L &gt; 1</Math>, the series diverges</li>
-          <li>If <Math>L = 1</Math>, the test is inconclusive</li>
+          <li>If <InlineMath>L &lt; 1</InlineMath>, the series converges absolutely</li>
+          <li>If <InlineMath>L &gt; 1</InlineMath>, the series diverges</li>
+          <li>If <InlineMath>L = 1</InlineMath>, the test is inconclusive</li>
         </ul>
       </Theorem>
 
@@ -78,16 +78,16 @@ export default function Section07() {
         title="Alternating Series Test (Leibniz)"
         proof={
           <>
-            <p className="mb-3">Consider partial sums <Math>{`s_n = a_1 - a_2 + a_3 - \\cdots \\pm a_n`}</Math>.</p>
-            <p className="mb-3">The even partial sums <Math>{`s_{2n} = (a_1 - a_2) + (a_3 - a_4) + \\cdots`}</Math> are increasing (each parenthesis <Math>{`\\geq 0`}</Math>).</p>
-            <p className="mb-3">Also <Math>{`s_{2n} = a_1 - (a_2 - a_3) - (a_4 - a_5) - \\cdots \\leq a_1`}</Math>, so <Math>{`(s_{2n})`}</Math> is bounded above.</p>
-            <p className="mb-3">By Monotone Convergence, <Math>{`s_{2n} \\to S`}</Math> for some <Math>{`S`}</Math>. Since <Math>{`s_{2n+1} = s_{2n} + a_{2n+1}`}</Math> and <Math>{`a_{2n+1} \\to 0`}</Math>, <Math>{`s_{2n+1} \\to S`}</Math> also.</p>
-            <p className="mb-3">Therefore <Math>{`s_n \\to S`}</Math>.</p>
+            <p className="mb-3">Consider partial sums <InlineMath>{`s_n = a_1 - a_2 + a_3 - \\cdots \\pm a_n`}</InlineMath>.</p>
+            <p className="mb-3">The even partial sums <InlineMath>{`s_{2n} = (a_1 - a_2) + (a_3 - a_4) + \\cdots`}</InlineMath> are increasing (each parenthesis <InlineMath>{`\\geq 0`}</InlineMath>).</p>
+            <p className="mb-3">Also <InlineMath>{`s_{2n} = a_1 - (a_2 - a_3) - (a_4 - a_5) - \\cdots \\leq a_1`}</InlineMath>, so <InlineMath>{`(s_{2n})`}</InlineMath> is bounded above.</p>
+            <p className="mb-3">By Monotone Convergence, <InlineMath>{`s_{2n} \\to S`}</InlineMath> for some <InlineMath>{`S`}</InlineMath>. Since <InlineMath>{`s_{2n+1} = s_{2n} + a_{2n+1}`}</InlineMath> and <InlineMath>{`a_{2n+1} \\to 0`}</InlineMath>, <InlineMath>{`s_{2n+1} \\to S`}</InlineMath> also.</p>
+            <p className="mb-3">Therefore <InlineMath>{`s_n \\to S`}</InlineMath>.</p>
           </>
         }
       >
         <p>
-          If <Math>(a_n)</Math> is a decreasing sequence with <Math>{"a_n \\to 0"}</Math>, then the
+          If <InlineMath>(a_n)</InlineMath> is a decreasing sequence with <InlineMath>{"a_n \\to 0"}</InlineMath>, then the
           alternating series converges:
         </p>
         <MathBlock>
@@ -108,7 +108,7 @@ export default function Section07() {
 
       <Definition title="Absolute Convergence">
         <p>
-          A series <Math>\sum a_n</Math> converges absolutely if <Math>\sum |a_n|</Math> converges.
+          A series <InlineMath>\sum a_n</InlineMath> converges absolutely if <InlineMath>\sum |a_n|</InlineMath> converges.
         </p>
       </Definition>
 
@@ -116,14 +116,14 @@ export default function Section07() {
         title="Absolute Convergence Implies Convergence"
         proof={
           <>
-            <p className="mb-3">Define <Math>{`a_n^+ = \\max(a_n, 0)`}</Math> and <Math>{`a_n^- = \\max(-a_n, 0)`}</Math>. Then <Math>{`a_n = a_n^+ - a_n^-`}</Math> and <Math>{`|a_n| = a_n^+ + a_n^-`}</Math>.</p>
-            <p className="mb-3">Since <Math>{`0 \\leq a_n^+ \\leq |a_n|`}</Math> and <Math>{`0 \\leq a_n^- \\leq |a_n|`}</Math>, by comparison both <Math>{`\\sum a_n^+`}</Math> and <Math>{`\\sum a_n^-`}</Math> converge.</p>
-            <p className="mb-3">Therefore <Math>{`\\sum a_n = \\sum a_n^+ - \\sum a_n^-`}</Math> converges by algebra of limits for series.</p>
+            <p className="mb-3">Define <InlineMath>{`a_n^+ = \\max(a_n, 0)`}</InlineMath> and <InlineMath>{`a_n^- = \\max(-a_n, 0)`}</InlineMath>. Then <InlineMath>{`a_n = a_n^+ - a_n^-`}</InlineMath> and <InlineMath>{`|a_n| = a_n^+ + a_n^-`}</InlineMath>.</p>
+            <p className="mb-3">Since <InlineMath>{`0 \\leq a_n^+ \\leq |a_n|`}</InlineMath> and <InlineMath>{`0 \\leq a_n^- \\leq |a_n|`}</InlineMath>, by comparison both <InlineMath>{`\\sum a_n^+`}</InlineMath> and <InlineMath>{`\\sum a_n^-`}</InlineMath> converge.</p>
+            <p className="mb-3">Therefore <InlineMath>{`\\sum a_n = \\sum a_n^+ - \\sum a_n^-`}</InlineMath> converges by algebra of limits for series.</p>
           </>
         }
       >
         <p>
-          If <Math>\sum |a_n|</Math> converges, then <Math>\sum a_n</Math> converges.
+          If <InlineMath>\sum |a_n|</InlineMath> converges, then <InlineMath>\sum a_n</InlineMath> converges.
         </p>
       </Theorem>
 

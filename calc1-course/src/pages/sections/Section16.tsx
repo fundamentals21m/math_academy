@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section16() {
   return (
@@ -17,35 +17,35 @@ export default function Section16() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">The Axiomatic Approach to Volume</h2>
 
       <p className="text-dark-200 mb-4">
-        We assume there exists a class <MathInline>{'\\mathscr{M}'}</MathInline> of{' '}
+        We assume there exists a class <InlineMath>{'\\mathscr{M}'}</InlineMath> of{' '}
         <strong>measurable sets</strong> in three-dimensional space (called <strong>solids</strong>)
-        and a <strong>volume function</strong> <MathInline>{'v'}</MathInline> that assigns to each
-        solid <MathInline>{'S'}</MathInline> a nonnegative number <MathInline>{'v(S)'}</MathInline>.
+        and a <strong>volume function</strong> <InlineMath>{'v'}</InlineMath> that assigns to each
+        solid <InlineMath>{'S'}</InlineMath> a nonnegative number <InlineMath>{'v(S)'}</InlineMath>.
       </p>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Axioms for Volume</p>
         <ol className="list-decimal list-inside space-y-2 mt-2">
           <li>
-            <strong>Nonnegative:</strong> <MathInline>{'v(S) \\geq 0'}</MathInline> for every solid{' '}
-            <MathInline>{'S'}</MathInline>
+            <strong>Nonnegative:</strong> <InlineMath>{'v(S) \\geq 0'}</InlineMath> for every solid{' '}
+            <InlineMath>{'S'}</InlineMath>
           </li>
           <li>
             <strong>Additive:</strong>{' '}
-            <MathInline>{'v(S \\cup T) = v(S) + v(T) - v(S \\cap T)'}</MathInline>
+            <InlineMath>{'v(S \\cup T) = v(S) + v(T) - v(S \\cap T)'}</InlineMath>
           </li>
           <li>
-            <strong>Difference:</strong> If <MathInline>{'S \\subseteq T'}</MathInline>, then{' '}
-            <MathInline>{'v(T - S) = v(T) - v(S)'}</MathInline>
+            <strong>Difference:</strong> If <InlineMath>{'S \\subseteq T'}</InlineMath>, then{' '}
+            <InlineMath>{'v(T - S) = v(T) - v(S)'}</InlineMath>
           </li>
           <li>
-            <strong>Cavalieri's Principle:</strong> If <MathInline>{'S'}</MathInline> and{' '}
-            <MathInline>{'T'}</MathInline> have equal cross-sectional areas for every plane
-            perpendicular to a given line, then <MathInline>{'v(S) = v(T)'}</MathInline>
+            <strong>Cavalieri's Principle:</strong> If <InlineMath>{'S'}</InlineMath> and{' '}
+            <InlineMath>{'T'}</InlineMath> have equal cross-sectional areas for every plane
+            perpendicular to a given line, then <InlineMath>{'v(S) = v(T)'}</InlineMath>
           </li>
           <li>
-            <strong>Choice of Scale:</strong> A box with edges <MathInline>{'a, b, c'}</MathInline>{' '}
-            has volume <MathInline>{'v = abc'}</MathInline>
+            <strong>Choice of Scale:</strong> A box with edges <InlineMath>{'a, b, c'}</InlineMath>{' '}
+            has volume <InlineMath>{'v = abc'}</InlineMath>
           </li>
           <li>
             <strong>Convex sets are measurable</strong>
@@ -64,9 +64,9 @@ export default function Section16() {
       <Callout type="info">
         <p className="font-semibold mb-2">Cavalieri Solid</p>
         <p className="mb-2">
-          A solid <MathInline>{'S'}</MathInline> is a <strong>Cavalieri solid</strong> with respect
-          to a line <MathInline>{'L'}</MathInline> if every cross-section perpendicular to{' '}
-          <MathInline>{'L'}</MathInline> is a measurable set in its own plane.
+          A solid <InlineMath>{'S'}</InlineMath> is a <strong>Cavalieri solid</strong> with respect
+          to a line <InlineMath>{'L'}</InlineMath> if every cross-section perpendicular to{' '}
+          <InlineMath>{'L'}</InlineMath> is a measurable set in its own plane.
         </p>
         <p>
           <strong>Cavalieri's Principle:</strong> Two Cavalieri solids with equal cross-sectional
@@ -83,9 +83,9 @@ export default function Section16() {
       <MathBlock>{'S = \\{(x, y, z) \\mid (x, y) \\in B, \\; a \\leq z \\leq b\\}'}</MathBlock>
 
       <p className="text-dark-200 mb-4">
-        where <MathInline>{'B'}</MathInline> is a bounded plane set (the base). Every cross-section
-        perpendicular to the <MathInline>{'z'}</MathInline>-axis is congruent to{' '}
-        <MathInline>{'B'}</MathInline>.
+        where <InlineMath>{'B'}</InlineMath> is a bounded plane set (the base). Every cross-section
+        perpendicular to the <InlineMath>{'z'}</InlineMath>-axis is congruent to{' '}
+        <InlineMath>{'B'}</InlineMath>.
       </p>
 
       <Callout type="theorem">
@@ -102,10 +102,10 @@ export default function Section16() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 2.7 (Volume via Cross-Sectional Area)</p>
         <p className="mb-2">
-          Let <MathInline>{'R'}</MathInline> be a Cavalieri solid with cross-sectional area function{' '}
-          <MathInline>{'a_R'}</MathInline> that is integrable on <MathInline>{'[a, b]'}</MathInline>{' '}
-          and zero outside <MathInline>{'[a, b]'}</MathInline>. Then the volume of{' '}
-          <MathInline>{'R'}</MathInline> is:
+          Let <InlineMath>{'R'}</InlineMath> be a Cavalieri solid with cross-sectional area function{' '}
+          <InlineMath>{'a_R'}</InlineMath> that is integrable on <InlineMath>{'[a, b]'}</InlineMath>{' '}
+          and zero outside <InlineMath>{'[a, b]'}</InlineMath>. Then the volume of{' '}
+          <InlineMath>{'R'}</InlineMath> is:
         </p>
         <MathBlock>{'v(R) = \\int_a^b a_R(u)\\,du'}</MathBlock>
       </Callout>
@@ -118,23 +118,23 @@ export default function Section16() {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Solids of Revolution: The Disk Method</h2>
 
       <p className="text-dark-200 mb-4">
-        Let <MathInline>{'f'}</MathInline> be nonnegative and integrable on{' '}
-        <MathInline>{'[a, b]'}</MathInline>. When the ordinate set of <MathInline>{'f'}</MathInline>{' '}
-        is revolved about the <MathInline>{'x'}</MathInline>-axis, it sweeps out a{' '}
+        Let <InlineMath>{'f'}</InlineMath> be nonnegative and integrable on{' '}
+        <InlineMath>{'[a, b]'}</InlineMath>. When the ordinate set of <InlineMath>{'f'}</InlineMath>{' '}
+        is revolved about the <InlineMath>{'x'}</InlineMath>-axis, it sweeps out a{' '}
         <strong>solid of revolution</strong>.
       </p>
 
       <p className="text-dark-200 mb-4">
-        Each cross-section perpendicular to the <MathInline>{'x'}</MathInline>-axis at point{' '}
-        <MathInline>{'x'}</MathInline> is a circular disk of radius <MathInline>{'f(x)'}</MathInline>,
-        with area <MathInline>{'\\pi f^2(x)'}</MathInline>.
+        Each cross-section perpendicular to the <InlineMath>{'x'}</InlineMath>-axis at point{' '}
+        <InlineMath>{'x'}</InlineMath> is a circular disk of radius <InlineMath>{'f(x)'}</InlineMath>,
+        with area <InlineMath>{'\\pi f^2(x)'}</InlineMath>.
       </p>
 
       <Callout type="theorem">
         <p className="font-semibold mb-2">Disk Method</p>
         <p className="mb-2">
           The volume of the solid obtained by revolving the ordinate set of{' '}
-          <MathInline>{'f'}</MathInline> about the <MathInline>{'x'}</MathInline>-axis is:
+          <InlineMath>{'f'}</InlineMath> about the <InlineMath>{'x'}</InlineMath>-axis is:
         </p>
         <MathBlock>{'V = \\int_a^b \\pi f^2(x)\\,dx = \\pi \\int_a^b f^2(x)\\,dx'}</MathBlock>
       </Callout>
@@ -142,9 +142,9 @@ export default function Section16() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Volume of a Sphere</p>
         <p className="mb-2">
-          A sphere of radius <MathInline>{'r'}</MathInline> is obtained by revolving the semicircle{' '}
-          <MathInline>{'f(x) = \\sqrt{r^2 - x^2}'}</MathInline> about the{' '}
-          <MathInline>{'x'}</MathInline>-axis for <MathInline>{'-r \\leq x \\leq r'}</MathInline>.
+          A sphere of radius <InlineMath>{'r'}</InlineMath> is obtained by revolving the semicircle{' '}
+          <InlineMath>{'f(x) = \\sqrt{r^2 - x^2}'}</InlineMath> about the{' '}
+          <InlineMath>{'x'}</InlineMath>-axis for <InlineMath>{'-r \\leq x \\leq r'}</InlineMath>.
         </p>
         <MathBlock>{'V = \\pi \\int_{-r}^{r} (r^2 - x^2)\\,dx = 2\\pi \\int_0^r (r^2 - x^2)\\,dx'}</MathBlock>
         <MathBlock>{'= 2\\pi \\left[r^2 x - \\frac{x^3}{3}\\right]_0^r = 2\\pi \\left(r^3 - \\frac{r^3}{3}\\right) = \\frac{4}{3}\\pi r^3'}</MathBlock>
@@ -153,14 +153,14 @@ export default function Section16() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Volume of a Cone</p>
         <p className="mb-2">
-          A right circular cone is obtained by revolving <MathInline>{'f(x) = cx'}</MathInline>{' '}
-          about the <MathInline>{'x'}</MathInline>-axis for{' '}
-          <MathInline>{'0 \\leq x \\leq b'}</MathInline>. The base has radius{' '}
-          <MathInline>{'R = cb'}</MathInline> and the altitude is <MathInline>{'b'}</MathInline>.
+          A right circular cone is obtained by revolving <InlineMath>{'f(x) = cx'}</InlineMath>{' '}
+          about the <InlineMath>{'x'}</InlineMath>-axis for{' '}
+          <InlineMath>{'0 \\leq x \\leq b'}</InlineMath>. The base has radius{' '}
+          <InlineMath>{'R = cb'}</InlineMath> and the altitude is <InlineMath>{'b'}</InlineMath>.
         </p>
         <MathBlock>{'V = \\pi \\int_0^b (cx)^2\\,dx = \\pi c^2 \\int_0^b x^2\\,dx = \\pi c^2 \\cdot \\frac{b^3}{3} = \\frac{1}{3}\\pi R^2 b'}</MathBlock>
         <p className="mt-2">
-          This is <MathInline>{'\\frac{1}{3}'}</MathInline> times the area of the base times the altitude.
+          This is <InlineMath>{'\\frac{1}{3}'}</InlineMath> times the area of the base times the altitude.
         </p>
       </Callout>
 
@@ -168,17 +168,17 @@ export default function Section16() {
 
       <p className="text-dark-200 mb-4">
         When the region <em>between</em> two graphs is rotated about the{' '}
-        <MathInline>{'x'}</MathInline>-axis, each cross-section is an <strong>annulus</strong>{' '}
+        <InlineMath>{'x'}</InlineMath>-axis, each cross-section is an <strong>annulus</strong>{' '}
         (a washer-shaped region bounded by two concentric circles).
       </p>
 
       <Callout type="theorem">
         <p className="font-semibold mb-2">Washer Method</p>
         <p className="mb-2">
-          If <MathInline>{'f'}</MathInline> and <MathInline>{'g'}</MathInline> are nonnegative and
-          integrable on <MathInline>{'[a, b]'}</MathInline> with{' '}
-          <MathInline>{'f \\leq g'}</MathInline>, the volume of the solid obtained by rotating the
-          region between their graphs about the <MathInline>{'x'}</MathInline>-axis is:
+          If <InlineMath>{'f'}</InlineMath> and <InlineMath>{'g'}</InlineMath> are nonnegative and
+          integrable on <InlineMath>{'[a, b]'}</InlineMath> with{' '}
+          <InlineMath>{'f \\leq g'}</InlineMath>, the volume of the solid obtained by rotating the
+          region between their graphs about the <InlineMath>{'x'}</InlineMath>-axis is:
         </p>
         <MathBlock>{'V = \\pi \\int_a^b [g^2(x) - f^2(x)]\\,dx'}</MathBlock>
       </Callout>
@@ -186,15 +186,15 @@ export default function Section16() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Washer Method</p>
         <p className="mb-2">
-          Find the volume when the region between <MathInline>{'f(x) = \\sqrt{x}'}</MathInline> and{' '}
-          <MathInline>{'g(x) = x^2'}</MathInline> on <MathInline>{'[0, 1]'}</MathInline> is rotated
-          about the <MathInline>{'x'}</MathInline>-axis.
+          Find the volume when the region between <InlineMath>{'f(x) = \\sqrt{x}'}</InlineMath> and{' '}
+          <InlineMath>{'g(x) = x^2'}</InlineMath> on <InlineMath>{'[0, 1]'}</InlineMath> is rotated
+          about the <InlineMath>{'x'}</InlineMath>-axis.
         </p>
         <p className="mt-3 mb-2"><strong>Solution:</strong></p>
         <p className="mb-2">
-          For <MathInline>{'0 \\leq x \\leq 1'}</MathInline>, we have{' '}
-          <MathInline>{'x^2 \\leq \\sqrt{x}'}</MathInline>, so{' '}
-          <MathInline>{'g(x) = \\sqrt{x}'}</MathInline> is the outer radius:
+          For <InlineMath>{'0 \\leq x \\leq 1'}</InlineMath>, we have{' '}
+          <InlineMath>{'x^2 \\leq \\sqrt{x}'}</InlineMath>, so{' '}
+          <InlineMath>{'g(x) = \\sqrt{x}'}</InlineMath> is the outer radius:
         </p>
         <MathBlock>{'V = \\pi \\int_0^1 [(\\sqrt{x})^2 - (x^2)^2]\\,dx = \\pi \\int_0^1 (x - x^4)\\,dx'}</MathBlock>
         <MathBlock>{'= \\pi \\left[\\frac{x^2}{2} - \\frac{x^5}{5}\\right]_0^1 = \\pi \\left(\\frac{1}{2} - \\frac{1}{5}\\right) = \\frac{3\\pi}{10}'}</MathBlock>
@@ -210,14 +210,14 @@ export default function Section16() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example: Square Cross-Sections</p>
         <p className="mb-2">
-          A solid has cross-sections perpendicular to the <MathInline>{'x'}</MathInline>-axis that
-          are squares with edge <MathInline>{'2x^2'}</MathInline>. Find the volume from{' '}
-          <MathInline>{'x = 0'}</MathInline> to <MathInline>{'x = a'}</MathInline>.
+          A solid has cross-sections perpendicular to the <InlineMath>{'x'}</InlineMath>-axis that
+          are squares with edge <InlineMath>{'2x^2'}</InlineMath>. Find the volume from{' '}
+          <InlineMath>{'x = 0'}</InlineMath> to <InlineMath>{'x = a'}</InlineMath>.
         </p>
         <p className="mt-3 mb-2"><strong>Solution:</strong></p>
         <p className="mb-2">
-          The cross-sectional area at <MathInline>{'x'}</MathInline> is{' '}
-          <MathInline>{'(2x^2)^2 = 4x^4'}</MathInline>:
+          The cross-sectional area at <InlineMath>{'x'}</InlineMath> is{' '}
+          <InlineMath>{'(2x^2)^2 = 4x^4'}</InlineMath>:
         </p>
         <MathBlock>{'V = \\int_0^a 4x^4\\,dx = 4 \\cdot \\frac{x^5}{5}\\Big|_0^a = \\frac{4a^5}{5}'}</MathBlock>
       </Callout>
@@ -231,25 +231,25 @@ export default function Section16() {
         </li>
         <li>
           <strong>Cross-sectional formula:</strong>{' '}
-          <MathInline>{'V = \\int_a^b a(x)\\,dx'}</MathInline> where{' '}
-          <MathInline>{'a(x)'}</MathInline> is cross-sectional area
+          <InlineMath>{'V = \\int_a^b a(x)\\,dx'}</InlineMath> where{' '}
+          <InlineMath>{'a(x)'}</InlineMath> is cross-sectional area
         </li>
         <li>
           <strong>Disk method:</strong>{' '}
-          <MathInline>{'V = \\pi \\int_a^b f^2(x)\\,dx'}</MathInline> for revolution about{' '}
-          <MathInline>{'x'}</MathInline>-axis
+          <InlineMath>{'V = \\pi \\int_a^b f^2(x)\\,dx'}</InlineMath> for revolution about{' '}
+          <InlineMath>{'x'}</InlineMath>-axis
         </li>
         <li>
           <strong>Washer method:</strong>{' '}
-          <MathInline>{'V = \\pi \\int_a^b [g^2(x) - f^2(x)]\\,dx'}</MathInline> for region between
+          <InlineMath>{'V = \\pi \\int_a^b [g^2(x) - f^2(x)]\\,dx'}</InlineMath> for region between
           curves
         </li>
         <li>
-          <strong>Sphere:</strong> <MathInline>{'V = \\frac{4}{3}\\pi r^3'}</MathInline>
+          <strong>Sphere:</strong> <InlineMath>{'V = \\frac{4}{3}\\pi r^3'}</InlineMath>
         </li>
         <li>
           <strong>Cone:</strong>{' '}
-          <MathInline>{'V = \\frac{1}{3} \\cdot \\text{base} \\cdot \\text{height}'}</MathInline>
+          <InlineMath>{'V = \\frac{1}{3} \\cdot \\text{base} \\cdot \\text{height}'}</InlineMath>
         </li>
       </ul>
 

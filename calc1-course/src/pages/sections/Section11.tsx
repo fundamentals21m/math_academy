@@ -1,6 +1,6 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
 export default function Section11() {
   return (
@@ -19,31 +19,31 @@ export default function Section11() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Increasing and Decreasing Functions</p>
         <p className="mb-2">
-          A function <MathInline>{'f'}</MathInline> is <strong>increasing</strong> on a set{' '}
-          <MathInline>{'S'}</MathInline> if:
+          A function <InlineMath>{'f'}</InlineMath> is <strong>increasing</strong> on a set{' '}
+          <InlineMath>{'S'}</InlineMath> if:
         </p>
         <MathBlock>{'f(x) \\leq f(y) \\quad \\text{whenever } x < y \\text{ in } S'}</MathBlock>
         <p className="mt-2 mb-2">
           It is <strong>strictly increasing</strong> if the strict inequality{' '}
-          <MathInline>{'f(x) < f(y)'}</MathInline> holds for all <MathInline>{'x < y'}</MathInline>.
+          <InlineMath>{'f(x) < f(y)'}</InlineMath> holds for all <InlineMath>{'x < y'}</InlineMath>.
         </p>
         <p className="mb-2">
-          Similarly, <MathInline>{'f'}</MathInline> is <strong>decreasing</strong> on{' '}
-          <MathInline>{'S'}</MathInline> if:
+          Similarly, <InlineMath>{'f'}</InlineMath> is <strong>decreasing</strong> on{' '}
+          <InlineMath>{'S'}</InlineMath> if:
         </p>
         <MathBlock>{'f(x) \\geq f(y) \\quad \\text{whenever } x < y \\text{ in } S'}</MathBlock>
         <p className="mt-2">
-          It is <strong>strictly decreasing</strong> if <MathInline>{'f(x) > f(y)'}</MathInline>{' '}
-          for all <MathInline>{'x < y'}</MathInline>.
+          It is <strong>strictly decreasing</strong> if <InlineMath>{'f(x) > f(y)'}</InlineMath>{' '}
+          for all <InlineMath>{'x < y'}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="definition">
         <p className="font-semibold mb-2">Monotonic Functions</p>
         <p>
-          A function is <strong>monotonic</strong> on <MathInline>{'S'}</MathInline> if it is
-          either increasing on <MathInline>{'S'}</MathInline> or decreasing on{' '}
-          <MathInline>{'S'}</MathInline>. It is <strong>strictly monotonic</strong> if it is
+          A function is <strong>monotonic</strong> on <InlineMath>{'S'}</InlineMath> if it is
+          either increasing on <InlineMath>{'S'}</InlineMath> or decreasing on{' '}
+          <InlineMath>{'S'}</InlineMath>. It is <strong>strictly monotonic</strong> if it is
           strictly increasing or strictly decreasing.
         </p>
       </Callout>
@@ -53,11 +53,11 @@ export default function Section11() {
       <Callout type="definition">
         <p className="font-semibold mb-2">Piecewise Monotonic</p>
         <p>
-          A function <MathInline>{'f'}</MathInline> is <strong>piecewise monotonic</strong>{' '}
-          on <MathInline>{'[a, b]'}</MathInline> if there exists a partition{' '}
-          <MathInline>{'P'}</MathInline> of <MathInline>{'[a, b]'}</MathInline> such that{' '}
-          <MathInline>{'f'}</MathInline> is monotonic on each open subinterval of{' '}
-          <MathInline>{'P'}</MathInline>.
+          A function <InlineMath>{'f'}</InlineMath> is <strong>piecewise monotonic</strong>{' '}
+          on <InlineMath>{'[a, b]'}</InlineMath> if there exists a partition{' '}
+          <InlineMath>{'P'}</InlineMath> of <InlineMath>{'[a, b]'}</InlineMath> such that{' '}
+          <InlineMath>{'f'}</InlineMath> is monotonic on each open subinterval of{' '}
+          <InlineMath>{'P'}</InlineMath>.
         </p>
       </Callout>
 
@@ -71,15 +71,15 @@ export default function Section11() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example 1: Power Functions</p>
         <p className="mb-2">
-          For any positive integer <MathInline>{'p'}</MathInline>, the function{' '}
-          <MathInline>{'f(x) = x^p'}</MathInline> satisfies:
+          For any positive integer <InlineMath>{'p'}</InlineMath>, the function{' '}
+          <InlineMath>{'f(x) = x^p'}</InlineMath> satisfies:
         </p>
         <MathBlock>{'x^p < y^p \\quad \\text{if } 0 \\leq x < y'}</MathBlock>
         <p className="mt-2">
-          So <MathInline>{'f(x) = x^p'}</MathInline> is strictly increasing on{' '}
-          <MathInline>{'[0, \\infty)'}</MathInline>. On the negative real axis, it is
-          decreasing if <MathInline>{'p'}</MathInline> is even and increasing if{' '}
-          <MathInline>{'p'}</MathInline> is odd. Thus <MathInline>{'x^p'}</MathInline> is
+          So <InlineMath>{'f(x) = x^p'}</InlineMath> is strictly increasing on{' '}
+          <InlineMath>{'[0, \\infty)'}</InlineMath>. On the negative real axis, it is
+          decreasing if <InlineMath>{'p'}</InlineMath> is even and increasing if{' '}
+          <InlineMath>{'p'}</InlineMath> is odd. Thus <InlineMath>{'x^p'}</InlineMath> is
           piecewise monotonic on every finite interval.
         </p>
       </Callout>
@@ -87,27 +87,27 @@ export default function Section11() {
       <Callout type="example">
         <p className="font-semibold mb-2">Example 2: Square Root Function</p>
         <p className="mb-2">
-          Let <MathInline>{'f(x) = \\sqrt{x}'}</MathInline> for <MathInline>{'x \\geq 0'}</MathInline>.
-          If <MathInline>{'0 \\leq x < y'}</MathInline>, then:
+          Let <InlineMath>{'f(x) = \\sqrt{x}'}</InlineMath> for <InlineMath>{'x \\geq 0'}</InlineMath>.
+          If <InlineMath>{'0 \\leq x < y'}</InlineMath>, then:
         </p>
         <MathBlock>{'\\sqrt{y} - \\sqrt{x} = \\frac{y - x}{\\sqrt{y} + \\sqrt{x}} > 0'}</MathBlock>
         <p className="mt-2">
-          Hence <MathInline>{'\\sqrt{x}'}</MathInline> is strictly increasing on{' '}
-          <MathInline>{'[0, \\infty)'}</MathInline>.
+          Hence <InlineMath>{'\\sqrt{x}'}</InlineMath> is strictly increasing on{' '}
+          <InlineMath>{'[0, \\infty)'}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example">
         <p className="font-semibold mb-2">Example 3: Semicircle</p>
         <p className="mb-2">
-          The function <MathInline>{'g(x) = \\sqrt{r^2 - x^2}'}</MathInline> for{' '}
-          <MathInline>{'-r \\leq x \\leq r'}</MathInline> has a semicircular graph.
+          The function <InlineMath>{'g(x) = \\sqrt{r^2 - x^2}'}</InlineMath> for{' '}
+          <InlineMath>{'-r \\leq x \\leq r'}</InlineMath> has a semicircular graph.
         </p>
         <p>
-          It is strictly increasing on <MathInline>{'[-r, 0]'}</MathInline> and strictly
-          decreasing on <MathInline>{'[0, r]'}</MathInline>. Hence{' '}
-          <MathInline>{'g'}</MathInline> is piecewise monotonic on{' '}
-          <MathInline>{'[-r, r]'}</MathInline>.
+          It is strictly increasing on <InlineMath>{'[-r, 0]'}</InlineMath> and strictly
+          decreasing on <InlineMath>{'[0, r]'}</InlineMath>. Hence{' '}
+          <InlineMath>{'g'}</InlineMath> is piecewise monotonic on{' '}
+          <InlineMath>{'[-r, r]'}</InlineMath>.
         </p>
       </Callout>
 
@@ -120,9 +120,9 @@ export default function Section11() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.12 (Integrability of Monotonic Functions)</p>
         <p>
-          If <MathInline>{'f'}</MathInline> is monotonic on a closed interval{' '}
-          <MathInline>{'[a, b]'}</MathInline>, then <MathInline>{'f'}</MathInline> is
-          integrable on <MathInline>{'[a, b]'}</MathInline>.
+          If <InlineMath>{'f'}</InlineMath> is monotonic on a closed interval{' '}
+          <InlineMath>{'[a, b]'}</InlineMath>, then <InlineMath>{'f'}</InlineMath> is
+          integrable on <InlineMath>{'[a, b]'}</InlineMath>.
         </p>
       </Callout>
 
@@ -131,21 +131,21 @@ export default function Section11() {
       <p className="text-dark-200 mb-4">
         We prove the theorem for increasing functions (the decreasing case is analogous).
         The strategy is to construct special step functions that squeeze{' '}
-        <MathInline>{'f'}</MathInline> and show that their integrals can be made arbitrarily close.
+        <InlineMath>{'f'}</InlineMath> and show that their integrals can be made arbitrarily close.
       </p>
 
       <p className="text-dark-200 mb-4">
-        Partition <MathInline>{'[a, b]'}</MathInline> into <MathInline>{'n'}</MathInline> equal
-        subintervals with points <MathInline>{'x_k = a + k(b-a)/n'}</MathInline>. Define step
+        Partition <InlineMath>{'[a, b]'}</InlineMath> into <InlineMath>{'n'}</InlineMath> equal
+        subintervals with points <InlineMath>{'x_k = a + k(b-a)/n'}</InlineMath>. Define step
         functions:
       </p>
 
       <MathBlock>{'s_n(x) = f(x_{k-1}) \\quad \\text{and} \\quad t_n(x) = f(x_k) \\quad \\text{for } x_{k-1} < x < x_k'}</MathBlock>
 
       <p className="text-dark-200 mb-4">
-        Since <MathInline>{'f'}</MathInline> is increasing, we have{' '}
-        <MathInline>{'s_n(x) \\leq f(x) \\leq t_n(x)'}</MathInline> throughout{' '}
-        <MathInline>{'[a, b]'}</MathInline>.
+        Since <InlineMath>{'f'}</InlineMath> is increasing, we have{' '}
+        <InlineMath>{'s_n(x) \\leq f(x) \\leq t_n(x)'}</InlineMath> throughout{' '}
+        <InlineMath>{'[a, b]'}</InlineMath>.
       </p>
 
       <Callout type="info">
@@ -156,23 +156,23 @@ export default function Section11() {
         <MathBlock>{'\\int_a^b t_n - \\int_a^b s_n = \\frac{b-a}{n} \\sum_{k=1}^{n}[f(x_k) - f(x_{k-1})] = \\frac{(b-a)[f(b) - f(a)]}{n}'}</MathBlock>
         <p className="mt-2">
           The sum telescopes! Geometrically, the shaded rectangles between{' '}
-          <MathInline>{'t_n'}</MathInline> and <MathInline>{'s_n'}</MathInline> can be slid
-          together to form a single rectangle of width <MathInline>{'(b-a)/n'}</MathInline>{' '}
-          and height <MathInline>{'f(b) - f(a)'}</MathInline>.
+          <InlineMath>{'t_n'}</InlineMath> and <InlineMath>{'s_n'}</InlineMath> can be slid
+          together to form a single rectangle of width <InlineMath>{'(b-a)/n'}</InlineMath>{' '}
+          and height <InlineMath>{'f(b) - f(a)'}</InlineMath>.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-4">
-        Setting <MathInline>{'C = (b-a)[f(b) - f(a)]'}</MathInline>, we have:
+        Setting <InlineMath>{'C = (b-a)[f(b) - f(a)]'}</InlineMath>, we have:
       </p>
 
       <MathBlock>{'0 \\leq \\overline{I}(f) - \\underline{I}(f) \\leq \\frac{C}{n}'}</MathBlock>
 
       <p className="text-dark-200 mb-6">
-        for every positive integer <MathInline>{'n'}</MathInline>. Since{' '}
-        <MathInline>{'C/n \\to 0'}</MathInline> as <MathInline>{'n \\to \\infty'}</MathInline>,
-        we must have <MathInline>{'\\underline{I}(f) = \\overline{I}(f)'}</MathInline>, so{' '}
-        <MathInline>{'f'}</MathInline> is integrable.
+        for every positive integer <InlineMath>{'n'}</InlineMath>. Since{' '}
+        <InlineMath>{'C/n \\to 0'}</InlineMath> as <InlineMath>{'n \\to \\infty'}</InlineMath>,
+        we must have <InlineMath>{'\\underline{I}(f) = \\overline{I}(f)'}</InlineMath>, so{' '}
+        <InlineMath>{'f'}</InlineMath> is integrable.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Computing Integrals of Monotonic Functions</h2>
@@ -184,42 +184,42 @@ export default function Section11() {
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.13 (Computing Integrals of Increasing Functions)</p>
         <p className="mb-2">
-          Assume <MathInline>{'f'}</MathInline> is increasing on <MathInline>{'[a, b]'}</MathInline>.
-          Let <MathInline>{'x_k = a + k(b-a)/n'}</MathInline> for <MathInline>{'k = 0, 1, \\ldots, n'}</MathInline>.
-          If <MathInline>{'I'}</MathInline> is any number satisfying:
+          Assume <InlineMath>{'f'}</InlineMath> is increasing on <InlineMath>{'[a, b]'}</InlineMath>.
+          Let <InlineMath>{'x_k = a + k(b-a)/n'}</InlineMath> for <InlineMath>{'k = 0, 1, \\ldots, n'}</InlineMath>.
+          If <InlineMath>{'I'}</InlineMath> is any number satisfying:
         </p>
         <MathBlock>{'\\frac{b-a}{n} \\sum_{k=0}^{n-1} f(x_k) \\leq I \\leq \\frac{b-a}{n} \\sum_{k=1}^{n} f(x_k)'}</MathBlock>
         <p className="mt-2">
-          for every <MathInline>{'n \\geq 1'}</MathInline>, then{' '}
-          <MathInline>{'I = \\int_a^b f(x)\\,dx'}</MathInline>.
+          for every <InlineMath>{'n \\geq 1'}</InlineMath>, then{' '}
+          <InlineMath>{'I = \\int_a^b f(x)\\,dx'}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.14 (Computing Integrals of Decreasing Functions)</p>
         <p className="mb-2">
-          Assume <MathInline>{'f'}</MathInline> is decreasing on <MathInline>{'[a, b]'}</MathInline>.
-          Let <MathInline>{'x_k = a + k(b-a)/n'}</MathInline>. If <MathInline>{'I'}</MathInline>{' '}
+          Assume <InlineMath>{'f'}</InlineMath> is decreasing on <InlineMath>{'[a, b]'}</InlineMath>.
+          Let <InlineMath>{'x_k = a + k(b-a)/n'}</InlineMath>. If <InlineMath>{'I'}</InlineMath>{' '}
           satisfies:
         </p>
         <MathBlock>{'\\frac{b-a}{n} \\sum_{k=1}^{n} f(x_k) \\leq I \\leq \\frac{b-a}{n} \\sum_{k=0}^{n-1} f(x_k)'}</MathBlock>
         <p className="mt-2">
-          for every <MathInline>{'n \\geq 1'}</MathInline>, then{' '}
-          <MathInline>{'I = \\int_a^b f(x)\\,dx'}</MathInline>.
+          for every <InlineMath>{'n \\geq 1'}</InlineMath>, then{' '}
+          <InlineMath>{'I = \\int_a^b f(x)\\,dx'}</InlineMath>.
         </p>
       </Callout>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Application: Integrating Power Functions</h2>
 
       <p className="text-dark-200 mb-4">
-        Using Theorem 1.13, we can calculate <MathInline>{'\\int_0^b x^p\\,dx'}</MathInline>:
+        Using Theorem 1.13, we can calculate <InlineMath>{'\\int_0^b x^p\\,dx'}</InlineMath>:
       </p>
 
       <Callout type="theorem">
         <p className="font-semibold mb-2">Theorem 1.15 (Integral of Power Functions)</p>
         <p className="mb-2">
-          If <MathInline>{'p'}</MathInline> is a positive integer and{' '}
-          <MathInline>{'b > 0'}</MathInline>, then:
+          If <InlineMath>{'p'}</InlineMath> is a positive integer and{' '}
+          <InlineMath>{'b > 0'}</InlineMath>, then:
         </p>
         <MathBlock>{'\\int_0^b x^p\\,dx = \\frac{b^{p+1}}{p+1}'}</MathBlock>
       </Callout>
@@ -231,14 +231,14 @@ export default function Section11() {
         </p>
         <MathBlock>{'\\sum_{k=1}^{n-1} k^p < \\frac{n^{p+1}}{p+1} < \\sum_{k=1}^{n} k^p'}</MathBlock>
         <p className="mt-2">
-          Multiplying by <MathInline>{'b^{p+1}/n^{p+1}'}</MathInline> and using{' '}
-          <MathInline>{'x_k = kb/n'}</MathInline> gives the inequalities of Theorem 1.13
-          with <MathInline>{'I = b^{p+1}/(p+1)'}</MathInline>.
+          Multiplying by <InlineMath>{'b^{p+1}/n^{p+1}'}</InlineMath> and using{' '}
+          <InlineMath>{'x_k = kb/n'}</InlineMath> gives the inequalities of Theorem 1.13
+          with <InlineMath>{'I = b^{p+1}/(p+1)'}</InlineMath>.
         </p>
       </Callout>
 
       <p className="text-dark-200 mb-4">
-        More generally, for any real <MathInline>{'a'}</MathInline> and <MathInline>{'b'}</MathInline>:
+        More generally, for any real <InlineMath>{'a'}</InlineMath> and <InlineMath>{'b'}</InlineMath>:
       </p>
 
       <MathBlock>{'\\int_a^b x^p\\,dx = \\frac{b^{p+1} - a^{p+1}}{p+1}'}</MathBlock>
@@ -253,18 +253,18 @@ export default function Section11() {
       <ul className="list-disc list-inside text-dark-200 mb-6 space-y-2">
         <li>
           For an increasing function, the difference{' '}
-          <MathInline>{'t_n(x) - s_n(x)'}</MathInline> on each subinterval equals the
-          total "rise" of <MathInline>{'f'}</MathInline> on that subinterval
+          <InlineMath>{'t_n(x) - s_n(x)'}</InlineMath> on each subinterval equals the
+          total "rise" of <InlineMath>{'f'}</InlineMath> on that subinterval
         </li>
         <li>
           These rises telescope: the total gap is{' '}
-          <MathInline>{'(b-a)[f(b) - f(a)]/n'}</MathInline>
+          <InlineMath>{'(b-a)[f(b) - f(a)]/n'}</InlineMath>
         </li>
         <li>
-          Making <MathInline>{'n'}</MathInline> larger makes the gap arbitrarily small
+          Making <InlineMath>{'n'}</InlineMath> larger makes the gap arbitrarily small
         </li>
         <li>
-          This forces <MathInline>{'\\underline{I}(f) = \\overline{I}(f)'}</MathInline>
+          This forces <InlineMath>{'\\underline{I}(f) = \\overline{I}(f)'}</InlineMath>
         </li>
       </ul>
 
@@ -273,9 +273,9 @@ export default function Section11() {
       <p className="text-dark-200 mb-4">
         A function is monotonic if it is always increasing or always decreasing. The
         fundamental theorem states that every monotonic function on{' '}
-        <MathInline>{'[a, b]'}</MathInline> is integrable. The proof constructs step function
+        <InlineMath>{'[a, b]'}</InlineMath> is integrable. The proof constructs step function
         approximations using equal partitions and shows the gap between upper and lower
-        integrals is <MathInline>{'O(1/n)'}</MathInline>. This result, combined with the
+        integrals is <InlineMath>{'O(1/n)'}</InlineMath>. This result, combined with the
         additivity property, means that piecewise monotonic functions (including polynomials)
         are integrable, covering most functions encountered in practice.
       </p>

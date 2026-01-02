@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Math as MathInline, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section77() {
@@ -18,23 +18,23 @@ export default function Section77() {
 
       <Callout type="definition" title="Linear Span">
         <p>
-          Let <MathInline>{`\\mathbf{v}_1, \\mathbf{v}_2, \\ldots, \\mathbf{v}_k`}</MathInline> be vectors
-          in <MathInline>{`\\mathbb{R}^n`}</MathInline>. The <strong>span</strong> (or <strong>linear span</strong>)
+          Let <InlineMath>{`\\mathbf{v}_1, \\mathbf{v}_2, \\ldots, \\mathbf{v}_k`}</InlineMath> be vectors
+          in <InlineMath>{`\\mathbb{R}^n`}</InlineMath>. The <strong>span</strong> (or <strong>linear span</strong>)
           of these vectors is the set of all linear combinations:
         </p>
         <MathBlock>{`\\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\} = \\{c_1\\mathbf{v}_1 + c_2\\mathbf{v}_2 + \\cdots + c_k\\mathbf{v}_k : c_1, \\ldots, c_k \\in \\mathbb{R}\\}`}</MathBlock>
       </Callout>
 
       <p>
-        A vector <MathInline>{`\\mathbf{w}`}</MathInline> is in the span if and only if there exist
-        scalars <MathInline>{`c_1, \\ldots, c_k`}</MathInline> such
-        that <MathInline>{`\\mathbf{w} = c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k`}</MathInline>.
+        A vector <InlineMath>{`\\mathbf{w}`}</InlineMath> is in the span if and only if there exist
+        scalars <InlineMath>{`c_1, \\ldots, c_k`}</InlineMath> such
+        that <InlineMath>{`\\mathbf{w} = c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k`}</InlineMath>.
       </p>
 
       <h2>Examples in ℝ²</h2>
 
       <Callout type="example" title="Span of One Vector">
-        <p>Let <MathInline>{`\\mathbf{v} = (1, 2)`}</MathInline>. Then:</p>
+        <p>Let <InlineMath>{`\\mathbf{v} = (1, 2)`}</InlineMath>. Then:</p>
         <MathBlock>{`\\text{span}\\{(1, 2)\\} = \\{c(1, 2) : c \\in \\mathbb{R}\\} = \\{(c, 2c) : c \\in \\mathbb{R}\\}`}</MathBlock>
         <p>
           This is the line through the origin with slope 2. Geometrically, the span of a single
@@ -43,31 +43,31 @@ export default function Section77() {
       </Callout>
 
       <Callout type="example" title="Span of Two Vectors">
-        <p>Let <MathInline>{`\\mathbf{v}_1 = (1, 0)`}</MathInline> and <MathInline>{`\\mathbf{v}_2 = (0, 1)`}</MathInline>.</p>
+        <p>Let <InlineMath>{`\\mathbf{v}_1 = (1, 0)`}</InlineMath> and <InlineMath>{`\\mathbf{v}_2 = (0, 1)`}</InlineMath>.</p>
         <MathBlock>{`\\text{span}\\{(1, 0), (0, 1)\\} = \\{c_1(1, 0) + c_2(0, 1) : c_1, c_2 \\in \\mathbb{R}\\} = \\{(c_1, c_2) : c_1, c_2 \\in \\mathbb{R}\\}`}</MathBlock>
-        <p>This equals all of <MathInline>{`\\mathbb{R}^2`}</MathInline>. We say these vectors <strong>span</strong> <MathInline>{`\\mathbb{R}^2`}</MathInline>.</p>
+        <p>This equals all of <InlineMath>{`\\mathbb{R}^2`}</InlineMath>. We say these vectors <strong>span</strong> <InlineMath>{`\\mathbb{R}^2`}</InlineMath>.</p>
       </Callout>
 
       <Callout type="example" title="Two Vectors That Don't Span ℝ²">
-        <p>Let <MathInline>{`\\mathbf{v}_1 = (1, 2)`}</MathInline> and <MathInline>{`\\mathbf{v}_2 = (2, 4)`}</MathInline>.</p>
+        <p>Let <InlineMath>{`\\mathbf{v}_1 = (1, 2)`}</InlineMath> and <InlineMath>{`\\mathbf{v}_2 = (2, 4)`}</InlineMath>.</p>
         <p>
-          Note that <MathInline>{`\\mathbf{v}_2 = 2\\mathbf{v}_1`}</MathInline>. Any linear combination is:
+          Note that <InlineMath>{`\\mathbf{v}_2 = 2\\mathbf{v}_1`}</InlineMath>. Any linear combination is:
         </p>
         <MathBlock>{`c_1(1, 2) + c_2(2, 4) = (c_1 + 2c_2)(1, 2)`}</MathBlock>
         <p>
-          This is still just a scalar multiple of <MathInline>{`(1, 2)`}</MathInline>, so the span is
-          the same line as before—not all of <MathInline>{`\\mathbb{R}^2`}</MathInline>.
+          This is still just a scalar multiple of <InlineMath>{`(1, 2)`}</InlineMath>, so the span is
+          the same line as before—not all of <InlineMath>{`\\mathbb{R}^2`}</InlineMath>.
         </p>
       </Callout>
 
       <h2>Geometric Interpretation</h2>
 
       <Callout type="info" title="Spans in ℝ³">
-        <p>In <MathInline>{`\\mathbb{R}^3`}</MathInline>, the span of vectors can be:</p>
+        <p>In <InlineMath>{`\\mathbb{R}^3`}</InlineMath>, the span of vectors can be:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>One nonzero vector:</strong> A line through the origin</li>
           <li><strong>Two non-parallel vectors:</strong> A plane through the origin</li>
-          <li><strong>Three vectors (not all in one plane):</strong> All of <MathInline>{`\\mathbb{R}^3`}</MathInline></li>
+          <li><strong>Three vectors (not all in one plane):</strong> All of <InlineMath>{`\\mathbb{R}^3`}</InlineMath></li>
         </ul>
         <p>
           Adding more vectors beyond what's needed to span the space doesn't increase the span.
@@ -75,68 +75,68 @@ export default function Section77() {
       </Callout>
 
       <Callout type="example" title="A Plane in ℝ³">
-        <p>Let <MathInline>{`\\mathbf{v}_1 = (1, 0, 1)`}</MathInline> and <MathInline>{`\\mathbf{v}_2 = (0, 1, 1)`}</MathInline>.</p>
+        <p>Let <InlineMath>{`\\mathbf{v}_1 = (1, 0, 1)`}</InlineMath> and <InlineMath>{`\\mathbf{v}_2 = (0, 1, 1)`}</InlineMath>.</p>
         <MathBlock>{`\\text{span}\\{\\mathbf{v}_1, \\mathbf{v}_2\\} = \\{(c_1, c_2, c_1 + c_2) : c_1, c_2 \\in \\mathbb{R}\\}`}</MathBlock>
         <p>
-          This is the plane <MathInline>{`z = x + y`}</MathInline> (passing through the origin).
-          Any point <MathInline>{`(a, b, c)`}</MathInline> is in this span iff <MathInline>{`c = a + b`}</MathInline>.
+          This is the plane <InlineMath>{`z = x + y`}</InlineMath> (passing through the origin).
+          Any point <InlineMath>{`(a, b, c)`}</InlineMath> is in this span iff <InlineMath>{`c = a + b`}</InlineMath>.
         </p>
       </Callout>
 
       <h2>Testing if a Vector is in a Span</h2>
 
       <p>
-        To determine if <MathInline>{`\\mathbf{w}`}</MathInline> is in <MathInline>{`\\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\}`}</MathInline>,
-        we solve the equation <MathInline>{`c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k = \\mathbf{w}`}</MathInline> for
-        the scalars <MathInline>{`c_i`}</MathInline>.
+        To determine if <InlineMath>{`\\mathbf{w}`}</InlineMath> is in <InlineMath>{`\\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\}`}</InlineMath>,
+        we solve the equation <InlineMath>{`c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k = \\mathbf{w}`}</InlineMath> for
+        the scalars <InlineMath>{`c_i`}</InlineMath>.
       </p>
 
       <Callout type="example" title="Is (5, 7) in the Span?">
         <p>
-          Is <MathInline>{`(5, 7)`}</MathInline> in <MathInline>{`\\text{span}\\{(1, 2), (3, 1)\\}`}</MathInline>?
+          Is <InlineMath>{`(5, 7)`}</InlineMath> in <InlineMath>{`\\text{span}\\{(1, 2), (3, 1)\\}`}</InlineMath>?
         </p>
-        <p><strong>Solution:</strong> We need <MathInline>{`c_1`}</MathInline> and <MathInline>{`c_2`}</MathInline> such that:</p>
+        <p><strong>Solution:</strong> We need <InlineMath>{`c_1`}</InlineMath> and <InlineMath>{`c_2`}</InlineMath> such that:</p>
         <MathBlock>{`c_1(1, 2) + c_2(3, 1) = (5, 7)`}</MathBlock>
         <p>This gives the system:</p>
         <MathBlock>{`c_1 + 3c_2 = 5`}</MathBlock>
         <MathBlock>{`2c_1 + c_2 = 7`}</MathBlock>
-        <p>From the first equation: <MathInline>{`c_1 = 5 - 3c_2`}</MathInline>. Substituting:</p>
+        <p>From the first equation: <InlineMath>{`c_1 = 5 - 3c_2`}</InlineMath>. Substituting:</p>
         <MathBlock>{`2(5 - 3c_2) + c_2 = 7 \\implies 10 - 5c_2 = 7 \\implies c_2 = \\frac{3}{5}`}</MathBlock>
         <MathBlock>{`c_1 = 5 - 3 \\cdot \\frac{3}{5} = 5 - \\frac{9}{5} = \\frac{16}{5}`}</MathBlock>
         <p>
-          Yes, <MathInline>{`(5, 7) = \\frac{16}{5}(1, 2) + \\frac{3}{5}(3, 1)`}</MathInline> is in the span.
+          Yes, <InlineMath>{`(5, 7) = \\frac{16}{5}(1, 2) + \\frac{3}{5}(3, 1)`}</InlineMath> is in the span.
         </p>
       </Callout>
 
       <Callout type="example" title="A Vector Not in the Span">
         <p>
-          Is <MathInline>{`(1, 2, 3)`}</MathInline> in <MathInline>{`\\text{span}\\{(1, 0, 1), (0, 1, 1)\\}`}</MathInline>?
+          Is <InlineMath>{`(1, 2, 3)`}</InlineMath> in <InlineMath>{`\\text{span}\\{(1, 0, 1), (0, 1, 1)\\}`}</InlineMath>?
         </p>
         <p><strong>Solution:</strong> We need:</p>
         <MathBlock>{`c_1(1, 0, 1) + c_2(0, 1, 1) = (1, 2, 3)`}</MathBlock>
         <p>This gives:</p>
         <MathBlock>{`c_1 = 1, \\quad c_2 = 2, \\quad c_1 + c_2 = 3`}</MathBlock>
-        <p>Check: <MathInline>{`c_1 + c_2 = 1 + 2 = 3`}</MathInline> ✓</p>
+        <p>Check: <InlineMath>{`c_1 + c_2 = 1 + 2 = 3`}</InlineMath> ✓</p>
         <p>
-          Yes! <MathInline>{`(1, 2, 3) = 1 \\cdot (1, 0, 1) + 2 \\cdot (0, 1, 1)`}</MathInline>.
+          Yes! <InlineMath>{`(1, 2, 3) = 1 \\cdot (1, 0, 1) + 2 \\cdot (0, 1, 1)`}</InlineMath>.
         </p>
       </Callout>
 
       <h2>Properties of Span</h2>
 
       <Callout type="theorem" title="Properties of the Span">
-        <p>For vectors in <MathInline>{`\\mathbb{R}^n`}</MathInline>:</p>
+        <p>For vectors in <InlineMath>{`\\mathbb{R}^n`}</InlineMath>:</p>
         <ol className="list-decimal pl-6 space-y-2">
-          <li>The span always contains the zero vector (take all <MathInline>{`c_i = 0`}</MathInline>)</li>
-          <li>Each <MathInline>{`\\mathbf{v}_i`}</MathInline> is in its own span (take <MathInline>{`c_i = 1`}</MathInline>, others 0)</li>
-          <li>The span is <strong>closed under addition</strong>: if <MathInline>{`\\mathbf{u}, \\mathbf{w} \\in \\text{span}`}</MathInline>, then <MathInline>{`\\mathbf{u} + \\mathbf{w} \\in \\text{span}`}</MathInline></li>
-          <li>The span is <strong>closed under scalar multiplication</strong>: if <MathInline>{`\\mathbf{u} \\in \\text{span}`}</MathInline>, then <MathInline>{`c\\mathbf{u} \\in \\text{span}`}</MathInline></li>
-          <li><MathInline>{`\\text{span}\\{\\mathbf{0}\\} = \\{\\mathbf{0}\\}`}</MathInline></li>
+          <li>The span always contains the zero vector (take all <InlineMath>{`c_i = 0`}</InlineMath>)</li>
+          <li>Each <InlineMath>{`\\mathbf{v}_i`}</InlineMath> is in its own span (take <InlineMath>{`c_i = 1`}</InlineMath>, others 0)</li>
+          <li>The span is <strong>closed under addition</strong>: if <InlineMath>{`\\mathbf{u}, \\mathbf{w} \\in \\text{span}`}</InlineMath>, then <InlineMath>{`\\mathbf{u} + \\mathbf{w} \\in \\text{span}`}</InlineMath></li>
+          <li>The span is <strong>closed under scalar multiplication</strong>: if <InlineMath>{`\\mathbf{u} \\in \\text{span}`}</InlineMath>, then <InlineMath>{`c\\mathbf{u} \\in \\text{span}`}</InlineMath></li>
+          <li><InlineMath>{`\\text{span}\\{\\mathbf{0}\\} = \\{\\mathbf{0}\\}`}</InlineMath></li>
         </ol>
       </Callout>
 
       <p>
-        Properties 3 and 4 say that the span is a <strong>subspace</strong> of <MathInline>{`\\mathbb{R}^n`}</MathInline>—a
+        Properties 3 and 4 say that the span is a <strong>subspace</strong> of <InlineMath>{`\\mathbb{R}^n`}</InlineMath>—a
         subset that is itself a vector space under the same operations.
       </p>
 
@@ -144,18 +144,18 @@ export default function Section77() {
 
       <Callout type="definition" title="Spanning Set">
         <p>
-          A set of vectors <MathInline>{`\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\}`}</MathInline> is a <strong>spanning
-          set</strong> for <MathInline>{`\\mathbb{R}^n`}</MathInline> if <MathInline>{`\\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\} = \\mathbb{R}^n`}</MathInline>.
+          A set of vectors <InlineMath>{`\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\}`}</InlineMath> is a <strong>spanning
+          set</strong> for <InlineMath>{`\\mathbb{R}^n`}</InlineMath> if <InlineMath>{`\\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\} = \\mathbb{R}^n`}</InlineMath>.
         </p>
         <p>
-          Equivalently, every vector in <MathInline>{`\\mathbb{R}^n`}</MathInline> can be written as a linear
-          combination of <MathInline>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_k`}</MathInline>.
+          Equivalently, every vector in <InlineMath>{`\\mathbb{R}^n`}</InlineMath> can be written as a linear
+          combination of <InlineMath>{`\\mathbf{v}_1, \\ldots, \\mathbf{v}_k`}</InlineMath>.
         </p>
       </Callout>
 
       <Callout type="example" title="Standard Basis Spans ℝⁿ">
         <p>
-          The standard basis vectors <MathInline>{`\\{\\mathbf{e}_1, \\ldots, \\mathbf{e}_n\\}`}</MathInline> span <MathInline>{`\\mathbb{R}^n`}</MathInline>:
+          The standard basis vectors <InlineMath>{`\\{\\mathbf{e}_1, \\ldots, \\mathbf{e}_n\\}`}</InlineMath> span <InlineMath>{`\\mathbb{R}^n`}</InlineMath>:
         </p>
         <MathBlock>{`(x_1, \\ldots, x_n) = x_1\\mathbf{e}_1 + \\cdots + x_n\\mathbf{e}_n`}</MathBlock>
         <p>Every vector is uniquely expressible as a linear combination of standard basis vectors.</p>
@@ -163,37 +163,37 @@ export default function Section77() {
 
       <Callout type="example" title="Another Spanning Set for ℝ²">
         <p>
-          The vectors <MathInline>{`(1, 1)`}</MathInline> and <MathInline>{`(1, -1)`}</MathInline> also span <MathInline>{`\\mathbb{R}^2`}</MathInline>.
+          The vectors <InlineMath>{`(1, 1)`}</InlineMath> and <InlineMath>{`(1, -1)`}</InlineMath> also span <InlineMath>{`\\mathbb{R}^2`}</InlineMath>.
         </p>
-        <p>To express <MathInline>{`(a, b)`}</MathInline>:</p>
+        <p>To express <InlineMath>{`(a, b)`}</InlineMath>:</p>
         <MathBlock>{`c_1(1, 1) + c_2(1, -1) = (a, b)`}</MathBlock>
         <MathBlock>{`c_1 + c_2 = a, \\quad c_1 - c_2 = b`}</MathBlock>
-        <p>Solving: <MathInline>{`c_1 = (a+b)/2`}</MathInline>, <MathInline>{`c_2 = (a-b)/2`}</MathInline>.</p>
+        <p>Solving: <InlineMath>{`c_1 = (a+b)/2`}</InlineMath>, <InlineMath>{`c_2 = (a-b)/2`}</InlineMath>.</p>
         <p>
-          For any <MathInline>{`(a, b)`}</MathInline>, we can find such <MathInline>{`c_1, c_2`}</MathInline>,
-          so the span is all of <MathInline>{`\\mathbb{R}^2`}</MathInline>.
+          For any <InlineMath>{`(a, b)`}</InlineMath>, we can find such <InlineMath>{`c_1, c_2`}</InlineMath>,
+          so the span is all of <InlineMath>{`\\mathbb{R}^2`}</InlineMath>.
         </p>
       </Callout>
 
       <h2>When Do Vectors Span ℝⁿ?</h2>
 
       <Callout type="theorem" title="Spanning ℝⁿ">
-        <p>To span <MathInline>{`\\mathbb{R}^n`}</MathInline>, you need:</p>
+        <p>To span <InlineMath>{`\\mathbb{R}^n`}</InlineMath>, you need:</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>At least <MathInline>{`n`}</MathInline> vectors</li>
+          <li>At least <InlineMath>{`n`}</InlineMath> vectors</li>
           <li>The vectors must be "independent enough" (no redundancy)</li>
         </ul>
         <p>
-          Specifically, <MathInline>{`k`}</MathInline> vectors span <MathInline>{`\\mathbb{R}^n`}</MathInline> iff <MathInline>{`k \\geq n`}</MathInline> and
+          Specifically, <InlineMath>{`k`}</InlineMath> vectors span <InlineMath>{`\\mathbb{R}^n`}</InlineMath> iff <InlineMath>{`k \\geq n`}</InlineMath> and
           the vectors are not all contained in a proper subspace.
         </p>
       </Callout>
 
       <Callout type="example" title="Minimum Spanning Sets">
         <ul className="list-disc pl-6 space-y-2">
-          <li><MathInline>{`\\mathbb{R}^2`}</MathInline> requires at least 2 non-parallel vectors</li>
-          <li><MathInline>{`\\mathbb{R}^3`}</MathInline> requires at least 3 vectors not all in a plane</li>
-          <li><MathInline>{`\\mathbb{R}^n`}</MathInline> requires at least <MathInline>{`n`}</MathInline> vectors in "general position"</li>
+          <li><InlineMath>{`\\mathbb{R}^2`}</InlineMath> requires at least 2 non-parallel vectors</li>
+          <li><InlineMath>{`\\mathbb{R}^3`}</InlineMath> requires at least 3 vectors not all in a plane</li>
+          <li><InlineMath>{`\\mathbb{R}^n`}</InlineMath> requires at least <InlineMath>{`n`}</InlineMath> vectors in "general position"</li>
         </ul>
       </Callout>
 
@@ -205,15 +205,15 @@ export default function Section77() {
 
       <Callout type="theorem" title="Removing Redundant Vectors">
         <p>
-          If <MathInline>{`\\mathbf{v}_k \\in \\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_{k-1}\\}`}</MathInline>, then:
+          If <InlineMath>{`\\mathbf{v}_k \\in \\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_{k-1}\\}`}</InlineMath>, then:
         </p>
         <MathBlock>{`\\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\} = \\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_{k-1}\\}`}</MathBlock>
       </Callout>
 
       <Callout type="example" title="A Redundant Vector">
-        <p>Consider <MathInline>{`\\{(1, 0), (0, 1), (1, 1)\\}`}</MathInline> in <MathInline>{`\\mathbb{R}^2`}</MathInline>.</p>
+        <p>Consider <InlineMath>{`\\{(1, 0), (0, 1), (1, 1)\\}`}</InlineMath> in <InlineMath>{`\\mathbb{R}^2`}</InlineMath>.</p>
         <p>
-          Since <MathInline>{`(1, 1) = (1, 0) + (0, 1)`}</MathInline>, the third vector is redundant:
+          Since <InlineMath>{`(1, 1) = (1, 0) + (0, 1)`}</InlineMath>, the third vector is redundant:
         </p>
         <MathBlock>{`\\text{span}\\{(1, 0), (0, 1), (1, 1)\\} = \\text{span}\\{(1, 0), (0, 1)\\} = \\mathbb{R}^2`}</MathBlock>
       </Callout>
@@ -221,15 +221,15 @@ export default function Section77() {
       <h2>Summary</h2>
 
       <Callout type="info" title="Key Concepts">
-        <p><strong>Span:</strong> <MathInline>{`\\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\} = \\{c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k\\}`}</MathInline></p>
+        <p><strong>Span:</strong> <InlineMath>{`\\text{span}\\{\\mathbf{v}_1, \\ldots, \\mathbf{v}_k\\} = \\{c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k\\}`}</InlineMath></p>
         <p><strong>Geometric meaning:</strong></p>
         <ul className="list-disc pl-6 space-y-1">
           <li>One nonzero vector spans a line</li>
           <li>Two non-parallel vectors span a plane</li>
-          <li><MathInline>{`n`}</MathInline> "independent" vectors span <MathInline>{`\\mathbb{R}^n`}</MathInline></li>
+          <li><InlineMath>{`n`}</InlineMath> "independent" vectors span <InlineMath>{`\\mathbb{R}^n`}</InlineMath></li>
         </ul>
-        <p><strong>Testing membership:</strong> Solve <MathInline>{`c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k = \\mathbf{w}`}</MathInline> for scalars</p>
-        <p><strong>Properties:</strong> Span contains <MathInline>{`\\mathbf{0}`}</MathInline>, closed under + and scalar ×</p>
+        <p><strong>Testing membership:</strong> Solve <InlineMath>{`c_1\\mathbf{v}_1 + \\cdots + c_k\\mathbf{v}_k = \\mathbf{w}`}</InlineMath> for scalars</p>
+        <p><strong>Properties:</strong> Span contains <InlineMath>{`\\mathbf{0}`}</InlineMath>, closed under + and scalar ×</p>
         <p><strong>Spanning set:</strong> Vectors whose span equals the entire space</p>
       </Callout>
     </LessonLayout>
