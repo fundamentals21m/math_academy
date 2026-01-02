@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section00Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'According to Euclid, what is a point?',
+    options: [
+      'That which has no part',
+      'A breadthless length',
+      'The intersection of two lines',
+      'A location with coordinates'
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Definition 1 states: "A point is that which has no part." This means a point has no dimension—no length, width, or depth.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What does Postulate 5 (the Parallel Postulate) state about two lines cut by a transversal?',
+    options: [
+      'They are always parallel',
+      'They meet on the side where interior angles sum to less than two right angles',
+      'They never meet',
+      'They form equal alternate angles'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Postulate 5 states that if interior angles on one side sum to less than two right angles, the lines will meet on that side if extended.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Common Notion 1 states: "Things which are equal to the same thing are also..."',
+    options: [
+      'Greater than each other',
+      'Parallel to each other',
+      'Equal to one another',
+      'Similar to each other'
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Common Notion 1 establishes transitivity of equality: if A = C and B = C, then A = B.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'According to Euclid\'s definitions, what is a right angle?',
+    options: [
+      'An angle of exactly 90 degrees',
+      'When a straight line standing on another makes adjacent angles equal to one another',
+      'The angle in a semicircle',
+      'Half of a straight angle'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Definition 10: When a straight line standing on a straight line makes the adjacent angles equal, each is a right angle.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Which postulate allows us to draw a circle with any center and any radius?',
+    options: [
+      'Postulate 1',
+      'Postulate 2',
+      'Postulate 3',
+      'Postulate 4'
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Postulate 3: "To describe a circle with any centre and distance."',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What does Common Notion 5 state?',
+    options: [
+      'Equals added to equals give equals',
+      'Equals subtracted from equals give equals',
+      'The whole is greater than the part',
+      'Things equal to the same thing are equal to each other'
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Common Notion 5: "The whole is greater than the part." This fundamental axiom underlies many geometric proofs.',
+  },
+];
