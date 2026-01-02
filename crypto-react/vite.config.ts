@@ -5,7 +5,7 @@ import path from 'path'
 // =============================================================================
 // COURSE CONFIGURATION - Cryptography Mathematics
 // =============================================================================
-const BASE_PATH = '/cryptography/'
+const BASE_PATH = '/'
 // =============================================================================
 
 export default defineConfig({
