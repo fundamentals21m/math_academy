@@ -32,29 +32,29 @@ export default function Section00() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Definition: Congruence</h3>
         <p className="text-dark-200 mb-4">
-          Two integers <InlineMath>a</InlineMath> and <InlineMath>b</InlineMath> are said to be{' '}
-          <strong>congruent modulo</strong> <InlineMath>m</InlineMath> if their difference{' '}
-          <InlineMath>a - b</InlineMath> is divisible by <InlineMath>m</InlineMath>. We write:
+          Two integers <InlineMath>{`a`}</InlineMath> and <InlineMath>{`b`}</InlineMath> are said to be{' '}
+          <strong>congruent modulo</strong> <InlineMath>{`m`}</InlineMath> if their difference{' '}
+          <InlineMath>{`a - b`}</InlineMath> is divisible by <InlineMath>{`m`}</InlineMath>. We write:
         </p>
         <MathBlock>{`a \\equiv b \\pmod{m}`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          The number <InlineMath>m</InlineMath> is called the <strong>modulus</strong>.
+          The number <InlineMath>{`m`}</InlineMath> is called the <strong>modulus</strong>.
         </p>
       </div>
 
       <p>
-        For example, <InlineMath>17 \equiv 5 \pmod{12}</InlineMath> because{' '}
-        <InlineMath>17 - 5 = 12</InlineMath>, which is divisible by 12. Another way to think
+        For example, <InlineMath>{`17 \\equiv 5 \\pmod{12}`}</InlineMath> because{' '}
+        <InlineMath>{`17 - 5 = 12`}</InlineMath>, which is divisible by 12. Another way to think
         about it: 17 and 5 leave the same remainder when divided by 12.
       </p>
 
       <h2>Residues and Non-Residues</h2>
 
       <p>
-        When <InlineMath>a \equiv b \pmod{m}</InlineMath>, Gauss says that{' '}
-        <InlineMath>b</InlineMath> is a <strong>residue</strong> of{' '}
-        <InlineMath>a</InlineMath> with respect to the modulus <InlineMath>m</InlineMath>.
-        Any integer that is <em>not</em> congruent to <InlineMath>a</InlineMath> is called
+        When <InlineMath>{`a \\equiv b \\pmod{m}`}</InlineMath>, Gauss says that{' '}
+        <InlineMath>{`b`}</InlineMath> is a <strong>residue</strong> of{' '}
+        <InlineMath>{`a`}</InlineMath> with respect to the modulus <InlineMath>{`m`}</InlineMath>.
+        Any integer that is <em>not</em> congruent to <InlineMath>{`a`}</InlineMath> is called
         a <strong>non-residue</strong>.
       </p>
 
@@ -83,19 +83,19 @@ export default function Section00() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">Least Positive Residue</h3>
         <p className="text-dark-200 mb-2">
-          For any integer <InlineMath>a</InlineMath> and positive modulus <InlineMath>m</InlineMath>,
-          there is a unique integer <InlineMath>r</InlineMath> such that:
+          For any integer <InlineMath>{`a`}</InlineMath> and positive modulus <InlineMath>{`m`}</InlineMath>,
+          there is a unique integer <InlineMath>{`r`}</InlineMath> such that:
         </p>
         <MathBlock>{`a \\equiv r \\pmod{m} \\quad \\text{and} \\quad 0 \\le r < m`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          This is simply the <strong>remainder</strong> when <InlineMath>a</InlineMath> is
-          divided by <InlineMath>m</InlineMath>.
+          This is simply the <strong>remainder</strong> when <InlineMath>{`a`}</InlineMath> is
+          divided by <InlineMath>{`m`}</InlineMath>.
         </p>
       </div>
 
       <p>
         Gauss also considers the <strong>least absolute residue</strong>: the residue{' '}
-        <InlineMath>r</InlineMath> with <InlineMath>{`-m/2 < r \\le m/2`}</InlineMath>.
+        <InlineMath>{`r`}</InlineMath> with <InlineMath>{`-m/2 < r \\le m/2`}</InlineMath>.
         This is often more convenient for calculations.
       </p>
 
@@ -141,8 +141,8 @@ export default function Section00() {
 
       <Callout type="warning">
         <strong>Caution with Division:</strong> Unlike addition and multiplication, you cannot
-        always "divide" congruences. If <InlineMath>ac \equiv bc \pmod{m}</InlineMath>,
-        it does <em>not</em> necessarily follow that <InlineMath>a \equiv b \pmod{m}</InlineMath>.
+        always "divide" congruences. If <InlineMath>{`ac \\equiv bc \\pmod{m}`}</InlineMath>,
+        it does <em>not</em> necessarily follow that <InlineMath>{`a \\equiv b \\pmod{m}`}</InlineMath>.
         This subtlety is addressed in Section II.
       </Callout>
 
@@ -166,11 +166,11 @@ export default function Section00() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Example: Divisibility by 9</h3>
         <p className="text-dark-200 mb-4">
-          Since <InlineMath>10 \equiv 1 \pmod{9}</InlineMath>, we have{' '}
-          <InlineMath>10^n \equiv 1 \pmod{9}</InlineMath> for all <InlineMath>n</InlineMath>.
+          Since <InlineMath>{`10 \\equiv 1 \\pmod{9}`}</InlineMath>, we have{' '}
+          <InlineMath>{`10^n \\equiv 1 \\pmod{9}`}</InlineMath> for all <InlineMath>{`n`}</InlineMath>.
         </p>
         <p className="text-dark-200 mb-4">
-          Therefore, a number written in decimal as <InlineMath>d_n d_{'{n-1}'} \cdots d_1 d_0</InlineMath> satisfies:
+          Therefore, a number written in decimal as <InlineMath>{`d_n d_{n-1} \\cdots d_1 d_0`}</InlineMath> satisfies:
         </p>
         <MathBlock>{`d_n \\cdot 10^n + d_{n-1} \\cdot 10^{n-1} + \\cdots + d_1 \\cdot 10 + d_0 \\equiv d_n + d_{n-1} + \\cdots + d_1 + d_0 \\pmod{9}`}</MathBlock>
         <p className="text-dark-300 mt-4">
@@ -182,7 +182,7 @@ export default function Section00() {
 
       <p>
         Before Gauss, mathematicians described divisibility relationships verbally. By introducing
-        the <InlineMath>\equiv</InlineMath> notation and treating congruence as a relation with
+        the <InlineMath>{`\\equiv`}</InlineMath> notation and treating congruence as a relation with
         algebraic properties, Gauss made number theory vastly more systematic and powerful.
       </p>
 
@@ -201,7 +201,7 @@ export default function Section00() {
 
       <Callout type="success">
         <strong>Looking Ahead:</strong> In the next section, we'll explore how Gauss solves
-        linear congruences—equations of the form <InlineMath>ax \equiv b \pmod{m}</InlineMath>—and
+        linear congruences—equations of the form <InlineMath>{`ax \\equiv b \\pmod{m}`}</InlineMath>—and
         discover the powerful Chinese Remainder Theorem.
       </Callout>
     </LessonLayout>

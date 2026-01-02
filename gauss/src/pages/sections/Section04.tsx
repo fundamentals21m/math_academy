@@ -1,5 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout, MathBlock, InlineMath } from '@/components/common';
+import { BinaryQuadraticFormExplorer } from '@/components/visualizations';
 
 export default function Section04() {
   return (
@@ -9,7 +10,7 @@ export default function Section04() {
       <p>
         Section V is the longest and most ambitious part of the Disquisitiones. Here
         Gauss develops a comprehensive theory of <strong>binary quadratic forms</strong>—expressions
-        of the form <InlineMath>ax^2 + bxy + cy^2</InlineMath>. This theory answers
+        of the form <InlineMath>{`ax^2 + bxy + cy^2`}</InlineMath>. This theory answers
         fundamental questions about which integers can be represented as sums of squares,
         and much more.
       </p>
@@ -23,14 +24,14 @@ export default function Section04() {
         </p>
         <MathBlock>{`f(x, y) = ax^2 + bxy + cy^2`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          where <InlineMath>a, b, c</InlineMath> are integers. Gauss writes this as{' '}
-          <InlineMath>(a, b, c)</InlineMath>.
+          where <InlineMath>{`a, b, c`}</InlineMath> are integers. Gauss writes this as{' '}
+          <InlineMath>{`(a, b, c)`}</InlineMath>.
         </p>
       </div>
 
       <p>
         The <strong>discriminant</strong> (which Gauss calls the "determinant") is the
-        quantity <InlineMath>D = b^2 - 4ac</InlineMath>. It governs many properties of
+        quantity <InlineMath>{`D = b^2 - 4ac`}</InlineMath>. It governs many properties of
         the form.
       </p>
 
@@ -53,18 +54,27 @@ export default function Section04() {
         </div>
       </div>
 
+      <h2>Try It: Binary Quadratic Form Explorer</h2>
+
+      <p>
+        Explore which integers can be represented by different binary quadratic forms.
+        See how the coefficients affect which numbers are representable:
+      </p>
+
+      <BinaryQuadraticFormExplorer className="my-6" />
+
       <h2>Representation of Integers</h2>
 
       <p>
-        A central question: Given a form <InlineMath>f</InlineMath>, which integers{' '}
-        <InlineMath>n</InlineMath> can be <strong>represented</strong> by <InlineMath>f</InlineMath>?
-        That is, for which <InlineMath>n</InlineMath> does{' '}
-        <InlineMath>f(x, y) = n</InlineMath> have integer solutions?
+        A central question: Given a form <InlineMath>{`f`}</InlineMath>, which integers{' '}
+        <InlineMath>{`n`}</InlineMath> can be <strong>represented</strong> by <InlineMath>{`f`}</InlineMath>?
+        That is, for which <InlineMath>{`n`}</InlineMath> does{' '}
+        <InlineMath>{`f(x, y) = n`}</InlineMath> have integer solutions?
       </p>
 
       <Callout type="info">
         <strong>Classical Questions:</strong> Which integers are sums of two squares?
-        Which are of the form <InlineMath>x^2 + 2y^2</InlineMath>? These ancient problems
+        Which are of the form <InlineMath>{`x^2 + 2y^2`}</InlineMath>? These ancient problems
         are special cases of Gauss's general theory.
       </Callout>
 
@@ -78,13 +88,13 @@ export default function Section04() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">Equivalence</h3>
         <p className="text-dark-200 mb-4">
-          Two forms <InlineMath>f</InlineMath> and <InlineMath>g</InlineMath> are{' '}
+          Two forms <InlineMath>{`f`}</InlineMath> and <InlineMath>{`g`}</InlineMath> are{' '}
           <strong>equivalent</strong> if one can be transformed into the other by a
           linear substitution:
         </p>
         <MathBlock>{`x = \\alpha x' + \\beta y', \\quad y = \\gamma x' + \\delta y'`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          where <InlineMath>\alpha\delta - \beta\gamma = \pm 1</InlineMath> (the transformation
+          where <InlineMath>{`\alpha\delta - \beta\gamma = \pm 1`}</InlineMath> (the transformation
           has determinant ±1).
         </p>
       </div>
@@ -105,7 +115,7 @@ export default function Section04() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Reduced Forms (D &lt; 0)</h3>
         <p className="text-dark-200 mb-4">
-          For negative discriminant, a form <InlineMath>(a, b, c)</InlineMath> is reduced if:
+          For negative discriminant, a form <InlineMath>{`(a, b, c)`}</InlineMath> is reduced if:
         </p>
         <MathBlock>{`|b| \\le a \\le c`}</MathBlock>
         <p className="text-dark-300 mt-2">
@@ -121,8 +131,8 @@ export default function Section04() {
       <h2>Class Number</h2>
 
       <p>
-        The number of equivalence classes of forms with discriminant <InlineMath>D</InlineMath>{' '}
-        is called the <strong>class number</strong>, denoted <InlineMath>h(D)</InlineMath>.
+        The number of equivalence classes of forms with discriminant <InlineMath>{`D`}</InlineMath>{' '}
+        is called the <strong>class number</strong>, denoted <InlineMath>{`h(D)`}</InlineMath>.
         This is a fundamental invariant studied intensively in algebraic number theory.
       </p>
 
@@ -171,10 +181,10 @@ export default function Section04() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">Composition Idea</h3>
         <p className="text-dark-200 mb-4">
-          If form <InlineMath>f</InlineMath> represents <InlineMath>m</InlineMath> and
-          form <InlineMath>g</InlineMath> represents <InlineMath>n</InlineMath>, then
-          their composition <InlineMath>f \circ g</InlineMath> represents{' '}
-          <InlineMath>mn</InlineMath>.
+          If form <InlineMath>{`f`}</InlineMath> represents <InlineMath>{`m`}</InlineMath> and
+          form <InlineMath>{`g`}</InlineMath> represents <InlineMath>{`n`}</InlineMath>, then
+          their composition <InlineMath>{`f \circ g`}</InlineMath> represents{' '}
+          <InlineMath>{`mn`}</InlineMath>.
         </p>
         <p className="text-dark-300">
           The composition law is associative and commutative, and there is an identity
@@ -201,9 +211,9 @@ export default function Section04() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Two Squares Theorem</h3>
         <p className="text-dark-200">
-          A positive integer <InlineMath>n</InlineMath> is a sum of two squares if and
-          only if every prime factor of the form <InlineMath>4k + 3</InlineMath> appears
-          to an even power in the factorization of <InlineMath>n</InlineMath>.
+          A positive integer <InlineMath>{`n`}</InlineMath> is a sum of two squares if and
+          only if every prime factor of the form <InlineMath>{`4k + 3`}</InlineMath> appears
+          to an even power in the factorization of <InlineMath>{`n`}</InlineMath>.
         </p>
       </div>
 

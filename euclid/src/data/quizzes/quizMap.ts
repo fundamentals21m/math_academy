@@ -2,6 +2,7 @@
  * Quiz Map - Maps section IDs to their quiz questions
  * Book I: Sections 0-48 (Definitions/Postulates/Common Notions + 48 Propositions)
  * Book II: Sections 49-63 (Definitions + 14 Propositions)
+ * Book III: Sections 64-101 (Definitions + 37 Propositions)
  */
 
 import type { QuizQuestion } from './types';
@@ -74,6 +75,46 @@ import { section61Questions } from './section61';
 import { section62Questions } from './section62';
 import { section63Questions } from './section63';
 
+// Book III
+import { section64Questions } from './section64';
+import { section65Questions } from './section65';
+import { section66Questions } from './section66';
+import { section67Questions } from './section67';
+import { section68Questions } from './section68';
+import { section69Questions } from './section69';
+import { section70Questions } from './section70';
+import { section71Questions } from './section71';
+import { section72Questions } from './section72';
+import { section73Questions } from './section73';
+import { section74Questions } from './section74';
+import { section75Questions } from './section75';
+import { section76Questions } from './section76';
+import { section77Questions } from './section77';
+import { section78Questions } from './section78';
+import { section79Questions } from './section79';
+import { section80Questions } from './section80';
+import { section81Questions } from './section81';
+import { section82Questions } from './section82';
+import { section83Questions } from './section83';
+import { section84Questions } from './section84';
+import { section85Questions } from './section85';
+import { section86Questions } from './section86';
+import { section87Questions } from './section87';
+import { section88Questions } from './section88';
+import { section89Questions } from './section89';
+import { section90Questions } from './section90';
+import { section91Questions } from './section91';
+import { section92Questions } from './section92';
+import { section93Questions } from './section93';
+import { section94Questions } from './section94';
+import { section95Questions } from './section95';
+import { section96Questions } from './section96';
+import { section97Questions } from './section97';
+import { section98Questions } from './section98';
+import { section99Questions } from './section99';
+import { section100Questions } from './section100';
+import { section101Questions } from './section101';
+
 const quizMap: Record<number, QuizQuestion[]> = {
   0: section00Questions,
   1: section01Questions,
@@ -140,6 +181,45 @@ const quizMap: Record<number, QuizQuestion[]> = {
   61: section61Questions,
   62: section62Questions,
   63: section63Questions,
+  // Book III
+  64: section64Questions,
+  65: section65Questions,
+  66: section66Questions,
+  67: section67Questions,
+  68: section68Questions,
+  69: section69Questions,
+  70: section70Questions,
+  71: section71Questions,
+  72: section72Questions,
+  73: section73Questions,
+  74: section74Questions,
+  75: section75Questions,
+  76: section76Questions,
+  77: section77Questions,
+  78: section78Questions,
+  79: section79Questions,
+  80: section80Questions,
+  81: section81Questions,
+  82: section82Questions,
+  83: section83Questions,
+  84: section84Questions,
+  85: section85Questions,
+  86: section86Questions,
+  87: section87Questions,
+  88: section88Questions,
+  89: section89Questions,
+  90: section90Questions,
+  91: section91Questions,
+  92: section92Questions,
+  93: section93Questions,
+  94: section94Questions,
+  95: section95Questions,
+  96: section96Questions,
+  97: section97Questions,
+  98: section98Questions,
+  99: section99Questions,
+  100: section100Questions,
+  101: section101Questions,
 };
 
 export function getQuizQuestions(sectionId: number): QuizQuestion[] | null {

@@ -6,6 +6,8 @@ import {
   EuclideanAlgorithmVisualizer,
   PrimitiveRootExplorer,
   QuadraticResidueChecker,
+  BinaryQuadraticFormExplorer,
+  PellEquationSolver,
   ConstructiblePolygonDemo,
 } from '@/components/visualizations';
 
@@ -63,6 +65,26 @@ const modules: InteractiveModule[] = [
     category: 'Quadratic Residues',
     icon: '✓',
     component: QuadraticResidueChecker,
+  },
+  {
+    id: 'binary-quadratic-forms',
+    title: 'Binary Quadratic Form Explorer',
+    description: 'Explore which integers can be represented by ax² + bxy + cy².',
+    sectionId: 4,
+    sectionTitle: 'Binary Quadratic Forms',
+    category: 'Quadratic Forms',
+    icon: '📊',
+    component: BinaryQuadraticFormExplorer,
+  },
+  {
+    id: 'pell-equation',
+    title: 'Pell Equation Solver',
+    description: 'Find solutions to x² - Dy² = 1 using continued fractions.',
+    sectionId: 5,
+    sectionTitle: 'Various Applications',
+    category: 'Diophantine Equations',
+    icon: '🔍',
+    component: PellEquationSolver,
   },
   {
     id: 'constructible-polygons',

@@ -10,7 +10,7 @@ export default function Section01() {
       <p>
         In the second section of the Disquisitiones, Gauss addresses the fundamental
         problem of solving <strong>linear congruences</strong>—equations of the form{' '}
-        <InlineMath>ax \equiv b \pmod{m}</InlineMath>. This seemingly simple question
+        <InlineMath>{`ax \\equiv b \\pmod{m}`}</InlineMath>. This seemingly simple question
         leads to deep insights about divisibility and the structure of integers.
       </p>
 
@@ -31,24 +31,24 @@ export default function Section01() {
       </div>
 
       <p>
-        Gauss also proves the crucial property that if a prime <InlineMath>p</InlineMath>{' '}
-        divides a product <InlineMath>ab</InlineMath>, then <InlineMath>p</InlineMath> must
-        divide at least one of <InlineMath>a</InlineMath> or <InlineMath>b</InlineMath>.
+        Gauss also proves the crucial property that if a prime <InlineMath>{`p`}</InlineMath>{' '}
+        divides a product <InlineMath>{`ab`}</InlineMath>, then <InlineMath>{`p`}</InlineMath> must
+        divide at least one of <InlineMath>{`a`}</InlineMath> or <InlineMath>{`b`}</InlineMath>.
       </p>
 
       <h2>The Greatest Common Divisor</h2>
 
       <p>
         Central to solving linear congruences is the <strong>greatest common divisor</strong>{' '}
-        (GCD). For integers <InlineMath>a</InlineMath> and <InlineMath>b</InlineMath>,
-        the GCD—written <InlineMath>\gcd(a, b)</InlineMath>—is the largest positive integer
+        (GCD). For integers <InlineMath>{`a`}</InlineMath> and <InlineMath>{`b`}</InlineMath>,
+        the GCD—written <InlineMath>{`\gcd(a, b)`}</InlineMath>—is the largest positive integer
         that divides both.
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">The Euclidean Algorithm</h3>
         <p className="text-dark-200 mb-4">
-          To find <InlineMath>\gcd(a, b)</InlineMath>, repeatedly apply the division algorithm:
+          To find <InlineMath>{`\gcd(a, b)`}</InlineMath>, repeatedly apply the division algorithm:
         </p>
         <MathBlock>{`\\begin{aligned}
 a &= bq_1 + r_1 \\quad (0 \\le r_1 < b) \\\\
@@ -58,7 +58,7 @@ r_1 &= r_2 q_3 + r_3 \\quad (0 \\le r_3 < r_2) \\\\
 r_{n-1} &= r_n q_{n+1} + 0
 \\end{aligned}`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          The last non-zero remainder <InlineMath>r_n</InlineMath> is the GCD.
+          The last non-zero remainder <InlineMath>{`r_n`}</InlineMath> is the GCD.
         </p>
       </div>
 
@@ -96,34 +96,34 @@ r_{n-1} &= r_n q_{n+1} + 0
 
       <p>
         Now we can address the main question: When does{' '}
-        <InlineMath>ax \equiv b \pmod{m}</InlineMath> have a solution, and how do we find it?
+        <InlineMath>{`ax \\equiv b \\pmod{m}`}</InlineMath> have a solution, and how do we find it?
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Theorem: Solvability of Linear Congruences</h3>
         <p className="text-dark-200 mb-4">
-          The congruence <InlineMath>ax \equiv b \pmod{m}</InlineMath> has a solution
-          if and only if <InlineMath>\gcd(a, m)</InlineMath> divides <InlineMath>b</InlineMath>.
+          The congruence <InlineMath>{`ax \\equiv b \\pmod{m}`}</InlineMath> has a solution
+          if and only if <InlineMath>{`\gcd(a, m)`}</InlineMath> divides <InlineMath>{`b`}</InlineMath>.
         </p>
         <p className="text-dark-300">
-          When solutions exist, there are exactly <InlineMath>d = \gcd(a, m)</InlineMath>{' '}
-          incongruent solutions modulo <InlineMath>m</InlineMath>.
+          When solutions exist, there are exactly <InlineMath>{`d = \gcd(a, m)`}</InlineMath>{' '}
+          incongruent solutions modulo <InlineMath>{`m`}</InlineMath>.
         </p>
       </div>
 
       <h3>Special Case: When gcd(a, m) = 1</h3>
 
       <p>
-        When <InlineMath>a</InlineMath> and <InlineMath>m</InlineMath> are <strong>coprime</strong>{' '}
-        (their GCD is 1), the congruence <InlineMath>ax \equiv b \pmod{m}</InlineMath> has
-        exactly one solution modulo <InlineMath>m</InlineMath>.
+        When <InlineMath>{`a`}</InlineMath> and <InlineMath>{`m`}</InlineMath> are <strong>coprime</strong>{' '}
+        (their GCD is 1), the congruence <InlineMath>{`ax \\equiv b \\pmod{m}`}</InlineMath> has
+        exactly one solution modulo <InlineMath>{`m`}</InlineMath>.
       </p>
 
       <p>
         In this case, there exists a <strong>modular inverse</strong> of{' '}
-        <InlineMath>a</InlineMath>—an integer <InlineMath>a'</InlineMath> such that{' '}
-        <InlineMath>aa' \equiv 1 \pmod{m}</InlineMath>. The solution is then{' '}
-        <InlineMath>x \equiv a'b \pmod{m}</InlineMath>.
+        <InlineMath>{`a`}</InlineMath>—an integer <InlineMath>{`a'`}</InlineMath> such that{' '}
+        <InlineMath>{`aa' \\equiv 1 \\pmod{m}`}</InlineMath>. The solution is then{' '}
+        <InlineMath>{`x \\equiv a'b \\pmod{m}`}</InlineMath>.
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
@@ -132,16 +132,16 @@ r_{n-1} &= r_n q_{n+1} + 0
           Since gcd(3, 11) = 1, there is a unique solution.
         </p>
         <p className="text-dark-200 mb-2">
-          Find the inverse of 3 mod 11: We need <InlineMath>3a' \equiv 1 \pmod{11}</InlineMath>.
+          Find the inverse of 3 mod 11: We need <InlineMath>{`3a' \\equiv 1 \\pmod{11}`}</InlineMath>.
         </p>
         <p className="text-dark-200 mb-2">
-          Testing: <InlineMath>3 \times 4 = 12 \equiv 1 \pmod{11}</InlineMath>. So <InlineMath>a' = 4</InlineMath>.
+          Testing: <InlineMath>{`3 \\times 4 = 12 \\equiv 1 \\pmod{11}`}</InlineMath>. So <InlineMath>{`a' = 4`}</InlineMath>.
         </p>
         <p className="text-dark-200">
-          Solution: <InlineMath>x \equiv 4 \times 7 = 28 \equiv 6 \pmod{11}</InlineMath>.
+          Solution: <InlineMath>{`x \\equiv 4 \\times 7 = 28 \\equiv 6 \\pmod{11}`}</InlineMath>.
         </p>
         <p className="text-emerald-400 mt-2">
-          Check: <InlineMath>3 \times 6 = 18 = 11 + 7 \equiv 7 \pmod{11}</InlineMath> ✓
+          Check: <InlineMath>{`3 \\times 6 = 18 = 11 + 7 \\equiv 7 \\pmod{11}`}</InlineMath> ✓
         </p>
       </div>
 
@@ -156,8 +156,8 @@ r_{n-1} &= r_n q_{n+1} + 0
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Chinese Remainder Theorem</h3>
         <p className="text-dark-200 mb-4">
-          Let <InlineMath>m_1, m_2, \ldots, m_k</InlineMath> be pairwise coprime positive integers.
-          Then for any integers <InlineMath>a_1, a_2, \ldots, a_k</InlineMath>, the system:
+          Let <InlineMath>{`m_1, m_2, \ldots, m_k`}</InlineMath> be pairwise coprime positive integers.
+          Then for any integers <InlineMath>{`a_1, a_2, \ldots, a_k`}</InlineMath>, the system:
         </p>
         <MathBlock>{`\\begin{aligned}
 x &\\equiv a_1 \\pmod{m_1} \\\\
@@ -166,7 +166,7 @@ x &\\equiv a_2 \\pmod{m_2} \\\\
 x &\\equiv a_k \\pmod{m_k}
 \\end{aligned}`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          has a unique solution modulo <InlineMath>M = m_1 m_2 \cdots m_k</InlineMath>.
+          has a unique solution modulo <InlineMath>{`M = m_1 m_2 \cdots m_k`}</InlineMath>.
         </p>
       </div>
 
@@ -179,16 +179,16 @@ x &\\equiv a_k \\pmod{m_k}
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">Example: Sun Tzu's Problem</h3>
-        <p className="text-dark-200 mb-4">Find <InlineMath>x</InlineMath> such that:</p>
+        <p className="text-dark-200 mb-4">Find <InlineMath>{`x`}</InlineMath> such that:</p>
         <MathBlock>{`x \\equiv 2 \\pmod{3}, \\quad x \\equiv 3 \\pmod{5}, \\quad x \\equiv 2 \\pmod{7}`}</MathBlock>
         <p className="text-dark-200 mt-4">
           Since gcd(3,5) = gcd(3,7) = gcd(5,7) = 1, the moduli are pairwise coprime.
         </p>
         <p className="text-dark-200 mt-2">
-          The solution is unique modulo <InlineMath>3 \times 5 \times 7 = 105</InlineMath>.
+          The solution is unique modulo <InlineMath>{`3 \times 5 \times 7 = 105`}</InlineMath>.
         </p>
         <p className="text-emerald-400 mt-2">
-          Answer: <InlineMath>x \equiv 23 \pmod{105}</InlineMath>
+          Answer: <InlineMath>{`x \\equiv 23 \\pmod{105}`}</InlineMath>
         </p>
         <p className="text-dark-400 text-sm mt-2">
           (Verify: 23 = 7×3 + 2, 23 = 4×5 + 3, 23 = 3×7 + 2 ✓)
@@ -227,7 +227,7 @@ a_2 x + b_2 y &\\equiv c_2 \\pmod{m}
       <Callout type="success">
         <strong>Looking Ahead:</strong> With the foundation of linear congruences established,
         Gauss moves to a more challenging question in Section III: What can we say about
-        the <em>powers</em> of numbers modulo <InlineMath>m</InlineMath>? This leads to
+        the <em>powers</em> of numbers modulo <InlineMath>{`m`}</InlineMath>? This leads to
         primitive roots and Fermat's Little Theorem.
       </Callout>
     </LessonLayout>
