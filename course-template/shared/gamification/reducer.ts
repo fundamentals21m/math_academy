@@ -175,26 +175,38 @@ function handleRecordQuiz(
 
   const newAttempts = [...existing.quizAttempts, newAttempt];
   const updatedSection = { ...existing, quizAttempts: newAttempts };
+  const newMasteryLevel = calculateMastery(updatedSection);
+
+  // Mark section as completed if score >= 80% and not already completed
+  const shouldComplete = score >= 80 && !existing.completedAt;
+  const isNewCompletion = shouldComplete && !state.user.sectionsCompleted.includes(sectionId);
+
+  // Add completion XP if this is a new completion
+  const completionXP = isNewCompletion ? XP_CONFIG.SECTION_COMPLETE : 0;
 
   return {
     ...state,
     user: {
       ...state.user,
-      totalXP: newXP,
-      level: calculateLevel(newXP),
+      totalXP: newXP + completionXP,
+      level: calculateLevel(newXP + completionXP),
       quizzesTaken: state.user.quizzesTaken + 1,
       perfectQuizzes: isPerfect ? state.user.perfectQuizzes + 1 : state.user.perfectQuizzes,
+      sectionsCompleted: isNewCompletion
+        ? [...state.user.sectionsCompleted, sectionId]
+        : state.user.sectionsCompleted,
     },
     sections: {
       ...state.sections,
       [sectionId]: {
         ...updatedSection,
-        masteryLevel: calculateMastery(updatedSection),
+        masteryLevel: newMasteryLevel,
+        completedAt: shouldComplete ? (existing.completedAt || now) : existing.completedAt,
       },
     },
     dailyGoals: {
       ...state.dailyGoals,
-      xpEarned: state.dailyGoals.xpEarned + xpEarned,
+      xpEarned: state.dailyGoals.xpEarned + xpEarned + completionXP,
     },
     lastUpdated: now,
   };

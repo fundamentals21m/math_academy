@@ -163,11 +163,7 @@ function handleRecordQuiz(
   const xpEarned = isPerfect
     ? Math.round(baseXP * (1 + XP_CONFIG.QUIZ_PERFECT_BONUS))
     : baseXP;
-
-  // Add section completion XP if perfect and not already completed
-  const isNewCompletion = isPerfect && !existing.completedAt;
-  const completionXP = isNewCompletion ? XP_CONFIG.SECTION_COMPLETE : 0;
-  const newXP = state.user.totalXP + xpEarned + completionXP;
+  const newXP = state.user.totalXP + xpEarned;
 
   const newAttempt = {
     timestamp: now,
@@ -179,32 +175,34 @@ function handleRecordQuiz(
   };
 
   const newAttempts = [...existing.quizAttempts, newAttempt];
-  const updatedSection = {
-    ...existing,
-    quizAttempts: newAttempts,
-    completedAt: isPerfect ? (existing.completedAt ?? now) : existing.completedAt,
-  };
+  const updatedSection = { ...existing, quizAttempts: newAttempts };
+  const newMasteryLevel = calculateMastery(updatedSection);
 
-  // Add to sectionsCompleted if perfect and not already there
-  const newSectionsCompleted = isNewCompletion
-    ? [...state.user.sectionsCompleted, sectionId]
-    : state.user.sectionsCompleted;
+  // Mark section as completed if score >= 80% and not already completed
+  const shouldComplete = score >= 80 && !existing.completedAt;
+  const isNewCompletion = shouldComplete && !state.user.sectionsCompleted.includes(sectionId);
+
+  // Add completion XP if this is a new completion
+  const completionXP = isNewCompletion ? XP_CONFIG.SECTION_COMPLETE : 0;
 
   return {
     ...state,
     user: {
       ...state.user,
-      totalXP: newXP,
-      level: calculateLevel(newXP),
+      totalXP: newXP + completionXP,
+      level: calculateLevel(newXP + completionXP),
       quizzesTaken: state.user.quizzesTaken + 1,
       perfectQuizzes: isPerfect ? state.user.perfectQuizzes + 1 : state.user.perfectQuizzes,
-      sectionsCompleted: newSectionsCompleted,
+      sectionsCompleted: isNewCompletion
+        ? [...state.user.sectionsCompleted, sectionId]
+        : state.user.sectionsCompleted,
     },
     sections: {
       ...state.sections,
       [sectionId]: {
         ...updatedSection,
-        masteryLevel: calculateMastery(updatedSection),
+        masteryLevel: newMasteryLevel,
+        completedAt: shouldComplete ? (existing.completedAt || now) : existing.completedAt,
       },
     },
     dailyGoals: {
