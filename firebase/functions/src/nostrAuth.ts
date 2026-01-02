@@ -5,6 +5,8 @@ import { sha256 } from '@noble/hashes/sha256';
 import { bytesToHex, hexToBytes, randomBytes } from '@noble/hashes/utils';
 
 const CHALLENGE_EXPIRY_MS = 60 * 1000; // 60 seconds
+const RATE_LIMIT_MAX_CHALLENGES = 10; // Max challenges per pubkey per window
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour window
 
 interface NostrEvent {
   id: string;
@@ -38,12 +40,30 @@ export const createChallenge = functions.https.onCall(
       );
     }
 
+    const normalizedPubkey = pubkeyHex.toLowerCase();
+
+    // Rate limiting: count recent challenges for this pubkey
+    const windowStart = new Date(Date.now() - RATE_LIMIT_WINDOW_MS);
+    const recentChallenges = await admin.firestore()
+      .collection('challenges')
+      .where('pubkeyHex', '==', normalizedPubkey)
+      .where('createdAt', '>=', windowStart)
+      .count()
+      .get();
+
+    if (recentChallenges.data().count >= RATE_LIMIT_MAX_CHALLENGES) {
+      throw new functions.https.HttpsError(
+        'resource-exhausted',
+        'Too many authentication attempts. Please try again later.'
+      );
+    }
+
     const challenge = bytesToHex(randomBytes(32));
     const expiresAt = Date.now() + CHALLENGE_EXPIRY_MS;
 
     // Store challenge in Firestore
     await admin.firestore().collection('challenges').doc(challenge).set({
-      pubkeyHex: pubkeyHex.toLowerCase(),
+      pubkeyHex: normalizedPubkey,
       expiresAt,
       used: false,
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
