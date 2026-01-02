@@ -34,16 +34,7 @@
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
     import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js';
-
-    // Firebase config (same as courses)
-    const firebaseConfig = {
-      apiKey: "AIzaSyAW6S712bLLkP-iCmB4URv44sst9wLBXQQ",
-      authDomain: "magic-internet-math-96630.firebaseapp.com",
-      projectId: "magic-internet-math-96630",
-      storageBucket: "magic-internet-math-96630.firebasestorage.app",
-      messagingSenderId: "863101072402",
-      appId: "1:863101072402:web:072f6cb1724919360f94cb"
-    };
+    import { firebaseConfig } from './scripts/firebase-config.js';
 
     // Firebase app instance (singleton) - make it global for nostrAuth.js
     window.firebaseApp = null;
