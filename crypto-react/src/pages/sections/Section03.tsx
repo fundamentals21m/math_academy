@@ -28,9 +28,9 @@ export default function Section03() {
       <div className="flex justify-center my-8">
         <div className="relative w-48 h-48 rounded-full border-4 border-primary-500 bg-dark-800">
           {[12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num, i) => {
-            const angle = (i * 30 - 90) * (Math.PI / 180);
-            const x = 50 + 38 * Math.cos(angle);
-            const y = 50 + 38 * Math.sin(angle);
+            const angle = (i * 30 - 90) * (globalThis.Math.PI / 180);
+            const x = 50 + 38 * globalThis.Math.cos(angle);
+            const y = 50 + 38 * globalThis.Math.sin(angle);
             return (
               <span
                 key={num}
