@@ -10,7 +10,7 @@ export default function Section02() {
       <p>
         In Section III of the Disquisitiones, Gauss investigates a beautiful question:
         What patterns emerge when we compute successive powers of a number modulo{' '}
-        <InlineMath>m</InlineMath>? This investigation leads to <strong>Fermat's Little Theorem</strong>,
+        <InlineMath>{`m`}</InlineMath>? This investigation leads to <strong>Fermat's Little Theorem</strong>,
         the concept of <strong>primitive roots</strong>, and powerful tools for computation.
       </p>
 
@@ -34,27 +34,27 @@ export default function Section02() {
       </div>
 
       <p>
-        Gauss proves that for any base <InlineMath>a</InlineMath> coprime to the modulus{' '}
-        <InlineMath>m</InlineMath>, the sequence of powers <InlineMath>a, a^2, a^3, \ldots</InlineMath>{' '}
+        Gauss proves that for any base <InlineMath>{`a`}</InlineMath> coprime to the modulus{' '}
+        <InlineMath>{`m`}</InlineMath>, the sequence of powers <InlineMath>{`a, a^2, a^3, \ldots`}</InlineMath>{' '}
         is <strong>eventually periodic</strong>, and in fact must return to 1.
       </p>
 
       <h2>Fermat's Little Theorem</h2>
 
       <p>
-        When the modulus is a prime <InlineMath>p</InlineMath>, Gauss presents the celebrated
+        When the modulus is a prime <InlineMath>{`p`}</InlineMath>, Gauss presents the celebrated
         theorem first stated by Pierre de Fermat:
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Fermat's Little Theorem</h3>
         <p className="text-dark-200 mb-4">
-          If <InlineMath>p</InlineMath> is a prime and <InlineMath>a</InlineMath> is any
-          integer not divisible by <InlineMath>p</InlineMath>, then:
+          If <InlineMath>{`p`}</InlineMath> is a prime and <InlineMath>{`a`}</InlineMath> is any
+          integer not divisible by <InlineMath>{`p`}</InlineMath>, then:
         </p>
         <MathBlock>{`a^{p-1} \\equiv 1 \\pmod{p}`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          Equivalently: <InlineMath>a^p \equiv a \pmod{p}</InlineMath> for all integers <InlineMath>a</InlineMath>.
+          Equivalently: <InlineMath>{`a^p \\equiv a \\pmod{p}`}</InlineMath> for all integers <InlineMath>{`a`}</InlineMath>.
         </p>
       </div>
 
@@ -86,23 +86,23 @@ export default function Section02() {
       <h2>The Order of an Element</h2>
 
       <p>
-        While <InlineMath>a^{'{p-1}'} \equiv 1 \pmod{p}</InlineMath>, the power might
-        reach 1 sooner. The smallest positive exponent <InlineMath>d</InlineMath> such that{' '}
-        <InlineMath>a^d \equiv 1 \pmod{p}</InlineMath> is called the <strong>order</strong>{' '}
-        of <InlineMath>a</InlineMath> modulo <InlineMath>p</InlineMath>.
+        While <InlineMath>{`a^{p-1} \\equiv 1 \\pmod{p}`}</InlineMath>, the power might
+        reach 1 sooner. The smallest positive exponent <InlineMath>{`d`}</InlineMath> such that{' '}
+        <InlineMath>{`a^d \\equiv 1 \\pmod{p}`}</InlineMath> is called the <strong>order</strong>{' '}
+        of <InlineMath>{`a`}</InlineMath> modulo <InlineMath>{`p`}</InlineMath>.
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">Key Property</h3>
         <p className="text-dark-200">
-          The order of <InlineMath>a</InlineMath> modulo <InlineMath>p</InlineMath> always
-          divides <InlineMath>p - 1</InlineMath>.
+          The order of <InlineMath>{`a`}</InlineMath> modulo <InlineMath>{`p`}</InlineMath> always
+          divides <InlineMath>{`p - 1`}</InlineMath>.
         </p>
         <MathBlock>{`\\text{ord}_p(a) \\mid (p-1)`}</MathBlock>
       </div>
 
       <p>
-        For <InlineMath>p = 7</InlineMath>, we have <InlineMath>p - 1 = 6</InlineMath>,
+        For <InlineMath>{`p = 7`}</InlineMath>, we have <InlineMath>{`p - 1 = 6`}</InlineMath>,
         so possible orders are 1, 2, 3, and 6:
       </p>
 
@@ -153,29 +153,29 @@ export default function Section02() {
       <h2>Primitive Roots</h2>
 
       <p>
-        Elements with the maximum possible order <InlineMath>p - 1</InlineMath> are
+        Elements with the maximum possible order <InlineMath>{`p - 1`}</InlineMath> are
         especially important. Gauss calls them <strong>primitive roots</strong>.
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Definition: Primitive Root</h3>
         <p className="text-dark-200 mb-4">
-          An integer <InlineMath>g</InlineMath> is a <strong>primitive root</strong> modulo{' '}
-          <InlineMath>p</InlineMath> if its order is <InlineMath>p - 1</InlineMath>, i.e.,
-          the powers <InlineMath>g, g^2, \ldots, g^{'{p-1}'}</InlineMath> produce all
-          non-zero residues modulo <InlineMath>p</InlineMath>.
+          An integer <InlineMath>{`g`}</InlineMath> is a <strong>primitive root</strong> modulo{' '}
+          <InlineMath>{`p`}</InlineMath> if its order is <InlineMath>{`p - 1`}</InlineMath>, i.e.,
+          the powers <InlineMath>{`g, g^2, \\ldots, g^{p-1}`}</InlineMath> produce all
+          non-zero residues modulo <InlineMath>{`p`}</InlineMath>.
         </p>
       </div>
 
       <p>
-        From our table, <InlineMath>3</InlineMath> and <InlineMath>5</InlineMath> are
+        From our table, <InlineMath>{`3`}</InlineMath> and <InlineMath>{`5`}</InlineMath> are
         primitive roots modulo 7. Their powers cycle through all of 1, 2, 3, 4, 5, 6.
       </p>
 
       <Callout type="info">
-        <strong>Gauss's Theorem:</strong> For every prime <InlineMath>p</InlineMath>,
-        primitive roots exist! Moreover, there are exactly <InlineMath>\phi(p-1)</InlineMath>{' '}
-        of them, where <InlineMath>\phi</InlineMath> is Euler's totient function.
+        <strong>Gauss's Theorem:</strong> For every prime <InlineMath>{`p`}</InlineMath>,
+        primitive roots exist! Moreover, there are exactly <InlineMath>{`\phi(p-1)`}</InlineMath>{' '}
+        of them, where <InlineMath>{`\phi`}</InlineMath> is Euler's totient function.
       </Callout>
 
       <h2>Try It: Primitive Root Explorer</h2>
@@ -191,11 +191,11 @@ export default function Section02() {
       <h2>Indices (Discrete Logarithms)</h2>
 
       <p>
-        If <InlineMath>g</InlineMath> is a primitive root modulo <InlineMath>p</InlineMath>,
-        then every non-zero residue <InlineMath>a</InlineMath> can be written as{' '}
-        <InlineMath>a \equiv g^k \pmod{p}</InlineMath> for some unique{' '}
-        <InlineMath>{`k \\in \\{0, 1, \\ldots, p-2\\}`}</InlineMath>. Gauss calls <InlineMath>k</InlineMath>{' '}
-        the <strong>index</strong> of <InlineMath>a</InlineMath> (what we now call the{' '}
+        If <InlineMath>{`g`}</InlineMath> is a primitive root modulo <InlineMath>{`p`}</InlineMath>,
+        then every non-zero residue <InlineMath>{`a`}</InlineMath> can be written as{' '}
+        <InlineMath>{`a \\equiv g^k \\pmod{p}`}</InlineMath> for some unique{' '}
+        <InlineMath>{`k \\in \\{0, 1, \\ldots, p-2\\}`}</InlineMath>. Gauss calls <InlineMath>{`k`}</InlineMath>{' '}
+        the <strong>index</strong> of <InlineMath>{`a`}</InlineMath> (what we now call the{' '}
         <strong>discrete logarithm</strong>).
       </p>
 
@@ -236,7 +236,7 @@ export default function Section02() {
       </div>
 
       <p>
-        Indices convert multiplication to addition: <InlineMath>\text{'{ind}'} (ab) \equiv \text{'{ind}'} (a) + \text{'{ind}'} (b) \pmod{'{p-1}'}</InlineMath>.
+        Indices convert multiplication to addition: <InlineMath>{`\\text{ind} (ab) \\equiv \\text{ind} (a) + \\text{ind} (b) \\pmod{p-1}`}</InlineMath>.
         This is analogous to ordinary logarithms!
       </p>
 
@@ -249,11 +249,11 @@ export default function Section02() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Wilson's Theorem</h3>
         <p className="text-dark-200 mb-4">
-          For any prime <InlineMath>p</InlineMath>:
+          For any prime <InlineMath>{`p`}</InlineMath>:
         </p>
         <MathBlock>{`(p-1)! \\equiv -1 \\pmod{p}`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          Example: <InlineMath>6! = 720 = 103 \times 7 - 1 \equiv -1 \pmod 7</InlineMath> ✓
+          Example: <InlineMath>{`6! = 720 = 103 \times 7 - 1 \equiv -1 \pmod 7`}</InlineMath> ✓
         </p>
       </div>
 
@@ -266,23 +266,23 @@ export default function Section02() {
       <ul className="list-disc list-inside space-y-2 my-4 text-dark-300">
         <li>
           <strong>Powers of odd primes:</strong> Primitive roots exist modulo{' '}
-          <InlineMath>p^k</InlineMath> for any odd prime <InlineMath>p</InlineMath>.
+          <InlineMath>{`p^k`}</InlineMath> for any odd prime <InlineMath>{`p`}</InlineMath>.
         </li>
         <li>
           <strong>Powers of 2:</strong> Primitive roots exist modulo 2 and 4, but
-          <em>not</em> modulo <InlineMath>2^k</InlineMath> for <InlineMath>k \ge 3</InlineMath>.
+          <em>not</em> modulo <InlineMath>{`2^k`}</InlineMath> for <InlineMath>{`k \ge 3`}</InlineMath>.
         </li>
         <li>
-          <strong>Composite moduli:</strong> Primitive roots exist modulo <InlineMath>n</InlineMath>{' '}
-          if and only if <InlineMath>n = 1, 2, 4, p^k, \text{'{or}'} 2p^k</InlineMath> for an odd prime{' '}
-          <InlineMath>p</InlineMath>.
+          <strong>Composite moduli:</strong> Primitive roots exist modulo <InlineMath>{`n`}</InlineMath>{' '}
+          if and only if <InlineMath>{`n = 1, 2, 4, p^k, \\text{ or } 2p^k`}</InlineMath> for an odd prime{' '}
+          <InlineMath>{`p`}</InlineMath>.
         </li>
       </ul>
 
       <Callout type="success">
         <strong>Looking Ahead:</strong> The theory of primitive roots and indices provides
         the foundation for Section IV, where Gauss tackles the deep question: Which numbers
-        are <em>squares</em> modulo <InlineMath>p</InlineMath>? This leads to the celebrated
+        are <em>squares</em> modulo <InlineMath>{`p`}</InlineMath>? This leads to the celebrated
         Law of Quadratic Reciprocity.
       </Callout>
     </LessonLayout>

@@ -1,5 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout, MathBlock, InlineMath } from '@/components/common';
+import { PellEquationSolver } from '@/components/visualizations';
 
 export default function Section05() {
   return (
@@ -33,7 +34,7 @@ export default function Section05() {
           <div>
             <MathBlock>{`x^2 - Dy^2 = 1`}</MathBlock>
             <p className="text-dark-300 mt-2">
-              Pell's equation: infinitely many solutions when <InlineMath>D</InlineMath> is
+              Pell's equation: infinitely many solutions when <InlineMath>{`D`}</InlineMath> is
               not a perfect square.
             </p>
           </div>
@@ -56,13 +57,13 @@ export default function Section05() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">Solving x² + y² = p</h3>
         <p className="text-dark-200 mb-4">
-          For a prime <InlineMath>p</InlineMath>, the equation <InlineMath>x^2 + y^2 = p</InlineMath>{' '}
-          has a solution if and only if <InlineMath>p = 2</InlineMath> or{' '}
-          <InlineMath>p \equiv 1 \pmod 4</InlineMath>.
+          For a prime <InlineMath>{`p`}</InlineMath>, the equation <InlineMath>{`x^2 + y^2 = p`}</InlineMath>{' '}
+          has a solution if and only if <InlineMath>{`p = 2`}</InlineMath> or{' '}
+          <InlineMath>{`p \equiv 1 \pmod 4`}</InlineMath>.
         </p>
         <p className="text-dark-300">
-          The solution is essentially unique (up to signs and interchanging <InlineMath>x</InlineMath>{' '}
-          and <InlineMath>y</InlineMath>).
+          The solution is essentially unique (up to signs and interchanging <InlineMath>{`x`}</InlineMath>{' '}
+          and <InlineMath>{`y`}</InlineMath>).
         </p>
       </div>
 
@@ -91,14 +92,14 @@ export default function Section05() {
       <h2>Pell's Equation</h2>
 
       <p>
-        Gauss addresses the equation <InlineMath>x^2 - Dy^2 = \pm 1</InlineMath>, which
+        Gauss addresses the equation <InlineMath>{`x^2 - Dy^2 = \pm 1`}</InlineMath>, which
         has a rich history and beautiful theory:
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">Pell's Equation x² - Dy² = 1</h3>
         <p className="text-dark-200 mb-4">
-          When <InlineMath>D</InlineMath> is a positive non-square integer, this equation
+          When <InlineMath>{`D`}</InlineMath> is a positive non-square integer, this equation
           always has infinitely many solutions. The solutions can be generated from a
           "fundamental solution" using the recurrence:
         </p>
@@ -117,24 +118,33 @@ export default function Section05() {
         </ul>
       </div>
 
+      <h2>Try It: Pell Equation Solver</h2>
+
+      <p>
+        Find solutions to Pell's equation for different values of D using continued
+        fractions. Watch how the solutions grow exponentially:
+      </p>
+
+      <PellEquationSolver className="my-6" />
+
       <h2>Representation by Ternary Forms</h2>
 
       <p>
         Gauss extends his methods to <strong>ternary quadratic forms</strong>—expressions
-        in three variables like <InlineMath>ax^2 + by^2 + cz^2</InlineMath>. A famous
+        in three variables like <InlineMath>{`ax^2 + by^2 + cz^2`}</InlineMath>. A famous
         result concerns sums of three squares:
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Three Squares Theorem</h3>
         <p className="text-dark-200 mb-4">
-          A positive integer <InlineMath>n</InlineMath> can be written as a sum of three
+          A positive integer <InlineMath>{`n`}</InlineMath> can be written as a sum of three
           squares:
         </p>
         <MathBlock>{`n = x^2 + y^2 + z^2`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          if and only if <InlineMath>n</InlineMath> is <em>not</em> of the form{' '}
-          <InlineMath>4^a(8b + 7)</InlineMath>.
+          if and only if <InlineMath>{`n`}</InlineMath> is <em>not</em> of the form{' '}
+          <InlineMath>{`4^a(8b + 7)`}</InlineMath>.
         </p>
       </div>
 
@@ -174,7 +184,7 @@ export default function Section05() {
         </li>
         <li>
           <strong>Continued fractions:</strong> For Pell's equation, the continued
-          fraction expansion of <InlineMath>\sqrt{'{D}'}</InlineMath> yields the fundamental
+          fraction expansion of <InlineMath>{`\\sqrt{D}`}</InlineMath> yields the fundamental
           solution.
         </li>
         <li>
@@ -193,8 +203,8 @@ export default function Section05() {
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-primary-400 mb-2">Algebraic Number Theory</h3>
           <p className="text-dark-300">
-            Solutions to <InlineMath>x^2 - Dy^2 = 1</InlineMath> correspond to units
-            in the ring <InlineMath>\mathbb{'{Z}'}[\sqrt{'{D}'}]</InlineMath>.
+            Solutions to <InlineMath>{`x^2 - Dy^2 = 1`}</InlineMath> correspond to units
+            in the ring <InlineMath>{`\\mathbb{Z}[\\sqrt{D}]`}</InlineMath>.
           </p>
         </div>
 

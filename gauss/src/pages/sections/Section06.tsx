@@ -24,8 +24,8 @@ export default function Section06() {
       <h2>The Division of the Circle</h2>
 
       <p>
-        Dividing a circle into <InlineMath>n</InlineMath> equal parts is equivalent to
-        finding the <InlineMath>n</InlineMath>-th roots of unity—the solutions to:
+        Dividing a circle into <InlineMath>{`n`}</InlineMath> equal parts is equivalent to
+        finding the <InlineMath>{`n`}</InlineMath>-th roots of unity—the solutions to:
       </p>
 
       <MathBlock>{`z^n = 1`}</MathBlock>
@@ -37,16 +37,16 @@ export default function Section06() {
       <MathBlock>{`\\zeta_k = \\cos\\frac{2\\pi k}{n} + i\\sin\\frac{2\\pi k}{n} = e^{2\\pi i k/n}`}</MathBlock>
 
       <p>
-        for <InlineMath>k = 0, 1, 2, \ldots, n-1</InlineMath>. They form the vertices
-        of a regular <InlineMath>n</InlineMath>-gon inscribed in the unit circle.
+        for <InlineMath>{`k = 0, 1, 2, \ldots, n-1`}</InlineMath>. They form the vertices
+        of a regular <InlineMath>{`n`}</InlineMath>-gon inscribed in the unit circle.
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">The Cyclotomic Polynomial</h3>
         <p className="text-dark-200 mb-4">
-          The primitive <InlineMath>n</InlineMath>-th roots of unity are roots of the
-          <strong>cyclotomic polynomial</strong> <InlineMath>\Phi_n(x)</InlineMath>,
-          whose degree is <InlineMath>\phi(n)</InlineMath> (Euler's totient).
+          The primitive <InlineMath>{`n`}</InlineMath>-th roots of unity are roots of the
+          <strong>cyclotomic polynomial</strong> <InlineMath>{`\Phi_n(x)`}</InlineMath>,
+          whose degree is <InlineMath>{`\phi(n)`}</InlineMath> (Euler's totient).
         </p>
         <MathBlock>{`\\Phi_n(x) = \\prod_{\\substack{1 \\le k \\le n \\\\ \\gcd(k,n)=1}} (x - \\zeta_k)`}</MathBlock>
       </div>
@@ -62,16 +62,16 @@ export default function Section06() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Constructibility Criterion</h3>
         <p className="text-dark-200">
-          A number <InlineMath>\alpha</InlineMath> is constructible if and only if the
-          field extension <InlineMath>\mathbb{'{Q}'}(\alpha)/\mathbb{'{Q}'}</InlineMath> has
-          degree <InlineMath>2^k</InlineMath> for some <InlineMath>k</InlineMath>.
+          A number <InlineMath>{`\alpha`}</InlineMath> is constructible if and only if the
+          field extension <InlineMath>{`\\mathbb{Q}(\\alpha)/\\mathbb{Q}`}</InlineMath> has
+          degree <InlineMath>{`2^k`}</InlineMath> for some <InlineMath>{`k`}</InlineMath>.
         </p>
       </div>
 
       <p>
-        For the regular <InlineMath>n</InlineMath>-gon, the relevant number is{' '}
-        <InlineMath>\cos(2\pi/n)</InlineMath>. Its field extension has degree{' '}
-        <InlineMath>\phi(n)/2</InlineMath> for <InlineMath>n \ge 3</InlineMath>.
+        For the regular <InlineMath>{`n`}</InlineMath>-gon, the relevant number is{' '}
+        <InlineMath>{`\cos(2\pi/n)`}</InlineMath>. Its field extension has degree{' '}
+        <InlineMath>{`\phi(n)/2`}</InlineMath> for <InlineMath>{`n \ge 3`}</InlineMath>.
       </p>
 
       <h2>Gauss's Theorem on Constructibility</h2>
@@ -83,12 +83,12 @@ export default function Section06() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Gauss-Wantzel Theorem</h3>
         <p className="text-dark-200 mb-4">
-          The regular <InlineMath>n</InlineMath>-gon is constructible with compass and
+          The regular <InlineMath>{`n`}</InlineMath>-gon is constructible with compass and
           straightedge if and only if:
         </p>
         <MathBlock>{`n = 2^k p_1 p_2 \\cdots p_m`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          where <InlineMath>k \ge 0</InlineMath> and <InlineMath>p_1, p_2, \ldots, p_m</InlineMath>{' '}
+          where <InlineMath>{`k \ge 0`}</InlineMath> and <InlineMath>{`p_1, p_2, \ldots, p_m`}</InlineMath>{' '}
           are <strong>distinct Fermat primes</strong>.
         </p>
       </div>
@@ -151,7 +151,7 @@ export default function Section06() {
 
       <Callout type="warning">
         <strong>Open Problem:</strong> Are there any Fermat primes beyond{' '}
-        <InlineMath>F_4 = 65537</InlineMath>? No new Fermat primes have been discovered,
+        <InlineMath>{`F_4 = 65537`}</InlineMath>? No new Fermat primes have been discovered,
         and many mathematicians conjecture there are only five.
       </Callout>
 
@@ -166,7 +166,7 @@ export default function Section06() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-4">Gauss's Construction of the 17-gon</h3>
         <p className="text-dark-200 mb-4">
-          Gauss showed that <InlineMath>\cos(2\pi/17)</InlineMath> can be expressed using
+          Gauss showed that <InlineMath>{`\cos(2\pi/17)`}</InlineMath> can be expressed using
           only square roots:
         </p>
         <MathBlock>{`\\cos\\frac{2\\pi}{17} = \\frac{-1 + \\sqrt{17} + \\sqrt{34-2\\sqrt{17}} + 2\\sqrt{17+3\\sqrt{17}-\\sqrt{34-2\\sqrt{17}}-2\\sqrt{34+2\\sqrt{17}}}}{16}`}</MathBlock>
@@ -196,8 +196,8 @@ export default function Section06() {
       <h2>Constructible Polygons</h2>
 
       <p>
-        From Gauss's theorem, the constructible regular <InlineMath>n</InlineMath>-gons
-        for small <InlineMath>n</InlineMath> are:
+        From Gauss's theorem, the constructible regular <InlineMath>{`n`}</InlineMath>-gons
+        for small <InlineMath>{`n`}</InlineMath> are:
       </p>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 my-6">
@@ -231,7 +231,7 @@ export default function Section06() {
       <h2>Gauss Sums and Periods</h2>
 
       <p>
-        Gauss's proof involves partitioning the <InlineMath>n</InlineMath>-th roots of
+        Gauss's proof involves partitioning the <InlineMath>{`n`}</InlineMath>-th roots of
         unity into "periods" using primitive roots. The <strong>Gauss sums</strong>
         (sometimes called Gaussian periods) satisfy polynomial equations of lower degree,
         allowing a step-by-step descent to constructible quantities.
@@ -245,7 +245,7 @@ export default function Section06() {
         <MathBlock>{`16 = 2^4 \\rightarrow \\text{4 levels of square roots}`}</MathBlock>
         <p className="text-dark-300 mt-4">
           At each level, solving a quadratic equation introduces one square root,
-          eventually reaching <InlineMath>\cos(2\pi/17)</InlineMath>.
+          eventually reaching <InlineMath>{`\cos(2\pi/17)`}</InlineMath>.
         </p>
       </div>
 

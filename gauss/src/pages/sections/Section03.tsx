@@ -20,18 +20,18 @@ export default function Section03() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Definition</h3>
         <p className="text-dark-200 mb-4">
-          An integer <InlineMath>a</InlineMath> not divisible by an odd prime{' '}
-          <InlineMath>p</InlineMath> is called a <strong>quadratic residue</strong> modulo{' '}
-          <InlineMath>p</InlineMath> if the congruence{' '}
-          <InlineMath>x^2 \equiv a \pmod{p}</InlineMath> has a solution.
+          An integer <InlineMath>{`a`}</InlineMath> not divisible by an odd prime{' '}
+          <InlineMath>{`p`}</InlineMath> is called a <strong>quadratic residue</strong> modulo{' '}
+          <InlineMath>{`p`}</InlineMath> if the congruence{' '}
+          <InlineMath>{`x^2 \\equiv a \\pmod{p}`}</InlineMath> has a solution.
         </p>
         <p className="text-dark-300">
-          Otherwise, <InlineMath>a</InlineMath> is a <strong>quadratic non-residue</strong>.
+          Otherwise, <InlineMath>{`a`}</InlineMath> is a <strong>quadratic non-residue</strong>.
         </p>
       </div>
 
       <p>
-        For <InlineMath>p = 7</InlineMath>, let's compute all squares modulo 7:
+        For <InlineMath>{`p = 7`}</InlineMath>, let's compute all squares modulo 7:
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-6 border border-dark-700 my-6">
@@ -56,9 +56,9 @@ export default function Section03() {
       </div>
 
       <Callout type="info">
-        <strong>Key Observation:</strong> For any odd prime <InlineMath>p</InlineMath>,
+        <strong>Key Observation:</strong> For any odd prime <InlineMath>{`p`}</InlineMath>,
         exactly half of the non-zero residues are quadratic residues, and half are
-        non-residues. There are <InlineMath>(p-1)/2</InlineMath> of each.
+        non-residues. There are <InlineMath>{`(p-1)/2`}</InlineMath> of each.
       </Callout>
 
       <h2>The Legendre Symbol</h2>
@@ -83,14 +83,14 @@ export default function Section03() {
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Euler's Criterion</h3>
         <MathBlock>{`\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}`}</MathBlock>
         <p className="text-dark-300 mt-4">
-          That is, <InlineMath>a</InlineMath> is a quadratic residue if and only if{' '}
-          <InlineMath>a^{'{(p-1)/2}'} \equiv 1 \pmod{p}</InlineMath>.
+          That is, <InlineMath>{`a`}</InlineMath> is a quadratic residue if and only if{' '}
+          <InlineMath>{`a^{(p-1)/2} \\equiv 1 \\pmod{p}`}</InlineMath>.
         </p>
       </div>
 
       <p>
         For example, is 2 a quadratic residue mod 7? Compute{' '}
-        <InlineMath>2^{'{(7-1)/2}'} = 2^3 = 8 \equiv 1 \pmod 7</InlineMath>. Yes, 2 is a QR mod 7.
+        <InlineMath>{`2^{(7-1)/2} = 2^3 = 8 \\equiv 1 \\pmod 7`}</InlineMath>. Yes, 2 is a QR mod 7.
       </p>
 
       <h2>Try It: Quadratic Residue Checker</h2>
@@ -138,7 +138,7 @@ export default function Section03() {
       <div className="bg-dark-800/50 rounded-xl p-6 border border-amber-500/30 my-6">
         <h3 className="text-lg font-semibold text-amber-400 mb-4">Law of Quadratic Reciprocity</h3>
         <p className="text-dark-200 mb-4">
-          Let <InlineMath>p</InlineMath> and <InlineMath>q</InlineMath> be distinct odd primes. Then:
+          Let <InlineMath>{`p`}</InlineMath> and <InlineMath>{`q`}</InlineMath> be distinct odd primes. Then:
         </p>
         <MathBlock>{`\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2} \\cdot \\frac{q-1}{2}}`}</MathBlock>
         <p className="text-dark-300 mt-4">Equivalently:</p>
@@ -150,9 +150,9 @@ export default function Section03() {
       </div>
 
       <Callout type="info">
-        <strong>Why "Reciprocity"?</strong> The theorem relates whether <InlineMath>p</InlineMath>{' '}
-        is a square mod <InlineMath>q</InlineMath> to whether <InlineMath>q</InlineMath>{' '}
-        is a square mod <InlineMath>p</InlineMath>—two seemingly unrelated questions
+        <strong>Why "Reciprocity"?</strong> The theorem relates whether <InlineMath>{`p`}</InlineMath>{' '}
+        is a square mod <InlineMath>{`q`}</InlineMath> to whether <InlineMath>{`q`}</InlineMath>{' '}
+        is a square mod <InlineMath>{`p`}</InlineMath>—two seemingly unrelated questions
         connected by a beautiful formula.
       </Callout>
 
@@ -163,14 +163,14 @@ export default function Section03() {
         </p>
         <p className="text-dark-200 mb-2">
           Since 5 ≡ 1 (mod 4) and 11 ≡ 3 (mod 4), the product{' '}
-          <InlineMath>\frac{'{5-1}{2}'} \cdot \frac{'{11-1}{2}'} = 2 \cdot 5 = 10</InlineMath>{' '}
+          <InlineMath>{`\\frac{5-1}{2} \\cdot \\frac{11-1}{2} = 2 \\cdot 5 = 10`}</InlineMath>{' '}
           is even.
         </p>
         <p className="text-dark-200 mb-2">
-          So <InlineMath>(-1)^{'{10}'} = 1</InlineMath>, meaning the Legendre symbols are equal.
+          So <InlineMath>{`(-1)^{10} = 1`}</InlineMath>, meaning the Legendre symbols are equal.
         </p>
         <p className="text-dark-200 mb-2">
-          Check: <InlineMath>(5/11) = 5^5 \mod 11 = 3125 \mod 11 = 1</InlineMath>, so 5 is a QR mod 11.
+          Check: <InlineMath>{`(5/11) = 5^5 \mod 11 = 3125 \mod 11 = 1`}</InlineMath>, so 5 is a QR mod 11.
         </p>
         <p className="text-emerald-400">
           Therefore 11 is also a QR mod 5. (Indeed, 11 ≡ 1 ≡ 1² (mod 5) ✓)
@@ -221,15 +221,15 @@ export default function Section03() {
       <MathBlock>{`ax^2 + bx + c \\equiv 0 \\pmod{p}`}</MathBlock>
 
       <p>
-        By completing the square (when <InlineMath>p \nmid 2a</InlineMath>), this reduces
-        to determining whether the discriminant <InlineMath>b^2 - 4ac</InlineMath> is a
+        By completing the square (when <InlineMath>{`p \nmid 2a`}</InlineMath>), this reduces
+        to determining whether the discriminant <InlineMath>{`b^2 - 4ac`}</InlineMath> is a
         quadratic residue.
       </p>
 
       <Callout type="success">
         <strong>Looking Ahead:</strong> The study of quadratic residues naturally leads
         to Section V, where Gauss develops the theory of binary quadratic forms—expressions
-        of the form <InlineMath>ax^2 + bxy + cy^2</InlineMath>. This theory would eventually
+        of the form <InlineMath>{`ax^2 + bxy + cy^2`}</InlineMath>. This theory would eventually
         influence the development of algebraic number theory.
       </Callout>
     </LessonLayout>
