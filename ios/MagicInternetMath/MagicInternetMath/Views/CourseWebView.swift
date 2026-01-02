@@ -156,14 +156,27 @@ struct WebViewRepresentable: UIViewRepresentable {
 
             switch type {
             case "sectionCompleted":
-                if let sectionId = body["sectionId"] as? String {
-                    print("Section completed: \(sectionId)")
-                    // TODO: Update progress service
+                if let sectionId = body["sectionId"] as? String,
+                   let courseId = body["courseId"] as? String {
+                    // Update iOS progress service
+                    ProgressService.shared.markSectionCompleted(
+                        sectionId,
+                        courseId: courseId,
+                        totalSections: 12  // Default, actual value varies by course
+                    )
+                    print("iOS Progress: Section completed - \(sectionId)")
                 }
-            case "progressSync":
-                if let data = body["data"] as? [String: Any] {
-                    print("Progress sync: \(data)")
-                    // TODO: Sync with progress service
+            case "quizCompleted":
+                if let sectionId = body["sectionId"] as? String,
+                   let courseId = body["courseId"] as? String,
+                   let score = body["score"] as? Int {
+                    // Quiz completions also count as section progress
+                    ProgressService.shared.markSectionCompleted(
+                        "\(sectionId):quiz",
+                        courseId: courseId,
+                        totalSections: 12
+                    )
+                    print("iOS Progress: Quiz completed - \(sectionId) score: \(score)")
                 }
             default:
                 break

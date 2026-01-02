@@ -31,6 +31,41 @@ import { gamificationReducer } from './reducer';
 const ACHIEVEMENT_CHECK_DEBOUNCE_MS = 500;
 
 // =============================================================================
+// iOS WEBVIEW BRIDGE
+// =============================================================================
+
+/** Window type with iOS WebKit message handlers */
+interface WebKitWindow extends Window {
+  webkit?: {
+    messageHandlers?: {
+      progressHandler?: {
+        postMessage: (message: unknown) => void;
+      };
+    };
+  };
+}
+
+/**
+ * Check if running inside iOS WKWebView with progress handler
+ */
+const isIOSWebView = (): boolean => {
+  return !!(window as WebKitWindow).webkit?.messageHandlers?.progressHandler;
+};
+
+/**
+ * Send a progress event to the iOS app via WKWebView message handler.
+ * No-op if not running in iOS WebView.
+ */
+const postToiOS = (type: string, data: Record<string, unknown>): void => {
+  if (isIOSWebView()) {
+    (window as WebKitWindow).webkit!.messageHandlers!.progressHandler!.postMessage({
+      type,
+      ...data,
+    });
+  }
+};
+
+// =============================================================================
 // CONTEXT TYPES
 // =============================================================================
 
@@ -173,8 +208,14 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
   const completeSection = useCallback(
     (sectionId: number) => {
       dispatch({ type: 'COMPLETE_SECTION', payload: { sectionId: makeSectionId(sectionId) } });
+
+      // Notify iOS app if running in WKWebView
+      postToiOS('sectionCompleted', {
+        sectionId: makeSectionId(sectionId),
+        courseId,
+      });
     },
-    [makeSectionId]
+    [makeSectionId, courseId]
   );
 
   const recordQuiz = useCallback(
@@ -195,8 +236,17 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
           totalQuestions,
         },
       });
+
+      // Notify iOS app if running in WKWebView
+      postToiOS('quizCompleted', {
+        sectionId: makeSectionId(sectionId),
+        courseId,
+        score,
+        correctAnswers,
+        totalQuestions,
+      });
     },
-    [makeSectionId]
+    [makeSectionId, courseId]
   );
 
   const useVisualization = useCallback(
