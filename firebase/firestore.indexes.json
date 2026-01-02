@@ -15,6 +15,14 @@
         { "fieldPath": "banned", "order": "ASCENDING" },
         { "fieldPath": "totalXP", "order": "DESCENDING" }
       ]
+    },
+    {
+      "collectionGroup": "challenges",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "pubkeyHex", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "ASCENDING" }
+      ]
     }
   ],
   "fieldOverrides": []
