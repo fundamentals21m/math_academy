@@ -28,6 +28,9 @@ firebase/functions/*.log
 .env.local
 .env.*.local
 
+# Firebase config (contains API keys)
+scripts/firebase-config.js
+
 # Working files
 calc_easy_pdfs/
 why_math_chunks/
