@@ -15,11 +15,15 @@ struct Course: Identifiable, Codable, Hashable {
     let shortName: String?
     let progressGradient: String?
 
-    // Base URL for all courses
+    // Base URL for hub-hosted courses
     static let baseURL = "https://mathacademy-cyan.vercel.app/"
 
     var fullURL: URL? {
-        URL(string: Self.baseURL + url)
+        // Support both absolute URLs and relative paths
+        if url.hasPrefix("http") {
+            return URL(string: url)
+        }
+        return URL(string: Self.baseURL + url)
     }
 
     var gradient: LinearGradient {
@@ -55,12 +59,12 @@ extension Course {
         description: "Learn the mathematics that powers modern encryption.",
         icon: "🔐",
         iconImage: nil,
-        url: "cryptography/",
+        url: "https://cryptography-xi.vercel.app/",
         tags: ["12 Lessons", "Interactive"],
         sections: ["featured"],
         totalSections: 12,
         progressPrefix: "crypto:",
-        leaderboardUrl: "cryptography/#/leaderboard",
+        leaderboardUrl: "https://cryptography-xi.vercel.app/#/leaderboard",
         shortName: "Cryptography",
         progressGradient: "linear-gradient(90deg, #6366f1, #818cf8)"
     )
