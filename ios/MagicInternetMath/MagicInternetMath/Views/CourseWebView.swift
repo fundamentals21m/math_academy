@@ -63,11 +63,14 @@ struct CourseWebView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                if let leaderboardUrl = course.leaderboardUrl,
-                   let url = URL(string: Course.baseURL + leaderboardUrl) {
-                    Link(destination: url) {
-                        Image(systemName: "trophy.fill")
-                            .foregroundColor(.featuredGold)
+                if let leaderboardUrl = course.leaderboardUrl {
+                    // Support both absolute URLs and relative paths
+                    let urlString = leaderboardUrl.hasPrefix("http") ? leaderboardUrl : Course.baseURL + leaderboardUrl
+                    if let url = URL(string: urlString) {
+                        Link(destination: url) {
+                            Image(systemName: "trophy.fill")
+                                .foregroundColor(.featuredGold)
+                        }
                     }
                 }
             }
