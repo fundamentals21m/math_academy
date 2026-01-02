@@ -3,6 +3,7 @@ import * as admin from 'firebase-admin';
 import { schnorr } from '@noble/curves/secp256k1';
 import { sha256 } from '@noble/hashes/sha256';
 import { bytesToHex, hexToBytes, randomBytes } from '@noble/hashes/utils';
+import { logSecurityEvent, logAuthSuccess, logAuthFailure, logRateLimitHit } from './securityLogger';
 
 const CHALLENGE_EXPIRY_MS = 60 * 1000; // 60 seconds
 const RATE_LIMIT_MAX_CHALLENGES = 10; // Max challenges per pubkey per window
@@ -52,6 +53,7 @@ export const createChallenge = functions.https.onCall(
       .get();
 
     if (recentChallenges.data().count >= RATE_LIMIT_MAX_CHALLENGES) {
+      await logRateLimitHit(normalizedPubkey, recentChallenges.data().count);
       throw new functions.https.HttpsError(
         'resource-exhausted',
         'Too many authentication attempts. Please try again later.'
@@ -94,6 +96,7 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
       .get();
 
     if (!challengeDoc.exists) {
+      await logAuthFailure('auth_failure_challenge_not_found', undefined, { challenge });
       throw new functions.https.HttpsError(
         'not-found',
         'Challenge not found'
@@ -103,6 +106,7 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
     const challengeData = challengeDoc.data()!;
 
     if (challengeData.used) {
+      await logAuthFailure('auth_failure_challenge_reused', challengeData.pubkeyHex, { challenge });
       throw new functions.https.HttpsError(
         'already-exists',
         'Challenge already used'
@@ -110,6 +114,7 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
     }
 
     if (Date.now() > challengeData.expiresAt) {
+      await logAuthFailure('auth_failure_expired_challenge', challengeData.pubkeyHex, { challenge });
       throw new functions.https.HttpsError(
         'deadline-exceeded',
         'Challenge expired'
@@ -117,6 +122,10 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
     }
 
     if (signedEvent.pubkey.toLowerCase() !== challengeData.pubkeyHex) {
+      await logAuthFailure('auth_failure_pubkey_mismatch', signedEvent.pubkey, {
+        expected: challengeData.pubkeyHex,
+        received: signedEvent.pubkey.toLowerCase(),
+      });
       throw new functions.https.HttpsError(
         'permission-denied',
         'Pubkey mismatch'
@@ -125,6 +134,10 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
 
     // Verify the signed event
     if (!verifyNostrEvent(signedEvent, challenge)) {
+      await logAuthFailure('auth_failure_invalid_signature', signedEvent.pubkey, {
+        eventId: signedEvent.id,
+        eventKind: signedEvent.kind,
+      });
       throw new functions.https.HttpsError(
         'unauthenticated',
         'Invalid signature'
@@ -162,6 +175,10 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
     // Check if user is banned
     const userData = userDoc.exists ? userDoc.data() : null;
     if (userData?.banned) {
+      await logSecurityEvent('auth_banned_user_attempt', 'error', {
+        npub,
+        pubkeyHex: signedEvent.pubkey.toLowerCase(),
+      });
       throw new functions.https.HttpsError(
         'permission-denied',
         'User is banned from the leaderboard'
@@ -188,6 +205,9 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
       pubkeyHex: signedEvent.pubkey.toLowerCase(),
       isAdmin,
     });
+
+    // Log successful authentication
+    await logAuthSuccess(npub, signedEvent.pubkey.toLowerCase());
 
     return { token, npub };
   }

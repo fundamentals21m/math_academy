@@ -10,4 +10,4 @@ export { createChallenge, verifyNostrAndCreateToken } from './nostrAuth';
 export { syncScores, getLeaderboard, getUserScores } from './scores';
 
 // Export admin functions
-export { banUser, unbanUser, resetUserScores, getAdminLogs } from './admin';
+export { banUser, unbanUser, resetUserScores, getAdminLogs, getSecurityLogs } from './admin';

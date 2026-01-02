@@ -233,3 +233,40 @@ export const getAdminLogs = functions.https.onCall(
     return { logs };
   }
 );
+
+/**
+ * Get security logs (auth failures, rate limits, etc.)
+ */
+export const getSecurityLogs = functions.https.onCall(
+  async (
+    data: { limit?: number; severity?: string; eventType?: string },
+    context
+  ): Promise<{ logs: unknown[] }> => {
+    await requireAdmin(context.auth);
+
+    const { limit = 100, severity, eventType } = data || {};
+
+    let query = admin.firestore()
+      .collection('securityLogs')
+      .orderBy('timestamp', 'desc');
+
+    // Filter by severity if provided
+    if (severity) {
+      query = query.where('severity', '==', severity);
+    }
+
+    // Filter by event type if provided
+    if (eventType) {
+      query = query.where('type', '==', eventType);
+    }
+
+    const logsSnapshot = await query.limit(Math.min(limit, 500)).get();
+
+    const logs = logsSnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    return { logs };
+  }
+);
