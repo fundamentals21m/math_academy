@@ -4,7 +4,7 @@ import { schnorr } from '@noble/curves/secp256k1';
 import { sha256 } from '@noble/hashes/sha256';
 import { bytesToHex, hexToBytes, randomBytes } from '@noble/hashes/utils';
 
-const CHALLENGE_EXPIRY_MS = 5 * 60 * 1000; // 5 minutes
+const CHALLENGE_EXPIRY_MS = 60 * 1000; // 60 seconds
 
 interface NostrEvent {
   id: string;
@@ -148,8 +148,17 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
       );
     }
 
+    // Get existing admin status from Firebase Auth claims (not Firestore - prevents race condition)
+    // New users are never admins - admin status must be set via protected admin functions
+    let isAdmin = false;
+    try {
+      const existingUser = await admin.auth().getUser(npub);
+      isAdmin = existingUser.customClaims?.isAdmin === true;
+    } catch {
+      // User doesn't exist in Auth yet - will be created with isAdmin: false
+    }
+
     // Set custom user claims (these persist and are refreshable via getIdTokenResult)
-    const isAdmin = userData?.isAdmin ?? false;
     await admin.auth().setCustomUserClaims(npub, {
       isAdmin,
     });
@@ -183,9 +192,9 @@ function verifyNostrEvent(event: NostrEvent, expectedChallenge: string): boolean
       return false;
     }
 
-    // Verify event is recent (within 5 minutes)
+    // Verify event is recent (within 30 seconds)
     const now = Math.floor(Date.now() / 1000);
-    if (Math.abs(event.created_at - now) > 300) {
+    if (Math.abs(event.created_at - now) > 30) {
       return false;
     }
 
