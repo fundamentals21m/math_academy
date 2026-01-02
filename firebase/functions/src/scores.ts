@@ -14,7 +14,7 @@ interface ScoreUpdate {
  */
 export const syncScores = functions.https.onCall(
   async (
-    data: { scores?: ScoreUpdate[]; displayName?: string | null },
+    data: { scores?: ScoreUpdate[]; displayName?: string | null; totalXP?: number },
     context
   ): Promise<{ success: boolean; totalXP: number }> => {
     if (!context.auth) {
@@ -24,7 +24,7 @@ export const syncScores = functions.https.onCall(
       );
     }
 
-    const { scores, displayName } = data || {};
+    const { scores, displayName, totalXP: providedTotalXP } = data || {};
 
     if (!scores || !Array.isArray(scores)) {
       console.error('syncScores: scores is not an array:', typeof scores, scores);
@@ -35,6 +35,7 @@ export const syncScores = functions.https.onCall(
     }
 
     console.log('syncScores: received scores:', JSON.stringify(scores));
+    console.log('syncScores: received totalXP:', providedTotalXP);
 
     const npub = context.auth.uid;
     const userRef = admin.firestore().collection('users').doc(npub);
@@ -92,8 +93,9 @@ export const syncScores = functions.https.onCall(
       }, { merge: true });
     }
 
-    // Calculate total XP
-    const totalXP = Object.values(userScores).reduce((sum, xp) => sum + xp, 0);
+    // Use provided totalXP if available (includes bonuses), otherwise sum course scores
+    const calculatedXP = Object.values(userScores).reduce((sum, xp) => sum + xp, 0);
+    const totalXP = (providedTotalXP !== undefined && providedTotalXP > 0) ? providedTotalXP : calculatedXP;
 
     // Calculate level (simple formula: level = floor(sqrt(totalXP / 100)) + 1)
     const level = Math.floor(Math.sqrt(totalXP / 100)) + 1;

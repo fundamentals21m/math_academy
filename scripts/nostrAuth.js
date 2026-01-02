@@ -158,6 +158,117 @@ let authState = {
   extensionChecked: false
 };
 
+// Storage key for gamification state (same as React courses)
+const GAMIFICATION_STORAGE_KEY = 'magic-internet-math-progress';
+
+// Valid course IDs for sync
+const VALID_COURSE_IDS = ['ba', 'aa', 'crypto', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'four_pillars', 'wm', 'mom'];
+
+// XP values for scoring
+const XP_CONFIG = {
+  SECTION_VISIT: 5,
+  SECTION_COMPLETE: 10,
+  VISUALIZATION_USE: 3,
+};
+
+/**
+ * Extract scores from localStorage for syncing to Firebase
+ */
+function extractScoresFromStorage() {
+  try {
+    const stored = localStorage.getItem(GAMIFICATION_STORAGE_KEY);
+    if (!stored) {
+      console.log('[NostrAuth] No gamification data in localStorage');
+      return null;
+    }
+
+    const state = JSON.parse(stored);
+    if (!state?.user || !state?.sections) {
+      console.log('[NostrAuth] Missing user or sections in stored data');
+      return null;
+    }
+
+    // Get the authoritative totalXP (includes all bonuses)
+    const totalXP = state.user.totalXP || 0;
+    console.log('[NostrAuth] Found totalXP in localStorage:', totalXP);
+
+    const scores = {};
+    VALID_COURSE_IDS.forEach(id => scores[id] = 0);
+
+    // Calculate XP per course from sections
+    for (const [sectionId, sectionData] of Object.entries(state.sections)) {
+      const [coursePrefix] = sectionId.split(':');
+      if (!VALID_COURSE_IDS.includes(coursePrefix)) continue;
+
+      // Add XP from quiz attempts
+      if (sectionData.quizAttempts) {
+        for (const attempt of sectionData.quizAttempts) {
+          if (attempt.xpEarned) {
+            scores[coursePrefix] += attempt.xpEarned;
+          }
+        }
+      }
+
+      // Add XP for section visits
+      if (sectionData.visitedAt) {
+        scores[coursePrefix] += XP_CONFIG.SECTION_VISIT;
+      }
+
+      // Add XP for section completion
+      if (sectionData.completedAt) {
+        scores[coursePrefix] += XP_CONFIG.SECTION_COMPLETE;
+      }
+
+      // Add XP for visualizations
+      if (sectionData.visualizationsInteracted) {
+        scores[coursePrefix] += sectionData.visualizationsInteracted.length * XP_CONFIG.VISUALIZATION_USE;
+      }
+    }
+
+    return {
+      scores: VALID_COURSE_IDS.map(id => ({ courseId: id, xp: scores[id] })),
+      totalXP,
+    };
+  } catch (error) {
+    console.error('[NostrAuth] Error extracting scores:', error);
+    return null;
+  }
+}
+
+/**
+ * Sync scores to Firebase
+ */
+async function syncScoresToFirebase() {
+  if (!authState.isAuthenticated) {
+    console.log('[NostrAuth] Not authenticated, skipping sync');
+    return;
+  }
+
+  const extracted = extractScoresFromStorage();
+  if (!extracted) {
+    console.log('[NostrAuth] No scores to sync');
+    return;
+  }
+
+  try {
+    const { getFunctions, httpsCallable } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-functions.js');
+    const functions = getFunctions(window.firebaseApp);
+    const syncScores = httpsCallable(functions, 'syncScores');
+
+    const payload = {
+      scores: extracted.scores,
+      totalXP: extracted.totalXP,
+      displayName: authState.displayName,
+    };
+
+    console.log('[NostrAuth] Syncing to Firebase, totalXP:', extracted.totalXP);
+    const result = await syncScores(payload);
+    console.log('[NostrAuth] Sync successful:', result.data);
+  } catch (error) {
+    console.error('[NostrAuth] Sync failed:', error);
+  }
+}
+
 // Update UI based on auth state
 function updateAuthUI() {
   const container = document.getElementById('nostr-auth-container');
@@ -282,6 +393,9 @@ async function connect() {
 
     // Fetch profile from relays
     fetchNostrProfile(pubkeyHex);
+
+    // Sync scores to Firebase
+    syncScoresToFirebase();
 
   } catch (err) {
     console.error('Nostr connect error:', err);
@@ -431,6 +545,9 @@ async function initNostrAuth() {
         } catch (err) {
           console.debug('Storage read error:', err);
         }
+
+        // Sync scores when auth state changes to logged in
+        syncScoresToFirebase();
       } else {
         authState.isAuthenticated = false;
         authState.npub = null;
