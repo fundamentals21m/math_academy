@@ -110,9 +110,9 @@ export const syncScores = functions.https.onCall(
 
     // Update display name if provided
     if (displayName !== undefined) {
-      // Sanitize display name
+      // Sanitize display name - only allow alphanumeric, spaces, hyphens, apostrophes, periods
       const sanitizedName = displayName
-        ? displayName.trim().slice(0, 30).replace(/[<>]/g, '')
+        ? displayName.trim().replace(/[^a-zA-Z0-9\s\-'.]/g, '').slice(0, 30)
         : null;
       updateData.displayName = sanitizedName;
     }
@@ -192,20 +192,24 @@ export const getLeaderboard = functions.https.onCall(
       const npubs = scoresSnapshot.docs.map(doc => doc.data().npub);
       const usersMap = new Map<string, { displayName: string | null; level: number; banned: boolean }>();
 
-      // Batch fetch users
-      if (npubs.length > 0) {
-        const userDocs = await admin.firestore()
-          .collection('users')
-          .where(admin.firestore.FieldPath.documentId(), 'in', npubs.slice(0, 30))
-          .get();
+      // Batch fetch users (Firestore 'in' queries limited to 30 items)
+      // Fetch in batches of 30 to handle all npubs
+      for (let i = 0; i < npubs.length; i += 30) {
+        const batch = npubs.slice(i, i + 30);
+        if (batch.length > 0) {
+          const userDocs = await admin.firestore()
+            .collection('users')
+            .where(admin.firestore.FieldPath.documentId(), 'in', batch)
+            .get();
 
-        for (const doc of userDocs.docs) {
-          const data = doc.data();
-          usersMap.set(doc.id, {
-            displayName: data.displayName || null,
-            level: data.level || 1,
-            banned: data.banned || false,
-          });
+          for (const doc of userDocs.docs) {
+            const data = doc.data();
+            usersMap.set(doc.id, {
+              displayName: data.displayName || null,
+              level: data.level || 1,
+              banned: data.banned || false,
+            });
+          }
         }
       }
 
