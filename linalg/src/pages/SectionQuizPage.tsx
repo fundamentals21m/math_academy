@@ -1,7 +1,10 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { getSectionQuiz } from '@/data/quizzes';
 import { getSectionById, getPartBySectionId } from '@/data/curriculum';
+import { FEATURES } from '@/config';
+import { useGamification } from '@/contexts/GamificationContext';
 
 export default function SectionQuizPage() {
   const { id } = useParams<{ id: string }>();
@@ -9,6 +12,15 @@ export default function SectionQuizPage() {
   const questions = getSectionQuiz(sectionId);
   const section = getSectionById(sectionId);
   const part = getPartBySectionId(sectionId);
+
+  const gamificationContext = useGamification();
+  const gamification = FEATURES.gamification ? gamificationContext : null;
+
+  useEffect(() => {
+    if (gamification) {
+      gamification.visitSection(sectionId);
+    }
+  }, [sectionId, gamification]);
 
   if (!questions || questions.length === 0) {
     return (

@@ -1,7 +1,10 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { getQuizQuestions } from '@/data/quizzes/quizMap';
 import { getSectionById, getPartBySectionId } from '@/data/curriculum';
+import { FEATURES } from '@/config';
+import { useGamification } from '@/contexts/GamificationContext';
 
 export default function SectionQuizPage() {
   const { id } = useParams<{ id: string }>();
@@ -9,6 +12,17 @@ export default function SectionQuizPage() {
   const questions = getQuizQuestions(sectionId);
   const section = getSectionById(sectionId);
   const part = getPartBySectionId(sectionId);
+
+  // Always call the hook unconditionally, then conditionally use the result
+  const gamificationContext = useGamification();
+  const gamification = FEATURES.gamification ? gamificationContext : null;
+
+  // Ensure section is marked as visited before quiz can be taken
+  useEffect(() => {
+    if (gamification) {
+      gamification.visitSection(sectionId);
+    }
+  }, [sectionId, gamification]);
 
   if (!questions || questions.length === 0) {
     return (
