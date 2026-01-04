@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section17Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What can praxeology do regarding ethical arguments for intervention?',
+    options: [
+      'Prove them right or wrong morally',
+      'Expose internal contradictions and show if means achieve stated ends',
+      'Nothing—economics is purely descriptive',
+      'Vote on which ethics are correct'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Praxeology can critique ethics by showing logical contradictions and whether proposed means actually achieve stated goals.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is Rothbard\'s critique of egalitarianism?',
+    options: [
+      'Inequality is morally good',
+      'Equality of outcomes requires unequal treatment and destroys incentives',
+      'Some people deserve more',
+      'Equality is impossible to define'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Enforcing equality of outcomes requires treating people unequally and removes the incentive to produce.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why can\'t cost-benefit analysis justify intervention?',
+    options: [
+      'Benefits are too hard to calculate',
+      'Interpersonal utility comparisons are impossible',
+      'Government analysts are biased',
+      'All costs and benefits are equal'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'We cannot compare one person\'s utility loss to another\'s gain—utility is subjective and cannot be measured or compared.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is wrong with "public interest" justifications for intervention?',
+    options: [
+      'The public doesn\'t vote on it',
+      'Only individuals have interests; "society" doesn\'t choose',
+      'Politicians ignore the public interest',
+      'The public interest is always clear'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Only individuals act and have preferences. "Public interest" is a rhetorical device masking that some gain at others\' expense.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'According to Rothbard, does democratic approval make intervention legitimate?',
+    options: [
+      'Yes, democracy reflects the will of the people',
+      'No, rights are not subject to vote',
+      'Only if the vote is unanimous',
+      'Only in constitutional democracies'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Rights cannot be voted away. Majority approval doesn\'t make an action right—it just means more people supported it.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What ethical framework does Rothbard advocate instead of utilitarianism?',
+    options: [
+      'Majority rule',
+      'Natural rights based on self-ownership',
+      'Social contract theory',
+      'Virtue ethics'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Rothbard advocates natural rights derived from self-ownership, which provide clear, consistent rules without utility calculations.',
+  },
+];

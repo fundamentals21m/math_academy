@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section05Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is time preference?',
+    options: [
+      'Preference for working certain hours',
+      'The tendency to value present goods over future goods',
+      'Preference for saving over spending',
+      'The optimal timing for production'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Time preference is the preference for present satisfaction over future satisfaction. People generally prefer goods now to the same goods later.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'According to Austrian economics, what determines the interest rate?',
+    options: [
+      'The central bank',
+      'The social rate of time preference',
+      'The rate of inflation',
+      'International agreements'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The natural interest rate reflects society\'s time preference—how much more people value present goods versus future goods.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why does saving lead to economic growth?',
+    options: [
+      'It increases money in circulation',
+      'It provides funds for capital investment, increasing future production',
+      'It reduces consumption, leaving more goods available',
+      'It forces businesses to lower prices'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Saving means forgoing present consumption, freeing resources for investment in capital goods that increase future output.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the originary interest rate?',
+    options: [
+      'The rate charged by the first bank',
+      'The interest rate on government bonds',
+      'The pure time preference component of interest',
+      'The inflation-adjusted interest rate'
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Originary interest is the pure time preference component of interest—the premium present goods command over future goods.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What happens when time preference decreases in society?',
+    options: [
+      'Interest rates rise',
+      'More resources are devoted to present consumption',
+      'Savings increase and more capital is accumulated',
+      'Economic growth slows'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Lower time preference means people are more willing to delay gratification, leading to more saving and capital accumulation.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Why is interest not exploitation according to Rothbard?',
+    options: [
+      'Because governments regulate it',
+      'Because it reflects the genuine time preferences of savers and borrowers',
+      'Because interest rates are always low',
+      'Because only rich people earn interest'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Interest compensates savers for forgoing present consumption. It reflects mutual benefit: borrowers get funds now, savers are rewarded for waiting.',
+  },
+];

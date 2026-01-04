@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section13Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is autistic intervention?',
+    options: [
+      'Intervention affecting international trade',
+      'Government restriction on an individual\'s use of their own person or property',
+      'Intervention in the banking system',
+      'Voluntary self-restriction'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Autistic intervention restricts what individuals can do with their own bodies or property, with no exchange involved.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is binary intervention?',
+    options: [
+      'Intervention affecting two countries',
+      'Coerced exchange between government and individual (taxation, subsidies)',
+      'Regulation of two industries',
+      'Computer-based regulation'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Binary intervention involves a forced exchange between the State and the individual, such as taxation or conscription.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why does intervention "beget more intervention" according to Rothbard?',
+    options: [
+      'Bureaucrats want more power',
+      'Each intervention creates problems that seem to require further intervention',
+      'The public demands it',
+      'It is required by law'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Intervention creates unintended consequences that are used to justify additional interventions, creating an expansionary dynamic.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Who are the "unseen victims" of intervention?',
+    options: [
+      'Those who receive subsidies',
+      'Those who pay higher prices, lose opportunities, or never get to produce',
+      'Government officials',
+      'Foreign countries'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The unseen victims include consumers paying higher prices, workers losing jobs, and entrepreneurs whose businesses never exist.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is the "knowledge problem" created by intervention?',
+    options: [
+      'Officials don\'t have degrees',
+      'Intervention destroys the price signals that convey dispersed knowledge',
+      'People become less educated',
+      'Information is classified'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Prices convey information that no central authority can possess. Intervention disrupts this signaling mechanism.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'According to Rothbard, is the "mixed economy" stable?',
+    options: [
+      'Yes, it balances freedom and control',
+      'No, it tends toward either full socialism or the free market',
+      'It depends on the specific policies',
+      'Only in democracies'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The mixed economy is inherently unstable—it tends either toward more intervention (socialism) or toward liberalization.',
+  },
+];

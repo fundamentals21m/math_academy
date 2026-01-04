@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section15Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'How does taxation differ from voluntary payment according to Rothbard?',
+    options: [
+      'Taxation is for public goods only',
+      'Taxation is coerced while voluntary payment involves mutual benefit',
+      'There is no meaningful difference',
+      'Taxation is always lower'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Voluntary payments involve expected mutual benefit; taxation is coerced—if it weren\'t, government could simply charge fees.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is tax incidence?',
+    options: [
+      'How often taxes are collected',
+      'Who ultimately bears the economic burden of a tax',
+      'The tax rate',
+      'When taxes are due'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Tax incidence refers to who actually bears the burden, which may differ from who legally pays the tax.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Who typically bears the burden of employer payroll taxes?',
+    options: [
+      'Only employers',
+      'Primarily workers through reduced wages',
+      'Only consumers',
+      'The government'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Though nominally paid by employers, payroll taxes ultimately reduce what employers can pay workers.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is Rothbard\'s critique of progressive taxation?',
+    options: [
+      'It raises too much revenue',
+      'It penalizes success and destroys capital formation',
+      'It is too complicated',
+      'It benefits the middle class too much'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Progressive taxation punishes those who serve consumers most effectively and destroys capital that could fund investment.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What does Rothbard argue about "ability to pay" justifications for progressive taxes?',
+    options: [
+      'They are scientifically valid',
+      'They ignore that wealth is produced, not found',
+      'They should be used for all taxes',
+      'They benefit the poor'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The "ability to pay" argument ignores that wealth is produced by serving others, not simply possessed.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'According to Rothbard, is there such a thing as a "neutral" tax?',
+    options: [
+      'Yes, sales taxes are neutral',
+      'Yes, flat taxes are neutral',
+      'No, all taxes distort the market',
+      'Only lump-sum taxes are neutral'
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'All taxes alter behavior and resource allocation; there is no tax that leaves the market undistorted.',
+  },
+];
