@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section04Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the structure of production according to Austrian economics?',
+    options: [
+      'A single stage from raw materials to consumer goods',
+      'A series of stages from higher-order goods to consumer goods',
+      'Random production processes',
+      'Government-planned production sequences'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Production moves through stages: from raw materials (higher-order goods) through intermediate stages to final consumer goods.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What are "higher-order goods"?',
+    options: [
+      'Luxury consumer items',
+      'Goods used to produce other goods',
+      'Goods with higher prices',
+      'Government-produced goods'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Higher-order goods (capital goods, raw materials) are used in earlier production stages to eventually create consumer goods.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is capital in the Austrian view?',
+    options: [
+      'Money in the bank',
+      'Previously produced goods used to produce future goods',
+      'Stock market investments',
+      'Government bonds'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Capital consists of produced means of production—tools, machines, factories—that aid in producing consumer goods.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Why is production time-consuming?',
+    options: [
+      'Workers are slow',
+      'Production requires going through multiple stages of transformation',
+      'Government regulations slow it down',
+      'There is no reason—production can be instantaneous'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Production takes time because goods must pass through various stages of transformation before becoming consumer goods.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What determines the value of producer goods (factors of production)?',
+    options: [
+      'Their cost of production',
+      'Government assessment',
+      'The value of the consumer goods they help produce',
+      'Their weight and size'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Producer goods derive their value from the consumer goods they help create. Value flows backward from consumption.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'According to Rothbard, what happens when capital is consumed rather than maintained?',
+    options: [
+      'Nothing significant',
+      'Future production capacity decreases',
+      'Prices immediately fall',
+      'Workers become unemployed instantly'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Consuming capital (not replacing worn-out equipment) reduces future productive capacity, lowering future living standards.',
+  },
+];

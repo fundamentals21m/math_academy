@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section16Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Why does government spending lack market discipline?',
+    options: [
+      'Government workers are lazy',
+      'Spenders don\'t bear the costs and recipients don\'t choose the goods',
+      'There is not enough money',
+      'Bureaucracy is inherently slow'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Government spenders use others\' money for others—the category with the weakest incentive to economize.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What are transfer payments?',
+    options: [
+      'Payments for government services',
+      'Payments taken from some and given to others without production',
+      'International wire transfers',
+      'Tax refunds'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Transfer payments redistribute wealth—they don\'t pay for production, just move resources from one group to another.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why are "free" government services not really free?',
+    options: [
+      'Because there are application fees',
+      'Because they are paid for through taxation',
+      'Because they require waiting in line',
+      'Because quality is lower'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Services funded by taxes are not free—the cost is merely hidden and shifted to taxpayers.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is crowding out?',
+    options: [
+      'Too many people using government services',
+      'Government borrowing that reduces private investment',
+      'Regulations that prevent business entry',
+      'Public spaces becoming overcrowded'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'When government borrows, it competes with private borrowers, raising interest rates and reducing private investment.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is the "ratchet effect" in government spending?',
+    options: [
+      'Spending increases smoothly over time',
+      'Spending rises during crises but never fully returns to pre-crisis levels',
+      'Spending follows a mechanical formula',
+      'Spending is controlled by a ratchet mechanism'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Crises justify increased spending, but when crises end, spending doesn\'t return to previous levels—it ratchets up.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'According to Rothbard, what do both the welfare state and warfare state have in common?',
+    options: [
+      'They both help the poor',
+      'They both consume resources that would otherwise serve consumers',
+      'They are both constitutional',
+      'They are both popular'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Both welfare and warfare states divert resources from productive uses determined by consumers to political uses.',
+  },
+];
