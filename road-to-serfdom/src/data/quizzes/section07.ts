@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section07Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'According to Hayek, economic control is really:',
+    options: [
+      'Control of a minor sector of life separate from higher values',
+      'Control of the means for all our ends—and thus control over which ends are served',
+      'Only about money and prices',
+      'Easily separated from personal freedom'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Economic control is not control of a separate sector but control of the means for all ends. Whoever controls the means determines which ends can be pursued.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Hayek describes money as:',
+    options: [
+      'The root of all evil',
+      'One of the greatest instruments of freedom ever invented',
+      'Something that should be abolished',
+      'Only useful for the wealthy'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Money is one of the greatest instruments of freedom ever invented—it opens an astounding range of choice even to the poor, allowing trade with many rather than dependence on one.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Hayek argues there is no such thing as a separate "economic motive" because:',
+    options: [
+      'People are not interested in economics',
+      'All our ends compete for the same scarce means—economic choices are choices among ultimate values',
+      'Economics is too complicated',
+      'Only governments have economic motives'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'When we supposedly act from "economic motives," we actually mean our non-economic aims are limited by available means. All ends compete for scarce resources.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The claim that planning can control production while leaving consumption free is:',
+    options: [
+      'A valid middle ground',
+      'Proven successful in practice',
+      'An illusion—control of production determines what goods are available to consume',
+      'The official socialist position'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Control of production inevitably means control of consumption because the planning authority determines what goods are available. "Consumer sovereignty" is precisely what planning destroys.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Why does Hayek say "economic" freedoms like travel, choice of work, and leisure matter?',
+    options: [
+      'They don\'t matter much compared to political freedoms',
+      'They are often dearer to us than anything else—even free speech requires material resources',
+      'They only matter to the wealthy',
+      'They can easily be replaced by government provision'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'So-called "economic" freedoms are often what we value most. Even free speech requires printing, paper, halls—when the state controls all material resources, no freedom is secure.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Private property is the most important guarantee of freedom because:',
+    options: [
+      'It makes everyone wealthy',
+      'It divides control among many independent actors, so nobody has complete power over us',
+      'It was endorsed by Marx',
+      'It eliminates all inequality'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Private property guarantees freedom—even for the propertyless—because control is divided among many independent people. If all means are in one hand, that hand has complete power.',
+  },
+];

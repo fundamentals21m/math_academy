@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section15Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'National economic planning, according to Hayek, inevitably leads to:',
+    options: [
+      'International cooperation',
+      'International friction—turning economic relations into conflicts between armed states',
+      'Peace through prosperity',
+      'Global unity'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'National planning requires shutting out external influences, leading to restrictions on movement of goods and people, creating new blocks of opposed interests.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'International planning would be worse than national planning because:',
+    options: [
+      'It is too expensive',
+      'The wider the area, the less agreement on ends, and the greater necessity to rely on force',
+      'Technology doesn\'t permit it',
+      'There are too many languages'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'As scale increases, common ground decreases. Will Norwegians sacrifice for Portuguese? International planning becomes naked imposition by a small group.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'International economic authorities with monopolistic control would:',
+    options: [
+      'Promote efficiency',
+      'Become tyrannical—even with good intentions, controlling essentials like oil gives master-of-fate power',
+      'Reduce all conflicts',
+      'Be easily reformed'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Control of essential commodities like oil or transport gives far-reaching power. Such monopolies would become the worst conceivable racket, beyond national control.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The federal solution Hayek proposes would give international authority:',
+    options: [
+      'Unlimited planning powers',
+      'Power to restrain nations (say "no" to restrictions) but not to direct them',
+      'Control over all economic activity',
+      'No powers at all'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Federation gives limited powers—mainly negative powers to prevent harm. It can restrain without directing, based on rules not discretion.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Hayek says democracy works best with:',
+    options: [
+      'Large centralized governments',
+      'A great measure of local self-government—a school of political training',
+      'No local government',
+      'Direct democracy only'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Nowhere has democracy worked well without substantial local self-government. It provides training in responsibility and allows ordinary people to participate in familiar affairs.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Hayek\'s goal for international order is:',
+    options: [
+      'An omnipotent super-state',
+      'A loose association of nations',
+      'A community of nations of free men—neither super-state nor mere loose association',
+      'Complete isolation of nations'
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '"Neither an omnipotent super-state, nor a loose association of free nations, but a community of nations of free men must be our goal."',
+  },
+];

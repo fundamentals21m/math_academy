@@ -359,6 +359,20 @@ export const COURSES = [
     shortName: 'Man, Economy, State',
     progressGradient: 'linear-gradient(90deg, #10b981, #34d399)',
   },
+  {
+    id: 'road_to_serfdom',
+    title: 'The Road to Serfdom',
+    description: "F.A. Hayek's classic warning against central planning and collectivism. Explore how good intentions lead to tyranny, why the worst get on top, and the case for individual freedom.",
+    icon: '🔗',
+    url: 'https://road-to-serfdom-deploy.vercel.app/',
+    tags: ['16 Sections', 'Interactive'],
+    sections: ['austrian'],
+    totalSections: 16,
+    progressPrefix: 'road_to_serfdom:',
+    leaderboardUrl: 'https://road-to-serfdom-deploy.vercel.app/#/leaderboard',
+    shortName: 'Road to Serfdom',
+    progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
+  },
 ];
 
 /**

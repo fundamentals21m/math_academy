@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section01Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'According to Hayek, what primarily explains the rise of totalitarianism in Germany?',
+    options: [
+      'The inherent viciousness of the German people',
+      'Ideas that have spread throughout Western civilization',
+      'The Treaty of Versailles',
+      'Economic depression alone'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Hayek firmly rejects racial explanations and argues that specific ideas—not German character—led to totalitarianism, and these ideas have spread beyond Germany.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What does Hayek mean when he says Britain resembles Germany "15-25 years earlier"?',
+    options: [
+      'Britain has the same population as Germany did',
+      'Britain is experiencing the same intellectual trends that preceded Nazism',
+      'Britain has the same economic output',
+      'Britain has adopted German language and customs'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Hayek argues that ideas spread across nations at different speeds, and the same intellectual evolution that led to totalitarianism in Germany is underway in Britain.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Hayek describes his book as primarily:',
+    options: [
+      'A scientific treatise on economics',
+      'A political book arguing from the value of individual freedom',
+      'A historical account of World War II',
+      'A biography of German leaders'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Hayek is transparent that this is a political book, written not as a detached scientist but as a concerned citizen arguing from the value of individual freedom.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the "supreme tragedy" Hayek identifies in Germany\'s path to totalitarianism?',
+    options: [
+      'Economic collapse',
+      'Military defeat in World War I',
+      'People of goodwill prepared the way for forces they came to detest',
+      'Foreign intervention'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Hayek emphasizes that admired figures and people of goodwill in Germany unwittingly prepared the ground for the very forces they would later despise.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Why does Hayek reject the theory that Germans are "inherently vicious"?',
+    options: [
+      'Because it adopts the worst features of German racial theories',
+      'Because Germans won World War I',
+      'Because all humans are inherently good',
+      'Because Germany had never been violent before'
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Hayek argues that explaining Nazism by German racial character ironically adopts the same type of racial theorizing that characterized Nazi ideology itself.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'According to Hayek, what observation about British society in the 1940s was "too obvious" to need emphasizing?',
+    options: [
+      'Britain was winning the war',
+      '"We are all socialists now"',
+      'The economy was growing',
+      'Democracy was flourishing'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Hayek notes that socialism had become so dominant that virtually everyone who influenced opinion accepted socialist premises—the only disagreement was about degree.',
+  },
+];

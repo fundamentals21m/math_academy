@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section14Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The "End of Economic Man" is, according to Hayek:',
+    options: [
+      'An accurate description of modern attitudes',
+      'A myth—our generation is MORE governed by economic doctrines while refusing to accept economic constraints',
+      'A scientific theory',
+      'A goal to achieve'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '"Economophobia" would be more accurate—modern man hasn\'t stopped caring about economics but refuses to accept any obstacles to material demands.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Hayek argues that submission to impersonal market forces:',
+    options: [
+      'Is a form of slavery',
+      'Made possible the growth of civilization; the alternative is submission to arbitrary human power',
+      'Should be abolished',
+      'Is unique to capitalism'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Submission to market forces enabled civilization. Unless we destroy complex society, the only alternative is submission to equally uncontrollable but arbitrary human power.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Hayek says individual freedom cannot be reconciled with:',
+    options: [
+      'Any government action',
+      'Permanent subordination to any single purpose—even worthy ones like eliminating unemployment',
+      'Democratic voting',
+      'Economic growth'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Temporary sacrifice of freedom in war is acceptable; permanent subordination to any single goal, however worthy, is incompatible with freedom.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'A "recently dispossessed middle class" is dangerous because:',
+    options: [
+      'They are naturally violent',
+      'It was the decisive factor in totalitarianism on the Continent—short-sighted redistribution could create one in Britain',
+      'They oppose democracy',
+      'They support capitalism'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The dispossessed middle class was decisive in Continental totalitarianism. Britain lacked this, but unwise redistribution creating such a class would create similar dangers.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Morality, according to Hayek, can only exist where:',
+    options: [
+      'The state enforces good behavior',
+      'The individual is free to decide for himself—outside individual responsibility there is no moral merit',
+      'Religion provides guidance',
+      'Economic equality exists'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Outside individual responsibility there is neither goodness nor badness. If people are "made" to do good, they have no moral merit—choice is essential to morality.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Collectivism is "anti-moral" because:',
+    options: [
+      'It promotes crime',
+      'Its main promise—relief from responsibility—destroys the conditions in which moral sense can grow',
+      'It bans religion',
+      'It promotes selfishness'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A movement promising relief from responsibility cannot but be anti-moral. Freedom to arrange our own lives is the air in which moral sense grows and moral values are created.',
+  },
+];

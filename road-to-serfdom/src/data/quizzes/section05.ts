@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section05Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'According to Hayek, the claim that planning is "inevitable" due to technology is:',
+    options: [
+      'A proven scientific fact',
+      'A deliberately cultivated myth propagated until accepted as fact',
+      'A recent discovery',
+      'An undisputed truth'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Hayek argues the "inevitability" of planning is a deliberately cultivated myth—the result of opinions propagated for decades until they were accepted as established fact.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What did the American "Temporary National Economic Committee" study conclude about monopoly?',
+    options: [
+      'That large-scale production efficiency always leads to monopoly',
+      'That the view that efficiency causes monopoly "finds scant support in any evidence"',
+      'That monopoly is technologically inevitable',
+      'That competition cannot exist in modern industry'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The comprehensive study concluded that the claim efficiency of large-scale production eliminates competition "finds scant support in any evidence that is now at hand."',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Hayek argues that the complexity of modern society makes central planning:',
+    options: [
+      'More necessary than ever',
+      'Completely impossible',
+      'Less viable—complexity requires the price system, not central direction',
+      'Easier due to computers'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Hayek turns the complexity argument on its head: it is precisely modern complexity that makes competition more necessary, since no central planner can know what millions know.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Why do technical experts often favor planning, according to Hayek?',
+    options: [
+      'They are more intelligent than others',
+      'They see only their field\'s goals, not the trade-offs between competing objectives',
+      'They have studied planning extensively',
+      'They dislike democracy'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Experts favor planning because they see that their specific goals could be achieved—but they fail to see that this requires sacrificing other goals, which falls outside their specialism.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What role does the price system play, according to Hayek?',
+    options: [
+      'It causes economic chaos',
+      'It transmits information allowing coordination without conscious central direction',
+      'It benefits only large corporations',
+      'It should be replaced by planning boards'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The price system enables entrepreneurs to adjust their activities to others by watching comparatively few prices—an apparatus for transmitting information without central direction.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The historical evidence shows that monopoly in Germany resulted from:',
+    options: [
+      'Inevitable technological forces',
+      'Natural market evolution',
+      'Deliberate government policy fostering cartels since 1878',
+      'Consumer preferences'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Since 1878, Germany systematically fostered cartels through deliberate policy—protection, direct inducements, and ultimately compulsion—not technological necessity.',
+  },
+];
