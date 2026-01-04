@@ -154,37 +154,27 @@ struct WebViewRepresentable: UIViewRepresentable {
 
         func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
             // Handle messages from JavaScript (for progress sync)
-            print("iOS WebView: Received message from JavaScript: \(message.body)")
-
             guard let body = message.body as? [String: Any],
-                  let type = body["type"] as? String else {
-                print("iOS WebView: Failed to parse message body")
-                return
-            }
+                  let type = body["type"] as? String else { return }
 
             switch type {
             case "sectionCompleted":
                 if let sectionId = body["sectionId"] as? String,
                    let courseId = body["courseId"] as? String {
-                    // Update iOS progress service
                     ProgressService.shared.markSectionCompleted(
                         sectionId,
                         courseId: courseId,
-                        totalSections: 12  // Default, actual value varies by course
+                        totalSections: 12
                     )
-                    print("iOS Progress: Section completed - \(sectionId)")
                 }
             case "quizCompleted":
                 if let sectionId = body["sectionId"] as? String,
-                   let courseId = body["courseId"] as? String,
-                   let score = body["score"] as? Int {
-                    // Quiz completions also count as section progress
+                   let courseId = body["courseId"] as? String {
                     ProgressService.shared.markSectionCompleted(
                         "\(sectionId):quiz",
                         courseId: courseId,
                         totalSections: 12
                     )
-                    print("iOS Progress: Quiz completed - \(sectionId) score: \(score)")
                 }
             default:
                 break
