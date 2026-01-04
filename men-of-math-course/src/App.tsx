@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
 import { AchievementToastContainer } from '@/components/gamification';
@@ -89,22 +89,22 @@ const sectionComponents: Record<number, React.ComponentType> = {
 };
 
 function SectionRouter() {
-  // Get section ID from URL
-  const id = parseInt(window.location.hash.split('/section/')[1] || '0');
-  const SectionComponent = sectionComponents[id];
+  const { id } = useParams<{ id: string }>();
+  const sectionId = parseInt(id || '0', 10);
+  const SectionComponent = sectionComponents[sectionId];
 
-  if (SectionComponent) {
-    return <SectionComponent />;
+  if (!SectionComponent) {
+    return (
+      <div className="min-h-screen bg-dark-950 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
+          <p className="text-dark-400">This section is not yet implemented.</p>
+        </div>
+      </div>
+    );
   }
 
-  return (
-    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
-        <p className="text-dark-400">This section is not yet implemented.</p>
-      </div>
-    </div>
-  );
+  return <SectionComponent />;
 }
 
 function AppLayout({ children }: { children: React.ReactNode }) {

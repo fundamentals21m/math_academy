@@ -14,7 +14,7 @@ import Theorems from '@/pages/Theorems';
 import InteractiveModules from '@/pages/InteractiveModules';
 import SectionQuizPage from '@/pages/SectionQuizPage';
 
-// Section pages - Atlas Shrugged (30 chapters)
+// Section pages - import all sections here
 import Section00 from '@/pages/sections/Section00';
 import Section01 from '@/pages/sections/Section01';
 import Section02 from '@/pages/sections/Section02';
@@ -45,8 +45,19 @@ import Section26 from '@/pages/sections/Section26';
 import Section27 from '@/pages/sections/Section27';
 import Section28 from '@/pages/sections/Section28';
 import Section29 from '@/pages/sections/Section29';
+import Section30 from '@/pages/sections/Section30';
+import Section31 from '@/pages/sections/Section31';
+import Section32 from '@/pages/sections/Section32';
+import Section33 from '@/pages/sections/Section33';
+import Section34 from '@/pages/sections/Section34';
+import Section35 from '@/pages/sections/Section35';
+import Section36 from '@/pages/sections/Section36';
+import Section37 from '@/pages/sections/Section37';
+import Section38 from '@/pages/sections/Section38';
+import Section39 from '@/pages/sections/Section39';
 
 // Dynamic section loader for sections that exist
+// Add section components here as you create them:
 const sectionComponents: Record<number, React.ComponentType> = {
   0: Section00,
   1: Section01,
@@ -78,6 +89,16 @@ const sectionComponents: Record<number, React.ComponentType> = {
   27: Section27,
   28: Section28,
   29: Section29,
+  30: Section30,
+  31: Section31,
+  32: Section32,
+  33: Section33,
+  34: Section34,
+  35: Section35,
+  36: Section36,
+  37: Section37,
+  38: Section38,
+  39: Section39,
 };
 
 function AppLayout({ children }: { children: React.ReactNode }) {
