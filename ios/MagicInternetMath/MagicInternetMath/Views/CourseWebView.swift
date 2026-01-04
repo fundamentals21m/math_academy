@@ -154,8 +154,13 @@ struct WebViewRepresentable: UIViewRepresentable {
 
         func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
             // Handle messages from JavaScript (for progress sync)
+            print("iOS WebView: Received message from JavaScript: \(message.body)")
+
             guard let body = message.body as? [String: Any],
-                  let type = body["type"] as? String else { return }
+                  let type = body["type"] as? String else {
+                print("iOS WebView: Failed to parse message body")
+                return
+            }
 
             switch type {
             case "sectionCompleted":

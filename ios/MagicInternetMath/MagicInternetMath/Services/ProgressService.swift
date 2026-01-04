@@ -60,11 +60,16 @@ class ProgressService: ObservableObject {
     func markSectionCompleted(_ sectionId: String, courseId: String, totalSections: Int) {
         guard !progress.sectionsCompleted.contains(sectionId) else { return }
 
+        // Notify SwiftUI of upcoming change
+        objectWillChange.send()
+
         progress.sectionsCompleted.append(sectionId)
         updateCourseProgress(courseId: courseId, totalSections: totalSections)
         awardXP(50)
         updateStreak()
         save()
+
+        print("ProgressService: Updated progress for \(courseId) - \(getProgressPercentage(for: courseId) * 100)%")
     }
 
     func getCourseProgress(for courseId: String) -> UserProgress.CourseProgress? {

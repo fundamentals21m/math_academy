@@ -2,6 +2,11 @@ import SwiftUI
 
 struct CourseCardView: View {
     let course: Course
+    @ObservedObject private var progressService = ProgressService.shared
+
+    private var progress: Double {
+        progressService.getProgressPercentage(for: course.id)
+    }
 
     var body: some View {
         NavigationLink(destination: CourseWebView(course: course)) {
@@ -43,9 +48,10 @@ struct CourseCardView: View {
                     .lineLimit(3)
                     .multilineTextAlignment(.leading)
 
-                // Progress bar (placeholder - connect to progress service later)
-                ProgressBarView(progress: 0, gradient: course.gradient)
-                    .opacity(0) // Hidden until progress tracking is implemented
+                // Progress bar
+                if progress > 0 {
+                    ProgressBarView(progress: progress, gradient: course.gradient)
+                }
             }
             .padding(16)
             .cardStyle()
