@@ -67,6 +67,12 @@ export const SECTIONS = [
     subtitle: 'Foundational texts that shaped mathematics',
     style: 'subject'
   },
+  {
+    id: 'austrian',
+    title: 'Austrian Economics',
+    subtitle: 'The study of human action and market processes',
+    style: 'subject'
+  },
 ];
 
 /** @type {Course[]} */
@@ -257,9 +263,9 @@ export const COURSES = [
     description: "The foundational text of Western mathematics. Study all 13 books covering plane geometry, proportions, number theory, and solid geometry through interactive propositions and proofs.",
     icon: '📜',
     url: 'https://euclid-deploy.vercel.app/',
-    tags: ['13 Books', '137 Sections'],
-    sections: ['featured', 'seminal', 'geometry'],
-    totalSections: 137,
+    tags: ['13 Books', '219 Sections'],
+    sections: ['seminal', 'geometry'],
+    totalSections: 219,
     progressPrefix: 'euclid:',
     leaderboardUrl: 'https://euclid-deploy.vercel.app/#/leaderboard',
     shortName: 'Elements',
@@ -308,6 +314,50 @@ export const COURSES = [
     leaderboardUrl: 'thales-deploy/#/leaderboard',
     shortName: 'Heritage of Thales',
     progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
+  },
+
+  // AUSTRIAN ECONOMICS
+  {
+    id: 'human_action',
+    title: 'Human Action',
+    description: "Ludwig von Mises' foundational treatise on economics. A comprehensive study of human action, market processes, and the Austrian school of economic thought.",
+    icon: '📖',
+    url: 'human-action-deploy/',
+    tags: ['8 Parts', '40 Sections'],
+    sections: ['austrian'],
+    totalSections: 40,
+    progressPrefix: 'human_action:',
+    leaderboardUrl: 'human-action-deploy/#/leaderboard',
+    shortName: 'Human Action',
+    progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
+  },
+  {
+    id: 'atlas_shrugged',
+    title: 'Atlas Shrugged',
+    description: "Ayn Rand's magnum opus exploring individualism, reason, and productive achievement. A philosophical novel about what happens when the world's producers go on strike.",
+    icon: '🔥',
+    url: 'https://atlas-shrugged-deploy.vercel.app/',
+    tags: ['3 Parts', '30 Sections'],
+    sections: ['austrian'],
+    totalSections: 30,
+    progressPrefix: 'atlas_shrugged:',
+    leaderboardUrl: 'https://atlas-shrugged-deploy.vercel.app/#/leaderboard',
+    shortName: 'Atlas Shrugged',
+    progressGradient: 'linear-gradient(90deg, #ef4444, #f97316)',
+  },
+  {
+    id: 'man_econ_state',
+    title: 'Man, Economy, and State',
+    description: "Murray Rothbard's comprehensive treatise on Austrian economics. From the fundamentals of human action through money, production, and intervention to the vision of a free society.",
+    icon: '⚖️',
+    url: 'https://man-econ-state.vercel.app/',
+    tags: ['6 Parts', '19 Sections'],
+    sections: ['austrian'],
+    totalSections: 19,
+    progressPrefix: 'man_econ_state:',
+    leaderboardUrl: 'https://man-econ-state.vercel.app/#/leaderboard',
+    shortName: 'Man, Economy, State',
+    progressGradient: 'linear-gradient(90deg, #10b981, #34d399)',
   },
 ];
 
