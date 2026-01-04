@@ -46,7 +46,7 @@ const calloutStyles: Record<CalloutType, { bg: string; border: string; icon: str
 
 /**
  * Callout component for highlighting important information
- * Types: info (blue), warning (yellow), danger (red), success (green)
+ * Types: info (blue), warning (yellow), danger (red), success (green), note (purple)
  */
 export function Callout({ type = 'info', title, children, className = '' }: CalloutProps) {
   const style = calloutStyles[type];

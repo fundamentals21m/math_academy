@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-type CalloutType = 'info' | 'warning' | 'danger' | 'success';
+type CalloutType = 'info' | 'warning' | 'danger' | 'success' | 'note';
 
 interface CalloutProps {
   type?: CalloutType;
@@ -34,11 +34,17 @@ const calloutStyles: Record<CalloutType, { bg: string; border: string; icon: str
     icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
     iconColor: 'text-emerald-400',
   },
+  note: {
+    bg: 'bg-purple-500/5',
+    border: 'border-purple-500/30',
+    icon: 'M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z',
+    iconColor: 'text-purple-400',
+  },
 };
 
 /**
  * Callout component for highlighting important information
- * Types: info (blue), warning (yellow), danger (red), success (green)
+ * Types: info (blue), warning (yellow), danger (red), success (green), note (purple)
  */
 export function Callout({ type = 'info', title, children, className = '' }: CalloutProps) {
   const style = calloutStyles[type];

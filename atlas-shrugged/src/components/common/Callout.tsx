@@ -35,16 +35,16 @@ const calloutStyles: Record<CalloutType, { bg: string; border: string; icon: str
     iconColor: 'text-emerald-400',
   },
   note: {
-    bg: 'bg-purple-500/5',
-    border: 'border-purple-500/30',
+    bg: 'bg-amber-500/5',
+    border: 'border-amber-500/30',
     icon: 'M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z',
-    iconColor: 'text-purple-400',
+    iconColor: 'text-amber-400',
   },
 };
 
 /**
  * Callout component for highlighting important information
- * Types: info (blue), warning (yellow), danger (red), success (green), note (purple)
+ * Types: info (blue), warning (yellow), danger (red), success (green)
  */
 export function Callout({ type = 'info', title, children, className = '' }: CalloutProps) {
   const style = calloutStyles[type];
