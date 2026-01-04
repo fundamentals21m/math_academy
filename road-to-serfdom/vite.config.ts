@@ -6,7 +6,7 @@ import path from 'path'
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
 const COURSE_ID = 'road-to-serfdom'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = `/${COURSE_ID}-deploy/`  // For hub deployment: /{course-id}-deploy/
+const BASE_PATH = '/'  // Standalone Vercel deployment
 // =============================================================================
 
 export default defineConfig({
