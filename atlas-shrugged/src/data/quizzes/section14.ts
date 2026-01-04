@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section14Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What does "Account Overdrawn" refer to in this chapter?',
+    options: [
+      'A character\'s personal bank account',
+      'Society consuming more than it produces',
+      'A specific corporate bankruptcy',
+      'Railroad ticket sales'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The title refers to society\'s account being overdrawn - consuming the accumulated wealth of producers without creating new value.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What consequences are becoming visible as the "account" runs out?',
+    options: [
+      'Economic growth and prosperity',
+      'Shortages, breakdowns, and systemic failures',
+      'International investment',
+      'Political reform'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'As the productive are driven out and accumulated wealth is consumed, shortages, infrastructure failures, and economic collapse accelerate.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why can\'t the looters simply continue taking from the productive?',
+    options: [
+      'Because laws prevent it',
+      'Because there is increasingly less to take as producers disappear',
+      'Because the military intervenes',
+      'Because international trade saves them'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The looters face a limit: as producers leave or stop producing, there is less wealth to redistribute, and the system cannot sustain itself.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What do the authorities blame for the growing economic problems?',
+    options: [
+      'Their own policies',
+      'The producers who are leaving and the "selfish" who won\'t sacrifice',
+      'Natural disasters',
+      'Foreign enemies'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Rather than recognizing their policies as the cause, authorities blame the productive for "selfishly" refusing to sacrifice more.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What economic principle does the chapter illustrate?',
+    options: [
+      'That wealth is unlimited and can be redistributed forever',
+      'That consumption without production leads to eventual collapse',
+      'That government spending creates prosperity',
+      'That natural resources determine wealth'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The chapter illustrates that wealth must be produced before it can be consumed - drawing on accumulated capital without replenishing it leads to collapse.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What does Rand suggest is the ultimate result of the looters\' philosophy?',
+    options: [
+      'A stable socialist society',
+      'Self-destruction as they consume the basis of their own existence',
+      'Eventual compromise with producers',
+      'International bailout'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Rand shows that the looter philosophy is ultimately self-destructive - by destroying the productive, they destroy the source of what they consume.',
+  },
+];
