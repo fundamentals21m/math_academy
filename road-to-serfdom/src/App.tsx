@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
 import { AchievementToastContainer } from '@/components/gamification';
@@ -73,16 +73,22 @@ function AppLayout({ children }: { children: React.ReactNode }) {
 }
 
 function SectionRouter() {
-  // This component handles dynamic section routing
-  // It will be replaced with actual section components as you build them
-  return (
-    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
-        <p className="text-dark-400">This section is not yet implemented.</p>
+  const { id } = useParams<{ id: string }>();
+  const sectionId = parseInt(id || '0', 10);
+  const SectionComponent = sectionComponents[sectionId];
+
+  if (!SectionComponent) {
+    return (
+      <div className="min-h-screen bg-dark-950 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
+          <p className="text-dark-400">This section is not yet implemented.</p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  return <SectionComponent />;
 }
 
 function AppContent() {
