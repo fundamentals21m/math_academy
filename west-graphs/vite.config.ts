@@ -25,7 +25,22 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-math': ['katex'],
+          'vendor-animation': ['framer-motion'],
+          'vendor-firebase': [
+            'firebase/app',
+            'firebase/auth',
+            'firebase/firestore',
+            'firebase/functions',
+          ],
+        },
+      },
+    },
   },
   define: {
     // Firebase environment variables
