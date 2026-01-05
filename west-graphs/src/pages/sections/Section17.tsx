@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { PlanarityTester } from '@/components/visualizations';
 
 export default function Section17() {
   return (
@@ -73,6 +74,8 @@ export default function Section17() {
           <li>The outer face is bounded by the outer triangle</li>
         </ul>
       </Example>
+
+      <PlanarityTester className="my-8" />
 
       <h2>Euler's Formula</h2>
 

@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { HamiltonianFinder } from '@/components/visualizations';
 
 export default function Section21() {
   return (
@@ -44,6 +45,8 @@ export default function Section21() {
           </li>
         </ul>
       </Example>
+
+      <HamiltonianFinder className="my-8" />
 
       <h2>Necessary Conditions</h2>
 

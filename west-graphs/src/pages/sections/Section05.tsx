@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { TreeVisualizer } from '@/components/visualizations';
 
 export default function Section05() {
   return (
@@ -11,6 +12,15 @@ export default function Section05() {
         communication networks. In this section, we develop the fundamental properties of
         trees and introduce the important concept of distance in graphs.
       </p>
+
+      <h2>Interactive Tree Visualizer</h2>
+
+      <p>
+        Use the interactive tool below to explore tree properties. Select a root vertex to see
+        the hierarchical structure, compute distances, and find the tree's center and radius.
+      </p>
+
+      <TreeVisualizer className="my-8" />
 
       <h2>Basic Definitions</h2>
 

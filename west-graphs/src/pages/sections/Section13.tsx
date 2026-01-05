@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { FlowNetwork } from '@/components/visualizations';
 
 export default function Section13() {
   return (
@@ -12,6 +13,15 @@ export default function Section13() {
         to linear programming duality. Flow networks model transportation, communication,
         and many other systems.
       </p>
+
+      <h2>Interactive Flow Network</h2>
+
+      <p>
+        Watch the Ford-Fulkerson algorithm find maximum flow. See augmenting paths, observe
+        flow being pushed through the network, and discover the minimum cut.
+      </p>
+
+      <FlowNetwork className="my-8" />
 
       <h2>Networks and Flows</h2>
 

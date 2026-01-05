@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { GraphEditor } from '@/components/visualizations';
 
 export default function Section01() {
   return (
@@ -197,6 +198,15 @@ export default function Section01() {
           <strong>disconnected</strong>.
         </p>
       </Definition>
+
+      <h2>Interactive Graph Editor</h2>
+
+      <p>
+        Use the interactive tool below to explore graph concepts. Create vertices by clicking,
+        connect them with edges, and observe properties like adjacency and degree sequences.
+      </p>
+
+      <GraphEditor className="my-8" />
 
       <h2>Matrices and Isomorphism</h2>
 

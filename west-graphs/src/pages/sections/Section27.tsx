@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { RandomGraphGenerator } from '@/components/visualizations';
 
 export default function Section27() {
   return (
@@ -35,6 +36,8 @@ export default function Section27() {
           similarly.
         </p>
       </Definition>
+
+      <RandomGraphGenerator className="my-8" />
 
       <h2>Basic Properties</h2>
 

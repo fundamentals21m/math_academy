@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { GraphColoring } from '@/components/visualizations';
 
 export default function Section14() {
   return (
@@ -66,6 +67,8 @@ export default function Section14() {
           <InlineMath math="G" /> has no odd cycle.
         </p>
       </Theorem>
+
+      <GraphColoring className="my-8" />
 
       <h2>Greedy Coloring</h2>
 

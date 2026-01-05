@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { MSTAnimator } from '@/components/visualizations';
 
 export default function Section07() {
   return (
@@ -18,6 +19,15 @@ export default function Section07() {
         with small distances. When discussing weighted graphs,{' '}
         <strong>we consider only nonnegative edge weights</strong>.
       </p>
+
+      <h2>Interactive MST Algorithm</h2>
+
+      <p>
+        Watch Kruskal's or Prim's algorithm find the minimum spanning tree step by step.
+        See how each algorithm greedily selects edges to build the optimal solution.
+      </p>
+
+      <MSTAnimator className="my-8" />
 
       <h2>Minimum Spanning Trees</h2>
 

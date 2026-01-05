@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { PathExplorer } from '@/components/visualizations';
 
 export default function Section02() {
   return (
@@ -359,6 +360,15 @@ export default function Section02() {
         <InlineMath>G</InlineMath> is bipartite, we define a bipartition and prove that the two
         sets are independent.
       </p>
+
+      <h2>Interactive Path Explorer</h2>
+
+      <p>
+        Use the interactive tool below to explore paths, cycles, and Eulerian circuits.
+        Click vertices to find paths between them, detect cycles, or discover Eulerian circuits.
+      </p>
+
+      <PathExplorer className="my-8" />
 
       <h2>Eulerian Circuits</h2>
 

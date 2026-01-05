@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { MatchingExplorer } from '@/components/visualizations';
 
 export default function Section08() {
   return (
@@ -12,6 +13,15 @@ export default function Section08() {
         applicants. Bipartite graphs have a natural vertex partition, and we want to know
         whether the two sets can be paired using edges.
       </p>
+
+      <h2>Interactive Matching Explorer</h2>
+
+      <p>
+        Explore bipartite matchings interactively. Click edges to build a matching, find
+        maximum matchings, and verify Hall's condition for perfect matchings.
+      </p>
+
+      <MatchingExplorer className="my-8" />
 
       <h2>Matchings</h2>
 
