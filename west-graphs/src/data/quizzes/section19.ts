@@ -1,0 +1,83 @@
+import type { QuizQuestion } from './types';
+
+export const section19Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The Four Color Theorem states that every planar graph is:',
+    options: [
+      '2-colorable',
+      '3-colorable',
+      '4-colorable',
+      '5-colorable'
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Every planar graph can be properly vertex-colored with at most 4 colors.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The crossing number $cr(G)$ is:',
+    options: [
+      'The number of edges',
+      'The minimum crossings in any drawing',
+      'The chromatic number',
+      'The genus'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The crossing number is the minimum number of edge crossings over all drawings of $G$.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'A graph is planar if and only if:',
+    options: [
+      '$cr(G) = 0$',
+      '$cr(G) \\leq 1$',
+      'The genus is 0',
+      'Both $cr(G) = 0$ and genus is 0'
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Planarity $\\Leftrightarrow$ zero crossing number $\\Leftrightarrow$ embeds on the sphere (genus 0).',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The thickness of $K_9$ (minimum planar graphs to decompose edges) is:',
+    options: [
+      '1',
+      '2',
+      '3',
+      '4'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$K_9$ has 36 edges; planar graphs on 9 vertices have $\\leq 3(9)-6=21$ edges. So thickness $\\geq \\lceil 36/21 \\rceil = 2$. Actually, thickness of $K_9$ is 3.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'What is $cr(K_5)$ (crossing number of $K_5$)?',
+    correctAnswer: 1,
+    numericRange: { min: 0, max: 10, precision: 0 },
+    difficulty: 'hard',
+    explanation: '$K_5$ needs exactly 1 crossing; it has $10 - 9 = 1$ extra edge over the planar threshold.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'An outerplanar graph is one that:',
+    options: [
+      'Has a plane drawing with all vertices on the outer face',
+      'Has no $K_4$ subgraph',
+      'Is a tree',
+      'Has chromatic number 2'
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Outerplanar: can be drawn with all vertices on the boundary of the unbounded face.',
+  },
+];

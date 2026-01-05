@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section24Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'A matroid is defined by a ground set $E$ and a collection $\\mathcal{I}$ of independent sets satisfying:',
+    options: [
+      'Hereditary and exchange properties',
+      'Closure under union',
+      'All subsets are independent',
+      'Only singletons are independent'
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Matroids: (I1) $\\emptyset \\in \\mathcal{I}$, (I2) hereditary: $I \\in \\mathcal{I}, J \\subseteq I \\Rightarrow J \\in \\mathcal{I}$, (I3) exchange axiom.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'In the graphic matroid of graph $G$:',
+    options: [
+      'Independent sets are matchings',
+      'Independent sets are forests (acyclic edge sets)',
+      'Independent sets are vertex covers',
+      'Independent sets are cliques'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Graphic matroid: ground set is edges, independent sets are forests (edge sets with no cycles).',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The rank of a set $S$ in a matroid is:',
+    options: [
+      'The number of elements in $S$',
+      'The size of the largest independent subset of $S$',
+      'The number of bases containing $S$',
+      'The chromatic number'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Rank $r(S)$ = maximum size of an independent set contained in $S$.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The dual matroid $M^*$ has the same ground set but:',
+    options: [
+      'Complementary bases',
+      'Same independent sets',
+      'Reversed rank function',
+      'No bases'
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'In $M^*$, bases are complements of bases in $M$: $B^* = E \\setminus B$ where $B$ is a basis of $M$.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The greedy algorithm solves maximum weight independent set problems for:',
+    options: [
+      'All graphs',
+      'Only bipartite graphs',
+      'Matroids',
+      'Only trees'
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Matroids are precisely the structures where greedy gives optimal weighted independent sets.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The dual of a graphic matroid (cycles in $G$) is:',
+    options: [
+      'Another graphic matroid',
+      'The cographic matroid (bonds/cuts in $G$)',
+      'Not a matroid',
+      'The same matroid'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Dual of graphic matroid is cographic: independent sets are edge sets not containing cuts.',
+  },
+];

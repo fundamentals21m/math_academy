@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section13Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'In a network flow, the value of a flow is:',
+    options: [
+      'The sum of all edge capacities',
+      'The net flow out of the source',
+      'The number of edges with positive flow',
+      'The maximum edge capacity'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Flow value = total flow leaving source = total flow entering sink.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The Max-Flow Min-Cut Theorem states:',
+    options: [
+      'Maximum flow equals minimum number of edges',
+      'Maximum flow value equals minimum cut capacity',
+      'Every flow can be decomposed into paths',
+      'Flows are always integral'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The maximum flow value equals the minimum capacity of an $s$-$t$ cut.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Ford-Fulkerson finds augmenting paths in:',
+    options: [
+      'The original graph',
+      'The residual graph',
+      'The line graph',
+      'A spanning tree'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Ford-Fulkerson repeatedly finds augmenting paths in the residual graph (forward and backward edges).',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'If all capacities are integers, Ford-Fulkerson guarantees:',
+    options: [
+      'Polynomial time always',
+      'An integral maximum flow',
+      'A unique maximum flow',
+      'No augmenting paths exist'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'With integer capacities, Ford-Fulkerson produces an integral max flow (integrality theorem).',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Edmonds-Karp is Ford-Fulkerson with:',
+    options: [
+      'Random path selection',
+      'BFS to find shortest augmenting paths',
+      'DFS to find longest augmenting paths',
+      'Minimum capacity paths'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Edmonds-Karp uses BFS for shortest augmenting paths, giving $O(VE^2)$ complexity.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'König\'s theorem can be proved using:',
+    options: [
+      'Induction on vertices',
+      'Max-flow min-cut theorem',
+      'The four-color theorem',
+      'Euler\'s formula'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'König\'s theorem (bipartite matching = vertex cover) follows from max-flow min-cut applied to bipartite graphs.',
+  },
+];
