@@ -36,7 +36,22 @@ export default function Section04() {
         This important result extends the Thales theorem and follows from it.
       </p>
 
-      <Theorem title="Proportional Sides of Similar Triangles">
+      <Theorem title="Proportional Sides of Similar Triangles"
+        proof={
+          <>
+            <p>Let triangles ABC and A′B′C′ have equal angles α, β, γ at corresponding vertices.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Place triangle ABC so that A coincides with A′, and sides AB and AC lie along A′B′ and A′C′ respectively.</p>
+            <p className="mt-2">Since the angles at A and A′ are equal, this placement is possible.</p>
+            <p className="mt-2"><strong>Step 2:</strong> After placement, B lies on segment A′B′ and C lies on segment A′C′.</p>
+            <p className="mt-2">The line BC makes angle β with line A′B′ at point B. Line B′C′ also makes angle β with line A′B′ at point B′.</p>
+            <p className="mt-2"><strong>Step 3:</strong> Since BC and B′C′ both make the same angle β with line A′B′, they are parallel.</p>
+            <p className="mt-2"><strong>Step 4:</strong> By the Thales theorem (parallels cut transversals proportionally):</p>
+            <MathBlock math="\frac{|AB|}{|AB'|} = \frac{|AC|}{|AC'|}" />
+            <p className="mt-2">Writing |AB| = c, |AC| = b, |A′B′| = c′, |A′C′| = b′:</p>
+            <MathBlock math="\frac{c}{c'} = \frac{b}{b'} \implies \frac{b}{c} = \frac{b'}{c'}" />
+          </>
+        }
+      >
         <p>
           If triangles ABC and A&prime;B&prime;C&prime; are similar, then all corresponding
           sides are proportional:
@@ -185,7 +200,23 @@ export default function Section04() {
         the foundations of geometry.
       </p>
 
-      <Theorem title="Pappus's Theorem (Parallel Case)">
+      <Theorem title="Pappus's Theorem (Parallel Case)"
+        proof={
+          <>
+            <p>Let points A, E, C lie on line M through O, and points F, B, D lie on line L through O.</p>
+            <p className="mt-2">Assume AB ∥ ED and FE ∥ BC. We must show AF ∥ CD.</p>
+            <p className="mt-2"><strong>Step 1:</strong> By Thales theorem applied to AB ∥ ED:</p>
+            <MathBlock math="\frac{|OA|}{|OE|} = \frac{|OB|}{|OD|}" />
+            <p className="mt-2"><strong>Step 2:</strong> By Thales theorem applied to FE ∥ BC:</p>
+            <MathBlock math="\frac{|OF|}{|OB|} = \frac{|OE|}{|OC|}" />
+            <p className="mt-2"><strong>Step 3:</strong> Multiplying these ratios:</p>
+            <MathBlock math="\frac{|OA|}{|OE|} \cdot \frac{|OF|}{|OB|} = \frac{|OB|}{|OD|} \cdot \frac{|OE|}{|OC|}" />
+            <p className="mt-2">Simplifying (canceling |OE| and |OB|):</p>
+            <MathBlock math="\frac{|OA| \cdot |OF|}{|OE| \cdot |OB|} = \frac{|OB| \cdot |OE|}{|OD| \cdot |OC|} \implies \frac{|OA|}{|OC|} = \frac{|OF|}{|OD|}" />
+            <p className="mt-2"><strong>Step 4:</strong> By the converse of the Thales theorem, this proportion implies AF ∥ CD.</p>
+          </>
+        }
+      >
         <p>
           Suppose that points A, B, C, D, E, F lie alternately on two lines L and M
           meeting at O.
@@ -241,7 +272,21 @@ export default function Section04() {
         </svg>
       </div>
 
-      <Theorem title="Desargues's Theorem (Parallel Case)">
+      <Theorem title="Desargues's Theorem (Parallel Case)"
+        proof={
+          <>
+            <p>Let triangles ABC and A′B′C′ be in perspective from O, with AA′, BB′, CC′ all passing through O.</p>
+            <p className="mt-2">Assume AB ∥ A′B′ and BC ∥ B′C′. We must show AC ∥ A′C′.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Apply Thales theorem to the transversals OA and OB cut by the parallels AB and A′B′:</p>
+            <MathBlock math="\frac{|OA|}{|OA'|} = \frac{|OB|}{|OB'|}" />
+            <p className="mt-2"><strong>Step 2:</strong> Apply Thales theorem to the transversals OB and OC cut by the parallels BC and B′C′:</p>
+            <MathBlock math="\frac{|OB|}{|OB'|} = \frac{|OC|}{|OC'|}" />
+            <p className="mt-2"><strong>Step 3:</strong> Combining these results:</p>
+            <MathBlock math="\frac{|OA|}{|OA'|} = \frac{|OB|}{|OB'|} = \frac{|OC|}{|OC'|}" />
+            <p className="mt-2"><strong>Step 4:</strong> By the converse of the Thales theorem, the equal ratios |OA|/|OA′| = |OC|/|OC′| imply that AC ∥ A′C′.</p>
+          </>
+        }
+      >
         <p>
           Suppose that triangles ABC and A&prime;B&prime;C&prime; are "in perspective
           from O"—meaning points A, B, C, A&prime;, B&prime;, C&prime; lie on concurrent

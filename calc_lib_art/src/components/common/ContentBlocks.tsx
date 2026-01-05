@@ -44,11 +44,11 @@ export function Definition({ title, children, className = '' }: ContentBlockProp
 }
 
 interface TheoremProps extends ContentBlockProps {
-  proof?: ReactNode;
+  proof: ReactNode;  // Required - all theorems must have proofs
 }
 
 /**
- * Theorem block - amber gradient, with optional collapsible proof
+ * Theorem block - amber gradient, with collapsible proof
  */
 export function Theorem({ title, children, proof, className = '' }: TheoremProps) {
   const [showProof, setShowProof] = useState(false);

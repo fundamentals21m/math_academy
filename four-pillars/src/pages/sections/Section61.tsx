@@ -84,7 +84,25 @@ export default function Section61() {
         </p>
       </div>
 
-      <Theorem title="Möbius Transformations Are Conformal">
+      <Theorem title="Möbius Transformations Are Conformal"
+        proof={
+          <>
+            <p>We prove conformality using the complex derivative.</p>
+            <p className="mt-2"><strong>For f(z) = (az + b)/(cz + d):</strong></p>
+            <p>Differentiating using the quotient rule:</p>
+            <MathBlock math="f'(z) = \frac{a(cz+d) - c(az+b)}{(cz+d)^2} = \frac{ad - bc}{(cz+d)^2}" />
+            <p className="mt-2">Since ad - bc ≠ 0 by definition of Möbius transformation, f'(z) is never zero where f is defined.</p>
+            <p className="mt-2"><strong>Why nonzero derivative implies conformality:</strong></p>
+            <p>At a point z₀, the derivative f'(z₀) = re^{'{'}iθ{'}'} (in polar form). The map f locally acts like:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>Rotation by angle θ (the argument of f'(z₀))</li>
+              <li>Scaling by factor r = |f'(z₀)|</li>
+            </ul>
+            <p className="mt-2">Both rotation and scaling preserve angles. Therefore f is conformal at z₀.</p>
+            <p className="mt-2"><strong>Orientation:</strong> If f involves conjugation (z → z̄), then the sense of angles is reversed (as reflection reverses orientation). Otherwise, orientation is preserved.</p>
+          </>
+        }
+      >
         <p>
           Every Möbius transformation is conformal. Orientation-preserving Möbius
           transformations preserve the sense of angles, while orientation-reversing
@@ -128,7 +146,20 @@ export default function Section61() {
         The conformal property has important implications for hyperbolic geometry:
       </p>
 
-      <Theorem title="Hyperbolic Angles = Euclidean Angles">
+      <Theorem title="Hyperbolic Angles = Euclidean Angles"
+        proof={
+          <>
+            <p>In the upper half-plane model, non-Euclidean lines are semicircles or vertical rays.</p>
+            <p className="mt-2"><strong>The hyperbolic metric:</strong> The hyperbolic metric at a point z = x + iy is ds = |dz|/y. At any point, this metric is a scalar multiple of the Euclidean metric.</p>
+            <p className="mt-2"><strong>Angles from metrics:</strong> Angles are determined by inner products. If the hyperbolic metric is g_H = (1/y²)(dx² + dy²) and the Euclidean metric is g_E = dx² + dy², then:</p>
+            <MathBlock math="g_H = \frac{1}{y^2} g_E" />
+            <p className="mt-2">Since g_H is a positive scalar multiple of g_E at each point, the angle between any two tangent vectors is the same in both metrics.</p>
+            <p className="mt-2">Specifically, if v and w are tangent vectors at z:</p>
+            <MathBlock math="\cos\theta_H = \frac{g_H(v,w)}{\sqrt{g_H(v,v)g_H(w,w)}} = \frac{(1/y^2)g_E(v,w)}{\sqrt{(1/y^2)g_E(v,v) \cdot (1/y^2)g_E(w,w)}} = \cos\theta_E" />
+            <p className="mt-2">Therefore hyperbolic and Euclidean angles coincide.</p>
+          </>
+        }
+      >
         <p>
           The angle between two non-Euclidean lines at their point of intersection
           equals the Euclidean angle between them (as curves in the complex plane).
@@ -168,7 +199,26 @@ export default function Section61() {
         symmetries of the hyperbolic plane.
       </p>
 
-      <Theorem title="Triple Transitivity">
+      <Theorem title="Triple Transitivity"
+        proof={
+          <>
+            <p>We construct the unique Möbius transformation explicitly.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Define f₁ mapping (z₁, z₂, z₃) → (0, 1, ∞):</p>
+            <MathBlock math="f_1(z) = \frac{(z - z_1)(z_2 - z_3)}{(z - z_3)(z_2 - z_1)}" />
+            <p className="mt-2">Verification: f₁(z₁) = 0, f₁(z₂) = 1, f₁(z₃) = ∞.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Similarly define f₂ mapping (w₁, w₂, w₃) → (0, 1, ∞).</p>
+            <p className="mt-2"><strong>Step 3:</strong> The composition f = f₂⁻¹ ∘ f₁ maps:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>z₁ → 0 → w₁</li>
+              <li>z₂ → 1 → w₂</li>
+              <li>z₃ → ∞ → w₃</li>
+            </ul>
+            <p className="mt-2"><strong>Uniqueness:</strong> Suppose g also maps (z₁, z₂, z₃) to (w₁, w₂, w₃). Then f⁻¹ ∘ g fixes z₁, z₂, z₃.</p>
+            <p className="mt-2">A Möbius transformation with three fixed points must be the identity (by the cross-ratio: if f(zᵢ) = zᵢ for i = 1,2,3, then [z₁, z₂; z₃, f(z)] = [z₁, z₂; z₃, z] for all z, so f(z) = z).</p>
+            <p className="mt-2">Therefore g = f, proving uniqueness.</p>
+          </>
+        }
+      >
         <p>
           Given any three distinct points on ℝ ∪ {'{'}∞{'}'} and any other three distinct
           points on ℝ ∪ {'{'}∞{'}'}, there is a unique Möbius transformation mapping the

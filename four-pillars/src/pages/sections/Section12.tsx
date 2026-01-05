@@ -36,7 +36,26 @@ export default function Section12() {
 
       <h3>The Inscribed Angle Theorem</h3>
 
-      <Theorem title="Inscribed Angle Theorem (Euclid III.20)">
+      <Theorem title="Inscribed Angle Theorem (Euclid III.20)"
+        proof={
+          <>
+            <p>Let ∠BAC be an inscribed angle subtending arc BC, and let O be the center.</p>
+            <p className="mt-2"><strong>Case 1: O lies on side AC</strong></p>
+            <p className="mt-2">Draw radius OB. Since OA = OB (radii), triangle OAB is isosceles.</p>
+            <p className="mt-2">Let ∠OAB = ∠OBA = α (base angles of isosceles triangle).</p>
+            <p className="mt-2">Central angle ∠BOC is an exterior angle of △OAB:</p>
+            <MathBlock math="\angle BOC = \angle OAB + \angle OBA = \alpha + \alpha = 2\alpha" />
+            <p className="mt-2"><strong>Case 2: O lies inside angle BAC</strong></p>
+            <p className="mt-2">Draw diameter AD through A. By Case 1:</p>
+            <MathBlock math="\angle BAD = \frac{1}{2}\angle BOD \text{ and } \angle DAC = \frac{1}{2}\angle DOC" />
+            <p className="mt-2">Adding: ∠BAC = ∠BAD + ∠DAC = ½(∠BOD + ∠DOC) = ½∠BOC.</p>
+            <p className="mt-2"><strong>Case 3: O lies outside angle BAC</strong></p>
+            <p className="mt-2">Draw diameter AD. By Case 1:</p>
+            <MathBlock math="\angle BAD = \frac{1}{2}\angle BOD \text{ and } \angle CAD = \frac{1}{2}\angle COD" />
+            <p className="mt-2">Subtracting: ∠BAC = ∠BAD - ∠CAD = ½(∠BOD - ∠COD) = ½∠BOC.</p>
+          </>
+        }
+      >
         <p>
           An inscribed angle is half the central angle that subtends the same arc.
         </p>
@@ -44,32 +63,6 @@ export default function Section12() {
           Equivalently: All inscribed angles subtending the same arc are equal.
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof (Case 1: Center lies on one side)</strong>
-      </p>
-
-      <p>
-        Consider an inscribed angle ∠BAC where the center O lies on one of
-        the sides, say AC. Draw the radius OB.
-      </p>
-
-      <p>
-        Since OA = OB (both radii), triangle OAB is isosceles. Therefore
-        ∠OAB = ∠OBA = α (say).
-      </p>
-
-      <p>
-        The central angle ∠BOC is an exterior angle of triangle OAB, so:
-      </p>
-
-      <MathBlock>
-        {`\\angle BOC = \\angle OAB + \\angle OBA = \\alpha + \\alpha = 2\\alpha`}
-      </MathBlock>
-
-      <p>
-        Thus the inscribed angle α is half the central angle. ∎
-      </p>
 
       <Callout type="info">
         <strong>General Case:</strong> When the center doesn't lie on either
@@ -79,16 +72,23 @@ export default function Section12() {
 
       <h3>Corollary: Angles on the Same Arc</h3>
 
-      <Theorem title="Equal Inscribed Angles">
+      <Theorem title="Equal Inscribed Angles"
+        proof={
+          <>
+            <p>Let ∠BAC and ∠BDC be two inscribed angles subtending the same arc BC.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Let the central angle subtending arc BC be ∠BOC.</p>
+            <p className="mt-2"><strong>Step 2:</strong> By the Inscribed Angle Theorem:</p>
+            <MathBlock math="\angle BAC = \frac{1}{2}\angle BOC" />
+            <p className="mt-2"><strong>Step 3:</strong> Similarly:</p>
+            <MathBlock math="\angle BDC = \frac{1}{2}\angle BOC" />
+            <p className="mt-2"><strong>Step 4:</strong> Therefore ∠BAC = ∠BDC.</p>
+          </>
+        }
+      >
         <p>
           All inscribed angles subtending the same arc are equal.
         </p>
       </Theorem>
-
-      <p>
-        This follows immediately because each inscribed angle is half of the
-        same central angle.
-      </p>
 
       <div className="bg-slate-800/50 p-4 rounded-lg my-6">
         <h4 className="font-semibold text-blue-400 mb-3">Visualization</h4>
@@ -106,7 +106,21 @@ export default function Section12() {
         subtends a diameter:
       </p>
 
-      <Theorem title="Thales' Circle Theorem (Euclid III.31)">
+      <Theorem title="Thales' Circle Theorem (Euclid III.31)"
+        proof={
+          <>
+            <p>Let AB be a diameter of a circle with center O, and let C be any point on the circle (other than A or B).</p>
+            <p className="mt-2"><strong>Step 1:</strong> The central angle ∠AOB subtending arc ACB is 180° (since AOB is a straight line through the center).</p>
+            <p className="mt-2"><strong>Step 2:</strong> By the Inscribed Angle Theorem, the inscribed angle ∠ACB is half the central angle:</p>
+            <MathBlock math="\angle ACB = \frac{1}{2} \cdot 180° = 90°" />
+            <p className="mt-2">Alternatively, draw radius OC. Since OA = OC = OB (all radii):</p>
+            <p className="mt-2">Triangle OAC is isosceles: ∠OAC = ∠OCA = α</p>
+            <p className="mt-2">Triangle OBC is isosceles: ∠OBC = ∠OCB = β</p>
+            <p className="mt-2">In triangle ABC: ∠CAB + ∠ABC + ∠ACB = 180°</p>
+            <MathBlock math="\alpha + \beta + (\alpha + \beta) = 180° \implies 2(\alpha + \beta) = 180° \implies \angle ACB = \alpha + \beta = 90°" />
+          </>
+        }
+      >
         <p>
           An angle inscribed in a semicircle is a right angle.
         </p>
@@ -114,12 +128,6 @@ export default function Section12() {
           {`\\text{If } AB \\text{ is a diameter and } C \\text{ is on the circle, then } \\angle ACB = 90°`}
         </MathBlock>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> The central angle subtending a diameter is 180°
-        (a straight line through the center). By the inscribed angle theorem,
-        the inscribed angle is half of 180°, which is 90°. ∎
-      </p>
 
       <Callout type="important">
         <strong>Historical Note:</strong> This theorem is attributed to Thales
@@ -134,16 +142,24 @@ export default function Section12() {
         The converse of Thales' circle theorem is equally important:
       </p>
 
-      <Theorem title="Converse of Thales' Circle Theorem">
+      <Theorem title="Converse of Thales' Circle Theorem"
+        proof={
+          <>
+            <p>Let ∠ACB = 90° for points A, B, C. We prove C lies on the circle with diameter AB.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Let M be the midpoint of AB. This is the center of the circle with diameter AB.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Draw segment MC. We must show MC = MA = MB (so C is on the circle).</p>
+            <p className="mt-2"><strong>Step 3:</strong> Complete rectangle ACBD by drawing CD ∥ AB and AD ∥ CB.</p>
+            <p className="mt-2"><strong>Step 4:</strong> In a rectangle, the diagonals bisect each other and are equal.</p>
+            <p className="mt-2">The diagonals AB and CD meet at M (since M is the midpoint of AB, and diagonals bisect).</p>
+            <p className="mt-2"><strong>Step 5:</strong> Therefore MA = MB = MC = MD (each is half a diagonal).</p>
+            <p className="mt-2"><strong>Step 6:</strong> Since MC = MA = radius of circle with diameter AB, point C lies on this circle.</p>
+          </>
+        }
+      >
         <p>
           If ∠ACB = 90°, then C lies on the circle with diameter AB.
         </p>
       </Theorem>
-
-      <p>
-        This means the locus of points from which a segment AB subtends a
-        right angle is exactly the circle with AB as diameter.
-      </p>
 
       <h3>Applications</h3>
 
@@ -180,7 +196,23 @@ export default function Section12() {
         <strong>cyclic</strong>. The inscribed angle theorem gives us:
       </p>
 
-      <Theorem title="Cyclic Quadrilateral Theorem">
+      <Theorem title="Cyclic Quadrilateral Theorem"
+        proof={
+          <>
+            <p>Let ABCD be a cyclic quadrilateral with vertices on a circle, with angles α at A, β at B, γ at C, δ at D.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Angle α at A is an inscribed angle subtending arc BCD (the arc not containing A).</p>
+            <p className="mt-2">Angle γ at C is an inscribed angle subtending arc BAD (the arc not containing C).</p>
+            <p className="mt-2"><strong>Step 2:</strong> Together, arcs BCD and BAD form the complete circle.</p>
+            <p className="mt-2">The central angles subtending these arcs sum to 360°.</p>
+            <p className="mt-2"><strong>Step 3:</strong> By the Inscribed Angle Theorem:</p>
+            <MathBlock math="\alpha = \frac{1}{2}(\text{central angle for arc } BCD)" />
+            <MathBlock math="\gamma = \frac{1}{2}(\text{central angle for arc } BAD)" />
+            <p className="mt-2"><strong>Step 4:</strong> Adding:</p>
+            <MathBlock math="\alpha + \gamma = \frac{1}{2}(360°) = 180°" />
+            <p className="mt-2"><strong>Step 5:</strong> Similarly, β + δ = 180° (since arcs ACD and ABD form the complete circle).</p>
+          </>
+        }
+      >
         <p>
           In a cyclic quadrilateral, opposite angles sum to 180°.
         </p>
@@ -188,12 +220,6 @@ export default function Section12() {
           {`\\alpha + \\gamma = 180° \\quad \\text{and} \\quad \\beta + \\delta = 180°`}
         </MathBlock>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> The opposite angles subtend arcs that together
-        form the entire circle. Since the full circle corresponds to a central
-        angle of 360°, the sum of the two inscribed angles is 180°. ∎
-      </p>
 
       <h3>Exercises</h3>
 

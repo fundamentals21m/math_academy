@@ -27,7 +27,21 @@ export default function Section36() {
         occurs only if ax + b = (a/c)(cx + d), in which case ad − bc = 0.
       </p>
 
-      <Theorem title="Decomposition of Linear Fractional Functions">
+      <Theorem title="Decomposition of Linear Fractional Functions"
+        proof={
+          <>
+            <p>We derive the decomposition algebraically. Starting with f(x) = (ax + b)/(cx + d) where c ≠ 0:</p>
+            <MathBlock math="\frac{ax + b}{cx + d} = \frac{ax + b}{cx + d}" />
+            <p className="mt-2">We perform polynomial long division of the numerator by the denominator. Since (a/c)(cx + d) = ax + ad/c, we have:</p>
+            <MathBlock math="ax + b = \frac{a}{c}(cx + d) + \left(b - \frac{ad}{c}\right) = \frac{a}{c}(cx + d) + \frac{bc - ad}{c}" />
+            <p className="mt-2">Therefore:</p>
+            <MathBlock math="\frac{ax + b}{cx + d} = \frac{a}{c} + \frac{bc - ad}{c(cx + d)}" />
+            <p className="mt-2">To express this as a composition of generators, we trace the sequence of operations:</p>
+            <MathBlock math="x \xrightarrow{\times c} cx \xrightarrow{+d} cx + d \xrightarrow{1/(\cdot)} \frac{1}{cx+d} \xrightarrow{\times(bc-ad)} \frac{bc-ad}{cx+d} \xrightarrow{\div c} \frac{bc-ad}{c(cx+d)} \xrightarrow{+a/c} \frac{a}{c} + \frac{bc-ad}{c(cx+d)}" />
+            <p className="mt-2">Each step is a translation, scaling, or reciprocation, confirming the decomposition.</p>
+          </>
+        }
+      >
         <p>By algebraic manipulation, any linear fractional function with c ≠ 0 may be written as:</p>
         <MathBlock>
           {`f(x) = \\frac{a}{c} + \\frac{bc - ad}{c(cx + d)}`}
@@ -87,7 +101,23 @@ export default function Section36() {
         This is also a linear fractional function of t.
       </p>
 
-      <Theorem title="Linear Fractional = Projection">
+      <Theorem title="Linear Fractional = Projection"
+        proof={
+          <>
+            <p>We prove both directions of this correspondence.</p>
+            <p className="mt-2"><strong>Projections give linear fractional functions:</strong></p>
+            <p>Consider projecting from a point P = (a, b) in the plane. A point t on the x-axis maps to the intersection of line Pt with another line (say, the y-axis or a line y = cx).</p>
+            <p className="mt-2">For projection onto the y-axis: The line through (t, 0) and (a, b) has slope b/(a - t). This line intersects the y-axis at y = bt/(t - a), which equals -bt/(a - t). Rearranging:</p>
+            <MathBlock math="f(t) = \frac{bt}{t - a} = \frac{bt + 0}{1 \cdot t + (-a)}" />
+            <p className="mt-2">This is linear fractional with determinant b·(-a) - 0·1 = -ab ≠ 0 (assuming a, b ≠ 0).</p>
+            <p className="mt-2">For projection onto y = cx: Similar calculation gives f(t) = bt/(ct - ac + b), also linear fractional.</p>
+            <p className="mt-2"><strong>Composition preserves the property:</strong></p>
+            <p>If f₁(x) = (a₁x + b₁)/(c₁x + d₁) and f₂(x) = (a₂x + b₂)/(c₂x + d₂), then:</p>
+            <MathBlock math="f_1(f_2(x)) = \frac{a_1 \cdot \frac{a_2x + b_2}{c_2x + d_2} + b_1}{c_1 \cdot \frac{a_2x + b_2}{c_2x + d_2} + d_1} = \frac{(a_1a_2 + b_1c_2)x + (a_1b_2 + b_1d_2)}{(c_1a_2 + d_1c_2)x + (c_1b_2 + d_1d_2)}" />
+            <p className="mt-2">This is again linear fractional, and the determinant is the product of the original determinants, hence nonzero.</p>
+          </>
+        }
+      >
         <p>
           Any single projection of a line can be represented by a linear fractional
           function. Since composing linear fractional functions gives a linear fractional

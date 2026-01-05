@@ -97,7 +97,7 @@ export default function Section17() {
         <p className="text-dark-400 text-sm mt-2">(The actual ratio is about 4)</p>
       </div>
 
-      <Callout type="note" title="The First Heliocentric Model">
+      <Callout type="info" title="The First Heliocentric Model">
         According to Plutarch, Aristarchus also proposed that "the Earth moves in an
         oblique circle about the Sun at the same time as it turns around its axis."
         This heliocentric hypothesis predates Copernicus by nearly 1,800 years! It
@@ -222,7 +222,7 @@ export default function Section17() {
         fact, the kilometer was originally defined as 1/40,000 of the Earth's circumference.
       </p>
 
-      <Callout type="note" title="Columbus and the Size of the Earth">
+      <Callout type="info" title="Columbus and the Size of the Earth">
         Had Columbus known Eratosthenes's correct calculation, he might never have set out
         on his voyage—or at least would not have called the inhabitants of the New World
         "Indians." Columbus used a much smaller (and incorrect) estimate of Earth's size,

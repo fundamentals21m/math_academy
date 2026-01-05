@@ -20,7 +20,7 @@ export default function Section36() {
       {/* Basic Definition */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Definition and Notation</h3>
 
-      <Callout type="definition" title="Complex Numbers">
+      <Callout type="info" title="Complex Numbers">
         <p className="mb-2">
           Numbers of the form <InlineMath>{`a + bi`}</InlineMath>, where{' '}
           <InlineMath>{`a`}</InlineMath> and <InlineMath>{`b`}</InlineMath> are real,
@@ -159,7 +159,7 @@ export default function Section36() {
       {/* Properties */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Key Properties</h3>
 
-      <Callout type="theorem" title="Triangle Inequality and Product Rule">
+      <Callout type="success" title="Triangle Inequality and Product Rule">
         <p className="mb-2">
           For any complex numbers <InlineMath>{`u`}</InlineMath> and <InlineMath>{`v`}</InlineMath>:
         </p>
@@ -202,7 +202,7 @@ export default function Section36() {
       </p>
 
       {/* De Moivre's Theorem */}
-      <Callout type="theorem" title="De Moivre's Theorem">
+      <Callout type="success" title="De Moivre's Theorem">
         <p className="mb-2">
           For any natural number <InlineMath>{`m`}</InlineMath>:
         </p>

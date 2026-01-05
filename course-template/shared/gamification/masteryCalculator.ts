@@ -18,7 +18,7 @@ export function calculateMastery(section: SectionProgress): MasteryLevel {
   const avgScore = quizAttempts.reduce((sum, a) => sum + a.score, 0) / quizAttempts.length;
 
   // Count perfect scores
-  const perfectCount = quizAttempts.filter((a) => a.score === 100).length;
+  const perfectCount = quizAttempts.filter((a) => a.score >= 100).length;
 
   // Mastery criteria:
   // - Mastered: any perfect score (100%), or avg >= 90 with 3+ attempts

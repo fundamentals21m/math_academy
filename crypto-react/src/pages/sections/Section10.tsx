@@ -149,7 +149,7 @@ export default function Section10() {
         }
       >
         <p>
-          For any message <InlineMath>m</InlineMath> with <InlineMath>0 {'<'} m {'<'} n</InlineMath>, decrypting the 
+          For any message <InlineMath>m</InlineMath> with <InlineMath>{`0 \\lt m \\lt n`}</InlineMath>, decrypting the
           encryption of <InlineMath>m</InlineMath> returns <InlineMath>m</InlineMath>:
         </p>
         <MathBlock>{`(m^e)^d \\equiv m \\pmod{n}`}</MathBlock>

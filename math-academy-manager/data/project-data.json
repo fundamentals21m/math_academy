@@ -1,0 +1,83 @@
+{
+  "testing": [
+    {
+      "id": 1767533883994,
+      "text": "Typos",
+      "completed": false,
+      "priority": "low",
+      "timestamp": "1/4/2026, 8:38:03 AM"
+    },
+    {
+      "id": 1767533896976,
+      "text": "All screens load",
+      "completed": false,
+      "priority": "high",
+      "timestamp": "1/4/2026, 8:38:16 AM"
+    },
+    {
+      "id": 1767533913193,
+      "text": "All theorems have clickable proofs",
+      "completed": false,
+      "priority": "high",
+      "timestamp": "1/4/2026, 8:38:33 AM"
+    }
+  ],
+  "content": [
+    {
+      "id": 1767533958609,
+      "text": "Integrate Modulus Game",
+      "completed": false,
+      "priority": "medium",
+      "timestamp": "1/4/2026, 8:39:18 AM"
+    }
+  ],
+  "features": [],
+  "design": [],
+  "monetization": [
+    {
+      "id": 1767536121267,
+      "text": "Membership Tiers",
+      "completed": false,
+      "priority": "medium",
+      "timestamp": "1/4/2026, 9:15:21 AM"
+    },
+    {
+      "id": 1767536138298,
+      "text": "Cohort Classes",
+      "completed": false,
+      "priority": "medium",
+      "timestamp": "1/4/2026, 9:15:38 AM"
+    }
+  ],
+  "team": [
+    {
+      "id": 1767536166886,
+      "name": "Rob Hamilton",
+      "role": "Vibe Code Mentor",
+      "email": "",
+      "phone": "",
+      "notes": "",
+      "timestamp": "1/4/2026, 9:16:06 AM"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": 1767533516433,
+      "name": "ClaudeCode",
+      "cost": 200,
+      "frequency": "monthly",
+      "renewal": "2026-01-02",
+      "purpose": "Core Coding Backbone - essential",
+      "timestamp": "1/4/2026, 8:31:56 AM"
+    },
+    {
+      "id": 1767533538728,
+      "name": "Vercel Pro",
+      "cost": 20,
+      "frequency": "monthly",
+      "renewal": "2026-01-02",
+      "purpose": "server for hosting websites",
+      "timestamp": "1/4/2026, 8:32:18 AM"
+    }
+  ]
+}

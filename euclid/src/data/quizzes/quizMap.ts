@@ -3,6 +3,10 @@
  * Book I: Sections 0-48 (Definitions/Postulates/Common Notions + 48 Propositions)
  * Book II: Sections 49-63 (Definitions + 14 Propositions)
  * Book III: Sections 64-101 (Definitions + 37 Propositions)
+ * Book IV: Sections 102-118 (Definitions + 16 Propositions)
+ * Book V: Sections 119-144 (Definitions + 25 Propositions)
+ * Book VI: Sections 145-178 (Definitions + 33 Propositions)
+ * Book VII: Sections 179-218 (Definitions + 39 Propositions)
  */
 
 import type { QuizQuestion } from './types';
@@ -115,6 +119,131 @@ import { section99Questions } from './section99';
 import { section100Questions } from './section100';
 import { section101Questions } from './section101';
 
+// Book IV
+import { section102Questions } from './section102';
+import { section103Questions } from './section103';
+import { section104Questions } from './section104';
+import { section105Questions } from './section105';
+import { section106Questions } from './section106';
+import { section107Questions } from './section107';
+import { section108Questions } from './section108';
+import { section109Questions } from './section109';
+import { section110Questions } from './section110';
+import { section111Questions } from './section111';
+import { section112Questions } from './section112';
+import { section113Questions } from './section113';
+import { section114Questions } from './section114';
+import { section115Questions } from './section115';
+import { section116Questions } from './section116';
+import { section117Questions } from './section117';
+import { section118Questions } from './section118';
+
+// Book V
+import { section119Questions } from './section119';
+import { section120Questions } from './section120';
+import { section121Questions } from './section121';
+import { section122Questions } from './section122';
+import { section123Questions } from './section123';
+import { section124Questions } from './section124';
+import { section125Questions } from './section125';
+import { section126Questions } from './section126';
+import { section127Questions } from './section127';
+import { section128Questions } from './section128';
+import { section129Questions } from './section129';
+import { section130Questions } from './section130';
+import { section131Questions } from './section131';
+import { section132Questions } from './section132';
+import { section133Questions } from './section133';
+import { section134Questions } from './section134';
+import { section135Questions } from './section135';
+import { section136Questions } from './section136';
+import { section137Questions } from './section137';
+import { section138Questions } from './section138';
+import { section139Questions } from './section139';
+import { section140Questions } from './section140';
+import { section141Questions } from './section141';
+import { section142Questions } from './section142';
+import { section143Questions } from './section143';
+import { section144Questions } from './section144';
+
+// Book VI
+import { section145Questions } from './section145';
+import { section146Questions } from './section146';
+import { section147Questions } from './section147';
+import { section148Questions } from './section148';
+import { section149Questions } from './section149';
+import { section150Questions } from './section150';
+import { section151Questions } from './section151';
+import { section152Questions } from './section152';
+import { section153Questions } from './section153';
+import { section154Questions } from './section154';
+import { section155Questions } from './section155';
+import { section156Questions } from './section156';
+import { section157Questions } from './section157';
+import { section158Questions } from './section158';
+import { section159Questions } from './section159';
+import { section160Questions } from './section160';
+import { section161Questions } from './section161';
+import { section162Questions } from './section162';
+import { section163Questions } from './section163';
+import { section164Questions } from './section164';
+import { section165Questions } from './section165';
+import { section166Questions } from './section166';
+import { section167Questions } from './section167';
+import { section168Questions } from './section168';
+import { section169Questions } from './section169';
+import { section170Questions } from './section170';
+import { section171Questions } from './section171';
+import { section172Questions } from './section172';
+import { section173Questions } from './section173';
+import { section174Questions } from './section174';
+import { section175Questions } from './section175';
+import { section176Questions } from './section176';
+import { section177Questions } from './section177';
+import { section178Questions } from './section178';
+
+// Book VII
+import { section179Questions } from './section179';
+import { section180Questions } from './section180';
+import { section181Questions } from './section181';
+import { section182Questions } from './section182';
+import { section183Questions } from './section183';
+import { section184Questions } from './section184';
+import { section185Questions } from './section185';
+import { section186Questions } from './section186';
+import { section187Questions } from './section187';
+import { section188Questions } from './section188';
+import { section189Questions } from './section189';
+import { section190Questions } from './section190';
+import { section191Questions } from './section191';
+import { section192Questions } from './section192';
+import { section193Questions } from './section193';
+import { section194Questions } from './section194';
+import { section195Questions } from './section195';
+import { section196Questions } from './section196';
+import { section197Questions } from './section197';
+import { section198Questions } from './section198';
+import { section199Questions } from './section199';
+import { section200Questions } from './section200';
+import { section201Questions } from './section201';
+import { section202Questions } from './section202';
+import { section203Questions } from './section203';
+import { section204Questions } from './section204';
+import { section205Questions } from './section205';
+import { section206Questions } from './section206';
+import { section207Questions } from './section207';
+import { section208Questions } from './section208';
+import { section209Questions } from './section209';
+import { section210Questions } from './section210';
+import { section211Questions } from './section211';
+import { section212Questions } from './section212';
+import { section213Questions } from './section213';
+import { section214Questions } from './section214';
+import { section215Questions } from './section215';
+import { section216Questions } from './section216';
+import { section217Questions } from './section217';
+import { section218Questions } from './section218';
+
 const quizMap: Record<number, QuizQuestion[]> = {
   0: section00Questions,
   1: section01Questions,
@@ -220,6 +349,127 @@ const quizMap: Record<number, QuizQuestion[]> = {
   99: section99Questions,
   100: section100Questions,
   101: section101Questions,
+  // Book IV
+  102: section102Questions,
+  103: section103Questions,
+  104: section104Questions,
+  105: section105Questions,
+  106: section106Questions,
+  107: section107Questions,
+  108: section108Questions,
+  109: section109Questions,
+  110: section110Questions,
+  111: section111Questions,
+  112: section112Questions,
+  113: section113Questions,
+  114: section114Questions,
+  115: section115Questions,
+  116: section116Questions,
+  117: section117Questions,
+  118: section118Questions,
+  // Book V
+  119: section119Questions,
+  120: section120Questions,
+  121: section121Questions,
+  122: section122Questions,
+  123: section123Questions,
+  124: section124Questions,
+  125: section125Questions,
+  126: section126Questions,
+  127: section127Questions,
+  128: section128Questions,
+  129: section129Questions,
+  130: section130Questions,
+  131: section131Questions,
+  132: section132Questions,
+  133: section133Questions,
+  134: section134Questions,
+  135: section135Questions,
+  136: section136Questions,
+  137: section137Questions,
+  138: section138Questions,
+  139: section139Questions,
+  140: section140Questions,
+  141: section141Questions,
+  142: section142Questions,
+  143: section143Questions,
+  144: section144Questions,
+  // Book VI
+  145: section145Questions,
+  146: section146Questions,
+  147: section147Questions,
+  148: section148Questions,
+  149: section149Questions,
+  150: section150Questions,
+  151: section151Questions,
+  152: section152Questions,
+  153: section153Questions,
+  154: section154Questions,
+  155: section155Questions,
+  156: section156Questions,
+  157: section157Questions,
+  158: section158Questions,
+  159: section159Questions,
+  160: section160Questions,
+  161: section161Questions,
+  162: section162Questions,
+  163: section163Questions,
+  164: section164Questions,
+  165: section165Questions,
+  166: section166Questions,
+  167: section167Questions,
+  168: section168Questions,
+  169: section169Questions,
+  170: section170Questions,
+  171: section171Questions,
+  172: section172Questions,
+  173: section173Questions,
+  174: section174Questions,
+  175: section175Questions,
+  176: section176Questions,
+  177: section177Questions,
+  178: section178Questions,
+  // Book VII
+  179: section179Questions,
+  180: section180Questions,
+  181: section181Questions,
+  182: section182Questions,
+  183: section183Questions,
+  184: section184Questions,
+  185: section185Questions,
+  186: section186Questions,
+  187: section187Questions,
+  188: section188Questions,
+  189: section189Questions,
+  190: section190Questions,
+  191: section191Questions,
+  192: section192Questions,
+  193: section193Questions,
+  194: section194Questions,
+  195: section195Questions,
+  196: section196Questions,
+  197: section197Questions,
+  198: section198Questions,
+  199: section199Questions,
+  200: section200Questions,
+  201: section201Questions,
+  202: section202Questions,
+  203: section203Questions,
+  204: section204Questions,
+  205: section205Questions,
+  206: section206Questions,
+  207: section207Questions,
+  208: section208Questions,
+  209: section209Questions,
+  210: section210Questions,
+  211: section211Questions,
+  212: section212Questions,
+  213: section213Questions,
+  214: section214Questions,
+  215: section215Questions,
+  216: section216Questions,
+  217: section217Questions,
+  218: section218Questions,
 };
 
 export function getQuizQuestions(sectionId: number): QuizQuestion[] | null {

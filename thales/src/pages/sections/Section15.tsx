@@ -96,7 +96,7 @@ export default function Section15() {
         his <em>Principia</em>, and Spinoza in his <em>Ethics</em>.
       </p>
 
-      <Callout type="note" title="The Axiomatic Method">
+      <Callout type="info" title="The Axiomatic Method">
         Euclid's grandiose plan was to deduce all of mathematics from a small number
         of initial definitions and assumptions. The assumptions are subdivided into
         <strong> axioms</strong> (dealing with mathematics in general) and <strong>postulates</strong> (dealing
@@ -192,7 +192,7 @@ export default function Section15() {
         deductions. Here is how he begins:
       </p>
 
-      <Callout type="theorem" title="Proposition 1">
+      <Callout type="success" title="Proposition 1">
         On a finite straight line to construct an equilateral triangle.
       </Callout>
 
@@ -317,7 +317,7 @@ export default function Section15() {
         triangle."
       </p>
 
-      <Callout type="note" title="Looking Ahead">
+      <Callout type="info" title="Looking Ahead">
         Euclid's Fifth Postulate—the parallel postulate—would prove to be far more
         significant than anyone imagined. For over 2,000 years, mathematicians tried
         to prove it from the other postulates. Their failure led to one of the greatest

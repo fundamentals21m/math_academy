@@ -66,6 +66,42 @@ export default function Section14() {
           Equivalently, <InlineMath math="G" /> is bipartite iff{' '}
           <InlineMath math="G" /> has no odd cycle.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              <strong>(⇒) Bipartite implies 2-colorable:</strong> If{' '}
+              <InlineMath math="G" /> is bipartite with parts <InlineMath math="X, Y" />,
+              color all vertices in <InlineMath math="X" /> with color 1 and all vertices
+              in <InlineMath math="Y" /> with color 2. Since edges only go between parts,
+              this is a proper 2-coloring.
+            </p>
+            <p className="mt-2">
+              <strong>(⇐) 2-colorable implies bipartite:</strong> Given a proper 2-coloring,
+              let <InlineMath math="X" /> be the vertices of color 1 and{' '}
+              <InlineMath math="Y" /> be the vertices of color 2. Since adjacent vertices
+              have different colors, there are no edges within <InlineMath math="X" /> or
+              within <InlineMath math="Y" />. Thus <InlineMath math="G" /> is bipartite.
+            </p>
+            <p className="mt-2">
+              <strong>No odd cycle equivalence:</strong>
+            </p>
+            <p className="mt-2">
+              If <InlineMath math="G" /> has an odd cycle <InlineMath math="C_{2k+1}" />,
+              trying to 2-color it alternates colors around the cycle, but after{' '}
+              <InlineMath math="2k + 1" /> steps we return to the start vertex with the
+              wrong color. So <InlineMath math="\chi(G) \geq 3" />.
+            </p>
+            <p className="mt-2">
+              Conversely, if <InlineMath math="G" /> has no odd cycle, use BFS to construct
+              a 2-coloring: pick any root <InlineMath math="r" />, color it 1, and color
+              each vertex by <InlineMath math="1 + d(r, v) \mod 2" />. If two adjacent
+              vertices have the same color, there would be an odd cycle—contradiction.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <GraphColoring className="my-8" />
@@ -179,6 +215,30 @@ export default function Section14() {
         <p className="mt-2 text-dark-300">
           Vertices in a clique must all have different colors.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              Let <InlineMath math="K" /> be a maximum clique in <InlineMath math="G" />,
+              so <InlineMath math="|K| = \omega(G)" />.
+            </p>
+            <p className="mt-2">
+              In a clique, every pair of vertices is adjacent. In any proper coloring,
+              adjacent vertices must receive different colors.
+            </p>
+            <p className="mt-2">
+              Therefore, the <InlineMath math="\omega(G)" /> vertices of{' '}
+              <InlineMath math="K" /> must all receive distinct colors. This requires at
+              least <InlineMath math="\omega(G)" /> colors.
+            </p>
+            <p className="mt-2">
+              Since <InlineMath math="\chi(G)" /> is the minimum number of colors needed,
+              we have <InlineMath math="\chi(G) \geq \omega(G)" />.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <Example title="Gap Between χ and ω">
@@ -297,6 +357,51 @@ export default function Section14() {
         <p className="mt-2 text-dark-300">
           This equals 1 + degeneracy of <InlineMath math="G" />.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              Let <InlineMath math="k = \max_{H \subseteq G} \delta(H)" />. We show{' '}
+              <InlineMath math="G" /> is <InlineMath math="(k+1)" />-colorable.
+            </p>
+            <p className="mt-2">
+              <strong>Algorithm:</strong> Construct a vertex ordering{' '}
+              <InlineMath math="v_n, v_{n-1}, \ldots, v_1" /> as follows:
+            </p>
+            <ul className="mt-2 list-disc list-inside">
+              <li>
+                Let <InlineMath math="v_n" /> be a vertex of minimum degree in{' '}
+                <InlineMath math="G" /> (degree at most <InlineMath math="k" />)
+              </li>
+              <li>
+                Let <InlineMath math="v_{n-1}" /> be a vertex of minimum degree in{' '}
+                <InlineMath math="G - v_n" /> (degree at most <InlineMath math="k" />, since{' '}
+                <InlineMath math="G - v_n" /> is an induced subgraph)
+              </li>
+              <li>Continue until all vertices are ordered</li>
+            </ul>
+            <p className="mt-2">
+              <strong>Key property:</strong> When vertex <InlineMath math="v_i" /> is
+              selected, it has degree at most <InlineMath math="k" /> in the remaining
+              graph <InlineMath math="G[\{'{'}v_1, \ldots, v_i{'}'}]" />.
+            </p>
+            <p className="mt-2">
+              <strong>Greedy coloring:</strong> Color vertices in order{' '}
+              <InlineMath math="v_1, v_2, \ldots, v_n" />. When coloring{' '}
+              <InlineMath math="v_i" />, its neighbors among{' '}
+              <InlineMath math="\{'{'}v_1, \ldots, v_{i-1}{'}'}" /> are exactly its neighbors
+              in <InlineMath math="G[\{'{'}v_1, \ldots, v_i{'}'}]" />, which number at most{' '}
+              <InlineMath math="k" />.
+            </p>
+            <p className="mt-2">
+              These neighbors use at most <InlineMath math="k" /> colors, so color{' '}
+              <InlineMath math="k + 1" /> is always available. Thus{' '}
+              <InlineMath math="\chi(G) \leq k + 1" />.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <h2>Interval Graphs</h2>

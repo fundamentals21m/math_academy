@@ -57,7 +57,6 @@ export function SectionQuiz({
   const [numericAnswer, setNumericAnswer] = useState<number | null>(null);
   const [textAnswer, setTextAnswer] = useState('');
   const [showResult, setShowResult] = useState(false);
-  const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState<boolean[]>([]);
   const [isComplete, setIsComplete] = useState(false);
   const [numericError, setNumericError] = useState('');
@@ -85,7 +84,6 @@ export function SectionQuiz({
     setNumericAnswer(null);
     setTextAnswer('');
     setShowResult(false);
-    setScore(0);
     setAnswers([]);
     setIsComplete(false);
     setNumericError('');
@@ -96,10 +94,6 @@ export function SectionQuiz({
 
     setSelectedAnswer(answerIndex);
     const isCorrect = answerIndex === currentQuestion.correctIndex;
-
-    if (isCorrect) {
-      setScore((prev) => prev + 1);
-    }
 
     setAnswers((prev) => [...prev, isCorrect]);
     setShowResult(true);
@@ -126,10 +120,6 @@ export function SectionQuiz({
 
     setNumericError('');
     const isCorrect = numericAnswer === currentQuestion.correctAnswer;
-    
-    if (isCorrect) {
-      setScore((prev) => prev + 1);
-    }
 
     setAnswers((prev) => [...prev, isCorrect]);
     setShowResult(true);
@@ -144,10 +134,6 @@ export function SectionQuiz({
     }
 
     const isCorrect = trimmedAnswer.toLowerCase() === currentQuestion.correctAnswer?.toString().toLowerCase();
-    
-    if (isCorrect) {
-      setScore((prev) => prev + 1);
-    }
 
     setAnswers((prev) => [...prev, isCorrect]);
     setShowResult(true);
@@ -166,12 +152,15 @@ export function SectionQuiz({
       setIsComplete(true);
 
       if (gamification && currentQuestion && selectedDifficulty) {
-        const finalScore = score + (showResult ? (
-          questionType === 'multiple-choice' && selectedAnswer === currentQuestion.correctIndex ? 1 :
-          questionType === 'numeric' && numericAnswer === currentQuestion.correctAnswer ? 1 :
-          questionType === 'text' && textAnswer.toLowerCase() === currentQuestion.correctAnswer?.toString().toLowerCase() ? 1 : 0
-        ) : 0);
-        const finalPercentage = Math.round((finalScore / totalQuestions) * 100);
+        // Use answers array for accurate count (avoids React state batching issues with score)
+        const answeredCorrectly = answers.filter(Boolean).length;
+        const lastAnswerCorrect = showResult && (
+          (questionType === 'multiple-choice' && selectedAnswer === currentQuestion.correctIndex) ||
+          (questionType === 'numeric' && numericAnswer === currentQuestion.correctAnswer) ||
+          (questionType === 'text' && textAnswer.toLowerCase() === currentQuestion.correctAnswer?.toString().toLowerCase())
+        );
+        const finalScore = answeredCorrectly + (lastAnswerCorrect ? 1 : 0);
+        const finalPercentage = Math.min(100, Math.round((finalScore / totalQuestions) * 100));
         
         gamification.recordQuiz(
           sectionId,

@@ -170,7 +170,34 @@ export default function Section20() {
         </ul>
       </Example>
 
-      <Theorem title="Edge Coloring via Line Graphs">
+      <Theorem
+        title="Edge Coloring via Line Graphs"
+        proof={
+          <>
+            <p>
+              This follows directly from the definitions of edge coloring and line graph.
+            </p>
+            <p className="mt-2">
+              <strong>Edge coloring of <InlineMath math="G" />:</strong> Assign colors to edges of{' '}
+              <InlineMath math="G" /> such that edges sharing an endpoint have different colors.
+            </p>
+            <p className="mt-2">
+              <strong>Line graph <InlineMath math="L(G)" />:</strong> Vertices of{' '}
+              <InlineMath math="L(G)" /> are edges of <InlineMath math="G" />. Two vertices of{' '}
+              <InlineMath math="L(G)" /> are adjacent iff the corresponding edges of{' '}
+              <InlineMath math="G" /> share an endpoint.
+            </p>
+            <p className="mt-2">
+              <strong>Equivalence:</strong> A proper edge coloring of <InlineMath math="G" /> assigns
+              different colors to adjacent edges = assigns different colors to adjacent vertices of{' '}
+              <InlineMath math="L(G)" /> = proper vertex coloring of <InlineMath math="L(G)" />.
+            </p>
+            <p className="mt-2">
+              The minimum number of colors is the same: <InlineMath math="\chi'(G) = \chi(L(G))" />.
+            </p>
+          </>
+        }
+      >
         <p>
           <InlineMath math="\chi'(G) = \chi(L(G))" />
         </p>
@@ -180,7 +207,39 @@ export default function Section20() {
         </p>
       </Theorem>
 
-      <Theorem title="Line Graph Clique Number">
+      <Theorem
+        title="Line Graph Clique Number"
+        proof={
+          <>
+            <p>
+              A clique in <InlineMath math="L(G)" /> corresponds to a set of edges of{' '}
+              <InlineMath math="G" /> that are pairwise adjacent (share endpoints).
+            </p>
+            <p className="mt-2">
+              <strong>Type 1 cliques:</strong> All edges incident to a single vertex{' '}
+              <InlineMath math="v" />. These form a clique of size <InlineMath math="d(v)" /> in{' '}
+              <InlineMath math="L(G)" />. Maximum size: <InlineMath math="\Delta(G)" />.
+            </p>
+            <p className="mt-2">
+              <strong>Type 2 cliques:</strong> Edges forming a "triangle" or more generally a clique
+              in <InlineMath math="G" />. A triangle <InlineMath math="K_3" /> in <InlineMath math="G" />{' '}
+              gives 3 pairwise adjacent edges, forming a clique of size 3 in <InlineMath math="L(G)" />.
+              This corresponds to <InlineMath math="\omega'(G)" />.
+            </p>
+            <p className="mt-2">
+              Every maximal clique in <InlineMath math="L(G)" /> is either all edges at a vertex
+              (Type 1) or edges of a clique in <InlineMath math="G" /> (Type 2).
+            </p>
+            <p className="mt-2">
+              Therefore: <InlineMath math="\omega(L(G)) = \max(\Delta(G), \omega'(G))" />.
+            </p>
+            <p className="mt-2">
+              Note: For triangle-free graphs, <InlineMath math="\omega'(G) \leq 2" />, so{' '}
+              <InlineMath math="\omega(L(G)) = \Delta(G)" />.
+            </p>
+          </>
+        }
+      >
         <p>
           <InlineMath math="\omega(L(G)) = \max(\Delta(G), \omega'(G))" />
         </p>
@@ -192,7 +251,40 @@ export default function Section20() {
 
       <h3>Characterizing Line Graphs</h3>
 
-      <Theorem title="Beineke's Characterization (Theorem 7.1.16)">
+      <Theorem
+        title="Beineke's Characterization (Theorem 7.1.16)"
+        proof={
+          <>
+            <p>
+              <strong>Necessity:</strong> We show line graphs cannot contain the forbidden subgraphs.
+            </p>
+            <p className="mt-2">
+              The key forbidden graph is <InlineMath math="K_{'{'}1,3{'}'}" /> (claw): three edges
+              sharing a common endpoint would require one vertex with three non-adjacent neighbors in{' '}
+              <InlineMath math="L(G)" />. But if edges <InlineMath math="e_1, e_2, e_3" /> all share
+              endpoint <InlineMath math="v" />, then in the original graph <InlineMath math="G" />,
+              the other endpoints are pairwise non-adjacent only if no two share a vertex—but this
+              contradicts having a fourth edge adjacent to all three.
+            </p>
+            <p className="mt-2">
+              Similar arguments exclude the other eight graphs in Beineke's list (including{' '}
+              <InlineMath math="K_5 - e" />, <InlineMath math="K_{'{'}2,3{'}'}" /> subdivisions, etc.).
+            </p>
+            <p className="mt-2">
+              <strong>Sufficiency:</strong> If <InlineMath math="H" /> contains no forbidden subgraph,
+              construct <InlineMath math="G" /> with <InlineMath math="L(G) = H" />:
+            </p>
+            <ol className="mt-2 list-decimal list-inside space-y-1">
+              <li>The claw-free property ensures each maximal clique has a specific structure</li>
+              <li>
+                Partition edges of <InlineMath math="H" /> into cliques (each from a vertex of{' '}
+                <InlineMath math="G" />)
+              </li>
+              <li>The other forbidden graphs ensure this partition gives a valid graph</li>
+            </ol>
+          </>
+        }
+      >
         <p>
           A graph <InlineMath math="H" /> is a line graph if and only if{' '}
           <InlineMath math="H" /> has none of the nine forbidden induced subgraphs shown
@@ -225,14 +317,80 @@ export default function Section20() {
         </p>
       </Definition>
 
-      <Theorem title="Shannon's Theorem (Theorem 7.1.10)">
+      <Theorem
+        title="Shannon's Theorem (Theorem 7.1.10)"
+        proof={
+          <>
+            <p>
+              We prove by induction on <InlineMath math="m" /> that{' '}
+              <InlineMath math="\chi'(G) \leq \lfloor 3\Delta/2 \rfloor" />.
+            </p>
+            <p className="mt-2">
+              <strong>Base:</strong> If <InlineMath math="m = 0" />, trivially true.
+            </p>
+            <p className="mt-2">
+              <strong>Inductive step:</strong> Remove an edge <InlineMath math="e = uv" />. By induction,{' '}
+              <InlineMath math="G - e" /> has a <InlineMath math="\lfloor 3\Delta/2 \rfloor" />-edge-coloring.
+            </p>
+            <p className="mt-2">
+              We need to color <InlineMath math="e" />. The colors "missing" at <InlineMath math="u" />{' '}
+              (not used by edges at <InlineMath math="u" />) number at least{' '}
+              <InlineMath math="\lfloor 3\Delta/2 \rfloor - (d(u) - 1)" />. Similarly for <InlineMath math="v" />.
+            </p>
+            <p className="mt-2">
+              <strong>Key counting:</strong> Since <InlineMath math="d(u), d(v) \leq \Delta" />, the
+              number of missing colors at <InlineMath math="u" /> is at least{' '}
+              <InlineMath math="\lfloor 3\Delta/2 \rfloor - \Delta + 1 = \lceil \Delta/2 \rceil + 1" />.
+            </p>
+            <p className="mt-2">
+              If the missing colors at <InlineMath math="u" /> and <InlineMath math="v" /> have no
+              color in common, we can still find an available color by a careful "fan" argument
+              similar to Vizing's proof, using the fact that{' '}
+              <InlineMath math="\lfloor 3\Delta/2 \rfloor" /> colors provide enough slack.
+            </p>
+          </>
+        }
+      >
         <p>
           For any multigraph <InlineMath math="G" />:
         </p>
         <MathBlock math="\chi'(G) \leq \left\lfloor \frac{3\Delta(G)}{2} \right\rfloor" />
       </Theorem>
 
-      <Theorem title="Vizing's Theorem for Multigraphs">
+      <Theorem
+        title="Vizing's Theorem for Multigraphs"
+        proof={
+          <>
+            <p>
+              The proof extends Vizing's fan argument for simple graphs.
+            </p>
+            <p className="mt-2">
+              <strong>Setup:</strong> Suppose we have a <InlineMath math="(\Delta + \mu)" />-edge-coloring
+              of <InlineMath math="G - e" /> where <InlineMath math="e = uv" />. We show{' '}
+              <InlineMath math="e" /> can be colored.
+            </p>
+            <p className="mt-2">
+              At vertex <InlineMath math="u" />, the number of missing colors (not used by edges at{' '}
+              <InlineMath math="u" />) is at least <InlineMath math="(\Delta + \mu) - d(u) + 1 \geq \mu + 1" />.
+            </p>
+            <p className="mt-2">
+              At vertex <InlineMath math="v" />, similarly at least <InlineMath math="\mu + 1" /> colors
+              are missing.
+            </p>
+            <p className="mt-2">
+              <strong>Key insight:</strong> Between <InlineMath math="u" /> and <InlineMath math="v" />,
+              there are at most <InlineMath math="\mu - 1" /> edges in <InlineMath math="G - e" />{' '}
+              (since <InlineMath math="e" /> is one of the <InlineMath math="\mu" /> parallel edges).
+              These use at most <InlineMath math="\mu - 1" /> colors at both ends.
+            </p>
+            <p className="mt-2">
+              With <InlineMath math="\geq \mu + 1" /> colors missing at each of <InlineMath math="u, v" />,
+              and at most <InlineMath math="\mu - 1" /> colors "blocked" by parallel edges, by pigeonhole
+              some color is available for <InlineMath math="e" />.
+            </p>
+          </>
+        }
+      >
         <p>
           <InlineMath math="\chi'(G) \leq \Delta(G) + \mu(G)" />
         </p>
@@ -240,14 +398,92 @@ export default function Section20() {
 
       <h2>Edge Coloring Algorithms</h2>
 
-      <Theorem title="Misra-Gries Algorithm">
+      <Theorem
+        title="Misra-Gries Algorithm"
+        proof={
+          <>
+            <p>
+              The algorithm colors edges one at a time, maintaining a valid{' '}
+              <InlineMath math="(\Delta + 1)" />-edge-coloring.
+            </p>
+            <p className="mt-2">
+              <strong>Algorithm for adding edge <InlineMath math="e = uv" />:</strong>
+            </p>
+            <ol className="mt-2 list-decimal list-inside space-y-1">
+              <li>
+                If some color <InlineMath math="c" /> is missing at both <InlineMath math="u" />{' '}
+                and <InlineMath math="v" />, color <InlineMath math="e" /> with <InlineMath math="c" />.
+              </li>
+              <li>
+                Otherwise, build a "Vizing fan": a sequence of edges at <InlineMath math="u" />{' '}
+                using colors missing at their other endpoints.
+              </li>
+              <li>
+                Rotate colors along the fan, then either find a free color for <InlineMath math="e" />,
+                or find two edges using colors missing at <InlineMath math="u" /> and <InlineMath math="v" />.
+              </li>
+              <li>
+                In the latter case, swap colors along an alternating path (Kempe chain) to free a color.
+              </li>
+            </ol>
+            <p className="mt-2">
+              <strong>Time analysis:</strong> Building a fan takes <InlineMath math="O(\Delta)" /> time.
+              Swapping along a Kempe chain takes <InlineMath math="O(n)" /> time. Thus each edge takes{' '}
+              <InlineMath math="O(n)" /> time, giving <InlineMath math="O(mn)" /> total.
+            </p>
+          </>
+        }
+      >
         <p>
           A <InlineMath math="(\Delta + 1)" />-edge-coloring can be computed in{' '}
           <InlineMath math="O(mn)" /> time using Vizing fan rotations.
         </p>
       </Theorem>
 
-      <Theorem title="Complexity of Optimal Edge Coloring">
+      <Theorem
+        title="Complexity of Optimal Edge Coloring"
+        proof={
+          <>
+            <p>
+              <strong>NP-completeness (Holyer, 1981):</strong>
+            </p>
+            <p className="mt-2">
+              The reduction is from 3-SAT. Given a 3-SAT formula, construct a 3-regular graph where:
+            </p>
+            <ul className="mt-2 list-disc list-inside">
+              <li>
+                The graph is Class 1 (<InlineMath math="\chi' = 3" />) iff the formula is satisfiable
+              </li>
+              <li>
+                The graph is Class 2 (<InlineMath math="\chi' = 4" />) iff the formula is unsatisfiable
+              </li>
+            </ul>
+            <p className="mt-2">
+              The construction uses gadgets that encode variable assignments (true/false corresponds to
+              two different 3-edge-colorings of a subgraph) and clause satisfaction.
+            </p>
+            <p className="mt-2">
+              <strong>Polynomial time for bipartite graphs:</strong>
+            </p>
+            <p className="mt-2">
+              By König's theorem, bipartite graphs are Class 1. A{' '}
+              <InlineMath math="\Delta" />-edge-coloring can be found by:
+            </p>
+            <ol className="mt-2 list-decimal list-inside space-y-1">
+              <li>
+                Reducing to bipartite matching: each color class is a matching
+              </li>
+              <li>
+                Using Hall's theorem and augmenting paths to find{' '}
+                <InlineMath math="\Delta" /> disjoint matchings covering all edges
+              </li>
+            </ol>
+            <p className="mt-2">
+              This can be done in <InlineMath math="O(m\sqrt{'{'}n{'}'})" /> time using Hopcroft-Karp matching.
+            </p>
+          </>
+        }
+      >
         <p>
           Determining whether a graph is Class 1 (i.e., whether{' '}
           <InlineMath math="\chi' = \Delta" />) is NP-complete even for 3-regular

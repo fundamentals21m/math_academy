@@ -65,5 +65,13 @@ function getDefaultAchievements() {
     // Exploration achievements
     { id: 'first-visualization', unlockedAt: null, progress: 0, target: 1 },
     { id: 'explorer', unlockedAt: null, progress: 0, target: 10 },
+
+    // Racing achievements
+    { id: 'racing-rookie', unlockedAt: null, progress: 0, target: 1 },         // Complete first race
+    { id: 'speed-demon', unlockedAt: null, progress: 0, target: 50 },          // 50 answers under 2 seconds
+    { id: 'streak-legend', unlockedAt: null, progress: 0, target: 20 },        // Get a 20-answer streak
+    { id: 'tier-climber', unlockedAt: null, progress: 0, target: 6 },          // Unlock Master tier
+    { id: 'modular-master', unlockedAt: null, progress: 0, target: 10000 },    // Earn 10,000 total racing points
+    { id: 'multiplayer-champion', unlockedAt: null, progress: 0, target: 5 },  // Win 5 multiplayer games
   ];
 }

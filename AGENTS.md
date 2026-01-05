@@ -9,6 +9,28 @@ React 19 + TypeScript educational platform. Monorepo with courses in separate di
 **Active courses**: `linalg/`, `advanced-linalg/`, `crypto-react/`  
 **Shared library**: `shared/` | **Firebase**: `firebase/functions/`
 
+## Regression Testing
+
+**Baseline Regression Tests** - 93 tests protecting critical functionality
+- Location: `shared/test/regression/`
+- Coverage: XP calculations, mastery levels, math rendering, quiz logic
+- Status: ✅ 100% passing
+- CI: Integrated into `.github/workflows/regression.yml`
+- Documentation: `REGRESSION_BASELINES.md`
+
+**How to Run**:
+```bash
+cd shared && npm run test:regression
+```
+
+**What's Protected**:
+- XP values (Easy: 15, Medium: 25, Hard: 40)
+- Mastery level thresholds (learning/familiar/mastered criteria)
+- Math rendering behavior (KaTeX integration)
+- Quiz logic (scoring formulas, randomization)
+
+**Blocking Behavior**: Regression test failures block deployments by default
+
 ## Build/Lint/Test Commands
 
 Run from course directory (e.g., `cd linalg`):

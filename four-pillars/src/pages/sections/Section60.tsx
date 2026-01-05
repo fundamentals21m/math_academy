@@ -49,7 +49,22 @@ export default function Section60() {
 
       <h3>The Main Preservation Theorem</h3>
 
-      <Theorem title="Möbius Transformations Preserve Generalized Circles">
+      <Theorem title="Möbius Transformations Preserve Generalized Circles"
+        proof={
+          <>
+            <p>Since every Möbius transformation is a composition of translations, scalings, and inversions (z → 1/z), it suffices to check each generator.</p>
+            <p className="mt-2"><strong>Translations z → z + l:</strong> Shift all points by l. Circles remain circles (centered at shifted point), lines remain lines (parallel translation).</p>
+            <p className="mt-2"><strong>Scalings z → kz:</strong> Multiply all distances from origin by |k|. Circles centered at w become circles centered at kw with radius multiplied by |k|. Lines through origin remain lines through origin; others remain lines.</p>
+            <p className="mt-2"><strong>Inversion z → 1/z:</strong> This is the key case. A generalized circle has equation:</p>
+            <MathBlock math="A(x^2 + y^2) + Bx + Cy + D = 0 \quad \text{i.e.} \quad Az\bar{z} + \frac{B-iC}{2}z + \frac{B+iC}{2}\bar{z} + D = 0" />
+            <p className="mt-2">Under z → 1/z = w, we have z = 1/w, so:</p>
+            <MathBlock math="A\frac{1}{w\bar{w}} + \frac{B-iC}{2w} + \frac{B+iC}{2\bar{w}} + D = 0" />
+            <p className="mt-2">Multiplying by ww̄:</p>
+            <MathBlock math="A + \frac{B-iC}{2}\bar{w} + \frac{B+iC}{2}w + Dw\bar{w} = 0" />
+            <p className="mt-2">This is again the equation of a generalized circle (with coefficients rearranged: A and D swap roles).</p>
+          </>
+        }
+      >
         <p>
           Every Möbius transformation maps generalized circles to generalized
           circles. In particular:
@@ -116,7 +131,24 @@ export default function Section60() {
         transformations preserve this property.
       </p>
 
-      <Theorem title="Orthogonality to the Boundary">
+      <Theorem title="Orthogonality to the Boundary"
+        proof={
+          <>
+            <p>We use two key properties of Möbius transformations:</p>
+            <p className="mt-2"><strong>1. Conformality:</strong> Möbius transformations preserve angles between curves.</p>
+            <p className="mt-2"><strong>2. Boundary preservation:</strong> A Möbius transformation mapping ℋ to itself must map ∂ℋ = ℝ ∪ {'{'}∞{'}'} to itself.</p>
+            <p className="mt-2">Now let L be a non-Euclidean line, meaning L is a generalized circle meeting ℝ at right angles (90°).</p>
+            <p className="mt-2">By the generalized circle theorem, f(L) is a generalized circle.</p>
+            <p className="mt-2">Let P be a point where L meets ℝ. At P:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>The angle between L and ℝ at P is 90°</li>
+              <li>f maps P to some point f(P) on ℝ (boundary preservation)</li>
+              <li>By conformality, the angle between f(L) and f(ℝ) = ℝ at f(P) is also 90°</li>
+            </ul>
+            <p className="mt-2">Therefore f(L) is a generalized circle meeting ℝ orthogonally—i.e., a non-Euclidean line.</p>
+          </>
+        }
+      >
         <p>
           If a Möbius transformation f maps the upper half plane to itself, and
           L is a non-Euclidean line (meeting ℝ ∪ {'{'}∞{'}'} orthogonally), then f(L)

@@ -68,7 +68,7 @@ export default function Section30() {
         notation introduced by Legendre.
       </p>
 
-      <Callout type="definition" title="Legendre Symbol">
+      <Callout type="info" title="Legendre Symbol">
         <p className="mb-2">
           For a prime <InlineMath>{`p`}</InlineMath> and an integer{' '}
           <InlineMath>{`n`}</InlineMath> not divisible by <InlineMath>{`p`}</InlineMath>,
@@ -107,7 +107,7 @@ export default function Section30() {
         of the same result!
       </p>
 
-      <Callout type="theorem" title="Law of Quadratic Reciprocity">
+      <Callout type="success" title="Law of Quadratic Reciprocity">
         <p className="mb-2">
           If <InlineMath>{`p`}</InlineMath> and <InlineMath>{`q`}</InlineMath> are
           distinct odd primes, then:
@@ -158,7 +158,7 @@ export default function Section30() {
         compute the Legendre symbol.
       </p>
 
-      <Callout type="theorem" title="Gauss's Lemma">
+      <Callout type="success" title="Gauss's Lemma">
         <p className="mb-2">
           Let <InlineMath>{`p`}</InlineMath> be an odd prime and <InlineMath>{`q`}</InlineMath> an
           integer not divisible by <InlineMath>{`p`}</InlineMath>. Consider the integers{' '}

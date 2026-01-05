@@ -173,18 +173,46 @@ export default function Section02() {
         a trivial component, consisting of one vertex and no edge.
       </p>
 
-      <Theorem title="Lower Bound on Components" className="my-6">
+      <Theorem
+        title="Lower Bound on Components"
+        className="my-6"
+        proof={
+          <>
+            <p>
+              We prove this by induction on the number of edges <InlineMath>k</InlineMath>.
+            </p>
+            <p className="mt-2">
+              <strong>Base case:</strong> When <InlineMath>{`k = 0`}</InlineMath>, the graph has no edges,
+              so each vertex is its own component. Thus there are exactly <InlineMath>n</InlineMath>{' '}
+              components, which equals <InlineMath>{`n - 0 = n - k`}</InlineMath>.
+            </p>
+            <p className="mt-2">
+              <strong>Induction step:</strong> Assume the result holds for graphs with{' '}
+              <InlineMath>{`k - 1`}</InlineMath> edges. Let <InlineMath>G</InlineMath> be a graph
+              with <InlineMath>n</InlineMath> vertices and <InlineMath>k</InlineMath> edges.
+              Remove any edge <InlineMath>e</InlineMath> to obtain <InlineMath>{`G - e`}</InlineMath>.
+            </p>
+            <p className="mt-2">
+              By the induction hypothesis, <InlineMath>{`G - e`}</InlineMath> has at least{' '}
+              <InlineMath>{`n - (k-1) = n - k + 1`}</InlineMath> components.
+            </p>
+            <p className="mt-2">
+              When we add edge <InlineMath>e</InlineMath> back, it can decrease the number of
+              components by at most 1 (if it joins two different components, it merges them into one;
+              if both endpoints are in the same component, the number of components stays the same).
+            </p>
+            <p className="mt-2">
+              Therefore, <InlineMath>G</InlineMath> has at least{' '}
+              <InlineMath>{`(n - k + 1) - 1 = n - k`}</InlineMath> components.
+            </p>
+          </>
+        }
+      >
         <p>
           Every graph with <InlineMath>n</InlineMath> vertices and <InlineMath>k</InlineMath>{' '}
           edges has at least <InlineMath>{`n - k`}</InlineMath> components.
         </p>
       </Theorem>
-
-      <p>
-        The proof follows from the observation that an <InlineMath>n</InlineMath>-vertex graph
-        with no edges has <InlineMath>n</InlineMath> components, and each edge added reduces
-        the number of components by at most 1.
-      </p>
 
       <h2>Cut-Edges and Cut-Vertices</h2>
 
@@ -395,24 +423,44 @@ export default function Section02() {
         </p>
       </Definition>
 
-      <Theorem title="Cycle Existence Lemma" className="my-6">
+      <Theorem
+        title="Cycle Existence Lemma"
+        className="my-6"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>P</InlineMath> be a maximal path in <InlineMath>G</InlineMath>. Such a
+              path exists because <InlineMath>G</InlineMath> is finite and nonempty (having vertices
+              of degree at least 2 implies it has edges).
+            </p>
+            <p className="mt-2">
+              Let <InlineMath>u</InlineMath> be an endpoint of <InlineMath>P</InlineMath>. Since{' '}
+              <InlineMath>P</InlineMath> is maximal (cannot be extended), every neighbor of{' '}
+              <InlineMath>u</InlineMath> must already be a vertex of <InlineMath>P</InlineMath>.
+              If some neighbor were not on <InlineMath>P</InlineMath>, we could extend{' '}
+              <InlineMath>P</InlineMath> through that neighbor, contradicting maximality.
+            </p>
+            <p className="mt-2">
+              Since <InlineMath>{`d(u) \\geq 2`}</InlineMath>, the vertex <InlineMath>u</InlineMath>{' '}
+              has at least two neighbors. One neighbor is its predecessor on the path{' '}
+              <InlineMath>P</InlineMath>. There must be at least one other neighbor{' '}
+              <InlineMath>v</InlineMath>, and this neighbor lies on <InlineMath>P</InlineMath>.
+            </p>
+            <p className="mt-2">
+              The edge <InlineMath>uv</InlineMath> is not part of <InlineMath>P</InlineMath> (since
+              paths have no repeated vertices, and <InlineMath>u</InlineMath> already has a different
+              edge to its predecessor on <InlineMath>P</InlineMath>). This edge{' '}
+              <InlineMath>uv</InlineMath> together with the portion of <InlineMath>P</InlineMath>{' '}
+              from <InlineMath>v</InlineMath> to <InlineMath>u</InlineMath> forms a cycle.
+            </p>
+          </>
+        }
+      >
         <p>
           If every vertex of a graph <InlineMath>G</InlineMath> has degree at least 2, then{' '}
           <InlineMath>G</InlineMath> contains a cycle.
         </p>
       </Theorem>
-
-      <p>
-        The proof uses extremality: let <InlineMath>P</InlineMath> be a maximal path in{' '}
-        <InlineMath>G</InlineMath>, and let <InlineMath>u</InlineMath> be an endpoint of{' '}
-        <InlineMath>P</InlineMath>. Since <InlineMath>P</InlineMath> cannot be extended, every
-        neighbor of <InlineMath>u</InlineMath> must already be a vertex of <InlineMath>P</InlineMath>.
-        Since <InlineMath>u</InlineMath> has degree at least 2, it has a neighbor{' '}
-        <InlineMath>v</InlineMath> in <InlineMath>V(P)</InlineMath> via an edge not in{' '}
-        <InlineMath>P</InlineMath>. The edge <InlineMath>uv</InlineMath> completes a cycle with
-        the portion of <InlineMath>P</InlineMath> from <InlineMath>v</InlineMath> to{' '}
-        <InlineMath>u</InlineMath>.
-      </p>
 
       <Theorem
         title="Characterization of Eulerian Graphs"
@@ -466,14 +514,45 @@ export default function Section02() {
         </p>
       </Theorem>
 
-      <Theorem title="Cycle Decomposition of Even Graphs" className="my-6">
+      <Theorem
+        title="Cycle Decomposition of Even Graphs"
+        className="my-6"
+        proof={
+          <>
+            <p>
+              We prove this by strong induction on the number of edges <InlineMath>m</InlineMath>.
+            </p>
+            <p className="mt-2">
+              <strong>Base case:</strong> If <InlineMath>{`m = 0`}</InlineMath>, the graph has no
+              edges and is trivially decomposed into zero cycles (the empty decomposition).
+            </p>
+            <p className="mt-2">
+              <strong>Induction step:</strong> Suppose <InlineMath>{`m > 0`}</InlineMath> and the
+              result holds for all even graphs with fewer than <InlineMath>m</InlineMath> edges.
+              Let <InlineMath>G</InlineMath> be an even graph with <InlineMath>m</InlineMath> edges.
+            </p>
+            <p className="mt-2">
+              Since <InlineMath>G</InlineMath> has an edge and all degrees are even (hence at least 2
+              for vertices incident to edges), the Cycle Existence Lemma guarantees that{' '}
+              <InlineMath>G</InlineMath> contains a cycle <InlineMath>C</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Let <InlineMath>{`G' = G - E(C)`}</InlineMath> be the graph obtained by deleting the
+              edges of <InlineMath>C</InlineMath>. Since <InlineMath>C</InlineMath> contributes
+              exactly 0 or 2 to the degree of each vertex (2 if the vertex is on the cycle, 0
+              otherwise), the graph <InlineMath>G'</InlineMath> is still an even graph.
+            </p>
+            <p className="mt-2">
+              Since <InlineMath>G'</InlineMath> has fewer edges than <InlineMath>G</InlineMath>, by
+              the induction hypothesis, <InlineMath>G'</InlineMath> decomposes into cycles. Adding
+              the cycle <InlineMath>C</InlineMath> to this decomposition gives a cycle decomposition
+              of <InlineMath>G</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>Every even graph decomposes into cycles.</p>
       </Theorem>
-
-      <p>
-        This follows from the proof of the Eulerian characterization: every even nontrivial
-        graph has a cycle, and the deletion of a cycle leaves an even graph.
-      </p>
 
       <h2>Decomposing Graphs into Trails</h2>
 

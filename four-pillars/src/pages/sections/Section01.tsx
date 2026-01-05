@@ -65,7 +65,22 @@ export default function Section01() {
         sides are equal:
       </p>
 
-      <Theorem title="Equality of Sides">
+      <Theorem title="Equality of Sides"
+        proof={
+          <>
+            <p>We prove that all three sides of triangle ABC have equal length.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Consider the first circle, centered at A with radius AB.</p>
+            <p>Since C lies on this circle, we have:</p>
+            <MathBlock math="|AC| = |AB|" />
+            <p className="mt-2"><strong>Step 2:</strong> Consider the second circle, centered at B with radius BA = AB.</p>
+            <p>Since C also lies on this circle, we have:</p>
+            <MathBlock math="|BC| = |AB|" />
+            <p className="mt-2"><strong>Step 3:</strong> By transitivity of equality (Euclid's Common Notion 1: things equal to the same thing are equal to each other):</p>
+            <MathBlock math="|AC| = |AB| = |BC|" />
+            <p className="mt-2">Therefore, triangle ABC is equilateral.</p>
+          </>
+        }
+      >
         <ul className="list-disc list-inside space-y-2 mt-4">
           <li>
             Sides <strong>AB</strong> and <strong>CA</strong> have equal length because they are
@@ -193,7 +208,19 @@ export default function Section01() {
         {`\\text{For which } m \\text{ is } 2^{2^m} + 1 \\text{ a prime number?}`}
       </MathBlock>
 
-      <Theorem title="Gauss-Wantzel Theorem (Preview)">
+      <Theorem title="Gauss-Wantzel Theorem (Preview)"
+        proof={
+          <>
+            <p>The full proof requires advanced algebra (Galois theory), but the key ideas are:</p>
+            <p className="mt-2"><strong>Necessity:</strong> A straightedge and compass construction corresponds algebraically to solving equations using only +, −, ×, ÷, and √. Each square root operation doubles the degree of the field extension over ℚ.</p>
+            <MathBlock math="[\mathbb{Q}(\text{constructible numbers}) : \mathbb{Q}] = 2^k \text{ for some } k" />
+            <p className="mt-2">To construct a regular p-gon, we must construct cos(2π/p). The minimal polynomial of this has degree (p-1)/2 over ℚ.</p>
+            <p className="mt-2">For this to be a power of 2, we need p-1 = 2^n for some n, i.e., p = 2^n + 1.</p>
+            <p className="mt-2">For 2^n + 1 to be prime, n itself must be a power of 2 (since if n = ab with a odd and a &gt; 1, then 2^n + 1 is divisible by 2^b + 1).</p>
+            <p className="mt-2"><strong>Sufficiency:</strong> Gauss showed that when p is a Fermat prime, the p-th roots of unity can be expressed using nested square roots, making the regular p-gon constructible.</p>
+          </>
+        }
+      >
         <p>
           A regular polygon with a prime number p of sides is constructible by straightedge
           and compass if and only if p is of the form 2<sup>2<sup>m</sup></sup> + 1.

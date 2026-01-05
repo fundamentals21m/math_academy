@@ -189,7 +189,7 @@ export default function Section53() {
         all of mathematics to logic — a position called <strong>Logicism</strong>.
       </p>
 
-      <Callout type="definition" title="Frege's Comprehension Scheme">
+      <Callout type="info" title="Frege's Comprehension Scheme">
         <p>
           For any property <InlineMath>{`P(x)`}</InlineMath>, there exists a
           set containing exactly the entities with that property:
@@ -210,7 +210,7 @@ export default function Section53() {
         out a serious problem.
       </p>
 
-      <Callout type="theorem" title="Russell's Paradox (1901)">
+      <Callout type="success" title="Russell's Paradox (1901)">
         <p>
           Consider the property <InlineMath>{`P(x) = \\neg(x \\in x)`}</InlineMath>.
           By Frege's scheme, there exists a set{' '}

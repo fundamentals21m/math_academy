@@ -69,7 +69,7 @@ export default function Section25() {
         </div>
       </Card>
 
-      <Callout type="note" title="Why Logarithms Mattered">
+      <Callout type="info" title="Why Logarithms Mattered">
         Before electronic calculators, logarithms transformed multiplication and division
         into addition and subtraction! To multiply two numbers, you looked up their logs,
         added them, and looked up the antilog. This made complex astronomical calculations
@@ -167,7 +167,7 @@ export default function Section25() {
         more than any other planet's.
       </p>
 
-      <Callout type="theorem" title="Kepler's Three Laws of Planetary Motion">
+      <Callout type="success" title="Kepler's Three Laws of Planetary Motion">
         <ol className="space-y-3">
           <li>
             <strong>First Law (1609):</strong> Each planet describes an <strong>ellipse</strong>

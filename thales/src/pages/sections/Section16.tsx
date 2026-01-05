@@ -100,7 +100,7 @@ export default function Section16() {
         sure the parallel postulate cannot be proved.
       </p>
 
-      <Callout type="note" title="The Hyperbolic Alternative">
+      <Callout type="info" title="The Hyperbolic Alternative">
         Consider replacing Euclid's parallel postulate with:
         <p className="mt-2 font-semibold text-amber-400">
           (H) Through any point not on a line, there are at least two lines through that
@@ -219,7 +219,7 @@ export default function Section16() {
         as necessary truths about space—truths which underlay all of astronomy and physics.
       </p>
 
-      <Callout type="note" title="Einstein and General Relativity">
+      <Callout type="info" title="Einstein and General Relativity">
         A modern physicist uses whichever geometry suits his purposes. According to the
         <strong> general theory of relativity</strong>, space-time is a four-dimensional
         Riemannian geometry with curvature varying from place to place, depending on the
@@ -305,7 +305,7 @@ export default function Section16() {
         (the equilateral triangle construction).
       </p>
 
-      <Callout type="theorem" title="Axiom of Completeness (Bernays's formulation)">
+      <Callout type="success" title="Axiom of Completeness (Bernays's formulation)">
         No points can be added to a straight line so that all other postulates remain valid.
       </Callout>
 

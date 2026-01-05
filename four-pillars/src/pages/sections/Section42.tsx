@@ -19,7 +19,30 @@ export default function Section42() {
 
       <h3>The Converse Desargues Theorem</h3>
 
-      <Theorem title="Converse Desargues Theorem">
+      <Theorem title="Converse Desargues Theorem"
+        proof={
+          <>
+            <p>Let triangles ABC and A′B′C′ have their corresponding sides meeting on line L:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>BC ∩ B′C′ = X on L</li>
+              <li>CA ∩ C′A′ = Y on L</li>
+              <li>AB ∩ A′B′ = Z on L</li>
+            </ul>
+            <p className="mt-2">Let P = AA′ ∩ BB′. We must show CC′ passes through P.</p>
+            <p className="mt-2"><strong>Proof by contradiction:</strong> Suppose PC meets B′C′ at a point C″ different from C′.</p>
+            <p className="mt-2">Then triangles ABC and A′B′C″ are in perspective from P (since AA′, BB′, and CC″ all pass through P).</p>
+            <p className="mt-2">By the Desargues theorem, the corresponding sides of ABC and A′B′C″ meet on a line. We know:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>AB ∩ A′B′ = Z lies on L</li>
+              <li>BC ∩ B′C″ lies on L (since C″ is on B′C′, and BC ∩ B′C′ = X is on L)</li>
+            </ul>
+            <p className="mt-2">By Desargues, CA ∩ A′C″ also lies on L, at the point Y where CA meets L.</p>
+            <p className="mt-2">So A′C″ passes through Y. But A′C′ also passes through Y (since CA ∩ C′A′ = Y). Since A′C′ and A′C″ both pass through A′ and Y, they are the same line.</p>
+            <p className="mt-2">Therefore C″ lies on A′C′. But C″ also lies on B′C′ (by construction). Thus C″ = A′C′ ∩ B′C′ = C′.</p>
+            <p className="mt-2">This contradicts our assumption that C″ ≠ C′. Hence CC′ passes through P.</p>
+          </>
+        }
+      >
         <p>
           If corresponding sides of two triangles meet on a line, then the two
           triangles are in perspective from a point.
@@ -52,7 +75,30 @@ export default function Section42() {
         It is an apt name, as you will see from the configuration.
       </p>
 
-      <Theorem title="Scissors Theorem">
+      <Theorem title="Scissors Theorem"
+        proof={
+          <>
+            <p>Let ABCD and A′B′C′D′ be quadrilaterals with vertices alternately on two lines, with AB ∥ A′B′, BC ∥ B′C′, and AD ∥ A′D′.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Let E = AD ∩ BC and E′ = A′D′ ∩ B′C′.</p>
+            <p className="mt-2">Consider triangles ABE and A′B′E′. Their corresponding sides satisfy:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>AB ∥ A′B′ (given)</li>
+              <li>BE ∥ B′E′ (parts of BC ∥ B′C′)</li>
+              <li>EA ∥ E′A′ (parts of AD ∥ A′D′)</li>
+            </ul>
+            <p className="mt-2"><strong>Step 2:</strong> Since corresponding sides of triangles ABE and A′B′E′ are parallel, they meet on the line at infinity. By the Converse Desargues theorem, these triangles are in perspective from some point P.</p>
+            <p className="mt-2">In other words: AA′, BB′, and EE′ all pass through P.</p>
+            <p className="mt-2"><strong>Step 3:</strong> Now consider triangles CDE and C′D′E′. Since ABCD and A′B′C′D′ have vertices alternately on two lines, we have:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>C lies on the same line as A (through P, since AA′ and CC′ are both lines through vertices on this line)</li>
+              <li>D lies on the same line as B</li>
+            </ul>
+            <p className="mt-2">Therefore triangles CDE and C′D′E′ are in perspective from P (since CC′, DD′, EE′ pass through P).</p>
+            <p className="mt-2"><strong>Step 4:</strong> We know CE ∥ C′E′ and DE ∥ D′E′ (parts of the given parallel sides). By the Desargues theorem, the third pair of corresponding sides must meet on the same line (at infinity) as the first two pairs.</p>
+            <p className="mt-2">Therefore CD ∥ C′D′.</p>
+          </>
+        }
+      >
         <p>
           If ABCD and A′B′C′D′ are quadrilaterals with vertices alternately on two
           lines, and if AB is parallel to A′B′, BC to B′C′, and AD to A′D′, then

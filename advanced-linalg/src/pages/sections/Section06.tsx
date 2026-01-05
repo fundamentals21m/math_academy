@@ -48,7 +48,25 @@ export default function Section06() {
         <MathBlock>{`[T]_\\beta^\\gamma = \\begin{pmatrix} 1 & 1 \\\\ 2 & 0 \\\\ 0 & 1 \\end{pmatrix}`}</MathBlock>
       </Example>
 
-      <Theorem title="Matrix-Vector Multiplication">
+      <Theorem
+        title="Matrix-Vector Multiplication"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>v = c_1 v_1 + \cdots + c_n v_n</InlineMath> where <InlineMath>\beta = {`\\{v_1, \\ldots, v_n\\}`}</InlineMath>.
+            </p>
+            <p className="mt-2">By linearity of <InlineMath>T</InlineMath>:</p>
+            <MathBlock>{`T(v) = c_1 T(v_1) + \\cdots + c_n T(v_n)`}</MathBlock>
+            <p className="mt-2">
+              The <InlineMath>j</InlineMath>-th column of <InlineMath>[T]_\beta^\gamma</InlineMath> is <InlineMath>[T(v_j)]_\gamma</InlineMath>. So:
+            </p>
+            <MathBlock>{`[T(v)]_\\gamma = c_1[T(v_1)]_\\gamma + \\cdots + c_n[T(v_n)]_\\gamma`}</MathBlock>
+            <p className="mt-2">
+              This is exactly the matrix-vector product <InlineMath>[T]_\beta^\gamma \cdot [v]_\beta</InlineMath>, where <InlineMath>[v]_\beta = (c_1, \ldots, c_n)^T</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>
           For any <InlineMath>v \in V</InlineMath>:
         </p>
@@ -113,7 +131,26 @@ export default function Section06() {
         </p>
       </Example>
 
-      <Theorem title="Coordinate Conversion">
+      <Theorem
+        title="Coordinate Conversion"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>\beta' = {`\\{v'_1, \\ldots, v'_n\\}`}</InlineMath>. By definition, column <InlineMath>j</InlineMath> of <InlineMath>P</InlineMath> is <InlineMath>[v'_j]_\beta</InlineMath>.
+            </p>
+            <p className="mt-2">
+              If <InlineMath>v = c_1 v'_1 + \cdots + c_n v'_n</InlineMath>, then <InlineMath>[v]_{'\\beta\''} = (c_1, \ldots, c_n)^T</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Since <InlineMath>P = [I]_{'\\beta\''}^\beta</InlineMath> is the matrix of the identity map, by the matrix-vector multiplication theorem:
+            </p>
+            <MathBlock>{`[v]_\\beta = [I(v)]_\\beta = [I]_{\\beta'}^\\beta [v]_{\\beta'} = P[v]_{\\beta'}`}</MathBlock>
+            <p className="mt-2">
+              Since <InlineMath>P</InlineMath> is invertible (change of basis between two bases), we have <InlineMath>[v]_{'\\beta\''} = P^{'{-1}'}[v]_\beta</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>
           If <InlineMath>P</InlineMath> is the change of basis matrix from <InlineMath>\beta'</InlineMath> to <InlineMath>\beta</InlineMath>, then
           for any vector <InlineMath>v</InlineMath>:
@@ -176,7 +213,23 @@ export default function Section06() {
 
       <h2>Properties Preserved by Similarity</h2>
 
-      <Theorem title="Invariants of Similar Matrices">
+      <Theorem
+        title="Invariants of Similar Matrices"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>B = P^{'{-1}'}AP</InlineMath> for some invertible <InlineMath>P</InlineMath>.
+            </p>
+            <p className="mt-2"><strong>Determinant:</strong></p>
+            <MathBlock>{`\\det(B) = \\det(P^{-1}AP) = \\det(P^{-1})\\det(A)\\det(P) = \\frac{1}{\\det(P)}\\det(A)\\det(P) = \\det(A)`}</MathBlock>
+            <p className="mt-2"><strong>Characteristic polynomial:</strong></p>
+            <MathBlock>{`\\det(\\lambda I - B) = \\det(\\lambda I - P^{-1}AP) = \\det(P^{-1}(\\lambda I - A)P) = \\det(\\lambda I - A)`}</MathBlock>
+            <p className="mt-2"><strong>Eigenvalues:</strong> Since the characteristic polynomials are identical, they have the same roots with the same multiplicities.</p>
+            <p className="mt-2"><strong>Trace:</strong> The trace equals the sum of eigenvalues (with multiplicities), or directly: <InlineMath>{`\\text{tr}`}(P^{'{-1}'}AP) = {`\\text{tr}`}(APP^{'{-1}'}) = {`\\text{tr}`}(A)</InlineMath> by cyclic property of trace.</p>
+            <p className="mt-2"><strong>Rank:</strong> Since <InlineMath>P</InlineMath> and <InlineMath>P^{'{-1}'}</InlineMath> are invertible, they preserve rank: <InlineMath>{`\\text{rank}`}(B) = {`\\text{rank}`}(P^{'{-1}'}AP) = {`\\text{rank}`}(A)</InlineMath>.</p>
+          </>
+        }
+      >
         <p>If <InlineMath>A</InlineMath> and <InlineMath>B</InlineMath> are similar, they have the same:</p>
         <ul className="list-disc list-inside text-dark-300 mt-2">
           <li>Determinant</li>

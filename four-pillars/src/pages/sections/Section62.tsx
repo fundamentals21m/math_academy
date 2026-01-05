@@ -57,7 +57,18 @@ export default function Section62() {
         Möbius transformations preserve distance.
       </p>
 
-      <Theorem title="Scaling Preserves Distance">
+      <Theorem title="Scaling Preserves Distance"
+        proof={
+          <>
+            <p>Let f(z) = kz where k &gt; 0. For points pi and qi on the positive imaginary axis (with p &lt; q):</p>
+            <p className="mt-2">The images are f(pi) = kpi and f(qi) = kqi.</p>
+            <p className="mt-2">Computing the non-Euclidean distance:</p>
+            <MathBlock math="\text{ndist}(f(pi), f(qi)) = \text{ndist}(kpi, kqi) = \log\frac{kq}{kp} = \log\frac{q}{p} = \text{ndist}(pi, qi)" />
+            <p className="mt-2">The k factors cancel in the ratio, leaving the original distance unchanged.</p>
+            <p className="mt-2">This is why we use the logarithm of a ratio rather than, say, the difference: the ratio is scale-invariant, making scaling transformations into isometries.</p>
+          </>
+        }
+      >
         <p>
           The transformation z → kz (for k &gt; 0) preserves non-Euclidean
           distance on the imaginary axis:
@@ -94,7 +105,21 @@ export default function Section62() {
 
       <h3>Properties of Non-Euclidean Distance</h3>
 
-      <Theorem title="Metric Properties">
+      <Theorem title="Metric Properties"
+        proof={
+          <>
+            <p>We verify the three metric axioms for ndist(P, Q) = |log CR(A, P, Q, B)|.</p>
+            <p className="mt-2"><strong>1. Non-negativity:</strong> The absolute value ensures ndist ≥ 0. If P = Q, then CR(A, P, P, B) = 1 (degenerate cross-ratio), so log(1) = 0.</p>
+            <p className="mt-2"><strong>2. Symmetry:</strong> Exchanging P and Q in the cross-ratio:</p>
+            <MathBlock math="CR(A, Q, P, B) = \frac{1}{CR(A, P, Q, B)}" />
+            <p className="mt-2">Taking logs: log(CR(A, Q, P, B)) = -log(CR(A, P, Q, B)). The absolute value makes ndist(Q, P) = ndist(P, Q).</p>
+            <p className="mt-2"><strong>3. Triangle inequality:</strong> For P, Q, R on the same non-Euclidean line (with endpoints A, B):</p>
+            <MathBlock math="CR(A, P, R, B) = CR(A, P, Q, B) \cdot CR(A, Q, R, B)" />
+            <p className="mt-2">Taking logs and applying |log(xy)| ≤ |log x| + |log y| when x, y have the same sign (which they do for points in order on the line) gives the triangle inequality.</p>
+            <p className="mt-2">For points not on the same line, the triangle inequality follows from the geodesic property: the direct path is shortest.</p>
+          </>
+        }
+      >
         <p>
           Non-Euclidean distance is a genuine metric:
         </p>
@@ -105,7 +130,21 @@ export default function Section62() {
         </ul>
       </Theorem>
 
-      <Theorem title="Möbius Transformations Preserve Distance">
+      <Theorem title="Möbius Transformations Preserve Distance"
+        proof={
+          <>
+            <p>Let f be a Möbius transformation mapping the upper half plane to itself. Let P, Q be points in the upper half plane, with L the non-Euclidean line through them and A, B the endpoints of L on the boundary.</p>
+            <p className="mt-2">Since f preserves non-Euclidean lines (proven earlier), f(L) is a non-Euclidean line with endpoints f(A), f(B).</p>
+            <p className="mt-2">The non-Euclidean distance is defined via cross-ratio:</p>
+            <MathBlock math="\text{ndist}(P, Q) = |\log CR(A, P, Q, B)|" />
+            <p className="mt-2">Since Möbius transformations preserve cross-ratio (proven in Chapter 5):</p>
+            <MathBlock math="CR(f(A), f(P), f(Q), f(B)) = CR(A, P, Q, B)" />
+            <p className="mt-2">Therefore:</p>
+            <MathBlock math="\text{ndist}(f(P), f(Q)) = |\log CR(f(A), f(P), f(Q), f(B))| = |\log CR(A, P, Q, B)| = \text{ndist}(P, Q)" />
+            <p className="mt-2">Thus f is an isometry of the hyperbolic plane.</p>
+          </>
+        }
+      >
         <p>
           If f is a Möbius transformation of the upper half plane, then:
         </p>
@@ -129,7 +168,28 @@ export default function Section62() {
         minimize hyperbolic distance.
       </p>
 
-      <Theorem title="Geodesic Property">
+      <Theorem title="Geodesic Property"
+        proof={
+          <>
+            <p>We prove that the non-Euclidean line (semicircle or vertical ray) minimizes hyperbolic length.</p>
+            <p className="mt-2"><strong>Case 1: Points on the imaginary axis.</strong></p>
+            <p>For pi and qi (with p &lt; q), any path γ from pi to qi has length:</p>
+            <MathBlock math="L(\gamma) = \int_\gamma \frac{|dz|}{y} = \int_\gamma \frac{\sqrt{dx^2 + dy^2}}{y}" />
+            <p className="mt-2">For the vertical segment (x = 0), dx = 0, so:</p>
+            <MathBlock math="L_{\text{vertical}} = \int_p^q \frac{dy}{y} = \log q - \log p = \log(q/p)" />
+            <p className="mt-2">For any other path, we have additional horizontal movement (dx ≠ 0), making:</p>
+            <MathBlock math="\sqrt{dx^2 + dy^2} > |dy|" />
+            <p className="mt-2">Thus any non-vertical path is strictly longer.</p>
+            <p className="mt-2"><strong>Case 2: General points.</strong></p>
+            <p>Use a Möbius transformation f to map P and Q to points on the imaginary axis. Since f is an isometry of the hyperbolic metric:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>Lengths are preserved: L(γ) = L(f(γ))</li>
+              <li>The non-Euclidean line through P, Q maps to the imaginary axis</li>
+            </ul>
+            <p className="mt-2">By Case 1, the vertical path minimizes length for f(P) to f(Q). Since f is an isometry, the non-Euclidean line minimizes length for P to Q.</p>
+          </>
+        }
+      >
         <p>
           If P and Q are two points in the upper half plane, the shortest path
           between them (in the hyperbolic metric) is the arc of the non-Euclidean
@@ -156,7 +216,22 @@ export default function Section62() {
         "infinitely far away."
       </p>
 
-      <Theorem title="Boundary at Infinity">
+      <Theorem title="Boundary at Infinity"
+        proof={
+          <>
+            <p>We show that the hyperbolic distance from any interior point to any boundary point is infinite.</p>
+            <p className="mt-2"><strong>Case 1:</strong> Distance from P = i to A = 0 along the imaginary axis.</p>
+            <p>As we approach 0 from i along the imaginary axis through points εi (with ε → 0):</p>
+            <MathBlock math="\text{ndist}(i, \varepsilon i) = \log\frac{1}{\varepsilon} = -\log\varepsilon \to \infty \text{ as } \varepsilon \to 0" />
+            <p className="mt-2"><strong>Case 2:</strong> Distance from P = i to A = ∞.</p>
+            <p>As we move from i toward ∞ through points Ni (with N → ∞):</p>
+            <MathBlock math="\text{ndist}(i, Ni) = \log N \to \infty \text{ as } N \to \infty" />
+            <p className="mt-2"><strong>General case:</strong></p>
+            <p>For any P in the upper half plane and any A on the boundary, use a Möbius transformation f mapping P to i and A to 0 (or ∞). Since f is an isometry, ndist(P, A) = ndist(i, 0) = ∞ (or ndist(i, ∞) = ∞).</p>
+            <p className="mt-2">Thus the boundary ℝ ∪ {'{'}∞{'}'} is "at infinity" in the hyperbolic metric.</p>
+          </>
+        }
+      >
         <p>
           For any point P in the upper half plane and any point A on the boundary
           ℝ ∪ {'{'}∞{'}'}:

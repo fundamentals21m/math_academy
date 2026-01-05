@@ -9,6 +9,13 @@ export default defineConfig({
     setupFiles: ['./test/setup.ts'],
     globals: true,
     testTimeout: 10000,
+    include: [
+      '**/*.{test,spec}.{js,ts,jsx,tsx}',
+      '**/test/**/*.{test,spec}.{js,ts,jsx,tsx}',
+      '**/test/regression/**/*.{test,spec}.{js,ts,jsx,tsx}',
+      '**/test/integration/**/*.{test,spec}.{js,ts,jsx,tsx}',
+      '**/test/snapshots/**/*.{test,spec}.{js,ts,jsx,tsx}',
+    ],
   },
   coverage: {
     provider: 'v8',
@@ -21,5 +28,11 @@ export default defineConfig({
       '**/*.spec.ts',
       '**/*.spec.tsx',
     ],
+    thresholds: {
+      lines: 85,
+      functions: 85,
+      branches: 80,
+      statements: 85,
+    },
   },
 });

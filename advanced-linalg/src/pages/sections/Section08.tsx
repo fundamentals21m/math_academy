@@ -115,7 +115,28 @@ export default function Section08() {
         <MathBlock>{`\\text{REF: } \\begin{pmatrix} 2 & 3 & 1 \\\\ 0 & 5 & 4 \\\\ 0 & 0 & 2 \\end{pmatrix} \\quad \\text{RREF: } \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}`}</MathBlock>
       </Example>
 
-      <Theorem title="Uniqueness of RREF">
+      <Theorem
+        title="Uniqueness of RREF"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>A</InlineMath> be an <InlineMath>m \times n</InlineMath> matrix and suppose <InlineMath>R_1</InlineMath> and <InlineMath>R_2</InlineMath> are both reduced row echelon forms of <InlineMath>A</InlineMath>.
+            </p>
+            <p className="mt-2">
+              The column space <InlineMath>C(A)</InlineMath> is preserved under row operations. The pivot columns of any REF form a basis for <InlineMath>C(A)</InlineMath>.
+            </p>
+            <p className="mt-2">
+              In RREF, the pivot columns are standard basis vectors <InlineMath>e_i</InlineMath>. Since both <InlineMath>R_1</InlineMath> and <InlineMath>R_2</InlineMath> have the same column space, they have pivots in the same columns.
+            </p>
+            <p className="mt-2">
+              The null space <InlineMath>N(A) = N(R_1) = N(R_2)</InlineMath> since row operations preserve solutions. In RREF, each non-pivot column is uniquely determined by expressing the corresponding free variable in terms of pivot variables.
+            </p>
+            <p className="mt-2">
+              Since pivots are in identical positions and determine identical relationships for free variables, <InlineMath>R_1 = R_2</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>Every matrix has a unique reduced row echelon form.</p>
       </Theorem>
 
@@ -136,7 +157,20 @@ export default function Section08() {
         </p>
       </Definition>
 
-      <Theorem title="The Four Fundamental Subspaces">
+      <Theorem
+        title="The Four Fundamental Subspaces"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>r = {`\\text{rank}`}(A)</InlineMath> be the number of pivot columns (or nonzero rows in RREF).
+            </p>
+            <p className="mt-2"><strong>Column space:</strong> The pivot columns of <InlineMath>A</InlineMath> form a basis for <InlineMath>C(A)</InlineMath>, so <InlineMath>\dim(C(A)) = r</InlineMath>.</p>
+            <p className="mt-2"><strong>Row space:</strong> The nonzero rows of RREF form a basis for <InlineMath>R(A)</InlineMath> (row operations preserve row space), so <InlineMath>\dim(R(A)) = r</InlineMath>.</p>
+            <p className="mt-2"><strong>Null space:</strong> There are <InlineMath>n - r</InlineMath> free variables, each giving one basis vector for <InlineMath>N(A)</InlineMath>. By rank-nullity: <InlineMath>\dim(N(A)) = n - r</InlineMath>.</p>
+            <p className="mt-2"><strong>Left null space:</strong> <InlineMath>N(A^T)</InlineMath> is the null space of <InlineMath>A^T</InlineMath>, which is <InlineMath>n \times m</InlineMath>. Since <InlineMath>{`\\text{rank}`}(A^T) = r</InlineMath>, we have <InlineMath>\dim(N(A^T)) = m - r</InlineMath>.</p>
+          </>
+        }
+      >
         <p>For an <InlineMath>m \times n</InlineMath> matrix <InlineMath>A</InlineMath>:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div className="p-3 bg-dark-800/50 rounded-lg">
@@ -157,7 +191,34 @@ export default function Section08() {
         <p className="mt-2">where <InlineMath>r = {`\\text{rank}`}(A)</InlineMath>.</p>
       </Theorem>
 
-      <Theorem title="Orthogonality Relations">
+      <Theorem
+        title="Orthogonality Relations"
+        proof={
+          <>
+            <p><strong><InlineMath>R(A) \perp N(A)</InlineMath>:</strong></p>
+            <p className="mt-2">
+              Let <InlineMath>{`\\mathbf{x}`} \in N(A)</InlineMath>, so <InlineMath>A{`\\mathbf{x}`} = {`\\mathbf{0}`}</InlineMath>. Let <InlineMath>{`\\mathbf{r}`}</InlineMath> be any row of <InlineMath>A</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Then <InlineMath>{`\\mathbf{r}`} \cdot {`\\mathbf{x}`}</InlineMath> is one component of <InlineMath>A{`\\mathbf{x}`} = {`\\mathbf{0}`}</InlineMath>, so <InlineMath>{`\\mathbf{r}`} \cdot {`\\mathbf{x}`} = 0</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Since every row is orthogonal to every vector in <InlineMath>N(A)</InlineMath>, and <InlineMath>R(A)</InlineMath> is spanned by rows, <InlineMath>R(A) \perp N(A)</InlineMath>.
+            </p>
+            <p className="mt-2"><strong><InlineMath>C(A) \perp N(A^T)</InlineMath>:</strong></p>
+            <p className="mt-2">
+              Apply the first result to <InlineMath>A^T</InlineMath>: <InlineMath>R(A^T) \perp N(A^T)</InlineMath>. Since <InlineMath>R(A^T) = C(A)</InlineMath>, we get <InlineMath>C(A) \perp N(A^T)</InlineMath>.
+            </p>
+            <p className="mt-2"><strong>Direct sum decomposition:</strong></p>
+            <p className="mt-2">
+              We have <InlineMath>\dim(R(A)) + \dim(N(A)) = r + (n - r) = n</InlineMath>. Since <InlineMath>R(A) \perp N(A)</InlineMath>, they have trivial intersection. Thus <InlineMath>{`\\mathbb{R}`}^n = R(A) \oplus N(A)</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Similarly, <InlineMath>\dim(C(A)) + \dim(N(A^T)) = r + (m - r) = m</InlineMath>, giving <InlineMath>{`\\mathbb{R}`}^m = C(A) \oplus N(A^T)</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>The four subspaces satisfy:</p>
         <ul className="list-disc list-inside text-dark-300 mt-2">
           <li><InlineMath>R(A) \perp N(A)</InlineMath> (row space perpendicular to null space)</li>
@@ -169,14 +230,43 @@ export default function Section08() {
 
       <h2>Existence and Uniqueness</h2>
 
-      <Theorem title="Existence of Solutions">
+      <Theorem
+        title="Existence of Solutions"
+        proof={
+          <>
+            <p><strong>(⇒)</strong> If <InlineMath>{`\\mathbf{x}`}</InlineMath> is a solution, then:</p>
+            <MathBlock>{`\\mathbf{b} = A\\mathbf{x} = x_1 \\mathbf{a}_1 + x_2 \\mathbf{a}_2 + \\cdots + x_n \\mathbf{a}_n`}</MathBlock>
+            <p className="mt-2">where <InlineMath>{`\\mathbf{a}`}_i</InlineMath> are columns of <InlineMath>A</InlineMath>. So <InlineMath>{`\\mathbf{b}`} \in C(A)</InlineMath>.</p>
+            <p className="mt-2"><strong>(⇐)</strong> If <InlineMath>{`\\mathbf{b}`} \in C(A)</InlineMath>, then <InlineMath>{`\\mathbf{b}`} = \sum x_i {`\\mathbf{a}`}_i</InlineMath> for some scalars <InlineMath>x_i</InlineMath>. Then <InlineMath>{`\\mathbf{x}`} = (x_1, \ldots, x_n)^T</InlineMath> solves <InlineMath>A{`\\mathbf{x}`} = {`\\mathbf{b}`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Rank condition:</strong> <InlineMath>{`\\mathbf{b}`} \in C(A)</InlineMath> iff adding <InlineMath>{`\\mathbf{b}`}</InlineMath> as a column doesn't increase rank (it's already in the span), i.e., <InlineMath>{`\\text{rank}`}(A) = {`\\text{rank}`}(A | {`\\mathbf{b}`})</InlineMath>.</p>
+          </>
+        }
+      >
         <p>
           <InlineMath>A{`\\mathbf{x}`} = {`\\mathbf{b}`}</InlineMath> has a solution if and only if <InlineMath>{`\\mathbf{b}`} \in C(A)</InlineMath>,
           i.e., <InlineMath>{`\\text{rank}`}(A) = {`\\text{rank}`}(A | {`\\mathbf{b}`})</InlineMath>.
         </p>
       </Theorem>
 
-      <Theorem title="Uniqueness of Solutions">
+      <Theorem
+        title="Uniqueness of Solutions"
+        proof={
+          <>
+            <p>
+              By the Solution Structure Theorem, if <InlineMath>{`\\mathbf{x}`}_0</InlineMath> is a particular solution, the complete solution set is <InlineMath>{`\\{\\mathbf{x}_0 + \\mathbf{n} : \\mathbf{n} \\in N(A)\\}`}</InlineMath>.
+            </p>
+            <p className="mt-2">
+              <strong>(⇒)</strong> If the solution is unique, then <InlineMath>{`\\mathbf{x}`}_0 + {`\\mathbf{n}`} = {`\\mathbf{x}`}_0</InlineMath> for all <InlineMath>{`\\mathbf{n}`} \in N(A)</InlineMath>, which implies <InlineMath>N(A) = {`\\{\\mathbf{0}\\}`}</InlineMath>.
+            </p>
+            <p className="mt-2">
+              <strong>(⇐)</strong> If <InlineMath>N(A) = {`\\{\\mathbf{0}\\}`}</InlineMath>, then <InlineMath>{`\\mathbf{x}`}_0 + {`\\mathbf{0}`} = {`\\mathbf{x}`}_0</InlineMath> is the only solution.
+            </p>
+            <p className="mt-2">
+              By rank-nullity, <InlineMath>N(A) = {`\\{\\mathbf{0}\\}`}</InlineMath> iff <InlineMath>\dim(N(A)) = 0</InlineMath> iff <InlineMath>{`\\text{rank}`}(A) = n</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>
           If a solution exists, it is unique if and only if <InlineMath>N(A) = {`\\{\\mathbf{0}\\}`}</InlineMath>,
           i.e., <InlineMath>{`\\text{rank}`}(A) = n</InlineMath> (full column rank).

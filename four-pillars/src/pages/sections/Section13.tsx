@@ -25,7 +25,29 @@ export default function Section13() {
         altitude from C to the hypotenuse AB, meeting it at point H.
       </p>
 
-      <Theorem title="Altitude Creates Similar Triangles">
+      <Theorem title="Altitude Creates Similar Triangles"
+        proof={
+          <>
+            <p>Let ABC be a right triangle with right angle at C. Let H be the foot of the altitude from C to hypotenuse AB.</p>
+            <p className="mt-2"><strong>Part 1: △ACH ∼ △ABC</strong></p>
+            <p className="mt-2">In triangle ACH:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>∠AHC = 90° (altitude is perpendicular)</li>
+              <li>∠CAH = ∠CAB = ∠A (same angle)</li>
+            </ul>
+            <p className="mt-2">By AA similarity (two equal angles), △ACH ∼ △ABC.</p>
+            <p className="mt-2"><strong>Part 2: △CBH ∼ △ABC</strong></p>
+            <p className="mt-2">In triangle CBH:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>∠CHB = 90° (altitude is perpendicular)</li>
+              <li>∠CBH = ∠CBA = ∠B (same angle)</li>
+            </ul>
+            <p className="mt-2">By AA similarity, △CBH ∼ △ABC.</p>
+            <p className="mt-2"><strong>Part 3: △ACH ∼ △CBH</strong></p>
+            <p className="mt-2">Since both are similar to △ABC, they are similar to each other (transitivity).</p>
+          </>
+        }
+      >
         <p>
           The altitude from the right angle to the hypotenuse divides the
           right triangle into two smaller triangles, each similar to the
@@ -35,20 +57,6 @@ export default function Section13() {
           {`\\triangle ACH \\sim \\triangle ABC \\sim \\triangle CBH`}
         </MathBlock>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> In triangle ACH:
-      </p>
-      <ul className="list-disc list-inside space-y-2 my-4">
-        <li>∠AHC = 90° (by construction)</li>
-        <li>∠A is shared with triangle ABC</li>
-        <li>Therefore ∠ACH = ∠B (angle sum)</li>
-      </ul>
-
-      <p>
-        So triangle ACH has the same angles as triangle ABC, making them
-        similar. The same argument applies to triangle CBH. ∎
-      </p>
 
       <h3>Proof of Pythagorean Theorem via Similar Triangles</h3>
 
@@ -93,7 +101,28 @@ export default function Section13() {
         The altitude construction reveals another important relationship:
       </p>
 
-      <Theorem title="Altitude as Geometric Mean">
+      <Theorem title="Altitude as Geometric Mean"
+        proof={
+          <>
+            <p>Let H be the foot of the altitude from C to hypotenuse AB in right triangle ABC.</p>
+            <p className="mt-2"><strong>Step 1:</strong> From the previous theorem, △ACH ∼ △CBH.</p>
+            <p className="mt-2"><strong>Step 2:</strong> In △ACH, the sides opposite to corresponding angles are:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>CH opposite to ∠A</li>
+              <li>AH opposite to ∠ACH</li>
+            </ul>
+            <p className="mt-2"><strong>Step 3:</strong> In △CBH, the corresponding sides are:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>HB opposite to ∠HCB (= ∠A by similarity)</li>
+              <li>CH opposite to ∠B (= ∠ACH by similarity)</li>
+            </ul>
+            <p className="mt-2"><strong>Step 4:</strong> By similarity, corresponding sides are proportional:</p>
+            <MathBlock math="\frac{AH}{CH} = \frac{CH}{HB}" />
+            <p className="mt-2"><strong>Step 5:</strong> Cross-multiplying:</p>
+            <MathBlock math="CH^2 = AH \cdot HB" />
+          </>
+        }
+      >
         <p>
           The altitude to the hypotenuse is the geometric mean of the two
           segments it creates.
@@ -105,16 +134,6 @@ export default function Section13() {
           Equivalently: CH = √(AH · HB)
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> From the similarity △ACH ∼ △CBH:
-      </p>
-
-      <MathBlock>
-        {`\\frac{AH}{CH} = \\frac{CH}{HB}`}
-      </MathBlock>
-
-      <p>Cross-multiplying gives CH² = AH · HB. ∎</p>
 
       <h3>Constructing Square Roots</h3>
 
@@ -169,7 +188,30 @@ export default function Section13() {
         and compass.
       </p>
 
-      <Theorem title="Constructible Numbers Form a Field">
+      <Theorem title="Constructible Numbers Form a Field"
+        proof={
+          <>
+            <p>We show each operation preserves constructibility.</p>
+            <p className="mt-2"><strong>Addition (a + b):</strong> Copy segment b at the end of segment a along a line.</p>
+            <p className="mt-2"><strong>Subtraction (a - b):</strong> Copy segment b from the end of segment a backwards.</p>
+            <p className="mt-2"><strong>Multiplication (a · b):</strong></p>
+            <ol className="list-decimal list-inside mt-1">
+              <li>Draw rays from point O forming an angle</li>
+              <li>Mark segment OA = 1 and OB = a on one ray</li>
+              <li>Mark segment OC = b on the other ray</li>
+              <li>Draw line AC, then line through B parallel to AC</li>
+              <li>This line meets the second ray at D with OD = ab (by Thales)</li>
+            </ol>
+            <p className="mt-2"><strong>Division (a/b):</strong></p>
+            <ol className="list-decimal list-inside mt-1">
+              <li>Mark OA = a and OB = b on one ray, OC = 1 on another</li>
+              <li>Draw BC, then line through A parallel to BC</li>
+              <li>This meets the second ray at D with OD = a/b (by Thales)</li>
+            </ol>
+            <p className="mt-2"><strong>Square root (√a):</strong> Use the semicircle construction with segments of length a and 1.</p>
+          </>
+        }
+      >
         <p>
           If a and b are constructible, then so are:
         </p>

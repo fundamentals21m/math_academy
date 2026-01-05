@@ -69,7 +69,25 @@ export default function Section08() {
         <em>Elements</em> II.4.
       </p>
 
-      <Theorem title="Square of a Sum (Euclid II.4)">
+      <Theorem title="Square of a Sum (Euclid II.4)"
+        proof={
+          <>
+            <p>Construct a square ABCD with side length a + b.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Mark point E on AB at distance a from A, so AE = a and EB = b.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Mark point F on AD at distance a from A, so AF = a and FD = b.</p>
+            <p className="mt-2"><strong>Step 3:</strong> Draw EG parallel to AD and FH parallel to AB, meeting at point P.</p>
+            <p className="mt-2"><strong>Step 4:</strong> This divides square ABCD into four rectangles:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>AEPF: a square with side a, area = a²</li>
+              <li>EBGP: a rectangle with sides a and b, area = ab</li>
+              <li>FPHD: a rectangle with sides b and a, area = ab</li>
+              <li>PGCH: a square with side b, area = b²</li>
+            </ul>
+            <p className="mt-2"><strong>Step 5:</strong> By additivity of area:</p>
+            <MathBlock math="(a+b)^2 = a^2 + ab + ab + b^2 = a^2 + 2ab + b^2" />
+          </>
+        }
+      >
         <p>
           If a line segment is divided into two parts, then the square on the
           whole equals the sum of the squares on the two parts plus twice the
@@ -80,31 +98,6 @@ export default function Section08() {
         </MathBlock>
       </Theorem>
 
-      <p>
-        <strong>Geometric Proof:</strong> Consider a square with side a + b.
-        Divide it into regions by drawing lines parallel to the sides at
-        distance a from one corner.
-      </p>
-
-      <div className="bg-slate-800/50 p-4 rounded-lg my-6">
-        <p className="text-slate-300">
-          The square decomposes into:
-        </p>
-        <ul className="list-disc list-inside space-y-2 mt-2 text-slate-300">
-          <li>A square of side a (area a²) in one corner</li>
-          <li>A square of side b (area b²) in the opposite corner</li>
-          <li>Two rectangles, each with sides a and b (each with area ab)</li>
-        </ul>
-      </div>
-
-      <p>
-        Since these four pieces tile the large square without overlapping:
-      </p>
-
-      <MathBlock>
-        {`(a + b)^2 = a^2 + ab + ab + b^2 = a^2 + 2ab + b^2`}
-      </MathBlock>
-
       <h3>The Difference of Squares</h3>
 
       <p>
@@ -112,7 +105,26 @@ export default function Section08() {
         interpretation (Euclid II.5).
       </p>
 
-      <Theorem title="Difference of Squares">
+      <Theorem title="Difference of Squares"
+        proof={
+          <>
+            <p>Consider a square ABCD with side a. Remove a smaller square of side b from corner A.</p>
+            <p className="mt-2"><strong>Step 1:</strong> The remaining L-shaped region (gnomon) has area a² - b².</p>
+            <p className="mt-2"><strong>Step 2:</strong> The gnomon consists of two rectangles:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>A rectangle with sides a and (a - b), along one arm</li>
+              <li>A rectangle with sides b and (a - b), along the other arm</li>
+            </ul>
+            <p className="mt-2"><strong>Step 3:</strong> Cut the gnomon along the line separating these two rectangles.</p>
+            <p className="mt-2"><strong>Step 4:</strong> Slide the smaller piece to extend the larger rectangle:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>The result is a rectangle with length a + b and width a - b</li>
+            </ul>
+            <p className="mt-2"><strong>Step 5:</strong> Therefore:</p>
+            <MathBlock math="a^2 - b^2 = (a + b)(a - b)" />
+          </>
+        }
+      >
         <p>
           The difference of two squares equals a rectangle whose sides are the
           sum and difference of the original sides:
@@ -121,13 +133,6 @@ export default function Section08() {
           {`a^2 - b^2 = (a + b)(a - b)`}
         </MathBlock>
       </Theorem>
-
-      <p>
-        <strong>Geometric Proof:</strong> Start with a square of side a and
-        remove a smaller square of side b from one corner. The remaining
-        L-shaped region (called a <em>gnomon</em>) can be cut and rearranged
-        into a rectangle with dimensions (a + b) × (a − b). ∎
-      </p>
 
       <Callout type="important">
         <strong>Geometric Algebra:</strong> Book II of the <em>Elements</em>

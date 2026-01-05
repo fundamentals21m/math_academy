@@ -90,7 +90,27 @@ export default function Section35() {
         {`x \\mapsto \\frac{1}{x}`}
       </MathBlock>
 
-      <Theorem title="Generating Transformations">
+      <Theorem title="Generating Transformations"
+        proof={
+          <>
+            <p>We show that composing translations, scalings, and reciprocation yields all linear fractional functions, and conversely.</p>
+            <p className="mt-2"><strong>Forward direction:</strong> Consider f(x) = (ax + b)/(cx + d) with ad - bc ≠ 0.</p>
+            <p className="mt-2"><em>Case 1:</em> If c = 0, then f(x) = (a/d)x + (b/d). This is a scaling by a/d followed by translation by b/d.</p>
+            <p className="mt-2"><em>Case 2:</em> If c ≠ 0, we perform polynomial division:</p>
+            <MathBlock math="\frac{ax + b}{cx + d} = \frac{a}{c} + \frac{b - ad/c}{cx + d} = \frac{a}{c} + \frac{bc - ad}{c(cx + d)}" />
+            <p className="mt-2">This can be composed as follows:</p>
+            <ol className="list-decimal list-inside mt-2 space-y-1">
+              <li>Start with x</li>
+              <li>Scale: x → cx</li>
+              <li>Translate: cx → cx + d</li>
+              <li>Reciprocate: (cx + d) → 1/(cx + d)</li>
+              <li>Scale: 1/(cx + d) → (bc - ad)/c · 1/(cx + d)</li>
+              <li>Translate: add a/c to get the final result</li>
+            </ol>
+            <p className="mt-2"><strong>Converse direction:</strong> We verify that composing two linear fractional functions yields another. If f₁(x) = (a₁x + b₁)/(c₁x + d₁) and f₂(x) = (a₂x + b₂)/(c₂x + d₂), then f₁(f₂(x)) has the form (Ax + B)/(Cx + D) where the coefficients are determined by matrix multiplication, and AD - BC = (a₁d₁ - b₁c₁)(a₂d₂ - b₂c₂) ≠ 0.</p>
+          </>
+        }
+      >
         <p>
           Any combination of projections is a combination of these three
           <strong> generating transformations</strong>:

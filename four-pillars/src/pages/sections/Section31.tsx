@@ -73,7 +73,18 @@ export default function Section31() {
         simple:
       </p>
 
-      <Theorem title="The Diagonal Method">
+      <Theorem title="The Diagonal Method"
+        proof={
+          <>
+            <p>Consider a tiled floor with tile diagonals at 45° to the tile edges in the actual plane.</p>
+            <p className="mt-2"><strong>Step 1:</strong> In the actual plane, the diagonal of any tile passes through the corners of adjacent tiles in a regular pattern (since all tiles are congruent squares).</p>
+            <p className="mt-2"><strong>Step 2:</strong> The diagonal line in the actual plane is straight, so its perspective image is also a straight line (projection preserves collinearity).</p>
+            <p className="mt-2"><strong>Step 3:</strong> The corners of tiles in the actual plane project to the corners of the perspective tiles.</p>
+            <p className="mt-2"><strong>Step 4:</strong> Since the diagonal line passes through tile corners in the actual plane, its perspective image passes through the corresponding perspective tile corners.</p>
+            <p className="mt-2"><strong>Step 5:</strong> Therefore, the perspective diagonal crosses successive columns at the corners of tiles in successive rows, allowing us to locate the horizontal lines defining each row.</p>
+          </>
+        }
+      >
         <p>
           Draw the diagonal of any tile in the bottom row. The diagonal necessarily
           crosses successive columns at the corners of tiles in the 2nd, 3rd, 4th, ...

@@ -58,21 +58,32 @@ export default function Section07() {
         rather than an axiom.
       </p>
 
-      <Theorem title="ASA Congruence Theorem">
+      <Theorem title="ASA Congruence Theorem"
+        proof={
+          <>
+            <p>Let triangles ABC and DEF satisfy: ∠A = ∠D, AB = DE, and ∠B = ∠E.</p>
+            <p className="mt-2">We must prove AC = DF and BC = EF (and hence the triangles are congruent).</p>
+            <p className="mt-2"><strong>Step 1:</strong> Assume for contradiction that BC ≠ EF. WLOG, suppose BC &gt; EF.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Mark point G on BC such that BG = EF.</p>
+            <p className="mt-2"><strong>Step 3:</strong> Consider triangles ABG and DEF:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>AB = DE (given)</li>
+              <li>∠ABG = ∠DEF (since ∠ABG = ∠ABC = ∠B = ∠E = ∠DEF)</li>
+              <li>BG = EF (by construction)</li>
+            </ul>
+            <p className="mt-2">By SAS, triangle ABG ≅ triangle DEF.</p>
+            <p className="mt-2"><strong>Step 4:</strong> This gives ∠BAG = ∠EDF = ∠A.</p>
+            <p className="mt-2">But G is between B and C, so ray AG is between rays AB and AC.</p>
+            <p className="mt-2">Therefore ∠BAG &lt; ∠BAC = ∠A, contradicting ∠BAG = ∠A.</p>
+            <p className="mt-2"><strong>Step 5:</strong> Hence BC = EF. By SAS with AB = DE, ∠B = ∠E, BC = EF, the triangles are congruent.</p>
+          </>
+        }
+      >
         <p>
           Two triangles are congruent if two angles and the included side of one
           triangle are equal to two angles and the included side of the other.
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof sketch:</strong> Given triangles ABC and DEF with ∠A = ∠D,
-        AB = DE, and ∠B = ∠E, we need to show BC = EF. If BC ≠ EF, say BC &gt; EF,
-        we can find a point B' on BC with BB' = EF. Then triangles AB'B and DEF
-        would be congruent by SAS, giving ∠AB'B = ∠E = ∠B. But this is impossible
-        since the exterior angle ∠AB'B of triangle AB'C must be greater than the
-        interior angle ∠B. ∎
-      </p>
 
       <h3>The Isosceles Triangle Theorem</h3>
 
@@ -81,38 +92,31 @@ export default function Section07() {
         theorem about isosceles triangles.
       </p>
 
-      <Theorem title="Isosceles Triangle Theorem (Euclid I.5)">
+      <Theorem title="Isosceles Triangle Theorem (Euclid I.5)"
+        proof={
+          <>
+            <p>Let triangle ABC have AB = AC. We prove ∠ABC = ∠ACB.</p>
+            <p className="mt-2"><strong>Pappus's elegant proof:</strong> Compare the triangle with its mirror image.</p>
+            <p className="mt-2">Consider triangle ABC (vertices in order A, B, C) and triangle ACB (vertices in order A, C, B).</p>
+            <p className="mt-2"><strong>Step 1:</strong> In triangle ABC, the sides from vertex A are AB and AC.</p>
+            <p className="mt-2">In triangle ACB, the sides from vertex A are AC and AB.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Compare corresponding parts:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>First side from A: AB = AC (given)</li>
+              <li>Angle at A: ∠BAC = ∠CAB (same angle)</li>
+              <li>Second side from A: AC = AB (given)</li>
+            </ul>
+            <p className="mt-2"><strong>Step 3:</strong> By SAS, triangle ABC ≅ triangle ACB.</p>
+            <p className="mt-2"><strong>Step 4:</strong> Corresponding angles are equal:</p>
+            <MathBlock math="\angle ABC = \angle ACB" />
+          </>
+        }
+      >
         <p>
           In a triangle with two equal sides, the angles opposite those sides
           are equal.
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> Consider triangle ABC with AB = AC. We show that
-        ∠ABC = ∠ACB.
-      </p>
-
-      <p>
-        The key insight is to compare the triangle with itself! Consider:
-      </p>
-      <ul className="list-disc list-inside space-y-2 my-4">
-        <li>Triangle ABC (reading vertices as A, B, C)</li>
-        <li>Triangle ACB (reading vertices as A, C, B)</li>
-      </ul>
-
-      <p>
-        These triangles have:
-      </p>
-      <ul className="list-disc list-inside space-y-2 my-4">
-        <li>AB = AC (given)</li>
-        <li>∠BAC = ∠CAB (the same angle)</li>
-        <li>AC = AB (given)</li>
-      </ul>
-
-      <p>
-        By SAS, triangle ABC ≅ triangle ACB. Therefore ∠ABC = ∠ACB. ∎
-      </p>
 
       <Callout type="important">
         <strong>Pappus's Proof:</strong> This elegant proof, where a triangle is
@@ -128,7 +132,22 @@ export default function Section07() {
         proved using ASA.
       </p>
 
-      <Theorem title="Converse of Isosceles Triangle Theorem">
+      <Theorem title="Converse of Isosceles Triangle Theorem"
+        proof={
+          <>
+            <p>Let triangle ABC have ∠ABC = ∠ACB. We prove AB = AC.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Consider triangles ABC and ACB (the triangle compared with its reflection).</p>
+            <p className="mt-2"><strong>Step 2:</strong> Compare corresponding parts:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>∠ABC = ∠ACB (given)</li>
+              <li>BC = CB (same segment)</li>
+              <li>∠ACB = ∠ABC (given)</li>
+            </ul>
+            <p className="mt-2"><strong>Step 3:</strong> By ASA, triangle ABC ≅ triangle ACB.</p>
+            <p className="mt-2"><strong>Step 4:</strong> Corresponding sides are equal: AB = AC.</p>
+          </>
+        }
+      >
         <p>
           If two angles of a triangle are equal, then the sides opposite those
           angles are equal.
@@ -142,34 +161,27 @@ export default function Section07() {
         parallelograms—quadrilaterals whose opposite sides are parallel.
       </p>
 
-      <Theorem title="Opposite Sides of a Parallelogram">
+      <Theorem title="Opposite Sides of a Parallelogram"
+        proof={
+          <>
+            <p>Let ABCD be a parallelogram with AB ∥ CD and AD ∥ BC. We prove AB = CD and AD = BC.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Draw diagonal AC, dividing the parallelogram into triangles ABC and CDA.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Since AB ∥ CD, transversal AC creates alternate interior angles:</p>
+            <MathBlock math="\angle BAC = \angle DCA" />
+            <p className="mt-2"><strong>Step 3:</strong> Since AD ∥ BC, transversal AC creates alternate interior angles:</p>
+            <MathBlock math="\angle DAC = \angle BCA" />
+            <p className="mt-2"><strong>Step 4:</strong> Triangles ABC and CDA share side AC = CA.</p>
+            <p className="mt-2"><strong>Step 5:</strong> By ASA (using ∠BAC = ∠DCA, AC = CA, ∠BCA = ∠DAC):</p>
+            <MathBlock math="\triangle ABC \cong \triangle CDA" />
+            <p className="mt-2"><strong>Step 6:</strong> Corresponding sides of congruent triangles are equal:</p>
+            <MathBlock math="AB = CD \text{ and } BC = DA" />
+          </>
+        }
+      >
         <p>
           In a parallelogram, opposite sides are equal.
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> Let ABCD be a parallelogram with AB ∥ CD and
-        AD ∥ BC. Draw the diagonal AC.
-      </p>
-
-      <p>
-        Since AB ∥ CD, the alternate interior angles satisfy ∠BAC = ∠DCA.
-        Since AD ∥ BC, we have ∠DAC = ∠BCA.
-      </p>
-
-      <p>
-        Now triangles ABC and CDA have:
-      </p>
-      <ul className="list-disc list-inside space-y-2 my-4">
-        <li>∠BAC = ∠DCA</li>
-        <li>AC = CA (common side)</li>
-        <li>∠BCA = ∠DAC</li>
-      </ul>
-
-      <p>
-        By ASA, triangle ABC ≅ triangle CDA. Therefore AB = CD and BC = DA. ∎
-      </p>
 
       <h3>Exercises</h3>
 

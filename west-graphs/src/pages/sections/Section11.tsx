@@ -193,6 +193,53 @@ export default function Section11() {
             The blocks partition <InlineMath math="E(G)" />.
           </li>
         </ol>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              <strong>Part 1:</strong> Let <InlineMath math="e = uv" /> be an edge.
+              Consider the subgraph <InlineMath math="H" /> consisting of all edges
+              that lie on a common cycle with <InlineMath math="e" />, plus{' '}
+              <InlineMath math="e" /> itself.
+            </p>
+            <p className="mt-2">
+              We claim <InlineMath math="H" /> is a block. If{' '}
+              <InlineMath math="H" /> has a cut-vertex <InlineMath math="v" />, then
+              some edge <InlineMath math="f" /> in <InlineMath math="H" /> would be
+              separated from <InlineMath math="e" /> by <InlineMath math="v" />. But{' '}
+              <InlineMath math="f" /> is in <InlineMath math="H" /> precisely because
+              it lies on a cycle with <InlineMath math="e" />, so removing{' '}
+              <InlineMath math="v" /> cannot separate them—contradiction.
+            </p>
+            <p className="mt-2">
+              <InlineMath math="H" /> is maximal: any edge sharing a cycle with any edge
+              of <InlineMath math="H" /> also shares a cycle with <InlineMath math="e" />{' '}
+              (by transitivity of the "same cycle" relation).
+            </p>
+            <p className="mt-2">
+              <strong>Part 2:</strong> Suppose blocks <InlineMath math="B_1" /> and{' '}
+              <InlineMath math="B_2" /> share two vertices <InlineMath math="u" /> and{' '}
+              <InlineMath math="v" />. Since <InlineMath math="B_1" /> is 2-connected,
+              there exist internally disjoint <InlineMath math="u, v" />-paths in{' '}
+              <InlineMath math="B_1" />. Similarly for <InlineMath math="B_2" />.
+            </p>
+            <p className="mt-2">
+              Taking one path from each block gives a cycle containing edges from both
+              blocks. By Part 1, these edges belong to the same block—contradiction.
+            </p>
+            <p className="mt-2">
+              If blocks share exactly one vertex <InlineMath math="v" />, then{' '}
+              <InlineMath math="v" /> is a cut-vertex: removing it separates the blocks.
+            </p>
+            <p className="mt-2">
+              <strong>Part 3:</strong> Follows from Part 1: each edge is in exactly one
+              block, and every edge is in some block (the edge itself forms a block if
+              it's a cut-edge).
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <Example title="Finding Blocks">
@@ -238,6 +285,54 @@ export default function Section11() {
         <p>
           The block-cutpoint graph of a connected graph is a tree.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              Let <InlineMath math="G" /> be a connected graph and{' '}
+              <InlineMath math="H" /> be its block-cutpoint graph.
+            </p>
+            <p className="mt-2">
+              <strong>Connectedness:</strong> We show <InlineMath math="H" /> is connected.
+              For any two blocks <InlineMath math="B_1, B_2" />, pick vertices{' '}
+              <InlineMath math="u \in B_1" /> and <InlineMath math="v \in B_2" />. Since{' '}
+              <InlineMath math="G" /> is connected, there is a <InlineMath math="u, v" />-path
+              in <InlineMath math="G" />.
+            </p>
+            <p className="mt-2">
+              This path passes through a sequence of blocks, consecutive blocks sharing a
+              cut-vertex. This gives a path in <InlineMath math="H" /> from{' '}
+              <InlineMath math="B_1" /> to <InlineMath math="B_2" />.
+            </p>
+            <p className="mt-2">
+              <strong>Acyclicity:</strong> Suppose <InlineMath math="H" /> contains a
+              cycle. Since <InlineMath math="H" /> is bipartite (blocks and cut-vertices
+              alternate), the cycle has form{' '}
+              <InlineMath math="B_1, v_1, B_2, v_2, \ldots, B_k, v_k, B_1" />.
+            </p>
+            <p className="mt-2">
+              Consider what this means in <InlineMath math="G" />: we can go from{' '}
+              <InlineMath math="B_1" /> through <InlineMath math="v_1" /> to{' '}
+              <InlineMath math="B_2" />, etc., and return to <InlineMath math="B_1" />{' '}
+              through <InlineMath math="v_k" />.
+            </p>
+            <p className="mt-2">
+              This means <InlineMath math="v_1" /> and <InlineMath math="v_k" /> are both
+              in <InlineMath math="B_1" />, and we can reach <InlineMath math="v_k" />{' '}
+              from <InlineMath math="v_1" /> via a path through{' '}
+              <InlineMath math="B_2, \ldots, B_k" /> that avoids{' '}
+              <InlineMath math="B_1 - \{'{'}v_1, v_k{'}'}" />.
+            </p>
+            <p className="mt-2">
+              Combined with paths in <InlineMath math="B_1" />, this shows all the edges
+              in <InlineMath math="B_1, B_2, \ldots, B_k" /> lie on common cycles.
+              By Theorem 4.1.11, they should all be in one block—contradicting that{' '}
+              <InlineMath math="B_1, \ldots, B_k" /> are distinct blocks.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <h2>Edge Cuts and Bonds</h2>
@@ -255,6 +350,57 @@ export default function Section11() {
         <p>
           An edge cut is a bond if and only if it is a minimal disconnecting set.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              <strong>(⇒)</strong> Suppose <InlineMath math="[S, \overline{S}]" /> is a
+              bond, so both <InlineMath math="G[S]" /> and{' '}
+              <InlineMath math="G[\overline{S}]" /> are connected.
+            </p>
+            <p className="mt-2">
+              We show it's minimal. Suppose we remove some edge{' '}
+              <InlineMath math="e = uv" /> from the cut, where{' '}
+              <InlineMath math="u \in S" /> and <InlineMath math="v \in \overline{S}" />.
+              Since <InlineMath math="G[S]" /> is connected, there's a path from any{' '}
+              <InlineMath math="s \in S" /> to <InlineMath math="u" /> within{' '}
+              <InlineMath math="S" />. Since <InlineMath math="G[\overline{S}]" /> is
+              connected, there's a path from <InlineMath math="v" /> to any{' '}
+              <InlineMath math="t \in \overline{S}" /> within <InlineMath math="\overline{S}" />.
+            </p>
+            <p className="mt-2">
+              Combined with edge <InlineMath math="e" />, we get an{' '}
+              <InlineMath math="s, t" />-path using only edges in{' '}
+              <InlineMath math="G[S] \cup G[\overline{S}] \cup \{'{'}e{'}'}" />. So{' '}
+              <InlineMath math="[S, \overline{S}] - \{'{'}e{'}'}" /> doesn't disconnect—the
+              bond is minimal.
+            </p>
+            <p className="mt-2">
+              <strong>(⇐)</strong> Suppose <InlineMath math="F" /> is a minimal
+              disconnecting set. Then <InlineMath math="F" /> separates{' '}
+              <InlineMath math="G" /> into components. Let <InlineMath math="S" /> be
+              one component and <InlineMath math="\overline{S}" /> be the union of
+              all others.
+            </p>
+            <p className="mt-2">
+              We must show <InlineMath math="G[\overline{S}]" /> is connected (
+              <InlineMath math="G[S]" /> is connected by definition of component).
+              If <InlineMath math="G[\overline{S}]" /> has multiple components{' '}
+              <InlineMath math="C_1, C_2, \ldots" />, then edges of <InlineMath math="F" />{' '}
+              go from <InlineMath math="S" /> to various <InlineMath math="C_i" />.
+            </p>
+            <p className="mt-2">
+              But then <InlineMath math="F" /> minus edges to some{' '}
+              <InlineMath math="C_j" /> still disconnects (separating{' '}
+              <InlineMath math="S \cup C_j" /> from other components). This contradicts
+              minimality of <InlineMath math="F" />. So{' '}
+              <InlineMath math="G[\overline{S}]" /> is connected, and{' '}
+              <InlineMath math="F = [S, \overline{S}]" /> is a bond.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <Example title="Bonds in a Cycle">
@@ -310,6 +456,54 @@ export default function Section11() {
           All cut-vertices and bridges can be found in <InlineMath math="O(n + m)" />{' '}
           time using DFS.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              <strong>Correctness of cut-vertex detection:</strong>
+            </p>
+            <p className="mt-2">
+              For root <InlineMath math="r" />: <InlineMath math="r" /> is a cut-vertex iff
+              it has ≥2 children in the DFS tree. If <InlineMath math="r" /> has only one
+              child, removing <InlineMath math="r" /> leaves the subtree connected.
+              If ≥2 children, they can only communicate through <InlineMath math="r" />{' '}
+              (no cross edges between subtrees in DFS).
+            </p>
+            <p className="mt-2">
+              For non-root <InlineMath math="v" />: <InlineMath math="v" /> is a cut-vertex
+              iff some child <InlineMath math="u" /> has{' '}
+              <InlineMath math="\text{low}[u] \geq \text{disc}[v]" />. This means the subtree
+              rooted at <InlineMath math="u" /> has no back edge to an ancestor of{' '}
+              <InlineMath math="v" />, so removing <InlineMath math="v" /> disconnects this
+              subtree.
+            </p>
+            <p className="mt-2">
+              <strong>Correctness of bridge detection:</strong>
+            </p>
+            <p className="mt-2">
+              Edge <InlineMath math="(u, v)" /> (where <InlineMath math="v" /> is child of{' '}
+              <InlineMath math="u" />) is a bridge iff{' '}
+              <InlineMath math="\text{low}[v] > \text{disc}[u]" />. This means no vertex in{' '}
+              <InlineMath math="v" />'s subtree can reach <InlineMath math="u" /> or its
+              ancestors except through edge <InlineMath math="(u, v)" />, so{' '}
+              <InlineMath math="(u, v)" /> lies on no cycle.
+            </p>
+            <p className="mt-2">
+              <strong>Time complexity:</strong>
+            </p>
+            <p className="mt-2">
+              DFS visits each vertex once: <InlineMath math="O(n)" />.
+              Each edge is examined twice (once from each endpoint): <InlineMath math="O(m)" />.
+              Computing <InlineMath math="\text{low}[v]" /> values during DFS adds only
+              constant work per edge.
+            </p>
+            <p className="mt-2">
+              Total: <InlineMath math="O(n + m)" />.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <h2>Key Takeaways</h2>

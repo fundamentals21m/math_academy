@@ -61,7 +61,38 @@ export default function Section18() {
         </p>
       </Definition>
 
-      <Theorem title="Lemma 6.2.2 (Subdivision implies Minor)">
+      <Theorem
+        title="Lemma 6.2.2 (Subdivision implies Minor)"
+        proof={
+          <>
+            <p>
+              Let <InlineMath math="G" /> contain <InlineMath math="TH" />, a subdivision of{' '}
+              <InlineMath math="H" />. The branch vertices of <InlineMath math="TH" /> correspond
+              to vertices of <InlineMath math="H" />, and paths between them (through subdivision
+              vertices) correspond to edges of <InlineMath math="H" />.
+            </p>
+            <p className="mt-2">
+              To obtain <InlineMath math="H" /> as a minor:
+            </p>
+            <ol className="mt-2 list-decimal list-inside space-y-1">
+              <li>Start with <InlineMath math="TH" /> as a subgraph of <InlineMath math="G" /></li>
+              <li>
+                For each path of subdivision vertices connecting two branch vertices, contract all
+                internal edges to collapse the path to a single edge
+              </li>
+              <li>
+                After all contractions, the branch vertices become the vertices of{' '}
+                <InlineMath math="H" />, and the contracted paths become edges of{' '}
+                <InlineMath math="H" />
+              </li>
+            </ol>
+            <p className="mt-2">
+              Thus <InlineMath math="H" /> is obtained from a subgraph of <InlineMath math="G" />{' '}
+              by edge contractions, so <InlineMath math="H \preceq G" />.
+            </p>
+          </>
+        }
+      >
         <p>
           If <InlineMath math="G" /> contains a subdivision of <InlineMath math="H" />,
           then <InlineMath math="H" /> is a minor of <InlineMath math="G" />.
@@ -139,7 +170,41 @@ export default function Section18() {
 
       <h2>Wagner's Theorem (Minor Version)</h2>
 
-      <Theorem title="Wagner's Theorem (Theorem 6.2.5)">
+      <Theorem
+        title="Wagner's Theorem (Theorem 6.2.5)"
+        proof={
+          <>
+            <p>
+              <strong>Equivalence with Kuratowski:</strong> We show that{' '}
+              <InlineMath math="G" /> has a <InlineMath math="K_5" /> or{' '}
+              <InlineMath math="K_{'{'}3,3{'}'}" /> minor iff <InlineMath math="G" /> contains{' '}
+              <InlineMath math="TK_5" /> or <InlineMath math="TK_{'{'}3,3{'}'}" />.
+            </p>
+            <p className="mt-2">
+              <strong>(⇐):</strong> By Lemma 6.2.2, subdivision implies minor.
+            </p>
+            <p className="mt-2">
+              <strong>(⇒):</strong> Suppose <InlineMath math="G" /> has <InlineMath math="K_5" /> or{' '}
+              <InlineMath math="K_{'{'}3,3{'}'}" /> as a minor. The branch sets form connected subgraphs
+              with edges between them.
+            </p>
+            <p className="mt-2">
+              For <InlineMath math="K_5" />: each branch set contains a vertex (pick one from each),
+              and paths through the branch sets provide the subdivision. A technical argument shows
+              we can always route these paths to form <InlineMath math="TK_5" /> or{' '}
+              <InlineMath math="TK_{'{'}3,3{'}'}" />.
+            </p>
+            <p className="mt-2">
+              For <InlineMath math="K_{'{'}3,3{'}'}" /> minors, the low maximum degree (3) means the
+              minor structure directly yields a subdivision.
+            </p>
+            <p className="mt-2">
+              Therefore, Wagner's forbidden minor characterization is equivalent to Kuratowski's
+              forbidden subdivision characterization.
+            </p>
+          </>
+        }
+      >
         <p>
           A graph <InlineMath math="G" /> is planar if and only if{' '}
           <InlineMath math="G" /> has neither <InlineMath math="K_5" /> nor{' '}
@@ -172,7 +237,43 @@ export default function Section18() {
         efficient algorithm. Several linear-time planarity testing algorithms exist.
       </p>
 
-      <Theorem title="Linear-Time Planarity Testing">
+      <Theorem
+        title="Linear-Time Planarity Testing"
+        proof={
+          <>
+            <p>
+              <strong>Key insight:</strong> By Euler's formula, a planar graph with{' '}
+              <InlineMath math="n" /> vertices has at most <InlineMath math="3n - 6" /> edges, so{' '}
+              <InlineMath math="m = O(n)" />. This allows algorithms linear in{' '}
+              <InlineMath math="n" />.
+            </p>
+            <p className="mt-2">
+              <strong>Hopcroft-Tarjan approach:</strong>
+            </p>
+            <ol className="mt-2 list-decimal list-inside space-y-1">
+              <li>
+                Compute a DFS tree <InlineMath math="T" /> of <InlineMath math="G" />. Non-tree edges
+                (back edges) form cycles with tree paths.
+              </li>
+              <li>
+                Process cycles in a specific order, maintaining partial embeddings.
+              </li>
+              <li>
+                At each step, determine which face(s) can accommodate the next path. Use stack-based
+                bookkeeping to track constraints in <InlineMath math="O(1)" /> amortized time per edge.
+              </li>
+              <li>
+                If no valid placement exists at any step, the graph is non-planar; otherwise,
+                construct the embedding.
+              </li>
+            </ol>
+            <p className="mt-2">
+              Each edge is processed a constant number of times, yielding{' '}
+              <InlineMath math="O(n)" /> total time.
+            </p>
+          </>
+        }
+      >
         <p>
           Planarity can be tested in <InlineMath math="O(n)" /> time.
         </p>
@@ -281,7 +382,46 @@ export default function Section18() {
         </p>
       </Definition>
 
-      <Theorem title="Tutte's Barycentric Embedding (Theorem 6.2.9)">
+      <Theorem
+        title="Tutte's Barycentric Embedding (Theorem 6.2.9)"
+        proof={
+          <>
+            <p>
+              Let <InlineMath math="G" /> be 3-connected and planar. Choose a face{' '}
+              <InlineMath math="F" /> to be the outer face and fix its boundary vertices
+              on a convex polygon in the plane.
+            </p>
+            <p className="mt-2">
+              For each interior vertex <InlineMath math="v" />, require that its position{' '}
+              <InlineMath math="p(v)" /> equals the average of its neighbors' positions:
+            </p>
+            <MathBlock math="p(v) = \frac{1}{d(v)} \sum_{u \in N(v)} p(u)" />
+            <p className="mt-2">
+              This gives a system of linear equations. Since <InlineMath math="G" /> is
+              3-connected, the system has a unique solution (the matrix is invertible by
+              the connection to electrical networks and Kirchhoff's laws).
+            </p>
+            <p className="mt-2">
+              <strong>Convexity:</strong> The key lemma is that in the resulting drawing,
+              edges do not cross. This follows because:
+            </p>
+            <ol className="mt-2 list-decimal list-inside space-y-1">
+              <li>
+                Each vertex is a strict convex combination of its neighbors (barycenter property)
+              </li>
+              <li>
+                By 3-connectivity, every face boundary is a simple cycle
+              </li>
+              <li>
+                A crossing would create a configuration violating the barycenter equations
+              </li>
+            </ol>
+            <p className="mt-2">
+              Every face (not just the outer face) is convex in this embedding.
+            </p>
+          </>
+        }
+      >
         <p>
           Every 3-connected planar graph has a convex embedding (with any face chosen as
           the outer face).
@@ -295,7 +435,47 @@ export default function Section18() {
 
       <h2>Unique Embeddings</h2>
 
-      <Theorem title="Whitney's Theorem (Theorem 6.2.11)">
+      <Theorem
+        title="Whitney's Theorem (Theorem 6.2.11)"
+        proof={
+          <>
+            <p>
+              We show that the facial cycles (boundaries of faces) are uniquely determined by the
+              graph structure when <InlineMath math="G" /> is 3-connected and planar.
+            </p>
+            <p className="mt-2">
+              <strong>Key observation:</strong> A cycle <InlineMath math="C" /> in <InlineMath math="G" />{' '}
+              is a facial cycle in some embedding iff <InlineMath math="G - V(C)" /> is connected
+              (for 3-connected graphs).
+            </p>
+            <p className="mt-2">
+              <strong>Proof of uniqueness:</strong>
+            </p>
+            <ol className="mt-2 list-decimal list-inside space-y-1">
+              <li>
+                Since <InlineMath math="G" /> is 3-connected, every facial cycle is an induced cycle
+                (no chords), and <InlineMath math="G - V(C)" /> remains connected.
+              </li>
+              <li>
+                Conversely, any cycle with <InlineMath math="G - V(C)" /> connected must bound a face
+                in any planar embedding.
+              </li>
+              <li>
+                The set of facial cycles is therefore determined solely by <InlineMath math="G" />'s
+                structure, not by any particular embedding.
+              </li>
+            </ol>
+            <p className="mt-2">
+              Since facial cycles determine the embedding (up to reflection), and the facial cycles
+              are uniquely determined, the embedding is unique.
+            </p>
+            <p className="mt-2">
+              <strong>Note:</strong> For 2-connected graphs, different embeddings can have different
+              facial cycles (e.g., <InlineMath math="C_n" /> can have either 2-face embedded differently).
+            </p>
+          </>
+        }
+      >
         <p>
           A 3-connected planar graph has a unique embedding on the sphere (up to
           homeomorphism).
@@ -320,7 +500,39 @@ export default function Section18() {
 
       <h2>Planarity and Minors</h2>
 
-      <Theorem title="Robertson-Seymour Graph Minor Theorem">
+      <Theorem
+        title="Robertson-Seymour Graph Minor Theorem"
+        proof={
+          <>
+            <p>
+              This is one of the deepest results in graph theory, proved over a series of 23
+              papers spanning 1983-2004. We outline the key ideas.
+            </p>
+            <p className="mt-2">
+              <strong>Well-quasi-ordering:</strong> The theorem states that graphs under the
+              minor relation form a well-quasi-order (WQO). A WQO has no infinite antichains
+              (sets of pairwise incomparable elements) and no infinite descending chains.
+            </p>
+            <p className="mt-2">
+              <strong>Structure theorem:</strong> The proof relies on a deep structure theorem
+              for <InlineMath math="H" />-minor-free graphs. For any fixed graph{' '}
+              <InlineMath math="H" />, graphs with no <InlineMath math="H" /> minor can be built
+              from bounded-treewidth pieces glued along bounded-size separators.
+            </p>
+            <p className="mt-2">
+              <strong>Consequence for forbidden minors:</strong> If property{' '}
+              <InlineMath math="\mathcal{P}" /> is closed under minors (if{' '}
+              <InlineMath math="G \in \mathcal{P}" /> and <InlineMath math="H \preceq G" />,
+              then <InlineMath math="H \in \mathcal{P}" />), then the set of minimal graphs
+              not in <InlineMath math="\mathcal{P}" /> must be finite.
+            </p>
+            <p className="mt-2">
+              For planarity, the minimal forbidden minors are exactly <InlineMath math="K_5" />{' '}
+              and <InlineMath math="K_{'{'}3,3{'}'}" /> (Wagner's theorem).
+            </p>
+          </>
+        }
+      >
         <p>
           In any infinite sequence of graphs <InlineMath math="G_1, G_2, G_3, \ldots" />,
           some <InlineMath math="G_i" /> is a minor of some <InlineMath math="G_j" />{' '}

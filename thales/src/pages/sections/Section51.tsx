@@ -22,7 +22,7 @@ export default function Section51() {
       {/* The Problem */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The Problem</h3>
 
-      <Callout type="definition" title="Hilbert's 10th Problem (1900)">
+      <Callout type="info" title="Hilbert's 10th Problem (1900)">
         <p>
           Find an algorithm to determine whether any given polynomial
           Diophantine equation has a solution in integers.
@@ -56,7 +56,7 @@ export default function Section51() {
       {/* Diophantine Sets */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Diophantine Sets</h3>
 
-      <Callout type="definition" title="Diophantine Set">
+      <Callout type="info" title="Diophantine Set">
         <p>
           A set <InlineMath>{`A`}</InlineMath> of positive integers is{' '}
           <strong>Diophantine</strong> if there is a polynomial{' '}
@@ -85,7 +85,7 @@ export default function Section51() {
       {/* Key Lemmas */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Key Lemmas</h3>
 
-      <Callout type="theorem" title="Lemma 21.1">
+      <Callout type="success" title="Lemma 21.1">
         <p>
           Every Diophantine set is <strong>recursively enumerable</strong>.
         </p>
@@ -110,7 +110,7 @@ export default function Section51() {
         </div>
       </Card>
 
-      <Callout type="theorem" title="Lemma 21.2">
+      <Callout type="success" title="Lemma 21.2">
         <p>
           Suppose there is an algorithm for deciding whether, for any given{' '}
           <InlineMath>{`t`}</InlineMath>, the equation{' '}
@@ -142,7 +142,7 @@ export default function Section51() {
         <strong>exponentially</strong>.
       </p>
 
-      <Callout type="theorem" title="Lemma 21.3 (Julia Robinson)">
+      <Callout type="success" title="Lemma 21.3 (Julia Robinson)">
         <p>
           A sufficient condition for every recursively enumerable set to be
           Diophantine is that there exists a polynomial equation{' '}
@@ -164,7 +164,7 @@ export default function Section51() {
 
       <MathBlock>{`(m, F_{2m}, x_2, \\ldots, x_n)`}</MathBlock>
 
-      <Callout type="theorem" title="Theorem 21.4 (Matiyasevič, 1970)">
+      <Callout type="success" title="Theorem 21.4 (Matiyasevič, 1970)">
         <p>
           Every recursively enumerable set of positive integers is{' '}
           <strong>Diophantine</strong>.
@@ -242,7 +242,7 @@ export default function Section51() {
         </div>
       </Card>
 
-      <Callout type="theorem" title="Theorem 21.5 (Putnam)">
+      <Callout type="success" title="Theorem 21.5 (Putnam)">
         <p>
           For any Diophantine set <InlineMath>{`A_p`}</InlineMath>, there is a
           polynomial <InlineMath>{`q(t, x_1, \\ldots, x_n)`}</InlineMath> with

@@ -22,6 +22,7 @@ import {
   type Difficulty,
   type AchievementNotification,
   type CourseId,
+  type RaceGameResult,
 } from './types';
 import { loadState, saveState, hasUnmigratedProgress, markAsMigrated } from './storage';
 import { createDefaultState } from './defaults';
@@ -105,6 +106,10 @@ interface GamificationContextValue {
   dismissNotification: (id: string) => void;
   /** Reset all progress (development only) */
   resetProgress: () => void;
+  /** Record a racing game result (awards XP based on performance) */
+  recordRaceGame: (result: RaceGameResult) => void;
+  /** Raw dispatch function for advanced use cases */
+  dispatch: React.Dispatch<import('./reducer').GamificationAction>;
 }
 
 // =============================================================================
@@ -379,6 +384,20 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
     dispatch({ type: 'RESET_PROGRESS' });
   }, []);
 
+  const recordRaceGame = useCallback((result: RaceGameResult) => {
+    dispatch({ type: 'RECORD_RACE_GAME', payload: result });
+
+    // Notify iOS app if running in WKWebView
+    postToiOS('raceGameCompleted', {
+      courseId,
+      score: result.score,
+      tier: result.tier,
+      correctAnswers: result.correctAnswers,
+      totalQuestions: result.totalQuestions,
+      isMultiplayer: result.isMultiplayer,
+    });
+  }, [courseId]);
+
   // Memoize the context value to prevent unnecessary re-renders
   const value = useMemo<GamificationContextValue>(
     () => ({
@@ -392,6 +411,8 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
       useVisualization,
       dismissNotification,
       resetProgress,
+      recordRaceGame,
+      dispatch,
     }),
     [
       state,
@@ -404,6 +425,8 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
       useVisualization,
       dismissNotification,
       resetProgress,
+      recordRaceGame,
+      dispatch,
     ]
   );
 

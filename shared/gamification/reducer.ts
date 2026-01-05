@@ -8,7 +8,11 @@ import {
   type GamificationState,
   type SectionId,
   type Difficulty,
+  type RaceGameResult,
+  type RacingStats,
+  type RacingTier,
   XP_CONFIG,
+  RACE_XP_CONFIG,
 } from './types';
 import { createDefaultState } from './defaults';
 import { calculateLevel, calculateXP } from './xpCalculator';
@@ -27,12 +31,16 @@ const logger = getLogger('GamificationReducer');
  */
 export type GamificationAction =
   | { type: 'LOAD_STATE'; payload: GamificationState }
+  | { type: 'LOAD_FROM_SERVER'; payload: GamificationState }
+  | { type: 'MERGE_WITH_SERVER'; payload: GamificationState }
+  | { type: 'MARK_MIGRATED' }
   | { type: 'VISIT_SECTION'; payload: { sectionId: SectionId } }
   | { type: 'COMPLETE_SECTION'; payload: { sectionId: SectionId } }
   | { type: 'RECORD_QUIZ'; payload: RecordQuizPayload }
   | { type: 'USE_VISUALIZATION'; payload: { sectionId: SectionId; name: string } }
   | { type: 'UPDATE_STREAK' }
-  | { type: 'RESET_PROGRESS' };
+  | { type: 'RESET_PROGRESS' }
+  | { type: 'RECORD_RACE_GAME'; payload: RaceGameResult };
 
 /**
  * Payload for recording a quiz attempt.
@@ -259,6 +267,147 @@ function handleUseVisualization(
   };
 }
 
+/**
+ * Handle recording a racing game result.
+ * Updates racing stats and awards XP.
+ */
+function handleRecordRaceGame(
+  state: GamificationState,
+  result: RaceGameResult,
+  now: string
+): GamificationState {
+  // Calculate XP earned from the game
+  let xpEarned = RACE_XP_CONFIG.GAME_PARTICIPATION;
+
+  // Performance XP (based on points and tier)
+  const tierMultiplier = RACE_XP_CONFIG.TIER_MULTIPLIER[result.tier];
+  const performanceXP = Math.floor(
+    (Math.max(0, result.score) / RACE_XP_CONFIG.POINTS_PER_XP_UNIT) *
+    XP_CONFIG.QUIZ_MEDIUM *
+    tierMultiplier
+  );
+  xpEarned += performanceXP;
+
+  // Perfect game bonus
+  if (result.correctAnswers === result.totalQuestions && result.totalQuestions >= 10) {
+    xpEarned += RACE_XP_CONFIG.PERFECT_GAME_BONUS;
+  }
+
+  // Speed demon bonus (10+ fast answers)
+  if (result.fastAnswers >= 10) {
+    xpEarned += RACE_XP_CONFIG.SPEED_DEMON_BONUS;
+  }
+
+  // Streak master bonus (10+ streak)
+  if (result.maxStreak >= 10) {
+    xpEarned += RACE_XP_CONFIG.STREAK_MASTER_BONUS;
+  }
+
+  // Multiplayer placement bonuses
+  if (result.isMultiplayer && result.placement) {
+    switch (result.placement) {
+      case 1:
+        xpEarned += RACE_XP_CONFIG.FIRST_PLACE_BONUS;
+        break;
+      case 2:
+        xpEarned += RACE_XP_CONFIG.SECOND_PLACE_BONUS;
+        break;
+      case 3:
+        xpEarned += RACE_XP_CONFIG.THIRD_PLACE_BONUS;
+        break;
+    }
+  }
+
+  const newXP = state.user.totalXP + xpEarned;
+
+  // Initialize or update racing stats
+  const existingStats = state.racingStats;
+  const isNewHighScore = result.score > (existingStats?.highScore ?? 0);
+  const isMultiplayerWin = result.isMultiplayer && result.placement === 1;
+
+  const newRacingStats: RacingStats = {
+    gamesPlayed: (existingStats?.gamesPlayed ?? 0) + 1,
+    multiplayerGamesPlayed: (existingStats?.multiplayerGamesPlayed ?? 0) + (result.isMultiplayer ? 1 : 0),
+    totalPoints: (existingStats?.totalPoints ?? 0) + Math.max(0, result.score),
+    highScore: isNewHighScore ? result.score : (existingStats?.highScore ?? 0),
+    highestTierUnlocked: Math.max(existingStats?.highestTierUnlocked ?? 1, result.tier) as RacingTier,
+    longestStreak: Math.max(existingStats?.longestStreak ?? 0, result.maxStreak),
+    fastAnswers: (existingStats?.fastAnswers ?? 0) + result.fastAnswers,
+    totalCorrect: (existingStats?.totalCorrect ?? 0) + result.correctAnswers,
+    totalAttempted: (existingStats?.totalAttempted ?? 0) + result.totalQuestions,
+    multiplayerWins: (existingStats?.multiplayerWins ?? 0) + (isMultiplayerWin ? 1 : 0),
+    lastPlayedAt: now,
+  };
+
+  // Update racing achievements
+  const updatedAchievements = state.achievements.map((achievement) => {
+    // Skip already unlocked achievements
+    if (achievement.unlockedAt) return achievement;
+
+    switch (achievement.id) {
+      case 'racing-rookie':
+        // Complete first race
+        if (newRacingStats.gamesPlayed >= 1) {
+          return { ...achievement, progress: 1, unlockedAt: now };
+        }
+        break;
+
+      case 'speed-demon':
+        // 50 answers under 2 seconds (cumulative)
+        if (newRacingStats.fastAnswers >= 50) {
+          return { ...achievement, progress: 50, unlockedAt: now };
+        }
+        return { ...achievement, progress: Math.min(newRacingStats.fastAnswers, 50) };
+
+      case 'streak-legend':
+        // Get a 20-answer streak
+        if (newRacingStats.longestStreak >= 20) {
+          return { ...achievement, progress: 20, unlockedAt: now };
+        }
+        return { ...achievement, progress: Math.min(newRacingStats.longestStreak, 20) };
+
+      case 'tier-climber':
+        // Unlock Master tier (tier 6)
+        if (newRacingStats.highestTierUnlocked >= 6) {
+          return { ...achievement, progress: 6, unlockedAt: now };
+        }
+        return { ...achievement, progress: newRacingStats.highestTierUnlocked };
+
+      case 'modular-master':
+        // Earn 10,000 total racing points
+        if (newRacingStats.totalPoints >= 10000) {
+          return { ...achievement, progress: 10000, unlockedAt: now };
+        }
+        return { ...achievement, progress: Math.min(newRacingStats.totalPoints, 10000) };
+
+      case 'multiplayer-champion':
+        // Win 5 multiplayer games
+        if (newRacingStats.multiplayerWins >= 5) {
+          return { ...achievement, progress: 5, unlockedAt: now };
+        }
+        return { ...achievement, progress: Math.min(newRacingStats.multiplayerWins, 5) };
+    }
+
+    return achievement;
+  });
+
+  return {
+    ...state,
+    user: {
+      ...state.user,
+      totalXP: newXP,
+      level: calculateLevel(newXP),
+    },
+    racingStats: newRacingStats,
+    achievements: updatedAchievements,
+    dailyGoals: {
+      ...state.dailyGoals,
+      xpEarned: state.dailyGoals.xpEarned + xpEarned,
+    },
+    lastUpdated: now,
+  };
+}
+
 // =============================================================================
 // REDUCER
 // =============================================================================
@@ -289,6 +438,18 @@ export function gamificationReducer(
     case 'LOAD_STATE':
       return action.payload;
 
+    case 'LOAD_FROM_SERVER':
+      // Replace local state with server state (server is source of truth)
+      return { ...action.payload, migratedToServer: true };
+
+    case 'MERGE_WITH_SERVER':
+      // Server merged states - use the merged result
+      return { ...action.payload, migratedToServer: true };
+
+    case 'MARK_MIGRATED':
+      // Mark that local progress has been migrated to server
+      return { ...state, migratedToServer: true, lastUpdated: now };
+
     case 'VISIT_SECTION':
       return handleVisitSection(state, action.payload.sectionId, now);
 
@@ -311,6 +472,9 @@ export function gamificationReducer(
 
     case 'RESET_PROGRESS':
       return createDefaultState();
+
+    case 'RECORD_RACE_GAME':
+      return handleRecordRaceGame(state, action.payload, now);
 
     default:
       return state;

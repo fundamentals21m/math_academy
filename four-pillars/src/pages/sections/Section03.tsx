@@ -157,7 +157,27 @@ export default function Section03() {
 
       <h3>Constructing Rational Lengths</h3>
 
-      <Theorem title="Rational Lengths are Constructible">
+      <Theorem title="Rational Lengths are Constructible"
+        proof={
+          <>
+            <p><strong>Construction of natural number lengths:</strong></p>
+            <p>Given the unit segment 1, we construct any natural number n by repeated addition:</p>
+            <MathBlock math="n = \underbrace{1 + 1 + \cdots + 1}_{n \text{ times}}" />
+            <p className="mt-2">This is done by copying the unit segment end-to-end n times along a line.</p>
+            <p className="mt-2"><strong>Construction of rational lengths m/n:</strong></p>
+            <p>Given segments of length m and n (both natural numbers with n ≠ 0):</p>
+            <ol className="list-decimal list-inside space-y-1 mt-2">
+              <li>Construct a triangle UOA with |OU| = n and |OA| = m</li>
+              <li>Mark the point B₂ at distance 1 from O along OA</li>
+              <li>Draw the line parallel to UA through B₂</li>
+              <li>This parallel meets OU extended at point D</li>
+            </ol>
+            <p className="mt-2">By the Thales theorem:</p>
+            <MathBlock math="\frac{|OD|}{|OU|} = \frac{|OB_2|}{|OA|} \implies \frac{|OD|}{n} = \frac{1}{m} \implies |OD| = \frac{n}{m}" />
+            <p className="mt-2">Interchanging m and n gives us m/n. Thus all positive rationals are constructible.</p>
+          </>
+        }
+      >
         <p>
           The sum operation allows us to construct a segment n units in length, for any
           natural number n, simply by adding the segment 1 to itself n times.

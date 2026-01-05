@@ -23,7 +23,7 @@ export default function Section43() {
         We begin by defining three binary operations for sets in general:
       </p>
 
-      <Callout type="definition" title="Set Operations">
+      <Callout type="info" title="Set Operations">
         <div className="space-y-3">
           <p><strong>Cartesian Product:</strong></p>
           <MathBlock>{`A \\times B = \\{(a, b) \\mid a \\in A \\text{ and } b \\in B\\}`}</MathBlock>
@@ -67,7 +67,7 @@ export default function Section43() {
       {/* Laws of Cardinal Arithmetic */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Laws of Cardinal Arithmetic</h3>
 
-      <Callout type="theorem" title="Isomorphism Laws for Sets">
+      <Callout type="success" title="Isomorphism Laws for Sets">
         <p className="mb-2">The following isomorphisms hold for all sets:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
           <div><InlineMath>{`A + B \\cong B + A`}</InlineMath></div>
@@ -110,7 +110,7 @@ export default function Section43() {
         in computer science, named after the logician <strong>Haskell B. Curry</strong>.
       </p>
 
-      <Callout type="note" title="The Currying Isomorphism">
+      <Callout type="info" title="The Currying Isomorphism">
         <p className="mb-2">
           A function <InlineMath>{`f : C \\to A^B`}</InlineMath> (a function returning
           functions) corresponds to a function{' '}
@@ -167,7 +167,7 @@ export default function Section43() {
         </div>
       </Card>
 
-      <Callout type="note" title="Squaring is Idempotent">
+      <Callout type="info" title="Squaring is Idempotent">
         <p>
           For any infinite cardinal <InlineMath>{`\\kappa`}</InlineMath>:
         </p>

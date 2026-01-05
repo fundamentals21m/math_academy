@@ -1,6 +1,6 @@
 // Chapter 5: Determinants (Sections 25-31)
 // Based on Hoffman & Kunze Chapter 5
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // Section 30: Multilinear Functions (Used as Section 9: Determinants in curriculum)
 export const section30Quiz: DifficultyQuizData = {

@@ -43,7 +43,38 @@ export default function Section19() {
         </details>
       </Theorem>
 
-      <Theorem title="Four Color Theorem (Theorem 6.3.2)">
+      <Theorem
+        title="Four Color Theorem (Theorem 6.3.2)"
+        proof={
+          <>
+            <p>
+              <strong>Proof structure (Appel-Haken):</strong> The proof has two main parts:
+            </p>
+            <p className="mt-2">
+              <strong>1. Discharging method:</strong> Assign charges to vertices based on degree.
+              By Euler's formula, the total charge is positive. Redistribute charge according to
+              rules such that every vertex ends with non-positive charge—unless it belongs to a
+              "reducible configuration."
+            </p>
+            <p className="mt-2">
+              <strong>2. Reducibility:</strong> A configuration is <em>reducible</em> if whenever
+              it appears in a minimal counterexample, the graph can be 4-colored by reducing to a
+              smaller graph, coloring it, then extending back.
+            </p>
+            <p className="mt-2">
+              Appel and Haken found an "unavoidable set" of 1,476 reducible configurations.
+              Every planar graph must contain at least one of these. Since each is reducible,
+              no minimal counterexample exists.
+            </p>
+            <p className="mt-2">
+              <strong>Computer verification:</strong> Checking reducibility of each configuration
+              required computer analysis (totaling ~1000 hours in 1976). Robertson, Sanders,
+              Seymour, and Thomas (1997) reduced this to 633 configurations with simpler
+              analysis. Gonthier (2005) gave a formal machine-checked proof in Coq.
+            </p>
+          </>
+        }
+      >
         <p>
           Every planar graph is 4-colorable.
         </p>
@@ -68,7 +99,40 @@ export default function Section19() {
         </p>
       </Example>
 
-      <Theorem title="Grötzsch's Theorem (Theorem 6.3.5)">
+      <Theorem
+        title="Grötzsch's Theorem (Theorem 6.3.5)"
+        proof={
+          <>
+            <p>
+              We prove a stronger statement: every triangle-free planar graph has a proper
+              3-coloring, and moreover, for any facial cycle of length at most 5 with a partial
+              3-coloring, the coloring extends to the whole graph.
+            </p>
+            <p className="mt-2">
+              <strong>Proof by induction on <InlineMath math="n" />:</strong>
+            </p>
+            <p className="mt-2">
+              <strong>Base:</strong> Small triangle-free planar graphs are easily 3-colorable.
+            </p>
+            <p className="mt-2">
+              <strong>Inductive step:</strong> Let <InlineMath math="G" /> be triangle-free planar
+              with <InlineMath math="n" /> vertices. Since <InlineMath math="G" /> has no triangles,
+              faces have length at least 4. By the triangle-free edge bound{' '}
+              (<InlineMath math="m \leq 2n - 4" />), the average degree is less than 4.
+            </p>
+            <p className="mt-2">
+              Thus <InlineMath math="G" /> has a vertex <InlineMath math="v" /> of degree at most 3.
+              If <InlineMath math="d(v) \leq 2" />, remove <InlineMath math="v" />, 3-color by
+              induction, and extend (at most 2 neighbors use at most 2 colors).
+            </p>
+            <p className="mt-2">
+              If <InlineMath math="d(v) = 3" />, the neighbors form an independent set (no triangles).
+              A careful argument using Kempe chains shows we can always extend a 3-coloring of{' '}
+              <InlineMath math="G - v" /> to <InlineMath math="G" />.
+            </p>
+          </>
+        }
+      >
         <p>
           Every triangle-free planar graph is 3-colorable.
         </p>
@@ -96,7 +160,43 @@ export default function Section19() {
         </p>
       </Definition>
 
-      <Theorem title="Thomassen's Theorem (Theorem 6.3.9)">
+      <Theorem
+        title="Thomassen's Theorem (Theorem 6.3.9)"
+        proof={
+          <>
+            <p>
+              We prove a stronger statement for plane graphs with the outer face as a cycle{' '}
+              <InlineMath math="C" />:
+            </p>
+            <p className="mt-2">
+              <strong>Claim:</strong> If <InlineMath math="G" /> is a plane graph bounded by cycle{' '}
+              <InlineMath math="C" />, and:
+            </p>
+            <ul className="mt-2 list-disc list-inside">
+              <li>Two adjacent vertices on <InlineMath math="C" /> are precolored</li>
+              <li>All other vertices on <InlineMath math="C" /> have lists of size ≥ 3</li>
+              <li>All interior vertices have lists of size ≥ 5</li>
+            </ul>
+            <p className="mt-2">
+              Then the precoloring extends to a valid list coloring of <InlineMath math="G" />.
+            </p>
+            <p className="mt-2">
+              <strong>Proof by induction on <InlineMath math="|V(G)|" />:</strong>
+            </p>
+            <p className="mt-2">
+              <strong>Base:</strong> If <InlineMath math="G = C" />, successively color vertices on{' '}
+              <InlineMath math="C" /> (each has ≥ 3 colors, ≤ 2 colored neighbors).
+            </p>
+            <p className="mt-2">
+              <strong>Inductive step:</strong> If there's a chord of <InlineMath math="C" />,
+              split into two smaller graphs and apply induction. Otherwise, let{' '}
+              <InlineMath math="v" /> be a vertex adjacent to both precolored vertices. Then{' '}
+              <InlineMath math="v" /> has a list of size 3 and only 2 colored neighbors, so we can
+              color <InlineMath math="v" /> and remove it, reducing to a smaller case.
+            </p>
+          </>
+        }
+      >
         <p>
           Every planar graph is 5-choosable:{' '}
           <InlineMath math="\text{ch}(G) \leq 5" /> for planar <InlineMath math="G" />.
@@ -130,7 +230,44 @@ export default function Section19() {
         </p>
       </Definition>
 
-      <Theorem title="Crossing Number Lower Bound (Theorem 6.3.18)">
+      <Theorem
+        title="Crossing Number Lower Bound (Theorem 6.3.18)"
+        proof={
+          <>
+            <p>
+              <strong>Proof using the probabilistic method (Ajtai-Chvátal-Newborn-Szemerédi):</strong>
+            </p>
+            <p className="mt-2">
+              Let <InlineMath math="G" /> have <InlineMath math="n" /> vertices,{' '}
+              <InlineMath math="m" /> edges, and crossing number <InlineMath math="\text{cr}(G)" />.
+              Fix an optimal drawing of <InlineMath math="G" />.
+            </p>
+            <p className="mt-2">
+              Choose a random subset <InlineMath math="S \subseteq V(G)" /> by including each
+              vertex independently with probability <InlineMath math="p" /> (to be determined).
+              Let <InlineMath math="H = G[S]" /> be the induced subgraph.
+            </p>
+            <p className="mt-2">
+              <strong>Expected values:</strong>
+            </p>
+            <ul className="mt-2 list-disc list-inside">
+              <li><InlineMath math="E[|V(H)|] = pn" /></li>
+              <li><InlineMath math="E[|E(H)|] = p^2 m" /> (both endpoints must be selected)</li>
+              <li><InlineMath math="E[\text{cr}(H)] = p^4 \cdot \text{cr}(G)" /> (all 4 endpoints of crossing edges)</li>
+            </ul>
+            <p className="mt-2">
+              Since <InlineMath math="H" /> inherits the drawing from <InlineMath math="G" />, and
+              planar graphs have <InlineMath math="m \leq 3n - 6" />:
+            </p>
+            <MathBlock math="E[\text{cr}(H)] \geq E[|E(H)|] - 3E[|V(H)|]" />
+            <p className="mt-2">
+              Thus <InlineMath math="p^4 \cdot \text{cr}(G) \geq p^2 m - 3pn" />. Setting{' '}
+              <InlineMath math="p = 4n/m" /> (valid when <InlineMath math="m > 4n" />) and solving
+              gives <InlineMath math="\text{cr}(G) \geq m^3 / (64n^2)" />.
+            </p>
+          </>
+        }
+      >
         <p>
           For <InlineMath math="m > 7n" />:
         </p>
@@ -217,7 +354,34 @@ export default function Section19() {
         </ul>
       </Example>
 
-      <Theorem title="Thickness Lower Bound">
+      <Theorem
+        title="Thickness Lower Bound"
+        proof={
+          <>
+            <p>
+              By definition, thickness <InlineMath math="\text{th}(G)" /> is the minimum number of
+              planar subgraphs whose union covers all edges of <InlineMath math="G" />.
+            </p>
+            <p className="mt-2">
+              Each planar subgraph <InlineMath math="H_i" /> on <InlineMath math="n" /> vertices
+              (same vertex set as <InlineMath math="G" />) has at most <InlineMath math="3n - 6" />{' '}
+              edges by the planar edge bound.
+            </p>
+            <p className="mt-2">
+              If we decompose <InlineMath math="G" /> into <InlineMath math="k" /> planar subgraphs,
+              the total number of edges covered is at most <InlineMath math="k(3n - 6)" />.
+            </p>
+            <p className="mt-2">
+              Since we need to cover all <InlineMath math="m" /> edges:
+            </p>
+            <MathBlock math="k(3n - 6) \geq m \implies k \geq \frac{m}{3n - 6}" />
+            <p className="mt-2">
+              Since <InlineMath math="k" /> must be an integer:{' '}
+              <InlineMath math="\text{th}(G) \geq \lceil m/(3n-6) \rceil" />.
+            </p>
+          </>
+        }
+      >
         <p>
           <InlineMath math="\text{th}(G) \geq \lceil m / (3n - 6) \rceil" /> for{' '}
           <InlineMath math="n \geq 3" />.
@@ -251,7 +415,43 @@ export default function Section19() {
         </p>
       </Definition>
 
-      <Theorem title="Euler's Formula for Higher Genus (Theorem 6.3.26)">
+      <Theorem
+        title="Euler's Formula for Higher Genus (Theorem 6.3.26)"
+        proof={
+          <>
+            <p>
+              The proof generalizes the planar case using the classification of surfaces.
+            </p>
+            <p className="mt-2">
+              <strong>Topological background:</strong> A surface of genus <InlineMath math="g" />{' '}
+              (orientable) is a sphere with <InlineMath math="g" /> handles attached. The Euler
+              characteristic <InlineMath math="\chi_S = 2 - 2g" /> is a topological invariant.
+            </p>
+            <p className="mt-2">
+              <strong>Proof sketch:</strong>
+            </p>
+            <ol className="mt-2 list-decimal list-inside space-y-1">
+              <li>
+                For a tree embedded on any surface: <InlineMath math="n" /> vertices,{' '}
+                <InlineMath math="n-1" /> edges, 1 face.{' '}
+                <InlineMath math="n - (n-1) + 1 = 2 = 2 - 2(0)" /> for the sphere.
+              </li>
+              <li>
+                Adding an edge that doesn't disconnect a face doesn't change{' '}
+                <InlineMath math="n - m + f" /> (adds 1 edge, creates 1 face).
+              </li>
+              <li>
+                Adding a handle to the surface allows one more edge to be added without creating
+                a new face (the edge "wraps around" the handle). This decreases{' '}
+                <InlineMath math="n - m + f" /> by 2.
+              </li>
+            </ol>
+            <p className="mt-2">
+              With <InlineMath math="g" /> handles: <InlineMath math="n - m + f = 2 - 2g" />.
+            </p>
+          </>
+        }
+      >
         <p>
           For a graph embedded on a surface of genus <InlineMath math="g" />:
         </p>
@@ -280,7 +480,43 @@ export default function Section19() {
         </ul>
       </Example>
 
-      <Theorem title="Heawood's Formula (Theorem 6.3.28)">
+      <Theorem
+        title="Heawood's Formula (Theorem 6.3.28)"
+        proof={
+          <>
+            <p>
+              <strong>Upper bound (Heawood 1890):</strong>
+            </p>
+            <p className="mt-2">
+              Let <InlineMath math="G" /> be embeddable on a surface of genus <InlineMath math="g" />.
+              By the generalized Euler formula, <InlineMath math="m \leq 3n + 6(g-1)" /> when{' '}
+              <InlineMath math="n \geq 3" />.
+            </p>
+            <p className="mt-2">
+              This gives average degree <InlineMath math="\frac{'{'}2m{'}'}{'{'}n{'}'} \leq 6 + \frac{'{'}12(g-1){'}'}{'{'}n{'}'}" />.
+              Thus <InlineMath math="G" /> has a vertex of degree at most{' '}
+              <InlineMath math="\lfloor 6 + 12(g-1)/n \rfloor" />.
+            </p>
+            <p className="mt-2">
+              By induction (greedy coloring from low-degree vertices), this bounds{' '}
+              <InlineMath math="\chi(G)" />. Optimizing over <InlineMath math="n" /> gives the
+              Heawood bound <InlineMath math="H(g)" />.
+            </p>
+            <p className="mt-2">
+              <strong>Tightness (Ringel-Youngs 1968):</strong>
+            </p>
+            <p className="mt-2">
+              For each <InlineMath math="g \geq 1" />, we must show <InlineMath math="K_{'{'}H(g){'}'}" />{' '}
+              embeds on the genus-<InlineMath math="g" /> surface.
+            </p>
+            <p className="mt-2">
+              This was proved by constructing explicit embeddings for each <InlineMath math="g" />—a
+              monumental effort requiring separate constructions for different residue classes of{' '}
+              <InlineMath math="H(g) \mod 12" />. The "Map Color Theorem" took 12 years to complete.
+            </p>
+          </>
+        }
+      >
         <p>
           For a surface of genus <InlineMath math="g \geq 1" />, the maximum chromatic
           number of graphs embeddable on that surface is:
@@ -330,7 +566,34 @@ export default function Section19() {
         </p>
       </Definition>
 
-      <Theorem title="Map Coloring Connection">
+      <Theorem
+        title="Map Coloring Connection"
+        proof={
+          <>
+            <p>
+              The dual graph of a map has one vertex per country and edges between countries
+              sharing a border. Coloring the map = coloring the dual graph.
+            </p>
+            <p className="mt-2">
+              <strong>Sphere/plane:</strong> Dual graphs are planar. By the Four Color Theorem,
+              4 colors suffice. Tightness: maps with 4 mutually adjacent countries exist (e.g.,
+              four regions meeting at a point with shared borders).
+            </p>
+            <p className="mt-2">
+              <strong>Torus:</strong> Dual graphs embed on the torus. By Heawood's formula,{' '}
+              <InlineMath math="H(1) = 7" /> colors suffice. Tightness: <InlineMath math="K_7" />{' '}
+              embeds on the torus (the "seven color map"), so 7 mutually adjacent countries can
+              exist on a torus.
+            </p>
+            <p className="mt-2">
+              <strong>General genus <InlineMath math="g" />:</strong> Dual graphs embed on the
+              genus-<InlineMath math="g" /> surface. The Heawood bound gives{' '}
+              <InlineMath math="H(g)" /> colors. By Ringel-Youngs, <InlineMath math="K_{'{'}H(g){'}'}" />{' '}
+              embeds, showing tightness.
+            </p>
+          </>
+        }
+      >
         <p>
           For maps on surfaces:
         </p>

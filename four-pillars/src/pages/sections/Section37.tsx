@@ -51,7 +51,27 @@ export default function Section37() {
         that it is preserved by the three generating transformations.
       </p>
 
-      <Theorem title="Invariance of the Cross-Ratio">
+      <Theorem title="Invariance of the Cross-Ratio"
+        proof={
+          <>
+            <p>We verify invariance under each generating transformation.</p>
+            <p className="mt-2"><strong>1. Translation x → x + l:</strong></p>
+            <p>Under this map, p, q, r, s become p + l, q + l, r + l, s + l. The cross-ratio becomes:</p>
+            <MathBlock math="\frac{((r+l) - (p+l))((s+l) - (q+l))}{((r+l) - (q+l))((s+l) - (p+l))} = \frac{(r-p)(s-q)}{(r-q)(s-p)}" />
+            <p>The l terms cancel in each difference, leaving the original cross-ratio.</p>
+            <p className="mt-2"><strong>2. Scaling x → kx:</strong></p>
+            <p>Under this map, p, q, r, s become kp, kq, kr, ks. The cross-ratio becomes:</p>
+            <MathBlock math="\frac{(kr - kp)(ks - kq)}{(kr - kq)(ks - kp)} = \frac{k(r-p) \cdot k(s-q)}{k(r-q) \cdot k(s-p)} = \frac{k^2(r-p)(s-q)}{k^2(r-q)(s-p)} = \frac{(r-p)(s-q)}{(r-q)(s-p)}" />
+            <p>The k² factors cancel, leaving the original cross-ratio.</p>
+            <p className="mt-2"><strong>3. Reciprocation x → 1/x:</strong></p>
+            <p>Under this map, p, q, r, s become 1/p, 1/q, 1/r, 1/s. Computing:</p>
+            <MathBlock math="\frac{(1/r - 1/p)(1/s - 1/q)}{(1/r - 1/q)(1/s - 1/p)} = \frac{\frac{p-r}{pr} \cdot \frac{q-s}{qs}}{\frac{q-r}{qr} \cdot \frac{p-s}{ps}}" />
+            <p className="mt-2">Simplifying by multiplying numerator and denominator by prqs:</p>
+            <MathBlock math="= \frac{(p-r)(q-s) \cdot qs \cdot pr}{(q-r)(p-s) \cdot pr \cdot qs} = \frac{(p-r)(q-s)}{(q-r)(p-s)} = \frac{(r-p)(s-q)}{(r-q)(s-p)}" />
+            <p>The last equality follows from (p-r) = -(r-p) and similar, with signs canceling.</p>
+          </>
+        }
+      >
         <div className="space-y-4">
           <div>
             <p className="font-semibold text-blue-400">1. The map x → x + l</p>

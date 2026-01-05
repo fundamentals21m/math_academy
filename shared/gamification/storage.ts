@@ -49,7 +49,7 @@ function isValidGamificationState(data: unknown): data is GamificationState {
   if (typeof user.totalXP !== 'number') return false;
   if (typeof user.level !== 'number') return false;
   if (!Array.isArray(user.sectionsCompleted)) return false;
-  if (!Array.isArray(user.chaptersCompleted)) return false;
+  if (!Array.isArray(user.partsCompleted)) return false;
 
   // Validate streak object has required fields
   const streak = obj.streak as Record<string, unknown>;
@@ -279,4 +279,43 @@ export function getProgressSummary(): { totalXP: number; level: number; sections
     level: state.user.level,
     sectionsCompleted: state.user.sectionsCompleted.length
   };
+}
+
+// =============================================================================
+// SERVER MIGRATION HELPERS
+// =============================================================================
+
+/**
+ * Check if local progress has been migrated to server
+ */
+export function hasMigratedToServer(): boolean {
+  const state = loadState();
+  return state?.migratedToServer ?? false;
+}
+
+/**
+ * Mark local progress as migrated to server
+ */
+export function markAsMigrated(): void {
+  const state = loadState();
+  if (state) {
+    state.migratedToServer = true;
+    saveState(state);
+    logger.info('Marked progress as migrated to server');
+  }
+}
+
+/**
+ * Check if there is local progress that needs migration
+ * (has progress but hasn't been migrated yet)
+ */
+export function hasUnmigratedProgress(): boolean {
+  const state = loadState();
+  if (!state) return false;
+
+  // Has progress if totalXP > 0 or has any sections
+  const hasProgress = state.user.totalXP > 0 || Object.keys(state.sections).length > 0;
+  const notMigrated = !state.migratedToServer;
+
+  return hasProgress && notMigrated;
 }

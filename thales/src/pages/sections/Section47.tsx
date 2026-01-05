@@ -23,7 +23,7 @@ export default function Section47() {
       {/* Definition */}
       <h3 className="text-xl font-semibold mt-8 mb-4">What is a Quadratic Surd?</h3>
 
-      <Callout type="definition" title="Quadratic Surd">
+      <Callout type="info" title="Quadratic Surd">
         <p>
           If <InlineMath>{`a`}</InlineMath> and <InlineMath>{`b \\neq 0`}</InlineMath> are
           integers and <InlineMath>{`d`}</InlineMath> is a positive nonsquare integer,
@@ -96,7 +96,7 @@ export default function Section47() {
         quadratic surd. Less obvious is the converse:
       </p>
 
-      <Callout type="theorem" title="Lagrange's Theorem (~1770)">
+      <Callout type="success" title="Lagrange's Theorem (~1770)">
         <p>
           Every quadratic surd has a continued fraction expansion which is
           ultimately periodic.
@@ -107,7 +107,7 @@ export default function Section47() {
         We prove the special case for <InlineMath>{`\\sqrt{d}`}</InlineMath>:
       </p>
 
-      <Callout type="theorem" title="Theorem 17.1">
+      <Callout type="success" title="Theorem 17.1">
         <p>
           If <InlineMath>{`d`}</InlineMath> is a positive integer which is not a
           perfect square, the continued fraction expansion of{' '}
@@ -159,7 +159,7 @@ export default function Section47() {
       {/* Special Form */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The Special Form of √d</h3>
 
-      <Callout type="note" title="Structure of √d Expansion">
+      <Callout type="info" title="Structure of √d Expansion">
         <p className="mb-2">
           For nonsquare <InlineMath>{`d`}</InlineMath>, the continued fraction
           expansion of <InlineMath>{`\\sqrt{d}`}</InlineMath> has the form:
@@ -202,7 +202,7 @@ export default function Section47() {
 
       <MathBlock>{`x^2 - dy^2 = \\pm 1`}</MathBlock>
 
-      <Callout type="theorem" title="Solutions from Convergents">
+      <Callout type="success" title="Solutions from Convergents">
         <p>
           If <InlineMath>{`\\sqrt{d} = (a_0, \\overline{a_1, \\ldots, a_{n-1}, 2a_0})`}</InlineMath>{' '}
           and <InlineMath>{`p_{n-1}/q_{n-1}`}</InlineMath> is the{' '}

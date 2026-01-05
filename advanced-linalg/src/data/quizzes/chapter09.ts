@@ -1,6 +1,6 @@
 // Chapter 9: Operators on Inner Product Spaces (Sections 50-55)
 // Based on Hoffman & Kunze Chapter 9
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // Section 50: Introduction
 export const section50Quiz: DifficultyQuizData = {

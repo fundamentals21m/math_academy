@@ -1,0 +1,50 @@
+{
+  "testing": [
+    {
+      "id": 1767533883994,
+      "text": "Typos",
+      "completed": false,
+      "priority": "low",
+      "timestamp": "1/4/2026, 8:38:03 AM"
+    },
+    {
+      "id": 1767533896976,
+      "text": "All screens load",
+      "completed": false,
+      "priority": "low",
+      "timestamp": "1/4/2026, 8:38:16 AM"
+    },
+    {
+      "id": 1767533913193,
+      "text": "All theorems have clickable proofs",
+      "completed": false,
+      "priority": "low",
+      "timestamp": "1/4/2026, 8:38:33 AM"
+    }
+  ],
+  "content": [],
+  "features": [],
+  "design": [],
+  "monetization": [],
+  "team": [],
+  "subscriptions": [
+    {
+      "id": 1767533516433,
+      "name": "ClaudeCode",
+      "cost": 200,
+      "frequency": "monthly",
+      "renewal": "2026-01-02",
+      "purpose": "Core Coding Backbone - essential",
+      "timestamp": "1/4/2026, 8:31:56 AM"
+    },
+    {
+      "id": 1767533538728,
+      "name": "Vercel Pro",
+      "cost": 20,
+      "frequency": "monthly",
+      "renewal": "2026-01-02",
+      "purpose": "server for hosting websites",
+      "timestamp": "1/4/2026, 8:32:18 AM"
+    }
+  ]
+}

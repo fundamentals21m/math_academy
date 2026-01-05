@@ -44,11 +44,19 @@ export function Definition({ title, children, className = '' }: ContentBlockProp
 }
 
 interface TheoremProps extends ContentBlockProps {
-  proof?: ReactNode;
+  proof: ReactNode;  // Required - all theorems must have proofs
+}
+
+interface PropositionProps {
+  title: string;
+  statement?: string;
+  children?: ReactNode;
+  proof: ReactNode;  // Required - all theorems must have proofs
+  className?: string;
 }
 
 /**
- * Theorem block - amber gradient, with optional collapsible proof
+ * Theorem block - amber gradient, with collapsible proof
  */
 export function Theorem({ title, children, proof, className = '' }: TheoremProps) {
   const [showProof, setShowProof] = useState(false);
@@ -273,8 +281,9 @@ export function CommonNotion({ title, children, className = '' }: ContentBlockPr
 
 /**
  * Proposition block - amber gradient with proof, used for Euclid's propositions
+ * Supports both statement prop and children for content
  */
-export function Proposition({ title, children, proof, className = '' }: TheoremProps) {
+export function Proposition({ title, statement, children, proof, className = '' }: PropositionProps) {
   const [showProof, setShowProof] = useState(false);
 
   return (
@@ -304,7 +313,12 @@ export function Proposition({ title, children, proof, className = '' }: TheoremP
           <h3 className="text-lg font-semibold text-dark-100">{title}</h3>
         </div>
       </div>
-      <div className="text-dark-300 pl-11">{children}</div>
+      {statement && (
+        <div className="text-dark-200 pl-11 mb-4 italic">{statement}</div>
+      )}
+      {children && (
+        <div className="text-dark-300 pl-11">{children}</div>
+      )}
 
       {proof && (
         <div className="mt-4 pl-11">

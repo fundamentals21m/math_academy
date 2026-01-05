@@ -29,7 +29,7 @@ export default function Section33() {
         <InlineMath>{`0`}</InlineMath> and <InlineMath>{`1`}</InlineMath> are distinguished elements.
       </p>
 
-      <Callout type="definition" title="Ring Axioms">
+      <Callout type="info" title="Ring Axioms">
         <p className="mb-2">The following axioms must hold for all <InlineMath>{`x, y, z \\in R`}</InlineMath>:</p>
         <ol className="list-decimal list-inside space-y-1 ml-4 text-sm">
           <li><InlineMath>{`(x + y) + z = x + (y + z)`}</InlineMath> (associativity of +)</li>
@@ -104,7 +104,7 @@ export default function Section33() {
       {/* Integral Domains */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Integral Domains</h3>
 
-      <Callout type="definition" title="Integral Domain">
+      <Callout type="info" title="Integral Domain">
         <p className="mb-2">
           A commutative ring is called an <strong>integral domain</strong> if:
         </p>
@@ -141,7 +141,7 @@ export default function Section33() {
       {/* Fields */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Fields</h3>
 
-      <Callout type="definition" title="Field">
+      <Callout type="info" title="Field">
         <p className="mb-2">
           A commutative ring is called a <strong>field</strong> if:
         </p>

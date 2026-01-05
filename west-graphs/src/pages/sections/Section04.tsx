@@ -207,7 +207,58 @@ export default function Section04() {
         </p>
       </Definition>
 
-      <Theorem title="Characterization of Eulerian Digraphs">
+      <Theorem
+        title="Characterization of Eulerian Digraphs"
+        proof={
+          <>
+            <p>
+              <strong>Necessity:</strong> Suppose <InlineMath math="D" /> has an Eulerian circuit{' '}
+              <InlineMath math="C" />. Each passage of <InlineMath math="C" /> through a vertex{' '}
+              <InlineMath math="v" /> uses one edge entering <InlineMath math="v" /> and one edge
+              leaving <InlineMath math="v" />. Since <InlineMath math="C" /> uses every edge exactly
+              once and the circuit closes, <InlineMath math="d^+(v) = d^-(v)" /> for each vertex.
+            </p>
+            <p className="mt-2">
+              Furthermore, any two edges in the same trail must lie in the same component of the
+              underlying graph. Since all edges are in one circuit, the underlying graph has at most
+              one nontrivial component.
+            </p>
+            <p className="mt-2">
+              <strong>Sufficiency:</strong> We prove by induction on the number of edges{' '}
+              <InlineMath math="m" />.
+            </p>
+            <p className="mt-2">
+              <em>Base case:</em> If <InlineMath math="m = 0" />, a single vertex forms a trivial
+              Eulerian circuit.
+            </p>
+            <p className="mt-2">
+              <em>Induction step:</em> Assume <InlineMath math="m > 0" /> and the result holds for
+              digraphs with fewer edges. Since <InlineMath math="d^+(v) = d^-(v) \geq 1" /> for
+              vertices in the nontrivial component, each such vertex has at least one outgoing edge.
+            </p>
+            <p className="mt-2">
+              Start at any vertex <InlineMath math="u" /> in the nontrivial component and follow
+              edges, never repeating an edge. Since <InlineMath math="d^+(v) = d^-(v)" /> at each
+              vertex, whenever we enter a vertex (other than <InlineMath math="u" />), we can leave
+              it. We must eventually return to <InlineMath math="u" />, forming a closed trail{' '}
+              <InlineMath math="C" />.
+            </p>
+            <p className="mt-2">
+              Let <InlineMath math="D' = D - E(C)" />. Since <InlineMath math="C" /> contributes
+              equally to indegree and outdegree at each vertex, <InlineMath math="D'" /> still
+              satisfies <InlineMath math="d^+(v) = d^-(v)" /> for all <InlineMath math="v" />. Each
+              component of <InlineMath math="D'" /> has fewer edges than <InlineMath math="D" />,
+              so by induction each has an Eulerian circuit.
+            </p>
+            <p className="mt-2">
+              Combine these into an Eulerian circuit of <InlineMath math="D" /> by traversing{' '}
+              <InlineMath math="C" />, and when first entering a vertex belonging to a component of{' '}
+              <InlineMath math="D'" />, detour along that component's Eulerian circuit before
+              continuing on <InlineMath math="C" />.
+            </p>
+          </>
+        }
+      >
         <p>
           A digraph is Eulerian if and only if <InlineMath math="d^+(v) = d^-(v)" /> for each
           vertex <InlineMath math="v" /> and the underlying graph has at most one nontrivial component.

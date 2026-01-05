@@ -10,17 +10,15 @@ import { COURSE_ID } from '@/config';
 import {
   GamificationProvider as SharedGamificationProvider,
   useGamification,
+  type SectionId,
 } from '@magic-internet-math/shared';
 
 // Re-export the hook directly
 export { useGamification };
 
-// Course prefix for section IDs
-const COURSE_PREFIX = COURSE_ID;
-
 // Helper to create a full section ID from a numeric ID
-export function makeSectionId(numericId: number): string {
-  return `${COURSE_PREFIX}:${numericId}`;
+export function makeSectionId(numericId: number): SectionId {
+  return `${COURSE_ID}:${numericId}` as SectionId;
 }
 
 // Wrapper component that injects the course ID

@@ -18,7 +18,30 @@ export default function Section10() {
         the area concepts developed in the previous sections.
       </p>
 
-      <Theorem title="Pythagorean Theorem (Euclid I.47)">
+      <Theorem title="Pythagorean Theorem (Euclid I.47)"
+        proof={
+          <>
+            <p>Let ABC be a right triangle with right angle at C, legs a = BC and b = AC, and hypotenuse c = AB.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Construct squares on all three sides: BCHI on BC, ACFG on AC, and ABDE on AB.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Draw altitude CK from C perpendicular to AB, extended to meet DE at L.</p>
+            <p className="mt-2"><strong>Step 3:</strong> Draw lines AD and CF.</p>
+            <p className="mt-2"><strong>Step 4:</strong> Consider triangles ABD and FBC:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>AB = BD (sides of square ABDE)</li>
+              <li>FB = BC (sides of square BCHI)</li>
+              <li>∠ABD = ∠FBC (both equal 90° + ∠ABC)</li>
+            </ul>
+            <p className="mt-2">By SAS, △ABD ≅ △FBC.</p>
+            <p className="mt-2"><strong>Step 5:</strong> Rectangle BDLK has the same base BD and height as △ABD (between parallels BD and AL).</p>
+            <p className="mt-2">By I.41: Area(BDLK) = 2 · Area(△ABD).</p>
+            <p className="mt-2"><strong>Step 6:</strong> Square BCHI has the same base BC and height as △FBC.</p>
+            <p className="mt-2">By I.41: Area(BCHI) = 2 · Area(△FBC).</p>
+            <p className="mt-2"><strong>Step 7:</strong> Since △ABD ≅ △FBC: Area(BDLK) = Area(BCHI) = a².</p>
+            <p className="mt-2"><strong>Step 8:</strong> Similarly, Area(ALKE) = Area(ACFG) = b².</p>
+            <p className="mt-2"><strong>Step 9:</strong> Area(ABDE) = Area(BDLK) + Area(ALKE) = a² + b² = c².</p>
+          </>
+        }
+      >
         <p>
           In a right triangle, the square on the hypotenuse equals the sum of
           the squares on the other two sides.
@@ -118,24 +141,37 @@ export default function Section10() {
         Euclid also proves the converse (I.48):
       </p>
 
-      <Theorem title="Converse of Pythagorean Theorem (Euclid I.48)">
+      <Theorem title="Converse of Pythagorean Theorem (Euclid I.48)"
+        proof={
+          <>
+            <p>Let triangle ABC have sides a = BC, b = AC, c = AB with a² + b² = c².</p>
+            <p className="mt-2"><strong>Step 1:</strong> Construct a right triangle DEF with:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>Right angle at E</li>
+              <li>DE = a = BC</li>
+              <li>EF = b = AC</li>
+            </ul>
+            <p className="mt-2"><strong>Step 2:</strong> By the Pythagorean theorem (I.47) applied to △DEF:</p>
+            <MathBlock math="DF^2 = DE^2 + EF^2 = a^2 + b^2" />
+            <p className="mt-2"><strong>Step 3:</strong> By hypothesis, a² + b² = c², so DF² = c².</p>
+            <p className="mt-2">Therefore DF = c = AB.</p>
+            <p className="mt-2"><strong>Step 4:</strong> Triangles ABC and DEF have:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>BC = DE = a</li>
+              <li>AC = EF = b</li>
+              <li>AB = DF = c</li>
+            </ul>
+            <p className="mt-2"><strong>Step 5:</strong> By SSS congruence, △ABC ≅ △DEF.</p>
+            <p className="mt-2"><strong>Step 6:</strong> Therefore ∠ACB = ∠DEF = 90°.</p>
+          </>
+        }
+      >
         <p>
           If the square on one side of a triangle equals the sum of the squares
           on the other two sides, then the angle opposite that side is a right
           angle.
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> Suppose triangle ABC has a² + b² = c² where
-        c = AB. Construct a right triangle DEF with legs DE = a and EF = b.
-        By the Pythagorean theorem, DF² = a² + b² = c², so DF = c = AB.
-      </p>
-
-      <p>
-        Now triangles ABC and DEF have all three sides equal (a, b, c), so
-        they are congruent by SSS. Therefore ∠ACB = ∠DEF = 90°. ∎
-      </p>
 
       <h3>Historical Context</h3>
 

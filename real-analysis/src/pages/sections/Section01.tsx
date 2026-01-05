@@ -99,7 +99,30 @@ export default function Section01() {
 
       <h3>Completeness - The Least Upper Bound Property</h3>
 
-      <Theorem title="Completeness Axiom">
+      <Theorem title="Completeness Axiom"
+        proof={
+          <>
+            <p>
+              The Completeness Axiom is taken as a fundamental axiom of the real numbers, not derived from
+              the field and order axioms. However, we can verify that completeness holds for specific
+              constructions of ℝ:
+            </p>
+            <p className="mt-2">
+              <strong>Dedekind Cuts:</strong> Define a real number as a partition (A, B) of ℚ where every
+              element of A is less than every element of B. For any bounded set S of such cuts, the supremum
+              is constructed by taking the union of all the "lower" sets.
+            </p>
+            <p className="mt-2">
+              <strong>Cauchy Sequences:</strong> Define ℝ as equivalence classes of Cauchy sequences of
+              rationals. The supremum of a bounded set is the limit of a sequence of upper bounds.
+            </p>
+            <p className="mt-2">
+              Both constructions verify that the resulting ordered field satisfies the Least Upper Bound
+              Property, distinguishing ℝ from ℚ.
+            </p>
+          </>
+        }
+      >
         <p>
           Every non-empty subset of ℝ that is bounded above has a least upper bound (supremum) in ℝ.
         </p>

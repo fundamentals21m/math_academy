@@ -232,7 +232,34 @@ export default function Section04() {
 
       <h2>Dimension and Subspaces</h2>
 
-      <Theorem title="Dimension of Subspace">
+      <Theorem
+        title="Dimension of Subspace"
+        proof={
+          <>
+            <p><strong>(1) W is finite-dimensional:</strong></p>
+            <p className="mt-2">
+              If <InlineMath>W = {`\\{\\mathbf{0}\\}`}</InlineMath>, then <InlineMath>\dim(W) = 0</InlineMath>. Otherwise, choose any nonzero <InlineMath>v_1 \in W</InlineMath>.
+            </p>
+            <p className="mt-2">
+              If <InlineMath>W = {`\\text{span}`}(v_1)</InlineMath>, we're done. Otherwise, choose <InlineMath>v_2 \in W \setminus {`\\text{span}`}(v_1)</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Continue: <InlineMath>{`\\{v_1, v_2, \\ldots\\}`}</InlineMath> is linearly independent at each step. By Steinitz, this process must stop after at most <InlineMath>\dim(V)</InlineMath> steps.
+            </p>
+            <p className="mt-4"><strong>(2) <InlineMath>\dim(W) \leq \dim(V)</InlineMath>:</strong></p>
+            <p className="mt-2">
+              Any basis of <InlineMath>W</InlineMath> is a linearly independent set in <InlineMath>V</InlineMath>. By Steinitz, it has at most <InlineMath>\dim(V)</InlineMath> elements.
+            </p>
+            <p className="mt-4"><strong>(3) <InlineMath>\dim(W) = \dim(V) \iff W = V</InlineMath>:</strong></p>
+            <p className="mt-2">
+              If <InlineMath>W = V</InlineMath>, clearly <InlineMath>\dim(W) = \dim(V)</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Conversely, if <InlineMath>\dim(W) = \dim(V) = n</InlineMath>, let <InlineMath>{`\\{v_1, \\ldots, v_n\\}`}</InlineMath> be a basis of <InlineMath>W</InlineMath>. This is an independent set of <InlineMath>n</InlineMath> vectors in <InlineMath>V</InlineMath>, hence a basis of <InlineMath>V</InlineMath>. Thus <InlineMath>W = {`\\text{span}`}(v_1, \ldots, v_n) = V</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>
           If <InlineMath>W</InlineMath> is a subspace of finite-dimensional <InlineMath>V</InlineMath>, then:
         </p>
@@ -243,7 +270,46 @@ export default function Section04() {
         </ol>
       </Theorem>
 
-      <Theorem title="Dimension of Sum">
+      <Theorem
+        title="Dimension of Sum"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>k = \dim(W_1 \cap W_2)</InlineMath>, <InlineMath>m = \dim(W_1)</InlineMath>, and <InlineMath>n = \dim(W_2)</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Choose a basis <InlineMath>{`\\{v_1, \\ldots, v_k\\}`}</InlineMath> of <InlineMath>W_1 \cap W_2</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Extend to a basis <InlineMath>{`\\{v_1, \\ldots, v_k, u_1, \\ldots, u_{m-k}\\}`}</InlineMath> of <InlineMath>W_1</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Extend to a basis <InlineMath>{`\\{v_1, \\ldots, v_k, w_1, \\ldots, w_{n-k}\\}`}</InlineMath> of <InlineMath>W_2</InlineMath>.
+            </p>
+            <p className="mt-2">
+              <strong>Claim:</strong> <InlineMath>{`\\{v_1, \\ldots, v_k, u_1, \\ldots, u_{m-k}, w_1, \\ldots, w_{n-k}\\}`}</InlineMath> is a basis of <InlineMath>W_1 + W_2</InlineMath>.
+            </p>
+            <p className="mt-2">
+              <strong>Spanning:</strong> Any <InlineMath>x \in W_1 + W_2</InlineMath> can be written as <InlineMath>x = x_1 + x_2</InlineMath> with <InlineMath>x_i \in W_i</InlineMath>. Expressing each in terms of its basis gives a combination of <InlineMath>v_i, u_j, w_l</InlineMath>.
+            </p>
+            <p className="mt-2">
+              <strong>Independence:</strong> Suppose <InlineMath>\sum a_i v_i + \sum b_j u_j + \sum c_l w_l = {`\\mathbf{0}`}</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Then <InlineMath>\sum a_i v_i + \sum b_j u_j = -\sum c_l w_l</InlineMath>. The left side is in <InlineMath>W_1</InlineMath>, right side in <InlineMath>W_2</InlineMath>, so both are in <InlineMath>W_1 \cap W_2</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Thus <InlineMath>-\sum c_l w_l = \sum d_i v_i</InlineMath> for some scalars <InlineMath>d_i</InlineMath>. By independence of the <InlineMath>W_2</InlineMath>-basis, all <InlineMath>c_l = 0</InlineMath> and <InlineMath>d_i = 0</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Then <InlineMath>\sum a_i v_i + \sum b_j u_j = {`\\mathbf{0}`}</InlineMath>, so by independence of the <InlineMath>W_1</InlineMath>-basis, all <InlineMath>a_i = b_j = 0</InlineMath>.
+            </p>
+            <p className="mt-2">
+              <strong>Conclusion:</strong> <InlineMath>\dim(W_1 + W_2) = k + (m - k) + (n - k) = m + n - k</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>
           For subspaces <InlineMath>W_1</InlineMath> and <InlineMath>W_2</InlineMath> of a finite-dimensional space:
         </p>

@@ -368,17 +368,20 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
 }
 
 // Default context for when NostrAuthProvider is not present
-const defaultNostrAuthContext: NostrAuthContextType = {
+const defaultNostrAuthContext: NostrAuthContextValue = {
   isAuthenticated: false,
-  isLoading: false,
+  isConnecting: false,
   npub: null,
   displayName: null,
   nip05: null,
   error: null,
   isAdmin: false,
-  connect: async () => {},
-  disconnect: () => {},
-  setDisplayName: async () => {},
+  hasExtension: false,
+  extensionChecked: false,
+  clearError: () => {},
+  connect: async () => Promise.resolve(),
+  disconnect: () => Promise.resolve(),
+  setDisplayName: async () => Promise.resolve(),
 };
 
 export function useNostrAuth() {

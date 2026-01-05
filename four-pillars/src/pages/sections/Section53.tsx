@@ -75,7 +75,24 @@ export default function Section53() {
         form a group under multiplication, and they correspond to rotations.
       </p>
 
-      <Theorem title="Quaternion Rotation Formula">
+      <Theorem title="Quaternion Rotation Formula"
+        proof={
+          <>
+            <p>We verify that the map p → qpq⁻¹ is indeed a rotation.</p>
+            <p className="mt-2"><strong>Step 1: Pure quaternions map to pure quaternions.</strong></p>
+            <p>Let p = xi + yj + zk be a pure quaternion (real part 0). We show qpq⁻¹ is also pure.</p>
+            <p className="mt-2">Taking the conjugate: (qpq⁻¹)* = (q⁻¹)*p*q* = q(-p)q⁻¹ = -qpq⁻¹.</p>
+            <p className="mt-2">A quaternion r satisfies r* = -r if and only if r is pure. Therefore qpq⁻¹ is pure.</p>
+            <p className="mt-2"><strong>Step 2: The map preserves length.</strong></p>
+            <p>For any quaternion: |qpq⁻¹|² = |q|²|p|²|q⁻¹|² = |p|² (since |q| = 1).</p>
+            <p className="mt-2"><strong>Step 3: The map is linear.</strong></p>
+            <p>q(p₁ + p₂)q⁻¹ = qp₁q⁻¹ + qp₂q⁻¹ and q(λp)q⁻¹ = λ(qpq⁻¹) for real λ.</p>
+            <p className="mt-2"><strong>Step 4: The map is orientation-preserving.</strong></p>
+            <p>The determinant of the map is +1 (since it's conjugation by a unit quaternion, which lies in the connected identity component).</p>
+            <p className="mt-2"><strong>Conclusion:</strong> A linear, length-preserving, orientation-preserving map of ℝ³ is a rotation.</p>
+          </>
+        }
+      >
         <p>
           Let q be a unit quaternion. The map:
         </p>
@@ -114,7 +131,20 @@ export default function Section53() {
         produce the same rotation.
       </p>
 
-      <Theorem title="Two-to-One Homomorphism">
+      <Theorem title="Two-to-One Homomorphism"
+        proof={
+          <>
+            <p>We prove that the map φ: q → (p → qpq⁻¹) is a 2-to-1 surjective homomorphism.</p>
+            <p className="mt-2"><strong>Homomorphism:</strong> For unit quaternions q₁, q₂:</p>
+            <MathBlock math="\varphi(q_1)\varphi(q_2)(p) = q_1(q_2 p q_2^{-1})q_1^{-1} = (q_1q_2)p(q_1q_2)^{-1} = \varphi(q_1q_2)(p)" />
+            <p className="mt-2"><strong>Kernel:</strong> φ(q) = identity means qpq⁻¹ = p for all pure p.</p>
+            <p className="mt-2">This means q commutes with all of i, j, k. Since iq = qi implies q has no j, k components, and similar reasoning for j and k, we get q = a (real). Since |q| = 1, we have q = ±1.</p>
+            <p className="mt-2">Thus ker(φ) = {'{'}+1, -1{'}'}.</p>
+            <p className="mt-2"><strong>Surjectivity:</strong> Every rotation has an axis n and angle θ. The quaternion q = cos(θ/2) + sin(θ/2)(n₁i + n₂j + n₃k) maps to this rotation (verified by direct calculation).</p>
+            <p className="mt-2"><strong>2-to-1:</strong> Since ker(φ) = {'{'}±1{'}'} has exactly 2 elements, each rotation is the image of exactly two unit quaternions: q and -q.</p>
+          </>
+        }
+      >
         <p>
           The map from unit quaternions to rotations:
         </p>
@@ -150,7 +180,19 @@ export default function Section53() {
         The composition of rotations corresponds to quaternion multiplication:
       </p>
 
-      <Theorem title="Composition of Rotations">
+      <Theorem title="Composition of Rotations"
+        proof={
+          <>
+            <p>Let R₁ and R₂ be rotations corresponding to unit quaternions q₁ and q₂ respectively.</p>
+            <p className="mt-2">For any pure quaternion p (representing a point in ℝ³):</p>
+            <MathBlock math="(R_1 \circ R_2)(p) = R_1(R_2(p)) = R_1(q_2 p q_2^{-1}) = q_1(q_2 p q_2^{-1})q_1^{-1}" />
+            <p className="mt-2">By associativity of quaternion multiplication:</p>
+            <MathBlock math="= (q_1 q_2) p (q_2^{-1} q_1^{-1}) = (q_1 q_2) p (q_1 q_2)^{-1}" />
+            <p className="mt-2">This is exactly the rotation corresponding to the quaternion q₁q₂.</p>
+            <p className="mt-2">Therefore, composing rotations corresponds to multiplying their quaternion representations (in the same order).</p>
+          </>
+        }
+      >
         <p>
           If rotation R₁ corresponds to quaternion q₁ and rotation R₂ corresponds
           to quaternion q₂, then the composition R₁ ∘ R₂ corresponds to q₁q₂.

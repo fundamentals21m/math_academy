@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Academy Project Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Save Status Indicator -->
+        <div id="save-status" class="save-status">
+            <span id="save-indicator"></span>
+        </div>
+
+        <header>
+            <h1>📚 Math Academy Project Manager</h1>
+            <p class="subtitle">Track your development progress across all areas</p>
+            <div class="backup-info">
+                <div id="auto-save-status" class="auto-save-status">
+                    ✓ Auto-saving to file system
+                </div>
+                <button class="view-backups-btn" onclick="showBackups()">📁 View Backups</button>
+            </div>
+        </header>
+
+        <div class="categories">
+            <!-- Testing Category -->
+            <div class="category testing">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">✅</span>
+                        Built & Needs Testing
+                    </div>
+                    <span class="item-count" id="testing-count">0</span>
+                </div>
+                <div class="priority-selector">
+                    <label>Priority:</label>
+                    <input type="radio" name="testing-priority" value="high"> High
+                    <input type="radio" name="testing-priority" value="medium" checked> Medium
+                    <input type="radio" name="testing-priority" value="low"> Low
+                </div>
+                <div class="add-item">
+                    <input type="text" id="testing-input" placeholder="e.g., Test interactive graph component on mobile">
+                    <button class="add-btn" onclick="addItem('testing')">Add</button>
+                </div>
+                <div class="items-list" id="testing-list"></div>
+            </div>
+
+            <!-- Content Category -->
+            <div class="category content">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">📝</span>
+                        Content Pipeline
+                    </div>
+                    <span class="item-count" id="content-count">0</span>
+                </div>
+                <div class="priority-selector">
+                    <label>Priority:</label>
+                    <input type="radio" name="content-priority" value="high"> High
+                    <input type="radio" name="content-priority" value="medium" checked> Medium
+                    <input type="radio" name="content-priority" value="low"> Low
+                </div>
+                <div class="add-item">
+                    <input type="text" id="content-input" placeholder="e.g., Add quadratic formula lesson with visualizer">
+                    <button class="add-btn" onclick="addItem('content')">Add</button>
+                </div>
+                <div class="items-list" id="content-list"></div>
+            </div>
+
+            <!-- Features Category -->
+            <div class="category features">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">⚡</span>
+                        Feature Roadmap
+                    </div>
+                    <span class="item-count" id="features-count">0</span>
+                </div>
+                <div class="priority-selector">
+                    <label>Priority:</label>
+                    <input type="radio" name="features-priority" value="high"> High
+                    <input type="radio" name="features-priority" value="medium" checked> Medium
+                    <input type="radio" name="features-priority" value="low"> Low
+                </div>
+                <div class="add-item">
+                    <input type="text" id="features-input" placeholder="e.g., Add progress tracking system">
+                    <button class="add-btn" onclick="addItem('features')">Add</button>
+                </div>
+                <div class="items-list" id="features-list"></div>
+            </div>
+
+            <!-- Design Category -->
+            <div class="category design">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">🎨</span>
+                        Design Issues
+                    </div>
+                    <span class="item-count" id="design-count">0</span>
+                </div>
+                <div class="priority-selector">
+                    <label>Priority:</label>
+                    <input type="radio" name="design-priority" value="high"> High
+                    <input type="radio" name="design-priority" value="medium" checked> Medium
+                    <input type="radio" name="design-priority" value="low"> Low
+                </div>
+                <div class="add-item">
+                    <input type="text" id="design-input" placeholder="e.g., Navigation menu overlaps content on tablet">
+                    <button class="add-btn" onclick="addItem('design')">Add</button>
+                </div>
+                <div class="items-list" id="design-list"></div>
+            </div>
+
+            <!-- Monetization Category -->
+            <div class="category monetization">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">💰</span>
+                        Monetization Ideas
+                    </div>
+                    <span class="item-count" id="monetization-count">0</span>
+                </div>
+                <div class="priority-selector">
+                    <label>Priority:</label>
+                    <input type="radio" name="monetization-priority" value="high"> High
+                    <input type="radio" name="monetization-priority" value="medium" checked> Medium
+                    <input type="radio" name="monetization-priority" value="low"> Low
+                </div>
+                <div class="add-item">
+                    <input type="text" id="monetization-input" placeholder="e.g., Premium subscription with advanced topics">
+                    <button class="add-btn" onclick="addItem('monetization')">Add</button>
+                </div>
+                <div class="items-list" id="monetization-list"></div>
+            </div>
+
+            <!-- Team & Collaborators Category -->
+            <div class="category team">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">👥</span>
+                        Team & Collaborators
+                    </div>
+                    <span class="item-count" id="team-count">0</span>
+                </div>
+                <div class="team-add-form">
+                    <div class="form-row">
+                        <input type="text" id="team-name" placeholder="Name">
+                        <input type="text" id="team-role" placeholder="Role (e.g., Content Creator, Designer)">
+                    </div>
+                    <div class="form-row">
+                        <input type="email" id="team-email" placeholder="Email (optional)">
+                        <input type="text" id="team-phone" placeholder="Phone (optional)">
+                    </div>
+                    <textarea id="team-notes" placeholder="Notes: What they're working on, areas of expertise, status, etc."></textarea>
+                    <button class="add-btn" onclick="addTeamMember()">Add Team Member</button>
+                </div>
+                <div class="items-list" id="team-list"></div>
+            </div>
+
+            <!-- Subscriptions & Services Category -->
+            <div class="category subscriptions">
+                <div class="category-header">
+                    <div class="category-title">
+                        <span class="category-icon">💳</span>
+                        Paid Services
+                    </div>
+                    <span class="item-count" id="subscriptions-count">0</span>
+                </div>
+                <div id="subscription-total-display"></div>
+                <div class="subscription-add-form">
+                    <div class="form-row">
+                        <input type="text" id="sub-name" placeholder="Service name (e.g., Claude API, Vercel)">
+                        <input type="number" id="sub-cost" placeholder="Cost per period" step="0.01">
+                    </div>
+                    <div class="form-row">
+                        <select id="sub-frequency">
+                            <option value="monthly">Monthly</option>
+                            <option value="yearly">Yearly</option>
+                            <option value="one-time">One-time</option>
+                        </select>
+                        <input type="date" id="sub-renewal" placeholder="Next renewal date">
+                    </div>
+                    <input type="text" id="sub-purpose" placeholder="Purpose/What it's used for (optional)">
+                    <button class="add-btn" onclick="addSubscription()">Add Service</button>
+                </div>
+                <div class="items-list" id="subscriptions-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Edit Item</h2>
+                <button class="close-modal" onclick="closeEditModal()">&times;</button>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Backups Modal -->
+    <div id="backupsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Backup Files</h2>
+                <button class="close-modal" onclick="closeBackupsModal()">&times;</button>
+            </div>
+            <div id="backupsBody" class="backups-list"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

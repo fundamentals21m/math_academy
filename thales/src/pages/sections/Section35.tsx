@@ -37,7 +37,7 @@ export default function Section35() {
         <em>below</em> and <em>above</em> <InlineMath>{`\\alpha`}</InlineMath>, respectively.
       </p>
 
-      <Callout type="definition" title="Dedekind Cut">
+      <Callout type="info" title="Dedekind Cut">
         <p className="mb-2">
           A <strong>Dedekind cut</strong> is a pair <InlineMath>{`(L, U)`}</InlineMath>{' '}
           of sets of rationals such that:
@@ -80,7 +80,7 @@ export default function Section35() {
         class of sequences of rationals.
       </p>
 
-      <Callout type="definition" title="Cauchy Sequence">
+      <Callout type="info" title="Cauchy Sequence">
         <p>
           A <strong>Cauchy sequence</strong> is a sequence{' '}
           <InlineMath>{`\\{a_n | n \\in \\mathbb{N}\\}`}</InlineMath> of rational numbers
@@ -142,7 +142,7 @@ export default function Section35() {
       </p>
 
       {/* Ordered Field */}
-      <Callout type="definition" title="Ordered Field">
+      <Callout type="info" title="Ordered Field">
         <p className="mb-2">
           A field <InlineMath>{`F`}</InlineMath> is <strong>ordered</strong> if it has
           a subset <InlineMath>{`P`}</InlineMath> (the <strong>positive elements</strong>)
@@ -225,7 +225,7 @@ export default function Section35() {
       {/* Completeness */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Completeness</h3>
 
-      <Callout type="definition" title="Complete Ordered Field">
+      <Callout type="info" title="Complete Ordered Field">
         <p>
           An ordered field is <strong>complete</strong> if every nonempty set of
           positive elements has a <strong>greatest lower bound</strong> (infimum).
@@ -241,7 +241,7 @@ export default function Section35() {
       </p>
 
       {/* Uniqueness */}
-      <Callout type="theorem" title="Uniqueness of ℝ">
+      <Callout type="success" title="Uniqueness of ℝ">
         <p>
           <strong>Theorem:</strong> Any two complete ordered fields are isomorphic.
         </p>

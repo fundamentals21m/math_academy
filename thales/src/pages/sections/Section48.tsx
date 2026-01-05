@@ -28,7 +28,7 @@ export default function Section48() {
         <InlineMath>{`\\gcd(x, y, z) = 1`}</InlineMath>.
       </p>
 
-      <Callout type="definition" title="Primitive Pythagorean Triangle">
+      <Callout type="info" title="Primitive Pythagorean Triangle">
         <p>
           A Pythagorean triple <InlineMath>{`(x, y, z)`}</InlineMath> is{' '}
           <strong>primitive</strong> if <InlineMath>{`\\gcd(x, y, z) = 1`}</InlineMath>.
@@ -41,7 +41,7 @@ export default function Section48() {
       {/* Key Lemma */}
       <h3 className="text-xl font-semibold mt-8 mb-4">A Key Lemma</h3>
 
-      <Callout type="theorem" title="Lemma 18.1">
+      <Callout type="success" title="Lemma 18.1">
         <p>
           If <InlineMath>{`m`}</InlineMath> and <InlineMath>{`n`}</InlineMath> are
           nonnegative integers such that <InlineMath>{`\\gcd(m, n) = 1`}</InlineMath>{' '}
@@ -81,7 +81,7 @@ export default function Section48() {
         Characterization of Pythagorean Triples
       </h3>
 
-      <Callout type="theorem" title="Theorem 18.2">
+      <Callout type="success" title="Theorem 18.2">
         <p className="mb-2">
           Let <InlineMath>{`x, y, z`}</InlineMath> be positive integers. Then{' '}
           <InlineMath>{`x^2 + y^2 = z^2`}</InlineMath> with{' '}
@@ -130,7 +130,7 @@ export default function Section48() {
         sum of two squares:
       </p>
 
-      <Callout type="note" title="Fermat's Marginal Note">
+      <Callout type="info" title="Fermat's Marginal Note">
         <p className="italic">
           "On the other hand it is impossible to separate a cube into two cubes,
           or a biquadratic into two biquadratics, or generally any power except
@@ -140,7 +140,7 @@ export default function Section48() {
         </p>
       </Callout>
 
-      <Callout type="theorem" title="Fermat's Last Theorem" className="mt-4">
+      <Callout type="success" title="Fermat's Last Theorem" className="mt-4">
         <p>
           For any integer <InlineMath>{`n > 2`}</InlineMath>, there are no positive
           integers <InlineMath>{`x, y, z`}</InlineMath> such that:
@@ -177,7 +177,7 @@ export default function Section48() {
         smaller solution, which is impossible.
       </p>
 
-      <Callout type="theorem" title="Theorem 18.3">
+      <Callout type="success" title="Theorem 18.3">
         <p>
           There are no positive integers <InlineMath>{`x, y, z`}</InlineMath> such that:
         </p>

@@ -27,7 +27,7 @@ export default function Section23() {
         in one place for 800 years.
       </p>
 
-      <Callout type="note" title="Mathematics Goes Global">
+      <Callout type="info" title="Mathematics Goes Global">
         With printing, mathematical texts became available all over the civilized world.
         People could learn mathematics even in such outlying places as <strong>Bohemia</strong>
         or <strong>Scotland</strong>—no longer needing to travel to centers of learning.
@@ -144,7 +144,7 @@ export default function Section23() {
       </Card>
 
       {/* Columbus and Regiomontanus */}
-      <Callout type="note" title="Columbus's Mathematical Trick">
+      <Callout type="info" title="Columbus's Mathematical Trick">
         Columbus took a copy of Regiomontanus's <em>Ephemerides</em> on his fourth
         voyage. When stranded with hostile natives in Jamaica, he used its prediction
         of the <strong>lunar eclipse of February 29, 1504</strong> to intimidate them—

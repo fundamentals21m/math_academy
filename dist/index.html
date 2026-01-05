@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+  <title>Magic Internet Math</title>
+  <meta name="description" content="Interactive courses covering the mathematics that powers modern technology, from foundational algebra to the cryptography securing the internet.">
+
+  <!-- Open Graph / Facebook / LinkedIn / Messages -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mathacademy-cyan.vercel.app/">
+  <meta property="og:title" content="Magic Internet Math">
+  <meta property="og:description" content="Interactive courses covering the mathematics that powers modern technology, from foundational algebra to the cryptography securing the internet.">
+  <meta property="og:image" content="https://mathacademy-cyan.vercel.app/images/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mathacademy-cyan.vercel.app/">
+  <meta name="twitter:title" content="Magic Internet Math">
+  <meta name="twitter:description" content="Interactive courses covering the mathematics that powers modern technology, from foundational algebra to the cryptography securing the internet.">
+  <meta name="twitter:image" content="https://mathacademy-cyan.vercel.app/images/og-preview.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Firebase SDK -->
+
+  <!-- Nostr Auth -->
+
+  <!-- Hub Renderer -->
+  <script type="module" crossorigin src="/assets/index-BY8HVOs7.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DOcTOH_z.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="index.html" class="logo">Magic Internet Math</a>
+      <div style="display: flex; align-items: center; gap: 2rem;">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Courses</a></li>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+        </ul>
+        <div id="nostr-auth-container"></div>
+        <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Courses</a>
+      <a href="#leaderboard" onclick="toggleMobileMenu()">Leaderboard</a>
+    </div>
+  </nav>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const hamburger = document.querySelector('.hamburger');
+      menu.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    }
+  </script>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Magic Internet Math</h1>
+      <p class="hero-subtitle">
+        Interactive courses covering the mathematics that powers modern technology,
+        from foundational algebra to the cryptography securing the internet.
+      </p>
+    </section>
+
+    <h2 class="section-title">Choose Your Path</h2>
+    <p class="section-subtitle" id="courses-subtitle">Courses organized by subject</p>
+
+    <!-- Course sections rendered dynamically (includes inline featured content) -->
+    <div id="courses-container"></div>
+
+    <!-- Progress Dashboard -->
+    <div id="progress-dashboard" style="display: none;"></div>
+
+    <div class="callout callout-info" style="margin-top: 3rem;">
+      <strong>Start with the basics!</strong> New to math? Begin with Basic Algebra to build your foundation.
+      Ready for more? Move through the levels at your own pace.
+    </div>
+
+    <!-- Global Leaderboard Section -->
+    <section id="leaderboard" class="leaderboard-section">
+      <div class="level-header">
+        <span class="level-badge featured">Leaderboard</span>
+        <span class="level-description">Compete with learners worldwide</span>
+      </div>
+
+      <!-- Leaderboard Table -->
+      <div class="card" style="padding: 0; overflow: hidden; margin-top: 1.5rem;">
+        <div style="padding: 1.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="margin: 0; color: #f1f5f9; font-size: 1.25rem;">Top Learners</h3>
+          <button onclick="window.loadLeaderboard()" style="font-size: 0.75rem; color: #64748b; background: none; border: 1px solid #374151; padding: 0.25rem 0.75rem; border-radius: 4px; cursor: pointer;" id="leaderboard-refresh">
+            <span id="leaderboard-status">Refresh</span>
+          </button>
+        </div>
+
+        <div id="leaderboard-table" style="min-height: 200px;">
+          <!-- Leaderboard rows will be inserted here -->
+          <div style="padding: 3rem; text-align: center; color: #64748b;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
+            <p style="margin-bottom: 1rem;">Loading leaderboard...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connect prompt -->
+      <div class="callout callout-info" style="margin-top: 1.5rem;">
+        <strong>Want to join the leaderboard?</strong> Click "Connect with Nostr" in the top right to sync your progress across all courses and compete!
+      </div>
+
+      <!-- Course Leaderboard Links -->
+      <div style="margin-top: 1.5rem;">
+        <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">View course-specific rankings:</p>
+        <div id="leaderboard-links" class="leaderboard-links">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

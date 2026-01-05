@@ -51,7 +51,7 @@ export default function Section52() {
       {/* Terms of Lambda Calculus */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Terms of Lambda Calculus</h3>
 
-      <Callout type="definition" title="Lambda Terms">
+      <Callout type="info" title="Lambda Terms">
         <p>
           Assuming countably many variables{' '}
           <InlineMath>{`x_1, x_2, \\ldots`}</InlineMath>, we define{' '}
@@ -229,7 +229,7 @@ export default function Section52() {
       {/* Fixpoint Theorem */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The Fixpoint Theorem</h3>
 
-      <Callout type="theorem" title="Theorem 22.1 (Fixpoint Theorem)">
+      <Callout type="success" title="Theorem 22.1 (Fixpoint Theorem)">
         <p>
           For any term <InlineMath>{`\\phi`}</InlineMath>, there is a term{' '}
           <InlineMath>{`\\alpha`}</InlineMath> such that{' '}
@@ -287,7 +287,7 @@ export default function Section52() {
         </Card>
       </CardGrid>
 
-      <Callout type="theorem" title="Theorem 22.2 (Schönfinkel)" className="mt-4">
+      <Callout type="success" title="Theorem 22.2 (Schönfinkel)" className="mt-4">
         <p>
           Every term of the lambda calculus is provably equal to a{' '}
           <strong>combinator</strong> — an expression built from variables,{' '}
@@ -299,7 +299,7 @@ export default function Section52() {
       {/* Church-Turing Thesis */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The Church-Turing Thesis</h3>
 
-      <Callout type="note" title="Equivalence of Computability">
+      <Callout type="info" title="Equivalence of Computability">
         <p>
           Every numerical function definable in the untyped lambda calculus is
           calculable, and conversely. Thus:

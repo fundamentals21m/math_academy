@@ -92,7 +92,36 @@ export default function Section24() {
         </ul>
       </Definition>
 
-      <Theorem title="Base Properties">
+      <Theorem
+        title="Base Properties"
+        proof={
+          <>
+            <p>
+              <strong>Equal cardinality:</strong> Suppose bases <InlineMath math="B_1" /> and{' '}
+              <InlineMath math="B_2" /> have <InlineMath math="|B_1| < |B_2|" />.
+              By the exchange property (I3) applied to independent sets{' '}
+              <InlineMath math="B_1" /> and <InlineMath math="B_2" />, there exists{' '}
+              <InlineMath math="e \in B_2 - B_1" /> with <InlineMath math="B_1 \cup \{'{'}e{'}'}" />{' '}
+              independent. This contradicts maximality of <InlineMath math="B_1" />.
+            </p>
+            <p className="mt-2">
+              <strong>Base exchange:</strong> Let <InlineMath math="e \in B_1 - B_2" />.
+              The set <InlineMath math="B_1 - e" /> is independent with{' '}
+              <InlineMath math="|B_1 - e| = |B_1| - 1 < |B_2|" />.
+            </p>
+            <p className="mt-2">
+              By (I3), there exists <InlineMath math="f \in B_2 - (B_1 - e) = B_2 - B_1 + e" />{' '}
+              such that <InlineMath math="(B_1 - e) \cup \{'{'}f{'}'}" /> is independent.
+              Since <InlineMath math="e \notin B_2" />, we have{' '}
+              <InlineMath math="f \in B_2 - B_1" />.
+            </p>
+            <p className="mt-2">
+              The set <InlineMath math="B_1 - e + f" /> has size <InlineMath math="|B_1|" />{' '}
+              and is independent, hence a base.
+            </p>
+          </>
+        }
+      >
         <p>
           All bases of a matroid have the same cardinality (the <strong>rank</strong> of
           the matroid).
@@ -155,7 +184,40 @@ export default function Section24() {
 
       <h2>Greedy Algorithm</h2>
 
-      <Theorem title="Greedy Algorithm for Matroids">
+      <Theorem
+        title="Greedy Algorithm for Matroids"
+        proof={
+          <>
+            <p>
+              Let <InlineMath math="B^*" /> be the greedy solution and{' '}
+              <InlineMath math="B" /> be any base. We show{' '}
+              <InlineMath math="w(B^*) \geq w(B)" />.
+            </p>
+            <p className="mt-2">
+              Order <InlineMath math="B^* = \{'{'}e_1, \ldots, e_r{'}'}" /> by decreasing
+              weight and <InlineMath math="B = \{'{'}f_1, \ldots, f_r{'}'}" /> similarly.
+              We claim <InlineMath math="w(e_i) \geq w(f_i)" /> for all{' '}
+              <InlineMath math="i" />.
+            </p>
+            <p className="mt-2">
+              <strong>By contradiction:</strong> Suppose <InlineMath math="i" /> is the
+              first index with <InlineMath math="w(e_i) < w(f_i)" />.
+              Consider <InlineMath math="I = \{'{'}e_1, \ldots, e_{'{'}i-1{'}'}{'}'}" /> and{' '}
+              <InlineMath math="J = \{'{'}f_1, \ldots, f_i{'}'}" />.
+            </p>
+            <p className="mt-2">
+              We have <InlineMath math="|I| < |J|" />, so by (I3), some{' '}
+              <InlineMath math="f_j \in J - I" /> can be added to <InlineMath math="I" />.
+              Since <InlineMath math="w(f_j) \geq w(f_i) > w(e_i)" />, the greedy algorithm
+              would have chosen <InlineMath math="f_j" /> before <InlineMath math="e_i" />,
+              contradiction.
+            </p>
+            <p className="mt-2">
+              Thus <InlineMath math="w(B^*) = \sum w(e_i) \geq \sum w(f_i) = w(B)" />.
+            </p>
+          </>
+        }
+      >
         <p>
           Given a weighted matroid <InlineMath math="(E, \mathcal{I}, w)" />, the greedy
           algorithm finds a maximum-weight base:
@@ -178,7 +240,45 @@ export default function Section24() {
         </p>
       </Theorem>
 
-      <Theorem title="Characterization by Greedy">
+      <Theorem
+        title="Characterization by Greedy"
+        proof={
+          <>
+            <p>
+              <strong>(Matroid → greedy works):</strong> Proved above.
+            </p>
+            <p className="mt-2">
+              <strong>(Greedy works → matroid):</strong> Suppose{' '}
+              <InlineMath math="(E, \mathcal{I})" /> is hereditary but not a matroid.
+              Then (I3) fails: there exist <InlineMath math="I, J \in \mathcal{I}" /> with{' '}
+              <InlineMath math="|I| < |J|" /> but no element of <InlineMath math="J - I" />{' '}
+              can be added to <InlineMath math="I" />.
+            </p>
+            <p className="mt-2">
+              <strong>Construct bad weights:</strong> Define:
+            </p>
+            <ul className="list-disc list-inside mt-2">
+              <li>
+                <InlineMath math="w(e) = 1 + \epsilon" /> for <InlineMath math="e \in I" />
+              </li>
+              <li>
+                <InlineMath math="w(e) = 1" /> for <InlineMath math="e \in J - I" />
+              </li>
+              <li>
+                <InlineMath math="w(e) = 0" /> otherwise
+              </li>
+            </ul>
+            <p className="mt-2">
+              For small <InlineMath math="\epsilon > 0" />, greedy selects all of{' '}
+              <InlineMath math="I" /> first (higher weight), then cannot add elements
+              of <InlineMath math="J - I" />. The greedy solution has weight{' '}
+              <InlineMath math="|I|(1 + \epsilon)" />, but{' '}
+              <InlineMath math="J" /> achieves <InlineMath math="|J| > |I|(1 + \epsilon)" />{' '}
+              for small enough <InlineMath math="\epsilon" />. Greedy fails.
+            </p>
+          </>
+        }
+      >
         <p>
           A hereditary system <InlineMath math="(E, \mathcal{I})" /> is a matroid if and
           only if the greedy algorithm produces a maximum-weight base for every weight
@@ -207,7 +307,42 @@ export default function Section24() {
         </p>
       </Definition>
 
-      <Theorem title="Matroid Intersection Theorem">
+      <Theorem
+        title="Matroid Intersection Theorem"
+        proof={
+          <>
+            <p>
+              <strong>Upper bound (weak duality):</strong> For any{' '}
+              <InlineMath math="A \subseteq E" /> and any common independent set{' '}
+              <InlineMath math="I \in \mathcal{I}_1 \cap \mathcal{I}_2" />:
+            </p>
+            <MathBlock math="|I| = |I \cap A| + |I \cap (E-A)| \leq r_1(A) + r_2(E-A)" />
+            <p className="mt-2">
+              since <InlineMath math="I \cap A" /> is independent in{' '}
+              <InlineMath math="M_1" /> and <InlineMath math="I \cap (E-A)" /> is
+              independent in <InlineMath math="M_2" />.
+            </p>
+            <p className="mt-2">
+              <strong>Equality (strong duality):</strong> The proof uses an augmenting
+              path algorithm. Given a common independent set <InlineMath math="I" />,
+              construct an auxiliary directed bipartite graph where:
+            </p>
+            <ul className="list-disc list-inside mt-2">
+              <li>One part is <InlineMath math="I" />, other part is <InlineMath math="E - I" /></li>
+              <li>
+                Arcs encode which elements can be exchanged while preserving independence
+              </li>
+            </ul>
+            <p className="mt-2">
+              An augmenting path from <InlineMath math="E - I" /> to <InlineMath math="E - I" />{' '}
+              (through <InlineMath math="I" />) allows increasing <InlineMath math="|I|" />.
+              When no augmenting path exists, <InlineMath math="I" /> is maximum and
+              the partition <InlineMath math="A" /> achieving equality can be constructed
+              from the reachable set.
+            </p>
+          </>
+        }
+      >
         <p>
           The maximum size of a common independent set equals:
         </p>

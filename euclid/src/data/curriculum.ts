@@ -676,63 +676,789 @@ export const curriculum: Part[] = [
     ],
   },
   // ==========================================================================
-  // PART 4: THEORY OF PROPORTIONS (Books V-VI) - Placeholder
+  // BOOK IV: INSCRIBED AND CIRCUMSCRIBED FIGURES
   // ==========================================================================
   {
     id: 4,
-    title: 'Books V-VI: Theory of Proportions',
-    slug: 'proportions',
+    title: 'Book IV: Inscribed and Circumscribed Figures',
+    slug: 'book-iv',
     sections: [
       {
         id: 102,
-        title: 'Coming Soon: Book V',
-        slug: 'book-v-placeholder',
-        description: 'Book V develops the arithmetic theory of proportion, applicable to commensurable and incommensurable magnitudes.',
+        title: 'Book IV Definitions',
+        slug: 'book-iv-definitions',
+        description: 'Definitions of inscribed and circumscribed figures in circles.',
+      },
+      {
+        id: 103,
+        title: 'Proposition IV.1: Fitting a Chord Equal to Given Line',
+        slug: 'prop-iv-1',
+        description: 'Into a given circle to fit a straight line equal to a given straight line which is not greater than the diameter of the circle.',
+      },
+      {
+        id: 104,
+        title: 'Proposition IV.2: Inscribing a Triangle',
+        slug: 'prop-iv-2',
+        description: 'In a given circle to inscribe a triangle equiangular with a given triangle.',
+      },
+      {
+        id: 105,
+        title: 'Proposition IV.3: Circumscribing a Triangle',
+        slug: 'prop-iv-3',
+        description: 'About a given circle to circumscribe a triangle equiangular with a given triangle.',
+      },
+      {
+        id: 106,
+        title: 'Proposition IV.4: Inscribing a Circle in a Triangle',
+        slug: 'prop-iv-4',
+        description: 'In a given triangle to inscribe a circle.',
+      },
+      {
+        id: 107,
+        title: 'Proposition IV.5: Circumscribing a Circle About a Triangle',
+        slug: 'prop-iv-5',
+        description: 'About a given triangle to circumscribe a circle.',
+      },
+      {
+        id: 108,
+        title: 'Proposition IV.6: Inscribing a Square in a Circle',
+        slug: 'prop-iv-6',
+        description: 'In a given circle to inscribe a square.',
+      },
+      {
+        id: 109,
+        title: 'Proposition IV.7: Circumscribing a Square About a Circle',
+        slug: 'prop-iv-7',
+        description: 'About a given circle to circumscribe a square.',
+      },
+      {
+        id: 110,
+        title: 'Proposition IV.8: Inscribing a Circle in a Square',
+        slug: 'prop-iv-8',
+        description: 'In a given square to inscribe a circle.',
+      },
+      {
+        id: 111,
+        title: 'Proposition IV.9: Circumscribing a Circle About a Square',
+        slug: 'prop-iv-9',
+        description: 'About a given square to circumscribe a circle.',
+      },
+      {
+        id: 112,
+        title: 'Proposition IV.10: Isosceles Triangle for Pentagon',
+        slug: 'prop-iv-10',
+        description: 'To construct an isosceles triangle having each of the angles at the base double of the remaining one.',
+      },
+      {
+        id: 113,
+        title: 'Proposition IV.11: Inscribing a Regular Pentagon',
+        slug: 'prop-iv-11',
+        description: 'In a given circle to inscribe an equilateral and equiangular pentagon.',
+      },
+      {
+        id: 114,
+        title: 'Proposition IV.12: Circumscribing a Regular Pentagon',
+        slug: 'prop-iv-12',
+        description: 'About a given circle to circumscribe an equilateral and equiangular pentagon.',
+      },
+      {
+        id: 115,
+        title: 'Proposition IV.13: Inscribing a Circle in a Pentagon',
+        slug: 'prop-iv-13',
+        description: 'In a given equilateral and equiangular pentagon to inscribe a circle.',
+      },
+      {
+        id: 116,
+        title: 'Proposition IV.14: Circumscribing a Circle About a Pentagon',
+        slug: 'prop-iv-14',
+        description: 'About a given equilateral and equiangular pentagon to circumscribe a circle.',
+      },
+      {
+        id: 117,
+        title: 'Proposition IV.15: Inscribing a Regular Hexagon',
+        slug: 'prop-iv-15',
+        description: 'In a given circle to inscribe an equilateral and equiangular hexagon.',
+      },
+      {
+        id: 118,
+        title: 'Proposition IV.16: Inscribing a Regular 15-gon',
+        slug: 'prop-iv-16',
+        description: 'In a given circle to inscribe a fifteen-angled figure which shall be both equilateral and equiangular.',
       },
     ],
   },
   // ==========================================================================
-  // PART 5: NUMBER THEORY (Books VII-IX) - Placeholder
+  // BOOK V: THEORY OF PROPORTIONS
   // ==========================================================================
   {
     id: 5,
-    title: 'Books VII-IX: Number Theory',
-    slug: 'number-theory',
+    title: 'Book V: Theory of Proportions',
+    slug: 'book-v',
     sections: [
       {
-        id: 103,
-        title: 'Coming Soon: Book VII',
-        slug: 'book-vii-placeholder',
-        description: 'Books VII-IX deal with elementary number theory: prime numbers, greatest common divisors, and geometric series.',
+        id: 119,
+        title: 'Book V Definitions',
+        slug: 'book-v-definitions',
+        description: 'Definitions of ratio, proportion, and the fundamental concepts needed to compare magnitudes.',
+      },
+      {
+        id: 120,
+        title: 'Proposition V.1: Equimultiples Preserve Ratio',
+        slug: 'prop-v-1',
+        description: 'If any number of magnitudes are proportional, equimultiples taken of antecedents and consequents preserve the ratio.',
+      },
+      {
+        id: 121,
+        title: 'Proposition V.2: Sum with Equimultiples',
+        slug: 'prop-v-2',
+        description: 'If first:second = third:fourth, and fifth:second = sixth:fourth, then (first+fifth):second = (third+sixth):fourth.',
+      },
+      {
+        id: 122,
+        title: 'Proposition V.3: Multiples of Proportional Magnitudes',
+        slug: 'prop-v-3',
+        description: 'If first:second = third:fourth, then equimultiples of first and third have the same ratio to equimultiples of second and fourth.',
+      },
+      {
+        id: 123,
+        title: 'Proposition V.4: General Equimultiple Theorem',
+        slug: 'prop-v-4',
+        description: 'If first:second = third:fourth, any equimultiples of first and third have the same ratio to any equimultiples of second and fourth.',
+      },
+      {
+        id: 124,
+        title: 'Proposition V.5: Subtraction of Equimultiples',
+        slug: 'prop-v-5',
+        description: 'If a magnitude is the same multiple of another that a part subtracted is of a part subtracted, the remainder is the same multiple of the remainder.',
+      },
+      {
+        id: 125,
+        title: 'Proposition V.6: Equimultiples and Remainders',
+        slug: 'prop-v-6',
+        description: 'If two magnitudes are equimultiples of two others, and parts subtracted are equimultiples of the same, the remainders are either equal or equimultiples.',
+      },
+      {
+        id: 126,
+        title: 'Proposition V.7: Equal Magnitudes and Ratio',
+        slug: 'prop-v-7',
+        description: 'Equal magnitudes have the same ratio to the same magnitude, and the same magnitude has the same ratio to equal magnitudes.',
+      },
+      {
+        id: 127,
+        title: 'Proposition V.8: Unequal Magnitudes and Ratio',
+        slug: 'prop-v-8',
+        description: 'Of unequal magnitudes, the greater has a greater ratio to the same than the less has; and the same has a greater ratio to the less than to the greater.',
+      },
+      {
+        id: 128,
+        title: 'Proposition V.9: Same Ratio Implies Equality',
+        slug: 'prop-v-9',
+        description: 'Magnitudes having the same ratio to the same are equal; and magnitudes to which the same has the same ratio are equal.',
+      },
+      {
+        id: 129,
+        title: 'Proposition V.10: Greater Ratio Implies Greater Magnitude',
+        slug: 'prop-v-10',
+        description: 'Of magnitudes having ratio to the same, that which has the greater ratio is greater; that to which the same has the greater ratio is less.',
+      },
+      {
+        id: 130,
+        title: 'Proposition V.11: Transitivity of Equal Ratios',
+        slug: 'prop-v-11',
+        description: 'Ratios equal to the same ratio are equal to one another.',
+      },
+      {
+        id: 131,
+        title: 'Proposition V.12: Sum of Proportional Magnitudes',
+        slug: 'prop-v-12',
+        description: 'If any number of magnitudes are proportional, as one antecedent is to one consequent, so are all antecedents to all consequents.',
+      },
+      {
+        id: 132,
+        title: 'Proposition V.13: Order of Ratios',
+        slug: 'prop-v-13',
+        description: 'If first:second = third:fourth, and third:fourth > fifth:sixth, then first:second > fifth:sixth.',
+      },
+      {
+        id: 133,
+        title: 'Proposition V.14: Proportional Magnitudes and Order',
+        slug: 'prop-v-14',
+        description: 'If first:second = third:fourth, and first > third, then second > fourth; if equal, then equal; if less, then less.',
+      },
+      {
+        id: 134,
+        title: 'Proposition V.15: Parts and Like Multiples',
+        slug: 'prop-v-15',
+        description: 'Parts have the same ratio as the like multiples taken in corresponding order.',
+      },
+      {
+        id: 135,
+        title: 'Proposition V.16: Alternation (Alternando)',
+        slug: 'prop-v-16',
+        description: 'If four magnitudes are proportional, they will also be proportional alternately: first:third = second:fourth.',
+      },
+      {
+        id: 136,
+        title: 'Proposition V.17: Separation (Separando)',
+        slug: 'prop-v-17',
+        description: 'If magnitudes are proportional componendo, they will also be proportional separando: (A-B):B = (C-D):D.',
+      },
+      {
+        id: 137,
+        title: 'Proposition V.18: Composition (Componendo)',
+        slug: 'prop-v-18',
+        description: 'If magnitudes are proportional separando, they will also be proportional componendo: (A+B):B = (C+D):D.',
+      },
+      {
+        id: 138,
+        title: 'Proposition V.19: Conversion (Convertendo)',
+        slug: 'prop-v-19',
+        description: 'If whole:whole = part:part, then remainder:remainder = whole:whole.',
+      },
+      {
+        id: 139,
+        title: 'Proposition V.20: Perturbed Proportion (Ex Aequali)',
+        slug: 'prop-v-20',
+        description: 'If A:B = D:E and B:C = E:F in perturbed order, then A:C = D:F.',
+      },
+      {
+        id: 140,
+        title: 'Proposition V.21: Ordered Proportion (Ex Aequali)',
+        slug: 'prop-v-21',
+        description: 'If A:B = D:E and B:C = E:F in ordered proportion, then A:C = D:F.',
+      },
+      {
+        id: 141,
+        title: 'Proposition V.22: General Ex Aequali',
+        slug: 'prop-v-22',
+        description: 'If there are any number of magnitudes and others equal to them in multitude, taken two and two in the same ratio, they will also be in the same ratio ex aequali.',
+      },
+      {
+        id: 142,
+        title: 'Proposition V.23: Cross Multiplication (Ex Aequali)',
+        slug: 'prop-v-23',
+        description: 'If A:B = E:F and B:C = D:E (cross order), then A:C = D:F.',
+      },
+      {
+        id: 143,
+        title: 'Proposition V.24: Adding Proportional Magnitudes',
+        slug: 'prop-v-24',
+        description: 'If first:second = third:fourth and fifth:second = sixth:fourth, then (first+fifth):second = (third+sixth):fourth.',
+      },
+      {
+        id: 144,
+        title: 'Proposition V.25: Greatest and Least of Proportionals',
+        slug: 'prop-v-25',
+        description: 'If four magnitudes are proportional, the greatest and least together are greater than the remaining two together.',
       },
     ],
   },
   // ==========================================================================
-  // PART 6: INCOMMENSURABLE MAGNITUDES (Book X) - Placeholder
+  // BOOK VI: SIMILAR FIGURES
   // ==========================================================================
   {
     id: 6,
+    title: 'Book VI: Similar Figures',
+    slug: 'book-vi',
+    sections: [
+      {
+        id: 145,
+        title: 'Book VI Definitions',
+        slug: 'book-vi-definitions',
+        description: 'Definitions of similar rectilinear figures, reciprocally related figures, and extreme/mean ratio.',
+      },
+      {
+        id: 146,
+        title: 'Proposition VI.1: Triangles and Parallelograms with Same Height',
+        slug: 'prop-vi-1',
+        description: 'Triangles and parallelograms under the same height are to one another as their bases.',
+      },
+      {
+        id: 147,
+        title: 'Proposition VI.2: Parallel to Base Cuts Proportionally',
+        slug: 'prop-vi-2',
+        description: 'If a straight line is drawn parallel to one side of a triangle, it cuts the other sides proportionally; and conversely.',
+      },
+      {
+        id: 148,
+        title: 'Proposition VI.3: Angle Bisector Theorem',
+        slug: 'prop-vi-3',
+        description: 'If an angle of a triangle is bisected, the bisector divides the opposite side in the ratio of the adjacent sides.',
+      },
+      {
+        id: 149,
+        title: 'Proposition VI.4: Equiangular Triangles Have Proportional Sides',
+        slug: 'prop-vi-4',
+        description: 'In equiangular triangles the sides about the equal angles are proportional.',
+      },
+      {
+        id: 150,
+        title: 'Proposition VI.5: Proportional Sides Imply Equiangular',
+        slug: 'prop-vi-5',
+        description: 'If two triangles have their sides proportional, the triangles are equiangular with equal angles opposite corresponding sides.',
+      },
+      {
+        id: 151,
+        title: 'Proposition VI.6: Two Angles and Proportional Sides',
+        slug: 'prop-vi-6',
+        description: 'If two triangles have one angle equal and the sides about that angle proportional, the triangles are equiangular.',
+      },
+      {
+        id: 152,
+        title: 'Proposition VI.7: One Angle Equal and Adjacent Sides Proportional',
+        slug: 'prop-vi-7',
+        description: 'If two triangles have one angle equal and sides about other angles proportional, and the remaining angles both less than or both not less than a right angle, the triangles are equiangular.',
+      },
+      {
+        id: 153,
+        title: 'Proposition VI.8: Right Triangle Altitude',
+        slug: 'prop-vi-8',
+        description: 'If in a right-angled triangle a perpendicular is drawn from the right angle to the hypotenuse, the triangles formed are similar to the whole and to one another.',
+      },
+      {
+        id: 154,
+        title: 'Proposition VI.9: Cutting Off a Given Fraction',
+        slug: 'prop-vi-9',
+        description: 'From a given straight line to cut off a prescribed part.',
+      },
+      {
+        id: 155,
+        title: 'Proposition VI.10: Dividing a Line Similarly',
+        slug: 'prop-vi-10',
+        description: 'To cut a given uncut straight line similarly to a given cut straight line.',
+      },
+      {
+        id: 156,
+        title: 'Proposition VI.11: Third Proportional',
+        slug: 'prop-vi-11',
+        description: 'To find a third proportional to two given straight lines.',
+      },
+      {
+        id: 157,
+        title: 'Proposition VI.12: Fourth Proportional',
+        slug: 'prop-vi-12',
+        description: 'To find a fourth proportional to three given straight lines.',
+      },
+      {
+        id: 158,
+        title: 'Proposition VI.13: Mean Proportional',
+        slug: 'prop-vi-13',
+        description: 'To find a mean proportional to two given straight lines.',
+      },
+      {
+        id: 159,
+        title: 'Proposition VI.14: Equal Parallelograms with Equal Angles',
+        slug: 'prop-vi-14',
+        description: 'In equal parallelograms with one angle equal to one angle, the sides about the equal angles are reciprocally proportional; and conversely.',
+      },
+      {
+        id: 160,
+        title: 'Proposition VI.15: Equal Triangles with One Angle Equal',
+        slug: 'prop-vi-15',
+        description: 'In equal triangles with one angle equal to one angle, the sides about the equal angles are reciprocally proportional; and conversely.',
+      },
+      {
+        id: 161,
+        title: 'Proposition VI.16: Rectangle from Extremes Equals Rectangle from Means',
+        slug: 'prop-vi-16',
+        description: 'If four straight lines are proportional, the rectangle of the extremes equals the rectangle of the means; and conversely.',
+      },
+      {
+        id: 162,
+        title: 'Proposition VI.17: Rectangle from Three Proportionals',
+        slug: 'prop-vi-17',
+        description: 'If three straight lines are proportional, the rectangle of the extremes equals the square on the mean; and conversely.',
+      },
+      {
+        id: 163,
+        title: 'Proposition VI.18: Constructing Similar Polygons',
+        slug: 'prop-vi-18',
+        description: 'On a given straight line to describe a rectilinear figure similar and similarly situated to a given one.',
+      },
+      {
+        id: 164,
+        title: 'Proposition VI.19: Similar Triangles and Duplicate Ratio',
+        slug: 'prop-vi-19',
+        description: 'Similar triangles are to one another in the duplicate ratio of their corresponding sides.',
+      },
+      {
+        id: 165,
+        title: 'Proposition VI.20: Similar Polygons and Duplicate Ratio',
+        slug: 'prop-vi-20',
+        description: 'Similar polygons are divided into similar triangles, and the polygons are in the duplicate ratio of corresponding sides.',
+      },
+      {
+        id: 166,
+        title: 'Proposition VI.21: Figures with Same Ratio to Third',
+        slug: 'prop-vi-21',
+        description: 'Figures which are similar to the same rectilinear figure are also similar to one another.',
+      },
+      {
+        id: 167,
+        title: 'Proposition VI.22: Proportional Lines Give Similar Figures',
+        slug: 'prop-vi-22',
+        description: 'If four straight lines are proportional, similar rectilinear figures similarly described on them are also proportional.',
+      },
+      {
+        id: 168,
+        title: 'Proposition VI.23: Equiangular Parallelograms',
+        slug: 'prop-vi-23',
+        description: 'Equiangular parallelograms have to one another the ratio compounded of the ratios of their sides.',
+      },
+      {
+        id: 169,
+        title: 'Proposition VI.24: Parallelograms About Diameter',
+        slug: 'prop-vi-24',
+        description: 'In any parallelogram the parallelograms about the diameter are similar to the whole and to one another.',
+      },
+      {
+        id: 170,
+        title: 'Proposition VI.25: Constructing Equal Similar Figures',
+        slug: 'prop-vi-25',
+        description: 'To construct a figure similar to one given figure and equal to another.',
+      },
+      {
+        id: 171,
+        title: 'Proposition VI.26: Parallelogram Gnomon',
+        slug: 'prop-vi-26',
+        description: 'If from a parallelogram a parallelogram is subtracted similar and similarly situated to the whole and sharing one angle, it is about the same diameter as the whole.',
+      },
+      {
+        id: 172,
+        title: 'Proposition VI.27: Maximum Parallelogram on Half Line',
+        slug: 'prop-vi-27',
+        description: 'Of all parallelograms applied to the same straight line and deficient by parallelogrammic figures similar to a given one, the greatest is that applied to the half and similar to the defect.',
+      },
+      {
+        id: 173,
+        title: 'Proposition VI.28: Applying Deficient Parallelogram',
+        slug: 'prop-vi-28',
+        description: 'To apply to a given straight line a parallelogram equal to a given rectilinear figure and deficient by a parallelogrammic figure similar to a given one.',
+      },
+      {
+        id: 174,
+        title: 'Proposition VI.29: Applying Exceeding Parallelogram',
+        slug: 'prop-vi-29',
+        description: 'To apply to a given straight line a parallelogram equal to a given rectilinear figure and exceeding by a parallelogrammic figure similar to a given one.',
+      },
+      {
+        id: 175,
+        title: 'Proposition VI.30: Extreme and Mean Ratio',
+        slug: 'prop-vi-30',
+        description: 'To cut a given finite straight line in extreme and mean ratio.',
+      },
+      {
+        id: 176,
+        title: 'Proposition VI.31: Generalized Pythagorean Theorem',
+        slug: 'prop-vi-31',
+        description: 'In right-angled triangles the figure on the hypotenuse is equal to the similar figures on the sides containing the right angle.',
+      },
+      {
+        id: 177,
+        title: 'Proposition VI.32: Triangles with Parallel Sides',
+        slug: 'prop-vi-32',
+        description: 'If two triangles have two sides proportional to two sides and are placed with the corresponding sides parallel, their remaining sides are in a straight line.',
+      },
+      {
+        id: 178,
+        title: 'Proposition VI.33: Arcs and Central Angles',
+        slug: 'prop-vi-33',
+        description: 'In equal circles, angles have the same ratio as the arcs on which they stand, whether at the centers or at the circumferences.',
+      },
+    ],
+  },
+  // ==========================================================================
+  // BOOK VII: ELEMENTARY NUMBER THEORY
+  // ==========================================================================
+  {
+    id: 7,
+    title: 'Book VII: Elementary Number Theory',
+    slug: 'book-vii',
+    sections: [
+      {
+        id: 179,
+        title: 'Book VII Definitions',
+        slug: 'book-vii-definitions',
+        description: 'Definitions of unit, number, even, odd, prime, composite, relatively prime, perfect number, and operations on numbers.',
+      },
+      {
+        id: 180,
+        title: 'Proposition VII.1: Test for Relatively Prime Numbers',
+        slug: 'prop-vii-1',
+        description: 'Two unequal numbers being set out, and the less being continually subtracted from the greater, if the remainder never measures the one before it until a unit is left, the original numbers are relatively prime.',
+      },
+      {
+        id: 181,
+        title: 'Proposition VII.2: The Euclidean Algorithm',
+        slug: 'prop-vii-2',
+        description: 'Given two numbers not relatively prime to one another, to find their greatest common measure.',
+      },
+      {
+        id: 182,
+        title: 'Proposition VII.3: GCD of Three Numbers',
+        slug: 'prop-vii-3',
+        description: 'Given three numbers not relatively prime to one another, to find their greatest common measure.',
+      },
+      {
+        id: 183,
+        title: 'Proposition VII.4: Part or Parts',
+        slug: 'prop-vii-4',
+        description: 'Any number is either a part or parts of any number, the less of the greater.',
+      },
+      {
+        id: 184,
+        title: 'Proposition VII.5: Sum of Parts',
+        slug: 'prop-vii-5',
+        description: 'If a number be a part of a number, and another be the same part of another, the sum will also be the same part of the sum.',
+      },
+      {
+        id: 185,
+        title: 'Proposition VII.6: Sum of Parts (General)',
+        slug: 'prop-vii-6',
+        description: 'If a number be parts of a number, and another be the same parts of another, the sum will also be the same parts of the sum.',
+      },
+      {
+        id: 186,
+        title: 'Proposition VII.7: Subtraction of Parts',
+        slug: 'prop-vii-7',
+        description: 'If a number be that part of a number which a subtracted number is of a subtracted number, the remainder is the same part of the remainder.',
+      },
+      {
+        id: 187,
+        title: 'Proposition VII.8: Subtraction of Parts (General)',
+        slug: 'prop-vii-8',
+        description: 'If a number be the same parts of a number that a subtracted number is of a subtracted number, the remainder is the same parts of the remainder.',
+      },
+      {
+        id: 188,
+        title: 'Proposition VII.9: Alternation of Parts',
+        slug: 'prop-vii-9',
+        description: 'If a number be a part of a number, and another be the same part of another, alternately, whatever part the first is of the third, the same part is the second of the fourth.',
+      },
+      {
+        id: 189,
+        title: 'Proposition VII.10: Alternation of Parts (General)',
+        slug: 'prop-vii-10',
+        description: 'If a number be parts of a number, and another be the same parts of another, alternately, whatever parts the first is of the third, the same parts is the second of the fourth.',
+      },
+      {
+        id: 190,
+        title: 'Proposition VII.11: Proportion of Remainders',
+        slug: 'prop-vii-11',
+        description: 'If whole is to whole as a subtracted number is to a subtracted number, the remainder is to the remainder as whole is to whole.',
+      },
+      {
+        id: 191,
+        title: 'Proposition VII.12: Sum of Proportional Numbers',
+        slug: 'prop-vii-12',
+        description: 'If there be as many numbers as we please in proportion, as one of the antecedents is to one of the consequents, so are all the antecedents to all the consequents.',
+      },
+      {
+        id: 192,
+        title: 'Proposition VII.13: Alternation of Proportion',
+        slug: 'prop-vii-13',
+        description: 'If four numbers be proportional, they will also be proportional alternately.',
+      },
+      {
+        id: 193,
+        title: 'Proposition VII.14: Ex Aequali for Numbers',
+        slug: 'prop-vii-14',
+        description: 'If there be as many numbers as we please, and others equal to them in multitude, which taken two and two are in the same ratio, they will also be in the same ratio ex aequali.',
+      },
+      {
+        id: 194,
+        title: 'Proposition VII.15: Unit and Multiplication',
+        slug: 'prop-vii-15',
+        description: 'If a unit measures any number, and another number measures any other number the same number of times, alternately also, the unit will measure the third number the same number of times.',
+      },
+      {
+        id: 195,
+        title: 'Proposition VII.16: Commutativity of Multiplication',
+        slug: 'prop-vii-16',
+        description: 'If two numbers by multiplying one another make certain numbers, the numbers so produced will be equal to one another.',
+      },
+      {
+        id: 196,
+        title: 'Proposition VII.17: Products and Proportions',
+        slug: 'prop-vii-17',
+        description: 'If a number by multiplying two numbers make certain numbers, the numbers so produced will have the same ratio as the numbers multiplied.',
+      },
+      {
+        id: 197,
+        title: 'Proposition VII.18: Products and Proportions (Converse)',
+        slug: 'prop-vii-18',
+        description: 'If two numbers by multiplying any number make certain numbers, the numbers so produced will have the same ratio as the multipliers.',
+      },
+      {
+        id: 198,
+        title: 'Proposition VII.19: Products of Proportional Numbers',
+        slug: 'prop-vii-19',
+        description: 'If four numbers be proportional, the number produced from the first and fourth will be equal to the number produced from the second and third.',
+      },
+      {
+        id: 199,
+        title: 'Proposition VII.20: Least Numbers in Ratio',
+        slug: 'prop-vii-20',
+        description: 'The least numbers of those which have the same ratio with them measure those which have the same ratio the same number of times.',
+      },
+      {
+        id: 200,
+        title: 'Proposition VII.21: Relatively Prime are Least',
+        slug: 'prop-vii-21',
+        description: 'Numbers relatively prime to one another are the least of those which have the same ratio with them.',
+      },
+      {
+        id: 201,
+        title: 'Proposition VII.22: Least Numbers are Relatively Prime',
+        slug: 'prop-vii-22',
+        description: 'The least numbers of those which have the same ratio with them are relatively prime to one another.',
+      },
+      {
+        id: 202,
+        title: 'Proposition VII.23: Divisor of Relatively Prime',
+        slug: 'prop-vii-23',
+        description: 'If two numbers be relatively prime to one another, the number which measures one of them will be relatively prime to the remaining number.',
+      },
+      {
+        id: 203,
+        title: 'Proposition VII.24: Product Relatively Prime',
+        slug: 'prop-vii-24',
+        description: 'If two numbers be relatively prime to any number, their product also will be relatively prime to the same.',
+      },
+      {
+        id: 204,
+        title: 'Proposition VII.25: Square Relatively Prime',
+        slug: 'prop-vii-25',
+        description: 'If two numbers be relatively prime to one another, the product of one of them into itself will be relatively prime to the remaining one.',
+      },
+      {
+        id: 205,
+        title: 'Proposition VII.26: Products of Relatively Prime Pairs',
+        slug: 'prop-vii-26',
+        description: 'If two numbers be relatively prime to two numbers, both to each, their products also will be relatively prime to one another.',
+      },
+      {
+        id: 206,
+        title: 'Proposition VII.27: Powers of Relatively Prime Numbers',
+        slug: 'prop-vii-27',
+        description: 'If two numbers be relatively prime to one another, and each multiplying itself make a certain number, the products will be relatively prime; and if the originals multiplying the products make certain numbers, these will also be relatively prime.',
+      },
+      {
+        id: 207,
+        title: 'Proposition VII.28: Sum of Relatively Prime Numbers',
+        slug: 'prop-vii-28',
+        description: 'If two numbers be relatively prime to one another, the sum will also be relatively prime to each of them; and conversely.',
+      },
+      {
+        id: 208,
+        title: 'Proposition VII.29: Prime to Non-Multiple',
+        slug: 'prop-vii-29',
+        description: 'Any prime number is relatively prime to any number which it does not measure.',
+      },
+      {
+        id: 209,
+        title: "Proposition VII.30: Euclid's Lemma",
+        slug: 'prop-vii-30',
+        description: 'If two numbers by multiplying one another make some number, and any prime number measure the product, it will also measure one of the original numbers.',
+      },
+      {
+        id: 210,
+        title: 'Proposition VII.31: Composite Has Prime Factor',
+        slug: 'prop-vii-31',
+        description: 'Any composite number is measured by some prime number.',
+      },
+      {
+        id: 211,
+        title: 'Proposition VII.32: Every Number is Prime or Has Prime Factor',
+        slug: 'prop-vii-32',
+        description: 'Any number either is prime or is measured by some prime number.',
+      },
+      {
+        id: 212,
+        title: 'Proposition VII.33: Finding Least Numbers in Ratio',
+        slug: 'prop-vii-33',
+        description: 'Given as many numbers as we please, to find the least of those which have the same ratio with them.',
+      },
+      {
+        id: 213,
+        title: 'Proposition VII.34: Finding LCM of Two Numbers',
+        slug: 'prop-vii-34',
+        description: 'Given two numbers, to find the least number which they measure.',
+      },
+      {
+        id: 214,
+        title: 'Proposition VII.35: LCM Divides Common Multiples',
+        slug: 'prop-vii-35',
+        description: 'If two numbers measure any number, the least number measured by them will also measure the same.',
+      },
+      {
+        id: 215,
+        title: 'Proposition VII.36: Finding LCM of Three Numbers',
+        slug: 'prop-vii-36',
+        description: 'Given three numbers, to find the least number which they measure.',
+      },
+      {
+        id: 216,
+        title: 'Proposition VII.37: Divisor and Named Parts',
+        slug: 'prop-vii-37',
+        description: 'If a number be measured by any number, the number which is measured will have a part called by the same name as the measuring number.',
+      },
+      {
+        id: 217,
+        title: 'Proposition VII.38: Part and Divisor',
+        slug: 'prop-vii-38',
+        description: 'If a number have any part whatever, it will be measured by a number called by the same name as the part.',
+      },
+      {
+        id: 218,
+        title: 'Proposition VII.39: Finding Number with Given Parts',
+        slug: 'prop-vii-39',
+        description: 'To find the number which is the least that will have given parts.',
+      },
+    ],
+  },
+  // ==========================================================================
+  // BOOKS VIII-IX: NUMBER THEORY (Continued) - Placeholder
+  // ==========================================================================
+  {
+    id: 8,
+    title: 'Books VIII-IX: Number Theory (Continued)',
+    slug: 'books-viii-ix',
+    sections: [
+      {
+        id: 219,
+        title: 'Coming Soon: Book VIII',
+        slug: 'book-viii-placeholder',
+        description: 'Book VIII continues number theory with proportions in continued proportion and properties of squares and cubes.',
+      },
+    ],
+  },
+  // ==========================================================================
+  // BOOK X: INCOMMENSURABLE MAGNITUDES - Placeholder
+  // ==========================================================================
+  {
+    id: 9,
     title: 'Book X: Incommensurable Magnitudes',
     slug: 'incommensurables',
     sections: [
       {
-        id: 104,
+        id: 220,
         title: 'Coming Soon: Book X',
         slug: 'book-x-placeholder',
-        description: 'Book X classifies incommensurable (irrational) magnitudes using the method of exhaustion.',
+        description: 'Book X classifies incommensurable (irrational) magnitudes—the longest book in the Elements.',
       },
     ],
   },
   // ==========================================================================
-  // PART 7: SOLID GEOMETRY (Books XI-XIII) - Placeholder
+  // BOOKS XI-XIII: SOLID GEOMETRY - Placeholder
   // ==========================================================================
   {
-    id: 7,
+    id: 10,
     title: 'Books XI-XIII: Solid Geometry',
     slug: 'solid-geometry',
     sections: [
       {
-        id: 105,
+        id: 221,
         title: 'Coming Soon: Book XI',
         slug: 'book-xi-placeholder',
         description: 'Books XI-XIII cover three-dimensional geometry, culminating in the construction of the five Platonic solids.',
@@ -810,10 +1536,13 @@ export function getBookNumber(sectionId: number): number {
   if (sectionId <= 48) return 1;
   if (sectionId <= 63) return 2;
   if (sectionId <= 101) return 3;
-  if (sectionId <= 102) return 5; // Placeholder
-  if (sectionId <= 103) return 7; // Placeholder
-  if (sectionId <= 104) return 10; // Placeholder
-  return 11; // Placeholder
+  if (sectionId <= 118) return 4;
+  if (sectionId <= 144) return 5;
+  if (sectionId <= 178) return 6;
+  if (sectionId <= 218) return 7;
+  if (sectionId <= 219) return 8; // Placeholder for VIII-IX
+  if (sectionId <= 220) return 10; // Placeholder for X
+  return 11; // Placeholder for XI-XIII
 }
 
 /**
@@ -826,5 +1555,13 @@ export function getPropositionNumber(sectionId: number): string {
   if (sectionId <= 63) return `II.${sectionId - 49}`;
   if (sectionId === 64) return 'III Definitions';
   if (sectionId <= 101) return `III.${sectionId - 64}`;
+  if (sectionId === 102) return 'IV Definitions';
+  if (sectionId <= 118) return `IV.${sectionId - 102}`;
+  if (sectionId === 119) return 'V Definitions';
+  if (sectionId <= 144) return `V.${sectionId - 119}`;
+  if (sectionId === 145) return 'VI Definitions';
+  if (sectionId <= 178) return `VI.${sectionId - 145}`;
+  if (sectionId === 179) return 'VII Definitions';
+  if (sectionId <= 218) return `VII.${sectionId - 179}`;
   return '';
 }

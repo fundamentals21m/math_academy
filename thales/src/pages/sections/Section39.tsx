@@ -20,7 +20,7 @@ export default function Section39() {
       {/* Warm-up */}
       <h3 className="text-xl font-semibold mt-8 mb-4">A Warm-Up Exercise</h3>
 
-      <Callout type="note" title="Every Integer is a Sum of Five Cubes">
+      <Callout type="info" title="Every Integer is a Sum of Five Cubes">
         <p className="mb-2">
           Let <InlineMath>{`m`}</InlineMath> be an integer. Since{' '}
           <InlineMath>{`m - m^3 = -(m-1)m(m+1)`}</InlineMath>, it follows that{' '}
@@ -41,7 +41,7 @@ export default function Section39() {
       {/* Integer Quaternions */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Integer Quaternions</h3>
 
-      <Callout type="definition" title="Integer Quaternion (Lipschitz Integer)">
+      <Callout type="info" title="Integer Quaternion (Lipschitz Integer)">
         <p>
           Following Lipschitz [1886], an <strong>integer quaternion</strong> is a
           quaternion with integer coefficients:
@@ -59,7 +59,7 @@ export default function Section39() {
       {/* Euler's Lemma */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Euler's Lemma</h3>
 
-      <Callout type="theorem" title="Lemma (Euler)">
+      <Callout type="success" title="Lemma (Euler)">
         <p className="mb-2">
           For every odd prime <InlineMath>{`p`}</InlineMath>, there exist integers{' '}
           <InlineMath>{`x`}</InlineMath> and <InlineMath>{`y`}</InlineMath> such that:
@@ -103,7 +103,7 @@ export default function Section39() {
       {/* Lagrange's Theorem */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Lagrange's Four-Square Theorem</h3>
 
-      <Callout type="theorem" title="Theorem (Lagrange, 1770)">
+      <Callout type="success" title="Theorem (Lagrange, 1770)">
         <p className="mb-2">
           Every natural number <InlineMath>{`n`}</InlineMath> is the sum of four
           perfect squares:
@@ -217,7 +217,7 @@ export default function Section39() {
       {/* Related Results */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Related Results</h3>
 
-      <Callout type="note" title="Three Squares">
+      <Callout type="info" title="Three Squares">
         <p>
           Numbers of the form <InlineMath>{`8k + 7`}</InlineMath> <strong>cannot</strong>{' '}
           be expressed as sums of three perfect squares. However, all other positive
@@ -225,7 +225,7 @@ export default function Section39() {
         </p>
       </Callout>
 
-      <Callout type="note" title="Two Squares" className="mt-4">
+      <Callout type="info" title="Two Squares" className="mt-4">
         <p>
           A prime <InlineMath>{`p`}</InlineMath> can be expressed as the sum of two
           squares if and only if <InlineMath>{`p = 2`}</InlineMath> or{' '}

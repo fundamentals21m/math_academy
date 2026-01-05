@@ -38,7 +38,7 @@ export default function Section34() {
       {/* Equivalence Relation */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Equivalence Relation</h3>
 
-      <Callout type="definition" title="Equivalence of Pairs">
+      <Callout type="info" title="Equivalence of Pairs">
         <p className="mb-2">
           For pairs of integers <InlineMath>{`(a, b)`}</InlineMath> and{' '}
           <InlineMath>{`(c, d)`}</InlineMath> with <InlineMath>{`b, d \\neq 0`}</InlineMath>,
@@ -81,7 +81,7 @@ export default function Section34() {
       {/* Defining Rationals */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Defining Rational Numbers</h3>
 
-      <Callout type="definition" title="Ratio (Rational Number)">
+      <Callout type="info" title="Ratio (Rational Number)">
         <p>
           Assuming <InlineMath>{`b \\neq 0`}</InlineMath>, we define the <strong>ratio</strong>{' '}
           <InlineMath>{`a/b`}</InlineMath> as the <strong>equivalence class</strong> of{' '}
@@ -188,7 +188,7 @@ a/b + c/d &= (ad + bc)/(bd) \\\\
       {/* Field of Quotients */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Field of Quotients</h3>
 
-      <Callout type="theorem" title="Field of Quotients">
+      <Callout type="success" title="Field of Quotients">
         <p>
           The same construction that produces <InlineMath>{`\\mathbb{Q}`}</InlineMath> from{' '}
           <InlineMath>{`\\mathbb{Z}`}</InlineMath> can be applied to{' '}
@@ -230,7 +230,7 @@ a/b + c/d &= (ad + bc)/(bd) \\\\
         </div>
       </Card>
 
-      <Callout type="note" title="Mathematical Convention">
+      <Callout type="info" title="Mathematical Convention">
         <p>
           It is a mathematical convention to identify <InlineMath>{`2`}</InlineMath> with{' '}
           <InlineMath>{`2/1`}</InlineMath> and say that{' '}

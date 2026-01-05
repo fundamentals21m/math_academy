@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
-type CourseId = 'ba' | 'crypto' | 'aa' | 'linalg' | 'advlinalg' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art' | 'calc_easy' | 'wm' | 'four_pillars' | 'mom';
+type CourseId = 'ba' | 'crypto' | 'aa' | 'linalg' | 'advlinalg' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art' | 'calc_easy' | 'wm' | 'four_pillars' | 'mom' | 'euclid' | 'thales' | 'gauss' | 'human_action' | 'atlas_shrugged' | 'template';
 
 interface ScoreUpdate {
   courseId: CourseId;
@@ -56,9 +56,9 @@ export const syncScores = functions.https.onCall(
       );
     }
 
-    const validCourses: CourseId[] = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom'];
+    const validCourses: CourseId[] = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom', 'euclid', 'thales', 'gauss', 'human_action', 'atlas_shrugged', 'template'];
     const batch = admin.firestore().batch();
-    const userScores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0 };
+    const userScores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0, euclid: 0, thales: 0, gauss: 0, human_action: 0, atlas_shrugged: 0, template: 0 };
 
     for (const score of scores) {
       if (!validCourses.includes(score.courseId)) {
@@ -143,7 +143,7 @@ export const getLeaderboard = functions.https.onCall(
   }> => {
     const { courseId, limit = 50 } = data || {};
 
-    const validOptions = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom', 'overall'];
+    const validOptions = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom', 'euclid', 'thales', 'gauss', 'human_action', 'atlas_shrugged', 'template', 'overall'];
     if (!courseId || !validOptions.includes(courseId)) {
       throw new functions.https.HttpsError(
         'invalid-argument',
@@ -330,7 +330,7 @@ export const getUserScores = functions.https.onCall(
 
     return {
       found: true,
-      scores: userData.scores || { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0 },
+      scores: userData.scores || { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0, euclid: 0, thales: 0, gauss: 0, human_action: 0, atlas_shrugged: 0, template: 0 },
       totalXP: userData.totalXP || 0,
       level: userData.level || 1,
       displayName: userData.displayName || null,

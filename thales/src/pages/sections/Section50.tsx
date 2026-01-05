@@ -21,7 +21,7 @@ export default function Section50() {
       {/* Recursive Sets */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Recursive Sets</h3>
 
-      <Callout type="definition" title="Recursive Set">
+      <Callout type="info" title="Recursive Set">
         <p>
           A set <InlineMath>{`A`}</InlineMath> of natural numbers is{' '}
           <strong>recursive</strong> (or <strong>decidable</strong>) if there
@@ -55,7 +55,7 @@ export default function Section50() {
       {/* Recursively Enumerable Sets */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Recursively Enumerable Sets</h3>
 
-      <Callout type="definition" title="Recursively Enumerable Set">
+      <Callout type="info" title="Recursively Enumerable Set">
         <p>
           A set <InlineMath>{`A`}</InlineMath> of natural numbers is{' '}
           <strong>recursively enumerable</strong> (r.e.) if there is a recursive
@@ -77,7 +77,7 @@ export default function Section50() {
       {/* Kleene's Theorem */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The Key Connection</h3>
 
-      <Callout type="theorem" title="Proposition 20.1 (Kleene)">
+      <Callout type="success" title="Proposition 20.1 (Kleene)">
         <p>
           Let <InlineMath>{`A`}</InlineMath> be a set of natural numbers and{' '}
           <InlineMath>{`A^c`}</InlineMath> its complement in{' '}
@@ -144,7 +144,7 @@ export default function Section50() {
       {/* Church's Theorem */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Church's Theorem</h3>
 
-      <Callout type="theorem" title="Church's Theorem">
+      <Callout type="success" title="Church's Theorem">
         <p>
           There is <strong>no algorithm</strong> for determining, in general,
           whether a given formula is a theorem of mathematics. In other words,
@@ -174,7 +174,7 @@ export default function Section50() {
       {/* Incompleteness */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The Incompleteness Theorem</h3>
 
-      <Callout type="theorem" title="Theorem 20.2 (Incompleteness)">
+      <Callout type="success" title="Theorem 20.2 (Incompleteness)">
         <p>
           There are mathematical formulas <InlineMath>{`p`}</InlineMath> such
           that neither <InlineMath>{`p`}</InlineMath> nor{' '}

@@ -1,0 +1,245 @@
+name: Regression Tests
+
+on:
+  pull_request:
+    branches: ['main', 'develop']
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+concurrency:
+  group: '${{ github.workflow }}-${{ github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  baseline-tests:
+    name: Baseline Regression Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          cd shared && npm ci
+          cd ../linalg && npm ci
+          cd ../crypto-react && npm ci
+          cd ../advanced-linalg && npm ci
+
+      - name: Run baseline tests
+        run: |
+          cd shared && npm run test:regression
+
+      - name: Generate coverage report
+        run: |
+          cd shared && npm run test:coverage
+
+      - name: Check coverage thresholds
+        run: |
+          cd shared
+          # Parse coverage JSON and check thresholds
+          COVERAGE=$(cat coverage/coverage-final.json | jq -r '.total.lines.pct')
+          echo "Lines coverage: ${COVERAGE}%"
+          if (( $(echo "$COVERAGE < 85" | bc -l) )); then
+            echo "❌ Coverage below 85% threshold"
+            exit 1
+          fi
+          echo "✅ Coverage meets 85% threshold"
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: shared/coverage/
+          retention-days: 30
+
+  snapshot-tests:
+    name: Snapshot Regression Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          cd shared && npm ci
+          cd ../linalg && npm ci
+          cd ../crypto-react && npm ci
+          cd ../advanced-linalg && npm ci
+
+      - name: Update snapshots
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          cd shared && npm run test:snapshot -- -u
+
+      - name: Run snapshot tests
+        run: |
+          cd shared && npm run test:snapshot
+
+      - name: Upload snapshot failures
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshot-failures
+          path: shared/test/snapshots/*.snap
+          retention-days: 7
+
+  type-check:
+    name: TypeScript Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          cd linalg && npm ci
+          cd ../crypto-react && npm ci
+          cd ../advanced-linalg && npm ci
+
+      - name: Typecheck linalg
+        run: |
+          cd linalg && npm run typecheck
+
+      - name: Typecheck crypto-react
+        run: |
+          cd crypto-react && npm run typecheck
+
+      - name: Typecheck advanced-linalg
+        run: |
+          cd advanced-linalg && npm run typecheck
+
+  lint-check:
+    name: ESLint Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          cd linalg && npm ci
+          cd ../crypto-react && npm ci
+          cd ../advanced-linalg && npm ci
+
+      - name: Lint linalg
+        run: |
+          cd linalg && npm run lint
+
+      - name: Lint crypto-react
+        run: |
+          cd crypto-react && npm run lint
+
+      - name: Lint advanced-linalg
+        run: |
+          cd advanced-linalg && npm run lint
+
+  build-check:
+    name: Build Verification
+    runs-on: ubuntu-latest
+    needs: [baseline-tests, snapshot-tests, type-check, lint-check]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          cd linalg && npm ci
+          cd ../crypto-react && npm ci
+          cd ../advanced-linalg && npm ci
+
+      - name: Build linalg
+        run: |
+          cd linalg && npm run build
+
+      - name: Build crypto-react
+        run: |
+          cd crypto-react && npm run build
+
+      - name: Build advanced-linalg
+        run: |
+          cd advanced-linalg && npm run build
+
+      - name: Verify build outputs
+        run: |
+          if [ ! -d "linalg/dist" ]; then echo "❌ linalg build failed"; exit 1; fi
+          if [ ! -d "crypto-react/dist" ]; then echo "❌ crypto-react build failed"; exit 1; fi
+          if [ ! -d "advanced-linalg/dist" ]; then echo "❌ advanced-linalg build failed"; exit 1; fi
+          echo "✅ All builds successful"
+
+  firebase-tests:
+    name: Firebase Functions Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          cd firebase/functions && npm ci
+
+      - name: Run tests
+        run: |
+          cd firebase/functions && npm run test:run
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: firebase-test-results
+          path: firebase/functions/test-results/
+          retention-days: 7
+
+  summary:
+    name: Test Summary
+    runs-on: ubuntu-latest
+    needs: [baseline-tests, snapshot-tests, type-check, lint-check, build-check, firebase-tests]
+    if: always()
+    steps:
+      - name: Generate summary
+        run: |
+          echo "# Regression Test Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## Results" >> $GITHUB_STEP_SUMMARY
+          echo "- Baseline Tests: ${{ needs.baseline-tests.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Snapshot Tests: ${{ needs.snapshot-tests.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Type Check: ${{ needs.type-check.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Lint Check: ${{ needs.lint-check.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Build Check: ${{ needs.build-check.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Firebase Tests: ${{ needs.firebase-tests.result }}" >> $GITHUB_STEP_SUMMARY

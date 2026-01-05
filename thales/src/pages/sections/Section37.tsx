@@ -34,7 +34,7 @@ export default function Section37() {
       </p>
 
       {/* The Theorem */}
-      <Callout type="theorem" title="The Fundamental Theorem of Algebra">
+      <Callout type="success" title="The Fundamental Theorem of Algebra">
         <p>
           Every polynomial equation with complex coefficients has complex solutions.
         </p>
@@ -95,7 +95,7 @@ export default function Section37() {
       </p>
 
       {/* Corollary */}
-      <Callout type="theorem" title="Corollary: Complete Factorization">
+      <Callout type="success" title="Corollary: Complete Factorization">
         <p className="mb-2">
           A polynomial of degree <InlineMath>{`m`}</InlineMath> with complex coefficients
           has exactly <InlineMath>{`m`}</InlineMath> linear factors (counting multiplicity):
@@ -126,7 +126,7 @@ export default function Section37() {
       {/* Analysis vs Algebra */}
       <h3 className="text-xl font-semibold mt-8 mb-4">A Curious Feature</h3>
 
-      <Callout type="note" title="Analysis Meets Algebra">
+      <Callout type="info" title="Analysis Meets Algebra">
         <p>
           It is a pity that the proof of the <em>fundamental theorem of algebra</em> makes
           use of the notion of <strong>continuity</strong>, which belongs to{' '}
@@ -149,7 +149,7 @@ export default function Section37() {
       {/* Conjugate Roots */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Conjugate Roots</h3>
 
-      <Callout type="theorem" title="Conjugate Root Theorem">
+      <Callout type="success" title="Conjugate Root Theorem">
         <p>
           If a polynomial <InlineMath>{`p(z)`}</InlineMath> has all <strong>real</strong>{' '}
           coefficients, and <InlineMath>{`x + yi`}</InlineMath> is a root, then so is

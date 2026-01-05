@@ -270,7 +270,40 @@ export default function Section17() {
         </ul>
       </Example>
 
-      <Theorem title="Properties of Duals (Theorem 6.1.15)">
+      <Theorem
+        title="Properties of Duals (Theorem 6.1.15)"
+        proof={
+          <>
+            <p><strong>(1) <InlineMath math="(G^*)^* = G" />:</strong></p>
+            <p className="mt-2">
+              Each face of <InlineMath math="G" /> becomes a vertex of <InlineMath math="G^*" />,
+              and each face of <InlineMath math="G^*" /> corresponds to a vertex of <InlineMath math="G" />.
+              The dual of the dual recovers the original embedding (for connected graphs).
+            </p>
+            <p className="mt-4"><strong>(2) Connectivity equivalence:</strong></p>
+            <p className="mt-2">
+              If <InlineMath math="G" /> is connected, there is exactly one face containing any two
+              faces' boundary paths, allowing construction of paths in <InlineMath math="G^*" />.
+              Conversely, if <InlineMath math="G" /> is disconnected, the infinite face of{' '}
+              <InlineMath math="G^*" /> "separates" the components.
+            </p>
+            <p className="mt-4"><strong>(3) Counting:</strong></p>
+            <p className="mt-2">
+              By construction: one vertex of <InlineMath math="G^*" /> per face of <InlineMath math="G" />,
+              one edge of <InlineMath math="G^*" /> per edge of <InlineMath math="G" /> (crossing it).
+              By Euler: <InlineMath math="n - m + f = 2" /> for both <InlineMath math="G" /> and{' '}
+              <InlineMath math="G^*" />, giving <InlineMath math="f(G^*) = |V(G)|" />.
+            </p>
+            <p className="mt-4"><strong>(4) Cycles ↔ Bonds:</strong></p>
+            <p className="mt-2">
+              A cycle <InlineMath math="C" /> in <InlineMath math="G" /> separates the plane into
+              inside and outside regions. The dual edges crossing <InlineMath math="C" /> form a
+              minimal edge set disconnecting the faces inside from those outside—precisely an edge
+              cut (bond) in <InlineMath math="G^*" />.
+            </p>
+          </>
+        }
+      >
         <ol className="list-decimal list-inside space-y-1">
           <li>
             <InlineMath math="(G^*)^* = G" /> (for connected <InlineMath math="G" />)
@@ -351,7 +384,39 @@ export default function Section17() {
         </p>
       </Definition>
 
-      <Theorem title="Outerplanar Characterization (Theorem 6.1.31)">
+      <Theorem
+        title="Outerplanar Characterization (Theorem 6.1.31)"
+        proof={
+          <>
+            <p>
+              <strong>Necessity:</strong> We show <InlineMath math="K_4" /> and{' '}
+              <InlineMath math="K_{'{'}2,3{'}'}" /> are not outerplanar.
+            </p>
+            <p className="mt-2">
+              For <InlineMath math="K_4" />: if all 4 vertices were on the outer face (a convex
+              quadrilateral), two edges would cross—contradiction.
+            </p>
+            <p className="mt-2">
+              For <InlineMath math="K_{'{'}2,3{'}'}" />: place the two vertices of the smaller part
+              on the outer boundary; the three vertices of the larger part must each connect to both,
+              requiring crossings.
+            </p>
+            <p className="mt-2">
+              Since minors preserve outerplanarity (deleting/contracting edges cannot create
+              outerplanar graphs from non-outerplanar ones), any graph with a{' '}
+              <InlineMath math="K_4" /> or <InlineMath math="K_{'{'}2,3{'}'}" /> minor is not outerplanar.
+            </p>
+            <p className="mt-2">
+              <strong>Sufficiency:</strong> Suppose <InlineMath math="G" /> has no{' '}
+              <InlineMath math="K_4" /> or <InlineMath math="K_{'{'}2,3{'}'}" /> minor. We show{' '}
+              <InlineMath math="G" /> is outerplanar by induction on <InlineMath math="n + m" />.
+              If <InlineMath math="G" /> is 2-connected, it has a vertex of degree 2 (by edge bound).
+              Contracting or deleting this vertex preserves the minor-free property, and the embedding
+              extends by placing the vertex on the outer face between its neighbors.
+            </p>
+          </>
+        }
+      >
         <p>
           A graph is outerplanar if and only if it has no <InlineMath math="K_4" /> or{' '}
           <InlineMath math="K_{2,3}" /> minor.
@@ -362,7 +427,34 @@ export default function Section17() {
         </p>
       </Theorem>
 
-      <Theorem title="Theorem 6.1.30 (Outerplanar Edge Bound)">
+      <Theorem
+        title="Theorem 6.1.30 (Outerplanar Edge Bound)"
+        proof={
+          <>
+            <p>
+              Consider an outerplanar embedding of <InlineMath math="G" /> with all vertices on
+              the outer face. Add a new vertex <InlineMath math="v" /> inside the outer face and
+              connect it to all <InlineMath math="n" /> vertices of <InlineMath math="G" />.
+            </p>
+            <p className="mt-2">
+              The resulting graph <InlineMath math="G'" /> is planar (all edges from{' '}
+              <InlineMath math="v" /> can be drawn inside without crossings). It has{' '}
+              <InlineMath math="n + 1" /> vertices and <InlineMath math="m + n" /> edges.
+            </p>
+            <p className="mt-2">
+              By the planar edge bound: <InlineMath math="m + n \leq 3(n + 1) - 6 = 3n - 3" />.
+            </p>
+            <p className="mt-2">
+              Therefore <InlineMath math="m \leq 2n - 3" />.
+            </p>
+            <p className="mt-2">
+              <strong>Equality:</strong> Achieved when <InlineMath math="G" /> is a maximal outerplanar
+              graph—a triangulation with all vertices on the outer boundary (the "interior" is
+              triangulated using chords of the outer cycle).
+            </p>
+          </>
+        }
+      >
         <p>
           If <InlineMath math="G" /> is a simple outerplanar graph with{' '}
           <InlineMath math="n \geq 2" /> vertices:

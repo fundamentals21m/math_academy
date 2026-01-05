@@ -1,7 +1,7 @@
 // Chapter 2: Vector Spaces (Sections 7-12)
 // Based on Hoffman & Kunze Chapter 2
 // Maps to curriculum sections 2 (Vector Spaces), 3 (Subspaces), 4 (Bases and Dimension)
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // =============================================================================
 // Section 7: Vector Spaces (maps to curriculum Section 2)

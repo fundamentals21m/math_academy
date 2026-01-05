@@ -113,7 +113,7 @@ x + 2y + 3z &= 26
         <InlineMath>{`12^2 + 35^2 = 37^2`}</InlineMath>.
       </p>
 
-      <Callout type="note" title="Binary Numbers in Ancient India">
+      <Callout type="info" title="Binary Numbers in Ancient India">
         Around 800 BC, <strong>Pingala</strong> wrote a book on the <em>Science of Verse
         Meters</em>. Syllables in Vedic poetry are either "light" (assigned 1) or "heavy"
         (assigned 0). Each line of verse corresponds to a binary number, which is then
@@ -217,7 +217,7 @@ x + 2y + 3z &= 26
 
       <MathBlock>{`\\sqrt{x/2} + \\frac{8x}{9} + 2 = x`}</MathBlock>
 
-      <Callout type="note" title="The Story of Lilavati">
+      <Callout type="info" title="The Story of Lilavati">
         According to legend, Bhaskara named his mathematics book after his daughter
         because astrologers said there was only one lucky moment at which she might
         marry. Unfortunately, a pearl fell into the water clock and stopped it unnoticed.

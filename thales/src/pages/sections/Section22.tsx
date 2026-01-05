@@ -128,7 +128,7 @@ export default function Section22() {
         </div>
       </Card>
 
-      <Callout type="note" title="Emperor Frederick II's Math Contest">
+      <Callout type="info" title="Emperor Frederick II's Math Contest">
         In 1225, Emperor Frederick II delayed his departure on a crusade to organize
         a mathematical contest. Fibonacci answered all challenges with flying colors,
         including problems like:

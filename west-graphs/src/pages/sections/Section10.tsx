@@ -127,6 +127,55 @@ export default function Section10() {
           This generalizes both Hall's Theorem (for bipartite graphs) and Tutte's
           Theorem (when <InlineMath math="\text{def}(G) = 0" />).
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              <strong>Upper bound:</strong> Let <InlineMath math="S" /> achieve the
+              deficiency: <InlineMath math="o(G - S) - |S| = \text{def}(G)" />.
+            </p>
+            <p className="mt-2">
+              Any matching <InlineMath math="M" /> can saturate at most{' '}
+              <InlineMath math="|S|" /> vertices from the <InlineMath math="o(G - S)" />{' '}
+              odd components (each odd component needs at least one vertex matched to{' '}
+              <InlineMath math="S" />). Thus at least{' '}
+              <InlineMath math="o(G - S) - |S| = \text{def}(G)" /> vertices from odd
+              components remain unsaturated.
+            </p>
+            <p className="mt-2">
+              Therefore, <InlineMath math="M" /> saturates at most{' '}
+              <InlineMath math="n(G) - \text{def}(G)" /> vertices, giving:
+            </p>
+            <MathBlock math="\alpha'(G) \leq \frac{1}{2}(n(G) - \text{def}(G))" />
+            <p className="mt-2">
+              <strong>Lower bound:</strong> Construct a new graph{' '}
+              <InlineMath math="G'" /> from <InlineMath math="G" /> by adding{' '}
+              <InlineMath math="\text{def}(G)" /> new vertices, each adjacent to all
+              original vertices.
+            </p>
+            <p className="mt-2">
+              We verify <InlineMath math="G'" /> satisfies Tutte's condition. For any{' '}
+              <InlineMath math="T \subseteq V(G')" />, if <InlineMath math="T" />{' '}
+              contains all new vertices, then{' '}
+              <InlineMath math="o(G' - T) = o(G - S)" /> where{' '}
+              <InlineMath math="S = T \cap V(G)" />. Since <InlineMath math="|T| \geq \text{def}(G) + |S|" />:
+            </p>
+            <MathBlock math="o(G' - T) = o(G - S) \leq |S| + \text{def}(G) \leq |T|" />
+            <p className="mt-2">
+              If <InlineMath math="T" /> is missing some new vertex <InlineMath math="w" />,
+              then <InlineMath math="w" /> is adjacent to all of <InlineMath math="G - S" />,
+              so <InlineMath math="G' - T" /> has at most one component—condition satisfied.
+            </p>
+            <p className="mt-2">
+              By Tutte's Theorem, <InlineMath math="G'" /> has a perfect matching{' '}
+              <InlineMath math="M'" />. Restricting to <InlineMath math="G" /> gives a
+              matching of size{' '}
+              <InlineMath math="\frac{1}{2}(n(G) + \text{def}(G)) - \text{def}(G) = \frac{1}{2}(n(G) - \text{def}(G))" />.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <h2>Factors and <InlineMath math="f" />-Factors</h2>
@@ -223,6 +272,46 @@ export default function Section10() {
           <InlineMath math="q(S, T)" /> counts certain "bad" components of{' '}
           <InlineMath math="G - S - T" />.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof Sketch
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              The proof reduces to Tutte's 1-factor theorem via a clever construction.
+            </p>
+            <p className="mt-2">
+              <strong>Construction:</strong> Build a bipartite graph{' '}
+              <InlineMath math="H" /> from <InlineMath math="G" /> as follows. For each
+              vertex <InlineMath math="v \in V(G)" />, create <InlineMath math="f(v)" />{' '}
+              copies in one partite set <InlineMath math="A" /> and{' '}
+              <InlineMath math="d_G(v) - f(v)" /> copies in the other set{' '}
+              <InlineMath math="B" />. For each edge <InlineMath math="uv \in E(G)" />,
+              add a complete bipartite graph between the <InlineMath math="B" />-copies
+              of <InlineMath math="u" /> and the <InlineMath math="A" />-copies of{' '}
+              <InlineMath math="v" />, and vice versa.
+            </p>
+            <p className="mt-2">
+              <strong>Equivalence:</strong> An <InlineMath math="f" />-factor in{' '}
+              <InlineMath math="G" /> corresponds to a perfect matching in{' '}
+              <InlineMath math="H" />. The condition for <InlineMath math="H" /> to have
+              a perfect matching (via Hall's condition) translates to the given
+              inequality.
+            </p>
+            <p className="mt-2">
+              <strong>Bad components <InlineMath math="q(S, T)" />:</strong> A component{' '}
+              <InlineMath math="C" /> of <InlineMath math="G - S - T" /> is "bad" if the
+              sum <InlineMath math="\sum_{v \in C} f(v) + e_G(C, T)" /> has different parity
+              than <InlineMath math="|C|" />. Such components contribute an extra deficit
+              that must be accounted for.
+            </p>
+            <p className="mt-2">
+              The detailed verification requires careful counting arguments showing that
+              violations of the inequality correspond to obstructions to finding a perfect
+              matching in <InlineMath math="H" />.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <h2>Edmonds' Matching Algorithm</h2>
@@ -293,6 +382,54 @@ export default function Section10() {
           With better data structures (Micali-Vazirani), this improves to{' '}
           <InlineMath math="O(m\sqrt{n})" />.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              <strong>Correctness:</strong> The key insight is that blossom contraction
+              preserves the existence of augmenting paths. We prove two claims:
+            </p>
+            <p className="mt-2">
+              <em>Claim 1:</em> If <InlineMath math="G" /> has an{' '}
+              <InlineMath math="M" />-augmenting path, then the contracted graph{' '}
+              <InlineMath math="G/B" /> has an <InlineMath math="M/B" />-augmenting path,
+              where <InlineMath math="B" /> is a blossom.
+            </p>
+            <p className="mt-2">
+              <em>Proof of Claim 1:</em> An augmenting path either avoids{' '}
+              <InlineMath math="B" /> (unchanged after contraction) or enters and exits{' '}
+              <InlineMath math="B" />. In the latter case, since <InlineMath math="B" />{' '}
+              is an odd cycle with alternating matched/unmatched edges, we can traverse{' '}
+              <InlineMath math="B" /> maintaining the alternating property. After
+              contraction, the path visits the contracted vertex.
+            </p>
+            <p className="mt-2">
+              <em>Claim 2:</em> An augmenting path in <InlineMath math="G/B" /> can be
+              "lifted" to an augmenting path in <InlineMath math="G" />.
+            </p>
+            <p className="mt-2">
+              <em>Proof of Claim 2:</em> If the path visits the blossom vertex in{' '}
+              <InlineMath math="G/B" />, we expand it by routing through{' '}
+              <InlineMath math="B" /> appropriately. The odd structure of{' '}
+              <InlineMath math="B" /> ensures we can enter and exit while maintaining
+              alternation.
+            </p>
+            <p className="mt-2">
+              <strong>Time analysis:</strong> We perform at most{' '}
+              <InlineMath math="n/2" /> augmentations. Each augmentation involves
+              building alternating trees, which takes <InlineMath math="O(nm)" /> time
+              (each edge examined <InlineMath math="O(n)" /> times due to blossom
+              contractions). Total: <InlineMath math="O(n^2 m)" />.
+            </p>
+            <p className="mt-2">
+              More sophisticated implementations using the "blossom-shrinking" technique
+              with better bookkeeping achieve <InlineMath math="O(n^3)" /> or{' '}
+              <InlineMath math="O(m\sqrt{n})" /> with Micali-Vazirani.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <Example title="Finding Maximum Matching">

@@ -78,20 +78,28 @@ export default function Section06() {
         <strong>alternate interior angles</strong>.
       </p>
 
-      <Theorem title="Alternate Interior Angles">
+      <Theorem title="Alternate Interior Angles"
+        proof={
+          <>
+            <p>Let lines M and N be parallel, and let transversal L cross M at point P and N at point Q.</p>
+            <p className="mt-2">Let α be the angle on the left of L at P (above M), and β be the angle on the left of L at Q (below N).</p>
+            <p className="mt-2"><strong>Proof by contradiction:</strong></p>
+            <p className="mt-2">Assume α ≠ β. Without loss of generality, assume α &lt; β.</p>
+            <p className="mt-2">The interior angles on the right side of L are (π - α) at P and (π - β) at Q.</p>
+            <p className="mt-2">Their sum is:</p>
+            <MathBlock math="(\pi - \alpha) + (\pi - \beta) = 2\pi - \alpha - \beta" />
+            <p className="mt-2">Since α &lt; β, we have α + β &lt; 2β. If β &lt; π, then α + β &lt; 2π.</p>
+            <p className="mt-2">The interior angles on the left sum to α + β &lt; 2π - (α + β) = interior angles on right.</p>
+            <p className="mt-2">If α + β &lt; π, by Euclid's fifth postulate, M and N meet on the left, contradicting that they are parallel.</p>
+            <p className="mt-2">Therefore α = β.</p>
+          </>
+        }
+      >
         <p>
           If a line <em>L</em> crosses two parallel lines, then the alternate
           interior angles are equal.
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> Suppose lines <em>M</em> and <em>N</em> are parallel,
-        and line <em>L</em> crosses them, making angles α and β as alternate
-        interior angles. If α ≠ β, then the sum of angles on one side would be
-        either less than or greater than π, meaning the lines would meet—contradicting
-        that they are parallel. Therefore α = β. ∎
-      </p>
 
       <h3>The Angle Sum of a Triangle</h3>
 
@@ -100,7 +108,22 @@ export default function Section06() {
         classical theorem about the sum of angles in a triangle.
       </p>
 
-      <Theorem title="Triangle Angle Sum">
+      <Theorem title="Triangle Angle Sum"
+        proof={
+          <>
+            <p>Let triangle ABC have angles α at A, β at B, and γ at C.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Through vertex A, draw line DE parallel to side BC.</p>
+            <p className="mt-2"><strong>Step 2:</strong> The transversal AB crosses the parallel lines DE and BC.</p>
+            <p className="mt-2">By the alternate interior angles theorem, angle DAB = angle ABC = β.</p>
+            <p className="mt-2"><strong>Step 3:</strong> Similarly, the transversal AC crosses the parallel lines DE and BC.</p>
+            <p className="mt-2">By the alternate interior angles theorem, angle EAC = angle ACB = γ.</p>
+            <p className="mt-2"><strong>Step 4:</strong> At vertex A, the angles DAB, BAC, and CAE lie along the straight line DE:</p>
+            <MathBlock math="\angle DAB + \angle BAC + \angle CAE = \pi" />
+            <p className="mt-2">Substituting: β + α + γ = π.</p>
+            <p className="mt-2">Therefore α + β + γ = π.</p>
+          </>
+        }
+      >
         <p>
           The sum of the angles in any triangle equals π (180°):
         </p>
@@ -108,24 +131,6 @@ export default function Section06() {
           {`\\alpha + \\beta + \\gamma = \\pi`}
         </MathBlock>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> Consider a triangle ABC with angles α at A, β at B,
-        and γ at C. Draw a line through A parallel to BC.
-      </p>
-
-      <p>
-        By the alternate interior angles theorem:
-      </p>
-      <ul className="list-disc list-inside space-y-2 my-4">
-        <li>The angle between the parallel line and AB equals β</li>
-        <li>The angle between the parallel line and AC equals γ</li>
-      </ul>
-
-      <p>
-        Since these three angles (β, α, γ) form a straight line at A, their sum
-        is π. Therefore α + β + γ = π. ∎
-      </p>
 
       <Callout type="important">
         <strong>Historical Note:</strong> The angle sum theorem depends essentially
@@ -141,18 +146,28 @@ export default function Section06() {
         side. The angle sum theorem immediately gives us:
       </p>
 
-      <Theorem title="Exterior Angle Theorem">
+      <Theorem title="Exterior Angle Theorem"
+        proof={
+          <>
+            <p>Let triangle ABC have interior angles α at A, β at B, and γ at C.</p>
+            <p className="mt-2">Extend side BC past C to point D, creating exterior angle δ = ∠ACD.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Angles γ and δ form a linear pair (they share ray CA and their other rays are opposite):</p>
+            <MathBlock math="\gamma + \delta = \pi" />
+            <p className="mt-2"><strong>Step 2:</strong> By the triangle angle sum theorem:</p>
+            <MathBlock math="\alpha + \beta + \gamma = \pi" />
+            <p className="mt-2"><strong>Step 3:</strong> From Step 2, γ = π - α - β. Substituting into Step 1:</p>
+            <MathBlock math="(\pi - \alpha - \beta) + \delta = \pi" />
+            <p className="mt-2"><strong>Step 4:</strong> Solving for δ:</p>
+            <MathBlock math="\delta = \alpha + \beta" />
+            <p className="mt-2">Therefore, the exterior angle equals the sum of the two non-adjacent interior angles.</p>
+          </>
+        }
+      >
         <p>
           An exterior angle of a triangle equals the sum of the two non-adjacent
           interior angles.
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> If the interior angles are α, β, γ and we extend
-        the side opposite to γ, the exterior angle δ satisfies γ + δ = π (they
-        form a straight line). Since α + β + γ = π, we have δ = α + β. ∎
-      </p>
 
       <SectionQuiz
         sectionId={6}

@@ -39,7 +39,7 @@ export default function Section04() {
         which is a contradiction.
       </p>
 
-      <Example>
+      <Example title="Testing if 37 is Prime">
         <p>Is 37 prime?</p>
         <p>
           We check divisibility by primes up to <InlineMath>{`\\sqrt{37} \\approx 6.08`}</InlineMath>.
@@ -64,7 +64,7 @@ export default function Section04() {
         further, and everything is built from them.
       </p>
 
-      <Example>
+      <Example title="Prime Factorization Examples">
         <p>Prime factorizations:</p>
         <MathBlock>
           {`84 = 2^2 \\times 3 \\times 7`}
@@ -99,7 +99,7 @@ export default function Section04() {
 
       {/* TODO: Add prime sieve visualization - animated sieve crossing out composites */}
 
-      <Example>
+      <Example title="Sieve of Eratosthenes for 2-30">
         <p>Sieve of Eratosthenes for numbers 2-30:</p>
         <div className="grid grid-cols-6 md:grid-cols-10 gap-2 my-4 text-center font-mono">
           {Array.from({ length: 29 }, (_, i) => i + 2).map((n) => {

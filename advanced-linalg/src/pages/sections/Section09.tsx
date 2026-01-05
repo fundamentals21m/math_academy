@@ -35,7 +35,26 @@ export default function Section09() {
         </ol>
       </Definition>
 
-      <Theorem title="Consequences of the Axioms">
+      <Theorem
+        title="Consequences of the Axioms"
+        proof={
+          <>
+            <p><strong>Swapping columns negates det:</strong></p>
+            <p className="mt-2">
+              Let <InlineMath>a</InlineMath> and <InlineMath>b</InlineMath> be columns. By multilinearity and alternating:
+            </p>
+            <MathBlock>{`0 = \\det(\\ldots, a+b, \\ldots, a+b, \\ldots) = \\det(\\ldots, a, \\ldots, a, \\ldots) + \\det(\\ldots, a, \\ldots, b, \\ldots)`}</MathBlock>
+            <MathBlock>{`+ \\det(\\ldots, b, \\ldots, a, \\ldots) + \\det(\\ldots, b, \\ldots, b, \\ldots)`}</MathBlock>
+            <p className="mt-2">The first and last terms are 0 (alternating), so <InlineMath>\det(...,a,...,b,...) = -\det(...,b,...,a,...)</InlineMath>.</p>
+            <p className="mt-4"><strong>Column replacement doesn't change det:</strong></p>
+            <p className="mt-2">
+              <InlineMath>\det(..., a + cb, ..., b, ...) = \det(..., a, ..., b, ...) + c\det(..., b, ..., b, ...) = \det(..., a, ..., b, ...)</InlineMath>
+            </p>
+            <p className="mt-4"><strong>Scaling:</strong> Direct from multilinearity in that column.</p>
+            <p className="mt-4"><strong>Zero column:</strong> <InlineMath>\det(..., {`\\mathbf{0}`}, ...) = \det(..., 0 \cdot {`\\mathbf{0}`}, ...) = 0 \cdot \det(..., {`\\mathbf{0}`}, ...) = 0</InlineMath>.</p>
+          </>
+        }
+      >
         <p>From the three axioms, we can derive:</p>
         <ul className="list-disc list-inside text-dark-300 mt-2 space-y-1">
           <li>Swapping two columns negates the determinant</li>
@@ -71,7 +90,28 @@ export default function Section09() {
         </p>
       </Definition>
 
-      <Theorem title="Cofactor Expansion">
+      <Theorem
+        title="Cofactor Expansion"
+        proof={
+          <>
+            <p>
+              We prove by induction that any function satisfying multilinearity, alternating, and <InlineMath>\det(I) = 1</InlineMath> admits cofactor expansion.
+            </p>
+            <p className="mt-2"><strong>Base case:</strong> For <InlineMath>n = 1</InlineMath>, <InlineMath>\det(a) = a</InlineMath> (normalization).</p>
+            <p className="mt-2"><strong>Inductive step:</strong> By multilinearity in column 1:</p>
+            <MathBlock>{`\\det(A) = \\det\\left(\\sum_{i=1}^n a_{i1} e_i, a_2, \\ldots, a_n\\right) = \\sum_{i=1}^n a_{i1} \\det(e_i, a_2, \\ldots, a_n)`}</MathBlock>
+            <p className="mt-2">
+              For each term <InlineMath>\det(e_i, a_2, \ldots, a_n)</InlineMath>, expand using alternating property: moving row <InlineMath>i</InlineMath> to position 1 requires <InlineMath>i-1</InlineMath> swaps, giving factor <InlineMath>(-1)^{'{i-1}'}</InlineMath>.
+            </p>
+            <p className="mt-2">
+              The remaining <InlineMath>(n-1) \times (n-1)</InlineMath> determinant is <InlineMath>M_{'{i1}'}</InlineMath>. So <InlineMath>\det(e_i, a_2, \ldots, a_n) = (-1)^{'{i+1}'} M_{'{i1}'}</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Expansion along any row or column follows by transposition (since <InlineMath>\det(A^T) = \det(A)</InlineMath>).
+            </p>
+          </>
+        }
+      >
         <p>The determinant can be computed by expansion along any row <InlineMath>i</InlineMath>:</p>
         <MathBlock>{`\\det(A) = \\sum_{j=1}^n a_{ij} C_{ij} = \\sum_{j=1}^n a_{ij} (-1)^{i+j} M_{ij}`}</MathBlock>
         <p className="mt-2">Or along any column <InlineMath>j</InlineMath>:</p>
@@ -133,7 +173,19 @@ export default function Section09() {
         </p>
       </Theorem>
 
-      <Theorem title="Determinant of Inverse">
+      <Theorem
+        title="Determinant of Inverse"
+        proof={
+          <>
+            <p>If <InlineMath>A</InlineMath> is invertible, then <InlineMath>AA^{'{-1}'} = I</InlineMath>. By the product rule:</p>
+            <MathBlock>{`\\det(A)\\det(A^{-1}) = \\det(AA^{-1}) = \\det(I) = 1`}</MathBlock>
+            <p className="mt-2">
+              Since <InlineMath>A</InlineMath> is invertible, <InlineMath>\det(A) \neq 0</InlineMath>. Dividing both sides by <InlineMath>\det(A)</InlineMath>:
+            </p>
+            <MathBlock>{`\\det(A^{-1}) = \\frac{1}{\\det(A)}`}</MathBlock>
+          </>
+        }
+      >
         <p>If <InlineMath>A</InlineMath> is invertible: <InlineMath>\det(A^{'{-1}'}) = 1/\det(A)</InlineMath></p>
       </Theorem>
 
@@ -147,7 +199,21 @@ export default function Section09() {
         <MathBlock>{`\\text{adj}(A)_{ij} = C_{ji}`}</MathBlock>
       </Definition>
 
-      <Theorem title="Inverse via Adjugate">
+      <Theorem
+        title="Inverse via Adjugate"
+        proof={
+          <>
+            <p>
+              The <InlineMath>(i,j)</InlineMath> entry of <InlineMath>A \cdot {`\\text{adj}`}(A)</InlineMath> is:
+            </p>
+            <MathBlock>{`\\sum_{k=1}^n a_{ik} (\\text{adj}(A))_{kj} = \\sum_{k=1}^n a_{ik} C_{jk}`}</MathBlock>
+            <p className="mt-2"><strong>Case <InlineMath>i = j</InlineMath>:</strong> This is <InlineMath>\sum_k a_{ik} C_{ik}</InlineMath>, which is cofactor expansion along row <InlineMath>i</InlineMath>, giving <InlineMath>\det(A)</InlineMath>.</p>
+            <p className="mt-2"><strong>Case <InlineMath>i \neq j</InlineMath>:</strong> This is cofactor expansion of a matrix with row <InlineMath>j</InlineMath> replaced by row <InlineMath>i</InlineMath>, which has two identical rows. By the alternating property, this equals 0.</p>
+            <p className="mt-2">Therefore <InlineMath>A \cdot {`\\text{adj}`}(A) = \det(A) \cdot I</InlineMath>.</p>
+            <p className="mt-2">If <InlineMath>\det(A) \neq 0</InlineMath>, divide by <InlineMath>\det(A)</InlineMath>: <InlineMath>A \cdot \frac{1}{'\\det(A)'}{`\\text{adj}`}(A) = I</InlineMath>, so <InlineMath>A^{'{-1}'} = \frac{1}{'\\det(A)'}{`\\text{adj}`}(A)</InlineMath>.</p>
+          </>
+        }
+      >
         <p>
           <InlineMath>A \cdot {`\\text{adj}`}(A) = \det(A) \cdot I</InlineMath>
         </p>
@@ -197,7 +263,25 @@ export default function Section09() {
 
       <h2>Special Matrices</h2>
 
-      <Theorem title="Determinant of Special Matrices">
+      <Theorem
+        title="Determinant of Special Matrices"
+        proof={
+          <>
+            <p><strong>Triangular matrix:</strong></p>
+            <p className="mt-2">
+              Use cofactor expansion along the first column (for lower triangular) or first row (for upper triangular). Only one entry is nonzero, giving a recursion that yields the product of diagonal entries.
+            </p>
+            <p className="mt-4"><strong>Block triangular:</strong></p>
+            <p className="mt-2">
+              By row operations on the block structure (or cofactor expansion), the determinant factors as <InlineMath>\det(A)\det(B)</InlineMath>. The off-diagonal block doesn't contribute to the determinant.
+            </p>
+            <p className="mt-4"><strong>Orthogonal matrix:</strong></p>
+            <p className="mt-2">If <InlineMath>Q^T Q = I</InlineMath>, then:</p>
+            <MathBlock>{`\\det(Q^T)\\det(Q) = \\det(I) = 1`}</MathBlock>
+            <p className="mt-2">Since <InlineMath>\det(Q^T) = \det(Q)</InlineMath>, we have <InlineMath>\det(Q)^2 = 1</InlineMath>, so <InlineMath>\det(Q) = \pm 1</InlineMath>.</p>
+          </>
+        }
+      >
         <ul className="list-disc list-inside text-dark-300 mt-2 space-y-2">
           <li><strong>Triangular matrix:</strong> <InlineMath>\det = </InlineMath> product of diagonal entries</li>
           <li><strong>Diagonal matrix:</strong> <InlineMath>\det = </InlineMath> product of diagonal entries</li>

@@ -195,7 +195,18 @@ export default function Section12() {
 
       <h2>Properties of Jordan Form</h2>
 
-      <Theorem title="Invariants from Jordan Form">
+      <Theorem
+        title="Invariants from Jordan Form"
+        proof={
+          <>
+            <p><strong>Eigenvalues:</strong> Jordan blocks <InlineMath>J_k(\lambda)</InlineMath> have <InlineMath>\lambda</InlineMath> on the diagonal. Since similar matrices have the same eigenvalues, these are the eigenvalues of <InlineMath>A</InlineMath>.</p>
+            <p className="mt-2"><strong>Algebraic multiplicity:</strong> The characteristic polynomial of <InlineMath>J_k(\lambda)</InlineMath> is <InlineMath>(\mu - \lambda)^k</InlineMath>. Summing over all blocks for <InlineMath>\lambda</InlineMath> gives the total power, which is the algebraic multiplicity.</p>
+            <p className="mt-2"><strong>Geometric multiplicity:</strong> Each Jordan block <InlineMath>J_k(\lambda)</InlineMath> contributes exactly one eigenvector (the first standard basis vector in that block). So geometric multiplicity = number of blocks.</p>
+            <p className="mt-2"><strong>Minimal polynomial:</strong> For a single block <InlineMath>J_k(\lambda)</InlineMath>, <InlineMath>(J_k(\lambda) - \lambda I)^k = 0</InlineMath> but <InlineMath>(J_k(\lambda) - \lambda I)^{'{k-1}'} \neq 0</InlineMath>. The minimal polynomial for <InlineMath>\lambda</InlineMath> is <InlineMath>(\mu - \lambda)^m</InlineMath> where <InlineMath>m</InlineMath> is the largest block size.</p>
+            <p className="mt-2"><strong>Characteristic polynomial:</strong> Block diagonal structure gives <InlineMath>p(\mu) = \prod_i (\mu - \lambda_i)^{'{m_i}'}</InlineMath> where <InlineMath>m_i</InlineMath> is the algebraic multiplicity.</p>
+          </>
+        }
+      >
         <p>The Jordan form reveals important invariants:</p>
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li><strong>Eigenvalues:</strong> The diagonal entries</li>
@@ -206,7 +217,24 @@ export default function Section12() {
         </ul>
       </Theorem>
 
-      <Theorem title="Powers of Jordan Blocks">
+      <Theorem
+        title="Powers of Jordan Blocks"
+        proof={
+          <>
+            <p>
+              Write <InlineMath>J_k(\lambda) = \lambda I + N</InlineMath> where <InlineMath>N</InlineMath> is the nilpotent matrix with 1's on the superdiagonal.
+            </p>
+            <p className="mt-2">Since <InlineMath>\lambda I</InlineMath> and <InlineMath>N</InlineMath> commute, use the binomial theorem:</p>
+            <MathBlock>{`J^n = (\\lambda I + N)^n = \\sum_{r=0}^{n} \\binom{n}{r} \\lambda^{n-r} N^r`}</MathBlock>
+            <p className="mt-2">
+              Note <InlineMath>N^r</InlineMath> has 1's on the <InlineMath>r</InlineMath>-th superdiagonal and zeros elsewhere. Also <InlineMath>N^k = 0</InlineMath> for the <InlineMath>k \times k</InlineMath> block.
+            </p>
+            <p className="mt-2">
+              The <InlineMath>(i,j)</InlineMath> entry (for <InlineMath>j \geq i</InlineMath>) comes from <InlineMath>N^{'{j-i}'}</InlineMath>, giving coefficient <InlineMath>\binom{'{n}'}{'{j-i}'}\lambda^{'{n-(j-i)}'}</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>For a Jordan block <InlineMath>J = J_k(\lambda)</InlineMath>:</p>
         <MathBlock>{`J^n = \\begin{pmatrix} \\lambda^n & \\binom{n}{1}\\lambda^{n-1} & \\binom{n}{2}\\lambda^{n-2} & \\cdots \\\\ 0 & \\lambda^n & \\binom{n}{1}\\lambda^{n-1} & \\cdots \\\\ \\vdots & & \\ddots & \\\\ 0 & \\cdots & 0 & \\lambda^n \\end{pmatrix}`}</MathBlock>
         <p className="mt-2">
@@ -250,7 +278,20 @@ export default function Section12() {
         </p>
       </Definition>
 
-      <Theorem title="Jordan Form of Nilpotent Operators">
+      <Theorem
+        title="Jordan Form of Nilpotent Operators"
+        proof={
+          <>
+            <p><strong>(⇒)</strong> If <InlineMath>T</InlineMath> is nilpotent with <InlineMath>T^k = 0</InlineMath>, and <InlineMath>Tv = \lambda v</InlineMath> for <InlineMath>v \neq 0</InlineMath>, then:</p>
+            <MathBlock>{`0 = T^k v = \\lambda^k v`}</MathBlock>
+            <p className="mt-2">Since <InlineMath>v \neq 0</InlineMath>, we have <InlineMath>\lambda^k = 0</InlineMath>, so <InlineMath>\lambda = 0</InlineMath>. Thus 0 is the only eigenvalue.</p>
+            <p className="mt-2"><strong>(⇐)</strong> If 0 is the only eigenvalue, the characteristic polynomial is <InlineMath>p(\lambda) = \lambda^n</InlineMath>. By Cayley-Hamilton, <InlineMath>T^n = 0</InlineMath>, so <InlineMath>T</InlineMath> is nilpotent.</p>
+            <p className="mt-4"><strong>Jordan form structure:</strong></p>
+            <p className="mt-2">Since all eigenvalues are 0, every Jordan block is <InlineMath>J_{'{k_i}'}(0)</InlineMath>, which is strictly upper triangular.</p>
+            <p className="mt-2"><strong>Index of nilpotency:</strong> <InlineMath>J_{'{k}'}(0)^m = 0</InlineMath> iff <InlineMath>m \geq k</InlineMath>. For block diagonal <InlineMath>J</InlineMath>, <InlineMath>J^m = 0</InlineMath> iff <InlineMath>m \geq \max_i k_i</InlineMath>. So the index equals the largest block size.</p>
+          </>
+        }
+      >
         <p>
           <InlineMath>T</InlineMath> is nilpotent if and only if its only eigenvalue is 0. The Jordan form
           consists of blocks <InlineMath>J_{'{k_i}'}(0)</InlineMath>:

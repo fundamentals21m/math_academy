@@ -44,7 +44,21 @@ export default function Section16() {
         vertices are equal because parallel lines create equal angles.
       </p>
 
-      <Theorem title="Constant Slope">
+      <Theorem title="Constant Slope"
+        proof={
+          <>
+            <p>Let L be a non-vertical line. Choose any three points A, B, A′ on L with A below B and A′ below B′.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Draw vertical line from B meeting horizontal through A at C. Draw vertical from B′ meeting horizontal through A′ at C′.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Triangles ABC and A′B′C′ both have right angles at C and C′.</p>
+            <p className="mt-2"><strong>Step 3:</strong> Line L makes equal angles with both horizontals (since the horizontals are parallel).</p>
+            <p className="mt-2">Therefore ∠BAC = ∠B′A′C′.</p>
+            <p className="mt-2"><strong>Step 4:</strong> By AA similarity (right angle + equal angle), △ABC ∼ △A′B′C′.</p>
+            <p className="mt-2"><strong>Step 5:</strong> Corresponding sides of similar triangles are proportional:</p>
+            <MathBlock math="\frac{|BC|}{|AC|} = \frac{|B'C'|}{|A'C'|}" />
+            <p className="mt-2">Therefore slope = rise/run = |BC|/|AC| is constant.</p>
+          </>
+        }
+      >
         <p>
           Triangles ABC and A'B'C' are similar (by AA similarity), and so their
           corresponding sides are proportional. In particular:
@@ -142,7 +156,21 @@ export default function Section16() {
         statements that Euclid took as axioms:
       </p>
 
-      <Theorem title="Unique Line Through Two Points">
+      <Theorem title="Unique Line Through Two Points"
+        proof={
+          <>
+            <p>Let P₁ = (x₁, y₁) and P₂ = (x₂, y₂) be distinct points.</p>
+            <p className="mt-2"><strong>Case 1: x₁ ≠ x₂ (non-vertical line)</strong></p>
+            <p className="mt-2">The slope is m = (y₂ - y₁)/(x₂ - x₁).</p>
+            <p className="mt-2">The line equation is y - y₁ = m(x - x₁), or equivalently:</p>
+            <MathBlock math="y = mx + (y_1 - mx_1)" />
+            <p className="mt-2">This line contains P₁ (check: y₁ = mx₁ + y₁ - mx₁ ✓) and P₂ (check: y₂ = mx₂ + y₁ - mx₁ = y₁ + m(x₂-x₁) = y₁ + y₂ - y₁ = y₂ ✓).</p>
+            <p className="mt-2"><strong>Uniqueness:</strong> Any line through P₁ and P₂ must have slope (y₂-y₁)/(x₂-x₁) and pass through P₁, giving the same equation.</p>
+            <p className="mt-2"><strong>Case 2: x₁ = x₂ (vertical line)</strong></p>
+            <p className="mt-2">The unique line through P₁ and P₂ is x = x₁.</p>
+          </>
+        }
+      >
         <p>
           There is a unique line through any two distinct points.
         </p>
@@ -155,7 +183,18 @@ export default function Section16() {
         </MathBlock>
       </Theorem>
 
-      <Theorem title="Parallel Axiom">
+      <Theorem title="Parallel Axiom"
+        proof={
+          <>
+            <p>Let L be a line with equation y = mx + c, and let P = (p, q) be a point not on L.</p>
+            <p className="mt-2"><strong>Existence:</strong> The line through P with slope m has equation:</p>
+            <MathBlock math="y - q = m(x - p) \implies y = mx + (q - mp)" />
+            <p className="mt-2">This line has the same slope m as L, so it is parallel to L (they never meet, since if mx + c = mx + (q - mp), then c = q - mp, but P is not on L, so q ≠ mp + c).</p>
+            <p className="mt-2"><strong>Uniqueness:</strong> Any line through P not meeting L must have slope m (since lines with different slopes meet), and the unique line through P with slope m is y = mx + (q - mp).</p>
+            <p className="mt-2"><strong>Vertical case:</strong> If L is vertical (x = c), the unique parallel through P = (p, q) with p ≠ c is x = p.</p>
+          </>
+        }
+      >
         <p>
           For any line L and point P outside L, there is a unique line through
           P not meeting L.
@@ -172,7 +211,22 @@ export default function Section16() {
         Parallel lines, not surprisingly, turn out to be lines with the same slope:
       </p>
 
-      <Theorem title="Parallel Lines Have Equal Slopes">
+      <Theorem title="Parallel Lines Have Equal Slopes"
+        proof={
+          <>
+            <p>Consider distinct lines L₁: y = ax + c and L₂: y = a′x + c′.</p>
+            <p className="mt-2"><strong>Case 1: a ≠ a′</strong></p>
+            <p className="mt-2">To find intersection, solve ax + c = a′x + c′:</p>
+            <MathBlock math="(a - a')x = c' - c \implies x = \frac{c' - c}{a - a'}" />
+            <p className="mt-2">This gives a unique x-coordinate (since a - a′ ≠ 0), so the lines meet at exactly one point.</p>
+            <p className="mt-2"><strong>Case 2: a = a′ (equal slopes)</strong></p>
+            <p className="mt-2">The equation ax + c = ax + c′ simplifies to c = c′.</p>
+            <p className="mt-2">If c ≠ c′, there is no solution, so the lines have no common point (parallel).</p>
+            <p className="mt-2">If c = c′, the lines are identical (not distinct).</p>
+            <p className="mt-2"><strong>Conclusion:</strong> Distinct lines are parallel if and only if they have the same slope.</p>
+          </>
+        }
+      >
         <p>
           Distinct lines y = ax + c and y = a'x + c' have a common point unless
           they have the same slope (a = a'). Lines with the same slope are parallel.

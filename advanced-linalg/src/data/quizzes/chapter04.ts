@@ -1,6 +1,6 @@
 // Chapter 4: Polynomials (Sections 20-24)
 // Based on Hoffman & Kunze Chapter 4
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // Section 20: Algebras
 export const section20Quiz: DifficultyQuizData = {

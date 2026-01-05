@@ -72,7 +72,7 @@ export default function Section03() {
         The mod operation returns <InlineMath>{`r`}</InlineMath>.
       </p>
 
-      <Example>
+      <Example title="Calculating 17 mod 5">
         <p>Calculate <InlineMath>{`17 \\bmod 5`}</InlineMath>:</p>
         <MathBlock>
           {`17 = 3 \\times 5 + 2`}
@@ -82,7 +82,7 @@ export default function Section03() {
         </p>
       </Example>
 
-      <Example>
+      <Example title="Calculating 25 mod 7">
         <p>Calculate <InlineMath>{`25 \\bmod 7`}</InlineMath>:</p>
         <MathBlock>
           {`25 = 3 \\times 7 + 4`}
@@ -105,7 +105,7 @@ export default function Section03() {
         If the standard remainder is negative, add <InlineMath>n</InlineMath> to make it positive.
       </Definition>
 
-      <Example>
+      <Example title="Calculating -1 mod 5">
         <p>Calculate <InlineMath>{`-1 \\bmod 5`}</InlineMath>:</p>
         <p>
           We need to find a number <InlineMath>{`r`}</InlineMath> where <InlineMath>{`0 \\le r < 5`}</InlineMath> such
@@ -135,7 +135,7 @@ export default function Section03() {
         the same remainder when divided by <InlineMath>n</InlineMath>.
       </p>
 
-      <Example>
+      <Example title="Congruence Example">
         <MathBlock>
           {`17 \\equiv 2 \\pmod{5}`}
         </MathBlock>
@@ -171,7 +171,7 @@ export default function Section03() {
         the results eventually repeat in a cycle.
       </p>
 
-      <Example>
+      <Example title="Powers Cycling Mod 7">
         <p>Powers of 2 mod 7:</p>
         <div className="bg-dark-700/50 rounded-lg p-4 my-2 font-mono">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">

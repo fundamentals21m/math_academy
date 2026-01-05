@@ -49,7 +49,21 @@ export default function Section39() {
         </ul>
       </div>
 
-      <Theorem title="FP² is a Projective Plane">
+      <Theorem title="FP² is a Projective Plane"
+        proof={
+          <>
+            <p>We verify the three projective plane axioms for FP².</p>
+            <p className="mt-2"><strong>Axiom 1: Two points determine a unique line.</strong></p>
+            <p>Let P₁ = (x₁, y₁, z₁) and P₂ = (x₂, y₂, z₂) be distinct "points" (i.e., distinct lines through O in F³). We seek coefficients (a, b, c) with ax₁ + by₁ + cz₁ = 0 and ax₂ + by₂ + cz₂ = 0.</p>
+            <p className="mt-2">Since P₁ and P₂ are linearly independent (distinct lines through O), the solution space for (a, b, c) is one-dimensional over F—unique up to scalar multiple. This defines a unique "line" in FP².</p>
+            <p className="mt-2"><strong>Axiom 2: Two lines meet in a unique point.</strong></p>
+            <p>Let L₁: a₁x + b₁y + c₁z = 0 and L₂: a₂x + b₂y + c₂z = 0 be distinct "lines." Since (a₁, b₁, c₁) and (a₂, b₂, c₂) are linearly independent, the solution space is one-dimensional, giving a unique "point."</p>
+            <p className="mt-2"><strong>Axiom 3: There exist four points, no three collinear.</strong></p>
+            <p>The points (1, 0, 0), (0, 1, 0), (0, 0, 1), and (1, 1, 1) satisfy this. Any line through two of the first three has form x = 0, y = 0, or z = 0, none containing (1, 1, 1). Checking other triples similarly confirms no three are collinear.</p>
+            <p className="mt-2">All calculations use only field operations (+, ×, ÷), so they are valid in any field F.</p>
+          </>
+        }
+      >
         <p>
           The projective plane axioms can be checked for FP² just as they were for ℝP².
           The same calculations apply, because the field axioms ensure that the same
@@ -190,7 +204,29 @@ export default function Section39() {
 
       <h3>Cross-Ratio Over General Fields</h3>
 
-      <Theorem title="Cross-Ratio in General Fields">
+      <Theorem title="Cross-Ratio in General Fields"
+        proof={
+          <>
+            <p>We verify that the cross-ratio formula and its invariance under linear fractional transformations extend to any field F.</p>
+            <p className="mt-2"><strong>The cross-ratio formula:</strong></p>
+            <MathBlock math="[p, q; r, s] = \frac{(r - p)(s - q)}{(r - q)(s - p)}" />
+            <p className="mt-2">This expression involves only subtraction, multiplication, and division—all defined in any field F (with division defined for nonzero elements).</p>
+            <p className="mt-2"><strong>Extension to F ∪ {'{'}∞{'}'}:</strong> We adjoin a symbol ∞ with conventions:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>1/0 = ∞ and 1/∞ = 0</li>
+              <li>∞ + a = ∞ for any a ∈ F</li>
+              <li>a/∞ = 0 for any a ∈ F</li>
+            </ul>
+            <p className="mt-2"><strong>Invariance proof:</strong> The same calculation as for ℝ shows invariance under the generators:</p>
+            <ol className="list-decimal list-inside mt-2 space-y-1">
+              <li>x → x + l: Differences (r-p), etc. are unchanged, so the cross-ratio is unchanged.</li>
+              <li>x → kx: Each factor picks up k, and k² cancels in numerator and denominator.</li>
+              <li>x → 1/x: Converting (1/r - 1/p) = (p-r)/(pr), etc., and simplifying yields the same cross-ratio.</li>
+            </ol>
+            <p className="mt-2">These calculations use only field axioms, so they are valid in any field.</p>
+          </>
+        }
+      >
         <p>
           Linear fractional transformations and the cross-ratio make sense when ℝ is
           replaced by any field F. The transformations x → x + l and x → kx make sense

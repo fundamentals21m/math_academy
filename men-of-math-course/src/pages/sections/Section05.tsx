@@ -657,7 +657,7 @@ export default function Section05() {
 
       <p className="mb-4">
         In the margin of his copy of Diophantus's <em>Arithmetica</em>, Fermat wrote
-        that the equation <InlineMath>x^n + y^n = z^n</InlineMath> has no positive integer
+        that the equation <InlineMath>{`x^n + y^n = z^n`}</InlineMath> has no positive integer
         solutions when n {">"} 2. His famous claim that he had a "truly marvelous proof"
         has never been believed by mathematicians—the actual proof, by Andrew Wiles in 1995,
         required entirely modern techniques.
@@ -833,7 +833,7 @@ export default function Section05() {
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
             <span>
-              Fermat's Last Theorem—<InlineMath>x^n + y^n = z^n</InlineMath> has no positive
+              Fermat's Last Theorem—<InlineMath>{`x^n + y^n = z^n`}</InlineMath> has no positive
               integer solutions for n {">"} 2—remained unproved for 358 years until Andrew Wiles (1995).
             </span>
           </li>

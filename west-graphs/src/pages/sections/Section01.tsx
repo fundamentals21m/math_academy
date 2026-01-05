@@ -335,17 +335,49 @@ export default function Section01() {
         </p>
       </Definition>
 
-      <Theorem title="Petersen Graph Has Girth 5" className="my-6">
+      <Theorem
+        title="Petersen Graph Has Girth 5"
+        className="my-6"
+        proof={
+          <>
+            <p>
+              We must show that the Petersen graph has no cycles of length 1, 2, 3, or 4, but does
+              have a cycle of length 5.
+            </p>
+            <p className="mt-2">
+              <strong>No 1-cycles or 2-cycles:</strong> The Petersen graph is simple (no loops or
+              multiple edges), so it has no cycles of length 1 or 2.
+            </p>
+            <p className="mt-2">
+              <strong>No 3-cycles:</strong> A 3-cycle would require three pairwise adjacent vertices.
+              Recall that vertices are 2-element subsets of <InlineMath>{`\\{1,2,3,4,5\\}`}</InlineMath>,
+              and two vertices are adjacent if and only if their corresponding 2-sets are disjoint.
+              Three pairwise-disjoint 2-sets would require at least <InlineMath>6</InlineMath> elements,
+              but we only have 5. Thus no 3-cycle exists.
+            </p>
+            <p className="mt-2">
+              <strong>No 4-cycles:</strong> A 4-cycle requires two nonadjacent vertices with two
+              common neighbors. If vertices <InlineMath>ab</InlineMath> and <InlineMath>cd</InlineMath>{' '}
+              are nonadjacent, they share at least one element (say <InlineMath>{`a = c`}</InlineMath>).
+              A common neighbor must be disjoint from both, which means it must avoid{' '}
+              <InlineMath>{`\\{a, b, c, d\\} = \\{a, b, d\\}`}</InlineMath> (three elements).
+              The remaining two elements form exactly one 2-set. Thus nonadjacent vertices have
+              exactly one common neighbor, and no 4-cycle exists.
+            </p>
+            <p className="mt-2">
+              <strong>5-cycle exists:</strong> The vertices{' '}
+              <InlineMath>{`12, 34, 15, 23, 45`}</InlineMath> form a 5-cycle, since consecutive
+              pairs are disjoint 2-sets:
+              <InlineMath>{`\\{1,2\\} \\cap \\{3,4\\} = \\emptyset`}</InlineMath>, etc.
+            </p>
+            <p className="mt-2">
+              Therefore, the girth of the Petersen graph is 5.
+            </p>
+          </>
+        }
+      >
         <p>The Petersen graph has girth 5.</p>
       </Theorem>
-
-      <p>
-        The proof follows from several observations: the graph is simple (no 1-cycles or 2-cycles),
-        a 3-cycle would require three pairwise-disjoint 2-sets (impossible among 5 elements), and a
-        4-cycle would require nonadjacent vertices with two common neighbors, which cannot happen
-        because nonadjacent vertices in the Petersen graph share exactly one element and thus have
-        exactly one common neighbor.
-      </p>
 
       <h2>Key Ideas</h2>
 

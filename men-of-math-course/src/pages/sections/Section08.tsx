@@ -839,8 +839,8 @@ export default function Section08() {
       <p className="mb-4">
         Leibniz developed calculus independently of Newton in the 1670s. While Newton
         kept his methods secret, Leibniz published in 1684 and 1686, introducing the
-        notation we use today: <InlineMath>dy/dx</InlineMath> for derivatives and{' '}
-        <InlineMath>\int</InlineMath> for integrals.
+        notation we use today: <InlineMath>{`dy/dx`}</InlineMath> for derivatives and{' '}
+        <InlineMath>{`\\int`}</InlineMath> for integrals.
       </p>
 
       <NotationComparison />

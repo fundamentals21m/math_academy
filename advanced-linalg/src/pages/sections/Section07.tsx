@@ -95,7 +95,20 @@ export default function Section07() {
         <MathBlock>{`f_i(v_j) = \\delta_{ij}`}</MathBlock>
       </Theorem>
 
-      <Theorem title="Dimension of Dual Space">
+      <Theorem
+        title="Dimension of Dual Space"
+        proof={
+          <>
+            <p>
+              By the Dual Basis Theorem, if <InlineMath>{`\\{v_1, \\ldots, v_n\\}`}</InlineMath> is a basis for <InlineMath>V</InlineMath>, then the dual basis <InlineMath>{`\\{f_1, \\ldots, f_n\\}`}</InlineMath> is a basis for <InlineMath>V^*</InlineMath>.
+            </p>
+            <p className="mt-2">
+              Since the dual basis has <InlineMath>n</InlineMath> elements and is a basis for <InlineMath>V^*</InlineMath>, we have:
+            </p>
+            <MathBlock>{`\\dim(V^*) = n = \\dim(V)`}</MathBlock>
+          </>
+        }
+      >
         <p>If <InlineMath>V</InlineMath> is finite-dimensional, then <InlineMath>\dim(V^*) = \dim(V)</InlineMath>.</p>
       </Theorem>
 
@@ -212,7 +225,28 @@ export default function Section07() {
         <p className="mt-2">For <InlineMath>g \in W^*</InlineMath>, <InlineMath>T^*(g)</InlineMath> is the composition <InlineMath>V \xrightarrow{'{T}'} W \xrightarrow{'{g}'} F</InlineMath>.</p>
       </Definition>
 
-      <Theorem title="Matrix of Transpose">
+      <Theorem
+        title="Matrix of Transpose"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>\beta = {`\\{v_1, \\ldots, v_n\\}`}</InlineMath> and <InlineMath>\gamma = {`\\{w_1, \\ldots, w_m\\}`}</InlineMath> with dual bases <InlineMath>\beta^* = {`\\{f_1, \\ldots, f_n\\}`}</InlineMath> and <InlineMath>\gamma^* = {`\\{g_1, \\ldots, g_m\\}`}</InlineMath>.
+            </p>
+            <p className="mt-2">
+              The <InlineMath>(i,j)</InlineMath> entry of <InlineMath>[T]_\beta^\gamma</InlineMath> is the <InlineMath>i</InlineMath>-th coordinate of <InlineMath>T(v_j)</InlineMath> in basis <InlineMath>\gamma</InlineMath>, which is <InlineMath>g_i(T(v_j))</InlineMath>.
+            </p>
+            <p className="mt-2">
+              For the transpose, we need <InlineMath>[T^*]_{'\\gamma^*'}^{'\\beta^*'}</InlineMath>. Column <InlineMath>j</InlineMath> is <InlineMath>[T^*(g_j)]_{'\\beta^*'}</InlineMath>.
+            </p>
+            <p className="mt-2">
+              The <InlineMath>i</InlineMath>-th coordinate is <InlineMath>T^*(g_j)(v_i) = (g_j \circ T)(v_i) = g_j(T(v_i))</InlineMath>.
+            </p>
+            <p className="mt-2">
+              So <InlineMath>[T^*]_{'\\gamma^*'}^{'\\beta^*'}(i,j) = g_j(T(v_i)) = [T]_\beta^\gamma(j,i) = (A^T)(i,j)</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>
           If <InlineMath>[T]_\beta^\gamma = A</InlineMath>, then <InlineMath>[T^*]_{'{\\gamma^*}'}^{'{\\beta^*}'} = A^T</InlineMath> (the matrix transpose).
         </p>

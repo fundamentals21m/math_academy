@@ -114,7 +114,7 @@ export default function Section21() {
             Two numbers are <strong>amicable</strong> if the sum of proper divisors of each
             equals the other. Thabit gave a wholly original rule for finding such pairs:
           </p>
-          <Callout type="theorem" title="Thabit's Rule">
+          <Callout type="success" title="Thabit's Rule">
             Let n &gt; 1. Define <InlineMath>{`p = 3 \\cdot 2^n - 1`}</InlineMath>,
             <InlineMath>{`q = 3 \\cdot 2^{n-1} - 1`}</InlineMath>, and
             <InlineMath>{`r = 9 \\cdot 2^{2n-1} - 1`}</InlineMath>.
@@ -166,7 +166,7 @@ export default function Section21() {
         <p>The Flower that once has blown for ever dies.</p>
       </div>
 
-      <Callout type="note" title="A Famous Friendship">
+      <Callout type="info" title="A Famous Friendship">
         According to one story, Omar made a mutual assistance pact as a youth with two
         fellow students: Nizam-ul-Mulk (who became vizier to two Sultans) and Hasan Ben
         Sabbah. Nizam-ul-Mulk helped Omar to a yearly pension. Hasan, dissatisfied with a

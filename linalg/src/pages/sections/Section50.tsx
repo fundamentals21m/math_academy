@@ -21,8 +21,8 @@ export default function Section50() {
           <>
             <p><strong>Goal:</strong> Find directions of maximum variance. The variance along direction <InlineMath>{`\\mathbf{v}`}</InlineMath> (unit vector) is <InlineMath>{`\\mathbf{v}^T \\Sigma \\mathbf{v}`}</InlineMath> where <InlineMath>{`\\Sigma`}</InlineMath> is the covariance matrix.</p>
             <p className="mt-2"><strong>Solution:</strong> Maximize <InlineMath>{`\\mathbf{v}^T \\Sigma \\mathbf{v}`}</InlineMath> subject to <InlineMath>{`\\|\\mathbf{v}\\| = 1`}</InlineMath>. By Lagrange multipliers, <InlineMath>{`\\Sigma \\mathbf{v} = \\lambda \\mathbf{v}`}</InlineMath>.</p>
-            <p className="mt-2">The principal components are eigenvectors of <InlineMath>\\Sigma</InlineMath>. The variance along each is its eigenvalue.</p>
-            <p className="mt-2"><strong>SVD connection:</strong> For centered data <InlineMath>X</InlineMath>, <InlineMath>\\Sigma \\propto X^TX</InlineMath>. The SVD <InlineMath>X = U\\Sigma V^T</InlineMath> gives the same principal directions in <InlineMath>V</InlineMath>.</p>
+            <p className="mt-2">The principal components are eigenvectors of <InlineMath>{`\\Sigma`}</InlineMath>. The variance along each is its eigenvalue.</p>
+            <p className="mt-2"><strong>SVD connection:</strong> For centered data <InlineMath>{`X`}</InlineMath>, <InlineMath>{`\\Sigma \\propto X^TX`}</InlineMath>. The SVD <InlineMath>{`X = U\\Sigma V^T`}</InlineMath> gives the same principal directions in <InlineMath>{`V`}</InlineMath>.</p>
           </>
         }
       >
@@ -34,8 +34,8 @@ export default function Section50() {
         </MathBlock>
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li>Keep only <InlineMath>k</InlineMath> largest singular values</li>
-          <li>Minimizes reconstruction error <InlineMath>\|X - X_k\|_F</InlineMath></li>
-          <li>New coordinates: <InlineMath>Z = XV_k = U_k\Sigma_k</InlineMath></li>
+          <li>Minimizes reconstruction error <InlineMath>{`\\|X - X_k\\|_F`}</InlineMath></li>
+          <li>New coordinates: <InlineMath>{`Z = XV_k = U_k\\Sigma_k`}</InlineMath></li>
         </ul>
       </Theorem>
 
@@ -86,7 +86,7 @@ export default function Section50() {
           {`\\mathbf{h} = \\sigma(W\\mathbf{x} + \\mathbf{b})`}
         </MathBlock>
         <p className="mt-2">
-          where <InlineMath>\sigma</InlineMath> is a nonlinear activation (ReLU, sigmoid, etc.).<br />
+          where <InlineMath>{`\\sigma`}</InlineMath> is a nonlinear activation (ReLU, sigmoid, etc.).<br />
           Without nonlinearity, deep networks would collapse to a single matrix!
         </p>
       </Definition>
@@ -97,7 +97,7 @@ export default function Section50() {
           {`\\mathbf{y} = W_3 \\sigma(W_2 \\sigma(W_1 \\mathbf{x}))`}
         </MathBlock>
         <p className="mt-2">
-          Training = finding <InlineMath>W_1, W_2, W_3</InlineMath> to minimize loss.<br />
+          Training = finding <InlineMath>{`W_1, W_2, W_3`}</InlineMath> to minimize loss.<br />
           Gradients computed via backpropagation (chain rule + matrix calculus).
         </p>
       </Example>
@@ -119,7 +119,7 @@ export default function Section50() {
       <div className="bg-dark-800/50 rounded-xl p-4 my-6 border border-primary-500/20">
         <p className="font-semibold text-primary-400 mb-2">Condition Number in Optimization</p>
         <p className="text-dark-300 text-sm">
-          Convergence rate of gradient descent depends on <InlineMath>\kappa(X^TX)</InlineMath>.<br />
+          Convergence rate of gradient descent depends on <InlineMath>{`\\kappa(X^TX)`}</InlineMath>.<br />
           Ill-conditioned problems → slow convergence → need preconditioning or adaptive methods (Adam, etc.).
         </p>
       </div>
@@ -149,7 +149,7 @@ export default function Section50() {
             <p><strong>Objective:</strong> Minimize <InlineMath>{`f(\\boldsymbol{\\beta}) = \\|X\\boldsymbol{\\beta} - \\mathbf{y}\\|^2 + \\lambda\\|\\boldsymbol{\\beta}\\|^2`}</InlineMath>.</p>
             <p className="mt-2"><strong>Derivative:</strong> <InlineMath>{`\\frac{\\partial f}{\\partial \\boldsymbol{\\beta}} = 2X^T(X\\boldsymbol{\\beta} - \\mathbf{y}) + 2\\lambda\\boldsymbol{\\beta} = 0`}</InlineMath>.</p>
             <p className="mt-2"><strong>Solve:</strong> <InlineMath>{`(X^TX + \\lambda I)\\boldsymbol{\\beta} = X^T\\mathbf{y}`}</InlineMath>, giving <InlineMath>{`\\hat{\\boldsymbol{\\beta}} = (X^TX + \\lambda I)^{-1}X^T\\mathbf{y}`}</InlineMath>.</p>
-            <p className="mt-2"><strong>Why it works:</strong> Adding <InlineMath>{`\\lambda I`}</InlineMath> shifts all eigenvalues of <InlineMath>X^TX</InlineMath> up by <InlineMath>{`\\lambda`}</InlineMath>. This:</p>
+            <p className="mt-2"><strong>Why it works:</strong> Adding <InlineMath>{`\\lambda I`}</InlineMath> shifts all eigenvalues of <InlineMath>{`X^TX`}</InlineMath> up by <InlineMath>{`\\lambda`}</InlineMath>. This:</p>
             <ul className="list-disc list-inside ml-4">
               <li>Ensures invertibility (no zero eigenvalues)</li>
               <li>Reduces condition number: <InlineMath>{`\\kappa = (\\sigma_{\\max}^2 + \\lambda)/(\\sigma_{\\min}^2 + \\lambda)`}</InlineMath></li>
@@ -169,7 +169,7 @@ export default function Section50() {
           {`\\hat{\\boldsymbol{\\beta}} = (X^TX + \\lambda I)^{-1}X^Ty`}
         </MathBlock>
         <p className="mt-2 text-primary-400">
-          Adding <InlineMath>\lambda I</InlineMath> improves condition number and shrinks coefficients.
+          Adding <InlineMath>{`\\lambda I`}</InlineMath> improves condition number and shrinks coefficients.
         </p>
       </Theorem>
 

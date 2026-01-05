@@ -9,6 +9,12 @@ service cloud.firestore {
       allow update: if request.auth != null && request.auth.uid == npub
                     && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['isAdmin', 'banned']);
       allow delete: if false;
+
+      // Progress subcollection - only readable by owner, writes only via Cloud Functions
+      match /progress/{docId} {
+        allow read: if request.auth != null && request.auth.uid == npub;
+        allow write: if false;
+      }
     }
 
     // Scores collection - read-only for clients (written by Cloud Functions)
@@ -35,6 +41,25 @@ service cloud.firestore {
       allow read: if request.auth != null &&
         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
       allow write: if false;
+    }
+
+    // Game rooms collection for multiplayer racing
+    // Read allowed for authenticated users to enable real-time listeners
+    // Writes only via Cloud Functions to prevent cheating
+    match /gameRooms/{roomId} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    // Project Manager - admin tool for managing course development
+    // Open access for now (can add auth later if needed)
+    match /project-manager/{docId} {
+      allow read, write: if true;
+    }
+
+    // Project Manager History - backup/restore functionality
+    match /project-manager-history/{historyId} {
+      allow read, write: if true;
     }
   }
 }

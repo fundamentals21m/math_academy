@@ -28,7 +28,7 @@ export default function Section42() {
         how many elements there are in a given set.
       </p>
 
-      <Callout type="definition" title="Same Cardinality">
+      <Callout type="info" title="Same Cardinality">
         <p className="mb-2">
           Two sets are said to have the <strong>same cardinality</strong> if and only
           if there is a <strong>one-to-one correspondence</strong> (bijection) between them:
@@ -64,7 +64,7 @@ export default function Section42() {
       {/* Countable Sets */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Countably Infinite Sets</h3>
 
-      <Callout type="definition" title="Countable Sets">
+      <Callout type="info" title="Countable Sets">
         <p>
           A set <InlineMath>{`A`}</InlineMath> has cardinality{' '}
           <InlineMath>{`\\aleph_0`}</InlineMath> (read "aleph-null") if{' '}
@@ -80,7 +80,7 @@ export default function Section42() {
         <InlineMath>{`|E| = \\aleph_0`}</InlineMath>.
       </p>
 
-      <Callout type="theorem" title="Galileo's Theorem">
+      <Callout type="success" title="Galileo's Theorem">
         <p>
           If a set <InlineMath>{`S`}</InlineMath> has cardinality{' '}
           <InlineMath>{`\\aleph_0`}</InlineMath>, then any <strong>infinite subset</strong>{' '}
@@ -97,7 +97,7 @@ export default function Section42() {
       {/* Power Sets */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Power Sets</h3>
 
-      <Callout type="definition" title="Power Set">
+      <Callout type="info" title="Power Set">
         <p>
           The <strong>power set</strong> of a set <InlineMath>{`S`}</InlineMath>,
           written <InlineMath>{`P(S)`}</InlineMath>, is the set whose members are
@@ -130,7 +130,7 @@ export default function Section42() {
       {/* Cantor's Theorem */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Cantor's Theorem</h3>
 
-      <Callout type="theorem" title="Cantor's Theorem">
+      <Callout type="success" title="Cantor's Theorem">
         <p>
           Any set <InlineMath>{`A`}</InlineMath> has a <strong>lower cardinality</strong>{' '}
           than its power set <InlineMath>{`P(A)`}</InlineMath>:
@@ -173,7 +173,7 @@ export default function Section42() {
         For example, <InlineMath>{`|P(\\mathbb{N})| = 2^{\\aleph_0}`}</InlineMath>.
       </p>
 
-      <Callout type="note" title="An Infinite Hierarchy">
+      <Callout type="info" title="An Infinite Hierarchy">
         <p>By Cantor's Theorem:</p>
         <MathBlock>{`\\aleph_0 < 2^{\\aleph_0} < 2^{2^{\\aleph_0}} < 2^{2^{2^{\\aleph_0}}} < \\cdots`}</MathBlock>
         <p className="mt-2">
@@ -193,7 +193,7 @@ export default function Section42() {
         not as great as <InlineMath>{`2^{\\aleph_0}`}</InlineMath>?
       </p>
 
-      <Callout type="definition" title="The Continuum Hypothesis">
+      <Callout type="info" title="The Continuum Hypothesis">
         <p>
           The <strong>Continuum Hypothesis</strong> states that there is{' '}
           <em>no</em> set with cardinality strictly between{' '}

@@ -28,7 +28,7 @@ export default function Section32() {
         domain and codomain are that set.
       </p>
 
-      <Callout type="theorem" title="Peano's Axioms">
+      <Callout type="success" title="Peano's Axioms">
         <p className="mb-2">
           The following axioms hold for all elements <InlineMath>{`x`}</InlineMath> and{' '}
           <InlineMath>{`y`}</InlineMath> of <InlineMath>{`\\mathbb{N}`}</InlineMath>:
@@ -188,7 +188,7 @@ x^{Sy} &= (x^y) \\cdot x
 
       <MathBlock>{`x \\dot{-} 0 = x, \\quad x \\dot{-} Sy = P(x \\dot{-} y)`}</MathBlock>
 
-      <Callout type="note" title="Why 'Naive' Subtraction?">
+      <Callout type="info" title="Why 'Naive' Subtraction?">
         <p>
           We use the symbol <InlineMath>{`\\dot{-}`}</InlineMath> rather than{' '}
           <InlineMath>{`-`}</InlineMath> because naive subtraction is not quite

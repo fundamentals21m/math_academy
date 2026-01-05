@@ -70,7 +70,7 @@ export default function Section18() {
         biography of Marcellus.
       </p>
 
-      <Callout type="note" title="A Lasting Legacy">
+      <Callout type="info" title="A Lasting Legacy">
         Who today would know of Marcellus were it not for Archimedes?
       </Callout>
 
@@ -143,7 +143,7 @@ export default function Section18() {
         with Antiphon (425 BC).
       </p>
 
-      <Callout type="theorem" title="Area of a Circle">
+      <Callout type="success" title="Area of a Circle">
         The area of a circle equals that of a right triangle whose legs equal the
         radius and circumference of the circle:
         <MathBlock>{`\\text{Area} = \\frac{1}{2} \\times \\text{circumference} \\times \\text{radius} = \\pi r^2`}</MathBlock>

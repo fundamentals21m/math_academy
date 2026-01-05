@@ -27,7 +27,7 @@ export default function Section38() {
         numbers was decreed by heaven.
       </p>
 
-      <Callout type="note" title="The Discovery">
+      <Callout type="info" title="The Discovery">
         <p>
           The idea of quaternions dawned on Hamilton while he was strolling along
           the <strong>Royal Canal in Dublin in 1843</strong>. Matrix algebra came
@@ -38,7 +38,7 @@ export default function Section38() {
       {/* Definition */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Definition</h3>
 
-      <Callout type="definition" title="Quaternions">
+      <Callout type="info" title="Quaternions">
         <p className="mb-2">
           Quaternions are numbers of the form:
         </p>
@@ -116,7 +116,7 @@ export default function Section38() {
       {/* Conjugate and Norm */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Conjugate and Norm</h3>
 
-      <Callout type="definition" title="Quaternion Conjugate">
+      <Callout type="info" title="Quaternion Conjugate">
         <p className="mb-2">
           The <strong>conjugate</strong> of a quaternion{' '}
           <InlineMath>{`a = a_0 + a_1 i_1 + a_2 i_2 + a_3 i_3`}</InlineMath> is:
@@ -128,7 +128,7 @@ export default function Section38() {
         Note that <InlineMath>{`a\\bar{a} = a_0^2 + a_1^2 + a_2^2 + a_3^2 = \\bar{a}a`}</InlineMath>.
       </p>
 
-      <Callout type="definition" title="Norm">
+      <Callout type="info" title="Norm">
         <p className="mb-2">
           The <strong>norm</strong> <InlineMath>{`N(a)`}</InlineMath> of a quaternion{' '}
           <InlineMath>{`a`}</InlineMath> is:
@@ -155,7 +155,7 @@ export default function Section38() {
       {/* Division Ring */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Division Ring</h3>
 
-      <Callout type="definition" title="Division Ring (Skew-Field)">
+      <Callout type="info" title="Division Ring (Skew-Field)">
         <p className="mb-2">
           A <strong>division ring</strong> is a system of elements closed under
           addition and multiplication such that:
@@ -174,7 +174,7 @@ export default function Section38() {
         <strong>skew-field</strong>.
       </p>
 
-      <Callout type="theorem" title="Key Theorem">
+      <Callout type="success" title="Key Theorem">
         <p>The quaternions form a division ring.</p>
       </Callout>
 
@@ -209,7 +209,7 @@ export default function Section38() {
         </div>
       </Card>
 
-      <Callout type="theorem" title="Homomorphism Property">
+      <Callout type="success" title="Homomorphism Property">
         <p className="mb-2">
           For all quaternions <InlineMath>{`a`}</InlineMath> and{' '}
           <InlineMath>{`b`}</InlineMath>:

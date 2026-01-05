@@ -74,7 +74,21 @@ export default function Section33() {
         </ul>
       </Definition>
 
-      <Theorem title="ℝP² Satisfies the Axioms">
+      <Theorem title="ℝP² Satisfies the Axioms"
+        proof={
+          <>
+            <p>We verify each axiom for the model where "points" are lines through O and "lines" are planes through O in ℝ³.</p>
+            <p className="mt-2"><strong>Axiom 1:</strong> Any two "points" determine a unique "line."</p>
+            <p className="mt-2">Two distinct lines through O span a unique plane through O. (Given two linearly independent direction vectors v and w, the plane is {'{'}av + bw : a, b ∈ ℝ{'}'}.)</p>
+            <p className="mt-2"><strong>Axiom 2:</strong> Any two "lines" meet in a unique "point."</p>
+            <p className="mt-2">Two distinct planes through O intersect in a unique line through O. (If the planes have normal vectors n₁ and n₂, their intersection is the line in direction n₁ × n₂.)</p>
+            <p className="mt-2"><strong>Axiom 3:</strong> There exist four "points" with no three on a "line."</p>
+            <p className="mt-2">Consider lines through O in directions (1,0,0), (0,1,0), (0,0,1), (1,1,1).</p>
+            <p className="mt-2">Any three of these directions are linearly independent (determinant ≠ 0), so no plane through O contains all three lines.</p>
+            <MathBlock math="\det\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 1 & 1 & 1 \end{pmatrix} = 1 \neq 0" />
+          </>
+        }
+      >
         <ol className="list-decimal list-inside space-y-3">
           <li>
             Any two "points" are contained in a unique "line" because two given

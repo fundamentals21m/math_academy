@@ -57,7 +57,28 @@ export default function Section11() {
         <p className="mt-2">Equivalently: the sum of dimensions of eigenspaces equals <InlineMath>\dim(V)</InlineMath>.</p>
       </Theorem>
 
-      <Theorem title="Sufficient Condition for Diagonalizability">
+      <Theorem
+        title="Sufficient Condition for Diagonalizability"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>\lambda_1, \ldots, \lambda_n</InlineMath> be the <InlineMath>n</InlineMath> distinct eigenvalues.
+            </p>
+            <p className="mt-2">
+              For each <InlineMath>\lambda_i</InlineMath>, choose an eigenvector <InlineMath>v_i</InlineMath>. By the theorem on eigenvectors for distinct eigenvalues, <InlineMath>{`\\{v_1, \\ldots, v_n\\}`}</InlineMath> is linearly independent.
+            </p>
+            <p className="mt-2">
+              Since we have <InlineMath>n</InlineMath> linearly independent vectors in an <InlineMath>n</InlineMath>-dimensional space, they form a basis.
+            </p>
+            <p className="mt-2">
+              This is a basis of eigenvectors, so <InlineMath>A</InlineMath> is diagonalizable.
+            </p>
+            <p className="mt-2">
+              Explicitly: <InlineMath>P = [v_1 | \cdots | v_n]</InlineMath> satisfies <InlineMath>A = PDP^{'{-1}'}</InlineMath> where <InlineMath>D = {`\\text{diag}`}(\lambda_1, \ldots, \lambda_n)</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>
           If an <InlineMath>n \times n</InlineMath> matrix has <InlineMath>n</InlineMath> distinct eigenvalues, it is diagonalizable.
         </p>

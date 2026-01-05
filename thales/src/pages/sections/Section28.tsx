@@ -93,7 +93,7 @@ export default function Section28() {
         </div>
       </Card>
 
-      <Callout type="theorem" title="Leibniz's Rule (Product Rule)">
+      <Callout type="success" title="Leibniz's Rule (Product Rule)">
         <p className="mb-2">
           Leibniz obtained the rule for the derivative of a product:
         </p>
@@ -113,7 +113,7 @@ export default function Section28() {
         acquiescence, and a <strong>bitter priority battle</strong> ensued.
       </p>
 
-      <Callout type="note" title="Today's Verdict">
+      <Callout type="info" title="Today's Verdict">
         Today, we ascribe the invention of the calculus to <strong>both Newton and
         Leibniz</strong>. They developed it independently, with different notation
         and different emphasis. Newton's approach was more geometric and physical;

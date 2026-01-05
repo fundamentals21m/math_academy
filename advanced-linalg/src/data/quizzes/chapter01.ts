@@ -1,6 +1,6 @@
 // Chapter 1: Linear Equations (Sections 1-6)
 // Based on Hoffman & Kunze Chapter 1
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // =============================================================================
 // Section 1: Fields

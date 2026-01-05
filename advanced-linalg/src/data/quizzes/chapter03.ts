@@ -1,7 +1,7 @@
 // Chapter 3: Linear Transformations (Sections 13-19)
 // Based on Hoffman & Kunze Chapter 3
 // Maps to curriculum sections 5 (Linear Transformations), 6 (Matrix Representation), 7 (Dual Spaces)
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // =============================================================================
 // Section 13: Linear Transformations (maps to curriculum Section 5)

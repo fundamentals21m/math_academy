@@ -65,7 +65,22 @@ export default function Section41() {
         Desargues configuration.
       </p>
 
-      <Theorem title="Tiled Floor Coincidence">
+      <Theorem title="Tiled Floor Coincidence"
+        proof={
+          <>
+            <p>We identify two triangles in the tiled floor construction that form a little Desargues configuration.</p>
+            <p className="mt-2"><strong>Step 1:</strong> In the tiled floor, consider the diagonal lines of adjacent tiles. These diagonals, when extended, meet at a point on the horizon (the line at infinity where parallel lines meet).</p>
+            <p className="mt-2"><strong>Step 2:</strong> The tiles are constructed so that certain edges are parallel (all horizontal edges are parallel, all vertical edges from the perspective of the viewer converge to one vanishing point).</p>
+            <p className="mt-2"><strong>Step 3:</strong> In the construction, we can identify two triangles whose:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>Corresponding vertices lie on lines through the center of perspective P (on the horizon)</li>
+              <li>Two pairs of corresponding sides meet on the horizon L</li>
+            </ul>
+            <p className="mt-2"><strong>Step 4:</strong> By the little Desargues theorem, the third pair of corresponding sides also meets on L (the horizon).</p>
+            <p className="mt-2">This explains why the "diagonals of double tiles" meet on the horizon: the construction forces a little Desargues configuration whose conclusion is precisely that these diagonal lines have their intersection on the horizon.</p>
+          </>
+        }
+      >
         <p>
           The case of little Desargues in the tiled floor construction says that
           the two dotted lines (diagonals of "double tiles") meet on the horizon.

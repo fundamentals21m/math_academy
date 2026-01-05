@@ -106,7 +106,7 @@ export default function Section27() {
       </CardGrid>
 
       {/* Wallis's Product */}
-      <Callout type="theorem" title="Wallis's Product for π">
+      <Callout type="success" title="Wallis's Product for π">
         <p className="mb-2">
           Wallis discovered this remarkable infinite product:
         </p>
@@ -143,7 +143,7 @@ export default function Section27() {
         </div>
       </Card>
 
-      <Callout type="theorem" title="Newton's Binomial Theorem">
+      <Callout type="success" title="Newton's Binomial Theorem">
         <p className="mb-2">
           For any real exponent <InlineMath>{`n`}</InlineMath> (not just positive integers):
         </p>
@@ -233,7 +233,7 @@ export default function Section27() {
         was knighted in 1705.
       </p>
 
-      <Callout type="note" title="Newton's Humility">
+      <Callout type="info" title="Newton's Humility">
         <blockquote className="italic text-dark-300">
           "I do not know what I may appear to the world; but to myself I seem to have
           been only like a boy, playing on the sea-shore, and diverting myself, in now

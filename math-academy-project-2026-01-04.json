@@ -1,0 +1,28 @@
+{
+  "testing": [],
+  "content": [],
+  "features": [],
+  "design": [],
+  "monetization": [],
+  "team": [],
+  "subscriptions": [
+    {
+      "id": 1767533516433,
+      "name": "ClaudeCode",
+      "cost": 200,
+      "frequency": "monthly",
+      "renewal": "2026-01-02",
+      "purpose": "Core Coding Backbone - essential",
+      "timestamp": "1/4/2026, 8:31:56 AM"
+    },
+    {
+      "id": 1767533538728,
+      "name": "Vercel Pro",
+      "cost": 20,
+      "frequency": "monthly",
+      "renewal": "2026-01-02",
+      "purpose": "server for hosting websites",
+      "timestamp": "1/4/2026, 8:32:18 AM"
+    }
+  ]
+}

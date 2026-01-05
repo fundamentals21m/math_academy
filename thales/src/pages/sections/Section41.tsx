@@ -62,7 +62,7 @@ export default function Section41() {
         <InlineMath>{`h`}</InlineMath> is Planck's constant.
       </p>
 
-      <Callout type="note" title="Biquaternion Form">
+      <Callout type="info" title="Biquaternion Form">
         <p>
           Using biquaternion notation, the Klein-Gordon equation can be written as:
         </p>
@@ -107,7 +107,7 @@ export default function Section41() {
         <InlineMath>{`ji_k = i_k j`}</InlineMath> for <InlineMath>{`k = 1, 2, 3`}</InlineMath>.
       </p>
 
-      <Callout type="definition" title="The Two Representations">
+      <Callout type="info" title="The Two Representations">
         <p className="mb-2">
           Using real <InlineMath>{`4 \\times 4`}</InlineMath> matrices, we identify:
         </p>
@@ -131,7 +131,7 @@ export default function Section41() {
 
       <MathBlock>{`\\psi = \\phi + j_2 \\chi = \\phi_0 + j_1 \\phi_1 + j_2 \\chi_0 + j_3 \\chi_1`}</MathBlock>
 
-      <Callout type="theorem" title="Dirac's Equation">
+      <Callout type="success" title="Dirac's Equation">
         <p className="mb-2">
           The combined first-order equation becomes:
         </p>
@@ -184,7 +184,7 @@ export default function Section41() {
       {/* Spin 1/2 */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Spin ½</h3>
 
-      <Callout type="note" title="Why Electrons Have Spin ½">
+      <Callout type="info" title="Why Electrons Have Spin ½">
         <p className="mb-2">
           The biquaternions of norm 1, <InlineMath>{`p`}</InlineMath> and{' '}
           <InlineMath>{`-p`}</InlineMath>, yield the <strong>same</strong> Lorentz

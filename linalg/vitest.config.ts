@@ -1,28 +1,17 @@
-import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [react()],
   test: {
-    environment: 'jsdom',
     globals: true,
+    environment: 'happy-dom',
     setupFiles: ['./test/setup.ts'],
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@shared': path.resolve(__dirname, '../shared'),
-    },
-    coverage: {
-      provider: 'v8',
-      reporter: ['text', 'json', 'html'],
-      exclude: [
-        'node_modules/',
-        'test/',
-        '**/*.test.ts',
-        '**/*.test.tsx',
-        '**/*.spec.ts',
-        '**/*.spec.tsx',
-      ],
-    },
+    include: [
+      '**/*.{test,spec}.{js,ts,jsx,tsx}',
+      '**/test/**/*.{test,spec}.{js,ts,jsx,tsx}',
+      '**/test/regression/**/*.{test,spec}.{js,ts,jsx,tsx}',
+      '**/.storybook/**/*.stories.@(js|jsx|mjs|tsx|ts)',
+      '**/components/**/*.stories.@(js|jsx|mjs|tsx|ts)',
+    ],
   },
 });

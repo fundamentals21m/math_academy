@@ -47,7 +47,7 @@ export default function Section44() {
 
       <MathBlock>{`\\frac{1604}{502} = 3 + \\cfrac{1}{5 + \\cfrac{1}{8 + \\cfrac{1}{6}}}`}</MathBlock>
 
-      <Callout type="definition" title="Simple Continued Fraction">
+      <Callout type="info" title="Simple Continued Fraction">
         <p className="mb-2">
           A <strong>simple continued fraction</strong> is written{' '}
           <InlineMath>{`(a_0, a_1, a_2, \\ldots)`}</InlineMath> and represents:
@@ -75,7 +75,7 @@ export default function Section44() {
 
       <MathBlock>{`c_0 = a_0, \\quad c_1 = (a_0, a_1), \\quad c_2 = (a_0, a_1, a_2), \\quad \\ldots`}</MathBlock>
 
-      <Callout type="theorem" title="Computing Convergents">
+      <Callout type="success" title="Computing Convergents">
         <p className="mb-2">
           The <InlineMath>{`n`}</InlineMath>th convergent is{' '}
           <InlineMath>{`c_n = \\frac{p_n}{q_n}`}</InlineMath>, where:
@@ -110,7 +110,7 @@ export default function Section44() {
       {/* Key Theorems */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Key Properties</h3>
 
-      <Callout type="theorem" title="Alternating Determinant">
+      <Callout type="success" title="Alternating Determinant">
         <p>
           For all <InlineMath>{`n > 0`}</InlineMath>:
         </p>
@@ -157,7 +157,7 @@ export default function Section44() {
       {/* Golden Ratio Example */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The Golden Ratio</h3>
 
-      <Callout type="note" title="Example: (1, 1, 1, ...)">
+      <Callout type="info" title="Example: (1, 1, 1, ...)">
         <p className="mb-2">
           Let <InlineMath>{`x = (1, 1, 1, \\ldots)`}</InlineMath>. Then:
         </p>

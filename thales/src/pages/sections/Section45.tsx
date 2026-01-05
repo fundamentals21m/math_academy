@@ -26,7 +26,7 @@ export default function Section45() {
         <InlineMath>{`a`}</InlineMath> and <InlineMath>{`b`}</InlineMath>.
       </p>
 
-      <Callout type="theorem" title="Bézout's Identity">
+      <Callout type="success" title="Bézout's Identity">
         <p>
           Given positive integers <InlineMath>{`a`}</InlineMath> and{' '}
           <InlineMath>{`b`}</InlineMath>, their gcd is the <strong>smallest
@@ -63,7 +63,7 @@ export default function Section45() {
       {/* Fundamental Lemma */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The Fundamental Lemma</h3>
 
-      <Callout type="theorem" title="Fundamental Lemma of Arithmetic">
+      <Callout type="success" title="Fundamental Lemma of Arithmetic">
         <p className="mb-2">
           If <InlineMath>{`a`}</InlineMath> divides{' '}
           <InlineMath>{`bc`}</InlineMath> and{' '}
@@ -102,7 +102,7 @@ export default function Section45() {
       {/* The Fundamental Theorem */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The Fundamental Theorem</h3>
 
-      <Callout type="theorem" title="Fundamental Theorem of Arithmetic">
+      <Callout type="success" title="Fundamental Theorem of Arithmetic">
         <p className="mb-2">
           Every positive integer <InlineMath>{`n > 1`}</InlineMath> can be
           expressed as a product of prime numbers:

@@ -39,6 +39,13 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
-    "test:coverage": "node --version | grep -q 'v2[0-9]' && vitest run --coverage || echo 'Coverage requires Node 20+. Current version:' $(node --version)"
+    "test:coverage": "node --version | grep -q 'v2[0-9]' && vitest run --coverage || echo 'Coverage requires Node 20+. Current version:' $(node --version)",
+    "test:regression": "vitest run test/regression",
+    "test:snapshot": "vitest run test/snapshots",
+    "test:integration": "vitest run test/integration",
+    "test:all": "npm run test:run && npm run test:regression && npm run test:integration",
+    "storybook": "storybook dev -p public",
+    "build-storybook": "storybook build -p public",
+    "chromatic": "chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}"
   }
 }

@@ -241,7 +241,21 @@ export default function Section02() {
         </svg>
       </div>
 
-      <Theorem title="The Thales Theorem">
+      <Theorem title="The Thales Theorem"
+        proof={
+          <>
+            <p>Let line L be parallel to BC, intersecting AB at P and AC at Q. We prove that |AP|/|PB| = |AQ|/|QC|.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Consider triangles APQ and ABQ. They share the same height from Q to line AB.</p>
+            <MathBlock math="\frac{\text{Area}(\triangle APQ)}{\text{Area}(\triangle BPQ)} = \frac{|AP|}{|PB|}" />
+            <p className="mt-2"><strong>Step 2:</strong> Similarly, triangles APQ and AQC share the same height from P to line AC:</p>
+            <MathBlock math="\frac{\text{Area}(\triangle APQ)}{\text{Area}(\triangle PQC)} = \frac{|AQ|}{|QC|}" />
+            <p className="mt-2"><strong>Step 3:</strong> Since PQ is parallel to BC, triangles BPQ and PQC have the same base PQ and equal heights (the perpendicular distance between parallel lines PQ and BC).</p>
+            <MathBlock math="\text{Area}(\triangle BPQ) = \text{Area}(\triangle PQC)" />
+            <p className="mt-2"><strong>Step 4:</strong> Therefore:</p>
+            <MathBlock math="\frac{|AP|}{|PB|} = \frac{\text{Area}(\triangle APQ)}{\text{Area}(\triangle BPQ)} = \frac{\text{Area}(\triangle APQ)}{\text{Area}(\triangle PQC)} = \frac{|AQ|}{|QC|}" />
+          </>
+        }
+      >
         <p>
           This construction depends on a property of parallel lines attributed to Thales
           (Greek mathematician, c. 600 BCE):

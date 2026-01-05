@@ -23,7 +23,7 @@ export default function Section46() {
       {/* Existence of Solutions */}
       <h3 className="text-xl font-semibold mt-8 mb-4">When Do Solutions Exist?</h3>
 
-      <Callout type="theorem" title="Existence Criterion">
+      <Callout type="success" title="Existence Criterion">
         <p>
           The equation <InlineMath>{`ax + by = c`}</InlineMath> has integer solutions
           if and only if <InlineMath>{`\\gcd(a, b)`}</InlineMath> divides{' '}
@@ -71,7 +71,7 @@ export default function Section46() {
       {/* General Solution */}
       <h3 className="text-xl font-semibold mt-8 mb-4">The General Solution</h3>
 
-      <Callout type="theorem" title="Complete Solution">
+      <Callout type="success" title="Complete Solution">
         <p className="mb-2">
           If <InlineMath>{`(x_0, y_0)`}</InlineMath> is one solution of{' '}
           <InlineMath>{`ax + by = c`}</InlineMath>, then <strong>all</strong> solutions are:

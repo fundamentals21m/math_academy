@@ -119,7 +119,7 @@ export default function Section49() {
         </div>
       </Card>
 
-      <Callout type="definition" title="Primitive Recursive Functions">
+      <Callout type="info" title="Primitive Recursive Functions">
         <p>
           Functions built from the basic functions using schemes (1)–(5) are
           called <strong>primitive recursive functions</strong>. They were
@@ -176,7 +176,7 @@ export default function Section49() {
         There is one more scheme:
       </p>
 
-      <Callout type="definition" title="Scheme 6: Minimization">
+      <Callout type="info" title="Scheme 6: Minimization">
         <p>
           Given a calculable function <InlineMath>{`g(\\bar{x}, y)`}</InlineMath>,
           we can calculate:
@@ -198,7 +198,7 @@ export default function Section49() {
       {/* Recursive Functions */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Recursive Functions</h3>
 
-      <Callout type="theorem" title="Church-Turing Thesis">
+      <Callout type="success" title="Church-Turing Thesis">
         <p>
           The class of functions obtainable from schemes (1)–(6) are the{' '}
           <strong>(partial) recursive functions</strong>. These are exactly

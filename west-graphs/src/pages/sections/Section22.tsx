@@ -22,7 +22,34 @@ export default function Section22() {
         </p>
       </Definition>
 
-      <Theorem title="Tait's Theorem (Theorem 7.3.2)">
+      <Theorem
+        title="Tait's Theorem (Theorem 7.3.2)"
+        proof={
+          <>
+            <p>
+              <strong>(Hamiltonian implies 3-edge-colorable):</strong> Let <InlineMath math="G" /> be
+              a 2-edge-connected cubic planar graph with Hamiltonian cycle <InlineMath math="C" />.
+            </p>
+            <p className="mt-2">
+              The cycle <InlineMath math="C" /> uses exactly 2 edges at each vertex.
+              Color the edges of <InlineMath math="C" /> alternately with colors 1 and 2.
+              Since <InlineMath math="G" /> is cubic and <InlineMath math="C" /> uses 2 edges
+              at each vertex, exactly one edge at each vertex is not in <InlineMath math="C" />.
+            </p>
+            <p className="mt-2">
+              These remaining edges form a perfect matching (each vertex is incident to exactly
+              one such edge). Color all these edges with color 3. This gives a proper 3-edge-coloring.
+            </p>
+            <p className="mt-2">
+              <strong>(3-edge-colorable implies 4-face-colorable for dual):</strong> Given a
+              Tait coloring with colors <InlineMath math="\{'{'}1,2,3{'}'}" />, the edges of
+              colors 1 and 2 form a 2-regular spanning subgraph (a union of cycles).
+              These cycles partition the faces into two classes. Combined with the similar
+              partition from colors 1 and 3, we obtain 4 face classes, giving a 4-face-coloring.
+            </p>
+          </>
+        }
+      >
         <p>
           A planar graph is 4-face-colorable if and only if it is the dual of a
           bridgeless cubic planar graph that has a Tait coloring.
@@ -65,7 +92,37 @@ export default function Section22() {
         Hamiltonian, based on face sizes.
       </p>
 
-      <Theorem title="Grinberg's Theorem (Theorem 7.3.5)">
+      <Theorem
+        title="Grinberg's Theorem (Theorem 7.3.5)"
+        proof={
+          <>
+            <p>
+              Let <InlineMath math="C" /> be the Hamiltonian cycle with <InlineMath math="n" /> vertices
+              (and thus <InlineMath math="n" /> edges). Let <InlineMath math="G'" /> be the subgraph
+              consisting of <InlineMath math="C" /> and all edges and vertices inside <InlineMath math="C" />.
+            </p>
+            <p className="mt-2">
+              For <InlineMath math="G'" />: Let <InlineMath math="n'" /> be the number of vertices,{' '}
+              <InlineMath math="m'" /> the edges, and <InlineMath math="f'" /> the faces (not counting
+              the infinite face). Each face of size <InlineMath math="k" /> contributes{' '}
+              <InlineMath math="k" /> to the sum of face sizes, and each edge is on exactly 2 face
+              boundaries, so <InlineMath math="\sum_k k \cdot f'_k = 2m'" />.
+            </p>
+            <p className="mt-2">
+              By Euler's formula for <InlineMath math="G'" />: <InlineMath math="n' - m' + f' = 1" />{' '}
+              (the outer region is the unbounded face). Since <InlineMath math="C" /> has{' '}
+              <InlineMath math="n" /> edges, and summing over face sizes:
+            </p>
+            <MathBlock math="\sum_k (k-2) f'_k = 2m' - 2f' = 2(m' - f') = 2(n' - 1) - 2 \cdot 0 = n - 2" />
+            <p className="mt-2">
+              Similarly, for faces outside: <InlineMath math="\sum_k (k-2) f''_k = n - 2" />.
+            </p>
+            <p className="mt-2">
+              Subtracting: <InlineMath math="\sum_k (k-2)(f'_k - f''_k) = (n-2) - (n-2) = 0" />.
+            </p>
+          </>
+        }
+      >
         <p>
           If a plane graph <InlineMath math="G" /> has a Hamiltonian cycle{' '}
           <InlineMath math="C" />, let <InlineMath math="f'_k" /> be the number of faces
@@ -73,23 +130,6 @@ export default function Section22() {
           <InlineMath math="f''_k" /> be the number outside. Then:
         </p>
         <MathBlock math="\sum_{k \geq 3} (k - 2)(f'_k - f''_k) = 0" />
-        <details className="mt-3">
-          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
-            Proof
-          </summary>
-          <div className="mt-2 pl-4 border-l-2 border-dark-700">
-            <p>
-              Let <InlineMath math="C" /> have <InlineMath math="n" /> edges. For faces
-              inside: <InlineMath math="\sum k \cdot f'_k = n + 2(\text{edges inside})" />{' '}
-              and <InlineMath math="\sum f'_k = 1 + \text{faces inside}" />.
-            </p>
-            <p className="mt-2">
-              By Euler's formula applied to the inside subgraph:{' '}
-              <InlineMath math="\sum (k-2) f'_k = n - 2" />. Similarly for outside.
-              Subtracting gives the result.
-            </p>
-          </div>
-        </details>
       </Theorem>
 
       <Example title="Using Grinberg's Theorem">
@@ -146,7 +186,40 @@ export default function Section22() {
         </p>
       </Definition>
 
-      <Theorem title="Duality: Flows and Colorings (Theorem 7.3.13)">
+      <Theorem
+        title="Duality: Flows and Colorings (Theorem 7.3.13)"
+        proof={
+          <>
+            <p>
+              <strong>Correspondence:</strong> Orient <InlineMath math="G" /> arbitrarily.
+              A proper <InlineMath math="k" />-coloring of <InlineMath math="G^*" /> assigns
+              colors <InlineMath math="c_1, \ldots, c_f \in \mathbb{Z}_k" /> to faces of{' '}
+              <InlineMath math="G" />.
+            </p>
+            <p className="mt-2">
+              For each edge <InlineMath math="e" /> of <InlineMath math="G" /> separating
+              faces with colors <InlineMath math="c_L" /> and <InlineMath math="c_R" />{' '}
+              (left and right relative to orientation), define the flow value{' '}
+              <InlineMath math="f(e) = c_R - c_L \pmod{k}" />.
+            </p>
+            <p className="mt-2">
+              <strong>Flow conservation:</strong> At each vertex <InlineMath math="v" />,
+              the incident edges cycle around <InlineMath math="v" />. The flow values
+              telescope: incoming flow equals outgoing flow because we return to the
+              same face after going around.
+            </p>
+            <p className="mt-2">
+              <strong>Nowhere-zero:</strong> The coloring is proper iff adjacent faces
+              have different colors iff <InlineMath math="c_R \neq c_L" /> iff{' '}
+              <InlineMath math="f(e) \neq 0" /> for all edges.
+            </p>
+            <p className="mt-2">
+              This bijection preserves the number of colors/flow values, so{' '}
+              <InlineMath math="\chi(G^*) = \phi(G)" />.
+            </p>
+          </>
+        }
+      >
         <p>
           For a planar graph <InlineMath math="G" /> and its dual{' '}
           <InlineMath math="G^*" />:
@@ -171,7 +244,28 @@ export default function Section22() {
 
       <h3>Flow Conjectures</h3>
 
-      <Theorem title="Tutte's Flow Conjectures">
+      <Theorem
+        title="Tutte's Flow Conjectures"
+        proof={
+          <>
+            <p>
+              <em>These remain open conjectures.</em> The conjectures are stated here
+              for reference; their proofs (if they exist) are unknown.
+            </p>
+            <p className="mt-2">
+              <strong>Motivation:</strong> By the duality theorem, proving the 5-Flow
+              Conjecture would imply that every planar graph is 5-colorable (already
+              known). The conjecture generalizes this to non-planar graphs where duality
+              doesn't directly apply.
+            </p>
+            <p className="mt-2">
+              <strong>Evidence:</strong> Seymour's 6-Flow Theorem (1981) shows every
+              bridgeless graph has a nowhere-zero 6-flow, providing partial progress
+              toward the 5-Flow Conjecture.
+            </p>
+          </>
+        }
+      >
         <ul className="list-disc list-inside space-y-1">
           <li>
             <strong>5-Flow Conjecture:</strong> Every bridgeless graph has a
@@ -188,7 +282,32 @@ export default function Section22() {
         </ul>
       </Theorem>
 
-      <Theorem title="Seymour's 6-Flow Theorem (1981)">
+      <Theorem
+        title="Seymour's 6-Flow Theorem (1981)"
+        proof={
+          <>
+            <p>
+              <em>(Outline)</em> The proof uses structural decomposition.
+            </p>
+            <p className="mt-2">
+              <strong>Key idea:</strong> Seymour proved that every bridgeless graph can be
+              constructed from smaller graphs via certain operations (2-sums and 3-sums)
+              starting from graphs that admit nowhere-zero 6-flows.
+            </p>
+            <p className="mt-2">
+              <strong>Base case:</strong> Small bridgeless graphs (including{' '}
+              <InlineMath math="K_4" /> and the Petersen graph) can be verified to have
+              nowhere-zero 6-flows directly.
+            </p>
+            <p className="mt-2">
+              <strong>Induction:</strong> When combining graphs via 2-sums or 3-sums,
+              nowhere-zero 6-flows can be combined. The crucial insight is that{' '}
+              <InlineMath math="\mathbb{Z}_2 \times \mathbb{Z}_3 \cong \mathbb{Z}_6" />,
+              allowing separate flows modulo 2 and modulo 3 to combine into a flow modulo 6.
+            </p>
+          </>
+        }
+      >
         <p>
           Every bridgeless graph has a nowhere-zero 6-flow.
         </p>
@@ -203,7 +322,27 @@ export default function Section22() {
         </p>
       </Definition>
 
-      <Theorem title="Cycle Double Cover Conjecture">
+      <Theorem
+        title="Cycle Double Cover Conjecture"
+        proof={
+          <>
+            <p>
+              <em>This remains an open conjecture.</em>
+            </p>
+            <p className="mt-2">
+              <strong>Equivalence for cubic graphs:</strong> For cubic graphs, the Cycle
+              Double Cover Conjecture is equivalent to the 5-Flow Conjecture. If a cubic
+              graph has a nowhere-zero 4-flow, the level sets of the flow (edges with
+              each non-zero value) form a cycle double cover.
+            </p>
+            <p className="mt-2">
+              <strong>Partial results:</strong> The conjecture is known to hold for
+              planar graphs (the face boundaries form a cycle double cover) and for
+              graphs with small crossing number.
+            </p>
+          </>
+        }
+      >
         <p>
           Every bridgeless graph has a cycle double cover.
         </p>
@@ -248,7 +387,34 @@ export default function Section22() {
         </p>
       </Example>
 
-      <Theorem title="Snarks and the Four Color Theorem">
+      <Theorem
+        title="Snarks and the Four Color Theorem"
+        proof={
+          <>
+            <p>
+              <strong>4CT implies no planar bridgeless snarks:</strong> Suppose{' '}
+              <InlineMath math="G" /> is a bridgeless cubic planar graph. By Tait's
+              theorem equivalence, <InlineMath math="G" /> has a Tait coloring (3-edge-coloring)
+              if and only if its dual <InlineMath math="G^*" /> is 4-face-colorable.
+            </p>
+            <p className="mt-2">
+              The Four Color Theorem states every planar graph is 4-colorable, so{' '}
+              <InlineMath math="G^*" /> is 4-face-colorable. Therefore <InlineMath math="G" />{' '}
+              has a Tait coloring, meaning <InlineMath math="\chi'(G) = 3" />.
+            </p>
+            <p className="mt-2">
+              Thus <InlineMath math="G" /> is not a snark (which would require{' '}
+              <InlineMath math="\chi'(G) = 4" />). Hence no bridgeless cubic planar graph
+              is a snark.
+            </p>
+            <p className="mt-2">
+              <strong>Converse:</strong> If no planar bridgeless snark exists, then every
+              bridgeless cubic planar graph is 3-edge-colorable, which by Tait's theorem
+              implies 4-colorability of planar graphs.
+            </p>
+          </>
+        }
+      >
         <p>
           The Four Color Theorem is equivalent to: every planar snark has a bridge.
         </p>

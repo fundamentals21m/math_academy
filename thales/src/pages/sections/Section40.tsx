@@ -20,7 +20,7 @@ export default function Section40() {
       {/* Scalar and Vector Parts */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Scalar and Vector Parts</h3>
 
-      <Callout type="definition" title="Decomposition of a Quaternion">
+      <Callout type="info" title="Decomposition of a Quaternion">
         <p className="mb-2">
           Writing a quaternion <InlineMath>{`x`}</InlineMath> as{' '}
           <InlineMath>{`x = x_0 + \\boldsymbol{\\xi}`}</InlineMath>, where:
@@ -95,7 +95,7 @@ export default function Section40() {
         </div>
       </Card>
 
-      <Callout type="note" title="Maxwell's Praise of Quaternions">
+      <Callout type="info" title="Maxwell's Praise of Quaternions">
         <p>
           Maxwell wrote: "The invention of the calculus of quaternions is a step
           towards the knowledge of quantities related to space which can only be
@@ -129,7 +129,7 @@ export default function Section40() {
 
       <MathBlock>{`x = x_0 + i\\boldsymbol{\\xi}, \\quad x_0 = ct`}</MathBlock>
 
-      <Callout type="definition" title="Minkowski Space">
+      <Callout type="info" title="Minkowski Space">
         <p>
           A point in <strong>Minkowski space</strong> (an event in space-time) is
           represented by a quaternion whose scalar part is real, but whose vector
@@ -140,7 +140,7 @@ export default function Section40() {
       {/* Biquaternions */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Biquaternions</h3>
 
-      <Callout type="definition" title="Biquaternion">
+      <Callout type="info" title="Biquaternion">
         <p className="mb-2">
           A <strong>biquaternion</strong> is a quaternion with <em>complex</em>{' '}
           coefficients:
@@ -172,7 +172,7 @@ export default function Section40() {
       {/* Lorentz Transformations */}
       <h3 className="text-xl font-semibold mt-8 mb-4">Lorentz Transformations</h3>
 
-      <Callout type="theorem" title="Lorentz Transformation via Biquaternions">
+      <Callout type="success" title="Lorentz Transformation via Biquaternions">
         <p className="mb-2">
           A <strong>Lorentz transformation</strong> sends{' '}
           <InlineMath>{`x`}</InlineMath> onto:
@@ -214,7 +214,7 @@ export default function Section40() {
         <InlineMath>{`m\\frac{d\\boldsymbol{\\xi}}{dt}`}</InlineMath> is the momentum.
       </p>
 
-      <Callout type="theorem" title="Einstein's Mass-Energy Equivalence">
+      <Callout type="success" title="Einstein's Mass-Energy Equivalence">
         <p className="mb-2">
           If <InlineMath>{`v`}</InlineMath> is small compared to{' '}
           <InlineMath>{`c`}</InlineMath>:

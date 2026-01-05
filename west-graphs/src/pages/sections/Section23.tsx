@@ -51,7 +51,38 @@ export default function Section23() {
 
       <h2>The Perfect Graph Theorem</h2>
 
-      <Theorem title="Weak Perfect Graph Theorem (Lovász, 1972)">
+      <Theorem
+        title="Weak Perfect Graph Theorem (Lovász, 1972)"
+        proof={
+          <>
+            <p>
+              <strong>Key relationships:</strong> For any graph <InlineMath math="G" />:{' '}
+              <InlineMath math="\omega(\overline{G}) = \alpha(G)" /> and{' '}
+              <InlineMath math="\chi(\overline{G}) = \theta(G)" /> (clique cover number).
+            </p>
+            <p className="mt-2">
+              <strong>Lovász's approach:</strong> Define the theta function{' '}
+              <InlineMath math="\vartheta(G)" /> satisfying:
+            </p>
+            <MathBlock math="\alpha(G) \leq \vartheta(G) \leq \chi(\overline{G})" />
+            <p className="mt-2">
+              Lovász showed <InlineMath math="\vartheta(G) \cdot \vartheta(\overline{G}) = n" />.
+            </p>
+            <p className="mt-2">
+              <strong>If <InlineMath math="G" /> is perfect:</strong> Then{' '}
+              <InlineMath math="\chi(H) = \omega(H)" /> for all induced subgraphs{' '}
+              <InlineMath math="H" />. For the complement, we need{' '}
+              <InlineMath math="\chi(\overline{H}) = \omega(\overline{H})" />.
+            </p>
+            <p className="mt-2">
+              Using <InlineMath math="\omega(\overline{H}) = \alpha(H)" /> and the theta
+              function inequalities, perfectness of <InlineMath math="G" /> implies the
+              inequalities are tight for all induced subgraphs, which forces{' '}
+              <InlineMath math="\overline{G}" /> to also be perfect.
+            </p>
+          </>
+        }
+      >
         <p>
           A graph <InlineMath math="G" /> is perfect if and only if its complement{' '}
           <InlineMath math="\overline{G}" /> is perfect.
@@ -99,7 +130,35 @@ export default function Section23() {
         </p>
       </Example>
 
-      <Theorem title="Strong Perfect Graph Theorem (Chudnovsky et al., 2006)">
+      <Theorem
+        title="Strong Perfect Graph Theorem (Chudnovsky et al., 2006)"
+        proof={
+          <>
+            <p>
+              <strong>Necessity (easy direction):</strong> Odd holes and antiholes are
+              imperfect, so a perfect graph cannot contain them as induced subgraphs.
+            </p>
+            <p className="mt-2">
+              For <InlineMath math="C_{2k+1}" /> with <InlineMath math="k \geq 2" />:{' '}
+              <InlineMath math="\omega(C_{2k+1}) = 2" /> (no triangles) but{' '}
+              <InlineMath math="\chi(C_{2k+1}) = 3" /> (odd cycles need 3 colors).
+            </p>
+            <p className="mt-2">
+              For <InlineMath math="\overline{C_{2k+1}}" />:{' '}
+              <InlineMath math="\omega(\overline{C_{2k+1}}) = k" /> but{' '}
+              <InlineMath math="\chi(\overline{C_{2k+1}}) = k+1" /> (can be verified).
+            </p>
+            <p className="mt-2">
+              <strong>Sufficiency (hard direction):</strong> The 179-page proof by
+              Chudnovsky, Robertson, Seymour, and Thomas uses structural decomposition.
+              They show that graphs without odd holes and antiholes can be decomposed
+              via "2-joins" and "homogeneous pairs" into basic building blocks (bipartite
+              graphs, line graphs of bipartite graphs, complements of these, and
+              "double split graphs"), all of which are perfect.
+            </p>
+          </>
+        }
+      >
         <p>
           A graph is perfect if and only if it contains no odd hole and no odd antihole
           as an induced subgraph.
@@ -113,7 +172,33 @@ export default function Section23() {
 
       <h2>Recognition and Optimization</h2>
 
-      <Theorem title="Perfect Graph Recognition">
+      <Theorem
+        title="Perfect Graph Recognition"
+        proof={
+          <>
+            <p>
+              By the Strong Perfect Graph Theorem, recognizing perfect graphs reduces
+              to detecting odd holes and odd antiholes.
+            </p>
+            <p className="mt-2">
+              <strong>Odd hole detection:</strong> Chudnovsky, Cornuéjols, Liu, Seymour,
+              and Vušković (2005) gave an <InlineMath math="O(n^9)" /> algorithm.
+              The key insight is that shortest odd holes have special structure that
+              can be exploited.
+            </p>
+            <p className="mt-2">
+              <strong>Odd antihole detection:</strong> An odd antihole in{' '}
+              <InlineMath math="G" /> is an odd hole in <InlineMath math="\overline{G}" />,
+              so apply the same algorithm to the complement.
+            </p>
+            <p className="mt-2">
+              <strong>Combined:</strong> Check both <InlineMath math="G" /> and{' '}
+              <InlineMath math="\overline{G}" /> for odd holes. The graph is perfect
+              iff neither contains an odd hole.
+            </p>
+          </>
+        }
+      >
         <p>
           Perfect graphs can be recognized in polynomial time.
         </p>
@@ -123,7 +208,42 @@ export default function Section23() {
         </p>
       </Theorem>
 
-      <Theorem title="Polynomial Optimization on Perfect Graphs">
+      <Theorem
+        title="Polynomial Optimization on Perfect Graphs"
+        proof={
+          <>
+            <p>
+              <strong>Via theta function:</strong> Lovász showed that{' '}
+              <InlineMath math="\vartheta(G)" /> can be computed in polynomial time
+              using semidefinite programming.
+            </p>
+            <p className="mt-2">
+              For perfect graphs, the sandwich inequalities are tight:
+            </p>
+            <MathBlock math="\omega(G) = \vartheta(\overline{G}) \quad \text{and} \quad \chi(G) = \vartheta(\overline{G})" />
+            <p className="mt-2">
+              <strong>Algorithm outline:</strong>
+            </p>
+            <ol className="list-decimal list-inside mt-2 space-y-1">
+              <li>
+                Compute <InlineMath math="\vartheta(\overline{G})" /> using the ellipsoid
+                method or interior point methods.
+              </li>
+              <li>
+                For perfect <InlineMath math="G" />, this equals{' '}
+                <InlineMath math="\chi(G) = \omega(G)" />.
+              </li>
+              <li>
+                Actual clique/coloring found by augmenting LP relaxations.
+              </li>
+            </ol>
+            <p className="mt-2">
+              <strong>Independence number:</strong> <InlineMath math="\alpha(G) = \omega(\overline{G})" />,
+              so apply the above to <InlineMath math="\overline{G}" />.
+            </p>
+          </>
+        }
+      >
         <p>
           For perfect graphs, the following problems can be solved in polynomial time:
         </p>

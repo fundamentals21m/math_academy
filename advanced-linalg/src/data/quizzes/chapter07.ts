@@ -1,6 +1,6 @@
 // Chapter 7: The Rational and Jordan Forms (Sections 40-44)
 // Based on Hoffman & Kunze Chapter 7
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // Section 40: Cyclic Subspaces and Annihilators
 export const section40Quiz: DifficultyQuizData = {

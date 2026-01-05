@@ -79,7 +79,7 @@ export default function Section29() {
         works run to about <strong>75 volumes</strong>.
       </p>
 
-      <Callout type="theorem" title="Some of Euler's Results">
+      <Callout type="success" title="Some of Euler's Results">
         <ol className="space-y-3">
           <li>
             <strong>Euler's Formula for Polyhedra:</strong> If a convex polyhedron has{' '}
@@ -158,7 +158,7 @@ export default function Section29() {
         </ul>
       </div>
 
-      <Callout type="note" title="Euler's Generosity">
+      <Callout type="info" title="Euler's Generosity">
         When Lagrange wrote to Euler about his results in the calculus of variations,
         Euler was so impressed that he <strong>withheld his own results from publication</strong>{' '}
         so that Lagrange could publish first. Such unselfish acts are rare in mathematics.

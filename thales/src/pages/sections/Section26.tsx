@@ -38,7 +38,7 @@ export default function Section26() {
         </div>
       </Card>
 
-      <Callout type="definition" title="Mersenne Primes">
+      <Callout type="info" title="Mersenne Primes">
         A <strong>Mersenne prime</strong> is a prime number of the form{' '}
         <InlineMath>{`2^p - 1`}</InlineMath> where <InlineMath>{`p`}</InlineMath> is also prime.
         For example, <InlineMath>{`2^2 - 1 = 3`}</InlineMath>, <InlineMath>{`2^3 - 1 = 7`}</InlineMath>,
@@ -65,7 +65,7 @@ export default function Section26() {
         </div>
       </Card>
 
-      <Callout type="theorem" title="Desargues's Theorem">
+      <Callout type="success" title="Desargues's Theorem">
         <p className="mb-3">
           If two triangles <InlineMath>{`ABC`}</InlineMath> and <InlineMath>{`A'B'C'`}</InlineMath>{' '}
           are <strong>perspective from a point</strong> (meaning lines <InlineMath>{`AA'`}</InlineMath>,{' '}
@@ -110,7 +110,7 @@ export default function Section26() {
         </div>
       </Card>
 
-      <Callout type="theorem" title="Descartes's Rule of Signs">
+      <Callout type="success" title="Descartes's Rule of Signs">
         <p className="mb-2">
           For a polynomial <InlineMath>{`p(x)`}</InlineMath> with real coefficients:
         </p>
@@ -149,7 +149,7 @@ export default function Section26() {
         </div>
       </Card>
 
-      <Callout type="theorem" title="Fermat's Little Theorem">
+      <Callout type="success" title="Fermat's Little Theorem">
         <p className="mb-2">
           If <InlineMath>{`p`}</InlineMath> is a prime number and <InlineMath>{`a`}</InlineMath>{' '}
           is any integer not divisible by <InlineMath>{`p`}</InlineMath>, then:

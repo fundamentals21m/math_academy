@@ -111,7 +111,7 @@ export default function Section19() {
           <p>
             Book I of the Almagest contains a beautiful result about cyclic quadrilaterals:
           </p>
-          <Callout type="theorem" title="Ptolemy's Theorem">
+          <Callout type="success" title="Ptolemy's Theorem">
             In a cyclic quadrilateral (one inscribed in a circle), the product of the
             diagonals equals the sum of the products of the two pairs of opposite sides.
           </Callout>
@@ -154,7 +154,7 @@ export default function Section19() {
         </div>
       </Card>
 
-      <Callout type="note" title="What Is a 'Diophantine Equation'?">
+      <Callout type="info" title="What Is a 'Diophantine Equation'?">
         Curiously, what we now call a "Diophantine equation" is one whose unknowns must
         be <strong>integers</strong>. Diophantus himself, however, accepted any
         <strong> rational</strong> solution!
@@ -193,7 +193,7 @@ export default function Section19() {
             than Pappus realized—it expresses the <strong>commutativity of multiplication</strong>
             and is fundamental to projective geometry.
           </p>
-          <Callout type="theorem" title="Pappus's Theorem">
+          <Callout type="success" title="Pappus's Theorem">
             Given points A, B, C on one line and A′, B′, C′ on another, the three
             intersection points P = BC′ ∩ CB′, Q = AB′ ∩ BA′, and R = CA′ ∩ AC′
             are collinear.
@@ -249,7 +249,7 @@ export default function Section19() {
         schools of philosophy at Athens. The "Dark Ages" of Europe had begun.
       </p>
 
-      <Callout type="note" title="The Fate of the Library">
+      <Callout type="info" title="The Fate of the Library">
         When the Arabs conquered Alexandria in <strong>641 AD</strong>, there probably
         was not much left of the famous library. According to a story from 13th-century
         Muslim sources, Caliph Omar I ordered its destruction, arguing: "If the books

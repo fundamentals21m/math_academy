@@ -35,7 +35,24 @@ export default function Section38() {
 
       <h3>Fourth Point Determination</h3>
 
-      <Theorem title="Fourth Point Determination">
+      <Theorem title="Fourth Point Determination"
+        proof={
+          <>
+            <p>Given three distinct points p, q, r and a value y, we show there is exactly one x satisfying [p, q; r, x] = y.</p>
+            <p className="mt-2">The cross-ratio equation is:</p>
+            <MathBlock math="\frac{(r - p)(x - q)}{(r - q)(x - p)} = y" />
+            <p className="mt-2">Cross-multiplying:</p>
+            <MathBlock math="(r - p)(x - q) = y(r - q)(x - p)" />
+            <p className="mt-2">Expanding:</p>
+            <MathBlock math="(r-p)x - (r-p)q = y(r-q)x - y(r-q)p" />
+            <p className="mt-2">Collecting terms in x:</p>
+            <MathBlock math="x[(r-p) - y(r-q)] = (r-p)q - y(r-q)p" />
+            <p className="mt-2">Since p, q, r are distinct and y is finite, the coefficient of x is nonzero (unless y = (r-p)/(r-q), but this would make the right side nonzero too). Thus we can solve uniquely:</p>
+            <MathBlock math="x = \frac{(r-p)q - y(r-q)p}{(r-p) - y(r-q)}" />
+            <p className="mt-2">This gives a unique value of x for each value of y, establishing the bijection.</p>
+          </>
+        }
+      >
         <p>
           Given any three points p, q, r ∈ ℝP¹, any other point x ∈ ℝP¹ is uniquely
           determined by its cross-ratio [p, q; r, x] = y with p, q, r.
@@ -47,7 +64,23 @@ export default function Section38() {
 
       <h3>Existence of Three-Point Maps</h3>
 
-      <Theorem title="Existence of Three-Point Maps">
+      <Theorem title="Existence of Three-Point Maps"
+        proof={
+          <>
+            <p>We construct f explicitly. First, we find a linear fractional transformation g sending (p, q, r) to (0, 1, ∞), then a transformation h sending (0, 1, ∞) to (p′, q′, r′). The composition h ∘ g sends (p, q, r) to (p′, q′, r′).</p>
+            <p className="mt-2"><strong>Step 1:</strong> To send (p, q, r) to (0, 1, ∞), we need:</p>
+            <MathBlock math="g(x) = \frac{(x - p)(q - r)}{(x - r)(q - p)}" />
+            <p className="mt-2">Verification: g(p) = 0 (numerator vanishes), g(r) = ∞ (denominator vanishes), and g(q) = (q-p)(q-r)/((q-r)(q-p)) = 1.</p>
+            <p className="mt-2"><strong>Step 2:</strong> To send (0, 1, ∞) to (p′, q′, r′), we use:</p>
+            <MathBlock math="h(x) = \frac{(p' - r')x + r'(q' - p')}{(1 - 1)x + (q' - p')}" />
+            <p className="mt-2">Actually, a simpler form: h(x) = p′ + (q′ - p′)x/(1 + (x-1)(q′-p′)/(r′-p′)) when r′ ≠ ∞. Direct verification:</p>
+            <MathBlock math="h(x) = \frac{p'(q'-r') + x(r'-p')}{(q'-r') + x \cdot 0} = p' + \frac{(r'-p')(x)}{(q'-r')}" />
+            <p className="mt-2">The explicit formula is:</p>
+            <MathBlock math="h(x) = \frac{r'(q'-p')x + p'(r'-q')}{(q'-p')x + (r'-q')}" />
+            <p className="mt-2">Composing g and h yields a linear fractional transformation (since composition of linear fractional is linear fractional) with the desired property.</p>
+          </>
+        }
+      >
         <p>
           Given three points p, q, r ∈ ℝP¹ and three points p′, q′, r′ ∈ ℝP¹, there
           is a linear fractional transformation f sending p, q, r to p′, q′, r′
@@ -62,7 +95,18 @@ export default function Section38() {
 
       <h3>Uniqueness of Three-Point Maps</h3>
 
-      <Theorem title="Uniqueness of Three-Point Maps">
+      <Theorem title="Uniqueness of Three-Point Maps"
+        proof={
+          <>
+            <p>Suppose f and g are two linear fractional transformations both sending p → p′, q → q′, r → r′.</p>
+            <p className="mt-2">Consider any fourth point x ≠ p, q, r. Since linear fractional transformations preserve cross-ratio:</p>
+            <MathBlock math="[p', q'; r', f(x)] = [p, q; r, x] = [p', q'; r', g(x)]" />
+            <p className="mt-2">By the Fourth Point Determination theorem, the point with cross-ratio [p, q; r, x] relative to p′, q′, r′ is unique. Therefore f(x) = g(x).</p>
+            <p className="mt-2">Since this holds for all x in ℝP¹, we have f = g. Thus there is at most one such transformation.</p>
+            <p className="mt-2">Combined with the Existence theorem, exactly one linear fractional transformation sends p, q, r to p′, q′, r′.</p>
+          </>
+        }
+      >
         <p>
           Exactly one linear fractional function sends three points p, q, r to three
           points p′, q′, r′ respectively.
@@ -77,7 +121,22 @@ export default function Section38() {
 
       <h3>Characterization of Linear Fractional Maps</h3>
 
-      <Theorem title="Characterization Theorem">
+      <Theorem title="Characterization Theorem"
+        proof={
+          <>
+            <p>We prove both directions.</p>
+            <p className="mt-2"><strong>(⇒)</strong> If f is linear fractional, then f preserves cross-ratio. This was proven in Section 37 by showing invariance under the generators.</p>
+            <p className="mt-2"><strong>(⇐)</strong> Suppose f: ℝP¹ → ℝP¹ preserves cross-ratio. Pick three distinct points p, q, r and let p′ = f(p), q′ = f(q), r′ = f(r).</p>
+            <p className="mt-2">By the Existence theorem, there is a linear fractional transformation g with g(p) = p′, g(q) = q′, g(r) = r′.</p>
+            <p className="mt-2">Now let x be any fourth point. Since f preserves cross-ratio:</p>
+            <MathBlock math="[p', q'; r', f(x)] = [f(p), f(q); f(r), f(x)] = [p, q; r, x]" />
+            <p className="mt-2">Since g is linear fractional and hence preserves cross-ratio:</p>
+            <MathBlock math="[p', q'; r', g(x)] = [g(p), g(q); g(r), g(x)] = [p, q; r, x]" />
+            <p className="mt-2">Therefore [p′, q′; r′, f(x)] = [p′, q′; r′, g(x)]. By Fourth Point Determination, f(x) = g(x).</p>
+            <p className="mt-2">Since x was arbitrary, f = g, so f is linear fractional.</p>
+          </>
+        }
+      >
         <p>
           Linear fractional transformations are precisely the maps of ℝP¹ that
           preserve the cross-ratio.
@@ -107,7 +166,22 @@ export default function Section38() {
 
       <h3>The Fundamental Invariant</h3>
 
-      <Theorem title="The Fundamental Invariant">
+      <Theorem title="The Fundamental Invariant"
+        proof={
+          <>
+            <p>Let I(p, q, r, s) be any quantity invariant under linear fractional transformations. We show I depends only on [p, q; r, s].</p>
+            <p className="mt-2">Consider two quadruples (p, q, r, s) and (p′, q′, r′, s′) with the same cross-ratio:</p>
+            <MathBlock math="[p, q; r, s] = [p', q'; r', s'] = y" />
+            <p className="mt-2">By the Existence theorem, there is a linear fractional transformation f with f(p) = p′, f(q) = q′, f(r) = r′.</p>
+            <p className="mt-2">Since f preserves cross-ratio:</p>
+            <MathBlock math="[p', q'; r', f(s)] = [f(p), f(q); f(r), f(s)] = [p, q; r, s] = y" />
+            <p className="mt-2">But we also have [p′, q′; r′, s′] = y. By Fourth Point Determination, f(s) = s′.</p>
+            <p className="mt-2">Therefore f maps (p, q, r, s) to (p′, q′, r′, s′). Since I is invariant under f:</p>
+            <MathBlock math="I(p', q', r', s') = I(p, q, r, s)" />
+            <p className="mt-2">Thus I has the same value on any two quadruples with the same cross-ratio. This means I is determined by the cross-ratio: I(p, q, r, s) = J([p, q; r, s]) for some function J.</p>
+          </>
+        }
+      >
         <p>Any invariant of four points is a function of the cross-ratio.</p>
         <p className="mt-2 text-slate-300">
           Suppose I(p, q, r, s) is invariant under linear fractional transformations.

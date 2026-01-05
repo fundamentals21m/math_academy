@@ -1,6 +1,6 @@
 // Chapter 8: Inner Product Spaces (Sections 45-49)
 // Based on Hoffman & Kunze Chapter 8
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // Section 46: Inner Product Spaces (Used as Section 10: Eigenvalues and Eigenvectors in curriculum)
 export const section46Quiz: DifficultyQuizData = {

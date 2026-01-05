@@ -74,7 +74,23 @@ export default function Section17() {
         all points equidistant from two given points.
       </p>
 
-      <Theorem title="Equidistant Line">
+      <Theorem title="Equidistant Line"
+        proof={
+          <>
+            <p>Let A = (a₁, a₂) and B = (b₁, b₂). A point P = (x, y) is equidistant from A and B when |PA|² = |PB|²:</p>
+            <MathBlock math="(x - a_1)^2 + (y - a_2)^2 = (x - b_1)^2 + (y - b_2)^2" />
+            <p className="mt-2"><strong>Step 1:</strong> Expand both sides:</p>
+            <MathBlock math="x^2 - 2a_1x + a_1^2 + y^2 - 2a_2y + a_2^2 = x^2 - 2b_1x + b_1^2 + y^2 - 2b_2y + b_2^2" />
+            <p className="mt-2"><strong>Step 2:</strong> Cancel x² and y²:</p>
+            <MathBlock math="-2a_1x + a_1^2 - 2a_2y + a_2^2 = -2b_1x + b_1^2 - 2b_2y + b_2^2" />
+            <p className="mt-2"><strong>Step 3:</strong> Rearrange:</p>
+            <MathBlock math="2(b_1 - a_1)x + 2(b_2 - a_2)y = b_1^2 - a_1^2 + b_2^2 - a_2^2" />
+            <p className="mt-2">This is a linear equation in x and y, so it defines a line.</p>
+            <p className="mt-2"><strong>Step 4:</strong> The midpoint M = ((a₁+b₁)/2, (a₂+b₂)/2) satisfies this equation (verify by substitution).</p>
+            <p className="mt-2"><strong>Step 5:</strong> The direction vector of this line is (b₂-a₂, a₁-b₁), which is perpendicular to AB = (b₁-a₁, b₂-a₂) since their dot product is zero.</p>
+          </>
+        }
+      >
         <p>
           The set of all points equidistant from two distinct points A and B
           forms a line—the <strong>perpendicular bisector</strong> of segment AB.
@@ -84,19 +100,6 @@ export default function Section17() {
         </p>
       </Theorem>
 
-      <p>
-        To prove this, suppose A = (a₁, a₂) and B = (b₁, b₂). A point P = (x, y)
-        is equidistant from A and B when |PA| = |PB|, which means:
-      </p>
-
-      <MathBlock>
-        {`(x - a_1)^2 + (y - a_2)^2 = (x - b_1)^2 + (y - b_2)^2`}
-      </MathBlock>
-
-      <p>
-        Expanding and simplifying gives a linear equation—the equation of a line!
-      </p>
-
       <h3>The Triangle Inequality</h3>
 
       <p>
@@ -104,7 +107,24 @@ export default function Section17() {
         together greater than the third side. In coordinate terms:
       </p>
 
-      <Theorem title="Triangle Inequality">
+      <Theorem title="Triangle Inequality"
+        proof={
+          <>
+            <p>Place the triangle with O = (0, 0), P = (x₁, 0) with x₁ &gt; 0, and Q = (x₂, y₂) with y₂ ≠ 0.</p>
+            <p className="mt-2">We have:</p>
+            <MathBlock math="|OP| = x_1, \quad |PQ| = \sqrt{(x_2 - x_1)^2 + y_2^2}, \quad |OQ| = \sqrt{x_2^2 + y_2^2}" />
+            <p className="mt-2"><strong>Step 1:</strong> We prove (|OP| + |PQ|)² &gt; |OQ|² when y₂ ≠ 0.</p>
+            <MathBlock math="(|OP| + |PQ|)^2 = x_1^2 + 2x_1\sqrt{(x_2-x_1)^2 + y_2^2} + (x_2-x_1)^2 + y_2^2" />
+            <p className="mt-2"><strong>Step 2:</strong> Compute the difference:</p>
+            <MathBlock math="(|OP| + |PQ|)^2 - |OQ|^2 = x_1^2 + 2x_1\sqrt{(x_2-x_1)^2 + y_2^2} + (x_2-x_1)^2 + y_2^2 - x_2^2 - y_2^2" />
+            <MathBlock math="= x_1^2 + 2x_1\sqrt{(x_2-x_1)^2 + y_2^2} + x_2^2 - 2x_1x_2 + x_1^2 - x_2^2" />
+            <MathBlock math="= 2x_1^2 - 2x_1x_2 + 2x_1\sqrt{(x_2-x_1)^2 + y_2^2}" />
+            <MathBlock math="= 2x_1[\sqrt{(x_2-x_1)^2 + y_2^2} - (x_2 - x_1)]" />
+            <p className="mt-2"><strong>Step 3:</strong> Since y₂ ≠ 0: √((x₂-x₁)² + y₂²) &gt; |x₂ - x₁| ≥ x₂ - x₁.</p>
+            <p className="mt-2">Since x₁ &gt; 0, the expression is positive, so |OP| + |PQ| &gt; |OQ|.</p>
+          </>
+        }
+      >
         <p>
           For any three points O, P, Q not on a line:
         </p>
@@ -116,21 +136,6 @@ export default function Section17() {
           line segment from O to Q.
         </p>
       </Theorem>
-
-      <p>
-        To prove this algebraically, we can place the triangle with one vertex
-        at O = (0, 0), another at P = (x₁, 0) with x₁ {'>'} 0, and the third at
-        Q = (x₂, y₂). Then:
-      </p>
-
-      <MathBlock>
-        {`|OP| = x_1, \\quad |PQ| = \\sqrt{(x_2 - x_1)^2 + y_2^2}, \\quad |OQ| = \\sqrt{x_2^2 + y_2^2}`}
-      </MathBlock>
-
-      <p>
-        The triangle inequality |OP| + |PQ| {'>'} |OQ| can be verified by showing
-        that (|OP| + |PQ|)² {'>'} |OQ|².
-      </p>
 
       <Callout type="important">
         <strong>Application:</strong> The triangle inequality tells us that the
@@ -144,7 +149,22 @@ export default function Section17() {
         An elegant application of equidistant lines is the following theorem:
       </p>
 
-      <Theorem title="Circumscribed Circle">
+      <Theorem title="Circumscribed Circle"
+        proof={
+          <>
+            <p>Let A, B, C be three non-collinear points.</p>
+            <p className="mt-2"><strong>Step 1 (Existence):</strong> Let ℓ₁ be the perpendicular bisector of AB (the locus of points equidistant from A and B).</p>
+            <p className="mt-2">Let ℓ₂ be the perpendicular bisector of BC (the locus of points equidistant from B and C).</p>
+            <p className="mt-2"><strong>Step 2:</strong> Lines ℓ₁ and ℓ₂ are not parallel (since they are perpendicular to non-parallel segments AB and BC).</p>
+            <p className="mt-2">Therefore ℓ₁ and ℓ₂ intersect at a unique point O.</p>
+            <p className="mt-2"><strong>Step 3:</strong> O lies on ℓ₁, so |OA| = |OB|.</p>
+            <p className="mt-2">O lies on ℓ₂, so |OB| = |OC|.</p>
+            <p className="mt-2">Therefore |OA| = |OB| = |OC| = r (say).</p>
+            <p className="mt-2"><strong>Step 4:</strong> The circle with center O and radius r passes through A, B, and C.</p>
+            <p className="mt-2"><strong>Step 5 (Uniqueness):</strong> Any circle through A, B, C must have center equidistant from all three, hence on both ℓ₁ and ℓ₂, which uniquely determines O.</p>
+          </>
+        }
+      >
         <p>
           Any three points not on a line lie on a unique circle.
         </p>

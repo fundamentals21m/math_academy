@@ -1024,7 +1024,7 @@ export default function Section10() {
 
       <Callout type="success">
         <p>
-          <strong>Why So Beautiful?</strong> Euler's identity <InlineMath>e^{'{i\\pi}'} + 1 = 0</InlineMath> contains:
+          <strong>Why So Beautiful?</strong> Euler's identity <InlineMath>{`e^{i\\pi} + 1 = 0`}</InlineMath> contains:
           e (base of natural logarithms), i (imaginary unit), π (circle constant),
           1 (multiplicative identity), and 0 (additive identity)—united in one equation
           that falls naturally from Euler's formula. No contrivance, just pure mathematics.
@@ -1113,7 +1113,7 @@ export default function Section10() {
           <h4 className="font-semibold text-primary-400 mb-2">Euler's Totient Function</h4>
           <p className="text-sm text-dark-300">
             φ(n) counts integers less than n that are coprime to n. Fundamental to
-            number theory and RSA encryption: <InlineMath>a^{'{\\varphi(n)}'} \equiv 1 \pmod n</InlineMath>
+            number theory and RSA encryption: <InlineMath>{`a^{\\varphi(n)} \\equiv 1 \\pmod{n}`}</InlineMath>
           </p>
         </Card>
         <Card>
@@ -1170,8 +1170,8 @@ export default function Section10() {
           <li className="flex items-start gap-3">
             <span className="text-primary-400 font-bold">2.</span>
             <span>
-              Euler's formula <InlineMath>e^{'{i\\theta}'} = \cos\theta + i\sin\theta</InlineMath> and
-              identity <InlineMath>e^{'{i\\pi}'} + 1 = 0</InlineMath> connect the five most important
+              Euler's formula <InlineMath>{`e^{i\\theta} = \\cos\\theta + i\\sin\\theta`}</InlineMath> and
+              identity <InlineMath>{`e^{i\\pi} + 1 = 0`}</InlineMath> connect the five most important
               mathematical constants.
             </span>
           </li>

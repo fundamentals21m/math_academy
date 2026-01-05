@@ -69,7 +69,7 @@ export default function Section31() {
         and reals were studied before negative integers were considered.
       </p>
 
-      <Callout type="note" title="Extending Number Systems">
+      <Callout type="info" title="Extending Number Systems">
         <p className="mb-2">
           Each set after <InlineMath>{`\\mathbb{N}`}</InlineMath> "extends" the preceding
           one and, with the exception of <InlineMath>{`\\mathbb{H}`}</InlineMath>, is

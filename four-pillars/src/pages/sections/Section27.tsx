@@ -41,7 +41,21 @@ export default function Section27() {
         fundamental formula relating inner product to angle.
       </p>
 
-      <Theorem title="Inner Product Formula">
+      <Theorem title="Inner Product Formula"
+        proof={
+          <>
+            <p>Consider vectors u and v emanating from the origin, with angle θ between them.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Drop a perpendicular from the tip of v to the line containing u, meeting it at point P.</p>
+            <p className="mt-2">The vector from 0 to P is the projection of v onto u: proj_u(v) = (|v|cos θ) (u/|u|).</p>
+            <p className="mt-2"><strong>Step 2:</strong> The perpendicularity condition (v - proj_u(v)) · u = 0 gives:</p>
+            <MathBlock math="v \cdot u - \text{proj}_u(v) \cdot u = 0" />
+            <p className="mt-2"><strong>Step 3:</strong> Since proj_u(v) = (|v|cos θ)(u/|u|):</p>
+            <MathBlock math="\text{proj}_u(v) \cdot u = |v|\cos\theta \cdot \frac{u \cdot u}{|u|} = |v|\cos\theta \cdot |u|" />
+            <p className="mt-2"><strong>Step 4:</strong> Substituting back:</p>
+            <MathBlock math="u \cdot v = |u||v|\cos\theta" />
+          </>
+        }
+      >
         <p>
           If θ is the angle between vectors <strong>u</strong> and <strong>v</strong>, then:
         </p>
@@ -81,7 +95,20 @@ export default function Section27() {
         (<strong>u</strong> − <strong>v</strong>).
       </p>
 
-      <Theorem title="Cosine Rule (Law of Cosines)">
+      <Theorem title="Cosine Rule (Law of Cosines)"
+        proof={
+          <>
+            <p>Consider a triangle with vertices at 0, u, and v. The side opposite to the origin has length |u - v|.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Compute |u - v|² using the dot product:</p>
+            <MathBlock math="|u - v|^2 = (u - v) \cdot (u - v)" />
+            <p className="mt-2"><strong>Step 2:</strong> Expand using distributivity:</p>
+            <MathBlock math="= u \cdot u - u \cdot v - v \cdot u + v \cdot v" />
+            <MathBlock math="= |u|^2 - 2(u \cdot v) + |v|^2" />
+            <p className="mt-2"><strong>Step 3:</strong> Apply the inner product formula u · v = |u||v|cos θ:</p>
+            <MathBlock math="= |u|^2 + |v|^2 - 2|u||v|\cos\theta" />
+          </>
+        }
+      >
         <p>
           In any triangle with sides <strong>u</strong>, <strong>v</strong>, and
           <strong> u</strong> − <strong>v</strong>, and angle θ opposite to the side

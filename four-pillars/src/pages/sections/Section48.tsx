@@ -93,7 +93,21 @@ export default function Section48() {
         </ul>
       </div>
 
-      <Theorem title="Classification of Isometries">
+      <Theorem title="Classification of Isometries"
+        proof={
+          <>
+            <p>Let f be an isometry of ℝ². We analyze f based on its fixed points.</p>
+            <p className="mt-2"><strong>Case 1: f has no fixed points.</strong></p>
+            <p>If f is orientation-preserving with no fixed points, then f is a translation. (A rotation with no fixed point would be a contradiction since rotations about any point have that point fixed.)</p>
+            <p className="mt-2">If f is orientation-reversing with no fixed points, then f is a glide reflection: the composition of a reflection and a translation parallel to the reflection line.</p>
+            <p className="mt-2"><strong>Case 2: f has exactly one fixed point O.</strong></p>
+            <p>Then f must be a rotation about O. Every point P ≠ O satisfies |f(P) - O| = |P - O| (distance to O is preserved), so P moves on a circle centered at O.</p>
+            <p className="mt-2"><strong>Case 3: f has more than one fixed point.</strong></p>
+            <p>If f fixes two points A and B, then f fixes every point on line AB (since distances from A and B uniquely determine each point). If f is the identity, it's rotation by 0°. If f is not the identity, it must reverse orientation and is a reflection in line AB.</p>
+            <p className="mt-2">These cases are exhaustive: orientation-preserving isometries are rotations or translations; orientation-reversing isometries are reflections or glide reflections.</p>
+          </>
+        }
+      >
         <p>
           Every isometry of the plane is one of the following:
         </p>
@@ -135,7 +149,24 @@ export default function Section48() {
         products of reflections.
       </p>
 
-      <Theorem title="Three Reflections Theorem">
+      <Theorem title="Three Reflections Theorem"
+        proof={
+          <>
+            <p>We prove that each type of isometry can be expressed using at most three reflections.</p>
+            <p className="mt-2"><strong>Reflection:</strong> This is one reflection by definition.</p>
+            <p className="mt-2"><strong>Rotation about O through angle θ:</strong> Choose any line L₁ through O. Let L₂ be the line through O making angle θ/2 with L₁. The reflection in L₂ followed by reflection in L₁ produces a rotation about O through angle θ. (Two reflections.)</p>
+            <p className="mt-2"><strong>Translation by vector v:</strong> Let L₁ be any line perpendicular to v. Let L₂ be the parallel line at distance |v|/2 in the direction of v. The product of reflections in L₁ then L₂ is a translation by v. (Two reflections.)</p>
+            <p className="mt-2"><strong>Glide reflection:</strong> A glide reflection is a reflection in a line L followed by a translation parallel to L. The translation can be written as two reflections (in lines perpendicular to L), giving three reflections total.</p>
+            <p className="mt-2"><strong>Counting reflections and orientation:</strong></p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>One reflection: orientation-reversing</li>
+              <li>Two reflections: orientation-preserving (since reversing twice preserves)</li>
+              <li>Three reflections: orientation-reversing</li>
+            </ul>
+            <p className="mt-2">This matches: rotations/translations (orientation-preserving) need even number; reflections/glide reflections (orientation-reversing) need odd number.</p>
+          </>
+        }
+      >
         <p>
           Every isometry of the plane is a product of at most three reflections.
         </p>

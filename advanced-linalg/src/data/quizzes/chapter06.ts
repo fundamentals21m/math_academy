@@ -1,6 +1,6 @@
 // Chapter 6: Elementary Canonical Forms (Sections 32-39)
 // Based on Hoffman & Kunze Chapter 6
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // Section 32: Introduction
 export const section32Quiz: DifficultyQuizData = {

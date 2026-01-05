@@ -25,33 +25,31 @@ export default function Section09() {
         into rectangles without changing their area.
       </p>
 
-      <Theorem title="Parallelograms with Equal Base and Height (Euclid I.35)">
+      <Theorem title="Parallelograms with Equal Base and Height (Euclid I.35)"
+        proof={
+          <>
+            <p>Let ABCD and ABEF be parallelograms sharing base AB and lying between parallel lines AB and DE.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Since ABCD is a parallelogram, AD = BC and AD ∥ BC.</p>
+            <p className="mt-2">Since ABEF is a parallelogram, AF = BE and AF ∥ BE.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Consider triangles EAD and FBC:</p>
+            <ul className="list-disc list-inside mt-1">
+              <li>EA = FB (since ABFE has EA ∥ FB and the top sides are on the same line)</li>
+              <li>AD = BC (opposite sides of parallelogram ABCD)</li>
+              <li>∠EAD = ∠FBC (corresponding angles with parallel lines)</li>
+            </ul>
+            <p className="mt-2"><strong>Step 3:</strong> By SAS, triangle EAD ≅ triangle FBC.</p>
+            <p className="mt-2"><strong>Step 4:</strong> Let R be the region common to both parallelograms (trapezoid ABGE where G is on DE).</p>
+            <p className="mt-2"><strong>Step 5:</strong> Area(ABCD) = Area(R) + Area(△EAD)</p>
+            <p className="mt-2">Area(ABEF) = Area(R) + Area(△FBC)</p>
+            <p className="mt-2"><strong>Step 6:</strong> Since △EAD ≅ △FBC, Area(ABCD) = Area(ABEF).</p>
+          </>
+        }
+      >
         <p>
           Parallelograms with the same base and the same height have equal
           areas.
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> Consider two parallelograms ABCD and ABEF that
-        share the same base AB and lie between the same parallel lines (so they
-        have the same height).
-      </p>
-
-      <p>
-        The key observation is that both parallelograms differ from a common
-        triangle by another triangle of equal area:
-      </p>
-
-      <ul className="list-disc list-inside space-y-2 my-4">
-        <li>ABCD = triangle ABX + (common region) for some point X</li>
-        <li>ABEF = triangle ABY + (same common region) for some point Y</li>
-      </ul>
-
-      <p>
-        Since the triangles ABX and ABY are congruent (by SAS), the parallelograms
-        have equal areas. ∎
-      </p>
 
       <Callout type="info">
         <strong>Modern Formula:</strong> From this theorem, we derive the
@@ -67,18 +65,26 @@ export default function Section09() {
         The relationship between parallelograms and triangles is fundamental.
       </p>
 
-      <Theorem title="Triangle Area (Euclid I.37)">
+      <Theorem title="Triangle Area (Euclid I.37)"
+        proof={
+          <>
+            <p>Let triangles ABC and DEF have equal bases BC = EF and equal heights h.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Complete triangle ABC to parallelogram ABCG by drawing CG ∥ AB and AG ∥ BC.</p>
+            <p className="mt-2"><strong>Step 2:</strong> Similarly, complete triangle DEF to parallelogram DEFH.</p>
+            <p className="mt-2"><strong>Step 3:</strong> The diagonal of a parallelogram divides it into two congruent triangles (by ASA, using alternate interior angles and the shared diagonal).</p>
+            <p className="mt-2">Therefore:</p>
+            <MathBlock math="\text{Area}(\triangle ABC) = \frac{1}{2} \text{Area}(ABCG)" />
+            <MathBlock math="\text{Area}(\triangle DEF) = \frac{1}{2} \text{Area}(DEFH)" />
+            <p className="mt-2"><strong>Step 4:</strong> By Euclid I.35, parallelograms with equal base and height have equal area:</p>
+            <MathBlock math="\text{Area}(ABCG) = \text{Area}(DEFH)" />
+            <p className="mt-2"><strong>Step 5:</strong> Therefore Area(△ABC) = Area(△DEF).</p>
+          </>
+        }
+      >
         <p>
           Triangles with the same base and the same height have equal areas.
         </p>
       </Theorem>
-
-      <p>
-        <strong>Proof:</strong> A triangle is exactly half of a parallelogram
-        with the same base and height. If two triangles share the same base
-        and height, they are each half of equal parallelograms, so they have
-        equal areas. ∎
-      </p>
 
       <Definition title="Triangle Area Formula">
         <p>
@@ -95,7 +101,22 @@ export default function Section09() {
         A crucial relationship connects parallelograms and triangles:
       </p>
 
-      <Theorem title="Parallelogram is Double the Triangle (Euclid I.41)">
+      <Theorem title="Parallelogram is Double the Triangle (Euclid I.41)"
+        proof={
+          <>
+            <p>Let parallelogram ABCD and triangle EBC share base BC and lie between parallels BC and AD.</p>
+            <p className="mt-2"><strong>Step 1:</strong> Draw diagonal BD of the parallelogram, creating triangles BCD and ABD.</p>
+            <p className="mt-2"><strong>Step 2:</strong> These triangles are congruent (by ASA with alternate interior angles), so:</p>
+            <MathBlock math="\text{Area}(ABCD) = 2 \cdot \text{Area}(\triangle BCD)" />
+            <p className="mt-2"><strong>Step 3:</strong> Triangle BCD has the same base BC as triangle EBC.</p>
+            <p className="mt-2">Both triangles have the same height (the distance between parallels BC and AD).</p>
+            <p className="mt-2"><strong>Step 4:</strong> By I.37, triangles with equal base and height have equal area:</p>
+            <MathBlock math="\text{Area}(\triangle BCD) = \text{Area}(\triangle EBC)" />
+            <p className="mt-2"><strong>Step 5:</strong> Therefore:</p>
+            <MathBlock math="\text{Area}(ABCD) = 2 \cdot \text{Area}(\triangle EBC)" />
+          </>
+        }
+      >
         <p>
           If a parallelogram and a triangle share the same base and lie between
           the same parallels, then the parallelogram has twice the area of the
@@ -103,20 +124,25 @@ export default function Section09() {
         </p>
       </Theorem>
 
-      <p>
-        <strong>Proof:</strong> Draw a diagonal of the parallelogram. This
-        creates two congruent triangles, each equal in area to the given
-        triangle (by I.37). Therefore the parallelogram has twice the area
-        of the triangle. ∎
-      </p>
-
       <h3>Proportionality of Triangle Areas</h3>
 
       <p>
         These area relationships lead to important proportionality results.
       </p>
 
-      <Theorem title="Area Ratio for Equal Heights">
+      <Theorem title="Area Ratio for Equal Heights"
+        proof={
+          <>
+            <p>Let triangles ABC and DEF have the same height h, with bases BC and EF respectively.</p>
+            <p className="mt-2"><strong>Step 1:</strong> By the triangle area formula:</p>
+            <MathBlock math="\text{Area}(\triangle ABC) = \frac{1}{2} \cdot BC \cdot h" />
+            <MathBlock math="\text{Area}(\triangle DEF) = \frac{1}{2} \cdot EF \cdot h" />
+            <p className="mt-2"><strong>Step 2:</strong> Taking the ratio:</p>
+            <MathBlock math="\frac{\text{Area}(\triangle ABC)}{\text{Area}(\triangle DEF)} = \frac{\frac{1}{2} \cdot BC \cdot h}{\frac{1}{2} \cdot EF \cdot h} = \frac{BC}{EF}" />
+            <p className="mt-2">The heights cancel, leaving the ratio of bases.</p>
+          </>
+        }
+      >
         <p>
           Triangles with the same height have areas proportional to their bases.
         </p>

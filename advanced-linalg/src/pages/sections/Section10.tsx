@@ -123,7 +123,20 @@ export default function Section10() {
         </p>
       </Theorem>
 
-      <Theorem title="Properties from Characteristic Polynomial">
+      <Theorem
+        title="Properties from Characteristic Polynomial"
+        proof={
+          <>
+            <p>
+              Let <InlineMath>p(\lambda) = \det(\lambda I - A) = \lambda^n - c_{'{n-1}'}\lambda^{'{n-1}'} + \cdots + (-1)^n c_0</InlineMath>.
+            </p>
+            <p className="mt-2"><strong>Degree n:</strong> The leading term <InlineMath>\lambda^n</InlineMath> comes from the product of diagonal entries <InlineMath>(\lambda - a_{'{11}'}) \cdots (\lambda - a_{'{nn}'})</InlineMath>.</p>
+            <p className="mt-2"><strong>Determinant:</strong> <InlineMath>p(0) = \det(-A) = (-1)^n \det(A)</InlineMath>. If <InlineMath>p(\lambda) = \prod_i (\lambda - \lambda_i)</InlineMath>, then <InlineMath>p(0) = \prod_i (-\lambda_i) = (-1)^n \prod_i \lambda_i</InlineMath>. Thus <InlineMath>\det(A) = \prod_i \lambda_i</InlineMath>.</p>
+            <p className="mt-2"><strong>Trace:</strong> The coefficient of <InlineMath>\lambda^{'{n-1}'}</InlineMath> is <InlineMath>-{`\\text{tr}`}(A)</InlineMath>. From <InlineMath>p(\lambda) = \prod_i (\lambda - \lambda_i)</InlineMath>, this coefficient is also <InlineMath>-\sum_i \lambda_i</InlineMath>. Thus <InlineMath>{`\\text{tr}`}(A) = \sum_i \lambda_i</InlineMath>.</p>
+            <p className="mt-2"><strong>Fundamental Theorem of Algebra:</strong> Over <InlineMath>{`\\mathbb{C}`}</InlineMath>, every degree-<InlineMath>n</InlineMath> polynomial has exactly <InlineMath>n</InlineMath> roots (counting multiplicity).</p>
+          </>
+        }
+      >
         <p>For an <InlineMath>n \times n</InlineMath> matrix <InlineMath>A</InlineMath>:</p>
         <ul className="list-disc list-inside text-dark-300 mt-2 space-y-1">
           <li>Trace = sum of eigenvalues (with multiplicities)</li>
@@ -143,7 +156,30 @@ export default function Section10() {
         </ul>
       </Definition>
 
-      <Theorem title="Multiplicity Inequality">
+      <Theorem
+        title="Multiplicity Inequality"
+        proof={
+          <>
+            <p><strong>Geometric multiplicity <InlineMath>\geq 1</InlineMath>:</strong></p>
+            <p className="mt-2">
+              By definition, <InlineMath>\lambda</InlineMath> is an eigenvalue iff there exists a nonzero eigenvector, so <InlineMath>\dim(E_\lambda) \geq 1</InlineMath>.
+            </p>
+            <p className="mt-4"><strong>Geometric multiplicity <InlineMath>\leq</InlineMath> algebraic multiplicity:</strong></p>
+            <p className="mt-2">
+              Let <InlineMath>g = \dim(E_\lambda)</InlineMath> and choose a basis <InlineMath>{`\\{v_1, \\ldots, v_g\\}`}</InlineMath> of <InlineMath>E_\lambda</InlineMath>. Extend to a basis of <InlineMath>V</InlineMath>.
+            </p>
+            <p className="mt-2">
+              In this basis, <InlineMath>A</InlineMath> has the form <InlineMath>\begin{'{pmatrix}'} \lambda I_g & * \\ 0 & B \end{'{pmatrix}'}</InlineMath> where <InlineMath>I_g</InlineMath> is the <InlineMath>g \times g</InlineMath> identity.
+            </p>
+            <p className="mt-2">
+              The characteristic polynomial factors as <InlineMath>\det(\mu I - A) = (\mu - \lambda)^g \det(\mu I - B)</InlineMath>.
+            </p>
+            <p className="mt-2">
+              So <InlineMath>(\mu - \lambda)^g</InlineMath> divides <InlineMath>p_A(\mu)</InlineMath>, meaning algebraic multiplicity <InlineMath>\geq g</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <p>
           For any eigenvalue: <InlineMath>1 \leq </InlineMath> geometric multiplicity <InlineMath>\leq</InlineMath> algebraic multiplicity.
         </p>
@@ -166,7 +202,37 @@ export default function Section10() {
 
       <h2>Eigenvalues of Special Matrices</h2>
 
-      <Theorem title="Eigenvalues of Special Matrices">
+      <Theorem
+        title="Eigenvalues of Special Matrices"
+        proof={
+          <>
+            <p><strong>Triangular matrix:</strong></p>
+            <p className="mt-2">
+              <InlineMath>\det(\lambda I - A)</InlineMath> is the product of diagonal entries <InlineMath>(\lambda - a_{'{11}'}) \cdots (\lambda - a_{'{nn}'})</InlineMath> for triangular <InlineMath>A</InlineMath>.
+            </p>
+            <p className="mt-4"><strong>Similar matrices:</strong></p>
+            <p className="mt-2">
+              If <InlineMath>B = P^{'{-1}'}AP</InlineMath>, then <InlineMath>\det(\lambda I - B) = \det(P^{'{-1}'}(\lambda I - A)P) = \det(\lambda I - A)</InlineMath>. Same characteristic polynomial means same eigenvalues.
+            </p>
+            <p className="mt-4"><strong>Real symmetric:</strong></p>
+            <p className="mt-2">
+              If <InlineMath>Av = \lambda v</InlineMath> with <InlineMath>v \neq 0</InlineMath>, consider <InlineMath>\bar{'{v}'}^T A v</InlineMath>. Since <InlineMath>A = A^T</InlineMath> is real: <InlineMath>\bar{'{v}'}^T A v = \lambda \bar{'{v}'}^T v = \bar{'\lambda'} \bar{'{v}'}^T v</InlineMath>. Since <InlineMath>\bar{'{v}'}^T v = \|v\|^2 {'>'} 0</InlineMath>, we get <InlineMath>\lambda = \bar{'\lambda'}</InlineMath>, so <InlineMath>\lambda \in {`\\mathbb{R}`}</InlineMath>.
+            </p>
+            <p className="mt-4"><strong>Orthogonal:</strong></p>
+            <p className="mt-2">
+              If <InlineMath>Qv = \lambda v</InlineMath> and <InlineMath>Q^T Q = I</InlineMath>, then <InlineMath>\|v\|^2 = v^T v = v^T Q^T Q v = (Qv)^T (Qv) = |\lambda|^2 \|v\|^2</InlineMath>. Thus <InlineMath>|\lambda| = 1</InlineMath>.
+            </p>
+            <p className="mt-4"><strong>Idempotent:</strong></p>
+            <p className="mt-2">
+              If <InlineMath>A^2 = A</InlineMath> and <InlineMath>Av = \lambda v</InlineMath>, then <InlineMath>\lambda^2 v = A^2 v = Av = \lambda v</InlineMath>, so <InlineMath>\lambda^2 = \lambda</InlineMath>, giving <InlineMath>\lambda \in {`\\{0, 1\\}`}</InlineMath>.
+            </p>
+            <p className="mt-4"><strong>Nilpotent:</strong></p>
+            <p className="mt-2">
+              If <InlineMath>A^k = 0</InlineMath> and <InlineMath>Av = \lambda v</InlineMath>, then <InlineMath>0 = A^k v = \lambda^k v</InlineMath>. Since <InlineMath>v \neq 0</InlineMath>, <InlineMath>\lambda^k = 0</InlineMath>, so <InlineMath>\lambda = 0</InlineMath>.
+            </p>
+          </>
+        }
+      >
         <ul className="list-disc list-inside text-dark-300 mt-2 space-y-2">
           <li><strong>Triangular matrix:</strong> Eigenvalues = diagonal entries</li>
           <li><strong>Similar matrices:</strong> Have the same eigenvalues</li>

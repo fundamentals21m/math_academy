@@ -7,8 +7,17 @@
 
 import { initializeApp, getApps, type FirebaseApp } from 'firebase/app';
 import { getAuth, type Auth } from 'firebase/auth';
-import { getFirestore, type Firestore } from 'firebase/firestore';
-import { getFunctions, type Functions, connectFunctionsEmulator } from 'firebase/functions';
+import {
+  getFirestore,
+  type Firestore,
+  doc,
+  collection,
+  onSnapshot,
+  type DocumentReference,
+  type CollectionReference,
+  type Unsubscribe,
+} from 'firebase/firestore';
+import { getFunctions, type Functions, connectFunctionsEmulator, httpsCallable } from 'firebase/functions';
 
 // Firebase configuration - loaded from environment variables only
 // IMPORTANT: Never commit API keys. Use .env files or Vercel environment variables.
@@ -98,3 +107,16 @@ export function isFirebaseConfigured(): boolean {
 }
 
 export { firebaseConfig };
+
+// Re-export Firestore functions for consistent Firebase instance usage
+export {
+  doc,
+  collection,
+  onSnapshot,
+  type DocumentReference,
+  type CollectionReference,
+  type Unsubscribe,
+};
+
+// Re-export Functions utilities
+export { httpsCallable };

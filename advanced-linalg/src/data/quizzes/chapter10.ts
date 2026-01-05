@@ -1,6 +1,6 @@
 // Chapter 10: Bilinear Forms (Sections 56-59)
 // Based on Hoffman & Kunze Chapter 10
-import type { QuizQuestion, DifficultyQuizData } from './types';
+import type { DifficultyQuizData } from './types';
 
 // Section 56: Bilinear Forms
 export const section56Quiz: DifficultyQuizData = {

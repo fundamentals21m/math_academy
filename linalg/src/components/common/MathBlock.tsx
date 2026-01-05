@@ -1,61 +1,63 @@
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useRef } from 'react';
 import katex from 'katex';
 
 interface MathProps {
-  children: ReactNode;
+  children?: string;
+  math?: string;  // Alternative to children
   display?: boolean;
+  inline?: boolean;  // Convenience prop (opposite of display)
   className?: string;
-}
-
-// Helper to flatten children into a string for KaTeX
-function flattenChildren(children: ReactNode): string {
-  if (typeof children === 'string') return children;
-  if (typeof children === 'number') return String(children);
-  if (Array.isArray(children)) return children.map(flattenChildren).join('');
-  if (children === null || children === undefined) return '';
-  return '';
 }
 
 /**
  * Inline math component - renders LaTeX within text
  * Usage: <InlineMath>x^2 + y^2 = z^2</InlineMath>
  */
-export function InlineMath({ children, className = '' }: MathProps) {
+export function InlineMath({ children, math, className = '' }: MathProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const latex = flattenChildren(children);
+  const content = math ?? children ?? '';
 
   useEffect(() => {
-    if (ref.current && latex) {
-      katex.render(latex, ref.current, {
+    if (ref.current && content) {
+      katex.render(content, ref.current, {
         throwOnError: false,
         displayMode: false,
       });
     }
-  }, [latex]);
+  }, [content]);
 
   return <span ref={ref} className={`inline-block ${className}`} />;
 }
 
 /**
- * Block math component - renders LaTeX as centered display equation
- * Usage: <MathBlock>x^2 + y^2 = z^2</MathBlock>
+ * Block/Inline math component - renders LaTeX
+ * Usage:
+ *   <MathBlock>x^2 + y^2 = z^2</MathBlock>  (display mode)
+ *   <MathBlock math="x^2" inline />          (inline mode)
  */
-export function MathBlock({ children, className = '' }: MathProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const latex = flattenChildren(children);
+export function MathBlock({ children, math, inline, display, className = '' }: MathProps) {
+  const ref = useRef<HTMLElement>(null);
+  const content = math ?? children ?? '';
+
+  // inline prop takes precedence, then display prop, default to display mode
+  const isInline = inline === true || (display === false);
 
   useEffect(() => {
-    if (ref.current && latex) {
-      katex.render(latex, ref.current, {
+    if (ref.current && content) {
+      katex.render(content, ref.current, {
         throwOnError: false,
-        displayMode: true,
+        displayMode: !isInline,
       });
     }
-  }, [latex]);
+  }, [content, isInline]);
+
+  if (isInline) {
+    return <span ref={ref as React.RefObject<HTMLSpanElement>} className={`inline-block ${className}`} />;
+  }
 
   return (
     <div
-      ref={ref}
+      ref={ref as React.RefObject<HTMLDivElement>}
       className={`my-6 text-center text-lg overflow-x-auto ${className}`}
     />
   );

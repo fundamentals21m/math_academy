@@ -13,13 +13,18 @@ export type {
   DailyGoalState,
   GamificationState,
   AchievementNotification,
+  // Racing game types
+  RacingTier,
+  RaceGameResult,
+  RacingStats,
+  RacingTierConfig,
 } from './types';
 
 // Quiz types
 export type { QuizQuestion, SectionQuestions, QuestionType, NumericRange } from './quizTypes';
 export { renderContent } from './quizTypes';
 
-export { XP_CONFIG, LEVEL_THRESHOLDS, DAILY_XP_GOAL } from './types';
+export { XP_CONFIG, LEVEL_THRESHOLDS, DAILY_XP_GOAL, RACE_XP_CONFIG, RACING_TIERS } from './types';
 
 // LaTeX Parser
 export { parseLaTeX, renderLaTeX, type ParsedSegment } from './latexParser';

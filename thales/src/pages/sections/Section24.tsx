@@ -123,7 +123,7 @@ export default function Section24() {
         but <strong>breaking his promise</strong> to keep it secret.
       </p>
 
-      <Callout type="note" title="Tartaglia's Fury">
+      <Callout type="info" title="Tartaglia's Fury">
         Tartaglia was furious! Henceforth, he would have no special advantage in
         mathematical contests. He challenged Cardano to a competition, but Cardano
         sent his student Ferrari instead. Ferrari did better than Tartaglia, and
@@ -184,7 +184,7 @@ export default function Section24() {
         </div>
       </Card>
 
-      <Callout type="theorem" title="The Three Cases">
+      <Callout type="success" title="The Three Cases">
         <ul className="space-y-2">
           <li><strong>Case 1:</strong> <InlineMath>{`q^2 - p^3 > 0`}</InlineMath> → One real root, two complex conjugates</li>
           <li><strong>Case 2:</strong> <InlineMath>{`q^2 - p^3 = 0`}</InlineMath> → Two distinct roots (one is repeated)</li>

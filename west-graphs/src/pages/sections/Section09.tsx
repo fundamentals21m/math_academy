@@ -124,6 +124,41 @@ export default function Section09() {
           and <InlineMath math="m" /> edges can be found in{' '}
           <InlineMath math="O(m\sqrt{n})" /> time.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              The algorithm works in phases. Each phase finds a maximal set of
+              vertex-disjoint shortest augmenting paths and augments along all of them
+              simultaneously.
+            </p>
+            <p className="mt-2">
+              <strong>Key insight:</strong> After each phase, the length of the shortest
+              augmenting path strictly increases. This is because augmenting along all
+              shortest paths removes all such paths from the residual graph.
+            </p>
+            <p className="mt-2">
+              <strong>Phase count:</strong> If the maximum matching has size{' '}
+              <InlineMath math="k" />, then after <InlineMath math="\sqrt{k}" /> phases,
+              the shortest augmenting path has length at least{' '}
+              <InlineMath math="\sqrt{k}" />. The number of remaining augmenting paths is
+              at most <InlineMath math="\sqrt{k}" />, so at most{' '}
+              <InlineMath math="\sqrt{k}" /> more phases are needed.
+            </p>
+            <p className="mt-2">
+              <strong>Total phases:</strong> <InlineMath math="O(\sqrt{k}) = O(\sqrt{n})" />.
+            </p>
+            <p className="mt-2">
+              <strong>Per-phase time:</strong> Finding all shortest augmenting paths via
+              BFS and augmenting takes <InlineMath math="O(m)" /> time.
+            </p>
+            <p className="mt-2">
+              <strong>Total time:</strong> <InlineMath math="O(m\sqrt{n})" />.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <h2>Weighted Bipartite Matching</h2>
@@ -202,6 +237,38 @@ export default function Section09() {
           Thus, a perfect matching in <InlineMath math="G_\ell" /> is a maximum-weight
           perfect matching in <InlineMath math="G" />.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              <strong>Part 1:</strong> For any matching <InlineMath math="M" />, we have:
+            </p>
+            <MathBlock math="w(M) = \sum_{xy \in M} w(xy) \leq \sum_{xy \in M} (\ell(x) + \ell(y))" />
+            <p className="mt-2">
+              by the feasibility condition <InlineMath math="\ell(x) + \ell(y) \geq w(xy)" />.
+              Since <InlineMath math="M" /> saturates at most one endpoint of each vertex:
+            </p>
+            <MathBlock math="\sum_{xy \in M} (\ell(x) + \ell(y)) \leq \sum_{v \in V(G)} \ell(v)" />
+            <p className="mt-2">
+              <strong>Part 2 (⇐):</strong> If <InlineMath math="M" /> is a perfect matching
+              in <InlineMath math="G_\ell" />, then all edges of <InlineMath math="M" /> are
+              tight: <InlineMath math="\ell(x) + \ell(y) = w(xy)" /> for each{' '}
+              <InlineMath math="xy \in M" />. Since <InlineMath math="M" /> is perfect, every
+              vertex is saturated exactly once, so:
+            </p>
+            <MathBlock math="w(M) = \sum_{xy \in M} w(xy) = \sum_{xy \in M} (\ell(x) + \ell(y)) = \sum_{v \in V(G)} \ell(v)" />
+            <p className="mt-2">
+              <strong>Part 2 (⇒):</strong> If equality holds, then <InlineMath math="M" /> must
+              saturate every vertex (otherwise the sum over <InlineMath math="M" /> would be
+              less than the sum over all vertices). Furthermore, every edge in{' '}
+              <InlineMath math="M" /> must be tight (otherwise the weight would be strictly
+              less). Thus <InlineMath math="M" /> is a perfect matching in{' '}
+              <InlineMath math="G_\ell" />.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <Definition title="Hungarian Algorithm">
@@ -294,6 +361,49 @@ export default function Section09() {
         <p>
           Every bipartite preference system has a stable matching.
         </p>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              We prove the Gale-Shapley (proposal) algorithm produces a stable matching.
+            </p>
+            <p className="mt-2">
+              <strong>Termination:</strong> Each proposal is made at most once (a proposer
+              never re-proposes to someone who rejected them). With <InlineMath math="n" />{' '}
+              proposers and <InlineMath math="n" /> receivers, there are at most{' '}
+              <InlineMath math="n^2" /> proposals, so the algorithm terminates.
+            </p>
+            <p className="mt-2">
+              <strong>Completeness:</strong> We show all proposers are matched at termination.
+              Suppose proposer <InlineMath math="x" /> is unmatched. Then <InlineMath math="x" />{' '}
+              proposed to everyone and was rejected by all. Since a receiver only rejects when
+              they have a better partner, every receiver is matched. But then all{' '}
+              <InlineMath math="n" /> receivers are matched to <InlineMath math="n - 1" />{' '}
+              proposers—contradiction.
+            </p>
+            <p className="mt-2">
+              <strong>Stability:</strong> Suppose <InlineMath math="(x, y)" /> is a blocking
+              pair: <InlineMath math="x" /> prefers <InlineMath math="y" /> to{' '}
+              <InlineMath math="x" />'s partner, and <InlineMath math="y" /> prefers{' '}
+              <InlineMath math="x" /> to <InlineMath math="y" />'s partner.
+            </p>
+            <p className="mt-2">
+              Since <InlineMath math="x" /> prefers <InlineMath math="y" /> to their current
+              partner, <InlineMath math="x" /> must have proposed to <InlineMath math="y" />{' '}
+              before proposing to their current partner (proposers go down their preference
+              list). So <InlineMath math="y" /> rejected <InlineMath math="x" /> at some point.
+            </p>
+            <p className="mt-2">
+              But receivers only reject for someone they prefer more, and once matched to
+              someone, they only "trade up." So <InlineMath math="y" />'s final partner is at
+              least as preferred as whoever caused <InlineMath math="y" /> to reject{' '}
+              <InlineMath math="x" />. Thus <InlineMath math="y" /> does not prefer{' '}
+              <InlineMath math="x" /> to their partner—contradicting our assumption.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <Definition title="Gale-Shapley Algorithm (Proposal Algorithm)">
@@ -345,6 +455,67 @@ export default function Section09() {
             receiver gets their worst partner among all stable matchings.
           </li>
         </ol>
+        <details className="mt-3">
+          <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
+            Proof
+          </summary>
+          <div className="mt-2 pl-4 border-l-2 border-dark-700">
+            <p>
+              <strong>Part 1:</strong> Shown in the proof of Theorem 3.2.17. At most{' '}
+              <InlineMath math="n^2" /> proposals, each taking <InlineMath math="O(1)" />{' '}
+              time with proper data structures.
+            </p>
+            <p className="mt-2">
+              <strong>Part 2 (Proposer-optimal):</strong> Call <InlineMath math="y" /> a{' '}
+              <em>valid partner</em> for <InlineMath math="x" /> if some stable matching pairs
+              them. We show each proposer is matched to their best valid partner.
+            </p>
+            <p className="mt-2">
+              Suppose some proposer <InlineMath math="x" /> is rejected by a valid partner
+              during the algorithm. Consider the first such rejection: <InlineMath math="y" />{' '}
+              rejects <InlineMath math="x" /> for <InlineMath math="x'" />.
+            </p>
+            <p className="mt-2">
+              Let <InlineMath math="M" /> be a stable matching where{' '}
+              <InlineMath math="x" /> is paired with <InlineMath math="y" />. In{' '}
+              <InlineMath math="M" />, let <InlineMath math="x'" /> be paired with{' '}
+              <InlineMath math="y'" />.
+            </p>
+            <p className="mt-2">
+              Since this is the first rejection by a valid partner, <InlineMath math="x'" />{' '}
+              has not yet been rejected by any valid partner. So <InlineMath math="x'" />{' '}
+              prefers <InlineMath math="y" /> to <InlineMath math="y'" /> (otherwise{' '}
+              <InlineMath math="x'" /> would have proposed to <InlineMath math="y'" /> first).
+            </p>
+            <p className="mt-2">
+              Also, <InlineMath math="y" /> prefers <InlineMath math="x'" /> to{' '}
+              <InlineMath math="x" /> (that's why <InlineMath math="y" /> rejected{' '}
+              <InlineMath math="x" />).
+            </p>
+            <p className="mt-2">
+              But then <InlineMath math="(x', y)" /> is a blocking pair for{' '}
+              <InlineMath math="M" />—contradiction. So no proposer is ever rejected by a
+              valid partner.
+            </p>
+            <p className="mt-2">
+              <strong>Part 3 (Receiver-pessimal):</strong> Let <InlineMath math="M" /> be the
+              proposer-optimal matching. Suppose receiver <InlineMath math="y" /> is matched
+              to <InlineMath math="x" /> in <InlineMath math="M" /> but prefers{' '}
+              <InlineMath math="x" /> less than some partner <InlineMath math="x'" /> in
+              another stable matching <InlineMath math="M'" />.
+            </p>
+            <p className="mt-2">
+              In <InlineMath math="M'" />, proposer <InlineMath math="x" /> is matched to some{' '}
+              <InlineMath math="y' \neq y" />. Since <InlineMath math="M" /> is proposer-optimal,{' '}
+              <InlineMath math="x" /> prefers <InlineMath math="y" /> to <InlineMath math="y'" />.
+            </p>
+            <p className="mt-2">
+              But <InlineMath math="y" /> prefers <InlineMath math="x'" /> to{' '}
+              <InlineMath math="x" />, so <InlineMath math="(x, y)" /> blocks{' '}
+              <InlineMath math="M'" />—contradiction.
+            </p>
+          </div>
+        </details>
       </Theorem>
 
       <Example title="Medical Residency Matching">

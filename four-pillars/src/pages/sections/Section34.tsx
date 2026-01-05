@@ -65,7 +65,21 @@ ax_2 + by_2 + cz_2 &= 0
         the same homogeneous equation.
       </p>
 
-      <Theorem title="Algebraic Basis of Projective Geometry">
+      <Theorem title="Algebraic Basis of Projective Geometry"
+        proof={
+          <>
+            <p>We prove both statements using linear algebra.</p>
+            <p className="mt-2"><strong>Two points determine a unique line:</strong></p>
+            <p>Let P₁ = (x₁, y₁, z₁) and P₂ = (x₂, y₂, z₂) be two distinct "points" in ℝP² (i.e., two lines through O in ℝ³ that are not the same). We seek the plane ax + by + cz = 0 containing both.</p>
+            <p className="mt-2">The system of equations:</p>
+            <MathBlock math="ax_1 + by_1 + cz_1 = 0, \quad ax_2 + by_2 + cz_2 = 0" />
+            <p className="mt-2">has coefficient matrix of rank at most 2 (two equations in three unknowns). Since P₁ and P₂ represent different lines through O, they are linearly independent, so the matrix has rank exactly 2. Therefore, the solution space for (a, b, c) is one-dimensional, meaning all solutions are multiples (ta, tb, tc) of a single solution—representing a unique plane through O.</p>
+            <p className="mt-2"><strong>Two lines determine a unique point:</strong></p>
+            <p>Let L₁: a₁x + b₁y + c₁z = 0 and L₂: a₂x + b₂y + c₂z = 0 be two distinct "lines" (planes through O). Since they are distinct, (a₁, b₁, c₁) and (a₂, b₂, c₂) are linearly independent.</p>
+            <p className="mt-2">The system has coefficient matrix of rank 2 in three variables, so its solution space is one-dimensional. Thus, all solutions are of the form (tx, ty, tz) for some fixed (x, y, z)—representing a unique line through O, i.e., a unique "point" of ℝP².</p>
+          </>
+        }
+      >
         <p>
           This is the algebraic reason why two "points" lie on a unique "line" in ℝP².
           Similarly, two "lines" have a unique "point" in common because solving:

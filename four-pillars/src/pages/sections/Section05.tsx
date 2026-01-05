@@ -91,7 +91,21 @@ export default function Section05() {
         pentagon, because none were constructed until modern times.
       </p>
 
-      <Theorem title="Gauss's Discovery (1796)">
+      <Theorem title="Gauss's Discovery (1796)"
+        proof={
+          <>
+            <p>Gauss's key insight was that constructibility is equivalent to solving polynomial equations using only square roots.</p>
+            <p className="mt-2"><strong>Step 1:</strong> A regular 17-gon is constructible if and only if cos(2π/17) is constructible.</p>
+            <p className="mt-2"><strong>Step 2:</strong> The 17th roots of unity satisfy x¹⁷ - 1 = 0. Excluding x = 1:</p>
+            <MathBlock math="x^{16} + x^{15} + \cdots + x + 1 = 0" />
+            <p className="mt-2"><strong>Step 3:</strong> Gauss showed this factors into polynomials of degree 8, 4, 2, and finally 1, each solvable by square roots.</p>
+            <p className="mt-2">The key is that 16 = 2⁴, allowing repeated bisection into quadratics.</p>
+            <p className="mt-2"><strong>Step 4:</strong> The resulting nested radicals give:</p>
+            <MathBlock math="\cos\frac{2\pi}{17} = \frac{-1 + \sqrt{17} + \sqrt{34-2\sqrt{17}} + 2\sqrt{17+3\sqrt{17}-\sqrt{34-2\sqrt{17}}-2\sqrt{34+2\sqrt{17}}}}{16}" />
+            <p className="mt-2">Since this involves only +, −, ×, ÷, and √, the regular 17-gon is constructible.</p>
+          </>
+        }
+      >
         <p>
           The regular 17-gon was constructed by the 19-year-old Carl Friedrich Gauss in 1796.
           This discovery was the key to answering: <em>For which n is the regular n-gon
@@ -145,7 +159,28 @@ export default function Section05() {
         compass constructions require tools from algebra and number theory.
       </p>
 
-      <Theorem title="Complete Characterization">
+      <Theorem title="Complete Characterization"
+        proof={
+          <>
+            <p><strong>Sufficiency:</strong> If n has this form, the n-gon is constructible.</p>
+            <ol className="list-decimal list-inside space-y-1 mt-2">
+              <li>The 2-gon (a line segment) is trivially constructible</li>
+              <li>A 2k-gon is constructible from a k-gon by bisecting each arc</li>
+              <li>Each distinct Fermat prime pᵢ gives a constructible pᵢ-gon (by Gauss)</li>
+              <li>If gcd(m, n) = 1 and both m-gon and n-gon are constructible, so is the mn-gon</li>
+            </ol>
+            <p className="mt-2">(The last step uses Bézout's identity: am + bn = 1 for some integers a, b.)</p>
+            <p className="mt-2"><strong>Necessity:</strong> If n has an odd prime factor p that is not a Fermat prime, the n-gon is not constructible.</p>
+            <ol className="list-decimal list-inside space-y-1 mt-2">
+              <li>If the n-gon is constructible, then the p-gon is constructible (by selecting every n/p vertex)</li>
+              <li>For the p-gon to be constructible, cos(2π/p) must be constructible</li>
+              <li>The minimal polynomial of cos(2π/p) has degree (p-1)/2</li>
+              <li>This must be a power of 2, so p-1 = 2ᵐ, i.e., p = 2ᵐ + 1</li>
+              <li>For this to be prime, m must be a power of 2, making p a Fermat prime</li>
+            </ol>
+          </>
+        }
+      >
         <p>
           A regular n-gon is constructible by straightedge and compass if and only if n
           is of the form:
