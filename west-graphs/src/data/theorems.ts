@@ -47,6 +47,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Fundamental Concepts',
     type: 'theorem',
     hasProof: true,
+    proof: 'Necessity: Each visit to a vertex uses two edges (one in, one out), so degrees must be even. Sufficiency: Start at any vertex and walk without repeating edges. Since degrees are even, you can only get stuck at the start. If edges remain, find a vertex on the circuit adjacent to an unused edge, build another closed walk, and splice it in. Repeat until all edges are used.',
   },
   {
     id: 'thm-eulerian-trail',
@@ -56,6 +57,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Fundamental Concepts',
     type: 'theorem',
     hasProof: true,
+    proof: 'If 0 odd-degree vertices, use the circuit theorem. If 2 odd-degree vertices $u, v$, add edge $uv$ to get all even degrees, find an Eulerian circuit, then remove $uv$ to get a $u$-$v$ trail. Conversely, an Eulerian trail uses each edge once; internal vertices have equal in/out visits (even degree), while endpoints have one extra edge each (odd degree).',
   },
   {
     id: 'thm-handshaking',
@@ -75,6 +77,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Fundamental Concepts',
     type: 'corollary',
     hasProof: true,
+    proof: 'By the Handshaking Lemma, $\\sum d(v) = 2|E|$ is even. Split the sum into odd-degree and even-degree vertices. The even-degree sum is even, so the odd-degree sum must also be even. Since each odd-degree term is odd, there must be an even number of such terms.',
   },
   {
     id: 'thm-erdos-gallai',
@@ -92,6 +95,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Fundamental Concepts',
     type: 'theorem',
     hasProof: true,
+    proof: 'By induction on $n$. Base case $n=1$ is trivial. For $n > 1$: remove a vertex $v$ and find a Hamiltonian path $P$ in the remaining tournament by induction. If $v$ beats the first vertex of $P$, prepend $v$. If the last vertex beats $v$, append $v$. Otherwise, find consecutive vertices $u_i, u_{i+1}$ on $P$ where $u_i \\to v$ and $v \\to u_{i+1}$, and insert $v$ between them.',
   },
 
   // =============================================================================
@@ -113,6 +117,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Trees and Distance',
     type: 'theorem',
     hasProof: true,
+    proof: '(1)$\\Rightarrow$(4): Connected gives a path; acyclic ensures uniqueness. (4)$\\Rightarrow$(5): Unique paths means every edge is a bridge. (5)$\\Rightarrow$(2): By induction, connected graph where every edge is a bridge has $n-1$ edges. (2)$\\Rightarrow$(3): Connected with $n-1$ edges cannot have a cycle (removing a cycle edge keeps it connected, contradicting minimum edges). (3)$\\Rightarrow$(1): Acyclic with $n-1$ edges must be connected (a forest with $c$ components has $n-c$ edges).',
   },
   {
     id: 'thm-tree-leaves',
@@ -122,6 +127,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Trees and Distance',
     type: 'theorem',
     hasProof: true,
+    proof: 'A tree on $n \\geq 2$ vertices has $n-1$ edges, so sum of degrees is $2(n-1)$. If at most one leaf existed, at least $n-1$ vertices would have degree $\\geq 2$, giving degree sum $\\geq 2(n-1) + 1$, a contradiction. Alternatively: a longest path must have leaves at both endpoints (otherwise it could be extended).',
   },
   {
     id: 'thm-cayley',
@@ -131,6 +137,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Trees and Distance',
     type: 'theorem',
     hasProof: true,
+    proof: 'Prüfer sequence bijection: Each labeled tree on $[n]$ corresponds to a unique sequence in $[n]^{n-2}$. To encode: repeatedly remove the smallest leaf and record its neighbor. To decode: the sequence determines which edges to add. Since there are $n^{n-2}$ such sequences, there are $n^{n-2}$ labeled trees.',
   },
   {
     id: 'thm-matrix-tree',
@@ -148,6 +155,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Trees and Distance',
     type: 'theorem',
     hasProof: true,
+    proof: 'Let $T$ be the tree produced by Kruskal and $T^*$ be an MST. Consider the first edge $e$ in $T$ not in $T^*$. Adding $e$ to $T^*$ creates a cycle containing some edge $f \\notin T$ (otherwise the algorithm would have chosen $f$). Since $e$ was chosen first, $w(e) \\leq w(f)$. Thus $T^* - f + e$ is a spanning tree with weight $\\leq w(T^*)$, so it is also an MST closer to $T$. Repeat until $T = T^*$.',
   },
 
   // =============================================================================
@@ -169,6 +177,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Matchings and Factors',
     type: 'theorem',
     hasProof: true,
+    proof: 'Necessity is clear. For sufficiency, induct on $|X|$. If $|N(S)| > |S|$ for all proper $S$, match any $x \\in X$ to a neighbor and apply induction. Otherwise, some $S$ has $|N(S)| = |S|$; by induction match $S$ to $N(S)$. Hall\'s condition still holds for $X \\setminus S$ in $G - S - N(S)$, so complete the matching by induction.',
   },
   {
     id: 'thm-konig-egervary',
@@ -178,6 +187,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Matchings and Factors',
     type: 'theorem',
     hasProof: true,
+    proof: 'A vertex cover must include at least one endpoint of each matched edge, so cover size $\\geq$ matching size. For equality: let $M$ be maximum and $U \\subseteq X$ be vertices reachable from unmatched $X$-vertices via $M$-alternating paths. Set $C = (X \\setminus U) \\cup (Y \\cap U)$. Then $|C| = |M|$ (each $M$-edge contributes exactly one vertex to $C$), and $C$ is a cover (edges from $U$ go to $Y \\cap U$; edges from $X \\setminus U$ have no $Y \\setminus U$ endpoints by maximality of $M$).',
   },
   {
     id: 'thm-berge',
@@ -187,6 +197,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Matchings and Factors',
     type: 'theorem',
     hasProof: true,
+    proof: 'If an augmenting path $P$ exists, $M \\triangle P$ is a larger matching. Conversely, if $M$ is not maximum, let $M\'$ be larger. In $M \\triangle M\'$, each component is a path or cycle with edges alternating between $M$ and $M\'$. Since $|M\'| > |M|$, some component has more $M\'$-edges than $M$-edges, which must be a path starting and ending with $M\'$-edges—an $M$-augmenting path.',
   },
   {
     id: 'thm-tutte',
@@ -196,6 +207,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Matchings and Factors',
     type: 'theorem',
     hasProof: true,
+    proof: 'Necessity: A perfect matching must match each odd component of $G-S$ to a vertex in $S$, so $o(G-S) \\leq |S|$. Sufficiency: Assume Tutte\'s condition holds but no perfect matching exists. Add edges until $G$ is edge-maximal without a perfect matching. Then $G$ has a complete graph $K$ on vertices not in any maximum independent set. Analyzing the structure of $G - K$ and using the condition leads to a contradiction.',
   },
   {
     id: 'thm-petersen-matching',
@@ -205,6 +217,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Matchings and Factors',
     type: 'theorem',
     hasProof: true,
+    proof: 'Apply Tutte\'s theorem: for any $S$, we need $o(G-S) \\leq |S|$. Count edges between $S$ and odd components: each odd component has an odd number of vertices with degree 3, so an odd total degree, meaning an odd number of edges to $S$—at least 1. With $k$ odd components and no bridges, each sends $\\geq 1$ edge to $S$. Also, $|S|$ vertices have degree 3, giving $3|S|$ edges from $S$. So $k \\leq 3|S|$, and parity gives $k \\leq |S|$.',
   },
 
   // =============================================================================
@@ -226,6 +239,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Connectivity and Paths',
     type: 'theorem',
     hasProof: true,
+    proof: 'For $\\kappa\' \\leq \\delta$: deleting edges incident to a minimum-degree vertex disconnects the graph. For $\\kappa \\leq \\kappa\'$: given a minimum edge cut $F$, for each edge $uv \\in F$ delete $u$ (unless it\'s the only neighbor of some vertex on the other side). This gives a vertex cut of size $\\leq |F|$.',
   },
   {
     id: 'thm-menger-vertex',
@@ -235,6 +249,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Connectivity and Paths',
     type: 'theorem',
     hasProof: true,
+    proof: 'The number of disjoint paths cannot exceed the separator size (each path needs a distinct separator vertex). For the reverse: induct on $|E|$. If every $u$-$v$ separator contains a neighbor of $u$ and a neighbor of $v$, delete an edge $e$ on a shortest path; the separator bound decreases by at most 1, so we find enough paths. Otherwise, use the structure of a minimal separator to split the problem.',
   },
   {
     id: 'thm-menger-edge',
@@ -244,6 +259,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Connectivity and Paths',
     type: 'theorem',
     hasProof: true,
+    proof: 'Reduce to vertex version: construct $G\'$ by splitting each edge $xy$ into $x$-$z_{xy}$-$y$. Edge-disjoint $u$-$v$ paths in $G$ correspond to internally disjoint $u$-$v$ paths in $G\'$, and edge cuts in $G$ correspond to vertex separators in $G\'$ (using the new vertices). Apply vertex Menger to $G\'$.',
   },
   {
     id: 'thm-whitney-2connected',
@@ -253,6 +269,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Connectivity and Paths',
     type: 'theorem',
     hasProof: true,
+    proof: 'If 2-connected, any two edges $e = xy$ and $f = uv$ can be put on a cycle: by Menger, there are 2 internally disjoint $x$-$u$ paths. Together with edges $e$ and $f$ and paths from $y$ and $v$, we can form a cycle through both edges. Conversely, if every pair of edges lies on a cycle, there\'s no cut vertex (a cut vertex would separate some edge pair), so $G$ is 2-connected.',
   },
   {
     id: 'thm-max-flow-min-cut',
@@ -262,6 +279,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Connectivity and Paths',
     type: 'theorem',
     hasProof: true,
+    proof: 'Flow value $\\leq$ cut capacity (flow across any cut equals total flow, bounded by capacity). Ford-Fulkerson: while an augmenting path exists in the residual graph, push flow along it. When no augmenting path exists, vertices reachable from source in residual graph form one side of a min-cut; edges crossing this cut are saturated, proving equality.',
   },
 
   // =============================================================================
@@ -283,6 +301,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Coloring of Graphs',
     type: 'theorem',
     hasProof: true,
+    proof: 'Color vertices one by one in any order. When coloring vertex $v$, at most $d(v) \\leq \\Delta$ neighbors are already colored, so at most $\\Delta$ colors are forbidden. With $\\Delta + 1$ colors available, at least one color is always available for $v$.',
   },
   {
     id: 'thm-brooks',
@@ -292,6 +311,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Coloring of Graphs',
     type: 'theorem',
     hasProof: true,
+    proof: 'If $G$ is not 2-connected, apply induction to blocks. If 2-connected with $\\Delta \\geq 3$: find vertices $u, v$ both adjacent to some vertex $w$ but not to each other. Order vertices so $u, v$ come first and $w$ comes last (BFS from $w$). Give $u, v$ the same color. Greedily color the rest; each vertex (except $w$) has an uncolored neighbor when processed, so $\\Delta$ colors suffice. For $w$, neighbors use $\\leq \\Delta - 1$ colors (since $u, v$ share a color).',
   },
   {
     id: 'thm-turan',
@@ -301,6 +321,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Coloring of Graphs',
     type: 'theorem',
     hasProof: true,
+    proof: 'Induction on $n$. Let $G$ be extremal with no $K_{r+1}$. Then $G$ has a $K_r$ (else add edges). Delete this $K_r$; the remaining graph on $n-r$ vertices has no $K_{r+1}$, so by induction has $\\leq t(n-r, r)$ edges. Each deleted vertex contributes $\\leq n-r$ edges to $G$ (not all of $K_r$ can connect to a common vertex outside). Summing gives $\\leq t(n,r)$, achieved by $T(n,r)$.',
   },
   {
     id: 'thm-chromatic-polynomial',
@@ -330,6 +351,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Planar Graphs',
     type: 'theorem',
     hasProof: true,
+    proof: 'Induction on $m$. Base: a tree has $n$ vertices, $n-1$ edges, 1 face, so $n - (n-1) + 1 = 2$. For $m \\geq n$: the graph has a cycle. Remove an edge $e$ from a cycle; this merges two faces into one. By induction, $(n) - (m-1) + (f-1) = 2$, so $n - m + f = 2$.',
   },
   {
     id: 'cor-planar-edges',
@@ -339,6 +361,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Planar Graphs',
     type: 'corollary',
     hasProof: true,
+    proof: 'Each face has $\\geq 3$ edges on its boundary (or $\\geq 4$ if triangle-free). Summing over faces: $\\sum (\\text{face size}) \\geq 3f$ (or $4f$). Each edge borders 2 faces, so $2m \\geq 3f$. By Euler: $f = 2 - n + m$, giving $2m \\geq 3(2-n+m) = 6 - 3n + 3m$, so $m \\leq 3n - 6$. Similarly, $m \\leq 2n - 4$ if triangle-free.',
   },
   {
     id: 'thm-kuratowski',
@@ -348,6 +371,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Planar Graphs',
     type: 'theorem',
     hasProof: true,
+    proof: 'Subdivisions of $K_5$ and $K_{3,3}$ are not planar (edge bound: $K_5$ has 10 edges but $3(5)-6=9$; $K_{3,3}$ is triangle-free with 9 edges but $2(6)-4=8$). Conversely, suppose $G$ is non-planar and edge-minimal. Show $G$ is 3-connected. Contract an edge to get a smaller non-planar graph with a Kuratowski subgraph $H$. Analyze how to "uncontract" to find a subdivision in $G$.',
   },
   {
     id: 'thm-wagner',
@@ -365,6 +389,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Planar Graphs',
     type: 'theorem',
     hasProof: true,
+    proof: 'The proof (Appel-Haken, 1976; simplified by Robertson et al., 1997) uses a discharging method to show every planar graph contains one of ~600 "reducible configurations." Computer verification shows each configuration can be reduced to a smaller graph, allowing induction. No simple proof is known.',
   },
   {
     id: 'thm-five-color',
@@ -374,6 +399,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Planar Graphs',
     type: 'theorem',
     hasProof: true,
+    proof: 'Induction on $n$. By the edge bound, some vertex $v$ has degree $\\leq 5$. Remove $v$, 5-color the rest by induction. If $d(v) < 5$ or two neighbors share a color, color $v$ with an available color. Otherwise, $v$ has 5 differently-colored neighbors. Consider a Kempe chain argument: swap colors along a 2-colored path. This frees a color for $v$.',
   },
 
   // =============================================================================
@@ -395,6 +421,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Edges and Cycles',
     type: 'theorem',
     hasProof: true,
+    proof: 'Lower bound: edges at a max-degree vertex need distinct colors. Upper bound: induct on $|E|$. Remove edge $xy$, color the rest with $\\Delta+1$ colors. Try to add color to $xy$. If no color works, build a "fan" from $x$ and recolor using a Kempe chain argument on color classes, eventually freeing a color for $xy$.',
   },
   {
     id: 'thm-konig-edge-coloring',
@@ -404,6 +431,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Edges and Cycles',
     type: 'theorem',
     hasProof: true,
+    proof: 'Induction on $|E|$. Remove edge $xy$, color with $\\Delta$ colors. Colors missing at $x$ and $y$ exist (each has degree $< \\Delta$ now). If they share a missing color, use it for $xy$. Otherwise, missing color $a$ at $x$ and $b$ at $y$ differ. Follow the $a$-$b$ alternating path from $y$; in bipartite graphs it cannot reach $x$, so swap colors along it. Now $a$ is missing at both $x$ and $y$.',
   },
   {
     id: 'def-hamiltonian',
@@ -421,6 +449,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Edges and Cycles',
     type: 'theorem',
     hasProof: true,
+    proof: 'Take a longest path $P = v_1 \\ldots v_k$. Since $P$ is maximal, all neighbors of $v_1$ and $v_k$ are on $P$. If $v_1 v_k \\in E$, we have a cycle. Otherwise, if $v_1 v_i \\in E$ then $v_k v_{i-1} \\notin E$ (else $v_1 \\ldots v_{i-1} v_k \\ldots v_i v_1$ is a cycle). So $d(v_k) \\leq k - 1 - d(v_1)$, giving $d(v_1) + d(v_k) \\leq k-1 < n$, contradicting $\\delta \\geq n/2$. Thus a cycle $C$ exists; if $C \\neq G$, use connectivity to extend, contradiction.',
   },
   {
     id: 'thm-ore',
@@ -430,6 +459,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Edges and Cycles',
     type: 'theorem',
     hasProof: true,
+    proof: 'The same proof as Dirac works: on a longest path, the endpoints $v_1, v_k$ must satisfy $d(v_1) + d(v_k) \\geq n$ if non-adjacent. The counting argument shows $d(v_1) + d(v_k) \\leq k-1$, so we need $k = n$. The cycle-closing argument then applies. Note: Ore\'s condition is weaker than Dirac\'s since it only requires the degree sum condition for non-adjacent pairs.',
   },
   {
     id: 'thm-grinberg',
@@ -459,6 +489,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Additional Topics',
     type: 'theorem',
     hasProof: true,
+    proof: 'A replication lemma shows that if $G$ is perfect, so is any graph obtained by "replicating" vertices. Using this, one shows $G$ perfect implies $\\chi(G) \\cdot \\alpha(G) \\geq n$ for all induced subgraphs. Applying this to $\\overline{G}$ (where $\\chi$ and $\\alpha$ swap roles with $\\omega$ and $\\theta$), we get $\\overline{G}$ is also perfect.',
   },
   {
     id: 'thm-strong-perfect',
@@ -484,6 +515,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Additional Topics',
     type: 'theorem',
     hasProof: true,
+    proof: 'If matroid: greedy builds an independent set $I$ by adding highest-weight elements that maintain independence. By the exchange property, $|I|$ equals the rank. Any independent set of same size has $\\leq$ weight (greedy chose highest weights). Conversely, if greedy works for all weights, the exchange property must hold (otherwise, design weights where greedy fails).',
   },
   {
     id: 'thm-ramsey',
@@ -493,6 +525,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Additional Topics',
     type: 'theorem',
     hasProof: true,
+    proof: 'Induction: $R(s,1) = R(1,t) = 1$. For $s,t > 1$: take $n = R(s-1,t) + R(s,t-1)$. Pick vertex $v$; partition neighbors by edge color. Red neighbors form set of size $\\geq R(s-1,t)$ or blue neighbors $\\geq R(s,t-1)$. By induction, find red $K_{s-1}$ or blue $K_t$ in red neighborhood (add $v$ for red $K_s$), or red $K_s$ or blue $K_{t-1}$ in blue neighborhood (add $v$ for blue $K_t$).',
   },
   {
     id: 'thm-ramsey-bounds',
@@ -502,6 +535,7 @@ export const theorems: TheoremEntry[] = [
     category: 'Additional Topics',
     type: 'theorem',
     hasProof: true,
+    proof: 'Upper bound: from the recurrence $R(s,t) \\leq R(s-1,t) + R(s,t-1)$, induction gives $R(s,t) \\leq \\binom{s+t-2}{s-1}$. Lower bound (Erdős): color $K_n$ randomly. Expected number of monochromatic $K_s$ is $\\binom{n}{s} 2^{1-\\binom{s}{2}}$. If $< 1$, some coloring avoids mono-$K_s$. This holds when $n < 2^{s/2}$, so $R(s,s) > 2^{s/2}$.',
   },
   {
     id: 'thm-erdos-stone',
