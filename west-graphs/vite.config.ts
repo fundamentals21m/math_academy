@@ -6,7 +6,7 @@ import path from 'path'
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
 const COURSE_ID = 'west-graphs'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = '/'  // For standalone Vercel deployment: '/'
+const BASE_PATH = '/west-graphs-deploy/'  // Must match deploy folder name for hub
 // =============================================================================
 
 export default defineConfig({
