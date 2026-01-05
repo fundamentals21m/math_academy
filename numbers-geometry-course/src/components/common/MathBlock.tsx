@@ -1,12 +1,33 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, Children } from 'react';
 import katex from 'katex';
 
 interface MathProps {
-  children?: string;
+  children?: React.ReactNode;
   math?: string;  // Alternative to children
   display?: boolean;
   inline?: boolean;  // Convenience prop (opposite of display)
   className?: string;
+}
+
+// Convert React children to a string (handles arrays from JSX expressions like {'>'})
+function childrenToString(children: React.ReactNode): string {
+  if (typeof children === 'string') return children;
+  if (typeof children === 'number') return String(children);
+  if (!children) return '';
+
+  // Handle arrays (from JSX expressions like <InlineMath>p {'>'} 1</InlineMath>)
+  if (Array.isArray(children)) {
+    return children.map(childrenToString).join('');
+  }
+
+  // Handle React.Children
+  const parts: string[] = [];
+  Children.forEach(children, (child) => {
+    if (typeof child === 'string' || typeof child === 'number') {
+      parts.push(String(child));
+    }
+  });
+  return parts.join('');
 }
 
 /**
@@ -15,8 +36,7 @@ interface MathProps {
  */
 export function InlineMath({ children, math, className = '' }: MathProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const rawContent = math ?? children ?? '';
-  const content = typeof rawContent === 'string' ? rawContent : String(rawContent);
+  const content = math ?? childrenToString(children);
 
   useEffect(() => {
     if (ref.current && content) {
@@ -42,8 +62,7 @@ export function InlineMath({ children, math, className = '' }: MathProps) {
  */
 export function MathBlock({ children, math, inline, display, className = '' }: MathProps) {
   const ref = useRef<HTMLElement>(null);
-  const rawContent = math ?? children ?? '';
-  const content = typeof rawContent === 'string' ? rawContent : String(rawContent);
+  const content = math ?? childrenToString(children);
 
   // inline prop takes precedence, then display prop, default to display mode
   const isInline = inline === true || (display === false);
