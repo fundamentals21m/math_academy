@@ -79,6 +79,12 @@ export const SECTIONS = [
     subtitle: 'Combinatorics, graph theory, and discrete structures',
     style: 'subject'
   },
+  {
+    id: 'number_theory',
+    title: 'Number Theory',
+    subtitle: 'Integers, primes, and cryptographic foundations',
+    style: 'subject'
+  },
 ];
 
 /** @type {Course[]} */
@@ -261,6 +267,20 @@ export const COURSES = [
     shortName: 'Four Pillars',
     progressGradient: 'linear-gradient(90deg, #ec4899, #f472b6)',
   },
+  {
+    id: 'numbers_geometry',
+    title: 'Numbers and Geometry',
+    description: "Explore the deep connections between arithmetic and geometry. Based on John Stillwell's textbook, covering primes, Euclid, coordinates, Pythagorean triples, modular arithmetic, complex numbers, conics, and elementary functions.",
+    icon: '🔢',
+    url: 'https://numbers-geometry-course.vercel.app/',
+    tags: ['9 Chapters', '79 Sections'],
+    sections: ['geometry', 'number_theory'],
+    totalSections: 79,
+    progressPrefix: 'numbers_geometry:',
+    leaderboardUrl: 'https://numbers-geometry-course.vercel.app/#/leaderboard',
+    shortName: 'Numbers & Geometry',
+    progressGradient: 'linear-gradient(90deg, #14b8a6, #2dd4bf)',
+  },
 
   // SEMINAL WORKS
   {
@@ -394,6 +414,22 @@ export const COURSES = [
     leaderboardUrl: 'west-graphs-deploy/#/leaderboard',
     shortName: 'Graph Theory',
     progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)',
+  },
+
+  // NUMBER THEORY
+  {
+    id: 'koblitz',
+    title: 'Advanced Number Theory and Cryptography',
+    description: "A rigorous course in number theory and its applications to cryptography. Based on Neal Koblitz's classic textbook, covering primality testing, factorization algorithms, elliptic curves, and modern cryptosystems.",
+    icon: '🔑',
+    url: 'koblitz-course-deploy/',
+    tags: ['3 Parts', '22 Sections'],
+    sections: ['number_theory'],
+    totalSections: 22,
+    progressPrefix: 'koblitz:',
+    leaderboardUrl: 'koblitz-course-deploy/#/leaderboard',
+    shortName: 'Koblitz',
+    progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
   },
 ];
 
