@@ -73,6 +73,12 @@ export const SECTIONS = [
     subtitle: 'The study of human action and market processes',
     style: 'subject'
   },
+  {
+    id: 'discrete',
+    title: 'Discrete Mathematics',
+    subtitle: 'Combinatorics, graph theory, and discrete structures',
+    style: 'subject'
+  },
 ];
 
 /** @type {Course[]} */
@@ -372,6 +378,22 @@ export const COURSES = [
     leaderboardUrl: 'https://road-to-serfdom-deploy.vercel.app/#/leaderboard',
     shortName: 'Road to Serfdom',
     progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
+  },
+
+  // DISCRETE MATHEMATICS
+  {
+    id: 'west_graphs',
+    title: 'Introduction to Graph Theory',
+    description: "Master graph theory with Douglas B. West's classic textbook. From basic definitions through trees, matching, network flows, coloring, planarity, and random graphs with 10 interactive visualizations.",
+    icon: '🕸️',
+    url: 'https://west-graphs.vercel.app/',
+    tags: ['8 Chapters', '28 Sections'],
+    sections: ['discrete'],
+    totalSections: 28,
+    progressPrefix: 'west_graphs:',
+    leaderboardUrl: 'https://west-graphs.vercel.app/#/leaderboard',
+    shortName: 'Graph Theory',
+    progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)',
   },
 ];
 
