@@ -47,6 +47,18 @@
       "title": "Austrian Economics",
       "subtitle": "The study of human action and market processes",
       "style": "subject"
+    },
+    {
+      "id": "discrete",
+      "title": "Discrete Mathematics",
+      "subtitle": "Combinatorics, graph theory, and discrete structures",
+      "style": "subject"
+    },
+    {
+      "id": "number_theory",
+      "title": "Number Theory",
+      "subtitle": "Integers, primes, and cryptographic foundations",
+      "style": "subject"
     }
   ],
   "courses": [
@@ -220,18 +232,18 @@
       "progressGradient": "linear-gradient(90deg, #ec4899, #f472b6)"
     },
     {
-      "id": "mom",
-      "title": "Men of Mathematics",
-      "description": "Journey through 2500 years of mathematical history based on E.T. Bell's classic. From Zeno to Poincaré, discover the lives and ideas of history's greatest mathematicians.",
-      "icon": "📜",
-      "url": "mom-deploy/",
-      "tags": ["34 Sections", "Interactive"],
-      "sections": ["history"],
-      "totalSections": 34,
-      "progressPrefix": "mom:",
-      "leaderboardUrl": "mom-deploy/#/leaderboard",
-      "shortName": "Men of Math",
-      "progressGradient": "linear-gradient(90deg, #8b5cf6, #a78bfa)"
+      "id": "numbers_geometry",
+      "title": "Numbers and Geometry",
+      "description": "Explore the deep connections between arithmetic and geometry. Based on John Stillwell's textbook, covering primes, Euclid, coordinates, Pythagorean triples, modular arithmetic, complex numbers, conics, and elementary functions.",
+      "icon": "🔢",
+      "url": "numbers-geometry-deploy/",
+      "tags": ["9 Chapters", "79 Sections"],
+      "sections": ["geometry"],
+      "totalSections": 79,
+      "progressPrefix": "numbers_geometry:",
+      "leaderboardUrl": "numbers-geometry-deploy/#/leaderboard",
+      "shortName": "Numbers & Geometry",
+      "progressGradient": "linear-gradient(90deg, #14b8a6, #2dd4bf)"
     },
     {
       "id": "euclid",
@@ -239,9 +251,9 @@
       "description": "The foundational text of Western mathematics. Study all 13 books covering plane geometry, proportions, number theory, and solid geometry through interactive propositions and proofs.",
       "icon": "📜",
       "url": "https://euclid-deploy.vercel.app/",
-      "tags": ["13 Books", "137 Sections"],
-      "sections": ["featured", "seminal", "geometry"],
-      "totalSections": 137,
+      "tags": ["13 Books", "219 Sections"],
+      "sections": ["seminal", "geometry"],
+      "totalSections": 219,
       "progressPrefix": "euclid:",
       "leaderboardUrl": "https://euclid-deploy.vercel.app/#/leaderboard",
       "shortName": "Elements",
@@ -260,6 +272,20 @@
       "leaderboardUrl": "gauss-deploy/#/leaderboard",
       "shortName": "Disquisitiones",
       "progressGradient": "linear-gradient(90deg, #d97706, #f59e0b)"
+    },
+    {
+      "id": "mom",
+      "title": "Men of Mathematics",
+      "description": "Journey through 2500 years of mathematical history based on E.T. Bell's classic. From Zeno to Poincaré, discover the lives and ideas of history's greatest mathematicians.",
+      "icon": "📜",
+      "url": "mom-deploy/",
+      "tags": ["34 Sections", "Interactive"],
+      "sections": ["history"],
+      "totalSections": 34,
+      "progressPrefix": "mom:",
+      "leaderboardUrl": "mom-deploy/#/leaderboard",
+      "shortName": "Men of Math",
+      "progressGradient": "linear-gradient(90deg, #8b5cf6, #a78bfa)"
     },
     {
       "id": "thales",
@@ -329,6 +355,34 @@
       "progressPrefix": "road_to_serfdom:",
       "leaderboardUrl": "https://road-to-serfdom-deploy.vercel.app/#/leaderboard",
       "shortName": "Road to Serfdom",
+      "progressGradient": "linear-gradient(90deg, #f59e0b, #fbbf24)"
+    },
+    {
+      "id": "west_graphs",
+      "title": "Introduction to Graph Theory",
+      "description": "Master graph theory with Douglas B. West's classic textbook. From basic definitions through trees, matching, network flows, coloring, planarity, and random graphs with 10 interactive visualizations.",
+      "icon": "🕸️",
+      "url": "west-graphs-deploy/",
+      "tags": ["8 Chapters", "28 Sections"],
+      "sections": ["discrete"],
+      "totalSections": 28,
+      "progressPrefix": "west_graphs:",
+      "leaderboardUrl": "west-graphs-deploy/#/leaderboard",
+      "shortName": "Graph Theory",
+      "progressGradient": "linear-gradient(90deg, #8b5cf6, #a78bfa)"
+    },
+    {
+      "id": "koblitz",
+      "title": "Advanced Number Theory and Cryptography",
+      "description": "A rigorous course in number theory and its applications to cryptography. Based on Neal Koblitz's classic textbook, covering primality testing, factorization algorithms, elliptic curves, and modern cryptosystems.",
+      "icon": "🔑",
+      "url": "koblitz-course-deploy/",
+      "tags": ["3 Parts", "22 Sections"],
+      "sections": ["number_theory"],
+      "totalSections": 22,
+      "progressPrefix": "koblitz:",
+      "leaderboardUrl": "koblitz-course-deploy/#/leaderboard",
+      "shortName": "Koblitz",
       "progressGradient": "linear-gradient(90deg, #f59e0b, #fbbf24)"
     }
   ]

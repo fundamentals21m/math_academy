@@ -274,7 +274,7 @@ export const COURSES = [
     icon: '🔢',
     url: 'numbers-geometry-deploy/',
     tags: ['9 Chapters', '79 Sections'],
-    sections: ['geometry', 'number_theory'],
+    sections: ['geometry'],
     totalSections: 79,
     progressPrefix: 'numbers_geometry:',
     leaderboardUrl: 'numbers-geometry-deploy/#/leaderboard',
