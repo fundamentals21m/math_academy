@@ -15,14 +15,19 @@ interface MathProps {
  */
 export function InlineMath({ children, math, className = '' }: MathProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const content = math ?? children ?? '';
+  const rawContent = math ?? children ?? '';
+  const content = typeof rawContent === 'string' ? rawContent : String(rawContent);
 
   useEffect(() => {
     if (ref.current && content) {
-      katex.render(content, ref.current, {
-        throwOnError: false,
-        displayMode: false,
-      });
+      try {
+        katex.render(content, ref.current, {
+          throwOnError: false,
+          displayMode: false,
+        });
+      } catch (e) {
+        console.error('KaTeX render error:', e);
+      }
     }
   }, [content]);
 
@@ -37,17 +42,22 @@ export function InlineMath({ children, math, className = '' }: MathProps) {
  */
 export function MathBlock({ children, math, inline, display, className = '' }: MathProps) {
   const ref = useRef<HTMLElement>(null);
-  const content = math ?? children ?? '';
+  const rawContent = math ?? children ?? '';
+  const content = typeof rawContent === 'string' ? rawContent : String(rawContent);
 
   // inline prop takes precedence, then display prop, default to display mode
   const isInline = inline === true || (display === false);
 
   useEffect(() => {
     if (ref.current && content) {
-      katex.render(content, ref.current, {
-        throwOnError: false,
-        displayMode: !isInline,
-      });
+      try {
+        katex.render(content, ref.current, {
+          throwOnError: false,
+          displayMode: !isInline,
+        });
+      } catch (e) {
+        console.error('KaTeX render error:', e);
+      }
     }
   }, [content, isInline]);
 
