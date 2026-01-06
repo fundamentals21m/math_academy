@@ -311,6 +311,20 @@ export const COURSES = [
     shortName: 'Disquisitiones',
     progressGradient: 'linear-gradient(90deg, #d97706, #f59e0b)',
   },
+  {
+    id: 'only_the_strong_survive',
+    title: 'Only The Strong Survive',
+    description: "A philosophical, technical, and economic critique of prospects in crypto beyond Bitcoin. By Allen Farrington and Anders Larson.",
+    icon: '₿',
+    url: 'only-the-strong-survive-deploy/',
+    tags: ['8 Parts', '20 Sections'],
+    sections: ['seminal'],
+    totalSections: 20,
+    progressPrefix: 'only_the_strong_survive:',
+    leaderboardUrl: 'only-the-strong-survive-deploy/#/leaderboard',
+    shortName: 'Only The Strong',
+    progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)',
+  },
 
   // MATH HISTORY
   {
@@ -398,6 +412,20 @@ export const COURSES = [
     leaderboardUrl: 'https://road-to-serfdom-deploy.vercel.app/#/leaderboard',
     shortName: 'Road to Serfdom',
     progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
+  },
+  {
+    id: 'orange_btc',
+    title: 'Orange is the New Green',
+    description: "The emergence of Bitcoin money market funds. Explore how Bitcoin's unique properties can be harnessed to create seizure-resistant deposit facilities with positive real yields.",
+    icon: '🟠',
+    url: 'https://orange-is-new-green.vercel.app/',
+    tags: ['5 Parts', '15 Sections'],
+    sections: ['austrian'],
+    totalSections: 15,
+    progressPrefix: 'orange_btc:',
+    leaderboardUrl: 'https://orange-is-new-green.vercel.app/#/leaderboard',
+    shortName: 'Orange is New Green',
+    progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)',
   },
 
   // DISCRETE MATHEMATICS

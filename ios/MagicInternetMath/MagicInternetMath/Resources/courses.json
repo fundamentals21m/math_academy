@@ -384,6 +384,20 @@
       "leaderboardUrl": "koblitz-course-deploy/#/leaderboard",
       "shortName": "Koblitz",
       "progressGradient": "linear-gradient(90deg, #f59e0b, #fbbf24)"
+    },
+    {
+      "id": "only_the_strong_survive",
+      "title": "Only The Strong Survive",
+      "description": "A philosophical, technical, and economic critique of prospects in crypto beyond Bitcoin. By Allen Farrington and Anders Larson.",
+      "icon": "📚",
+      "url": "only-the-strong-survive-deploy/",
+      "tags": ["8 Parts", "20 Sections"],
+      "sections": ["seminal"],
+      "totalSections": 20,
+      "progressPrefix": "only_the_strong_survive:",
+      "leaderboardUrl": "only-the-strong-survive-deploy/#/leaderboard",
+      "shortName": "Only The Strong",
+      "progressGradient": "linear-gradient(90deg, #f97316, #fbbf24)"
     }
   ]
 }
