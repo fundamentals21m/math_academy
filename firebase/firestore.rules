@@ -52,14 +52,15 @@ service cloud.firestore {
     }
 
     // Project Manager - admin tool for managing course development
-    // Open access for now (can add auth later if needed)
+    // Requires authentication to prevent unauthorized access
     match /project-manager/{docId} {
-      allow read, write: if true;
+      allow read, write: if request.auth != null;
     }
 
     // Project Manager History - backup/restore functionality
+    // Requires authentication to prevent unauthorized access
     match /project-manager-history/{historyId} {
-      allow read, write: if true;
+      allow read, write: if request.auth != null;
     }
   }
 }
