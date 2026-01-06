@@ -526,6 +526,7 @@ export function formatTheoremPost(theorem) {
 
   lines.push('', `From: ${metadata.name}`);
   lines.push(`Learn more: ${metadata.url}/#/section/${theorem.sectionId}`);
+  lines.push('', `Explore all courses: https://mathacademy-cyan.vercel.app`);
 
   return lines.join('\n');
 }

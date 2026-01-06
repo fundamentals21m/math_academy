@@ -450,6 +450,8 @@ export function formatVisualizationPost(viz) {
     '',
     `From: ${viz.courseName}`,
     `Try it: ${viz.url}`,
+    '',
+    `Explore all courses: https://mathacademy-cyan.vercel.app`,
   ];
 
   return lines.join('\n');
