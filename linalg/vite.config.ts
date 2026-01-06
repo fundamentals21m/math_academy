@@ -16,13 +16,13 @@ export default defineConfig({
   resolve: {
     alias: {
         '@': path.resolve(__dirname, './src'),
-        '@shared': path.resolve(__dirname, './shared'),
+        '@shared': path.resolve(__dirname, '../shared'),
         '@components': path.resolve(__dirname, './src/components'),
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
         '@data': path.resolve(__dirname, './src/data'),
-        // Shared package (local copy for standalone deployment)
-        '@magic-internet-math/shared': path.resolve(__dirname, './shared'),
+        // Shared package (root shared directory)
+        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
         // Ensure shared package can resolve katex from this package's node_modules
         'katex': path.resolve(__dirname, './node_modules/katex'),
     },

@@ -14,24 +14,34 @@ export default defineConfig({
   resolve: {
     alias: {
         '@': path.resolve(__dirname, './src'),
-        '@shared': path.resolve(__dirname, './shared'),
+        '@shared': path.resolve(__dirname, '../shared'),
         '@components': path.resolve(__dirname, './src/components'),
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
         '@data': path.resolve(__dirname, './src/data'),
-        // Shared package - use local copy for standalone deployment
-        '@magic-internet-math/shared': path.resolve(__dirname, './shared'),
+        // Shared package (root shared directory)
+        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
+        // Ensure shared package can resolve katex from this package's node_modules
+        'katex': path.resolve(__dirname, './node_modules/katex'),
     },
   },
+  optimizeDeps: {
+    include: ['katex'],
+  },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     rollupOptions: {
       output: {
         manualChunks: {
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-math': ['katex'],
           'vendor-animation': ['framer-motion'],
-          'vendor-d3': ['d3'],
+          'vendor-firebase': [
+            'firebase/app',
+            'firebase/auth',
+            'firebase/firestore',
+            'firebase/functions',
+          ],
         },
       },
     },
