@@ -267,9 +267,12 @@ describe('GamificationContext', () => {
       });
 
       expect(result.current.state.user.perfectQuizzes).toBe(1);
-      // XP should include perfect bonus (50%)
-      const expectedXP = Math.round(XP_CONFIG.QUIZ_MEDIUM * 1.5);
-      expect(result.current.state.user.totalXP).toBe(xpAfterVisit + expectedXP);
+      // XP should include:
+      // 1. Quiz XP with perfect bonus (50%): QUIZ_MEDIUM * 1.5 = 25 * 1.5 = 38
+      // 2. Section completion XP (score >= 80% triggers completion): SECTION_COMPLETE = 25
+      const quizXP = Math.round(XP_CONFIG.QUIZ_MEDIUM * 1.5);
+      const completionXP = XP_CONFIG.SECTION_COMPLETE;
+      expect(result.current.state.user.totalXP).toBe(xpAfterVisit + quizXP + completionXP);
     });
 
     it('should not record quiz for unvisited section', async () => {

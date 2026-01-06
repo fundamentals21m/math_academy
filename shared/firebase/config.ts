@@ -101,9 +101,26 @@ export function getFirebaseFunctions(): Functions {
 
 /**
  * Check if Firebase is configured
+ * Returns false for empty keys, short keys, or common placeholder values
  */
 export function isFirebaseConfigured(): boolean {
-  return !!firebaseConfig.apiKey && firebaseConfig.apiKey.length > 10;
+  const apiKey = firebaseConfig.apiKey;
+  if (!apiKey || apiKey.length < 10) return false;
+  
+  // Check for common placeholder values
+  const placeholders = [
+    'YOUR_API_KEY',
+    'your-api-key',
+    'YOUR-API-KEY',
+    'PLACEHOLDER',
+    'placeholder',
+    'API_KEY',
+    'api-key',
+    'xxx',
+  ];
+  
+  const lowerKey = apiKey.toLowerCase();
+  return !placeholders.some(p => lowerKey.includes(p.toLowerCase()));
 }
 
 export { firebaseConfig };

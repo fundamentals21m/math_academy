@@ -82,15 +82,19 @@ describe('NostrAuthContext', () => {
   });
 
   describe('useNostrAuth hook', () => {
-    it('should throw error when used outside provider', () => {
-      // Suppress console.error for this test
-      const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    it('should return default context when used outside provider', () => {
+      // When used outside provider, returns default context (graceful degradation)
+      const { result } = renderHook(() => useNostrAuth());
       
-      expect(() => {
-        renderHook(() => useNostrAuth());
-      }).toThrow('useNostrAuth must be used within NostrAuthProvider');
-      
-      consoleSpy.mockRestore();
+      // Should return default values instead of throwing
+      expect(result.current.isAuthenticated).toBe(false);
+      expect(result.current.isConnecting).toBe(false);
+      expect(result.current.npub).toBeNull();
+      expect(result.current.displayName).toBeNull();
+      expect(result.current.hasExtension).toBe(false);
+      expect(result.current.extensionChecked).toBe(true);
+      expect(typeof result.current.connect).toBe('function');
+      expect(typeof result.current.disconnect).toBe('function');
     });
 
     it('should return initial state when used within provider', async () => {
