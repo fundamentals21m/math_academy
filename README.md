@@ -4,11 +4,66 @@ A multi-course educational platform with gamification, leaderboard, and decentra
 
 ## Courses
 
-- **aa/** - Abstract Algebra (built)
-- **ba/** - Basic Algebra (built)
-- **linalg/** - Linear Algebra (source + build)
-- **linalg-hub/** - Linear Algebra Hub (built)
-- **cryptography/** - Cryptography (vanilla JS)
+### Mathematics
+
+| Directory | Course Name | ID | Description |
+|-----------|-------------|-----|-------------|
+| `linalg/` | Introduction to Linear Algebra | `linalg` | Based on Gilbert Strang's textbook |
+| `advanced-linalg/` | Advanced Linear Algebra | `advlinalg` | Based on Hoffman & Kunze |
+| `real-analysis/` | Introduction to Real Analysis | `ra` | Limits, continuity, differentiation, integration |
+| `calc1-course/` | Calculus | `calc1` | Based on Tom M. Apostol's Calculus Vol. 1 |
+| `calc_easy/` | Calculus Made Easy | `calc_easy` | Accessible introduction to calculus |
+| `calc_lib_art/` | Calculus as a Liberal Art | `calc_lib_art` | Calculus through a liberal arts lens |
+| `crypto-react/` | Cryptography Mathematics | `crypto` | Modular arithmetic to elliptic curves |
+| `koblitz-course/` | Number Theory and Cryptography | `koblitz` | Graduate-level, based on Koblitz |
+| `coding-theory-course/` | Algebraic Coding Theory | `coding` | Error-correcting codes (Vermani) |
+| `islr/` | Introduction to Statistical Learning | `islr` | Based on James et al. (2nd Edition) |
+| `west-graphs/` | Introduction to Graph Theory | `west_graphs` | Based on Douglas B. West |
+| `why-math/` | Why Math? | `wm` | Based on R.D. Driver's classic |
+| `numbers-geometry-course/` | Numbers and Geometry | `numbers-geometry` | Connections between numbers and geometry |
+
+### Geometry & History
+
+| Directory | Course Name | ID | Description |
+|-----------|-------------|-----|-------------|
+| `euclid/` | Euclid's Elements | `euclid` | All 13 books with interactive propositions |
+| `gauss/` | Disquisitiones Arithmeticae | `gauss` | Gauss's 1801 number theory treatise |
+| `four-pillars/` | Advanced Geometry | `four_pillars` | Based on Stillwell's Four Pillars |
+| `thales/` | The Heritage of Thales | `thales` | 2,500 years of mathematical history |
+| `men-of-math-course/` | Men of Mathematics | `mom` | E.T. Bell's mathematical biographies |
+
+### Economics & Philosophy
+
+| Directory | Course Name | ID | Description |
+|-----------|-------------|-----|-------------|
+| `human-action/` | Human Action | `human_action` | Ludwig von Mises' economic treatise |
+| `man-econ-state/` | Man, Economy, and State | `man_econ_state` | Murray Rothbard's economics |
+| `road-to-serfdom/` | The Road to Serfdom | `road_to_serfdom` | F.A. Hayek on freedom and planning |
+| `atlas-shrugged/` | Atlas Shrugged | `atlas_shrugged` | Ayn Rand's novel |
+
+### Bitcoin & Special Topics
+
+| Directory | Course Name | ID | Description |
+|-----------|-------------|-----|-------------|
+| `only-the-strong-survive/` | Only The Strong Survive | `only-the-strong-survive` | Critique of altcoins |
+| `orange-is-new-green/` | Orange is the New Green | `orange_btc` | Bitcoin money market funds |
+| `mod-race/` | Modular Arithmetic Racing | `mod-race` | Competitive math game |
+
+### Built/Deployed Courses
+
+| Directory | Source | Status |
+|-----------|--------|--------|
+| `aa/` | Abstract Algebra | Deployed |
+| `ba/` | Basic Algebra | Deployed |
+| `cryptography/` | Cryptography | Vanilla JS (legacy) |
+
+### Templates & Tools
+
+| Directory | Purpose |
+|-----------|---------|
+| `course-template/` | Template for creating new courses |
+| `shared/` | Shared library for all courses |
+| `firebase/` | Firebase functions backend |
 
 ## Tech Stack
 
@@ -16,9 +71,12 @@ A multi-course educational platform with gamification, leaderboard, and decentra
 - TypeScript 5.9
 - Firebase 10.14
 - Vite 5.4
-- D3.js 7.9
 - KaTeX 0.16
-- Vitest (testing)
+- Tailwind CSS 3.4
+- Framer Motion
+- Vitest + React Testing Library
+- Zod (validation)
+- nostr-tools (authentication)
 
 ## Setup
 

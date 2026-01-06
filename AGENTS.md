@@ -6,8 +6,8 @@ Guidelines for AI agents working in this codebase.
 
 React 19 + TypeScript educational platform. Monorepo with courses in separate directories sharing code via `@magic-internet-math/shared`.
 
-**Active courses**: `linalg/`, `advanced-linalg/`, `crypto-react/`  
-**Shared library**: `shared/` | **Firebase**: `firebase/functions/`
+**Source courses**: 26 courses across mathematics, economics, and philosophy  
+**Shared library**: `shared/` | **Firebase**: `firebase/functions/` | **Template**: `course-template/`
 
 ## Regression Testing
 
@@ -69,7 +69,9 @@ import { type CourseId } from '@magic-internet-math/shared';
 | Element | Convention | Example |
 |---------|------------|---------|
 | Components | PascalCase | `SectionQuiz.tsx` |
- | Hooks | camelCase + `use` | `useGamification` |
+| Hooks | camelCase + `use` | `useGamification` |
+| Constants | SCREAMING_SNAKE | `XP_CONFIG` |
+| Types | PascalCase | `QuizQuestion` |
 
 ## Recent Security & Code Quality Improvements
 
@@ -93,8 +95,6 @@ import { type CourseId } from '@magic-internet-math/shared';
 - **Error boundaries** wrap critical components
 - **Shared library** for consistent functionality across courses
 - **Monorepo structure** with proper dependency management
-| Constants | SCREAMING_SNAKE | `XP_CONFIG` |
-| Types | PascalCase | `QuizQuestion` |
 
 ### Import Order
 1. React and external libraries
@@ -270,7 +270,7 @@ VITE_FIREBASE_APP_ID=...
 ```
 
 ## Key Dependencies
-React 19, Vite 5.4, TypeScript 5.9, Tailwind 3.4, Vitest, KaTeX, D3.js, Framer Motion, Zod, nostr-tools, Firebase
+React 19, Vite 5.4, TypeScript 5.9, Tailwind 3.4, Vitest, KaTeX, Framer Motion, Zod, nostr-tools, Firebase
 
 ## Architecture Notes
 

@@ -169,12 +169,20 @@ const safeNumber = sanitizeNumber(input, 0, 100, 50); // value, min, max, defaul
 ### Types
 
 #### CourseId
-Single source of truth for course identifiers:
+Single source of truth for course identifiers (defined in `types/courses.ts`):
 
 ```typescript
 import { type CourseId, VALID_COURSE_IDS, isValidCourseId } from '@magic-internet-math/shared';
 
-const courseId: CourseId = 'linalg'; // 'ba' | 'aa' | 'crypto' | 'linalg' | 'advlinalg'
+// All valid course IDs:
+// Mathematics: 'ba', 'aa', 'linalg', 'advlinalg', 'ra', 'calc1', 'calc_lib_art', 'calc_easy',
+//              'crypto', 'koblitz', 'coding', 'islr', 'west_graphs', 'wm', 'numbers-geometry'
+// Geometry/History: 'euclid', 'gauss', 'four_pillars', 'thales', 'mom'
+// Economics: 'human_action', 'man_econ_state', 'road_to_serfdom', 'atlas_shrugged'
+// Bitcoin: 'only-the-strong-survive', 'orange_btc', 'mod-race'
+// Other: 'template'
+
+const courseId: CourseId = 'linalg';
 
 if (isValidCourseId(input)) {
   // input is typed as CourseId
