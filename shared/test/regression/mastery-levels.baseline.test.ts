@@ -15,7 +15,7 @@ import type { SectionProgress, MasteryLevel } from '../../gamification/types';
  * - THRESHOLDS:
  *   - Learning: Default when no quizzes or low scores
  *   - Familiar: best >= 80 OR (avg >= 70 && attempts >= 2)
- *   - Mastered: perfect >= 1 OR (avg >= 90 && attempts >= 3)
+ *   - Mastered: perfect >= 2 OR (avg >= 90 && attempts >= 3)
  */
 
 describe('Mastery Level Baselines', () => {
@@ -130,7 +130,7 @@ describe('Mastery Level Baselines', () => {
   });
 
   describe('Level: Mastered', () => {
-    it('returns mastered for 1+ perfect scores', () => {
+    it('returns mastered for 2+ perfect scores', () => {
       const section: SectionProgress = {
         sectionId: 'linalg:1',
         visitedAt: '2024-01-01',
@@ -138,6 +138,7 @@ describe('Mastery Level Baselines', () => {
         timeSpentSeconds: 60,
         quizAttempts: [
           { timestamp: '2024-01-01', difficulty: 'hard', score: 100, correctAnswers: 5, totalQuestions: 5, xpEarned: 40 },
+          { timestamp: '2024-01-02', difficulty: 'hard', score: 100, correctAnswers: 5, totalQuestions: 5, xpEarned: 40 },
         ],
         masteryLevel: 'mastered',
         visualizationsInteracted: [],
@@ -217,7 +218,7 @@ describe('Mastery Level Baselines', () => {
   });
 
   describe('Edge Cases', () => {
-    it('handles single perfect score as mastered (not familiar)', () => {
+    it('handles single perfect score as familiar (not mastered)', () => {
       const section: SectionProgress = {
         sectionId: 'linalg:1',
         visitedAt: '2024-01-01',
@@ -226,13 +227,13 @@ describe('Mastery Level Baselines', () => {
         quizAttempts: [
           { timestamp: '2024-01-01', difficulty: 'medium', score: 100, correctAnswers: 5, totalQuestions: 5, xpEarned: 25 },
         ],
-        masteryLevel: 'mastered',
+        masteryLevel: 'familiar',
         visualizationsInteracted: [],
       };
       
-      // Single perfect score returns mastered in actual implementation
+      // Single perfect score returns familiar (best >= 80), need 2+ for mastered
       const result = calculateMastery(section);
-      expect(result).toBe('mastered');
+      expect(result).toBe('familiar');
     });
 
     it('handles exactly 70 avg with 2 attempts', () => {

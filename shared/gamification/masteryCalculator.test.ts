@@ -114,28 +114,28 @@ describe('getMasteryInfo', () => {
     const info = getMasteryInfo('mastered');
     expect(info.label).toBe('Mastered');
     expect(info.color).toContain('emerald');
-    expect(info.symbol).toBe('●');
+    expect(info.symbol).toBe('✓');
   });
 
   it('should return correct info for familiar', () => {
     const info = getMasteryInfo('familiar');
     expect(info.label).toBe('Familiar');
     expect(info.color).toContain('yellow');
-    expect(info.symbol).toBe('◑');
+    expect(info.symbol).toBe('◐');
   });
 
   it('should return correct info for learning', () => {
     const info = getMasteryInfo('learning');
     expect(info.label).toBe('Learning');
     expect(info.color).toContain('blue');
-    expect(info.symbol).toBe('◐');
+    expect(info.symbol).toBe('○');
   });
 
   it('should return correct info for none', () => {
     const info = getMasteryInfo('none');
     expect(info.label).toBe('Not Started');
     expect(info.color).toContain('dark');
-    expect(info.symbol).toBe('○');
+    expect(info.symbol).toBe('');
   });
 
   it('should handle unknown level as none', () => {
