@@ -23,6 +23,7 @@ const metadata = {
   about: 'Daily Top 10 Leaderboard for Magic Internet Math courses. Learn at https://mathacademy-cyan.vercel.app',
   picture: 'https://mathacademy-cyan.vercel.app/images/og-preview.png',
   website: 'https://mathacademy-cyan.vercel.app',
+  lud16: 'fundamentals@zeuspay.com',
 };
 
 const event = finalizeEvent({

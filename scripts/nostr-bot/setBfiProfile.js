@@ -30,7 +30,7 @@ const PROFILE_METADATA = {
   banner: '',
   website: 'https://zeuspay.com/btc-for-institutions',
   nip05: '', // Optional: verification
-  lud16: '', // Optional: Lightning address for tips
+  lud16: 'fundamentals@zeuspay.com',
 };
 
 async function main() {
