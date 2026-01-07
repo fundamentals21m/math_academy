@@ -1,0 +1,44 @@
+name: BFI Content Post
+
+on:
+  schedule:
+    # Run every 10 minutes
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+    # Allow manual trigger from GitHub Actions UI
+    inputs:
+      dry_run:
+        description: 'Dry run mode (preview without posting)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  post-bfi-content:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: scripts/nostr-bot
+        run: npm install
+
+      - name: Post BFI content
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        working-directory: scripts/nostr-bot
+        env:
+          BFI_BOT_NSEC: ${{ secrets.BFI_BOT_NSEC }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node bfiBot.js
+
+      - name: Dry run (preview only)
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        working-directory: scripts/nostr-bot
+        run: node bfiBot.js --dry-run

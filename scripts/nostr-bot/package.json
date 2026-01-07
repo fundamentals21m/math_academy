@@ -9,7 +9,11 @@
     "test": "node index.js --dry-run",
     "educational": "node educationalBot.js",
     "educational:dry": "node educationalBot.js --dry-run",
-    "educational:stats": "node educationalBot.js --stats"
+    "educational:stats": "node educationalBot.js --stats",
+    "bfi": "node bfiBot.js",
+    "bfi:dry": "node bfiBot.js --dry-run",
+    "bfi:stats": "node bfiBot.js --stats",
+    "bfi:profile": "node setBfiProfile.js"
   },
   "dependencies": {
     "firebase-admin": "^12.0.0",
