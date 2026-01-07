@@ -6,6 +6,12 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions UI
+    inputs:
+      show_history:
+        description: 'Show report history instead of generating new report'
+        required: false
+        default: 'false'
+        type: boolean
 
 jobs:
   daily-report:
@@ -25,12 +31,20 @@ jobs:
         run: npm install
 
       - name: Generate daily report
+        if: ${{ github.event.inputs.show_history != 'true' }}
         working-directory: scripts/nostr-bot
         env:
           NOSTR_BOT_NSEC: ${{ secrets.NOSTR_BOT_NSEC }}
           BFI_BOT_NSEC: ${{ secrets.BFI_BOT_NSEC }}
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         run: node dailyReport.js
+
+      - name: Show report history
+        if: ${{ github.event.inputs.show_history == 'true' }}
+        working-directory: scripts/nostr-bot
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node dailyReport.js --history
 
       - name: Write to job summary
         if: always()
