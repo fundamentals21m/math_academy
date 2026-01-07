@@ -486,7 +486,23 @@ export async function loadAllTheorems() {
 }
 
 /**
- * Format a theorem for posting
+ * Clean up LaTeX for Nostr posting (preserve math, clean whitespace)
+ */
+function cleanLatexForNostr(latex) {
+  if (!latex) return '';
+
+  let result = latex;
+
+  // Normalize whitespace (but preserve intentional line breaks)
+  result = result.replace(/[ \t]+/g, ' ');
+  result = result.replace(/\n\s*\n/g, '\n\n');
+  result = result.trim();
+
+  return result;
+}
+
+/**
+ * Format a theorem for posting (preserves LaTeX for clients that support it)
  */
 export function formatTheoremPost(theorem) {
   const metadata = COURSE_METADATA[theorem.courseId] || {
@@ -506,20 +522,21 @@ export function formatTheoremPost(theorem) {
   const emoji = typeEmoji[theorem.type] || '📐';
   const title = `${emoji} ${theorem.title}`;
 
-  let statement = convertLatexToText(theorem.statement);
+  // Preserve LaTeX notation for clients that support rendering
+  let statement = cleanLatexForNostr(theorem.statement);
 
-  // Truncate statement if too long (max 280 chars)
-  if (statement.length > 280) {
-    statement = statement.slice(0, 277) + '...';
+  // Truncate statement if too long (max 400 chars to allow for LaTeX markup)
+  if (statement.length > 400) {
+    statement = statement.slice(0, 397) + '...';
   }
 
   const lines = [title, '', statement];
 
-  // Add proof if available (max 200 chars)
+  // Add proof if available (max 300 chars)
   if (theorem.proof) {
-    let proofText = convertLatexToText(theorem.proof);
-    if (proofText.length > 200) {
-      proofText = proofText.slice(0, 197) + '...';
+    let proofText = cleanLatexForNostr(theorem.proof);
+    if (proofText.length > 300) {
+      proofText = proofText.slice(0, 297) + '...';
     }
     lines.push('', `Proof: ${proofText}`);
   }
