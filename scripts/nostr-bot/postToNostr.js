@@ -43,11 +43,19 @@ export async function postToNostr(content, nsec) {
   const publishedTo = [];
   const errors = [];
 
-  // Publish to each relay
+  // Publish to each relay with timeout
+  const TIMEOUT = 10000; // 10 second timeout per relay
+
   for (const relayUrl of RELAYS) {
     try {
-      const relay = await Relay.connect(relayUrl);
-      await relay.publish(event);
+      const relay = await Promise.race([
+        Relay.connect(relayUrl),
+        new Promise((_, reject) => setTimeout(() => reject(new Error('Connection timeout')), TIMEOUT))
+      ]);
+      await Promise.race([
+        relay.publish(event),
+        new Promise((_, reject) => setTimeout(() => reject(new Error('Publish timeout')), TIMEOUT))
+      ]);
       publishedTo.push(relayUrl);
       console.log(`  Published to ${relayUrl}`);
       relay.close();
