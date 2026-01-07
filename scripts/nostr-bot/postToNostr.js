@@ -10,9 +10,9 @@ import { Relay } from 'nostr-tools/relay';
 const RELAYS = [
   'wss://relay.damus.io',
   'wss://nos.lol',
-  'wss://relay.nostr.band',
   'wss://relay.primal.net',
-  'wss://nostr.wine',
+  'wss://relay.snort.social',
+  'wss://nostr.mom',
 ];
 
 /**
