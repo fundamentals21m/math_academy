@@ -225,7 +225,9 @@ async function main() {
   console.log('\n✓ Done!');
 }
 
-main().catch(error => {
+main().then(() => {
+  process.exit(0);
+}).catch(error => {
   console.error('Fatal error:', error);
   process.exit(1);
 });
