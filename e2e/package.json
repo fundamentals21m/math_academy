@@ -1,0 +1,36 @@
+{
+  "name": "@math-academy/e2e",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/smoke/",
+    "test:visual": "playwright test tests/visual/",
+    "test:forms": "playwright test tests/forms/",
+    "test:gamification": "playwright test tests/gamification/",
+    "test:auth": "playwright test tests/auth/",
+    "test:network": "playwright test tests/network/",
+    "test:crawl": "playwright test tests/crawl/",
+    "test:performance": "playwright test tests/performance/",
+    "test:accessibility": "playwright test tests/accessibility/",
+    "test:interactive": "playwright test tests/interactive/",
+    "test:screenshots": "playwright test tests/screenshots/",
+    "test:pdf": "playwright test tests/pdf/",
+    "test:pr": "playwright test tests/smoke/ tests/visual/ tests/forms/ tests/gamification/",
+    "test:nightly": "playwright test --project=chromium --project=firefox --project=webkit",
+    "test:course": "playwright test --grep",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:status": "bash ./check-test-status.sh",
+    "update-snapshots": "playwright test --update-snapshots",
+    "install-browsers": "playwright install chromium firefox webkit"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.8.0",
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,7 @@
+# Test artifacts
+test-results/
+playwright-report/
+screenshots/
+
+# PDFs generated during tests
+pdfs/
