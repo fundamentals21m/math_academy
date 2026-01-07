@@ -13,7 +13,10 @@
     "bfi": "node bfiBot.js",
     "bfi:dry": "node bfiBot.js --dry-run",
     "bfi:stats": "node bfiBot.js --stats",
-    "bfi:profile": "node setBfiProfile.js"
+    "bfi:profile": "node setBfiProfile.js",
+    "daily-report": "node dailyReport.js",
+    "daily-report:dry": "node dailyReport.js --dry-run",
+    "daily-report:history": "node dailyReport.js --history"
   },
   "dependencies": {
     "firebase-admin": "^12.0.0",

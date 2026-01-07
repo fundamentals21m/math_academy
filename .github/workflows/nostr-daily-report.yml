@@ -1,0 +1,42 @@
+name: Nostr Daily Report
+
+on:
+  schedule:
+    # Run daily at 8:00 AM UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    # Allow manual trigger from GitHub Actions UI
+
+jobs:
+  daily-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: scripts/nostr-bot
+        run: npm install
+
+      - name: Generate daily report
+        working-directory: scripts/nostr-bot
+        env:
+          NOSTR_BOT_NSEC: ${{ secrets.NOSTR_BOT_NSEC }}
+          BFI_BOT_NSEC: ${{ secrets.BFI_BOT_NSEC }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node dailyReport.js
+
+      - name: Write to job summary
+        if: always()
+        run: |
+          echo "## Nostr Daily Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Generated at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "View the workflow logs for the full report." >> $GITHUB_STEP_SUMMARY
