@@ -4,7 +4,7 @@ import { section03Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, Algorithm } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
-import { BiasVarianceTradeoff } from '@/components/visualizers/BiasVarianceTradeoff';
+import { BiasVarianceTradeoff } from '@/components/visualizations/BiasVarianceTradeoff';
 
 export default function Section03() {
   return (

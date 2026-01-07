@@ -1,5 +1,6 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
+import { logAdminAction } from './adminAudit';
 
 interface AuthContext {
   uid: string;
@@ -28,6 +29,13 @@ async function requireAdmin(auth: AuthContext | undefined): Promise<void> {
       'Admin privileges required'
     );
   }
+}
+
+/**
+ * Get client IP address from request
+ */
+function getClientIP(context: functions.https.CallableContext): string | undefined {
+  return context.rawRequest.ip || context.rawRequest.headers['x-forwarded-for'] || undefined;
 }
 
 /**
@@ -74,13 +82,11 @@ export const banUser = functions.https.onCall(
       banReason: reason || null,
     });
 
-    // Log the action
-    await admin.firestore().collection('adminLogs').add({
-      action: 'ban',
+    // Log the action with full audit trail
+    await logAdminAction('ban', context.auth!.uid, {
       targetNpub,
-      adminNpub: context.auth!.uid,
-      reason: reason || null,
-      timestamp: admin.firestore.FieldValue.serverTimestamp(),
+      reason,
+      ipAddress: getClientIP(context),
     });
 
     return { success: true };
@@ -122,12 +128,10 @@ export const unbanUser = functions.https.onCall(
       unbannedBy: context.auth!.uid,
     });
 
-    // Log the action
-    await admin.firestore().collection('adminLogs').add({
-      action: 'unban',
+    // Log the action with full audit trail
+    await logAdminAction('unban', context.auth!.uid, {
       targetNpub,
-      adminNpub: context.auth!.uid,
-      timestamp: admin.firestore.FieldValue.serverTimestamp(),
+      ipAddress: getClientIP(context),
     });
 
     return { success: true };
@@ -194,13 +198,11 @@ export const resetUserScores = functions.https.onCall(
 
     await batch.commit();
 
-    // Log the action
-    await admin.firestore().collection('adminLogs').add({
-      action: 'reset_scores',
+    // Log the action with full audit trail
+    await logAdminAction('reset_scores', context.auth!.uid, {
       targetNpub,
-      adminNpub: context.auth!.uid,
-      reason: reason || null,
-      timestamp: admin.firestore.FieldValue.serverTimestamp(),
+      reason,
+      ipAddress: getClientIP(context),
     });
 
     return { success: true };
@@ -208,7 +210,7 @@ export const resetUserScores = functions.https.onCall(
 );
 
 /**
- * Get admin logs
+ * Get admin audit logs (using new audit system)
  */
 export const getAdminLogs = functions.https.onCall(
   async (
@@ -219,8 +221,9 @@ export const getAdminLogs = functions.https.onCall(
 
     const { limit = 50 } = data || {};
 
+    // Use new audit log collection
     const logsSnapshot = await admin.firestore()
-      .collection('adminLogs')
+      .collection('adminAuditLog')
       .orderBy('timestamp', 'desc')
       .limit(Math.min(limit, 100))
       .get();

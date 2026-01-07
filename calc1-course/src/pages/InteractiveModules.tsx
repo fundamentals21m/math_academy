@@ -16,15 +16,50 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'limit-explorer',
+    title: 'Limit Explorer',
+    description: 'Explore the ε-δ definition of limits. See how epsilon and delta neighborhoods interact.',
+    sectionId: 19,
+    sectionTitle: 'Limits and Continuity',
+    category: 'Limits',
+    icon: 'ε',
+  },
+  {
+    id: 'derivative-visualizer',
+    title: 'Derivative Visualizer',
+    description: 'Watch the secant line approach the tangent line as h → 0. Understand the derivative as a limit.',
+    sectionId: 27,
+    sectionTitle: 'The Derivative',
+    category: 'Derivatives',
+    icon: "f'",
+  },
+  {
+    id: 'riemann-sum',
+    title: 'Riemann Sum Visualizer',
+    description: 'Approximate integrals with left, right, midpoint, upper, and lower sums. See convergence as n increases.',
+    sectionId: 10,
+    sectionTitle: 'Upper and Lower Integrals',
+    category: 'Integration',
+    icon: '∫',
+  },
+  {
+    id: 'taylor-series',
+    title: 'Taylor Series Visualizer',
+    description: 'See how Taylor polynomials approximate functions. Adjust the degree and watch the fit improve.',
+    sectionId: 46,
+    sectionTitle: 'Taylor Polynomials',
+    category: 'Series',
+    icon: 'Σ',
+  },
+  {
+    id: 'direction-field',
+    title: 'Direction Field Visualizer',
+    description: 'Visualize slope fields for differential equations. Trace solution curves through initial conditions.',
+    sectionId: 58,
+    sectionTitle: 'Direction Fields',
+    category: 'Differential Equations',
+    icon: '⟶',
   },
 ];
 // =============================================================================

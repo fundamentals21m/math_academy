@@ -43,21 +43,26 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   const [quizStarted, setQuizStarted] = useState(!isStructuredFormat); // Auto-start for legacy format
   const [numericError, setNumericError] = useState('');
 
+  // Generate stable random seed using lazy initializer (only runs once)
+  const [randomSeed] = useState(() => Array(100).fill(0).map(() => Math.random()));
+
   // Get questions for selected difficulty and randomize
   const shuffledQuestions = useMemo(() => {
     let questionPool: QuizQuestion[];
-    
+
     if (isStructuredFormat) {
       const structuredQuestions = questions as SectionQuizData;
       questionPool = structuredQuestions[selectedDifficulty] || [];
     } else {
       questionPool = questions as QuizQuestion[];
     }
-    
+
     return [...questionPool]
-      .sort(() => globalThis.Math.random() - 0.5)
+      .map((q, i) => ({ q, sort: randomSeed[i] ?? 0 }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ q }) => q)
       .slice(0, QUESTIONS_PER_QUIZ);
-  }, [questions, selectedDifficulty, isStructuredFormat, quizStarted]);
+  }, [questions, selectedDifficulty, isStructuredFormat, quizStarted, randomSeed]);
 
   const currentQuestion = shuffledQuestions[currentIndex];
   const totalQuestions = shuffledQuestions.length;

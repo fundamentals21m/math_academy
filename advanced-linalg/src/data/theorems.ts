@@ -462,10 +462,10 @@ This equals column $j$ of the product $[S]_\\gamma^\\delta [T]_\\beta^\\gamma$.
     type: 'theorem',
     hasProof: true,
     proof: `
-Let $I: V \\to V$ be the identity map. Then $[I]_{\\beta\'}^\\beta = P$ is the change of basis matrix.
+Let $I: V \\to V$ be the identity map. Then $[I]_{\\beta'}^\\beta = P$ is the change of basis matrix.
 
 We have $T = I \\circ T \\circ I$, so:
-$$[T]_{\\beta\'} = [I]_\\beta^{\\beta\'} [T]_\\beta [I]_{\\beta\'}^\\beta = P^{-1} [T]_\\beta P$$
+$$[T]_{\\beta'} = [I]_\\beta^{\\beta'} [T]_\\beta [I]_{\\beta'}^\\beta = P^{-1} [T]_\\beta P$$
     `,
   },
   

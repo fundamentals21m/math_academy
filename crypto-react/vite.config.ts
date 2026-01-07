@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { visualizer } from 'rollup-plugin-visualizer'
 import path from 'path'
 
 // =============================================================================
@@ -9,7 +10,16 @@ const BASE_PATH = '/'
 // =============================================================================
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    // Bundle analyzer for performance monitoring
+    visualizer({
+      filename: 'dist/bundle-analysis.html',
+      open: false,
+      gzipSize: true,
+      brotliSize: true,
+    }),
+  ],
   base: BASE_PATH,
   resolve: {
     alias: {
@@ -40,13 +50,11 @@ export default defineConfig({
           'vendor-math': ['katex'],
           // Animation library
           'vendor-animation': ['framer-motion'],
-          // Firebase - only loaded when auth/leaderboard features are used
-          'vendor-firebase': [
-            'firebase/app',
-            'firebase/auth',
-            'firebase/firestore',
-            'firebase/functions',
-          ],
+          // Firebase - split into granular chunks for better tree-shaking
+          'vendor-firebase-core': ['firebase/app'],
+          'vendor-firebase-auth': ['firebase/auth'],
+          'vendor-firebase-firestore': ['firebase/firestore'],
+          'vendor-firebase-functions': ['firebase/functions'],
         },
       },
     },

@@ -2,7 +2,7 @@ import { LessonLayout } from '@/components/layout/LessonLayout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section05Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
-import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath } from '@/components/common/MathBlock';
 
 export default function Section05() {
   return (

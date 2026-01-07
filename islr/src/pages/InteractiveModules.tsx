@@ -16,15 +16,59 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'bias-variance',
+    title: 'Bias-Variance Tradeoff',
+    description: 'Visualize how model complexity affects bias, variance, and total error. Find the sweet spot!',
+    sectionId: 3,
+    sectionTitle: 'Assessing Model Accuracy',
+    category: 'Fundamentals',
+    icon: '⚖️',
+  },
+  {
+    id: 'linear-regression',
+    title: 'Linear Regression Fitter',
+    description: 'Interactively fit a regression line, see residuals, R², and least squares estimates.',
+    sectionId: 6,
+    sectionTitle: 'Simple Linear Regression',
+    category: 'Regression',
+    icon: '📈',
+  },
+  {
+    id: 'ridge-lasso',
+    title: 'Ridge & Lasso Paths',
+    description: 'See how regularization shrinks coefficients towards zero as penalty increases.',
+    sectionId: 25,
+    sectionTitle: 'Shrinkage Methods',
+    category: 'Regularization',
+    icon: '📉',
+  },
+  {
+    id: 'decision-tree',
+    title: 'Decision Tree Builder',
+    description: 'Build and visualize decision trees step by step with interactive splitting.',
+    sectionId: 36,
+    sectionTitle: 'The Basics of Decision Trees',
+    category: 'Trees',
+    icon: '🌳',
+  },
+  {
+    id: 'kmeans',
+    title: 'K-Means Clustering',
+    description: 'Watch K-Means iteratively assign points to clusters and update centroids until convergence.',
+    sectionId: 56,
+    sectionTitle: 'Clustering Methods',
+    category: 'Unsupervised',
+    icon: '🎯',
+  },
+  {
+    id: 'pca-explorer',
+    title: 'PCA Explorer',
+    description: 'Explore principal components, variance explained, and dimensionality reduction.',
+    sectionId: 55,
+    sectionTitle: 'Principal Components Analysis',
+    category: 'Unsupervised',
+    icon: '🔍',
   },
 ];
 // =============================================================================

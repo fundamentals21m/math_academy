@@ -45,10 +45,20 @@ export const LEADERBOARD_CACHE_EXPIRY_MS = 60 * 60 * 1000;
 // DEFAULT NOSTR RELAYS
 // =============================================================================
 
-/** Default Nostr relays for fetching profiles */
+/** Default Nostr relays for fetching profiles - ordered by reliability */
 export const DEFAULT_RELAYS = [
   'wss://relay.damus.io',
   'wss://relay.nostr.band',
   'wss://nos.lol',
   'wss://relay.primal.net',
+  'wss://relay.nostr.bg',
+  'wss://nostr-pub.wellorder.net',
+  'wss://nostr.mom',
+] as const;
+
+/** Fallback relays to use if all defaults fail */
+export const FALLBACK_RELAYS = [
+  'wss://relay.snort.social',
+  'wss://relay.current.fyi',
+  'wss://nostr.zebedee.cloud',
 ] as const;

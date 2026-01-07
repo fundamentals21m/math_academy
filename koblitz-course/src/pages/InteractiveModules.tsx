@@ -16,15 +16,41 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'euclidean-algorithm',
+    title: 'Euclidean Algorithm',
+    description: 'Step through the Euclidean algorithm to find GCDs. See the extended version for Bézout coefficients.',
+    sectionId: 1,
+    sectionTitle: 'Divisibility and the Euclidean Algorithm',
+    category: 'Number Theory',
+    icon: '÷',
+  },
+  {
+    id: 'modular-arithmetic',
+    title: 'Modular Arithmetic Clock',
+    description: 'Visualize arithmetic in ℤ/nℤ on a clock diagram. Explore units, inverses, and Euler\'s totient.',
+    sectionId: 2,
+    sectionTitle: 'Congruences',
+    category: 'Number Theory',
+    icon: '🕐',
+  },
+  {
+    id: 'discrete-log',
+    title: 'Discrete Logarithm Problem',
+    description: 'Explore the discrete log problem — the computational hard problem behind Diffie-Hellman and ElGamal.',
+    sectionId: 10,
+    sectionTitle: 'Discrete Logarithm',
+    category: 'Cryptography',
+    icon: '🔐',
+  },
+  {
+    id: 'elliptic-curves',
+    title: 'Elliptic Curve Visualizer',
+    description: 'See the group law on elliptic curves. Drag points to visualize point addition P + Q.',
+    sectionId: 18,
+    sectionTitle: 'Basic Facts',
+    category: 'Elliptic Curves',
+    icon: '📈',
   },
 ];
 // =============================================================================

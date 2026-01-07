@@ -121,7 +121,8 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
     if (saved) {
       dispatch({ type: 'LOAD_STATE', payload: saved });
     }
-    setIsLoading(false);
+    // Use a microtask to avoid synchronous setState in effect
+    queueMicrotask(() => setIsLoading(false));
   }, []);
 
   // Save state to localStorage on changes and trigger sync

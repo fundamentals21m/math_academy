@@ -38,7 +38,7 @@ function extractScoresFromStorage(): ScoreUpdate[] | null {
       const course = coursePrefix;
 
       // Simple validation instead of schema validation to avoid circular dependencies
-      const section = sectionData as any; // Type assertion for now
+      const section = sectionData as Record<string, unknown>; // Type assertion for now
       if (!section) {
         logger.warn(`Invalid section data for ${sectionId}, skipping`);
         continue;

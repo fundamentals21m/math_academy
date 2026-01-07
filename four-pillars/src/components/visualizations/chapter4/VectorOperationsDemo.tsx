@@ -72,6 +72,7 @@ export function VectorOperationsDemo({ className = '' }: { className?: string })
     ctx.lineTo(originX, height);
     ctx.stroke();
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const drawVector = (v: Vector, color: string, label: string, fromOrigin: boolean = true, startPoint?: Vector) => {
       const start = startPoint || { x: 0, y: 0 };
       const [sx, sy] = toCanvas(start.x, start.y);
@@ -193,7 +194,7 @@ export function VectorOperationsDemo({ className = '' }: { className?: string })
 
     const cx = e.clientX - rect.left;
     const cy = e.clientY - rect.top;
-    let v = toMath(cx, cy);
+    const v = toMath(cx, cy);
 
     // Snap
     v.x = Math.round(v.x * 2) / 2;

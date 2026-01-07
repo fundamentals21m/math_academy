@@ -44,13 +44,14 @@ export function RiemannVisualizer({
           x_eval = (left + right) / 2;
           height = func(x_eval);
           break;
-        case 'trapezoidal':
+        case 'trapezoidal': {
           // For trapezoidal, we'll show both endpoints
           const h1 = func(left);
           const h2 = func(right);
           height = (h1 + h2) / 2; // Average height for visualization
           x_eval = (left + right) / 2;
           break;
+        }
       }
 
       const area = height * width;

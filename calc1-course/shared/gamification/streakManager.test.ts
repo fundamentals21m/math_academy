@@ -44,15 +44,6 @@ function createMockState(overrides?: Partial<GamificationState>): GamificationSt
   };
 }
 
-/**
- * Helper to get date string for N days ago
- */
-function daysAgo(days: number): string {
-  const date = new Date();
-  date.setDate(date.getDate() - days);
-  return date.toISOString().split('T')[0];
-}
-
 describe('updateStreak', () => {
   beforeEach(() => {
     vi.useFakeTimers();

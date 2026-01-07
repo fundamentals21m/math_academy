@@ -30,10 +30,17 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   const [numericError, setNumericError] = useState('');
   const [earnedXP, setEarnedXP] = useState(0);
 
-  // Randomize questions on mount, take 5
+  // Generate stable random seed using lazy initializer (only runs once)
+  const [randomSeed] = useState(() => questions.map(() => Math.random()));
+
+  // Randomize questions based on the stable seed, take 5
   const shuffledQuestions = useMemo(() => {
-    return [...questions].sort(() => globalThis.Math.random() - 0.5).slice(0, 5);
-  }, [questions]);
+    return [...questions]
+      .map((q, i) => ({ q, sort: randomSeed[i] ?? 0 }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ q }) => q)
+      .slice(0, 5);
+  }, [questions, randomSeed]);
 
   const currentQuestion = shuffledQuestions[currentIndex];
   const totalQuestions = shuffledQuestions.length;

@@ -16,15 +16,32 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'vector-operations',
+    title: 'Vector Operations',
+    description: 'Explore vector addition, scalar multiplication, and linear combinations in 2D.',
+    sectionId: 1,
+    sectionTitle: 'Vectors and Linear Combinations',
+    category: 'Vectors',
+    icon: '➡️',
+  },
+  {
+    id: 'matrix-transformation',
+    title: 'Matrix Transformation',
+    description: 'See how 2×2 matrices transform vectors and the plane. Includes rotation, scaling, shear, and more.',
+    sectionId: 3,
+    sectionTitle: 'Matrices',
+    category: 'Matrices',
+    icon: '🔄',
+  },
+  {
+    id: 'eigenvalue-visualizer',
+    title: 'Eigenvalue Visualizer',
+    description: 'Find eigenvectors by rotating an input vector until it aligns with its transformation.',
+    sectionId: 23,
+    sectionTitle: 'Introduction to Eigenvalues',
+    category: 'Eigenvalues',
+    icon: 'λ',
   },
 ];
 // =============================================================================

@@ -191,7 +191,7 @@ export function IsometryTransformDemo({ className = '' }: { className?: string }
       ctx.stroke();
 
       // Draw vertices
-      canvasPoints.forEach(([cx, cy], i) => {
+      canvasPoints.forEach(([cx, cy]) => {
         ctx.fillStyle = color;
         ctx.beginPath();
         ctx.arc(cx, cy, 5, 0, Math.PI * 2);

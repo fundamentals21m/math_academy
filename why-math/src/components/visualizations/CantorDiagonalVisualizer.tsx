@@ -3,7 +3,7 @@ import { useState } from 'react';
 export function CantorDiagonalVisualizer() {
   const [gridSize, setGridSize] = useState(6);
   const [showDiagonal, setShowDiagonal] = useState(true);
-  const [step, setStep] = useState(0);
+  const [step] = useState(0);
 
   // Generate "random" decimals for demonstration (deterministic for consistency)
   const generateDecimal = (index: number): string => {

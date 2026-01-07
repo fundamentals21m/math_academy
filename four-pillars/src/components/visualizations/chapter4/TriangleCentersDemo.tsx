@@ -294,7 +294,7 @@ export function TriangleCentersDemo({ className = '' }: { className?: string }) 
 
     const mx = e.clientX - rect.left;
     const my = e.clientY - rect.top;
-    let p = toMath(mx, my);
+    const p = toMath(mx, my);
 
     // Snap and clamp
     p.x = Math.round(p.x * 2) / 2;

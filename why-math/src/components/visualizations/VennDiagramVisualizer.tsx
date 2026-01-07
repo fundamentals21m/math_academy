@@ -10,7 +10,6 @@ export function VennDiagramVisualizer() {
   const intersection = setA.filter((x) => setB.includes(x)).sort((a, b) => a - b);
   const differenceAB = setA.filter((x) => !setB.includes(x)).sort((a, b) => a - b);
   const differenceBA = setB.filter((x) => !setA.includes(x)).sort((a, b) => a - b);
-  const symmetricDiff = [...differenceAB, ...differenceBA].sort((a, b) => a - b);
 
   // SVG dimensions
   const width = 350;

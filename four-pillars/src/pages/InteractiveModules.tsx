@@ -16,15 +16,41 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'compass-construction',
+    title: 'Compass & Straightedge Constructions',
+    description: 'Step through classical constructions: equilateral triangles, perpendicular bisectors, angle bisectors, and square roots.',
+    sectionId: 1,
+    sectionTitle: "Euclid's Construction of the Equilateral Triangle",
+    category: 'Constructions',
+    icon: '📐',
+  },
+  {
+    id: 'isometry-explorer',
+    title: 'Isometry Explorer',
+    description: 'Explore distance-preserving transformations: reflections, rotations, translations, and glide reflections.',
+    sectionId: 20,
+    sectionTitle: 'Isometries',
+    category: 'Transformations',
+    icon: '🔄',
+  },
+  {
+    id: 'cross-ratio',
+    title: 'Cross-Ratio Visualizer',
+    description: 'See why the cross-ratio is invariant under projection. Move points and watch the ratio stay constant!',
+    sectionId: 37,
+    sectionTitle: 'The Cross-Ratio',
+    category: 'Projective',
+    icon: '×',
+  },
+  {
+    id: 'hyperbolic-plane',
+    title: 'Hyperbolic Plane (Poincaré Disk)',
+    description: 'Explore non-Euclidean geometry. See geodesics as circular arcs and how distance stretches near the boundary.',
+    sectionId: 60,
+    sectionTitle: 'Preserving Non-Euclidean Lines',
+    category: 'Non-Euclidean',
+    icon: '◯',
   },
 ];
 // =============================================================================

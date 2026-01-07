@@ -28,9 +28,9 @@ export function SphericalGeometryDemo({ className = '' }: { className?: string }
     const radY = (rotationY * Math.PI) / 180;
 
     // Rotate around Y axis
-    let x = p.x * Math.cos(radY) + p.z * Math.sin(radY);
-    let z = -p.x * Math.sin(radY) + p.z * Math.cos(radY);
-    let y = p.y;
+    const x = p.x * Math.cos(radY) + p.z * Math.sin(radY);
+    const z = -p.x * Math.sin(radY) + p.z * Math.cos(radY);
+    const y = p.y;
 
     // Rotate around X axis
     const y2 = y * Math.cos(radX) - z * Math.sin(radX);

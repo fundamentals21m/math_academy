@@ -16,15 +16,41 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'sequence-convergence',
+    title: 'Sequence Convergence Explorer',
+    description: 'Visualize the ε-N definition of sequence convergence. See how sequences approach their limits and find the N that works for any ε.',
+    sectionId: 5,
+    sectionTitle: 'Sequences and Their Limits',
+    category: 'Sequences',
+    icon: '📈',
+  },
+  {
+    id: 'series-convergence',
+    title: 'Series Convergence Demo',
+    description: 'Watch partial sums of infinite series converge (or diverge). Compare famous series like the Basel problem, geometric series, and harmonic series.',
+    sectionId: 6,
+    sectionTitle: 'Infinite Series',
+    category: 'Series',
+    icon: 'Σ',
+  },
+  {
+    id: 'epsilon-delta',
+    title: 'ε-δ Definition of Limits',
+    description: 'Interactive exploration of the rigorous epsilon-delta definition of limits. Adjust ε and δ to see how they constrain the function.',
+    sectionId: 9,
+    sectionTitle: 'Limits and Continuity',
+    category: 'Limits',
+    icon: 'δ',
+  },
+  {
+    id: 'uniform-convergence',
+    title: 'Uniform vs Pointwise Convergence',
+    description: 'Compare uniform and pointwise convergence of function sequences. See why the supremum norm matters for uniform convergence.',
+    sectionId: 15,
+    sectionTitle: 'Sequences of Functions',
+    category: 'Function Sequences',
+    icon: '∥∥',
   },
 ];
 // =============================================================================

@@ -58,7 +58,7 @@ vi.mock('../validation/schemas', () => ({
 }));
 
 // Import mocked modules to control behavior
-import { isFirebaseConfigured, getFirebaseAuth } from '../firebase/config';
+import { isFirebaseConfigured } from '../firebase/config';
 import { hasNostrExtension, waitForNostrExtension } from '../nostr/utils';
 
 // Helper to create wrapper

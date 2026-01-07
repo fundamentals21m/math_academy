@@ -134,7 +134,7 @@ export default function Section11() {
           <>
             <p><strong>Step 1: Real eigenvalues.</strong> If <InlineMath>Av = \lambda v</InlineMath>:</p>
             <MathBlock>{`\\bar{\\lambda}\\bar{v}^T v = (\\bar{v}^T \\bar{A} v) = \\bar{v}^T A v = \\bar{v}^T (\\lambda v) = \\lambda \\bar{v}^T v`}</MathBlock>
-            <p>Since <InlineMath>\bar{'{v}'}^T v = \|v\|^2 {'>'} 0</InlineMath>, we get <InlineMath>\bar{'\lambda'} = \lambda</InlineMath>.</p>
+            <p>Since <InlineMath>{`\\bar{v}^T v = ||v||^2 > 0`}</InlineMath>, we get <InlineMath>{`\\bar{\\lambda} = \\lambda`}</InlineMath>.</p>
             <p className="mt-2"><strong>Step 2: Orthogonal eigenspaces.</strong> If <InlineMath>Av = \lambda v</InlineMath> and <InlineMath>Aw = \mu w</InlineMath> with <InlineMath>\lambda \neq \mu</InlineMath>:</p>
             <MathBlock>{`\\lambda(v \\cdot w) = (Av) \\cdot w = v \\cdot (A^T w) = v \\cdot (Aw) = \\mu(v \\cdot w)`}</MathBlock>
             <p>So <InlineMath>(\lambda - \mu)(v \cdot w) = 0</InlineMath>, giving <InlineMath>v \cdot w = 0</InlineMath>.</p>

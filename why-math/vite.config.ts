@@ -5,8 +5,13 @@ import path from 'path'
 // =============================================================================
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
-const COURSE_ID = 'wm'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = '/why-math-deploy/'  // Subdirectory of main HUB
+const COURSE_ID = 'why-math'  // Short ID: 'ba', 'aa', 'crypto', etc.
+
+// Base path is determined by deployment type:
+// - Standalone deploy (default): '/' - works on *.vercel.app domains
+// - Hub deploy (HUB_DEPLOY=true): '/{course-id}-deploy/' - for hub subdirectory
+const isHubDeploy = process.env.HUB_DEPLOY === 'true'
+const BASE_PATH = isHubDeploy ? `/${COURSE_ID}-deploy/` : '/'
 // =============================================================================
 
 export default defineConfig({

@@ -1,56 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { hexToNpub, npubToHex, hasNostrExtension, waitForNostrExtension } from './utils';
 
-// Mock WebSocket for testing
-class MockWebSocket {
-  static instances: MockWebSocket[] = [];
-  
-  url: string;
-  readyState: number = 0;
-  onopen: (() => void) | null = null;
-  onmessage: ((event: { data: string }) => void) | null = null;
-  onerror: ((error: Error) => void) | null = null;
-  onclose: (() => void) | null = null;
-  
-  constructor(url: string) {
-    this.url = url;
-    MockWebSocket.instances.push(this);
-  }
-  
-  send(_data: string) {
-    // Mock send
-  }
-  
-  close() {
-    this.readyState = 3; // CLOSED
-    if (this.onclose) this.onclose();
-  }
-  
-  // Test helpers
-  simulateOpen() {
-    this.readyState = 1; // OPEN
-    if (this.onopen) this.onopen();
-  }
-  
-  simulateMessage(data: unknown) {
-    if (this.onmessage) {
-      this.onmessage({ data: JSON.stringify(data) });
-    }
-  }
-  
-  simulateError(error: Error) {
-    if (this.onerror) this.onerror(error);
-  }
-  
-  static reset() {
-    MockWebSocket.instances = [];
-  }
-  
-  static get lastInstance(): MockWebSocket | undefined {
-    return MockWebSocket.instances[MockWebSocket.instances.length - 1];
-  }
-}
-
 describe('hexToNpub', () => {
   it('should convert valid hex to npub', () => {
     // Test with a known hex/npub pair

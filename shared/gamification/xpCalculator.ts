@@ -7,19 +7,26 @@
 import { LEVEL_THRESHOLDS, XP_CONFIG, type Difficulty } from './types';
 
 /**
- * Calculate user level based on total XP.
- * Levels are determined by thresholds defined in LEVEL_THRESHOLDS.
+ * Calculate user level based on total XP using predefined thresholds.
  *
- * @param totalXP - User's total accumulated XP
- * @returns Level number (1-10)
+ * Levels progress through fixed XP thresholds defined in LEVEL_THRESHOLDS.
+ * Higher levels require exponentially more XP to achieve.
+ *
+ * @param totalXP - User's total accumulated XP points (must be non-negative)
+ * @returns Level number between 1-10, clamped to maximum level
+ * @throws Will not throw, but returns minimum level 1 for invalid input
  *
  * @example
  * ```ts
- * calculateLevel(0);    // Returns 1
- * calculateLevel(100);  // Returns 2
- * calculateLevel(500);  // Returns 4
- * calculateLevel(5000); // Returns 10
+ * calculateLevel(0);      // Returns 1 (starting level)
+ * calculateLevel(100);    // Returns 2 (first threshold crossed)
+ * calculateLevel(500);    // Returns 4 (multiple thresholds)
+ * calculateLevel(5000);   // Returns 10 (maximum level)
+ * calculateLevel(-50);    // Returns 1 (invalid input handled)
  * ```
+ *
+ * @see LEVEL_THRESHOLDS for exact XP requirements per level
+ * @see getLevelProgress for percentage progress within current level
  */
 export function calculateLevel(totalXP: number): number {
   for (let i = LEVEL_THRESHOLDS.length - 1; i >= 0; i--) {

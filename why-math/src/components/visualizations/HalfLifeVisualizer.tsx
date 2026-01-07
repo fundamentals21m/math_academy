@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export function HalfLifeVisualizer() {
-  const [initialAmount, setInitialAmount] = useState(100);
+  const [initialAmount] = useState(100);
   const [halfLife, setHalfLife] = useState(1600);
   const [currentTime, setCurrentTime] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -18,7 +18,7 @@ export function HalfLifeVisualizer() {
       }, 50);
       return () => clearTimeout(timer);
     } else if (currentTime >= maxTime) {
-      setIsAnimating(false);
+      queueMicrotask(() => setIsAnimating(false));
     }
   }, [isAnimating, currentTime, maxTime]);
 

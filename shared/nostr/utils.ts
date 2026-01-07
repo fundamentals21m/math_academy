@@ -3,7 +3,7 @@
  * bech32 encoding/decoding for npub/nsec/note
  */
 
-import { DEFAULT_RELAYS, RELAY_TIMEOUT_MS } from '../constants';
+import { DEFAULT_RELAYS, FALLBACK_RELAYS, RELAY_TIMEOUT_MS } from '../constants';
 import { getLogger } from '../utils/logger';
 
 const logger = getLogger('NostrUtils');
@@ -192,7 +192,23 @@ export function bytesToHex(bytes: Uint8Array): string {
 }
 
 /**
- * Convert hex pubkey to npub (bech32)
+ * Convert hex-encoded public key to Nostr bech32 npub format.
+ *
+ * Nostr public keys are 32-byte (64-character hex) values that get encoded
+ * into human-readable bech32 format with 'npub' prefix for sharing and display.
+ *
+ * @param hex - 64-character hexadecimal public key string
+ * @returns Bech32-encoded npub string (e.g., 'npub1abc...xyz')
+ * @throws Error if input is not exactly 64 hex characters
+ *
+ * @example
+ * ```ts
+ * const hexKey = '3bf0c63fcb93463407af97a5e5ee64fa883d107ef9e558472c4eb9aaaefa459d';
+ * hexToNpub(hexKey); // Returns 'npub1...'
+ * ```
+ *
+ * @see npubToHex for reverse conversion
+ * @see isValidHexPubkey for validation
  */
 export function hexToNpub(hex: string): string {
   if (hex.length !== 64) {
@@ -226,10 +242,124 @@ export function isValidNpub(npub: string): boolean {
 }
 
 /**
- * Check if a string is a valid hex pubkey
+ * Fetch a user's Nostr profile from multiple relays with improved parallel fetching and failover.
+ *
+ * Implements proper error handling, timeout management, and graceful degradation.
+ *
+ * Enhanced with expanded relay pool for better availability.
+ *
+ * @param npub - User's Nostr public key in bech32 npub format
+ * @returns Promise resolving to user profile or null if not found
+ *
+ * @example
+ * ```ts
+ * const profile = await fetchNostrProfile('npub1...');
+ * // Returns user profile if found, null otherwise
+ * ```
+ *
+ * @see DEFAULT_RELAYS for relay list configuration
+ * @see fetchProfileFromRelay for single-relay implementation
+ * @see getAllRelays for complete relay management
  */
-export function isValidHexPubkey(hex: string): boolean {
-  return /^[0-9a-f]{64}$/i.test(hex);
+export async function fetchNostrProfile(npub: string): Promise<NostrProfile | null> {
+  try {
+    const pubkeyHex = npubToHex(npub);
+
+    // Get all available relays (defaults + fallbacks)
+    const allRelays = getAllRelays();
+
+    // Try relays in parallel with timeout for each
+    const relayPromises = allRelays.map(async (relayUrl) => {
+      try {
+        const profile = await Promise.race([
+          fetchProfileFromRelay(relayUrl, pubkeyHex),
+          // Timeout after 2 seconds per relay
+          new Promise<null>((resolve) => setTimeout(() => resolve(null), 2000))
+        ]);
+        return profile;
+      } catch (err) {
+        logger.debug(`Failed to fetch profile from relay ${relayUrl}:`, err);
+        return null;
+      }
+    });
+
+    // Wait for any relay to return a profile
+    const results = await Promise.allSettled(relayPromises);
+    const profiles = results
+      .filter((result): result is PromiseFulfilledResult<NostrProfile | null> =>
+        result.status === 'fulfilled' && result.value !== null
+      )
+      .map(result => result.value);
+
+    if (profiles.length > 0) {
+      // Return the first successful profile found
+      return profiles[0];
+    }
+
+    logger.debug(`No profile found for npub across ${allRelays.length} relays`);
+    return null;
+  } catch (err) {
+    logger.debug('Failed to convert npub to hex:', err);
+    return null;
+  }
+}
+
+/**
+ * Get all available relays (defaults + fallbacks) for comprehensive relay management.
+ */
+function getAllRelays(): readonly string[] {
+  return [...DEFAULT_RELAYS, ...FALLBACK_RELAYS];
+}
+
+/**
+ * Check if a Nostr relay is healthy and responding to requests.
+ * Useful for relay monitoring and health checks.
+ */
+export async function checkRelayHealth(relayUrl: string): Promise<boolean> {
+  return new Promise((resolve) => {
+    let cleaned = false;
+    const timeout = setTimeout(() => {
+      if (!cleaned) {
+        cleaned = true;
+        resolve(false);
+      }
+    }, 2000); // 2 second timeout
+
+    try {
+      const ws = new WebSocket(relayUrl);
+
+      const cleanup = () => {
+        if (cleaned) return;
+        cleaned = true;
+        clearTimeout(timeout);
+      };
+
+      ws.onopen = () => {
+        cleanup();
+        try {
+          ws.close();
+        } catch (e) {
+          // Ignore close errors
+        }
+        resolve(true);
+      };
+
+      ws.onerror = () => {
+        cleanup();
+        resolve(false);
+      };
+
+      ws.onclose = () => {
+        if (!cleaned) {
+          cleanup();
+          resolve(false);
+        }
+      };
+    } catch (err) {
+      cleanup();
+      resolve(false);
+    }
+  });
 }
 
 /**
@@ -243,10 +373,34 @@ export function shortenNpub(npub: string, chars: number = 8): string {
 }
 
 /**
- * Check if window.nostr is available (NIP-07 extension installed)
+ * Fetch a user's Nostr profile from multiple relays with improved parallel fetching and failover.
+ *
+ * Includes enhanced error handling, timeout management, and graceful degradation.
+ *
+ * Returns first successful profile found or null if none found.
+ *
+ * @param npub - User's Nostr public key in bech32 npub format
+ * @returns Promise resolving to user profile or null if not found
+ *
+ * @example
+ * ```ts
+ * const profile = await fetchNostrProfile('npub1...');
+ * if (profile) {
+ *   console.log('User:', profile.display_name || profile.name);
+ *   console.log('NIP-05:', profile.nip05);
+ * }
+ * ```
+ *
+ * @see DEFAULT_RELAYS for relay list configuration
+ * @see fetchProfileFromRelay for single-relay functionality
+ * @see getAllRelays for complete relay management
+ */
+
+/**
+ * Check if a Nostr browser extension (NIP-07) is available
  */
 export function hasNostrExtension(): boolean {
-  return typeof window !== 'undefined' && window.nostr !== undefined;
+  return typeof window !== 'undefined' && typeof window.nostr !== 'undefined';
 }
 
 /**
@@ -284,9 +438,10 @@ export interface NostrProfile {
 }
 
 /**
- * Fetch profile from a single relay
- * 
+ * Fetch profile from a single relay with improved error handling
+ *
  * Implements proper WebSocket cleanup to prevent connection leaks.
+ * Returns null on any error to enable relay failover.
  */
 export function fetchProfileFromRelay(
   relayUrl: string,
@@ -305,8 +460,12 @@ export function fetchProfileFromRelay(
         clearTimeout(timeoutId);
         timeoutId = null;
       }
-      if (ws && ws.readyState !== WebSocket.CLOSED) {
-        ws.close();
+      if (ws && ws.readyState !== WebSocket.CLOSED && ws.readyState !== WebSocket.CLOSING) {
+        try {
+          ws.close();
+        } catch (err) {
+          logger.debug(`Error closing WebSocket for ${relayUrl}:`, err);
+        }
       }
     };
 
@@ -329,12 +488,18 @@ export function fetchProfileFromRelay(
 
     ws.onopen = () => {
       if (cleaned || !ws) return;
-      const req = JSON.stringify([
-        'REQ',
-        subId,
-        { kinds: [0], authors: [pubkeyHex], limit: 1 },
-      ]);
-      ws.send(req);
+      try {
+        const req = JSON.stringify([
+          'REQ',
+          subId,
+          { kinds: [0], authors: [pubkeyHex], limit: 1 },
+        ]);
+        ws.send(req);
+      } catch (err) {
+        logger.debug(`Failed to send subscription to ${relayUrl}:`, err);
+        cleanup();
+        resolve(null);
+      }
     };
 
     ws.onmessage = (event) => {
@@ -357,7 +522,7 @@ export function fetchProfileFromRelay(
         }
       } catch (err) {
         logger.debug(`Failed to parse WebSocket message from ${relayUrl}:`, err);
-        // Continue listening for valid messages
+        // Continue listening for valid messages instead of failing immediately
       }
     };
 
@@ -367,9 +532,10 @@ export function fetchProfileFromRelay(
       resolve(null);
     };
 
-    ws.onclose = () => {
-      // Ensure cleanup happens if connection closes unexpectedly
+    ws.onclose = (event) => {
+      // Only resolve if we haven't already resolved and it wasn't a clean close
       if (!cleaned) {
+        logger.debug(`WebSocket closed for ${relayUrl}, code: ${event.code}, reason: ${event.reason}`);
         cleanup();
         resolve(null);
       }
@@ -378,30 +544,25 @@ export function fetchProfileFromRelay(
 }
 
 /**
- * Fetch a user's Nostr profile from relays
+ * Check if a Nostr relay is healthy by attempting a WebSocket connection.
+ *
+ * Performs a basic connectivity test by opening a WebSocket connection to the relay.
+ * Does not perform any Nostr protocol validation, just checks if the relay is reachable.
+ *
+ * @param relayUrl - WebSocket URL of the Nostr relay (e.g., 'wss://relay.damus.io')
+ * @returns Promise resolving to true if relay is reachable, false otherwise
+ *
+ * @example
+ * ```ts
+ * const isHealthy = await checkRelayHealth('wss://relay.damus.io');
+ * if (!isHealthy) {
+ *   console.log('Relay is down, trying fallback...');
+ * }
+ * ```
+ *
+ * @see DEFAULT_RELAYS for commonly used relay URLs
+ * @see fetchProfileFromRelay for full relay functionality testing
  */
-export async function fetchNostrProfile(npub: string): Promise<NostrProfile | null> {
-  try {
-    const pubkeyHex = npubToHex(npub);
-
-    for (const relayUrl of DEFAULT_RELAYS) {
-      try {
-        const profile = await fetchProfileFromRelay(relayUrl, pubkeyHex);
-        if (profile) {
-          return profile;
-        }
-      } catch (err) {
-        logger.debug(`Failed to fetch profile from relay ${relayUrl}:`, err);
-        // Try next relay
-      }
-    }
-    logger.debug(`No profile found for npub across ${DEFAULT_RELAYS.length} relays`);
-    return null;
-  } catch (err) {
-    logger.debug('Failed to convert npub to hex:', err);
-    return null;
-  }
-}
 
 /**
  * Fetch multiple profiles in parallel (with concurrency limit)

@@ -4,7 +4,7 @@ import { section06Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
 import { Definition, Theorem, Example, RCodeBlock } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
-import { LinearRegressionFitter } from '@/components/visualizers/LinearRegressionFitter';
+import { LinearRegressionFitter } from '@/components/visualizations/LinearRegressionFitter';
 
 export default function Section06() {
   return (

@@ -1,7 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock } from '@/components/common/MathBlock';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { quizMap } from '@/data/quizzes';
 import { PerspectiveProjectionDemo } from '@/components/visualizations/chapter5';

@@ -5,7 +5,7 @@ import path from 'path'
 // =============================================================================
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
-const COURSE_ID = 'four-pillars'  // Short ID: 'ba', 'aa', 'crypto', etc.
+// Course ID: 'four-pillars'
 // Use subdirectory path for hub deployment
 const BASE_PATH = '/four-pillars-deploy/'
 // =============================================================================

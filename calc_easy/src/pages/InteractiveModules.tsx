@@ -16,15 +16,50 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
+    id: 'function-explorer',
+    title: 'Function Explorer',
+    description: 'See how functions work — pick an input x and watch the function "machine" produce an output f(x).',
     sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    sectionTitle: 'What Is a Function?',
+    category: 'Foundations',
+    icon: '📊',
+  },
+  {
+    id: 'limit-visualizer',
+    title: 'Limit Visualizer',
+    description: 'Watch what happens as x approaches a target value. See the limit from both sides!',
+    sectionId: 1,
+    sectionTitle: 'What Is a Limit?',
+    category: 'Foundations',
+    icon: '🎯',
+  },
+  {
+    id: 'tangent-line',
+    title: 'Tangent Line Demo',
+    description: 'Drag along a curve to see the tangent line. The slope of this line IS the derivative!',
+    sectionId: 12,
+    sectionTitle: 'Geometrical Meaning',
+    category: 'Derivatives',
+    icon: '📐',
+  },
+  {
+    id: 'max-min-finder',
+    title: 'Max/Min Finder',
+    description: 'Find where a function reaches its highest and lowest points by looking for flat tangent lines.',
+    sectionId: 13,
+    sectionTitle: 'Maxima and Minima',
+    category: 'Derivatives',
+    icon: '⛰️',
+  },
+  {
+    id: 'area-under-curve',
+    title: 'Area Under a Curve',
+    description: 'Approximate area with rectangles — more rectangles = better approximation. This is integration!',
+    sectionId: 21,
+    sectionTitle: 'Finding Areas',
+    category: 'Integration',
+    icon: '📏',
   },
 ];
 // =============================================================================

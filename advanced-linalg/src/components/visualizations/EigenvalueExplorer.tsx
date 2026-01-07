@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Props {
@@ -17,7 +17,6 @@ export function EigenvalueExplorer({ className = '' }: Props) {
     [3, 1],
     [0, 2],
   ]);
-  const [result, setResult] = useState<EigenResult | null>(null);
   const [showEigenvectors, setShowEigenvectors] = useState(true);
   const [animationAngle, setAnimationAngle] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -80,10 +79,8 @@ export function EigenvalueExplorer({ className = '' }: Props) {
     return { eigenvalues, eigenvectors, isComplex };
   };
 
-  useEffect(() => {
-    const res = computeEigen(matrix);
-    setResult(res);
-  }, [matrix]);
+  // Compute eigenvalues/eigenvectors as derived state (not in effect)
+  const result = useMemo(() => computeEigen(matrix), [matrix]);
 
   useEffect(() => {
     const canvas = canvasRef.current;

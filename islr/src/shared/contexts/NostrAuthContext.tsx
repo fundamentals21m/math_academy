@@ -52,7 +52,7 @@ export function NostrAuthProvider({ children }: { children: ReactNode }) {
 
     try {
       // Get public key from extension (NIP-07)
-      const pubkey = await (window as any).nostr.getPublicKey();
+      const pubkey = await (window as unknown as { nostr: { getPublicKey: () => Promise<string> } }).nostr.getPublicKey();
 
       // Convert to npub format (simplified - full implementation uses nostr-tools)
       const npubValue = `npub1${pubkey.slice(0, 59)}`;

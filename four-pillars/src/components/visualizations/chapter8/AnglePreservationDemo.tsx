@@ -154,7 +154,7 @@ export function AnglePreservationDemo({ className = '' }: AnglePreservationDemoP
       let started = false;
 
       points.forEach(p => {
-        let drawPoint: Complex | null = transform ? applyMobius(p) : p;
+        const drawPoint: Complex | null = transform ? applyMobius(p) : p;
         if (drawPoint && Math.abs(drawPoint[0]) < 5 && Math.abs(drawPoint[1]) < 5) {
           const px = centerX + drawPoint[0] * scale;
           const py = cy - drawPoint[1] * scale;

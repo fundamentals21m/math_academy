@@ -6,7 +6,12 @@ import path from 'path'
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
 const COURSE_ID = 'islr'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = '/islr-deploy/'
+
+// Base path is determined by deployment type:
+// - Standalone deploy (default): '/' - works on *.vercel.app domains
+// - Hub deploy (HUB_DEPLOY=true): '/{course-id}-deploy/' - for hub subdirectory
+const isHubDeploy = process.env.HUB_DEPLOY === 'true'
+const BASE_PATH = isHubDeploy ? `/${COURSE_ID}-deploy/` : '/'
 // =============================================================================
 
 export default defineConfig({

@@ -191,6 +191,7 @@ export function SphereRotationGroupDemo({ className = '' }: SphereRotationGroupD
     ctx.lineWidth = 2;
     ctx.beginPath();
     for (let t = 0; t <= 1; t += 0.05) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const thetaT = (angle * t * Math.PI) / 180;
       const Rt = getRotationMatrix(axis, angle * t);
       const pt = transform(Rt, normalizedPoint);

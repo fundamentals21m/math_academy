@@ -13,9 +13,9 @@ export const PUBKEY_HEX_SCHEMA = z.string().regex(/^[a-fA-F0-9]{64}$/);
 
 export const NPUB_SCHEMA = z.string().regex(/^npub1[1-9ac-hjk-np-z46-9]+$/);
 
-export const DISPLAY_NAME_SCHEMA = z.string().min(1).max(50).regex(/^[a-zA-Z0-9\s\-\'\.]+$/);
+export const DISPLAY_NAME_SCHEMA = z.string().min(1).max(50).regex(/^[a-zA-Z0-9\s\-'.]+$/);
 
-export const NIP05_SCHEMA = z.string().regex(/^[a-zA-Z0-9\.\-_]+(@[a-zA-Z0-9\.\-_]+\.[a-zA-Z]{2,})?$/);
+export const NIP05_SCHEMA = z.string().regex(/^[a-zA-Z0-9.\-_]+(@[a-zA-Z0-9.\-_]+\.[a-zA-Z]{2,})?$/);
 
 export const CHALLENGE_SCHEMA = z.object({
   challenge: z.string().min(10).max(200),

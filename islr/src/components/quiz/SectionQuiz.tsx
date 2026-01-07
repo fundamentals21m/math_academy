@@ -18,7 +18,7 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   // Always call hook unconditionally, then conditionally use the result
   const gamificationContext = useGamification();
   const gamification = FEATURES.gamification ? gamificationContext : null;
-  
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [numericAnswer, setNumericAnswer] = useState<number | null>(null);
@@ -29,10 +29,17 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   const [isComplete, setIsComplete] = useState(false);
   const [numericError, setNumericError] = useState('');
 
+  // Generate random seeds once on mount for stable shuffling
+  const [randomSeed] = useState(() => questions.map(() => Math.random()));
+
   // Randomize questions on mount, take 5
   const shuffledQuestions = useMemo(() => {
-    return [...questions].sort(() => globalThis.Math.random() - 0.5).slice(0, 5);
-  }, [questions]);
+    return [...questions]
+      .map((q, i) => ({ q, sort: randomSeed[i] ?? 0 }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ q }) => q)
+      .slice(0, 5);
+  }, [questions, randomSeed]);
 
   const currentQuestion = shuffledQuestions[currentIndex];
   const totalQuestions = shuffledQuestions.length;

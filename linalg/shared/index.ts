@@ -16,7 +16,7 @@ export { ErrorProvider, useErrorContext } from './contexts/ErrorContext';
 export { ErrorBoundary } from './components/ErrorBoundary';
 export { ErrorDisplay } from './components/ErrorDisplay';
 export { LoadingSpinner } from './components/common/LoadingSpinner';
-export { NostrConnectButton } from './components/leaderboard/NostrConnectButton';
+export { NostrConnectButton } from './components/leaderboard';
 
 // Gamification
 export * from './gamification';

@@ -120,7 +120,7 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
     if (saved) {
       dispatch({ type: 'LOAD_STATE', payload: saved });
     }
-    setIsLoading(false);
+    queueMicrotask(() => setIsLoading(false));
   }, []);
 
   // Save state to localStorage on changes

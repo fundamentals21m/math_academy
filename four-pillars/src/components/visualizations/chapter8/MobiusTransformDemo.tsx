@@ -35,16 +35,17 @@ export function MobiusTransformDemo({ className = '' }: { className?: string }) 
         // z → z + l
         return { x: p.x + interpolatedParam, y: p.y };
 
-      case 'scaling':
+      case 'scaling': {
         // z → kz where k = e^param
         const k = Math.exp(interpolatedParam);
         return { x: p.x * k, y: p.y * k };
+      }
 
       case 'reflection':
         // z → -z̄ (reflection in imaginary axis)
         return { x: -p.x * t + p.x * (1 - t), y: p.y };
 
-      case 'inversion':
+      case 'inversion': {
         // z → 1/z̄ (inversion in unit circle)
         const denom = p.x * p.x + p.y * p.y;
         if (denom < 0.01) return null;
@@ -54,6 +55,7 @@ export function MobiusTransformDemo({ className = '' }: { className?: string }) 
           x: p.x * (1 - t) + invX * t,
           y: p.y * (1 - t) + invY * t,
         };
+      }
 
       default:
         return p;
@@ -61,6 +63,7 @@ export function MobiusTransformDemo({ className = '' }: { className?: string }) 
   };
 
   // Generate a grid of sample points
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const generateGrid = (): Point[] => {
     const points: Point[] = [];
     for (let x = -4; x <= 4; x += 0.5) {

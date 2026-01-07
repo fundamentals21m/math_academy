@@ -86,9 +86,9 @@ export function QuaternionRotationDemo({ className = '' }: QuaternionRotationDem
       const cy1 = Math.cos(viewAngleY), sy1 = Math.sin(viewAngleY);
       const cx1 = Math.cos(viewAngleX), sx1 = Math.sin(viewAngleX);
 
-      let x = v[0] * cy1 + v[2] * sy1;
+      const x = v[0] * cy1 + v[2] * sy1;
       let z = -v[0] * sy1 + v[2] * cy1;
-      let y = v[1] * cx1 - z * sx1;
+      const y = v[1] * cx1 - z * sx1;
       z = v[1] * sx1 + z * cx1;
 
       return [cx + x * scale, cy - y * scale];
@@ -138,7 +138,7 @@ export function QuaternionRotationDemo({ className = '' }: QuaternionRotationDem
     ];
 
     // Draw original and rotated points
-    originalPoints.forEach((p, i) => {
+    originalPoints.forEach((p) => {
       const [opx, opy] = project(p);
 
       // Original point

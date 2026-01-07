@@ -282,7 +282,7 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
     if (saved) {
       dispatch({ type: 'LOAD_STATE', payload: saved });
     }
-    setIsLoading(false);
+    queueMicrotask(() => setIsLoading(false));
   }, []);
 
   // Save state to localStorage on changes and trigger sync
@@ -306,7 +306,7 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
     if (!isLoading) {
       const newAchievements = checkAchievements(state);
       if (newAchievements.length > 0) {
-        setNotifications((prev) => [...prev, ...newAchievements]);
+        queueMicrotask(() => setNotifications((prev) => [...prev, ...newAchievements]));
       }
     }
   }, [state, isLoading]);

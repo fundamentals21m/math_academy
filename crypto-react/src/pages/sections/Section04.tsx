@@ -54,8 +54,20 @@ export default function Section04() {
 
       <h2>The Fundamental Theorem of Arithmetic</h2>
 
-      <Theorem title="Fundamental Theorem of Arithmetic">
-        Every integer greater than 1 can be represented <strong>uniquely</strong> as a product 
+      <Theorem
+        title="Fundamental Theorem of Arithmetic"
+        proof={
+          <>
+            <p className="mb-3"><strong>Part 1 (Existence):</strong> We prove by strong induction that every integer <InlineMath>{'n > 1'}</InlineMath> can be written as a product of primes.</p>
+            <p className="mb-3"><em>Base case:</em> <InlineMath>{'n = 2'}</InlineMath> is prime, so it is trivially a product of primes.</p>
+            <p className="mb-3"><em>Inductive step:</em> Assume every integer <InlineMath>{'k'}</InlineMath> with <InlineMath>{'2 \\le k < n'}</InlineMath> can be written as a product of primes. If <InlineMath>{'n'}</InlineMath> is prime, we're done. Otherwise, <InlineMath>{'n = ab'}</InlineMath> where <InlineMath>{'1 < a, b < n'}</InlineMath>. By the inductive hypothesis, both <InlineMath>{'a'}</InlineMath> and <InlineMath>{'b'}</InlineMath> are products of primes, so <InlineMath>{'n'}</InlineMath> is too.</p>
+            <p className="mb-3"><strong>Part 2 (Uniqueness):</strong> Suppose <InlineMath>{'n = p_1 p_2 \\cdots p_r = q_1 q_2 \\cdots q_s'}</InlineMath> are two prime factorizations.</p>
+            <p className="mb-3">Since <InlineMath>{'p_1'}</InlineMath> divides the left side, it divides the right side. By Euclid's Lemma (if a prime divides a product, it divides one of the factors), <InlineMath>{'p_1'}</InlineMath> divides some <InlineMath>{'q_j'}</InlineMath>. Since <InlineMath>{'q_j'}</InlineMath> is prime, <InlineMath>{'p_1 = q_j'}</InlineMath>.</p>
+            <p>Canceling <InlineMath>{'p_1'}</InlineMath> from both sides and repeating this argument, we find that the two factorizations are identical up to reordering.</p>
+          </>
+        }
+      >
+        Every integer greater than 1 can be represented <strong>uniquely</strong> as a product
         of prime numbers, up to the order of the factors.
       </Theorem>
 

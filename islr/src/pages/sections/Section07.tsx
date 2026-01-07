@@ -2,7 +2,7 @@ import { LessonLayout } from '@/components/layout/LessonLayout';
 import { SectionQuiz } from '@/components/quiz/SectionQuiz';
 import { section07Quiz } from '@/data/quizzes';
 import { Callout } from '@/components/common/Callout';
-import { Definition, Theorem, Example, RCodeBlock } from '@/components/common/ContentBlocks';
+import { Definition, Example, RCodeBlock } from '@/components/common/ContentBlocks';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section07() {

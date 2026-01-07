@@ -7,13 +7,8 @@ export function ScalingVisualizer() {
   const baseSize = 40;
   const scaledSize = baseSize * scale;
 
-  // Calculate areas/volumes
-  const baseArea = shape === 'circle' ? Math.PI * (baseSize / 2) ** 2 : baseSize ** 2;
-  const scaledArea = shape === 'circle' ? Math.PI * (scaledSize / 2) ** 2 : scaledSize ** 2;
+  // Calculate ratios for scaling
   const areaRatio = scale ** 2;
-
-  const baseVolume = shape === 'cube' ? baseSize ** 3 : null;
-  const scaledVolume = shape === 'cube' ? scaledSize ** 3 : null;
   const volumeRatio = scale ** 3;
 
   // SVG dimensions

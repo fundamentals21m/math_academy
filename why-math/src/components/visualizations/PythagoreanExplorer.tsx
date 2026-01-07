@@ -7,7 +7,6 @@ export function PythagoreanExplorer() {
   const c = Math.sqrt(a * a + b * b);
   const aSquared = a * a;
   const bSquared = b * b;
-  const cSquared = c * c;
 
   // SVG dimensions
   const width = 400;

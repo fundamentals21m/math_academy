@@ -16,15 +16,50 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'platonic-solids',
+    title: 'Platonic Solids',
+    description: 'Explore the five regular polyhedra: tetrahedron, cube, octahedron, dodecahedron, and icosahedron. Rotate them and verify Euler\'s formula.',
+    sectionId: 8,
+    sectionTitle: 'Regular Polyhedra',
+    category: 'Dawn of Greek Mathematics',
+    icon: '🎲',
+  },
+  {
+    id: 'irrational-sqrt2',
+    title: 'The Irrationality of √2',
+    description: 'See why √2 cannot be a ratio of integers through geometric and algebraic proofs. Explore continued fraction approximations.',
+    sectionId: 9,
+    sectionTitle: 'The Crisis of Incommensurables',
+    category: 'Dawn of Greek Mathematics',
+    icon: '📐',
+  },
+  {
+    id: 'ruler-compass',
+    title: 'Ruler & Compass Constructions',
+    description: 'Step through classical geometric constructions: perpendiculars, angle bisectors, equilateral triangles, and regular hexagons.',
+    sectionId: 13,
+    sectionTitle: 'Constructions with Ruler and Compass',
+    category: 'Classical Greek Mathematics',
+    icon: '📏',
+  },
+  {
+    id: 'continued-fractions',
+    title: 'Continued Fractions',
+    description: 'See how real numbers unfold as continued fractions. Discover patterns in √2, φ, e, and π. Find best rational approximations.',
+    sectionId: 44,
+    sectionTitle: 'Continued Fractions',
+    category: 'Set Theory and Number Theory',
+    icon: '🔢',
+  },
+  {
+    id: 'turing-machine',
+    title: 'Turing Machine',
+    description: 'Watch a simple Turing machine increment a binary number. See the tape, head, states, and transitions in action.',
+    sectionId: 49,
+    sectionTitle: 'What Is a Calculation?',
+    category: 'Computability and Logic',
+    icon: '🤖',
   },
 ];
 // =============================================================================

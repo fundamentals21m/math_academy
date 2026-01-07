@@ -216,7 +216,7 @@ export default function Section10() {
             </p>
             <p className="mt-4"><strong>Real symmetric:</strong></p>
             <p className="mt-2">
-              If <InlineMath>Av = \lambda v</InlineMath> with <InlineMath>v \neq 0</InlineMath>, consider <InlineMath>\bar{'{v}'}^T A v</InlineMath>. Since <InlineMath>A = A^T</InlineMath> is real: <InlineMath>\bar{'{v}'}^T A v = \lambda \bar{'{v}'}^T v = \bar{'\lambda'} \bar{'{v}'}^T v</InlineMath>. Since <InlineMath>\bar{'{v}'}^T v = \|v\|^2 {'>'} 0</InlineMath>, we get <InlineMath>\lambda = \bar{'\lambda'}</InlineMath>, so <InlineMath>\lambda \in {`\\mathbb{R}`}</InlineMath>.
+              If <InlineMath>{`Av = \\lambda v`}</InlineMath> with <InlineMath>{`v \\neq 0`}</InlineMath>, consider <InlineMath>{`\\bar{v}^T A v`}</InlineMath>. Since <InlineMath>{`A = A^T`}</InlineMath> is real: <InlineMath>{`\\bar{v}^T A v = \\lambda \\bar{v}^T v = \\bar{\\lambda} \\bar{v}^T v`}</InlineMath>. Since <InlineMath>{`\\bar{v}^T v = ||v||^2 > 0`}</InlineMath>, we get <InlineMath>{`\\lambda = \\bar{\\lambda}`}</InlineMath>, so <InlineMath>{`\\lambda \\in \\mathbb{R}`}</InlineMath>.
             </p>
             <p className="mt-4"><strong>Orthogonal:</strong></p>
             <p className="mt-2">

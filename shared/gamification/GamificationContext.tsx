@@ -179,7 +179,7 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
     // If not authenticated, we're done loading
     // If authenticated, the server sync effect will handle the rest
     if (!isAuthenticated) {
-      setIsLoading(false);
+      queueMicrotask(() => setIsLoading(false));
     }
   }, []);
 
@@ -234,7 +234,7 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
         } catch (error) {
           progressLogger.error('Failed to sync with server:', error);
         } finally {
-          setIsLoading(false);
+          queueMicrotask(() => setIsLoading(false));
           hasLoadedFromServerRef.current = true;
         }
       };
@@ -249,7 +249,7 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
       hasLoadedFromServerRef.current = false;
     } else if (!isAuthenticated) {
       // Not authenticated and wasn't before - ensure loading is complete
-      setIsLoading(false);
+      queueMicrotask(() => setIsLoading(false));
     }
 
     return () => {

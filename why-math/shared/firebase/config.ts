@@ -80,7 +80,7 @@ export function getFirebaseFunctions(): Functions {
       if (params.get('emulator') === 'true') {
         try {
           connectFunctionsEmulator(functions, 'localhost', 5001);
-        } catch (e) {
+        } catch {
           // Emulator may already be connected
         }
       }

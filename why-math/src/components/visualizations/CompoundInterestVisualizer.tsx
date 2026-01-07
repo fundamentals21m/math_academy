@@ -10,7 +10,6 @@ export function CompoundInterestVisualizer() {
 
   // Calculate amounts
   const simpleInterest = principal * (1 + i * years);
-  const compoundAnnual = principal * Math.pow(1 + i, years);
   const compoundFreq = principal * Math.pow(1 + i / compoundingFreq, compoundingFreq * years);
 
   // Generate data for chart

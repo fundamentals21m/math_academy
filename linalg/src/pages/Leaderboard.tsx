@@ -4,7 +4,7 @@ import { COURSE_NAME, FEATURES } from '@/config';
 import { NostrConnectButton } from '@magic-internet-math/shared';
 
 // This is a placeholder - the full leaderboard requires Firebase/Nostr integration
-// See src/shared/ for the full implementation
+// See shared/leaderboard/ for the full implementation
 
 export default function Leaderboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

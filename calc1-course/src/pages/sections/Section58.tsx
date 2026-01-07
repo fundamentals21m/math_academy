@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { InlineMath, MathBlock } from '../../components/common/MathBlock';
+import { InlineMath } from '../../components/common/MathBlock';
 import { Callout } from '../../components/common/Callout';
 
 export default function Section58() {

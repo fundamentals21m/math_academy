@@ -142,7 +142,7 @@ export function HyperbolicIsometriesDemo({ className = '' }: { className?: strin
     ctx.lineWidth = 1.5;
 
     switch (isometryType) {
-      case 'hyperbolic':
+      case 'hyperbolic': {
         // Fixed points at 0 and ∞, axis is imaginary axis
         ctx.strokeStyle = '#fbbf24';
         const [axisX] = toCanvas(0, 0);
@@ -158,8 +158,9 @@ export function HyperbolicIsometriesDemo({ className = '' }: { className?: strin
         ctx.fillText('Fixed: 0', axisX + 10, originY - 5);
         ctx.fillText('Fixed: ∞', axisX + 10, 15);
         break;
+      }
 
-      case 'elliptic':
+      case 'elliptic': {
         // Fixed point at i
         ctx.strokeStyle = '#fbbf24';
         const [fx, fy] = toCanvas(0, 1);
@@ -170,6 +171,7 @@ export function HyperbolicIsometriesDemo({ className = '' }: { className?: strin
         ctx.font = '11px sans-serif';
         ctx.fillText('Center: i', fx + 12, fy);
         break;
+      }
 
       case 'parabolic':
         // Fixed point at ∞ only

@@ -16,15 +16,59 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'zeno-paradoxes',
+    title: "Zeno's Paradoxes",
+    description: 'Explore Achilles and the Tortoise, the Dichotomy, and the Arrow paradox. See how infinite series resolve these puzzles.',
+    sectionId: 1,
+    sectionTitle: 'Zeno of Elea',
+    category: 'Ancient Mathematics',
+    icon: '🐢',
+  },
+  {
+    id: 'archimedes-demo',
+    title: "Archimedes' Mathematics",
+    description: 'Compute π using inscribed polygons, explore the Archimedean spiral, and see the quadrature of the parabola.',
+    sectionId: 3,
+    sectionTitle: 'Archimedes',
+    category: 'Ancient Mathematics',
+    icon: '🌀',
+  },
+  {
+    id: 'pascals-triangle',
+    title: "Pascal's Triangle",
+    description: 'Generate Pascal\'s triangle and discover hidden patterns: binomial coefficients, Fibonacci numbers, and the Sierpinski fractal.',
+    sectionId: 6,
+    sectionTitle: 'Blaise Pascal',
+    category: 'Birth of Modern Mathematics',
+    icon: '🔺',
+  },
+  {
+    id: 'euler-identity',
+    title: "Euler's Identity",
+    description: "Visualize the most beautiful equation in mathematics: e^(iπ) + 1 = 0. Watch complex exponentials trace the unit circle.",
+    sectionId: 10,
+    sectionTitle: 'Leonhard Euler',
+    category: 'The Age of Euler',
+    icon: '🌟',
+  },
+  {
+    id: 'quaternion-demo',
+    title: "Hamilton's Quaternions",
+    description: 'Rotate objects in 3D using quaternions. See the multiplication rules: i² = j² = k² = ijk = -1.',
+    sectionId: 21,
+    sectionTitle: 'William Rowan Hamilton',
+    category: 'Tragic Geniuses',
+    icon: '🎲',
+  },
+  {
+    id: 'cantor-set',
+    title: "Cantor's Set",
+    description: "Remove middle thirds forever. The result has measure zero but uncountably many points!",
+    sectionId: 30,
+    sectionTitle: 'Georg Cantor',
+    category: 'The Rigor Revolution',
+    icon: '♾️',
   },
 ];
 // =============================================================================

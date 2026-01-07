@@ -23,6 +23,7 @@ export function DistanceExplorer({ className = '' }: { className?: string }) {
   });
 
   // Convert math coords to canvas coords
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const toCanvas = (p: Point): Point => ({
     x: p.x * 40 + 50,
     y: 350 - p.y * 40,

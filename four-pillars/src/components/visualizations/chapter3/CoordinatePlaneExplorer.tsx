@@ -200,7 +200,7 @@ export function CoordinatePlaneExplorer({ className = '' }: { className?: string
 
     const cx = e.clientX - rect.left;
     const cy = e.clientY - rect.top;
-    let p = toMath(cx, cy);
+    const p = toMath(cx, cy);
 
     // Snap to grid
     p.x = Math.round(p.x * 2) / 2;
