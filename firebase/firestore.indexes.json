@@ -23,6 +23,14 @@
         { "fieldPath": "pubkeyHex", "order": "ASCENDING" },
         { "fieldPath": "createdAt", "order": "ASCENDING" }
       ]
+    },
+    {
+      "collectionGroup": "nostr_daily_reports",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "accountName", "order": "ASCENDING" },
+        { "fieldPath": "date", "order": "DESCENDING" }
+      ]
     }
   ],
   "fieldOverrides": []
