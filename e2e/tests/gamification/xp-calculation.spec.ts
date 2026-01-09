@@ -2,6 +2,9 @@ import { test, expect } from '@playwright/test';
 import { COURSES, getCourseById } from '../../config/courses';
 import { QuizComponent } from '../../page-objects/QuizComponent';
 
+// Storage key must match shared/gamification/storage.ts
+const STORAGE_KEY = 'magic-internet-math-progress';
+
 /**
  * XP Calculation Tests
  *
@@ -12,24 +15,26 @@ test.describe('XP Calculation', () => {
 
   // Helper to get current XP from localStorage
   async function getCurrentXP(page: any): Promise<number> {
-    return page.evaluate(() => {
-      const state = localStorage.getItem('gamificationState');
+    return page.evaluate((storageKey: string) => {
+      const state = localStorage.getItem(storageKey);
       if (state) {
         try {
-          return JSON.parse(state).totalXP || 0;
+          const parsed = JSON.parse(state);
+          // XP is stored in user.totalXP (GamificationState.user.totalXP)
+          return parsed.user?.totalXP || parsed.totalXP || 0;
         } catch {
           return 0;
         }
       }
       return 0;
-    });
+    }, STORAGE_KEY);
   }
 
   // Helper to clear gamification state
   async function clearState(page: any): Promise<void> {
-    await page.evaluate(() => {
-      localStorage.removeItem('gamificationState');
-    });
+    await page.evaluate((storageKey: string) => {
+      localStorage.removeItem(storageKey);
+    }, STORAGE_KEY);
   }
 
   for (const course of testCourses) {
@@ -131,22 +136,23 @@ test.describe('XP Award Amounts', () => {
   const course = COURSES[0];
 
   async function getCurrentXP(page: any): Promise<number> {
-    return page.evaluate(() => {
-      const state = localStorage.getItem('gamificationState');
+    return page.evaluate((storageKey: string) => {
+      const state = localStorage.getItem(storageKey);
       if (state) {
         try {
-          return JSON.parse(state).totalXP || 0;
+          const parsed = JSON.parse(state);
+          return parsed.user?.totalXP || parsed.totalXP || 0;
         } catch {
           return 0;
         }
       }
       return 0;
-    });
+    }, STORAGE_KEY);
   }
 
   test('section visit awards expected XP amount', async ({ page }) => {
     await page.goto(course.baseUrl);
-    await page.evaluate(() => localStorage.removeItem('gamificationState'));
+    await page.evaluate((key: string) => localStorage.removeItem(key), STORAGE_KEY);
 
     await page.goto(`${course.baseUrl}#/section/1`);
     await page.waitForLoadState('networkidle');
@@ -163,7 +169,7 @@ test.describe('XP Award Amounts', () => {
     // This is hard to test without knowing correct answers
     // Just verify some XP is awarded
     await page.goto(course.baseUrl);
-    await page.evaluate(() => localStorage.removeItem('gamificationState'));
+    await page.evaluate((key: string) => localStorage.removeItem(key), STORAGE_KEY);
 
     await page.goto(`${course.baseUrl}#/quiz/1`);
     await page.waitForLoadState('networkidle');
@@ -205,7 +211,7 @@ test.describe('XP Display', () => {
 
   test('XP updates after earning', async ({ page }) => {
     await page.goto(course.baseUrl);
-    await page.evaluate(() => localStorage.removeItem('gamificationState'));
+    await page.evaluate((key: string) => localStorage.removeItem(key), STORAGE_KEY);
 
     // Visit section to earn XP
     await page.goto(`${course.baseUrl}#/section/1`);
@@ -234,7 +240,7 @@ test.describe('XP Notifications', () => {
 
   test('shows XP gain notification', async ({ page }) => {
     await page.goto(course.baseUrl);
-    await page.evaluate(() => localStorage.removeItem('gamificationState'));
+    await page.evaluate((key: string) => localStorage.removeItem(key), STORAGE_KEY);
 
     // Visit section to earn XP
     await page.goto(`${course.baseUrl}#/section/1`);
@@ -263,22 +269,23 @@ test.describe('XP Edge Cases', () => {
   const course = COURSES[0];
 
   async function getCurrentXP(page: any): Promise<number> {
-    return page.evaluate(() => {
-      const state = localStorage.getItem('gamificationState');
+    return page.evaluate((storageKey: string) => {
+      const state = localStorage.getItem(storageKey);
       if (state) {
         try {
-          return JSON.parse(state).totalXP || 0;
+          const parsed = JSON.parse(state);
+          return parsed.user?.totalXP || parsed.totalXP || 0;
         } catch {
           return 0;
         }
       }
       return 0;
-    });
+    }, STORAGE_KEY);
   }
 
   test('revisiting section does not double-award XP', async ({ page }) => {
     await page.goto(course.baseUrl);
-    await page.evaluate(() => localStorage.removeItem('gamificationState'));
+    await page.evaluate((key: string) => localStorage.removeItem(key), STORAGE_KEY);
 
     // Visit section 1
     await page.goto(`${course.baseUrl}#/section/1`);
@@ -313,9 +320,9 @@ test.describe('XP Edge Cases', () => {
     await page.goto(course.baseUrl);
 
     // Corrupt the localStorage
-    await page.evaluate(() => {
-      localStorage.setItem('gamificationState', 'not valid json');
-    });
+    await page.evaluate((key: string) => {
+      localStorage.setItem(key, 'not valid json');
+    }, STORAGE_KEY);
 
     // Navigate - should not crash
     await page.goto(`${course.baseUrl}#/section/1`);
@@ -341,21 +348,20 @@ test.describe('XP State Management', () => {
     await page.waitForLoadState('networkidle');
     await page.waitForTimeout(1000);
 
-    const state = await page.evaluate(() => {
-      const stateStr = localStorage.getItem('gamificationState');
+    const state = await page.evaluate((storageKey: string) => {
+      const stateStr = localStorage.getItem(storageKey);
       return stateStr ? JSON.parse(stateStr) : null;
-    });
+    }, STORAGE_KEY);
 
     if (state) {
-      // Check expected properties
-      expect(typeof state.totalXP).toBe('number');
+      // Check expected structure (GamificationState)
+      expect(state.user).toBeDefined();
+      expect(typeof state.user.totalXP).toBe('number');
+      expect(typeof state.user.level).toBe('number');
 
       // Optional properties
-      if ('level' in state) {
-        expect(typeof state.level).toBe('number');
-      }
-      if ('streak' in state) {
-        expect(typeof state.streak).toBe('number');
+      if (state.streak) {
+        expect(typeof state.streak.currentStreak).toBe('number');
       }
     }
   });
