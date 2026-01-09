@@ -759,19 +759,43 @@ async function saveCategory() {
         sectionId: state.editingCategoryId,
         updates: { title, subtitle, style }
       });
+      // Update local state directly
+      const section = state.sections.find(s => s.id === state.editingCategoryId);
+      if (section) {
+        section.title = title;
+        section.subtitle = subtitle;
+        section.style = style;
+      }
+      const originalSection = state.originalSections.find(s => s.id === state.editingCategoryId);
+      if (originalSection) {
+        originalSection.title = title;
+        originalSection.subtitle = subtitle;
+        originalSection.style = style;
+      }
       showToast('Category updated', 'success');
     } else {
       // Create new
-      await window.callFunction('createSection', {
+      const result = await window.callFunction('createSection', {
         title,
         subtitle,
         style
       });
+      // Add to local state
+      const newSection = {
+        id: result.sectionId,
+        title,
+        subtitle,
+        style,
+        order: state.sections.length,
+        courses: []
+      };
+      state.sections.push(newSection);
+      state.originalSections.push({ ...newSection });
       showToast('Category created', 'success');
     }
-    
+
     closeCategoryModal();
-    await loadData();
+    renderCategories();
   } catch (error) {
     console.error('Error saving category:', error);
     showToast('Failed to save: ' + error.message, 'error');
@@ -796,9 +820,12 @@ window.confirmDeleteCategory = function(sectionId) {
   confirmBtn.onclick = async () => {
     try {
       await window.callFunction('deleteSection', { sectionId });
+      // Update local state directly
+      state.sections = state.sections.filter(s => s.id !== sectionId);
+      state.originalSections = state.originalSections.filter(s => s.id !== sectionId);
       closeConfirmModal();
       showToast('Category deleted', 'success');
-      await loadData();
+      renderCategories();
     } catch (error) {
       console.error('Error deleting category:', error);
       showToast('Failed to delete: ' + error.message, 'error');
@@ -844,9 +871,12 @@ async function saveAdmin() {
   
   try {
     await window.callFunction('addCourseAdmin', { npub, displayName });
+    // Update local state directly
+    const newAdmin = { npub, displayName: displayName || null, addedAt: new Date().toISOString() };
+    state.admins.push(newAdmin);
     closeAdminModal();
     showToast('Admin added', 'success');
-    await loadData();
+    renderAdmins();
   } catch (error) {
     console.error('Error adding admin:', error);
     showToast('Failed to add admin: ' + error.message, 'error');
@@ -872,9 +902,11 @@ window.confirmRemoveAdmin = function(npub) {
   confirmBtn.onclick = async () => {
     try {
       await window.callFunction('removeCourseAdmin', { npub });
+      // Update local state directly
+      state.admins = state.admins.filter(a => a.npub !== npub);
       closeConfirmModal();
       showToast('Admin removed', 'success');
-      await loadData();
+      renderAdmins();
     } catch (error) {
       console.error('Error removing admin:', error);
       showToast('Failed to remove admin: ' + error.message, 'error');
