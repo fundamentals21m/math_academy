@@ -165,8 +165,8 @@
 
     document.addEventListener('DOMContentLoaded', async () => {
       // Render course sections (with placeholder for featured content after 'featured' section)
-      // Use static data from courses.js
-      await renderCourseHub('courses-container', { insertFeaturedContentAfter: 'featured', useFirebase: false });
+      // Load from Firebase with fallback to static data
+      await renderCourseHub('courses-container', { insertFeaturedContentAfter: 'featured', useFirebase: true });
 
       // Initialize the expand/collapse all toggle button
       initToggleButton();
