@@ -16,6 +16,7 @@ let state = {
   draggedItem: null,
   draggedType: null, // 'section' or 'course'
   editingCategoryId: null, // For edit vs add mode
+  editingCourseId: null, // For course editing
 };
 
 // Wait for Firebase Auth to be ready and get current user
@@ -256,6 +257,7 @@ function renderCourses() {
           <span class="drag-handle">&#9776;</span>
           <span class="course-icon">${course.icon || ''}</span>
           <span class="course-title">${escapeHtml(course.title)}</span>
+          <button class="btn-secondary btn-small" onclick="editCourse('${course.id}')" style="margin-left: auto;">Edit</button>
         </div>
         <div class="course-categories-grid">
           ${state.sections.map(section => {
@@ -380,7 +382,12 @@ function setupEventListeners() {
   // Confirm modal
   document.getElementById('close-confirm-modal')?.addEventListener('click', closeConfirmModal);
   document.getElementById('cancel-confirm-btn')?.addEventListener('click', closeConfirmModal);
-  
+
+  // Course modal
+  document.getElementById('close-course-modal')?.addEventListener('click', closeCourseModal);
+  document.getElementById('cancel-course-btn')?.addEventListener('click', closeCourseModal);
+  document.getElementById('save-course-btn')?.addEventListener('click', saveCourseDetails);
+
   // Save/discard buttons
   document.getElementById('save-changes-btn')?.addEventListener('click', saveAllChanges);
   document.getElementById('discard-changes-btn')?.addEventListener('click', discardChanges);
@@ -876,6 +883,63 @@ window.confirmRemoveAdmin = function(npub) {
   
   modal.style.display = 'flex';
 };
+
+// =================
+// Course Operations
+// =================
+
+/**
+ * Open course edit modal
+ */
+window.editCourse = function(courseId) {
+  const course = state.courses.find(c => c.id === courseId);
+  if (!course) return;
+
+  state.editingCourseId = courseId;
+
+  document.getElementById('course-title-input').value = course.title || '';
+  document.getElementById('course-description-input').value = course.description || '';
+  document.getElementById('course-icon-input').value = course.icon || '';
+
+  document.getElementById('course-modal').style.display = 'flex';
+  document.getElementById('course-title-input').focus();
+};
+
+function closeCourseModal() {
+  document.getElementById('course-modal').style.display = 'none';
+  state.editingCourseId = null;
+}
+
+/**
+ * Save course details
+ */
+async function saveCourseDetails() {
+  const courseId = state.editingCourseId;
+  if (!courseId) return;
+
+  const title = document.getElementById('course-title-input').value.trim();
+  const description = document.getElementById('course-description-input').value.trim();
+  const icon = document.getElementById('course-icon-input').value.trim();
+
+  if (!title) {
+    showToast('Title is required', 'error');
+    return;
+  }
+
+  try {
+    await window.callFunction('updateCourse', {
+      courseId,
+      updates: { title, description, icon }
+    });
+
+    closeCourseModal();
+    showToast('Course updated', 'success');
+    await loadData();
+  } catch (error) {
+    console.error('Error updating course:', error);
+    showToast('Failed to update course: ' + error.message, 'error');
+  }
+}
 
 // =================
 // UI Helpers
