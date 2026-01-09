@@ -345,6 +345,20 @@ export const COURSES = [
     shortName: 'Only The Strong',
     progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)',
   },
+  {
+    id: 'euler_intro',
+    title: 'Introduction to the Analysis of the Infinite',
+    description: "Euler's 1748 masterpiece on the theory of curved lines. Study algebraic and transcendental curves, from conic sections to surfaces, through the revolutionary analytical approach that transformed mathematics.",
+    icon: '∞',
+    url: 'https://euler-intro.vercel.app/',
+    tags: ['5 Parts', '22 Sections'],
+    sections: ['seminal'],
+    totalSections: 22,
+    progressPrefix: 'euler-intro:',
+    leaderboardUrl: 'https://euler-intro.vercel.app/#/leaderboard',
+    shortName: 'Euler Intro',
+    progressGradient: 'linear-gradient(90deg, #d97706, #f59e0b)',
+  },
 
   // MATH HISTORY
   {
