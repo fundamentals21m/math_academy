@@ -117,7 +117,7 @@ export const COURSES = [
     icon: '📊',
     url: 'islr-deploy/',
     tags: ['13 Chapters', '62 Sections'],
-    sections: ['featured'],
+    sections: ['prob_stats'],
     totalSections: 62,
     progressPrefix: 'islr:',
     leaderboardUrl: 'islr-deploy/#/leaderboard',
