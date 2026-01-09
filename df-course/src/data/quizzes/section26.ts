@@ -1,0 +1,69 @@
+import type { QuizQuestion } from './types';
+
+export const section26Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The (external) direct product $G \\times H$ has elements:',
+    options: [
+      'Pairs $(g, h)$ with $g \\in G, h \\in H$',
+      'Products $gh$ with $g \\in G, h \\in H$',
+      'The union $G \\cup H$',
+      'Cosets $gH$ with $g \\in G$'
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$G \\times H = \\{(g, h) : g \\in G, h \\in H\\}$ with operation $(g_1, h_1)(g_2, h_2) = (g_1 g_2, h_1 h_2)$.',
+  },
+  {
+    id: 2,
+    type: 'numeric',
+    question: 'What is $|\\mathbb{Z}_6 \\times \\mathbb{Z}_4|$?',
+    correctAnswer: 24,
+    numericRange: { min: 1, max: 100, precision: 0 },
+    difficulty: 'easy',
+    explanation: '$|G \\times H| = |G| \\cdot |H| = 6 \\cdot 4 = 24$.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'A group $G$ is an internal direct product of subgroups $H$ and $K$ if:',
+    options: [
+      '$G = H \\cup K$',
+      '$G = HK$, $H \\cap K = \\{e\\}$, and $H, K$ are both normal',
+      '$G = H \\times K$ as sets',
+      '$H$ and $K$ are conjugate'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Internal direct product: $G = HK$, $H \\cap K = \\{e\\}$, and both $H, K \\trianglelefteq G$.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: '$\\mathbb{Z}_6$ is isomorphic to which direct product?',
+    options: [
+      '$\\mathbb{Z}_2 \\times \\mathbb{Z}_2$',
+      '$\\mathbb{Z}_2 \\times \\mathbb{Z}_3$',
+      '$\\mathbb{Z}_3 \\times \\mathbb{Z}_3$',
+      '$\\mathbb{Z}_4 \\times \\mathbb{Z}_2$'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}_6 \\cong \\mathbb{Z}_2 \\times \\mathbb{Z}_3$ since $\\gcd(2, 3) = 1$. By the Chinese Remainder Theorem, $\\mathbb{Z}_{mn} \\cong \\mathbb{Z}_m \\times \\mathbb{Z}_n$ when $\\gcd(m,n) = 1$.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Is $\\mathbb{Z}_4$ isomorphic to $\\mathbb{Z}_2 \\times \\mathbb{Z}_2$?',
+    options: [
+      'Yes, they both have order 4',
+      'No, $\\mathbb{Z}_4$ is cyclic but $\\mathbb{Z}_2 \\times \\mathbb{Z}_2$ is not',
+      'Yes, both are abelian',
+      'No, they have different numbers of elements'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}_4$ is cyclic (has an element of order 4), while $\\mathbb{Z}_2 \\times \\mathbb{Z}_2$ has no element of order 4 (max order is 2).',
+  },
+];

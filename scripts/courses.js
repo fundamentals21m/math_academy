@@ -271,6 +271,20 @@ export const COURSES = [
     shortName: 'Abstract Algebra',
     progressGradient: 'linear-gradient(90deg, #f97316, #fb923c)',
   },
+  {
+    id: 'df',
+    title: 'Abstract Algebra (Dummit & Foote)',
+    description: "The definitive graduate-level abstract algebra textbook. Covers groups, rings, modules, fields, Galois theory, algebraic geometry, homological algebra, and representation theory.",
+    icon: 'G',
+    url: 'https://df-course.vercel.app/',
+    tags: ['6 Parts', '95 Sections'],
+    sections: ['algebra'],
+    totalSections: 95,
+    progressPrefix: 'df:',
+    leaderboardUrl: 'https://df-course.vercel.app/#/leaderboard',
+    shortName: 'Dummit-Foote',
+    progressGradient: 'linear-gradient(90deg, #e11d48, #f43f5e)',
+  },
 
   // GEOMETRY
   {
