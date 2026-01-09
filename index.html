@@ -142,13 +142,16 @@
 
   <!-- Hub Renderer -->
   <script type="module">
-    import { renderCourseHub, renderLeaderboardLinks, getCourseCount } from './scripts/hubRenderer.js';
+    import { renderCourseHub, renderLeaderboardLinks, getCourseCount, initToggleButton } from './scripts/hubRenderer.js';
     import { renderProgressDashboard } from './scripts/progressDashboard.js';
     import { renderCardinalityViz } from './scripts/cardinalityViz.js';
 
     document.addEventListener('DOMContentLoaded', () => {
       // Render course sections (with placeholder for featured content after 'featured' section)
       renderCourseHub('courses-container', { insertFeaturedContentAfter: 'featured' });
+
+      // Initialize the expand/collapse all toggle button
+      initToggleButton();
 
       // Render featured content visualization into the inline placeholder
       renderCardinalityViz('featured-content-inline');
@@ -208,8 +211,13 @@
       </p>
     </section>
 
-    <h2 class="section-title">Choose Your Path</h2>
-    <p class="section-subtitle" id="courses-subtitle">Courses organized by subject</p>
+    <div class="section-controls">
+      <div>
+        <h2 class="section-title" style="margin-bottom: 0;">Choose Your Path</h2>
+        <p class="section-subtitle" id="courses-subtitle" style="margin-bottom: 0;">Courses organized by subject</p>
+      </div>
+      <button id="toggle-all-sections" class="toggle-all-btn">Expand All</button>
+    </div>
 
     <!-- Course sections rendered dynamically (includes inline featured content) -->
     <div id="courses-container"></div>

@@ -3,13 +3,7 @@
  * Styles specific to the Magic Internet Math hub/landing page
  */
 
-/* Course Grid */
-.courses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
+/* Course Grid - base styles moved to collapsible section */
 
 /* Course Cards */
 .course-card {
@@ -79,12 +73,100 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+  padding: 0.75rem 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.level-header:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.level-header.expanded {
+  margin-bottom: 0;
 }
 
 .level-description {
   color: #64748b;
   font-size: 0.9rem;
+  flex: 1;
+}
+
+/* Chevron icon for collapsible sections */
+.level-chevron {
+  font-size: 0.75rem;
+  color: #64748b;
+  transition: transform 0.2s ease;
+  margin-left: auto;
+  padding: 0.25rem;
+}
+
+.level-header.expanded .level-chevron {
+  transform: rotate(90deg);
+}
+
+/* Collapsible courses grid */
+.courses-grid {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+  animation: slideDown 0.25s ease-out;
+}
+
+.courses-grid.expanded {
+  display: grid;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Expand/Collapse All Toggle */
+.section-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.toggle-all-btn {
+  background: transparent;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #818cf8;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-all-btn:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Course count badge */
+.course-count {
+  font-size: 0.75rem;
+  color: #64748b;
+  background: rgba(100, 116, 139, 0.15);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
 }
 
 /* Level Badges */
