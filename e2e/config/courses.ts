@@ -237,6 +237,17 @@ export const COURSES: CourseConfig[] = [
 
   // Math History
   {
+    id: 'math_history',
+    name: 'Mathematics and Its History',
+    baseUrl: 'https://mathhistory.vercel.app',
+    totalSections: 72,
+    progressPrefix: 'math_history:',
+    icon: '📜',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
+  {
     id: 'mom',
     name: 'Men of Mathematics',
     baseUrl: resolveUrl('mom-deploy/'),
