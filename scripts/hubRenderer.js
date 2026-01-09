@@ -5,6 +5,7 @@
  * - User preferences stored in localStorage
  * - Expand All / Collapse All functionality
  * - Dynamic loading from Firebase with fallback to static data
+ * - Inline progress indicators on course cards
  */
 import { SECTIONS as STATIC_SECTIONS, COURSES as STATIC_COURSES, getCoursesForSection as getStaticCoursesForSection } from './courses.js';
 
@@ -12,6 +13,11 @@ import { SECTIONS as STATIC_SECTIONS, COURSES as STATIC_COURSES, getCoursesForSe
 let DATA_SECTIONS = STATIC_SECTIONS;
 let DATA_COURSES = STATIC_COURSES;
 let dataSource = 'static'; // 'static' or 'firebase'
+
+// Progress data - loaded from localStorage or Firebase
+let progressData = null;
+const PROGRESS_STORAGE_KEY = 'magic-internet-math-progress';
+const NOSTR_AUTH_KEY = 'nostr-auth';
 
 // Storage key for expanded sections
 const STORAGE_KEY = 'hub:expandedSections';
@@ -66,6 +72,69 @@ async function loadFromFirebase() {
     console.warn('Failed to load from Firebase, using static data:', error.message);
   }
   return false;
+}
+
+/**
+ * Load progress data from localStorage or Firebase
+ * Sets the progressData module variable
+ */
+async function loadProgressData() {
+  // First check for Nostr auth to fetch from Firebase
+  try {
+    const nostrAuth = localStorage.getItem(NOSTR_AUTH_KEY);
+    if (nostrAuth && window.getUserScores) {
+      const auth = JSON.parse(nostrAuth);
+      if (auth?.npub) {
+        const result = await window.getUserScores(auth.npub);
+        if (result && result.scores && result.scores.length > 0) {
+          // Convert Firebase scores to progress format
+          progressData = { source: 'firebase', scores: result.scores };
+          return;
+        }
+      }
+    }
+  } catch (e) {
+    console.warn('Failed to load progress from Firebase:', e);
+  }
+
+  // Fallback to localStorage
+  try {
+    const data = localStorage.getItem(PROGRESS_STORAGE_KEY);
+    if (data) {
+      const state = JSON.parse(data);
+      if (state.user?.sectionsCompleted?.length > 0) {
+        progressData = { source: 'localStorage', sectionsCompleted: state.user.sectionsCompleted };
+      }
+    }
+  } catch (e) {
+    console.warn('Failed to load progress from localStorage:', e);
+  }
+}
+
+/**
+ * Get progress percentage for a specific course
+ * @param {Object} course - The course object
+ * @returns {number} Progress percentage (0-100), or 0 if no progress
+ */
+function getCourseProgress(course) {
+  if (!progressData || !course.progressPrefix || !course.totalSections) {
+    return 0;
+  }
+
+  if (progressData.source === 'firebase' && progressData.scores) {
+    // Find score for this course
+    const courseScore = progressData.scores.find(s => s.courseId === course.id);
+    if (courseScore?.xp) {
+      // Estimate progress based on XP (~50 XP per section)
+      const estimatedSections = Math.min(Math.floor(courseScore.xp / 50), course.totalSections);
+      return (estimatedSections / course.totalSections) * 100;
+    }
+  } else if (progressData.source === 'localStorage' && progressData.sectionsCompleted) {
+    const completed = progressData.sectionsCompleted.filter(id => id.startsWith(course.progressPrefix)).length;
+    return (completed / course.totalSections) * 100;
+  }
+
+  return 0;
 }
 
 /**
@@ -211,12 +280,19 @@ function renderCourseCard(course) {
     .map(tag => `<span class="course-tag">${tag}</span>`)
     .join('');
 
+  // Get progress for this course
+  const progress = getCourseProgress(course);
+  const progressHtml = progress > 0
+    ? `<div class="card-progress-bar" style="--progress: ${progress}%; --gradient: ${course.progressGradient || 'linear-gradient(90deg, #6366f1, #818cf8)'}"></div>`
+    : '';
+
   return `
-    <a href="${course.url}" ${targetAttr} class="course-card" data-course-id="${course.id}">
+    <a href="${course.url}" ${targetAttr} class="course-card ${progress > 0 ? 'has-progress' : ''}" data-course-id="${course.id}">
       <div class="course-icon">${course.icon || ''}</div>
       <h3 class="course-title">${course.title}</h3>
       <p class="course-description">${course.description}</p>
       <div class="course-meta">${tagsHtml}</div>
+      ${progressHtml}
     </a>
   `;
 }
@@ -279,11 +355,14 @@ export async function renderCourseHub(containerId, options = {}) {
         <p style="margin-top: 1rem;">Loading courses...</p>
       </div>
     `;
-    
+
     // Wait a moment for Firebase to initialize
     await new Promise(resolve => setTimeout(resolve, 500));
     await loadFromFirebase();
   }
+
+  // Load progress data for inline card progress bars
+  await loadProgressData();
 
   const expandedSections = getExpandedSections();
 

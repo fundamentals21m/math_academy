@@ -160,12 +160,12 @@
   <!-- Hub Renderer -->
   <script type="module">
     import { renderCourseHub, renderLeaderboardLinks, getCourseCount, initToggleButton } from './scripts/hubRenderer.js';
-    import { renderProgressDashboard } from './scripts/progressDashboard.js';
     import { renderCardinalityViz } from './scripts/cardinalityViz.js';
 
     document.addEventListener('DOMContentLoaded', async () => {
       // Render course sections (with placeholder for featured content after 'featured' section)
       // Load from Firebase with fallback to static data
+      // Progress is now shown inline on course cards
       await renderCourseHub('courses-container', { insertFeaturedContentAfter: 'featured', useFirebase: true });
 
       // Initialize the expand/collapse all toggle button
@@ -173,9 +173,6 @@
 
       // Render featured content visualization into the inline placeholder
       renderCardinalityViz('featured-content-inline');
-
-      // Render progress dashboard
-      renderProgressDashboard('progress-dashboard');
 
       // Render leaderboard links
       renderLeaderboardLinks('leaderboard-links');
@@ -238,10 +235,8 @@
     </div>
 
     <!-- Course sections rendered dynamically (includes inline featured content) -->
+    <!-- Progress is shown inline on course cards -->
     <div id="courses-container"></div>
-
-    <!-- Progress Dashboard -->
-    <div id="progress-dashboard" style="display: none;"></div>
 
     <div class="callout callout-info" style="margin-top: 3rem;">
       <strong>Start with the basics!</strong> New to math? Begin with Basic Algebra to build your foundation.
