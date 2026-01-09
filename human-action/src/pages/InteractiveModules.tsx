@@ -16,15 +16,50 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'marginal-utility',
+    title: 'Diminishing Marginal Utility',
+    description: 'See why each additional unit of a good provides less satisfaction. This is the foundation of subjective value theory.',
+    sectionId: 7,
+    sectionTitle: 'Action Within the World',
+    category: 'Human Action',
+    icon: '📉',
+  },
+  {
+    id: 'comparative-advantage',
+    title: 'Ricardian Law of Association',
+    description: 'Explore how specialization and trade benefit everyone — even when one party is more productive at everything.',
+    sectionId: 8,
+    sectionTitle: 'Human Society',
+    category: 'Society',
+    icon: '🤝',
+  },
+  {
+    id: 'time-preference',
+    title: 'Time Preference & Interest',
+    description: 'Understand why present goods are worth more than future goods, and how interest rates emerge naturally from human action.',
+    sectionId: 18,
+    sectionTitle: 'Action in the Passing of Time',
+    category: 'Catallactics',
+    icon: '⏰',
+  },
+  {
+    id: 'business-cycle',
+    title: 'Austrian Business Cycle',
+    description: 'Watch how credit expansion creates artificial booms and inevitable busts. See the phases of the trade cycle unfold.',
+    sectionId: 20,
+    sectionTitle: 'Interest, Credit Expansion, and the Trade Cycle',
+    category: 'Catallactics',
+    icon: '📈',
+  },
+  {
+    id: 'price-controls',
+    title: 'Price Controls',
+    description: 'Manipulate price ceilings and floors to see how government interference creates shortages and surpluses.',
+    sectionId: 30,
+    sectionTitle: 'Interference with the Structure of Prices',
+    category: 'Interventionism',
+    icon: '🚫',
   },
 ];
 // =============================================================================

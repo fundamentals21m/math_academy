@@ -3,18 +3,19 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-   "scripts": {
-     "dev": "vite",
-     "build": "vite build",
-     "typecheck": "tsc -b",
-     "lint": "eslint .",
-     "preview": "vite preview",
-     "test": "vitest",
-     "test:ui": "vitest --ui",
-     "test:run": "vitest run",
-     "test:coverage": "vitest run --coverage"
-   },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc -b",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
   "dependencies": {
+    "dompurify": "^3.3.1",
     "firebase": "^10.14.0",
     "framer-motion": "^12.23.26",
     "katex": "^0.16.27",

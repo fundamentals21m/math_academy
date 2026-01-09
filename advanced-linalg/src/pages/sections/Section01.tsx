@@ -28,35 +28,35 @@ export default function Section01() {
 
       <Definition title="Field">
         <p>
-          A <strong>field</strong> is a set <InlineMath>F</InlineMath> together with two binary operations,
-          addition (<InlineMath>+</InlineMath>) and multiplication (<InlineMath>\cdot</InlineMath>), satisfying the
+          A <strong>field</strong> is a set <InlineMath>{`F`}</InlineMath> together with two binary operations,
+          addition (<InlineMath>{`+`}</InlineMath>) and multiplication (<InlineMath>{`\\cdot`}</InlineMath>), satisfying the
           following axioms:
         </p>
         <div className="mt-4 space-y-3">
           <div className="p-3 bg-dark-800/50 rounded-lg">
             <h4 className="text-sm font-semibold text-blue-400 mb-2">Addition Axioms</h4>
             <ul className="list-disc list-inside text-dark-300 space-y-1 text-sm">
-              <li><strong>A1 (Closure):</strong> For all <InlineMath>a, b \in F</InlineMath>, <InlineMath>a + b \in F</InlineMath></li>
-              <li><strong>A2 (Commutativity):</strong> <InlineMath>a + b = b + a</InlineMath></li>
-              <li><strong>A3 (Associativity):</strong> <InlineMath>(a + b) + c = a + (b + c)</InlineMath></li>
-              <li><strong>A4 (Identity):</strong> There exists <InlineMath>0 \in F</InlineMath> such that <InlineMath>a + 0 = a</InlineMath></li>
-              <li><strong>A5 (Inverses):</strong> For each <InlineMath>a</InlineMath>, there exists <InlineMath>-a</InlineMath> such that <InlineMath>a + (-a) = 0</InlineMath></li>
+              <li><strong>A1 (Closure):</strong> For all <InlineMath>{`a, b \\in F`}</InlineMath>, <InlineMath>{`a + b \\in F`}</InlineMath></li>
+              <li><strong>A2 (Commutativity):</strong> <InlineMath>{`a + b = b + a`}</InlineMath></li>
+              <li><strong>A3 (Associativity):</strong> <InlineMath>{`(a + b) + c = a + (b + c)`}</InlineMath></li>
+              <li><strong>A4 (Identity):</strong> There exists <InlineMath>{`0 \\in F`}</InlineMath> such that <InlineMath>{`a + 0 = a`}</InlineMath></li>
+              <li><strong>A5 (Inverses):</strong> For each <InlineMath>{`a`}</InlineMath>, there exists <InlineMath>{`-a`}</InlineMath> such that <InlineMath>{`a + (-a) = 0`}</InlineMath></li>
             </ul>
           </div>
           <div className="p-3 bg-dark-800/50 rounded-lg">
             <h4 className="text-sm font-semibold text-blue-400 mb-2">Multiplication Axioms</h4>
             <ul className="list-disc list-inside text-dark-300 space-y-1 text-sm">
-              <li><strong>M1 (Closure):</strong> For all <InlineMath>a, b \in F</InlineMath>, <InlineMath>a \cdot b \in F</InlineMath></li>
-              <li><strong>M2 (Commutativity):</strong> <InlineMath>a \cdot b = b \cdot a</InlineMath></li>
-              <li><strong>M3 (Associativity):</strong> <InlineMath>(a \cdot b) \cdot c = a \cdot (b \cdot c)</InlineMath></li>
-              <li><strong>M4 (Identity):</strong> There exists <InlineMath>1 \in F</InlineMath> with <InlineMath>1 \neq 0</InlineMath> such that <InlineMath>a \cdot 1 = a</InlineMath></li>
-              <li><strong>M5 (Inverses):</strong> For each <InlineMath>a \neq 0</InlineMath>, there exists <InlineMath>a^{'{-1}'}</InlineMath> such that <InlineMath>a \cdot a^{'{-1}'} = 1</InlineMath></li>
+              <li><strong>M1 (Closure):</strong> For all <InlineMath>{`a, b \\in F`}</InlineMath>, <InlineMath>{`a \\cdot b \\in F`}</InlineMath></li>
+              <li><strong>M2 (Commutativity):</strong> <InlineMath>{`a \\cdot b = b \\cdot a`}</InlineMath></li>
+              <li><strong>M3 (Associativity):</strong> <InlineMath>{`(a \\cdot b) \\cdot c = a \\cdot (b \\cdot c)`}</InlineMath></li>
+              <li><strong>M4 (Identity):</strong> There exists <InlineMath>{`1 \\in F`}</InlineMath> with <InlineMath>{`1 \\neq 0`}</InlineMath> such that <InlineMath>{`a \\cdot 1 = a`}</InlineMath></li>
+              <li><strong>M5 (Inverses):</strong> For each <InlineMath>{`a \\neq 0`}</InlineMath>, there exists <InlineMath>{`a^{-1}`}</InlineMath> such that <InlineMath>{`a \\cdot a^{-1} = 1`}</InlineMath></li>
             </ul>
           </div>
           <div className="p-3 bg-dark-800/50 rounded-lg">
             <h4 className="text-sm font-semibold text-blue-400 mb-2">Distributive Law</h4>
             <ul className="list-disc list-inside text-dark-300 space-y-1 text-sm">
-              <li><strong>D (Distributivity):</strong> <InlineMath>a \cdot (b + c) = a \cdot b + a \cdot c</InlineMath></li>
+              <li><strong>D (Distributivity):</strong> <InlineMath>{`a \\cdot (b + c) = a \\cdot b + a \\cdot c`}</InlineMath></li>
             </ul>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Section01() {
           (a + bi)(c + di) = (ac - bd) + (ad + bc)i
         `}</MathBlock>
         <p className="mt-2">
-          The multiplicative inverse of <InlineMath>a + bi \neq 0</InlineMath> is:
+          The multiplicative inverse of <InlineMath>{`a + bi \\neq 0`}</InlineMath> is:
         </p>
         <MathBlock>{`
           (a + bi)^{-1} = \\frac{a - bi}{a^2 + b^2}
@@ -100,8 +100,8 @@ export default function Section01() {
 
       <Example title="Finite Fields">
         <p>
-          For any prime <InlineMath>p</InlineMath>, the integers modulo <InlineMath>p</InlineMath>, denoted <InlineMath>{`\\mathbb{Z}_p`}</InlineMath> or <InlineMath>{`\\mathbb{F}_p`}</InlineMath>,
-          form a field with <InlineMath>p</InlineMath> elements. For example, <InlineMath>{`\\mathbb{F}_2 = \\{0, 1\\}`}</InlineMath> with:
+          For any prime <InlineMath>{`p`}</InlineMath>, the integers modulo <InlineMath>{`p`}</InlineMath>, denoted <InlineMath>{`\\mathbb{Z}_p`}</InlineMath> or <InlineMath>{`\\mathbb{F}_p`}</InlineMath>,
+          form a field with <InlineMath>{`p`}</InlineMath> elements. For example, <InlineMath>{`\\mathbb{F}_2 = \\{0, 1\\}`}</InlineMath> with:
         </p>
         <div className="grid grid-cols-2 gap-4 mt-3">
           <div className="p-3 bg-dark-800/50 rounded-lg">
@@ -136,12 +136,12 @@ export default function Section01() {
         proof={
           <>
             <p>
-              <strong>Uniqueness of 0:</strong> Suppose both <InlineMath>0</InlineMath> and <InlineMath>0'</InlineMath> are
+              <strong>Uniqueness of 0:</strong> Suppose both <InlineMath>{`0`}</InlineMath> and <InlineMath>{`0'`}</InlineMath> are
               additive identities. Then:
             </p>
             <MathBlock>{`0 = 0 + 0' = 0'`}</MathBlock>
             <p className="mt-2">
-              <strong>Uniqueness of 1:</strong> Similarly, if <InlineMath>1</InlineMath> and <InlineMath>1'</InlineMath> are
+              <strong>Uniqueness of 1:</strong> Similarly, if <InlineMath>{`1`}</InlineMath> and <InlineMath>{`1'`}</InlineMath> are
               multiplicative identities:
             </p>
             <MathBlock>{`1 = 1 \\cdot 1' = 1'`}</MathBlock>
@@ -149,8 +149,8 @@ export default function Section01() {
         }
       >
         <p>
-          In any field <InlineMath>F</InlineMath>, the additive identity <InlineMath>0</InlineMath> and multiplicative
-          identity <InlineMath>1</InlineMath> are unique.
+          In any field <InlineMath>{`F`}</InlineMath>, the additive identity <InlineMath>{`0`}</InlineMath> and multiplicative
+          identity <InlineMath>{`1`}</InlineMath> are unique.
         </p>
       </Theorem>
 
@@ -158,16 +158,16 @@ export default function Section01() {
         title="Zero Product Property"
         proof={
           <>
-            <p>For any <InlineMath>a \in F</InlineMath>:</p>
+            <p>For any <InlineMath>{`a \\in F`}</InlineMath>:</p>
             <MathBlock>{`a \\cdot 0 = a \\cdot (0 + 0) = a \\cdot 0 + a \\cdot 0`}</MathBlock>
             <p className="mt-2">
-              Adding <InlineMath>-(a \cdot 0)</InlineMath> to both sides gives <InlineMath>0 = a \cdot 0</InlineMath>.
+              Adding <InlineMath>{`-(a \\cdot 0)`}</InlineMath> to both sides gives <InlineMath>{`0 = a \\cdot 0`}</InlineMath>.
             </p>
           </>
         }
       >
         <p>
-          For any element <InlineMath>a</InlineMath> in a field <InlineMath>F</InlineMath>: <InlineMath>a \cdot 0 = 0</InlineMath>.
+          For any element <InlineMath>{`a`}</InlineMath> in a field <InlineMath>{`F`}</InlineMath>: <InlineMath>{`a \\cdot 0 = 0`}</InlineMath>.
         </p>
       </Theorem>
 
@@ -176,19 +176,19 @@ export default function Section01() {
         proof={
           <>
             <p>
-              <strong>Additive cancellation:</strong> If <InlineMath>a + c = b + c</InlineMath>, add <InlineMath>-c</InlineMath> to
-              both sides to get <InlineMath>a = b</InlineMath>.
+              <strong>Additive cancellation:</strong> If <InlineMath>{`a + c = b + c`}</InlineMath>, add <InlineMath>{`-c`}</InlineMath> to
+              both sides to get <InlineMath>{`a = b`}</InlineMath>.
             </p>
             <p className="mt-2">
-              <strong>Multiplicative cancellation:</strong> If <InlineMath>ac = bc</InlineMath> with <InlineMath>c \neq 0</InlineMath>,
-              multiply both sides by <InlineMath>c^{'{-1}'}</InlineMath> to get <InlineMath>a = b</InlineMath>.
+              <strong>Multiplicative cancellation:</strong> If <InlineMath>{`ac = bc`}</InlineMath> with <InlineMath>{`c \\neq 0`}</InlineMath>,
+              multiply both sides by <InlineMath>{`c^{-1}`}</InlineMath> to get <InlineMath>{`a = b`}</InlineMath>.
             </p>
           </>
         }
       >
         <p>
-          If <InlineMath>a + c = b + c</InlineMath>, then <InlineMath>a = b</InlineMath>. If <InlineMath>ac = bc</InlineMath> and <InlineMath>c \neq 0</InlineMath>,
-          then <InlineMath>a = b</InlineMath>.
+          If <InlineMath>{`a + c = b + c`}</InlineMath>, then <InlineMath>{`a = b`}</InlineMath>. If <InlineMath>{`ac = bc`}</InlineMath> and <InlineMath>{`c \\neq 0`}</InlineMath>,
+          then <InlineMath>{`a = b`}</InlineMath>.
         </p>
       </Theorem>
 
@@ -196,8 +196,8 @@ export default function Section01() {
 
       <Definition title="Subfield">
         <p>
-          A subset <InlineMath>K \subseteq F</InlineMath> of a field <InlineMath>F</InlineMath> is a <strong>subfield</strong> if
-          <InlineMath>K</InlineMath> is itself a field under the same operations.
+          A subset <InlineMath>{`K \\subseteq F`}</InlineMath> of a field <InlineMath>{`F`}</InlineMath> is a <strong>subfield</strong> if
+          <InlineMath>{`K`}</InlineMath> is itself a field under the same operations.
         </p>
       </Definition>
 
@@ -214,7 +214,7 @@ export default function Section01() {
 
       <Callout type="success">
         <strong>The Big Picture:</strong> Throughout this course, we'll work with vector spaces
-        over a field <InlineMath>F</InlineMath>. The elements of <InlineMath>F</InlineMath> are called <strong>scalars</strong>.
+        over a field <InlineMath>{`F`}</InlineMath>. The elements of <InlineMath>{`F`}</InlineMath> are called <strong>scalars</strong>.
         While you can usually think of <InlineMath>{`F = \\mathbb{R}`}</InlineMath>, keeping the theory general
         reveals the algebraic essence of linear algebra and allows applications to:
         <ul className="list-disc list-inside mt-2 space-y-1">

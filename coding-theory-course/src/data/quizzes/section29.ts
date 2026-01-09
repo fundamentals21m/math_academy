@@ -1,0 +1,73 @@
+import type { QuizQuestion } from './types';
+
+export const section29Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The extended binary Golay code $\\mathcal{G}_{24}$ has what parameters?',
+    options: ['$[24, 12, 8]$', '$[24, 12, 7]$', '$[24, 11, 8]$', '$[23, 12, 8]$'],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The extended binary Golay code $\\mathcal{G}_{24}$ is obtained by adding an overall parity check bit to $\\mathcal{G}_{23}$, giving parameters $[24, 12, 8]$.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'An extended QR code is obtained from a QR code by:',
+    options: [
+      'Adding an overall parity check coordinate',
+      'Removing a coordinate position',
+      'Doubling all codewords',
+      'Taking the dual code',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'An extended QR code is formed by adding an overall parity check bit to each codeword, which increases the length by 1 and typically increases the minimum distance by 1.',
+  },
+  {
+    id: 3,
+    type: 'numeric',
+    question: 'If a QR code has minimum distance $d = 5$, what is the minimum distance of its extended code (assuming $d$ is odd)?',
+    correctAnswer: 6,
+    numericRange: { min: 0, max: 20, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'When extending a code with odd minimum distance $d$ by adding an overall parity check, the minimum distance increases to $d + 1$. So $d = 5$ becomes $d = 6$.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'For an extended QR code $\\overline{\\mathcal{Q}}$ of length $n+1$, the automorphism group contains:',
+    options: [
+      '$\\text{PSL}_2(n)$ as a subgroup',
+      'Only the identity permutation',
+      'All permutations of coordinates',
+      'Only cyclic shifts',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Extended QR codes have large automorphism groups. For an extended QR code of length $n+1$, the projective special linear group $\\text{PSL}_2(n)$ is contained in its automorphism group.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The extended binary Golay code $\\mathcal{G}_{24}$ is:',
+    options: [
+      'Self-dual',
+      'The dual of $\\mathcal{G}_{23}$',
+      'Not a linear code',
+      'A cyclic code',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The extended binary Golay code $\\mathcal{G}_{24}$ is self-dual, meaning $\\mathcal{G}_{24} = \\mathcal{G}_{24}^\\perp$. This is a remarkable and useful property.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'The square root bound states that if $\\overline{\\mathcal{Q}}$ is an extended QR code with minimum distance $d$, then $d^2 \\geq n+1$. For $\\mathcal{G}_{24}$ with $d=8$, what is $d^2 - (n+1)$?',
+    correctAnswer: 40,
+    numericRange: { min: 0, max: 100, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'For $\\mathcal{G}_{24}$: $d^2 = 8^2 = 64$ and $n+1 = 24$. So $d^2 - (n+1) = 64 - 24 = 40$. The code exceeds the square root bound significantly.',
+  },
+];

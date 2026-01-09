@@ -85,6 +85,12 @@ export const SECTIONS = [
     subtitle: 'Integers, primes, and cryptographic foundations',
     style: 'subject'
   },
+  {
+    id: 'prob_stats',
+    title: 'Probability and Statistics',
+    subtitle: 'Random variables, distributions, and statistical inference',
+    style: 'subject'
+  },
 ];
 
 /** @type {Course[]} */
@@ -117,6 +123,20 @@ export const COURSES = [
     leaderboardUrl: 'islr-deploy/#/leaderboard',
     shortName: 'Statistical Learning',
     progressGradient: 'linear-gradient(90deg, #34d399, #6ee7b7)',
+  },
+  {
+    id: 'bfi',
+    title: 'Bitcoin for Institutions',
+    description: "A comprehensive guide to institutional Bitcoin adoption. From treasury management to deferred compensation, learn how institutions can successfully integrate Bitcoin into their operations.",
+    icon: '₿',
+    url: 'https://bfi-liart.vercel.app/',
+    tags: ['3 Parts', '15 Sections'],
+    sections: ['featured'],
+    totalSections: 15,
+    progressPrefix: 'bfi:',
+    leaderboardUrl: 'https://bfi-liart.vercel.app/#/leaderboard',
+    shortName: 'BFI',
+    progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)',
   },
 
   // BEGINNERS
@@ -443,6 +463,34 @@ export const COURSES = [
     shortName: 'Graph Theory',
     progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)',
   },
+  {
+    id: 'coding_theory',
+    title: 'Algebraic Coding Theory',
+    description: "Master error-correcting codes and their algebraic foundations. From Hamming and BCH codes to Reed-Solomon and quadratic residue codes. Based on L.R. Vermani's textbook.",
+    icon: '🔢',
+    url: 'coding-theory-deploy/',
+    tags: ['11 Chapters', '41 Sections'],
+    sections: ['discrete'],
+    totalSections: 41,
+    progressPrefix: 'coding_theory:',
+    leaderboardUrl: 'coding-theory-deploy/#/leaderboard',
+    shortName: 'Coding Theory',
+    progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
+  },
+  {
+    id: 'intro-discrete',
+    title: 'Intro to Discrete Math',
+    description: "Numbers, groups, and codes - learn combinatorics, group theory, and error-correcting codes. Based on Humphreys & Prest's Cambridge textbook.",
+    icon: '🔢',
+    url: 'intro-discrete-deploy/',
+    tags: ['6 Chapters', '26 Sections'],
+    sections: ['discrete'],
+    totalSections: 26,
+    progressPrefix: 'intro-discrete:',
+    leaderboardUrl: 'intro-discrete-deploy/#/leaderboard',
+    shortName: 'Intro Discrete',
+    progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)',
+  },
 
   // NUMBER THEORY
   {
@@ -458,6 +506,22 @@ export const COURSES = [
     leaderboardUrl: 'koblitz-course-deploy/#/leaderboard',
     shortName: 'Koblitz',
     progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
+  },
+
+  // PROBABILITY AND STATISTICS
+  {
+    id: 'ross-prob',
+    title: 'Probability',
+    description: "Master probability theory with Sheldon Ross's classic textbook. From combinatorial analysis through random variables, expectation, and limit theorems.",
+    icon: '🎲',
+    url: 'https://probability-ruby.vercel.app/',
+    tags: ['Ross Textbook', 'Interactive'],
+    sections: ['prob_stats'],
+    totalSections: 1,
+    progressPrefix: 'ross-prob:',
+    leaderboardUrl: 'https://probability-ruby.vercel.app/#/leaderboard',
+    shortName: 'Probability',
+    progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
   },
 ];
 

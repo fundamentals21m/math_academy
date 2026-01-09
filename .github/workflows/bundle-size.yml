@@ -1,0 +1,152 @@
+name: Bundle Size Monitoring
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/vite.config.ts'
+      - '**/package.json'
+      - '.github/workflows/bundle-size.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - '**/vite.config.ts'
+      - '**/package.json'
+      - '.github/workflows/bundle-size.yml'
+
+jobs:
+  bundle-size-check:
+    name: Check Bundle Sizes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and analyze linalg
+        run: |
+          cd linalg
+          npm run build -- --mode analyze 2>&1 || true
+          if [ -f dist/bundle-analysis.html ]; then
+            echo "Bundle analysis generated for linalg"
+          fi
+
+      - name: Extract bundle sizes from linalg
+        id: linalg-sizes
+        run: |
+          if [ -f linalg/dist/index-*.js ]; then
+            MAIN_SIZE=$(ls -l linalg/dist/index-*.js 2>/dev/null | awk '{print $5}')
+            echo "main_size=$MAIN_SIZE" >> $GITHUB_OUTPUT
+          fi
+          if [ -f linalg/dist/vendor-math-*.js ]; then
+            MATH_SIZE=$(ls -l linalg/dist/vendor-math-*.js 2>/dev/null | awk '{print $5}')
+            echo "math_size=$MATH_SIZE" >> $GITHUB_OUTPUT
+          fi
+          if [ -f linalg/dist/vendor-animation-*.js ]; then
+            ANIM_SIZE=$(ls -l linalg/dist/vendor-animation-*.js 2>/dev/null | awk '{print $5}')
+            echo "animation_size=$ANIM_SIZE" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build and analyze crypto-react
+        run: |
+          cd crypto-react
+          npm run build -- --mode analyze 2>&1 || true
+
+      - name: Extract bundle sizes from crypto-react
+        id: crypto-sizes
+        run: |
+          if [ -f crypto-react/dist/index-*.js ]; then
+            CRYPTO_MAIN_SIZE=$(ls -l crypto-react/dist/index-*.js 2>/dev/null | awk '{print $5}')
+            echo "crypto_main_size=$CRYPTO_MAIN_SIZE" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check against thresholds
+        id: threshold-check
+        run: |
+          # Thresholds (in bytes)
+          MAIN_THRESHOLD=1048576  # 1MB
+          MATH_THRESHOLD=314572   # 300KB
+          ANIM_THRESHOLD=157286   # 150KB
+          
+          PASSED=true
+          ISSUES=""
+          
+          # Check linalg main bundle
+          MAIN_SIZE=${MAIN_SIZE:-0}
+          if [ "$MAIN_SIZE" -gt "$MAIN_THRESHOLD" ]; then
+            PASSED=false
+            ISSUES="${ISSUES}❌ linalg main bundle: $(echo "scale=2; $MAIN_SIZE/1024/1024" | bc)MB (threshold: 1MB)\n"
+          else
+            echo "✅ linalg main bundle: $(echo "scale=2; $MAIN_SIZE/1024/1024" | bc)MB"
+          fi
+          
+          # Check math bundle
+          MATH_SIZE=${MATH_SIZE:-0}
+          if [ "$MATH_SIZE" -gt "$MATH_THRESHOLD" ]; then
+            PASSED=false
+            ISSUES="${ISSUES}❌ vendor-math bundle: $(echo "scale=2; $MATH_SIZE/1024" | bc)KB (threshold: 300KB)\n"
+          else
+            echo "✅ vendor-math bundle: $(echo "scale=2; $MATH_SIZE/1024" | bc)KB"
+          fi
+          
+          # Check animation bundle
+          ANIM_SIZE=${ANIM_SIZE:-0}
+          if [ "$ANIM_SIZE" -gt "$ANIM_THRESHOLD" ]; then
+            PASSED=false
+            ISSUES="${ISSUES}❌ vendor-animation bundle: $(echo "scale=2; $ANIM_SIZE/1024" | bc)KB (threshold: 150KB)\n"
+          else
+            echo "✅ vendor-animation bundle: $(echo "scale=2; $ANIM_SIZE/1024" | bc)KB"
+          fi
+          
+          echo "passed=$PASSED" >> $GITHUB_OUTPUT
+          echo "issues=$ISSUES" >> $GITHUB_OUTPUT
+
+      - name: Report results
+        if: steps.threshold-check.outputs.passed == 'false'
+        run: |
+          echo "Bundle size check FAILED:"
+          echo ""
+          echo -e "$ISSUES"
+          echo ""
+          echo "Please optimize bundle sizes before merging."
+          exit 1
+
+      - name: Upload bundle analysis
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bundle-analysis
+          path: |
+            linalg/dist/bundle-analysis.html
+            crypto-react/dist/bundle-analysis.html
+          retention-days: 7
+
+  bundle-size-report:
+    name: Generate Bundle Report
+    runs-on: ubuntu-latest
+    needs: bundle-size-check
+    if: always()
+    steps:
+      - name: Create summary report
+        run: |
+          echo "## Bundle Size Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Thresholds" >> $GITHUB_STEP_SUMMARY
+          echo "- Main bundle: < 1MB" >> $GITHUB_STEP_SUMMARY
+          echo "- KaTeX (vendor-math): < 300KB" >> $GITHUB_STEP_SUMMARY
+          echo "- Animation (vendor-animation): < 150KB" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ needs.bundle-size-check.result == 'success' ]; then
+            echo "✅ All bundle sizes are within thresholds" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Bundle size check failed - see CI output for details" >> $GITHUB_STEP_SUMMARY
+          fi

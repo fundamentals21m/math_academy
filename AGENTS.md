@@ -220,27 +220,57 @@ See `books/README.md` for detailed instructions.
 
 ## Common Tasks
 
-### Deploying to GitHub Pages Hub
+### Deploying a Course to the Hub
 
-**CRITICAL**: Courses deployed to GitHub Pages (math_academy repo) MUST use the correct base path.
+**All courses are deployed to the Vercel hub at `mathacademy-cyan.vercel.app`.**
 
-The base path must be `/math_academy/{deploy-dir}/` (NOT just `/{deploy-dir}/`).
+Courses live at `mathacademy-cyan.vercel.app/{course-id}-deploy/` (e.g., `mathacademy-cyan.vercel.app/intro-discrete-deploy/`).
 
-**Use the deploy script** to build and deploy safely:
+**Deployment steps:**
+
 ```bash
-./scripts/deploy-to-hub.sh abstract-algebra aa
-./scripts/deploy-to-hub.sh basic-algebra ba
+# 1. Build the course (from course directory)
+cd {course-dir}
+npm run build
+
+# 2. Copy build to deploy folder
+rm -rf /Users/brianhirschfield/Claude/math_academy/{course-id}-deploy/*
+cp -r dist/* /Users/brianhirschfield/Claude/math_academy/{course-id}-deploy/
+
+# 3. Deploy the ENTIRE HUB to Vercel (from math_academy root)
+cd /Users/brianhirschfield/Claude/math_academy
+vercel --prod --yes
 ```
 
-The script will:
-1. Verify `vite.config.ts` has the correct base path
-2. Build the course
-3. Copy to the deploy directory
-4. Verify the built files have correct paths
-
-**Manual verification**: Check `{deploy-dir}/index.html` contains `/math_academy/{deploy-dir}/assets/`:
+**Example for intro-discrete:**
 ```bash
-grep "math_academy" aa/index.html  # Should show /math_academy/aa/assets/...
+cd /Users/brianhirschfield/Claude/math_academy/intro-discrete && npm run build
+rm -rf /Users/brianhirschfield/Claude/math_academy/intro-discrete-deploy/* && \
+cp -r dist/* /Users/brianhirschfield/Claude/math_academy/intro-discrete-deploy/
+cd /Users/brianhirschfield/Claude/math_academy && vercel --prod --yes
+```
+
+**CRITICAL:**
+- The `vite.config.ts` defaults to hub deployment with base path `/{course-id}-deploy/`
+- Do NOT deploy individual course folders as standalone Vercel projects
+- Always deploy from the `math_academy` root directory
+- The hub URL is: `https://mathacademy-cyan.vercel.app/`
+
+**Verify the build has correct paths:**
+```bash
+grep 'src="/' {course-id}-deploy/index.html
+# Should show: src="/{course-id}-deploy/assets/..."
+```
+
+**After deployment, register the course in `scripts/courses.js`** with:
+```javascript
+{
+  id: 'course-id',
+  title: 'Course Title',
+  url: '{course-id}-deploy/',
+  leaderboardUrl: '{course-id}-deploy/#/leaderboard',
+  // ... other fields
+}
 ```
 
 ### New Course

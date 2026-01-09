@@ -114,7 +114,7 @@ test.describe('React Error Boundary', () => {
     await expect(body).toBeVisible();
 
     // Page should still be functional
-    const hasContent = await page.locator('main, [role="main"], #root').isVisible();
+    const hasContent = await page.locator('main, [role="main"], #root').first().isVisible();
     expect(hasContent).toBe(true);
   });
 

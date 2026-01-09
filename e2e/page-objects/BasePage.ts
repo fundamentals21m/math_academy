@@ -16,7 +16,7 @@ export class BasePage {
     this.header = page.locator('header, [role="banner"]');
     this.navigation = page.locator('nav, [role="navigation"]');
     this.sidebar = page.locator('aside, [role="complementary"], [class*="sidebar"]');
-    this.main = page.locator('main, [role="main"], #root > div');
+    this.main = page.locator('main, [role="main"], #root > div').first();
     this.footer = page.locator('footer, [role="contentinfo"]');
   }
 

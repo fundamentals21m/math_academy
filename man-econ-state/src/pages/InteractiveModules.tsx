@@ -16,15 +16,50 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'direct-exchange',
+    title: 'Direct Exchange',
+    description: 'Explore how two parties trade only when both benefit. Adjust endowments and trade terms to find mutually advantageous exchanges.',
+    sectionId: 1,
+    sectionTitle: 'Direct Exchange',
+    category: 'Fundamentals',
+    icon: '🔄',
+  },
+  {
+    id: 'money-emergence',
+    title: 'Emergence of Money',
+    description: 'Watch how money emerges spontaneously from barter. See which goods win the competition to become the universal medium of exchange.',
+    sectionId: 2,
+    sectionTitle: 'The Pattern of Indirect Exchange',
+    category: 'Money',
+    icon: '🪙',
+  },
+  {
+    id: 'production-structure',
+    title: 'Structure of Production',
+    description: 'Visualize the Hayekian triangle. See how time preference affects the length of the production structure and capital formation.',
+    sectionId: 4,
+    sectionTitle: 'Production: The Structure',
+    category: 'Production',
+    icon: '🏗️',
+  },
+  {
+    id: 'entrepreneur-profit',
+    title: 'Entrepreneurial Profit & Loss',
+    description: 'Play as an entrepreneur making forecasts. See how profits reward good foresight and losses punish mistakes.',
+    sectionId: 7,
+    sectionTitle: 'Production: Entrepreneurship and Change',
+    category: 'Production',
+    icon: '💰',
+  },
+  {
+    id: 'taxation-effects',
+    title: 'Effects of Taxation',
+    description: 'Explore how different types of taxes distort economic activity. See the deadweight loss and behavioral responses.',
+    sectionId: 15,
+    sectionTitle: 'Binary Intervention: Taxation',
+    category: 'Intervention',
+    icon: '📋',
   },
 ];
 // =============================================================================

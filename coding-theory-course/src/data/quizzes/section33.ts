@@ -1,0 +1,78 @@
+import type { QuizQuestion } from './types';
+
+export const section33Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The weight distribution of an MDS code is:',
+    options: [
+      'Completely determined by $n$, $k$, and $q$',
+      'Dependent on the specific generator matrix',
+      'Always uniform',
+      'Unknown in general',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A remarkable property of MDS codes is that their weight distribution depends only on the parameters $n$, $k$, and the field size $q$, not on the specific code.',
+  },
+  {
+    id: 2,
+    type: 'numeric',
+    question: 'For an $[n, k, d]$ MDS code, the minimum non-zero weight in the code is $d = n - k + 1$. If $n = 10$ and $k = 4$, what is the minimum weight?',
+    correctAnswer: 7,
+    numericRange: { min: 0, max: 10, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'For an MDS code, $d = n - k + 1 = 10 - 4 + 1 = 7$. The minimum weight equals the minimum distance for linear codes.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The weight enumerator $W_C(x, y)$ of an $[n, k]$ MDS code over $\\mathbb{F}_q$ has the form:',
+    options: [
+      '$\\sum_{i=0}^{k} A_i x^{n-d-i+1} y^{d+i-1}$ for specific coefficients $A_i$',
+      '$x^n + (q^k - 1)y^n$',
+      '$(x + y)^n$',
+      'Cannot be determined without knowing the generator matrix',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'MDS codes have a specific weight distribution formula. The non-zero weights range from $d = n-k+1$ to $n$, and the number of codewords of each weight is determined by a closed-form expression.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'For an $[n, k, d]$ MDS code, the number of codewords of minimum weight $d$ is:',
+    options: [
+      '$\\binom{n}{d}(q-1)$',
+      '$q^k - 1$',
+      '$\\binom{n}{k}$',
+      '$n(q-1)$',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The number of minimum weight codewords in an MDS code is $A_d = \\binom{n}{d}(q-1)$. This follows from the MDS weight distribution formula.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'For a $[7, 4, 4]$ MDS code over $\\mathbb{F}_8$, how many codewords have the minimum weight 4? (Use the formula $\\binom{n}{d}(q-1)$)',
+    correctAnswer: 245,
+    numericRange: { min: 0, max: 500, precision: 0 },
+    difficulty: 'medium',
+    explanation: '$A_4 = \\binom{7}{4}(8-1) = 35 \\times 7 = 245$ codewords of weight 4.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The MacWilliams identity relates the weight enumerator of a code to that of its dual. For MDS codes, this identity:',
+    options: [
+      'Confirms that the dual is also MDS',
+      'Shows that all weights must be even',
+      'Implies the code is self-dual',
+      'Cannot be applied',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The MacWilliams identity applied to an MDS code yields the weight enumerator of its dual, which is also MDS. This provides a consistency check for MDS code properties.',
+  },
+];

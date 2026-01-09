@@ -1,0 +1,78 @@
+import type { QuizQuestion } from './types';
+
+export const section37Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'For a code over $\\mathbb{F}_q$ with $q > 2$, the automorphism group includes:',
+    options: [
+      'Coordinate permutations and coordinate scalings by non-zero field elements',
+      'Only coordinate permutations',
+      'All linear maps on $\\mathbb{F}_q^n$',
+      'Only the identity',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For non-binary codes, automorphisms include both coordinate permutations and scaling each coordinate by a non-zero element of $\\mathbb{F}_q$. This gives the monomial group.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The monomial group $\\text{Mon}_n(\\mathbb{F}_q)$ acting on $\\mathbb{F}_q^n$ consists of:',
+    options: [
+      'Matrices that are products of permutation matrices and diagonal matrices',
+      'All $n \\times n$ matrices over $\\mathbb{F}_q$',
+      'Only diagonal matrices',
+      'Only permutation matrices',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The monomial group consists of $n \\times n$ matrices with exactly one non-zero entry in each row and column. These are products of permutation matrices with diagonal matrices.',
+  },
+  {
+    id: 3,
+    type: 'numeric',
+    question: 'The monomial group $\\text{Mon}_n(\\mathbb{F}_q)$ has order $n! \\cdot (q-1)^n$. For $n = 3$ and $q = 4$, what is this order?',
+    correctAnswer: 162,
+    numericRange: { min: 0, max: 500, precision: 0 },
+    difficulty: 'medium',
+    explanation: '$|\\text{Mon}_3(\\mathbb{F}_4)| = 3! \\cdot (4-1)^3 = 6 \\cdot 27 = 162$.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Two codes over $\\mathbb{F}_q$ are called monomially equivalent if:',
+    options: [
+      'One can be obtained from the other by a monomial transformation',
+      'They have the same dimension',
+      'They have the same weight distribution',
+      'Their generator matrices are row equivalent',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Monomial equivalence means there exists a monomial matrix $M$ such that $MC_1 = C_2$. This is the natural notion of equivalence for non-binary codes.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The automorphism group of a Reed-Solomon code $\\text{RS}(n, k)$ over $\\mathbb{F}_q$ is:',
+    options: [
+      'The affine group $\\text{AGL}_1(\\mathbb{F}_q)$',
+      'The symmetric group $S_n$',
+      'The cyclic group $\\mathbb{Z}_n$',
+      'The trivial group',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Reed-Solomon codes have automorphism group isomorphic to $\\text{AGL}_1(\\mathbb{F}_q)$, the affine linear group, consisting of maps $x \\mapsto ax + b$ for $a \\neq 0$.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'The affine group $\\text{AGL}_1(\\mathbb{F}_q)$ has order $q(q-1)$. For $q = 8$, what is this order?',
+    correctAnswer: 56,
+    numericRange: { min: 0, max: 100, precision: 0 },
+    difficulty: 'easy',
+    explanation: '$|\\text{AGL}_1(\\mathbb{F}_8)| = 8 \\cdot (8-1) = 8 \\cdot 7 = 56$.',
+  },
+];

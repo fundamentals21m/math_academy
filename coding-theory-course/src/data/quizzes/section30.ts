@@ -1,0 +1,78 @@
+import type { QuizQuestion } from './types';
+
+export const section30Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'An idempotent element $e$ in a ring satisfies:',
+    options: ['$e^2 = e$', '$e^2 = 1$', '$e^2 = 0$', '$e^n = e$ for all $n$'],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'By definition, an element $e$ is idempotent if and only if $e^2 = e$. This is a fundamental property used in the algebraic theory of cyclic codes.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The idempotent generator of a QR code $\\mathcal{Q}$ over $\\mathbb{F}_q$ of length $n$ has the form:',
+    options: [
+      '$e(x) = \\sum_{i \\in Q} x^i$ where $Q$ is the set of quadratic residues mod $n$',
+      'Any polynomial of degree less than $n$',
+      'The generator polynomial $g(x)$ itself',
+      'A primitive polynomial over $\\mathbb{F}_q$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The idempotent of a QR code can be expressed as $e(x) = \\sum_{i \\in Q} x^i$ (up to a scalar), where $Q$ is the set of quadratic residues modulo $n$.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'If $e(x)$ is the idempotent generator of code $C$, then the idempotent of the dual code $C^\\perp$ is:',
+    options: [
+      '$1 - e(x^{-1})$',
+      '$e(x)$ itself',
+      '$e(x^2)$',
+      '$x^n e(x^{-1})$',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'For a cyclic code with idempotent $e(x)$, the idempotent of the dual code is $1 - e(x^{-1})$, where $x^{-1}$ is computed modulo $x^n - 1$.',
+  },
+  {
+    id: 4,
+    type: 'numeric',
+    question: 'In a QR code of prime length $n$, the set of quadratic residues $Q$ has how many elements?',
+    correctAnswer: 0,
+    numericRange: { min: 0, max: 100, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'For a prime $n$, the quadratic residues modulo $n$ form exactly half of the non-zero elements, so $|Q| = (n-1)/2$. Since this depends on $n$, the answer varies. For the question as stated without specific $n$, the formula is $(n-1)/2$.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The relationship between the idempotent $e(x)$ and generator polynomial $g(x)$ of a cyclic code is:',
+    options: [
+      '$g(x)$ divides $e(x)$ and they generate the same ideal',
+      '$e(x) = g(x)$ always',
+      '$e(x)$ and $g(x)$ are coprime',
+      '$g(x) = e(x)^2$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The idempotent $e(x)$ and generator polynomial $g(x)$ generate the same cyclic code, and $g(x)$ divides $e(x)$. The idempotent is the unique polynomial satisfying $e^2 = e$ that generates the code.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'For the binary QR code of length 7, which set represents the quadratic residues mod 7?',
+    options: [
+      '$\\{1, 2, 4\\}$',
+      '$\\{1, 3, 5\\}$',
+      '$\\{3, 5, 6\\}$',
+      '$\\{2, 3, 5\\}$',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The quadratic residues mod 7 are the non-zero squares: $1^2 = 1$, $2^2 = 4$, $3^2 = 2$ (mod 7). So $Q = \\{1, 2, 4\\}$.',
+  },
+];

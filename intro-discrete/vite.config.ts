@@ -7,10 +7,11 @@ import path from 'path'
 // =============================================================================
 const COURSE_ID = 'intro-discrete'  // Short ID: 'ba', 'aa', 'crypto', etc.
 
-// Base path for GitHub Pages hub deployment (default)
-// Set STANDALONE_DEPLOY=true for rare cases needing '/' base path (e.g., Vercel standalone)
+// Base path for Vercel hub deployment (default)
+// Courses are deployed to mathacademy-cyan.vercel.app/{course-id}-deploy/
+// Set STANDALONE_DEPLOY=true for rare cases needing '/' base path
 const isStandalone = process.env.STANDALONE_DEPLOY === 'true'
-const BASE_PATH = isStandalone ? '/' : `/math_academy/${COURSE_ID}-deploy/`
+const BASE_PATH = isStandalone ? '/' : `/${COURSE_ID}-deploy/`
 // =============================================================================
 
 export default defineConfig({

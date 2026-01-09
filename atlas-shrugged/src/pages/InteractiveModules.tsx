@@ -16,15 +16,50 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'money-meaning',
+    title: 'The Meaning of Money',
+    description: 'Francisco d\'Anconia\'s famous speech on money. Explore what money truly represents and who calls it "the root of all evil."',
+    sectionId: 4,
+    sectionTitle: 'The Climax of the d\'Anconias',
+    category: 'Part One',
+    icon: '💰',
+  },
+  {
+    id: 'sanction-of-victim',
+    title: 'Sanction of the Victim',
+    description: 'See how the looters\' power depends entirely on the producers\' acceptance of guilt. Withdraw your sanction and watch the system collapse.',
+    sectionId: 13,
+    sectionTitle: 'The Sanction of the Victim',
+    category: 'Part Two',
+    icon: '🔐',
+  },
+  {
+    id: 'galts-gulch',
+    title: 'Galt\'s Gulch',
+    description: 'Explore the hidden valley where the strikers built their sanctuary. See who lives there and the principles they follow.',
+    sectionId: 20,
+    sectionTitle: 'Atlantis',
+    category: 'Part Three',
+    icon: '🏔️',
+  },
+  {
+    id: 'objectivist-principles',
+    title: 'Objectivist Philosophy',
+    description: 'The four branches of Objectivism from John Galt\'s speech: Metaphysics, Epistemology, Ethics, and Politics.',
+    sectionId: 26,
+    sectionTitle: '"This Is John Galt Speaking"',
+    category: 'Part Three',
+    icon: '🎯',
+  },
+  {
+    id: 'mind-on-strike',
+    title: 'The Mind on Strike',
+    description: 'Watch civilization collapse as the men of the mind withdraw. See what happens when the prime movers stop the motor of the world.',
+    sectionId: 29,
+    sectionTitle: 'In the Name of the Best Within Us',
+    category: 'Part Three',
+    icon: '⚡',
   },
 ];
 // =============================================================================

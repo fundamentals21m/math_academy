@@ -1,0 +1,83 @@
+import type { QuizQuestion } from './types';
+
+export const section38Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'If two codes are equivalent (related by an automorphism), then:',
+    options: [
+      'They have the same minimum distance',
+      'They must be identical',
+      'They have different dimensions',
+      'One is the dual of the other',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Equivalent codes have identical parameters, including the same minimum distance. Automorphisms preserve the weight of each codeword, hence the minimum distance.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'An automorphism $\\pi$ of a code $C$ maps minimum weight codewords to:',
+    options: [
+      'Minimum weight codewords',
+      'Any codeword',
+      'The zero codeword',
+      'Maximum weight codewords',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Automorphisms preserve Hamming weight (permutations preserve the number of non-zero positions, scalings preserve non-zero status). Thus minimum weight codewords map to minimum weight codewords.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The automorphism group of a code acts on the set of minimum weight codewords. This action is:',
+    options: [
+      'Transitive for many interesting codes like Golay and Reed-Muller codes',
+      'Always trivial',
+      'Always transitive for all codes',
+      'Never transitive',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For codes with large automorphism groups like Golay codes and Reed-Muller codes, the action on minimum weight codewords is often transitive, meaning any minimum weight codeword can be mapped to any other.',
+  },
+  {
+    id: 4,
+    type: 'numeric',
+    question: 'If a code has 253 minimum weight codewords and its automorphism group acts transitively on them with stabilizer of size 5, what is the order of the automorphism group?',
+    correctAnswer: 1265,
+    numericRange: { min: 0, max: 2000, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'By the orbit-stabilizer theorem: $|G| = |\\text{orbit}| \\cdot |\\text{stabilizer}| = 253 \\cdot 5 = 1265$.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Computing the minimum distance of a code is in general:',
+    options: [
+      'NP-hard',
+      'Polynomial time',
+      'Linear time',
+      'Constant time',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Determining the minimum distance of a linear code is NP-hard in general. Automorphisms can sometimes help by reducing the search space through equivalence.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'If $\\text{Aut}(C)$ acts transitively on coordinate positions, the code is called:',
+    options: [
+      'Transitive',
+      'Perfect',
+      'Self-dual',
+      'MDS',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A code is called transitive if its automorphism group acts transitively on the coordinate positions, meaning any coordinate can be mapped to any other by some automorphism.',
+  },
+];

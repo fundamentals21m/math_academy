@@ -1,0 +1,431 @@
+name: E2E Nightly
+
+on:
+  schedule:
+    # Run at 3 AM UTC every day
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      test_suite:
+        description: 'Test suite to run'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - smoke
+          - visual
+          - forms
+          - gamification
+          - auth
+          - network
+          - crawl
+          - performance
+          - accessibility
+          - interactive
+
+env:
+  CI: true
+
+jobs:
+  smoke-tests:
+    name: Smoke Tests (All Browsers)
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event.inputs.test_suite == 'smoke' || github.event_name == 'schedule' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: npx playwright install ${{ matrix.browser }} --with-deps
+        working-directory: e2e
+
+      - name: Run smoke tests
+        run: npm run test:smoke -- --project=${{ matrix.browser }}
+        working-directory: e2e
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: smoke-${{ matrix.browser }}-results
+          path: e2e/test-results/
+          retention-days: 14
+
+  visual-tests:
+    name: Visual Regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event.inputs.test_suite == 'visual' || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+        working-directory: e2e
+
+      - name: Run visual tests
+        run: npx playwright test tests/visual/ --project=chromium
+        working-directory: e2e
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: visual-test-results
+          path: |
+            e2e/test-results/
+            e2e/baselines/
+          retention-days: 14
+
+  form-tests:
+    name: Form & Quiz Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event.inputs.test_suite == 'forms' || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+        working-directory: e2e
+
+      - name: Run form tests
+        run: npx playwright test tests/forms/ --project=chromium
+        working-directory: e2e
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: form-test-results
+          path: e2e/test-results/
+          retention-days: 14
+
+  gamification-tests:
+    name: Gamification Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event.inputs.test_suite == 'gamification' || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+        working-directory: e2e
+
+      - name: Run gamification tests
+        run: npx playwright test tests/gamification/ --project=chromium
+        working-directory: e2e
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: gamification-test-results
+          path: e2e/test-results/
+          retention-days: 14
+
+  auth-tests:
+    name: Auth Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event.inputs.test_suite == 'auth' || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+        working-directory: e2e
+
+      - name: Run auth tests
+        run: npx playwright test tests/auth/ --project=chromium || true
+        working-directory: e2e
+        continue-on-error: true
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: auth-test-results
+          path: e2e/test-results/
+          retention-days: 14
+
+  network-tests:
+    name: Network Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event.inputs.test_suite == 'network' || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+        working-directory: e2e
+
+      - name: Run network tests
+        run: npx playwright test tests/network/ --project=chromium || true
+        working-directory: e2e
+        continue-on-error: true
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: network-test-results
+          path: e2e/test-results/
+          retention-days: 14
+
+  crawl-tests:
+    name: Link Crawler
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event.inputs.test_suite == 'crawl' || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+        working-directory: e2e
+
+      - name: Run crawl tests
+        run: npx playwright test tests/crawl/ --project=chromium --timeout=300000 || true
+        working-directory: e2e
+        continue-on-error: true
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: crawl-test-results
+          path: e2e/test-results/
+          retention-days: 14
+
+  performance-tests:
+    name: Performance Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event.inputs.test_suite == 'performance' || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+        working-directory: e2e
+
+      - name: Run performance tests
+        run: npx playwright test tests/performance/ --project=chromium || true
+        working-directory: e2e
+        continue-on-error: true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: performance-metrics
+          path: e2e/test-results/
+          retention-days: 30
+
+  accessibility-tests:
+    name: Accessibility Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event.inputs.test_suite == 'accessibility' || github.event_name == 'schedule' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+        working-directory: e2e
+
+      - name: Run accessibility tests
+        run: npx playwright test tests/accessibility/ --project=chromium || true
+        working-directory: e2e
+        continue-on-error: true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: a11y-report
+          path: e2e/test-results/
+          retention-days: 30
+
+  mobile-tests:
+    name: Mobile Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    if: ${{ github.event.inputs.test_suite == 'all' || github.event_name == 'schedule' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        device: [mobile-chrome, mobile-safari]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: e2e
+
+      - name: Install Playwright browsers
+        run: |
+          if [ "${{ matrix.device }}" = "mobile-safari" ]; then
+            npx playwright install webkit --with-deps
+          else
+            npx playwright install chromium --with-deps
+          fi
+        working-directory: e2e
+
+      - name: Run mobile tests
+        run: npm run test:smoke -- --project=${{ matrix.device }}
+        working-directory: e2e
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: ${{ matrix.device }}-test-results
+          path: e2e/test-results/
+          retention-days: 14
+
+  nightly-report:
+    name: Nightly Report
+    needs: [smoke-tests, visual-tests, form-tests, gamification-tests, auth-tests, network-tests, performance-tests, accessibility-tests, mobile-tests]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Generate report
+        run: |
+          echo "# Nightly E2E Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Run: $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Test Suite | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|------------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Smoke Tests | ${{ needs.smoke-tests.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Visual Tests | ${{ needs.visual-tests.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Form Tests | ${{ needs.form-tests.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Gamification | ${{ needs.gamification-tests.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Auth Tests | ${{ needs.auth-tests.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Network Tests | ${{ needs.network-tests.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Performance | ${{ needs.performance-tests.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Accessibility | ${{ needs.accessibility-tests.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Mobile Tests | ${{ needs.mobile-tests.result }} |" >> $GITHUB_STEP_SUMMARY

@@ -16,15 +16,50 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
-  // Example modules - replace with your course content
   {
-    id: 'demo-1',
-    title: 'Example Demo',
-    description: 'An interactive demonstration of the concept.',
-    sectionId: 0,
-    sectionTitle: 'Welcome',
-    category: 'Basics',
-    icon: '🎮',
+    id: 'planning-spectrum',
+    title: 'The Planning Spectrum',
+    description: 'Explore the range from free markets to totalitarianism. See why Hayek argues there is no stable "middle way."',
+    sectionId: 4,
+    sectionTitle: 'Individualism and Collectivism',
+    category: 'Foundations',
+    icon: '📊',
+  },
+  {
+    id: 'knowledge-problem',
+    title: 'The Knowledge Problem',
+    description: 'Visualize Hayek\'s key insight: economic knowledge is dispersed and cannot be collected by any central authority.',
+    sectionId: 5,
+    sectionTitle: 'The "Inevitability" of Planning',
+    category: 'Planning Problem',
+    icon: '🧠',
+  },
+  {
+    id: 'rule-of-law',
+    title: 'Rule of Law vs Arbitrary Power',
+    description: 'Compare scenarios under general rules versus discretionary authority. See why planning destroys the rule of law.',
+    sectionId: 7,
+    sectionTitle: 'Planning and the Rule of Law',
+    category: 'Planning Problem',
+    icon: '⚖️',
+  },
+  {
+    id: 'power-concentration',
+    title: 'Economic Control = Total Control',
+    description: 'See how control of economic life leads to control of all life. Adjust economic control and watch freedoms disappear.',
+    sectionId: 8,
+    sectionTitle: 'Economic Control and Totalitarianism',
+    category: 'Freedom',
+    icon: '🔗',
+  },
+  {
+    id: 'worst-get-on-top',
+    title: 'Why the Worst Get on Top',
+    description: 'Watch the selection process that promotes ruthless individuals in totalitarian systems. A simulation of "negative selection."',
+    sectionId: 11,
+    sectionTitle: 'Why the Worst Get on Top',
+    category: 'Dark Side',
+    icon: '👁️',
   },
 ];
 // =============================================================================
