@@ -16,7 +16,7 @@ export default function Section78() {
       <Callout type="info">
         <strong>Key Insight:</strong> Different ideals can define the same algebraic set
         (e.g., <InlineMath>(x^2)</InlineMath> and <InlineMath>(x)</InlineMath> both
-        define <InlineMath>\{"{0}"}\}</InlineMath> in <InlineMath>\mathbb{"{A}"}^1</InlineMath>).
+        define <InlineMath>{`\\{0\\}`}</InlineMath> in <InlineMath>{`\\mathbb{A}^1`}</InlineMath>).
         The radical identifies when this happens.
       </Callout>
 

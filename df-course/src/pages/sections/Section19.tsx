@@ -32,7 +32,7 @@ export default function Section19() {
         <MathBlock>A_n = \ker(\text{'{'}sgn{'}'}) = \{'{'}\sigma \in S_n : \text{'{'}sgn{'}'}(\sigma) = 1\{'}'}</MathBlock>
       </Callout>
 
-      <p>Since <InlineMath>\text{'{'}sgn{'}'}: S_n \to \{'{'}{\pm}1\{'}'}</InlineMath> is a surjective homomorphism:</p>
+      <p>Since <InlineMath>{`\\text{sgn}: S_n \\to \\{\\pm 1\\}`}</InlineMath> is a surjective homomorphism:</p>
       <ul className="list-disc list-inside text-dark-300 mb-6 space-y-2">
         <li><InlineMath>A_n \unlhd S_n</InlineMath></li>
         <li><InlineMath>[S_n : A_n] = 2</InlineMath></li>

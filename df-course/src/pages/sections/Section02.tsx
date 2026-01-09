@@ -39,8 +39,8 @@ export default function Section02() {
 
       <Callout type="warning">
         <strong>Well-definedness:</strong> These operations are <em>well-defined</em>, meaning the result does not depend
-        on the choice of representatives. If <InlineMath>\bar{'{'}a{'}'} = \bar{'{'}a'{'}{'}'}</InlineMath> and <InlineMath>\bar{'{'}b{'}'} = \bar{'{'}b'{'}{'}'}</InlineMath>,
-        then <InlineMath>\overline{'{'}a + b{'}'} = \overline{'{'}a{'}'} + b'{'}{'}'}</InlineMath> and <InlineMath>\overline{'{'}ab{'}'} = \overline{'{'}a{'}'}b'{'}{'}'}</InlineMath>.
+        on the choice of representatives. If <InlineMath>{`\\bar{a} = \\bar{a'}`}</InlineMath> and <InlineMath>{`\\bar{b} = \\bar{b'}`}</InlineMath>,
+        then <InlineMath>{`\\overline{a + b} = \\overline{a' + b'}`}</InlineMath> and <InlineMath>{`\\overline{ab} = \\overline{a'b'}`}</InlineMath>.
       </Callout>
 
       <p>With these operations, <InlineMath>\mathbb{'{'}Z{'}'}/n\mathbb{'{'}Z{'}'}</InlineMath> forms a commutative ring with identity.</p>

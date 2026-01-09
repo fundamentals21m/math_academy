@@ -32,12 +32,12 @@ export default function Section81() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">
         <p className="font-semibold text-amber-400">Examples</p>
         <ul className="list-disc list-inside space-y-2 mt-2 text-dark-300">
-          <li><InlineMath>\text{"{Spec}"}(\mathbb{"{Z}"}) = \{"{(0), (2), (3), (5), (7), \\ldots}"}\</InlineMath>
+          <li><InlineMath>{`\\text{Spec}(\\mathbb{Z}) = \\{(0), (2), (3), (5), (7), \\ldots\\}`}</InlineMath>
             (zero and primes)</li>
-          <li><InlineMath>\text{"{Spec}"}(k[x]) = \{"{(0)}"}\} \cup \{"{(f) \\mid f \\text{ irreducible}}"}\</InlineMath>
+          <li><InlineMath>{`\\text{Spec}(k[x]) = \\{(0)\\} \\cup \\{(f) \\mid f \\text{ irreducible}\\}`}</InlineMath>
             for field <InlineMath>k</InlineMath></li>
-          <li><InlineMath>\text{"{Spec}"}(k) = \{"{(0)}"}\</InlineMath> (single point)</li>
-          <li><InlineMath>\text{"{Spec}"}(\mathbb{"{Z}"}/6\mathbb{"{Z}"}) = \{"{(2), (3)}"}\</InlineMath></li>
+          <li><InlineMath>{`\\text{Spec}(k) = \\{(0)\\}`}</InlineMath> (single point)</li>
+          <li><InlineMath>{`\\text{Spec}(\\mathbb{Z}/6\\mathbb{Z}) = \\{(2), (3)\\}`}</InlineMath></li>
         </ul>
       </div>
 

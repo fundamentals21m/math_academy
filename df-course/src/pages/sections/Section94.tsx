@@ -86,16 +86,16 @@ export default function Section94() {
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-blue-500">
         <p className="font-semibold text-blue-400">Example: Inducing from <InlineMath>A_3</InlineMath> to <InlineMath>S_3</InlineMath></p>
         <p className="mt-2">
-          <InlineMath>A_3 = \{"{1, (123), (132)}"}\} \cong \mathbb{"{Z}"}/3</InlineMath> has irreducible
+          <InlineMath>{`A_3 = \\{1, (123), (132)\\} \\cong \\mathbb{Z}/3`}</InlineMath> has irreducible
           characters <InlineMath>\psi_0 = 1</InlineMath>, <InlineMath>\psi_1</InlineMath>, <InlineMath>\psi_2</InlineMath>
           (sending generator to <InlineMath>1, \omega, \omega^2</InlineMath>).
         </p>
         <p className="mt-2">
-          <InlineMath>\text{"{Ind}"}_{"{A_3}"}^{"{S_3}"}(\psi_0) = \text{"{Ind}"}(1) = 1 + \chi_{"{\\text{sign}}"}</InlineMath>
+          <InlineMath>{`\\text{Ind}_{A_3}^{S_3}(\\psi_0) = \\text{Ind}(1) = 1 + \\chi_{\\text{sign}}`}</InlineMath>
           (the induced trivial character is the permutation character on <InlineMath>S_3/A_3</InlineMath>).
         </p>
         <p className="mt-2">
-          <InlineMath>\text{"{Ind}"}_{"{A_3}"}^{"{S_3}"}(\psi_1) = \text{"{Ind}"}_{"{A_3}"}^{"{S_3}"}(\psi_2) = \chi_{"{\\text{std}}"}</InlineMath>
+          <InlineMath>{`\\text{Ind}_{A_3}^{S_3}(\\psi_1) = \\text{Ind}_{A_3}^{S_3}(\\psi_2) = \\chi_{\\text{std}}`}</InlineMath>
           (the 2-dimensional standard representation).
         </p>
       </div>

@@ -50,12 +50,12 @@ export default function Section13() {
         The transposition and the <InlineMath>n</InlineMath>-cycle generate all of <InlineMath>S_n</InlineMath>.
       </p>
 
-      <p><strong>Example 3:</strong> <InlineMath>S_n = \langle (1\,2), (2\,3), \ldots, (n{-}1\,n) \rangle</InlineMath></p>
+      <p><strong>Example 3:</strong> <InlineMath>{`S_n = \\langle (1\\,2), (2\\,3), \\ldots, (n{-}1\\,n) \\rangle`}</InlineMath></p>
       <p>
         Adjacent transpositions also generate <InlineMath>S_n</InlineMath>.
       </p>
 
-      <p><strong>Example 4:</strong> <InlineMath>D_{'{'}{'{'}2n{'}'}{'{}'} = \langle r, s \rangle</InlineMath></p>
+      <p><strong>Example 4:</strong> <InlineMath>{`D_{2n} = \\langle r, s \\rangle`}</InlineMath></p>
       <p>
         Where <InlineMath>r</InlineMath> is rotation by <InlineMath>2\pi/n</InlineMath> and <InlineMath>s</InlineMath> is a reflection.
       </p>

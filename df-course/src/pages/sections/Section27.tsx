@@ -16,7 +16,7 @@ export default function Section27() {
       <Callout type="info">
         <strong>Fundamental Theorem:</strong> Every finitely generated abelian group <InlineMath>G</InlineMath> is isomorphic to:
         <MathBlock>G \cong \mathbb{'{'}Z{'}'}^r \times \mathbb{'{'}Z{'}'}/n_1\mathbb{'{'}Z{'}'} \times \mathbb{'{'}Z{'}'}/n_2\mathbb{'{'}Z{'}'} \times \cdots \times \mathbb{'{'}Z{'}'}/n_k\mathbb{'{'}Z{'}'}</MathBlock>
-        where <InlineMath>r \geq 0</InlineMath> and <InlineMath>n_1 \mid n_2 \mid \cdots \mid n_k</InlineMath> with each <InlineMath>n_i {'>'} 1</InlineMath>.
+        where <InlineMath>r \geq 0</InlineMath> and <InlineMath>n_1 \mid n_2 \mid \cdots \mid n_k</InlineMath> with each <InlineMath>{`n_i > 1`}</InlineMath>.
         The numbers <InlineMath>r</InlineMath> (the <strong>rank</strong>) and <InlineMath>n_1, \ldots, n_k</InlineMath> (the <strong>invariant factors</strong>) are uniquely determined.
       </Callout>
 

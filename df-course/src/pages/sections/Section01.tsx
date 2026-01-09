@@ -19,7 +19,7 @@ export default function Section01() {
       </p>
 
       <Callout type="info">
-        <strong>Theorem (Division Algorithm):</strong> For any integers <InlineMath>a</InlineMath> and <InlineMath>b</InlineMath> with <InlineMath>b {'>'} 0</InlineMath>,
+        <strong>Theorem (Division Algorithm):</strong> For any integers <InlineMath>a</InlineMath> and <InlineMath>b</InlineMath> with <InlineMath>{`b > 0`}</InlineMath>,
         there exist unique integers <InlineMath>q</InlineMath> (quotient) and <InlineMath>r</InlineMath> (remainder) such that:
         <MathBlock>a = bq + r \quad \text{'{'}where{'}'} \quad 0 \le r {'<'} b</MathBlock>
       </Callout>
@@ -76,8 +76,8 @@ r_{n-1} &= r_n q_{n+1} + 0
 
       <h3>Prime Numbers</h3>
       <Callout type="info">
-        <strong>Definition:</strong> An integer <InlineMath>p {'>'} 1</InlineMath> is <strong>prime</strong> if its only positive divisors
-        are <InlineMath>1</InlineMath> and <InlineMath>p</InlineMath>. An integer <InlineMath>n {'>'} 1</InlineMath> that is not prime is <strong>composite</strong>.
+        <strong>Definition:</strong> An integer <InlineMath>{`p > 1`}</InlineMath> is <strong>prime</strong> if its only positive divisors
+        are <InlineMath>1</InlineMath> and <InlineMath>p</InlineMath>. An integer <InlineMath>{`n > 1`}</InlineMath> that is not prime is <strong>composite</strong>.
       </Callout>
 
       <p>Key properties of primes:</p>
@@ -88,7 +88,7 @@ r_{n-1} &= r_n q_{n+1} + 0
 
       <h3>The Fundamental Theorem of Arithmetic</h3>
       <Callout type="info">
-        <strong>Theorem (Fundamental Theorem of Arithmetic):</strong> Every integer <InlineMath>n {'>'} 1</InlineMath> can be written
+        <strong>Theorem (Fundamental Theorem of Arithmetic):</strong> Every integer <InlineMath>{`n > 1`}</InlineMath> can be written
         as a product of prime numbers:
         <MathBlock>n = p_1^{'{'}a_1{'}'} p_2^{'{'}a_2{'}'} \cdots p_k^{'{'}a_k{'}'}</MathBlock>
         and this factorization is unique up to the order of the factors.

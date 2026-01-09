@@ -99,7 +99,7 @@ k = \\begin{pmatrix} 0 & \\sqrt{-1} \\\\ \\sqrt{-1} & 0 \\end{pmatrix}`}
       </p>
       <MathBlock>\mathbb{'{'}H{'}'} = \{'{'}a + bi + cj + dk : a, b, c, d \in \mathbb{'{'}R{'}'}\{'}'}</MathBlock>
       <p>
-        The group <InlineMath>Q_8</InlineMath> is the group of unit quaternions <InlineMath>\{\pm 1, \pm i, \pm j, \pm k\}</InlineMath>.
+        The group <InlineMath>Q_8</InlineMath> is the group of unit quaternions <InlineMath>{`\\{\\pm 1, \\pm i, \\pm j, \\pm k\\}`}</InlineMath>.
       </p>
 
       <h3>Presentation</h3>
@@ -109,7 +109,7 @@ k = \\begin{pmatrix} 0 & \\sqrt{-1} \\\\ \\sqrt{-1} & 0 \\end{pmatrix}`}
       </Callout>
 
       <Callout type="success">
-        <strong>Summary:</strong> The quaternion group <InlineMath>Q_8</InlineMath> is a non-abelian group of order 8 with elements <InlineMath>\{\pm 1, \pm i, \pm j, \pm k\}</InlineMath>.
+        <strong>Summary:</strong> The quaternion group <InlineMath>Q_8</InlineMath> is a non-abelian group of order 8 with elements <InlineMath>{`\\{\\pm 1, \\pm i, \\pm j, \\pm k\\}`}</InlineMath>.
         It has a unique element of order 2 (<InlineMath>-1</InlineMath>), and all other non-identity elements have order 4.
         Every subgroup of <InlineMath>Q_8</InlineMath> is normal, making it a Hamiltonian group. <InlineMath>Q_8</InlineMath> and <InlineMath>D_8</InlineMath> are
         the only non-abelian groups of order 8, and they are not isomorphic.

@@ -79,11 +79,11 @@ export default function Section03() {
       <p>
         For a group written multiplicatively, we use exponent notation:
       </p>
-      <MathBlock>a^n = \underbrace{'{'}a \cdot a \cdot \ldots \cdot a{'}'}_{'{'}n \text{'{'} times{'}'}} \quad \text{'{'}for{'}'} \, n {'>'} 0</MathBlock>
+      <MathBlock>{`a^n = \\underbrace{a \\cdot a \\cdot \\ldots \\cdot a}_{n \\text{ times}} \\quad \\text{for} \\, n > 0`}</MathBlock>
       <p>
         with <InlineMath>a^0 = e</InlineMath> and <InlineMath>a^{'{-n}'} = (a^{'{-1}'})^n</InlineMath>. For abelian groups written additively:
       </p>
-      <MathBlock>na = \underbrace{'{'}a + a + \ldots + a{'}'}_{'{'}n \text{'{'} times{'}'}} \quad \text{'{'}for{'}'} \, n {'>'} 0</MathBlock>
+      <MathBlock>{`na = \\underbrace{a + a + \\ldots + a}_{n \\text{ times}} \\quad \\text{for} \\, n > 0`}</MathBlock>
 
       <h3>Order of an Element</h3>
       <Callout type="info">

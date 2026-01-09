@@ -103,7 +103,7 @@ export default function Section63() {
         </p>
         <MathBlock>{`[F(\\alpha):F] = n`}</MathBlock>
         <p className="mt-3">
-          Moreover, <InlineMath>\{"{1, \\alpha, \\alpha^2, \\ldots, \\alpha^{n-1}}"}\}</InlineMath> is a
+          Moreover, <InlineMath>{`\\{1, \\alpha, \\alpha^2, \\ldots, \\alpha^{n-1}\\}`}</InlineMath> is a
           basis for <InlineMath>F(\alpha)</InlineMath> over <InlineMath>F</InlineMath>.
         </p>
       </div>

@@ -80,10 +80,10 @@ export default function Section74() {
         <p className="font-semibold text-emerald-400">Examples of Solvable Groups</p>
         <ul className="list-disc list-inside space-y-2 mt-2 text-dark-300">
           <li>All abelian groups (trivially)</li>
-          <li><InlineMath>S_3</InlineMath>: <InlineMath>\{"{1}"}\} \trianglelefteq A_3 \trianglelefteq S_3</InlineMath>
-            with <InlineMath>A_3/\{"{1}"}\} \cong \mathbb{"{Z}"}/3</InlineMath>
-            and <InlineMath>S_3/A_3 \cong \mathbb{"{Z}"}/2</InlineMath></li>
-          <li><InlineMath>S_4</InlineMath>: <InlineMath>\{"{1}"}\} \trianglelefteq V_4 \trianglelefteq A_4 \trianglelefteq S_4</InlineMath></li>
+          <li><InlineMath>S_3</InlineMath>: <InlineMath>{`\\{1\\} \\trianglelefteq A_3 \\trianglelefteq S_3`}</InlineMath>
+            with <InlineMath>{`A_3/\\{1\\} \\cong \\mathbb{Z}/3`}</InlineMath>
+            and <InlineMath>{`S_3/A_3 \\cong \\mathbb{Z}/2`}</InlineMath></li>
+          <li><InlineMath>S_4</InlineMath>: <InlineMath>{`\\{1\\} \\trianglelefteq V_4 \\trianglelefteq A_4 \\trianglelefteq S_4`}</InlineMath></li>
           <li>All <InlineMath>p</InlineMath>-groups (groups of prime power order)</li>
         </ul>
       </div>
@@ -92,7 +92,7 @@ export default function Section74() {
         <p className="font-semibold text-red-400">Non-Solvable Groups</p>
         <p className="mt-2">
           <InlineMath>A_5</InlineMath> is the smallest non-abelian simple group. Since it has
-          no proper normal subgroups except <InlineMath>\{"{1}"}\}</InlineMath>, it cannot have
+          no proper normal subgroups except <InlineMath>{`\\{1\\}`}</InlineMath>, it cannot have
           a composition series with abelian quotients.
         </p>
         <p className="mt-2">
