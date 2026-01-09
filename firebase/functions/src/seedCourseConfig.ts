@@ -56,7 +56,10 @@ const COURSES = [
 ];
 
 /**
- * One-time seed function to populate courseConfig collection
+ * Seed function to add MISSING courses/sections to courseConfig collection.
+ * This function only ADDS new items - it does NOT overwrite existing data.
+ * Admin GUI changes are preserved.
+ *
  * Call via HTTP: https://us-central1-magic-internet-math-96630.cloudfunctions.net/seedCourseConfig?secret=YOUR_SECRET
  */
 export const seedCourseConfig = functions.https.onRequest(
@@ -68,49 +71,77 @@ export const seedCourseConfig = functions.https.onRequest(
       return;
     }
 
-    const force = req.query.force === 'true';
     const db = admin.firestore();
     const configRef = db.collection('courseConfig').doc('config');
 
-    // Check if already seeded
-    const configDoc = await configRef.get();
-    if (configDoc.exists && !force) {
-      res.status(200).send('Already seeded. Use ?force=true to overwrite.');
-      return;
-    }
+    // Get existing sections and courses
+    const [existingSectionsSnap, existingCoursesSnap, existingAdminsSnap] = await Promise.all([
+      configRef.collection('sections').get(),
+      configRef.collection('courses').get(),
+      configRef.collection('admins').get()
+    ]);
+
+    const existingSectionIds = new Set(existingSectionsSnap.docs.map(d => d.id));
+    const existingCourseIds = new Set(existingCoursesSnap.docs.map(d => d.id));
+    const existingAdminNpubs = new Set(existingAdminsSnap.docs.map(d => d.id));
 
     const batch = db.batch();
+    let addedSections = 0;
+    let addedCourses = 0;
+    let addedAdmins = 0;
 
-    // Set metadata
+    // Update metadata (merge, don't overwrite)
     batch.set(configRef, {
       lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
       updatedBy: 'seed-function',
-      version: 1
-    });
+    }, { merge: true });
 
-    // Create sections
+    // Only add NEW sections (preserve existing ones)
+    const maxExistingSectionOrder = existingSectionsSnap.docs.reduce(
+      (max, doc) => Math.max(max, doc.data().order ?? 0), -1
+    );
+
     SECTIONS.forEach((section, index) => {
-      const sectionRef = configRef.collection('sections').doc(section.id);
-      batch.set(sectionRef, { ...section, order: index });
+      if (!existingSectionIds.has(section.id)) {
+        const sectionRef = configRef.collection('sections').doc(section.id);
+        batch.set(sectionRef, { ...section, order: maxExistingSectionOrder + index + 1 });
+        addedSections++;
+      }
     });
 
-    // Create courses
+    // Only add NEW courses (preserve existing ones with their admin modifications)
+    const maxExistingCourseOrder = existingCoursesSnap.docs.reduce(
+      (max, doc) => Math.max(max, doc.data().order ?? 0), -1
+    );
+
     COURSES.forEach((course, index) => {
-      const courseRef = configRef.collection('courses').doc(course.id);
-      batch.set(courseRef, { ...course, order: index });
+      if (!existingCourseIds.has(course.id)) {
+        const courseRef = configRef.collection('courses').doc(course.id);
+        batch.set(courseRef, { ...course, order: maxExistingCourseOrder + index + 1 });
+        addedCourses++;
+      }
     });
 
-    // Create initial admin
-    const adminRef = configRef.collection('admins').doc(INITIAL_ADMIN_NPUB);
-    batch.set(adminRef, {
-      npub: INITIAL_ADMIN_NPUB,
-      displayName: 'Initial Admin',
-      addedAt: admin.firestore.FieldValue.serverTimestamp(),
-      addedBy: 'seed-function'
-    });
+    // Only add admin if doesn't exist
+    if (!existingAdminNpubs.has(INITIAL_ADMIN_NPUB)) {
+      const adminRef = configRef.collection('admins').doc(INITIAL_ADMIN_NPUB);
+      batch.set(adminRef, {
+        npub: INITIAL_ADMIN_NPUB,
+        displayName: 'Initial Admin',
+        addedAt: admin.firestore.FieldValue.serverTimestamp(),
+        addedBy: 'seed-function'
+      });
+      addedAdmins++;
+    }
 
     await batch.commit();
 
-    res.status(200).send(`Seeded ${SECTIONS.length} sections, ${COURSES.length} courses, 1 admin`);
+    const skippedSections = SECTIONS.length - addedSections;
+    const skippedCourses = COURSES.length - addedCourses;
+
+    res.status(200).send(
+      `Added ${addedSections} new sections, ${addedCourses} new courses, ${addedAdmins} new admins. ` +
+      `Preserved ${skippedSections} existing sections, ${skippedCourses} existing courses.`
+    );
   }
 );

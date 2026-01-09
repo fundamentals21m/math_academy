@@ -41,10 +41,10 @@ Add the same course to the `COURSES` array in the seed file.
 ### 3. Re-seed Firebase (required for hub to show the course)
 After deploying the updated seed function, run:
 ```bash
-curl "https://us-central1-magic-internet-math-96630.cloudfunctions.net/seedCourseConfig?secret=***REMOVED***&force=true"
+curl "https://us-central1-magic-internet-math-96630.cloudfunctions.net/seedCourseConfig?secret=***REMOVED***"
 ```
 
-This updates the Firebase database with the new course data.
+This adds only NEW courses to Firebase - existing courses and admin GUI changes are preserved.
 
 ## Firebase Functions
 
