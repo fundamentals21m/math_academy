@@ -56,7 +56,7 @@ export default function Section11() {
           <li>Circle 2 (prime); cross out all multiples of 2</li>
           <li>Circle 3 (prime); cross out all multiples of 3</li>
           <li>5 is next uncrossed—circle it; cross out multiples of 5</li>
-          <li>Since <InlineMath>\sqrt{30} &lt; 6</InlineMath>, we're done</li>
+          <li>Since <InlineMath>{'\\sqrt{30} < 6'}</InlineMath>, we're done</li>
         </ol>
         <p className="mt-2">
           Remaining: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29
@@ -219,7 +219,7 @@ export default function Section11() {
       <Callout type="info">
         <strong>The Prime Number Theorem:</strong> In 1896, Hadamard and
         de la Vallée Poussin independently proved that{' '}
-        <InlineMath>\pi(n) \approx n / \ln n</InlineMath>. This means primes
+        <InlineMath>{'\\pi(n) \\approx n / \\ln n'}</InlineMath>. This means primes
         become rarer as numbers get larger, but not too rare—there's always
         another prime nearby.
       </Callout>

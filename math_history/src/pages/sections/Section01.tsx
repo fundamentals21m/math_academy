@@ -173,8 +173,8 @@ export default function Section01() {
 
       <p>
         This can be seen by fitting two triangular arrangements together to form a rectangle,
-        then observing that when <InlineMath>T_{n-1}</InlineMath> and <InlineMath>T_n</InlineMath> are
-        combined, they form an <InlineMath>n \\times n</InlineMath> square.
+        then observing that when <InlineMath>{'T_{n-1}'}</InlineMath> and <InlineMath>{'T_n'}</InlineMath> are
+        combined, they form an <InlineMath>{'n \\times n'}</InlineMath> square.
       </p>
 
       <h3>The Diagonal Problem</h3>
@@ -198,9 +198,9 @@ export default function Section01() {
       </MathBlock>
 
       <p>
-        So <InlineMath>d = \\sqrt{2}</InlineMath>. But can <InlineMath>\\sqrt{2}</InlineMath> be
+        So <InlineMath>{'d = \\sqrt{2}'}</InlineMath>. But can <InlineMath>{'\\sqrt{2}'}</InlineMath> be
         expressed as a ratio of whole numbers? The shocking answer—discovered by the
-        Pythagoreans themselves—is <strong>no</strong>. This discovery of
+        Pythagoreans themselves—is <strong>no</strong>. This discovery of{' '}
         <em>irrational numbers</em> shook the foundations of Greek mathematics.
       </p>
 

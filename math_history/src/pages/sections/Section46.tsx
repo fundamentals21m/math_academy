@@ -28,7 +28,7 @@ export default function Section46() {
 
       <p>
         A meromorphic function <InlineMath>f(z)</InlineMath> is periodic if
-        there exists a nonzero <InlineMath>\omega</InlineMath> such that{' '}
+        there exists a nonzero <InlineMath>{'\\omega'}</InlineMath> such that{' '}
         <InlineMath>{`f(z + \\omega) = f(z)`}</InlineMath> for all{' '}
         <InlineMath>z</InlineMath>.
       </p>
@@ -49,7 +49,7 @@ export default function Section46() {
         <p>
           A meromorphic function <InlineMath>f(z)</InlineMath> is{' '}
           <strong>doubly periodic</strong> if it has two periods{' '}
-          <InlineMath>\omega_1</InlineMath> and <InlineMath>\omega_2</InlineMath>{' '}
+          <InlineMath>{'\\omega_1'}</InlineMath> and <InlineMath>{'\\omega_2'}</InlineMath>{' '}
           whose ratio is not real:
         </p>
         <MathBlock>
@@ -73,7 +73,7 @@ export default function Section46() {
         <p className="mt-2 text-dark-400">
           This is a two-dimensional grid of points. The fundamental domain—a
           parallelogram with vertices at <InlineMath>0</InlineMath>,{' '}
-          <InlineMath>\omega_1</InlineMath>, <InlineMath>\omega_2</InlineMath>,{' '}
+          <InlineMath>{'\\omega_1'}</InlineMath>, <InlineMath>{'\\omega_2'}</InlineMath>,{' '}
           <InlineMath>{`\\omega_1 + \\omega_2`}</InlineMath>—tiles the plane.
         </p>
       </Definition>
@@ -102,11 +102,11 @@ export default function Section46() {
       <Theorem title="Properties of ℘">
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <InlineMath>\wp(z)</InlineMath> has a double pole at each{' '}
+            <InlineMath>{'\\wp(z)'}</InlineMath> has a double pole at each{' '}
             <InlineMath>{`\\omega \\in \\Lambda`}</InlineMath>
           </li>
           <li>
-            <InlineMath>\wp(-z) = \wp(z)</InlineMath> (even function)
+            <InlineMath>{'\\wp(-z) = \\wp(z)'}</InlineMath> (even function)
           </li>
           <li>
             <InlineMath>{`\\wp(z + \\omega_1) = \\wp(z + \\omega_2) = \\wp(z)`}</InlineMath>
@@ -143,14 +143,14 @@ export default function Section46() {
       <h3>Uniformization</h3>
 
       <p>
-        Every elliptic curve over <InlineMath>\mathbb{C}</InlineMath> can be
+        Every elliptic curve over <InlineMath>{'\\mathbb{C}'}</InlineMath> can be
         parametrized by elliptic functions:
       </p>
 
       <Theorem title="Uniformization of Elliptic Curves">
         <p>
           For any elliptic curve <InlineMath>{`E: y^2 = 4x^3 - g_2 x - g_3`}</InlineMath>,
-          there exists a lattice <InlineMath>\Lambda</InlineMath> such that:
+          there exists a lattice <InlineMath>{'\\Lambda'}</InlineMath> such that:
         </p>
         <MathBlock>
           {`E(\\mathbb{C}) \\cong \\mathbb{C}/\\Lambda`}
@@ -191,7 +191,7 @@ export default function Section46() {
 
       <Example title="The ℘-Function Takes Each Value Twice">
         <p>
-          Since <InlineMath>\wp(z)</InlineMath> has a double pole in each
+          Since <InlineMath>{'\\wp(z)'}</InlineMath> has a double pole in each
           fundamental domain, it takes every value exactly twice (counting
           multiplicity). This is the "order" of the elliptic function.
         </p>

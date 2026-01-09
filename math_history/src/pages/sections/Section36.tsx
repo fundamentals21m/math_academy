@@ -43,7 +43,7 @@ export default function Section36() {
           Now we set <InlineMath>h = 0</InlineMath> to get{' '}
           <InlineMath>2x</InlineMath>. But wait—we divided by{' '}
           <InlineMath>h</InlineMath>, which is only valid if{' '}
-          <InlineMath>h \neq 0</InlineMath>!
+          <InlineMath>{'h \\neq 0'}</InlineMath>!
         </p>
         <p className="mt-2 italic text-dark-400">
           "By virtue of a twofold mistake, you arrive, though not at science,
@@ -262,7 +262,7 @@ export default function Section36() {
           </li>
         </ul>
         <p className="mt-2 text-dark-400">
-          Both constructions prove that <InlineMath>\mathbb{R}</InlineMath> is{' '}
+          Both constructions prove that <InlineMath>{'\\mathbb{R}'}</InlineMath> is{' '}
           <em>complete</em>: every Cauchy sequence converges.
         </p>
       </Example>

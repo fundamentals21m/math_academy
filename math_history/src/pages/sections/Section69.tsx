@@ -40,11 +40,11 @@ export default function Section69() {
           {`R = \\{x : x \\notin x\\}`}
         </MathBlock>
         <p className="mt-2">
-          Is <InlineMath>R \in R</InlineMath>?
+          Is <InlineMath>{'R \\in R'}</InlineMath>?
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>If <InlineMath>R \in R</InlineMath>, then by definition <InlineMath>R \notin R</InlineMath></li>
-          <li>If <InlineMath>R \notin R</InlineMath>, then by definition <InlineMath>R \in R</InlineMath></li>
+          <li>If <InlineMath>{'R \\in R'}</InlineMath>, then by definition <InlineMath>{'R \\notin R'}</InlineMath></li>
+          <li>If <InlineMath>{'R \\notin R'}</InlineMath>, then by definition <InlineMath>{'R \\in R'}</InlineMath></li>
         </ul>
         <p className="mt-2 text-dark-400">
           Contradiction! The set <InlineMath>R</InlineMath> both does and
@@ -71,13 +71,13 @@ export default function Section69() {
       <Example title="Cantor's Paradox">
         <p>
           Consider the "set of all sets" <InlineMath>V</InlineMath>. By
-          Cantor's theorem, <InlineMath>\mathcal{P}(V)</InlineMath> should be
+          Cantor's theorem, <InlineMath>{'\\mathcal{P}(V)'}</InlineMath> should be
           larger than <InlineMath>V</InlineMath>.
         </p>
         <p className="mt-2">
-          But <InlineMath>\mathcal{P}(V) \subseteq V</InlineMath> (since
+          But <InlineMath>{'\\mathcal{P}(V) \\subseteq V'}</InlineMath> (since
           every set is in <InlineMath>V</InlineMath>), so{' '}
-          <InlineMath>|\mathcal{P}(V)| \leq |V|</InlineMath>.
+          <InlineMath>{'|\\mathcal{P}(V)| \\leq |V|'}</InlineMath>.
         </p>
         <p className="mt-2 text-dark-400">
           Contradiction! There can be no "set of all sets."
@@ -152,7 +152,7 @@ export default function Section69() {
         <ul className="list-disc list-inside mt-2 space-y-2">
           <li>
             <strong>Empty set:</strong> There exists an empty set{' '}
-            <InlineMath>\emptyset</InlineMath>
+            <InlineMath>{'\\emptyset'}</InlineMath>
           </li>
           <li>
             <strong>Pairing:</strong> For any sets <InlineMath>a, b</InlineMath>,

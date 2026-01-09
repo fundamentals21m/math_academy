@@ -206,7 +206,7 @@ export default function Section17() {
 
       <ul className="list-disc list-inside space-y-2 mt-4">
         <li>
-          <strong>Irrational numbers:</strong> Is <InlineMath>\sqrt{2}</InlineMath>
+          <strong>Irrational numbers:</strong> Is <InlineMath>{'\\sqrt{2}'}</InlineMath>
           a number, or just a process for approximation?
         </li>
         <li>

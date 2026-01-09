@@ -260,7 +260,7 @@ export default function Section71() {
       <h3>Conclusion: Mathematics and Its History</h3>
 
       <p>
-        From the ancient discovery of <InlineMath>\sqrt{2}</InlineMath> to
+        From the ancient discovery of <InlineMath>{'\\sqrt{2}'}</InlineMath> to
         Turing's machines, we have traced mathematics through three millennia.
         We've seen:
       </p>

@@ -13,7 +13,7 @@ export default function Section66() {
       <p>
         How can we tell if two spaces are topologically different? Euler
         characteristic helps, but it's not enough—there are distinct spaces
-        with the same <InlineMath>\chi</InlineMath>. Henri Poincaré invented
+        with the same <InlineMath>{'\\chi'}</InlineMath>. Henri Poincaré invented
         a more powerful tool: the <strong>fundamental group</strong>, which
         captures how loops in a space can or cannot be contracted to a point.
         This marked the birth of <em>algebraic topology</em>—using algebra
@@ -78,11 +78,11 @@ export default function Section66() {
 
       <Example title="Group Operation">
         <p>
-          Given loops <InlineMath>\alpha</InlineMath> and{' '}
-          <InlineMath>\beta</InlineMath>, their product{' '}
-          <InlineMath>\alpha \cdot \beta</InlineMath> is: first traverse{' '}
-          <InlineMath>\alpha</InlineMath>, then traverse{' '}
-          <InlineMath>\beta</InlineMath>.
+          Given loops <InlineMath>{'\\alpha'}</InlineMath> and{' '}
+          <InlineMath>{'\\beta'}</InlineMath>, their product{' '}
+          <InlineMath>{'\\alpha \\cdot \\beta'}</InlineMath> is: first traverse{' '}
+          <InlineMath>{'\\alpha'}</InlineMath>, then traverse{' '}
+          <InlineMath>{'\\beta'}</InlineMath>.
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li><strong>Identity:</strong> The constant loop (stay at the basepoint)</li>
@@ -106,7 +106,7 @@ export default function Section66() {
       <Example title="Fundamental Groups of Common Spaces">
         <ul className="list-disc list-inside mt-2 space-y-2">
           <li>
-            <InlineMath>\mathbb{R}^n</InlineMath>:{' '}
+            <InlineMath>{'\\mathbb{R}^n'}</InlineMath>:{' '}
             <InlineMath>{`\\pi_1 = \\{e\\}`}</InlineMath> (simply connected)
           </li>
           <li>
@@ -115,7 +115,7 @@ export default function Section66() {
           </li>
           <li>
             Circle <InlineMath>S^1</InlineMath>:{' '}
-            <InlineMath>\pi_1 = \mathbb{Z}</InlineMath> (integer winding number)
+            <InlineMath>{'\\pi_1 = \\mathbb{Z}'}</InlineMath> (integer winding number)
           </li>
           <li>
             Torus <InlineMath>T^2</InlineMath>:{' '}
@@ -165,8 +165,8 @@ export default function Section66() {
       <Definition title="Covering Space">
         <p>
           A <strong>covering space</strong> of <InlineMath>X</InlineMath> is
-          a space <InlineMath>\tilde{X}</InlineMath> with a map{' '}
-          <InlineMath>p: \tilde{X} \to X</InlineMath> such that every point
+          a space <InlineMath>{'\\tilde{X}'}</InlineMath> with a map{' '}
+          <InlineMath>{'p: \\tilde{X} \\to X'}</InlineMath> such that every point
           in <InlineMath>X</InlineMath> has a neighborhood evenly covered by{' '}
           <InlineMath>p</InlineMath>.
         </p>
@@ -179,7 +179,7 @@ export default function Section66() {
           real line infinitely many times around the circle.
         </p>
         <p className="mt-2">
-          <InlineMath>\mathbb{R}</InlineMath> is the <strong>universal cover</strong>{' '}
+          <InlineMath>{'\\mathbb{R}'}</InlineMath> is the <strong>universal cover</strong>{' '}
           of <InlineMath>S^1</InlineMath>: it's simply connected and covers
           the circle.
         </p>
@@ -209,7 +209,7 @@ export default function Section66() {
           <li>Klein bottle: <InlineMath>\pi_1</InlineMath> is non-abelian, <InlineMath>\chi = 0</InlineMath></li>
         </ul>
         <p className="mt-2">
-          Same <InlineMath>\chi</InlineMath>, different <InlineMath>\pi_1</InlineMath>—so
+          Same <InlineMath>{'\\chi'}</InlineMath>, different <InlineMath>\pi_1</InlineMath>—so
           they're topologically distinct.
         </p>
       </Example>

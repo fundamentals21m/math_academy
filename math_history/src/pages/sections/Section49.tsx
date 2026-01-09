@@ -97,7 +97,7 @@ export default function Section49() {
       <Theorem title="Space Translation → Momentum Conservation">
         <p>
           If the Lagrangian is invariant under translations in direction{' '}
-          <InlineMath>\vec{n}</InlineMath>, then the component of total
+          <InlineMath>{'\\vec{n}'}</InlineMath>, then the component of total
           momentum in that direction is conserved:
         </p>
         <MathBlock>
@@ -132,9 +132,9 @@ export default function Section49() {
       <Example title="The Spinning Skater">
         <p>
           A figure skater pulling in their arms spins faster. No external
-          torques act, so angular momentum <InlineMath>L = I\omega</InlineMath>{' '}
-          is conserved. Reducing moment of inertia <InlineMath>I</InlineMath>{' '}
-          increases angular velocity <InlineMath>\omega</InlineMath>.
+          torques act, so angular momentum <InlineMath>{'L = I\\omega'}</InlineMath>{' '}
+          is conserved. Reducing moment of inertia <InlineMath>{'I'}</InlineMath>{' '}
+          increases angular velocity <InlineMath>{'\\omega'}</InlineMath>.
         </p>
       </Example>
 

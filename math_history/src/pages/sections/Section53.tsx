@@ -55,7 +55,7 @@ export default function Section53() {
           <InlineMath>h = ri</InlineMath> (imaginary), this equals -1.
         </p>
         <p className="mt-2 text-dark-400">
-          The limit depends on direction, so <InlineMath>\bar{z}</InlineMath>{' '}
+          The limit depends on direction, so <InlineMath>{'\\bar{z}'}</InlineMath>{' '}
           is nowhere complex-differentiable!
         </p>
       </Example>
@@ -187,8 +187,8 @@ export default function Section53() {
       <Example title="The Map w = z²">
         <p>
           The function <InlineMath>{`w = z^2`}</InlineMath> doubles angles at
-          the origin. A ray at angle <InlineMath>\theta</InlineMath> maps to
-          a ray at angle <InlineMath>2\theta</InlineMath>.
+          the origin. A ray at angle <InlineMath>{'\\theta'}</InlineMath> maps to
+          a ray at angle <InlineMath>{'2\\theta'}</InlineMath>.
         </p>
         <p className="mt-2">
           The right half-plane <InlineMath>{`\\text{Re}(z) > 0`}</InlineMath>{' '}

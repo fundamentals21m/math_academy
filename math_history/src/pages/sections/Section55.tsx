@@ -42,13 +42,13 @@ export default function Section55() {
         <p className="mt-2">
           Starting at <InlineMath>z = 1</InlineMath> with{' '}
           <InlineMath>{`\\sqrt{1} = 1`}</InlineMath>, traverse a circle around
-          the origin. When <InlineMath>\theta</InlineMath> increases by{' '}
+          the origin. When <InlineMath>{'\\theta'}</InlineMath> increases by{' '}
           <InlineMath>{`2\\pi`}</InlineMath>, the square root becomes{' '}
           <InlineMath>{`e^{i\\pi} = -1`}</InlineMath>.
         </p>
         <p className="mt-2 text-dark-400">
           We return to the same <InlineMath>z</InlineMath> but a different
-          value of <InlineMath>\sqrt{z}</InlineMath>!
+          value of <InlineMath>{'\\sqrt{z}'}</InlineMath>!
         </p>
       </Example>
 
@@ -73,14 +73,14 @@ export default function Section55() {
 
       <p>
         Riemann's insight: instead of a multi-valued function on{' '}
-        <InlineMath>\mathbb{C}</InlineMath>, consider a single-valued function
+        <InlineMath>{'\\mathbb{C}'}</InlineMath>, consider a single-valued function
         on a <em>branched covering surface</em>.
       </p>
 
       <Definition title="Riemann Surface">
         <p>
           A <strong>Riemann surface</strong> is a one-dimensional complex
-          manifold—locally, it looks like <InlineMath>\mathbb{C}</InlineMath>,
+          manifold—locally, it looks like <InlineMath>{'\\mathbb{C}'}</InlineMath>,
           but globally it may have nontrivial topology (like a torus or
           sphere with handles).
         </p>
@@ -122,8 +122,8 @@ export default function Section55() {
           meet—where the multi-valuedness "originates."
         </p>
         <p className="mt-2">
-          For <InlineMath>\sqrt{z}</InlineMath>: the branch points are at{' '}
-          <InlineMath>z = 0</InlineMath> and <InlineMath>z = \infty</InlineMath>.
+          For <InlineMath>{'\\sqrt{z}'}</InlineMath>: the branch points are at{' '}
+          <InlineMath>{'z = 0'}</InlineMath> and <InlineMath>{'z = \\infty'}</InlineMath>.
         </p>
       </Definition>
 
@@ -153,7 +153,7 @@ export default function Section55() {
         <p className="mt-2">
           For most <InlineMath>x</InlineMath>, there are two values of{' '}
           <InlineMath>y</InlineMath>. The branch points are at{' '}
-          <InlineMath>x = -1, 0, 1, \infty</InlineMath>.
+          <InlineMath>{'x = -1, 0, 1, \\infty'}</InlineMath>.
         </p>
         <p className="mt-2">
           The resulting Riemann surface is a torus (genus 1).
@@ -190,7 +190,7 @@ export default function Section55() {
         <p className="mt-2 text-dark-400">
           Here <InlineMath>D</InlineMath> is a "divisor" encoding poles,{' '}
           <InlineMath>K</InlineMath> is the canonical divisor, and{' '}
-          <InlineMath>\ell</InlineMath> counts dimensions.
+          <InlineMath>{'\\ell'}</InlineMath> counts dimensions.
         </p>
       </Theorem>
 

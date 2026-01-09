@@ -40,10 +40,10 @@ export default function Section68() {
 
       <Example title="Basic Sets">
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li><InlineMath>\mathbb{N}</InlineMath>: Natural numbers {`{0, 1, 2, 3, ...}`}</li>
-          <li><InlineMath>\mathbb{Z}</InlineMath>: Integers {`{..., -2, -1, 0, 1, 2, ...}`}</li>
-          <li><InlineMath>\mathbb{Q}</InlineMath>: Rational numbers</li>
-          <li><InlineMath>\mathbb{R}</InlineMath>: Real numbers</li>
+          <li><InlineMath>{'\\mathbb{N}'}</InlineMath>: Natural numbers {`{0, 1, 2, 3, ...}`}</li>
+          <li><InlineMath>{'\\mathbb{Z}'}</InlineMath>: Integers {`{..., -2, -1, 0, 1, 2, ...}`}</li>
+          <li><InlineMath>{'\\mathbb{Q}'}</InlineMath>: Rational numbers</li>
+          <li><InlineMath>{'\\mathbb{R}'}</InlineMath>: Real numbers</li>
         </ul>
       </Example>
 
@@ -64,7 +64,7 @@ export default function Section68() {
       <Definition title="Countable Set">
         <p>
           A set is <strong>countably infinite</strong> if it has the same
-          cardinality as <InlineMath>\mathbb{N}</InlineMath>—its elements can
+          cardinality as <InlineMath>{'\\mathbb{N}'}</InlineMath>—its elements can
           be listed: first, second, third, ...
         </p>
       </Definition>
@@ -94,16 +94,16 @@ export default function Section68() {
           {`0, 1, -1, 2, -2, 3, -3, \\ldots`}
         </MathBlock>
         <p className="mt-2">
-          This gives a bijection with <InlineMath>\mathbb{N}</InlineMath>,
-          so <InlineMath>|\mathbb{Z}| = |\mathbb{N}|</InlineMath>.
+          This gives a bijection with <InlineMath>{'\\mathbb{N}'}</InlineMath>,
+          so <InlineMath>{'|\\mathbb{Z}| = |\\mathbb{N}|'}</InlineMath>.
         </p>
       </Example>
 
       <Theorem title="Rationals Are Countable">
         <p>
-          The rational numbers <InlineMath>\mathbb{Q}</InlineMath> are countably
+          The rational numbers <InlineMath>{'\\mathbb{Q}'}</InlineMath> are countably
           infinite—they can be put in one-to-one correspondence with{' '}
-          <InlineMath>\mathbb{N}</InlineMath>.
+          <InlineMath>{'\\mathbb{N}'}</InlineMath>.
         </p>
       </Theorem>
 
@@ -130,8 +130,8 @@ export default function Section68() {
       <Theorem title="Cantor's Diagonal Argument (1891)">
         <p>
           The real numbers are <strong>uncountable</strong>—there is no
-          bijection between <InlineMath>\mathbb{R}</InlineMath> and{' '}
-          <InlineMath>\mathbb{N}</InlineMath>.
+          bijection between <InlineMath>{'\\mathbb{R}'}</InlineMath> and{' '}
+          <InlineMath>{'\\mathbb{N}'}</InlineMath>.
         </p>
       </Theorem>
 
@@ -174,8 +174,8 @@ export default function Section68() {
       <Definition title="Aleph Numbers">
         <p>
           Cantor denoted the cardinality of countably infinite sets by{' '}
-          <InlineMath>\aleph_0</InlineMath> ("aleph-null"). The cardinality
-          of the continuum (reals) is denoted <InlineMath>\mathfrak{c}</InlineMath>.
+          <InlineMath>{'\\aleph_0'}</InlineMath> ("aleph-null"). The cardinality
+          of the continuum (reals) is denoted <InlineMath>{'\\mathfrak{c}'}</InlineMath>.
         </p>
         <MathBlock>
           {`|\\mathbb{N}| = \\aleph_0, \\quad |\\mathbb{R}| = \\mathfrak{c} = 2^{\\aleph_0}`}
@@ -185,7 +185,7 @@ export default function Section68() {
       <Theorem title="Cantor's Theorem">
         <p>
           For any set <InlineMath>A</InlineMath>, the power set{' '}
-          <InlineMath>\mathcal{P}(A)</InlineMath> (set of all subsets) has
+          <InlineMath>{'\\mathcal{P}(A)'}</InlineMath> (set of all subsets) has
           strictly greater cardinality:
         </p>
         <MathBlock>
@@ -212,7 +212,7 @@ export default function Section68() {
         <p>
           The <strong>Continuum Hypothesis</strong> (CH) states that there is
           no set whose cardinality is strictly between{' '}
-          <InlineMath>\aleph_0</InlineMath> and <InlineMath>\mathfrak{c}</InlineMath>.
+          <InlineMath>{'\\aleph_0'}</InlineMath> and <InlineMath>{'\\mathfrak{c}'}</InlineMath>.
         </p>
         <MathBlock>
           {`\\mathfrak{c} = \\aleph_1?`}
@@ -245,10 +245,10 @@ export default function Section68() {
         <p>
           <strong>Ordinal numbers</strong> extend the natural numbers to describe
           well-ordered sets. The first infinite ordinal is{' '}
-          <InlineMath>\omega</InlineMath>, followed by{' '}
-          <InlineMath>\omega + 1</InlineMath>,{' '}
-          <InlineMath>\omega + 2</InlineMath>, ...,{' '}
-          <InlineMath>\omega \cdot 2</InlineMath>, etc.
+          <InlineMath>{'\\omega'}</InlineMath>, followed by{' '}
+          <InlineMath>{'\\omega + 1'}</InlineMath>,{' '}
+          <InlineMath>{'\\omega + 2'}</InlineMath>, ...,{' '}
+          <InlineMath>{'\\omega \\cdot 2'}</InlineMath>, etc.
         </p>
       </Definition>
 

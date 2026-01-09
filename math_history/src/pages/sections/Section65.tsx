@@ -32,7 +32,7 @@ export default function Section65() {
         <p>
           A <strong>surface</strong> (or <strong>2-manifold</strong>) is a
           space that locally looks like a piece of the plane{' '}
-          <InlineMath>\mathbb{R}^2</InlineMath>. Near every point, you can
+          <InlineMath>{'\\mathbb{R}^2'}</InlineMath>. Near every point, you can
           find a neighborhood that's topologically a disk.
         </p>
       </Definition>
@@ -106,7 +106,7 @@ export default function Section65() {
           <li><InlineMath>g = 3</InlineMath>: Triple torus, etc.</li>
         </ul>
         <p className="mt-2">
-          Euler characteristic: <InlineMath>\chi = 2 - 2g</InlineMath>
+          Euler characteristic: <InlineMath>{'\\chi = 2 - 2g'}</InlineMath>
         </p>
       </Example>
 
@@ -120,7 +120,7 @@ export default function Section65() {
           <li><InlineMath>k = 3</InlineMath>: Three cross-caps, etc.</li>
         </ul>
         <p className="mt-2">
-          Euler characteristic: <InlineMath>\chi = 2 - k</InlineMath>
+          Euler characteristic: <InlineMath>{'\\chi = 2 - k'}</InlineMath>
         </p>
       </Example>
 
@@ -140,8 +140,8 @@ export default function Section65() {
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
           <li>Torus = Sphere # (handle) = <InlineMath>T^2</InlineMath></li>
-          <li>Double torus = <InlineMath>T^2 \# T^2</InlineMath></li>
-          <li>Klein bottle = <InlineMath>\mathbb{RP}^2 \# \mathbb{RP}^2</InlineMath></li>
+          <li>Double torus = <InlineMath>{'T^2 \\# T^2'}</InlineMath></li>
+          <li>Klein bottle = <InlineMath>{'\\mathbb{RP}^2 \\# \\mathbb{RP}^2'}</InlineMath></li>
         </ul>
       </Example>
 

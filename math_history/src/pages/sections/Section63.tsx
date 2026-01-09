@@ -30,7 +30,7 @@ export default function Section63() {
       <Definition title="Group">
         <p>
           A <strong>group</strong> is a set <InlineMath>G</InlineMath> with a
-          binary operation <InlineMath>\cdot</InlineMath> satisfying:
+          binary operation <InlineMath>{'\\cdot'}</InlineMath> satisfying:
         </p>
         <ol className="list-decimal list-inside mt-2 space-y-1">
           <li><strong>Closure:</strong> For all <InlineMath>a, b \in G</InlineMath>,{' '}
@@ -48,22 +48,22 @@ export default function Section63() {
           We've seen many groups:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li><InlineMath>(\mathbb{Z}, +)</InlineMath>: integers under addition</li>
-          <li><InlineMath>(\mathbb{Q}^*, \times)</InlineMath>: nonzero rationals under multiplication</li>
-          <li><InlineMath>(S_n, \circ)</InlineMath>: permutations under composition</li>
-          <li><InlineMath>(D_n, \circ)</InlineMath>: symmetries of a regular <InlineMath>n</InlineMath>-gon</li>
-          <li><InlineMath>GL_n(\mathbb{R})</InlineMath>: invertible matrices under multiplication</li>
+          <li><InlineMath>{'(\\mathbb{Z}, +)'}</InlineMath>: integers under addition</li>
+          <li><InlineMath>{'(\\mathbb{Q}^*, \\times)'}</InlineMath>: nonzero rationals under multiplication</li>
+          <li><InlineMath>{'(S_n, \\circ)'}</InlineMath>: permutations under composition</li>
+          <li><InlineMath>{'(D_n, \\circ)'}</InlineMath>: symmetries of a regular <InlineMath>n</InlineMath>-gon</li>
+          <li><InlineMath>{'GL_n(\\mathbb{R})'}</InlineMath>: invertible matrices under multiplication</li>
         </ul>
       </Example>
 
       <Definition title="Abelian Group">
         <p>
           A group is <strong>abelian</strong> (or commutative) if{' '}
-          <InlineMath>a \cdot b = b \cdot a</InlineMath> for all{' '}
+          <InlineMath>{'a \\cdot b = b \\cdot a'}</InlineMath> for all{' '}
           <InlineMath>a, b</InlineMath>.
         </p>
         <p className="mt-2 text-dark-400">
-          Named after Niels Henrik Abel. Examples: <InlineMath>(\mathbb{Z}, +)</InlineMath>,{' '}
+          Named after Niels Henrik Abel. Examples: <InlineMath>{'(\\mathbb{Z}, +)'}</InlineMath>,{' '}
           cyclic groups. Non-examples: <InlineMath>S_n</InlineMath> for{' '}
           <InlineMath>n \geq 3</InlineMath>, <InlineMath>D_n</InlineMath> for{' '}
           <InlineMath>n \geq 3</InlineMath>.
@@ -76,7 +76,7 @@ export default function Section63() {
         <p>
           A <strong>subgroup</strong> <InlineMath>H</InlineMath> of{' '}
           <InlineMath>G</InlineMath> is a subset that is itself a group under
-          the same operation. We write <InlineMath>H \leq G</InlineMath>.
+          the same operation. We write <InlineMath>{'H \\leq G'}</InlineMath>.
         </p>
       </Definition>
 
@@ -91,8 +91,8 @@ export default function Section63() {
       <Definition title="Normal Subgroup">
         <p>
           A subgroup <InlineMath>N</InlineMath> is <strong>normal</strong> in{' '}
-          <InlineMath>G</InlineMath> (written <InlineMath>N \trianglelefteq G</InlineMath>)
-          if <InlineMath>gNg^{-1} = N</InlineMath> for all <InlineMath>g \in G</InlineMath>.
+          <InlineMath>G</InlineMath> (written <InlineMath>{'N \\trianglelefteq G'}</InlineMath>)
+          if <InlineMath>{'gNg^{-1} = N'}</InlineMath> for all <InlineMath>g \in G</InlineMath>.
         </p>
         <p className="mt-2 text-dark-400">
           Normal subgroups are exactly those for which we can form a quotient group.
@@ -101,7 +101,7 @@ export default function Section63() {
 
       <Definition title="Quotient Group">
         <p>
-          If <InlineMath>N \trianglelefteq G</InlineMath>, the <strong>quotient
+          If <InlineMath>{'N \\trianglelefteq G'}</InlineMath>, the <strong>quotient
           group</strong> <InlineMath>G/N</InlineMath> consists of cosets{' '}
           <InlineMath>gN</InlineMath> with operation{' '}
           <InlineMath>(gN)(hN) = (gh)N</InlineMath>.
@@ -110,7 +110,7 @@ export default function Section63() {
 
       <Example title="Z/nZ">
         <p>
-          The quotient <InlineMath>\mathbb{Z}/n\mathbb{Z}</InlineMath> is the
+          The quotient <InlineMath>{'\\mathbb{Z}/n\\mathbb{Z}'}</InlineMath> is the
           cyclic group of order <InlineMath>n</InlineMath>—integers modulo{' '}
           <InlineMath>n</InlineMath>.
         </p>
@@ -120,7 +120,7 @@ export default function Section63() {
 
       <Definition title="Group Homomorphism">
         <p>
-          A <strong>homomorphism</strong> <InlineMath>\phi: G \to H</InlineMath>{' '}
+          A <strong>homomorphism</strong> <InlineMath>{'\\phi: G \\to H'}</InlineMath>{' '}
           is a function preserving the group operation:
         </p>
         <MathBlock>
@@ -131,7 +131,7 @@ export default function Section63() {
       <Definition title="Isomorphism">
         <p>
           An <strong>isomorphism</strong> is a bijective homomorphism. Groups
-          are <strong>isomorphic</strong> (<InlineMath>G \cong H</InlineMath>)
+          are <strong>isomorphic</strong> (<InlineMath>{'G \\cong H'}</InlineMath>)
           if there exists an isomorphism between them.
         </p>
         <p className="mt-2 text-dark-400">
@@ -142,7 +142,7 @@ export default function Section63() {
 
       <Theorem title="First Isomorphism Theorem">
         <p>
-          If <InlineMath>\phi: G \to H</InlineMath> is a homomorphism, then:
+          If <InlineMath>{'\\phi: G \\to H'}</InlineMath> is a homomorphism, then:
         </p>
         <MathBlock>
           {`G / \\ker(\\phi) \\cong \\text{im}(\\phi)`}
@@ -173,9 +173,9 @@ export default function Section63() {
           The abelian groups of order 8 are:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li><InlineMath>\mathbb{Z}/8\mathbb{Z}</InlineMath> (cyclic)</li>
-          <li><InlineMath>\mathbb{Z}/4\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}</InlineMath></li>
-          <li><InlineMath>\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}</InlineMath></li>
+          <li><InlineMath>{'\\mathbb{Z}/8\\mathbb{Z}'}</InlineMath> (cyclic)</li>
+          <li><InlineMath>{'\\mathbb{Z}/4\\mathbb{Z} \\times \\mathbb{Z}/2\\mathbb{Z}'}</InlineMath></li>
+          <li><InlineMath>{'\\mathbb{Z}/2\\mathbb{Z} \\times \\mathbb{Z}/2\\mathbb{Z} \\times \\mathbb{Z}/2\\mathbb{Z}'}</InlineMath></li>
         </ul>
       </Example>
 
@@ -198,7 +198,7 @@ export default function Section63() {
           The finite simple groups fall into several families:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>Cyclic groups <InlineMath>\mathbb{Z}/p\mathbb{Z}</InlineMath> for prime <InlineMath>p</InlineMath></li>
+          <li>Cyclic groups <InlineMath>{'\\mathbb{Z}/p\\mathbb{Z}'}</InlineMath> for prime <InlineMath>p</InlineMath></li>
           <li>Alternating groups <InlineMath>A_n</InlineMath> for <InlineMath>n \geq 5</InlineMath></li>
           <li>Groups of Lie type (classical and exceptional)</li>
           <li>26 sporadic groups (including the Monster)</li>
@@ -251,7 +251,7 @@ export default function Section63() {
       <ul className="list-disc list-inside space-y-2 mt-4">
         <li>
           <strong>Cryptography:</strong> RSA uses the group{' '}
-          <InlineMath>(\mathbb{Z}/n\mathbb{Z})^*</InlineMath>; elliptic curve
+          <InlineMath>{'(\\mathbb{Z}/n\\mathbb{Z})^*'}</InlineMath>; elliptic curve
           cryptography uses groups of points on elliptic curves.
         </li>
         <li>

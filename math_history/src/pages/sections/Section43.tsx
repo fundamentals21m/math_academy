@@ -141,7 +141,7 @@ export default function Section43() {
       </p>
 
       <Definition title="Elliptic Curve">
-        <p>An elliptic curve over <InlineMath>\mathbb{Q}</InlineMath> has the form:</p>
+        <p>An elliptic curve over <InlineMath>{'\\mathbb{Q}'}</InlineMath> has the form:</p>
         <MathBlock>
           {`y^2 = x^3 + ax + b`}
         </MathBlock>
@@ -155,7 +155,7 @@ export default function Section43() {
 
       <p>
         In the 1950s, Yutaka Taniyama and Goro Shimura conjectured that every
-        elliptic curve over <InlineMath>\mathbb{Q}</InlineMath> is "modular"—
+        elliptic curve over <InlineMath>{'\\mathbb{Q}'}</InlineMath> is "modular"—
         connected to modular forms, which are special functions on the
         complex upper half-plane.
       </p>
@@ -198,7 +198,7 @@ export default function Section43() {
 
       <Theorem title="Wiles's Theorem (1995)">
         <p>
-          Every semistable elliptic curve over <InlineMath>\mathbb{Q}</InlineMath>{' '}
+          Every semistable elliptic curve over <InlineMath>{'\\mathbb{Q}'}</InlineMath>{' '}
           is modular.
         </p>
         <p className="mt-2 text-dark-400">

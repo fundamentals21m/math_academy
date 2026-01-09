@@ -45,14 +45,14 @@ export default function Section13() {
       <Theorem title="Existence of Solutions">
         <p>
           The equation <InlineMath>ax + by = c</InlineMath> has an integer
-          solution if and only if <InlineMath>\gcd(a, b)</InlineMath> divides{' '}
+          solution if and only if <InlineMath>{'\\gcd(a, b)'}</InlineMath> divides{' '}
           <InlineMath>c</InlineMath>.
         </p>
       </Theorem>
 
       <Example title="Solving 15x + 6y = 9">
         <p>
-          First, check if solutions exist: <InlineMath>\gcd(15, 6) = 3</InlineMath>,
+          First, check if solutions exist: <InlineMath>{'\\gcd(15, 6) = 3'}</InlineMath>,
           and 3 divides 9. Solutions exist!
         </p>
         <p className="mt-2">
@@ -113,7 +113,7 @@ export default function Section13() {
 
       <Theorem title="Pythagorean Triples">
         <p>
-          All primitive Pythagorean triples (where <InlineMath>\gcd(x, y, z) = 1</InlineMath>)
+          All primitive Pythagorean triples (where <InlineMath>{'\\gcd(x, y, z) = 1'}</InlineMath>)
           are given by:
         </p>
         <MathBlock>
@@ -121,7 +121,7 @@ export default function Section13() {
         </MathBlock>
         <p className="mt-2">
           where <InlineMath>m &gt; n &gt; 0</InlineMath>,{' '}
-          <InlineMath>\gcd(m, n) = 1</InlineMath>, and{' '}
+          <InlineMath>{'\\gcd(m, n) = 1'}</InlineMath>, and{' '}
           <InlineMath>m - n</InlineMath> is odd.
         </p>
       </Theorem>
@@ -258,7 +258,7 @@ export default function Section13() {
           <li><InlineMath>(99, 70)</InlineMath> — since <InlineMath>9801 - 9800 = 1</InlineMath></li>
         </ul>
         <p className="mt-2">
-          These approximate <InlineMath>\sqrt{2}</InlineMath>:{' '}
+          These approximate <InlineMath>{'\\sqrt{2}'}</InlineMath>:{' '}
           <InlineMath>3/2 = 1.5</InlineMath>,{' '}
           <InlineMath>17/12 \approx 1.417</InlineMath>,{' '}
           <InlineMath>99/70 \approx 1.4143</InlineMath> ...
@@ -274,7 +274,7 @@ export default function Section13() {
       <Theorem title="Fermat's Last Theorem">
         <p>
           The equation <InlineMath>x^n + y^n = z^n</InlineMath> has no
-          positive integer solutions for <InlineMath>n \geq 3</InlineMath>.
+          positive integer solutions for <InlineMath>{'n \\geq 3'}</InlineMath>.
         </p>
       </Theorem>
 

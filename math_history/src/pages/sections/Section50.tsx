@@ -15,7 +15,7 @@ export default function Section50() {
         results in mathematics: every non-constant polynomial with complex
         coefficients has at least one complex root. This guarantees that
         polynomials can always be completely factored over the complex numbers,
-        making <InlineMath>\mathbb{C}</InlineMath> "algebraically closed."
+        making <InlineMath>{'\\mathbb{C}'}</InlineMath> "algebraically closed."
       </p>
 
       <Callout type="info">
@@ -35,7 +35,7 @@ export default function Section50() {
           {`p(z) = a_n z^n + a_{n-1} z^{n-1} + \\cdots + a_1 z + a_0`}
         </MathBlock>
         <p className="mt-2">
-          has at least one root in <InlineMath>\mathbb{C}</InlineMath>.
+          has at least one root in <InlineMath>{'\\mathbb{C}'}</InlineMath>.
         </p>
       </Theorem>
 
@@ -102,13 +102,13 @@ export default function Section50() {
 
       <Example title="The Need for Analysis">
         <p>
-          The real numbers <InlineMath>\mathbb{R}</InlineMath> are not
+          The real numbers <InlineMath>{'\\mathbb{R}'}</InlineMath> are not
           algebraically closed—<InlineMath>{`x^2 + 1 = 0`}</InlineMath> has
-          no real roots. What makes <InlineMath>\mathbb{C}</InlineMath> different?
+          no real roots. What makes <InlineMath>{'\\mathbb{C}'}</InlineMath> different?
         </p>
         <p className="mt-2">
-          The key is that <InlineMath>\mathbb{C}</InlineMath> is{' '}
-          <strong>complete</strong> (like <InlineMath>\mathbb{R}</InlineMath>)
+          The key is that <InlineMath>{'\\mathbb{C}'}</InlineMath> is{' '}
+          <strong>complete</strong> (like <InlineMath>{'\\mathbb{R}'}</InlineMath>)
           and <strong>algebraically structured</strong> in the right way.
           Proving this requires analysis.
         </p>
@@ -143,10 +143,10 @@ export default function Section50() {
 
       <Definition title="Algebraic Proof (Requires Real Analysis)">
         <p>
-          Using that <InlineMath>\mathbb{R}</InlineMath> has no proper
+          Using that <InlineMath>{'\\mathbb{R}'}</InlineMath> has no proper
           finite algebraic extensions of odd degree (a consequence of the
           intermediate value theorem), one can prove that{' '}
-          <InlineMath>\mathbb{C}</InlineMath> is algebraically closed.
+          <InlineMath>{'\\mathbb{C}'}</InlineMath> is algebraically closed.
         </p>
       </Definition>
 
@@ -181,7 +181,7 @@ export default function Section50() {
       <h3>Algebraic Closure</h3>
 
       <p>
-        The FTA says precisely that <InlineMath>\mathbb{C}</InlineMath> is
+        The FTA says precisely that <InlineMath>{'\\mathbb{C}'}</InlineMath> is
         algebraically closed:
       </p>
 
@@ -195,8 +195,8 @@ export default function Section50() {
 
       <Callout type="info">
         <strong>Uniqueness:</strong> The complex numbers are (up to isomorphism)
-        the unique algebraic closure of <InlineMath>\mathbb{R}</InlineMath>.
-        There's no need to extend further—<InlineMath>\mathbb{C}</InlineMath>{' '}
+        the unique algebraic closure of <InlineMath>{'\\mathbb{R}'}</InlineMath>.
+        There's no need to extend further—<InlineMath>{'\\mathbb{C}'}</InlineMath>{' '}
         is complete for solving polynomial equations.
       </Callout>
 

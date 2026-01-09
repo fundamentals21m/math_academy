@@ -34,20 +34,20 @@ export default function Section67() {
 
       <Example title="Coordinate Dimension">
         <p>
-          A point in <InlineMath>\mathbb{R}^n</InlineMath> is specified by{' '}
+          A point in <InlineMath>{'\\mathbb{R}^n'}</InlineMath> is specified by{' '}
           <InlineMath>n</InlineMath> coordinates. This suggests:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>A line (<InlineMath>\mathbb{R}^1</InlineMath>): 1 coordinate</li>
-          <li>A plane (<InlineMath>\mathbb{R}^2</InlineMath>): 2 coordinates</li>
-          <li>Space (<InlineMath>\mathbb{R}^3</InlineMath>): 3 coordinates</li>
+          <li>A line (<InlineMath>{'\\mathbb{R}^1'}</InlineMath>): 1 coordinate</li>
+          <li>A plane (<InlineMath>{'\\mathbb{R}^2'}</InlineMath>): 2 coordinates</li>
+          <li>Space (<InlineMath>{'\\mathbb{R}^3'}</InlineMath>): 3 coordinates</li>
         </ul>
       </Example>
 
       <p>
         But is dimension preserved under continuous maps? Is{' '}
-        <InlineMath>\mathbb{R}^2</InlineMath> topologically different from{' '}
-        <InlineMath>\mathbb{R}^3</InlineMath>?
+        <InlineMath>{'\\mathbb{R}^2'}</InlineMath> topologically different from{' '}
+        <InlineMath>{'\\mathbb{R}^3'}</InlineMath>?
       </p>
 
       <h3>Cantor's Shocking Discovery</h3>
@@ -60,8 +60,8 @@ export default function Section67() {
       <Theorem title="Cantor's Bijection">
         <p>
           There exists a bijection (one-to-one correspondence) between{' '}
-          <InlineMath>\mathbb{R}</InlineMath> and{' '}
-          <InlineMath>\mathbb{R}^2</InlineMath>.
+          <InlineMath>{'\\mathbb{R}'}</InlineMath> and{' '}
+          <InlineMath>{'\\mathbb{R}^2'}</InlineMath>.
         </p>
         <p className="mt-2 text-dark-400">
           The line and the plane have the same cardinality!
@@ -121,15 +121,15 @@ export default function Section67() {
       <h3>Invariance of Dimension</h3>
 
       <p>
-        The fundamental question: Is <InlineMath>\mathbb{R}^m</InlineMath>{' '}
-        homeomorphic to <InlineMath>\mathbb{R}^n</InlineMath> when{' '}
+        The fundamental question: Is <InlineMath>{'\\mathbb{R}^m'}</InlineMath>{' '}
+        homeomorphic to <InlineMath>{'\\mathbb{R}^n'}</InlineMath> when{' '}
         <InlineMath>m \neq n</InlineMath>?
       </p>
 
       <Theorem title="Invariance of Dimension (Brouwer, 1911)">
         <p>
-          <InlineMath>\mathbb{R}^m</InlineMath> is homeomorphic to{' '}
-          <InlineMath>\mathbb{R}^n</InlineMath> if and only if{' '}
+          <InlineMath>{'\\mathbb{R}^m'}</InlineMath> is homeomorphic to{' '}
+          <InlineMath>{'\\mathbb{R}^n'}</InlineMath> if and only if{' '}
           <InlineMath>m = n</InlineMath>.
         </p>
         <p className="mt-2 text-dark-400">
@@ -176,7 +176,7 @@ export default function Section67() {
           <li>A point has dimension 0 (boundary is empty)</li>
           <li>A line has dimension 1 (boundaries of neighborhoods are points)</li>
           <li>A plane has dimension 2 (boundaries are curves)</li>
-          <li><InlineMath>\mathbb{R}^n</InlineMath> has dimension <InlineMath>n</InlineMath></li>
+          <li><InlineMath>{'\\mathbb{R}^n'}</InlineMath> has dimension <InlineMath>n</InlineMath></li>
         </ul>
       </Example>
 
@@ -252,7 +252,7 @@ export default function Section67() {
           Dimension 4 is uniquely strange. For example:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li><InlineMath>\mathbb{R}^4</InlineMath> has uncountably many different smooth structures</li>
+          <li><InlineMath>{'\\mathbb{R}^4'}</InlineMath> has uncountably many different smooth structures</li>
           <li>The smooth Poincaré conjecture is false in dimension 4</li>
           <li>Many problems solvable in other dimensions remain open in dimension 4</li>
         </ul>

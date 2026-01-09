@@ -101,12 +101,12 @@ export default function Section58() {
 
       <Example title="Parallel Lines in the Disk">
         <p>
-          Given a line <InlineMath>\ell</InlineMath> (a circular arc) and a
+          Given a line <InlineMath>{'\\ell'}</InlineMath> (a circular arc) and a
           point <InlineMath>P</InlineMath> not on it:
         </p>
         <ul className="list-disc list-inside mt-2 space-y-1">
-          <li>Two limiting parallels through <InlineMath>P</InlineMath> meet <InlineMath>\ell</InlineMath> at the boundary circle</li>
-          <li>Infinitely many ultra-parallels pass through <InlineMath>P</InlineMath> without touching <InlineMath>\ell</InlineMath></li>
+          <li>Two limiting parallels through <InlineMath>P</InlineMath> meet <InlineMath>{'\\ell'}</InlineMath> at the boundary circle</li>
+          <li>Infinitely many ultra-parallels pass through <InlineMath>P</InlineMath> without touching <InlineMath>{'\\ell'}</InlineMath></li>
         </ul>
         <p className="mt-2 text-dark-400">
           The boundary points where limiting parallels meet are "ideal points"—at
@@ -256,7 +256,7 @@ export default function Section58() {
         <p className="mt-2 text-dark-400">
           However, the pseudosphere only represents part of the hyperbolic
           plane; it has an edge where it becomes singular. The full hyperbolic
-          plane cannot be embedded in <InlineMath>\mathbb{R}^3</InlineMath>{' '}
+          plane cannot be embedded in <InlineMath>{'\\mathbb{R}^3'}</InlineMath>{' '}
           without self-intersection.
         </p>
       </Example>

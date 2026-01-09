@@ -44,7 +44,7 @@ export default function Section70() {
         More precisely: if <InlineMath>F</InlineMath> is consistent and
         contains enough arithmetic, there exists a sentence{' '}
         <InlineMath>G</InlineMath> such that neither <InlineMath>G</InlineMath>{' '}
-        nor <InlineMath>\neg G</InlineMath> is provable in{' '}
+        nor <InlineMath>{'\\neg G'}</InlineMath> is provable in{' '}
         <InlineMath>F</InlineMath>.
       </p>
 
@@ -130,10 +130,10 @@ export default function Section70() {
       </Theorem>
 
       <p>
-        Let <InlineMath>\text{Con}(F)</InlineMath> be the statement "F is
+        Let <InlineMath>{'\\text{Con}(F)'}</InlineMath> be the statement "F is
         consistent" (expressible via Gödel numbering). If{' '}
         <InlineMath>F</InlineMath> is consistent, then{' '}
-        <InlineMath>\text{Con}(F)</InlineMath> is not provable in{' '}
+        <InlineMath>{'\\text{Con}(F)'}</InlineMath> is not provable in{' '}
         <InlineMath>F</InlineMath>.
       </p>
 
