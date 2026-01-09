@@ -932,9 +932,25 @@ async function saveCourseDetails() {
       updates: { title, description, icon }
     });
 
+    // Update local state directly instead of reloading
+    const course = state.courses.find(c => c.id === courseId);
+    if (course) {
+      course.title = title;
+      course.description = description;
+      course.icon = icon;
+    }
+
+    // Also update original state so it's not marked as "changed"
+    const originalCourse = state.originalCourses.find(c => c.id === courseId);
+    if (originalCourse) {
+      originalCourse.title = title;
+      originalCourse.description = description;
+      originalCourse.icon = icon;
+    }
+
     closeCourseModal();
     showToast('Course updated', 'success');
-    await loadData();
+    renderCourses();
   } catch (error) {
     console.error('Error updating course:', error);
     showToast('Failed to update course: ' + error.message, 'error');
