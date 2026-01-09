@@ -54,6 +54,34 @@ import { section40Questions } from './section40';
 import { section41Questions } from './section41';
 import { section42Questions } from './section42';
 import { section43Questions } from './section43';
+import { section44Questions } from './section44';
+import { section45Questions } from './section45';
+import { section46Questions } from './section46';
+import { section47Questions } from './section47';
+import { section48Questions } from './section48';
+import { section49Questions } from './section49';
+import { section50Questions } from './section50';
+import { section51Questions } from './section51';
+import { section52Questions } from './section52';
+import { section53Questions } from './section53';
+import { section54Questions } from './section54';
+import { section55Questions } from './section55';
+import { section56Questions } from './section56';
+import { section57Questions } from './section57';
+import { section58Questions } from './section58';
+import { section59Questions } from './section59';
+import { section60Questions } from './section60';
+import { section61Questions } from './section61';
+import { section62Questions } from './section62';
+import { section63Questions } from './section63';
+import { section64Questions } from './section64';
+import { section65Questions } from './section65';
+import { section66Questions } from './section66';
+import { section67Questions } from './section67';
+import { section68Questions } from './section68';
+import { section69Questions } from './section69';
+import { section70Questions } from './section70';
+import { section71Questions } from './section71';
 
 const quizMap: Record<number, QuizQuestion[]> = {
   0: section00Questions,
@@ -100,6 +128,34 @@ const quizMap: Record<number, QuizQuestion[]> = {
   41: section41Questions,
   42: section42Questions,
   43: section43Questions,
+  44: section44Questions,
+  45: section45Questions,
+  46: section46Questions,
+  47: section47Questions,
+  48: section48Questions,
+  49: section49Questions,
+  50: section50Questions,
+  51: section51Questions,
+  52: section52Questions,
+  53: section53Questions,
+  54: section54Questions,
+  55: section55Questions,
+  56: section56Questions,
+  57: section57Questions,
+  58: section58Questions,
+  59: section59Questions,
+  60: section60Questions,
+  61: section61Questions,
+  62: section62Questions,
+  63: section63Questions,
+  64: section64Questions,
+  65: section65Questions,
+  66: section66Questions,
+  67: section67Questions,
+  68: section68Questions,
+  69: section69Questions,
+  70: section70Questions,
+  71: section71Questions,
 };
 
 export function getQuizQuestions(sectionId: number): QuizQuestion[] | null {
