@@ -1,10 +1,27 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
+// Admin action types for audit logging
+type AdminAction = 
+  | 'ban' 
+  | 'unban' 
+  | 'reset_scores' 
+  | 'update_xp' 
+  | 'create_course' 
+  | 'update_course' 
+  | 'delete_course'
+  | 'create_section'
+  | 'update_section'
+  | 'delete_section'
+  | 'reorder_sections'
+  | 'reorder_courses'
+  | 'add_course_admin'
+  | 'remove_course_admin';
+
 interface AdminAuditLog {
   id: string;
   timestamp: admin.firestore.FieldValue;
-  action: 'ban' | 'unban' | 'reset_scores' | 'update_xp' | 'create_course' | 'update_course' | 'delete_course';
+  action: AdminAction;
   adminNpub: string;
   targetNpub?: string;
   targetCourseId?: string;
@@ -13,7 +30,8 @@ interface AdminAuditLog {
   ipAddress?: string;
 }
 
-interface AdminAuditStats {
+// Stats interface - exported for potential future use
+export interface AdminAuditStats {
   id: string;
   totalActions: number;
   actionsByType: Record<string, number>;
@@ -44,19 +62,21 @@ export async function logAdminAction(
   const docRef = db.collection(COLLECTION_NAME).doc();
   const now = admin.firestore.FieldValue.serverTimestamp();
 
-  const logEntry: AdminAuditLog = {
+  const logEntry: Partial<AdminAuditLog> = {
     id: docRef.id,
     timestamp: now,
     action,
     adminNpub,
-    targetNpub: options.targetNpub,
-    targetCourseId: options.targetCourseId,
-    reason: options.reason,
-    metadata: options.metadata,
-    ipAddress: options.ipAddress,
   };
 
-  await docRef.set(logEntry);
+  // Only add optional fields if they are defined
+  if (options.targetNpub !== undefined) logEntry.targetNpub = options.targetNpub;
+  if (options.targetCourseId !== undefined) logEntry.targetCourseId = options.targetCourseId;
+  if (options.reason !== undefined) logEntry.reason = options.reason;
+  if (options.metadata !== undefined) logEntry.metadata = options.metadata;
+  if (options.ipAddress !== undefined) logEntry.ipAddress = options.ipAddress;
+
+  await docRef.set(logEntry as AdminAuditLog);
 
   // Update stats asynchronously (non-blocking)
   updateStatsAsync(action, adminNpub).catch(err => {
