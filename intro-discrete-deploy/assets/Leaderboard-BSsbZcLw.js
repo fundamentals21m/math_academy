@@ -1,0 +1,1 @@
+import{j as r}from"./vendor-animation-0o8UKZ_1.js";import{L as a}from"./index-D1xleDfm.js";import"./vendor-react-Drj8qL0h.js";import"./vendor-math-p018AHG0.js";function s(){return r.jsx("div",{className:"max-w-4xl mx-auto px-4 py-8",children:r.jsx(a,{})})}export{s as default};

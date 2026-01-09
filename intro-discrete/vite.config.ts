@@ -5,7 +5,7 @@ import path from 'path'
 // =============================================================================
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
-const COURSE_ID = 'template'  // Short ID: 'ba', 'aa', 'crypto', etc.
+const COURSE_ID = 'intro-discrete'  // Short ID: 'ba', 'aa', 'crypto', etc.
 
 // Base path for GitHub Pages hub deployment (default)
 // Set STANDALONE_DEPLOY=true for rare cases needing '/' base path (e.g., Vercel standalone)
