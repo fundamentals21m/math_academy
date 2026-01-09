@@ -25,3 +25,18 @@ export {
   advanceRound,
   leaveRoom,
 } from './modRace';
+
+// Export course configuration functions
+export {
+  getCourseConfig,
+  updateCourse,
+  createSection,
+  updateSection,
+  deleteSection,
+  reorderSections,
+  reorderCourses,
+  getCourseAdmins,
+  addCourseAdmin,
+  removeCourseAdmin,
+  isCourseAdmin,
+} from './courseConfig';

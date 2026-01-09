@@ -95,5 +95,31 @@ service cloud.firestore {
       allow read, write: if request.auth != null &&
         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
     }
+
+    // Course Configuration - dynamic course/category data for the hub
+    // Public read access for hub rendering
+    // Admin-only write access via Cloud Functions
+    match /courseConfig/{docId} {
+      allow read: if true;
+      allow write: if false; // Writes only via Cloud Functions
+      
+      // Sections subcollection (categories)
+      match /sections/{sectionId} {
+        allow read: if true;
+        allow write: if false;
+      }
+      
+      // Courses subcollection
+      match /courses/{courseId} {
+        allow read: if true;
+        allow write: if false;
+      }
+      
+      // Admins subcollection for course management
+      match /admins/{adminId} {
+        allow read: if true;
+        allow write: if false;
+      }
+    }
   }
 }
