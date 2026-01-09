@@ -40,3 +40,6 @@ export {
   removeCourseAdmin,
   isCourseAdmin,
 } from './courseConfig';
+
+// Export seed function (one-time use)
+export { seedCourseConfig } from './seedCourseConfig';

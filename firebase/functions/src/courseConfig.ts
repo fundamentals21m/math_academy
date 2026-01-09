@@ -48,7 +48,7 @@ interface AuthContext {
   token?: Record<string, unknown>;
 }
 
-const CONFIG_DOC = 'courseConfig/config';
+// Config document path: courseConfig/config
 
 /**
  * Check if the caller is a course config admin
@@ -169,8 +169,8 @@ export const updateCourse = functions.https.onCall(
     }, { merge: true });
 
     await logAdminAction('update_course', adminNpub, {
-      courseId,
-      updates: safeUpdates
+      targetCourseId: courseId,
+      metadata: { updates: safeUpdates }
     });
 
     return { success: true };
@@ -242,9 +242,7 @@ export const createSection = functions.https.onCall(
     }, { merge: true });
 
     await logAdminAction('create_section', adminNpub, {
-      sectionId,
-      title,
-      style
+      metadata: { sectionId, title, style }
     });
 
     return { success: true, sectionId };
@@ -293,8 +291,7 @@ export const updateSection = functions.https.onCall(
     }, { merge: true });
 
     await logAdminAction('update_section', adminNpub, {
-      sectionId,
-      updates: safeUpdates
+      metadata: { sectionId, updates: safeUpdates }
     });
 
     return { success: true };
@@ -362,8 +359,7 @@ export const deleteSection = functions.https.onCall(
     }, { merge: true });
 
     await logAdminAction('delete_section', adminNpub, {
-      sectionId,
-      sectionTitle: sectionDoc.data()?.title
+      metadata: { sectionId, sectionTitle: sectionDoc.data()?.title }
     });
 
     return { success: true };
@@ -407,7 +403,7 @@ export const reorderSections = functions.https.onCall(
     await batch.commit();
 
     await logAdminAction('reorder_sections', adminNpub, {
-      newOrder: sectionIds
+      metadata: { newOrder: sectionIds }
     });
 
     return { success: true };
@@ -451,7 +447,7 @@ export const reorderCourses = functions.https.onCall(
     await batch.commit();
 
     await logAdminAction('reorder_courses', adminNpub, {
-      newOrder: courseIds
+      metadata: { newOrder: courseIds }
     });
 
     return { success: true };
@@ -519,8 +515,8 @@ export const addCourseAdmin = functions.https.onCall(
     });
 
     await logAdminAction('add_course_admin', adminNpub, {
-      newAdminNpub: npub,
-      displayName
+      targetNpub: npub,
+      metadata: { displayName }
     });
 
     return { success: true };
@@ -577,7 +573,7 @@ export const removeCourseAdmin = functions.https.onCall(
     await adminRef.delete();
 
     await logAdminAction('remove_course_admin', adminNpub, {
-      removedAdminNpub: npub
+      targetNpub: npub
     });
 
     return { success: true };

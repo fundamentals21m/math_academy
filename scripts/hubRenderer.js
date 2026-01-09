@@ -4,14 +4,78 @@
  * - Collapsible category sections (Featured always expanded, others collapsed by default)
  * - User preferences stored in localStorage
  * - Expand All / Collapse All functionality
+ * - Dynamic loading from Firebase with fallback to static data
  */
-import { SECTIONS, COURSES, getCoursesForSection } from './courses.js';
+import { SECTIONS as STATIC_SECTIONS, COURSES as STATIC_COURSES, getCoursesForSection as getStaticCoursesForSection } from './courses.js';
+
+// Data source - will be populated from Firebase or static data
+let DATA_SECTIONS = STATIC_SECTIONS;
+let DATA_COURSES = STATIC_COURSES;
+let dataSource = 'static'; // 'static' or 'firebase'
 
 // Storage key for expanded sections
 const STORAGE_KEY = 'hub:expandedSections';
 
 // Default expanded sections (Featured is always expanded)
 const DEFAULT_EXPANDED = ['featured'];
+
+/**
+ * Load course configuration from Firebase
+ * Falls back to static data if Firebase fails
+ */
+async function loadFromFirebase() {
+  try {
+    // Check if Firebase is available
+    if (!window.callFunction) {
+      console.log('Firebase not available, using static data');
+      return false;
+    }
+
+    const config = await window.callFunction('getCourseConfig');
+    
+    if (config && config.sections && config.courses) {
+      // Map Firebase data to match static data structure
+      DATA_SECTIONS = config.sections.map(s => ({
+        id: s.id,
+        title: s.title,
+        subtitle: s.subtitle,
+        style: s.style
+      }));
+      
+      DATA_COURSES = config.courses.map(c => ({
+        id: c.id,
+        title: c.title,
+        description: c.description,
+        icon: c.icon,
+        url: c.url,
+        tags: c.tags || [],
+        sections: c.sections || [],
+        totalSections: c.totalSections,
+        progressPrefix: c.progressPrefix,
+        leaderboardUrl: c.leaderboardUrl,
+        shortName: c.shortName,
+        external: c.external,
+        progressGradient: c.progressGradient
+      }));
+      
+      dataSource = 'firebase';
+      console.log('Loaded course config from Firebase');
+      return true;
+    }
+  } catch (error) {
+    console.warn('Failed to load from Firebase, using static data:', error.message);
+  }
+  return false;
+}
+
+/**
+ * Get courses for a specific section
+ * @param {string} sectionId
+ * @returns {Array} Array of courses in that section
+ */
+function getCoursesForSection(sectionId) {
+  return DATA_COURSES.filter(course => course.sections?.includes(sectionId));
+}
 
 /**
  * Get the list of currently expanded sections from localStorage
@@ -96,7 +160,7 @@ function updateSectionUI(sectionId, isExpanded) {
  * Expand all sections
  */
 export function expandAll() {
-  const allSectionIds = SECTIONS.map(s => s.id);
+  const allSectionIds = DATA_SECTIONS.map(s => s.id);
   saveExpandedSections(allSectionIds);
   
   allSectionIds.forEach(id => updateSectionUI(id, true));
@@ -109,7 +173,7 @@ export function expandAll() {
 export function collapseAll() {
   saveExpandedSections(['featured']);
   
-  SECTIONS.forEach(section => {
+  DATA_SECTIONS.forEach(section => {
     updateSectionUI(section.id, section.id === 'featured');
   });
   updateToggleButtonText();
@@ -122,7 +186,7 @@ export function collapseAll() {
 function areAllExpanded() {
   const expanded = getExpandedSections();
   // Only check sections that have courses
-  const sectionsWithCourses = SECTIONS.filter(s => getCoursesForSection(s.id).length > 0);
+  const sectionsWithCourses = DATA_SECTIONS.filter(s => getCoursesForSection(s.id).length > 0);
   return sectionsWithCourses.every(s => expanded.includes(s.id));
 }
 
@@ -138,18 +202,18 @@ function updateToggleButtonText() {
 
 /**
  * Render a single course card
- * @param {import('./courses.js').Course} course
+ * @param {Object} course
  * @returns {string} HTML string
  */
 function renderCourseCard(course) {
   const targetAttr = course.external ? 'target="_blank"' : '';
-  const tagsHtml = course.tags
+  const tagsHtml = (course.tags || [])
     .map(tag => `<span class="course-tag">${tag}</span>`)
     .join('');
 
   return `
     <a href="${course.url}" ${targetAttr} class="course-card" data-course-id="${course.id}">
-      <div class="course-icon">${course.icon}</div>
+      <div class="course-icon">${course.icon || ''}</div>
       <h3 class="course-title">${course.title}</h3>
       <p class="course-description">${course.description}</p>
       <div class="course-meta">${tagsHtml}</div>
@@ -159,7 +223,7 @@ function renderCourseCard(course) {
 
 /**
  * Render a section with its courses
- * @param {import('./courses.js').Section} section
+ * @param {Object} section
  * @param {string[]} expandedSections - List of currently expanded section IDs
  * @returns {string} HTML string
  */
@@ -195,22 +259,39 @@ function renderSection(section, expandedSections) {
  * @param {string} containerId - ID of the container element
  * @param {Object} [options] - Rendering options
  * @param {string} [options.insertFeaturedContentAfter] - Section ID after which to insert featured content placeholder
+ * @param {boolean} [options.useFirebase=true] - Whether to try loading from Firebase first
  */
-export function renderCourseHub(containerId, options = {}) {
+export async function renderCourseHub(containerId, options = {}) {
   const container = document.getElementById(containerId);
   if (!container) {
     console.error(`Container #${containerId} not found`);
     return;
   }
 
-  const { insertFeaturedContentAfter } = options;
+  const { insertFeaturedContentAfter, useFirebase = true } = options;
+
+  // Try to load from Firebase if requested
+  if (useFirebase) {
+    // Show loading state
+    container.innerHTML = `
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem; color: #64748b;">
+        <div style="width: 40px; height: 40px; border: 3px solid rgba(99, 102, 241, 0.2); border-top-color: #6366f1; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        <p style="margin-top: 1rem;">Loading courses...</p>
+      </div>
+    `;
+    
+    // Wait a moment for Firebase to initialize
+    await new Promise(resolve => setTimeout(resolve, 500));
+    await loadFromFirebase();
+  }
+
   const expandedSections = getExpandedSections();
 
   // Expose toggle function globally for onclick handlers
   window.hubToggleSection = toggleSection;
 
   let sectionsHtml = '';
-  SECTIONS.forEach(section => {
+  DATA_SECTIONS.forEach(section => {
     sectionsHtml += renderSection(section, expandedSections);
     // Insert featured content placeholder after specified section
     if (insertFeaturedContentAfter && section.id === insertFeaturedContentAfter) {
@@ -261,7 +342,7 @@ export function renderLeaderboardLinks(containerId) {
     return;
   }
 
-  const linksHtml = COURSES
+  const linksHtml = DATA_COURSES
     .filter(course => course.leaderboardUrl)
     .map(course => {
       const targetAttr = course.external ? 'target="_blank"' : '';
@@ -277,7 +358,7 @@ export function renderLeaderboardLinks(containerId) {
  * @returns {number}
  */
 export function getCourseCount() {
-  return COURSES.length;
+  return DATA_COURSES.length;
 }
 
 /**
@@ -285,5 +366,34 @@ export function getCourseCount() {
  * @returns {number}
  */
 export function getTotalSectionCount() {
-  return SECTIONS.length;
+  return DATA_SECTIONS.length;
+}
+
+/**
+ * Get the current data source
+ * @returns {string} 'static' or 'firebase'
+ */
+export function getDataSource() {
+  return dataSource;
+}
+
+/**
+ * Force reload data from Firebase
+ */
+export async function reloadFromFirebase() {
+  const loaded = await loadFromFirebase();
+  if (loaded) {
+    // Re-render if already mounted
+    const container = document.getElementById('courses-container');
+    if (container) {
+      const expandedSections = getExpandedSections();
+      let sectionsHtml = '';
+      DATA_SECTIONS.forEach(section => {
+        sectionsHtml += renderSection(section, expandedSections);
+      });
+      container.innerHTML = sectionsHtml;
+      updateToggleButtonText();
+    }
+  }
+  return loaded;
 }

@@ -39,6 +39,23 @@
     // Firebase app instance (singleton) - make it global for nostrAuth.js
     window.firebaseApp = null;
 
+    // Generic function caller for any Firebase callable function
+    window.callFunction = async function(name, data = {}) {
+      try {
+        // Initialize Firebase only once
+        if (!window.firebaseApp) {
+          window.firebaseApp = initializeApp(firebaseConfig);
+        }
+        const functions = getFunctions(window.firebaseApp);
+        const fn = httpsCallable(functions, name);
+        const result = await fn(data);
+        return result.data;
+      } catch (error) {
+        console.error(`${name} error:`, error);
+        throw error;
+      }
+    };
+
     // Make functions available globally
     window.getUserScores = async function(npub) {
       try {
@@ -146,9 +163,10 @@
     import { renderProgressDashboard } from './scripts/progressDashboard.js';
     import { renderCardinalityViz } from './scripts/cardinalityViz.js';
 
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
       // Render course sections (with placeholder for featured content after 'featured' section)
-      renderCourseHub('courses-container', { insertFeaturedContentAfter: 'featured' });
+      // This will try Firebase first, then fall back to static data
+      await renderCourseHub('courses-container', { insertFeaturedContentAfter: 'featured' });
 
       // Initialize the expand/collapse all toggle button
       initToggleButton();
