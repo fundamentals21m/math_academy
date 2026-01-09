@@ -262,7 +262,9 @@ grep 'src="/' {course-id}-deploy/index.html
 # Should show: src="/{course-id}-deploy/assets/..."
 ```
 
-**After deployment, register the course in `scripts/courses.js`** with:
+**After deployment, complete these registration steps:**
+
+1. **Register in `scripts/courses.js`** (hub display):
 ```javascript
 {
   id: 'course-id',
@@ -273,12 +275,43 @@ grep 'src="/' {course-id}-deploy/index.html
 }
 ```
 
+2. **Add to `e2e/config/courses.ts`** (Playwright testing):
+```typescript
+{
+  id: 'course-id',
+  name: 'Course Title',
+  baseUrl: resolveUrl('{course-id}-deploy/'),
+  totalSections: 26,  // actual section count
+  progressPrefix: 'course-id:',
+  icon: '🔢',
+  hasQuizzes: true,
+  hasVisualizers: false,
+  hasLeaderboard: true,
+},
+```
+
 ### New Course
+
+**CRITICAL: A course requires CONTENT, not just a template.**
+
+When creating a course from book chunks, you MUST:
 1. Copy `course-template/` to new dir
-2. Update `src/config/course.ts`, `vite.config.ts`
-3. Define `curriculum.ts`, create sections, add quizzes
-4. If using book source: add chunks to `books/` and create symlink
-5. **For GitHub Pages deployment**: Set `base: '/math_academy/{deploy-dir}/'` in `vite.config.ts`
+2. Copy `shared/` folder (full version, not template's)
+3. Update `src/config/course.ts`, `vite.config.ts`, `index.html`, `package.json`
+4. Add `vercel.json` for SPA routing
+5. **BUILD THE CONTENT:**
+   - Read the PDF chunks to understand the book structure
+   - Create `curriculum.ts` with REAL chapters/sections from the book
+   - Create section pages (`Section01.tsx`, etc.) with actual lesson content
+   - Update `App.tsx` sectionLoaders to map all sections
+   - Add quiz questions for each section
+6. If using book source: add chunks to `books/` and create symlink
+7. Deploy to Vercel (see "Deploying to Vercel" section)
+8. Register in `shared/types/courses.ts` and `scripts/courses.js`
+
+**DO NOT deploy an empty template. Verify sections have content before deploying.**
+
+Use `/create-course` command for the full workflow.
 
 ### New Section
 1. Add to `curriculum.ts`

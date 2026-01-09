@@ -339,6 +339,17 @@ export const COURSES: CourseConfig[] = [
     hasVisualizers: true,
     hasLeaderboard: true,
   },
+  {
+    id: 'intro-discrete',
+    name: 'Intro to Discrete Math',
+    baseUrl: resolveUrl('intro-discrete-deploy/'),
+    totalSections: 26,
+    progressPrefix: 'intro-discrete:',
+    icon: '🔢',
+    hasQuizzes: true,
+    hasVisualizers: false,
+    hasLeaderboard: true,
+  },
 
   // Number Theory
   {
