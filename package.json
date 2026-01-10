@@ -4,6 +4,16 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "packageManager": "pnpm@10.28.0",
+  "scripts": {
+    "dev": "pnpm --filter",
+    "build": "pnpm --filter",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
+    "clean": "pnpm -r exec rm -rf node_modules dist .turbo",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^8.6.3",
     "@storybook/addon-docs": "^8.6.3",
@@ -13,7 +23,9 @@
     "storybook": "^8.6.3"
   },
   "dependencies": {
+    "@types/dompurify": "^3.2.0",
     "clsx": "^2.1.1",
+    "dompurify": "^3.3.1",
     "tailwind-merge": "^3.4.0"
   }
 }
