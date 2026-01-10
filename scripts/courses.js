@@ -91,6 +91,12 @@ export const SECTIONS = [
     subtitle: 'Random variables, distributions, and statistical inference',
     style: 'subject'
   },
+  {
+    id: 'games',
+    title: 'Games',
+    subtitle: 'Practice with competitive math challenges',
+    style: 'featured'
+  },
 ];
 
 /** @type {Course[]} */
@@ -225,6 +231,20 @@ export const COURSES = [
     leaderboardUrl: 'ra-deploy/#/leaderboard',
     shortName: 'Real Analysis',
     progressGradient: 'linear-gradient(90deg, #10b981, #34d399)',
+  },
+  {
+    id: 'rudin',
+    title: 'Principles of Mathematical Analysis',
+    description: "The classic 'Baby Rudin' - a rigorous introduction to real analysis covering sequences, series, continuity, differentiation, integration, and Lebesgue theory.",
+    icon: '∫',
+    url: 'https://rudin-deploy.vercel.app/',
+    tags: ['11 Parts', '86 Sections'],
+    sections: ['calculus'],
+    totalSections: 86,
+    progressPrefix: 'rudin:',
+    leaderboardUrl: 'https://rudin-deploy.vercel.app/#/leaderboard',
+    shortName: 'Baby Rudin',
+    progressGradient: 'linear-gradient(90deg, #06b6d4, #22d3ee)',
   },
 
   // ALGEBRA (Note: Basic Algebra also appears here via sections array)
@@ -564,6 +584,22 @@ export const COURSES = [
     leaderboardUrl: 'ross-prob-deploy/#/leaderboard',
     shortName: 'Probability',
     progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
+  },
+
+  // GAMES
+  {
+    id: 'mod-race',
+    title: 'Mod Racing',
+    description: 'Race to master modular arithmetic with competitive math challenges. 10 difficulty tiers from Beginner to Transcendent, with single-player and multiplayer modes.',
+    icon: '🏎️',
+    url: 'https://mod-race.vercel.app/',
+    tags: ['10 Tiers', 'Multiplayer'],
+    sections: ['games'],
+    totalSections: 10,
+    progressPrefix: 'mod-race:',
+    leaderboardUrl: 'https://mod-race.vercel.app/#/leaderboard',
+    shortName: 'Mod Racing',
+    progressGradient: 'linear-gradient(90deg, #22d3ee, #6366f1)',
   },
 ];
 

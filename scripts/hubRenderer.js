@@ -372,7 +372,7 @@ export async function renderCourseHub(containerId, options = {}) {
   let sectionsHtml = '';
   DATA_SECTIONS.forEach(section => {
     sectionsHtml += renderSection(section, expandedSections);
-    // Insert featured content placeholder after specified section
+    // Insert featured content placeholders after specified section
     if (insertFeaturedContentAfter && section.id === insertFeaturedContentAfter) {
       sectionsHtml += `
         <div class="featured-section">
@@ -381,6 +381,13 @@ export async function renderCourseHub(containerId, options = {}) {
             <span class="level-description">Mathematical wonder</span>
           </div>
           <div id="featured-content-inline"></div>
+        </div>
+        <div class="featured-section">
+          <div class="level-header">
+            <span class="level-badge featured">Featured Game</span>
+            <span class="level-description">Test your modular arithmetic speed</span>
+          </div>
+          <div id="mod-race-quickplay-inline"></div>
         </div>
       `;
     }

@@ -161,6 +161,7 @@
   <script type="module">
     import { renderCourseHub, renderLeaderboardLinks, getCourseCount, initToggleButton } from './scripts/hubRenderer.js';
     import { renderCardinalityViz } from './scripts/cardinalityViz.js';
+    import { renderModRaceQuickPlay } from './scripts/modRaceQuickPlay.js';
 
     document.addEventListener('DOMContentLoaded', async () => {
       // Render course sections (with placeholder for featured content after 'featured' section)
@@ -171,8 +172,9 @@
       // Initialize the expand/collapse all toggle button
       initToggleButton();
 
-      // Render featured content visualization into the inline placeholder
+      // Render featured content visualizations into the inline placeholders
       renderCardinalityViz('featured-content-inline');
+      renderModRaceQuickPlay('mod-race-quickplay-inline');
 
       // Render leaderboard links
       renderLeaderboardLinks('leaderboard-links');
