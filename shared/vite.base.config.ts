@@ -39,7 +39,7 @@ export function createCourseViteConfig(options: CourseViteOptions): UserConfig {
         '@pages': path.resolve(courseDir, './src/pages'),
         '@lib': path.resolve(courseDir, './src/lib'),
         '@data': path.resolve(courseDir, './src/data'),
-        '@magic-internet-math/shared': path.resolve(courseDir, '../shared'),
+        // '@magic-internet-math/shared': removed - use @shared/* instead
         // Ensure dependencies resolve from course's node_modules to prevent duplicates
         'react': path.resolve(courseDir, './node_modules/react'),
         'react-dom': path.resolve(courseDir, './node_modules/react-dom'),

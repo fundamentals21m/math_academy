@@ -6,7 +6,7 @@
 
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import type { RacingTier } from '@magic-internet-math/shared';
+import type { RacingTier } from '@shared/gamification';
 import { getTierConfig } from '../../lib/problemGenerator';
 import { formatTime } from '../../lib/scoring';
 import { playVictorySound } from '../../lib/sounds';

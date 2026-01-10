@@ -10,12 +10,11 @@ export default defineConfig({
     setupFiles: ['./test/setup.ts'],
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@shared': path.resolve(__dirname, './src/shared'),
+      '@shared': path.resolve(__dirname, '../shared'),
       '@components': path.resolve(__dirname, './src/components'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@lib': path.resolve(__dirname, './src/lib'),
       '@data': path.resolve(__dirname, './src/data'),
-      '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
     },
     coverage: {
       provider: 'v8',

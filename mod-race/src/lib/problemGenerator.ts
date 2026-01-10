@@ -4,7 +4,7 @@
 // Generates problems for the racing game with configurable difficulty tiers.
 // =============================================================================
 
-import { RACING_TIERS, type RacingTier, type RacingTierConfig } from '@magic-internet-math/shared';
+import { RACING_TIERS, type RacingTier, type RacingTierConfig } from '@shared/gamification';
 
 /**
  * A modular arithmetic problem

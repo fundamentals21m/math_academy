@@ -13,8 +13,8 @@ import {
   getFirebaseFirestore,
   getFirebaseFunctions,
   isFirebaseConfigured,
-} from '@magic-internet-math/shared';
-import type { RacingTier } from '@magic-internet-math/shared';
+} from '@shared/gamification';
+import type { RacingTier } from '@shared/gamification';
 
 // =============================================================================
 // TYPES

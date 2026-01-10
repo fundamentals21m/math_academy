@@ -10,7 +10,7 @@ import {
   XP_CONFIG,
   type RacingTier,
   type RaceGameResult,
-} from '@magic-internet-math/shared';
+} from '@shared/gamification';
 import { getTierConfig } from './problemGenerator';
 
 // Speed bonus thresholds (in milliseconds)

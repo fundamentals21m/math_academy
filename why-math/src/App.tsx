@@ -2,12 +2,10 @@ import { lazy, Suspense, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
-import {
-  ErrorBoundary,
-  ErrorProvider,
-  ErrorDisplay,
-  LoadingSpinner,
-} from '@magic-internet-math/shared';
+import { ErrorBoundary } from '@shared/components/ErrorBoundary';
+import { ErrorProvider } from '@shared/contexts/ErrorContext';
+import { ErrorDisplay } from '@shared/components/ErrorDisplay';
+import { LoadingSpinner } from '@shared/components/common/LoadingSpinner';
 import { AchievementToastContainer } from '@/components/gamification';
 import { Header, Sidebar } from '@/components/layout';
 import { FEATURES } from '@/config';

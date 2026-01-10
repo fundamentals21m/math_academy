@@ -6,7 +6,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { RACING_TIERS, type RacingTier } from '@magic-internet-math/shared';
+import { RACING_TIERS, type RacingTier } from '@shared/gamification';
 import type { GameRoom, PlayerState } from '../../hooks/useGameRoom';
 
 interface MultiplayerLobbyProps {

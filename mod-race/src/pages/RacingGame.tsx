@@ -9,7 +9,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useGamification } from '@shared/gamification/GamificationContext';
 import { useNostrAuth } from '@shared/contexts/NostrAuthContext';
-import { LEVEL_THRESHOLDS } from '@magic-internet-math/shared';
+import { LEVEL_THRESHOLDS } from '@shared/gamification';
 import { FEATURES } from '@/config';
 import { useGameSession } from '../hooks/useGameSession';
 import { useGameRoom } from '../hooks/useGameRoom';

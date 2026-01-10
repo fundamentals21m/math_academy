@@ -6,7 +6,7 @@
 // =============================================================================
 
 import { useState, useCallback, useMemo } from 'react';
-import type { RacingTier, RaceGameResult } from '@magic-internet-math/shared';
+import type { RacingTier, RaceGameResult } from '@shared/gamification';
 import {
   generateProblemSet,
   validateAnswer,

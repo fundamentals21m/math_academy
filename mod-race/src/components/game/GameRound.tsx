@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import type { ModularProblem } from '../../lib/problemGenerator';
 import { formatPoints, formatTime } from '../../lib/scoring';
 import { playCorrectSound, playWrongSound, playClickSound } from '../../lib/sounds';
-import type { RacingTier } from '@magic-internet-math/shared';
+import type { RacingTier } from '@shared/gamification';
 
 interface GameRoundProps {
   problem: ModularProblem;
