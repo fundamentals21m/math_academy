@@ -15,17 +15,29 @@ export default defineConfig({
   resolve: {
     alias: {
         '@': path.resolve(__dirname, './src'),
-        '@shared': path.resolve(__dirname, './shared'),
+        '@shared': path.resolve(__dirname, '../shared'),
         '@components': path.resolve(__dirname, './src/components'),
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
         '@data': path.resolve(__dirname, './src/data'),
         // Monorepo shared package (also maps to local shared folder)
-        '@magic-internet-math/shared': path.resolve(__dirname, './shared'),
+        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
     },
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-math': ['katex'],
+          'vendor-animation': ['framer-motion'],
+          'vendor-firebase-core': ['firebase/app'],
+          'vendor-firebase-auth': ['firebase/auth'],
+          'vendor-firebase-functions': ['firebase/functions'],
+        },
+      },
+    },
   },
   define: {
     // Firebase environment variables

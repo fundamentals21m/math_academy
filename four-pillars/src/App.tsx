@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { lazy, Suspense, useState } from 'react';
+import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
 import { AchievementToastContainer } from '@/components/gamification';
@@ -7,168 +7,127 @@ import { Header } from '@/components/layout/Header';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { FEATURES } from '@/config';
 
-// Pages
+// Eagerly load Home since it's the landing page
 import Home from '@/pages/Home';
-import Leaderboard from '@/pages/Leaderboard';
-import Theorems from '@/pages/Theorems';
-import InteractiveModules from '@/pages/InteractiveModules';
-import SectionQuizPage from '@/pages/SectionQuizPage';
 
-// Section pages - Chapter 1: Straightedge and Compass
-import Section00 from '@/pages/sections/Section00';
-import Section01 from '@/pages/sections/Section01';
-import Section02 from '@/pages/sections/Section02';
-import Section03 from '@/pages/sections/Section03';
-import Section04 from '@/pages/sections/Section04';
-import Section05 from '@/pages/sections/Section05';
+// Lazy load other pages - they're only needed when navigating to them
+const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
+const Theorems = lazy(() => import('@/pages/Theorems'));
+const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
+const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
 
-// Section pages - Chapter 2: Euclid's Approach to Geometry
-import Section06 from '@/pages/sections/Section06';
-import Section07 from '@/pages/sections/Section07';
-import Section08 from '@/pages/sections/Section08';
-import Section09 from '@/pages/sections/Section09';
-import Section10 from '@/pages/sections/Section10';
-import Section11 from '@/pages/sections/Section11';
-import Section12 from '@/pages/sections/Section12';
-import Section13 from '@/pages/sections/Section13';
-import Section14 from '@/pages/sections/Section14';
+// Loading spinner component
+function LoadingSpinner({ message = 'Loading...' }: { message?: string }) {
+  return (
+    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent-500 mx-auto mb-4"></div>
+        <p className="text-dark-400">{message}</p>
+      </div>
+    </div>
+  );
+}
 
-// Section pages - Chapter 3: Coordinates
-import Section15 from '@/pages/sections/Section15';
-import Section16 from '@/pages/sections/Section16';
-import Section17 from '@/pages/sections/Section17';
-import Section18 from '@/pages/sections/Section18';
-import Section19 from '@/pages/sections/Section19';
-import Section20 from '@/pages/sections/Section20';
-import Section21 from '@/pages/sections/Section21';
-import Section22 from '@/pages/sections/Section22';
-
-// Section pages - Chapter 4: Vectors and Euclidean Spaces
-import Section23 from '@/pages/sections/Section23';
-import Section24 from '@/pages/sections/Section24';
-import Section25 from '@/pages/sections/Section25';
-import Section26 from '@/pages/sections/Section26';
-import Section27 from '@/pages/sections/Section27';
-import Section28 from '@/pages/sections/Section28';
-import Section29 from '@/pages/sections/Section29';
-import Section30 from '@/pages/sections/Section30';
-
-// Section pages - Chapter 5: Perspective
-import Section31 from '@/pages/sections/Section31';
-import Section32 from '@/pages/sections/Section32';
-import Section33 from '@/pages/sections/Section33';
-import Section34 from '@/pages/sections/Section34';
-import Section35 from '@/pages/sections/Section35';
-import Section36 from '@/pages/sections/Section36';
-import Section37 from '@/pages/sections/Section37';
-import Section38 from '@/pages/sections/Section38';
-import Section39 from '@/pages/sections/Section39';
-
-// Section pages - Chapter 6: Projective Planes
-import Section40 from '@/pages/sections/Section40';
-import Section41 from '@/pages/sections/Section41';
-import Section42 from '@/pages/sections/Section42';
-import Section43 from '@/pages/sections/Section43';
-import Section44 from '@/pages/sections/Section44';
-import Section45 from '@/pages/sections/Section45';
-import Section46 from '@/pages/sections/Section46';
-import Section47 from '@/pages/sections/Section47';
-
-// Section pages - Chapter 7: Transformations
-import Section48 from '@/pages/sections/Section48';
-import Section49 from '@/pages/sections/Section49';
-import Section50 from '@/pages/sections/Section50';
-import Section51 from '@/pages/sections/Section51';
-import Section52 from '@/pages/sections/Section52';
-import Section53 from '@/pages/sections/Section53';
-import Section54 from '@/pages/sections/Section54';
-import Section55 from '@/pages/sections/Section55';
-import Section56 from '@/pages/sections/Section56';
-
-// Section pages - Chapter 8: Non-Euclidean Geometry
-import Section57 from '@/pages/sections/Section57';
-import Section58 from '@/pages/sections/Section58';
-import Section59 from '@/pages/sections/Section59';
-import Section60 from '@/pages/sections/Section60';
-import Section61 from '@/pages/sections/Section61';
-import Section62 from '@/pages/sections/Section62';
-import Section63 from '@/pages/sections/Section63';
-import Section64 from '@/pages/sections/Section64';
-import Section65 from '@/pages/sections/Section65';
-
-// Section component map for dynamic routing
-const sectionComponents: Record<number, React.ComponentType> = {
-  0: Section00,
-  1: Section01,
-  2: Section02,
-  3: Section03,
-  4: Section04,
-  5: Section05,
-  6: Section06,
-  7: Section07,
-  8: Section08,
-  9: Section09,
-  10: Section10,
-  11: Section11,
-  12: Section12,
-  13: Section13,
-  14: Section14,
-  15: Section15,
-  16: Section16,
-  17: Section17,
-  18: Section18,
-  19: Section19,
-  20: Section20,
-  21: Section21,
-  22: Section22,
-  23: Section23,
-  24: Section24,
-  25: Section25,
-  26: Section26,
-  27: Section27,
-  28: Section28,
-  29: Section29,
-  30: Section30,
-  // Chapter 5: Perspective
-  31: Section31,
-  32: Section32,
-  33: Section33,
-  34: Section34,
-  35: Section35,
-  36: Section36,
-  37: Section37,
-  38: Section38,
-  39: Section39,
-  // Chapter 6: Projective Planes
-  40: Section40,
-  41: Section41,
-  42: Section42,
-  43: Section43,
-  44: Section44,
-  45: Section45,
-  46: Section46,
-  47: Section47,
-  // Chapter 7: Transformations
-  48: Section48,
-  49: Section49,
-  50: Section50,
-  51: Section51,
-  52: Section52,
-  53: Section53,
-  54: Section54,
-  55: Section55,
-  56: Section56,
-  // Chapter 8: Non-Euclidean Geometry
-  57: Section57,
-  58: Section58,
-  59: Section59,
-  60: Section60,
-  61: Section61,
-  62: Section62,
-  63: Section63,
-  64: Section64,
-  65: Section65,
+// Lazy load all section pages - this is the biggest win for bundle size
+// Each section is only loaded when the user navigates to it
+const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentType }>> = {
+  0: () => import('@/pages/sections/Section00'),
+  1: () => import('@/pages/sections/Section01'),
+  2: () => import('@/pages/sections/Section02'),
+  3: () => import('@/pages/sections/Section03'),
+  4: () => import('@/pages/sections/Section04'),
+  5: () => import('@/pages/sections/Section05'),
+  6: () => import('@/pages/sections/Section06'),
+  7: () => import('@/pages/sections/Section07'),
+  8: () => import('@/pages/sections/Section08'),
+  9: () => import('@/pages/sections/Section09'),
+  10: () => import('@/pages/sections/Section10'),
+  11: () => import('@/pages/sections/Section11'),
+  12: () => import('@/pages/sections/Section12'),
+  13: () => import('@/pages/sections/Section13'),
+  14: () => import('@/pages/sections/Section14'),
+  15: () => import('@/pages/sections/Section15'),
+  16: () => import('@/pages/sections/Section16'),
+  17: () => import('@/pages/sections/Section17'),
+  18: () => import('@/pages/sections/Section18'),
+  19: () => import('@/pages/sections/Section19'),
+  20: () => import('@/pages/sections/Section20'),
+  21: () => import('@/pages/sections/Section21'),
+  22: () => import('@/pages/sections/Section22'),
+  23: () => import('@/pages/sections/Section23'),
+  24: () => import('@/pages/sections/Section24'),
+  25: () => import('@/pages/sections/Section25'),
+  26: () => import('@/pages/sections/Section26'),
+  27: () => import('@/pages/sections/Section27'),
+  28: () => import('@/pages/sections/Section28'),
+  29: () => import('@/pages/sections/Section29'),
+  30: () => import('@/pages/sections/Section30'),
+  31: () => import('@/pages/sections/Section31'),
+  32: () => import('@/pages/sections/Section32'),
+  33: () => import('@/pages/sections/Section33'),
+  34: () => import('@/pages/sections/Section34'),
+  35: () => import('@/pages/sections/Section35'),
+  36: () => import('@/pages/sections/Section36'),
+  37: () => import('@/pages/sections/Section37'),
+  38: () => import('@/pages/sections/Section38'),
+  39: () => import('@/pages/sections/Section39'),
+  40: () => import('@/pages/sections/Section40'),
+  41: () => import('@/pages/sections/Section41'),
+  42: () => import('@/pages/sections/Section42'),
+  43: () => import('@/pages/sections/Section43'),
+  44: () => import('@/pages/sections/Section44'),
+  45: () => import('@/pages/sections/Section45'),
+  46: () => import('@/pages/sections/Section46'),
+  47: () => import('@/pages/sections/Section47'),
+  48: () => import('@/pages/sections/Section48'),
+  49: () => import('@/pages/sections/Section49'),
+  50: () => import('@/pages/sections/Section50'),
+  51: () => import('@/pages/sections/Section51'),
+  52: () => import('@/pages/sections/Section52'),
+  53: () => import('@/pages/sections/Section53'),
+  54: () => import('@/pages/sections/Section54'),
+  55: () => import('@/pages/sections/Section55'),
+  56: () => import('@/pages/sections/Section56'),
+  57: () => import('@/pages/sections/Section57'),
+  58: () => import('@/pages/sections/Section58'),
+  59: () => import('@/pages/sections/Section59'),
+  60: () => import('@/pages/sections/Section60'),
+  61: () => import('@/pages/sections/Section61'),
+  62: () => import('@/pages/sections/Section62'),
+  63: () => import('@/pages/sections/Section63'),
+  64: () => import('@/pages/sections/Section64'),
+  65: () => import('@/pages/sections/Section65'),
 };
+
+// Create lazy components from loaders
+const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {};
+for (const [id, loader] of Object.entries(sectionLoaders)) {
+  sectionComponents[Number(id)] = lazy(loader);
+}
+
+function SectionRouter() {
+  const { id } = useParams<{ id: string }>();
+  const sectionId = parseInt(id || '0', 10);
+
+  const SectionComponent = sectionComponents[sectionId];
+
+  if (SectionComponent) {
+    return (
+      <Suspense fallback={<LoadingSpinner message="Loading section..." />}>
+        <SectionComponent />
+      </Suspense>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
+        <p className="text-dark-400">This section is not yet implemented.</p>
+      </div>
+    </div>
+  );
+}
 
 function AppLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -190,17 +149,6 @@ function AppLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-function SectionNotFound() {
-  return (
-    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
-        <p className="text-dark-400">This section is not yet implemented.</p>
-      </div>
-    </div>
-  );
-}
-
 function AppContent() {
   return (
     <>
@@ -209,27 +157,50 @@ function AppContent() {
           {/* Core routes */}
           <Route path="/" element={<Home />} />
 
-          {/* Feature-gated routes */}
+          {/* Feature-gated routes - lazy loaded */}
           {FEATURES.leaderboard && (
-            <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route
+              path="/leaderboard"
+              element={
+                <Suspense fallback={<LoadingSpinner message="Loading leaderboard..." />}>
+                  <Leaderboard />
+                </Suspense>
+              }
+            />
           )}
           {FEATURES.theoremIndex && (
-            <Route path="/theorems" element={<Theorems />} />
+            <Route
+              path="/theorems"
+              element={
+                <Suspense fallback={<LoadingSpinner message="Loading theorems..." />}>
+                  <Theorems />
+                </Suspense>
+              }
+            />
           )}
           {FEATURES.interactiveModules && (
-            <Route path="/interactive" element={<InteractiveModules />} />
+            <Route
+              path="/interactive"
+              element={
+                <Suspense fallback={<LoadingSpinner message="Loading modules..." />}>
+                  <InteractiveModules />
+                </Suspense>
+              }
+            />
           )}
 
-          {/* Section routes - dynamically generated from sectionComponents */}
-          {Object.entries(sectionComponents).map(([id, Component]) => (
-            <Route key={id} path={`/section/${id}`} element={<Component />} />
-          ))}
+          {/* Dynamic section routes - lazy loaded via SectionRouter */}
+          <Route path="/section/:id" element={<SectionRouter />} />
 
-          {/* Quiz routes */}
-          <Route path="/quiz/section/:id" element={<SectionQuizPage />} />
-
-          {/* Fallback for non-existent sections */}
-          <Route path="/section/:id" element={<SectionNotFound />} />
+          {/* Quiz routes - lazy loaded */}
+          <Route
+            path="/quiz/section/:id"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading quiz..." />}>
+                <SectionQuizPage />
+              </Suspense>
+            }
+          />
 
           {/* Fallback */}
           <Route path="*" element={<Home />} />

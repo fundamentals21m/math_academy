@@ -6,7 +6,12 @@ import path from 'path'
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
 const COURSE_ID = 'road-to-serfdom'  // Short ID: 'ba', 'aa', 'crypto', etc.
-const BASE_PATH = '/'  // Standalone Vercel deployment
+
+// Base path is determined by deployment type:
+// - Standalone deploy (default): '/' - works on *.vercel.app domains
+// - Hub deploy (HUB_DEPLOY=true): '/{course-id}-deploy/' - for hub subdirectory
+const isHubDeploy = process.env.HUB_DEPLOY === 'true'
+const BASE_PATH = isHubDeploy ? `/${COURSE_ID}-deploy/` : '/'
 // =============================================================================
 
 export default defineConfig({
@@ -15,17 +20,38 @@ export default defineConfig({
   resolve: {
     alias: {
         '@': path.resolve(__dirname, './src'),
-        '@shared': path.resolve(__dirname, './shared'),
+        '@shared': path.resolve(__dirname, '../shared'),
         '@components': path.resolve(__dirname, './src/components'),
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
         '@data': path.resolve(__dirname, './src/data'),
         // Monorepo shared package (also maps to local shared folder)
-        '@magic-internet-math/shared': path.resolve(__dirname, './shared'),
+        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
+        // Force React resolution to main node_modules to prevent duplicate React from shared/
+        'react': path.resolve(__dirname, './node_modules/react'),
+        'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
     },
+    dedupe: ['react', 'react-dom'],
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        // Manual chunks for better caching and smaller initial load
+        manualChunks: {
+          // Core React libraries - changes rarely
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          // Math rendering - large but essential
+          'vendor-math': ['katex'],
+          // Animation library
+          'vendor-animation': ['framer-motion'],
+          // Firebase - split into granular chunks for tree-shaking
+          'vendor-firebase-core': ['firebase/app'],
+          'vendor-firebase-auth': ['firebase/auth'],
+          'vendor-firebase-functions': ['firebase/functions'],
+        },
+      },
+    },
   },
   define: {
     // Firebase environment variables

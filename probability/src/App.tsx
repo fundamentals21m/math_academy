@@ -35,8 +35,17 @@ const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
 // For a course with many sections, you can generate this programmatically.
 // =============================================================================
 const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentType }>> = {
-  // Add your sections here:
-  // 1: () => import('@/pages/sections/Section01'),
+  // Chapter 1: Combinatorial Analysis
+  1: () => import('@/pages/sections/Section01'),
+  2: () => import('@/pages/sections/Section02'),
+  3: () => import('@/pages/sections/Section03'),
+  4: () => import('@/pages/sections/Section04'),
+  5: () => import('@/pages/sections/Section05'),
+  6: () => import('@/pages/sections/Section06'),
+  // Chapter 2: Axioms of Probability
+  7: () => import('@/pages/sections/Section07'),
+  8: () => import('@/pages/sections/Section08'),
+  9: () => import('@/pages/sections/Section09'),
 };
 
 // Create lazy components from loaders

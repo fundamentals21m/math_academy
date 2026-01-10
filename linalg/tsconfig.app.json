@@ -21,12 +21,12 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@shared/*": ["./shared/*"],
+      "@shared/*": ["../shared/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
       "@lib/*": ["./src/lib/*"],
       "@data/*": ["./src/data/*"],
-      "@magic-internet-math/shared": ["./shared"]
+      "@magic-internet-math/shared": ["../shared"]
     },
 
     /* Linting */

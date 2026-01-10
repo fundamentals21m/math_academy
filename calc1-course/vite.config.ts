@@ -20,7 +20,7 @@ export default defineConfig({
   resolve: {
     alias: {
         '@': path.resolve(__dirname, './src'),
-        '@shared': path.resolve(__dirname, './shared'),
+        '@shared': path.resolve(__dirname, '../shared'),
         '@components': path.resolve(__dirname, './src/components'),
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
@@ -28,7 +28,24 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        // Manual chunks for better caching and smaller initial load
+        manualChunks: {
+          // Core React libraries - changes rarely
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          // Math rendering - large but essential
+          'vendor-math': ['katex'],
+          // Animation library
+          'vendor-animation': ['framer-motion'],
+          // Firebase - split into granular chunks for tree-shaking
+          'vendor-firebase-core': ['firebase/app'],
+          'vendor-firebase-auth': ['firebase/auth'],
+          'vendor-firebase-functions': ['firebase/functions'],
+        },
+      },
+    },
   },
   define: {
     // Firebase environment variables

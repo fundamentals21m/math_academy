@@ -35,7 +35,9 @@ async function requireAdmin(auth: AuthContext | undefined): Promise<void> {
  * Get client IP address from request
  */
 function getClientIP(context: functions.https.CallableContext): string | undefined {
-  return context.rawRequest.ip || context.rawRequest.headers['x-forwarded-for'] || undefined;
+  const forwarded = context.rawRequest.headers['x-forwarded-for'];
+  const forwardedIp = Array.isArray(forwarded) ? forwarded[0] : forwarded;
+  return context.rawRequest.ip || forwardedIp || undefined;
 }
 
 /**

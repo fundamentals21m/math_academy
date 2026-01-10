@@ -9,8 +9,8 @@ export default defineConfig({
   resolve: {
     alias: {
         '@': path.resolve(__dirname, './src'),
-        '@shared': path.resolve(__dirname, './shared'),
-        '@magic-internet-math/shared': path.resolve(__dirname, './shared'),
+        '@shared': path.resolve(__dirname, '../shared'),
+        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
         '@components': path.resolve(__dirname, './src/components'),
         '@pages': path.resolve(__dirname, './src/pages'),
         '@lib': path.resolve(__dirname, './src/lib'),
