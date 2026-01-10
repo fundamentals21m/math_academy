@@ -32,7 +32,15 @@ function extractScoresFromStorage(): { scores: ScoreUpdate[], totalXP: number } 
     // Get the authoritative totalXP (includes all bonuses: quiz perfects, streaks, part completions)
     const totalXP = state.user.totalXP || 0;
 
-    const scores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0, euclid: 0, thales: 0, gauss: 0, human_action: 0, atlas_shrugged: 0, template: 0, 'mod-race': 0, man_econ_state: 0 };
+    const scores: Record<CourseId, number> = {
+      ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0,
+      calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0,
+      euclid: 0, thales: 0, gauss: 0, human_action: 0, atlas_shrugged: 0,
+      template: 0, 'mod-race': 0, man_econ_state: 0,
+      koblitz: 0, coding: 0, west_graphs: 0, 'numbers-geometry': 0,
+      'ross-prob': 0, 'intro-discrete': 0, road_to_serfdom: 0,
+      'only-the-strong-survive': 0, orange_btc: 0, math_history: 0
+    };
 
     // Calculate XP per course from sections
     for (const [sectionId, sectionData] of Object.entries(state.sections)) {

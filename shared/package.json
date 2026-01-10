@@ -9,6 +9,14 @@
     ".": {
       "types": "./index.ts",
       "import": "./index.ts"
+    },
+    "./gamification/storage": {
+      "types": "./gamification/storage.ts",
+      "import": "./gamification/storage.ts"
+    },
+    "./gamification/*": {
+      "types": "./gamification/*.ts",
+      "import": "./gamification/*.ts"
     }
   },
   "dependencies": {

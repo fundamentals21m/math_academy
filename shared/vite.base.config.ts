@@ -1,4 +1,4 @@
-import { defineConfig, type UserConfig } from 'vite'
+import { defineConfig, type UserConfig, type PluginOption } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
@@ -29,7 +29,8 @@ export function createCourseViteConfig(options: CourseViteOptions): UserConfig {
   const basePath = isStandalone ? '/' : `/${courseId}-deploy/`
 
   return defineConfig({
-    plugins: [react()],
+    // Cast to bypass vite version type conflicts between shared and course node_modules
+    plugins: [react()] as PluginOption[],
     base: basePath,
     resolve: {
       alias: {

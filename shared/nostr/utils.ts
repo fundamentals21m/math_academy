@@ -325,14 +325,14 @@ export async function checkRelayHealth(relayUrl: string): Promise<boolean> {
       }
     }, 2000); // 2 second timeout
 
+    const cleanup = () => {
+      if (cleaned) return;
+      cleaned = true;
+      clearTimeout(timeout);
+    };
+
     try {
       const ws = new WebSocket(relayUrl);
-
-      const cleanup = () => {
-        if (cleaned) return;
-        cleaned = true;
-        clearTimeout(timeout);
-      };
 
       ws.onopen = () => {
         cleanup();
