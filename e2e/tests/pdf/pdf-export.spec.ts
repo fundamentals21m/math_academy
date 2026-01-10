@@ -8,11 +8,16 @@ import { COURSES } from '../../config/courses';
  *
  * Generate PDFs of sections for offline use and printing.
  * Run weekly to keep PDFs up to date.
+ *
+ * NOTE: PDF generation only works on Chromium - tests are skipped on other browsers.
  */
 
 const PDFS_DIR = path.join(process.cwd(), 'pdfs');
 
 test.describe('PDF Export', () => {
+  // Skip on non-Chromium browsers (PDF generation is Chromium-only)
+  test.skip(({ browserName }) => browserName !== 'chromium', 'PDF export only supported on Chromium');
+
   // Ensure PDFs directory exists
   test.beforeAll(async () => {
     if (!fs.existsSync(PDFS_DIR)) {
@@ -93,6 +98,8 @@ test.describe('PDF Export', () => {
  * Multi-Section PDF Export
  */
 test.describe('Multi-Section PDF', () => {
+  // Skip on non-Chromium browsers (PDF generation is Chromium-only)
+  test.skip(({ browserName }) => browserName !== 'chromium', 'PDF export only supported on Chromium');
   test.describe.configure({ mode: 'serial' });
 
   const course = COURSES[0];
@@ -191,6 +198,9 @@ test.describe('Print Styles', () => {
  * PDF Quality Checks
  */
 test.describe('PDF Quality', () => {
+  // Skip on non-Chromium browsers (PDF generation is Chromium-only)
+  test.skip(({ browserName }) => browserName !== 'chromium', 'PDF export only supported on Chromium');
+
   const course = COURSES[0];
   const courseDir = path.join(PDFS_DIR, course.id);
 
@@ -312,6 +322,9 @@ test.describe('PDF Index', () => {
  * PDF Size Optimization
  */
 test.describe('PDF Optimization', () => {
+  // Skip on non-Chromium browsers (PDF generation is Chromium-only)
+  test.skip(({ browserName }) => browserName !== 'chromium', 'PDF export only supported on Chromium');
+
   const course = COURSES[0];
 
   test('PDF file size is reasonable', async ({ page }) => {
