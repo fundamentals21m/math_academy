@@ -33,7 +33,7 @@ function resolveUrl(url: string): string {
 }
 
 /**
- * All 26 Math Academy courses
+ * All 31 Math Academy courses
  */
 export const COURSES: CourseConfig[] = [
   // Featured
@@ -129,6 +129,17 @@ export const COURSES: CourseConfig[] = [
     hasVisualizers: true,
     hasLeaderboard: true,
   },
+  {
+    id: 'rudin',
+    name: 'Principles of Mathematical Analysis',
+    baseUrl: 'https://rudin-deploy.vercel.app',
+    totalSections: 86,
+    progressPrefix: 'rudin:',
+    icon: '∫',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
 
   // Algebra
   {
@@ -159,6 +170,17 @@ export const COURSES: CourseConfig[] = [
     baseUrl: resolveUrl('aa-deploy/'),
     totalSections: 50,
     progressPrefix: 'aa:',
+    icon: 'G',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
+  {
+    id: 'df',
+    name: 'Abstract Algebra (Dummit & Foote)',
+    baseUrl: 'https://df-course.vercel.app',
+    totalSections: 95,
+    progressPrefix: 'df:',
     icon: 'G',
     hasQuizzes: true,
     hasVisualizers: true,
@@ -208,6 +230,17 @@ export const COURSES: CourseConfig[] = [
     totalSections: 7,
     progressPrefix: 'gauss:',
     icon: '🔢',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
+  {
+    id: 'euler_intro',
+    name: 'Introduction to the Analysis of the Infinite',
+    baseUrl: 'https://euler-intro.vercel.app',
+    totalSections: 22,
+    progressPrefix: 'euler-intro:',
+    icon: '∞',
     hasQuizzes: true,
     hasVisualizers: true,
     hasLeaderboard: true,
@@ -370,6 +403,19 @@ export const COURSES: CourseConfig[] = [
     totalSections: 22,
     progressPrefix: 'koblitz:',
     icon: '🔑',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
+
+  // Probability and Statistics
+  {
+    id: 'ross-prob',
+    name: 'Probability',
+    baseUrl: resolveUrl('ross-prob-deploy/'),
+    totalSections: 9,
+    progressPrefix: 'ross-prob:',
+    icon: '🎲',
     hasQuizzes: true,
     hasVisualizers: true,
     hasLeaderboard: true,
