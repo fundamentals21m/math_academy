@@ -5,7 +5,7 @@ import path from 'path'
 // =============================================================================
 // COURSE CONFIGURATION - Update these values for your course
 // =============================================================================
-const COURSE_ID = 'men-of-math'  // Short ID: 'ba', 'aa', 'crypto', etc.
+const COURSE_ID = 'mom-deploy'  // Short ID: 'ba', 'aa', 'crypto', etc.
 const BASE_PATH = `/${COURSE_ID}/`
 // =============================================================================
 
@@ -22,10 +22,31 @@ export default defineConfig({
         '@data': path.resolve(__dirname, './src/data'),
         // Monorepo shared package
         '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
+        // Force React resolution to main node_modules to prevent duplicate React from shared/
+        'react': path.resolve(__dirname, './node_modules/react'),
+        'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
     },
+    dedupe: ['react', 'react-dom'],
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        // Manual chunks for better caching and smaller initial load
+        manualChunks: {
+          // Core React libraries - changes rarely
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          // Math rendering - large but essential
+          'vendor-math': ['katex'],
+          // Animation library
+          'vendor-animation': ['framer-motion'],
+          // Firebase - split into granular chunks for tree-shaking
+          'vendor-firebase-core': ['firebase/app'],
+          'vendor-firebase-auth': ['firebase/auth'],
+          'vendor-firebase-functions': ['firebase/functions'],
+        },
+      },
+    },
   },
   define: {
     // Firebase environment variables
