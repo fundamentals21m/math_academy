@@ -243,7 +243,7 @@ describe('Scores Functions', () => {
           { courseId: 'invalid' },
           {}
         )
-      ).rejects.toThrow('courseId must be "ba", "crypto", "aa", "linalg", "advlinalg", or "overall"');
+      ).rejects.toThrow('courseId must be a valid course ID or "overall"');
     });
 
     it('throws for missing courseId', async () => {
@@ -254,7 +254,7 @@ describe('Scores Functions', () => {
           {},
           {}
         )
-      ).rejects.toThrow('courseId must be "ba", "crypto", "aa", "linalg", "advlinalg", or "overall"');
+      ).rejects.toThrow('courseId must be a valid course ID or "overall"');
     });
 
     it('accepts overall as courseId', async () => {

@@ -111,12 +111,21 @@ describe('Nostr Authentication Functions', () => {
     it('creates challenge for valid pubkeyHex', async () => {
       vi.resetModules();
 
+      // Mock for rate limiting: .where().where().count().get()
+      const mockWhereChain = {
+        where: vi.fn().mockReturnThis(),
+        count: vi.fn().mockReturnValue({
+          get: vi.fn().mockResolvedValue({ data: () => ({ count: 0 }) }),
+        }),
+      };
+
       const mockChallengeDoc = {
         set: vi.fn().mockResolvedValue(undefined),
       };
 
       const mockCollectionRef = {
         doc: vi.fn().mockReturnValue(mockChallengeDoc),
+        where: vi.fn().mockReturnValue(mockWhereChain),
       };
 
       const firestoreFn = vi.fn().mockReturnValue({
@@ -143,6 +152,14 @@ describe('Nostr Authentication Functions', () => {
     it('accepts lowercase hex', async () => {
       vi.resetModules();
 
+      // Mock for rate limiting
+      const mockWhereChain = {
+        where: vi.fn().mockReturnThis(),
+        count: vi.fn().mockReturnValue({
+          get: vi.fn().mockResolvedValue({ data: () => ({ count: 0 }) }),
+        }),
+      };
+
       const mockChallengeDoc = {
         set: vi.fn().mockResolvedValue(undefined),
       };
@@ -150,6 +167,7 @@ describe('Nostr Authentication Functions', () => {
       const firestoreFn = vi.fn().mockReturnValue({
         collection: vi.fn().mockReturnValue({
           doc: vi.fn().mockReturnValue(mockChallengeDoc),
+          where: vi.fn().mockReturnValue(mockWhereChain),
         }),
       });
       firestoreFn.FieldValue = {
@@ -170,6 +188,14 @@ describe('Nostr Authentication Functions', () => {
     it('accepts uppercase hex', async () => {
       vi.resetModules();
 
+      // Mock for rate limiting
+      const mockWhereChain = {
+        where: vi.fn().mockReturnThis(),
+        count: vi.fn().mockReturnValue({
+          get: vi.fn().mockResolvedValue({ data: () => ({ count: 0 }) }),
+        }),
+      };
+
       const mockChallengeDoc = {
         set: vi.fn().mockResolvedValue(undefined),
       };
@@ -177,6 +203,7 @@ describe('Nostr Authentication Functions', () => {
       const firestoreFn = vi.fn().mockReturnValue({
         collection: vi.fn().mockReturnValue({
           doc: vi.fn().mockReturnValue(mockChallengeDoc),
+          where: vi.fn().mockReturnValue(mockWhereChain),
         }),
       });
       firestoreFn.FieldValue = {

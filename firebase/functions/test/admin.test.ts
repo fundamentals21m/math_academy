@@ -48,6 +48,11 @@ vi.mock('firebase-functions', () => ({
       }
     },
   },
+  pubsub: {
+    schedule: vi.fn(() => ({
+      onRun: vi.fn((handler) => handler),
+    })),
+  },
   config: vi.fn(() => ({})),
 }));
 

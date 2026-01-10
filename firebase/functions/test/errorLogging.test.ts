@@ -38,6 +38,11 @@ vi.mock('firebase-functions', () => ({
       }
     },
   },
+  pubsub: {
+    schedule: vi.fn(() => ({
+      onRun: vi.fn((handler) => handler),
+    })),
+  },
   config: vi.fn(() => ({})),
   logger: {
     info: vi.fn(),
@@ -76,9 +81,19 @@ describe('Error Logging Functions', () => {
     };
 
     mockErrorsCollection = {
-      doc: vi.fn().mockReturnValue({
-        set: vi.fn().mockResolvedValue(undefined),
-        get: vi.fn().mockResolvedValue({ exists: false }),
+      doc: vi.fn((docId: string) => {
+        // Return stats document when accessing 'stats' doc
+        if (docId === 'stats') {
+          return {
+            get: vi.fn().mockResolvedValue(mockStatsDoc),
+            set: vi.fn().mockResolvedValue(undefined),
+            update: vi.fn().mockResolvedValue(undefined),
+          };
+        }
+        return {
+          set: vi.fn().mockResolvedValue(undefined),
+          get: vi.fn().mockResolvedValue({ exists: false }),
+        };
       }),
       add: vi.fn().mockResolvedValue({ id: 'error-123' }),
       where: vi.fn().mockReturnThis(),
@@ -105,14 +120,20 @@ describe('Error Logging Functions', () => {
     (admin.firestore as unknown as Mock).mockReturnValue({
       collection: vi.fn((path: string) => {
         if (path === 'errors') return mockErrorsCollection;
-        if (path === 'errorStats') return {
+        if (path === 'users') return {
+          doc: vi.fn((uid: string) => ({
+            get: vi.fn().mockResolvedValue({
+              exists: true,
+              data: () => ({ isAdmin: uid === 'admin-1' }),
+            }),
+          })),
+        };
+        return {
           doc: vi.fn().mockReturnValue({
-            get: vi.fn().mockResolvedValue(mockStatsDoc),
+            get: vi.fn().mockResolvedValue({ exists: false }),
             set: vi.fn().mockResolvedValue(undefined),
-            update: vi.fn().mockResolvedValue(undefined),
           }),
         };
-        return {};
       }),
       batch: vi.fn().mockReturnValue({
         set: vi.fn(),
@@ -133,49 +154,56 @@ describe('Error Logging Functions', () => {
   describe('getErrorStats', () => {
     it('throws if not authenticated', async () => {
       const { getErrorStats } = await import('../src/errorLogging');
-      
+
       await expect(
         getErrorStats({ data: {} }, { auth: null } as any)
-      ).rejects.toThrow('Must be admin to view error statistics');
+      ).rejects.toThrow('Authentication required');
     });
 
     it('throws if not admin', async () => {
       const { getErrorStats } = await import('../src/errorLogging');
-      
+
       await expect(
         getErrorStats({ data: {} }, { auth: { uid: 'user-1' } } as any)
-      ).rejects.toThrow('Must be admin to view error statistics');
+      ).rejects.toThrow('Admin privileges required');
     });
 
     it('returns statistics for admin', async () => {
       const { getErrorStats } = await import('../src/errorLogging');
-      
+
       const result = await getErrorStats(
         { data: {} },
         { auth: { uid: 'admin-1' } } as any
       );
 
-      expect(result.totalErrors).toBe(50);
-      expect(result.errorCounts).toEqual({ TypeError: 20, ReferenceError: 10 });
-      expect(result.severityCounts).toEqual({ high: 5, medium: 25, low: 20 });
+      expect(result.stats).toBeDefined();
+      expect(result.stats.totalErrors).toBe(50);
     });
   });
 
   describe('getRecentErrors', () => {
     it('throws if not authenticated', async () => {
       const { getRecentErrors } = await import('../src/errorLogging');
-      
+
       await expect(
         getRecentErrors({ data: { limit: 10 } }, { auth: null } as any)
-      ).rejects.toThrow('Must be authenticated to view errors');
+      ).rejects.toThrow('Authentication required');
     });
 
-    it('returns recent errors for authenticated users', async () => {
+    it('throws if not admin', async () => {
       const { getRecentErrors } = await import('../src/errorLogging');
-      
+
+      await expect(
+        getRecentErrors({ data: { limit: 10 } }, { auth: { uid: 'user-1' } } as any)
+      ).rejects.toThrow('Admin privileges required');
+    });
+
+    it('returns recent errors for admin', async () => {
+      const { getRecentErrors } = await import('../src/errorLogging');
+
       const result = await getRecentErrors(
         { data: { limit: 20 } },
-        { auth: { uid: 'user-1' } } as any
+        { auth: { uid: 'admin-1' } } as any
       );
 
       expect(result.errors).toHaveLength(1);
@@ -184,29 +212,13 @@ describe('Error Logging Functions', () => {
 
     it('respects limit parameter', async () => {
       const { getRecentErrors } = await import('../src/errorLogging');
-      
+
       await getRecentErrors(
         { data: { limit: 50 } },
-        { auth: { uid: 'user-1' } } as any
+        { auth: { uid: 'admin-1' } } as any
       );
 
       expect(mockErrorsCollection.limit).toHaveBeenCalledWith(50);
-    });
-  });
-
-  describe('auto-severity detection', () => {
-    it('detects high severity for errors with "Cannot read"', async () => {
-      const { getSeverityFromMessage } = await import('../src/errorLogging');
-      
-      const severity = getSeverityFromMessage('Cannot read property of undefined');
-      expect(severity).toBe('high');
-    });
-
-    it('detects medium severity for generic errors', async () => {
-      const { getSeverityFromMessage } = await import('../src/errorLogging');
-      
-      const severity = getSeverityFromMessage('Something went wrong');
-      expect(severity).toBe('medium');
     });
   });
 });

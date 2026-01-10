@@ -43,6 +43,11 @@ vi.mock('firebase-functions', () => ({
       }
     },
   },
+  pubsub: {
+    schedule: vi.fn(() => ({
+      onRun: vi.fn((handler) => handler),
+    })),
+  },
   config: vi.fn(() => ({})),
   logger: {
     info: vi.fn(),
@@ -81,9 +86,19 @@ describe('Admin Audit Functions', () => {
     };
 
     mockLogsCollection = {
-      doc: vi.fn().mockReturnValue({
-        set: vi.fn().mockResolvedValue(undefined),
-        get: vi.fn().mockResolvedValue({ exists: false }),
+      doc: vi.fn((docId: string) => {
+        // Return stats document when accessing 'stats' doc
+        if (docId === 'stats') {
+          return {
+            get: vi.fn().mockResolvedValue(mockStatsDoc),
+            set: vi.fn().mockResolvedValue(undefined),
+            update: vi.fn().mockResolvedValue(undefined),
+          };
+        }
+        return {
+          set: vi.fn().mockResolvedValue(undefined),
+          get: vi.fn().mockResolvedValue({ exists: false }),
+        };
       }),
       add: vi.fn().mockResolvedValue({ id: 'log-123' }),
       where: vi.fn().mockReturnThis(),
@@ -119,14 +134,20 @@ describe('Admin Audit Functions', () => {
     (admin.firestore as unknown as Mock).mockReturnValue({
       collection: vi.fn((path: string) => {
         if (path === 'adminAuditLog') return mockLogsCollection;
-        if (path === 'adminStats') return {
+        if (path === 'users') return {
+          doc: vi.fn((uid: string) => ({
+            get: vi.fn().mockResolvedValue({
+              exists: true,
+              data: () => ({ isAdmin: uid === 'admin-1' }),
+            }),
+          })),
+        };
+        return {
           doc: vi.fn().mockReturnValue({
-            get: vi.fn().mockResolvedValue(mockStatsDoc),
+            get: vi.fn().mockResolvedValue({ exists: false }),
             set: vi.fn().mockResolvedValue(undefined),
-            update: vi.fn().mockResolvedValue(undefined),
           }),
         };
-        return {};
       }),
       batch: vi.fn().mockReturnValue({
         set: vi.fn(),
@@ -147,18 +168,18 @@ describe('Admin Audit Functions', () => {
   describe('getAdminAuditLogs', () => {
     it('throws if not authenticated', async () => {
       const { getAdminAuditLogs } = await import('../src/adminAudit');
-      
+
       await expect(
         getAdminAuditLogs({ data: { limit: 10 } }, { auth: null } as any)
-      ).rejects.toThrow('Must be admin to view audit logs');
+      ).rejects.toThrow('Authentication required');
     });
 
     it('throws if not admin', async () => {
       const { getAdminAuditLogs } = await import('../src/adminAudit');
-      
+
       await expect(
         getAdminAuditLogs({ data: { limit: 10 } }, { auth: { uid: 'user-1' } } as any)
-      ).rejects.toThrow('Must be admin to view audit logs');
+      ).rejects.toThrow('Admin privileges required');
     });
 
     it('returns audit logs for admin', async () => {
@@ -176,9 +197,9 @@ describe('Admin Audit Functions', () => {
 
     it('respects limit parameter', async () => {
       const { getAdminAuditLogs } = await import('../src/adminAudit');
-      
+
       await getAdminAuditLogs(
-        { data: { limit: 10 } },
+        { limit: 10 },
         { auth: { uid: 'admin-1' } } as any
       );
 
@@ -189,23 +210,23 @@ describe('Admin Audit Functions', () => {
   describe('getAdminAuditStats', () => {
     it('throws if not authenticated', async () => {
       const { getAdminAuditStats } = await import('../src/adminAudit');
-      
+
       await expect(
-        getAdminAuditStats({ data: {} }, { auth: null } as any)
-      ).rejects.toThrow('Must be admin to view audit statistics');
+        getAdminAuditStats({}, { auth: null } as any)
+      ).rejects.toThrow('Authentication required');
     });
 
     it('returns statistics for admin', async () => {
       const { getAdminAuditStats } = await import('../src/adminAudit');
-      
+
       const result = await getAdminAuditStats(
-        { data: {} },
+        {},
         { auth: { uid: 'admin-1' } } as any
       );
 
-      expect(result.totalActions).toBe(100);
-      expect(result.actionCounts).toEqual({ ban: 10, unban: 5, reset_scores: 3 });
-      expect(result.adminCounts).toEqual({ 'admin-1': 18 });
+      expect(result.stats.totalActions).toBe(100);
+      expect(result.stats.actionCounts).toEqual({ ban: 10, unban: 5, reset_scores: 3 });
+      expect(result.stats.adminCounts).toEqual({ 'admin-1': 18 });
     });
   });
 });
