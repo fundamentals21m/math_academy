@@ -1025,7 +1025,7 @@ export default function Section17() {
         <p>
           The <strong>completeness</strong> of the real numbers means that every Cauchy
           sequence converges to a real number. This property distinguishes the reals from
-          the rationals (where <Math math="\sqrt{2}" /> would be a "missing" limit).
+          the rationals (where <InlineMath math="\sqrt{2}" /> would be a "missing" limit).
         </p>
 
         {/* Intermediate Value Theorem */}
