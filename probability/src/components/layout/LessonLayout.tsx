@@ -8,6 +8,7 @@ import { getQuizQuestions } from '@/data/quizzes/quizMap';
 interface LessonLayoutProps {
   sectionId: number;
   children: ReactNode;
+  title?: string;  // Optional - section title is retrieved from curriculum data
 }
 
 export function LessonLayout({ sectionId, children }: LessonLayoutProps) {

@@ -1,6 +1,7 @@
 {
   "extends": "../shared/tsconfig.course.json",
   "compilerOptions": {
+    "types": ["vite/client"],
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "baseUrl": ".",
     "paths": {
