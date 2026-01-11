@@ -5,7 +5,7 @@
 // Update these values when creating a new course.
 // =============================================================================
 
-import type { CourseId } from '@magic-internet-math/shared';
+import type { CourseId } from '@shared/gamification';
 
 /**
  * Course identifier - used for XP tracking, URLs, and storage keys

@@ -1,4 +1,4 @@
 /**
  * Mastery Calculator - Re-exported from shared package
  */
-export { getMasteryInfo, calculateMastery } from '@magic-internet-math/shared';
+export { getMasteryInfo, calculateMastery } from '@shared/gamification';

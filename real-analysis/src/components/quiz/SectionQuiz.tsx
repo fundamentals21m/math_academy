@@ -2,11 +2,11 @@ import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { FEATURES } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
-import { renderContent } from '@magic-internet-math/shared';
-import type { QuizQuestion, QuestionType, Difficulty } from '@magic-internet-math/shared';
+import { renderContent } from '@shared/gamification';
+import type { QuizQuestion, QuestionType, Difficulty } from '@shared/gamification';
 
 // Re-export types for convenience
-export type { QuizQuestion, QuestionType, Difficulty } from '@magic-internet-math/shared';
+export type { QuizQuestion, QuestionType, Difficulty } from '@shared/gamification';
 
 // Section quiz data structure with difficulty levels
 export interface SectionQuizData {

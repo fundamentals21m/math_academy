@@ -21,7 +21,7 @@ export default defineConfig({
       '@lib': path.resolve(__dirname, './src/lib'),
       '@data': path.resolve(__dirname, './src/data'),
       // Monorepo shared package (also maps to local shared folder)
-      '@magic-internet-math/shared': path.resolve(__dirname, './shared'),
+      '@shared/gamification': path.resolve(__dirname, './shared'),
       // Ensure shared package can resolve katex from this package's node_modules
       'katex': path.resolve(__dirname, './node_modules/katex'),
     },

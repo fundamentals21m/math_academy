@@ -21,7 +21,7 @@ export default defineConfig({
         '@lib': path.resolve(__dirname, './src/lib'),
         '@data': path.resolve(__dirname, './src/data'),
         // Monorepo shared package
-        '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
+        '@shared/gamification': path.resolve(__dirname, '../shared'),
     },
   },
   build: {

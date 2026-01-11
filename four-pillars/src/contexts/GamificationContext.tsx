@@ -10,7 +10,7 @@ import { COURSE_ID } from '@/config';
 import {
   GamificationProvider as SharedGamificationProvider,
   useGamification,
-} from '@magic-internet-math/shared';
+} from '@shared/gamification';
 
 // Re-export the hook directly
 export { useGamification };

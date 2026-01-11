@@ -11,7 +11,7 @@ export type {
   AchievementCategory,
   Difficulty,
   SectionId,
-} from '@magic-internet-math/shared';
+} from '@shared/gamification';
 
 // Alias for backward compatibility
-export type { Difficulty as QuizDifficulty } from '@magic-internet-math/shared';
+export type { Difficulty as QuizDifficulty } from '@shared/gamification';

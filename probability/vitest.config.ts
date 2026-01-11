@@ -15,7 +15,7 @@ export default defineConfig({
       '@pages': path.resolve(__dirname, './src/pages'),
       '@lib': path.resolve(__dirname, './src/lib'),
       '@data': path.resolve(__dirname, './src/data'),
-      '@magic-internet-math/shared': path.resolve(__dirname, '../shared'),
+      '@shared/gamification': path.resolve(__dirname, '../shared'),
     },
     coverage: {
       provider: 'v8',

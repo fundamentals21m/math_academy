@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { exportProgress, importProgress, getProgressSummary } from '@magic-internet-math/shared/gamification/storage';
+import { exportProgress, importProgress, getProgressSummary } from '@shared/gamification/storage';
 
 interface ProgressBackupProps {
   onImportSuccess?: () => void;
