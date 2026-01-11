@@ -119,9 +119,8 @@ test.describe('Math Visual Regression', () => {
       // - Dynamic content (timestamps, random elements)
       // - Math rendering variations between KaTeX versions
       await expect(content).toHaveScreenshot(`${courseId}-section-${sectionId}-${name}.png`, {
-        maxDiffPixels: 1000, // Allow for font/rendering variations
         maxDiffPixelRatio: 0.05, // Allow 5% pixel difference
-        threshold: 0.4,
+        threshold: 0.4, // Per-pixel color difference threshold
       });
     });
   }

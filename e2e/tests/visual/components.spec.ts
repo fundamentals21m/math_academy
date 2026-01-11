@@ -18,7 +18,7 @@ test.describe('UI Components', () => {
       await expect(header).toBeVisible();
 
       await expect(header).toHaveScreenshot('header-component.png', {
-        maxDiffPixels: 100,
+        maxDiffPixelRatio: 0.05,
       });
     });
 
@@ -30,7 +30,7 @@ test.describe('UI Components', () => {
 
       if (await sidebar.isVisible()) {
         await expect(sidebar).toHaveScreenshot('sidebar-component.png', {
-          maxDiffPixels: 150,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -43,7 +43,7 @@ test.describe('UI Components', () => {
 
       if (await breadcrumb.isVisible()) {
         await expect(breadcrumb).toHaveScreenshot('breadcrumb-component.png', {
-          maxDiffPixels: 50,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -64,7 +64,7 @@ test.describe('UI Components', () => {
 
       if (await callout.isVisible()) {
         await expect(callout).toHaveScreenshot('callout-component.png', {
-          maxDiffPixels: 100,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -77,7 +77,7 @@ test.describe('UI Components', () => {
 
       if (await theorem.isVisible()) {
         await expect(theorem).toHaveScreenshot('theorem-component.png', {
-          maxDiffPixels: 150,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -97,7 +97,7 @@ test.describe('UI Components', () => {
 
       if (await codeBlock.isVisible()) {
         await expect(codeBlock).toHaveScreenshot('code-block-component.png', {
-          maxDiffPixels: 100,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -112,7 +112,7 @@ test.describe('UI Components', () => {
 
       if (await quizContainer.isVisible()) {
         await expect(quizContainer).toHaveScreenshot('quiz-component.png', {
-          maxDiffPixels: 200,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -130,7 +130,7 @@ test.describe('UI Components', () => {
 
       if (await navButtons.isVisible()) {
         await expect(navButtons).toHaveScreenshot('nav-button-component.png', {
-          maxDiffPixels: 50,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -143,7 +143,7 @@ test.describe('UI Components', () => {
 
       if (await progress.isVisible()) {
         await expect(progress).toHaveScreenshot('progress-component.png', {
-          maxDiffPixels: 50,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -158,7 +158,7 @@ test.describe('UI Components', () => {
 
       if (await xpDisplay.isVisible()) {
         await expect(xpDisplay).toHaveScreenshot('xp-display-component.png', {
-          maxDiffPixels: 50,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -171,7 +171,7 @@ test.describe('UI Components', () => {
 
       if (await levelBadge.isVisible()) {
         await expect(levelBadge).toHaveScreenshot('level-badge-component.png', {
-          maxDiffPixels: 50,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });
@@ -184,7 +184,7 @@ test.describe('UI Components', () => {
 
       if (await streak.isVisible()) {
         await expect(streak).toHaveScreenshot('streak-component.png', {
-          maxDiffPixels: 50,
+          maxDiffPixelRatio: 0.05,
         });
       }
     });

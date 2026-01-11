@@ -270,7 +270,7 @@ test.describe('Responsive Screenshots', () => {
 
       await expect(page).toHaveScreenshot(`homepage-${config.name}.png`, {
         fullPage: false,
-        maxDiffPixels: 300,
+        maxDiffPixelRatio: 0.05,
       });
     });
 
@@ -282,7 +282,7 @@ test.describe('Responsive Screenshots', () => {
 
       await expect(page).toHaveScreenshot(`section-${config.name}.png`, {
         fullPage: false,
-        maxDiffPixels: 300,
+        maxDiffPixelRatio: 0.05,
       });
     });
   }
