@@ -2,8 +2,8 @@ name: BFI Content Post
 
 on:
   schedule:
-    # Run every 10 minutes
-    - cron: '*/10 * * * *'
+    # Run once per hour at minute 15
+    - cron: '15 * * * *'
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions UI
     inputs:

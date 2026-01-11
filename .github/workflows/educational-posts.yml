@@ -2,8 +2,8 @@ name: Educational Content Post
 
 on:
   schedule:
-    # Run every 5 minutes
-    - cron: '*/5 * * * *'
+    # Run once per hour at minute 45
+    - cron: '45 * * * *'
   workflow_dispatch:
     # Allow manual trigger from GitHub Actions UI
     inputs:
