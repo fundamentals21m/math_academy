@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 interface Props {
@@ -29,11 +29,11 @@ export function MatrixTransformation({ className = '' }: Props) {
   const [showBasis, setShowBasis] = useState(true);
   const [animate, setAnimate] = useState(false);
 
-  // Transform a point
-  const transform = (x: number, y: number) => ({
+  // Transform a point (memoized to satisfy React Compiler)
+  const transform = useCallback((x: number, y: number) => ({
     x: matrix.a * x + matrix.b * y,
     y: matrix.c * x + matrix.d * y,
-  });
+  }), [matrix.a, matrix.b, matrix.c, matrix.d]);
 
   // Calculate determinant
   const determinant = matrix.a * matrix.d - matrix.b * matrix.c;
@@ -71,7 +71,7 @@ export function MatrixTransformation({ className = '' }: Props) {
     }
 
     return lines;
-  }, [matrix, showGrid]);
+  }, [transform, showGrid]);
 
   // Unit square vertices
   const unitSquare = useMemo(() => {
@@ -82,7 +82,7 @@ export function MatrixTransformation({ className = '' }: Props) {
       { x: 0, y: 1 },
     ];
     return corners.map(c => transform(c.x, c.y));
-  }, [matrix]);
+  }, [transform]);
 
   return (
     <div className={`p-6 rounded-2xl bg-dark-800/50 border border-dark-700/50 ${className}`}>

@@ -44,7 +44,7 @@ export function Definition({ title, children, className = '' }: ContentBlockProp
 }
 
 interface TheoremProps extends ContentBlockProps {
-  proof: ReactNode;  // Required - all theorems must have proofs
+  proof?: ReactNode;  // Optional - can omit for informal statements
 }
 
 /**
