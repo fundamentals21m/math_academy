@@ -17,10 +17,28 @@ test.describe('Navigation Smoke Tests', () => {
         await page.goto(course.baseUrl);
         await page.waitForLoadState('networkidle');
 
-        // Find and click first section link
-        const sectionLink = page.locator('a[href*="section/1"], a[href*="section/0"]').first();
+        // Find section link - may need to open mobile menu first
+        let sectionLink = page.locator('a[href*="section/1"], a[href*="section/0"]').first();
 
-        if (await sectionLink.isVisible()) {
+        // If section link isn't visible, try opening mobile menu
+        if (!(await sectionLink.isVisible().catch(() => false))) {
+          const menuButton = page.locator(
+            'button[aria-label*="menu" i], ' +
+            'button[aria-label*="Menu"], ' +
+            '[class*="hamburger"], ' +
+            '[class*="mobile-menu"]'
+          ).first();
+
+          if (await menuButton.isVisible().catch(() => false)) {
+            await menuButton.click();
+            await page.waitForTimeout(500); // Wait for menu animation
+          }
+        }
+
+        // Try to find section link again after potentially opening menu
+        sectionLink = page.locator('a[href*="section/1"], a[href*="section/0"]').first();
+
+        if (await sectionLink.isVisible().catch(() => false)) {
           await sectionLink.click();
           await page.waitForLoadState('networkidle');
 

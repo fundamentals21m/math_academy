@@ -218,7 +218,12 @@ export class QuizComponent {
    * Get current question number from progress
    */
   async getCurrentQuestionNumber(): Promise<number> {
-    const progressText = await this.progress.textContent();
+    // Check if progress element is visible before accessing
+    if (!(await this.progress.isVisible().catch(() => false))) {
+      return 0;
+    }
+
+    const progressText = await this.progress.textContent({ timeout: 5000 }).catch(() => null);
     if (!progressText) return 0;
 
     const match = progressText.match(/(\d+)\s*(?:of|\/)/);
@@ -229,7 +234,12 @@ export class QuizComponent {
    * Get total questions from progress
    */
   async getTotalQuestions(): Promise<number> {
-    const progressText = await this.progress.textContent();
+    // Check if progress element is visible before accessing
+    if (!(await this.progress.isVisible().catch(() => false))) {
+      return 0;
+    }
+
+    const progressText = await this.progress.textContent({ timeout: 5000 }).catch(() => null);
     if (!progressText) return 0;
 
     const match = progressText.match(/(?:of|\/)\s*(\d+)/);
