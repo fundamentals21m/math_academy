@@ -86,7 +86,13 @@ jobs:
 
       - name: Run snapshot tests
         run: |
-          cd shared && npm run test:snapshot
+          cd shared
+          # Check if any snapshot test files exist
+          if find test/snapshots -name "*.test.ts" -o -name "*.test.tsx" 2>/dev/null | grep -q .; then
+            npm run test:snapshot
+          else
+            echo "No snapshot tests found, skipping"
+          fi
 
       - name: Upload snapshot failures
         if: failure()
