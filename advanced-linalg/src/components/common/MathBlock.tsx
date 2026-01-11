@@ -2,11 +2,20 @@ import { useEffect, useRef } from 'react';
 import katex from 'katex';
 
 interface MathProps {
-  children?: string;
+  children?: React.ReactNode;
   math?: string;  // Alternative to children
   display?: boolean;
   inline?: boolean;  // Convenience prop (opposite of display)
   className?: string;
+}
+
+// Convert ReactNode children to string for KaTeX
+function childrenToString(children: React.ReactNode): string {
+  if (children === null || children === undefined) return '';
+  if (typeof children === 'string') return children;
+  if (typeof children === 'number') return String(children);
+  if (Array.isArray(children)) return children.map(childrenToString).join('');
+  return '';
 }
 
 /**
@@ -15,7 +24,7 @@ interface MathProps {
  */
 export function InlineMath({ children, math, className = '' }: MathProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const content = math ?? children ?? '';
+  const content = math ?? childrenToString(children);
 
   useEffect(() => {
     if (ref.current && content) {
@@ -37,7 +46,7 @@ export function InlineMath({ children, math, className = '' }: MathProps) {
  */
 export function MathBlock({ children, math, inline, display, className = '' }: MathProps) {
   const ref = useRef<HTMLElement>(null);
-  const content = math ?? children ?? '';
+  const content = math ?? childrenToString(children);
 
   // inline prop takes precedence, then display prop, default to display mode
   const isInline = inline === true || (display === false);
