@@ -31,8 +31,9 @@ export class SectionPage extends BasePage {
     this.callouts = page.locator('[class*="callout"], [class*="note"], [class*="warning"]');
     this.quiz = page.locator('[class*="quiz"], [data-testid="section-quiz"]');
     this.visualizers = page.locator('canvas, [class*="visualizer"], [class*="interactive"]');
-    this.nextButton = page.locator('a:has-text("Next"), button:has-text("Next")');
-    this.prevButton = page.locator('a:has-text("Previous"), button:has-text("Previous"), a:has-text("Back")');
+    // Use more specific selectors to avoid matching quiz option buttons that may contain "Next" text
+    this.nextButton = page.locator('nav a:has-text("Next"), a[href*="section"]:has-text("Next")').first();
+    this.prevButton = page.locator('nav a:has-text("Previous"), nav a:has-text("Back"), a[href*="section"]:has-text("Previous")').first();
     this.breadcrumb = page.locator('[class*="breadcrumb"], nav[aria-label="Breadcrumb"]');
   }
 
