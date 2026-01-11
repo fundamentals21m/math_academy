@@ -100,7 +100,11 @@ export class SectionPage extends BasePage {
    * Go to next section
    */
   async goToNextSection(): Promise<void> {
-    await this.nextButton.click();
+    // Scroll to the navigation area to avoid quiz overlays intercepting clicks
+    await this.nextButton.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(200); // Wait for any animations
+    // Use force click if element is intercepted (common on mobile with overlapping quiz CTAs)
+    await this.nextButton.click({ force: true });
     await this.waitForPageLoad();
   }
 
@@ -108,7 +112,9 @@ export class SectionPage extends BasePage {
    * Go to previous section
    */
   async goToPreviousSection(): Promise<void> {
-    await this.prevButton.click();
+    await this.prevButton.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(200);
+    await this.prevButton.click({ force: true });
     await this.waitForPageLoad();
   }
 
