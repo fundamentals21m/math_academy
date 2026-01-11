@@ -23,13 +23,27 @@ firebase/*.log
 firebase/functions/*.log
 .vercel
 
-# Environment variables
+# Environment variables - NEVER commit these
 .env
 .env.local
 .env.*.local
+.env.production
+.env.development
+.env.staging
 
-# Firebase config (contains API keys)
+# Firebase config (contains API keys) - NEVER commit
 scripts/firebase-config.js
+
+# Service account keys - NEVER commit
+*-firebase-adminsdk-*.json
+serviceAccountKey.json
+service-account*.json
+*.p12
+*.pem
+
+# Secrets files
+secrets.txt
+.secrets
 
 # Working files
 calc_easy_pdfs/

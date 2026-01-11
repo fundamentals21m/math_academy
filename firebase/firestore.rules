@@ -97,27 +97,29 @@ service cloud.firestore {
     }
 
     // Course Configuration - dynamic course/category data for the hub
-    // Public read access for hub rendering
+    // Public read access for hub rendering (except admins list)
     // Admin-only write access via Cloud Functions
     match /courseConfig/{docId} {
       allow read: if true;
       allow write: if false; // Writes only via Cloud Functions
-      
+
       // Sections subcollection (categories)
       match /sections/{sectionId} {
         allow read: if true;
         allow write: if false;
       }
-      
+
       // Courses subcollection
       match /courses/{courseId} {
         allow read: if true;
         allow write: if false;
       }
-      
-      // Admins subcollection for course management
+
+      // Admins subcollection - RESTRICTED to authenticated admins only
+      // Prevents enumeration of admin identities
       match /admins/{adminId} {
-        allow read: if true;
+        allow read: if request.auth != null &&
+          get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
         allow write: if false;
       }
     }

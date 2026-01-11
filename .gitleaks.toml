@@ -1,0 +1,67 @@
+# Gitleaks configuration for Magic Internet Math
+# This file configures secret detection to prevent credential leaks
+# Run manually: gitleaks detect --verbose
+# Pre-commit hook runs: gitleaks protect --staged --verbose
+
+title = "Magic Internet Math - Secret Detection"
+
+[extend]
+useDefault = true
+
+# Custom rules for project-specific secrets
+[[rules]]
+id = "firebase-api-key"
+description = "Firebase API Key detected"
+regex = '''AIza[0-9A-Za-z\-_]{35}'''
+tags = ["key", "firebase", "critical"]
+
+[[rules]]
+id = "firebase-project-id-with-key"
+description = "Firebase project configuration with API key"
+regex = '''apiKey['":\s]+AIza[0-9A-Za-z\-_]{35}'''
+tags = ["key", "firebase", "critical"]
+
+[[rules]]
+id = "nostr-nsec"
+description = "Nostr private key (nsec)"
+regex = '''nsec1[0-9a-z]{58,62}'''
+tags = ["key", "nostr", "critical"]
+
+[[rules]]
+id = "nostr-npub-in-source"
+description = "Hardcoded Nostr public key (may reveal admin identity)"
+regex = '''npub1[0-9a-z]{58,62}'''
+tags = ["key", "nostr", "warning"]
+
+[[rules]]
+id = "seed-function-secret"
+description = "Seed function secret pattern"
+regex = '''seed[_-]?[a-z]*[_-]?secret[_-]?\d{4}'''
+tags = ["secret", "critical"]
+
+[[rules]]
+id = "firebase-service-account"
+description = "Firebase service account JSON key"
+regex = '''"type":\s*"service_account"'''
+tags = ["key", "firebase", "critical"]
+
+[[rules]]
+id = "private-key-block"
+description = "Private key in PEM format"
+regex = '''-----BEGIN (RSA |EC |DSA |OPENSSH )?PRIVATE KEY-----'''
+tags = ["key", "critical"]
+
+# Global Allowlist - files that are okay to have certain patterns
+[allowlist]
+description = "Global allowlist"
+paths = [
+  '''^\.gitleaks\.toml$''',
+  '''^\.env\.example$''',
+  '''^.*\.md$''',
+]
+regexes = [
+  '''YOUR_API_KEY''',
+  '''YOUR_SECRET''',
+  '''YOUR_NEW_SECRET''',
+  '''\$SEED_SECRET''',
+]

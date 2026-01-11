@@ -41,7 +41,14 @@ Add the same course to the `COURSES` array in the seed file.
 ### 3. Re-seed Firebase (required for hub to show the course)
 After deploying the updated seed function, run:
 ```bash
-curl "https://us-central1-magic-internet-math-96630.cloudfunctions.net/seedCourseConfig?secret=***REMOVED***"
+# Secret is stored in Firebase Functions config - get it from there or from your team
+curl "https://us-central1-magic-internet-math-96630.cloudfunctions.net/seedCourseConfig?secret=$SEED_SECRET"
+```
+
+**SECURITY NOTE:** Never commit the seed secret to source control. The secret is stored in Firebase Functions config:
+```bash
+# To set the secret (admin only):
+firebase functions:config:set seed.secret="YOUR_NEW_SECRET"
 ```
 
 This adds only NEW courses to Firebase - existing courses and admin GUI changes are preserved.

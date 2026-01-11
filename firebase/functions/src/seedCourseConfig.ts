@@ -64,12 +64,23 @@ const COURSES = [
  * Admin GUI changes are preserved.
  *
  * Call via HTTP: https://us-central1-magic-internet-math-96630.cloudfunctions.net/seedCourseConfig?secret=YOUR_SECRET
+ *
+ * SECURITY: Secret must be set via Firebase Functions config:
+ *   firebase functions:config:set seed.secret="YOUR_NEW_SECRET"
  */
 export const seedCourseConfig = functions.https.onRequest(
   async (req, res) => {
-    // Simple secret check to prevent unauthorized calls
-    const secret = req.query.secret;
-    if (secret !== '***REMOVED***') {
+    // Secret check using environment config (NOT hardcoded)
+    const expectedSecret = functions.config().seed?.secret;
+    const providedSecret = req.query.secret;
+
+    if (!expectedSecret) {
+      console.error('SECURITY: seed.secret not configured. Run: firebase functions:config:set seed.secret="YOUR_SECRET"');
+      res.status(500).send('Server configuration error');
+      return;
+    }
+
+    if (providedSecret !== expectedSecret) {
       res.status(403).send('Forbidden');
       return;
     }
