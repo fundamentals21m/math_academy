@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { getLevelProgress } from '@magic-internet-math/shared';
+import { getLevelProgress } from '@shared/gamification';
 
 interface XPDisplayProps {
   xp: number;

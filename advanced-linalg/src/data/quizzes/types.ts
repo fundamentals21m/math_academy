@@ -1,13 +1,13 @@
 /**
  * Quiz types - Re-exported from shared module
  */
-export type { QuizQuestion, SectionQuestions, Difficulty } from '@magic-internet-math/shared';
+export type { QuizQuestion, SectionQuestions, Difficulty } from '@shared/gamification';
 
 /**
  * Quiz data structure with questions organized by difficulty
  */
 export interface DifficultyQuizData {
-  easy: import('@magic-internet-math/shared').QuizQuestion[];
-  medium: import('@magic-internet-math/shared').QuizQuestion[];
-  hard: import('@magic-internet-math/shared').QuizQuestion[];
+  easy: import('@shared/gamification').QuizQuestion[];
+  medium: import('@shared/gamification').QuizQuestion[];
+  hard: import('@shared/gamification').QuizQuestion[];
 }

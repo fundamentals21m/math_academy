@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { AchievementNotification } from '@magic-internet-math/shared';
+import type { AchievementNotification } from '@shared/gamification';
 import { useGamification } from '@/contexts/GamificationContext';
 
 const categoryIcons: Record<string, string> = {

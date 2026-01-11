@@ -4,7 +4,7 @@
 // Advanced Linear Algebra Course - Based on Hoffman & Kunze
 // =============================================================================
 
-import type { CourseId } from '@magic-internet-math/shared';
+import type { CourseId } from '@shared/gamification';
 
 /**
  * Course identifier - used for XP tracking, URLs, and storage keys

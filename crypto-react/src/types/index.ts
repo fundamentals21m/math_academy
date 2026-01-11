@@ -5,4 +5,4 @@ export type {
   QuizAttempt,
   SectionProgress,
   MasteryLevel,
-} from '@magic-internet-math/shared';
+} from '@shared/gamification';

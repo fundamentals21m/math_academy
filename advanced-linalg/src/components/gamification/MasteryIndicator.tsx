@@ -1,5 +1,5 @@
-import type { MasteryLevel } from '@magic-internet-math/shared';
-import { getMasteryInfo } from '@magic-internet-math/shared';
+import type { MasteryLevel } from '@shared/gamification';
+import { getMasteryInfo } from '@shared/gamification';
 
 interface MasteryIndicatorProps {
   level: MasteryLevel;

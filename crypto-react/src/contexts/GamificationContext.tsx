@@ -11,7 +11,7 @@ import {
   GamificationProvider as SharedGamificationProvider,
   useGamification,
   type SectionId,
-} from '@magic-internet-math/shared';
+} from '@shared/gamification';
 
 // Re-export the hook directly
 export { useGamification };

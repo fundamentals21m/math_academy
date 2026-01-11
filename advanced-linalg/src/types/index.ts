@@ -8,4 +8,4 @@ export type {
   QuestionType,
   Difficulty,
   SectionQuestions,
-} from '@magic-internet-math/shared';
+} from '@shared/gamification';
