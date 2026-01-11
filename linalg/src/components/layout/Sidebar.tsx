@@ -6,7 +6,7 @@ import { FEATURES } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
 import { MasteryIndicator } from '@/components/gamification';
 import { COURSE_ID } from '@/config';
-import type { SectionId } from '@magic-internet-math/shared';
+import type { SectionId } from '@shared/gamification';
 
 interface SidebarProps {
   isOpen: boolean;

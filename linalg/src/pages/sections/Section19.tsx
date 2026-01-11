@@ -54,7 +54,7 @@ export default function Section19() {
             <MathBlock>{`\\|Q\\mathbf{x}\\|^2 = (Q\\mathbf{x})^T(Q\\mathbf{x}) = \\mathbf{x}^TQ^TQ\\mathbf{x} = \\mathbf{x}^TI\\mathbf{x} = \\|\\mathbf{x}\\|^2`}</MathBlock>
             <p className="mt-2"><strong>Preserves dot product:</strong></p>
             <MathBlock>{`(Q\\mathbf{x})^T(Q\\mathbf{y}) = \\mathbf{x}^TQ^TQ\\mathbf{y} = \\mathbf{x}^TI\\mathbf{y} = \\mathbf{x}^T\\mathbf{y}`}</MathBlock>
-            <p className="mt-2"><strong>Square Q:</strong> If <InlineMath>Q</InlineMath> is square with <InlineMath>Q^TQ = I</InlineMath>, then <InlineMath>Q</InlineMath> is invertible with <InlineMath>{`Q^{-1} = Q^T`}</InlineMath>. Then <InlineMath>QQ^T = Q(Q^{-1}) = I</InlineMath>.</p>
+            <p className="mt-2"><strong>Square Q:</strong> If <InlineMath>{`Q`}</InlineMath> is square with <InlineMath>{`Q^TQ = I`}</InlineMath>, then <InlineMath>{`Q`}</InlineMath> is invertible with <InlineMath>{`Q^{-1} = Q^T`}</InlineMath>. Then <InlineMath>{`QQ^T = Q(Q^{-1}) = I`}</InlineMath>.</p>
           </>
         }
       >

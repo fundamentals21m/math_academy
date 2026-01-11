@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { curriculum } from '@/data/curriculum';
@@ -7,7 +7,7 @@ import { FEATURES } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
 import { Header } from '@/components/layout/Header';
 import { Sidebar } from '@/components/layout/Sidebar';
-import type { QuizQuestion } from '@magic-internet-math/shared';
+import type { QuizQuestion } from '@shared/gamification';
 
 export default function ChapterQuiz() {
   const { id } = useParams<{ id: string }>();
@@ -109,10 +109,10 @@ function ChapterQuizComponent({ chapterId, chapterTitle, questions }: ChapterQui
   const [isComplete, setIsComplete] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
 
-  // Shuffle questions on start
-  const shuffledQuestions = useMemo(() => {
+  // Shuffle questions on start (using useState to avoid re-shuffling on re-render)
+  const [shuffledQuestions] = useState(() => {
     return [...questions].sort(() => Math.random() - 0.5);
-  }, [questions]);
+  });
 
   const currentQuestion = shuffledQuestions[currentIndex];
   const totalQuestions = shuffledQuestions.length;
@@ -309,7 +309,7 @@ function ChapterQuizComponent({ chapterId, chapterTitle, questions }: ChapterQui
 
       {/* Options */}
       <div className="space-y-3 mb-6">
-        {currentQuestion.options?.map((option, index) => {
+        {currentQuestion.options?.map((option: string, index: number) => {
           const isSelected = selectedAnswer === index;
           const isCorrect = index === currentQuestion.correctIndex;
           const showCorrect = showResult && isCorrect;

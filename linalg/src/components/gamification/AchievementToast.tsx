@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { AchievementNotification } from '@magic-internet-math/shared';
+import type { AchievementNotification } from '@shared/gamification';
 import { useGamification } from '@/contexts/GamificationContext';
 
 const categoryIcons: Record<string, string> = {
@@ -62,7 +62,7 @@ export function AchievementToastContainer() {
   return (
     <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3 pointer-events-none">
       <AnimatePresence mode="popLayout">
-        {notifications.map((notification) => (
+        {notifications.map((notification: AchievementNotification) => (
           <AchievementToast
             key={notification.id}
             notification={notification}

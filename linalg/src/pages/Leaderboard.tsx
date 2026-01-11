@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Header, Sidebar } from '@/components/layout';
 import { COURSE_NAME, FEATURES } from '@/config';
-import { NostrConnectButton } from '@magic-internet-math/shared';
+import { NostrConnectButton } from '@shared/components/leaderboard';
 
 // This is a placeholder - the full leaderboard requires Firebase/Nostr integration
 // See shared/leaderboard/ for the full implementation

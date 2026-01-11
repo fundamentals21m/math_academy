@@ -1,2 +1,2 @@
-import type { QuizQuestion, SectionQuestions, QuestionType, NumericRange } from '@magic-internet-math/shared';
+import type { QuizQuestion, SectionQuestions, QuestionType, NumericRange } from '@shared/gamification';
 export type { QuizQuestion, SectionQuestions, QuestionType, NumericRange };

@@ -3,7 +3,7 @@ import { curriculum, getTotalSections } from '@/data/curriculum';
 import { COURSE_NAME, COURSE_DESCRIPTION, COURSE_ICON, FEATURES, COURSE_ID } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
 import { XPDisplay, StreakBadge } from '@/components/gamification';
-import type { SectionId } from '@magic-internet-math/shared';
+import type { SectionId } from '@shared/gamification';
 
 export default function Home() {
   // Always call the hook unconditionally, then conditionally use the result
@@ -12,7 +12,7 @@ export default function Home() {
 
   const totalSections = getTotalSections();
   const completedSections = gamification
-    ? gamification.state.user.sectionsCompleted.filter((id) => id.startsWith(COURSE_ID)).length
+    ? gamification.state.user.sectionsCompleted.filter((id: string) => id.startsWith(COURSE_ID)).length
     : 0;
   const progressPercent = Math.round((completedSections / totalSections) * 100);
 

@@ -20,9 +20,9 @@ export default function Section24() {
           <>
             <p>Let <InlineMath>{`X = [\\mathbf{x}_1 \\cdots \\mathbf{x}_n]`}</InlineMath> where <InlineMath>{`A\\mathbf{x}_i = \\lambda_i\\mathbf{x}_i`}</InlineMath>. Then:</p>
             <MathBlock>{`AX = A[\\mathbf{x}_1 \\cdots \\mathbf{x}_n] = [\\lambda_1\\mathbf{x}_1 \\cdots \\lambda_n\\mathbf{x}_n]`}</MathBlock>
-            <p className="mt-2">The right side can be written as <InlineMath>X\Lambda</InlineMath>:</p>
+            <p className="mt-2">The right side can be written as <InlineMath>{`X\\Lambda`}</InlineMath>:</p>
             <MathBlock>{`AX = X\\Lambda`}</MathBlock>
-            <p>If the eigenvectors are independent, <InlineMath>X</InlineMath> is invertible. Multiply by <InlineMath>X^{-1}</InlineMath>:</p>
+            <p>If the eigenvectors are independent, <InlineMath>{`X`}</InlineMath> is invertible. Multiply by <InlineMath>{`X^{-1}`}</InlineMath>:</p>
             <MathBlock>{`A = X\\Lambda X^{-1} \\quad \\text{or} \\quad \\Lambda = X^{-1}AX`}</MathBlock>
           </>
         }
@@ -140,8 +140,8 @@ export default function Section24() {
           <>
             <p><strong>Same eigenvalues:</strong> If <InlineMath>{`B = M^{-1}AM`}</InlineMath> and <InlineMath>{`A\\mathbf{x} = \\lambda\\mathbf{x}`}</InlineMath>, then:</p>
             <MathBlock>{`B(M^{-1}\\mathbf{x}) = M^{-1}AM(M^{-1}\\mathbf{x}) = M^{-1}A\\mathbf{x} = M^{-1}(\\lambda\\mathbf{x}) = \\lambda(M^{-1}\\mathbf{x})`}</MathBlock>
-            <p>So <InlineMath>{`M^{-1}\\mathbf{x}`}</InlineMath> is an eigenvector of <InlineMath>B</InlineMath> with the same eigenvalue <InlineMath>\lambda</InlineMath>.</p>
-            <p className="mt-2"><strong>Same determinant:</strong> <InlineMath>\det B = \det(M^{-1}AM) = \det(M^{-1})\det(A)\det(M) = \det A</InlineMath>.</p>
+            <p>So <InlineMath>{`M^{-1}\\mathbf{x}`}</InlineMath> is an eigenvector of <InlineMath>{`B`}</InlineMath> with the same eigenvalue <InlineMath>{`\\lambda`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Same determinant:</strong> <InlineMath>{`\\det B = \\det(M^{-1}AM) = \\det(M^{-1})\\det(A)\\det(M) = \\det A`}</InlineMath>.</p>
             <p className="mt-2"><strong>Same trace and rank:</strong> Follow from same eigenvalues (trace = sum, rank = number of nonzero eigenvalues).</p>
           </>
         }

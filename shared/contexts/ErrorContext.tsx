@@ -36,12 +36,14 @@ async function logErrorToFirebase(error: AppError): Promise<void> {
     );
 
     await logError({
-      message: error.message,
-      details: error.details,
-      recoverable: error.recoverable,
-      userAgent: error.userAgent,
-      url: error.url,
-      severity: error.severity,
+      error: {
+        message: error.message,
+        details: error.details,
+        recoverable: error.recoverable,
+        userAgent: error.userAgent,
+        url: error.url,
+        severity: error.severity,
+      },
     });
 
     logger.debug('Error logged to Firebase:', error.message);
@@ -69,7 +71,7 @@ export function ErrorProvider({ children, onError }: ErrorProviderProps) {
   const [errors, setErrors] = useState<AppError[]>([]);
 
   const addError = useCallback(
-    (error: Omit<AppError, 'id' | 'timestamp' | 'userAgent' | 'url' | 'severity'>) => {
+    (error: Omit<AppError, 'id' | 'timestamp' | 'userAgent' | 'url'>) => {
       const newError: AppError = {
         id: crypto.randomUUID(),
         ...error,

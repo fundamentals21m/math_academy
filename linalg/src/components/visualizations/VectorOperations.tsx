@@ -10,6 +10,49 @@ interface Vector {
   y: number;
 }
 
+// Arrow component moved outside to avoid re-creation during render
+interface ArrowProps {
+  from: Vector;
+  to: Vector;
+  color: string;
+  strokeWidth?: number;
+  toSvg: (v: Vector) => { x: number; y: number };
+}
+
+function Arrow({ from, to, color, strokeWidth = 2, toSvg }: ArrowProps) {
+  const svgFrom = toSvg(from);
+  const svgTo = toSvg(to);
+  const dx = svgTo.x - svgFrom.x;
+  const dy = svgTo.y - svgFrom.y;
+  const len = Math.sqrt(dx * dx + dy * dy);
+  if (len < 1) return null;
+
+  const angle = Math.atan2(dy, dx);
+  const arrowLen = 10;
+  const arrowAngle = 0.4;
+
+  return (
+    <g>
+      <line
+        x1={svgFrom.x}
+        y1={svgFrom.y}
+        x2={svgTo.x}
+        y2={svgTo.y}
+        stroke={color}
+        strokeWidth={strokeWidth}
+      />
+      <polygon
+        points={`
+          ${svgTo.x},${svgTo.y}
+          ${svgTo.x - arrowLen * Math.cos(angle - arrowAngle)},${svgTo.y - arrowLen * Math.sin(angle - arrowAngle)}
+          ${svgTo.x - arrowLen * Math.cos(angle + arrowAngle)},${svgTo.y - arrowLen * Math.sin(angle + arrowAngle)}
+        `}
+        fill={color}
+      />
+    </g>
+  );
+}
+
 export function VectorOperations({ className = '' }: Props) {
   const [vectorA, setVectorA] = useState<Vector>({ x: 3, y: 2 });
   const [vectorB, setVectorB] = useState<Vector>({ x: 1, y: 3 });
@@ -30,11 +73,6 @@ export function VectorOperations({ className = '' }: Props) {
     y: scalarA * vectorA.y,
   }), [vectorA, scalarA]);
 
-  const scaledB = useMemo(() => ({
-    x: scalarB * vectorB.x,
-    y: scalarB * vectorB.y,
-  }), [vectorB, scalarB]);
-
   // SVG dimensions
   const width = 400;
   const height = 400;
@@ -46,46 +84,6 @@ export function VectorOperations({ className = '' }: Props) {
     x: origin.x + v.x * scale,
     y: origin.y - v.y * scale, // Y is inverted in SVG
   });
-
-  // Draw arrow
-  const Arrow = ({ from, to, color, strokeWidth = 2 }: {
-    from: Vector;
-    to: Vector;
-    color: string;
-    strokeWidth?: number;
-  }) => {
-    const svgFrom = toSvg(from);
-    const svgTo = toSvg(to);
-    const dx = svgTo.x - svgFrom.x;
-    const dy = svgTo.y - svgFrom.y;
-    const len = Math.sqrt(dx * dx + dy * dy);
-    if (len < 1) return null;
-
-    const angle = Math.atan2(dy, dx);
-    const arrowLen = 10;
-    const arrowAngle = 0.4;
-
-    return (
-      <g>
-        <line
-          x1={svgFrom.x}
-          y1={svgFrom.y}
-          x2={svgTo.x}
-          y2={svgTo.y}
-          stroke={color}
-          strokeWidth={strokeWidth}
-        />
-        <polygon
-          points={`
-            ${svgTo.x},${svgTo.y}
-            ${svgTo.x - arrowLen * Math.cos(angle - arrowAngle)},${svgTo.y - arrowLen * Math.sin(angle - arrowAngle)}
-            ${svgTo.x - arrowLen * Math.cos(angle + arrowAngle)},${svgTo.y - arrowLen * Math.sin(angle + arrowAngle)}
-          `}
-          fill={color}
-        />
-      </g>
-    );
-  };
 
   return (
     <div className={`p-6 rounded-2xl bg-dark-800/50 border border-dark-700/50 ${className}`}>
@@ -245,6 +243,7 @@ export function VectorOperations({ className = '' }: Props) {
                   to={scaledA}
                   color="#3b82f6"
                   strokeWidth={3}
+                  toSvg={toSvg}
                 />
               </motion.g>
 
@@ -259,6 +258,7 @@ export function VectorOperations({ className = '' }: Props) {
                   to={result}
                   color="#10b981"
                   strokeWidth={3}
+                  toSvg={toSvg}
                 />
               </motion.g>
             </>
@@ -266,8 +266,8 @@ export function VectorOperations({ className = '' }: Props) {
 
           {/* Original vectors (lighter) */}
           <g opacity={0.4}>
-            <Arrow from={{ x: 0, y: 0 }} to={vectorA} color="#3b82f6" strokeWidth={2} />
-            <Arrow from={{ x: 0, y: 0 }} to={vectorB} color="#10b981" strokeWidth={2} />
+            <Arrow from={{ x: 0, y: 0 }} to={vectorA} color="#3b82f6" strokeWidth={2} toSvg={toSvg} />
+            <Arrow from={{ x: 0, y: 0 }} to={vectorB} color="#10b981" strokeWidth={2} toSvg={toSvg} />
           </g>
 
           {/* Result vector */}
@@ -281,6 +281,7 @@ export function VectorOperations({ className = '' }: Props) {
                 to={result}
                 color="#f97316"
                 strokeWidth={3}
+                toSvg={toSvg}
               />
             </motion.g>
           )}

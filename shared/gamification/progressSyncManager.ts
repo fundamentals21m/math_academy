@@ -9,7 +9,7 @@ import { getFirebaseFunctions, isFirebaseConfigured } from '../firebase/config';
 import { SYNC_INTERVAL_MS, DEBOUNCE_MS, RATE_LIMIT_MS } from '../constants';
 import { getLogger } from '../utils/logger';
 import { mergeGamificationStates } from './mergeProgress';
-import { loadState, saveState } from './storage';
+import { saveState } from './storage';
 import type { GamificationState } from './types';
 
 const logger = getLogger('ProgressSync');

@@ -1,2 +1,2 @@
 // Re-export types from shared gamification
-export type { Difficulty, QuizQuestion } from '@magic-internet-math/shared';
+export type { Difficulty, QuizQuestion } from '@shared/gamification';

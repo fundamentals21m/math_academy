@@ -107,7 +107,7 @@ export default function Section20() {
             <p><strong>Case 1:</strong> If <InlineMath>A</InlineMath> is singular, then <InlineMath>AB</InlineMath> is singular (its columns are combinations of <InlineMath>A</InlineMath>'s columns). Both sides equal 0.</p>
             <p className="mt-2"><strong>Case 2:</strong> If <InlineMath>A</InlineMath> is invertible, factor <InlineMath>A = E_1 E_2 \cdots E_k</InlineMath> into elementary matrices. Each <InlineMath>E_i</InlineMath> is a row operation, and we know how each affects the determinant.</p>
             <p className="mt-2">Then <InlineMath>\det(AB) = \det(E_1 \cdots E_k B) = \det(E_1) \cdots \det(E_k) \det(B) = \det(A) \det(B)</InlineMath>.</p>
-            <p className="mt-2"><strong>Consequence:</strong> <InlineMath>\det(A A^{-1}) = \det I = 1</InlineMath>, so <InlineMath>\det(A) \det(A^{-1}) = 1</InlineMath>.</p>
+            <p className="mt-2"><strong>Consequence:</strong> <InlineMath>{`\\det(A A^{-1}) = \\det I = 1`}</InlineMath>, so <InlineMath>{`\\det(A) \\det(A^{-1}) = 1`}</InlineMath>.</p>
           </>
         }
       >

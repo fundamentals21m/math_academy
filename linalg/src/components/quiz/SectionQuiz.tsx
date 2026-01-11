@@ -1,13 +1,13 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FEATURES } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
 
-import { renderContent, calculateXP, XP_CONFIG } from '@magic-internet-math/shared';
-import type { QuizQuestion, QuestionType } from '@magic-internet-math/shared';
+import { renderContent, calculateXP, XP_CONFIG } from '@shared/gamification';
+import type { QuizQuestion, QuestionType } from '@shared/gamification';
 
 // Re-export types for convenience
-export type { QuizQuestion, QuestionType } from '@magic-internet-math/shared';
+export type { QuizQuestion, QuestionType } from '@shared/gamification';
 
 interface SectionQuizProps {
   sectionId: number;
@@ -32,9 +32,10 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
   const [earnedXP, setEarnedXP] = useState(0);
 
   // Randomize questions on mount, take 5
-  const shuffledQuestions = useMemo(() => {
+  // Using useState with lazy init to avoid re-randomizing on re-renders
+  const [shuffledQuestions] = useState(() => {
     return [...questions].sort(() => Math.random() - 0.5).slice(0, 5);
-  }, [questions]);
+  });
 
   const currentQuestion = shuffledQuestions[currentIndex];
   const totalQuestions = shuffledQuestions.length;
@@ -245,7 +246,7 @@ export function SectionQuiz({ sectionId, questions, title = 'Section Quiz' }: Se
       {/* Multiple-choice options */}
       {questionType === 'multiple-choice' && currentQuestion.options && (
         <div className="space-y-3 mb-6">
-          {currentQuestion.options.map((option, index) => {
+          {currentQuestion.options.map((option: string, index: number) => {
             const isSelected = selectedAnswer === index;
             const isCorrect = index === currentQuestion.correctIndex;
             const showCorrect = showResult && isCorrect;

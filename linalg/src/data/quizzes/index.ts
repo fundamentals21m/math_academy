@@ -1,4 +1,4 @@
-import type { QuizQuestion } from '@magic-internet-math/shared';
+import type { QuizQuestion } from '@shared/gamification';
 
 // Re-export all chapter quizzes
 export * from './chapter01';

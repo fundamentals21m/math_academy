@@ -80,11 +80,11 @@ export default function Section40() {
         className="my-6"
         proof={
           <>
-            <p><strong>Perron-Frobenius:</strong> For a positive matrix, <InlineMath>\\lambda = 1</InlineMath> is the unique eigenvalue of maximum modulus (all others have <InlineMath>|\\lambda_i| &lt; 1</InlineMath>).</p>
-            <p className="mt-2"><strong>Diagonalization:</strong> If <InlineMath>P = X \\Lambda X^{-1}</InlineMath>, then <InlineMath>P^k = X \\Lambda^k X^{-1}</InlineMath>.</p>
-            <p className="mt-2">As <InlineMath>k \\to \\infty</InlineMath>, <InlineMath>\\lambda_i^k \\to 0</InlineMath> for all <InlineMath>|\\lambda_i| &lt; 1</InlineMath>. Only <InlineMath>\\lambda_1 = 1</InlineMath> survives:</p>
+            <p><strong>Perron-Frobenius:</strong> For a positive matrix, <InlineMath>{`\\lambda = 1`}</InlineMath> is the unique eigenvalue of maximum modulus (all others have <InlineMath>{`|\\lambda_i| < 1`}</InlineMath>).</p>
+            <p className="mt-2"><strong>Diagonalization:</strong> If <InlineMath>{`P = X \\Lambda X^{-1}`}</InlineMath>, then <InlineMath>{`P^k = X \\Lambda^k X^{-1}`}</InlineMath>.</p>
+            <p className="mt-2">As <InlineMath>{`k \\to \\infty`}</InlineMath>, <InlineMath>{`\\lambda_i^k \\to 0`}</InlineMath> for all <InlineMath>{`|\\lambda_i| < 1`}</InlineMath>. Only <InlineMath>{`\\lambda_1 = 1`}</InlineMath> survives:</p>
             <MathBlock>{`P^k \\to \\mathbf{x}_1 \\mathbf{y}_1^T`}</MathBlock>
-            <p className="mt-2">where <InlineMath>{`\\mathbf{x}_1`}</InlineMath> is the steady-state right eigenvector and <InlineMath>{`\\mathbf{y}_1`}</InlineMath> is the left eigenvector. Since columns of <InlineMath>P</InlineMath> sum to 1, <InlineMath>{`\\mathbf{y}_1 = \\mathbf{e}`}</InlineMath>.</p>
+            <p className="mt-2">where <InlineMath>{`\\mathbf{x}_1`}</InlineMath> is the steady-state right eigenvector and <InlineMath>{`\\mathbf{y}_1`}</InlineMath> is the left eigenvector. Since columns of <InlineMath>{`P`}</InlineMath> sum to 1, <InlineMath>{`\\mathbf{y}_1 = \\mathbf{e}`}</InlineMath>.</p>
           </>
         }
       >

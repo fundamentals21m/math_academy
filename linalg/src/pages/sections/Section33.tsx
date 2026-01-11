@@ -128,13 +128,13 @@ export default function Section33() {
         className="my-6"
         proof={
           <>
-            <p><strong>(⟹)</strong> Suppose <InlineMath>T</InlineMath> is invertible with inverse <InlineMath>T^{-1}</InlineMath>.</p>
-            <p className="mt-2">Let <InlineMath>A</InlineMath> be the matrix of <InlineMath>T</InlineMath> and <InlineMath>B</InlineMath> the matrix of <InlineMath>T^{-1}</InlineMath>.</p>
-            <p className="mt-2">By the composition theorem: <InlineMath>T^{-1} \\circ T = I</InlineMath> has matrix <InlineMath>BA = I</InlineMath>, and <InlineMath>T \\circ T^{-1} = I</InlineMath> has matrix <InlineMath>AB = I</InlineMath>.</p>
-            <p className="mt-2">Therefore <InlineMath>A</InlineMath> is invertible with <InlineMath>A^{-1} = B</InlineMath>.</p>
-            <p className="mt-2"><strong>(⟸)</strong> Suppose <InlineMath>A</InlineMath> is invertible.</p>
+            <p><strong>(⟹)</strong> Suppose <InlineMath>{`T`}</InlineMath> is invertible with inverse <InlineMath>{`T^{-1}`}</InlineMath>.</p>
+            <p className="mt-2">Let <InlineMath>{`A`}</InlineMath> be the matrix of <InlineMath>{`T`}</InlineMath> and <InlineMath>{`B`}</InlineMath> the matrix of <InlineMath>{`T^{-1}`}</InlineMath>.</p>
+            <p className="mt-2">By the composition theorem: <InlineMath>{`T^{-1} \\circ T = I`}</InlineMath> has matrix <InlineMath>{`BA = I`}</InlineMath>, and <InlineMath>{`T \\circ T^{-1} = I`}</InlineMath> has matrix <InlineMath>{`AB = I`}</InlineMath>.</p>
+            <p className="mt-2">Therefore <InlineMath>{`A`}</InlineMath> is invertible with <InlineMath>{`A^{-1} = B`}</InlineMath>.</p>
+            <p className="mt-2"><strong>(⟸)</strong> Suppose <InlineMath>{`A`}</InlineMath> is invertible.</p>
             <p className="mt-2">Define <InlineMath>{`S: W \\to V`}</InlineMath> by <InlineMath>{`[S(\\mathbf{w})]_V = A^{-1}[\\mathbf{w}]_W`}</InlineMath>. This is linear (matrix multiplication).</p>
-            <p className="mt-2">Then <InlineMath>S \\circ T</InlineMath> has matrix <InlineMath>A^{-1}A = I</InlineMath>, so <InlineMath>S \\circ T = I_V</InlineMath>. Similarly <InlineMath>T \\circ S = I_W</InlineMath>. Thus <InlineMath>S = T^{-1}</InlineMath>.</p>
+            <p className="mt-2">Then <InlineMath>{`S \\circ T`}</InlineMath> has matrix <InlineMath>{`A^{-1}A = I`}</InlineMath>, so <InlineMath>{`S \\circ T = I_V`}</InlineMath>. Similarly <InlineMath>{`T \\circ S = I_W`}</InlineMath>. Thus <InlineMath>{`S = T^{-1}`}</InlineMath>.</p>
           </>
         }
       >

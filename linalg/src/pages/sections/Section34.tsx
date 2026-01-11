@@ -131,13 +131,13 @@ export default function Section34() {
         className="my-6"
         proof={
           <>
-            <p>Let <InlineMath>B = P^{-1}AP</InlineMath>.</p>
-            <p className="mt-2"><strong>Eigenvalues:</strong> <InlineMath>\\det(B - \\lambda I) = \\det(P^{-1}AP - \\lambda P^{-1}P) = \\det(P^{-1}(A - \\lambda I)P)</InlineMath></p>
+            <p>Let <InlineMath>{`B = P^{-1}AP`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Eigenvalues:</strong> <InlineMath>{`\\det(B - \\lambda I) = \\det(P^{-1}AP - \\lambda P^{-1}P) = \\det(P^{-1}(A - \\lambda I)P)`}</InlineMath></p>
             <MathBlock>{`= \\det(P^{-1})\\det(A - \\lambda I)\\det(P) = \\det(A - \\lambda I)`}</MathBlock>
             <p className="mt-2">Same characteristic polynomial ⟹ same eigenvalues.</p>
-            <p className="mt-2"><strong>Determinant:</strong> <InlineMath>\\det B = \\det(P^{-1}AP) = \\det(P^{-1})\\det(A)\\det(P) = \\det A</InlineMath>.</p>
+            <p className="mt-2"><strong>Determinant:</strong> <InlineMath>{`\\det B = \\det(P^{-1}AP) = \\det(P^{-1})\\det(A)\\det(P) = \\det A`}</InlineMath>.</p>
             <p className="mt-2"><strong>Trace:</strong> <InlineMath>{`\\text{tr}(B) = \\text{tr}(P^{-1}AP) = \\text{tr}(APP^{-1}) = \\text{tr}(A)`}</InlineMath> (using <InlineMath>{`\\text{tr}(XY) = \\text{tr}(YX)`}</InlineMath>).</p>
-            <p className="mt-2"><strong>Rank:</strong> <InlineMath>{`B\\mathbf{x} = \\mathbf{0}`}</InlineMath> iff <InlineMath>{`P^{-1}AP\\mathbf{x} = \\mathbf{0}`}</InlineMath> iff <InlineMath>{`A(P\\mathbf{x}) = \\mathbf{0}`}</InlineMath>. Since <InlineMath>P</InlineMath> is invertible, <InlineMath>{`\\dim N(B) = \\dim N(A)`}</InlineMath>, so <InlineMath>{`\\text{rank}(B) = \\text{rank}(A)`}</InlineMath>.</p>
+            <p className="mt-2"><strong>Rank:</strong> <InlineMath>{`B\\mathbf{x} = \\mathbf{0}`}</InlineMath> iff <InlineMath>{`P^{-1}AP\\mathbf{x} = \\mathbf{0}`}</InlineMath> iff <InlineMath>{`A(P\\mathbf{x}) = \\mathbf{0}`}</InlineMath>. Since <InlineMath>{`P`}</InlineMath> is invertible, <InlineMath>{`\\dim N(B) = \\dim N(A)`}</InlineMath>, so <InlineMath>{`\\text{rank}(B) = \\text{rank}(A)`}</InlineMath>.</p>
           </>
         }
       >

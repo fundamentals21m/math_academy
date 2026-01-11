@@ -105,7 +105,7 @@ export default function Section02() {
         </p>
         <p className="mt-2">
           This is just the ordinary length of the arrow that represents the vector. The Pythagoras
-          formula <InlineMath>a^2 + b^2 = c^2</InlineMath> connects the three sides: <InlineMath>1^2 + 2^2 = {`\\|\\mathbf{v}\\|^2`}</InlineMath>.
+          formula <InlineMath>{`a^2 + b^2 = c^2`}</InlineMath> connects the three sides: <InlineMath>{`1^2 + 2^2 = \\|\\mathbf{v}\\|^2`}</InlineMath>.
         </p>
       </Example>
 

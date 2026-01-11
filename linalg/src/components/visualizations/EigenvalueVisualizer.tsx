@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
 
 interface Props {
   className?: string;
@@ -10,6 +9,50 @@ interface Matrix2x2 {
   b: number;
   c: number;
   d: number;
+}
+
+// Arrow component moved outside to avoid re-creation during render
+interface ArrowProps {
+  from: { x: number; y: number };
+  to: { x: number; y: number };
+  color: string;
+  strokeWidth?: number;
+  opacity?: number;
+  toSvg: (x: number, y: number) => { x: number; y: number };
+}
+
+function Arrow({ from, to, color, strokeWidth = 2, opacity = 1, toSvg }: ArrowProps) {
+  const svgFrom = toSvg(from.x, from.y);
+  const svgTo = toSvg(to.x, to.y);
+  const dx = svgTo.x - svgFrom.x;
+  const dy = svgTo.y - svgFrom.y;
+  const len = Math.sqrt(dx * dx + dy * dy);
+  if (len < 1) return null;
+
+  const angle = Math.atan2(dy, dx);
+  const arrowLen = 8;
+  const arrowAngle = 0.4;
+
+  return (
+    <g opacity={opacity}>
+      <line
+        x1={svgFrom.x}
+        y1={svgFrom.y}
+        x2={svgTo.x}
+        y2={svgTo.y}
+        stroke={color}
+        strokeWidth={strokeWidth}
+      />
+      <polygon
+        points={`
+          ${svgTo.x},${svgTo.y}
+          ${svgTo.x - arrowLen * Math.cos(angle - arrowAngle)},${svgTo.y - arrowLen * Math.sin(angle - arrowAngle)}
+          ${svgTo.x - arrowLen * Math.cos(angle + arrowAngle)},${svgTo.y - arrowLen * Math.sin(angle + arrowAngle)}
+        `}
+        fill={color}
+      />
+    </g>
+  );
 }
 
 const PRESETS: { name: string; matrix: Matrix2x2; description: string }[] = [
@@ -23,7 +66,6 @@ const PRESETS: { name: string; matrix: Matrix2x2; description: string }[] = [
 export function EigenvalueVisualizer({ className = '' }: Props) {
   const [matrix, setMatrix] = useState<Matrix2x2>({ a: 2, b: 1, c: 1, d: 2 });
   const [angle, setAngle] = useState(0); // Angle in degrees
-  const [showAllVectors, setShowAllVectors] = useState(false);
 
   // Calculate eigenvalues and eigenvectors
   const eigen = useMemo(() => {
@@ -122,47 +164,6 @@ export function EigenvalueVisualizer({ className = '' }: Props) {
     x: origin.x + x * scale,
     y: origin.y - y * scale,
   });
-
-  // Draw arrow
-  const Arrow = ({ from, to, color, strokeWidth = 2, opacity = 1 }: {
-    from: { x: number; y: number };
-    to: { x: number; y: number };
-    color: string;
-    strokeWidth?: number;
-    opacity?: number;
-  }) => {
-    const svgFrom = toSvg(from.x, from.y);
-    const svgTo = toSvg(to.x, to.y);
-    const dx = svgTo.x - svgFrom.x;
-    const dy = svgTo.y - svgFrom.y;
-    const len = Math.sqrt(dx * dx + dy * dy);
-    if (len < 1) return null;
-
-    const angle = Math.atan2(dy, dx);
-    const arrowLen = 8;
-    const arrowAngle = 0.4;
-
-    return (
-      <g opacity={opacity}>
-        <line
-          x1={svgFrom.x}
-          y1={svgFrom.y}
-          x2={svgTo.x}
-          y2={svgTo.y}
-          stroke={color}
-          strokeWidth={strokeWidth}
-        />
-        <polygon
-          points={`
-            ${svgTo.x},${svgTo.y}
-            ${svgTo.x - arrowLen * Math.cos(angle - arrowAngle)},${svgTo.y - arrowLen * Math.sin(angle - arrowAngle)}
-            ${svgTo.x - arrowLen * Math.cos(angle + arrowAngle)},${svgTo.y - arrowLen * Math.sin(angle + arrowAngle)}
-          `}
-          fill={color}
-        />
-      </g>
-    );
-  };
 
   return (
     <div className={`p-6 rounded-2xl bg-dark-800/50 border border-dark-700/50 ${className}`}>
@@ -316,6 +317,7 @@ export function EigenvalueVisualizer({ className = '' }: Props) {
             to={inputVector}
             color="#3b82f6"
             strokeWidth={3}
+            toSvg={toSvg}
           />
 
           {/* Output vector (red) */}
@@ -324,6 +326,7 @@ export function EigenvalueVisualizer({ className = '' }: Props) {
             to={outputVector}
             color="#ef4444"
             strokeWidth={3}
+            toSvg={toSvg}
           />
 
           {/* Labels */}

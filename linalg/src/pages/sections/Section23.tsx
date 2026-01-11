@@ -136,18 +136,18 @@ export default function Section23() {
         className="my-6"
         proof={
           <>
-            <p><strong>Triangular:</strong> <InlineMath>\det(A - \lambda I)</InlineMath> is also triangular, so its determinant is the product of diagonal entries: <InlineMath>(a_{11} - \lambda)(a_{22} - \lambda) \cdots</InlineMath>. This is zero when <InlineMath>\lambda</InlineMath> equals a diagonal entry.</p>
-            <p className="mt-2"><strong>Singular:</strong> If <InlineMath>\det A = 0</InlineMath>, then <InlineMath>\det(A - 0 \cdot I) = 0</InlineMath>, so <InlineMath>\lambda = 0</InlineMath> is an eigenvalue.</p>
+            <p><strong>Triangular:</strong> <InlineMath>{`\\det(A - \\lambda I)`}</InlineMath> is also triangular, so its determinant is the product of diagonal entries: <InlineMath>{`(a_{11} - \\lambda)(a_{22} - \\lambda) \\cdots`}</InlineMath>. This is zero when <InlineMath>{`\\lambda`}</InlineMath> equals a diagonal entry.</p>
+            <p className="mt-2"><strong>Singular:</strong> If <InlineMath>{`\\det A = 0`}</InlineMath>, then <InlineMath>{`\\det(A - 0 \\cdot I) = 0`}</InlineMath>, so <InlineMath>{`\\lambda = 0`}</InlineMath> is an eigenvalue.</p>
             <p className="mt-2"><strong>Inverse:</strong> If <InlineMath>{`A\\mathbf{x} = \\lambda\\mathbf{x}`}</InlineMath>, multiply by <InlineMath>{`A^{-1}`}</InlineMath>: <InlineMath>{`\\mathbf{x} = \\lambda A^{-1}\\mathbf{x}`}</InlineMath>, so <InlineMath>{`A^{-1}\\mathbf{x} = (1/\\lambda)\\mathbf{x}`}</InlineMath>.</p>
             <p className="mt-2"><strong>Powers:</strong> If <InlineMath>{`A\\mathbf{x} = \\lambda\\mathbf{x}`}</InlineMath>, then <InlineMath>{`A^2\\mathbf{x} = A(\\lambda\\mathbf{x}) = \\lambda A\\mathbf{x} = \\lambda^2\\mathbf{x}`}</InlineMath>. By induction, <InlineMath>{`A^k\\mathbf{x} = \\lambda^k\\mathbf{x}`}</InlineMath>.</p>
           </>
         }
       >
         <ul className="list-disc list-inside space-y-2">
-          <li>If <InlineMath>A</InlineMath> is <strong>triangular</strong>, eigenvalues = diagonal entries</li>
-          <li>If <InlineMath>A</InlineMath> is <strong>singular</strong>, then <InlineMath>\lambda = 0</InlineMath> is an eigenvalue</li>
-          <li>If <InlineMath>A</InlineMath> is <strong>invertible</strong>, eigenvalues of <InlineMath>{`A^{-1}`}</InlineMath> are <InlineMath>1/\lambda</InlineMath></li>
-          <li>Eigenvalues of <InlineMath>A^k</InlineMath> are <InlineMath>\lambda^k</InlineMath> (same eigenvectors)</li>
+          <li>If <InlineMath>{`A`}</InlineMath> is <strong>triangular</strong>, eigenvalues = diagonal entries</li>
+          <li>If <InlineMath>{`A`}</InlineMath> is <strong>singular</strong>, then <InlineMath>{`\\lambda = 0`}</InlineMath> is an eigenvalue</li>
+          <li>If <InlineMath>{`A`}</InlineMath> is <strong>invertible</strong>, eigenvalues of <InlineMath>{`A^{-1}`}</InlineMath> are <InlineMath>{`1/\\lambda`}</InlineMath></li>
+          <li>Eigenvalues of <InlineMath>{`A^k`}</InlineMath> are <InlineMath>{`\\lambda^k`}</InlineMath> (same eigenvectors)</li>
         </ul>
       </Theorem>
 

@@ -76,7 +76,7 @@ export default function Section49() {
         className="my-6"
         proof={
           <>
-            <p><strong>Hat matrix:</strong> <InlineMath>H = X(X^TX)^{-1}X^T</InlineMath> satisfies <InlineMath>H^2 = H</InlineMath> (idempotent) and <InlineMath>H^T = H</InlineMath> (symmetric).</p>
+            <p><strong>Hat matrix:</strong> <InlineMath>{`H = X(X^TX)^{-1}X^T`}</InlineMath> satisfies <InlineMath>{`H^2 = H`}</InlineMath> (idempotent) and <InlineMath>{`H^T = H`}</InlineMath> (symmetric).</p>
             <p className="mt-2">These are the defining properties of an orthogonal projection matrix.</p>
             <p className="mt-2"><strong>Projects onto C(X):</strong> For any <InlineMath>{`\\mathbf{v} \\in C(X)`}</InlineMath>, write <InlineMath>{`\\mathbf{v} = X\\mathbf{c}`}</InlineMath>. Then <InlineMath>{`H\\mathbf{v} = X(X^TX)^{-1}X^TX\\mathbf{c} = X\\mathbf{c} = \\mathbf{v}`}</InlineMath>.</p>
             <p className="mt-2"><strong>Orthogonal residuals:</strong> <InlineMath>{`\\mathbf{e} = (I-H)\\mathbf{y}`}</InlineMath>. Since <InlineMath>{`(I-H)H = 0`}</InlineMath>, the residual is orthogonal to the fitted values and hence to <InlineMath>{`C(X)`}</InlineMath>.</p>
