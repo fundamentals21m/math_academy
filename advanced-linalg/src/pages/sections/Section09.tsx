@@ -207,7 +207,7 @@ export default function Section09() {
               The <InlineMath>(i,j)</InlineMath> entry of <InlineMath>A \cdot {`\\text{adj}`}(A)</InlineMath> is:
             </p>
             <MathBlock>{`\\sum_{k=1}^n a_{ik} (\\text{adj}(A))_{kj} = \\sum_{k=1}^n a_{ik} C_{jk}`}</MathBlock>
-            <p className="mt-2"><strong>Case <InlineMath>i = j</InlineMath>:</strong> This is <InlineMath>\sum_k a_{ik} C_{ik}</InlineMath>, which is cofactor expansion along row <InlineMath>i</InlineMath>, giving <InlineMath>\det(A)</InlineMath>.</p>
+            <p className="mt-2"><strong>Case <InlineMath>i = j</InlineMath>:</strong> This is <InlineMath>{`\\sum_k a_{ik} C_{ik}`}</InlineMath>, which is cofactor expansion along row <InlineMath>i</InlineMath>, giving <InlineMath>{`\\det(A)`}</InlineMath>.</p>
             <p className="mt-2"><strong>Case <InlineMath>i \neq j</InlineMath>:</strong> This is cofactor expansion of a matrix with row <InlineMath>j</InlineMath> replaced by row <InlineMath>i</InlineMath>, which has two identical rows. By the alternating property, this equals 0.</p>
             <p className="mt-2">Therefore <InlineMath>A \cdot {`\\text{adj}`}(A) = \det(A) \cdot I</InlineMath>.</p>
             <p className="mt-2">If <InlineMath>\det(A) \neq 0</InlineMath>, divide by <InlineMath>\det(A)</InlineMath>: <InlineMath>A \cdot \frac{1}{'\\det(A)'}{`\\text{adj}`}(A) = I</InlineMath>, so <InlineMath>A^{'{-1}'} = \frac{1}{'\\det(A)'}{`\\text{adj}`}(A)</InlineMath>.</p>
