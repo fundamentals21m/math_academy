@@ -88,10 +88,10 @@ export default function RacingGame() {
         >
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-white mb-2">
-              Modular Arithmetic Racing
+              Base Conversion Racing
             </h1>
             <p className="text-dark-300">
-              Race to compute remainders!
+              Race to convert between binary, decimal, and hex!
             </p>
           </div>
 
@@ -120,13 +120,13 @@ export default function RacingGame() {
                 <div className="text-sm text-dark-400">XP</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-cyan-400">
+                <div className="text-2xl font-bold text-emerald-400">
                   {racingStats?.highScore.toLocaleString() ?? 0}
                 </div>
                 <div className="text-sm text-dark-400">High Score</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-cyan-400">
+                <div className="text-2xl font-bold text-emerald-400">
                   {racingStats?.gamesPlayed ?? 0}
                 </div>
                 <div className="text-sm text-dark-400">Games</div>
@@ -224,7 +224,7 @@ export default function RacingGame() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1 }}
               onClick={() => setGameMode('single')}
-              className="w-full py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xl rounded-lg transition-colors"
+              className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xl rounded-lg transition-colors"
             >
               Single Player
             </motion.button>
@@ -384,7 +384,7 @@ export default function RacingGame() {
     <div className="min-h-screen bg-dark-950 flex items-center justify-center">
       <button
         onClick={handleReturnToMenu}
-        className="text-white hover:text-cyan-400"
+        className="text-white hover:text-emerald-400"
       >
         Return to Menu
       </button>
