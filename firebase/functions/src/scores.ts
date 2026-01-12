@@ -27,15 +27,15 @@ export const syncScores = functions.https.onCall(
     const { scores, displayName, totalXP: providedTotalXP } = data || {};
 
     if (!scores || !Array.isArray(scores)) {
-      console.error('syncScores: scores is not an array:', typeof scores, scores);
+      // Don't log the actual scores value to avoid exposing user data
+      console.error('syncScores: scores is not an array:', typeof scores);
       throw new functions.https.HttpsError(
         'invalid-argument',
         'scores must be an array'
       );
     }
 
-    console.log('syncScores: received scores:', JSON.stringify(scores));
-    console.log('syncScores: received totalXP:', providedTotalXP);
+    // SECURITY: Don't log user score data to cloud function logs
 
     const npub = context.auth.uid;
     const userRef = admin.firestore().collection('users').doc(npub);

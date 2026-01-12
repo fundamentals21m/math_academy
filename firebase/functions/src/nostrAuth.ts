@@ -234,9 +234,11 @@ function verifyNostrEvent(event: NostrEvent, expectedChallenge: string): boolean
       return false;
     }
 
-    // Verify event is recent (within 30 seconds)
+    // Verify event is recent (within challenge expiry window)
+    // Allow same window as challenge expiry (60 seconds) for consistency
     const now = Math.floor(Date.now() / 1000);
-    if (Math.abs(event.created_at - now) > 30) {
+    const CHALLENGE_EXPIRY_SECONDS = 60;
+    if (Math.abs(event.created_at - now) > CHALLENGE_EXPIRY_SECONDS) {
       return false;
     }
 
