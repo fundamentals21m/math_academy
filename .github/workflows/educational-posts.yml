@@ -13,6 +13,10 @@ on:
         default: 'false'
         type: boolean
 
+# Explicitly restrict permissions - principle of least privilege
+permissions:
+  contents: read
+
 jobs:
   post-educational-content:
     runs-on: ubuntu-latest
