@@ -357,7 +357,32 @@ const NumberSystems = {
 
   calcEquals() {
     try {
-      // Evaluate the expression safely
+      // SECURITY: Validate expression contains only safe characters before evaluation
+      // Allowed: digits, decimal point, operators (+, -, *, /, **), parentheses, spaces
+      const safePattern = /^[\d\s+\-*/().]+$/;
+      if (!safePattern.test(this.calcExpression)) {
+        this.calcExpression = 'Error';
+        this.updateCalcDisplay();
+        return;
+      }
+
+      // Additional safety: prevent empty parentheses, multiple operators, etc.
+      const dangerousPatterns = [
+        /\(\s*\)/, // empty parentheses
+        /[+\-*/]{3,}/, // 3+ operators in a row (allow ** for exponent)
+        /^[*/]/, // starts with * or /
+        /[+\-*/]$/, // ends with operator
+      ];
+
+      for (const pattern of dangerousPatterns) {
+        if (pattern.test(this.calcExpression)) {
+          this.calcExpression = 'Error';
+          this.updateCalcDisplay();
+          return;
+        }
+      }
+
+      // Safe to evaluate - expression contains only math characters
       const result = Function('"use strict"; return (' + this.calcExpression + ')')();
       if (isFinite(result)) {
         this.calcExpression = String(result);

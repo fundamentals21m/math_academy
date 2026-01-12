@@ -185,17 +185,19 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
       );
     }
 
-    // Get existing admin status from Firebase Auth claims (not Firestore - prevents race condition)
-    // New users are never admins - admin status must be set via protected admin functions
+    // Get admin status from Firestore (source of truth) to sync with Auth claims
+    // This ensures admin status set via admin functions is reflected in the token
     let isAdmin = false;
     try {
-      const existingUser = await admin.auth().getUser(npub);
-      isAdmin = existingUser.customClaims?.isAdmin === true;
+      const userDoc = await admin.firestore().collection('users').doc(npub).get();
+      if (userDoc.exists) {
+        isAdmin = userDoc.data()?.isAdmin === true;
+      }
     } catch {
-      // User doesn't exist in Auth yet - will be created with isAdmin: false
+      // User doc doesn't exist - not an admin
     }
 
-    // Set custom user claims (these persist and are refreshable via getIdTokenResult)
+    // Sync admin status to Firebase Auth claims (for client-side checking)
     await admin.auth().setCustomUserClaims(npub, {
       isAdmin,
     });
