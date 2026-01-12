@@ -9,7 +9,7 @@ export function EquilateralTriangleConstruction({ className = '' }: EquilateralT
   const [step, setStep] = useState(0);
   const [animationProgress, setAnimationProgress] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
 
   const width = 500;
   const height = 400;

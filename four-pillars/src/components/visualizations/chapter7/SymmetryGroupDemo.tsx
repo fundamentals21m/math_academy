@@ -150,7 +150,7 @@ export function SymmetryGroupDemo({ className = '' }: { className?: string }) {
     ctx.strokeStyle = '#22d3ee';
     ctx.lineWidth = 2;
     ctx.beginPath();
-    transformedVertices.forEach(([vx, vy]) => {
+    transformedVertices.forEach(([vx, vy], i) => {
       const cx = centerX + vx;
       const cy = centerY - vy;
       if (i === 0) ctx.moveTo(cx, cy);

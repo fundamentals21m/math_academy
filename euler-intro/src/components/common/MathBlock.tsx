@@ -51,7 +51,7 @@ export function InlineMath({ children, math, className = '' }: MathProps) {
     }
   }, [content]);
 
-  return <span ref={ref} className={`inline-block ${className}`} />;
+  return <span ref={ref} style={{ display: 'inline' }} className={className} />;
 }
 
 /**
@@ -81,7 +81,7 @@ export function MathBlock({ children, math, inline, display, className = '' }: M
   }, [content, isInline]);
 
   if (isInline) {
-    return <span ref={ref as React.RefObject<HTMLSpanElement>} className={`inline-block ${className}`} />;
+    return <span ref={ref as React.RefObject<HTMLSpanElement>} style={{ display: 'inline' }} className={className} />;
   }
 
   return (

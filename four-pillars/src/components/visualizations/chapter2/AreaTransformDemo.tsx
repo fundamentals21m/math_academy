@@ -9,7 +9,7 @@ export function AreaTransformDemo({ className = '' }: AreaTransformDemoProps) {
   const [shearAmount, setShearAmount] = useState(0);
   const [showTriangle, setShowTriangle] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
 
   const width = 550;
   const height = 400;

@@ -9,6 +9,23 @@ interface Point {
   y: number;
 }
 
+interface LineGeodesic {
+  isLine: true;
+  start: Point;
+  end: Point;
+}
+
+interface ArcGeodesic {
+  isLine: false;
+  center: Point;
+  radius: number;
+  startAngle: number;
+  endAngle: number;
+  idealPoints: Point[];
+}
+
+type Geodesic = LineGeodesic | ArcGeodesic;
+
 export function HyperbolicPlaneDemo({ className = '' }: Props) {
   // Points for geodesic
   const [pointA, setPointA] = useState<Point>({ x: -0.5, y: 0.3 });
@@ -40,7 +57,7 @@ export function HyperbolicPlaneDemo({ className = '' }: Props) {
 
   // Calculate hyperbolic geodesic between two points
   // In Poincare disk model, geodesics are arcs of circles perpendicular to the boundary
-  const calculateGeodesic = (p1: Point, p2: Point) => {
+  const calculateGeodesic = (p1: Point, p2: Point): Geodesic | null => {
     // Special case: if points are on a diameter (through origin)
     const cross = p1.x * p2.y - p1.y * p2.x;
     if (Math.abs(cross) < 0.001) {
@@ -155,7 +172,7 @@ export function HyperbolicPlaneDemo({ className = '' }: Props) {
   }, []);
 
   // Create SVG arc path
-  const createArcPath = (geo: ReturnType<typeof calculateGeodesic>) => {
+  const createArcPath = (geo: Geodesic | null) => {
     if (!geo) return '';
 
     if (geo.isLine) {
