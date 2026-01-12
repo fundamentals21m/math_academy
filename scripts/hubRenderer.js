@@ -9,6 +9,69 @@
  */
 import { SECTIONS as STATIC_SECTIONS, COURSES as STATIC_COURSES, getCoursesForSection as getStaticCoursesForSection } from './courses.js';
 
+/**
+ * Escape HTML special characters to prevent XSS
+ * @param {string} str
+ * @returns {string}
+ */
+function escapeHtml(str) {
+  if (!str) return '';
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+/**
+ * Sanitize CSS gradient value to prevent CSS injection
+ * Only allows safe linear-gradient and radial-gradient patterns
+ * @param {string} gradient
+ * @returns {string} Sanitized gradient or default
+ */
+function sanitizeGradient(gradient) {
+  const defaultGradient = 'linear-gradient(90deg, #6366f1, #818cf8)';
+  if (!gradient || typeof gradient !== 'string') {
+    return defaultGradient;
+  }
+
+  // Remove any dangerous characters that could break out of CSS context
+  // Only allow: letters, numbers, spaces, parentheses, commas, #, %, deg, px, -, .
+  const sanitized = gradient.trim();
+
+  // Check for dangerous patterns (urls, expressions, javascript, etc.)
+  const dangerousPatterns = [
+    /url\s*\(/i,
+    /expression\s*\(/i,
+    /javascript:/i,
+    /data:/i,
+    /@import/i,
+    /behavior:/i,
+    /-moz-binding/i,
+    /[<>"'`]/,  // No HTML or quotes that could escape
+    /;/,        // No semicolons to prevent property injection
+    /\}/,       // No closing braces
+    /\{/,       // No opening braces
+  ];
+
+  for (const pattern of dangerousPatterns) {
+    if (pattern.test(sanitized)) {
+      console.warn('Blocked potentially malicious gradient:', gradient);
+      return defaultGradient;
+    }
+  }
+
+  // Must start with a valid gradient function
+  if (!sanitized.match(/^(linear-gradient|radial-gradient|conic-gradient)\s*\(/i)) {
+    return defaultGradient;
+  }
+
+  // Length limit to prevent DoS
+  if (sanitized.length > 500) {
+    return defaultGradient;
+  }
+
+  return sanitized;
+}
+
 // Data source - will be populated from Firebase or static data
 let DATA_SECTIONS = STATIC_SECTIONS;
 let DATA_COURSES = STATIC_COURSES;
@@ -275,22 +338,25 @@ function updateToggleButtonText() {
  * @returns {string} HTML string
  */
 function renderCourseCard(course) {
-  const targetAttr = course.external ? 'target="_blank"' : '';
+  // Security: Add rel="noopener noreferrer" to external links to prevent tabnabbing
+  const targetAttr = course.external ? 'target="_blank" rel="noopener noreferrer"' : '';
   const tagsHtml = (course.tags || [])
-    .map(tag => `<span class="course-tag">${tag}</span>`)
+    .map(tag => `<span class="course-tag">${escapeHtml(tag)}</span>`)
     .join('');
 
   // Get progress for this course
   const progress = getCourseProgress(course);
+  // Security: Sanitize gradient to prevent CSS injection
+  const safeGradient = sanitizeGradient(course.progressGradient);
   const progressHtml = progress > 0
-    ? `<div class="card-progress-bar" style="--progress: ${progress}%; --gradient: ${course.progressGradient || 'linear-gradient(90deg, #6366f1, #818cf8)'}"></div>`
+    ? `<div class="card-progress-bar" style="--progress: ${progress}%; --gradient: ${safeGradient}"></div>`
     : '';
 
   return `
-    <a href="${course.url}" ${targetAttr} class="course-card ${progress > 0 ? 'has-progress' : ''}" data-course-id="${course.id}">
-      <div class="course-icon">${course.icon || ''}</div>
-      <h3 class="course-title">${course.title}</h3>
-      <p class="course-description">${course.description}</p>
+    <a href="${escapeHtml(course.url)}" ${targetAttr} class="course-card ${progress > 0 ? 'has-progress' : ''}" data-course-id="${escapeHtml(course.id)}">
+      <div class="course-icon">${escapeHtml(course.icon || '')}</div>
+      <h3 class="course-title">${escapeHtml(course.title)}</h3>
+      <p class="course-description">${escapeHtml(course.description)}</p>
       <div class="course-meta">${tagsHtml}</div>
       ${progressHtml}
     </a>
@@ -314,16 +380,19 @@ function renderSection(section, expandedSections) {
   const expandedClass = isExpanded ? 'expanded' : '';
   const cardsHtml = sectionCourses.map(renderCourseCard).join('');
   const chevronIcon = '▶';
+  // Security: Escape all user-controlled data
+  const safeId = escapeHtml(section.id);
+  const safeStyle = escapeHtml(section.style);
 
   return `
-    <div class="level-section" data-section="${section.id}">
-      <div class="level-header ${expandedClass}" onclick="window.hubToggleSection('${section.id}')">
-        <span class="level-badge ${section.style}">${section.title}</span>
-        <span class="level-description">${section.subtitle}</span>
+    <div class="level-section" data-section="${safeId}">
+      <div class="level-header ${expandedClass}" data-section-id="${safeId}">
+        <span class="level-badge ${safeStyle}">${escapeHtml(section.title)}</span>
+        <span class="level-description">${escapeHtml(section.subtitle)}</span>
         <span class="course-count">${sectionCourses.length} course${sectionCourses.length !== 1 ? 's' : ''}</span>
         <span class="level-chevron">${chevronIcon}</span>
       </div>
-      <div class="courses-grid level-${section.style} ${expandedClass}">
+      <div class="courses-grid level-${safeStyle} ${expandedClass}">
         ${cardsHtml}
       </div>
     </div>
@@ -366,9 +435,6 @@ export async function renderCourseHub(containerId, options = {}) {
 
   const expandedSections = getExpandedSections();
 
-  // Expose toggle function globally for onclick handlers
-  window.hubToggleSection = toggleSection;
-
   let sectionsHtml = '';
   DATA_SECTIONS.forEach(section => {
     sectionsHtml += renderSection(section, expandedSections);
@@ -394,6 +460,16 @@ export async function renderCourseHub(containerId, options = {}) {
   });
 
   container.innerHTML = sectionsHtml;
+
+  // Security: Use addEventListener instead of inline onclick to prevent injection
+  container.querySelectorAll('.level-header[data-section-id]').forEach(header => {
+    header.addEventListener('click', () => {
+      const sectionId = header.dataset.sectionId;
+      if (sectionId) toggleSection(sectionId);
+    });
+    // Add cursor pointer style for clickable headers
+    header.style.cursor = 'pointer';
+  });
 
   // Update toggle button text after render
   updateToggleButtonText();
@@ -431,8 +507,9 @@ export function renderLeaderboardLinks(containerId) {
   const linksHtml = DATA_COURSES
     .filter(course => course.leaderboardUrl)
     .map(course => {
-      const targetAttr = course.external ? 'target="_blank"' : '';
-      return `<a href="${course.leaderboardUrl}" ${targetAttr} class="btn btn-secondary btn-small">${course.shortName || course.title}</a>`;
+      // Security: Add rel="noopener noreferrer" to external links to prevent tabnabbing
+      const targetAttr = course.external ? 'target="_blank" rel="noopener noreferrer"' : '';
+      return `<a href="${escapeHtml(course.leaderboardUrl)}" ${targetAttr} class="btn btn-secondary btn-small">${escapeHtml(course.shortName || course.title)}</a>`;
     })
     .join('');
 

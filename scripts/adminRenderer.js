@@ -185,25 +185,39 @@ function renderCategories() {
   }
 
   container.innerHTML = state.sections.map((section, index) => `
-    <div class="category-item" 
-         draggable="true" 
-         data-section-id="${section.id}"
+    <div class="category-item"
+         draggable="true"
+         data-section-id="${escapeHtml(section.id)}"
          data-index="${index}">
       <span class="drag-handle">&#9776;</span>
       <div class="category-info">
         <div class="category-title">${escapeHtml(section.title)}</div>
         <div class="category-subtitle">${escapeHtml(section.subtitle || '')}</div>
       </div>
-      <span class="category-badge ${section.style}">${section.style}</span>
+      <span class="category-badge ${escapeHtml(section.style)}">${escapeHtml(section.style)}</span>
       <div class="category-actions">
-        <button class="btn-secondary btn-small" onclick="editCategory('${section.id}')">Edit</button>
-        ${section.id !== 'featured' ? `<button class="btn-danger" onclick="confirmDeleteCategory('${section.id}')">Delete</button>` : ''}
+        <button class="btn-secondary btn-small edit-category-btn" data-section-id="${escapeHtml(section.id)}">Edit</button>
+        ${section.id !== 'featured' ? `<button class="btn-danger delete-category-btn" data-section-id="${escapeHtml(section.id)}">Delete</button>` : ''}
       </div>
     </div>
   `).join('');
 
   // Setup drag handlers for categories
   setupCategoryDragHandlers();
+
+  // Setup click handlers for category buttons (security: avoid inline onclick)
+  container.querySelectorAll('.edit-category-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const sectionId = e.currentTarget.dataset.sectionId;
+      if (sectionId) editCategory(sectionId);
+    });
+  });
+  container.querySelectorAll('.delete-category-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const sectionId = e.currentTarget.dataset.sectionId;
+      if (sectionId) confirmDeleteCategory(sectionId);
+    });
+  });
 }
 
 /**
@@ -247,24 +261,26 @@ function renderCourses() {
   container.innerHTML = filteredCourses.map((course, index) => {
     const isChanged = hasCourseChanged(course);
     const isInSelectedCategory = selectedCategory && course.sections?.includes(selectedCategory);
-    
+
     return `
-      <div class="course-item ${isChanged ? 'changed' : ''} ${isInSelectedCategory ? 'in-category' : ''}" 
+      <div class="course-item ${isChanged ? 'changed' : ''} ${isInSelectedCategory ? 'in-category' : ''}"
            draggable="true"
-           data-course-id="${course.id}"
+           data-course-id="${escapeHtml(course.id)}"
            data-index="${index}">
         <div class="course-item-header">
           <span class="drag-handle">&#9776;</span>
-          <span class="course-icon">${course.icon || ''}</span>
+          <span class="course-icon">${escapeHtml(course.icon || '')}</span>
           <span class="course-title">${escapeHtml(course.title)}</span>
-          <button class="btn-secondary btn-small" onclick="editCourse('${course.id}')" style="margin-left: auto;">Edit</button>
+          <button class="btn-secondary btn-small edit-course-btn" data-course-id="${escapeHtml(course.id)}" style="margin-left: auto;">Edit</button>
         </div>
         <div class="course-categories-grid">
           ${state.sections.map(section => {
             const isInThisCategory = course.sections?.includes(section.id);
             return `
-              <div class="category-toggle ${isInThisCategory ? 'active' : ''}" 
-                   onclick="toggleCourseCategory('${course.id}', '${section.id}', ${!isInThisCategory})">
+              <div class="category-toggle ${isInThisCategory ? 'active' : ''}"
+                   data-course-id="${escapeHtml(course.id)}"
+                   data-section-id="${escapeHtml(section.id)}"
+                   data-add="${!isInThisCategory}">
                 <span class="category-toggle-icon">${isInThisCategory ? '✓' : '+'}</span>
                 <span class="category-toggle-name">${escapeHtml(section.title)}</span>
               </div>
@@ -277,6 +293,23 @@ function renderCourses() {
 
   // Setup drag handlers for courses
   setupCourseDragHandlers();
+
+  // Setup click handlers for course buttons (security: avoid inline onclick)
+  container.querySelectorAll('.edit-course-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const courseId = e.currentTarget.dataset.courseId;
+      if (courseId) editCourse(courseId);
+    });
+  });
+  container.querySelectorAll('.category-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      const el = e.currentTarget;
+      const courseId = el.dataset.courseId;
+      const sectionId = el.dataset.sectionId;
+      const shouldAdd = el.dataset.add === 'true';
+      if (courseId && sectionId) toggleCourseCategory(courseId, sectionId, shouldAdd);
+    });
+  });
 }
 
 /**
@@ -295,18 +328,26 @@ function renderAdmins() {
     const isSelf = admin.npub === state.currentNpub;
     const displayName = admin.displayName || 'Unknown';
     const shortNpub = admin.npub ? `${admin.npub.slice(0, 12)}...${admin.npub.slice(-6)}` : '';
-    
+
     return `
       <div class="admin-item">
         <div style="flex: 1;">
           <div style="color: #f1f5f9; font-weight: 500;">${escapeHtml(displayName)}</div>
-          <div class="admin-npub">${shortNpub}</div>
+          <div class="admin-npub">${escapeHtml(shortNpub)}</div>
         </div>
         ${isSelf ? '<span class="admin-label">You</span>' : ''}
-        ${!isSelf ? `<button class="btn-danger" onclick="confirmRemoveAdmin('${admin.npub}')">Remove</button>` : ''}
+        ${!isSelf ? `<button class="btn-danger remove-admin-btn" data-npub="${escapeHtml(admin.npub)}">Remove</button>` : ''}
       </div>
     `;
   }).join('');
+
+  // Setup click handlers for admin buttons (security: avoid inline onclick)
+  container.querySelectorAll('.remove-admin-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const npub = e.currentTarget.dataset.npub;
+      if (npub) confirmRemoveAdmin(npub);
+    });
+  });
 }
 
 /**
@@ -321,7 +362,7 @@ function updateCategoryFilter() {
   select.innerHTML = '<option value="">All Courses (no category focus)</option>' +
     state.sections.map(s => {
       const courseCount = state.courses.filter(c => c.sections?.includes(s.id)).length;
-      return `<option value="${s.id}">Manage: ${escapeHtml(s.title)} (${courseCount} courses)</option>`;
+      return `<option value="${escapeHtml(s.id)}">Manage: ${escapeHtml(s.title)} (${courseCount} courses)</option>`;
     }).join('');
   
   // Restore selection if still valid

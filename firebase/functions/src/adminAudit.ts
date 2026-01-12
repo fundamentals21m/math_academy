@@ -125,7 +125,7 @@ async function updateStatsAsync(action: string, adminNpub: string): Promise<void
 
     transaction.update(statsRef, {
       totalActions: newTotal,
-      actionsByType: newActionsByAdmin,
+      actionsByType: newActionsByType,  // Fixed: was incorrectly using newActionsByAdmin
       actionsByAdmin: newActionsByAdmin,
       lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
     });

@@ -2,6 +2,10 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import { logAdminAction } from './adminAudit';
 
+// Rate limiting constants for admin operations
+const ADMIN_RATE_LIMIT_MAX = 60; // Max operations per admin per window
+const ADMIN_RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute window
+
 // Types
 interface Section {
   id: string;
@@ -51,6 +55,46 @@ interface AuthContext {
 // Config document path: courseConfig/config
 
 /**
+ * Check rate limit for admin operations
+ * Throws if rate limit exceeded
+ */
+async function checkAdminRateLimit(npub: string, operation: string): Promise<void> {
+  const rateLimitRef = admin.firestore().collection('rateLimits').doc(`admin_${npub}`);
+  const rateLimitDoc = await rateLimitRef.get();
+  const now = Date.now();
+
+  if (rateLimitDoc.exists) {
+    const data = rateLimitDoc.data()!;
+    const windowStart = now - ADMIN_RATE_LIMIT_WINDOW_MS;
+
+    // Filter to only count requests within the window
+    const recentRequests = (data.timestamps || []).filter(
+      (ts: number) => ts > windowStart
+    );
+
+    if (recentRequests.length >= ADMIN_RATE_LIMIT_MAX) {
+      console.warn(`Rate limit exceeded for admin operation ${operation}: ${npub}`);
+      throw new functions.https.HttpsError(
+        'resource-exhausted',
+        'Too many admin operations. Please try again later.'
+      );
+    }
+
+    // Update with new timestamp, keeping only recent ones
+    await rateLimitRef.set({
+      timestamps: [...recentRequests, now].slice(-ADMIN_RATE_LIMIT_MAX),
+      lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+    });
+  } else {
+    // First request, create rate limit document
+    await rateLimitRef.set({
+      timestamps: [now],
+      lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+    });
+  }
+}
+
+/**
  * Check if the caller is a course config admin
  */
 async function requireCourseAdmin(auth: AuthContext | undefined): Promise<string> {
@@ -82,10 +126,10 @@ async function requireCourseAdmin(auth: AuthContext | undefined): Promise<string
 }
 
 /**
- * Get the full course configuration (public read)
+ * Get the full course configuration (public read for sections/courses, admin-only for admin list)
  */
 export const getCourseConfig = functions.https.onCall(
-  async (): Promise<CourseConfig> => {
+  async (_data: unknown, context): Promise<CourseConfig> => {
     const configRef = admin.firestore().collection('courseConfig').doc('config');
 
     // Get sections
@@ -106,12 +150,20 @@ export const getCourseConfig = functions.https.onCall(
       ...doc.data()
     })) as Course[];
 
-    // Get admins (public read for admin UI to show who's admin)
-    const adminsSnapshot = await configRef.collection('admins').get();
-    const admins = adminsSnapshot.docs.map(doc => ({
-      npub: doc.id,
-      ...doc.data()
-    })) as Admin[];
+    // Only return admin list to authenticated admins (security: prevent enumeration)
+    let admins: Admin[] = [];
+    if (context.auth) {
+      const npub = context.auth.uid;
+      const adminDoc = await configRef.collection('admins').doc(npub).get();
+      if (adminDoc.exists) {
+        // Caller is an admin, return the full admin list
+        const adminsSnapshot = await configRef.collection('admins').get();
+        admins = adminsSnapshot.docs.map(doc => ({
+          npub: doc.id,
+          ...doc.data()
+        })) as Admin[];
+      }
+    }
 
     // Get metadata
     const configDoc = await configRef.get();
@@ -130,12 +182,20 @@ export const getCourseConfig = functions.https.onCall(
 /**
  * Update a course's data (admin only)
  */
+// Allowed fields for course updates (security: whitelist approach)
+const ALLOWED_COURSE_FIELDS = [
+  'title', 'description', 'icon', 'url', 'tags', 'sections',
+  'totalSections', 'progressPrefix', 'leaderboardUrl', 'shortName',
+  'external', 'progressGradient', 'order'
+];
+
 export const updateCourse = functions.https.onCall(
   async (
     data: { courseId: string; updates: Partial<Course> },
     context
   ): Promise<{ success: boolean }> => {
     const adminNpub = await requireCourseAdmin(context.auth);
+    await checkAdminRateLimit(adminNpub, 'updateCourse');
 
     const { courseId, updates } = data;
 
@@ -146,8 +206,20 @@ export const updateCourse = functions.https.onCall(
       );
     }
 
-    // Remove id from updates to prevent overwriting
-    const { id, ...safeUpdates } = updates;
+    // Security: Only allow whitelisted fields, remove id to prevent overwriting
+    const safeUpdates: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(updates || {})) {
+      if (key !== 'id' && ALLOWED_COURSE_FIELDS.includes(key)) {
+        // Validate string fields have reasonable length
+        if (typeof value === 'string' && value.length > 10000) {
+          throw new functions.https.HttpsError(
+            'invalid-argument',
+            `Field ${key} exceeds maximum length`
+          );
+        }
+        safeUpdates[key] = value;
+      }
+    }
 
     const configRef = admin.firestore().collection('courseConfig').doc('config');
     const courseRef = configRef.collection('courses').doc(courseId);
@@ -186,6 +258,7 @@ export const createSection = functions.https.onCall(
     context
   ): Promise<{ success: boolean; sectionId: string }> => {
     const adminNpub = await requireCourseAdmin(context.auth);
+    await checkAdminRateLimit(adminNpub, 'createSection');
 
     const { title, subtitle, style } = data;
 
@@ -193,6 +266,21 @@ export const createSection = functions.https.onCall(
       throw new functions.https.HttpsError(
         'invalid-argument',
         'title is required'
+      );
+    }
+
+    // Validate string lengths
+    if (title.length > 200) {
+      throw new functions.https.HttpsError(
+        'invalid-argument',
+        'title exceeds maximum length of 200 characters'
+      );
+    }
+
+    if (subtitle && typeof subtitle === 'string' && subtitle.length > 500) {
+      throw new functions.https.HttpsError(
+        'invalid-argument',
+        'subtitle exceeds maximum length of 500 characters'
       );
     }
 
@@ -249,6 +337,9 @@ export const createSection = functions.https.onCall(
   }
 );
 
+// Allowed fields for section updates (security: whitelist approach)
+const ALLOWED_SECTION_FIELDS = ['title', 'subtitle', 'style', 'order'];
+
 /**
  * Update a category/section (admin only)
  */
@@ -258,6 +349,7 @@ export const updateSection = functions.https.onCall(
     context
   ): Promise<{ success: boolean }> => {
     const adminNpub = await requireCourseAdmin(context.auth);
+    await checkAdminRateLimit(adminNpub, 'updateSection');
 
     const { sectionId, updates } = data;
 
@@ -268,8 +360,32 @@ export const updateSection = functions.https.onCall(
       );
     }
 
-    // Remove id from updates to prevent overwriting
-    const { id, ...safeUpdates } = updates;
+    // Security: Only allow whitelisted fields, remove id to prevent overwriting
+    const safeUpdates: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(updates || {})) {
+      if (key !== 'id' && ALLOWED_SECTION_FIELDS.includes(key)) {
+        // Validate string fields have reasonable length
+        if (key === 'title' && typeof value === 'string' && value.length > 200) {
+          throw new functions.https.HttpsError(
+            'invalid-argument',
+            'title exceeds maximum length of 200 characters'
+          );
+        }
+        if (key === 'subtitle' && typeof value === 'string' && value.length > 500) {
+          throw new functions.https.HttpsError(
+            'invalid-argument',
+            'subtitle exceeds maximum length of 500 characters'
+          );
+        }
+        if (key === 'style' && !['featured', 'beginner', 'subject'].includes(value as string)) {
+          throw new functions.https.HttpsError(
+            'invalid-argument',
+            'style must be featured, beginner, or subject'
+          );
+        }
+        safeUpdates[key] = value;
+      }
+    }
 
     const configRef = admin.firestore().collection('courseConfig').doc('config');
     const sectionRef = configRef.collection('sections').doc(sectionId);
@@ -308,6 +424,7 @@ export const deleteSection = functions.https.onCall(
     context
   ): Promise<{ success: boolean }> => {
     const adminNpub = await requireCourseAdmin(context.auth);
+    await checkAdminRateLimit(adminNpub, 'deleteSection');
 
     const { sectionId } = data;
 
@@ -369,12 +486,16 @@ export const deleteSection = functions.https.onCall(
 /**
  * Reorder sections (admin only)
  */
+// Maximum batch size for reorder operations (Firestore limit is 500)
+const MAX_REORDER_BATCH_SIZE = 100;
+
 export const reorderSections = functions.https.onCall(
   async (
     data: { sectionIds: string[] },
     context
   ): Promise<{ success: boolean }> => {
     const adminNpub = await requireCourseAdmin(context.auth);
+    await checkAdminRateLimit(adminNpub, 'reorderSections');
 
     const { sectionIds } = data;
 
@@ -382,6 +503,14 @@ export const reorderSections = functions.https.onCall(
       throw new functions.https.HttpsError(
         'invalid-argument',
         'sectionIds must be an array'
+      );
+    }
+
+    // Security: Limit batch size to prevent DoS
+    if (sectionIds.length > MAX_REORDER_BATCH_SIZE) {
+      throw new functions.https.HttpsError(
+        'invalid-argument',
+        `sectionIds array exceeds maximum size of ${MAX_REORDER_BATCH_SIZE}`
       );
     }
 
@@ -419,6 +548,7 @@ export const reorderCourses = functions.https.onCall(
     context
   ): Promise<{ success: boolean }> => {
     const adminNpub = await requireCourseAdmin(context.auth);
+    await checkAdminRateLimit(adminNpub, 'reorderCourses');
 
     const { courseIds } = data;
 
@@ -426,6 +556,14 @@ export const reorderCourses = functions.https.onCall(
       throw new functions.https.HttpsError(
         'invalid-argument',
         'courseIds must be an array'
+      );
+    }
+
+    // Security: Limit batch size to prevent DoS
+    if (courseIds.length > MAX_REORDER_BATCH_SIZE) {
+      throw new functions.https.HttpsError(
+        'invalid-argument',
+        `courseIds array exceeds maximum size of ${MAX_REORDER_BATCH_SIZE}`
       );
     }
 
@@ -485,6 +623,7 @@ export const addCourseAdmin = functions.https.onCall(
     context
   ): Promise<{ success: boolean }> => {
     const adminNpub = await requireCourseAdmin(context.auth);
+    await checkAdminRateLimit(adminNpub, 'addCourseAdmin');
 
     const { npub, displayName } = data;
 
@@ -493,6 +632,26 @@ export const addCourseAdmin = functions.https.onCall(
         'invalid-argument',
         'Valid npub is required'
       );
+    }
+
+    // Validate npub length (standard bech32 npub is 63 characters)
+    if (npub.length > 70) {
+      throw new functions.https.HttpsError(
+        'invalid-argument',
+        'Invalid npub format'
+      );
+    }
+
+    // Validate and sanitize display name
+    let sanitizedDisplayName: string | null = null;
+    if (displayName && typeof displayName === 'string') {
+      if (displayName.length > 100) {
+        throw new functions.https.HttpsError(
+          'invalid-argument',
+          'displayName exceeds maximum length of 100 characters'
+        );
+      }
+      sanitizedDisplayName = displayName.trim().slice(0, 100);
     }
 
     const configRef = admin.firestore().collection('courseConfig').doc('config');
@@ -509,7 +668,7 @@ export const addCourseAdmin = functions.https.onCall(
 
     await adminRef.set({
       npub,
-      displayName: displayName || null,
+      displayName: sanitizedDisplayName,
       addedAt: admin.firestore.FieldValue.serverTimestamp(),
       addedBy: adminNpub
     });
@@ -532,6 +691,7 @@ export const removeCourseAdmin = functions.https.onCall(
     context
   ): Promise<{ success: boolean }> => {
     const adminNpub = await requireCourseAdmin(context.auth);
+    await checkAdminRateLimit(adminNpub, 'removeCourseAdmin');
 
     const { npub } = data;
 

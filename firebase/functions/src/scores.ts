@@ -1,6 +1,10 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
+// Rate limiting constants for syncScores
+const SYNC_RATE_LIMIT_MAX = 30; // Max syncs per user per window
+const SYNC_RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute window
+
 type CourseId = 'ba' | 'crypto' | 'aa' | 'linalg' | 'advlinalg' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art' | 'calc_easy' | 'wm' | 'four_pillars' | 'mom' | 'euclid' | 'thales' | 'gauss' | 'human_action' | 'atlas_shrugged' | 'template';
 
 interface ScoreUpdate {
@@ -24,6 +28,43 @@ export const syncScores = functions.https.onCall(
       );
     }
 
+    const npub = context.auth.uid;
+
+    // Rate limiting: check recent sync attempts for this user
+    const rateLimitRef = admin.firestore().collection('rateLimits').doc(`sync_${npub}`);
+    const rateLimitDoc = await rateLimitRef.get();
+    const now = Date.now();
+
+    if (rateLimitDoc.exists) {
+      const data = rateLimitDoc.data()!;
+      const windowStart = now - SYNC_RATE_LIMIT_WINDOW_MS;
+
+      // Filter to only count requests within the window
+      const recentRequests = (data.timestamps || []).filter(
+        (ts: number) => ts > windowStart
+      );
+
+      if (recentRequests.length >= SYNC_RATE_LIMIT_MAX) {
+        console.warn(`Rate limit exceeded for syncScores: ${npub}`);
+        throw new functions.https.HttpsError(
+          'resource-exhausted',
+          'Too many sync requests. Please try again later.'
+        );
+      }
+
+      // Update with new timestamp, keeping only recent ones
+      await rateLimitRef.set({
+        timestamps: [...recentRequests, now].slice(-SYNC_RATE_LIMIT_MAX),
+        lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+      });
+    } else {
+      // First request, create rate limit document
+      await rateLimitRef.set({
+        timestamps: [now],
+        lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+      });
+    }
+
     const { scores, displayName, totalXP: providedTotalXP } = data || {};
 
     if (!scores || !Array.isArray(scores)) {
@@ -37,7 +78,6 @@ export const syncScores = functions.https.onCall(
 
     // SECURITY: Don't log user score data to cloud function logs
 
-    const npub = context.auth.uid;
     const userRef = admin.firestore().collection('users').doc(npub);
     const userDoc = await userRef.get();
 

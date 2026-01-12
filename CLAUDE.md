@@ -113,3 +113,29 @@ Magic Internet Math - Interactive educational platform for mathematics courses.
 - `history` - Math history courses
 - `seminal` - Foundational mathematical texts
 - `austrian` - Economics courses
+
+## Admin Authorization Models
+
+**IMPORTANT**: The system has TWO separate admin authorization models. Be aware of which one applies to your use case:
+
+### 1. User-Level Admins (`users/{npub}.isAdmin`)
+- **Purpose**: User moderation (ban/unban users, reset scores)
+- **Location**: `firebase/functions/src/admin.ts`
+- **Check**: `userDoc.data()?.isAdmin === true`
+- **Functions**: `banUser`, `unbanUser`, `resetUserScores`
+
+### 2. Course-Config Admins (`courseConfig/config/admins/{npub}`)
+- **Purpose**: Course and category management
+- **Location**: `firebase/functions/src/courseConfig.ts`
+- **Check**: Document exists in `courseConfig/config/admins/{npub}`
+- **Functions**: `updateCourse`, `createSection`, `updateSection`, `deleteSection`, `reorderSections`, `reorderCourses`, `addCourseAdmin`, `removeCourseAdmin`
+
+### Why Two Models?
+- **User-Level Admins**: Higher privilege, can affect user accounts and data
+- **Course-Config Admins**: Content management, cannot affect user accounts
+- A user can be one, both, or neither type of admin
+- The initial course-config admin is seeded via `seedCourseConfig.ts`
+
+### Adding a New Admin
+- **User-Level Admin**: Set `isAdmin: true` on the user's document in `users/{npub}`
+- **Course-Config Admin**: Use the admin panel or call `addCourseAdmin` function
