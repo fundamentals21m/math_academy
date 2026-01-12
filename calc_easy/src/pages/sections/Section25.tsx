@@ -24,7 +24,7 @@ export default function Section25() {
         For a curve y = f(x) from x = a to x = b, the arc length is:
       </p>
 
-      <MathBlock latex="L = \int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2} \, dx" />
+      <MathBlock math="L = \int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2} \, dx" />
 
       <h2>Where This Comes From</h2>
 
@@ -33,7 +33,7 @@ export default function Section25() {
         is approximately √(dx² + dy²). Factor out dx:
       </p>
 
-      <MathBlock latex="ds = \sqrt{(dx)^2 + (dy)^2} = \sqrt{1 + \left(\frac{dy}{dx}\right)^2} \, dx" />
+      <MathBlock math="ds = \sqrt{(dx)^2 + (dy)^2} = \sqrt{1 + \left(\frac{dy}{dx}\right)^2} \, dx" />
 
       <p>Integrating these infinitesimal pieces gives the total arc length.</p>
 
@@ -41,15 +41,15 @@ export default function Section25() {
 
       <p>First, find dy/dx:</p>
 
-      <MathBlock latex="\frac{dy}{dx} = \frac{3}{2}x^{1/2}" />
+      <MathBlock math="\frac{dy}{dx} = \frac{3}{2}x^{1/2}" />
 
       <p>Then:</p>
 
-      <MathBlock latex="L = \int_0^4 \sqrt{1 + \frac{9x}{4}} \, dx" />
+      <MathBlock math="L = \int_0^4 \sqrt{1 + \frac{9x}{4}} \, dx" />
 
       <p>Using substitution (u = 1 + 9x/4):</p>
 
-      <MathBlock latex="L = \frac{8}{27}\left[(1 + \frac{9x}{4})^{3/2}\right]_0^4 = \frac{8}{27}(10^{3/2} - 1) \approx 9.07" />
+      <MathBlock math="L = \frac{8}{27}\left[(1 + \frac{9x}{4})^{3/2}\right]_0^4 = \frac{8}{27}(10^{3/2} - 1) \approx 9.07" />
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">A Famous Example: The Catenary</h3>

@@ -31,7 +31,7 @@ export default function Section13() {
 
       <h2>Example: y = x³ - 3x</h2>
 
-      <MathBlock latex="\frac{dy}{dx} = 3x^2 - 3 = 3(x^2 - 1) = 3(x-1)(x+1)" />
+      <MathBlock math="\frac{dy}{dx} = 3x^2 - 3 = 3(x^2 - 1) = 3(x-1)(x+1)" />
 
       <p>Setting dy/dx = 0: x = 1 or x = -1</p>
 
@@ -63,7 +63,7 @@ export default function Section13() {
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Continuing our example</h3>
-        <MathBlock latex="\frac{d^2y}{dx^2} = 6x" />
+        <MathBlock math="\frac{d^2y}{dx^2} = 6x" />
         <p className="text-dark-300 mt-2">At x = -1: d²y/dx² = -6 &lt; 0 → Maximum ✓</p>
         <p className="text-dark-300">At x = 1: d²y/dx² = 6 &gt; 0 → Minimum ✓</p>
       </div>

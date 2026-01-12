@@ -54,7 +54,7 @@ export default function Section03() {
 
       <h2>What These Symbols Mean</h2>
 
-      <MathBlock latex="\int dx \text{ means the sum of all the little bits of } x" />
+      <MathBlock math="\int dx \text{ means the sum of all the little bits of } x" />
 
       <p>
         Now any fool can see that if <em>x</em> is considered as made up of a lot of
@@ -71,7 +71,7 @@ export default function Section03() {
         little bits added up together make one hour.
       </p>
 
-      <MathBlock latex="\int dt = t" />
+      <MathBlock math="\int dt = t" />
 
       <p>
         When you see an expression that begins with this terrifying symbol, you will

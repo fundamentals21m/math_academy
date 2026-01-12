@@ -19,7 +19,7 @@ export default function Section20() {
         Since d/dx(xⁿ) = nxⁿ⁻¹, working backwards:
       </p>
 
-      <MathBlock latex="\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)" />
+      <MathBlock math="\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)" />
 
       <Callout type="info">
         <strong>The Pattern:</strong> Increase the exponent by 1, then divide by the
@@ -30,13 +30,13 @@ export default function Section20() {
 
       <div className="space-y-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
-          <MathBlock latex="\int x^3 \, dx = \frac{x^4}{4} + C" />
+          <MathBlock math="\int x^3 \, dx = \frac{x^4}{4} + C" />
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
-          <MathBlock latex="\int x^{-2} \, dx = \frac{x^{-1}}{-1} + C = -\frac{1}{x} + C" />
+          <MathBlock math="\int x^{-2} \, dx = \frac{x^{-1}}{-1} + C = -\frac{1}{x} + C" />
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
-          <MathBlock latex="\int \sqrt{x} \, dx = \int x^{1/2} \, dx = \frac{x^{3/2}}{3/2} + C = \frac{2}{3}x^{3/2} + C" />
+          <MathBlock math="\int \sqrt{x} \, dx = \int x^{1/2} \, dx = \frac{x^{3/2}}{3/2} + C = \frac{2}{3}x^{3/2} + C" />
         </div>
       </div>
 
@@ -46,7 +46,7 @@ export default function Section20() {
         When n = -1, our formula would give division by zero. This case is special:
       </p>
 
-      <MathBlock latex="\int \frac{1}{x} \, dx = \ln|x| + C" />
+      <MathBlock math="\int \frac{1}{x} \, dx = \ln|x| + C" />
 
       <p>
         The natural logarithm appears! This is because d/dx(ln x) = 1/x.

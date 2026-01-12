@@ -24,13 +24,13 @@ export default function Section17() {
         can show that:
       </p>
 
-      <MathBlock latex="\frac{d}{dx}\sin(x) = \cos(x)" />
+      <MathBlock math="\frac{d}{dx}\sin(x) = \cos(x)" />
 
       <h2>The Derivative of cos(x)</h2>
 
       <p>Similarly:</p>
 
-      <MathBlock latex="\frac{d}{dx}\cos(x) = -\sin(x)" />
+      <MathBlock math="\frac{d}{dx}\cos(x) = -\sin(x)" />
 
       <p>Note the negative sign! Cosine decreases where sine is positive.</p>
 
@@ -41,7 +41,7 @@ export default function Section17() {
       </p>
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
-        <MathBlock latex="\sin(x) \xrightarrow{d/dx} \cos(x) \xrightarrow{d/dx} -\sin(x) \xrightarrow{d/dx} -\cos(x) \xrightarrow{d/dx} \sin(x)" />
+        <MathBlock math="\sin(x) \xrightarrow{d/dx} \cos(x) \xrightarrow{d/dx} -\sin(x) \xrightarrow{d/dx} -\cos(x) \xrightarrow{d/dx} \sin(x)" />
       </div>
 
       <h2>Other Trigonometric Derivatives</h2>
@@ -59,9 +59,9 @@ export default function Section17() {
         For composite functions like sin(3x) or cos(x²), use the chain rule:
       </p>
 
-      <MathBlock latex="\frac{d}{dx}\sin(3x) = \cos(3x) \times 3 = 3\cos(3x)" />
+      <MathBlock math="\frac{d}{dx}\sin(3x) = \cos(3x) \times 3 = 3\cos(3x)" />
 
-      <MathBlock latex="\frac{d}{dx}\cos(x^2) = -\sin(x^2) \times 2x = -2x\sin(x^2)" />
+      <MathBlock math="\frac{d}{dx}\cos(x^2) = -\sin(x^2) \times 2x = -2x\sin(x^2)" />
 
       <Callout type="success">
         <strong>Remember:</strong> Sine and cosine derivatives cycle through each

@@ -24,56 +24,56 @@ export default function Section06() {
         bit bigger and become y + dy. Then we have:
       </p>
 
-      <MathBlock latex="y + dy = (x + dx)^2" />
+      <MathBlock math="y + dy = (x + dx)^2" />
 
       <p>Expanding:</p>
 
-      <MathBlock latex="y + dy = x^2 + 2x \cdot dx + (dx)^2" />
+      <MathBlock math="y + dy = x^2 + 2x \cdot dx + (dx)^2" />
 
       <p>Since y = x², we can subtract:</p>
 
-      <MathBlock latex="dy = 2x \cdot dx + (dx)^2" />
+      <MathBlock math="dy = 2x \cdot dx + (dx)^2" />
 
       <p>
         Now remember, (dx)² is a small quantity of the second order, so we may
         discard it:
       </p>
 
-      <MathBlock latex="dy = 2x \cdot dx" />
+      <MathBlock math="dy = 2x \cdot dx" />
 
       <p>Therefore:</p>
 
-      <MathBlock latex="\frac{dy}{dx} = 2x" />
+      <MathBlock math="\frac{dy}{dx} = 2x" />
 
       <h2>Differentiating y = x³</h2>
 
       <p>Let y = x³. Proceeding as before:</p>
 
-      <MathBlock latex="y + dy = (x + dx)^3 = x^3 + 3x^2 \cdot dx + 3x(dx)^2 + (dx)^3" />
+      <MathBlock math="y + dy = (x + dx)^3 = x^3 + 3x^2 \cdot dx + 3x(dx)^2 + (dx)^3" />
 
       <p>
         The terms with (dx)² and (dx)³ are small quantities of higher orders and can
         be neglected:
       </p>
 
-      <MathBlock latex="dy = 3x^2 \cdot dx" />
+      <MathBlock math="dy = 3x^2 \cdot dx" />
 
-      <MathBlock latex="\frac{dy}{dx} = 3x^2" />
+      <MathBlock math="\frac{dy}{dx} = 3x^2" />
 
       <h2>The General Pattern</h2>
 
       <p>We can see a pattern emerging. Let's try y = x⁴:</p>
 
-      <MathBlock latex="\frac{dy}{dx} = 4x^3" />
+      <MathBlock math="\frac{dy}{dx} = 4x^3" />
 
       <p>And for y = x⁵:</p>
 
-      <MathBlock latex="\frac{dy}{dx} = 5x^4" />
+      <MathBlock math="\frac{dy}{dx} = 5x^4" />
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">The Power Rule</h3>
         <p className="text-dark-300 mb-4">For any power n, if y = xⁿ, then:</p>
-        <MathBlock latex="\frac{dy}{dx} = nx^{n-1}" />
+        <MathBlock math="\frac{dy}{dx} = nx^{n-1}" />
         <p className="text-dark-400 text-sm mt-2">
           This is one of the most important rules in differential calculus!
         </p>

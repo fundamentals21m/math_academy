@@ -19,14 +19,14 @@ export default function Section07() {
         Suppose we have y = ax^n, where a is a constant. What is dy/dx?
       </p>
 
-      <MathBlock latex="y = ax^n" />
-      <MathBlock latex="y + dy = a(x + dx)^n = a(x^n + nx^{n-1} \cdot dx + \ldots)" />
+      <MathBlock math="y = ax^n" />
+      <MathBlock math="y + dy = a(x + dx)^n = a(x^n + nx^{n-1} \cdot dx + \ldots)" />
 
       <p>After subtracting y = axⁿ and dropping higher-order terms:</p>
 
-      <MathBlock latex="dy = a \cdot nx^{n-1} \cdot dx" />
+      <MathBlock math="dy = a \cdot nx^{n-1} \cdot dx" />
 
-      <MathBlock latex="\frac{dy}{dx} = anx^{n-1}" />
+      <MathBlock math="\frac{dy}{dx} = anx^{n-1}" />
 
       <Callout type="info">
         <strong>Rule:</strong> A constant multiplier remains unchanged when you
@@ -38,11 +38,11 @@ export default function Section07() {
       <div className="space-y-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-dark-300">If y = 5x³, then:</p>
-          <MathBlock latex="\frac{dy}{dx} = 5 \times 3x^2 = 15x^2" />
+          <MathBlock math="\frac{dy}{dx} = 5 \times 3x^2 = 15x^2" />
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-dark-300">If y = 7x⁴, then:</p>
-          <MathBlock latex="\frac{dy}{dx} = 7 \times 4x^3 = 28x^3" />
+          <MathBlock math="\frac{dy}{dx} = 7 \times 4x^3 = 28x^3" />
         </div>
       </div>
 
@@ -52,13 +52,13 @@ export default function Section07() {
         What if we have y = x² + a, where a is a constant? Let's differentiate:
       </p>
 
-      <MathBlock latex="y + dy = (x + dx)^2 + a = x^2 + 2x \cdot dx + (dx)^2 + a" />
+      <MathBlock math="y + dy = (x + dx)^2 + a = x^2 + 2x \cdot dx + (dx)^2 + a" />
 
       <p>Since y = x² + a, subtracting gives:</p>
 
-      <MathBlock latex="dy = 2x \cdot dx" />
+      <MathBlock math="dy = 2x \cdot dx" />
 
-      <MathBlock latex="\frac{dy}{dx} = 2x" />
+      <MathBlock math="\frac{dy}{dx} = 2x" />
 
       <Callout type="info">
         <strong>Rule:</strong> Added constants vanish when you differentiate! They
@@ -79,11 +79,11 @@ export default function Section07() {
       <div className="space-y-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-dark-300">If y = 3x² + 7, then:</p>
-          <MathBlock latex="\frac{dy}{dx} = 6x" />
+          <MathBlock math="\frac{dy}{dx} = 6x" />
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-dark-300">If y = ax² + bx + c, then:</p>
-          <MathBlock latex="\frac{dy}{dx} = 2ax + b" />
+          <MathBlock math="\frac{dy}{dx} = 2ax + b" />
         </div>
       </div>
 

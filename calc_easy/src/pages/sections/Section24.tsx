@@ -29,7 +29,7 @@ export default function Section24() {
 
       <p>The radius R of the osculating circle is:</p>
 
-      <MathBlock latex="R = \frac{\left[1 + \left(\frac{dy}{dx}\right)^2\right]^{3/2}}{\left|\frac{d^2y}{dx^2}\right|}" />
+      <MathBlock math="R = \frac{\left[1 + \left(\frac{dy}{dx}\right)^2\right]^{3/2}}{\left|\frac{d^2y}{dx^2}\right|}" />
 
       <p>The curvature κ (Greek "kappa") is the reciprocal: κ = 1/R.</p>
 
@@ -37,11 +37,11 @@ export default function Section24() {
 
       <p>We have dy/dx = 2x and d²y/dx² = 2.</p>
 
-      <MathBlock latex="R = \frac{(1 + 4x^2)^{3/2}}{2}" />
+      <MathBlock math="R = \frac{(1 + 4x^2)^{3/2}}{2}" />
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">At the vertex (x = 0):</h3>
-        <MathBlock latex="R = \frac{(1 + 0)^{3/2}}{2} = \frac{1}{2}" />
+        <MathBlock math="R = \frac{(1 + 0)^{3/2}}{2} = \frac{1}{2}" />
         <p className="text-dark-300 mt-2">
           The radius of curvature at the vertex is 1/2, so the curvature is κ = 2.
           This is where the parabola bends most sharply.

@@ -27,12 +27,12 @@ export default function Section10() {
       <div className="space-y-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-emerald-400 mb-2">Velocity</h3>
-          <MathBlock latex="v = \frac{ds}{dt}" />
+          <MathBlock math="v = \frac{ds}{dt}" />
           <p className="text-dark-400 text-sm">Rate of change of distance with time</p>
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <h3 className="text-lg font-semibold text-amber-400 mb-2">Acceleration</h3>
-          <MathBlock latex="a = \frac{dv}{dt} = \frac{d^2s}{dt^2}" />
+          <MathBlock math="a = \frac{dv}{dt} = \frac{d^2s}{dt^2}" />
           <p className="text-dark-400 text-sm">Rate of change of velocity with time</p>
         </div>
       </div>
@@ -43,12 +43,12 @@ export default function Section10() {
         A body falling freely under gravity (ignoring air resistance) follows the law:
       </p>
 
-      <MathBlock latex="s = \frac{1}{2}gt^2" />
+      <MathBlock math="s = \frac{1}{2}gt^2" />
 
       <p>where g ≈ 9.8 m/s² is the acceleration due to gravity. Then:</p>
 
-      <MathBlock latex="v = \frac{ds}{dt} = gt" />
-      <MathBlock latex="a = \frac{dv}{dt} = g" />
+      <MathBlock math="v = \frac{ds}{dt} = gt" />
+      <MathBlock math="a = \frac{dv}{dt} = g" />
 
       <p>
         This tells us the velocity increases linearly with time, while the acceleration
@@ -66,7 +66,7 @@ export default function Section10() {
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Inflating Balloon</h3>
         <p className="text-dark-300 mb-2">Volume of a sphere: V = (4/3)πr³</p>
-        <MathBlock latex="\frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt}" />
+        <MathBlock math="\frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt}" />
         <p className="text-dark-400 text-sm mt-2">
           The rate of volume change depends on both the current radius and how fast
           the radius is changing.

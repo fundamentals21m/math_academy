@@ -61,7 +61,7 @@ export default function Section04() {
 
       <p>Consider the function f(x) = x². If x grows by a small amount dx:</p>
 
-      <MathBlock latex="(x + dx)^2 = x^2 + 2x \cdot dx + (dx)^2" />
+      <MathBlock math="(x + dx)^2 = x^2 + 2x \cdot dx + (dx)^2" />
 
       <p>
         The second term is not negligible because it is a first-order quantity (dx

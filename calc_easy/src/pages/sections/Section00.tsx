@@ -26,7 +26,7 @@ export default function Section00() {
         the Pythagorean theorem, if the side is <em>x</em>, the diagonal is:
       </p>
 
-      <MathBlock latex="y = x\sqrt{2}" />
+      <MathBlock math="y = x\sqrt{2}" />
 
       <p>
         This is a <em>one-to-one function</em>—each value of <em>x</em> gives exactly

@@ -18,7 +18,7 @@ export default function Section08() {
         If y = u + v, where both u and v are functions of x, then:
       </p>
 
-      <MathBlock latex="\frac{dy}{dx} = \frac{du}{dx} + \frac{dv}{dx}" />
+      <MathBlock math="\frac{dy}{dx} = \frac{du}{dx} + \frac{dv}{dx}" />
 
       <Callout type="info">
         <strong>Sum Rule:</strong> The derivative of a sum is the sum of the derivatives.
@@ -27,7 +27,7 @@ export default function Section08() {
 
       <p>For example, if y = x³ + x², then:</p>
 
-      <MathBlock latex="\frac{dy}{dx} = 3x^2 + 2x" />
+      <MathBlock math="\frac{dy}{dx} = 3x^2 + 2x" />
 
       <h2>The Product Rule</h2>
 
@@ -36,12 +36,12 @@ export default function Section08() {
         We need the <strong>Product Rule</strong>:
       </p>
 
-      <MathBlock latex="\frac{dy}{dx} = u\frac{dv}{dx} + v\frac{du}{dx}" />
+      <MathBlock math="\frac{dy}{dx} = u\frac{dv}{dx} + v\frac{du}{dx}" />
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Example: y = x² × x³</h3>
         <p className="text-dark-300 mb-2">Let u = x² and v = x³:</p>
-        <MathBlock latex="\frac{dy}{dx} = x^2 \times 3x^2 + x^3 \times 2x = 3x^4 + 2x^4 = 5x^4" />
+        <MathBlock math="\frac{dy}{dx} = x^2 \times 3x^2 + x^3 \times 2x = 3x^4 + 2x^4 = 5x^4" />
         <p className="text-dark-400 text-sm mt-2">
           (Which matches the result if we first simplify: y = x⁵, dy/dx = 5x⁴)
         </p>
@@ -53,12 +53,12 @@ export default function Section08() {
         If y = u/v, we need the <strong>Quotient Rule</strong>:
       </p>
 
-      <MathBlock latex="\frac{dy}{dx} = \frac{v\frac{du}{dx} - u\frac{dv}{dx}}{v^2}" />
+      <MathBlock math="\frac{dy}{dx} = \frac{v\frac{du}{dx} - u\frac{dv}{dx}}{v^2}" />
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Example: y = x²/x³</h3>
         <p className="text-dark-300 mb-2">Let u = x² and v = x³:</p>
-        <MathBlock latex="\frac{dy}{dx} = \frac{x^3 \times 2x - x^2 \times 3x^2}{(x^3)^2} = \frac{2x^4 - 3x^4}{x^6} = \frac{-x^4}{x^6} = -\frac{1}{x^2}" />
+        <MathBlock math="\frac{dy}{dx} = \frac{x^3 \times 2x - x^2 \times 3x^2}{(x^3)^2} = \frac{2x^4 - 3x^4}{x^6} = \frac{-x^4}{x^6} = -\frac{1}{x^2}" />
         <p className="text-dark-400 text-sm mt-2">
           (Which matches: y = x⁻¹, dy/dx = -x⁻² = -1/x²)
         </p>

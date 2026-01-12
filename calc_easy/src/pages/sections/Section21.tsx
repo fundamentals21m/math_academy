@@ -23,7 +23,7 @@ export default function Section21() {
         To find the area under a curve y = f(x) from x = a to x = b, we compute:
       </p>
 
-      <MathBlock latex="\text{Area} = \int_a^b f(x) \, dx" />
+      <MathBlock math="\text{Area} = \int_a^b f(x) \, dx" />
 
       <p>
         This is called a <strong>definite integral</strong> because it has specific
@@ -36,7 +36,7 @@ export default function Section21() {
         If F(x) is an antiderivative of f(x) (meaning F'(x) = f(x)), then:
       </p>
 
-      <MathBlock latex="\int_a^b f(x) \, dx = F(b) - F(a)" />
+      <MathBlock math="\int_a^b f(x) \, dx = F(b) - F(a)" />
 
       <p>This is sometimes written as [F(x)]ᵇₐ or F(x)|ᵇₐ.</p>
 
@@ -44,7 +44,7 @@ export default function Section21() {
 
       <p>Find the area under y = x² from x = 0 to x = 3:</p>
 
-      <MathBlock latex="\int_0^3 x^2 \, dx = \left[\frac{x^3}{3}\right]_0^3 = \frac{27}{3} - \frac{0}{3} = 9" />
+      <MathBlock math="\int_0^3 x^2 \, dx = \left[\frac{x^3}{3}\right]_0^3 = \frac{27}{3} - \frac{0}{3} = 9" />
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">The Fundamental Theorem of Calculus</h3>
@@ -52,7 +52,7 @@ export default function Section21() {
           The connection between differentiation and integration is given by the
           <em> Fundamental Theorem of Calculus</em>: if F'(x) = f(x), then
         </p>
-        <MathBlock latex="\int_a^b f(x) \, dx = F(b) - F(a)" />
+        <MathBlock math="\int_a^b f(x) \, dx = F(b) - F(a)" />
         <p className="text-dark-400 text-sm mt-2">
           This theorem unifies the two main branches of calculus!
         </p>

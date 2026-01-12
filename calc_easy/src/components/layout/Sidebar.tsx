@@ -24,7 +24,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   // Check if section is completed
   const isCompleted = (sectionId: number) => {
     if (!gamification) return false;
-    const id = `${COURSE_ID}:${sectionId}`;
+    const id = `${COURSE_ID}:${sectionId}` as const;
     return gamification.state.user.sectionsCompleted.includes(id);
   };
 

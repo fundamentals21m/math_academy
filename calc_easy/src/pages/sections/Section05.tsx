@@ -43,7 +43,7 @@ export default function Section05() {
         will have become y + dy.
       </p>
 
-      <MathBlock latex="\frac{dy}{dx}" />
+      <MathBlock math="\frac{dy}{dx}" />
 
       <p>
         Right through the differential calculus we are hunting, hunting, hunting for a
@@ -60,7 +60,7 @@ export default function Section05() {
         base grows so as to become x + dx, the height becomes y + dy.
       </p>
 
-      <MathBlock latex="\frac{dy}{dx} = \frac{1}{1.73...} = \tan 30°" />
+      <MathBlock math="\frac{dy}{dx} = \frac{1}{1.73...} = \tan 30°" />
 
       <h2>Example 2: The Ladder</h2>
 
@@ -77,20 +77,20 @@ export default function Section05() {
         to pull the bottom end out 1 inch more, how much would the top end come down?
       </p>
 
-      <MathBlock latex="\sqrt{(180)^2 + (19)^2} = 181 \text{ inches}" />
+      <MathBlock math="\sqrt{(180)^2 + (19)^2} = 181 \text{ inches}" />
 
       <p>
         If the new distance is 20 inches, then:
       </p>
 
-      <MathBlock latex="y - dy = \sqrt{(181)^2 - (20)^2} = \sqrt{32361} = 179.89 \text{ inches}" />
+      <MathBlock math="y - dy = \sqrt{(181)^2 - (20)^2} = \sqrt{32361} = 179.89 \text{ inches}" />
 
       <p>
         So dy is 180 - 179.89 = 0.11 inch. Making dx an increase of 1 inch has resulted
         in making dy a decrease of 0.11 inch.
       </p>
 
-      <MathBlock latex="\frac{dy}{dx} = \frac{-0.11}{1} = -0.11" />
+      <MathBlock math="\frac{dy}{dx} = \frac{-0.11}{1} = -0.11" />
 
       <Callout type="success">
         <strong>Key Point:</strong> The ratio dy/dx can only be found when y and x are

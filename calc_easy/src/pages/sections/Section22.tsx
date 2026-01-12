@@ -22,9 +22,9 @@ export default function Section22() {
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Example</h3>
-        <MathBlock latex="\int 2x \cdot e^{x^2} \, dx" />
+        <MathBlock math="\int 2x \cdot e^{x^2} \, dx" />
         <p className="text-dark-300 mt-2">Let u = x², then du = 2x dx:</p>
-        <MathBlock latex="= \int e^u \, du = e^u + C = e^{x^2} + C" />
+        <MathBlock math="= \int e^u \, du = e^u + C = e^{x^2} + C" />
       </div>
 
       <Callout type="info">
@@ -38,12 +38,12 @@ export default function Section22() {
         This is the integration equivalent of the product rule. For ∫u dv:
       </p>
 
-      <MathBlock latex="\int u \, dv = uv - \int v \, du" />
+      <MathBlock math="\int u \, dv = uv - \int v \, du" />
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Example: ∫ x·eˣ dx</h3>
         <p className="text-dark-300">Let u = x, dv = eˣ dx. Then du = dx, v = eˣ:</p>
-        <MathBlock latex="= x \cdot e^x - \int e^x \, dx = xe^x - e^x + C = e^x(x-1) + C" />
+        <MathBlock math="= x \cdot e^x - \int e^x \, dx = xe^x - e^x + C = e^x(x-1) + C" />
       </div>
 
       <h2>Common Pitfalls</h2>
@@ -59,7 +59,7 @@ export default function Section22() {
 
       <p>Using the identity sin²(x) = (1 - cos(2x))/2:</p>
 
-      <MathBlock latex="\int \sin^2(x) \, dx = \int \frac{1 - \cos(2x)}{2} \, dx = \frac{x}{2} - \frac{\sin(2x)}{4} + C" />
+      <MathBlock math="\int \sin^2(x) \, dx = \int \frac{1 - \cos(2x)}{2} \, dx = \frac{x}{2} - \frac{\sin(2x)}{4} + C" />
 
       <Callout type="success">
         <strong>Mastery Tip:</strong> Integration requires practice and pattern

@@ -48,7 +48,7 @@ export default function Section12() {
         At any point (x₀, y₀) on a curve y = f(x), the equation of the tangent line is:
       </p>
 
-      <MathBlock latex="y - y_0 = f'(x_0)(x - x_0)" />
+      <MathBlock math="y - y_0 = f'(x_0)(x - x_0)" />
 
       <h2>Example: y = x²</h2>
 

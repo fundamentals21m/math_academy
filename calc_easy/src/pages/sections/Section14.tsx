@@ -57,7 +57,7 @@ export default function Section14() {
         <strong> radius of curvature</strong>, denoted R:
       </p>
 
-      <MathBlock latex="R = \frac{\left[1 + \left(\frac{dy}{dx}\right)^2\right]^{3/2}}{\left|\frac{d^2y}{dx^2}\right|}" />
+      <MathBlock math="R = \frac{\left[1 + \left(\frac{dy}{dx}\right)^2\right]^{3/2}}{\left|\frac{d^2y}{dx^2}\right|}" />
 
       <p>The curvature itself is κ = 1/R.</p>
 

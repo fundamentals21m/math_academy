@@ -48,7 +48,7 @@ export default function Section01() {
           He first runs half the distance, then half the remaining distance, then again
           half the remaining distance, and so on. The distances form the halving series:
         </p>
-        <MathBlock latex="\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \ldots" />
+        <MathBlock math="\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \ldots" />
         <p className="text-dark-400 text-sm mt-2">
           Does the runner ever reach the goal? The series converges to 1!
         </p>
@@ -72,19 +72,19 @@ export default function Section01() {
         entire series:
       </p>
 
-      <MathBlock latex="x = 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots" />
+      <MathBlock math="x = 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots" />
 
       <p>Multiply each side by 2:</p>
 
-      <MathBlock latex="2x = 2 + 1 + \frac{1}{2} + \frac{1}{4} + \ldots" />
+      <MathBlock math="2x = 2 + 1 + \frac{1}{2} + \frac{1}{4} + \ldots" />
 
       <p>
         Note that the series beyond 2 is the same as the original series <em>x</em>.
         So we can substitute:
       </p>
 
-      <MathBlock latex="2x = 2 + x" />
-      <MathBlock latex="x = 2" />
+      <MathBlock math="2x = 2 + x" />
+      <MathBlock math="x = 2" />
 
       <h2>The Harmonic Series</h2>
 
@@ -94,7 +94,7 @@ export default function Section01() {
         example is the <strong>harmonic series</strong>:
       </p>
 
-      <MathBlock latex="\frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \ldots" />
+      <MathBlock math="\frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \ldots" />
 
       <p>
         Although its fractions get progressively smaller, converging on zero, its

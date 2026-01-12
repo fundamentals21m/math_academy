@@ -25,20 +25,20 @@ export default function Section16() {
         after t years you have:
       </p>
 
-      <MathBlock latex="A = P\left(1 + \frac{r}{n}\right)^{nt}" />
+      <MathBlock math="A = P\left(1 + \frac{r}{n}\right)^{nt}" />
 
       <p>
         What if interest is compounded continuously—infinitely many times per year?
         Taking the limit as n → ∞:
       </p>
 
-      <MathBlock latex="A = Pe^{rt}" />
+      <MathBlock math="A = Pe^{rt}" />
 
       <h2>The Number e</h2>
 
       <p>The number e is defined as:</p>
 
-      <MathBlock latex="e = \lim_{n \to \infty}\left(1 + \frac{1}{n}\right)^n = 2.71828..." />
+      <MathBlock math="e = \lim_{n \to \infty}\left(1 + \frac{1}{n}\right)^n = 2.71828..." />
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Computing e</h3>
@@ -65,14 +65,14 @@ export default function Section16() {
         Many natural processes follow exponential growth or decay:
       </p>
 
-      <MathBlock latex="\frac{dy}{dt} = ky" />
+      <MathBlock math="\frac{dy}{dt} = ky" />
 
       <p>
         This says: the rate of growth is proportional to the current amount. The
         solution is always:
       </p>
 
-      <MathBlock latex="y = y_0 e^{kt}" />
+      <MathBlock math="y = y_0 e^{kt}" />
 
       <p>where y₀ is the initial value.</p>
 

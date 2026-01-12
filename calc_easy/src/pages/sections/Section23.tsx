@@ -39,19 +39,19 @@ export default function Section23() {
         all x's on one side and all y's on the other.
       </p>
 
-      <MathBlock latex="\frac{dy}{dx} = xy" />
+      <MathBlock math="\frac{dy}{dx} = xy" />
 
       <p>Separate:</p>
 
-      <MathBlock latex="\frac{dy}{y} = x \, dx" />
+      <MathBlock math="\frac{dy}{y} = x \, dx" />
 
       <p>Integrate both sides:</p>
 
-      <MathBlock latex="\ln|y| = \frac{x^2}{2} + C" />
+      <MathBlock math="\ln|y| = \frac{x^2}{2} + C" />
 
       <p>Solve for y:</p>
 
-      <MathBlock latex="y = Ae^{x^2/2}" />
+      <MathBlock math="y = Ae^{x^2/2}" />
 
       <h2>Initial Conditions</h2>
 

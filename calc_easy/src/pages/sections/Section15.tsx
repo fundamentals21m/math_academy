@@ -21,11 +21,11 @@ export default function Section15() {
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Example</h3>
-        <MathBlock latex="\frac{1}{x^2-1} = \frac{1}{(x-1)(x+1)} = \frac{A}{x-1} + \frac{B}{x+1}" />
+        <MathBlock math="\frac{1}{x^2-1} = \frac{1}{(x-1)(x+1)} = \frac{A}{x-1} + \frac{B}{x+1}" />
         <p className="text-dark-300 mt-2">
           Solving for A and B, we find: A = 1/2 and B = -1/2
         </p>
-        <MathBlock latex="\frac{1}{x^2-1} = \frac{1}{2(x-1)} - \frac{1}{2(x+1)}" />
+        <MathBlock math="\frac{1}{x^2-1} = \frac{1}{2(x-1)} - \frac{1}{2(x+1)}" />
       </div>
 
       <Callout type="info">
@@ -49,7 +49,7 @@ export default function Section15() {
 
       <p>There's an elegant relationship between a function and its inverse:</p>
 
-      <MathBlock latex="\frac{dx}{dy} = \frac{1}{\frac{dy}{dx}}" />
+      <MathBlock math="\frac{dx}{dy} = \frac{1}{\frac{dy}{dx}}" />
 
       <p>
         If you know the derivative of y with respect to x, you can find the derivative
@@ -62,7 +62,7 @@ export default function Section15() {
         If y = x², then dy/dx = 2x. For the inverse function x = √y:
       </p>
 
-      <MathBlock latex="\frac{dx}{dy} = \frac{1}{2x} = \frac{1}{2\sqrt{y}}" />
+      <MathBlock math="\frac{dx}{dy} = \frac{1}{2x} = \frac{1}{2\sqrt{y}}" />
 
       <p>Which matches the result of directly differentiating x = y^(1/2).</p>
 

@@ -45,13 +45,13 @@ export default function Section09() {
 
       <p>Let's find successive derivatives of y = x⁵:</p>
 
-      <MathBlock latex="y = x^5" />
-      <MathBlock latex="\frac{dy}{dx} = 5x^4" />
-      <MathBlock latex="\frac{d^2y}{dx^2} = 20x^3" />
-      <MathBlock latex="\frac{d^3y}{dx^3} = 60x^2" />
-      <MathBlock latex="\frac{d^4y}{dx^4} = 120x" />
-      <MathBlock latex="\frac{d^5y}{dx^5} = 120" />
-      <MathBlock latex="\frac{d^6y}{dx^6} = 0" />
+      <MathBlock math="y = x^5" />
+      <MathBlock math="\frac{dy}{dx} = 5x^4" />
+      <MathBlock math="\frac{d^2y}{dx^2} = 20x^3" />
+      <MathBlock math="\frac{d^3y}{dx^3} = 60x^2" />
+      <MathBlock math="\frac{d^4y}{dx^4} = 120x" />
+      <MathBlock math="\frac{d^5y}{dx^5} = 120" />
+      <MathBlock math="\frac{d^6y}{dx^6} = 0" />
 
       <p>
         Eventually we reach zero! For a polynomial of degree n, the (n+1)th derivative
@@ -65,7 +65,7 @@ export default function Section09() {
         the second, and so on. Also, f'(x), f''(x), etc.
       </p>
 
-      <MathBlock latex="y' = \frac{dy}{dx}, \quad y'' = \frac{d^2y}{dx^2}, \quad y''' = \frac{d^3y}{dx^3}" />
+      <MathBlock math="y' = \frac{dy}{dx}, \quad y'' = \frac{d^2y}{dx^2}, \quad y''' = \frac{d^3y}{dx^3}" />
 
       <Callout type="success">
         <strong>Key Point:</strong> Successive differentiation reveals deeper

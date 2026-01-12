@@ -15,7 +15,7 @@ export default function Section11() {
 
       <Callout type="info">
         <strong>The Chain Rule:</strong> If y = f(u) and u = g(x), then:
-        <MathBlock latex="\frac{dy}{dx} = \frac{dy}{du} \times \frac{du}{dx}" />
+        <MathBlock math="\frac{dy}{dx} = \frac{dy}{du} \times \frac{du}{dx}" />
       </Callout>
 
       <h2>Why It Works</h2>
@@ -29,23 +29,23 @@ export default function Section11() {
 
       <p>Let u = x² + 1, so y = u³. Then:</p>
 
-      <MathBlock latex="\frac{dy}{du} = 3u^2 = 3(x^2 + 1)^2" />
-      <MathBlock latex="\frac{du}{dx} = 2x" />
+      <MathBlock math="\frac{dy}{du} = 3u^2 = 3(x^2 + 1)^2" />
+      <MathBlock math="\frac{du}{dx} = 2x" />
 
       <p>Therefore:</p>
 
-      <MathBlock latex="\frac{dy}{dx} = 3(x^2 + 1)^2 \times 2x = 6x(x^2 + 1)^2" />
+      <MathBlock math="\frac{dy}{dx} = 3(x^2 + 1)^2 \times 2x = 6x(x^2 + 1)^2" />
 
       <h2>Example 2: y = √(3x - 5)</h2>
 
       <p>Let u = 3x - 5, so y = √u = u^(1/2). Then:</p>
 
-      <MathBlock latex="\frac{dy}{du} = \frac{1}{2}u^{-1/2} = \frac{1}{2\sqrt{3x-5}}" />
-      <MathBlock latex="\frac{du}{dx} = 3" />
+      <MathBlock math="\frac{dy}{du} = \frac{1}{2}u^{-1/2} = \frac{1}{2\sqrt{3x-5}}" />
+      <MathBlock math="\frac{du}{dx} = 3" />
 
       <p>Therefore:</p>
 
-      <MathBlock latex="\frac{dy}{dx} = \frac{3}{2\sqrt{3x-5}}" />
+      <MathBlock math="\frac{dy}{dx} = \frac{3}{2\sqrt{3x-5}}" />
 
       <h2>The Power of Substitution</h2>
 
@@ -54,7 +54,7 @@ export default function Section11() {
         <p className="text-dark-300 mb-2">
           For y = [f(x)]ⁿ, if we let u = f(x):
         </p>
-        <MathBlock latex="\frac{dy}{dx} = n[f(x)]^{n-1} \times f'(x)" />
+        <MathBlock math="\frac{dy}{dx} = n[f(x)]^{n-1} \times f'(x)" />
         <p className="text-dark-400 text-sm mt-2">
           Differentiate the outer function, keep the inner function, then multiply by
           the derivative of the inner function.

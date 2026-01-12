@@ -24,17 +24,17 @@ export default function Section18() {
         For a function f(x, y), we write partial derivatives with the "curly d" symbol ∂:
       </p>
 
-      <MathBlock latex="\frac{\partial f}{\partial x} \quad \text{and} \quad \frac{\partial f}{\partial y}" />
+      <MathBlock math="\frac{\partial f}{\partial x} \quad \text{and} \quad \frac{\partial f}{\partial y}" />
 
       <h2>Example: f(x, y) = x²y + 3xy²</h2>
 
       <p>To find ∂f/∂x, treat y as a constant:</p>
 
-      <MathBlock latex="\frac{\partial f}{\partial x} = 2xy + 3y^2" />
+      <MathBlock math="\frac{\partial f}{\partial x} = 2xy + 3y^2" />
 
       <p>To find ∂f/∂y, treat x as a constant:</p>
 
-      <MathBlock latex="\frac{\partial f}{\partial y} = x^2 + 6xy" />
+      <MathBlock math="\frac{\partial f}{\partial y} = x^2 + 6xy" />
 
       <h2>Geometric Interpretation</h2>
 
@@ -53,7 +53,7 @@ export default function Section18() {
         If both x and y change simultaneously, the total change in f is approximately:
       </p>
 
-      <MathBlock latex="df = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy" />
+      <MathBlock math="df = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy" />
 
       <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700 my-6">
         <h3 className="text-lg font-semibold text-primary-400 mb-3">Physical Example</h3>

@@ -36,7 +36,7 @@ export default function Section19() {
 
       <p>We write:</p>
 
-      <MathBlock latex="\int f(x) \, dx" />
+      <MathBlock math="\int f(x) \, dx" />
 
       <p>
         This is read "the integral of f(x) with respect to x" or "the integral of f(x) dx."
@@ -47,11 +47,11 @@ export default function Section19() {
       <div className="space-y-4 my-6">
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-dark-300">Since d/dx(x²) = 2x:</p>
-          <MathBlock latex="\int 2x \, dx = x^2 + C" />
+          <MathBlock math="\int 2x \, dx = x^2 + C" />
         </div>
         <div className="bg-dark-800/50 rounded-xl p-4 border border-dark-700">
           <p className="text-dark-300">Since d/dx(x³) = 3x²:</p>
-          <MathBlock latex="\int 3x^2 \, dx = x^3 + C" />
+          <MathBlock math="\int 3x^2 \, dx = x^3 + C" />
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export default function Section19() {
         what constant (if any) was originally present.
       </p>
 
-      <MathBlock latex="\frac{d}{dx}(x^2 + 5) = 2x = \frac{d}{dx}(x^2 - 3)" />
+      <MathBlock math="\frac{d}{dx}(x^2 + 5) = 2x = \frac{d}{dx}(x^2 - 3)" />
 
       <p>
         Both x² + 5 and x² - 3 have the same derivative, so when integrating 2x, we

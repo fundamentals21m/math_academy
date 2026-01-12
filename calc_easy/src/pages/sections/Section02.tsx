@@ -42,7 +42,7 @@ export default function Section02() {
         instant he is going ten meters per second.
       </p>
 
-      <MathBlock latex="\text{The derivative of } y = 10x \text{ is simply } 10" />
+      <MathBlock math="\text{The derivative of } y = 10x \text{ is simply } 10" />
 
       <p>
         It tells you two things: (1) that at any time the runner's speed is ten meters
@@ -59,7 +59,7 @@ export default function Section02() {
         the runner's distance from the start changes, relative to changes of time, is zero.
       </p>
 
-      <MathBlock latex="\text{The derivative of any constant is } 0" />
+      <MathBlock math="\text{The derivative of any constant is } 0" />
 
       <h2>The Derivative of y = x²</h2>
 
@@ -80,7 +80,7 @@ export default function Section02() {
         derivative is <em>2x</em>.
       </p>
 
-      <MathBlock latex="\frac{d}{dx}(x^2) = 2x" />
+      <MathBlock math="\frac{d}{dx}(x^2) = 2x" />
 
       <p>
         This tells us that at any given moment the monster's area is growing at a rate
