@@ -31,7 +31,7 @@ export function HomogeneousCoordinatesDemo({ className = '' }: HomogeneousCoordi
 
     // Isometric projection helpers
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const isoX = (x: number, y: number, z: number) => cx + (x - y) * 0.7 * scale;
+    const isoX = (x: number, y: number, _z: number) => cx + (x - y) * 0.7 * scale;
     const isoY = (x: number, y: number, z: number) => cy - z * scale + (x + y) * 0.4 * scale;
 
     // Draw axes

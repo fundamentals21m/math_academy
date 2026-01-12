@@ -62,17 +62,6 @@ export function MobiusTransformDemo({ className = '' }: { className?: string }) 
     }
   };
 
-  // Generate a grid of sample points
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const generateGrid = (): Point[] => {
-    const points: Point[] = [];
-    for (let x = -4; x <= 4; x += 0.5) {
-      for (let y = 0.5; y <= 5; y += 0.5) {
-        points.push({ x, y });
-      }
-    }
-    return points;
-  };
 
   // Generate geodesics (semicircles and vertical lines)
   const generateGeodesics = (): { type: 'vertical' | 'semicircle'; x?: number; center?: number; radius?: number }[] => {

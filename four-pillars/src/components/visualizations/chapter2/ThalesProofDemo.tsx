@@ -297,7 +297,7 @@ export function ThalesProofDemo({ className = '' }: ThalesProofDemoProps) {
       </div>
 
       <div className="flex justify-center gap-2 mb-4">
-        {steps.map((stepLabel, i) => (
+        {steps.map((_stepLabel, i) => (
           <button
             key={i}
             onClick={() => setHighlightStep(i)}

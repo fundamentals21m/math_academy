@@ -45,16 +45,6 @@ export function HyperbolicPlaneDemo({ className = '' }: Props) {
     y: cy - p.y * diskRadius,
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const fromSvg = (svgX: number, svgY: number): Point => ({
-    x: (svgX - cx) / diskRadius,
-    y: (cy - svgY) / diskRadius,
-  });
-
-  // Check if point is inside disk
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const isInsideDisk = (p: Point) => p.x * p.x + p.y * p.y < 1;
-
   // Calculate hyperbolic geodesic between two points
   // In Poincare disk model, geodesics are arcs of circles perpendicular to the boundary
   const calculateGeodesic = (p1: Point, p2: Point): Geodesic | null => {
@@ -158,18 +148,6 @@ export function HyperbolicPlaneDemo({ className = '' }: Props) {
   }, [pointA, pointB]);
 
   const geodesic = useMemo(() => calculateGeodesic(pointA, pointB), [pointA, pointB]);
-
-  // Generate decorative geodesics (horocycles and geodesics through center)
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const decorativeGeodesics = useMemo(() => {
-    const geodesics: { center: Point; radius: number }[] = [];
-
-    // Add some reference geodesics through the center
-    // These are actually straight lines through origin, represented as very large circles
-    // TODO: Implement decorative geodesics visualization
-
-    return geodesics;
-  }, []);
 
   // Create SVG arc path
   const createArcPath = (geo: Geodesic | null) => {
