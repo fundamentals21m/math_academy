@@ -2,7 +2,7 @@
 // Section 14: Vertex Colorings and Upper Bounds
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import type { Graph, GraphNode, PresetGraphType, ColoringStep, AlgorithmSpeed } from './shared/types';
+import type { Graph, PresetGraphType, ColoringStep, AlgorithmSpeed } from './shared/types';
 import {
   clearCanvas,
   drawGrid,
@@ -16,7 +16,6 @@ import {
   generatePresetGraph,
   getAdjacencyList,
   getDegree,
-  chromaticNumber,
   moveNode,
   addNode,
   addEdge,

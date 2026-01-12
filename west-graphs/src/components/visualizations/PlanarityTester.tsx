@@ -2,7 +2,7 @@
 // Sections 17-18: Planar Graphs
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import type { Graph, GraphNode, PresetGraphType } from './shared/types';
+import type { Graph, GraphNode } from './shared/types';
 import {
   clearCanvas,
   drawGrid,
@@ -95,7 +95,7 @@ export function PlanarityTester({ className = '' }: Props) {
   const [draggingNode, setDraggingNode] = useState<string | null>(null);
   const [editMode, setEditMode] = useState<'view' | 'addNode' | 'addEdge' | 'delete'>('view');
   const [edgeStartNode, setEdgeStartNode] = useState<string | null>(null);
-  const [showFaces, setShowFaces] = useState(false);
+  const [_showFaces, _setShowFaces] = useState(false);
   const [crossings, setCrossings] = useState<number>(0);
 
   const width = 600;

@@ -152,7 +152,6 @@ export function MSTAnimator({ className = '' }: Props) {
   // Generate Prim's algorithm steps
   const generatePrimSteps = (g: Graph, start: string): MSTStep[] => {
     const steps: MSTStep[] = [];
-    const adj = getAdjacencyList(g);
     const inMST = new Set<string>([start]);
     let totalWeight = 0;
 
@@ -215,7 +214,6 @@ export function MSTAnimator({ className = '' }: Props) {
     }
 
     const newMstEdges = new Set<string>();
-    let lastConsideredEdge: GraphEdge | null = null;
 
     for (let i = 0; i <= currentStep; i++) {
       const step = steps[i];

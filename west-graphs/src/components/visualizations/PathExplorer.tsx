@@ -2,7 +2,7 @@
 // Section 2: Paths, Cycles, and Trails
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import type { Graph, GraphNode, PathMode, PresetGraphType } from './shared/types';
+import type { Graph, PathMode, PresetGraphType } from './shared/types';
 import {
   clearCanvas,
   drawGrid,
@@ -27,7 +27,6 @@ import {
   dfs,
   addNode,
   addEdge,
-  removeNode,
   moveNode
 } from './shared/graphUtils';
 

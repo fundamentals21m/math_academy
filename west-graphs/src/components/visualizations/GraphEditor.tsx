@@ -2,14 +2,13 @@
 // Section 1: What Is a Graph?
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import type { Graph, GraphNode, EditorMode, PresetGraphType } from './shared/types';
+import type { Graph, EditorMode, PresetGraphType } from './shared/types';
 import {
   clearCanvas,
   drawGrid,
   drawNode,
   drawEdge,
   drawSelectionRing,
-  drawAdjacencyMatrix,
   findNodeAtPoint,
   getCanvasCoordinates,
   COLORS
@@ -20,7 +19,6 @@ import {
   addNode,
   removeNode,
   addEdge,
-  removeEdge,
   moveNode,
   getDegreeSequence
 } from './shared/graphUtils';

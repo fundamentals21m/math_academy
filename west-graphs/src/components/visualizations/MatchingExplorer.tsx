@@ -13,7 +13,6 @@ import {
   COLORS
 } from './shared/canvasUtils';
 import {
-  isBipartite,
   getAdjacencyList
 } from './shared/graphUtils';
 
@@ -81,7 +80,7 @@ export function MatchingExplorer({ className = '' }: Props) {
   const [matching, setMatching] = useState<Set<string>>(new Set());
   const [augmentingPath, setAugmentingPath] = useState<string[]>([]);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [hoveredEdge, setHoveredEdge] = useState<GraphEdge | null>(null);
+  const [_hoveredEdge, _setHoveredEdge] = useState<GraphEdge | null>(null);
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
   const [showVertexCover, setShowVertexCover] = useState(false);
   const [vertexCover, setVertexCover] = useState<Set<string>>(new Set());
@@ -90,9 +89,9 @@ export function MatchingExplorer({ className = '' }: Props) {
   const height = 400;
 
   // Find augmenting path using BFS
-  const findAugmentingPath = useCallback((): string[] | null => {
+  const _findAugmentingPath = useCallback((): string[] | null => {
     const leftNodes = graph.nodes.filter(n => n.id.startsWith('L'));
-    const adj = getAdjacencyList(graph);
+    const _adj = getAdjacencyList(graph);
 
     // Find unmatched left vertex
     const unmatchedLeft = leftNodes.find(n => {
@@ -153,7 +152,7 @@ export function MatchingExplorer({ className = '' }: Props) {
   }, [graph, matching]);
 
   // Apply augmenting path to increase matching
-  const augment = useCallback((path: string[]) => {
+  const _augment = useCallback((path: string[]) => {
     const newMatching = new Set(matching);
 
     for (let i = 0; i < path.length - 1; i++) {
@@ -276,7 +275,7 @@ export function MatchingExplorer({ className = '' }: Props) {
     const matchedRight = new Set<string>();
 
     for (const edgeKey of matching) {
-      const [left, right] = edgeKey.split('-');
+      const [_left, right] = edgeKey.split('-');
       matchedRight.add(right);
     }
 
@@ -351,7 +350,7 @@ export function MatchingExplorer({ className = '' }: Props) {
       const edgeKey1 = `${edge.source}-${edge.target}`;
       const edgeKey2 = `${edge.target}-${edge.source}`;
       const inMatching = matching.has(edgeKey1) || matching.has(edgeKey2);
-      const inPath = augmentingPath.length > 0 && augmentingPath.some((node, i) =>
+      const inPath = augmentingPath.length > 0 && augmentingPath.some((_node, i) =>
         i < augmentingPath.length - 1 &&
         ((augmentingPath[i] === edge.source && augmentingPath[i + 1] === edge.target) ||
          (augmentingPath[i] === edge.target && augmentingPath[i + 1] === edge.source))

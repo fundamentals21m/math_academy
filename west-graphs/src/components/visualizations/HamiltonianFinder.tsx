@@ -2,7 +2,7 @@
 // Section 21: Hamiltonian Cycles
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import type { Graph, GraphNode, PresetGraphType, AlgorithmSpeed } from './shared/types';
+import type { Graph, GraphNode, AlgorithmSpeed } from './shared/types';
 import {
   clearCanvas,
   drawGrid,
@@ -120,7 +120,7 @@ export function HamiltonianFinder({ className = '' }: Props) {
 
   // Check if current path is a valid Hamiltonian path/cycle
   const isHamiltonianPath = path.length === graph.nodes.length;
-  const isHamiltonianCycle = isHamiltonianPath && path.length > 2 &&
+  const _isHamiltonianCycle = isHamiltonianPath && path.length > 2 &&
     hasEdge(graph, path[path.length - 1], path[0]);
 
   // Find Hamiltonian path/cycle using backtracking

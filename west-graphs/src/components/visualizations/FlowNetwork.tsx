@@ -2,12 +2,11 @@
 // Section 13: Network Flow Problems
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import type { Graph, GraphNode, GraphEdge, FlowStep, AlgorithmSpeed } from './shared/types';
+import type { GraphNode, GraphEdge, FlowStep, AlgorithmSpeed } from './shared/types';
 import {
   clearCanvas,
   drawGrid,
   drawNode,
-  drawDirectedEdge,
   findNodeAtPoint,
   getCanvasCoordinates,
   COLORS
@@ -83,7 +82,7 @@ export function FlowNetwork({ className = '' }: Props) {
   const [isAnimating, setIsAnimating] = useState(false);
   const [speed, setSpeed] = useState<AlgorithmSpeed>('medium');
   const [currentPath, setCurrentPath] = useState<string[]>([]);
-  const [showResidual, setShowResidual] = useState(false);
+  const [_showResidual, _setShowResidual] = useState(false);
   const [minCut, setMinCut] = useState<Set<string>>(new Set());
   const [showMinCut, setShowMinCut] = useState(false);
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
