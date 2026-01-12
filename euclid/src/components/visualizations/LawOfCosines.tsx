@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 
 /**
  * Interactive visualization of Propositions II.12 & II.13: Law of Cosines

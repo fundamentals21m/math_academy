@@ -19,7 +19,6 @@ export function ParallelLines() {
 
   // Transversal line (angled)
   const angleRad = transversalAngle * (Math.PI / 180);
-  const transversalLength = 200;
 
   // Intersection points
   const int1X = 180;

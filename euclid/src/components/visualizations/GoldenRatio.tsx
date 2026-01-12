@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 
 /**
  * Interactive visualization of Proposition II.11: Golden Ratio
