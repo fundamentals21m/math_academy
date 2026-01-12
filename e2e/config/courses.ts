@@ -75,7 +75,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'ba',
     name: 'Basic Algebra',
-    baseUrl: resolveUrl('basic-algebra-deploy/'),
+    baseUrl: 'https://basic-algebra-deploy.vercel.app',
     totalSections: 64,
     progressPrefix: 'ba:',
     icon: 'x²',
@@ -99,7 +99,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'calc1',
     name: 'Intermediate Calculus',
-    baseUrl: resolveUrl('calc1-deploy/'),
+    baseUrl: 'https://calc1-deploy.vercel.app',
     totalSections: 101,
     progressPrefix: 'calc1:',
     icon: '∫',
@@ -121,7 +121,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'ra',
     name: 'Introduction to Real Analysis',
-    baseUrl: resolveUrl('ra-deploy/'),
+    baseUrl: 'https://ra-deploy-murex.vercel.app',
     totalSections: 15,
     progressPrefix: 'ra:',
     icon: '📐',
@@ -178,7 +178,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'df',
     name: 'Abstract Algebra (Dummit & Foote)',
-    baseUrl: 'https://df-course.vercel.app',
+    baseUrl: 'https://df-course-deploy.vercel.app',
     totalSections: 95,
     progressPrefix: 'df:',
     icon: 'G',
@@ -237,7 +237,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'euler_intro',
     name: 'Introduction to the Analysis of the Infinite',
-    baseUrl: 'https://euler-intro.vercel.app',
+    baseUrl: 'https://euler-intro-deploy.vercel.app',
     totalSections: 22,
     progressPrefix: 'euler-intro:',
     icon: '∞',
@@ -259,7 +259,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'bfi',
     name: 'Bitcoin for Institutions',
-    baseUrl: 'https://bfi-liart.vercel.app',
+    baseUrl: 'https://bfi-deploy.vercel.app',
     totalSections: 15,
     progressPrefix: 'bfi:',
     icon: '₿',
@@ -329,7 +329,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'man_econ_state',
     name: 'Man, Economy, and State',
-    baseUrl: 'https://man-econ-state.vercel.app',
+    baseUrl: 'https://man-econ-state-deploy.vercel.app',
     totalSections: 19,
     progressPrefix: 'man_econ_state:',
     icon: '⚖️',
@@ -412,7 +412,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'ross-prob',
     name: 'Probability',
-    baseUrl: resolveUrl('ross-prob-deploy/'),
+    baseUrl: 'https://ross-prob-deploy.vercel.app',
     totalSections: 9,
     progressPrefix: 'ross-prob:',
     icon: '🎲',
