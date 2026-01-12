@@ -67,7 +67,7 @@ export function KnowledgeProblem({ className = '' }: Props) {
             <>
               {/* Price signal connections (decentralized) */}
               {showConnections && agents.map((a1, i) =>
-                agents.slice(i + 1).map((a2, j) => (
+                agents.slice(i + 1).map((a2) => (
                   <line
                     key={`${a1.id}-${a2.id}`}
                     x1={a1.x}

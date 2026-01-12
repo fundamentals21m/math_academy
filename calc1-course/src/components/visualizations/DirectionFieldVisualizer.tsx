@@ -14,20 +14,19 @@ type ODEPreset = {
 const PRESETS: ODEPreset[] = [
   {
     name: 'y\' = y',
-    f: (x, y) => y,
+    f: (_x, y) => y,
     label: 'dy/dx = y',
     description: 'Exponential growth/decay'
   },
   {
     name: 'y\' = -y',
-    f: (x, y) => -y,
+    f: (_x, y) => -y,
     label: 'dy/dx = -y',
     description: 'Exponential decay'
   },
   {
     name: 'y\' = x',
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    f: (x, y) => x,
+    f: (x, _y) => x,
     label: 'dy/dx = x',
     description: 'Solutions: y = x²/2 + C'
   },
@@ -45,14 +44,13 @@ const PRESETS: ODEPreset[] = [
   },
   {
     name: 'y\' = y(1-y)',
-    f: (x, y) => y * (1 - y),
+    f: (_x, y) => y * (1 - y),
     label: 'dy/dx = y(1-y)',
     description: 'Logistic equation'
   },
   {
     name: 'y\' = sin(x)',
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    f: (x, y) => Math.sin(x),
+    f: (x, _y) => Math.sin(x),
     label: 'dy/dx = sin(x)',
     description: 'Solutions: y = -cos(x) + C'
   },

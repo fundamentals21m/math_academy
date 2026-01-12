@@ -2,22 +2,6 @@ import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
 import { Card, CardGrid } from '../../components/common/Card';
 
-// Operating profitability example data
-const operatingExample = {
-  current: {
-    revenue: 76700000,
-    expenses: 88000000,
-    netIncome: -11300000,
-    margin: '-14.73%',
-  },
-  proposed: {
-    revenue: 76700000,
-    expenses: 76462468,
-    netIncome: 237532,
-    margin: '0.31%',
-  },
-};
-
 export default function Section11() {
   return (
     <LessonLayout sectionId={11}>

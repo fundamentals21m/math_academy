@@ -65,8 +65,6 @@ export function InflationCalculator({ className = '' }: Props) {
     { name: 'Asset Inflation (~15%)', inflation: 15 },
   ];
 
-  const maxValue = Math.max(...simulation.map((d) => Math.max(d.cashValue, d.btcValue)));
-
   return (
     <div className={`p-6 rounded-2xl bg-dark-800/50 border border-dark-700/50 ${className}`}>
       <h3 className="text-xl font-bold text-dark-100 mb-4">Cash vs Bitcoin: The Debasement Race</h3>

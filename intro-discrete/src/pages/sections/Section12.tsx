@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
-import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { InlineMath } from '@/components/common/MathBlock';
 
 export default function Section12() {
   return (

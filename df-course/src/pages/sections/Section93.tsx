@@ -1,6 +1,6 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Callout } from '@/components/common/Callout';
-import { MathBlock, InlineMath } from '@/components/common/MathBlock';
+import { InlineMath } from '@/components/common/MathBlock';
 
 export default function Section93() {
   return (

@@ -37,49 +37,6 @@ export function EuclideanAlgorithmDemo({ className = '' }: Props) {
 
   const gcd = steps.length > 0 ? steps[steps.length - 1].b : Math.abs(a);
 
-  // Extended Euclidean algorithm
-  const extendedSteps = useMemo(() => {
-    const result: { s: number; t: number; equation: string }[] = [];
-    let x = Math.abs(a);
-    let y = Math.abs(b);
-    if (y === 0 || x === 0) return [];
-    if (x < y) [x, y] = [y, x];
-
-    // Forward pass to get quotients
-    const quotients: number[] = [];
-    let tempX = x;
-    let tempY = y;
-    while (tempY > 0) {
-      quotients.push(Math.floor(tempX / tempY));
-      const r = tempX % tempY;
-      tempX = tempY;
-      tempY = r;
-    }
-
-    // Back substitution
-    let s0 = 1, s1 = 0;
-    let t0 = 0, t1 = 1;
-
-    for (let i = 0; i < quotients.length; i++) {
-      const q = quotients[i];
-      const s2 = s0 - q * s1;
-      const t2 = t0 - q * t1;
-
-      result.push({
-        s: s1,
-        t: t1,
-        equation: `${s1}·${x} + ${t1}·${y} = ${s1 * x + t1 * y}`,
-      });
-
-      s0 = s1;
-      s1 = s2;
-      t0 = t1;
-      t1 = t2;
-    }
-
-    return result;
-  }, [a, b]);
-
   // Bezout coefficients
   const bezout = useMemo(() => {
     let x = Math.abs(a);

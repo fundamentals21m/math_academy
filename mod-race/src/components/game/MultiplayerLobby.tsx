@@ -25,7 +25,7 @@ interface MultiplayerLobbyProps {
 
 export function MultiplayerLobby({
   userNpub,
-  userLevel,
+  userLevel: _userLevel,
   room,
   isCreating,
   isJoining,
@@ -268,7 +268,6 @@ interface WaitingRoomProps {
 function WaitingRoom({ room, userNpub, onSetReady, onLeaveRoom }: WaitingRoomProps) {
   const players = Object.values(room.players);
   const currentPlayer = room.players[userNpub];
-  const isHost = room.hostNpub === userNpub;
   const allReady = players.length >= 2 && players.every(p => p.isReady);
   const tierConfig = RACING_TIERS.find(t => t.tier === room.tier)!;
 

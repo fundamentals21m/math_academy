@@ -8,7 +8,7 @@ type MoneyView = 'productive' | 'looter';
 
 export function MoneyMeaning({ className = '' }: Props) {
   const [view, setView] = useState<MoneyView>('productive');
-  const [wealth, setWealth] = useState(50);
+  const [_wealth, _setWealth] = useState(50);
 
   const productiveView = {
     title: 'Money as Symbol of Achievement',

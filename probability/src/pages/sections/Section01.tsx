@@ -1,6 +1,5 @@
 import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Example } from '@/components/common/ContentBlocks';
-import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 
 export default function Section01() {
   return (

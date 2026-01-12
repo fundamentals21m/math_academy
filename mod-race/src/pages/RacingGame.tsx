@@ -25,7 +25,7 @@ import {
 type GameMode = 'menu' | 'single' | 'multi';
 
 export default function RacingGame() {
-  const { state, recordRaceGame, syncStatus } = useGamification();
+  const { state, recordRaceGame, syncStatus: _syncStatus } = useGamification();
   const { npub, connect, disconnect, isConnecting, error: authError, hasExtension, extensionChecked } = useNostrAuth();
   const [gameMode, setGameMode] = useState<GameMode>('menu');
   const isSignedIn = !!npub;

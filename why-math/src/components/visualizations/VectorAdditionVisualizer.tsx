@@ -36,7 +36,7 @@ export function VectorAdditionVisualizer() {
 
   // Arrow marker
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const drawArrow = (x1: number, y1: number, x2: number, y2: number, color: string, id: string) => {
+  const drawArrow = (x1: number, y1: number, x2: number, y2: number, color: string, _id: string) => {
     const angle = Math.atan2(y2 - y1, x2 - x1);
     const headLen = 10;
     const headAngle = Math.PI / 6;

@@ -132,7 +132,7 @@ export function PowerConcentration({ className = '' }: Props) {
             { x: 200, emoji: '💼', label: 'Work' },
             { x: 275, emoji: '📚', label: 'Education' },
             { x: 350, emoji: '🏥', label: 'Healthcare' },
-          ].map((item, i) => (
+          ].map((item) => (
             <g key={item.label}>
               <line
                 x1={200}

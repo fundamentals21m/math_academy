@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { curriculum, getTotalSections } from '@/data/curriculum';
-import { COURSE_NAME, COURSE_DESCRIPTION, COURSE_ICON, FEATURES, COURSE_ID } from '@/config';
+import { COURSE_NAME, COURSE_DESCRIPTION, FEATURES, COURSE_ID } from '@/config';
 import { useGamification } from '@/contexts/GamificationContext';
 import { XPDisplay, StreakBadge } from '@/components/gamification';
 

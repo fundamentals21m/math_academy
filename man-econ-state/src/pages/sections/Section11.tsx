@@ -53,7 +53,7 @@ function InterventionTypesDemo() {
         <p className="text-dark-300 mb-3">{data.description}</p>
 
         <div className="flex justify-center gap-2 mb-4">
-          {data.parties.map((party, i) => (
+          {data.parties.map((party) => (
             <span
               key={party}
               className={`px-3 py-1 rounded text-sm ${

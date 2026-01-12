@@ -5,7 +5,7 @@
 // =============================================================================
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { RACING_TIERS } from '@shared/gamification';
 import type { GameRoom, AnswerResult, FinalRanking } from '../../hooks/useGameRoom';
 

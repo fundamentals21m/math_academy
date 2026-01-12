@@ -29,7 +29,7 @@ interface GameRoundProps {
 
 export function GameRound({
   problem,
-  tier,
+  tier: _tier,
   roundNumber,
   totalRounds,
   score,
