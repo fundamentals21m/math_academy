@@ -246,6 +246,20 @@ export const COURSES = [
     shortName: 'Baby Rudin',
     progressGradient: 'linear-gradient(90deg, #06b6d4, #22d3ee)',
   },
+  {
+    id: 'tao-analysis-1',
+    title: "Tao's Analysis I",
+    description: "A rigorous introduction to real analysis by Terence Tao, building from the Peano axioms through the construction of real numbers, sequences, series, continuity, differentiation, and Riemann integration.",
+    icon: 'ε',
+    url: 'tao-analysis-1-deploy/',
+    tags: ['13 Parts', '72 Sections'],
+    sections: ['calculus', 'seminal'],
+    totalSections: 72,
+    progressPrefix: 'tao-analysis-1:',
+    leaderboardUrl: 'tao-analysis-1-deploy/#/leaderboard',
+    shortName: 'Tao Analysis I',
+    progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
+  },
 
   // ALGEBRA (Note: Basic Algebra also appears here via sections array)
   {
@@ -600,6 +614,20 @@ export const COURSES = [
     leaderboardUrl: 'https://mod-race.vercel.app/#/leaderboard',
     shortName: 'Mod Racing',
     progressGradient: 'linear-gradient(90deg, #22d3ee, #6366f1)',
+  },
+  {
+    id: 'base-race',
+    title: 'Base Conversion Racing',
+    description: 'Race to convert numbers between binary, decimal, and hexadecimal! 10 difficulty tiers with progressively harder conversions.',
+    icon: '🔢',
+    url: 'https://base-race-opal.vercel.app/',
+    tags: ['10 Tiers', 'Binary/Hex'],
+    sections: ['games'],
+    totalSections: 10,
+    progressPrefix: 'base-race:',
+    leaderboardUrl: 'https://base-race-opal.vercel.app/#/leaderboard',
+    shortName: 'Base Racing',
+    progressGradient: 'linear-gradient(90deg, #10b981, #34d399)',
   },
 ];
 

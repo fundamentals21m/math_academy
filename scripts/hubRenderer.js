@@ -455,6 +455,13 @@ export async function renderCourseHub(containerId, options = {}) {
           </div>
           <div id="mod-race-quickplay-inline"></div>
         </div>
+        <div class="featured-section">
+          <div class="level-header">
+            <span class="level-badge featured">Featured Game</span>
+            <span class="level-description">Test your base conversion speed</span>
+          </div>
+          <div id="base-race-quickplay-inline"></div>
+        </div>
       `;
     }
   });

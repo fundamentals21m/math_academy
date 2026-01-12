@@ -49,13 +49,13 @@ export type CourseId =
   | 'calc1' | 'calc_lib_art' | 'calc_easy'
   | 'crypto' | 'koblitz' | 'coding'
   | 'islr' | 'west_graphs' | 'wm' | 'numbers-geometry'
-  | 'ross-prob' | 'intro-discrete' | 'rudin' | 'df' | 'euler-intro'
+  | 'ross-prob' | 'intro-discrete' | 'rudin' | 'df' | 'euler-intro' | 'tao-analysis-1'
   // Geometry & History
   | 'euclid' | 'gauss' | 'four_pillars' | 'thales' | 'mom'
   // Economics & Philosophy
   | 'human_action' | 'man_econ_state' | 'road_to_serfdom' | 'atlas_shrugged'
   // Bitcoin & Special
-  | 'only-the-strong-survive' | 'orange_btc' | 'mod-race' | 'bfi'
+  | 'only-the-strong-survive' | 'orange_btc' | 'mod-race' | 'base-race' | 'bfi'
   // History of Mathematics
   | 'math_history'
   // Other
@@ -70,13 +70,13 @@ export const VALID_COURSE_IDS: readonly CourseId[] = [
   'calc1', 'calc_lib_art', 'calc_easy',
   'crypto', 'koblitz', 'coding',
   'islr', 'west_graphs', 'wm', 'numbers-geometry', 'ross-prob', 'intro-discrete',
-  'rudin', 'df', 'euler-intro',
+  'rudin', 'df', 'euler-intro', 'tao-analysis-1',
   // Geometry & History
   'euclid', 'gauss', 'four_pillars', 'thales', 'mom',
   // Economics & Philosophy
   'human_action', 'man_econ_state', 'road_to_serfdom', 'atlas_shrugged',
   // Bitcoin & Special
-  'only-the-strong-survive', 'orange_btc', 'mod-race', 'bfi',
+  'only-the-strong-survive', 'orange_btc', 'mod-race', 'base-race', 'bfi',
   // History of Mathematics
   'math_history',
   // Other
