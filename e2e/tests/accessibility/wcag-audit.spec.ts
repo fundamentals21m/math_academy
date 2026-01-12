@@ -9,8 +9,7 @@ import { COURSES } from '../../config/courses';
  * These tests use AxeBuilder which can be slow, so we increase the timeout.
  */
 
-// Increase timeout for all accessibility tests (AxeBuilder is resource-intensive)
-test.use({ timeout: 60000 });
+// Note: Individual tests set their own timeout with test.setTimeout() for AxeBuilder tests
 
 test.describe('Accessibility Audits', () => {
   const testCourses = COURSES.slice(0, 5);

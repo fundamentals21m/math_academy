@@ -417,7 +417,7 @@ test.describe('Textarea Inputs', () => {
 
     // Textarea should allow some resizing (not 'none')
     // Or it should have a reasonable height
-    const height = await textarea.evaluate(el => el.offsetHeight);
+    const height = await textarea.evaluate(el => (el as HTMLElement).offsetHeight);
     expect(height).toBeGreaterThan(30);
   });
 });

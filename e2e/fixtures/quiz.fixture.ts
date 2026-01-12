@@ -63,11 +63,11 @@ export const test = baseTest.extend<QuizTestFixtures>({
   },
 
   getQuizQuestions: async ({ page }, use) => {
-    await use(page.locator('[class*="question"], [data-testid="question"]'));
+    await use(() => page.locator('[class*="question"], [data-testid="question"]'));
   },
 
   getQuizOptions: async ({ page }, use) => {
-    await use(page.locator(
+    await use(() => page.locator(
       'button[class*="option"], ' +
       '[role="radio"], ' +
       '[data-testid="quiz-option"], ' +

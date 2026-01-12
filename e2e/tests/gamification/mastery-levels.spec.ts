@@ -259,14 +259,14 @@ test.describe('Mastery Calculation', () => {
     oldDate.setDate(oldDate.getDate() - 30);
 
     await page.evaluate(
-      ([dateStr]: [string]) => {
+      (dateStr: string) => {
         localStorage.setItem('gamificationState', JSON.stringify({
           totalXP: 1000,
           mastery: { '1': 5 },
           lastMasteryUpdate: { '1': dateStr },
         }));
       },
-      [oldDate.toISOString()]
+      oldDate.toISOString()
     );
 
     await page.goto(`${course.baseUrl}#/section/1`);
