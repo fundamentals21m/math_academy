@@ -11,29 +11,30 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const MATH_ACADEMY_ROOT = join(__dirname, '..', '..', '..');
 
 // Course metadata for URLs and display names
+// Note: URLs should NOT end with trailing slash to avoid double-slash when appending /#/section/
 const COURSE_METADATA = {
   'gauss': { name: 'Disquisitiones Arithmeticae', url: 'https://gauss-deploy.vercel.app' },
   'euclid': { name: "Euclid's Elements", url: 'https://euclid-deploy.vercel.app' },
-  'calc1-course': { name: 'Calculus I', url: 'https://calc1-course.vercel.app' },
-  'calc_lib_art': { name: 'Calculus: A Liberal Art', url: 'https://calc-lib-art-deploy.vercel.app' },
-  'calc_easy': { name: 'Beginner Calculus', url: 'https://calceasy-green.vercel.app' },
-  'linalg': { name: 'Linear Algebra', url: 'https://linalg-pink.vercel.app' },
-  'advanced-linalg': { name: 'Advanced Linear Algebra', url: 'https://advanced-linalg.vercel.app' },
-  'abstract-algebra': { name: 'Abstract Algebra', url: 'https://mathacademy-cyan.vercel.app' },
-  'real-analysis': { name: 'Real Analysis', url: 'https://real-analysis-eta.vercel.app' },
+  'calc1-course': { name: 'Calculus I', url: 'https://calc1-deploy.vercel.app' },
+  'calc_lib_art': { name: 'Calculus: A Liberal Art', url: 'https://mathacademy-cyan.vercel.app/calc-lib-art-deploy' },
+  'calc_easy': { name: 'Beginner Calculus', url: 'https://mathacademy-cyan.vercel.app/calceasy-deploy' },
+  'linalg': { name: 'Linear Algebra', url: 'https://mathacademy-cyan.vercel.app/linalg-deploy' },
+  'advanced-linalg': { name: 'Advanced Linear Algebra', url: 'https://mathacademy-cyan.vercel.app/advlinalg-deploy' },
+  'abstract-algebra': { name: 'Abstract Algebra', url: 'https://mathacademy-cyan.vercel.app/aa-deploy' },
+  'real-analysis': { name: 'Real Analysis', url: 'https://ra-deploy-murex.vercel.app' },
   'crypto-react': { name: 'Cryptography Math', url: 'https://cryptography-xi.vercel.app' },
-  'why-math': { name: 'Why Math?', url: 'https://why-math.vercel.app' },
-  'four-pillars': { name: 'Four Pillars of Geometry', url: 'https://four-pillars.vercel.app' },
-  'islr': { name: 'Intro to Statistical Learning', url: 'https://mathacademy-cyan.vercel.app' },
-  'west-graphs': { name: 'Introduction to Graph Theory', url: 'https://west-graphs-deploy.vercel.app' },
-  'numbers-geometry-course': { name: 'Numbers and Geometry', url: 'https://numbers-geometry-course.vercel.app' },
-  'koblitz-course': { name: 'Algebraic Number Theory', url: 'https://koblitz-course-deploy.vercel.app' },
-  'thales': { name: 'Thales to Euclid', url: 'https://mathacademy-cyan.vercel.app' },
-  'human-action': { name: 'Human Action', url: 'https://human-action.vercel.app' },
-  'man-econ-state': { name: 'Man, Economy, and State', url: 'https://man-econ-state.vercel.app' },
+  'why-math': { name: 'Why Math?', url: 'https://mathacademy-cyan.vercel.app/why-math-deploy' },
+  'four-pillars': { name: 'Four Pillars of Geometry', url: 'https://four-pillars-deploy.vercel.app' },
+  'islr': { name: 'Intro to Statistical Learning', url: 'https://mathacademy-cyan.vercel.app/islr-deploy' },
+  'west-graphs': { name: 'Introduction to Graph Theory', url: 'https://mathacademy-cyan.vercel.app/west-graphs-deploy' },
+  'numbers-geometry-course': { name: 'Numbers and Geometry', url: 'https://numbers-geometry-deploy.vercel.app' },
+  'koblitz-course': { name: 'Algebraic Number Theory', url: 'https://mathacademy-cyan.vercel.app/koblitz-course-deploy' },
+  'thales': { name: 'Thales to Euclid', url: 'https://mathacademy-cyan.vercel.app/thales-deploy' },
+  'human-action': { name: 'Human Action', url: 'https://human-action-deploy.vercel.app' },
+  'man-econ-state': { name: 'Man, Economy, and State', url: 'https://man-econ-state-deploy.vercel.app' },
   'road-to-serfdom': { name: 'The Road to Serfdom', url: 'https://road-to-serfdom-deploy.vercel.app' },
-  'atlas-shrugged': { name: 'Atlas Shrugged', url: 'https://mathacademy-cyan.vercel.app' },
-  'men-of-math-course': { name: 'Men of Mathematics', url: 'https://mathacademy-cyan.vercel.app' },
+  'atlas-shrugged': { name: 'Atlas Shrugged', url: 'https://atlas-shrugged-deploy.vercel.app' },
+  'men-of-math-course': { name: 'Men of Mathematics', url: 'https://mathacademy-cyan.vercel.app/mom-deploy' },
 };
 
 /**

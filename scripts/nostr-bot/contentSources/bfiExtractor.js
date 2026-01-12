@@ -13,7 +13,7 @@ const BFI_SECTIONS_PATH = join(__dirname, '..', '..', '..', 'bfi', 'src', 'pages
 const BFI_METADATA = {
   name: 'Bitcoin for Institutions',
   author: 'Brian Hirschfield',
-  url: 'https://bfi-liart.vercel.app',
+  url: 'https://bfi-deploy.vercel.app',
 };
 
 // Section titles from curriculum.ts

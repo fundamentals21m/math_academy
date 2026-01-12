@@ -25,7 +25,7 @@ const RELAYS = [
 const PROFILE_METADATA = {
   name: 'Bitcoin for Institutions',
   display_name: 'Bitcoin for Institutions',
-  about: 'Insights from "Bitcoin for Institutions" by Brian Hirschfield. Learn how institutional investors can approach Bitcoin.\n\nBuy the book: https://zeuspay.com/btc-for-institutions\n\nFree course: https://bfi-liart.vercel.app',
+  about: 'Insights from "Bitcoin for Institutions" by Brian Hirschfield. Learn how institutional investors can approach Bitcoin.\n\nBuy the book: https://zeuspay.com/btc-for-institutions\n\nFree course: https://bfi-deploy.vercel.app',
   picture: '', // Can be set to course logo URL if available
   banner: '',
   website: 'https://zeuspay.com/btc-for-institutions',

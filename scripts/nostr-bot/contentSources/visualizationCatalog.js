@@ -88,7 +88,7 @@ export const VISUALIZATION_CATALOG = [
     courseId: 'four-pillars',
     courseName: 'Four Pillars of Geometry',
     sectionId: 34,
-    url: 'https://four-pillars.vercel.app/#/section/34',
+    url: 'https://four-pillars-deploy.vercel.app/#/section/34',
     tags: ['projective-geometry', 'invariant'],
   },
   {
@@ -98,7 +98,7 @@ export const VISUALIZATION_CATALOG = [
     courseId: 'four-pillars',
     courseName: 'Four Pillars of Geometry',
     sectionId: 36,
-    url: 'https://four-pillars.vercel.app/#/section/36',
+    url: 'https://four-pillars-deploy.vercel.app/#/section/36',
     tags: ['projective-geometry', 'coordinates'],
   },
   {
@@ -108,7 +108,7 @@ export const VISUALIZATION_CATALOG = [
     courseId: 'four-pillars',
     courseName: 'Four Pillars of Geometry',
     sectionId: 37,
-    url: 'https://four-pillars.vercel.app/#/section/37',
+    url: 'https://four-pillars-deploy.vercel.app/#/section/37',
     tags: ['transformation', 'group-theory'],
   },
   {
@@ -118,7 +118,7 @@ export const VISUALIZATION_CATALOG = [
     courseId: 'four-pillars',
     courseName: 'Four Pillars of Geometry',
     sectionId: 48,
-    url: 'https://four-pillars.vercel.app/#/section/48',
+    url: 'https://four-pillars-deploy.vercel.app/#/section/48',
     tags: ['quaternions', '3d-rotation'],
   },
   {
@@ -128,7 +128,7 @@ export const VISUALIZATION_CATALOG = [
     courseId: 'four-pillars',
     courseName: 'Four Pillars of Geometry',
     sectionId: 49,
-    url: 'https://four-pillars.vercel.app/#/section/49',
+    url: 'https://four-pillars-deploy.vercel.app/#/section/49',
     tags: ['rotation', 'group-theory'],
   },
   {
@@ -138,7 +138,7 @@ export const VISUALIZATION_CATALOG = [
     courseId: 'four-pillars',
     courseName: 'Four Pillars of Geometry',
     sectionId: 52,
-    url: 'https://four-pillars.vercel.app/#/section/52',
+    url: 'https://four-pillars-deploy.vercel.app/#/section/52',
     tags: ['isometry', 'group-theory'],
   },
   {
@@ -148,7 +148,7 @@ export const VISUALIZATION_CATALOG = [
     courseId: 'four-pillars',
     courseName: 'Four Pillars of Geometry',
     sectionId: 60,
-    url: 'https://four-pillars.vercel.app/#/section/60',
+    url: 'https://four-pillars-deploy.vercel.app/#/section/60',
     tags: ['hyperbolic-geometry', 'conformal'],
   },
   {
@@ -158,7 +158,7 @@ export const VISUALIZATION_CATALOG = [
     courseId: 'four-pillars',
     courseName: 'Four Pillars of Geometry',
     sectionId: 61,
-    url: 'https://four-pillars.vercel.app/#/section/61',
+    url: 'https://four-pillars-deploy.vercel.app/#/section/61',
     tags: ['hyperbolic-geometry', 'geodesic'],
   },
 
