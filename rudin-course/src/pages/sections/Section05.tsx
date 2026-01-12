@@ -1,5 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
-import { Definition, Theorem, Example } from '../../components/common/ContentBlocks';
+import { Definition, Theorem } from '../../components/common/ContentBlocks';
 import { Callout } from '../../components/common/Callout';
 import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 
