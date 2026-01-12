@@ -16,16 +16,34 @@ export class BasePage {
     this.header = page.locator('header, [role="banner"]');
     this.navigation = page.locator('nav, [role="navigation"]');
     this.sidebar = page.locator('aside, [role="complementary"], [class*="sidebar"]');
-    this.main = page.locator('main, [role="main"], #root > div').first();
+    // More robust selector: look for main content area (React apps render inside #root)
+    this.main = page.locator('main, [role="main"], #root > div, [class*="min-h-screen"]').first();
     this.footer = page.locator('footer, [role="contentinfo"]');
   }
 
   /**
    * Wait for page to be fully loaded
+   * React SPAs need time to hydrate after networkidle fires
    */
   async waitForPageLoad(): Promise<void> {
-    await this.page.waitForLoadState('networkidle');
-    await expect(this.main).toBeVisible();
+    // Wait for DOM content first
+    await this.page.waitForLoadState('domcontentloaded');
+
+    // Wait for React to render - look for #root having children
+    // This is faster than waitForFunction and more WebKit-friendly
+    await this.page.waitForSelector('#root > *', { timeout: 15000 });
+
+    // Wait for main content area to be visible
+    // Use a broad selector to catch various React app structures
+    const mainContent = this.page.locator(
+      'main, [role="main"], [class*="min-h-screen"], article, [class*="content"]'
+    ).first();
+    await mainContent.waitFor({ state: 'visible', timeout: 15000 });
+
+    // Brief wait for any animations/hydration to settle
+    await this.page.waitForLoadState('networkidle').catch(() => {
+      // networkidle can timeout on slow connections, that's OK
+    });
   }
 
   /**

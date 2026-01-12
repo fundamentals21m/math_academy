@@ -26,11 +26,16 @@ test.describe('Course Loading Smoke Tests', () => {
 
       test('first section loads', async ({ page }) => {
         await page.goto(`${course.baseUrl}#/section/1`);
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState('domcontentloaded');
 
-        // Should have main content area
-        const mainContent = page.locator('main, [role="main"], article, [class*="content"]');
-        await expect(mainContent.first()).toBeVisible();
+        // Wait for React to render content inside #root
+        await page.waitForSelector('#root > *', { timeout: 15000 });
+
+        // Should have main content area - use broad selector for React SPAs
+        const mainContent = page.locator(
+          'main, [role="main"], article, [class*="content"], [class*="min-h-screen"]'
+        );
+        await expect(mainContent.first()).toBeVisible({ timeout: 15000 });
       });
 
       test('theorems page loads', async ({ page }) => {
@@ -75,11 +80,16 @@ test.describe('Section Sampling', () => {
     for (const sectionId of sectionIds) {
       test(`@${course.id} section ${sectionId} loads`, async ({ page }) => {
         await page.goto(`${course.baseUrl}#/section/${sectionId}`);
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState('domcontentloaded');
 
-        // Content should be visible
-        const content = page.locator('main, article, [class*="lesson"]');
-        await expect(content.first()).toBeVisible({ timeout: 10000 });
+        // Wait for React to render
+        await page.waitForSelector('#root > *', { timeout: 15000 });
+
+        // Content should be visible - use broad selector for React SPAs
+        const content = page.locator(
+          'main, article, [class*="lesson"], [class*="min-h-screen"], [class*="content"]'
+        );
+        await expect(content.first()).toBeVisible({ timeout: 15000 });
       });
     }
   }

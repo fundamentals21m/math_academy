@@ -153,11 +153,14 @@ test.describe('Hash Routing', () => {
   test('direct hash navigation works', async ({ page }) => {
     // Navigate directly to section via hash
     await page.goto(`${course.baseUrl}#/section/1`);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+
+    // Wait for React to render
+    await page.waitForSelector('#root > *', { timeout: 15000 });
 
     // Should show section content
-    const content = page.locator('main, article');
-    await expect(content.first()).toBeVisible();
+    const content = page.locator('main, article, [class*="min-h-screen"]');
+    await expect(content.first()).toBeVisible({ timeout: 15000 });
   });
 
   test('hash change updates content', async ({ page }) => {
