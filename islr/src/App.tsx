@@ -1,4 +1,4 @@
-import { lazy, Suspense, Component, ReactNode, useState } from 'react';
+import { lazy, Suspense, Component, type ReactNode, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { Header } from '@/components/layout/Header';
