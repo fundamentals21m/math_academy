@@ -1,1 +1,0 @@
-import{j as r}from"./vendor-animation-CmxkKU9r.js";import{L as a}from"./index-CXWVnLBX.js";import"./vendor-react-DamxDR2H.js";function m(){return r.jsx("div",{className:"max-w-4xl mx-auto px-4 py-8",children:r.jsx(a,{})})}export{m as default};
