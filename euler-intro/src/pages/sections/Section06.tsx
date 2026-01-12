@@ -136,7 +136,7 @@ export default function Section06() {
 
       <p>
         As <InlineMath>x \to \infty</InlineMath>, <InlineMath>y</InlineMath> grows like
-        <InlineMath>\sqrt{x}</InlineMath>—slower than any line (which grows like <InlineMath>x</InlineMath>).
+        <InlineMath>{`\\sqrt{x}`}</InlineMath>—slower than any line (which grows like <InlineMath>{`x`}</InlineMath>).
       </p>
 
       <div className="bg-dark-800 p-4 rounded-lg my-4 border-l-4 border-amber-500">

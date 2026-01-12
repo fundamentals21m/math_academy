@@ -133,7 +133,7 @@ export default function Section34() {
             </p>
             <p className="mt-2">
               Each has a unique solution in <InlineMath>{`\\text{GF}(q)^*`}</InlineMath>. Since{' '}
-              <InlineMath>|\\\text{GF}(q)^*| = q - 1 {'<'} k</InlineMath>, at least two equations
+              <InlineMath>{`|\\text{GF}(q)^*| = q - 1 < k`}</InlineMath>, at least two equations
               have the same solution, say <InlineMath>{`a_1x = b_1`}</InlineMath> and{' '}
               <InlineMath>{`a_2x = b_2`}</InlineMath> with solution <InlineMath>{`x`}</InlineMath>.
             </p>

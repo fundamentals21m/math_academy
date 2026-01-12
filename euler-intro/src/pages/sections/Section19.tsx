@@ -66,7 +66,7 @@ export default function Section19() {
         <p className="font-semibold text-blue-400">Method 2: Two Lines and a Circle</p>
         <p className="mt-2">
           Using the geometric mean: draw a semicircle with diameter <InlineMath>b</InlineMath>,
-          and the altitude to the diameter has length <InlineMath>\sqrt{c}</InlineMath> when
+          and the altitude to the diameter has length <InlineMath>{`\\sqrt{c}`}</InlineMath> when
           the segments are in the right proportion.
         </p>
       </div>

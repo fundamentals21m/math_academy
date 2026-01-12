@@ -38,7 +38,7 @@ export default function Section15() {
       <MathBlock>{`a_n(x)y^n + a_{n-1}(x)y^{n-1} + \\cdots + a_0(x) = 0`}</MathBlock>
 
       <p>
-        then the sum of roots equals <InlineMath>-a_{n-1}(x)/a_n(x)</InlineMath>.
+        then the sum of roots equals <InlineMath>{`-a_{n-1}(x)/a_n(x)`}</InlineMath>.
         Setting this equal to <InlineMath>g(x)</InlineMath> constrains the coefficients.
       </p>
 

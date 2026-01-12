@@ -41,7 +41,7 @@ export default function Section07() {
             The asymptotic directions come from <InlineMath>A_n(y) = 0</InlineMath>
           </li>
           <li>
-            For each direction, find the intercept by analyzing <InlineMath>A_{n-1}(y)</InlineMath>
+            For each direction, find the intercept by analyzing <InlineMath>{`A_{n-1}(y)`}</InlineMath>
           </li>
         </ol>
       </div>
@@ -101,8 +101,8 @@ export default function Section07() {
       <MathBlock>{`x - \\sqrt{x^2 - a^2} = \\frac{a^2}{x + \\sqrt{x^2 - a^2}} \\approx \\frac{a^2}{2x}`}</MathBlock>
 
       <p>
-        Thus <InlineMath>d \sim \frac{1}{x}</InlineMath>—the distance decreases like the
-        reciprocal of <InlineMath>x</InlineMath>.
+        Thus <InlineMath>{`d \\sim \\frac{1}{x}`}</InlineMath>—the distance decreases like the
+        reciprocal of <InlineMath>{`x`}</InlineMath>.
       </p>
 
       <h2>Asymptotes of Higher-Degree Curves</h2>
@@ -170,7 +170,7 @@ export default function Section07() {
       <Callout type="warning">
         <strong>Parabolic Branches:</strong> When <InlineMath>m</InlineMath> exists but
         <InlineMath>c \to \infty</InlineMath>, the branch is <em>parabolic</em>—it recedes
-        from all lines. Example: <InlineMath>y = \sqrt{x}</InlineMath> has
+        from all lines. Example: <InlineMath>{`y = \\sqrt{x}`}</InlineMath> has
         <InlineMath>m = 0</InlineMath> but no finite <InlineMath>c</InlineMath>.
       </Callout>
 

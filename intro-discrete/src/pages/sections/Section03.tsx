@@ -87,8 +87,8 @@ ca &\\equiv cb \\mod n
         </p>
         <p className="mt-2">
           If <InlineMath>k = n^2 + m^2</InlineMath>, then modulo 4, the possibilities for{' '}
-          <InlineMath>k</InlineMath> are <InlineMath>(0 \text{{ or }} 1) + (0 \text{{ or }} 1)</InlineMath>,
-          which gives <InlineMath>0, 1, \text{{ or }} 2</InlineMath>.
+          <InlineMath>k</InlineMath> are <InlineMath>{`(0 \\text{ or } 1) + (0 \\text{ or } 1)`}</InlineMath>,
+          which gives <InlineMath>{`0, 1, \\text{ or } 2`}</InlineMath>.
         </p>
         <p className="mt-2">
           In particular, <InlineMath>k</InlineMath> cannot be congruent to 3 modulo 4.

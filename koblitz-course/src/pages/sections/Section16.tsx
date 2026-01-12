@@ -105,7 +105,7 @@ export default function Section16() {
             <tr className="border-b border-dark-700">
               <th className="py-1 text-left">k</th>
               <th className="py-1 text-left">p_k</th>
-              <th className="py-1 text-left">Q_{k+1}</th>
+              <th className="py-1 text-left">{`Q_{k+1}`}</th>
               <th className="py-1 text-left">Factorization</th>
             </tr>
           </thead>

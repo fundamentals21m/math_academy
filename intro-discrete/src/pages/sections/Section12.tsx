@@ -282,7 +282,7 @@ export default function Section12() {
       </Definition>
 
       <Example title="Constructive Existence Proof" className="my-6">
-        <Theorem>
+        <Theorem title="Irrational Powers">
           <p>There exist irrational numbers <InlineMath>a, b</InlineMath> such that <InlineMath>a^b</InlineMath> is rational.</p>
         </Theorem>
         <div className="bg-dark-800/50 rounded-xl p-4 mt-4 border border-dark-700">

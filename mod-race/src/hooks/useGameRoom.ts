@@ -6,14 +6,13 @@
 // =============================================================================
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { doc, onSnapshot } from 'firebase/firestore';
 import {
-  doc,
-  onSnapshot,
   httpsCallable,
   getFirebaseFirestore,
   getFirebaseFunctions,
   isFirebaseConfigured,
-} from '@shared/gamification';
+} from '@shared/firebase/config';
 import type { RacingTier } from '@shared/gamification';
 
 // =============================================================================

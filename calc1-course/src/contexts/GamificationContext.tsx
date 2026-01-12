@@ -11,7 +11,7 @@ import {
   GamificationProvider as SharedGamificationProvider,
   useGamification,
   type SectionId,
-} from '@shared/gamification/GamificationContext';
+} from '@shared/gamification';
 
 // Re-export the hook directly
 export { useGamification };
