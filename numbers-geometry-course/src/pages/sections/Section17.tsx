@@ -1,6 +1,5 @@
 import { LessonLayout } from '../../components/layout/LessonLayout';
 import { Callout } from '../../components/common/Callout';
-import { Card, CardGrid, CardHeader } from '../../components/common/Card';
 import { InlineMath, MathBlock } from '../../components/common/MathBlock';
 import { SectionQuiz } from '../../components/quiz';
 import { section17Questions } from '../../data/quizzes';

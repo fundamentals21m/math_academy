@@ -36,11 +36,8 @@ export function ComplexPlaneDemo({ className = '' }: Props) {
 
   // Modulus and argument
   const mod1 = Math.sqrt(a * a + b * b);
-  const arg1 = Math.atan2(b, a);
   const mod2 = Math.sqrt(c * c + d * d);
-  const arg2 = Math.atan2(d, c);
   const modResult = Math.sqrt(result.re * result.re + result.im * result.im);
-  const argResult = Math.atan2(result.im, result.re);
 
   // SVG dimensions
   const width = 400;

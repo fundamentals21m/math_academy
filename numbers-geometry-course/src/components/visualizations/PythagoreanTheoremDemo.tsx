@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 
 interface Props {
   className?: string;
@@ -10,7 +10,7 @@ export function PythagoreanTheoremDemo({ className = '' }: Props) {
   const [a, setA] = useState(3);
   const [b, setB] = useState(4);
   const [proofType, setProofType] = useState<ProofType>('squares');
-  const [showLabels, setShowLabels] = useState(true);
+  const [showLabels, _setShowLabels] = useState(true);
 
   const c = Math.sqrt(a * a + b * b);
   const aSquared = a * a;

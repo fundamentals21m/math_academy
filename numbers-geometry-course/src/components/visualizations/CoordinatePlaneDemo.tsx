@@ -17,7 +17,7 @@ export function CoordinatePlaneDemo({ className = '' }: Props) {
   const [r, setR] = useState(2);
 
   const [shapeType, setShapeType] = useState<ShapeType>('both');
-  const [showIntersections, setShowIntersections] = useState(true);
+  const [showIntersections, _setShowIntersections] = useState(true);
 
   // SVG dimensions
   const width = 400;

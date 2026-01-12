@@ -9,7 +9,7 @@ export function PrimeSieve({ className = '' }: Props) {
   const [sieveState, setSieveState] = useState<boolean[]>([]);
   const [currentPrime, setCurrentPrime] = useState<number | null>(null);
   const [step, setStep] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
+  const [_isRunning, setIsRunning] = useState(false);
 
   // Initialize sieve
   const initSieve = useCallback(() => {
