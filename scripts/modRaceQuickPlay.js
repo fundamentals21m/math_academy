@@ -240,6 +240,10 @@ export function renderModRaceQuickPlay(containerId) {
             <span class="mod-race-example-answer">Answer: 2</span>
           </div>
 
+          <a href="https://cryptography-xi.vercel.app/#/section/3" target="_blank" rel="noopener noreferrer" class="mod-race-learn-link">
+            New to modular arithmetic? Learn the basics first
+          </a>
+
           <button id="mod-race-start-btn" class="viz-btn mod-race-start-btn">
             Quick Play (${QUESTION_COUNT} Questions)
           </button>
@@ -362,6 +366,10 @@ export function renderModRaceQuickPlay(containerId) {
           Want more? The full game has <strong>10 difficulty tiers</strong>,
           <strong>multiplayer racing</strong>, and <strong>leaderboards</strong>!
         </p>
+
+        <a href="https://cryptography-xi.vercel.app/#/section/3" target="_blank" rel="noopener noreferrer" class="mod-race-learn-link">
+          Want to learn more? Take the Modular Arithmetic lesson
+        </a>
       </div>
     `;
   }
