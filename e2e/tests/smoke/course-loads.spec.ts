@@ -40,7 +40,10 @@ test.describe('Course Loading Smoke Tests', () => {
 
       test('theorems page loads', async ({ page }) => {
         await page.goto(`${course.baseUrl}#/theorems`);
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState('domcontentloaded');
+
+        // Wait for React to render
+        await page.waitForSelector('#root > *', { timeout: 15000 });
 
         // Page should not show 404 or error
         const title = await page.title();
@@ -55,7 +58,10 @@ test.describe('Course Loading Smoke Tests', () => {
         }
 
         await page.goto(`${course.baseUrl}#/leaderboard`);
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState('domcontentloaded');
+
+        // Wait for React to render
+        await page.waitForSelector('#root > *', { timeout: 15000 });
 
         // Page should load without error
         const title = await page.title();

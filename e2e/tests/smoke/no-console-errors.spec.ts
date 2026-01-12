@@ -42,7 +42,8 @@ test.describe('Console Error Checks', () => {
       });
 
       await page.goto(course.baseUrl);
-      await page.waitForLoadState('networkidle');
+      await page.waitForLoadState('domcontentloaded');
+      await page.waitForSelector('#root > *', { timeout: 15000 });
 
       // Wait a bit for any delayed errors
       await page.waitForTimeout(1000);
@@ -77,7 +78,8 @@ test.describe('Console Error Checks', () => {
       });
 
       await page.goto(`${course.baseUrl}#/section/1`);
-      await page.waitForLoadState('networkidle');
+      await page.waitForLoadState('domcontentloaded');
+      await page.waitForSelector('#root > *', { timeout: 15000 });
       await page.waitForTimeout(1000);
 
       const criticalErrors = errors.filter(e => !isIgnoredError(e));
@@ -106,7 +108,8 @@ test.describe('React Error Boundary', () => {
 
     // Navigate to invalid section
     await page.goto(`${course.baseUrl}#/section/99999`);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+      await page.waitForSelector('#root > *', { timeout: 15000 });
 
     // Should not crash with unhandled error
     // Either shows 404 message or redirects
@@ -120,7 +123,8 @@ test.describe('React Error Boundary', () => {
 
   test('invalid route shows graceful error', async ({ page }) => {
     await page.goto(`${course.baseUrl}#/invalid-route-that-does-not-exist`);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+      await page.waitForSelector('#root > *', { timeout: 15000 });
 
     // Should not show blank page
     const body = page.locator('body');
@@ -143,7 +147,8 @@ test.describe('Network Error Handling', () => {
     page.on('pageerror', error => errors.push(error.message));
 
     await page.goto(course.baseUrl);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+      await page.waitForSelector('#root > *', { timeout: 15000 });
 
     // Page should still load (may show error message but not crash)
     const body = page.locator('body');

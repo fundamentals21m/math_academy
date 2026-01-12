@@ -15,7 +15,8 @@ test.describe('Navigation Smoke Tests', () => {
     test.describe(`@${course.id}`, () => {
       test('can navigate from home to first section', async ({ page }) => {
         await page.goto(course.baseUrl);
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState('domcontentloaded');
+        await page.waitForSelector('#root > *', { timeout: 15000 });
 
         // Find section link in MAIN content area first (visible on all viewports)
         // Avoid sidebar links which may be off-screen on mobile
@@ -37,7 +38,8 @@ test.describe('Navigation Smoke Tests', () => {
 
         if (isInViewport) {
           await sectionLink.click();
-          await page.waitForLoadState('networkidle');
+          await page.waitForLoadState('domcontentloaded');
+          await page.waitForSelector('#root > *', { timeout: 15000 });
 
           // Should now be on a section page
           const url = page.url();
@@ -58,7 +60,8 @@ test.describe('Navigation Smoke Tests', () => {
             const sidebarLink = page.locator('aside a[href*="section/1"], aside a[href*="section/0"], nav a[href*="section/1"], nav a[href*="section/0"]').first();
             if (await sidebarLink.isVisible().catch(() => false)) {
               await sidebarLink.click();
-              await page.waitForLoadState('networkidle');
+              await page.waitForLoadState('domcontentloaded');
+              await page.waitForSelector('#root > *', { timeout: 15000 });
 
               const url = page.url();
               expect(url).toMatch(/section\/\d+/);
@@ -97,7 +100,8 @@ test.describe('Navigation Smoke Tests', () => {
 
       test('sidebar navigation works', async ({ page }) => {
         await page.goto(course.baseUrl);
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState('domcontentloaded');
+        await page.waitForSelector('#root > *', { timeout: 15000 });
 
         // Look for sidebar
         const sidebar = page.locator('aside, nav, [class*="sidebar"]');
@@ -109,7 +113,8 @@ test.describe('Navigation Smoke Tests', () => {
           if (await sectionLinks.count() > 0) {
             // Click first section link
             await sectionLinks.first().click();
-            await page.waitForLoadState('networkidle');
+            await page.waitForLoadState('domcontentloaded');
+            await page.waitForSelector('#root > *', { timeout: 15000 });
 
             // Should navigate to section
             const url = page.url();
@@ -121,7 +126,8 @@ test.describe('Navigation Smoke Tests', () => {
       test('back to home navigation works', async ({ page }) => {
         // Start on a section
         await page.goto(`${course.baseUrl}#/section/1`);
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState('domcontentloaded');
+        await page.waitForSelector('#root > *', { timeout: 15000 });
 
         // Find home link
         const homeLink = page.locator(
@@ -133,7 +139,8 @@ test.describe('Navigation Smoke Tests', () => {
 
         if (await homeLink.isVisible()) {
           await homeLink.click();
-          await page.waitForLoadState('networkidle');
+          await page.waitForLoadState('domcontentloaded');
+          await page.waitForSelector('#root > *', { timeout: 15000 });
 
           // Should be on home page
           const url = page.url();
@@ -165,14 +172,16 @@ test.describe('Hash Routing', () => {
 
   test('hash change updates content', async ({ page }) => {
     await page.goto(course.baseUrl);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForSelector('#root > *', { timeout: 15000 });
 
     // Change hash programmatically
     await page.evaluate(() => {
       window.location.hash = '#/section/1';
     });
 
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForTimeout(500); // Allow React router to update
 
     // Content should update
     const url = page.url();
