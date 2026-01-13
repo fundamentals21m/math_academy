@@ -75,7 +75,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'ba',
     name: 'Basic Algebra',
-    baseUrl: 'https://basic-algebra-deploy.vercel.app',
+    baseUrl: resolveUrl('basic-algebra-deploy/'),
     totalSections: 64,
     progressPrefix: 'ba:',
     icon: 'x²',
@@ -99,7 +99,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'calc1',
     name: 'Intermediate Calculus',
-    baseUrl: 'https://calc1-deploy.vercel.app',
+    baseUrl: resolveUrl('calc1-deploy/'),
     totalSections: 101,
     progressPrefix: 'calc1:',
     icon: '∫',
@@ -121,7 +121,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'ra',
     name: 'Introduction to Real Analysis',
-    baseUrl: 'https://ra-deploy-murex.vercel.app',
+    baseUrl: resolveUrl('ra-deploy/'),
     totalSections: 15,
     progressPrefix: 'ra:',
     icon: '📐',
@@ -191,7 +191,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'four_pillars',
     name: 'The Four Pillars of Geometry',
-    baseUrl: 'https://four-pillars-deploy.vercel.app',
+    baseUrl: resolveUrl('four-pillars-deploy/'),
     totalSections: 66,
     progressPrefix: 'four_pillars:',
     icon: '🔺',
@@ -202,7 +202,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'numbers_geometry',
     name: 'Numbers and Geometry',
-    baseUrl: 'https://numbers-geometry-deploy.vercel.app',
+    baseUrl: resolveUrl('numbers-geometry-deploy/'),
     totalSections: 79,
     progressPrefix: 'numbers_geometry:',
     icon: '🔢',
@@ -226,7 +226,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'gauss',
     name: 'Disquisitiones Arithmeticae',
-    baseUrl: 'https://gauss-deploy.vercel.app',
+    baseUrl: resolveUrl('gauss-deploy/'),
     totalSections: 7,
     progressPrefix: 'gauss:',
     icon: '🔢',
@@ -248,7 +248,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'only_the_strong_survive',
     name: 'Only The Strong Survive',
-    baseUrl: 'https://only-the-strong-survive-deploy.vercel.app',
+    baseUrl: resolveUrl('only-the-strong-survive-deploy/'),
     totalSections: 20,
     progressPrefix: 'only_the_strong_survive:',
     icon: '₿',
@@ -307,7 +307,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'human_action',
     name: 'Human Action',
-    baseUrl: 'https://human-action-deploy.vercel.app',
+    baseUrl: resolveUrl('human-action-deploy/'),
     totalSections: 40,
     progressPrefix: 'human_action:',
     icon: '📖',
@@ -412,7 +412,7 @@ export const COURSES: CourseConfig[] = [
   {
     id: 'ross-prob',
     name: 'Probability',
-    baseUrl: 'https://ross-prob-deploy.vercel.app',
+    baseUrl: resolveUrl('ross-prob-deploy/'),
     totalSections: 9,
     progressPrefix: 'ross-prob:',
     icon: '🎲',
