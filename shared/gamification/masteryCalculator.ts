@@ -4,7 +4,7 @@ import type { SectionProgress, MasteryLevel } from './types';
  * Calculate mastery level for a section based on quiz performance.
  *
  * Mastery levels are determined by quiz scores and attempt patterns:
- * - **Mastered**: 2+ perfect scores (100%) OR average ≥90% with 3+ attempts
+ * - **Mastered**: 1+ perfect score (100%) OR average ≥90% with 3+ attempts
  * - **Familiar**: Best score ≥80% OR average ≥70% with 2+ attempts
  * - **Learning**: Any other performance (default state)
  *
@@ -15,7 +15,7 @@ import type { SectionProgress, MasteryLevel } from './types';
  * ```ts
  * const section = {
  *   sectionId: 'linalg:1',
- *   quizAttempts: [{ score: 100 }, { score: 100 }] // 2 perfect scores
+ *   quizAttempts: [{ score: 100 }] // 1 perfect score
  * };
  * calculateMastery(section); // Returns 'mastered'
  * ```
@@ -41,11 +41,11 @@ export function calculateMastery(section: SectionProgress): MasteryLevel {
   const perfectCount = quizAttempts.filter((a) => a.score === 100).length;
 
   // Mastery criteria:
-  // - Mastered: 2+ perfect scores (100%), or avg >= 90 with 3+ attempts
+  // - Mastered: 1+ perfect score (100%), or avg >= 90 with 3+ attempts
   // - Familiar: best score >= 80, or avg >= 70 with 2+ attempts
   // - Learning: any other case
 
-  if (perfectCount >= 2 || (avgScore >= 90 && quizAttempts.length >= 3)) {
+  if (perfectCount >= 1 || (avgScore >= 90 && quizAttempts.length >= 3)) {
     return 'mastered';
   }
 
