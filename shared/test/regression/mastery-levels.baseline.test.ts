@@ -218,7 +218,7 @@ describe('Mastery Level Baselines', () => {
   });
 
   describe('Edge Cases', () => {
-    it('handles single perfect score as familiar (not mastered)', () => {
+    it('handles single perfect score as mastered', () => {
       const section: SectionProgress = {
         sectionId: 'linalg:1',
         visitedAt: '2024-01-01',
@@ -227,13 +227,13 @@ describe('Mastery Level Baselines', () => {
         quizAttempts: [
           { timestamp: '2024-01-01', difficulty: 'medium', score: 100, correctAnswers: 5, totalQuestions: 5, xpEarned: 25 },
         ],
-        masteryLevel: 'familiar',
+        masteryLevel: 'mastered',
         visualizationsInteracted: [],
       };
-      
-      // Single perfect score returns familiar (best >= 80), need 2+ for mastered
+
+      // Single perfect score (100%) = mastered (green check)
       const result = calculateMastery(section);
-      expect(result).toBe('familiar');
+      expect(result).toBe('mastered');
     });
 
     it('handles exactly 70 avg with 2 attempts', () => {

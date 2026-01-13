@@ -58,6 +58,11 @@ describe('calculateMastery', () => {
   });
 
   describe('mastered level', () => {
+    it('should return mastered for single perfect score (100%)', () => {
+      const section = createSection([{ score: 100 }]);
+      expect(calculateMastery(section)).toBe('mastered');
+    });
+
     it('should return mastered for 2+ perfect scores', () => {
       const section = createSection([{ score: 100 }, { score: 100 }]);
       expect(calculateMastery(section)).toBe('mastered');
@@ -85,10 +90,10 @@ describe('calculateMastery', () => {
   });
 
   describe('edge cases', () => {
-    it('should handle single perfect score as familiar (not mastered)', () => {
+    it('should handle single perfect score as mastered', () => {
       const section = createSection([{ score: 100 }]);
-      // Single perfect score: best = 100 >= 80, so familiar
-      expect(calculateMastery(section)).toBe('familiar');
+      // Single perfect score = mastered (green check)
+      expect(calculateMastery(section)).toBe('mastered');
     });
 
     it('should prioritize mastered over familiar criteria', () => {
@@ -114,28 +119,28 @@ describe('getMasteryInfo', () => {
     const info = getMasteryInfo('mastered');
     expect(info.label).toBe('Mastered');
     expect(info.color).toContain('emerald');
-    expect(info.symbol).toBe('●');
+    expect(info.symbol).toBe('✓');
   });
 
   it('should return correct info for familiar', () => {
     const info = getMasteryInfo('familiar');
     expect(info.label).toBe('Familiar');
     expect(info.color).toContain('yellow');
-    expect(info.symbol).toBe('◑');
+    expect(info.symbol).toBe('◐');
   });
 
   it('should return correct info for learning', () => {
     const info = getMasteryInfo('learning');
     expect(info.label).toBe('Learning');
     expect(info.color).toContain('blue');
-    expect(info.symbol).toBe('◐');
+    expect(info.symbol).toBe('○');
   });
 
   it('should return correct info for none', () => {
     const info = getMasteryInfo('none');
     expect(info.label).toBe('Not Started');
     expect(info.color).toContain('dark');
-    expect(info.symbol).toBe('○');
+    expect(info.symbol).toBe('');
   });
 
   it('should handle unknown level as none', () => {
