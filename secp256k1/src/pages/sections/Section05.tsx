@@ -86,7 +86,7 @@ export default function Section05() {
         THE NONCE CATASTROPHE
       </h3>
 
-      <Callout type="error" title="Critical Security Warning">
+      <Callout type="danger" title="Critical Security Warning">
         <p className="font-bold text-lg">
           Never reuse the nonce <InlineMath>k</InlineMath>!
         </p>
