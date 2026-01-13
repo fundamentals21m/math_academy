@@ -18,6 +18,7 @@ packages:
   - 'euclid'
   - 'euler-intro'
   - 'four-pillars'
+  - 'frost'
   - 'gauss'
   - 'human-action'
   - 'intro-discrete'

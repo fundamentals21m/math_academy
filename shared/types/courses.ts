@@ -55,7 +55,7 @@ export type CourseId =
   // Economics & Philosophy
   | 'human_action' | 'man_econ_state' | 'road_to_serfdom' | 'atlas_shrugged'
   // Bitcoin & Special
-  | 'only-the-strong-survive' | 'orange_btc' | 'mod-race' | 'base-race' | 'bfi'
+  | 'only-the-strong-survive' | 'orange_btc' | 'mod-race' | 'base-race' | 'bfi' | 'frost'
   // History of Mathematics
   | 'math_history'
   // Other
@@ -76,7 +76,7 @@ export const VALID_COURSE_IDS: readonly CourseId[] = [
   // Economics & Philosophy
   'human_action', 'man_econ_state', 'road_to_serfdom', 'atlas_shrugged',
   // Bitcoin & Special
-  'only-the-strong-survive', 'orange_btc', 'mod-race', 'base-race', 'bfi',
+  'only-the-strong-survive', 'orange_btc', 'mod-race', 'base-race', 'bfi', 'frost',
   // History of Mathematics
   'math_history',
   // Other
