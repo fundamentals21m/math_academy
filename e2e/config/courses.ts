@@ -33,7 +33,7 @@ function resolveUrl(url: string): string {
 }
 
 /**
- * All 31 Math Academy courses
+ * All 40 Math Academy courses
  */
 export const COURSES: CourseConfig[] = [
   // Featured
@@ -407,6 +407,28 @@ export const COURSES: CourseConfig[] = [
     hasVisualizers: true,
     hasLeaderboard: true,
   },
+  {
+    id: 'frost',
+    name: 'FROST: Threshold Signatures',
+    baseUrl: 'https://frost-nine.vercel.app',
+    totalSections: 69,
+    progressPrefix: 'frost:',
+    icon: '🔐',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
+  {
+    id: 'secp256k1',
+    name: 'secp256k1: The Curve That Powers Bitcoin',
+    baseUrl: 'https://secp256k1-deploy.vercel.app',
+    totalSections: 10,
+    progressPrefix: 'secp256k1:',
+    icon: '📐',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
 
   // Probability and Statistics
   {
@@ -418,6 +440,67 @@ export const COURSES: CourseConfig[] = [
     icon: '🎲',
     hasQuizzes: true,
     hasVisualizers: true,
+    hasLeaderboard: true,
+  },
+  {
+    id: 'tontines',
+    name: 'Tontines: The Mathematics of Lifetime Income',
+    baseUrl: 'https://tontines-deploy.vercel.app',
+    totalSections: 45,
+    progressPrefix: 'tontines:',
+    icon: '💰',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
+
+  // Calculus (additional)
+  {
+    id: 'tao-analysis-1',
+    name: "Tao's Analysis I",
+    baseUrl: resolveUrl('tao-analysis-1-deploy/'),
+    totalSections: 72,
+    progressPrefix: 'tao-analysis-1:',
+    icon: 'ε',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
+
+  // Podcast Focus
+  {
+    id: 'lcn',
+    name: 'Little Crypto Notebook',
+    baseUrl: 'https://lcn-deploy.vercel.app',
+    totalSections: 9,
+    progressPrefix: 'lcn:',
+    icon: '🔐',
+    hasQuizzes: true,
+    hasVisualizers: true,
+    hasLeaderboard: true,
+  },
+
+  // Games
+  {
+    id: 'mod-race',
+    name: 'Mod Racing',
+    baseUrl: 'https://mod-race.vercel.app',
+    totalSections: 10,
+    progressPrefix: 'mod-race:',
+    icon: '🏎️',
+    hasQuizzes: false,
+    hasVisualizers: false,
+    hasLeaderboard: true,
+  },
+  {
+    id: 'base-race',
+    name: 'Base Conversion Racing',
+    baseUrl: 'https://base-race-opal.vercel.app',
+    totalSections: 10,
+    progressPrefix: 'base-race:',
+    icon: '🔢',
+    hasQuizzes: false,
+    hasVisualizers: false,
     hasLeaderboard: true,
   },
 ];
