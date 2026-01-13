@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout';
 import { Definition, Example } from '@/components/common';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
+import { CommitmentBindingGame } from '@/components/visualizations';
 
 export default function Section01() {
   return (
@@ -87,6 +88,8 @@ export default function Section01() {
         These properties create a "locked box" metaphor: you can lock a value in a box (commit),
         and later open it (reveal), but you cannot change what's inside after locking.
       </p>
+
+      <CommitmentBindingGame className="my-8" />
     </LessonLayout>
   );
 }

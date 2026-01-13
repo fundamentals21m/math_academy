@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout';
 import { Definition, Theorem, Example } from '@/components/common';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
+import { P2CKeyTweaking } from '@/components/visualizations';
 
 export default function Section02() {
   return (
@@ -114,6 +115,8 @@ export default function Section02() {
           <li><strong>Script path:</strong> Reveal <InlineMath>P</InlineMath> and <InlineMath>m</InlineMath>, execute script</li>
         </ul>
       </Example>
+
+      <P2CKeyTweaking className="my-8" />
     </LessonLayout>
   );
 }

@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout';
 import { Definition } from '@/components/common';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { FunctionGrowthComparison } from '@/components/visualizations';
 
 export default function Section00() {
   return (
@@ -35,6 +36,8 @@ export default function Section00() {
           security analyses.
         </p>
       </Definition>
+
+      <FunctionGrowthComparison className="my-8" />
 
       <Definition title="Probabilistic Polynomial-Time (PPT)">
         <p>

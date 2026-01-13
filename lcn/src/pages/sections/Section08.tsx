@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout';
 import { Definition, Theorem } from '@/components/common';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
+import { AGMRepresentationVisualizer } from '@/components/visualizations';
 
 export default function Section08() {
   return (
@@ -165,6 +166,8 @@ export default function Section08() {
           Fuchsbauer, Kiltz, Loss. <em>The Algebraic Group Model and its Applications.</em>
         </li>
       </ul>
+
+      <AGMRepresentationVisualizer className="my-8" />
     </LessonLayout>
   );
 }

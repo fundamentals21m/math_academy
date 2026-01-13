@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout';
 import { Definition } from '@/components/common';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
+import { PSHVZKVariantTool } from '@/components/visualizations';
 
 export default function Section04() {
   return (
@@ -107,6 +108,8 @@ export default function Section04() {
         The next sections will demonstrate how to construct such simulators for specific
         protocols.
       </p>
+
+      <PSHVZKVariantTool className="my-8" />
     </LessonLayout>
   );
 }

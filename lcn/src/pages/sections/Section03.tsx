@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout';
 import { Definition } from '@/components/common';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
+import { ZKProtocolDiagram } from '@/components/visualizations';
 
 export default function Section03() {
   return (
@@ -111,6 +112,8 @@ export default function Section03() {
         In practice, arguments are often sufficient because we only need to defend against
         realistic (efficient) adversaries.
       </p>
+
+      <ZKProtocolDiagram className="my-8" />
     </LessonLayout>
   );
 }

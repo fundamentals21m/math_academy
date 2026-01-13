@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout';
 import { Theorem } from '@/components/common';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
+import { SimulatorConstruction } from '@/components/visualizations';
 
 export default function Section06() {
   return (
@@ -156,6 +157,8 @@ export default function Section06() {
           produce.
         </p>
       </Callout>
+
+      <SimulatorConstruction className="my-8" />
     </LessonLayout>
   );
 }

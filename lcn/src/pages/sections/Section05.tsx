@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout';
 import { Definition, Example } from '@/components/common';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
+import { MultiplicationProtocolAnimator } from '@/components/visualizations';
 
 export default function Section05() {
   return (
@@ -130,6 +131,8 @@ export default function Section05() {
           <InlineMath>T_1</InlineMath> and <InlineMath>T_2</InlineMath> terms.
         </p>
       </Callout>
+
+      <MultiplicationProtocolAnimator className="my-8" />
     </LessonLayout>
   );
 }

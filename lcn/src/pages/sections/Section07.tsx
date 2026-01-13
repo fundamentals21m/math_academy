@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout';
 import { Definition } from '@/components/common';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
 import { Callout } from '@/components/common/Callout';
+import { SUNFGameAnimator } from '@/components/visualizations';
 
 export default function Section07() {
   return (
@@ -130,6 +131,8 @@ export default function Section07() {
           valid signature.
         </p>
       </Callout>
+
+      <SUNFGameAnimator className="my-8" />
     </LessonLayout>
   );
 }
