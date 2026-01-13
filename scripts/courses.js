@@ -97,6 +97,12 @@ export const SECTIONS = [
     subtitle: 'Practice with competitive math challenges',
     style: 'featured'
   },
+  {
+    id: 'podcast_focus',
+    title: 'Podcast Focus Subjects',
+    subtitle: 'Deep dives into topics from our podcasts',
+    style: 'subject'
+  },
 ];
 
 /** @type {Course[]} */
@@ -597,6 +603,22 @@ export const COURSES = [
     progressPrefix: 'ross-prob:',
     leaderboardUrl: 'ross-prob-deploy/#/leaderboard',
     shortName: 'Probability',
+    progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
+  },
+
+  // PODCAST FOCUS
+  {
+    id: 'lcn',
+    title: 'Little Crypto Notebook',
+    description: 'Advanced cryptography: commitments, zero-knowledge proofs, and multi-signatures. Covers Pay-to-Contract, PSHVZK proofs, and Blind Sequential MuSig.',
+    icon: '🔐',
+    url: 'https://lcn-deploy.vercel.app/',
+    tags: ['4 Parts', '9 Sections'],
+    sections: ['podcast_focus'],
+    totalSections: 9,
+    progressPrefix: 'lcn:',
+    leaderboardUrl: 'https://lcn-deploy.vercel.app/#/leaderboard',
+    shortName: 'Crypto Notebook',
     progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
   },
 

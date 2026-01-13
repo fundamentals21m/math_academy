@@ -18,6 +18,7 @@ const SECTIONS = [
   { id: 'number_theory', title: 'Number Theory', subtitle: 'Integers, primes, and cryptographic foundations', style: 'subject' },
   { id: 'prob_stats', title: 'Probability and Statistics', subtitle: 'Random variables, distributions, and statistical inference', style: 'subject' },
   { id: 'games', title: 'Games', subtitle: 'Practice with competitive math challenges', style: 'featured' },
+  { id: 'podcast_focus', title: 'Podcast Focus Subjects', subtitle: 'Deep dives into topics from our podcasts', style: 'subject' },
 ];
 
 // Course data
@@ -58,6 +59,7 @@ const COURSES = [
   { id: 'ross-prob', title: 'Probability', description: "Master probability theory.", icon: '🎲', url: 'ross-prob-deploy/', tags: ['10 Chapters', '66 Sections'], sections: ['prob_stats'], totalSections: 9, progressPrefix: 'ross-prob:', leaderboardUrl: 'ross-prob-deploy/#/leaderboard', shortName: 'Probability', progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)' },
   { id: 'mod-race', title: 'Mod Racing', description: 'Race to master modular arithmetic with competitive math challenges.', icon: '🏎️', url: 'https://mod-race.vercel.app/', tags: ['10 Tiers', 'Multiplayer'], sections: ['games'], totalSections: 10, progressPrefix: 'mod-race:', leaderboardUrl: 'https://mod-race.vercel.app/#/leaderboard', shortName: 'Mod Racing', progressGradient: 'linear-gradient(90deg, #22d3ee, #6366f1)' },
   { id: 'base-race', title: 'Base Conversion Racing', description: 'Race to convert numbers between binary, decimal, and hexadecimal!', icon: '🔢', url: 'https://base-race-opal.vercel.app/', tags: ['10 Tiers', 'Binary/Hex'], sections: ['games'], totalSections: 10, progressPrefix: 'base-race:', leaderboardUrl: 'https://base-race-opal.vercel.app/#/leaderboard', shortName: 'Base Racing', progressGradient: 'linear-gradient(90deg, #10b981, #34d399)' },
+  { id: 'lcn', title: 'Little Crypto Notebook', description: 'Advanced cryptography: commitments, zero-knowledge proofs, and multi-signatures.', icon: '🔐', url: 'https://lcn-deploy.vercel.app/', tags: ['4 Parts', '9 Sections'], sections: ['podcast_focus'], totalSections: 9, progressPrefix: 'lcn:', leaderboardUrl: 'https://lcn-deploy.vercel.app/#/leaderboard', shortName: 'Crypto Notebook', progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)' },
 ];
 
 /**
