@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { PolynomialVisualizer } from '@/components/visualizations/PolynomialVisualizer';
 
 export default function Section09() {
   return (
@@ -105,14 +106,7 @@ export default function Section09() {
         </li>
       </ul>
 
-      <div className="p-4 rounded-xl bg-dark-800/50 border border-dark-700/50 my-6">
-        <h4 className="font-semibold text-emerald-400 mb-3">Visualization</h4>
-        <p className="text-sm">
-          Imagine the polynomial as a curve in 2D. Two points don't pin down a parabola -
-          infinitely many parabolas pass through any two points. But three non-collinear
-          points? Exactly one parabola.
-        </p>
-      </div>
+      <PolynomialVisualizer />
 
       <h3>For FROST</h3>
 

@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { SigningRoundVisualizer } from '@/components/visualizations/SigningRoundVisualizer';
 
 export default function Section31() {
   return (
@@ -19,6 +20,8 @@ export default function Section31() {
         set <InlineMath>{`S \\subseteq \\{1, \\ldots, n\\}`}</InlineMath> with{' '}
         <InlineMath>{`|S| = t`}</InlineMath>, produce a valid Schnorr signature in one communication round.
       </Callout>
+
+      <SigningRoundVisualizer />
 
       <h3>Input Requirements</h3>
 

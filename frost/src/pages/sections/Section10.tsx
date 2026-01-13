@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { LagrangeInterpolator } from '@/components/visualizations/LagrangeInterpolator';
 
 export default function Section10() {
   return (
@@ -124,6 +125,8 @@ export default function Section10() {
         This is because <InlineMath>{`\\sum_i L_i(x) = 1`}</InlineMath> for all <InlineMath>{`x`}</InlineMath>
         (the basis polynomials form a partition of unity).
       </Callout>
+
+      <LagrangeInterpolator />
 
       <h3>For FROST</h3>
 

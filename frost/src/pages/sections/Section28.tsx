@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { ProtocolOverview } from '@/components/visualizations/ProtocolOverview';
 
 export default function Section28() {
   return (
@@ -31,28 +32,7 @@ export default function Section28() {
         </ol>
       </Definition>
 
-      <h3>Phase Relationships</h3>
-
-      <div className="space-y-6 my-8">
-        <div className="flex items-center justify-center">
-          <div className="flex items-center space-x-4">
-            <div className="p-4 rounded-xl bg-indigo-900/30 border border-indigo-500/50 text-center">
-              <p className="font-semibold text-indigo-400">DKG</p>
-              <p className="text-xs text-gray-400">Once</p>
-            </div>
-            <div className="text-gray-500">→</div>
-            <div className="p-4 rounded-xl bg-emerald-900/30 border border-emerald-500/50 text-center">
-              <p className="font-semibold text-emerald-400">Preprocessing</p>
-              <p className="text-xs text-gray-400">Batches</p>
-            </div>
-            <div className="text-gray-500">→</div>
-            <div className="p-4 rounded-xl bg-amber-900/30 border border-amber-500/50 text-center">
-              <p className="font-semibold text-amber-400">Signing</p>
-              <p className="text-xs text-gray-400">Per-signature</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ProtocolOverview />
 
       <h3>Participants and Roles</h3>
 

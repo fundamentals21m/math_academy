@@ -2,6 +2,7 @@ import { LessonLayout } from '@/components/layout/LessonLayout';
 import { Definition, Theorem, Example } from '@/components/common/ContentBlocks';
 import { Callout } from '@/components/common/Callout';
 import { InlineMath, MathBlock } from '@/components/common/MathBlock';
+import { DKGVisualizer } from '@/components/visualizations/DKGVisualizer';
 
 export default function Section29() {
   return (
@@ -13,6 +14,8 @@ export default function Section29() {
         shares without any single party ever knowing the complete secret. This is the
         foundation of FROST's security.
       </p>
+
+      <DKGVisualizer />
 
       <h3>DKG Goal</h3>
 
