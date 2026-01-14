@@ -385,6 +385,30 @@
   margin-top: 3rem;
 }
 
+/* Games Row - Side by side layout for racing games */
+.games-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.games-row .game-section {
+  flex: 1;
+  margin-top: 0;
+  min-width: 0;
+}
+
+/* Stack games vertically on smaller screens */
+@media (max-width: 900px) {
+  .games-row {
+    flex-direction: column;
+  }
+
+  .games-row .game-section {
+    flex: none;
+  }
+}
+
 #featured-content-inline {
   margin: 2.5rem 0;
 }

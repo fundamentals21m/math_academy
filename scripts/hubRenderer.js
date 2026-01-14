@@ -448,19 +448,21 @@ export async function renderCourseHub(containerId, options = {}) {
           </div>
           <div id="featured-content-inline"></div>
         </div>
-        <div class="featured-section">
-          <div class="level-header">
-            <span class="level-badge featured">Featured Game</span>
-            <span class="level-description">Test your modular arithmetic speed</span>
+        <div class="games-row">
+          <div class="featured-section game-section">
+            <div class="level-header">
+              <span class="level-badge featured">Featured Game</span>
+              <span class="level-description">Test your modular arithmetic speed</span>
+            </div>
+            <div id="mod-race-quickplay-inline"></div>
           </div>
-          <div id="mod-race-quickplay-inline"></div>
-        </div>
-        <div class="featured-section">
-          <div class="level-header">
-            <span class="level-badge featured">Featured Game</span>
-            <span class="level-description">Test your base conversion speed</span>
+          <div class="featured-section game-section">
+            <div class="level-header">
+              <span class="level-badge featured">Featured Game</span>
+              <span class="level-description">Test your base conversion speed</span>
+            </div>
+            <div id="base-race-quickplay-inline"></div>
           </div>
-          <div id="base-race-quickplay-inline"></div>
         </div>
       `;
     }
