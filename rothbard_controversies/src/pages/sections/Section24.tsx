@@ -1,0 +1,134 @@
+import { LessonLayout } from '@/components/layout/LessonLayout';
+import { Callout } from '@/components/common/Callout';
+
+export default function Section24() {
+  return (
+    <LessonLayout sectionId={24}>
+      <h2>The Myth of Neutral Taxation</h2>
+
+      <p>
+        Economists have long sought a "neutral" tax—one that would raise revenue for government
+        without distorting economic decisions. The ideal neutral tax would leave relative prices
+        unchanged, not favor some activities over others, and not affect the allocation of resources.
+        But this ideal is a myth: no tax can be neutral.
+      </p>
+
+      <Callout type="info">
+        <strong>The Appeal of Neutrality:</strong> The concept of tax neutrality appeals to
+        economists who want to separate equity from efficiency. If a neutral tax existed, the
+        government could raise whatever revenue it needed without affecting economic efficiency.
+        The burden of taxation could then be distributed according to principles of justice without
+        worrying about economic distortions.
+      </Callout>
+
+      <h3>Why Neutrality Is Impossible</h3>
+      <p>
+        The fundamental problem with tax neutrality is that every tax affects behavior. When you
+        tax something, you get less of it. An income tax reduces the incentive to earn income. A
+        sales tax reduces the incentive to buy the taxed goods. A property tax reduces the incentive
+        to hold property. There is no way to extract resources from the economy without affecting
+        the decisions of those from whom they are extracted.
+      </p>
+
+      <p>
+        Even a lump-sum tax—a fixed amount that does not vary with income, consumption, or wealth—
+        affects behavior by reducing the resources available to the taxpayer. He must cut back on
+        something; his decisions about what to cut back change the allocation of resources.
+      </p>
+
+      <Callout type="warning">
+        <strong>The Income Effect:</strong> Even if a tax creates no substitution effects—no
+        incentive to switch from one activity to another—it creates an income effect. The taxpayer
+        is poorer and must adjust his behavior accordingly. This income effect is itself a
+        distortion from the pre-tax allocation.
+      </Callout>
+
+      <h3>The Myth of the Head Tax</h3>
+      <p>
+        The head tax—a fixed sum per person, regardless of income or wealth—is sometimes cited as
+        the only truly neutral tax. Since it does not vary with economic activity, it supposedly
+        creates no substitution effects. But even the head tax is not neutral.
+      </p>
+
+      <p>
+        First, the head tax creates powerful incentives for population decisions—emigration, birth
+        rates, even suicide in extreme cases. Second, even setting these aside, the head tax
+        reduces the resources available to taxpayers and changes their consumption and production
+        decisions. The head tax is not neutral; it is merely uniformly distortionary.
+      </p>
+
+      <h3>Proportional vs. Progressive Taxation</h3>
+      <p>
+        Some economists argue that a flat-rate or proportional tax is more neutral than a progressive
+        tax with rising marginal rates. It is true that progressive taxation creates larger
+        substitution effects by discouraging additional earning more heavily. But this does not
+        make the proportional tax neutral—it makes it less distortionary than the progressive tax.
+      </p>
+
+      <Callout type="info">
+        <strong>The Zero Rate:</strong> The only tax rate that creates no distortion is zero. Every
+        positive tax rate affects behavior to some degree. The question is not how to achieve
+        neutrality but how to minimize distortion—or, better yet, how to minimize taxation itself.
+      </Callout>
+
+      <h3>Broad-Based vs. Narrow-Based Taxes</h3>
+      <p>
+        Another supposed principle of neutral taxation is that taxes should be broad-based rather
+        than narrow. A tax on all consumption is said to be more neutral than a tax on specific
+        goods, because it does not favor some goods over others.
+      </p>
+
+      <p>
+        But a broad-based tax is still a tax. It still reduces the incentive for the taxed activity.
+        A general consumption tax reduces consumption relative to non-consumption (leisure, saving).
+        A general income tax reduces income relative to non-income (leisure, home production). No
+        base is truly comprehensive; every tax must draw lines somewhere.
+      </p>
+
+      <h3>The Real Choice</h3>
+      <p>
+        The pursuit of neutral taxation distracts from the real question: how much should government
+        take? Debates about tax structure often assume that some fixed amount must be raised, with
+        the only question being how to raise it. But the amount of taxation is itself a choice, and
+        reducing taxation is always an option.
+      </p>
+
+      <Callout type="success">
+        <strong>The Libertarian Position:</strong> From the libertarian perspective, the neutral
+        tax is not a useful concept. All taxes are burdens; all taxes distort. The goal should be
+        to minimize taxation, not to find a mythically painless way to extract resources from the
+        productive economy.
+      </Callout>
+
+      <h3>The Political Economy of Tax Design</h3>
+      <p>
+        In practice, tax design is driven by political, not economic, considerations. Politicians
+        favor complex tax systems because they can sell loopholes to interest groups. They favor
+        hidden taxes because voters resist visible ones. They favor taxes on unpopular minorities
+        because these are politically easy. The search for neutrality is largely beside the point.
+      </p>
+
+      <p>
+        The complexity of real-world tax systems reflects not economic wisdom but political
+        incentives. A tax system designed by economists would look very different from the tax
+        systems that actually exist. But even economists' designs would not be neutral—they would
+        simply reflect different preferences about which distortions to accept.
+      </p>
+
+      <h3>Conclusion: Embracing Reality</h3>
+      <p>
+        The myth of neutral taxation should be abandoned. All taxes have effects on behavior; all
+        taxes distort the market economy. The honest question is not how to achieve neutrality
+        but what distortions we are willing to accept and, more fundamentally, how much taxation
+        is justifiable in the first place.
+      </p>
+
+      <Callout type="success">
+        <strong>The Bottom Line:</strong> There is no such thing as a neutral tax. Every tax
+        burdens someone, distorts some decision, and transfers resources from private to public
+        use. The search for neutrality is a distraction from the real issues: how much should
+        government take, and from whom?
+      </Callout>
+    </LessonLayout>
+  );
+}

@@ -1,0 +1,201 @@
+import { LessonLayout } from '@/components/layout/LessonLayout';
+import { Callout } from '@/components/common/Callout';
+
+export default function Section02() {
+  return (
+    <LessonLayout sectionId={2}>
+      <h2>What is the Proper Way to Study Man?</h2>
+
+      <p>
+        If the fundamental axioms of praxeology are true, then the logical consequences built upon
+        them must be empirically true as well. But this is not the sort of empiricism welcomed by
+        the positivists, for it is based on universal reflective or inner experience, as well as
+        on external physical experience. Thus, the knowledge that human beings have goals and act
+        purposively to attain them rests, not simply on observing that human beings exist, but also
+        on the introspective knowledge of what it means to be human possessed by each man, who
+        then assents to this knowledge.
+      </p>
+
+      <Callout type="info">
+        <strong>Verstehen:</strong> Alfred Schütz pointed out and elaborated the complexity of the
+        interaction between the individual and other persons, the "interpretive understanding" or
+        <em> Verstehen</em>, upon which this universal, prescientific understanding rests. The
+        common-sense knowledge of the universality of motivated, intentional human action, ignored
+        by positivists as "unscientific," actually provides the indispensable groundwork on which
+        science itself must develop.
+      </Callout>
+
+      <h3>The Nature of Evidence</h3>
+      <p>
+        The nature of the evidence on which the praxeological axiom rests is fundamentally similar
+        to that accepted by the self-proclaimed empiricists. To them, the laboratory experiment is
+        evidence because the sensory experience involved in it is available to each observer; the
+        experience becomes "evident" to all. Logical proof is in this sense similar; for the
+        knowledge that B follows from A becomes evident to all who care to follow the demonstration.
+      </p>
+
+      <p>
+        In the same way, the fact of human action and of purposive choice also becomes evident to
+        each person who bothers to contemplate it; it is just as evident as the direct sense
+        experience of the laboratory.
+      </p>
+
+      <h3>How Praxeology Differs from Other Disciplines</h3>
+      <p>
+        From this philosophical perspective, all disciplines dealing with human beings—from philosophy
+        to history, psychology, and the social sciences—must take as their starting point the fact
+        that humans engage in motivated, purposive action and are thus different from the unmotivated
+        atoms and stones that are the objects of the physical sciences.
+      </p>
+
+      <Callout type="success">
+        <strong>The Distinction:</strong> Economic theory (as distinct from applied economics) deals,
+        not with the content of human valuations, motivations, and choices, but with the formal fact
+        that people engage in such motivated action. Other disciplines focus on the content of these
+        values and actions: psychology asks how and why people adopt values; ethics deals with what
+        values they should adopt; technology explains how to achieve chosen ends; and history tries
+        to explain the content of human motives and choices through recorded time.
+      </Callout>
+
+      <h3>The Gedankenexperiment</h3>
+      <p>
+        One of the basic tools for the deduction of the logical implications of the axiom of human
+        action is the use of the <em>Gedankenexperiment</em>, or "mental experiment." The
+        <em> Gedankenexperiment</em> is the economic theorist's substitute for the natural scientist's
+        controlled laboratory experiment. Since the relevant variables of the social world cannot
+        actually be held constant, the economist holds them constant in his imagination.
+      </p>
+
+      <p>
+        Using the tool of verbal logic, he mentally investigates the causal influence of one variable
+        on another. The economist finds, for example, that the price of a product is determined by
+        two variables: the demand for it and its supply at any given time. He then mentally holds the
+        supply constant, and finds that an increase in demand will bring about an increase in price.
+        In short, economics arrives at <em>ceteris paribus</em> laws.
+      </p>
+
+      <h3>The Qualitative Nature of Economic Laws</h3>
+      <p>
+        One important aspect of these economic laws must be pointed out: they are necessarily
+        qualitative. The fact that human beings have goals and preferences, that they make choices
+        to attain their goals, that all action must take place over time—all these are qualitative
+        axioms. And since only the qualitative enters into the logical process from the real world,
+        only the qualitative can emerge.
+      </p>
+
+      <Callout type="warning">
+        <strong>The Limits of Quantification:</strong> One can only say that an increase in demand,
+        given the supply, will raise the price; one cannot say that a 20 percent increase in demand
+        will bring about a 25 percent increase in price. The praxeologist must reject all attempts,
+        no matter how fashionable, to erect a theory consisting of alleged quantitative laws.
+      </Callout>
+
+      <h3>Why Quantitative Laws Fail in Social Science</h3>
+      <p>
+        There is a basic reason for the quantitative-qualitative dichotomy between the physical and
+        the social sciences. The objects of physical science do not act; they do not choose, change
+        their minds, and choose again. Their natures may therefore be investigated, and the
+        investigations replicated indefinitely, with quantitative precision.
+      </p>
+
+      <p>
+        But people do change their minds, and their actions, all the time; their behavior cannot
+        be predicted with exact and therefore scientific precision. Among the many factors helping
+        to determine the demand and supply of any commodity are the valuations placed by each
+        consumer, the availability of substitutes, climatic conditions, technological methods of
+        production, and the public's expectations of the trend of general prices. Every one of
+        these factors is subject to continuing and unpredictable change.
+      </p>
+
+      <Callout type="info">
+        <strong>No Constants in Economics:</strong> All the determined efforts of quantitative
+        economists, econometricians, and social scientists have not been able to find one single
+        quantitative constant in human affairs. The mathematical laws in the physical sciences
+        contain numerous constants; but the imitative method in the social sciences is proven
+        vain by the fact that not a single constant has ever emerged.
+      </Callout>
+
+      <h3>Prediction vs. Forecasting</h3>
+      <p>
+        Except for the fact that they are not quantitative, the predictions of the praxeologist
+        are precisely the same kind as those of the natural scientist. The latter is not a prophet
+        or soothsayer; his successful prediction is not what <em>will</em> happen in the world,
+        but what <em>would</em> happen if such and such should occur.
+      </p>
+
+      <p>
+        The scientist can predict successfully that if hydrogen and oxygen are combined in
+        proportions of two to one, the result will be water; but he has no way of predicting
+        scientifically how many scientists in how many laboratories will perform this process
+        at any given period in the future. In the same way, the praxeologist can say, with
+        absolute certainty, that if the demand for butter increases, and the supply remains
+        the same, the price of butter will rise; but he does not know whether the public's
+        demand for butter will in fact rise or fall.
+      </p>
+
+      <h3>Applied Economics</h3>
+      <p>
+        What, then, is the praxeological view of the function of applied economics? The
+        praxeologist contrasts, on the one hand, the body of qualitative, nomothetic laws
+        developed by economic theory, and on the other, a myriad of unique, complex historical
+        facts of both the past and the future.
+      </p>
+
+      <p>
+        While accepting that there are no mechanical laws of history, the praxeologist holds
+        that he can and must use his knowledge of other nomothetic sciences as part of his
+        <em> verstehende</em> attempt to understand and explain the idiographic events of history.
+        The economic historian combines all of his scientific knowledge with his understanding
+        of motives and choices to attempt to explain complex historical phenomena.
+      </p>
+
+      <Callout type="success">
+        <strong>The Art of Forecasting:</strong> For the praxeologist, forecasting is a task
+        very similar to the work of the historian. The latter attempts to "predict" the events
+        of the past by explaining their antecedent causes; similarly, the forecaster attempts
+        to predict the events of the future on the basis of present and past events already
+        known. He uses all his nomothetic knowledge—economic, political, military, psychological,
+        and technological; but at best his work is an art rather than an exact science.
+      </Callout>
+
+      <h3>The Praxeological Tradition</h3>
+      <p>
+        The praxeological tradition has a long history in economic thought. One of the first
+        self-conscious methodologists in the history of economics was the early-nineteenth-century
+        French economist Jean-Baptiste Say. Say insisted that the "general facts" underlying what
+        he calls the "moral sciences" are undisputed and grounded on universal observation.
+      </p>
+
+      <p>
+        Say anticipated the praxeologist's view of historical and statistical data as themselves
+        complex facts needing to be explained. "The study of statistics may gratify curiosity,"
+        he wrote, "but it can never be productive of advantage when it does not indicate the
+        origin and consequences of the facts it has collected."
+      </p>
+
+      <Callout type="warning">
+        <strong>Say on Mathematics in Economics:</strong> Say questioned the value of mathematics
+        in the construction of economic theory. For political economy is concerned with men's
+        values, and these values being "subject to the influence of the faculties, the wants and
+        the desires of mankind, they are not susceptible of any rigorous appreciation, and cannot
+        therefore furnish any data for absolute calculations."
+      </Callout>
+
+      <p>
+        The first economists to devote their attention specifically to methodology were three
+        leading economists of mid-nineteenth century Britain: John E. Cairnes, Nassau W. Senior,
+        and John Stuart Mill. Cairnes noted that "the economist starts with a knowledge of
+        ultimate causes"—in contrast to the physical scientist, who arrives at ultimate causes
+        only after laborious research.
+      </p>
+
+      <p>
+        Senior was the most important praxeologist of that era. Before Senior, classical economists
+        such as John Stuart Mill had placed the fundamental premises of economics on the shaky
+        ground of being hypotheses. Senior broadened the fundamental premise to include immaterial
+        wealth or satisfaction, a complete, apodictic, and universally true principle based on
+        insight into the goal-seeking nature of human action.
+      </p>
+    </LessonLayout>
+  );
+}
