@@ -8,7 +8,7 @@ import os, requests, time
 from pathlib import Path
 
 ELEVENLABS_API_URL = "https://api.elevenlabs.io/v1/text-to-speech"
-VOICE_ID = "ErXwobaYiN019PkySvjV"
+VOICE_ID = "TxGEqnHWrfWFTfGW9XjX"  # Josh - Deep, authoritative
 VOICE_SETTINGS = {"stability": 0.65, "similarity_boost": 0.80, "style": 0.35, "use_speaker_boost": True}
 EPISODE_NUMBER = 3
 EPISODE_TITLE = "The Top and the Bottom"

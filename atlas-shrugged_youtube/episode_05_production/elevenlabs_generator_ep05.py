@@ -24,7 +24,7 @@ from pathlib import Path
 # =============================================================================
 
 ELEVENLABS_API_URL = "https://api.elevenlabs.io/v1/text-to-speech"
-VOICE_ID = "ErXwobaYiN019PkySvjV"  # Antoni
+VOICE_ID = "TxGEqnHWrfWFTfGW9XjX"  # Josh - Deep, authoritative
 
 VOICE_SETTINGS = {
     "stability": 0.65,
