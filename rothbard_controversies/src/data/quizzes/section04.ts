@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section04Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the definitive statement of Austrian methodology?',
+    options: [
+      'The Wealth of Nations by Adam Smith',
+      'Human Action by Ludwig von Mises',
+      'The General Theory by John Maynard Keynes',
+      'Capital by Karl Marx',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Mises\'s magnum opus, Human Action (1949), presents a comprehensive treatise on economics grounded in the a priori analysis of purposive human behavior and remains the definitive statement of Austrian methodology.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why is any attempt to deny the action axiom self-defeating?',
+    options: [
+      'It requires too much education',
+      'The act of denying it is itself an action—purposive employment of means to achieve an end',
+      'No one has ever tried',
+      'It contradicts mathematics',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Any attempt to deny the action axiom would itself be an action—a purposive employment of means (arguments) to achieve an end (refutation). The axiom is therefore apodictically certain.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the law of time preference?',
+    options: [
+      'People prefer to work during certain hours',
+      'Actors prefer to achieve their goals sooner rather than later, other things being equal',
+      'Time moves faster during economic booms',
+      'Historical data is more reliable than forecasts',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The law of time preference states that, other things being equal, actors prefer to achieve their goals sooner rather than later. A good available now is worth more than the same good available in the future.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'According to Austrian economics, why does interest exist?',
+    options: [
+      'Banks charge it arbitrarily',
+      'Government regulates it into existence',
+      'It arises from time preference—the premium placed on present over future goods',
+      'It is a tax on borrowers',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Interest arises from time preference. Those who abstain from present consumption to save and invest must be compensated for waiting. The interest rate reflects the premium placed on present over future goods.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Why do Austrians reject mathematical economics?',
+    options: [
+      'Economists are bad at math',
+      'Computers were not invented yet',
+      'Human valuations are neither constant nor measurable, making mathematical treatment inappropriate',
+      'Math is too expensive to use',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Mathematics deals with quantities that are constant and measurable. But the valuations of acting men are neither constant nor measurable—utility is ordinal, not cardinal, and cannot be subjected to mathematical operations.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What term describes utility that can only be ranked (A > B > C) but not measured or added?',
+    options: [
+      'Cardinal',
+      'Ordinal',
+      'Marginal',
+      'Nominal',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Utility is ordinal, not cardinal. We can say that an actor prefers A to B to C, but we cannot say he prefers A twice as much as B.',
+  },
+];

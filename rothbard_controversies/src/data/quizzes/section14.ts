@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section14Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the Walrasian general equilibrium framework?',
+    options: [
+      'A theory of partial markets',
+      'A vision of the economy as a system of simultaneous equations determining all prices and quantities',
+      'A theory of government planning',
+      'A statistical method',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Walrasian framework envisions the economy as a system of simultaneous equations that determine all prices and quantities, with all markets clearing in general equilibrium.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is a major criticism of the Walrasian framework?',
+    options: [
+      'It uses too little math',
+      'It assumes perfect information and instantaneous adjustment, ignoring entrepreneurship',
+      'It focuses too much on individuals',
+      'It ignores equilibrium',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Walrasian framework assumes perfect information, instantaneous adjustment, and no entrepreneurship—making it mathematically tractable but empirically unrealistic.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What did Schumpeter emphasize about the entrepreneur?',
+    options: [
+      'Entrepreneurs are passive price-takers',
+      'Entrepreneurs disrupt equilibrium through innovation, driving "creative destruction"',
+      'Entrepreneurs only respond to prices',
+      'Entrepreneurship is unimportant',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Schumpeter\'s entrepreneur is an innovator who introduces new products, methods, and organizations, creating "creative destruction" that sweeps away old industries and creates new ones.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What problem does the Walrasian treatment of capital have?',
+    options: [
+      'It ignores capital entirely',
+      'It aggregates all capital goods into a single homogeneous factor',
+      'It overemphasizes capital',
+      'It uses too much detail',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Walrasian economics typically aggregates all capital goods into a single homogeneous factor, ignoring the heterogeneity and time structure of the capital stock that Austrian economics emphasizes.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What did Alvin Hansen\'s "secular stagnation" thesis argue?',
+    options: [
+      'Economies grow forever',
+      'Mature economies tend toward stagnation as investment opportunities dry up',
+      'Capitalism always succeeds',
+      'Government should shrink',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Hansen argued that mature economies tend toward stagnation because investment opportunities dry up as population growth slows. Though his conclusions were flawed, his recognition that equilibrium models miss important dynamics was valuable.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What Austrian view sees the market as a process of discovery and coordination, not a state of equilibrium?',
+    options: [
+      'Static analysis',
+      'Process view',
+      'Equilibrium theory',
+      'Steady state model',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Austrian view sees the market as a process—a dynamic activity of discovery and coordination—rather than a static state of equilibrium where all is known and settled.',
+  },
+];

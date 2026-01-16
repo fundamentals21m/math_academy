@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section07Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the common objection that praxeological propositions are mere tautologies?',
+    options: [
+      'They are too complex',
+      'They are true by definition but devoid of empirical content',
+      'They contradict each other',
+      'They require too much math',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Critics claim that praxeological propositions are mere tautologies—true by definition but telling us nothing about the real world. The response is that the action axiom is a statement about reality, not an arbitrary definition.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why does the Popperian falsifiability criterion not apply to praxeology?',
+    options: [
+      'Popper was wrong about everything',
+      'The criterion was developed for natural sciences where controlled experiments are possible',
+      'Praxeology is not a science',
+      'Falsification is too expensive',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Popperian criterion was developed for natural sciences where controlled experiments are possible. In social sciences, where controlled experiments are impossible and "other things" are never equal, a different criterion of validity is required.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the status of subsidiary axioms like "labor has disutility"?',
+    options: [
+      'They are purely logical truths',
+      'They are empirical in origin but so broadly true as to be beyond serious doubt',
+      'They are mathematical theorems',
+      'They are government regulations',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The subsidiary axioms are empirical in origin but so broadly true as to be beyond serious doubt. It would be difficult to imagine a world where labor was not irksome or where there was no variety of resources.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'How are qualitative economic laws relevant to policy?',
+    options: [
+      'They are not relevant at all',
+      'Knowing that price controls cause shortages tells legislators their policy will be counterproductive',
+      'They only matter for academic debates',
+      'They require exact numerical predictions',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Qualitative laws are highly relevant. Knowing that price controls cause shortages tells the legislator that if he enacts controls, shortages will result. He need not know the exact magnitude to know the policy will be counterproductive.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'How can history test the application of economic theory?',
+    options: [
+      'By proving economic laws false',
+      'By checking if predictions about specific events were consistent with the facts',
+      'History cannot test anything',
+      'By replacing theory entirely',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The historian can check whether his application of theory is consistent with facts. If he predicts a shortage from controls and none occurs, he must reconsider whether controls were effective or countervailing factors were at work.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What term describes the criticism that praxeology refuses to consider evidence or argument (which is a mischaracterization)?',
+    options: [
+      'Empiricism',
+      'Dogmatism',
+      'Rationalism',
+      'Skepticism',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Critics confuse apriorism with dogmatism—the refusal to consider evidence or argument. But Austrians are open to argument; they simply deny that fundamental principles can be established or refuted by statistical analysis.',
+  },
+];

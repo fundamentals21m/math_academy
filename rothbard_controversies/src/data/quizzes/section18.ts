@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section18Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the "statist bias" in mainstream economics?',
+    options: [
+      'Bias toward statistics',
+      'The assumption that government intervention is necessary to correct market failures',
+      'Preference for state universities',
+      'Bias toward historical analysis',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Mainstream economics has developed a pronounced statist bias—assuming that government intervention is necessary to correct "market failures" and that the burden of proof lies on defenders of the free market.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why do economists often have a material interest in expanding government?',
+    options: [
+      'They are paid by taxpayers',
+      'Recommending intervention creates demand for their services as advisors and planners',
+      'They own government bonds',
+      'They work for state universities only',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Economists who recommend government intervention create demand for their own services as advisors, planners, and technocrats. The growth of government has accompanied the growth of the economics profession.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is often missing from mainstream analysis of "market failure"?',
+    options: [
+      'Mathematical rigor',
+      'Discussion of "government failure"—the systematic tendency of intervention to produce unintended consequences',
+      'Statistical data',
+      'International comparisons',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'What is rarely discussed is "government failure"—the systematic tendency of government intervention to produce unintended consequences, serve special interests, and create more problems than it solves.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What did the Keynesian revolution provide for economists?',
+    options: [
+      'Lower salaries',
+      'An intellectual rationale for deficit spending that made economists in demand as advisors',
+      'Jobs in the private sector',
+      'Academic independence',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Keynes provided an intellectual rationale for deficit spending and government management. Economists who adopted Keynesianism found themselves in demand as advisors to presidents and prime ministers.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What did free-market economists like Mises and Hayek experience professionally?',
+    options: [
+      'Immediate success and recognition',
+      'Academic hostility and marginalization throughout their careers',
+      'Government positions',
+      'Early retirement',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Mises and Hayek paid a professional price for defending free markets. They were denied prestigious positions and ignored by mainstream journals. Their vindication came only after decades of struggle.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What era saw economics transform from a defense of laissez-faire to a justification of intervention?',
+    options: [
+      'Gilded Age',
+      'Progressive Era',
+      'New Deal Era',
+      'Post-War Era',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The transformation occurred during the Progressive Era of the late nineteenth and early twentieth centuries. Economists like Richard T. Ely openly advocated socialism and helped create the modern academic establishment.',
+  },
+];

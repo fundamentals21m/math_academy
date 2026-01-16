@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section41Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is fractional reserve banking?',
+    options: [
+      'Banking for fractions of society',
+      'Banks holding only a fraction of deposits as reserves while lending the rest',
+      'Dividing banks into fractions',
+      'Partial banking services',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Fractional reserve banking means banks hold only a fraction of deposits as reserves, lending out the rest. If everyone tried to withdraw at once, banks couldn\'t pay—they don\'t have the money.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'How does fractional reserve banking create money?',
+    options: [
+      'By printing currency',
+      'Loans create new deposits, which can be loaned again, multiplying the money supply',
+      'By mining gold',
+      'By government order',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'When banks lend, they create new deposits. These deposits can be withdrawn and deposited elsewhere, enabling more loans. This process multiplies the money supply beyond the original reserves.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is a "bank run"?',
+    options: [
+      'A race between banks',
+      'Depositors rushing to withdraw funds when they fear the bank cannot pay',
+      'A bank closing for the day',
+      'A new branch opening',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A bank run occurs when depositors rush to withdraw, fearing the bank cannot pay. Under fractional reserves, banks can\'t pay everyone simultaneously—they\'ve lent out the deposits.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Why is fractional reserve banking criticized by some Austrians?',
+    options: [
+      'It is too profitable',
+      'It creates money from nothing, potentially constituting fraud and causing business cycles',
+      'It is too safe',
+      'It reduces bank profits',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Some Austrians argue fractional reserves are fraudulent—banks promise to pay on demand money they don\'t have. This credit expansion also distorts interest rates and causes business cycles.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is 100% reserve banking?',
+    options: [
+      'Banking only for the wealthy',
+      'Banks holding all deposits in reserve, lending only from time deposits',
+      'Government-owned banking',
+      'Banking with 100% profits',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '100% reserve banking means banks keep all demand deposits in reserve. They can only lend from time deposits where depositors explicitly agree to lock up funds. Some Austrians advocate this system.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What event occurs when depositors panic and rush to withdraw their money from a bank?',
+    options: [
+      'Bank holiday',
+      'Bank run',
+      'Bank merger',
+      'Bank audit',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A bank run occurs when depositors lose confidence and rush to withdraw. Under fractional reserves, this can cause bank failures since banks don\'t hold enough reserves for all depositors.',
+  },
+];

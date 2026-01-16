@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section48Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the most common methodological criticism of Austrian economics?',
+    options: [
+      'It uses too much mathematics',
+      'It is not empirically testable due to its reliance on praxeological deduction',
+      'It is too complex',
+      'It uses too many experiments',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Critics argue that Austrian reliance on deduction from the action axiom makes the theory unfalsifiable. If conclusions follow logically from axioms, empirical evidence cannot refute them.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is the Austrian response to the empiricism critique?',
+    options: [
+      'Economics should use experiments',
+      'Economic laws are true by their nature; empirical testing tests auxiliary conditions, not the laws themselves',
+      'The critique is completely valid',
+      'Austrians reject all evidence',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Austrians argue that praxeological laws are necessarily true. Empirical "tests" actually test whether auxiliary conditions (ceteris paribus) held. Apparent disconfirmation indicates other factors intervened.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why do mainstream economists criticize Austrian rejection of econometrics?',
+    options: [
+      'Econometrics is easy',
+      'Without quantitative testing, they argue, economics becomes mere ideology',
+      'Econometrics is cheap',
+      'Everyone agrees with Austrians',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Mainstream critics argue that without empirical testing and quantification, Austrian economics cannot distinguish truth from ideology. Science requires testable predictions.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the Austrian critique of econometric methods?',
+    options: [
+      'Math is too hard',
+      'Economic data does not satisfy the conditions for valid statistical inference',
+      'Computers are unreliable',
+      'Data collection is impossible',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Austrians argue that economic data does not satisfy conditions for valid statistical inference—no controlled experiments, no constant parameters, no independent observations. Econometric "tests" are unreliable.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'How do Austrians respond to charges that their method is "unscientific"?',
+    options: [
+      'They accept the charge',
+      'They argue that aping natural science methods is inappropriate for studying human action',
+      'They use more mathematics',
+      'They conduct experiments',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Austrians argue that human action differs fundamentally from natural phenomena. Trying to apply natural science methods to economics is inappropriate—a different methodology is required.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What mainstream economic approach do Austrians criticize for inappropriately applying natural science methods to economics?',
+    options: [
+      'Microeconomics',
+      'Econometrics',
+      'Game theory',
+      'Macroeconomics',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Austrians criticize econometrics for trying to apply statistical methods appropriate to controlled experiments to economic data that lacks the required properties.',
+  },
+];

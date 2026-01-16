@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section17Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What was the original assumption of welfare economics that was later discredited?',
+    options: [
+      'Markets always fail',
+      'Utility could be measured and compared across individuals',
+      'Government always succeeds',
+      'Prices are fixed',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The original welfare economists assumed that utility could be measured and compared across individuals, allowing them to make policy recommendations based on maximizing total utility.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why can\'t utilities be aggregated across individuals?',
+    options: [
+      'Math is too hard',
+      'Utility is ordinal, not cardinal—we cannot measure or add subjective utilities',
+      'People lie about preferences',
+      'Government prevents it',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Utility is ordinal, not cardinal. We can say Jones prefers A to B, but not that his preference is twice as strong. We cannot add or compare the subjective utilities of different individuals.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the Kaldor-Hicks compensation principle?',
+    options: [
+      'Everyone must be compensated',
+      'A change is desirable if winners could compensate losers and still be better off, even without actual compensation',
+      'Losers should compensate winners',
+      'No compensation is ever needed',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Kaldor-Hicks principle says a change is desirable if winners could compensate losers and still be better off—even if no compensation actually occurs. This hypothetical compensation supposedly avoids interpersonal comparisons.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the Austrian alternative to mainstream welfare economics?',
+    options: [
+      'Cost-benefit analysis',
+      'Demonstrated preference through voluntary exchange—the only unambiguous welfare improvement',
+      'Government surveys',
+      'Mathematical optimization',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Austrian approach uses "demonstrated preference"—when parties voluntarily exchange, we can say with confidence both expect to benefit. Voluntary exchange is the only unambiguous welfare improvement.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Why can\'t government intervention be scientifically shown to improve welfare?',
+    options: [
+      'Government is always wrong',
+      'Every intervention benefits some at the expense of others; we cannot scientifically compare gains and losses',
+      'Science doesn\'t apply to government',
+      'Welfare is irrelevant',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Every intervention benefits some at the expense of others; we cannot scientifically compare the gains and losses. And intervention replaces voluntary exchange with coercion—we cannot assume the coerced parties benefit.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What Austrian approach observes that parties chose to trade, demonstrating they preferred trading to not trading?',
+    options: [
+      'Revealed utility',
+      'Demonstrated preference',
+      'Measured satisfaction',
+      'Calculated welfare',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The "demonstrated preference" approach avoids measuring utilities. We simply observe that parties chose to trade, which demonstrates they preferred trading to not trading.',
+  },
+];

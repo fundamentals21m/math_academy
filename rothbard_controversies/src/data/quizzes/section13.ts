@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section13Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What does Pareto efficiency mean?',
+    options: [
+      'Maximum production at minimum cost',
+      'No one can be made better off without making someone else worse off',
+      'Perfect competition',
+      'Government-optimal allocation',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A Pareto-efficient arrangement is one where no rearrangement of resources could make some people better off without making others worse off.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why is efficiency problematic as a sole criterion for evaluating economic arrangements?',
+    options: [
+      'It\'s too hard to measure',
+      'Many arrangements are Pareto efficient, including very unequal ones',
+      'It only applies to markets',
+      'Politicians don\'t understand it',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Many arrangements are Pareto efficient; the criterion cannot tell us which to prefer. A world where one person owned everything could be Pareto efficient. Questions of justice and distribution cannot be subsumed under efficiency.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What do Austrian economists emphasize about the market compared to static efficiency?',
+    options: [
+      'Mathematical optimization',
+      'The market is a dynamic process of discovery and adaptation',
+      'Equilibrium states',
+      'Government planning',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Austrian economists emphasize that the market is a dynamic process of discovery and adaptation, not a static equilibrium. The relevant question is whether the market tends to correct errors and adapt to change.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What deeper problem arises when efficiency analysis takes the existing property distribution as given?',
+    options: [
+      'Math becomes too complex',
+      'The existing distribution may be the product of past injustice',
+      'Prices are unstable',
+      'Government cannot intervene',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'If property was acquired through theft or fraud, then the "efficient" allocation based on that distribution has no moral standing. Efficiency cannot serve as a foundation without a prior theory of just property.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is the deepest problem with efficiency as a criterion?',
+    options: [
+      'It ignores money',
+      'It ignores freedom—an arrangement might be efficient while severely restricting liberty',
+      'It\'s too complicated',
+      'It ignores technology',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The deepest problem is that efficiency ignores freedom. A well-managed slave plantation might be efficient. The market is valuable primarily because it respects individual freedom, not because it is efficient.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What are the proper criteria for evaluating economic arrangements, according to the Austrian view?',
+    options: [
+      'Efficiency and growth',
+      'Justice and liberty',
+      'Equality and stability',
+      'Democracy and consensus',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The proper criteria are justice and liberty. A just economy respects property rights; a free economy allows individuals to pursue their own goals without coercive interference.',
+  },
+];

@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section16Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What characterizes the Kirznerian entrepreneur?',
+    options: [
+      'Mathematical optimization',
+      'Alertness—the ability to notice profit opportunities others have overlooked',
+      'Perfect information',
+      'Government connections',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'For Kirzner, the entrepreneur is characterized by alertness—the ability to notice profit opportunities that others have overlooked. The entrepreneur discovers rather than creates opportunities.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'How does Kirzner\'s entrepreneur move the market toward coordination?',
+    options: [
+      'By lobbying government',
+      'By noticing price discrepancies and acting on them, eliminating the discrepancies',
+      'By controlling supply',
+      'By advertising',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The entrepreneur notices discrepancies between buying and selling prices. By acting on this discovery, he eliminates the discrepancy and moves prices toward their equilibrium values.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'How does Kirzner\'s view of entrepreneurship differ from Schumpeter\'s?',
+    options: [
+      'Kirzner sees entrepreneurship as equilibrating; Schumpeter sees it as disrupting equilibrium',
+      'They are identical',
+      'Schumpeter focuses on alertness',
+      'Kirzner emphasizes innovation more',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Kirzner sees entrepreneurship as equilibrating—moving the market toward coordination by eliminating profit opportunities. Schumpeter sees the entrepreneur as a disruptor who destroys equilibrium through innovation.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'According to Kirzner, where does profit come from?',
+    options: [
+      'Exploitation of workers',
+      'The correction of previous errors that created opportunities',
+      'Government subsidies',
+      'Monopoly power',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Kirznerian profit arises from the correction of previous errors. If markets were in equilibrium, there would be no profits. Profits exist because markets are out of equilibrium.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is "pure profit" in Kirzner\'s theory?',
+    options: [
+      'Profit after taxes',
+      'Profit requiring no prior ownership of resources—only alertness',
+      'Maximum possible profit',
+      'Profit from monopoly',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Kirznerian pure profit requires no prior ownership of resources. Anyone who notices an opportunity can profit by acting on it. The entrepreneur needs only alertness, not capital (though he may need to obtain capital).',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What is the key entrepreneurial capacity that Kirzner emphasizes—the propensity to notice what has gone unnoticed?',
+    options: [
+      'Risk tolerance',
+      'Alertness',
+      'Capital access',
+      'Technical skill',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Alertness is central to Kirzner\'s theory—the propensity to notice what has gone unnoticed. Everyone has access to the same information, but only the alert entrepreneur notices the profit opportunity.',
+  },
+];

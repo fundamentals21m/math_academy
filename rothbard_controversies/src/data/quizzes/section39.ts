@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section39Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is fiat money?',
+    options: [
+      'Money made by car companies',
+      'Money by government decree with no commodity backing',
+      'Foreign currency',
+      'Digital money only',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Fiat money is money by government decree (fiat means "let it be done"). It has no commodity backing—its value comes from legal tender laws and acceptability, not from any physical commodity.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why is fiat money problematic according to Austrian economics?',
+    options: [
+      'It is too heavy',
+      'It gives government unlimited power to inflate and transfer wealth',
+      'It is difficult to counterfeit',
+      'It wears out too quickly',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Fiat money gives government unlimited power to create money, inflating the supply and transferring wealth from money-holders to government and early recipients of new money.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the "inflation tax"?',
+    options: [
+      'A formal tax on rising prices',
+      'Government appropriating resources by creating new money that dilutes existing money\'s value',
+      'A tax to fight inflation',
+      'A tax on imported goods',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The inflation tax is how government appropriates resources by creating new money. Existing money loses value, transferring purchasing power to those who receive new money first—primarily the government.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What are "legal tender laws"?',
+    options: [
+      'Laws about contracts',
+      'Laws requiring acceptance of government money for all debts',
+      'Laws about banking',
+      'International trade laws',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Legal tender laws require acceptance of government-issued money for all debts. They prevent competition from other moneys and force people to use potentially inflating government currency.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What historical pattern typically follows the adoption of fiat money?',
+    options: [
+      'Price stability',
+      'Eventual inflation and often currency collapse',
+      'Economic growth',
+      'Reduced government',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'History shows that fiat currencies tend toward inflation. Without the discipline of commodity backing, the temptation to create money is irresistible. Many fiat currencies have eventually collapsed.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What Latin word meaning "let it be done" describes money created by government decree?',
+    options: [
+      'Caveat',
+      'Fiat',
+      'Veto',
+      'Carpe',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Fiat comes from Latin meaning "let it be done." Fiat money has value by government decree rather than from any underlying commodity.',
+  },
+];

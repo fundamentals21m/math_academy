@@ -1,0 +1,83 @@
+import type { QuizQuestion } from './types';
+
+export const section09Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'When was Carl Menger\'s founding work of the Austrian School published?',
+    options: ['1848', '1871', '1912', '1936'],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Carl Menger\'s Grundsätze der Volkswirtschaftslehre (Principles of Economics), published in 1871, is conventionally dated as the founding of the Austrian School.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What group of Spanish thinkers developed early ideas about subjective value?',
+    options: [
+      'The Madrid Circle',
+      'The late Spanish Scholastics of Salamanca',
+      'The Barcelona School',
+      'The Spanish Empiricists',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The late Spanish Scholastics of the sixteenth and seventeenth centuries, centered at the University of Salamanca, developed many ideas central to Austrian economics, including the subjective theory of value.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What important economic insight is attributed to Richard Cantillon?',
+    options: [
+      'The labor theory of value',
+      'New money enters the economy at specific points, enriching some before others',
+      'The gold standard theory',
+      'Perfect competition theory',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cantillon showed that new money does not enter the economy uniformly but at specific points, enriching some before others. This "Cantillon effect" was later developed in Austrian business cycle theory.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'How did the Ricardian school represent a "detour" from sound economics?',
+    options: [
+      'It rejected all mathematics',
+      'Its emphasis on the labor theory of value led economics toward Marx',
+      'It ignored international trade',
+      'It was too Austrian',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Ricardo\'s emphasis on objective costs and the labor theory of value led economics in a direction that culminated in Marx. The Austrians corrected this "Ricardian detour."',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What did Menger explain about the origin of money?',
+    options: [
+      'Government created money by decree',
+      'Money arose through social contract',
+      'Money emerged spontaneously as traders discovered certain goods were more widely accepted',
+      'Money was invented by banks',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Menger developed a theory of money as a spontaneous institution, emerging from the rational actions of traders who discovered certain commodities were more "saleable" than others.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What French economist anticipated the praxeologist\'s view that historical and statistical data are themselves complex facts needing explanation?',
+    options: [
+      'Frédéric Bastiat',
+      'Jean-Baptiste Say',
+      'Turgot',
+      'François Quesnay',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Jean-Baptiste Say anticipated that statistics need to be explained: "The study of statistics may gratify curiosity, but it can never be productive of advantage when it does not indicate the origin and consequences of the facts."',
+  },
+];

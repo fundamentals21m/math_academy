@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section08Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is hermeneutics?',
+    options: [
+      'A branch of mathematics',
+      'The art and theory of interpretation',
+      'A type of economic planning',
+      'A statistical method',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Hermeneutics is the art and theory of interpretation, originally developed for interpreting texts (especially biblical and legal) and extended to all human phenomena.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What problematic claim does radical hermeneutics make about interpretation?',
+    options: [
+      'Interpretation is too easy',
+      'Every interpretation reflects the interpreter\'s perspective; there is no objective truth',
+      'Only experts can interpret texts',
+      'Interpretation requires government approval',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Modern hermeneutics emphasizes that all understanding involves a "fusion of horizons"—the interpreter brings his own preconceptions. Radical hermeneutics denies that there is a single, objectively correct interpretation.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the fundamental difference between praxeology and radical hermeneutics?',
+    options: [
+      'Praxeology uses more math',
+      'Praxeology holds that objective truths about human action can be known through reason',
+      'Hermeneutics is newer',
+      'They are actually the same',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Praxeology holds that there are objective truths about human action knowable through reason. Hermeneutics, in its radical form, denies the possibility of such objective knowledge.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Why is the denial of objective truth self-refuting?',
+    options: [
+      'It is too complicated',
+      'The claim that all claims are perspectival is itself merely perspectival',
+      'No one believes it',
+      'It requires too much evidence',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'If all claims are merely perspectival, then the claim that all claims are perspectival is itself merely perspectival. The hermeneuticist cannot consistently maintain his position.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What are the political implications of the hermeneutical attack on objective economic knowledge?',
+    options: [
+      'More freedom',
+      'If laws of supply and demand are mere ideology, the state can override them',
+      'Better economic planning',
+      'More scientific economics',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'If the laws of supply and demand are not objective truths but bourgeois ideology, the state can override them without compunction. The attack on objective knowledge is an attack on the intellectual foundations of a free society.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What philosophical position holds that reality exists independently of our interpretations and that some interpretations capture it better than others?',
+    options: [
+      'Idealism',
+      'Realism',
+      'Relativism',
+      'Constructivism',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The realist holds that there is a reality independent of our interpretations and that some interpretations correspond more closely to reality. This is the position presupposed by both everyday life and science.',
+  },
+];

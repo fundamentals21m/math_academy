@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section50Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What internal debates exist within Austrian economics?',
+    options: [
+      'There are no debates',
+      'Debates over fractional reserve banking, intellectual property, and methodology',
+      'All Austrians agree on everything',
+      'Debates only with outsiders',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Austrian economists debate among themselves about fractional reserve banking (fraud or legitimate?), intellectual property (valid or not?), and methodological questions about the role of empirical work.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is the debate about fractional reserve banking within Austrian circles?',
+    options: [
+      'All agree it is good',
+      'Some see it as fraud, others as legitimate banking that emerges in free markets',
+      'All agree it should be banned',
+      'No Austrian discusses banking',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Some Austrians (following Rothbard) see fractional reserves as fraudulent—banks promise to pay on demand money they don\'t have. Others (following Selgin) see it as legitimate free banking.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'How do Austrians differ on intellectual property?',
+    options: [
+      'All support strong IP',
+      'Some see it as legitimate property, others as government-granted monopoly inconsistent with property rights',
+      'All oppose IP',
+      'IP is not discussed',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Some Austrians defend IP as property in one\'s creations. Others (following Kinsella) argue IP is government-granted monopoly that restricts use of one\'s physical property and is inconsistent with libertarian principles.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the methodological divide between "Misesians" and "Hayekians"?',
+    options: [
+      'There is no divide',
+      'Misesians emphasize pure deduction; Hayekians are more open to empirical and evolutionary analysis',
+      'Hayekians reject praxeology completely',
+      'Misesians use econometrics',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Misesians strictly follow praxeological deduction from the action axiom. Hayekians are more open to empirical work, evolutionary analysis, and engagement with other schools. Both remain distinctively Austrian.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Why are these internal debates healthy for Austrian economics?',
+    options: [
+      'They cause confusion',
+      'They show the school is intellectually active and not dogmatic',
+      'They weaken the school',
+      'They should be suppressed',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Internal debates show intellectual vitality. A school that permits no dissent becomes dogmatic. These debates clarify issues and allow the best arguments to emerge through scholarly exchange.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What controversial practice do some Austrians see as fraud while others see as legitimate free banking?',
+    options: [
+      'Central banking',
+      'Fractional reserve banking',
+      'Investment banking',
+      'Retail banking',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Fractional reserve banking divides Austrians. Some see it as fraud (promising to pay on demand what you don\'t have); others see it as legitimate banking that would emerge in free markets.',
+  },
+];

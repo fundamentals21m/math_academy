@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section22Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Why are government statistics not objective facts?',
+    options: [
+      'They use wrong formulas',
+      'They are constructed by agencies with interests and biases in measurement choices',
+      'Computers make errors',
+      'Data is too old',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Every statistic involves choices: what to measure, how to measure it, what to include and exclude. These choices have political implications, and the range of defensible choices is wide.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'How do official unemployment definitions tend to affect the measured rate?',
+    options: [
+      'They overstate unemployment',
+      'They understate unemployment by excluding discouraged workers and part-timers',
+      'They are perfectly accurate',
+      'They have no effect',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Definitions systematically understate joblessness. Only those actively looking count as unemployed. Discouraged workers and part-timers wanting full-time work are excluded from the official rate.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What are "hedonic adjustments" in the CPI?',
+    options: [
+      'Adjustments for happiness',
+      'Adjustments that reduce measured inflation by accounting for quality improvements',
+      'Seasonal adjustments',
+      'International comparisons',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Hedonic adjustments account for quality improvements. If a computer is faster than last year\'s, its price increase is adjusted downward. These adjustments systematically reduce measured inflation.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is a fundamental problem with GDP as a measure of economic performance?',
+    options: [
+      'It\'s calculated incorrectly',
+      'It includes government spending at cost, assuming services are worth what they cost',
+      'It excludes imports',
+      'It only measures services',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'GDP includes government spending at cost, assuming that government services are worth what was spent on them. It also excludes household production and underground activity, and counts disaster cleanup as positive.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What would be an alternative to government monopoly on statistics?',
+    options: [
+      'No statistics at all',
+      'Private organizations producing competing measures with competitive pressures for accuracy',
+      'International agencies only',
+      'Academic institutions only',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Private organizations can collect economic data. A market in statistics would produce competing measures, each with its own methodology. Users could choose based on track records and transparency.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What type of tax does inflation represent—extracting resources while costs fall on money holders?',
+    options: [
+      'Progressive tax',
+      'Hidden tax',
+      'Flat tax',
+      'Excise tax',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Inflation is a hidden tax. By inflating the money supply, the state can extract resources from the economy while the costs fall on all who hold money—stealthily and politically conveniently.',
+  },
+];

@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section25Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the incidence of a tax?',
+    options: [
+      'The legal entity responsible for filing',
+      'The economic burden—who actually bears the cost',
+      'The tax rate',
+      'The collection method',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Tax incidence refers to who actually bears the economic burden. The legal incidence (who writes the check) often differs from the economic incidence (who bears the cost through reduced wages, higher prices, etc.).',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What determines how much of a tax burden is shifted forward to consumers?',
+    options: [
+      'Government policy',
+      'Elasticity of supply and demand',
+      'Tax collector preferences',
+      'Company size',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The ability to shift taxes forward depends on supply and demand elasticity. If demand is inelastic, more of the tax burden can be shifted to consumers. If demand is elastic, producers bear more of the burden.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why is the corporate income tax particularly harmful?',
+    options: [
+      'It is too low',
+      'It falls on capital investment, reducing future productivity',
+      'It is too easy to collect',
+      'Only large corporations pay it',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The corporate income tax falls on capital investment. By reducing the return to investment, it discourages capital formation, reducing future productivity and wages.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the "deadweight loss" of taxation?',
+    options: [
+      'The cost of tax collection',
+      'The value of transactions prevented by the tax that would have benefited both parties',
+      'The amount sent to government',
+      'Administrative overhead',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Deadweight loss is the value of transactions that would have benefited both buyer and seller but are prevented by the tax. This is a pure loss to society—it doesn\'t go to the government or anyone else.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What happens when taxes are levied on factors of production?',
+    options: [
+      'Only owners bear the burden',
+      'Factors become less productive, reducing output available to everyone',
+      'Workers benefit',
+      'Production increases',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Taxes on factors of production make them less productive. The reduced output harms not just the factor owners but all consumers who would have benefited from the production.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What economic term describes the value of mutually beneficial exchanges that never happen due to taxation?',
+    options: [
+      'Opportunity cost',
+      'Deadweight loss',
+      'Marginal utility',
+      'Consumer surplus',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Deadweight loss represents the economic value destroyed by taxation—transactions that would have benefited both parties but are prevented by the tax distortion.',
+  },
+];

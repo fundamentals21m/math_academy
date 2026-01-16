@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section40Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is a central bank?',
+    options: [
+      'A bank located in the center of a city',
+      'A government-controlled institution with monopoly power over money creation',
+      'Any large bank',
+      'A bank that holds deposits only',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A central bank is a government institution with monopoly power over money creation, banking regulation, and serving as lender of last resort. Examples include the Federal Reserve and European Central Bank.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why do Austrian economists criticize central banking?',
+    options: [
+      'Central bankers are incompetent',
+      'Central planning of money faces the same knowledge problems as central planning of the economy',
+      'Interest rates should be higher',
+      'Banks should not exist',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Central banking is central planning applied to money. Just as socialist planners cannot know correct prices for goods, central bankers cannot know the "correct" interest rate or money supply.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is "monetary policy"?',
+    options: [
+      'Minting coins',
+      'Central bank decisions about money supply and interest rates',
+      'Currency design',
+      'Banking regulations only',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Monetary policy refers to central bank decisions about money supply and interest rates. These decisions affect the entire economy but are made by a small group of appointed officials.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the "lender of last resort" function?',
+    options: [
+      'Lending to individuals',
+      'Central banks providing emergency loans to banks facing liquidity crises',
+      'International lending',
+      'Personal lending limits',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The lender of last resort provides emergency loans to banks. Austrian critics argue this creates moral hazard—banks take more risks knowing the central bank will bail them out.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is the Austrian alternative to central banking?',
+    options: [
+      'More central banks',
+      'Free banking—competitive money creation without government monopoly',
+      'No money at all',
+      'International central bank',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Austrians advocate free banking—allowing private banks to issue their own currencies backed by commodities, subject to competition and market discipline rather than government monopoly.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What is the name of the central bank of the United States?',
+    options: [
+      'Bank of America',
+      'Federal Reserve',
+      'Treasury Department',
+      'National Bank',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Federal Reserve (the Fed) is the central bank of the United States, established in 1913. It controls U.S. monetary policy.',
+  },
+];

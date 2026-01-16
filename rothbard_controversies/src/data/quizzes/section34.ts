@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section34Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What does free trade mean in the Austrian context?',
+    options: [
+      'Government-managed trade agreements',
+      'Absence of government barriers to voluntary exchange across borders',
+      'Trade without money',
+      'Trade only between allies',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Free trade means the absence of government barriers—tariffs, quotas, regulations—to voluntary exchange across borders. Individuals freely choose with whom to trade.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is the relationship between free trade and peace?',
+    options: [
+      'No relationship',
+      'Trade creates mutual interdependence that makes war more costly',
+      'Trade causes conflict',
+      'Only military alliances matter',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Trade creates mutual interdependence. When countries trade, war becomes more costly—you would be destroying your own customers and suppliers. Free trade promotes peace; protectionism increases tensions.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Is unilateral free trade advisable according to Austrian economists?',
+    options: [
+      'No, only reciprocal deals benefit',
+      'Yes—a country benefits from free imports regardless of what others do',
+      'Only in theory',
+      'Never',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Austrian economists support unilateral free trade. A country benefits from lower import prices regardless of what others do. Waiting for reciprocity punishes your own consumers to spite foreign governments.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the "balance of trade" fallacy?',
+    options: [
+      'Trade balances are very accurate',
+      'Believing that exports are gains and imports are losses, when actually imports are what we want',
+      'Trade is always balanced',
+      'Balance of trade doesn\'t exist',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The fallacy is treating exports as gains and imports as losses. Actually, imports are what we want—the goods that improve our lives. Exports are the cost we pay to get them.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'According to Rothbard, what should be the role of trade agreements between governments?',
+    options: [
+      'They should manage all trade',
+      'They are unnecessary—governments should simply not restrict trade',
+      'They should be expanded',
+      'They should focus on tariff increases',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'From the libertarian view, trade agreements between governments are unnecessary. Governments should simply not restrict trade. "Agreements" often include managed trade, harmonization, and other interventions.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What policy allows individuals to trade across borders without government barriers?',
+    options: [
+      'Protectionism',
+      'Free trade',
+      'Mercantilism',
+      'Autarky',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Free trade means the absence of tariffs, quotas, and other government barriers to voluntary international exchange.',
+  },
+];

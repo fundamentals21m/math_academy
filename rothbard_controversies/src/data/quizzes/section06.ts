@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section06Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What does "a priori" mean in the context of praxeology?',
+    options: [
+      'Before lunch',
+      'Known through reason rather than empirical testing',
+      'First in a sequence',
+      'Most important',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A priori means established by reflecting on the nature of action—truths known through reason that yield universally and necessarily valid conclusions, not requiring empirical verification.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why is the action axiom self-evident?',
+    options: [
+      'Everyone agrees with it',
+      'It was proven in a laboratory',
+      'Each person knows directly through introspection that he acts purposively',
+      'The government declared it so',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The action axiom is self-evident because each person knows directly, through introspection, that he acts; that he has purposes; and that he employs means to achieve those purposes.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the character of praxeological conclusions?',
+    options: [
+      'Probable',
+      'Tentative',
+      'Apodictic (necessarily certain)',
+      'Hypothetical',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The conclusions of praxeology are apodictically certain—they cannot be otherwise. If the axiom is true and reasoning is valid, the conclusions must be true, like logic and mathematics.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the proper role of empirical data in Austrian economics?',
+    options: [
+      'To test and potentially refute economic theory',
+      'Data are raw material for economic history, not tests of economic theory',
+      'Data should replace all theory',
+      'Data should be ignored entirely',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Data are the raw material of economic history, not the test of economic theory. The economist uses theory to interpret data, to understand why prices rose or fell, not to test the laws themselves.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Why can\'t apparent counterexamples refute the law of demand?',
+    options: [
+      'The law of demand is not scientific',
+      'Each apparent counterexample can be explained by identifying the "other things" that were changing',
+      'No one has tried to find counterexamples',
+      'The law of demand is just a suggestion',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The law of demand is derived from the nature of action itself. What cannot be tested is the law itself—each apparent counterexample can be explained by identifying the "other things" that were changing.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What philosopher\'s term "synthetic a priori" characterizes praxeological propositions—known independently of testing yet telling us something substantial about reality?',
+    options: [
+      'Aristotle',
+      'Immanuel Kant',
+      'David Hume',
+      'John Locke',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Following Immanuel Kant, praxeological propositions are characterized as "synthetic a priori"—known a priori (independently of empirical testing) yet synthetic (telling us something substantial about reality).',
+  },
+];

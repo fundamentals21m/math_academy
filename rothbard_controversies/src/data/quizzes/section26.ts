@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section26Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What was the standard justification for progressive income taxation?',
+    options: [
+      'Simplicity of collection',
+      'Diminishing marginal utility of income—the rich value dollars less',
+      'Constitutional requirement',
+      'International standards',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Progressive taxation was justified by diminishing marginal utility—the claim that rich people value additional dollars less. Therefore taking from the rich supposedly causes less disutility than taking from the poor.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is the Austrian critique of interpersonal utility comparisons?',
+    options: [
+      'They are mathematically complex',
+      'They are scientifically meaningless—utility cannot be compared between individuals',
+      'They are politically biased',
+      'They are too expensive to calculate',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Utility is subjective and ordinal. There is no scientific basis for comparing one person\'s utility to another\'s. We cannot know how much a dollar means to the rich versus the poor.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'How does progressive taxation affect incentives?',
+    options: [
+      'It has no effect on behavior',
+      'It penalizes success—higher earnings face higher marginal rates, discouraging effort',
+      'It encourages saving',
+      'It reduces inequality without costs',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Progressive taxation penalizes success. Higher earnings face higher marginal rates, discouraging effort and risk-taking at the margin. The more you earn, the higher percentage the government takes.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is "bracket creep"?',
+    options: [
+      'Tax rates slowly increasing',
+      'Inflation pushing taxpayers into higher brackets with no real income increase',
+      'Government expanding tax categories',
+      'Filing deadlines moving earlier',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Bracket creep occurs when inflation pushes taxpayers into higher marginal brackets even though their real income hasn\'t increased. They pay more taxes without being better off.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What would be a more neutral form of income taxation?',
+    options: [
+      'Higher rates on the wealthy',
+      'A flat rate—the same percentage for everyone',
+      'No income tax at all',
+      'Rates based on occupation',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A flat tax—the same percentage for everyone—would be more neutral. However, Rothbard would argue that no income tax would be best, since all taxation involves taking property without consent.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What type of tax applies the same percentage rate to all income levels?',
+    options: [
+      'Progressive tax',
+      'Flat tax',
+      'Regressive tax',
+      'Excise tax',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A flat tax applies the same percentage to all income levels. Unlike progressive taxation, it doesn\'t create increasing marginal disincentives as income rises.',
+  },
+];

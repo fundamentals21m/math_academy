@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section43Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is inflation from the Austrian perspective?',
+    options: [
+      'Rising prices',
+      'An increase in the money supply',
+      'Economic growth',
+      'Currency appreciation',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Austrians define inflation as an increase in the money supply, not rising prices. Rising prices are a consequence of inflation. This definition focuses on the cause rather than the symptom.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Who benefits most from inflation?',
+    options: [
+      'Everyone equally',
+      'Those who receive new money first—government and banks',
+      'Those on fixed incomes',
+      'Savers',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Those who receive new money first—government, banks, well-connected businesses—benefit. They spend money before prices rise. By the time ordinary people receive it, prices have already increased.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the "Cantillon effect"?',
+    options: [
+      'A musical phenomenon',
+      'New money does not spread evenly—early recipients benefit at the expense of later recipients',
+      'A banking regulation',
+      'A type of inflation',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Cantillon effect, named after Richard Cantillon, describes how new money enters the economy at specific points and spreads unevenly. Early recipients gain; late recipients face higher prices.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Why do Austrians consider inflation a hidden tax?',
+    options: [
+      'It funds visible programs',
+      'It transfers purchasing power from money-holders to money-creators without explicit taxation',
+      'It increases tax revenue directly',
+      'It is transparent',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Inflation transfers purchasing power from all who hold money to those who create it. Unlike explicit taxes, victims don\'t see the transfer happening—their money simply buys less over time.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is hyperinflation?',
+    options: [
+      'Very stable prices',
+      'Extremely rapid inflation where money loses value faster than it can be spent',
+      'Deflation',
+      'Moderate price increases',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Hyperinflation is extremely rapid inflation—prices rise so fast that money becomes nearly worthless. Historical examples include Weimar Germany, Zimbabwe, and Venezuela.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What effect, named after an Irish economist, describes how new money benefits early recipients at the expense of later ones?',
+    options: [
+      'Keynesian effect',
+      'Cantillon effect',
+      'Monetarist effect',
+      'Austrian effect',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Cantillon effect, named after Richard Cantillon, explains that new money enters at specific points and benefits those closest to the source at the expense of those further away.',
+  },
+];

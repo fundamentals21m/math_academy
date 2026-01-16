@@ -1,0 +1,83 @@
+import type { QuizQuestion } from './types';
+
+export const section11Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is Mises\'s most famous contribution to economic theory?',
+    options: [
+      'The theory of perfect competition',
+      'The demonstration that economic calculation under socialism is impossible',
+      'The Phillips Curve',
+      'Supply-side economics',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Mises\'s most famous contribution is his demonstration that without private ownership of the means of production, there can be no market prices for capital goods, making rational economic calculation impossible under socialism.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'When did Mises first present his calculation argument against socialism?',
+    options: ['1900', '1920', '1936', '1949'],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Mises first presented his calculation argument in 1920. Though initially dismissed, the collapse of socialism in the late twentieth century vindicated him completely.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the Regression Theorem?',
+    options: [
+      'A statistical method',
+      'An explanation of how money\'s value today depends on its purchasing power yesterday, regressing to commodity use',
+      'A theory of economic decline',
+      'A mathematical formula for interest rates',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Regression Theorem solves the circularity in money\'s value by showing that demand for money today depends on purchasing power yesterday, regressing back to when the money commodity had only non-monetary use value.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What does the Austrian theory say happens when banks create money through lending?',
+    options: [
+      'It has no economic effect',
+      'It artificially lowers interest rates, leading to malinvestment',
+      'It always increases prosperity',
+      'It reduces inflation',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Credit expansion artificially lowers interest rates below their natural level, distorting the structure of production and leading to malinvestment. The boom must inevitably give way to a bust.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What happens with government intervention according to Mises\'s critique?',
+    options: [
+      'It always improves outcomes',
+      'It creates unintended consequences that lead to further intervention',
+      'It has neutral effects',
+      'It only affects prices',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Mises showed that intervention creates unintended consequences that seem to call for further intervention, in an escalating cycle that tends toward socialism. The only escape is to abandon intervention entirely.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'In what year did Mises publish his magnum opus "Human Action"?',
+    options: [
+      '1936',
+      '1949',
+      '1962',
+      '1971',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Mises published Human Action in 1949. It presents a comprehensive treatise on economics grounded in the a priori analysis of purposive human behavior.',
+  },
+];

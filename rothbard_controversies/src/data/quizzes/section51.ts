@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section51Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the lasting contribution of Austrian economics?',
+    options: [
+      'Mathematical models',
+      'Emphasis on subjective value, entrepreneurship, market process, and limits of central planning',
+      'Econometric methods',
+      'Support for government intervention',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Austrian economics\' lasting contributions include subjective value theory, entrepreneurship and market process analysis, understanding of spontaneous order, and demonstration of central planning\'s impossibility.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'How has Austrian economics influenced mainstream thought?',
+    options: [
+      'It has had no influence',
+      'Concepts like entrepreneurship, knowledge problems, and unintended consequences have entered mainstream discourse',
+      'Mainstream economics adopted praxeology',
+      'Austrians joined the mainstream',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'While remaining distinct, Austrian ideas have influenced mainstream economics. Entrepreneurship, knowledge problems, and unintended consequences are now widely discussed, though often without Austrian attribution.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What contemporary relevance does Austrian economics have?',
+    options: [
+      'None—it is obsolete',
+      'It offers insights into cryptocurrency, financial crises, and limits of monetary policy',
+      'Only historical interest',
+      'It has been fully integrated into mainstream economics',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Austrian economics offers insights into contemporary issues: cryptocurrency and monetary competition, understanding financial crises, critique of central bank policy, and analysis of regulatory failure.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Why does Austrian economics attract interest despite being outside the mainstream?',
+    options: [
+      'Superior mathematics',
+      'It offers explanations for phenomena—crises, policy failures—that mainstream models miss',
+      'Government funding',
+      'Popular culture',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Austrian economics attracts interest because it explains phenomena mainstream models miss. The 2008 crisis renewed interest—Austrians had warned about credit expansion while mainstream economists declared the problem solved.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is the ultimate message of Austrian economics about prosperity?',
+    options: [
+      'Government creates prosperity',
+      'Prosperity comes from voluntary exchange, sound money, and limited government',
+      'Prosperity is impossible',
+      'Prosperity requires central planning',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Austrian economics teaches that prosperity comes from voluntary exchange, secure property rights, sound money, and limited government. Central planning and intervention impoverish rather than enrich.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What emerging technology embodies Austrian ideas about monetary competition and decentralization?',
+    options: [
+      'Central bank digital currency',
+      'Cryptocurrency',
+      'Mobile banking',
+      'Electronic funds transfer',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Cryptocurrency embodies Austrian ideas about monetary competition, spontaneous order, and alternatives to central bank money. Bitcoin especially reflects Austrian concerns about inflation and central banking.',
+  },
+];

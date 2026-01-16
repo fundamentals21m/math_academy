@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section35Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is a quota?',
+    options: [
+      'A tax on imports',
+      'A government-imposed limit on the quantity of a good that can be imported',
+      'A trade agreement',
+      'A production target',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A quota is a quantitative limit on imports. Unlike tariffs, which allow unlimited imports at a higher price, quotas physically restrict the amount that can enter the country.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'How do quotas differ from tariffs in their effects?',
+    options: [
+      'They are identical',
+      'Quotas create rents for those holding import licenses instead of government revenue',
+      'Quotas benefit consumers more',
+      'Tariffs are more restrictive',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Quotas create rents for quota-holders rather than revenue for government. The difference between the low foreign price and high domestic price goes to those with import licenses rather than the treasury.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What are non-tariff barriers (NTBs)?',
+    options: [
+      'Language differences',
+      'Regulations, standards, and procedures that restrict imports without explicit tariffs',
+      'Geographic obstacles',
+      'Cultural preferences',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Non-tariff barriers include regulations, standards, licensing, and procedures that restrict imports without explicit tariffs. As tariffs have declined, NTBs have become more important forms of protection.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Why have non-tariff barriers proliferated as tariffs have declined?',
+    options: [
+      'Governments became more efficient',
+      'Protectionist interests use regulations as a substitute for tariffs',
+      'Consumers demanded them',
+      'International law required them',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'As tariffs were reduced through trade agreements, protectionist interests found other ways to restrict competition. Regulatory barriers are less transparent and easier to justify as serving non-trade purposes.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is a "voluntary export restraint"?',
+    options: [
+      'A company\'s choice not to export',
+      'Foreign governments limiting exports to avoid even more restrictive measures',
+      'A quality standard',
+      'An environmental regulation',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Voluntary export restraints are agreements where foreign governments limit exports to avoid tariffs or quotas. They are "voluntary" in name only—the alternative is worse restrictions.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What type of trade barrier limits the quantity of imports rather than taxing them?',
+    options: [
+      'Tariff',
+      'Quota',
+      'Subsidy',
+      'Embargo',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A quota directly limits the quantity of goods that can be imported, as opposed to a tariff which taxes them but allows unlimited quantity.',
+  },
+];

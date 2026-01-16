@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section03Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the fundamental axiom of praxeology?',
+    options: [
+      'All men are created equal',
+      'Individual human beings act—they have goals and employ means to achieve them',
+      'Supply equals demand in equilibrium',
+      'Markets are efficient',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The fundamental axiom of praxeology is that individual human beings act—that is, they have goals and purposes, and they employ means to try to attain these goals.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is the relationship between praxeology and psychology?',
+    options: [
+      'They are competing theories',
+      'Psychology replaces praxeology',
+      'Praxeology takes preferences as given; psychology studies why people adopt them',
+      'They are the same discipline',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Psychology studies how and why people adopt preferences; praxeology takes preferences as given and studies the formal implications of acting on those preferences. They are complementary.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is methodological individualism?',
+    options: [
+      'A theory that individuals are selfish',
+      'All social phenomena must ultimately be traced back to the actions of individuals',
+      'A belief that individuals should act alone',
+      'A statistical method focused on individuals',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Methodological individualism holds that all social phenomena must be traced back to individual actions. There is no "group mind" or "social forces" acting apart from individuals.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Why can\'t empiricism establish the universal laws that praxeology derives?',
+    options: [
+      'Empirical data is too expensive to collect',
+      'No number of observations can prove what men always do in all circumstances',
+      'Scientists disagree too much',
+      'Technology is insufficient',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'No number of observations can prove that men always prefer more of a good to less, or always seek to economize. These truths are grasped by understanding the nature of action itself, not by counting observations.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Which category is inherent in all human action?',
+    options: [
+      'Mathematical precision',
+      'Government approval',
+      'Time',
+      'Social cooperation',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Time is particularly important—every action aims at achieving a more satisfactory state in the future. Time is always a scarce resource that every actor must consider.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What term describes the a priori method of deriving true conclusions from a true axiom through valid logic?',
+    options: [
+      'Econometrics',
+      'Praxeology',
+      'Empiricism',
+      'Positivism',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Praxeology is the a priori science of human action. If the axiom is true and the logical deduction is valid, then the conclusions must also be true.',
+  },
+];

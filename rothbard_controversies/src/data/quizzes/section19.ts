@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section19Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'According to the Lockean theory, how do individuals acquire property?',
+    options: [
+      'Government grants it',
+      'By mixing their labor with unowned resources',
+      'Through inheritance only',
+      'By social contract',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The labor theory, associated with John Locke, holds that individuals acquire property by mixing their labor with natural resources. Each person owns his body and therefore his labor.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is the foundation of legitimate property according to the libertarian view?',
+    options: [
+      'Government decree',
+      'Self-ownership—each individual owns his own body',
+      'Social agreement',
+      'Utility maximization',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The most defensible theory of property begins with self-ownership. Each individual owns his own body and therefore owns his labor. From this foundation, all legitimate property can be derived.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is original appropriation?',
+    options: [
+      'Government seizure of property',
+      'The first and most basic way to acquire property by appropriating unowned resources',
+      'Buying property from others',
+      'Inheriting property',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Original appropriation is the first way to acquire property. The pioneer who clears land, the miner who extracts ore, the inventor who creates a new product—all acquire property by productive effort.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the difficult problem regarding property with "tainted" origins?',
+    options: [
+      'There is no problem',
+      'How to deal with property that passed through illegitimate hands when the chain of title is unclear',
+      'All property is legitimate',
+      'Only recent property matters',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Much property was originally acquired by conquest, theft, or fraud. Tracing the chain of title is often impossible. How to deal with property that has passed through illegitimate hands is one of the most difficult problems in justice theory.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Why is property essential to liberty according to this section?',
+    options: [
+      'It generates taxes',
+      'It defines a sphere of individual autonomy within which the individual is sovereign',
+      'It enables government',
+      'It simplifies law',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The right to property implies the right to use it as one sees fit, to exclude others, and to transfer it. These rights define a sphere of individual autonomy within which the individual is sovereign.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What type of exchange is itself a productive act where both parties gain by their own evaluation?',
+    options: [
+      'Coerced',
+      'Voluntary',
+      'Mandated',
+      'Regulated',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Voluntary exchange is itself a productive act—both parties gain by their own evaluation, or they would not trade. The chain of legitimate transfers traces back to original appropriation.',
+  },
+];

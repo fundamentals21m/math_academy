@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section28Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Why do land taxes have unique economic properties?',
+    options: [
+      'They are easier to collect',
+      'Land is fixed in supply—taxes cannot reduce the quantity available',
+      'They are always progressive',
+      'They affect all citizens equally',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Land is fixed in supply. Unlike labor or capital, taxing land cannot reduce the quantity available. This makes land taxes less distortionary than other taxes in terms of supply effects.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is the "single tax" movement associated with Henry George?',
+    options: [
+      'A tax on income only',
+      'A tax on land values as the sole source of government revenue',
+      'A consumption tax only',
+      'A payroll tax only',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Henry George advocated taxing land values as the sole source of government revenue. He argued that land value is created by the community, not the owner, so the community should recapture it.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the Rothbardian critique of Georgist land taxation?',
+    options: [
+      'It would raise too much revenue',
+      'It violates property rights—landowners have legitimate claims through homesteading',
+      'It is too difficult to implement',
+      'It would cause unemployment',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Rothbard argued that landowners acquire legitimate property rights through homesteading and voluntary exchange. Taxing land values violates these rights just as any other tax does.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is "capitalization" in the context of land taxes?',
+    options: [
+      'Converting land to capital',
+      'Future tax liabilities are reflected in lower current land prices',
+      'Investing in land improvements',
+      'Borrowing against land value',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Tax capitalization means that expected future taxes reduce the current value of land. When a land tax is imposed, land prices fall to reflect the present value of future tax payments.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'How do property taxes affect landowners versus tenants?',
+    options: [
+      'Only landowners bear the burden',
+      'Taxes may be partially shifted to tenants through higher rents, depending on market conditions',
+      'Only tenants bear the burden',
+      'Neither bears the burden',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The incidence of property taxes depends on market conditions. In competitive markets, taxes on land improvements may be shifted to tenants; taxes on pure land value typically fall on owners.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What economist is most associated with advocating a "single tax" on land values?',
+    options: [
+      'Adam Smith',
+      'Henry George',
+      'John Maynard Keynes',
+      'Milton Friedman',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Henry George (1839-1897) is famous for advocating a single tax on land values. His book "Progress and Poverty" popularized this idea.',
+  },
+];

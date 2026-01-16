@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section47Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the knowledge problem in central planning?',
+    options: [
+      'Planners lack education',
+      'The knowledge needed for economic decisions is dispersed and tacit—no planner can gather it',
+      'There are not enough books',
+      'Communication is too slow',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Hayek\'s knowledge problem shows that knowledge is dispersed among millions and often tacit—people know things they cannot articulate. No central authority can gather and process this knowledge.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is "tacit knowledge"?',
+    options: [
+      'Written instructions',
+      'Knowledge that cannot easily be articulated or transmitted—know-how gained through experience',
+      'Public information',
+      'Government data',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Tacit knowledge is know-how that cannot easily be articulated. A skilled craftsman knows things about his trade that cannot be written in a manual. Central planners cannot access this knowledge.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why can\'t computers solve the planning problem?',
+    options: [
+      'Computers are too expensive',
+      'The knowledge is not just computational—it is dispersed, tacit, and constantly changing',
+      'Software is unreliable',
+      'Power outages',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Even with unlimited computing power, the knowledge problem remains. The knowledge is not sitting in databases waiting to be processed—it is dispersed, tacit, and constantly changing in unpredictable ways.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'How do markets solve the knowledge problem?',
+    options: [
+      'By centralizing information',
+      'Prices emerge from decentralized decisions, coordinating behavior without anyone needing all the knowledge',
+      'Through government direction',
+      'Markets cannot solve it',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Markets solve the knowledge problem through prices that emerge from decentralized decisions. Each person acts on their local knowledge; prices coordinate these actions without any central authority.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is the relationship between the calculation problem and the knowledge problem?',
+    options: [
+      'They are the same thing',
+      'Calculation requires prices; the knowledge problem shows why those prices cannot be simulated',
+      'They are unrelated',
+      'Knowledge solves calculation',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The problems are related but distinct. Calculation requires prices for comparison. The knowledge problem shows why even with prices, central planning cannot replicate market outcomes—the knowledge is too dispersed and tacit.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What Austrian economist is most associated with emphasizing the knowledge problem in economics?',
+    options: [
+      'Ludwig von Mises',
+      'F.A. Hayek',
+      'Murray Rothbard',
+      'Carl Menger',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'F.A. Hayek emphasized the knowledge problem, particularly in his 1945 article "The Use of Knowledge in Society," showing how markets coordinate dispersed knowledge through prices.',
+  },
+];

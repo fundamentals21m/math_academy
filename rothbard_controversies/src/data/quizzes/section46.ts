@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section46Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is economic calculation?',
+    options: [
+      'Adding up national accounts',
+      'Using prices to determine the most valuable use of resources',
+      'Government planning',
+      'Counting money',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Economic calculation is the process of using prices to determine how to allocate scarce resources to their most valuable uses. Money prices make comparison possible across heterogeneous goods.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why is economic calculation impossible under socialism?',
+    options: [
+      'Socialists are bad at math',
+      'Without private ownership and market prices for capital goods, there is no way to calculate efficiency',
+      'There is too much paperwork',
+      'Workers refuse to cooperate',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Mises showed that without private ownership of means of production, there are no market prices for capital goods. Without prices, planners cannot calculate which production methods are efficient.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the calculation problem?',
+    options: [
+      'Computers are too slow',
+      'Central planners cannot rationally allocate resources without market prices for capital goods',
+      'Mathematics is too complex',
+      'Workers make errors',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The calculation problem shows that central planners cannot rationally allocate resources. They lack the price signals that emerge from market exchange of privately owned capital goods.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'How do prices transmit information according to Hayek?',
+    options: [
+      'Through government reports',
+      'Prices condense dispersed knowledge into signals that coordinate decentralized decisions',
+      'Through newspapers',
+      'Prices contain no information',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Hayek emphasized that prices condense dispersed knowledge of time and place into signals. No central authority could gather this knowledge, but prices communicate it efficiently.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Why did the Soviet economy ultimately fail?',
+    options: [
+      'Lack of resources',
+      'Without real prices, planners could not know what to produce or how to produce it efficiently',
+      'External pressure only',
+      'Poor weather',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Soviet economy failed because planners lacked the price signals needed for rational allocation. They often relied on Western prices or produced goods no one wanted while facing shortages of necessities.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What Austrian economist first identified the economic calculation problem in 1920?',
+    options: [
+      'Carl Menger',
+      'Ludwig von Mises',
+      'Friedrich Hayek',
+      'Murray Rothbard',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Ludwig von Mises first articulated the economic calculation problem in his 1920 article "Economic Calculation in the Socialist Commonwealth," showing why socialism cannot work.',
+  },
+];

@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section45Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is free banking?',
+    options: [
+      'Banks that charge no fees',
+      'A system where private banks issue competing currencies without central bank monopoly',
+      'Government-owned banks',
+      'Banks for the poor only',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Free banking is a system where private banks issue their own currencies, typically backed by commodities like gold, competing for depositors without a government-imposed central bank monopoly.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'How would market discipline work in a free banking system?',
+    options: [
+      'Government regulation',
+      'Banks that over-issue notes would face redemption demands they cannot meet',
+      'Central bank supervision',
+      'International oversight',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Market discipline means banks that over-issue notes face redemption demands. If they cannot pay in gold, they fail. This constrains money creation without government regulation.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What historical examples of free banking exist?',
+    options: [
+      'None exist',
+      'Scotland (1716-1845), Canada, and parts of the United States',
+      'Only in theory',
+      'Ancient Rome only',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Free banking operated successfully in Scotland for over a century, in Canada, and in some U.S. states. These systems were generally stable and innovative before being replaced by central banking.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Why do Austrians argue free banking would be more stable than central banking?',
+    options: [
+      'Banks would be larger',
+      'Competition and redemption requirements prevent over-expansion that causes cycles',
+      'Government would still control banks',
+      'There would be no banks',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Free banking constrains money creation through redemption requirements and competition. Without a central bank to bail out over-expanded banks, they must remain prudent. This prevents the credit expansion that causes cycles.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What role would a commodity standard play in free banking?',
+    options: [
+      'None',
+      'Bank notes would be redeemable in gold or silver, anchoring money to real value',
+      'Only for decoration',
+      'To prevent bank formation',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Under free banking, notes would typically be redeemable in gold or silver. This anchors money to real value and provides automatic discipline—banks cannot create money beyond their reserves.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'In what country did free banking operate successfully from 1716 to 1845?',
+    options: [
+      'England',
+      'Scotland',
+      'Ireland',
+      'France',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Scotland\'s free banking era (1716-1845) is the most studied example. It featured competing private banks issuing notes, general stability, and innovation in banking practices.',
+  },
+];
