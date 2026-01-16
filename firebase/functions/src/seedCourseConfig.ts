@@ -4,6 +4,28 @@ import * as admin from 'firebase-admin';
 // Initial admin npub
 const INITIAL_ADMIN_NPUB = 'npub12eml5kmtrjmdt0h8shgg32gye5yqsf2jha6a70jrqt82q9d960sspky99g';
 
+// Allowed origins for CORS
+const ALLOWED_ORIGINS = [
+  'https://mathacademy-cyan.vercel.app',
+  'https://*.vercel.app',
+  'http://localhost:5173',
+  'http://localhost:3000',
+  'http://127.0.0.1:5173',
+];
+
+// Timing-safe string comparison (prevents timing attacks)
+function timingSafeEqual(a: string | undefined, b: string | undefined): boolean {
+  if (!a || !b) return false;
+  if (a.length !== b.length) return false;
+
+  let result = 0;
+  for (let i = 0; i < a.length; i++) {
+    result |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+
+  return result === 0;
+}
+
 // Section data
 const SECTIONS = [
   { id: 'featured', title: 'Featured', subtitle: 'Our flagship courses', style: 'featured' },
@@ -24,9 +46,9 @@ const SECTIONS = [
 // Course data
 const COURSES = [
   { id: 'crypto', title: 'Cryptography Math', description: 'Learn the mathematics that powers modern encryption.', icon: '🔐', url: 'https://cryptography-xi.vercel.app/', tags: ['12 Lessons', 'Interactive'], sections: ['featured'], totalSections: 12, progressPrefix: 'crypto:', leaderboardUrl: 'https://cryptography-xi.vercel.app/#/leaderboard', shortName: 'Cryptography', progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)' },
-  { id: 'frost', title: 'FROST: Threshold Signatures', description: 'Master Flexible Round-Optimized Schnorr Threshold Signatures - from mathematical foundations to Bitcoin applications.', icon: '🔐', url: 'https://frost-nine.vercel.app/', tags: ['10 Parts', '69 Sections'], sections: ['featured', 'number_theory'], totalSections: 69, progressPrefix: 'frost:', leaderboardUrl: 'https://frost-nine.vercel.app/#/leaderboard', shortName: 'FROST', progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)' },
+  { id: 'frost', title: 'FROST: Threshold Signatures', description: 'Master Flexible Round-Optimized Schnorr Threshold Signatures - from mathematical foundations to Bitcoin applications.', icon: '🔐', url: 'frost-deploy/', tags: ['10 Parts', '69 Sections'], sections: ['featured', 'number_theory'], totalSections: 69, progressPrefix: 'frost:', leaderboardUrl: 'frost-deploy/#/leaderboard', shortName: 'FROST', progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)' },
   { id: 'islr', title: 'Intro to Statistical Learning', description: "Master machine learning fundamentals.", icon: '📊', url: 'islr-deploy/', tags: ['13 Chapters', '62 Sections'], sections: ['prob_stats'], totalSections: 62, progressPrefix: 'islr:', leaderboardUrl: 'islr-deploy/#/leaderboard', shortName: 'Statistical Learning', progressGradient: 'linear-gradient(90deg, #34d399, #6ee7b7)' },
-  { id: 'bfi', title: 'Bitcoin for Institutions', description: "A comprehensive guide to institutional Bitcoin adoption.", icon: '₿', url: 'https://bfi-deploy.vercel.app/', tags: ['3 Parts', '15 Sections'], sections: ['featured'], totalSections: 15, progressPrefix: 'bfi:', leaderboardUrl: 'https://bfi-deploy.vercel.app/#/leaderboard', shortName: 'BFI', progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)' },
+  { id: 'bfi', title: 'Bitcoin for Institutions', description: "A comprehensive guide to institutional Bitcoin adoption.", icon: '₿', url: 'https://bfi-liart.vercel.app/', tags: ['3 Parts', '15 Sections'], sections: ['featured'], totalSections: 15, progressPrefix: 'bfi:', leaderboardUrl: 'https://bfi-liart.vercel.app/#/leaderboard', shortName: 'BFI', progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)' },
   { id: 'calc_easy', title: 'Beginner Calculus', description: "Master calculus through Silvanus P. Thompson's timeless classic.", icon: '∂', url: 'calceasy-deploy/', tags: ['26 Sections', 'Interactive'], sections: ['beginners', 'calculus'], totalSections: 26, progressPrefix: 'calc_easy:', leaderboardUrl: 'calceasy-deploy/#/leaderboard', shortName: 'Beginner Calculus', progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)' },
   { id: 'ba', title: 'Basic Algebra', description: 'Master the fundamentals of algebra through interactive lessons.', icon: 'x²', url: 'basic-algebra-deploy/', tags: ['17 Chapters', '64 Sections'], sections: ['beginners', 'algebra'], totalSections: 64, progressPrefix: 'ba:', leaderboardUrl: 'basic-algebra-deploy/#/leaderboard', shortName: 'Basic Algebra', progressGradient: 'linear-gradient(90deg, #22c55e, #4ade80)' },
   { id: 'wm', title: 'Why Math?', description: "Discover the real reasons behind mathematical concepts.", icon: '📚', url: 'why-math-deploy/', tags: ['8 Parts', '13 Sections'], sections: ['beginners'], totalSections: 13, progressPrefix: 'wm:', leaderboardUrl: 'why-math-deploy/#/leaderboard', shortName: 'Why Math?', progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)' },
@@ -45,6 +67,7 @@ const COURSES = [
   { id: 'gauss', title: "Disquisitiones Arithmeticae", description: "Gauss's foundational 1801 treatise.", icon: '🔢', url: 'gauss-deploy/', tags: ['7 Sections', 'Number Theory'], sections: ['seminal'], totalSections: 7, progressPrefix: 'gauss:', leaderboardUrl: 'gauss-deploy/#/leaderboard', shortName: 'Disquisitiones', progressGradient: 'linear-gradient(90deg, #d97706, #f59e0b)' },
   { id: 'only_the_strong_survive', title: 'Only The Strong Survive', description: "A critique of prospects in crypto beyond Bitcoin.", icon: '₿', url: 'only-the-strong-survive-deploy/', tags: ['8 Parts', '20 Sections'], sections: ['seminal'], totalSections: 20, progressPrefix: 'only_the_strong_survive:', leaderboardUrl: 'only-the-strong-survive-deploy/#/leaderboard', shortName: 'Only The Strong', progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)' },
   { id: 'euler_intro', title: 'Introduction to the Analysis of the Infinite', description: "Euler's 1748 masterpiece on the theory of curved lines.", icon: '∞', url: 'https://euler-intro-deploy.vercel.app/', tags: ['5 Parts', '22 Sections'], sections: ['seminal'], totalSections: 22, progressPrefix: 'euler-intro:', leaderboardUrl: 'https://euler-intro-deploy.vercel.app/#/leaderboard', shortName: 'Euler Intro', progressGradient: 'linear-gradient(90deg, #d97706, #f59e0b)' },
+  { id: 'saylor-diss', title: "Michael Saylor's Dissertation", description: "A Machiavellian Interpretation of Political Dynamics - applying system dynamics to model Machiavelli's political philosophy. Saylor's 1987 MIT thesis.", icon: '📚', url: 'https://saylor-diss-deploy.vercel.app/', tags: ['5 Parts', '21 Sections'], sections: ['seminal'], totalSections: 21, progressPrefix: 'saylor-diss:', leaderboardUrl: 'https://saylor-diss-deploy.vercel.app/#/leaderboard', shortName: 'Saylor Diss', progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)' },
   { id: 'mom', title: 'Men of Mathematics', description: "Journey through 2500 years of mathematical history.", icon: '📜', url: 'mom-deploy/', tags: ['34 Sections', 'Interactive'], sections: ['history'], totalSections: 34, progressPrefix: 'mom:', leaderboardUrl: 'mom-deploy/#/leaderboard', shortName: 'Men of Math', progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)' },
   { id: 'thales', title: 'The Heritage of Thales', description: "Journey through 2,500 years of mathematical history.", icon: '🏛️', url: 'thales-deploy/', tags: ['11 Parts', '66 Sections'], sections: ['history'], totalSections: 66, progressPrefix: 'thales:', leaderboardUrl: 'thales-deploy/#/leaderboard', shortName: 'Heritage of Thales', progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)' },
   { id: 'math_history', title: 'Mathematics and Its History', description: "A journey through 4,000 years of mathematical history.", icon: '📜', url: 'https://mathhistory.vercel.app/', tags: ['19 Chapters', '72 Sections'], sections: ['history'], totalSections: 72, progressPrefix: 'math_history:', leaderboardUrl: 'https://mathhistory.vercel.app/#/leaderboard', shortName: 'Stillwell', progressGradient: 'linear-gradient(90deg, #F59E0B, #D97706)' },
@@ -53,6 +76,7 @@ const COURSES = [
   { id: 'man_econ_state', title: 'Man, Economy, and State', description: "Murray Rothbard's comprehensive treatise.", icon: '⚖️', url: 'https://man-econ-state-deploy.vercel.app/', tags: ['6 Parts', '19 Sections'], sections: ['austrian'], totalSections: 19, progressPrefix: 'man_econ_state:', leaderboardUrl: 'https://man-econ-state-deploy.vercel.app/#/leaderboard', shortName: 'Man, Economy, State', progressGradient: 'linear-gradient(90deg, #10b981, #34d399)' },
   { id: 'road_to_serfdom', title: 'The Road to Serfdom', description: "F.A. Hayek's classic warning.", icon: '🔗', url: 'https://road-to-serfdom-deploy.vercel.app/', tags: ['16 Sections', 'Interactive'], sections: ['austrian'], totalSections: 16, progressPrefix: 'road_to_serfdom:', leaderboardUrl: 'https://road-to-serfdom-deploy.vercel.app/#/leaderboard', shortName: 'Road to Serfdom', progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)' },
   { id: 'orange_btc', title: 'Orange is the New Green', description: "The emergence of Bitcoin money market funds.", icon: '🟠', url: 'https://orange-is-new-green.vercel.app/', tags: ['5 Parts', '15 Sections'], sections: ['austrian'], totalSections: 15, progressPrefix: 'orange_btc:', leaderboardUrl: 'https://orange-is-new-green.vercel.app/#/leaderboard', shortName: 'Orange is New Green', progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)' },
+  { id: 'rothbard_controversies', title: 'Economic Controversies', description: "Murray Rothbard's analysis of economic fallacies and controversies.", icon: '⚖️', url: 'https://rothbard-deploy.vercel.app/', tags: ['8 Parts', '52 Sections'], sections: ['austrian'], totalSections: 52, progressPrefix: 'rothbard_controversies:', leaderboardUrl: 'https://rothbard-deploy.vercel.app/#/leaderboard', shortName: 'Economic Controversies', progressGradient: 'linear-gradient(90deg, #dc2626, #ef4444)' },
   { id: 'west_graphs', title: 'Introduction to Graph Theory', description: "Master graph theory.", icon: '🕸️', url: 'west-graphs-deploy/', tags: ['8 Chapters', '28 Sections'], sections: ['discrete'], totalSections: 28, progressPrefix: 'west_graphs:', leaderboardUrl: 'west-graphs-deploy/#/leaderboard', shortName: 'Graph Theory', progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)' },
   { id: 'coding_theory', title: 'Algebraic Coding Theory', description: "Master error-correcting codes.", icon: '🔢', url: 'coding-theory-deploy/', tags: ['11 Chapters', '41 Sections'], sections: ['discrete'], totalSections: 41, progressPrefix: 'coding_theory:', leaderboardUrl: 'coding-theory-deploy/#/leaderboard', shortName: 'Coding Theory', progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)' },
   { id: 'intro-discrete', title: 'Intro to Discrete Math', description: "Numbers, groups, and codes.", icon: '🔢', url: 'intro-discrete-deploy/', tags: ['6 Chapters', '26 Sections'], sections: ['discrete'], totalSections: 26, progressPrefix: 'intro-discrete:', leaderboardUrl: 'intro-discrete-deploy/#/leaderboard', shortName: 'Intro Discrete', progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)' },
@@ -61,12 +85,23 @@ const COURSES = [
   { id: 'mod-race', title: 'Mod Racing', description: 'Race to master modular arithmetic with competitive math challenges.', icon: '🏎️', url: 'https://mod-race.vercel.app/', tags: ['10 Tiers', 'Multiplayer'], sections: ['games'], totalSections: 10, progressPrefix: 'mod-race:', leaderboardUrl: 'https://mod-race.vercel.app/#/leaderboard', shortName: 'Mod Racing', progressGradient: 'linear-gradient(90deg, #22d3ee, #6366f1)' },
   { id: 'base-race', title: 'Base Conversion Racing', description: 'Race to convert numbers between binary, decimal, and hexadecimal!', icon: '🔢', url: 'https://base-race-opal.vercel.app/', tags: ['10 Tiers', 'Binary/Hex'], sections: ['games'], totalSections: 10, progressPrefix: 'base-race:', leaderboardUrl: 'https://base-race-opal.vercel.app/#/leaderboard', shortName: 'Base Racing', progressGradient: 'linear-gradient(90deg, #10b981, #34d399)' },
   { id: 'lcn', title: 'Little Crypto Notebook', description: 'Advanced cryptography: commitments, zero-knowledge proofs, and multi-signatures.', icon: '🔐', url: 'https://lcn-deploy.vercel.app/', tags: ['4 Parts', '9 Sections'], sections: ['podcast_focus'], totalSections: 9, progressPrefix: 'lcn:', leaderboardUrl: 'https://lcn-deploy.vercel.app/#/leaderboard', shortName: 'Crypto Notebook', progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)' },
+  { id: 'secp256k1', title: 'secp256k1: The Curve That Powers Bitcoin', description: 'From geometry to cryptography—the mathematics that makes Bitcoin possible.', icon: '📐', url: 'https://secp256k1-deploy.vercel.app/', tags: ['4 Parts', '10 Sections'], sections: ['featured', 'number_theory'], totalSections: 10, progressPrefix: 'secp256k1:', leaderboardUrl: 'https://secp256k1-deploy.vercel.app/#/leaderboard', shortName: 'secp256k1', progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)' },
+  { id: 'tontines', title: 'Tontines: The Mathematics of Lifetime Income', description: 'From 17th century finance to modern retirement security - understanding the mathematics of longevity risk pooling.', icon: '💰', url: 'https://tontines-deploy.vercel.app/', tags: ['4 Parts', '45 Sections'], sections: ['prob_stats'], totalSections: 45, progressPrefix: 'tontines:', leaderboardUrl: 'https://tontines-deploy.vercel.app/#/leaderboard', shortName: 'Tontines', progressGradient: 'linear-gradient(90deg, #10b981, #34d399)' },
 ];
 
+// Seed function only adds NEW courses - existing courses are never modified
+// This preserves all admin customizations (titles, descriptions, ordering, etc.)
+
 /**
- * Seed function to add MISSING courses/sections to courseConfig collection.
- * This function only ADDS new items - it does NOT overwrite existing data.
- * Admin GUI changes are preserved.
+ * Seed function to sync courses/sections to courseConfig collection.
+ *
+ * Behavior:
+ * - NEW items: Added with all fields from seed
+ * - EXISTING items: Critical fields (url, leaderboardUrl, etc.) are UPDATED from seed
+ * - Order is preserved for existing items (respects admin reordering)
+ *
+ * This ensures the seed file is the source of truth for deployment URLs,
+ * while preserving admin customizations like ordering.
  *
  * Call via HTTP: https://us-central1-magic-internet-math-96630.cloudfunctions.net/seedCourseConfig?secret=YOUR_SECRET
  *
@@ -75,6 +110,32 @@ const COURSES = [
  */
 export const seedCourseConfig = functions.https.onRequest(
   async (req, res) => {
+    // CORS: Handle OPTIONS preflight
+    if (req.method === 'OPTIONS') {
+      const origin = req.headers.origin;
+      if (origin && ALLOWED_ORIGINS.some(allowed => origin === allowed || origin.startsWith(allowed.replace('*.', '')))) {
+        res.header('Access-Control-Allow-Origin', origin);
+        res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+        res.header('Access-Control-Max-Age', '86400');
+      }
+      res.status(204).send('');
+      return;
+    }
+
+    // CORS: Validate origin for actual requests
+    const origin = req.headers.origin;
+    if (origin) {
+      const isAllowed = ALLOWED_ORIGINS.some(allowed => 
+        origin === allowed || origin.startsWith(allowed.replace('*.', ''))
+      );
+      if (!isAllowed) {
+        console.error('CORS: Unauthorized origin attempt:', origin);
+        res.status(403).send('Forbidden origin');
+        return;
+      }
+    }
+
     // Secret check using environment config (NOT hardcoded)
     const expectedSecret = functions.config().seed?.secret;
     const providedSecret = req.query.secret;
@@ -85,7 +146,9 @@ export const seedCourseConfig = functions.https.onRequest(
       return;
     }
 
-    if (providedSecret !== expectedSecret) {
+    // Use timing-safe comparison to prevent timing attacks
+    if (!timingSafeEqual(providedSecret as string, expectedSecret)) {
+      console.error('CORS: Unauthorized seed secret attempt from origin:', origin);
       res.status(403).send('Forbidden');
       return;
     }
@@ -128,17 +191,20 @@ export const seedCourseConfig = functions.https.onRequest(
       }
     });
 
-    // Only add NEW courses (preserve existing ones with their admin modifications)
+    // Process courses: add new ones, update existing ones with canonical fields
     const maxExistingCourseOrder = existingCoursesSnap.docs.reduce(
       (max, doc) => Math.max(max, doc.data().order ?? 0), -1
     );
 
     COURSES.forEach((course, index) => {
+      const courseRef = configRef.collection('courses').doc(course.id);
+
       if (!existingCourseIds.has(course.id)) {
-        const courseRef = configRef.collection('courses').doc(course.id);
+        // NEW course: add with all fields
         batch.set(courseRef, { ...course, order: maxExistingCourseOrder + index + 1 });
         addedCourses++;
       }
+      // Existing courses are NOT updated - admin customizations are preserved
     });
 
     // Only add admin if doesn't exist
@@ -155,12 +221,17 @@ export const seedCourseConfig = functions.https.onRequest(
 
     await batch.commit();
 
-    const skippedSections = SECTIONS.length - addedSections;
     const skippedCourses = COURSES.length - addedCourses;
+
+    // CORS: Add response headers
+    if (origin) {
+      res.header('Access-Control-Allow-Origin', origin);
+    }
+    res.header('Access-Control-Allow-Credentials', 'true');
 
     res.status(200).send(
       `Added ${addedSections} new sections, ${addedCourses} new courses, ${addedAdmins} new admins. ` +
-      `Preserved ${skippedSections} existing sections, ${skippedCourses} existing courses.`
+      `${skippedCourses} existing courses unchanged (admin customizations preserved).`
     );
   }
 );

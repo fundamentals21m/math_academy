@@ -1,6 +1,6 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
-import { schnorr } from '@noble/curves/secp256k1';
+import { schnorr } from '@noble/curves/secp256k1.js';
 import { sha256 } from '@noble/hashes/sha256';
 import { bytesToHex, hexToBytes, randomBytes } from '@noble/hashes/utils';
 import { logSecurityEvent, logAuthSuccess, logAuthFailure, logRateLimitHit } from './securityLogger';
@@ -8,6 +8,24 @@ import { logSecurityEvent, logAuthSuccess, logAuthFailure, logRateLimitHit } fro
 const CHALLENGE_EXPIRY_MS = 60 * 1000; // 60 seconds
 const RATE_LIMIT_MAX_CHALLENGES = 10; // Max challenges per pubkey per window
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour window
+
+// IP-based rate limiting
+const IP_RATE_LIMIT_MAX_CHALLENGES = 50; // Max challenges per IP per hour
+const IP_RATE_LIMIT_MAX_FAILURES = 10; // Max auth failures per IP per 5 minutes
+const IP_RATE_LIMIT_FAILURE_WINDOW_MS = 5 * 60 * 1000; // 5 minute window
+
+/**
+ * Get client IP address from Firebase function context
+ */
+function getClientIP(context: functions.https.CallableContext): string {
+  const request = context.rawRequest;
+  const ip = request?.headers['x-forwarded-for'] ||
+             request?.headers['x-real-ip'] ||
+             request?.ip ||
+             'unknown';
+  // Handle multiple IPs in x-forwarded-for (take first one)
+  return (typeof ip === 'string' ? ip : ip?.[0] || 'unknown').split(',')[0].trim();
+}
 
 interface NostrEvent {
   id: string;
@@ -23,7 +41,7 @@ interface NostrEvent {
  * Generate a unique challenge for Nostr authentication
  */
 export const createChallenge = functions.https.onCall(
-  async (data: { pubkeyHex?: string }): Promise<{ challenge: string; expiresAt: number }> => {
+  async (data: { pubkeyHex?: string }, context: functions.https.CallableContext): Promise<{ challenge: string; expiresAt: number }> => {
     const { pubkeyHex } = data || {};
 
     if (!pubkeyHex || typeof pubkeyHex !== 'string' || pubkeyHex.length !== 64) {
@@ -42,6 +60,31 @@ export const createChallenge = functions.https.onCall(
     }
 
     const normalizedPubkey = pubkeyHex.toLowerCase();
+    const clientIP = getClientIP(context);
+
+    // IP-based rate limiting: count challenges per IP
+    const ipWindowStart = new Date(Date.now() - RATE_LIMIT_WINDOW_MS);
+    const ipRateKey = `challenge_ip_${clientIP}`;
+    const ipRateRef = admin.firestore().collection('rateLimits').doc(ipRateKey);
+    const ipRateDoc = await ipRateRef.get();
+
+    const ipRecentChallenges = ipRateDoc.exists
+      ? ((ipRateDoc.data() as { timestamps?: number[] }).timestamps || []).filter(
+          (ts: number) => ts > ipWindowStart.getTime()
+        )
+      : [];
+
+    if (ipRecentChallenges.length >= IP_RATE_LIMIT_MAX_CHALLENGES) {
+      await logSecurityEvent('rate_limit_ip_challenge', 'warning', {
+        ipAddress: clientIP,
+        pubkeyHex: normalizedPubkey,
+        metadata: { requestCount: ipRecentChallenges.length, window: '1 hour' }
+      });
+      throw new functions.https.HttpsError(
+        'resource-exhausted',
+        'Too many authentication attempts from this IP address. Please try again later.'
+      );
+    }
 
     // Rate limiting: count recent challenges for this pubkey
     const windowStart = new Date(Date.now() - RATE_LIMIT_WINDOW_MS);
@@ -71,6 +114,12 @@ export const createChallenge = functions.https.onCall(
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
+    // Update IP rate limit tracking
+    await ipRateRef.set({
+      timestamps: [...ipRecentChallenges, Date.now()].slice(-IP_RATE_LIMIT_MAX_CHALLENGES),
+      lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+    });
+
     return { challenge, expiresAt };
   }
 );
@@ -79,13 +128,37 @@ export const createChallenge = functions.https.onCall(
  * Verify Nostr signed event and return Firebase custom auth token
  */
 export const verifyNostrAndCreateToken = functions.https.onCall(
-  async (data: { signedEvent?: NostrEvent; challenge?: string }): Promise<{ token: string; npub: string }> => {
+  async (data: { signedEvent?: NostrEvent; challenge?: string }, context: functions.https.CallableContext): Promise<{ token: string; npub: string }> => {
     const { signedEvent, challenge } = data || {};
+    const clientIP = getClientIP(context);
 
     if (!signedEvent || !challenge) {
       throw new functions.https.HttpsError(
         'invalid-argument',
         'signedEvent and challenge are required'
+      );
+    }
+
+    // IP-based rate limiting for failed auth attempts
+    const ipFailureKey = `auth_failure_${clientIP}`;
+    const ipFailureRef = admin.firestore().collection('rateLimits').doc(ipFailureKey);
+    const ipFailureDoc = await ipFailureRef.get();
+
+    const ipFailureWindow = Date.now() - IP_RATE_LIMIT_FAILURE_WINDOW_MS;
+    const ipRecentFailures = ipFailureDoc.exists
+      ? (ipFailureDoc.data() as { timestamps?: number[] }).timestamps || [].filter(
+          (ts: number) => ts > ipFailureWindow
+        )
+      : [];
+
+    if (ipRecentFailures.length >= IP_RATE_LIMIT_MAX_FAILURES) {
+      await logSecurityEvent('rate_limit_ip_auth_failure', 'warning', {
+        ipAddress: clientIP,
+        metadata: { failureCount: ipRecentFailures.length, window: '5 minutes' }
+      });
+      throw new functions.https.HttpsError(
+        'resource-exhausted',
+        'Too many failed authentication attempts from this IP address. Please wait 5 minutes.'
       );
     }
 
@@ -147,6 +220,12 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
     // Mark challenge as used
     await challengeDoc.ref.update({ used: true });
 
+    // Clear IP failure rate limit on successful auth
+    await ipFailureRef.set({
+      timestamps: [],
+      lastCleared: admin.firestore.FieldValue.serverTimestamp(),
+    });
+
     // Convert pubkey hex to npub
     const npub = hexToNpub(signedEvent.pubkey);
 
@@ -178,6 +257,7 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
       await logSecurityEvent('auth_banned_user_attempt', 'error', {
         npub,
         pubkeyHex: signedEvent.pubkey.toLowerCase(),
+        ipAddress: clientIP,
       });
       throw new functions.https.HttpsError(
         'permission-denied',
@@ -208,8 +288,8 @@ export const verifyNostrAndCreateToken = functions.https.onCall(
       isAdmin,
     });
 
-    // Log successful authentication
-    await logAuthSuccess(npub, signedEvent.pubkey.toLowerCase());
+    // Log successful authentication with IP address
+    await logAuthSuccess(npub, signedEvent.pubkey.toLowerCase(), clientIP);
 
     return { token, npub };
   }
