@@ -1,0 +1,74 @@
+import type { QuizQuestion } from './types';
+
+export const section47Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Fubini\'s theorem relates:',
+    options: [
+      'Derivatives and integrals',
+      'Double integrals and iterated integrals',
+      'Fourier series and power series',
+      'Limits and continuity'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Fubini\'s theorem says double integrals can be computed as iterated integrals.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Fubini\'s theorem requires $f$ to be:',
+    options: [
+      'Continuous',
+      'Absolutely integrable on $\\mathbf{R}^2$',
+      'Bounded',
+      'Differentiable'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Fubini requires $\\int_{\\mathbf{R}^2} |f| < \\infty$.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Under Fubini\'s theorem, $\\int_{\\mathbf{R}^2} f(x, y) \\, d(x, y)$ equals:',
+    options: [
+      '$\\int_\\mathbf{R} \\left(\\int_\\mathbf{R} f(x, y) \\, dy\\right) dx$ and $\\int_\\mathbf{R} \\left(\\int_\\mathbf{R} f(x, y) \\, dx\\right) dy$',
+      'Only $\\int \\int f \\, dx \\, dy$',
+      'Only $\\int \\int f \\, dy \\, dx$',
+      'Neither iterated integral'
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Both orders of integration give the same result as the double integral.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Tonelli\'s theorem is the version of Fubini for:',
+    options: [
+      'Bounded functions',
+      'Non-negative measurable functions',
+      'Continuous functions only',
+      'Functions on finite domains'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Tonelli applies to non-negative functions without requiring integrability (the integral might be $\\infty$).',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The "almost everywhere" caveat in Fubini\'s theorem means:',
+    options: [
+      'The theorem fails',
+      'The inner integral might not exist for every $x$, only for almost every $x$',
+      'The double integral is always zero',
+      '$f$ must be continuous'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The inner integral $\\int f(x, y) \\, dy$ might not exist for a null set of $x$ values.',
+  },
+];

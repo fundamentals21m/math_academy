@@ -280,6 +280,20 @@ export const COURSES = [
     shortName: 'Tao Analysis I',
     progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
   },
+  {
+    id: 'tao2',
+    title: "Tao's Analysis II",
+    description: "The sequel to Analysis I, covering metric spaces, continuous functions, uniform convergence, power series, Fourier series, several variable calculus, Lebesgue measure, and Lebesgue integration.",
+    icon: 'δ',
+    url: 'tao2-deploy/',
+    tags: ['8 Parts', '48 Sections'],
+    sections: ['calculus', 'seminal'],
+    totalSections: 48,
+    progressPrefix: 'tao2:',
+    leaderboardUrl: 'tao2-deploy/#/leaderboard',
+    shortName: 'Tao Analysis II',
+    progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)',
+  },
 
   // ALGEBRA (Note: Basic Algebra also appears here via sections array)
   {
