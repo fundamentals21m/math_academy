@@ -1,0 +1,667 @@
+{
+  "partId": 0,
+  "partTitle": "Preliminaries",
+  "textbookChapter": "Chapter 0",
+  "sections": [
+    {
+      "sectionId": 0,
+      "sectionTitle": "Basics",
+      "textbookSection": "§0.1",
+      "examples": [
+        {
+          "id": "ex-0-1-1",
+          "type": "example",
+          "title": "Equivalence Relations",
+          "statement": "Show that the relation ~ on ℤ defined by a ~ b if and only if a - b is even is an equivalence relation.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Reflexive",
+                "content": "For any a ∈ ℤ, we have a - a = 0, which is even. Thus a ~ a."
+              },
+              {
+                "title": "Symmetric",
+                "content": "If a ~ b, then a - b is even. But b - a = -(a - b), and the negative of an even number is even. Thus b ~ a."
+              },
+              {
+                "title": "Transitive",
+                "content": "If a ~ b and b ~ c, then a - b and b - c are both even. The sum (a - b) + (b - c) = a - c is also even. Thus a ~ c."
+              }
+            ],
+            "conclusion": "Since ~ is reflexive, symmetric, and transitive, it is an equivalence relation. The equivalence classes are the even integers and the odd integers."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "0-1-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Let A be the set of 2 × 2 matrices with real entries and let M = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}. Let B = {X ∈ A | MX = XM}. Determine which of the following elements of A lie in B:\n\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}, \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}, \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}, \\begin{pmatrix} 1 & 1 \\\\ 1 & 0 \\end{pmatrix}, \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}, \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check each matrix",
+                "content": "We need to verify if MX = XM for each matrix X."
+              },
+              {
+                "title": "Matrix \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}",
+                "content": "This is M itself. MM = MM, so M ∈ B. ✓"
+              },
+              {
+                "title": "Matrix \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}",
+                "content": "MX = \\begin{pmatrix} 2 & 2 \\\\ 1 & 1 \\end{pmatrix}, XM = \\begin{pmatrix} 1 & 2 \\\\ 1 & 2 \\end{pmatrix}. These are not equal. ✗"
+              },
+              {
+                "title": "Matrix \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}",
+                "content": "The zero matrix commutes with everything: M·0 = 0 = 0·M. ✓"
+              },
+              {
+                "title": "Matrix \\begin{pmatrix} 1 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+                "content": "MX = \\begin{pmatrix} 2 & 1 \\\\ 1 & 0 \\end{pmatrix}, XM = \\begin{pmatrix} 1 & 2 \\\\ 1 & 1 \\end{pmatrix}. These are not equal. ✗"
+              },
+              {
+                "title": "Matrix \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}",
+                "content": "The identity matrix commutes with everything: MI = M = IM. ✓"
+              },
+              {
+                "title": "Matrix \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}",
+                "content": "MX = \\begin{pmatrix} 1 & 1 \\\\ 1 & 0 \\end{pmatrix}, XM = \\begin{pmatrix} 0 & 1 \\\\ 1 & 1 \\end{pmatrix}. These are not equal. ✗"
+              }
+            ],
+            "conclusion": "The matrices in B are: \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}, \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}, and \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}."
+          }
+        },
+        {
+          "id": "0-1-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that if P, Q ∈ B, then P + Q ∈ B (where + denotes the usual sum of two matrices).",
+          "solution": {
+            "steps": [
+              {
+                "title": "Setup",
+                "content": "We need to show that M(P + Q) = (P + Q)M."
+              },
+              {
+                "title": "Apply distributivity",
+                "content": "M(P + Q) = MP + MQ (matrix multiplication distributes over addition)"
+              },
+              {
+                "title": "Use the hypothesis",
+                "content": "Since P, Q ∈ B, we have MP = PM and MQ = QM."
+              },
+              {
+                "title": "Substitute",
+                "content": "MP + MQ = PM + QM = (P + Q)M"
+              }
+            ],
+            "conclusion": "Therefore M(P + Q) = (P + Q)M, so P + Q ∈ B."
+          }
+        },
+        {
+          "id": "0-1-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that if P, Q ∈ B, then P · Q ∈ B (where · denotes the usual product of two matrices).",
+          "solution": {
+            "steps": [
+              {
+                "title": "Setup",
+                "content": "We need to show that M(PQ) = (PQ)M."
+              },
+              {
+                "title": "Apply associativity",
+                "content": "M(PQ) = (MP)Q (matrix multiplication is associative)"
+              },
+              {
+                "title": "Use the hypothesis",
+                "content": "Since P ∈ B, we have MP = PM, so (MP)Q = (PM)Q = P(MQ)"
+              },
+              {
+                "title": "Apply hypothesis again",
+                "content": "Since Q ∈ B, we have MQ = QM, so P(MQ) = P(QM) = (PQ)M"
+              }
+            ],
+            "conclusion": "Therefore M(PQ) = (PQ)M, so PQ ∈ B."
+          }
+        },
+        {
+          "id": "0-1-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Find conditions on p, q, r, s which determine precisely when \\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix} ∈ B.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute MX",
+                "content": "MX = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}\\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix} = \\begin{pmatrix} p+r & q+s \\\\ r & s \\end{pmatrix}"
+              },
+              {
+                "title": "Compute XM",
+                "content": "XM = \\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix}\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} p & p+q \\\\ r & r+s \\end{pmatrix}"
+              },
+              {
+                "title": "Set MX = XM",
+                "content": "Comparing entries:\n• (1,1): p + r = p ⟹ r = 0\n• (1,2): q + s = p + q ⟹ s = p\n• (2,1): r = r ✓ (always true)\n• (2,2): s = r + s ⟹ r = 0 ✓ (consistent)"
+              }
+            ],
+            "conclusion": "The matrix \\begin{pmatrix} p & q \\\\ r & s \\end{pmatrix} ∈ B if and only if r = 0 and s = p. That is, X = \\begin{pmatrix} a & b \\\\ 0 & a \\end{pmatrix} for any real numbers a and b."
+          }
+        },
+        {
+          "id": "0-1-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Determine whether the following functions f are well defined:\n(a) f : ℚ → ℤ defined by f(a/b) = a.\n(b) f : ℚ → ℚ defined by f(a/b) = a²/b².",
+          "solution": {
+            "steps": [
+              {
+                "title": "Part (a): Check f(a/b) = a",
+                "content": "Consider 1/2 = 2/4. If f is well defined, then f(1/2) = f(2/4).\nBut f(1/2) = 1 and f(2/4) = 2.\nSince 1 ≠ 2, f is NOT well defined."
+              },
+              {
+                "title": "Part (b): Check f(a/b) = a²/b²",
+                "content": "Let a/b = c/d be two representations of the same rational number.\nThen ad = bc, which implies a²d² = b²c², so a²/b² = c²/d².\nThus f(a/b) = f(c/d), and f IS well defined."
+              }
+            ],
+            "conclusion": "(a) Not well defined. (b) Well defined."
+          }
+        },
+        {
+          "id": "0-1-6",
+          "type": "exercise",
+          "number": 6,
+          "statement": "Determine whether the function f : ℝ⁺ → ℤ defined by mapping a real number r to the first digit to the right of the decimal point in a decimal expansion of r is well defined.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Consider non-unique decimal expansions",
+                "content": "Some real numbers have two decimal expansions. For example:\n0.999... = 1.000..."
+              },
+              {
+                "title": "Apply f to both representations",
+                "content": "f(0.999...) = 9 (first digit after decimal is 9)\nf(1.000...) = 0 (first digit after decimal is 0)"
+              },
+              {
+                "title": "Check consistency",
+                "content": "Since 0.999... and 1.000... represent the same real number but give different values under f, the function is not well defined."
+              }
+            ],
+            "conclusion": "The function f is NOT well defined because some real numbers have multiple decimal representations that give different first digits after the decimal point."
+          }
+        },
+        {
+          "id": "0-1-7",
+          "type": "exercise",
+          "number": 7,
+          "statement": "Let f : A → B be a surjective map of sets. Prove that the relation a ~ b if and only if f(a) = f(b) is an equivalence relation whose equivalence classes are the fibers of f.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Reflexive",
+                "content": "For any a ∈ A, f(a) = f(a), so a ~ a."
+              },
+              {
+                "title": "Symmetric",
+                "content": "If a ~ b, then f(a) = f(b), which means f(b) = f(a), so b ~ a."
+              },
+              {
+                "title": "Transitive",
+                "content": "If a ~ b and b ~ c, then f(a) = f(b) and f(b) = f(c). By transitivity of equality, f(a) = f(c), so a ~ c."
+              },
+              {
+                "title": "Equivalence classes are fibers",
+                "content": "The equivalence class of a is [a] = {x ∈ A | x ~ a} = {x ∈ A | f(x) = f(a)}.\nThis is exactly the fiber of f over f(a), denoted f⁻¹({f(a)})."
+              }
+            ],
+            "conclusion": "The relation is an equivalence relation, and the equivalence classes are precisely the fibers of f."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 1,
+      "sectionTitle": "Properties of the Integers",
+      "textbookSection": "§0.2",
+      "examples": [
+        {
+          "id": "ex-0-2-1",
+          "type": "example",
+          "title": "Euclidean Algorithm",
+          "statement": "Use the Euclidean Algorithm to find gcd(57970, 10353).",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Division Algorithm repeatedly",
+                "content": "57970 = (5)(10353) + 6205\n10353 = (1)(6205) + 4148\n6205 = (1)(4148) + 2057\n4148 = (2)(2057) + 34\n2057 = (60)(34) + 17\n34 = (2)(17)"
+              },
+              {
+                "title": "Identify the gcd",
+                "content": "The last nonzero remainder is 17."
+              }
+            ],
+            "conclusion": "gcd(57970, 10353) = 17"
+          }
+        },
+        {
+          "id": "ex-0-2-2",
+          "type": "example",
+          "title": "Linear Combination of gcd",
+          "statement": "Express gcd(57970, 10353) = 17 as a linear combination of 57970 and 10353.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Back-substitute through Euclidean Algorithm",
+                "content": "17 = 2057 - (60)(34)\n34 = 4148 - (2)(2057)\n17 = 2057 - (60)[4148 - (2)(2057)] = (121)(2057) - (60)(4148)"
+              },
+              {
+                "title": "Continue substitution",
+                "content": "2057 = 6205 - (1)(4148)\n17 = (121)[6205 - (1)(4148)] - (60)(4148) = (121)(6205) - (181)(4148)"
+              },
+              {
+                "title": "Final substitutions",
+                "content": "4148 = 10353 - (1)(6205)\n6205 = 57970 - (5)(10353)\n17 = (302)(57970) - (1691)(10353)"
+              }
+            ],
+            "conclusion": "17 = (302)(57970) + (-1691)(10353)"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "0-2-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "For each of the following pairs of integers a and b, determine their greatest common divisor, their least common multiple, and write their greatest common divisor in the form ax + by for some integers x and y.\n(a) a = 20, b = 13\n(b) a = 69, b = 372\n(c) a = 792, b = 275\n(d) a = 11391, b = 5673\n(e) a = 1761, b = 1567\n(f) a = 507885, b = 60808",
+          "solution": {
+            "steps": [
+              {
+                "title": "Part (a): a = 20, b = 13",
+                "content": "20 = 1(13) + 7\n13 = 1(7) + 6\n7 = 1(6) + 1\n6 = 6(1)\ngcd(20, 13) = 1\nlcm(20, 13) = 260\n1 = 7 - 1(6) = 7 - 1(13 - 7) = 2(7) - 1(13) = 2(20 - 13) - 1(13) = 2(20) - 3(13)\nSo 1 = 2(20) + (-3)(13)"
+              },
+              {
+                "title": "Part (b): a = 69, b = 372",
+                "content": "372 = 5(69) + 27\n69 = 2(27) + 15\n27 = 1(15) + 12\n15 = 1(12) + 3\n12 = 4(3)\ngcd(69, 372) = 3\nlcm(69, 372) = 8556\nBack-substituting: 3 = 27(69) + (-5)(372)"
+              },
+              {
+                "title": "Part (c): a = 792, b = 275",
+                "content": "792 = 2(275) + 242\n275 = 1(242) + 33\n242 = 7(33) + 11\n33 = 3(11)\ngcd(792, 275) = 11\nlcm(792, 275) = 19800\n11 = (-16)(792) + (46)(275)"
+              },
+              {
+                "title": "Part (d): a = 11391, b = 5673",
+                "content": "11391 = 2(5673) + 45\n5673 = 126(45) + 3\n45 = 15(3)\ngcd(11391, 5673) = 3\nlcm(11391, 5673) = 21,534,381\n3 = (-126)(11391) + (253)(5673)"
+              },
+              {
+                "title": "Part (e): a = 1761, b = 1567",
+                "content": "1761 = 1(1567) + 194\n1567 = 8(194) + 15\n194 = 12(15) + 14\n15 = 1(14) + 1\n14 = 14(1)\ngcd(1761, 1567) = 1\nlcm(1761, 1567) = 2,759,487\n1 = (-105)(1761) + (118)(1567)"
+              },
+              {
+                "title": "Part (f): a = 507885, b = 60808",
+                "content": "gcd(507885, 60808) = 691\nlcm(507885, 60808) = 44,693,880\n691 = (32)(507885) + (-267)(60808)"
+              }
+            ],
+            "conclusion": "The solutions are listed above for each pair."
+          }
+        },
+        {
+          "id": "0-2-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that if the integer k divides the integers a and b then k divides as + bt for every pair of integers s and t.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Express divisibility",
+                "content": "If k | a and k | b, then there exist integers m and n such that a = km and b = kn."
+              },
+              {
+                "title": "Substitute",
+                "content": "as + bt = (km)s + (kn)t = k(ms + nt)"
+              },
+              {
+                "title": "Conclude",
+                "content": "Since ms + nt is an integer, k | (as + bt)."
+              }
+            ],
+            "conclusion": "Therefore k divides as + bt for any integers s and t."
+          }
+        },
+        {
+          "id": "0-2-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that if n is composite then there are integers a and b such that n divides ab but n does not divide either a or b.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use definition of composite",
+                "content": "Since n is composite, n = ab for some integers a, b with 1 < a, b < n."
+              },
+              {
+                "title": "Check divisibility",
+                "content": "Clearly n | ab (since ab = n).\nBut n ∤ a since a < n and a > 0.\nSimilarly, n ∤ b since b < n and b > 0."
+              }
+            ],
+            "conclusion": "These integers a and b satisfy the required conditions."
+          }
+        },
+        {
+          "id": "0-2-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Let a, b and N be fixed integers with a and b nonzero and let d = (a, b) be the greatest common divisor of a and b. Suppose x₀ and y₀ are particular solutions to ax + by = N. Prove for any integer t that the integers x = x₀ + (b/d)t and y = y₀ - (a/d)t are also solutions to ax + by = N.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Substitute into the equation",
+                "content": "ax + by = a(x₀ + (b/d)t) + b(y₀ - (a/d)t)"
+              },
+              {
+                "title": "Expand",
+                "content": "= ax₀ + a(b/d)t + by₀ - b(a/d)t\n= ax₀ + by₀ + (ab/d)t - (ab/d)t\n= ax₀ + by₀"
+              },
+              {
+                "title": "Apply hypothesis",
+                "content": "Since x₀ and y₀ are solutions, ax₀ + by₀ = N."
+              }
+            ],
+            "conclusion": "Therefore ax + by = N, so x and y are also solutions."
+          }
+        },
+        {
+          "id": "0-2-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Determine the value φ(n) for each integer n ≤ 30 where φ denotes the Euler φ-function.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute values",
+                "content": "φ(1) = 1, φ(2) = 1, φ(3) = 2, φ(4) = 2, φ(5) = 4\nφ(6) = 2, φ(7) = 6, φ(8) = 4, φ(9) = 6, φ(10) = 4\nφ(11) = 10, φ(12) = 4, φ(13) = 12, φ(14) = 6, φ(15) = 8\nφ(16) = 8, φ(17) = 16, φ(18) = 6, φ(19) = 18, φ(20) = 8\nφ(21) = 12, φ(22) = 10, φ(23) = 22, φ(24) = 8, φ(25) = 20\nφ(26) = 12, φ(27) = 18, φ(28) = 12, φ(29) = 28, φ(30) = 8"
+              }
+            ],
+            "conclusion": "For prime p: φ(p) = p - 1. For prime power pᵏ: φ(pᵏ) = pᵏ - pᵏ⁻¹. For coprime m,n: φ(mn) = φ(m)φ(n)."
+          }
+        },
+        {
+          "id": "0-2-6",
+          "type": "exercise",
+          "number": 6,
+          "statement": "Prove the Well Ordering Property of ℤ by induction and prove the minimal element is unique.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume no minimal element",
+                "content": "Suppose A ⊆ ℤ⁺ is nonempty but has no minimal element."
+              },
+              {
+                "title": "Prove 1 ∉ A",
+                "content": "If 1 ∈ A, then 1 would be minimal (since 1 is the smallest positive integer)."
+              },
+              {
+                "title": "Induction step",
+                "content": "Suppose 1, 2, ..., n ∉ A. If n + 1 ∈ A, then n + 1 would be minimal (all smaller positive integers are not in A). So n + 1 ∉ A."
+              },
+              {
+                "title": "Conclusion",
+                "content": "By induction, no positive integer is in A, contradicting that A is nonempty."
+              },
+              {
+                "title": "Uniqueness",
+                "content": "If m and m' are both minimal, then m ≤ m' and m' ≤ m, so m = m'."
+              }
+            ],
+            "conclusion": "The Well Ordering Property holds and the minimal element is unique."
+          }
+        },
+        {
+          "id": "0-2-7",
+          "type": "exercise",
+          "number": 7,
+          "statement": "If p is a prime, prove that there do not exist nonzero integers a and b such that a² = pb² (i.e., √p is not a rational number).",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume contradiction",
+                "content": "Suppose a² = pb² for nonzero integers a, b. WLOG assume gcd(a, b) = 1."
+              },
+              {
+                "title": "Analyze divisibility",
+                "content": "Since p | a², and p is prime, we have p | a.\nWrite a = pc for some integer c."
+              },
+              {
+                "title": "Substitute",
+                "content": "Then (pc)² = pb², so p²c² = pb², giving pc² = b²."
+              },
+              {
+                "title": "Derive contradiction",
+                "content": "Now p | b², so p | b.\nBut then p | gcd(a, b), contradicting gcd(a, b) = 1."
+              }
+            ],
+            "conclusion": "Therefore no such a and b exist, so √p is irrational."
+          }
+        },
+        {
+          "id": "0-2-8",
+          "type": "exercise",
+          "number": 8,
+          "statement": "Let p be a prime, n ∈ ℤ⁺. Find a formula for the largest power of p which divides n! = n(n-1)(n-2)...2·1 (it involves the greatest integer function).",
+          "solution": {
+            "steps": [
+              {
+                "title": "Count multiples of p",
+                "content": "Among 1, 2, ..., n, there are ⌊n/p⌋ multiples of p."
+              },
+              {
+                "title": "Count multiples of p²",
+                "content": "There are ⌊n/p²⌋ multiples of p², each contributing an extra factor of p."
+              },
+              {
+                "title": "General pattern",
+                "content": "Continue for p³, p⁴, ... until pᵏ > n."
+              }
+            ],
+            "conclusion": "The largest power of p dividing n! is: ⌊n/p⌋ + ⌊n/p²⌋ + ⌊n/p³⌋ + ... (Legendre's formula)"
+          }
+        },
+        {
+          "id": "0-2-10",
+          "type": "exercise",
+          "number": 10,
+          "statement": "Prove for any given positive integer N there exist only finitely many integers n with φ(n) = N where φ denotes Euler's φ-function. Conclude in particular that φ(n) tends to infinity as n tends to infinity.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Upper bound for n",
+                "content": "If n > 1, then φ(n) ≥ 1. Also, φ(n) ≤ n - 1 for n > 1.\nFor prime p, φ(p) = p - 1.\nFor n = 2m with m > 1, φ(n) ≤ n/2."
+              },
+              {
+                "title": "Bound in terms of N",
+                "content": "If φ(n) = N, then n ≤ 2N + 2 (since φ(n) ≥ n/3 for n > 2)."
+              },
+              {
+                "title": "Finiteness",
+                "content": "Since n is bounded by a function of N, there are only finitely many possible values of n with φ(n) = N."
+              }
+            ],
+            "conclusion": "For any N, finitely many n satisfy φ(n) = N. Thus φ(n) → ∞ as n → ∞."
+          }
+        },
+        {
+          "id": "0-2-11",
+          "type": "exercise",
+          "number": 11,
+          "statement": "Prove that if d divides n then φ(d) divides φ(n) where φ denotes Euler's φ-function.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Write prime factorizations",
+                "content": "Let n = p₁^α₁ p₂^α₂ ... pₖ^αₖ\nSince d | n, we have d = p₁^β₁ p₂^β₂ ... pₖ^βₖ where 0 ≤ βᵢ ≤ αᵢ."
+              },
+              {
+                "title": "Apply φ formula",
+                "content": "φ(n) = ∏ pᵢ^(αᵢ-1)(pᵢ - 1)\nφ(d) = ∏ pᵢ^(βᵢ-1)(pᵢ - 1) (for βᵢ > 0)"
+              },
+              {
+                "title": "Compare",
+                "content": "For each prime pᵢ:\n• If βᵢ = 0, this prime doesn't contribute to φ(d)\n• If βᵢ > 0, then pᵢ^(βᵢ-1)(pᵢ-1) divides pᵢ^(αᵢ-1)(pᵢ-1) since βᵢ ≤ αᵢ"
+              }
+            ],
+            "conclusion": "Therefore φ(d) | φ(n)."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "sectionTitle": "The Integers Modulo n",
+      "textbookSection": "§0.3",
+      "examples": [
+        {
+          "id": "ex-0-3-1",
+          "type": "example",
+          "title": "Residue Classes",
+          "statement": "List all residue classes modulo 5.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Identify equivalence classes",
+                "content": "The residue classes mod 5 are determined by remainders 0, 1, 2, 3, 4:\n\\bar{0} = {..., -10, -5, 0, 5, 10, ...}\n\\bar{1} = {..., -9, -4, 1, 6, 11, ...}\n\\bar{2} = {..., -8, -3, 2, 7, 12, ...}\n\\bar{3} = {..., -7, -2, 3, 8, 13, ...}\n\\bar{4} = {..., -6, -1, 4, 9, 14, ...}"
+              }
+            ],
+            "conclusion": "There are exactly 5 residue classes: \\bar{0}, \\bar{1}, \\bar{2}, \\bar{3}, \\bar{4}"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "0-3-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Write out the addition and multiplication tables for ℤ/3ℤ.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Addition table",
+                "content": "+  | 0̄  1̄  2̄\n---|--------\n0̄ | 0̄  1̄  2̄\n1̄ | 1̄  2̄  0̄\n2̄ | 2̄  0̄  1̄"
+              },
+              {
+                "title": "Multiplication table",
+                "content": "×  | 0̄  1̄  2̄\n---|--------\n0̄ | 0̄  0̄  0̄\n1̄ | 0̄  1̄  2̄\n2̄ | 0̄  2̄  1̄"
+              }
+            ],
+            "conclusion": "Note that ℤ/3ℤ is a field since 3 is prime and every nonzero element has a multiplicative inverse."
+          }
+        },
+        {
+          "id": "0-3-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Write out the addition and multiplication tables for ℤ/6ℤ.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Addition table",
+                "content": "+  | 0̄  1̄  2̄  3̄  4̄  5̄\n---|------------------\n0̄ | 0̄  1̄  2̄  3̄  4̄  5̄\n1̄ | 1̄  2̄  3̄  4̄  5̄  0̄\n2̄ | 2̄  3̄  4̄  5̄  0̄  1̄\n3̄ | 3̄  4̄  5̄  0̄  1̄  2̄\n4̄ | 4̄  5̄  0̄  1̄  2̄  3̄\n5̄ | 5̄  0̄  1̄  2̄  3̄  4̄"
+              },
+              {
+                "title": "Multiplication table",
+                "content": "×  | 0̄  1̄  2̄  3̄  4̄  5̄\n---|------------------\n0̄ | 0̄  0̄  0̄  0̄  0̄  0̄\n1̄ | 0̄  1̄  2̄  3̄  4̄  5̄\n2̄ | 0̄  2̄  4̄  0̄  2̄  4̄\n3̄ | 0̄  3̄  0̄  3̄  0̄  3̄\n4̄ | 0̄  4̄  2̄  0̄  4̄  2̄\n5̄ | 0̄  5̄  4̄  3̄  2̄  1̄"
+              }
+            ],
+            "conclusion": "Note: 2̄ · 3̄ = 0̄ shows ℤ/6ℤ has zero divisors (not an integral domain)."
+          }
+        },
+        {
+          "id": "0-3-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that if a̅ = a̅' in ℤ/nℤ and b̅ = b̅' in ℤ/nℤ, then a̅ + b̅ = a̅' + b̅' and a̅ · b̅ = a̅' · b̅'.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Setup",
+                "content": "a̅ = a̅' means n | (a - a'), so a = a' + kn for some k ∈ ℤ.\nb̅ = b̅' means n | (b - b'), so b = b' + ln for some l ∈ ℤ."
+              },
+              {
+                "title": "Addition",
+                "content": "a + b = (a' + kn) + (b' + ln) = (a' + b') + (k + l)n\nSo n | ((a + b) - (a' + b')), thus a̅ + b̅ = a̅' + b̅'."
+              },
+              {
+                "title": "Multiplication",
+                "content": "ab = (a' + kn)(b' + ln) = a'b' + a'ln + kb'n + kln²\n= a'b' + n(a'l + kb' + kln)\nSo n | (ab - a'b'), thus a̅ · b̅ = a̅' · b̅'."
+              }
+            ],
+            "conclusion": "Addition and multiplication in ℤ/nℤ are well-defined operations on residue classes."
+          }
+        },
+        {
+          "id": "0-3-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Prove that the number of elements of (ℤ/nℤ)× is φ(n) where φ denotes Euler's φ-function.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Define (ℤ/nℤ)×",
+                "content": "(ℤ/nℤ)× is the set of units (invertible elements) in ℤ/nℤ."
+              },
+              {
+                "title": "Characterize units",
+                "content": "ā has an inverse in ℤ/nℤ iff ∃b̄ such that āb̄ = 1̄\niff ∃b such that ab ≡ 1 (mod n)\niff ∃b, k such that ab = 1 + kn\niff ∃b, k such that ab - kn = 1\niff gcd(a, n) = 1 (by Bezout's identity)"
+              },
+              {
+                "title": "Count units",
+                "content": "The number of residue classes ā with 0 ≤ a < n and gcd(a, n) = 1 is φ(n) by definition."
+              }
+            ],
+            "conclusion": "|(ℤ/nℤ)×| = φ(n)"
+          }
+        },
+        {
+          "id": "0-3-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Prove that if ā, b̄ ∈ (ℤ/nℤ)× then ā · b̄ ∈ (ℤ/nℤ)×.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Express conditions",
+                "content": "ā ∈ (ℤ/nℤ)× means gcd(a, n) = 1.\nb̄ ∈ (ℤ/nℤ)× means gcd(b, n) = 1."
+              },
+              {
+                "title": "Use prime characterization",
+                "content": "gcd(a, n) = 1 means no prime p divides both a and n.\ngcd(b, n) = 1 means no prime p divides both b and n."
+              },
+              {
+                "title": "Analyze product",
+                "content": "If prime p | n and p | ab, then p | a or p | b.\nBut p | a and p | n implies gcd(a, n) > 1, contradiction.\nSimilarly for b. So no prime divides both ab and n."
+              }
+            ],
+            "conclusion": "gcd(ab, n) = 1, so āb̄ ∈ (ℤ/nℤ)×. Thus (ℤ/nℤ)× is closed under multiplication."
+          }
+        },
+        {
+          "id": "0-3-6",
+          "type": "exercise",
+          "number": 6,
+          "statement": "Determine ā⁻¹ for every ā ∈ (ℤ/9ℤ)×.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find (ℤ/9ℤ)×",
+                "content": "(ℤ/9ℤ)× = {1̄, 2̄, 4̄, 5̄, 7̄, 8̄} (elements coprime to 9)"
+              },
+              {
+                "title": "Find inverses",
+                "content": "1̄⁻¹ = 1̄ (since 1·1 = 1 ≡ 1)\n2̄⁻¹ = 5̄ (since 2·5 = 10 ≡ 1)\n4̄⁻¹ = 7̄ (since 4·7 = 28 ≡ 1)\n5̄⁻¹ = 2̄ (since 5·2 = 10 ≡ 1)\n7̄⁻¹ = 4̄ (since 7·4 = 28 ≡ 1)\n8̄⁻¹ = 8̄ (since 8·8 = 64 ≡ 1)"
+              }
+            ],
+            "conclusion": "The pairs of inverses are: (1̄, 1̄), (2̄, 5̄), (4̄, 7̄), (8̄, 8̄)"
+          }
+        }
+      ]
+    }
+  ]
+}
