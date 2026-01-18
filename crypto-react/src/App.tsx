@@ -2,14 +2,25 @@ import { lazy, Suspense, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
+import { CourseConfigProvider, type CourseConfig } from '@shared/contexts/CourseConfigContext';
 import { ErrorBoundary } from '@shared/components/ErrorBoundary';
 import { ErrorProvider } from '@shared/contexts/ErrorContext';
 import { ErrorDisplay } from '@shared/components/ErrorDisplay';
 import { LoadingSpinner } from '@shared/components/common/LoadingSpinner';
+import { Header, Sidebar } from '@shared/components/layout';
 import { AchievementToastContainer } from '@/components/gamification';
-import { Header } from '@/components/layout/Header';
-import { Sidebar } from '@/components/layout/Sidebar';
-import { FEATURES } from '@/config';
+import { COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL, FEATURES } from '@/config';
+import { curriculum } from '@/data/curriculum';
+
+// Course configuration for shared components
+const courseConfig: CourseConfig = {
+  id: COURSE_ID,
+  name: COURSE_NAME,
+  icon: COURSE_ICON,
+  hubUrl: HUB_URL,
+  features: FEATURES,
+  curriculum,
+};
 
 // Eagerly load Home since it's the landing page
 import Home from '@/pages/Home';
@@ -19,22 +30,16 @@ const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
 const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 
-// Lazy load all section pages - this is the biggest win for bundle size
-// Each section is only loaded when the user navigates to it
-const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentType }>> = {
-  1: () => import('@/pages/sections/Section01'),
-  2: () => import('@/pages/sections/Section02'),
-  3: () => import('@/pages/sections/Section03'),
-  4: () => import('@/pages/sections/Section04'),
-  5: () => import('@/pages/sections/Section05'),
-  6: () => import('@/pages/sections/Section06'),
-  7: () => import('@/pages/sections/Section07'),
-  8: () => import('@/pages/sections/Section08'),
-  9: () => import('@/pages/sections/Section09'),
-  10: () => import('@/pages/sections/Section10'),
-  11: () => import('@/pages/sections/Section11'),
-  12: () => import('@/pages/sections/Section12'),
-};
+// =============================================================================
+// SECTION CONFIGURATION
+// =============================================================================
+// Sections are auto-discovered using Vite's glob imports. Just add Section files
+// to src/pages/sections/ following the naming convention Section00.tsx, Section01.tsx, etc.
+// =============================================================================
+import { createSectionLoadersFromGlob, type SectionLoaders } from '@shared/routing/sectionLoader';
+
+const sectionModules = import.meta.glob('./pages/sections/Section*.tsx');
+const sectionLoaders: SectionLoaders = createSectionLoadersFromGlob(sectionModules);
 
 // Create lazy components from loaders
 const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {};
@@ -144,25 +149,27 @@ export default function App() {
   return (
     <ErrorBoundary>
       <ErrorProvider>
-        <HashRouter>
-          {FEATURES.nostrAuth ? (
-            <NostrAuthProvider>
-              {FEATURES.gamification ? (
-                <GamificationProvider>
+        <CourseConfigProvider config={courseConfig}>
+          <HashRouter>
+            {FEATURES.nostrAuth ? (
+              <NostrAuthProvider>
+                {FEATURES.gamification ? (
+                  <GamificationProvider>
+                    <AppContent />
+                  </GamificationProvider>
+                ) : (
                   <AppContent />
-                </GamificationProvider>
-              ) : (
+                )}
+              </NostrAuthProvider>
+            ) : FEATURES.gamification ? (
+              <GamificationProvider>
                 <AppContent />
-              )}
-            </NostrAuthProvider>
-          ) : FEATURES.gamification ? (
-            <GamificationProvider>
+              </GamificationProvider>
+            ) : (
               <AppContent />
-            </GamificationProvider>
-          ) : (
-            <AppContent />
-          )}
-        </HashRouter>
+            )}
+          </HashRouter>
+        </CourseConfigProvider>
         <ErrorDisplay />
       </ErrorProvider>
     </ErrorBoundary>

@@ -1,11 +1,23 @@
 import { lazy, Suspense, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
-import { GamificationProvider } from '@/contexts/GamificationContext';
+import { GamificationProvider, useGamification } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
-import { AchievementToastContainer } from '@/components/gamification';
-import { Header } from '@/components/layout/Header';
-import { Sidebar } from '@/components/layout/Sidebar';
-import { FEATURES } from '@/config';
+import { CourseConfigProvider, type CourseConfig } from '@shared/contexts/CourseConfigContext';
+import { LoadingSpinner } from '@shared/components/common/LoadingSpinner';
+import { AchievementToastContainer } from '@shared/components/gamification';
+import { Header, Sidebar } from '@shared/components/layout';
+import { COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL, FEATURES } from '@/config';
+import { curriculum } from '@/data/curriculum';
+
+// Course configuration for shared components
+const courseConfig: CourseConfig = {
+  id: COURSE_ID,
+  name: COURSE_NAME,
+  icon: COURSE_ICON,
+  hubUrl: HUB_URL,
+  features: FEATURES,
+  curriculum,
+};
 
 // Eagerly load Home since it's the landing page
 import Home from '@/pages/Home';
@@ -16,88 +28,16 @@ const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
 
-// Loading spinner component
-function LoadingSpinner({ message = 'Loading...' }: { message?: string }) {
-  return (
-    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent-500 mx-auto mb-4"></div>
-        <p className="text-dark-400">{message}</p>
-      </div>
-    </div>
-  );
-}
+// =============================================================================
+// SECTION CONFIGURATION
+// =============================================================================
+// Sections are auto-discovered using Vite's glob imports. Just add Section files
+// to src/pages/sections/ following the naming convention Section00.tsx, Section01.tsx, etc.
+// =============================================================================
+import { createSectionLoadersFromGlob, type SectionLoaders } from '@shared/routing/sectionLoader';
 
-// Lazy load all section pages - this is the biggest win for bundle size
-// Each section is only loaded when the user navigates to it
-const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentType }>> = {
-  0: () => import('@/pages/sections/Section00'),
-  1: () => import('@/pages/sections/Section01'),
-  2: () => import('@/pages/sections/Section02'),
-  3: () => import('@/pages/sections/Section03'),
-  4: () => import('@/pages/sections/Section04'),
-  5: () => import('@/pages/sections/Section05'),
-  6: () => import('@/pages/sections/Section06'),
-  7: () => import('@/pages/sections/Section07'),
-  8: () => import('@/pages/sections/Section08'),
-  9: () => import('@/pages/sections/Section09'),
-  10: () => import('@/pages/sections/Section10'),
-  11: () => import('@/pages/sections/Section11'),
-  12: () => import('@/pages/sections/Section12'),
-  13: () => import('@/pages/sections/Section13'),
-  14: () => import('@/pages/sections/Section14'),
-  15: () => import('@/pages/sections/Section15'),
-  16: () => import('@/pages/sections/Section16'),
-  17: () => import('@/pages/sections/Section17'),
-  18: () => import('@/pages/sections/Section18'),
-  19: () => import('@/pages/sections/Section19'),
-  20: () => import('@/pages/sections/Section20'),
-  21: () => import('@/pages/sections/Section21'),
-  22: () => import('@/pages/sections/Section22'),
-  23: () => import('@/pages/sections/Section23'),
-  24: () => import('@/pages/sections/Section24'),
-  25: () => import('@/pages/sections/Section25'),
-  26: () => import('@/pages/sections/Section26'),
-  27: () => import('@/pages/sections/Section27'),
-  28: () => import('@/pages/sections/Section28'),
-  29: () => import('@/pages/sections/Section29'),
-  30: () => import('@/pages/sections/Section30'),
-  31: () => import('@/pages/sections/Section31'),
-  32: () => import('@/pages/sections/Section32'),
-  33: () => import('@/pages/sections/Section33'),
-  34: () => import('@/pages/sections/Section34'),
-  35: () => import('@/pages/sections/Section35'),
-  36: () => import('@/pages/sections/Section36'),
-  37: () => import('@/pages/sections/Section37'),
-  38: () => import('@/pages/sections/Section38'),
-  39: () => import('@/pages/sections/Section39'),
-  40: () => import('@/pages/sections/Section40'),
-  41: () => import('@/pages/sections/Section41'),
-  42: () => import('@/pages/sections/Section42'),
-  43: () => import('@/pages/sections/Section43'),
-  44: () => import('@/pages/sections/Section44'),
-  45: () => import('@/pages/sections/Section45'),
-  46: () => import('@/pages/sections/Section46'),
-  47: () => import('@/pages/sections/Section47'),
-  48: () => import('@/pages/sections/Section48'),
-  49: () => import('@/pages/sections/Section49'),
-  50: () => import('@/pages/sections/Section50'),
-  51: () => import('@/pages/sections/Section51'),
-  52: () => import('@/pages/sections/Section52'),
-  53: () => import('@/pages/sections/Section53'),
-  54: () => import('@/pages/sections/Section54'),
-  55: () => import('@/pages/sections/Section55'),
-  56: () => import('@/pages/sections/Section56'),
-  57: () => import('@/pages/sections/Section57'),
-  58: () => import('@/pages/sections/Section58'),
-  59: () => import('@/pages/sections/Section59'),
-  60: () => import('@/pages/sections/Section60'),
-  61: () => import('@/pages/sections/Section61'),
-  62: () => import('@/pages/sections/Section62'),
-  63: () => import('@/pages/sections/Section63'),
-  64: () => import('@/pages/sections/Section64'),
-  65: () => import('@/pages/sections/Section65'),
-};
+const sectionModules = import.meta.glob('./pages/sections/Section*.tsx');
+const sectionLoaders: SectionLoaders = createSectionLoadersFromGlob(sectionModules);
 
 // Create lazy components from loaders
 const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {};
@@ -208,31 +148,39 @@ function AppContent() {
       </AppLayout>
 
       {/* Global achievement notifications */}
-      {FEATURES.gamification && <AchievementToastContainer />}
+      {FEATURES.gamification && <AchievementNotifications />}
     </>
   );
 }
 
+/** Wrapper that connects shared AchievementToastContainer to the gamification context */
+function AchievementNotifications() {
+  const { notifications, dismissNotification } = useGamification();
+  return <AchievementToastContainer notifications={notifications} onDismiss={dismissNotification} />;
+}
+
 export default function App() {
   return (
-    <HashRouter>
-      {FEATURES.nostrAuth ? (
-        <NostrAuthProvider>
-          {FEATURES.gamification ? (
-            <GamificationProvider>
+    <CourseConfigProvider config={courseConfig}>
+      <HashRouter>
+        {FEATURES.nostrAuth ? (
+          <NostrAuthProvider>
+            {FEATURES.gamification ? (
+              <GamificationProvider>
+                <AppContent />
+              </GamificationProvider>
+            ) : (
               <AppContent />
-            </GamificationProvider>
-          ) : (
+            )}
+          </NostrAuthProvider>
+        ) : FEATURES.gamification ? (
+          <GamificationProvider>
             <AppContent />
-          )}
-        </NostrAuthProvider>
-      ) : FEATURES.gamification ? (
-        <GamificationProvider>
+          </GamificationProvider>
+        ) : (
           <AppContent />
-        </GamificationProvider>
-      ) : (
-        <AppContent />
-      )}
-    </HashRouter>
+        )}
+      </HashRouter>
+    </CourseConfigProvider>
   );
 }

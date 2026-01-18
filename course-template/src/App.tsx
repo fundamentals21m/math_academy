@@ -2,14 +2,15 @@ import { lazy, Suspense, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
+import { CourseConfigProvider, type CourseConfig } from '@shared/contexts/CourseConfigContext';
 import { ErrorBoundary } from '@shared/components/ErrorBoundary';
 import { ErrorProvider } from '@shared/contexts/ErrorContext';
 import { ErrorDisplay } from '@shared/components/ErrorDisplay';
 import { LoadingSpinner } from '@shared/components/common/LoadingSpinner';
+import { Header, Sidebar } from '@shared/components/layout';
 import { AchievementToastContainer } from '@/components/gamification';
-import { Header } from '@/components/layout/Header';
-import { Sidebar } from '@/components/layout/Sidebar';
-import { FEATURES } from '@/config';
+import { COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL, FEATURES } from '@/config';
+import { curriculum } from '@/data/curriculum';
 
 // Eagerly load Home since it's the landing page
 import Home from '@/pages/Home';
@@ -23,27 +24,36 @@ const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
 // =============================================================================
 // SECTION CONFIGURATION
 // =============================================================================
-// Add your section loaders here. Each section is lazy-loaded for optimal
-// bundle splitting. Example:
-//
-// const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentType }>> = {
-//   1: () => import('@/pages/sections/Section01'),
-//   2: () => import('@/pages/sections/Section02'),
-//   3: () => import('@/pages/sections/Section03'),
-// };
-//
-// For a course with many sections, you can generate this programmatically.
+// Sections are auto-discovered using Vite's glob imports. Just add Section files
+// to src/pages/sections/ following the naming convention Section00.tsx, Section01.tsx, etc.
 // =============================================================================
-const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentType }>> = {
-  // Add your sections here:
-  // 1: () => import('@/pages/sections/Section01'),
-};
+import { createSectionLoadersFromGlob, type SectionLoaders } from '@shared/routing/sectionLoader';
+
+const sectionModules = import.meta.glob('./pages/sections/Section*.tsx');
+const sectionLoaders: SectionLoaders = createSectionLoadersFromGlob(sectionModules);
 
 // Create lazy components from loaders
 const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {};
 for (const [id, loader] of Object.entries(sectionLoaders)) {
   sectionComponents[Number(id)] = lazy(loader);
 }
+
+// Course configuration for shared layout components
+const courseConfig: CourseConfig = {
+  id: COURSE_ID,
+  name: COURSE_NAME,
+  icon: COURSE_ICON,
+  hubUrl: HUB_URL,
+  features: FEATURES,
+  curriculum: curriculum.map((part) => ({
+    id: part.id,
+    title: part.title,
+    sections: part.sections.map((section) => ({
+      id: section.id,
+      title: section.title,
+    })),
+  })),
+};
 
 function SectionRouter() {
   const { id } = useParams<{ id: string }>();
@@ -157,25 +167,27 @@ export default function App() {
   return (
     <ErrorBoundary>
       <ErrorProvider>
-        <HashRouter>
-          {FEATURES.nostrAuth ? (
-            <NostrAuthProvider>
-              {FEATURES.gamification ? (
-                <GamificationProvider>
+        <CourseConfigProvider config={courseConfig}>
+          <HashRouter>
+            {FEATURES.nostrAuth ? (
+              <NostrAuthProvider>
+                {FEATURES.gamification ? (
+                  <GamificationProvider>
+                    <AppContent />
+                  </GamificationProvider>
+                ) : (
                   <AppContent />
-                </GamificationProvider>
-              ) : (
+                )}
+              </NostrAuthProvider>
+            ) : FEATURES.gamification ? (
+              <GamificationProvider>
                 <AppContent />
-              )}
-            </NostrAuthProvider>
-          ) : FEATURES.gamification ? (
-            <GamificationProvider>
+              </GamificationProvider>
+            ) : (
               <AppContent />
-            </GamificationProvider>
-          ) : (
-            <AppContent />
-          )}
-        </HashRouter>
+            )}
+          </HashRouter>
+        </CourseConfigProvider>
         <ErrorDisplay />
       </ErrorProvider>
     </ErrorBoundary>

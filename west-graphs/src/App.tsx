@@ -2,12 +2,23 @@ import { lazy, Suspense, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
+import { CourseConfigProvider, type CourseConfig } from '@shared/contexts/CourseConfigContext';
 import { AchievementToastContainer } from '@/components/gamification';
-import { Header } from '@/components/layout/Header';
-import { Sidebar } from '@/components/layout/Sidebar';
-import { FEATURES } from '@/config';
+import { Header, Sidebar } from '@shared/components/layout';
+import { COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL, FEATURES } from '@/config';
+import { curriculum } from '@/data/curriculum';
 import { LoadingSpinner } from '@shared/components/common/LoadingSpinner';
 import { createSectionLoadersFromGlob, type SectionLoaders } from '@shared/routing/sectionLoader';
+
+// Course configuration for shared components
+const courseConfig: CourseConfig = {
+  id: COURSE_ID,
+  name: COURSE_NAME,
+  icon: COURSE_ICON,
+  hubUrl: HUB_URL,
+  features: FEATURES,
+  curriculum,
+};
 
 // Pages
 import Home from '@/pages/Home';
@@ -121,24 +132,26 @@ function AppContent() {
 
 export default function App() {
   return (
-    <HashRouter>
-      {FEATURES.nostrAuth ? (
-        <NostrAuthProvider>
-          {FEATURES.gamification ? (
-            <GamificationProvider>
+    <CourseConfigProvider config={courseConfig}>
+      <HashRouter>
+        {FEATURES.nostrAuth ? (
+          <NostrAuthProvider>
+            {FEATURES.gamification ? (
+              <GamificationProvider>
+                <AppContent />
+              </GamificationProvider>
+            ) : (
               <AppContent />
-            </GamificationProvider>
-          ) : (
+            )}
+          </NostrAuthProvider>
+        ) : FEATURES.gamification ? (
+          <GamificationProvider>
             <AppContent />
-          )}
-        </NostrAuthProvider>
-      ) : FEATURES.gamification ? (
-        <GamificationProvider>
+          </GamificationProvider>
+        ) : (
           <AppContent />
-        </GamificationProvider>
-      ) : (
-        <AppContent />
-      )}
-    </HashRouter>
+        )}
+      </HashRouter>
+    </CourseConfigProvider>
   );
 }

@@ -1,8 +1,6 @@
 import { lazy, Suspense, Component, type ReactNode, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
-import { GamificationProvider } from '@/contexts/GamificationContext';
-import { Header } from '@/components/layout/Header';
-import { Sidebar } from '@/components/layout/Sidebar';
+import { GamificationProvider, useGamification } from '@/contexts/GamificationContext';
 
 // Simple LoadingSpinner component
 function LoadingSpinner({ message = 'Loading...' }: { message?: string }) {
@@ -40,6 +38,17 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boole
   }
 }
 
+
+// Course configuration for shared components
+const courseConfig: CourseConfig = {
+  id: COURSE_ID,
+  name: COURSE_NAME,
+  icon: COURSE_ICON,
+  hubUrl: HUB_URL,
+  features: FEATURES,
+  curriculum,
+};
+
 // Eagerly load Home since it's the landing page
 import Home from '@/pages/Home';
 
@@ -47,25 +56,20 @@ import Home from '@/pages/Home';
 const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 
-// Lazy load all section pages - this is the biggest win for bundle size
-// Each section is only loaded when the user navigates to it
-// Add more sections as they are created
-const sectionLoaders: Record<number, () => Promise<{ default: React.ComponentType }>> = {
-  // Chapter 1: Introduction
-  1: () => import('@/pages/sections/Section01'),
-  // Chapter 2: Statistical Learning
-  2: () => import('@/pages/sections/Section02'),
-  3: () => import('@/pages/sections/Section03'),
-  4: () => import('@/pages/sections/Section04'), // Lab: Intro to R
-  5: () => import('@/pages/sections/Section05'), // Ch2 Exercises
-  // Chapter 3: Linear Regression
-  6: () => import('@/pages/sections/Section06'),
-  7: () => import('@/pages/sections/Section07'), // Multiple Linear Regression
-  8: () => import('@/pages/sections/Section08'), // Regression Considerations
-  9: () => import('@/pages/sections/Section09'), // The Marketing Plan
-  10: () => import('@/pages/sections/Section10'), // Comparison with KNN
-  // ... continue adding sections as they are implemented
-};
+// =============================================================================
+// SECTION CONFIGURATION
+// =============================================================================
+// Sections are auto-discovered using Vite's glob imports. Just add Section files
+// to src/pages/sections/ following the naming convention Section00.tsx, Section01.tsx, etc.
+// =============================================================================
+import { createSectionLoadersFromGlob, type SectionLoaders } from '@shared/routing/sectionLoader';
+import { CourseConfigProvider, type CourseConfig } from '@shared/contexts/CourseConfigContext';
+import { AchievementToastContainer } from '@shared/components/gamification';
+import { Header, Sidebar } from '@shared/components/layout';
+import { curriculum } from '@/data/curriculum';
+
+const sectionModules = import.meta.glob('./pages/sections/Section*.tsx');
+const sectionLoaders: SectionLoaders = createSectionLoadersFromGlob(sectionModules);
 
 // Create lazy components from loaders
 const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {};
@@ -151,6 +155,13 @@ function AppContent() {
     </AppLayout>
   );
 }
+
+/** Wrapper that connects shared AchievementToastContainer to the gamification context */
+function AchievementNotifications() {
+  const { notifications, dismissNotification } = useGamification();
+  return <AchievementToastContainer notifications={notifications} onDismiss={dismissNotification} />;
+}
+
 
 export default function App() {
   return (
