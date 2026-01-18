@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { getLevelProgress } from '@/lib/gamification/xpCalculator';
+import { getLevelProgress } from '@shared/gamification';
 
 interface XPDisplayProps {
   xp: number;

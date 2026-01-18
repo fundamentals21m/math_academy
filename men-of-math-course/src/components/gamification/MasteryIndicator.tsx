@@ -1,5 +1,5 @@
 import type { MasteryLevel } from '@/types/gamification';
-import { getMasteryInfo } from '@/lib/gamification/masteryCalculator';
+import { getMasteryInfo } from '@shared/gamification';
 
 interface MasteryIndicatorProps {
   level: MasteryLevel;
