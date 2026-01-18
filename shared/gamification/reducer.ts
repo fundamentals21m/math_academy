@@ -36,6 +36,7 @@ export type GamificationAction =
   | { type: 'MARK_MIGRATED' }
   | { type: 'VISIT_SECTION'; payload: { sectionId: SectionId } }
   | { type: 'COMPLETE_SECTION'; payload: { sectionId: SectionId } }
+  | { type: 'COMPLETE_PART'; payload: { partId: string } }
   | { type: 'RECORD_QUIZ'; payload: RecordQuizPayload }
   | { type: 'USE_VISUALIZATION'; payload: { sectionId: SectionId; name: string } }
   | { type: 'UPDATE_STREAK' }
@@ -268,6 +269,39 @@ function handleUseVisualization(
 }
 
 /**
+ * Handle completing a curriculum part/chapter.
+ * Awards PART_COMPLETE_BONUS XP if not already completed.
+ */
+function handleCompletePart(
+  state: GamificationState,
+  partId: string,
+  now: string
+): GamificationState {
+  if (state.user.partsCompleted.includes(partId)) {
+    return state; // Already completed
+  }
+
+  const newXP = state.user.totalXP + XP_CONFIG.PART_COMPLETE_BONUS;
+
+  logger.info(`Part ${partId} completed, awarding ${XP_CONFIG.PART_COMPLETE_BONUS} XP`);
+
+  return {
+    ...state,
+    user: {
+      ...state.user,
+      totalXP: newXP,
+      level: calculateLevel(newXP),
+      partsCompleted: [...state.user.partsCompleted, partId],
+    },
+    dailyGoals: {
+      ...state.dailyGoals,
+      xpEarned: state.dailyGoals.xpEarned + XP_CONFIG.PART_COMPLETE_BONUS,
+    },
+    lastUpdated: now,
+  };
+}
+
+/**
  * Handle recording a racing game result.
  * Updates racing stats and awards XP.
  */
@@ -455,6 +489,9 @@ export function gamificationReducer(
 
     case 'COMPLETE_SECTION':
       return handleCompleteSection(state, action.payload.sectionId, now);
+
+    case 'COMPLETE_PART':
+      return handleCompletePart(state, action.payload.partId, now);
 
     case 'RECORD_QUIZ':
       return handleRecordQuiz(state, action.payload, now);

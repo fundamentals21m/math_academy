@@ -276,3 +276,27 @@ export const LEVEL_THRESHOLDS = [
 ] as const;
 
 export const DAILY_XP_GOAL = 50;
+
+// =============================================================================
+// CURRICULUM TYPES (for part completion tracking)
+// =============================================================================
+
+/**
+ * Section within a curriculum part (minimal type for gamification)
+ */
+export interface CurriculumSection {
+  id: number;
+}
+
+/**
+ * Part/chapter containing multiple sections
+ */
+export interface CurriculumPart {
+  id: number;
+  sections: CurriculumSection[];
+}
+
+/**
+ * Curriculum structure for part completion tracking
+ */
+export type Curriculum = CurriculumPart[];

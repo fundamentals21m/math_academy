@@ -34,15 +34,20 @@ describe('calculateMastery', () => {
       expect(calculateMastery(section)).toBe('learning');
     });
 
-    it('should return learning for single moderate score', () => {
-      const section = createSection([{ score: 75 }]);
+    it('should return learning for single score below 70', () => {
+      const section = createSection([{ score: 65 }]);
       expect(calculateMastery(section)).toBe('learning');
     });
   });
 
   describe('familiar level', () => {
-    it('should return familiar when best score >= 80', () => {
+    it('should return familiar when best score is exactly 80 (edge case)', () => {
       const section = createSection([{ score: 80 }]);
+      expect(calculateMastery(section)).toBe('familiar');
+    });
+
+    it('should return familiar when best score >= 70', () => {
+      const section = createSection([{ score: 75 }]);
       expect(calculateMastery(section)).toBe('familiar');
     });
 
@@ -50,21 +55,26 @@ describe('calculateMastery', () => {
       const section = createSection([{ score: 70 }, { score: 75 }]);
       expect(calculateMastery(section)).toBe('familiar');
     });
-
-    it('should return familiar for 85% score', () => {
-      const section = createSection([{ score: 85 }]);
-      expect(calculateMastery(section)).toBe('familiar');
-    });
   });
 
   describe('mastered level', () => {
+    it('should return mastered for score > 80 (81%)', () => {
+      const section = createSection([{ score: 81 }]);
+      expect(calculateMastery(section)).toBe('mastered');
+    });
+
+    it('should return mastered for 85% score', () => {
+      const section = createSection([{ score: 85 }]);
+      expect(calculateMastery(section)).toBe('mastered');
+    });
+
     it('should return mastered for single perfect score (100%)', () => {
       const section = createSection([{ score: 100 }]);
       expect(calculateMastery(section)).toBe('mastered');
     });
 
-    it('should return mastered for 2+ perfect scores', () => {
-      const section = createSection([{ score: 100 }, { score: 100 }]);
+    it('should return mastered for 2+ scores > 80', () => {
+      const section = createSection([{ score: 85 }, { score: 90 }]);
       expect(calculateMastery(section)).toBe('mastered');
     });
 
@@ -90,24 +100,30 @@ describe('calculateMastery', () => {
   });
 
   describe('edge cases', () => {
-    it('should handle single perfect score as mastered', () => {
-      const section = createSection([{ score: 100 }]);
-      // Single perfect score = mastered (green check)
+    it('should handle exactly 80 as familiar (not mastered)', () => {
+      const section = createSection([{ score: 80 }]);
+      // 80% exactly = familiar (threshold is >80, not >=80)
+      expect(calculateMastery(section)).toBe('familiar');
+    });
+
+    it('should handle 81 as mastered (just above threshold)', () => {
+      const section = createSection([{ score: 81 }]);
+      // 81% > 80% = mastered (green check)
       expect(calculateMastery(section)).toBe('mastered');
     });
 
     it('should prioritize mastered over familiar criteria', () => {
-      // 2 perfect scores should be mastered even if we only have 2 attempts
-      const section = createSection([{ score: 100 }, { score: 100 }]);
+      // Score of 85 meets both >80 (mastered) and >=70 (familiar) - should be mastered
+      const section = createSection([{ score: 85 }]);
       expect(calculateMastery(section)).toBe('mastered');
     });
 
-    it('should handle exactly 70 avg with 2 attempts', () => {
+    it('should handle exactly 70 avg with 2 attempts as familiar', () => {
       const section = createSection([{ score: 70 }, { score: 70 }]);
       expect(calculateMastery(section)).toBe('familiar');
     });
 
-    it('should handle exactly 90 avg with 3 attempts', () => {
+    it('should handle exactly 90 avg with 3 attempts as mastered', () => {
       const section = createSection([{ score: 90 }, { score: 90 }, { score: 90 }]);
       expect(calculateMastery(section)).toBe('mastered');
     });

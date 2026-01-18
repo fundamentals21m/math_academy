@@ -23,6 +23,7 @@ import {
   type AchievementNotification,
   type CourseId,
   type RaceGameResult,
+  type Curriculum,
 } from './types';
 import { loadState, saveState, hasUnmigratedProgress, markAsMigrated } from './storage';
 import { createDefaultState } from './defaults';
@@ -126,6 +127,8 @@ interface GamificationProviderProps {
   children: ReactNode;
   /** Course identifier for section ID generation */
   courseId: CourseId;
+  /** Optional curriculum for part/chapter completion tracking */
+  curriculum?: Curriculum;
 }
 
 /**
@@ -143,7 +146,7 @@ interface GamificationProviderProps {
  * }
  * ```
  */
-export function GamificationProvider({ children, courseId }: GamificationProviderProps) {
+export function GamificationProvider({ children, courseId, curriculum }: GamificationProviderProps) {
   const [state, dispatch] = useReducer(gamificationReducer, createDefaultState());
   const [isLoading, setIsLoading] = useState(true);
   const [notifications, setNotifications] = useState<AchievementNotification[]>([]);
@@ -168,6 +171,37 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
       return `${courseId}:${numericId}` as SectionId;
     },
     [courseId]
+  );
+
+  /**
+   * Check if completing a section completes a curriculum part.
+   * Returns the part ID if completion triggers a part completion, null otherwise.
+   */
+  const checkPartCompletion = useCallback(
+    (sectionId: number, currentState: GamificationState): string | null => {
+      if (!curriculum) return null;
+
+      // Find the part containing this section
+      const part = curriculum.find((p) => p.sections.some((s) => s.id === sectionId));
+      if (!part) return null;
+
+      const partIdStr = `${courseId}:part${part.id}`;
+
+      // Already completed this part
+      if (currentState.user.partsCompleted.includes(partIdStr)) return null;
+
+      // Check if all sections in this part are completed
+      // (including the one being completed now)
+      const allSectionIds = part.sections.map((s) => makeSectionId(s.id));
+      const currentSectionId = makeSectionId(sectionId);
+
+      const allCompleted = allSectionIds.every(
+        (id) => currentState.user.sectionsCompleted.includes(id) || id === currentSectionId
+      );
+
+      return allCompleted ? partIdStr : null;
+    },
+    [curriculum, courseId, makeSectionId]
   );
 
   // Load state from localStorage on mount (initial load for non-authenticated users)
@@ -313,7 +347,21 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
 
   const completeSection = useCallback(
     (sectionId: number) => {
+      // Check for part completion BEFORE dispatching (since we check current state + this section)
+      const completedPartId = checkPartCompletion(sectionId, state);
+
       dispatch({ type: 'COMPLETE_SECTION', payload: { sectionId: makeSectionId(sectionId) } });
+
+      // If completing this section completes a part, dispatch COMPLETE_PART
+      if (completedPartId) {
+        dispatch({ type: 'COMPLETE_PART', payload: { partId: completedPartId } });
+
+        // Notify iOS app about part completion
+        postToiOS('partCompleted', {
+          partId: completedPartId,
+          courseId,
+        });
+      }
 
       // Notify iOS app if running in WKWebView
       postToiOS('sectionCompleted', {
@@ -321,7 +369,7 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
         courseId,
       });
     },
-    [makeSectionId, courseId]
+    [makeSectionId, courseId, checkPartCompletion, state]
   );
 
   const recordQuiz = useCallback(
@@ -334,6 +382,10 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
     ) => {
       const fullSectionId = makeSectionId(sectionId);
 
+      // Check for part completion BEFORE dispatching if quiz will pass
+      // (Quiz passing auto-completes section in the reducer)
+      const completedPartId = score >= 80 ? checkPartCompletion(sectionId, state) : null;
+
       dispatch({
         type: 'RECORD_QUIZ',
         payload: {
@@ -344,6 +396,16 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
           totalQuestions,
         },
       });
+
+      // If passing quiz completes a part, dispatch COMPLETE_PART
+      if (completedPartId) {
+        dispatch({ type: 'COMPLETE_PART', payload: { partId: completedPartId } });
+
+        postToiOS('partCompleted', {
+          partId: completedPartId,
+          courseId,
+        });
+      }
 
       // Notify iOS app if running in WKWebView
       postToiOS('quizCompleted', {
@@ -363,7 +425,7 @@ export function GamificationProvider({ children, courseId }: GamificationProvide
         });
       }
     },
-    [makeSectionId, courseId]
+    [makeSectionId, courseId, checkPartCompletion, state]
   );
 
   const useVisualization = useCallback(
