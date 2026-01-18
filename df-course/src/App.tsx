@@ -43,6 +43,16 @@ const ProblemsPart06 = lazy(() => import('@/pages/problems/ProblemsPart06'));
 const ProblemsPart07 = lazy(() => import('@/pages/problems/ProblemsPart07'));
 const ProblemsPart08 = lazy(() => import('@/pages/problems/ProblemsPart08'));
 const ProblemsPart09 = lazy(() => import('@/pages/problems/ProblemsPart09'));
+const ProblemsPart10 = lazy(() => import('@/pages/problems/ProblemsPart10'));
+const ProblemsPart11 = lazy(() => import('@/pages/problems/ProblemsPart11'));
+const ProblemsPart12 = lazy(() => import('@/pages/problems/ProblemsPart12'));
+const ProblemsPart13 = lazy(() => import('@/pages/problems/ProblemsPart13'));
+const ProblemsPart14 = lazy(() => import('@/pages/problems/ProblemsPart14'));
+const ProblemsPart15 = lazy(() => import('@/pages/problems/ProblemsPart15'));
+const ProblemsPart16 = lazy(() => import('@/pages/problems/ProblemsPart16'));
+const ProblemsPart17 = lazy(() => import('@/pages/problems/ProblemsPart17'));
+const ProblemsPart18 = lazy(() => import('@/pages/problems/ProblemsPart18'));
+const ProblemsPart19 = lazy(() => import('@/pages/problems/ProblemsPart19'));
 
 // =============================================================================
 // SECTION CONFIGURATION
@@ -231,6 +241,86 @@ function AppContent() {
             element={
               <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
                 <ProblemsPart09 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/10"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart10 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/11"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart11 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/12"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart12 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/13"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart13 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/14"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart14 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/15"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart15 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/16"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart16 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/17"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart17 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/18"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart18 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/19"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart19 />
               </Suspense>
             }
           />

@@ -1,0 +1,30 @@
+{
+  "partId": 17,
+  "partTitle": "Introduction to Homological Algebra",
+  "textbookChapter": "Chapter 17",
+  "sections": [
+    {
+      "sectionId": "17.1",
+      "sectionTitle": "Exact Sequences and the Snake Lemma",
+      "textbookSection": "§17.1",
+      "examples": [
+        {
+          "id": "ex-17.1.1",
+          "type": "example",
+          "title": "Exact Sequences",
+          "statement": "Define exact sequences and prove the Short Five Lemma.",
+          "solution": "**Definition:**\n\nA sequence of R-modules and homomorphisms:\n... → Aₙ₊₁ →^{fₙ₊₁} Aₙ →^{fₙ} Aₙ₋₁ → ...\n\nis **exact at Aₙ** if im(fₙ₊₁) = ker(fₙ).\n\nIt's **exact** if it's exact at every term.\n\n**Short exact sequence:** 0 → A →^f B →^g C → 0\nmeans f is injective, g is surjective, and im(f) = ker(g).\n\n**Short Five Lemma:**\n\nGiven a commutative diagram with exact rows:\n\n0 → A → B → C → 0\n    ↓α   ↓β   ↓γ\n0 → A' → B' → C' → 0\n\nIf α and γ are isomorphisms, then β is an isomorphism.\n\n**Proof:**\n\n*β injective:* Let b ∈ ker(β). Then γ(g(b)) = g'(β(b)) = 0.\nSince γ is injective, g(b) = 0, so b ∈ ker(g) = im(f).\nb = f(a) for some a. Then 0 = β(b) = β(f(a)) = f'(α(a)).\nSince f' is injective, α(a) = 0. Since α is injective, a = 0.\nSo b = 0.\n\n*β surjective:* Diagram chase using surjectivity of α and γ."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "17.1.1",
+          "type": "exercise",
+          "title": "Exercise 17.1.1",
+          "statement": "Prove that if 0 → A → B → C → 0 is exact and C is free, then B ≅ A ⊕ C.",
+          "solution": "**Proof:**\n\nLet 0 → A →^i B →^π C → 0 be exact with C free.\n\nSince C is free, let {cⱼ}_{j∈J} be a basis.\n\nFor each cⱼ, pick bⱼ ∈ B with π(bⱼ) = cⱼ.\n\n**Define s: C → B by s(cⱼ) = bⱼ, extended linearly.**\n\nThen π ∘ s = id_C (s is a **section** of π).\n\n**Claim:** B = i(A) ⊕ s(C).\n\n*Spanning:* For b ∈ B, let c = π(b). Then:\nb - s(c) ∈ ker(π) = im(i) = i(A).\nSo b = (b - s(c)) + s(c) ∈ i(A) + s(C).\n\n*Direct sum:* If b ∈ i(A) ∩ s(C), then:\nπ(b) = 0 (since b ∈ i(A) = ker(π))\nb = s(c) for some c ∈ C.\nπ(b) = π(s(c)) = c = 0.\nSo b = s(0) = 0.\n\nThus B ≅ A ⊕ C.\n\nThis says: **Short exact sequences with free quotient split.**"
+        }
+      ]
+    }
+  ]
+}

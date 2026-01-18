@@ -1,0 +1,67 @@
+{
+  "partId": 10,
+  "partTitle": "Introduction to Module Theory",
+  "textbookChapter": "Chapter 10",
+  "sections": [
+    {
+      "sectionId": "10.1",
+      "sectionTitle": "Basic Definitions and Examples",
+      "textbookSection": "§10.1-10.2",
+      "examples": [
+        {
+          "id": "ex-10.1.1",
+          "type": "example",
+          "title": "Example 10.1.1",
+          "statement": "Define a module over a ring R and give examples.",
+          "solution": "**Definition:**\n\nLet R be a ring. A **left R-module** is an abelian group (M, +) with a scalar multiplication R × M → M, written (r, m) ↦ rm, satisfying:\n\n1. r(m + n) = rm + rn (distributivity over M)\n2. (r + s)m = rm + sm (distributivity over R)\n3. (rs)m = r(sm) (associativity)\n4. 1m = m (if R has unity)\n\n**Examples:**\n\n1. **Vector spaces:** If F is a field, an F-module is exactly an F-vector space.\n\n2. **Abelian groups:** Every abelian group A is a ℤ-module with:\n   n · a = a + a + ... + a (n times) for n > 0\n   0 · a = 0\n   n · a = -((-n) · a) for n < 0\n\n3. **Ideals:** If I ⊆ R is a left ideal, then I is a left R-module under the ring multiplication.\n\n4. **R[x]-modules:** An R[x]-module M is an R-module together with an R-linear map T: M → M (where x acts as T).\n\n5. **Matrix modules:** R^n (column vectors) is a left M_n(R)-module."
+        },
+        {
+          "id": "ex-10.1.2",
+          "type": "example",
+          "title": "Example 10.1.2",
+          "statement": "Define submodules and quotient modules, and state the First Isomorphism Theorem for modules.",
+          "solution": "**Submodule:**\n\nA subset N of an R-module M is a **submodule** if:\n1. N is a subgroup of (M, +)\n2. rn ∈ N for all r ∈ R, n ∈ N\n\n**Quotient Module:**\n\nIf N is a submodule of M, the quotient M/N is an R-module with:\n- Addition: (m + N) + (m' + N) = (m + m') + N\n- Scalar multiplication: r(m + N) = rm + N\n\n**First Isomorphism Theorem for Modules:**\n\nIf φ: M → N is an R-module homomorphism, then:\n1. ker(φ) is a submodule of M\n2. im(φ) is a submodule of N\n3. M/ker(φ) ≅ im(φ)\n\n**Proof sketch:**\nSame as for groups/rings:\n- Define ψ: M/ker(φ) → im(φ) by ψ(m + ker(φ)) = φ(m)\n- Verify well-defined, R-linear, bijective"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "10.1.1",
+          "type": "exercise",
+          "title": "Exercise 10.1.1",
+          "statement": "Prove that an abelian group A is a simple ℤ-module (no proper non-trivial submodules) if and only if A ≅ ℤ_p for some prime p.",
+          "solution": "**Proof:**\n\n**(⟹) A simple implies A ≅ ℤ_p:**\n\nℤ-submodules of A are exactly the subgroups of A.\n\nA is simple means A has no proper non-trivial subgroups.\n\nLet a ∈ A be non-zero. Then ⟨a⟩ is a non-trivial subgroup.\n\nSince A is simple, ⟨a⟩ = A, so A is cyclic.\n\nIf A were infinite cyclic (A ≅ ℤ), then 2ℤ would be a proper non-trivial subgroup. ✗\n\nSo A ≅ ℤ_n for some n > 1.\n\nIf n = ab with 1 < a < n, then ⟨a⟩ ≅ ℤ_{n/a} is a proper non-trivial subgroup. ✗\n\nSo n must be prime.\n\n**(⟸) A ≅ ℤ_p implies A is simple:**\n\nSubgroups of ℤ_p have order dividing p (prime).\n\nSo subgroups have order 1 or p.\n\nOrder 1: trivial subgroup {0}.\nOrder p: the whole group.\n\nThus ℤ_p has no proper non-trivial subgroups, making it simple."
+        },
+        {
+          "id": "10.1.2",
+          "type": "exercise",
+          "title": "Exercise 10.1.2",
+          "statement": "Let R be a ring and M an R-module. Prove that Ann(M) = {r ∈ R : rm = 0 for all m ∈ M} is a two-sided ideal of R.",
+          "solution": "**Proof:**\n\n**Step 1: Ann(M) is a subgroup of (R, +).**\n\n- 0 ∈ Ann(M): 0·m = 0 for all m. ✓\n- Closure: If r, s ∈ Ann(M), then (r + s)m = rm + sm = 0 + 0 = 0 for all m. ✓\n- Inverses: If r ∈ Ann(M), then (-r)m = -(rm) = -0 = 0 for all m. ✓\n\n**Step 2: Ann(M) absorbs multiplication on the left.**\n\nFor s ∈ R and r ∈ Ann(M), and any m ∈ M:\n(sr)m = s(rm) = s·0 = 0.\n\nSo sr ∈ Ann(M). ✓\n\n**Step 3: Ann(M) absorbs multiplication on the right.**\n\nFor s ∈ R and r ∈ Ann(M), and any m ∈ M:\n(rs)m = r(sm).\n\nSince r ∈ Ann(M), r annihilates ALL elements of M, including sm.\n\nSo r(sm) = 0.\n\nThus rs ∈ Ann(M). ✓\n\n**Conclusion:** Ann(M) is a two-sided ideal."
+        }
+      ]
+    },
+    {
+      "sectionId": "10.2",
+      "sectionTitle": "Free Modules",
+      "textbookSection": "§10.3",
+      "examples": [
+        {
+          "id": "ex-10.2.1",
+          "type": "example",
+          "title": "Example 10.2.1",
+          "statement": "Define free modules and state the universal property.",
+          "solution": "**Definition:**\n\nAn R-module F is **free** with basis B ⊆ F if every element of F can be written uniquely as a finite R-linear combination of elements of B.\n\nEquivalently: F ≅ R^{(B)} = ⊕_{b ∈ B} R (direct sum of copies of R indexed by B).\n\n**Universal Property:**\n\nFor any R-module M and any function f: B → M, there exists a unique R-module homomorphism φ: F → M such that φ|_B = f.\n\n```\n   B ----f----> M\n   |            ↑\n   |            | φ (unique)\n   v            |\n   F -----------+\n```\n\n**Proof:**\n\nDefine φ(Σ r_b · b) = Σ r_b · f(b).\n\nThis is well-defined by uniqueness of representation.\nIt's R-linear by construction.\nIt's unique because any homomorphism is determined by its values on a generating set.\n\n**Note:** Unlike vector spaces, not every module is free. For example, ℤ_n is not a free ℤ-module (it's torsion)."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "10.2.1",
+          "type": "exercise",
+          "title": "Exercise 10.2.1",
+          "statement": "Prove that if R is a commutative ring with unity and F is a free R-module with finite basis, then any two bases have the same cardinality.",
+          "solution": "**Proof:**\n\nLet F be a free R-module with bases B and B' of sizes n and m respectively.\n\nLet I be a maximal ideal of R. Such an ideal exists by Zorn's Lemma.\n\nConsider F/IF, which is an R/I-module.\n\n**Claim:** F/IF is a vector space over R/I with dimension n (and also m).\n\nThe images of B in F/IF span F/IF and are linearly independent over R/I.\n\nThis is because if Σ (r_i + I)(b_i + IF) = 0 + IF, then Σ r_i b_i ∈ IF = Σ_{i,j} I·b_j.\n\nSince {b_i} are a basis and the coefficients of the b_i in Σ r_i b_i are r_i, we must have r_i ∈ I for all i.\n\nThus r_i + I = 0 in R/I.\n\nSo dim_{R/I}(F/IF) = |B| = n.\n\nSimilarly, dim_{R/I}(F/IF) = |B'| = m.\n\nSince R/I is a field, dimensions are unique, so n = m."
+        }
+      ]
+    }
+  ]
+}

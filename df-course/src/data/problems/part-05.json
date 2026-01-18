@@ -1,0 +1,132 @@
+{
+  "partId": 5,
+  "partTitle": "Direct and Semidirect Products and Abelian Groups",
+  "textbookChapter": "Chapter 5",
+  "sections": [
+    {
+      "sectionId": "5.1",
+      "sectionTitle": "Direct Products",
+      "textbookSection": "§5.1",
+      "examples": [
+        {
+          "id": "ex-5.1.1",
+          "type": "example",
+          "title": "Example 5.1.1",
+          "statement": "Prove that ℤ_6 ≅ ℤ_2 × ℤ_3.",
+          "solution": "**Proof using the Chinese Remainder Theorem:**\n\nSince gcd(2, 3) = 1, by CRT:\nℤ_6 ≅ ℤ_2 × ℤ_3.\n\n**Direct verification:**\n\nDefine φ: ℤ_6 → ℤ_2 × ℤ_3 by φ(n) = (n mod 2, n mod 3).\n\n**φ is a homomorphism:**\nφ(n + m) = ((n+m) mod 2, (n+m) mod 3) = (n mod 2 + m mod 2, n mod 3 + m mod 3) = φ(n) + φ(m).\n\n**φ is injective:**\nker(φ) = {n ∈ ℤ_6 : 2|n and 3|n} = {n : 6|n} = {0}.\n\n**φ is surjective:**\n|ℤ_6| = 6 = |ℤ_2 × ℤ_3|, and φ is injective, so φ is surjective.\n\n**Explicit isomorphism:**\n- φ(0) = (0, 0)\n- φ(1) = (1, 1)\n- φ(2) = (0, 2)\n- φ(3) = (1, 0)\n- φ(4) = (0, 1)\n- φ(5) = (1, 2)"
+        },
+        {
+          "id": "ex-5.1.2",
+          "type": "example",
+          "title": "Example 5.1.2",
+          "statement": "Prove that if gcd(m, n) = 1, then ℤ_{mn} ≅ ℤ_m × ℤ_n.",
+          "solution": "**Proof:**\n\nDefine φ: ℤ → ℤ_m × ℤ_n by φ(a) = (a mod m, a mod n).\n\n**Step 1: φ is a homomorphism.**\nφ(a + b) = ((a+b) mod m, (a+b) mod n) = (a mod m + b mod m, a mod n + b mod n) = φ(a) + φ(b).\n\n**Step 2: Find ker(φ).**\nker(φ) = {a ∈ ℤ : m|a and n|a}.\n\nSince gcd(m, n) = 1, we have m|a and n|a implies mn|a.\nSo ker(φ) = mnℤ.\n\n**Step 3: φ is surjective.**\nBy the Chinese Remainder Theorem, for any (r, s) ∈ ℤ_m × ℤ_n, there exists a ∈ ℤ with:\na ≡ r (mod m) and a ≡ s (mod n).\n\nSo φ(a) = (r, s).\n\n**Step 4: Apply First Isomorphism Theorem.**\nℤ/ker(φ) ≅ ℤ_m × ℤ_n\nℤ/mnℤ ≅ ℤ_m × ℤ_n\nℤ_{mn} ≅ ℤ_m × ℤ_n.\n\n**Note:** This fails when gcd(m, n) > 1. For example:\nℤ_4 ≇ ℤ_2 × ℤ_2 (the left is cyclic, the right is not)."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "5.1.1",
+          "type": "exercise",
+          "title": "Exercise 5.1.1",
+          "statement": "Let G = G_1 × G_2 × ... × G_n be a direct product. Prove that Z(G) = Z(G_1) × Z(G_2) × ... × Z(G_n).",
+          "solution": "**Proof:**\n\nLet z = (z_1, z_2, ..., z_n) ∈ G.\n\n**z ∈ Z(G) ⟺ z commutes with all g ∈ G.**\n\nFor any g = (g_1, ..., g_n) ∈ G:\nzg = (z_1g_1, z_2g_2, ..., z_ng_n)\ngz = (g_1z_1, g_2z_2, ..., g_nz_n)\n\nzg = gz ⟺ z_ig_i = g_iz_i for all i and all g_i ∈ G_i.\n\nThis happens ⟺ z_i ∈ Z(G_i) for all i.\n\n**Therefore:**\nz ∈ Z(G) ⟺ z_i ∈ Z(G_i) for all i ⟺ z ∈ Z(G_1) × ... × Z(G_n).\n\nSo Z(G) = Z(G_1) × Z(G_2) × ... × Z(G_n)."
+        },
+        {
+          "id": "5.1.2",
+          "type": "exercise",
+          "title": "Exercise 5.1.2",
+          "statement": "Prove that G × H ≅ H × G for any groups G and H.",
+          "solution": "**Proof:**\n\nDefine φ: G × H → H × G by φ(g, h) = (h, g).\n\n**φ is a homomorphism:**\nφ((g_1, h_1)(g_2, h_2)) = φ(g_1g_2, h_1h_2) = (h_1h_2, g_1g_2)\n= (h_1, g_1)(h_2, g_2) = φ(g_1, h_1)φ(g_2, h_2). ✓\n\n**φ is injective:**\nIf φ(g, h) = (e_H, e_G), then h = e_H and g = e_G.\nSo ker(φ) = {(e_G, e_H)}. ✓\n\n**φ is surjective:**\nFor any (h, g) ∈ H × G, we have φ(g, h) = (h, g). ✓\n\n**Therefore φ is an isomorphism:**\nG × H ≅ H × G."
+        },
+        {
+          "id": "5.1.3",
+          "type": "exercise",
+          "title": "Exercise 5.1.3",
+          "statement": "Let G and H be groups with |G| = m and |H| = n where gcd(m, n) = 1. Prove that Aut(G × H) ≅ Aut(G) × Aut(H).",
+          "solution": "**Proof:**\n\nThe key observation is that G × {e_H} and {e_G} × H are characteristic subgroups of G × H.\n\n**Step 1: G × {e_H} is characteristic.**\n\nG × {e_H} = {(g, e_H) : g ∈ G} consists of elements whose order divides |G| = m.\n\n{e_G} × H consists of elements whose order divides |H| = n.\n\nSince gcd(m, n) = 1, an element (g, h) has order lcm(|g|, |h|).\n\nElements of order dividing m must have h = e_H (since |h| must divide both m and n, so |h| = 1).\n\nThus G × {e_H} = {x ∈ G × H : x^m = e}, which is preserved by automorphisms.\n\nSimilarly for {e_G} × H.\n\n**Step 2: Define the map.**\n\nFor φ ∈ Aut(G × H), define:\n- φ_G: G → G by φ((g, e_H)) = (φ_G(g), e_H)\n- φ_H: H → H by φ((e_G, h)) = (e_G, φ_H(h))\n\nThen φ_G ∈ Aut(G) and φ_H ∈ Aut(H).\n\n**Step 3: Show φ is determined by (φ_G, φ_H).**\n\nφ(g, h) = φ((g, e_H)(e_G, h)) = φ(g, e_H) · φ(e_G, h) = (φ_G(g), φ_H(h)).\n\n**Step 4: Conclude.**\n\nThe map Aut(G × H) → Aut(G) × Aut(H) given by φ ↦ (φ_G, φ_H) is an isomorphism."
+        }
+      ]
+    },
+    {
+      "sectionId": "5.2",
+      "sectionTitle": "Semidirect Products",
+      "textbookSection": "§5.2",
+      "examples": [
+        {
+          "id": "ex-5.2.1",
+          "type": "example",
+          "title": "Example 5.2.1",
+          "statement": "Define the semidirect product N ⋊_φ H and describe its group operation.",
+          "solution": "**Definition:**\n\nLet N and H be groups and let φ: H → Aut(N) be a homomorphism.\n\nThe semidirect product N ⋊_φ H is the set N × H with multiplication:\n(n_1, h_1) · (n_2, h_2) = (n_1 · φ(h_1)(n_2), h_1h_2)\n\n**Verification this is a group:**\n\n**Identity:** (e_N, e_H) is the identity:\n(e_N, e_H) · (n, h) = (e_N · φ(e_H)(n), e_H · h) = (n, h).\n(n, h) · (e_N, e_H) = (n · φ(h)(e_N), h) = (n, h).\n\n**Inverses:** (n, h)^{-1} = (φ(h^{-1})(n^{-1}), h^{-1}).\n\nVerify: (n, h) · (φ(h^{-1})(n^{-1}), h^{-1}) = (n · φ(h)(φ(h^{-1})(n^{-1})), e_H)\n= (n · n^{-1}, e_H) = (e_N, e_H). ✓\n\n**Associativity:** (Tedious but straightforward check.)\n\n**Key features:**\n- N ≅ N × {e_H} ◁ N ⋊_φ H (N is normal).\n- H ≅ {e_N} × H ≤ N ⋊_φ H (H is a subgroup).\n- (N ⋊_φ H)/N ≅ H.\n- If φ is trivial (φ(h) = id for all h), then N ⋊_φ H = N × H (direct product)."
+        },
+        {
+          "id": "ex-5.2.2",
+          "type": "example",
+          "title": "Example 5.2.2",
+          "statement": "Show that the dihedral group D_{2n} is isomorphic to ℤ_n ⋊ ℤ_2.",
+          "solution": "**Construction:**\n\nD_{2n} = ⟨r, s | r^n = s^2 = e, srs^{-1} = r^{-1}⟩.\n\nLet N = ⟨r⟩ ≅ ℤ_n and H = ⟨s⟩ ≅ ℤ_2.\n\n**Step 1: N ◁ D_{2n}.**\n\n|N| = n and [D_{2n} : N] = 2, so N ◁ D_{2n}.\n\n**Step 2: Define the action.**\n\nφ: H → Aut(N) where φ(s): r ↦ r^{-1} (inversion).\n\nThis is the unique non-trivial automorphism of ℤ_n when n > 2.\n\n**Step 3: Verify the semidirect product structure.**\n\nN ∩ H = {e} and NH = D_{2n}.\n\nThe multiplication rule in D_{2n}:\n(r^a)(s^b) · (r^c)(s^d) = r^a s^b r^c s^d\n\nWhen b = 1: s^1 r^c = r^{-c} s^1 (from the relation srs^{-1} = r^{-1}).\n\nSo: r^a s r^c s = r^a r^{-c} s^2 = r^{a-c}.\n\nThis matches: (r^a, s)(r^c, e) = (r^a · φ(s)(r^c), s) = (r^a · r^{-c}, s) = (r^{a-c}, s).\n\n**Conclusion:**\nD_{2n} ≅ ℤ_n ⋊_φ ℤ_2 where φ(1) is the inversion automorphism."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "5.2.1",
+          "type": "exercise",
+          "title": "Exercise 5.2.1",
+          "statement": "How many non-isomorphic groups of order 21 are there? Describe them.",
+          "solution": "**Solution:**\n\n|G| = 21 = 3 · 7.\n\n**Step 1: Sylow analysis.**\n\nn_7 ≡ 1 (mod 7) and n_7 | 3 ⟹ n_7 = 1.\nn_3 ≡ 1 (mod 3) and n_3 | 7 ⟹ n_3 ∈ {1, 7}.\n\nLet P = unique Sylow 7-subgroup ≅ ℤ_7 (normal).\nLet Q = a Sylow 3-subgroup ≅ ℤ_3.\n\nG = PQ with P ◁ G, P ∩ Q = {e}.\n\nSo G ≅ ℤ_7 ⋊_φ ℤ_3 for some φ: ℤ_3 → Aut(ℤ_7).\n\n**Step 2: Determine possible φ.**\n\nAut(ℤ_7) ≅ ℤ_6 (cyclic of order 6).\n\nHomomorphisms φ: ℤ_3 → ℤ_6 are determined by where 1 ∈ ℤ_3 maps.\n\nφ(1) must have order dividing 3 in ℤ_6.\nElements of order dividing 3 in ℤ_6: {0, 2, 4}.\n\nSo there are 3 homomorphisms.\n\n**Step 3: Classify up to isomorphism.**\n\n**Case φ trivial:** G ≅ ℤ_7 × ℤ_3 ≅ ℤ_21 (cyclic).\n\n**Case φ non-trivial:** Both non-trivial φ give isomorphic groups.\n\nThe non-trivial action: generator of ℤ_3 acts on ℤ_7 by multiplication by a primitive cube root of unity mod 7 (which is 2 or 4 mod 7, since 2³ ≡ 1 mod 7).\n\n**Conclusion:**\nThere are exactly **2 groups of order 21**:\n1. ℤ_21 (cyclic, abelian)\n2. ℤ_7 ⋊ ℤ_3 (non-abelian)"
+        },
+        {
+          "id": "5.2.2",
+          "type": "exercise",
+          "title": "Exercise 5.2.2",
+          "statement": "Prove that if H acts trivially on N, then N ⋊ H = N × H.",
+          "solution": "**Proof:**\n\nLet φ: H → Aut(N) be the trivial homomorphism, i.e., φ(h) = id_N for all h ∈ H.\n\nThe semidirect product multiplication:\n(n_1, h_1) · (n_2, h_2) = (n_1 · φ(h_1)(n_2), h_1h_2)\n= (n_1 · id_N(n_2), h_1h_2)\n= (n_1 · n_2, h_1h_2)\n= (n_1, h_1) ·_{direct} (n_2, h_2)\n\nThis is exactly the multiplication in the direct product N × H.\n\nTherefore N ⋊_φ H = N × H when φ is trivial."
+        }
+      ]
+    },
+    {
+      "sectionId": "5.3",
+      "sectionTitle": "Fundamental Theorem of Finitely Generated Abelian Groups",
+      "textbookSection": "§5.3",
+      "examples": [
+        {
+          "id": "ex-5.3.1",
+          "type": "example",
+          "title": "Fundamental Theorem",
+          "statement": "State the Fundamental Theorem of Finitely Generated Abelian Groups.",
+          "solution": "**Fundamental Theorem of Finitely Generated Abelian Groups:**\n\nEvery finitely generated abelian group G is isomorphic to:\n\nG ≅ ℤ^r × ℤ_{n_1} × ℤ_{n_2} × ... × ℤ_{n_k}\n\nwhere:\n- r ≥ 0 is the **rank** (or **free rank**) of G\n- n_1 | n_2 | ... | n_k (each divides the next) are the **invariant factors**\n- n_i > 1 for all i\n\n**Alternative form (elementary divisors):**\n\nG ≅ ℤ^r × ℤ_{p_1^{a_1}} × ℤ_{p_2^{a_2}} × ... × ℤ_{p_m^{a_m}}\n\nwhere the p_i^{a_i} are prime powers (not necessarily distinct primes).\n\n**Uniqueness:** Both decompositions are unique.\n\n**Example:**\nℤ_12 ≅ ℤ_4 × ℤ_3 (elementary divisors: 4 = 2², 3)\nℤ_12 has invariant factor form: ℤ_12 (since 12 is the only invariant factor).\n\nℤ_2 × ℤ_6 ≅ ℤ_2 × ℤ_2 × ℤ_3.\nInvariant factors: 2, 6 (since gcd structure gives 2 | 6)."
+        },
+        {
+          "id": "ex-5.3.2",
+          "type": "example",
+          "title": "Example 5.3.2",
+          "statement": "List all abelian groups of order 72 up to isomorphism.",
+          "solution": "**Solution:**\n\n72 = 8 · 9 = 2³ · 3².\n\n**Step 1: Partition into prime power parts.**\n\nBy the fundamental theorem, an abelian group of order 72 is:\nG ≅ (2-group of order 8) × (3-group of order 9)\n\n**Step 2: List abelian groups of order 8 = 2³.**\n\nPartitions of 3: (3), (2,1), (1,1,1)\n\n- ℤ_8 (cyclic)\n- ℤ_4 × ℤ_2\n- ℤ_2 × ℤ_2 × ℤ_2\n\n**Step 3: List abelian groups of order 9 = 3².**\n\nPartitions of 2: (2), (1,1)\n\n- ℤ_9 (cyclic)\n- ℤ_3 × ℤ_3\n\n**Step 4: Take all combinations.**\n\n1. ℤ_8 × ℤ_9 ≅ ℤ_72\n2. ℤ_8 × ℤ_3 × ℤ_3\n3. ℤ_4 × ℤ_2 × ℤ_9\n4. ℤ_4 × ℤ_2 × ℤ_3 × ℤ_3\n5. ℤ_2 × ℤ_2 × ℤ_2 × ℤ_9\n6. ℤ_2 × ℤ_2 × ℤ_2 × ℤ_3 × ℤ_3\n\n**Total: 6 abelian groups of order 72.**"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "5.3.1",
+          "type": "exercise",
+          "title": "Exercise 5.3.1",
+          "statement": "How many abelian groups of order 360 are there?",
+          "solution": "**Solution:**\n\n360 = 8 · 45 = 8 · 9 · 5 = 2³ · 3² · 5.\n\n**Count partitions:**\n\n- Partitions of 3 (for 2³): 3 partitions\n  - (3): ℤ_8\n  - (2,1): ℤ_4 × ℤ_2\n  - (1,1,1): ℤ_2 × ℤ_2 × ℤ_2\n\n- Partitions of 2 (for 3²): 2 partitions\n  - (2): ℤ_9\n  - (1,1): ℤ_3 × ℤ_3\n\n- Partitions of 1 (for 5¹): 1 partition\n  - (1): ℤ_5\n\n**Total number of abelian groups:**\n3 × 2 × 1 = **6 abelian groups of order 360**."
+        },
+        {
+          "id": "5.3.2",
+          "type": "exercise",
+          "title": "Exercise 5.3.2",
+          "statement": "Let G be a finite abelian group. Prove that G is cyclic if and only if for every prime p, the Sylow p-subgroup of G is cyclic.",
+          "solution": "**Proof:**\n\n**(⟹) G cyclic implies Sylow p-subgroups are cyclic:**\n\nIf G is cyclic, then G ≅ ℤ_n for some n.\n\nThe Sylow p-subgroup of ℤ_n is ℤ_{p^k} where p^k is the exact power of p dividing n.\n\nℤ_{p^k} is cyclic.\n\n**(⟸) Sylow p-subgroups cyclic implies G cyclic:**\n\nLet |G| = p_1^{a_1} · p_2^{a_2} · ... · p_r^{a_r}.\n\nBy the fundamental theorem:\nG ≅ P_1 × P_2 × ... × P_r\n\nwhere P_i is the Sylow p_i-subgroup.\n\nBy assumption, each P_i ≅ ℤ_{p_i^{a_i}} is cyclic.\n\nSince gcd(|P_i|, |P_j|) = 1 for i ≠ j:\n\nG ≅ ℤ_{p_1^{a_1}} × ℤ_{p_2^{a_2}} × ... × ℤ_{p_r^{a_r}}\n≅ ℤ_{p_1^{a_1} · p_2^{a_2} · ... · p_r^{a_r}}\n= ℤ_{|G|}\n\nSo G is cyclic."
+        },
+        {
+          "id": "5.3.3",
+          "type": "exercise",
+          "title": "Exercise 5.3.3",
+          "statement": "Find the invariant factors and elementary divisors of ℤ_4 × ℤ_6 × ℤ_15.",
+          "solution": "**Solution:**\n\n**Step 1: Find elementary divisors.**\n\n4 = 2²\n6 = 2 · 3\n15 = 3 · 5\n\nElementary divisors (prime power factors):\n- From ℤ_4: 2² = 4\n- From ℤ_6: 2, 3\n- From ℤ_15: 3, 5\n\nSo: **Elementary divisors: 2, 3, 3, 4, 5**\n\n(Regrouping: 2¹, 2², 3¹, 3¹, 5¹)\n\n**Step 2: Convert to invariant factors.**\n\nArrange prime powers in a grid:\n\np=2: 2, 4\np=3: 3, 3\np=5: 5\n\nTo form invariant factors, take products column by column (aligning to the right):\n\n| p | col 1 | col 2 |\n|---|-------|-------|\n| 2 | 2     | 4     |\n| 3 | 3     | 3     |\n| 5 |       | 5     |\n\nInvariant factor 1: 2 · 3 = 6\nInvariant factor 2: 4 · 3 · 5 = 60\n\nCheck: 6 | 60 ✓\n\n**Invariant factors: 6, 60**\n\n**Verification:**\nℤ_4 × ℤ_6 × ℤ_15 ≅ ℤ_6 × ℤ_60\n\nOrder: 4 · 6 · 15 = 360 = 6 · 60 ✓"
+        }
+      ]
+    }
+  ]
+}

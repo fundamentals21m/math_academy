@@ -1,0 +1,111 @@
+{
+  "partId": 6,
+  "partTitle": "Further Topics in Group Theory",
+  "textbookChapter": "Chapter 6",
+  "sections": [
+    {
+      "sectionId": "6.1",
+      "sectionTitle": "p-Groups and Nilpotent Groups",
+      "textbookSection": "§6.1",
+      "examples": [
+        {
+          "id": "ex-6.1.1",
+          "type": "example",
+          "title": "Example 6.1.1",
+          "statement": "Define nilpotent groups and show that all p-groups are nilpotent.",
+          "solution": "**Definition of Nilpotent:**\n\nA group G is **nilpotent** if it has a central series:\n{e} = Z_0 ⊆ Z_1 ⊆ ... ⊆ Z_n = G\n\nwhere Z_1 = Z(G) and Z_{i+1}/Z_i = Z(G/Z_i).\n\nEquivalently, the upper central series terminates at G.\n\n**Theorem: All p-groups are nilpotent.**\n\n**Proof by induction on |G|:**\n\nBase case: |G| = 1. Then G = {e} is nilpotent (Z_0 = G).\n\nInductive step: Let |G| = p^n with n ≥ 1.\n\nWe showed earlier that Z(G) ≠ {e} for p-groups.\n\nConsider G/Z(G). This is a p-group with |G/Z(G)| < |G|.\n\nBy induction, G/Z(G) is nilpotent.\n\nThe preimage in G of the upper central series of G/Z(G) gives a central series for G:\n{e} ⊆ Z(G) ⊆ Z_2 ⊆ ... ⊆ G\n\nwhere Z_{i+1}/Z(G) = Z_i(G/Z(G)).\n\nTherefore G is nilpotent.\n\n**Note:** The converse is false: ℤ is nilpotent but not a p-group."
+        },
+        {
+          "id": "ex-6.1.2",
+          "type": "example",
+          "title": "Example 6.1.2",
+          "statement": "Prove that a finite group G is nilpotent if and only if G is a direct product of its Sylow subgroups.",
+          "solution": "**Proof:**\n\n**(⟹) Nilpotent implies direct product of Sylow subgroups:**\n\nLet G be nilpotent and let P be a Sylow p-subgroup.\n\nClaim: P ◁ G (all Sylow subgroups are normal).\n\nProof of claim: In a nilpotent group, all maximal subgroups are normal.\n\nIf P is not normal, then N_G(P) ⊊ G.\nLet M be a maximal subgroup containing N_G(P).\nBy the normalizer condition for nilpotent groups, N_G(M) ⊃ M.\n\nBut this means there exists g ∈ N_G(M) \\ M with gPg⁻¹ ⊆ M.\nSince P and gPg⁻¹ are both Sylow p-subgroups of M, they're conjugate in M.\nThis contradicts P ⊆ N_G(P) ⊆ M.\n\nSince all Sylow subgroups are normal and have pairwise coprime orders:\nG = P_1 × P_2 × ... × P_r\n\nwhere P_i is the Sylow p_i-subgroup.\n\n**(⟸) Direct product of p-groups implies nilpotent:**\n\nEach P_i is a p-group, hence nilpotent.\n\nThe direct product of nilpotent groups is nilpotent.\n\n(The upper central series of a direct product is the product of upper central series.)"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6.1.1",
+          "type": "exercise",
+          "title": "Exercise 6.1.1",
+          "statement": "Prove that a group G is nilpotent if and only if every maximal subgroup of G is normal.",
+          "solution": "**Proof:**\n\n**(⟹) Nilpotent implies maximal subgroups are normal:**\n\nLet G be nilpotent with upper central series Z_0 ⊆ Z_1 ⊆ ... ⊆ Z_n = G.\n\nLet M be a maximal subgroup of G.\n\nFind the largest i such that Z_i ⊆ M. Since Z_n = G ⊄ M, such i exists with i < n.\n\nThen Z_i ⊆ M but Z_{i+1} ⊄ M.\n\nSince M is maximal and Z_i ⊆ M, we have M · Z_{i+1} = G.\n\nNow Z_{i+1}/Z_i = Z(G/Z_i), so Z_{i+1}/Z_i is central in G/Z_i.\n\nFor any g ∈ G, gZ_{i+1}g⁻¹ = Z_{i+1} (since Z_{i+1}/Z_i is central).\n\nThis means gMg⁻¹ · Z_{i+1} = gGg⁻¹ = G = M · Z_{i+1}.\n\nSince [G : M] = [Z_{i+1} : M ∩ Z_{i+1}] is prime (M maximal), and M ∩ Z_{i+1} is normal in Z_{i+1}:\ngMg⁻¹ = M.\n\n**(⟸) Maximal subgroups normal implies nilpotent:**\n\nWe show Z(G) ≠ {e}, then use induction.\n\nIf Z(G) = {e}, pick a maximal subgroup M.\nBy hypothesis M ◁ G, so G/M is simple.\nSince M is maximal, G/M has prime order p.\n\nBut then G/M ≅ ℤ_p, which is abelian.\nThis means [G, G] ⊆ M for all maximal M.\nSo [G, G] is in every maximal subgroup, making [G, G] ⊆ Φ(G).\n\nBy the Burnside basis theorem and properties of p-groups, this implies Z(G) ≠ {e}.\n\nInduction completes the proof."
+        },
+        {
+          "id": "6.1.2",
+          "type": "exercise",
+          "title": "Exercise 6.1.2",
+          "statement": "Let G be a nilpotent group and let H ≤ G with H ≠ G. Prove that N_G(H) ⊃ H (proper containment).",
+          "solution": "**Proof (Normalizer Condition):**\n\nWe prove by induction on the nilpotency class c of G.\n\nBase case c = 1: G is abelian, so N_G(H) = G ⊃ H.\n\nInductive step: Let G have class c > 1.\n\nConsider Z(G) ≠ {e}.\n\n**Case 1: Z(G) ⊆ H.**\n\nThen H/Z(G) ≤ G/Z(G), and G/Z(G) has class c - 1.\n\nBy induction: N_{G/Z(G)}(H/Z(G)) ⊃ H/Z(G).\n\nLet π: G → G/Z(G) be the projection.\nN_G(H) = π⁻¹(N_{G/Z(G)}(H/Z(G))) ⊃ π⁻¹(H/Z(G)) = H.\n\n**Case 2: Z(G) ⊄ H.**\n\nThen HZ(G) ⊃ H (proper containment).\n\nSince Z(G) ⊆ N_G(H) (central elements normalize everything):\nN_G(H) ⊇ HZ(G) ⊃ H.\n\nIn both cases, N_G(H) ⊃ H.\n\n**Note:** This property characterizes nilpotent groups among finite groups."
+        }
+      ]
+    },
+    {
+      "sectionId": "6.2",
+      "sectionTitle": "Solvable Groups",
+      "textbookSection": "§6.2",
+      "examples": [
+        {
+          "id": "ex-6.2.1",
+          "type": "example",
+          "title": "Example 6.2.1",
+          "statement": "Define solvable groups and prove that S_4 is solvable.",
+          "solution": "**Definition:**\n\nA group G is **solvable** if it has a subnormal series:\n{e} = G_0 ◁ G_1 ◁ ... ◁ G_n = G\n\nwhere each quotient G_{i+1}/G_i is abelian.\n\nEquivalently, the derived series G ⊇ G' ⊇ G'' ⊇ ... eventually reaches {e}.\n\n**Proof that S_4 is solvable:**\n\nConsider the series:\n{e} ◁ V_4 ◁ A_4 ◁ S_4\n\nwhere V_4 = {e, (12)(34), (13)(24), (14)(23)} (Klein four-group).\n\n**Check each quotient is abelian:**\n\n1. S_4/A_4 ≅ ℤ_2 (abelian).\n\n2. A_4/V_4 ≅ ℤ_3 (abelian).\n   |A_4| = 12, |V_4| = 4, so |A_4/V_4| = 3.\n\n3. V_4/{e} ≅ V_4 ≅ ℤ_2 × ℤ_2 (abelian).\n\nTherefore S_4 is solvable.\n\n**Note:** S_n is NOT solvable for n ≥ 5 because A_n is simple and non-abelian."
+        },
+        {
+          "id": "ex-6.2.2",
+          "type": "example",
+          "title": "Example 6.2.2",
+          "statement": "Prove that every nilpotent group is solvable.",
+          "solution": "**Proof:**\n\nLet G be nilpotent with upper central series:\n{e} = Z_0 ⊆ Z_1 ⊆ ... ⊆ Z_n = G\n\nwhere Z_{i+1}/Z_i = Z(G/Z_i).\n\n**Claim:** Z_{i+1}/Z_i is abelian for all i.\n\n**Proof of claim:**\nZ_{i+1}/Z_i = Z(G/Z_i), which is the center of G/Z_i.\nThe center of any group is abelian.\n\nTherefore the upper central series is a subnormal series with abelian quotients.\n\nHence G is solvable.\n\n**Note:** The converse is false. S_3 is solvable but not nilpotent:\n- Solvable: {e} ◁ A_3 ◁ S_3 with abelian quotients.\n- Not nilpotent: Z(S_3) = {e}, so the upper central series is stuck at {e}."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6.2.1",
+          "type": "exercise",
+          "title": "Exercise 6.2.1",
+          "statement": "Prove that subgroups and quotients of solvable groups are solvable.",
+          "solution": "**Part 1: Subgroups of solvable groups are solvable.**\n\nLet G be solvable with derived series:\nG = G^{(0)} ⊇ G^{(1)} ⊇ ... ⊇ G^{(n)} = {e}\n\nwhere G^{(i+1)} = [G^{(i)}, G^{(i)}].\n\nLet H ≤ G. Consider H^{(i)} = [H^{(i-1)}, H^{(i-1)}].\n\nClaim: H^{(i)} ⊆ G^{(i)} for all i.\n\nProof by induction:\n- H^{(0)} = H ⊆ G = G^{(0)}.\n- If H^{(i)} ⊆ G^{(i)}, then H^{(i+1)} = [H^{(i)}, H^{(i)}] ⊆ [G^{(i)}, G^{(i)}] = G^{(i+1)}.\n\nSince G^{(n)} = {e}, we have H^{(n)} ⊆ {e}, so H^{(n)} = {e}.\n\nTherefore H is solvable.\n\n**Part 2: Quotients of solvable groups are solvable.**\n\nLet G be solvable and N ◁ G.\n\nLet π: G → G/N be the projection.\n\nClaim: (G/N)^{(i)} = π(G^{(i)}) = G^{(i)}N/N.\n\nProof: π is surjective and preserves commutators:\n[π(g), π(h)] = π([g, h]).\n\nSo π(G^{(i)}) = (G/N)^{(i)}.\n\nSince G^{(n)} = {e}:\n(G/N)^{(n)} = π(G^{(n)}) = π({e}) = {N/N} = {e_{G/N}}.\n\nTherefore G/N is solvable."
+        },
+        {
+          "id": "6.2.2",
+          "type": "exercise",
+          "title": "Exercise 6.2.2",
+          "statement": "Prove that S_n is not solvable for n ≥ 5.",
+          "solution": "**Proof:**\n\nFor n ≥ 5, A_n is simple and non-abelian.\n\n**Step 1: The derived series of S_n.**\n\nS_n' = [S_n, S_n] = A_n (the derived subgroup is the commutator subgroup).\n\nThis is because:\n- Every commutator [σ, τ] = στσ⁻¹τ⁻¹ is an even permutation.\n- Every even permutation can be written as a product of commutators.\n\n**Step 2: For n ≥ 5, A_n is non-abelian and simple.**\n\nSince A_n is non-abelian, A_n' = [A_n, A_n] ≠ {e}.\n\nSince A_n is simple and A_n' ◁ A_n, we have A_n' = A_n.\n\n**Step 3: The derived series doesn't terminate.**\n\nS_n^{(0)} = S_n\nS_n^{(1)} = A_n\nS_n^{(2)} = A_n' = A_n\nS_n^{(3)} = A_n' = A_n\n...\n\nThe derived series stabilizes at A_n ≠ {e}.\n\nTherefore S_n is not solvable for n ≥ 5.\n\n**Note:** This is key to proving the insolvability of the general quintic by radicals."
+        }
+      ]
+    },
+    {
+      "sectionId": "6.3",
+      "sectionTitle": "Free Groups",
+      "textbookSection": "§6.3",
+      "examples": [
+        {
+          "id": "ex-6.3.1",
+          "type": "example",
+          "title": "Example 6.3.1",
+          "statement": "Define the free group F(S) on a set S and state its universal property.",
+          "solution": "**Definition:**\n\nLet S be a set. The **free group on S**, denoted F(S), is defined as:\n\n1. Let S⁻¹ = {s⁻¹ : s ∈ S} be a disjoint copy of S (formal inverses).\n\n2. A **word** in S ∪ S⁻¹ is a finite sequence w = a_1 a_2 ... a_n where each a_i ∈ S ∪ S⁻¹.\n\n3. A word is **reduced** if it contains no adjacent pair ss⁻¹ or s⁻¹s.\n\n4. F(S) is the set of reduced words, with:\n   - Multiplication: concatenation followed by reduction\n   - Identity: the empty word ε\n   - Inverses: reverse the word and invert each letter\n\n**Universal Property:**\n\nFor any group G and any function f: S → G, there exists a unique homomorphism φ: F(S) → G such that φ|_S = f.\n\n```\n    S ----f----> G\n    |            ↑\n    |            | φ (unique)\n    v            |\n   F(S) ---------+\n```\n\n**Consequence:** Every group is a quotient of a free group.\n\nIf G = ⟨g_i : i ∈ I | relations⟩, then G ≅ F(I)/N where N is the normal closure of the relations."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6.3.1",
+          "type": "exercise",
+          "title": "Exercise 6.3.1",
+          "statement": "Prove that the free group F(S) is non-abelian if |S| ≥ 2.",
+          "solution": "**Proof:**\n\nLet S contain at least two distinct elements a, b.\n\nConsider the reduced words ab and ba in F(S).\n\n**Claim: ab ≠ ba in F(S).**\n\nIn a free group, two reduced words are equal if and only if they are identical as sequences.\n\nThe sequence (a, b) is not the same as the sequence (b, a).\n\nTherefore ab ≠ ba.\n\n**Alternative proof using the universal property:**\n\nLet G = S_3 (non-abelian group).\n\nDefine f: S → S_3 by:\n- f(a) = (1 2)\n- f(b) = (1 3)\n- f(s) = e for other s ∈ S\n\nBy the universal property, f extends to φ: F(S) → S_3.\n\nφ(ab) = (1 2)(1 3) = (1 3 2)\nφ(ba) = (1 3)(1 2) = (1 2 3)\n\nSince (1 3 2) ≠ (1 2 3), we have ab ≠ ba in F(S).\n\nTherefore F(S) is non-abelian."
+        },
+        {
+          "id": "6.3.2",
+          "type": "exercise",
+          "title": "Exercise 6.3.2",
+          "statement": "Prove that subgroups of free groups are free (Nielsen-Schreier Theorem).",
+          "solution": "**Statement (Nielsen-Schreier Theorem):**\n\nEvery subgroup of a free group is free.\n\n**Proof sketch (topological approach):**\n\n1. F(S) is the fundamental group of a bouquet of |S| circles (one-point union of circles).\n\n2. Subgroups of π_1(X) correspond to covering spaces of X.\n\n3. Every covering space of a graph (1-dimensional CW complex) is also a graph.\n\n4. The fundamental group of a graph is free (generated by the edges not in a spanning tree).\n\n5. Therefore every subgroup of F(S) is free.\n\n**Rank formula for finite index subgroups:**\n\nIf H ≤ F_n has index m, then:\nrank(H) = m(n - 1) + 1\n\n**Example:**\nF_2 has subgroups of any finite rank ≥ 2.\nFor m = 2, rank(H) = 2(2-1) + 1 = 3.\n\n**Note:** This theorem is non-trivial! The analogous statement is false for other algebraic structures (e.g., submonoids of free monoids need not be free)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "partId": 8,
+  "partTitle": "Euclidean Domains, PIDs, and UFDs",
+  "textbookChapter": "Chapter 8",
+  "sections": [
+    {
+      "sectionId": "8.1",
+      "sectionTitle": "Euclidean Domains",
+      "textbookSection": "§8.1",
+      "examples": [
+        {
+          "id": "ex-8.1.1",
+          "type": "example",
+          "title": "Example 8.1.1",
+          "statement": "Define a Euclidean domain and show that ℤ is a Euclidean domain with norm N(a) = |a|.",
+          "solution": "**Definition:**\n\nAn integral domain R is a **Euclidean domain** if there exists a function N: R \\ {0} → ℤ≥0 (called a **norm** or **Euclidean function**) such that:\n\nFor any a, b ∈ R with b ≠ 0, there exist q, r ∈ R with:\na = bq + r\n\nwhere either r = 0 or N(r) < N(b).\n\n**Proof that ℤ is Euclidean:**\n\nDefine N: ℤ \\ {0} → ℤ≥0 by N(a) = |a|.\n\nLet a, b ∈ ℤ with b ≠ 0.\n\nBy the division algorithm for integers:\na = bq + r where 0 ≤ r < |b|.\n\nIf r ≠ 0, then N(r) = r < |b| = N(b).\n\nTherefore ℤ is a Euclidean domain.\n\n**Note:** The Euclidean algorithm for finding gcd works in any Euclidean domain."
+        },
+        {
+          "id": "ex-8.1.2",
+          "type": "example",
+          "title": "Example 8.1.2",
+          "statement": "Prove that the Gaussian integers ℤ[i] form a Euclidean domain with norm N(a + bi) = a² + b².",
+          "solution": "**Proof:**\n\nDefine N: ℤ[i] \\ {0} → ℤ>0 by N(a + bi) = a² + b² = |a + bi|².\n\nLet α, β ∈ ℤ[i] with β ≠ 0.\n\nConsider α/β ∈ ℂ. Write α/β = x + yi where x, y ∈ ℚ.\n\nChoose integers m, n such that |x - m| ≤ 1/2 and |y - n| ≤ 1/2.\n\nLet q = m + ni ∈ ℤ[i] and r = α - βq.\n\n**Claim: Either r = 0 or N(r) < N(β).**\n\nr = α - βq = β(α/β - q) = β((x - m) + (y - n)i).\n\nN(r) = N(β) · |((x-m) + (y-n)i)|²\n= N(β) · ((x-m)² + (y-n)²)\n≤ N(β) · (1/4 + 1/4)\n= N(β) · (1/2)\n< N(β).\n\nTherefore ℤ[i] is a Euclidean domain."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8.1.1",
+          "type": "exercise",
+          "title": "Exercise 8.1.1",
+          "statement": "Use the Euclidean algorithm to find gcd(11 + 3i, 8 + i) in ℤ[i].",
+          "solution": "**Solution:**\n\nLet α = 11 + 3i and β = 8 + i.\n\n**Step 1:** Divide α by β.\nα/β = (11 + 3i)/(8 + i) = (11 + 3i)(8 - i)/((8 + i)(8 - i))\n= (88 - 11i + 24i - 3i²)/(64 + 1)\n= (88 + 3 + 13i)/65\n= (91 + 13i)/65\n= 91/65 + (13/65)i\n= 1.4 + 0.2i\n\nRound to q₁ = 1 + 0i = 1.\nr₁ = α - βq₁ = (11 + 3i) - (8 + i)(1) = 3 + 2i.\n\n**Step 2:** Divide β by r₁.\nβ/r₁ = (8 + i)/(3 + 2i) = (8 + i)(3 - 2i)/((3 + 2i)(3 - 2i))\n= (24 - 16i + 3i - 2i²)/(9 + 4)\n= (24 + 2 - 13i)/13\n= 26/13 - 13i/13\n= 2 - i.\n\nThis is exact! So q₂ = 2 - i and r₂ = 0.\n\n**Conclusion:** gcd(11 + 3i, 8 + i) = r₁ = **3 + 2i**.\n\n**Verification:** N(3 + 2i) = 13, N(11 + 3i) = 130 = 13·10, N(8 + i) = 65 = 13·5. ✓"
+        },
+        {
+          "id": "8.1.2",
+          "type": "exercise",
+          "title": "Exercise 8.1.2",
+          "statement": "Prove that every Euclidean domain is a PID.",
+          "solution": "**Proof:**\n\nLet R be a Euclidean domain with norm N.\nLet I ⊆ R be a non-zero ideal.\n\n**Claim:** I = (d) for some d ∈ I.\n\nChoose d ∈ I \\ {0} with N(d) minimal among all non-zero elements of I.\n\n**Claim:** I = (d).\n\nClearly (d) ⊆ I since d ∈ I and I is an ideal.\n\nConversely, let a ∈ I. By the Euclidean property:\na = dq + r where r = 0 or N(r) < N(d).\n\nSince a ∈ I and dq ∈ I (because d ∈ I), we have r = a - dq ∈ I.\n\nIf r ≠ 0, then N(r) < N(d), contradicting the minimality of N(d) among non-zero elements of I.\n\nTherefore r = 0, so a = dq ∈ (d).\n\nThis proves I ⊆ (d), hence I = (d).\n\nTherefore R is a PID."
+        }
+      ]
+    },
+    {
+      "sectionId": "8.2",
+      "sectionTitle": "Principal Ideal Domains",
+      "textbookSection": "§8.2",
+      "examples": [
+        {
+          "id": "ex-8.2.1",
+          "type": "example",
+          "title": "Example 8.2.1",
+          "statement": "Define PIDs and give an example of a PID that is not a Euclidean domain.",
+          "solution": "**Definition:**\n\nAn integral domain R is a **Principal Ideal Domain (PID)** if every ideal of R is principal, i.e., of the form (a) = Ra for some a ∈ R.\n\n**Example: ℤ[(1 + √-19)/2]**\n\nLet ω = (1 + √-19)/2 and R = ℤ[ω] = {a + bω : a, b ∈ ℤ}.\n\n**Fact:** R is a PID but NOT a Euclidean domain.\n\n**Why it's a PID:**\nR is the ring of integers in ℚ(√-19), which has class number 1.\nRings of integers with class number 1 are PIDs.\n\n**Why it's not Euclidean:**\nIf R were Euclidean, there would exist a universal side divisor (an element that divides any element with quotient having smaller norm).\n\nOne can show that no element of R serves as a universal side divisor, so R is not Euclidean.\n\n**Note:** This shows the strict inclusion: Euclidean domains ⊊ PIDs."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8.2.1",
+          "type": "exercise",
+          "title": "Exercise 8.2.1",
+          "statement": "Prove that in a PID, every non-zero prime ideal is maximal.",
+          "solution": "**Proof:**\n\nLet R be a PID and P = (p) be a non-zero prime ideal.\n\nWe proved this in the Rings chapter, but here's another approach:\n\nSuppose (p) ⊆ (q) for some q ∈ R.\n\nThen p = qr for some r ∈ R.\n\nSince P = (p) is prime and qr = p ∈ P:\n- Either q ∈ P, or\n- r ∈ P.\n\n**Case q ∈ P = (p):**\nThen q = ps for some s, so p = qr = psr.\nSince R is an integral domain and p ≠ 0, we get sr = 1.\nSo s is a unit, meaning (q) = (p).\n\n**Case r ∈ P = (p):**\nThen r = pt for some t, so p = qr = qpt.\nSince p ≠ 0, we get qt = 1.\nSo q is a unit, meaning (q) = R.\n\nThus for any ideal (q) ⊇ (p), either (q) = (p) or (q) = R.\n\nThis means (p) is maximal."
+        },
+        {
+          "id": "8.2.2",
+          "type": "exercise",
+          "title": "Exercise 8.2.2",
+          "statement": "Prove that if R is a PID and a, b ∈ R, then (a, b) = (gcd(a, b)).",
+          "solution": "**Proof:**\n\nLet d = gcd(a, b).\n\nSince R is a PID, the ideal (a, b) = {ra + sb : r, s ∈ R} is principal.\nSay (a, b) = (g) for some g ∈ R.\n\n**Claim 1: g | a and g | b.**\n\nSince a ∈ (a, b) = (g), we have g | a.\nSimilarly, g | b.\n\n**Claim 2: d | g.**\n\nSince g ∈ (g) = (a, b), we have g = ra + sb for some r, s ∈ R.\n\nSince d | a and d | b, we have d | (ra + sb) = g.\n\n**Claim 3: g | d.**\n\nBy definition, d is a common divisor of a and b.\nBy Claim 1, g is also a common divisor.\n\nAlso, d is the greatest common divisor, meaning if c | a and c | b, then c | d.\n\nSince g | a and g | b (Claim 1), we have g | d.\n\n**Conclusion:**\n\nSince d | g and g | d, we have (d) = (g).\n\nTherefore (a, b) = (gcd(a, b))."
+        }
+      ]
+    },
+    {
+      "sectionId": "8.3",
+      "sectionTitle": "Unique Factorization Domains",
+      "textbookSection": "§8.3",
+      "examples": [
+        {
+          "id": "ex-8.3.1",
+          "type": "example",
+          "title": "Example 8.3.1",
+          "statement": "Define UFDs and prove that every PID is a UFD.",
+          "solution": "**Definition:**\n\nAn integral domain R is a **Unique Factorization Domain (UFD)** if:\n1. Every non-zero non-unit element can be written as a product of irreducibles.\n2. This factorization is unique up to order and associates (units).\n\n**Theorem: Every PID is a UFD.**\n\n**Proof (outline):**\n\n**Step 1: Existence of factorization.**\n\nAssume for contradiction that some a ∈ R has no factorization.\n\nThen a is not irreducible, so a = a₁b₁ where a₁, b₁ are non-units.\n\nAt least one of a₁, b₁ has no factorization; say a₁.\n\nSince a₁ | a and a₁ is not a unit times a, we have (a) ⊊ (a₁).\n\nRepeating: (a) ⊊ (a₁) ⊊ (a₂) ⊊ ...\n\nThis is an ascending chain of ideals.\n\n**In a PID, ascending chains stabilize** (Noetherian property).\nContradiction.\n\n**Step 2: Uniqueness.**\n\nIn a PID, irreducible ⟹ prime.\n\nUniqueness follows from the standard argument using primality:\nIf p₁...pₘ = q₁...qₙ, then p₁ | q₁...qₙ.\nBy primality, p₁ | qⱼ for some j.\nSince both are irreducible, p₁ and qⱼ are associates.\nCancel and continue by induction."
+        },
+        {
+          "id": "ex-8.3.2",
+          "type": "example",
+          "title": "Example 8.3.2",
+          "statement": "Show that ℤ[√-5] is NOT a UFD by finding two different factorizations of 6.",
+          "solution": "**Solution:**\n\nIn ℤ[√-5] = {a + b√-5 : a, b ∈ ℤ}:\n\n6 = 2 · 3\n6 = (1 + √-5)(1 - √-5)\n\n**Verify (1 + √-5)(1 - √-5) = 6:**\n(1 + √-5)(1 - √-5) = 1 - (√-5)² = 1 - (-5) = 6. ✓\n\n**Claim: 2, 3, (1 + √-5), (1 - √-5) are all irreducible.**\n\nUse the norm N(a + b√-5) = a² + 5b².\n\nN is multiplicative: N(αβ) = N(α)N(β).\n\nN(2) = 4, N(3) = 9, N(1 ± √-5) = 1 + 5 = 6.\n\nFor 2 to factor as αβ with α, β non-units:\nN(α)N(β) = 4, so N(α), N(β) ∈ {2, 2} or {1, 4}.\n\nN = 2: a² + 5b² = 2 has no integer solutions. ✗\nN = 1: Only units have norm 1 (just ±1). ✗\n\nSo 2 is irreducible. Similarly for 3 and (1 ± √-5).\n\n**Claim: 2 and (1 + √-5) are not associates.**\n\nAssociates differ by a unit. Units in ℤ[√-5] are ±1.\n(1 + √-5) ≠ ±2. ✓\n\n**Conclusion:** 6 has two essentially different factorizations, so ℤ[√-5] is not a UFD."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8.3.1",
+          "type": "exercise",
+          "title": "Exercise 8.3.1",
+          "statement": "Prove that in a UFD, an element is prime if and only if it is irreducible.",
+          "solution": "**Proof:**\n\n**(⟹) Prime implies irreducible (in any integral domain):**\n\nLet p be prime. Suppose p = ab.\nThen ab ∈ (p), so a ∈ (p) or b ∈ (p).\n\nWLOG a ∈ (p), so a = pc.\nThen p = pcb, so cb = 1 (canceling p).\nThus b is a unit, proving p is irreducible.\n\n**(⟸) Irreducible implies prime (in a UFD):**\n\nLet p be irreducible in a UFD R.\nSuppose p | ab.\n\nThen ab = pc for some c ∈ R.\n\nFactor a, b, c into irreducibles:\na = p₁...pₘ\nb = q₁...qₙ\nc = r₁...rₖ\n\nThen: p₁...pₘ · q₁...qₙ = p · r₁...rₖ.\n\nBy uniqueness of factorization, p is an associate of some pᵢ or qⱼ.\n\nIf p ~ pᵢ, then p | a.\nIf p ~ qⱼ, then p | b.\n\nTherefore p is prime."
+        },
+        {
+          "id": "8.3.2",
+          "type": "exercise",
+          "title": "Exercise 8.3.2",
+          "statement": "State the hierarchy: Fields ⊆ Euclidean Domains ⊆ PIDs ⊆ UFDs ⊆ Integral Domains. Give examples showing each inclusion is strict.",
+          "solution": "**The Hierarchy:**\n\nFields ⊊ Euclidean Domains ⊊ PIDs ⊊ UFDs ⊊ Integral Domains\n\n**Examples showing strict inclusions:**\n\n**1. Euclidean but not a field: ℤ**\n- ℤ is Euclidean (with N(a) = |a|)\n- ℤ is not a field (2 has no inverse)\n\n**2. PID but not Euclidean: ℤ[(1+√-19)/2]**\n- This is a PID (class number 1)\n- Not Euclidean (no universal side divisor)\n\n**3. UFD but not a PID: ℤ[x]**\n- ℤ[x] is a UFD (polynomials over a UFD form a UFD)\n- Not a PID: (2, x) is not principal\n  - If (2, x) = (f), then f | 2 and f | x.\n  - f | 2 ⟹ f ∈ {±1, ±2}.\n  - f | x and deg(f) ≤ 1 ⟹ f = ±1 or f = ±x.\n  - f = ±1 ⟹ (2, x) = ℤ[x], but 1 ∉ (2, x). ✗\n  - f = ±2 doesn't divide x. ✗\n  - f = ±x doesn't divide 2. ✗\n\n**4. Integral domain but not a UFD: ℤ[√-5]**\n- 6 = 2·3 = (1+√-5)(1-√-5) (two factorizations)\n- The elements 2, 3, 1±√-5 are irreducible but not prime"
+        }
+      ]
+    }
+  ]
+}

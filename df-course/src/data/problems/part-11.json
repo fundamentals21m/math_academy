@@ -1,0 +1,37 @@
+{
+  "partId": 11,
+  "partTitle": "Vector Spaces",
+  "textbookChapter": "Chapter 11",
+  "sections": [
+    {
+      "sectionId": "11.1",
+      "sectionTitle": "Definitions and Basic Theorems",
+      "textbookSection": "§11.1",
+      "examples": [
+        {
+          "id": "ex-11.1.1",
+          "type": "example",
+          "title": "Example 11.1.1",
+          "statement": "Prove that every vector space has a basis (requires Zorn's Lemma).",
+          "solution": "**Theorem:** Every vector space V over a field F has a basis.\n\n**Proof using Zorn's Lemma:**\n\nLet S = {linearly independent subsets of V}.\n\nS is non-empty: ∅ ∈ S (vacuously independent).\n\nPartially order S by inclusion.\n\n**Claim:** Every chain in S has an upper bound.\n\nLet C = {S_i : i ∈ I} be a chain in S.\nLet S = ∪_{i ∈ I} S_i.\n\nS is linearly independent:\nIf Σ c_j v_j = 0 with v_j ∈ S and c_j ∈ F, then all v_j lie in some S_i (finitely many elements, chain property).\nSince S_i is linearly independent, all c_j = 0.\n\nSo S ∈ S is an upper bound for C.\n\nBy Zorn's Lemma, S has a maximal element B.\n\n**Claim:** B is a basis.\n\nB is linearly independent by construction.\n\nB spans V: If v ∉ span(B), then B ∪ {v} would be linearly independent (prove!), contradicting maximality.\n\nTherefore B is a basis."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "11.1.1",
+          "type": "exercise",
+          "title": "Exercise 11.1.1",
+          "statement": "Prove that all bases of a finite-dimensional vector space have the same cardinality.",
+          "solution": "**Proof (Steinitz Exchange Lemma approach):**\n\nLet B = {b_1, ..., b_n} and C = {c_1, ..., c_m} be bases of V.\n\n**Claim: n = m.**\n\nWe show m ≤ n and n ≤ m.\n\n**Showing m ≤ n:**\n\nStart with B. Since c_1 ∈ V = span(B), we can write c_1 as a linear combination of B.\n\nc_1 = α_1 b_1 + ... + α_n b_n with some α_i ≠ 0 (WLOG α_1 ≠ 0).\n\nThen B_1 = {c_1, b_2, ..., b_n} is still a basis (exchange lemma).\n\nContinue: Express c_2 in terms of B_1, exchange with some b_j.\n\nAfter m steps: {c_1, c_2, ..., c_m, b_{j_1}, ...} spans V.\n\nIf m > n, we'd have more than n vectors, but we started with n basis vectors and only exchanged. This means some c_i would be dependent on previous ones, contradicting that C is a basis.\n\n**Showing n ≤ m:** Symmetric argument.\n\nTherefore n = m."
+        },
+        {
+          "id": "11.1.2",
+          "type": "exercise",
+          "title": "Exercise 11.1.2",
+          "statement": "Let V be a finite-dimensional vector space and W ⊆ V a subspace. Prove dim(V/W) = dim(V) - dim(W).",
+          "solution": "**Proof:**\n\nLet dim(W) = m and dim(V) = n.\n\nLet {w_1, ..., w_m} be a basis for W.\n\nExtend to a basis {w_1, ..., w_m, v_1, ..., v_k} for V, where k = n - m.\n\n**Claim:** {v_1 + W, ..., v_k + W} is a basis for V/W.\n\n**Spanning:**\n\nAny v ∈ V can be written as:\nv = α_1 w_1 + ... + α_m w_m + β_1 v_1 + ... + β_k v_k.\n\nThen v + W = β_1 v_1 + ... + β_k v_k + W = β_1(v_1 + W) + ... + β_k(v_k + W).\n\nSo {v_i + W} spans V/W.\n\n**Linear independence:**\n\nSuppose β_1(v_1 + W) + ... + β_k(v_k + W) = W (zero in V/W).\n\nThen β_1 v_1 + ... + β_k v_k ∈ W.\n\nSo β_1 v_1 + ... + β_k v_k = γ_1 w_1 + ... + γ_m w_m for some γ_i.\n\nThis gives β_1 v_1 + ... + β_k v_k - γ_1 w_1 - ... - γ_m w_m = 0.\n\nBy independence of the full basis, all coefficients are 0, so β_i = 0.\n\nTherefore dim(V/W) = k = n - m = dim(V) - dim(W)."
+        }
+      ]
+    }
+  ]
+}

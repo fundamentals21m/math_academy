@@ -1,0 +1,30 @@
+{
+  "partId": 16,
+  "partTitle": "Artinian Rings, Discrete Valuation Rings, and Dedekind Domains",
+  "textbookChapter": "Chapter 16",
+  "sections": [
+    {
+      "sectionId": "16.1",
+      "sectionTitle": "Artinian Rings",
+      "textbookSection": "§16.1",
+      "examples": [
+        {
+          "id": "ex-16.1.1",
+          "type": "example",
+          "title": "Artinian Rings",
+          "statement": "Define Artinian rings and prove that a commutative Artinian ring has only finitely many maximal ideals.",
+          "solution": "**Definition:**\n\nA ring R is **Artinian** if it satisfies the descending chain condition (DCC) on ideals: every descending chain I₁ ⊇ I₂ ⊇ I₃ ⊇ ... eventually stabilizes.\n\n**Theorem:** A commutative Artinian ring has finitely many maximal ideals.\n\n**Proof:**\n\nSuppose R has infinitely many distinct maximal ideals M₁, M₂, M₃, ...\n\nConsider the descending chain:\nM₁ ⊇ M₁ ∩ M₂ ⊇ M₁ ∩ M₂ ∩ M₃ ⊇ ...\n\n**Claim:** This chain is strictly descending.\n\nSuppose M₁ ∩ ... ∩ Mₙ = M₁ ∩ ... ∩ Mₙ ∩ Mₙ₊₁.\n\nThen M₁ ∩ ... ∩ Mₙ ⊆ Mₙ₊₁.\n\nBy the prime avoidance lemma (or direct argument), one of M₁, ..., Mₙ is contained in Mₙ₊₁.\n\nBut maximal ideals are maximal, so Mᵢ = Mₙ₊₁ for some i.\n\nThis contradicts that the Mᵢ are distinct.\n\nSo the chain is strictly descending, contradicting DCC.\n\nTherefore R has only finitely many maximal ideals."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "16.1.1",
+          "type": "exercise",
+          "title": "Exercise 16.1.1",
+          "statement": "Prove that a commutative Artinian ring is Noetherian.",
+          "solution": "**Proof:**\n\nLet R be a commutative Artinian ring.\n\n**Step 1:** R has finitely many maximal ideals M₁, ..., Mₙ.\n\n**Step 2:** The Jacobson radical J(R) = M₁ ∩ ... ∩ Mₙ.\n\n**Step 3:** J(R) is nilpotent.\n\nConsider J(R) ⊇ J(R)² ⊇ J(R)³ ⊇ ...\n\nBy DCC, J(R)^k = J(R)^{k+1} for some k.\n\nLet I = J(R)^k. Then I = I·J(R).\n\nBy Nakayama's Lemma (applicable since J(R) ⊆ all maximal ideals), I = 0.\n\nSo J(R)^k = 0.\n\n**Step 4:** R/J(R) is semisimple.\n\nR/J(R) has trivial Jacobson radical and is Artinian.\nBy Artin-Wedderburn, it's a product of fields (in the commutative case).\nHence Noetherian.\n\n**Step 5:** Use induction on k.\n\nR has a filtration with Noetherian quotients, so R is Noetherian."
+        }
+      ]
+    }
+  ]
+}

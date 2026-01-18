@@ -1,0 +1,74 @@
+{
+  "partId": 9,
+  "partTitle": "Polynomial Rings",
+  "textbookChapter": "Chapter 9",
+  "sections": [
+    {
+      "sectionId": "9.1",
+      "sectionTitle": "Definitions and Basic Properties",
+      "textbookSection": "§9.1-9.2",
+      "examples": [
+        {
+          "id": "ex-9.1.1",
+          "type": "example",
+          "title": "Example 9.1.1",
+          "statement": "Prove that if R is an integral domain, then R[x] is an integral domain.",
+          "solution": "**Proof:**\n\nLet R be an integral domain. We need to show R[x] has no zero divisors.\n\nLet f(x) = aₙxⁿ + ... + a₁x + a₀ with aₙ ≠ 0 (deg f = n).\nLet g(x) = bₘxᵐ + ... + b₁x + b₀ with bₘ ≠ 0 (deg g = m).\n\nAssume f(x) ≠ 0 and g(x) ≠ 0.\n\n**Compute f(x)g(x):**\n\nThe leading term of f(x)g(x) is aₙbₘxⁿ⁺ᵐ.\n\nSince R is an integral domain and aₙ ≠ 0, bₘ ≠ 0:\naₙbₘ ≠ 0.\n\nTherefore f(x)g(x) ≠ 0.\n\n**Conclusion:** R[x] is an integral domain.\n\n**Corollary:** deg(fg) = deg(f) + deg(g) when R is an integral domain."
+        },
+        {
+          "id": "ex-9.1.2",
+          "type": "example",
+          "title": "Example 9.1.2",
+          "statement": "State and prove the Division Algorithm for polynomials over a field.",
+          "solution": "**Division Algorithm:**\n\nLet F be a field and f(x), g(x) ∈ F[x] with g(x) ≠ 0.\n\nThen there exist unique q(x), r(x) ∈ F[x] such that:\nf(x) = g(x)q(x) + r(x)\n\nwhere r(x) = 0 or deg r < deg g.\n\n**Proof of existence (by strong induction on deg f):**\n\nBase case: If deg f < deg g, take q = 0, r = f.\n\nInductive step: Let deg f = n ≥ deg g = m.\n\nLet f(x) = aₙxⁿ + ... and g(x) = bₘxᵐ + ...\n\nConsider f₁(x) = f(x) - (aₙ/bₘ)xⁿ⁻ᵐg(x).\n\nThe leading terms cancel, so deg f₁ < n.\n\nBy induction: f₁(x) = g(x)q₁(x) + r(x) with deg r < m.\n\nThen:\nf(x) = f₁(x) + (aₙ/bₘ)xⁿ⁻ᵐg(x)\n= g(x)q₁(x) + r(x) + (aₙ/bₘ)xⁿ⁻ᵐg(x)\n= g(x)(q₁(x) + (aₙ/bₘ)xⁿ⁻ᵐ) + r(x)\n\nLet q(x) = q₁(x) + (aₙ/bₘ)xⁿ⁻ᵐ. Done.\n\n**Proof of uniqueness:** Standard (if f = gq + r = gq' + r', then g(q-q') = r'-r, compare degrees)."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "9.1.1",
+          "type": "exercise",
+          "title": "Exercise 9.1.1",
+          "statement": "Prove that F[x] is a PID when F is a field.",
+          "solution": "**Proof:**\n\nF[x] is a Euclidean domain with norm N(f) = deg(f).\n\nThe division algorithm shows:\nFor f, g ∈ F[x] with g ≠ 0, there exist q, r with:\nf = gq + r and (r = 0 or deg r < deg g).\n\nSince every Euclidean domain is a PID, F[x] is a PID.\n\n**Alternative direct proof:**\n\nLet I ⊆ F[x] be a non-zero ideal.\n\nLet g(x) ∈ I be a non-zero polynomial of minimum degree.\n\n**Claim: I = (g).**\n\nFor any f ∈ I, divide: f = gq + r with deg r < deg g or r = 0.\n\nSince f, gq ∈ I, we have r = f - gq ∈ I.\n\nIf r ≠ 0, then r ∈ I with deg r < deg g, contradicting minimality.\n\nSo r = 0, meaning f = gq ∈ (g).\n\nTherefore I ⊆ (g), and clearly (g) ⊆ I, so I = (g)."
+        },
+        {
+          "id": "9.1.2",
+          "type": "exercise",
+          "title": "Exercise 9.1.2",
+          "statement": "Prove that if R is a UFD, then R[x] is a UFD.",
+          "solution": "**Theorem (Gauss):** If R is a UFD, then R[x] is a UFD.\n\n**Proof outline:**\n\nLet K = Frac(R) be the field of fractions.\n\n**Step 1: Content and primitive polynomials.**\n\nFor f(x) ∈ R[x], the **content** c(f) is the gcd of its coefficients.\nf is **primitive** if c(f) = 1.\n\nEvery f ∈ R[x] can be written as f = c(f) · f* where f* is primitive.\n\n**Step 2: Gauss's Lemma.**\nProduct of primitive polynomials is primitive.\n\n**Step 3: Factor in K[x].**\n\nK[x] is a PID, hence a UFD.\n\nIf f ∈ R[x] is primitive and f = gh in K[x], then after clearing denominators, we can assume g, h ∈ R[x] primitive.\n\n**Step 4: Conclude.**\n\nIrreducibles in R[x] are either:\n- Irreducible elements of R (constant polynomials), or\n- Primitive polynomials irreducible over K.\n\nThe factorization in R[x] combines factorization of content (in R) and factorization of primitive part (essentially in K[x])."
+        }
+      ]
+    },
+    {
+      "sectionId": "9.2",
+      "sectionTitle": "Irreducibility Criteria",
+      "textbookSection": "§9.3-9.4",
+      "examples": [
+        {
+          "id": "ex-9.2.1",
+          "type": "example",
+          "title": "Eisenstein's Criterion",
+          "statement": "State and prove Eisenstein's Criterion for irreducibility.",
+          "solution": "**Eisenstein's Criterion:**\n\nLet f(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀ ∈ ℤ[x].\n\nIf there exists a prime p such that:\n1. p ∤ aₙ (p doesn't divide leading coefficient)\n2. p | aᵢ for all i < n (p divides all other coefficients)\n3. p² ∤ a₀ (p² doesn't divide constant term)\n\nThen f(x) is irreducible in ℚ[x].\n\n**Proof:**\n\nSuppose f = gh in ℤ[x] with deg g, deg h ≥ 1.\n(By Gauss's Lemma, if f factors in ℚ[x], it factors in ℤ[x].)\n\nLet g = bᵣxʳ + ... + b₀ and h = cₛxˢ + ... + c₀.\n\nThen r + s = n, bᵣcₛ = aₙ, and b₀c₀ = a₀.\n\n**From condition 3:** p | a₀ = b₀c₀ but p² ∤ a₀.\nSo exactly one of p | b₀ or p | c₀.\nWLOG p | b₀ and p ∤ c₀.\n\n**From condition 1:** p ∤ aₙ = bᵣcₛ.\nSo p ∤ bᵣ.\n\nLet k be the smallest index with p ∤ bₖ. Then 0 < k ≤ r < n.\n\n**Consider aₖ:**\naₖ = bₖc₀ + bₖ₋₁c₁ + ... + b₀cₖ.\n\np | bᵢ for i < k, so p | (bₖ₋₁c₁ + ... + b₀cₖ).\np | aₖ (by condition 2, since k < n).\n\nSo p | bₖc₀. But p ∤ bₖ and p ∤ c₀. Contradiction.\n\nTherefore f is irreducible."
+        },
+        {
+          "id": "ex-9.2.2",
+          "type": "example",
+          "title": "Example 9.2.2",
+          "statement": "Use Eisenstein's Criterion to prove that x⁴ + 1 is irreducible over ℚ.",
+          "solution": "**Solution:**\n\nEisenstein doesn't apply directly to x⁴ + 1.\n\n**Substitution trick:** Let y = x + 1, so x = y - 1.\n\n(x + 1)⁴ = x⁴ + 4x³ + 6x² + 4x + 1.\n\nSubstitute x → y - 1:\n\n(y)⁴ = y⁴\n4(y-1)³ = 4y³ - 12y² + 12y - 4\n6(y-1)² = 6y² - 12y + 6\n4(y-1) = 4y - 4\n1 = 1\n\nSo we need to compute f(y-1) where f(x) = x⁴ + 1.\n\n(y-1)⁴ + 1 = y⁴ - 4y³ + 6y² - 4y + 1 + 1\n= y⁴ - 4y³ + 6y² - 4y + 2.\n\n**Apply Eisenstein with p = 2:**\n\n- 2 ∤ 1 (leading coefficient) ✓\n- 2 | -4, 6, -4, 2 (all others) ✓\n- 4 ∤ 2 (constant term) ✓\n\nBy Eisenstein, y⁴ - 4y³ + 6y² - 4y + 2 is irreducible over ℚ.\n\nSince f(x) is irreducible iff f(x + 1) is irreducible:\n\n**x⁴ + 1 is irreducible over ℚ.**"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "9.2.1",
+          "type": "exercise",
+          "title": "Exercise 9.2.1",
+          "statement": "Prove that the cyclotomic polynomial Φₚ(x) = xᵖ⁻¹ + xᵖ⁻² + ... + x + 1 is irreducible over ℚ for prime p.",
+          "solution": "**Proof:**\n\nNote: Φₚ(x) = (xᵖ - 1)/(x - 1).\n\n**Substitution:** Let y = x + 1.\n\nΦₚ(y-1) = ((y-1)ᵖ - 1)/((y-1) - 1)\n= ((y-1)ᵖ - 1)/(y - 2)\n\n**Compute (y-1)ᵖ - 1:**\n\nBy binomial theorem:\n(y-1)ᵖ = Σₖ₌₀ᵖ C(p,k) yᵏ (-1)ᵖ⁻ᵏ\n= yᵖ - py^{p-1} + ... + (-1)ᵖ.\n\nSo (y-1)ᵖ - 1 = yᵖ - py^{p-1} + ... + ((-1)ᵖ - 1).\n\nActually, let's use y = x + 1 so x = y - 1:\n\nΦₚ(x) = (xᵖ - 1)/(x - 1).\nΦₚ(y + 1) = ((y+1)ᵖ - 1)/y.\n\n(y+1)ᵖ - 1 = Σₖ₌₁ᵖ C(p,k) yᵏ = py + C(p,2)y² + ... + yᵖ.\n\nDividing by y:\nΦₚ(y+1) = p + C(p,2)y + ... + y^{p-1}.\n\n**Apply Eisenstein with prime p:**\n\n- p ∤ 1 (leading coefficient of y^{p-1}) ✓\n- p | C(p,k) for 1 ≤ k ≤ p-1 ✓ (since C(p,k) = p!/(k!(p-k)!))\n- p² ∤ p (constant term) ✓\n\nBy Eisenstein, Φₚ(y+1) is irreducible.\n\nTherefore Φₚ(x) is irreducible over ℚ."
+        }
+      ]
+    }
+  ]
+}

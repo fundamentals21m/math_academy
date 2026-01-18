@@ -1,0 +1,132 @@
+{
+  "partId": 7,
+  "partTitle": "Introduction to Rings",
+  "textbookChapter": "Chapter 7",
+  "sections": [
+    {
+      "sectionId": "7.1",
+      "sectionTitle": "Basic Definitions and Examples",
+      "textbookSection": "§7.1",
+      "examples": [
+        {
+          "id": "ex-7.1.1",
+          "type": "example",
+          "title": "Example 7.1.1",
+          "statement": "Define a ring and verify that ℤ[i] = {a + bi : a, b ∈ ℤ} is a ring under the usual operations.",
+          "solution": "**Definition of a Ring:**\n\nA **ring** R is a set with two binary operations + (addition) and · (multiplication) such that:\n\n1. (R, +) is an abelian group (with identity 0).\n2. Multiplication is associative: (ab)c = a(bc).\n3. Distributive laws hold:\n   - a(b + c) = ab + ac\n   - (a + b)c = ac + bc\n\nIf multiplication is commutative, R is a **commutative ring**.\nIf R has a multiplicative identity 1 ≠ 0, R is a **ring with unity**.\n\n**Verification for ℤ[i] (Gaussian integers):**\n\n**Step 1: (ℤ[i], +) is an abelian group.**\n- Closure: (a + bi) + (c + di) = (a+c) + (b+d)i ∈ ℤ[i] ✓\n- Associativity: Inherited from ℂ ✓\n- Identity: 0 = 0 + 0i ✓\n- Inverses: -(a + bi) = -a + (-b)i ∈ ℤ[i] ✓\n- Commutativity: Inherited from ℂ ✓\n\n**Step 2: Multiplication is associative.**\nInherited from ℂ. ✓\n\n**Step 3: Distributive laws.**\nInherited from ℂ. ✓\n\n**Step 4: Closure under multiplication.**\n(a + bi)(c + di) = (ac - bd) + (ad + bc)i ∈ ℤ[i] ✓\n\n**Step 5: Additional properties.**\n- Commutative: Yes (inherited from ℂ)\n- Has unity: 1 = 1 + 0i\n\nℤ[i] is a commutative ring with unity."
+        },
+        {
+          "id": "ex-7.1.2",
+          "type": "example",
+          "title": "Example 7.1.2",
+          "statement": "Show that M_2(ℝ), the set of 2×2 real matrices, is a non-commutative ring.",
+          "solution": "**Verification:**\n\n**Step 1: (M_2(ℝ), +) is an abelian group.**\n- Closure: Sum of matrices is a matrix ✓\n- Associativity: Matrix addition is associative ✓\n- Identity: Zero matrix [[0,0],[0,0]] ✓\n- Inverses: -A exists for each A ✓\n- Commutativity: A + B = B + A ✓\n\n**Step 2: Multiplication is associative.**\nMatrix multiplication is associative: (AB)C = A(BC). ✓\n\n**Step 3: Distributive laws.**\n- A(B + C) = AB + AC ✓\n- (A + B)C = AC + BC ✓\n\n**Step 4: Unity exists.**\nThe identity matrix I = [[1,0],[0,1]] satisfies AI = IA = A. ✓\n\n**Step 5: Non-commutativity.**\n\nLet A = [[1,0],[0,0]] and B = [[0,1],[0,0]].\n\nAB = [[0,1],[0,0]]\nBA = [[0,0],[0,0]]\n\nAB ≠ BA, so M_2(ℝ) is non-commutative.\n\n**Note:** M_2(ℝ) has zero divisors:\n[[1,0],[0,0]] · [[0,0],[0,1]] = [[0,0],[0,0]]\n\nNeither factor is zero, but the product is zero."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "7.1.1",
+          "type": "exercise",
+          "title": "Exercise 7.1.1",
+          "statement": "Let R be a ring with unity 1. Prove that (-1)a = -a for all a ∈ R.",
+          "solution": "**Proof:**\n\nWe need to show that (-1)a + a = 0.\n\n(-1)a + a = (-1)a + 1·a\n= (-1 + 1)a  (by distributivity)\n= 0·a\n= 0\n\nThe last step follows from:\n0·a = (0 + 0)·a = 0·a + 0·a\n⟹ 0 = 0·a\n\nSince (-1)a + a = 0, we have (-1)a = -a."
+        },
+        {
+          "id": "7.1.2",
+          "type": "exercise",
+          "title": "Exercise 7.1.2",
+          "statement": "An element a in a ring R is called nilpotent if aⁿ = 0 for some positive integer n. Prove that if a is nilpotent, then 1 - a is a unit.",
+          "solution": "**Proof:**\n\nLet aⁿ = 0 for some n ≥ 1.\n\nConsider the geometric series identity:\n(1 - a)(1 + a + a² + ... + aⁿ⁻¹) = 1 - aⁿ = 1 - 0 = 1\n\nLet b = 1 + a + a² + ... + aⁿ⁻¹.\n\nWe verify this is also a right inverse:\n(1 + a + a² + ... + aⁿ⁻¹)(1 - a)\n= 1 + a + a² + ... + aⁿ⁻¹ - a - a² - ... - aⁿ⁻¹ - aⁿ\n= 1 - aⁿ\n= 1\n\nSo (1 - a)b = b(1 - a) = 1.\n\nTherefore 1 - a is a unit with inverse b = Σᵢ₌₀ⁿ⁻¹ aⁱ.\n\n**Example:** In ℤ/8ℤ, a = 2 is nilpotent (2³ = 8 ≡ 0).\n1 - 2 = -1 ≡ 7 (mod 8).\nIndeed 7 is a unit: 7·7 = 49 ≡ 1 (mod 8)."
+        },
+        {
+          "id": "7.1.3",
+          "type": "exercise",
+          "title": "Exercise 7.1.3",
+          "statement": "Let R be a commutative ring. Prove that if a and b are nilpotent, then a + b is nilpotent.",
+          "solution": "**Proof:**\n\nLet aᵐ = 0 and bⁿ = 0.\n\nWe claim (a + b)^{m+n-1} = 0.\n\nBy the binomial theorem (valid since R is commutative):\n(a + b)^{m+n-1} = Σₖ₌₀^{m+n-1} C(m+n-1, k) aᵏ b^{m+n-1-k}\n\nFor each term:\n- If k ≥ m, then aᵏ = aᵐ · aᵏ⁻ᵐ = 0 · aᵏ⁻ᵐ = 0.\n- If k < m, then m + n - 1 - k ≥ m + n - 1 - (m-1) = n, so b^{m+n-1-k} = 0.\n\nEither way, each term is 0.\n\nTherefore (a + b)^{m+n-1} = 0.\n\n**Note:** Commutativity is essential! In a non-commutative ring, the binomial theorem doesn't hold, and the sum of two nilpotent elements need not be nilpotent."
+        }
+      ]
+    },
+    {
+      "sectionId": "7.2",
+      "sectionTitle": "Ideals and Quotient Rings",
+      "textbookSection": "§7.2-7.3",
+      "examples": [
+        {
+          "id": "ex-7.2.1",
+          "type": "example",
+          "title": "Example 7.2.1",
+          "statement": "Define ideals and prove that in a commutative ring R, (a) = Ra = {ra : r ∈ R} is an ideal.",
+          "solution": "**Definition of Ideal:**\n\nA subset I of a ring R is a **left ideal** if:\n1. I is a subgroup of (R, +)\n2. For all r ∈ R and a ∈ I: ra ∈ I\n\n**Right ideal:** ar ∈ I for all r ∈ R, a ∈ I.\n\n**Two-sided ideal:** Both left and right ideal.\n\nIn commutative rings, left = right = two-sided.\n\n**Proof that (a) = Ra is an ideal:**\n\n**Step 1: (a) is an additive subgroup.**\n\nClosure: ra + sa = (r + s)a ∈ (a). ✓\nIdentity: 0 = 0·a ∈ (a). ✓\nInverses: -(ra) = (-r)a ∈ (a). ✓\n\n**Step 2: Absorption property.**\n\nFor r ∈ R and sa ∈ (a):\nr(sa) = (rs)a ∈ (a). ✓\n\n(In a commutative ring, (sa)r = (sr)a ∈ (a) as well.)\n\n**Notation:**\n- (a) is called the **principal ideal** generated by a.\n- (a₁, a₂, ..., aₙ) = Ra₁ + Ra₂ + ... + Raₙ is the ideal generated by a₁, ..., aₙ."
+        },
+        {
+          "id": "ex-7.2.2",
+          "type": "example",
+          "title": "Example 7.2.2",
+          "statement": "Construct the quotient ring ℤ[x]/(x² + 1) and show it is isomorphic to ℂ.",
+          "solution": "**Construction:**\n\nLet I = (x² + 1) be the ideal generated by x² + 1 in ℤ[x].\n\nℤ[x]/I consists of cosets f(x) + I.\n\n**Key fact:** x² + 1 ≡ 0 (mod I), so x² ≡ -1 in the quotient.\n\n**Representatives:**\nEvery polynomial can be reduced modulo x² + 1.\nDivision algorithm: f(x) = (x² + 1)q(x) + r(x) where deg(r) < 2.\n\nSo r(x) = a + bx for some a, b ∈ ℤ.\n\nThus every coset has a unique representative of the form a + bx.\n\n**Ring structure:**\nℤ[x]/I = {a + bx̄ : a, b ∈ ℤ} where x̄ = x + I.\n\nAddition: (a + bx̄) + (c + dx̄) = (a+c) + (b+d)x̄\n\nMultiplication: (a + bx̄)(c + dx̄) = ac + (ad + bc)x̄ + bdx̄²\n= ac + (ad + bc)x̄ + bd(-1)\n= (ac - bd) + (ad + bc)x̄\n\n**Isomorphism with ℂ:**\n\nDefine φ: ℤ[x]/I → ℂ by φ(a + bx̄) = a + bi.\n\nThis extends to φ: ℚ[x]/(x² + 1) → ℂ, which is an isomorphism.\n\n(For ℤ[x]/(x² + 1), we get the Gaussian integers ℤ[i].)"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "7.2.1",
+          "type": "exercise",
+          "title": "Exercise 7.2.1",
+          "statement": "Let R be a commutative ring and I, J ideals of R. Prove that I + J = {a + b : a ∈ I, b ∈ J} is an ideal.",
+          "solution": "**Proof:**\n\n**Step 1: I + J is an additive subgroup.**\n\nClosure: (a₁ + b₁) + (a₂ + b₂) = (a₁ + a₂) + (b₁ + b₂) ∈ I + J.\n(Since a₁ + a₂ ∈ I and b₁ + b₂ ∈ J.)\n\nIdentity: 0 = 0 + 0 ∈ I + J.\n\nInverses: -(a + b) = (-a) + (-b) ∈ I + J.\n\n**Step 2: Absorption property.**\n\nFor r ∈ R and a + b ∈ I + J:\nr(a + b) = ra + rb ∈ I + J.\n\n(Since ra ∈ I and rb ∈ J.)\n\n**Therefore I + J is an ideal.**\n\n**Note:** I + J is the smallest ideal containing both I and J."
+        },
+        {
+          "id": "7.2.2",
+          "type": "exercise",
+          "title": "Exercise 7.2.2",
+          "statement": "Prove that an ideal I of a commutative ring R with unity equals R if and only if I contains a unit.",
+          "solution": "**Proof:**\n\n**(⟹) I = R implies I contains a unit.**\n\nIf I = R, then 1 ∈ I, and 1 is a unit.\n\n**(⟸) I contains a unit implies I = R.**\n\nLet u ∈ I be a unit. Then u⁻¹ exists in R.\n\nFor any r ∈ R:\nr = r · 1 = r · (u · u⁻¹) = (ru⁻¹) · u ∈ I\n\n(Since u ∈ I and I absorbs multiplication.)\n\nActually, more directly: 1 = u⁻¹ · u ∈ I.\n\nThen for any r ∈ R: r = r · 1 ∈ I.\n\nSo I = R.\n\n**Corollary:** A proper ideal contains no units.\n\n**Corollary:** In a field F, the only ideals are {0} and F.\n(Every non-zero element is a unit.)"
+        },
+        {
+          "id": "7.2.3",
+          "type": "exercise",
+          "title": "Exercise 7.2.3",
+          "statement": "State and prove the First Isomorphism Theorem for rings.",
+          "solution": "**First Isomorphism Theorem for Rings:**\n\nIf φ: R → S is a ring homomorphism, then:\n1. ker(φ) is an ideal of R\n2. R/ker(φ) ≅ φ(R)\n\n**Proof:**\n\n**Part 1: ker(φ) is an ideal.**\n\nker(φ) = {r ∈ R : φ(r) = 0}.\n\n*Additive subgroup:*\n- φ(0) = 0, so 0 ∈ ker(φ).\n- If φ(a) = φ(b) = 0, then φ(a + b) = φ(a) + φ(b) = 0.\n- If φ(a) = 0, then φ(-a) = -φ(a) = 0.\n\n*Absorption:*\nFor r ∈ R, a ∈ ker(φ):\nφ(ra) = φ(r)φ(a) = φ(r) · 0 = 0.\nSo ra ∈ ker(φ). Similarly ar ∈ ker(φ).\n\n**Part 2: R/ker(φ) ≅ φ(R).**\n\nDefine ψ: R/ker(φ) → φ(R) by ψ(r + ker(φ)) = φ(r).\n\n*Well-defined:* If r + ker(φ) = s + ker(φ), then r - s ∈ ker(φ).\nSo φ(r - s) = 0, meaning φ(r) = φ(s).\n\n*Homomorphism:*\nψ((r + I)(s + I)) = ψ(rs + I) = φ(rs) = φ(r)φ(s) = ψ(r + I)ψ(s + I).\nSimilarly for addition.\n\n*Injective:* If ψ(r + I) = 0, then φ(r) = 0, so r ∈ I = ker(φ).\n\n*Surjective:* ψ maps onto φ(R) by construction."
+        }
+      ]
+    },
+    {
+      "sectionId": "7.3",
+      "sectionTitle": "Prime and Maximal Ideals",
+      "textbookSection": "§7.4",
+      "examples": [
+        {
+          "id": "ex-7.3.1",
+          "type": "example",
+          "title": "Example 7.3.1",
+          "statement": "Define prime and maximal ideals and characterize them in terms of quotient rings.",
+          "solution": "**Definitions:**\n\nLet R be a commutative ring with unity and I ⊊ R a proper ideal.\n\n**Prime ideal:** I is **prime** if: ab ∈ I implies a ∈ I or b ∈ I.\n\n**Maximal ideal:** I is **maximal** if there is no ideal J with I ⊊ J ⊊ R.\n\n**Characterizations:**\n\n**Theorem 1:** I is prime ⟺ R/I is an integral domain.\n\n*Proof:*\nR/I is an integral domain ⟺ R/I has no zero divisors\n⟺ (a + I)(b + I) = 0 implies a + I = 0 or b + I = 0\n⟺ ab ∈ I implies a ∈ I or b ∈ I\n⟺ I is prime.\n\n**Theorem 2:** I is maximal ⟺ R/I is a field.\n\n*Proof:*\nIdeals of R/I correspond bijectively to ideals of R containing I.\nI is maximal ⟺ R/I has no proper non-trivial ideals ⟺ R/I is a field.\n\n**Corollary:** Every maximal ideal is prime.\n\n*Proof:* Every field is an integral domain."
+        },
+        {
+          "id": "ex-7.3.2",
+          "type": "example",
+          "title": "Example 7.3.2",
+          "statement": "Find all prime and maximal ideals of ℤ.",
+          "solution": "**Ideals of ℤ:**\n\nEvery ideal of ℤ has the form nℤ = (n) for some n ≥ 0.\n\n**Prime ideals:**\n\nnℤ is prime ⟺ ℤ/nℤ is an integral domain.\n\n- n = 0: ℤ/0ℤ = ℤ is an integral domain. ✓\n- n = 1: ℤ/ℤ = {0}, not an integral domain (or trivially so, but not proper).\n- n prime: ℤ/pℤ = ℤ_p is a field, hence an integral domain. ✓\n- n composite: If n = ab with 1 < a, b < n, then ā · b̄ = 0̄ in ℤ_n.\n  So ℤ_n has zero divisors. ✗\n\n**Prime ideals of ℤ:** (0) and (p) for prime p.\n\n**Maximal ideals:**\n\nnℤ is maximal ⟺ ℤ/nℤ is a field.\n\n- n = 0: ℤ is not a field. ✗\n- n prime: ℤ_p is a field. ✓\n- n composite: ℤ_n is not a field (has zero divisors). ✗\n\n**Maximal ideals of ℤ:** (p) for prime p.\n\n**Note:** (0) is prime but not maximal."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "7.3.1",
+          "type": "exercise",
+          "title": "Exercise 7.3.1",
+          "statement": "Prove that in a PID (Principal Ideal Domain), every non-zero prime ideal is maximal.",
+          "solution": "**Proof:**\n\nLet R be a PID and let P = (p) be a non-zero prime ideal.\n\nSince R is a PID, every ideal is principal.\n\nSuppose P ⊆ M ⊆ R where M = (m) is a proper ideal.\n\nSince (p) ⊆ (m), we have m | p.\n\nSo p = m · k for some k ∈ R.\n\nSince P is prime and p = mk ∈ P:\n- Either m ∈ P, or\n- k ∈ P.\n\n**Case 1: m ∈ P = (p).**\nThen p | m, so m = p · j for some j.\nThus p = mk = pjk, so jk = 1.\nThis means k is a unit, so (m) = (p) = P.\n\n**Case 2: k ∈ P = (p).**\nThen k = pℓ for some ℓ.\nSo p = m(pℓ) = pℓm, meaning ℓm = 1.\nThus m is a unit, so (m) = R.\n\nIn either case, M = P or M = R.\n\nTherefore P is maximal."
+        },
+        {
+          "id": "7.3.2",
+          "type": "exercise",
+          "title": "Exercise 7.3.2",
+          "statement": "Find all prime and maximal ideals of ℤ[x]/(x² - 1).",
+          "solution": "**Solution:**\n\n**Step 1: Factor x² - 1.**\nx² - 1 = (x - 1)(x + 1).\n\n**Step 2: Apply CRT.**\nSince gcd(x - 1, x + 1) = 1 in ℤ[x] (their difference is 2, and they share no common roots):\n\nActually, in ℤ[x], x - 1 and x + 1 are coprime modulo 2.\n\nℤ[x]/(x² - 1) ≅ ℤ[x]/(x - 1) × ℤ[x]/(x + 1) = ℤ × ℤ\n\nThe isomorphism sends f(x) + (x² - 1) ↦ (f(1), f(-1)).\n\n**Step 3: Find ideals of ℤ × ℤ.**\n\nIdeals of ℤ × ℤ are products nℤ × mℤ.\n\n**Step 4: Prime ideals.**\n\nnℤ × mℤ is prime ⟺ (ℤ × ℤ)/(nℤ × mℤ) ≅ ℤ_n × ℤ_m is an integral domain.\n\nℤ_n × ℤ_m is an integral domain ⟺ one factor is {0}.\n- If n = 0 and m = 1: Get ℤ × {0} ≅ ℤ. Prime ideals are (0) × ℤ and (p) × ℤ.\n- If n = 1 and m = 0: Get {0} × ℤ ≅ ℤ. Prime ideals are ℤ × (0) and ℤ × (p).\n\n**Prime ideals:** (x - 1), (x + 1), (p, x - 1), (p, x + 1) for primes p.\n\n**Maximal ideals:** (p, x - 1), (p, x + 1) for primes p.\n\n(These give quotients ℤ_p.)"
+        }
+      ]
+    }
+  ]
+}

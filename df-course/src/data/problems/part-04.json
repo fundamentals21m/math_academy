@@ -1,0 +1,176 @@
+{
+  "partId": 4,
+  "partTitle": "Group Actions",
+  "textbookChapter": "Chapter 4",
+  "sections": [
+    {
+      "sectionId": "4.1",
+      "sectionTitle": "Group Actions and Permutation Representations",
+      "textbookSection": "§4.1",
+      "examples": [
+        {
+          "id": "ex-4.1.1",
+          "type": "example",
+          "title": "Example 4.1.1",
+          "statement": "Let G be a group acting on itself by left multiplication. Show this defines a group action and describe the associated permutation representation.",
+          "solution": "**Step 1: Define the action.**\n\nFor g ∈ G and x ∈ G, define g · x = gx (left multiplication).\n\n**Step 2: Verify the group action axioms.**\n\nIdentity axiom: e · x = ex = x for all x ∈ G. ✓\n\nCompatibility axiom: For g, h ∈ G and x ∈ G:\ng · (h · x) = g · (hx) = g(hx) = (gh)x = (gh) · x ✓\n\n**Step 3: Describe the permutation representation.**\n\nThe permutation representation φ: G → S_G is defined by:\nφ(g) = σ_g where σ_g(x) = gx.\n\nEach σ_g is a bijection G → G:\n- Injective: If gx = gy, then x = y (by left cancellation).\n- Surjective: For any y ∈ G, y = g(g⁻¹y), so y = σ_g(g⁻¹y).\n\n**Step 4: Key property (Cayley's Theorem).**\n\nφ is injective: If φ(g) = φ(h), then gx = hx for all x.\nTaking x = e: g = h.\n\nTherefore G ≅ φ(G) ≤ S_G, proving every group embeds in a symmetric group."
+        },
+        {
+          "id": "ex-4.1.2",
+          "type": "example",
+          "title": "Example 4.1.2",
+          "statement": "Let G act on a set A. Define the orbit of a ∈ A and the stabilizer of a. Prove the Orbit-Stabilizer Theorem.",
+          "solution": "**Definitions:**\n\nOrbit of a: O_a = G · a = {g · a : g ∈ G}\n\nStabilizer of a: G_a = Stab_G(a) = {g ∈ G : g · a = a}\n\n**Orbit-Stabilizer Theorem:**\n|G| = |O_a| · |G_a| (for finite groups)\n\nMore precisely: |O_a| = [G : G_a].\n\n**Proof:**\n\nDefine f: G/G_a → O_a by f(gG_a) = g · a.\n\n**Well-defined:** If gG_a = hG_a, then g⁻¹h ∈ G_a.\nSo (g⁻¹h) · a = a, meaning h · a = g · a.\n\n**Injective:** If g · a = h · a, then h⁻¹g · a = a.\nSo h⁻¹g ∈ G_a, meaning gG_a = hG_a.\n\n**Surjective:** Any element of O_a is g · a = f(gG_a) for some g.\n\nTherefore f is a bijection, so |O_a| = |G/G_a| = [G : G_a].\n\nBy Lagrange's theorem: |G| = [G : G_a] · |G_a| = |O_a| · |G_a|."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4.1.1",
+          "type": "exercise",
+          "title": "Exercise 4.1.1",
+          "statement": "Let G act on A. Prove that the orbits of this action partition A.",
+          "solution": "**Proof:**\n\nDefine an equivalence relation on A: a ~ b if and only if b ∈ O_a (i.e., b = g · a for some g ∈ G).\n\n**Reflexive:** a = e · a, so a ∈ O_a, meaning a ~ a.\n\n**Symmetric:** If a ~ b, then b = g · a for some g.\nThen a = g⁻¹ · b (since g⁻¹ · (g · a) = (g⁻¹g) · a = a).\nSo a ∈ O_b, meaning b ~ a.\n\n**Transitive:** If a ~ b and b ~ c, then:\nb = g · a for some g\nc = h · b for some h\n\nThen c = h · (g · a) = (hg) · a.\nSo c ∈ O_a, meaning a ~ c.\n\nSince ~ is an equivalence relation, its equivalence classes partition A.\n\nThe equivalence class of a is {b ∈ A : b ~ a} = {g · a : g ∈ G} = O_a.\n\nTherefore the orbits partition A."
+        },
+        {
+          "id": "4.1.2",
+          "type": "exercise",
+          "title": "Exercise 4.1.2",
+          "statement": "Let G act on A and let a ∈ A. Prove that G_a (the stabilizer of a) is a subgroup of G.",
+          "solution": "**Proof:**\n\n**Identity:** e · a = a (by the identity axiom for group actions).\nTherefore e ∈ G_a.\n\n**Closure:** Let g, h ∈ G_a. Then g · a = a and h · a = a.\n(gh) · a = g · (h · a) = g · a = a.\nTherefore gh ∈ G_a.\n\n**Inverses:** Let g ∈ G_a. Then g · a = a.\nApply g⁻¹ to both sides:\ng⁻¹ · (g · a) = g⁻¹ · a\n(g⁻¹g) · a = g⁻¹ · a\ne · a = g⁻¹ · a\na = g⁻¹ · a\n\nTherefore g⁻¹ ∈ G_a.\n\nSince G_a satisfies the subgroup criteria, G_a ≤ G."
+        },
+        {
+          "id": "4.1.3",
+          "type": "exercise",
+          "title": "Exercise 4.1.3",
+          "statement": "Let G act on A. Prove that for any g ∈ G and a ∈ A: G_{g·a} = gG_a g⁻¹.",
+          "solution": "**Proof:**\n\nWe show both inclusions.\n\n**G_{g·a} ⊆ gG_a g⁻¹:**\n\nLet h ∈ G_{g·a}. Then h · (g · a) = g · a.\n\nWe want to show h = gkg⁻¹ for some k ∈ G_a.\n\nLet k = g⁻¹hg. We verify k ∈ G_a:\nk · a = (g⁻¹hg) · a = g⁻¹ · (h · (g · a)) = g⁻¹ · (g · a) = a.\n\nSo k ∈ G_a, and h = gkg⁻¹ ∈ gG_a g⁻¹.\n\n**gG_a g⁻¹ ⊆ G_{g·a}:**\n\nLet h = gkg⁻¹ where k ∈ G_a.\n\nh · (g · a) = (gkg⁻¹) · (g · a)\n= g · (k · (g⁻¹ · (g · a)))\n= g · (k · a)\n= g · a  (since k ∈ G_a)\n\nSo h ∈ G_{g·a}.\n\n**Conclusion:**\nG_{g·a} = gG_a g⁻¹.\n\nThis shows that stabilizers of elements in the same orbit are conjugate subgroups."
+        }
+      ]
+    },
+    {
+      "sectionId": "4.2",
+      "sectionTitle": "Groups Acting on Themselves by Conjugation",
+      "textbookSection": "§4.2",
+      "examples": [
+        {
+          "id": "ex-4.2.1",
+          "type": "example",
+          "title": "Example 4.2.1",
+          "statement": "Describe the conjugacy classes of S_3.",
+          "solution": "**Step 1: Elements of S_3.**\n\nS_3 = {1, (1 2), (1 3), (2 3), (1 2 3), (1 3 2)}\n|S_3| = 6\n\n**Step 2: Conjugacy in S_n.**\n\nIn S_n, two permutations are conjugate if and only if they have the same cycle type.\n\n**Step 3: List cycle types.**\n\n- Identity (1): {1}\n- Transpositions (cycle type 2): {(1 2), (1 3), (2 3)}\n- 3-cycles (cycle type 3): {(1 2 3), (1 3 2)}\n\n**Step 4: Conjugacy classes.**\n\nClass 1: {1} (size 1)\nClass 2: {(1 2), (1 3), (2 3)} (size 3)\nClass 3: {(1 2 3), (1 3 2)} (size 2)\n\n**Verification using class equation:**\n|G| = |Z(G)| + Σ[G : C_G(g_i)]\n\nFor S_3: Z(S_3) = {1} (non-abelian group has trivial center for order ≤ 6, actually S_3 has center {1})\n\n6 = 1 + 3 + 2 ✓"
+        },
+        {
+          "id": "ex-4.2.2",
+          "type": "example",
+          "title": "Example 4.2.2",
+          "statement": "Prove the Class Equation: |G| = |Z(G)| + Σ[G : C_G(g_i)] where the sum is over representatives of conjugacy classes of size > 1.",
+          "solution": "**Step 1: Set up the conjugation action.**\n\nG acts on itself by conjugation: g · x = gxg⁻¹.\n\nThe orbits are the conjugacy classes.\nThe stabilizer of x is C_G(x), the centralizer of x.\n\n**Step 2: Partition by orbits.**\n\nBy Orbit-Stabilizer: |conjugacy class of x| = [G : C_G(x)].\n\nSince orbits partition G:\n|G| = Σ (sizes of conjugacy classes)\n\n**Step 3: Identify the center.**\n\nThe conjugacy class of x has size 1 ⟺ gxg⁻¹ = x for all g ∈ G ⟺ x ∈ Z(G).\n\nSo elements of Z(G) form singleton conjugacy classes.\n\n**Step 4: Write the class equation.**\n\nLet g₁, g₂, ..., g_r be representatives of conjugacy classes with size > 1.\n\n|G| = (number of size-1 classes) + Σᵢ (size of class containing gᵢ)\n= |Z(G)| + Σᵢ [G : C_G(gᵢ)]\n\nNote: Each [G : C_G(gᵢ)] > 1 and divides |G|."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4.2.1",
+          "type": "exercise",
+          "title": "Exercise 4.2.1",
+          "statement": "Use the Class Equation to prove that if |G| = p^n for a prime p, then Z(G) ≠ {e}.",
+          "solution": "**Proof:**\n\nBy the class equation:\n|G| = |Z(G)| + Σ[G : C_G(gᵢ)]\n\nwhere the sum is over representatives of non-central conjugacy classes.\n\n**Key observations:**\n\n1. |G| = p^n is divisible by p.\n\n2. For each gᵢ not in Z(G):\n   - C_G(gᵢ) is a proper subgroup (since gᵢ ∉ Z(G))\n   - [G : C_G(gᵢ)] > 1\n   - [G : C_G(gᵢ)] divides |G| = p^n\n   - Therefore [G : C_G(gᵢ)] is a power of p, and since it's > 1, it's ≥ p.\n   - Thus p divides [G : C_G(gᵢ)].\n\n3. Rearranging:\n   |Z(G)| = |G| - Σ[G : C_G(gᵢ)] = p^n - Σ[G : C_G(gᵢ)]\n\n4. Since p divides |G| and p divides each [G : C_G(gᵢ)]:\n   p divides |Z(G)|.\n\n5. Since |Z(G)| ≥ 1 (the identity is always central) and p divides |Z(G)|:\n   |Z(G)| ≥ p > 1.\n\nTherefore Z(G) ≠ {e}."
+        },
+        {
+          "id": "4.2.2",
+          "type": "exercise",
+          "title": "Exercise 4.2.2",
+          "statement": "Prove that every group of order p² (p prime) is abelian.",
+          "solution": "**Proof:**\n\nLet |G| = p².\n\nBy the previous exercise, Z(G) ≠ {e}.\n\nSince Z(G) ≤ G, by Lagrange's theorem |Z(G)| divides p² = |G|.\n\nPossible values: |Z(G)| ∈ {1, p, p²}.\n\nSince Z(G) ≠ {e}, we have |Z(G)| ∈ {p, p²}.\n\n**Case 1: |Z(G)| = p².**\nThen Z(G) = G, so G is abelian. Done.\n\n**Case 2: |Z(G)| = p.**\nThen |G/Z(G)| = p²/p = p.\n\nGroups of prime order are cyclic, so G/Z(G) is cyclic.\n\nBut we proved earlier: If G/Z(G) is cyclic, then G is abelian.\n\nThis means Z(G) = G, contradicting |Z(G)| = p < p² = |G|.\n\n**Conclusion:**\nCase 2 is impossible, so |Z(G)| = p², meaning G = Z(G) and G is abelian.\n\n**Corollary:** G ≅ ℤ_{p²} or G ≅ ℤ_p × ℤ_p."
+        },
+        {
+          "id": "4.2.3",
+          "type": "exercise",
+          "title": "Exercise 4.2.3",
+          "statement": "Find the number of conjugacy classes in S_5.",
+          "solution": "**Solution:**\n\nConjugacy classes in S_n correspond to cycle types (partitions of n).\n\n**Partitions of 5:**\n\n1. 5 = 5 (one 5-cycle)\n2. 5 = 4 + 1 (one 4-cycle, one fixed point)\n3. 5 = 3 + 2 (one 3-cycle and one 2-cycle)\n4. 5 = 3 + 1 + 1 (one 3-cycle, two fixed points)\n5. 5 = 2 + 2 + 1 (two disjoint 2-cycles, one fixed point)\n6. 5 = 2 + 1 + 1 + 1 (one transposition, three fixed points)\n7. 5 = 1 + 1 + 1 + 1 + 1 (identity)\n\n**Total: 7 conjugacy classes**\n\n**Size of each class** (for reference):\n- 5-cycles: 5!/5 = 24\n- (4)(1)-type: 5!/(4·1) = 30\n- (3)(2)-type: 5!/(3·2) = 20\n- (3)(1)(1)-type: 5!/(3·2!) = 20\n- (2)(2)(1)-type: 5!/(2·2·2!) = 15\n- (2)(1)(1)(1)-type: 5!/(2·3!) = 10\n- identity: 1\n\n**Check:** 24 + 30 + 20 + 20 + 15 + 10 + 1 = 120 = |S_5| ✓"
+        }
+      ]
+    },
+    {
+      "sectionId": "4.3",
+      "sectionTitle": "Automorphisms",
+      "textbookSection": "§4.3",
+      "examples": [
+        {
+          "id": "ex-4.3.1",
+          "type": "example",
+          "title": "Example 4.3.1",
+          "statement": "Prove that Aut(ℤ_n) ≅ (ℤ/nℤ)× and find |Aut(ℤ_n)|.",
+          "solution": "**Step 1: Structure of Aut(ℤ_n).**\n\nAny automorphism φ: ℤ_n → ℤ_n is determined by φ(1), since ℤ_n = ⟨1⟩.\n\nFor φ to be an automorphism, φ(1) must generate ℤ_n.\n\nSo φ(1) ∈ {k ∈ ℤ_n : gcd(k, n) = 1} = (ℤ/nℤ)×.\n\n**Step 2: Define the isomorphism.**\n\nDefine Ψ: Aut(ℤ_n) → (ℤ/nℤ)× by Ψ(φ) = φ(1).\n\n**Ψ is well-defined:** As shown, φ(1) ∈ (ℤ/nℤ)×.\n\n**Ψ is a homomorphism:** \nLet φ, ψ ∈ Aut(ℤ_n).\nΨ(φ ∘ ψ) = (φ ∘ ψ)(1) = φ(ψ(1)) = φ(1) · ψ(1) (mod n)\n\nWait, let's be careful. If ψ(1) = a and φ(1) = b, then:\nφ(ψ(1)) = φ(a) = a · φ(1) = ab.\nSo Ψ(φ ∘ ψ) = ab = Ψ(φ) · Ψ(ψ). ✓\n\n**Ψ is injective:** If Ψ(φ) = Ψ(ψ), then φ(1) = ψ(1).\nSince automorphisms are determined by the image of 1, φ = ψ.\n\n**Ψ is surjective:** For any k ∈ (ℤ/nℤ)×, define φ_k(m) = km.\nThen φ_k is an automorphism with φ_k(1) = k.\n\n**Step 3: Conclusion.**\n\nAut(ℤ_n) ≅ (ℤ/nℤ)×.\n\n|Aut(ℤ_n)| = φ(n) (Euler's totient function)."
+        },
+        {
+          "id": "ex-4.3.2",
+          "type": "example",
+          "title": "Example 4.3.2",
+          "statement": "Prove that Inn(G) ◁ Aut(G) and Aut(G)/Inn(G) ≅ Out(G), the outer automorphism group.",
+          "solution": "**Step 1: Define inner automorphisms.**\n\nFor g ∈ G, define φ_g: G → G by φ_g(x) = gxg⁻¹.\n\nφ_g is an automorphism (conjugation).\n\nInn(G) = {φ_g : g ∈ G} ≤ Aut(G).\n\n**Step 2: Prove Inn(G) ◁ Aut(G).**\n\nLet σ ∈ Aut(G) and φ_g ∈ Inn(G).\n\nWe compute σ ∘ φ_g ∘ σ⁻¹:\n\n(σ ∘ φ_g ∘ σ⁻¹)(x) = σ(φ_g(σ⁻¹(x)))\n= σ(g · σ⁻¹(x) · g⁻¹)\n= σ(g) · x · σ(g)⁻¹\n= φ_{σ(g)}(x)\n\nSo σ ∘ φ_g ∘ σ⁻¹ = φ_{σ(g)} ∈ Inn(G).\n\nTherefore Inn(G) ◁ Aut(G).\n\n**Step 3: Define Out(G).**\n\nThe outer automorphism group is defined as:\nOut(G) = Aut(G)/Inn(G)\n\nElements of Out(G) are cosets σ · Inn(G).\n\nTwo automorphisms represent the same outer automorphism iff they differ by an inner automorphism.\n\n**Step 4: Connection to G/Z(G).**\n\nThe map G → Inn(G) given by g ↦ φ_g is a surjective homomorphism.\nIts kernel is Z(G) (elements that commute with everything).\n\nBy the First Isomorphism Theorem:\nG/Z(G) ≅ Inn(G)"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4.3.1",
+          "type": "exercise",
+          "title": "Exercise 4.3.1",
+          "statement": "Compute Aut(ℤ_2 × ℤ_2).",
+          "solution": "**Step 1: Identify the group structure.**\n\nℤ_2 × ℤ_2 = {(0,0), (1,0), (0,1), (1,1)} is the Klein four-group V₄.\n\nEvery non-identity element has order 2.\n\n**Step 2: Determine automorphisms.**\n\nAn automorphism φ must permute the three elements of order 2:\n{(1,0), (0,1), (1,1)}\n\nφ is determined by φ((1,0)) and φ((0,1)), which must be:\n- Distinct non-identity elements\n- Generate the group (always true since any two distinct non-identity elements generate V₄)\n\n**Step 3: Count possibilities.**\n\nφ((1,0)) can be any of the 3 non-identity elements.\nφ((0,1)) can be any of the remaining 2 non-identity elements.\n\n|Aut(V₄)| = 3 × 2 = 6.\n\n**Step 4: Identify the group.**\n\nAut(V₄) acts on the set {(1,0), (0,1), (1,1)} of 3 elements.\n\nThis gives a homomorphism Aut(V₄) → S_3.\n\nSince |Aut(V₄)| = 6 = |S_3| and the homomorphism is injective (an automorphism is determined by its action on generators):\n\nAut(ℤ_2 × ℤ_2) ≅ S_3."
+        },
+        {
+          "id": "4.3.2",
+          "type": "exercise",
+          "title": "Exercise 4.3.2",
+          "statement": "Let G be a group. Prove that if Aut(G) is trivial, then |G| ≤ 2.",
+          "solution": "**Proof:**\n\nAssume Aut(G) = {id}.\n\n**Step 1: Inn(G) is trivial.**\n\nSince Inn(G) ≤ Aut(G) = {id}, we have Inn(G) = {id}.\n\nThis means φ_g = id for all g ∈ G.\n\nSo gxg⁻¹ = x for all g, x ∈ G.\n\nTherefore G is abelian.\n\n**Step 2: Every element has order ≤ 2.**\n\nFor abelian G, the inversion map ι: G → G defined by ι(x) = x⁻¹ is a homomorphism:\nι(xy) = (xy)⁻¹ = y⁻¹x⁻¹ = x⁻¹y⁻¹ = ι(x)ι(y) (using commutativity).\n\nAlso ι is bijective (ι⁻¹ = ι), so ι ∈ Aut(G).\n\nSince Aut(G) = {id}, we have ι = id.\n\nSo x⁻¹ = x for all x ∈ G, meaning x² = e.\n\n**Step 3: Conclude |G| ≤ 2.**\n\nG is an abelian group where every element has order 1 or 2.\n\nSuch a group is a vector space over ℤ_2.\n\nIf G has dimension ≥ 2 over ℤ_2, then G contains ℤ_2 × ℤ_2 as a subgroup.\n\nBut Aut(ℤ_2 × ℤ_2) ≅ S_3 ≠ {id}, and we could extend automorphisms.\n\nMore directly: if |G| ≥ 4, pick two independent elements a, b. The map swapping a ↔ b extends to a non-trivial automorphism.\n\nTherefore |G| ≤ 2. (G is either {e} or ℤ_2.)"
+        }
+      ]
+    },
+    {
+      "sectionId": "4.4",
+      "sectionTitle": "Sylow Theorems",
+      "textbookSection": "§4.4-4.5",
+      "examples": [
+        {
+          "id": "ex-4.4.1",
+          "type": "example",
+          "title": "Sylow Theorems",
+          "statement": "State the Sylow Theorems.",
+          "solution": "**Sylow Theorems**\n\nLet G be a finite group with |G| = p^n m where p is prime and p ∤ m.\n\n**First Sylow Theorem (Existence):**\nG has a subgroup of order p^k for each k = 0, 1, ..., n.\nIn particular, G has a Sylow p-subgroup (subgroup of order p^n).\n\n**Second Sylow Theorem (Conjugacy):**\nAll Sylow p-subgroups of G are conjugate.\nThat is, if P and Q are Sylow p-subgroups, then Q = gPg⁻¹ for some g ∈ G.\n\n**Third Sylow Theorem (Counting):**\nLet n_p denote the number of Sylow p-subgroups. Then:\n1. n_p ≡ 1 (mod p)\n2. n_p divides m = |G|/p^n\n3. n_p = [G : N_G(P)] for any Sylow p-subgroup P\n\n**Corollary:** If n_p = 1, then the unique Sylow p-subgroup is normal in G."
+        },
+        {
+          "id": "ex-4.4.2",
+          "type": "example",
+          "title": "Example 4.4.2",
+          "statement": "Prove there is no simple group of order 12.",
+          "solution": "**Proof:**\n\n|G| = 12 = 2² · 3.\n\n**Step 1: Count Sylow subgroups.**\n\nFor Sylow 3-subgroups:\n- n_3 ≡ 1 (mod 3)\n- n_3 divides 4\n- So n_3 ∈ {1, 4}\n\nFor Sylow 2-subgroups:\n- n_2 ≡ 1 (mod 2)\n- n_2 divides 3\n- So n_2 ∈ {1, 3}\n\n**Step 2: Assume G is simple.**\n\nIf G is simple, then no proper non-trivial subgroup is normal.\n\nSo n_3 ≠ 1 and n_2 ≠ 1.\n\nTherefore n_3 = 4 and n_2 = 3.\n\n**Step 3: Count elements.**\n\n4 Sylow 3-subgroups, each of order 3, pairwise intersecting in {e}:\n4 × (3-1) = 8 elements of order 3.\n\n3 Sylow 2-subgroups, each of order 4.\n\nTotal elements so far: at least 8 + 1 = 9 (counting identity once).\n\nRemaining spots: 12 - 9 = 3.\n\n**Step 4: Analyze Sylow 2-subgroups.**\n\nIf the 3 Sylow 2-subgroups had trivial pairwise intersection, they'd contribute:\n3 × 3 = 9 non-identity elements.\n\nBut we only have 3 spots for elements not of order 3.\n\nSo Sylow 2-subgroups must have non-trivial intersection.\n\nLet P, Q be distinct Sylow 2-subgroups with P ∩ Q ≠ {e}.\n|P ∩ Q| divides 4 and is > 1, so |P ∩ Q| = 2.\n\nP ∩ Q is a subgroup of order 2, so it's ⟨x⟩ for some x of order 2.\n\nN_G(P ∩ Q) contains both P and Q, so |N_G(P ∩ Q)| ≥ |PQ| ≥ 6.\n\nSince |N_G(P ∩ Q)| divides 12 and is ≥ 6: |N_G(P ∩ Q)| ∈ {6, 12}.\n\nIf |N_G(P ∩ Q)| = 12, then P ∩ Q ◁ G, contradicting simplicity.\n\n**Alternative conclusion:** At least one of n_2 or n_3 equals 1, so G has a normal Sylow subgroup and is not simple."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4.4.1",
+          "type": "exercise",
+          "title": "Exercise 4.4.1",
+          "statement": "Classify groups of order 15.",
+          "solution": "**Solution:**\n\n|G| = 15 = 3 · 5.\n\n**Step 1: Apply Sylow theorems.**\n\nFor Sylow 5-subgroups:\n- n_5 ≡ 1 (mod 5)\n- n_5 divides 3\n- n_5 ∈ {1} (since 6 doesn't divide 3)\n- So n_5 = 1.\n\nFor Sylow 3-subgroups:\n- n_3 ≡ 1 (mod 3)\n- n_3 divides 5\n- n_3 ∈ {1} (since 4 doesn't divide 5)\n- So n_3 = 1.\n\n**Step 2: Structure of G.**\n\nLet P be the unique Sylow 5-subgroup (|P| = 5).\nLet Q be the unique Sylow 3-subgroup (|Q| = 3).\n\nBoth P and Q are normal (unique Sylow subgroups).\n\nP ∩ Q = {e} (coprime orders).\n\n|PQ| = |P||Q|/|P ∩ Q| = 15 = |G|.\n\nSo G = PQ with P ◁ G, Q ◁ G, P ∩ Q = {e}.\n\n**Step 3: Apply direct product theorem.**\n\nSince P, Q ◁ G, P ∩ Q = {e}, and PQ = G:\n\nG ≅ P × Q ≅ ℤ_5 × ℤ_3 ≅ ℤ_15.\n\n**Conclusion:** There is exactly one group of order 15 (up to isomorphism): the cyclic group ℤ_15."
+        },
+        {
+          "id": "4.4.2",
+          "type": "exercise",
+          "title": "Exercise 4.4.2",
+          "statement": "Prove that every group of order 35 is cyclic.",
+          "solution": "**Proof:**\n\n|G| = 35 = 5 · 7.\n\n**Step 1: Sylow analysis.**\n\nFor Sylow 7-subgroups:\n- n_7 ≡ 1 (mod 7) and n_7 | 5\n- n_7 ∈ {1, 8, 15, ...} ∩ {1, 5} = {1}\n- So n_7 = 1.\n\nFor Sylow 5-subgroups:\n- n_5 ≡ 1 (mod 5) and n_5 | 7\n- n_5 ∈ {1, 6, 11, ...} ∩ {1, 7} = {1}\n- So n_5 = 1.\n\n**Step 2: Direct product structure.**\n\nLet P = unique Sylow 7-subgroup ≅ ℤ_7.\nLet Q = unique Sylow 5-subgroup ≅ ℤ_5.\n\nBoth are normal, P ∩ Q = {e}, and |PQ| = 35 = |G|.\n\nBy the direct product theorem:\nG ≅ P × Q ≅ ℤ_7 × ℤ_5.\n\n**Step 3: Conclude.**\n\nSince gcd(7, 5) = 1:\nℤ_7 × ℤ_5 ≅ ℤ_35.\n\nTherefore G is cyclic.\n\n**Generalization:** Any group of order pq where p < q are primes and p ∤ (q-1) is cyclic."
+        },
+        {
+          "id": "4.4.3",
+          "type": "exercise",
+          "title": "Exercise 4.4.3",
+          "statement": "Let G be a finite group and H ≤ G a subgroup. Prove that if gcd(|H|, [G:H]!) = 1, then H ◁ G.",
+          "solution": "**Proof:**\n\nLet n = [G : H] and consider the action of G on G/H (left cosets) by left multiplication.\n\nThis gives a homomorphism φ: G → S_n (the permutation representation).\n\n**Step 1: Analyze the kernel.**\n\nK = ker(φ) is the largest normal subgroup of G contained in H.\n\n(K is the intersection of all conjugates of H.)\n\n**Step 2: Apply homomorphism theorem.**\n\nG/K ≅ φ(G) ≤ S_n.\n\nSo |G/K| divides |S_n| = n!.\n\nEquivalently, [G : K] divides [G : H]! = n!.\n\n**Step 3: Factor [G : K].**\n\n[G : K] = [G : H][H : K] = n · [H : K].\n\nSo [H : K] divides n!/n = (n-1)!.\n\nAlso [H : K] divides |H|.\n\n**Step 4: Use the gcd condition.**\n\nSince gcd(|H|, n!) = 1, and [H : K] divides both |H| and (n-1)! (which divides n!):\n\n[H : K] = 1.\n\nTherefore K = H.\n\n**Step 5: Conclude.**\n\nSince K ◁ G and K = H:\n\nH ◁ G."
+        }
+      ]
+    }
+  ]
+}

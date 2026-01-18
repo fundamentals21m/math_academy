@@ -1,0 +1,44 @@
+{
+  "partId": 13,
+  "partTitle": "Field Theory",
+  "textbookChapter": "Chapter 13",
+  "sections": [
+    {
+      "sectionId": "13.1",
+      "sectionTitle": "Basic Theory of Field Extensions",
+      "textbookSection": "§13.1-13.2",
+      "examples": [
+        {
+          "id": "ex-13.1.1",
+          "type": "example",
+          "title": "Example 13.1.1",
+          "statement": "Define algebraic and transcendental elements. Show that √2 is algebraic over ℚ.",
+          "solution": "**Definitions:**\n\nLet K/F be a field extension.\n\nAn element α ∈ K is **algebraic over F** if there exists a non-zero polynomial p(x) ∈ F[x] such that p(α) = 0.\n\nAn element α ∈ K is **transcendental over F** if it is not algebraic over F.\n\n**Example: √2 is algebraic over ℚ.**\n\nConsider p(x) = x² - 2 ∈ ℚ[x].\n\np(√2) = (√2)² - 2 = 2 - 2 = 0.\n\nSince p(x) is a non-zero polynomial and p(√2) = 0, √2 is algebraic over ℚ.\n\n**Minimal polynomial:**\n\nThe **minimal polynomial** of √2 over ℚ is x² - 2:\n- It's monic\n- It's irreducible over ℚ (by Eisenstein with p = 2, or rational root test)\n- It annihilates √2\n\nThe degree [ℚ(√2) : ℚ] = deg(min poly) = 2."
+        },
+        {
+          "id": "ex-13.1.2",
+          "type": "example",
+          "title": "Example 13.1.2",
+          "statement": "Prove the Tower Law: If L/K/F are field extensions, then [L:F] = [L:K][K:F].",
+          "solution": "**Tower Law:**\n\nIf L/K and K/F are field extensions (possibly infinite), then:\n[L : F] = [L : K] · [K : F]\n\n(where ∞ · n = n · ∞ = ∞ · ∞ = ∞)\n\n**Proof (finite case):**\n\nLet {α₁, ..., αₘ} be a basis for K over F.\nLet {β₁, ..., βₙ} be a basis for L over K.\n\n**Claim:** {αᵢβⱼ : 1 ≤ i ≤ m, 1 ≤ j ≤ n} is a basis for L over F.\n\n**Spanning:**\n\nAny λ ∈ L can be written as λ = Σⱼ kⱼβⱼ with kⱼ ∈ K.\n\nEach kⱼ = Σᵢ fᵢⱼαᵢ with fᵢⱼ ∈ F.\n\nSo λ = Σⱼ (Σᵢ fᵢⱼαᵢ)βⱼ = Σᵢⱼ fᵢⱼ(αᵢβⱼ).\n\n**Linear independence:**\n\nSuppose Σᵢⱼ fᵢⱼ(αᵢβⱼ) = 0 with fᵢⱼ ∈ F.\n\nRewrite as Σⱼ (Σᵢ fᵢⱼαᵢ)βⱼ = 0.\n\nSince {βⱼ} are independent over K, each Σᵢ fᵢⱼαᵢ = 0.\n\nSince {αᵢ} are independent over F, each fᵢⱼ = 0.\n\nTherefore [L : F] = mn = [L : K][K : F]."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "13.1.1",
+          "type": "exercise",
+          "title": "Exercise 13.1.1",
+          "statement": "Find [ℚ(√2, √3) : ℚ] and give a basis.",
+          "solution": "**Solution:**\n\n**Step 1: Build the tower.**\n\nℚ ⊂ ℚ(√2) ⊂ ℚ(√2, √3)\n\n[ℚ(√2) : ℚ] = 2 (minimal polynomial x² - 2).\n\n**Step 2: Find [ℚ(√2, √3) : ℚ(√2)].**\n\nConsider x² - 3 over ℚ(√2).\n\nIf √3 ∈ ℚ(√2), then √3 = a + b√2 for some a, b ∈ ℚ.\n\nSquaring: 3 = a² + 2b² + 2ab√2.\n\nSince √2 ∉ ℚ: ab = 0 and 3 = a² + 2b².\n\n- If b = 0: a² = 3, no rational solution.\n- If a = 0: 2b² = 3, no rational solution.\n\nSo √3 ∉ ℚ(√2), meaning x² - 3 is irreducible over ℚ(√2).\n\n[ℚ(√2, √3) : ℚ(√2)] = 2.\n\n**Step 3: Apply Tower Law.**\n\n[ℚ(√2, √3) : ℚ] = [ℚ(√2, √3) : ℚ(√2)] · [ℚ(√2) : ℚ] = 2 · 2 = **4**.\n\n**Basis:** {1, √2, √3, √6}."
+        },
+        {
+          "id": "13.1.2",
+          "type": "exercise",
+          "title": "Exercise 13.1.2",
+          "statement": "Prove that the set of algebraic numbers over ℚ forms a field.",
+          "solution": "**Proof:**\n\nLet A = {α ∈ ℂ : α is algebraic over ℚ}.\n\n**Claim: A is a field (the algebraic closure of ℚ in ℂ).**\n\nLet α, β ∈ A. We show α + β, αβ, α⁻¹ (if α ≠ 0) are in A.\n\n**Key fact:** If α is algebraic over ℚ, then [ℚ(α) : ℚ] < ∞.\n\n**α + β is algebraic:**\n\nConsider ℚ(α, β).\n\nBy Tower Law:\n[ℚ(α, β) : ℚ] = [ℚ(α, β) : ℚ(α)] · [ℚ(α) : ℚ]\n≤ [ℚ(β) : ℚ] · [ℚ(α) : ℚ] < ∞.\n\nSince α + β ∈ ℚ(α, β), we have:\n[ℚ(α + β) : ℚ] ≤ [ℚ(α, β) : ℚ] < ∞.\n\nA finite extension is algebraic, so α + β is algebraic.\n\n**αβ is algebraic:** Same argument; αβ ∈ ℚ(α, β).\n\n**α⁻¹ is algebraic:** α⁻¹ ∈ ℚ(α), which has finite degree over ℚ.\n\nTherefore A is a field."
+        }
+      ]
+    }
+  ]
+}

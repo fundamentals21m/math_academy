@@ -1,0 +1,37 @@
+{
+  "partId": 14,
+  "partTitle": "Galois Theory",
+  "textbookChapter": "Chapter 14",
+  "sections": [
+    {
+      "sectionId": "14.1",
+      "sectionTitle": "The Fundamental Theorem of Galois Theory",
+      "textbookSection": "§14.1-14.2",
+      "examples": [
+        {
+          "id": "ex-14.1.1",
+          "type": "example",
+          "title": "Fundamental Theorem",
+          "statement": "State the Fundamental Theorem of Galois Theory.",
+          "solution": "**Setup:**\n\nLet K/F be a finite Galois extension with Galois group G = Gal(K/F).\n\n**Fundamental Theorem:**\n\nThere is an inclusion-reversing bijection:\n\n{Intermediate fields F ⊆ E ⊆ K} ↔ {Subgroups H ⊆ G}\n\ngiven by:\n- E ↦ Gal(K/E) = {σ ∈ G : σ(e) = e for all e ∈ E}\n- H ↦ K^H = {α ∈ K : σ(α) = α for all σ ∈ H} (fixed field)\n\n**Properties:**\n\n1. [K : E] = |Gal(K/E)| and [E : F] = [G : Gal(K/E)].\n\n2. E/F is normal ⟺ Gal(K/E) ◁ G.\n   In this case, Gal(E/F) ≅ G/Gal(K/E).\n\n3. E/F is separable ⟺ always (since K/F is Galois).\n\n4. E/F is Galois ⟺ Gal(K/E) ◁ G."
+        },
+        {
+          "id": "ex-14.1.2",
+          "type": "example",
+          "title": "Example 14.1.2",
+          "statement": "Find the Galois group of x⁴ - 2 over ℚ and describe the subgroup lattice.",
+          "solution": "**Step 1: Find the splitting field.**\n\nRoots of x⁴ - 2: ⁴√2, ⁴√2·i, ⁴√2·(-1), ⁴√2·(-i) = ⁴√2, ⁴√2·i, -⁴√2, -⁴√2·i.\n\nMore clearly: ⁴√2 · ζ where ζ⁴ = 1, i.e., ζ ∈ {1, i, -1, -i}.\n\nSplitting field: K = ℚ(⁴√2, i).\n\n**Step 2: Compute [K : ℚ].**\n\n[ℚ(⁴√2) : ℚ] = 4 (x⁴ - 2 is irreducible by Eisenstein).\n[K : ℚ(⁴√2)] = 2 (i ∉ ℚ(⁴√2) ⊂ ℝ).\n[K : ℚ] = 8.\n\n**Step 3: Determine Gal(K/ℚ).**\n\n|Gal(K/ℚ)| = [K : ℚ] = 8.\n\nAutomorphisms are determined by:\n- σ(⁴√2) = ⁴√2 · ζ for some 4th root of unity\n- τ(i) = ±i\n\nLet σ: ⁴√2 ↦ ⁴√2·i, i ↦ i.\nLet τ: ⁴√2 ↦ ⁴√2, i ↦ -i.\n\nThen σ⁴ = 1, τ² = 1, and τστ⁻¹ = σ⁻¹.\n\n**Gal(K/ℚ) ≅ D₈** (dihedral group of order 8)."
+        }
+      ],
+      "exercises": [
+        {
+          "id": "14.1.1",
+          "type": "exercise",
+          "title": "Exercise 14.1.1",
+          "statement": "Prove that a polynomial of degree n over a field F is solvable by radicals if and only if its Galois group is a solvable group.",
+          "solution": "**Theorem (Galois):**\n\nLet f(x) ∈ F[x] and let K be its splitting field over F.\n\nf is solvable by radicals ⟺ Gal(K/F) is solvable.\n\n**Proof outline:**\n\n**(⟸) Solvable Galois group ⟹ solvable by radicals:**\n\n1. If G = Gal(K/F) is solvable, there's a chain:\n   {1} = G₀ ◁ G₁ ◁ ... ◁ Gₙ = G\n   with Gᵢ₊₁/Gᵢ cyclic.\n\n2. By FTGT, this corresponds to:\n   K = K₀ ⊃ K₁ ⊃ ... ⊃ Kₙ = F\n   with Kᵢ/Kᵢ₊₁ cyclic Galois.\n\n3. Cyclic extensions (over fields with enough roots of unity) are radical extensions.\n\n**(⟹) Solvable by radicals ⟹ solvable Galois group:**\n\nIf K ⊂ L where L is obtained by adjoining radicals:\nF = L₀ ⊂ L₁ ⊂ ... ⊂ Lₘ = L\n\nwith Lᵢ₊₁ = Lᵢ(ⁿ√aᵢ).\n\nThe Galois group of each radical extension is cyclic or trivial.\n\nBy properties of solvable groups, Gal(K/F) is solvable.\n\n**Consequence:** The general quintic is not solvable by radicals because S₅ is not solvable (A₅ is simple and non-abelian)."
+        }
+      ]
+    }
+  ]
+}

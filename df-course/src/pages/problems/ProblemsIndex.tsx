@@ -6,10 +6,48 @@ import { curriculum } from '@/data/curriculum';
 
 // Import all problem data
 import part00Data from '@/data/problems/part-00.json';
+import part01Data from '@/data/problems/part-01.json';
+import part02Data from '@/data/problems/part-02.json';
+import part03Data from '@/data/problems/part-03.json';
+import part04Data from '@/data/problems/part-04.json';
+import part05Data from '@/data/problems/part-05.json';
+import part06Data from '@/data/problems/part-06.json';
+import part07Data from '@/data/problems/part-07.json';
+import part08Data from '@/data/problems/part-08.json';
+import part09Data from '@/data/problems/part-09.json';
+import part10Data from '@/data/problems/part-10.json';
+import part11Data from '@/data/problems/part-11.json';
+import part12Data from '@/data/problems/part-12.json';
+import part13Data from '@/data/problems/part-13.json';
+import part14Data from '@/data/problems/part-14.json';
+import part15Data from '@/data/problems/part-15.json';
+import part16Data from '@/data/problems/part-16.json';
+import part17Data from '@/data/problems/part-17.json';
+import part18Data from '@/data/problems/part-18.json';
+import part19Data from '@/data/problems/part-19.json';
 
 // Combine all problem data
 const problemDataByPart: Record<number, typeof part00Data> = {
   0: part00Data,
+  1: part01Data,
+  2: part02Data,
+  3: part03Data,
+  4: part04Data,
+  5: part05Data,
+  6: part06Data,
+  7: part07Data,
+  8: part08Data,
+  9: part09Data,
+  10: part10Data,
+  11: part11Data,
+  12: part12Data,
+  13: part13Data,
+  14: part14Data,
+  15: part15Data,
+  16: part16Data,
+  17: part17Data,
+  18: part18Data,
+  19: part19Data,
 };
 
 export default function ProblemsIndex() {
