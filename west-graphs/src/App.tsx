@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
@@ -6,75 +6,27 @@ import { AchievementToastContainer } from '@/components/gamification';
 import { Header } from '@/components/layout/Header';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { FEATURES } from '@/config';
+import { LoadingSpinner } from '@shared/components/common/LoadingSpinner';
+import { createSectionLoadersFromGlob, type SectionLoaders } from '@shared/routing/sectionLoader';
 
 // Pages
 import Home from '@/pages/Home';
-import Leaderboard from '@/pages/Leaderboard';
-import Theorems from '@/pages/Theorems';
-import InteractiveModules from '@/pages/InteractiveModules';
 import SectionQuizPage from '@/pages/SectionQuizPage';
 
-// Section pages
-import Section01 from '@/pages/sections/Section01';
-import Section02 from '@/pages/sections/Section02';
-import Section03 from '@/pages/sections/Section03';
-import Section04 from '@/pages/sections/Section04';
-import Section05 from '@/pages/sections/Section05';
-import Section06 from '@/pages/sections/Section06';
-import Section07 from '@/pages/sections/Section07';
-import Section08 from '@/pages/sections/Section08';
-import Section09 from '@/pages/sections/Section09';
-import Section10 from '@/pages/sections/Section10';
-import Section11 from '@/pages/sections/Section11';
-import Section12 from '@/pages/sections/Section12';
-import Section13 from '@/pages/sections/Section13';
-import Section14 from '@/pages/sections/Section14';
-import Section15 from '@/pages/sections/Section15';
-import Section16 from '@/pages/sections/Section16';
-import Section17 from '@/pages/sections/Section17';
-import Section18 from '@/pages/sections/Section18';
-import Section19 from '@/pages/sections/Section19';
-import Section20 from '@/pages/sections/Section20';
-import Section21 from '@/pages/sections/Section21';
-import Section22 from '@/pages/sections/Section22';
-import Section23 from '@/pages/sections/Section23';
-import Section24 from '@/pages/sections/Section24';
-import Section25 from '@/pages/sections/Section25';
-import Section26 from '@/pages/sections/Section26';
-import Section27 from '@/pages/sections/Section27';
-import Section28 from '@/pages/sections/Section28';
+// Lazy-loaded pages
+const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
+const Theorems = lazy(() => import('@/pages/Theorems'));
+const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 
-// Section components map
-const sectionComponents: Record<number, React.ComponentType> = {
-  1: Section01,
-  2: Section02,
-  3: Section03,
-  4: Section04,
-  5: Section05,
-  6: Section06,
-  7: Section07,
-  8: Section08,
-  9: Section09,
-  10: Section10,
-  11: Section11,
-  12: Section12,
-  13: Section13,
-  14: Section14,
-  15: Section15,
-  16: Section16,
-  17: Section17,
-  18: Section18,
-  19: Section19,
-  20: Section20,
-  21: Section21,
-  22: Section22,
-  23: Section23,
-  24: Section24,
-  25: Section25,
-  26: Section26,
-  27: Section27,
-  28: Section28,
-};
+// Auto-discover sections using Vite glob imports
+const sectionModules = import.meta.glob('./pages/sections/Section*.tsx');
+const sectionLoaders: SectionLoaders = createSectionLoadersFromGlob(sectionModules);
+
+// Create lazy components from loaders
+const sectionComponents: Record<number, React.LazyExoticComponent<React.ComponentType>> = {};
+for (const [id, loader] of Object.entries(sectionLoaders)) {
+  sectionComponents[Number(id)] = lazy(loader);
+}
 
 function AppLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -112,7 +64,11 @@ function SectionRouter() {
     );
   }
 
-  return <SectionComponent />;
+  return (
+    <Suspense fallback={<LoadingSpinner message="Loading section..." />}>
+      <SectionComponent />
+    </Suspense>
+  );
 }
 
 function AppContent() {
@@ -125,13 +81,25 @@ function AppContent() {
 
           {/* Feature-gated routes */}
           {FEATURES.leaderboard && (
-            <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/leaderboard" element={
+              <Suspense fallback={<LoadingSpinner message="Loading leaderboard..." />}>
+                <Leaderboard />
+              </Suspense>
+            } />
           )}
           {FEATURES.theoremIndex && (
-            <Route path="/theorems" element={<Theorems />} />
+            <Route path="/theorems" element={
+              <Suspense fallback={<LoadingSpinner message="Loading theorems..." />}>
+                <Theorems />
+              </Suspense>
+            } />
           )}
           {FEATURES.interactiveModules && (
-            <Route path="/interactive" element={<InteractiveModules />} />
+            <Route path="/interactive" element={
+              <Suspense fallback={<LoadingSpinner message="Loading interactive modules..." />}>
+                <InteractiveModules />
+              </Suspense>
+            } />
           )}
 
           {/* Dynamic section routes */}
