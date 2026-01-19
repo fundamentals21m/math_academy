@@ -22,25 +22,25 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "dompurify": "^3.3.1",
-    "firebase": "^10.14.0",
-    "react": "^18.0.0 || ^19.0.0",
-    "tailwind-merge": "^2.6.0"
+    "firebase": "^12.8.0",
+    "react": "^19.2.3",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^14.6.1",
-    "@types/node": "^22.0.0",
-    "@types/react": "^19.2.5",
-    "@vitejs/plugin-react": "^4.4.1",
-    "@vitest/coverage-v8": "^4.0.16",
-    "@vitest/ui": "^4.0.16",
-    "happy-dom": "^20.0.11",
-    "jsdom": "^27.3.0",
+    "@types/node": "^25.0.8",
+    "@types/react": "^19.2.8",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@vitest/coverage-v8": "^4.0.17",
+    "@vitest/ui": "^4.0.17",
+    "happy-dom": "^20.3.0",
+    "jsdom": "^27.4.0",
     "typescript": "^5.9.3",
-    "vite": "^6.3.5",
-    "vitest": "^4.0.16",
-    "zod": "^4.2.1"
+    "vite": "^7.3.1",
+    "vitest": "^4.0.17",
+    "zod": "^4.3.5"
   },
   "peerDependencies": {
     "katex": "^0.16.0",
@@ -57,9 +57,6 @@
     "test:regression": "vitest run test/regression",
     "test:snapshot": "vitest run test/snapshots",
     "test:integration": "vitest run test/integration",
-    "test:all": "npm run test:run && npm run test:regression && npm run test:integration",
-    "storybook": "storybook dev -p public",
-    "build-storybook": "storybook build -p public",
-    "chromatic": "chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}"
+    "test:all": "npm run test:run && npm run test:regression && npm run test:integration"
   }
 }

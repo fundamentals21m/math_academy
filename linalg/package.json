@@ -17,9 +17,7 @@
     "test:regression": "vitest run test/regression",
     "test:snapshot": "vitest run test/snapshots",
     "test:integration": "vitest run test/integration",
-    "test:all": "npm run test:run && npm run test:regression && npm run test:integration",
-    "storybook": "storybook dev -p public",
-    "build-storybook": "npx storybook@8.6.3 build -p public"
+    "test:all": "npm run test:run && npm run test:regression && npm run test:integration"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
