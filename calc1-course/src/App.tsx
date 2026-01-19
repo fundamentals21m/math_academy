@@ -3,9 +3,12 @@ import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider, useGamification } from '@/contexts/GamificationContext';
 import { NostrAuthProvider } from '@shared/contexts/NostrAuthContext';
 import { LoadingSpinner } from '@shared/components/common/LoadingSpinner';
+import { CourseConfigProvider, type CourseConfig } from '@shared/contexts/CourseConfigContext';
+import { AchievementToastContainer } from '@shared/components/gamification';
+import { Header, Sidebar } from '@shared/components/layout';
+import { curriculum } from '@/data/curriculum';
 
 import { FEATURES, COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL } from '@/config';
-
 
 // Course configuration for shared components
 const courseConfig: CourseConfig = {
@@ -26,6 +29,26 @@ const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
 
+// Problem Set pages
+const ProblemsIndex = lazy(() => import('@/pages/problems/ProblemsIndex'));
+const ProblemsPart01 = lazy(() => import('@/pages/problems/ProblemsPart01'));
+const ProblemsPart02 = lazy(() => import('@/pages/problems/ProblemsPart02'));
+const ProblemsPart03 = lazy(() => import('@/pages/problems/ProblemsPart03'));
+const ProblemsPart04 = lazy(() => import('@/pages/problems/ProblemsPart04'));
+const ProblemsPart05 = lazy(() => import('@/pages/problems/ProblemsPart05'));
+const ProblemsPart06 = lazy(() => import('@/pages/problems/ProblemsPart06'));
+const ProblemsPart07 = lazy(() => import('@/pages/problems/ProblemsPart07'));
+const ProblemsPart08 = lazy(() => import('@/pages/problems/ProblemsPart08'));
+const ProblemsPart09 = lazy(() => import('@/pages/problems/ProblemsPart09'));
+const ProblemsPart10 = lazy(() => import('@/pages/problems/ProblemsPart10'));
+const ProblemsPart11 = lazy(() => import('@/pages/problems/ProblemsPart11'));
+const ProblemsPart12 = lazy(() => import('@/pages/problems/ProblemsPart12'));
+const ProblemsPart13 = lazy(() => import('@/pages/problems/ProblemsPart13'));
+const ProblemsPart14 = lazy(() => import('@/pages/problems/ProblemsPart14'));
+const ProblemsPart15 = lazy(() => import('@/pages/problems/ProblemsPart15'));
+const ProblemsPart16 = lazy(() => import('@/pages/problems/ProblemsPart16'));
+const ProblemsPart17 = lazy(() => import('@/pages/problems/ProblemsPart17'));
+
 // =============================================================================
 // SECTION CONFIGURATION
 // =============================================================================
@@ -33,10 +56,6 @@ const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
 // to src/pages/sections/ following the naming convention Section00.tsx, Section01.tsx, etc.
 // =============================================================================
 import { createSectionLoadersFromGlob, type SectionLoaders } from '@shared/routing/sectionLoader';
-import { CourseConfigProvider, type CourseConfig } from '@shared/contexts/CourseConfigContext';
-import { AchievementToastContainer } from '@shared/components/gamification';
-import { Header, Sidebar } from '@shared/components/layout';
-import { curriculum } from '@/data/curriculum';
 
 const sectionModules = import.meta.glob('./pages/sections/Section*.tsx');
 const sectionLoaders: SectionLoaders = createSectionLoadersFromGlob(sectionModules);
@@ -131,6 +150,152 @@ function AppContent() {
             />
           )}
 
+          {/* Problem Set routes */}
+          <Route
+            path="/problems"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsIndex />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/1"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart01 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/2"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart02 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/3"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart03 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/4"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart04 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/5"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart05 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/6"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart06 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/7"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart07 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/8"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart08 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/9"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart09 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/10"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart10 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/11"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart11 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/12"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart12 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/13"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart13 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/14"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart14 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/15"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart15 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/16"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart16 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/17"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart17 />
+              </Suspense>
+            }
+          />
+
           {/* Dynamic section routes - lazy loaded via SectionRouter */}
           <Route path="/section/:id" element={<SectionRouter />} />
 
@@ -164,24 +329,26 @@ function AchievementNotifications() {
 
 export default function App() {
   return (
-    <HashRouter>
-      {FEATURES.nostrAuth ? (
-        <NostrAuthProvider>
-          {FEATURES.gamification ? (
-            <GamificationProvider>
+    <CourseConfigProvider config={courseConfig}>
+      <HashRouter>
+        {FEATURES.nostrAuth ? (
+          <NostrAuthProvider>
+            {FEATURES.gamification ? (
+              <GamificationProvider>
+                <AppContent />
+              </GamificationProvider>
+            ) : (
               <AppContent />
-            </GamificationProvider>
-          ) : (
+            )}
+          </NostrAuthProvider>
+        ) : FEATURES.gamification ? (
+          <GamificationProvider>
             <AppContent />
-          )}
-        </NostrAuthProvider>
-      ) : FEATURES.gamification ? (
-        <GamificationProvider>
+          </GamificationProvider>
+        ) : (
           <AppContent />
-        </GamificationProvider>
-      ) : (
-        <AppContent />
-      )}
-    </HashRouter>
+        )}
+      </HashRouter>
+    </CourseConfigProvider>
   );
 }

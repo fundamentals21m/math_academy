@@ -1,0 +1,761 @@
+{
+  "partId": 17,
+  "partTitle": "Linear Transformations",
+  "textbookChapter": "Chapter 17: Linear Transformations and Matrices",
+  "sections": [
+    {
+      "sectionId": 95,
+      "sectionTitle": "Linear Transformations",
+      "textbookSection": "§17.1",
+      "examples": [
+        {
+          "id": "ex-17-95-1",
+          "type": "example",
+          "title": "Verifying Linearity",
+          "statement": "Determine whether the function $T: \\mathbb{R}^2 \\to \\mathbb{R}^2$ defined by $T(x, y) = (2x + y, x - 3y)$ is a linear transformation.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check additivity",
+                "content": "Let $\\mathbf{u} = (x_1, y_1)$ and $\\mathbf{v} = (x_2, y_2)$.\n\n$T(\\mathbf{u} + \\mathbf{v}) = T(x_1 + x_2, y_1 + y_2)$\n$= (2(x_1 + x_2) + (y_1 + y_2), (x_1 + x_2) - 3(y_1 + y_2))$\n$= (2x_1 + 2x_2 + y_1 + y_2, x_1 + x_2 - 3y_1 - 3y_2)$\n\n$T(\\mathbf{u}) + T(\\mathbf{v}) = (2x_1 + y_1, x_1 - 3y_1) + (2x_2 + y_2, x_2 - 3y_2)$\n$= (2x_1 + y_1 + 2x_2 + y_2, x_1 - 3y_1 + x_2 - 3y_2)$\n\nThese are equal, so additivity holds."
+              },
+              {
+                "title": "Check homogeneity",
+                "content": "For scalar $c$:\n\n$T(c\\mathbf{u}) = T(cx_1, cy_1) = (2cx_1 + cy_1, cx_1 - 3cy_1)$\n$= c(2x_1 + y_1, x_1 - 3y_1) = cT(\\mathbf{u})$\n\nHomogeneity holds."
+              }
+            ],
+            "conclusion": "Yes, $T$ is a linear transformation since both additivity and homogeneity are satisfied."
+          }
+        },
+        {
+          "id": "ex-17-95-2",
+          "type": "example",
+          "title": "Finding the Null Space",
+          "statement": "Find the null space of $T: \\mathbb{R}^3 \\to \\mathbb{R}^2$ defined by $T(x, y, z) = (x + y - z, 2x + y)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up the equations",
+                "content": "We need $T(x, y, z) = (0, 0)$:\n\n$x + y - z = 0$\n$2x + y = 0$"
+              },
+              {
+                "title": "Solve the system",
+                "content": "From equation 2: $y = -2x$\n\nSubstitute into equation 1: $x + (-2x) - z = 0$\n$-x - z = 0$\n$z = -x$\n\nSo the solution is $(x, y, z) = (x, -2x, -x) = x(1, -2, -1)$."
+              }
+            ],
+            "conclusion": "$\\text{Null}(T) = \\text{span}\\{(1, -2, -1)\\}$. The null space is a line through the origin in $\\mathbb{R}^3$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "17-95-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Determine whether $T: \\mathbb{R}^2 \\to \\mathbb{R}$ defined by $T(x, y) = x^2 + y$ is a linear transformation.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Test homogeneity",
+                "content": "Check if $T(c\\mathbf{v}) = cT(\\mathbf{v})$ for $\\mathbf{v} = (1, 0)$ and $c = 2$.\n\n$T(2 \\cdot 1, 2 \\cdot 0) = T(2, 0) = 4 + 0 = 4$\n$2T(1, 0) = 2(1 + 0) = 2$\n\nSince $4 \\neq 2$, homogeneity fails."
+              }
+            ],
+            "conclusion": "$T$ is NOT a linear transformation because $T(2x, 2y) \\neq 2T(x, y)$ in general."
+          }
+        },
+        {
+          "id": "17-95-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Let $D: \\mathcal{P}_2 \\to \\mathcal{P}_1$ be the differentiation operator $D(p) = p'$. Find $\\text{Null}(D)$ and $\\text{Range}(D)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find the null space",
+                "content": "$\\text{Null}(D) = \\{p \\in \\mathcal{P}_2 : p' = 0\\}$\n\nFor $p(x) = a + bx + cx^2$, we have $p'(x) = b + 2cx$.\n\n$p' = 0$ requires $b = 0$ and $c = 0$.\n\nSo $\\text{Null}(D) = \\{a : a \\in \\mathbb{R}\\}$ = constant polynomials."
+              },
+              {
+                "title": "Find the range",
+                "content": "For any $p(x) = a + bx + cx^2 \\in \\mathcal{P}_2$:\n$D(p) = b + 2cx$\n\nThis can produce any polynomial of degree $\\leq 1$ by choosing appropriate $b$ and $c$.\n\nFor example, to get $\\alpha + \\beta x$, choose $b = \\alpha$ and $c = \\beta/2$."
+              }
+            ],
+            "conclusion": "$\\text{Null}(D)$ = constant polynomials (dimension 1), $\\text{Range}(D) = \\mathcal{P}_1$ (all polynomials of degree $\\leq 1$)."
+          }
+        },
+        {
+          "id": "17-95-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Show that the projection $P: \\mathbb{R}^3 \\to \\mathbb{R}^3$ onto the $xy$-plane, $P(x, y, z) = (x, y, 0)$, is linear. Find its null space and range.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Verify linearity",
+                "content": "For $\\mathbf{u} = (x_1, y_1, z_1)$, $\\mathbf{v} = (x_2, y_2, z_2)$:\n\n$P(\\mathbf{u} + \\mathbf{v}) = P(x_1+x_2, y_1+y_2, z_1+z_2)$\n$= (x_1+x_2, y_1+y_2, 0)$\n$= (x_1, y_1, 0) + (x_2, y_2, 0) = P(\\mathbf{u}) + P(\\mathbf{v})$ ✓\n\n$P(c\\mathbf{u}) = P(cx_1, cy_1, cz_1) = (cx_1, cy_1, 0)$\n$= c(x_1, y_1, 0) = cP(\\mathbf{u})$ ✓"
+              },
+              {
+                "title": "Find null space",
+                "content": "$\\text{Null}(P) = \\{(x, y, z) : P(x, y, z) = (0, 0, 0)\\}$\n$= \\{(x, y, z) : (x, y, 0) = (0, 0, 0)\\}$\n$= \\{(0, 0, z) : z \\in \\mathbb{R}\\}$ = the $z$-axis"
+              },
+              {
+                "title": "Find range",
+                "content": "$\\text{Range}(P) = \\{P(x, y, z) : (x, y, z) \\in \\mathbb{R}^3\\}$\n$= \\{(x, y, 0) : x, y \\in \\mathbb{R}\\}$ = the $xy$-plane"
+              }
+            ],
+            "conclusion": "$P$ is linear. $\\text{Null}(P) = z$-axis (dim = 1), $\\text{Range}(P) = xy$-plane (dim = 2). Note: $3 = 1 + 2$ (Rank-Nullity)."
+          }
+        },
+        {
+          "id": "17-95-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Find the linear transformation $T: \\mathbb{R}^2 \\to \\mathbb{R}^2$ such that $T(1, 0) = (3, 1)$ and $T(0, 1) = (-1, 2)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use the basis principle",
+                "content": "Since $\\{(1,0), (0,1)\\}$ is a basis for $\\mathbb{R}^2$, any $(x, y)$ can be written as:\n$(x, y) = x(1, 0) + y(0, 1)$"
+              },
+              {
+                "title": "Apply linearity",
+                "content": "$T(x, y) = T(x(1,0) + y(0,1))$\n$= xT(1, 0) + yT(0, 1)$\n$= x(3, 1) + y(-1, 2)$\n$= (3x - y, x + 2y)$"
+              }
+            ],
+            "conclusion": "$T(x, y) = (3x - y, x + 2y)$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 96,
+      "sectionTitle": "Nullity and Rank",
+      "textbookSection": "§17.2",
+      "examples": [
+        {
+          "id": "ex-17-96-1",
+          "type": "example",
+          "title": "Rank-Nullity Theorem Application",
+          "statement": "Let $T: \\mathbb{R}^4 \\to \\mathbb{R}^3$ be a linear transformation with $\\dim(\\text{Null}(T)) = 2$. Find $\\text{rank}(T)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Rank-Nullity Theorem",
+                "content": "The theorem states: $\\dim(V) = \\text{rank}(T) + \\text{nullity}(T)$\n\nHere $\\dim(\\mathbb{R}^4) = 4$ and $\\text{nullity}(T) = 2$."
+              },
+              {
+                "title": "Solve for rank",
+                "content": "$4 = \\text{rank}(T) + 2$\n$\\text{rank}(T) = 2$"
+              }
+            ],
+            "conclusion": "$\\text{rank}(T) = 2$. The range of $T$ is a 2-dimensional subspace of $\\mathbb{R}^3$."
+          }
+        },
+        {
+          "id": "ex-17-96-2",
+          "type": "example",
+          "title": "Computing Rank and Nullity from a Matrix",
+          "statement": "Find the rank and nullity of $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 1 & 2 & 3 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Row reduce",
+                "content": "$\\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 1 & 2 & 3 \\end{pmatrix} \\xrightarrow{R_2 - 2R_1, R_3 - R_1} \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$"
+              },
+              {
+                "title": "Count pivots and free variables",
+                "content": "Number of pivots: 1 (in column 1)\nNumber of columns: 3\n\n$\\text{rank}(A) = 1$\n$\\text{nullity}(A) = 3 - 1 = 2$"
+              }
+            ],
+            "conclusion": "$\\text{rank}(A) = 1$ and $\\text{nullity}(A) = 2$. Verify: $1 + 2 = 3$ ✓"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "17-96-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "A linear transformation $T: \\mathbb{R}^5 \\to \\mathbb{R}^4$ has $\\text{rank}(T) = 3$. What is $\\text{nullity}(T)$?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Rank-Nullity",
+                "content": "$\\dim(\\mathbb{R}^5) = \\text{rank}(T) + \\text{nullity}(T)$\n$5 = 3 + \\text{nullity}(T)$\n$\\text{nullity}(T) = 2$"
+              }
+            ],
+            "conclusion": "$\\text{nullity}(T) = 2$"
+          }
+        },
+        {
+          "id": "17-96-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Can a linear transformation $T: \\mathbb{R}^3 \\to \\mathbb{R}^5$ be surjective? Explain.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Analyze using Rank-Nullity",
+                "content": "For $T$ to be surjective, we need $\\text{Range}(T) = \\mathbb{R}^5$, so $\\text{rank}(T) = 5$.\n\nBy Rank-Nullity: $\\dim(\\mathbb{R}^3) = \\text{rank}(T) + \\text{nullity}(T)$\n\nSince nullity $\\geq 0$: $\\text{rank}(T) \\leq 3$"
+              }
+            ],
+            "conclusion": "No. Since $\\text{rank}(T) \\leq \\min(\\dim V, \\dim W) = \\min(3, 5) = 3$, the rank can be at most 3, not 5. A transformation from a smaller to larger space cannot be surjective."
+          }
+        },
+        {
+          "id": "17-96-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Find the rank and nullity of $A = \\begin{pmatrix} 1 & 2 & 0 & 1 \\\\ 2 & 4 & 1 & 3 \\\\ 3 & 6 & 2 & 5 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Row reduce",
+                "content": "$\\begin{pmatrix} 1 & 2 & 0 & 1 \\\\ 2 & 4 & 1 & 3 \\\\ 3 & 6 & 2 & 5 \\end{pmatrix} \\xrightarrow{R_2 - 2R_1, R_3 - 3R_1} \\begin{pmatrix} 1 & 2 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 2 & 2 \\end{pmatrix}$\n\n$\\xrightarrow{R_3 - 2R_2} \\begin{pmatrix} 1 & 2 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix}$"
+              },
+              {
+                "title": "Identify pivots",
+                "content": "Pivots are in columns 1 and 3.\n$\\text{rank}(A) = 2$ (number of pivots)\n$\\text{nullity}(A) = 4 - 2 = 2$ (number of columns minus rank)"
+              }
+            ],
+            "conclusion": "$\\text{rank}(A) = 2$, $\\text{nullity}(A) = 2$. Check: $2 + 2 = 4$ ✓"
+          }
+        },
+        {
+          "id": "17-96-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "If $T: V \\to W$ is injective and $\\dim(V) = 5$, what is $\\text{nullity}(T)$? What is $\\text{rank}(T)$?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use injectivity criterion",
+                "content": "$T$ is injective if and only if $\\text{Null}(T) = \\{\\mathbf{0}\\}$.\n\nTherefore $\\text{nullity}(T) = 0$."
+              },
+              {
+                "title": "Apply Rank-Nullity",
+                "content": "$\\dim(V) = \\text{rank}(T) + \\text{nullity}(T)$\n$5 = \\text{rank}(T) + 0$\n$\\text{rank}(T) = 5$"
+              }
+            ],
+            "conclusion": "$\\text{nullity}(T) = 0$ and $\\text{rank}(T) = 5$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 97,
+      "sectionTitle": "Matrix Representations",
+      "textbookSection": "§17.3",
+      "examples": [
+        {
+          "id": "ex-17-97-1",
+          "type": "example",
+          "title": "Finding a Matrix Representation",
+          "statement": "Find the matrix of $T: \\mathbb{R}^2 \\to \\mathbb{R}^3$ defined by $T(x, y) = (x - y, 2x + y, 3y)$ with respect to the standard bases.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply T to standard basis vectors",
+                "content": "$T(\\mathbf{e}_1) = T(1, 0) = (1, 2, 0)$\n$T(\\mathbf{e}_2) = T(0, 1) = (-1, 1, 3)$"
+              },
+              {
+                "title": "Form the matrix",
+                "content": "The columns are the images of the basis vectors:\n\n$[T] = \\begin{pmatrix} 1 & -1 \\\\ 2 & 1 \\\\ 0 & 3 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$[T] = \\begin{pmatrix} 1 & -1 \\\\ 2 & 1 \\\\ 0 & 3 \\end{pmatrix}$"
+          }
+        },
+        {
+          "id": "ex-17-97-2",
+          "type": "example",
+          "title": "Change of Basis Matrix",
+          "statement": "Find the change of basis matrix from $\\mathcal{B} = \\{(1, 1), (1, -1)\\}$ to the standard basis $\\mathcal{E}$ in $\\mathbb{R}^2$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Express basis vectors",
+                "content": "We need to express each vector in $\\mathcal{B}$ in terms of $\\mathcal{E}$.\n\n$(1, 1) = 1 \\cdot (1, 0) + 1 \\cdot (0, 1)$, so $[(1,1)]_{\\mathcal{E}} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$\n\n$(1, -1) = 1 \\cdot (1, 0) + (-1) \\cdot (0, 1)$, so $[(1,-1)]_{\\mathcal{E}} = \\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix}$"
+              },
+              {
+                "title": "Form the matrix",
+                "content": "The columns are the coordinate vectors:\n\n$P_{\\mathcal{B} \\to \\mathcal{E}} = \\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$P_{\\mathcal{B} \\to \\mathcal{E}} = \\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "17-97-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find the matrix representation of $D: \\mathcal{P}_2 \\to \\mathcal{P}_2$ defined by $D(p) = p'$ using the basis $\\{1, x, x^2\\}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply D to basis vectors",
+                "content": "$D(1) = 0 = 0 \\cdot 1 + 0 \\cdot x + 0 \\cdot x^2$\n$D(x) = 1 = 1 \\cdot 1 + 0 \\cdot x + 0 \\cdot x^2$\n$D(x^2) = 2x = 0 \\cdot 1 + 2 \\cdot x + 0 \\cdot x^2$"
+              },
+              {
+                "title": "Form matrix columns",
+                "content": "$[D] = \\begin{pmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 2 \\\\ 0 & 0 & 0 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$[D] = \\begin{pmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 2 \\\\ 0 & 0 & 0 \\end{pmatrix}$"
+          }
+        },
+        {
+          "id": "17-97-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Show that $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $B = \\begin{pmatrix} -1 & -2 \\\\ 3 & 6 \\end{pmatrix}$ are NOT similar.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute invariants",
+                "content": "Similar matrices have the same trace and determinant.\n\n$\\text{tr}(A) = 1 + 4 = 5$\n$\\text{tr}(B) = -1 + 6 = 5$ ✓\n\n$\\det(A) = 1 \\cdot 4 - 2 \\cdot 3 = -2$\n$\\det(B) = (-1) \\cdot 6 - (-2) \\cdot 3 = -6 + 6 = 0$"
+              },
+              {
+                "title": "Compare determinants",
+                "content": "$\\det(A) = -2 \\neq 0 = \\det(B)$"
+              }
+            ],
+            "conclusion": "$A$ and $B$ are NOT similar because they have different determinants. ($A$ is invertible but $B$ is not.)"
+          }
+        },
+        {
+          "id": "17-97-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Let $T: \\mathbb{R}^2 \\to \\mathbb{R}^2$ be rotation by $90°$ counterclockwise. Find $[T]$ with respect to the standard basis.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply T to basis vectors",
+                "content": "$T(1, 0) = (0, 1)$ (rotate $(1,0)$ by $90°$)\n$T(0, 1) = (-1, 0)$ (rotate $(0,1)$ by $90°$)"
+              },
+              {
+                "title": "Form the matrix",
+                "content": "The columns are the images:\n\n$[T] = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$"
+              },
+              {
+                "title": "Verify using formula",
+                "content": "The rotation matrix for angle $\\theta$ is:\n$R_\\theta = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$\n\nFor $\\theta = 90°$: $\\cos(90°) = 0$, $\\sin(90°) = 1$\n$R_{90°} = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$ ✓"
+              }
+            ],
+            "conclusion": "$[T] = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$"
+          }
+        },
+        {
+          "id": "17-97-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Use the matrix $[T] = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ to compute $T(2, -1)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Matrix-vector multiplication",
+                "content": "$T(2, -1) = [T] \\begin{pmatrix} 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} \\begin{pmatrix} 2 \\\\ -1 \\end{pmatrix}$\n\n$= \\begin{pmatrix} 1 \\cdot 2 + 2 \\cdot (-1) \\\\ 3 \\cdot 2 + 4 \\cdot (-1) \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 2 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$T(2, -1) = (0, 2)$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 98,
+      "sectionTitle": "Matrix Algebra",
+      "textbookSection": "§17.4",
+      "examples": [
+        {
+          "id": "ex-17-98-1",
+          "type": "example",
+          "title": "Matrix Multiplication",
+          "statement": "Compute $AB$ where $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $B = \\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute each entry",
+                "content": "$(AB)_{11} = 1 \\cdot 5 + 2 \\cdot 7 = 5 + 14 = 19$\n$(AB)_{12} = 1 \\cdot 6 + 2 \\cdot 8 = 6 + 16 = 22$\n$(AB)_{21} = 3 \\cdot 5 + 4 \\cdot 7 = 15 + 28 = 43$\n$(AB)_{22} = 3 \\cdot 6 + 4 \\cdot 8 = 18 + 32 = 50$"
+              }
+            ],
+            "conclusion": "$AB = \\begin{pmatrix} 19 & 22 \\\\ 43 & 50 \\end{pmatrix}$"
+          }
+        },
+        {
+          "id": "ex-17-98-2",
+          "type": "example",
+          "title": "Non-Commutativity of Matrix Multiplication",
+          "statement": "Show that $AB \\neq BA$ for $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$ and $B = \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute AB",
+                "content": "$AB = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\end{pmatrix} = \\begin{pmatrix} 3 & 2 \\\\ 1 & 1 \\end{pmatrix}$"
+              },
+              {
+                "title": "Compute BA",
+                "content": "$BA = \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 2 \\\\ 1 & 3 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$AB = \\begin{pmatrix} 3 & 2 \\\\ 1 & 1 \\end{pmatrix} \\neq \\begin{pmatrix} 1 & 2 \\\\ 1 & 3 \\end{pmatrix} = BA$. Matrix multiplication is not commutative."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "17-98-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Compute $(A + B)^T$ and verify that $(A + B)^T = A^T + B^T$ for $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $B = \\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute A + B",
+                "content": "$A + B = \\begin{pmatrix} 6 & 8 \\\\ 10 & 12 \\end{pmatrix}$"
+              },
+              {
+                "title": "Compute (A + B)^T",
+                "content": "$(A + B)^T = \\begin{pmatrix} 6 & 10 \\\\ 8 & 12 \\end{pmatrix}$"
+              },
+              {
+                "title": "Compute A^T + B^T",
+                "content": "$A^T = \\begin{pmatrix} 1 & 3 \\\\ 2 & 4 \\end{pmatrix}$, $B^T = \\begin{pmatrix} 5 & 7 \\\\ 6 & 8 \\end{pmatrix}$\n\n$A^T + B^T = \\begin{pmatrix} 6 & 10 \\\\ 8 & 12 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$(A + B)^T = A^T + B^T = \\begin{pmatrix} 6 & 10 \\\\ 8 & 12 \\end{pmatrix}$ ✓"
+          }
+        },
+        {
+          "id": "17-98-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Verify that $(AB)^T = B^T A^T$ for $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $B = \\begin{pmatrix} 0 & 1 \\\\ 2 & 3 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute AB",
+                "content": "$AB = \\begin{pmatrix} 4 & 7 \\\\ 8 & 15 \\end{pmatrix}$"
+              },
+              {
+                "title": "Compute (AB)^T",
+                "content": "$(AB)^T = \\begin{pmatrix} 4 & 8 \\\\ 7 & 15 \\end{pmatrix}$"
+              },
+              {
+                "title": "Compute B^T A^T",
+                "content": "$B^T = \\begin{pmatrix} 0 & 2 \\\\ 1 & 3 \\end{pmatrix}$, $A^T = \\begin{pmatrix} 1 & 3 \\\\ 2 & 4 \\end{pmatrix}$\n\n$B^T A^T = \\begin{pmatrix} 4 & 8 \\\\ 7 & 15 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$(AB)^T = B^T A^T = \\begin{pmatrix} 4 & 8 \\\\ 7 & 15 \\end{pmatrix}$ ✓"
+          }
+        },
+        {
+          "id": "17-98-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Compute $\\text{tr}(AB)$ and $\\text{tr}(BA)$ for $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $B = \\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}$. Verify that they are equal.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute AB and its trace",
+                "content": "$AB = \\begin{pmatrix} 19 & 22 \\\\ 43 & 50 \\end{pmatrix}$\n$\\text{tr}(AB) = 19 + 50 = 69$"
+              },
+              {
+                "title": "Compute BA and its trace",
+                "content": "$BA = \\begin{pmatrix} 23 & 34 \\\\ 31 & 46 \\end{pmatrix}$\n$\\text{tr}(BA) = 23 + 46 = 69$"
+              }
+            ],
+            "conclusion": "$\\text{tr}(AB) = \\text{tr}(BA) = 69$ ✓ (The trace is cyclic.)"
+          }
+        },
+        {
+          "id": "17-98-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Compute $A^3$ where $A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute A²",
+                "content": "$A^2 = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$"
+              },
+              {
+                "title": "Compute A³",
+                "content": "$A^3 = A^2 \\cdot A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 3 \\\\ 0 & 1 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$A^3 = \\begin{pmatrix} 1 & 3 \\\\ 0 & 1 \\end{pmatrix}$. (Pattern: $A^n = \\begin{pmatrix} 1 & n \\\\ 0 & 1 \\end{pmatrix}$)"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 99,
+      "sectionTitle": "Systems of Linear Equations",
+      "textbookSection": "§17.5",
+      "examples": [
+        {
+          "id": "ex-17-99-1",
+          "type": "example",
+          "title": "Gaussian Elimination",
+          "statement": "Solve the system $\\begin{cases} x + 2y + z = 9 \\\\ 2x + 3y - z = 3 \\\\ x + y + 2z = 8 \\end{cases}$",
+          "solution": {
+            "steps": [
+              {
+                "title": "Form augmented matrix",
+                "content": "$\\left(\\begin{array}{ccc|c} 1 & 2 & 1 & 9 \\\\ 2 & 3 & -1 & 3 \\\\ 1 & 1 & 2 & 8 \\end{array}\\right)$"
+              },
+              {
+                "title": "Row reduce",
+                "content": "$R_2 - 2R_1, R_3 - R_1$:\n$\\left(\\begin{array}{ccc|c} 1 & 2 & 1 & 9 \\\\ 0 & -1 & -3 & -15 \\\\ 0 & -1 & 1 & -1 \\end{array}\\right)$\n\n$R_3 - R_2$:\n$\\left(\\begin{array}{ccc|c} 1 & 2 & 1 & 9 \\\\ 0 & -1 & -3 & -15 \\\\ 0 & 0 & 4 & 14 \\end{array}\\right)$"
+              },
+              {
+                "title": "Back substitution",
+                "content": "From row 3: $4z = 14 \\Rightarrow z = 3.5$\n\nFrom row 2: $-y - 3(3.5) = -15 \\Rightarrow y = 4.5$\n\nFrom row 1: $x + 2(4.5) + 3.5 = 9 \\Rightarrow x = -3.5$"
+              }
+            ],
+            "conclusion": "$(x, y, z) = (-3.5, 4.5, 3.5)$ or $(-7/2, 9/2, 7/2)$"
+          }
+        },
+        {
+          "id": "ex-17-99-2",
+          "type": "example",
+          "title": "Identifying No Solution",
+          "statement": "Determine if the system has a solution: $\\begin{cases} x + y + z = 1 \\\\ x + y + z = 2 \\end{cases}$",
+          "solution": {
+            "steps": [
+              {
+                "title": "Form augmented matrix",
+                "content": "$\\left(\\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 2 \\end{array}\\right)$"
+              },
+              {
+                "title": "Row reduce",
+                "content": "$R_2 - R_1$:\n$\\left(\\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\\\ 0 & 0 & 0 & 1 \\end{array}\\right)$"
+              },
+              {
+                "title": "Interpret",
+                "content": "Row 2 says $0 = 1$, which is impossible."
+              }
+            ],
+            "conclusion": "The system is inconsistent (no solution). The equations represent parallel planes that don't intersect."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "17-99-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Solve the system using Gaussian elimination: $\\begin{cases} x + y - z = 2 \\\\ 2x - y + z = 1 \\\\ x + 2y + z = 4 \\end{cases}$",
+          "solution": {
+            "steps": [
+              {
+                "title": "Form augmented matrix and reduce",
+                "content": "$\\left(\\begin{array}{ccc|c} 1 & 1 & -1 & 2 \\\\ 2 & -1 & 1 & 1 \\\\ 1 & 2 & 1 & 4 \\end{array}\\right) \\xrightarrow{R_2-2R_1, R_3-R_1} \\left(\\begin{array}{ccc|c} 1 & 1 & -1 & 2 \\\\ 0 & -3 & 3 & -3 \\\\ 0 & 1 & 2 & 2 \\end{array}\\right)$\n\n$\\xrightarrow{R_2/-3} \\left(\\begin{array}{ccc|c} 1 & 1 & -1 & 2 \\\\ 0 & 1 & -1 & 1 \\\\ 0 & 1 & 2 & 2 \\end{array}\\right)$\n\n$\\xrightarrow{R_3-R_2} \\left(\\begin{array}{ccc|c} 1 & 1 & -1 & 2 \\\\ 0 & 1 & -1 & 1 \\\\ 0 & 0 & 3 & 1 \\end{array}\\right)$"
+              },
+              {
+                "title": "Back substitute",
+                "content": "From row 3: $z = 1/3$\nFrom row 2: $y - 1/3 = 1 \\Rightarrow y = 4/3$\nFrom row 1: $x + 4/3 - 1/3 = 2 \\Rightarrow x = 1$"
+              }
+            ],
+            "conclusion": "$(x, y, z) = (1, 4/3, 1/3)$"
+          }
+        },
+        {
+          "id": "17-99-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Find the general solution to $A\\mathbf{x} = \\mathbf{0}$ where $A = \\begin{pmatrix} 1 & 2 & 1 \\\\ 2 & 4 & 2 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Row reduce",
+                "content": "$\\begin{pmatrix} 1 & 2 & 1 \\\\ 2 & 4 & 2 \\end{pmatrix} \\xrightarrow{R_2 - 2R_1} \\begin{pmatrix} 1 & 2 & 1 \\\\ 0 & 0 & 0 \\end{pmatrix}$"
+              },
+              {
+                "title": "Identify free variables",
+                "content": "Pivot in column 1. Free variables: $x_2 = s$, $x_3 = t$.\n\nFrom row 1: $x_1 + 2s + t = 0 \\Rightarrow x_1 = -2s - t$"
+              },
+              {
+                "title": "Write general solution",
+                "content": "$\\mathbf{x} = \\begin{pmatrix} -2s - t \\\\ s \\\\ t \\end{pmatrix} = s \\begin{pmatrix} -2 \\\\ 1 \\\\ 0 \\end{pmatrix} + t \\begin{pmatrix} -1 \\\\ 0 \\\\ 1 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "Null space = span$\\left\\{(-2, 1, 0), (-1, 0, 1)\\right\\}$ (dimension 2)"
+          }
+        },
+        {
+          "id": "17-99-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Determine for which values of $k$ the system $\\begin{cases} x + y = 2 \\\\ 2x + 2y = k \\end{cases}$ has (a) no solution, (b) infinitely many solutions.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Row reduce",
+                "content": "$\\left(\\begin{array}{cc|c} 1 & 1 & 2 \\\\ 2 & 2 & k \\end{array}\\right) \\xrightarrow{R_2 - 2R_1} \\left(\\begin{array}{cc|c} 1 & 1 & 2 \\\\ 0 & 0 & k-4 \\end{array}\\right)$"
+              },
+              {
+                "title": "Analyze cases",
+                "content": "Row 2 represents $0 = k - 4$.\n\nIf $k \\neq 4$: Row 2 says $0 = k-4 \\neq 0$, which is false. No solution.\n\nIf $k = 4$: Row 2 is $0 = 0$ (true). Free variable $y = t$, so $x = 2 - t$."
+              }
+            ],
+            "conclusion": "(a) No solution when $k \\neq 4$. (b) Infinitely many solutions when $k = 4$: $(x, y) = (2-t, t)$."
+          }
+        },
+        {
+          "id": "17-99-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "If a homogeneous system $A\\mathbf{x} = \\mathbf{0}$ has more unknowns than equations, prove it has a nontrivial solution.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up dimensions",
+                "content": "Let $A$ be $m \\times n$ with $n > m$ (more unknowns than equations)."
+              },
+              {
+                "title": "Apply Rank-Nullity",
+                "content": "$n = \\text{rank}(A) + \\text{nullity}(A)$\n\nSince $\\text{rank}(A) \\leq m < n$:\n$\\text{nullity}(A) = n - \\text{rank}(A) \\geq n - m > 0$"
+              },
+              {
+                "title": "Conclude",
+                "content": "Since nullity > 0, the null space contains more than just $\\mathbf{0}$."
+              }
+            ],
+            "conclusion": "When $n > m$, nullity$(A) > 0$, so there exist nontrivial solutions."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 100,
+      "sectionTitle": "Matrix Inverses",
+      "textbookSection": "§17.6",
+      "examples": [
+        {
+          "id": "ex-17-100-1",
+          "type": "example",
+          "title": "2×2 Inverse Formula",
+          "statement": "Find the inverse of $A = \\begin{pmatrix} 4 & 7 \\\\ 2 & 6 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check determinant",
+                "content": "$\\det(A) = 4 \\cdot 6 - 7 \\cdot 2 = 24 - 14 = 10 \\neq 0$\n\nSince det ≠ 0, the inverse exists."
+              },
+              {
+                "title": "Apply formula",
+                "content": "For $2 \\times 2$ matrix $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$:\n$A^{-1} = \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$\n\n$A^{-1} = \\frac{1}{10} \\begin{pmatrix} 6 & -7 \\\\ -2 & 4 \\end{pmatrix} = \\begin{pmatrix} 0.6 & -0.7 \\\\ -0.2 & 0.4 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$A^{-1} = \\frac{1}{10} \\begin{pmatrix} 6 & -7 \\\\ -2 & 4 \\end{pmatrix}$"
+          }
+        },
+        {
+          "id": "ex-17-100-2",
+          "type": "example",
+          "title": "Computing Inverse via Row Reduction",
+          "statement": "Find the inverse of $A = \\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{pmatrix}$ using row reduction.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Form augmented matrix",
+                "content": "$\\left(\\begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 & 1 & 0 \\\\ 1 & 0 & 1 & 0 & 0 & 1 \\end{array}\\right)$"
+              },
+              {
+                "title": "Row reduce to RREF",
+                "content": "$R_3 - R_1$:\n$\\left(\\begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 & 1 & 0 \\\\ 0 & -2 & 1 & -1 & 0 & 1 \\end{array}\\right)$\n\n$R_3 + 2R_2$:\n$\\left(\\begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 & 1 & 0 \\\\ 0 & 0 & 3 & -1 & 2 & 1 \\end{array}\\right)$\n\n$R_3 / 3$:\n$\\left(\\begin{array}{ccc|ccc} 1 & 2 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 & 1 & 0 \\\\ 0 & 0 & 1 & -1/3 & 2/3 & 1/3 \\end{array}\\right)$\n\n$R_2 - R_3$, $R_1 - 2R_2$:\n$\\left(\\begin{array}{ccc|ccc} 1 & 0 & 0 & 1/3 & -2/3 & 2/3 \\\\ 0 & 1 & 0 & 1/3 & 1/3 & -1/3 \\\\ 0 & 0 & 1 & -1/3 & 2/3 & 1/3 \\end{array}\\right)$"
+              }
+            ],
+            "conclusion": "$A^{-1} = \\frac{1}{3} \\begin{pmatrix} 1 & -2 & 2 \\\\ 1 & 1 & -1 \\\\ -1 & 2 & 1 \\end{pmatrix}$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "17-100-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Determine if $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 6 \\end{pmatrix}$ is invertible.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute determinant",
+                "content": "$\\det(A) = 1 \\cdot 6 - 2 \\cdot 3 = 6 - 6 = 0$"
+              }
+            ],
+            "conclusion": "$A$ is NOT invertible because $\\det(A) = 0$. (The rows are proportional: row 2 = 3 × row 1.)"
+          }
+        },
+        {
+          "id": "17-100-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Find the inverse of $A = \\begin{pmatrix} 2 & 3 \\\\ 1 & 2 \\end{pmatrix}$ and use it to solve $A\\mathbf{x} = \\begin{pmatrix} 5 \\\\ 3 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find inverse",
+                "content": "$\\det(A) = 4 - 3 = 1$\n\n$A^{-1} = \\frac{1}{1} \\begin{pmatrix} 2 & -3 \\\\ -1 & 2 \\end{pmatrix} = \\begin{pmatrix} 2 & -3 \\\\ -1 & 2 \\end{pmatrix}$"
+              },
+              {
+                "title": "Solve the system",
+                "content": "$\\mathbf{x} = A^{-1} \\mathbf{b} = \\begin{pmatrix} 2 & -3 \\\\ -1 & 2 \\end{pmatrix} \\begin{pmatrix} 5 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 10-9 \\\\ -5+6 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$A^{-1} = \\begin{pmatrix} 2 & -3 \\\\ -1 & 2 \\end{pmatrix}$, and the solution is $\\mathbf{x} = (1, 1)^T$."
+          }
+        },
+        {
+          "id": "17-100-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Verify that $(AB)^{-1} = B^{-1}A^{-1}$ for $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$ and $B = \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute AB",
+                "content": "$AB = \\begin{pmatrix} 3 & 2 \\\\ 1 & 1 \\end{pmatrix}$"
+              },
+              {
+                "title": "Compute (AB)^{-1}",
+                "content": "$\\det(AB) = 3 - 2 = 1$\n$(AB)^{-1} = \\begin{pmatrix} 1 & -2 \\\\ -1 & 3 \\end{pmatrix}$"
+              },
+              {
+                "title": "Compute B^{-1}A^{-1}",
+                "content": "$A^{-1} = \\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$, $B^{-1} = \\begin{pmatrix} 1 & 0 \\\\ -1 & 1 \\end{pmatrix}$\n\n$B^{-1}A^{-1} = \\begin{pmatrix} 1 & 0 \\\\ -1 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & -2 \\\\ -1 & 3 \\end{pmatrix}$"
+              }
+            ],
+            "conclusion": "$(AB)^{-1} = B^{-1}A^{-1} = \\begin{pmatrix} 1 & -2 \\\\ -1 & 3 \\end{pmatrix}$ ✓"
+          }
+        },
+        {
+          "id": "17-100-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Show that if $A$ is orthogonal ($A^T A = I$), then $A^{-1} = A^T$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use definition of orthogonal",
+                "content": "Given: $A^T A = I$"
+              },
+              {
+                "title": "Identify the inverse",
+                "content": "By definition, $A^{-1}$ is the matrix such that $A^{-1} A = I$.\n\nFrom $A^T A = I$, we see that $A^T$ satisfies this property."
+              },
+              {
+                "title": "Verify",
+                "content": "We also need $A A^T = I$. For orthogonal matrices, this follows from $A^T A = I$ (can be shown by noting that orthogonal matrices have orthonormal columns and rows)."
+              }
+            ],
+            "conclusion": "If $A^T A = I$, then $A^{-1} = A^T$. Orthogonal matrices have the convenient property that their inverse is their transpose."
+          }
+        }
+      ]
+    }
+  ]
+}

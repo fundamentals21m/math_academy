@@ -1,0 +1,177 @@
+const t="Linear Spaces",e="Chapter 15: Linear Spaces",n=[{sectionId:89,sectionTitle:"Definition of Linear Spaces",textbookSection:"§15.1-15.3",examples:[{id:"ex-15-89-1",type:"example",title:"Verifying a Linear Space",statement:"Show that the set of all $2 \\times 2$ symmetric matrices forms a linear space.",solution:{steps:[{title:"Define the set",content:`$W = \\{A \\in M_{2 \\times 2} : A^T = A\\}$
+
+Symmetric matrices have the form $\\begin{pmatrix} a & b \\\\ b & c \\end{pmatrix}$.`},{title:"Check closure under addition",content:`If $A^T = A$ and $B^T = B$, then:
+
+$(A + B)^T = A^T + B^T = A + B$ ✓`},{title:"Check closure under scalar multiplication",content:`If $A^T = A$ and $c \\in \\mathbb{R}$, then:
+
+$(cA)^T = cA^T = cA$ ✓`},{title:"Verify zero element",content:"The zero matrix is symmetric: $0^T = 0$ ✓"}],conclusion:"$W$ is a subspace of $M_{2 \\times 2}$, hence a linear space. It has dimension 3 (basis: $E_{11}, E_{12} + E_{21}, E_{22}$)."}},{id:"ex-15-89-2",type:"example",title:"Showing 0v = 0",statement:"Prove that $0\\mathbf{v} = \\mathbf{0}$ for any vector $\\mathbf{v}$ in a linear space, using only the axioms.",solution:{steps:[{title:"Start with scalar addition",content:"We know $0 = 0 + 0$ (property of real numbers)."},{title:"Apply axiom 8 (distributivity)",content:"$0\\mathbf{v} = (0 + 0)\\mathbf{v} = 0\\mathbf{v} + 0\\mathbf{v}$"},{title:"Add the inverse",content:`Adding $-(0\\mathbf{v})$ to both sides:
+
+$\\mathbf{0} = 0\\mathbf{v}$`}],conclusion:"Therefore $0\\mathbf{v} = \\mathbf{0}$ for any $\\mathbf{v}$."}}],exercises:[{id:"15-89-1",type:"exercise",number:1,statement:"Is the set of all polynomials of degree exactly 2 a linear space? Justify your answer.",solution:{steps:[{title:"Check for zero element",content:`The zero polynomial $p(x) = 0$ has no defined degree (or is sometimes defined as degree $-\\infty$).
+
+It is NOT a polynomial of degree exactly 2.`},{title:"Check closure under addition",content:`Consider $p(x) = x^2$ and $q(x) = -x^2 + x$.
+
+Both have degree 2, but $p + q = x$ has degree 1.`}],conclusion:"No, this is NOT a linear space. It fails to contain the zero element and is not closed under addition."}},{id:"15-89-2",type:"exercise",number:2,statement:"Prove that $(-1)\\mathbf{v} = -\\mathbf{v}$ using the linear space axioms.",solution:{steps:[{title:"Add v and (-1)v",content:`$\\mathbf{v} + (-1)\\mathbf{v} = 1\\mathbf{v} + (-1)\\mathbf{v}$ (by axiom 10: identity)
+
+$= (1 + (-1))\\mathbf{v}$ (by axiom 8: distributivity)
+
+$= 0\\mathbf{v} = \\mathbf{0}$`},{title:"Conclusion",content:"Since $\\mathbf{v} + (-1)\\mathbf{v} = \\mathbf{0}$, by definition of additive inverse, $(-1)\\mathbf{v} = -\\mathbf{v}$."}],conclusion:"$(-1)\\mathbf{v} = -\\mathbf{v}$"}},{id:"15-89-3",type:"exercise",number:3,statement:"Write $(3, -1, 2)$ as a linear combination of $(1, 0, 1)$, $(0, 1, 1)$, and $(1, 1, 0)$.",solution:{steps:[{title:"Set up the equation",content:"$c_1(1, 0, 1) + c_2(0, 1, 1) + c_3(1, 1, 0) = (3, -1, 2)$"},{title:"Write the system",content:`$c_1 + c_3 = 3$
+$c_2 + c_3 = -1$
+$c_1 + c_2 = 2$`},{title:"Solve",content:`From equations 1 and 3: $c_3 - c_2 = 1$.
+
+Combined with equation 2 ($c_2 + c_3 = -1$):
+$2c_3 = 0$, so $c_3 = 0$.
+
+Then $c_2 = -1$ and $c_1 = 3$.`}],conclusion:"$(3, -1, 2) = 3(1, 0, 1) - (0, 1, 1) + 0(1, 1, 0) = 3(1, 0, 1) - (0, 1, 1)$"}},{id:"15-89-4",type:"exercise",number:4,statement:"Is the set $W = \\{f \\in C[0,1] : f(1/2) = 0\\}$ a linear space (with pointwise operations)?",solution:{steps:[{title:"Check for zero",content:"The zero function $f(x) = 0$ satisfies $f(1/2) = 0$. ✓"},{title:"Check closure under addition",content:`If $f(1/2) = 0$ and $g(1/2) = 0$, then:
+
+$(f + g)(1/2) = f(1/2) + g(1/2) = 0 + 0 = 0$ ✓`},{title:"Check scalar multiplication",content:`If $f(1/2) = 0$ and $c \\in \\mathbb{R}$, then:
+
+$(cf)(1/2) = c \\cdot f(1/2) = c \\cdot 0 = 0$ ✓`}],conclusion:"Yes, $W$ is a subspace of $C[0,1]$, hence a linear space."}}]},{sectionId:90,sectionTitle:"Subspaces",textbookSection:"§15.4-15.6",examples:[{id:"ex-15-90-1",type:"example",title:"Finding the Null Space",statement:"Find the null space of $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\end{pmatrix}$.",solution:{steps:[{title:"Row reduce",content:`The second row is $2 \\times$ the first, so:
+
+$\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\end{pmatrix}$`},{title:"Find general solution",content:`From $x_1 + 2x_2 + 3x_3 = 0$:
+
+$x_1 = -2x_2 - 3x_3$
+
+Let $x_2 = s$, $x_3 = t$.`},{title:"Write in parametric form",content:"$(x_1, x_2, x_3) = s(-2, 1, 0) + t(-3, 0, 1)$"}],conclusion:"$\\text{null}(A) = \\text{span}\\{(-2, 1, 0), (-3, 0, 1)\\}$, a 2-dimensional subspace of $\\mathbb{R}^3$."}},{id:"ex-15-90-2",type:"example",title:"Intersection of Subspaces",statement:"Find the intersection of $U = \\{(x,y,z): x + y = 0\\}$ and $W = \\{(x,y,z): y + z = 0\\}$ in $\\mathbb{R}^3$.",solution:{steps:[{title:"Set up the conditions",content:`A vector in $U \\cap W$ must satisfy both:
+$x + y = 0$ and $y + z = 0$`},{title:"Solve",content:`From the conditions: $x = -y$ and $z = -y$.
+
+So $(x, y, z) = (-y, y, -y) = y(-1, 1, -1)$.`}],conclusion:"$U \\cap W = \\text{span}\\{(-1, 1, -1)\\}$, a line through the origin."}}],exercises:[{id:"15-90-1",type:"exercise",number:1,statement:"Is $W = \\{(x, y, z) \\in \\mathbb{R}^3 : x^2 + y^2 = z^2\\}$ a subspace of $\\mathbb{R}^3$?",solution:{steps:[{title:"Check for zero",content:"$0^2 + 0^2 = 0^2$, so $(0,0,0) \\in W$. ✓"},{title:"Check closure under addition",content:`Consider $(3, 4, 5) \\in W$ (since $9 + 16 = 25$) and $(0, 0, 0) \\in W$.
+
+Actually, let's try $(1, 0, 1) \\in W$ and $(0, 1, 1) \\in W$.
+
+Sum: $(1, 1, 2)$. Check: $1 + 1 = 2 \\neq 4 = 2^2$. Not in $W$!`}],conclusion:"No, $W$ is not a subspace because it is not closed under addition."}},{id:"15-90-2",type:"exercise",number:2,statement:"Verify that $\\text{span}\\{(1,1,0), (0,1,1)\\}$ is a subspace of $\\mathbb{R}^3$ and find its dimension.",solution:{steps:[{title:"Span is always a subspace",content:"By the theorem, the span of any set of vectors is a subspace."},{title:"Check linear independence",content:`$(1,1,0)$ and $(0,1,1)$ are not scalar multiples of each other.
+
+They are linearly independent.`}],conclusion:"$\\text{span}\\{(1,1,0), (0,1,1)\\}$ is a 2-dimensional subspace (a plane through the origin)."}},{id:"15-90-3",type:"exercise",number:3,statement:"Find the null space of $A = \\begin{pmatrix} 1 & -1 & 2 \\\\ 2 & -2 & 4 \\\\ -1 & 1 & -2 \\end{pmatrix}$.",solution:{steps:[{title:"Row reduce",content:`All rows are multiples of the first row.
+
+RREF: $\\begin{pmatrix} 1 & -1 & 2 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$`},{title:"Solve",content:`$x_1 = x_2 - 2x_3$
+
+Let $x_2 = s$, $x_3 = t$.
+
+$(x_1, x_2, x_3) = s(1, 1, 0) + t(-2, 0, 1)$`}],conclusion:"$\\text{null}(A) = \\text{span}\\{(1, 1, 0), (-2, 0, 1)\\}$, dimension 2."}},{id:"15-90-4",type:"exercise",number:4,statement:"Let $U$ be the $x$-axis and $W$ be the $y$-axis in $\\mathbb{R}^2$. Find $U + W$ and $U \\cap W$.",solution:{steps:[{title:"Find the sum",content:`$U = \\{(x, 0) : x \\in \\mathbb{R}\\}$
+$W = \\{(0, y) : y \\in \\mathbb{R}\\}$
+
+$U + W = \\{(x, 0) + (0, y) : x, y \\in \\mathbb{R}\\} = \\{(x, y) : x, y \\in \\mathbb{R}\\} = \\mathbb{R}^2$`},{title:"Find the intersection",content:`$U \\cap W$ consists of vectors that are both on the $x$-axis AND on the $y$-axis.
+
+The only such vector is $(0, 0)$.`}],conclusion:"$U + W = \\mathbb{R}^2$ and $U \\cap W = \\{\\mathbf{0}\\}$."}}]},{sectionId:91,sectionTitle:"Bases and Dimension",textbookSection:"§15.7-15.9",examples:[{id:"ex-15-91-1",type:"example",title:"Finding a Basis",statement:"Find a basis for the subspace $W = \\{(a, b, c, d) : a + b = c + d\\}$ of $\\mathbb{R}^4$.",solution:{steps:[{title:"Express in terms of free variables",content:`From $a + b = c + d$: $a = -b + c + d$.
+
+Let $b = s$, $c = t$, $d = u$.
+
+$(a, b, c, d) = (-s + t + u, s, t, u)$`},{title:"Write as linear combination",content:"$= s(-1, 1, 0, 0) + t(1, 0, 1, 0) + u(1, 0, 0, 1)$"},{title:"Verify independence",content:`The three vectors $\\mathbf{v}_1 = (-1, 1, 0, 0)$, $\\mathbf{v}_2 = (1, 0, 1, 0)$, $\\mathbf{v}_3 = (1, 0, 0, 1)$.
+
+Putting them in a matrix and row reducing shows rank 3 (independent).`}],conclusion:"Basis: $\\{(-1, 1, 0, 0), (1, 0, 1, 0), (1, 0, 0, 1)\\}$. Dimension: 3."}},{id:"ex-15-91-2",type:"example",title:"Dimension of P₃",statement:"What is the dimension of $\\mathcal{P}_3$ (polynomials of degree at most 3)?",solution:{steps:[{title:"Identify a spanning set",content:`Every polynomial in $\\mathcal{P}_3$ can be written as:
+$a_0 + a_1 x + a_2 x^2 + a_3 x^3$`},{title:"Verify the standard basis",content:`The set $\\{1, x, x^2, x^3\\}$ spans $\\mathcal{P}_3$.
+
+These are linearly independent (different degrees).`}],conclusion:"$\\dim(\\mathcal{P}_3) = 4$"}}],exercises:[{id:"15-91-1",type:"exercise",number:1,statement:"Are $\\mathbf{v}_1 = (1, 2, 3)$, $\\mathbf{v}_2 = (4, 5, 6)$, $\\mathbf{v}_3 = (7, 8, 9)$ linearly independent in $\\mathbb{R}^3$?",solution:{steps:[{title:"Set up the matrix",content:"$\\begin{pmatrix} 1 & 4 & 7 \\\\ 2 & 5 & 8 \\\\ 3 & 6 & 9 \\end{pmatrix}$"},{title:"Row reduce",content:`After row operations:
+$\\begin{pmatrix} 1 & 4 & 7 \\\\ 0 & -3 & -6 \\\\ 0 & -6 & -12 \\end{pmatrix} \\to \\begin{pmatrix} 1 & 4 & 7 \\\\ 0 & -3 & -6 \\\\ 0 & 0 & 0 \\end{pmatrix}$`},{title:"Check rank",content:`Rank is 2, not 3. There's a dependence relation.
+
+Actually, $\\mathbf{v}_3 = 2\\mathbf{v}_2 - \\mathbf{v}_1$:
+$(7,8,9) = 2(4,5,6) - (1,2,3) = (8-1, 10-2, 12-3) = (7,8,9)$ ✓`}],conclusion:"No, they are linearly dependent. $\\mathbf{v}_3 = 2\\mathbf{v}_2 - \\mathbf{v}_1$."}},{id:"15-91-2",type:"exercise",number:2,statement:"Extend $\\{(1, 1, 0, 0)\\}$ to a basis for $\\mathbb{R}^4$.",solution:{steps:[{title:"Strategy",content:"We need 3 more vectors that, together with $(1,1,0,0)$, are linearly independent."},{title:"Choose standard basis vectors",content:`Try $\\mathbf{e}_1 = (1,0,0,0)$: Not a multiple of $(1,1,0,0)$. Add it.
+
+Try $\\mathbf{e}_3 = (0,0,1,0)$: Independent of the first two. Add it.
+
+Try $\\mathbf{e}_4 = (0,0,0,1)$: Independent of the first three. Add it.`}],conclusion:"One basis: $\\{(1,1,0,0), (1,0,0,0), (0,0,1,0), (0,0,0,1)\\}$."}},{id:"15-91-3",type:"exercise",number:3,statement:"Find the dimension of the solution space of $x_1 + x_2 + x_3 + x_4 = 0$ in $\\mathbb{R}^4$.",solution:{steps:[{title:"Find the general solution",content:`$x_1 = -x_2 - x_3 - x_4$
+
+With $x_2 = s$, $x_3 = t$, $x_4 = u$:
+
+$(x_1, x_2, x_3, x_4) = s(-1, 1, 0, 0) + t(-1, 0, 1, 0) + u(-1, 0, 0, 1)$`},{title:"Count basis vectors",content:"The three vectors are linearly independent (each has a 1 in a different component)."}],conclusion:"Dimension = 3 (a hyperplane in $\\mathbb{R}^4$)."}},{id:"15-91-4",type:"exercise",number:4,statement:"What is the dimension of $M_{2 \\times 3}$ (the space of $2 \\times 3$ matrices)?",solution:{steps:[{title:"Identify the standard basis",content:`The matrices $E_{ij}$ with 1 in position $(i,j)$ and 0 elsewhere form a basis.
+
+For $2 \\times 3$: $E_{11}, E_{12}, E_{13}, E_{21}, E_{22}, E_{23}$.`}],conclusion:"$\\dim(M_{2 \\times 3}) = 2 \\times 3 = 6$"}}]},{sectionId:92,sectionTitle:"Inner Product Spaces",textbookSection:"§15.10-15.12",examples:[{id:"ex-15-92-1",type:"example",title:"Inner Product of Functions",statement:"Compute $\\langle \\sin x, \\cos x \\rangle$ in $C[-\\pi, \\pi]$ with $\\langle f, g \\rangle = \\int_{-\\pi}^{\\pi} f(x)g(x) \\, dx$.",solution:{steps:[{title:"Set up the integral",content:"$\\langle \\sin x, \\cos x \\rangle = \\int_{-\\pi}^{\\pi} \\sin x \\cos x \\, dx$"},{title:"Use double angle formula",content:`$\\sin x \\cos x = \\frac{1}{2} \\sin(2x)$
+
+$= \\frac{1}{2} \\int_{-\\pi}^{\\pi} \\sin(2x) \\, dx$`},{title:"Evaluate",content:`$= \\frac{1}{2} \\left[-\\frac{1}{2}\\cos(2x)\\right]_{-\\pi}^{\\pi}$
+
+$= -\\frac{1}{4}(\\cos(2\\pi) - \\cos(-2\\pi)) = -\\frac{1}{4}(1 - 1) = 0$`}],conclusion:"$\\langle \\sin x, \\cos x \\rangle = 0$. The functions are orthogonal."}},{id:"ex-15-92-2",type:"example",title:"Verifying Cauchy-Schwarz",statement:"Verify the Cauchy-Schwarz inequality for $\\mathbf{u} = (3, 4)$ and $\\mathbf{v} = (1, 2)$ in $\\mathbb{R}^2$.",solution:{steps:[{title:"Compute inner product",content:"$\\langle \\mathbf{u}, \\mathbf{v} \\rangle = 3(1) + 4(2) = 11$"},{title:"Compute norms",content:`$\\|\\mathbf{u}\\| = \\sqrt{9 + 16} = 5$
+
+$\\|\\mathbf{v}\\| = \\sqrt{1 + 4} = \\sqrt{5}$`},{title:"Verify the inequality",content:`$|\\langle \\mathbf{u}, \\mathbf{v} \\rangle| = 11$
+
+$\\|\\mathbf{u}\\| \\|\\mathbf{v}\\| = 5\\sqrt{5} \\approx 11.18$
+
+$11 \\leq 11.18$ ✓`}],conclusion:"Cauchy-Schwarz holds: $11 \\leq 5\\sqrt{5}$."}}],exercises:[{id:"15-92-1",type:"exercise",number:1,statement:"Find the norm of $f(x) = x$ in $C[0, 1]$ with $\\langle f, g \\rangle = \\int_0^1 f(x)g(x) \\, dx$.",solution:{steps:[{title:"Compute the inner product",content:"$\\langle f, f \\rangle = \\int_0^1 x^2 \\, dx = \\left[\\frac{x^3}{3}\\right]_0^1 = \\frac{1}{3}$"},{title:"Take square root",content:"$\\|f\\| = \\sqrt{\\langle f, f \\rangle} = \\sqrt{\\frac{1}{3}} = \\frac{1}{\\sqrt{3}}$"}],conclusion:"$\\|x\\| = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$"}},{id:"15-92-2",type:"exercise",number:2,statement:"Find the angle between $(1, 1, 1)$ and $(1, 0, -1)$ in $\\mathbb{R}^3$.",solution:{steps:[{title:"Compute inner product",content:"$\\langle (1,1,1), (1,0,-1) \\rangle = 1 + 0 - 1 = 0$"},{title:"Determine the angle",content:`Since the inner product is 0, the vectors are orthogonal.
+
+$\\cos \\theta = 0$`}],conclusion:"$\\theta = 90°$ (the vectors are perpendicular)."}},{id:"15-92-3",type:"exercise",number:3,statement:"Verify the triangle inequality $\\|\\mathbf{u} + \\mathbf{v}\\| \\leq \\|\\mathbf{u}\\| + \\|\\mathbf{v}\\|$ for $\\mathbf{u} = (1, 0)$ and $\\mathbf{v} = (0, 1)$.",solution:{steps:[{title:"Compute the left side",content:`$\\mathbf{u} + \\mathbf{v} = (1, 1)$
+
+$\\|\\mathbf{u} + \\mathbf{v}\\| = \\sqrt{2}$`},{title:"Compute the right side",content:`$\\|\\mathbf{u}\\| = 1$, $\\|\\mathbf{v}\\| = 1$
+
+$\\|\\mathbf{u}\\| + \\|\\mathbf{v}\\| = 2$`},{title:"Verify",content:"$\\sqrt{2} \\approx 1.414 \\leq 2$ ✓"}],conclusion:"Triangle inequality holds: $\\sqrt{2} \\leq 2$."}},{id:"15-92-4",type:"exercise",number:4,statement:"Find the distance between $f(x) = x$ and $g(x) = x^2$ in $C[0, 1]$.",solution:{steps:[{title:"Compute f - g",content:"$(f - g)(x) = x - x^2$"},{title:"Compute the norm",content:`$\\|f - g\\|^2 = \\int_0^1 (x - x^2)^2 \\, dx = \\int_0^1 (x^2 - 2x^3 + x^4) \\, dx$
+
+$= \\left[\\frac{x^3}{3} - \\frac{x^4}{2} + \\frac{x^5}{5}\\right]_0^1$
+
+$= \\frac{1}{3} - \\frac{1}{2} + \\frac{1}{5} = \\frac{10 - 15 + 6}{30} = \\frac{1}{30}$`}],conclusion:"$d(f, g) = \\|f - g\\| = \\sqrt{\\frac{1}{30}} = \\frac{1}{\\sqrt{30}}$"}}]},{sectionId:93,sectionTitle:"Orthogonality",textbookSection:"§15.13-15.15",examples:[{id:"ex-15-93-1",type:"example",title:"Gram-Schmidt Process",statement:"Apply the Gram-Schmidt process to $\\mathbf{v}_1 = (1, 1, 0)$ and $\\mathbf{v}_2 = (1, 0, 1)$ to find an orthonormal basis for their span.",solution:{steps:[{title:"First vector",content:`$\\|\\mathbf{v}_1\\| = \\sqrt{1 + 1 + 0} = \\sqrt{2}$
+
+$\\mathbf{u}_1 = \\frac{1}{\\sqrt{2}}(1, 1, 0)$`},{title:"Orthogonalize second vector",content:`$\\langle \\mathbf{v}_2, \\mathbf{u}_1 \\rangle = \\frac{1}{\\sqrt{2}}(1 + 0 + 0) = \\frac{1}{\\sqrt{2}}$
+
+$\\mathbf{w}_2 = \\mathbf{v}_2 - \\frac{1}{\\sqrt{2}} \\cdot \\frac{1}{\\sqrt{2}}(1, 1, 0) = (1, 0, 1) - \\frac{1}{2}(1, 1, 0)$
+
+$= (\\frac{1}{2}, -\\frac{1}{2}, 1)$`},{title:"Normalize",content:`$\\|\\mathbf{w}_2\\| = \\sqrt{\\frac{1}{4} + \\frac{1}{4} + 1} = \\sqrt{\\frac{3}{2}} = \\frac{\\sqrt{6}}{2}$
+
+$\\mathbf{u}_2 = \\frac{2}{\\sqrt{6}}(\\frac{1}{2}, -\\frac{1}{2}, 1) = \\frac{1}{\\sqrt{6}}(1, -1, 2)$`}],conclusion:"Orthonormal basis: $\\left\\{\\frac{1}{\\sqrt{2}}(1, 1, 0), \\frac{1}{\\sqrt{6}}(1, -1, 2)\\right\\}$"}},{id:"ex-15-93-2",type:"example",title:"Orthogonal Projection",statement:"Find the orthogonal projection of $\\mathbf{b} = (1, 2, 3)$ onto the line spanned by $\\mathbf{v} = (1, 1, 1)$.",solution:{steps:[{title:"Normalize the direction",content:`$\\|\\mathbf{v}\\| = \\sqrt{3}$
+
+$\\mathbf{u} = \\frac{1}{\\sqrt{3}}(1, 1, 1)$`},{title:"Compute the projection",content:`$\\text{proj}_{\\mathbf{v}}(\\mathbf{b}) = \\langle \\mathbf{b}, \\mathbf{u} \\rangle \\mathbf{u}$
+
+$\\langle \\mathbf{b}, \\mathbf{u} \\rangle = \\frac{1}{\\sqrt{3}}(1 + 2 + 3) = \\frac{6}{\\sqrt{3}} = 2\\sqrt{3}$
+
+$\\text{proj}_{\\mathbf{v}}(\\mathbf{b}) = 2\\sqrt{3} \\cdot \\frac{1}{\\sqrt{3}}(1, 1, 1) = 2(1, 1, 1) = (2, 2, 2)$`}],conclusion:"$\\text{proj}_{\\mathbf{v}}(\\mathbf{b}) = (2, 2, 2)$"}}],exercises:[{id:"15-93-1",type:"exercise",number:1,statement:"Verify that $\\{\\frac{1}{\\sqrt{2}}(1, 1, 0), \\frac{1}{\\sqrt{3}}(1, -1, 1)\\}$ is an orthonormal set.",solution:{steps:[{title:"Check norms",content:`$\\|\\frac{1}{\\sqrt{2}}(1, 1, 0)\\| = \\frac{1}{\\sqrt{2}}\\sqrt{1 + 1 + 0} = 1$ ✓
+
+$\\|\\frac{1}{\\sqrt{3}}(1, -1, 1)\\| = \\frac{1}{\\sqrt{3}}\\sqrt{1 + 1 + 1} = 1$ ✓`},{title:"Check orthogonality",content:`$\\langle \\frac{1}{\\sqrt{2}}(1,1,0), \\frac{1}{\\sqrt{3}}(1,-1,1) \\rangle$
+
+$= \\frac{1}{\\sqrt{6}}(1 \\cdot 1 + 1 \\cdot (-1) + 0 \\cdot 1) = \\frac{1}{\\sqrt{6}}(0) = 0$ ✓`}],conclusion:"Yes, it is an orthonormal set (unit vectors that are orthogonal)."}},{id:"15-93-2",type:"exercise",number:2,statement:"Express $(5, -1, 3)$ in terms of the orthonormal basis $\\{\\mathbf{e}_1, \\mathbf{e}_2, \\mathbf{e}_3\\}$ using inner products.",solution:{steps:[{title:"Find coefficients",content:`$c_1 = \\langle (5,-1,3), \\mathbf{e}_1 \\rangle = 5$
+
+$c_2 = \\langle (5,-1,3), \\mathbf{e}_2 \\rangle = -1$
+
+$c_3 = \\langle (5,-1,3), \\mathbf{e}_3 \\rangle = 3$`}],conclusion:"$(5, -1, 3) = 5\\mathbf{e}_1 - \\mathbf{e}_2 + 3\\mathbf{e}_3$"}},{id:"15-93-3",type:"exercise",number:3,statement:"Find the orthogonal complement of $W = \\text{span}\\{(1, 2, 3)\\}$ in $\\mathbb{R}^3$.",solution:{steps:[{title:"Set up the condition",content:`$W^\\perp = \\{(x, y, z) : \\langle (x,y,z), (1,2,3) \\rangle = 0\\}$
+
+$x + 2y + 3z = 0$`},{title:"Solve",content:`$x = -2y - 3z$
+
+With $y = s$, $z = t$:
+
+$(x, y, z) = s(-2, 1, 0) + t(-3, 0, 1)$`}],conclusion:"$W^\\perp = \\text{span}\\{(-2, 1, 0), (-3, 0, 1)\\}$, a plane through the origin."}},{id:"15-93-4",type:"exercise",number:4,statement:"Is the rotation matrix $R = \\begin{pmatrix} \\cos 45° & -\\sin 45° \\\\ \\sin 45° & \\cos 45° \\end{pmatrix}$ an orthogonal matrix?",solution:{steps:[{title:"Compute R^T R",content:`$R = \\frac{1}{\\sqrt{2}}\\begin{pmatrix} 1 & -1 \\\\ 1 & 1 \\end{pmatrix}$
+
+$R^T = \\frac{1}{\\sqrt{2}}\\begin{pmatrix} 1 & 1 \\\\ -1 & 1 \\end{pmatrix}$
+
+$R^T R = \\frac{1}{2}\\begin{pmatrix} 1 & 1 \\\\ -1 & 1 \\end{pmatrix}\\begin{pmatrix} 1 & -1 \\\\ 1 & 1 \\end{pmatrix}$
+
+$= \\frac{1}{2}\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix} = I$`}],conclusion:"Yes, $R^T R = I$, so $R$ is an orthogonal matrix."}}]},{sectionId:94,sectionTitle:"Best Approximation",textbookSection:"§15.16-15.18",examples:[{id:"ex-15-94-1",type:"example",title:"Least Squares Line",statement:"Find the least squares line through the points $(0, 1)$, $(1, 1)$, $(2, 3)$.",solution:{steps:[{title:"Set up the system",content:`Seek $y = c_0 + c_1 x$.
+
+$A = \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\\\ 1 & 2 \\end{pmatrix}$, $\\mathbf{b} = \\begin{pmatrix} 1 \\\\ 1 \\\\ 3 \\end{pmatrix}$`},{title:"Compute normal equations",content:`$A^T A = \\begin{pmatrix} 3 & 3 \\\\ 3 & 5 \\end{pmatrix}$
+
+$A^T \\mathbf{b} = \\begin{pmatrix} 5 \\\\ 7 \\end{pmatrix}$`},{title:"Solve",content:`$\\begin{pmatrix} 3 & 3 \\\\ 3 & 5 \\end{pmatrix}\\begin{pmatrix} c_0 \\\\ c_1 \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ 7 \\end{pmatrix}$
+
+From row 2 - row 1: $2c_1 = 2$, so $c_1 = 1$.
+
+Then $3c_0 + 3 = 5$, so $c_0 = 2/3$.`}],conclusion:"Least squares line: $y = \\frac{2}{3} + x$"}},{id:"ex-15-94-2",type:"example",title:"Best Approximation to a Subspace",statement:"Find the point in the plane $W = \\{(x,y,z): x + y + z = 0\\}$ closest to $\\mathbf{b} = (1, 1, 1)$.",solution:{steps:[{title:"Find orthonormal basis for W",content:`From earlier: $W = \\text{span}\\{(-1, 1, 0), (-1, 0, 1)\\}$.
+
+Apply Gram-Schmidt...
+
+$\\mathbf{u}_1 = \\frac{1}{\\sqrt{2}}(-1, 1, 0)$
+
+$\\mathbf{u}_2 = \\frac{1}{\\sqrt{6}}(-1, -1, 2)$ (after orthogonalization)`},{title:"Project b onto W",content:`$\\langle \\mathbf{b}, \\mathbf{u}_1 \\rangle = \\frac{1}{\\sqrt{2}}(-1 + 1 + 0) = 0$
+
+$\\langle \\mathbf{b}, \\mathbf{u}_2 \\rangle = \\frac{1}{\\sqrt{6}}(-1 - 1 + 2) = 0$
+
+$\\text{proj}_W(\\mathbf{b}) = 0 \\cdot \\mathbf{u}_1 + 0 \\cdot \\mathbf{u}_2 = (0, 0, 0)$`}],conclusion:"The closest point is $(0, 0, 0)$. The vector $(1, 1, 1)$ is already orthogonal to the plane $W$."}}],exercises:[{id:"15-94-1",type:"exercise",number:1,statement:"Find the least squares solution to $\\begin{pmatrix} 1 & 1 \\\\ 1 & 2 \\\\ 1 & 3 \\end{pmatrix}\\mathbf{x} = \\begin{pmatrix} 2 \\\\ 3 \\\\ 5 \\end{pmatrix}$.",solution:{steps:[{title:"Compute A^T A and A^T b",content:`$A^T A = \\begin{pmatrix} 3 & 6 \\\\ 6 & 14 \\end{pmatrix}$
+
+$A^T \\mathbf{b} = \\begin{pmatrix} 10 \\\\ 23 \\end{pmatrix}$`},{title:"Solve normal equations",content:`$\\begin{pmatrix} 3 & 6 \\\\ 6 & 14 \\end{pmatrix}\\begin{pmatrix} x_1 \\\\ x_2 \\end{pmatrix} = \\begin{pmatrix} 10 \\\\ 23 \\end{pmatrix}$
+
+$3x_1 + 6x_2 = 10$
+$6x_1 + 14x_2 = 23$
+
+From row 2 - 2×row 1: $2x_2 = 3$, so $x_2 = 3/2$.
+
+Then $3x_1 = 10 - 9 = 1$, so $x_1 = 1/3$.`}],conclusion:"$\\hat{\\mathbf{x}} = (1/3, 3/2)$"}},{id:"15-94-2",type:"exercise",number:2,statement:"Find the best linear approximation $c_0 + c_1 x$ to $f(x) = x^2$ on $[0, 1]$ with $\\langle f, g \\rangle = \\int_0^1 fg \\, dx$.",solution:{steps:[{title:"Set up normal equations",content:`We want $\\langle x^2 - (c_0 + c_1 x), 1 \\rangle = 0$ and $\\langle x^2 - (c_0 + c_1 x), x \\rangle = 0$.
+
+This gives:
+$\\langle x^2, 1 \\rangle = c_0 \\langle 1, 1 \\rangle + c_1 \\langle x, 1 \\rangle$
+$\\langle x^2, x \\rangle = c_0 \\langle 1, x \\rangle + c_1 \\langle x, x \\rangle$`},{title:"Compute inner products",content:`$\\langle 1, 1 \\rangle = 1$, $\\langle x, 1 \\rangle = \\langle 1, x \\rangle = 1/2$, $\\langle x, x \\rangle = 1/3$
+
+$\\langle x^2, 1 \\rangle = 1/3$, $\\langle x^2, x \\rangle = 1/4$`},{title:"Solve",content:`$c_0 + \\frac{1}{2}c_1 = \\frac{1}{3}$
+$\\frac{1}{2}c_0 + \\frac{1}{3}c_1 = \\frac{1}{4}$
+
+From these: $c_1 = 1$, $c_0 = -1/6$.`}],conclusion:"Best approximation: $p(x) = -\\frac{1}{6} + x$"}},{id:"15-94-3",type:"exercise",number:3,statement:"Find the residual $\\mathbf{r} = \\mathbf{b} - A\\hat{\\mathbf{x}}$ for the least squares problem with $A = \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix}$, $\\mathbf{b} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix}$.",solution:{steps:[{title:"Solve normal equations",content:`$A^T A = 3$, $A^T \\mathbf{b} = 6$
+
+$\\hat{x} = 6/3 = 2$`},{title:"Compute residual",content:`$A\\hat{x} = 2\\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 2 \\\\ 2 \\end{pmatrix}$
+
+$\\mathbf{r} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix} - \\begin{pmatrix} 2 \\\\ 2 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} -1 \\\\ 0 \\\\ 1 \\end{pmatrix}$`},{title:"Verify orthogonality",content:"$A^T \\mathbf{r} = (-1 + 0 + 1) = 0$ ✓"}],conclusion:"$\\mathbf{r} = (-1, 0, 1)$, which is orthogonal to Col(A)."}},{id:"15-94-4",type:"exercise",number:4,statement:"Find the pseudoinverse $A^+$ of $A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\\\ 1 & 1 \\end{pmatrix}$ and verify $A A^+ A = A$.",solution:{steps:[{title:"Compute A^T A",content:"$A^T A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$"},{title:"Find (A^T A)^{-1}",content:`$\\det(A^T A) = 4 - 1 = 3$
+
+$(A^T A)^{-1} = \\frac{1}{3}\\begin{pmatrix} 2 & -1 \\\\ -1 & 2 \\end{pmatrix}$`},{title:"Compute A^+",content:`$A^+ = (A^T A)^{-1} A^T = \\frac{1}{3}\\begin{pmatrix} 2 & -1 \\\\ -1 & 2 \\end{pmatrix}\\begin{pmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 1 \\end{pmatrix}$
+
+$= \\frac{1}{3}\\begin{pmatrix} 2 & -1 & 1 \\\\ -1 & 2 & 1 \\end{pmatrix}$`},{title:"Verify",content:`$A A^+ = \\frac{1}{3}\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\\\ 1 & 1 \\end{pmatrix}\\begin{pmatrix} 2 & -1 & 1 \\\\ -1 & 2 & 1 \\end{pmatrix} = \\frac{1}{3}\\begin{pmatrix} 2 & -1 & 1 \\\\ -1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix}$
+
+$A A^+ A = A$ ✓ (verification by computation)`}],conclusion:"$A^+ = \\frac{1}{3}\\begin{pmatrix} 2 & -1 & 1 \\\\ -1 & 2 & 1 \\end{pmatrix}$"}}]}],i={partId:16,partTitle:t,textbookChapter:e,sections:n};export{i as p};
