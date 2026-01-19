@@ -22,11 +22,8 @@ export interface CourseViteOptions {
 export function createCourseViteConfig(options: CourseViteOptions): UserConfig {
   const { courseId, courseDir } = options
 
-  // Base path is determined by deployment type:
-  // - Standalone deploy (STANDALONE_DEPLOY=true): '/' - for individual *.vercel.app domains
-  // - Hub deploy (default): '/{course-id}-deploy/' - for hub subdirectory deployment
-  const isStandalone = process.env.STANDALONE_DEPLOY === 'true'
-  const basePath = isStandalone ? '/' : `/${courseId}-deploy/`
+  // Always use relative paths - works from any directory (hub subdirectory or standalone)
+  const basePath = './'
 
   return defineConfig({
     // Cast to bypass vite version type conflicts between shared and course node_modules
