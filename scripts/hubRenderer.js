@@ -569,3 +569,160 @@ export async function reloadFromFirebase() {
   }
   return loaded;
 }
+
+/**
+ * Get courses that are in progress (have some progress but not complete)
+ * @returns {Array} Array of { course, progress, completedSections, lastActivity } objects
+ */
+function getCoursesInProgress() {
+  if (!progressData) return [];
+
+  const coursesWithProgress = [];
+
+  for (const course of DATA_COURSES) {
+    if (!course.progressPrefix || !course.totalSections) continue;
+
+    const progress = getCourseProgress(course);
+
+    // Include if has some progress but not 100% complete
+    if (progress > 0 && progress < 100) {
+      let completedSections = 0;
+      let lastActivity = null;
+
+      if (progressData.source === 'localStorage' && progressData.sectionsCompleted) {
+        const sections = progressData.sectionsCompleted.filter(id => id.startsWith(course.progressPrefix));
+        completedSections = sections.length;
+        // Try to get last activity timestamp from localStorage
+        try {
+          const data = localStorage.getItem(PROGRESS_STORAGE_KEY);
+          if (data) {
+            const state = JSON.parse(data);
+            if (state.lastUpdated) {
+              lastActivity = new Date(state.lastUpdated);
+            }
+          }
+        } catch (e) {
+          // Ignore
+        }
+      } else if (progressData.source === 'firebase' && progressData.scores) {
+        const courseScore = progressData.scores.find(s => s.courseId === course.id);
+        if (courseScore) {
+          completedSections = Math.min(Math.floor(courseScore.xp / 50), course.totalSections);
+          if (courseScore.lastUpdated) {
+            lastActivity = courseScore.lastUpdated.toDate ? courseScore.lastUpdated.toDate() : new Date(courseScore.lastUpdated);
+          }
+        }
+      }
+
+      coursesWithProgress.push({
+        course,
+        progress,
+        completedSections,
+        totalSections: course.totalSections,
+        lastActivity
+      });
+    }
+  }
+
+  // Sort by progress (highest first), then by last activity (most recent first)
+  coursesWithProgress.sort((a, b) => {
+    // First by progress descending
+    if (b.progress !== a.progress) return b.progress - a.progress;
+    // Then by last activity (if available)
+    if (a.lastActivity && b.lastActivity) {
+      return b.lastActivity.getTime() - a.lastActivity.getTime();
+    }
+    return 0;
+  });
+
+  // Return top 4 courses
+  return coursesWithProgress.slice(0, 4);
+}
+
+/**
+ * Format relative time (e.g., "2 days ago")
+ * @param {Date} date
+ * @returns {string}
+ */
+function formatRelativeTime(date) {
+  if (!date) return '';
+
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (diffDays === 0) return 'Today';
+  if (diffDays === 1) return 'Yesterday';
+  if (diffDays < 7) return `${diffDays} days ago`;
+  if (diffDays < 30) {
+    const weeks = Math.floor(diffDays / 7);
+    return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+  }
+  if (diffDays < 365) {
+    const months = Math.floor(diffDays / 30);
+    return `${months} month${months > 1 ? 's' : ''} ago`;
+  }
+  return 'Long time ago';
+}
+
+/**
+ * Render a compact course card for Continue Learning section
+ * @param {Object} item - { course, progress, completedSections, totalSections, lastActivity }
+ * @returns {string} HTML string
+ */
+function renderContinueLearningCard(item) {
+  const { course, progress, completedSections, totalSections, lastActivity } = item;
+  const safeGradient = sanitizeGradient(course.progressGradient);
+  const timeAgo = formatRelativeTime(lastActivity);
+  const nextSection = completedSections; // 0-indexed, so completed count = next section number
+
+  return `
+    <a href="${escapeHtml(course.url)}#/section/${nextSection}" class="continue-card" data-course-id="${escapeHtml(course.id)}">
+      <div class="continue-card-icon">${escapeHtml(course.icon || '📚')}</div>
+      <div class="continue-card-content">
+        <h4 class="continue-card-title">${escapeHtml(course.shortName || course.title)}</h4>
+        <div class="continue-card-progress">
+          <span class="continue-card-section">Section ${completedSections + 1}/${totalSections}</span>
+          ${timeAgo ? `<span class="continue-card-time">${escapeHtml(timeAgo)}</span>` : ''}
+        </div>
+        <div class="continue-card-bar">
+          <div class="continue-card-bar-fill" style="width: ${progress}%; background: ${safeGradient};"></div>
+        </div>
+        <span class="continue-card-percent">${Math.round(progress)}%</span>
+      </div>
+      <div class="continue-card-arrow">→</div>
+    </a>
+  `;
+}
+
+/**
+ * Render the Continue Learning section
+ * @param {string} containerId - ID of the container element
+ */
+export function renderContinueLearning(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const coursesInProgress = getCoursesInProgress();
+
+  // Don't render if no courses in progress
+  if (coursesInProgress.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const cardsHtml = coursesInProgress.map(renderContinueLearningCard).join('');
+
+  container.innerHTML = `
+    <section class="continue-learning-section">
+      <div class="continue-learning-header">
+        <span class="continue-learning-icon">📚</span>
+        <h2 class="continue-learning-title">Continue Learning</h2>
+        <span class="continue-learning-count">${coursesInProgress.length} course${coursesInProgress.length !== 1 ? 's' : ''} in progress</span>
+      </div>
+      <div class="continue-learning-grid">
+        ${cardsHtml}
+      </div>
+    </section>
+  `;
+}

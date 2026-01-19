@@ -171,7 +171,7 @@
 
   <!-- Hub Renderer -->
   <script type="module">
-    import { renderCourseHub, renderLeaderboardLinks, getCourseCount, initToggleButton } from './scripts/hubRenderer.js';
+    import { renderCourseHub, renderLeaderboardLinks, getCourseCount, initToggleButton, renderContinueLearning } from './scripts/hubRenderer.js';
     import { renderCardinalityViz } from './scripts/cardinalityViz.js';
     import { renderModRaceQuickPlay } from './scripts/modRaceQuickPlay.js';
     import { renderBaseRaceQuickPlay } from './scripts/baseRaceQuickPlay.js';
@@ -181,6 +181,9 @@
       // Load from Firebase with fallback to static data
       // Progress is now shown inline on course cards
       await renderCourseHub('courses-container', { insertFeaturedContentAfter: 'featured', useFirebase: true });
+
+      // Render Continue Learning section (shows courses in progress)
+      renderContinueLearning('continue-learning-container');
 
       // Initialize the expand/collapse all toggle button
       initToggleButton();
@@ -241,6 +244,9 @@
         from foundational algebra to the cryptography securing the internet.
       </p>
     </section>
+
+    <!-- Continue Learning Section (rendered dynamically if user has progress) -->
+    <div id="continue-learning-container"></div>
 
     <div class="section-controls">
       <div>
