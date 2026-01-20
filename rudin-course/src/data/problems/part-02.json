@@ -1,0 +1,306 @@
+{
+  "partId": 2,
+  "partTitle": "Basic Topology",
+  "textbookChapter": "Chapter 2",
+  "sections": [
+    {
+      "sectionId": 8,
+      "sectionTitle": "Finite, Countable, and Uncountable Sets",
+      "textbookSection": "2.1-2.14",
+      "examples": [
+        {
+          "id": "ex-2-8-1",
+          "type": "example",
+          "title": "Countability of the Rationals",
+          "statement": "Prove that the set $\\mathbb{Q}$ of all rational numbers is countable.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Strategy",
+                "content": "We will show that $\\mathbb{Q}^+$ (positive rationals) is countable, then extend to all of $\\mathbb{Q}$."
+              },
+              {
+                "title": "Arrange positive rationals in a grid",
+                "content": "Write all positive rationals $p/q$ (in lowest terms) in a grid where row $q$ contains all fractions with denominator $q$:\n\n$1/1, 2/1, 3/1, \\ldots$\n$1/2, 3/2, 5/2, \\ldots$\n$1/3, 2/3, 4/3, \\ldots$"
+              },
+              {
+                "title": "Diagonal enumeration",
+                "content": "Enumerate by diagonals: $1/1, 2/1, 1/2, 3/1, 1/3, 4/1, 3/2, 2/3, 1/4, \\ldots$\n\nThis gives a bijection $f: \\mathbb{N} \\to \\mathbb{Q}^+$."
+              },
+              {
+                "title": "Extend to all rationals",
+                "content": "$\\mathbb{Q} = \\{0\\} \\cup \\mathbb{Q}^+ \\cup \\mathbb{Q}^-$. Since $\\mathbb{Q}^- \\cong \\mathbb{Q}^+$ and a countable union of countable sets is countable, $\\mathbb{Q}$ is countable."
+              }
+            ],
+            "conclusion": "The rationals are countable. This is remarkable because $\\mathbb{Q}$ is dense in $\\mathbb{R}$, yet has the same cardinality as $\\mathbb{N}$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-8-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that the empty set is a subset of every set.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definition of subset",
+                "content": "$A \\subseteq B$ means: for all $x$, if $x \\in A$ then $x \\in B$."
+              },
+              {
+                "title": "Vacuous truth",
+                "content": "For $A = \\emptyset$: the statement \"if $x \\in \\emptyset$ then $x \\in B$\" is vacuously true because there is no $x \\in \\emptyset$."
+              },
+              {
+                "title": "Logical form",
+                "content": "The implication $P \\Rightarrow Q$ is true whenever $P$ is false. Since \"$x \\in \\emptyset$\" is always false, the implication holds for all $x$."
+              }
+            ],
+            "conclusion": "$\\emptyset \\subseteq B$ for every set $B$. This is why $\\emptyset$ is called the \"empty set\" - it has no elements to violate any subset condition."
+          }
+        },
+        {
+          "id": "2-8-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "A complex number $z$ is said to be algebraic if there are integers $a_0, \\ldots, a_n$, not all zero, such that $a_0 z^n + a_1 z^{n-1} + \\cdots + a_{n-1} z + a_n = 0$. Prove that the set of all algebraic numbers is countable.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Count polynomials of fixed degree and height",
+                "content": "For each $n \\geq 1$, let $P_n$ be the set of polynomials of degree $n$ with integer coefficients. Define the height $h = |a_0| + |a_1| + \\cdots + |a_n|$."
+              },
+              {
+                "title": "Finite polynomials per height",
+                "content": "For fixed $n$ and $h$, there are only finitely many polynomials (since coefficients are bounded). Each polynomial has at most $n$ roots."
+              },
+              {
+                "title": "Countable union",
+                "content": "The algebraic numbers are a countable union (over $n$ and $h$) of finite sets of roots. A countable union of finite sets is countable."
+              }
+            ],
+            "conclusion": "The set of algebraic numbers is countable. Combined with the uncountability of $\\mathbb{R}$, this proves the existence of transcendental numbers (like $e$ and $\\pi$)."
+          }
+        },
+        {
+          "id": "2-8-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that there exist real numbers which are not algebraic.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use cardinality",
+                "content": "We proved that algebraic numbers are countable, but $\\mathbb{R}$ is uncountable (by Cantor's diagonal argument)."
+              },
+              {
+                "title": "Conclude existence",
+                "content": "If all real numbers were algebraic, then $\\mathbb{R}$ would be countable (as a subset of a countable set). This contradicts the uncountability of $\\mathbb{R}$."
+              }
+            ],
+            "conclusion": "There exist real numbers that are not algebraic. Such numbers are called transcendental. In fact, \"most\" real numbers are transcendental in the sense that the algebraic numbers have measure zero."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 9,
+      "sectionTitle": "Metric Spaces",
+      "textbookSection": "2.15-2.28",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "2-9-1",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Is the set of all irrational real numbers countable?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume countable",
+                "content": "Suppose the irrationals $\\mathbb{R} \\setminus \\mathbb{Q}$ were countable."
+              },
+              {
+                "title": "Apply union",
+                "content": "Then $\\mathbb{R} = \\mathbb{Q} \\cup (\\mathbb{R} \\setminus \\mathbb{Q})$ would be a union of two countable sets, hence countable."
+              },
+              {
+                "title": "Contradiction",
+                "content": "But $\\mathbb{R}$ is uncountable (Cantor's theorem). Contradiction."
+              }
+            ],
+            "conclusion": "The set of irrational numbers is uncountable. In fact, removing any countable set from $\\mathbb{R}$ leaves an uncountable set."
+          }
+        },
+        {
+          "id": "2-9-2",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Let $E'$ denote the set of all limit points of a set $E$. Prove that $E'$ is closed.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Show (E')' ⊆ E'",
+                "content": "Let $x$ be a limit point of $E'$. We need to show $x \\in E'$, i.e., $x$ is a limit point of $E$."
+              },
+              {
+                "title": "Use neighborhood definition",
+                "content": "Let $N$ be any neighborhood of $x$. Since $x$ is a limit point of $E'$, there exists $y \\in E' \\cap N$ with $y \\neq x$."
+              },
+              {
+                "title": "Find point of E",
+                "content": "Since $y \\in E'$ and $N$ is open, there exists a neighborhood $M \\subseteq N$ of $y$. Since $y$ is a limit point of $E$, there exists $z \\in E \\cap M$ with $z \\neq y$."
+              },
+              {
+                "title": "Conclude",
+                "content": "Thus $z \\in E \\cap N$ and we can ensure $z \\neq x$ by choosing $M$ small enough. This shows $x$ is a limit point of $E$."
+              }
+            ],
+            "conclusion": "$E'$ is closed because it contains all its limit points: $(E')' \\subseteq E'$."
+          }
+        },
+        {
+          "id": "2-9-3",
+          "type": "exercise",
+          "number": 6,
+          "statement": "Let $A$ and $B$ be separated subsets of some $\\mathbb{R}^k$, suppose $\\mathbf{a} \\in A$, $\\mathbf{b} \\in B$, and define $\\mathbf{p}(t) = (1-t)\\mathbf{a} + t\\mathbf{b}$ for $t \\in [0,1]$. Put $A_0 = \\mathbf{p}^{-1}(A)$ and $B_0 = \\mathbf{p}^{-1}(B)$. Prove that $A_0$ and $B_0$ are separated subsets of $[0,1]$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definitions",
+                "content": "$A_0 = \\{t \\in [0,1] : \\mathbf{p}(t) \\in A\\}$ and $B_0 = \\{t \\in [0,1] : \\mathbf{p}(t) \\in B\\}$."
+              },
+              {
+                "title": "Show A₀ ∩ B̄₀ = ∅",
+                "content": "Suppose $t \\in A_0 \\cap \\overline{B_0}$. Then $\\mathbf{p}(t) \\in A$ and $t$ is in the closure of $B_0$.\n\nIf $t \\in B_0$, then $\\mathbf{p}(t) \\in A \\cap B = \\emptyset$, contradiction.\n\nIf $t$ is a limit point of $B_0$, then $\\mathbf{p}(t)$ is a limit point of $B$ (by continuity of $\\mathbf{p}$). So $\\mathbf{p}(t) \\in A \\cap \\overline{B} = \\emptyset$, contradiction."
+              },
+              {
+                "title": "Similarly for Ā₀ ∩ B₀",
+                "content": "By symmetry, $\\overline{A_0} \\cap B_0 = \\emptyset$."
+              }
+            ],
+            "conclusion": "$A_0$ and $B_0$ are separated subsets of $[0,1]$, with $0 \\in A_0$ and $1 \\in B_0$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 10,
+      "sectionTitle": "Compact Sets",
+      "textbookSection": "2.29-2.40",
+      "examples": [
+        {
+          "id": "ex-2-10-1",
+          "type": "example",
+          "title": "Heine-Borel Theorem",
+          "statement": "Prove that a subset of $\\mathbb{R}^k$ is compact if and only if it is closed and bounded.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compact ⟹ closed",
+                "content": "Let $K$ be compact. If $p \\notin K$, for each $q \\in K$ choose disjoint neighborhoods $V_q$ of $p$ and $W_q$ of $q$. The $W_q$ cover $K$, so finitely many $W_{q_1}, \\ldots, W_{q_n}$ cover $K$. Then $V = V_{q_1} \\cap \\cdots \\cap V_{q_n}$ is a neighborhood of $p$ disjoint from $K$. So $K^c$ is open."
+              },
+              {
+                "title": "Compact ⟹ bounded",
+                "content": "The open balls $B(0, n)$ for $n \\in \\mathbb{N}$ cover $K$. By compactness, finitely many suffice, so $K \\subseteq B(0, N)$ for some $N$."
+              },
+              {
+                "title": "Closed and bounded ⟹ compact",
+                "content": "If $K$ is closed and bounded, then $K \\subseteq [-M, M]^k$ for some $M$. The $k$-cell $[-M, M]^k$ is compact (by the nested intervals theorem). A closed subset of a compact set is compact."
+              }
+            ],
+            "conclusion": "In $\\mathbb{R}^k$, compact = closed + bounded. This fails in general metric spaces."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-10-1",
+          "type": "exercise",
+          "number": 7,
+          "statement": "Prove that every infinite subset of a compact set has a limit point in $K$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Contrapositive",
+                "content": "Suppose $E \\subseteq K$ is infinite and has no limit point in $K$. We derive a contradiction."
+              },
+              {
+                "title": "Construct an open cover",
+                "content": "For each $q \\in K$, since $q$ is not a limit point of $E$, there is a neighborhood $V_q$ containing at most one point of $E$ (namely $q$ itself if $q \\in E$)."
+              },
+              {
+                "title": "Apply compactness",
+                "content": "The $V_q$ cover $K$. By compactness, finitely many $V_{q_1}, \\ldots, V_{q_n}$ cover $K$. But then $E \\subseteq K \\subseteq V_{q_1} \\cup \\cdots \\cup V_{q_n}$ contains at most $n$ points."
+              },
+              {
+                "title": "Contradiction",
+                "content": "This contradicts $E$ being infinite."
+              }
+            ],
+            "conclusion": "Every infinite subset of a compact set has a limit point in the compact set. This is the Bolzano-Weierstrass property."
+          }
+        },
+        {
+          "id": "2-10-2",
+          "type": "exercise",
+          "number": 8,
+          "statement": "If $\\{K_\\alpha\\}$ is a collection of compact subsets of a metric space $X$ such that the intersection of every finite subcollection is nonempty, prove that $\\bigcap K_\\alpha$ is nonempty.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Reformulate",
+                "content": "Fix $K_1$. We need to show $K_1 \\cap \\bigcap_{\\alpha} K_\\alpha \\neq \\emptyset$."
+              },
+              {
+                "title": "Define closed sets",
+                "content": "Let $G_\\alpha = K_1 \\cap K_\\alpha$. Each $G_\\alpha$ is closed in $K_1$ (intersection of closed sets). We need $\\bigcap G_\\alpha \\neq \\emptyset$."
+              },
+              {
+                "title": "Finite intersection property",
+                "content": "Any finite intersection $G_{\\alpha_1} \\cap \\cdots \\cap G_{\\alpha_n} = K_1 \\cap K_{\\alpha_1} \\cap \\cdots \\cap K_{\\alpha_n} \\neq \\emptyset$ by hypothesis."
+              },
+              {
+                "title": "Apply compactness",
+                "content": "If $\\bigcap G_\\alpha = \\emptyset$, then $\\{K_1 \\setminus G_\\alpha\\}$ is an open cover of $K_1$. By compactness, finitely many cover $K_1$, so some finite intersection of $G_\\alpha$'s is empty. Contradiction."
+              }
+            ],
+            "conclusion": "A collection of compact sets with the finite intersection property has nonempty intersection. This is equivalent to compactness."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 12,
+      "sectionTitle": "Connected Sets",
+      "textbookSection": "2.45-2.47",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "2-12-1",
+          "type": "exercise",
+          "number": 9,
+          "statement": "Prove that a set $E \\subseteq \\mathbb{R}^1$ is connected if and only if it has the following property: If $x \\in E$, $y \\in E$, and $x < z < y$, then $z \\in E$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "⟹ direction",
+                "content": "Suppose $E$ is connected and $x, y \\in E$ with $x < z < y$ but $z \\notin E$. Then $A = E \\cap (-\\infty, z)$ and $B = E \\cap (z, \\infty)$ are separated (disjoint open sets in the subspace topology), nonempty ($x \\in A$, $y \\in B$), and $E = A \\cup B$. This contradicts connectedness."
+              },
+              {
+                "title": "⟸ direction",
+                "content": "Suppose $E$ has the intermediate property. If $E = A \\cup B$ with $A, B$ separated and nonempty, pick $a \\in A$, $b \\in B$, say $a < b$.\n\nLet $c = \\sup(A \\cap [a, b])$. Then $a \\leq c \\leq b$."
+              },
+              {
+                "title": "Show c leads to contradiction",
+                "content": "If $c \\in A$: Since $A$ is open in $E$, some interval $(c-\\epsilon, c+\\epsilon) \\cap E \\subseteq A$. By the intermediate property, $[a, c+\\epsilon/2] \\cap E \\subseteq E$, so there's an element of $A$ greater than $c$. Contradiction.\n\nIf $c \\in B$: Similarly, there's an upper bound for $A \\cap [a,b]$ less than $c$. Contradiction.\n\nIf $c \\notin E$: Then $a < c < b$ with $a, b \\in E$ but $c \\notin E$, contradicting the intermediate property."
+              }
+            ],
+            "conclusion": "A subset of $\\mathbb{R}$ is connected iff it is an interval (possibly unbounded, possibly a single point)."
+          }
+        }
+      ]
+    }
+  ]
+}

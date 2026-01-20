@@ -30,6 +30,10 @@ const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
 const ProblemsIndex = lazy(() => import('@/pages/problems/ProblemsIndex'));
 const ProblemsPart01 = lazy(() => import('@/pages/problems/ProblemsPart01'));
+const ProblemsPart02 = lazy(() => import('@/pages/problems/ProblemsPart02'));
+const ProblemsPart03 = lazy(() => import('@/pages/problems/ProblemsPart03'));
+const ProblemsPart04 = lazy(() => import('@/pages/problems/ProblemsPart04'));
+const ProblemsPart05 = lazy(() => import('@/pages/problems/ProblemsPart05'));
 
 // =============================================================================
 // SECTION CONFIGURATION
@@ -150,6 +154,38 @@ function AppContent() {
                 element={
                   <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
                     <ProblemsPart01 />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/problems/2"
+                element={
+                  <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                    <ProblemsPart02 />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/problems/3"
+                element={
+                  <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                    <ProblemsPart03 />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/problems/4"
+                element={
+                  <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                    <ProblemsPart04 />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/problems/5"
+                element={
+                  <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                    <ProblemsPart05 />
                   </Suspense>
                 }
               />

@@ -6,15 +6,19 @@ import { curriculum } from '@/data/curriculum';
 
 // Import problem data
 import part01Data from '@/data/problems/part-01.json';
+import part02Data from '@/data/problems/part-02.json';
+import part03Data from '@/data/problems/part-03.json';
+import part04Data from '@/data/problems/part-04.json';
+import part05Data from '@/data/problems/part-05.json';
 
 // Map curriculum part IDs to problem data
 // Add more parts as problem sets are created
 const problemDataByPart: Record<number, typeof part01Data | null> = {
   1: part01Data,
-  2: null, // Basic Topology - coming soon
-  3: null, // Numerical Sequences and Series - coming soon
-  4: null, // Continuity - coming soon
-  5: null, // Differentiation - coming soon
+  2: part02Data,
+  3: part03Data,
+  4: part04Data,
+  5: part05Data,
   6: null, // Riemann-Stieltjes Integral - coming soon
   7: null, // Sequences and Series of Functions - coming soon
   8: null, // Some Special Functions - coming soon
