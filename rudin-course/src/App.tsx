@@ -28,6 +28,8 @@ const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
 const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
+const ProblemsIndex = lazy(() => import('@/pages/problems/ProblemsIndex'));
+const ProblemsPart01 = lazy(() => import('@/pages/problems/ProblemsPart01'));
 
 // =============================================================================
 // SECTION CONFIGURATION
@@ -132,6 +134,26 @@ function AppContent() {
                 </Suspense>
               }
             />
+          )}
+          {FEATURES.problemSets && (
+            <>
+              <Route
+                path="/problems"
+                element={
+                  <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                    <ProblemsIndex />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/problems/1"
+                element={
+                  <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                    <ProblemsPart01 />
+                  </Suspense>
+                }
+              />
+            </>
           )}
 
           {/* Dynamic section routes - lazy loaded via SectionRouter */}
