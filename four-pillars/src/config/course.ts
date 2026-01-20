@@ -65,4 +65,5 @@ export const FEATURES = {
   quizzes: true,
   interactiveModules: true,
   theoremIndex: true,
+  problems: true,
 } as const;

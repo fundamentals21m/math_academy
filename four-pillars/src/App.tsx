@@ -28,6 +28,17 @@ const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
 
+// Problem pages - lazy loaded
+const ProblemsIndex = lazy(() => import('@/pages/problems/ProblemsIndex'));
+const ProblemsPart01 = lazy(() => import('@/pages/problems/ProblemsPart01'));
+const ProblemsPart02 = lazy(() => import('@/pages/problems/ProblemsPart02'));
+const ProblemsPart03 = lazy(() => import('@/pages/problems/ProblemsPart03'));
+const ProblemsPart04 = lazy(() => import('@/pages/problems/ProblemsPart04'));
+const ProblemsPart05 = lazy(() => import('@/pages/problems/ProblemsPart05'));
+const ProblemsPart06 = lazy(() => import('@/pages/problems/ProblemsPart06'));
+const ProblemsPart07 = lazy(() => import('@/pages/problems/ProblemsPart07'));
+const ProblemsPart08 = lazy(() => import('@/pages/problems/ProblemsPart08'));
+
 // =============================================================================
 // SECTION CONFIGURATION
 // =============================================================================
@@ -127,6 +138,28 @@ function AppContent() {
                 </Suspense>
               }
             />
+          )}
+
+          {/* Problem routes - lazy loaded */}
+          {FEATURES.problems && (
+            <>
+              <Route
+                path="/problems"
+                element={
+                  <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                    <ProblemsIndex />
+                  </Suspense>
+                }
+              />
+              <Route path="/problems/1" element={<Suspense fallback={<LoadingSpinner message="Loading..." />}><ProblemsPart01 /></Suspense>} />
+              <Route path="/problems/2" element={<Suspense fallback={<LoadingSpinner message="Loading..." />}><ProblemsPart02 /></Suspense>} />
+              <Route path="/problems/3" element={<Suspense fallback={<LoadingSpinner message="Loading..." />}><ProblemsPart03 /></Suspense>} />
+              <Route path="/problems/4" element={<Suspense fallback={<LoadingSpinner message="Loading..." />}><ProblemsPart04 /></Suspense>} />
+              <Route path="/problems/5" element={<Suspense fallback={<LoadingSpinner message="Loading..." />}><ProblemsPart05 /></Suspense>} />
+              <Route path="/problems/6" element={<Suspense fallback={<LoadingSpinner message="Loading..." />}><ProblemsPart06 /></Suspense>} />
+              <Route path="/problems/7" element={<Suspense fallback={<LoadingSpinner message="Loading..." />}><ProblemsPart07 /></Suspense>} />
+              <Route path="/problems/8" element={<Suspense fallback={<LoadingSpinner message="Loading..." />}><ProblemsPart08 /></Suspense>} />
+            </>
           )}
 
           {/* Dynamic section routes - lazy loaded via SectionRouter */}

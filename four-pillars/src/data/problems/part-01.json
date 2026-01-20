@@ -1,0 +1,149 @@
+{
+  "partId": 1,
+  "partTitle": "Straightedge and Compass",
+  "textbookChapter": "Chapter 1: Straightedge and Compass",
+  "sections": [
+    {
+      "sectionId": 1,
+      "sectionTitle": "Euclid's Construction of the Equilateral Triangle",
+      "examples": [
+        {
+          "id": "ex-1-1-1",
+          "type": "example",
+          "title": "Constructing an Equilateral Triangle",
+          "statement": "Given segment $AB$ of length 3 units, construct an equilateral triangle $ABC$ using only straightedge and compass.",
+          "solution": {
+            "steps": [
+              "Draw a circle centered at $A$ with radius $|AB| = 3$",
+              "Draw a circle centered at $B$ with radius $|BA| = 3$",
+              "Let $C$ be one of the intersection points of the two circles",
+              "Connect $A$ to $C$ and $B$ to $C$",
+              "Since $C$ is on the circle centered at $A$: $|AC| = |AB| = 3$",
+              "Since $C$ is on the circle centered at $B$: $|BC| = |BA| = 3$",
+              "Therefore $|AB| = |AC| = |BC| = 3$, making $\\triangle ABC$ equilateral"
+            ],
+            "conclusion": "The triangle $ABC$ is equilateral with all sides of length 3."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-1-1",
+          "type": "exercise",
+          "number": "1.1.1",
+          "statement": "Use Euclid's method to construct an equilateral triangle on each side of a given square. What figure results?",
+          "solution": "A regular octagon outline, or more precisely, a square with equilateral triangles on each side, forming a shape with 12 vertices."
+        },
+        {
+          "id": "1-1-2",
+          "type": "exercise",
+          "number": "1.1.2",
+          "statement": "Given a segment $AB$, explain why the two circles in Euclid's construction must intersect.",
+          "solution": "Each circle has radius $|AB|$. The distance between centers is also $|AB|$. Two circles intersect when the sum of their radii exceeds the distance between centers and each radius is less than this distance. Here: $|AB| + |AB| = 2|AB| > |AB|$ and $|AB| < |AB| + |AB|$. So the circles must intersect in exactly two points."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "sectionTitle": "Some Basic Constructions",
+      "examples": [
+        {
+          "id": "ex-1-2-1",
+          "type": "example",
+          "title": "Constructing a Perpendicular Bisector",
+          "statement": "Given segment $AB$, construct its perpendicular bisector.",
+          "solution": {
+            "steps": [
+              "Draw a circle centered at $A$ with radius $|AB|$",
+              "Draw a circle centered at $B$ with radius $|BA|$",
+              "Let $C$ and $D$ be the two intersection points",
+              "Draw line $CD$",
+              "This line passes through the midpoint of $AB$ and is perpendicular to $AB$"
+            ],
+            "conclusion": "Line $CD$ is the perpendicular bisector of $AB$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-2-1",
+          "type": "exercise",
+          "number": "1.2.1",
+          "statement": "Why are points $C$ and $D$ (the intersection points in the perpendicular bisector construction) equidistant from both $A$ and $B$?",
+          "solution": "Point $C$ lies on the circle centered at $A$ with radius $|AB|$, so $|AC| = |AB|$. Point $C$ also lies on the circle centered at $B$ with radius $|AB|$, so $|BC| = |AB|$. Therefore $|AC| = |BC|$. The same reasoning applies to $D$."
+        },
+        {
+          "id": "1-2-2",
+          "type": "exercise",
+          "number": "1.2.2",
+          "statement": "Construct the angle bisector of a given angle $\\angle AOB$.",
+          "solution": "Draw a circle centered at $O$ intersecting both rays at points $P$ (on $OA$) and $Q$ (on $OB$). Draw circles of equal radius centered at $P$ and $Q$. Their intersection $R$ (other than any intersection on line $PQ$) lies on the angle bisector. Draw ray $OR$."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "sectionTitle": "Multiplication and Division",
+      "examples": [
+        {
+          "id": "ex-1-3-1",
+          "type": "example",
+          "title": "Geometric Multiplication",
+          "statement": "Given segments of length $a = 2$, $b = 3$, and a unit segment, construct a segment of length $ab = 6$.",
+          "solution": {
+            "steps": [
+              "Draw a ray from point $O$",
+              "Mark off the unit segment $|OU| = 1$ and segment $|OA| = a = 2$ on this ray",
+              "Draw a second ray from $O$ at any angle",
+              "Mark off segment $|OB| = b = 3$ on this second ray",
+              "Connect $U$ to $B$",
+              "Draw a line through $A$ parallel to $UB$, intersecting the second ray at $C$",
+              "By Thales' theorem: $\\frac{|OC|}{|OB|} = \\frac{|OA|}{|OU|}$",
+              "So $|OC| = |OB| \\cdot \\frac{|OA|}{|OU|} = 3 \\cdot \\frac{2}{1} = 6$"
+            ],
+            "conclusion": "Segment $OC$ has length $ab = 6$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-3-1",
+          "type": "exercise",
+          "number": "1.3.1",
+          "statement": "Using geometric division, construct a segment of length $\\frac{5}{3}$ given a unit segment.",
+          "solution": "Mark segments of length 5 and 3 on two rays from $O$. If $|OA| = 5$ and $|OB| = 3$ on the respective rays, and $|OU| = 1$ on the first ray, then draw line $AB$ and construct a parallel through $U$ to find the point giving length $\\frac{5}{3}$."
+        }
+      ]
+    },
+    {
+      "sectionId": 4,
+      "sectionTitle": "Similar Triangles",
+      "examples": [
+        {
+          "id": "ex-1-4-1",
+          "type": "example",
+          "title": "Using Similar Triangles",
+          "statement": "If $\\triangle ABC \\sim \\triangle DEF$ with $|AB| = 4$, $|DE| = 6$, and $|BC| = 5$, find $|EF|$.",
+          "solution": {
+            "steps": [
+              "Since the triangles are similar, corresponding sides are proportional",
+              "$\\frac{|AB|}{|DE|} = \\frac{|BC|}{|EF|}$",
+              "$\\frac{4}{6} = \\frac{5}{|EF|}$",
+              "$|EF| = \\frac{6 \\cdot 5}{4} = \\frac{30}{4} = 7.5$"
+            ],
+            "conclusion": "$|EF| = 7.5$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-4-1",
+          "type": "exercise",
+          "number": "1.4.1",
+          "statement": "Prove that two triangles with equal corresponding angles are similar.",
+          "solution": "If $\\angle A = \\angle D$, $\\angle B = \\angle E$, then $\\angle C = \\angle F$ (since angles sum to $180°$). Place $\\triangle DEF$ so $D$ coincides with $A$ and $DE$ lies along $AB$. Since $\\angle D = \\angle A$ and $\\angle E = \\angle B$, line $EF$ is parallel to $BC$ (alternate angles). By Thales' theorem, $\\frac{|AD|}{|AB|} = \\frac{|AE|}{|AC|} = \\frac{|DE|}{|BC|}$, proving proportionality."
+        }
+      ]
+    }
+  ]
+}
