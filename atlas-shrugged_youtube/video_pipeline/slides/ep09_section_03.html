@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b4545; --accent-rgb: 139, 69, 69; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(107, 76, 122, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .dichotomy {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 45px;
+    }
+    .side {
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    }
+    .side.sacred {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    }
+    .side.profane {
+    background: rgba(107, 76, 122, 0.08);
+    border: 1px solid rgba(107, 76, 122, 0.3);
+    }
+    .side-label {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .sacred .side-label { color: #d4a84b; }
+    .profane .side-label { color: #6b4c7a; }
+    .side-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.4;
+    }
+    .conflict-box {
+    background: rgba(139, 69, 69, 0.08);
+    border: 1px solid rgba(139, 69, 69, 0.3);
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .conflict-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.5;
+    }
+    .question {
+    padding: 25px 40px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    }
+    .question-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .question-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The False Dichotomy</div>
+      <div class="title">Rearden's Conflict</div>
+      <div class="dichotomy">
+        <div class="side sacred">
+          <div class="side-label">"Sacred"</div>
+          <div class="side-text">His mind, his work, his achievements&mdash;noble and pure</div>
+        </div>
+        <div class="side profane">
+          <div class="side-label">"Profane"</div>
+          <div class="side-text">His body, his desires&mdash;base and shameful</div>
+        </div>
+      </div>
+      <div class="conflict-box">
+        <div class="conflict-text">
+          "He felt the desire to have her, and fought it. He had held desire as something to be conquered. He had won every battle against inanimate nature&mdash;but this was a battle he lost."
+        </div>
+      </div>
+      <div class="question">
+        <div class="question-text">
+          And yet&mdash;why should he want to win it? Why should desire for someone he <em>admires</em> be something to conquer rather than <em>celebrate</em>?
+        </div>
+      </div>
+    </div>
+</body>
+</html>

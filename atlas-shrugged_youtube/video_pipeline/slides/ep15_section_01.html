@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .main-title {
+      color: #f5f0e6;
+      font-size: 72px;
+      margin-bottom: 50px;
+    }
+    .metaphor {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .metaphor-box {
+      background: rgba(139, 45, 45, 0.08);
+      border: 1px solid rgba(139, 45, 45, 0.3);
+      padding: 30px;
+      width: 380px;
+      text-align: left;
+    }
+    .metaphor-label {
+      color: #8b2d2d;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .metaphor-text {
+      color: #f5f0e6;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .conclusion {
+      color: #d4a84b;
+      font-size: 32px;
+      font-style: italic;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 15 &bull; Part 2: Either-Or</div>
+    <div class="main-title">Account Overdrawn</div>
+    <div class="metaphor">
+      <div class="metaphor-box">
+        <div class="metaphor-label">A Bank Account</div>
+        <div class="metaphor-text">You can only withdraw what you've deposited. Try to withdraw more, and the check bounces.</div>
+      </div>
+      <div class="metaphor-box">
+        <div class="metaphor-label">Society</div>
+        <div class="metaphor-text">You can only consume what has been produced. Try to consume more, and the system collapses.</div>
+      </div>
+    </div>
+    <div class="conclusion">America has been writing checks against an account that's running dry.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 56px;
+      margin-bottom: 50px;
+    }
+    .logic-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto 50px;
+    }
+    .logic-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .action {
+      color: #a09080;
+      font-size: 22px;
+      width: 280px;
+      text-align: right;
+    }
+    .arrow {
+      color: #8b2d2d;
+      font-size: 24px;
+    }
+    .consequence {
+      color: #f5f0e6;
+      font-size: 22px;
+    }
+    .consequence em {
+      color: #8b2d2d;
+      font-style: normal;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(139, 45, 45, 0.3);
+      padding-top: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #d4a84b;
+      font-size: 28px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 15 &bull; The Economic Reality</div>
+    <div class="section-title">The Unforgiving Logic</div>
+    <div class="logic-grid">
+      <div class="logic-row">
+        <div class="action">When you tax producers</div>
+        <div class="arrow">&rarr;</div>
+        <div class="consequence">some <em>stop producing</em></div>
+      </div>
+      <div class="logic-row">
+        <div class="action">When you regulate creators</div>
+        <div class="arrow">&rarr;</div>
+        <div class="consequence">some <em>stop creating</em></div>
+      </div>
+      <div class="logic-row">
+        <div class="action">When you punish success</div>
+        <div class="arrow">&rarr;</div>
+        <div class="consequence">some <em>stop succeeding</em></div>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">Each is a withdrawal from the account.<br>The producers who filled it are gone.</div>
+    </div>
+  </div>
+</body>
+</html>

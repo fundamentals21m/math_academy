@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .finale-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #d4a84b 0%, #8b6914 100%);
+      color: #1a1a1a;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      padding: 6px 16px;
+      margin-bottom: 15px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 42px;
+      margin-bottom: 40px;
+    }
+    .intro-box {
+      max-width: 850px;
+      margin: 0 auto 40px;
+      padding: 30px 40px;
+      border: 1px solid rgba(212, 168, 75, 0.4);
+      background: rgba(212, 168, 75, 0.05);
+    }
+    .intro-text {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.6;
+    }
+    .intro-text em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .theme-line {
+      color: #a09080;
+      font-size: 20px;
+      margin-top: 30px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="finale-badge">SERIES FINALE</div>
+    <div class="episode-tag">Episode 30 &bull; Introduction</div>
+    <div class="section-title">In the Name of the Best Within Us</div>
+    <div class="intro-box">
+      <div class="intro-text">We must build our lives and our society on the <em>highest possibilities</em> of human nature, not the lowest.</div>
+    </div>
+    <div class="theme-line">Welcome to the final episode of Atlas Shrugged.</div>
+  </div>
+</body>
+</html>

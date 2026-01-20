@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #5ea9a8; --accent-rgb: 94, 169, 168; }
+    .recap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+    }
+    .recap-item {
+    background: rgba(212, 168, 75, 0.05);
+    border: 1px solid rgba(212, 168, 75, 0.2);
+    padding: 22px;
+    text-align: left;
+    }
+    .recap-icon {
+    color: #d4a84b;
+    font-size: 22px;
+    margin-bottom: 10px;
+    }
+    .recap-text {
+    color: #f5f0e6;
+    font-size: 18px;
+    line-height: 1.4;
+    }
+    .recap-item:nth-child(4) {
+    grid-column: 1 / 2;
+    }
+    .recap-item:nth-child(5) {
+    grid-column: 2 / 4;
+    }
+    .next-episode {
+    background: rgba(94, 169, 168, 0.08);
+    border: 1px solid rgba(94, 169, 168, 0.3);
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    }
+    .next-label {
+    color: #5ea9a8;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .next-text {
+    color: #f5f0e6;
+    font-size: 26px;
+    line-height: 1.5;
+    }
+    .next-text em {
+    color: #5ea9a8;
+    font-style: normal;
+    }
+    .outro {
+    color: #a09080;
+    font-size: 28px;
+    }
+    .outro em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Episode 5 Summary</div>
+      <div class="title">What We Learned</div>
+      <div class="recap-grid">
+        <div class="recap-item">
+          <div class="recap-icon">1</div>
+          <div class="recap-text">Francisco's Money Speech presents money as a tool of achievement and free exchange, not as a source of evil.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">2</div>
+          <div class="recap-text">The party intellectuals preach nihilism and anti-reason philosophy, providing cover for the looters.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">3</div>
+          <div class="recap-text">Rearden and Francisco meet for the first time, beginning a relationship central to the novel.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">4</div>
+          <div class="recap-text">The social gathering exposes the conflict between producers and parasites.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">5</div>
+          <div class="recap-text">Francisco drops his mask briefly, revealing he is far more than the idle playboy he pretends to be.</div>
+        </div>
+      </div>
+      <div class="next-episode">
+        <div class="next-label">Next Episode</div>
+        <div class="next-text">
+          <em>"The Non-Commercial"</em>&mdash;the conflict between productive enterprise<br>
+          and those who despise commerce. We'll see how the philosophical ideas<br>
+          from the Money Speech play out in practical reality.
+        </div>
+      </div>
+      <div class="outro">
+        <em>See you in the next one.</em>
+      </div>
+    </div>
+</body>
+</html>

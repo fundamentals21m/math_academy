@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #5ea9a8; --accent-rgb: 94, 169, 168; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(94, 169, 168, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .glow-right {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(ellipse at center, rgba(184, 115, 51, 0.12) 0%, transparent 60%);
+    transform: translate(50%, -50%);
+    pointer-events: none;
+    }
+    .characters {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-bottom: 50px;
+    }
+    .character {
+    width: 300px;
+    text-align: center;
+    }
+    .char-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    }
+    .char-icon.rearden {
+    background: rgba(94, 169, 168, 0.15);
+    border: 2px solid rgba(94, 169, 168, 0.4);
+    color: #5ea9a8;
+    }
+    .char-icon.francisco {
+    background: rgba(184, 115, 51, 0.15);
+    border: 2px solid rgba(184, 115, 51, 0.4);
+    color: #b87333;
+    }
+    .char-name {
+    color: #f5f0e6;
+    font-size: 28px;
+    margin-bottom: 10px;
+    }
+    .char-desc {
+    color: #a09080;
+    font-size: 18px;
+    line-height: 1.5;
+    }
+    .quote-box {
+    background: rgba(184, 115, 51, 0.08);
+    border: 1px solid rgba(184, 115, 51, 0.4);
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    }
+    .mystery {
+    padding: 25px 50px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    .mystery-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .mystery-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-right"></div>
+    <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">A Central Relationship Begins</div>
+      <div class="title">Rearden Meets Francisco</div>
+      <div class="characters">
+        <div class="character">
+          <div class="char-icon rearden">HR</div>
+          <div class="char-name">Hank Rearden</div>
+          <div class="char-desc">Despite being told Francisco is his enemy, finds himself intrigued by his unusual honesty</div>
+        </div>
+        <div class="character">
+          <div class="char-icon francisco">FA</div>
+          <div class="char-name">Francisco d'Anconia</div>
+          <div class="char-desc">His directness contrasts sharply with the evasiveness of everyone else at the party</div>
+        </div>
+      </div>
+      <div class="quote-box">
+        <div class="quote">
+          "Mr. Rearden, I came to this party solely in order to meet you.<br>
+          I want to learn to understand you."
+        </div>
+        <div class="attribution">&mdash; Francisco d'Anconia</div>
+      </div>
+      <div class="mystery">
+        <div class="mystery-text">
+          Then comes the mysterious statement: Francisco hints that he eventually wants <em>Rearden to lose money</em>.
+          Why would someone who clearly admires Rearden want this? This question will drive much of the novel's plot.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

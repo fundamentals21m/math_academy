@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #d4a84b;
+      font-size: 56px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(212, 168, 75, 0.3);
+    }
+    .description {
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .desc-line {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .desc-line em {
+      color: #d4a84b;
+      font-style: italic;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(212, 168, 75, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #a09080;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 19 &bull; The Encounter</div>
+    <div class="section-title">The Encounter</div>
+    <div class="description">
+      <div class="desc-line">A face that shows the serenity of someone who has <em>resolved all contradictions</em>.</div>
+      <div class="desc-line">Not someone who avoided life's challenges&mdash;but one who <em>met them and won</em>.</div>
+      <div class="desc-line">Not by luck, but by <em>understanding</em>. Not by evasion, but by <em>reason</em>.</div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">Dagny now knows that what she's seeking exists.</div>
+    </div>
+  </div>
+</body>
+</html>

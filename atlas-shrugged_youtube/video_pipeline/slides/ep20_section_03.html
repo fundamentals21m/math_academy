@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.15) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #d4a84b;
+      font-size: 52px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(212, 168, 75, 0.3);
+    }
+    .meanings {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .meaning {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .dollar {
+      color: #d4a84b;
+      font-size: 36px;
+      width: 50px;
+      text-align: center;
+    }
+    .meaning-text {
+      color: #f5f0e6;
+      font-size: 24px;
+      text-align: left;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(212, 168, 75, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #a09080;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 20 &bull; The Symbol Reclaimed</div>
+    <div class="section-title">The Symbol Reclaimed</div>
+    <div class="meanings">
+      <div class="meaning">
+        <div class="dollar">$</div>
+        <div class="meaning-text">A certificate of production&mdash;work done, value created</div>
+      </div>
+      <div class="meaning">
+        <div class="dollar">$</div>
+        <div class="meaning-text">The moment someone creates and another voluntarily pays</div>
+      </div>
+      <div class="meaning">
+        <div class="dollar">$</div>
+        <div class="meaning-text">The alternative to force&mdash;trade over theft</div>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">The right of producers to keep what they produce.</div>
+    </div>
+  </div>
+</body>
+</html>

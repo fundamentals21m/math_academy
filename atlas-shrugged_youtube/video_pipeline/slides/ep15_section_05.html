@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.1) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .truths {
+      max-width: 900px;
+      margin: 0 auto 50px;
+    }
+    .truth {
+      color: #f5f0e6;
+      font-size: 26px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      padding-left: 30px;
+      border-left: 2px solid rgba(139, 45, 45, 0.4);
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .final-line {
+      color: #d4a84b;
+      font-size: 32px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .closing {
+      color: #a09080;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 15 &bull; Closing</div>
+    <div class="truths">
+      <div class="truth">You cannot consume what has not been produced.</div>
+      <div class="truth">You cannot spend what does not exist.</div>
+      <div class="truth">You cannot demand services from people who have vanished.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="final-line">When your account is overdrawn, the checks bounce.</div>
+    <div class="closing">See you in the next episode.</div>
+  </div>
+</body>
+</html>

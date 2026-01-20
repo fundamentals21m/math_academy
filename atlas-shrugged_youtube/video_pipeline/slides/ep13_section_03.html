@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(90, 106, 90, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .guilts {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 40px;
+    }
+    .guilt-item {
+    background: rgba(90, 106, 90, 0.08);
+    border: 1px solid rgba(90, 106, 90, 0.3);
+    padding: 25px 35px;
+    width: 350px;
+    text-align: left;
+    }
+    .guilt-virtue {
+    color: #d4a84b;
+    font-size: 20px;
+    margin-bottom: 10px;
+    }
+    .guilt-accusation {
+    color: #5a6a5a;
+    font-size: 18px;
+    font-style: italic;
+    }
+    .truth-box {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .truth-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .truth-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+    .exploitation {
+    padding: 25px 40px;
+    border-left: 3px solid #5a6a5a;
+    background: rgba(90, 106, 90, 0.05);
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    .exploitation-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .exploitation-text em {
+    color: #5a6a5a;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Manufactured Shame</div>
+      <div class="title">Guilt as Weapon</div>
+      <div class="guilts">
+        <div class="guilt-item">
+          <div class="guilt-virtue">Are you successful?</div>
+          <div class="guilt-accusation">You should feel guilty&mdash;others are not.</div>
+        </div>
+        <div class="guilt-item">
+          <div class="guilt-virtue">Are you intelligent?</div>
+          <div class="guilt-accusation">You should feel guilty&mdash;others are not.</div>
+        </div>
+        <div class="guilt-item">
+          <div class="guilt-virtue">Are you productive?</div>
+          <div class="guilt-accusation">You should feel guilty&mdash;others are not.</div>
+        </div>
+      </div>
+      <div class="truth-box">
+        <div class="truth-text">
+          This guilt has <em>no basis in wrongdoing</em>. The producer has harmed no one. But he has been taught that his success itself is an <em>offense</em> against those who have not succeeded.
+        </div>
+      </div>
+      <div class="exploitation">
+        <div class="exploitation-text">
+          No threat is made. No force is used. The victim <em>destroys himself</em> through his own misplaced virtue.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

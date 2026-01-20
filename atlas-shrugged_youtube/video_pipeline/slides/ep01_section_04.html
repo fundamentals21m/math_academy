@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .character-visual {
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(180deg, rgba(212, 168, 75, 0.2) 0%, rgba(212, 168, 75, 0.05) 100%);
+    border: 2px solid rgba(212, 168, 75, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    }
+    .initials {
+    font-size: 180px;
+    color: #d4a84b;
+    opacity: 0.8;
+    }
+    .character-info {
+    max-width: 900px;
+    }
+    .name {
+    color: #f5f0e6;
+    font-size: 72px;
+    margin-bottom: 16px;
+    }
+    .role {
+    color: #d4a84b;
+    font-size: 28px;
+    margin-bottom: 40px;
+    }
+    .traits {
+    display: flex;
+    gap: 20px;
+    }
+    .trait {
+    background: rgba(212, 168, 75, 0.1);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    padding: 12px 24px;
+    color: #f5f0e6;
+    font-size: 18px;
+    }
+    .contrast-box {
+    margin-top: 40px;
+    padding: 24px 32px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    }
+    .contrast-text {
+    color: #a09080;
+    font-size: 22px;
+    }
+    .contrast-text em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="character-visual">
+        <div class="initials">DT</div>
+      </div>
+      <div class="character-info">
+        <div class="tag">Protagonist</div>
+        <div class="name">Dagny Taggart</div>
+        <div class="role">Vice President in Charge of Operations</div>
+        <div class="description">
+          A woman who refuses to give up on the world despite its decline.
+          Unlike her brother James, Dagny actually keeps the railroad running.
+        </div>
+        <div class="traits">
+          <div class="trait">Competence</div>
+          <div class="trait">Determination</div>
+          <div class="trait">Concrete Thinking</div>
+        </div>
+        <div class="contrast-box">
+          <div class="contrast-text">
+            <em>James speaks in abstractions</em> about "social responsibility"<br>
+            <em>Dagny speaks in concrete terms</em> about rail shipments and bridge repairs
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

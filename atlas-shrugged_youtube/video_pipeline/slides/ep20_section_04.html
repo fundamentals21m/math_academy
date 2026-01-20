@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #8b2d2d;
+      font-size: 64px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(139, 45, 45, 0.3);
+    }
+    .choices {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .choice-col {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .choice {
+      font-size: 26px;
+      padding: 10px 0;
+    }
+    .choice.left {
+      color: #d4a84b;
+      text-align: right;
+    }
+    .choice.right {
+      color: #8b2d2d;
+      text-align: left;
+    }
+    .or {
+      color: #a09080;
+      font-size: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px 20px;
+    }
+    .or span {
+      padding: 10px 0;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(139, 45, 45, 0.3);
+      padding-top: 40px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #f5f0e6;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 20 &bull; Either-Or</div>
+    <div class="section-title">Either&ndash;Or</div>
+    <div class="choices">
+      <div class="choice-col">
+        <div class="choice left">Production</div>
+        <div class="choice left">Create value</div>
+        <div class="choice left">Trade</div>
+      </div>
+      <div class="or">
+        <span>or</span>
+        <span>or</span>
+        <span>or</span>
+      </div>
+      <div class="choice-col">
+        <div class="choice right">Looting</div>
+        <div class="choice right">Seize value</div>
+        <div class="choice right">Steal</div>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">There is no middle ground.</div>
+    </div>
+  </div>
+</body>
+</html>

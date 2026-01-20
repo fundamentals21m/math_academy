@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #5ea9a8; --accent-rgb: 94, 169, 168; }
+    .recap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+    }
+    .recap-item {
+    background: rgba(212, 168, 75, 0.05);
+    border: 1px solid rgba(212, 168, 75, 0.2);
+    padding: 25px;
+    text-align: left;
+    }
+    .recap-icon {
+    color: #d4a84b;
+    font-size: 24px;
+    margin-bottom: 12px;
+    }
+    .recap-text {
+    color: #f5f0e6;
+    font-size: 20px;
+    line-height: 1.4;
+    }
+    .recap-item:nth-child(4) {
+    grid-column: 1 / 2;
+    }
+    .recap-item:nth-child(5) {
+    grid-column: 2 / 4;
+    }
+    .next-episode {
+    background: rgba(94, 169, 168, 0.08);
+    border: 1px solid rgba(94, 169, 168, 0.3);
+    padding: 35px 60px;
+    margin-bottom: 40px;
+    }
+    .next-label {
+    color: #5ea9a8;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .next-text {
+    color: #f5f0e6;
+    font-size: 26px;
+    line-height: 1.5;
+    }
+    .next-text em {
+    color: #5ea9a8;
+    font-style: normal;
+    }
+    .outro {
+    color: #a09080;
+    font-size: 28px;
+    }
+    .outro em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Episode 3 Summary</div>
+      <div class="title">What We Learned</div>
+      <div class="recap-grid">
+        <div class="recap-item">
+          <div class="recap-icon">1</div>
+          <div class="recap-text">The looters' conspiracy is revealed: Taggart, Boyle, and others plan to use government regulation to destroy competitors.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">2</div>
+          <div class="recap-text">The Anti-dog-eat-dog Rule will force Phoenix-Durango out of Colorado, rewarding incompetence.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">3</div>
+          <div class="recap-text">Wesley Mouch is betraying his employer Rearden, working secretly with the conspirators.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">4</div>
+          <div class="recap-text">Looting rhetoric uses "fairness" and "public good" to disguise plunder.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">5</div>
+          <div class="recap-text">Pull replaces merit as the means of success in a society corrupted by political manipulation.</div>
+        </div>
+      </div>
+      <div class="next-episode">
+        <div class="next-label">Next Episode</div>
+        <div class="next-text">
+          We'll meet the <em>prime movers of industry</em> and learn about<br>
+          <em>Francisco d'Anconia's brilliant youth</em>&mdash;deepening the mystery<br>
+          of why he seems to have abandoned his genius.
+        </div>
+      </div>
+      <div class="outro">
+        <em>See you in the next one.</em>
+      </div>
+    </div>
+</body>
+</html>

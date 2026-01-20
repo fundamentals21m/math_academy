@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.2) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #d4a84b;
+      font-size: 48px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(212, 168, 75, 0.3);
+    }
+    .return-box {
+      max-width: 850px;
+      margin: 0 auto 40px;
+      padding: 30px;
+      border: 1px solid rgba(212, 168, 75, 0.3);
+      background: rgba(212, 168, 75, 0.03);
+    }
+    .return-text {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .return-text:last-child {
+      margin-bottom: 0;
+    }
+    .return-text em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .condition {
+      color: #d4a84b;
+      font-size: 22px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 30 &bull; The Return</div>
+    <div class="section-title">The Return</div>
+    <div class="return-box">
+      <div class="return-text">The strike is over. Not because they surrendered&mdash;because they <em>won</em>.</div>
+      <div class="return-text">They ask only for <em>freedom</em>&mdash;to think, to produce, to keep what they've earned.</div>
+    </div>
+    <div class="condition">Meet it, and civilization rises again. Reject it, and the darkness continues.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.18) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #8b2d2d;
+      font-size: 64px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(139, 45, 45, 0.3);
+    }
+    .logic-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 50px;
+    }
+    .logic-step {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .step-num {
+      color: #8b2d2d;
+      font-size: 36px;
+      width: 50px;
+      text-align: center;
+    }
+    .step-text {
+      color: #f5f0e6;
+      font-size: 24px;
+      text-align: left;
+    }
+    .therefore {
+      border-top: 1px solid rgba(139, 45, 45, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .therefore-text {
+      color: #d4a84b;
+      font-size: 28px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 16 &bull; The Seizure</div>
+    <div class="section-title">The Seizure</div>
+    <div class="logic-steps">
+      <div class="logic-step">
+        <div class="step-num">1</div>
+        <div class="step-text">Rearden Metal is too valuable to be controlled by one man</div>
+      </div>
+      <div class="logic-step">
+        <div class="step-num">2</div>
+        <div class="step-text">The public interest requires it be available to all</div>
+      </div>
+      <div class="logic-step">
+        <div class="step-num">3</div>
+        <div class="step-text">The government will take control of production</div>
+      </div>
+    </div>
+    <div class="therefore">
+      <div class="therefore-text">Missing: any recognition of the man who created it.</div>
+    </div>
+  </div>
+</body>
+</html>

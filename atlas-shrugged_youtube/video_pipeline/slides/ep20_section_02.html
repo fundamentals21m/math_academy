@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.1) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .recap-box {
+      border-left: 3px solid #8b2d2d;
+      padding: 25px 30px;
+      background: rgba(139, 45, 45, 0.06);
+      max-width: 800px;
+      margin: 0 auto 50px;
+      text-align: left;
+    }
+    .recap-label {
+      color: #8b2d2d;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .recap-text {
+      color: #a09080;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .divider {
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .today {
+      color: #d4a84b;
+      font-size: 26px;
+      font-style: italic;
+      max-width: 750px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .finale-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 20 &bull; Introduction</div>
+    <div class="section-title">The Final Episode of Part Two</div>
+    <div class="recap-box">
+      <div class="recap-label">Previously</div>
+      <div class="recap-text">Dagny glimpsed a face without pain or fear or guilt&mdash;someone who has solved the problem of living. The answer is close.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="today">Today: The symbol chosen by the strikers.<br>The emblem of free exchange between free people.</div>
+    <div class="finale-tag">Part II: Either-Or &bull; Finale</div>
+  </div>
+</body>
+</html>

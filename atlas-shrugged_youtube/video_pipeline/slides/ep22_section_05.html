@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .truth {
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .truth-line {
+      color: #f5f0e6;
+      font-size: 26px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .truth-line em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .final-line {
+      color: #d4a84b;
+      font-size: 30px;
+      font-style: italic;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .closing {
+      color: #a09080;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 22 &bull; Closing</div>
+    <div class="truth">
+      <div class="truth-line"><em>Greed</em> isn't the problem&mdash;it's the solution.</div>
+      <div class="truth-line">The real problem is <em>force</em>&mdash;taking without trading.</div>
+      <div class="truth-line">Eliminate force. What remains is greed&mdash;and <em>greed builds paradise</em>.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="final-line">The looters said it couldn't work.<br>The valley proves them wrong.</div>
+    <div class="closing">See you in the next episode.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .recap {
+    flex: 1;
+    }
+    .points {
+    list-style: none;
+    }
+    .points li {
+    color: #a09080;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+    }
+    .points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 8px;
+    height: 8px;
+    background: #d4a84b;
+    }
+    .points li em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .preview {
+    width: 500px;
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    padding: 40px;
+    }
+    .preview-tag {
+    color: #d4a84b;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    }
+    .preview-title {
+    color: #f5f0e6;
+    font-size: 36px;
+    margin-bottom: 8px;
+    }
+    .preview-subtitle {
+    color: #d4a84b;
+    font-size: 22px;
+    margin-bottom: 24px;
+    }
+    .preview-desc {
+    color: #a09080;
+    font-size: 20px;
+    line-height: 1.5;
+    }
+    .cta {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(212, 168, 75, 0.2);
+    color: #f5f0e6;
+    font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="recap">
+        <div class="tag">Episode 2 Recap</div>
+        <div class="title">What We Learned</div>
+        <ul class="points">
+          <li><em>Hank Rearden</em>&mdash;the archetypal creator, ten years building Rearden Metal</li>
+          <li>The <em>Rearden family</em> represents parasites who drain producers while resenting them</li>
+          <li>The <em>bracelet scene</em> shows the conflict between those who understand value and those who don't</li>
+          <li><em>The sanction of the victim</em>&mdash;how producers accept guilt for supporting parasites</li>
+          <li>Business connection between Rearden and <em>Taggart Transcontinental</em> established</li>
+        </ul>
+      </div>
+      <div class="preview">
+        <div class="preview-tag">Next Episode</div>
+        <div class="preview-title">The Top and the Bottom</div>
+        <div class="preview-subtitle">Episode 3</div>
+        <div class="preview-desc">
+          We'll expose the conspiracy of the looters&mdash;the secret meeting where James Taggart, Orren Boyle, and others plot to use government regulation to destroy their more capable competitors.
+        </div>
+        <div class="cta">
+          See you in the next one.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

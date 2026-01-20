@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .bill-box {
+    background: rgba(139, 45, 45, 0.1);
+    border: 2px solid rgba(139, 45, 45, 0.4);
+    padding: 35px 50px;
+    margin-bottom: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .bill-label {
+    color: #8b2d2d;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .bill-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .contrast {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+    }
+    .contrast-box {
+    width: 450px;
+    padding: 30px;
+    text-align: left;
+    }
+    .contrast-box.claim {
+    background: rgba(100, 120, 140, 0.08);
+    border: 1px solid rgba(100, 120, 140, 0.3);
+    }
+    .contrast-box.reality {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    }
+    .contrast-label {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .claim .contrast-label { color: #64788c; }
+    .reality .contrast-label { color: #d4a84b; }
+    .contrast-text {
+    color: #f5f0e6;
+    font-size: 20px;
+    line-height: 1.5;
+    }
+    .inversion {
+    padding: 25px 40px;
+    border-left: 3px solid #8b2d2d;
+    background: rgba(139, 45, 45, 0.05);
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    }
+    .inversion-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .inversion-text em {
+    color: #8b2d2d;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Legislation</div>
+      <div class="title">Equalization of Opportunity Bill</div>
+      <div class="bill-box">
+        <div class="bill-label">What It Mandates</div>
+        <div class="bill-text">
+          Any business owner operating in multiple industries must divest from all but one.<br>
+          Rearden, who owns steel mills and ore mines, must sell his mines.
+        </div>
+      </div>
+      <div class="contrast">
+        <div class="contrast-box claim">
+          <div class="contrast-label">The Claimed Purpose</div>
+          <div class="contrast-text">Helping the "little guy"&mdash;giving smaller competitors a chance against industrial giants.</div>
+        </div>
+        <div class="contrast-box reality">
+          <div class="contrast-label">The Actual Effect</div>
+          <div class="contrast-text">Strips a productive man of property he built through decades, transferring it to those who never created it.</div>
+        </div>
+      </div>
+      <div class="inversion">
+        <div class="inversion-text">
+          This is the <em>inversion of exploitation</em>. The productive are forced to surrender their creations to the unproductive. Achievement is <em>punished</em>. Incompetence is <em>rewarded</em>.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

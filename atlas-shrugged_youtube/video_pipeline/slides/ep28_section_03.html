@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .contrast-box {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .contrast-item {
+      padding: 25px 35px;
+      text-align: left;
+    }
+    .contrast-item.wrong {
+      border-left: 3px solid #8b4545;
+      background: rgba(139, 69, 69, 0.06);
+    }
+    .contrast-item.right {
+      border-left: 3px solid #d4a84b;
+      background: rgba(212, 168, 75, 0.06);
+    }
+    .contrast-label {
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .contrast-label.wrong { color: #8b4545; }
+    .contrast-label.right { color: #d4a84b; }
+    .contrast-text {
+      color: #f5f0e6;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .contrast-text em {
+      font-style: normal;
+    }
+    .contrast-item.wrong .contrast-text em { color: #8b4545; }
+    .contrast-item.right .contrast-text em { color: #d4a84b; }
+    .bottom-line {
+      color: #a09080;
+      font-size: 20px;
+      font-style: italic;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 28 &bull; What Selfishness Means</div>
+    <div class="section-title">Two Kinds of Self-Interest</div>
+    <div class="contrast-box">
+      <div class="contrast-item wrong">
+        <div class="contrast-label wrong">False Selfishness</div>
+        <div class="contrast-text">Grabbing whatever you want without thought. The addict who ruins his health for pleasure. That's not self-interest&mdash;that's <em>self-destruction</em>.</div>
+      </div>
+      <div class="contrast-item right">
+        <div class="contrast-label right">Rational Selfishness</div>
+        <div class="contrast-text">Identifying what actually serves your life&mdash;long term, comprehensively, realistically&mdash;and pursuing it with <em>discipline and integrity</em>.</div>
+      </div>
+    </div>
+    <div class="bottom-line">The rational egoist is, paradoxically, the most reliable person you could meet.</div>
+  </div>
+</body>
+</html>

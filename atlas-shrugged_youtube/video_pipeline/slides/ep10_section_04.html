@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(200, 80, 40, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .choices {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 50px;
+    }
+    .choice-box {
+    width: 450px;
+    padding: 30px;
+    text-align: left;
+    }
+    .choice-box.submit {
+    background: rgba(139, 45, 45, 0.08);
+    border: 1px solid rgba(139, 45, 45, 0.25);
+    }
+    .choice-box.destroy {
+    background: rgba(200, 80, 40, 0.08);
+    border: 1px solid rgba(200, 80, 40, 0.25);
+    }
+    .choice-label {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .submit .choice-label { color: #8b2d2d; }
+    .destroy .choice-label { color: #c85028; }
+    .choice-text {
+    color: #f5f0e6;
+    font-size: 20px;
+    line-height: 1.5;
+    }
+    .quote-box {
+    background: rgba(200, 80, 40, 0.1);
+    border: 1px solid rgba(200, 80, 40, 0.4);
+    padding: 35px 60px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .quote-text {
+    color: #f5f0e6;
+    font-size: 32px;
+    font-style: italic;
+    }
+    .context {
+    color: #a09080;
+    font-size: 26px;
+    }
+    .context em {
+    color: #c85028;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Producer's Response</div>
+      <div class="title">Wyatt's Choice</div>
+      <div class="choices">
+        <div class="choice-box submit">
+          <div class="choice-label">Option A: Submit</div>
+          <div class="choice-text">Comply and watch his creation be destroyed slowly by incompetent bureaucrats who know nothing about oil production.</div>
+        </div>
+        <div class="choice-box destroy">
+          <div class="choice-label">Option B: Destroy</div>
+          <div class="choice-text">Set fire to his own oil fields. Leave the looters nothing but flames. Deny them the fruits of his labor forever.</div>
+        </div>
+      </div>
+      <div class="quote-box">
+        <div class="quote-text">"I am leaving it as I found it. Take over. It's yours."</div>
+      </div>
+      <div class="context">He has left them <em>nothing but flames</em>.</div>
+    </div>
+</body>
+</html>

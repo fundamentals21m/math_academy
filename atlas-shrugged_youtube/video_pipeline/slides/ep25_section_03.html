@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.12) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 52px;
+      margin-bottom: 50px;
+    }
+    .logic-chain {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+    .logic-step {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .arrow {
+      color: #4a6b8a;
+      font-size: 24px;
+    }
+    .logic-text {
+      color: #f5f0e6;
+      font-size: 22px;
+      text-align: left;
+    }
+    .logic-text em {
+      color: #8b2d2d;
+      font-style: normal;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(139, 45, 45, 0.3);
+      padding-top: 40px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #8b2d2d;
+      font-size: 26px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 25 &bull; The Obligation</div>
+    <div class="section-title">The Obligation</div>
+    <div class="logic-chain">
+      <div class="logic-step">
+        <div class="arrow">&rarr;</div>
+        <div class="logic-text">His need creates your obligation</div>
+      </div>
+      <div class="logic-step">
+        <div class="arrow">&rarr;</div>
+        <div class="logic-text">The <em>needier</em> he is, the more you owe</div>
+      </div>
+      <div class="logic-step">
+        <div class="arrow">&rarr;</div>
+        <div class="logic-text">The more <em>irresponsible</em>, the larger the debt</div>
+      </div>
+      <div class="logic-step">
+        <div class="arrow">&rarr;</div>
+        <div class="logic-text">Everyone owes <em>everything</em> to everyone</div>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">No one has a right to their own life.</div>
+    </div>
+  </div>
+</body>
+</html>

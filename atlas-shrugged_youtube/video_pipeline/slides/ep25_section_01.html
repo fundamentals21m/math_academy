@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.15) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .series-tag {
+      color: #a09080;
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 18px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+    }
+    .question {
+      color: #d4a84b;
+      font-size: 48px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .title {
+      color: #f5f0e6;
+      font-size: 64px;
+      margin-bottom: 40px;
+      text-shadow: 0 0 60px rgba(74, 107, 138, 0.4);
+    }
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #4a6b8a, transparent);
+      margin: 0 auto 40px;
+    }
+    .hook {
+      color: #a09080;
+      font-size: 24px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="series-tag">Atlas Shrugged &bull; Part III: A Is A</div>
+    <div class="episode-tag">Episode 25</div>
+    <div class="question">"Am I my brother's keeper?"</div>
+    <div class="title">Their Brothers' Keepers</div>
+    <div class="divider"></div>
+    <div class="hook">Brotherhood pushed to its logical conclusion&mdash;and it's not pretty.</div>
+  </div>
+</body>
+</html>

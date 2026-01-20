@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .previously {
+    width: 500px;
+    background: rgba(160, 144, 128, 0.08);
+    border: 1px solid rgba(160, 144, 128, 0.2);
+    padding: 40px;
+    }
+    .prev-tag {
+    color: #a09080;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    }
+    .prev-title {
+    color: #a09080;
+    font-size: 28px;
+    margin-bottom: 20px;
+    }
+    .prev-points {
+    list-style: none;
+    }
+    .prev-points li {
+    color: #706050;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    }
+    .prev-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background: #706050;
+    }
+    .current {
+    flex: 1;
+    }
+    .episode-title {
+    color: #f5f0e6;
+    font-size: 72px;
+    margin-bottom: 16px;
+    }
+    .subtitle {
+    color: #a09080;
+    font-size: 32px;
+    margin-bottom: 40px;
+    }
+    .focus {
+    color: #a09080;
+    font-size: 26px;
+    line-height: 1.6;
+    }
+    .focus em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+    .chapter-note {
+    margin-top: 40px;
+    padding: 24px 32px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    color: #a09080;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="previously">
+        <div class="prev-tag">Previously</div>
+        <div class="prev-title">Episode 1</div>
+        <ul class="prev-points">
+          <li>The lights are going out</li>
+          <li>Dagny Taggart fights to keep civilization running</li>
+          <li>"Who is John Galt?" haunts everyone</li>
+        </ul>
+      </div>
+      <div class="current">
+        <div class="tag">Episode 2</div>
+        <div class="episode-title">The Chain</div>
+        <div class="subtitle">Part One: Non-Contradiction</div>
+        <div class="focus">
+          Today we meet <em>Hank Rearden</em>&mdash;a self-made steel industrialist who has spent ten years developing a revolutionary new alloy.
+        </div>
+        <div class="chapter-note">
+          "The Chain" refers to interconnected relationships&mdash;both productive chains of business and parasitic chains of family obligation.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

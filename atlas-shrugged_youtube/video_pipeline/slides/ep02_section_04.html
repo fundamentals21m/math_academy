@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .family-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    }
+    .family-member {
+    width: 400px;
+    background: rgba(160, 144, 128, 0.05);
+    border: 1px solid rgba(160, 144, 128, 0.2);
+    padding: 40px 30px;
+    }
+    .member-initial {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: rgba(160, 144, 128, 0.1);
+    border: 1px solid rgba(160, 144, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #a09080;
+    }
+    .member-name {
+    color: #a09080;
+    font-size: 28px;
+    margin-bottom: 8px;
+    }
+    .member-role {
+    color: #706050;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    }
+    .member-desc {
+    color: #706050;
+    font-size: 18px;
+    line-height: 1.5;
+    }
+    .member-weapon {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(160, 144, 128, 0.2);
+    color: #a09080;
+    font-size: 16px;
+    font-style: italic;
+    }
+    .insight-box {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    padding: 30px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Parasites</div>
+      <div class="title">The Rearden Family</div>
+      <div class="family-grid">
+        <div class="family-member">
+          <div class="member-initial">L</div>
+          <div class="member-name">Lillian</div>
+          <div class="member-role">Wife</div>
+          <div class="member-desc">Married Rearden for wealth and status but despises his work, finding his dedication to industry vulgar.</div>
+          <div class="member-weapon">"Appropriate, isn't it? It's the chain by which he holds us all."</div>
+        </div>
+        <div class="family-member">
+          <div class="member-initial">P</div>
+          <div class="member-name">Philip</div>
+          <div class="member-role">Brother</div>
+          <div class="member-desc">Has never worked and lives off Hank's generosity, yet resents his brother's success.</div>
+          <div class="member-weapon">Resentment masked as moral superiority</div>
+        </div>
+        <div class="family-member">
+          <div class="member-initial">M</div>
+          <div class="member-name">Mother</div>
+          <div class="member-role">Parent</div>
+          <div class="member-desc">Plays the martyr, accusing Hank of neglecting his family despite supporting them all.</div>
+          <div class="member-weapon">Guilt as emotional currency</div>
+        </div>
+      </div>
+      <div class="insight-box">
+        <div class="insight-text">
+          Each family member uses <em>guilt as a weapon</em> to extract from Rearden while offering nothing in return.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

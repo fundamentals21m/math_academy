@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 154, 140, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .part-tag {
+    color: #4a9a8c;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    }
+    .subtitle {
+    color: #d4a84b;
+    font-size: 36px;
+    font-style: italic;
+    margin-bottom: 50px;
+    }
+    .divider {
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4a9a8c, transparent);
+    margin: 0 auto 50px;
+    }
+    .context {
+    color: #a09080;
+    font-size: 26px;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin-bottom: 40px;
+    }
+    .context em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .preview {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .preview em {
+    color: #4a9a8c;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="part-tag">Atlas Shrugged &bull; Episode 11</div>
+      <div class="title">Either-Or</div>
+      <div class="subtitle">Welcome to Part Two</div>
+      <div class="divider"></div>
+      <div class="context">
+        The world has changed since Wyatt's Torch. The producers are <em>disappearing faster now</em>. The economy spirals downward. And somewhere, someone is recruiting the best minds for a purpose no one yet understands.
+      </div>
+      <div class="preview">
+        Today we meet a scientist who creates revolutionary technology&mdash;and face the choice that confronts everyone: <em>either produce, or loot. Either think, or evade.</em> There is no middle ground.
+      </div>
+    </div>
+</body>
+</html>

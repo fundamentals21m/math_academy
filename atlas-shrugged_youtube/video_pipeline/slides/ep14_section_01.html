@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.18) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+    color: #8b2d2d;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    }
+    .limitations {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+    }
+    .limit-box {
+    background: rgba(139, 45, 45, 0.08);
+    border: 1px solid rgba(139, 45, 45, 0.3);
+    padding: 25px 30px;
+    width: 350px;
+    }
+    .limit-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.4;
+    }
+    .limit-text em {
+    color: #8b2d2d;
+    font-style: normal;
+    }
+    .divider {
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+    margin: 0 auto 50px;
+    }
+    .question {
+    color: #d4a84b;
+    font-size: 36px;
+    font-style: italic;
+    margin-bottom: 40px;
+    }
+    .answer {
+    color: #f5f0e6;
+    font-size: 28px;
+    line-height: 1.5;
+    }
+    .answer em {
+    color: #d4a84b;
+    font-style: normal;
+    font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="episode-tag">Episode 14 &bull; Cold Open</div>
+      <div class="limitations">
+        <div class="limit-box">
+          <div class="limit-text">They cannot <em>create</em> wealth&mdash;only seize it</div>
+        </div>
+        <div class="limit-box">
+          <div class="limit-text">They cannot <em>run</em> businesses&mdash;only regulate them</div>
+        </div>
+        <div class="limit-box">
+          <div class="limit-text">They cannot <em>invent</em>&mdash;only ban invention</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="question">So why do the producers submit?</div>
+      <div class="answer">
+        Because the victims have <em>granted their sanction</em>.<br>
+        And the moment they withdraw it, the system collapses.
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b4545; --accent-rgb: 139, 69, 69; }
+    .cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+    }
+    .card {
+    width: 360px;
+    background: rgba(20, 18, 15, 0.9);
+    border: 1px solid rgba(139, 69, 69, 0.4);
+    padding: 30px;
+    text-align: left;
+    }
+    .card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(139, 69, 69, 0.2);
+    }
+    .card-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(139, 69, 69, 0.15);
+    border: 2px solid rgba(139, 69, 69, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #8b4545;
+    flex-shrink: 0;
+    }
+    .card-name {
+    color: #f5f0e6;
+    font-size: 24px;
+    margin-bottom: 4px;
+    }
+    .card-role {
+    color: #8b4545;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    }
+    .card-desc {
+    color: #a09080;
+    font-size: 18px;
+    line-height: 1.5;
+    }
+    .common-trait {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    padding: 25px 50px;
+    display: inline-block;
+    }
+    .trait-text {
+    color: #f5f0e6;
+    font-size: 26px;
+    }
+    .trait-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Character Study</div>
+      <div class="title">The Conspirators</div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">JT</div>
+            <div>
+              <div class="card-name">James Taggart</div>
+              <div class="card-role">Taggart Transcontinental</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            President who relies on political connections rather than competence. Resents his sister Dagny's abilities.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">OB</div>
+            <div>
+              <div class="card-name">Orren Boyle</div>
+              <div class="card-role">Associated Steel</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Owner of an inefficient company that cannot compete with Rearden Steel. Wants government to handicap his competitor.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">WM</div>
+            <div>
+              <div class="card-name">Wesley Mouch</div>
+              <div class="card-role">Washington Lobbyist</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Rearden's own lobbyist, secretly working against his employer. A double agent feeding information to the conspirators.
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">PL</div>
+            <div>
+              <div class="card-name">Paul Larkin</div>
+              <div class="card-role">"Friend" of Rearden</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Pretends loyalty while plotting against him. The false friend who profits from betrayal.
+          </div>
+        </div>
+      </div>
+      <div class="common-trait">
+        <div class="trait-text">
+          Each shares a common trait: they <em>cannot create value</em> themselves,<br>
+          so they must <em>seize it</em> from those who can.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

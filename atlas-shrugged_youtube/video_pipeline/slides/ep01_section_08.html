@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .recap {
+    flex: 1;
+    }
+    .points {
+    list-style: none;
+    }
+    .points li {
+    color: #a09080;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+    }
+    .points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 8px;
+    height: 8px;
+    background: #d4a84b;
+    }
+    .points li em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .preview {
+    width: 500px;
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    padding: 40px;
+    }
+    .preview-tag {
+    color: #d4a84b;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    }
+    .preview-title {
+    color: #f5f0e6;
+    font-size: 36px;
+    margin-bottom: 8px;
+    }
+    .preview-subtitle {
+    color: #d4a84b;
+    font-size: 22px;
+    margin-bottom: 24px;
+    }
+    .preview-desc {
+    color: #a09080;
+    font-size: 20px;
+    line-height: 1.5;
+    }
+    .cta {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(212, 168, 75, 0.2);
+    color: #a09080;
+    font-size: 18px;
+    }
+    .cta em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="recap">
+        <div class="tag">Episode 1 Recap</div>
+        <div class="title">What We Learned</div>
+        <ul class="points">
+          <li><em>"Who is John Galt?"</em> opens as despair but becomes the central mystery</li>
+          <li><em>Dagny Taggart</em> fights to keep her railroad running in a world that punishes achievement</li>
+          <li>The world is in decline&mdash;infrastructure crumbles, capable people disappear</li>
+          <li><em>Producers vs. Looters</em>&mdash;established through Dagny versus James</li>
+          <li>Three-part structure reflects principles of logic: <em>Non-Contradiction, Either-Or, A Is A</em></li>
+        </ul>
+      </div>
+      <div class="preview">
+        <div class="preview-tag">Next Episode</div>
+        <div class="preview-title">The Chain</div>
+        <div class="preview-subtitle">Episode 2</div>
+        <div class="preview-desc">
+          Meet Hank Rearden&mdash;the steel industrialist who has spent ten years creating a revolutionary new metal. Witness the first pour of Rearden Metal and the stark contrast between creators and consumers.
+        </div>
+        <div class="cta">
+          <em>Subscribe</em> and check out the<br>interactive course in the description
+        </div>
+      </div>
+    </div>
+</body>
+</html>

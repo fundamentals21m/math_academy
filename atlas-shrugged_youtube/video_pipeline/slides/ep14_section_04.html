@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 154, 140, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .implications {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 45px;
+    }
+    .implication-box {
+    padding: 25px 40px;
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    }
+    .implication-box.first {
+    background: rgba(139, 45, 45, 0.08);
+    border-left: 3px solid #8b2d2d;
+    }
+    .implication-box.second {
+    background: rgba(212, 168, 75, 0.08);
+    border-left: 3px solid #d4a84b;
+    }
+    .implication-box.third {
+    background: rgba(74, 154, 140, 0.08);
+    border-left: 3px solid #4a9a8c;
+    }
+    .implication-label {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .first .implication-label { color: #8b2d2d; }
+    .second .implication-label { color: #d4a84b; }
+    .third .implication-label { color: #4a9a8c; }
+    .implication-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .implication-text em {
+    font-style: normal;
+    }
+    .first .implication-text em { color: #8b2d2d; }
+    .second .implication-text em { color: #d4a84b; }
+    .third .implication-text em { color: #4a9a8c; }
+    .conclusion {
+    color: #f5f0e6;
+    font-size: 24px;
+    }
+    .conclusion em {
+    color: #4a9a8c;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Profound Consequences</div>
+      <div class="title">The Implications</div>
+      <div class="implications">
+        <div class="implication-box first">
+          <div class="implication-label">First</div>
+          <div class="implication-text">The producers are not truly victims&mdash;<em>they are collaborators</em>. They choose to accept the guilt, obey the regulations, serve the system. They could choose differently.</div>
+        </div>
+        <div class="implication-box second">
+          <div class="implication-label">Second</div>
+          <div class="implication-text">The looters are not truly powerful&mdash;<em>they depend entirely on the producers' cooperation</em>. Their laws, their guns, their threats are meaningless if the producers refuse to comply.</div>
+        </div>
+        <div class="implication-box third">
+          <div class="implication-label">Third</div>
+          <div class="implication-text">Liberation is possible at any moment. Not through revolution or violence, but through <em>simple refusal</em>. Stop producing for those who punish production.</div>
+        </div>
+      </div>
+      <div class="conclusion">This is the strike. <em>The mind on strike.</em></div>
+    </div>
+</body>
+</html>

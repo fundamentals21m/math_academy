@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b4545; --accent-rgb: 139, 69, 69; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(100, 120, 140, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .speaker {
+    color: #8b4545;
+    font-size: 26px;
+    margin-bottom: 50px;
+    }
+    .context {
+    color: #a09080;
+    font-size: 28px;
+    line-height: 1.6;
+    }
+    .context em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Academic Lecture Hall</div>
+      <div class="quote">
+        "The purpose of philosophy is not to help men find<br>
+        the meaning of life, but to prove to them<br>
+        that there isn't any."
+      </div>
+      <div class="speaker">&mdash; Dr. Simon Pritchett, Professor of Philosophy</div>
+      <div class="context">
+        These words capture the spirit of intellectuals who claim to be<br>
+        <em>above mere commerce</em>&mdash;while living off the products<br>
+        of the very industries they despise.
+      </div>
+    </div>
+</body>
+</html>

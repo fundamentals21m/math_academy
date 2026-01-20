@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .contrast {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .type {
+      width: 320px;
+      padding: 25px;
+      text-align: left;
+    }
+    .type.enforced {
+      border-left: 3px solid #8b2d2d;
+      background: rgba(139, 45, 45, 0.04);
+    }
+    .type.voluntary {
+      border-left: 3px solid #d4a84b;
+      background: rgba(212, 168, 75, 0.04);
+    }
+    .type-label {
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .enforced .type-label { color: #8b2d2d; }
+    .voluntary .type-label { color: #d4a84b; }
+    .type-text {
+      color: #f5f0e6;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .final-line {
+      color: #d4a84b;
+      font-size: 26px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .closing {
+      color: #a09080;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 25 &bull; Closing</div>
+    <div class="contrast">
+      <div class="type enforced">
+        <div class="type-label">Enforced Brotherhood</div>
+        <div class="type-text">Imposed obligation<br>Sacrifice demanded<br>Chains</div>
+      </div>
+      <div class="type voluntary">
+        <div class="type-label">Real Brotherhood</div>
+        <div class="type-text">Chosen connection<br>Mutual benefit<br>Trade</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="final-line">Brotherhood based on respect, not obligation.<br>On choice, not chains.</div>
+    <div class="closing">See you in the next episode.</div>
+  </div>
+</body>
+</html>

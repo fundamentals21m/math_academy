@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.12) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .story {
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .story-part {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      padding-left: 30px;
+      border-left: 2px solid rgba(74, 107, 138, 0.4);
+      text-align: left;
+    }
+    .story-part em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(212, 168, 75, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #d4a84b;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 26 &bull; Why Halley Withdrew</div>
+    <div class="section-title">Why Halley Withdrew</div>
+    <div class="story">
+      <div class="story-part">Critics dismissed him for years. Audiences ignored him. He wrote for decades without recognition.</div>
+      <div class="story-part">Then, finally, they applauded. They thought their <em>approval was a gift</em>.</div>
+      <div class="story-part">He rejected that premise. His work was great <em>regardless</em> of whether they recognized it.</div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">So he took his music and left.</div>
+    </div>
+  </div>
+</body>
+</html>

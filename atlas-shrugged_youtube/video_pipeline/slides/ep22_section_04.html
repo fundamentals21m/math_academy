@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .contrast {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .world {
+      width: 350px;
+      padding: 25px;
+      text-align: left;
+    }
+    .world.outside {
+      border-left: 3px solid #8b2d2d;
+      background: rgba(139, 45, 45, 0.04);
+    }
+    .world.valley {
+      border-left: 3px solid #d4a84b;
+      background: rgba(212, 168, 75, 0.04);
+    }
+    .world-label {
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .outside .world-label { color: #8b2d2d; }
+    .valley .world-label { color: #d4a84b; }
+    .world-text {
+      color: #f5f0e6;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .bottom-line {
+      color: #a09080;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 22 &bull; The Moral Dimension</div>
+    <div class="section-title">The Moral Dimension</div>
+    <div class="contrast">
+      <div class="world outside">
+        <div class="world-label">Outside World</div>
+        <div class="world-text">Achievement is punished. Success invites envy, regulation, confiscation. Don't stand out.</div>
+      </div>
+      <div class="world valley">
+        <div class="world-label">The Valley</div>
+        <div class="world-text">Achievement is celebrated. Success inspires admiration, learning, emulation. Excel freely.</div>
+      </div>
+    </div>
+    <div class="bottom-line">A utopia of greed is actually a utopia of pride.</div>
+  </div>
+</body>
+</html>

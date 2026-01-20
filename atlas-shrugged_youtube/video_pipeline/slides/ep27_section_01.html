@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.2) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .series-tag {
+      color: #a09080;
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 18px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .question {
+      color: #a09080;
+      font-size: 32px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .title {
+      color: #d4a84b;
+      font-size: 56px;
+      margin-bottom: 30px;
+      font-style: italic;
+      text-shadow: 0 0 80px rgba(212, 168, 75, 0.5);
+      line-height: 1.2;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 40px auto;
+    }
+    .hook {
+      color: #f5f0e6;
+      font-size: 28px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="series-tag">Atlas Shrugged &bull; Part III: A Is A</div>
+    <div class="episode-tag">Episode 27</div>
+    <div class="question">"Who is John Galt?"</div>
+    <div class="title">This is John Galt Speaking</div>
+    <div class="divider"></div>
+    <div class="hook">Tonight, he tells them.</div>
+  </div>
+</body>
+</html>

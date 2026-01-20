@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.15) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 52px;
+      margin-bottom: 50px;
+    }
+    .mechanics {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .mechanic {
+      width: 280px;
+      padding: 25px;
+      border: 1px solid rgba(74, 107, 138, 0.4);
+      background: rgba(74, 107, 138, 0.04);
+      text-align: left;
+    }
+    .mech-label {
+      color: #4a6b8a;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .mech-text {
+      color: #f5f0e6;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(212, 168, 75, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #d4a84b;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 22 &bull; How the Valley Works</div>
+    <div class="section-title">How It Works</div>
+    <div class="mechanics">
+      <div class="mechanic">
+        <div class="mech-label">One Rule</div>
+        <div class="mech-text">No one initiates force against another</div>
+      </div>
+      <div class="mechanic">
+        <div class="mech-label">One Method</div>
+        <div class="mech-text">Voluntary trade&mdash;offer value for value</div>
+      </div>
+      <div class="mechanic">
+        <div class="mech-label">One Result</div>
+        <div class="mech-text">Self-interest aligns with mutual benefit</div>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">Free trade transforms self-interest into mutual benefit.</div>
+    </div>
+  </div>
+</body>
+</html>

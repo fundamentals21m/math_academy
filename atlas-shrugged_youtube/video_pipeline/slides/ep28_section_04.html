@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 69, 69, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .critique-box {
+      border: 1px solid rgba(139, 69, 69, 0.4);
+      background: rgba(139, 69, 69, 0.05);
+      max-width: 850px;
+      margin: 0 auto 40px;
+      padding: 30px 40px;
+      text-align: left;
+    }
+    .critique-point {
+      color: #f5f0e6;
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .critique-point:last-child {
+      margin-bottom: 0;
+    }
+    .critique-point em {
+      color: #8b4545;
+      font-style: normal;
+    }
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 35px;
+    }
+    .alternative {
+      color: #d4a84b;
+      font-size: 24px;
+      font-style: italic;
+      max-width: 750px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 28 &bull; Why Altruism Fails</div>
+    <div class="section-title">The Trap of Sacrifice</div>
+    <div class="critique-box">
+      <div class="critique-point">If others' needs are your moral obligation, there's <em>no end to obligation</em>. There's always someone needier.</div>
+      <div class="critique-point">Altruism degrades everyone: givers become <em>servants</em>, receivers become <em>beggars</em>.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="alternative">The egoist escapes this trap. He trades&mdash;giving value for value, benefiting himself while benefiting others.</div>
+  </div>
+</body>
+</html>

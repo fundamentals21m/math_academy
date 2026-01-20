@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.15) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #8b2d2d;
+      font-size: 64px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(139, 45, 45, 0.3);
+    }
+    .collapse-items {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .collapse-item {
+      width: 320px;
+      padding: 25px;
+      border-left: 3px solid #8b2d2d;
+      background: rgba(139, 45, 45, 0.06);
+      text-align: left;
+    }
+    .collapse-what {
+      color: #f5f0e6;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    .collapse-why {
+      color: #a09080;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+    .bewildered {
+      color: #d4a84b;
+      font-size: 26px;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 15 &bull; The Collapse</div>
+    <div class="section-title">The Collapse</div>
+    <div class="collapse-items">
+      <div class="collapse-item">
+        <div class="collapse-what">Trains stop running</div>
+        <div class="collapse-why">Not mechanical failure&mdash;no one left who knows how to run them</div>
+      </div>
+      <div class="collapse-item">
+        <div class="collapse-what">Factories close</div>
+        <div class="collapse-why">Not lack of demand&mdash;no one left who can manage them</div>
+      </div>
+      <div class="collapse-item">
+        <div class="collapse-what">Crops rot in fields</div>
+        <div class="collapse-why">Not drought&mdash;no one left to organize the harvest</div>
+      </div>
+    </div>
+    <div class="bewildered">The system was never the source of wealth.<br>The producers were. And the producers are gone.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(200, 80, 40, 0.18) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+    color: #c85028;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    }
+    .quote em {
+    color: #c85028;
+    font-style: normal;
+    font-weight: bold;
+    }
+    .divider {
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c85028, transparent);
+    margin: 0 auto 50px;
+    }
+    .context {
+    color: #a09080;
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 1100px;
+    }
+    .context em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="episode-tag">Episode 10 &bull; Cold Open</div>
+      <div class="quote">"I am leaving it as I found it.<br><em>Take over. It's yours.</em>"</div>
+      <div class="divider"></div>
+      <div class="context">
+        A pillar of fire rises from the oil fields of Colorado. Ellis Wyatt has <em>set fire to his own creation</em> and vanished&mdash;leaving behind a burning torch that will blaze for years. This is the end of Part One&mdash;and the beginning of something no one yet understands.
+      </div>
+    </div>
+</body>
+</html>

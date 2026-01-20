@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .insight {
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .insight-line {
+      color: #f5f0e6;
+      font-size: 26px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .insight-line em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .final-line {
+      color: #d4a84b;
+      font-size: 28px;
+      font-style: italic;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+    .closing {
+      color: #a09080;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 19 &bull; Closing</div>
+    <div class="insight">
+      <div class="insight-line">Suffering comes not from consciousness but from <em>contradictions</em>.</div>
+      <div class="insight-line">Resolve the contradictions, and the suffering <em>ends</em>.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="final-line">The man behind that face has found the answer.<br>Part Two draws toward the moment when we will learn what it is.</div>
+    <div class="closing">See you in the next episode.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.1) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .recap-box {
+      border-left: 3px solid #4a6b8a;
+      padding: 25px 30px;
+      background: rgba(74, 107, 138, 0.06);
+      max-width: 800px;
+      margin: 0 auto 50px;
+      text-align: left;
+    }
+    .recap-label {
+      color: #4a6b8a;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .recap-text {
+      color: #a09080;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .divider {
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #8b2d2d, transparent);
+      margin: 0 auto 40px;
+    }
+    .today {
+      color: #8b2d2d;
+      font-size: 26px;
+      font-style: italic;
+      max-width: 750px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 23 &bull; Introduction</div>
+    <div class="section-title">Where We Stand</div>
+    <div class="recap-box">
+      <div class="recap-label">Previously</div>
+      <div class="recap-text">The valley's "greedy" inhabitants built paradise. When people can only acquire through trade, everyone's self-interest serves everyone else.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="today">Today: We return to the outside world.<br>A society that rejected self-interest&mdash;and what it's become.</div>
+  </div>
+</body>
+</html>

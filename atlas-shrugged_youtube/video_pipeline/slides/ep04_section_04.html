@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b4545; --accent-rgb: 139, 69, 69; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at bottom, rgba(80, 60, 50, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .quote-box {
+    background: rgba(30, 25, 20, 0.8);
+    border: 1px solid rgba(160, 144, 128, 0.3);
+    padding: 40px 60px;
+    margin-bottom: 50px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .analysis {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    }
+    .analysis-item {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid rgba(160, 144, 128, 0.2);
+    text-align: left;
+    }
+    .analysis-label {
+    color: #8b4545;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .analysis-text {
+    color: #a09080;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .lesson {
+    padding: 30px 50px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    .lesson-text {
+    color: #f5f0e6;
+    font-size: 26px;
+    line-height: 1.5;
+    }
+    .lesson-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Rule Takes Effect</div>
+      <div class="title">Dan Conway's Defeat</div>
+      <div class="quote-box">
+        <div class="quote">
+          "I've never asked anyone to give me anything. I thought people got things by working for them.
+          But it's not so simple... I built something good&mdash;and they're taking it away from me."
+        </div>
+        <div class="attribution">&mdash; Dan Conway</div>
+      </div>
+      <div class="analysis">
+        <div class="analysis-item">
+          <div class="analysis-label">What He Built</div>
+          <div class="analysis-text">A better railroad through years of hard work and superior service</div>
+        </div>
+        <div class="analysis-item">
+          <div class="analysis-label">His Reward</div>
+          <div class="analysis-text">Destruction through political manipulation by those who couldn't compete</div>
+        </div>
+      </div>
+      <div class="lesson">
+        <div class="lesson-text">
+          When the rules are rigged against the competent, those who cannot compete through <em>merit</em>
+          turn to <em>force</em>&mdash;and the best are punished for their excellence.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.12) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 52px;
+      margin-bottom: 50px;
+    }
+    .contrast-grid {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .contrast-item {
+      width: 380px;
+      padding: 30px;
+      text-align: left;
+    }
+    .contrast-item.sacrifice {
+      border-left: 3px solid #8b2d2d;
+      background: rgba(139, 45, 45, 0.06);
+    }
+    .contrast-item.admiration {
+      border-left: 3px solid #d4a84b;
+      background: rgba(212, 168, 75, 0.06);
+    }
+    .contrast-label {
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .sacrifice .contrast-label { color: #8b2d2d; }
+    .admiration .contrast-label { color: #d4a84b; }
+    .contrast-text {
+      color: #f5f0e6;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .bottom-line {
+      color: #a09080;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 18 &bull; Two Kinds of Love</div>
+    <div class="section-title">Two Visions of Love</div>
+    <div class="contrast-grid">
+      <div class="contrast-item sacrifice">
+        <div class="contrast-label">Love as Sacrifice</div>
+        <div class="contrast-text">You prove love by giving up what you want. The ideal partner needs you, can't survive without you. Love means carrying someone's burden.</div>
+      </div>
+      <div class="contrast-item admiration">
+        <div class="contrast-label">Love as Admiration</div>
+        <div class="contrast-text">You love someone for their virtues. The ideal partner inspires you, challenges you. Love adds to your life rather than subtracting.</div>
+      </div>
+    </div>
+    <div class="bottom-line">One makes love a duty. The other makes it a reward.</div>
+  </div>
+</body>
+</html>

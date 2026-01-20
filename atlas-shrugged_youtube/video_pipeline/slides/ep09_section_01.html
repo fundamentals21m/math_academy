@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(107, 76, 122, 0.2) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+    color: #6b4c7a;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    }
+    .divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6b4c7a, transparent);
+    margin: 0 auto 50px;
+    }
+    .context {
+    color: #a09080;
+    font-size: 26px;
+    line-height: 1.6;
+    max-width: 1100px;
+    }
+    .context em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+    .context strong {
+    color: #6b4c7a;
+    font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="episode-tag">Episode 9 &bull; Cold Open</div>
+      <div class="quote">
+        "I have been thinking of nothing but you for the past week. I have been thinking of the way you carry your head, of the manner of your walk, of the sound of your voice."
+      </div>
+      <div class="divider"></div>
+      <div class="context">
+        Hank Rearden has achieved everything he set out to achieve. His metal is vindicated, his line is running. Yet he cannot accept <em>happiness without guilt</em>. The <strong>mind-body split</strong> that conventional morality has taught him makes triumph feel like sin.
+      </div>
+    </div>
+</body>
+</html>

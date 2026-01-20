@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .paradox-grid {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .paradox-item {
+      width: 350px;
+      padding: 30px;
+      border: 1px solid rgba(139, 45, 45, 0.3);
+      background: rgba(139, 45, 45, 0.04);
+    }
+    .paradox-label {
+      color: #8b2d2d;
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .paradox-text {
+      color: #f5f0e6;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .paradox-text em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .bottom-line {
+      color: #a09080;
+      font-size: 24px;
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 16 &bull; The Deeper Meaning</div>
+    <div class="section-title">The Paradox of Need</div>
+    <div class="paradox-grid">
+      <div class="paradox-item">
+        <div class="paradox-label">They Need Him</div>
+        <div class="paradox-text">Without Rearden: <em>no metal to seize</em>.<br>Without his knowledge: <em>no way to produce more</em>.</div>
+      </div>
+      <div class="paradox-item">
+        <div class="paradox-label">They Hate Him</div>
+        <div class="paradox-text">To admit they need him would admit <em>some create value</em> while others <em>merely consume it</em>.</div>
+      </div>
+    </div>
+    <div class="bottom-line">They take the miracle while punishing the miracle-worker.</div>
+  </div>
+</body>
+</html>

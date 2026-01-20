@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .concept {
+    color: #d4a84b;
+    font-size: 64px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 40px rgba(212, 168, 75, 0.4);
+    }
+    .description em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Creative Mind</div>
+      <div class="quote">
+        "He was the kind of man who had never thought of his own existence<br>
+        as important enough to require an explanation.<br>
+        He worked, he loved his work, he did not ask why."
+      </div>
+      <div class="concept">The Prime Mover</div>
+      <div class="description">
+        The creative mind that <em>drives civilization forward</em>.<br>
+        In this chapter, we'll see both the heights such minds can reach<br>
+        and the forces gathering to destroy them.
+      </div>
+    </div>
+</body>
+</html>

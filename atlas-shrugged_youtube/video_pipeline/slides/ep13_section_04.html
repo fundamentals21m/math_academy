@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 45px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .step {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    text-align: left;
+    background: rgba(90, 106, 90, 0.06);
+    border: 1px solid rgba(90, 106, 90, 0.25);
+    padding: 25px 30px;
+    }
+    .step-number {
+    color: #5a6a5a;
+    font-size: 36px;
+    font-weight: bold;
+    min-width: 50px;
+    }
+    .step-content {
+    flex: 1;
+    }
+    .step-action {
+    color: #5a6a5a;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    }
+    .step-text {
+    color: #f5f0e6;
+    font-size: 20px;
+    line-height: 1.4;
+    }
+    .result {
+    padding: 30px 50px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    .result-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .result-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">How It Works in Practice</div>
+      <div class="title">The Mechanism</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <div class="step-action">Delegitimize</div>
+            <div class="step-text">Convince the producer that his success is somehow illegitimate&mdash;that he owes his achievements to society, to luck, to privilege, to anything except his own effort.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <div class="step-action">Accuse</div>
+            <div class="step-text">Convince him that his success harms others&mdash;that wealth is zero-sum, that his gain is someone else's loss, that his excellence makes others feel inferior.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <div class="step-action">Extract</div>
+            <div class="step-text">Demand that he atone for this imaginary sin through sacrifice&mdash;giving up his wealth, his time, his judgment, his self-respect.</div>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="result-text">
+          This is more effective than force. <em>Force creates resistance</em>. <em>Guilt creates surrender</em>.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

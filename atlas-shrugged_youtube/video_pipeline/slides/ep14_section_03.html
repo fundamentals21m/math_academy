@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .core-idea {
+    background: rgba(212, 168, 75, 0.1);
+    border: 1px solid rgba(212, 168, 75, 0.4);
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .core-text {
+    color: #f5f0e6;
+    font-size: 28px;
+    line-height: 1.5;
+    }
+    .core-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+    .example-box {
+    background: rgba(139, 45, 45, 0.08);
+    border-left: 3px solid #8b2d2d;
+    padding: 25px 40px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    }
+    .example-label {
+    color: #8b2d2d;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .example-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .conclusion {
+    color: #4a9a8c;
+    font-size: 26px;
+    font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Core Principle</div>
+      <div class="title">What is the Sanction of the Victim?</div>
+      <div class="core-idea">
+        <div class="core-text">
+          <em>Evil is powerless without the cooperation of the good.</em><br>
+          Looters cannot function without producers to loot.<br>
+          Parasites cannot survive without hosts to feed upon.
+        </div>
+      </div>
+      <div class="example-box">
+        <div class="example-label">Rearden's Sanction</div>
+        <div class="example-text">
+          He grants his sanction every time he accepts guilt for his success. Every time he lets his family drain him. Every time he obeys a regulation he knows is unjust. He is the looters' strength&mdash;without his compliance, they have nothing.
+        </div>
+      </div>
+      <div class="conclusion">
+        The moment he withdraws his sanction, he is free. And they are powerless.
+      </div>
+    </div>
+</body>
+</html>

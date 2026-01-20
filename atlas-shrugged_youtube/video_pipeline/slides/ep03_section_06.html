@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #5ea9a8; --accent-rgb: 94, 169, 168; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(94, 169, 168, 0.1) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .dagny-visual {
+    width: 350px;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(94, 169, 168, 0.15) 0%, rgba(94, 169, 168, 0.05) 100%);
+    border: 2px solid rgba(94, 169, 168, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    }
+    .dagny-icon {
+    font-size: 72px;
+    color: #5ea9a8;
+    margin-bottom: 20px;
+    }
+    .dagny-name {
+    color: #f5f0e6;
+    font-size: 32px;
+    margin-bottom: 8px;
+    }
+    .dagny-title {
+    color: #5ea9a8;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    }
+    .info {
+    max-width: 900px;
+    }
+    .response {
+    color: #a09080;
+    font-size: 26px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    }
+    .response em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .insight-label {
+    color: #d4a84b;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="dagny-visual">
+        <div class="dagny-icon">DT</div>
+        <div class="dagny-name">Dagny Taggart</div>
+        <div class="dagny-title">Vice President, Operations</div>
+      </div>
+      <div class="info">
+        <div class="tag">A Producer's Response</div>
+        <div class="title">Recognizing Injustice</div>
+        <div class="response">
+          When Dagny learns about the plot against Phoenix-Durango, she is horrified&mdash;
+          <em>not because Conway is a friend</em>, but because she recognizes the injustice
+          of destroying a better competitor through political means rather than market competition.
+        </div>
+        <div class="insight">
+          <div class="insight-label">Key Insight</div>
+          <div class="insight-text">
+            Dagny <em>opposes looting even when it would benefit her</em>.<br>
+            A system based on force rather than merit will ultimately<br>
+            destroy everyone&mdash;including those who benefit temporarily.
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

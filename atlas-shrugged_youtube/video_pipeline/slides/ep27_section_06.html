@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .revelation {
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .rev-line {
+      color: #f5f0e6;
+      font-size: 26px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .rev-line em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .final-word {
+      color: #d4a84b;
+      font-size: 48px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .closing {
+      color: #a09080;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 27 &bull; Closing</div>
+    <div class="revelation">
+      <div class="rev-line">The man who asked the world's haunting question has <em>answered</em> it.</div>
+      <div class="rev-line">He is the man who refused to accept the morality of sacrifice.</div>
+      <div class="rev-line">He is the <em>mind on strike</em>.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="final-word">Choose.</div>
+    <div class="closing">See you in the next episode.</div>
+  </div>
+</body>
+</html>

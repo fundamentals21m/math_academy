@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .scene-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    }
+    .scene-card {
+    background: rgba(212, 168, 75, 0.05);
+    border: 1px solid rgba(212, 168, 75, 0.2);
+    padding: 40px;
+    }
+    .scene-label {
+    color: #d4a84b;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    }
+    .scene-title {
+    color: #f5f0e6;
+    font-size: 28px;
+    margin-bottom: 16px;
+    }
+    .scene-desc {
+    color: #a09080;
+    font-size: 20px;
+    line-height: 1.5;
+    }
+    .quote-box {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px 60px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    }
+    .quote-text {
+    color: #f5f0e6;
+    font-size: 26px;
+    font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Chapter Summary</div>
+      <div class="title">Opening Scenes</div>
+      <div class="scene-grid">
+        <div class="scene-card">
+          <div class="scene-label">Scene I</div>
+          <div class="scene-title">Eddie Willers</div>
+          <div class="scene-desc">A loyal employee encounters a bum who asks: "Who is John Galt?"</div>
+        </div>
+        <div class="scene-card">
+          <div class="scene-label">Scene II</div>
+          <div class="scene-title">The Decaying City</div>
+          <div class="scene-desc">Crumbling buildings, empty storefronts, gold leaf peeling from spires</div>
+        </div>
+        <div class="scene-card">
+          <div class="scene-label">Scene III</div>
+          <div class="scene-title">Taggart HQ</div>
+          <div class="scene-desc">The Rio Norte Line is failing. Suppliers aren't delivering. Something is wrong.</div>
+        </div>
+      </div>
+      <div class="quote-box">
+        <div class="quote-text">"The causeless uneasiness"&mdash;the subconscious awareness<br>that something fundamental is wrong with the world</div>
+      </div>
+    </div>
+</body>
+</html>

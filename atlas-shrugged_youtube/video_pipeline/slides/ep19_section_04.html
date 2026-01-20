@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.1) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .meanings {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .meaning {
+      display: flex;
+      gap: 25px;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .meaning-word {
+      width: 100px;
+      color: #d4a84b;
+      font-size: 22px;
+      text-align: right;
+      padding-top: 3px;
+    }
+    .meaning-content {
+      flex: 1;
+      border-left: 2px solid rgba(212, 168, 75, 0.3);
+      padding-left: 25px;
+    }
+    .meaning-text {
+      color: #f5f0e6;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .meaning-source {
+      color: #a09080;
+      font-size: 17px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 19 &bull; The Meaning</div>
+    <div class="section-title">What It Means</div>
+    <div class="meanings">
+      <div class="meaning">
+        <div class="meaning-word">Pain</div>
+        <div class="meaning-content">
+          <div class="meaning-text">Not adding suffering to difficulty</div>
+          <div class="meaning-source">Pain comes from resistance to reality. Accept reality, and pain dissolves.</div>
+        </div>
+      </div>
+      <div class="meaning">
+        <div class="meaning-word">Fear</div>
+        <div class="meaning-content">
+          <div class="meaning-text">Assessing threats rationally, responding appropriately</div>
+          <div class="meaning-source">Fear comes from uncertainty about your ability to cope. Know your abilities, and fear dissolves.</div>
+        </div>
+      </div>
+      <div class="meaning">
+        <div class="meaning-word">Guilt</div>
+        <div class="meaning-content">
+          <div class="meaning-text">Judging yourself by rational standards</div>
+          <div class="meaning-source">Guilt comes from accepting standards you don't believe in. Hold only to rational standards, and guilt dissolves.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

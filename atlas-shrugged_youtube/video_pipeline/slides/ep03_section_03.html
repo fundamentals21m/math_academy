@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b4545; --accent-rgb: 139, 69, 69; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at 20% 80%, rgba(50, 40, 30, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(50, 40, 30, 0.2) 0%, transparent 40%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .meeting-desc {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    }
+    .attendee {
+    width: 180px;
+    text-align: center;
+    }
+    .attendee-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    background: rgba(139, 69, 69, 0.15);
+    border: 2px solid rgba(139, 69, 69, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #8b4545;
+    }
+    .attendee-name {
+    color: #f5f0e6;
+    font-size: 18px;
+    margin-bottom: 5px;
+    }
+    .attendee-role {
+    color: #a09080;
+    font-size: 14px;
+    }
+    .plan-box {
+    background: rgba(139, 69, 69, 0.08);
+    border: 1px solid rgba(139, 69, 69, 0.3);
+    padding: 40px 60px;
+    margin-bottom: 40px;
+    }
+    .plan-label {
+    color: #8b4545;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .plan-text {
+    color: #f5f0e6;
+    font-size: 28px;
+    line-height: 1.5;
+    }
+    .insight em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">A Dingy Bar &bull; Away From Honest Businessmen</div>
+      <div class="title">The Secret Meeting</div>
+      <div class="meeting-desc">
+        <div class="attendee">
+          <div class="attendee-icon">JT</div>
+          <div class="attendee-name">James Taggart</div>
+          <div class="attendee-role">Railroad</div>
+        </div>
+        <div class="attendee">
+          <div class="attendee-icon">OB</div>
+          <div class="attendee-name">Orren Boyle</div>
+          <div class="attendee-role">Steel</div>
+        </div>
+        <div class="attendee">
+          <div class="attendee-icon">WM</div>
+          <div class="attendee-name">Wesley Mouch</div>
+          <div class="attendee-role">Lobbyist</div>
+        </div>
+        <div class="attendee">
+          <div class="attendee-icon">PL</div>
+          <div class="attendee-name">Paul Larkin</div>
+          <div class="attendee-role">"Friend"</div>
+        </div>
+      </div>
+      <div class="plan-box">
+        <div class="plan-label">Their Plan</div>
+        <div class="plan-text">
+          Use government regulation to destroy Hank Rearden<br>
+          and Dan Conway's Phoenix-Durango railroad.
+        </div>
+      </div>
+      <div class="insight">
+        They cloak their plunder in language about <em>equality</em>, <em>social responsibility</em>,<br>
+        and <em>protecting the weak</em>&mdash;but the weak they protect are themselves.
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(184, 115, 51, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .francisco-visual {
+    width: 380px;
+    flex-shrink: 0;
+    }
+    .francisco-card {
+    background: linear-gradient(135deg, rgba(184, 115, 51, 0.15) 0%, rgba(184, 115, 51, 0.05) 100%);
+    border: 2px solid rgba(184, 115, 51, 0.4);
+    padding: 40px;
+    text-align: center;
+    }
+    .francisco-icon {
+    font-size: 72px;
+    color: #b87333;
+    margin-bottom: 20px;
+    }
+    .francisco-name {
+    color: #f5f0e6;
+    font-size: 32px;
+    margin-bottom: 10px;
+    }
+    .francisco-title {
+    color: #b87333;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    }
+    .legacy {
+    color: #a09080;
+    font-size: 18px;
+    line-height: 1.5;
+    font-style: italic;
+    }
+    .info {
+    max-width: 900px;
+    }
+    .traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 35px;
+    }
+    .trait {
+    background: rgba(184, 115, 51, 0.1);
+    border: 1px solid rgba(184, 115, 51, 0.3);
+    padding: 12px 24px;
+    color: #b87333;
+    font-size: 18px;
+    }
+    .story {
+    color: #a09080;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    }
+    .story em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .detail {
+    padding: 25px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    }
+    .detail-label {
+    color: #d4a84b;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    }
+    .detail-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="francisco-visual">
+        <div class="francisco-card">
+          <div class="francisco-icon">FA</div>
+          <div class="francisco-name">Francisco d'Anconia</div>
+          <div class="francisco-title">Heir to d'Anconia Copper</div>
+          <div class="legacy">Fortune built over centuries<br>by generations of brilliant industrialists</div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="tag">Through Dagny's Memories</div>
+        <div class="title">An Extraordinary Childhood</div>
+        <div class="traits">
+          <div class="trait">Mathematics</div>
+          <div class="trait">Science</div>
+          <div class="trait">Business</div>
+          <div class="trait">Sports</div>
+          <div class="trait">Prodigy</div>
+        </div>
+        <div class="story">
+          Francisco spent summers with the Taggarts, where he and Dagny became close friends.
+          Their friendship was based on <em>shared values</em>&mdash;a love of productive work
+          and contempt for those who merely existed without creating.
+        </div>
+        <div class="detail">
+          <div class="detail-label">Striking Detail</div>
+          <div class="detail-text">
+            As a teenager, he worked incognito in a d'Anconia copper foundry,
+            rising to become one of the most valued workers before revealing his identity.
+            He was committed to earning everything, despite being born to wealth.
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

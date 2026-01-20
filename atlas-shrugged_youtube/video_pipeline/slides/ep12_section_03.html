@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .versus {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-bottom: 50px;
+    }
+    .path-box {
+    width: 500px;
+    padding: 35px;
+    text-align: left;
+    }
+    .path-box.merit {
+    background: rgba(212, 168, 75, 0.08);
+    border: 2px solid rgba(212, 168, 75, 0.4);
+    }
+    .path-box.pull {
+    background: rgba(122, 60, 60, 0.08);
+    border: 2px solid rgba(122, 60, 60, 0.4);
+    }
+    .path-label {
+    font-size: 28px;
+    margin-bottom: 20px;
+    }
+    .merit .path-label { color: #d4a84b; }
+    .pull .path-label { color: #7a3c3c; }
+    .path-def {
+    color: #a09080;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    }
+    .path-example {
+    color: #f5f0e6;
+    font-size: 18px;
+    line-height: 1.5;
+    font-style: italic;
+    }
+    .consequences {
+    background: rgba(122, 60, 60, 0.08);
+    border: 1px solid rgba(122, 60, 60, 0.3);
+    padding: 30px 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    .consequences-label {
+    color: #7a3c3c;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .consequences-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .consequences-text em {
+    color: #7a3c3c;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Two Paths to Power</div>
+      <div class="title">Pull vs Merit</div>
+      <div class="versus">
+        <div class="path-box merit">
+          <div class="path-label">Merit</div>
+          <div class="path-def">Earning your position through demonstrated ability. You rise because you can do the job better than others.</div>
+          <div class="path-example">The best surgeon gets patients because she saves lives. The best engineer gets contracts because his bridges stand.</div>
+        </div>
+        <div class="path-box pull">
+          <div class="path-label">Pull</div>
+          <div class="path-def">Getting your position through political connection. You rise because you know someone, or you've said the right things.</div>
+          <div class="path-example">The connected surgeon gets patients regardless of skill. The connected engineer gets contracts regardless of competence.</div>
+        </div>
+      </div>
+      <div class="consequences">
+        <div class="consequences-label">When Pull Replaces Merit</div>
+        <div class="consequences-text">
+          Bridges collapse. Patients die. Quality disappears. But the aristocracy of pull doesn't care&mdash;they're <em>insulated from consequences</em> by their connections.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

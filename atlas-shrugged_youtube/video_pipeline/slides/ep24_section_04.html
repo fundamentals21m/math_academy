@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #8b2d2d;
+      font-size: 52px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(139, 45, 45, 0.3);
+    }
+    .consequences {
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .consequence {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      padding-left: 30px;
+      border-left: 2px solid rgba(139, 45, 45, 0.4);
+      text-align: left;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(139, 45, 45, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #8b2d2d;
+      font-size: 26px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 24 &bull; The Consequences</div>
+    <div class="section-title">The Consequences</div>
+    <div class="consequences">
+      <div class="consequence">The more people suffer, the more noble the cause must be.</div>
+      <div class="consequence">The more life is destroyed, the more sacrifice has been achieved.</div>
+      <div class="consequence">The looters aren't disappointed by the collapse. They're vindicated by it.</div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">Suffering isn't a problem to be solved. It's a virtue to be cultivated.</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(122, 60, 60, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .lords {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 45px;
+    }
+    .lord-card {
+    width: 320px;
+    background: rgba(122, 60, 60, 0.08);
+    border: 1px solid rgba(122, 60, 60, 0.3);
+    padding: 25px;
+    text-align: center;
+    }
+    .lord-initials {
+    color: #7a3c3c;
+    font-size: 36px;
+    margin-bottom: 15px;
+    }
+    .lord-name {
+    color: #f5f0e6;
+    font-size: 22px;
+    margin-bottom: 10px;
+    }
+    .lord-method {
+    color: #a09080;
+    font-size: 16px;
+    line-height: 1.4;
+    }
+    .metaphor {
+    background: rgba(122, 60, 60, 0.1);
+    border: 1px solid rgba(122, 60, 60, 0.3);
+    padding: 30px 50px;
+    margin-bottom: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .metaphor-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .metaphor-text em {
+    color: #7a3c3c;
+    font-style: normal;
+    }
+    .instability {
+    padding: 25px 40px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    }
+    .instability-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .instability-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The New Lords of America</div>
+      <div class="title">The New Aristocracy</div>
+      <div class="lords">
+        <div class="lord-card">
+          <div class="lord-initials">WM</div>
+          <div class="lord-name">Wesley Mouch</div>
+          <div class="lord-method">Rose through betraying his employer and serving the looters</div>
+        </div>
+        <div class="lord-card">
+          <div class="lord-initials">JT</div>
+          <div class="lord-name">James Taggart</div>
+          <div class="lord-method">Holds position through political allies, not railroad competence</div>
+        </div>
+        <div class="lord-card">
+          <div class="lord-initials">OB</div>
+          <div class="lord-name">Orren Boyle</div>
+          <div class="lord-method">Competes by getting laws passed against his competitors</div>
+        </div>
+      </div>
+      <div class="metaphor">
+        <div class="metaphor-text">
+          Their <em>castles</em> are government offices. Their <em>armies</em> are bureaucrats with regulatory power. Their <em>weapons</em> are laws and directives that can destroy anyone who threatens their position.
+        </div>
+      </div>
+      <div class="instability">
+        <div class="instability-text">
+          Like all aristocracies based on something other than merit, this one is <em>fundamentally unstable</em>. It can seize wealth, but it <em>cannot create it</em>.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

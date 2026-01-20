@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 154, 140, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .description em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .achievement-box {
+    background: rgba(74, 154, 140, 0.08);
+    border: 1px solid rgba(74, 154, 140, 0.3);
+    padding: 35px 50px;
+    margin-bottom: 45px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .achievement-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .achievement-text em {
+    color: #4a9a8c;
+    font-style: normal;
+    }
+    .question {
+    color: #d4a84b;
+    font-size: 30px;
+    font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Mind Unleashed</div>
+      <div class="title">The Scientist</div>
+      <div class="description">
+        We meet a brilliant scientist whose work could transform the world&mdash;technology that seems <em>almost impossible</em>, yet functions. His inventions work not by magic but by the <em>application of reason to reality</em>.
+      </div>
+      <div class="achievement-box">
+        <div class="achievement-text">
+          He has discovered principles that others said were impossible, built machines that others said <em>could not exist</em>. This man represents what human achievement can accomplish when the mind is free.
+        </div>
+      </div>
+      <div class="question">
+        But in a world that punishes achievement, where does genius go when genius itself becomes a crime?
+      </div>
+    </div>
+</body>
+</html>

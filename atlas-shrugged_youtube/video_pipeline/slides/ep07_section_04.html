@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .character-visual {
+    width: 350px;
+    flex-shrink: 0;
+    }
+    .character-card {
+    background: linear-gradient(135deg, rgba(139, 45, 45, 0.15) 0%, rgba(139, 45, 45, 0.05) 100%);
+    border: 2px solid rgba(139, 45, 45, 0.4);
+    padding: 40px;
+    text-align: center;
+    }
+    .character-icon {
+    font-size: 64px;
+    color: #8b2d2d;
+    margin-bottom: 20px;
+    }
+    .character-name {
+    color: #f5f0e6;
+    font-size: 28px;
+    margin-bottom: 10px;
+    }
+    .character-role {
+    color: #8b2d2d;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    }
+    .character-desc {
+    color: #a09080;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.4;
+    }
+    .info {
+    max-width: 900px;
+    }
+    .betrayal-desc {
+    color: #a09080;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    }
+    .betrayal-desc em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .reward-box {
+    background: rgba(139, 45, 45, 0.08);
+    border: 1px solid rgba(139, 45, 45, 0.3);
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    }
+    .reward-label {
+    color: #8b2d2d;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .reward-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    }
+    .lesson {
+    padding: 25px 30px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    }
+    .lesson-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .lesson-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="character-visual">
+        <div class="character-card">
+          <div class="character-icon">WM</div>
+          <div class="character-name">Wesley Mouch</div>
+          <div class="character-role">The Betrayer</div>
+          <div class="character-desc">Rearden's former lobbyist, now serving the looters</div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="tag">The Ultimate Betrayal</div>
+        <div class="title">Mouch Reveals His True Colors</div>
+        <div class="betrayal-desc">
+          Rearden had employed Mouch as his Washington lobbyist&mdash;paid him to represent his interests. But Mouch has been <em>working with the conspirators all along</em>.
+        </div>
+        <div class="reward-box">
+          <div class="reward-label">His Reward for Betrayal</div>
+          <div class="reward-text">Appointment as Assistant Coordinator of the Bureau of Economic Planning and National Resources</div>
+        </div>
+        <div class="lesson">
+          <div class="lesson-text">
+            You cannot work within a <em>corrupt system</em>. Rearden realizes too late that he was <em>funding his own destruction</em>. Every dollar he paid Mouch was used against him.
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

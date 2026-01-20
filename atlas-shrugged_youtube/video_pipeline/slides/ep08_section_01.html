@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+    color: #d4a84b;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    }
+    .dialogue {
+    margin-bottom: 50px;
+    }
+    .question {
+    color: #a09080;
+    font-size: 38px;
+    font-style: italic;
+    margin-bottom: 20px;
+    }
+    .answer {
+    color: #d4a84b;
+    font-size: 72px;
+    font-weight: bold;
+    text-shadow: 0 0 60px rgba(212, 168, 75, 0.4);
+    }
+    .divider {
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+    margin: 0 auto 50px;
+    }
+    .context {
+    color: #f5f0e6;
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 1100px;
+    }
+    .context em {
+    color: #4a9a8c;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="episode-tag">Episode 8 &bull; Cold Open</div>
+      <div class="dialogue">
+        <div class="question">"Miss Taggart, who is John Galt?"</div>
+        <div class="answer">"We are!"</div>
+      </div>
+      <div class="divider"></div>
+      <div class="context">
+        The crowd roars as the John Galt Line opens. After months of predictions of disaster and condemnation from the intellectual establishment, Dagny Taggart and Hank Rearden are about to <em>stake their lives on their own work</em>.
+      </div>
+    </div>
+</body>
+</html>

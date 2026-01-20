@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #5ea9a8; --accent-rgb: 94, 169, 168; }
+    .themes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    }
+    .theme-card {
+    background: rgba(20, 18, 15, 0.9);
+    border: 1px solid rgba(212, 168, 75, 0.25);
+    padding: 35px;
+    text-align: left;
+    }
+    .theme-number {
+    color: #d4a84b;
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.6;
+    }
+    .theme-name {
+    color: #f5f0e6;
+    font-size: 28px;
+    margin-bottom: 15px;
+    }
+    .theme-desc {
+    color: #a09080;
+    font-size: 20px;
+    line-height: 1.5;
+    }
+    .theme-desc em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+    .theme-card:nth-child(1) { border-color: rgba(212, 168, 75, 0.4); }
+    .theme-card:nth-child(2) { border-color: rgba(139, 69, 69, 0.4); }
+    .theme-card:nth-child(2) .theme-number { color: #8b4545; }
+    .theme-card:nth-child(3) { border-color: rgba(184, 115, 51, 0.4); }
+    .theme-card:nth-child(3) .theme-number { color: #b87333; }
+    .theme-card:nth-child(4) { border-color: rgba(94, 169, 168, 0.4); }
+    .theme-card:nth-child(4) .theme-number { color: #5ea9a8; }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Chapter Analysis</div>
+      <div class="title">Key Themes</div>
+      <div class="themes-grid">
+        <div class="theme-card">
+          <div class="theme-number">1</div>
+          <div class="theme-name">Money as Virtue</div>
+          <div class="theme-desc">
+            Francisco's speech presents money as a tool of <em>achievement and free exchange</em>.
+            Hostility to money is hostility to human accomplishment itself.
+          </div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-number">2</div>
+          <div class="theme-name">Intellectual Corruption</div>
+          <div class="theme-desc">
+            The intellectuals provide philosophical cover for looting by preaching that
+            <em>nothing can be known</em>, man is worthless, and suffering is noble.
+          </div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-number">3</div>
+          <div class="theme-name">Social Masks</div>
+          <div class="theme-desc">
+            The party reveals the gap between people's social poses and their true values.
+            Francisco <em>drops his playboy mask</em> to reveal unexpected depth.
+          </div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-number">4</div>
+          <div class="theme-name">Recognition</div>
+          <div class="theme-desc">
+            Rearden and Dagny recognize each other as <em>kindred spirits</em>&mdash;different
+            from everyone else at the gathering.
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

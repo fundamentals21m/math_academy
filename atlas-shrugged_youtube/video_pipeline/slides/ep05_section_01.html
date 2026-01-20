@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .speaker {
+    color: #b87333;
+    font-size: 28px;
+    margin-bottom: 50px;
+    }
+    .context {
+    color: #a09080;
+    font-size: 28px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    }
+    .context em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .declaration {
+    color: #d4a84b;
+    font-size: 36px;
+    text-shadow: 0 0 30px rgba(212, 168, 75, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Question That Changes Everything</div>
+      <div class="quote">
+        "So you think that money is the root of all evil?<br>
+        Have you ever asked what is the root of money?"
+      </div>
+      <div class="speaker">&mdash; Francisco d'Anconia</div>
+      <div class="context">
+        With those words, a man everyone believes is a <em>worthless playboy</em><br>
+        drops his mask and delivers one of the most important<br>
+        philosophical arguments in literature.
+      </div>
+      <div class="declaration">This is the Money Speech.</div>
+    </div>
+</body>
+</html>

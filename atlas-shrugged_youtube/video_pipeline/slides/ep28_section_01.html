@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.2) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .series-tag {
+      color: #a09080;
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 18px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .words {
+      color: #d4a84b;
+      font-size: 52px;
+      font-style: italic;
+      margin-bottom: 40px;
+      text-shadow: 0 0 60px rgba(212, 168, 75, 0.5);
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 40px auto;
+    }
+    .question {
+      color: #f5f0e6;
+      font-size: 32px;
+      max-width: 750px;
+      margin: 0 auto 30px;
+      line-height: 1.5;
+    }
+    .provocation {
+      color: #d4a84b;
+      font-size: 28px;
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="series-tag">Atlas Shrugged &bull; Part III: A Is A</div>
+    <div class="episode-tag">Episode 28</div>
+    <div class="words">Egoist. Selfish. Self-interested.</div>
+    <div class="divider"></div>
+    <div class="question">These words are meant as insults. To be called selfish is to be accused of a moral crime.</div>
+    <div class="provocation">But what if selfishness isn't a crime? What if it's a virtue?</div>
+  </div>
+</body>
+</html>

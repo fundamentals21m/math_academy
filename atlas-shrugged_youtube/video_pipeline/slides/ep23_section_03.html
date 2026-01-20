@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.15) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #8b2d2d;
+      font-size: 52px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(139, 45, 45, 0.3);
+    }
+    .contrasts {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .contrast-item {
+      width: 350px;
+      padding: 20px 25px;
+      text-align: left;
+    }
+    .rhetoric {
+      border-left: 3px solid #a09080;
+      background: rgba(160, 144, 128, 0.04);
+    }
+    .reality {
+      border-left: 3px solid #8b2d2d;
+      background: rgba(139, 45, 45, 0.04);
+    }
+    .contrast-label {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .rhetoric .contrast-label { color: #a09080; }
+    .reality .contrast-label { color: #8b2d2d; }
+    .contrast-text {
+      color: #f5f0e6;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(139, 45, 45, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #a09080;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 23 &bull; The Outside World</div>
+    <div class="section-title">The Outside World</div>
+    <div class="contrasts">
+      <div class="contrast-item rhetoric">
+        <div class="contrast-label">The Rhetoric</div>
+        <div class="contrast-text">Sharing and fairness for all</div>
+      </div>
+      <div class="contrast-item reality">
+        <div class="contrast-label">The Reality</div>
+        <div class="contrast-text">Scarcity and favoritism for the connected</div>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">The greedy producer has been replaced by the greedy bureaucrat.</div>
+    </div>
+  </div>
+</body>
+</html>

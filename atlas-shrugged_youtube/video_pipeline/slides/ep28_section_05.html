@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.18) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .declaration {
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .dec-line {
+      color: #f5f0e6;
+      font-size: 26px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .dec-line em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .hero-box {
+      border: 1px solid rgba(212, 168, 75, 0.4);
+      background: rgba(212, 168, 75, 0.05);
+      max-width: 800px;
+      margin: 0 auto 40px;
+      padding: 25px 35px;
+    }
+    .hero-text {
+      color: #d4a84b;
+      font-size: 24px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .closing {
+      color: #a09080;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 28 &bull; Closing</div>
+    <div class="declaration">
+      <div class="dec-line">The egoist says: <em>my life is mine</em>. My happiness matters. My achievements are not crimes.</div>
+      <div class="dec-line">This isn't cruelty. It's <em>integrity</em>.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="hero-box">
+      <div class="hero-text">John Galt is the novel's supreme egoist&mdash;completely, unapologetically, proudly selfish. And he's the hero.</div>
+    </div>
+    <div class="closing">See you in the next episode.</div>
+  </div>
+</body>
+</html>

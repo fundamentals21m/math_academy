@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.12) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .accusation {
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .acc-line {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      padding-left: 30px;
+      border-left: 2px solid rgba(139, 45, 45, 0.4);
+      text-align: left;
+    }
+    .acc-line em {
+      color: #8b2d2d;
+      font-style: normal;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(139, 45, 45, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #8b2d2d;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 27 &bull; The Basic Premise</div>
+    <div class="section-title">The Basic Premise</div>
+    <div class="accusation">
+      <div class="acc-line">You were taught that selfishness is <em>evil</em> and sacrifice is <em>good</em></div>
+      <div class="acc-line">You felt guilty for <em>succeeding</em> and virtuous for <em>suffering</em></div>
+      <div class="acc-line">A civilization built by the selfish, destroyed by the morality that <em>condemns</em> them</div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">"I have called a strike&mdash;not against your bodies, but against your morality."</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #5ea9a8; --accent-rgb: 94, 169, 168; }
+    .bracelet-visual {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, rgba(94, 169, 168, 0.2) 0%, rgba(94, 169, 168, 0.05) 100%);
+    border: 3px solid rgba(94, 169, 168, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    }
+    .bracelet-symbol {
+    width: 200px;
+    height: 200px;
+    border: 8px solid #5ea9a8;
+    border-radius: 50%;
+    opacity: 0.8;
+    }
+    .bracelet-label {
+    position: absolute;
+    bottom: 30px;
+    color: #5ea9a8;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    }
+    .info {
+    max-width: 900px;
+    }
+    .contrast {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    }
+    .contrast-item {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid rgba(160, 144, 128, 0.2);
+    }
+    .contrast-item.value {
+    border-color: rgba(94, 169, 168, 0.4);
+    background: rgba(94, 169, 168, 0.05);
+    }
+    .contrast-label {
+    color: #a09080;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .contrast-item.value .contrast-label {
+    color: #5ea9a8;
+    }
+    .contrast-text {
+    color: #a09080;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .contrast-item.value .contrast-text {
+    color: #f5f0e6;
+    }
+    .insight-label {
+    color: #d4a84b;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="bracelet-visual">
+        <div class="bracelet-symbol"></div>
+        <div class="bracelet-label">Rearden Metal</div>
+      </div>
+      <div class="info">
+        <div class="tag">Symbol</div>
+        <div class="title">The Bracelet</div>
+        <div class="contrast">
+          <div class="contrast-item value">
+            <div class="contrast-label">To Rearden</div>
+            <div class="contrast-text">Ten years of work, innovation, and triumph&mdash;the first fruit of his greatest creation</div>
+          </div>
+          <div class="contrast-item">
+            <div class="contrast-label">To Lillian</div>
+            <div class="contrast-text">Worthless. She would have preferred diamonds&mdash;social status over actual achievement</div>
+          </div>
+        </div>
+        <div class="insight">
+          <div class="insight-label">The Sanction of the Victim</div>
+          <div class="insight-text">The producer must consent to his own exploitation by accepting unearned guilt.</div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

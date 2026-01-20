@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.2) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+    color: #8b2d2d;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    }
+    .quote em {
+    color: #8b2d2d;
+    font-style: normal;
+    }
+    .divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8b2d2d, transparent);
+    margin: 0 auto 50px;
+    }
+    .context {
+    color: #a09080;
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 1100px;
+    }
+    .context em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="episode-tag">Episode 7 &bull; Cold Open</div>
+      <div class="quote">
+        "The man who speaks to you of <em>sacrifice</em>, speaks of <em>slaves and masters</em>.<br>
+        And intends to be the <em>master</em>."
+      </div>
+      <div class="divider"></div>
+      <div class="context">
+        The Equalization of Opportunity Bill has passed. Hank Rearden must sell his ore mines&mdash;property he built through <em>decades of work</em>&mdash;to men who could never dig a single chunk of ore from the earth.
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .choices {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 50px;
+    }
+    .choice-box {
+    width: 480px;
+    padding: 35px;
+    text-align: left;
+    }
+    .choice-box.looters {
+    background: rgba(139, 45, 45, 0.08);
+    border: 1px solid rgba(139, 45, 45, 0.25);
+    }
+    .choice-box.producers {
+    background: rgba(74, 154, 140, 0.08);
+    border: 1px solid rgba(74, 154, 140, 0.25);
+    }
+    .choice-label {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .looters .choice-label { color: #8b2d2d; }
+    .producers .choice-label { color: #4a9a8c; }
+    .choice-text {
+    color: #f5f0e6;
+    font-size: 20px;
+    line-height: 1.5;
+    }
+    .conclusion {
+    padding: 30px 50px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    .conclusion-text {
+    color: #f5f0e6;
+    font-size: 26px;
+    line-height: 1.5;
+    }
+    .conclusion-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Fundamental Choice</div>
+      <div class="title">Either-Or</div>
+      <div class="choices">
+        <div class="choice-box looters">
+          <div class="choice-label">The Looters Offer</div>
+          <div class="choice-text">Safety through submission. Surrender your judgment, follow the collective, ask permission for every action&mdash;and you can survive. Perhaps.</div>
+        </div>
+        <div class="choice-box producers">
+          <div class="choice-label">The Producers Offer</div>
+          <div class="choice-text">Freedom and its consequences. Use your mind, create value, live by your own judgment&mdash;and face the full force of a system designed to destroy you.</div>
+        </div>
+      </div>
+      <div class="conclusion">
+        <div class="conclusion-text">
+          There is no compromise. You cannot half-think. You cannot partially produce. <em>Either you are a creator or a parasite.</em> Either you move the world or you cling to it.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

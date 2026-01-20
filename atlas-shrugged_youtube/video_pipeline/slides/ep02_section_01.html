@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #5ea9a8; --accent-rgb: 94, 169, 168; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(94, 169, 168, 0.15) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Rearden Steel Mills</div>
+      <div class="main-title">Rearden Metal</div>
+      <div class="quote">
+        "The metal was greenish-blue. It had a slight shimmer,<br>
+        like the color of the sky in the early morning,<br>
+        when the sun is still below the horizon but about to rise."
+      </div>
+      <div class="attribution">
+        <span class="emphasis">Ten years</span> of work, experimentation, and determination made physical.
+      </div>
+    </div>
+</body>
+</html>

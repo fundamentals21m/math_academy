@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.15) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #8b2d2d;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .collapse-items {
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+    .collapse-item {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      padding-left: 30px;
+      border-left: 2px solid rgba(139, 45, 45, 0.5);
+      text-align: left;
+    }
+    .collapse-item em {
+      color: #8b2d2d;
+      font-style: normal;
+    }
+    .bottom-line {
+      color: #a09080;
+      font-size: 22px;
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 30 &bull; The Collapse</div>
+    <div class="section-title">The Collapse</div>
+    <div class="collapse-items">
+      <div class="collapse-item">The system that punished production has <em>no production left</em> to punish</div>
+      <div class="collapse-item">They followed their principles&mdash;and it <em>stopped working</em></div>
+      <div class="collapse-item">Now those minds are gone&mdash;and they discover what a world <em>without them</em> looks like</div>
+    </div>
+    <div class="bottom-line">Not conquered, not invaded&mdash;simply stopped.</div>
+  </div>
+</body>
+</html>

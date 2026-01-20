@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .previously {
+      color: #a09080;
+      font-size: 20px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .recap {
+      color: #f5f0e6;
+      font-size: 28px;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+    }
+    .recap em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #8b2d2d, transparent);
+      margin: 0 auto 40px;
+    }
+    .today-label {
+      color: #8b2d2d;
+      font-size: 18px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .today-text {
+      color: #f5f0e6;
+      font-size: 26px;
+      line-height: 1.5;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+    .today-text em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 15 &bull; Introduction</div>
+    <div class="previously">Previously</div>
+    <div class="recap">
+      The <em>sanction of the victim</em>. Evil is powerless without the cooperation of the good.<br>
+      The moment the producers withdraw their sanction&mdash;they are free.
+    </div>
+    <div class="divider"></div>
+    <div class="today-label">Today</div>
+    <div class="today-text">
+      We see the <em>economic consequences</em> of exploitation.<br>
+      What happens when a society consumes more than it produces,<br>
+      when it writes checks against a <em>shrinking balance</em>.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b4545; --accent-rgb: 139, 69, 69; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(180, 140, 80, 0.1) 0%, transparent 50%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .guest-types {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+    }
+    .guest-type {
+    width: 350px;
+    padding: 30px;
+    border: 1px solid rgba(160, 144, 128, 0.3);
+    text-align: left;
+    }
+    .guest-type.intellectuals {
+    border-color: rgba(139, 69, 69, 0.4);
+    background: rgba(139, 69, 69, 0.08);
+    }
+    .guest-type.schemers {
+    border-color: rgba(100, 80, 60, 0.4);
+    background: rgba(100, 80, 60, 0.08);
+    }
+    .guest-label {
+    color: #a09080;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .guest-type.intellectuals .guest-label { color: #8b4545; }
+    .guest-type.schemers .guest-label { color: #a09080; }
+    .guest-text {
+    color: #f5f0e6;
+    font-size: 20px;
+    line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Rearden Home</div>
+      <div class="title">The Party Scene</div>
+      <div class="description">
+        A gathering hosted by Lillian Rearden that brings together the novel's main characters,
+        exposing the conflicts between them in a social setting.
+      </div>
+      <div class="guest-types">
+        <div class="guest-type intellectuals">
+          <div class="guest-label">The Intellectuals</div>
+          <div class="guest-text">Dr. Pritchett and Balph Eubank spout nihilistic philosophy while enjoying champagne and fine food</div>
+        </div>
+        <div class="guest-type schemers">
+          <div class="guest-label">The Schemers</div>
+          <div class="guest-text">James Taggart and others scheme in corners, living off wealth created by producers</div>
+        </div>
+      </div>
+      <div class="insight">
+        <div class="insight-text">
+          The party represents the <em>cultural establishment</em> that provides intellectual cover
+          for the looters' assault on the producers. And it's into this environment that
+          Francisco d'Anconia drops his <em>philosophical bomb</em>.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .contrast-final {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .side {
+      width: 320px;
+      padding: 25px;
+      text-align: center;
+    }
+    .side.greed {
+      border: 1px solid rgba(212, 168, 75, 0.4);
+      background: rgba(212, 168, 75, 0.04);
+    }
+    .side.envy {
+      border: 1px solid rgba(139, 45, 45, 0.4);
+      background: rgba(139, 45, 45, 0.04);
+    }
+    .side-label {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .greed .side-label { color: #d4a84b; }
+    .envy .side-label { color: #8b2d2d; }
+    .side-text {
+      color: #f5f0e6;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #4a6b8a, transparent);
+      margin: 0 auto 40px;
+    }
+    .final-line {
+      color: #d4a84b;
+      font-size: 28px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .closing {
+      color: #a09080;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 23 &bull; Closing</div>
+    <div class="contrast-final">
+      <div class="side greed">
+        <div class="side-label">Honest Greed</div>
+        <div class="side-text">Creates wealth<br>Leads to abundance<br>The valley</div>
+      </div>
+      <div class="side envy">
+        <div class="side-label">Envy</div>
+        <div class="side-text">Destroys wealth<br>Leads to ruin<br>The outside</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="final-line">A civilization eating itself, calling its suicide a virtue.</div>
+    <div class="closing">See you in the next episode.</div>
+  </div>
+</body>
+</html>

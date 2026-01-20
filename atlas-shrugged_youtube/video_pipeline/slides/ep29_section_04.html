@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 69, 69, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .meaning-box {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .meaning-line {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+    .meaning-line em {
+      font-style: normal;
+    }
+    .meaning-line em.loss { color: #8b4545; }
+    .meaning-line em.gold { color: #d4a84b; }
+    .monument {
+      border-left: 3px solid #8b4545;
+      padding: 20px 30px;
+      background: rgba(139, 69, 69, 0.06);
+      margin-top: 40px;
+    }
+    .monument-text {
+      color: #a09080;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .monument-text em {
+      color: #8b4545;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 29 &bull; The Meaning</div>
+    <div class="section-title">What Was Lost</div>
+    <div class="meaning-box">
+      <div class="meaning-line">Cheap energy for everyone. An end to scarcity. Prosperity <em class="loss">beyond imagination</em>.</div>
+      <div class="meaning-line">All abandoned because they taught the world that <em class="gold">achievement is exploitation</em> and <em class="gold">ability is debt</em>.</div>
+      <div class="monument">
+        <div class="monument-text">The motor rusting in the factory is a monument to everything collectivism destroys. Kill the spirit of achievement, and <em>the motors stop</em>.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

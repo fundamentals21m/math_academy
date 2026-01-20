@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .directives {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 45px;
+    }
+    .directive {
+    background: rgba(139, 45, 45, 0.08);
+    border: 1px solid rgba(139, 45, 45, 0.25);
+    padding: 25px;
+    text-align: left;
+    }
+    .directive-label {
+    color: #8b2d2d;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    }
+    .directive-text {
+    color: #f5f0e6;
+    font-size: 20px;
+    line-height: 1.4;
+    }
+    .conclusion {
+    padding: 30px 50px;
+    border-left: 3px solid #8b2d2d;
+    background: rgba(139, 45, 45, 0.05);
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    .conclusion-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .conclusion-text em {
+    color: #8b2d2d;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Looters Strike</div>
+      <div class="title">New Legislation</div>
+      <div class="directives">
+        <div class="directive">
+          <div class="directive-label">Directive I</div>
+          <div class="directive-text">Freeze wages and prices&mdash;preventing the market from functioning</div>
+        </div>
+        <div class="directive">
+          <div class="directive-label">Directive II</div>
+          <div class="directive-text">Workers forbidden from quitting without government permission</div>
+        </div>
+        <div class="directive">
+          <div class="directive-label">Directive III</div>
+          <div class="directive-text">Businesses must produce at least as much as the previous year</div>
+        </div>
+        <div class="directive">
+          <div class="directive-label">Directive IV</div>
+          <div class="directive-text">New inventions and businesses require government approval</div>
+        </div>
+      </div>
+      <div class="conclusion">
+        <div class="conclusion-text">
+          These are not regulations&mdash;<em>they are chains</em>. The looters have decided that if achievement is possible, <em>it must be made illegal</em>.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

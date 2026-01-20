@@ -1,0 +1,252 @@
+/**
+ * Atlas Shrugged YouTube Series - Slide Stylesheet
+ *
+ * Base styles shared across all episode slides.
+ * Use CSS custom properties (--accent-color) for episode-specific theming.
+ *
+ * Default accent: Gold (#d4a84b) - Part 1: Non-Contradiction
+ * Teal (#5ea9a8) - Rearden Metal scenes
+ * Crimson (#8b4545) - Part 2: Either-Or
+ * Steel blue (#4a6fa5) - Part 3: A Is A
+ */
+
+/* =============================================================================
+   CSS CUSTOM PROPERTIES (Override in individual HTML files)
+   ============================================================================= */
+:root {
+  --accent-color: #d4a84b;
+  --accent-rgb: 212, 168, 75;
+  --bg-color: #0a0908;
+  --text-primary: #f5f0e6;
+  --text-secondary: #a09080;
+
+  --slide-width: 1920px;
+  --slide-height: 1080px;
+}
+
+/* =============================================================================
+   RESET & BASE
+   ============================================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: var(--slide-width);
+  height: var(--slide-height);
+  background: var(--bg-color);
+  font-family: Georgia, 'Times New Roman', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =============================================================================
+   VIGNETTE OVERLAY
+   ============================================================================= */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* =============================================================================
+   DECORATIVE FRAME
+   ============================================================================= */
+.frame {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+}
+
+.frame::before,
+.frame::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-color);
+}
+
+.frame::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.frame::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.corner-br,
+.corner-tl {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-color);
+}
+
+.corner-tl {
+  top: 38px;
+  right: 38px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.corner-br {
+  bottom: 38px;
+  left: 38px;
+  border-right: none;
+  border-top: none;
+}
+
+/* =============================================================================
+   CONTENT CONTAINER
+   ============================================================================= */
+.content {
+  text-align: center;
+  z-index: 10;
+  max-width: 1400px;
+  padding: 60px;
+}
+
+/* =============================================================================
+   TYPOGRAPHY
+   ============================================================================= */
+.tag {
+  color: var(--accent-color);
+  font-size: 18px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.main-quote {
+  color: var(--text-primary);
+  font-size: 96px;
+  font-style: italic;
+  line-height: 1.2;
+  margin-bottom: 60px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.main-title {
+  color: var(--accent-color);
+  font-size: 84px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 40px rgba(var(--accent-rgb), 0.4);
+}
+
+.title {
+  color: var(--text-primary);
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 32px;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.quote {
+  color: var(--text-primary);
+  font-size: 36px;
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 1100px;
+  margin: 0 auto 50px;
+}
+
+.attribution {
+  color: var(--text-secondary);
+  font-size: 26px;
+}
+
+.emphasis {
+  color: var(--accent-color);
+}
+
+/* =============================================================================
+   INSIGHT BOXES
+   ============================================================================= */
+.insight {
+  padding: 30px 50px;
+  border-left: 3px solid var(--accent-color);
+  background: rgba(var(--accent-rgb), 0.05);
+  text-align: left;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.insight-text {
+  color: var(--text-primary);
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.insight-text em {
+  color: var(--accent-color);
+  font-style: normal;
+}
+
+/* =============================================================================
+   THEME VARIANTS
+   ============================================================================= */
+
+/* Teal theme (Rearden Metal) */
+.theme-teal {
+  --accent-color: #5ea9a8;
+  --accent-rgb: 94, 169, 168;
+}
+
+/* Crimson theme (Part 2) */
+.theme-crimson {
+  --accent-color: #8b4545;
+  --accent-rgb: 139, 69, 69;
+}
+
+/* Steel blue theme (Part 3) */
+.theme-steel {
+  --accent-color: #4a6fa5;
+  --accent-rgb: 74, 111, 165;
+}
+
+/* =============================================================================
+   GLOW EFFECTS (Add as body::before in individual files if needed)
+   ============================================================================= */
+.glow-center::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

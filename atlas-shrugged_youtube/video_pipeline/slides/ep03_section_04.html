@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b4545; --accent-rgb: 139, 69, 69; }
+    .rule-visual {
+    width: 400px;
+    flex-shrink: 0;
+    }
+    .rule-doc {
+    background: rgba(30, 25, 20, 0.8);
+    border: 2px solid rgba(139, 69, 69, 0.5);
+    padding: 40px;
+    text-align: center;
+    }
+    .rule-header {
+    color: #8b4545;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(139, 69, 69, 0.3);
+    padding-bottom: 15px;
+    }
+    .rule-name {
+    color: #f5f0e6;
+    font-size: 32px;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    }
+    .rule-effect {
+    color: #a09080;
+    font-size: 18px;
+    line-height: 1.5;
+    }
+    .struck {
+    text-decoration: line-through;
+    color: #8b4545;
+    }
+    .info {
+    max-width: 850px;
+    }
+    .comparison {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    }
+    .compare-item {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid rgba(160, 144, 128, 0.2);
+    }
+    .compare-item.rhetoric {
+    border-color: rgba(212, 168, 75, 0.3);
+    background: rgba(212, 168, 75, 0.05);
+    }
+    .compare-item.reality {
+    border-color: rgba(139, 69, 69, 0.4);
+    background: rgba(139, 69, 69, 0.08);
+    }
+    .compare-label {
+    color: #a09080;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .compare-item.rhetoric .compare-label { color: #d4a84b; }
+    .compare-item.reality .compare-label { color: #8b4545; }
+    .compare-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="rule-visual">
+        <div class="rule-doc">
+          <div class="rule-header">National Alliance of Railroads</div>
+          <div class="rule-name">The Anti-Dog-Eat-Dog Rule</div>
+          <div class="rule-effect">
+            <span class="struck">Phoenix-Durango Railroad</span><br>
+            must cease operations in Colorado
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="tag">Government Regulation</div>
+        <div class="title">Destroying Competition</div>
+        <div class="comparison">
+          <div class="compare-item rhetoric">
+            <div class="compare-label">The Rhetoric</div>
+            <div class="compare-text">
+              "Protecting the public interest"<br>
+              "Preventing destructive competition"
+            </div>
+          </div>
+          <div class="compare-item reality">
+            <div class="compare-label">The Reality</div>
+            <div class="compare-text">
+              Destroy a more efficient competitor<br>
+              winning through better service
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <div class="insight-text">
+            Unable to compete through <em>productive merit</em>,<br>
+            they turn to <em>political manipulation</em>.
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

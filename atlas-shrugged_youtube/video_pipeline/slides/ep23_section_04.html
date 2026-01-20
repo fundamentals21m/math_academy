@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .envy-logic {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+    .envy-line {
+      color: #f5f0e6;
+      font-size: 24px;
+      padding: 12px 25px;
+      border-left: 3px solid #8b2d2d;
+      background: rgba(139, 45, 45, 0.04);
+      text-align: left;
+    }
+    .envy-line em {
+      color: #8b2d2d;
+      font-style: normal;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(139, 45, 45, 0.3);
+      padding-top: 40px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #8b2d2d;
+      font-size: 26px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 23 &bull; The Psychology of Envy</div>
+    <div class="section-title">The Psychology of Envy</div>
+    <div class="envy-logic">
+      <div class="envy-line">If I can't be wealthy, <em>no one should be</em></div>
+      <div class="envy-line">If I can't succeed, <em>success should be banned</em></div>
+      <div class="envy-line">If I can't create, <em>creation should be punished</em></div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">The goal isn't abundance&mdash;it's equality of misery.</div>
+    </div>
+  </div>
+</body>
+</html>

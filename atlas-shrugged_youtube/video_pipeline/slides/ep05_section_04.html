@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.18) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .points-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+    }
+    .point-card {
+    background: rgba(20, 18, 15, 0.9);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    padding: 25px;
+    text-align: left;
+    }
+    .point-number {
+    color: #d4a84b;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .point-title {
+    color: #f5f0e6;
+    font-size: 24px;
+    margin-bottom: 12px;
+    }
+    .point-text {
+    color: #a09080;
+    font-size: 18px;
+    line-height: 1.5;
+    }
+    .core-argument {
+    background: rgba(212, 168, 75, 0.1);
+    border: 2px solid rgba(212, 168, 75, 0.4);
+    padding: 30px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+    .core-label {
+    color: #d4a84b;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .core-text {
+    color: #f5f0e6;
+    font-size: 26px;
+    line-height: 1.5;
+    }
+    .core-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Francisco d'Anconia</div>
+      <div class="title">The Money Speech</div>
+      <div class="points-grid">
+        <div class="point-card">
+          <div class="point-number">First Point</div>
+          <div class="point-title">Tool of Exchange</div>
+          <div class="point-text">Money doesn't create wealth&mdash;it represents wealth already created through productive effort.</div>
+        </div>
+        <div class="point-card">
+          <div class="point-number">Second Point</div>
+          <div class="point-title">Source of Money</div>
+          <div class="point-text">Money is made by the effort of every honest man who knows he can't consume more than he has produced.</div>
+        </div>
+        <div class="point-card">
+          <div class="point-number">Third Point</div>
+          <div class="point-title">Barometer of Virtue</div>
+          <div class="point-text">When money ceases to be the tool by which men deal with one another, men become the tools of men.</div>
+        </div>
+      </div>
+      <div class="core-argument">
+        <div class="core-label">The Core Argument</div>
+        <div class="core-text">
+          If money is not the medium of exchange, then <em>force</em> must be.<br>
+          Money represents <em>voluntary trade</em>; its abolition means the <em>rule of force</em>.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

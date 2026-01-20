@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .contrast-lines {
+      max-width: 900px;
+      margin: 0 auto 50px;
+    }
+    .contrast-line {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    .line-type {
+      width: 120px;
+      font-size: 16px;
+      text-align: right;
+      letter-spacing: 0.1em;
+    }
+    .burden .line-type { color: #8b2d2d; }
+    .reward .line-type { color: #d4a84b; }
+    .line-text {
+      color: #f5f0e6;
+      font-size: 22px;
+      text-align: left;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .final-line {
+      color: #d4a84b;
+      font-size: 34px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .closing {
+      color: #a09080;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 18 &bull; Closing</div>
+    <div class="contrast-lines">
+      <div class="contrast-line burden">
+        <div class="line-type">As Burden</div>
+        <div class="line-text">Seek partners who need you, depend on you, drain you</div>
+      </div>
+      <div class="contrast-line reward">
+        <div class="line-type">As Reward</div>
+        <div class="line-text">Seek partners who challenge you, inspire you, match you</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="final-line">By our love, we reveal everything.</div>
+    <div class="closing">See you in the next episode.</div>
+  </div>
+</body>
+</html>

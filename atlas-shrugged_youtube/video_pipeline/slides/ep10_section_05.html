@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .meanings {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 45px;
+    }
+    .meaning-box {
+    padding: 25px 40px;
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    }
+    .meaning-box.defiance {
+    background: rgba(200, 80, 40, 0.08);
+    border-left: 3px solid #c85028;
+    }
+    .meaning-box.message {
+    background: rgba(212, 168, 75, 0.08);
+    border-left: 3px solid #d4a84b;
+    }
+    .meaning-box.mystery {
+    background: rgba(74, 154, 140, 0.08);
+    border-left: 3px solid #4a9a8c;
+    }
+    .meaning-label {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .defiance .meaning-label { color: #c85028; }
+    .message .meaning-label { color: #d4a84b; }
+    .mystery .meaning-label { color: #4a9a8c; }
+    .meaning-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .meaning-text em {
+    font-style: normal;
+    }
+    .defiance .meaning-text em { color: #c85028; }
+    .message .meaning-text em { color: #d4a84b; }
+    .mystery .meaning-text em { color: #4a9a8c; }
+    .conclusion {
+    color: #a09080;
+    font-size: 26px;
+    }
+    .conclusion em {
+    color: #c85028;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Symbolism</div>
+      <div class="title">The Meaning of the Torch</div>
+      <div class="meanings">
+        <div class="meaning-box defiance">
+          <div class="meaning-label">An Act of Defiance</div>
+          <div class="meaning-text">Wyatt refuses to let the looters benefit from his work. If they want his oil, they can try to pump it from <em>burning wells</em>.</div>
+        </div>
+        <div class="meaning-box message">
+          <div class="meaning-label">A Message to the World</div>
+          <div class="meaning-text">The producers can leave. The mind can go on strike. When they do, they will <em>leave nothing behind</em> for those who sought to enslave them.</div>
+        </div>
+        <div class="meaning-box mystery">
+          <div class="meaning-label">A Mystery</div>
+          <div class="meaning-text">Where did Wyatt go? Who recruited him? <em>"Who is John Galt?"</em> takes on new meaning. Someone is taking these men.</div>
+        </div>
+      </div>
+      <div class="conclusion">Part One ends with <em>fire</em>&mdash;and with questions that will drive the rest of the novel.</div>
+    </div>
+</body>
+</html>

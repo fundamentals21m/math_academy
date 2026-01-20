@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .recap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+    }
+    .recap-item {
+    background: rgba(212, 168, 75, 0.05);
+    border: 1px solid rgba(212, 168, 75, 0.2);
+    padding: 25px;
+    text-align: left;
+    }
+    .recap-icon {
+    color: #d4a84b;
+    font-size: 24px;
+    margin-bottom: 12px;
+    }
+    .recap-text {
+    color: #f5f0e6;
+    font-size: 19px;
+    line-height: 1.4;
+    }
+    .recap-item:nth-child(4) {
+    grid-column: 1 / 2;
+    }
+    .recap-item:nth-child(5) {
+    grid-column: 2 / 4;
+    }
+    .next-episode {
+    background: rgba(184, 115, 51, 0.1);
+    border: 1px solid rgba(184, 115, 51, 0.4);
+    padding: 35px 60px;
+    margin-bottom: 40px;
+    }
+    .next-label {
+    color: #b87333;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .next-text {
+    color: #f5f0e6;
+    font-size: 26px;
+    line-height: 1.5;
+    }
+    .next-text em {
+    color: #b87333;
+    font-style: normal;
+    }
+    .teaser {
+    color: #a09080;
+    font-size: 22px;
+    font-style: italic;
+    margin-top: 20px;
+    }
+    .outro {
+    color: #a09080;
+    font-size: 28px;
+    }
+    .outro em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Episode 4 Summary</div>
+      <div class="title">What We Learned</div>
+      <div class="recap-grid">
+        <div class="recap-item">
+          <div class="recap-icon">1</div>
+          <div class="recap-text">The prime movers are creative minds who drive civilization forward&mdash;without them, society cannot function.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">2</div>
+          <div class="recap-text">Francisco d'Anconia's brilliant youth is revealed, deepening the mystery of his current playboy behavior.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">3</div>
+          <div class="recap-text">Dan Conway's defeat illustrates how the productive are punished in a corrupted society.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">4</div>
+          <div class="recap-text">The Colorado crisis shows the consequences of destroying producers.</div>
+        </div>
+        <div class="recap-item">
+          <div class="recap-icon">5</div>
+          <div class="recap-text">Dagny's commitment to rebuilding the Rio Norte Line with Rearden Metal sets up the novel's central conflict.</div>
+        </div>
+      </div>
+      <div class="next-episode">
+        <div class="next-label">Next Episode</div>
+        <div class="next-text">
+          One of the most famous scenes in literature&mdash;<em>Francisco d'Anconia's Money Speech</em>.
+        </div>
+        <div class="teaser">
+          When someone declares "money is the root of all evil," Francisco responds with a philosophical defense
+          that will change how you think about wealth, trade, and freedom.
+        </div>
+      </div>
+      <div class="outro">
+        <em>See you in the next one.</em>
+      </div>
+    </div>
+</body>
+</html>

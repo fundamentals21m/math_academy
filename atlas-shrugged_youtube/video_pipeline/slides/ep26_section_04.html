@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #d4a84b;
+      font-size: 52px;
+      margin-bottom: 50px;
+      font-style: italic;
+      text-shadow: 0 0 40px rgba(212, 168, 75, 0.3);
+    }
+    .meaning {
+      max-width: 850px;
+      margin: 0 auto 50px;
+    }
+    .meaning-line {
+      color: #f5f0e6;
+      font-size: 26px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .assertion {
+      color: #d4a84b;
+      font-size: 28px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 26 &bull; The Concerto</div>
+    <div class="section-title">The Concerto</div>
+    <div class="meaning">
+      <div class="meaning-line">The sound of liberation&mdash;a mind freed from the need for permission.</div>
+      <div class="meaning-line">The joy of creating for your own sake, answering to your own standards.</div>
+      <div class="meaning-line">Beautiful, complete, unapologetic.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="assertion">I am right to create. I am right to excel. I am right to exist.</div>
+  </div>
+</body>
+</html>

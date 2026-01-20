@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.15) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #d4a84b;
+      font-size: 56px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(212, 168, 75, 0.3);
+    }
+    .residents {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto 50px;
+    }
+    .resident {
+      padding: 15px 25px;
+      border: 1px solid rgba(74, 107, 138, 0.4);
+      background: rgba(74, 107, 138, 0.04);
+    }
+    .resident-name {
+      color: #f5f0e6;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    .resident-role {
+      color: #a09080;
+      font-size: 16px;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(74, 107, 138, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #a09080;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 21 &bull; The Valley</div>
+    <div class="section-title">The Valley</div>
+    <div class="residents">
+      <div class="resident">
+        <div class="resident-name">Ellis Wyatt</div>
+        <div class="resident-role">Oil producer</div>
+      </div>
+      <div class="resident">
+        <div class="resident-name">Richard Halley</div>
+        <div class="resident-role">Composer</div>
+      </div>
+      <div class="resident">
+        <div class="resident-name">Midas Mulligan</div>
+        <div class="resident-role">Banker</div>
+      </div>
+      <div class="resident">
+        <div class="resident-name">Dozens more</div>
+        <div class="resident-role">The best in every field</div>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">The best minds of a generation, gathered in one hidden place.</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(74, 107, 138, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+    .choice-box {
+      max-width: 850px;
+      margin: 0 auto 50px;
+      padding: 30px;
+      border: 1px solid rgba(212, 168, 75, 0.3);
+      background: rgba(212, 168, 75, 0.03);
+    }
+    .choice-intro {
+      color: #a09080;
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    .choice-options {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .option {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.5;
+    }
+    .option em {
+      color: #d4a84b;
+      font-style: normal;
+    }
+    .option.dark em {
+      color: #8b2d2d;
+    }
+    .bottom-line {
+      color: #d4a84b;
+      font-size: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 27 &bull; The Strike and the Choice</div>
+    <div class="section-title">The Choice</div>
+    <div class="choice-box">
+      <div class="choice-intro">The strike continues until you learn to respect the mind.</div>
+      <div class="choice-options">
+        <div class="option dark">Continue with your morality of sacrifice&mdash;and watch your <em>civilization die</em></div>
+        <div class="option">Accept that selfishness is a virtue, that the mind is noble, that <em>life is good</em></div>
+      </div>
+    </div>
+    <div class="bottom-line">"We will return when you are ready to deal with us as traders."</div>
+  </div>
+</body>
+</html>

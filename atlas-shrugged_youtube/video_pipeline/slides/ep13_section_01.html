@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(90, 106, 90, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+    color: #5a6a5a;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    }
+    .premise {
+    color: #a09080;
+    font-size: 28px;
+    line-height: 1.6;
+    margin-bottom: 45px;
+    max-width: 1100px;
+    }
+    .premise em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .question {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    padding: 30px 50px;
+    margin-bottom: 45px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .question-text {
+    color: #f5f0e6;
+    font-size: 28px;
+    line-height: 1.5;
+    }
+    .question-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+    .definition {
+    padding: 30px 50px;
+    border-left: 3px solid #5a6a5a;
+    background: rgba(90, 106, 90, 0.05);
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    .definition-text {
+    color: #f5f0e6;
+    font-size: 26px;
+    line-height: 1.5;
+    }
+    .definition-text em {
+    color: #5a6a5a;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="episode-tag">Episode 13 &bull; Cold Open</div>
+      <div class="premise">
+        Blackmail works by threatening to reveal something shameful. The victim pays to keep a <em>secret</em> hidden.
+      </div>
+      <div class="question">
+        <div class="question-text">
+          But what if the shameful thing <em>isn't shameful at all</em>? What if the victim is being made to feel guilty for something that is actually <em>good</em>?
+        </div>
+      </div>
+      <div class="definition">
+        <div class="definition-text">
+          This is <em>white blackmail</em>&mdash;the use of unearned guilt as a weapon against the productive. And it may be the looters' most powerful tool.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

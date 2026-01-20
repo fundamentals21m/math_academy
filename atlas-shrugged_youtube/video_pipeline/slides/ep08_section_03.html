@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(74, 154, 140, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .scene-desc {
+    color: #a09080;
+    font-size: 26px;
+    line-height: 1.6;
+    margin-bottom: 45px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .scene-desc em {
+    color: #f5f0e6;
+    font-style: normal;
+    }
+    .quote-box {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    padding: 30px 50px;
+    margin-bottom: 45px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .quote-text {
+    color: #f5f0e6;
+    font-size: 28px;
+    font-style: italic;
+    }
+    .quote-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+    .crowds {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+    }
+    .crowd-box {
+    width: 400px;
+    padding: 25px 30px;
+    text-align: left;
+    }
+    .crowd-box.hope-fail {
+    background: rgba(139, 45, 45, 0.08);
+    border: 1px solid rgba(139, 45, 45, 0.25);
+    }
+    .crowd-box.hope-success {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.25);
+    }
+    .crowd-label {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .hope-fail .crowd-label { color: #8b2d2d; }
+    .hope-success .crowd-label { color: #d4a84b; }
+    .crowd-text {
+    color: #f5f0e6;
+    font-size: 18px;
+    line-height: 1.4;
+    }
+    .symbol {
+    padding: 25px 40px;
+    border-left: 3px solid #4a9a8c;
+    background: rgba(74, 154, 140, 0.05);
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    }
+    .symbol-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .symbol-text em {
+    color: #4a9a8c;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">The Moment Arrives</div>
+      <div class="title">Opening Ceremony</div>
+      <div class="scene-desc">
+        Eddie Willers cuts the ribbon to open the line. When photographers ask him to stage the moment for multiple shots, he refuses:
+      </div>
+      <div class="quote-box">
+        <div class="quote-text">"It's <em>not going to be a phony</em>."</div>
+      </div>
+      <div class="crowds">
+        <div class="crowd-box hope-fail">
+          <div class="crowd-label">Some Hope for Failure</div>
+          <div class="crowd-text">Vindication of their predictions of disaster</div>
+        </div>
+        <div class="crowd-box hope-success">
+          <div class="crowd-label">Others Cheer for Success</div>
+          <div class="crowd-text">Believers in achievement and creation</div>
+        </div>
+      </div>
+      <div class="symbol">
+        <div class="symbol-text">
+          Everything about the John Galt Line is <em>real</em>&mdash;the rails, the bridge, the achievement. No pretense, no public relations, <em>no lies</em>.
+        </div>
+      </div>
+    </div>
+</body>
+</html>

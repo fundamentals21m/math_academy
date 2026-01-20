@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .contrast-box {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 45px;
+    }
+    .era {
+    width: 450px;
+    padding: 30px;
+    text-align: left;
+    }
+    .era.old {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    }
+    .era.new {
+    background: rgba(122, 60, 60, 0.08);
+    border: 1px solid rgba(122, 60, 60, 0.3);
+    }
+    .era-label {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .old .era-label { color: #d4a84b; }
+    .new .era-label { color: #7a3c3c; }
+    .era-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.4;
+    }
+    .responses {
+    background: rgba(160, 144, 128, 0.08);
+    border: 1px solid rgba(160, 144, 128, 0.3);
+    padding: 30px 50px;
+    margin-bottom: 45px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    }
+    .responses-label {
+    color: #a09080;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .responses-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.6;
+    }
+    .responses-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+    .mystery {
+    padding: 25px 40px;
+    border-left: 3px solid #d4a84b;
+    background: rgba(212, 168, 75, 0.05);
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    }
+    .mystery-text {
+    color: #f5f0e6;
+    font-size: 24px;
+    line-height: 1.5;
+    }
+    .mystery-text em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+    .outro {
+    color: #a09080;
+    font-size: 26px;
+    margin-top: 40px;
+    }
+    .outro em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Episode 12 Summary</div>
+      <div class="title">The Aristocracy Has Changed</div>
+      <div class="contrast-box">
+        <div class="era old">
+          <div class="era-label">The Old America</div>
+          <div class="era-text">You rose by being good at something.</div>
+        </div>
+        <div class="era new">
+          <div class="era-label">The New America</div>
+          <div class="era-text">You rise by knowing someone.</div>
+        </div>
+      </div>
+      <div class="responses">
+        <div class="responses-label">How the Producers Respond</div>
+        <div class="responses-text">
+          Some submit and try to play the game. Some fight and lose. And some&mdash;a <em>growing number</em>&mdash;simply disappear. They refuse to serve an aristocracy that punishes their virtues.
+        </div>
+      </div>
+      <div class="mystery">
+        <div class="mystery-text">
+          The question <em>"Who is John Galt?"</em> grows more urgent. Someone is offering the producers an alternative to the aristocracy of pull.
+        </div>
+      </div>
+      <div class="outro">
+        <em>See you in the next episode.</em>
+      </div>
+    </div>
+</body>
+</html>

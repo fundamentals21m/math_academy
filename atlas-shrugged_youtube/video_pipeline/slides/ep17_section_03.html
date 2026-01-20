@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 1000px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.18) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #8b2d2d;
+      font-size: 64px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(139, 45, 45, 0.3);
+    }
+    .directives {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+    .directive {
+      color: #f5f0e6;
+      font-size: 24px;
+      padding: 15px 25px;
+      background: rgba(139, 45, 45, 0.08);
+      border-left: 3px solid #8b2d2d;
+      text-align: left;
+    }
+    .therefore {
+      border-top: 1px solid rgba(139, 45, 45, 0.3);
+      padding-top: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .therefore-text {
+      color: #d4a84b;
+      font-size: 26px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 17 &bull; The Freeze</div>
+    <div class="section-title">The Freeze</div>
+    <div class="directives">
+      <div class="directive">No business may expand beyond its current size</div>
+      <div class="directive">No new businesses may be created</div>
+      <div class="directive">No worker may change jobs</div>
+      <div class="directive">No new methods or products allowed</div>
+    </div>
+    <div class="therefore">
+      <div class="therefore-text">A ban on the very faculty that could save civilization.</div>
+    </div>
+  </div>
+</body>
+</html>

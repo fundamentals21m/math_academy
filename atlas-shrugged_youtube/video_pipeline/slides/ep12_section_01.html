@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(122, 60, 60, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+    color: #7a3c3c;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    }
+    .question {
+    color: #f5f0e6;
+    font-size: 36px;
+    margin-bottom: 50px;
+    line-height: 1.5;
+    }
+    .contrast {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 50px;
+    }
+    .society-box {
+    width: 450px;
+    padding: 30px;
+    text-align: left;
+    }
+    .society-box.free {
+    background: rgba(212, 168, 75, 0.08);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    }
+    .society-box.looter {
+    background: rgba(122, 60, 60, 0.08);
+    border: 1px solid rgba(122, 60, 60, 0.3);
+    }
+    .society-label {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    }
+    .free .society-label { color: #d4a84b; }
+    .looter .society-label { color: #7a3c3c; }
+    .society-text {
+    color: #f5f0e6;
+    font-size: 22px;
+    line-height: 1.5;
+    }
+    .society-text em {
+    font-style: normal;
+    }
+    .free .society-text em { color: #d4a84b; }
+    .looter .society-text em { color: #7a3c3c; }
+    .reveal {
+    color: #a09080;
+    font-size: 26px;
+    line-height: 1.5;
+    }
+    .reveal em {
+    color: #7a3c3c;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="episode-tag">Episode 12 &bull; Cold Open</div>
+      <div class="question">
+        In every society, there is an aristocracy&mdash;a ruling class that holds power.<br>
+        The question is: <em style="color: #d4a84b;">what determines membership?</em>
+      </div>
+      <div class="contrast">
+        <div class="society-box free">
+          <div class="society-label">A Free Society</div>
+          <div class="society-text">The aristocracy consists of those who <em>produce the most value</em>. The best rise through <em>merit</em>.</div>
+        </div>
+        <div class="society-box looter">
+          <div class="society-label">A Society of Looters</div>
+          <div class="society-text">The aristocracy consists of those with the most <em>political connections</em>. The best at manipulation rise through <em>pull</em>.</div>
+        </div>
+      </div>
+      <div class="reveal">
+        This chapter shows the new American aristocracy&mdash;and it has <em>nothing to do with ability</em>.
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(139, 45, 45, 0.15) 0%, transparent 55%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .series-tag {
+      color: #a09080;
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 18px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+    }
+    .title {
+      color: #f5f0e6;
+      font-size: 64px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 60px rgba(139, 45, 45, 0.4);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .subtitle {
+      color: #d4a84b;
+      font-size: 30px;
+      font-style: italic;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      line-height: 1.4;
+    }
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #8b2d2d, transparent);
+      margin: 0 auto 40px;
+    }
+    .hook {
+      color: #a09080;
+      font-size: 24px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="series-tag">Atlas Shrugged &bull; Part II: Either-Or</div>
+    <div class="episode-tag">Episode 17</div>
+    <div class="title">The Moratorium on Brains</div>
+    <div class="subtitle">When innovation itself becomes illegal</div>
+    <div class="divider"></div>
+    <div class="hook">The logical endpoint of a system that treats achievement as a threat.</div>
+  </div>
+</body>
+</html>

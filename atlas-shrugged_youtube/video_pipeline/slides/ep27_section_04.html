@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #d4a84b;
+      font-size: 48px;
+      margin-bottom: 50px;
+      text-shadow: 0 0 40px rgba(212, 168, 75, 0.3);
+    }
+    .commandments {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+    .commandment {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 15px 25px;
+      border-left: 3px solid #d4a84b;
+      background: rgba(212, 168, 75, 0.04);
+    }
+    .cmd-word {
+      color: #d4a84b;
+      font-size: 28px;
+      width: 120px;
+      text-align: right;
+    }
+    .cmd-text {
+      color: #f5f0e6;
+      font-size: 22px;
+      text-align: left;
+    }
+    .bottom-line {
+      color: #a09080;
+      font-size: 22px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 27 &bull; The New Morality</div>
+    <div class="section-title">The New Morality</div>
+    <div class="commandments">
+      <div class="commandment">
+        <div class="cmd-word">Think.</div>
+        <div class="cmd-text">Use your mind to understand reality and create values.</div>
+      </div>
+      <div class="commandment">
+        <div class="cmd-word">Trade.</div>
+        <div class="cmd-text">Deal through voluntary exchange, giving value for value.</div>
+      </div>
+      <div class="commandment">
+        <div class="cmd-word">Produce.</div>
+        <div class="cmd-text">Create more than you consume. Be a maker, not a taker.</div>
+      </div>
+    </div>
+    <div class="bottom-line">This morality asks only that you live&mdash;really live.</div>
+  </div>
+</body>
+</html>

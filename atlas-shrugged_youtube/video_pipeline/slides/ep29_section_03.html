@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #4a6b8a; --accent-rgb: 74, 107, 138; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(94, 169, 168, 0.15) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #4a6b8a;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+    .motor-box {
+      border: 1px solid rgba(94, 169, 168, 0.4);
+      background: rgba(94, 169, 168, 0.05);
+      max-width: 850px;
+      margin: 0 auto 40px;
+      padding: 30px 40px;
+      text-align: left;
+    }
+    .motor-point {
+      color: #f5f0e6;
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .motor-point:last-child {
+      margin-bottom: 0;
+    }
+    .motor-point em {
+      color: #5ea9a8;
+      font-style: normal;
+    }
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #8b4545, transparent);
+      margin: 0 auto 35px;
+    }
+    .betrayal {
+      color: #8b4545;
+      font-size: 24px;
+      font-style: italic;
+      max-width: 750px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 29 &bull; The Motor</div>
+    <div class="section-title">The Invention</div>
+    <div class="motor-box">
+      <div class="motor-point"><em>Free energy</em> from the atmosphere. No fuel costs. No pollution.</div>
+      <div class="motor-point">Built by a young man driven by the <em>pure joy of solving</em> an impossible problem.</div>
+      <div class="motor-point">Then the heirs took over: <em>"From each according to his ability, to each according to his need."</em></div>
+    </div>
+    <div class="divider"></div>
+    <div class="betrayal">He refused. He quit on the spot. If they wanted ability's products, they could have them&mdash;without the ability.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .structure {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+    }
+    .part {
+    width: 380px;
+    text-align: center;
+    }
+    .part-box {
+    background: rgba(212, 168, 75, 0.1);
+    border: 2px solid rgba(212, 168, 75, 0.4);
+    padding: 40px 30px;
+    margin-bottom: 24px;
+    }
+    .part-label {
+    color: #d4a84b;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    }
+    .part-name {
+    color: #f5f0e6;
+    font-size: 36px;
+    }
+    .part-desc {
+    color: #a09080;
+    font-size: 20px;
+    line-height: 1.5;
+    }
+    .connector {
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    }
+    .arrow {
+    color: #d4a84b;
+    font-size: 36px;
+    }
+    .footer {
+    color: #a09080;
+    font-size: 24px;
+    margin-top: 20px;
+    }
+    .footer em {
+    color: #d4a84b;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+    <div class="corner-tl"></div>
+    <div class="corner-br"></div>
+    <div class="content">
+      <div class="tag">Novel Structure</div>
+      <div class="title">Three Parts of Atlas Shrugged</div>
+      <div class="structure">
+        <div class="part">
+          <div class="part-box">
+            <div class="part-label">Part I</div>
+            <div class="part-name">Non-Contradiction</div>
+          </div>
+          <div class="part-desc">A world full of contradictions that cannot be sustained. Capable people mysteriously disappear.</div>
+        </div>
+        <div class="part">
+          <div class="part-box">
+            <div class="part-label">Part II</div>
+            <div class="part-name">Either-Or</div>
+          </div>
+          <div class="part-desc">The conflict intensifies. Characters must choose: create value or consume it. Think or evade.</div>
+        </div>
+        <div class="part">
+          <div class="part-box">
+            <div class="part-label">Part III</div>
+            <div class="part-name">A Is A</div>
+          </div>
+          <div class="part-desc">The mystery is revealed. The philosophy of rational self-interest presented in full.</div>
+        </div>
+      </div>
+      <div class="footer">Each title reflects a principle of <em>Aristotelian logic</em></div>
+    </div>
+</body>
+</html>

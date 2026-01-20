@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 900px; height: 900px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.1) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .section-title {
+      color: #f5f0e6;
+      font-size: 52px;
+      margin-bottom: 50px;
+    }
+    .characters {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .character {
+      width: 350px;
+      padding: 25px;
+      text-align: left;
+    }
+    .character.hero {
+      border: 1px solid rgba(212, 168, 75, 0.4);
+      background: rgba(212, 168, 75, 0.04);
+    }
+    .character.villain {
+      border: 1px solid rgba(139, 45, 45, 0.4);
+      background: rgba(139, 45, 45, 0.04);
+    }
+    .char-name {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    .hero .char-name { color: #d4a84b; }
+    .villain .char-name { color: #8b2d2d; }
+    .char-desc {
+      color: #a09080;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .bottom-line {
+      border-top: 1px solid rgba(212, 168, 75, 0.3);
+      padding-top: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .bottom-text {
+      color: #d4a84b;
+      font-size: 28px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 18 &bull; Love and Values</div>
+    <div class="section-title">Love Reveals Values</div>
+    <div class="characters">
+      <div class="character hero">
+        <div class="char-name">Dagny</div>
+        <div class="char-desc">Loves achievers&mdash;Francisco, Rearden, and eventually the greatest achiever of all. Seeks those who challenge and match her.</div>
+      </div>
+      <div class="character villain">
+        <div class="char-name">James Taggart</div>
+        <div class="char-desc">Seeks partners who make him feel superior by being inferior. Attracted to weakness because strength threatens him.</div>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-text">By our love, we show who we are.</div>
+    </div>
+  </div>
+</body>
+</html>

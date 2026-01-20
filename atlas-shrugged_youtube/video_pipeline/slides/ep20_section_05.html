@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root { --accent-color: #8b2d2d; --accent-rgb: 139, 45, 45; }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 800px; height: 800px;
+      background: radial-gradient(ellipse at center, rgba(212, 168, 75, 0.12) 0%, transparent 60%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .episode-tag {
+      color: #8b2d2d;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .part-end {
+      color: #a09080;
+      font-size: 18px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .summary {
+      max-width: 850px;
+      margin: 0 auto 40px;
+    }
+    .summary-line {
+      color: #f5f0e6;
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .divider {
+      width: 150px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d4a84b, transparent);
+      margin: 0 auto 40px;
+    }
+    .next-part {
+      margin-bottom: 30px;
+    }
+    .next-label {
+      color: #a09080;
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .next-title {
+      color: #d4a84b;
+      font-size: 42px;
+      font-style: italic;
+    }
+    .next-desc {
+      color: #a09080;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+    .closing {
+      color: #a09080;
+      font-size: 22px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-tag">Episode 20 &bull; Closing</div>
+    <div class="part-end">End of Part II: Either-Or</div>
+    <div class="summary">
+      <div class="summary-line">The lines are drawn. The choice has been made.</div>
+      <div class="summary-line">The dollar sign is their banner&mdash;trade is moral, production is noble.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="next-part">
+      <div class="next-label">Coming Next</div>
+      <div class="next-title">Part III: A Is A</div>
+      <div class="next-desc">The mystery revealed. John Galt speaks. The hidden valley awaits.</div>
+    </div>
+    <div class="closing">See you in Part Three.</div>
+  </div>
+</body>
+</html>
