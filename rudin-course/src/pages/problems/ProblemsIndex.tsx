@@ -10,21 +10,26 @@ import part02Data from '@/data/problems/part-02.json';
 import part03Data from '@/data/problems/part-03.json';
 import part04Data from '@/data/problems/part-04.json';
 import part05Data from '@/data/problems/part-05.json';
+import part06Data from '@/data/problems/part-06.json';
+import part07Data from '@/data/problems/part-07.json';
+import part08Data from '@/data/problems/part-08.json';
+import part09Data from '@/data/problems/part-09.json';
+import part10Data from '@/data/problems/part-10.json';
+import part11Data from '@/data/problems/part-11.json';
 
 // Map curriculum part IDs to problem data
-// Add more parts as problem sets are created
 const problemDataByPart: Record<number, typeof part01Data | null> = {
   1: part01Data,
   2: part02Data,
   3: part03Data,
   4: part04Data,
   5: part05Data,
-  6: null, // Riemann-Stieltjes Integral - coming soon
-  7: null, // Sequences and Series of Functions - coming soon
-  8: null, // Some Special Functions - coming soon
-  9: null, // Functions of Several Variables - coming soon
-  10: null, // Integration of Differential Forms - coming soon
-  11: null, // The Lebesgue Theory - coming soon
+  6: part06Data,
+  7: part07Data,
+  8: part08Data,
+  9: part09Data,
+  10: part10Data,
+  11: part11Data,
 };
 
 export default function ProblemsIndex() {
