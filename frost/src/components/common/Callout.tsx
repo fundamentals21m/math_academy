@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-type CalloutType = 'info' | 'warning' | 'danger' | 'success' | 'note';
+type CalloutType = 'info' | 'warning' | 'danger' | 'success' | 'note' | 'error' | 'important';
 
 interface CalloutProps {
   type?: CalloutType;
@@ -39,6 +39,18 @@ const calloutStyles: Record<CalloutType, { bg: string; border: string; icon: str
     border: 'border-purple-500/30',
     icon: 'M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z',
     iconColor: 'text-purple-400',
+  },
+  error: {
+    bg: 'bg-red-500/5',
+    border: 'border-red-500/30',
+    icon: 'M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    iconColor: 'text-red-400',
+  },
+  important: {
+    bg: 'bg-amber-500/5',
+    border: 'border-amber-500/30',
+    icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z',
+    iconColor: 'text-amber-400',
   },
 };
 
