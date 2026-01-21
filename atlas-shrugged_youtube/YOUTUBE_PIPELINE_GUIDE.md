@@ -6,6 +6,35 @@ This document defines the end-to-end process for creating YouTube video playlist
 
 ---
 
+## Quick Start - Pipeline Tool
+
+The `pipeline.py` tool enforces checkpoints and prevents bulk operations without verification.
+
+```bash
+cd video_pipeline
+
+# Check current state
+python3 pipeline.py status
+
+# Standard workflow:
+python3 pipeline.py checkpoint -m "Before changes"   # Git commit
+python3 pipeline.py render --episode 1               # Render one
+python3 pipeline.py verify --render                  # Verify it
+python3 pipeline.py render --all                     # Render all
+
+python3 pipeline.py video --episode 1                # Generate one
+python3 pipeline.py verify --video                   # Verify it
+python3 pipeline.py video --all                      # Generate all
+
+python3 pipeline.py upload --episode 1               # Upload one
+python3 pipeline.py verify --upload                  # Verify it
+python3 pipeline.py upload --all                     # Upload all
+```
+
+**The tool will block bulk operations until you verify the single episode first.**
+
+---
+
 ## Golden Rules
 
 1. **Never run bulk operations without verifying a single sample first**
