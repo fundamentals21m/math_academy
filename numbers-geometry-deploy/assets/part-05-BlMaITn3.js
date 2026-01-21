@@ -1,0 +1,13 @@
+const e="Algebraic Numbers",t="Part 5",n=[{sectionId:37,sectionTitle:"Algebraic Numbers",textbookSection:"Section 37",examples:[{id:"ex-5-37-1",type:"example",title:"Algebraic vs Transcendental",statement:"Define algebraic and transcendental numbers and give examples.",solution:{steps:[{title:"Definition",content:`A number $\\alpha$ is algebraic if it satisfies some polynomial equation with integer coefficients: $a_nx^n + \\cdots + a_0 = 0$.
+Otherwise, it is transcendental.`},{title:"Examples",content:`Algebraic: $\\sqrt{2}$ (satisfies $x^2 - 2 = 0$), $i$ (satisfies $x^2 + 1 = 0$)
+Transcendental: $\\pi$, $e$`}],conclusion:"Most real numbers are transcendental (Cantor)."}}],exercises:[{id:"5-37-1",type:"exercise",number:1,statement:"Show that $\\sqrt{2} + \\sqrt{3}$ is algebraic by finding its minimal polynomial.",solution:{steps:[{title:"Let x = √2 + √3",content:`$x - \\sqrt{2} = \\sqrt{3}$
+$(x - \\sqrt{2})^2 = 3$
+$x^2 - 2\\sqrt{2}x + 2 = 3$`},{title:"Isolate radical",content:`$x^2 - 1 = 2\\sqrt{2}x$
+$(x^2 - 1)^2 = 8x^2$`},{title:"Expand",content:`$x^4 - 2x^2 + 1 = 8x^2$
+$x^4 - 10x^2 + 1 = 0$`}],conclusion:"Minimal polynomial: $x^4 - 10x^2 + 1 = 0$"}}]},{sectionId:39,sectionTitle:"Algebraic Integers",textbookSection:"Section 39",examples:[{id:"ex-5-39-1",type:"example",title:"Algebraic Integers",statement:"Define algebraic integers and prove that the sum of algebraic integers is an algebraic integer.",solution:{steps:[{title:"Definition",content:"An algebraic integer is a root of a monic polynomial with integer coefficients."},{title:"Closure under addition",content:`If $\\alpha$ satisfies $x^n + a_{n-1}x^{n-1} + \\cdots + a_0 = 0$
+and $\\beta$ satisfies $x^m + b_{m-1}x^{m-1} + \\cdots + b_0 = 0$,
+then $\\alpha + \\beta$ satisfies a monic polynomial of degree $nm$.`}],conclusion:"Algebraic integers form a ring."}}],exercises:[{id:"5-39-1",type:"exercise",number:1,statement:"Show that $\\frac{1 + \\sqrt{5}}{2}$ (the golden ratio $\\phi$) is an algebraic integer.",solution:{steps:[{title:"Find polynomial",content:`Let $x = \\frac{1 + \\sqrt{5}}{2}$.
+$2x - 1 = \\sqrt{5}$
+$(2x-1)^2 = 5$
+$4x^2 - 4x + 1 = 5$`},{title:"Simplify",content:`$4x^2 - 4x - 4 = 0$
+$x^2 - x - 1 = 0$`}],conclusion:"$\\phi$ satisfies $x^2 - x - 1 = 0$, a monic polynomial, so it's an algebraic integer."}}]}],i={partId:5,partTitle:e,textbookChapter:t,sections:n};export{i as p};

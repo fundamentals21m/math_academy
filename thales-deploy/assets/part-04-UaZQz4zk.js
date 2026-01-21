@@ -1,0 +1,24 @@
+const t="Global Mathematics",e="Part 4",i=[{sectionId:20,sectionTitle:"Mathematics in China and India",textbookSection:"Section 20",examples:[{id:"ex-4-20-1",type:"example",title:"Chinese Remainder Theorem",statement:"Solve the system: $x \\equiv 2 \\pmod{3}$, $x \\equiv 3 \\pmod{5}$, $x \\equiv 2 \\pmod{7}$.",solution:{steps:[{title:"Calculate product",content:"$M = 3 \\times 5 \\times 7 = 105$"},{title:"Find partial products",content:`$M_1 = 105/3 = 35$
+$M_2 = 105/5 = 21$
+$M_3 = 105/7 = 15$`},{title:"Find modular inverses",content:`$35y_1 \\equiv 1 \\pmod{3}$: $y_1 = 2$ (since $35 \\cdot 2 = 70 \\equiv 1$)
+$21y_2 \\equiv 1 \\pmod{5}$: $y_2 = 1$ (since $21 \\equiv 1$)
+$15y_3 \\equiv 1 \\pmod{7}$: $y_3 = 1$ (since $15 \\equiv 1$)`},{title:"Combine",content:`$x = 2 \\cdot 35 \\cdot 2 + 3 \\cdot 21 \\cdot 1 + 2 \\cdot 15 \\cdot 1$
+$= 140 + 63 + 30 = 233$
+$= 233 \\mod 105 = 23$`}],conclusion:"$x \\equiv 23 \\pmod{105}$"}}],exercises:[{id:"4-20-1",type:"exercise",number:1,statement:"The ancient Indian mathematician Brahmagupta gave a formula for the area of a cyclic quadrilateral with sides $a, b, c, d$. If $s = \\frac{a+b+c+d}{2}$, verify his formula $A = \\sqrt{(s-a)(s-b)(s-c)(s-d)}$ for a cyclic quadrilateral with sides 5, 5, 5, 5.",solution:{steps:[{title:"Calculate s",content:"$s = \\frac{5+5+5+5}{2} = 10$"},{title:"Apply formula",content:"$A = \\sqrt{(10-5)(10-5)(10-5)(10-5)} = \\sqrt{5^4} = 25$"},{title:"Verify geometrically",content:`A cyclic quadrilateral with 4 equal sides is a square.
+A square with side 5 has area $5^2 = 25$. ✓`}],conclusion:"Brahmagupta's formula gives the correct area."}}]},{sectionId:21,sectionTitle:"Mathematics in Islamic Countries",textbookSection:"Section 21",examples:[{id:"ex-4-21-1",type:"example",title:"Al-Khwarizmi's Completing the Square",statement:"Solve $x^2 + 10x = 39$ using al-Khwarizmi's geometric method of completing the square.",solution:{steps:[{title:"Draw the geometry",content:`Start with a square of side $x$ (area $x^2$).
+
+Add two rectangles of dimension $x \\times 5$ (total area $10x$).
+
+The total area is $x^2 + 10x = 39$.`},{title:"Complete the square",content:`To complete the large square, add a small square of side 5 (area 25).
+
+New total: $x^2 + 10x + 25 = 39 + 25 = 64$`},{title:"Solve",content:`$(x + 5)^2 = 64$
+$x + 5 = 8$ (taking positive root)
+$x = 3$`}],conclusion:"$x = 3$. Check: $3^2 + 10(3) = 9 + 30 = 39$ ✓"}}],exercises:[{id:"4-21-1",type:"exercise",number:1,statement:"Use al-Khwarizmi's method to solve $x^2 + 6x = 16$.",solution:{steps:[{title:"Complete the square",content:`$x^2 + 6x + 9 = 16 + 9 = 25$
+$(x + 3)^2 = 25$`},{title:"Solve",content:`$x + 3 = 5$ (positive root)
+$x = 2$`},{title:"Verify",content:"$2^2 + 6(2) = 4 + 12 = 16$ ✓"}],conclusion:"$x = 2$"}}]},{sectionId:24,sectionTitle:"The Cubic and Quartic Equations",textbookSection:"Section 24",examples:[{id:"ex-4-24-1",type:"example",title:"Cardano's Formula",statement:"Solve $x^3 + 6x = 20$ using Cardano's formula.",solution:{steps:[{title:"Identify parameters",content:"For $x^3 + px = q$, here $p = 6$ and $q = 20$."},{title:"Apply Cardano's formula",content:"$x = \\sqrt[3]{\\frac{q}{2} + \\sqrt{\\frac{q^2}{4} + \\frac{p^3}{27}}} + \\sqrt[3]{\\frac{q}{2} - \\sqrt{\\frac{q^2}{4} + \\frac{p^3}{27}}}$"},{title:"Calculate discriminant",content:`$\\frac{q^2}{4} + \\frac{p^3}{27} = \\frac{400}{4} + \\frac{216}{27} = 100 + 8 = 108$
+$\\sqrt{108} = 6\\sqrt{3}$`},{title:"Compute roots",content:`$x = \\sqrt[3]{10 + 6\\sqrt{3}} + \\sqrt[3]{10 - 6\\sqrt{3}}$
+
+Note: $10 \\pm 6\\sqrt{3} = (1 \\pm \\sqrt{3})^3$
+
+$x = (1 + \\sqrt{3}) + (1 - \\sqrt{3}) = 2$`}],conclusion:"$x = 2$. Verify: $8 + 12 = 20$ ✓"}}],exercises:[{id:"4-24-1",type:"exercise",number:1,statement:"Verify that $x = 2$ is a solution to $x^3 - 6x = -4$, then find all solutions.",solution:{steps:[{title:"Verify x = 2",content:"$2^3 - 6(2) = 8 - 12 = -4$ ✓"},{title:"Factor out (x - 2)",content:"$x^3 - 6x + 4 = (x - 2)(x^2 + 2x - 2) = 0$"},{title:"Solve quadratic",content:`$x^2 + 2x - 2 = 0$
+$x = \\frac{-2 \\pm \\sqrt{4 + 8}}{2} = \\frac{-2 \\pm 2\\sqrt{3}}{2} = -1 \\pm \\sqrt{3}$`}],conclusion:"Solutions: $x = 2$, $x = -1 + \\sqrt{3}$, $x = -1 - \\sqrt{3}$"}}]}],o={partId:4,partTitle:t,textbookChapter:e,sections:i};export{o as p};

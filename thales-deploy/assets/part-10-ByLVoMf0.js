@@ -1,0 +1,43 @@
+const t="Foundations of Mathematics",e="Part 10",o=[{sectionId:55,sectionTitle:"How to Interpret Intuitionistic Logic",textbookSection:"Section 55",examples:[{id:"ex-10-55-1",type:"example",title:"BHK Interpretation",statement:"Explain the Brouwer-Heyting-Kolmogorov (BHK) interpretation of intuitionistic logic.",solution:{steps:[{title:"Interpretation of connectives",content:`A proof of $A \\land B$ is a pair: (proof of $A$, proof of $B$)
+A proof of $A \\lor B$ is either (0, proof of $A$) or (1, proof of $B$)
+A proof of $A \\to B$ is a function that transforms any proof of $A$ into a proof of $B$`},{title:"Negation",content:`$\\lnot A$ means $A \\to \\bot$ (false).
+A proof of $\\lnot A$ is a function that transforms any proof of $A$ into a proof of a contradiction.`},{title:"Why excluded middle fails",content:`To prove $A \\lor \\lnot A$, we need either a proof of $A$ or a proof of $\\lnot A$.
+For undecided propositions, we have neither.`}],conclusion:"Intuitionistic proofs are constructive: they provide witnesses or algorithms."}}],exercises:[{id:"10-55-1",type:"exercise",number:1,statement:"Show that $\\lnot\\lnot A \\to A$ is not provable in intuitionistic logic, but $A \\to \\lnot\\lnot A$ is.",solution:{steps:[{title:"Prove A → ¬¬A",content:`Assume we have a proof $p$ of $A$.
+We need a proof of $\\lnot\\lnot A$, i.e., $(\\lnot A) \\to \\bot$.
+Given any proof $q$ of $\\lnot A$ (i.e., $A \\to \\bot$), apply $q$ to $p$ to get a proof of $\\bot$.`},{title:"Why ¬¬A → A fails",content:`A proof of $\\lnot\\lnot A$ tells us "there's no refutation of $A$".
+But this doesn't construct an actual proof of $A$.`},{title:"Kripke countermodel",content:"In Kripke semantics, there are worlds where $\\lnot\\lnot A$ is true but $A$ is not yet known."}],conclusion:"Double negation elimination requires the law of excluded middle."}}]},{sectionId:58,sectionTitle:"Gödel's Incompleteness Theorems",textbookSection:"Section 58",examples:[{id:"ex-10-58-1",type:"example",title:"The Gödel Sentence",statement:'Explain how Gödel constructs a sentence that says "I am not provable."',solution:{steps:[{title:"Gödel numbering",content:"Assign unique natural numbers to all symbols, formulas, and proofs."},{title:"Provability predicate",content:`Define $\\text{Prov}(n)$ meaning "$n$ is the Gödel number of a provable formula."
+This is expressible in arithmetic.`},{title:"Diagonal lemma",content:`For any formula $\\phi(x)$, there exists a sentence $G$ such that:
+$G \\leftrightarrow \\phi(\\ulcorner G \\urcorner)$
+where $\\ulcorner G \\urcorner$ is the Gödel number of $G$.`},{title:"Construct G",content:`Apply diagonal lemma to $\\lnot\\text{Prov}(x)$:
+$G \\leftrightarrow \\lnot\\text{Prov}(\\ulcorner G \\urcorner)$
+
+$G$ says "I am not provable."`}],conclusion:"If the system is consistent, $G$ is true but unprovable."}}],exercises:[{id:"10-58-1",type:"exercise",number:1,statement:`Explain why adding the Gödel sentence $G$ as an axiom doesn't "fix" incompleteness.`,solution:{steps:[{title:"New system",content:"Let $T' = T + G$ be the system with $G$ added as axiom."},{title:"Apply Gödel again",content:`If $T'$ is consistent and sufficiently strong, Gödel's theorem applies to $T'$.
+There exists $G'$ for $T'$ that is true but unprovable in $T'$.`},{title:"Iterate",content:"This process never terminates. Each consistent extension has its own Gödel sentence."}],conclusion:"Incompleteness is intrinsic to sufficiently strong formal systems."}}]},{sectionId:60,sectionTitle:"More about Gödel's Theorems",textbookSection:"Section 60",examples:[{id:"ex-10-60-1",type:"example",title:"The Second Incompleteness Theorem",statement:"State and explain Gödel's second incompleteness theorem.",solution:{steps:[{title:"Statement",content:"If $T$ is a consistent, sufficiently strong formal system, then $T$ cannot prove its own consistency."},{title:"Formalization of consistency",content:`$\\text{Con}(T)$ is the sentence $\\lnot\\text{Prov}(\\ulcorner 0=1 \\urcorner)$.
+("$0=1$ is not provable")`},{title:"Key insight",content:`Inside $T$, one can prove: $\\text{Con}(T) \\to G$.
+("If I'm consistent, then $G$ is true.")
+
+Since $G$ is unprovable in $T$, so is $\\text{Con}(T)$.`}],conclusion:"No sufficiently strong consistent system can prove its own consistency."}}],exercises:[{id:"10-60-1",type:"exercise",number:1,statement:"Why doesn't Gödel's second theorem apply to very weak systems like Presburger arithmetic?",solution:{steps:[{title:"What Presburger arithmetic is",content:"Presburger arithmetic is the theory of $(\\mathbb{N}, +)$ — natural numbers with addition only, no multiplication."},{title:"Why Gödel doesn't apply",content:`Gödel's theorems require coding of proofs as numbers, which needs multiplication.
+Presburger arithmetic cannot express its own proof predicate.`},{title:"Presburger is decidable",content:`In fact, Presburger arithmetic is complete and decidable!
+There's an algorithm to decide any Presburger sentence.`}],conclusion:`The system must be "sufficiently strong" (able to do basic arithmetic) for Gödel's theorems.`}}]},{sectionId:63,sectionTitle:"Category Theory Basics",textbookSection:"Section 63",examples:[{id:"ex-10-63-1",type:"example",title:"Categories and Functors",statement:"Define a category and give examples.",solution:{steps:[{title:"Definition",content:`A category $\\mathcal{C}$ consists of:
+- Objects: $\\text{Ob}(\\mathcal{C})$
+- Morphisms: For each pair $(A, B)$, a set $\\text{Hom}(A, B)$
+- Composition: $\\circ : \\text{Hom}(B,C) \\times \\text{Hom}(A,B) \\to \\text{Hom}(A,C)$
+- Identity: For each $A$, an $\\text{id}_A \\in \\text{Hom}(A, A)$`},{title:"Axioms",content:`Associativity: $(h \\circ g) \\circ f = h \\circ (g \\circ f)$
+Identity: $\\text{id}_B \\circ f = f = f \\circ \\text{id}_A$`},{title:"Examples",content:`**Set**: Objects are sets, morphisms are functions
+**Grp**: Objects are groups, morphisms are homomorphisms
+**Top**: Objects are topological spaces, morphisms are continuous maps`}],conclusion:"Categories abstract the notion of mathematical structure and structure-preserving maps."}}],exercises:[{id:"10-63-1",type:"exercise",number:1,statement:"Show that any group $G$ can be viewed as a category with one object.",solution:{steps:[{title:"Define the category",content:`Objects: A single object $\\star$
+Morphisms: $\\text{Hom}(\\star, \\star) = G$ (elements of the group)`},{title:"Define composition",content:"For $g, h \\in G$: $h \\circ g = hg$ (group multiplication)"},{title:"Verify axioms",content:`Associativity: $(hg)f = h(gf)$ ✓ (group associativity)
+Identity: $\\text{id}_\\star = e$ (group identity)
+$e \\cdot g = g = g \\cdot e$ ✓`}],conclusion:"A group is a category with one object where every morphism is invertible."}}]},{sectionId:65,sectionTitle:"A Natural Transformation between Vector Spaces",textbookSection:"Section 65",examples:[{id:"ex-10-65-1",type:"example",title:"The Double Dual",statement:"Show that there is a natural transformation from the identity functor to the double dual functor on finite-dimensional vector spaces.",solution:{steps:[{title:"Define the map",content:`For a vector space $V$, define $\\eta_V : V \\to V^{**}$ by:
+$\\eta_V(v)(f) = f(v)$ for $v \\in V$, $f \\in V^*$`},{title:"Check naturality",content:`For a linear map $T: V \\to W$, we need:
+$T^{**} \\circ \\eta_V = \\eta_W \\circ T$`},{title:"Verify",content:`$(T^{**}(\\eta_V(v)))(g) = \\eta_V(v)(T^*(g)) = T^*(g)(v) = g(T(v))$
+$(\\eta_W(T(v)))(g) = g(T(v))$
+
+They agree!`}],conclusion:"$\\eta$ is a natural transformation. For finite-dimensional spaces, it's a natural isomorphism."}}],exercises:[{id:"10-65-1",type:"exercise",number:1,statement:"Why is the isomorphism $V \\cong V^*$ for finite-dimensional $V$ not natural?",solution:{steps:[{title:"The isomorphism requires a basis",content:`Given a basis $\\{e_1, \\ldots, e_n\\}$, we get dual basis $\\{e_1^*, \\ldots, e_n^*\\}$.
+Map: $e_i \\mapsto e_i^*$`},{title:"Check naturality fails",content:`For $T: V \\to W$, naturality would require:
+$T^* \\circ \\phi_W = \\phi_V \\circ T$
+where $\\phi$ is the isomorphism.`},{title:"Counterexample",content:`Let $V = W = \\mathbb{R}$, $T = 2 \\cdot \\text{id}$.
+$T^*(f) = f \\circ T = 2f$.
+
+$\\phi_V(1) = 1^*$ (the identity functional).
+$T^*(\\phi_W(1)) = 2 \\cdot 1^* \\neq \\phi_V(2 \\cdot 1) = \\phi_V(2)$.`}],conclusion:"The isomorphism $V \\cong V^*$ depends on the choice of basis and is not natural."}}]}],n={partId:10,partTitle:t,textbookChapter:e,sections:o};export{n as p};

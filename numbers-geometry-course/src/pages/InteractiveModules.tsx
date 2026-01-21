@@ -16,6 +16,7 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
+  // Part 1: Arithmetic
   {
     id: 'prime-sieve',
     title: 'Sieve of Eratosthenes',
@@ -26,6 +27,25 @@ const modules: InteractiveModule[] = [
     icon: '🔢',
   },
   {
+    id: 'euclidean-algorithm',
+    title: 'Euclidean Algorithm',
+    description: 'Step through the GCD algorithm visually. See how repeated division finds the greatest common divisor.',
+    sectionId: 5,
+    sectionTitle: 'The Euclidean Algorithm',
+    category: 'Arithmetic',
+    icon: '➗',
+  },
+  // Part 2: Numbers in Geometry
+  {
+    id: 'fibonacci-spiral',
+    title: 'Fibonacci Numbers',
+    description: 'Watch the Fibonacci sequence grow and see how it relates to the golden ratio and spirals in nature.',
+    sectionId: 10,
+    sectionTitle: 'The Fibonacci Numbers',
+    category: 'Numbers & Geometry',
+    icon: '🐚',
+  },
+  {
     id: 'pythagorean-theorem',
     title: 'Pythagorean Theorem',
     description: 'Explore visual proofs of a² + b² = c² with adjustable triangles and squares.',
@@ -34,6 +54,7 @@ const modules: InteractiveModule[] = [
     category: 'Geometry',
     icon: '📐',
   },
+  // Part 3: Coordinates
   {
     id: 'coordinate-plane',
     title: 'Lines and Circles',
@@ -44,6 +65,15 @@ const modules: InteractiveModule[] = [
     icon: '📊',
   },
   {
+    id: 'vectors',
+    title: 'Vector Operations',
+    description: 'Add and scale vectors graphically. See how vector addition forms parallelograms.',
+    sectionId: 22,
+    sectionTitle: 'Vectors',
+    category: 'Coordinates',
+    icon: '➡️',
+  },
+  {
     id: 'isometries',
     title: 'Isometries Demo',
     description: 'Apply rotations, reflections, and translations to shapes and see how distances are preserved.',
@@ -52,6 +82,17 @@ const modules: InteractiveModule[] = [
     category: 'Coordinates',
     icon: '🔄',
   },
+  // Part 4: Area and Volume
+  {
+    id: 'area-formulas',
+    title: 'Area Explorer',
+    description: 'Derive area formulas visually: parallelograms from rectangles, triangles from parallelograms.',
+    sectionId: 28,
+    sectionTitle: 'Areas of Basic Figures',
+    category: 'Area & Volume',
+    icon: '⬛',
+  },
+  // Part 5: Trigonometry
   {
     id: 'unit-circle-trig',
     title: 'Unit Circle & Trigonometry',
@@ -62,6 +103,16 @@ const modules: InteractiveModule[] = [
     icon: '⭕',
   },
   {
+    id: 'inverse-trig',
+    title: 'Inverse Trig Functions',
+    description: 'Explore arcsin, arccos, arctan and understand their domains and ranges through interactive graphs.',
+    sectionId: 42,
+    sectionTitle: 'The Inverse Circular Functions',
+    category: 'Trigonometry',
+    icon: '↩️',
+  },
+  // Part 6: Finite Arithmetic
+  {
     id: 'modular-arithmetic',
     title: 'Clock Arithmetic',
     description: 'Explore addition, multiplication, and powers in modular arithmetic with a clock visualization.',
@@ -70,6 +121,16 @@ const modules: InteractiveModule[] = [
     category: 'Finite Arithmetic',
     icon: '🕐',
   },
+  {
+    id: 'quadratic-residues',
+    title: 'Quadratic Residues',
+    description: 'Discover which numbers are perfect squares mod p. See patterns in the Legendre symbol.',
+    sectionId: 51,
+    sectionTitle: 'Quadratic Residues',
+    category: 'Finite Arithmetic',
+    icon: '²',
+  },
+  // Part 7: Complex Numbers
   {
     id: 'complex-plane',
     title: 'Complex Numbers',
@@ -80,6 +141,16 @@ const modules: InteractiveModule[] = [
     icon: '💫',
   },
   {
+    id: 'roots-of-unity',
+    title: 'Roots of Unity',
+    description: 'Find the n-th roots of 1 and see them form regular polygons on the unit circle.',
+    sectionId: 60,
+    sectionTitle: 'Roots of Complex Numbers',
+    category: 'Complex Numbers',
+    icon: '🔮',
+  },
+  // Part 8: Conic Sections
+  {
     id: 'conic-sections',
     title: 'Conic Sections',
     description: 'Explore ellipses, parabolas, and hyperbolas. See their foci, directrices, and equations.',
@@ -87,6 +158,15 @@ const modules: InteractiveModule[] = [
     sectionTitle: 'Too Much, Too Little, and Just Right',
     category: 'Conic Sections',
     icon: '🥚',
+  },
+  {
+    id: 'kepler-orbits',
+    title: 'Planetary Orbits',
+    description: 'See how planets trace elliptical orbits with the sun at one focus. Visualize Kepler\'s laws.',
+    sectionId: 68,
+    sectionTitle: 'Planetary Orbits',
+    category: 'Conic Sections',
+    icon: '🪐',
   },
 ];
 // =============================================================================

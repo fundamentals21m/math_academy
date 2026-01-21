@@ -1,0 +1,37 @@
+const t="Logic and Computability",e="Part 9",n=[{sectionId:45,sectionTitle:"The Fundamental Theorem of Arithmetic",textbookSection:"Section 45",examples:[{id:"ex-9-45-1",type:"example",title:"Prime Factorization Uniqueness",statement:"Use the fundamental theorem of arithmetic to show that if $p | ab$ where $p$ is prime, then $p | a$ or $p | b$.",solution:{steps:[{title:"Write prime factorizations",content:"Let $a = p_1^{a_1} \\cdots p_k^{a_k}$ and $b = q_1^{b_1} \\cdots q_m^{b_m}$"},{title:"Factorization of ab",content:'$ab$ has prime factorization that is the "union" of these factorizations.'},{title:"Apply uniqueness",content:`If $p | ab$, then $p$ appears in the factorization of $ab$.
+By uniqueness, $p$ must be one of the $p_i$ or one of the $q_j$.`}],conclusion:"Therefore $p | a$ (if $p = p_i$) or $p | b$ (if $p = q_j$)."}}],exercises:[{id:"9-45-1",type:"exercise",number:1,statement:"Use the fundamental theorem of arithmetic to prove that $\\sqrt{6}$ is irrational.",solution:{steps:[{title:"Assume rational",content:"Suppose $\\sqrt{6} = \\frac{a}{b}$ in lowest terms."},{title:"Square both sides",content:"$6 = \\frac{a^2}{b^2}$, so $6b^2 = a^2$, i.e., $2 \\cdot 3 \\cdot b^2 = a^2$."},{title:"Count prime factors",content:`The power of 2 in $a^2$ is even.
+The power of 2 in $6b^2 = 2 \\cdot 3 \\cdot b^2$ is $1 + (\\text{even}) = $ odd.`},{title:"Contradiction",content:"Even ≠ odd, contradicting uniqueness of prime factorization."}],conclusion:"$\\sqrt{6}$ is irrational."}}]},{sectionId:46,sectionTitle:"Propositional Logic",textbookSection:"Section 46",examples:[{id:"ex-9-46-1",type:"example",title:"Tautology Verification",statement:"Verify that $((P \\to Q) \\land (Q \\to R)) \\to (P \\to R)$ is a tautology.",solution:{steps:[{title:"Recall implication truth table",content:"$A \\to B$ is false only when $A$ is true and $B$ is false."},{title:"Assume antecedent is true",content:`Assume $(P \\to Q) \\land (Q \\to R)$ is true.
+So both $P \\to Q$ and $Q \\to R$ are true.`},{title:"Prove consequent",content:`Need to show $P \\to R$ is true.
+If $P$ is false, $P \\to R$ is true.
+If $P$ is true, then $Q$ is true (from $P \\to Q$), then $R$ is true (from $Q \\to R$).`}],conclusion:"In all cases, the implication holds. It is a tautology."}}],exercises:[{id:"9-46-1",type:"exercise",number:1,statement:"Show that $\\lnot(P \\land Q) \\equiv (\\lnot P \\lor \\lnot Q)$ using a truth table.",solution:{steps:[{title:"Build truth table",content:`| P | Q | P∧Q | ¬(P∧Q) | ¬P | ¬Q | ¬P∨¬Q |
+|---|---|-----|--------|----|----|-------|
+| T | T |  T  |   F    | F  | F  |   F   |
+| T | F |  F  |   T    | F  | T  |   T   |
+| F | T |  F  |   T    | T  | F  |   T   |
+| F | F |  F  |   T    | T  | T  |   T   |`},{title:"Compare columns",content:"The columns for $\\lnot(P \\land Q)$ and $\\lnot P \\lor \\lnot Q$ are identical."}],conclusion:"De Morgan's law: $\\lnot(P \\land Q) \\equiv \\lnot P \\lor \\lnot Q$"}}]},{sectionId:50,sectionTitle:"Recursive and Recursively Enumerable Sets",textbookSection:"Section 50",examples:[{id:"ex-9-50-1",type:"example",title:"Recursive vs. R.E.",statement:"Explain the difference between recursive (decidable) and recursively enumerable (r.e.) sets.",solution:{steps:[{title:"Recursive sets",content:`A set $S$ is recursive if there is an algorithm that:
+- Halts on all inputs
+- Outputs "yes" if input $\\in S$
+- Outputs "no" if input $\\notin S$`},{title:"R.E. sets",content:`A set $S$ is r.e. if there is an algorithm that:
+- Outputs "yes" if input $\\in S$ (eventually)
+- May run forever if input $\\notin S$`},{title:"Key relationship",content:`Recursive $\\Rightarrow$ R.E.
+R.E. $\\not\\Rightarrow$ Recursive (e.g., the halting set)`}],conclusion:"Recursive = decidable; R.E. = semi-decidable."}}],exercises:[{id:"9-50-1",type:"exercise",number:1,statement:"Show that the set of valid C programs that halt on empty input is r.e. but not recursive.",solution:{steps:[{title:"Show it's r.e.",content:`Given program $P$:
+1. Run $P$ on empty input
+2. If $P$ halts, output "yes"
+This enumerates exactly the halting programs.`},{title:"Show it's not recursive",content:`This is equivalent to the halting problem.
+If we could decide it, we could solve the halting problem.`},{title:"Halting problem is undecidable",content:"By Turing's theorem (diagonal argument), there is no algorithm that decides whether arbitrary programs halt."}],conclusion:"The halting set is the canonical example of r.e. but not recursive."}}]},{sectionId:51,sectionTitle:"Turing Machines",textbookSection:"Section 51",examples:[{id:"ex-9-51-1",type:"example",title:"Simple Turing Machine",statement:"Design a Turing machine that recognizes the language $\\{0^n1^n : n \\geq 0\\}$.",solution:{steps:[{title:"Strategy",content:"Repeatedly match 0s with 1s by crossing them out."},{title:"Algorithm",content:`1. Find leftmost 0, replace with X
+2. Scan right to find leftmost 1, replace with Y
+3. Return left, repeat
+4. Accept if no unmatched 0s or 1s remain`},{title:"States",content:`q0: Initial, look for 0
+q1: Found 0, look for 1
+q2: Found 1, return left
+qaccept: All matched
+qreject: Mismatch found`}],conclusion:"This TM accepts exactly strings of the form $0^n1^n$."}}],exercises:[{id:"9-51-1",type:"exercise",number:1,statement:"Why can't a finite automaton (DFA) recognize $\\{0^n1^n : n \\geq 0\\}$?",solution:{steps:[{title:"Use pumping lemma",content:"Assume a DFA with $p$ states recognizes the language."},{title:"Choose string",content:"Consider $s = 0^p1^p$ with $|s| \\geq p$."},{title:"Apply pumping",content:`$s = xyz$ where $|xy| \\leq p$ and $|y| > 0$.
+So $y = 0^k$ for some $k > 0$.`},{title:"Pump down",content:"$xy^0z = 0^{p-k}1^p \\notin L$ (more 1s than 0s)."}],conclusion:"By pumping lemma, $\\{0^n1^n\\}$ is not regular. DFAs can't count."}}]},{sectionId:52,sectionTitle:"The Halting Problem",textbookSection:"Section 52",examples:[{id:"ex-9-52-1",type:"example",title:"Undecidability of the Halting Problem",statement:"Prove that the halting problem is undecidable.",solution:{steps:[{title:"Assume decidable",content:"Suppose $H(P, x)$ decides whether program $P$ halts on input $x$."},{title:"Construct diagonal program D",content:`Define $D(P)$:
+  if $H(P, P)$ = "halts" then loop forever
+  else halt`},{title:"Apply D to itself",content:`Does $D(D)$ halt?
+If yes: $H(D,D) = $ "halts", so $D$ loops. Contradiction.
+If no: $H(D,D) = $ "doesn't halt", so $D$ halts. Contradiction.`}],conclusion:"No such $H$ can exist. The halting problem is undecidable."}}],exercises:[{id:"9-52-1",type:"exercise",number:1,statement:"Show that determining whether a Turing machine accepts the empty string is undecidable.",solution:{steps:[{title:"Reduction from halting",content:`Given $(M, w)$, construct $M'$ that:
+1. Ignores its input
+2. Simulates $M$ on $w$
+3. Accepts if simulation halts`},{title:"Key property",content:"$M'$ accepts $\\varepsilon$ iff $M$ halts on $w$."},{title:"Conclude",content:`If we could decide "accepts empty string", we could decide halting.
+Since halting is undecidable, so is this problem.`}],conclusion:"The empty-string acceptance problem is undecidable by reduction from halting."}}]}],i={partId:9,partTitle:t,textbookChapter:e,sections:n};export{i as p};

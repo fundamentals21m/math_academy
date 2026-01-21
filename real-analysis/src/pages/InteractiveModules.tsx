@@ -16,6 +16,26 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
+  // Part 1: Foundations
+  {
+    id: 'completeness',
+    title: 'Completeness of ℝ',
+    description: 'Explore the least upper bound property. See why ℚ has "holes" and how ℝ fills them. Visualize Dedekind cuts.',
+    sectionId: 1,
+    sectionTitle: 'The Real Number System',
+    category: 'Foundations',
+    icon: '∅',
+  },
+  {
+    id: 'countability',
+    title: 'Countable vs Uncountable',
+    description: 'Compare the sizes of infinite sets. See Cantor\'s diagonal argument proving ℝ is uncountable while ℚ is countable.',
+    sectionId: 3,
+    sectionTitle: 'Finite and Infinite Sets',
+    category: 'Foundations',
+    icon: '∞',
+  },
+  // Part 2: Sequences and Series
   {
     id: 'sequence-convergence',
     title: 'Sequence Convergence Explorer',
@@ -35,6 +55,25 @@ const modules: InteractiveModule[] = [
     icon: 'Σ',
   },
   {
+    id: 'convergence-tests',
+    title: 'Convergence Tests Visualizer',
+    description: 'Apply ratio test, root test, and comparison tests to series. See why each test works through visual comparisons.',
+    sectionId: 7,
+    sectionTitle: 'Convergence Tests',
+    category: 'Series',
+    icon: '⚖️',
+  },
+  {
+    id: 'power-series',
+    title: 'Power Series Explorer',
+    description: 'Explore radius of convergence. See how Taylor series approximate functions better as you add more terms.',
+    sectionId: 8,
+    sectionTitle: 'Power Series',
+    category: 'Series',
+    icon: 'xⁿ',
+  },
+  // Part 3: Continuity and Differentiation
+  {
     id: 'epsilon-delta',
     title: 'ε-δ Definition of Limits',
     description: 'Interactive exploration of the rigorous epsilon-delta definition of limits. Adjust ε and δ to see how they constrain the function.',
@@ -42,6 +81,43 @@ const modules: InteractiveModule[] = [
     sectionTitle: 'Limits and Continuity',
     category: 'Limits',
     icon: 'δ',
+  },
+  {
+    id: 'intermediate-value',
+    title: 'Intermediate Value Theorem',
+    description: 'See why continuous functions on closed intervals hit every value between f(a) and f(b). Visualize root-finding.',
+    sectionId: 10,
+    sectionTitle: 'Continuous Functions',
+    category: 'Continuity',
+    icon: '↔',
+  },
+  {
+    id: 'mean-value',
+    title: 'Mean Value Theorem',
+    description: 'Find the point where the tangent is parallel to the secant. See the geometric and analytic meaning of MVT.',
+    sectionId: 11,
+    sectionTitle: 'Differentiation',
+    category: 'Differentiation',
+    icon: '∥',
+  },
+  // Part 4: Integration
+  {
+    id: 'riemann-sums',
+    title: 'Riemann Sums Visualizer',
+    description: 'Build the Riemann integral from partitions. Compare left, right, and midpoint sums as partitions get finer.',
+    sectionId: 13,
+    sectionTitle: 'The Riemann Integral',
+    category: 'Integration',
+    icon: '∫',
+  },
+  {
+    id: 'ftc',
+    title: 'Fundamental Theorem of Calculus',
+    description: 'See the connection between differentiation and integration. Watch how the area function\'s derivative equals the original function.',
+    sectionId: 14,
+    sectionTitle: 'Fundamental Theorem of Calculus',
+    category: 'Integration',
+    icon: '∮',
   },
   {
     id: 'uniform-convergence',

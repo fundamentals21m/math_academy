@@ -1,0 +1,26 @@
+const e="Dawn of Greek Mathematics",t="Part 2",n=[{sectionId:5,sectionTitle:"The Dawn of Greek Mathematics",textbookSection:"Section 5",examples:[{id:"ex-2-5-1",type:"example",title:"Thales' Theorem",statement:"Prove Thales' theorem: An angle inscribed in a semicircle is a right angle.",solution:{steps:[{title:"Set up the diagram",content:"Let $AB$ be a diameter of circle with center $O$. Let $C$ be any point on the circle (not $A$ or $B$)."},{title:"Draw radii",content:"Connect $O$ to $C$. Since $OA = OB = OC$ (radii), triangles $OAC$ and $OBC$ are isosceles."},{title:"Use isosceles triangle property",content:`Let $\\angle OCA = \\angle OAC = \\alpha$ and $\\angle OCB = \\angle OBC = \\beta$.
+
+$\\angle ACB = \\alpha + \\beta$`},{title:"Sum of angles in triangle ABC",content:`$\\angle CAB + \\angle ABC + \\angle BCA = 180°$
+$\\alpha + \\beta + (\\alpha + \\beta) = 180°$
+$2(\\alpha + \\beta) = 180°$
+$\\alpha + \\beta = 90°$`}],conclusion:"$\\angle ACB = 90°$. Any angle inscribed in a semicircle is a right angle."}}],exercises:[{id:"2-5-1",type:"exercise",number:1,statement:"Thales is said to have measured the height of the Great Pyramid using shadows. If a 2-meter stick casts a 3-meter shadow at the same time the pyramid casts a 180-meter shadow (from its center), what is the height of the pyramid?",solution:{steps:[{title:"Use similar triangles",content:`The sun's rays create similar triangles with the stick and pyramid.
+
+$\\frac{\\text{height of stick}}{\\text{shadow of stick}} = \\frac{\\text{height of pyramid}}{\\text{shadow of pyramid}}$`},{title:"Substitute and solve",content:`$\\frac{2}{3} = \\frac{h}{180}$
+
+$h = \\frac{2 \\times 180}{3} = \\frac{360}{3} = 120$ meters`}],conclusion:"The pyramid is 120 meters tall. This elegant method shows the power of similar triangles."}}]},{sectionId:6,sectionTitle:"Pythagoras and His School",textbookSection:"Section 6",examples:[{id:"ex-2-6-1",type:"example",title:"Pythagorean Theorem Proof",statement:"Prove the Pythagorean theorem using the classic square dissection method.",solution:{steps:[{title:"Construct two squares of side $a + b$",content:"Both squares have area $(a + b)^2 = a^2 + 2ab + b^2$."},{title:"Dissect the first square",content:`Place four right triangles (legs $a$ and $b$) in the corners, leaving a tilted square of side $c$ in the middle.
+
+Total area: $4 \\cdot \\frac{1}{2}ab + c^2 = 2ab + c^2$`},{title:"Dissect the second square differently",content:`Place the same four triangles along the edges, leaving two squares: one of side $a$ and one of side $b$.
+
+Total area: $4 \\cdot \\frac{1}{2}ab + a^2 + b^2 = 2ab + a^2 + b^2$`},{title:"Equate the areas",content:`$2ab + c^2 = 2ab + a^2 + b^2$
+$c^2 = a^2 + b^2$`}],conclusion:"The Pythagorean theorem: $a^2 + b^2 = c^2$."}}],exercises:[{id:"2-6-1",type:"exercise",number:1,statement:"The Pythagoreans were fascinated by figurate numbers. Find the 5th triangular number $T_5$ and verify that $T_n = \\frac{n(n+1)}{2}$.",solution:{steps:[{title:"List triangular numbers",content:`$T_1 = 1$
+$T_2 = 1 + 2 = 3$
+$T_3 = 1 + 2 + 3 = 6$
+$T_4 = 1 + 2 + 3 + 4 = 10$
+$T_5 = 1 + 2 + 3 + 4 + 5 = 15$`},{title:"Verify with formula",content:"$T_5 = \\frac{5 \\cdot 6}{2} = \\frac{30}{2} = 15$ ✓"}],conclusion:"The 5th triangular number is 15."}},{id:"2-6-2",type:"exercise",number:2,statement:"Prove the Pythagorean identity: The sum of two consecutive triangular numbers is a perfect square.",solution:{steps:[{title:"Express algebraically",content:"$T_n + T_{n+1} = \\frac{n(n+1)}{2} + \\frac{(n+1)(n+2)}{2}$"},{title:"Simplify",content:`$= \\frac{(n+1)(n + n + 2)}{2} = \\frac{(n+1)(2n+2)}{2}$
+$= \\frac{2(n+1)^2}{2} = (n+1)^2$`}],conclusion:"$T_n + T_{n+1} = (n+1)^2$. For example: $T_3 + T_4 = 6 + 10 = 16 = 4^2$."}}]},{sectionId:9,sectionTitle:"The Crisis of Incommensurables",textbookSection:"Section 9",examples:[{id:"ex-2-9-1",type:"example",title:"Irrationality of √2",statement:"Prove that $\\sqrt{2}$ is irrational.",solution:{steps:[{title:"Assume rationality",content:"Suppose $\\sqrt{2} = \\frac{p}{q}$ where $p, q$ are integers with no common factors."},{title:"Square both sides",content:"$2 = \\frac{p^2}{q^2}$, so $p^2 = 2q^2$."},{title:"Analyze parity of p",content:`$p^2$ is even, so $p$ is even. Let $p = 2k$.
+
+Then $(2k)^2 = 2q^2$, so $4k^2 = 2q^2$, thus $q^2 = 2k^2$.`},{title:"Derive contradiction",content:`So $q^2$ is even, meaning $q$ is even.
+
+But then both $p$ and $q$ are even, contradicting that they have no common factors.`}],conclusion:"$\\sqrt{2}$ is irrational. This discovery allegedly shocked the Pythagoreans."}}],exercises:[{id:"2-9-1",type:"exercise",number:1,statement:"Prove that $\\sqrt{3}$ is irrational.",solution:{steps:[{title:"Assume rationality",content:"Suppose $\\sqrt{3} = \\frac{p}{q}$ in lowest terms."},{title:"Square",content:"$3 = \\frac{p^2}{q^2}$, so $p^2 = 3q^2$."},{title:"Analyze divisibility by 3",content:`$3 | p^2$ implies $3 | p$ (since 3 is prime).
+
+Let $p = 3k$. Then $9k^2 = 3q^2$, so $q^2 = 3k^2$.`},{title:"Contradiction",content:"So $3 | q$, contradicting that $p/q$ was in lowest terms."}],conclusion:"$\\sqrt{3}$ is irrational."}}]}],a={partId:2,partTitle:e,textbookChapter:t,sections:n};export{a as p};

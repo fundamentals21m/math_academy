@@ -16,6 +16,26 @@ interface InteractiveModule {
 }
 
 const modules: InteractiveModule[] = [
+  // Ancient Mathematics
+  {
+    id: 'prime-sieve',
+    title: 'Sieve of Eratosthenes',
+    description: 'Watch the ancient algorithm find all prime numbers by crossing out multiples. See patterns emerge in the distribution of primes.',
+    sectionId: 2,
+    sectionTitle: 'Prime Numbers',
+    category: 'Ancient Mathematics',
+    icon: '🔍',
+  },
+  // Dawn of Greek Mathematics
+  {
+    id: 'perfect-numbers',
+    title: 'Perfect Numbers',
+    description: 'Explore numbers equal to the sum of their divisors. Discover the connection to Mersenne primes and Euclid-Euler theorem.',
+    sectionId: 7,
+    sectionTitle: 'Perfect Numbers',
+    category: 'Dawn of Greek Mathematics',
+    icon: '✨',
+  },
   {
     id: 'platonic-solids',
     title: 'Platonic Solids',
@@ -34,6 +54,7 @@ const modules: InteractiveModule[] = [
     category: 'Dawn of Greek Mathematics',
     icon: '📐',
   },
+  // Classical Greek Mathematics
   {
     id: 'ruler-compass',
     title: 'Ruler & Compass Constructions',
@@ -44,6 +65,43 @@ const modules: InteractiveModule[] = [
     icon: '📏',
   },
   {
+    id: 'impossible-constructions',
+    title: 'Impossible Constructions',
+    description: 'Understand why squaring the circle, doubling the cube, and trisecting angles cannot be done with ruler and compass.',
+    sectionId: 14,
+    sectionTitle: 'The Impossibility of Solving Classical Problems',
+    category: 'Classical Greek Mathematics',
+    icon: '⚠️',
+  },
+  {
+    id: 'euclid-elements',
+    title: 'Euclid\'s Elements',
+    description: 'Explore the axiomatic method through key propositions from the Elements. See how theorems build from definitions and postulates.',
+    sectionId: 15,
+    sectionTitle: 'Euclid',
+    category: 'Classical Greek Mathematics',
+    icon: '📜',
+  },
+  {
+    id: 'non-euclidean',
+    title: 'Non-Euclidean Geometry',
+    description: 'Explore hyperbolic and spherical geometry. See what happens when the parallel postulate fails.',
+    sectionId: 16,
+    sectionTitle: 'Non-Euclidean Geometry and Hilbert\'s Axioms',
+    category: 'Classical Greek Mathematics',
+    icon: '🌐',
+  },
+  {
+    id: 'archimedes-method',
+    title: 'Archimedes\' Method',
+    description: 'Calculate π by inscribing and circumscribing polygons. See how Archimedes found bounds for pi using 96-gons.',
+    sectionId: 18,
+    sectionTitle: 'Archimedes',
+    category: 'Classical Greek Mathematics',
+    icon: '🔵',
+  },
+  // Set Theory and Number Theory
+  {
     id: 'continued-fractions',
     title: 'Continued Fractions',
     description: 'See how real numbers unfold as continued fractions. Discover patterns in √2, φ, e, and π. Find best rational approximations.',
@@ -53,6 +111,16 @@ const modules: InteractiveModule[] = [
     icon: '🔢',
   },
   {
+    id: 'cantor-diagonal',
+    title: 'Cantor\'s Diagonal Argument',
+    description: 'See why there are more real numbers than integers. Witness the uncountability proof through diagonalization.',
+    sectionId: 42,
+    sectionTitle: 'Cantor\'s Set Theory',
+    category: 'Set Theory and Number Theory',
+    icon: '∞',
+  },
+  // Computability and Logic
+  {
     id: 'turing-machine',
     title: 'Turing Machine',
     description: 'Watch a simple Turing machine increment a binary number. See the tape, head, states, and transitions in action.',
@@ -60,6 +128,15 @@ const modules: InteractiveModule[] = [
     sectionTitle: 'What Is a Calculation?',
     category: 'Computability and Logic',
     icon: '🤖',
+  },
+  {
+    id: 'godel-incompleteness',
+    title: 'Gödel Numbering',
+    description: 'See how mathematical statements can be encoded as numbers. Understand the foundation of Gödel\'s incompleteness theorems.',
+    sectionId: 51,
+    sectionTitle: 'Gödel\'s Theorems',
+    category: 'Computability and Logic',
+    icon: '🔐',
   },
 ];
 // =============================================================================

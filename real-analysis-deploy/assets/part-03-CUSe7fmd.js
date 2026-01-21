@@ -1,0 +1,76 @@
+const t="Continuity and Differentiation",e="Part 3",n=[{sectionId:9,sectionTitle:"Limits and Continuity",textbookSection:"Section 9",examples:[{id:"ex-3-9-1",type:"example",title:"Epsilon-Delta Proof of Continuity",statement:"Prove that $f(x) = x^2$ is continuous at $x = 2$ using the $\\varepsilon$-$\\delta$ definition.",solution:{steps:[{title:"State what we need to show",content:"For every $\\varepsilon > 0$, we need $\\delta > 0$ such that $|x - 2| < \\delta$ implies $|x^2 - 4| < \\varepsilon$."},{title:"Factor the difference",content:`$|x^2 - 4| = |x - 2||x + 2|$
+
+We need to bound $|x + 2|$ when $x$ is near 2.`},{title:"Restrict delta initially",content:`If $|x - 2| < 1$, then $1 < x < 3$, so $3 < x + 2 < 5$.
+Thus $|x + 2| < 5$ when $|x - 2| < 1$.`},{title:"Choose delta",content:`Let $\\delta = \\min(1, \\frac{\\varepsilon}{5})$.
+
+If $|x - 2| < \\delta$, then:
+$|x^2 - 4| = |x - 2||x + 2| < \\delta \\cdot 5 \\leq \\frac{\\varepsilon}{5} \\cdot 5 = \\varepsilon$`}],conclusion:"Therefore $f(x) = x^2$ is continuous at $x = 2$."}},{id:"ex-3-9-2",type:"example",title:"Sequential Criterion for Continuity",statement:"Prove that $f$ is continuous at $a$ if and only if for every sequence $(x_n)$ with $x_n \\to a$, we have $f(x_n) \\to f(a)$.",solution:{steps:[{title:"Forward direction",content:`Assume $f$ is continuous at $a$. Let $x_n \\to a$ and let $\\varepsilon > 0$.
+
+By continuity, there exists $\\delta > 0$ such that $|x - a| < \\delta \\Rightarrow |f(x) - f(a)| < \\varepsilon$.
+
+Since $x_n \\to a$, there exists $N$ such that $n > N \\Rightarrow |x_n - a| < \\delta$.
+
+For $n > N$: $|f(x_n) - f(a)| < \\varepsilon$. Thus $f(x_n) \\to f(a)$.`},{title:"Reverse direction (contrapositive)",content:`Assume $f$ is not continuous at $a$. Then there exists $\\varepsilon_0 > 0$ such that for all $\\delta > 0$, there exists $x$ with $|x - a| < \\delta$ but $|f(x) - f(a)| \\geq \\varepsilon_0$.
+
+For $\\delta = \\frac{1}{n}$, choose $x_n$ with $|x_n - a| < \\frac{1}{n}$ but $|f(x_n) - f(a)| \\geq \\varepsilon_0$.
+
+Then $x_n \\to a$ but $f(x_n) \\not\\to f(a)$.`}],conclusion:"The sequential criterion provides an alternative characterization of continuity."}}],exercises:[{id:"3-9-1",type:"exercise",number:1,statement:"Prove that $f(x) = \\frac{1}{x}$ is continuous at any $a > 0$ using $\\varepsilon$-$\\delta$.",solution:{steps:[{title:"Factor the difference",content:"$|\\frac{1}{x} - \\frac{1}{a}| = |\\frac{a - x}{xa}| = \\frac{|x - a|}{|x| \\cdot a}$"},{title:"Bound $|x|$ from below",content:`If $|x - a| < \\frac{a}{2}$, then $x > \\frac{a}{2}$, so $|x| > \\frac{a}{2}$.
+
+Thus $\\frac{1}{|x|} < \\frac{2}{a}$.`},{title:"Choose delta",content:`Let $\\delta = \\min(\\frac{a}{2}, \\frac{\\varepsilon a^2}{2})$.
+
+If $|x - a| < \\delta$:
+$|\\frac{1}{x} - \\frac{1}{a}| = \\frac{|x - a|}{|x| \\cdot a} < \\frac{\\delta}{\\frac{a}{2} \\cdot a} = \\frac{2\\delta}{a^2} \\leq \\varepsilon$`}],conclusion:"$f(x) = \\frac{1}{x}$ is continuous at all $a > 0$."}},{id:"3-9-2",type:"exercise",number:2,statement:"Prove that if $f$ and $g$ are continuous at $a$, then $f + g$ is continuous at $a$.",solution:{steps:[{title:"Use triangle inequality",content:`$|(f + g)(x) - (f + g)(a)| = |f(x) - f(a) + g(x) - g(a)|$
+$\\leq |f(x) - f(a)| + |g(x) - g(a)|$`},{title:"Apply continuity of f and g",content:`Given $\\varepsilon > 0$:
+- There exists $\\delta_1$ such that $|x - a| < \\delta_1 \\Rightarrow |f(x) - f(a)| < \\frac{\\varepsilon}{2}$
+- There exists $\\delta_2$ such that $|x - a| < \\delta_2 \\Rightarrow |g(x) - g(a)| < \\frac{\\varepsilon}{2}$`},{title:"Choose delta",content:`Let $\\delta = \\min(\\delta_1, \\delta_2)$.
+
+If $|x - a| < \\delta$:
+$|(f + g)(x) - (f + g)(a)| < \\frac{\\varepsilon}{2} + \\frac{\\varepsilon}{2} = \\varepsilon$`}],conclusion:"$f + g$ is continuous at $a$."}}]},{sectionId:10,sectionTitle:"Continuous Functions",textbookSection:"Section 10",examples:[{id:"ex-3-10-1",type:"example",title:"Intermediate Value Theorem Application",statement:"Prove that $f(x) = x^3 - x - 1$ has a root in $[1, 2]$.",solution:{steps:[{title:"Verify continuity",content:"$f$ is a polynomial, so it is continuous on $[1, 2]$."},{title:"Evaluate at endpoints",content:`$f(1) = 1 - 1 - 1 = -1 < 0$
+$f(2) = 8 - 2 - 1 = 5 > 0$`},{title:"Apply IVT",content:"Since $f$ is continuous on $[1, 2]$ and $f(1) < 0 < f(2)$, by the Intermediate Value Theorem, there exists $c \\in (1, 2)$ such that $f(c) = 0$."}],conclusion:"The equation $x^3 - x - 1 = 0$ has a solution in $(1, 2)$."}}],exercises:[{id:"3-10-1",type:"exercise",number:1,statement:"Prove the Extreme Value Theorem: If $f$ is continuous on $[a, b]$, then $f$ attains its maximum and minimum on $[a, b]$.",solution:{steps:[{title:"Show f is bounded above",content:`If not, for each $n$ there exists $x_n \\in [a,b]$ with $f(x_n) > n$.
+
+By Bolzano-Weierstrass, $(x_n)$ has a convergent subsequence $x_{n_k} \\to c \\in [a,b]$.
+
+By continuity, $f(x_{n_k}) \\to f(c)$, contradicting $f(x_{n_k}) > n_k \\to \\infty$.`},{title:"Show supremum is attained",content:`Let $M = \\sup\\{f(x) : x \\in [a,b]\\}$. Choose $x_n$ with $f(x_n) > M - \\frac{1}{n}$.
+
+By B-W, $x_{n_k} \\to c \\in [a,b]$.
+
+By continuity, $f(x_{n_k}) \\to f(c)$.
+
+Since $f(x_{n_k}) > M - \\frac{1}{n_k}$, we get $f(c) \\geq M$.
+
+But $f(c) \\leq M$ by definition of supremum, so $f(c) = M$.`}],conclusion:"Similarly for the minimum. Thus $f$ attains both its maximum and minimum on $[a,b]$."}},{id:"3-10-2",type:"exercise",number:2,statement:"Prove that if $f: [a, b] \\to [a, b]$ is continuous, then $f$ has a fixed point (i.e., there exists $c \\in [a,b]$ with $f(c) = c$).",solution:{steps:[{title:"Define auxiliary function",content:"Let $g(x) = f(x) - x$. Then $g$ is continuous on $[a, b]$."},{title:"Evaluate at endpoints",content:`Since $f: [a,b] \\to [a,b]$:
+$g(a) = f(a) - a \\geq a - a = 0$ (since $f(a) \\geq a$)
+$g(b) = f(b) - b \\leq b - b = 0$ (since $f(b) \\leq b$)`},{title:"Apply IVT",content:`If $g(a) = 0$ or $g(b) = 0$, we're done.
+
+Otherwise $g(a) > 0$ and $g(b) < 0$.
+
+By IVT, there exists $c \\in (a, b)$ with $g(c) = 0$, i.e., $f(c) = c$.`}],conclusion:"Every continuous function from $[a,b]$ to itself has a fixed point."}}]},{sectionId:11,sectionTitle:"Differentiation",textbookSection:"Section 11",examples:[{id:"ex-3-11-1",type:"example",title:"Differentiability Implies Continuity",statement:"Prove that if $f$ is differentiable at $a$, then $f$ is continuous at $a$.",solution:{steps:[{title:"Write difference in useful form",content:`For $x \\neq a$:
+$f(x) - f(a) = \\frac{f(x) - f(a)}{x - a} \\cdot (x - a)$`},{title:"Take limit",content:`$\\lim_{x \\to a} [f(x) - f(a)] = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a} \\cdot \\lim_{x \\to a} (x - a)$
+$= f'(a) \\cdot 0 = 0$`},{title:"Conclude continuity",content:`Since $\\lim_{x \\to a} [f(x) - f(a)] = 0$, we have $\\lim_{x \\to a} f(x) = f(a)$.
+
+Thus $f$ is continuous at $a$.`}],conclusion:"Differentiability implies continuity (but not conversely: consider $f(x) = |x|$ at $x = 0$)."}}],exercises:[{id:"3-11-1",type:"exercise",number:1,statement:"Use the definition of derivative to prove that $(fg)'(a) = f'(a)g(a) + f(a)g'(a)$ (product rule).",solution:{steps:[{title:"Write the difference quotient",content:"$\\frac{(fg)(x) - (fg)(a)}{x - a} = \\frac{f(x)g(x) - f(a)g(a)}{x - a}$"},{title:"Add and subtract",content:`$= \\frac{f(x)g(x) - f(a)g(x) + f(a)g(x) - f(a)g(a)}{x - a}$
+$= \\frac{f(x) - f(a)}{x - a} g(x) + f(a) \\frac{g(x) - g(a)}{x - a}$`},{title:"Take limit",content:`As $x \\to a$:
+- $\\frac{f(x) - f(a)}{x - a} \\to f'(a)$
+- $g(x) \\to g(a)$ (by continuity, which follows from differentiability)
+- $\\frac{g(x) - g(a)}{x - a} \\to g'(a)$
+
+Thus $(fg)'(a) = f'(a)g(a) + f(a)g'(a)$.`}],conclusion:"This proves the product rule for derivatives."}},{id:"3-11-2",type:"exercise",number:2,statement:"Prove the chain rule: If $g$ is differentiable at $a$ and $f$ is differentiable at $g(a)$, then $(f \\circ g)'(a) = f'(g(a)) \\cdot g'(a)$.",solution:{steps:[{title:"Define auxiliary function",content:`Let $u(y) = \\begin{cases} \\frac{f(y) - f(g(a))}{y - g(a)} & y \\neq g(a) \\\\ f'(g(a)) & y = g(a) \\end{cases}$
+
+$u$ is continuous at $g(a)$ since $f$ is differentiable there.`},{title:"Express the difference",content:`For $y \\neq g(a)$: $f(y) - f(g(a)) = u(y)(y - g(a))$
+
+This also holds when $y = g(a)$ (both sides are 0).`},{title:"Apply to composition",content:`$f(g(x)) - f(g(a)) = u(g(x))(g(x) - g(a))$
+
+$\\frac{f(g(x)) - f(g(a))}{x - a} = u(g(x)) \\cdot \\frac{g(x) - g(a)}{x - a}$`},{title:"Take limit",content:`As $x \\to a$: $g(x) \\to g(a)$ and $u(g(x)) \\to u(g(a)) = f'(g(a))$
+
+$(f \\circ g)'(a) = f'(g(a)) \\cdot g'(a)$`}],conclusion:"This proves the chain rule."}}]},{sectionId:12,sectionTitle:"Applications of Derivatives",textbookSection:"Section 12",examples:[{id:"ex-3-12-1",type:"example",title:"Mean Value Theorem Application",statement:"Use the Mean Value Theorem to prove that $|\\sin x - \\sin y| \\leq |x - y|$ for all $x, y$.",solution:{steps:[{title:"Apply MVT",content:`For any $x < y$, by MVT there exists $c \\in (x, y)$ such that:
+$\\frac{\\sin y - \\sin x}{y - x} = \\cos c$`},{title:"Use bound on cosine",content:`Since $|\\cos c| \\leq 1$:
+$|\\frac{\\sin y - \\sin x}{y - x}| \\leq 1$`},{title:"Rearrange",content:"$|\\sin y - \\sin x| \\leq |y - x|$"}],conclusion:"The sine function is Lipschitz continuous with constant 1."}}],exercises:[{id:"3-12-1",type:"exercise",number:1,statement:"Prove Rolle's Theorem: If $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $f(a) = f(b)$, then there exists $c \\in (a,b)$ with $f'(c) = 0$.",solution:{steps:[{title:"Apply Extreme Value Theorem",content:"By EVT, $f$ attains its maximum $M$ and minimum $m$ on $[a,b]$."},{title:"Case 1: f is constant",content:"If $M = m$, then $f$ is constant, so $f'(c) = 0$ for all $c \\in (a,b)$."},{title:"Case 2: f is not constant",content:`If $M > m$, at least one extreme value is attained in the interior $(a,b)$ (since $f(a) = f(b)$, they can't both be at endpoints).
+
+Let $c \\in (a,b)$ be where this extreme occurs.`},{title:"Show derivative is zero",content:`If $f(c) = M$ is a maximum, then for $h$ small:
+$\\frac{f(c+h) - f(c)}{h} \\leq 0$ for $h > 0$
+$\\frac{f(c+h) - f(c)}{h} \\geq 0$ for $h < 0$
+
+Taking limits: $f'(c) \\leq 0$ and $f'(c) \\geq 0$, so $f'(c) = 0$.`}],conclusion:"There exists $c \\in (a,b)$ with $f'(c) = 0$."}},{id:"3-12-2",type:"exercise",number:2,statement:"Use L'Hôpital's rule to evaluate $\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2}$.",solution:{steps:[{title:"Check indeterminate form",content:`At $x = 0$: numerator $= e^0 - 1 - 0 = 0$, denominator $= 0$.
+This is $\\frac{0}{0}$ form.`},{title:"Apply L'Hôpital's rule once",content:`$\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2} = \\lim_{x \\to 0} \\frac{e^x - 1}{2x}$
+
+Still $\\frac{0}{0}$ form.`},{title:"Apply L'Hôpital's rule again",content:"$= \\lim_{x \\to 0} \\frac{e^x}{2} = \\frac{1}{2}$"}],conclusion:"$\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2} = \\frac{1}{2}$"}}]}],a={partId:3,partTitle:t,textbookChapter:e,sections:n};export{a as p};
