@@ -1,0 +1,70 @@
+// =============================================================================
+// COURSE CONFIGURATION
+// =============================================================================
+// This is the central configuration file for your course.
+// Update these values when creating a new course.
+// =============================================================================
+
+import type { CourseId } from '@shared/gamification';
+
+/**
+ * Course identifier - used for XP tracking, URLs, and storage keys
+ * Examples: 'ba' (Basic Algebra), 'aa' (Abstract Algebra), 'crypto' (Cryptography)
+ */
+export const COURSE_ID: CourseId = 'tontines';
+
+/**
+ * Human-readable course name
+ */
+export const COURSE_NAME = 'Tontines: The Mathematics of Lifetime Income';
+
+/**
+ * Short description for meta tags and headers
+ */
+export const COURSE_DESCRIPTION = 'From 17th century finance to modern retirement security - understanding the mathematics of longevity risk pooling';
+
+/**
+ * Course accent color (used in headers, buttons, etc.)
+ * Options: 'indigo', 'emerald', 'amber', 'rose', 'cyan'
+ */
+export const COURSE_ACCENT = 'emerald';
+
+/**
+ * Course icon/emoji for visual identification
+ */
+export const COURSE_ICON = '💰';
+
+/**
+ * Base path for routing (must match vite.config.ts)
+ */
+export const BASE_PATH = `/math_academy/${COURSE_ID}/`;
+
+/**
+ * Hub URL - main Magic Internet Math landing page
+ */
+export const HUB_URL = 'https://mathacademy-cyan.vercel.app';
+
+/**
+ * External links
+ */
+export const LINKS = {
+  hub: HUB_URL,
+  home: '/',
+  leaderboard: `${BASE_PATH}#/leaderboard`,
+  theorems: `${BASE_PATH}#/theorems`,
+  interactive: `${BASE_PATH}#/interactive`,
+  transcripts: `${BASE_PATH}#/transcripts`,
+} as const;
+
+/**
+ * Feature flags - enable/disable features per course
+ */
+export const FEATURES = {
+  gamification: true,
+  leaderboard: true,
+  nostrAuth: true,
+  quizzes: true,
+  interactiveModules: true,
+  theoremIndex: true,
+  transcripts: true,
+} as const;
