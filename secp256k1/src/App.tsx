@@ -51,7 +51,7 @@ const transcriptIdMap: Record<string, string> = {
   'schnorr-taproot': 'schnorr-taproot',
   'schnorr-applications': 'schnorr-applications',
   'musig-overview': 'musig-overview',
-  'musig2-deep-dive': 'musig2-deep-dive',
+  'musig2-deep-dive': 'musig2deep-dive',
   'musig-implementations': 'musig-implementations',
   'adaptor-intro': 'adaptor-intro',
   'adaptor-applications': 'adaptor-applications',

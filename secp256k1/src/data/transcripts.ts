@@ -74,16 +74,17 @@ export const transcripts: Transcript[] = [
   },
   {
     id: 'schnorr-taproot',
-    title: 'Schnorr and Taproot',
+    title: 'Taproot and Schnorr Multisignatures',
     source: 'London Bitcoin Devs',
     date: '2020-06-17',
     speakers: [
-      { name: 'Pieter Wuille', role: 'Bitcoin Core Developer' },
+      { name: 'Tim Ruffing', role: 'Blockstream Cryptographer' },
+      { name: 'Michael Folkson', role: 'Moderator' },
     ],
-    topics: ['Schnorr Signatures', 'Taproot', 'BIP340', 'BIP341'],
-    sourceUrl: 'https://btctranscripts.com/london-bitcoin-devs/2020-06-17-pieter-wuille-schnorr-taproot/',
+    topics: ['Schnorr Signatures', 'Taproot', 'MuSig', 'Multi-Signatures'],
+    sourceUrl: 'https://btctranscripts.com/london-bitcoin-devs/2020-06-17-tim-ruffing-schnorr-multisig/',
     duration: '~2h',
-    description: 'Deep technical walkthrough of BIP340 (Schnorr) and BIP341 (Taproot), including the math behind the schemes and implementation details.',
+    description: 'Technical presentation on how Schnorr signatures enable efficient multisignature and threshold signature schemes compatible with Taproot.',
   },
   {
     id: 'schnorr-applications',

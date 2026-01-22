@@ -59,9 +59,9 @@ export default function Musig2DeepDive() {
 
       <Definition title="Wagner's Attack">
         <p>
-          If an attacker sees all other signers' nonces <InlineMath>R_1, ..., R_{n-1}</InlineMath> before
-          choosing their own <InlineMath>R_n</InlineMath>, they can solve a generalized birthday problem
-          to find <InlineMath>R_n</InlineMath> that produces a forgeable aggregate signature.
+          If an attacker sees all other signers' nonces <InlineMath>{`R_1, ..., R_{n-1}`}</InlineMath> before
+          choosing their own <InlineMath>{`R_n`}</InlineMath>, they can solve a generalized birthday problem
+          to find <InlineMath>{`R_n`}</InlineMath> that produces a forgeable aggregate signature.
         </p>
         <p className="mt-2">
           The attack requires ~<InlineMath>2^{32}</InlineMath> work for 128-bit security—feasible!
@@ -168,8 +168,8 @@ export default function Musig2DeepDive() {
             <div>
               <p className="text-dark-200 font-medium">Nonce Generation</p>
               <p className="text-sm text-dark-400">
-                Each signer generates <InlineMath>(k_i^{`(1)`}, k_i^{`(2)`})</InlineMath> and
-                computes <InlineMath>(R_i^{`(1)`}, R_i^{`(2)`})</InlineMath>
+                Each signer generates <InlineMath>{`(k_i^{(1)}, k_i^{(2)})`}</InlineMath> and
+                computes <InlineMath>{`(R_i^{(1)}, R_i^{(2)})`}</InlineMath>
               </p>
             </div>
           </div>
