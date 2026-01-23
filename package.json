@@ -8,11 +8,21 @@
   "scripts": {
     "dev": "pnpm --filter",
     "build": "pnpm --filter",
+    "build:all": "./scripts/rebuild-all-courses.sh",
+    "build:all:clean": "./scripts/rebuild-all-courses.sh --clean",
+    "validate:courses": "node scripts/validate-courses.js",
+    "validate:runtime": "node scripts/validate-runtime.js",
+    "validate:runtime:all": "node scripts/validate-runtime.js --all --verbose",
+    "validate:quiz-balance": "node scripts/validate-quiz-balance.cjs",
+    "validate": "node scripts/validate-courses.js && node scripts/validate-quiz-balance.cjs",
+    "shuffle:quiz": "node scripts/shuffle-quiz-options.cjs",
     "test": "pnpm -r run test",
+    "test:shared": "cd shared && pnpm test",
     "lint": "pnpm -r run lint",
     "clean": "pnpm -r exec rm -rf node_modules dist .turbo",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^8.6.3",
@@ -20,6 +30,9 @@
     "@storybook/addon-essentials": "^8.6.3",
     "@testing-library/react": "^16.3.1",
     "happy-dom": "^20.0.11",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
+    "playwright": "^1.50.0",
     "storybook": "^8.6.3"
   },
   "dependencies": {
@@ -27,5 +40,10 @@
     "clsx": "^2.1.1",
     "dompurify": "^3.3.1",
     "tailwind-merge": "^3.4.0"
+  },
+  "lint-staged": {
+    "**/quizzes/{section,chapter}*.ts": [
+      "node scripts/validate-quiz-balance.cjs"
+    ]
   }
 }
