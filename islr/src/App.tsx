@@ -1,6 +1,7 @@
 import { lazy, Suspense, Component, type ReactNode, useState } from 'react';
 import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { GamificationProvider, useGamification } from '@/contexts/GamificationContext';
+import { COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL, FEATURES } from '@/config';
 
 // Simple LoadingSpinner component
 function LoadingSpinner({ message = 'Loading...' }: { message?: string }) {
