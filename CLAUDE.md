@@ -2,6 +2,62 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## CRITICAL: External URL Policy
+
+**NEVER fabricate, guess, or invent URLs.** This rule has been violated twice and caused production failures.
+
+Before using ANY external URL in code or content:
+1. **STOP** - Do not write the URL until verified
+2. **SEARCH** - Use WebSearch to find the actual URL
+3. **FETCH** - Use WebFetch to confirm it returns 200 (not 404/403)
+4. **ONLY THEN** - Use the verified URL in code
+
+If you cannot verify a URL exists, you must either:
+- Ask the user to provide the correct URL
+- Do not include that reference at all
+
+**No exceptions. No "plausible-looking" URLs. No educated guesses.**
+
+## CRITICAL: Hub Deployment Is MANDATORY
+
+**The HUB (https://mathacademy-cyan.vercel.app) is the primary product.** Individual course deployments mean NOTHING if the hub is not deployed.
+
+### After ANY deployment task, you MUST:
+
+1. **Deploy the hub explicitly:**
+   ```bash
+   cd /Users/brianhirschfield/Claude/math_academy && npx vercel --prod
+   ```
+
+2. **Verify the hub loads:**
+   ```bash
+   # Use Playwright or browser to confirm https://mathacademy-cyan.vercel.app loads with courses
+   ```
+
+3. **Never claim "deployed" until the hub is verified live.**
+
+**Git push does NOT auto-deploy the hub.** The hub is a separate Vercel project that requires explicit `vercel --prod` from the root directory.
+
+Individual courses (`*-deploy/` directories) are separate Vercel projects. Deploying a course does NOT deploy the hub.
+
+### Failure History (DO NOT REPEAT)
+- 2026-01-23: Deployed bips course 3 times without deploying the hub, despite explicit user instructions
+
+---
+
+## CRITICAL: Hub Deployment Files
+
+**NEVER exclude these directories/files from `.vercelignore`:**
+
+- `scripts/` - Contains hubRenderer.js, courses.js, nostrAuth.js, etc.
+- `styles/` - Contains main.css, hub.css, admin.css
+- `index.html` - Main hub page
+- `admin.html` - Admin interface
+
+The hub is a **static site** that loads JavaScript directly via `<script>` tags. If any of these files are missing from deployment, the entire hub breaks with infinite loading.
+
+**CI Safeguard:** The `hub-critical-files` job in `regression.yml` will fail if `.vercelignore` excludes any of these.
+
 ## Build & Development Commands
 
 - No build step required — plain HTML/CSS/JS for the hub
