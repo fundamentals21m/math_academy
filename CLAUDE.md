@@ -22,23 +22,32 @@ If you cannot verify a URL exists, you must either:
 
 **The HUB (https://mathacademy-cyan.vercel.app) is the primary product.** Individual course deployments mean NOTHING if the hub is not deployed.
 
-### After ANY deployment task, you MUST:
+### USE THIS SCRIPT FOR ALL DEPLOYMENTS:
 
-1. **Deploy the hub explicitly:**
-   ```bash
-   cd /Users/brianhirschfield/Claude/math_academy && npx vercel --prod
-   ```
+```bash
+./scripts/deploy-with-hub.sh <course-name>
 
-2. **Verify the hub loads:**
-   ```bash
-   # Use Playwright or browser to confirm https://mathacademy-cyan.vercel.app loads with courses
-   ```
+# Example:
+./scripts/deploy-with-hub.sh bips
+```
 
-3. **Never claim "deployed" until the hub is verified live.**
+This script:
+1. Builds the course
+2. Copies to deploy directory
+3. Deploys the course to Vercel
+4. **Deploys the HUB to Vercel** (mandatory, cannot be skipped)
+5. Verifies the hub returns HTTP 200
 
-**Git push does NOT auto-deploy the hub.** The hub is a separate Vercel project that requires explicit `vercel --prod` from the root directory.
+**DO NOT deploy courses manually.** Use the script. It exists because manual deployment repeatedly failed.
 
-Individual courses (`*-deploy/` directories) are separate Vercel projects. Deploying a course does NOT deploy the hub.
+### If you must deploy manually (NOT RECOMMENDED):
+
+1. Deploy the course: `cd <course>-deploy && npx vercel --prod`
+2. **IMMEDIATELY deploy the hub:** `cd /Users/brianhirschfield/Claude/math_academy && npx vercel --prod`
+3. **Verify the hub loads:** Open https://mathacademy-cyan.vercel.app and confirm courses appear
+4. **Never claim "deployed" until the hub is verified live.**
+
+**Git push does NOT auto-deploy the hub.** The hub is a separate Vercel project.
 
 ### Failure History (DO NOT REPEAT)
 - 2026-01-23: Deployed bips course 3 times without deploying the hub, despite explicit user instructions
