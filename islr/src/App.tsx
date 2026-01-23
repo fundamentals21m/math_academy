@@ -167,11 +167,13 @@ function AchievementNotifications() {
 export default function App() {
   return (
     <ErrorBoundary>
-      <GamificationProvider>
-        <HashRouter>
-          <AppContent />
-        </HashRouter>
-      </GamificationProvider>
+      <CourseConfigProvider config={courseConfig}>
+        <GamificationProvider>
+          <HashRouter>
+            <AppContent />
+          </HashRouter>
+        </GamificationProvider>
+      </CourseConfigProvider>
     </ErrorBoundary>
   );
 }
