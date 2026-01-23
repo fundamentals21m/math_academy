@@ -1,0 +1,158 @@
+# =============================================================================
+# VERCEL IGNORE - Only deploy hub files and *-deploy directories
+# =============================================================================
+
+# Secrets - Never deploy these!
+.env
+.env.local
+.env.*.local
+secrets.txt
+firebase-adminsdk-*.json
+service-account-*.json
+
+# Dependencies
+node_modules
+pnpm-lock.yaml
+package-lock.json
+
+# Build artifacts (source builds, not deploy dirs)
+dist
+build
+lib
+.turbo
+
+# =============================================================================
+# SOURCE COURSE DIRECTORIES - Exclude all non-deploy course folders
+# =============================================================================
+
+# Source courses (these have corresponding -deploy directories)
+advanced-linalg
+atlas-shrugged
+base-race
+basic-algebra
+bfi
+calc_easy
+calc_lib_art
+calc1-course
+calc2-course
+coding-theory-course
+course-template
+crypto-react
+df-course
+euclid
+euler-intro
+four-pillars
+frost
+gauss
+human-action
+intro-discrete
+islr
+koblitz-course
+lcn
+linalg
+man-econ-state
+mod-race
+mom
+numbers-geometry
+only-the-strong-survive
+ra
+road-to-serfdom
+ross-prob
+rothbard_controversies
+rudin
+saylor-diss
+secp256k1
+tao-analysis-1
+tao2
+thales
+tontines
+west-graphs
+why-math
+aa
+
+# YouTube/video production directories
+*_youtube
+atlas-shrugged_youtube
+
+# PDF source files and chunks
+*.pdf
+*-chunks
+pdf-chunks
+
+# Firebase functions source (deployed separately)
+firebase
+
+# E2E tests
+e2e
+
+# Shared module source (bundled into deploy dirs)
+shared
+
+# Scripts (not needed for static hosting)
+scripts
+
+# Storybook
+.storybook
+storybook-static
+
+# Legacy/backup directories
+*-LEGACY*
+*-BACKUP*
+
+# =============================================================================
+# STANDARD EXCLUSIONS
+# =============================================================================
+
+# Testing
+coverage
+test-results
+.playwright-mcp
+.nyc_output
+playwright-report
+
+# Logs
+*.log
+firebase-debug.log
+firebase-debug.*.log
+
+# Firebase local
+.firebase
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode
+.idea
+*.sublime-*
+
+# Git
+.git
+
+# Documentation (keep README for hub)
+CLAUDE.md
+*.md
+!index.html
+
+# Temporary files
+*.tmp
+*.temp
+.cache
+
+# TypeScript source (compiled JS is in deploy dirs)
+*.ts
+*.tsx
+!*.d.ts
+
+# Config files not needed for static deploy
+tsconfig*.json
+vite.config.*
+vitest.config.*
+eslint.config.*
+.prettierrc*
+.eslintrc*
+turbo.json
