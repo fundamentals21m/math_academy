@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout';
 import { Definition, Example } from '@/components/common';
 import { Callout } from '@/components/common/Callout';
+import { AttackFlowSimulator, AddressSwapDetector } from '@/components/visualizations';
 
 export default function Section02() {
   return (
@@ -168,6 +169,23 @@ export default function Section02() {
         it with Branta as belonging to the legitimate business. The verification breaks the
         attack chain by providing an independent source of truth.
       </p>
+
+      <h3 className="text-xl font-semibold text-dark-100 mt-8 mb-4">Interactive: Attack Flow Simulator</h3>
+
+      <p className="mb-4">
+        See how an address swap attack unfolds step by step, and how Branta protection changes
+        the outcome:
+      </p>
+
+      <AttackFlowSimulator />
+
+      <h3 className="text-xl font-semibold text-dark-100 mt-8 mb-4">Interactive: Address Swap Detector</h3>
+
+      <p className="mb-4">
+        Experience how clipboard hijacking works in a safe simulation:
+      </p>
+
+      <AddressSwapDetector />
     </LessonLayout>
   );
 }

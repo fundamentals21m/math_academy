@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout';
 import { Definition, Example } from '@/components/common';
 import { Callout } from '@/components/common/Callout';
+import { VerificationFlowDiagram, BitcoinAddressExplorer } from '@/components/visualizations';
 
 export default function Section06() {
   return (
@@ -183,6 +184,22 @@ export default function Section06() {
         The system works best when widely adopted. The more merchants that register their
         addresses, the more valuable verification becomes for everyone.
       </p>
+
+      <h3 className="text-xl font-semibold text-dark-100 mt-8 mb-4">Interactive: Verification Flow</h3>
+
+      <p className="mb-4">
+        Watch the complete verification lifecycle unfold step by step:
+      </p>
+
+      <VerificationFlowDiagram />
+
+      <h3 className="text-xl font-semibold text-dark-100 mt-8 mb-4">Interactive: Bitcoin Address Explorer</h3>
+
+      <p className="mb-4">
+        Explore the different Bitcoin address formats that Guardrail supports:
+      </p>
+
+      <BitcoinAddressExplorer />
     </LessonLayout>
   );
 }

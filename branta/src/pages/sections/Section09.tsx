@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout';
 import { Definition, Example } from '@/components/common';
 import { Callout } from '@/components/common/Callout';
+import { APIRequestBuilder } from '@/components/visualizations';
 
 export default function Section09() {
   return (
@@ -270,6 +271,14 @@ end`}
         <li><strong>Include in response</strong> - Return verification URL to customer</li>
         <li><strong>Handle failures gracefully</strong> - Don't block checkout if registration fails</li>
       </ul>
+
+      <h3 className="text-xl font-semibold text-dark-100 mt-8 mb-4">Interactive: API Request Builder</h3>
+
+      <p className="mb-4">
+        Build and explore Guardrail API requests interactively:
+      </p>
+
+      <APIRequestBuilder />
     </LessonLayout>
   );
 }

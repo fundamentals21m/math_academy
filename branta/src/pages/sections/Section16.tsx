@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout';
 import { Definition, Example } from '@/components/common';
 import { Callout } from '@/components/common/Callout';
+import { ZeroKnowledgeDemo } from '@/components/visualizations';
 
 export default function Section16() {
   return (
@@ -207,6 +208,15 @@ const isRegistered = verifyProof(proof, commitment);`}
         and privacy. You can verify payment addresses without revealing your transaction
         patterns to anyone—including Branta.
       </Callout>
+
+      <h3 className="text-xl font-semibold text-dark-100 mt-8 mb-4">Interactive: Zero-Knowledge Demo</h3>
+
+      <p className="mb-4">
+        Explore how commitment schemes work and see the privacy difference between
+        traditional and zero-knowledge verification:
+      </p>
+
+      <ZeroKnowledgeDemo />
     </LessonLayout>
   );
 }

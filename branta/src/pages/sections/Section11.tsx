@@ -1,6 +1,7 @@
 import { LessonLayout } from '@/components/layout';
 import { Definition, Example } from '@/components/common';
 import { Callout } from '@/components/common/Callout';
+import { TTLTimeline } from '@/components/visualizations';
 
 export default function Section11() {
   return (
@@ -204,6 +205,14 @@ setInterval(() => maintainDonationAddress(DONATION_ADDRESS), 86400000);`}
         <li><strong>Limits damage</strong> - Old, potentially-insecure addresses auto-expire</li>
         <li><strong>Forces fresh registration</strong> - Encourages regular security review</li>
       </ul>
+
+      <h3 className="text-xl font-semibold text-dark-100 mt-8 mb-4">Interactive: TTL Timeline</h3>
+
+      <p className="mb-4">
+        Visualize how TTL affects registration lifecycle with time simulation:
+      </p>
+
+      <TTLTimeline />
     </LessonLayout>
   );
 }
