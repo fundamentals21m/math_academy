@@ -53,6 +53,7 @@ export const LINKS = {
   leaderboard: `${BASE_PATH}#/leaderboard`,
   theorems: `${BASE_PATH}#/theorems`,
   interactive: `${BASE_PATH}#/interactive`,
+  transcripts: `${BASE_PATH}#/transcripts`,
 } as const;
 
 /**
@@ -65,4 +66,5 @@ export const FEATURES = {
   quizzes: true,
   interactiveModules: true,
   theoremIndex: true,
+  transcripts: true,
 } as const;
