@@ -6,12 +6,16 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The statement $\\forall x \\, P(x)$ means:',
     options: [
-      'For all $x$, $P(x)$ is true',
+      '$P(x)$ is never true',
       'There exists an $x$ such that $P(x)$ is true',
-      '$P(x)$ is true for exactly one $x$',
-      '$P(x)$ is never true'
+      'For all $x$, $P(x)$ is true',
+      '$P(x)$ is true for exactly one $x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\forall$ is the universal quantifier meaning "for all".',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$\\forall$ is the universal quantifier meaning "for all".',
   },
@@ -34,12 +38,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The negation of $\\forall x \\, P(x)$ is:',
     options: [
-      '$\\exists x \\, \\neg P(x)$',
       '$\\forall x \\, \\neg P(x)$',
+      '$\\exists x \\, \\neg P(x)$',
       '$\\neg \\exists x \\, P(x)$',
       '$\\exists x \\, P(x)$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'To negate "all", we say "there exists one that is not".',
   },
@@ -48,12 +52,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The negation of $\\exists x \\, P(x)$ is:',
     options: [
-      '$\\forall x \\, \\neg P(x)$',
-      '$\\exists x \\, \\neg P(x)$',
       '$\\neg \\forall x \\, P(x)$',
+      '$\\exists x \\, \\neg P(x)$',
+      '$\\forall x \\, \\neg P(x)$',
       '$\\forall x \\, P(x)$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'To negate "there exists", we say "for all, it is not".',
   },
@@ -62,12 +66,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The statement "All primes greater than 2 are odd" is written as:',
     options: [
-      '$\\forall p \\, ((p > 2 \\land \\text{prime}(p)) \\Rightarrow \\text{odd}(p))$',
+      '$\\exists p \\, (\\text{prime}(p) \\Rightarrow \\text{odd}(p))$',
       '$\\exists p \\, (p > 2 \\land \\text{prime}(p) \\land \\text{odd}(p))$',
       '$\\forall p \\, (\\text{prime}(p) \\land \\text{odd}(p))$',
-      '$\\exists p \\, (\\text{prime}(p) \\Rightarrow \\text{odd}(p))$'
+      '$\\forall p \\, ((p > 2 \\land \\text{prime}(p)) \\Rightarrow \\text{odd}(p))$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Universal statements about conditionally-defined properties use implications.',
   },
@@ -76,10 +80,18 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When do we swap quantifiers in negation?',
     options: [
-      '$\\neg \\forall$ becomes $\\exists$ and $\\neg \\exists$ becomes $\\forall$',
       'Never',
       'Only when there are nested quantifiers',
-      '$\\neg \\forall$ becomes $\\forall \\neg$'
+      '$\\neg \\forall$ becomes $\\forall \\neg
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Negation swaps quantifiers: $\\neg \\forall \\leftrightarrow \\exists$ and $\\neg \\exists \\leftrightarrow \\forall$.',
+  },
+      '$\\neg \\forall$ becomes $\\exists$ and $\\neg \\exists$ becomes $\\forall
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Negation swaps quantifiers: $\\neg \\forall \\leftrightarrow \\exists$ and $\\neg \\exists \\leftrightarrow \\forall$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

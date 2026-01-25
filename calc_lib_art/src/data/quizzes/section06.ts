@@ -7,11 +7,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What is a tangent line to a curve at a point?',
     options: [
       'A line that crosses the curve at two points',
-      'A line that best approximates the curve near that point',
       'A vertical line through the point',
+      'A line that best approximates the curve near that point',
       'A line parallel to the x-axis'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The tangent line at a point is the line that best approximates the curve near that point—it shows the instantaneous direction of the curve.',
   },
@@ -21,11 +21,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What is a secant line?',
     options: [
       'A line tangent to a curve',
-      'A line passing through two points on a curve',
+      'A line parallel to the curve',
       'A vertical line',
-      'A line parallel to the curve'
+      'A line passing through two points on a curve'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A secant line passes through two points on a curve. As the two points get closer together, the secant approaches the tangent.',
   },
@@ -35,11 +35,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'How do we find the tangent line from secant lines?',
     options: [
       'By averaging many secant lines',
-      'By taking the limit as the two points on the secant merge into one',
       'By drawing a perpendicular line',
-      'By extending the secant to infinity'
+      'By taking the limit as the two points on the secant merge into one',
+      'By extending the secant to infinity',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The tangent is the limit of secant lines as the two points approach each other—what the secant "wants to become" as the gap closes.',
   },
@@ -71,12 +71,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Where on a curve would the tangent line be horizontal?',
     options: [
-      'At every point',
       'At maxima and minima (where the derivative is zero)',
+      'At every point',
       'Only at the y-intercept',
-      'At inflection points'
+      'At inflection points',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The tangent line is horizontal where the derivative equals zero—at local maxima and minima where the function momentarily stops rising or falling.',
   },

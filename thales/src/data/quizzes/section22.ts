@@ -9,12 +9,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many outstanding European mathematicians were there in the thousand years from 400 to 1400 AD?',
     options: [
-      'None',
       'One (Fibonacci)',
+      'None',
       'About a dozen',
-      'Hundreds',
+      'Hundreds'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'In the thousand years from 400 to 1400 AD, there was exactly one outstanding European mathematician: Leonardo of Pisa, better known as Fibonacci.',
@@ -24,12 +24,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Gerbert\'s mathematical abilities lead his contemporaries to believe about him?',
     options: [
-      'That he was divinely inspired',
       'That he had a pact with the devil',
+      'That he was divinely inspired',
       'That he was secretly Greek',
       'That he was immortal',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Gerbert\'s mathematical knowledge so overawed his contemporaries that they believed he had a pact with the devil! Despite this reputation, he became Pope Sylvester II.',
@@ -41,10 +41,10 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       'He received it as a gift from the Caliph',
       'He purchased it from merchants',
-      'He disguised himself as a Muslim and attended lectures in Cordova',
       'He inherited it from his teacher',
+      'He disguised himself as a Muslim and attended lectures in Cordova',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Around 1120, Adelhard of Bath attended lectures at Cordova in Spain, disguising himself as a Muslim. There he obtained a copy of Euclid\'s Elements in Arabic, which he translated into Latin.',
@@ -54,12 +54,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What important mathematical result did Nicole Oresme prove?',
     options: [
-      'The Pythagorean theorem',
       'The divergence of the harmonic series',
-      'Fermat\'s Last Theorem',
+      'The Pythagorean theorem',
       'The quadratic formula',
+      'Fermat\\'s Last Theorem',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Nicole Oresme (1320-1382), a French bishop, gave the first proof that the harmonic series 1 + 1/2 + 1/3 + 1/4 + ... diverges to infinity.',
@@ -69,8 +69,8 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the famous sequence 1, 1, 2, 3, 5, 8, 13, 21, ... called?',
     options: [
-      'The Pythagorean sequence',
       'The Euclidean sequence',
+      'The Pythagorean sequence',
       'The Fibonacci sequence',
       'The geometric sequence',
     ],
@@ -85,11 +85,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'What is the golden ratio φ (phi) approximately equal to?',
     options: [
       '1.414',
-      '1.618',
       '2.718',
+      '1.618',
       '3.142',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The golden ratio φ = (1 + √5)/2 ≈ 1.618. It is connected to the Fibonacci sequence: the ratio of consecutive Fibonacci numbers approaches φ as the numbers get larger.',
@@ -115,11 +115,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'What problem in the Liber abaci led to the Fibonacci sequence?',
     options: [
       'Calculating compound interest',
-      'Breeding rabbits',
-      'Building pyramids',
       'Dividing inheritance',
+      'Building pyramids',
+      'Breeding rabbits'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Fibonacci sequence arose from this problem: How many pairs of rabbits will be produced in a year, beginning with a single pair, if every month each pair bears a new pair which becomes productive from the second month on?',

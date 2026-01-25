@@ -7,11 +7,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'A power series is an expression of the form:',
     options: [
       '$\\sum_{n=0}^{\\infty} c_n$',
-      '$\\sum_{n=0}^{\\infty} c_n x^n$',
       '$\\sum_{n=0}^{\\infty} n^x$',
+      '$\\sum_{n=0}^{\\infty} c_n x^n$',
       '$\\prod_{n=0}^{\\infty} c_n x^n$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A power series centered at $0$ has the form $\\sum_{n=0}^{\\infty} c_n x^n$, where $c_n$ are coefficients and $x$ is the variable.',
   },
@@ -21,11 +21,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'The radius of convergence $R$ of a power series $\\sum c_n x^n$ is defined by:',
     options: [
       '$R = \\sum |c_n|$',
-      '$1/R = \\limsup_{n \\to \\infty} \\sqrt[n]{|c_n|}$',
+      '$R = |c_0|$',
       '$R = \\lim_{n \\to \\infty} c_n$',
-      '$R = |c_0|$'
+      '$1/R = \\limsup_{n \\to \\infty} \\sqrt[n]{|c_n|}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'By the root test, the series converges for $|x| \\limsup \\sqrt[n]{|c_n|} < 1$, i.e., $|x| < 1/\\limsup \\sqrt[n]{|c_n|} = R$.',
   },
@@ -34,12 +34,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If a power series $\\sum c_n x^n$ has radius of convergence $R$, then it:',
     options: [
-      'Converges for all $x$',
       'Converges absolutely for $|x| < R$ and diverges for $|x| > R$',
+      'Converges for all $x$',
       'Converges only at $x = 0$',
       'Converges for $|x| = R$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Inside the radius ($|x| < R$): absolute convergence. Outside ($|x| > R$): divergence. At the boundary ($|x| = R$): could go either way, needs separate analysis.',
   },
@@ -64,10 +64,10 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       '$0$',
       '$1$',
-      '$e$',
-      '$\\infty$'
+      '$\\infty$',
+      '$e$'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Here $c_n = 1/n!$. $\\sqrt[n]{1/n!} \\to 0$ (since $n! > (n/e)^n$). Thus $1/R = 0$, so $R = \\infty$. The series converges for all $x$ (to $e^x$).',
   },

@@ -9,7 +9,7 @@ export const section08Questions: QuizQuestion[] = [
       'A business partnership only',
       'A romantic and physical relationship',
       'An adversarial relationship',
-      'A mentor-student relationship'
+      'A mentor-student relationship',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'How does Hank initially view his relationship with Dagny?',
     options: [
       'As pure and good',
-      'With guilt and shame despite his passion',
       'As a business transaction',
-      'With complete indifference'
+      'With complete indifference',
+      'With guilt and shame despite his passion',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Hank initially feels guilt about his desire for Dagny, having internalized the idea that physical passion is base and degrading.',
   },
@@ -49,11 +49,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What conventional morality does the chapter challenge?',
     options: [
       'The morality of hard work',
+      'The value of money',
       'The body-soul dichotomy that condemns physical pleasure',
       'The ethics of business competition',
-      'The value of money'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The chapter challenges the conventional view that separates and opposes body and soul, treating physical pleasure as sinful.',
   },
@@ -62,12 +62,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Dagny\'s attitude toward her relationship with Hank reveal about her philosophy?',
     options: [
-      'She is ashamed of physical pleasure',
       'She sees no conflict between passion and virtue',
+      'She is ashamed of physical pleasure',
       'She believes love must be sacrificial',
       'She thinks relationships distract from work'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Dagny\'s guiltless acceptance of her passion reflects Rand\'s view that physical pleasure and romantic love are proper expressions of one\'s values.',
   },
@@ -76,12 +76,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Rand suggest about the nature of genuine romantic love?',
     options: [
-      'It requires sacrifice of one\'s values',
-      'It is based on responding to the highest values one sees in another',
+      'It requires sacrifice of one\\'s values',
       'It is irrational and cannot be understood',
-      'It is purely physical attraction'
+      'It is based on responding to the highest values one sees in another',
+      'It is purely physical attraction',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Rand presents romantic love as a response to values - Dagny and Hank are drawn to each other because each embodies the virtues the other admires.',
   },

@@ -1,0 +1,92 @@
+import type { QuizQuestion } from './types';
+
+export const section06Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Russell\'s paradox considers the set $R = \\{x : x \\notin x\\}$. The paradox arises when we ask:',
+    options: [
+      'Is $R$ empty?',
+      'Is $R \\in R$?',
+      'Is $R$ finite or infinite?',
+      'Is $R$ a subset of itself?',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $R \\in R$, then by definition $R \\notin R$. If $R \\notin R$, then by definition $R \\in R$. This contradiction shows naive set theory is inconsistent.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Russell\'s paradox demonstrates that:',
+    options: [
+      'Sets cannot contain other sets',
+      'The empty set does not exist',
+      'Not every collection described by a property forms a set',
+      'All sets must be finite',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The paradox shows that "the set of all sets not containing themselves" cannot exist. This means unrestricted comprehension (forming sets from any property) leads to contradictions.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'In ZF set theory, which principle replaces the naive comprehension axiom to avoid Russell\'s paradox?',
+    options: [
+      'The axiom of separation (or specification)',
+      'The axiom of extensionality',
+      'The axiom of union',
+      'The axiom of pairing'
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The axiom of separation allows forming $\\{x \\in A : P(x)\\}$ only from an already-existing set $A$. You cannot form "the set of all $x$ such that $P(x)$" without a bounding set.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The "set of all sets" $V$ does not exist in ZF set theory. This is related to Russell\'s paradox because:',
+    options: [
+      'The empty set would not be a member of $V$',
+      'If $V$ existed, we could form $R = \\{x \\in V : x \\notin x\\}$ by separation, leading to paradox',
+      'All sets would have to be finite',
+      '$V$ would have to equal the empty set'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'If a universal set $V$ existed, then $R = \\{x \\in V : x \\notin x\\}$ would be a legitimate set by separation, recreating Russell\'s paradox.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'In naive set theory, the comprehension principle states:',
+    options: [
+      'Every set has a power set',
+      'Two sets are equal iff they have the same elements',
+      'The empty set exists',
+      'For any property $P$, there exists a set $\\{x : P(x)\\}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Naive comprehension asserts that any definable property determines a set. Russell showed this leads to contradictions.',
+  },
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Naive comprehension asserts that any definable property determines a set. Russell showed this leads to contradictions.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The barber paradox ("the barber shaves all those who do not shave themselves") is analogous to Russell\'s paradox. Who shaves the barber?',
+    options: [
+      'The scenario is self-contradictory; no such barber can exist',
+      'The barber always shaves himself',
+      'The barber never shaves himself',
+      'Someone else shaves the barber',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Like Russell\'s paradox: if the barber shaves himself, he doesn\'t (since he only shaves those who don\'t shave themselves). If he doesn\'t, he must. The barber cannot exist.',
+  },
+];

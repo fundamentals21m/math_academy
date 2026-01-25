@@ -20,12 +20,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The syndrome $\\mathbf{s}$ of a received word $\\mathbf{r}$ is defined as:',
     options: [
-      '$\\mathbf{s} = \\mathbf{H}\\mathbf{r}^t$',
-      '$\\mathbf{s} = \\mathbf{G}\\mathbf{r}^t$',
-      '$\\mathbf{s} = \\mathbf{r}\\mathbf{H}$',
-      '$\\mathbf{s} = \\mathbf{r}\\mathbf{G}$'
+      '$\\mathbf{s} = \\mathbf{G}\\mathbf{r}^t
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The syndrome of a received word $\\mathbf{r}$ is computed as $\\mathbf{s} = \\mathbf{H}\\mathbf{r}^t$, where $\\mathbf{H}$ is the parity check matrix.',
+  },
+      '$\\mathbf{s} = \\mathbf{r}\\mathbf{H}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The syndrome of a received word $\\mathbf{r}$ is computed as $\\mathbf{s} = \\mathbf{H}\\mathbf{r}^t$, where $\\mathbf{H}$ is the parity check matrix.',
+  },
+      '$\\mathbf{s} = \\mathbf{r}\\mathbf{G}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The syndrome of a received word $\\mathbf{r}$ is computed as $\\mathbf{s} = \\mathbf{H}\\mathbf{r}^t$, where $\\mathbf{H}$ is the parity check matrix.',
+  },
+      '$\\mathbf{s} = \\mathbf{H}\\mathbf{r}^t
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The syndrome of a received word $\\mathbf{r}$ is computed as $\\mathbf{s} = \\mathbf{H}\\mathbf{r}^t$, where $\\mathbf{H}$ is the parity check matrix.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The syndrome of a received word $\\mathbf{r}$ is computed as $\\mathbf{s} = \\mathbf{H}\\mathbf{r}^t$, where $\\mathbf{H}$ is the parity check matrix.',
   },
@@ -34,12 +50,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If the syndrome of a received word is zero, then:',
     options: [
-      'The received word is assumed to be a valid code word',
-      'An error has definitely occurred',
       'The error is in position 1',
+      'An error has definitely occurred',
+      'The received word is assumed to be a valid code word',
       'The transmission failed'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A zero syndrome indicates that the received word satisfies all parity check equations, so it is assumed to be the transmitted code word (no detectable error).',
   },
@@ -48,12 +64,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For syndrome decoding to correct all single errors, the columns of $\\mathbf{H}$ must be:',
     options: [
-      'Non-zero and distinct',
+      'Orthogonal to each other',
       'Linearly dependent',
       'All equal',
-      'Orthogonal to each other'
+      'Non-zero and distinct'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A parity check matrix $\\mathbf{H}$ can decode all single errors correctly if and only if all columns of $\\mathbf{H}$ are non-zero and distinct. This allows unique identification of the error position from the syndrome.',
   },
@@ -76,12 +92,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two words have the same syndrome if and only if:',
     options: [
-      'They are in the same coset of the code',
       'They are both code words',
+      'They are in the same coset of the code',
       'They differ in exactly one position',
       'They have the same weight'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Words $\\mathbf{x}$ and $\\mathbf{y}$ are in the same coset of $\\mathcal{C}$ if and only if they have the same syndrome. This is because $\\mathbf{H}\\mathbf{x}^t = \\mathbf{H}\\mathbf{y}^t$ iff $\\mathbf{x} - \\mathbf{y} \\in \\mathcal{C}$.',
   },

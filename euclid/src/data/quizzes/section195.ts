@@ -6,12 +6,12 @@ export const section195Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition VII.16 prove about products of numbers?',
     options: [
-      'Products of prime numbers are prime',
       'If two numbers are multiplied together, the products are equal to one another (commutativity)',
+      'Products of prime numbers are prime',
       'Products are always greater than either factor',
-      'Products of odd numbers are odd'
+      'Products of odd numbers are odd',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'VII.16 proves the commutativity of multiplication: a times b equals b times a. In Euclid\'s terms, the product of two numbers is the same regardless of order.',
   },
@@ -21,11 +21,11 @@ export const section195Questions: QuizQuestion[] = [
     question: 'Which earlier proposition does Euclid use to prove VII.16?',
     options: [
       'VII.1 (the Euclidean algorithm)',
-      'VII.15 (unit and number alternation)',
       'VII.10 (measurement by parts)',
-      'VII.5 (part of a part)'
+      'VII.5 (part of a part)',
+      'VII.15 (unit and number alternation)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Euclid proves VII.16 using VII.15, which established an alternation property for the unit. This connects the abstract measurement relationships to concrete multiplication.',
   },
@@ -36,8 +36,8 @@ export const section195Questions: QuizQuestion[] = [
     options: [
       'It was not obvious to ancient Greeks',
       'It establishes commutativity from first principles using only the definitions of number and multiplication',
+      'It was Euclid\\'s most difficult proof',
       'It proves commutativity only works for certain numbers',
-      'It was Euclid\'s most difficult proof'
     ],
     correctIndex: 1,
     difficulty: 'hard',

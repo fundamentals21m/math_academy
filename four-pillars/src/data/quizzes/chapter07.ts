@@ -8,11 +8,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'What is an isometry of the plane?',
     options: [
       'A function that changes distances proportionally',
-      'A function that preserves distance',
       'A function that preserves angles only',
-      'A function that maps lines to lines'
+      'A function that maps lines to lines',
+      'A function that preserves distance',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'An isometry is a distance-preserving map. For any two points P and Q, an isometry f satisfies |f(P) - f(Q)| = |P - Q|.',
   },
@@ -23,10 +23,10 @@ export const section48Questions: QuizQuestion[] = [
     options: [
       'Rotation',
       'Reflection',
+      'Translation',
       'Scaling by factor 2',
-      'Translation'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Scaling by factor 2 doubles all distances, so it is not an isometry. Rotations, reflections, and translations all preserve distances.',
   },
@@ -49,12 +49,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the product of two reflections in lines that meet at angle θ?',
     options: [
+      'A rotation through angle 2θ',
       'A reflection',
       'A translation',
       'A rotation through angle θ',
-      'A rotation through angle 2θ'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The product of reflections in two lines meeting at angle θ is a rotation about their intersection through angle 2θ.',
   },
@@ -82,11 +82,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'What is the key property of an orthogonal matrix?',
     options: [
       'All entries are positive',
-      'The determinant is 1',
       'A^T A = I (transpose times itself equals identity)',
-      'All entries are integers'
+      'The determinant is 1',
+      'All entries are integers',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A matrix A is orthogonal if A^T A = I, meaning its transpose equals its inverse. This is equivalent to having orthonormal columns.',
   },
@@ -96,11 +96,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'What does the determinant of an orthogonal matrix tell us?',
     options: [
       'The area of the transformation',
-      'Whether it is a rotation (det = 1) or reflection (det = -1)',
       'The angle of rotation',
-      'The number of fixed points'
+      'The number of fixed points',
+      'Whether it is a rotation (det = 1) or reflection (det = -1)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'For orthogonal matrices, det = 1 indicates a rotation (orientation-preserving) and det = -1 indicates a reflection (orientation-reversing).',
   },
@@ -109,12 +109,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why are homogeneous coordinates useful for representing affine transformations?',
     options: [
-      'They make matrices smaller',
       'They allow translations to be represented as matrix multiplications',
+      'They make matrices smaller',
       'They preserve angles',
-      'They eliminate the need for inverses'
+      'They eliminate the need for inverses',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Homogeneous coordinates allow translations (which are not linear) to be combined with linear transformations into a single matrix multiplication.',
   },
@@ -128,11 +128,11 @@ export const section50Questions: QuizQuestion[] = [
     question: 'What is a linear fractional function?',
     options: [
       'A polynomial of degree 1',
-      'A function of the form f(x) = (ax + b)/(cx + d)',
       'A function that preserves ratios',
-      'Any function with a fraction'
+      'A function of the form f(x) = (ax + b)/(cx + d)',
+      'Any function with a fraction',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A linear fractional function (Möbius transformation) has the form f(x) = (ax + b)/(cx + d) where ad - bc ≠ 0.',
   },
@@ -157,10 +157,10 @@ export const section50Questions: QuizQuestion[] = [
     options: [
       'One point',
       'Two points',
+      'Four points',
       'Three points',
-      'Four points'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A linear fractional transformation is uniquely determined by its action on three points—given three points and their images, there is exactly one such transformation.',
   },
@@ -171,10 +171,10 @@ export const section50Questions: QuizQuestion[] = [
     options: [
       'GL(2, ℝ)',
       'SL(2, ℝ)',
+      'O(2)',
       'PGL(2, ℝ)',
-      'O(2)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The projective general linear group PGL(2, ℝ) consists of linear fractional transformations, represented by 2×2 matrices up to scalar multiplication.',
   },
@@ -188,11 +188,11 @@ export const section51Questions: QuizQuestion[] = [
     question: 'What are the "lines" in spherical geometry?',
     options: [
       'Lines of latitude',
-      'Great circles',
       'Any circle on the sphere',
-      'Meridians only'
+      'Great circles',
+      'Meridians only',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Great circles—intersections of the sphere with planes through its center—are the "lines" of spherical geometry because they are geodesics (shortest paths).',
   },
@@ -202,11 +202,11 @@ export const section51Questions: QuizQuestion[] = [
     question: 'How do any two great circles relate to each other?',
     options: [
       'They never meet',
-      'They meet at exactly one point',
       'They meet at exactly two antipodal points',
-      'They may or may not meet'
+      'They meet at exactly one point',
+      'They may or may not meet',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Any two great circles on S² intersect at exactly two antipodal points. There are no parallel lines in spherical geometry.',
   },
@@ -216,11 +216,11 @@ export const section51Questions: QuizQuestion[] = [
     question: 'What is true about the angles of a spherical triangle?',
     options: [
       'They sum to less than 180°',
-      'They sum to exactly 180°',
       'They sum to more than 180°',
-      'The sum depends on the triangle size'
+      'They sum to exactly 180°',
+      'The sum depends on the triangle size',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The angles of a spherical triangle always sum to more than 180°. The excess over 180° is proportional to the triangle\'s area.',
   },
@@ -247,12 +247,12 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is SO(3)?',
     options: [
+      '3×3 orthogonal matrices with determinant 1',
       'All 3×3 matrices',
       'All orthogonal 3×3 matrices',
-      '3×3 orthogonal matrices with determinant 1',
-      '3×3 matrices with determinant 1'
+      '3×3 matrices with determinant 1',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'SO(3) is the special orthogonal group—3×3 orthogonal matrices with determinant 1. These represent rotations of ℝ³.',
   },
@@ -262,11 +262,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'What is special about rotations in 3D compared to 2D?',
     options: [
       '3D rotations preserve area',
-      '3D rotations do not commute in general',
       '3D rotations require matrices',
-      '3D rotations have no fixed points'
+      '3D rotations have no fixed points',
+      '3D rotations do not commute in general',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Unlike in 2D, rotations in 3D generally do not commute. The order of rotations matters: R₁R₂ ≠ R₂R₁ in general.',
   },
@@ -276,11 +276,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'Every rotation of S² is a product of exactly how many reflections?',
     options: [
       'One',
-      'Two',
       'Three',
-      'Any number'
+      'Any number',
+      'Two',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Every rotation of S² is a product of exactly two reflections in great circles. The angle between the great circles determines the rotation angle.',
   },
@@ -307,12 +307,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a quaternion?',
     options: [
-      'A 4×4 matrix',
       'A number of the form a + bi + cj + dk',
+      'A 4×4 matrix',
       'A 4-dimensional vector',
-      'A type of polynomial'
+      'A type of polynomial',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A quaternion is a number q = a + bi + cj + dk where i² = j² = k² = ijk = -1, extending complex numbers to four dimensions.',
   },
@@ -349,12 +349,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For rotation about axis n through angle θ, the quaternion uses which angle?',
     options: [
-      'θ',
       'θ/2',
+      'θ',
       '2θ',
-      'θ²'
+      'θ²',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The unit quaternion for rotation about n through angle θ is q = cos(θ/2) + sin(θ/2)(n₁i + n₂j + n₃k). The half-angle appears because of the 2-to-1 correspondence.',
   },
@@ -369,10 +369,10 @@ export const section54Questions: QuizQuestion[] = [
     options: [
       '4',
       '8',
+      '24',
       '12',
-      '24'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The tetrahedron has 12 rotational symmetries: 1 identity, 8 face rotations (120° and 240° about each vertex-face axis), and 3 edge rotations (180° about edge midpoint axes).',
   },
@@ -395,12 +395,12 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The 24 quaternions representing tetrahedron rotations form the vertices of which 4D polytope?',
     options: [
+      'The 24-cell',
       'The 4-simplex',
       'The hypercube',
-      'The 24-cell',
-      'The 600-cell'
+      'The 600-cell',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The 24 unit quaternions (±1, ±i, ±j, ±k and the 16 of form ½(±1 ± i ± j ± k)) form the vertices of the 24-cell, an exceptional regular 4D polytope.',
   },
@@ -410,11 +410,11 @@ export const section54Questions: QuizQuestion[] = [
     question: 'Why do the cube and octahedron have the same rotation group?',
     options: [
       'They have the same number of faces',
-      'They are dual polyhedra',
       'They have the same volume',
-      'They have the same surface area'
+      'They are dual polyhedra',
+      'They have the same surface area',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The cube and octahedron are dual—vertices of one correspond to face centers of the other. Duality preserves the symmetry group, so both have 24 rotations (S₄).',
   },
@@ -442,11 +442,11 @@ export const section55Questions: QuizQuestion[] = [
     question: 'Unit quaternions are in one-to-one correspondence with points of which space?',
     options: [
       'ℝ³',
-      'S²',
       'S³',
-      'ℝP³'
+      'S²',
+      'ℝP³',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Unit quaternions q = a + bi + cj + dk with |q| = 1 correspond exactly to points (a,b,c,d) on S³, since |q|² = a² + b² + c² + d² = 1.',
   },
@@ -455,12 +455,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which spheres have continuous group structures?',
     options: [
+      'Only S¹ and S³',
       'All spheres Sⁿ',
       'Only S¹',
-      'Only S¹ and S³',
-      'S¹, S², and S³'
+      'S¹, S², and S³',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Only S¹ and S³ have continuous group structures. S¹ gets its structure from complex multiplication, S³ from quaternion multiplication. S² cannot have a continuous group structure.',
   },
@@ -469,12 +469,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is an isomorphism between groups?',
     options: [
-      'Any function between groups',
       'A one-to-one correspondence that preserves products',
+      'Any function between groups',
       'A function that preserves the identity',
-      'A bijection between sets'
+      'A bijection between sets',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'An isomorphism ϕ: G → G\' is a bijection satisfying ϕ(g₁g₂) = ϕ(g₁)ϕ(g₂). Isomorphic groups are "the same" as abstract groups.',
   },
@@ -489,10 +489,10 @@ export const section56Questions: QuizQuestion[] = [
     options: [
       'Euclidean geometry',
       'Affine geometry',
+      'Differential geometry',
       'Projective geometry',
-      'Differential geometry'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Projective geometry is the most visual branch, concerned with how objects look (perspective) rather than their actual measurements.',
   },
@@ -516,11 +516,11 @@ export const section56Questions: QuizQuestion[] = [
     question: 'Why is there no "number system" with multiplicative absolute value on ℝ³?',
     options: [
       'Three is an odd number',
-      'There is no multiplication rule that makes |uv| = |u||v| while satisfying field axioms',
       'ℝ³ is too small',
-      'Complex numbers already exist in ℝ²'
+      'There is no multiplication rule that makes |uv| = |u||v| while satisfying field axioms',
+      'Complex numbers already exist in ℝ²',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'It is impossible to define a multiplication on ℝ³ that satisfies the field axioms (or even weaker conditions) while having a multiplicative absolute value. The next dimension where this works is ℝ⁴ (quaternions).',
   },
@@ -529,12 +529,12 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Klein\'s Erlangen program, what defines a geometry?',
     options: [
-      'Its axioms',
       'Its transformation group',
+      'Its axioms',
       'Its dimension',
-      'Its coordinate system'
+      'Its coordinate system',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Klein\'s Erlangen program (1872) proposed that each geometry is characterized by its group of transformations. The properties of the geometry are exactly the invariants of its transformation group.',
   },

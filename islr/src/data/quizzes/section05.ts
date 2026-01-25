@@ -7,12 +7,12 @@ export const section05Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'With a large sample size $n$ and small number of predictors $p$, which method would generally perform better?',
     options: [
-      'Inflexible methods',
       'Flexible methods',
+      'Inflexible methods',
       'They perform equally',
       'Cannot determine'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'With large $n$, we have enough data to estimate complex patterns without overfitting, so flexible methods can shine.',
   },
@@ -58,11 +58,11 @@ export const section05Quiz: QuizQuestion[] = [
     question: 'The bias-variance tradeoff means:',
     options: [
       'Bias and variance are always equal',
-      'Reducing one often increases the other',
+      'They are unrelated concepts',
       'Both can be minimized simultaneously',
-      'They are unrelated concepts'
+      'Reducing one often increases the other'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The tradeoff means that more flexible models (lower bias) typically have higher variance, and vice versa.',
   },
@@ -72,12 +72,12 @@ export const section05Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When $p$ is large relative to $n$, flexible methods often:',
     options: [
-      'Perform very well',
       'Overfit the training data',
+      'Perform very well',
       'Have low variance',
       'Underfit the data'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'High $p$ relative to $n$ (curse of dimensionality) makes overfitting more likely with flexible methods.',
   },
@@ -87,11 +87,11 @@ export const section05Quiz: QuizQuestion[] = [
     question: 'For inference about which predictors affect the response, we prefer:',
     options: [
       'Neural networks',
-      'Random forests',
       'Linear regression',
+      'Random forests',
       'Support vector machines'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Linear regression coefficients are interpretable - each coefficient shows the effect of that predictor on the response.',
   },
@@ -101,11 +101,11 @@ export const section05Quiz: QuizQuestion[] = [
     question: 'High variance of error terms ($\\sigma^2$ is large) suggests we should use:',
     options: [
       'More flexible methods to capture the noise',
-      'Less flexible methods to avoid fitting noise',
       'Any method will work equally well',
+      'Less flexible methods to avoid fitting noise',
       'More predictors'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'When noise is high, flexible methods may fit the noise. Simpler methods are more robust to noisy data.',
   },
@@ -115,11 +115,11 @@ export const section05Quiz: QuizQuestion[] = [
     question: 'Cluster analysis is an example of:',
     options: [
       'Supervised learning',
-      'Unsupervised learning',
+      'Classification',
       'Regression',
-      'Classification'
+      'Unsupervised learning'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Clustering finds natural groupings without predefined labels - a classic unsupervised learning task.',
   },
@@ -138,12 +138,12 @@ export const section05Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If training error is 2% and test error is 20%, the model is likely:',
     options: [
-      'Underfitting',
       'Overfitting',
+      'Underfitting',
       'Optimal',
       'Unbiased'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Large gap between training error (2%) and test error (20%) indicates overfitting - the model learned training-specific patterns.',
   },
@@ -153,11 +153,11 @@ export const section05Quiz: QuizQuestion[] = [
     question: 'The irreducible error in the bias-variance decomposition:',
     options: [
       'Can be reduced with more data',
-      'Can be reduced with better models',
       'Is independent of our modeling choices',
+      'Can be reduced with better models',
       'Equals zero in the Bayes classifier'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Irreducible error ($\\text{Var}(\\epsilon)$) is inherent randomness that cannot be reduced by any model or additional data.',
   },
@@ -167,11 +167,11 @@ export const section05Quiz: QuizQuestion[] = [
     question: 'When comparing two models, if Model A has lower training error but higher test error than Model B, we should choose:',
     options: [
       'Model A (lower training error)',
-      'Model B (lower test error)',
       'Either model (they\'re equivalent)',
+      'Model B (lower test error)',
       'A third model'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Test error measures real-world performance. Model B generalizes better even though it fits training data less well.',
   },

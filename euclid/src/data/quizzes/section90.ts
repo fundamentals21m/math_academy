@@ -7,11 +7,11 @@ export const section90Questions: QuizQuestion[] = [
     question: 'Proposition III.26 proves that in equal circles, equal angles (whether central or inscribed) stand on:',
     options: [
       'Equal chords',
-      'Equal arcs',
       'Equal radii',
-      'Equal diameters'
+      'Equal diameters',
+      'Equal arcs',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'III.26 proves that in equal circles, equal central angles (or equal inscribed angles) stand on equal arcs.',
   },
@@ -22,8 +22,8 @@ export const section90Questions: QuizQuestion[] = [
     options: [
       'The arcs are proportional to the radii',
       'The arcs are equal',
+      'The circles are concentric',
       'The chords are perpendicular',
-      'The circles are concentric'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section90Questions: QuizQuestion[] = [
     question: 'This proposition begins a sequence relating angles, arcs, and chords. The key insight is:',
     options: [
       'Angles and arcs are independent',
-      'Angles determine arcs in circles of the same size',
       'Chords are always proportional to angles',
-      'Inscribed angles are irrelevant'
+      'Angles determine arcs in circles of the same size',
+      'Inscribed angles are irrelevant',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'III.26-29 establish the connections between equal angles and equal arcs in equal circles.',
   },

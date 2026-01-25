@@ -7,11 +7,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'A set $P$ is perfect if:',
     options: [
       '$P$ is open',
-      '$P$ is closed and every point of $P$ is a limit point of $P$',
+      '$P$ contains all rationals',
       '$P$ is finite',
-      '$P$ contains all rationals'
+      '$P$ is closed and every point of $P$ is a limit point of $P$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A perfect set is closed and has no isolated points—every point is a limit point. This means $P = P\'$ where $P\'$ is the set of limit points.',
   },
@@ -20,12 +20,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cantor set is constructed by:',
     options: [
-      'Taking the union of all intervals of length $1/3^n$',
       'Repeatedly removing the open middle third from each remaining interval',
+      'Taking the union of all intervals of length $1/3^n$',
       'Taking all rationals in $[0,1]$',
       'Taking all irrationals in $[0,1]$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Cantor set starts with $[0,1]$, removes $(1/3, 2/3)$, then removes the middle thirds of remaining intervals, and continues. The Cantor set is what remains after infinitely many steps.',
   },
@@ -64,10 +64,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'Finite',
       'Countable',
-      'Uncountable',
-      'Open'
+      'Open',
+      'Uncountable'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Rudin proves that every nonempty perfect set in $\\mathbb{R}^k$ is uncountable. The proof uses the fact that perfect sets cannot be written as a countable union of singletons, combined with the Baire category theorem ideas.',
   },

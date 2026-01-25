@@ -7,11 +7,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'How many generations of the Bernoulli family produced significant mathematicians?',
     options: [
       'One',
-      'Two',
       'Three',
-      'Four'
+      'Two',
+      'Four',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Three generations of Bernoullis made major contributions to mathematics and physics.',
   },
@@ -20,12 +20,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Bernoulli numbers appear in formulas for:',
     options: [
-      'Prime factorization',
       'Sums of powers of integers',
+      'Prime factorization',
       'Trigonometric identities',
       'Logarithms'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Bernoulli numbers appear in formulas for $\\sum k^n$ and in the Euler-Maclaurin formula.',
   },
@@ -35,11 +35,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'Bernoulli\'s principle in fluid dynamics relates fluid speed to:',
     options: [
       'Temperature',
-      'Pressure',
       'Viscosity',
-      'Density'
+      'Pressure',
+      'Density',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Bernoulli\'s principle states that faster-moving fluid has lower pressure, explaining airplane lift.',
   },
@@ -49,11 +49,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'The brachistochrone problem asks for the curve of:',
     options: [
       'Shortest distance between two points',
-      'Fastest descent under gravity',
       'Maximum enclosed area',
-      'Minimum surface area'
+      'Minimum surface area',
+      'Fastest descent under gravity',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Johann Bernoulli posed the brachistochrone problem: find the curve of fastest descent. The answer is a cycloid.',
   },
@@ -63,11 +63,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'The rivalry between which two Bernoulli brothers was legendary?',
     options: [
       'Johann and Daniel',
+      'Daniel and Nicolaus',
       'Jakob and Johann',
       'Nicolaus and Johann',
-      'Daniel and Nicolaus'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Jakob and Johann Bernoulli had a famously bitter rivalry despite both being brilliant mathematicians.',
   },

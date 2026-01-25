@@ -7,11 +7,11 @@ export const section51Questions: QuizQuestion[] = [
     question: '$\\lim_{x \\to \\infty} \\frac{\\ln x}{x}$ equals:',
     options: [
       '$\\infty$',
-      '$1$',
       '$0$',
+      '$1$',
       'Does not exist'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'By L\'Hôpital: $\\frac{1/x}{1} = 1/x \\to 0$. Log grows slower than any power.',
   },
@@ -20,10 +20,26 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\lim_{x \\to \\infty} \\frac{e^x}{x^n}$ for any fixed $n$ equals:',
     options: [
-      '$0$',
-      '$1$',
-      '$\\infty$',
-      '$n$'
+      '$0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Exponential grows faster than any polynomial.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Exponential grows faster than any polynomial.',
+  },
+      '$n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Exponential grows faster than any polynomial.',
+  },
+      '$\\infty
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Exponential grows faster than any polynomial.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -35,11 +51,11 @@ export const section51Questions: QuizQuestion[] = [
     question: '$\\lim_{x \\to \\infty} \\frac{x^{100}}{e^x}$ equals:',
     options: [
       '$\\infty$',
-      '$0$',
+      '$100$',
       '$1$',
-      '$100$'
+      '$0$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Any polynomial divided by $e^x$ goes to 0.',
   },
@@ -48,12 +64,12 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The growth rate hierarchy (slowest to fastest) is:',
     options: [
-      'polynomial < exponential < logarithm',
       'logarithm < polynomial < exponential',
+      'polynomial < exponential < logarithm',
       'exponential < logarithm < polynomial',
       'polynomial < logarithm < exponential'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$\\ln x < x^n < e^x$ for large $x$.',
   },
@@ -62,12 +78,28 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\lim_{x \\to 0^+} x \\ln x$ equals:',
     options: [
-      '$0$',
-      '$-\\infty$',
-      '$\\infty$',
-      '$1$'
+      '$-\\infty
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Rewrite as $\\frac{\\ln x}{1/x}$ (form $-\\infty/\\infty$). L\'Hôpital gives $\\frac{1/x}{-1/x^2} = -x \\to 0$.',
+  },
+      '$\\infty
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Rewrite as $\\frac{\\ln x}{1/x}$ (form $-\\infty/\\infty$). L\'Hôpital gives $\\frac{1/x}{-1/x^2} = -x \\to 0$.',
+  },
+      '$0
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Rewrite as $\\frac{\\ln x}{1/x}$ (form $-\\infty/\\infty$). L\'Hôpital gives $\\frac{1/x}{-1/x^2} = -x \\to 0$.',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Rewrite as $\\frac{\\ln x}{1/x}$ (form $-\\infty/\\infty$). L\'Hôpital gives $\\frac{1/x}{-1/x^2} = -x \\to 0$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Rewrite as $\\frac{\\ln x}{1/x}$ (form $-\\infty/\\infty$). L\'Hôpital gives $\\frac{1/x}{-1/x^2} = -x \\to 0$.',
   },

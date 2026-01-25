@@ -7,11 +7,11 @@ export const section143Questions: QuizQuestion[] = [
     question: 'What does V.24 prove about adding proportional magnitudes?',
     options: [
       'Proportional magnitudes cannot be added',
-      'If A:B = C:D and E:B = F:D, then (A+E):B = (C+F):D',
       'Adding destroys proportions',
-      'Only equal magnitudes can be added'
+      'If A:B = C:D and E:B = F:D, then (A+E):B = (C+F):D',
+      'Only equal magnitudes can be added',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'V.24 shows that ratios with a common consequent can be added: the sum of antecedents has the expected ratio.',
   },
@@ -22,10 +22,10 @@ export const section143Questions: QuizQuestion[] = [
     options: [
       'Multiplication',
       'Division',
+      'Subtraction',
       'Addition with common denominator: a/c + b/c = (a+b)/c',
-      'Subtraction'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Just as fractions with common denominators add by adding numerators, V.24 adds ratios with common consequents.',
   },
@@ -36,8 +36,8 @@ export const section143Questions: QuizQuestion[] = [
     options: [
       '5:5 = 10:10',
       '(2+3):5 = (4+6):10, i.e., 5:5 = 10:10',
+      'Nothing, V.24 does not apply',
       '6:10 = 12:20',
-      'Nothing, V.24 does not apply'
     ],
     correctIndex: 1,
     difficulty: 'medium',

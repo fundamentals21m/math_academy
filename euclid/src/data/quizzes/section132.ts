@@ -7,11 +7,11 @@ export const section132Questions: QuizQuestion[] = [
     question: 'What does V.13 prove about substituting equal ratios in inequalities?',
     options: [
       'Equal ratios cannot be substituted',
-      'If A:B = C:D and C:D > E:F, then A:B > E:F',
       'Inequalities destroy proportions',
-      'Only equalities can be substituted'
+      'Only equalities can be substituted',
+      'If A:B = C:D and C:D > E:F, then A:B > E:F',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'V.13 shows that equal ratios can be substituted in ratio inequalities, preserving the inequality.',
   },
@@ -35,11 +35,11 @@ export const section132Questions: QuizQuestion[] = [
     question: 'Why is V.13 useful for chaining ratio relationships?',
     options: [
       'It is not useful',
-      'It allows us to combine equalities and inequalities to derive new inequalities',
       'It proves all ratios are equal',
+      'It allows us to combine equalities and inequalities to derive new inequalities',
       'It only works for whole numbers'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'V.13 lets us build chains mixing equalities and inequalities, concluding relationships between the first and last ratios.',
   },

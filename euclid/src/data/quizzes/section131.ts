@@ -7,11 +7,11 @@ export const section131Questions: QuizQuestion[] = [
     question: 'What does V.12 prove about proportional magnitudes?',
     options: [
       'They cannot be summed',
-      'If A:B = C:D = E:F, then A:B = (A+C+E):(B+D+F)',
       'Sums have different ratios',
-      'Only two magnitudes can be proportional'
+      'Only two magnitudes can be proportional',
+      'If A:B = C:D = E:F, then A:B = (A+C+E):(B+D+F)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'V.12 shows that when multiple ratios are equal, the ratio of the sum of antecedents to the sum of consequents equals the common ratio.',
   },
@@ -34,12 +34,12 @@ export const section131Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'V.12 is useful for proving that similar figures have:',
     options: [
-      'Equal areas',
       'Perimeters in the same ratio as corresponding sides',
+      'Equal areas',
+      'Integer dimensions',
       'The same shape',
-      'Integer dimensions'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In similar figures, corresponding sides are in equal ratios. By V.12, summing all sides (perimeter) maintains that ratio.',
   },

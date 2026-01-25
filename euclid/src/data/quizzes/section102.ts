@@ -6,12 +6,12 @@ export const section102Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the main topic of Book IV of the Elements?',
     options: [
-      'Theory of proportions',
       'Inscribed and circumscribed figures',
+      'Theory of proportions',
       'Number theory',
-      'Solid geometry'
+      'Solid geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Book IV focuses on inscribing and circumscribing rectilineal figures (triangles, squares, pentagons, hexagons) in and about circles.',
   },
@@ -22,8 +22,8 @@ export const section102Questions: QuizQuestion[] = [
     options: [
       'When all its sides touch the circle',
       'When all its angles lie on the circumference',
-      'When its center coincides with the circle\'s center',
-      'When it fits entirely inside the circle'
+      'When it fits entirely inside the circle',
+      'When its center coincides with the circle\\'s center',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section102Questions: QuizQuestion[] = [
     question: 'What is the difference between a circle inscribed in a figure and a circle circumscribed about a figure?',
     options: [
       'They are the same thing',
-      'Inscribed: circle touches all sides; Circumscribed: circle passes through all vertices',
       'Inscribed: circle is larger; Circumscribed: circle is smaller',
-      'Inscribed: circle is outside; Circumscribed: circle is inside'
+      'Inscribed: circle touches all sides; Circumscribed: circle passes through all vertices',
+      'Inscribed: circle is outside; Circumscribed: circle is inside',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'An inscribed circle (incircle) touches all sides of the figure; a circumscribed circle (circumcircle) passes through all vertices.',
   },

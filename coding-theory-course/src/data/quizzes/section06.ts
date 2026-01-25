@@ -24,12 +24,28 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'With $r$ bits, how many distinct non-zero binary vectors can be represented?',
     options: [
-      '$2^r - 1$',
-      '$2^r$',
-      '$r$',
-      '$2r$'
-    ],
+      '$2^r - 1
     correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'With $r$ bits, there are $2^r$ total binary vectors. Excluding the zero vector, we have $2^r - 1$ non-zero vectors.',
+  },
+      '$2^r
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'With $r$ bits, there are $2^r$ total binary vectors. Excluding the zero vector, we have $2^r - 1$ non-zero vectors.',
+  },
+      '$r
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'With $r$ bits, there are $2^r$ total binary vectors. Excluding the zero vector, we have $2^r - 1$ non-zero vectors.',
+  },
+      '$2r
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'With $r$ bits, there are $2^r$ total binary vectors. Excluding the zero vector, we have $2^r - 1$ non-zero vectors.',
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'With $r$ bits, there are $2^r$ total binary vectors. Excluding the zero vector, we have $2^r - 1$ non-zero vectors.',
   },
@@ -38,12 +54,28 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the binary representation of 10?',
     options: [
-      '$(1010)_2$',
-      '$(1001)_2$',
-      '$(1100)_2$',
-      '$(0110)_2$'
+      '$(1100)_2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$10 = 8 + 2 = 1 \\cdot 2^3 + 0 \\cdot 2^2 + 1 \\cdot 2^1 + 0 \\cdot 2^0 = (1010)_2$.',
+  },
+      '$(1001)_2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$10 = 8 + 2 = 1 \\cdot 2^3 + 0 \\cdot 2^2 + 1 \\cdot 2^1 + 0 \\cdot 2^0 = (1010)_2$.',
+  },
+      '$(0110)_2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$10 = 8 + 2 = 1 \\cdot 2^3 + 0 \\cdot 2^2 + 1 \\cdot 2^1 + 0 \\cdot 2^0 = (1010)_2$.',
+  },
+      '$(1010)_2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$10 = 8 + 2 = 1 \\cdot 2^3 + 0 \\cdot 2^2 + 1 \\cdot 2^1 + 0 \\cdot 2^0 = (1010)_2$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$10 = 8 + 2 = 1 \\cdot 2^3 + 0 \\cdot 2^2 + 1 \\cdot 2^1 + 0 \\cdot 2^0 = (1010)_2$.',
   },
@@ -52,12 +84,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When adding binary column vectors in $\\mathbb{B}$, what operation is performed component-wise?',
     options: [
-      'XOR (exclusive or)',
+      'NAND',
       'AND',
+      'XOR (exclusive or)',
       'OR',
-      'NAND'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'In the binary field, addition is modulo 2, which is the same as the XOR operation: $0 + 0 = 0$, $0 + 1 = 1$, $1 + 0 = 1$, $1 + 1 = 0$.',
   },

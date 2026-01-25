@@ -9,7 +9,7 @@ export const section33Questions: QuizQuestion[] = [
       'Publish a paper',
       'Earn a doctorate in mathematics',
       'Attend a math lecture',
-      'Win a Fields Medal'
+      'Win a Fields Medal',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Kovalevskaya top is famous for being which integrable case of rigid body rotation?',
     options: [
+      'The third',
       'The first',
       'The second',
-      'The third',
-      'The fourth'
+      'The fourth',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Kovalevskaya top is the third integrable case, after Euler (1758) and Lagrange (1788).',
   },
@@ -34,12 +34,28 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What special property do the moments of inertia have in the Kovalevskaya top?',
     options: [
-      '$I_1 = I_2 = I_3$',
-      '$I_1 = I_2 = 2I_3$',
-      '$I_1 = 2I_2 = 2I_3$',
-      '$I_1 + I_2 = I_3$'
+      '$I_1 = I_2 = I_3
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Kovalevskaya top has $I_1 = I_2 = 2I_3$ with the center of mass offset in the equatorial plane.',
+  },
+      '$I_1 = 2I_2 = 2I_3
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Kovalevskaya top has $I_1 = I_2 = 2I_3$ with the center of mass offset in the equatorial plane.',
+  },
+      '$I_1 = I_2 = 2I_3
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Kovalevskaya top has $I_1 = I_2 = 2I_3$ with the center of mass offset in the equatorial plane.',
+  },
+      '$I_1 + I_2 = I_3
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Kovalevskaya top has $I_1 = I_2 = 2I_3$ with the center of mass offset in the equatorial plane.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Kovalevskaya top has $I_1 = I_2 = 2I_3$ with the center of mass offset in the equatorial plane.',
   },
@@ -49,11 +65,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'What does the Cauchy-Kovalevskaya theorem guarantee for analytic PDEs?',
     options: [
       'Global solutions always exist',
-      'Solutions are always periodic',
       'Local existence and uniqueness of analytic solutions',
+      'Solutions are always periodic',
       'Solutions can be computed in polynomial time'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The Cauchy-Kovalevskaya theorem guarantees that for analytic initial data and analytic PDEs, a unique local analytic solution exists.',
   },
@@ -62,12 +78,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why did Kovalevskaya contract a marriage with Vladimir Kovalevsky?',
     options: [
+      'To escape Russia and study abroad',
       'For love at first sight',
       'To inherit his wealth',
-      'To escape Russia and study abroad',
-      'To collaborate on research'
+      'To collaborate on research',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Women in Russia could not travel alone or attend university, so a marriage of convenience allowed her to study in Germany.',
   },
@@ -77,11 +93,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'Which prestigious prize did Kovalevskaya win from the French Academy?',
     options: [
       'Prix Fermat',
+      'Prix Gauss',
       'Prix Bordin',
       'Prix Lagrange',
-      'Prix Gauss'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'She won the Prix Bordin in 1888 for her work on rigid body rotation, with the prize increased due to exceptional quality.',
   },
@@ -90,12 +106,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who was Kovalevskaya\'s mathematical mentor in Berlin?',
     options: [
-      'Gauss',
       'Riemann',
+      'Gauss',
+      'Kronecker',
       'Weierstrass',
-      'Kronecker'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Karl Weierstrass tutored Kovalevskaya privately since women were not allowed to attend university lectures.',
   },

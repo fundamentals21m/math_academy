@@ -9,12 +9,12 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the quadratic reciprocity law?',
     options: [
-      '(p/q) = (q/p) always',
       '(p/q)(q/p) = (-1)^((p-1)/2 · (q-1)/2)',
-      '(p/q) + (q/p) = 0',
+      '(p/q) = (q/p) always',
       '(pq) is always a square',
+      '(p/q) + (q/p) = 0',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The quadratic reciprocity law states that (p/q)(q/p) = (-1)^((p-1)/2 · (q-1)/2) for distinct odd primes p, q.',
@@ -24,12 +24,12 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When are (p/q) and (q/p) opposite in sign?',
     options: [
-      'When both p and q are ≡ 1 (mod 4)',
       'When both p and q are ≡ 3 (mod 4)',
+      'When both p and q are ≡ 1 (mod 4)',
       'When p + q is even',
-      'Never',
+      'Never'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The product (p/q)(q/p) = -1 exactly when (p-1)/2 and (q-1)/2 are both odd, i.e., both p, q ≡ 3 (mod 4).',
@@ -48,8 +48,13 @@ export const section54Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'Using reciprocity, if p = 5 and q = 11, what is (p/q)(q/p)?',
-    options: ['-1', '1', '0', '5'],
-    correctIndex: 1,
+    options: [
+      '-1',
+      '0',
+      '5',
+      '1',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'p = 5 ≡ 1 (mod 4), so (p-1)/2 = 2 is even. Thus (5/11)(11/5) = (-1)^(2·5) = (-1)^10 = 1.',
@@ -85,11 +90,11 @@ export const section54Questions: QuizQuestion[] = [
     question: 'What mathematical objects are used in Gauss\'s elegant proof of reciprocity?',
     options: [
       'Matrices',
-      'Gauss sums',
       'Differential equations',
       'Continued fractions',
+      'Gauss sums',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Gauss sums are exponential sums involving the Legendre symbol. Their properties lead to quadratic reciprocity.',
@@ -101,11 +106,11 @@ export const section54Questions: QuizQuestion[] = [
       'Which major area of modern mathematics grew from attempts to generalize quadratic reciprocity?',
     options: [
       'Calculus',
+      'Probability theory',
       'Class field theory and the Langlands program',
       'Topology',
-      'Probability theory',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The quest to generalize QR to higher powers and number fields led to class field theory and eventually the Langlands program.',

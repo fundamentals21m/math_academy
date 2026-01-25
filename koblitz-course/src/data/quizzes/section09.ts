@@ -7,11 +7,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'In RSA, the public modulus $n$ is:',
     options: [
       'A large prime',
-      'A product of two large primes $p \\cdot q$',
+      'Any large integer',
       'A power of 2',
-      'Any large integer'
+      'A product of two large primes $p \\cdot q$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'RSA modulus $n = pq$ where $p$ and $q$ are large, distinct primes.',
   },
@@ -20,12 +20,28 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The RSA decryption exponent $d$ satisfies:',
     options: [
-      '$ed \\equiv 1 \\pmod{n}$',
-      '$ed \\equiv 1 \\pmod{\\phi(n)}$',
-      '$e + d = n$',
-      '$e \\cdot d = n$'
-    ],
+      '$ed \\equiv 1 \\pmod{n}
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$d$ is the modular inverse of $e$ mod $\\phi(n)$: $ed \\equiv 1 \\pmod{\\phi(n)}$.',
+  },
+      '$ed \\equiv 1 \\pmod{\\phi(n)}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$d$ is the modular inverse of $e$ mod $\\phi(n)$: $ed \\equiv 1 \\pmod{\\phi(n)}$.',
+  },
+      '$e + d = n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$d$ is the modular inverse of $e$ mod $\\phi(n)$: $ed \\equiv 1 \\pmod{\\phi(n)}$.',
+  },
+      '$e \\cdot d = n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$d$ is the modular inverse of $e$ mod $\\phi(n)$: $ed \\equiv 1 \\pmod{\\phi(n)}$.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$d$ is the modular inverse of $e$ mod $\\phi(n)$: $ed \\equiv 1 \\pmod{\\phi(n)}$.',
   },
@@ -43,12 +59,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The security of RSA relies on the difficulty of:',
     options: [
-      'Computing discrete logarithms',
       'Factoring large integers',
+      'Computing discrete logarithms',
       'Solving systems of linear equations',
-      'Finding hash collisions'
+      'Finding hash collisions',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'RSA security is based on the computational difficulty of factoring $n = pq$.',
   },

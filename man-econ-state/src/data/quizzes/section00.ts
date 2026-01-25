@@ -7,11 +7,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What is the fundamental axiom of praxeology according to Rothbard?',
     options: [
       'Humans are rational beings',
-      'Humans act purposefully to achieve goals',
       'Humans seek to maximize utility',
-      'Humans respond to incentives'
+      'Humans respond to incentives',
+      'Humans act purposefully to achieve goals',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The action axiom states that humans act purposefully, using means to achieve ends. This is the foundational premise of praxeological economics.',
   },
@@ -23,7 +23,7 @@ export const section00Questions: QuizQuestion[] = [
       'Because goods become worn out with use',
       'Because people get bored with the same goods',
       'Because higher-valued ends are satisfied first',
-      'Because production costs increase'
+      'Because production costs increase',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section00Questions: QuizQuestion[] = [
       'Preferences stated in surveys',
       'Preferences revealed through actual choices and actions',
       'Preferences that can be measured numerically',
-      'Preferences that remain constant over time'
+      'Preferences that remain constant over time',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -51,7 +51,7 @@ export const section00Questions: QuizQuestion[] = [
       'Measurement tools are not accurate enough',
       'People lie about their preferences',
       'Utility is subjective and ordinal, not numerical',
-      'Different cultures measure utility differently'
+      'Different cultures measure utility differently',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -77,11 +77,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'According to Rothbard, what makes economic laws universal?',
     options: [
       'They are based on empirical observation across cultures',
-      'They are derived logically from the action axiom',
       'They have been tested in laboratory experiments',
-      'They are agreed upon by most economists'
+      'They are agreed upon by most economists',
+      'They are derived logically from the action axiom',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Praxeological laws are derived through logical deduction from the action axiom, making them a priori true for all human action.',
   },

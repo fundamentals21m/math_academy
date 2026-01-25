@@ -6,12 +6,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the derivative represent geometrically?',
     options: [
-      'The area under the curve',
       'The slope of the tangent line at a point',
+      'The area under the curve',
       'The length of the curve',
-      'The distance from the origin'
+      'The distance from the origin',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The derivative at a point gives the slope of the line tangent to the curve at that point.',
   },
@@ -23,7 +23,7 @@ export const section10Questions: QuizQuestion[] = [
       'Crosses the curve at that point',
       'Touches the curve at exactly one point and has the same slope as the curve there',
       'Is always horizontal',
-      'Is always vertical'
+      'Is always vertical',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'The equation of the tangent line at $(a, f(a))$ is:',
     options: [
       '$y = f(a) + f\'(a)$',
-      '$y = f(a) + f\'(a)(x - a)$',
+      '$y = a + f(a)(x - a)$',
       '$y = f\'(a) \\cdot x$',
-      '$y = a + f(a)(x - a)$'
+      '$y = f(a) + f\'(a)(x - a)$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Using point-slope form with slope $f\'(a)$ at point $(a, f(a))$: $y = f(a) + f\'(a)(x - a)$.',
   },
@@ -58,11 +58,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'A normal line to a curve is:',
     options: [
       'The same as the tangent line',
-      'Perpendicular to the tangent line',
       'Parallel to the $x$-axis',
-      'Always passes through the origin'
+      'Perpendicular to the tangent line',
+      'Always passes through the origin',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The normal line is perpendicular to the tangent line at the point of tangency.',
   },

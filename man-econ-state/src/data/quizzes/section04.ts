@@ -7,11 +7,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What is the structure of production according to Austrian economics?',
     options: [
       'A single stage from raw materials to consumer goods',
-      'A series of stages from higher-order goods to consumer goods',
       'Random production processes',
-      'Government-planned production sequences'
+      'Government-planned production sequences',
+      'A series of stages from higher-order goods to consumer goods',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Production moves through stages: from raw materials (higher-order goods) through intermediate stages to final consumer goods.',
   },
@@ -35,11 +35,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What is capital in the Austrian view?',
     options: [
       'Money in the bank',
-      'Previously produced goods used to produce future goods',
       'Stock market investments',
+      'Previously produced goods used to produce future goods',
       'Government bonds'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Capital consists of produced means of production—tools, machines, factories—that aid in producing consumer goods.',
   },
@@ -48,12 +48,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is production time-consuming?',
     options: [
-      'Workers are slow',
       'Production requires going through multiple stages of transformation',
+      'Workers are slow',
+      'There is no reason—production can be instantaneous',
       'Government regulations slow it down',
-      'There is no reason—production can be instantaneous'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Production takes time because goods must pass through various stages of transformation before becoming consumer goods.',
   },
@@ -62,12 +62,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What determines the value of producer goods (factors of production)?',
     options: [
-      'Their cost of production',
       'Government assessment',
+      'Their cost of production',
+      'Their weight and size',
       'The value of the consumer goods they help produce',
-      'Their weight and size'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Producer goods derive their value from the consumer goods they help create. Value flows backward from consumption.',
   },

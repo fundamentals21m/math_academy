@@ -8,8 +8,8 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'It has a simple closed-form solution',
       'It can exhibit chaotic behavior',
+      'It has exactly three solutions',
       'It is equivalent to the two-body problem',
-      'It has exactly three solutions'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'Which branch of mathematics did Poincare essentially create?',
     options: [
       'Number theory',
-      'Algebraic topology',
       'Linear algebra',
-      'Calculus'
+      'Calculus',
+      'Algebraic topology',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Poincare founded algebraic topology, using algebraic structures (like the fundamental group) to study topological spaces.',
   },
@@ -34,12 +34,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the fundamental group $\\pi_1(X)$ measure?',
     options: [
+      'How loops can be deformed within a space',
       'The volume of a space',
       'The number of dimensions',
-      'How loops can be deformed within a space',
-      'The curvature of a surface'
+      'The curvature of a surface',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The fundamental group captures information about loops in a space and whether they can be continuously shrunk to a point.',
   },
@@ -49,11 +49,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'In the Poincare disk model, what are geodesics (straight lines)?',
     options: [
       'Actual straight lines',
-      'Circles centered at the origin',
       'Circular arcs perpendicular to the boundary',
-      'Spirals'
+      'Circles centered at the origin',
+      'Spirals',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'In the Poincare disk model of hyperbolic geometry, geodesics appear as circular arcs that meet the boundary at right angles.',
   },
@@ -65,7 +65,7 @@ export const section32Questions: QuizQuestion[] = [
       'All systems eventually stop moving',
       'Energy is always conserved',
       'Almost every state will return arbitrarily close to itself',
-      'Chaos is impossible in closed systems'
+      'Chaos is impossible in closed systems',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -77,11 +77,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'The Poincare Conjecture was about which type of manifold?',
     options: [
       '2-dimensional surfaces',
-      '3-dimensional manifolds',
       '4-dimensional spacetime',
-      'Infinite-dimensional spaces'
+      '3-dimensional manifolds',
+      'Infinite-dimensional spaces',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Poincare Conjecture states that every simply connected, closed 3-manifold is homeomorphic to the 3-sphere.',
   },
@@ -92,10 +92,10 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'Henri Poincare',
       'David Hilbert',
+      'Andrew Wiles',
       'Grigori Perelman',
-      'Andrew Wiles'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Grigori Perelman proved the Poincare Conjecture in 2003 using Ricci flow techniques.',
   },

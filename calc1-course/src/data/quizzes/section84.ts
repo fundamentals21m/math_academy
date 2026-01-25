@@ -6,12 +6,12 @@ export const section84Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\mathbf{r}(t)$ parametrizes a curve, then $\\mathbf{r}\'(t)$ is:',
     options: [
-      'Perpendicular to the curve',
       'Tangent to the curve',
+      'Perpendicular to the curve',
+      'The curvature',
       'The position vector',
-      'The curvature'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$\\mathbf{r}\'(t)$ points in the direction of the tangent.',
   },
@@ -21,11 +21,15 @@ export const section84Questions: QuizQuestion[] = [
     question: 'A smooth curve is one where $\\mathbf{r}\'(t)$:',
     options: [
       'Is always zero',
-      'Is continuous and nonzero',
       'Has constant magnitude',
-      'Is perpendicular to $\\mathbf{r}(t)$'
+      'Is continuous and nonzero',
+      'Is perpendicular to $\\mathbf{r}(t)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Smooth: $\\mathbf{r}\'(t) \\neq \\mathbf{0}$ and continuous.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Smooth: $\\mathbf{r}\'(t) \\neq \\mathbf{0}$ and continuous.',
   },
@@ -34,12 +38,12 @@ export const section84Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The tangent line at $t = t_0$ is:',
     options: [
-      '$\\mathbf{r}(t_0) + s \\mathbf{r}\'(t_0)$ for $s \\in \\mathbb{R}$',
       '$\\mathbf{r}\'(t_0)$',
+      '$\\mathbf{r}(t_0) + s \\mathbf{r}\'(t_0)$ for $s \\in \\mathbb{R}$',
       '$\\mathbf{r}(t_0)$',
       '$s \\mathbf{r}(t_0)$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Tangent line passes through $\\mathbf{r}(t_0)$ with direction $\\mathbf{r}\'(t_0)$.',
   },
@@ -48,12 +52,28 @@ export const section84Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the helix $\\mathbf{r}(t) = (\\cos t, \\sin t, t)$, the tangent vector is:',
     options: [
-      '$(\\cos t, \\sin t, 1)$',
-      '$(-\\sin t, \\cos t, 1)$',
-      '$(\\sin t, -\\cos t, 0)$',
-      '$(1, 1, 1)$'
+      '$(\\cos t, \\sin t, 1)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\mathbf{r}\'(t) = (-\\sin t, \\cos t, 1)$.',
+  },
+      '$(\\sin t, -\\cos t, 0)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\mathbf{r}\'(t) = (-\\sin t, \\cos t, 1)$.',
+  },
+      '$(1, 1, 1)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\mathbf{r}\'(t) = (-\\sin t, \\cos t, 1)$.',
+  },
+      '$(-\\sin t, \\cos t, 1)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\mathbf{r}\'(t) = (-\\sin t, \\cos t, 1)$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: '$\\mathbf{r}\'(t) = (-\\sin t, \\cos t, 1)$.',
   },
@@ -71,12 +91,28 @@ export const section84Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A curve $\\mathbf{r}(t)$ has a cusp at $t_0$ if:',
     options: [
-      '$\\mathbf{r}(t_0) = \\mathbf{0}$',
-      '$\\mathbf{r}\'(t_0) = \\mathbf{0}$',
-      '$\\mathbf{r}\'\'(t_0) = \\mathbf{0}$',
-      '$\\mathbf{r}$ is not defined at $t_0$'
+      '$\\mathbf{r}(t_0) = \\mathbf{0}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Cusp: tangent vector vanishes.',
+  },
+      '$\\mathbf{r}$ is not defined at $t_0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Cusp: tangent vector vanishes.',
+  },
+      '$\\mathbf{r}\\'(t_0) = \\mathbf{0}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Cusp: tangent vector vanishes.',
+  },
+      '$\\mathbf{r}\\'\\'(t_0) = \\mathbf{0}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Cusp: tangent vector vanishes.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Cusp: tangent vector vanishes.',
   },

@@ -9,7 +9,7 @@ export const section08Questions: QuizQuestion[] = [
       'Creating new tokens',
       'Using the same collateral across multiple protocols simultaneously',
       'Converting one token to another',
-      'Staking tokens for rewards'
+      'Staking tokens for rewards',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -21,11 +21,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What systemic risk does rehypothecation create?',
     options: [
       'Higher gas fees',
-      'A small price drop can cascade through multiple positions, causing mass liquidations',
       'Slower transaction times',
-      'Reduced token supply'
+      'A small price drop can cascade through multiple positions, causing mass liquidations',
+      'Reduced token supply',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'When collateral is reused across protocols, a decline in the base asset triggers liquidations everywhere simultaneously. This creates cascade effects where falling prices accelerate further declines.',
   },
@@ -34,12 +34,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is it difficult to assess true exposure in DeFi?',
     options: [
-      'Protocols don\'t publish their code',
-      'The same underlying collateral may be counted multiple times across different protocols',
+      'Protocols don\\'t publish their code',
       'There are too many users',
-      'Transaction data is not public'
+      'Transaction data is not public',
+      'The same underlying collateral may be counted multiple times across different protocols',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When the same ETH backs positions in multiple protocols, totaling the "locked value" double or triple counts the same underlying asset, making the system appear more robust than it is.',
   },

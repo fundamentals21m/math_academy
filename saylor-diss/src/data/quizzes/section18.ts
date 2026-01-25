@@ -1,0 +1,60 @@
+import type { QuizQuestion } from './types';
+
+export const section18Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'In Machiavelli\'s framework, corruption is primarily:',
+    options: [
+      'A structural condition of the political system',
+      'Individual moral failing',
+      'Bribery only',
+      'Foreign influence',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Corruption is a structural condition where normal feedback mechanisms have broken down.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is the "J-curve" in political dynamics?',
+    options: [
+      'A type of economic graph',
+      'A population growth pattern',
+      'A military formation',
+      'Revolutions occur when improving conditions suddenly reverse'
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The J-curve shows revolutions often occur when rising expectations are suddenly disappointed.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why can reform trigger instability?',
+    options: [
+      'Reform is always bad',
+      'People prefer suffering',
+      'It raises expectations that may not be sustainable',
+      'Reforms are illegal',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Reform raises expectations; if improvements can\'t be sustained, the gap triggers instability.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'What is the "reformer\'s dilemma"?',
+    options: [
+      'Choosing between good and evil',
+      'Reform can trigger the instability it aims to prevent',
+      'Reformers are always assassinated',
+      'Reforms are too expensive'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The reformer\'s dilemma is that well-intentioned reform can trigger destabilizing backlash.',
+  },
+];

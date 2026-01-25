@@ -23,8 +23,13 @@ export const section59Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'What is the norm N(3 + 4i)?',
-    options: ['5', '7', '12', '25'],
-    correctIndex: 3,
+    options: [
+      '5',
+      '25',
+      '7',
+      '12',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'N(3 + 4i) = 3² + 4² = 9 + 16 = 25.',
@@ -33,8 +38,13 @@ export const section59Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'How many units are there in the Gaussian integers?',
-    options: ['2', '4', '8', 'Infinitely many'],
-    correctIndex: 1,
+    options: [
+      '4',
+      '2',
+      '8',
+      'Infinitely many',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The units are 1, -1, i, and -i—exactly the Gaussian integers with norm 1.',
@@ -43,8 +53,13 @@ export const section59Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'What is N(z) equal to?',
-    options: ['z²', '|z|', 'z · z̄', '|z̄|'],
-    correctIndex: 2,
+    options: [
+      'z²',
+      '|z|',
+      '|z̄|',
+      'z · z̄',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'N(z) = z · z̄ = |z|². For z = a + bi, this equals a² + b².',
@@ -65,11 +80,11 @@ export const section59Questions: QuizQuestion[] = [
     question: 'If α divides β in Z[i], what can we conclude about their norms?',
     options: [
       'N(α) = N(β)',
+      'Nothing in general',
       'N(α) divides N(β)',
       'N(α) > N(β)',
-      'Nothing in general',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'If α | β, then β = αγ, so N(β) = N(α)N(γ), meaning N(α) | N(β).',
@@ -78,8 +93,13 @@ export const section59Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'What is i⁻¹ in Z[i]?',
-    options: ['1', '-1', 'i', '-i'],
-    correctIndex: 3,
+    options: [
+      '-i',
+      '1',
+      '-1',
+      'i',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'i⁻¹ = 1/i = i/i² = i/(-1) = -i. Check: i · (-i) = -i² = 1 ✓',

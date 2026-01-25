@@ -8,8 +8,8 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'A competing cryptocurrency to Bitcoin',
       'A second-layer payment protocol built on top of Bitcoin',
+      'A cryptocurrency exchange',
       'A Bitcoin mining pool',
-      'A cryptocurrency exchange'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'What is Liquid Network designed for?',
     options: [
       'Retail payments',
-      'Faster settlements between exchanges and institutions',
       'Mining Bitcoin',
-      'Creating new cryptocurrencies'
+      'Creating new cryptocurrencies',
+      'Faster settlements between exchanges and institutions',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Liquid is a federated sidechain focused on faster, confidential transactions for exchanges and institutions—trading off some decentralization for functionality in a clearly defined context.',
   },
@@ -34,12 +34,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are DLCs (Discreet Log Contracts)?',
     options: [
-      'A type of cryptocurrency wallet',
       'Smart contracts for Bitcoin that enable conditional payments based on oracle data',
+      'A type of cryptocurrency wallet',
       'A Bitcoin mining algorithm',
-      'A token standard'
+      'A token standard',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'DLCs enable Bitcoin-based smart contracts for derivatives, bets, and conditional payments using oracles, without requiring changes to Bitcoin\'s base layer.',
   },

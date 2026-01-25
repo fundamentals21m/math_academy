@@ -1,0 +1,82 @@
+import type { QuizQuestion } from './types';
+
+export const section06Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the main difference between a Lightning invoice and a Bitcoin address?',
+    options: [
+      'Lightning invoices are permanent, addresses expire',
+      'Addresses are for larger amounts only',
+      'Lightning invoices are typically single-use, addresses can be reused',
+      'There is no difference',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Lightning invoices are typically single-use payment requests that expire after a set time. Bitcoin addresses can technically be reused (though not recommended for privacy).',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What are routing fees?',
+    options: [
+      'Fees paid to Bitcoin miners',
+      'Small fees charged by intermediate nodes that forward your payment',
+      'Fees charged by Zeus',
+      'Fees for opening channels',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Routing fees are small amounts charged by intermediate nodes that forward your Lightning payment. They typically consist of a base fee plus a percentage of the amount.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is Keysend?',
+    options: [
+      'A way to send your private keys securely',
+      'Spontaneous Lightning payments without an invoice',
+      'A key management feature',
+      'A type of channel backup',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Keysend allows spontaneous Lightning payments that only require the recipient\'s node public key - no invoice needed. Useful for tips and donations.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'For small amounts, which payment method is usually more economical?',
+    options: [
+      'They cost the same',
+      'It depends on the time of day',
+      'On-chain Bitcoin',
+      'Lightning Network',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Lightning is almost always more economical for small amounts because on-chain fees don\'t depend on the amount - a 100 sat transfer costs the same as a 1 BTC transfer.',
+  },
+  {
+    id: 5,
+    type: 'text',
+    question: 'What cryptographic proof does Zeus store to prove a Lightning payment was received?',
+    correctAnswer: 'preimage',
+    difficulty: 'hard',
+    explanation: 'The payment preimage is proof that a Lightning payment was received. Zeus stores this automatically, and it can be used to prove payment in case of disputes.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What does BIP21 with Lightning enable?',
+    options: [
+      'Unified QR codes that work with both Lightning and on-chain',
+      'Faster on-chain confirmations',
+      'Lower Lightning fees',
+      'Multiple addresses in one invoice',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'BIP21 with Lightning embeds a Lightning invoice inside a Bitcoin URI. Compatible wallets try Lightning first and fall back to on-chain if needed.',
+  },
+];

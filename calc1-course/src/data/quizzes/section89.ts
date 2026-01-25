@@ -7,11 +7,11 @@ export const section89Questions: QuizQuestion[] = [
     question: 'A linear space (vector space) must satisfy axioms including:',
     options: [
       'Only closure under addition',
-      'Closure under addition, scalar multiplication, and other algebraic properties',
       'Only having a zero vector',
-      'Being finite-dimensional'
+      'Being finite-dimensional',
+      'Closure under addition, scalar multiplication, and other algebraic properties',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Vector space axioms: closure, associativity, identity, inverses, distributivity, etc.',
   },
@@ -21,11 +21,15 @@ export const section89Questions: QuizQuestion[] = [
     question: 'Which is NOT a vector space?',
     options: [
       '$\\mathbb{R}^n$ with standard operations',
-      'The set of polynomials',
       'The positive real numbers under usual addition',
-      'The set of continuous functions on $[0,1]$'
+      'The set of polynomials',
+      'The set of continuous functions on $[0,1]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Positive reals under usual addition: no zero element, no additive inverses.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Positive reals under usual addition: no zero element, no additive inverses.',
   },
@@ -34,12 +38,28 @@ export const section89Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The zero vector satisfies:',
     options: [
-      '$\\mathbf{v} + \\mathbf{0} = \\mathbf{0}$',
-      '$\\mathbf{v} + \\mathbf{0} = \\mathbf{v}$ for all $\\mathbf{v}$',
-      '$\\mathbf{0} = (1, 1, ..., 1)$',
-      '$0 \\cdot \\mathbf{v} = \\mathbf{v}$'
+      '$\\mathbf{v} + \\mathbf{0} = \\mathbf{0}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Zero vector is the additive identity.',
+  },
+      '$\\mathbf{0} = (1, 1, ..., 1)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Zero vector is the additive identity.',
+  },
+      '$\\mathbf{v} + \\mathbf{0} = \\mathbf{v}$ for all $\\mathbf{v}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Zero vector is the additive identity.',
+  },
+      '$0 \\cdot \\mathbf{v} = \\mathbf{v}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Zero vector is the additive identity.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Zero vector is the additive identity.',
   },
@@ -48,10 +68,22 @@ export const section89Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For any vector $\\mathbf{v}$, $0 \\cdot \\mathbf{v} = ?$',
     options: [
-      '$\\mathbf{v}$',
-      '$\\mathbf{0}$',
-      '$-\\mathbf{v}$',
-      'Undefined'
+      '$\\mathbf{0}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Scalar 0 times any vector gives the zero vector.',
+  },
+      '$\\mathbf{v}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Scalar 0 times any vector gives the zero vector.',
+  },
+      '$-\\mathbf{v}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Scalar 0 times any vector gives the zero vector.',
+  },
+      'Undefined',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -62,10 +94,26 @@ export const section89Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The set of $2 \\times 2$ matrices forms a vector space of dimension:',
     options: [
-      '$2$',
-      '$3$',
-      '$4$',
-      '$8$'
+      '$2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$2 \\times 2$ matrices have 4 entries, so dimension 4.',
+  },
+      '$4
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$2 \\times 2$ matrices have 4 entries, so dimension 4.',
+  },
+      '$3
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$2 \\times 2$ matrices have 4 entries, so dimension 4.',
+  },
+      '$8
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$2 \\times 2$ matrices have 4 entries, so dimension 4.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -77,11 +125,11 @@ export const section89Questions: QuizQuestion[] = [
     question: 'The set of polynomials of degree $\\leq n$ has dimension:',
     options: [
       '$n$',
-      '$n + 1$',
+      'Infinite',
       '$2n$',
-      'Infinite'
+      '$n + 1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Basis: $1, x, x^2, ..., x^n$ (total $n+1$ vectors).',
   },

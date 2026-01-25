@@ -5,7 +5,28 @@ export const section02Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'In $\\mathbb{Z}/6\\mathbb{Z}$, what is $\\overline{4} + \\overline{5}$?',
-    options: ['$\\overline{9}$', '$\\overline{3}$', '$\\overline{1}$', '$\\overline{2}$'],
+    options: [
+      '$\\overline{9}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\overline{4} + \\overline{5} = \\overline{4 + 5} = \\overline{9} = \\overline{3}$ since $9 \\equiv 3 \\pmod{6}$.',
+  },
+      '$\\overline{1}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\overline{4} + \\overline{5} = \\overline{4 + 5} = \\overline{9} = \\overline{3}$ since $9 \\equiv 3 \\pmod{6}$.',
+  },
+      '$\\overline{3}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\overline{4} + \\overline{5} = \\overline{4 + 5} = \\overline{9} = \\overline{3}$ since $9 \\equiv 3 \\pmod{6}$.',
+  },
+      '$\\overline{2}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\overline{4} + \\overline{5} = \\overline{4 + 5} = \\overline{9} = \\overline{3}$ since $9 \\equiv 3 \\pmod{6}$.',
+  },
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     explanation: '$\\overline{4} + \\overline{5} = \\overline{4 + 5} = \\overline{9} = \\overline{3}$ since $9 \\equiv 3 \\pmod{6}$.',
@@ -23,7 +44,28 @@ export const section02Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'Which of the following elements is a unit (has a multiplicative inverse) in $\\mathbb{Z}/8\\mathbb{Z}$?',
-    options: ['$\\overline{2}$', '$\\overline{4}$', '$\\overline{5}$', '$\\overline{6}$'],
+    options: [
+      '$\\overline{5}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'An element $\\overline{a}$ is a unit in $\\mathbb{Z}/n\\mathbb{Z}$ iff $\\gcd(a, n) = 1$. Here $\\gcd(5, 8) = 1$, while $\\gcd(2, 8) = 2$, $\\gcd(4, 8) = 4$, $\\gcd(6, 8) = 2$.',
+  },
+      '$\\overline{2}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'An element $\\overline{a}$ is a unit in $\\mathbb{Z}/n\\mathbb{Z}$ iff $\\gcd(a, n) = 1$. Here $\\gcd(5, 8) = 1$, while $\\gcd(2, 8) = 2$, $\\gcd(4, 8) = 4$, $\\gcd(6, 8) = 2$.',
+  },
+      '$\\overline{4}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'An element $\\overline{a}$ is a unit in $\\mathbb{Z}/n\\mathbb{Z}$ iff $\\gcd(a, n) = 1$. Here $\\gcd(5, 8) = 1$, while $\\gcd(2, 8) = 2$, $\\gcd(4, 8) = 4$, $\\gcd(6, 8) = 2$.',
+  },
+      '$\\overline{6}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'An element $\\overline{a}$ is a unit in $\\mathbb{Z}/n\\mathbb{Z}$ iff $\\gcd(a, n) = 1$. Here $\\gcd(5, 8) = 1$, while $\\gcd(2, 8) = 2$, $\\gcd(4, 8) = 4$, $\\gcd(6, 8) = 2$.',
+  },
+    ],
     correctIndex: 2,
     difficulty: 'medium',
     explanation: 'An element $\\overline{a}$ is a unit in $\\mathbb{Z}/n\\mathbb{Z}$ iff $\\gcd(a, n) = 1$. Here $\\gcd(5, 8) = 1$, while $\\gcd(2, 8) = 2$, $\\gcd(4, 8) = 4$, $\\gcd(6, 8) = 2$.',
@@ -42,12 +84,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $a \\equiv b \\pmod{n}$ and $c \\equiv d \\pmod{n}$, which of the following is NOT always true?',
     options: [
-      '$a + c \\equiv b + d \\pmod{n}$',
-      '$a - c \\equiv b - d \\pmod{n}$',
-      '$ac \\equiv bd \\pmod{n}$',
-      '$a/c \\equiv b/d \\pmod{n}$'
+      '$a + c \\equiv b + d \\pmod{n}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Division is not well-defined in modular arithmetic in general. We can only divide by elements that are units (have multiplicative inverses).',
+  },
+      '$a/c \\equiv b/d \\pmod{n}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Division is not well-defined in modular arithmetic in general. We can only divide by elements that are units (have multiplicative inverses).',
+  },
+      '$a - c \\equiv b - d \\pmod{n}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Division is not well-defined in modular arithmetic in general. We can only divide by elements that are units (have multiplicative inverses).',
+  },
+      '$ac \\equiv bd \\pmod{n}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Division is not well-defined in modular arithmetic in general. We can only divide by elements that are units (have multiplicative inverses).',
+  },
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Division is not well-defined in modular arithmetic in general. We can only divide by elements that are units (have multiplicative inverses).',
   },

@@ -7,11 +7,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What problem does public-key cryptography solve?',
     options: [
       'Making data smaller for storage',
-      'Enabling secure communication without pre-shared secrets',
       'Speeding up calculations',
-      'Generating random numbers'
+      'Enabling secure communication without pre-shared secrets',
+      'Generating random numbers',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Public-key cryptography allows Alice and Bob to communicate securely without having to meet first to exchange a secret key.',
   },
@@ -35,11 +35,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What is a "one-way function" in cryptography?',
     options: [
       'A function that can only be computed once',
-      'A function easy to compute but hard to reverse',
       'A function that always returns the same value',
-      'A function that cannot be computed by computers'
+      'A function that cannot be computed by computers',
+      'A function easy to compute but hard to reverse',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A one-way function is easy to compute in one direction but computationally infeasible to reverse without special knowledge.',
   },
@@ -56,12 +56,16 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Elliptic Curve Discrete Logarithm Problem (ECDLP)?',
     options: [
+      'Given $Q = dG$, finding the scalar $d
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The ECDLP is: given points $G$ and $Q = dG$, find the scalar $d$. This is believed to be computationally infeasible for large $d$.',
+  },
       'Finding the equation of an elliptic curve',
-      'Given $Q = dG$, finding the scalar $d$',
+      'Factoring the curve\\'s prime',
       'Computing the square root of a point',
-      'Factoring the curve\'s prime'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The ECDLP is: given points $G$ and $Q = dG$, find the scalar $d$. This is believed to be computationally infeasible for large $d$.',
   },

@@ -21,12 +21,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'What mathematical problem is RSA security based on?',
       options: [
-        'The difficulty of factoring large numbers',
         'The difficulty of computing square roots',
+        'The difficulty of factoring large numbers',
         'The difficulty of adding large numbers',
         'The difficulty of finding primes'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'RSA security relies on the computational difficulty of factoring the product of two large primes.'
     },
@@ -44,12 +44,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'In RSA, which key is used for encryption?',
       options: [
-        'The public key $(e, n)$',
-        'The private key $(d, n)$',
         'Both keys together',
+        'The private key $(d, n)$',
+        'The public key $(e, n)$',
         'Neither key'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'RSA encryption uses the recipient\'s public key $(e, n)$.'
     },
@@ -67,12 +67,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'To decrypt RSA ciphertext $c$, we compute:',
       options: [
-        '$c^d \\bmod n$',
+        '$c + d \\bmod n$',
         '$c^e \\bmod n$',
         '$c \\times d \\bmod n$',
-        '$c + d \\bmod n$'
+        '$c^d \\bmod n$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'RSA decryption: $m = c^d \\bmod n$, where $d$ is the private exponent.'
     },
@@ -104,12 +104,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'In RSA, the public key consists of:',
       options: [
-        '$(e, n)$',
         '$(d, n)$',
+        '$(e, n)$',
         '$(p, q)$',
         '$(e, d)$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The public key is $(e, n)$ where $e$ is the public exponent and $n$ is the modulus.'
     },
@@ -118,12 +118,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'What must be true for $e$ to be valid in RSA?',
       options: [
-        '$\\gcd(e, \\varphi(n)) = 1$',
-        '$e > n$',
         '$e$ must be even',
+        '$e > n$',
+        '$\\gcd(e, \\varphi(n)) = 1$',
         '$e = p + q$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: '$e$ must be coprime with $\\varphi(n)$ so that $d = e^{-1} \\bmod \\varphi(n)$ exists.'
     }
@@ -135,12 +135,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'In RSA, what is the relationship between $e$ and $d$?',
       options: [
-        '$e \\times d \\equiv 1 \\pmod{\\varphi(n)}$',
+        '$e \\times d = n$',
         '$e + d = n$',
         '$e = d$',
-        '$e \\times d = n$'
+        '$e \\times d \\equiv 1 \\pmod{\\varphi(n)}$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: '$d$ is the modular inverse of $e$ modulo $\\varphi(n)$: $e \\cdot d \\equiv 1 \\pmod{\\varphi(n)}$.'
     },
@@ -190,12 +190,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'Why must $p$ and $q$ be kept secret in RSA?',
       options: [
-        'They allow computation of $\\varphi(n)$ and thus $d$',
         'They are the encryption keys',
+        'They allow computation of $\\varphi(n)$ and thus $d$',
         'They are used directly for decryption',
         'Revealing them has no security impact'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'If $p$ and $q$ are known, an attacker can compute $\\varphi(n)$ and derive the private key $d$.'
     },
@@ -213,12 +213,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'The RSA assumption states that:',
       options: [
-        'Computing $e$-th roots mod $n$ is hard without knowing $d$',
-        'Factoring is always polynomial time',
         'All primes are equally secure',
+        'Factoring is always polynomial time',
+        'Computing $e$-th roots mod $n$ is hard without knowing $d$',
         'Encryption and decryption take the same time'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The RSA problem is: given $c = m^e \\bmod n$, find $m$. This is believed hard without the private key.'
     },
@@ -236,12 +236,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'Why shouldn\'t $p$ and $q$ be close to each other in RSA?',
       options: [
-        'Fermat\'s factorization can efficiently factor $n$ if $p \\approx q$',
+        'Close primes are not coprime',
         'It makes encryption slower',
         'It makes the key size larger',
-        'Close primes are not coprime'
+        'Fermat\'s factorization can efficiently factor $n$ if $p \\approx q$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'If $p \\approx q$, then $\\sqrt{n} \\approx p \\approx q$, and Fermat\'s method finds factors quickly.'
     }
@@ -285,12 +285,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'Bleichenbacher\'s attack on PKCS#1 v1.5 padding exploits:',
       options: [
-        'An oracle that reveals whether decrypted data has valid padding',
         'Weak random number generation',
+        'An oracle that reveals whether decrypted data has valid padding',
         'Small prime factors of $n$',
         'The use of $e = 3$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'The attack uses padding validation errors as an oracle to gradually recover the plaintext through millions of queries.'
     },
@@ -308,12 +308,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'Coppersmith\'s attack can break RSA when:',
       options: [
-        'The message is small and $e$ is small (e.g., $m < n^{1/e}$)',
-        'The primes $p$ and $q$ are safe primes',
         '$n$ has more than 2 prime factors',
+        'The primes $p$ and $q$ are safe primes',
+        'The message is small and $e$ is small (e.g., $m < n^{1/e}$)',
         'The same message is encrypted with different keys'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'If $m^e < n$, then $c = m^e$ (no mod reduction), and $m = \\sqrt[e]{c}$ over the integers.'
     },
@@ -331,12 +331,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'RSA-OAEP (Optimal Asymmetric Encryption Padding) provides:',
       options: [
-        'CCA2 security under the RSA assumption in the random oracle model',
+        'Faster encryption than textbook RSA',
         'Only CPA security',
         'Information-theoretic security',
-        'Faster encryption than textbook RSA'
+        'CCA2 security under the RSA assumption in the random oracle model'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'OAEP adds randomness and structure to achieve chosen-ciphertext security, proven in the random oracle model.'
     },

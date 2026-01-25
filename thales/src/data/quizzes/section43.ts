@@ -11,8 +11,8 @@ export const section43Questions: QuizQuestion[] = [
     options: [
       'Disjoint union',
       'Cartesian product',
-      'Power set',
       'Intersection',
+      'Power set',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -24,12 +24,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the disjoint union A + B defined as?',
     options: [
-      'A ∪ B',
       'A × B',
-      '(A × {0}) ∪ (B × {1})',
+      'A ∪ B',
       'P(A ∪ B)',
+      '(A × {0}) ∪ (B × {1})',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The disjoint union A + B = (A × {0}) ∪ (B × {1}) ensures elements from A and B are kept distinct by tagging them with 0 or 1.',
@@ -48,8 +48,13 @@ export const section43Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'What is ℵ₀ × ℵ₀?',
-    options: ['ℵ₀²', 'ℵ₀', '2^ℵ₀', 'ℵ₁'],
-    correctIndex: 1,
+    options: [
+      'ℵ₀²',
+      '2^ℵ₀',
+      'ℵ₀',
+      'ℵ₁',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'ℵ₀ × ℵ₀ = ℵ₀. The set ℕ × ℕ can be enumerated by diagonals, showing it has the same cardinality as ℕ.',
@@ -74,12 +79,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does A^B represent in set theory?',
     options: [
-      'A raised to the power B numerically',
       'The set of all functions from B to A',
+      'A raised to the power B numerically',
       'The Cartesian product of A and B',
       'The power set of A ∪ B',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'A^B = {f | f : B → A} is the set of all functions from B to A. Its cardinality is |A|^|B|.',
@@ -89,12 +94,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does P(A) ≅ 2^A?',
     options: [
-      'Because power sets double in size',
       'Because each subset corresponds to a characteristic function A → {0,1}',
-      'Because of Cantor\'s theorem',
+      'Because power sets double in size',
       'Because there are 2 subsets for each element',
+      'Because of Cantor\\'s theorem',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Each subset S ⊆ A corresponds to its characteristic function χ_S : A → {0,1}, where χ_S(x) = 1 iff x ∈ S. This gives a bijection P(A) ≅ 2^A.',
@@ -103,8 +108,13 @@ export const section43Questions: QuizQuestion[] = [
     id: 8,
     type: 'multiple-choice',
     question: 'What is A × 0 (A times the empty set)?',
-    options: ['A', '0 (empty set)', '1', 'Undefined'],
-    correctIndex: 1,
+    options: [
+      'A',
+      '1',
+      'Undefined',
+      '0 (empty set)',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A × ∅ = ∅ because there are no elements b in ∅ to form pairs (a,b). This is the annihilation property.',

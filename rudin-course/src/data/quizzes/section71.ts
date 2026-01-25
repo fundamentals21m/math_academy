@@ -6,12 +6,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The change of variables formula states that if $T: U \\to V$ is a $C^1$ diffeomorphism, then:',
     options: [
-      '$\\int_V f(y) \\, dy = \\int_U f(T(x)) |\\det T\'(x)| \\, dx$',
+      '$\\int_V f(y) \\, dy = \\int_U f(T(x)) \\det T\'(x) \\, dx$',
       '$\\int_V f(y) \\, dy = \\int_U f(T(x)) \\, dx$',
       '$\\int_V f(y) \\, dy = \\int_U f(x) |\\det T\'(x)| \\, dx$',
-      '$\\int_V f(y) \\, dy = \\int_U f(T(x)) \\det T\'(x) \\, dx$'
+      '$\\int_V f(y) \\, dy = \\int_U f(T(x)) |\\det T\'(x)| \\, dx$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The change of variables formula requires the absolute value of the Jacobian determinant as the volume scaling factor. This accounts for the change in the volume element.',
   },
@@ -34,12 +34,28 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In spherical coordinates $(\\rho, \\phi, \\theta)$ where $x = \\rho\\sin\\phi\\cos\\theta$, the volume element is:',
     options: [
-      '$\\rho^2 \\sin\\phi \\, d\\rho \\, d\\phi \\, d\\theta$',
-      '$\\rho^2 \\, d\\rho \\, d\\phi \\, d\\theta$',
-      '$\\rho \\sin\\phi \\, d\\rho \\, d\\phi \\, d\\theta$',
-      '$d\\rho \\, d\\phi \\, d\\theta$'
+      '$\\rho^2 \\, d\\rho \\, d\\phi \\, d\\theta
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Jacobian for spherical coordinates is $\\rho^2 \\sin\\phi$, giving the volume element $dV = \\rho^2 \\sin\\phi \\, d\\rho \\, d\\phi \\, d\\theta$.',
+  },
+      '$\\rho \\sin\\phi \\, d\\rho \\, d\\phi \\, d\\theta
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Jacobian for spherical coordinates is $\\rho^2 \\sin\\phi$, giving the volume element $dV = \\rho^2 \\sin\\phi \\, d\\rho \\, d\\phi \\, d\\theta$.',
+  },
+      '$\\rho^2 \\sin\\phi \\, d\\rho \\, d\\phi \\, d\\theta
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Jacobian for spherical coordinates is $\\rho^2 \\sin\\phi$, giving the volume element $dV = \\rho^2 \\sin\\phi \\, d\\rho \\, d\\phi \\, d\\theta$.',
+  },
+      '$d\\rho \\, d\\phi \\, d\\theta
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Jacobian for spherical coordinates is $\\rho^2 \\sin\\phi$, giving the volume element $dV = \\rho^2 \\sin\\phi \\, d\\rho \\, d\\phi \\, d\\theta$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The Jacobian for spherical coordinates is $\\rho^2 \\sin\\phi$, giving the volume element $dV = \\rho^2 \\sin\\phi \\, d\\rho \\, d\\phi \\, d\\theta$.',
   },
@@ -48,12 +64,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The change of variables formula requires $T$ to be:',
     options: [
+      'A linear transformation',
       'A $C^1$ diffeomorphism (bijective with $C^1$ inverse)',
       'Any continuous function',
-      'A linear transformation',
-      'Measure-preserving'
+      'Measure-preserving',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The formula requires $T$ to be a $C^1$ diffeomorphism so that the Jacobian is well-defined and nonzero, and the inverse mapping exists.',
   },
@@ -63,9 +79,9 @@ export const section71Questions: QuizQuestion[] = [
     question: 'The Jacobian determinant $|\\det T\'(x)|$ represents:',
     options: [
       'The local volume magnification factor of the transformation',
+      'The speed of the transformation',
       'The derivative of the volume function',
       'The curvature of the transformation',
-      'The speed of the transformation'
     ],
     correctIndex: 0,
     difficulty: 'easy',

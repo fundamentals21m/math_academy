@@ -6,12 +6,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Outer measure fails to be countably additive because:',
     options: [
-      'It is always zero',
       'There exist non-measurable sets',
+      'It is always zero',
       'It is only defined for intervals',
-      'It equals infinity everywhere'
+      'It equals infinity everywhere',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Some sets (non-measurable) cause outer measure to fail countable additivity.',
   },
@@ -20,12 +20,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Vitali set is an example of:',
     options: [
+      'A non-measurable set',
       'A measurable set',
       'A set with measure zero',
-      'A non-measurable set',
-      'An interval'
+      'An interval',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Vitali set is the classic example of a non-Lebesgue-measurable set.',
   },
@@ -35,11 +35,11 @@ export const section40Questions: QuizQuestion[] = [
     question: 'The existence of non-measurable sets relies on:',
     options: [
       'The completeness axiom',
+      'The triangle inequality',
       'The axiom of choice',
       'The Archimedean property',
-      'The triangle inequality'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Constructing non-measurable sets requires the axiom of choice.',
   },
@@ -51,7 +51,7 @@ export const section40Questions: QuizQuestion[] = [
       'We would get Lebesgue measure',
       'We would get a contradiction',
       'The measure would be zero everywhere',
-      'All sets would have measure 1'
+      'All sets would have measure 1',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -63,11 +63,11 @@ export const section40Questions: QuizQuestion[] = [
     question: 'The solution to the non-additivity problem is to:',
     options: [
       'Abandon measure theory',
-      'Restrict to a $\\sigma$-algebra of measurable sets',
       'Only consider finite sets',
-      'Use a different metric'
+      'Use a different metric',
+      'Restrict to a $\\sigma$-algebra of measurable sets',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'We define Lebesgue measure only on measurable sets, forming a $\\sigma$-algebra.',
   },

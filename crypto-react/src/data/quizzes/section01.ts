@@ -31,11 +31,11 @@ export const section01Quiz = {
       question: 'What is a one-way function?',
       options: [
         'A function that can only be computed once',
-        'A function that is easy to compute but hard to reverse',
         'A function that always returns the same value',
+        'A function that is easy to compute but hard to reverse',
         'A function that works in one direction only on a network'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'A one-way function is easy to compute in one direction but computationally infeasible to reverse without special information.'
     },
@@ -54,11 +54,11 @@ export const section01Quiz = {
       question: 'In asymmetric cryptography, the public key is used for:',
       options: [
         'Decryption only',
-        'Encryption only',
+        'Neither encryption nor decryption',
         'Both encryption and decryption',
-        'Neither encryption nor decryption'
+        'Encryption only'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'In asymmetric cryptography, the public key is used for encryption, while the private key is used for decryption.'
     },
@@ -76,12 +76,12 @@ export const section01Quiz = {
       type: 'multiple-choice',
       question: 'What does "plaintext" refer to in cryptography?',
       options: [
-        'Encrypted data',
         'Unencrypted, readable data',
+        'Encrypted data',
         'The encryption key',
         'A type of cipher'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Plaintext is the original, unencrypted data that can be read by anyone.'
     },
@@ -91,11 +91,11 @@ export const section01Quiz = {
       question: 'What is "ciphertext"?',
       options: [
         'The encryption algorithm',
-        'The decrypted message',
         'The encrypted, unreadable data',
+        'The decrypted message',
         'A secret key'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Ciphertext is the result of encrypting plaintext; it is unreadable without the proper decryption key.'
     },
@@ -126,11 +126,11 @@ export const section01Quiz = {
       question: 'What distinguishes a trapdoor function from a regular one-way function?',
       options: [
         'Trapdoor functions are faster to compute',
-        'Trapdoor functions can be reversed with secret information',
         'Trapdoor functions only work with prime numbers',
+        'Trapdoor functions can be reversed with secret information',
         'Trapdoor functions are impossible to reverse'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'A trapdoor function is a one-way function that becomes easy to reverse if you know a special "trapdoor" secret, such as a private key.'
     },
@@ -140,11 +140,11 @@ export const section01Quiz = {
       question: 'Why is the integer factorization problem important for RSA?',
       options: [
         'It makes addition faster',
-        'Multiplying primes is easy, but factoring their product is hard',
+        'It ensures the key is always odd',
         'It generates random numbers',
-        'It ensures the key is always odd'
+        'Multiplying primes is easy, but factoring their product is hard'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'RSA security relies on the asymmetry: multiplying two large primes is easy, but factoring their product back into the original primes is computationally hard.'
     },
@@ -153,12 +153,12 @@ export const section01Quiz = {
       type: 'multiple-choice',
       question: 'In public-key cryptography, if Alice wants to send a secret message to Bob, which key should she use to encrypt?',
       options: [
-        'Alice\'s private key',
+        'Bob\'s public key',
         'Alice\'s public key',
         'Bob\'s private key',
-        'Bob\'s public key'
+        'Alice\'s private key'
       ],
-      correctIndex: 3,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Alice encrypts with Bob\'s public key so that only Bob (who has the corresponding private key) can decrypt it.'
     },
@@ -191,11 +191,11 @@ export const section01Quiz = {
       question: 'Which property ensures that a hash function produces different outputs for different inputs?',
       options: [
         'Pre-image resistance',
-        'Collision resistance',
         'Second pre-image resistance',
+        'Collision resistance',
         'Determinism'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Collision resistance means it should be computationally infeasible to find two different inputs that produce the same hash output.'
     },
@@ -206,10 +206,10 @@ export const section01Quiz = {
       options: [
         'Encrypting messages',
         'Compressing data',
-        'Verifying authenticity and integrity of a message',
-        'Generating random numbers'
+        'Generating random numbers',
+        'Verifying authenticity and integrity of a message'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Digital signatures prove that a message came from a specific sender (authenticity) and hasn\'t been altered (integrity).'
     },
@@ -227,12 +227,12 @@ export const section01Quiz = {
       type: 'multiple-choice',
       question: 'Which of the following best describes "computational security"?',
       options: [
-        'Security that can never be broken',
         'Security based on time and computational resources needed to break it',
+        'Security that can never be broken',
         'Security that uses only one computer',
         'Security that requires no computation'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Computational security means breaking the encryption is theoretically possible but requires more computational resources than an attacker could realistically have.'
     },
@@ -259,11 +259,11 @@ export const section01Quiz = {
       question: 'Why can\'t symmetric cryptography alone solve the secure communication problem between strangers?',
       options: [
         'Symmetric keys are too short',
-        'There is no secure way to share the secret key over an insecure channel',
         'Symmetric encryption is too slow',
+        'There is no secure way to share the secret key over an insecure channel',
         'Symmetric algorithms are mathematically broken'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The fundamental challenge is that symmetric encryption requires both parties to have the same secret key, but sharing that key securely over an insecure channel is impossible without additional mechanisms like public-key cryptography.'
     },
@@ -273,11 +273,11 @@ export const section01Quiz = {
       question: 'What is the relationship between $P$ and $NP$ that makes one-way functions possible?',
       options: [
         '$P = NP$, so all problems are equally hard',
-        'It is widely believed that $P \\neq NP$, meaning some problems are easy to verify but hard to solve',
+        'One-way functions require $P > NP$',
         '$P$ is always larger than $NP$',
-        'One-way functions require $P > NP$'
+        'It is widely believed that $P \\neq NP$, meaning some problems are easy to verify but hard to solve'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The existence of one-way functions depends on $P \\neq NP$, meaning there are problems (like factoring) that are easy to verify but believed to be hard to solve in polynomial time.'
     },
@@ -286,12 +286,12 @@ export const section01Quiz = {
       type: 'multiple-choice',
       question: 'In hybrid encryption, why is symmetric encryption still used alongside public-key encryption?',
       options: [
-        'Public-key encryption cannot encrypt large amounts of data',
         'Symmetric encryption is much faster, so the asymmetric part only encrypts the symmetric key',
+        'Public-key encryption cannot encrypt large amounts of data',
         'Public-key encryption is insecure for large files',
         'Symmetric encryption provides stronger security guarantees'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Hybrid encryption uses asymmetric encryption to securely exchange a symmetric key, then uses the faster symmetric encryption for the actual data. This combines the best of both: secure key exchange and efficient bulk encryption.'
     },
@@ -324,11 +324,11 @@ export const section01Quiz = {
       question: 'Why is a 128-bit symmetric key considered roughly equivalent to a 3072-bit RSA key in security?',
       options: [
         'They both use the same algorithm',
-        'The best known attacks have similar complexity for breaking each',
         '128 times 24 equals 3072',
+        'The best known attacks have similar complexity for breaking each',
         'RSA keys must always be 24 times larger'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Security equivalence is based on attack complexity. Brute-forcing a 128-bit symmetric key and factoring a 3072-bit RSA modulus both require approximately $2^{128}$ operations with the best known attacks.'
     },
@@ -347,11 +347,11 @@ export const section01Quiz = {
       question: 'What is the "semantic security" property of an encryption scheme?',
       options: [
         'The ciphertext can be parsed grammatically',
-        'An adversary cannot learn any information about the plaintext from the ciphertext',
+        'Only semantically correct messages can be encrypted',
         'The encryption preserves the meaning of the message',
-        'Only semantically correct messages can be encrypted'
+        'An adversary cannot learn any information about the plaintext from the ciphertext'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Semantic security means that an adversary with the ciphertext cannot determine any property of the plaintext that they couldn\'t determine without the ciphertext.'
     },
@@ -360,12 +360,12 @@ export const section01Quiz = {
       type: 'multiple-choice',
       question: 'Why is it important that cryptographic algorithms be publicly known rather than secret?',
       options: [
-        'Secret algorithms are illegal',
         'Public scrutiny helps identify vulnerabilities (Kerckhoffs\'s principle)',
+        'Secret algorithms are illegal',
         'Public algorithms are faster to compute',
         'Secret algorithms cannot be implemented in software'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Kerckhoffs\'s principle states that a cryptographic system should be secure even if everything about the system, except the key, is public knowledge. Public algorithms undergo extensive peer review, finding weaknesses that secret algorithms might hide.'
     },

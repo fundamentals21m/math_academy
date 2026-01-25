@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section39Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Value-free science serves human values by:',
+    options: [
+      'Telling people what they should value',
+      'Avoiding all practical questions',
+      'Supporting the dominant ideology',
+      'Providing information for valuations while respecting freedom to choose ends',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Science that dictates values serves only those values. Science that remains neutral about ends serves everyone who seeks to understand means. By remaining value-free, science illuminates without commanding.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Human freedom is constrained by three types of laws:',
+    options: [
+      'Political, economic, and moral',
+      'Physical, biological, and praxeological',
+      'Local, national, and international',
+      'Written, customary, and natural',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Physical laws constrain what bodies can do; biological laws constrain what life can do; praxeological laws constrain how means can achieve ends. Economics studies this third type of constraint.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Economics studies the connection between means and ends, which:',
+    options: [
+      'Can be overcome by sufficient will',
+      'Applies only to material goods',
+      'Cannot be wished away any more than gravity can',
+      'Is merely a social convention',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'You cannot wish away the laws of economics any more than you can wish away the law of gravity. Ignoring them leads not to freedom but to failure. The laws of action constrain what we can achieve.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The charge that economics assumes people only care about material goods is:',
+    options: [
+      'Accurate and limiting',
+      'A fair criticism of modern economics',
+      'Unfounded—economics deals with action toward any end',
+      'True of Austrian economics only',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Economics deals with action as such—any purposeful behavior directed toward any end. It does not assume what ends people pursue; it studies the logic of pursuing ends with means, whether material or spiritual.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The body of economic knowledge is:',
+    options: [
+      'An essential foundation of human civilization',
+      'An academic curiosity',
+      'Useful only for specialists',
+      'Constantly being overturned',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Economic knowledge is the foundation upon which modern industrialism and all the achievements of recent centuries have been built. Without it, we cannot preserve what we have built, let alone improve upon it.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Whether humans make proper use of economic knowledge:',
+    options: [
+      'Is determined by historical forces',
+      'Depends on technological progress',
+      'Is beyond human control',
+      'Rests with humans to decide—the choice is ours but consequences follow economic laws'
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The knowledge exists. The question is whether we will apply it. We can choose our policies, but the consequences are determined by the laws of human action, not by our wishes.',
+  },
+];

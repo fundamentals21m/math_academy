@@ -8,11 +8,11 @@ export const section20Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       '$x^2 + y^2 = N$',
-      '$x^2 - Ny^2 = 1$',
-      '$x^2 + Ny^2 = 1$',
       '$x^2 - y^2 = N$',
+      '$x^2 + Ny^2 = 1$',
+      '$x^2 - Ny^2 = 1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Pell\'s equation is $x^2 - Ny^2 = 1$, where $N$ is a positive integer that is not a perfect square, and we seek integer solutions $(x, y)$.',
   },
@@ -82,10 +82,10 @@ export const section20Questions: QuizQuestion[] = [
     options: [
       'In the 13th century by Fibonacci',
       'In the 15th century by Cardano',
-      'In the 17th century by Fermat and Wallis',
       'In the 19th century by Gauss',
+      'In the 17th century by Fermat and Wallis'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'Bhāskara solved $x^2 - 61y^2 = 1$ around 1150 CE using the chakravala method. Europeans didn\'t solve this until Fermat challenged mathematicians with it in the 1650s—about 500 years later.',
   },

@@ -7,12 +7,12 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two sets have the same cardinality if:',
     options: [
-      'There exists a bijection (one-to-one correspondence) between them',
       'They contain the same elements',
+      'There exists a bijection (one-to-one correspondence) between them',
       'They are both infinite',
-      'They have the same number of subsets',
+      'They have the same number of subsets'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Cantor defined two sets to have the same cardinality (size) if there exists a bijection between them—a pairing where each element of one set corresponds to exactly one element of the other.',
@@ -22,12 +22,12 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A set is countably infinite if:',
     options: [
-      'Its elements can be put in one-to-one correspondence with the natural numbers',
-      'It contains only natural numbers',
       'It is finite',
-      'It contains the number zero',
+      'It contains only natural numbers',
+      'Its elements can be put in one-to-one correspondence with the natural numbers',
+      'It contains the number zero'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'A countably infinite set can be "listed" (first element, second element, ...), which means there\'s a bijection with N. Examples include the integers and rationals.',
@@ -38,12 +38,12 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cantor\'s diagonal argument proves that:',
     options: [
-      'The real numbers are uncountable',
+      'The natural numbers are uncountable',
       'The rational numbers are uncountable',
       'All infinite sets have the same size',
-      'The natural numbers are uncountable',
+      'The real numbers are uncountable'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Cantor\'s diagonal argument (1891) shows that the real numbers cannot be listed—any supposed list misses at least one real number constructed by the diagonal method. Thus |R| > |N|.',
@@ -69,12 +69,12 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Continuum Hypothesis states that:',
     options: [
-      'There is no cardinality strictly between $\\aleph_0$ and $\\mathfrak{c}$',
       'All infinite sets are countable',
+      'There is no cardinality strictly between $\\aleph_0$ and $\\mathfrak{c}$',
       'The real numbers are countable',
-      'There are exactly two sizes of infinity',
+      'There are exactly two sizes of infinity'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The Continuum Hypothesis (CH) claims c = ℵ₁, meaning no set has cardinality strictly between the naturals and reals. Gödel and Cohen proved CH is independent of standard set theory axioms—it can neither be proved nor disproved.',
@@ -84,12 +84,12 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cardinality of the real numbers equals:',
     options: [
-      '$2^{\\aleph_0}$',
-      '$\\aleph_0$',
       '$\\aleph_0 + 1$',
-      '$\\aleph_0^2$',
+      '$\\aleph_0$',
+      '$2^{\\aleph_0}$',
+      '$\\aleph_0^2$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The cardinality of R equals 2^(ℵ₀), the cardinality of the power set of N. This is because real numbers can be represented as infinite binary sequences (subsets of N). This is strictly greater than ℵ₀.',

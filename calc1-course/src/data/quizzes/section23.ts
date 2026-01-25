@@ -21,11 +21,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'If $f$ is strictly increasing on $[a,b]$, then $f$ is:',
     options: [
       'Not invertible',
-      'One-to-one and has an inverse',
       'Constant',
-      'Undefined'
+      'Undefined',
+      'One-to-one and has an inverse',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Strictly monotonic functions are one-to-one, hence invertible.',
   },
@@ -34,12 +34,28 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f^{-1}$ is the inverse of $f$, then $f(f^{-1}(x)) = ?$',
     options: [
-      '$f(x)$',
-      '$x$',
-      '$0$',
-      '$1$'
+      '$f(x)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By definition: $f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$.',
+  },
+      '$1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'By definition: $f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$.',
+  },
+      '$x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'By definition: $f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$.',
+  },
+      '$0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'By definition: $f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'By definition: $f(f^{-1}(x)) = x$ and $f^{-1}(f(x)) = x$.',
   },
@@ -57,12 +73,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The graph of $f^{-1}$ is related to the graph of $f$ by:',
     options: [
-      'Reflection across the $x$-axis',
-      'Reflection across the $y$-axis',
       'Reflection across the line $y = x$',
+      'Reflection across the $y$-axis',
+      'Reflection across the $x$-axis',
       'A 90° rotation'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The graphs of $f$ and $f^{-1}$ are reflections of each other across $y = x$.',
   },

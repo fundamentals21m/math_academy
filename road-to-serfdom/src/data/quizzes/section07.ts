@@ -7,11 +7,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'According to Hayek, economic control is really:',
     options: [
       'Control of a minor sector of life separate from higher values',
-      'Control of the means for all our ends—and thus control over which ends are served',
       'Only about money and prices',
-      'Easily separated from personal freedom'
+      'Control of the means for all our ends—and thus control over which ends are served',
+      'Easily separated from personal freedom',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Economic control is not control of a separate sector but control of the means for all ends. Whoever controls the means determines which ends can be pursued.',
   },
@@ -21,11 +21,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'Hayek describes money as:',
     options: [
       'The root of all evil',
-      'One of the greatest instruments of freedom ever invented',
       'Something that should be abolished',
-      'Only useful for the wealthy'
+      'One of the greatest instruments of freedom ever invented',
+      'Only useful for the wealthy',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Money is one of the greatest instruments of freedom ever invented—it opens an astounding range of choice even to the poor, allowing trade with many rather than dependence on one.',
   },
@@ -37,7 +37,7 @@ export const section07Questions: QuizQuestion[] = [
       'People are not interested in economics',
       'All our ends compete for the same scarce means—economic choices are choices among ultimate values',
       'Economics is too complicated',
-      'Only governments have economic motives'
+      'Only governments have economic motives',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -50,10 +50,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'A valid middle ground',
       'Proven successful in practice',
-      'An illusion—control of production determines what goods are available to consume',
-      'The official socialist position'
+      'The official socialist position',
+      'An illusion—control of production determines what goods are available to consume'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Control of production inevitably means control of consumption because the planning authority determines what goods are available. "Consumer sovereignty" is precisely what planning destroys.',
   },
@@ -62,12 +62,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does Hayek say "economic" freedoms like travel, choice of work, and leisure matter?',
     options: [
-      'They don\'t matter much compared to political freedoms',
       'They are often dearer to us than anything else—even free speech requires material resources',
+      'They don\'t matter much compared to political freedoms',
       'They only matter to the wealthy',
       'They can easily be replaced by government provision'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'So-called "economic" freedoms are often what we value most. Even free speech requires printing, paper, halls—when the state controls all material resources, no freedom is secure.',
   },

@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section09Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'In Year 1 of the tontine example with 100 members, $10M pool, and 4% return, the payout per survivor (with 99 survivors) is approximately:',
+    options: [
+      '$4,040',
+      '$4,000',
+      '$10,000',
+      '$40,000',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Investment income = $10,000,000 × 0.04 = $400,000. Divided by 99 survivors = $4,040 per person.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'By Year 20 (age 85) in the example, payouts have approximately:',
+    options: [
+      'Stayed constant at 4%',
+      'Doubled to 8%',
+      'Tripled to around 12.7%',
+      'Decreased to 2%'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By Year 20, with about 50 survivors and pool growth from mortality credits, payouts reach approximately $12,700—about 12.7%, roughly triple the initial payout.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Tontine payouts grow for two main reasons:',
+    options: [
+      'Administrative cost reductions over time',
+      'Fewer survivors to share with and pool growth from deceased members\\' capital',
+      'Inflation and interest rate increases',
+      'Government subsidies and tax benefits',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Payouts grow because: (1) fewer survivors means fewer people sharing the pool, and (2) deceased members\' capital remains in the pool, growing the total.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'In Year 30 of the example (age 95), with only 12 survivors, the approximate yield on the original contribution is:',
+    options: [
+      '12%',
+      '24%',
+      '48%',
+      '36%',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'By Year 30 with only 12 survivors, the payout reaches approximately $48,000 per person—48% of the original $100,000 contribution.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The payout per survivor $D_t$ is calculated as:',
+    options: [
+      'Pool value times interest rate',
+      'Contribution times years elapsed',
+      'Interest rate divided by deaths',
+      'Investment income divided by number of survivors',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'D_t = Investment income / n_t. The total investment income from the pool is divided equally among survivors.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The exponentially growing payouts in a classic tontine are described as:',
+    options: [
+      'A feature and a problem that needs addressing',
+      'A pure benefit with no drawbacks',
+      'Impossible due to regulations',
+      'Only theoretical, never observed in practice',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Exponentially growing payouts are both a feature (high returns for survivors) and a problem (unpredictable income, perverse incentives) that modern tontine designs address.',
+  },
+];

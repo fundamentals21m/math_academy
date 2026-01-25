@@ -6,12 +6,20 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f: X \\to Y$ between metric spaces is continuous at $x_0$ if:',
     options: [
-      'For every $\\varepsilon > 0$, there exists $\\delta > 0$ such that $d_X(x, x_0) < \\delta$ implies $d_Y(f(x), f(x_0)) < \\varepsilon$',
+      '$f$ is bounded near $x_0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'This is the $\\varepsilon$-$\\delta$ definition of continuity at a point in metric spaces.',
+  },
+      'For every $\\varepsilon > 0$, there exists $\\delta > 0$ such that $d_X(x, x_0) < \\delta$ implies $d_Y(f(x), f(x_0)) < \\varepsilon
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'This is the $\\varepsilon$-$\\delta$ definition of continuity at a point in metric spaces.',
+  },
       '$f$ maps open sets to open sets',
-      '$f$ is bounded near $x_0$',
-      '$f(x_0)$ exists'
+      '$f(x_0)$ exists',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'This is the $\\varepsilon$-$\\delta$ definition of continuity at a point in metric spaces.',
   },
@@ -20,12 +28,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which characterization of continuity is TRUE? A function $f: X \\to Y$ is continuous if and only if:',
     options: [
-      'The preimage of every open set is open',
+      'The image of every closed set is closed',
       'The image of every open set is open',
+      'The preimage of every open set is open',
       'The preimage of every closed set is open',
-      'The image of every closed set is closed'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A function is continuous iff the preimage of every open set is open. Equivalently, the preimage of every closed set is closed.',
   },
@@ -34,12 +42,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f: X \\to Y$ and $g: Y \\to Z$ are continuous, then $g \\circ f: X \\to Z$ is:',
     options: [
-      'Not necessarily continuous',
       'Continuous',
+      'Not necessarily continuous',
       'Continuous only if $f$ is surjective',
       'Continuous only if $g$ is injective'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The composition of continuous functions is continuous.',
   },
@@ -49,9 +57,13 @@ export const section05Questions: QuizQuestion[] = [
     question: 'A function $f: X \\to Y$ is continuous at $x_0$ if and only if:',
     options: [
       'For every sequence $(x_n)$ in $X$, $f(x_n)$ converges',
-      'For every sequence $(x_n) \\to x_0$, we have $f(x_n) \\to f(x_0)$',
       '$f$ is bounded',
-      '$f$ maps Cauchy sequences to Cauchy sequences'
+      'For every sequence $(x_n) \\to x_0$, we have $f(x_n) \\to f(x_0)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'This is the sequential characterization of continuity: $f$ is continuous at $x_0$ iff it preserves limits of sequences converging to $x_0$.',
+  },
+      '$f$ maps Cauchy sequences to Cauchy sequences',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -63,11 +75,19 @@ export const section05Questions: QuizQuestion[] = [
     question: 'The function $f: \\mathbf{R} \\to \\mathbf{R}$ defined by $f(x) = 1/x$ for $x \\neq 0$ and $f(0) = 0$ is:',
     options: [
       'Continuous everywhere',
-      'Continuous except at $x = 0$',
       'Discontinuous everywhere',
-      'Continuous only on $(0, \\infty)$'
+      'Continuous only on $(0, \\infty)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The function $1/x$ is continuous on its natural domain. Defining $f(0) = 0$ creates a discontinuity at 0 since $\\lim_{x \\to 0} 1/x$ does not exist.',
+  },
+      'Continuous except at $x = 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The function $1/x$ is continuous on its natural domain. Defining $f(0) = 0$ creates a discontinuity at 0 since $\\lim_{x \\to 0} 1/x$ does not exist.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The function $1/x$ is continuous on its natural domain. Defining $f(0) = 0$ creates a discontinuity at 0 since $\\lim_{x \\to 0} 1/x$ does not exist.',
   },

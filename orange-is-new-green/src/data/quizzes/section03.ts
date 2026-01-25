@@ -6,12 +6,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a "Minsky moment"?',
     options: [
-      'A period of steady economic growth',
       'A tipping point where accumulated leverage triggers destabilizing market downturn',
+      'A period of steady economic growth',
       'The moment Bitcoin was invented',
-      'A central bank interest rate decision'
+      'A central bank interest rate decision',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A Minsky moment occurs when leverage accumulates until a tipping point triggers a destabilizing market downturn, named after economist Hyman Minsky.',
   },
@@ -22,8 +22,8 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'Liquidity is constant across all market conditions',
       'Liquidity is context-dependent rather than an inherent property of an asset',
+      'Liquidity can be created by central banks indefinitely',
       'Only government bonds are truly liquid',
-      'Liquidity can be created by central banks indefinitely'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'What makes government securities particularly vulnerable to liquidity crises?',
     options: [
       'They have no yield',
-      'They are used extensively as collateral, creating interconnected risks',
       'They are too complex to trade',
-      'They cannot be sold on weekends'
+      'They are used extensively as collateral, creating interconnected risks',
+      'They cannot be sold on weekends',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Government securities constitute the bulk of collateral in the financial system. When their value drops (due to rate hikes), it triggers margin calls and forced selling, creating cascade effects.',
   },

@@ -16,6 +16,9 @@ export type SecurityEventType =
   | 'auth_failure_invalid_event_kind'
   | 'auth_failure_timestamp_invalid'
   | 'auth_banned_user_attempt'
+  // IP-based rate limiting
+  | 'rate_limit_ip_challenge'
+  | 'rate_limit_ip_auth_failure'
   // Admin events (already in adminLogs, but unified here too)
   | 'admin_ban_user'
   | 'admin_unban_user'
@@ -85,6 +88,8 @@ export function getEventSeverity(type: SecurityEventType): SecurityEventSeverity
     'auth_failure_expired_challenge': 'warning',
     'auth_failure_challenge_not_found': 'warning',
     'auth_failure_timestamp_invalid': 'warning',
+    'rate_limit_ip_challenge': 'warning',
+    'rate_limit_ip_auth_failure': 'warning',
 
     // Error level - authentication failures
     'auth_failure_invalid_signature': 'error',
@@ -109,10 +114,11 @@ export function getEventSeverity(type: SecurityEventType): SecurityEventSeverity
 /**
  * Helper to log auth success
  */
-export async function logAuthSuccess(npub: string, pubkeyHex: string): Promise<void> {
+export async function logAuthSuccess(npub: string, pubkeyHex: string, ipAddress?: string): Promise<void> {
   await logSecurityEvent('auth_success', 'info', {
     npub,
     pubkeyHex,
+    ipAddress,
   });
 }
 

@@ -7,11 +7,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What problem does public key cryptography solve?',
     options: [
       'Making encryption faster',
-      'Key distribution without a secure channel',
+      'Preventing brute force attacks',
       'Reducing key size',
-      'Preventing brute force attacks'
+      'Key distribution without a secure channel'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Public key crypto allows secure communication without pre-shared secrets.',
   },
@@ -20,12 +20,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a public key system, the encryption key is:',
     options: [
-      'Kept secret by the sender',
-      'Kept secret by the receiver',
       'Made public',
+      'Kept secret by the receiver',
+      'Kept secret by the sender',
       'Shared between sender and receiver'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The public key is published; anyone can encrypt. Only the private key holder can decrypt.',
   },
@@ -37,7 +37,7 @@ export const section08Questions: QuizQuestion[] = [
       'Easy to compute in both directions',
       'Hard to compute in both directions',
       'Easy to compute, hard to invert without secret information',
-      'Impossible to compute'
+      'Impossible to compute',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -51,7 +51,7 @@ export const section08Questions: QuizQuestion[] = [
       'Rivest, Shamir, and Adleman',
       'Diffie and Hellman',
       'Shannon',
-      'Turing'
+      'Turing',
     ],
     correctIndex: 1,
     difficulty: 'medium',

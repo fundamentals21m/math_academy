@@ -10,11 +10,11 @@ export const section40Questions: QuizQuestion[] = [
     question: 'Why was Hamilton\'s application of quaternions to physics initially difficult?',
     options: [
       'Quaternions are too abstract',
-      'Physical space has only three dimensions, not four',
-      'Physicists rejected non-commutative algebra',
       'Complex numbers were preferred',
+      'Physicists rejected non-commutative algebra',
+      'Physical space has only three dimensions, not four'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Hamilton was stymied by the fact that physical space has only three dimensions. A quaternion has four components, which doesn\'t directly match 3D space.',
@@ -65,11 +65,11 @@ export const section40Questions: QuizQuestion[] = [
     question: 'What is a biquaternion?',
     options: [
       'A quaternion with integer coefficients',
-      'A quaternion with complex coefficients',
       'A product of two quaternions',
       'A quaternion with norm 2',
+      'A quaternion with complex coefficients',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A biquaternion is a quaternion whose coefficients a₀, a₁, a₂, a₃ are complex numbers rather than real numbers.',
@@ -79,12 +79,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is a Lorentz transformation expressed using biquaternions?',
     options: [
+      'x → pxp^(ct)',
       'x → px',
       'x → xp',
-      'x → pxp^(ct)',
       'x → p + x',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A Lorentz transformation sends x to pxp^(ct), where p is a biquaternion of norm 1. This preserves the norm N(x), which corresponds to the spacetime interval.',
@@ -94,12 +94,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What characterizes a Hermitian biquaternion?',
     options: [
-      'x^t = x',
-      'x^c = x',
       'x^t = x^c',
-      'N(x) = 1',
+      'x^c = x',
+      'x^t = x',
+      'N(x) = 1'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'A biquaternion x is Hermitian if x^t = x^c (quaternion conjugate equals complex conjugate). Hermitian biquaternions represent points in Minkowski space.',
@@ -109,12 +109,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is Einstein\'s famous mass-energy equation?',
     options: [
+      'E = mc²',
       'E = mv',
       'E = mc',
-      'E = mc²',
       'E = m²c',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Einstein\'s equation E = mc² identifies the total energy of a particle, consisting of rest energy m₀c² plus kinetic energy.',
@@ -123,8 +123,13 @@ export const section40Questions: QuizQuestion[] = [
     id: 9,
     type: 'multiple-choice',
     question: 'Who first noted that Maxwell\'s equations are preserved under Lorentz transformations?',
-    options: ['Maxwell', 'Einstein', 'Poincaré', 'Lorentz'],
-    correctIndex: 2,
+    options: [
+      'Maxwell',
+      'Poincaré',
+      'Einstein',
+      'Lorentz',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The fact that Maxwell\'s equations are preserved under Lorentz transformations appears to have first been noted by Henri Poincaré.',

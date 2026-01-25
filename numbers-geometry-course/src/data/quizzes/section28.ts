@@ -9,12 +9,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the two sides of geometry described in this chapter?',
     options: [
-      'Euclidean and non-Euclidean',
       'Synthetic (visual) and analytic (algebraic)',
+      'Euclidean and non-Euclidean',
       'Plane and solid',
       'Finite and infinite',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Geometry has two sides: the synthetic (visual, self-contained) side that seems intuitively natural, and the analytic (algebraic) side that integrates geometry into the larger world of mathematics.',
@@ -49,12 +49,17 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is $\\mathbb{Q}$ called countable?',
     options: [
-      'It contains only finitely many elements',
       'Its members can be listed (paired with natural numbers)',
+      'It contains only finitely many elements',
+      'It is a subset of $\\mathbb{R}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'The sets ℕ, ℤ, and ℚ are called countable because their members can be listed—given a first member, second member, third member, and so on. This means they can be paired with the natural numbers.',
+  },
       'Each rational has a unique decimal expansion',
-      'It is a subset of $\\mathbb{R}$',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The sets ℕ, ℤ, and ℚ are called countable because their members can be listed—given a first member, second member, third member, and so on. This means they can be paired with the natural numbers.',
@@ -63,8 +68,13 @@ export const section28Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'What algebraic structure is the appropriate setting for geometry?',
-    options: ['Group', 'Ring', 'Field', 'Vector space'],
-    correctIndex: 2,
+    options: [
+      'Group',
+      'Field',
+      'Ring',
+      'Vector space',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Around 1900, it became clear that the concept of field was the appropriate algebraic setting for geometry. We can build Euclid\'s geometry using the field ℝ, and conversely, we can build a field from Euclid\'s geometric concepts.',
@@ -90,11 +100,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'What is a similarity in Euclidean geometry?',
     options: [
       'A map that preserves all distances',
-      'A map that multiplies all lengths by a constant',
       'A reflection in a line',
       'A map that preserves only angles less than 90°',
+      'A map that multiplies all lengths by a constant',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A similarity is a mapping of ℝ × ℝ that multiplies all lengths by a constant c. A typical example is the dilatation that sends (x, y) to (cx, cy).',

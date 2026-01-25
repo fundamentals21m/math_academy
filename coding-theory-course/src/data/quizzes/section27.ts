@@ -6,12 +6,24 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An integer $a$ is a quadratic residue modulo a prime $p$ if:',
     options: [
-      '$a$ divides $p$',
-      '$a \\equiv b^2 \\pmod{p}$ for some integer $b$',
+      '$a \\equiv b^2 \\pmod{p}$ for some integer $b
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A quadratic residue modulo $p$ is an integer $a$ that is congruent to a perfect square modulo $p$: there exists $b$ with $a \\equiv b^2 \\pmod{p}$.',
+  },
+      '$a$ divides $p
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A quadratic residue modulo $p$ is an integer $a$ that is congruent to a perfect square modulo $p$: there exists $b$ with $a \\equiv b^2 \\pmod{p}$.',
+  },
+      '$\\gcd(a, p) > 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A quadratic residue modulo $p$ is an integer $a$ that is congruent to a perfect square modulo $p$: there exists $b$ with $a \\equiv b^2 \\pmod{p}$.',
+  },
       '$a$ is even',
-      '$\\gcd(a, p) > 1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A quadratic residue modulo $p$ is an integer $a$ that is congruent to a perfect square modulo $p$: there exists $b$ with $a \\equiv b^2 \\pmod{p}$.',
   },
@@ -20,12 +32,12 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The quadratic residue (QR) code of length $p$ (prime) over $\\mathbb{F}_q$ is defined using:',
     options: [
-      'The set of all elements in $\\mathbb{Z}_p$',
       'The set of quadratic residues in $\\mathbb{Z}_p^*$',
+      'The set of all elements in $\\mathbb{Z}_p$',
       'The set of prime elements less than $p$',
       'The Frobenius automorphism'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'QR codes are cyclic codes whose generator polynomial has roots at $\\alpha^r$ where $r$ runs over quadratic residues (or non-residues) modulo $p$.',
   },
@@ -44,11 +56,11 @@ export const section27Questions: QuizQuestion[] = [
     question: 'The binary QR code of length $23$ is related to which famous code?',
     options: [
       'The Hamming $[7, 4, 3]$ code',
-      'The binary Golay $[23, 12, 7]$ code',
       'The Reed-Solomon code',
-      'The repetition code'
+      'The repetition code',
+      'The binary Golay $[23, 12, 7]$ code',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The binary $[23, 12, 7]$ Golay code is a quadratic residue code. It is one of the most remarkable codes in coding theory, with connections to sporadic simple groups.',
   },
@@ -57,12 +69,28 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a QR code to exist over $\\mathbb{F}_q$ with length $p$ (prime), a necessary condition is:',
     options: [
-      '$q$ is a quadratic residue modulo $p$',
-      '$p$ is a quadratic residue modulo $q$',
-      '$p = q$',
-      '$q$ divides $p - 1$'
+      '$p = q
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'QR codes of length $p$ over $\\mathbb{F}_q$ exist when $q$ is a quadratic residue modulo $p$. This ensures the cyclotomic cosets have the right structure.',
+  },
+      '$q$ is a quadratic residue modulo $p
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'QR codes of length $p$ over $\\mathbb{F}_q$ exist when $q$ is a quadratic residue modulo $p$. This ensures the cyclotomic cosets have the right structure.',
+  },
+      '$p$ is a quadratic residue modulo $q
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'QR codes of length $p$ over $\\mathbb{F}_q$ exist when $q$ is a quadratic residue modulo $p$. This ensures the cyclotomic cosets have the right structure.',
+  },
+      '$q$ divides $p - 1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'QR codes of length $p$ over $\\mathbb{F}_q$ exist when $q$ is a quadratic residue modulo $p$. This ensures the cyclotomic cosets have the right structure.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'QR codes of length $p$ over $\\mathbb{F}_q$ exist when $q$ is a quadratic residue modulo $p$. This ensures the cyclotomic cosets have the right structure.',
   },
@@ -72,11 +100,11 @@ export const section27Questions: QuizQuestion[] = [
     question: 'The idempotents of quadratic residue codes can be expressed using:',
     options: [
       'Lagrange interpolation',
+      'Matrix determinants',
       'Quadratic Gauss sums',
       'The Euclidean algorithm',
-      'Matrix determinants'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The idempotents of QR codes involve quadratic Gauss sums $\\sum_{a \\in QR} \\zeta^a$ where $\\zeta$ is a primitive $p$-th root of unity. These have beautiful number-theoretic properties.',
   },

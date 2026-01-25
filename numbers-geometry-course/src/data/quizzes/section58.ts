@@ -10,11 +10,11 @@ export const section58Questions: QuizQuestion[] = [
     question: 'What property defines an isometry?',
     options: [
       'Preserves angles',
-      'Preserves distances',
       'Preserves areas',
       'Fixes the origin',
+      'Preserves distances',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'An isometry is a transformation that preserves distances between points.',
@@ -39,12 +39,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What geometric operation does complex conjugation z̄ perform?',
     options: [
+      'Reflection in the real axis',
       'Rotation by 90°',
       'Rotation by 180°',
-      'Reflection in the real axis',
       'Translation by 1',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Conjugation z̄ = a - bi reflects the point z = a + bi in the real axis.',
@@ -63,8 +63,13 @@ export const section58Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'What is z · z̄ equal to?',
-    options: ['z²', '|z|', '|z|²', '2z'],
-    correctIndex: 2,
+    options: [
+      '|z|²',
+      'z²',
+      '|z|',
+      '2z',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'z · z̄ = (a + bi)(a - bi) = a² + b² = |z|².',
@@ -73,8 +78,13 @@ export const section58Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: 'Which isometry reverses orientation?',
-    options: ['Translation', 'Rotation', 'Reflection', 'Both rotation and translation'],
-    correctIndex: 2,
+    options: [
+      'Translation',
+      'Reflection',
+      'Rotation',
+      'Both rotation and translation',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Reflection reverses orientation (switches handedness), while rotations and translations preserve it.',
@@ -85,11 +95,11 @@ export const section58Questions: QuizQuestion[] = [
     question: 'What is the general form of an orientation-preserving isometry?',
     options: [
       'f(z) = z + c',
-      'f(z) = e^(iθ)z + c',
       'f(z) = e^(iθ)z̄ + c',
       'f(z) = |z|',
+      'f(z) = e^(iθ)z + c',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Every orientation-preserving isometry can be written as f(z) = e^(iθ)z + c (rotation + translation).',
@@ -100,11 +110,11 @@ export const section58Questions: QuizQuestion[] = [
     question: 'To rotate about a point c (not the origin), we use:',
     options: [
       'f(z) = e^(iθ)z + c',
-      'f(z) = e^(iθ)(z - c) + c',
       'f(z) = e^(iθ)z - c',
+      'f(z) = e^(iθ)(z - c) + c',
       'f(z) = c · e^(iθ)z',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'We translate c to the origin (z - c), rotate (e^(iθ)), then translate back (+ c).',

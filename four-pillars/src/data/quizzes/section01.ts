@@ -1,0 +1,100 @@
+import type { QuizQuestion } from './types';
+
+export const section01Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'To construct an equilateral triangle on segment AB, Euclid uses:',
+    options: [
+      'Two circles centered at A and B with radius AB',
+      'A protractor to measure 60° angles',
+      'Parallel lines',
+      'A single circle centered at the midpoint',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Draw circles centered at A and B, both with radius AB. Their intersection C forms the third vertex.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why are all three sides of the constructed triangle equal?',
+    options: [
+      'CA and CB are radii of circles with radius AB',
+      'The circles are congruent',
+      'Because we used a ruler to measure',
+      'The construction is approximate',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'CA = AB (radius of first circle), CB = AB (radius of second circle), so CA = AB = CB.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'A regular polygon is one whose:',
+    options: [
+      'Sides are all different lengths',
+      'Equal sides meet at equal angles',
+      'Vertices lie on a straight line',
+      'Angles are all right angles',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Regular polygons have equal sides AND equal interior angles.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The regular 17-gon was first constructed by:',
+    options: [
+      'Archimedes',
+      'Gauss',
+      'Euclid',
+      'Newton',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Carl Friedrich Gauss constructed the regular 17-gon in 1796 at age 19.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'A gap in Euclid\'s equilateral triangle proof is:',
+    options: [
+      'He didn\\'t prove AB has positive length',
+      'The compass settings were wrong',
+      'He assumed without proof that the two circles intersect',
+      'He used a protractor',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Euclid provides no axiom guaranteeing that two circles positioned this way must intersect.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'A prime $p$ for which the regular $p$-gon is constructible must have the form:',
+    options: [
+      '$p = 2^n + 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'By the Gauss-Wantzel theorem, only Fermat primes (3, 5, 17, 257, 65537) give constructible p-gons.',
+  },
+      '$p = 2^n
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'By the Gauss-Wantzel theorem, only Fermat primes (3, 5, 17, 257, 65537) give constructible p-gons.',
+  },
+      '$p = n^2 + 1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'By the Gauss-Wantzel theorem, only Fermat primes (3, 5, 17, 257, 65537) give constructible p-gons.',
+  },
+      '$p = 2^{2^m} + 1$ (Fermat prime)',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'By the Gauss-Wantzel theorem, only Fermat primes (3, 5, 17, 257, 65537) give constructible p-gons.',
+  },
+];

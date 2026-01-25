@@ -6,12 +6,28 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The chain rule states that if $f = u \\circ v$, then $f\'(x) = ?$',
     options: [
-      '$u\'(x) \\cdot v\'(x)$',
-      '$u\'(v(x)) \\cdot v\'(x)$',
-      '$u(v\'(x))$',
-      '$v\'(u(x))$'
-    ],
+      '$u\\'(x) \\cdot v\\'(x)
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Chain rule: $(u \\circ v)\'(x) = u\'(v(x)) \\cdot v\'(x)$.',
+  },
+      '$u\\'(v(x)) \\cdot v\\'(x)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Chain rule: $(u \\circ v)\'(x) = u\'(v(x)) \\cdot v\'(x)$.',
+  },
+      '$v\\'(u(x))
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Chain rule: $(u \\circ v)\'(x) = u\'(v(x)) \\cdot v\'(x)$.',
+  },
+      '$u(v\\'(x))
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Chain rule: $(u \\circ v)\'(x) = u\'(v(x)) \\cdot v\'(x)$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Chain rule: $(u \\circ v)\'(x) = u\'(v(x)) \\cdot v\'(x)$.',
   },
@@ -20,12 +36,28 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Leibniz notation, if $z = u(y)$ and $y = v(x)$, then $\\frac{dz}{dx} = ?$',
     options: [
-      '$\\frac{dz}{dy} + \\frac{dy}{dx}$',
-      '$\\frac{dz}{dy} \\cdot \\frac{dy}{dx}$',
-      '$\\frac{dz}{dy} / \\frac{dy}{dx}$',
-      '$\\frac{dy}{dz} \\cdot \\frac{dx}{dy}$'
+      '$\\frac{dz}{dy} + \\frac{dy}{dx}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Chain rule in Leibniz form: $\\frac{dz}{dx} = \\frac{dz}{dy} \\cdot \\frac{dy}{dx}$.',
+  },
+      '$\\frac{dz}{dy} / \\frac{dy}{dx}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Chain rule in Leibniz form: $\\frac{dz}{dx} = \\frac{dz}{dy} \\cdot \\frac{dy}{dx}$.',
+  },
+      '$\\frac{dy}{dz} \\cdot \\frac{dx}{dy}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Chain rule in Leibniz form: $\\frac{dz}{dx} = \\frac{dz}{dy} \\cdot \\frac{dy}{dx}$.',
+  },
+      '$\\frac{dz}{dy} \\cdot \\frac{dy}{dx}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Chain rule in Leibniz form: $\\frac{dz}{dx} = \\frac{dz}{dy} \\cdot \\frac{dy}{dx}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Chain rule in Leibniz form: $\\frac{dz}{dx} = \\frac{dz}{dy} \\cdot \\frac{dy}{dx}$.',
   },
@@ -34,10 +66,26 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f(x) = \\sin(x^2)$, then $f\'(x) = ?$',
     options: [
-      '$\\cos(x^2)$',
-      '$2x\\cos(x^2)$',
-      '$2x\\sin(x^2)$',
-      '$\\cos(2x)$'
+      '$2x\\cos(x^2)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Chain rule: derivative of outside $\\cos(x^2)$ times derivative of inside $2x$.',
+  },
+      '$\\cos(x^2)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Chain rule: derivative of outside $\\cos(x^2)$ times derivative of inside $2x$.',
+  },
+      '$2x\\sin(x^2)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Chain rule: derivative of outside $\\cos(x^2)$ times derivative of inside $2x$.',
+  },
+      '$\\cos(2x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Chain rule: derivative of outside $\\cos(x^2)$ times derivative of inside $2x$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -58,11 +106,11 @@ export const section30Questions: QuizQuestion[] = [
     question: 'The general power rule $(v^n)\' = ?$ (where $v = v(x)$)',
     options: [
       '$nv^{n-1}$',
-      '$nv^{n-1}v\'$',
       '$v^n/n$',
+      '$nv^{n-1}v\'$',
       '$nv\'$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'General power rule: $(v^n)\' = nv^{n-1} \\cdot v\'$.',
   },

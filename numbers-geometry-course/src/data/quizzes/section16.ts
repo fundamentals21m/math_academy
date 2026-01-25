@@ -11,10 +11,10 @@ export const section16Questions: QuizQuestion[] = [
     options: [
       'The unit length',
       'The unit square',
-      'The unit cube',
       'The unit circle',
+      'The unit cube',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Just as area is measured by unit squares, volume is measured by unit cubes (cubes with sides of unit length).',
@@ -24,12 +24,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A parallelepiped is:',
     options: [
-      'A 2D shape with parallel sides',
       'The 3D analog of a parallelogram',
-      'A regular polygon',
+      'A 2D shape with parallel sides',
       'A type of prism with circular base',
+      'A regular polygon',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'A parallelepiped is the three-dimensional figure analogous to the parallelogram, with six faces that are parallelograms.',
@@ -54,12 +54,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How did the Greeks find the volume of a tetrahedron?',
     options: [
+      'By an infinite construction filling it with prisms',
       'By finite cutting and pasting',
       'By using calculus',
-      'By an infinite construction filling it with prisms',
       'They could not find it',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The Greeks were unable to cut and paste the tetrahedron into a cuboid, so they used infinite constructions, like filling it with infinitely many prisms.',
@@ -71,10 +71,10 @@ export const section16Questions: QuizQuestion[] = [
     options: [
       'base × height',
       '$\\frac{1}{2}$ × base × height',
-      '$\\frac{1}{3}$ × base × height',
       '$\\frac{1}{4}$ × base × height',
+      '$\\frac{1}{3}$ × base × height',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The volume of a tetrahedron is (1/3) × base × height, derived using infinite geometric series.',
@@ -86,8 +86,8 @@ export const section16Questions: QuizQuestion[] = [
     options: [
       'The tetrahedron volume formula',
       'A tetrahedron cannot be converted to a cube by finite cuts',
-      'All polyhedra have rational volume',
       'The cube can be cut into tetrahedra',
+      'All polyhedra have rational volume',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -100,8 +100,8 @@ export const section16Questions: QuizQuestion[] = [
     question:
       "In Euclid's proof, what is the combined volume of the first two prisms?",
     options: [
-      '$\\frac{1}{2}$ × base × height',
       '$\\frac{1}{3}$ × base × height',
+      '$\\frac{1}{2}$ × base × height',
       '$\\frac{1}{4}$ × base × height',
       '$\\frac{1}{8}$ × base × height',
     ],
@@ -117,11 +117,11 @@ export const section16Questions: QuizQuestion[] = [
       'Figures like parallelepipeds and prisms have what special property?',
     options: [
       'They have curved surfaces',
-      'They have constant cross section',
       'They cannot be cut into cubes',
+      'They have constant cross section',
       'They have irrational volume',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Parallelepipeds and prisms have constant cross section, which is why their volumes can be found by cut-and-paste methods similar to those used for parallelograms and triangles in 2D.',

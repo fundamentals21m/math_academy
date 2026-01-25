@@ -6,12 +6,12 @@ export const section169Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'VI.24 states that parallelograms described about the diameter of a parallelogram are:',
     options: [
-      'Equal in area to the whole parallelogram',
       'Similar to the whole parallelogram',
+      'Equal in area to the whole parallelogram',
+      'Perpendicular to the diameter',
       'Congruent to each other',
-      'Perpendicular to the diameter'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'VI.24 proves that any parallelogram described about the diameter (diagonal) of another parallelogram is similar to the whole.',
   },
@@ -20,10 +20,10 @@ export const section169Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The key geometric insight of VI.24 is that the diagonal creates:',
     options: [
-      'Perpendicular lines',
       'Equal areas on both sides',
+      'Perpendicular lines',
       'A proportional subdivision that preserves shape',
-      'Parallel segments only'
+      'Parallel segments only',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section169Questions: QuizQuestion[] = [
     question: 'Which previous proposition is essential to proving VI.24?',
     options: [
       'VI.1 (triangles with same height have areas proportional to bases)',
-      'VI.4 (equiangular triangles have proportional sides)',
       'VI.20 (similar polygons divide into similar triangles)',
-      'VI.22 (duplicate ratio of similar figures)'
+      'VI.22 (duplicate ratio of similar figures)',
+      'VI.4 (equiangular triangles have proportional sides)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'VI.24 relies on VI.4, which establishes that equiangular triangles have proportional sides. The diagonal creates equiangular triangles that share angles with the whole parallelogram.',
   },

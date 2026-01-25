@@ -15,12 +15,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $D_{2n}$, if $r$ is a rotation by $2\\pi/n$ and $s$ is a reflection, what is $rs$?',
     options: [
-      'A rotation',
       'A reflection',
+      'A rotation',
+      'Cannot be determined',
       'The identity',
-      'Cannot be determined'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The product of a rotation and a reflection is always a reflection. In $D_{2n}$, reflections have the form $sr^k$ for some $k$.',
   },
@@ -29,12 +29,28 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $D_{2n}$, which relation holds between the generators $r$ (rotation) and $s$ (reflection)?',
     options: [
-      '$rs = sr$',
-      '$srs = r$',
-      '$sr = rs^{-1}$',
-      '$sr = r^{-1}s$'
-    ],
+      '$srs = r
     correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The key relation in $D_{2n}$ is $sr = r^{-1}s$ (equivalently $srs = r^{-1}$). This captures how reflection "reverses" the direction of rotation.',
+  },
+      '$sr = rs^{-1}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The key relation in $D_{2n}$ is $sr = r^{-1}s$ (equivalently $srs = r^{-1}$). This captures how reflection "reverses" the direction of rotation.',
+  },
+      '$rs = sr
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The key relation in $D_{2n}$ is $sr = r^{-1}s$ (equivalently $srs = r^{-1}$). This captures how reflection "reverses" the direction of rotation.',
+  },
+      '$sr = r^{-1}s
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The key relation in $D_{2n}$ is $sr = r^{-1}s$ (equivalently $srs = r^{-1}$). This captures how reflection "reverses" the direction of rotation.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The key relation in $D_{2n}$ is $sr = r^{-1}s$ (equivalently $srs = r^{-1}$). This captures how reflection "reverses" the direction of rotation.',
   },
@@ -51,7 +67,28 @@ export const section04Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'How many reflections are there in $D_{10}$ (symmetries of a regular pentagon)?',
-    options: ['$2$', '$4$', '$5$', '$10$'],
+    options: [
+      '$2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$D_{2n}$ has exactly $n$ reflections. For $D_{10}$ with $n = 5$, there are 5 reflections.',
+  },
+      '$5
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$D_{2n}$ has exactly $n$ reflections. For $D_{10}$ with $n = 5$, there are 5 reflections.',
+  },
+      '$4
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$D_{2n}$ has exactly $n$ reflections. For $D_{10}$ with $n = 5$, there are 5 reflections.',
+  },
+      '$10
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$D_{2n}$ has exactly $n$ reflections. For $D_{10}$ with $n = 5$, there are 5 reflections.',
+  },
+    ],
     correctIndex: 2,
     difficulty: 'easy',
     explanation: '$D_{2n}$ has exactly $n$ reflections. For $D_{10}$ with $n = 5$, there are 5 reflections.',

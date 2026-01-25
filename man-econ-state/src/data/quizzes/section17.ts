@@ -7,11 +7,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'What can praxeology do regarding ethical arguments for intervention?',
     options: [
       'Prove them right or wrong morally',
-      'Expose internal contradictions and show if means achieve stated ends',
       'Nothing—economics is purely descriptive',
-      'Vote on which ethics are correct'
+      'Vote on which ethics are correct',
+      'Expose internal contradictions and show if means achieve stated ends',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Praxeology can critique ethics by showing logical contradictions and whether proposed means actually achieve stated goals.',
   },
@@ -20,12 +20,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is Rothbard\'s critique of egalitarianism?',
     options: [
-      'Inequality is morally good',
       'Equality of outcomes requires unequal treatment and destroys incentives',
+      'Inequality is morally good',
+      'Equality is impossible to define',
       'Some people deserve more',
-      'Equality is impossible to define'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Enforcing equality of outcomes requires treating people unequally and removes the incentive to produce.',
   },
@@ -35,11 +35,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'Why can\'t cost-benefit analysis justify intervention?',
     options: [
       'Benefits are too hard to calculate',
-      'Interpersonal utility comparisons are impossible',
       'Government analysts are biased',
-      'All costs and benefits are equal'
+      'All costs and benefits are equal',
+      'Interpersonal utility comparisons are impossible',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'We cannot compare one person\'s utility loss to another\'s gain—utility is subjective and cannot be measured or compared.',
   },
@@ -63,11 +63,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'According to Rothbard, does democratic approval make intervention legitimate?',
     options: [
       'Yes, democracy reflects the will of the people',
-      'No, rights are not subject to vote',
       'Only if the vote is unanimous',
+      'No, rights are not subject to vote',
       'Only in constitutional democracies'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Rights cannot be voted away. Majority approval doesn\'t make an action right—it just means more people supported it.',
   },
@@ -77,11 +77,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'What ethical framework does Rothbard advocate instead of utilitarianism?',
     options: [
       'Majority rule',
+      'Virtue ethics',
       'Natural rights based on self-ownership',
       'Social contract theory',
-      'Virtue ethics'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Rothbard advocates natural rights derived from self-ownership, which provide clear, consistent rules without utility calculations.',
   },

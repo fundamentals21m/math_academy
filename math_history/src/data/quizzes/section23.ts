@@ -23,11 +23,11 @@ export const section23Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'A cubic equation that reduces to a quadratic',
-      'A cubic equation that arises when solving a quartic',
-      'The original quartic rewritten in cubic form',
       'A cubic equation with no solutions',
+      'The original quartic rewritten in cubic form',
+      'A cubic equation that arises when solving a quartic'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'The resolvent cubic is a cubic equation in an auxiliary variable $y$ that arises when setting up Ferrari\'s method. Solving it allows the quartic to be factored.',
   },
@@ -38,12 +38,12 @@ export const section23Questions: QuizQuestion[] = [
       'An equation is "solvable by radicals" if its roots can be expressed using:',
     difficulty: 'medium',
     options: [
-      'Only addition and subtraction',
-      'Only square roots',
       'Arithmetic operations and nth roots',
-      'Trigonometric functions',
+      'Only square roots',
+      'Only addition and subtraction',
+      'Trigonometric functions'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'Solution by radicals means expressing roots using only the coefficients, the four arithmetic operations (+, -, ×, ÷), and taking nth roots.',
   },
@@ -55,11 +55,11 @@ export const section23Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       '$x^5 = A$',
-      '$x^5 - x = A$',
       '$x^5 - x - A = 0$',
-      '$x^5 + Ax + B = 0$',
+      '$x^5 - x = A$',
+      '$x^5 + Ax + B = 0$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'Bring showed that any quintic can be reduced to $x^5 - x - A = 0$ with only one parameter. Yet even this simplified form cannot be solved by radicals.',
   },
@@ -87,11 +87,11 @@ export const section23Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       '$p(x)$ has no other roots',
-      '$(x - a)$ is a factor of $p(x)$',
-      '$p(x) = (x - a)$',
       '$a$ must be rational',
+      '$p(x) = (x - a)$',
+      '$(x - a)$ is a factor of $p(x)$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Descartes proved that if $p(a) = 0$, then $p(x)$ has $(x - a)$ as a factor: $p(x) = (x - a) \\cdot q(x)$ where $q(x)$ has degree one less than $p(x)$.',
   },

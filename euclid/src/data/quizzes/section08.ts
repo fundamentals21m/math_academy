@@ -6,12 +6,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What triangle congruence criterion does Proposition I.8 establish?',
     options: [
-      'SAS (Side-Angle-Side)',
-      'ASA (Angle-Side-Angle)',
       'SSS (Side-Side-Side)',
+      'ASA (Angle-Side-Angle)',
+      'SAS (Side-Angle-Side)',
       'AAS (Angle-Angle-Side)'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'I.8 proves SSS: if all three sides of one triangle equal the corresponding sides of another, the triangles are congruent.',
   },
@@ -23,7 +23,7 @@ export const section08Questions: QuizQuestion[] = [
       'Proposition I.4',
       'Proposition I.5',
       'Proposition I.7',
-      'Proposition I.6'
+      'Proposition I.6',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -36,10 +36,10 @@ export const section08Questions: QuizQuestion[] = [
     options: [
       'Only the largest angles are equal',
       'The angles opposite equal sides are equal',
+      'Only right angles are equal',
       'All corresponding angles are equal',
-      'Only right angles are equal'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'If three sides are equal, all corresponding angles are equal (full congruence).',
   },

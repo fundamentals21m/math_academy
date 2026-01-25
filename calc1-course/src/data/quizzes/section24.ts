@@ -7,11 +7,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'The Extreme Value Theorem states that a continuous function on a closed interval $[a,b]$:',
     options: [
       'Has no extrema',
-      'Attains its maximum and minimum',
       'Is differentiable',
-      'Is monotonic'
+      'Is monotonic',
+      'Attains its maximum and minimum',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'EVT: continuous functions on closed bounded intervals attain max and min values.',
   },
@@ -21,11 +21,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'Why does $f(x) = 1/x$ on $(0, 1)$ NOT contradict the EVT?',
     options: [
       '$f$ is not continuous',
+      '$f$ is not bounded',
       'The interval $(0, 1)$ is not closed',
       '$f$ has a maximum',
-      '$f$ is not bounded'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The EVT requires a closed interval. $(0,1)$ is open, so EVT doesn\'t apply.',
   },
@@ -34,12 +34,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'On $[0, 2]$, the function $f(x) = x^2 - 2x$ attains its minimum at:',
     options: [
-      '$x = 0$',
       '$x = 1$',
+      '$x = 0$',
       '$x = 2$',
       '$x = -1$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$f\'(x) = 2x - 2 = 0$ gives $x = 1$. Check: $f(0) = 0$, $f(1) = -1$, $f(2) = 0$. Min at $x = 1$.',
   },
@@ -71,12 +71,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The EVT is a consequence of which property of real numbers?',
     options: [
-      'Field axioms',
       'Completeness (least upper bound property)',
+      'Field axioms',
       'Associativity',
-      'Commutativity'
+      'Commutativity',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The EVT relies on the completeness of the real numbers.',
   },

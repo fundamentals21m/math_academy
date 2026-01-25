@@ -6,12 +6,12 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A ring $R$ is Noetherian if and only if:',
     options: [
-      'Every ideal is finitely generated',
-      'Every ideal is principal',
       'Every ideal is maximal',
+      'Every ideal is principal',
+      'Every ideal is finitely generated',
       '$R$ is a field'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A ring is Noetherian if it satisfies the ascending chain condition (ACC) on ideals, which is equivalent to every ideal being finitely generated.',
   },
@@ -20,12 +20,12 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Hilbert Basis Theorem states that:',
     options: [
-      'Every ideal in $\\mathbb{Z}$ is principal',
       'If $R$ is Noetherian, then $R[x]$ is Noetherian',
+      'Every ideal in $\\mathbb{Z}$ is principal',
+      'Every finitely generated ideal is principal',
       'Every Noetherian ring is a PID',
-      'Every finitely generated ideal is principal'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Hilbert Basis Theorem says that if $R$ is Noetherian, then the polynomial ring $R[x]$ is also Noetherian. By induction, $R[x_1, \\ldots, x_n]$ is Noetherian if $R$ is.',
   },
@@ -34,12 +34,24 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT Noetherian?',
     options: [
-      '$\\mathbb{Z}$',
-      '$\\mathbb{Q}[x, y]$',
+      '$\\mathbb{Q}[x, y]
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The ring of all algebraic integers is not Noetherian. For example, $(\\sqrt{2}) \\subset (\\sqrt[4]{2}) \\subset (\\sqrt[8]{2}) \\subset \\cdots$ is a strictly ascending chain.',
+  },
+      '$\\mathbb{Z}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The ring of all algebraic integers is not Noetherian. For example, $(\\sqrt{2}) \\subset (\\sqrt[4]{2}) \\subset (\\sqrt[8]{2}) \\subset \\cdots$ is a strictly ascending chain.',
+  },
+      '$\\mathbb{C}[x]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The ring of all algebraic integers is not Noetherian. For example, $(\\sqrt{2}) \\subset (\\sqrt[4]{2}) \\subset (\\sqrt[8]{2}) \\subset \\cdots$ is a strictly ascending chain.',
+  },
       'The ring of all algebraic integers',
-      '$\\mathbb{C}[x]$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The ring of all algebraic integers is not Noetherian. For example, $(\\sqrt{2}) \\subset (\\sqrt[4]{2}) \\subset (\\sqrt[8]{2}) \\subset \\cdots$ is a strictly ascending chain.',
   },
@@ -48,12 +60,12 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a Noetherian ring, every ideal:',
     options: [
+      'Has a primary decomposition',
       'Is maximal',
-      'Contains a maximal ideal',
       'Is contained in only finitely many maximal ideals',
-      'Has a primary decomposition'
+      'Contains a maximal ideal',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In a Noetherian ring, every ideal has a primary decomposition (the Lasker-Noether theorem). This generalizes the prime factorization of ideals in Dedekind domains.',
   },
@@ -65,7 +77,7 @@ export const section77Questions: QuizQuestion[] = [
       'Not necessarily Noetherian',
       'Noetherian',
       'Noetherian only if $I$ is prime',
-      'Noetherian only if $I$ is maximal'
+      'Noetherian only if $I$ is maximal',
     ],
     correctIndex: 1,
     difficulty: 'easy',

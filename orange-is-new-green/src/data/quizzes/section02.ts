@@ -6,12 +6,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to economic theory, what is the PRIMARY rationale for holding cash?',
     options: [
-      'To earn interest',
       'To anticipate future uncertainty',
+      'To earn interest',
+      'To avoid taxes',
       'To impress others with wealth',
-      'To avoid taxes'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The economic rationale for holding cash and its equivalents is rooted in the anticipation of future uncertainty.',
   },
@@ -20,12 +20,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'At 2% annual inflation, approximately how much purchasing power is lost after 30 years?',
     options: [
-      '20%',
       '33%',
       '45%',
-      '60%'
+      '20%',
+      '60%',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'At 2% annual inflation, cash loses approximately 45% of its purchasing power over 30 years due to compounding effects.',
   },
@@ -37,7 +37,7 @@ export const section02Questions: QuizQuestion[] = [
       'Over $500 billion',
       'Over $1.5 trillion',
       'Over $5.5 trillion',
-      'Over $10 trillion'
+      'Over $10 trillion',
     ],
     correctIndex: 2,
     difficulty: 'easy',

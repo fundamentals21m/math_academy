@@ -6,12 +6,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What major structural element begins with this chapter?',
     options: [
-      'The epilogue',
       'Part Two of the novel, "Either-Or"',
+      'The epilogue',
       'The final section',
       'A flashback sequence'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'This chapter begins Part Two of Atlas Shrugged, titled "Either-Or," named after the logical principle of excluded middle.',
   },
@@ -21,11 +21,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What type of character does "The Man Who Belonged on Earth" introduce or focus on?',
     options: [
       'A politician',
-      'A scientist or inventor',
       'A union leader',
-      'A journalist'
+      'A journalist',
+      'A scientist or inventor',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The chapter focuses on a scientist character, emphasizing the theme of the mind\'s importance in human achievement.',
   },
@@ -35,11 +35,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What does the phrase "belonged on earth" suggest about the character?',
     options: [
       'He should leave for space',
-      'He is a practical, reality-oriented thinker',
       'He is unambitious',
-      'He is a farmer'
+      'He is a farmer',
+      'He is a practical, reality-oriented thinker',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Belonging "on earth" means being oriented toward reality and practical achievement, not lost in mysticism or impractical theory.',
   },
@@ -51,7 +51,7 @@ export const section10Questions: QuizQuestion[] = [
       'As opposed to each other',
       'As separate domains with no connection',
       'As naturally allied in pursuing rational achievement',
-      'As competing for resources'
+      'As competing for resources',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -65,7 +65,7 @@ export const section10Questions: QuizQuestion[] = [
       'Competition from other scientists',
       'Regulations, bureaucracy, and intellectual persecution',
       'Lack of natural talent',
-      'Public adoration'
+      'Public adoration',
     ],
     correctIndex: 1,
     difficulty: 'hard',

@@ -5,7 +5,28 @@ export const section00Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'In the binary field $\\mathbb{B}$, what is $1 + 1$?',
-    options: ['$0$', '$1$', '$2$', '$-1$'],
+    options: [
+      '$1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'In the binary field $\\mathbb{B} = \\{0, 1\\}$, arithmetic is done modulo 2. Therefore, $1 + 1 = 0$.',
+  },
+      '$2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'In the binary field $\\mathbb{B} = \\{0, 1\\}$, arithmetic is done modulo 2. Therefore, $1 + 1 = 0$.',
+  },
+      '$0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'In the binary field $\\mathbb{B} = \\{0, 1\\}$, arithmetic is done modulo 2. Therefore, $1 + 1 = 0$.',
+  },
+      '$-1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'In the binary field $\\mathbb{B} = \\{0, 1\\}$, arithmetic is done modulo 2. Therefore, $1 + 1 = 0$.',
+  },
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     explanation: 'In the binary field $\\mathbb{B} = \\{0, 1\\}$, arithmetic is done modulo 2. Therefore, $1 + 1 = 0$.',
@@ -47,12 +68,28 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a code to correct all sets of $k$ or fewer errors, the minimum distance must be at least:',
     options: [
-      '$2k + 1$',
-      '$k + 1$',
-      '$2k$',
-      '$k$'
+      '$k + 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'To correct $k$ errors, the minimum distance must be at least $2k + 1$. This ensures that a received word with up to $k$ errors is still closer to the original code word than to any other code word.',
+  },
+      '$2k
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'To correct $k$ errors, the minimum distance must be at least $2k + 1$. This ensures that a received word with up to $k$ errors is still closer to the original code word than to any other code word.',
+  },
+      '$k
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'To correct $k$ errors, the minimum distance must be at least $2k + 1$. This ensures that a received word with up to $k$ errors is still closer to the original code word than to any other code word.',
+  },
+      '$2k + 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'To correct $k$ errors, the minimum distance must be at least $2k + 1$. This ensures that a received word with up to $k$ errors is still closer to the original code word than to any other code word.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'To correct $k$ errors, the minimum distance must be at least $2k + 1$. This ensures that a received word with up to $k$ errors is still closer to the original code word than to any other code word.',
   },
@@ -61,12 +98,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT an axiom of a group?',
     options: [
+      'Existence of identity',
       'Commutativity',
       'Associativity',
-      'Existence of identity',
-      'Existence of inverses'
+      'Existence of inverses',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Commutativity is NOT required for a group. A group only requires associativity, an identity element, and inverses. A group that is also commutative is called an Abelian group.',
   },

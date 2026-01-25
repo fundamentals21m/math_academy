@@ -8,10 +8,10 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'They directly attack the Bitcoin network',
       'They require physical access to devices',
-      'They exploit human psychology rather than technical vulnerabilities',
       'They only target large corporations',
+      'They exploit human psychology rather than technical vulnerabilities'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Phishing attacks target the human element through deception and impersonation, bypassing technical security measures.',
   },
@@ -20,12 +20,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which social engineering tactic uses artificial time pressure?',
     options: [
-      'Authority',
       'Greed',
       'Fear',
       'Urgency',
+      'Authority',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Urgency creates artificial time pressure ("Only 2 hours left!") to prevent victims from thinking critically.',
   },

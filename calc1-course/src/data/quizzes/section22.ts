@@ -6,12 +6,28 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Bolzano\'s Theorem (Intermediate Value Theorem) states that if $f$ is continuous on $[a,b]$ and $f(a)$ and $f(b)$ have opposite signs, then:',
     options: [
-      '$f$ has a maximum on $[a,b]$',
-      'There exists $c \\in (a,b)$ with $f(c) = 0$',
-      '$f$ is differentiable on $(a,b)$',
-      '$f(a) = f(b)$'
+      '$f$ has a maximum on $[a,b]
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The IVT guarantees a root when a continuous function changes sign.',
+  },
+      '$f$ is differentiable on $(a,b)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The IVT guarantees a root when a continuous function changes sign.',
+  },
+      '$f(a) = f(b)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The IVT guarantees a root when a continuous function changes sign.',
+  },
+      'There exists $c \\in (a,b)$ with $f(c) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The IVT guarantees a root when a continuous function changes sign.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The IVT guarantees a root when a continuous function changes sign.',
   },
@@ -20,12 +36,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The IVT can be used to show that $x^3 - x - 1 = 0$ has a root in $[1, 2]$ because:',
     options: [
-      '$f(1) = -1 < 0$ and $f(2) = 5 > 0$',
       '$f(1) > 0$ and $f(2) > 0$',
+      '$f(1) = -1 < 0$ and $f(2) = 5 > 0$',
       '$f$ is not continuous',
       'The equation has no real roots'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$f(1) = 1 - 1 - 1 = -1 < 0$ and $f(2) = 8 - 2 - 1 = 5 > 0$. By IVT, there is a root.',
   },
@@ -35,11 +51,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'If $f$ is continuous on $[a,b]$ and $f(a) < k < f(b)$, then:',
     options: [
       'No $c$ exists with $f(c) = k$',
-      'There exists $c \\in (a,b)$ with $f(c) = k$',
       '$f$ must be increasing',
+      'There exists $c \\in (a,b)$ with $f(c) = k$',
       '$k$ must equal zero'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The general IVT: continuous functions take all intermediate values.',
   },
@@ -57,12 +73,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The IVT requires:',
     options: [
-      'Differentiability',
       'Continuity on a closed interval',
+      'Differentiability',
+      'The function to be monotonic',
       'The function to be polynomial',
-      'The function to be monotonic'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The key hypothesis is continuity on a closed interval.',
   },
@@ -71,12 +87,28 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which function on $[0, 1]$ does NOT satisfy the IVT hypothesis?',
     options: [
-      '$f(x) = x^2$',
-      '$f(x) = \\sin x$',
-      '$f(x) = 1/x$',
-      '$f(x) = e^x$'
+      '$f(x) = \\sin x
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$f(x) = 1/x$ is not defined at $x = 0$, so not continuous on $[0,1]$.',
+  },
+      '$f(x) = x^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$f(x) = 1/x$ is not defined at $x = 0$, so not continuous on $[0,1]$.',
+  },
+      '$f(x) = e^x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$f(x) = 1/x$ is not defined at $x = 0$, so not continuous on $[0,1]$.',
+  },
+      '$f(x) = 1/x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$f(x) = 1/x$ is not defined at $x = 0$, so not continuous on $[0,1]$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$f(x) = 1/x$ is not defined at $x = 0$, so not continuous on $[0,1]$.',
   },

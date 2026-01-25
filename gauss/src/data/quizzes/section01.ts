@@ -42,12 +42,16 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\gcd(a, m) = 1$, how many solutions does $ax \\equiv b \\pmod{m}$ have?',
     options: [
+      'Exactly one solution modulo $m
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'When $\\gcd(a, m) = 1$, the congruence has exactly one solution modulo $m$ because $a$ has a multiplicative inverse.',
+  },
       'No solutions',
-      'Exactly one solution modulo $m$',
       'Exactly $m$ solutions',
-      'Infinitely many solutions'
+      'Infinitely many solutions',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'When $\\gcd(a, m) = 1$, the congruence has exactly one solution modulo $m$ because $a$ has a multiplicative inverse.',
   },
@@ -66,11 +70,15 @@ export const section01Questions: QuizQuestion[] = [
     question: 'The Chinese Remainder Theorem guarantees a unique solution modulo $m_1 m_2$ when:',
     options: [
       '$m_1$ and $m_2$ are both prime',
+      '$m_1 + m_2$ is prime',
       '$m_1$ and $m_2$ are coprime (i.e., $\\gcd(m_1, m_2) = 1$)',
-      '$m_1$ divides $m_2$',
-      '$m_1 + m_2$ is prime'
+      '$m_1$ divides $m_2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The CRT requires the moduli to be pairwise coprime. Then the system has a unique solution modulo the product.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The CRT requires the moduli to be pairwise coprime. Then the system has a unique solution modulo the product.',
   },
@@ -88,12 +96,28 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using the Euclidean algorithm, which step comes after $\\gcd(a, b)$ with $a > b$?',
     options: [
-      'Compute $\\gcd(a - b, b)$',
-      'Compute $\\gcd(b, a \\mod b)$',
-      'Compute $\\gcd(a, b - a)$',
-      'Compute $\\gcd(a/b, b)$'
+      'Compute $\\gcd(a - b, b)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Euclidean algorithm replaces $(a, b)$ with $(b, a \\mod b)$ at each step, continuing until the remainder is $0$.',
+  },
+      'Compute $\\gcd(a, b - a)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Euclidean algorithm replaces $(a, b)$ with $(b, a \\mod b)$ at each step, continuing until the remainder is $0$.',
+  },
+      'Compute $\\gcd(a/b, b)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Euclidean algorithm replaces $(a, b)$ with $(b, a \\mod b)$ at each step, continuing until the remainder is $0$.',
+  },
+      'Compute $\\gcd(b, a \\mod b)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Euclidean algorithm replaces $(a, b)$ with $(b, a \\mod b)$ at each step, continuing until the remainder is $0$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Euclidean algorithm replaces $(a, b)$ with $(b, a \\mod b)$ at each step, continuing until the remainder is $0$.',
   },

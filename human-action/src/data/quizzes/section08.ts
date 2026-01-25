@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section08Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Indirect exchange (using money) emerged because:',
+    options: [
+      'Governments mandated it',
+      'Direct barter has a double coincidence of wants problem',
+      'Gold is intrinsically valuable',
+      'Banks needed deposits',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Money arose spontaneously because direct barter requires that each party wants exactly what the other has - the double coincidence of wants problem.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'According to Mises, money is:',
+    options: [
+      'Whatever the government declares to be money',
+      'A generally accepted medium of exchange that emerged from market processes',
+      'Only gold and silver',
+      'Digital currency'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Money is the commonly used medium of exchange that emerged through market evolution as individuals sought the most marketable goods.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The purchasing power of money is determined by:',
+    options: [
+      'Supply and demand for money itself',
+      'Government decree',
+      'The gold content of coins',
+      'International agreements',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Like any good, money\'s value (purchasing power) is determined by supply and demand. More money relative to goods means lower purchasing power.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Inflation, in the Austrian view, is primarily:',
+    options: [
+      'An increase in the money supply',
+      'Rising prices',
+      'Economic growth',
+      'Currency appreciation',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Austrians define inflation as an increase in the money supply. Rising prices are a consequence of inflation, not inflation itself.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Credit expansion through bank lending:',
+    options: [
+      'Creates real wealth',
+      'Has no economic effects',
+      'Benefits everyone equally',
+      'Distorts the interest rate and causes malinvestment',
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Artificially lowering interest rates through credit expansion sends false signals, causing entrepreneurs to undertake investments that cannot be sustained.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The Austrian Business Cycle Theory attributes boom-bust cycles to:',
+    options: [
+      'Random shocks to the economy',
+      'Insufficient government spending',
+      'Credit expansion that artificially lowers interest rates',
+      'Lack of consumer confidence',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The ABCT holds that credit expansion lowers interest rates below the natural rate, triggering unsustainable investments that must later be liquidated.',
+  },
+];

@@ -9,12 +9,32 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The triangle inequality states that for non-collinear points A, B, C:',
     options: [
-      '$d(A, C) = d(A, B) + d(B, C)$',
-      '$d(A, C) > d(A, B) + d(B, C)$',
-      '$d(A, C) < d(A, B) + d(B, C)$',
-      '$d(A, C) \\geq d(A, B) \\cdot d(B, C)$',
+      '$d(A, C) < d(A, B) + d(B, C)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'The triangle inequality states that the direct distance d(A, C) is strictly less than the sum d(A, B) + d(B, C) when A, B, C are not collinear. Going directly is shorter than any detour.',
+  },
+      '$d(A, C) = d(A, B) + d(B, C)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'The triangle inequality states that the direct distance d(A, C) is strictly less than the sum d(A, B) + d(B, C) when A, B, C are not collinear. Going directly is shorter than any detour.',
+  },
+      '$d(A, C) > d(A, B) + d(B, C)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'The triangle inequality states that the direct distance d(A, C) is strictly less than the sum d(A, B) + d(B, C) when A, B, C are not collinear. Going directly is shorter than any detour.',
+  },
+      '$d(A, C) \\geq d(A, B) \\cdot d(B, C)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'The triangle inequality states that the direct distance d(A, C) is strictly less than the sum d(A, B) + d(B, C) when A, B, C are not collinear. Going directly is shorter than any detour.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The triangle inequality states that the direct distance d(A, C) is strictly less than the sum d(A, B) + d(B, C) when A, B, C are not collinear. Going directly is shorter than any detour.',
@@ -39,12 +59,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What technique simplifies the proof of the triangle inequality?',
     options: [
-      'Using complex numbers',
       'Applying isometries to position the triangle conveniently',
+      'Using complex numbers',
       'Assuming the result is true',
       'Using calculus',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'By applying a translation to move B to the origin and possibly a reflection to place A on the x-axis, the calculation becomes much simpler. Isometries preserve distances, so the inequality still holds.',
@@ -55,11 +75,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'When does equality hold in the triangle inequality?',
     options: [
       'When the triangle is equilateral',
-      'When A, B, C are collinear (B is on segment AC)',
       'Never',
       'When the triangle is isosceles',
+      'When A, B, C are collinear (B is on segment AC)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Equality d(A, C) = d(A, B) + d(B, C) holds if and only if the three points are collinear, with B lying on the segment from A to C. Only then is the "detour" not actually a detour.',
@@ -70,11 +90,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'The phrase "a straight line is the shortest distance between two points" expresses:',
     options: [
       'The parallel axiom',
+      'The definition of distance',
       'The triangle inequality',
       'The Pythagorean theorem',
-      'The definition of distance',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'This common saying is an informal statement of the triangle inequality. Any path from A to C via other points is at least as long as the direct path, with equality only for points on the line AC.',
@@ -83,8 +103,13 @@ export const section25Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: 'In Euclid\'s Elements, the triangle inequality appears in which proposition of Book I?',
-    options: ['Proposition 1', 'Proposition 5', 'Proposition 20', 'Proposition 47'],
-    correctIndex: 2,
+    options: [
+      'Proposition 1',
+      'Proposition 5',
+      'Proposition 47',
+      'Proposition 20',
+    ],
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Euclid proves the triangle inequality in Proposition 20 of Book I. His proof is longer because he does not assume the parallel axiom, making the result valid in non-Euclidean geometry too.',
@@ -110,11 +135,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'What property of $\\mathbb{R}$ ensures arc length exists?',
     options: [
       'The Archimedean property',
-      'Completeness (existence of least upper bounds)',
       'The ordering of real numbers',
+      'Completeness (existence of least upper bounds)',
       'The density of rationals',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The triangle inequality gives an upper bound for polygonal approximations to a curve. By completeness of ℝ, a bounded set has a least upper bound. This LUB is the arc length.',

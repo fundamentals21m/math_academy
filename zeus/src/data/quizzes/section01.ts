@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section01Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'numeric',
+    question: 'How many satoshis are in 1 Bitcoin?',
+    correctAnswer: 100000000,
+    numericRange: { min: 0, max: 1000000000, precision: 0 },
+    difficulty: 'easy',
+    explanation: '1 BTC = 100,000,000 satoshis (100 million). A satoshi is the smallest unit of Bitcoin, named after its creator.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is a UTXO?',
+    options: [
+      'A type of cryptocurrency exchange',
+      'A Lightning Network channel',
+      'A Bitcoin mining pool',
+      'An unspent transaction output that represents spendable bitcoin',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'UTXO stands for Unspent Transaction Output. Bitcoin tracks individual chunks of bitcoin rather than account balances. Your wallet balance is the sum of all UTXOs you can spend.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'If you have a 50,000 sat UTXO and pay someone 30,000 sats, what happens?',
+    options: [
+      'Only 30,000 sats are deducted from your balance',
+      'You need to find exact change from multiple UTXOs',
+      'The entire UTXO is consumed and you get change back',
+      'The transaction fails because UTXOs cannot be split',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'When spending, the entire UTXO is consumed. A new UTXO is created for the recipient (30,000 sats) and another for your change (minus fees). Think of it like paying with a $50 bill.',
+  },
+  {
+    id: 4,
+    type: 'text',
+    question: 'What unit are on-chain transaction fees typically measured in?',
+    correctAnswer: 'sat/vB',
+    difficulty: 'hard',
+    explanation: 'On-chain fees are measured in satoshis per virtual byte (sat/vB). The total fee = fee rate (sat/vB) × transaction size (vB).',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Can you derive a private key from a Bitcoin address?',
+    options: [
+      'No, the cryptographic function is one-way',
+      'Yes, addresses and private keys are interchangeable',
+      'Yes, but only with quantum computers',
+      'No, but you can from the public key',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The relationship is one-way: Private Key → Public Key → Address. You cannot reverse this process, which is the cryptographic property that secures Bitcoin.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Which of the following is safe to share publicly?',
+    options: [
+      'Private key',
+      'Bitcoin address',
+      'Seed phrase',
+      'Wallet password',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Bitcoin addresses are safe to share - they are designed to receive payments. Private keys, seed phrases, and passwords should never be shared as they control your funds.',
+  },
+];

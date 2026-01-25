@@ -9,7 +9,7 @@ export const section149Questions: QuizQuestion[] = [
       'They have equal areas',
       'They are congruent',
       'The sides about the equal angles are proportional (they are similar)',
-      'They share a common side'
+      'They share a common side',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section149Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In modern terminology, VI.4 is equivalent to which similarity criterion?',
     options: [
-      'SSS (Side-Side-Side)',
       'SAS (Side-Angle-Side)',
+      'SSS (Side-Side-Side)',
+      'HL (Hypotenuse-Leg)',
       'AA (Angle-Angle) or AAA',
-      'HL (Hypotenuse-Leg)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'VI.4 is the classical proof of AA similarity: if two triangles have two equal angles (hence all three), they are similar.',
   },

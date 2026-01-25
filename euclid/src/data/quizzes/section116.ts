@@ -9,7 +9,7 @@ export const section116Questions: QuizQuestion[] = [
       'By drawing altitudes',
       'By bisecting two adjacent angles',
       'By using the Pythagorean theorem',
-      'By drawing medians'
+      'By drawing medians',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section116Questions: QuizQuestion[] = [
     question: 'What is the key difference between finding the incircle (IV.13) and circumcircle (IV.14) of a regular pentagon?',
     options: [
       'Different center points are found',
-      'Same center, but incircle measures distance to sides; circumcircle to vertices',
       'IV.14 requires the golden ratio; IV.13 does not',
-      'They use completely different methods'
+      'Same center, but incircle measures distance to sides; circumcircle to vertices',
+      'They use completely different methods',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Both constructions find the same center point. The incircle uses the perpendicular distance to sides; the circumcircle uses the distance to vertices.',
   },
@@ -34,12 +34,12 @@ export const section116Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Do IV.13 and IV.14 also work for regular hexagons?',
     options: [
-      'No, only for pentagons',
       'Yes, the method generalizes to all regular polygons',
+      'No, only for pentagons',
       'Only for odd-sided polygons',
-      'Only for polygons with fewer than 6 sides'
+      'Only for polygons with fewer than 6 sides',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The method of bisecting angles to find the center works for any regular polygon. The center is equidistant from all sides and all vertices.',
   },

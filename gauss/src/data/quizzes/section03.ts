@@ -10,12 +10,20 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A quadratic residue modulo $p$ is an integer $a$ such that:',
     options: [
-      '$a$ is divisible by $p$',
-      '$x^2 \\equiv a \\pmod{p}$ has a solution',
-      '$a^2$ is divisible by $p$',
-      '$a$ is a perfect square'
-    ],
+      '$a$ is divisible by $p
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'An integer $a$ (with $p \\nmid a$) is a quadratic residue mod $p$ if $x^2 \\equiv a \\pmod{p}$ has a solution.',
+  },
+      '$x^2 \\equiv a \\pmod{p}$ has a solution',
+      '$a$ is a perfect square',
+      '$a^2$ is divisible by $p
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'An integer $a$ (with $p \\nmid a$) is a quadratic residue mod $p$ if $x^2 \\equiv a \\pmod{p}$ has a solution.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'An integer $a$ (with $p \\nmid a$) is a quadratic residue mod $p$ if $x^2 \\equiv a \\pmod{p}$ has a solution.',
   },
@@ -33,12 +41,28 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For an odd prime $p$, how many quadratic residues are there among $1, 2, \\ldots, p-1$?',
     options: [
-      '$p - 1$',
-      '$(p - 1)/2$',
-      '$p/2$',
-      '$(p + 1)/2$'
-    ],
+      '$p - 1
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Exactly half of the non-zero residues modulo an odd prime are quadratic residues: $(p-1)/2$ of them.',
+  },
+      '$(p - 1)/2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Exactly half of the non-zero residues modulo an odd prime are quadratic residues: $(p-1)/2$ of them.',
+  },
+      '$p/2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Exactly half of the non-zero residues modulo an odd prime are quadratic residues: $(p-1)/2$ of them.',
+  },
+      '$(p + 1)/2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Exactly half of the non-zero residues modulo an odd prime are quadratic residues: $(p-1)/2$ of them.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Exactly half of the non-zero residues modulo an odd prime are quadratic residues: $(p-1)/2$ of them.',
   },
@@ -47,10 +71,26 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Euler's criterion states that $\\left(\\frac{a}{p}\\right) \\equiv$:",
     options: [
-      '$a^p \\pmod{p}$',
-      '$a^{(p-1)/2} \\pmod{p}$',
-      '$a^{(p+1)/2} \\pmod{p}$',
-      '$a^2 \\pmod{p}$'
+      '$a^{(p-1)/2} \\pmod{p}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: "Euler's criterion: $\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}$.",
+  },
+      '$a^p \\pmod{p}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: "Euler's criterion: $\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}$.",
+  },
+      '$a^{(p+1)/2} \\pmod{p}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: "Euler's criterion: $\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}$.",
+  },
+      '$a^2 \\pmod{p}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: "Euler's criterion: $\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}$.",
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -72,8 +112,16 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'Always',
       'Never',
-      'When $p \\equiv 1 \\pmod{4}$',
-      'When $p \\equiv 3 \\pmod{4}$'
+      'When $p \\equiv 3 \\pmod{4}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$-1$ is a QR mod $p$ if and only if $p \\equiv 1 \\pmod{4}$.',
+  },
+      'When $p \\equiv 1 \\pmod{4}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$-1$ is a QR mod $p$ if and only if $p \\equiv 1 \\pmod{4}$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -84,12 +132,24 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Law of Quadratic Reciprocity relates $\\left(\\frac{p}{q}\\right)$ and $\\left(\\frac{q}{p}\\right)$ for distinct odd primes. They are equal unless:',
     options: [
-      'Both $p$ and $q$ are $\\equiv 1 \\pmod{4}$',
-      'Both $p$ and $q$ are $\\equiv 3 \\pmod{4}$',
-      'One is $\\equiv 1$ and the other $\\equiv 3 \\pmod{4}$',
-      '$p + q$ is even'
+      'Both $p$ and $q$ are $\\equiv 1 \\pmod{4}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The symbols are equal unless both $p \\equiv q \\equiv 3 \\pmod{4}$, in which case they are opposite.',
+  },
+      '$p + q$ is even',
+      'Both $p$ and $q$ are $\\equiv 3 \\pmod{4}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The symbols are equal unless both $p \\equiv q \\equiv 3 \\pmod{4}$, in which case they are opposite.',
+  },
+      'One is $\\equiv 1$ and the other $\\equiv 3 \\pmod{4}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The symbols are equal unless both $p \\equiv q \\equiv 3 \\pmod{4}$, in which case they are opposite.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The symbols are equal unless both $p \\equiv q \\equiv 3 \\pmod{4}$, in which case they are opposite.',
   },
@@ -98,12 +158,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When is $2$ a quadratic residue modulo an odd prime $p$?',
     options: [
-      'When $p \\equiv 1 \\pmod{4}$',
       'When $p \\equiv \\pm 1 \\pmod{8}$',
+      'When $p \\equiv 1 \\pmod{4}$',
       'When $p \\equiv \\pm 3 \\pmod{8}$',
       'Always'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: '$2$ is a QR mod $p$ if and only if $p \\equiv \\pm 1 \\pmod{8}$, i.e., $p \\equiv 1$ or $7 \\pmod{8}$.',
   },
@@ -122,11 +182,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'Gauss called the Law of Quadratic Reciprocity the:',
     options: [
       'Fundamental Theorem',
-      'Golden Theorem (Theorema Aureum)',
       'Prime Theorem',
-      'Reciprocal Law'
+      'Reciprocal Law',
+      'Golden Theorem (Theorema Aureum)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Gauss called it the "theorema aureum" (golden theorem) and gave eight different proofs over his lifetime.',
   },

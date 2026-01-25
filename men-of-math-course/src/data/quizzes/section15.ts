@@ -7,11 +7,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Jean-Victor Poncelet made major contributions to which branch of geometry?',
     options: [
       'Euclidean geometry',
-      'Projective geometry',
       'Differential geometry',
-      'Coordinate geometry'
+      'Coordinate geometry',
+      'Projective geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Poncelet is considered one of the founders of modern projective geometry.',
   },
@@ -20,12 +20,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Poncelet developed much of his geometry while:',
     options: [
-      'Teaching at the Sorbonne',
       'A prisoner of war in Russia',
+      'Teaching at the Sorbonne',
       'Working as an engineer in Paris',
-      'Studying under Monge'
+      'Studying under Monge',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Poncelet was captured during Napoleon\'s Russian campaign and developed projective geometry while imprisoned.',
   },
@@ -35,11 +35,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'In projective geometry, parallel lines:',
     options: [
       'Never meet',
-      'Meet at a point at infinity',
       'Are always perpendicular',
-      'Do not exist'
+      'Do not exist',
+      'Meet at a point at infinity',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Projective geometry adds "points at infinity" where parallel lines meet, eliminating the special case of parallelism.',
   },
@@ -50,8 +50,8 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       'Closed curves',
       'Polygons inscribed in conics',
+      'Integration methods',
       'Solid geometry',
-      'Integration methods'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -62,12 +62,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The principle of duality in projective geometry states that:',
     options: [
-      'Every theorem has a dual theorem with points and lines interchanged',
       'Every construction can be done in two ways',
       'Parallel lines have dual perpendicular lines',
-      'Every curve has a dual curve'
+      'Every theorem has a dual theorem with points and lines interchanged',
+      'Every curve has a dual curve',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Duality means every projective theorem has a dual with "point" and "line" swapped throughout.',
   },

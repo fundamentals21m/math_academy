@@ -11,10 +11,10 @@ export const section26Questions: QuizQuestion[] = [
     options: [
       'Its axioms',
       'Its coordinate system',
-      'Its group of isometries',
       'Its dimensionality',
+      'Its group of isometries',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Klein\'s Erlangen Program (1872) proposed that geometry is defined by its group of isometries. Euclidean geometry is everything preserved by Euclidean isometries.',
@@ -33,8 +33,13 @@ export const section26Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'In spherical geometry, what are the "lines"?',
-    options: ['Small circles', 'Great circles', 'Parallels of latitude', 'Meridians only'],
-    correctIndex: 1,
+    options: [
+      'Small circles',
+      'Parallels of latitude',
+      'Great circles',
+      'Meridians only',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'In spherical geometry, the "lines" are great circles—the intersections of the sphere with planes through its center. These are the "equidistant sets" of the spherical reflections.',
@@ -44,12 +49,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a group of transformations?',
     options: [
-      'Any set of transformations',
       'A set closed under composition and inverses',
-      'A finite set of rotations',
+      'Any set of transformations',
       'A set containing only reflections',
+      'A finite set of rotations',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A group of transformations is a set of one-to-one functions that is closed under composition (combining two gives another in the set) and inverses (the reverse of each transformation is also in the set).',
@@ -60,11 +65,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'Why is each reflection its own inverse?',
     options: [
       'Reflections are undefined',
-      'Reflecting twice returns to the original',
       'Reflections preserve distance',
       'Klein defined them that way',
+      'Reflecting twice returns to the original',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Reflecting in the same line twice returns every point to its original position. So the composite of a reflection with itself is the identity function, meaning the reflection is its own inverse.',
@@ -75,11 +80,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'What is the orientation-preserving subgroup?',
     options: [
       'All isometries',
-      'Only translations',
       'Composites of an even number of reflections',
-      'Composites of an odd number of reflections',
+      'Only translations',
+      'Composites of an odd number of reflections'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The orientation-preserving subgroup consists of isometries that are composites of an even number of reflections. This includes rotations and translations, but not single reflections or glide reflections.',
@@ -90,11 +95,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'How do we know that orientation is a real geometric property?',
     options: [
       'Euclid defined it',
-      'The orientation-preserving subgroup differs from the whole group',
       'All isometries preserve it',
-      'It is visible on a clock face',
+      'The orientation-preserving subgroup differs from the whole group',
+      'It is visible on a clock face'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Orientation is a real property because the orientation-preserving subgroup is strictly smaller than the whole isometry group. A reflection maps exactly one line onto itself, while even composites (rotations, translations) have different behavior.',

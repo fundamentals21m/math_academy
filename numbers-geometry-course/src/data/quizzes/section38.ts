@@ -10,11 +10,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'How are cos θ and sin θ defined using the unit circle?',
     options: [
       'As the lengths of sides of a triangle',
-      'As the coordinates of a point at angle θ on the unit circle',
-      'As the area and perimeter of a sector',
       'As roots of a polynomial equation',
+      'As the area and perimeter of a sector',
+      'As the coordinates of a point at angle θ on the unit circle'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'On the unit circle, the point at angle θ has coordinates (cos θ, sin θ). This extends the trigonometric ratios to all real angles.',
@@ -38,8 +38,13 @@ export const section38Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'What is the period of the cosine and sine functions?',
-    options: ['π', '2π', 'π/2', '4π'],
-    correctIndex: 1,
+    options: [
+      'π',
+      'π/2',
+      '2π',
+      '4π',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Both cos and sin have period 2π, meaning cos(θ + 2π) = cos θ and sin(θ + 2π) = sin θ. This corresponds to one complete rotation around the circle.',
@@ -63,8 +68,13 @@ export const section38Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'What is lim(θ→0) sin θ / θ?',
-    options: ['0', '1', 'π', 'Does not exist'],
-    correctIndex: 1,
+    options: [
+      '1',
+      '0',
+      'π',
+      'Does not exist',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'This fundamental limit equals 1. It can be proved by the squeeze theorem using sin θ < θ < tan θ for small positive θ.',
@@ -88,8 +98,13 @@ export const section38Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'If sin θ = 3/5 and θ is in the first quadrant, what is cos θ?',
-    options: ['3/5', '4/5', '5/4', '5/3'],
-    correctIndex: 1,
+    options: [
+      '4/5',
+      '3/5',
+      '5/4',
+      '5/3',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Using cos² θ + sin² θ = 1, we get cos² θ = 1 - 9/25 = 16/25, so cos θ = 4/5 (positive in the first quadrant).',
@@ -100,11 +115,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'Why does the graph of sin lag behind cos by π/2?',
     options: [
       'They are unrelated functions',
-      'Because sin θ = cos(θ - π/2)',
-      'Because of a computational error',
       'They have different periods',
+      'Because of a computational error',
+      'Because sin θ = cos(θ - π/2)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'From the unit circle, sin θ = cos(π/2 - θ) = cos(-(θ - π/2)) = cos(θ - π/2). So the sine wave is the cosine wave shifted right by π/2.',

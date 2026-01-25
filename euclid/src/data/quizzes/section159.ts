@@ -21,11 +21,11 @@ export const section159Questions: QuizQuestion[] = [
     question: 'What does "reciprocally proportional" mean for two parallelograms with sides a,b and c,d?',
     options: [
       'a:c = b:d',
-      'a:c = d:b',
       'a + b = c + d',
+      'a:c = d:b',
       'a × b = c × d'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Reciprocally proportional means a:c = d:b (or equivalently a × b = c × d for equal areas). The sides are "crossed" in the proportion.',
   },
@@ -34,12 +34,12 @@ export const section159Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'VI.14 also proves the converse: if sides are reciprocally proportional, what follows?',
     options: [
-      'The parallelograms are similar',
       'The parallelograms are equal in area',
+      'The parallelograms are similar',
+      'The parallelograms have equal diagonals',
       'The parallelograms have equal perimeters',
-      'The parallelograms have equal diagonals'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The converse states that if parallelograms have one angle equal and reciprocally proportional sides, they are equal in area.',
   },

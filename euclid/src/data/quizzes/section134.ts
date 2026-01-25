@@ -9,7 +9,7 @@ export const section134Questions: QuizQuestion[] = [
       'Scaling changes ratios',
       'A:B = mA:mB for any positive integer m',
       'Only certain scales preserve ratios',
-      'Ratios cannot be scaled'
+      'Ratios cannot be scaled',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section134Questions: QuizQuestion[] = [
     question: 'V.15 means we can "simplify" ratios by:',
     options: [
       'Adding to both terms',
-      'Dividing both terms by the same factor (canceling common factors)',
+      'Ratios cannot be simplified',
       'Subtracting from both terms',
-      'Ratios cannot be simplified'
+      'Dividing both terms by the same factor (canceling common factors)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Since A:B = mA:mB, reversing this gives mA:mB = A:B. Common factors can be canceled.',
   },
@@ -34,12 +34,12 @@ export const section134Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which ratios are all equal by V.15?',
     options: [
-      '2:3, 4:5, 6:7',
       '2:3, 4:6, 6:9',
+      '2:3, 4:5, 6:7',
       '2:3, 3:4, 4:5',
       '1:2, 2:3, 3:4'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '2:3 = 4:6 = 6:9 because 4:6 = 2(2:3) and 6:9 = 3(2:3). All are the same ratio scaled.',
   },

@@ -8,11 +8,11 @@ export const section06Quiz = {
       question: 'An infinite series $\\sum_{n=1}^{\\infty} a_n$ converges if:',
       options: [
         'Each term $a_n$ is small',
-        'The sequence of partial sums $S_N = \\sum_{n=1}^{N} a_n$ converges',
         'The terms alternate in sign',
+        'The sequence of partial sums $S_N = \\sum_{n=1}^{N} a_n$ converges',
         '$a_n \\to 0$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'A series converges if and only if its sequence of partial sums converges to a finite limit.'
     },
@@ -75,11 +75,11 @@ export const section06Quiz = {
       question: 'A telescoping series is one where:',
       options: [
         'Terms grow exponentially',
-        'Consecutive terms cancel leaving only boundary terms',
+        'The sum equals $\\pi$',
         'All terms are positive',
-        'The sum equals $\\pi$'
+        'Consecutive terms cancel leaving only boundary terms'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'In a telescoping series, partial sums simplify due to cancellation of adjacent terms.'
     },
@@ -204,11 +204,11 @@ export const section06Quiz = {
       question: 'The alternating harmonic series $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$:',
       options: [
         'Diverges',
-        'Converges absolutely',
         'Converges conditionally',
+        'Converges absolutely',
         'Oscillates'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'It converges (by the alternating series test) to $\\ln 2$, but $\\sum 1/n$ diverges, so convergence is conditional.'
     },
@@ -227,11 +227,11 @@ export const section06Quiz = {
       question: 'If $\\sum a_n$ converges conditionally, which statement is true?',
       options: [
         '$\\sum |a_n|$ converges',
-        '$\\sum |a_n|$ diverges',
         '$a_n > 0$ for all $n$',
+        '$\\sum |a_n|$ diverges',
         'The series can be rearranged without changing its sum'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Conditional convergence means $\\sum a_n$ converges but $\\sum |a_n|$ diverges.'
     },
@@ -241,11 +241,11 @@ export const section06Quiz = {
       question: 'The Riemann rearrangement theorem states that a conditionally convergent series can be rearranged to:',
       options: [
         'Only converge to its original sum',
-        'Converge to any real number or diverge',
+        'Converge to $0$',
         'Only diverge',
-        'Converge to $0$'
+        'Converge to any real number or diverge'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Any conditionally convergent series can be rearranged to converge to any prescribed real number, or to diverge.'
     },
@@ -254,12 +254,12 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'For an absolutely convergent series, rearranging terms:',
       options: [
-        'May change the sum',
-        'Always changes the sum',
         'Does not change the sum',
+        'Always changes the sum',
+        'May change the sum',
         'Causes divergence'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Absolutely convergent series are unconditionally convergent; any rearrangement gives the same sum.'
     },
@@ -386,10 +386,10 @@ export const section06Quiz = {
       options: [
         'Diverges',
         'Converges conditionally',
-        'Converges absolutely',
-        'Equals $0$'
+        'Equals $0$',
+        'Converges absolutely'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Since $\\sum 1/n^2$ converges, the alternating series converges absolutely.'
     },
@@ -407,12 +407,12 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'The Cauchy criterion for series states that $\\sum a_n$ converges if and only if:',
       options: [
-        '$a_n \\to 0$',
         'For every $\\varepsilon > 0$, there exists $N$ such that $|\\sum_{k=m}^{n} a_k| < \\varepsilon$ for all $n > m > N$',
+        '$a_n \\to 0$',
         '$\\sum |a_n|$ converges',
         'The sequence of partial sums is bounded'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The Cauchy criterion says finite chunks of the series can be made arbitrarily small.'
     }
@@ -433,12 +433,12 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'If $\\sum a_n$ converges and $a_n > 0$, then $\\sum a_n^2$:',
       options: [
-        'Must converge',
         'Must diverge',
+        'Must converge',
         'May converge or diverge',
         'Converges to $(\\sum a_n)^2$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Since $a_n \\to 0$, eventually $a_n < 1$, so $a_n^2 < a_n$. By comparison, $\\sum a_n^2$ converges.'
     },
@@ -466,11 +466,11 @@ export const section06Quiz = {
       question: 'The series $\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{\\sqrt{n}}$ is:',
       options: [
         'Absolutely convergent',
-        'Conditionally convergent',
         'Divergent',
+        'Conditionally convergent',
         'Convergent to $0$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'By the alternating series test, it converges. But $\\sum 1/\\sqrt{n}$ diverges, so convergence is conditional.'
     },
@@ -489,11 +489,11 @@ export const section06Quiz = {
       question: 'The product $(1 + a_1)(1 + a_2)(1 + a_3)\\cdots$ converges if:',
       options: [
         '$a_n \\to 0$',
-        '$\\sum a_n$ converges absolutely',
+        '$\\sum a_n$ converges',
         '$a_n > 0$ for all $n$',
-        '$\\sum a_n$ converges'
+        '$\\sum a_n$ converges absolutely'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'An infinite product $\\prod(1+a_n)$ converges iff $\\sum a_n$ converges absolutely (assuming $a_n > -1$).'
     },
@@ -511,12 +511,12 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'If $a_n > 0$ and $\\lim \\frac{a_{n+1}}{a_n} = 1$, then $\\sum a_n$:',
       options: [
-        'Converges',
-        'Diverges',
         'Cannot be determined from this information alone',
+        'Diverges',
+        'Converges',
         'Converges absolutely'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The ratio test is inconclusive when the limit is $1$. Examples: $1/n$ diverges, $1/n^2$ converges, both have ratio $\\to 1$.'
     },
@@ -557,11 +557,11 @@ export const section06Quiz = {
       question: 'The Weierstrass M-test is used to prove:',
       options: [
         'Convergence of a single series',
-        'Uniform convergence of a series of functions',
         'Divergence of harmonic series',
+        'Uniform convergence of a series of functions',
         'Absolute convergence implies conditional convergence'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The M-test provides a sufficient condition for uniform (and absolute) convergence of function series.'
     },
@@ -572,10 +572,10 @@ export const section06Quiz = {
       options: [
         'Only $S$',
         'Only $S$ or $-S$',
-        'Any real number',
-        'Any positive number'
+        'Any positive number',
+        'Any real number'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Riemann\'s rearrangement theorem: any conditionally convergent series can be rearranged to sum to any real number.'
     },
@@ -584,12 +584,12 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{n^2 + 1}$:',
       options: [
-        'Converges absolutely',
         'Converges conditionally',
+        'Converges absolutely',
         'Diverges',
         'Converges to $0$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'By alternating series test (terms $\\to 0$, decreasing), it converges. But $\\sum n/(n^2+1) \\sim \\sum 1/n$ diverges.'
     },
@@ -630,11 +630,11 @@ export const section06Quiz = {
       question: 'If $\\sum a_n$ diverges and $\\sum b_n$ converges, then $\\sum(a_n + b_n)$:',
       options: [
         'Must converge',
-        'Must diverge',
         'May converge or diverge',
+        'Must diverge',
         'Converges to $\\sum b_n$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'If $\\sum(a_n + b_n)$ converged, then $\\sum a_n = \\sum(a_n + b_n) - \\sum b_n$ would converge, contradiction.'
     },
@@ -645,10 +645,10 @@ export const section06Quiz = {
       options: [
         '$\\pi^2/6$',
         '$(\\pi^2/6)^2$',
-        '$\\pi^4/36$',
-        '$\\pi^4/90$'
+        '$\\pi^4/90$',
+        '$\\pi^4/36$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The double sum factors: $\\left(\\sum 1/m^2\\right)\\left(\\sum 1/n^2\\right) = (\\pi^2/6)^2 = \\pi^4/36$.'
     }

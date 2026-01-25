@@ -9,7 +9,7 @@ export const section19Questions: QuizQuestion[] = [
       'The greater side is opposite the greater angle',
       'The greater angle is opposite the greater side',
       'Equal angles have equal opposite sides',
-      'Right angles are the largest angles'
+      'Right angles are the largest angles',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'What proof technique is used in I.19?',
     options: [
       'Direct construction',
-      'Proof by contradiction',
       'Superposition',
-      'Exhaustion'
+      'Proof by contradiction',
+      'Exhaustion',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'I.19 uses contradiction: assuming the greater angle is not opposite a greater side leads to contradictions using I.5 and I.18.',
   },

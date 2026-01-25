@@ -9,7 +9,7 @@ export const section18Questions: QuizQuestion[] = [
       'To prescribe what goals society should pursue',
       'To show if proposed means achieve stated ends, without judging those ends',
       'To run the economy scientifically',
-      'To advise politicians on legislation'
+      'To advise politicians on legislation',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -21,11 +21,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What is consumer sovereignty?',
     options: [
       'Consumers control the government',
-      'Consumer preferences ultimately direct production through the market',
       'Consumers are always right',
-      'Consumers vote on products'
+      'Consumers vote on products',
+      'Consumer preferences ultimately direct production through the market',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Consumer sovereignty means producers must satisfy consumers to earn profits—spending directs production.',
   },
@@ -34,12 +34,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Rothbard, what does a free society require for law and order?',
     options: [
-      'A strong central government',
       'Voluntary provision of defense and courts by competing private agencies',
+      'A strong central government',
       'No rules at all',
-      'An elected police force'
+      'An elected police force',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Rothbard envisions law and defense provided by competing private agencies, like any other service.',
   },
@@ -49,11 +49,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What monetary system does Rothbard advocate?',
     options: [
       'Central bank-managed fiat currency',
+      'International currency union',
       'Market-chosen commodity money like gold',
       'Cryptocurrency',
-      'International currency union'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Rothbard advocates market-chosen commodity money (historically gold) to prevent inflation and business cycles.',
   },
@@ -63,11 +63,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'According to Rothbard, how can a free society be achieved?',
     options: [
       'Revolution',
-      'Spreading sound economic ideas that change intellectual opinion',
       'Voting for libertarian candidates',
-      'Ignoring the government'
+      'Spreading sound economic ideas that change intellectual opinion',
+      'Ignoring the government',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Government rests on ideological acceptance. Changing minds through education can undermine that acceptance.',
   },
@@ -76,12 +76,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the core message of Man, Economy, and State with Power and Market?',
     options: [
-      'Government intervention is sometimes necessary',
       'The free market coordinates human action efficiently; intervention always fails',
+      'Government intervention is sometimes necessary',
       'Economics is too complex for conclusions',
-      'Mixed economies are optimal'
+      'Mixed economies are optimal',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Rothbard\'s treatise argues that markets coordinate efficiently through prices while all intervention distorts and fails.',
   },

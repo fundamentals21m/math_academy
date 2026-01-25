@@ -23,7 +23,7 @@ export const section29Questions: QuizQuestion[] = [
       'Postulate 1',
       'Postulate 3',
       'Postulate 4',
-      'Postulate 5 (Parallel Postulate)'
+      'Postulate 5 (Parallel Postulate)',
     ],
     correctIndex: 3,
     difficulty: 'hard',

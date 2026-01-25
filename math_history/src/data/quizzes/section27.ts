@@ -23,11 +23,11 @@ export const section27Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       '1',
-      '2',
       '3',
-      '4',
+      '2',
+      '4'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'Conics are degree 2 curves. Their general equation is $ax^2 + bxy + cy^2 + dx + ey + f = 0$. The highest total degree of any term is 2.',
   },
@@ -39,10 +39,10 @@ export const section27Questions: QuizQuestion[] = [
     options: [
       'An inflection point',
       'A node (double point where the curve crosses itself)',
-      'A cusp (sharp point where branches meet tangentially)',
       'No singular point',
+      'A cusp (sharp point where branches meet tangentially)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'The curve $y^2 = x^3$ (the semicubical parabola) has a cusp at the origin. The two branches of the curve meet and share a common tangent line (the x-axis) at that point.',
   },
@@ -52,12 +52,12 @@ export const section27Questions: QuizQuestion[] = [
     question: 'According to Bézout\'s theorem, how many points can two conics intersect in?',
     difficulty: 'medium',
     options: [
-      '2 points',
-      '3 points',
       '4 points',
-      '6 points',
+      '3 points',
+      '2 points',
+      '6 points'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'By Bézout\'s theorem, curves of degrees $m$ and $n$ intersect in $mn$ points (counted with multiplicity, including complex and infinite points). Two conics: $2 \\times 2 = 4$.',
   },

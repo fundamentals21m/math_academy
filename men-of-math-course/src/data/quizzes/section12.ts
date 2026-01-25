@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Laplace is famous for his work on what physical system?',
     options: [
       'Electromagnetism',
-      'Celestial mechanics (the solar system)',
       'Thermodynamics',
-      'Quantum mechanics'
+      'Quantum mechanics',
+      'Celestial mechanics (the solar system)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Laplace\'s Mécanique Céleste analyzed the stability of the solar system using Newtonian mechanics.',
   },
@@ -22,8 +22,8 @@ export const section12Questions: QuizQuestion[] = [
     options: [
       '"God is everywhere in my equations"',
       '"I had no need of that hypothesis"',
+      '"God set the initial conditions"',
       '"That is beyond mathematics"',
-      '"God set the initial conditions"'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -37,7 +37,7 @@ export const section12Questions: QuizQuestion[] = [
       'Position',
       'Complex frequency',
       'Temperature',
-      'Angle'
+      'Angle',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Laplace\'s equation $\\nabla^2 \\phi = 0$ describes:',
     options: [
+      'Steady-state potential fields',
       'Wave propagation',
       'Heat flow',
-      'Steady-state potential fields',
-      'Fluid turbulence'
+      'Fluid turbulence',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Laplace\'s equation describes steady-state situations where there are no sources or sinks.',
   },
@@ -63,11 +63,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Laplace\'s demon is a thought experiment about:',
     options: [
       'Evil in the world',
-      'Perfect deterministic prediction',
       'The heat death of the universe',
+      'Perfect deterministic prediction',
       'Mathematical paradoxes'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Laplace\'s demon could predict all future events given complete knowledge of all positions and velocities.',
   },

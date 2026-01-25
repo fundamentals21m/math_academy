@@ -6,12 +6,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f: E \\to Y$ is continuous at $p \\in E$ if:',
     options: [
-      '$f$ is bounded near $p$',
       'For every $\\varepsilon > 0$, there exists $\\delta > 0$ such that $d_E(x, p) < \\delta$ implies $d_Y(f(x), f(p)) < \\varepsilon$',
+      '$f$ is bounded near $p$',
       '$f(p)$ is the maximum of $f$ on $E$',
       '$f$ is differentiable at $p$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Continuity at $p$: $f(x)$ is close to $f(p)$ whenever $x$ is close to $p$. Unlike limits, we include $x = p$ and require $f(p)$ to be defined.',
   },
@@ -35,11 +35,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'If $f$ and $g$ are continuous at $p$, then $f + g$ is:',
     options: [
       'Discontinuous at $p$',
-      'Continuous at $p$',
       'Continuous only if $f = g$',
+      'Continuous at $p$',
       'Not defined at $p$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Sums (and products, quotients with nonzero denominator) of continuous functions are continuous. This follows from the corresponding limit laws.',
   },
@@ -49,11 +49,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'The composition of continuous functions is:',
     options: [
       'Not necessarily continuous',
-      'Continuous',
+      'Always differentiable',
       'Defined only for polynomial functions',
-      'Always differentiable'
+      'Continuous'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'If $f$ is continuous at $p$ and $g$ is continuous at $f(p)$, then $g \\circ f$ is continuous at $p$. Composition preserves continuity.',
   },

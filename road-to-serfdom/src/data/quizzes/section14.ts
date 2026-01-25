@@ -9,7 +9,7 @@ export const section14Questions: QuizQuestion[] = [
       'An accurate description of modern attitudes',
       'A myth—our generation is MORE governed by economic doctrines while refusing to accept economic constraints',
       'A scientific theory',
-      'A goal to achieve'
+      'A goal to achieve',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,12 +20,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hayek argues that submission to impersonal market forces:',
     options: [
-      'Is a form of slavery',
       'Made possible the growth of civilization; the alternative is submission to arbitrary human power',
+      'Is a form of slavery',
+      'Is unique to capitalism',
       'Should be abolished',
-      'Is unique to capitalism'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Submission to market forces enabled civilization. Unless we destroy complex society, the only alternative is submission to equally uncontrollable but arbitrary human power.',
   },
@@ -35,11 +35,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'Hayek says individual freedom cannot be reconciled with:',
     options: [
       'Any government action',
-      'Permanent subordination to any single purpose—even worthy ones like eliminating unemployment',
       'Democratic voting',
-      'Economic growth'
+      'Permanent subordination to any single purpose—even worthy ones like eliminating unemployment',
+      'Economic growth',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Temporary sacrifice of freedom in war is acceptable; permanent subordination to any single goal, however worthy, is incompatible with freedom.',
   },
@@ -49,11 +49,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'A "recently dispossessed middle class" is dangerous because:',
     options: [
       'They are naturally violent',
-      'It was the decisive factor in totalitarianism on the Continent—short-sighted redistribution could create one in Britain',
       'They oppose democracy',
-      'They support capitalism'
+      'They support capitalism',
+      'It was the decisive factor in totalitarianism on the Continent—short-sighted redistribution could create one in Britain',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The dispossessed middle class was decisive in Continental totalitarianism. Britain lacked this, but unwise redistribution creating such a class would create similar dangers.',
   },
@@ -65,7 +65,7 @@ export const section14Questions: QuizQuestion[] = [
       'The state enforces good behavior',
       'The individual is free to decide for himself—outside individual responsibility there is no moral merit',
       'Religion provides guidance',
-      'Economic equality exists'
+      'Economic equality exists',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -77,11 +77,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'Collectivism is "anti-moral" because:',
     options: [
       'It promotes crime',
-      'Its main promise—relief from responsibility—destroys the conditions in which moral sense can grow',
+      'It promotes selfishness',
       'It bans religion',
-      'It promotes selfishness'
+      'Its main promise—relief from responsibility—destroys the conditions in which moral sense can grow'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A movement promising relief from responsibility cannot but be anti-moral. Freedom to arrange our own lives is the air in which moral sense grows and moral values are created.',
   },

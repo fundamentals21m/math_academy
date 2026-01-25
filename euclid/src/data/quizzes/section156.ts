@@ -7,11 +7,11 @@ export const section156Questions: QuizQuestion[] = [
     question: 'What is a "third proportional" to two given lines A and B?',
     options: [
       'A line C such that A + B = C',
-      'A line C such that A:B = B:C',
       'A line C that bisects A and B',
-      'A line C equal to (A + B)/2'
+      'A line C such that A:B = B:C',
+      'A line C equal to (A + B)/2',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The third proportional C to lines A and B satisfies the proportion A:B = B:C, making B the geometric mean of A and C.',
   },
@@ -20,12 +20,12 @@ export const section156Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If A = 4 and B = 6, VI.11 constructs the third proportional C. What is C?',
     options: [
-      '8',
       '9',
+      '8',
       '10',
-      '12'
+      '12',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'From A:B = B:C, we have 4:6 = 6:C. Cross-multiplying: 4C = 36, so C = 9.',
   },
@@ -35,11 +35,11 @@ export const section156Questions: QuizQuestion[] = [
     question: 'The construction of the third proportional in VI.11 is essential for:',
     options: [
       'Proving the Pythagorean theorem only',
-      'Finding geometric means and solving problems involving continued proportion',
       'Bisecting angles',
-      'Drawing regular hexagons'
+      'Drawing regular hexagons',
+      'Finding geometric means and solving problems involving continued proportion',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'VI.11 is fundamental for problems involving geometric sequences and continued proportions, where each term is the geometric mean of its neighbors.',
   },

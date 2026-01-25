@@ -9,10 +9,10 @@ export const section34Questions: QuizQuestion[] = [
     options: [
       'Addition and subtraction',
       'Algebra and geometry',
-      'Differentiation and integration',
       'Trigonometry and calculus',
+      'Differentiation and integration'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'The Fundamental Theorem of Calculus establishes that differentiation and integration are inverse operations. The derivative of an integral returns the original function, and integrating a derivative gives back the function (up to a constant).',
   },
@@ -23,12 +23,12 @@ export const section34Questions: QuizQuestion[] = [
       'If $F(x) = \\int_a^x f(t)\\,dt$, what is $F\'(x)$?',
     difficulty: 'easy',
     options: [
-      '$0$',
-      '$f(a)$',
       '$f(x)$',
-      '$\\int_a^x f\'(t)\\,dt$',
+      '$f(a)$',
+      '$0$',
+      '$\\int_a^x f\'(t)\\,dt$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'This is the first part of the Fundamental Theorem: the derivative of the integral is the original function. If $F(x) = \\int_a^x f(t)\\,dt$, then $F\'(x) = f(x)$.',
   },
@@ -56,11 +56,11 @@ export const section34Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Integration and differentiation cancel by definition',
-      'The rate of change of area under a curve equals the height of the curve',
       'Derivatives are always equal to the original function',
-      'The integral is just the antiderivative by another name',
+      'The rate of change of area under a curve equals the height of the curve',
+      'The integral is just the antiderivative by another name'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'When $x$ increases by a small amount $h$, the area under the curve increases by approximately $f(x) \\cdot h$ (a thin rectangle). So the rate of change of area is $f(x)$—the height of the curve at that point.',
   },
@@ -82,11 +82,11 @@ export const section34Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'It made geometric proofs obsolete',
-      'It unified tangent problems and area problems into a single theory',
-      'It proved that all functions are differentiable',
       'It eliminated the need for limits',
+      'It proved that all functions are differentiable',
+      'It unified tangent problems and area problems into a single theory'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Before FTC, finding tangents and finding areas were separate problems requiring different techniques. The Fundamental Theorem showed they are inverse operations, unifying them into a coherent theory and making both much easier to compute.',
   },

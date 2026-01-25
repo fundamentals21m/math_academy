@@ -21,11 +21,11 @@ export const section139Questions: QuizQuestion[] = [
     question: 'In V.20, the "perturbed" pattern refers to:',
     options: [
       'Random arrangement',
-      'Terms being matched across sequences via middle terms B and E',
       'All terms being equal',
+      'Terms being matched across sequences via middle terms B and E',
       'No pattern at all'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The perturbed pattern links sequences via middle terms: A:B = D:E and B:C = E:F connect through B and E.',
   },
@@ -34,12 +34,12 @@ export const section139Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'V.20 is preparation for which important theorem?',
     options: [
-      'The Pythagorean theorem',
       'The ex aequali theorems (V.22-23)',
+      'The Pythagorean theorem',
+      'The angle sum theorem',
       'The parallel postulate',
-      'The angle sum theorem'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'V.20 prepares for the ex aequali results, which allow "multiplying" ratios by eliminating middle terms.',
   },

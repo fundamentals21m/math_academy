@@ -9,7 +9,7 @@ export const section140Questions: QuizQuestion[] = [
       'They are the same',
       'V.21 handles "perturbed" order where the second sequence terms are crossed',
       'V.21 only works for integers',
-      'V.21 is about addition, V.20 about subtraction'
+      'V.21 is about addition, V.20 about subtraction',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -21,11 +21,11 @@ export const section140Questions: QuizQuestion[] = [
     question: 'In V.21, if A:B = E:F and B:C = D:E, what can we conclude?',
     options: [
       'Nothing',
-      'A > C implies D > F (and similarly for = and <)',
       'All magnitudes are equal',
-      'The ratios are different'
+      'A > C implies D > F (and similarly for = and <)',
+      'The ratios are different',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Even with the perturbed arrangement, comparing A vs C determines the comparison of D vs F.',
   },
@@ -34,12 +34,12 @@ export const section140Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do we need both V.20 and V.21?',
     options: [
-      'We do not need both',
       'Proportions in proofs may arise in either ordered or perturbed form',
+      'We do not need both',
       'V.21 is for negative magnitudes',
-      'They contradict each other'
+      'They contradict each other',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In geometric proofs, proportions may naturally arise in either pattern. Having both cases covered is essential.',
   },

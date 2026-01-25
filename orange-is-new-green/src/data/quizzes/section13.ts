@@ -7,11 +7,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'What is BlinkBTC\'s "Stablesats" feature?',
     options: [
       'A stablecoin on Ethereum',
-      'Dollar-stable balances using Bitcoin short positions through exchange APIs',
       'A Bitcoin savings account',
-      'A hardware wallet'
+      'Dollar-stable balances using Bitcoin short positions through exchange APIs',
+      'A hardware wallet',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Stablesats allows users to hold dollar-stable balances by executing Bitcoin short positions through exchange APIs, though with custodial trade-offs.',
   },
@@ -34,12 +34,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why can\'t asset managers hold fund assets on centralized exchanges?',
     options: [
-      'Exchanges don\'t allow large deposits',
       'Regulatory constraints prevent it',
-      'It\'s too expensive',
-      'Exchanges are always hacked'
+      'Exchanges don\\'t allow large deposits',
+      'It\\'s too expensive',
+      'Exchanges are always hacked',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Regulatory constraints prevent asset managers from holding fund assets on centralized exchanges, which is why on-chain solutions are needed for institutional products.',
   },

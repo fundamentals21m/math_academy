@@ -6,12 +6,20 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the special case of Berlekamp\'s algorithm for $q = 2$ (binary), the condition $h^2 = h$ in $\\mathbb{F}_2[x]/(f(x))$ simplifies because:',
     options: [
+      '$h^2 = h$ becomes $h^2 - h = h(h-1) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'In any field, $h^2 = h$ means $h(h-1) = 0$. Over $\\mathbb{F}_2$, this factors differently than in larger fields, simplifying the algorithm.',
+  },
       'All elements satisfy $h^2 = h$ in characteristic 2',
-      'The only solutions are $h = 0$ and $h = 1$',
-      '$h^2 = h$ becomes $h^2 - h = h(h-1) = 0$',
-      'All of the above considerations apply'
+      'The only solutions are $h = 0$ and $h = 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'In any field, $h^2 = h$ means $h(h-1) = 0$. Over $\\mathbb{F}_2$, this factors differently than in larger fields, simplifying the algorithm.',
+  },
+      'All of the above considerations apply',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'In any field, $h^2 = h$ means $h(h-1) = 0$. Over $\\mathbb{F}_2$, this factors differently than in larger fields, simplifying the algorithm.',
   },
@@ -20,12 +28,28 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For binary fields, the Berlekamp matrix $Q$ satisfies $Q_{ij} = $ coefficient of $x^j$ in:',
     options: [
-      '$x^i \\pmod{f(x)}$',
-      '$x^{2i} \\pmod{f(x)}$',
-      '$x^{i+j} \\pmod{f(x)}$',
-      '$(x^i)^2 \\pmod{f(x)}$'
-    ],
+      '$x^i \\pmod{f(x)}
     correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'For $q = 2$, the $i$-th row of $Q$ represents $x^{2i} \\pmod{f(x)}$. We compute $Q$ and then find the null space of $Q - I$.',
+  },
+      '$x^{2i} \\pmod{f(x)}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'For $q = 2$, the $i$-th row of $Q$ represents $x^{2i} \\pmod{f(x)}$. We compute $Q$ and then find the null space of $Q - I$.',
+  },
+      '$x^{i+j} \\pmod{f(x)}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'For $q = 2$, the $i$-th row of $Q$ represents $x^{2i} \\pmod{f(x)}$. We compute $Q$ and then find the null space of $Q - I$.',
+  },
+      '$(x^i)^2 \\pmod{f(x)}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'For $q = 2$, the $i$-th row of $Q$ represents $x^{2i} \\pmod{f(x)}$. We compute $Q$ and then find the null space of $Q - I$.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'For $q = 2$, the $i$-th row of $Q$ represents $x^{2i} \\pmod{f(x)}$. We compute $Q$ and then find the null space of $Q - I$.',
   },
@@ -43,12 +67,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The polynomial $x^4 + x^3 + x^2 + x + 1$ over $\\mathbb{F}_2$ is:',
     options: [
-      'Irreducible',
       'A product of two irreducible quadratics',
       'A product of four linear factors',
-      'A product of an irreducible cubic and a linear factor'
+      'Irreducible',
+      'A product of an irreducible cubic and a linear factor',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'This is the 5th cyclotomic polynomial, which is irreducible over $\\mathbb{F}_2$ since the order of 2 modulo 5 is 4.',
   },
@@ -58,11 +82,19 @@ export const section26Questions: QuizQuestion[] = [
     question: 'In binary Berlekamp, after finding $\\gcd(f(x), h(x))$ and $\\gcd(f(x), h(x) + 1)$ for a non-trivial $h$, we get:',
     options: [
       'One trivial and one non-trivial factor',
-      'Two non-trivial factors that multiply to $f(x)$',
-      'The complete factorization of $f(x)$',
-      'Two factors that may need further factoring'
-    ],
+      'Two non-trivial factors that multiply to $f(x)
     correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The GCDs give two factors of $f(x)$, but these may not be irreducible. The algorithm is applied recursively to each factor until complete factorization.',
+  },
+      'The complete factorization of $f(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The GCDs give two factors of $f(x)$, but these may not be irreducible. The algorithm is applied recursively to each factor until complete factorization.',
+  },
+      'Two factors that may need further factoring',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The GCDs give two factors of $f(x)$, but these may not be irreducible. The algorithm is applied recursively to each factor until complete factorization.',
   },

@@ -7,11 +7,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'Cauchy is most famous for his contributions to:',
     options: [
       'Number theory',
-      'Mathematical analysis and rigor',
       'Geometry',
+      'Mathematical analysis and rigor',
       'Probability'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Cauchy established rigorous foundations for calculus and analysis.',
   },
@@ -22,8 +22,8 @@ export const section17Questions: QuizQuestion[] = [
     options: [
       'Increasingly larger',
       'Arbitrarily close to each other',
+      'Prime numbers',
       'Alternately positive and negative',
-      'Prime numbers'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'Cauchy\'s integral formula relates the value of a function inside a contour to:',
     options: [
       'Its derivative',
-      'An integral over the contour',
       'Its Taylor series',
-      'Its zeros'
+      'Its zeros',
+      'An integral over the contour',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Cauchy\'s integral formula expresses $f(z_0)$ as a contour integral, a central result in complex analysis.',
   },
@@ -48,12 +48,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cauchy-Schwarz inequality relates:',
     options: [
-      'Areas of triangles',
       'Inner products and norms',
+      'Areas of triangles',
       'Sums and products',
-      'Derivatives and integrals'
+      'Derivatives and integrals',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Cauchy-Schwarz inequality states $|\\langle u,v \\rangle| \\leq \\|u\\| \\cdot \\|v\\|$.',
   },
@@ -62,12 +62,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cauchy was politically:',
     options: [
-      'A revolutionary',
       'A royalist who went into exile',
+      'A revolutionary',
       'Apolitical',
-      'A republican'
+      'A republican',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Cauchy was a devout royalist who went into voluntary exile when Charles X was overthrown.',
   },

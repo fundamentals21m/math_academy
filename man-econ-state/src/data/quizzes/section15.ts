@@ -6,12 +6,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does taxation differ from voluntary payment according to Rothbard?',
     options: [
-      'Taxation is for public goods only',
       'Taxation is coerced while voluntary payment involves mutual benefit',
+      'Taxation is for public goods only',
       'There is no meaningful difference',
-      'Taxation is always lower'
+      'Taxation is always lower',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Voluntary payments involve expected mutual benefit; taxation is coerced—if it weren\'t, government could simply charge fees.',
   },
@@ -21,11 +21,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'What is tax incidence?',
     options: [
       'How often taxes are collected',
+      'When taxes are due',
       'Who ultimately bears the economic burden of a tax',
       'The tax rate',
-      'When taxes are due'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Tax incidence refers to who actually bears the burden, which may differ from who legally pays the tax.',
   },
@@ -34,12 +34,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who typically bears the burden of employer payroll taxes?',
     options: [
-      'Only employers',
       'Primarily workers through reduced wages',
+      'Only employers',
       'Only consumers',
       'The government'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Though nominally paid by employers, payroll taxes ultimately reduce what employers can pay workers.',
   },
@@ -49,11 +49,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'What is Rothbard\'s critique of progressive taxation?',
     options: [
       'It raises too much revenue',
-      'It penalizes success and destroys capital formation',
       'It is too complicated',
-      'It benefits the middle class too much'
+      'It benefits the middle class too much',
+      'It penalizes success and destroys capital formation',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Progressive taxation punishes those who serve consumers most effectively and destroys capital that could fund investment.',
   },
@@ -65,7 +65,7 @@ export const section15Questions: QuizQuestion[] = [
       'They are scientifically valid',
       'They ignore that wealth is produced, not found',
       'They should be used for all taxes',
-      'They benefit the poor'
+      'They benefit the poor',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -79,7 +79,7 @@ export const section15Questions: QuizQuestion[] = [
       'Yes, sales taxes are neutral',
       'Yes, flat taxes are neutral',
       'No, all taxes distort the market',
-      'Only lump-sum taxes are neutral'
+      'Only lump-sum taxes are neutral',
     ],
     correctIndex: 2,
     difficulty: 'hard',

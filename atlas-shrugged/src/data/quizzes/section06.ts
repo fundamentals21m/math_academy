@@ -6,10 +6,10 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Rand, who are the true "exploiters" in society?',
     options: [
-      'The industrialists and businessmen',
       'The workers in factories',
+      'The industrialists and businessmen',
       'Those who take from producers without giving value in return',
-      'Foreign competitors'
+      'Foreign competitors',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who are the "exploited" according to this chapter\'s perspective?',
     options: [
-      'Factory workers',
       'The productive individuals who create wealth',
+      'Factory workers',
       'Government employees',
-      'The poor and needy'
+      'The poor and needy',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The chapter argues that productive individuals - the creators of wealth - are exploited by those who claim their products through need or political force.',
   },
@@ -34,12 +34,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does the chapter challenge traditional views of exploitation?',
     options: [
-      'By denying that exploitation exists',
       'By reversing who is exploiter and who is exploited',
+      'By denying that exploitation exists',
       'By blaming foreign countries',
-      'By focusing only on government exploitation'
+      'By focusing only on government exploitation',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Rand reverses the conventional view: instead of capitalists exploiting workers, it is the non-producers who exploit the producers.',
   },
@@ -50,8 +50,8 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'Physical force alone',
       'Moral guilt and the altruist code',
+      'Natural scarcity of resources',
       'Superior intelligence of exploiters',
-      'Natural scarcity of resources'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -62,10 +62,10 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What would happen if producers refused to be exploited, according to Rand?',
     options: [
-      'Society would become more equal',
       'The exploiters would find other victims',
+      'Society would become more equal',
       'The parasitical system would collapse',
-      'Government would restore order'
+      'Government would restore order',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -77,11 +77,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What philosophical claim underlies the chapter\'s view of exploitation?',
     options: [
       'Wealth is fixed and must be redistributed',
-      'Wealth is created by individual minds and rightfully belongs to creators',
       'All property is theft',
-      'The state should own all means of production'
+      'The state should own all means of production',
+      'Wealth is created by individual minds and rightfully belongs to creators',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The chapter rests on the premise that wealth is created by individual rational effort and therefore rightfully belongs to those who create it.',
   },

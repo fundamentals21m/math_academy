@@ -20,11 +20,11 @@ export const section42Questions: QuizQuestion[] = [
     question: 'When do two sets have the same cardinality?',
     options: [
       'When they have the same number of elements',
-      'When there exists a bijection (one-to-one correspondence) between them',
       'When one is a subset of the other',
+      'When there exists a bijection (one-to-one correspondence) between them',
       'When they are equal',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Two sets A and B have the same cardinality if and only if there exists a one-to-one and onto function (bijection) f: A → B. This works for both finite and infinite sets.',
@@ -34,12 +34,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does ℵ₀ (aleph-null) represent?',
     options: [
-      'The cardinality of the real numbers',
       'The cardinality of the natural numbers',
+      'The cardinality of the real numbers',
       'The smallest cardinal',
       'The cardinality of the power set of ℕ',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'ℵ₀ (aleph-null) is the cardinality of the natural numbers ℕ. Sets with this cardinality are called "countably infinite" or just "countable."',
@@ -50,11 +50,11 @@ export const section42Questions: QuizQuestion[] = [
     question: 'What does Galileo\'s Theorem state?',
     options: [
       'All infinite sets have the same cardinality',
-      'Any infinite subset of a countable set is countable',
       'The power set is always larger',
       'ℕ and ℝ have different cardinalities',
+      'Any infinite subset of a countable set is countable',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Galileo\'s Theorem states that if a set S has cardinality ℵ₀, then any infinite subset of S also has cardinality ℵ₀. This might suggest there\'s only one infinity, but Cantor proved otherwise.',
@@ -63,8 +63,13 @@ export const section42Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'How many elements does the power set of an n-element set have?',
-    options: ['n', 'n²', '2n', '2ⁿ'],
-    correctIndex: 3,
+    options: [
+      'n',
+      '2ⁿ',
+      'n²',
+      '2n',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The power set of an n-element set has 2ⁿ elements. This is because each element can either be included or excluded from a subset, giving 2 choices per element.',
@@ -75,11 +80,11 @@ export const section42Questions: QuizQuestion[] = [
     question: 'What does Cantor\'s Theorem state?',
     options: [
       'All infinite sets are countable',
-      'Any set A has lower cardinality than its power set P(A)',
-      'The natural numbers are the smallest infinite set',
       'There are only countably many infinities',
+      'The natural numbers are the smallest infinite set',
+      'Any set A has lower cardinality than its power set P(A)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Cantor\'s Theorem states that |A| < |P(A)| for any set A. This is proved using the diagonal argument: assuming a bijection exists leads to a contradiction.',
@@ -89,8 +94,8 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Continuum Hypothesis?',
     options: [
-      'There are infinitely many infinities',
       'ℵ₀ is the smallest infinity',
+      'There are infinitely many infinities',
       'There is no cardinality strictly between ℵ₀ and 2^ℵ₀',
       'The real numbers are uncountable',
     ],
@@ -106,10 +111,10 @@ export const section42Questions: QuizQuestion[] = [
     options: [
       'Cantor alone',
       'Hilbert and Russell',
-      'Gödel and Cohen',
       'Dedekind and Peano',
+      'Gödel and Cohen',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'In 1940, Gödel showed the Continuum Hypothesis is consistent with set theory axioms. In 1963, Cohen showed its negation is also consistent. Together, this proves it\'s independent.',
@@ -119,12 +124,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What technique is used to prove Cantor\'s Theorem?',
     options: [
-      'Mathematical induction',
       'The diagonal argument',
+      'Mathematical induction',
       'Proof by exhaustion',
       'The pigeonhole principle',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Cantor\'s Theorem is proved using the diagonal argument: assuming a bijection f: A → P(A) exists, we construct the set S = {x ∈ A | x ∉ f(x)}, which leads to a contradiction.',

@@ -6,12 +6,28 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A BCH code is designed to correct up to $t$ errors. Its generator polynomial is the LCM of the minimal polynomials of:',
     options: [
-      '$\\alpha, \\alpha^2, \\ldots, \\alpha^t$',
-      '$\\alpha, \\alpha^2, \\ldots, \\alpha^{2t}$',
-      '$\\alpha^2, \\alpha^4, \\ldots, \\alpha^{2t}$',
-      '$1, \\alpha, \\alpha^2, \\ldots, \\alpha^{t-1}$'
+      '$\\alpha, \\alpha^2, \\ldots, \\alpha^t
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For a $t$-error-correcting BCH code, the generator polynomial is the LCM of minimal polynomials of $\\alpha, \\alpha^2, \\ldots, \\alpha^{2t}$, where $\\alpha$ is a primitive $n$-th root of unity.',
+  },
+      '$\\alpha^2, \\alpha^4, \\ldots, \\alpha^{2t}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a $t$-error-correcting BCH code, the generator polynomial is the LCM of minimal polynomials of $\\alpha, \\alpha^2, \\ldots, \\alpha^{2t}$, where $\\alpha$ is a primitive $n$-th root of unity.',
+  },
+      '$\\alpha, \\alpha^2, \\ldots, \\alpha^{2t}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a $t$-error-correcting BCH code, the generator polynomial is the LCM of minimal polynomials of $\\alpha, \\alpha^2, \\ldots, \\alpha^{2t}$, where $\\alpha$ is a primitive $n$-th root of unity.',
+  },
+      '$1, \\alpha, \\alpha^2, \\ldots, \\alpha^{t-1}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a $t$-error-correcting BCH code, the generator polynomial is the LCM of minimal polynomials of $\\alpha, \\alpha^2, \\ldots, \\alpha^{2t}$, where $\\alpha$ is a primitive $n$-th root of unity.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'For a $t$-error-correcting BCH code, the generator polynomial is the LCM of minimal polynomials of $\\alpha, \\alpha^2, \\ldots, \\alpha^{2t}$, where $\\alpha$ is a primitive $n$-th root of unity.',
   },
@@ -20,10 +36,26 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The binary Hamming code of length $n = 2^m - 1$ can be viewed as a cyclic code. Its generator polynomial is:',
     options: [
-      'Any irreducible polynomial of degree $m$',
-      'A primitive polynomial of degree $m$',
-      'The polynomial $x^m - 1$',
-      'The polynomial $(x^n - 1)/(x - 1)$'
+      'Any irreducible polynomial of degree $m
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The generator polynomial of the cyclic Hamming code is a primitive polynomial of degree $m$, which is the minimal polynomial of a primitive element $\\alpha$ of $\\mathbb{F}_{2^m}$.',
+  },
+      'The polynomial $x^m - 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The generator polynomial of the cyclic Hamming code is a primitive polynomial of degree $m$, which is the minimal polynomial of a primitive element $\\alpha$ of $\\mathbb{F}_{2^m}$.',
+  },
+      'The polynomial $(x^n - 1)/(x - 1)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The generator polynomial of the cyclic Hamming code is a primitive polynomial of degree $m$, which is the minimal polynomial of a primitive element $\\alpha$ of $\\mathbb{F}_{2^m}$.',
+  },
+      'A primitive polynomial of degree $m
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The generator polynomial of the cyclic Hamming code is a primitive polynomial of degree $m$, which is the minimal polynomial of a primitive element $\\alpha$ of $\\mathbb{F}_{2^m}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -43,12 +75,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the binary Hamming code $[7, 4, 3]$ as a cyclic code, what is the relationship between the code and BCH codes?',
     options: [
+      'It is not a BCH code',
       'It is a 1-error-correcting BCH code',
       'It is a 2-error-correcting BCH code',
-      'It is not a BCH code',
-      'It is a 3-error-correcting BCH code'
+      'It is a 3-error-correcting BCH code',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The $[7, 4, 3]$ Hamming code is the simplest BCH code: a 1-error-correcting BCH code. Its generator polynomial is the minimal polynomial of $\\alpha$, a primitive 7th root of unity.',
   },
@@ -66,12 +98,28 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The designed distance $\\delta$ of a BCH code with consecutive roots $\\alpha^b, \\alpha^{b+1}, \\ldots, \\alpha^{b+\\delta-2}$ is:',
     options: [
-      '$\\delta - 1$',
-      '$\\delta$',
-      '$\\delta + 1$',
-      '$2\\delta - 1$'
+      '$\\delta
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The BCH bound states that if $g(x)$ has $\\delta - 1$ consecutive powers of $\\alpha$ as roots, then the minimum distance $d \\geq \\delta$. This $\\delta$ is called the designed distance.',
+  },
+      '$\\delta - 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The BCH bound states that if $g(x)$ has $\\delta - 1$ consecutive powers of $\\alpha$ as roots, then the minimum distance $d \\geq \\delta$. This $\\delta$ is called the designed distance.',
+  },
+      '$2\\delta - 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The BCH bound states that if $g(x)$ has $\\delta - 1$ consecutive powers of $\\alpha$ as roots, then the minimum distance $d \\geq \\delta$. This $\\delta$ is called the designed distance.',
+  },
+      '$\\delta + 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The BCH bound states that if $g(x)$ has $\\delta - 1$ consecutive powers of $\\alpha$ as roots, then the minimum distance $d \\geq \\delta$. This $\\delta$ is called the designed distance.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The BCH bound states that if $g(x)$ has $\\delta - 1$ consecutive powers of $\\alpha$ as roots, then the minimum distance $d \\geq \\delta$. This $\\delta$ is called the designed distance.',
   },

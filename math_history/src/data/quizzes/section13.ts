@@ -9,10 +9,10 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'Yes, because 7 is prime',
       'Yes, because 6 and 9 are both positive',
-      'No, because $\\gcd(6, 9) = 3$ does not divide 7',
       'No, because 7 is odd',
+      'No, because $\\gcd(6, 9) = 3$ does not divide 7'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'A linear Diophantine equation $ax + by = c$ has solutions if and only if $\\gcd(a, b)$ divides $c$. Here $\\gcd(6, 9) = 3$, which does not divide 7, so no solutions exist.',
   },
@@ -78,10 +78,10 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'Euler in 1770',
       'Kummer in 1850',
-      'Fermat in 1637',
       'Wiles in 1995',
+      'Fermat in 1637'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     explanation:
       'Andrew Wiles proved Fermat\'s Last Theorem in 1995, 358 years after Fermat\'s original claim. The proof used modern techniques involving elliptic curves and modular forms.',
   },

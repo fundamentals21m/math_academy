@@ -26,11 +26,11 @@ export const section43Questions: QuizQuestion[] = [
       'The simplest additive functions from ℝ to ℝ are f(x) = kx. Why doesn\'t this help for the Dehn invariant?',
     options: [
       'They are too complicated',
-      'If f(π) = 0, then k = 0, giving only the zero function',
       'They do help directly',
+      'If f(π) = 0, then k = 0, giving only the zero function',
       'They are not continuous',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'For the Dehn invariant we need f(π) = 0. If f(x) = kx, then kπ = 0 implies k = 0, so f is identically zero—not useful!',
@@ -40,12 +40,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does "rationally independent" mean for a set of numbers?',
     options: [
-      'They are all irrational',
       'No nontrivial rational linear combination equals zero',
+      'They are all irrational',
       'They have no common factors',
       'They are all independent random variables',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Numbers β₁, ..., βₙ are rationally independent if r₁β₁ + ... + rₙβₙ = 0 (with rational rᵢ) implies all rᵢ = 0.',
@@ -55,12 +55,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a "basis over ℚ" for a finite set S of reals?',
     options: [
-      'The smallest element of S',
       'A set of rationally independent numbers that generate S via rational combinations',
-      'The average of S',
+      'The smallest element of S',
       'The GCD of elements of S',
+      'The average of S',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'A basis over ℚ for S is a rationally independent set {β₁, ..., βₙ} such that every element of S is a rational combination of the βᵢ.',
@@ -71,12 +71,12 @@ export const section43Questions: QuizQuestion[] = [
     question:
       'If α and π are rationally independent, what can we say about l ⊗ α?',
     options: [
-      'It equals 0',
       'It equals l × α',
-      'It is nonzero whenever l ≠ 0',
+      'It equals 0',
       'It depends on the cube',
+      'It is nonzero whenever l ≠ 0',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Rational Independence Theorem: if α and π are rationally independent, then l ⊗ α = 0 only if l = 0.',
@@ -88,11 +88,11 @@ export const section43Questions: QuizQuestion[] = [
       'Can a √2 × (1/√2) rectangle be converted to a 1 × 1 square by horizontal and vertical cuts?',
     options: [
       'Yes, because they have the same area',
-      'No, because √2 and 1 are rationally independent',
       'Yes, with exactly 4 cuts',
+      'No, because √2 and 1 are rationally independent',
       'It depends on the starting orientation',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Though they have equal area, the tensor √2 ⊗ (1/√2) ≠ 1 ⊗ 1 in ℝ ⊗ ℝ because √2 and 1 are rationally independent.',
@@ -104,11 +104,11 @@ export const section43Questions: QuizQuestion[] = [
       'Why is the Rational Independence Theorem crucial for Hilbert\'s Third Problem?',
     options: [
       'It calculates volumes',
-      'It links number theory (rational independence) to geometry (equidecomposability)',
       'It proves all polyhedra are equidecomposable',
       'It defines the tetrahedron',
+      'It links number theory (rational independence) to geometry (equidecomposability)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The theorem bridges number theory and geometry: if the tetrahedron\'s dihedral angle is rationally independent of π, its Dehn invariant is nonzero.',
@@ -121,8 +121,8 @@ export const section43Questions: QuizQuestion[] = [
     options: [
       'All finite sets are countable',
       'We can select rationally independent elements one at a time',
-      'Finite sets have finitely many subsets',
       'The set must contain π',
+      'Finite sets have finitely many subsets',
     ],
     correctIndex: 1,
     difficulty: 'medium',

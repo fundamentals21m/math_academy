@@ -36,11 +36,11 @@ export const section12Quiz = {
       question: 'The second-order Taylor polynomial of $f$ at $a$ is:',
       options: [
         '$f(a) + f\'(a)(x-a)$',
-        '$f(a) + f\'(a)(x-a) + \\frac{f\'\'(a)}{2}(x-a)^2$',
         '$f\'\'(a)(x-a)^2$',
+        '$f(a) + f\'(a)(x-a) + \\frac{f\'\'(a)}{2}(x-a)^2$',
         '$f(a) + f\'\'(a)$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The quadratic Taylor polynomial includes terms up to $(x-a)^2$.'
     },
@@ -49,12 +49,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'L\'Hôpital\'s rule is used to evaluate limits of the form:',
       options: [
-        '$0/0$ or $\\infty/\\infty$',
+        '$\\infty - \\infty$ directly',
         'Any limit',
         '$1/0$',
-        '$\\infty - \\infty$ directly'
+        '$0/0$ or $\\infty/\\infty$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'L\'Hôpital\'s rule applies to indeterminate forms $0/0$ or $\\infty/\\infty$.'
     },
@@ -100,11 +100,11 @@ export const section12Quiz = {
       question: 'The Maclaurin series is a Taylor series centered at:',
       options: [
         '$x = 1$',
-        '$x = 0$',
         '$x = -1$',
+        '$x = 0$',
         'Any point'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Maclaurin series is the special case of Taylor series with $a = 0$.'
     },
@@ -114,11 +114,11 @@ export const section12Quiz = {
       question: 'The inverse function theorem requires that at point $a$:',
       options: [
         '$f(a) = 0$',
-        '$f\'(a) \\neq 0$',
+        '$f\'\'(a) = 0$',
         '$f\'(a) = 0$',
-        '$f\'\'(a) = 0$'
+        '$f\'(a) \\neq 0$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Non-zero derivative ensures local invertibility.'
     },
@@ -127,12 +127,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is invertible with $f\'(a) \\neq 0$, then $(f^{-1})\'(f(a)) = $:',
       options: [
-        '$f\'(a)$',
         '$1/f\'(a)$',
+        '$f\'(a)$',
         '$-f\'(a)$',
         '$f\'(f(a))$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The derivative of the inverse is the reciprocal of the derivative.'
     },
@@ -156,11 +156,11 @@ export const section12Quiz = {
       question: 'The error in Taylor approximation is given by the:',
       options: [
         'First term',
-        'Remainder term',
         'Constant term',
+        'Remainder term',
         'Leading coefficient'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The remainder $R_n(x)$ measures the error of the $n$th degree approximation.'
     },
@@ -178,11 +178,11 @@ export const section12Quiz = {
       question: 'L\'Hôpital\'s rule may need to be applied:',
       options: [
         'Exactly once',
-        'Multiple times if the result is still indeterminate',
+        'Only to polynomials',
         'Never more than twice',
-        'Only to polynomials'
+        'Multiple times if the result is still indeterminate'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'If $\\lim f\'/g\'$ is still indeterminate, apply the rule again.'
     },
@@ -220,11 +220,11 @@ export const section12Quiz = {
       question: 'For $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$, L\'Hôpital gives:',
       options: [
         '$0$',
-        '$1/2$',
         '$1$',
+        '$1/2$',
         '$\\infty$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'First: $\\frac{\\sin x}{2x}$, still $0/0$. Second: $\\frac{\\cos x}{2} \\to 1/2$.'
     },
@@ -234,11 +234,11 @@ export const section12Quiz = {
       question: 'The Taylor polynomial is the unique polynomial of degree $\\leq n$ that:',
       options: [
         'Passes through $(a, f(a))$',
-        'Has the same derivatives as $f$ at $a$ up to order $n$',
+        'Is always positive',
         'Minimizes the error',
-        'Is always positive'
+        'Has the same derivatives as $f$ at $a$ up to order $n$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Taylor polynomial matches $f$ and its first $n$ derivatives at $a$.'
     },
@@ -255,12 +255,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The coefficient of $(x-a)^n$ in the Taylor series is:',
       options: [
-        '$f^{(n)}(a)$',
         '$\\frac{f^{(n)}(a)}{n!}$',
+        '$f^{(n)}(a)$',
         '$n! f^{(n)}(a)$',
         '$f(a)^n$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The coefficient is $f^{(n)}(a)/n!$ in the Taylor series.'
     }
@@ -286,12 +286,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The Cauchy remainder formula for Taylor\'s theorem is:',
       options: [
-        '$\\frac{f^{(n+1)}(c)}{n!}(x-c)^n(x-a)$',
-        '$\\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$',
         '$f^{(n)}(a)(x-a)^n$',
+        '$\\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$',
+        '$\\frac{f^{(n+1)}(c)}{n!}(x-c)^n(x-a)$',
         'Does not exist'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Cauchy form: $R_n = \\frac{f^{(n+1)}(c)}{n!}(x-c)^n(x-a)$ for some $c$ between $a$ and $x$.'
     },
@@ -308,12 +308,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'To evaluate $\\lim_{x \\to 0^+} x \\ln x$ using L\'Hôpital:',
       options: [
-        'Write as $\\frac{\\ln x}{1/x}$ and apply the rule',
+        'Use squeeze theorem',
         'Apply directly',
         'The limit does not exist',
-        'Use squeeze theorem'
+        'Write as $\\frac{\\ln x}{1/x}$ and apply the rule'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Convert $x \\ln x = \\frac{\\ln x}{1/x}$ (form $-\\infty/\\infty$), then apply L\'Hôpital.'
     },
@@ -322,12 +322,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: '$\\lim_{x \\to 0^+} x \\ln x = $:',
       options: [
-        '$-\\infty$',
         '$0$',
+        '$-\\infty$',
         '$1$',
         '$\\infty$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Via L\'Hôpital: $\\frac{\\ln x}{1/x} \\to \\frac{1/x}{-1/x^2} = -x \\to 0$.'
     },
@@ -336,12 +336,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'For $\\lim_{x \\to \\infty} x^{1/x}$ (form $\\infty^0$):',
       options: [
-        'Write as $e^{\\ln(x)/x}$ and find $\\lim \\ln(x)/x$',
         'The limit is $\\infty$',
+        'Write as $e^{\\ln(x)/x}$ and find $\\lim \\ln(x)/x$',
         'The limit is $0$',
         'L\'Hôpital cannot be used'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: '$x^{1/x} = e^{\\ln x / x}$. Since $\\ln x / x \\to 0$ (L\'Hôpital), limit is $e^0 = 1$.'
     },
@@ -351,11 +351,11 @@ export const section12Quiz = {
       question: 'The second-order Taylor polynomial of $\\cos x$ at $0$ is:',
       options: [
         '$1$',
-        '$1 - x^2/2$',
         '$1 - x^2$',
+        '$1 - x^2/2$',
         '$1 + x^2/2$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: '$\\cos x = 1 - x^2/2! + \\cdots = 1 - x^2/2 + O(x^4)$.'
     },
@@ -365,11 +365,11 @@ export const section12Quiz = {
       question: 'Using Taylor series, $\\lim_{x \\to 0} \\frac{\\sin x - x}{x^3} = $:',
       options: [
         '$0$',
-        '$-1/6$',
+        '$-1$',
         '$1/6$',
-        '$-1$'
+        '$-1/6$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: '$\\sin x = x - x^3/6 + O(x^5)$. So $(\\sin x - x)/x^3 \\to -1/6$.'
     },
@@ -378,12 +378,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'Newton\'s method converges quadratically near a simple root, meaning:',
       options: [
-        'Error halves each iteration',
         'Error squares each iteration (roughly)',
+        'Error halves each iteration',
         'Error is constant',
         'Convergence is linear'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Quadratic convergence: $|e_{n+1}| \\approx C|e_n|^2$, so errors square (roughly).'
     },
@@ -400,12 +400,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The binomial series $(1+x)^\\alpha$ for general $\\alpha$ is:',
       options: [
-        '$\\sum_{n=0}^{\\infty} \\binom{\\alpha}{n} x^n$ where $\\binom{\\alpha}{n} = \\frac{\\alpha(\\alpha-1)\\cdots(\\alpha-n+1)}{n!}$',
         '$\\sum_{n=0}^{\\infty} x^n$',
+        '$\\sum_{n=0}^{\\infty} \\binom{\\alpha}{n} x^n$ where $\\binom{\\alpha}{n} = \\frac{\\alpha(\\alpha-1)\\cdots(\\alpha-n+1)}{n!}$',
         '$(1+x)^n$ exactly',
         'Only valid for integer $\\alpha$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'The generalized binomial series uses generalized binomial coefficients.'
     },
@@ -415,11 +415,11 @@ export const section12Quiz = {
       question: 'Using L\'Hôpital, $\\lim_{x \\to 0} \\frac{\\tan x - x}{x^3} = $:',
       options: [
         '$0$',
-        '$1/3$',
         '$1$',
+        '$1/3$',
         '$\\infty$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: '$\\tan x = x + x^3/3 + O(x^5)$. So $(\\tan x - x)/x^3 \\to 1/3$.'
     },
@@ -430,10 +430,10 @@ export const section12Quiz = {
       options: [
         '$1/(n+1)!$',
         '$e/(n+1)!$',
-        '$3/(n+1)!$',
-        '$n!$'
+        '$n!$',
+        '$3/(n+1)!$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'By Lagrange remainder with $|e^c| < 3$ for $c \\in (0,1)$: error $< 3/(n+1)!$.'
     },
@@ -479,12 +479,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The integral form of the remainder is:',
       options: [
-        '$R_n(x) = \\int_a^x \\frac{(x-t)^n}{n!} f^{(n+1)}(t) dt$',
-        '$R_n(x) = \\int_0^1 f(t) dt$',
         '$R_n(x) = f^{(n)}(a)$',
+        '$R_n(x) = \\int_0^1 f(t) dt$',
+        '$R_n(x) = \\int_a^x \\frac{(x-t)^n}{n!} f^{(n+1)}(t) dt$',
         'Does not exist'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The integral remainder formula involves integrating the $(n+1)$st derivative.'
     },
@@ -494,11 +494,11 @@ export const section12Quiz = {
       question: 'If $f^{(n)}(a) = 0$ for all $n$, and $f$ is analytic, then:',
       options: [
         '$f$ is any polynomial',
-        '$f \\equiv 0$ in a neighborhood of $a$',
+        'Nothing can be concluded',
         '$f$ is linear',
-        'Nothing can be concluded'
+        '$f \\equiv 0$ in a neighborhood of $a$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'If all derivatives vanish and $f$ equals its Taylor series, then $f = 0$ near $a$.'
     },
@@ -507,12 +507,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'L\'Hôpital\'s rule requires that:',
       options: [
-        'Both $f$ and $g$ are continuous',
         '$f, g$ are differentiable near $a$ (except possibly at $a$) and $g\' \\neq 0$ near $a$',
+        'Both $f$ and $g$ are continuous',
         '$f(a) = g(a) = 0$',
         '$f\'(a) = g\'(a)$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'We need differentiability near $a$ and $g\'$ nonzero (except possibly at $a$).'
     },
@@ -539,11 +539,11 @@ export const section12Quiz = {
       question: 'Taylor\'s theorem can be viewed as a generalization of:',
       options: [
         'The Fundamental Theorem of Calculus',
-        'The Mean Value Theorem',
         'The Intermediate Value Theorem',
+        'The Mean Value Theorem',
         'The Extreme Value Theorem'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Taylor\'s theorem generalizes MVT (which is the $n = 0$ case).'
     },
@@ -552,12 +552,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The Peano form of the remainder states that if $f$ is $n$ times differentiable at $a$:',
       options: [
-        '$f(x) = P_n(x) + o((x-a)^n)$ as $x \\to a$',
+        'The remainder is $f^{(n)}(a)$',
         '$f(x) = P_n(x) + O((x-a)^{n+1})$',
         '$f(x) = P_n(x)$ exactly',
-        'The remainder is $f^{(n)}(a)$'
+        '$f(x) = P_n(x) + o((x-a)^n)$ as $x \\to a$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Peano form uses little-o notation: the error is $o((x-a)^n)$.'
     },
@@ -566,12 +566,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is $C^\\infty$ but not analytic at $a$, then:',
       options: [
-        'The Taylor series diverges',
         'The Taylor series converges but not to $f$',
+        'The Taylor series diverges',
         'All derivatives are zero',
         '$f$ is not differentiable'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The Taylor series may converge to something other than $f$ (e.g., $e^{-1/x^2}$).'
     },
@@ -589,12 +589,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'Newton\'s method may fail if:',
       options: [
-        '$f\'(r) = 0$ at the root $r$',
         '$f$ is linear',
+        '$f\'(r) = 0$ at the root $r$',
         '$f$ is analytic',
         'The initial guess is exact'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'If the derivative is zero at the root (multiple root), convergence slows or fails.'
     },
@@ -604,11 +604,11 @@ export const section12Quiz = {
       question: 'For a root of multiplicity $m > 1$, Newton\'s method converges:',
       options: [
         'Quadratically',
-        'Linearly',
         'Not at all',
+        'Linearly',
         'Cubically'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'For multiple roots, Newton\'s method has only linear convergence.'
     },
@@ -619,10 +619,10 @@ export const section12Quiz = {
       options: [
         '$1$',
         '$2$',
-        '$3$',
-        '$4$'
+        '$4$',
+        '$3$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Halley\'s method uses second derivative information for cubic convergence.'
     },
@@ -674,11 +674,11 @@ export const section12Quiz = {
       question: 'For $\\lim_{x \\to \\infty} \\frac{x}{e^x}$, applying L\'Hôpital repeatedly:',
       options: [
         'Never terminates',
-        'Gives $0$ after one application',
+        'Is not applicable',
         'Gives $1$',
-        'Is not applicable'
+        'Gives $0$ after one application'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: '$\\frac{d}{dx}x = 1$, $\\frac{d}{dx}e^x = e^x$. So $\\frac{1}{e^x} \\to 0$.'
     },
@@ -696,12 +696,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The inverse function theorem in higher dimensions requires:',
       options: [
-        'The function to be continuous',
         'The Jacobian determinant to be nonzero',
+        'The function to be continuous',
         'The function to be linear',
         'All partial derivatives to be zero'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The Jacobian being nonzero (non-singular) ensures local invertibility.'
     },
@@ -725,11 +725,11 @@ export const section12Quiz = {
       question: 'Asymptotic expansions differ from Taylor series in that:',
       options: [
         'They always converge',
-        'They may diverge but still provide good approximations',
         'They use only integer powers',
+        'They may diverge but still provide good approximations',
         'They are unique'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Asymptotic series may diverge but truncating gives accurate approximations.'
     },
@@ -739,11 +739,11 @@ export const section12Quiz = {
       question: 'The Stirling approximation $n! \\approx \\sqrt{2\\pi n}(n/e)^n$ is:',
       options: [
         'Exact',
-        'An asymptotic expansion',
+        'Valid only for small $n$',
         'A Taylor series',
-        'Valid only for small $n$'
+        'An asymptotic expansion'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Stirling\'s formula is an asymptotic approximation for large $n$.'
     },
@@ -761,12 +761,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'A function is called Gevrey class $s$ if its Taylor coefficients satisfy:',
       options: [
-        '$|a_n| \\leq C^n$',
         '$|a_n| \\leq C^n (n!)^{s-1}$',
+        '$|a_n| \\leq C^n$',
         '$|a_n| = 0$ for large $n$',
         '$|a_n| = 1/n!$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Gevrey classes interpolate between analytic ($s = 1$) and $C^\\infty$ ($s = \\infty$).'
     },
@@ -790,11 +790,11 @@ export const section12Quiz = {
       question: 'Watson\'s lemma provides asymptotics for integrals of the form:',
       options: [
         '$\\int_0^\\infty f(t) dt$',
-        '$\\int_0^\\infty e^{-xt} g(t) dt$ as $x \\to \\infty$',
         '$\\int_{-\\infty}^{\\infty} f(t) dt$',
+        '$\\int_0^\\infty e^{-xt} g(t) dt$ as $x \\to \\infty$',
         'Any integral'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Watson\'s lemma gives asymptotic expansions of Laplace-type integrals.'
     }

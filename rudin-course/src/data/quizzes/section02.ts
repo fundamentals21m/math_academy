@@ -21,11 +21,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'In a field $F$, why is $0 \\cdot x = 0$ for all $x \\in F$?',
     options: [
       'It is an axiom of fields',
-      'Because $0 \\cdot x = (0 + 0) \\cdot x = 0 \\cdot x + 0 \\cdot x$, so $0 \\cdot x = 0$',
+      'Because multiplication is commutative',
       'Because $0$ has no multiplicative inverse',
-      'Because multiplication is commutative'
+      'Because $0 \\cdot x = (0 + 0) \\cdot x = 0 \\cdot x + 0 \\cdot x$, so $0 \\cdot x = 0$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Using distributivity: $0 \\cdot x = (0 + 0) \\cdot x = 0 \\cdot x + 0 \\cdot x$. Adding the additive inverse of $0 \\cdot x$ to both sides gives $0 = 0 \\cdot x$.',
   },
@@ -63,11 +63,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Why can the complex numbers $\\mathbb{C}$ not be made into an ordered field?',
     options: [
       'Because $\\mathbb{C}$ is not a field',
-      'Because $i^2 = -1 < 0$, but $i^2$ should be positive if $i \\neq 0$',
       'Because complex numbers cannot be compared',
+      'Because $i^2 = -1 < 0$, but $i^2$ should be positive if $i \\neq 0$',
       'Because $\\mathbb{C}$ is uncountable'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'In any ordered field, $x^2 > 0$ for $x \\neq 0$. But in $\\mathbb{C}$, $i \\neq 0$ and $i^2 = -1$. If $\\mathbb{C}$ were ordered, we would need $i^2 > 0$, meaning $-1 > 0$, a contradiction.',
   },

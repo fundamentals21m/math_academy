@@ -6,12 +6,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the next step after differentiating a function?',
     options: [
-      'Finding the maximum value',
       'Evaluating the derivative at specific points to understand the function\'s behavior',
+      'Finding the maximum value',
       'Integrating the result',
       'Graphing the original function'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'After finding the derivative, we often evaluate it at specific points to understand rates of change, slopes, and behavior.',
   },

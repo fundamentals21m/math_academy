@@ -6,12 +6,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To find a maximum or minimum of a function, we first:',
     options: [
-      'Set the function equal to zero',
       'Set the derivative equal to zero',
+      'Set the function equal to zero',
       'Find the second derivative',
-      'Graph the function'
+      'Graph the function',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Critical points occur where $f\'(x) = 0$ (or undefined). These are candidates for maxima/minima.',
   },
@@ -21,11 +21,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'A point where $f\'(x) = 0$ is called a:',
     options: [
       'Zero of the function',
-      'Critical point or stationary point',
       'Inflection point',
-      'Asymptote'
+      'Asymptote',
+      'Critical point or stationary point',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Points where the derivative is zero are called critical points or stationary points.',
   },
@@ -35,11 +35,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'If $f\'\'(x) > 0$ at a critical point, the function has a:',
     options: [
       'Maximum',
+      'Cannot be determined',
       'Minimum',
       'Inflection point',
-      'Cannot be determined'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'If the second derivative is positive at a critical point, the curve is concave up—a minimum.',
   },
@@ -57,12 +57,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An inflection point is where:',
     options: [
-      'The function equals zero',
       'The derivative equals zero',
       'The second derivative changes sign (concavity changes)',
-      'The function is undefined'
+      'The function equals zero',
+      'The function is undefined',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'An inflection point is where the curve changes from concave up to concave down (or vice versa).',
   },

@@ -6,12 +6,28 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The discrete logarithm problem asks: given $g, h, p$, find $x$ such that:',
     options: [
-      '$g + x \\equiv h \\pmod{p}$',
-      '$g^x \\equiv h \\pmod{p}$',
-      '$x^g \\equiv h \\pmod{p}$',
-      '$gx \\equiv h \\pmod{p}$'
-    ],
+      '$g + x \\equiv h \\pmod{p}
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'DLP: Given $g^x \\equiv h \\pmod{p}$, find $x$.',
+  },
+      '$g^x \\equiv h \\pmod{p}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'DLP: Given $g^x \\equiv h \\pmod{p}$, find $x$.',
+  },
+      '$x^g \\equiv h \\pmod{p}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'DLP: Given $g^x \\equiv h \\pmod{p}$, find $x$.',
+  },
+      '$gx \\equiv h \\pmod{p}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'DLP: Given $g^x \\equiv h \\pmod{p}$, find $x$.',
+  },
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'DLP: Given $g^x \\equiv h \\pmod{p}$, find $x$.',
   },
@@ -22,10 +38,10 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'Their private keys',
       'The computed shared secret $g^{ab} \\bmod p$',
-      'The prime $p$ and generator $g$ only',
-      'Nothing - it\'s one-way communication'
+      'Nothing - it\'s one-way communication',
+      'The prime $p$ and generator $g$ only'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'They publicly share $p$, $g$, and their public values $g^a$, $g^b$. The shared secret $g^{ab}$ is computed privately.',
   },
@@ -34,12 +50,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'ElGamal encryption is based on:',
     options: [
-      'Integer factorization',
       'Discrete logarithm problem',
+      'Integer factorization',
       'Lattice problems',
       'Error-correcting codes'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'ElGamal\'s security relies on the difficulty of the discrete logarithm problem.',
   },

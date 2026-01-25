@@ -6,12 +6,28 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two elements $g, h \\in G$ are conjugate if:',
     options: [
-      '$gh = hg$',
-      '$g = xhx^{-1}$ for some $x \\in G$',
-      '$g = h^n$ for some $n$',
-      '$\\langle g \\rangle = \\langle h \\rangle$'
+      '$g = xhx^{-1}$ for some $x \\in G
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$g$ and $h$ are conjugate if $g = xhx^{-1}$ for some $x \\in G$.',
+  },
+      '$gh = hg
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$g$ and $h$ are conjugate if $g = xhx^{-1}$ for some $x \\in G$.',
+  },
+      '$g = h^n$ for some $n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$g$ and $h$ are conjugate if $g = xhx^{-1}$ for some $x \\in G$.',
+  },
+      '$\\langle g \\rangle = \\langle h \\rangle
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$g$ and $h$ are conjugate if $g = xhx^{-1}$ for some $x \\in G$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$g$ and $h$ are conjugate if $g = xhx^{-1}$ for some $x \\in G$.',
   },
@@ -20,12 +36,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Class Equation for a finite group $G$ is:',
     options: [
-      '$|G| = |Z(G)| + \\sum [G : C_G(g_i)]$',
+      '$|G| = |Z(G)| - \\sum [G : C_G(g_i)]$',
       '$|G| = \\sum |C_G(g_i)|$',
       '$|G| = |Z(G)| \\cdot \\sum [G : C_G(g_i)]$',
-      '$|G| = |Z(G)| - \\sum [G : C_G(g_i)]$'
+      '$|G| = |Z(G)| + \\sum [G : C_G(g_i)]$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Class Equation: $|G| = |Z(G)| + \\sum_{i} [G : C_G(g_i)]$, summing over representatives of non-central conjugacy classes.',
   },
@@ -34,12 +50,28 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The size of the conjugacy class of $g$ equals:',
     options: [
-      '$|C_G(g)|$',
-      '$[G : C_G(g)]$',
-      '$|Z(G)|$',
-      '$|N_G(g)|$'
+      '$|C_G(g)|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The conjugacy class of $g$ has size $[G : C_G(g)]$ by the orbit-stabilizer theorem (conjugation action).',
+  },
+      '$|Z(G)|
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The conjugacy class of $g$ has size $[G : C_G(g)]$ by the orbit-stabilizer theorem (conjugation action).',
+  },
+      '$[G : C_G(g)]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The conjugacy class of $g$ has size $[G : C_G(g)]$ by the orbit-stabilizer theorem (conjugation action).',
+  },
+      '$|N_G(g)|
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The conjugacy class of $g$ has size $[G : C_G(g)]$ by the orbit-stabilizer theorem (conjugation action).',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The conjugacy class of $g$ has size $[G : C_G(g)]$ by the orbit-stabilizer theorem (conjugation action).',
   },

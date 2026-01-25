@@ -7,12 +7,12 @@ export const section19Questions: QuizQuestion[] = [
     question: 'Which major mathematical concept was developed in India?',
     difficulty: 'easy',
     options: [
-      'The Pythagorean theorem',
       'The decimal place-value system with zero',
+      'The Pythagorean theorem',
       'Euclidean geometry',
-      'The method of exhaustion',
+      'The method of exhaustion'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'The decimal place-value system with zero as a number was developed in India by the 7th century CE. This system, transmitted through Arabic mathematicians, is now used worldwide.',
   },

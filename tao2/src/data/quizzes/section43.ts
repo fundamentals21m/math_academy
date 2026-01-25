@@ -6,10 +6,22 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A simple function has the form:',
     options: [
+      '$\\sum_{n=0}^\\infty a_n x^n
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Simple functions are finite linear combinations of indicator functions.',
+  },
       '$\\sum_{i=1}^n c_i \\chi_{E_i}$ where $E_i$ are measurable and $c_i$ are constants',
-      '$\\sum_{n=0}^\\infty a_n x^n$',
-      '$e^x$',
-      '$\\sin(x)$'
+      '$e^x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Simple functions are finite linear combinations of indicator functions.',
+  },
+      '$\\sin(x)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Simple functions are finite linear combinations of indicator functions.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -20,10 +32,26 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Lebesgue integral of a non-negative simple function $\\sum c_i \\chi_{E_i}$ is:',
     options: [
-      '$\\sum c_i$',
-      '$\\sum c_i m(E_i)$',
-      '$\\max c_i$',
-      '$\\prod c_i$'
+      '$\\sum c_i
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The integral is the weighted sum of measure: $\\int \\sum c_i \\chi_{E_i} = \\sum c_i m(E_i)$.',
+  },
+      '$\\max c_i
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The integral is the weighted sum of measure: $\\int \\sum c_i \\chi_{E_i} = \\sum c_i m(E_i)$.',
+  },
+      '$\\prod c_i
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The integral is the weighted sum of measure: $\\int \\sum c_i \\chi_{E_i} = \\sum c_i m(E_i)$.',
+  },
+      '$\\sum c_i m(E_i)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The integral is the weighted sum of measure: $\\int \\sum c_i \\chi_{E_i} = \\sum c_i m(E_i)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -35,11 +63,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'Simple functions form a:',
     options: [
       'Field',
-      'Vector space',
       'Group but not a vector space',
+      'Vector space',
       'Empty set'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Simple functions are closed under addition and scalar multiplication.',
   },
@@ -48,12 +76,24 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f \\leq g$ are non-negative simple functions, then:',
     options: [
-      '$\\int f \\geq \\int g$',
-      '$\\int f \\leq \\int g$',
-      '$\\int f = \\int g$',
-      'Nothing can be concluded'
+      '$\\int f \\leq \\int g
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The integral is monotone: $f \\leq g \\Rightarrow \\int f \\leq \\int g$.',
+  },
+      '$\\int f \\geq \\int g
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The integral is monotone: $f \\leq g \\Rightarrow \\int f \\leq \\int g$.',
+  },
+      'Nothing can be concluded',
+      '$\\int f = \\int g
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The integral is monotone: $f \\leq g \\Rightarrow \\int f \\leq \\int g$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The integral is monotone: $f \\leq g \\Rightarrow \\int f \\leq \\int g$.',
   },
@@ -63,11 +103,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'Simple functions are used to:',
     options: [
       'Solve differential equations',
-      'Approximate measurable functions and define the Lebesgue integral',
       'Study convergence of power series',
-      'Prove the inverse function theorem'
+      'Approximate measurable functions and define the Lebesgue integral',
+      'Prove the inverse function theorem',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Simple functions are building blocks for defining the Lebesgue integral.',
   },

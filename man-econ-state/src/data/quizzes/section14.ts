@@ -7,11 +7,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'What is a price ceiling?',
     options: [
       'A minimum price set by government',
-      'A maximum price set by government below market equilibrium',
       'The highest price anyone is willing to pay',
-      'An average market price'
+      'A maximum price set by government below market equilibrium',
+      'An average market price',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A price ceiling is a legally mandated maximum price, typically set below the market equilibrium price.',
   },
@@ -35,11 +35,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'What is the result of a price floor above market equilibrium?',
     options: [
       'Shortage',
-      'Surplus',
       'No effect',
+      'Surplus',
       'Price reduction'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Price floors cause surpluses because quantity supplied exceeds quantity demanded at the artificially high price.',
   },
@@ -48,12 +48,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a grant of monopolistic privilege?',
     options: [
-      'Earning monopoly profits through efficiency',
       'Government-enforced barriers that exclude competitors',
+      'Earning monopoly profits through efficiency',
+      'Having a patent on an innovation',
       'Being the only seller in a market',
-      'Having a patent on an innovation'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Monopolistic privilege refers to legal barriers (licensing, franchises, etc.) that prevent competition.',
   },
@@ -63,11 +63,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'According to Rothbard, what creates true monopoly?',
     options: [
       'Superior efficiency',
-      'Government enforcement excluding competitors',
       'Large company size',
-      'Consumer preference'
+      'Consumer preference',
+      'Government enforcement excluding competitors',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'True monopoly requires government enforcement. On a free market, monopoly positions are always subject to competition.',
   },

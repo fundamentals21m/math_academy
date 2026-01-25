@@ -6,12 +6,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What notation did Leibniz introduce for the derivative?',
     options: [
-      '$\\dot{x}$ (dot notation)',
-      '$f\'(x)$ (prime notation)',
       '$\\frac{dy}{dx}$ (fraction notation)',
+      '$f\'(x)$ (prime notation)',
+      '$\\dot{x}$ (dot notation)',
       '$D_x y$ (operator notation)'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Leibniz introduced $\\frac{dy}{dx}$ notation, treating the derivative as a ratio of infinitesimal changes—notation we still use today.',
   },
@@ -21,11 +21,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What does the integral symbol $\\int$ represent, according to Leibniz?',
     options: [
       'The letter "I" for "infinite"',
-      'An elongated "S" for "summa" (sum)',
       'The Greek letter sigma',
-      'A stylized infinity symbol'
+      'An elongated "S" for "summa" (sum)',
+      'A stylized infinity symbol',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Leibniz designed the integral sign ∫ as an elongated S, standing for "summa" (Latin for sum), representing the sum of infinitely many infinitesimal pieces.',
   },
@@ -45,7 +45,7 @@ export const section04Questions: QuizQuestion[] = [
       'It uses fewer symbols',
       'It suggests algebraic manipulations that often give correct results',
       'It only works for physics problems',
-      'Newton\'s notation was incorrect'
+      'Newton\\'s notation was incorrect',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -56,12 +56,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What was Leibniz\'s dream of a "characteristica universalis"?',
     options: [
-      'A universal language of reasoning where all disputes could be settled by calculation',
+      'A mechanical computer',
       'A way to communicate with aliens',
       'A universal alphabet for all languages',
-      'A mechanical computer'
+      'A universal language of reasoning where all disputes could be settled by calculation'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Leibniz dreamed of a universal symbolic language that could reduce all reasoning to calculation, resolving disputes through logic rather than debate.',
   },
@@ -70,12 +70,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who published their calculus first—Newton or Leibniz?',
     options: [
-      'Newton, in 1666',
-      'Newton, in 1687 (Principia)',
       'Leibniz, in 1684',
+      'Newton, in 1687 (Principia)',
+      'Newton, in 1666',
       'They published simultaneously'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Leibniz published his calculus paper in 1684, while Newton\'s work appeared in the Principia in 1687—though Newton had developed his methods earlier privately.',
   },

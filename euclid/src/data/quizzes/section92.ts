@@ -7,11 +7,11 @@ export const section92Questions: QuizQuestion[] = [
     question: 'Proposition III.28 proves that in equal circles, equal chords cut off:',
     options: [
       'Equal radii',
-      'Equal arcs',
       'Equal diameters',
-      'Unequal segments'
+      'Unequal segments',
+      'Equal arcs',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'III.28 proves that in equal circles, equal chords cut off equal arcs.',
   },
@@ -23,7 +23,7 @@ export const section92Questions: QuizQuestion[] = [
       'Only the major arcs are equal',
       'Only the minor arcs are equal',
       'Both the greater arcs equal each other, and the lesser arcs equal each other',
-      'The arcs are unrelated'
+      'The arcs are unrelated',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -35,9 +35,9 @@ export const section92Questions: QuizQuestion[] = [
     question: 'The proof of III.28 uses which earlier result?',
     options: [
       'III.14 (equal chords equidistant from center)',
-      'III.26 (equal angles subtend equal arcs)',
       'III.20 (inscribed angle theorem)',
-      'I.47 (Pythagorean theorem)'
+      'III.26 (equal angles subtend equal arcs)',
+      'I.47 (Pythagorean theorem)',
     ],
     correctIndex: 0,
     difficulty: 'hard',

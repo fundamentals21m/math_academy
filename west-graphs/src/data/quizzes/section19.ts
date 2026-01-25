@@ -8,10 +8,10 @@ export const section19Questions: QuizQuestion[] = [
     options: [
       '2-colorable',
       '3-colorable',
-      '4-colorable',
-      '5-colorable'
+      '5-colorable',
+      '4-colorable'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Every planar graph can be properly vertex-colored with at most 4 colors.',
   },
@@ -23,7 +23,7 @@ export const section19Questions: QuizQuestion[] = [
       'The number of edges',
       'The minimum crossings in any drawing',
       'The chromatic number',
-      'The genus'
+      'The genus',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +34,20 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A graph is planar if and only if:',
     options: [
-      '$cr(G) = 0$',
-      '$cr(G) \\leq 1$',
+      'Both $cr(G) = 0$ and genus is 0',
+      '$cr(G) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Planarity $\\Leftrightarrow$ zero crossing number $\\Leftrightarrow$ embeds on the sphere (genus 0).',
+  },
       'The genus is 0',
-      'Both $cr(G) = 0$ and genus is 0'
+      '$cr(G) \\leq 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Planarity $\\Leftrightarrow$ zero crossing number $\\Leftrightarrow$ embeds on the sphere (genus 0).',
+  },
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Planarity $\\Leftrightarrow$ zero crossing number $\\Leftrightarrow$ embeds on the sphere (genus 0).',
   },
@@ -50,10 +58,10 @@ export const section19Questions: QuizQuestion[] = [
     options: [
       '1',
       '2',
+      '4',
       '3',
-      '4'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$K_9$ has 36 edges; planar graphs on 9 vertices have $\\leq 3(9)-6=21$ edges. So thickness $\\geq \\lceil 36/21 \\rceil = 2$. Actually, thickness of $K_9$ is 3.',
   },
@@ -71,12 +79,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An outerplanar graph is one that:',
     options: [
-      'Has a plane drawing with all vertices on the outer face',
+      'Has chromatic number 2',
       'Has no $K_4$ subgraph',
+      'Has a plane drawing with all vertices on the outer face',
       'Is a tree',
-      'Has chromatic number 2'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Outerplanar: can be drawn with all vertices on the boundary of the unbounded face.',
   },

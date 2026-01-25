@@ -1,0 +1,82 @@
+import type { QuizQuestion } from './types';
+
+export const section04Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is a macaroon in the context of LND?',
+    options: [
+      'A type of cookie used for tracking',
+      'A capability-based authentication token',
+      'A Lightning payment type',
+      'A channel backup file',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A macaroon is a capability-based authentication token used by LND. They can be restricted to allow only certain actions, with the admin macaroon granting full access.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Why is connecting via Tor recommended?',
+    options: [
+      'It provides privacy and works through NAT/firewalls',
+      'It makes payments faster',
+      'It reduces Lightning fees',
+      'It increases channel capacity',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Tor provides privacy by hiding your IP address and works through NAT/firewalls without port forwarding, making it ideal for remote node connections.',
+  },
+  {
+    id: 3,
+    type: 'text',
+    question: 'What port does LND typically use for REST API connections?',
+    correctAnswer: '8080',
+    difficulty: 'hard',
+    explanation: 'LND\'s REST API is typically available on port 8080. The gRPC interface uses port 10009 by default.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Which node packages have built-in Zeus connection support?',
+    options: [
+      'Only Umbrel',
+      'Only custom-built nodes',
+      'Zeus does not support node packages',
+      'Umbrel, Start9, RaspiBlitz, myNode, and BTCPay Server',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Many popular node packages including Umbrel, Start9 Embassy, RaspiBlitz, myNode, and BTCPay Server have built-in Zeus connection support with easy QR code setup.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What should you NEVER do with your admin macaroon?',
+    options: [
+      'Use it to connect Zeus',
+      'Store it encrypted on your device',
+      'Share it with others or store it unencrypted',
+      'Back it up securely',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Your admin macaroon gives full control over your node. Never share it or store it unencrypted - treat it like a password to all your funds.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What does Zeus allow you to do with multiple node configurations?',
+    options: [
+      'Run all nodes simultaneously',
+      'Merge balances from different nodes',
+      'Save configurations and switch between different nodes',
+      'Auto-sync channels between nodes',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Zeus allows you to save multiple node configurations and switch between them, useful for managing separate nodes for different purposes like personal vs. business use.',
+  },
+];

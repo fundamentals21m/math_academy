@@ -6,10 +6,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the multiplication relation $\\mathcal{R}_{\\text{mult}}$, commitment $V$ commits to:',
     options: [
-      'Value $a$',
-      'Value $b$',
-      'Product $ab$',
-      'Sum $a + b$'
+      'Value $a
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$V = ab \\cdot G_0 + s_V H$ commits to the product of $a$ and $b$.',
+  },
+      'Product $ab
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$V = ab \\cdot G_0 + s_V H$ commits to the product of $a$ and $b$.',
+  },
+      'Value $b
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$V = ab \\cdot G_0 + s_V H$ commits to the product of $a$ and $b$.',
+  },
+      'Sum $a + b
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$V = ab \\cdot G_0 + s_V H$ commits to the product of $a$ and $b$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -21,11 +37,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'In the protocol, the prover\'s first message includes:',
     options: [
       '$a$ and $b$ directly',
-      '$S$, $T_1$, and $T_2$',
+      'The verification equations',
       'Only the witness',
-      'The verification equations'
+      '$S$, $T_1$, and $T_2$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The prover sends $S = s_a G_0 + s_b G_1 + s_S H$, $T_1 = (as_b + bs_a)G_0 + \\tau_1 H$, and $T_2 = s_a s_b G_0 + \\tau_2 H$.',
   },
@@ -34,12 +50,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the prover\'s response, $l = a + s_a x$ is:',
     options: [
-      'A group element',
       'A polynomial evaluated at the challenge',
+      'A group element',
       'A random value',
       'A hash output'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$l(x) = a + s_a x$ is a degree-1 polynomial in $x$, evaluated at the verifier\'s challenge.',
   },
@@ -57,10 +73,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The product $lr$ expands to:',
     options: [
-      '$ab$',
-      '$ab + x(as_b + bs_a) + x^2 s_a s_b$',
-      '$(a + b)(s_a + s_b)$',
-      '$a^2 + b^2$'
+      '$ab
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$lr = (a + s_a x)(b + s_b x) = ab + x(as_b + bs_a) + x^2 s_a s_b$.',
+  },
+      '$(a + b)(s_a + s_b)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$lr = (a + s_a x)(b + s_b x) = ab + x(as_b + bs_a) + x^2 s_a s_b$.',
+  },
+      '$ab + x(as_b + bs_a) + x^2 s_a s_b
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$lr = (a + s_a x)(b + s_b x) = ab + x(as_b + bs_a) + x^2 s_a s_b$.',
+  },
+      '$a^2 + b^2
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$lr = (a + s_a x)(b + s_b x) = ab + x(as_b + bs_a) + x^2 s_a s_b$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',

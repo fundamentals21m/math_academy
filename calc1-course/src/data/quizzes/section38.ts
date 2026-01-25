@@ -6,12 +6,28 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Integration by parts states $\\int u\\,dv = ?$',
     options: [
-      '$uv + \\int v\\,du$',
-      '$uv - \\int v\\,du$',
-      '$u\'v - \\int u\'v\'$',
-      '$\\int u \\cdot \\int dv$'
+      '$uv - \\int v\\,du
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Integration by parts: $\\int u\\,dv = uv - \\int v\\,du$.',
+  },
+      '$uv + \\int v\\,du
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Integration by parts: $\\int u\\,dv = uv - \\int v\\,du$.',
+  },
+      '$\\int u \\cdot \\int dv
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Integration by parts: $\\int u\\,dv = uv - \\int v\\,du$.',
+  },
+      '$u\\'v - \\int u\\'v\\'
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Integration by parts: $\\int u\\,dv = uv - \\int v\\,du$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Integration by parts: $\\int u\\,dv = uv - \\int v\\,du$.',
   },
@@ -20,12 +36,24 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To evaluate $\\int x e^x\\,dx$, we should choose:',
     options: [
-      '$u = e^x$, $dv = x\\,dx$',
-      '$u = x$, $dv = e^x\\,dx$',
-      '$u = xe^x$, $dv = dx$',
-      'Substitution instead'
+      '$u = e^x$, $dv = x\\,dx
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Let $u = x$ (so $du = dx$) and $dv = e^x\\,dx$ (so $v = e^x$).',
+  },
+      '$u = xe^x$, $dv = dx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Let $u = x$ (so $du = dx$) and $dv = e^x\\,dx$ (so $v = e^x$).',
+  },
+      'Substitution instead',
+      '$u = x$, $dv = e^x\\,dx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Let $u = x$ (so $du = dx$) and $dv = e^x\\,dx$ (so $v = e^x$).',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Let $u = x$ (so $du = dx$) and $dv = e^x\\,dx$ (so $v = e^x$).',
   },
@@ -49,11 +77,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'The LIATE rule suggests choosing $u$ in order of:',
     options: [
       'Algebraic, Trig, Inverse trig, Log, Exponential',
-      'Log, Inverse trig, Algebraic, Trig, Exponential',
       'Exponential, Trig, Algebraic, Inverse trig, Log',
+      'Log, Inverse trig, Algebraic, Trig, Exponential',
       'Any order works equally well'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'LIATE: Logs, Inverse trig, Algebraic, Trig, Exponential (preference for $u$).',
   },
@@ -64,10 +92,10 @@ export const section38Questions: QuizQuestion[] = [
     options: [
       '$1/x + C$',
       '$x\\ln x + x + C$',
-      '$x\\ln x - x + C$',
-      '$\\ln x / x + C$'
+      '$\\ln x / x + C$',
+      '$x\\ln x - x + C$'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Let $u = \\ln x$, $dv = dx$. Then $\\int \\ln x\\,dx = x\\ln x - x + C$.',
   },
@@ -79,7 +107,7 @@ export const section38Questions: QuizQuestion[] = [
       'Exactly once',
       'Multiple times for some integrals',
       'Never more than twice',
-      'Only for polynomials'
+      'Only for polynomials',
     ],
     correctIndex: 1,
     difficulty: 'easy',

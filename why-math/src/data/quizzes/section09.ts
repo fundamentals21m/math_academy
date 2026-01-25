@@ -6,10 +6,10 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Einstein\'s postulate about the speed of light states that:',
     options: [
-      'Light speed varies depending on the source\'s motion',
+      'Light speed varies depending on the source\\'s motion',
       'Light speed is constant relative to any observer moving at constant velocity',
       'Light speed is infinite',
-      'Light speed depends on the medium only'
+      'Light speed depends on the medium only',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +34,28 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The time dilation formula states that a moving clock runs slower by factor:',
     options: [
-      '$v/c$',
-      '$\\sqrt{1 - (v/c)^2}$',
-      '$1 - v/c$',
-      '$(v/c)^2$'
+      '$v/c
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
+  },
+      '$1 - v/c
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
+  },
+      '$(v/c)^2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
+  },
+      '$\\sqrt{1 - (v/c)^2}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
   },
@@ -58,11 +74,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'Muons created in the upper atmosphere reach Earth because:',
     options: [
       'They travel faster than light',
+      'Gravity accelerates them',
       'Time dilation extends their lifetime in our reference frame',
       'They are created at lower altitudes',
-      'Gravity accelerates them'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'From our perspective, fast-moving muons live longer due to time dilation, allowing them to reach Earth.',
   },
@@ -72,11 +88,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'The Lorentz-Fitzgerald contraction means that moving objects appear:',
     options: [
       'Longer in the direction of motion',
-      'Shorter in the direction of motion',
       'Wider perpendicular to motion',
-      'Unchanged in all dimensions'
+      'Unchanged in all dimensions',
+      'Shorter in the direction of motion',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Objects appear contracted (shorter) in the direction of motion by factor $\\sqrt{1 - (v/c)^2}$.',
   },
@@ -94,12 +110,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From the muon\'s perspective, it reaches Earth because:',
     options: [
-      'It lives longer',
       'The distance to Earth is contracted',
+      'It lives longer',
       'Earth moves toward it faster',
-      'Time speeds up for it'
+      'Time speeds up for it',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'From the muon\'s frame, Earth rushes toward it and the distance is length-contracted, so it arrives within its short lifetime.',
   },
@@ -108,12 +124,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to relativity, what is impossible?',
     options: [
+      'Traveling faster than light',
       'Time travel to the future',
       'Length contraction',
-      'Traveling faster than light',
-      'Simultaneous events'
+      'Simultaneous events',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Nothing can travel faster than the speed of light $c$—it is the cosmic speed limit.',
   },
@@ -123,11 +139,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'The Einstein-Langevin clock uses:',
     options: [
       'Pendulum swings',
+      'Sand falling through glass',
       'Light bouncing between mirrors',
       'Atomic vibrations',
-      'Sand falling through glass'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Einstein-Langevin clock uses a light flash bouncing between mirrors to measure time precisely.',
   },

@@ -18,11 +18,11 @@ export const section11Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Because it is too small',
-      'Because it would break unique prime factorization',
-      'Because the Greeks didn\'t like it',
       'Because it is even',
+      'Because the Greeks didn\'t like it',
+      'Because it would break unique prime factorization'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'If 1 were prime, then numbers would have infinitely many factorizations (e.g., 6 = 2 × 3 = 1 × 2 × 3 = 1 × 1 × 2 × 3, etc.), destroying the uniqueness of prime factorization.',
   },
@@ -54,12 +54,12 @@ export const section11Questions: QuizQuestion[] = [
       'If $p_1, p_2, \\ldots, p_n$ are the first $n$ primes, the number $N = p_1 \\cdot p_2 \\cdots p_n + 1$ in Euclid\'s proof:',
     difficulty: 'hard',
     options: [
-      'Is always prime',
-      'Is always composite',
       'Has a prime factor not in the list',
-      'Equals the next prime after $p_n$',
+      'Is always composite',
+      'Is always prime',
+      'Equals the next prime after $p_n$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       '$N$ is not always prime (e.g., 2×3×5×7×11×13 + 1 = 30031 = 59 × 509). However, $N$ must have at least one prime factor, and that factor cannot be any of $p_1, \\ldots, p_n$ since they all leave remainder 1.',
   },

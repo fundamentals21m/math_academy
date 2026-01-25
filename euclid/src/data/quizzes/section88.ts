@@ -6,12 +6,12 @@ export const section88Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Proposition III.24 proves that similar segments on equal bases are:',
     options: [
-      'Always different sizes',
       'Equal to one another',
+      'Always different sizes',
       'Proportional in area',
       'On the same circle'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'III.24 proves that similar segments of circles on equal straight lines are equal to each other.',
   },
@@ -35,11 +35,11 @@ export const section88Questions: QuizQuestion[] = [
     question: 'III.24 extends III.23 by considering similar segments on:',
     options: [
       'The same base',
-      'Different but equal bases',
       'Parallel bases',
-      'Perpendicular bases'
+      'Perpendicular bases',
+      'Different but equal bases',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'III.23 addresses the same base; III.24 shows similar segments on equal (congruent) bases are equal.',
   },

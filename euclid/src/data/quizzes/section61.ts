@@ -7,11 +7,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'Proposition II.12 is the geometric form of which modern formula?',
     options: [
       'Pythagorean theorem',
-      'Law of cosines for obtuse triangles',
       'Law of sines',
-      'Heron\'s formula'
+      'Heron\\'s formula',
+      'Law of cosines for obtuse triangles',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'II.12 proves the law of cosines for obtuse triangles: c² = a² + b² + 2ab·cos(180° - C).',
   },
@@ -22,8 +22,8 @@ export const section61Questions: QuizQuestion[] = [
     options: [
       'To use the Pythagorean theorem',
       'Because the angle is obtuse, so the foot falls outside the triangle',
+      'To create a rectangle',
       'To apply II.4',
-      'To create a rectangle'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,10 +34,10 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Compared to the Pythagorean theorem (I.47), in II.12 the square on the side opposite the obtuse angle is:',
     options: [
-      'Equal to the sum of the other squares',
       'Less than the sum of the other squares',
+      'Equal to the sum of the other squares',
       'Greater than the sum of the other squares',
-      'Unrelated to the other squares'
+      'Unrelated to the other squares',
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -10,12 +10,28 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A binary quadratic form is an expression of the type:',
     options: [
-      '$ax + by$',
-      '$ax^2 + bxy + cy^2$',
-      '$ax^2 + by^2$',
-      '$ax^3 + bx^2 + cx + d$'
+      '$ax + by
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A binary quadratic form has the general form $ax^2 + bxy + cy^2$ with integer coefficients $a, b, c$.',
+  },
+      '$ax^2 + by^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A binary quadratic form has the general form $ax^2 + bxy + cy^2$ with integer coefficients $a, b, c$.',
+  },
+      '$ax^3 + bx^2 + cx + d
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A binary quadratic form has the general form $ax^2 + bxy + cy^2$ with integer coefficients $a, b, c$.',
+  },
+      '$ax^2 + bxy + cy^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A binary quadratic form has the general form $ax^2 + bxy + cy^2$ with integer coefficients $a, b, c$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A binary quadratic form has the general form $ax^2 + bxy + cy^2$ with integer coefficients $a, b, c$.',
   },
@@ -34,11 +50,15 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Two binary quadratic forms are equivalent if:',
     options: [
       'They have the same coefficients',
-      'One can be transformed to the other by a substitution with determinant $\\pm 1$',
-      'They have different discriminants',
-      'They represent the same single integer'
-    ],
+      'One can be transformed to the other by a substitution with determinant $\\pm 1
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Forms are equivalent if related by a linear substitution $\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} \\alpha & \\beta \\\\ \\gamma & \\delta \\end{pmatrix} \\begin{pmatrix} x\' \\\\ y\' \\end{pmatrix}$ with $\\alpha\\delta - \\beta\\gamma = \\pm 1$.',
+  },
+      'They represent the same single integer',
+      'They have different discriminants',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Forms are equivalent if related by a linear substitution $\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} \\alpha & \\beta \\\\ \\gamma & \\delta \\end{pmatrix} \\begin{pmatrix} x\' \\\\ y\' \\end{pmatrix}$ with $\\alpha\\delta - \\beta\\gamma = \\pm 1$.',
   },
@@ -47,12 +67,16 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A positive integer $n$ is a sum of two squares if and only if:',
     options: [
-      '$n$ is prime',
       '$n$ is odd',
+      '$n$ is prime',
       'Every prime factor $\\equiv 3 \\pmod{4}$ appears to an even power',
-      '$n \\equiv 1 \\pmod{4}$'
-    ],
+      '$n \\equiv 1 \\pmod{4}
     correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$n$ is a sum of two squares iff every prime factor of the form $4k+3$ appears to an even power in the factorization.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: '$n$ is a sum of two squares iff every prime factor of the form $4k+3$ appears to an even power in the factorization.',
   },
@@ -79,10 +103,26 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The class number $h(D)$ counts:',
     options: [
-      'The number of primes less than $|D|$',
-      'The number of equivalence classes of forms with discriminant $D$',
-      'The number of solutions to $x^2 + y^2 = D$',
-      'The discriminant divided by $4$'
+      'The number of primes less than $|D|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The class number $h(D)$ is the number of equivalence classes of binary quadratic forms with discriminant $D$.',
+  },
+      'The number of solutions to $x^2 + y^2 = D
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The class number $h(D)$ is the number of equivalence classes of binary quadratic forms with discriminant $D$.',
+  },
+      'The discriminant divided by $4
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The class number $h(D)$ is the number of equivalence classes of binary quadratic forms with discriminant $D$.',
+  },
+      'The number of equivalence classes of forms with discriminant $D
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The class number $h(D)$ is the number of equivalence classes of binary quadratic forms with discriminant $D$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -103,11 +143,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Gauss discovered that equivalence classes of forms can be composed (multiplied). This structure is now called:',
     options: [
       'The Gauss ring',
-      'The form lattice',
       'The class group',
-      'The quadratic field'
+      'The form lattice',
+      'The quadratic field',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The set of equivalence classes with Gauss\'s composition law forms the class group, a fundamental object in algebraic number theory.',
   },
@@ -116,12 +156,28 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a negative discriminant $D$, a form $(a, b, c)$ is reduced if:',
     options: [
-      '$a > b > c$',
-      '$|b| \\le a \\le c$',
-      '$a = b = c$',
-      '$b = 0$'
+      '$|b| \\le a \\le c
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'For $D < 0$, a form is reduced if $|b| \\le a \\le c$ (with additional tie-breaking rules when equality holds).',
+  },
+      '$a > b > c
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'For $D < 0$, a form is reduced if $|b| \\le a \\le c$ (with additional tie-breaking rules when equality holds).',
+  },
+      '$b = 0
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'For $D < 0$, a form is reduced if $|b| \\le a \\le c$ (with additional tie-breaking rules when equality holds).',
+  },
+      '$a = b = c
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'For $D < 0$, a form is reduced if $|b| \\le a \\le c$ (with additional tie-breaking rules when equality holds).',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'For $D < 0$, a form is reduced if $|b| \\le a \\le c$ (with additional tie-breaking rules when equality holds).',
   },

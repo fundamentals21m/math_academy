@@ -13,11 +13,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Euclid\'s parallel axiom (fifth postulate) states that if a transversal crosses two lines making interior angles on one side summing to less than two right angles, then:',
     options: [
       'The lines are parallel',
-      'The lines meet on that side',
       'The lines are perpendicular',
-      'The lines never meet'
+      'The lines never meet',
+      'The lines meet on that side',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When interior angles sum to less than 180°, the lines will eventually meet on that side. If equal to 180°, they are parallel.',
   },
@@ -26,12 +26,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Playfair\'s axiom states:',
     options: [
-      'Through any point, infinitely many parallels to a line exist',
       'Given a line L and point P not on L, exactly one parallel to L passes through P',
+      'Through any point, infinitely many parallels to a line exist',
       'All lines eventually meet',
-      'Parallel lines have equal length'
+      'Parallel lines have equal length',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Playfair\'s axiom is a simpler, equivalent form of Euclid\'s fifth postulate: exactly one parallel exists through any external point.',
   },
@@ -40,12 +40,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sum of angles in a triangle equals:',
     options: [
-      'Less than 180° in all geometries',
       'Exactly 180° (π radians) in Euclidean geometry',
+      'Less than 180° in all geometries',
       'More than 180° in Euclidean geometry',
-      '360°'
+      '360°',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'In Euclidean geometry, the angle sum is exactly 180°. This depends on the parallel axiom; in non-Euclidean geometries it differs.',
   },
@@ -55,11 +55,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'When a transversal crosses two parallel lines, alternate interior angles are:',
     options: [
       'Supplementary (sum to 180°)',
-      'Equal',
       'Complementary (sum to 90°)',
-      'Always acute'
+      'Always acute',
+      'Equal',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Alternate interior angles formed by a transversal crossing parallel lines are equal.',
   },
@@ -70,10 +70,10 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'The adjacent interior angle',
       'The sum of the two non-adjacent interior angles',
+      'Both B and C are correct',
       '180° minus the adjacent angle',
-      'Both B and C are correct'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'An exterior angle equals both the sum of the remote interior angles (by the angle sum theorem) and 180° minus its adjacent interior angle (supplementary angles).',
   },
@@ -83,11 +83,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'In non-Euclidean geometry, the angle sum of a triangle can be:',
     options: [
       'Only exactly 180°',
-      'Greater than 180° (spherical) or less than 180° (hyperbolic)',
       'Any value from 0° to 360°',
-      'Always 270°'
+      'Always 270°',
+      'Greater than 180° (spherical) or less than 180° (hyperbolic)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'On a sphere, angle sum exceeds 180°; in hyperbolic geometry, it is less than 180°. The parallel axiom determines which.',
   },
@@ -101,11 +101,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'SAS congruence means two triangles are congruent if they have equal:',
     options: [
       'Three sides',
-      'Two sides and the included angle',
       'Two angles and one side',
-      'All three angles'
+      'Two sides and the included angle',
+      'All three angles',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Side-Angle-Side: if two sides and the angle between them are equal, the triangles are congruent.',
   },
@@ -115,11 +115,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'In modern treatments, SAS is taken as:',
     options: [
       'A theorem proved from simpler axioms',
-      'An axiom (accepted without proof)',
       'A definition of congruence',
-      'A corollary of ASA'
+      'A corollary of ASA',
+      'An axiom (accepted without proof)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Euclid "proved" SAS by superposition, but this is logically problematic. Modern geometry takes SAS as an axiom.',
   },
@@ -142,12 +142,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Pappus\'s elegant proof of the isosceles triangle theorem compares:',
     options: [
-      'The triangle with a congruent copy',
       'The triangle with itself read in reverse order (ABC vs ACB)',
+      'The triangle with a congruent copy',
       'Two smaller triangles formed by the altitude',
-      'The triangle with its reflection'
+      'The triangle with its reflection',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Pappus compared triangle ABC with "triangle ACB" (the same triangle with vertices relabeled). By SAS, they are congruent, proving the base angles equal.',
   },
@@ -157,11 +157,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'The isosceles triangle theorem states:',
     options: [
       'All triangles are isosceles',
-      'If two sides are equal, the opposite angles are equal',
       'If two angles are equal, the triangle is equilateral',
-      'The base of an isosceles triangle is longest'
+      'The base of an isosceles triangle is longest',
+      'If two sides are equal, the opposite angles are equal',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'If AB = AC in triangle ABC, then angle ABC = angle ACB (the base angles are equal).',
   },
@@ -171,11 +171,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'To prove that opposite sides of a parallelogram are equal, we use:',
     options: [
       'SAS with the two triangles formed by a diagonal',
-      'ASA with the two triangles formed by a diagonal',
       'The Pythagorean theorem',
-      'The definition of parallel lines'
+      'ASA with the two triangles formed by a diagonal',
+      'The definition of parallel lines',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Drawing a diagonal creates two triangles. Alternate interior angles give two pairs of equal angles, and the diagonal is shared. By ASA, the triangles are congruent.',
   },
@@ -202,12 +202,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two parallelograms with the same base and height have:',
     options: [
-      'Equal perimeter',
       'Equal area',
+      'Equal perimeter',
       'Equal diagonals',
-      'The same shape'
+      'The same shape',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Euclid I.35 establishes that parallelograms on the same base between the same parallels have equal areas.',
   },
@@ -216,10 +216,26 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The area of a triangle with base b and height h is:',
     options: [
-      '$bh$',
-      '$\\frac{1}{2}bh$',
-      '$2bh$',
-      '$b + h$'
+      '$bh
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A triangle is half of a parallelogram with the same base and height.',
+  },
+      '$2bh
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A triangle is half of a parallelogram with the same base and height.',
+  },
+      '$\\frac{1}{2}bh
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A triangle is half of a parallelogram with the same base and height.',
+  },
+      '$b + h
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A triangle is half of a parallelogram with the same base and height.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -258,12 +274,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The principle that equal figures can be added to equal figures to give equal figures is used by Euclid to:',
     options: [
-      'Prove the Pythagorean theorem',
       'Define congruence',
+      'Prove the Pythagorean theorem',
       'Construct regular polygons',
-      'Bisect angles'
+      'Bisect angles',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Euclid\'s proof of the Pythagorean theorem relies on adding and comparing equal areas.',
   },
@@ -277,11 +293,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'Euclid I.35 proves that parallelograms on the same base between the same parallels:',
     options: [
       'Are congruent',
-      'Have equal area',
       'Have equal perimeter',
-      'Are similar'
+      'Are similar',
+      'Have equal area',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Same base and same height (distance between parallels) means equal area.',
   },
@@ -290,12 +306,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If two triangles share the same base and lie between the same parallel lines, then:',
     options: [
-      'They are congruent',
       'They have equal area',
+      'They are congruent',
       'They are similar',
-      'They have the same angles'
+      'They have the same angles',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Triangles with the same base and height have equal area (each is half of a parallelogram with that base and height).',
   },
@@ -305,11 +321,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'To compare the areas of triangles ABC and DBC (sharing base BC), we compare:',
     options: [
       'Their perimeters',
-      'Their heights from A and D to BC',
       'The angles at A and D',
-      'The lengths of AC and DC'
+      'Their heights from A and D to BC',
+      'The lengths of AC and DC',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Same base means areas are proportional to heights. Equal heights mean equal areas.',
   },
@@ -332,12 +348,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two triangles with equal areas and the same base have:',
     options: [
-      'Equal perimeters',
       'Equal heights',
+      'Equal perimeters',
       'Equal angles',
-      'All of the above'
+      'All of the above',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Since Area = ½ × base × height, same base and area implies same height.',
   },
@@ -346,12 +362,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The medians of a triangle divide it into:',
     options: [
-      'Three congruent triangles',
       'Six triangles of equal area',
+      'Three congruent triangles',
       'Two congruent triangles',
-      'Four similar triangles'
+      'Four similar triangles',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The three medians divide a triangle into six smaller triangles, all with equal area.',
   },
@@ -365,9 +381,17 @@ export const section10Questions: QuizQuestion[] = [
     question: 'The Pythagorean theorem states that in a right triangle:',
     options: [
       '$a + b = c$ where c is the hypotenuse',
+      '$a^2 - b^2 = c^2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The sum of squares of the legs equals the square of the hypotenuse.',
+  },
+      'The angles satisfy $\\alpha + \\beta + \\gamma = 180°
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The sum of squares of the legs equals the square of the hypotenuse.',
+  },
       '$a^2 + b^2 = c^2$ where c is the hypotenuse',
-      '$a^2 - b^2 = c^2$',
-      'The angles satisfy $\\alpha + \\beta + \\gamma = 180°$'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -407,11 +431,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'Which is a Pythagorean triple?',
     options: [
       '(2, 3, 4)',
-      '(3, 4, 5)',
       '(4, 5, 6)',
-      '(1, 2, 3)'
+      '(1, 2, 3)',
+      '(3, 4, 5)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$3^2 + 4^2 = 9 + 16 = 25 = 5^2$, so (3, 4, 5) is a Pythagorean triple.',
   },
@@ -421,11 +445,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'The Pythagorean theorem was known to:',
     options: [
       'Only the Greeks',
-      'Babylonians before Pythagoras',
       'Only medieval mathematicians',
-      'Only Euclid'
+      'Babylonians before Pythagoras',
+      'Only Euclid',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Babylonian tablets from c. 1800 BCE show knowledge of Pythagorean triples. The Greeks provided rigorous proofs.',
   },
@@ -434,12 +458,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If m > n are positive integers, then $(m^2 - n^2, 2mn, m^2 + n^2)$ is:',
     options: [
-      'An arithmetic sequence',
       'A Pythagorean triple',
+      'An arithmetic sequence',
       'A geometric sequence',
-      'Three prime numbers'
+      'Three prime numbers',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: '$(m^2 - n^2)^2 + (2mn)^2 = m^4 - 2m^2n^2 + n^4 + 4m^2n^2 = m^4 + 2m^2n^2 + n^4 = (m^2 + n^2)^2$.',
   },
@@ -467,11 +491,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'The proof of the Thales theorem relies on:',
     options: [
       'Congruent triangles',
-      'Triangles with equal areas having the same base share the same height',
       'The Pythagorean theorem',
-      'Angle bisector properties'
+      'Triangles with equal areas having the same base share the same height',
+      'Angle bisector properties',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The proof compares areas of triangles sharing a vertex. Triangles between parallels with the same base have equal areas.',
   },
@@ -495,11 +519,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'The midpoint theorem states that the segment joining midpoints of two sides of a triangle:',
     options: [
       'Equals the third side',
-      'Is parallel to the third side and half its length',
       'Bisects the third side',
-      'Is perpendicular to the third side'
+      'Is parallel to the third side and half its length',
+      'Is perpendicular to the third side',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'If D and E are midpoints of AB and AC, then DE ∥ BC and DE = ½BC.',
   },
@@ -508,12 +532,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If D divides AB in ratio 2:1 (AD = 2·DB), and DE ∥ BC, then E divides AC in ratio:',
     options: [
-      '1:2',
       '2:1',
+      '1:2',
       '1:1',
-      '3:1'
+      '3:1',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'By Thales\' theorem, DE ∥ BC implies AD/DB = AE/EC = 2/1.',
   },
@@ -522,12 +546,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Thales of Miletus lived around:',
     options: [
-      '300 BCE (same time as Euclid)',
       '624-546 BCE (before Pythagoras)',
+      '300 BCE (same time as Euclid)',
       '100 CE (Roman era)',
-      '1600 CE (Renaissance)'
+      '1600 CE (Renaissance)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Thales (c. 624-546 BCE) is considered the first mathematician in the Greek tradition.',
   },
@@ -541,11 +565,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'An inscribed angle in a circle is:',
     options: [
       'An angle at the center',
-      'An angle whose vertex is on the circle and whose sides are chords',
       'An angle between two radii',
-      'A 90° angle'
+      'A 90° angle',
+      'An angle whose vertex is on the circle and whose sides are chords',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'An inscribed angle has its vertex on the circle and is formed by two chords.',
   },
@@ -569,11 +593,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'All inscribed angles subtending the same arc are:',
     options: [
       'Supplementary',
-      'Equal',
       'Complementary',
-      'Right angles'
+      'Right angles',
+      'Equal',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Since each equals half the central angle on that arc, all inscribed angles on the same arc are equal.',
   },
@@ -583,11 +607,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'An angle inscribed in a semicircle (subtending a diameter) is:',
     options: [
       '45°',
-      '90°',
       '60°',
-      '180°'
+      '180°',
+      '90°',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The central angle is 180° (a straight line), so the inscribed angle is 90°. This is Thales\' theorem on circles.',
   },
@@ -596,12 +620,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If inscribed angle APB = 50°, then the central angle AOB equals:',
     options: [
+      '100°',
       '25°',
       '50°',
-      '100°',
-      '75°'
+      '75°',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The central angle is twice the inscribed angle: 2 × 50° = 100°.',
   },
@@ -611,11 +635,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Two inscribed angles on opposite sides of a chord:',
     options: [
       'Are equal',
-      'Are supplementary (sum to 180°)',
       'Are complementary (sum to 90°)',
-      'Have no special relationship'
+      'Are supplementary (sum to 180°)',
+      'Have no special relationship',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Inscribed angles in the two arcs sum to 180° because the two central angles sum to 360°.',
   },
@@ -629,11 +653,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'An alternative proof of the Pythagorean theorem uses:',
     options: [
       'Only algebra',
-      'Similar triangles formed by the altitude to the hypotenuse',
       'Coordinate geometry',
-      'Trigonometric functions'
+      'Trigonometric functions',
+      'Similar triangles formed by the altitude to the hypotenuse',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Dropping an altitude from the right angle to the hypotenuse creates two triangles similar to the original.',
   },
@@ -642,12 +666,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If the altitude from C meets hypotenuse AB at H, then triangles ACH and ABC are:',
     options: [
-      'Congruent',
       'Similar',
+      'Congruent',
       'Equal in area',
-      'Isosceles'
+      'Isosceles',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Both share angle A, and both have a right angle, so by AA similarity they are similar.',
   },
@@ -684,12 +708,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many distinct proofs of the Pythagorean theorem are known?',
     options: [
-      'Only Euclid\'s original proof',
-      'About 10',
       'Hundreds',
-      'It cannot be proven in more than one way'
+      'Only Euclid\\'s original proof',
+      'About 10',
+      'It cannot be proven in more than one way',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'There are hundreds of known proofs, including ones by President James Garfield and Leonardo da Vinci.',
   },
@@ -745,11 +769,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'Attempts to prove the parallel postulate from the other axioms led to:',
     options: [
       'A successful proof by Gauss',
-      'The discovery of non-Euclidean geometries',
       'Proof that the postulate is false',
-      'Abandonment of the axiomatic method'
+      'The discovery of non-Euclidean geometries',
+      'Abandonment of the axiomatic method',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Attempts to prove the parallel postulate by contradiction instead revealed consistent non-Euclidean geometries.',
   },
@@ -758,12 +782,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hilbert\'s 1899 work on geometry:',
     options: [
-      'Proved Euclid was wrong',
       'Provided a rigorous modern axiom system filling gaps in Euclid',
+      'Proved Euclid was wrong',
       'Abandoned the Euclidean approach entirely',
-      'Focused only on non-Euclidean geometry'
+      'Focused only on non-Euclidean geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Hilbert provided a complete, rigorous axiom system for Euclidean geometry, addressing gaps and implicit assumptions in Euclid.',
   },
@@ -773,11 +797,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'The importance of the axiomatic method extends beyond geometry to:',
     options: [
       'Only physics',
-      'All areas of modern mathematics',
       'Only number theory',
-      'Only applied mathematics'
+      'All areas of modern mathematics',
+      'Only applied mathematics',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The axiomatic method, pioneered in geometry, is now fundamental to all modern mathematics.',
   },
@@ -788,10 +812,10 @@ export const section14Questions: QuizQuestion[] = [
     options: [
       '5',
       '9',
+      '20',
       '13',
-      '20'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The Elements consists of 13 books covering plane geometry, number theory, and solid geometry.',
   },

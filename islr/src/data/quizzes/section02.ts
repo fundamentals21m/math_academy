@@ -17,11 +17,11 @@ export const section02Quiz: QuizQuestion[] = [
     question: 'Parametric methods require us to:',
     options: [
       'Have very large datasets',
-      'Assume a functional form for $f$',
+      'Avoid making any assumptions',
       'Use only non-linear models',
-      'Avoid making any assumptions'
+      'Assume a functional form for $f$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Parametric methods first assume a functional form (like linear), then estimate the parameters of that form from data.',
   },
@@ -57,12 +57,12 @@ export const section02Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which is an advantage of parametric over non-parametric methods?',
     options: [
-      'They can fit any functional form',
       'They require fewer observations to estimate $f$',
+      'They can fit any functional form',
       'They never make incorrect assumptions',
       'They always have lower bias'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Parametric methods reduce the problem to estimating a fixed number of parameters, requiring less data than non-parametric methods that must estimate the entire function.',
   },
@@ -109,11 +109,11 @@ export const section02Quiz: QuizQuestion[] = [
     question: 'If we primarily need to understand which predictors affect the response, we should prefer:',
     options: [
       'More flexible methods for better fit',
-      'Less flexible methods for better interpretability',
+      'Deep neural networks',
       'Non-parametric methods',
-      'Deep neural networks'
+      'Less flexible methods for better interpretability'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'For inference (understanding relationships), interpretability is crucial. Less flexible methods like linear regression make it easier to understand predictor effects.',
   },
@@ -123,12 +123,12 @@ export const section02Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In parametric regression, assuming $f$ is linear when the true relationship is quadratic will result in:',
     options: [
-      'Increased variance',
       'Increased bias',
+      'Increased variance',
       'Decreased irreducible error',
       'Better predictions'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Using an incorrect functional form (linear when true is quadratic) introduces bias - a systematic error that cannot be reduced by collecting more data.',
   },
@@ -152,11 +152,11 @@ export const section02Quiz: QuizQuestion[] = [
     question: 'A non-parametric method requires more data than a parametric method primarily because:',
     options: [
       'It must estimate many more parameters',
-      'It must estimate the function at every point rather than just a few parameters',
       'Non-parametric methods are always more complex',
+      'It must estimate the function at every point rather than just a few parameters',
       'Parametric methods use regularization'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Non-parametric methods effectively estimate $f$ at many points (or use local information), requiring more data than estimating a small fixed set of parameters.',
   },

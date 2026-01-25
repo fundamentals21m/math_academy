@@ -7,12 +7,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Turing machine consists of:',
     options: [
-      'An infinite tape, a read/write head, states, and a transition table',
+      'A mechanical gear system',
       'A finite memory only',
       'A calculator with buttons',
-      'A mechanical gear system',
+      'An infinite tape, a read/write head, states, and a transition table'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A Turing machine has an infinite tape divided into cells, a head that reads/writes and moves, a finite set of states, and a transition table that determines actions based on current state and symbol. This simple model captures all of computation.',
@@ -38,12 +38,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Halting Problem asks whether:',
     options: [
-      'Given a program and input, we can determine if it will eventually stop',
       'A computer can run forever',
+      'Given a program and input, we can determine if it will eventually stop',
       'All programs halt',
-      'Computers can solve all problems',
+      'Computers can solve all problems'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Halting Problem: given a description of a Turing machine M and input x, determine if M eventually halts on x. Turing proved this is undecidable—no algorithm can correctly answer this for all M and x.',
@@ -53,12 +53,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Universal Turing Machine is significant because:',
     options: [
-      'It can simulate any other Turing machine given its description',
-      'It runs faster than all other machines',
       'It uses no memory',
-      'It can only solve simple problems',
+      'It runs faster than all other machines',
+      'It can simulate any other Turing machine given its description',
+      'It can only solve simple problems'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A Universal Turing Machine takes as input a description of any machine M and input x, and simulates M on x. This is the theoretical foundation of stored-program computers—one machine running different programs rather than separate hardware for each task.',
@@ -69,12 +69,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Turing\'s negative solution to the Entscheidungsproblem showed that:',
     options: [
-      'There is no algorithm to decide if arbitrary statements are provable',
+      'Only arithmetic statements are undecidable',
       'All mathematical statements can be decided',
       'The Entscheidungsproblem was poorly posed',
-      'Only arithmetic statements are undecidable',
+      'There is no algorithm to decide if arbitrary statements are provable'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The Entscheidungsproblem asked for an algorithm to decide provability of any statement. Turing showed no such algorithm exists, connecting to Gödel\'s incompleteness. This was a major blow to Hilbert\'s foundational program.',

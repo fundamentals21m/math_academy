@@ -7,11 +7,11 @@ export const section77Questions: QuizQuestion[] = [
     question: 'The span of vectors $\\mathbf{v}_1, ..., \\mathbf{v}_k$ is:',
     options: [
       'Their sum',
-      'The set of all linear combinations $c_1 \\mathbf{v}_1 + ... + c_k \\mathbf{v}_k$',
+      'Just the vectors themselves',
       'Their product',
-      'Just the vectors themselves'
+      'The set of all linear combinations $c_1 \\mathbf{v}_1 + ... + c_k \\mathbf{v}_k$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Span = all possible linear combinations.',
   },
@@ -20,12 +20,28 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A linear combination of $\\mathbf{u}$ and $\\mathbf{v}$ is:',
     options: [
-      '$\\mathbf{u} \\cdot \\mathbf{v}$',
-      '$\\mathbf{u} + \\mathbf{v}$',
-      '$a\\mathbf{u} + b\\mathbf{v}$ for scalars $a, b$',
-      '$\\mathbf{u}/\\mathbf{v}$'
-    ],
+      '$\\mathbf{u} + \\mathbf{v}
     correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Linear combination: scalar multiples added together.',
+  },
+      '$\\mathbf{u} \\cdot \\mathbf{v}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Linear combination: scalar multiples added together.',
+  },
+      '$a\\mathbf{u} + b\\mathbf{v}$ for scalars $a, b
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Linear combination: scalar multiples added together.',
+  },
+      '$\\mathbf{u}/\\mathbf{v}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Linear combination: scalar multiples added together.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Linear combination: scalar multiples added together.',
   },
@@ -35,11 +51,11 @@ export const section77Questions: QuizQuestion[] = [
     question: 'The span of $(1, 0)$ and $(0, 1)$ in $\\mathbb{R}^2$ is:',
     options: [
       'A line',
-      'A point',
       'All of $\\mathbb{R}^2$',
+      'A point',
       'Empty'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'These standard basis vectors span all of $\\mathbb{R}^2$.',
   },
@@ -48,12 +64,12 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The span of a single nonzero vector is:',
     options: [
-      'A point',
       'A line through the origin',
+      'A point',
       'A plane',
-      'All of space'
+      'All of space',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'One vector spans a line (all scalar multiples).',
   },
@@ -62,12 +78,24 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\mathbf{w}$ is in span$\\{\\mathbf{v}_1, \\mathbf{v}_2\\}$, then:',
     options: [
-      '$\\mathbf{w} = \\mathbf{v}_1$',
+      '$\\mathbf{w} = \\mathbf{v}_1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Being in the span means expressible as a linear combination.',
+  },
+      '$\\mathbf{w} = \\mathbf{0}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Being in the span means expressible as a linear combination.',
+  },
       '$\\mathbf{w} = c_1 \\mathbf{v}_1 + c_2 \\mathbf{v}_2$ for some scalars',
-      '$\\mathbf{w}$ is orthogonal to $\\mathbf{v}_1$ and $\\mathbf{v}_2$',
-      '$\\mathbf{w} = \\mathbf{0}$'
+      '$\\mathbf{w}$ is orthogonal to $\\mathbf{v}_1$ and $\\mathbf{v}_2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Being in the span means expressible as a linear combination.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Being in the span means expressible as a linear combination.',
   },
@@ -76,12 +104,12 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Vectors that span $\\mathbb{R}^n$ are called:',
     options: [
-      'Orthogonal',
       'A spanning set for $\\mathbb{R}^n$',
+      'Orthogonal',
       'Unit vectors',
       'Perpendicular'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A spanning set generates the entire space.',
   },

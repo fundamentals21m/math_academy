@@ -6,12 +6,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What famous algebraic identity does Proposition II.4 prove?',
     options: [
-      'a² - b² = (a+b)(a-b)',
       '(a + b)² = a² + 2ab + b²',
+      'a² - b² = (a+b)(a-b)',
+      '(a - b)² = a² - 2ab + b²',
       'a³ + b³ = (a+b)(a² - ab + b²)',
-      '(a - b)² = a² - 2ab + b²'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'II.4 proves the square of a sum: when a line is cut into two parts, the square on the whole equals the squares on the parts plus twice the rectangle they contain.',
   },
@@ -20,12 +20,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the geometric proof of II.4, the large square is divided into how many regions?',
     options: [
-      'Two',
       'Three',
+      'Two',
+      'Six',
       'Four',
-      'Six'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The square on (a+b) is divided into four regions: two smaller squares (a² and b²) and two equal rectangles (each of area ab).',
   },

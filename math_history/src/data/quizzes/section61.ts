@@ -22,12 +22,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Évariste Galois died at what age?',
     options: [
-      '20',
       '30',
+      '20',
       '40',
-      '50',
+      '50'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Galois was killed in a duel in 1832 at age 20. Despite his short life, he developed one of the most profound theories in mathematics, though it took decades for others to fully understand his work.',
@@ -38,12 +38,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A group is "solvable" if it has a chain of subgroups with:',
     options: [
-      'Abelian quotients',
-      'Only one element in each',
       'Infinite order',
-      'No normal subgroups',
+      'Only one element in each',
+      'Abelian quotients',
+      'No normal subgroups'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A group G is solvable if there exists a chain {e} = G₀ ⊲ G₁ ⊲ ... ⊲ Gₙ = G where each quotient Gᵢ₊₁/Gᵢ is abelian (commutative). This property determines whether the corresponding polynomial can be solved by radicals.',
@@ -53,12 +53,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The symmetric group $S_4$ is solvable, which explains why:',
     options: [
-      'Quartic equations can be solved by radicals',
+      'Quartic equations require transcendental functions',
       'Quartic equations have no solutions',
       'Quartic equations have exactly 4 solutions',
-      'Quartic equations require transcendental functions',
+      'Quartic equations can be solved by radicals'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Since S₄ is solvable (it has a chain {e} ⊲ V₄ ⊲ A₄ ⊲ S₄ with abelian quotients), Galois theory tells us that the general quartic equation can be solved by radicals, which Ferrari showed in the 16th century.',
@@ -84,12 +84,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Fundamental Theorem of Galois Theory establishes a correspondence between:',
     options: [
-      'Subgroups of the Galois group and intermediate field extensions',
       'Roots of polynomials and prime numbers',
+      'Subgroups of the Galois group and intermediate field extensions',
       'Even and odd permutations',
-      'Real and complex numbers',
+      'Real and complex numbers'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The Fundamental Theorem establishes a bijection between subgroups of the Galois group and intermediate fields between the base field and the splitting field. Normal subgroups correspond to normal (Galois) extensions. This "Galois correspondence" is the heart of the theory.',

@@ -7,11 +7,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'What is the "mouse trap" strategy described for Bitcoin adoption?',
     options: [
       'Tricking people into buying Bitcoin',
+      'A regulatory compliance strategy',
       'Using attractive yields to draw finance professionals who inadvertently accelerate hyperbitcoinization',
       'A new Bitcoin mining technique',
-      'A regulatory compliance strategy'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The strategy uses tempting yields as "bait" to transform Bitcoin\'s detractors into participants who inadvertently expedite monetary paradigm change.',
   },
@@ -21,11 +21,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'According to the paper, how has Bitcoin demonstrated "Jujitsu" strategy before?',
     options: [
       'By defeating all competitors',
-      'By turning the energy criticism into a feature (stranded energy monetization)',
       'By avoiding regulation',
-      'By becoming a government currency'
+      'By becoming a government currency',
+      'By turning the energy criticism into a feature (stranded energy monetization)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Bitcoin turned energy criticism into a feature by enabling stranded energy monetization—using opponents\' arguments to amplify its own impact.',
   },
@@ -48,12 +48,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the ultimate vision for Bitcoin money market funds?',
     options: [
-      'To replace all traditional banks',
       'A sly roundabout way toward hyperbitcoinization through gradual adoption',
+      'To replace all traditional banks',
       'To create a new fiat currency',
-      'To eliminate all government regulation'
+      'To eliminate all government regulation',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The vision is for Bitcoin to gradually absorb both long-term savings and short-term capital through attractive products, leading to irreversible monetary paradigm change.',
   },

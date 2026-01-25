@@ -6,10 +6,26 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The group algebra $\\mathbb{F}_q[G]$ for a finite group $G$ consists of:',
     options: [
-      'All functions from $G$ to $\\mathbb{F}_q$',
-      'Formal linear combinations $\\sum_{g \\in G} a_g g$ with $a_g \\in \\mathbb{F}_q$',
-      'All group homomorphisms from $G$ to $\\mathbb{F}_q^*$',
-      'The quotient $\\mathbb{F}_q / G$'
+      'Formal linear combinations $\\sum_{g \\in G} a_g g$ with $a_g \\in \\mathbb{F}_q
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The group algebra $\\mathbb{F}_q[G]$ consists of formal linear combinations $\\sum_{g \\in G} a_g g$ where $a_g \\in \\mathbb{F}_q$, with multiplication extending the group operation linearly.',
+  },
+      'All functions from $G$ to $\\mathbb{F}_q
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The group algebra $\\mathbb{F}_q[G]$ consists of formal linear combinations $\\sum_{g \\in G} a_g g$ where $a_g \\in \\mathbb{F}_q$, with multiplication extending the group operation linearly.',
+  },
+      'All group homomorphisms from $G$ to $\\mathbb{F}_q^*
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The group algebra $\\mathbb{F}_q[G]$ consists of formal linear combinations $\\sum_{g \\in G} a_g g$ where $a_g \\in \\mathbb{F}_q$, with multiplication extending the group operation linearly.',
+  },
+      'The quotient $\\mathbb{F}_q / G
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The group algebra $\\mathbb{F}_q[G]$ consists of formal linear combinations $\\sum_{g \\in G} a_g g$ where $a_g \\in \\mathbb{F}_q$, with multiplication extending the group operation linearly.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,10 +36,26 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $G = \\mathbb{Z}_n$ (cyclic group of order $n$), the group algebra $\\mathbb{F}_q[\\mathbb{Z}_n]$ is isomorphic to:',
     options: [
-      '$\\mathbb{F}_q^n$',
-      '$\\mathbb{F}_q[x]/(x^n)$',
-      '$\\mathbb{F}_q[x]/(x^n - 1)$',
-      '$\\mathbb{F}_{q^n}$'
+      '$\\mathbb{F}_q^n
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The group algebra $\\mathbb{F}_q[\\mathbb{Z}_n] \\cong \\mathbb{F}_q[x]/(x^n - 1)$ where the generator of $\\mathbb{Z}_n$ maps to $x$. This shows cyclic codes are ideals in a group algebra.',
+  },
+      '$\\mathbb{F}_q[x]/(x^n - 1)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The group algebra $\\mathbb{F}_q[\\mathbb{Z}_n] \\cong \\mathbb{F}_q[x]/(x^n - 1)$ where the generator of $\\mathbb{Z}_n$ maps to $x$. This shows cyclic codes are ideals in a group algebra.',
+  },
+      '$\\mathbb{F}_q[x]/(x^n)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The group algebra $\\mathbb{F}_q[\\mathbb{Z}_n] \\cong \\mathbb{F}_q[x]/(x^n - 1)$ where the generator of $\\mathbb{Z}_n$ maps to $x$. This shows cyclic codes are ideals in a group algebra.',
+  },
+      '$\\mathbb{F}_{q^n}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The group algebra $\\mathbb{F}_q[\\mathbb{Z}_n] \\cong \\mathbb{F}_q[x]/(x^n - 1)$ where the generator of $\\mathbb{Z}_n$ maps to $x$. This shows cyclic codes are ideals in a group algebra.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -35,11 +67,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Cyclic codes of length $n$ over $\\mathbb{F}_q$ correspond to:',
     options: [
       'Subgroups of $(\\mathbb{F}_q[x]/(x^n-1))^*$',
-      'Ideals in $\\mathbb{F}_q[\\mathbb{Z}_n]$',
+      'Prime ideals in $\\mathbb{F}_q[x]$',
       'Automorphisms of $\\mathbb{F}_q[x]$',
-      'Prime ideals in $\\mathbb{F}_q[x]$'
+      'Ideals in $\\mathbb{F}_q[\\mathbb{Z}_n]$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Cyclic codes are precisely the ideals in the group algebra $\\mathbb{F}_q[\\mathbb{Z}_n] \\cong \\mathbb{F}_q[x]/(x^n-1)$. This algebraic perspective unifies the theory.',
   },
@@ -58,11 +90,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'When $\\gcd(n, q) = 1$, the group algebra $\\mathbb{F}_q[\\mathbb{Z}_n]$ is semisimple, meaning it decomposes as:',
     options: [
       'A direct sum of matrix algebras',
-      'A direct product of fields',
       'A polynomial ring',
-      'A local ring'
+      'A local ring',
+      'A direct product of fields',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'By Maschke\'s theorem and the CRT, when $\\gcd(n,q)=1$, we have $\\mathbb{F}_q[x]/(x^n-1) \\cong \\prod_i \\mathbb{F}_{q^{d_i}}$, a direct product of extension fields.',
   },
@@ -74,7 +106,7 @@ export const section21Questions: QuizQuestion[] = [
       'Only cyclic groups',
       'Only abelian groups',
       'Any finite group',
-      'Only simple groups'
+      'Only simple groups',
     ],
     correctIndex: 2,
     difficulty: 'medium',

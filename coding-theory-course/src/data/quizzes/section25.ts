@@ -6,12 +6,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Berlekamp\'s algorithm is used to:',
     options: [
-      'Encode messages into codewords',
       'Factor polynomials over finite fields',
+      'Encode messages into codewords',
       'Compute the minimum distance of a code',
-      'Find the generator matrix of a code'
+      'Find the generator matrix of a code',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Berlekamp\'s algorithm is a deterministic algorithm for factoring polynomials over finite fields $\\mathbb{F}_q$. It is widely used in coding theory for factoring $x^n - 1$.',
   },
@@ -20,12 +20,28 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Berlekamp\'s algorithm, we seek polynomials $h(x)$ satisfying:',
     options: [
-      '$h(x)^q = h(x) \\pmod{f(x)}$',
-      '$h(x)^q = 1 \\pmod{f(x)}$',
-      '$h(x) + h(x)^q = 0 \\pmod{f(x)}$',
-      '$h(x) \\cdot f(x) = 0$'
+      '$h(x) \\cdot f(x) = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Berlekamp\'s algorithm finds all $h(x)$ with $h(x)^q \\equiv h(x) \\pmod{f(x)}$. These form a vector space, and non-trivial solutions help factor $f(x)$.',
+  },
+      '$h(x)^q = 1 \\pmod{f(x)}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Berlekamp\'s algorithm finds all $h(x)$ with $h(x)^q \\equiv h(x) \\pmod{f(x)}$. These form a vector space, and non-trivial solutions help factor $f(x)$.',
+  },
+      '$h(x)^q = h(x) \\pmod{f(x)}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Berlekamp\'s algorithm finds all $h(x)$ with $h(x)^q \\equiv h(x) \\pmod{f(x)}$. These form a vector space, and non-trivial solutions help factor $f(x)$.',
+  },
+      '$h(x) + h(x)^q = 0 \\pmod{f(x)}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Berlekamp\'s algorithm finds all $h(x)$ with $h(x)^q \\equiv h(x) \\pmod{f(x)}$. These form a vector space, and non-trivial solutions help factor $f(x)$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Berlekamp\'s algorithm finds all $h(x)$ with $h(x)^q \\equiv h(x) \\pmod{f(x)}$. These form a vector space, and non-trivial solutions help factor $f(x)$.',
   },
@@ -34,12 +50,28 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Berlekamp subalgebra $B$ of $\\mathbb{F}_q[x]/(f(x))$ consists of all $h(x)$ with $h^q = h$. This is an $\\mathbb{F}_q$-vector space of dimension:',
     options: [
-      '$\\deg(f)$',
-      'The number of distinct irreducible factors of $f(x)$',
-      '$q$',
-      '$\\deg(f) - 1$'
+      '$\\deg(f)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The dimension of the Berlekamp subalgebra equals the number of distinct irreducible factors of $f(x)$. This is a key theorem enabling the factorization.',
+  },
+      '$q
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The dimension of the Berlekamp subalgebra equals the number of distinct irreducible factors of $f(x)$. This is a key theorem enabling the factorization.',
+  },
+      'The number of distinct irreducible factors of $f(x)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The dimension of the Berlekamp subalgebra equals the number of distinct irreducible factors of $f(x)$. This is a key theorem enabling the factorization.',
+  },
+      '$\\deg(f) - 1
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The dimension of the Berlekamp subalgebra equals the number of distinct irreducible factors of $f(x)$. This is a key theorem enabling the factorization.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The dimension of the Berlekamp subalgebra equals the number of distinct irreducible factors of $f(x)$. This is a key theorem enabling the factorization.',
   },
@@ -71,12 +103,28 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'After finding a non-trivial element $h(x)$ in the Berlekamp subalgebra, we obtain factors of $f(x)$ by computing:',
     options: [
-      '$\\gcd(f(x), h(x))$',
-      '$\\gcd(f(x), h(x) - c)$ for various $c \\in \\mathbb{F}_q$',
-      '$f(x) / h(x)$',
-      '$h(x)^q - h(x)$'
+      '$\\gcd(f(x), h(x))
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'For $h(x)$ in the Berlekamp subalgebra, $\\gcd(f(x), h(x) - c)$ for $c \\in \\mathbb{F}_q$ gives non-trivial factors. The key is that $\\prod_{c \\in \\mathbb{F}_q}(h - c) = h^q - h = 0 \\pmod{f}$.',
+  },
+      '$f(x) / h(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For $h(x)$ in the Berlekamp subalgebra, $\\gcd(f(x), h(x) - c)$ for $c \\in \\mathbb{F}_q$ gives non-trivial factors. The key is that $\\prod_{c \\in \\mathbb{F}_q}(h - c) = h^q - h = 0 \\pmod{f}$.',
+  },
+      '$h(x)^q - h(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For $h(x)$ in the Berlekamp subalgebra, $\\gcd(f(x), h(x) - c)$ for $c \\in \\mathbb{F}_q$ gives non-trivial factors. The key is that $\\prod_{c \\in \\mathbb{F}_q}(h - c) = h^q - h = 0 \\pmod{f}$.',
+  },
+      '$\\gcd(f(x), h(x) - c)$ for various $c \\in \\mathbb{F}_q
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For $h(x)$ in the Berlekamp subalgebra, $\\gcd(f(x), h(x) - c)$ for $c \\in \\mathbb{F}_q$ gives non-trivial factors. The key is that $\\prod_{c \\in \\mathbb{F}_q}(h - c) = h^q - h = 0 \\pmod{f}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'For $h(x)$ in the Berlekamp subalgebra, $\\gcd(f(x), h(x) - c)$ for $c \\in \\mathbb{F}_q$ gives non-trivial factors. The key is that $\\prod_{c \\in \\mathbb{F}_q}(h - c) = h^q - h = 0 \\pmod{f}$.',
   },

@@ -6,12 +6,28 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In polar coordinates, a point is represented by:',
     options: [
-      '$(x, y)$',
-      '$(r, \\theta)$',
-      '$(\\rho, z)$',
-      '$(r, x, y)$'
+      '$(x, y)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Polar coordinates use $(r, \\theta)$: distance from origin and angle from positive $x$-axis.',
+  },
+      '$(\\rho, z)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Polar coordinates use $(r, \\theta)$: distance from origin and angle from positive $x$-axis.',
+  },
+      '$(r, x, y)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Polar coordinates use $(r, \\theta)$: distance from origin and angle from positive $x$-axis.',
+  },
+      '$(r, \\theta)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Polar coordinates use $(r, \\theta)$: distance from origin and angle from positive $x$-axis.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Polar coordinates use $(r, \\theta)$: distance from origin and angle from positive $x$-axis.',
   },
@@ -20,12 +36,28 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To convert from polar to Cartesian: $x = ?$',
     options: [
-      '$r\\sin\\theta$',
-      '$r\\cos\\theta$',
-      '$r/\\cos\\theta$',
-      '$\\theta\\cos r$'
+      '$r\\sin\\theta
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$x = r\\cos\\theta$ and $y = r\\sin\\theta$.',
+  },
+      '$\\theta\\cos r
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$x = r\\cos\\theta$ and $y = r\\sin\\theta$.',
+  },
+      '$r\\cos\\theta
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$x = r\\cos\\theta$ and $y = r\\sin\\theta$.',
+  },
+      '$r/\\cos\\theta
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$x = r\\cos\\theta$ and $y = r\\sin\\theta$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$x = r\\cos\\theta$ and $y = r\\sin\\theta$.',
   },
@@ -34,12 +66,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The area of a region in polar coordinates is given by:',
     options: [
-      '$\\int_\\alpha^\\beta r\\,d\\theta$',
       '$\\int_\\alpha^\\beta \\frac{1}{2}r^2\\,d\\theta$',
+      '$\\int_\\alpha^\\beta r\\,d\\theta$',
       '$\\int_\\alpha^\\beta r^2\\,d\\theta$',
       '$\\int_\\alpha^\\beta \\pi r^2\\,d\\theta$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Area in polar: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$.',
   },

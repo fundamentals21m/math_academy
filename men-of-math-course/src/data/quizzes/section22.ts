@@ -8,8 +8,8 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       'Topology',
       'Group theory',
+      'Analysis',
       'Set theory',
-      'Analysis'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'Galois died tragically in:',
     options: [
       'A laboratory accident',
-      'A duel',
       'War',
-      'Disease'
+      'A duel',
+      'Disease',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Galois was killed in a duel at age 20, possibly over a romantic dispute.',
   },
@@ -34,12 +34,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Galois theory connects polynomial solvability to:',
     options: [
-      'The degree of the polynomial',
       'The structure of its symmetry group',
+      'The degree of the polynomial',
       'The size of its coefficients',
-      'The number of real roots'
+      'The number of real roots',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A polynomial is solvable by radicals if and only if its Galois group is solvable.',
   },
@@ -49,11 +49,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'The night before his duel, Galois:',
     options: [
       'Slept peacefully',
-      'Wrote down his mathematical ideas frantically',
       'Tried to escape Paris',
-      'Met with Cauchy'
+      'Met with Cauchy',
+      'Wrote down his mathematical ideas frantically',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Galois spent his final night writing down his revolutionary mathematical ideas.',
   },
@@ -64,8 +64,8 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       'Function',
       'Field extension',
+      'Differential equation',
       'Matrix',
-      'Differential equation'
     ],
     correctIndex: 1,
     difficulty: 'hard',

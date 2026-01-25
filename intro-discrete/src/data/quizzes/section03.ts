@@ -6,10 +6,26 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does $a \\equiv b \\pmod{n}$ mean?',
     options: [
-      '$n$ divides $a - b$',
-      '$a$ divides $n - b$',
-      '$a = b$',
-      '$a$ and $b$ are both divisible by $n$'
+      '$a$ divides $n - b
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Two integers are congruent modulo $n$ if their difference is divisible by $n$.',
+  },
+      '$a = b
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Two integers are congruent modulo $n$ if their difference is divisible by $n$.',
+  },
+      '$a$ and $b$ are both divisible by $n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Two integers are congruent modulo $n$ if their difference is divisible by $n$.',
+  },
+      '$n$ divides $a - b
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Two integers are congruent modulo $n$ if their difference is divisible by $n$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -32,7 +48,7 @@ export const section03Questions: QuizQuestion[] = [
       '12',
       '11',
       '13',
-      'Infinitely many'
+      'Infinitely many',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -43,12 +59,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When is $[a]_n$ invertible in $\\mathbb{Z}_n$?',
     options: [
-      'When $\\gcd(a, n) = 1$',
-      'When $a$ is prime',
       'When $n$ is prime',
+      'When $a$ is prime',
+      'When $\\gcd(a, n) = 1$',
       'Always'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: '$[a]_n$ has a multiplicative inverse if and only if $a$ and $n$ are relatively prime.',
   },
@@ -66,12 +82,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $p$ is prime, what is true about $\\mathbb{Z}_p$?',
     options: [
+      'It has zero-divisors',
       'Every non-zero element is invertible',
       'No elements are invertible',
       'Only $[1]$ is invertible',
-      'It has zero-divisors'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'When $p$ is prime, $\\gcd(a, p) = 1$ for all $1 \\leq a < p$, so all non-zero elements are invertible.',
   },

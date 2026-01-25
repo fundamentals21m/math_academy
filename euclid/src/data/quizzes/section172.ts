@@ -7,11 +7,11 @@ export const section172Questions: QuizQuestion[] = [
     question: 'VI.27 proves that among all parallelograms applied to half of a given line and deficient by a similar parallelogram:',
     options: [
       'The smallest is when applied to the whole line',
-      'The greatest is the one described on half the line',
       'All have equal area',
-      'None can exceed a given bound'
+      'None can exceed a given bound',
+      'The greatest is the one described on half the line',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'VI.27 establishes that the maximum parallelogram is achieved when it is constructed on exactly half the given line. This is an optimization result.',
   },
@@ -35,9 +35,9 @@ export const section172Questions: QuizQuestion[] = [
     question: 'VI.27 is related to which modern mathematical concept?',
     options: [
       'Finding maximum values (optimization)',
-      'Computing derivatives',
       'Solving linear equations',
-      'Finding circle centers'
+      'Computing derivatives',
+      'Finding circle centers',
     ],
     correctIndex: 0,
     difficulty: 'easy',

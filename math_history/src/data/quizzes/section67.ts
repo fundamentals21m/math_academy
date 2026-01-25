@@ -7,12 +7,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cantor\'s surprising discovery was that:',
     options: [
-      'There exists a bijection between $\\mathbb{R}$ and $\\mathbb{R}^2$',
+      'All spaces are one-dimensional',
       'The line is longer than the plane',
       'Dimension cannot be defined',
-      'All spaces are one-dimensional',
+      'There exists a bijection between $\\mathbb{R}$ and $\\mathbb{R}^2$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'In 1877, Cantor showed that there\'s a one-to-one correspondence between R and R². The line and plane have the same cardinality! However, this bijection is not continuous, so dimension is still preserved under homeomorphisms.',
@@ -38,12 +38,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Brouwer\'s invariance of dimension theorem states that:',
     options: [
-      '$\\mathbb{R}^m$ is homeomorphic to $\\mathbb{R}^n$ only if $m = n$',
       'All spaces have the same dimension',
+      '$\\mathbb{R}^m$ is homeomorphic to $\\mathbb{R}^n$ only if $m = n$',
       'Dimension is not a topological property',
-      'Space-filling curves are impossible',
+      'Space-filling curves are impossible'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Brouwer proved in 1911 that R^m and R^n are homeomorphic (topologically equivalent) if and only if m = n. This confirms that dimension is a topological invariant—it can\'t be changed by continuous deformation.',
@@ -53,12 +53,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cantor set has Hausdorff dimension approximately:',
     options: [
-      '0.631',
-      '1',
       '0',
-      '2',
+      '1',
+      '0.631',
+      '2'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The Cantor set has Hausdorff dimension log(2)/log(3) ≈ 0.631. It has topological dimension 0 (totally disconnected) but fractal dimension between 0 and 1, reflecting its "in-between" nature.',
@@ -69,12 +69,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In dimension 7, Milnor discovered that:',
     options: [
-      'There are 28 different smooth structures on the 7-sphere',
+      'Dimension is undefined',
       'The sphere doesn\'t exist',
       'All spheres are the same',
-      'Dimension is undefined',
+      'There are 28 different smooth structures on the 7-sphere'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Milnor\'s 1956 discovery of exotic spheres showed that in dimension 7, there are 28 different ways to put a smooth structure on the sphere. These are homeomorphic but not diffeomorphic—a distinction that doesn\'t exist in lower dimensions.',

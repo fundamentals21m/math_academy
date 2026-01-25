@@ -16,11 +16,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'Every group of order $p$ (prime) is:',
     options: [
       'Non-abelian',
+      'Simple but not cyclic',
       'Cyclic (isomorphic to $\\mathbb{Z}_p$)',
       'A direct product',
-      'Simple but not cyclic'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'By Lagrange, the only subgroups have order 1 or $p$. Any $g \\neq e$ generates $G$, so $G \\cong \\mathbb{Z}_p$.',
   },
@@ -32,7 +32,7 @@ export const section28Questions: QuizQuestion[] = [
       'Cyclic',
       'Abelian',
       'Non-abelian',
-      'Simple'
+      'Simple',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -52,12 +52,16 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A group of order 15 is:',
     options: [
-      'Always cyclic',
       'Always non-abelian',
-      'Either cyclic or isomorphic to $\\mathbb{Z}_3 \\times \\mathbb{Z}_5$',
-      'Simple'
+      'Either cyclic or isomorphic to $\\mathbb{Z}_3 \\times \\mathbb{Z}_5
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$15 = 3 \\cdot 5$. By Sylow, $n_3 | 5$ and $n_3 \\equiv 1 \\pmod 3$, so $n_3 = 1$. Similarly $n_5 = 1$. Both Sylow subgroups are normal, and $G \\cong \\mathbb{Z}_3 \\times \\mathbb{Z}_5 \\cong \\mathbb{Z}_{15}$.',
+  },
+      'Simple',
+      'Always cyclic',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$15 = 3 \\cdot 5$. By Sylow, $n_3 | 5$ and $n_3 \\equiv 1 \\pmod 3$, so $n_3 = 1$. Similarly $n_5 = 1$. Both Sylow subgroups are normal, and $G \\cong \\mathbb{Z}_3 \\times \\mathbb{Z}_5 \\cong \\mathbb{Z}_{15}$.',
   },

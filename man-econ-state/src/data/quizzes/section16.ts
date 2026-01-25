@@ -6,12 +6,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does government spending lack market discipline?',
     options: [
-      'Government workers are lazy',
       'Spenders don\'t bear the costs and recipients don\'t choose the goods',
+      'Government workers are lazy',
       'There is not enough money',
       'Bureaucracy is inherently slow'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Government spenders use others\' money for others—the category with the weakest incentive to economize.',
   },
@@ -35,11 +35,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'Why are "free" government services not really free?',
     options: [
       'Because there are application fees',
-      'Because they are paid for through taxation',
       'Because they require waiting in line',
-      'Because quality is lower'
+      'Because quality is lower',
+      'Because they are paid for through taxation',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Services funded by taxes are not free—the cost is merely hidden and shifted to taxpayers.',
   },
@@ -49,11 +49,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'What is crowding out?',
     options: [
       'Too many people using government services',
+      'Public spaces becoming overcrowded',
       'Government borrowing that reduces private investment',
       'Regulations that prevent business entry',
-      'Public spaces becoming overcrowded'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'When government borrows, it competes with private borrowers, raising interest rates and reducing private investment.',
   },
@@ -62,12 +62,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "ratchet effect" in government spending?',
     options: [
-      'Spending increases smoothly over time',
       'Spending rises during crises but never fully returns to pre-crisis levels',
+      'Spending increases smoothly over time',
       'Spending follows a mechanical formula',
       'Spending is controlled by a ratchet mechanism'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Crises justify increased spending, but when crises end, spending doesn\'t return to previous levels—it ratchets up.',
   },
@@ -77,11 +77,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'According to Rothbard, what do both the welfare state and warfare state have in common?',
     options: [
       'They both help the poor',
-      'They both consume resources that would otherwise serve consumers',
       'They are both constitutional',
-      'They are both popular'
+      'They both consume resources that would otherwise serve consumers',
+      'They are both popular',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Both welfare and warfare states divert resources from productive uses determined by consumers to political uses.',
   },

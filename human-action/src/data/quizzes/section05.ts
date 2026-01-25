@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section05Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'All action takes place in:',
+    options: [
+      'An instant',
+      'Time - from past through present to future',
+      'Multiple dimensions',
+      'A vacuum',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Action is always temporal - it unfolds through time. We act in the present to change the future based on knowledge from the past.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Time preference refers to the tendency to:',
+    options: [
+      'Prefer later goods over present goods',
+      'Ignore time in economic calculations',
+      'Value present satisfaction over future satisfaction of the same kind',
+      'Prefer historical data over forecasts',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Time preference means valuing present goods more highly than future goods of the same kind. This is universal to all human action.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why does uncertainty necessarily accompany all action?',
+    options: [
+      'Because the future is always unknown and cannot be known with certainty',
+      'Because economists cannot predict accurately',
+      'Because markets are irrational',
+      'Because governments change policies'
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The future is inherently uncertain. We act based on expectations and beliefs about what will happen, but cannot know outcomes with certainty.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Interest originates from:',
+    options: [
+      'Bank policies',
+      'Time preference - the universal preference for present over future goods',
+      'Government regulation',
+      'Inflation'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Interest is the market manifestation of time preference. People must be compensated (with interest) to defer consumption to the future.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'According to Mises, planning is:',
+    options: [
+      'Only done by governments',
+      'Impossible under capitalism',
+      'Inherent in all human action - we always consider future consequences',
+      'Only necessary for large businesses'
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'All action involves planning - considering future consequences and selecting means expected to achieve desired ends. Action is always future-oriented.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The period of production refers to:',
+    options: [
+      'The time needed for a factory to operate',
+      'The fiscal year',
+      'The election cycle',
+      'The time between the beginning of an action and the attainment of its end'
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The period of production is the time from starting an action to achieving its goal. Longer production periods generally yield more output but require more waiting.',
+  },
+];

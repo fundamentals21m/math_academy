@@ -7,9 +7,9 @@ export const section08Questions: QuizQuestion[] = [
     question: 'A matching in a graph is:',
     options: [
       'A set of edges with no common vertices',
+      'A set of adjacent vertices',
       'A set of vertices with no common edges',
       'A connected subgraph',
-      'A set of adjacent vertices'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -20,12 +20,28 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A perfect matching in a graph $G$ covers:',
     options: [
-      'All edges of $G$',
-      'All vertices of $G$',
-      'Half the vertices of $G$',
-      'All cycles of $G$'
+      'All edges of $G
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A perfect matching saturates (covers) every vertex of $G$.',
+  },
+      'Half the vertices of $G
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A perfect matching saturates (covers) every vertex of $G$.',
+  },
+      'All vertices of $G
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A perfect matching saturates (covers) every vertex of $G$.',
+  },
+      'All cycles of $G
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A perfect matching saturates (covers) every vertex of $G$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A perfect matching saturates (covers) every vertex of $G$.',
   },
@@ -34,10 +50,18 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hall\'s Theorem states that a bipartite graph $G$ with parts $X, Y$ has a matching saturating $X$ iff:',
     options: [
-      '$|X| = |Y|$',
-      '$|N(S)| \\geq |S|$ for all $S \\subseteq X$',
+      '$|X| = |Y|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Hall\'s condition: for every subset $S$ of $X$, the neighborhood $N(S)$ in $Y$ satisfies $|N(S)| \\geq |S|$.',
+  },
       'Every vertex in $X$ has degree at least 1',
-      'The graph is connected'
+      'The graph is connected',
+      '$|N(S)| \\geq |S|$ for all $S \\subseteq X
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Hall\'s condition: for every subset $S$ of $X$, the neighborhood $N(S)$ in $Y$ satisfies $|N(S)| \\geq |S|$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,12 +72,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A vertex cover is:',
     options: [
+      'A spanning subgraph',
       'A set of vertices incident to every edge',
       'A set of edges incident to every vertex',
-      'A spanning subgraph',
-      'A dominating set'
+      'A dominating set',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A vertex cover is a set $S$ such that every edge has at least one endpoint in $S$.',
   },
@@ -63,11 +87,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'König\'s Theorem states that in bipartite graphs:',
     options: [
       'Maximum matching equals minimum edge cover',
+      'Every vertex cover is a matching',
       'Maximum matching equals minimum vertex cover',
       'Chromatic number equals 2',
-      'Every vertex cover is a matching'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'König-Egerváry: in bipartite graphs, $\\nu(G) = \\tau(G)$ (max matching = min vertex cover).',
   },

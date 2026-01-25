@@ -6,12 +6,28 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The First Fundamental Theorem of Calculus states that if $A(x) = \\int_a^x f(t)\\,dt$, then:',
     options: [
-      '$A(x) = f(x)$',
-      '$A\'(x) = f(x)$',
-      '$A\'(x) = F(x)$',
-      '$A(x) = f\'(x)$'
+      '$A(x) = f(x)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'FTC I: the derivative of the integral (with variable upper limit) is the integrand.',
+  },
+      '$A\\'(x) = F(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'FTC I: the derivative of the integral (with variable upper limit) is the integrand.',
+  },
+      '$A(x) = f\\'(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'FTC I: the derivative of the integral (with variable upper limit) is the integrand.',
+  },
+      '$A\\'(x) = f(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'FTC I: the derivative of the integral (with variable upper limit) is the integrand.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'FTC I: the derivative of the integral (with variable upper limit) is the integrand.',
   },
@@ -20,12 +36,28 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $F(x) = \\int_0^x \\cos t\\,dt$, then $F\'(x) = ?$',
     options: [
-      '$\\sin x$',
-      '$\\cos x$',
-      '$-\\sin x$',
-      '$-\\cos x$'
+      '$\\sin x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By FTC I: $F\'(x) = \\cos x$.',
+  },
+      '$-\\cos x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'By FTC I: $F\'(x) = \\cos x$.',
+  },
+      '$\\cos x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'By FTC I: $F\'(x) = \\cos x$.',
+  },
+      '$-\\sin x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'By FTC I: $F\'(x) = \\cos x$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'By FTC I: $F\'(x) = \\cos x$.',
   },
@@ -46,7 +78,7 @@ export const section35Questions: QuizQuestion[] = [
       'Unrelated operations',
       'Inverse operations',
       'The same operation',
-      'Only valid for polynomials'
+      'Only valid for polynomials',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -57,10 +89,26 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $H(x) = \\int_a^{x^2} f(t)\\,dt$, then by chain rule, $H\'(x) = ?$',
     options: [
-      '$f(x^2)$',
-      '$f(x^2) \\cdot 2x$',
-      '$2xf(x)$',
-      '$f\'(x^2)$'
+      '$f(x^2)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Chain rule with FTC I: $H\'(x) = f(x^2) \\cdot \\frac{d}{dx}(x^2) = 2xf(x^2)$.',
+  },
+      '$2xf(x)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Chain rule with FTC I: $H\'(x) = f(x^2) \\cdot \\frac{d}{dx}(x^2) = 2xf(x^2)$.',
+  },
+      '$f\\'(x^2)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Chain rule with FTC I: $H\'(x) = f(x^2) \\cdot \\frac{d}{dx}(x^2) = 2xf(x^2)$.',
+  },
+      '$f(x^2) \\cdot 2x
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Chain rule with FTC I: $H\'(x) = f(x^2) \\cdot \\frac{d}{dx}(x^2) = 2xf(x^2)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -71,12 +119,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The FTC I requires $f$ to be:',
     options: [
-      'Differentiable',
       'Continuous',
+      'Differentiable',
       'Polynomial',
-      'Bounded'
+      'Bounded',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'FTC I requires $f$ to be continuous for the integral to be differentiable.',
   },

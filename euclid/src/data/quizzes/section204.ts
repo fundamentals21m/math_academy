@@ -9,7 +9,7 @@ export const section204Questions: QuizQuestion[] = [
       'Squares of primes are relatively prime',
       'If two numbers are relatively prime, their squares are also relatively prime',
       'The square of a relatively prime pair equals their product',
-      'Squares are always relatively prime to odd numbers'
+      'Squares are always relatively prime to odd numbers',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section204Questions: QuizQuestion[] = [
       '1',
       '3',
       '4',
-      '9'
+      '9',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section204Questions: QuizQuestion[] = [
     question: 'VII.25 follows from VII.24 by observing that:',
     options: [
       'Squares are special products',
-      'a squared = a times a, so if gcd(a,b) = 1, apply VII.24 twice',
       'Squares preserve all divisibility properties',
+      'a squared = a times a, so if gcd(a,b) = 1, apply VII.24 twice',
       'Prime factorizations of squares have even exponents'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'VII.25 is a corollary of VII.24. Since a squared = a times a, and gcd(a,b) = 1 for both factors, VII.24 gives gcd(a squared, b) = 1. Applying again: gcd(a squared, b squared) = 1.',
   },

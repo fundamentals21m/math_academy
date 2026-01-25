@@ -10,11 +10,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'What defines a "rational triangle"?',
     options: [
       'A triangle with integer sides',
-      'A triangle with rational sides and rational area',
       'A right-angled triangle',
-      'A triangle with rational angles',
+      'A triangle with rational sides and rational area',
+      'A triangle with rational angles'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'A rational triangle has both rational side lengths and rational area. Since area = ½ base × height, this is equivalent to having all altitudes rational.',
@@ -35,11 +35,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'What key property do all rational triangles have?',
     options: [
       'They are equilateral',
-      'They split into two rational right triangles',
-      'Their perimeter is rational',
       'They have a 90° angle',
+      'Their perimeter is rational',
+      'They split into two rational right triangles'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Every rational triangle splits into two rational right-angled triangles when you drop an altitude. This follows from the parameterization of rational right triangles.',
@@ -48,8 +48,13 @@ export const section32Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'Triangles with rational sides and area are sometimes called:',
-    options: ['Pythagorean', 'Euclidean', 'Heronian', 'Diophantine'],
-    correctIndex: 2,
+    options: [
+      'Heronian',
+      'Pythagorean',
+      'Euclidean',
+      'Diophantine',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Such triangles are called Heronian after the Greek mathematician Hero (first century A.D.), who is also known for Hero\'s formula for the area of a triangle.',
@@ -59,12 +64,32 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hero\'s formula for the area of a triangle with sides $a, b, c$ and semiperimeter $s$ is:',
     options: [
-      '$\\frac{1}{2}ab$',
-      '$\\sqrt{s(s-a)(s-b)(s-c)}$',
-      '$\\frac{abc}{4R}$',
-      '$(a+b+c)/2$',
-    ],
+      '$\\frac{1}{2}ab
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'Hero\'s formula states that Area = √[s(s-a)(s-b)(s-c)], where s = (a+b+c)/2 is the semiperimeter.',
+  },
+      '$\\sqrt{s(s-a)(s-b)(s-c)}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Hero\'s formula states that Area = √[s(s-a)(s-b)(s-c)], where s = (a+b+c)/2 is the semiperimeter.',
+  },
+      '$\\frac{abc}{4R}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Hero\'s formula states that Area = √[s(s-a)(s-b)(s-c)], where s = (a+b+c)/2 is the semiperimeter.',
+  },
+      '$(a+b+c)/2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Hero\'s formula states that Area = √[s(s-a)(s-b)(s-c)], where s = (a+b+c)/2 is the semiperimeter.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Hero\'s formula states that Area = √[s(s-a)(s-b)(s-c)], where s = (a+b+c)/2 is the semiperimeter.',
@@ -75,11 +100,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'The triangle (13, 14, 15) splits into which two right triangles?',
     options: [
       '(3, 4, 5) and (5, 12, 13)',
-      '(5, 12, 13) and (9, 12, 15)',
       '(6, 8, 10) and (7, 14, 15)',
+      '(5, 12, 13) and (9, 12, 15)',
       '(5, 12, 13) and (8, 15, 17)',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The triangle (13, 14, 15) splits into (5, 12, 13) and (9, 12, 15) = 3×(3, 4, 5). The altitude is h = 12, and it splits side 14 into segments 5 and 9.',
@@ -105,11 +130,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'If a triangle has altitude $h = 2u$, what is the relationship with Brahmagupta\'s parameters?',
     options: [
       '$u$ is the area',
-      '$u$ determines the altitude via $h = 2u$',
-      '$u$ is the perimeter',
       '$u$ is one of the sides',
+      '$u$ is the perimeter',
+      '$u$ determines the altitude via $h = 2u$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'In Brahmagupta\'s parameterization, the altitude is h = 2u. The rational triangle is assembled from two rational right triangles sharing this common altitude.',

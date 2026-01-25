@@ -9,7 +9,7 @@ export const section22Questions: QuizQuestion[] = [
       'A triangle given three angles',
       'A triangle given three straight lines (satisfying triangle inequality)',
       'A triangle given two sides and included angle',
-      'A right triangle given the hypotenuse'
+      'A right triangle given the hypotenuse',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What condition must the three lines satisfy in I.22?',
     options: [
+      'Any two together must be greater than the third',
       'They must all be equal',
       'One must be longer than the sum of the other two',
-      'Any two together must be greater than the third',
-      'They must form right angles'
+      'They must form right angles',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'I.22 requires the triangle inequality: any two sides together greater than the third (from I.20).',
   },

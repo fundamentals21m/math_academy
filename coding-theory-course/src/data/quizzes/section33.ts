@@ -6,12 +6,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The weight distribution of an MDS code is:',
     options: [
-      'Completely determined by $n$, $k$, and $q$',
       'Dependent on the specific generator matrix',
+      'Completely determined by $n$, $k$, and $q$',
       'Always uniform',
-      'Unknown in general',
+      'Unknown in general'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A remarkable property of MDS codes is that their weight distribution depends only on the parameters $n$, $k$, and the field size $q$, not on the specific code.',
   },
@@ -29,12 +29,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The weight enumerator $W_C(x, y)$ of an $[n, k]$ MDS code over $\\mathbb{F}_q$ has the form:',
     options: [
-      '$\\sum_{i=0}^{k} A_i x^{n-d-i+1} y^{d+i-1}$ for specific coefficients $A_i$',
-      '$x^n + (q^k - 1)y^n$',
       '$(x + y)^n$',
-      'Cannot be determined without knowing the generator matrix',
+      '$x^n + (q^k - 1)y^n$',
+      '$\\sum_{i=0}^{k} A_i x^{n-d-i+1} y^{d+i-1}$ for specific coefficients $A_i$',
+      'Cannot be determined without knowing the generator matrix'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'MDS codes have a specific weight distribution formula. The non-zero weights range from $d = n-k+1$ to $n$, and the number of codewords of each weight is determined by a closed-form expression.',
   },
@@ -43,12 +43,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For an $[n, k, d]$ MDS code, the number of codewords of minimum weight $d$ is:',
     options: [
-      '$\\binom{n}{d}(q-1)$',
+      '$n(q-1)$',
       '$q^k - 1$',
       '$\\binom{n}{k}$',
-      '$n(q-1)$',
+      '$\\binom{n}{d}(q-1)$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The number of minimum weight codewords in an MDS code is $A_d = \\binom{n}{d}(q-1)$. This follows from the MDS weight distribution formula.',
   },

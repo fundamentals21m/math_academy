@@ -39,12 +39,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How do you construct a perpendicular to a line through an external point $O$?',
     options: [
-      'Use a protractor',
       'Draw a circle centered at $O$ that cuts the line at two points, then bisect the angle',
-      'It is impossible with ruler and compass',
+      'Use a protractor',
       'Draw parallel lines',
+      'It is impossible with ruler and compass',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Draw a circle centered at O large enough to cut the line at points A and B. The bisector of angle AOB is the required perpendicular.',
@@ -55,11 +55,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'What year did Gauss discover how to construct the regular 17-gon?',
     options: [
       '1637',
-      '1796',
       '1837',
       '1899',
+      '1796',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Gauss discovered the construction of the regular 17-gon in 1796, leading to a complete algebraic theory of constructibility.',
@@ -85,11 +85,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'To divide segment $AB$ into $n$ equal parts, you need to construct:',
     options: [
       'Perpendicular lines',
-      'Parallel lines',
       'Circles only',
-      'Nothing—it cannot be done',
+      'Parallel lines',
+      'Nothing—it cannot be done'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'To divide AB into n equal parts, mark n equally spaced points on any line through A, join the last to B, then draw parallels through the others. These cut AB into n equal parts.',
@@ -101,10 +101,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'Euclid',
       'Descartes',
-      'Pierre Wantzel',
       'Hilbert',
+      'Pierre Wantzel'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Pierre Wantzel completed the theory in 1837, proving which regular polygons can and cannot be constructed with ruler and compass.',
@@ -114,12 +114,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why can the regular 7-gon NOT be constructed with ruler and compass?',
     options: [
-      'It was simply never discovered',
       '7 is not of the form "power of 2 times distinct Fermat primes"',
+      'It was simply never discovered',
       'The ancient Greeks forbade it',
-      'It requires a protractor',
+      'It requires a protractor'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The regular 7-gon is impossible because 7 is not a Fermat prime (it is not of the form $2^{2^k} + 1$) and cannot be expressed as required by the Gauss-Wantzel theorem.',

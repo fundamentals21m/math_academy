@@ -7,11 +7,11 @@ export const section74Questions: QuizQuestion[] = [
     question: 'Proposition III.10 concerns two circles that:',
     options: [
       'Are concentric',
-      'Cut (intersect) each other',
       'Are tangent',
+      'Cut (intersect) each other',
       'Are parallel'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'III.10 proves a limit on how many times two circles can intersect: they cannot cut each other at more than two points.',
   },
@@ -21,11 +21,11 @@ export const section74Questions: QuizQuestion[] = [
     question: 'According to III.10, two circles can cut each other at:',
     options: [
       'Zero, one, or two points',
+      'At most two points',
       'Exactly two points only',
       'Any number of points',
-      'At most two points'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'III.10 proves the maximum is two intersection points. Circles may also have 0 (disjoint) or 1 (tangent) points in common.',
   },

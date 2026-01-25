@@ -7,11 +7,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'If $r(t)$ is the rate at which water flows into a tank, what does $\\int_0^{10} r(t)\\,dt$ represent?',
     options: [
       'The rate of flow at time 10',
-      'The total amount of water that flowed in from time 0 to 10',
       'The average flow rate',
-      'The maximum flow rate'
+      'The maximum flow rate',
+      'The total amount of water that flowed in from time 0 to 10',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Integrating a rate gives the total quantity. The integral of flow rate over time gives the total volume of water.',
   },
@@ -20,12 +20,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the relationship between velocity and position?',
     options: [
+      'Position is the integral of velocity',
       'Position is the derivative of velocity',
       'Velocity is the integral of position',
-      'Position is the integral of velocity',
-      'They are unrelated'
+      'They are unrelated',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Position is obtained by integrating velocity over time: $x(t) = \\int v(t)\\,dt$. (Velocity is the derivative of position.)',
   },
@@ -35,11 +35,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What is the difference between "net displacement" and "total distance traveled"?',
     options: [
       'They are the same thing',
-      'Net displacement can be negative (if you go backward); total distance is always positive',
       'Total distance is always less than displacement',
-      'Net displacement is always greater'
+      'Net displacement can be negative (if you go backward); total distance is always positive',
+      'Net displacement is always greater',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Net displacement is final position minus initial position (can be negative). Total distance uses absolute value of velocity to count all movement.',
   },
@@ -63,11 +63,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What does the "constant of integration" represent in $\\int f(x)\\,dx = F(x) + C$?',
     options: [
       'A measurement error',
-      'The unknown initial value (since we only know the rate of change)',
       'A rounding error',
+      'The unknown initial value (since we only know the rate of change)',
       'The maximum value of F'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'When reconstructing from a rate, we don\'t know the starting value. Any constant $C$ works because its derivative is zero—it doesn\'t affect the rate.',
   },
@@ -78,8 +78,8 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'The derivative of power',
       'The integral of power over time',
+      'Power squared',
       'Power divided by time',
-      'Power squared'
     ],
     correctIndex: 1,
     difficulty: 'medium',

@@ -6,10 +6,22 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'L\'Hôpital\'s Rule applies to limits of the form:',
     options: [
-      'Only $0/0$',
-      'Only $\\infty/\\infty$',
-      'Both $0/0$ and $\\infty/\\infty$',
-      'All limits'
+      'Only $0/0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'L\'Hôpital\'s Rule works for both $0/0$ and $\\infty/\\infty$ forms.',
+  },
+      'Only $\\infty/\\infty
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'L\'Hôpital\'s Rule works for both $0/0$ and $\\infty/\\infty$ forms.',
+  },
+      'All limits',
+      'Both $0/0$ and $\\infty/\\infty
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'L\'Hôpital\'s Rule works for both $0/0$ and $\\infty/\\infty$ forms.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,12 +32,24 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'L\'Hôpital\'s Rule states: if $\\lim f/g$ is $0/0$ or $\\infty/\\infty$, then $\\lim f/g = ?$',
     options: [
-      '$\\lim f\' \\cdot g\'$',
-      '$\\lim f\'/g\'$ (if this limit exists)',
-      '$\\lim (f \\cdot g)\'$',
-      '$\\lim f - g$'
+      '$\\lim f\\'/g\\'$ (if this limit exists)',
+      '$\\lim f\\' \\cdot g\\'
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\lim \\frac{f(x)}{g(x)} = \\lim \\frac{f\'(x)}{g\'(x)}$ when applicable.',
+  },
+      '$\\lim f - g
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\lim \\frac{f(x)}{g(x)} = \\lim \\frac{f\'(x)}{g\'(x)}$ when applicable.',
+  },
+      '$\\lim (f \\cdot g)\\'
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\lim \\frac{f(x)}{g(x)} = \\lim \\frac{f\'(x)}{g\'(x)}$ when applicable.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$\\lim \\frac{f(x)}{g(x)} = \\lim \\frac{f\'(x)}{g\'(x)}$ when applicable.',
   },
@@ -53,11 +77,11 @@ export const section50Questions: QuizQuestion[] = [
     question: 'Before using L\'Hôpital\'s Rule, we must verify:',
     options: [
       'The functions are polynomials',
-      'The limit is in $0/0$ or $\\infty/\\infty$ form',
       'The functions are equal',
-      'The limit equals zero'
+      'The limit is in $0/0$ or $\\infty/\\infty$ form',
+      'The limit equals zero',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'L\'Hôpital\'s Rule requires an indeterminate form.',
   },

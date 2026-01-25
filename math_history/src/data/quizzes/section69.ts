@@ -7,12 +7,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Russell\'s paradox considers the set of all sets that:',
     options: [
-      'Do not contain themselves',
+      'Have exactly one element',
       'Are infinite',
       'Contain only numbers',
-      'Have exactly one element',
+      'Do not contain themselves'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Russell\'s paradox asks: does the set R = {x : x ∉ x} contain itself? If R ∈ R, then R ∉ R by definition. If R ∉ R, then R ∈ R. This contradiction shows "naive" set theory is inconsistent.',
@@ -38,12 +38,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Axiom of Choice states that:',
     options: [
-      'From any collection of nonempty sets, we can simultaneously choose one element from each',
       'Every set is finite',
+      'From any collection of nonempty sets, we can simultaneously choose one element from each',
       'All sets contain themselves',
-      'There is exactly one infinite set',
+      'There is exactly one infinite set'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Axiom of Choice (AC) asserts that given any collection of nonempty sets, a "choice function" exists that selects one element from each. AC is independent of ZF but widely accepted. ZFC = ZF + AC is the standard foundation.',
@@ -53,12 +53,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hilbert\'s program aimed to prove that mathematics is:',
     options: [
-      'Consistent (free of contradictions) and complete (all truths provable)',
-      'Based only on geometry',
       'Independent of logic',
-      'Purely intuitive',
+      'Based only on geometry',
+      'Consistent (free of contradictions) and complete (all truths provable)',
+      'Purely intuitive'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Hilbert\'s program sought to formalize mathematics and prove it consistent (no contradictions can be derived) and complete (every true statement is provable). Gödel later showed this program cannot fully succeed.',
@@ -69,12 +69,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Banach-Tarski paradox, which follows from the Axiom of Choice, states that:',
     options: [
-      'A ball can be decomposed and reassembled into two balls of the same size',
+      'The real numbers are countable',
       'All sets are countable',
       'Infinity doesn\'t exist',
-      'The real numbers are countable',
+      'A ball can be decomposed and reassembled into two balls of the same size'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The Banach-Tarski paradox uses the Axiom of Choice to show a solid ball can be partitioned into finitely many pieces that can be rearranged (using only rotations and translations) into two balls identical to the original. This counterintuitive result shows AC has surprising consequences.',

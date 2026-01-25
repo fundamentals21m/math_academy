@@ -27,11 +27,11 @@ export const section45Questions: QuizQuestion[] = [
       'What was mathematically significant about Viète\'s product formula for π?',
     options: [
       'It was the first approximation of π',
-      'It was the first infinite product in mathematics',
       'It proved π is rational',
       'It used only whole numbers',
+      'It was the first infinite product in mathematics',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Viète\'s formula (1593) was the first infinite product in mathematics, expressing 2/π as an infinite product of nested square roots.',
@@ -43,11 +43,11 @@ export const section45Questions: QuizQuestion[] = [
       'What does the word "trigonometry" literally mean?',
     options: [
       'Circle measurement',
-      'Triangle measurement',
       'Angle calculation',
       'Wave analysis',
+      'Triangle measurement',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'From Greek: trigonon (triangle) + metron (measure). Though the subject has grown far beyond triangles.',
@@ -59,11 +59,11 @@ export const section45Questions: QuizQuestion[] = [
       'Which formula connects trigonometry to complex numbers?',
     options: [
       'The Pythagorean theorem',
-      'De Moivre\'s formula: e^(iθ) = cos θ + i sin θ',
-      'The law of cosines',
       'The tangent addition formula',
+      'De Moivre\\'s formula: e^(iθ) = cos θ + i sin θ',
+      'The law of cosines',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'De Moivre\'s formula (and Euler\'s formula e^(iθ) = cos θ + i sin θ) beautifully connects trigonometry to complex numbers.',
@@ -101,12 +101,12 @@ export const section45Questions: QuizQuestion[] = [
     question:
       'What connects the tangent addition formula to Pythagorean triples?',
     options: [
-      'They are unrelated',
       'Rational slopes correspond to rational points on the circle, hence Pythagorean triples',
+      'They are unrelated',
       'Both use the number 3',
       'Both were discovered by Pythagoras',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'A rational slope t gives a rational point ((1-t²)/(1+t²), 2t/(1+t²)) on the circle, corresponding to a Pythagorean triple.',
@@ -118,11 +118,11 @@ export const section45Questions: QuizQuestion[] = [
       'What topic follows Trigonometry in this course?',
     options: [
       'Calculus',
-      'Finite Arithmetic',
       'Complex Numbers',
-      'Differential Equations',
+      'Finite Arithmetic',
+      'Differential Equations'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The next chapter explores Finite Arithmetic—modular arithmetic, clock math, and algebraic structures based on remainders.',

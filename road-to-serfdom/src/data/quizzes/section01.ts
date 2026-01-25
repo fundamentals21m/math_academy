@@ -7,11 +7,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'According to Hayek, what primarily explains the rise of totalitarianism in Germany?',
     options: [
       'The inherent viciousness of the German people',
-      'Ideas that have spread throughout Western civilization',
       'The Treaty of Versailles',
-      'Economic depression alone'
+      'Ideas that have spread throughout Western civilization',
+      'Economic depression alone',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Hayek firmly rejects racial explanations and argues that specific ideas—not German character—led to totalitarianism, and these ideas have spread beyond Germany.',
   },
@@ -20,12 +20,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Hayek mean when he says Britain resembles Germany "15-25 years earlier"?',
     options: [
-      'Britain has the same population as Germany did',
       'Britain is experiencing the same intellectual trends that preceded Nazism',
+      'Britain has the same population as Germany did',
       'Britain has the same economic output',
-      'Britain has adopted German language and customs'
+      'Britain has adopted German language and customs',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Hayek argues that ideas spread across nations at different speeds, and the same intellectual evolution that led to totalitarianism in Germany is underway in Britain.',
   },
@@ -37,7 +37,7 @@ export const section01Questions: QuizQuestion[] = [
       'A scientific treatise on economics',
       'A political book arguing from the value of individual freedom',
       'A historical account of World War II',
-      'A biography of German leaders'
+      'A biography of German leaders',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -48,12 +48,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "supreme tragedy" Hayek identifies in Germany\'s path to totalitarianism?',
     options: [
+      'People of goodwill prepared the way for forces they came to detest',
       'Economic collapse',
       'Military defeat in World War I',
-      'People of goodwill prepared the way for forces they came to detest',
-      'Foreign intervention'
+      'Foreign intervention',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Hayek emphasizes that admired figures and people of goodwill in Germany unwittingly prepared the ground for the very forces they would later despise.',
   },
@@ -62,12 +62,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does Hayek reject the theory that Germans are "inherently vicious"?',
     options: [
-      'Because it adopts the worst features of German racial theories',
       'Because Germans won World War I',
       'Because all humans are inherently good',
-      'Because Germany had never been violent before'
+      'Because Germany had never been violent before',
+      'Because it adopts the worst features of German racial theories',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Hayek argues that explaining Nazism by German racial character ironically adopts the same type of racial theorizing that characterized Nazi ideology itself.',
   },
@@ -77,11 +77,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'According to Hayek, what observation about British society in the 1940s was "too obvious" to need emphasizing?',
     options: [
       'Britain was winning the war',
-      '"We are all socialists now"',
       'The economy was growing',
-      'Democracy was flourishing'
+      'Democracy was flourishing',
+      '"We are all socialists now"',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Hayek notes that socialism had become so dominant that virtually everyone who influenced opinion accepted socialist premises—the only disagreement was about degree.',
   },

@@ -9,7 +9,7 @@ export const section164Questions: QuizQuestion[] = [
       'The ratio of corresponding sides',
       'The duplicate ratio (square) of corresponding sides',
       'The triplicate ratio (cube) of corresponding sides',
-      'The sum of corresponding sides'
+      'The sum of corresponding sides',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -22,10 +22,10 @@ export const section164Questions: QuizQuestion[] = [
     options: [
       '3:5',
       '6:10',
+      '27:125',
       '9:25',
-      '27:125'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The duplicate ratio of 3:5 is 9:25 (each term squared). Similar triangles with sides in ratio 3:5 have areas in ratio 9:25.',
   },
@@ -35,11 +35,11 @@ export const section164Questions: QuizQuestion[] = [
     question: 'The proof of VI.19 constructs a third proportional to what?',
     options: [
       'The two areas',
-      'Two corresponding sides',
       'The two perimeters',
+      'Two corresponding sides',
       'The two heights'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Euclid constructs a third proportional to two corresponding sides (BC and EF), creating a continued proportion that yields the duplicate ratio.',
   },

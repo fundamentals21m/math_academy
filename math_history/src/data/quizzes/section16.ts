@@ -54,11 +54,11 @@ export const section16Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'By trial and error with physical models',
-      'By imagining figures as thin slices and "weighing" them using the lever law',
       'By divine inspiration',
-      'By computing numerical approximations',
+      'By imagining figures as thin slices and "weighing" them using the lever law',
+      'By computing numerical approximations'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'Archimedes imagined figures composed of infinitely thin slices, then used the principle of the lever to balance unknown areas/volumes against known ones. This heuristic method let him discover results before proving them rigorously by exhaustion.',
   },

@@ -9,8 +9,13 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question:
       'After defeating which empire in 490 BC did Athens become a center of mathematics?',
-    options: ['Egyptian', 'Persian', 'Roman', 'Babylonian'],
-    correctIndex: 1,
+    options: [
+      'Persian',
+      'Egyptian',
+      'Roman',
+      'Babylonian',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'After an alliance of Greek cities defeated the Persians in 490 BC, Athens became a great center of civilization and mathematics for over a hundred years.',
@@ -31,8 +36,8 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why did Plato criticize Hippias\'s use of the quadratrix?',
     options: [
-      'It gave incorrect answers',
       'It was too difficult to understand',
+      'It gave incorrect answers',
       'He believed constructions should use only straightedge and compass',
       'It was discovered by a sophist',
     ],
@@ -47,12 +52,12 @@ export const section11Questions: QuizQuestion[] = [
     question:
       'What method did Antiphon use to approximate the area of a circle?',
     options: [
-      'Circumscribed squares',
       'Inscribed regular polygons',
+      'Circumscribed squares',
       'Integration',
       'The quadratrix',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Antiphon suggested calculating the area of a circle using inscribed regular polygons. An inscribed square takes up more than 1/2 the area, an octagon more than 3/4, and so on.',
@@ -75,11 +80,11 @@ export const section11Questions: QuizQuestion[] = [
       'Hippocrates of Chios contributed material to which books of Euclid\'s Elements?',
     options: [
       'Books I and II',
-      'Books III and IV',
       'Books V and VI',
-      'Books XI and XII',
+      'Books III and IV',
+      'Books XI and XII'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Hippocrates of Chios was responsible for much of the material in Books III and IV of Euclid\'s Elements. He also coined the term "dynamos" for the square of a quantity, giving us the word "power."',
@@ -91,11 +96,11 @@ export const section11Questions: QuizQuestion[] = [
       'What was the first curved region whose area was calculated exactly?',
     options: [
       'A circle',
-      'An ellipse',
       'The lunes of Hippocrates',
+      'An ellipse',
       'A parabolic segment',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Hippocrates was the first to find the exact area of a region bounded by curves. He proved that the sum of the areas of the two lunes (crescent shapes) on a right triangle equals the area of the triangle.',
@@ -107,7 +112,7 @@ export const section11Questions: QuizQuestion[] = [
       'According to legend, why did the Athenians need to double a cube during the plague of 430 BC?',
     options: [
       'To build a larger temple',
-      'The oracle of Delos told them to double Apollo\'s altar',
+      'The oracle of Delos told them to double Apollo\\'s altar',
       'To store more grain',
       'As a mathematical competition prize',
     ],
@@ -123,11 +128,11 @@ export const section11Questions: QuizQuestion[] = [
       'Hippocrates showed that doubling the cube is equivalent to finding what?',
     options: [
       'The square root of 2',
-      'Two mean proportionals between 1 and 2',
       'The circumference of a circle',
       'A regular heptagon',
+      'Two mean proportionals between 1 and 2',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Hippocrates showed that to double the cube, one needs to find x and y such that 1/x = x/y = y/2. These are called two mean proportionals between 1 and 2, and they give x³ = 2.',

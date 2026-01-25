@@ -6,12 +6,12 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition I.27 prove about lines cut by a transversal?',
     options: [
-      'If alternate angles are equal, the lines are parallel',
       'Parallel lines have equal alternate angles',
+      'If alternate angles are equal, the lines are parallel',
       'All transversals create equal angles',
       'Perpendicular lines are parallel'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'I.27: "If a straight line falling on two straight lines make the alternate angles equal to one another, the straight lines will be parallel."',
   },
@@ -21,11 +21,11 @@ export const section27Questions: QuizQuestion[] = [
     question: 'Does I.27 use the Parallel Postulate (Postulate 5)?',
     options: [
       'Yes, it is essential',
-      'No, it is proved without it',
       'Only partially',
+      'No, it is proved without it',
       'It uses a weaker form'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'I.27 is proved using I.16 (exterior angle theorem) without Postulate 5. It establishes parallelism from equal alternate angles.',
   },

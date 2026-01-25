@@ -10,11 +10,11 @@ export const section59Questions: QuizQuestion[] = [
     question: "What does Gödel's Lemma state about recursive relations?",
     options: [
       'Recursive relations cannot be expressed in formal languages',
-      'Recursive relations can be represented by formulas that prove or disprove instances',
       'Recursive relations are always decidable in polynomial time',
-      'Recursive relations are equivalent to computable functions',
+      'Recursive relations can be represented by formulas that prove or disprove instances',
+      'Recursive relations are equivalent to computable functions'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       "Gödel's Lemma states that if R(m,n) is a recursive relation, there is a formula F(x,y) such that: if R(m,n) then ⊢ F(Sᵐ0, Sⁿ0), and if not R(m,n) then ⊢ ¬F(Sᵐ0, Sⁿ0).",
@@ -25,11 +25,11 @@ export const section59Questions: QuizQuestion[] = [
     question: 'Why can all proofs in L be enumerated?',
     options: [
       'There are only finitely many proofs',
-      'Proofs are finite sequences of formulas, and finite strings are countable',
-      'Proofs can be sorted alphabetically',
       'The axiom of choice guarantees enumeration',
+      'Proofs can be sorted alphabetically',
+      'Proofs are finite sequences of formulas, and finite strings are countable'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Proofs are finite sequences of formulas. Since there are only countably many finite strings of symbols, there are only countably many proofs. We can enumerate them as P₁, P₂, P₃, ...',
@@ -85,11 +85,11 @@ export const section59Questions: QuizQuestion[] = [
     question: 'What happens if we assume Sᵍ0 ∈ αg is provable?',
     options: [
       'We get a valid proof of consistency',
-      'We derive both the formula and its negation, contradicting consistency',
-      'We prove that L has a model',
       'We prove that all formulas are decidable',
+      'We prove that L has a model',
+      'We derive both the formula and its negation, contradicting consistency'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'If Sᵍ0 ∈ αg were provable, some Pₙ proves it, so R(g,n) holds, so ⊢ F(Sᵍ0, Sⁿ0), so ⊢ ∃y F(Sᵍ0, y), which means ⊢ ¬Sᵍ0 ∈ αg. This contradicts our assumption that ⊢ Sᵍ0 ∈ αg.',
@@ -99,12 +99,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From the result (*) that for all n, ⊢ ¬F(Sᵍ0, Sⁿ0), what can we conclude in ω-complete models?',
     options: [
-      '∃y F(Sᵍ0, y) is true',
       '∀y ¬F(Sᵍ0, y) is true',
+      '∃y F(Sᵍ0, y) is true',
       'F is not a valid formula',
-      'The model is inconsistent',
+      'The model is inconsistent'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'By soundness, ¬F(Sᵍ0, Sⁿ0) is true for all n in all models. In an ω-complete model, if A(Sⁿ0) is true for each n, then ∀x A(x) is true. Hence ∀y ¬F(Sᵍ0, y) is true in any ω-complete model.',
@@ -114,12 +114,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What inference is used to go from ∀y ¬G(y) to ¬∃y G(y)?',
     options: [
-      'Modus ponens',
       'An inference valid even in intuitionistic logic',
+      'Modus ponens',
       'Double negation elimination',
       'The axiom of choice',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Even intuitionistic logic allows us to infer ¬∃y G(y) from ∀y ¬G(y). This inference does not require classical principles like the law of excluded middle or double negation elimination.',

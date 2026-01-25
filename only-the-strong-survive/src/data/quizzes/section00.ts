@@ -9,7 +9,7 @@ export const section00Questions: QuizQuestion[] = [
       'All cryptocurrencies will eventually succeed',
       'Crypto beyond Bitcoin lacks the fundamental properties that make Bitcoin valuable',
       'Bitcoin should add smart contracts like Ethereum',
-      'Decentralized finance will replace traditional banking'
+      'Decentralized finance will replace traditional banking',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -23,7 +23,7 @@ export const section00Questions: QuizQuestion[] = [
       'Transaction speed',
       'Developer adoption',
       'Decentralization and censorship resistance',
-      'Marketing budget'
+      'Marketing budget',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What three perspectives does the paper use to critique crypto?',
     options: [
       'Legal, regulatory, and political',
-      'Philosophical, technical, and economic',
       'Historical, social, and cultural',
-      'Mathematical, scientific, and engineering'
+      'Mathematical, scientific, and engineering',
+      'Philosophical, technical, and economic',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The subtitle states: "A Philosophical, Technical, and Economic Critique of Prospects in Crypto Beyond Bitcoin."',
   },

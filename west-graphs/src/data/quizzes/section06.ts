@@ -7,9 +7,13 @@ export const section06Questions: QuizQuestion[] = [
     question: 'A spanning tree of a connected graph $G$ is:',
     options: [
       'Any subgraph that is a tree',
-      'A tree subgraph containing all vertices of $G$',
       'The unique shortest path tree',
-      'A tree with maximum number of edges'
+      'A tree with maximum number of edges',
+      'A tree subgraph containing all vertices of $G
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A spanning tree is a subgraph that is a tree and includes every vertex of $G$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -45,8 +49,8 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'The determinant of the adjacency matrix',
       'The determinant of a cofactor of the Laplacian matrix',
+      'The eigenvalues of the incidence matrix',
       'The trace of the adjacency matrix',
-      'The eigenvalues of the incidence matrix'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -57,12 +61,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Prüfer sequence for a labeled tree on $n$ vertices has length:',
     options: [
-      '$n$',
-      '$n - 1$',
       '$n - 2$',
+      '$n - 1$',
+      '$n$',
       '$2n - 2$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Prüfer sequences have length $n-2$. The bijection with $[n]^{n-2}$ proves Cayley\'s formula.',
   },

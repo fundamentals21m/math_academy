@@ -6,12 +6,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does $\\text{negl}(\\lambda)$ denote?',
     options: [
-      'The set of polynomial functions',
       'The set of negligible functions',
+      'The set of polynomial functions',
       'The set of exponential functions',
       'The security parameter'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$\\text{negl}(\\lambda)$ denotes the set of negligible functions in the security parameter $\\lambda$.',
   },
@@ -20,12 +20,24 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f$ is negligible if:',
     options: [
-      '$f(\\lambda)$ is polynomial in $\\lambda$',
-      '$f(\\lambda)^{-1}$ is polynomial in $\\lambda$',
-      '$f(\\lambda)^{-1}$ is NOT polynomial in $\\lambda$',
-      '$f(\\lambda)$ is constant'
-    ],
+      '$f(\\lambda)$ is polynomial in $\\lambda
     correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A negligible function decreases faster than the inverse of any polynomial, so $f(\\lambda)^{-1} \\notin \\text{poly}(\\lambda)$.',
+  },
+      '$f(\\lambda)^{-1}$ is polynomial in $\\lambda
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A negligible function decreases faster than the inverse of any polynomial, so $f(\\lambda)^{-1} \\notin \\text{poly}(\\lambda)$.',
+  },
+      '$f(\\lambda)^{-1}$ is NOT polynomial in $\\lambda
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A negligible function decreases faster than the inverse of any polynomial, so $f(\\lambda)^{-1} \\notin \\text{poly}(\\lambda)$.',
+  },
+      '$f(\\lambda)$ is constant',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A negligible function decreases faster than the inverse of any polynomial, so $f(\\lambda)^{-1} \\notin \\text{poly}(\\lambda)$.',
   },
@@ -35,11 +47,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What does PPT stand for in cryptography?',
     options: [
       'Polynomial Prime Testing',
-      'Probabilistic Polynomial-Time',
       'Provably Perfect Theorem',
-      'Public Parameter Transfer'
+      'Public Parameter Transfer',
+      'Probabilistic Polynomial-Time',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'PPT stands for Probabilistic Polynomial-Time, referring to efficient randomized algorithms.',
   },
@@ -48,12 +60,20 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In additive notation for a cyclic group $\\mathbb{G}$, scalar multiplication $n \\cdot G$ represents:',
     options: [
-      'Raising $G$ to the power $n$',
       'Adding $G$ to itself $n$ times',
+      'Raising $G$ to the power $n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'In additive notation, $n \\cdot G$ means $G + G + \\ldots + G$ ($n$ times), equivalent to $G^n$ in multiplicative notation.',
+  },
+      'Computing $G \\mod n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'In additive notation, $n \\cdot G$ means $G + G + \\ldots + G$ ($n$ times), equivalent to $G^n$ in multiplicative notation.',
+  },
       'Multiplying $G$ by $n$ as a scalar',
-      'Computing $G \\mod n$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'In additive notation, $n \\cdot G$ means $G + G + \\ldots + G$ ($n$ times), equivalent to $G^n$ in multiplicative notation.',
   },
@@ -70,12 +90,28 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $p$ is a $\\lambda$-bit prime, approximately how large is $p$?',
     options: [
-      '$O(\\lambda)$',
-      '$O(\\lambda^2)$',
-      '$O(2^\\lambda)$',
-      '$O(\\log \\lambda)$'
+      '$O(\\lambda^2)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'A $\\lambda$-bit prime is approximately $2^\\lambda$ in magnitude, which is exponential in $\\lambda$.',
+  },
+      '$O(2^\\lambda)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'A $\\lambda$-bit prime is approximately $2^\\lambda$ in magnitude, which is exponential in $\\lambda$.',
+  },
+      '$O(\\lambda)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'A $\\lambda$-bit prime is approximately $2^\\lambda$ in magnitude, which is exponential in $\\lambda$.',
+  },
+      '$O(\\log \\lambda)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'A $\\lambda$-bit prime is approximately $2^\\lambda$ in magnitude, which is exponential in $\\lambda$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'A $\\lambda$-bit prime is approximately $2^\\lambda$ in magnitude, which is exponential in $\\lambda$.',
   },

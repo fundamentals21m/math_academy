@@ -67,11 +67,11 @@ export const section01Quiz: QuizQuestion[] = [
     question: 'What is the primary goal when estimating $f$ for prediction purposes?',
     options: [
       'To understand which predictors are important',
-      'To minimize the difference between predicted and actual values',
       'To identify clusters in the data',
+      'To minimize the difference between predicted and actual values',
       'To maximize the number of predictors used'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'For prediction, we want $\\hat{Y} = \\hat{f}(X)$ to be as close as possible to the true $Y$. Understanding the relationship is the goal of inference, not prediction.',
   },
@@ -90,11 +90,11 @@ export const section01Quiz: QuizQuestion[] = [
     question: 'Which question is most relevant when the goal is inference rather than prediction?',
     options: [
       'How accurately can we predict Y?',
-      'Which predictors are associated with Y?',
+      'How flexible should our model be?',
       'What is the test error rate?',
-      'How flexible should our model be?'
+      'Which predictors are associated with Y?'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Inference focuses on understanding the relationship between predictors and response, such as which predictors matter and how they affect Y.',
   },
@@ -113,12 +113,12 @@ export const section01Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A medical researcher wants to understand how exercise, diet, and genetics affect heart disease risk. This is primarily:',
     options: [
-      'A prediction problem',
       'An inference problem',
+      'A prediction problem',
       'An unsupervised learning problem',
       'A classification problem only'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The goal is to understand relationships (how factors affect risk), which is inference. While prediction may be useful, the primary interest is in understanding the mechanism.',
   },
@@ -142,11 +142,11 @@ export const section01Quiz: QuizQuestion[] = [
     question: 'Which scenario would benefit most from unsupervised learning?',
     options: [
       'Predicting customer churn based on usage patterns',
-      'Identifying natural groupings among customers based on purchasing behavior',
       'Classifying tumors as malignant or benign',
+      'Identifying natural groupings among customers based on purchasing behavior',
       'Predicting house prices from square footage'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Finding natural groupings without predefined categories is clustering, an unsupervised task. The other options have known response variables (supervised).',
   },

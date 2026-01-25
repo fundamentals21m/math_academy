@@ -21,11 +21,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'Which Book I propositions are essential for the proof of II.3?',
     options: [
       'I.1 and I.2',
-      'I.31 and I.46',
       'I.47 and I.48',
-      'I.4 and I.5'
+      'I.4 and I.5',
+      'I.31 and I.46',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'II.3 uses I.31 (constructing parallels) and I.46 (constructing squares) to set up the geometric proof.',
   },

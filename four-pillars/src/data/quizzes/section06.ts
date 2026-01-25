@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section06Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Euclid\'s fifth postulate (parallel axiom) describes when two lines:',
+    options: [
+      'Are perpendicular',
+      'Meet (are not parallel)',
+      'Form a triangle',
+      'Have equal length',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The axiom states that if interior angles sum to less than π, the lines meet on that side.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Playfair\'s axiom says: given a line L and point P not on L, there is:',
+    options: [
+      'Exactly one line through P parallel to L',
+      'Infinitely many lines through P parallel to L',
+      'No line through P parallel to L',
+      'Exactly two lines through P parallel to L'
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'This modern form of the parallel axiom is equivalent to Euclid\'s fifth postulate.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'When a transversal crosses two parallel lines, the alternate interior angles are:',
+    options: [
+      'Supplementary (sum to π)',
+      'Unrelated',
+      'Complementary (sum to π/2)',
+      'Equal',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This follows from the parallel axiom and is used to prove the triangle angle sum theorem.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The sum of angles in any triangle equals:',
+    options: [
+      '2π (360°)',
+      'π/2 (90°)',
+      'It varies by triangle',
+      'π (180°)',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By drawing a parallel through one vertex, alternate interior angles show α + β + γ = π.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'An exterior angle of a triangle equals:',
+    options: [
+      'The sum of the two non-adjacent interior angles',
+      'The adjacent interior angle',
+      'The largest interior angle',
+      'Half the sum of all interior angles',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'If the exterior angle at C is δ and interior angles are α, β, γ, then δ = α + β.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'In non-Euclidean geometry (e.g., spherical), the angle sum of a triangle is:',
+    options: [
+      'Less than π',
+      'Always π',
+      'Greater than π',
+      'Undefined',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'On a sphere, triangle angle sums exceed π. The parallel axiom distinguishes Euclidean geometry.',
+  },
+];

@@ -6,10 +6,26 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cauchy product of $\\sum a_n$ and $\\sum b_n$ is $\\sum c_n$ where:',
     options: [
-      '$c_n = a_n b_n$',
-      '$c_n = a_n + b_n$',
-      '$c_n = \\sum_{k=0}^n a_k b_{n-k}$',
-      '$c_n = \\max(a_n, b_n)$'
+      '$c_n = \\sum_{k=0}^n a_k b_{n-k}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Cauchy product uses the convolution formula.',
+  },
+      '$c_n = a_n b_n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Cauchy product uses the convolution formula.',
+  },
+      '$c_n = a_n + b_n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Cauchy product uses the convolution formula.',
+  },
+      '$c_n = \\max(a_n, b_n)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Cauchy product uses the convolution formula.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,12 +36,24 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\sum a_n x^n$ and $\\sum b_n x^n$ both have radius of convergence $\\geq R$, their product has radius:',
     options: [
-      'Exactly $R$',
-      'At least $R$',
-      'At most $R$',
-      'Could be anything'
-    ],
+      'Exactly $R
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The product of power series converges at least where both factors converge.',
+  },
+      'At least $R
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The product of power series converges at least where both factors converge.',
+  },
+      'Could be anything',
+      'At most $R
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The product of power series converges at least where both factors converge.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The product of power series converges at least where both factors converge.',
   },
@@ -35,11 +63,15 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Mertens\' theorem states that if $\\sum a_n$ converges absolutely and $\\sum b_n$ converges, then:',
     options: [
       'The Cauchy product diverges',
-      'The Cauchy product converges to $(\\sum a_n)(\\sum b_n)$',
       'The Cauchy product converges but not to the expected value',
-      'Nothing can be concluded'
+      'The Cauchy product converges to $(\\sum a_n)(\\sum b_n)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Mertens\' theorem: if one series converges absolutely and the other converges, the Cauchy product converges to the product of the sums.',
+  },
+      'Nothing can be concluded',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Mertens\' theorem: if one series converges absolutely and the other converges, the Cauchy product converges to the product of the sums.',
   },
@@ -48,12 +80,28 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The product $(1 + x + x^2 + \\cdots)(1 + x + x^2 + \\cdots)$ for $|x| < 1$ equals:',
     options: [
-      '$\\frac{1}{(1-x)^2}$',
-      '$\\frac{2}{1-x}$',
-      '$\\frac{1}{1-x}$',
-      '$\\frac{1}{1-2x}$'
+      '$\\frac{2}{1-x}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Each factor equals $\\frac{1}{1-x}$, so the product is $\\frac{1}{(1-x)^2}$.',
+  },
+      '$\\frac{1}{1-x}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Each factor equals $\\frac{1}{1-x}$, so the product is $\\frac{1}{(1-x)^2}$.',
+  },
+      '$\\frac{1}{1-2x}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Each factor equals $\\frac{1}{1-x}$, so the product is $\\frac{1}{(1-x)^2}$.',
+  },
+      '$\\frac{1}{(1-x)^2}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Each factor equals $\\frac{1}{1-x}$, so the product is $\\frac{1}{(1-x)^2}$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Each factor equals $\\frac{1}{1-x}$, so the product is $\\frac{1}{(1-x)^2}$.',
   },
@@ -63,11 +111,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'The coefficient of $x^n$ in $(1-x)^{-2} = \\sum c_n x^n$ is:',
     options: [
       '$n$',
-      '$n + 1$',
       '$2^n$',
+      '$n + 1$',
       '$1$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'We have $(1-x)^{-2} = \\sum_{n=0}^\\infty (n+1) x^n$.',
   },

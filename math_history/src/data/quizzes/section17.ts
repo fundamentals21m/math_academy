@@ -8,11 +8,11 @@ export const section17Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'A completed infinite totality',
-      'A process that can be continued indefinitely but is never complete',
-      'The largest possible number',
       'A type of infinite decimal',
+      'The largest possible number',
+      'A process that can be continued indefinitely but is never complete'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Potential infinity refers to a process that can always be extended further (like counting: 1, 2, 3, ...) but is never treated as a completed whole.',
   },
@@ -33,12 +33,12 @@ export const section17Questions: QuizQuestion[] = [
       'How did Euclid phrase his theorem about prime numbers to avoid actual infinity?',
     difficulty: 'medium',
     options: [
-      '"There are infinitely many primes"',
       '"Prime numbers are more than any assigned multitude of prime numbers"',
+      '"There are infinitely many primes"',
       '"The primes form a complete infinite set"',
-      '"Primes continue forever"',
+      '"Primes continue forever"'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'Euclid said primes are "more than any assigned multitude"—given any finite collection, you can find another prime. This expresses potential infinity without claiming an actual infinite totality exists.',
   },
@@ -49,11 +49,11 @@ export const section17Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Infinity doesn\'t exist',
-      'Perfect squares outnumber natural numbers',
       'Natural numbers can be matched one-to-one with perfect squares, despite squares being a subset',
-      'Aristotle was wrong about everything',
+      'Perfect squares outnumber natural numbers',
+      'Aristotle was wrong about everything'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'Galileo showed that natural numbers (1,2,3,...) can be paired one-to-one with perfect squares (1,4,9,...) even though squares are a proper subset. This seemed paradoxical before Cantor\'s work.',
   },
@@ -65,11 +65,11 @@ export const section17Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'He proved the paradox was based on a mathematical error',
-      'He defined infinite sets as precisely those that can be matched with a proper subset of themselves',
       'He showed that perfect squares actually outnumber natural numbers',
-      'He rejected the existence of infinite sets entirely',
+      'He defined infinite sets as precisely those that can be matched with a proper subset of themselves',
+      'He rejected the existence of infinite sets entirely'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'Cantor embraced the paradox by defining infinite sets as those that can be put in one-to-one correspondence with a proper subset. This became part of the foundation of set theory.',
   },
@@ -81,11 +81,11 @@ export const section17Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'Never using infinite sequences',
-      'Using only finite polygons but showing the difference from the claimed area can be made arbitrarily small',
-      'Proving that infinity doesn\'t exist',
       'Using actual infinity but calling it something else',
+      'Proving that infinity doesn\'t exist',
+      'Using only finite polygons but showing the difference from the claimed area can be made arbitrarily small'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'The method of exhaustion never invokes actual infinity. It proves that for ANY positive difference ε, a polygon can be found within ε of the claimed area—purely potential infinity.',
   },

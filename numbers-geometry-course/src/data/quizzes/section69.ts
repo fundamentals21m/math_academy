@@ -10,11 +10,11 @@ export const section69Questions: QuizQuestion[] = [
     question: 'What is the continued fraction expansion of √2?',
     options: [
       '[1; 1, 1, 1, ...]',
-      '[1; 2, 2, 2, ...]',
       '[2; 1, 1, 1, ...]',
-      '[1; 1, 2, 1, ...]',
+      '[1; 2, 2, 2, ...]',
+      '[1; 1, 2, 1, ...]'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       '√2 = [1; 2, 2, 2, ...] = [1; 2̄], where the 2 repeats forever.',
@@ -26,8 +26,8 @@ export const section69Questions: QuizQuestion[] = [
     options: [
       'Its continued fraction terminates',
       'Its continued fraction is eventually periodic',
-      'Its continued fraction has no pattern',
       'Its continued fraction equals d',
+      'Its continued fraction has no pattern',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -39,12 +39,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a convergent of a continued fraction?',
     options: [
-      'The sum of all terms',
       'A rational approximation from truncation',
+      'The sum of all terms',
       'The limit as terms go to infinity',
-      'The product of numerators',
+      'The product of numerators'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Convergents are rational numbers obtained by truncating the continued fraction at each step.',
@@ -55,11 +55,11 @@ export const section69Questions: QuizQuestion[] = [
     question: 'Why are convergents special?',
     options: [
       'They are always integers',
-      'They are the best rational approximations',
       'They have period 1',
+      'They are the best rational approximations',
       'They equal the original number',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Convergents are optimal: no fraction with smaller denominator can be closer to the target.',
@@ -68,8 +68,13 @@ export const section69Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'The convergent 3/2 approximates √2. Check: 3² - 2(2²) = ?',
-    options: ['0', '1', '-1', '2'],
-    correctIndex: 1,
+    options: [
+      '0',
+      '-1',
+      '2',
+      '1',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       '3² - 2(2²) = 9 - 8 = 1, showing (3, 2) solves x² - 2y² = 1.',
@@ -78,8 +83,13 @@ export const section69Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: 'In the continued fraction [a₀; a₁, a₂, ...] for √d, the period ends with:',
-    options: ['a₀', '2a₀', 'a₁', '1'],
-    correctIndex: 1,
+    options: [
+      '2a₀',
+      'a₀',
+      'a₁',
+      '1',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'By Lagrange\'s theorem, the periodic part always ends with 2a₀.',
@@ -90,11 +100,11 @@ export const section69Questions: QuizQuestion[] = [
     question: 'How is the continued fraction of √d computed?',
     options: [
       'Using derivatives',
-      'Using the Euclidean algorithm',
-      'Using Newton\'s method',
+      'Using Newton\\'s method',
       'Using Taylor series',
+      'Using the Euclidean algorithm',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The continued fraction comes from repeatedly taking floor and reciprocal—the Euclidean algorithm!',

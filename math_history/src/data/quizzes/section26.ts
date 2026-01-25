@@ -7,12 +7,12 @@ export const section26Questions: QuizQuestion[] = [
     question: 'What technique did Fermat call "adequality"?',
     difficulty: 'easy',
     options: [
-      'Solving quadratic equations',
       'Setting nearly equal quantities equal to find extrema',
+      'Solving quadratic equations',
       'Constructing perpendicular lines',
-      'Calculating areas under curves',
+      'Calculating areas under curves'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'Fermat\'s "adequality" (adaequalitas) was the technique of setting $f(x + e) \\approx f(x)$ for small $e$, simplifying, dividing by $e$, then setting $e = 0$. This finds maxima and minima.',
   },
@@ -39,11 +39,11 @@ export const section26Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       '3',
-      '6',
       '9',
-      '2',
+      '6',
+      '2'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'For $f(x) = x^2$, Fermat\'s method gives slope $= 2a$ at point $(a, a^2)$. At $a = 3$, the slope is $2 \\cdot 3 = 6$.',
   },
@@ -55,11 +55,11 @@ export const section26Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Integration',
-      'The derivative',
-      'Completing the square',
       'Matrix multiplication',
+      'Completing the square',
+      'The derivative'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Fermat\'s adequality is essentially computing $\\lim_{e \\to 0} \\frac{f(a+e) - f(a)}{e}$, which is exactly the definition of the derivative $f\'(a)$.',
   },
@@ -80,12 +80,12 @@ export const section26Questions: QuizQuestion[] = [
       'How many years before Newton and Leibniz did Fermat discover his method for tangents?',
     difficulty: 'hard',
     options: [
-      'About 10 years',
-      'About 20 years',
       'About 40 years',
-      'About 100 years',
+      'About 20 years',
+      'About 10 years',
+      'About 100 years'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'Fermat discovered his methods around 1629. Newton and Leibniz developed calculus in the late 1660s and 1670s—about 40 years later. Fermat never systematized his approach into a general theory.',
   },

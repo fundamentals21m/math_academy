@@ -7,11 +7,15 @@ export const section25Questions: QuizQuestion[] = [
     question: 'The Ramsey number $R(s,t)$ is the minimum $n$ such that every 2-coloring of $K_n$ contains:',
     options: [
       'A monochromatic spanning tree',
-      'A red $K_s$ or blue $K_t$',
-      'A rainbow triangle',
-      'A monochromatic Hamiltonian path'
-    ],
+      'A red $K_s$ or blue $K_t
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$R(s,t)$: any red-blue edge-coloring of $K_n$ has red $K_s$ or blue $K_t$.',
+  },
+      'A rainbow triangle',
+      'A monochromatic Hamiltonian path',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$R(s,t)$: any red-blue edge-coloring of $K_n$ has red $K_s$ or blue $K_t$.',
   },
@@ -29,10 +33,14 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The probabilistic method proof that $R(s,s) > 2^{s/2}$ uses:',
     options: [
-      'Induction on $s$',
-      'Random 2-coloring and expected monochromatic cliques',
+      'Induction on $s
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Erdős: randomly color edges; expected number of monochromatic $K_s$ is $< 1$ when $n < 2^{s/2}$.',
+  },
       'Explicit construction',
-      'The Lovász Local Lemma'
+      'The Lovász Local Lemma',
+      'Random 2-coloring and expected monochromatic cliques',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -45,10 +53,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       '$R(s,t)$ is always finite',
       '$R(s,t) \\leq \\binom{s+t-2}{s-1}$',
-      '$R(s,t) = st$',
-      'Both that $R(s,t)$ is finite and the binomial bound'
+      'Both that $R(s,t)$ is finite and the binomial bound',
+      '$R(s,t) = st$'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'This recurrence proves existence of $R(s,t)$ and gives upper bound $\\binom{s+t-2}{s-1}$.',
   },
@@ -66,12 +74,24 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $R(5,5)$, we currently know:',
     options: [
-      '$R(5,5) = 43$',
-      '$R(5,5) = 48$',
       '$43 \\leq R(5,5) \\leq 48$ (exact value unknown)',
-      '$R(5,5) > 100$'
+      '$R(5,5) = 43
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$R(5,5)$ is between 43 and 48; the exact value remains unknown despite decades of research.',
+  },
+      '$R(5,5) = 48
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$R(5,5)$ is between 43 and 48; the exact value remains unknown despite decades of research.',
+  },
+      '$R(5,5) > 100
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$R(5,5)$ is between 43 and 48; the exact value remains unknown despite decades of research.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: '$R(5,5)$ is between 43 and 48; the exact value remains unknown despite decades of research.',
   },

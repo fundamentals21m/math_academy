@@ -10,10 +10,26 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does $17 \\equiv 5 \\pmod{12}$ mean?',
     options: [
-      '$17$ and $5$ have the same remainder when divided by $12$',
-      '$17$ is divisible by $5$ and $12$',
-      '$17 - 5 = 12$',
-      '$17 \\times 5 = 12$'
+      '$17$ is divisible by $5$ and $12
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Two numbers are congruent modulo $m$ if they have the same remainder when divided by $m$. Since $17 = 1 \\cdot 12 + 5$ and $5 = 0 \\cdot 12 + 5$, both have remainder $5$.',
+  },
+      '$17$ and $5$ have the same remainder when divided by $12
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Two numbers are congruent modulo $m$ if they have the same remainder when divided by $m$. Since $17 = 1 \\cdot 12 + 5$ and $5 = 0 \\cdot 12 + 5$, both have remainder $5$.',
+  },
+      '$17 - 5 = 12
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Two numbers are congruent modulo $m$ if they have the same remainder when divided by $m$. Since $17 = 1 \\cdot 12 + 5$ and $5 = 0 \\cdot 12 + 5$, both have remainder $5$.',
+  },
+      '$17 \\times 5 = 12
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Two numbers are congruent modulo $m$ if they have the same remainder when divided by $m$. Since $17 = 1 \\cdot 12 + 5$ and $5 = 0 \\cdot 12 + 5$, both have remainder $5$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -24,12 +40,28 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is congruent to $23$ modulo $7$?',
     options: [
-      '$8$',
-      '$9$',
-      '$2$',
-      '$5$'
+      '$2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$23 = 3 \\cdot 7 + 2$, so $23 \\equiv 2 \\pmod{7}$.',
+  },
+      '$8
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$23 = 3 \\cdot 7 + 2$, so $23 \\equiv 2 \\pmod{7}$.',
+  },
+      '$9
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$23 = 3 \\cdot 7 + 2$, so $23 \\equiv 2 \\pmod{7}$.',
+  },
+      '$5
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$23 = 3 \\cdot 7 + 2$, so $23 \\equiv 2 \\pmod{7}$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: '$23 = 3 \\cdot 7 + 2$, so $23 \\equiv 2 \\pmod{7}$.',
   },
@@ -67,10 +99,10 @@ export const section00Questions: QuizQuestion[] = [
     options: [
       '$\\{1, 2, 3, 4\\}$',
       '$\\{0, 1, 2, 3\\}$',
-      '$\\{-2, -1, 0, 1\\}$',
-      'Both B and C are correct'
+      'Both B and C are correct',
+      '$\\{-2, -1, 0, 1\\}$'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A complete residue system modulo $m$ contains exactly one representative from each congruence class. Both $\\{0, 1, 2, 3\\}$ and $\\{-2, -1, 0, 1\\}$ satisfy this.',
   },
@@ -88,12 +120,28 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In what year did Gauss publish the Disquisitiones Arithmeticae?',
     options: [
-      '$1789$',
-      '$1801$',
-      '$1815$',
-      '$1832$'
+      '$1801
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Gauss published the Disquisitiones Arithmeticae in $1801$ when he was $24$ years old.',
+  },
+      '$1789
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Gauss published the Disquisitiones Arithmeticae in $1801$ when he was $24$ years old.',
+  },
+      '$1832
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Gauss published the Disquisitiones Arithmeticae in $1801$ when he was $24$ years old.',
+  },
+      '$1815
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Gauss published the Disquisitiones Arithmeticae in $1801$ when he was $24$ years old.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Gauss published the Disquisitiones Arithmeticae in $1801$ when he was $24$ years old.',
   },
@@ -102,12 +150,28 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $a \\equiv b \\pmod{m}$, which of the following must be true?',
     options: [
-      '$m$ divides $a$',
-      '$m$ divides $b$',
-      '$m$ divides $(a - b)$',
-      '$a$ divides $m$'
+      '$m$ divides $b
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By definition, $a \\equiv b \\pmod{m}$ means $m \\mid (a - b)$, i.e., $m$ divides the difference.',
+  },
+      '$m$ divides $a
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'By definition, $a \\equiv b \\pmod{m}$ means $m \\mid (a - b)$, i.e., $m$ divides the difference.',
+  },
+      '$a$ divides $m
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'By definition, $a \\equiv b \\pmod{m}$ means $m \\mid (a - b)$, i.e., $m$ divides the difference.',
+  },
+      '$m$ divides $(a - b)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'By definition, $a \\equiv b \\pmod{m}$ means $m \\mid (a - b)$, i.e., $m$ divides the difference.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'By definition, $a \\equiv b \\pmod{m}$ means $m \\mid (a - b)$, i.e., $m$ divides the difference.',
   },

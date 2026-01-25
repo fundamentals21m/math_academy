@@ -30,9 +30,17 @@ export const section16Questions: QuizQuestion[] = [
     question: 'If $|G| = 15$ and $g \\in G$, what are the possible orders of $g$?',
     options: [
       'Any positive integer up to 15',
-      '$1, 3, 5,$ or $15$',
-      '$1, 2, 3, 5,$ or $15$',
-      '$1$ or $15$ only'
+      '$1, 2, 3, 5,$ or $15
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By Lagrange, $|g|$ divides $|G| = 15$. The divisors of 15 are 1, 3, 5, 15.',
+  },
+      '$1, 3, 5,$ or $15
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By Lagrange, $|g|$ divides $|G| = 15$. The divisors of 15 are 1, 3, 5, 15.',
+  },
+      '$1$ or $15$ only',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -44,11 +52,15 @@ export const section16Questions: QuizQuestion[] = [
     question: 'If $G$ is a group of prime order $p$, then:',
     options: [
       '$G$ has many proper subgroups',
-      '$G$ is cyclic and has no proper subgroups other than $\\{e\\}$',
       '$G$ is necessarily non-abelian',
-      '$G$ has exactly $p$ subgroups'
+      '$G$ has exactly $p$ subgroups',
+      '$G$ is cyclic and has no proper subgroups other than $\\{e\\}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By Lagrange, subgroups have order dividing $p$, so only 1 or $p$. Any $g \\neq e$ generates $G$, so $G$ is cyclic.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'By Lagrange, subgroups have order dividing $p$, so only 1 or $p$. Any $g \\neq e$ generates $G$, so $G$ is cyclic.',
   },
@@ -57,12 +69,28 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "A corollary of Lagrange's Theorem is that for any $g$ in a finite group $G$:",
     options: [
-      '$g^{|G|} = g$',
-      '$g^{|G|} = e$',
-      '$g^{|G|-1} = e$',
-      '$g^{|G|+1} = e$'
-    ],
+      '$g^{|G|} = g
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Since $|g|$ divides $|G|$, we have $|G| = |g| \\cdot k$ for some $k$. Thus $g^{|G|} = (g^{|g|})^k = e^k = e$.',
+  },
+      '$g^{|G|} = e
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Since $|g|$ divides $|G|$, we have $|G| = |g| \\cdot k$ for some $k$. Thus $g^{|G|} = (g^{|g|})^k = e^k = e$.',
+  },
+      '$g^{|G|+1} = e
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Since $|g|$ divides $|G|$, we have $|G| = |g| \\cdot k$ for some $k$. Thus $g^{|G|} = (g^{|g|})^k = e^k = e$.',
+  },
+      '$g^{|G|-1} = e
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Since $|g|$ divides $|G|$, we have $|G| = |g| \\cdot k$ for some $k$. Thus $g^{|G|} = (g^{|g|})^k = e^k = e$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Since $|g|$ divides $|G|$, we have $|G| = |g| \\cdot k$ for some $k$. Thus $g^{|G|} = (g^{|g|})^k = e^k = e$.',
   },

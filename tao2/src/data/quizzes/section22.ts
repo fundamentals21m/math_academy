@@ -7,11 +7,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'The exponential function is defined by the power series:',
     options: [
       '$e^x = \\sum_{n=0}^\\infty x^n$',
-      '$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}$',
+      '$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{2^n}$',
       '$e^x = \\sum_{n=1}^\\infty \\frac{x^n}{n}$',
-      '$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{2^n}$'
+      '$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The exponential series is $e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}$.',
   },
@@ -20,12 +20,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The radius of convergence of $\\sum_{n=0}^\\infty \\frac{x^n}{n!}$ is:',
     options: [
-      '$R = 1$',
-      '$R = e$',
       '$R = \\infty$',
+      '$R = e$',
+      '$R = 1$',
       '$R = 0$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The exponential series converges for all $x \\in \\mathbf{R}$.',
   },
@@ -49,11 +49,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'Which property defines $e^x$ uniquely (up to a constant)?',
     options: [
       '$e^x$ is the only bounded function',
-      '$(e^x)\' = e^x$ and $e^0 = 1$',
       '$e^x$ is the only continuous function',
+      '$(e^x)\' = e^x$ and $e^0 = 1$',
       '$e^x$ is the only function with a power series'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The exponential is the unique function satisfying $f\' = f$ with $f(0) = 1$.',
   },
@@ -64,8 +64,8 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       'The ratio test',
       'The Cauchy product of power series',
+      'L\\'Hôpital\\'s rule',
       'The intermediate value theorem',
-      'L\'Hôpital\'s rule'
     ],
     correctIndex: 1,
     difficulty: 'medium',

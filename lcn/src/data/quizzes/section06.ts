@@ -7,11 +7,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'In Variant A (removing $s_a$), why does PSHVZK break?',
     options: [
       'The protocol becomes incomplete',
-      'The adversary knows $a$ and can check if $l = a$',
       'The commitment becomes unbinding',
+      'The adversary knows $a$ and can check if $l = a$',
       'The verification equations fail'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Without blinding, $l = a$ directly. The adversary knows $a$ and can distinguish real ($l = a$) from simulated (random $l$).',
   },
@@ -20,12 +20,20 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the PSHVZK simulator construction, which values are drawn uniformly at random?',
     options: [
-      'Only $x$',
-      '$x, l, r, \\mu, \\tau_x, T_2$',
-      'All transcript values',
-      'The witness values'
-    ],
+      'Only $x
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The simulator draws $x, l, r, \\mu, \\tau_x, T_2$ randomly, then computes $S$ and $T_1$ from verification equations.',
+  },
+      '$x, l, r, \\mu, \\tau_x, T_2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The simulator draws $x, l, r, \\mu, \\tau_x, T_2$ randomly, then computes $S$ and $T_1$ from verification equations.',
+  },
+      'The witness values',
+      'All transcript values',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The simulator draws $x, l, r, \\mu, \\tau_x, T_2$ randomly, then computes $S$ and $T_1$ from verification equations.',
   },
@@ -34,12 +42,24 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The simulator computes $S$ as:',
     options: [
-      '$s_a G_0 + s_b G_1 + s_S H$',
-      '$\\frac{1}{x}(lG_0 + rG_1 + \\mu H - C)$',
+      '$s_a G_0 + s_b G_1 + s_S H
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The simulator sets $S = \\frac{1}{x}(lG_0 + rG_1 + \\mu H - C)$ to satisfy the first verification equation.',
+  },
       'A random group element',
-      '$C + xT_1$'
+      '$C + xT_1
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The simulator sets $S = \\frac{1}{x}(lG_0 + rG_1 + \\mu H - C)$ to satisfy the first verification equation.',
+  },
+      '$\\frac{1}{x}(lG_0 + rG_1 + \\mu H - C)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The simulator sets $S = \\frac{1}{x}(lG_0 + rG_1 + \\mu H - C)$ to satisfy the first verification equation.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The simulator sets $S = \\frac{1}{x}(lG_0 + rG_1 + \\mu H - C)$ to satisfy the first verification equation.',
   },
@@ -62,12 +82,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Each blinding factor serves to make its corresponding transcript value:',
     options: [
-      'Computationally hard',
       'Uniformly distributed',
+      'Computationally hard',
       'Binding',
-      'Non-malleable'
+      'Non-malleable',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Blinding factors ensure transcript values are uniformly distributed, allowing simulation without the witness.',
   },
@@ -78,10 +98,10 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'The protocol is complete',
       'The simulator runs in polynomial time',
-      'Real and simulated transcript distributions are equal',
-      'The witness is extractable'
+      'The witness is extractable',
+      'Real and simulated transcript distributions are equal'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The proof shows that both distributions factor the same way, proving they are identical.',
   },

@@ -6,10 +6,26 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Radioactive decay is modeled by:',
     options: [
-      '$y\' = ky$ with $k > 0$',
-      '$y\' = -ky$ with $k > 0$',
-      '$y\'\' = -ky$',
-      '$y\' = y^2$'
+      '$y\\' = ky$ with $k > 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Decay: rate of decrease proportional to amount present.',
+  },
+      '$y\\'\\' = -ky
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Decay: rate of decrease proportional to amount present.',
+  },
+      '$y\\' = y^2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Decay: rate of decrease proportional to amount present.',
+  },
+      '$y\\' = -ky$ with $k > 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Decay: rate of decrease proportional to amount present.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -23,7 +39,7 @@ export const section54Questions: QuizQuestion[] = [
       'The temperature itself',
       'The difference between object and ambient temperature',
       'Time',
-      'The mass of the object'
+      'The mass of the object',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -37,7 +53,7 @@ export const section54Questions: QuizQuestion[] = [
       'Constant volume',
       'Volume changing with flow rates',
       'Either constant or changing volume',
-      'Only chemical reactions'
+      'Only chemical reactions',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -57,12 +73,28 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The logistic growth equation is:',
     options: [
-      '$y\' = ky$',
-      '$y\' = ky(1 - y/M)$',
-      '$y\' = k/y$',
-      '$y\'\' + ky = 0$'
+      '$y\\' = ky
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Logistic: growth slows as population approaches carrying capacity $M$.',
+  },
+      '$y\\' = k/y
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Logistic: growth slows as population approaches carrying capacity $M$.',
+  },
+      '$y\\' = ky(1 - y/M)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Logistic: growth slows as population approaches carrying capacity $M$.',
+  },
+      '$y\\'\\' + ky = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Logistic: growth slows as population approaches carrying capacity $M$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Logistic: growth slows as population approaches carrying capacity $M$.',
   },
@@ -71,10 +103,26 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If half-life is $T$, the decay constant $k$ (for $y\' = -ky$) satisfies:',
     options: [
-      '$k = T$',
-      '$k = \\ln 2 / T$',
-      '$k = 2/T$',
-      '$k = T \\ln 2$'
+      '$k = \\ln 2 / T
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'From $e^{-kT} = 1/2$: $kT = \\ln 2$, so $k = \\ln 2 / T$.',
+  },
+      '$k = T
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'From $e^{-kT} = 1/2$: $kT = \\ln 2$, so $k = \\ln 2 / T$.',
+  },
+      '$k = 2/T
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'From $e^{-kT} = 1/2$: $kT = \\ln 2$, so $k = \\ln 2 / T$.',
+  },
+      '$k = T \\ln 2
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'From $e^{-kT} = 1/2$: $kT = \\ln 2$, so $k = \\ln 2 / T$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',

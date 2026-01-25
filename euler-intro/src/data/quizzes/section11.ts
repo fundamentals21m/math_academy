@@ -9,7 +9,7 @@ export const section11Questions: QuizQuestion[] = [
       '1',
       '2',
       '3',
-      '4'
+      '4',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -21,11 +21,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'Can a cubic curve have a curved asymptote?',
     options: [
       'No, asymptotes are always straight lines',
-      'Yes, it can approach a parabola asymptotically',
       'Only if the cubic degenerates',
-      'Only in complex coordinates'
+      'Only in complex coordinates',
+      'Yes, it can approach a parabola asymptotically',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Yes! Some cubics have parabolic asymptotes—they approach a parabola rather than a straight line as they extend to infinity.',
   },
@@ -35,9 +35,9 @@ export const section11Questions: QuizQuestion[] = [
     question: 'What is a rectilinear asymptote?',
     options: [
       'An asymptote that is a straight line',
+      'An asymptote with positive slope',
       'An asymptote that is perpendicular to the axis',
       'An asymptote that passes through the origin',
-      'An asymptote with positive slope'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -48,12 +48,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If a cubic has only one real infinite branch, how many rectilinear asymptotes does it have?',
     options: [
-      '0',
       '1',
+      '0',
       '2',
       '3'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Each infinite branch corresponds to one asymptote (rectilinear or curvilinear). One real infinite branch gives one asymptote.',
   },

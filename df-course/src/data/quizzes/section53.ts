@@ -7,11 +7,23 @@ export const section53Questions: QuizQuestion[] = [
     question: 'A sequence $0 \\to A \\xrightarrow{f} B \\xrightarrow{g} C \\to 0$ is exact if:',
     options: [
       '$f$ and $g$ are isomorphisms',
-      '$f$ is injective, $g$ is surjective, and $\\ker(g) = \\text{im}(f)$',
-      '$A = B = C$',
-      '$f \\circ g = 0$'
+      '$A = B = C
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A short exact sequence has $f$ injective (kernel is $0$), $g$ surjective (image is $C$), and $\\text{im}(f) = \\ker(g)$.',
+  },
+      '$f \\circ g = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A short exact sequence has $f$ injective (kernel is $0$), $g$ surjective (image is $C$), and $\\text{im}(f) = \\ker(g)$.',
+  },
+      '$f$ is injective, $g$ is surjective, and $\\ker(g) = \\text{im}(f)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A short exact sequence has $f$ injective (kernel is $0$), $g$ surjective (image is $C$), and $\\text{im}(f) = \\ker(g)$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A short exact sequence has $f$ injective (kernel is $0$), $g$ surjective (image is $C$), and $\\text{im}(f) = \\ker(g)$.',
   },
@@ -20,12 +32,16 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A module $P$ is projective if:',
     options: [
-      'Every short exact sequence ending in $P$ splits',
+      '$P$ has no submodules',
       '$P$ is free',
-      '$P = 0$',
-      '$P$ has no submodules'
+      'Every short exact sequence ending in $P$ splits',
+      '$P = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$P$ is projective if every surjection $M \\twoheadrightarrow P$ splits, equivalently if $\\text{Hom}(P, -)$ is exact, or every epimorphism onto $P$ has a section.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$P$ is projective if every surjection $M \\twoheadrightarrow P$ splits, equivalently if $\\text{Hom}(P, -)$ is exact, or every epimorphism onto $P$ has a section.',
   },
@@ -49,11 +65,11 @@ export const section53Questions: QuizQuestion[] = [
     question: 'Every free module is:',
     options: [
       'Injective',
-      'Projective',
       'Neither projective nor injective',
-      'Both projective and injective'
+      'Projective',
+      'Both projective and injective',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Every free module is projective. The converse is not true in general (projective does not imply free), though it is true over PIDs.',
   },
@@ -62,12 +78,16 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A module $F$ is flat if:',
     options: [
+      '$F$ is injective',
       '$F \\otimes -$ preserves exact sequences',
       '$F$ is finite',
-      '$F$ is injective',
-      '$F = 0$'
+      '$F = 0
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$F$ is flat if $- \\otimes_R F$ is an exact functor. Every projective module is flat, but not conversely. $\\mathbb{Q}$ is a flat $\\mathbb{Z}$-module but not projective.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: '$F$ is flat if $- \\otimes_R F$ is an exact functor. Every projective module is flat, but not conversely. $\\mathbb{Q}$ is a flat $\\mathbb{Z}$-module but not projective.',
   },

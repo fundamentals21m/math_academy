@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section26Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Without market prices for factors of production, a socialist planner cannot:',
+    options: [
+      'Count physical quantities',
+      'Employ workers',
+      'Produce goods',
+      'Reduce diverse inputs to a common denominator for comparison',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Prices provide the essential "common denominator" for comparing heterogeneous inputs. Without them, how do you add tons of steel to hours of labor to kilowatts of electricity?',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The proposal to calculate costs in labor-hours fails because:',
+    options: [
+      'It ignores non-labor factors and heterogeneous labor types',
+      'Labor is too hard to measure',
+      'Workers would object',
+      'It requires too much paperwork',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Labor-hour calculation ignores land, capital, and the fact that different labor has different value—an hour of brain surgery is not equivalent to an hour of ditch-digging.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Using "utility units" for economic calculation is impossible because:',
+    options: [
+      'Utility is subjective',
+      'People lie about their preferences',
+      'Utility changes over time',
+      'Utility is ordinal (ranked), not cardinal (measured)',
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'People don\'t measure utility cardinally—they only rank preferences. You can say you prefer A to B, but not that A gives you exactly 1.5 times as much satisfaction as B.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The "trial and error" solution fails under socialism because:',
+    options: [
+      'Planners are too slow',
+      'Without profit/loss signals, errors cannot be recognized',
+      'Workers refuse to cooperate',
+      'Resources are insufficient',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Entrepreneurs use trial and error, but profit and loss signals tell them what "worked." Under socialism, there\'s no metric to distinguish success from failure.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Quasi-markets (artificial internal markets in socialism) cannot work because:',
+    options: [
+      'They are too complicated',
+      'Managers playing with state funds lack skin in the game',
+      'Computer technology is insufficient',
+      'Workers would sabotage them',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '"One cannot play speculation and investment." Markets work because entrepreneurs risk their own capital. Managers playing with state funds cannot replicate this essential feature.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Mises argues that "market socialism" is:',
+    options: [
+      'A promising compromise',
+      'The best of both systems',
+      'Self-contradictory—like a "triangular square"',
+      'Successfully implemented in some countries',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Socialism requires eliminating the market and catallactic competition. A system that preserves markets is not socialism. The notion of "market socialism" is as contradictory as a triangular square.',
+  },
+];

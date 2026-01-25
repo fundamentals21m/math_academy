@@ -8,8 +8,13 @@ export const section57Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'What is the argument of i?',
-    options: ['0', 'π/4', 'π/2', 'π'],
-    correctIndex: 2,
+    options: [
+      '0',
+      'π/4',
+      'π',
+      'π/2',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The number i lies on the positive imaginary axis, which is at angle π/2 from the positive real axis.',
@@ -20,11 +25,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'What geometric transformation does multiplication by i represent?',
     options: [
       'Reflection in the real axis',
-      'Rotation by 90° counterclockwise',
       'Scaling by factor 2',
+      'Rotation by 90° counterclockwise',
       'Translation by 1 unit',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Multiplying by i adds π/2 to the argument, which is a 90° counterclockwise rotation.',
@@ -33,8 +38,13 @@ export const section57Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'What is i⁴?',
-    options: ['1', '-1', 'i', '-i'],
-    correctIndex: 0,
+    options: [
+      '-1',
+      '1',
+      'i',
+      '-i',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'i⁴ = (i²)² = (-1)² = 1. The powers of i cycle with period 4.',
@@ -45,12 +55,12 @@ export const section57Questions: QuizQuestion[] = [
     question:
       'When multiplying two complex numbers in polar form, what happens to their arguments?',
     options: [
-      'They are multiplied',
       'They are added',
+      'They are multiplied',
       'They are subtracted',
       'The larger one is taken',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'In polar form multiplication, absolute values multiply and arguments add.',
@@ -61,11 +71,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'What are the fourth roots of unity?',
     options: [
       '1, 2, 3, 4',
-      '1, -1',
       '1, i, -1, -i',
+      '1, -1',
       '1, ω, ω², ω³ where ω = e^(iπ/2)',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The fourth roots of unity are 1, i, -1, -i—evenly spaced around the unit circle at 90° intervals.',
@@ -84,8 +94,13 @@ export const section57Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'Which mathematician discovered that multiplication adds arguments?',
-    options: ['Euler', 'Viète', 'Gauss', 'Newton'],
-    correctIndex: 1,
+    options: [
+      'Euler',
+      'Gauss',
+      'Newton',
+      'Viète',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'François Viète discovered around 1590 that the product of triangles adds their angles.',
@@ -96,11 +111,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'What does the Fundamental Theorem of Algebra state?',
     options: [
       'Every equation has a real solution',
-      'Every polynomial equation has a complex solution',
       'Complex numbers form a field',
+      'Every polynomial equation has a complex solution',
       'i² = -1',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The Fundamental Theorem of Algebra states that every polynomial equation has a solution in the complex numbers.',

@@ -6,12 +6,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does the equation $p^2 = 2$ have no solution in the rational numbers $\\mathbb{Q}$?',
     options: [
-      'Because $2$ is a prime number',
       'Because assuming $p = m/n$ in lowest terms leads to both $m$ and $n$ being even, a contradiction',
+      'Because $2$ is a prime number',
       'Because the square root function is not defined for rationals',
       'Because $2$ is larger than $1$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'If $p = m/n$ with $\\gcd(m,n) = 1$, then $p^2 = 2$ implies $m^2 = 2n^2$. This means $m^2$ is even, so $m$ is even. Writing $m = 2k$, we get $4k^2 = 2n^2$, so $n^2 = 2k^2$, making $n$ even. But then $\\gcd(m,n) \\geq 2$, contradicting our assumption.',
   },
@@ -21,11 +21,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'Consider the set $A = \\{p \\in \\mathbb{Q} : p^2 < 2\\}$. Which statement is true?',
     options: [
       '$A$ has a largest element in $\\mathbb{Q}$',
-      '$A$ has no upper bound in $\\mathbb{Q}$',
       '$A$ has upper bounds in $\\mathbb{Q}$ but no least upper bound in $\\mathbb{Q}$',
+      '$A$ has no upper bound in $\\mathbb{Q}$',
       '$A$ is empty'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Any rational $q > \\sqrt{2}$ is an upper bound for $A$. However, since $\\sqrt{2} \\notin \\mathbb{Q}$, there is no least upper bound in $\\mathbb{Q}$. For any rational upper bound $q$, we can find a smaller rational still greater than $\\sqrt{2}$.',
   },
@@ -50,10 +50,10 @@ export const section00Questions: QuizQuestion[] = [
     options: [
       '$q = p + 1$',
       '$q = 2p$',
-      '$q = \\frac{2p + 2}{p + 2}$',
-      '$q = p^2$'
+      '$q = p^2$',
+      '$q = \\frac{2p + 2}{p + 2}$'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Rudin shows that $q = \\frac{2p + 2}{p + 2} = \\frac{2(p+1)}{p+2}$ satisfies $q > p$ and $q^2 < 2$ when $p^2 < 2$. This is derived from examining $q^2 - 2 = \\frac{2(p^2 - 2)}{(p+2)^2}$, which is negative when $p^2 < 2$.',
   },
@@ -62,12 +62,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the fundamental inadequacy of $\\mathbb{Q}$ that motivates the construction of $\\mathbb{R}$?',
     options: [
-      '$\\mathbb{Q}$ is not closed under division',
-      '$\\mathbb{Q}$ contains too many elements',
       'Bounded sets in $\\mathbb{Q}$ may lack suprema in $\\mathbb{Q}$',
+      '$\\mathbb{Q}$ contains too many elements',
+      '$\\mathbb{Q}$ is not closed under division',
       '$\\mathbb{Q}$ does not contain zero'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The rationals are an ordered field, but they have "gaps"—bounded sets without least upper bounds. The real numbers $\\mathbb{R}$ are constructed precisely to fill these gaps and satisfy the least upper bound property.',
   },

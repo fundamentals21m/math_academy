@@ -8,8 +8,13 @@ export const section71Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'Who wrote the definitive ancient treatise on conic sections?',
-    options: ['Euclid', 'Apollonius', 'Archimedes', 'Pythagoras'],
-    correctIndex: 1,
+    options: [
+      'Apollonius',
+      'Euclid',
+      'Archimedes',
+      'Pythagoras',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Apollonius of Perga wrote "Conics" around 200 BC, the definitive ancient work on the subject.',
@@ -21,8 +26,8 @@ export const section71Questions: QuizQuestion[] = [
     options: [
       'Nowhere',
       'At a point at infinity',
-      'At the origin',
       'At the focus',
+      'At the origin',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,12 +39,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does a parabola relate to the line at infinity?',
     options: [
-      'It doesn\'t intersect it',
-      'It intersects it twice',
       'It is tangent to it',
-      'It equals it',
+      'It intersects it twice',
+      'It doesn\'t intersect it',
+      'It equals it'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A parabola is tangent to the line at infinity (touches it at one point), which explains its single asymptotic direction.',
@@ -50,11 +55,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'What are homogeneous coordinates?',
     options: [
       'Coordinates on a hyperbola',
-      'Coordinates where multiples represent the same point',
       'Coordinates in 2D only',
       'Coordinates measured from the focus',
+      'Coordinates where multiples represent the same point',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'In homogeneous coordinates (X:Y:Z), multiples like (2X:2Y:2Z) represent the same point as (X:Y:Z).',
@@ -75,11 +80,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'What field of mathematics generalizes the study of conics?',
     options: [
       'Topology',
-      'Algebraic geometry',
       'Differential equations',
       'Statistics',
+      'Algebraic geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Algebraic geometry studies solutions to polynomial equations geometrically, with conics being degree 2 curves.',
@@ -90,11 +95,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'What are elliptic curves?',
     options: [
       'Ellipses in 3D',
+      'Curves with eccentricity 0',
       'Degree 3 algebraic curves',
       'Circles with varying radius',
-      'Curves with eccentricity 0',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Elliptic curves are degree 3 (cubic) curves, the next step beyond conics in algebraic geometry.',
@@ -105,11 +110,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'Which three areas of mathematics does this chapter connect?',
     options: [
       'Calculus, statistics, logic',
-      'Geometry, algebra, number theory',
       'Topology, analysis, combinatorics',
+      'Geometry, algebra, number theory',
       'Set theory, category theory, algebra',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Conics unite geometry (shapes), algebra (equations), and number theory (integer solutions).',

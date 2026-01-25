@@ -7,11 +7,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'In Apostol\'s approach, $\\sin x$ and $\\cos x$ are defined using:',
     options: [
       'Right triangles',
-      'Unit circle geometry',
       'Integration (area functions)',
-      'Infinite series'
+      'Unit circle geometry',
+      'Infinite series',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Apostol defines trigonometric functions analytically using integrals.',
   },
@@ -21,11 +21,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'Which identity holds for all $x$?',
     options: [
       '$\\sin^2 x + \\cos^2 x = 0$',
-      '$\\sin^2 x + \\cos^2 x = 1$',
+      '$\\sin x \\cdot \\cos x = 1$',
       '$\\sin x + \\cos x = 1$',
-      '$\\sin x \\cdot \\cos x = 1$'
+      '$\\sin^2 x + \\cos^2 x = 1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The Pythagorean identity: $\\sin^2 x + \\cos^2 x = 1$.',
   },
@@ -52,12 +52,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The function $\\sin x$ is:',
     options: [
-      'Even: $\\sin(-x) = \\sin x$',
       'Odd: $\\sin(-x) = -\\sin x$',
+      'Even: $\\sin(-x) = \\sin x$',
       'Neither even nor odd',
       'Both even and odd'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Sine is an odd function: $\\sin(-x) = -\\sin x$.',
   },
@@ -66,10 +66,26 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The period of $\\sin x$ is:',
     options: [
-      '$\\pi$',
-      '$2\\pi$',
-      '$\\pi/2$',
-      '$4\\pi$'
+      '$\\pi
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\sin(x + 2\\pi) = \\sin x$ for all $x$; the period is $2\\pi$.',
+  },
+      '$\\pi/2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\sin(x + 2\\pi) = \\sin x$ for all $x$; the period is $2\\pi$.',
+  },
+      '$2\\pi
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\sin(x + 2\\pi) = \\sin x$ for all $x$; the period is $2\\pi$.',
+  },
+      '$4\\pi
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\sin(x + 2\\pi) = \\sin x$ for all $x$; the period is $2\\pi$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

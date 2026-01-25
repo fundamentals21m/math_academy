@@ -67,11 +67,11 @@ export const section10Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'The value of $a$',
-      'The number of digits in $b$',
       'The difference $a - b$',
-      'The product $a \\times b$',
+      'The number of digits in $b$',
+      'The product $a \\times b$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       "Lamé's theorem states that the number of steps is at most five times the number of digits in $b$ (the smaller number). This shows the algorithm runs in time proportional to $\\log b$.",
   },

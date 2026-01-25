@@ -38,11 +38,11 @@ export const section31Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'A line connecting opposite vertices',
-      'The line through the three intersection points of opposite sides',
-      'A tangent to the conic',
       'The longest diagonal',
+      'A tangent to the conic',
+      'The line through the three intersection points of opposite sides'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'In Pascal\'s theorem, opposite sides $AB \\cap DE$, $BC \\cap EF$, and $CD \\cap FA$ meet in three points $P$, $Q$, $R$. The Pascal line is the unique line through these three collinear points.',
   },
@@ -53,12 +53,12 @@ export const section31Questions: QuizQuestion[] = [
       'How many different hexagons can be formed from 6 points on a conic?',
     difficulty: 'medium',
     options: [
-      '6',
-      '15',
       '60',
-      '720',
+      '15',
+      '6',
+      '720'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'From 6 points, there are 60 different ways to order them into a hexagon (accounting for cyclic and reflection symmetries). Each ordering gives a different Pascal line, creating intricate configurations.',
   },
@@ -86,11 +86,11 @@ export const section31Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'The theorem fails',
-      'The side between them becomes a tangent to the conic',
       'The conic becomes a parabola',
-      'The Pascal line passes through the center',
+      'The side between them becomes a tangent to the conic',
+      'The Pascal line passes through the center'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'If two adjacent vertices coincide (say $B = C$), then "side $BC$" becomes the tangent line to the conic at that point. This gives a construction for tangent lines using only a straightedge!',
   },

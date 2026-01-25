@@ -7,11 +7,15 @@ export const section27Questions: QuizQuestion[] = [
     question: 'The Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG) states that every finitely generated abelian group is isomorphic to:',
     options: [
       'A direct product of cyclic groups only',
-      '$\\mathbb{Z}^r \\times \\mathbb{Z}_{n_1} \\times \\cdots \\times \\mathbb{Z}_{n_k}$ where $n_i | n_{i+1}$',
-      'A free abelian group',
-      'A finite group'
-    ],
+      '$\\mathbb{Z}^r \\times \\mathbb{Z}_{n_1} \\times \\cdots \\times \\mathbb{Z}_{n_k}$ where $n_i | n_{i+1}
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'FTFGAG: $G \\cong \\mathbb{Z}^r \\times \\mathbb{Z}_{n_1} \\times \\cdots \\times \\mathbb{Z}_{n_k}$ with $n_1 | n_2 | \\cdots | n_k$ (invariant factors).',
+  },
+      'A free abelian group',
+      'A finite group',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'FTFGAG: $G \\cong \\mathbb{Z}^r \\times \\mathbb{Z}_{n_1} \\times \\cdots \\times \\mathbb{Z}_{n_k}$ with $n_1 | n_2 | \\cdots | n_k$ (invariant factors).',
   },
@@ -20,10 +24,18 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The invariant factors of an abelian group are:',
     options: [
+      'A sequence $n_1 | n_2 | \\cdots | n_k$ giving $G \\cong \\mathbb{Z}_{n_1} \\times \\cdots \\times \\mathbb{Z}_{n_k}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Invariant factors are the unique sequence $n_1 | n_2 | \\cdots | n_k$ (each divides the next) in the decomposition.',
+  },
       'The orders of all elements',
-      'A sequence $n_1 | n_2 | \\cdots | n_k$ giving $G \\cong \\mathbb{Z}_{n_1} \\times \\cdots \\times \\mathbb{Z}_{n_k}$',
-      'The prime divisors of $|G|$',
-      'The indices of maximal subgroups'
+      'The prime divisors of $|G|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Invariant factors are the unique sequence $n_1 | n_2 | \\cdots | n_k$ (each divides the next) in the decomposition.',
+  },
+      'The indices of maximal subgroups',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +47,19 @@ export const section27Questions: QuizQuestion[] = [
     question: 'The elementary divisors of a finite abelian group are:',
     options: [
       'The same as invariant factors',
-      'Prime powers $p^a$ giving $G \\cong \\prod \\mathbb{Z}_{p^{a_i}}$',
-      'All prime divisors of $|G|$',
-      'The orders of generators'
+      'All prime divisors of $|G|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Elementary divisors are prime powers: $G \\cong \\mathbb{Z}_{p_1^{a_1}} \\times \\cdots \\times \\mathbb{Z}_{p_m^{a_m}}$.',
+  },
+      'The orders of generators',
+      'Prime powers $p^a$ giving $G \\cong \\prod \\mathbb{Z}_{p^{a_i}}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Elementary divisors are prime powers: $G \\cong \\mathbb{Z}_{p_1^{a_1}} \\times \\cdots \\times \\mathbb{Z}_{p_m^{a_m}}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Elementary divisors are prime powers: $G \\cong \\mathbb{Z}_{p_1^{a_1}} \\times \\cdots \\times \\mathbb{Z}_{p_m^{a_m}}$.',
   },

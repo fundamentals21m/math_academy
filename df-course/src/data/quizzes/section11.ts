@@ -6,12 +6,28 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The centralizer $C_G(A)$ of a subset $A$ in a group $G$ is:',
     options: [
-      '$\\{g \\in G : gA = Ag\\}$',
-      '$\\{g \\in G : ga = ag \\text{ for all } a \\in A\\}$',
-      '$\\{g \\in G : gAg^{-1} = A\\}$',
-      '$\\{a \\in A : ga = ag \\text{ for all } g \\in G\\}$'
+      '$\\{g \\in G : ga = ag \\text{ for all } a \\in A\\}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$C_G(A) = \\{g \\in G : ga = ag \\text{ for all } a \\in A\\}$ is the set of elements that commute with every element of $A$.',
+  },
+      '$\\{g \\in G : gA = Ag\\}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$C_G(A) = \\{g \\in G : ga = ag \\text{ for all } a \\in A\\}$ is the set of elements that commute with every element of $A$.',
+  },
+      '$\\{a \\in A : ga = ag \\text{ for all } g \\in G\\}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$C_G(A) = \\{g \\in G : ga = ag \\text{ for all } a \\in A\\}$ is the set of elements that commute with every element of $A$.',
+  },
+      '$\\{g \\in G : gAg^{-1} = A\\}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$C_G(A) = \\{g \\in G : ga = ag \\text{ for all } a \\in A\\}$ is the set of elements that commute with every element of $A$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$C_G(A) = \\{g \\in G : ga = ag \\text{ for all } a \\in A\\}$ is the set of elements that commute with every element of $A$.',
   },
@@ -20,12 +36,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The normalizer $N_G(A)$ of a subset $A$ in a group $G$ is:',
     options: [
-      '$\\{g \\in G : ga = ag \\text{ for all } a \\in A\\}$',
       '$\\{g \\in G : gAg^{-1} = A\\}$',
+      '$\\{g \\in G : ga = ag \\text{ for all } a \\in A\\}$',
       '$\\{g \\in G : gA = A\\}$',
       '$\\{a \\in A : gag^{-1} \\in A\\}$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$N_G(A) = \\{g \\in G : gAg^{-1} = A\\}$ is the set of elements that normalize $A$ (map $A$ to itself under conjugation).',
   },
@@ -48,12 +64,28 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The center $Z(G)$ of a group $G$ is:',
     options: [
-      '$C_G(G)$',
-      '$N_G(G)$',
-      '$C_G(\\{e\\})$',
-      '$N_G(\\{e\\})$'
+      '$C_G(\\{e\\})
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$Z(G) = C_G(G) = \\{g \\in G : ga = ag \\text{ for all } a \\in G\\}$ is the set of elements that commute with everything.',
+  },
+      '$N_G(G)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$Z(G) = C_G(G) = \\{g \\in G : ga = ag \\text{ for all } a \\in G\\}$ is the set of elements that commute with everything.',
+  },
+      '$N_G(\\{e\\})
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$Z(G) = C_G(G) = \\{g \\in G : ga = ag \\text{ for all } a \\in G\\}$ is the set of elements that commute with everything.',
+  },
+      '$C_G(G)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$Z(G) = C_G(G) = \\{g \\in G : ga = ag \\text{ for all } a \\in G\\}$ is the set of elements that commute with everything.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$Z(G) = C_G(G) = \\{g \\in G : ga = ag \\text{ for all } a \\in G\\}$ is the set of elements that commute with everything.',
   },
@@ -62,12 +94,28 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $H$ is a subgroup of $G$, then $H$ is normal in $G$ if and only if:',
     options: [
-      '$C_G(H) = G$',
-      '$N_G(H) = G$',
-      '$Z(G) = H$',
-      '$C_G(H) = H$'
+      '$C_G(H) = G
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$H$ is normal iff $gHg^{-1} = H$ for all $g \\in G$, which means $N_G(H) = G$.',
+  },
+      '$C_G(H) = H
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$H$ is normal iff $gHg^{-1} = H$ for all $g \\in G$, which means $N_G(H) = G$.',
+  },
+      '$N_G(H) = G
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$H$ is normal iff $gHg^{-1} = H$ for all $g \\in G$, which means $N_G(H) = G$.',
+  },
+      '$Z(G) = H
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$H$ is normal iff $gHg^{-1} = H$ for all $g \\in G$, which means $N_G(H) = G$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$H$ is normal iff $gHg^{-1} = H$ for all $g \\in G$, which means $N_G(H) = G$.',
   },

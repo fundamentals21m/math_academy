@@ -7,11 +7,11 @@ export const section97Questions: QuizQuestion[] = [
     question: 'Proposition III.33 constructs what?',
     options: [
       'A tangent line from an external point',
+      'A chord equal to a given line',
       'A circular segment on a given line admitting a given angle',
       'The center of a circle',
-      'A chord equal to a given line'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'III.33 constructs a circular arc (segment) on a given straight line such that inscribed angles in that segment equal a given angle.',
   },
@@ -20,12 +20,12 @@ export const section97Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To construct a segment admitting a given angle θ, the construction uses:',
     options: [
-      'The inscribed angle theorem directly',
       'A tangent line and III.32 (tangent-chord angle equals inscribed angle)',
+      'The inscribed angle theorem directly',
       'The Pythagorean theorem',
       'Parallel lines'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The construction creates a tangent-chord angle equal to θ. By III.32, the inscribed angle in the alternate segment also equals θ.',
   },
@@ -35,11 +35,11 @@ export const section97Questions: QuizQuestion[] = [
     question: 'This construction is useful for:',
     options: [
       'Finding circle centers',
-      'Creating arcs where all inscribed angles have a specific measure',
       'Bisecting angles',
-      'Drawing parallel lines'
+      'Drawing parallel lines',
+      'Creating arcs where all inscribed angles have a specific measure',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'III.33 creates a "locus" of points from which a given line segment subtends a given angle.',
   },

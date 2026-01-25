@@ -8,8 +8,13 @@ export const section63Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'Who first defined complex numbers rigorously as ordered pairs?',
-    options: ['Euler', 'Gauss', 'Hamilton', 'Cardano'],
-    correctIndex: 2,
+    options: [
+      'Euler',
+      'Hamilton',
+      'Gauss',
+      'Cardano',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Hamilton in 1833 defined complex numbers as ordered pairs (a, b) with specific operations.',
@@ -19,12 +24,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are quaternions?',
     options: [
-      'Complex numbers with three imaginary units',
       '4-dimensional extension of complex numbers',
+      'Complex numbers with three imaginary units',
       'Complex numbers modulo 4',
       'Gaussian integers with norm 4',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Quaternions are 4-dimensional: a + bi + cj + dk, where i² = j² = k² = ijk = -1.',
@@ -33,8 +38,13 @@ export const section63Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'Which ring does NOT have unique factorization?',
-    options: ['Z', 'Z[i]', 'Z[√(-5)]', 'Q'],
-    correctIndex: 2,
+    options: [
+      'Z',
+      'Z[i]',
+      'Q',
+      'Z[√(-5)]',
+    ],
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'In Z[√(-5)], we have 6 = 2 × 3 = (1 + √(-5))(1 - √(-5)), two different irreducible factorizations.',
@@ -45,11 +55,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'What does "multiplication by i is rotation by 90°" illustrate?',
     options: [
       'The failure of commutativity',
-      'The union of algebra and geometry',
       'The definition of a ring',
-      'The Euclidean algorithm',
+      'The union of algebra and geometry',
+      'The Euclidean algorithm'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'This shows how algebraic operations (×i) have geometric meaning (rotation).',
@@ -60,11 +70,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'What made unique factorization work in Z[i]?',
     options: [
       'The ring has infinitely many elements',
-      'The norm satisfies the Euclidean property',
-      'Gauss proved it by induction',
       'Complex numbers are closed under addition',
+      'Gauss proved it by induction',
+      'The norm satisfies the Euclidean property'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The Euclidean property (division with smaller remainder) ensures unique factorization.',
@@ -75,11 +85,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'Who discovered that complex numbers could represent rotations?',
     options: [
       'Euler (1707-1783)',
-      'Wessel and Argand (1797-1806)',
       'Cardano (1501-1576)',
+      'Wessel and Argand (1797-1806)',
       'Hamilton (1805-1865)',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Wessel (1797) and Argand (1806) independently discovered the geometric interpretation.',
@@ -104,12 +114,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is special about quaternion multiplication?',
     options: [
-      'It is always zero',
       'It is not commutative',
+      'It is always zero',
       'It equals the norm',
       'It only works for integers',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Quaternions form a non-commutative algebra: ij = k but ji = -k.',

@@ -6,12 +6,20 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a proof by induction, what is the "base case"?',
     options: [
-      'Proving $P(n) \\Rightarrow P(n+1)$',
-      'Proving $P(1)$ is true',
-      'Assuming $P(k)$ is true',
-      'Proving $P(n)$ for all $n$'
-    ],
+      'Proving $P(n) \\Rightarrow P(n+1)
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The base case establishes that the statement holds for the initial value, typically $n = 1$.',
+  },
+      'Proving $P(1)$ is true',
+      'Proving $P(n)$ for all $n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The base case establishes that the statement holds for the initial value, typically $n = 1$.',
+  },
+      'Assuming $P(k)$ is true',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The base case establishes that the statement holds for the initial value, typically $n = 1$.',
   },
@@ -21,11 +29,15 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What is the inductive hypothesis?',
     options: [
       'The statement we want to prove',
-      'The assumption that $P(k)$ is true for some $k$',
       'The final conclusion',
-      'The base case'
+      'The assumption that $P(k)$ is true for some $k
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The inductive hypothesis assumes $P(k)$ is true for some arbitrary $k$, which we use to prove $P(k+1)$.',
+  },
+      'The base case',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The inductive hypothesis assumes $P(k)$ is true for some arbitrary $k$, which we use to prove $P(k+1)$.',
   },
@@ -34,12 +46,24 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using induction, prove that $1 + 2 + ... + n = \\frac{n(n+1)}{2}$. What is $P(1)$?',
     options: [
-      '$1 = \\frac{1 \\cdot 2}{2} = 1$',
-      '$1 = \\frac{1}{2}$',
-      '$1 + 2 = 3$',
-      '$P(1)$ cannot be verified'
-    ],
+      '$1 = \\frac{1 \\cdot 2}{2} = 1
     correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For $n = 1$: LHS $= 1$, RHS $= \\frac{1 \\cdot 2}{2} = 1$. So $P(1)$ is true.',
+  },
+      '$1 = \\frac{1}{2}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For $n = 1$: LHS $= 1$, RHS $= \\frac{1 \\cdot 2}{2} = 1$. So $P(1)$ is true.',
+  },
+      '$1 + 2 = 3
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For $n = 1$: LHS $= 1$, RHS $= \\frac{1 \\cdot 2}{2} = 1$. So $P(1)$ is true.',
+  },
+      '$P(1)$ cannot be verified',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For $n = 1$: LHS $= 1$, RHS $= \\frac{1 \\cdot 2}{2} = 1$. So $P(1)$ is true.',
   },
@@ -58,11 +82,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'The well-ordering principle states that:',
     options: [
       'Every set of real numbers has a minimum',
-      'Every nonempty set of positive integers has a least element',
       'Every set can be ordered',
-      'Induction always works'
+      'Induction always works',
+      'Every nonempty set of positive integers has a least element',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The well-ordering principle: every nonempty subset of $\\mathbb{Z}^+$ has a smallest element.',
   },

@@ -6,12 +6,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A vector is a quantity that has:',
     options: [
-      'Magnitude only',
       'Direction only',
+      'Magnitude only',
+      'Neither magnitude nor direction',
       'Both magnitude and direction',
-      'Neither magnitude nor direction'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Vectors have both magnitude (size) and direction, unlike scalars which have only magnitude.',
   },
@@ -39,11 +39,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'The Doppler effect explains why:',
     options: [
       'Sound is louder near the source',
-      'A car horn sounds higher when approaching and lower when receding',
       'Sound travels faster in water',
-      'Light is brighter from nearby stars'
+      'A car horn sounds higher when approaching and lower when receding',
+      'Light is brighter from nearby stars',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The Doppler effect causes frequency shifts—higher pitch when approaching, lower when receding.',
   },
@@ -53,11 +53,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'Sound travels at approximately:',
     options: [
       '186,000 miles/second',
-      '1100 feet/second',
       '343 miles/hour',
+      '1100 feet/second',
       '100 feet/second'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Sound travels at about 1100 ft/s (750 mph). Light travels at 186,000 miles/second.',
   },
@@ -66,12 +66,28 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If an observer moves toward a stationary sound source at speed $v$, the perceived frequency is:',
     options: [
-      '$f$',
-      '$(1 + v/c)f$',
-      '$(1 - v/c)f$',
-      '$f/v$'
+      '$(1 + v/c)f
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Moving toward the source: $f\' = (1 + v/c)f$, where $c$ is the speed of sound.',
+  },
+      '$f
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Moving toward the source: $f\' = (1 + v/c)f$, where $c$ is the speed of sound.',
+  },
+      '$f/v
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Moving toward the source: $f\' = (1 + v/c)f$, where $c$ is the speed of sound.',
+  },
+      '$(1 - v/c)f
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Moving toward the source: $f\' = (1 + v/c)f$, where $c$ is the speed of sound.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Moving toward the source: $f\' = (1 + v/c)f$, where $c$ is the speed of sound.',
   },
@@ -81,11 +97,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'Police radar uses the Doppler effect. Why is there a factor of 2 in the frequency shift formula?',
     options: [
       'Because radar uses two signals',
-      'Because the car acts as both a moving receiver and a moving source',
       'Because of rounding',
-      'Because light has two polarizations'
+      'Because light has two polarizations',
+      'Because the car acts as both a moving receiver and a moving source',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The target vehicle first receives the wave (one Doppler shift), then reflects it (another shift).',
   },
@@ -94,12 +110,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To add two vectors geometrically, you:',
     options: [
-      'Add their magnitudes',
       'Draw them tip-to-tail and connect start to end',
+      'Add their magnitudes',
       'Multiply them together',
-      'Find their average'
+      'Find their average',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Vector addition: place the second vector\'s tail at the first vector\'s tip. The sum goes from start to end.',
   },
@@ -111,7 +127,7 @@ export const section08Questions: QuizQuestion[] = [
       'It uses a motor when going upwind',
       'By angling the sail to create forward thrust and zigzagging (tacking)',
       'Wind actually pushes equally in all directions',
-      'It cannot sail into the wind'
+      'It cannot sail into the wind',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -124,8 +140,8 @@ export const section08Questions: QuizQuestion[] = [
     options: [
       'Stars turning red as they age',
       'Light appearing redder from receding objects due to the Doppler effect',
+      'The color of Mars',
       'Dust between stars making them appear red',
-      'The color of Mars'
     ],
     correctIndex: 1,
     difficulty: 'medium',

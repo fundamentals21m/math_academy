@@ -7,9 +7,13 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Kuratowski\'s Theorem states that $G$ is planar iff it has no:',
     options: [
       'Cycles',
-      'Subdivision of $K_5$ or $K_{3,3}$',
       'Cliques of size 4',
-      'Vertices of degree 5 or more'
+      'Subdivision of $K_5$ or $K_{3,3}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Kuratowski: $G$ is planar $\\Leftrightarrow$ no subgraph is a subdivision of $K_5$ or $K_{3,3}$.',
+  },
+      'Vertices of degree 5 or more',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +25,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'A subdivision of a graph $H$ is obtained by:',
     options: [
       'Removing edges',
-      'Replacing edges with paths',
       'Adding cliques',
-      'Contracting edges'
+      'Contracting edges',
+      'Replacing edges with paths',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A subdivision replaces edges with internally disjoint paths (adds degree-2 vertices on edges).',
   },
@@ -36,8 +40,8 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'Subdivisions only',
       'Minors (contractions and deletions)',
+      'Matchings',
       'Colorings',
-      'Matchings'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,12 +52,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$K_5$ is not planar because:',
     options: [
-      'It has too many vertices',
       'It has $10 > 3(5) - 6 = 9$ edges',
+      'It has too many vertices',
       'It is not connected',
       'It has odd cycles'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$K_5$ has $\\binom{5}{2} = 10$ edges, but planar graphs on 5 vertices have at most $3(5)-6=9$.',
   },
@@ -63,11 +67,11 @@ export const section18Questions: QuizQuestion[] = [
     question: '$K_{3,3}$ is not planar because:',
     options: [
       'It has too many vertices',
-      'It has $9 > 2(6) - 4 = 8$ edges and is triangle-free',
       'It has a Hamiltonian cycle',
-      'It is bipartite'
+      'It is bipartite',
+      'It has $9 > 2(6) - 4 = 8$ edges and is triangle-free',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: '$K_{3,3}$ is triangle-free with 9 edges, but triangle-free planar graphs on 6 vertices have $\\leq 2(6)-4=8$.',
   },
@@ -76,12 +80,20 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Petersen graph is not planar because it contains:',
     options: [
-      'A subdivision of $K_5$',
+      'A subdivision of $K_5
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Petersen graph contains both a $K_5$ minor and a $K_{3,3}$ subdivision.',
+  },
+      'Both a $K_5$ minor and a $K_{3,3}$ subdivision',
       'A $K_5$ minor',
-      'A subdivision of $K_{3,3}$',
-      'Both a $K_5$ minor and a $K_{3,3}$ subdivision'
+      'A subdivision of $K_{3,3}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The Petersen graph contains both a $K_5$ minor and a $K_{3,3}$ subdivision.',
+  },
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The Petersen graph contains both a $K_5$ minor and a $K_{3,3}$ subdivision.',
   },

@@ -10,11 +10,11 @@ export const section55Questions: QuizQuestion[] = [
     question: 'What does the BHK interpretation stand for?',
     options: [
       'Boolean-Hilbert-Kleene',
-      'Brouwer-Heyting-Kolmogorov',
       'Boole-Henkin-Kripke',
+      'Brouwer-Heyting-Kolmogorov',
       'Bishop-Howard-Curry',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The BHK interpretation stands for Brouwer-Heyting-Kolmogorov. It explains intuitionistic logical connectives in terms of "reasons" or proofs for formulas.',
@@ -25,11 +25,11 @@ export const section55Questions: QuizQuestion[] = [
     question: 'In the BHK interpretation, what is a reason for A ∨ B?',
     options: [
       'A reason for A and a reason for B',
-      'A reason for A or a reason for B',
       'A rule converting a reason for A into a reason for B',
       'There is exactly one reason',
+      'A reason for A or a reason for B',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'In the BHK interpretation, a reason for A ∨ B is a reason for A or a reason for B. This is why intuitionistic disjunction requires actually proving one of the disjuncts.',
@@ -39,12 +39,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What set-theoretic operation corresponds to logical conjunction (∧)?',
     options: [
-      'Disjoint union (A + B)',
       'Cartesian product (A × B)',
+      'Disjoint union (A + B)',
       'Exponentiation (B^A)',
       'Power set (PA)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Logical conjunction A ∧ B corresponds to Cartesian product A × B. Just as a reason for A ∧ B is a pair of reasons, an element of A × B is a pair of elements.',
@@ -54,12 +54,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What set-theoretic operation corresponds to implication (B ⇒ C)?',
     options: [
+      'C^B (function space)',
       'C × B',
       'C + B',
-      'C^B (function space)',
       'C − B',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Implication B ⇒ C corresponds to the function space C^B. A reason for B ⇒ C is a rule converting reasons for B into reasons for C, just as an element of C^B is a function from B to C.',
@@ -69,12 +69,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does a deduction A ⊢ B correspond to in the set-theoretic interpretation?',
     options: [
-      'An isomorphism A ≅ B',
       'A mapping A → B',
+      'An isomorphism A ≅ B',
       'A subset A ⊆ B',
-      'An identity A = B',
+      'An identity A = B'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A deduction A ⊢ B corresponds to a mapping (function) A → B. If we can deduce B from A, we have a way to transform any reason for A into a reason for B.',
@@ -86,10 +86,10 @@ export const section55Questions: QuizQuestion[] = [
     options: [
       'C^(A+B) ≅ C^A × C^B',
       '(A × B)^C ≅ A^C × B^C',
-      '(C^B)^A ≅ C^(A×B)',
       'A^1 ≅ A',
+      '(C^B)^A ≅ C^(A×B)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The currying equivalence A ⇒ (B ⇒ C) ⊣⊢ (A ∧ B) ⇒ C corresponds to (C^B)^A ≅ C^(A×B). This generalizes the arithmetic law (c^b)^a = c^(a×b).',

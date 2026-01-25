@@ -6,12 +6,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What revolutionary product has Hank Rearden developed?',
     options: [
-      'A new type of steel alloy',
       'Rearden Metal, a stronger and lighter alloy',
+      'A new type of steel alloy',
       'An improved railroad engine',
-      'A new oil refining process'
+      'A new oil refining process',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Hank Rearden has spent ten years developing Rearden Metal, a revolutionary alloy that is stronger, lighter, and more durable than traditional steel.',
   },
@@ -20,12 +20,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the chapter title "The Chain" primarily refer to?',
     options: [
+      'The chain of business relationships and supply dependencies',
       'The chains binding workers to their jobs',
       'A decorative chain Dagny wears',
-      'The chain of business relationships and supply dependencies',
-      'The railroad chain of command'
+      'The railroad chain of command',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The chapter explores the interconnected chain of business relationships, suppliers, and producers that keeps the economy functioning.',
   },
@@ -37,7 +37,7 @@ export const section01Questions: QuizQuestion[] = [
       'The price is too high',
       'Fear of the unknown and pressure from competitors',
       'It requires special equipment they do not have',
-      'Government regulations prohibit its use'
+      'Government regulations prohibit its use',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -51,7 +51,7 @@ export const section01Questions: QuizQuestion[] = [
       'She is cautious and wants more testing',
       'She refuses to consider it',
       'She embraces it as the solution to her problems',
-      'She defers to her brother\'s judgment'
+      'She defers to her brother\\'s judgment',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -63,11 +63,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'What philosophical concept does the chapter introduce through business relationships?',
     options: [
       'The inevitability of government intervention',
-      'The mutual dependence of productive individuals',
       'The superiority of collective decision-making',
-      'The impossibility of honest business dealings'
+      'The impossibility of honest business dealings',
+      'The mutual dependence of productive individuals',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The chapter shows how productive individuals form a chain of mutual value exchange, where each person\'s success depends on others\' competence and integrity.',
   },
@@ -77,11 +77,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'How does Rearden view his relationship with his suppliers?',
     options: [
       'As adversarial negotiations to be won',
-      'As necessary evils he must tolerate',
       'As partnerships based on mutual self-interest and competence',
-      'As charity he extends to less capable people'
+      'As necessary evils he must tolerate',
+      'As charity he extends to less capable people',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Rearden values business relationships built on mutual competence and fair exchange, seeing them as proper partnerships rather than exploitation.',
   },

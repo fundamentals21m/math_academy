@@ -6,12 +6,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What mathematical technique did Lagrange develop to find extrema with constraints?',
     options: [
-      'Integration by parts',
       'Lagrange multipliers',
+      'Integration by parts',
       'The chain rule',
-      'Taylor series'
+      'Taylor series',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Lagrange multipliers allow finding maxima and minima of functions subject to constraints.',
   },
@@ -23,7 +23,7 @@ export const section11Questions: QuizQuestion[] = [
       'Force and acceleration',
       'Energy (kinetic minus potential)',
       'Momentum and impulse',
-      'Pressure and volume'
+      'Pressure and volume',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -36,8 +36,8 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'Equals the order of the group',
       'Divides the order of the group',
+      'Is always even',
       'Is always prime',
-      'Is always even'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The calculus of variations, developed by Lagrange, finds:',
     options: [
-      'Derivatives of functions',
       'Integrals of functions',
+      'Derivatives of functions',
+      'Limits of sequences',
       'Functions that extremize integrals',
-      'Limits of sequences'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The calculus of variations finds functions (not numbers) that maximize or minimize integral quantities.',
   },
@@ -63,11 +63,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'Which work by Lagrange presented mechanics without geometric diagrams?',
     options: [
       'Principia Mathematica',
-      'Mécanique Analytique',
       'Elements',
-      'Disquisitiones Arithmeticae'
+      'Mécanique Analytique',
+      'Disquisitiones Arithmeticae',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Mécanique Analytique (1788) developed mechanics purely analytically, famously containing no diagrams.',
   },

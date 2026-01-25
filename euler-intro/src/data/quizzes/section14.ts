@@ -6,12 +6,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a diameter of a curve?',
     options: [
-      'The longest chord of the curve',
       'A line that bisects all chords parallel to a given direction',
+      'The longest chord of the curve',
       'The distance across the curve through the center',
       'The axis of symmetry'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A diameter is a locus of midpoints of parallel chords. For each direction of chords, there is a corresponding diameter.',
   },
@@ -21,11 +21,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'For a conic section, what shape is any diameter?',
     options: [
       'A curved line',
-      'A straight line',
       'A parabola',
-      'An ellipse'
+      'An ellipse',
+      'A straight line',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'For conic sections (second-order curves), every diameter is a straight line. This follows from the linear formula for the sum of roots.',
   },
@@ -35,11 +35,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'What are conjugate diameters?',
     options: [
       'Diameters that are perpendicular',
-      'Diameters where each bisects chords parallel to the other',
       'Diameters of equal length',
+      'Diameters where each bisects chords parallel to the other',
       'Diameters that pass through the foci'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Two diameters are conjugate if each one bisects all chords parallel to the other. In an ellipse, conjugate diameters are not generally perpendicular.',
   },
@@ -50,8 +50,8 @@ export const section14Questions: QuizQuestion[] = [
     options: [
       'Any diameter through the center',
       'A diameter perpendicular to its conjugate',
+      'The diameter along the directrix',
       'The shortest diameter',
-      'The diameter along the directrix'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -62,10 +62,10 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For higher-order curves (degree > 2), diameters are generally:',
     options: [
-      'Always straight lines',
       'Always curved',
+      'Always straight lines',
       'Curves of degree one less than the original',
-      'Non-existent'
+      'Non-existent',
     ],
     correctIndex: 2,
     difficulty: 'hard',

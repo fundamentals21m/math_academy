@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section35Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Capitalism\'s relationship to poverty is that it:',
+    options: [
+      'Inherited universal poverty and has steadily reduced it',
+      'Created poverty where none existed',
+      'Has no effect on poverty levels',
+      'Increases poverty over time',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Poverty is the original condition of humanity. For millennia, the vast majority lived at bare subsistence. Capitalism inherited this universal poverty and has reduced extreme poverty from 90% to under 10%.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Inequality in the market economy:',
+    options: [
+      'Is a defect to be corrected',
+      'Has no economic function',
+      'Is the mechanism enabling capital accumulation and rising living standards',
+      'Benefits only the wealthy',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Inequality allows some to save and invest. This drives capital accumulation, which raises productivity and wages for all. Attempts to enforce equality destroy the incentives that create wealth.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Market "insecurity" (businesses failing, jobs lost) reflects:',
+    options: [
+      'Market failure',
+      'Capitalist exploitation',
+      'Government interference',
+      'Economic dynamism—resources shifting to more valued uses',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This "insecurity" is consumer sovereignty in action. Resources constantly shift toward more valued uses because consumers have found something better. A stagnant economy without such changes would be "secure" only in its poverty.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The concept of "welfare" when defined broadly enough to be acceptable:',
+    options: [
+      'Becomes empty—merely another name for the urge to satisfy wants',
+      'Provides clear policy guidance',
+      'Justifies any intervention',
+      'Has universal meaning',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Interpreted broadly, "welfare" becomes the fundamental category of all human action—removing uneasiness. The market already serves this. Specific definitions smuggle in particular value judgments.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Interventionism hinders help for the poor by:',
+    options: [
+      'Directly helping the poor too much',
+      'Reducing funds for charity through high taxes and preventing jobs through regulations',
+      'Eliminating poverty completely',
+      'Creating too much equality',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'High taxes reduce funds available for charity. Regulations prevent low-skilled workers from finding jobs. Minimum wages price the poorest out of the labor market entirely.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Critics who blame the market for poverty, inequality, and insecurity are actually criticizing:',
+    options: [
+      'Pure capitalism',
+      'The consequences of anti-capitalistic policies they themselves advocate',
+      'Human nature',
+      'Technological progress',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The objections are based on bad economics. Critics blame the market for consequences of the very anti-capitalistic policies they advocate. They fix on the market the responsibility for the inevitable failure of interventionism.',
+  },
+];

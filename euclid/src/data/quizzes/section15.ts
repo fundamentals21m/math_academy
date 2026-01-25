@@ -7,11 +7,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'What does Proposition I.15 prove about intersecting lines?',
     options: [
       'They form right angles',
-      'Vertical (opposite) angles are equal',
       'Adjacent angles are equal',
-      'All four angles are equal'
+      'All four angles are equal',
+      'Vertical (opposite) angles are equal',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'I.15: "If two straight lines cut one another, they make the vertical angles equal to one another."',
   },
@@ -23,7 +23,7 @@ export const section15Questions: QuizQuestion[] = [
       'I.13',
       'I.14',
       'I.12',
-      'I.11'
+      'I.11',
     ],
     correctIndex: 0,
     difficulty: 'medium',

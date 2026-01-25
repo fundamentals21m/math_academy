@@ -1,0 +1,91 @@
+import type { QuizQuestion } from './types';
+
+export const section71Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'A real number $x \\in [0,1)$ can be represented as an infinite decimal $0.a_1a_2a_3\\ldots = \\sum_{i=1}^{\\infty} a_i \\cdot 10^{-i}$. This representation is:',
+    options: [
+      'Never unique',
+      'Always unique for every real number',
+      'Unique for most real numbers, but some have two representations (e.g., $0.999\\ldots = 1.000\\ldots$)',
+      'Unique only for rational numbers'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Decimal representations are unique except for numbers with terminating decimals, which can also be written with trailing 9s. For example, $0.5 = 0.4999\\ldots$ and $1 = 0.999\\ldots$.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The decimal $0.999\\ldots$ (infinitely many 9s) equals:',
+    options: [
+      '$1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The infinite series $\\sum_{i=1}^{\\infty} 9 \\cdot 10^{-i} = \\frac{9/10}{1 - 1/10} = \\frac{9/10}{9/10} = 1$. Alternatively, if $x = 0.999\\ldots$, then $10x = 9.999\\ldots$, so $10x - x = 9$, giving $x = 1$.',
+  },
+      '$0.999$ (finite)',
+      'A number slightly less than $1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The infinite series $\\sum_{i=1}^{\\infty} 9 \\cdot 10^{-i} = \\frac{9/10}{1 - 1/10} = \\frac{9/10}{9/10} = 1$. Alternatively, if $x = 0.999\\ldots$, then $10x = 9.999\\ldots$, so $10x - x = 9$, giving $x = 1$.',
+  },
+      'An undefined expression',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The infinite series $\\sum_{i=1}^{\\infty} 9 \\cdot 10^{-i} = \\frac{9/10}{1 - 1/10} = \\frac{9/10}{9/10} = 1$. Alternatively, if $x = 0.999\\ldots$, then $10x = 9.999\\ldots$, so $10x - x = 9$, giving $x = 1$.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'A real number is rational if and only if its decimal expansion is:',
+    options: [
+      'Finite (terminating)',
+      'Eventually periodic (repeating)',
+      'Non-repeating',
+      'Contains only finitely many distinct digits',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A real number is rational iff its decimal expansion is eventually periodic, meaning after some point the same finite block of digits repeats forever. Terminating decimals are a special case (period of 0s).',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The decimal expansion of $\\sqrt{2}$ is:',
+    options: [
+      'Non-terminating and non-repeating',
+      'Terminating',
+      'Eventually periodic',
+      'Undefined',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Since $\\sqrt{2}$ is irrational, its decimal expansion cannot be eventually periodic. It begins $1.41421356...$ and continues forever without any repeating pattern.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'The repeating decimal $0.\\overline{3} = 0.333\\ldots$ equals what fraction? (Enter the numerator if the fraction is in lowest terms with denominator 3)',
+    correctAnswer: 1,
+    numericRange: { min: 0, max: 10, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'Let $x = 0.333\\ldots$ Then $10x = 3.333\\ldots$, so $10x - x = 3$, giving $9x = 3$, thus $x = 3/9 = 1/3$. The numerator is 1.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The Cantor diagonal argument uses decimal representations to prove:',
+    options: [
+      'The rationals are dense in the reals',
+      'Every real number has a unique decimal expansion',
+      'Every decimal expansion represents a rational number',
+      'The set of real numbers in $[0,1]$ is uncountable',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Cantor\'s diagonal argument assumes the reals in $[0,1]$ are countable, lists them as $r_1, r_2, \\ldots$, then constructs a real number differing from $r_n$ in the $n$-th decimal place. This number is not in the list, contradicting countability.',
+  },
+];

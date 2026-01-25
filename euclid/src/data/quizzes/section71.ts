@@ -22,10 +22,10 @@ export const section71Questions: QuizQuestion[] = [
     options: [
       'Passes through the center',
       'Is perpendicular to the diameter',
+      'Is parallel to the tangent',
       'Is on the opposite side from the longest line (both on the line through the center)',
-      'Is parallel to the tangent'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The shortest segment is also on the line through the center, but on the near side of the circle.',
   },
@@ -35,11 +35,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'III.7 shows that from an internal point, there are exactly how many lines of each length to the circle?',
     options: [
       'One of every length',
+      'None - all lengths are different',
       'Two of every intermediate length, one of maximum, one of minimum',
       'Infinitely many of each length',
-      'None - all lengths are different'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'There is exactly one maximum and one minimum distance, and for each intermediate distance, there are exactly two lines reaching the circle.',
   },

@@ -9,7 +9,7 @@ export const section03Questions: QuizQuestion[] = [
       'A line equal to another line',
       'A segment cut from a greater line equal to a lesser line',
       'A perpendicular to a line',
-      'An angle equal to another angle'
+      'An angle equal to another angle',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'Which proposition does I.3 use to transfer the length?',
     options: [
       'Proposition I.1',
-      'Proposition I.2',
       'Postulate 3 directly',
-      'Common Notion 1'
+      'Common Notion 1',
+      'Proposition I.2',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'I.3 uses I.2 to place a line equal to the lesser line at one endpoint of the greater line.',
   },

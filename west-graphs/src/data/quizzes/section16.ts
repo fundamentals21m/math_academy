@@ -7,11 +7,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'The chromatic polynomial $P(G, k)$ counts:',
     options: [
       'The number of edges using $k$ colors',
-      'The number of proper $k$-colorings',
+      'The number of cliques of size $k$',
       'The chromatic number',
-      'The number of cliques of size $k$'
+      'The number of proper $k$-colorings'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$P(G, k)$ = number of ways to properly color $G$ with at most $k$ colors.',
   },
@@ -20,12 +20,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The chromatic polynomial of $K_n$ is:',
     options: [
-      '$k^n$',
-      '$k(k-1)^{n-1}$',
       '$k(k-1)(k-2)\\cdots(k-n+1)$',
+      '$k(k-1)^{n-1}$',
+      '$k^n$',
       '$(k-1)^n$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'For $K_n$: first vertex gets $k$ choices, second $k-1$, ..., giving $k(k-1)\\cdots(k-n+1)$.',
   },
@@ -34,10 +34,26 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The deletion-contraction formula for chromatic polynomials is:',
     options: [
-      '$P(G) = P(G-e) + P(G/e)$',
-      '$P(G) = P(G-e) - P(G/e)$',
-      '$P(G) = P(G-e) \\cdot P(G/e)$',
-      '$P(G) = P(G-e) / P(G/e)$'
+      '$P(G) = P(G-e) + P(G/e)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For edge $e$: $P(G, k) = P(G-e, k) - P(G/e, k)$ (delete minus contract).',
+  },
+      '$P(G) = P(G-e) \\cdot P(G/e)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For edge $e$: $P(G, k) = P(G-e, k) - P(G/e, k)$ (delete minus contract).',
+  },
+      '$P(G) = P(G-e) - P(G/e)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For edge $e$: $P(G, k) = P(G-e, k) - P(G/e, k)$ (delete minus contract).',
+  },
+      '$P(G) = P(G-e) / P(G/e)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For edge $e$: $P(G, k) = P(G-e, k) - P(G/e, k)$ (delete minus contract).',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -51,7 +67,7 @@ export const section16Questions: QuizQuestion[] = [
       'Every vertex is in a triangle',
       'Every cycle of length $\\geq 4$ has a chord',
       'It has no triangles',
-      'It is planar'
+      'It is planar',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -71,12 +87,24 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A graph is perfect if for every induced subgraph $H$:',
     options: [
-      '$\\chi(H) = \\Delta(H)$',
-      '$\\chi(H) = \\omega(H)$',
-      '$\\chi(H) = |V(H)|$',
-      '$H$ is bipartite'
+      '$\\chi(H) = \\Delta(H)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Perfect: $\\chi(H) = \\omega(H)$ for every induced subgraph $H$.',
+  },
+      '$H$ is bipartite',
+      '$\\chi(H) = \\omega(H)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Perfect: $\\chi(H) = \\omega(H)$ for every induced subgraph $H$.',
+  },
+      '$\\chi(H) = |V(H)|
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Perfect: $\\chi(H) = \\omega(H)$ for every induced subgraph $H$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Perfect: $\\chi(H) = \\omega(H)$ for every induced subgraph $H$.',
   },

@@ -9,7 +9,7 @@ export const section178Questions: QuizQuestion[] = [
       'Inversely proportional',
       'In the same ratio (directly proportional)',
       'Equal regardless of arc length',
-      'In the duplicate ratio'
+      'In the duplicate ratio',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section178Questions: QuizQuestion[] = [
     question: 'VI.33 applies specifically to:',
     options: [
       'Any circles of different sizes',
+      'Inscribed angles only',
       'Equal circles only',
       'Semicircles only',
-      'Inscribed angles only'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'VI.33 requires equal circles. In equal circles, arc length depends only on the central angle, making angles and arcs proportional.',
   },

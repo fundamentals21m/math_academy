@@ -9,7 +9,7 @@ export const section12Questions: QuizQuestion[] = [
       'Euler',
       'Newton',
       'Descartes',
-      'Leibniz'
+      'Leibniz',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,12 +20,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a node on a cubic curve?',
     options: [
-      'A point where the curve intersects itself (double point)',
+      'A point where the curve is vertical',
       'The highest point on the curve',
+      'A point where the curve intersects itself (double point)',
       'A point of maximum curvature',
-      'A point where the curve is vertical'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A node is a singular point where the curve crosses itself, creating a double point with two distinct tangent directions.',
   },
@@ -35,11 +35,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'What is a cusp on a curve?',
     options: [
       'A point where two branches cross with different tangents',
-      'A point where two branches meet with the same tangent',
       'The endpoint of a curve',
-      'A point of inflection'
+      'A point of inflection',
+      'A point where two branches meet with the same tangent',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A cusp is a singular point where two branches of the curve meet and share the same tangent line, creating a sharp point.',
   },
@@ -48,12 +48,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The folium of Descartes $x^3 + y^3 = 3axy$ is an example of what type of cubic?',
     options: [
-      'A cubic with a node',
       'A cubic with a cusp',
       'A non-singular cubic',
-      'A degenerate cubic'
+      'A degenerate cubic',
+      'A cubic with a node',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The folium of Descartes has a node (self-intersection) at the origin, where the curve crosses itself.',
   },
@@ -62,12 +62,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How did Euler organize cubic curves?',
     options: [
+      'By the type and number of asymptotes and singular points',
       'By the date they were discovered',
       'Alphabetically by name',
-      'By the type and number of asymptotes and singular points',
-      'By the size of their coefficients'
+      'By the size of their coefficients',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Euler organized cubics by their geometric features: the type of asymptotes (rectilinear vs parabolic), number of branches, and singular points (nodes, cusps).',
   },

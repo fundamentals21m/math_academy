@@ -21,11 +21,11 @@ export const section80Questions: QuizQuestion[] = [
     question: 'For a prime ideal $P$ of $R$, the localization $R_P$ is defined as $S^{-1}R$ where:',
     options: [
       '$S = P$',
-      '$S = R \\setminus P$',
       '$S = \\{1\\}$',
+      '$S = R \\setminus P$',
       '$S = R^*$ (units of $R$)'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'When $P$ is prime, $S = R \\setminus P$ is multiplicatively closed. The localization $R_P = (R \\setminus P)^{-1}R$ is a local ring with maximal ideal $PR_P$.',
   },
@@ -35,11 +35,11 @@ export const section80Questions: QuizQuestion[] = [
     question: 'The localization $R_f$ for $f \\in R$ is $S^{-1}R$ where:',
     options: [
       '$S = \\{f\\}$',
-      '$S = \\{f^n : n \\geq 0\\}$',
+      '$S = R \\setminus (f)$',
       '$S = (f)$',
-      '$S = R \\setminus (f)$'
+      '$S = \\{f^n : n \\geq 0\\}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$R_f$ is localization at the multiplicative set $S = \\{1, f, f^2, f^3, \\ldots\\}$. This inverts all powers of $f$, making $f$ a unit in $R_f$.',
   },
@@ -48,12 +48,12 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The prime ideals of $R_P$ are in bijection with:',
     options: [
-      'All prime ideals of $R$',
       'Prime ideals of $R$ contained in $P$',
+      'All prime ideals of $R$',
       'Prime ideals of $R$ containing $P$',
       'Maximal ideals of $R$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Prime ideals of $S^{-1}R$ correspond bijectively to prime ideals of $R$ that are disjoint from $S$. For $R_P$ where $S = R \\setminus P$, these are exactly the primes contained in $P$.',
   },
@@ -62,12 +62,16 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $R$ is an integral domain, then the localization $R_{(0)}$ at the zero ideal is:',
     options: [
+      'The field of fractions of $R
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'When $R$ is a domain, $(0)$ is prime and $R \\setminus (0) = R \\setminus \\{0\\}$ is all nonzero elements. Localizing at this set gives the field of fractions $\\text{Frac}(R)$.',
+  },
       '$R$ itself',
       'The zero ring',
-      'The field of fractions of $R$',
-      'A local ring'
+      'A local ring',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'When $R$ is a domain, $(0)$ is prime and $R \\setminus (0) = R \\setminus \\{0\\}$ is all nonzero elements. Localizing at this set gives the field of fractions $\\text{Frac}(R)$.',
   },

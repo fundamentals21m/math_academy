@@ -6,12 +6,28 @@ export const section78Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The radical $\\sqrt{I}$ of an ideal $I$ in a ring $R$ is defined as:',
     options: [
-      '$\\{r \\in R : r^2 \\in I\\}$',
-      '$\\{r \\in R : r^n \\in I \\text{ for some } n \\geq 1\\}$',
-      'The intersection of all ideals containing $I$',
-      'The smallest prime ideal containing $I$'
+      '$\\{r \\in R : r^n \\in I \\text{ for some } n \\geq 1\\}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The radical $\\sqrt{I} = \\{r \\in R : r^n \\in I \\text{ for some positive integer } n\\}$. It is the intersection of all prime ideals containing $I$.',
+  },
+      '$\\{r \\in R : r^2 \\in I\\}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The radical $\\sqrt{I} = \\{r \\in R : r^n \\in I \\text{ for some positive integer } n\\}$. It is the intersection of all prime ideals containing $I$.',
+  },
+      'The smallest prime ideal containing $I
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The radical $\\sqrt{I} = \\{r \\in R : r^n \\in I \\text{ for some positive integer } n\\}$. It is the intersection of all prime ideals containing $I$.',
+  },
+      'The intersection of all ideals containing $I
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The radical $\\sqrt{I} = \\{r \\in R : r^n \\in I \\text{ for some positive integer } n\\}$. It is the intersection of all prime ideals containing $I$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The radical $\\sqrt{I} = \\{r \\in R : r^n \\in I \\text{ for some positive integer } n\\}$. It is the intersection of all prime ideals containing $I$.',
   },
@@ -20,12 +36,24 @@ export const section78Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a polynomial ring $k[x_1, \\ldots, x_n]$ over an algebraically closed field $k$, the variety $V(I)$ of an ideal $I$ is:',
     options: [
-      'The set of all polynomials in $I$',
+      'The set of all polynomials in $I
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The variety $V(I) = \\{(a_1, \\ldots, a_n) \\in k^n : f(a_1, \\ldots, a_n) = 0 \\text{ for all } f \\in I\\}$ is the common zero locus of all polynomials in $I$.',
+  },
+      'The quotient ring $k[x_1, \\ldots, x_n]/I
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The variety $V(I) = \\{(a_1, \\ldots, a_n) \\in k^n : f(a_1, \\ldots, a_n) = 0 \\text{ for all } f \\in I\\}$ is the common zero locus of all polynomials in $I$.',
+  },
       'The set of points $(a_1, \\ldots, a_n) \\in k^n$ where all $f \\in I$ vanish',
-      'The quotient ring $k[x_1, \\ldots, x_n]/I$',
-      'The radical of $I$'
+      'The radical of $I
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The variety $V(I) = \\{(a_1, \\ldots, a_n) \\in k^n : f(a_1, \\ldots, a_n) = 0 \\text{ for all } f \\in I\\}$ is the common zero locus of all polynomials in $I$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The variety $V(I) = \\{(a_1, \\ldots, a_n) \\in k^n : f(a_1, \\ldots, a_n) = 0 \\text{ for all } f \\in I\\}$ is the common zero locus of all polynomials in $I$.',
   },
@@ -48,12 +76,28 @@ export const section78Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For any ideal $I$ in $k[x_1, \\ldots, x_n]$, we always have:',
     options: [
-      '$I(V(I)) = I$',
-      '$I(V(I)) = \\sqrt{I}$',
-      '$I(V(I)) \\subseteq I$',
-      '$V(I(V(I))) = \\emptyset$'
+      '$I(V(I)) = I
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By the Nullstellensatz, $I(V(I)) = \\sqrt{I}$ when $k$ is algebraically closed. The ideal of functions vanishing on $V(I)$ is exactly the radical of $I$.',
+  },
+      '$I(V(I)) \\subseteq I
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By the Nullstellensatz, $I(V(I)) = \\sqrt{I}$ when $k$ is algebraically closed. The ideal of functions vanishing on $V(I)$ is exactly the radical of $I$.',
+  },
+      '$V(I(V(I))) = \\emptyset
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By the Nullstellensatz, $I(V(I)) = \\sqrt{I}$ when $k$ is algebraically closed. The ideal of functions vanishing on $V(I)$ is exactly the radical of $I$.',
+  },
+      '$I(V(I)) = \\sqrt{I}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By the Nullstellensatz, $I(V(I)) = \\sqrt{I}$ when $k$ is algebraically closed. The ideal of functions vanishing on $V(I)$ is exactly the radical of $I$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'By the Nullstellensatz, $I(V(I)) = \\sqrt{I}$ when $k$ is algebraically closed. The ideal of functions vanishing on $V(I)$ is exactly the radical of $I$.',
   },
@@ -63,11 +107,11 @@ export const section78Questions: QuizQuestion[] = [
     question: 'An ideal $I$ is called a radical ideal if:',
     options: [
       '$I$ is prime',
-      '$I = \\sqrt{I}$',
+      '$\\sqrt{I} = (0)$',
       '$I$ is maximal',
-      '$\\sqrt{I} = (0)$'
+      '$I = \\sqrt{I}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'An ideal is radical if it equals its own radical: $I = \\sqrt{I}$. Equivalently, if $r^n \\in I$ implies $r \\in I$. Prime ideals are radical, but not all radical ideals are prime.',
   },

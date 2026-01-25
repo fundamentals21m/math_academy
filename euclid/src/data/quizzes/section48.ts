@@ -20,12 +20,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What proof technique does I.48 use?',
     options: [
-      'Direct computation',
       'Constructing a right triangle and using SSS congruence',
+      'Direct computation',
       'Proof by contradiction',
-      'Using similar triangles'
+      'Using similar triangles',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'I.48 constructs a right triangle with the same two shorter sides, uses I.47 to show the hypotenuses are equal, then I.8 (SSS) to prove congruence.',
   },
@@ -36,8 +36,8 @@ export const section48Questions: QuizQuestion[] = [
     options: [
       'It allows calculating areas',
       'It lets us verify right angles using only length measurements (like the 3-4-5 triangle)',
+      'It constructs perfect circles',
       'It proves all triangles are right triangles',
-      'It constructs perfect circles'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -49,11 +49,15 @@ export const section48Questions: QuizQuestion[] = [
     question: 'With I.47 and I.48, what has Euclid established?',
     options: [
       'Only that the Pythagorean theorem is true',
-      'A complete characterization: right triangle iff $a^2 + b^2 = c^2$',
       'That all triangles satisfy the Pythagorean theorem',
-      'Only that the converse is true'
+      'Only that the converse is true',
+      'A complete characterization: right triangle iff $a^2 + b^2 = c^2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Together, I.47 and I.48 prove: a triangle has a right angle if and only if the sum of squares on two sides equals the square on the third.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Together, I.47 and I.48 prove: a triangle has a right angle if and only if the sum of squares on two sides equals the square on the third.',
   },
@@ -63,11 +67,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'What does the completion of I.48 signify in Book I?',
     options: [
       'The beginning of number theory',
-      'The climax and end of Book I, completing the theory of plane geometry foundations',
       'The introduction to Book II',
-      'The definition of squares'
+      'The climax and end of Book I, completing the theory of plane geometry foundations',
+      'The definition of squares',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'I.47-48 are the crowning achievements of Book I, bringing together all the earlier propositions into the famous Pythagorean theorem and its converse.',
   },

@@ -23,7 +23,7 @@ export const section84Questions: QuizQuestion[] = [
       'A principal ideal',
       'A product of prime ideals',
       'An intersection of maximal ideals',
-      'A sum of two ideals'
+      'A sum of two ideals',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section84Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The ring of integers $\\mathcal{O}_K$ of a number field $K$ is always:',
     options: [
+      'A Dedekind domain',
       'A PID',
       'A UFD',
-      'A Dedekind domain',
-      'A field'
+      'A field',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The ring of integers of any number field is a Dedekind domain. It is a PID (and hence UFD) if and only if the class number is $1$.',
   },
@@ -48,12 +48,12 @@ export const section84Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $\\mathbb{Z}[\\sqrt{-5}]$, the element $6$ factors as:',
     options: [
-      '$6 = 2 \\cdot 3$ only',
       '$6 = (1 + \\sqrt{-5})(1 - \\sqrt{-5})$ only',
+      '$6 = 2 \\cdot 3$ only',
+      '$6$ is prime',
       'Both factorizations exist, showing non-unique factorization',
-      '$6$ is prime'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: '$6 = 2 \\cdot 3 = (1 + \\sqrt{-5})(1 - \\sqrt{-5})$ are two distinct factorizations into irreducibles. This shows $\\mathbb{Z}[\\sqrt{-5}]$ is not a UFD, though it is a Dedekind domain where ideals factor uniquely.',
   },
@@ -63,11 +63,11 @@ export const section84Questions: QuizQuestion[] = [
     question: 'The ideal class group of a Dedekind domain measures:',
     options: [
       'How many maximal ideals exist',
-      'The failure of unique factorization of elements',
       'The number of units',
-      'The Krull dimension'
+      'The failure of unique factorization of elements',
+      'The Krull dimension',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The class group $\\text{Cl}(R)$ consists of fractional ideal classes under multiplication. It is trivial if and only if $R$ is a PID. A nontrivial class group indicates failure of unique factorization of elements.',
   },

@@ -34,12 +34,12 @@ export const section91Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the condition "equal circles" necessary?',
     options: [
-      'It\'s not actually necessary',
       'In unequal circles, the same arc length subtends different angles',
+      'It\\'s not actually necessary',
+      'Equal circles are easier to construct',
       'In unequal circles, arcs cannot be compared',
-      'Equal circles are easier to construct'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The same arc length in a smaller circle subtends a larger central angle than in a larger circle.',
   },

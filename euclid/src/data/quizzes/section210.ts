@@ -7,11 +7,11 @@ export const section210Questions: QuizQuestion[] = [
     question: 'Proposition VII.31 states that every composite number:',
     options: [
       'Is divisible by 2',
-      'Has a prime factor',
       'Is a perfect square',
+      'Has a prime factor',
       'Has exactly two factors'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'VII.31 proves that every composite number is divisible by some prime number.',
   },
@@ -22,10 +22,10 @@ export const section210Questions: QuizQuestion[] = [
     options: [
       '2',
       '3',
-      '7',
-      '9'
+      '9',
+      '7'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '91 = 7 * 13, so 7 is a prime factor of 91.',
   },
@@ -37,7 +37,7 @@ export const section210Questions: QuizQuestion[] = [
       'The number would be prime',
       'That divisor would have a smaller divisor greater than 1, contradiction',
       'The number would equal 1',
-      'The divisor would equal the number itself'
+      'The divisor would equal the number itself',
     ],
     correctIndex: 1,
     difficulty: 'hard',

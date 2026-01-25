@@ -6,12 +6,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An equivalence relation must be:',
     options: [
-      'Reflexive, symmetric, and transitive',
       'Reflexive and symmetric only',
       'Symmetric and transitive only',
-      'Antisymmetric and transitive'
+      'Antisymmetric and transitive',
+      'Reflexive, symmetric, and transitive',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The three defining properties of an equivalence relation are reflexivity, symmetry, and transitivity.',
   },
@@ -20,12 +20,28 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A relation is reflexive if:',
     options: [
-      '$a \\sim a$ for all $a$',
-      '$a \\sim b$ implies $b \\sim a$',
-      '$a \\sim b$ and $b \\sim c$ implies $a \\sim c$',
-      '$a \\sim b$ and $b \\sim a$ implies $a = b$'
+      '$a \\sim b$ and $b \\sim c$ implies $a \\sim c
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Reflexivity: every element is related to itself.',
+  },
+      '$a \\sim a$ for all $a
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Reflexivity: every element is related to itself.',
+  },
+      '$a \\sim b$ implies $b \\sim a
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Reflexivity: every element is related to itself.',
+  },
+      '$a \\sim b$ and $b \\sim a$ implies $a = b
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Reflexivity: every element is related to itself.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Reflexivity: every element is related to itself.',
   },
@@ -34,12 +50,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An equivalence relation partitions a set into:',
     options: [
+      'The power set',
       'Disjoint equivalence classes',
       'Overlapping subsets',
       'A single subset',
-      'The power set'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Equivalence classes are disjoint and their union is the whole set.',
   },
@@ -48,12 +64,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A partial order is:',
     options: [
-      'Reflexive, antisymmetric, and transitive',
       'Reflexive, symmetric, and transitive',
       'Only reflexive and transitive',
-      'Only antisymmetric'
+      'Reflexive, antisymmetric, and transitive',
+      'Only antisymmetric',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A partial order satisfies reflexivity, antisymmetry, and transitivity.',
   },
@@ -62,12 +78,16 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is an example of an equivalence relation on integers?',
     options: [
-      'Congruence modulo $n$',
+      'Congruence modulo $n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Congruence mod $n$ is reflexive, symmetric, and transitive.',
+  },
       'Less than ($<$)',
       'Divisibility ($\\mid$)',
-      'Greater than or equal ($\\geq$)'
+      'Greater than or equal ($\\geq$)',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Congruence mod $n$ is reflexive, symmetric, and transitive.',
   },
@@ -76,12 +96,24 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $[a]$ and $[b]$ are equivalence classes with $[a] \\cap [b] \\neq \\emptyset$, then:',
     options: [
-      '$[a] = [b]$',
-      '$[a] \\subset [b]$',
-      '$[b] \\subset [a]$',
-      '$[a]$ and $[b]$ are disjoint'
-    ],
+      '$[a] = [b]
     correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Equivalence classes are either equal or disjoint.',
+  },
+      '$[b] \\subset [a]
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Equivalence classes are either equal or disjoint.',
+  },
+      '$[a] \\subset [b]
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Equivalence classes are either equal or disjoint.',
+  },
+      '$[a]$ and $[b]$ are disjoint',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Equivalence classes are either equal or disjoint.',
   },

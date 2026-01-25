@@ -1,0 +1,83 @@
+import type { QuizQuestion } from './types';
+
+export const section07Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What happens to channel capacity when you make payments?',
+    options: [
+      'It stays the same - only the balance distribution changes',
+      'It decreases as you spend',
+      'It increases with each payment',
+      'It fluctuates with Bitcoin price',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Channel capacity stays constant. When you pay, your local balance decreases and the remote balance increases by the same amount. Capacity = Local + Remote.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is a cooperative close?',
+    options: [
+      'When multiple channels close at once',
+      'When both parties agree to close the channel',
+      'When you close channels with no balance',
+      'When the network forces a channel closed',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A cooperative close is when both parties agree to close the channel. It creates a single on-chain transaction paying out final balances - the fastest and cheapest method.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why would you force close a channel?',
+    options: [
+      'To get better routing',
+      'To save on fees',
+      'When your peer is permanently unavailable',
+      'Force close is always preferred',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Force close should only be used when your peer is permanently unavailable and cannot cooperatively close. It\'s more expensive and locks your funds during a timeout period.',
+  },
+  {
+    id: 4,
+    type: 'numeric',
+    question: 'Approximately how many blocks is the typical force close timelock (in hours, assuming 10 min blocks)?',
+    correctAnswer: 24,
+    numericRange: { min: 0, max: 100, precision: 0 },
+    difficulty: 'hard',
+    explanation: 'Force closes typically have a 144 block timelock. At ~10 minutes per block, that\'s about 24 hours during which your funds are locked.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is the base fee in Lightning routing?',
+    options: [
+      'A percentage of the payment amount',
+      'The minimum channel capacity',
+      'The fee for opening channels',
+      'A flat fee charged per forwarded payment regardless of size',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The base fee is a flat amount (in millisatoshis) charged per forwarded payment regardless of size. Combined with the fee rate (percentage), it determines total routing fees.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What is a common mistake when opening many channels?',
+    options: [
+      'All channels having 100% local balance (no inbound)',
+      'Having too much channel capacity',
+      'Opening channels with too many different nodes',
+      'Using too high opening fees',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Opening many channels with 100% local balance means you can send but not receive. You need inbound liquidity (remote balance) to receive payments.',
+  },
+];

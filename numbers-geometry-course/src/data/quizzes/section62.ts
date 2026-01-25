@@ -10,11 +10,11 @@ export const section62Questions: QuizQuestion[] = [
     question: 'What is the first step in finding a² + b² = p for prime p ≡ 1 (mod 4)?',
     options: [
       'Compute the GCD of p and i',
+      'Compute p mod 4',
       'Find m with m² ≡ -1 (mod p)',
       'Factor p as a product of primes',
-      'Compute p mod 4',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'We first find m such that m² ≡ -1 (mod p), which exists since p ≡ 1 (mod 4).',
@@ -40,11 +40,11 @@ export const section62Questions: QuizQuestion[] = [
     question: 'What is the Diophantus identity?',
     options: [
       '(a + b)² = a² + 2ab + b²',
-      '(a² + b²)(c² + d²) = (ac - bd)² + (ad + bc)²',
       'a² + b² = (a + bi)(a - bi)',
       'gcd(a, b) · lcm(a, b) = ab',
+      '(a² + b²)(c² + d²) = (ac - bd)² + (ad + bc)²',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The Diophantus identity shows the product of two sums of squares is a sum of squares.',
@@ -53,8 +53,13 @@ export const section62Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'What is 9² mod 41?',
-    options: ['1', '-1 (i.e., 40)', '0', '9'],
-    correctIndex: 1,
+    options: [
+      '-1 (i.e., 40)',
+      '1',
+      '0',
+      '9',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       '9² = 81 = 2 × 41 - 1 = 82 - 1, so 9² ≡ -1 (mod 41).',
@@ -95,11 +100,11 @@ export const section62Questions: QuizQuestion[] = [
     question: 'How is the Diophantus identity related to Gaussian integers?',
     options: [
       'It proves the existence of i',
-      'It is equivalent to N(αβ) = N(α)N(β)',
       'It defines multiplication in Z[i]',
+      'It is equivalent to N(αβ) = N(α)N(β)',
       'It proves unique factorization',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The identity follows from the multiplicativity of the norm: |αβ|² = |α|²|β|².',

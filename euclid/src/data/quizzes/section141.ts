@@ -7,11 +7,11 @@ export const section141Questions: QuizQuestion[] = [
     question: 'What powerful result does V.22 (ex aequali, ordered) prove?',
     options: [
       'Ratios cannot be combined',
-      'If A:B = D:E and B:C = E:F, then A:C = D:F',
+      'Only adjacent ratios can be compared',
       'All ratios are 1:1',
-      'Only adjacent ratios can be compared'
+      'If A:B = D:E and B:C = E:F, then A:C = D:F'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Ex aequali allows us to "compose" ratios: chained proportions give a proportion relating first to last terms.',
   },
@@ -21,11 +21,11 @@ export const section141Questions: QuizQuestion[] = [
     question: 'Ex aequali is like "multiplying" ratios because:',
     options: [
       'It increases all magnitudes',
-      '(A:B) · (B:C) = A:C, eliminating the middle term B',
       'It doubles the ratio',
-      'Ratios cannot be multiplied'
+      '(A:B) · (B:C) = A:C, eliminating the middle term B',
+      'Ratios cannot be multiplied',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Just as (a/b) · (b/c) = a/c in fractions, ex aequali composes ratios by eliminating the common middle term.',
   },
@@ -37,7 +37,7 @@ export const section141Questions: QuizQuestion[] = [
       '2:5',
       '5:2',
       '3:3',
-      '6:15'
+      '6:15',
     ],
     correctIndex: 0,
     difficulty: 'easy',

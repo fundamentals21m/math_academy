@@ -7,11 +7,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'What does "The Moratorium on Brains" refer to?',
     options: [
       'A law banning new inventions',
-      'The systematic destruction of productive minds through government policy',
       'A temporary halt to scientific research',
-      'A union strike by intellectuals'
+      'The systematic destruction of productive minds through government policy',
+      'A union strike by intellectuals',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '"The Moratorium on Brains" refers to the government\'s policies that drive away the producers, thinkers, and creators—effectively placing a moratorium on the use of human intelligence.',
   },
@@ -21,11 +21,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'What happens to productive individuals under increasing government control?',
     options: [
       'They are given government positions',
-      'They disappear or go on strike',
       'They form a political party',
-      'They are imprisoned'
+      'They are imprisoned',
+      'They disappear or go on strike',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'As government control increases, the productive minds of society begin disappearing—joining the strike of the men of the mind that John Galt has organized.',
   },
@@ -37,7 +37,7 @@ export const section16Questions: QuizQuestion[] = [
       'Reducing regulations to attract them back',
       'Imposing more controls and regulations',
       'Offering tax incentives',
-      'Forming international alliances'
+      'Forming international alliances',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do the looters believe they can run the economy without the producers?',
     options: [
-      'They have superior management skills',
       'They deny that individual ability matters',
+      'They have superior management skills',
+      'They believe technology has eliminated the need for talent',
       'They have access to foreign expertise',
-      'They believe technology has eliminated the need for talent'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The looters operate on the premise that ability is a collective resource and that one man\'s mind can be replaced by any other. They deny the crucial role of individual genius.',
   },
@@ -63,11 +63,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'What does the disappearance of industrialists reveal about the nature of production?',
     options: [
       'Factories can run themselves',
-      'The mind is the root of all wealth',
       'Workers are more important than managers',
-      'Government can replace private enterprise'
+      'The mind is the root of all wealth',
+      'Government can replace private enterprise',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The collapse that follows the disappearance of producers demonstrates that the mind—the thinking, planning, creating human mind—is the source of all material wealth.',
   },
@@ -76,12 +76,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the ultimate consequence of the moratorium on brains?',
     options: [
-      'A temporary economic slowdown',
       'The complete collapse of civilization',
+      'A temporary economic slowdown',
       'A peaceful transition to socialism',
-      'The rise of new leaders'
+      'The rise of new leaders',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Without the minds that create and produce, civilization cannot be maintained. The moratorium on brains leads inevitably to the complete collapse of the economy and society.',
   },

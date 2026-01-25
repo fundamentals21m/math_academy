@@ -9,12 +9,12 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When did Diophantus of Alexandria live?',
     options: [
+      '150-300 A.D.',
       '500-400 B.C.',
       '300-200 B.C.',
-      '150-300 A.D.',
       '500-600 A.D.',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Diophantus lived sometime between 150 A.D. and 300 A.D. in Alexandria. His exact dates are uncertain, but he represents the last peak of classical Greek mathematics.',
@@ -23,8 +23,13 @@ export const section36Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'What is Diophantus\'s major surviving work called?',
-    options: ['Elements', 'Arithmetica', 'Almagest', 'Conics'],
-    correctIndex: 1,
+    options: [
+      'Arithmetica',
+      'Elements',
+      'Almagest',
+      'Conics',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Diophantus\'s major work is the Arithmetica, a collection of problems about finding integers or rationals satisfying various conditions. It inspired Fermat and Euler.',
@@ -35,11 +40,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'What are "Diophantine equations"?',
     options: [
       'Equations with complex solutions',
-      'Equations to be solved in integers or rationals',
       'Quadratic equations only',
+      'Equations to be solved in integers or rationals',
       'Equations without solutions',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Diophantine equations are equations to be solved in integers or rational numbers, named in honor of Diophantus. They combine algebra, geometry, and number theory.',
@@ -48,8 +53,13 @@ export const section36Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'Which famous mathematician praised Diophantus\'s methods as "as general as those in use today"?',
-    options: ['Newton', 'Gauss', 'Euler', 'Fermat'],
-    correctIndex: 2,
+    options: [
+      'Newton',
+      'Euler',
+      'Gauss',
+      'Fermat',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Euler praised Diophantus, writing that his methods "are as general as those which are in use today" and that "there is hardly any method yet invented... of which there are not sufficiently distinct traces to be discovered in Diophantus."',
@@ -85,11 +95,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'Why is Diophantus\'s method of lines powerful for quadratic curves?',
     options: [
       'It avoids all computation',
-      'One rational point generates infinitely many via lines of rational slope',
       'It works for all polynomial equations',
       'It finds integer points directly',
+      'One rational point generates infinitely many via lines of rational slope',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'For quadratic curves with rational coefficients, one rational point plus lines of rational slope generate all rational points. This is why such curves have either 0 or infinitely many rational points.',
@@ -100,11 +110,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'What is the Birch and Swinnerton-Dyer (BSD) conjecture about?',
     options: [
       'Prime numbers',
-      'Rational points on elliptic curves',
-      'Pythagorean triples',
       'Non-Euclidean geometry',
+      'Pythagorean triples',
+      'Rational points on elliptic curves'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The BSD conjecture connects the number of rational points on an elliptic curve to properties of an associated analytic function. It is one of the Millennium Prize Problems, with a $1 million reward.',

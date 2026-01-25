@@ -7,11 +7,11 @@ export const section68Questions: QuizQuestion[] = [
     question: 'What does Proposition III.4 prove about two chords that cross inside a circle?',
     options: [
       'They are always equal in length',
-      'They do not bisect each other unless both are diameters',
       'They always bisect each other',
-      'They are always perpendicular'
+      'They are always perpendicular',
+      'They do not bisect each other unless both are diameters',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'III.4 proves that two chords that are not both diameters cannot bisect each other inside a circle.',
   },
@@ -20,12 +20,12 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What special case would make two chords bisect each other?',
     options: [
-      'If they are equal in length',
       'If both are diameters',
+      'If they are equal in length',
       'If they are perpendicular',
-      'If they subtend equal arcs'
+      'If they subtend equal arcs',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Two diameters always bisect each other at the center. III.4 shows this is the only case.',
   },
@@ -35,11 +35,11 @@ export const section68Questions: QuizQuestion[] = [
     question: 'The proof of III.4 proceeds by:',
     options: [
       'Direct construction',
-      'Contradiction, assuming chords bisect each other',
       'Using similar triangles',
+      'Contradiction, assuming chords bisect each other',
       'Applying the Pythagorean theorem'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Euclid assumes two non-diameter chords bisect each other at point E, then shows E would have to be the center, contradicting that they are not diameters.',
   },

@@ -10,11 +10,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'What does a ≡ b (mod n) mean?',
     options: [
       'a equals b',
-      'n divides a - b',
-      'a is less than b',
       'a times b equals n',
+      'a is less than b',
+      'n divides a - b'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The congruence a ≡ b (mod n) means that n divides a - b, or equivalently, a and b have the same remainder when divided by n.',
@@ -24,12 +24,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is true?',
     options: [
-      '15 ≡ 2 (mod 5)',
       '15 ≡ 3 (mod 5)',
-      '15 ≡ 0 (mod 5)',
+      '15 ≡ 2 (mod 5)',
       '15 ≡ 5 (mod 5)',
+      '15 ≡ 0 (mod 5)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       '15 = 3 × 5 + 0, so 15 ≡ 0 (mod 5). Also, 15 ≡ 5 (mod 5) is equivalent, but 0 is the standard representative.',
@@ -38,8 +38,13 @@ export const section47Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'If a ≡ 3 (mod 7) and b ≡ 5 (mod 7), what is a + b mod 7?',
-    options: ['0', '1', '8', '15'],
-    correctIndex: 1,
+    options: [
+      '1',
+      '0',
+      '8',
+      '15',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       '3 + 5 = 8 ≡ 1 (mod 7). We can add congruences.',
@@ -49,8 +54,13 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question:
       'Congruence mod n is an equivalence relation. Which property states that if a ≡ b and b ≡ c, then a ≡ c?',
-    options: ['Reflexive', 'Symmetric', 'Transitive', 'Commutative'],
-    correctIndex: 2,
+    options: [
+      'Reflexive',
+      'Transitive',
+      'Symmetric',
+      'Commutative',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Transitivity is the property that allows us to "chain" congruences together.',
@@ -79,8 +89,13 @@ export const section47Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'What is -7 mod 10 (as a number from 0 to 9)?',
-    options: ['3', '7', '-7', '-3'],
-    correctIndex: 0,
+    options: [
+      '7',
+      '3',
+      '-7',
+      '-3',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       '-7 = -1 × 10 + 3, so -7 ≡ 3 (mod 10). The standard representative is 3.',

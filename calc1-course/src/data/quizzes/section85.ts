@@ -6,12 +6,12 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If position is $\\mathbf{r}(t)$, then velocity is:',
     options: [
-      '$\\mathbf{r}(t)$',
       '$\\mathbf{r}\'(t)$',
+      '$\\mathbf{r}(t)$',
       '$\\mathbf{r}\'\'(t)$',
       '$|\\mathbf{r}(t)|$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Velocity = derivative of position.',
   },
@@ -20,10 +20,26 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Acceleration is:',
     options: [
-      '$\\mathbf{r}\'(t)$',
-      '$\\mathbf{r}\'\'(t)$',
-      '$|\\mathbf{r}\'(t)|$',
-      '$\\mathbf{r}(t)$'
+      '$\\mathbf{r}\\'(t)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Acceleration = derivative of velocity = second derivative of position.',
+  },
+      '$|\\mathbf{r}\\'(t)|
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Acceleration = derivative of velocity = second derivative of position.',
+  },
+      '$\\mathbf{r}\\'\\'(t)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Acceleration = derivative of velocity = second derivative of position.',
+  },
+      '$\\mathbf{r}(t)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Acceleration = derivative of velocity = second derivative of position.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -35,11 +51,15 @@ export const section85Questions: QuizQuestion[] = [
     question: 'Speed is:',
     options: [
       'Velocity',
-      'The magnitude of velocity: $|\\mathbf{v}(t)|$',
-      'Acceleration',
-      'The direction of motion'
-    ],
+      'The magnitude of velocity: $|\\mathbf{v}(t)|
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Speed = $|\\mathbf{r}\'(t)|$ (scalar, not vector).',
+  },
+      'Acceleration',
+      'The direction of motion',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Speed = $|\\mathbf{r}\'(t)|$ (scalar, not vector).',
   },
@@ -49,11 +69,11 @@ export const section85Questions: QuizQuestion[] = [
     question: 'For projectile motion with gravity, $\\mathbf{r}\'\'(t) = ?$',
     options: [
       '$(0, 0)$',
-      '$(0, -g)$',
+      '$(g, g)$',
       '$(v_0, 0)$',
-      '$(g, g)$'
+      '$(0, -g)$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Constant downward acceleration: $\\mathbf{a} = (0, -g)$ in 2D.',
   },
@@ -65,7 +85,7 @@ export const section85Questions: QuizQuestion[] = [
       'Tangent to the circle',
       'Toward the center (centripetal)',
       'Away from the center',
-      'In the direction of velocity'
+      'In the direction of velocity',
     ],
     correctIndex: 1,
     difficulty: 'medium',

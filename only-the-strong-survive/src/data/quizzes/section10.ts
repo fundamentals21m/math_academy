@@ -7,11 +7,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What is Total Value Locked (TVL)?',
     options: [
       'The total market cap of all cryptocurrencies',
-      'The sum of assets deposited in DeFi protocols',
       'The amount of Bitcoin in circulation',
+      'The sum of assets deposited in DeFi protocols',
       'The total trading volume on exchanges'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'TVL measures the total value of crypto assets deposited in DeFi protocols—used as collateral, for lending, or in liquidity pools.',
   },
@@ -21,11 +21,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'Why do the authors argue TVL is a misleading metric?',
     options: [
       'It\'s too difficult to calculate accurately',
-      'It counts the same underlying collateral multiple times due to rehypothecation',
+      'It excludes Bitcoin',
       'It doesn\'t account for inflation',
-      'It excludes Bitcoin'
+      'It counts the same underlying collateral multiple times due to rehypothecation'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'When the same ETH is deposited, converted to derivative tokens, and those deposited elsewhere, TVL counts each step separately. The "locked value" is inflated beyond the actual underlying assets.',
   },
@@ -34,12 +34,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What effect do high TVL numbers have on investor behavior?',
     options: [
-      'They discourage new investment',
       'They create a false sense of security and attract more capital',
+      'They discourage new investment',
       'They have no effect on behavior',
       'They cause prices to drop'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'High TVL numbers signal "safety" and attract more capital, which inflates TVL further. This reflexive loop obscures the actual fragility of the underlying system.',
   },

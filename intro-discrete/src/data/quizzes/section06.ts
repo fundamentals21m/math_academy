@@ -6,12 +6,20 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does $A \\subseteq B$ mean?',
     options: [
-      'Every element of $A$ is also in $B$',
+      '$A$ and $B$ are disjoint',
+      'Every element of $A$ is also in $B
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$A \\subseteq B$ means $A$ is a subset of $B$: every element of $A$ is in $B$.',
+  },
       '$A$ and $B$ have the same elements',
-      '$A$ contains $B$',
-      '$A$ and $B$ are disjoint'
+      '$A$ contains $B
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$A \\subseteq B$ means $A$ is a subset of $B$: every element of $A$ is in $B$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$A \\subseteq B$ means $A$ is a subset of $B$: every element of $A$ is in $B$.',
   },
@@ -52,12 +60,28 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $A \\cap A^c$ (the intersection of $A$ with its complement)?',
     options: [
-      '$\\emptyset$',
-      '$A$',
-      'The universal set $U$',
-      '$A^c$'
+      '$A
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A set and its complement have no elements in common: $A \\cap A^c = \\emptyset$.',
+  },
+      'The universal set $U
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A set and its complement have no elements in common: $A \\cap A^c = \\emptyset$.',
+  },
+      '$\\emptyset
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A set and its complement have no elements in common: $A \\cap A^c = \\emptyset$.',
+  },
+      '$A^c
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A set and its complement have no elements in common: $A \\cap A^c = \\emptyset$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A set and its complement have no elements in common: $A \\cap A^c = \\emptyset$.',
   },
@@ -66,12 +90,28 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cartesian product $A \\times B$ consists of:',
     options: [
-      'All ordered pairs $(a, b)$ with $a \\in A$ and $b \\in B$',
-      'All elements in both $A$ and $B$',
-      'The union of $A$ and $B$',
-      'All subsets of $A$ and $B$'
+      'The union of $A$ and $B
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$A \\times B = \\{(a, b) : a \\in A, b \\in B\\}$.',
+  },
+      'All elements in both $A$ and $B
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$A \\times B = \\{(a, b) : a \\in A, b \\in B\\}$.',
+  },
+      'All subsets of $A$ and $B
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$A \\times B = \\{(a, b) : a \\in A, b \\in B\\}$.',
+  },
+      'All ordered pairs $(a, b)$ with $a \\in A$ and $b \\in B
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$A \\times B = \\{(a, b) : a \\in A, b \\in B\\}$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$A \\times B = \\{(a, b) : a \\in A, b \\in B\\}$.',
   },

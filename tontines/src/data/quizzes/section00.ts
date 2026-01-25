@@ -5,7 +5,28 @@ export const section00Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'What is $x^2$ when $x=3$?',
-    options: ['$3$', '$6$', '$9$', '$12$'],
+    options: [
+      '$6
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$3^2 = 9$',
+  },
+      '$9
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$3^2 = 9$',
+  },
+      '$12
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$3^2 = 9$',
+  },
+      '$3
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$3^2 = 9$',
+  },
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     explanation: '$3^2 = 9$',

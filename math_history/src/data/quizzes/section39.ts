@@ -22,12 +22,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the radius of convergence of the geometric series $\\sum x^n$?',
     options: [
-      '$R = 1$',
       '$R = \\infty$',
+      '$R = 1$',
       '$R = 0$',
-      '$R = e$',
+      '$R = e$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The geometric series $\\sum x^n$ converges when $|x| < 1$ and diverges when $|x| > 1$, so its radius of convergence is $R = 1$. At the boundary points $x = \\pm 1$, the series diverges.',
@@ -38,12 +38,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The alternating harmonic series $1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots$ is an example of:',
     options: [
-      'Conditional convergence (converges but not absolutely)',
-      'Absolute convergence',
       'Divergence',
-      'Uniform convergence',
+      'Absolute convergence',
+      'Conditional convergence (converges but not absolutely)',
+      'Uniform convergence'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The alternating harmonic series converges to $\\ln 2$ (by the alternating series test), but the series of absolute values is the harmonic series $\\sum 1/n$, which diverges. This makes it conditionally convergent but not absolutely convergent.',
@@ -53,12 +53,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Riemann Rearrangement Theorem states that a conditionally convergent series can be rearranged to:',
     options: [
-      'Converge to any real number, or diverge',
+      'Always converge to zero',
       'Only converge to its original sum',
       'Converge to exactly two different values',
-      'Always converge to zero',
+      'Converge to any real number, or diverge'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Riemann proved that for any conditionally convergent series, the terms can be reordered to make the series converge to any prescribed real number, or to diverge to $+\\infty$ or $-\\infty$. This shows that order matters for conditional convergence!',
@@ -84,12 +84,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is uniform convergence important for series of functions?',
     options: [
-      'It preserves continuity and allows term-by-term integration',
       'It is equivalent to absolute convergence',
+      'It preserves continuity and allows term-by-term integration',
       'It guarantees the series converges faster',
-      'It ensures all partial sums are bounded',
+      'It ensures all partial sums are bounded'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Uniform convergence is crucial because it preserves properties like continuity: the uniform limit of continuous functions is continuous. It also justifies term-by-term integration and differentiation under appropriate conditions—operations that fail for merely pointwise convergence.',

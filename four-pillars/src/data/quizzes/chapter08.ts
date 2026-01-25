@@ -7,12 +7,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the upper half plane in the context of hyperbolic geometry?',
     options: [
-      'The set of real numbers greater than zero',
       'The set of complex numbers z = x + iy with y > 0',
+      'The set of real numbers greater than zero',
       'The upper hemisphere of a sphere',
-      'The top half of the Euclidean plane'
+      'The top half of the Euclidean plane',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The upper half plane ℋ = {z = x + iy ∈ ℂ : y > 0} consists of all complex numbers with positive imaginary part.',
   },
@@ -37,10 +37,10 @@ export const section57Questions: QuizQuestion[] = [
     options: [
       'Zero',
       'Exactly one',
+      'Infinitely many',
       'Exactly two',
-      'Infinitely many'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Unlike Euclidean geometry where there is exactly one parallel, hyperbolic geometry has infinitely many lines through P that do not intersect L.',
   },
@@ -50,11 +50,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'What condition ensures a linear fractional transformation f(z) = (az+b)/(cz+d) maps the upper half plane to itself?',
     options: [
       'a, b, c, d are complex and ad - bc = 1',
-      'a, b, c, d are real and ad - bc > 0',
       'a, b, c, d are integers',
-      'c = 0'
+      'c = 0',
+      'a, b, c, d are real and ad - bc > 0',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'When a, b, c, d are real and ad - bc > 0, the transformation preserves the upper half plane. If ad - bc < 0, it maps to the lower half plane.',
   },
@@ -97,10 +97,10 @@ export const section58Questions: QuizQuestion[] = [
     options: [
       'z → z̄',
       'z → -z',
+      'z → iz',
       'z → -z̄',
-      'z → iz'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'z → -z̄ reflects across the imaginary axis while preserving the upper half plane. z → z̄ sends y > 0 to y < 0.',
   },
@@ -127,12 +127,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which transformations generate all Möbius transformations of the upper half plane?',
     options: [
+      'z → z + l, z → kz, z → -z̄, z → 1/z̄',
       'Only translations',
       'Only rotations and reflections',
-      'z → z + l, z → kz, z → -z̄, z → 1/z̄',
-      'Only inversions'
+      'Only inversions',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'All Möbius transformations can be built from translations (z → z + l), scalings (z → kz), reflection in the imaginary axis (z → -z̄), and inversion-reflection (z → 1/z̄).',
   },
@@ -157,10 +157,10 @@ export const section59Questions: QuizQuestion[] = [
     options: [
       'Rotation',
       'Reflection',
+      'Translation',
       'Scaling (dilation)',
-      'Translation'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'z → kz is a scaling or dilation centered at the origin. It multiplies all distances from the origin by k.',
   },
@@ -169,12 +169,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The composition of two reflections in non-Euclidean lines produces what type of transformation?',
     options: [
-      'A reflection',
       'An orientation-preserving Möbius transformation',
+      'A reflection',
       'A translation only',
-      'A rotation only'
+      'A rotation only',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The composition of two reflections is always orientation-preserving. Depending on how the lines meet, it could be a translation, rotation, or limit rotation.',
   },
@@ -203,10 +203,10 @@ export const section60Questions: QuizQuestion[] = [
     options: [
       'Euclidean distances',
       'Areas',
+      'Curvature',
       'Generalized circles',
-      'Curvature'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Möbius transformations map generalized circles to generalized circles. A line might map to a circle and vice versa, but circles/lines map to circles/lines.',
   },
@@ -215,12 +215,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do Möbius transformations preserve non-Euclidean lines?',
     options: [
-      'They preserve distances',
       'They preserve angles, and non-Euclidean lines meet the boundary orthogonally',
+      'They preserve distances',
       'They are linear',
-      'They fix the origin'
+      'They fix the origin',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Non-Euclidean lines are characterized by meeting the x-axis at right angles. Since Möbius transformations preserve both the boundary and angles, they preserve non-Euclidean lines.',
   },
@@ -230,11 +230,11 @@ export const section60Questions: QuizQuestion[] = [
     question: 'What happens to the vertical line x = 1 under the map z → 1/z?',
     options: [
       'It remains a vertical line',
-      'It becomes a semicircle through the origin',
       'It becomes a horizontal line',
-      'It becomes the unit circle'
+      'It becomes the unit circle',
+      'It becomes a semicircle through the origin',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Under z → 1/z, lines not through the origin map to circles through the origin. The vertical line x = 1 maps to a circle passing through 0.',
   },
@@ -248,11 +248,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'What does it mean for a map to be conformal?',
     options: [
       'It preserves distances',
-      'It preserves angles',
       'It preserves areas',
-      'It preserves straight lines'
+      'It preserves angles',
+      'It preserves straight lines',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A conformal map preserves angles between curves at their intersection points.',
   },
@@ -262,11 +262,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'Are all Möbius transformations conformal?',
     options: [
       'No, only rotations are conformal',
-      'Yes, all Möbius transformations preserve angles',
       'Only orientation-preserving ones',
-      'Only at certain points'
+      'Only at certain points',
+      'Yes, all Möbius transformations preserve angles',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'All Möbius transformations are conformal. Orientation-preserving ones preserve the sense of angles; orientation-reversing ones (involving conjugation) reverse the sense but preserve magnitude.',
   },
@@ -276,11 +276,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'For f(z) = (az + b)/(cz + d), where is f conformal?',
     options: [
       'Only at z = 0',
-      'Everywhere except where cz + d = 0',
       'Only on the real line',
-      'Everywhere including at poles'
+      'Everywhere including at poles',
+      'Everywhere except where cz + d = 0',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A Möbius transformation is conformal everywhere in its domain. It is undefined only where cz + d = 0 (the pole).',
   },
@@ -290,11 +290,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'In hyperbolic geometry, how are angles measured?',
     options: [
       'Using a special hyperbolic protractor',
-      'Using the Euclidean angle between curves',
       'Using the cross-ratio',
-      'They cannot be measured'
+      'Using the Euclidean angle between curves',
+      'They cannot be measured',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Hyperbolic angles equal Euclidean angles. We measure angles using the standard Euclidean metric on tangent vectors.',
   },
@@ -308,11 +308,11 @@ export const section62Questions: QuizQuestion[] = [
     question: 'What is the hyperbolic distance from i to 2i on the imaginary axis?',
     options: [
       '1',
-      'log 2',
       '2',
-      'π'
+      'log 2',
+      'π',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'For points pi and qi on the imaginary axis, ndist(pi, qi) = |log(q/p)|. So ndist(i, 2i) = log(2/1) = log 2.',
   },
@@ -337,10 +337,10 @@ export const section62Questions: QuizQuestion[] = [
     options: [
       'Zero',
       'One',
+      'Infinite',
       'Finite but depends on the point',
-      'Infinite'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The boundary is at infinite hyperbolic distance from every interior point. This is why the boundary is "unreachable" in finite hyperbolic time.',
   },
@@ -350,11 +350,11 @@ export const section62Questions: QuizQuestion[] = [
     question: 'The hyperbolic metric ds = |dz|/y means that at height y, the hyperbolic length of a Euclidean segment is:',
     options: [
       'Multiplied by y',
-      'Divided by y',
       'Independent of y',
-      'Squared by y'
+      'Squared by y',
+      'Divided by y',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The metric ds = |dz|/y means hyperbolic length = Euclidean length / y. Near the x-axis (small y), even small Euclidean distances are large hyperbolic distances.',
   },
@@ -381,12 +381,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a hyperbolic translation?',
     options: [
-      'Movement along a horocycle',
       'Movement along a non-Euclidean line (geodesic)',
+      'Movement along a horocycle',
       'Rotation about a point',
-      'Reflection in a line'
+      'Reflection in a line',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A hyperbolic translation moves points along a geodesic (non-Euclidean line). It has two fixed points on the boundary, the endpoints of its axis.',
   },
@@ -396,11 +396,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'What is a horocycle?',
     options: [
       'A hyperbolic circle',
-      'A curve tangent to the boundary at one point',
       'A geodesic',
-      'An ellipse'
+      'A curve tangent to the boundary at one point',
+      'An ellipse',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A horocycle is tangent to the boundary at exactly one point. In the upper half plane, horocycles are horizontal lines (tangent to ∞) or circles tangent to the x-axis.',
   },
@@ -410,11 +410,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'The transformation z → z + 1 is which type?',
     options: [
       'Hyperbolic (translation along a geodesic)',
-      'Elliptic (rotation)',
       'Parabolic (limit rotation)',
-      'Reflection'
+      'Elliptic (rotation)',
+      'Reflection',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'z → z + 1 has only ∞ as a fixed point (one fixed point on boundary), making it parabolic. Points move along horizontal horocycles.',
   },
@@ -441,12 +441,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is an involution?',
     options: [
-      'A transformation with no fixed points',
       'A transformation that is its own inverse (f ∘ f = id)',
+      'A transformation with no fixed points',
       'A transformation with exactly one fixed point',
-      'A continuous transformation'
+      'A continuous transformation',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'An involution satisfies f(f(z)) = z for all z. Applying it twice returns to the original. Every reflection is an involution.',
   },
@@ -455,12 +455,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a half-turn in hyperbolic geometry?',
     options: [
-      'A reflection',
       'A rotation by 180° about a point in ℋ',
+      'A reflection',
       'A translation by half the distance',
-      'A parabolic transformation'
+      'A parabolic transformation',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A half-turn is a rotation by π (180°) about a point. It is an orientation-preserving involution: applying it twice gives the identity.',
   },
@@ -488,11 +488,11 @@ export const section65Questions: QuizQuestion[] = [
     question: 'Who were the independent discoverers of hyperbolic geometry?',
     options: [
       'Newton and Leibniz',
-      'Bolyai and Lobachevsky',
       'Euclid and Pythagoras',
-      'Gauss and Riemann'
+      'Gauss and Riemann',
+      'Bolyai and Lobachevsky',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'János Bolyai (Hungary) and Nikolai Lobachevsky (Russia) independently discovered hyperbolic geometry around 1830. Gauss also knew of it but never published.',
   },
@@ -502,11 +502,11 @@ export const section65Questions: QuizQuestion[] = [
     question: 'What did Saccheri attempt to prove in 1733?',
     options: [
       'The existence of non-Euclidean geometry',
-      'The parallel postulate by contradiction',
       'The consistency of Euclidean geometry',
-      'The Pythagorean theorem'
+      'The parallel postulate by contradiction',
+      'The Pythagorean theorem',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Saccheri tried to prove the parallel postulate by assuming its negation and deriving a contradiction. He derived many hyperbolic theorems but rejected the valid geometry he had discovered.',
   },
@@ -515,12 +515,12 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the existence of a model prove about hyperbolic geometry?',
     options: [
-      'That it is true in the real world',
       'That it is consistent (if Euclidean geometry is)',
+      'That it is true in the real world',
       'That the parallel postulate is false',
-      'That Euclid was wrong'
+      'That Euclid was wrong',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A model shows that hyperbolic geometry is consistent relative to Euclidean geometry: if Euclidean geometry has no contradictions, neither does hyperbolic geometry.',
   },
@@ -530,11 +530,11 @@ export const section65Questions: QuizQuestion[] = [
     question: 'In the three constant-curvature geometries, which has angle sums greater than 180° for triangles?',
     options: [
       'Euclidean',
-      'Hyperbolic',
       'Spherical',
-      'Projective'
+      'Hyperbolic',
+      'Projective',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Spherical geometry (positive curvature) has triangles with angle sum > 180°. Euclidean has exactly 180°. Hyperbolic (negative curvature) has < 180°.',
   },

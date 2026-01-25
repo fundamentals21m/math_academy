@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'In a zero-knowledge proof, the prover convinces the verifier:',
     options: [
       'By revealing the secret',
-      'Without revealing any information beyond the statement\'s truth',
       'By providing half the secret',
-      'Using encryption only'
+      'Without revealing any information beyond the statement\\'s truth',
+      'Using encryption only',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Zero-knowledge: verifier learns nothing except that the statement is true.',
   },
@@ -21,11 +21,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'The three properties of a zero-knowledge proof are:',
     options: [
       'Fast, secure, simple',
-      'Completeness, soundness, zero-knowledge',
       'Authentication, integrity, confidentiality',
-      'Public, private, shared'
+      'Public, private, shared',
+      'Completeness, soundness, zero-knowledge',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Completeness (honest prover convinces), soundness (cheater fails), zero-knowledge (nothing leaked).',
   },
@@ -37,7 +37,7 @@ export const section12Questions: QuizQuestion[] = [
       'The adjacency matrices',
       'A permutation mapping one graph to another',
       'The number of vertices',
-      'The chromatic number'
+      'The chromatic number',
     ],
     correctIndex: 1,
     difficulty: 'medium',

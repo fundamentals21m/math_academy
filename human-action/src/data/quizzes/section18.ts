@@ -9,7 +9,7 @@ export const section18Questions: QuizQuestion[] = [
       'The preference for leisure time over work time',
       'The preference for present goods over future goods of the same kind and quantity',
       'The preference for spending time on production rather than consumption',
-      'The preference for shorter production periods'
+      'The preference for shorter production periods',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section18Questions: QuizQuestion[] = [
       'Money and financial instruments',
       'Consumer goods that last a long time',
       'Produced factors of production used to make other goods',
-      'Natural resources like land and minerals'
+      'Natural resources like land and minerals',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens when saving falls short of capital depreciation?',
     options: [
+      'Capital is consumed and future productivity declines',
       'The economy enters a boom period',
       'Interest rates fall',
-      'Capital is consumed and future productivity declines',
-      'The money supply increases'
+      'The money supply increases',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'When saving falls short of depreciation, capital is consumed—often called "eating the seed corn." The period of production shortens and future productivity falls. This may not be immediately apparent but ultimately leads to a lower standard of living.'
   },
@@ -48,12 +48,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is time preference a necessary feature of human action?',
     options: [
+      'Because without it, there would never be any urgency to begin acting',
       'Because humans are naturally impatient',
       'Because future events are uncertain',
-      'Because without it, there would never be any urgency to begin acting',
-      'Because present consumption is more enjoyable'
+      'Because present consumption is more enjoyable',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Mises argues that time preference is categorical, not merely psychological. An actor who did not prefer earlier to later satisfaction would never begin any action at all—there would always be some future moment that would seem more appropriate to start.'
   },
@@ -63,11 +63,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What is the relationship between saving and investment according to Mises?',
     options: [
       'Investment creates saving through the multiplier effect',
-      'Genuine investment requires prior genuine saving',
       'Saving and investment are independent of each other',
-      'Government can create investment without private saving'
+      'Genuine investment requires prior genuine saving',
+      'Government can create investment without private saving',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Genuine investment requires prior genuine saving. Saving releases resources from producing consumer goods, making them available for producing capital goods. When banks create credit not backed by real saving, they create the illusion of capital without the reality.'
   },
@@ -77,11 +77,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What does a longer period of production require and produce?',
     options: [
       'Less capital and more immediate output',
-      'More capital accumulation and ultimately greater productivity',
       'Government planning and lower interest rates',
-      'Reduced saving and increased consumption'
+      'Reduced saving and increased consumption',
+      'More capital accumulation and ultimately greater productivity',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Lengthening the period of production—adopting more roundabout methods—requires capital accumulation through saving. While results are delayed, this ultimately produces enormously greater productivity. This is the source of modern prosperity.'
   }

@@ -7,11 +7,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'The real number system $\\mathbb{R}$ is characterized as:',
     options: [
       'The only ordered field',
-      'An ordered field with the least upper bound property',
+      'The completion of the integers',
       'The set of all decimal expansions',
-      'The completion of the integers'
+      'An ordered field with the least upper bound property'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$\\mathbb{R}$ is an ordered field that satisfies the least upper bound property: every nonempty set bounded above has a supremum. This property, combined with being an ordered field, essentially characterizes $\\mathbb{R}$ uniquely (up to isomorphism).',
   },
@@ -20,12 +20,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Archimedean property of $\\mathbb{R}$ states that:',
     options: [
-      'Every real number has a square root',
       'For any $x, y \\in \\mathbb{R}$ with $x > 0$, there exists $n \\in \\mathbb{Z}^+$ such that $nx > y$',
+      'Every real number has a square root',
       '$\\mathbb{R}$ is uncountable',
       'Between any two reals there is a rational'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Archimedean property says there are no infinitely large or infinitesimally small elements: given any $x > 0$ and any $y$, we can find a positive integer $n$ with $nx > y$. This follows from the LUB property.',
   },
@@ -35,11 +35,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'Which statement about the density of $\\mathbb{Q}$ in $\\mathbb{R}$ is correct?',
     options: [
       'Between any two distinct rationals there is an irrational',
-      'Between any two distinct reals there is a rational',
       'Both of the above',
+      'Between any two distinct reals there is a rational',
       'Neither of the above'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Both $\\mathbb{Q}$ and $\\mathbb{R} \\setminus \\mathbb{Q}$ are dense in $\\mathbb{R}$. Between any two distinct real numbers, we can find both a rational number and an irrational number.',
   },

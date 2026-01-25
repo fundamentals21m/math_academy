@@ -6,12 +6,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Hadamard code of order $n$ is constructed from a Hadamard matrix by:',
     options: [
-      'Taking rows of the matrix (after converting $\\pm 1$ to $0/1$) and their complements',
+      'Multiplying all rows together',
       'Taking only the first row',
       'Computing the determinant',
-      'Multiplying all rows together',
+      'Taking rows of the matrix (after converting $\\pm 1$ to $0/1$) and their complements'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Hadamard codes are formed by converting $+1 \\to 0$ and $-1 \\to 1$ in a normalized Hadamard matrix, then including each row and its complement as codewords.',
   },
@@ -29,10 +29,26 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The minimum distance of a Hadamard code of length $n$ (derived from $H_n$) is:',
     options: [
-      '$n/2$',
-      '$n$',
-      '$n-1$',
-      '$n/4$',
+      '$n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Hadamard codes have minimum distance $d = n/2$. This follows from the orthogonality of Hadamard matrix rows: distinct rows differ in exactly $n/2$ positions.',
+  },
+      '$n-1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Hadamard codes have minimum distance $d = n/2$. This follows from the orthogonality of Hadamard matrix rows: distinct rows differ in exactly $n/2$ positions.',
+  },
+      '$n/2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Hadamard codes have minimum distance $d = n/2$. This follows from the orthogonality of Hadamard matrix rows: distinct rows differ in exactly $n/2$ positions.',
+  },
+      '$n/4
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Hadamard codes have minimum distance $d = n/2$. This follows from the orthogonality of Hadamard matrix rows: distinct rows differ in exactly $n/2$ positions.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -52,12 +68,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hadamard codes are particularly interesting because they:',
     options: [
-      'Achieve the Plotkin bound with equality',
       'Are always cyclic',
+      'Achieve the Plotkin bound with equality',
       'Are MDS codes',
-      'Have the largest possible dimension',
+      'Have the largest possible dimension'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Hadamard codes meet the Plotkin bound with equality, achieving the maximum number of codewords possible for a code with length $n$ and minimum distance $n/2$.',
   },
@@ -67,8 +83,8 @@ export const section40Questions: QuizQuestion[] = [
     question: 'The first-order Reed-Muller code $R(1, m)$ is related to Hadamard codes by:',
     options: [
       'Its dual is a Hadamard code (up to puncturing)',
-      'They are unrelated',
       'They are identical',
+      'They are unrelated',
       '$R(1,m)$ is the dual of its own Hadamard matrix',
     ],
     correctIndex: 0,

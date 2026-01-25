@@ -7,12 +7,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many symmetries does a square have?',
     options: [
-      '8',
-      '4',
       '6',
-      '12',
+      '4',
+      '8',
+      '12'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'A square has 8 symmetries: 4 rotations (including the identity) by 0°, 90°, 180°, and 270°, plus 4 reflections (across 2 diagonals and 2 lines through midpoints of opposite edges). This forms the dihedral group D₄.',
@@ -22,12 +22,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The dihedral group $D_n$ has how many elements?',
     options: [
-      '$2n$',
+      '$n!$',
       '$n$',
       '$n^2$',
-      '$n!$',
+      '$2n$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The dihedral group D_n (symmetries of a regular n-gon) has 2n elements: n rotations (including the identity) and n reflections.',
@@ -53,12 +53,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Klein\'s Erlangen Program proposes that geometry should be defined by:',
     options: [
-      'Its group of symmetry transformations',
       'The number of dimensions',
+      'Its group of symmetry transformations',
       'The axioms it satisfies',
-      'The shapes it contains',
+      'The shapes it contains'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Klein\'s revolutionary 1872 proposal was that a geometry is characterized by a group of transformations, and geometric properties are those invariant under the group. Different groups give different geometries (Euclidean, projective, etc.).',
@@ -69,12 +69,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The rotation group of the icosahedron is isomorphic to:',
     options: [
-      '$A_5$',
-      '$S_5$',
       '$A_4$',
-      '$D_{12}$',
+      '$S_5$',
+      '$A_5$',
+      '$D_{12}$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The icosahedron has 60 rotational symmetries, forming a group isomorphic to A₅ (the alternating group on 5 elements, which also has order 60). This connects the geometry of Platonic solids to the algebraic unsolvability of the quintic.',
@@ -84,12 +84,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In 2D crystallography, which rotational symmetry orders are NOT allowed?',
     options: [
-      '5 and 7',
+      '3 and 4',
       '2 and 3',
       '4 and 6',
-      '3 and 4',
+      '5 and 7'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The crystallographic restriction theorem states that 2D lattices can only have rotational symmetries of order 1, 2, 3, 4, or 6. Orders 5, 7, and higher are forbidden because regular pentagons and heptagons cannot tile the plane.',

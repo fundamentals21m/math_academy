@@ -6,12 +6,28 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does $\\sum_{k=1}^{n} a_k$ represent?',
     options: [
-      '$a_1 \\cdot a_2 \\cdot ... \\cdot a_n$',
-      '$a_1 + a_2 + ... + a_n$',
-      '$a_n - a_1$',
-      '$\\frac{a_1 + a_n}{2}$'
-    ],
+      '$a_1 \\cdot a_2 \\cdot ... \\cdot a_n
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Sigma notation: $\\sum_{k=1}^{n} a_k = a_1 + a_2 + ... + a_n$.',
+  },
+      '$a_1 + a_2 + ... + a_n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Sigma notation: $\\sum_{k=1}^{n} a_k = a_1 + a_2 + ... + a_n$.',
+  },
+      '$\\frac{a_1 + a_n}{2}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Sigma notation: $\\sum_{k=1}^{n} a_k = a_1 + a_2 + ... + a_n$.',
+  },
+      '$a_n - a_1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Sigma notation: $\\sum_{k=1}^{n} a_k = a_1 + a_2 + ... + a_n$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Sigma notation: $\\sum_{k=1}^{n} a_k = a_1 + a_2 + ... + a_n$.',
   },
@@ -38,12 +54,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\sum_{k=1}^{n} c$ where $c$ is a constant?',
     options: [
-      '$c$',
       '$nc$',
+      '$c$',
       '$c^n$',
       '$n + c$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Adding $c$ a total of $n$ times gives $nc$.',
   },
@@ -52,10 +68,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The triangle inequality states that:',
     options: [
-      '$|a + b| = |a| + |b|$',
-      '$|a + b| \\leq |a| + |b|$',
-      '$|a + b| \\geq |a| + |b|$',
-      '$|ab| = |a| \\cdot |b|$'
+      '$|a + b| = |a| + |b|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The triangle inequality: $|a + b| \\leq |a| + |b|$.',
+  },
+      '$|a + b| \\geq |a| + |b|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The triangle inequality: $|a + b| \\leq |a| + |b|$.',
+  },
+      '$|a + b| \\leq |a| + |b|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The triangle inequality: $|a + b| \\leq |a| + |b|$.',
+  },
+      '$|ab| = |a| \\cdot |b|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The triangle inequality: $|a + b| \\leq |a| + |b|$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

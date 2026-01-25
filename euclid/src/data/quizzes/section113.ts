@@ -9,7 +9,7 @@ export const section113Questions: QuizQuestion[] = [
       'I.47 (Pythagorean theorem)',
       'II.14 (constructing a square equal to a rectangle)',
       'IV.10 (golden triangle)',
-      'III.31 (angle in semicircle)'
+      'III.31 (angle in semicircle)',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section113Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the measure of each interior angle of a regular pentagon?',
     options: [
-      '72°',
-      '90°',
       '108°',
+      '90°',
+      '72°',
       '120°'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A regular pentagon has interior angles of (5-2)×180°/5 = 108° each.',
   },

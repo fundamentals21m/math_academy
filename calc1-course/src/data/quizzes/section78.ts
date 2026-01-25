@@ -6,10 +6,18 @@ export const section78Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Vectors $\\mathbf{v}_1, ..., \\mathbf{v}_k$ are linearly independent if:',
     options: [
+      'The only solution to $c_1 \\mathbf{v}_1 + ... + c_k \\mathbf{v}_k = \\mathbf{0}$ is $c_1 = ... = c_k = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Linearly independent: trivial combination is the only way to get zero.',
+  },
       'They are orthogonal',
-      'The only solution to $c_1 \\mathbf{v}_1 + ... + c_k \\mathbf{v}_k = \\mathbf{0}$ is $c_1 = ... = c_k = 0$',
-      'They span $\\mathbb{R}^n$',
-      'They have the same length'
+      'They span $\\mathbb{R}^n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Linearly independent: trivial combination is the only way to get zero.',
+  },
+      'They have the same length',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -21,11 +29,11 @@ export const section78Questions: QuizQuestion[] = [
     question: 'Vectors are linearly dependent if:',
     options: [
       'They are all zero',
-      'One can be written as a linear combination of the others',
       'They are orthogonal',
+      'One can be written as a linear combination of the others',
       'They span $\\mathbb{R}^n$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Dependent: at least one is a linear combo of the others.',
   },
@@ -36,10 +44,10 @@ export const section78Questions: QuizQuestion[] = [
     options: [
       'Any spanning set',
       'Any linearly independent set',
-      'A linearly independent spanning set',
-      'The zero vector'
+      'The zero vector',
+      'A linearly independent spanning set'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Basis = linearly independent AND spans the space.',
   },
@@ -48,12 +56,24 @@ export const section78Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The standard basis for $\\mathbb{R}^3$ is:',
     options: [
+      '$(1, 1, 1), (1, 1, 0), (1, 0, 0)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Standard basis: unit vectors along each axis.',
+  },
+      '$(1, 0, 0), (0, 1, 0), (0, 0, 1)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Standard basis: unit vectors along each axis.',
+  },
       '$(1, 0, 0)$ only',
-      '$(1, 1, 1), (1, 1, 0), (1, 0, 0)$',
-      '$(1, 0, 0), (0, 1, 0), (0, 0, 1)$',
-      '$(1, 2, 3)$'
+      '$(1, 2, 3)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Standard basis: unit vectors along each axis.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Standard basis: unit vectors along each axis.',
   },
@@ -72,9 +92,13 @@ export const section78Questions: QuizQuestion[] = [
     question: 'If $(1, 2)$ and $(2, 4)$ are given, they are:',
     options: [
       'Linearly independent',
-      'Linearly dependent',
       'Orthogonal',
-      'A basis for $\\mathbb{R}^2$'
+      'Linearly dependent',
+      'A basis for $\\mathbb{R}^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$(2, 4) = 2(1, 2)$, so they are dependent.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

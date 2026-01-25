@@ -6,12 +6,28 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Handshaking Lemma states that:',
     options: [
-      '$\\sum_{v \\in V} d(v) = |E|$',
-      '$\\sum_{v \\in V} d(v) = 2|E|$',
-      '$\\sum_{v \\in V} d(v) = |V|$',
-      '$\\sum_{v \\in V} d(v) = |V| + |E|$'
+      '$\\sum_{v \\in V} d(v) = |E|
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Each edge contributes 2 to the sum of degrees (one for each endpoint), so $\\sum d(v) = 2|E|$.',
+  },
+      '$\\sum_{v \\in V} d(v) = |V| + |E|
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Each edge contributes 2 to the sum of degrees (one for each endpoint), so $\\sum d(v) = 2|E|$.',
+  },
+      '$\\sum_{v \\in V} d(v) = 2|E|
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Each edge contributes 2 to the sum of degrees (one for each endpoint), so $\\sum d(v) = 2|E|$.',
+  },
+      '$\\sum_{v \\in V} d(v) = |V|
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Each edge contributes 2 to the sum of degrees (one for each endpoint), so $\\sum d(v) = 2|E|$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Each edge contributes 2 to the sum of degrees (one for each endpoint), so $\\sum d(v) = 2|E|$.',
   },
@@ -20,12 +36,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In any graph, the number of vertices with odd degree is:',
     options: [
-      'Always zero',
       'Always even',
+      'Always zero',
       'Always odd',
       'Could be any number'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Since $\\sum d(v) = 2|E|$ is even, and odd numbers must pair up to sum to even, the count of odd-degree vertices must be even.',
   },
@@ -44,11 +60,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'A simple graph $G$ with $n$ vertices and $m$ edges satisfies:',
     options: [
       '$m \\leq n$',
-      '$m \\leq n^2$',
       '$m \\leq \\binom{n}{2}$',
+      '$m \\leq n^2$',
       '$m \\leq n!$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A simple graph has at most one edge per vertex pair. Maximum is $\\binom{n}{2} = n(n-1)/2$ edges (achieved by $K_n$).',
   },
@@ -67,11 +83,15 @@ export const section03Questions: QuizQuestion[] = [
     question: 'A degree sequence $(d_1, \\ldots, d_n)$ is graphic (realizable by a simple graph) if and only if:',
     options: [
       'All degrees are even',
+      'All degrees are less than $n
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The Erdős-Gallai theorem gives necessary and sufficient conditions: sum is even, and certain inequalities involving partial sums hold.',
+  },
+      'The sequence is non-increasing',
       'The sum is even and satisfies Erdős-Gallai inequalities',
-      'All degrees are less than $n$',
-      'The sequence is non-increasing'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The Erdős-Gallai theorem gives necessary and sufficient conditions: sum is even, and certain inequalities involving partial sums hold.',
   },

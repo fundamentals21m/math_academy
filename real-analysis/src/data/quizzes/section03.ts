@@ -37,10 +37,10 @@ export const section03Quiz = {
       options: [
         'It is finite',
         'It has the same cardinality as the real numbers',
-        'It is finite or has the same cardinality as the natural numbers',
-        'It contains only integers'
+        'It contains only integers',
+        'It is finite or has the same cardinality as the natural numbers'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'A set is countable if it is either finite or countably infinite (i.e., there exists a bijection with the natural numbers $\\mathbb{N}$). This means the elements can be "listed" or "enumerated."'
     },
@@ -49,12 +49,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'The cardinality of a set $A$, denoted $|A|$, represents:',
       options: [
-        'The largest element in $A$',
         'The number of elements in $A$',
+        'The largest element in $A$',
         'The sum of all elements in $A$',
         'The dimension of $A$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The cardinality of a set is the number of elements it contains. For finite sets, this is a natural number. For infinite sets, cardinality is described using cardinal numbers like $\\aleph_0$.'
     },
@@ -64,11 +64,11 @@ export const section03Quiz = {
       question: 'Which of the following sets is countably infinite?',
       options: [
         'The empty set $\\emptyset$',
-        'The set $\\{1, 2, 3\\}$',
         'The set of all integers $\\mathbb{Z}$',
+        'The set $\\{1, 2, 3\\}$',
         'The set of all real numbers $\\mathbb{R}$'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The set of integers $\\mathbb{Z}$ is countably infinite because we can list them as $0, 1, -1, 2, -2, 3, -3, \\ldots$. This defines a bijection with $\\mathbb{N}$.'
     },
@@ -78,11 +78,11 @@ export const section03Quiz = {
       question: 'Two sets $A$ and $B$ have the same cardinality if:',
       options: [
         'They have the same elements',
-        'There exists a bijection $f: A \\to B$',
         '$A \\subseteq B$ and $B \\subseteq A$',
+        'There exists a bijection $f: A \\to B$',
         'They are both infinite'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Two sets have the same cardinality if and only if there exists a bijection (one-to-one correspondence) between them. This is written as $|A| = |B|$.'
     },
@@ -91,12 +91,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'The symbol $\\aleph_0$ (aleph-null) represents:',
       options: [
-        'The smallest infinite cardinal number',
+        'An undefined quantity',
         'The cardinality of the real numbers',
         'Zero',
-        'An undefined quantity'
+        'The smallest infinite cardinal number'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: '$\\aleph_0$ is the cardinality of the natural numbers and is the smallest infinite cardinal number. It represents the "size" of countably infinite sets.'
     },
@@ -105,12 +105,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'Which statement about the set of rational numbers $\\mathbb{Q}$ is true?',
       options: [
-        '$\\mathbb{Q}$ is uncountable',
-        '$\\mathbb{Q}$ is finite',
         '$\\mathbb{Q}$ is countably infinite',
+        '$\\mathbb{Q}$ is finite',
+        '$\\mathbb{Q}$ is uncountable',
         '$\\mathbb{Q}$ has cardinality greater than $\\mathbb{R}$'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The rational numbers $\\mathbb{Q}$ are countably infinite. This can be shown using a diagonal enumeration (Cantor\'s pairing function) that lists all positive rationals.'
     },
@@ -143,10 +143,10 @@ export const section03Quiz = {
       options: [
         'The set of natural numbers $\\mathbb{N}$',
         'The set of integers $\\mathbb{Z}$',
-        'The set of rational numbers $\\mathbb{Q}$',
-        'The set of real numbers $\\mathbb{R}$'
+        'The set of real numbers $\\mathbb{R}$',
+        'The set of rational numbers $\\mathbb{Q}$'
       ],
-      correctIndex: 3,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The set of real numbers $\\mathbb{R}$ is uncountable, as proved by Cantor\'s diagonal argument. The other three sets are all countably infinite.'
     },
@@ -165,10 +165,10 @@ export const section03Quiz = {
       options: [
         'Only injective (one-to-one)',
         'Only surjective (onto)',
-        'Both injective and surjective',
-        'Neither injective nor surjective'
+        'Neither injective nor surjective',
+        'Both injective and surjective'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'A bijection is a function that is both injective (one-to-one) and surjective (onto). This means every element in the codomain is hit exactly once.'
     },
@@ -177,12 +177,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'The interval $(0, 1)$ of real numbers is:',
       options: [
-        'Finite',
-        'Countably infinite',
         'Uncountable',
+        'Countably infinite',
+        'Finite',
         'Empty'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The open interval $(0, 1)$ is uncountable. It has the same cardinality as the entire real line $\\mathbb{R}$, which is $2^{\\aleph_0}$ or $\\mathfrak{c}$ (the cardinality of the continuum).'
     },
@@ -220,11 +220,11 @@ export const section03Quiz = {
       question: 'Which set has the same cardinality as the set of positive even integers?',
       options: [
         'The set $\\{1, 2, 3, 4, 5\\}$',
-        'The set of positive odd integers',
+        'The empty set',
         'The set of real numbers between 0 and 1',
-        'The empty set'
+        'The set of positive odd integers'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The positive even integers and positive odd integers are both countably infinite. The bijection $f(n) = 2n - 1$ maps even $2n$ to odd $2n-1$, or simply $f(2k) = 2k-1$.'
     },
@@ -241,12 +241,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'An infinite set is called countable if:',
       options: [
-        'Its elements cannot be counted',
         'There exists a bijection with the natural numbers $\\mathbb{N}$',
+        'Its elements cannot be counted',
         'It is larger than the real numbers',
         'It contains only countable subsets'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'An infinite set is countably infinite if there exists a bijection between it and the natural numbers. This means its elements can be listed as a sequence $a_1, a_2, a_3, \\ldots$'
     },
@@ -286,12 +286,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'Cantor\'s diagonal argument proves that the real numbers are uncountable by:',
       options: [
-        'Showing that every list of reals misses at least one real number',
+        'Proving that the rationals are uncountable',
         'Counting all the real numbers one by one',
         'Finding a bijection between $\\mathbb{R}$ and $\\mathbb{N}$',
-        'Proving that the rationals are uncountable'
+        'Showing that every list of reals misses at least one real number'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Cantor\'s diagonal argument assumes a list of all reals in $(0,1)$ and constructs a real number that differs from the $n$-th number in the $n$-th decimal place. This number cannot be in the list, contradicting the assumption that all reals were listed.'
     },
@@ -300,12 +300,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'If $|A| = \\aleph_0$ and $|B| = \\aleph_0$, what is $|A \\cup B|$?',
       options: [
-        '$2\\aleph_0$',
         '$\\aleph_0$',
+        '$2\\aleph_0$',
         '$\\aleph_0^2$',
         'It depends on whether $A$ and $B$ are disjoint'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The union of two countably infinite sets is countably infinite. We can enumerate $A \\cup B$ by alternating between elements of $A$ and $B$: $a_1, b_1, a_2, b_2, \\ldots$. So $|A \\cup B| = \\aleph_0$.'
     },
@@ -329,11 +329,11 @@ export const section03Quiz = {
       question: 'Which of the following is true about the set of algebraic numbers?',
       options: [
         'It is finite',
-        'It is countably infinite',
         'It is uncountable',
+        'It is countably infinite',
         'It equals the set of real numbers'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The algebraic numbers (roots of polynomials with integer coefficients) are countably infinite. There are countably many polynomials with integer coefficients, each with finitely many roots, so the algebraic numbers form a countable set.'
     },
@@ -343,11 +343,11 @@ export const section03Quiz = {
       question: 'If $f: A \\to B$ is an injection, then:',
       options: [
         '$|A| \\geq |B|$',
-        '$|A| \\leq |B|$',
+        'We cannot compare $|A|$ and $|B|$',
         '$|A| = |B|$',
-        'We cannot compare $|A|$ and $|B|$'
+        '$|A| \\leq |B|$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'An injection $f: A \\to B$ shows that $|A| \\leq |B|$ because each element of $A$ maps to a distinct element of $B$. This means $A$ is "no larger than" $B$ in terms of cardinality.'
     },
@@ -356,12 +356,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'The continuum hypothesis states that:',
       options: [
-        'The real numbers are countable',
         'There is no set with cardinality strictly between $\\aleph_0$ and $2^{\\aleph_0}$',
+        'The real numbers are countable',
         'Every infinite set is countable',
         '$\\aleph_0 = 2^{\\aleph_0}$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The continuum hypothesis (CH) states that there is no set whose cardinality is strictly between that of the integers ($\\aleph_0$) and the real numbers ($2^{\\aleph_0}$). Equivalently, it states $\\aleph_1 = 2^{\\aleph_0}$.'
     },
@@ -408,10 +408,10 @@ export const section03Quiz = {
       options: [
         'Countably infinite',
         'Finite',
-        'Uncountable',
-        'Empty'
+        'Empty',
+        'Uncountable'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The irrationals are uncountable. Since $\\mathbb{R} = \\mathbb{Q} \\cup (\\mathbb{R} \\setminus \\mathbb{Q})$ and $\\mathbb{Q}$ is countable while $\\mathbb{R}$ is uncountable, the irrationals must be uncountable.'
     },
@@ -420,12 +420,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'For any set $A$, Cantor\'s theorem states that:',
       options: [
-        '$|A| = |\\mathcal{P}(A)|$',
         '$|A| < |\\mathcal{P}(A)|$',
+        '$|A| = |\\mathcal{P}(A)|$',
         '$|A| > |\\mathcal{P}(A)|$',
         '$|A|$ and $|\\mathcal{P}(A)|$ are incomparable'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Cantor\'s theorem states that for any set $A$, the power set $\\mathcal{P}(A)$ has strictly greater cardinality than $A$. This is proved using a diagonal argument showing no surjection from $A$ to $\\mathcal{P}(A)$ exists.'
     },
@@ -449,11 +449,11 @@ export const section03Quiz = {
       question: 'The set $(0, 1)$ and the set $(0, 2)$ have:',
       options: [
         'Different cardinalities since $(0, 2)$ is "larger"',
-        'The same cardinality',
         'Cardinality that cannot be compared',
+        'The same cardinality',
         '$(0, 2)$ has twice the cardinality of $(0, 1)$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The function $f(x) = 2x$ is a bijection from $(0, 1)$ to $(0, 2)$, so they have the same cardinality. In fact, all non-degenerate intervals have the same cardinality as $\\mathbb{R}$.'
     },
@@ -472,10 +472,10 @@ export const section03Quiz = {
       options: [
         '$A = B$',
         '$A \\subset B$',
-        'There exists a bijection between $A$ and $B$',
-        '$A$ and $B$ are both countable'
+        '$A$ and $B$ are both countable',
+        'There exists a bijection between $A$ and $B$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The Schröder-Bernstein theorem states that if $|A| \\leq |B|$ and $|B| \\leq |A|$ (i.e., there are injections both ways), then $|A| = |B|$ (there exists a bijection). This is a powerful tool for proving equal cardinality.'
     },
@@ -484,12 +484,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'The set of all functions from $\\mathbb{N}$ to $\\{0, 1\\}$ has cardinality:',
       options: [
-        '$\\aleph_0$',
         '$2^{\\aleph_0}$',
+        '$\\aleph_0$',
         '$2$',
         'Finite'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The set of all functions from $\\mathbb{N}$ to $\\{0, 1\\}$ is denoted $\\{0, 1\\}^{\\mathbb{N}}$ and has cardinality $2^{\\aleph_0}$, the cardinality of the continuum. Each such function corresponds to a subset of $\\mathbb{N}$ (its preimage of 1).'
     },
@@ -499,11 +499,11 @@ export const section03Quiz = {
       question: 'If $A$ is uncountable and $B \\subset A$ is countable, then $A \\setminus B$ is:',
       options: [
         'Countable',
-        'Finite',
         'Uncountable',
+        'Finite',
         'Empty'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'If $A$ is uncountable and $B$ is countable, then $A \\setminus B$ must be uncountable. Otherwise, $A = (A \\setminus B) \\cup (A \\cap B)$ would be a union of two countable sets, hence countable, contradicting that $A$ is uncountable.'
     },
@@ -521,11 +521,11 @@ export const section03Quiz = {
       question: 'The set of all polynomials with integer coefficients is:',
       options: [
         'Finite',
-        'Countably infinite',
         'Uncountable',
+        'Countably infinite',
         'Has cardinality $2^{\\aleph_0}$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Polynomials with integer coefficients are countable. For each degree $n$, a polynomial is determined by $n+1$ integer coefficients. Since $\\mathbb{Z}^{n+1}$ is countable for each $n$, and we have countably many degrees, the union is countable.'
     }
@@ -537,12 +537,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'In Cantor\'s proof that $|A| < |\\mathcal{P}(A)|$, consider the set $S = \\{a \\in A : a \\notin f(a)\\}$ where $f: A \\to \\mathcal{P}(A)$. If $S = f(s)$ for some $s \\in A$, we get a contradiction because:',
       options: [
-        '$s \\in S$ if and only if $s \\in f(s)$, but $S = f(s)$, so $s \\in S$ iff $s \\notin S$',
+        '$f$ cannot be defined',
         '$S$ is empty',
         '$S$ equals $A$',
-        '$f$ cannot be defined'
+        '$s \\in S$ if and only if $s \\in f(s)$, but $S = f(s)$, so $s \\in S$ iff $s \\notin S$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'If $S = f(s)$, then $s \\in S \\Leftrightarrow s \\in f(s)$. But by definition of $S$, $s \\in S \\Leftrightarrow s \\notin f(s)$. Combined: $s \\in f(s) \\Leftrightarrow s \\notin f(s)$, a contradiction. So no such $s$ exists, meaning $f$ is not surjective.'
     },
@@ -551,12 +551,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'The cardinality of the set of all continuous functions from $\\mathbb{R}$ to $\\mathbb{R}$ is:',
       options: [
-        '$\\aleph_0$',
         '$2^{\\aleph_0}$',
+        '$\\aleph_0$',
         '$2^{2^{\\aleph_0}}$',
         'Larger than $2^{2^{\\aleph_0}}$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'A continuous function on $\\mathbb{R}$ is determined by its values on $\\mathbb{Q}$ (by continuity). Since $|\\mathbb{Q}| = \\aleph_0$ and each value is in $\\mathbb{R}$, the set of continuous functions has cardinality at most $|\\mathbb{R}|^{\\aleph_0} = (2^{\\aleph_0})^{\\aleph_0} = 2^{\\aleph_0}$. Constant functions give the lower bound.'
     },
@@ -566,11 +566,11 @@ export const section03Quiz = {
       question: 'Consider the statement: "There exists an uncountable set of disjoint open intervals in $\\mathbb{R}$." This statement is:',
       options: [
         'True, by taking intervals $(n, n+1)$ for all real $n$',
-        'True, by Cantor\'s theorem',
         'False, because each open interval contains a distinct rational',
+        'True, by Cantor\'s theorem',
         'Undecidable in ZFC'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Each non-empty open interval contains at least one rational number. If we have disjoint open intervals, we can choose a distinct rational from each. Since there are only countably many rationals, there can only be countably many disjoint open intervals.'
     },
@@ -594,11 +594,11 @@ export const section03Quiz = {
       question: 'Which statement about $\\aleph_1$ is true in ZFC?',
       options: [
         '$\\aleph_1 = 2^{\\aleph_0}$ (this is provable)',
-        '$\\aleph_1$ is the smallest uncountable cardinal',
+        '$\\aleph_1$ does not exist',
         '$\\aleph_1 < 2^{\\aleph_0}$ (this is provable)',
-        '$\\aleph_1$ does not exist'
+        '$\\aleph_1$ is the smallest uncountable cardinal'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: '$\\aleph_1$ is defined as the smallest cardinal greater than $\\aleph_0$, i.e., the smallest uncountable cardinal. Whether $\\aleph_1 = 2^{\\aleph_0}$ is the continuum hypothesis, which is independent of ZFC.'
     },
@@ -607,12 +607,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'The set of all well-orderings of $\\mathbb{N}$ has cardinality:',
       options: [
-        '$\\aleph_0$',
         '$2^{\\aleph_0}$',
+        '$\\aleph_0$',
         '$\\aleph_1$',
         'The same as the countable ordinals'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'A well-ordering of $\\mathbb{N}$ is a bijection $\\mathbb{N} \\to \\mathbb{N}$ plus an ordering, but actually is determined by which element is first, second, etc. The set of permutations of $\\mathbb{N}$ has cardinality $\\aleph_0! = 2^{\\aleph_0}$.'
     },
@@ -636,11 +636,11 @@ export const section03Quiz = {
       question: 'The Dedekind definition of an infinite set states that a set $A$ is infinite if and only if:',
       options: [
         '$A$ is uncountable',
-        '$A$ has a proper subset $B \\subsetneq A$ with $|A| = |B|$',
         '$A$ cannot be well-ordered',
+        '$A$ has a proper subset $B \\subsetneq A$ with $|A| = |B|$',
         '$A$ contains the natural numbers'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Dedekind\'s definition: A set is infinite if and only if it is equipotent to a proper subset of itself. For example, $\\mathbb{N}$ is equinumerous with the even numbers $\\{2, 4, 6, \\ldots\\}$ via $n \\mapsto 2n$.'
     },
@@ -650,11 +650,11 @@ export const section03Quiz = {
       question: 'The set of all subsets of $\\mathbb{R}$ has cardinality:',
       options: [
         '$2^{\\aleph_0}$',
-        '$2^{2^{\\aleph_0}}$',
+        '$\\aleph_0$',
         '$\\aleph_1$',
-        '$\\aleph_0$'
+        '$2^{2^{\\aleph_0}}$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The power set of $\\mathbb{R}$ has cardinality $|\\mathcal{P}(\\mathbb{R})| = 2^{|\\mathbb{R}|} = 2^{2^{\\aleph_0}}$. By Cantor\'s theorem, this is strictly larger than $2^{\\aleph_0}$.'
     },
@@ -663,12 +663,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'Consider the set $T$ of all transcendental real numbers. Then:',
       options: [
-        '$T$ is finite',
-        '$T$ is countably infinite',
         '$T$ is uncountable',
+        '$T$ is countably infinite',
+        '$T$ is finite',
         '$T$ is empty'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The algebraic numbers are countable, and $\\mathbb{R}$ is uncountable. Since $\\mathbb{R}$ = (algebraic) $\\cup$ (transcendental), and a countable union with something equals uncountable, the transcendentals must be uncountable.'
     },
@@ -700,11 +700,11 @@ export const section03Quiz = {
       question: 'A set $A$ is called "Dedekind-finite" if:',
       options: [
         'It has finitely many elements',
-        'Every injection $f: A \\to A$ is a bijection',
         'It is a subset of a finite set',
+        'Every injection $f: A \\to A$ is a bijection',
         '$|A| < \\aleph_0$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'A set is Dedekind-finite if every injection from the set to itself is also surjective (hence a bijection). In ZFC, Dedekind-finite is equivalent to finite, but without the Axiom of Choice, there could be infinite Dedekind-finite sets.'
     },
@@ -715,10 +715,10 @@ export const section03Quiz = {
       options: [
         '$2^{\\aleph_0}$',
         '$2^{2^{\\aleph_0}}$',
-        '$(2^{\\aleph_0})^{2^{\\aleph_0}} = 2^{2^{\\aleph_0}}$',
-        '$\\aleph_0^{2^{\\aleph_0}}$'
+        '$\\aleph_0^{2^{\\aleph_0}}$',
+        '$(2^{\\aleph_0})^{2^{\\aleph_0}} = 2^{2^{\\aleph_0}}$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The set $\\mathbb{R}^\\mathbb{R}$ has cardinality $|\\mathbb{R}|^{|\\mathbb{R}|} = (2^{\\aleph_0})^{2^{\\aleph_0}} = 2^{\\aleph_0 \\cdot 2^{\\aleph_0}} = 2^{2^{\\aleph_0}}$, using cardinal exponentiation rules.'
     },
@@ -727,12 +727,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'In the Cantor diagonal argument, if we have a list $r_1, r_2, r_3, \\ldots$ of reals in $(0,1)$, the constructed number $d$ differs from $r_n$ in the:',
       options: [
-        'First decimal place',
         '$n$-th decimal place',
+        'First decimal place',
         'Last decimal place',
         'Every decimal place'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The diagonal number $d$ is constructed so that its $n$-th decimal digit differs from the $n$-th decimal digit of $r_n$. This ensures $d \\neq r_n$ for all $n$, so $d$ is not in the list.'
     },
@@ -756,11 +756,11 @@ export const section03Quiz = {
       question: 'The cofinality of $\\aleph_\\omega$ is:',
       options: [
         '$\\aleph_\\omega$',
-        '$\\omega = \\aleph_0$',
         '$\\aleph_1$',
+        '$\\omega = \\aleph_0$',
         '$2^{\\aleph_0}$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: '$\\aleph_\\omega = \\sup\\{\\aleph_n : n < \\omega\\}$ is the limit of the sequence $\\aleph_0, \\aleph_1, \\aleph_2, \\ldots$. This sequence has length $\\omega$, so $\\text{cf}(\\aleph_\\omega) = \\omega = \\aleph_0$.'
     },
@@ -770,11 +770,11 @@ export const section03Quiz = {
       question: 'If $2^{\\aleph_0} = \\aleph_2$, then the Generalized Continuum Hypothesis (GCH) is:',
       options: [
         'True',
-        'False',
+        'Equivalent to this statement',
         'Still undetermined from this information alone',
-        'Equivalent to this statement'
+        'False'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'GCH states that $2^{\\aleph_\\alpha} = \\aleph_{\\alpha+1}$ for all ordinals $\\alpha$. If $2^{\\aleph_0} = \\aleph_2 \\neq \\aleph_1$, then GCH fails at $\\alpha = 0$, so GCH is false.'
     },
@@ -783,12 +783,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'The set of Borel sets in $\\mathbb{R}$ has cardinality:',
       options: [
-        '$\\aleph_0$',
         '$2^{\\aleph_0}$',
+        '$\\aleph_0$',
         '$2^{2^{\\aleph_0}}$',
         '$\\aleph_1$ (in ZFC)'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The Borel $\\sigma$-algebra on $\\mathbb{R}$ has cardinality $2^{\\aleph_0}$. This is proved by transfinite induction: starting from countably many open intervals and applying countable operations countably many times still yields only $2^{\\aleph_0}$ sets.'
     },

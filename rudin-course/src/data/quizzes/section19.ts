@@ -7,11 +7,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'The comparison test states: if $0 \\leq a_n \\leq b_n$ and $\\sum b_n$ converges, then:',
     options: [
       '$\\sum a_n$ diverges',
-      '$\\sum a_n$ converges',
+      'Nothing can be concluded',
       '$\\sum a_n = \\sum b_n$',
-      'Nothing can be concluded'
+      '$\\sum a_n$ converges'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'If $0 \\leq a_n \\leq b_n$ and $\\sum b_n$ converges, then $\\sum a_n$ converges (and $\\sum a_n \\leq \\sum b_n$). This is because the partial sums of $\\sum a_n$ are increasing and bounded.',
   },
@@ -20,12 +20,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $0 \\leq a_n \\leq b_n$ and $\\sum a_n$ diverges, then:',
     options: [
-      '$\\sum b_n$ converges',
       '$\\sum b_n$ diverges',
+      '$\\sum b_n$ converges',
       '$\\sum b_n$ may converge or diverge',
       '$a_n = b_n$ for all $n$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'If a smaller series diverges, the larger one must also diverge. This is the contrapositive of the comparison test.',
   },
@@ -35,11 +35,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'The $p$-series $\\sum_{n=1}^{\\infty} \\frac{1}{n^p}$ converges if and only if:',
     options: [
       '$p > 0$',
-      '$p \\geq 1$',
       '$p > 1$',
+      '$p \\geq 1$',
       '$p = 2$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The $p$-series converges iff $p > 1$. For $p \\leq 1$, comparison with the harmonic series shows divergence. For $p > 1$, the integral test proves convergence.',
   },
@@ -63,11 +63,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'For series with nonnegative terms, convergence of partial sums to a finite limit is equivalent to:',
     options: [
       'The partial sums being increasing',
-      'The partial sums being bounded above',
+      'The terms being decreasing',
       'The terms going to zero',
-      'The terms being decreasing'
+      'The partial sums being bounded above'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'For nonnegative $a_n$, partial sums $s_N$ are increasing. They converge iff bounded above (monotone convergence theorem). Boundedness is the key criterion.',
   },

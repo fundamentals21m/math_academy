@@ -20,12 +20,12 @@ export const section183Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If 6 measures 12, and 3 measures 6, what does VII.4 tell us?',
     options: [
-      '3 measures 12',
-      '12 measures 3',
       '6 measures 3',
-      '3 and 12 are relatively prime'
+      '12 measures 3',
+      '3 and 12 are relatively prime',
+      '3 measures 12',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'By VII.4, since 6 measures 12 (12 = 2 x 6) and 3 measures 6 (6 = 2 x 3), it follows that 3 also measures 12 (12 = 4 x 3).',
   },
@@ -34,12 +34,12 @@ export const section183Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'VII.4 is foundational for understanding which concept in modern number theory?',
     options: [
-      'The fundamental theorem of arithmetic',
       'The transitivity of divisibility',
+      'The fundamental theorem of arithmetic',
+      'Fermat\\'s little theorem',
       'The prime number theorem',
-      'Fermat\'s little theorem'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'VII.4 establishes the transitivity of the "measures" (divides) relation: if a|b and b|c, then a|c. This is a fundamental property of divisibility.',
   },

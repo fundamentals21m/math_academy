@@ -7,11 +7,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'A continued fraction represents a number as:',
     options: [
       'A sum of unit fractions',
-      'A nested sequence of integer quotients',
       'A product of primes',
-      'A decimal expansion'
+      'A nested sequence of integer quotients',
+      'A decimal expansion',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Continued fractions: $a_0 + \\cfrac{1}{a_1 + \\cfrac{1}{a_2 + \\cdots}}$.',
   },
@@ -21,11 +21,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'The continued fraction expansion of a rational number is:',
     options: [
       'Infinite',
-      'Finite',
       'Periodic',
-      'Undefined'
+      'Undefined',
+      'Finite',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Rational numbers have finite continued fractions; irrationals have infinite expansions.',
   },
@@ -34,12 +34,16 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The convergents of a continued fraction are:',
     options: [
+      'Rational approximations $p_k/q_k
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Convergents $p_k/q_k$ are the best rational approximations with denominator $\\leq q_k$.',
+  },
       'The partial quotients',
-      'Rational approximations $p_k/q_k$',
       'The remainders',
-      'The denominators only'
+      'The denominators only',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Convergents $p_k/q_k$ are the best rational approximations with denominator $\\leq q_k$.',
   },

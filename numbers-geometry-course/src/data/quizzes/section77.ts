@@ -10,11 +10,11 @@ export const section77Questions: QuizQuestion[] = [
     question: 'How is x² - dy² = 1 parametrized?',
     options: [
       'x = cos θ, y = sin θ',
-      'x = cosh θ, y = (1/√d) sinh θ',
       'x = eᶿ, y = e⁻ᶿ',
       'x = θ, y = √(θ² - 1)',
+      'x = cosh θ, y = (1/√d) sinh θ',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The parametrization x = cosh θ, y = (1/√d) sinh θ satisfies x² - dy² = 1.',
@@ -24,12 +24,12 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the rule for x_{θ+φ} on x² - dy² = 1?',
     options: [
+      'xθ · xφ + d · yθ · yφ',
       'xθ + xφ',
       'xθ · xφ',
-      'xθ · xφ + d · yθ · yφ',
       'xθ · yφ + yθ · xφ',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'x_{θ+φ} = xθ · xφ + d · yθ · yφ, from the hyperbolic addition formulas.',
@@ -65,11 +65,11 @@ export const section77Questions: QuizQuestion[] = [
     question: 'The point addition formula is equivalent to multiplying:',
     options: [
       'xθ + yθ by xφ + yφ',
+      'cosh θ by cosh φ',
       '(xθ + yθ√d)(xφ + yφ√d)',
       'xθ · yθ by xφ · yφ',
-      'cosh θ by cosh φ',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'x_{θ+φ} + y_{θ+φ}√d = (xθ + yθ√d)(xφ + yφ√d), the same multiplication from Chapter 8.',
@@ -78,8 +78,13 @@ export const section77Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: 'For x² - 2y² = 1, adding (3, 2) to itself gives:',
-    options: ['(6, 4)', '(9, 4)', '(17, 12)', '(11, 8)'],
-    correctIndex: 2,
+    options: [
+      '(17, 12)',
+      '(6, 4)',
+      '(9, 4)',
+      '(11, 8)',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'x = 3·3 + 2·2·2 = 17, y = 3·2 + 2·3 = 12, giving (17, 12).',
@@ -90,11 +95,11 @@ export const section77Questions: QuizQuestion[] = [
     question: 'What generates all integer solutions to x² - dy² = 1?',
     options: [
       'The point (d, 1)',
-      'The fundamental solution nearest to (1, 0)',
       'Any integer point',
       'The point (√d, 1)',
+      'The fundamental solution nearest to (1, 0)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'All integer solutions come from repeatedly adding the fundamental solution (nearest to (1, 0)).',
@@ -103,8 +108,13 @@ export const section77Questions: QuizQuestion[] = [
     id: 8,
     type: 'multiple-choice',
     question: 'What is the inverse of an integer point (x, y) on x² - dy² = 1?',
-    options: ['(x, y)', '(-x, -y)', '(x, -y)', '(y, x)'],
-    correctIndex: 2,
+    options: [
+      '(x, y)',
+      '(x, -y)',
+      '(-x, -y)',
+      '(y, x)',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The inverse is (x, -y), corresponding to parameter -θ since sinh(-θ) = -sinh θ.',

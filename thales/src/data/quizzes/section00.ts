@@ -9,12 +9,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the two primary sources of information on ancient Egyptian mathematics?',
     options: [
-      'The Moscow Papyrus and the Rhind Papyrus',
       'The Cairo Codex and the Alexandria Scroll',
       'The Pyramid Texts and the Book of the Dead',
       'The Ebers Papyrus and the Edwin Smith Papyrus',
+      'The Moscow Papyrus and the Rhind Papyrus',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The Moscow Mathematical Papyrus (c. 1850 BC) and the Rhind Mathematical Papyrus (c. 1650 BC) are our only original sources on ancient Egyptian mathematics.',
@@ -24,12 +24,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What technique did the Egyptians use for multiplication?',
     options: [
-      'Memorized multiplication tables',
       'Doubling and adding',
+      'Memorized multiplication tables',
       'Repeated subtraction',
       'Geometric construction',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The Egyptians multiplied by repeatedly doubling one number and then adding the appropriate doubled values. This method works because any number can be expressed as a sum of powers of 2 (binary representation).',
@@ -39,12 +39,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is special about Egyptian fractions?',
     options: [
-      'They only used fractions with even denominators',
       'They expressed all fractions as sums of distinct unit fractions (1/n)',
+      'They only used fractions with even denominators',
       'They never used fractions smaller than 1/10',
       'They wrote fractions in decimal form',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The Egyptians insisted on expressing all fractions (except 2/3) as sums of distinct unit fractions of the form 1/n. For example, 2/9 = 1/6 + 1/18.',
@@ -64,12 +64,32 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What formula did the Egyptians use for the volume of a truncated pyramid (frustum) with base side $a$, top side $b$, and height $h$?',
     options: [
-      '$V = \\frac{1}{3}h(a^2 + b^2)$',
-      '$V = \\frac{h}{3}(a^2 + ab + b^2)$',
-      '$V = h(a^2 + b^2)/2$',
-      '$V = \\frac{1}{2}h(a + b)^2$',
+      '$V = \\frac{1}{3}h(a^2 + b^2)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      'Problem 14 of the Moscow Papyrus shows the Egyptians used V = (h/3)(a² + ab + b²), which is the correct formula for a truncated pyramid.',
+  },
+      '$V = \\frac{1}{2}h(a + b)^2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'Problem 14 of the Moscow Papyrus shows the Egyptians used V = (h/3)(a² + ab + b²), which is the correct formula for a truncated pyramid.',
+  },
+      '$V = \\frac{h}{3}(a^2 + ab + b^2)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'Problem 14 of the Moscow Papyrus shows the Egyptians used V = (h/3)(a² + ab + b²), which is the correct formula for a truncated pyramid.',
+  },
+      '$V = h(a^2 + b^2)/2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'Problem 14 of the Moscow Papyrus shows the Egyptians used V = (h/3)(a² + ab + b²), which is the correct formula for a truncated pyramid.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Problem 14 of the Moscow Papyrus shows the Egyptians used V = (h/3)(a² + ab + b²), which is the correct formula for a truncated pyramid.',
@@ -79,12 +99,32 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "According to the Rhind Papyrus, which expression equals $\\frac{2}{13}$?",
     options: [
-      '$\\frac{1}{7} + \\frac{1}{91}$',
-      '$\\frac{1}{8} + \\frac{1}{52} + \\frac{1}{104}$',
-      '$\\frac{1}{13} + \\frac{1}{13}$',
-      '$\\frac{1}{6} + \\frac{1}{78}$',
+      '$\\frac{1}{7} + \\frac{1}{91}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation:
+      'The Rhind Papyrus gives 2/13 = 1/8 + 1/52 + 1/104. This can be verified: 1/8 + 1/52 + 1/104 = 13/104 + 2/104 + 1/104 = 16/104 = 2/13.',
+  },
+      '$\\frac{1}{13} + \\frac{1}{13}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      'The Rhind Papyrus gives 2/13 = 1/8 + 1/52 + 1/104. This can be verified: 1/8 + 1/52 + 1/104 = 13/104 + 2/104 + 1/104 = 16/104 = 2/13.',
+  },
+      '$\\frac{1}{6} + \\frac{1}{78}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      'The Rhind Papyrus gives 2/13 = 1/8 + 1/52 + 1/104. This can be verified: 1/8 + 1/52 + 1/104 = 13/104 + 2/104 + 1/104 = 16/104 = 2/13.',
+  },
+      '$\\frac{1}{8} + \\frac{1}{52} + \\frac{1}{104}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      'The Rhind Papyrus gives 2/13 = 1/8 + 1/52 + 1/104. This can be verified: 1/8 + 1/52 + 1/104 = 13/104 + 2/104 + 1/104 = 16/104 = 2/13.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The Rhind Papyrus gives 2/13 = 1/8 + 1/52 + 1/104. This can be verified: 1/8 + 1/52 + 1/104 = 13/104 + 2/104 + 1/104 = 16/104 = 2/13.',
@@ -102,8 +142,13 @@ export const section00Questions: QuizQuestion[] = [
     id: 8,
     type: 'multiple-choice',
     question: "The Egyptians' approximation for $\\pi$, implied by their circle area formula, was approximately:",
-    options: ['3.0', '3.14', '3.16', '3.5'],
-    correctIndex: 2,
+    options: [
+      '3.0',
+      '3.16',
+      '3.14',
+      '3.5',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Egyptians used the formula (8/9)⁴r² for the area of a circle, which implies π ≈ 3.16, remarkably close to the true value of π ≈ 3.14159.',

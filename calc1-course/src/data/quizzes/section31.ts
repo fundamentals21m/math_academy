@@ -8,8 +8,8 @@ export const section31Questions: QuizQuestion[] = [
     options: [
       'Finding antiderivatives',
       'Finding how rates of change of related quantities are connected',
+      'Solving algebraic equations',
       'Computing areas',
-      'Solving algebraic equations'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,19 @@ export const section31Questions: QuizQuestion[] = [
     question: 'In implicit differentiation, we differentiate both sides with respect to $x$, treating $y$ as:',
     options: [
       'A constant',
-      'A function of $x$',
-      'Zero',
-      'Independent of $x$'
-    ],
+      'A function of $x
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'We treat $y$ as $y(x)$ and apply the chain rule when differentiating terms with $y$.',
+  },
+      'Zero',
+      'Independent of $x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'We treat $y$ as $y(x)$ and apply the chain rule when differentiating terms with $y$.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'We treat $y$ as $y(x)$ and apply the chain rule when differentiating terms with $y$.',
   },
@@ -34,12 +42,28 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $x^2 + y^2 = 25$, implicit differentiation gives $\\frac{dy}{dx} = ?$',
     options: [
-      '$-x/y$',
-      '$x/y$',
-      '$-y/x$',
-      '$y/x$'
+      '$x/y
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$2x + 2y\\frac{dy}{dx} = 0$ gives $\\frac{dy}{dx} = -x/y$.',
+  },
+      '$-y/x
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$2x + 2y\\frac{dy}{dx} = 0$ gives $\\frac{dy}{dx} = -x/y$.',
+  },
+      '$y/x
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$2x + 2y\\frac{dy}{dx} = 0$ gives $\\frac{dy}{dx} = -x/y$.',
+  },
+      '$-x/y
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$2x + 2y\\frac{dy}{dx} = 0$ gives $\\frac{dy}{dx} = -x/y$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$2x + 2y\\frac{dy}{dx} = 0$ gives $\\frac{dy}{dx} = -x/y$.',
   },
@@ -57,12 +81,28 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A = \\pi r^2$ and $\\frac{dr}{dt} = 3$, then $\\frac{dA}{dt} = ?$',
     options: [
-      '$2\\pi r$',
-      '$6\\pi r$',
-      '$\\pi r^2$',
-      '$3\\pi r^2$'
+      '$6\\pi r
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\frac{dA}{dt} = 2\\pi r \\cdot \\frac{dr}{dt} = 2\\pi r \\cdot 3 = 6\\pi r$.',
+  },
+      '$2\\pi r
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\frac{dA}{dt} = 2\\pi r \\cdot \\frac{dr}{dt} = 2\\pi r \\cdot 3 = 6\\pi r$.',
+  },
+      '$\\pi r^2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\frac{dA}{dt} = 2\\pi r \\cdot \\frac{dr}{dt} = 2\\pi r \\cdot 3 = 6\\pi r$.',
+  },
+      '$3\\pi r^2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\frac{dA}{dt} = 2\\pi r \\cdot \\frac{dr}{dt} = 2\\pi r \\cdot 3 = 6\\pi r$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: '$\\frac{dA}{dt} = 2\\pi r \\cdot \\frac{dr}{dt} = 2\\pi r \\cdot 3 = 6\\pi r$.',
   },
@@ -72,11 +112,11 @@ export const section31Questions: QuizQuestion[] = [
     question: 'In a related rates problem, the key step is to:',
     options: [
       'Guess the answer',
+      'Set all rates equal to zero',
       'Find an equation relating the quantities, then differentiate with respect to time',
       'Integrate both sides',
-      'Set all rates equal to zero'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'First establish a relationship, then differentiate implicitly with respect to time.',
   },

@@ -10,11 +10,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'What is a ring?',
     options: [
       'A set with only addition',
-      'A set with addition and multiplication satisfying certain axioms',
       'A circular structure',
       'A field with zero divisors',
+      'A set with addition and multiplication satisfying certain axioms',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A ring is a set with two operations (addition and multiplication) satisfying associativity, distributivity, and having additive inverses.',
@@ -35,11 +35,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'What is a zero divisor?',
     options: [
       'An element equal to zero',
-      'A non-zero element whose product with some non-zero element is zero',
       'An element that divides every other element',
       'The multiplicative identity',
+      'A non-zero element whose product with some non-zero element is zero',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A zero divisor is a non-zero element a such that ab = 0 for some non-zero b.',
@@ -49,12 +49,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When is Z/nZ a field?',
     options: [
+      'When n is prime',
       'When n is even',
       'When n is a perfect square',
-      'When n is prime',
       'Always',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Z/nZ is a field if and only if n is prime. In this case, every non-zero element has a multiplicative inverse.',
@@ -73,8 +73,13 @@ export const section48Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: 'In Z/5Z, what is 3 × 2?',
-    options: ['0', '1', '6', '11'],
-    correctIndex: 1,
+    options: [
+      '0',
+      '6',
+      '1',
+      '11',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       '3 × 2 = 6 ≡ 1 (mod 5). This shows that 3 and 2 are multiplicative inverses in Z/5Z.',
@@ -83,8 +88,13 @@ export const section48Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'Which of the following has zero divisors?',
-    options: ['Z/7Z', 'Z/11Z', 'Z/12Z', 'Z/13Z'],
-    correctIndex: 2,
+    options: [
+      'Z/12Z',
+      'Z/7Z',
+      'Z/11Z',
+      'Z/13Z',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Z/12Z has zero divisors because 12 is composite. For example, 3 × 4 = 12 ≡ 0. The others are fields (prime moduli).',

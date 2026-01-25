@@ -10,11 +10,16 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What does the prime divisor property state?',
     options: [
       'Every number has a prime divisor',
-      'If a prime $p$ divides $ab$, then $p$ divides $a$ or $p$ divides $b$',
       'Every prime divides every product',
       'Primes only divide odd numbers',
+      'If a prime $p$ divides $ab$, then $p$ divides $a$ or $p$ divides $b
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'The prime divisor property says: if a prime $p$ divides the product $ab$, then $p$ must divide at least one of $a$ or $b$. This is a key property that makes primes special.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The prime divisor property says: if a prime $p$ divides the product $ab$, then $p$ must divide at least one of $a$ or $b$. This is a key property that makes primes special.',
@@ -25,11 +30,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What is another name for the unique prime factorization theorem?',
     options: [
       'The Prime Number Theorem',
-      'Fermat\'s Last Theorem',
       'The Fundamental Theorem of Arithmetic',
-      'The Euclidean Algorithm',
+      'Fermat\'s Last Theorem',
+      'The Euclidean Algorithm'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Unique prime factorization is also called the Fundamental Theorem of Arithmetic because it is the foundation of number theory — every natural number factors into primes in exactly one way.',
@@ -40,11 +45,21 @@ export const section05Questions: QuizQuestion[] = [
     question: 'In the proof of the prime divisor property, what key fact is used?',
     options: [
       'That all primes are odd',
-      'That $\\gcd(a, p) = ax + py$ when $p$ doesn\'t divide $a$',
-      'That $p$ is always larger than $a$',
+      'That $p$ is always larger than $a
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'When $p$ is prime and doesn\'t divide $a$, we have $\\gcd(a, p) = 1$. By the linear representation of gcd, $1 = ax + py$ for some integers $x, y$. Multiplying by $b$ gives the result.',
+  },
       'That $ab$ is always even',
+      'That $\\gcd(a, p) = ax + py$ when $p$ doesn\\'t divide $a
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      'When $p$ is prime and doesn\'t divide $a$, we have $\\gcd(a, p) = 1$. By the linear representation of gcd, $1 = ax + py$ for some integers $x, y$. Multiplying by $b$ gives the result.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'When $p$ is prime and doesn\'t divide $a$, we have $\\gcd(a, p) = 1$. By the linear representation of gcd, $1 = ax + py$ for some integers $x, y$. Multiplying by $b$ gives the result.',
@@ -54,12 +69,32 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the prime factorization of 60?',
     options: [
-      '$2 \\times 30$',
-      '$4 \\times 15$',
-      '$2^2 \\times 3 \\times 5$',
-      '$6 \\times 10$',
+      '$2 \\times 30
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      '$60 = 2 \\times 30 = 2 \\times 2 \\times 15 = 2 \\times 2 \\times 3 \\times 5 = 2^2 \\times 3 \\times 5$. This is the unique prime factorization (the other options contain composite factors).',
+  },
+      '$2^2 \\times 3 \\times 5
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      '$60 = 2 \\times 30 = 2 \\times 2 \\times 15 = 2 \\times 2 \\times 3 \\times 5 = 2^2 \\times 3 \\times 5$. This is the unique prime factorization (the other options contain composite factors).',
+  },
+      '$4 \\times 15
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      '$60 = 2 \\times 30 = 2 \\times 2 \\times 15 = 2 \\times 2 \\times 3 \\times 5 = 2^2 \\times 3 \\times 5$. This is the unique prime factorization (the other options contain composite factors).',
+  },
+      '$6 \\times 10
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      '$60 = 2 \\times 30 = 2 \\times 2 \\times 15 = 2 \\times 2 \\times 3 \\times 5 = 2^2 \\times 3 \\times 5$. This is the unique prime factorization (the other options contain composite factors).',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       '$60 = 2 \\times 30 = 2 \\times 2 \\times 15 = 2 \\times 2 \\times 3 \\times 5 = 2^2 \\times 3 \\times 5$. This is the unique prime factorization (the other options contain composite factors).',
@@ -69,12 +104,17 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $p_1 p_2 \\cdots p_s = q_1 q_2 \\cdots q_t$ are two prime factorizations of the same number, what can we conclude?',
     options: [
+      'We must have $s \\neq t
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      'By unique prime factorization, both sides must have the same primes with the same multiplicities. The only difference can be the order in which we write them.',
+  },
       'The factorizations must be completely different',
-      'We must have $s \\neq t$',
       'The primes $p_i$ and $q_j$ are the same (up to reordering)',
       'One factorization uses only 2s',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'By unique prime factorization, both sides must have the same primes with the same multiplicities. The only difference can be the order in which we write them.',
@@ -84,12 +124,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does unique prime factorization help prove $\\sqrt{2}$ is irrational?',
     options: [
-      'It shows 2 is prime',
       'It shows that in $m^2 = 2n^2$, the prime 2 appears an odd number of times on one side',
+      'It shows 2 is prime',
       'It shows all square roots are irrational',
       'It has nothing to do with irrationality',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'In $m^2$, every prime appears an even number of times. In $2n^2$, the prime 2 appears an odd number of times (the evens from $n^2$ plus one more). This contradicts unique factorization, so no such $m, n$ exist.',
@@ -114,12 +154,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is unique prime factorization called "fundamental"?',
     options: [
+      'Because it is the foundation upon which number theory is built',
       'Because it was the first theorem ever proved',
       'Because it is very easy to prove',
-      'Because it is the foundation upon which number theory is built',
       'Because it only applies to fundamental particles',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Unique prime factorization is called the Fundamental Theorem of Arithmetic because it establishes that primes are the basic building blocks of all natural numbers — the foundation of number theory.',

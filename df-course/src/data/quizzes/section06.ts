@@ -6,12 +6,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The general linear group $GL_n(\\mathbb{R})$ consists of all $n \\times n$ real matrices that are:',
     options: [
-      'Symmetric',
       'Orthogonal',
+      'Symmetric',
+      'Have determinant 1',
       'Invertible (nonzero determinant)',
-      'Have determinant 1'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$GL_n(\\mathbb{R})$ is the group of all invertible $n \\times n$ real matrices, i.e., matrices with nonzero determinant.',
   },
@@ -35,11 +35,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'If $A, B \\in GL_n(\\mathbb{R})$, what is $\\det(AB)$?',
     options: [
       '$\\det(A) + \\det(B)$',
-      '$\\det(A) \\cdot \\det(B)$',
       '$\\det(A) - \\det(B)$',
+      '$\\det(A) \\cdot \\det(B)$',
       '$\\det(A) / \\det(B)$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The determinant is multiplicative: $\\det(AB) = \\det(A) \\det(B)$. This is why $SL_n$ is closed under multiplication.',
   },
@@ -48,12 +48,20 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is a subgroup of $GL_2(\\mathbb{R})$?',
     options: [
-      'Matrices with trace $0$',
       'Upper triangular matrices with nonzero diagonal entries',
-      'Matrices with determinant $2$',
-      'Symmetric matrices'
+      'Matrices with trace $0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Upper triangular matrices with nonzero diagonal entries form a subgroup (closed under multiplication and inverses). The others are not closed under the group operation.',
+  },
+      'Symmetric matrices',
+      'Matrices with determinant $2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Upper triangular matrices with nonzero diagonal entries form a subgroup (closed under multiplication and inverses). The others are not closed under the group operation.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Upper triangular matrices with nonzero diagonal entries form a subgroup (closed under multiplication and inverses). The others are not closed under the group operation.',
   },

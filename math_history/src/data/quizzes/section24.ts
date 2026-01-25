@@ -7,12 +7,12 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What is the "casus irreducibilis"?',
     difficulty: 'easy',
     options: [
-      'A cubic with no real roots',
       'A cubic where Cardano\'s formula involves $\\sqrt{-1}$ even though all roots are real',
+      'A cubic with no real roots',
       'A cubic that cannot be solved',
-      'A cubic with three equal roots',
+      'A cubic with three equal roots'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'The casus irreducibilis ("irreducible case") occurs when a cubic has three distinct real roots, yet Cardano\'s formula necessarily produces expressions involving $\\sqrt{-1}$.',
   },
@@ -39,11 +39,11 @@ export const section24Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       '$(2 + i)$',
-      '$(2 - i)$',
       '$(-2 + i)$',
-      '$(-2 - i)$',
+      '$(2 - i)$',
+      '$(-2 - i)$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'The two cube roots in Cardano\'s formula are always complex conjugates. If one is $2 + i$, the other is $2 - i$. Their sum $(2 + i) + (2 - i) = 4$ is always real.',
   },
@@ -56,10 +56,10 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       '$3$',
       '$4$',
-      '$5$',
       '$4 - i^2$',
+      '$5$'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       '$(2 + i)(2 - i) = 4 - i^2 = 4 - (-1) = 5$. In general, $z \\cdot \\bar{z} = a^2 + b^2$ for $z = a + bi$.',
   },

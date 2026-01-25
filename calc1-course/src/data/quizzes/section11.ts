@@ -6,12 +6,20 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f$ is monotonically increasing if:',
     options: [
-      '$f(x) > 0$ for all $x$',
-      '$x_1 < x_2$ implies $f(x_1) \\leq f(x_2)$',
+      '$f(x) > 0$ for all $x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Monotonically increasing means larger inputs give larger (or equal) outputs.',
+  },
       '$f$ is continuous',
-      '$f$ has a derivative'
+      '$f$ has a derivative',
+      '$x_1 < x_2$ implies $f(x_1) \\leq f(x_2)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Monotonically increasing means larger inputs give larger (or equal) outputs.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Monotonically increasing means larger inputs give larger (or equal) outputs.',
   },
@@ -23,7 +31,7 @@ export const section11Questions: QuizQuestion[] = [
       'Continuous',
       'Differentiable',
       'Integrable',
-      'A polynomial'
+      'A polynomial',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -34,12 +42,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which function is monotonically decreasing on $[0, \\infty)$?',
     options: [
-      '$f(x) = x^2$',
-      '$f(x) = e^x$',
       '$f(x) = 1/x$ for $x > 0$',
+      '$f(x) = e^x$',
+      '$f(x) = x^2$',
       '$f(x) = \\sin x$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$1/x$ decreases as $x$ increases (for $x > 0$).',
   },
@@ -63,11 +71,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'A step function is:',
     options: [
       'Always monotonic',
+      'Monotonic if its values don\\'t decrease across subintervals',
       'Never monotonic',
-      'Monotonic if its values don\'t decrease across subintervals',
-      'Only monotonic if constant'
+      'Only monotonic if constant',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A step function is monotonic if its constant values are non-decreasing (or non-increasing) from left to right.',
   },

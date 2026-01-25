@@ -7,11 +7,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'What does Proposition I.16 prove about exterior angles?',
     options: [
       'An exterior angle equals the sum of the non-adjacent interior angles',
-      'An exterior angle is greater than either non-adjacent interior angle',
       'Exterior angles sum to 360°',
+      'An exterior angle is greater than either non-adjacent interior angle',
       'Exterior angles are supplementary to interior angles'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'I.16: "In any triangle, if one of the sides be produced, the exterior angle is greater than either of the interior and opposite angles."',
   },
@@ -22,8 +22,8 @@ export const section16Questions: QuizQuestion[] = [
     options: [
       'It proves triangles have three sides',
       'It is used to prove parallel line properties without using Postulate 5',
+      'It defines exterior angles',
       'It establishes angle measurement',
-      'It defines exterior angles'
     ],
     correctIndex: 1,
     difficulty: 'hard',

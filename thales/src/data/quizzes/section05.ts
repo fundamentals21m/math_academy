@@ -24,12 +24,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What was the essential difference between Greek and pre-Greek mathematics?',
     options: [
-      'The Greeks used a decimal number system',
       'The Greeks gave abstract proofs of their results',
+      'The Greeks used a decimal number system',
       'The Greeks invented algebra',
       'The Greeks used more accurate approximations',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The essential difference between Greek and pre-Greek (Egyptian, Babylonian) mathematics was that the Greeks established logical connections among their results and gave the first abstract proofs in mathematics.',
@@ -54,12 +54,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What event did Thales famously predict in May of 585 BC?',
     options: [
-      'A volcanic eruption',
       'A great flood',
-      'A solar eclipse',
+      'A volcanic eruption',
       'An earthquake',
+      'A solar eclipse',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Thales is said to have predicted the solar eclipse that occurred over the Near East in May of 585 BC. He may have used observations accumulated by the Babylonians over centuries to make this prediction.',
@@ -86,10 +86,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'Anaximenes of Miletus',
       'Anaximander of Miletus',
-      'Heraclitus of Ephesus',
       'Thales of Miletus',
+      'Heraclitus of Ephesus',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Heraclitus of Ephesus (500 BC) held that everything is made of fire. Other Ionian philosophers proposed different primal substances: Thales (water), Anaximenes (air), and Anaximander (the Infinite).',
@@ -100,11 +100,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Where did Greek mathematics and philosophy first begin?',
     options: [
       'Athens',
-      'Alexandria',
       'Ionia (western Turkey)',
+      'Alexandria',
       'Rome',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Greek philosophy and mathematics began in Ionia (modern western Turkey), where the influence of older civilizations like Babylon was greatest. Later it spread to Italy, then Athens, and finally Alexandria.',
@@ -115,12 +115,12 @@ export const section05Questions: QuizQuestion[] = [
     question:
       'What did Pythagoras and Democritus believe about the nature of reality, in contrast to Thales?',
     options: [
-      'That reality is fundamentally continuous',
       'That reality is fundamentally discrete (based on numbers)',
+      'That reality is fundamentally continuous',
       'That reality cannot be understood mathematically',
-      'That reality is made of water',
+      'That reality is made of water'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'In contrast to Thales\'s continuous view, Pythagoras and Democritus took the view that reality is basically discrete. Pythagoras taught that "all is number" — everything could be understood in terms of whole numbers and their ratios.',
@@ -131,11 +131,11 @@ export const section05Questions: QuizQuestion[] = [
     question: "What did Anaximander call the primal substance?",
     options: [
       'Water',
-      'Air',
       'Fire',
       'The Infinite (apeiron)',
+      'Air',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Anaximander of Miletus, a follower of Thales, thought the primal substance was something he called "the Infinite" (apeiron), which could take on the forms of earth, water, air, and fire — roughly corresponding to solid, liquid, gas, and energy.',

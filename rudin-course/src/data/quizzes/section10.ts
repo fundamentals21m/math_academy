@@ -7,11 +7,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'A set $K$ in a metric space is compact if:',
     options: [
       'Every sequence in $K$ is bounded',
-      'Every open cover of $K$ has a finite subcover',
       '$K$ is closed',
+      'Every open cover of $K$ has a finite subcover',
       '$K$ is bounded'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: '$K$ is compact if every open cover $\\{V_\\alpha\\}$ of $K$ (meaning $K \\subset \\bigcup V_\\alpha$) contains a finite subcover. This is the defining property of compactness.',
   },
@@ -21,11 +21,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'The Heine-Borel theorem states that in $\\mathbb{R}^k$, a set is compact if and only if it is:',
     options: [
       'Open and bounded',
-      'Closed and bounded',
+      'Closed and connected',
       'Connected and bounded',
-      'Closed and connected'
+      'Closed and bounded'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The Heine-Borel theorem: A subset of $\\mathbb{R}^k$ is compact if and only if it is closed and bounded. This characterization does not hold in general metric spaces.',
   },
@@ -34,12 +34,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is the interval $(0, 1)$ compact in $\\mathbb{R}$?',
     options: [
-      'Yes, because it is bounded',
-      'Yes, because it is an interval',
       'No, because it is not closed',
+      'Yes, because it is an interval',
+      'Yes, because it is bounded',
       'No, because it is not connected'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'By Heine-Borel, $(0,1)$ is not compact because it is not closed. Alternatively, the open cover $\\{(1/n, 1) : n \\geq 2\\}$ has no finite subcover.',
   },

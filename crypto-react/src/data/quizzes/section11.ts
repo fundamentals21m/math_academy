@@ -7,12 +7,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'In Diffie-Hellman, the shared secret is:',
       options: [
-        '$g^{ab} \\bmod p$',
         '$g^a + g^b \\bmod p$',
+        '$g^{ab} \\bmod p$',
         '$a \\times b \\bmod p$',
         '$g^{a+b} \\bmod p$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Both parties compute $g^{ab} \\bmod p$: Alice computes $(g^b)^a$ and Bob computes $(g^a)^b$.'
     },
@@ -21,12 +21,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'In Diffie-Hellman, what can an eavesdropper see?',
       options: [
-        '$g$, $p$, $g^a \\bmod p$, and $g^b \\bmod p$',
-        'The shared secret $g^{ab}$',
         'Alice\'s private key $a$',
+        'The shared secret $g^{ab}$',
+        '$g$, $p$, $g^a \\bmod p$, and $g^b \\bmod p$',
         'Bob\'s private key $b$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The eavesdropper sees public parameters and exchanged values, but cannot compute the shared secret without solving the discrete log.'
     },
@@ -44,12 +44,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'What does Alice compute to get the shared secret?',
       options: [
-        '$(g^b)^a \\bmod p$',
+        '$g^a \\cdot g^b \\bmod p$',
         '$g^a + g^b \\bmod p$',
         '$a \\cdot b \\bmod p$',
-        '$g^a \\cdot g^b \\bmod p$'
+        '$(g^b)^a \\bmod p$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Alice takes Bob\'s public value $g^b$ and raises it to her private key $a$: $(g^b)^a = g^{ab}$.'
     },
@@ -90,12 +90,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'Diffie-Hellman allows two parties to:',
       options: [
-        'Establish a shared secret over an insecure channel',
         'Encrypt messages directly',
+        'Establish a shared secret over an insecure channel',
         'Sign documents',
         'Factor large numbers'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'DH is a key agreement protocol that creates a shared secret, which can then be used for symmetric encryption.'
     },
@@ -113,12 +113,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The security of Diffie-Hellman relies on:',
       options: [
-        'The difficulty of the discrete logarithm problem',
-        'The difficulty of factoring',
         'The difficulty of finding prime numbers',
+        'The difficulty of factoring',
+        'The difficulty of the discrete logarithm problem',
         'The difficulty of addition modulo $p$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'An attacker seeing $g^a$ and $g^b$ must solve the DLP to find $a$ or $b$ and compute the shared secret.'
     }
@@ -139,12 +139,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'What type of attack is Diffie-Hellman vulnerable to without authentication?',
       options: [
-        'Man-in-the-middle attack',
+        'Timing attack only',
         'Brute force attack only',
         'Birthday attack',
-        'Timing attack only'
+        'Man-in-the-middle attack'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Without authentication, an attacker can intercept and substitute their own values, establishing separate keys with Alice and Bob.'
     },
@@ -185,12 +185,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The Computational Diffie-Hellman (CDH) assumption states:',
       options: [
-        'Given $g^a$ and $g^b$, computing $g^{ab}$ is hard without knowing $a$ or $b$',
         'Computing discrete logs is easy',
+        'Given $g^a$ and $g^b$, computing $g^{ab}$ is hard without knowing $a$ or $b$',
         'Factoring $p$ is hard',
         'Modular exponentiation is slow'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'CDH assumes computing $g^{ab}$ from $g$, $g^a$, $g^b$ is hard, even if not as hard as solving DLP.'
     },
@@ -208,12 +208,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'Static Diffie-Hellman uses:',
       options: [
-        'Long-term key pairs, allowing key reuse',
-        'Fresh random keys for every exchange',
         'Only the generator as a key',
+        'Fresh random keys for every exchange',
+        'Long-term key pairs, allowing key reuse',
         'RSA encryption for the key exchange'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'In static DH, parties have long-term public/private key pairs. The shared secret depends only on these fixed keys.'
     },
@@ -231,12 +231,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'Ephemeral Diffie-Hellman provides:',
       options: [
-        'Forward secrecy - past sessions remain secure if long-term keys are compromised',
+        'Authentication without certificates',
         'Backward secrecy only',
         'No additional security over static DH',
-        'Authentication without certificates'
+        'Forward secrecy - past sessions remain secure if long-term keys are compromised'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Ephemeral DH uses fresh random keys for each session. Compromising future keys doesn\'t reveal past session keys.'
     }
@@ -280,12 +280,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'To prevent small subgroup attacks, one should:',
       options: [
-        'Verify received public values are in the correct subgroup',
         'Use smaller primes',
+        'Verify received public values are in the correct subgroup',
         'Share the private key with the server',
         'Use even private keys only'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Validating that received values lie in the expected large prime-order subgroup prevents attackers from exploiting small subgroups.'
     },
@@ -303,12 +303,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'In the X3DH (Extended Triple DH) protocol used by Signal:',
       options: [
-        'One-time prekeys allow asynchronous key agreement',
-        'All keys must be exchanged synchronously',
         'Only symmetric encryption is used',
+        'All keys must be exchanged synchronously',
+        'One-time prekeys allow asynchronous key agreement',
         'No forward secrecy is provided'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'X3DH uses signed prekeys and one-time prekeys to enable secure first messages even when the recipient is offline.'
     },
@@ -326,12 +326,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'Logjam attack on Diffie-Hellman exploits:',
       options: [
-        'Precomputation for common 512-bit primes enables efficient discrete log',
+        'Small private key values',
         'Weak random number generators',
         'Buffer overflow in DH implementations',
-        'Small private key values'
+        'Precomputation for common 512-bit primes enables efficient discrete log'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Logjam showed that many servers used common 512-bit DH primes. Precomputation allows breaking these in practical time.'
     },

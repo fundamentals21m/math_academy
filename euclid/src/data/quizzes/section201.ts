@@ -8,8 +8,8 @@ export const section201Questions: QuizQuestion[] = [
     options: [
       'Prime numbers are relatively prime to all numbers',
       'The least numbers in any ratio are relatively prime to one another',
+      'Consecutive numbers are relatively prime',
       'All odd numbers are relatively prime',
-      'Consecutive numbers are relatively prime'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section201Questions: QuizQuestion[] = [
     question: 'If 4:6 reduces to 2:3, what does VII.22 tell us about 2 and 3?',
     options: [
       '2 and 3 are both prime',
-      '2 and 3 are relatively prime (gcd = 1)',
       '2 divides 3',
-      '2 and 3 are consecutive'
+      '2 and 3 are relatively prime (gcd = 1)',
+      '2 and 3 are consecutive',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Since 2:3 is the reduced form (least numbers) of the ratio 4:6, VII.22 guarantees that gcd(2,3) = 1. The numbers in lowest terms must be relatively prime.',
   },
@@ -34,12 +34,12 @@ export const section201Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'VII.21 and VII.22 together establish:',
     options: [
-      'An algorithm for finding GCDs',
       'A bijection between ratios in lowest terms and pairs of relatively prime numbers',
+      'An algorithm for finding GCDs',
       'That all numbers can be factored into primes',
-      'The existence of irrational numbers'
+      'The existence of irrational numbers',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'VII.21 (coprime implies least) and VII.22 (least implies coprime) together show: a pair is in lowest terms if and only if the numbers are relatively prime. This is a complete characterization.',
   },

@@ -11,11 +11,11 @@ export const section12Questions: QuizQuestion[] = [
       'In Plato\'s dialogue Meno, how did Socrates demonstrate that an uneducated slave could "recollect" how to double the area of a square?',
     options: [
       'By doubling the side length',
-      'By constructing a square on the diagonal',
       'By adding four smaller squares',
-      'By using the quadratrix',
+      'By constructing a square on the diagonal',
+      'By using the quadratrix'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Socrates showed that a square built on the diagonal of the original square has exactly double the area. The slave first incorrectly suggested doubling the side (which quadruples the area).',
@@ -27,11 +27,11 @@ export const section12Questions: QuizQuestion[] = [
       'What famous inscription was placed at the entrance of Plato\'s Academy?',
     options: [
       '"Knowledge is virtue"',
-      '"Let no one ignorant of geometry enter here"',
-      '"The unexamined life is not worth living"',
       '"All is number"',
+      '"The unexamined life is not worth living"',
+      '"Let no one ignorant of geometry enter here"'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The inscription "Let no one ignorant of geometry enter here" reflected Plato\'s belief that mathematical knowledge was essential for philosophical understanding.',
@@ -42,8 +42,8 @@ export const section12Questions: QuizQuestion[] = [
     question:
       'According to Plato, how do mathematical objects like numbers and squares exist?',
     options: [
-      'As mental constructs created by humans',
       'As physical objects we can touch',
+      'As mental constructs created by humans',
       'In an immaterial realm, independent of the physical world',
       'Only as approximations in drawings',
     ],
@@ -75,11 +75,11 @@ export const section12Questions: QuizQuestion[] = [
       'How did Aristotle view the word "two" differently from Plato?',
     options: [
       'As a noun designating an abstract object',
-      'As an adjective describing concrete objects',
       'As a mystical symbol',
       'As an approximation',
+      'As an adjective describing concrete objects',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'For Aristotle, "two" is not a noun designating an abstract entity but an adjective describing concrete things — like "the two-yard ladder" or "a two-year period." Mathematical objects are abstractions from physical reality.',
@@ -92,8 +92,8 @@ export const section12Questions: QuizQuestion[] = [
     options: [
       'He accepted them as necessary for mathematics',
       'He was a finitist who rejected actual infinities',
-      'He believed they existed in the immaterial realm',
       'He never addressed the question',
+      'He believed they existed in the immaterial realm',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -122,12 +122,12 @@ export const section12Questions: QuizQuestion[] = [
     question:
       'What philosophical puzzle did Aristotle raise about the statement "there will be a sea battle tomorrow"?',
     options: [
-      'Whether it can be proven mathematically',
       'Whether it is either true or false (the principle of bivalence)',
+      'Whether it can be proven mathematically',
       'Whether the gods control naval warfare',
       'Whether geometry applies to the sea',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'In "On Interpretation," Aristotle questioned whether statements about future contingent events (like "there will be a sea battle tomorrow") are either true or false. This raised deep questions about determinism and the nature of truth.',
@@ -138,12 +138,12 @@ export const section12Questions: QuizQuestion[] = [
     question:
       'Which modern school of mathematical philosophy is most similar to Aristotle\'s human-centered, finitist approach?',
     options: [
+      'Intuitionism',
       'Set theory',
       'Mathematical realism',
-      'Intuitionism',
       'Formalism',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'Like 20th-century intuitionists, Aristotle\'s view is human-centered. Intuitionism rejects actual infinities and emphasizes constructive methods, similar to Aristotle\'s rejection of completed infinite wholes.',

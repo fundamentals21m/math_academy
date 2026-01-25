@@ -7,9 +7,17 @@ export const section47Questions: QuizQuestion[] = [
     question: 'Taylor\'s theorem gives the error (remainder) as:',
     options: [
       'Always exactly zero',
-      'The difference $f(x) - P_n(x)$',
-      '$f(a)$',
-      'The $(n+1)$th Taylor term'
+      '$f(a)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The remainder $R_n(x) = f(x) - P_n(x)$ is the approximation error.',
+  },
+      'The $(n+1)$th Taylor term',
+      'The difference $f(x) - P_n(x)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The remainder $R_n(x) = f(x) - P_n(x)$ is the approximation error.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +28,24 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Lagrange form of the remainder is:',
     options: [
-      '$\\frac{f^{(n)}(a)}{n!}(x-a)^n$',
-      '$\\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x$',
-      '$f(x) - f(a)$',
-      'Always zero'
-    ],
+      '$\\frac{f^{(n)}(a)}{n!}(x-a)^n
     correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Lagrange remainder: $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$.',
+  },
+      '$\\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Lagrange remainder: $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$.',
+  },
+      '$f(x) - f(a)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Lagrange remainder: $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$.',
+  },
+      'Always zero',
+    ],
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Lagrange remainder: $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$.',
   },
@@ -35,11 +55,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'The remainder helps us:',
     options: [
       'Compute exact values',
+      'Solve equations',
       'Bound the approximation error',
       'Find antiderivatives',
-      'Solve equations'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The remainder formula lets us bound how far $P_n(x)$ is from $f(x)$.',
   },
@@ -48,10 +68,22 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $e^x$, all derivatives are $e^c$, so the remainder at $a = 0$ is bounded by:',
     options: [
-      '$\\frac{e^x |x|^{n+1}}{(n+1)!}$ when $x > 0$',
-      '$x^n$',
-      '$e^x$',
-      'Cannot be bounded'
+      '$x^n
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Since $e^c \\leq e^x$ for $0 < c < x$, $|R_n| \\leq \\frac{e^x |x|^{n+1}}{(n+1)!}$.',
+  },
+      '$e^x
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Since $e^c \\leq e^x$ for $0 < c < x$, $|R_n| \\leq \\frac{e^x |x|^{n+1}}{(n+1)!}$.',
+  },
+      'Cannot be bounded',
+      '$\\frac{e^x |x|^{n+1}}{(n+1)!}$ when $x > 0
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Since $e^c \\leq e^x$ for $0 < c < x$, $|R_n| \\leq \\frac{e^x |x|^{n+1}}{(n+1)!}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -62,12 +94,28 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'As $n \\to \\infty$, the Taylor remainder for $e^x$ goes to:',
     options: [
-      '$\\infty$',
-      '$1$',
-      '$0$',
-      'Depends on $x$'
+      '$0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For $e^x$, the remainder $\\to 0$ as $n \\to \\infty$ (series converges to $e^x$).',
+  },
+      '$\\infty
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For $e^x$, the remainder $\\to 0$ as $n \\to \\infty$ (series converges to $e^x$).',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For $e^x$, the remainder $\\to 0$ as $n \\to \\infty$ (series converges to $e^x$).',
+  },
+      'Depends on $x
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For $e^x$, the remainder $\\to 0$ as $n \\to \\infty$ (series converges to $e^x$).',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For $e^x$, the remainder $\\to 0$ as $n \\to \\infty$ (series converges to $e^x$).',
   },
@@ -76,12 +124,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The integral form of the remainder involves:',
     options: [
-      'A definite integral of the $(n+1)$th derivative',
-      'Only the first derivative',
       'No integration',
+      'Only the first derivative',
+      'A definite integral of the $(n+1)$th derivative',
       'The antiderivative of $f$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Integral form: $R_n(x) = \\frac{1}{n!}\\int_a^x (x-t)^n f^{(n+1)}(t)\\,dt$.',
   },

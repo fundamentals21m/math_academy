@@ -7,11 +7,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What is the paradox of instantaneous velocity?',
     options: [
       'Objects can\'t move faster than light',
-      'At a single instant, no time passes and no distance is traveled, so how can there be a speed?',
+      'Velocity and speed are different',
       'Speedometers are always inaccurate',
-      'Velocity and speed are different'
+      'At a single instant, no time passes and no distance is traveled, so how can there be a speed?'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The paradox is that speed = distance/time, but at a single instant, both distance and time are zero. How can velocity exist at a moment?',
   },
@@ -23,7 +23,7 @@ export const section07Questions: QuizQuestion[] = [
       'Distance divided by time',
       'The limit of average velocities as the time interval shrinks to zero',
       'The maximum speed reached',
-      'The speed at the midpoint of a journey'
+      'The speed at the midpoint of a journey',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'If position is given by $x(t)$, velocity by $v(t)$, what is acceleration?',
     options: [
       'The integral of position',
-      'The derivative of velocity (or second derivative of position)',
       'The product of position and velocity',
-      'The average of position over time'
+      'The derivative of velocity (or second derivative of position)',
+      'The average of position over time',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Acceleration is the rate of change of velocity, which is the derivative of velocity or equivalently the second derivative of position.',
   },
@@ -48,12 +48,28 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a falling object with position $x = \\frac{1}{2}gt^2$, what is the velocity?',
     options: [
-      '$v = \\frac{1}{2}g$',
-      '$v = gt$',
-      '$v = gt^2$',
-      '$v = g$'
+      '$v = gt
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Taking the derivative of $\\frac{1}{2}gt^2$ with respect to $t$ gives $gt$. The velocity increases linearly with time.',
+  },
+      '$v = \\frac{1}{2}g
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Taking the derivative of $\\frac{1}{2}gt^2$ with respect to $t$ gives $gt$. The velocity increases linearly with time.',
+  },
+      '$v = gt^2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Taking the derivative of $\\frac{1}{2}gt^2$ with respect to $t$ gives $gt$. The velocity increases linearly with time.',
+  },
+      '$v = g
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Taking the derivative of $\\frac{1}{2}gt^2$ with respect to $t$ gives $gt$. The velocity increases linearly with time.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Taking the derivative of $\\frac{1}{2}gt^2$ with respect to $t$ gives $gt$. The velocity increases linearly with time.',
   },
@@ -64,10 +80,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'The car has traveled 60 miles',
       'The car will definitely travel 60 miles in the next hour',
-      'If the current rate of change continued for an hour, 60 miles would be covered',
-      'The car is exactly 60 miles from its starting point'
+      'The car is exactly 60 miles from its starting point',
+      'If the current rate of change continued for an hour, 60 miles would be covered'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Instantaneous velocity is about the current rate of change. "60 mph" means at the current rate, you would cover 60 miles in an hour—but the rate may change.',
   },

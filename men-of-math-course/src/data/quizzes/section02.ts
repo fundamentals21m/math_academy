@@ -7,11 +7,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What technique did Eudoxus develop to calculate areas and volumes?',
     options: [
       'Algebraic substitution',
-      'The method of exhaustion',
       'Differential calculus',
-      'Trigonometric identities'
+      'The method of exhaustion',
+      'Trigonometric identities',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The method of exhaustion approximates areas by inscribing polygons with increasingly many sides, exhausting the difference.',
   },
@@ -23,7 +23,7 @@ export const section02Questions: QuizQuestion[] = [
       'The discovery of zero',
       'The discovery of irrational numbers',
       'The problem of parallel lines',
-      'The impossibility of squaring the circle'
+      'The impossibility of squaring the circle',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Eudoxus\'s definition of equal ratios states that $a:b = c:d$ if and only if:',
     options: [
       '$a \\times d = b \\times c$',
-      'For all integers $m, n$: $ma \\lessgtr nb$ exactly when $mc \\lessgtr nd$',
+      '$a/b$ and $c/d$ have the same decimal expansion',
       '$a + b = c + d$',
-      '$a/b$ and $c/d$ have the same decimal expansion'
+      'For all integers $m, n$: $ma \\lessgtr nb$ exactly when $mc \\lessgtr nd$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'This definition works for all magnitudes, rational or irrational, anticipating Dedekind cuts by over 2000 years.',
   },
@@ -48,12 +48,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which famous mathematician incorporated Eudoxus\'s work into his Elements?',
     options: [
-      'Pythagoras',
-      'Archimedes',
       'Euclid',
+      'Archimedes',
+      'Pythagoras',
       'Aristotle'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Euclid\'s Elements Book V presents Eudoxus\'s theory of proportions, and Book XII uses his method of exhaustion.',
   },

@@ -10,11 +10,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'Who invented the Lambda Calculus?',
     options: [
       'Alan Turing',
-      'Alonzo Church',
       'Kurt Gödel',
       'David Hilbert',
+      'Alonzo Church',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Alonzo Church invented the Lambda Calculus as a formal system to understand mathematical entities as functions. In 1937, Church and Turing independently showed that every calculable function can be expressed in lambda calculus.',
@@ -25,11 +25,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'What does the abstraction operator λx do?',
     options: [
       'Multiplies x by a constant',
-      'Creates a function that sends x to some expression',
       'Deletes the variable x',
-      'Finds the derivative with respect to x',
+      'Creates a function that sends x to some expression',
+      'Finds the derivative with respect to x'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The abstraction operator λx creates a function from an expression. For example, λx(x² + 1) is the function that sends x to x² + 1.',
@@ -39,12 +39,12 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the lambda calculus, how is the number 2 defined?',
     options: [
-      '2 = λx(x + x)',
       '2 = λf(f²) — the function that assigns f composed with f to f',
-      '2 = λx λy(x + y)',
+      '2 = λx(x + x)',
       '2 = 1 + 1',
+      '2 = λx λy(x + y)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Church defined numbers as processes of iteration. The number n is the function λf(fⁿ) that assigns the n-th iterate of f to f. So 2 = λf(f²) = λfλx(f·(f·x)).',
@@ -54,12 +54,12 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which rule in lambda calculus allows (λxφ(x))·a = φ(a)?',
     options: [
-      'Alpha conversion (R3)',
       'Eta conversion (R2)',
-      'Beta reduction (R1)',
+      'Alpha conversion (R3)',
       'Gamma elimination',
+      'Beta reduction (R1)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Beta reduction (R1) is the rule that allows substituting a value for a bound variable: (λxφ(x))·a = φ(a). This is the fundamental computation rule of lambda calculus.',
@@ -84,12 +84,12 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the three basic combinators that can replace lambda abstraction?',
     options: [
-      'A, B, C',
       'I, K, S',
+      'A, B, C',
       'X, Y, Z',
       'α, β, γ',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Schönfinkel (1924) showed that the combinators I (identity), K (constant), and S (Schönfinkel operator) can eliminate the need for lambda abstraction. Every lambda term is provably equal to a combinator.',
@@ -100,11 +100,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'How is exponentiation mⁿ expressed in Church numerals?',
     options: [
       'm·n',
-      'n·m',
-      'm + n',
       'm × n',
+      'm + n',
+      'n·m'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Since n·f = fⁿ (the n-th iterate of f), substituting m for f gives n·m = mⁿ. So exponentiation is simply function application: mⁿ = n·m.',

@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section32Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The confiscationist fallacy assumes that economic output is:',
+    options: [
+      'Determined by property rights and incentives',
+      'Unlimited',
+      'Dependent on government planning',
+      'A fixed quantity independent of how it is distributed',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Confiscationists treat economic output like a fixed pie to be divided. But the pie\'s size depends on property rights—people produce and accumulate capital only when they expect to keep the fruits of their efforts.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Land reform that breaks up large estates into small holdings:',
+    options: [
+      'Raises food prices and reduces total economic output',
+      'Increases total agricultural output',
+      'Benefits all workers equally',
+      'Has no economic effects',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'When more workers are required per unit of farm output (due to smaller, less efficient holdings), more people must work in agriculture and fewer remain for manufacturing. Total output decreases.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Confiscatory taxation on capital ultimately harms:',
+    options: [
+      'Only the wealthy',
+      'Government revenue',
+      'Workers, through slower capital accumulation and stagnant wages',
+      'Foreign investors only'
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Lower capital accumulation means less productive equipment, slower technological progress, and stagnant wages. The policy claiming to help workers actually harms them by slowing the growth that raises living standards.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Progressive taxation creates an asymmetry because:',
+    options: [
+      'Rich and poor pay the same rates',
+      'Government shares heavily in profits but only partially in losses',
+      'All risk is eliminated',
+      'Investment returns are guaranteed',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'An entrepreneur who succeeds may keep only a fraction of gains while absorbing most of the downside risk. This asymmetry particularly affects innovative ventures that drive economic progress.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Under confiscatory taxation, capital tends to flow toward:',
+    options: [
+      'Risky innovations that advance civilization',
+      'Foreign markets exclusively',
+      'Consumer goods only',
+      'Safe, established investments with predictable returns',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'High taxation makes the risk-reward ratio unfavorable for entrepreneurship. Capital gravitates toward bonds and established businesses. Society loses the dynamism of entrepreneurial risk-taking.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Confiscatory policies contain the seeds of their own failure because:',
+    options: [
+      'Politicians change their minds',
+      'International pressure intervenes',
+      'They consume the very wealth they seek to redistribute',
+      'Technology makes them obsolete',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By attacking capital accumulation, confiscatory policies reduce the very wealth they seek to redistribute. Each round of expropriation leaves less to expropriate next time.',
+  },
+];

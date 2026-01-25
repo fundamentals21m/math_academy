@@ -7,11 +7,11 @@ export const section42Questions: QuizQuestion[] = [
     question: 'A function $f: \\Omega \\to \\mathbf{R}$ is measurable if:',
     options: [
       '$f$ is continuous',
+      '$f$ is differentiable',
       'For all $a \\in \\mathbf{R}$, the set $\\{x : f(x) > a\\}$ is measurable',
       '$f$ is bounded',
-      '$f$ is differentiable'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Measurability means preimages of intervals (or rays) are measurable sets.',
   },
@@ -23,7 +23,7 @@ export const section42Questions: QuizQuestion[] = [
       'Not measurable',
       'Measurable',
       'Constant',
-      'Unbounded'
+      'Unbounded',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ and $g$ are measurable, then $f + g$ is:',
     options: [
-      'Not necessarily measurable',
       'Measurable',
+      'Not necessarily measurable',
       'Continuous',
-      'Bounded'
+      'Bounded',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Sums, products, and limits of measurable functions are measurable.',
   },
@@ -48,12 +48,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A simple function is:',
     options: [
-      'A polynomial',
       'A function taking finitely many values, each on a measurable set',
+      'A polynomial',
       'A linear function',
-      'A constant function'
+      'A constant function',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Simple functions are finite linear combinations of characteristic functions of measurable sets.',
   },
@@ -63,11 +63,11 @@ export const section42Questions: QuizQuestion[] = [
     question: 'Every non-negative measurable function is:',
     options: [
       'Equal to a simple function',
-      'The pointwise limit of an increasing sequence of simple functions',
+      'Bounded',
       'Continuous',
-      'Bounded'
+      'The pointwise limit of an increasing sequence of simple functions'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Non-negative measurable functions can be approximated from below by simple functions.',
   },

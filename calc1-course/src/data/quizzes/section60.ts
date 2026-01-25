@@ -6,12 +6,28 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The imaginary unit $i$ satisfies:',
     options: [
-      '$i = -1$',
-      '$i^2 = -1$',
-      '$i^2 = 1$',
-      '$i = \\sqrt{1}$'
-    ],
+      '$i = -1
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'By definition, $i^2 = -1$, so $i = \\sqrt{-1}$.',
+  },
+      '$i^2 = -1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'By definition, $i^2 = -1$, so $i = \\sqrt{-1}$.',
+  },
+      '$i^2 = 1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'By definition, $i^2 = -1$, so $i = \\sqrt{-1}$.',
+  },
+      '$i = \\sqrt{1}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'By definition, $i^2 = -1$, so $i = \\sqrt{-1}$.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'By definition, $i^2 = -1$, so $i = \\sqrt{-1}$.',
   },
@@ -20,10 +36,26 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A complex number $z = a + bi$ has real part:',
     options: [
-      '$b$',
-      '$a$',
-      '$i$',
-      '$a + b$'
+      '$a
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Real part is $a$, imaginary part is $b$.',
+  },
+      '$b
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Real part is $a$, imaginary part is $b$.',
+  },
+      '$i
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Real part is $a$, imaginary part is $b$.',
+  },
+      '$a + b
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Real part is $a$, imaginary part is $b$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +66,28 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The complex conjugate of $z = a + bi$ is:',
     options: [
-      '$-a - bi$',
-      '$a - bi$',
-      '$-a + bi$',
-      '$b + ai$'
+      '$-a - bi
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Conjugate $\\bar{z} = a - bi$ (negate imaginary part).',
+  },
+      '$-a + bi
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Conjugate $\\bar{z} = a - bi$ (negate imaginary part).',
+  },
+      '$b + ai
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Conjugate $\\bar{z} = a - bi$ (negate imaginary part).',
+  },
+      '$a - bi
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Conjugate $\\bar{z} = a - bi$ (negate imaginary part).',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Conjugate $\\bar{z} = a - bi$ (negate imaginary part).',
   },
@@ -59,8 +107,8 @@ export const section60Questions: QuizQuestion[] = [
     options: [
       'Group under addition only',
       'Field (with addition and multiplication)',
+      'Vector space only',
       'Ring but not a field',
-      'Vector space only'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -71,12 +119,28 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$(a + bi)(c + di) = ?$',
     options: [
-      '$ac + bdi$',
-      '$(ac - bd) + (ad + bc)i$',
-      '$(ac + bd) + (ad + bc)i$',
-      '$ac + bd + (ad - bc)i$'
+      '$ac + bdi
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'FOIL and use $i^2 = -1$: real part $ac - bd$, imaginary part $ad + bc$.',
+  },
+      '$(ac + bd) + (ad + bc)i
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'FOIL and use $i^2 = -1$: real part $ac - bd$, imaginary part $ad + bc$.',
+  },
+      '$(ac - bd) + (ad + bc)i
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'FOIL and use $i^2 = -1$: real part $ac - bd$, imaginary part $ad + bc$.',
+  },
+      '$ac + bd + (ad - bc)i
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'FOIL and use $i^2 = -1$: real part $ac - bd$, imaginary part $ad + bc$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'FOIL and use $i^2 = -1$: real part $ac - bd$, imaginary part $ad + bc$.',
   },

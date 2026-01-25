@@ -7,11 +7,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'According to Hayek, totalitarian propaganda differs from propaganda in free societies:',
     options: [
       'Only in magnitude—more of the same',
-      'Not only in magnitude but in kind—all sources are unified under single control',
       'It is actually less effective',
-      'It uses different technology'
+      'It uses different technology',
+      'Not only in magnitude but in kind—all sources are unified under single control',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Totalitarian propaganda differs in kind, not just degree. When all sources of information are under single control (Gleichschaltung), the propagandist can "mould minds" in any direction.',
   },
@@ -21,11 +21,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'Hayek argues that totalitarian propaganda is "destructive of all morals" because:',
     options: [
       'It teaches people to steal',
-      'It undermines the sense of and respect for truth—the foundation of all morals',
       'It promotes violence',
-      'It bans religion'
+      'It bans religion',
+      'It undermines the sense of and respect for truth—the foundation of all morals',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The moral consequences are destructive because they undermine the very sense of and respect for objective truth—the foundation upon which all morals rest.',
   },
@@ -34,12 +34,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hayek says the word "liberty" suffers the most because:',
     options: [
+      'It is used as freely as before, but "collective freedom" really means the planner\\'s freedom to do as he pleases',
       'It becomes illegal to say',
-      'It is used as freely as before, but "collective freedom" really means the planner\'s freedom to do as he pleases',
       'People forget the word',
-      'It is translated incorrectly'
+      'It is translated incorrectly',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Liberty is still used freely, but "collective freedom" confuses freedom with power—it means the unlimited freedom of the planner to do with society what he pleases.',
   },
@@ -50,8 +50,8 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'It is perfectly designed',
       'Doubt is treated as sabotage and disloyalty; all information that might cause questioning is suppressed',
+      'It is temporary',
       'People naturally agree with it',
-      'It is temporary'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -65,7 +65,7 @@ export const section11Questions: QuizQuestion[] = [
       'Only social sciences were affected',
       '"Party in Mathematics," "German Physics," and even chess being condemned for "neutrality"',
       'Science was completely banned',
-      'Scientists were left alone'
+      'Scientists were left alone',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -77,11 +77,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'Under totalitarianism, the word "truth" ceases to mean:',
     options: [
       'Something useful',
-      'Something to be discovered, with individual conscience as arbiter—it becomes something decreed by authority',
       'Anything at all',
-      'Scientific facts'
+      'Something to be discovered, with individual conscience as arbiter—it becomes something decreed by authority',
+      'Scientific facts',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Truth no longer describes something to be found through individual inquiry. It becomes something laid down by authority—something that must be believed in the interest of the organized effort.',
   },

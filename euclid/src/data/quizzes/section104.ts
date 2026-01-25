@@ -9,7 +9,7 @@ export const section104Questions: QuizQuestion[] = [
       'All angles are right angles',
       'The triangle has angles equal to those of a given triangle',
       'All angles are 60°',
-      'The angles are acute'
+      'The angles are acute',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section104Questions: QuizQuestion[] = [
     question: 'Which theorem is key to the construction in IV.2?',
     options: [
       'The Pythagorean theorem (I.47)',
-      'The tangent-chord angle theorem (III.32)',
       'The angle sum theorem (I.32)',
-      'The isosceles triangle theorem (I.5)'
+      'The isosceles triangle theorem (I.5)',
+      'The tangent-chord angle theorem (III.32)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'III.32 states that the angle between a tangent and chord equals the inscribed angle in the alternate segment—essential for copying angles into the inscribed triangle.',
   },
@@ -34,12 +34,12 @@ export const section104Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is the inscribed triangle in IV.2 congruent or similar to the given triangle?',
     options: [
-      'Congruent (same size and shape)',
       'Similar (same shape, different size)',
+      'Congruent (same size and shape)',
       'Neither',
-      'Both'
+      'Both',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The inscribed triangle is similar to the given triangle (same angles), but its size is determined by the circle, so it is not necessarily congruent.',
   },

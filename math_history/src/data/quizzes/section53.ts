@@ -22,12 +22,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An analytic (holomorphic) function is one that:',
     options: [
-      'Is complex differentiable at every point of its domain',
       'Has only real values',
+      'Is complex differentiable at every point of its domain',
       'Is continuous but not differentiable',
-      'Has a finite number of derivatives',
+      'Has a finite number of derivatives'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A function is analytic (or holomorphic) on a domain if it is complex differentiable at every point of that domain. This single condition implies the function is infinitely differentiable and equals its Taylor series.',
@@ -38,12 +38,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is $f(z) = \\bar{z}$ (complex conjugate) not analytic?',
     options: [
-      'The limit defining the derivative depends on the direction of approach',
-      'It is not continuous',
       'It has no real part',
-      'It is unbounded',
+      'It is not continuous',
+      'The limit defining the derivative depends on the direction of approach',
+      'It is unbounded'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'For $f(z) = \\bar{z}$, the difference quotient $\\bar{h}/h$ equals 1 when $h$ is real but -1 when $h$ is purely imaginary. Since the limit depends on direction, the complex derivative does not exist anywhere.',
@@ -53,12 +53,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A key property that distinguishes complex differentiability from real differentiability is:',
     options: [
-      'Complex differentiable functions are automatically infinitely differentiable',
+      'Complex differentiability requires boundedness',
       'Complex differentiable functions must be polynomials',
       'Real differentiable functions are always complex differentiable',
-      'Complex differentiability requires boundedness',
+      'Complex differentiable functions are automatically infinitely differentiable'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'In real analysis, a function can be differentiable once but not twice. In complex analysis, being differentiable once implies being infinitely differentiable, and the function equals its Taylor series. This "rigidity" is a remarkable property of analytic functions.',
@@ -84,12 +84,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Analytic functions preserve angles because:',
     options: [
-      'Where the derivative is nonzero, they act as local rotations and scalings',
       'They map circles to circles',
+      'Where the derivative is nonzero, they act as local rotations and scalings',
       'They preserve distances',
-      'They have constant modulus',
+      'They have constant modulus'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'At points where $f\'(z_0) \\neq 0$, an analytic function acts locally like multiplication by $f\'(z_0)$, which is a rotation (by $\\arg f\'$) and scaling (by $|f\'|$). These transformations preserve angles, making analytic functions conformal.',

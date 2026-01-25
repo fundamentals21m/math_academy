@@ -6,12 +6,12 @@ export const section72Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Proposition III.8 deals with lines drawn from a point:',
     options: [
-      'At the center of the circle',
       'Inside the circle',
+      'At the center of the circle',
+      'On the circumference',
       'Outside the circle',
-      'On the circumference'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'III.8 analyzes lines from an external point to the circle, complementing III.7 which dealt with internal points.',
   },
@@ -34,12 +34,12 @@ export const section72Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From an external point, how many lines of a given length reach the circle (between minimum and maximum)?',
     options: [
-      'One',
       'Two',
+      'One',
       'Infinitely many',
-      'None'
+      'None',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'For any length between the minimum and maximum distances, exactly two lines from the external point reach the circle at that distance.',
   },

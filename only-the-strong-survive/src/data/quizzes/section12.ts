@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'What does the "Jenga tower" metaphor illustrate about crypto?',
     options: [
       'Crypto is built on solid foundations',
-      'The system becomes increasingly unstable as more leverage is built on the same base',
       'Crypto can be easily dismantled',
-      'Each layer strengthens the whole'
+      'The system becomes increasingly unstable as more leverage is built on the same base',
+      'Each layer strengthens the whole',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Like Jenga, each new layer of leverage and derivative products makes the structure more precarious. The tower gets taller but the foundation remains the same, creating instability.',
   },
@@ -35,11 +35,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'What triggers a "Jenga collapse" in crypto markets?',
     options: [
       'A single large hack',
-      'When capital outflows exceed inflows and deleveraging cascades through the system',
       'Government bans',
-      'Developer departures'
+      'Developer departures',
+      'When capital outflows exceed inflows and deleveraging cascades through the system',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'When more capital leaves than enters, forced liquidations begin. Each liquidation causes price drops that trigger more liquidations—the tower falls as blocks are removed faster than they\'re added.',
   },

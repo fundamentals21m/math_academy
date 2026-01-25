@@ -8,8 +8,13 @@ export const section64Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'In what year did category theory begin with Eilenberg and Mac Lane\'s article?',
-    options: ['1935', '1945', '1955', '1965'],
-    correctIndex: 1,
+    options: [
+      '1935',
+      '1955',
+      '1945',
+      '1965',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Category theory began in 1945 with Eilenberg and Mac Lane\'s article "General Theory of Natural Equivalences."',
@@ -34,12 +39,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the naturality condition for a natural transformation t?',
     options: [
+      'G(f) ∘ t(a) = t(b) ∘ F(f)',
       't(a) = t(b) for all objects a and b',
       'F(f) ∘ G(f) = t(a)',
-      'G(f) ∘ t(a) = t(b) ∘ F(f)',
       't(f) = F(f) ∘ G(f)',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The naturality condition states that for any arrow f: a → b in A, we have G(f) ∘ t(a) = t(b) ∘ F(f). This says the naturality square commutes.',
@@ -51,8 +56,8 @@ export const section64Questions: QuizQuestion[] = [
     options: [
       'All arrows are invertible',
       'Going around either way gives the same result',
-      'The square has equal sides',
       'F equals G',
+      'The square has equal sides',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -65,11 +70,11 @@ export const section64Questions: QuizQuestion[] = [
     question: 'In the naturality square, where do the objects a and b live?',
     options: [
       'In category B',
-      'In category A',
       'In both A and B',
       'In neither A nor B',
+      'In category A',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Objects a and b are in category A, while all the objects and arrows shown in the naturality square (F(a), G(a), F(b), G(b), and the arrows between them) are in category B.',
@@ -80,12 +85,12 @@ export const section64Questions: QuizQuestion[] = [
     question:
       'When sets are viewed as functors from a one-object category, what corresponds to a function between sets?',
     options: [
-      'A functor',
       'A natural transformation',
+      'A functor',
       'An identity arrow',
       'A composition',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'When sets S and S\' are viewed as functors F and F\', a function f: S → S\' corresponds to a natural transformation from F to F\'.',
@@ -109,8 +114,13 @@ export const section64Questions: QuizQuestion[] = [
     id: 8,
     type: 'multiple-choice',
     question: 'What property must an M-homomorphism f satisfy?',
-    options: ['f(a + b) = f(a) + f(b)', 'f(ab) = af(b)', 'f(1) = 1', 'f is bijective'],
-    correctIndex: 1,
+    options: [
+      'f(a + b) = f(a) + f(b)',
+      'f(1) = 1',
+      'f(ab) = af(b)',
+      'f is bijective',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'An M-homomorphism f from M-set (M, X, m) to (M, X\', m\') must satisfy f(ab) = af(b), meaning f is compatible with the monoid action.',
@@ -121,11 +131,11 @@ export const section64Questions: QuizQuestion[] = [
     question: 'According to the text, what is the main value of category theory\'s abstract definitions?',
     options: [
       'They make simple ideas more complicated',
-      'They embody methods of many branches of mathematics and unify their results',
-      'They replace all other mathematical notation',
       'They only apply to set theory',
+      'They replace all other mathematical notation',
+      'They embody methods of many branches of mathematics and unify their results'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The abstract definitions of category theory embody the ideas and methods of many branches of mathematics at once, and thus serve to unify their separate proofs and results.',

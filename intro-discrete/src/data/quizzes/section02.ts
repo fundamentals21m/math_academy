@@ -6,10 +6,14 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A positive integer $p$ is prime if:',
     options: [
-      'It has exactly two positive divisors: 1 and $p$',
       'It is greater than 1',
       'It is not divisible by 2',
-      'It has no divisors'
+      'It has no divisors',
+      'It has exactly two positive divisors: 1 and $p
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A prime has exactly two positive divisors: 1 and itself.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -20,12 +24,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is 1 a prime number?',
     options: [
-      'No, because it has only one positive divisor',
       'Yes, because it is only divisible by itself',
       'Yes, because it is the first positive integer',
-      'No, because it is even'
+      'No, because it has only one positive divisor',
+      'No, because it is even',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '1 has only one positive divisor (itself), so it does not meet the definition of prime.',
   },
@@ -34,12 +38,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Prime Divisibility Property states that if $p$ is prime and $p \\mid ab$, then:',
     options: [
-      '$p \\mid a$ or $p \\mid b$',
-      '$p \\mid a$ and $p \\mid b$',
-      '$p \\mid a + b$',
-      '$p = ab$'
+      '$p \\mid a + b
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If a prime divides a product, it must divide at least one of the factors.',
+  },
+      '$p \\mid a$ or $p \\mid b
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'If a prime divides a product, it must divide at least one of the factors.',
+  },
+      '$p \\mid a$ and $p \\mid b
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'If a prime divides a product, it must divide at least one of the factors.',
+  },
+      '$p = ab
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'If a prime divides a product, it must divide at least one of the factors.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'If a prime divides a product, it must divide at least one of the factors.',
   },
@@ -65,12 +85,16 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Euclid's proof of the infinitude of primes considers $N = p_1 p_2 \\cdots p_n + 1$. What can we conclude about $N$?",
     options: [
-      '$N$ has a prime factor not in the list $p_1, \\ldots, p_n$',
+      '$N$ has a prime factor not in the list $p_1, \\ldots, p_n
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Dividing $N$ by any $p_i$ gives remainder 1, so $N$ has a prime factor outside the list.',
+  },
+      '$N$ is divisible by all primes in the list',
       '$N$ is always prime',
       '$N$ is always composite',
-      '$N$ is divisible by all primes in the list'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Dividing $N$ by any $p_i$ gives remainder 1, so $N$ has a prime factor outside the list.',
   },

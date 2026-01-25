@@ -9,12 +9,12 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why can\'t we define a rational number a/b as simply a pair (a, b)?',
     options: [
-      'Because pairs cannot be added',
       'Because then 2/3 ≠ 4/6 (different pairs)',
+      'Because pairs cannot be added',
       'Because b might be zero',
-      'Because integers cannot form pairs',
+      'Because integers cannot form pairs'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'If rationals were just pairs, then (2, 3) ≠ (4, 6) since they are different pairs, even though 2/3 and 4/6 represent the same rational number.',
@@ -40,11 +40,11 @@ export const section34Questions: QuizQuestion[] = [
     question: 'What is a ratio (rational number) formally defined as?',
     options: [
       'A pair of integers',
-      'An equivalence class of pairs',
       'A real number with finite decimal expansion',
       'The quotient of two natural numbers',
+      'An equivalence class of pairs',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A ratio a/b is formally defined as the equivalence class of (a, b)—the set of all pairs (c, d) with d ≠ 0 such that ad = bc.',
@@ -69,12 +69,12 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is bd ≠ 0 guaranteed when computing a/b + c/d?',
     options: [
-      'Because addition always preserves non-zero values',
       'Because we are in an integral domain (no zero divisors)',
+      'Because addition always preserves non-zero values',
       'Because we only consider positive integers',
-      'Because b and d are always the same',
+      'Because b and d are always the same'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Since ℤ is an integral domain, it has no zero divisors. If b ≠ 0 and d ≠ 0, then bd ≠ 0. This is essential for the operations to be well-defined.',
@@ -84,12 +84,12 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does "well-defined" mean for operations on rationals?',
     options: [
-      'The operation always produces an integer',
       'The operation gives the same result regardless of representative choice',
+      'The operation always produces an integer',
       'The operation is commutative',
       'The operation never produces zero',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'An operation is well-defined if the result depends only on the equivalence class, not on which representative pair we choose. For example, 2/3 + 1/2 must equal 4/6 + 1/2.',
@@ -98,8 +98,13 @@ export const section34Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'What is the multiplicative inverse of a/b in ℚ (assuming a ≠ 0)?',
-    options: ['−a/b', 'a/b', 'b/a', '1/(ab)'],
-    correctIndex: 2,
+    options: [
+      '−a/b',
+      'b/a',
+      'a/b',
+      '1/(ab)',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The multiplicative inverse of a/b is b/a, since (a/b) · (b/a) = (ab)/(ba) = 1/1 = 1.',
@@ -125,11 +130,11 @@ export const section34Questions: QuizQuestion[] = [
     question: 'How is ℤ embedded in ℚ?',
     options: [
       'By the map a ↦ a/a',
-      'By the map a ↦ a/1',
-      'By the map a ↦ 1/a',
       'By the map a ↦ a/0',
+      'By the map a ↦ 1/a',
+      'By the map a ↦ a/1'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The embedding h: ℤ → ℚ is defined by h(a) = a/1. This is a homomorphism (preserves operations) and is injective, so h(ℤ) is isomorphic to ℤ.',

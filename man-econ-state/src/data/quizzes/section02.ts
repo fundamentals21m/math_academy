@@ -7,11 +7,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What is indirect exchange?',
     options: [
       'Trading goods through a government agency',
-      'Using a commonly accepted medium (money) to facilitate trade',
       'Trading only with family members',
-      'Exchanging goods through barter'
+      'Using a commonly accepted medium (money) to facilitate trade',
+      'Exchanging goods through barter',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Indirect exchange uses money as an intermediary. Instead of trading goods directly, you sell for money, then buy what you want.',
   },
@@ -21,11 +21,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'According to Menger\'s theory, how did money emerge?',
     options: [
       'Government decree',
-      'International agreement',
       'Spontaneously from market processes as the most saleable commodity',
+      'International agreement',
       'Religious institutions created it'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Money emerged spontaneously as traders began using the most marketable (saleable) commodities as media of exchange.',
   },
@@ -35,11 +35,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What property makes a good suitable as money?',
     options: [
       'It must be beautiful',
-      'It must be divisible, durable, portable, and widely accepted',
       'It must be produced by government',
-      'It must be consumable'
+      'It must be consumable',
+      'It must be divisible, durable, portable, and widely accepted',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Good money is divisible (can make change), durable (doesn\'t decay), portable (easy to carry), and widely accepted.',
   },
@@ -49,11 +49,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Why did gold and silver historically become money?',
     options: [
       'Government mandated their use',
-      'They were the most useful for industrial purposes',
       'They possessed ideal monetary properties and high marketability',
-      'They were the most abundant metals'
+      'They were the most useful for industrial purposes',
+      'They were the most abundant metals',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Gold and silver became money because they are durable, divisible, portable, scarce, and were already widely valued and traded.',
   },
@@ -63,11 +63,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What is the regression theorem?',
     options: [
       'Money always loses value over time',
-      'Money\'s purchasing power traces back to its original commodity value',
       'Governments always debase money',
-      'Money must be backed by gold'
+      'Money\\'s purchasing power traces back to its original commodity value',
+      'Money must be backed by gold',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The regression theorem explains that money\'s current value traces back historically to when the money commodity was valued for direct use.',
   },
@@ -76,12 +76,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does money solve the "double coincidence of wants" problem?',
     options: [
-      'By forcing people to want the same things',
       'By allowing any good to be exchanged for money, then money for desired goods',
+      'By forcing people to want the same things',
       'By eliminating the need for trade',
-      'By standardizing all prices'
+      'By standardizing all prices',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'With money, you don\'t need to find someone who wants your specific goods. You sell for money, then use money to buy anything.',
   },

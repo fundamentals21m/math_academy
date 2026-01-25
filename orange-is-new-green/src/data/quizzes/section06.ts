@@ -7,11 +7,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What fundamental characteristic do all fiat monetary zones share?',
     options: [
       'Fixed money supply',
-      'The necessity of unbounded money supply expansion over time',
       'Gold backing',
-      'Bitcoin reserves'
+      'Bitcoin reserves',
+      'The necessity of unbounded money supply expansion over time',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'All fiat monetary zones share the necessity of unbounded money supply expansion—their bond markets rest on continuously growing money supplies.',
   },
@@ -35,11 +35,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What happens when you hedge Bitcoin against the dollar (sell BTC exposure)?',
     options: [
       'You pay a premium for protection',
-      'You receive a premium because you\'re giving up expected positive returns',
       'Nothing—hedging Bitcoin is impossible',
+      'You receive a premium because you\'re giving up expected positive returns',
       'You automatically lose money'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Unlike hedging weak currencies, selling Bitcoin exposure means relinquishing returns that, on average, remain positive—so you get paid a premium for hedging.',
   },

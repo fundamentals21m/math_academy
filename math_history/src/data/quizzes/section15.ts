@@ -18,11 +18,11 @@ export const section15Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Direct measurement with rulers',
-      'Double contradiction: showing the area is neither greater nor less than the claimed value',
       'Counting unit squares',
-      'Using algebraic formulas',
+      'Double contradiction: showing the area is neither greater nor less than the claimed value',
+      'Using algebraic formulas'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'The method of exhaustion uses double reductio ad absurdum: it proves the area cannot be greater than the claimed value (using inscribed polygons) and cannot be less (using circumscribed polygons).',
   },
@@ -34,11 +34,11 @@ export const section15Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Every circle has area $\\pi r^2$',
-      'Given any two magnitudes, repeatedly doubling the smaller will eventually exceed the larger',
-      'Parallel lines never meet',
       'The whole is greater than the part',
+      'Parallel lines never meet',
+      'Given any two magnitudes, repeatedly doubling the smaller will eventually exceed the larger'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'The Axiom of Eudoxus states that for any two magnitudes A < B, there exists n such that nA > B. This rules out infinitesimals and ensures inscribed polygons can get arbitrarily close to the curved figure.',
   },
@@ -60,12 +60,12 @@ export const section15Questions: QuizQuestion[] = [
       'Why was the method of exhaustion eventually replaced by calculus?',
     difficulty: 'hard',
     options: [
-      'It gave wrong answers',
       'It required knowing the answer first and had no general algorithm',
+      'It gave wrong answers',
       'It was too easy',
-      'Archimedes asked mathematicians to stop using it',
+      'Archimedes asked mathematicians to stop using it'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'The method of exhaustion required guessing the answer first, then proving it correct via lengthy contradiction arguments. Calculus provides systematic algorithms that work for any problem, making it far more practical.',
   },

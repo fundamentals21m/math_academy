@@ -9,7 +9,7 @@ export const section07Questions: QuizQuestion[] = [
       'They have equal areas',
       'Two distinct triangles cannot have both pairs of sides from endpoints equal',
       'They must be congruent',
-      'Their heights are proportional'
+      'Their heights are proportional',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -21,11 +21,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What is the primary purpose of Proposition I.7?',
     options: [
       'To prove the uniqueness of triangles',
+      'To establish parallel lines',
       'As a lemma for proving I.8 (SSS congruence)',
       'To construct perpendiculars',
-      'To establish parallel lines'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'I.7 serves as a crucial lemma for I.8, which proves SSS (side-side-side) triangle congruence.',
   },

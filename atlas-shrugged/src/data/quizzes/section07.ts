@@ -9,7 +9,7 @@ export const section07Questions: QuizQuestion[] = [
       'A telephone company',
       'A railroad line built by Dagny using Rearden Metal',
       'An oil pipeline',
-      'A shipping company'
+      'A shipping company',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does Dagny name the line after "John Galt"?',
     options: [
-      'To honor a famous railroad builder',
       'As a defiant gesture against those who say nothing is possible',
+      'To honor a famous railroad builder',
+      'John Galt invested in the project',
       'It was required by law',
-      'John Galt invested in the project'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Dagny names it the John Galt Line as a defiant gesture, taking the phrase of despair and turning it into a symbol of achievement.',
   },
@@ -34,10 +34,10 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who accompanies Dagny on the first run of the John Galt Line?',
     options: [
+      'Francisco d\\'Anconia',
       'James Taggart',
-      'Francisco d\'Anconia',
       'Hank Rearden',
-      'Eddie Willers'
+      'Eddie Willers',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -49,11 +49,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What do Dagny and Hank demonstrate by building the John Galt Line?',
     options: [
       'That government support is essential for progress',
-      'That individuals can achieve greatness through rational effort',
       'That public opinion should guide business decisions',
-      'That compromise is the key to success'
+      'That compromise is the key to success',
+      'That individuals can achieve greatness through rational effort',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The John Galt Line proves that determined individuals using reason and ability can achieve great things despite opposition.',
   },
@@ -62,12 +62,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does the public initially react to the John Galt Line?',
     options: [
-      'Overwhelming support from the beginning',
       'Fear and skepticism that turns to celebration after success',
+      'Overwhelming support from the beginning',
       'Complete indifference',
-      'Violent opposition'
+      'Violent opposition',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Initial public reaction is fear and skepticism about Rearden Metal, but successful operation leads to celebration and crowds lining the route.',
   },
@@ -77,11 +77,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What does the John Galt Line symbolize in the novel\'s broader themes?',
     options: [
       'The power of collective action',
+      'The need for public ownership of railroads',
       'The triumph of the creative mind over mediocrity',
       'The importance of government infrastructure',
-      'The need for public ownership of railroads'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The John Galt Line symbolizes the triumph of individual creative achievement over the forces of mediocrity, fear, and destruction.',
   },

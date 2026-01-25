@@ -6,12 +6,28 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The substitution rule for integration states $\\int f(g(x))g\'(x)\\,dx = ?$',
     options: [
-      '$\\int f(u)\\,du$ where $u = g(x)$',
-      '$f(g(x)) + C$',
-      '$\\int f(x)g(x)\\,dx$',
-      '$f\'(g(x))$'
+      '$\\int f(x)g(x)\\,dx
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Substitution: let $u = g(x)$, then $du = g\'(x)\\,dx$.',
+  },
+      '$\\int f(u)\\,du$ where $u = g(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Substitution: let $u = g(x)$, then $du = g\'(x)\\,dx$.',
+  },
+      '$f(g(x)) + C
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Substitution: let $u = g(x)$, then $du = g\'(x)\\,dx$.',
+  },
+      '$f\\'(g(x))
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Substitution: let $u = g(x)$, then $du = g\'(x)\\,dx$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Substitution: let $u = g(x)$, then $du = g\'(x)\\,dx$.',
   },
@@ -21,11 +37,11 @@ export const section37Questions: QuizQuestion[] = [
     question: 'To evaluate $\\int 2x(x^2 + 1)^5\\,dx$, the best substitution is:',
     options: [
       '$u = x$',
-      '$u = x^2 + 1$',
+      '$u = (x^2+1)^5$',
       '$u = 2x$',
-      '$u = (x^2+1)^5$'
+      '$u = x^2 + 1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Let $u = x^2 + 1$, then $du = 2x\\,dx$. The integral becomes $\\int u^5\\,du$.',
   },
@@ -34,12 +50,28 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int \\cos(3x)\\,dx = ?$',
     options: [
-      '$\\sin(3x) + C$',
-      '$\\frac{1}{3}\\sin(3x) + C$',
-      '$3\\sin(3x) + C$',
-      '$-\\sin(3x) + C$'
+      '$\\sin(3x) + C
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Let $u = 3x$, $du = 3\\,dx$. $\\int \\cos u \\cdot \\frac{du}{3} = \\frac{1}{3}\\sin(3x) + C$.',
+  },
+      '$3\\sin(3x) + C
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Let $u = 3x$, $du = 3\\,dx$. $\\int \\cos u \\cdot \\frac{du}{3} = \\frac{1}{3}\\sin(3x) + C$.',
+  },
+      '$\\frac{1}{3}\\sin(3x) + C
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Let $u = 3x$, $du = 3\\,dx$. $\\int \\cos u \\cdot \\frac{du}{3} = \\frac{1}{3}\\sin(3x) + C$.',
+  },
+      '$-\\sin(3x) + C
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Let $u = 3x$, $du = 3\\,dx$. $\\int \\cos u \\cdot \\frac{du}{3} = \\frac{1}{3}\\sin(3x) + C$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Let $u = 3x$, $du = 3\\,dx$. $\\int \\cos u \\cdot \\frac{du}{3} = \\frac{1}{3}\\sin(3x) + C$.',
   },
@@ -48,12 +80,28 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int e^{2x}\\,dx = ?$',
     options: [
-      '$e^{2x} + C$',
-      '$2e^{2x} + C$',
-      '$\\frac{1}{2}e^{2x} + C$',
-      '$e^{x^2} + C$'
+      '$\\frac{1}{2}e^{2x} + C
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Let $u = 2x$. $\\int e^u \\cdot \\frac{du}{2} = \\frac{1}{2}e^{2x} + C$.',
+  },
+      '$e^{2x} + C
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Let $u = 2x$. $\\int e^u \\cdot \\frac{du}{2} = \\frac{1}{2}e^{2x} + C$.',
+  },
+      '$2e^{2x} + C
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Let $u = 2x$. $\\int e^u \\cdot \\frac{du}{2} = \\frac{1}{2}e^{2x} + C$.',
+  },
+      '$e^{x^2} + C
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Let $u = 2x$. $\\int e^u \\cdot \\frac{du}{2} = \\frac{1}{2}e^{2x} + C$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Let $u = 2x$. $\\int e^u \\cdot \\frac{du}{2} = \\frac{1}{2}e^{2x} + C$.',
   },
@@ -71,12 +119,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For definite integrals with substitution, we must:',
     options: [
-      'Keep the original limits',
       'Change the limits to the new variable OR substitute back',
+      'Keep the original limits',
       'Always use limits 0 to 1',
-      'Ignore the limits'
+      'Ignore the limits',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Either change limits to $u$-values or substitute back to $x$ before evaluating.',
   },

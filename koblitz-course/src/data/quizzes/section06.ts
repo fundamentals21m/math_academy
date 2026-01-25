@@ -5,8 +5,13 @@ export const section06Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'In the Caesar cipher with shift 3, what does "ABC" encrypt to?',
-    options: ['"XYZ"', '"DEF"', '"BCD"', '"CDE"'],
-    correctIndex: 1,
+    options: [
+      '"XYZ"',
+      '"BCD"',
+      '"CDE"',
+      '"DEF"',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Caesar cipher shifts each letter by 3: A→D, B→E, C→F, so "ABC"→"DEF".',
   },
@@ -15,12 +20,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What type of attack exploits letter frequency patterns in ciphertext?',
     options: [
-      'Brute force attack',
       'Frequency analysis',
+      'Brute force attack',
       'Man-in-the-middle attack',
-      'Side channel attack'
+      'Side channel attack',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Frequency analysis uses the fact that letters like E, T, A appear most often in English text.',
   },
@@ -40,8 +45,8 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'A single substitution cipher',
       'Multiple Caesar ciphers with a repeating keyword',
+      'An asymmetric cipher',
       'A transposition cipher',
-      'An asymmetric cipher'
     ],
     correctIndex: 1,
     difficulty: 'medium',

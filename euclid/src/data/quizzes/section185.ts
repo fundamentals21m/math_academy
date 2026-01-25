@@ -7,11 +7,11 @@ export const section185Questions: QuizQuestion[] = [
     question: 'What does Proposition VII.6 address that VII.5 does not?',
     options: [
       'Subtraction of parts',
-      'The case of "parts" (multiple equal parts) rather than just "a part"',
+      'Multiplication of parts',
       'Division of numbers',
-      'Multiplication of parts'
+      'The case of "parts" (multiple equal parts) rather than just "a part"'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'VII.6 extends VII.5 to handle "parts" - when a number is multiple copies of a unit fraction (like 3/4), not just a single part (1/4).',
   },
@@ -20,12 +20,12 @@ export const section185Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If 6 is "two-thirds" of 9, and 10 is "two-thirds" of 15, what does VII.6 say about their sums?',
     options: [
-      '16 is two-thirds of 24',
       '16 is one-half of 24',
+      '16 is two-thirds of 24',
       '16 is three-fourths of 24',
-      '16 and 24 are relatively prime'
+      '16 and 24 are relatively prime',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'By VII.6: if 6 = (2/3)(9) and 10 = (2/3)(15), then 6+10=16 is two-thirds of 9+15=24. Check: (2/3)(24) = 16.',
   },
@@ -34,12 +34,12 @@ export const section185Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does VII.6 build upon VII.5?',
     options: [
-      'It proves VII.5 using different methods',
       'It uses VII.5 repeatedly to handle multiple parts',
+      'It proves VII.5 using different methods',
       'It contradicts VII.5 in special cases',
-      'It restricts VII.5 to prime numbers only'
+      'It restricts VII.5 to prime numbers only',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'VII.6 applies VII.5 multiple times. If A is m/n of B (where m/n means "m parts each of which is 1/n"), the proposition iterates the logic for each part.',
   },

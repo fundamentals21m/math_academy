@@ -6,12 +6,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What historical example do the authors use to illustrate sound money principles?',
     options: [
-      'The Roman Empire',
       'Renaissance Florence and the gold florin',
+      'The Roman Empire',
       'Ancient Egypt',
-      'Medieval England'
+      'Medieval England',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The authors reference Florence\'s gold florin as a historical example of sound money that facilitated commerce and trust—paralleling Bitcoin\'s potential role today.',
   },
@@ -21,11 +21,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'What made the Florentine florin successful as money?',
     options: [
       'Government decree',
-      'Consistent gold content that merchants could trust across borders',
       'Backing by real estate',
-      'Low transaction fees'
+      'Low transaction fees',
+      'Consistent gold content that merchants could trust across borders',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The florin\'s success came from predictable, trustworthy gold content. Merchants knew exactly what they were getting—reliability that enabled commerce across political boundaries.',
   },
@@ -36,8 +36,8 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       'Both were created in Italy',
       'Both represent sound, predictable money that enables trust without relying on political authority',
+      'Both were rejected by merchants initially',
       'Both use gold as backing',
-      'Both were rejected by merchants initially'
     ],
     correctIndex: 1,
     difficulty: 'hard',

@@ -61,12 +61,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'What does $a \\equiv b \\pmod{n}$ mean?',
       options: [
-        '$a$ and $b$ have the same remainder when divided by $n$',
-        '$a$ equals $b$',
         '$a$ is greater than $b$',
+        '$a$ equals $b$',
+        '$a$ and $b$ have the same remainder when divided by $n$',
         '$n$ divides $a$ but not $b$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The congruence notation $a \\equiv b \\pmod{n}$ means $a$ and $b$ leave the same remainder when divided by $n$.'
     },
@@ -216,12 +216,12 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'Which statement about modular arithmetic is FALSE?',
       options: [
-        'We can always divide in modular arithmetic',
+        'If $a \\equiv b \\pmod{n}$, then $n$ divides $(a - b)$',
         '$(a + b) \\bmod n = ((a \\bmod n) + (b \\bmod n)) \\bmod n$',
         '$(a \\times b) \\bmod n = ((a \\bmod n) \\times (b \\bmod n)) \\bmod n$',
-        'If $a \\equiv b \\pmod{n}$, then $n$ divides $(a - b)$'
+        'We can always divide in modular arithmetic'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Division in modular arithmetic requires finding a modular inverse, which only exists when $\\gcd(a, n) = 1$. We cannot always divide.'
     },

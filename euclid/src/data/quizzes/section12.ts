@@ -20,12 +20,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the key step in the construction of I.12?',
     options: [
-      'Drawing a circle centered at the given point that intersects the line at two points',
-      'Using the parallel postulate',
       'Constructing an equilateral triangle',
-      'Bisecting an angle'
+      'Using the parallel postulate',
+      'Bisecting an angle',
+      'Drawing a circle centered at the given point that intersects the line at two points',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Draw a circle centered at the point that crosses the line twice, then bisect the chord between the intersections.',
   },
@@ -34,12 +34,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which propositions does I.12 rely on?',
     options: [
+      'I.8 and I.10',
       'I.8 and I.9',
       'I.10 and I.11',
-      'I.8 and I.10',
-      'I.4 and I.10'
+      'I.4 and I.10',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'I.12 uses I.10 (bisect the chord) and I.8 (SSS) to prove the angles are right angles.',
   },

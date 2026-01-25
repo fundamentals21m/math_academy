@@ -37,10 +37,10 @@ export const section09Quiz = {
       options: [
         '$f(2) = 4$ and $\\lim_{x \\to 2} x^2 = 4$',
         '$f$ is a polynomial',
-        'Both (A) and (B)',
-        '$f$ is bounded'
+        '$f$ is bounded',
+        'Both (A) and (B)'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Polynomials are continuous everywhere, and we can verify $\\lim_{x \\to 2} x^2 = 4 = f(2)$.'
     },
@@ -58,12 +58,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The one-sided limit $\\lim_{x \\to a^+} f(x)$ means:',
       options: [
-        '$x$ approaches $a$ from the left',
         '$x$ approaches $a$ from the right (values greater than $a$)',
+        '$x$ approaches $a$ from the left',
         '$f(x)$ approaches $a$',
         '$x$ equals $a$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The notation $a^+$ indicates approaching from the right (from values greater than $a$).'
     },
@@ -73,11 +73,11 @@ export const section09Quiz = {
       question: '$\\lim_{x \\to a} f(x) = L$ exists if and only if:',
       options: [
         '$\\lim_{x \\to a^+} f(x) = L$',
-        '$\\lim_{x \\to a^-} f(x) = L$',
         'Both one-sided limits exist and are equal to $L$',
+        '$\\lim_{x \\to a^-} f(x) = L$',
         '$f(a) = L$'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The two-sided limit exists iff both one-sided limits exist and are equal.'
     },
@@ -87,11 +87,11 @@ export const section09Quiz = {
       question: 'The function $f(x) = |x|$ at $x = 0$ is:',
       options: [
         'Discontinuous',
-        'Continuous but not differentiable',
         'Differentiable',
+        'Continuous but not differentiable',
         'Not defined'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: '$|x|$ is continuous at $0$ (limit equals $f(0) = 0$) but has a corner, making it not differentiable there.'
     },
@@ -101,11 +101,11 @@ export const section09Quiz = {
       question: 'A removable discontinuity at $x = a$ occurs when:',
       options: [
         '$\\lim_{x \\to a} f(x)$ does not exist',
-        '$\\lim_{x \\to a} f(x)$ exists but $\\neq f(a)$ (or $f(a)$ undefined)',
+        '$f(a) = \\infty$',
         '$\\lim_{x \\to a^+} f(x) \\neq \\lim_{x \\to a^-} f(x)$',
-        '$f(a) = \\infty$'
+        '$\\lim_{x \\to a} f(x)$ exists but $\\neq f(a)$ (or $f(a)$ undefined)'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Removable discontinuity: the limit exists but doesn\'t equal the function value (or function is undefined there).'
     },
@@ -122,12 +122,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = \\frac{1}{x}$ is continuous on:',
       options: [
-        '$\\mathbb{R}$',
         '$\\mathbb{R} \\setminus \\{0\\}$',
+        '$\\mathbb{R}$',
         '$[0, \\infty)$',
         '$(-\\infty, 0]$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: '$1/x$ is continuous everywhere except $x = 0$ where it is undefined.'
     },
@@ -151,11 +151,11 @@ export const section09Quiz = {
       question: 'A jump discontinuity occurs when:',
       options: [
         'The limit does not exist',
-        'Both one-sided limits exist but are different',
         'The function is undefined',
+        'Both one-sided limits exist but are different',
         '$f(a) = \\infty$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Jump discontinuity: $\\lim_{x \\to a^-} f(x) \\neq \\lim_{x \\to a^+} f(x)$, both finite.'
     },
@@ -174,11 +174,11 @@ export const section09Quiz = {
       question: 'The squeeze theorem for limits states that if $g(x) \\leq f(x) \\leq h(x)$ near $a$ and $\\lim g(x) = \\lim h(x) = L$:',
       options: [
         '$\\lim f(x) = 0$',
-        '$\\lim f(x) = L$',
+        '$f(a) = L$',
         '$f$ is continuous',
-        '$f(a) = L$'
+        '$\\lim f(x) = L$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'If $f$ is squeezed between two functions with the same limit, $f$ has that limit too.'
     },
@@ -195,12 +195,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A function is continuous on $[a, b]$ if:',
       options: [
-        'It is continuous at every point in $(a, b)$',
-        'It is continuous at $a$ and $b$',
         'It is continuous on $(a, b)$ with right-continuity at $a$ and left-continuity at $b$',
+        'It is continuous at $a$ and $b$',
+        'It is continuous at every point in $(a, b)$',
         'It is differentiable on $[a, b]$'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'On a closed interval, we use one-sided continuity at the endpoints.'
     },
@@ -253,11 +253,11 @@ export const section09Quiz = {
       question: 'Uniform continuity of $f$ on $S$ means:',
       options: [
         'For all $a \\in S$ and $\\varepsilon > 0$, there exists $\\delta > 0$ (depending on $a$ and $\\varepsilon$)',
-        'For all $\\varepsilon > 0$, there exists $\\delta > 0$ (independent of $x$) such that $|f(x) - f(y)| < \\varepsilon$ when $|x - y| < \\delta$',
         '$f$ is bounded on $S$',
+        'For all $\\varepsilon > 0$, there exists $\\delta > 0$ (independent of $x$) such that $|f(x) - f(y)| < \\varepsilon$ when $|x - y| < \\delta$',
         '$f$ is differentiable on $S$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Uniform continuity: the same $\\delta$ works for all points, unlike pointwise continuity.'
     },
@@ -267,11 +267,11 @@ export const section09Quiz = {
       question: 'The function $f(x) = x^2$ on $\\mathbb{R}$ is:',
       options: [
         'Uniformly continuous',
-        'Continuous but not uniformly continuous',
+        'Uniformly continuous on $[0, 1]$ only',
         'Discontinuous',
-        'Uniformly continuous on $[0, 1]$ only'
+        'Continuous but not uniformly continuous'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: '$x^2$ is continuous everywhere but not uniformly continuous on $\\mathbb{R}$ (the slope grows without bound).'
     },
@@ -280,12 +280,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'On a closed bounded interval $[a, b]$, every continuous function is:',
       options: [
-        'Differentiable',
         'Uniformly continuous',
+        'Differentiable',
         'Constant',
         'Unbounded'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Heine-Cantor theorem: continuous on compact $\\Rightarrow$ uniformly continuous.'
     },
@@ -304,11 +304,11 @@ export const section09Quiz = {
       question: 'The function $f(x) = \\sin(1/x)$ as $x \\to 0$:',
       options: [
         'Has limit $0$',
-        'Has limit $1$',
         'Does not have a limit (oscillates)',
+        'Has limit $1$',
         'Has limit $\\infty$'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'As $x \\to 0$, $1/x \\to \\pm\\infty$, and $\\sin$ oscillates between $-1$ and $1$ without settling.'
     },
@@ -318,11 +318,11 @@ export const section09Quiz = {
       question: 'The function $f(x) = x \\sin(1/x)$ for $x \\neq 0$, $f(0) = 0$ is:',
       options: [
         'Discontinuous at $0$',
-        'Continuous at $0$',
         'Not defined at $0$',
+        'Continuous at $0$',
         'Differentiable at $0$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: '$|x \\sin(1/x)| \\leq |x| \\to 0$, so by squeeze theorem, $\\lim_{x \\to 0} x\\sin(1/x) = 0 = f(0)$.'
     },
@@ -340,11 +340,11 @@ export const section09Quiz = {
       question: 'A function $f$ has an essential discontinuity at $a$ if:',
       options: [
         'The limit exists but differs from $f(a)$',
-        'At least one one-sided limit is infinite or does not exist',
+        '$f(a)$ is undefined',
         'Both one-sided limits exist but differ',
-        '$f(a)$ is undefined'
+        'At least one one-sided limit is infinite or does not exist'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Essential discontinuity: the limit doesn\'t exist (oscillation, infinite limits, etc.).'
     },
@@ -353,12 +353,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The sequential characterization of continuity: $f$ is continuous at $a$ iff:',
       options: [
-        '$f(a)$ exists',
         'For every sequence $x_n \\to a$, we have $f(x_n) \\to f(a)$',
+        '$f(a)$ exists',
         '$f$ is bounded near $a$',
         '$f$ is monotonic near $a$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Sequential continuity: $x_n \\to a$ implies $f(x_n) \\to f(a)$.'
     },
@@ -408,11 +408,11 @@ export const section09Quiz = {
       question: 'A Lipschitz continuous function with constant $K$ satisfies:',
       options: [
         '$|f(x)| \\leq K$ for all $x$',
-        '$|f(x) - f(y)| \\leq K|x - y|$ for all $x, y$',
         '$|f\'(x)| \\leq K$ for all $x$',
+        '$|f(x) - f(y)| \\leq K|x - y|$ for all $x, y$',
         '$f(x) = Kx$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Lipschitz condition bounds how fast the function can change.'
     },
@@ -422,11 +422,11 @@ export const section09Quiz = {
       question: 'Every Lipschitz continuous function is:',
       options: [
         'Differentiable',
-        'Uniformly continuous',
+        'Constant',
         'Bounded',
-        'Constant'
+        'Uniformly continuous'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Lipschitz implies uniform continuity (take $\\delta = \\varepsilon/K$).'
     },
@@ -444,12 +444,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The oscillation of $f$ at $a$ is $0$ if and only if:',
       options: [
-        '$f(a) = 0$',
         '$f$ is continuous at $a$',
+        '$f(a) = 0$',
         '$f$ is bounded near $a$',
         '$f$ is differentiable at $a$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Zero oscillation at a point is equivalent to continuity at that point.'
     },
@@ -473,11 +473,11 @@ export const section09Quiz = {
       question: 'If $f$ is continuous at $a$ and $f(a) > 0$, then:',
       options: [
         '$f(x) > 0$ for all $x$',
-        'There exists $\\delta > 0$ such that $f(x) > 0$ for $|x - a| < \\delta$',
         '$f$ is constant near $a$',
+        'There exists $\\delta > 0$ such that $f(x) > 0$ for $|x - a| < \\delta$',
         '$f$ is increasing near $a$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Sign preservation: continuous functions preserve sign in a neighborhood of points where they\'re nonzero.'
     },
@@ -497,12 +497,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = \\sqrt{x}$ on $[0, \\infty)$ is:',
       options: [
-        'Uniformly continuous',
+        'Lipschitz continuous',
         'Not uniformly continuous',
         'Uniformly continuous only on $[1, \\infty)$',
-        'Lipschitz continuous'
+        'Uniformly continuous'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: '$\\sqrt{x}$ is uniformly continuous on $[0, \\infty)$. Though not Lipschitz (derivative unbounded at $0$), it satisfies $|\\sqrt{x} - \\sqrt{y}| \\leq \\sqrt{|x-y|}$.'
     },
@@ -511,12 +511,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous on $(a, b)$ and uniformly continuous, then:',
       options: [
-        '$f$ must be bounded',
+        'Both (A) and (B)',
         '$f$ extends continuously to $[a, b]$',
         '$f$ is differentiable',
-        'Both (A) and (B)'
+        '$f$ must be bounded'
       ],
-      correctIndex: 3,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Uniform continuity on $(a,b)$ implies the limits at $a$ and $b$ exist, allowing continuous extension and implying boundedness.'
     },
@@ -539,12 +539,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A function can have a countable set of discontinuities and still be:',
       options: [
-        'Riemann integrable',
-        'Continuous',
         'Differentiable everywhere',
+        'Continuous',
+        'Riemann integrable',
         'Uniformly continuous'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Lebesgue\'s criterion: bounded functions with measure-zero discontinuities are Riemann integrable.'
     },
@@ -554,11 +554,11 @@ export const section09Quiz = {
       question: 'The modulus of continuity $\\omega(\\delta) = \\sup\\{|f(x) - f(y)| : |x - y| < \\delta\\}$ for a uniformly continuous $f$:',
       options: [
         'Is always constant',
-        'Satisfies $\\omega(\\delta) \\to 0$ as $\\delta \\to 0$',
+        'Does not exist',
         'Is always equal to $\\delta$',
-        'Does not exist'
+        'Satisfies $\\omega(\\delta) \\to 0$ as $\\delta \\to 0$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'For uniformly continuous functions, $\\omega(\\delta) \\to 0$ as $\\delta \\to 0$.'
     },
@@ -567,12 +567,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A continuous function $f: \\mathbb{Q} \\to \\mathbb{R}$ (domain is rationals only):',
       options: [
-        'Can always be extended to a continuous function on $\\mathbb{R}$',
         'Can be extended to $\\mathbb{R}$ iff it is uniformly continuous',
+        'Can always be extended to a continuous function on $\\mathbb{R}$',
         'Is automatically uniformly continuous',
         'Cannot exist'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Extension to $\\mathbb{R}$ requires uniform continuity to define limits at irrationals consistently.'
     },
@@ -618,12 +618,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'There exists a function continuous only at a single point:',
       options: [
-        'True, e.g., $f(x) = xD(x)$ where $D$ is Dirichlet',
+        'True, but only for discontinuous functions',
         'False, continuity points are always dense',
         'False, there must be an interval of continuity',
-        'True, but only for discontinuous functions'
+        'True, e.g., $f(x) = xD(x)$ where $D$ is Dirichlet'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: '$f(x) = x \\cdot D(x)$ (where $D$ is Dirichlet) is continuous only at $x = 0$.'
     },
@@ -632,12 +632,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is monotonic on $(a, b)$, its discontinuities are:',
       options: [
-        'All removable',
         'At most countable, all jump discontinuities',
+        'All removable',
         'Essential',
         'Nowhere dense'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Monotonic functions can only have jump discontinuities, and there are at most countably many.'
     },
@@ -655,12 +655,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A Hölder continuous function with exponent $\\alpha$ satisfies:',
       options: [
-        '$|f(x) - f(y)| \\leq C|x - y|^\\alpha$ for some $C$ and $0 < \\alpha \\leq 1$',
         '$|f(x)| \\leq C|x|^\\alpha$',
+        '$|f(x) - f(y)| \\leq C|x - y|^\\alpha$ for some $C$ and $0 < \\alpha \\leq 1$',
         '$f$ is differentiable with bounded derivative',
         '$f$ is constant'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Hölder continuity generalizes Lipschitz ($\\alpha = 1$) to fractional exponents.'
     },
@@ -685,10 +685,10 @@ export const section09Quiz = {
       options: [
         '$\\lim f(x)/g(x) = \\infty$',
         '$\\lim f(x)/g(x) = 0$',
-        '$\\lim f(x)/g(x)$ may not exist',
-        '$\\lim f(x)/g(x) = L$'
+        '$\\lim f(x)/g(x) = L$',
+        '$\\lim f(x)/g(x)$ may not exist'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'This is an indeterminate form if $L \\neq 0$; the limit depends on how fast each approaches its value.'
     },
@@ -705,12 +705,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is uniformly continuous on $\\mathbb{R}$ and bounded below, then:',
       options: [
-        '$f$ is bounded',
         '$f$ might be unbounded above',
+        '$f$ is bounded',
         '$f$ is Lipschitz',
         '$f$ is constant'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'E.g., $f(x) = \\sqrt{|x|}$ is uniformly continuous, bounded below by $0$, but unbounded above.'
     },
@@ -735,10 +735,10 @@ export const section09Quiz = {
       options: [
         '$f$ is continuous',
         'For every $\\varepsilon > 0$, there exists $\\delta > 0$ independent of the point',
-        'Whenever $x_n - y_n \\to 0$, we have $f(x_n) - f(y_n) \\to 0$',
-        'Both (B) and (C)'
+        'Both (B) and (C)',
+        'Whenever $x_n - y_n \\to 0$, we have $f(x_n) - f(y_n) \\to 0$'
       ],
-      correctIndex: 3,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The sequence characterization (C) is equivalent to the $\\varepsilon$-$\\delta$ definition (B).'
     },
@@ -747,12 +747,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A continuous bijection $f: [a, b] \\to [c, d]$ has:',
       options: [
-        'A continuous inverse',
+        'An inverse that may or may not be continuous',
         'A discontinuous inverse',
         'No inverse',
-        'An inverse that may or may not be continuous'
+        'A continuous inverse'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'A continuous bijection from a compact interval to an interval has a continuous inverse.'
     }

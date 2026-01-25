@@ -7,11 +7,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'Over a field $F$, $F[x]$ is:',
     options: [
       'A field',
-      'A Euclidean domain',
       'Not an integral domain',
-      'A finite ring'
+      'A finite ring',
+      'A Euclidean domain',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$F[x]$ is a Euclidean domain with the Euclidean function being the degree. This means we have a division algorithm and $F[x]$ is also a PID and UFD.',
   },
@@ -35,11 +35,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'If $f(x) \\in F[x]$ is irreducible and $\\deg(f) = n$, then $F[x]/(f)$ is:',
     options: [
       'Isomorphic to $F$',
-      'A field extension of $F$ of degree $n$',
       'Not a field',
+      'A field extension of $F$ of degree $n$',
       'Isomorphic to $F^n$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'When $f$ is irreducible, $(f)$ is a maximal ideal in $F[x]$ (since $F[x]$ is a PID), so $F[x]/(f)$ is a field. As a vector space over $F$, it has dimension $n = \\deg(f)$.',
   },
@@ -48,12 +48,28 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The formal derivative of $f(x) = x^p$ over $\\mathbb{Z}_p$ is:',
     options: [
-      '$px^{p-1} = 0$',
-      '$x^{p-1}$',
-      '$1$',
-      '$p$'
+      '$p
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The formal derivative is $f\'(x) = px^{p-1}$. In $\\mathbb{Z}_p$, we have $p = 0$, so $f\'(x) = 0$. This shows $x^p$ has zero derivative over $\\mathbb{Z}_p$.',
+  },
+      '$px^{p-1} = 0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The formal derivative is $f\'(x) = px^{p-1}$. In $\\mathbb{Z}_p$, we have $p = 0$, so $f\'(x) = 0$. This shows $x^p$ has zero derivative over $\\mathbb{Z}_p$.',
+  },
+      '$x^{p-1}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The formal derivative is $f\'(x) = px^{p-1}$. In $\\mathbb{Z}_p$, we have $p = 0$, so $f\'(x) = 0$. This shows $x^p$ has zero derivative over $\\mathbb{Z}_p$.',
+  },
+      '$1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The formal derivative is $f\'(x) = px^{p-1}$. In $\\mathbb{Z}_p$, we have $p = 0$, so $f\'(x) = 0$. This shows $x^p$ has zero derivative over $\\mathbb{Z}_p$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The formal derivative is $f\'(x) = px^{p-1}$. In $\\mathbb{Z}_p$, we have $p = 0$, so $f\'(x) = 0$. This shows $x^p$ has zero derivative over $\\mathbb{Z}_p$.',
   },

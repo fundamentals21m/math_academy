@@ -7,12 +7,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many permutations are there of a set with 4 elements?',
     options: [
-      '24',
-      '16',
       '12',
-      '8',
+      '16',
+      '24',
+      '8'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The number of permutations of n elements is n! (n factorial). For 4 elements: 4! = 4 × 3 × 2 × 1 = 24.',
@@ -22,12 +22,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A transposition is a permutation that:',
     options: [
-      'Swaps exactly two elements and fixes all others',
+      'Keeps all elements in place',
       'Moves all elements one position',
       'Reverses the order of all elements',
-      'Keeps all elements in place',
+      'Swaps exactly two elements and fixes all others'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A transposition swaps exactly two elements while leaving all other elements in their original positions. In cycle notation, it is written as (i j).',
@@ -53,12 +53,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A 5-cycle like $(1 \\, 2 \\, 3 \\, 4 \\, 5)$ is:',
     options: [
-      'An even permutation',
       'An odd permutation',
+      'An even permutation',
       'Neither even nor odd',
-      'The identity permutation',
+      'The identity permutation'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'A k-cycle can be written as k-1 transpositions. A 5-cycle needs 4 transpositions, which is even. In general, a k-cycle is even when k is odd, and odd when k is even.',
@@ -69,12 +69,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Lagrange\'s theorem states that for a subgroup $H$ of a finite group $G$:',
     options: [
-      '$|H|$ divides $|G|}$',
-      '$|H| = |G|$',
       '$|H|$ is always prime',
-      '$|G|$ divides $|H|$',
+      '$|H| = |G|$',
+      '$|H|$ divides $|G|}$',
+      '$|G|$ divides $|H|$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Lagrange\'s theorem states that the order (size) of any subgroup H must divide the order of the group G. This fundamental result constrains what subgroups can exist in a group.',
@@ -84,12 +84,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cayley\'s theorem states that:',
     options: [
-      'Every group is isomorphic to a subgroup of some symmetric group',
+      'Every group has exactly one subgroup',
       'Every symmetric group is abelian',
       'Every permutation is a transposition',
-      'Every group has exactly one subgroup',
+      'Every group is isomorphic to a subgroup of some symmetric group'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Cayley\'s theorem shows that every abstract group can be faithfully represented as a group of permutations (a subgroup of some S_n). This makes permutation groups "universal" in group theory.',

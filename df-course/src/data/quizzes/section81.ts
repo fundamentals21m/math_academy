@@ -7,11 +7,11 @@ export const section81Questions: QuizQuestion[] = [
     question: 'The prime spectrum $\\text{Spec } R$ of a ring $R$ is:',
     options: [
       'The set of all ideals of $R$',
-      'The set of all prime ideals of $R$',
       'The set of all maximal ideals of $R$',
+      'The set of all prime ideals of $R$',
       'The set of all nilpotent elements of $R$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$\\text{Spec } R$ is the set of all prime ideals of $R$. It is equipped with the Zariski topology, making it a topological space fundamental to algebraic geometry.',
   },
@@ -20,12 +20,24 @@ export const section81Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The closed sets in the Zariski topology on $\\text{Spec } R$ are:',
     options: [
-      '$V(I) = \\{P \\in \\text{Spec } R : P \\supseteq I\\}$ for ideals $I$',
-      '$V(I) = \\{P \\in \\text{Spec } R : P \\subseteq I\\}$ for ideals $I$',
-      'Finite subsets of $\\text{Spec } R$',
-      'Complements of principal ideals'
-    ],
+      '$V(I) = \\{P \\in \\text{Spec } R : P \\supseteq I\\}$ for ideals $I
     correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A closed set in the Zariski topology is $V(I) = \\{P \\in \\text{Spec } R : I \\subseteq P\\}$, the set of prime ideals containing $I$. These form the closed sets.',
+  },
+      'Complements of principal ideals',
+      '$V(I) = \\{P \\in \\text{Spec } R : P \\subseteq I\\}$ for ideals $I
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A closed set in the Zariski topology is $V(I) = \\{P \\in \\text{Spec } R : I \\subseteq P\\}$, the set of prime ideals containing $I$. These form the closed sets.',
+  },
+      'Finite subsets of $\\text{Spec } R
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A closed set in the Zariski topology is $V(I) = \\{P \\in \\text{Spec } R : I \\subseteq P\\}$, the set of prime ideals containing $I$. These form the closed sets.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A closed set in the Zariski topology is $V(I) = \\{P \\in \\text{Spec } R : I \\subseteq P\\}$, the set of prime ideals containing $I$. These form the closed sets.',
   },
@@ -34,12 +46,20 @@ export const section81Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The basic open sets in the Zariski topology on $\\text{Spec } R$ are:',
     options: [
-      '$V(f) = \\{P : f \\in P\\}$ for $f \\in R$',
-      '$D(f) = \\{P : f \\notin P\\}$ for $f \\in R$',
+      '$V(f) = \\{P : f \\in P\\}$ for $f \\in R
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The basic open sets are $D(f) = \\text{Spec } R \\setminus V(f) = \\{P \\in \\text{Spec } R : f \\notin P\\}$. These form a basis for the Zariski topology.',
+  },
       'Open balls around each prime ideal',
-      'Complements of maximal ideals'
+      'Complements of maximal ideals',
+      '$D(f) = \\{P : f \\notin P\\}$ for $f \\in R
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The basic open sets are $D(f) = \\text{Spec } R \\setminus V(f) = \\{P \\in \\text{Spec } R : f \\notin P\\}$. These form a basis for the Zariski topology.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The basic open sets are $D(f) = \\text{Spec } R \\setminus V(f) = \\{P \\in \\text{Spec } R : f \\notin P\\}$. These form a basis for the Zariski topology.',
   },
@@ -65,7 +85,7 @@ export const section81Questions: QuizQuestion[] = [
       'Maximal ideals',
       'Prime ideals',
       'Radical ideals',
-      'Principal ideals'
+      'Principal ideals',
     ],
     correctIndex: 1,
     difficulty: 'medium',

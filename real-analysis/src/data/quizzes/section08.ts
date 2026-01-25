@@ -35,12 +35,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'If $R$ is the radius of convergence, the series converges absolutely for:',
       options: [
-        '$|x - a| < R$',
+        '$x = a$ only',
         '$|x - a| > R$',
         '$|x - a| = R$',
-        '$x = a$ only'
+        '$|x - a| < R$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Inside the radius ($|x-a| < R$), the series converges absolutely.'
     },
@@ -49,12 +49,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'At the boundary $|x - a| = R$:',
       options: [
-        'The series always converges',
-        'The series always diverges',
         'Convergence must be checked separately at each endpoint',
+        'The series always diverges',
+        'The series always converges',
         'The series converges conditionally'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'At the endpoints, the series may converge, diverge, or converge conditionally - each must be tested.'
     },
@@ -96,11 +96,11 @@ export const section08Quiz = {
       question: 'If $R = 0$, the power series converges only at:',
       options: [
         'No points',
-        'The center $x = a$',
         'All real numbers',
+        'The center $x = a$',
         'The interval $[-1, 1]$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'When $R = 0$, the series converges only at the single point $x = a$.'
     },
@@ -109,12 +109,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The formula $R = \\lim_{n \\to \\infty} \\left|\\frac{c_n}{c_{n+1}}\\right|$ gives the radius when:',
       options: [
-        'The limit exists',
+        'Always',
         'The limit is $0$',
         'The coefficients alternate',
-        'Always'
+        'The limit exists'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'This formula (derived from the ratio test) gives $R$ when the limit exists.'
     },
@@ -132,12 +132,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The Maclaurin series for $\\sin x$ is:',
       options: [
-        '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$',
         '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$',
+        '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$',
         '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$',
         '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: '$\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$.'
     },
@@ -146,12 +146,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The Maclaurin series for $\\cos x$ is:',
       options: [
-        '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$',
         '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$',
+        '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$',
         '$\\sum_{n=0}^{\\infty} \\frac{x^{2n}}{(2n)!}$',
         '$\\sum_{n=0}^{\\infty} x^n$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$.'
     },
@@ -184,10 +184,10 @@ export const section08Quiz = {
       options: [
         'Continuous',
         'Differentiable',
-        'Analytic on that interval',
-        'Bounded'
+        'Bounded',
+        'Analytic on that interval'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'A function is analytic if it equals its Taylor series in some neighborhood of each point.'
     },
@@ -205,12 +205,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'Differentiating a power series $\\sum c_n x^n$ term by term gives:',
       options: [
-        '$\\sum c_n x^{n+1}$',
         '$\\sum n c_n x^{n-1}$',
+        '$\\sum c_n x^{n+1}$',
         '$\\sum \\frac{c_n x^{n+1}}{n+1}$',
         '$\\sum c_n$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Term-by-term differentiation: $\\frac{d}{dx}(c_n x^n) = n c_n x^{n-1}$.'
     },
@@ -220,11 +220,11 @@ export const section08Quiz = {
       question: 'Integrating a power series $\\sum c_n x^n$ term by term gives:',
       options: [
         '$\\sum c_n x^{n-1}$',
-        '$\\sum n c_n x^n$',
         '$\\sum \\frac{c_n x^{n+1}}{n+1} + C$',
+        '$\\sum n c_n x^n$',
         '$\\sum c_n$'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Term-by-term integration: $\\int c_n x^n dx = \\frac{c_n x^{n+1}}{n+1}$.'
     },
@@ -277,11 +277,11 @@ export const section08Quiz = {
       question: 'The series $\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$ at $x = -1$:',
       options: [
         'Diverges',
-        'Converges conditionally',
+        'Oscillates',
         'Converges absolutely',
-        'Oscillates'
+        'Converges conditionally'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'At $x = -1$, we get $\\sum \\frac{(-1)^n}{n}$, the alternating harmonic series, which converges conditionally.'
     },
@@ -299,12 +299,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'For $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$, differentiating term by term gives:',
       options: [
-        '$\\sum_{n=1}^{\\infty} \\frac{x^{n-1}}{(n-1)!}$',
         '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$',
+        '$\\sum_{n=1}^{\\infty} \\frac{x^{n-1}}{(n-1)!}$',
         '$\\sum_{n=0}^{\\infty} \\frac{x^{n+1}}{(n+1)!}$',
         '$0$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: '$\\frac{d}{dx}\\sum \\frac{x^n}{n!} = \\sum \\frac{nx^{n-1}}{n!} = \\sum \\frac{x^{n-1}}{(n-1)!} = \\sum \\frac{x^n}{n!} = e^x$.'
     },
@@ -345,11 +345,11 @@ export const section08Quiz = {
       question: 'The binomial series $(1+x)^\\alpha = \\sum_{n=0}^{\\infty} \\binom{\\alpha}{n} x^n$ converges for $|x| < 1$ when:',
       options: [
         '$\\alpha$ is a positive integer',
-        '$\\alpha$ is any real number',
         '$\\alpha = 0$',
+        '$\\alpha$ is any real number',
         '$\\alpha$ is rational'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'For any real $\\alpha$, the binomial series converges absolutely for $|x| < 1$.'
     },
@@ -359,11 +359,11 @@ export const section08Quiz = {
       question: 'The series $\\sum_{n=1}^{\\infty} \\frac{x^n}{n^2}$ has $R = 1$. At both endpoints:',
       options: [
         'The series diverges',
-        'The series converges absolutely',
+        'Cannot be determined',
         'The series converges conditionally at one endpoint',
-        'Cannot be determined'
+        'The series converges absolutely'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'At $x = 1$: $\\sum 1/n^2$ converges. At $x = -1$: $\\sum (-1)^n/n^2$ converges absolutely.'
     },
@@ -372,12 +372,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'If $f(x) = \\sum_{n=0}^{\\infty} c_n x^n$, then $c_n = $:',
       options: [
-        '$f(n)$',
-        '$f^{(n)}(0)$',
         '$\\frac{f^{(n)}(0)}{n!}$',
+        '$f^{(n)}(0)$',
+        '$f(n)$',
         '$\\frac{f(0)}{n!}$'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'By Taylor\'s theorem, the coefficient $c_n = \\frac{f^{(n)}(0)}{n!}$.'
     },
@@ -445,11 +445,11 @@ export const section08Quiz = {
       question: 'Cauchy-Hadamard formula states $R = 1/\\limsup |c_n|^{1/n}$. This uses:',
       options: [
         'The ratio test',
-        'The root test',
         'The integral test',
+        'The root test',
         'The comparison test'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The Cauchy-Hadamard formula is based on the root test applied to the power series.'
     },
@@ -468,11 +468,11 @@ export const section08Quiz = {
       question: 'A power series and its derivatives have:',
       options: [
         'Different radii of convergence',
-        'The same radius of convergence',
+        'Derivatives have smaller radius',
         'Derivatives have larger radius',
-        'Derivatives have smaller radius'
+        'The same radius of convergence'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'A power series, its term-by-term derivative, and integral all have the same radius of convergence.'
     }
@@ -484,12 +484,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = e^{-1/x^2}$ for $x \\neq 0$ and $f(0) = 0$ is:',
       options: [
-        'Not differentiable at $0$',
         'Differentiable but not analytic at $0$',
+        'Not differentiable at $0$',
         'Analytic everywhere',
         'Equal to its Taylor series at $0$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: '$f$ is infinitely differentiable with all derivatives at $0$ equal to $0$, so its Taylor series is $0$, but $f \\neq 0$ for $x \\neq 0$.'
     },
@@ -525,12 +525,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'Abel\'s theorem states that if $\\sum c_n$ converges to $S$, then:',
       options: [
-        '$\\lim_{x \\to 1^-} \\sum c_n x^n = S$',
         '$\\sum c_n x^n$ diverges at $x = 1$',
+        '$\\lim_{x \\to 1^-} \\sum c_n x^n = S$',
         '$R = 1$ always',
         'The series converges uniformly'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Abel\'s theorem: if $\\sum c_n$ converges, then $\\lim_{x \\to 1^-} \\sum c_n x^n = \\sum c_n$.'
     },
@@ -539,12 +539,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$ at $x = 1$ gives the harmonic series. By Abel\'s theorem applied at $x = -1$:',
       options: [
-        '$\\lim_{x \\to -1^+} \\sum \\frac{x^n}{n} = -\\ln 2$',
-        'The limit does not exist',
         '$\\lim_{x \\to -1^+} \\sum \\frac{x^n}{n} = \\ln 2$',
+        'The limit does not exist',
+        '$\\lim_{x \\to -1^+} \\sum \\frac{x^n}{n} = -\\ln 2$',
         'Abel\'s theorem does not apply'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: '$\\sum \\frac{(-1)^n}{n} = -\\ln 2$. By Abel, $\\lim_{x \\to -1^+} \\sum \\frac{x^n}{n} = -\\ln 2$.'
     },
@@ -555,10 +555,10 @@ export const section08Quiz = {
       options: [
         '$\\sum (a_n + b_n) x^n$',
         '$\\sum a_n b_n x^n$',
-        '$\\sum c_n x^n$ where $c_n = \\sum_{k=0}^{n} a_k b_{n-k}$',
-        'Not a power series'
+        'Not a power series',
+        '$\\sum c_n x^n$ where $c_n = \\sum_{k=0}^{n} a_k b_{n-k}$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The Cauchy product: $c_n = \\sum_{k=0}^{n} a_k b_{n-k}$ gives a power series with $R \\geq \\min(R_1, R_2)$.'
     },
@@ -567,12 +567,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'A real analytic function has the property that:',
       options: [
-        'It is continuous',
         'It equals its Taylor series in some neighborhood of each point',
+        'It is continuous',
         'It is differentiable once',
         'It is bounded'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Real analytic means locally equal to a convergent power series.'
     },
@@ -604,11 +604,11 @@ export const section08Quiz = {
       question: 'The Maclaurin series for $(1-x)^{-1/2}$ involves:',
       options: [
         'Integer coefficients',
-        'Binomial coefficients $\\binom{-1/2}{n}$',
         'Factorial coefficients',
+        'Binomial coefficients $\\binom{-1/2}{n}$',
         'Fibonacci numbers'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: '$(1-x)^{-1/2} = \\sum \\binom{-1/2}{n} (-x)^n$ where $\\binom{-1/2}{n} = \\frac{(-1/2)(-3/2)\\cdots}{n!}$.'
     },
@@ -618,11 +618,11 @@ export const section08Quiz = {
       question: 'If $\\sum c_n x^n$ has a natural boundary at $|x| = R$, then:',
       options: [
         'The series can be analytically continued beyond $R$',
-        'The series cannot be analytically continued beyond $|x| = R$',
+        '$R = \\infty$',
         'The function is entire',
-        '$R = \\infty$'
+        'The series cannot be analytically continued beyond $|x| = R$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'A natural boundary means no analytic continuation exists beyond the circle of convergence.'
     },
@@ -631,12 +631,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=0}^{\\infty} x^{2^n}$ (lacunary) has a natural boundary at:',
       options: [
-        '$x = 0$',
         '$|x| = 1$',
+        '$x = 0$',
         '$|x| = 2$',
         'No boundary exists'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Lacunary series with $n_k/n_{k-1} \\to \\infty$ have the circle of convergence as a natural boundary.'
     },
@@ -645,12 +645,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The generating function $\\sum_{n=0}^{\\infty} F_n x^n$ for Fibonacci numbers $F_n$ equals:',
       options: [
-        '$\\frac{x}{1-x-x^2}$',
         '$\\frac{1}{1-x-x^2}$',
+        '$\\frac{x}{1-x-x^2}$',
         '$\\frac{1}{1-x}$',
         '$e^x$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Using $F_{n+2} = F_{n+1} + F_n$, one derives $\\sum F_n x^n = \\frac{x}{1-x-x^2}$.'
     },
@@ -669,11 +669,11 @@ export const section08Quiz = {
       question: 'If $f(x) = \\sum c_n (x-a)^n$ has $R > 0$, then $f$ is:',
       options: [
         'Continuous on $(a-R, a+R)$ only',
-        'Infinitely differentiable on $(a-R, a+R)$',
         'Differentiable exactly once',
+        'Infinitely differentiable on $(a-R, a+R)$',
         'Discontinuous at $x = a$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Power series define infinitely differentiable (and analytic) functions inside their interval of convergence.'
     },
@@ -683,11 +683,11 @@ export const section08Quiz = {
       question: 'The Taylor series of $\\tan x$ about $x = 0$:',
       options: [
         'Has $R = \\infty$',
-        'Has $R = \\pi/2$',
+        'Does not exist',
         'Has only even powers',
-        'Does not exist'
+        'Has $R = \\pi/2$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: '$\\tan x$ has vertical asymptotes at $x = \\pm\\pi/2$, limiting the radius to $R = \\pi/2$.'
     },
@@ -704,12 +704,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'If $\\sum c_n z^n$ converges at some $z_0 \\neq 0$, then it converges absolutely for all $z$ with:',
       options: [
-        '$|z| = |z_0|$',
         '$|z| < |z_0|$',
+        '$|z| = |z_0|$',
         '$|z| > |z_0|$',
         '$z = z_0$ only'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'If the series converges at $z_0$, then $|c_n z_0^n|$ is bounded, implying absolute convergence for $|z| < |z_0|$.'
     },

@@ -22,12 +22,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A branch point of a multi-valued function is:',
     options: [
-      'A point where sheets of the Riemann surface meet',
       'A point where the function is zero',
+      'A point where sheets of the Riemann surface meet',
       'A maximum of the function',
-      'A point where the function is analytic',
+      'A point where the function is analytic'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Branch points are where the different "sheets" of a Riemann surface connect. For $\\sqrt{z}$, the branch points are at $z = 0$ and $z = \\infty$—these are where circling the point causes you to move between sheets.',
@@ -38,12 +38,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Riemann surface of $\\sqrt{z}$ consists of:',
     options: [
-      'Two sheets glued together along a branch cut',
-      'A single copy of the complex plane',
       'Infinitely many sheets',
-      'Three disconnected planes',
+      'A single copy of the complex plane',
+      'Two sheets glued together along a branch cut',
+      'Three disconnected planes'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Since $\\sqrt{z}$ has two values for each nonzero $z$, its Riemann surface has two sheets. These are glued along a branch cut (typically the positive real axis) so that circling the origin once takes you from one sheet to the other.',
@@ -53,12 +53,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Riemann surface of $\\log z$ has:',
     options: [
-      'Infinitely many sheets arranged in a spiral',
+      'A finite number of sheets equal to $2\\pi$',
       'Two sheets',
       'One sheet',
-      'A finite number of sheets equal to $2\\pi$',
+      'Infinitely many sheets arranged in a spiral'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The logarithm has infinitely many values: $\\log z = \\ln|z| + i(\\arg z + 2\\pi k)$ for all integers $k$. The Riemann surface is an infinite spiral—each circuit around the origin moves you to the next sheet.',
@@ -84,12 +84,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Riemann-Roch theorem relates:',
     options: [
-      'Meromorphic functions, divisors, and the genus of a surface',
       'Branch points and branch cuts',
+      'Meromorphic functions, divisors, and the genus of a surface',
       'Real and imaginary parts of functions',
-      'Derivatives and integrals',
+      'Derivatives and integrals'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The Riemann-Roch theorem $\\ell(D) - \\ell(K-D) = \\deg(D) + 1 - g$ connects the space of meromorphic functions with prescribed poles (analysis), divisors (algebra), and genus (topology). It\'s a cornerstone of algebraic geometry.',

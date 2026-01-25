@@ -1,0 +1,92 @@
+import type { QuizQuestion } from './types';
+
+export const section11Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'In the example, the last survivor (at age 105) could receive approximately how much per year?',
+    options: [
+      '$80,000',
+      '$200,000',
+      '$500,000',
+      '$800,000',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The last survivor gets all $20M pool × 4% = $800,000/year—800% of their original $100,000 contribution.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Mathematically, payouts in a classic tontine grow as:',
+    options: [
+      'Proportional to time elapsed',
+      'Proportional to $1/n$ where $n$ is survivors',
+      'Constant regardless of survivors',
+      'Proportional to $n^2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Payout D_t ∝ 1/n_t. As the number of survivors approaches 1, payouts explode toward infinity.',
+  },
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Payout D_t ∝ 1/n_t. As the number of survivors approaches 1, payouts explode toward infinity.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The classic tontine\'s payout profile is problematic for retirement because:',
+    options: [
+      'Inflation adjustments are mandatory',
+      'Payouts are too low overall',
+      'Early retirees get modest payouts while late survivors get enormous amounts they may not need',
+      'Payouts are guaranteed to decrease',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Active retirees in their 60s-70s get modest payouts when they might want to travel. Late survivors in their 90s+ get enormous payouts when they may have limited ability to spend.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Which is NOT a problem with the classic tontine design?',
+    options: [
+      'Wildly variable payouts make financial planning impossible',
+      'Perverse incentives regarding other members\\' deaths',
+      'Gambling-like characteristics',
+      'The initial contribution amount',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The initial contribution amount is not a design problem—it\'s simply a parameter. The problems are payout variability, perverse incentives, and gambling characteristics.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Historical tontines gained a bad reputation partly due to:',
+    options: [
+      'Real and imagined incentives for murder of other members',
+      'High administrative costs',
+      'Government prohibition from the start',
+      'Mathematical impossibility of the concept',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The fewer survivors, the more each gets—creating real and imagined incentives for murder that fueled tontines\' negative reputation.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Modern tontine designs aim to eliminate all of the following EXCEPT:',
+    options: [
+      'Smooth, predictable payout growth',
+      'Investment returns',
+      'Elimination of the last-survivor jackpot',
+      'Optimal consumption profiles',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Modern tontines still include investment returns—that\'s part of how they work. They aim for smooth payouts, no jackpot, and optimal consumption, addressing classic design flaws.',
+  },
+];

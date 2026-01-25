@@ -100,12 +100,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'What does the Extended Euclidean Algorithm find?',
       options: [
-        'Integers $x, y$ such that $ax + by = \\gcd(a, b)$',
+        'The modular square root',
         'The prime factors of a number',
         'The largest prime less than $n$',
-        'The modular square root',
+        'Integers $x, y$ such that $ax + by = \\gcd(a, b)$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: "The Extended Euclidean Algorithm finds Bézout coefficients $x$ and $y$ satisfying $ax + by = \\gcd(a, b)$.",
     },
@@ -239,12 +239,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The worst-case input for the Euclidean algorithm (requiring most steps) is:',
       options: [
-        'Consecutive Fibonacci numbers',
         'Powers of 2',
+        'Consecutive Fibonacci numbers',
         'Twin primes',
-        'Consecutive integers',
+        'Consecutive integers'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Consecutive Fibonacci numbers require the maximum number of steps because each quotient is always $1$, making progress as slow as possible.',
     },

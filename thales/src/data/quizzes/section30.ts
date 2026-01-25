@@ -10,11 +10,11 @@ export const section30Questions: QuizQuestion[] = [
     question: 'What geometric construction did Gauss discover as a teenager?',
     options: [
       'Trisecting an angle with ruler and compass',
-      'The regular 17-gon with ruler and compass',
       'Squaring the circle with ruler and compass',
       'Doubling the cube with ruler and compass',
+      'The regular 17-gon with ruler and compass',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Gauss was inspired to become a mathematician by discovering a ruler and compass construction for the regular 17-gon when he was only a teenager.',
@@ -23,8 +23,13 @@ export const section30Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'In what year did Gauss publish the Disquisitiones Arithmeticae?',
-    options: ['1777', '1801', '1807', '1855'],
-    correctIndex: 1,
+    options: [
+      '1801',
+      '1777',
+      '1807',
+      '1855',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       "Gauss's monumental number theory book Disquisitiones Arithmeticae appeared in 1801. It included the first proof of the Law of Quadratic Reciprocity.",
@@ -33,8 +38,13 @@ export const section30Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'What does the Legendre symbol (n/p) equal when n is a quadratic residue mod p?',
-    options: ['0', '1', '-1', 'p'],
-    correctIndex: 1,
+    options: [
+      '1',
+      '0',
+      '-1',
+      'p',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The Legendre symbol (n/p) equals 1 when n is a quadratic residue modulo p (meaning n ≡ r² (mod p) for some r), and -1 when n is a quadratic non-residue.',
@@ -69,10 +79,10 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What astronomical achievement led to Gauss's appointment at Göttingen?",
     options: [
-      'Predicting the return of Halley\'s Comet',
+      'Predicting the return of Halley\\'s Comet',
       'Calculating the position of the asteroid Ceres',
       'Discovering the planet Neptune',
-      'Mapping the Moon\'s surface',
+      'Mapping the Moon\\'s surface',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -85,11 +95,11 @@ export const section30Questions: QuizQuestion[] = [
     question: "What is Euler's criterion for computing the Legendre symbol?",
     options: [
       'n^p ≡ (n/p) (mod p)',
+      'n^2 ≡ (n/p) (mod p)',
       'n^(p-1)/2 ≡ (n/p) (mod p)',
       'n^(p+1)/2 ≡ (n/p) (mod p)',
-      'n^2 ≡ (n/p) (mod p)',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       "Euler's criterion states that n^((p-1)/2) ≡ (n/p) (mod p). This follows from Fermat's Little Theorem and provides a computational method for the Legendre symbol.",
@@ -115,11 +125,11 @@ export const section30Questions: QuizQuestion[] = [
     question: 'What unit of measure is named after Gauss?',
     options: [
       'A unit of gravitational force',
-      'A unit of magnetic intensity',
       'A unit of electrical resistance',
       'A unit of light wavelength',
+      'A unit of magnetic intensity',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The gauss is a unit of measure denoting magnetic intensity, named after Gauss for his pioneering work in electromagnetism.',

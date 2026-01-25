@@ -5,7 +5,28 @@ export const section02Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'What is $17 \\bmod 5$?',
-    options: ['$0$', '$2$', '$3$', '$4$'],
+    options: [
+      '$2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$17 = 3 \\cdot 5 + 2$, so $17 \\equiv 2 \\pmod{5}$.',
+  },
+      '$0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$17 = 3 \\cdot 5 + 2$, so $17 \\equiv 2 \\pmod{5}$.',
+  },
+      '$3
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$17 = 3 \\cdot 5 + 2$, so $17 \\equiv 2 \\pmod{5}$.',
+  },
+      '$4
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$17 = 3 \\cdot 5 + 2$, so $17 \\equiv 2 \\pmod{5}$.',
+  },
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     explanation: '$17 = 3 \\cdot 5 + 2$, so $17 \\equiv 2 \\pmod{5}$.',
@@ -15,12 +36,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Fermat\'s Little Theorem, if $p$ is prime and $\\gcd(a, p) = 1$, then:',
     options: [
-      '$a^p \\equiv 1 \\pmod{p}$',
-      '$a^{p-1} \\equiv 1 \\pmod{p}$',
-      '$a^{p+1} \\equiv 1 \\pmod{p}$',
-      '$a^{2p} \\equiv 1 \\pmod{p}$'
+      '$a^p \\equiv 1 \\pmod{p}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ when $p$ is prime and $\\gcd(a,p) = 1$.',
+  },
+      '$a^{2p} \\equiv 1 \\pmod{p}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ when $p$ is prime and $\\gcd(a,p) = 1$.',
+  },
+      '$a^{p-1} \\equiv 1 \\pmod{p}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ when $p$ is prime and $\\gcd(a,p) = 1$.',
+  },
+      '$a^{p+1} \\equiv 1 \\pmod{p}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ when $p$ is prime and $\\gcd(a,p) = 1$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Fermat\'s Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ when $p$ is prime and $\\gcd(a,p) = 1$.',
   },
@@ -39,9 +76,9 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What does Euler\'s theorem generalize?',
     options: [
       'The Euclidean algorithm',
-      'Fermat\'s Little Theorem',
+      'Fermat\\'s Little Theorem',
       'The Chinese Remainder Theorem',
-      'Quadratic reciprocity'
+      'Quadratic reciprocity',
     ],
     correctIndex: 1,
     difficulty: 'medium',

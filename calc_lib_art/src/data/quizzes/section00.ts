@@ -7,11 +7,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What are the two fundamental operations of calculus?',
     options: [
       'Addition and subtraction',
-      'Differentiation and integration',
       'Multiplication and division',
-      'Exponentiation and logarithms'
+      'Exponentiation and logarithms',
+      'Differentiation and integration',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The two pillars of calculus are differentiation (measuring rates of change) and integration (measuring accumulation).',
   },
@@ -20,12 +20,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does differentiation measure?',
     options: [
-      'Total area under a curve',
       'Instantaneous rate of change',
+      'Total area under a curve',
       'The average of a function',
-      'The maximum value of a function'
+      'The maximum value of a function',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Differentiation measures instantaneous rate of change—how fast something is changing at a specific moment.',
   },
@@ -35,11 +35,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What does integration compute?',
     options: [
       'The slope at a point',
-      'The speed of an object',
       'Accumulated totals (such as area under a curve)',
-      'The derivative of a function'
+      'The speed of an object',
+      'The derivative of a function',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Integration computes accumulated totals—adding up infinitely many infinitesimal pieces to find areas, volumes, and other quantities.',
   },
@@ -51,7 +51,7 @@ export const section00Questions: QuizQuestion[] = [
       'Infinite',
       'Change',
       'Small stone (used for counting)',
-      'Mathematics'
+      'Mathematics',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -70,12 +70,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT a typical application of calculus?',
     options: [
-      'Calculating the orbit of a planet',
       'Determining prime numbers',
+      'Calculating the orbit of a planet',
       'Finding the optimal shape for a bridge',
       'Modeling population growth'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Prime number theory is part of number theory, not calculus. Calculus deals with continuous change, not discrete counting problems.',
   },

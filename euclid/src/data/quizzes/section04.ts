@@ -9,7 +9,7 @@ export const section04Questions: QuizQuestion[] = [
       'SSS (Side-Side-Side)',
       'SAS (Side-Angle-Side)',
       'ASA (Angle-Side-Angle)',
-      'AAS (Angle-Angle-Side)'
+      'AAS (Angle-Angle-Side)',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What controversial method does Euclid use in proving I.4?',
     options: [
-      'Proof by contradiction',
       'Superposition (placing one figure on another)',
+      'Proof by contradiction',
+      'Exhaustion',
       'Indirect proof',
-      'Exhaustion'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Euclid uses superposition—imagining one triangle placed on another—which some consider an undefined operation.',
   },
@@ -34,12 +34,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does I.4 prove about the remaining parts of congruent triangles?',
     options: [
-      'Only the third sides are equal',
       'Only the other angles are equal',
+      'Only the third sides are equal',
+      'Nothing about the remaining parts',
       'The base and remaining angles are all equal',
-      'Nothing about the remaining parts'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'I.4 proves that if SAS holds, then the base (third side) and both remaining angles are also equal.',
   },

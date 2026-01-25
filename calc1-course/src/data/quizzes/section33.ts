@@ -6,12 +6,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Mean Value Theorem states that if $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$, then there exists $c \\in (a,b)$ with:',
     options: [
-      '$f(c) = 0$',
       '$f\'(c) = \\frac{f(b) - f(a)}{b - a}$',
+      '$f(c) = 0$',
       '$f\'(c) = 0$',
       '$f(c) = f(a)$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'MVT: there is a point where the instantaneous rate equals the average rate.',
   },
@@ -20,10 +20,22 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Rolle\'s Theorem is a special case of MVT when:',
     options: [
-      '$f\'(a) = f\'(b)$',
-      '$f(a) = f(b)$',
-      '$a = b$',
-      '$f$ is constant'
+      '$f\\'(a) = f\\'(b)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Rolle: if $f(a) = f(b)$, then there exists $c$ with $f\'(c) = 0$.',
+  },
+      '$a = b
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Rolle: if $f(a) = f(b)$, then there exists $c$ with $f\'(c) = 0$.',
+  },
+      '$f$ is constant',
+      '$f(a) = f(b)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Rolle: if $f(a) = f(b)$, then there exists $c$ with $f\'(c) = 0$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -36,10 +48,10 @@ export const section33Questions: QuizQuestion[] = [
     options: [
       'Increasing',
       'Decreasing',
+      'Undefined',
       'Constant',
-      'Undefined'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Zero derivative everywhere implies constant function (by MVT).',
   },
@@ -48,12 +60,28 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f\'(x) > 0$ for all $x$ in $(a, b)$, then $f$ is:',
     options: [
-      'Constant on $(a,b)$',
-      'Strictly increasing on $[a,b]$',
-      'Decreasing on $(a,b)$',
-      'Has a minimum in $(a,b)$'
+      'Constant on $(a,b)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Positive derivative implies strictly increasing.',
+  },
+      'Has a minimum in $(a,b)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Positive derivative implies strictly increasing.',
+  },
+      'Strictly increasing on $[a,b]
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Positive derivative implies strictly increasing.',
+  },
+      'Decreasing on $(a,b)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Positive derivative implies strictly increasing.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Positive derivative implies strictly increasing.',
   },
@@ -71,12 +99,20 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The MVT requires $f$ to be:',
     options: [
-      'Differentiable on $[a, b]$',
-      'Continuous on $[a, b]$ and differentiable on $(a, b)$',
-      'Twice differentiable',
-      'A polynomial'
-    ],
+      'Differentiable on $[a, b]
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'MVT hypotheses: continuous on closed interval, differentiable on open interior.',
+  },
+      'Continuous on $[a, b]$ and differentiable on $(a, b)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'MVT hypotheses: continuous on closed interval, differentiable on open interior.',
+  },
+      'Twice differentiable',
+      'A polynomial',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'MVT hypotheses: continuous on closed interval, differentiable on open interior.',
   },

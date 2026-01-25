@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section38Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Economics, like logic and mathematics, is:',
+    options: [
+      'An empirical science requiring laboratories',
+      'A branch of psychology',
+      'A display of abstract reasoning that cannot be experimental',
+      'A purely descriptive enterprise',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Economics differs from natural sciences in method. The economist must reason from the logical structure of human action to its necessary consequences. This does not make it less rigorous—only differently rigorous.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The rise of economics as a profession is largely due to:',
+    options: [
+      'Interventionism—governments and interest groups needing economists to justify policies',
+      'Scientific curiosity',
+      'University expansion',
+      'Increased mathematical sophistication',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Governments need economists to design and justify programs. Interest groups need economists to support their demands. This professionalization creates conflicts of interest—economists may serve employers rather than truth.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Governments and pressure groups restrict freedom of economic thought because:',
+    options: [
+      'Economics is too complex for ordinary people',
+      'Economists are dangerous revolutionaries',
+      'Economic theory is constantly changing',
+      'Economic ideas determine policy, which affects their power',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The paramount role that economic ideas play in civic affairs explains why those in power want to propagandize the "good" doctrine and silence the "bad" ones. Truth threatens established arrangements.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'A citizen who votes on economic issues without understanding economics is like:',
+    options: [
+      'A patient who trusts their doctor',
+      'A surgeon who operates without understanding anatomy',
+      'An efficient consumer',
+      'A responsible voter',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Citizens who vote participate in deciding economic questions that affect everyone. Voting without understanding economics makes decisions that can harm the entire society. Economic literacy is a civic duty.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Basic economic principles are:',
+    options: [
+      'Beyond ordinary intelligence',
+      'Only for specialists',
+      'Accessible to anyone willing to think carefully',
+      'Constantly being revised by new research',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The common belief that economic questions are too complex for ordinary people is both false and dangerous. Anyone who can follow an argument can understand why price controls cause shortages.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Freedom of economic thought is:',
+    options: [
+      'Inseparable from intellectual freedom generally',
+      'A specialized concern',
+      'Separate from general intellectual freedom',
+      'Already fully secured',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'A society that suppresses economic truth will eventually suppress all truth. The patterns of censorship that begin with "dangerous" economic ideas extend to all ideas that challenge power.',
+  },
+];

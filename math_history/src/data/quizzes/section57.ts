@@ -22,12 +22,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In hyperbolic geometry, the sum of angles in a triangle is:',
     options: [
-      'Strictly less than 180 degrees',
       'Exactly 180 degrees',
+      'Strictly less than 180 degrees',
       'Strictly greater than 180 degrees',
-      'It varies unpredictably',
+      'It varies unpredictably'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A fundamental property of hyperbolic geometry is that the angle sum of any triangle is strictly less than 180°. The difference from 180° is called the angular defect and is proportional to the triangle\'s area.',
@@ -38,12 +38,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "angular defect" of a hyperbolic triangle?',
     options: [
-      '$180°$ minus the sum of the triangle\'s angles',
-      'The largest angle in the triangle',
       'The sum of the triangle\'s angles',
-      'The difference between the largest and smallest angles',
+      'The largest angle in the triangle',
+      '$180°$ minus the sum of the triangle\'s angles',
+      'The difference between the largest and smallest angles'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The angular defect δ = 180° - (α + β + γ) measures how much the angle sum falls short of the Euclidean value. Remarkably, the area of a hyperbolic triangle equals k²δ, where k is a constant related to curvature.',
@@ -53,12 +53,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In hyperbolic geometry, similar triangles (same angles, different sizes):',
     options: [
-      'Cannot exist - same angles implies congruence',
+      'Have the same area but different perimeters',
       'Exist just like in Euclidean geometry',
       'Can only exist for right triangles',
-      'Have the same area but different perimeters',
+      'Cannot exist - same angles implies congruence'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Since angle sum determines area in hyperbolic geometry (Area = k²δ), two triangles with the same angles must have the same area and are therefore congruent. This is fundamentally different from Euclidean geometry where similar figures of any size exist.',
@@ -84,12 +84,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An "ideal triangle" in hyperbolic geometry (with all three vertices at infinity) has:',
     options: [
-      'All angles equal to 0° and finite, maximal area',
       'All angles equal to 60°',
+      'All angles equal to 0° and finite, maximal area',
       'Infinite area',
-      'Zero area',
+      'Zero area'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'An ideal triangle has all three vertices at infinity (where asymptotic parallels meet). All three angles are 0°, giving angular defect δ = 180°. Despite having "infinite" vertices, the area is finite: πk². All ideal triangles are congruent and have maximum possible area for hyperbolic triangles.',

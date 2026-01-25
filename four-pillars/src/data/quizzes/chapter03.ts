@@ -7,12 +7,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who are the two mathematicians credited with independently discovering the coordinate approach to geometry around 1630?',
     options: [
-      'Euclid and Pythagoras',
       'Fermat and Descartes',
+      'Euclid and Pythagoras',
       'Newton and Leibniz',
-      'Gauss and Riemann'
+      'Gauss and Riemann',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Pierre de Fermat and René Descartes independently discovered the advantages of using coordinates in geometry around 1630. Descartes published first in 1637.',
   },
@@ -21,12 +21,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the coordinate approach called "Cartesian" geometry?',
     options: [
+      'From the old way of writing Descartes\\' name: Des Cartes',
       'It was developed in Carthage',
       'It uses carts to measure distances',
-      'From the old way of writing Descartes\' name: Des Cartes',
-      'It was named after a Greek mathematician'
+      'It was named after a Greek mathematician',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The coordinate approach became known as "Cartesian" from the old way of writing Descartes\' name: Des Cartes.',
   },
@@ -35,10 +35,26 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What notation represents the Cartesian plane (number plane)?',
     options: [
-      '$\\mathbb{Z}$',
-      '$\\mathbb{Q}$',
-      '$\\mathbb{R}^2$',
-      '$\\mathbb{C}$'
+      '$\\mathbb{Z}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Cartesian plane is denoted $\\mathbb{R}^2$, which is the set of all ordered pairs of real numbers.',
+  },
+      '$\\mathbb{R}^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Cartesian plane is denoted $\\mathbb{R}^2$, which is the set of all ordered pairs of real numbers.',
+  },
+      '$\\mathbb{Q}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Cartesian plane is denoted $\\mathbb{R}^2$, which is the set of all ordered pairs of real numbers.',
+  },
+      '$\\mathbb{C}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Cartesian plane is denoted $\\mathbb{R}^2$, which is the set of all ordered pairs of real numbers.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -68,11 +84,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'What is the slope of a line?',
     options: [
       'The y-intercept',
-      'The ratio of rise to run',
       'The length of the line',
-      'The x-intercept'
+      'The x-intercept',
+      'The ratio of rise to run',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The slope is the ratio of the vertical change (rise) to the horizontal change (run) between any two points on the line: $\\frac{y_2 - y_1}{x_2 - x_1}$.',
   },
@@ -127,10 +143,26 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the distance formula for points $(x_1, y_1)$ and $(x_2, y_2)$?',
     options: [
-      '$|x_2 - x_1| + |y_2 - y_1|$',
-      '$\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$',
-      '$(x_2 - x_1)(y_2 - y_1)$',
-      '$\\frac{x_2 + y_2}{x_1 + y_1}$'
+      '$|x_2 - x_1| + |y_2 - y_1|
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The distance formula comes from the Pythagorean theorem: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.',
+  },
+      '$(x_2 - x_1)(y_2 - y_1)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The distance formula comes from the Pythagorean theorem: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.',
+  },
+      '$\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The distance formula comes from the Pythagorean theorem: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.',
+  },
+      '$\\frac{x_2 + y_2}{x_1 + y_1}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The distance formula comes from the Pythagorean theorem: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -170,11 +202,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'What does the triangle inequality state?',
     options: [
       'All triangles have equal sides',
-      'Any two sides together are greater than the third side',
       'The angles of a triangle sum to 180°',
-      'Triangles have three vertices'
+      'Any two sides together are greater than the third side',
+      'Triangles have three vertices',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The triangle inequality states that for any triangle, the sum of any two sides is greater than the third side: $|OP| + |PQ| > |OQ|$.',
   },
@@ -187,10 +219,22 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What operations are needed to find all intersection points in straightedge and compass constructions?',
     options: [
-      'Only $+$ and $-$',
-      'Only $\\times$ and $\\div$',
-      '$+$, $-$, $\\times$, $\\div$, and $\\sqrt{}$',
-      'Trigonometric functions'
+      'Only $+$ and $-
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'All intersection points can be found using $+$, $-$, $\\times$, $\\div$, and $\\sqrt{}$. This is the algebraic criterion for constructibility.',
+  },
+      '$+$, $-$, $\\times$, $\\div$, and $\\sqrt{}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'All intersection points can be found using $+$, $-$, $\\times$, $\\div$, and $\\sqrt{}$. This is the algebraic criterion for constructibility.',
+  },
+      'Only $\\times$ and $\\div
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'All intersection points can be found using $+$, $-$, $\\times$, $\\div$, and $\\sqrt{}$. This is the algebraic criterion for constructibility.',
+  },
+      'Trigonometric functions',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -202,11 +246,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'When finding the intersection of two circles, what happens when you subtract one equation from the other?',
     options: [
       'You get another circle equation',
-      'The $x^2$ and $y^2$ terms cancel, leaving a linear equation',
       'You get a cubic equation',
-      'The equations have no solution'
+      'The equations have no solution',
+      'The $x^2$ and $y^2$ terms cancel, leaving a linear equation',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Subtracting one circle equation from another eliminates the $x^2$ and $y^2$ terms, leaving a linear equation (the radical axis).',
   },
@@ -216,11 +260,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Why can\'t we trisect an arbitrary angle with straightedge and compass?',
     options: [
       'It requires too many steps',
-      '$\\cos(\\pi/9)$ cannot be expressed with finite square roots',
       'Ancient Greeks forbade it',
-      'The compass isn\'t accurate enough'
+      'The compass isn\\'t accurate enough',
+      '$\\cos(\\pi/9)$ cannot be expressed with finite square roots',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Trisecting $\\pi/3$ requires constructing $\\cos(\\pi/9)$, which cannot be expressed by a finite number of square roots, making it impossible with straightedge and compass.',
   },
@@ -234,11 +278,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'Why do we use slope instead of angle in algebraic geometry?',
     options: [
       'Slope is easier to measure',
-      'Angles don\'t exist in geometry',
       'Slope is an algebraic function, but $\\tan^{-1}$ is not',
-      'Ancient Greeks didn\'t know about angles'
+      'Angles don\\'t exist in geometry',
+      'Ancient Greeks didn\\'t know about angles',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The angle $\\theta = \\tan^{-1}(t)$ is not an algebraic function. To stay within the world of algebra, we work with slope $t$ rather than angle.',
   },
@@ -247,10 +291,26 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two lines with slopes $t_1$ and $t_2$ are perpendicular if and only if:',
     options: [
-      '$t_1 = t_2$',
-      '$t_1 + t_2 = 0$',
-      '$t_1 \\cdot t_2 = -1$',
-      '$t_1 \\cdot t_2 = 1$'
+      '$t_1 = t_2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The condition for perpendicularity is $t_1 \\cdot t_2 = -1$. The product of slopes of perpendicular lines is $-1$.',
+  },
+      '$t_1 + t_2 = 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The condition for perpendicularity is $t_1 \\cdot t_2 = -1$. The product of slopes of perpendicular lines is $-1$.',
+  },
+      '$t_1 \\cdot t_2 = 1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The condition for perpendicularity is $t_1 \\cdot t_2 = -1$. The product of slopes of perpendicular lines is $-1$.',
+  },
+      '$t_1 \\cdot t_2 = -1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The condition for perpendicularity is $t_1 \\cdot t_2 = -1$. The product of slopes of perpendicular lines is $-1$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -261,10 +321,26 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A rotation $r_{c,s}$ about the origin sends $(x, y)$ to:',
     options: [
-      '$(x + c, y + s)$',
-      '$(cx, sy)$',
-      '$(cx - sy, sx + cy)$',
-      '$(x - c, y - s)$'
+      '$(cx - sy, sx + cy)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The rotation $r_{c,s}$ sends $(x, y)$ to $(cx - sy, sx + cy)$, where $c = \\cos\\theta$ and $s = \\sin\\theta$.',
+  },
+      '$(x + c, y + s)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The rotation $r_{c,s}$ sends $(x, y)$ to $(cx - sy, sx + cy)$, where $c = \\cos\\theta$ and $s = \\sin\\theta$.',
+  },
+      '$(cx, sy)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The rotation $r_{c,s}$ sends $(x, y)$ to $(cx - sy, sx + cy)$, where $c = \\cos\\theta$ and $s = \\sin\\theta$.',
+  },
+      '$(x - c, y - s)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The rotation $r_{c,s}$ sends $(x, y)$ to $(cx - sy, sx + cy)$, where $c = \\cos\\theta$ and $s = \\sin\\theta$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -279,12 +355,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is an isometry?',
     options: [
-      'A transformation that changes all distances',
       'A transformation that preserves distances',
+      'A transformation that changes all distances',
       'A type of triangle',
-      'A measurement tool'
+      'A measurement tool',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'An isometry (from Greek for "same length") is a transformation that preserves the distance between any two points: $|f(P_1)f(P_2)| = |P_1P_2|$.',
   },
@@ -294,11 +370,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Which of the following is NOT a type of isometry?',
     options: [
       'Translation',
-      'Rotation',
       'Dilation (scaling)',
-      'Reflection'
+      'Rotation',
+      'Reflection',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Dilation (scaling) changes distances and is not an isometry. The four types of plane isometries are translation, rotation, reflection, and glide reflection.',
   },
@@ -307,10 +383,26 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A translation $t_{a,b}$ sends the point $(x, y)$ to:',
     options: [
-      '$(ax, by)$',
-      '$(x + a, y + b)$',
-      '$(x - a, y - b)$',
-      '$(xa, yb)$'
+      '$(ax, by)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A translation moves every point by the same amount: $t_{a,b}(x, y) = (x + a, y + b)$.',
+  },
+      '$(x - a, y - b)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A translation moves every point by the same amount: $t_{a,b}(x, y) = (x + a, y + b)$.',
+  },
+      '$(xa, yb)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A translation moves every point by the same amount: $t_{a,b}(x, y) = (x + a, y + b)$.',
+  },
+      '$(x + a, y + b)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A translation moves every point by the same amount: $t_{a,b}(x, y) = (x + a, y + b)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -321,10 +413,26 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Reflection in the x-axis sends $(x, y)$ to:',
     options: [
-      '$(-x, y)$',
-      '$(x, -y)$',
-      '$(-x, -y)$',
-      '$(y, x)$'
+      '$(-x, y)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Reflection in the x-axis flips the y-coordinate: $(x, y) \\mapsto (x, -y)$.',
+  },
+      '$(-x, -y)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Reflection in the x-axis flips the y-coordinate: $(x, y) \\mapsto (x, -y)$.',
+  },
+      '$(x, -y)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Reflection in the x-axis flips the y-coordinate: $(x, y) \\mapsto (x, -y)$.',
+  },
+      '$(y, x)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Reflection in the x-axis flips the y-coordinate: $(x, y) \\mapsto (x, -y)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -341,10 +449,10 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       'One',
       'Two',
+      'Four',
       'Three',
-      'Four'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'An isometry is completely determined by the images of three points not in a line, because any point P is uniquely determined by its distances from three non-collinear points.',
   },
@@ -381,12 +489,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A combination of two reflections in intersecting lines produces:',
     options: [
-      'A translation',
       'A rotation',
+      'A translation',
       'A glide reflection',
-      'The identity'
+      'The identity',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Two reflections in lines meeting at angle $\\theta/2$ combine to form a rotation through angle $\\theta$ about the point of intersection.',
   },
@@ -399,12 +507,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the name of Felix Klein\'s 1872 address that characterized geometry as the study of transformation groups?',
     options: [
+      'The Erlanger Programm',
       'The Principia',
       'The Elements',
-      'The Erlanger Programm',
-      'The Foundations'
+      'The Foundations',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Klein\'s Erlanger Programm (1872) characterized geometry as the study of transformation groups and their invariants.',
   },
@@ -414,11 +522,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'What are the invariants preserved by the isometry group of $\\mathbb{R}^2$?',
     options: [
       'Only length',
-      'Length, angle, and straightness',
       'Only area',
-      'Only orientation'
+      'Only orientation',
+      'Length, angle, and straightness',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Isometries preserve length, angle, and straightness. These are the geometric properties unchanged by translations, rotations, reflections, and glide reflections.',
   },
@@ -427,12 +535,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "arithmetization of geometry"?',
     options: [
-      'Counting geometric shapes',
       'Building geometry from numbers using coordinates',
+      'Counting geometric shapes',
       'Measuring angles numerically',
-      'Using calculators in geometry'
+      'Using calculators in geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The arithmetization of geometry means building geometry from numbers, using coordinates to define points, lines, circles, and other geometric objects.',
   },

@@ -6,12 +6,28 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The alternating group $A_n$ is defined as:',
     options: [
-      'All permutations in $S_n$',
-      'All even permutations in $S_n$',
-      'All odd permutations in $S_n$',
-      'All cyclic permutations in $S_n$'
+      'All permutations in $S_n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$A_n$ consists of all even permutations (those that can be written as a product of an even number of transpositions).',
+  },
+      'All odd permutations in $S_n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$A_n$ consists of all even permutations (those that can be written as a product of an even number of transpositions).',
+  },
+      'All cyclic permutations in $S_n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$A_n$ consists of all even permutations (those that can be written as a product of an even number of transpositions).',
+  },
+      'All even permutations in $S_n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$A_n$ consists of all even permutations (those that can be written as a product of an even number of transpositions).',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$A_n$ consists of all even permutations (those that can be written as a product of an even number of transpositions).',
   },
@@ -29,12 +45,28 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sign (signature) homomorphism $\\text{sgn}: S_n \\to \\{\\pm 1\\}$ maps even permutations to:',
     options: [
-      '$-1$',
-      '$1$',
-      '$0$',
-      'Depends on $n$'
+      '$-1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\text{sgn}(\\sigma) = 1$ if $\\sigma$ is even, and $\\text{sgn}(\\sigma) = -1$ if $\\sigma$ is odd.',
+  },
+      'Depends on $n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\text{sgn}(\\sigma) = 1$ if $\\sigma$ is even, and $\\text{sgn}(\\sigma) = -1$ if $\\sigma$ is odd.',
+  },
+      '$1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\text{sgn}(\\sigma) = 1$ if $\\sigma$ is even, and $\\text{sgn}(\\sigma) = -1$ if $\\sigma$ is odd.',
+  },
+      '$0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\text{sgn}(\\sigma) = 1$ if $\\sigma$ is even, and $\\text{sgn}(\\sigma) = -1$ if $\\sigma$ is odd.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$\\text{sgn}(\\sigma) = 1$ if $\\sigma$ is even, and $\\text{sgn}(\\sigma) = -1$ if $\\sigma$ is odd.',
   },
@@ -43,12 +75,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The kernel of the sign homomorphism $\\text{sgn}: S_n \\to \\{\\pm 1\\}$ is:',
     options: [
-      '$S_n$',
       '$A_n$',
+      '$S_n$',
       '$\\{e\\}$',
       'The set of transpositions'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$\\ker(\\text{sgn}) = \\{\\sigma : \\text{sgn}(\\sigma) = 1\\} = A_n$.',
   },
@@ -57,12 +89,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is $A_n$ a normal subgroup of $S_n$?',
     options: [
-      'Yes, because it has index 2',
       'No, because $S_n$ is not abelian',
+      'Yes, because it has index 2',
       'Only for $n \\geq 5$',
       'Only for $n \\leq 4$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Any subgroup of index 2 is normal. Since $[S_n : A_n] = 2$, $A_n$ is normal in $S_n$.',
   },

@@ -7,9 +7,9 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Where does Francisco d\'Anconia deliver his famous "money speech"?',
     options: [
       'At a board meeting',
-      'At James Taggart\'s wedding party',
+      'At James Taggart\\'s wedding party',
       'In a courtroom',
-      'On a radio broadcast'
+      'On a radio broadcast',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'According to Francisco, what is money?',
     options: [
       'The root of all evil',
-      'A tool of exchange representing productive work',
       'A necessary evil of capitalism',
-      'A symbol of greed'
+      'A tool of exchange representing productive work',
+      'A symbol of greed',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Francisco argues that money is a tool of exchange that represents productive work and creative achievement, not evil.',
   },
@@ -48,12 +48,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the chapter title "The Climax of the d\'Anconias" suggest about Francisco?',
     options: [
-      'He represents the peak of his family\'s legacy',
+      'He is betraying his family\\'s traditions',
+      'He represents the peak of his family\\'s legacy',
       'His family is about to gain more power',
       'He is the last of his noble line',
-      'He is betraying his family\'s traditions'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The title suggests Francisco represents the culmination of the d\'Anconia legacy, though in a way the party guests cannot understand.',
   },
@@ -62,12 +62,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How do the party guests react to Francisco\'s money speech?',
     options: [
-      'With enthusiastic agreement',
       'With thoughtful consideration',
+      'With enthusiastic agreement',
+      'With immediate conversion to his views',
       'With discomfort, hostility, or incomprehension',
-      'With immediate conversion to his views'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Most guests react with discomfort or hostility, unable to accept a moral defense of money that challenges their guilt-based worldview.',
   },
@@ -76,12 +76,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What deeper meaning does Francisco\'s speech reveal about his apparent playboy behavior?',
     options: [
-      'He truly is irresponsible and decadent',
       'He is acting a role as part of a larger plan',
+      'He truly is irresponsible and decadent',
       'He has given up on his principles',
-      'He is mentally unstable'
+      'He is mentally unstable',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The brilliance of the money speech hints that Francisco\'s playboy persona is a deliberate act, concealing a purposeful mission.',
   },

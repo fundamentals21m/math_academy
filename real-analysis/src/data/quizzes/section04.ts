@@ -7,12 +7,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'A function $f: A \\to B$ is defined as:',
       options: [
-        'A rule that assigns to each element of $A$ exactly one element of $B$',
-        'A rule that assigns to each element of $B$ exactly one element of $A$',
         'Any subset of $A \\times B$',
+        'A rule that assigns to each element of $B$ exactly one element of $A$',
+        'A rule that assigns to each element of $A$ exactly one element of $B$',
         'A bijection between $A$ and $B$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'A function $f: A \\to B$ assigns to each element $a \\in A$ exactly one element $f(a) \\in B$. The set $A$ is called the domain and $B$ is called the codomain.'
     },
@@ -22,11 +22,11 @@ export const section04Quiz = {
       question: 'For the function $f(x) = x^2$ with domain $\\mathbb{R}$, what is the range?',
       options: [
         '$\\mathbb{R}$',
-        '$[0, \\infty)$',
+        '$(0, \\infty)$',
         '$(-\\infty, 0]$',
-        '$(0, \\infty)$'
+        '$[0, \\infty)$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Since $x^2 \\geq 0$ for all $x \\in \\mathbb{R}$, and for any $y \\geq 0$ we have $f(\\sqrt{y}) = y$, the range is $[0, \\infty)$.'
     },
@@ -35,12 +35,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'The domain of the function $f(x) = \\frac{1}{x-2}$ is:',
       options: [
-        '$\\mathbb{R}$',
         '$\\mathbb{R} \\setminus \\{2\\}$',
+        '$\\mathbb{R}$',
         '$\\mathbb{R} \\setminus \\{0\\}$',
         '$(2, \\infty)$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The function is undefined when the denominator equals zero, i.e., when $x = 2$. Therefore, the domain is all real numbers except 2, written as $\\mathbb{R} \\setminus \\{2\\}$.'
     },
@@ -78,11 +78,11 @@ export const section04Quiz = {
       question: 'A function $f: A \\to B$ is surjective (onto) if:',
       options: [
         'Every element of $A$ maps to a unique element of $B$',
-        'For every $b \\in B$, there exists $a \\in A$ such that $f(a) = b$',
+        '$|A| = |B|$',
         'The function is invertible',
-        '$|A| = |B|$'
+        'For every $b \\in B$, there exists $a \\in A$ such that $f(a) = b$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'A function is surjective if every element in the codomain $B$ is the image of at least one element from the domain $A$. This means the range equals the codomain.'
     },
@@ -91,12 +91,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'The function $f: \\mathbb{R} \\to \\mathbb{R}$ defined by $f(x) = x^3$ is:',
       options: [
-        'Injective but not surjective',
-        'Surjective but not injective',
         'Bijective',
+        'Surjective but not injective',
+        'Injective but not surjective',
         'Neither injective nor surjective'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: '$f(x) = x^3$ is strictly increasing (hence injective), and for any $y \\in \\mathbb{R}$, we have $f(\\sqrt[3]{y}) = y$ (hence surjective). Therefore, it is bijective.'
     },
@@ -119,12 +119,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'For $f(x) = 2x$ and $g(x) = x + 3$, what is $(g \\circ f)(x)$?',
       options: [
-        '$2x + 3$',
-        '$2x + 6$',
         '$2(x + 3)$',
+        '$2x + 6$',
+        '$2x + 3$',
         '$x + 6$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: '$(g \\circ f)(x) = g(f(x)) = g(2x) = 2x + 3$. We first apply $f$ to get $2x$, then apply $g$ to add 3.'
     },
@@ -134,11 +134,11 @@ export const section04Quiz = {
       question: 'A relation $R$ on a set $A$ is reflexive if:',
       options: [
         '$(a, b) \\in R$ implies $(b, a) \\in R$',
-        '$(a, a) \\in R$ for all $a \\in A$',
+        '$R$ contains exactly one pair for each element',
         '$(a, b), (b, c) \\in R$ implies $(a, c) \\in R$',
-        '$R$ contains exactly one pair for each element'
+        '$(a, a) \\in R$ for all $a \\in A$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'A relation is reflexive if every element is related to itself. Formally, for all $a \\in A$, we have $(a, a) \\in R$ or equivalently $aRa$.'
     },
@@ -147,12 +147,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'A relation $R$ on a set $A$ is symmetric if:',
       options: [
-        '$(a, a) \\in R$ for all $a \\in A$',
         '$(a, b) \\in R$ implies $(b, a) \\in R$',
+        '$(a, a) \\in R$ for all $a \\in A$',
         '$(a, b), (b, c) \\in R$ implies $(a, c) \\in R$',
         '$(a, b) \\in R$ and $(b, a) \\in R$ implies $a = b$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'A relation is symmetric if whenever $a$ is related to $b$, then $b$ is also related to $a$. Formally, $(a, b) \\in R \\Rightarrow (b, a) \\in R$.'
     },
@@ -162,11 +162,11 @@ export const section04Quiz = {
       question: 'A relation $R$ on a set $A$ is transitive if:',
       options: [
         '$(a, a) \\in R$ for all $a \\in A$',
-        '$(a, b) \\in R$ implies $(b, a) \\in R$',
         '$(a, b), (b, c) \\in R$ implies $(a, c) \\in R$',
+        '$(a, b) \\in R$ implies $(b, a) \\in R$',
         '$(a, b) \\in R$ or $(b, a) \\in R$ for all $a, b$'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'A relation is transitive if the relation "chains together": if $a$ is related to $b$ and $b$ is related to $c$, then $a$ is related to $c$.'
     },
@@ -189,12 +189,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'The inverse of the function $f(x) = 3x + 5$ is:',
       options: [
-        '$f^{-1}(x) = \\frac{x - 5}{3}$',
+        '$f^{-1}(x) = \\frac{1}{3x + 5}$',
         '$f^{-1}(x) = \\frac{x + 5}{3}$',
         '$f^{-1}(x) = 3x - 5$',
-        '$f^{-1}(x) = \\frac{1}{3x + 5}$'
+        '$f^{-1}(x) = \\frac{x - 5}{3}$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'To find the inverse, solve $y = 3x + 5$ for $x$: $x = \\frac{y - 5}{3}$. Therefore, $f^{-1}(x) = \\frac{x - 5}{3}$.'
     },
@@ -203,12 +203,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Which of the following is an example of an equivalence relation on $\\mathbb{Z}$?',
       options: [
-        '$a < b$',
-        '$a \\leq b$',
         '$a \\equiv b \\pmod{n}$ for fixed $n$',
+        '$a \\leq b$',
+        '$a < b$',
         '$a \\mid b$ (a divides b)'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Congruence modulo $n$ is reflexive ($a \\equiv a$), symmetric (if $a \\equiv b$ then $b \\equiv a$), and transitive (if $a \\equiv b$ and $b \\equiv c$ then $a \\equiv c$).'
     },
@@ -266,12 +266,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Prove that $f(x) = \\frac{x}{1+|x|}$ is injective on $\\mathbb{R}$. The key observation is:',
       options: [
-        '$f$ is strictly increasing on $\\mathbb{R}$',
-        '$f$ has a unique fixed point',
         '$f$ is bounded',
+        '$f$ has a unique fixed point',
+        '$f$ is strictly increasing on $\\mathbb{R}$',
         '$f$ is continuous'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The function $f(x) = \\frac{x}{1+|x|}$ is strictly increasing: for $x > 0$, $f\'(x) = \\frac{1}{(1+x)^2} > 0$, and similarly for $x < 0$. A strictly monotonic function is always injective.'
     },
@@ -282,10 +282,10 @@ export const section04Quiz = {
       options: [
         'Injective but not surjective',
         'Surjective but not injective',
-        'Bijective',
-        'Neither injective nor surjective'
+        'Neither injective nor surjective',
+        'Bijective'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'This is the logistic function. It is strictly increasing (hence injective), and as $x \\to -\\infty$, $f(x) \\to 0$, and as $x \\to \\infty$, $f(x) \\to 1$. By the intermediate value theorem, every value in $(0, 1)$ is achieved, so it is surjective onto $(0, 1)$.'
     },
@@ -322,12 +322,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'If $g \\circ f$ is injective, which of the following must be true?',
       options: [
-        '$f$ must be injective',
-        '$g$ must be injective',
         'Both $f$ and $g$ must be injective',
+        '$g$ must be injective',
+        '$f$ must be injective',
         '$f$ must be surjective'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'If $f(a_1) = f(a_2)$, then $g(f(a_1)) = g(f(a_2))$, so $(g \\circ f)(a_1) = (g \\circ f)(a_2)$. Since $g \\circ f$ is injective, $a_1 = a_2$. Thus $f$ is injective. Note: $g$ need not be injective on all of its domain, only on the range of $f$.'
     },
@@ -337,11 +337,11 @@ export const section04Quiz = {
       question: 'If $g \\circ f$ is surjective, which of the following must be true?',
       options: [
         '$f$ must be surjective',
-        '$g$ must be surjective',
+        '$f$ must be injective',
         'Both $f$ and $g$ must be surjective',
-        '$f$ must be injective'
+        '$g$ must be surjective'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'For any $c$ in the codomain of $g$, since $g \\circ f$ is surjective, there exists $a$ with $(g \\circ f)(a) = c$, i.e., $g(f(a)) = c$. So every $c$ is in the range of $g$, meaning $g$ is surjective. Note: $f$ need not be surjective.'
     },
@@ -350,12 +350,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'The inverse of a bijection $f: A \\to B$ satisfies:',
       options: [
-        '$f \\circ f^{-1} = \\text{id}_A$ only',
         '$f^{-1} \\circ f = \\text{id}_A$ and $f \\circ f^{-1} = \\text{id}_B$',
+        '$f \\circ f^{-1} = \\text{id}_A$ only',
         '$f^{-1}(f(x)) = x$ for some $x \\in A$',
         '$f^{-1}$ exists only when $f$ is injective'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'For a bijection $f: A \\to B$, the inverse $f^{-1}: B \\to A$ satisfies both $(f^{-1} \\circ f)(a) = a$ for all $a \\in A$ (i.e., $f^{-1} \\circ f = \\text{id}_A$) and $(f \\circ f^{-1})(b) = b$ for all $b \\in B$ (i.e., $f \\circ f^{-1} = \\text{id}_B$).'
     },
@@ -364,12 +364,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Find the inverse of $f(x) = \\frac{2x+1}{x-3}$ for $x \\neq 3$:',
       options: [
-        '$f^{-1}(x) = \\frac{3x+1}{x-2}$',
         '$f^{-1}(x) = \\frac{3x-1}{x+2}$',
+        '$f^{-1}(x) = \\frac{3x+1}{x-2}$',
         '$f^{-1}(x) = \\frac{x-3}{2x+1}$',
         '$f^{-1}(x) = \\frac{3x+1}{x+2}$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Set $y = \\frac{2x+1}{x-3}$. Then $y(x-3) = 2x+1$, so $yx - 3y = 2x + 1$, giving $x(y-2) = 3y + 1$, hence $x = \\frac{3y+1}{y-2}$. Therefore $f^{-1}(x) = \\frac{3x+1}{x-2}$.'
     },
@@ -393,11 +393,11 @@ export const section04Quiz = {
       question: 'If $R$ is an equivalence relation on a set $A$, then the equivalence classes:',
       options: [
         'May overlap (share elements)',
-        'Partition $A$ into disjoint non-empty subsets',
+        'Always have the same cardinality',
         'Are always finite',
-        'Always have the same cardinality'
+        'Partition $A$ into disjoint non-empty subsets'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Equivalence classes form a partition of $A$: every element belongs to exactly one equivalence class (its own class $[a]$), and two classes are either identical or disjoint.'
     },
@@ -406,12 +406,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'The relation $R$ on $\\mathbb{R}^2$ defined by $(a, b) R (c, d)$ iff $a^2 + b^2 = c^2 + d^2$ is:',
       options: [
-        'Reflexive and symmetric but not transitive',
         'An equivalence relation',
+        'Reflexive and symmetric but not transitive',
         'Symmetric and transitive but not reflexive',
         'Only reflexive'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Reflexive: $a^2 + b^2 = a^2 + b^2$. Symmetric: if $a^2 + b^2 = c^2 + d^2$, then $c^2 + d^2 = a^2 + b^2$. Transitive: if $a^2 + b^2 = c^2 + d^2$ and $c^2 + d^2 = e^2 + f^2$, then $a^2 + b^2 = e^2 + f^2$. The equivalence classes are circles centered at the origin.'
     },
@@ -435,11 +435,11 @@ export const section04Quiz = {
       question: 'For a function $f: A \\to B$ to have a right inverse $h: B \\to A$ (i.e., $f \\circ h = \\text{id}_B$), $f$ must be:',
       options: [
         'Injective',
-        'Surjective',
         'Bijective',
+        'Surjective',
         'Monotonic'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'If $f \\circ h = \\text{id}_B$, then for any $b \\in B$, we have $f(h(b)) = b$, so $b$ is in the range of $f$. Thus $f$ is surjective. Conversely, if $f$ is surjective, a right inverse can be constructed by choosing one preimage for each element of $B$.'
     },
@@ -450,10 +450,10 @@ export const section04Quiz = {
       options: [
         'Injective but not surjective',
         'Surjective but not injective',
-        'Bijective',
-        'Neither injective nor surjective'
+        'Neither injective nor surjective',
+        'Bijective'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Injective: if $n + 1 = m + 1$, then $n = m$. Surjective: for any $k \\in \\mathbb{Z}$, we have $f(k-1) = k$. Thus $f$ is bijective with inverse $f^{-1}(n) = n - 1$.'
     },
@@ -526,11 +526,11 @@ export const section04Quiz = {
       question: 'Let $f: A \\to B$ and $g: B \\to C$ be functions. If $g \\circ f$ is bijective, which statement is TRUE?',
       options: [
         'Both $f$ and $g$ must be bijective',
-        '$f$ is injective and $g$ is surjective',
         '$f$ is surjective and $g$ is injective',
+        '$f$ is injective and $g$ is surjective',
         'Neither $f$ nor $g$ needs to be bijective'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Since $g \\circ f$ is bijective, it is injective and surjective. $g \\circ f$ injective implies $f$ is injective (proved earlier). $g \\circ f$ surjective implies $g$ is surjective (proved earlier). However, $f$ need not be surjective and $g$ need not be injective.'
     },
@@ -539,12 +539,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Prove or disprove: If $f: \\mathbb{R} \\to \\mathbb{R}$ satisfies $f(f(x)) = x$ for all $x$, then $f$ is bijective.',
       options: [
-        'True: $f \\circ f = \\text{id}$ implies $f$ is its own inverse, hence bijective',
+        'False: $f$ could be neither injective nor surjective',
         'False: $f$ could be the zero function',
         'True: only if $f$ is continuous',
-        'False: $f$ could be neither injective nor surjective'
+        'True: $f \\circ f = \\text{id}$ implies $f$ is its own inverse, hence bijective'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'If $f(f(x)) = x$, then $f$ is its own inverse: $f^{-1} = f$. This means $f \\circ f = \\text{id}$, so $f$ has both a left and right inverse (namely, itself). A function with a left inverse is injective, and one with a right inverse is surjective. Thus $f$ is bijective.'
     },
@@ -568,11 +568,11 @@ export const section04Quiz = {
       question: 'Define $f: \\mathcal{P}(\\mathbb{N}) \\to \\mathcal{P}(\\mathbb{N})$ by $f(S) = \\mathbb{N} \\setminus S$ (complement). This function is:',
       options: [
         'Injective but not surjective',
-        'Surjective but not injective',
         'Bijective with $f^{-1} = f$',
+        'Surjective but not injective',
         'Neither injective nor surjective'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Injective: if $\\mathbb{N} \\setminus S = \\mathbb{N} \\setminus T$, then $S = T$. Surjective: for any $T \\in \\mathcal{P}(\\mathbb{N})$, we have $f(\\mathbb{N} \\setminus T) = \\mathbb{N} \\setminus (\\mathbb{N} \\setminus T) = T$. Also, $f(f(S)) = S$, so $f^{-1} = f$ (involution).'
     },
@@ -582,11 +582,11 @@ export const section04Quiz = {
       question: 'Let $\\sim$ be an equivalence relation on $A$. The quotient set $A/\\sim$ is:',
       options: [
         'The set of all pairs $(a, b)$ with $a \\sim b$',
-        'The set of all equivalence classes $[a]$ for $a \\in A$',
         'A subset of $A$ containing one element from each class',
+        'The set of all equivalence classes $[a]$ for $a \\in A$',
         'The relation $\\sim$ itself'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The quotient set $A/\\sim$ is the set of all equivalence classes. Each element of $A/\\sim$ is itself a set (an equivalence class $[a] = \\{b \\in A : b \\sim a\\}$). The quotient set partitions $A$.'
     },
@@ -609,12 +609,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'A function $f: A \\to B$ induces an equivalence relation on $A$ defined by $a_1 \\sim a_2$ iff:',
       options: [
-        '$f(a_1) \\neq f(a_2)$',
         '$f(a_1) = f(a_2)$',
+        '$f(a_1) \\neq f(a_2)$',
         '$a_1$ and $a_2$ are in the same subset of a partition',
         '$f(a_1)$ and $f(a_2)$ are both in the range of $f$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Define $a_1 \\sim a_2$ iff $f(a_1) = f(a_2)$. This is reflexive ($f(a) = f(a)$), symmetric, and transitive (by transitivity of equality). The equivalence classes are the fibers $f^{-1}(\\{b\\})$ for $b$ in the range of $f$.'
     },
@@ -652,11 +652,11 @@ export const section04Quiz = {
       question: 'Cantor-Bernstein Theorem: If there exist injections $f: A \\to B$ and $g: B \\to A$, then:',
       options: [
         'There exists a surjection from $A$ to $B$',
-        'There exists a bijection between $A$ and $B$',
+        '$f$ or $g$ must be bijective',
         '$A$ and $B$ must be finite',
-        '$f$ or $g$ must be bijective'
+        'There exists a bijection between $A$ and $B$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The Cantor-Bernstein (or Schröder-Bernstein) theorem states that if there are injections in both directions between sets $A$ and $B$, then there exists a bijection between them. This is a fundamental result in set theory that does not require the Axiom of Choice.'
     },
@@ -665,12 +665,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Consider the relation $R$ on $\\mathbb{R}$ where $xRy$ iff $x - y \\in \\mathbb{Q}$. The equivalence class $[\\sqrt{2}]$ is:',
       options: [
-        '$\\{\\sqrt{2}\\}$',
-        '$\\mathbb{Q}$',
         '$\\{\\sqrt{2} + q : q \\in \\mathbb{Q}\\}$',
+        '$\\mathbb{Q}$',
+        '$\\{\\sqrt{2}\\}$',
         '$\\mathbb{R}$'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: '$[\\sqrt{2}] = \\{x \\in \\mathbb{R} : x - \\sqrt{2} \\in \\mathbb{Q}\\} = \\{x : x = \\sqrt{2} + q \\text{ for some } q \\in \\mathbb{Q}\\}$. This is the "rational translates" of $\\sqrt{2}$, a countable set that is dense in $\\mathbb{R}$.'
     },
@@ -709,10 +709,10 @@ export const section04Quiz = {
       options: [
         'Injective',
         'Surjective',
-        'Neither injective nor surjective',
-        'Bijective'
+        'Bijective',
+        'Neither injective nor surjective'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Not injective: $f(0) = f(2\\pi) = (1, 0)$ but $0 \\neq 2\\pi$. Not surjective: the range is the unit circle $\\{(x, y) : x^2 + y^2 = 1\\}$, not all of $\\mathbb{R}^2$. For example, $(0, 0) \\notin \\text{range}(f)$.'
     },
@@ -721,12 +721,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'The function $f: [0, 2\\pi) \\to S^1$ (unit circle) defined by $f(t) = (\\cos t, \\sin t)$ is:',
       options: [
-        'Injective but not surjective',
-        'Surjective but not injective',
         'Bijective',
+        'Surjective but not injective',
+        'Injective but not surjective',
         'Neither injective nor surjective'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Injective: on $[0, 2\\pi)$, different angles give different points on the circle. Surjective: every point on $S^1$ can be written as $(\\cos t, \\sin t)$ for some $t \\in [0, 2\\pi)$. Thus $f$ is bijective.'
     },

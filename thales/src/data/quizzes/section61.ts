@@ -21,8 +21,8 @@ export const section61Questions: QuizQuestion[] = [
     options: [
       'A class of sets with no additional structure',
       'A class of structured sets with all structure-preserving functions between them',
-      'A single set with multiple operations',
       'A collection of abstract objects with no functions',
+      'A single set with multiple operations',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -49,12 +49,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the two properties that define a monoid?',
     options: [
-      'Commutativity and associativity',
       'Associativity and existence of an identity element',
+      'Commutativity and associativity',
       'Reflexivity and transitivity',
       'Invertibility and associativity',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A monoid is a set with a binary operation that is associative ((a·b)·c = a·(b·c)) and has an identity element 1 such that 1·a = a·1 = a.',
@@ -66,10 +66,10 @@ export const section61Questions: QuizQuestion[] = [
     options: [
       'Only the binary operation',
       'Only the identity element',
-      'Both the binary operation and the identity element',
       'The ordering relation',
+      'Both the binary operation and the identity element',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A monoid homomorphism f: A → A\' must preserve both structure: f(a·b) = f(a)·f(b) and f(1) = 1 (identity maps to identity).',
@@ -80,11 +80,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'What properties does a pre-ordered set\'s relation ≤ have?',
     options: [
       'Symmetric and transitive',
+      'Antisymmetric and transitive',
       'Reflexive and transitive',
       'Reflexive and symmetric',
-      'Antisymmetric and transitive',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'A pre-ordered set has a binary relation ≤ that is reflexive (a ≤ a) and transitive (if a ≤ b and b ≤ c, then a ≤ c).',
@@ -95,11 +95,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'What is a monotone mapping?',
     options: [
       'A function that reverses order',
-      'A function that preserves order: if a ≤ b then f(a) ≤ f(b)',
       'A function that maps to a single element',
       'A function that creates new orderings',
+      'A function that preserves order: if a ≤ b then f(a) ≤ f(b)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A monotone mapping is a function f from a pre-ordered set A to a pre-ordered set A\' that preserves order: if a ≤ b then f(a) ≤ f(b).',
@@ -109,12 +109,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the doubling function from natural numbers to even numbers a monotone mapping?',
     options: [
-      'It doubles every number',
       'It preserves the ≤ relation: if a ≤ b then 2a ≤ 2b',
+      'It doubles every number',
       'It maps odd numbers to even numbers',
       'It is injective',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The doubling function preserves order: if a ≤ b for natural numbers, then 2a ≤ 2b for even numbers. This makes it a monotone mapping between the two pre-ordered sets.',
@@ -125,11 +125,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'Which two properties always hold in concrete categories?',
     options: [
       'All functions are invertible, and composition is commutative',
-      'Identity preserves structure, and composition of structure-preserving functions preserves structure',
       'All morphisms are bijections, and there are finite objects',
-      'Every set has infinite elements, and functions are continuous',
+      'Identity preserves structure, and composition of structure-preserving functions preserves structure',
+      'Every set has infinite elements, and functions are continuous'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'In all concrete categories: (1) the identity function on any set always preserves structure, and (2) the composition of two structure-preserving functions also preserves structure.',

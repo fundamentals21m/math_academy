@@ -6,12 +6,28 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Gamma function $\\Gamma(x)$ is defined for $x > 0$ by which integral?',
     options: [
-      '$\\int_0^\\infty t^{x-1} e^{-t} \\, dt$',
-      '$\\int_0^\\infty t^x e^{-t} \\, dt$',
-      '$\\int_0^1 t^{x-1} (1-t)^{x-1} \\, dt$',
-      '$\\int_{-\\infty}^\\infty e^{-t^2} t^x \\, dt$'
+      '$\\int_0^1 t^{x-1} (1-t)^{x-1} \\, dt
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The Gamma function is defined as $\\Gamma(x) = \\int_0^\\infty t^{x-1} e^{-t} \\, dt$ for $x > 0$. This integral converges absolutely for all positive real $x$.',
+  },
+      '$\\int_0^\\infty t^x e^{-t} \\, dt
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Gamma function is defined as $\\Gamma(x) = \\int_0^\\infty t^{x-1} e^{-t} \\, dt$ for $x > 0$. This integral converges absolutely for all positive real $x$.',
+  },
+      '$\\int_{-\\infty}^\\infty e^{-t^2} t^x \\, dt
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Gamma function is defined as $\\Gamma(x) = \\int_0^\\infty t^{x-1} e^{-t} \\, dt$ for $x > 0$. This integral converges absolutely for all positive real $x$.',
+  },
+      '$\\int_0^\\infty t^{x-1} e^{-t} \\, dt
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Gamma function is defined as $\\Gamma(x) = \\int_0^\\infty t^{x-1} e^{-t} \\, dt$ for $x > 0$. This integral converges absolutely for all positive real $x$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Gamma function is defined as $\\Gamma(x) = \\int_0^\\infty t^{x-1} e^{-t} \\, dt$ for $x > 0$. This integral converges absolutely for all positive real $x$.',
   },
@@ -20,12 +36,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the value of $\\Gamma(n+1)$ for a positive integer $n$?',
     options: [
-      '$n!$',
+      '$n^n$',
       '$(n-1)!$',
       '$(n+1)!$',
-      '$n^n$'
+      '$n!$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'For positive integers, $\\Gamma(n+1) = n!$. This follows from the functional equation $\\Gamma(x+1) = x\\Gamma(x)$ and the fact that $\\Gamma(1) = 1$.',
   },
@@ -48,12 +64,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the value of $\\Gamma(1/2)$?',
     options: [
-      '$\\sqrt{\\pi}$',
       '$\\pi$',
+      '$\\sqrt{\\pi}$',
       '$1/2$',
       '$2\\sqrt{\\pi}$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: '$\\Gamma(1/2) = \\int_0^\\infty t^{-1/2} e^{-t} \\, dt = \\sqrt{\\pi}$. This can be computed using the substitution $t = u^2$ and the Gaussian integral $\\int_{-\\infty}^\\infty e^{-u^2} du = \\sqrt{\\pi}$.',
   },
@@ -62,12 +78,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Beta function $B(x,y)$ is related to the Gamma function by:',
     options: [
-      '$B(x,y) = \\frac{\\Gamma(x)\\Gamma(y)}{\\Gamma(x+y)}$',
-      '$B(x,y) = \\Gamma(x)\\Gamma(y)$',
       '$B(x,y) = \\frac{\\Gamma(x+y)}{\\Gamma(x)\\Gamma(y)}$',
+      '$B(x,y) = \\Gamma(x)\\Gamma(y)$',
+      '$B(x,y) = \\frac{\\Gamma(x)\\Gamma(y)}{\\Gamma(x+y)}$',
       '$B(x,y) = \\Gamma(xy)$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The Beta function $B(x,y) = \\int_0^1 t^{x-1}(1-t)^{y-1} dt$ satisfies $B(x,y) = \\frac{\\Gamma(x)\\Gamma(y)}{\\Gamma(x+y)}$. This identity connects two important special functions.',
   },

@@ -26,11 +26,11 @@ export const section17Questions: QuizQuestion[] = [
     question: "What axiom did Euclid use because he couldn't prove it?",
     options: [
       'The parallel postulate',
-      'The whole is greater than the part',
-      'Area equals base times height',
       'All right angles are equal',
+      'Area equals base times height',
+      'The whole is greater than the part'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Euclid could not prove that a polygon could not be cut and pasted onto a smaller part of itself, so he assumed "the whole is greater than the part."',
@@ -51,12 +51,12 @@ export const section17Questions: QuizQuestion[] = [
     question:
       'In any triangle, the product of a side by its corresponding height is:',
     options: [
-      'Different for each side',
-      'Always an integer',
       'Constant (the same for all sides)',
-      'Zero for acute triangles',
+      'Always an integer',
+      'Different for each side',
+      'Zero for acute triangles'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The product of base × height is constant regardless of which side is chosen as the base. This is proved using similar triangles.',
@@ -65,8 +65,13 @@ export const section17Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'Who proved that different subdivisions give the same area?',
-    options: ['Euclid', 'Pythagoras', 'Hilbert', 'Gauss'],
-    correctIndex: 2,
+    options: [
+      'Euclid',
+      'Pythagoras',
+      'Gauss',
+      'Hilbert',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Hilbert (1899) proved that different subdivisions of the same polygon give the same numerical area, using the concept of signed area.',
@@ -76,12 +81,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What is the key feature of Hilbert's signed area [ABC]?",
     options: [
-      'It is always positive',
       'It changes sign with vertex order',
+      'It is always positive',
       'It only works for rectangles',
       'It requires calculus',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Signed area [ABC] is positive when vertices are clockwise and negative when counterclockwise. This sign convention makes interior edges cancel when summing.',
@@ -92,11 +97,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'Two polygons are equidecomposable if:',
     options: [
       'They have the same number of sides',
-      'One can be cut into pieces that reassemble into the other',
       'They are congruent',
-      'They have the same perimeter',
+      'One can be cut into pieces that reassemble into the other',
+      'They have the same perimeter'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Polygons are equidecomposable if one can be cut into polygonal pieces that can be pasted together to form the other.',
@@ -108,8 +113,8 @@ export const section17Questions: QuizQuestion[] = [
     options: [
       'All triangles have the same area',
       'Polygons with equal area are equidecomposable',
-      'The tetrahedron cannot be cut into a cube',
       'Area is not conserved under cutting',
+      'The tetrahedron cannot be cut into a cube',
     ],
     correctIndex: 1,
     difficulty: 'hard',

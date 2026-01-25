@@ -8,8 +8,13 @@ export const section56Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'What is i²?',
-    options: ['1', '-1', 'i', '-i'],
-    correctIndex: 1,
+    options: [
+      '1',
+      'i',
+      '-i',
+      '-1',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'By definition, i = √(-1), so i² = -1. This is the fundamental property of the imaginary unit.',
@@ -18,8 +23,13 @@ export const section56Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'What is (2 + 3i) + (4 - i)?',
-    options: ['6 + 2i', '6 + 4i', '8 + 2i', '2 + 4i'],
-    correctIndex: 0,
+    options: [
+      '6 + 4i',
+      '8 + 2i',
+      '2 + 4i',
+      '6 + 2i',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Add real parts: 2 + 4 = 6. Add imaginary parts: 3 + (-1) = 2. So the answer is 6 + 2i.',
@@ -38,8 +48,13 @@ export const section56Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'What is the absolute value |3 + 4i|?',
-    options: ['5', '7', '12', '25'],
-    correctIndex: 0,
+    options: [
+      '7',
+      '5',
+      '12',
+      '25',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       '|3 + 4i| = √(3² + 4²) = √(9 + 16) = √25 = 5. This is a 3-4-5 right triangle!',
@@ -48,8 +63,13 @@ export const section56Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'What is i³?',
-    options: ['1', '-1', 'i', '-i'],
-    correctIndex: 3,
+    options: [
+      '-i',
+      '1',
+      '-1',
+      'i',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'i³ = i² × i = (-1) × i = -i. The powers of i cycle: i, -1, -i, 1, i, ...',
@@ -59,12 +79,12 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which property does the absolute value of complex numbers satisfy?',
     options: [
-      '|z₁ + z₂| = |z₁| + |z₂|',
       '|z₁z₂| = |z₁| × |z₂|',
+      '|z₁ + z₂| = |z₁| + |z₂|',
       '|z₁ - z₂| = |z₁| - |z₂|',
-      '|z₁/z₂| = |z₁| + |z₂|',
+      '|z₁/z₂| = |z₁| + |z₂|'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The absolute value is multiplicative: |z₁z₂| = |z₁| × |z₂|. This is equivalent to the Diophantus identity.',
@@ -73,8 +93,13 @@ export const section56Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'Who first rigorously defined complex numbers as ordered pairs?',
-    options: ['Euler', 'Gauss', 'Hamilton', 'Cauchy'],
-    correctIndex: 2,
+    options: [
+      'Euler',
+      'Hamilton',
+      'Gauss',
+      'Cauchy',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'William Rowan Hamilton in 1833 defined complex numbers as ordered pairs (a, b) with specific addition and multiplication rules.',

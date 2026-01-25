@@ -7,11 +7,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What is the fundamental design trade-off that crypto projects make according to the authors?',
     options: [
       'Speed vs. cost',
+      'Scalability vs. security',
       'Functionality vs. decentralization',
       'Privacy vs. transparency',
-      'Scalability vs. security'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The authors argue that to add functionality (smart contracts, high throughput), crypto projects must sacrifice decentralization—the very property that makes Bitcoin valuable.',
   },
@@ -21,11 +21,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Why do the authors argue that proof-of-stake fundamentally differs from proof-of-work?',
     options: [
       'PoS is faster',
-      'PoS creates circular security—coins secure the chain that defines coin ownership',
       'PoS uses less electricity',
-      'PoS allows for more validators'
+      'PoS allows for more validators',
+      'PoS creates circular security—coins secure the chain that defines coin ownership',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'PoS creates circular security: the coins that give voting power are defined by the chain that voters secure. There\'s no external anchor like PoW\'s energy expenditure to ground the system.',
   },

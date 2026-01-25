@@ -7,11 +7,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Turán\'s Theorem gives the maximum edges in a graph with no:',
     options: [
       'Cycles',
-      '$K_{r+1}$ subgraph',
       'Perfect matching',
+      '$K_{r+1}$ subgraph',
       'Cut vertices'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Turán: $ex(n, K_{r+1})$ = max edges avoiding $(r+1)$-clique, achieved by $T(n,r)$.',
   },
@@ -20,12 +20,20 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Turán graph $T(n,r)$ is:',
     options: [
-      'The complete graph $K_n$',
-      'A complete $r$-partite graph with parts as equal as possible',
-      'A tree on $n$ vertices',
-      'A cycle of length $n$'
-    ],
+      'The complete graph $K_n
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$T(n,r)$ is complete $r$-partite with part sizes differing by at most 1.',
+  },
+      'A complete $r$-partite graph with parts as equal as possible',
+      'A cycle of length $n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$T(n,r)$ is complete $r$-partite with part sizes differing by at most 1.',
+  },
+      'A tree on $n$ vertices',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$T(n,r)$ is complete $r$-partite with part sizes differing by at most 1.',
   },
@@ -35,11 +43,15 @@ export const section15Questions: QuizQuestion[] = [
     question: 'A graph is $k$-critical if:',
     options: [
       '$\\chi(G) = k$ and $G$ is connected',
-      '$\\chi(G) = k$ and $\\chi(G-e) < k$ for every edge $e$',
       '$G$ has exactly $k$ edges',
-      '$G$ is $k$-regular'
+      '$\\chi(G) = k$ and $\\chi(G-e) < k$ for every edge $e
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A $k$-critical graph has $\\chi(G) = k$ but every proper subgraph has smaller chromatic number.',
+  },
+      '$G$ is $k$-regular',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A $k$-critical graph has $\\chi(G) = k$ but every proper subgraph has smaller chromatic number.',
   },
@@ -48,10 +60,26 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a $k$-critical graph, every vertex has degree at least:',
     options: [
-      '$1$',
-      '$k - 1$',
-      '$k$',
-      '$2k - 2$'
+      '$k - 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'In a $k$-critical graph, $\\delta(G) \\geq k-1$ (removing low-degree vertex reduces chromatic number).',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In a $k$-critical graph, $\\delta(G) \\geq k-1$ (removing low-degree vertex reduces chromatic number).',
+  },
+      '$k
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In a $k$-critical graph, $\\delta(G) \\geq k-1$ (removing low-degree vertex reduces chromatic number).',
+  },
+      '$2k - 2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In a $k$-critical graph, $\\delta(G) \\geq k-1$ (removing low-degree vertex reduces chromatic number).',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -72,11 +100,15 @@ export const section15Questions: QuizQuestion[] = [
     question: 'The degeneracy of a graph is:',
     options: [
       'The minimum degree',
-      'The maximum $k$ such that every subgraph has a vertex of degree at most $k$',
       'The chromatic number minus one',
-      'The connectivity'
+      'The connectivity',
+      'The maximum $k$ such that every subgraph has a vertex of degree at most $k
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Degeneracy $d$: every subgraph has a vertex of degree $\\leq d$. Implies $\\chi(G) \\leq d + 1$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Degeneracy $d$: every subgraph has a vertex of degree $\\leq d$. Implies $\\chi(G) \\leq d + 1$.',
   },

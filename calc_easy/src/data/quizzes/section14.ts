@@ -6,12 +6,28 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of $\\sin(x)$?',
     options: [
-      '$-\\sin(x)$',
-      '$\\cos(x)$',
-      '$-\\cos(x)$',
-      '$\\tan(x)$'
+      '$-\\sin(x)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$.',
+  },
+      '$\\tan(x)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$.',
+  },
+      '$\\cos(x)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$.',
+  },
+      '$-\\cos(x)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$.',
   },
@@ -20,12 +36,28 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of $\\cos(x)$?',
     options: [
-      '$\\sin(x)$',
-      '$-\\sin(x)$',
-      '$\\cos(x)$',
-      '$-\\cos(x)$'
+      '$\\sin(x)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
+  },
+      '$\\cos(x)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
+  },
+      '$-\\cos(x)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
+  },
+      '$-\\sin(x)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
   },
@@ -48,10 +80,26 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of $\\tan(x)$?',
     options: [
-      '$\\cot(x)$',
-      '$\\sec(x)$',
-      '$\\sec^2(x)$',
-      '$\\cos^2(x)$'
+      '$\\sec^2(x)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}\\tan(x) = \\sec^2(x)$.',
+  },
+      '$\\cot(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}\\tan(x) = \\sec^2(x)$.',
+  },
+      '$\\sec(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}\\tan(x) = \\sec^2(x)$.',
+  },
+      '$\\cos^2(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}\\tan(x) = \\sec^2(x)$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -62,12 +110,28 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The second derivative of $\\sin(x)$ is:',
     options: [
-      '$\\sin(x)$',
-      '$-\\sin(x)$',
-      '$\\cos(x)$',
-      '$-\\cos(x)$'
-    ],
+      '$\\sin(x)
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$, then $\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
+  },
+      '$-\\sin(x)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$, then $\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
+  },
+      '$-\\cos(x)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$, then $\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
+  },
+      '$\\cos(x)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$, then $\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$, then $\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
   },

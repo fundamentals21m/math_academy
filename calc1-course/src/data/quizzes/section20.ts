@@ -6,12 +6,28 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\lim_{x \\to a} f(x) = L$ and $\\lim_{x \\to a} g(x) = M$, then $\\lim_{x \\to a} f(x)g(x) = ?$',
     options: [
-      '$L + M$',
-      '$L - M$',
-      '$LM$',
-      '$L/M$'
+      '$L - M
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Limit of a product equals product of limits: $LM$.',
+  },
+      '$LM
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Limit of a product equals product of limits: $LM$.',
+  },
+      '$L + M
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Limit of a product equals product of limits: $LM$.',
+  },
+      '$L/M
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Limit of a product equals product of limits: $LM$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Limit of a product equals product of limits: $LM$.',
   },
@@ -20,12 +36,24 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\lim_{x \\to a} g(x) = M \\neq 0$, then $\\lim_{x \\to a} \\frac{f(x)}{g(x)} = ?$',
     options: [
-      '$L + M$',
-      '$LM$',
-      '$L/M$',
-      'Does not exist'
+      '$L/M
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Limit of a quotient equals quotient of limits (when denominator limit is nonzero).',
+  },
+      '$L + M
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Limit of a quotient equals quotient of limits (when denominator limit is nonzero).',
+  },
+      '$LM
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Limit of a quotient equals quotient of limits (when denominator limit is nonzero).',
+  },
+      'Does not exist',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Limit of a quotient equals quotient of limits (when denominator limit is nonzero).',
   },
@@ -44,11 +72,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'The Squeeze Theorem states: if $g(x) \\leq f(x) \\leq h(x)$ and $\\lim g = \\lim h = L$, then:',
     options: [
       '$\\lim f$ does not exist',
-      '$\\lim f = L$',
       '$\\lim f \\leq L$',
+      '$\\lim f = L$',
       '$\\lim f \\geq L$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Squeeze (Sandwich) Theorem: $f$ is squeezed to the same limit $L$.',
   },
@@ -58,11 +86,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'If $f$ and $g$ are continuous at $a$, then $f + g$ is:',
     options: [
       'Discontinuous at $a$',
-      'Continuous at $a$',
+      'Cannot determine',
       'Only defined at $a$',
-      'Cannot determine'
+      'Continuous at $a$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Continuity is preserved under addition (and multiplication, and division when denominator is nonzero).',
   },

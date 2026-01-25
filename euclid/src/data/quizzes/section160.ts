@@ -7,11 +7,11 @@ export const section160Questions: QuizQuestion[] = [
     question: 'Proposition VI.15 is the triangle analogue of VI.14. Equal triangles with one angle equal have:',
     options: [
       'Equal bases',
-      'Reciprocally proportional sides about the equal angles',
       'Equal heights',
-      'Congruent medians'
+      'Congruent medians',
+      'Reciprocally proportional sides about the equal angles',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'VI.15 proves that equal triangles sharing one equal angle have their sides about that angle reciprocally proportional.',
   },
@@ -21,11 +21,11 @@ export const section160Questions: QuizQuestion[] = [
     question: 'If triangles ABC and DEF have equal areas, angle A = angle D, and sides AB = 4, AC = 6, DE = 3, what is DF?',
     options: [
       '6',
-      '8',
       '9',
-      '12'
+      '8',
+      '12',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'By reciprocal proportion: AB:DE = DF:AC, so 4:3 = DF:6, giving DF = 8.',
   },
@@ -37,7 +37,7 @@ export const section160Questions: QuizQuestion[] = [
       'For aesthetic symmetry',
       'Because the area formula involves sine of the included angle',
       'To ensure the triangles are congruent',
-      'To make the proof shorter'
+      'To make the proof shorter',
     ],
     correctIndex: 1,
     difficulty: 'hard',

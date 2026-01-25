@@ -15,10 +15,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is the permutation $\\sigma = \\begin{pmatrix} 1 & 2 & 3 & 4 \\\\ 2 & 4 & 1 & 3 \\end{pmatrix}$ written in cycle notation?',
     options: [
-      '$(1\\ 2)(3\\ 4)$',
-      '$(1\\ 2\\ 4\\ 3)$',
-      '$(1\\ 2\\ 3\\ 4)$',
-      '$(1\\ 3)(2\\ 4)$'
+      '$(1\\ 2)(3\\ 4)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Following the permutation: $1 \\to 2 \\to 4 \\to 3 \\to 1$. This is the 4-cycle $(1\\ 2\\ 4\\ 3)$.',
+  },
+      '$(1\\ 2\\ 3\\ 4)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Following the permutation: $1 \\to 2 \\to 4 \\to 3 \\to 1$. This is the 4-cycle $(1\\ 2\\ 4\\ 3)$.',
+  },
+      '$(1\\ 3)(2\\ 4)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Following the permutation: $1 \\to 2 \\to 4 \\to 3 \\to 1$. This is the 4-cycle $(1\\ 2\\ 4\\ 3)$.',
+  },
+      '$(1\\ 2\\ 4\\ 3)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Following the permutation: $1 \\to 2 \\to 4 \\to 3 \\to 1$. This is the 4-cycle $(1\\ 2\\ 4\\ 3)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -41,7 +57,7 @@ export const section05Questions: QuizQuestion[] = [
       'An odd number of transpositions',
       'An even number of transpositions',
       'An even number of cycles',
-      'An odd number of cycles'
+      'An odd number of cycles',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -53,9 +69,9 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What is the sign (parity) of the 5-cycle $(1\\ 2\\ 3\\ 4\\ 5)$?',
     options: [
       'Even',
+      'Depends on the specific cycle',
       'Odd',
       'Neither even nor odd',
-      'Depends on the specific cycle'
     ],
     correctIndex: 0,
     difficulty: 'medium',

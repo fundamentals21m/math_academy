@@ -7,11 +7,11 @@ export const section35Questions: QuizQuestion[] = [
     question: 'What does Proposition I.35 prove about parallelograms?',
     options: [
       'They have equal diagonals',
-      'Parallelograms on the same base and between the same parallels are equal in area',
       'They can be constructed from any quadrilateral',
-      'Their angles sum to 360°'
+      'Their angles sum to 360°',
+      'Parallelograms on the same base and between the same parallels are equal in area',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'I.35: Parallelograms on the same base and between the same parallels have equal areas.',
   },
@@ -23,7 +23,7 @@ export const section35Questions: QuizQuestion[] = [
       'Congruence',
       'Similarity',
       'Area equivalence without congruence',
-      'Perpendicularity'
+      'Perpendicularity',
     ],
     correctIndex: 2,
     difficulty: 'hard',

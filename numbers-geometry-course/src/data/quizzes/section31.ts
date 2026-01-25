@@ -20,11 +20,11 @@ export const section31Questions: QuizQuestion[] = [
     question: 'What is a "rational point" on the unit circle?',
     options: [
       'Any point on the circle',
-      'A point with both coordinates rational',
       'A point at a rational angle',
       'The center of the circle',
+      'A point with both coordinates rational',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A rational point is a point (x, y) where both x and y are rational numbers. Finding rational points on x² + y² = 1 is equivalent to finding Pythagorean triples.',
@@ -44,10 +44,30 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Diophantus\'s formula for rational points on $x^2 + y^2 = 1$ is:',
     options: [
-      '$x = t$, $y = 1-t$',
-      '$x = \\frac{1-t^2}{1+t^2}$, $y = \\frac{2t}{1+t^2}$',
-      '$x = \\cos t$, $y = \\sin t$',
-      '$x = t^2$, $y = 1-t^2$',
+      '$x = \\frac{1-t^2}{1+t^2}$, $y = \\frac{2t}{1+t^2}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'Diophantus\'s formula is x = (1-t²)/(1+t²), y = 2t/(1+t²). These give all rational points on the circle except (-1, 0) as t varies over rational values.',
+  },
+      '$x = t$, $y = 1-t
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'Diophantus\'s formula is x = (1-t²)/(1+t²), y = 2t/(1+t²). These give all rational points on the circle except (-1, 0) as t varies over rational values.',
+  },
+      '$x = \\cos t$, $y = \\sin t
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'Diophantus\'s formula is x = (1-t²)/(1+t²), y = 2t/(1+t²). These give all rational points on the circle except (-1, 0) as t varies over rational values.',
+  },
+      '$x = t^2$, $y = 1-t^2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'Diophantus\'s formula is x = (1-t²)/(1+t²), y = 2t/(1+t²). These give all rational points on the circle except (-1, 0) as t varies over rational values.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -60,8 +80,8 @@ export const section31Questions: QuizQuestion[] = [
     question: 'How does Diophantus\'s formula relate to Euclid\'s?',
     options: [
       'They are completely different',
-      'Setting $t = v/u$ recovers Euclid\'s formula',
-      'Euclid\'s is more general',
+      'Setting $t = v/u$ recovers Euclid\\'s formula',
+      'Euclid\\'s is more general',
       'Diophantus came first',
     ],
     correctIndex: 1,
@@ -76,8 +96,8 @@ export const section31Questions: QuizQuestion[] = [
     options: [
       'A function whose values are always rational',
       'A function built from a variable and constants by +, −, ×, ÷',
-      'A function that equals a ratio',
       'A function with rational domain',
+      'A function that equals a ratio',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -89,12 +109,32 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which function can be "rationalized" using Diophantus\'s substitution?',
     options: [
-      '$\\sqrt{1 - x^3}$',
-      '$\\sqrt{1 - x^2}$',
-      '$\\sqrt{1 - x^4}$',
-      '$\\sqrt{x}$',
+      '$\\sqrt{1 - x^3}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation:
+      '√(1-x²) can be rationalized by substituting x = (1-t²)/(1+t²), giving √(1-x²) = 2t/(1+t²). In contrast, √(1-x³) and √(1-x⁴) cannot be rationalized—a deep fact.',
+  },
+      '$\\sqrt{1 - x^4}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      '√(1-x²) can be rationalized by substituting x = (1-t²)/(1+t²), giving √(1-x²) = 2t/(1+t²). In contrast, √(1-x³) and √(1-x⁴) cannot be rationalized—a deep fact.',
+  },
+      '$\\sqrt{x}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      '√(1-x²) can be rationalized by substituting x = (1-t²)/(1+t²), giving √(1-x²) = 2t/(1+t²). In contrast, √(1-x³) and √(1-x⁴) cannot be rationalized—a deep fact.',
+  },
+      '$\\sqrt{1 - x^2}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      '√(1-x²) can be rationalized by substituting x = (1-t²)/(1+t²), giving √(1-x²) = 2t/(1+t²). In contrast, √(1-x³) and √(1-x⁴) cannot be rationalized—a deep fact.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       '√(1-x²) can be rationalized by substituting x = (1-t²)/(1+t²), giving √(1-x²) = 2t/(1+t²). In contrast, √(1-x³) and √(1-x⁴) cannot be rationalized—a deep fact.',
@@ -104,12 +144,12 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is Diophantus\'s formula simpler than Euclid\'s?',
     options: [
-      'It uses smaller numbers',
       'It uses only one parameter instead of three',
+      'It uses smaller numbers',
       'It avoids square roots',
       'It works for all triangles',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'Diophantus\'s formula uses only the single parameter t, while Euclid\'s requires three parameters u, v, and w. Working with rationals instead of integers simplifies the story considerably.',

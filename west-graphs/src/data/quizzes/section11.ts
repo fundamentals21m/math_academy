@@ -6,12 +6,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A cut vertex (articulation point) is:',
     options: [
-      'A vertex of maximum degree',
       'A vertex whose removal increases the number of components',
+      'A vertex of maximum degree',
       'A vertex in a minimum vertex cover',
       'A vertex of degree 1'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A cut vertex is one whose deletion disconnects the graph (increases component count).',
   },
@@ -20,12 +20,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A bridge in a graph is:',
     options: [
-      'An edge in every spanning tree',
       'An edge whose removal disconnects the graph',
+      'An edge in every spanning tree',
       'An edge between two cut vertices',
-      'The shortest edge'
+      'The shortest edge',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A bridge (cut edge) is an edge whose deletion increases the number of components.',
   },
@@ -34,12 +34,16 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The vertex connectivity $\\kappa(G)$ is:',
     options: [
-      'The minimum number of vertices to remove to disconnect $G$',
-      'The number of cut vertices',
       'The maximum degree',
-      'The number of components'
+      'The minimum number of vertices to remove to disconnect $G
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\kappa(G)$ is the minimum size of a vertex cut (or $n-1$ if $G = K_n$).',
+  },
+      'The number of cut vertices',
+      'The number of components',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: '$\\kappa(G)$ is the minimum size of a vertex cut (or $n-1$ if $G = K_n$).',
   },
@@ -49,11 +53,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'For any graph $G$: $\\kappa(G) \\leq \\kappa\'(G) \\leq \\delta(G)$. What are $\\kappa\'$ and $\\delta$?',
     options: [
       'Edge connectivity and average degree',
-      'Edge connectivity and minimum degree',
+      'Independence number and minimum degree',
       'Chromatic number and maximum degree',
-      'Independence number and minimum degree'
+      'Edge connectivity and minimum degree'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$\\kappa\' =$ edge connectivity, $\\delta =$ minimum degree. Whitney\'s inequality.',
   },
@@ -63,11 +67,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'A block of a graph is:',
     options: [
       'A connected component',
-      'A maximal 2-connected subgraph or bridge or isolated vertex',
       'A clique',
-      'A bipartite subgraph'
+      'A maximal 2-connected subgraph or bridge or isolated vertex',
+      'A bipartite subgraph',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Blocks are the maximal subgraphs with no cut vertex. They partition the edges.',
   },

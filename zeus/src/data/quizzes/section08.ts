@@ -1,0 +1,82 @@
+import type { QuizQuestion } from './types';
+
+export const section08Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is LNURL?',
+    options: [
+      'A Bitcoin address format',
+      'A set of protocols using HTTP endpoints for Lightning interactions',
+      'A type of Lightning invoice',
+      'A specific Lightning wallet',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'LNURL is a set of protocols that use HTTP endpoints to facilitate Lightning interactions, enabling features like static payment links and human-readable addresses.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is a Lightning Address?',
+    options: [
+      'A Bitcoin address for Lightning',
+      'The public key of a Lightning node',
+      'A human-readable identifier that looks like an email address',
+      'An invoice with no expiry',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A Lightning Address is a human-readable identifier (like user@domain.com) that uses LNURL-pay behind the scenes, making it easy to share and remember.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What is the main advantage of LNURL-pay over regular invoices?',
+    options: [
+      'Reusable links - same link works for multiple payments',
+      'Lower fees',
+      'Faster payments',
+      'Higher payment limits',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'LNURL-pay creates reusable payment links. Unlike single-use invoices, the same LNURL-pay link can be used for multiple payments with flexible amounts.',
+  },
+  {
+    id: 4,
+    type: 'text',
+    question: 'What LNURL protocol allows you to "pull" funds from a service?',
+    correctAnswer: 'LNURL-withdraw',
+    difficulty: 'medium',
+    explanation: 'LNURL-withdraw allows pulling funds from a service. The service shares a withdrawal link, and your wallet uses it to request payment to itself.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What does LNURL-auth provide?',
+    options: [
+      'Two-factor authentication',
+      'Email verification',
+      'Biometric login',
+      'Passwordless authentication using your Lightning wallet',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'LNURL-auth provides passwordless authentication. You sign a challenge with your node key, proving ownership without revealing personal information or needing passwords.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What is BOLT12 (Offers)?',
+    options: [
+      'A replacement for LNURL',
+      'A next-generation protocol for reusable payment codes natively in Lightning',
+      'A Lightning routing algorithm',
+      'A new Bitcoin address format',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'BOLT12 Offers provides reusable payment codes natively in Lightning without requiring a web server like LNURL. It\'s still being rolled out across implementations.',
+  },
+];

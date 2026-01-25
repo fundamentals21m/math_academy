@@ -7,11 +7,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Abel\'s theorem concerns the behavior of a power series:',
     options: [
       'Inside the radius of convergence',
-      'At a boundary point where the series converges',
       'Outside the radius of convergence',
-      'At the center of convergence'
+      'At the center of convergence',
+      'At a boundary point where the series converges',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Abel\'s theorem addresses what happens at the boundary of the disk of convergence when the series converges there.',
   },
@@ -20,12 +20,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\sum a_n$ converges and $f(x) = \\sum a_n x^n$ has radius 1, then Abel\'s theorem says:',
     options: [
-      '$f$ extends continuously to $x = 1$ with $f(1) = \\sum a_n$',
-      '$f$ diverges at $x = 1$',
       '$f(1) = 0$',
+      '$f$ diverges at $x = 1$',
+      '$f$ extends continuously to $x = 1$ with $f(1) = \\sum a_n$',
       'The theorem says nothing about $x = 1$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Abel\'s theorem: if $\\sum a_n$ converges, then $\\lim_{x \\to 1^-} \\sum a_n x^n = \\sum a_n$.',
   },
@@ -35,11 +35,23 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Consider $\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n} x^n$. At $x = 1$, this series:',
     options: [
       'Diverges',
-      'Converges to $\\ln(2)$',
-      'Converges to $0$',
-      'Converges to $1$'
+      'Converges to $1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The alternating harmonic series converges to $\\ln(2)$. By Abel\'s theorem, $\\sum \\frac{(-1)^{n+1}}{n} = \\ln(2)$.',
+  },
+      'Converges to $\\ln(2)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The alternating harmonic series converges to $\\ln(2)$. By Abel\'s theorem, $\\sum \\frac{(-1)^{n+1}}{n} = \\ln(2)$.',
+  },
+      'Converges to $0
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The alternating harmonic series converges to $\\ln(2)$. By Abel\'s theorem, $\\sum \\frac{(-1)^{n+1}}{n} = \\ln(2)$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The alternating harmonic series converges to $\\ln(2)$. By Abel\'s theorem, $\\sum \\frac{(-1)^{n+1}}{n} = \\ln(2)$.',
   },

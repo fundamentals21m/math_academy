@@ -7,11 +7,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What does Hayek mean by "individualism" in Western civilization?',
     options: [
       'Selfishness and egotism',
-      'Respect for the individual and tolerance for diverse views',
       'Economic competition only',
+      'Respect for the individual and tolerance for diverse views',
       'Isolation from society'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Hayek clarifies that individualism means respect for the individual man and tolerance—it has no necessary connection with egotism or selfishness.',
   },
@@ -20,12 +20,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Hayek, what was discovered about spontaneous market order?',
     options: [
-      'It was designed by brilliant economists',
       'It emerged after freedom made progress—the argument followed the reality',
+      'It was designed by brilliant economists',
+      'It only works in small economies',
       'It was created by government planning',
-      'It only works in small economies'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The realization that uncontrolled individual efforts could produce complex economic order came only after freedom had made progress—the argument for economic freedom was the outcome of free growth, not its cause.',
   },
@@ -37,7 +37,7 @@ export const section02Questions: QuizQuestion[] = [
       'Marx and Engels',
       'de Tocqueville and Lord Acton',
       'Hegel and Schmoller',
-      'Hitler and Mussolini'
+      'Hitler and Mussolini',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -49,11 +49,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Why did liberalism decline despite its success, according to Hayek?',
     options: [
       'It failed to produce any progress',
-      'Success bred impatience—people took progress for granted and wanted faster change',
       'Foreign powers suppressed it',
-      'Religious authorities banned it'
+      'Success bred impatience—people took progress for granted and wanted faster change',
+      'Religious authorities banned it',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The very success of liberalism led people to take progress for granted and become impatient with the "slow" rate of improvement, demanding to scrap the liberal framework entirely.',
   },
@@ -63,11 +63,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Around 1870, what major shift occurred in the flow of ideas between nations?',
     options: [
       'American ideas began dominating Europe',
-      'English liberal ideas stopped spreading and collectivist ideas from Germany advanced westward',
       'French ideas conquered Germany',
-      'Asian ideas reached Europe'
+      'Asian ideas reached Europe',
+      'English liberal ideas stopped spreading and collectivist ideas from Germany advanced westward',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'After 1870, the tide reversed: England began importing collectivist ideas from Germany rather than exporting liberal ideas eastward.',
   },
@@ -77,11 +77,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'A Nazi leader described National Socialism as a "counter-Renaissance." Hayek says this was:',
     options: [
       'Completely false propaganda',
-      'More true than he knew—it destroyed individualist civilization',
+      'A translation error',
       'A reference to art movements',
-      'A translation error'
+      'More true than he knew—it destroyed individualist civilization'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Hayek argues the Nazi leader was more accurate than he realized: Nazism represented a destruction of the individualist civilization built since the Renaissance.',
   },

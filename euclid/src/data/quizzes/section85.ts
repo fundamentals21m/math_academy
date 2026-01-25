@@ -9,7 +9,7 @@ export const section85Questions: QuizQuestion[] = [
       'Supplementary',
       'Complementary',
       'Equal to each other',
-      'Right angles'
+      'Right angles',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If points A, B, C, D are on a circle with chord BC, and both A and D are in the same segment, then:',
     options: [
-      '∠BAC = ∠BDC',
       '∠BAC + ∠BDC = 180°',
+      '∠BAC = ∠BDC',
       '∠BAC + ∠BDC = 90°',
-      '∠BAC = 2∠BDC'
+      '∠BAC = 2∠BDC',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Both angles are inscribed in the same segment (same side of chord BC), so they are equal.',
   },
@@ -34,12 +34,12 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'III.21 follows from III.20 because:',
     options: [
-      'All inscribed angles equal the central angle',
       'All inscribed angles are half the same central angle',
+      'All inscribed angles equal the central angle',
       'Inscribed angles are always 90°',
-      'Central angles are constant'
+      'Central angles are constant',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Each inscribed angle on the same arc is half of the same central angle (by III.20), so all such inscribed angles are equal.',
   },

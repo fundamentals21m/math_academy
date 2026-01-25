@@ -6,12 +6,20 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The $n$-th cyclotomic polynomial $\\Phi_n(x)$ is defined as:',
     options: [
-      '$x^n - 1$',
       'The product of $(x - \\zeta)$ over all $n$-th roots of unity',
-      'The product of $(x - \\zeta)$ over all primitive $n$-th roots of unity',
-      '$(x^n - 1)/(x - 1)$'
-    ],
+      '$x^n - 1
     correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\Phi_n(x) = \\prod_{\\gcd(k,n)=1, 1 \\leq k \\leq n} (x - e^{2\\pi i k/n})$ is the product over all primitive $n$-th roots of unity.',
+  },
+      'The product of $(x - \\zeta)$ over all primitive $n$-th roots of unity',
+      '$(x^n - 1)/(x - 1)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\Phi_n(x) = \\prod_{\\gcd(k,n)=1, 1 \\leq k \\leq n} (x - e^{2\\pi i k/n})$ is the product over all primitive $n$-th roots of unity.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$\\Phi_n(x) = \\prod_{\\gcd(k,n)=1, 1 \\leq k \\leq n} (x - e^{2\\pi i k/n})$ is the product over all primitive $n$-th roots of unity.',
   },
@@ -21,11 +29,11 @@ export const section67Questions: QuizQuestion[] = [
     question: 'The degree of $\\Phi_n(x)$ equals:',
     options: [
       '$n$',
-      '$n - 1$',
       '$\\phi(n)$ (Euler\'s totient function)',
+      '$n - 1$',
       '$\\lfloor n/2 \\rfloor$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The degree of $\\Phi_n(x)$ is $\\phi(n)$, the number of integers from $1$ to $n$ that are relatively prime to $n$, since this counts the primitive $n$-th roots of unity.',
   },
@@ -34,10 +42,18 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The factorization $x^n - 1 = \\prod_{d | n} \\Phi_d(x)$ holds:',
     options: [
-      'Only for prime $n$',
-      'Only over $\\mathbb{C}$',
+      'Only for prime $n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This identity holds over $\\mathbb{Z}[x]$ and hence over any ring. Each $n$-th root of unity is a primitive $d$-th root of unity for exactly one divisor $d$ of $n$.',
+  },
+      'Only over $\\mathbb{C}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'This identity holds over $\\mathbb{Z}[x]$ and hence over any ring. Each $n$-th root of unity is a primitive $d$-th root of unity for exactly one divisor $d$ of $n$.',
+  },
+      'Only when $n$ is a prime power',
       'Over any field',
-      'Only when $n$ is a prime power'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -49,11 +65,11 @@ export const section67Questions: QuizQuestion[] = [
     question: '$\\Phi_6(x)$ equals:',
     options: [
       '$x^6 - 1$',
-      '$x^2 - x + 1$',
+      '$x^2 + 1$',
       '$x^2 + x + 1$',
-      '$x^2 + 1$'
+      '$x^2 - x + 1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'We have $x^6 - 1 = \\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = (x-1)(x+1)(x^2+x+1)\\Phi_6(x)$. Dividing: $\\Phi_6(x) = (x^6-1)/[(x-1)(x+1)(x^2+x+1)] = (x^6-1)/(x^4+x^3-x-1) = x^2 - x + 1$.',
   },

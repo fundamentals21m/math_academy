@@ -6,12 +6,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is Proposition I.47 commonly known as?',
     options: [
-      'The Triangle Inequality',
       'The Pythagorean Theorem',
+      'The Triangle Inequality',
       'Thales\' Theorem',
       'The Angle Sum Theorem'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'I.47 is the famous Pythagorean theorem: in a right triangle, the square on the hypotenuse equals the sum of squares on the other two sides.',
   },
@@ -35,11 +35,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'What is Euclid\'s proof of I.47 sometimes called?',
     options: [
       'The rearrangement proof',
-      'The windmill proof',
       'The algebraic proof',
+      'The windmill proof',
       'The similar triangles proof'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The "windmill proof" refers to the distinctive shape formed by the three squares and the auxiliary lines.',
   },
@@ -49,11 +49,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'Which proposition is crucial to the proof of I.47?',
     options: [
       'I.4 (SAS congruence)',
-      'I.41 (parallelogram is double the triangle)',
+      'I.20 (triangle inequality)',
       'I.32 (angle sum)',
-      'I.20 (triangle inequality)'
+      'I.41 (parallelogram is double the triangle)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'I.47 uses I.41 to show each small square equals a rectangle (since parallelograms are double triangles).',
   },
@@ -65,7 +65,7 @@ export const section47Questions: QuizQuestion[] = [
       'Into two triangles',
       'Into two rectangles using a line through A parallel to the sides',
       'Into four equal squares',
-      'He does not divide it'
+      'He does not divide it',
     ],
     correctIndex: 1,
     difficulty: 'medium',

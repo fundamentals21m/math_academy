@@ -7,11 +7,11 @@ export const section166Questions: QuizQuestion[] = [
     question: 'Proposition VI.21 proves what about similarity?',
     options: [
       'All polygons are similar to each other',
-      'Similarity is transitive: if A is similar to B, and B to C, then A is similar to C',
       'Similar polygons have equal areas',
+      'Similarity is transitive: if A is similar to B, and B to C, then A is similar to C',
       'Only triangles can be similar'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'VI.21 establishes transitivity: figures similar to the same figure are similar to one another.',
   },
@@ -21,9 +21,9 @@ export const section166Questions: QuizQuestion[] = [
     question: 'Why is the transitivity of similarity important?',
     options: [
       'It allows comparing figures indirectly through an intermediate figure',
+      'It proves circles are polygons',
       'It proves all figures are congruent',
       'It shows similarity is the same as equality',
-      'It proves circles are polygons'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section166Questions: QuizQuestion[] = [
       'All figures have the same number of sides',
       'Equal ratios to the same ratio are equal to each other',
       'All angles in similar figures are right angles',
-      'Similar figures have equal perimeters'
+      'Similar figures have equal perimeters',
     ],
     correctIndex: 1,
     difficulty: 'hard',

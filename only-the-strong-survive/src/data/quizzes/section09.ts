@@ -7,11 +7,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'Why must capital keep flowing into DeFi systems according to the authors?',
     options: [
       'To pay developer salaries',
+      'To pay blockchain transaction fees',
       'To maintain the illusion of yield and prevent cascading liquidations',
       'To fund marketing campaigns',
-      'To pay blockchain transaction fees'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Without fresh capital, the "yields" disappear (since they come from new entrants) and falling prices trigger liquidation cascades. The system needs constant inflows to maintain apparent health.',
   },
@@ -23,7 +23,7 @@ export const section09Questions: QuizQuestion[] = [
       'Yields increase to attract more capital',
       'Prices fall, triggering liquidations which cause more selling, creating a death spiral',
       'The system automatically rebalances',
-      'Governance votes to increase rewards'
+      'Governance votes to increase rewards',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -35,11 +35,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'What traditional financial concept does DeFi\'s capital dependency most resemble?',
     options: [
       'Index funds',
-      'Ponzi schemes where early investors are paid with later investors\' money',
       'Government bonds',
-      'Savings accounts'
+      'Savings accounts',
+      'Ponzi schemes where early investors are paid with later investors\\' money',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The structure where early participants\' "yields" come from new capital rather than productive activity resembles a Ponzi scheme, though the mechanism is obscured by technical complexity.',
   },

@@ -6,12 +6,20 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Uniform continuity on $[a,b]$ means that for every $\\varepsilon > 0$, there exists $\\delta > 0$ such that:',
     options: [
-      '$\\delta$ depends on the point $x$',
-      '$\\delta$ works for ALL points $x, y$ in the interval',
-      '$\\delta = \\varepsilon$',
-      'The function is differentiable'
-    ],
+      '$\\delta$ depends on the point $x
     correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Uniform continuity: one $\\delta$ works everywhere, not depending on the point.',
+  },
+      '$\\delta$ works for ALL points $x, y$ in the interval',
+      'The function is differentiable',
+      '$\\delta = \\varepsilon
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Uniform continuity: one $\\delta$ works everywhere, not depending on the point.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Uniform continuity: one $\\delta$ works everywhere, not depending on the point.',
   },
@@ -21,11 +29,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'Every continuous function on a closed bounded interval is:',
     options: [
       'Only pointwise continuous',
-      'Uniformly continuous',
       'Discontinuous somewhere',
-      'Unbounded'
+      'Unbounded',
+      'Uniformly continuous',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Heine-Cantor Theorem: continuous on $[a,b]$ implies uniformly continuous.',
   },
@@ -34,12 +42,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The function $f(x) = 1/x$ on $(0, 1)$ is:',
     options: [
-      'Uniformly continuous',
       'Continuous but not uniformly continuous',
+      'Uniformly continuous',
       'Discontinuous',
-      'Bounded'
+      'Bounded',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: '$1/x$ is continuous on $(0,1)$ but not uniformly continuous (blows up near 0).',
   },
@@ -48,12 +56,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The small-span theorem says that a uniformly continuous function on $[a,b]$:',
     options: [
-      'Has arbitrarily small oscillation on sufficiently small subintervals',
-      'Is constant',
       'Is unbounded',
+      'Is constant',
+      'Has arbitrarily small oscillation on sufficiently small subintervals',
       'Has large gaps'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Uniform continuity controls oscillation uniformly across the interval.',
   },
@@ -62,12 +70,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Uniform continuity is important for integration because:',
     options: [
-      'It guarantees the function is a polynomial',
       'It ensures integrability via approximation by step functions',
+      'It guarantees the function is a polynomial',
+      'It has no relation to integration',
       'It makes the function differentiable',
-      'It has no relation to integration'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Uniform continuity allows uniform approximation by step functions, proving integrability.',
   },
@@ -76,12 +84,28 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which function is uniformly continuous on $\\mathbb{R}$?',
     options: [
-      '$f(x) = x^2$',
-      '$f(x) = e^x$',
-      '$f(x) = \\sin x$',
-      '$f(x) = 1/x$'
+      '$f(x) = e^x
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\sin x$ is uniformly continuous on $\\mathbb{R}$ (bounded derivative).',
+  },
+      '$f(x) = \\sin x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\sin x$ is uniformly continuous on $\\mathbb{R}$ (bounded derivative).',
+  },
+      '$f(x) = x^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\sin x$ is uniformly continuous on $\\mathbb{R}$ (bounded derivative).',
+  },
+      '$f(x) = 1/x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\sin x$ is uniformly continuous on $\\mathbb{R}$ (bounded derivative).',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$\\sin x$ is uniformly continuous on $\\mathbb{R}$ (bounded derivative).',
   },

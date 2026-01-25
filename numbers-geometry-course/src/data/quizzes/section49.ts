@@ -10,11 +10,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'When does a have a multiplicative inverse mod n?',
     options: [
       'When a < n',
-      'When gcd(a, n) = 1',
       'When a is prime',
       'When n is even',
+      'When gcd(a, n) = 1',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'An element a has an inverse mod n if and only if gcd(a, n) = 1, meaning a and n are coprime.',
@@ -55,11 +55,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'Which algorithm finds multiplicative inverses?',
     options: [
       'Sieve of Eratosthenes',
-      'Extended Euclidean Algorithm',
-      'Newton\'s method',
+      'Newton\\'s method',
       'Binary search',
+      'Extended Euclidean Algorithm',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The extended Euclidean algorithm finds x, y such that ax + ny = gcd(a,n). When gcd(a,n) = 1, x is the inverse of a mod n.',
@@ -79,12 +79,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In RSA cryptography, what makes computing φ(n) difficult?',
     options: [
-      'n is very large',
       'n = pq for large unknown primes p and q',
-      'φ(n) doesn\'t exist for composite n',
+      'n is very large',
       'The algorithm is too slow',
+      'φ(n) doesn\\'t exist for composite n',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'For n = pq, φ(n) = (p-1)(q-1). Without knowing p and q, computing φ(n) is as hard as factoring n.',

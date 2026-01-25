@@ -7,11 +7,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'What is Galt\'s Gulch also known as?',
     options: [
       'The Valley of Freedom',
-      'Atlantis',
       'The Hidden City',
-      'Paradise Valley'
+      'Paradise Valley',
+      'Atlantis',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Galt\'s Gulch is called "Atlantis" by its inhabitants, referencing the legendary civilization that sank beneath the sea—except this Atlantis has risen above the corrupt world.',
   },
@@ -22,10 +22,10 @@ export const section20Questions: QuizQuestion[] = [
     options: [
       'She is invited by Francisco',
       'She follows a map given by Ellis Wyatt',
+      'She stumbles upon it while hiking',
       'She crashes her plane while pursuing a mysterious aircraft',
-      'She stumbles upon it while hiking'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Dagny discovers the valley when she crashes her plane while pursuing Quentin Daniels, who is being recruited to join the strike. Her crash landing brings her into the hidden community.',
   },
@@ -35,11 +35,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Who are the inhabitants of Galt\'s Gulch?',
     options: [
       'Political refugees from various countries',
-      'The productive minds who have gone on strike',
       'Wealthy retirees seeking privacy',
+      'The productive minds who have gone on strike',
       'Scientists conducting secret research'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Galt\'s Gulch is populated by the strikers—the industrialists, artists, scientists, and other men of the mind who have withdrawn from a world that punishes their achievements.',
   },
@@ -51,7 +51,7 @@ export const section20Questions: QuizQuestion[] = [
       'Each according to his needs',
       'The strong shall rule the weak',
       'Trading value for value without force or fraud',
-      'Majority rule democracy'
+      'Majority rule democracy',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -63,9 +63,9 @@ export const section20Questions: QuizQuestion[] = [
     question: 'What does Dagny initially feel about leaving the outside world permanently?',
     options: [
       'Immediate eagerness to stay',
-      'Conflict because she hasn\'t given up on the railroad',
+      'Conflict because she hasn\\'t given up on the railroad',
       'Indifference to her former life',
-      'Fear of the valley\'s inhabitants'
+      'Fear of the valley\\'s inhabitants',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -76,12 +76,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Galt\'s Gulch represent philosophically?',
     options: [
-      'An escape from reality',
       'The proof that a society based on rational self-interest is possible',
+      'An escape from reality',
       'A utopian fantasy disconnected from human nature',
-      'A temporary refuge until circumstances change'
+      'A temporary refuge until circumstances change',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Galt\'s Gulch demonstrates that a society based on individual rights, productive achievement, and voluntary exchange can work—it is the proof of concept for Rand\'s philosophy.',
   },

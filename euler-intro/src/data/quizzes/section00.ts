@@ -16,11 +16,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'According to Euler, what is a "continuous" curve?',
     options: [
       'A curve that has no breaks or gaps',
-      'A curve whose entire nature is expressed by a single function',
       'A curve that extends infinitely in both directions',
-      'A curve that passes through the origin'
+      'A curve that passes through the origin',
+      'A curve whose entire nature is expressed by a single function',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Euler defines a continuous curve as one whose entire nature is expressed by a single function of $x$. A discontinuous curve is composed of portions defined by different functions.',
   },
@@ -29,12 +29,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Euler\'s framework, where is the ordinate drawn when $y$ is negative?',
     options: [
-      'Above the axis',
       'Below the axis',
+      'Above the axis',
       'To the left of the origin',
-      'On the axis itself'
+      'On the axis itself',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'When $y$ is positive, the ordinate $PM$ is drawn above the axis. When $y$ is negative, it is drawn below the axis.',
   },
@@ -52,11 +52,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What is the fundamental insight Euler establishes about functions and curves?',
     options: [
       'Only polynomial functions can define curves',
-      'Every function defines a curve, and every curve can be expressed as an equation',
       'Curves can only be drawn mechanically, not analytically',
+      'Every function defines a curve, and every curve can be expressed as an equation',
       'Functions and curves are unrelated mathematical objects'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Euler establishes the two-way correspondence: every function $y = f(x)$ determines a unique curve, and every curve can be expressed as an equation relating $x$ and $y$.',
   },

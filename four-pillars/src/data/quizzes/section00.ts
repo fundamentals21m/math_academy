@@ -5,7 +5,28 @@ export const section00Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'How many construction axioms did Euclid use for straightedge and compass constructions?',
-    options: ['$2$', '$3$', '$4$', '$5$'],
+    options: [
+      '$3
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Euclid used three construction axioms: (1) draw a line segment between two points, (2) extend a line segment, and (3) draw a circle with given center and radius.',
+  },
+      '$2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Euclid used three construction axioms: (1) draw a line segment between two points, (2) extend a line segment, and (3) draw a circle with given center and radius.',
+  },
+      '$4
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Euclid used three construction axioms: (1) draw a line segment between two points, (2) extend a line segment, and (3) draw a circle with given center and radius.',
+  },
+      '$5
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Euclid used three construction axioms: (1) draw a line segment between two points, (2) extend a line segment, and (3) draw a circle with given center and radius.',
+  },
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Euclid used three construction axioms: (1) draw a line segment between two points, (2) extend a line segment, and (3) draw a circle with given center and radius.',
@@ -18,7 +39,7 @@ export const section00Questions: QuizQuestion[] = [
       'A straightedge is longer',
       'A straightedge has no markings for measurement',
       'A ruler can only draw curved lines',
-      'There is no difference'
+      'There is no difference',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -30,11 +51,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'In Euclidean geometry, which tool is used for measuring and transferring lengths?',
     options: [
       'The straightedge',
-      'The protractor',
       'The compass',
+      'The protractor',
       'The ruler'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The compass "stores" the length of a radius and allows this length to be transferred elsewhere. The power of measuring lengths resides in the compass.',
   },
@@ -58,11 +79,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'To add the length $|AB|$ to the length $|CD|$ using a compass, what should you do?',
     options: [
       'Draw a line from A to D',
-      'Set the compass to radius $|AB|$ and draw a circle centered at D',
+      'Draw perpendicular lines from each segment',
       'Use a ruler to measure both lengths',
-      'Draw perpendicular lines from each segment'
+      'Set the compass to radius $|AB|$ and draw a circle centered at D'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'To add lengths, you pick up the compass with radius set to $|AB|$ and describe a circle with center D. Where this circle intersects the extended line CD gives you the sum $|CD| + |AB|$.',
   },
@@ -71,12 +92,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why did Euclid separate the concepts of "straightness" and "length" into different tools?',
     options: [
-      'He didn\'t have access to rulers',
       'It simplifies the axioms and clarifies the foundations of geometry',
+      'He didn\'t have access to rulers',
       'Compasses were easier to manufacture',
       'Ancient Greek law required separate tools'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Separating "straightness" (straightedge) and "length" (compass) turns out to be important for understanding the foundations of geometry. This same separation reappears in different approaches to geometry.',
   },

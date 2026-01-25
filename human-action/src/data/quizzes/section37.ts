@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section37Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Economic theorems differ from physical theories in that they are:',
+    options: [
+      'Derived from the logical structure of human action, not verified by controlled experiments',
+      'Less certain because they cannot be tested',
+      'Based on observation alone',
+      'Subject to democratic approval',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Economics cannot experiment with human societies. Its theorems are derived from the logic of human action itself—like mathematics, they are certain because they follow necessarily from how humans act.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Unlike technological innovations, economic policies:',
+    options: [
+      'Can succeed against public objection',
+      'Require public acceptance to be effective',
+      'Are empirically verifiable',
+      'Are value-free',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'An inventor can succeed despite initial skepticism—the airplane flew whether people believed it would or not. Economic policies require public acceptance; a government cannot maintain sound policy if voters demand otherwise.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The supremacy of public opinion determines:',
+    options: [
+      'The whole process of human history',
+      'Only economic policy',
+      'Only political elections',
+      'Nothing important'
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'What the majority believes shapes what policies are possible. The ideas that prevail in public opinion determine whether liberal or interventionist policies predominate—and thus the course of history.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The old liberals made the error of assuming:',
+    options: [
+      'Markets needed government support',
+      'Economics was too complex for ordinary people',
+      'Propaganda could defeat truth',
+      'Capitalism\\'s benefits were so obvious that no intellectual defense was needed',
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Classical liberals assumed people would reason correctly about economics once they had the facts. They failed to anticipate that intuitive fallacies and propaganda could convince people to support policies against their own interests.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'In a democracy, economic policy reflects:',
+    options: [
+      'What economists know to be true',
+      'What voters believe, regardless of what economists know',
+      'Objective scientific analysis',
+      'Pure rational calculation',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The economist can only advise; public opinion decides. If the public believes minimum wages help workers, minimum wages will be enacted—regardless of what economic theory shows.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The battle for capitalism was lost because:',
+    options: [
+      'Capitalism failed economically',
+      'Workers rejected it',
+      'Liberals failed to counter anti-capitalist propaganda—they lost by default',
+      'Socialism proved superior',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Anti-capitalist propaganda succeeded not because it was true but because liberals failed to counter it. They left the field open for ideological attack. The intellectual battle was lost by default.',
+  },
+];

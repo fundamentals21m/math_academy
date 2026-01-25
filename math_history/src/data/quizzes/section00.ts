@@ -6,12 +6,28 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Pythagorean theorem states that in a right triangle with legs $a$ and $b$ and hypotenuse $c$:',
     options: [
-      '$a + b = c$',
-      '$a^2 + b^2 = c^2$',
-      '$a^2 - b^2 = c^2$',
-      '$ab = c^2$'
-    ],
+      '$a + b = c
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean theorem states that the sum of the squares of the two legs equals the square of the hypotenuse: $a^2 + b^2 = c^2$.',
+  },
+      '$a^2 + b^2 = c^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean theorem states that the sum of the squares of the two legs equals the square of the hypotenuse: $a^2 + b^2 = c^2$.',
+  },
+      '$a^2 - b^2 = c^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean theorem states that the sum of the squares of the two legs equals the square of the hypotenuse: $a^2 + b^2 = c^2$.',
+  },
+      '$ab = c^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean theorem states that the sum of the squares of the two legs equals the square of the hypotenuse: $a^2 + b^2 = c^2$.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Pythagorean theorem states that the sum of the squares of the two legs equals the square of the hypotenuse: $a^2 + b^2 = c^2$.',
   },
@@ -20,10 +36,26 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is a Pythagorean triple?',
     options: [
-      '$(2, 3, 4)$',
-      '$(3, 4, 5)$',
-      '$(4, 5, 6)$',
-      '$(5, 6, 7)$'
+      '$(2, 3, 4)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$(3, 4, 5)$ is a Pythagorean triple because $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.',
+  },
+      '$(4, 5, 6)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$(3, 4, 5)$ is a Pythagorean triple because $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.',
+  },
+      '$(5, 6, 7)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$(3, 4, 5)$ is a Pythagorean triple because $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.',
+  },
+      '$(3, 4, 5)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$(3, 4, 5)$ is a Pythagorean triple because $3^2 + 4^2 = 9 + 16 = 25 = 5^2$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -43,12 +75,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Pythagorean theorem was known before Pythagoras by which civilization?',
     options: [
-      'The Romans',
       'The Babylonians',
+      'The Romans',
       'The Egyptians',
-      'The Persians'
+      'The Persians',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Babylonian clay tablets from around 1800 BCE show knowledge of Pythagorean triples, predating Pythagoras by over 1000 years.',
   },
@@ -67,11 +99,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What philosophical belief did the Pythagoreans hold about mathematics?',
     options: [
       '"Mathematics is a tool for trade"',
+      '"Numbers are dangerous"',
       '"All is number"',
       '"Geometry is merely decoration"',
-      '"Numbers are dangerous"'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Pythagoreans believed "all is number"—that the universe could be understood through mathematics.',
   },

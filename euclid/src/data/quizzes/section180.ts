@@ -6,12 +6,12 @@ export const section180Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition VII.1 help determine about two unequal numbers?',
     options: [
-      'Which number is larger',
       'Whether they are relatively prime (have no common measure except 1)',
+      'Which number is larger',
       'Their product',
       'Their sum'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Proposition VII.1 provides a method to determine if two unequal numbers are relatively prime by repeatedly subtracting the lesser from the greater.',
   },
@@ -34,12 +34,12 @@ export const section180Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When applying VII.1 to test if 12 and 35 are relatively prime, what is the sequence of remainders?',
     options: [
-      '35, 12, 11, 1 - they are relatively prime',
-      '35, 23, 11, 1 - they are relatively prime',
       '35, 12, 7, 5, 2, 1 - they are relatively prime',
-      '35, 12, 11, 0 - they are not relatively prime'
+      '35, 23, 11, 1 - they are relatively prime',
+      '35, 12, 11, 0 - they are not relatively prime',
+      '35, 12, 11, 1 - they are relatively prime',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: '35 - 12 = 23, 23 - 12 = 11, 12 - 11 = 1. Since we reach 1, the numbers are relatively prime. (Using repeated subtraction as Euclid describes.)',
   },

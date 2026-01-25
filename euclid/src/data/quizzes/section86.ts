@@ -6,12 +6,12 @@ export const section86Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Proposition III.22 proves what about opposite angles in a cyclic quadrilateral?',
     options: [
-      'They are equal',
       'They are supplementary (sum to 180°)',
+      'They are equal',
       'They are complementary (sum to 90°)',
-      'They are right angles'
+      'They are right angles',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'III.22 proves that opposite angles of a quadrilateral inscribed in a circle sum to two right angles (180°).',
   },
@@ -23,7 +23,7 @@ export const section86Questions: QuizQuestion[] = [
       '70°',
       '90°',
       '110°',
-      '140°'
+      '140°',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section86Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does III.22 follow from III.20?',
     options: [
-      'Opposite angles subtend arcs that together make the full circle',
       'All inscribed angles are equal',
       'The quadrilateral must be a rectangle',
-      'Central angles are always 360°'
+      'Central angles are always 360°',
+      'Opposite angles subtend arcs that together make the full circle',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Angle A subtends arc BCD, angle C subtends arc BAD. These arcs together form the whole circle (360° central angle), so the inscribed angles sum to 180°.',
   },

@@ -9,7 +9,7 @@ export const section90Questions: QuizQuestion[] = [
       'Contain all vectors',
       'Be closed under addition and scalar multiplication',
       'Be finite',
-      'Have the same dimension as the parent space'
+      'Have the same dimension as the parent space',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,12 +20,20 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The zero vector subspace $\\{\\mathbf{0}\\}$ has dimension:',
     options: [
-      '$0$',
-      '$1$',
+      '$1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The trivial subspace has dimension 0.',
+  },
       'Undefined',
-      'Infinite'
+      'Infinite',
+      '$0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The trivial subspace has dimension 0.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The trivial subspace has dimension 0.',
   },
@@ -34,12 +42,12 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $\\mathbb{R}^3$, a plane through the origin is:',
     options: [
-      'Not a subspace',
       'A subspace of dimension 2',
+      'Not a subspace',
       'A subspace of dimension 3',
-      'A subspace of dimension 1'
+      'A subspace of dimension 1',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Plane through origin in $\\mathbb{R}^3$ is a 2D subspace.',
   },
@@ -48,12 +56,16 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The set $\\{(x, y) : x + y = 1\\}$ in $\\mathbb{R}^2$ is:',
     options: [
+      'Not a subspace (doesn\\'t contain origin)',
       'A subspace',
-      'Not a subspace (doesn\'t contain origin)',
-      'All of $\\mathbb{R}^2$',
-      'Empty'
+      'Empty',
+      'All of $\\mathbb{R}^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$x + y = 1$ doesn\'t pass through origin, so not a subspace.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$x + y = 1$ doesn\'t pass through origin, so not a subspace.',
   },
@@ -63,11 +75,11 @@ export const section90Questions: QuizQuestion[] = [
     question: 'The intersection of two subspaces is:',
     options: [
       'Not necessarily a subspace',
-      'Always a subspace',
       'Always empty',
-      'The whole space'
+      'Always a subspace',
+      'The whole space',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Intersection of subspaces is a subspace.',
   },
@@ -77,11 +89,11 @@ export const section90Questions: QuizQuestion[] = [
     question: 'The solution set of $A\\mathbf{x} = \\mathbf{0}$ (null space) is:',
     options: [
       'Never a subspace',
-      'A subspace',
       'Always the whole space',
-      'Always trivial'
+      'Always trivial',
+      'A subspace',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Null space is a subspace (homogeneous solutions).',
   },

@@ -6,12 +6,12 @@ export const section122Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does V.3 prove about proportions and equimultiples?',
     options: [
-      'Equimultiples destroy proportions',
       'If A:B = C:D, then mA:nB = mC:nD for any positive integers m, n',
+      'Equimultiples destroy proportions',
       'Only certain multiples preserve proportions',
-      'Proportions only work with whole numbers'
+      'Proportions only work with whole numbers',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'V.3 shows that proportions are "scale-invariant"—multiplying corresponding terms by the same factors preserves the proportion.',
   },
@@ -22,8 +22,8 @@ export const section122Questions: QuizQuestion[] = [
     options: [
       'It defines what a proportion is',
       'It shows proportions can be checked at any scale without changing the result',
+      'It eliminates irrational ratios',
       'It proves all ratios are equal',
-      'It eliminates irrational ratios'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -35,11 +35,11 @@ export const section122Questions: QuizQuestion[] = [
     question: 'If 2:3 = 4:6, what does V.3 tell us about 6:9 and 12:18?',
     options: [
       'They are not related',
-      'They are equal (both are 2:3 scaled)',
       'One is larger than the other',
-      'We cannot compare them'
+      'We cannot compare them',
+      'They are equal (both are 2:3 scaled)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '6:9 = 3×(2:3) and 12:18 = 3×(4:6). Since 2:3 = 4:6, by V.3, 6:9 = 12:18.',
   },

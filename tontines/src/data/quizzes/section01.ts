@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section01Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The Freemasons\' Hall Tontine (1775) illustrates a key tontine feature: as members died, the survivors:',
+    options: [
+      'Received increasingly larger payouts',
+      'Lost their investment',
+      'Had their shares transferred to heirs',
+      'Received smaller payouts',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'In a tontine, the fixed annual dividend is split among surviving members. As members die, fewer people share the pot, so each survivor receives more.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'At their peak in 1905, American tontine assets represented approximately:',
+    options: [
+      '$7 billion (about $200 billion today)',
+      '$1 billion (about $30 billion today)',
+      '$100 million (about $3 billion today)',
+      '$50 billion (about $1 trillion today)',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'By 1905, American tontine assets exceeded $7 billion, equivalent to over $200 billion today, representing one of the most successful financial innovations in history.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Why did tontines eliminate insurance company risk?',
+    options: [
+      'Fixed returns were guaranteed by law',
+      'Government guarantees backed the policies',
+      'The pool self-adjusted to actual mortality—payouts depended on actual survivors',
+      'Professional actuaries managed all investments',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Tontines inherently adjust to actual mortality. The pool divides among actual survivors rather than promising fixed amounts that might exceed funds if too many people live.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Alexander Hamilton proposed using tontines in 1790 to fund:',
+    options: [
+      'The Revolutionary War debt',
+      'American infrastructure',
+      'The Louisiana Purchase',
+      'The first national bank',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Hamilton proposed using tontines to fund American infrastructure in 1790, recognizing their utility for raising long-term capital for public works.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What fraction of American families held tontine policies at their peak?',
+    options: [
+      'One-quarter',
+      'One-half',
+      'One-tenth',
+      'Two-thirds',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'At their peak, two-thirds of American families held tontine policies, making them one of the most widely held financial instruments.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: '"Mortality credits" refers to the mechanism whereby:',
+    options: [
+      'The shares of deceased members boost returns for survivors',
+      'Insurance companies receive tax credits for mortality tables',
+      'Death benefits are paid to beneficiaries',
+      'Government subsidizes life insurance',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Mortality credits are the additional returns survivors receive from the forfeited shares of deceased members—a key advantage of tontines over traditional investments.',
+  },
+];

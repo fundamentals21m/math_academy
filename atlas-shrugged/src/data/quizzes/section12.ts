@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'What is "white blackmail" as presented in this chapter?',
     options: [
       'Extortion for money',
-      'Moral manipulation that uses virtue against the virtuous',
       'Corporate espionage',
-      'Newspaper slander'
+      'Moral manipulation that uses virtue against the virtuous',
+      'Newspaper slander',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'White blackmail is moral manipulation - using someone\'s own sense of duty, compassion, or guilt against them to extract unearned benefits.',
   },
@@ -21,11 +21,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'How does white blackmail differ from regular blackmail?',
     options: [
       'It uses threats of violence',
-      'It exploits moral virtues rather than vices',
       'It is conducted through newspapers',
-      'It is always about money'
+      'It is always about money',
+      'It exploits moral virtues rather than vices',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Regular blackmail exploits fear of exposing vices; white blackmail exploits victims\' virtues like compassion, duty, and fairness.',
   },
@@ -35,11 +35,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Who are the typical victims of white blackmail in the novel?',
     options: [
       'Criminals and corrupt politicians',
-      'Productive, conscientious individuals with strong moral codes',
       'The poor and vulnerable',
-      'Government bureaucrats'
+      'Government bureaucrats',
+      'Productive, conscientious individuals with strong moral codes',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Productive people with strong consciences are vulnerable to white blackmail because they can be manipulated through their own sense of duty.',
   },
@@ -48,12 +48,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What makes white blackmail particularly insidious?',
     options: [
+      'It turns the victim\\'s own virtues into weapons against them',
       'It is illegal but undetectable',
-      'It turns the victim\'s own virtues into weapons against them',
+      'It only works on the uneducated',
       'It requires physical violence',
-      'It only works on the uneducated'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'White blackmail is insidious because it weaponizes good qualities - the more moral the victim, the more vulnerable they become.',
   },
@@ -65,7 +65,7 @@ export const section12Questions: QuizQuestion[] = [
       'Becoming equally manipulative',
       'Refusing to accept unearned guilt',
       'Ignoring all moral claims',
-      'Seeking government protection'
+      'Seeking government protection',
     ],
     correctIndex: 1,
     difficulty: 'hard',

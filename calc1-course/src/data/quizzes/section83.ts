@@ -6,12 +6,12 @@ export const section83Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A vector-valued function $\\mathbf{r}(t)$ maps:',
     options: [
-      'Vectors to scalars',
       'Scalars to vectors',
+      'Vectors to scalars',
       'Vectors to vectors',
-      'Scalars to scalars'
+      'Scalars to scalars',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$\\mathbf{r}: \\mathbb{R} \\to \\mathbb{R}^n$ takes parameter $t$ to a vector.',
   },
@@ -20,12 +20,28 @@ export const section83Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivative $\\mathbf{r}\'(t)$ is defined as:',
     options: [
-      '$\\lim_{h \\to 0} \\frac{\\mathbf{r}(t+h) - \\mathbf{r}(t)}{h}$',
-      '$\\mathbf{r}(t+1) - \\mathbf{r}(t)$',
-      '$|\\mathbf{r}(t)|$',
-      '$\\mathbf{r}(t) \\cdot \\mathbf{r}\'(t)$'
+      '$|\\mathbf{r}(t)|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Differentiate componentwise: limit of difference quotient.',
+  },
+      '$\\mathbf{r}(t+1) - \\mathbf{r}(t)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Differentiate componentwise: limit of difference quotient.',
+  },
+      '$\\mathbf{r}(t) \\cdot \\mathbf{r}\\'(t)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Differentiate componentwise: limit of difference quotient.',
+  },
+      '$\\lim_{h \\to 0} \\frac{\\mathbf{r}(t+h) - \\mathbf{r}(t)}{h}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Differentiate componentwise: limit of difference quotient.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Differentiate componentwise: limit of difference quotient.',
   },
@@ -34,12 +50,28 @@ export const section83Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\mathbf{r}(t) = (t^2, t^3, e^t)$, then $\\mathbf{r}\'(t) = ?$',
     options: [
-      '$(2t, 3t^2, e^t)$',
-      '$(t, t^2, e^t)$',
-      '$(2, 6t, e^t)$',
-      '$(t^3, t^4, te^t)$'
-    ],
+      '$(2t, 3t^2, e^t)
     correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Differentiate each component: $(2t, 3t^2, e^t)$.',
+  },
+      '$(t^3, t^4, te^t)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Differentiate each component: $(2t, 3t^2, e^t)$.',
+  },
+      '$(t, t^2, e^t)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Differentiate each component: $(2t, 3t^2, e^t)$.',
+  },
+      '$(2, 6t, e^t)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Differentiate each component: $(2t, 3t^2, e^t)$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Differentiate each component: $(2t, 3t^2, e^t)$.',
   },
@@ -48,12 +80,12 @@ export const section83Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The integral $\\int \\mathbf{r}(t)\\,dt$ is computed:',
     options: [
-      'By integrating each component',
       'By taking the magnitude first',
       'By cross product',
-      'Cannot be done for vectors'
+      'By integrating each component',
+      'Cannot be done for vectors',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Integrate componentwise.',
   },
@@ -77,11 +109,11 @@ export const section83Questions: QuizQuestion[] = [
     question: '$\\lim_{t \\to a} \\mathbf{r}(t)$ exists if:',
     options: [
       'Only the first component has a limit',
-      'Each component has a limit',
       'The magnitude has a limit',
-      '$\\mathbf{r}$ is constant'
+      '$\\mathbf{r}$ is constant',
+      'Each component has a limit',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Limits are taken componentwise.',
   },

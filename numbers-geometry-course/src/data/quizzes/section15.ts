@@ -10,11 +10,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Euclid\'s proof of the Pythagorean theorem uses:',
     options: [
       'Only algebra',
-      'Triangle-parallelogram area relationships',
-      'Calculus',
       'Prime factorization',
+      'Calculus',
+      'Triangle-parallelogram area relationships'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Euclid\'s proof uses the fact that a triangle has half the area of a parallelogram with the same base and height, combined with congruence.',
@@ -24,12 +24,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Pythagoreans discovered that:',
     options: [
-      'All numbers are rational',
       '$\\sqrt{2}$ is rational',
       '$\\sqrt{2}$ is irrational',
+      'All numbers are rational',
       'The theorem is false',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The Pythagoreans discovered both the Pythagorean theorem and that $\\sqrt{2}$ is irrational, which conflicted with their belief that "all is number."',
@@ -55,11 +55,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'In "geometric algebra," lengths are multiplied by:',
     options: [
       'Converting to decimals',
-      'Forming rectangles with them as sides',
       'Adding them repeatedly',
       'Using prime factorization',
+      'Forming rectangles with them as sides',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'In geometric algebra, the "product" of two lengths is the area of the rectangle with those lengths as adjacent sides.',
@@ -70,11 +70,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Who initiated the reconciliation of arithmetic and geometry?',
     options: [
       'Euclid and Pythagoras',
+      'Newton and Leibniz',
       'Fermat and Descartes',
       'Gauss and Hilbert',
-      'Newton and Leibniz',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Fermat and Descartes initiated analytic geometry in the 17th century, beginning the reconciliation of arithmetic and geometry.',
@@ -84,12 +84,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who completed the reconciliation by defining real numbers?',
     options: [
-      'Euclid',
-      'Gauss',
       'Dedekind',
-      'Pythagoras',
+      'Gauss',
+      'Euclid',
+      'Pythagoras'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Dedekind (1858) defined the concept of real number to capture all possible lengths, completing the reconciliation of arithmetic and geometry.',
@@ -99,12 +99,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Pythagorean theorem is valuable because:',
     options: [
-      'It avoids using numbers',
       'It relates lengths simply via their squares, even when the lengths have no simple ratio',
+      'It avoids using numbers',
       'It only works for rational numbers',
       'It proves all numbers are rational',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The theorem relates the sides and hypotenuse simply via their squares ($a^2 + b^2 = c^2$), even though the lengths themselves may not be simply related.',

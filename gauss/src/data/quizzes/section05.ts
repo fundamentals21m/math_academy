@@ -10,10 +10,10 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "A Diophantine equation is a polynomial equation where we seek:",
     options: [
-      'Real solutions',
       'Complex solutions',
+      'Real solutions',
       'Integer solutions',
-      'Rational solutions only'
+      'Rational solutions only',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -33,10 +33,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Pell's equation is:",
     options: [
-      '$x^2 + y^2 = n$',
-      '$x^2 - Dy^2 = 1$',
-      '$x^3 + y^3 = z^3$',
-      '$xy = n$'
+      '$x^2 - Dy^2 = 1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: "Pell's equation is $x^2 - Dy^2 = 1$ where $D$ is a positive non-square integer.",
+  },
+      '$x^2 + y^2 = n
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: "Pell's equation is $x^2 - Dy^2 = 1$ where $D$ is a positive non-square integer.",
+  },
+      '$x^3 + y^3 = z^3
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: "Pell's equation is $x^2 - Dy^2 = 1$ where $D$ is a positive non-square integer.",
+  },
+      '$xy = n
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: "Pell's equation is $x^2 - Dy^2 = 1$ where $D$ is a positive non-square integer.",
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -58,10 +74,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'No solutions',
       'Exactly one solution',
-      'Finitely many solutions',
-      'Infinitely many solutions'
+      'Infinitely many solutions',
+      'Finitely many solutions'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: "Pell's equation always has infinitely many solutions, generated from the fundamental solution.",
   },
@@ -70,12 +86,28 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Three Squares Theorem says $n$ is a sum of three squares if and only if $n$ is NOT of the form:',
     options: [
-      '$4^a(8b + 1)$',
-      '$4^a(8b + 3)$',
-      '$4^a(8b + 7)$',
-      '$4^a(8b + 5)$'
+      '$4^a(8b + 1)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$n$ is a sum of three squares iff $n$ is not of the form $4^a(8b + 7)$.',
+  },
+      '$4^a(8b + 7)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$n$ is a sum of three squares iff $n$ is not of the form $4^a(8b + 7)$.',
+  },
+      '$4^a(8b + 3)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$n$ is a sum of three squares iff $n$ is not of the form $4^a(8b + 7)$.',
+  },
+      '$4^a(8b + 5)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$n$ is a sum of three squares iff $n$ is not of the form $4^a(8b + 7)$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: '$n$ is a sum of three squares iff $n$ is not of the form $4^a(8b + 7)$.',
   },
@@ -102,12 +134,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Lagrange's Four Squares Theorem states that every positive integer is:",
     options: [
-      'A sum of two squares',
       'A sum of three squares',
+      'A sum of two squares',
+      'A perfect square',
       'A sum of four squares',
-      'A perfect square'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Every positive integer can be written as a sum of four squares (some of which may be zero).',
   },

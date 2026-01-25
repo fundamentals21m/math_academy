@@ -29,12 +29,28 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cyclic shift permutation $\\sigma: (c_0, c_1, \\ldots, c_{n-1}) \\mapsto (c_{n-1}, c_0, \\ldots, c_{n-2})$ generates a group of order:',
     options: [
-      '$n - 1$',
-      '$n$',
-      '$n + 1$',
-      '$2n$'
+      '$n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The cyclic shift $\\sigma$ has order $n$ since $\\sigma^n$ returns each codeword to its original position. The group generated is $\\mathbb{Z}_n$.',
+  },
+      '$n - 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The cyclic shift $\\sigma$ has order $n$ since $\\sigma^n$ returns each codeword to its original position. The group generated is $\\mathbb{Z}_n$.',
+  },
+      '$n + 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The cyclic shift $\\sigma$ has order $n$ since $\\sigma^n$ returns each codeword to its original position. The group generated is $\\mathbb{Z}_n$.',
+  },
+      '$2n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The cyclic shift $\\sigma$ has order $n$ since $\\sigma^n$ returns each codeword to its original position. The group generated is $\\mathbb{Z}_n$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The cyclic shift $\\sigma$ has order $n$ since $\\sigma^n$ returns each codeword to its original position. The group generated is $\\mathbb{Z}_n$.',
   },
@@ -44,11 +60,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'For the $[7, 4, 3]$ Hamming code as a cyclic code, the automorphism group includes:',
     options: [
       'Only cyclic shifts',
-      'Cyclic shifts and the Frobenius automorphism',
+      'Only the identity',
       'The full symmetric group $S_7$',
-      'Only the identity'
+      'Cyclic shifts and the Frobenius automorphism'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The automorphism group of the $[7,4,3]$ cyclic Hamming code includes the cyclic shifts (order 7) and the Frobenius map $x \\mapsto x^2 \\pmod{7}$, forming a group of order 21.',
   },
@@ -66,10 +82,26 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If a cyclic code $C$ is invariant under the multiplier $\\mu_a: i \\mapsto ai \\pmod{n}$, then for any codeword $c(x)$:',
     options: [
-      '$c(x^a) \\in C$',
-      '$c(ax) \\in C$',
-      '$x^a c(x) \\in C$',
-      '$c(x)^a \\in C$'
+      '$c(ax) \\in C
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The multiplier $\\mu_a$ acts on polynomials by $c(x) \\mapsto c(x^a)$. If $C$ is invariant under $\\mu_a$, then $c(x^a) \\in C$ for all $c(x) \\in C$.',
+  },
+      '$x^a c(x) \\in C
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The multiplier $\\mu_a$ acts on polynomials by $c(x) \\mapsto c(x^a)$. If $C$ is invariant under $\\mu_a$, then $c(x^a) \\in C$ for all $c(x) \\in C$.',
+  },
+      '$c(x^a) \\in C
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The multiplier $\\mu_a$ acts on polynomials by $c(x) \\mapsto c(x^a)$. If $C$ is invariant under $\\mu_a$, then $c(x^a) \\in C$ for all $c(x) \\in C$.',
+  },
+      '$c(x)^a \\in C
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The multiplier $\\mu_a$ acts on polynomials by $c(x) \\mapsto c(x^a)$. If $C$ is invariant under $\\mu_a$, then $c(x^a) \\in C$ for all $c(x) \\in C$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

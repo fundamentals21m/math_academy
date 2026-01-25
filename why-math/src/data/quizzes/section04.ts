@@ -30,11 +30,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'The fundamental distance-rate-time formula is:',
     options: [
       'Distance = Rate + Time',
-      'Distance = Rate × Time',
       'Distance = Rate / Time',
+      'Distance = Rate × Time',
       'Distance = Rate - Time'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Distance = Rate × Time, or $d = rt$.',
   },
@@ -44,11 +44,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'A car travels 180 miles at 60 mph, then returns at 45 mph. What is the average speed for the entire trip?',
     options: [
       '52.5 mph (the average of 60 and 45)',
+      '55 mph',
       '51.4 mph (total distance / total time)',
       '50 mph',
-      '55 mph'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Time going: 3 hrs. Time returning: 4 hrs. Total: 360 miles in 7 hrs = 51.4 mph. Average speed is NOT the average of the two speeds!',
   },
@@ -75,12 +75,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Law of the Lever states that for balance:',
     options: [
-      'Weight₁ + Distance₁ = Weight₂ + Distance₂',
       'Weight₁ × Distance₁ = Weight₂ × Distance₂',
+      'Weight₁ + Distance₁ = Weight₂ + Distance₂',
       'Weight₁ / Distance₁ = Weight₂ / Distance₂',
       'Weight₁ - Distance₁ = Weight₂ - Distance₂'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Law of the Lever: $W_1 \\times d_1 = W_2 \\times d_2$.',
   },
@@ -99,11 +99,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Convert 100°C to Fahrenheit:',
     options: [
       '180°F',
-      '212°F',
       '100°F',
-      '132°F'
+      '132°F',
+      '212°F',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$F = \\frac{9}{5}(100) + 32 = 180 + 32 = 212°F$.',
   },

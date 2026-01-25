@@ -6,12 +6,12 @@ export const section120Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition V.1 establish about equimultiples?',
     options: [
-      'Equimultiples can be divided',
       'If A₁ = mB₁ and A₂ = mB₂, then (A₁+A₂) = m(B₁+B₂)',
+      'Equimultiples can be divided',
       'Equimultiples are always equal',
       'Equimultiples have different ratios'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'V.1 shows that equimultiples distribute over addition: the sum of equimultiples is the same multiple of the sum.',
   },
@@ -23,7 +23,7 @@ export const section120Questions: QuizQuestion[] = [
       'Commutativity',
       'Associativity',
       'Distributivity: m(a+b) = ma + mb',
-      'Identity property'
+      'Identity property',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -36,10 +36,10 @@ export const section120Questions: QuizQuestion[] = [
     options: [
       'To make it more complicated',
       'Because the proof only works for many magnitudes',
+      'Because two magnitudes cannot be equimultiples',
       'To establish the general principle that applies to sums of any length',
-      'Because two magnitudes cannot be equimultiples'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'V.1 is stated generally so it can be applied to sums of any number of terms, making it more useful in later propositions.',
   },

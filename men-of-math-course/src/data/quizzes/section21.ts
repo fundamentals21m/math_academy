@@ -7,11 +7,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'William Rowan Hamilton invented which number system that extends the complex numbers?',
     options: [
       'Octonions',
-      'Quaternions',
       'Dual numbers',
-      'p-adic numbers'
+      'p-adic numbers',
+      'Quaternions',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Hamilton invented quaternions, a 4-dimensional number system extending complex numbers.',
   },
@@ -20,12 +20,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hamilton famously carved the quaternion formula on which Dublin landmark?',
     options: [
-      'Dublin Castle',
       'Broom Bridge',
+      'Dublin Castle',
+      'St. Patrick\\'s Cathedral',
       'Trinity College',
-      'St. Patrick\'s Cathedral'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Hamilton carved $i^2 = j^2 = k^2 = ijk = -1$ on Broom Bridge after his eureka moment.',
   },
@@ -35,11 +35,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Quaternion multiplication is notable because it is:',
     options: [
       'Commutative',
-      'Non-commutative',
       'Associative only',
-      'Neither associative nor commutative'
+      'Neither associative nor commutative',
+      'Non-commutative',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Quaternion multiplication is non-commutative: $ij = k$ but $ji = -k$.',
   },
@@ -63,11 +63,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Quaternions are now widely used in:',
     options: [
       'Stock market analysis',
-      '3D computer graphics and robotics',
       'Cryptography',
+      '3D computer graphics and robotics',
       'Machine learning only'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Quaternions efficiently represent 3D rotations without gimbal lock, used in games and robotics.',
   },

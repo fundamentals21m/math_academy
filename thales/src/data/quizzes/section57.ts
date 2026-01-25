@@ -10,11 +10,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'What are the three basic types in intuitionistic type theory?',
     options: [
       'True, False, and Natural',
-      '1 (unit), Ω (truth values), and N (natural numbers)',
       'Set, Function, and Proposition',
-      'Integer, Real, and Complex',
+      '1 (unit), Ω (truth values), and N (natural numbers)',
+      'Integer, Real, and Complex'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The three basic types are: 1 (the unit type with a single element), Ω (the type of truth values/propositions), and N (the type of natural numbers).',
@@ -25,11 +25,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'What does PA represent in intuitionistic type theory?',
     options: [
       'Peano Arithmetic applied to A',
-      'The product of A with itself',
       'The power type (sets of entities of type A)',
+      'The product of A with itself',
       'The partial functions on A',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'PA is the power type, representing the type of sets of entities of type A. It is one of the two type constructors (the other being A × B for product types).',
@@ -40,11 +40,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'How is the logical connective ⊤ (truth) defined in type theory?',
     options: [
       '⊤ ≡ 1',
-      '⊤ ≡ * = *',
       '⊤ ≡ ∀x.x',
       '⊤ ≡ N',
+      '⊤ ≡ * = *',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Truth is defined as * = *, where * is the unique element of the unit type 1. Since * is always equal to itself, this represents a tautology.',
@@ -70,11 +70,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'Why must we avoid De Morgan\'s rules when defining logical symbols intuitionistically?',
     options: [
       'De Morgan\'s rules are computationally expensive',
-      'De Morgan\'s rules are not valid in intuitionistic logic',
       'De Morgan\'s rules create circular definitions',
-      'De Morgan\'s rules require the axiom of choice',
+      'De Morgan\'s rules are not valid in intuitionistic logic',
+      'De Morgan\'s rules require the axiom of choice'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'De Morgan\'s rules (such as ¬(p ∨ q) ⟺ ¬p ∧ ¬q) are not valid intuitionistically. Making implicit use of them would introduce classical reasoning into the constructive framework.',
@@ -84,12 +84,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is falsity (⊥) defined in intuitionistic type theory?',
     options: [
+      '⊥ ≡ ∀t∈Ω.t (everything is true)',
       '⊥ ≡ * ≠ *',
       '⊥ ≡ 0',
-      '⊥ ≡ ∀t∈Ω.t (everything is true)',
       '⊥ ≡ ∅',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'Falsity is defined as ⊥ ≡ ∀t∈Ω.t, meaning "every proposition is true." This is a contradiction, since not every proposition can be true. This definition makes ⊥ a "negative" connective.',
@@ -99,12 +99,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What rule of inference captures mathematical induction in type theory?',
     options: [
-      'If φ(0) then ∀x.φ(x)',
       'If φ(x) ⊢ φ(Sx) then φ(0) ⊢ ∀x.φ(x)',
-      'If φ(x) ⊢{x} φ(Sx), then φ(0) ⊢{x} φ(x)',
+      'If φ(0) then ∀x.φ(x)',
       'If ∀x.φ(x) then φ(0)',
+      'If φ(x) ⊢{x} φ(Sx), then φ(0) ⊢{x} φ(x)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Mathematical induction states: if proving φ(x) allows us to prove φ(Sx), and we can prove φ(0), then we can prove φ(x) for any natural number x. The subscript {x} indicates that x is a free variable in the context.',
@@ -115,11 +115,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'According to the chapter, what is the only source of nonconstructive proofs in arithmetic and analysis?',
     options: [
       'The law of excluded middle',
-      'Double negation elimination',
       'The axiom of choice',
-      'Proof by contradiction',
+      'Double negation elimination',
+      'Proof by contradiction'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'As far as we know, the only proofs in arithmetic and analysis which are essentially nonconstructive depend on the axiom of choice, which asserts that for any nonempty collection of nonempty sets, there exists a set containing exactly one element from each.',

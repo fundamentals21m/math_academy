@@ -9,12 +9,12 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the addition formula for eˣ?',
     options: [
-      'eᵃ⁺ᵇ = eᵃ + eᵇ',
       'eᵃ⁺ᵇ = eᵃ · eᵇ',
+      'eᵃ⁺ᵇ = eᵃ + eᵇ',
       'eᵃ⁺ᵇ = (eᵃ)ᵇ',
       'eᵃ⁺ᵇ = eᵃᵇ',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The addition formula eᵃ⁺ᵇ = eᵃ · eᵇ is the fundamental property of exponentials.',
@@ -26,8 +26,8 @@ export const section75Questions: QuizQuestion[] = [
     options: [
       'e = mc²',
       'eⁱᶿ = cos θ + i sin θ',
-      'e = 2.718...',
       'e + π = i',
+      'e = 2.718...',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -38,8 +38,13 @@ export const section75Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'What is eⁱᵖⁱ?',
-    options: ['1', '0', '-1', 'i'],
-    correctIndex: 2,
+    options: [
+      '1',
+      '0',
+      'i',
+      '-1',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'By Euler\'s formula: eⁱᵖⁱ = cos π + i sin π = -1 + 0 = -1.',
@@ -65,11 +70,11 @@ export const section75Questions: QuizQuestion[] = [
     question: 'Why is eˣ transcendental?',
     options: [
       'Because e is irrational',
-      'Because eˣ = 1 has infinitely many solutions (x = 2πin)',
       'Because it cannot be computed exactly',
+      'Because eˣ = 1 has infinitely many solutions (x = 2πin)',
       'Because it grows too fast',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'If eˣ were algebraic, eˣ = 1 would have finitely many solutions, but x = 2πin works for all integers n.',
@@ -80,11 +85,11 @@ export const section75Questions: QuizQuestion[] = [
     question: 'The series for eˣ is:',
     options: [
       '1 + x + x² + x³ + ...',
-      '1 + x/1! + x²/2! + x³/3! + ...',
       'x + x²/2 + x³/3 + ...',
       '1 - x + x² - x³ + ...',
+      '1 + x/1! + x²/2! + x³/3! + ...',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'eˣ = 1 + x/1! + x²/2! + x³/3! + ..., where n! = n(n-1)(n-2)...1.',
@@ -104,12 +109,12 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What five constants appear in eⁱᵖⁱ + 1 = 0?',
     options: [
-      'e, i, π, 2, 0',
       'e, i, π, 1, 0',
-      'e, i, 2π, 1, -1',
+      'e, i, π, 2, 0',
       'e, √-1, π, -1, 0',
+      'e, i, 2π, 1, -1',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The equation eⁱᵖⁱ + 1 = 0 connects e, i, π, 1, and 0—five fundamental constants.',

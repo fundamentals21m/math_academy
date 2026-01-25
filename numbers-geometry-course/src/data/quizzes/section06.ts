@@ -9,12 +9,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many divisors does $30 = 2 \\times 3 \\times 5$ have?',
     options: [
-      '3',
-      '6',
       '8',
-      '30',
+      '6',
+      '3',
+      '30'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'For $30 = 2^1 \\times 3^1 \\times 5^1$, the number of divisors is $(1+1)(1+1)(1+1) = 2 \\times 2 \\times 2 = 8$. They are: 1, 2, 3, 5, 6, 10, 15, 30.',
@@ -24,12 +24,32 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $n = p_1^{e_1} p_2^{e_2} \\cdots p_k^{e_k}$, how many divisors does $n$ have?',
     options: [
-      '$e_1 + e_2 + \\cdots + e_k$',
-      '$e_1 \\times e_2 \\times \\cdots \\times e_k$',
-      '$(e_1 + 1)(e_2 + 1) \\cdots (e_k + 1)$',
-      '$p_1 + p_2 + \\cdots + p_k$',
+      '$e_1 + e_2 + \\cdots + e_k
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'Each divisor is $p_1^{d_1} \\cdots p_k^{d_k}$ where $0 \\leq d_i \\leq e_i$. There are $e_i + 1$ choices for each $d_i$, giving $(e_1+1)(e_2+1)\\cdots(e_k+1)$ total divisors.',
+  },
+      '$e_1 \\times e_2 \\times \\cdots \\times e_k
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'Each divisor is $p_1^{d_1} \\cdots p_k^{d_k}$ where $0 \\leq d_i \\leq e_i$. There are $e_i + 1$ choices for each $d_i$, giving $(e_1+1)(e_2+1)\\cdots(e_k+1)$ total divisors.',
+  },
+      '$p_1 + p_2 + \\cdots + p_k
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'Each divisor is $p_1^{d_1} \\cdots p_k^{d_k}$ where $0 \\leq d_i \\leq e_i$. There are $e_i + 1$ choices for each $d_i$, giving $(e_1+1)(e_2+1)\\cdots(e_k+1)$ total divisors.',
+  },
+      '$(e_1 + 1)(e_2 + 1) \\cdots (e_k + 1)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'Each divisor is $p_1^{d_1} \\cdots p_k^{d_k}$ where $0 \\leq d_i \\leq e_i$. There are $e_i + 1$ choices for each $d_i$, giving $(e_1+1)(e_2+1)\\cdots(e_k+1)$ total divisors.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Each divisor is $p_1^{d_1} \\cdots p_k^{d_k}$ where $0 \\leq d_i \\leq e_i$. There are $e_i + 1$ choices for each $d_i$, giving $(e_1+1)(e_2+1)\\cdots(e_k+1)$ total divisors.',
@@ -50,11 +70,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'To find $\\gcd(m, n)$ using prime factorizations, we take:',
     options: [
       'The maximum exponent of each prime',
-      'The minimum exponent of each prime',
       'The sum of all exponents',
       'The product of all primes',
+      'The minimum exponent of each prime',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The gcd is found by taking the minimum exponent of each prime that appears in both factorizations. This gives the largest number that divides both $m$ and $n$.',
@@ -65,11 +85,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What is $\\gcd(12, 18)$ if $12 = 2^2 \\times 3$ and $18 = 2 \\times 3^2$?',
     options: [
       '2',
-      '3',
       '6',
+      '3',
       '36',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       '$\\gcd(12, 18) = 2^{\\min(2,1)} \\times 3^{\\min(1,2)} = 2^1 \\times 3^1 = 6$.',
@@ -79,12 +99,32 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What elegant formula relates gcd, lcm, and the product $mn$?',
     options: [
-      '$\\gcd(m,n) + \\text{lcm}(m,n) = mn$',
-      '$\\gcd(m,n) \\times \\text{lcm}(m,n) = mn$',
-      '$\\gcd(m,n) \\times \\text{lcm}(m,n) = m + n$',
-      '$\\gcd(m,n) = \\text{lcm}(m,n)$',
+      '$\\gcd(m,n) + \\text{lcm}(m,n) = mn
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      '$\\gcd(m,n) \\times \\text{lcm}(m,n) = mn$. This allows computing lcm without factorization: find gcd by Euclidean algorithm, then divide into $mn$.',
+  },
+      '$\\gcd(m,n) \\times \\text{lcm}(m,n) = m + n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      '$\\gcd(m,n) \\times \\text{lcm}(m,n) = mn$. This allows computing lcm without factorization: find gcd by Euclidean algorithm, then divide into $mn$.',
+  },
+      '$\\gcd(m,n) \\times \\text{lcm}(m,n) = mn
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      '$\\gcd(m,n) \\times \\text{lcm}(m,n) = mn$. This allows computing lcm without factorization: find gcd by Euclidean algorithm, then divide into $mn$.',
+  },
+      '$\\gcd(m,n) = \\text{lcm}(m,n)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      '$\\gcd(m,n) \\times \\text{lcm}(m,n) = mn$. This allows computing lcm without factorization: find gcd by Euclidean algorithm, then divide into $mn$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       '$\\gcd(m,n) \\times \\text{lcm}(m,n) = mn$. This allows computing lcm without factorization: find gcd by Euclidean algorithm, then divide into $mn$.',
@@ -94,12 +134,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A perfect number is one that:',
     options: [
-      'Is divisible by all primes',
       'Equals the sum of its proper divisors',
+      'Is divisible by all primes',
       'Has exactly two divisors',
       'Is both a square and a cube',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'A perfect number equals the sum of its proper divisors (all divisors except itself). For example, $6 = 1 + 2 + 3$ and $28 = 1 + 2 + 4 + 7 + 14$.',

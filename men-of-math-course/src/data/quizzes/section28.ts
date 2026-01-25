@@ -7,11 +7,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'Leopold Kronecker is famous for saying "God made the integers; all else is the work of:',
     options: [
       'Nature',
-      'Man',
       'The devil',
-      'Mathematicians'
+      'Man',
+      'Mathematicians',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Kronecker\'s quote reflects his belief that only integers are truly fundamental in mathematics.',
   },
@@ -23,7 +23,7 @@ export const section28Questions: QuizQuestion[] = [
       'Platonism',
       'Constructivism/Finitism',
       'Formalism',
-      'Logicism'
+      'Logicism',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'Kronecker opposed which mathematician\'s work on infinite sets?',
     options: [
       'Gauss',
+      'Euler',
       'Cantor',
       'Weierstrass',
-      'Euler'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Kronecker famously opposed Cantor\'s theory of infinite sets, calling it illegitimate.',
   },
@@ -49,11 +49,15 @@ export const section28Questions: QuizQuestion[] = [
     question: 'The Kronecker delta $\\delta_{ij}$ equals:',
     options: [
       'Always 1',
-      '1 if $i=j$, 0 otherwise',
       'Always 0',
-      '$i + j$'
+      '$i + j
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The Kronecker delta is 1 when indices are equal and 0 otherwise.',
+  },
+      '1 if $i=j$, 0 otherwise',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Kronecker delta is 1 when indices are equal and 0 otherwise.',
   },
@@ -62,12 +66,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Kronecker made major contributions to:',
     options: [
-      'Topology',
       'Algebraic number theory',
+      'Topology',
       'Statistics',
-      'Geometry'
+      'Geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Kronecker worked extensively on algebraic number theory and algebra.',
   },

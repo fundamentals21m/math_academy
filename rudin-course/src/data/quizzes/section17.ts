@@ -21,11 +21,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'If $|x| < 1$, what is $\\lim_{n \\to \\infty} x^n$?',
     options: [
       '$1$',
-      '$0$',
       '$x$',
+      '$0$',
       'Does not exist'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'For $|x| < 1$, the sequence $|x|^n$ decreases geometrically to $0$. Hence $x^n \\to 0$.',
   },
@@ -35,11 +35,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'What is $\\lim_{n \\to \\infty} n^{1/n}$?',
     options: [
       '$0$',
-      '$1$',
+      '$\\infty$',
       '$e$',
-      '$\\infty$'
+      '$1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Let $y_n = n^{1/n}$. Taking logarithms: $\\ln y_n = \\frac{\\ln n}{n} \\to 0$ as $n \\to \\infty$. Thus $y_n \\to e^0 = 1$.',
   },
@@ -48,12 +48,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n$?',
     options: [
-      '$1$',
-      '$2$',
       '$e$',
+      '$2$',
+      '$1$',
       '$\\infty$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'This is the definition of $e$: $\\lim_{n \\to \\infty} (1 + 1/n)^n = e \\approx 2.718$.',
   },
@@ -63,11 +63,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'If $p > 0$, what is $\\lim_{n \\to \\infty} \\frac{n^p}{(1+r)^n}$ for $r > 0$?',
     options: [
       '$\\infty$',
-      '$1$',
       '$0$',
+      '$1$',
       'Depends on $p$ and $r$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Exponential growth beats polynomial growth: $(1+r)^n$ grows faster than $n^p$ for any fixed $p$. Thus $n^p/(1+r)^n \\to 0$.',
   },

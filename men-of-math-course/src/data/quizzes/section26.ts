@@ -7,11 +7,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'George Boole founded which branch of mathematics fundamental to computer science?',
     options: [
       'Calculus',
+      'Geometry',
       'Boolean algebra',
       'Statistics',
-      'Geometry'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Boolean algebra, the mathematics of logic with AND, OR, NOT operations, is foundational for computing.',
   },
@@ -21,11 +21,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'In Boolean algebra, variables take values of:',
     options: [
       'Any real number',
-      'True or false (1 or 0)',
       'Positive integers',
-      'Complex numbers'
+      'Complex numbers',
+      'True or false (1 or 0)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Boolean variables are binary: true/false, 1/0, on/off.',
   },
@@ -34,12 +34,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Boole\'s major work "An Investigation of the Laws of Thought" (1854) applied algebra to:',
     options: [
-      'Physics',
       'Logic and reasoning',
+      'Physics',
       'Chemistry',
-      'Economics'
+      'Economics',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Boole showed that logical reasoning could be expressed algebraically.',
   },
@@ -51,7 +51,7 @@ export const section26Questions: QuizQuestion[] = [
       'University educated',
       'Self-taught',
       'Trained by Gauss',
-      'A child prodigy from nobility'
+      'A child prodigy from nobility',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -63,11 +63,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'Boolean algebra is used in:',
     options: [
       'Only mathematics',
-      'Digital circuits and computer programming',
+      'Fluid dynamics',
       'Only philosophy',
-      'Fluid dynamics'
+      'Digital circuits and computer programming'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Boolean algebra is the foundation of digital circuits, programming logic, and database queries.',
   },

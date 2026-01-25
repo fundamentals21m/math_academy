@@ -21,11 +21,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'What is "originary interest"?',
     options: [
       'The interest rate set by the central bank',
-      'The first interest payment on a loan',
       'The pure time-preference component of interest, abstracted from risk and uncertainty',
-      'The historical origin of interest in ancient economies'
+      'The first interest payment on a loan',
+      'The historical origin of interest in ancient economies',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Originary interest is the pure expression of time preference—the discount applied to future goods compared to present goods, abstracted from all other considerations like risk, uncertainty, and expected inflation.'
   },
@@ -34,12 +34,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Can originary interest be zero or negative?',
     options: [
-      'Yes, with sufficient government intervention',
-      'Yes, in deflationary conditions',
       'No, it is always positive because time preference is an essential feature of action',
+      'Yes, in deflationary conditions',
+      'Yes, with sufficient government intervention',
       'Yes, when savings exceed investment'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Originary interest cannot be zero or negative. A zero or negative rate would mean people value future goods as much as or more than present goods, contradicting the very nature of action. If people didn\'t prefer earlier satisfaction, they would never begin to act.'
   },
@@ -48,12 +48,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What components does the gross market rate of interest include beyond originary interest?',
     options: [
-      'Only the central bank\'s policy rate',
-      'Risk premium, entrepreneurial component, and price (inflation) premium',
+      'Only the central bank\\'s policy rate',
       'Only the cost of administering loans',
-      'Only compensation for expected inflation'
+      'Only compensation for expected inflation',
+      'Risk premium, entrepreneurial component, and price (inflation) premium',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The gross market rate of interest includes originary interest (pure time preference) plus a risk premium (default risk), an entrepreneurial component (uncertainty about economic conditions), and a price premium (expected changes in purchasing power of money).'
   },
@@ -63,11 +63,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'How does interest differ from entrepreneurial profit?',
     options: [
       'There is no difference; they are synonyms',
-      'Interest arises from time preference and exists with certainty; profit arises from uncertainty and foresight',
       'Interest is earned by workers; profit by capitalists',
-      'Interest is always positive; profit is always negative'
+      'Interest is always positive; profit is always negative',
+      'Interest arises from time preference and exists with certainty; profit arises from uncertainty and foresight',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Interest arises from time preference and would exist even in a world of perfect foresight—it is always positive. Entrepreneurial profit arises from uncertainty and the ability to anticipate future conditions better than others—it can be positive (profit) or negative (loss).'
   },
@@ -76,12 +76,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why are interest rates important for investment decisions?',
     options: [
-      'They determine government spending levels',
       'They affect the discounted present value of expected returns, making some projects profitable or unprofitable',
+      'They determine government spending levels',
+      'They have no effect on long-term investment decisions',
       'They only matter for consumer lending, not business investment',
-      'They have no effect on long-term investment decisions'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Entrepreneurs compare investment costs with the discounted present value of expected returns. Projects profitable at low interest rates become unprofitable when rates rise. The interest rate thus serves as a crucial signal coordinating production across time.'
   }

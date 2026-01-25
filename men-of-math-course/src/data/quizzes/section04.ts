@@ -20,12 +20,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is Descartes\'s most famous philosophical statement?',
     options: [
-      'Knowledge is power',
       'I think, therefore I am',
+      'Knowledge is power',
       'The unexamined life is not worth living',
-      'Man is the measure of all things'
+      'Man is the measure of all things',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '"Cogito, ergo sum" (I think, therefore I am) was Descartes\'s foundational principle of certainty.',
   },
@@ -35,11 +35,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'In Descartes\'s notation, what do $x$, $y$, $z$ typically represent?',
     options: [
       'Constants',
-      'Unknown quantities (variables)',
+      'Coefficients',
       'Exponents',
-      'Coefficients'
+      'Unknown quantities (variables)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Descartes established the convention of using letters from the end of the alphabet for unknowns.',
   },
@@ -48,12 +48,28 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The equation of a circle centered at the origin with radius $r$ in Cartesian coordinates is:',
     options: [
-      '$x + y = r$',
-      '$x^2 + y^2 = r^2$',
-      '$xy = r$',
-      '$x^2 - y^2 = r^2$'
+      '$x + y = r
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The distance formula gives $\\sqrt{x^2 + y^2} = r$, so $x^2 + y^2 = r^2$.',
+  },
+      '$xy = r
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The distance formula gives $\\sqrt{x^2 + y^2} = r$, so $x^2 + y^2 = r^2$.',
+  },
+      '$x^2 + y^2 = r^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The distance formula gives $\\sqrt{x^2 + y^2} = r$, so $x^2 + y^2 = r^2$.',
+  },
+      '$x^2 - y^2 = r^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The distance formula gives $\\sqrt{x^2 + y^2} = r$, so $x^2 + y^2 = r^2$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The distance formula gives $\\sqrt{x^2 + y^2} = r$, so $x^2 + y^2 = r^2$.',
   },
@@ -63,11 +79,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Descartes\'s Rule of Signs helps determine:',
     options: [
       'The derivative of a polynomial',
-      'The number of positive and negative real roots',
       'Whether a number is prime',
-      'The area under a curve'
+      'The number of positive and negative real roots',
+      'The area under a curve',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Rule of Signs uses sign changes in coefficients to bound the number of positive and negative real roots.',
   },

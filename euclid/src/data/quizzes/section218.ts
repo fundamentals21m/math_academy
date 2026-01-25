@@ -7,11 +7,11 @@ export const section218Questions: QuizQuestion[] = [
     question: 'Proposition VII.39 addresses finding the least number that has:',
     options: [
       'Only prime factors',
-      'Given parts (such as a half, a third, a fourth, etc.)',
       'No factors at all',
+      'Given parts (such as a half, a third, a fourth, etc.)',
       'The maximum number of divisors'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'VII.39 shows how to find the smallest number that has specified parts (e.g., a half, a third, and a fifth).',
   },
@@ -20,12 +20,12 @@ export const section218Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the least number that has both a half and a third (i.e., is divisible by both 2 and 3)?',
     options: [
-      '5',
       '6',
+      '5',
+      '3',
       '12',
-      '3'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The least number divisible by both 2 and 3 is LCM(2, 3) = 6.',
   },
@@ -37,7 +37,7 @@ export const section218Questions: QuizQuestion[] = [
       'The Euclidean algorithm',
       'The least common multiple',
       'Perfect numbers',
-      'The infinity of primes'
+      'The infinity of primes',
     ],
     correctIndex: 1,
     difficulty: 'hard',

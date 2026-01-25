@@ -9,7 +9,7 @@ export const section21Questions: QuizQuestion[] = [
       'Primality testing',
       'Integer factorization',
       'Discrete logarithms',
-      'Key generation'
+      'Key generation',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'ECM\'s running time depends primarily on:',
     options: [
       'The size of $n$ being factored',
-      'The size of the smallest prime factor',
+      'The field characteristic',
       'The number of curves tried',
-      'The field characteristic'
+      'The size of the smallest prime factor'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Unlike QS/NFS, ECM\'s complexity depends on the factor size, not $n$.',
   },
@@ -34,12 +34,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'ECM generalizes which classical factoring method?',
     options: [
-      'Trial division',
-      'Fermat\'s method',
       'Pollard\'s $p-1$ method',
+      'Fermat\'s method',
+      'Trial division',
       'Quadratic sieve'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'ECM generalizes $p-1$ by using elliptic curve groups instead of $(\\mathbb{Z}/p\\mathbb{Z})^*$.',
   },
@@ -49,9 +49,13 @@ export const section21Questions: QuizQuestion[] = [
     question: 'ECM finds a factor when:',
     options: [
       'A point has infinite order',
-      'A GCD computation yields a non-trivial factor',
       'The curve is supersingular',
-      'The group order equals $p$'
+      'A GCD computation yields a non-trivial factor',
+      'The group order equals $p
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'When computing $MP$ fails due to non-invertible denominator, GCD reveals a factor.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

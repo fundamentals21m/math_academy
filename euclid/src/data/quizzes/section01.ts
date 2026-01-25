@@ -7,11 +7,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'What does Proposition I.1 construct?',
     options: [
       'A right angle',
-      'An equilateral triangle on a given line segment',
       'A perpendicular bisector',
-      'A circle through three points'
+      'A circle through three points',
+      'An equilateral triangle on a given line segment',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Proposition I.1 shows how to construct an equilateral triangle on a given finite straight line.',
   },
@@ -29,12 +29,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which postulates are used in the proof of I.1?',
     options: [
-      'Only Postulate 1',
       'Postulates 1 and 3',
+      'Only Postulate 1',
+      'All five postulates',
       'Postulates 1, 2, and 3',
-      'All five postulates'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The proof uses Postulate 1 (drawing straight lines) and Postulate 3 (drawing circles).',
   },
@@ -44,11 +44,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'What property of circles ensures the two circles in I.1 intersect?',
     options: [
       'It follows from Definition 15',
-      'Euclid assumes it without explicit justification',
       'It follows from Postulate 3',
-      'Common Notion 4 proves it'
+      'Euclid assumes it without explicit justification',
+      'Common Notion 4 proves it',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'This is a famous gap in Euclid\'s reasoning. He assumes the circles intersect without proving it, though it follows from continuity considerations.',
   },

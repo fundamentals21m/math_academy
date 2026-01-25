@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section29Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The distinguishing feature of restriction as a form of intervention is that:',
+    options: [
+      'The diversion of production is precisely what the authority intends',
+      'It generates government revenue',
+      'It increases total output',
+      'It benefits consumers',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Restriction means government "forbids or makes more difficult the production of definite articles." The diversion of production is not an unintended side effect—it is the purpose.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Every restriction benefits:',
+    options: [
+      'Society as a whole',
+      'Consumers primarily',
+      'A concentrated group at the expense of the dispersed many',
+      'Workers in all industries',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Restrictive action is advantageous for the privileged group and disadvantageous for those excluded. The winners are concentrated and organized; the losers are dispersed and unaware.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'When government "encourages" an industry through subsidies:',
+    options: [
+      'Resources are withdrawn from other sectors, reducing their output',
+      'Total production increases',
+      'Resources are created from nothing',
+      'All industries benefit equally'
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Government cannot create resources; it can only redirect them. Every subsidy to one sector withdraws resources from others. Citizens forgo valued satisfactions to obtain lesser ones.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Restriction belongs to the sphere of:',
+    options: [
+      'Production—generating new wealth',
+      'Consumption—reducing what productive systems create',
+      'Scientific management',
+      'Neutral policy'
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Restrictions can only curtail output, never generate it. You cannot construct a system of economic action out of restrictive measures alone—they belong to consumption, not production.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Higher living standards for workers result from:',
+    options: [
+      'Government mandates for shorter work hours',
+      'Capital accumulation and increased productivity',
+      'Restriction of imports',
+      'Licensing requirements',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Rising standards come from profit-seeking businesses accumulating and investing capital, not from restrictions or mandates. Higher productivity per hour, not fewer hours at the same productivity, creates wealth.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Those seeking restrictions want to be:',
+    options: [
+      'Equal with others',
+      'Subject to market discipline',
+      'Accountable to consumers',
+      'Privileged at others\' expense'
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Those who advocate restrictions want to be privileged at others\' expense. The concentrated gains to the few are always less than the dispersed losses to the many.',
+  },
+];

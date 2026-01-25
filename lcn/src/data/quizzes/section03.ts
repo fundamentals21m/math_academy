@@ -7,11 +7,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'What are the three properties of a zero-knowledge argument of knowledge?',
     options: [
       'Binding, hiding, soundness',
-      'Completeness, soundness, zero-knowledge',
+      'Commitment, challenge, response',
       'Privacy, integrity, availability',
-      'Commitment, challenge, response'
+      'Completeness, soundness, zero-knowledge'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A ZKAK must satisfy completeness (honest prover succeeds), soundness (cheating prover fails), and zero-knowledge (verifier learns nothing).',
   },
@@ -23,7 +23,7 @@ export const section03Questions: QuizQuestion[] = [
       'The verifier always rejects',
       'A prover with a valid witness can convince the verifier',
       'The proof is short',
-      'No computation is needed'
+      'No computation is needed',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -48,12 +48,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Zero-knowledge is formalized through the existence of:',
     options: [
-      'A hash function',
       'A simulator that can produce proofs without the witness',
+      'A hash function',
       'A trusted third party',
-      'A random oracle'
+      'A random oracle',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'ZK requires a simulator that produces identically distributed transcripts without knowing the witness.',
   },
@@ -63,11 +63,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'The difference between an "argument" and a "proof" is:',
     options: [
       'Arguments are interactive, proofs are not',
+      'There is no difference',
       'Arguments have computational soundness, proofs have information-theoretic soundness',
       'Arguments are longer than proofs',
-      'There is no difference'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Arguments are sound against PPT adversaries; proofs are sound against unbounded adversaries.',
   },

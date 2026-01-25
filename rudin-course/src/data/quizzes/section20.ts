@@ -6,12 +6,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The number $e$ is defined as:',
     options: [
-      '$\\sum_{n=0}^{\\infty} n!$',
       '$\\sum_{n=0}^{\\infty} \\frac{1}{n!}$',
+      '$\\sum_{n=0}^{\\infty} n!$',
       '$\\lim_{n \\to \\infty} n!$',
       '$\\prod_{n=1}^{\\infty} (1 + 1/n)$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$e = \\sum_{n=0}^{\\infty} \\frac{1}{n!} = 1 + 1 + \\frac{1}{2} + \\frac{1}{6} + \\cdots \\approx 2.71828$. Equivalently, $e = \\lim_{n \\to \\infty} (1 + 1/n)^n$.',
   },
@@ -35,11 +35,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'The number $e$ is:',
     options: [
       'Rational',
-      'Irrational',
       'An integer',
+      'Irrational',
       'Negative'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Rudin proves $e$ is irrational. If $e = p/q$ with $q \\geq 2$, then $q!(e - \\sum_{n=0}^{q} 1/n!)$ would be a positive integer less than $1$, a contradiction.',
   },
@@ -50,10 +50,10 @@ export const section20Questions: QuizQuestion[] = [
     options: [
       '$x$',
       '$1$',
-      '$e^x$',
-      'Does not exist'
+      'Does not exist',
+      '$e^x$'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'This limit equals $e^x$. For $x = 1$, we get $e$. The general result follows from $\\ln(1 + x/n)^n = n \\ln(1 + x/n) \\to x$ as $n \\to \\infty$.',
   },
@@ -62,12 +62,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Between which two integers does $e$ lie?',
     options: [
-      '$1$ and $2$',
       '$2$ and $3$',
+      '$1$ and $2$',
       '$3$ and $4$',
       '$0$ and $1$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$e = 1 + 1 + 1/2 + 1/6 + \\cdots$. The first three terms already give $2.5$, and the full sum is approximately $2.71828$. So $2 < e < 3$.',
   },

@@ -9,7 +9,7 @@ export const section03Questions: QuizQuestion[] = [
       '$n - 1$ points',
       '$n$ points',
       '$n + 1$ points',
-      '$2n$ points'
+      '$2n$ points',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -29,12 +29,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the relationship between the number of points needed to determine a curve and its order?',
     options: [
-      'Higher order curves need fewer points',
       'Higher order curves need more points',
+      'Higher order curves need fewer points',
       'All curves need the same number of points',
-      'The order has no relation to points needed'
+      'The order has no relation to points needed',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Higher order curves have more coefficients in their equations, so more points are needed to determine them uniquely. A line needs 2 points, a conic needs 5.',
   },
@@ -44,11 +44,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'What happens when two curves of orders $m$ and $n$ intersect?',
     options: [
       'They intersect at $m + n$ points',
-      'They intersect at $m \\times n$ points',
       'They intersect at $\\max(m, n)$ points',
-      'They never intersect'
+      'They never intersect',
+      'They intersect at $m \\times n$ points',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Bézout\'s theorem: two curves of degrees $m$ and $n$ intersect in at most $mn$ points (counting multiplicity and complex intersections).',
   },
@@ -58,11 +58,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'Why does Euler study properties that are common to curves of the same order?',
     options: [
       'Because they have the same color',
+      'Because they were discovered at the same time',
       'Because coordinate transformations preserve order',
       'Because they have the same length',
-      'Because they were discovered at the same time'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Since order is preserved under coordinate transformations, curves of the same order share geometric properties that don\'t depend on the choice of coordinates.',
   },

@@ -9,12 +9,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why did Euclid avoid measuring angles with numbers?',
     options: [
-      'He did not know about numbers',
       'Angle measure is a deep concept beyond traditional geometry',
+      'He did not know about numbers',
       'The Greeks only worked with integers',
-      'Angles cannot be measured',
+      'Angles cannot be measured'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Euclid compared angles but never assigned numbers to them. This suggests angle measure is a deeper concept than traditional geometric methods can handle directly.',
@@ -56,10 +56,10 @@ export const section37Questions: QuizQuestion[] = [
     options: [
       'The ratio of circumference to diameter',
       'The length of a semicircle of radius 1',
-      'The area of a unit circle',
       'All of the above are equivalent',
+      'The area of a unit circle',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'π can be defined as the length of a semicircle of radius 1, or equivalently as half the circumference, or as the area of the unit circle. All these definitions give the same value.',
@@ -69,12 +69,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Archimedes prove about π using 96-sided polygons?',
     options: [
-      'π = 3',
       'π = 22/7 exactly',
-      '3 + 10/71 < π < 3 + 1/7',
+      'π = 3',
       'π is irrational',
+      '3 + 10/71 < π < 3 + 1/7',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Archimedes used inner and outer 96-sided polygons to prove 3 + 10/71 < π < 3 + 1/7, giving approximately 3.140 < π < 3.143.',
@@ -95,11 +95,11 @@ export const section37Questions: QuizQuestion[] = [
     question: 'Why is arc length additive?',
     options: [
       'Because angles are defined that way',
-      'Because of the least upper bound property',
       'Because the circle is round',
       'It is not actually additive',
+      'Because of the least upper bound property',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Arc length is additive because of how the least upper bound works: polygons in adjacent arcs can be combined into a polygon in the union, and vice versa.',
@@ -110,12 +110,12 @@ export const section37Questions: QuizQuestion[] = [
     question:
       'What problem shows that the ancient Greeks understood the depth of angle measure?',
     options: [
-      'Trisecting the angle',
       'Squaring the circle',
+      'Trisecting the angle',
       'Duplicating the cube',
       'The parallel postulate',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Squaring the circle requires constructing π, which is the natural measure of a straight angle. The Greeks\' failure to solve this problem hints at the transcendental nature of angle measure.',

@@ -6,12 +6,12 @@ export const section129Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does V.10 prove (converse of V.8)?',
     options: [
-      'Greater ratios are meaningless',
       'If A:C > B:C, then A > B',
+      'Greater ratios are meaningless',
+      'Ratios cannot be compared',
       'All ratios are equal',
-      'Ratios cannot be compared'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'V.10 proves the converse of V.8: if the ratio A:C exceeds B:C, then A exceeds B.',
   },
@@ -23,7 +23,7 @@ export const section129Questions: QuizQuestion[] = [
       'That ratios are undefined',
       'A complete correspondence between magnitude ordering and ratio ordering',
       'That all magnitudes are commensurable',
-      'That ratios only work for integers'
+      'That ratios only work for integers',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -37,7 +37,7 @@ export const section129Questions: QuizQuestion[] = [
       '12 < 8',
       '12 = 8',
       '12 > 8',
-      'We cannot conclude anything'
+      'We cannot conclude anything',
     ],
     correctIndex: 2,
     difficulty: 'easy',

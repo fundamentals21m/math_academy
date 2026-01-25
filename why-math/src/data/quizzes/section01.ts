@@ -7,11 +7,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'Which property states that $a + b = b + a$?',
     options: [
       'Associative Law',
-      'Commutative Law',
       'Distributive Law',
-      'Identity Law'
+      'Commutative Law',
+      'Identity Law',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The Commutative Law states that the order of operands does not matter for addition and multiplication.',
   },
@@ -20,12 +20,28 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the value of $3 \\times (4 + 5)$ using the distributive law?',
     options: [
-      '$3 \\times 4 + 5 = 17$',
-      '$3 \\times 4 + 3 \\times 5 = 27$',
-      '$3 + 4 \\times 5 = 23$',
-      '$(3 + 4) \\times 5 = 35$'
-    ],
+      '$3 \\times 4 + 5 = 17
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The distributive law: $a \\times (b + c) = a \\times b + a \\times c$. So $3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27$.',
+  },
+      '$3 \\times 4 + 3 \\times 5 = 27
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The distributive law: $a \\times (b + c) = a \\times b + a \\times c$. So $3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27$.',
+  },
+      '$3 + 4 \\times 5 = 23
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The distributive law: $a \\times (b + c) = a \\times b + a \\times c$. So $3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27$.',
+  },
+      '$(3 + 4) \\times 5 = 35
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The distributive law: $a \\times (b + c) = a \\times b + a \\times c$. So $3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27$.',
+  },
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The distributive law: $a \\times (b + c) = a \\times b + a \\times c$. So $3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27$.',
   },
@@ -35,11 +51,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'What is $\\frac{2}{3} \\div \\frac{4}{5}$?',
     options: [
       '$\\frac{8}{15}$',
-      '$\\frac{5}{6}$',
+      '$\\frac{6}{20}$',
       '$\\frac{10}{12}$',
-      '$\\frac{6}{20}$'
+      '$\\frac{5}{6}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'To divide fractions, invert and multiply: $\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}$.',
   },
@@ -48,12 +64,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the laws of exponents, what is $a^3 \\times a^4$?',
     options: [
-      '$a^{12}$',
       '$a^7$',
+      '$a^{12}$',
       '$a^{4/3}$',
       '$2a^7$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The product rule for exponents: $a^m \\times a^n = a^{m+n}$. So $a^3 \\times a^4 = a^{3+4} = a^7$.',
   },
@@ -73,10 +89,10 @@ export const section01Questions: QuizQuestion[] = [
     options: [
       '10%',
       '20%',
+      '50%',
       '25%',
-      '50%'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Percentage change = $\\frac{50 - 40}{40} \\times 100\\% = \\frac{10}{40} \\times 100\\% = 25\\%$.',
   },
@@ -86,11 +102,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'Which is a better deal: 12 oz for $2.40 or 20 oz for $3.60?',
     options: [
       '12 oz for $2.40 (lower total price)',
-      '20 oz for $3.60 (lower price per ounce)',
       'They are the same price per ounce',
+      '20 oz for $3.60 (lower price per ounce)',
       'Cannot be determined'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: '12 oz: $2.40/12 = $0.20/oz. 20 oz: $3.60/20 = $0.18/oz. The 20 oz option has a lower unit price.',
   },
@@ -108,12 +124,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the order of operations (PEMDAS), what comes first?',
     options: [
+      'Parentheses',
       'Addition',
       'Multiplication',
       'Exponents',
-      'Parentheses'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'PEMDAS: Parentheses, Exponents, Multiplication/Division, Addition/Subtraction. Parentheses come first.',
   },

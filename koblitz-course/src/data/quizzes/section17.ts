@@ -6,12 +6,20 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The quadratic sieve factors $n$ by finding:',
     options: [
+      'Congruences $x^2 \\equiv y^2 \\pmod{n}$ with $x \\not\\equiv \\pm y
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'QS finds $x^2 \\equiv y^2 \\pmod{n}$, then $\\gcd(x-y, n)$ often gives a factor.',
+  },
       'Two primes directly',
-      'Congruences $x^2 \\equiv y^2 \\pmod{n}$ with $x \\not\\equiv \\pm y$',
-      'The continued fraction of $\\sqrt{n}$',
-      'Smooth numbers only'
+      'Smooth numbers only',
+      'The continued fraction of $\\sqrt{n}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'QS finds $x^2 \\equiv y^2 \\pmod{n}$, then $\\gcd(x-y, n)$ often gives a factor.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'QS finds $x^2 \\equiv y^2 \\pmod{n}$, then $\\gcd(x-y, n)$ often gives a factor.',
   },
@@ -20,12 +28,24 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A number is $B$-smooth if:',
     options: [
-      'It equals $B$',
-      'All its prime factors are $\\leq B$',
-      'It divides $B!$',
-      'It has exactly $B$ factors'
-    ],
+      'It equals $B
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$B$-smooth means all prime factors are at most $B$.',
+  },
+      'All its prime factors are $\\leq B
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$B$-smooth means all prime factors are at most $B$.',
+  },
+      'It divides $B!
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$B$-smooth means all prime factors are at most $B$.',
+  },
+      'It has exactly $B$ factors',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$B$-smooth means all prime factors are at most $B$.',
   },
@@ -34,12 +54,28 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The complexity of the quadratic sieve is:',
     options: [
-      'Polynomial in $n$',
-      'Exponential in $n$',
-      'Subexponential: $L(n)^{1+o(1)}$',
-      '$O(\\sqrt{n})$'
+      'Polynomial in $n
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'QS runs in $L(n) = \\exp(c\\sqrt{\\ln n \\ln \\ln n})$, which is subexponential.',
+  },
+      'Exponential in $n
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'QS runs in $L(n) = \\exp(c\\sqrt{\\ln n \\ln \\ln n})$, which is subexponential.',
+  },
+      '$O(\\sqrt{n})
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'QS runs in $L(n) = \\exp(c\\sqrt{\\ln n \\ln \\ln n})$, which is subexponential.',
+  },
+      'Subexponential: $L(n)^{1+o(1)}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'QS runs in $L(n) = \\exp(c\\sqrt{\\ln n \\ln \\ln n})$, which is subexponential.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'QS runs in $L(n) = \\exp(c\\sqrt{\\ln n \\ln \\ln n})$, which is subexponential.',
   },
@@ -49,11 +85,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'In the quadratic sieve, the factor base consists of:',
     options: [
       'All primes up to $n$',
-      'Primes $p$ for which $n$ is a quadratic residue mod $p$',
       'Only twin primes',
+      'Primes $p$ for which $n$ is a quadratic residue mod $p$',
       'Powers of 2'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The factor base includes small primes $p$ where $\\left(\\frac{n}{p}\\right) = 1$.',
   },

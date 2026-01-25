@@ -22,12 +22,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\phi(7)$, the count of integers from 1 to 7 that are relatively prime to 7?',
     options: [
-      '6',
       '7',
+      '6',
       '5',
-      '4',
+      '4'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Since 7 is prime, all integers from 1 to 6 are relatively prime to 7. Therefore $\\phi(7) = 6$. In general, for a prime $p$, $\\phi(p) = p - 1$.',
@@ -38,12 +38,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $2^{10} \\pmod{11}$?',
     options: [
-      '1',
-      '2',
       '10',
-      '0',
+      '2',
+      '1',
+      '0'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'By Fermat\'s Little Theorem, since 11 is prime and $\\gcd(2, 11) = 1$, we have $2^{10} \\equiv 1 \\pmod{11}$. The exponent is $p - 1 = 11 - 1 = 10$.',
@@ -53,12 +53,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\phi(12)$?',
     options: [
-      '4',
+      '5',
       '6',
       '11',
-      '5',
+      '4'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The integers from 1 to 12 that are relatively prime to 12 are: 1, 5, 7, 11. These are exactly the numbers coprime to both 3 and 4 (the prime factors of 12 are 2 and 3). So $\\phi(12) = 4$.',
@@ -84,12 +84,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Carmichael numbers are problematic for the Fermat primality test because:',
     options: [
-      'They are composite but pass the test for all bases coprime to them',
       'They are prime but fail the test',
+      'They are composite but pass the test for all bases coprime to them',
       'They have no prime factors',
-      'The test takes too long to compute for them',
+      'The test takes too long to compute for them'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Carmichael numbers are composite numbers $n$ for which $a^{n-1} \\equiv 1 \\pmod{n}$ for ALL $a$ coprime to $n$. This means the Fermat test incorrectly suggests they might be prime. The smallest Carmichael number is 561 = 3 × 11 × 17.',

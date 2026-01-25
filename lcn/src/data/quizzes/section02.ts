@@ -9,7 +9,7 @@ export const section02Questions: QuizQuestion[] = [
       'A hash value',
       'A group element',
       'A scalar',
-      'A bit string'
+      'A bit string',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $sk \\cdot G = P$, what is the discrete log of $\\text{P2C}_{\\text{Commit}}(m; P)$?',
     options: [
-      '$sk$',
-      '$sk + H_{\\text{P2C}}(P, m)$',
-      '$sk \\cdot H_{\\text{P2C}}(P, m)$',
-      '$H_{\\text{P2C}}(P, m)$'
+      '$sk + H_{\\text{P2C}}(P, m)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The tweaked secret key is $sk + t$ where $t = H_{\\text{P2C}}(P, m)$, giving discrete log of $P + tG$.',
+  },
+      '$sk
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The tweaked secret key is $sk + t$ where $t = H_{\\text{P2C}}(P, m)$, giving discrete log of $P + tG$.',
+  },
+      '$H_{\\text{P2C}}(P, m)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The tweaked secret key is $sk + t$ where $t = H_{\\text{P2C}}(P, m)$, giving discrete log of $P + tG$.',
+  },
+      '$sk \\cdot H_{\\text{P2C}}(P, m)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The tweaked secret key is $sk + t$ where $t = H_{\\text{P2C}}(P, m)$, giving discrete log of $P + tG$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The tweaked secret key is $sk + t$ where $t = H_{\\text{P2C}}(P, m)$, giving discrete log of $P + tG$.',
   },
@@ -34,10 +50,10 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Pay-to-Contract is proven binding in what model?',
     options: [
-      'The standard model',
       'The generic group model',
+      'The standard model',
       'The random oracle model',
-      'The algebraic group model'
+      'The algebraic group model',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -49,11 +65,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'In the binding proof for P2C, the collision probability is bounded by:',
     options: [
       '$1/p$',
-      '$q/p$',
       '$q^2/p$',
+      '$q/p$',
       '$2^{-\\lambda}$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'With $q$ queries and $q^2$ pairs, union bound gives collision probability $\\leq q^2/p$.',
   },
@@ -63,11 +79,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'In Bitcoin Taproot, P2C is used to:',
     options: [
       'Hash transaction data',
-      'Commit a script tree to a public key',
       'Generate random numbers',
-      'Verify signatures'
+      'Verify signatures',
+      'Commit a script tree to a public key',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Taproot uses P2C to commit a script tree to a public key, enabling both key-path and script-path spending.',
   },

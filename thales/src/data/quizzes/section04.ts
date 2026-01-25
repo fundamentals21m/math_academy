@@ -24,12 +24,32 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the algebraic identity for the difference of squares?',
     options: [
-      '$a^2 - b^2 = (a - b)^2$',
-      '$a^2 - b^2 = (a + b)(a - b)$',
-      '$a^2 - b^2 = a^2 + b^2 - 2ab$',
-      '$a^2 - b^2 = 2(a - b)$',
-    ],
+      '$a^2 - b^2 = (a - b)^2
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'The Babylonians knew the difference of squares identity: $a^2 - b^2 = (a + b)(a - b)$. This fundamental algebraic identity is still used today.',
+  },
+      '$a^2 - b^2 = (a + b)(a - b)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'The Babylonians knew the difference of squares identity: $a^2 - b^2 = (a + b)(a - b)$. This fundamental algebraic identity is still used today.',
+  },
+      '$a^2 - b^2 = a^2 + b^2 - 2ab
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'The Babylonians knew the difference of squares identity: $a^2 - b^2 = (a + b)(a - b)$. This fundamental algebraic identity is still used today.',
+  },
+      '$a^2 - b^2 = 2(a - b)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'The Babylonians knew the difference of squares identity: $a^2 - b^2 = (a + b)(a - b)$. This fundamental algebraic identity is still used today.',
+  },
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The Babylonians knew the difference of squares identity: $a^2 - b^2 = (a + b)(a - b)$. This fundamental algebraic identity is still used today.',
@@ -40,12 +60,32 @@ export const section04Questions: QuizQuestion[] = [
     question:
       'What is the formula for the sum of squares $1^2 + 2^2 + 3^2 + \\cdots + n^2$?',
     options: [
-      '$n(n+1)/2$',
-      '$n^2(n+1)/4$',
-      '$n(n+1)(2n+1)/6$',
-      '$n(n+1)(n+2)/6$',
+      '$n(n+1)(2n+1)/6
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'The Babylonians knew the sum of squares formula: $1^2 + 2^2 + \\cdots + n^2 = n(n+1)(2n+1)/6$. This was useful for calculating the volume of ziggurats (stepped pyramids).',
+  },
+      '$n(n+1)/2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'The Babylonians knew the sum of squares formula: $1^2 + 2^2 + \\cdots + n^2 = n(n+1)(2n+1)/6$. This was useful for calculating the volume of ziggurats (stepped pyramids).',
+  },
+      '$n^2(n+1)/4
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'The Babylonians knew the sum of squares formula: $1^2 + 2^2 + \\cdots + n^2 = n(n+1)(2n+1)/6$. This was useful for calculating the volume of ziggurats (stepped pyramids).',
+  },
+      '$n(n+1)(n+2)/6
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'The Babylonians knew the sum of squares formula: $1^2 + 2^2 + \\cdots + n^2 = n(n+1)(2n+1)/6$. This was useful for calculating the volume of ziggurats (stepped pyramids).',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Babylonians knew the sum of squares formula: $1^2 + 2^2 + \\cdots + n^2 = n(n+1)(2n+1)/6$. This was useful for calculating the volume of ziggurats (stepped pyramids).',
@@ -56,11 +96,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What is the significance of the clay tablet Plimpton 322?',
     options: [
       'It contains the first known proof of the Pythagorean theorem',
-      'It shows the Babylonians had a theory of Pythagorean triples over 1000 years before Pythagoras',
       'It is the oldest known multiplication table',
       'It contains the first use of the number zero',
+      'It shows the Babylonians had a theory of Pythagorean triples over 1000 years before Pythagoras',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Plimpton 322 (dating from 1900-1600 BC) contains 15 Pythagorean triangles, showing the Babylonians understood how to generate Pythagorean triples systematically over a millennium before Pythagoras.',
@@ -71,12 +111,32 @@ export const section04Questions: QuizQuestion[] = [
     question:
       'According to the Babylonian formula, if $u = 2$ and $v = 1$, what Pythagorean triple $(a, b, c)$ is generated?',
     options: [
-      '$(3, 4, 5)$',
-      '$(5, 12, 13)$',
-      '$(4, 3, 5)$',
-      '$(6, 8, 10)$',
-    ],
+      '$(3, 4, 5)
     correctIndex: 2,
+    difficulty: 'hard',
+    explanation:
+      'Using $a = 2uv = 2(2)(1) = 4$, $b = u^2 - v^2 = 4 - 1 = 3$, and $c = u^2 + v^2 = 4 + 1 = 5$, we get the triple $(4, 3, 5)$, which satisfies $4^2 + 3^2 = 16 + 9 = 25 = 5^2$.',
+  },
+      '$(5, 12, 13)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'Using $a = 2uv = 2(2)(1) = 4$, $b = u^2 - v^2 = 4 - 1 = 3$, and $c = u^2 + v^2 = 4 + 1 = 5$, we get the triple $(4, 3, 5)$, which satisfies $4^2 + 3^2 = 16 + 9 = 25 = 5^2$.',
+  },
+      '$(4, 3, 5)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'Using $a = 2uv = 2(2)(1) = 4$, $b = u^2 - v^2 = 4 - 1 = 3$, and $c = u^2 + v^2 = 4 + 1 = 5$, we get the triple $(4, 3, 5)$, which satisfies $4^2 + 3^2 = 16 + 9 = 25 = 5^2$.',
+  },
+      '$(6, 8, 10)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'Using $a = 2uv = 2(2)(1) = 4$, $b = u^2 - v^2 = 4 - 1 = 3$, and $c = u^2 + v^2 = 4 + 1 = 5$, we get the triple $(4, 3, 5)$, which satisfies $4^2 + 3^2 = 16 + 9 = 25 = 5^2$.',
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Using $a = 2uv = 2(2)(1) = 4$, $b = u^2 - v^2 = 4 - 1 = 3$, and $c = u^2 + v^2 = 4 + 1 = 5$, we get the triple $(4, 3, 5)$, which satisfies $4^2 + 3^2 = 16 + 9 = 25 = 5^2$.',
@@ -87,12 +147,32 @@ export const section04Questions: QuizQuestion[] = [
     question:
       'What value did the Babylonians sometimes use for π according to a tablet found at Susa?',
     options: [
-      '$3$',
-      '$3\\frac{1}{8} = 3.125$',
-      '$(16/9)^2 \\approx 3.16$',
-      '$22/7 \\approx 3.14$',
+      '$3
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'A tablet from Susa shows the Babylonians sometimes used $3\\frac{1}{8} = 3.125$ for π. At other times they used the simpler approximation π ≈ 3.',
+  },
+      '$(16/9)^2 \\approx 3.16
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      'A tablet from Susa shows the Babylonians sometimes used $3\\frac{1}{8} = 3.125$ for π. At other times they used the simpler approximation π ≈ 3.',
+  },
+      '$22/7 \\approx 3.14
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      'A tablet from Susa shows the Babylonians sometimes used $3\\frac{1}{8} = 3.125$ for π. At other times they used the simpler approximation π ≈ 3.',
+  },
+      '$3\\frac{1}{8} = 3.125
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      'A tablet from Susa shows the Babylonians sometimes used $3\\frac{1}{8} = 3.125$ for π. At other times they used the simpler approximation π ≈ 3.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A tablet from Susa shows the Babylonians sometimes used $3\\frac{1}{8} = 3.125$ for π. At other times they used the simpler approximation π ≈ 3.',
@@ -103,12 +183,12 @@ export const section04Questions: QuizQuestion[] = [
     question:
       'The biblical passage 1 Kings 7:23-24 describes a basin with what dimensions?',
     options: [
-      'Diameter 12 cubits, circumference 36 cubits',
       'Diameter 10 cubits, circumference 30 cubits',
-      'Diameter 7 cubits, circumference 22 cubits',
+      'Diameter 12 cubits, circumference 36 cubits',
       'Diameter 5 cubits, circumference 16 cubits',
+      'Diameter 7 cubits, circumference 22 cubits',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The Bible describes a basin with diameter 10 cubits and circumference 30 cubits, implying π = 3. Some scholars suggest the basin was hexagonal rather than circular!',
@@ -120,11 +200,11 @@ export const section04Questions: QuizQuestion[] = [
       'What structures led the Babylonians to discover the sum of squares formula?',
     options: [
       'Pyramids',
-      'Ziggurats (stepped pyramids)',
       'Temples',
+      'Ziggurats (stepped pyramids)',
       'City walls',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The Babylonians built ziggurats (stepped pyramids). If each story is a square platform of dimension $m \\times m$ with height 1, the total volume involves the sum $1^2 + 2^2 + \\cdots + n^2$.',

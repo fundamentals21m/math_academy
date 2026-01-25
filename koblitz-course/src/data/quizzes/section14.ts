@@ -6,12 +6,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Pollard\'s rho algorithm finds factors using:',
     options: [
-      'Trial division',
       'A pseudo-random walk with cycle detection',
+      'Trial division',
       'Matrix operations',
-      'Continued fractions'
+      'Continued fractions',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Pollard rho uses $f(x) = x^2 + c \\bmod n$ and detects cycles via Floyd\'s algorithm.',
   },
@@ -21,11 +21,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'The expected running time of Pollard\'s rho to find a factor $p$ is:',
     options: [
       '$O(p)$',
-      '$O(\\sqrt{p})$',
+      '$O(p^2)$',
       '$O(\\log p)$',
-      '$O(p^2)$'
+      '$O(\\sqrt{p})$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Birthday paradox: collision expected after $O(\\sqrt{p})$ iterations.',
   },
@@ -35,11 +35,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'Floyd\'s cycle detection uses how many pointers?',
     options: [
       'One',
-      'Two (slow and fast)',
       'Three',
-      'Logarithmically many'
+      'Two (slow and fast)',
+      'Logarithmically many',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Floyd\'s "tortoise and hare": slow pointer moves 1 step, fast moves 2 steps.',
   },

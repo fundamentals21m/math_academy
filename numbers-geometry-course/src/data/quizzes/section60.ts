@@ -9,12 +9,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is 2 a Gaussian prime?',
     options: [
-      'Yes, all ordinary primes are Gaussian primes',
       'No, 2 = (1 + i)(1 - i)',
+      'Yes, all ordinary primes are Gaussian primes',
       'Yes, because 2 is even',
-      'No, 2 = i · (−2i)',
+      'No, 2 = i · (−2i)'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       '2 = (1 + i)(1 - i), a product of non-units, so 2 is not a Gaussian prime.',
@@ -23,8 +23,13 @@ export const section60Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'Which ordinary prime remains prime in Z[i]?',
-    options: ['2', '5', '3', '13'],
-    correctIndex: 2,
+    options: [
+      '3',
+      '2',
+      '5',
+      '13',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       '3 ≡ 3 (mod 4), so it remains prime in Z[i]. The others split: 5 = (2+i)(2-i), etc.',
@@ -35,11 +40,11 @@ export const section60Questions: QuizQuestion[] = [
     question: 'What is the Gaussian factorization of 5?',
     options: [
       '5 is a Gaussian prime',
-      '5 = (2 + i)(2 - i)',
       '5 = (1 + 2i)(1 - 2i)',
       '5 = (1 + i)²',
+      '5 = (2 + i)(2 - i)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       '5 = (2 + i)(2 - i). Note that N(2 + i) = 5.',
@@ -65,11 +70,11 @@ export const section60Questions: QuizQuestion[] = [
     question: 'How does an ordinary prime p ≡ 1 (mod 4) factor in Z[i]?',
     options: [
       'Stays prime',
+      'Has no factorization',
       'Splits as p = ππ̄',
       'Equals (1 + i)²',
-      'Has no factorization',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Primes p ≡ 1 (mod 4) split into conjugate Gaussian primes: p = ππ̄ where N(π) = p.',
@@ -79,12 +84,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are associates of 3 in Z[i]?',
     options: [
-      '3 only',
       '3 and -3',
-      '3, -3, 3i, -3i',
+      '3 only',
       '3 and 3i',
+      '3, -3, 3i, -3i',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Associates differ by unit factors. The units are 1, -1, i, -i, giving 3, -3, 3i, -3i.',
@@ -95,11 +100,11 @@ export const section60Questions: QuizQuestion[] = [
     question: 'Is 7 a Gaussian prime?',
     options: [
       'No, 7 = (2 + i)(2 - i) + 2',
-      'Yes, 7 ≡ 3 (mod 4)',
       'No, 7 = (1 + i)(1 - i)²',
+      'Yes, 7 ≡ 3 (mod 4)',
       'Yes, 7 is odd',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       '7 ≡ 3 (mod 4), so 7 remains prime in Z[i]. Primes ≡ 3 (mod 4) don\'t split.',

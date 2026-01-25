@@ -6,10 +6,10 @@ export const section196Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition VII.17 state about products and measurement?',
     options: [
-      'If a product is measured by a number, then one of the factors is measured by it',
       'If a number measures two others, it measures their product',
+      'If a product is measured by a number, then one of the factors is measured by it',
       'If a number multiplied by another produces a third, then the third is measured by the second',
-      'Products are always measured by primes'
+      'Products are always measured by primes',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section196Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'VII.17 is essentially the converse of which modern statement?',
     options: [
-      'If a|c and b|c, then ab|c',
       'If ab = c, then a|c and b|c',
+      'If a|c and b|c, then ab|c',
       'If a|b and b|c, then a|c',
-      'If gcd(a,b) = 1, then ab = lcm(a,b)'
+      'If gcd(a,b) = 1, then ab = lcm(a,b)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'VII.17 says that if a times b = c, then a divides c and b divides c. This is the statement that factors of a product divide the product.',
   },

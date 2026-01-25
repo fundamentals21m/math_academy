@@ -7,12 +7,12 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What does $17 \\equiv 2 \\pmod{5}$ mean?',
     difficulty: 'easy',
     options: [
-      '17 divided by 2 equals 5',
       '17 and 2 have the same remainder when divided by 5',
+      '17 divided by 2 equals 5',
       '17 equals 2 times 5',
-      '17 minus 2 equals 5',
+      '17 minus 2 equals 5'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       '$a \\equiv b \\pmod{m}$ means $a$ and $b$ have the same remainder when divided by $m$. Here, $17 = 3 \\times 5 + 2$ and $2 = 0 \\times 5 + 2$, so both have remainder 2.',
   },
@@ -49,11 +49,11 @@ export const section18Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'They must all be prime',
-      'They must be pairwise coprime (any two share no common factor > 1)',
       'They must be consecutive integers',
-      'They must all be powers of 2',
+      'They must be pairwise coprime (any two share no common factor > 1)',
+      'They must all be powers of 2'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'The Chinese Remainder Theorem requires the moduli to be pairwise coprime, meaning $\\gcd(m_i, m_j) = 1$ for all $i \\neq j$. They don\'t need to be prime—just mutually coprime.',
   },
@@ -76,10 +76,10 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'RSA cryptographic decryption speedup',
       'Parallel computation on large integers',
-      'Sorting algorithms',
       'Error-correcting codes',
+      'Sorting algorithms'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'Sorting algorithms don\'t typically use CRT. However, RSA uses CRT to speed up decryption by a factor of 4, large-integer arithmetic uses CRT for parallelization, and Reed-Solomon error-correcting codes are based on CRT principles.',
   },

@@ -8,8 +8,13 @@ export const section19Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'Who introduced coordinates in his Geometry of 1637?',
-    options: ['Euclid', 'Fermat', 'Descartes', 'Pythagoras'],
-    correctIndex: 2,
+    options: [
+      'Euclid',
+      'Fermat',
+      'Pythagoras',
+      'Descartes',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Descartes introduced coordinates in his Geometry of 1637. Fermat independently discovered the same idea in 1629 but did not publish at the time.',
@@ -18,8 +23,13 @@ export const section19Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'What are the coordinates of the origin?',
-    options: ['(1, 1)', '(0, 1)', '(1, 0)', '(0, 0)'],
-    correctIndex: 3,
+    options: [
+      '(0, 0)',
+      '(1, 1)',
+      '(0, 1)',
+      '(1, 0)',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The origin O has coordinates (0, 0), as it lies at the intersection of the perpendicular axes.',
@@ -30,11 +40,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'The equation $y = mx$ represents:',
     options: [
       'A circle centered at the origin',
-      'A straight line through the origin',
       'A parabola',
       'An ellipse',
+      'A straight line through the origin',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The equation y = mx represents a straight line through the origin, where m is the slope (ratio y/x).',
@@ -60,12 +70,32 @@ export const section19Questions: QuizQuestion[] = [
     question:
       'The equation of a circle with center at the origin and radius $r$ is:',
     options: [
-      '$x + y = r$',
-      '$x^2 + y^2 = r$',
-      '$x^2 + y^2 = r^2$',
-      '$(x - r)^2 + (y - r)^2 = 1$',
+      '$x + y = r
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'By the Pythagorean theorem, a point (x, y) is at distance r from the origin when x² + y² = r².',
+  },
+      '$x^2 + y^2 = r^2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'By the Pythagorean theorem, a point (x, y) is at distance r from the origin when x² + y² = r².',
+  },
+      '$x^2 + y^2 = r
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'By the Pythagorean theorem, a point (x, y) is at distance r from the origin when x² + y² = r².',
+  },
+      '$(x - r)^2 + (y - r)^2 = 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'By the Pythagorean theorem, a point (x, y) is at distance r from the origin when x² + y² = r².',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'By the Pythagorean theorem, a point (x, y) is at distance r from the origin when x² + y² = r².',
@@ -76,8 +106,8 @@ export const section19Questions: QuizQuestion[] = [
     question:
       'What theorem is used to derive the equation of a circle from coordinates?',
     options: [
-      "Thales' theorem",
       'The parallel axiom',
+      'Thales\' theorem',
       'The Pythagorean theorem',
       'The fundamental theorem of arithmetic',
     ],
@@ -93,11 +123,11 @@ export const section19Questions: QuizQuestion[] = [
       'In analytic geometry, how are points, lines, and circles typically found?',
     options: [
       'By ruler and compass construction',
-      'By solving equations',
       'By physical measurement',
+      'By solving equations',
       'By trial and error',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       "Analytic geometry finds geometric objects by solving equations, unlike synthetic geometry which uses ruler and compass constructions (Euclid's approach).",

@@ -7,9 +7,9 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Which of the following is NOT one of the three implications for money managers discussed?',
     options: [
       'Elusive positive yields',
-      'Money market funds\' resurgence',
+      'Money market funds\\' resurgence',
       'Rising cryptocurrency adoption',
-      'Looming government intrusion'
+      'Looming government intrusion',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -20,12 +20,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What percentage of global FX transactions remain USD-denominated?',
     options: [
+      '86%',
       '50%',
       '65%',
-      '86%',
-      '95%'
+      '95%',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '86% of FX transactions remain USD-denominated, demonstrating the dollar\'s continued dominance in global finance.',
   },
@@ -36,8 +36,8 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'Government backing and FDIC insurance',
       'Resistance to seizure and capability for positive real returns',
+      'Anonymous transactions and unlimited supply',
       'High volatility and maximum leverage',
-      'Anonymous transactions and unlimited supply'
     ],
     correctIndex: 1,
     difficulty: 'easy',

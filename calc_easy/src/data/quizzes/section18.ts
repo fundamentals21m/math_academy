@@ -6,12 +6,20 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A definite integral $\\int_a^b f(x) \\, dx$ represents:',
     options: [
-      'The derivative at points $a$ and $b$',
-      'The area under the curve between $x = a$ and $x = b$',
+      'The derivative at points $a$ and $b
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A definite integral calculates the (signed) area between the curve and the x-axis.',
+  },
+      'The slope of the secant line',
+      'The area under the curve between $x = a$ and $x = b
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A definite integral calculates the (signed) area between the curve and the x-axis.',
+  },
       'The maximum value of the function',
-      'The slope of the secant line'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A definite integral calculates the (signed) area between the curve and the x-axis.',
   },
@@ -30,11 +38,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'If a function is negative on an interval, its definite integral on that interval is:',
     options: [
       'Always positive',
-      'Negative (representing area below the x-axis)',
       'Zero',
-      'Undefined'
+      'Undefined',
+      'Negative (representing area below the x-axis)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The integral gives signed area—negative for regions below the x-axis.',
   },
@@ -43,12 +51,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Fundamental Theorem of Calculus connects:',
     options: [
-      'Algebra and geometry',
       'Differentiation and integration',
+      'Algebra and geometry',
       'Trigonometry and calculus',
-      'Limits and infinity'
+      'Limits and infinity',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Fundamental Theorem shows that differentiation and integration are inverse operations.',
   },

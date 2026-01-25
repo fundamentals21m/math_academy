@@ -8,8 +8,8 @@ export const section213Questions: QuizQuestion[] = [
     options: [
       'Three numbers',
       'Two numbers',
+      'Perfect squares',
       'Any prime numbers',
-      'Perfect squares'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section213Questions: QuizQuestion[] = [
     question: 'What is the LCM of 12 and 18?',
     options: [
       '6',
-      '36',
       '216',
-      '72'
+      '36',
+      '72',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'LCM(12, 18) = 36. We have 12 = 2^2 * 3 and 18 = 2 * 3^2, so LCM = 2^2 * 3^2 = 36.',
   },
@@ -34,12 +34,12 @@ export const section213Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The relationship between LCM and GCD for two numbers a and b is:',
     options: [
-      'LCM(a, b) = a + b - GCD(a, b)',
       'LCM(a, b) * GCD(a, b) = a * b',
+      'LCM(a, b) = a + b - GCD(a, b)',
       'LCM(a, b) = GCD(a, b)^2',
-      'LCM(a, b) + GCD(a, b) = a * b'
+      'LCM(a, b) + GCD(a, b) = a * b',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'For any two positive integers a and b, LCM(a, b) * GCD(a, b) = a * b.',
   },

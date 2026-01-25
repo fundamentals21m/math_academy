@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'According to Hayek, National-Socialism was:',
     options: [
       'An irrational revolt against reason without intellectual background',
-      'The culmination of a long evolution of thought—collectivism freed from individualist tradition',
       'A capitalist reaction against socialism',
+      'The culmination of a long evolution of thought—collectivism freed from individualist tradition',
       'A foreign import to Germany'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Nazism was not irrational but the logical culmination of collectivist thought freed from all traces of individualist tradition. Once one accepts its premises, there is no escape from its logic.',
   },
@@ -21,11 +21,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'The support that brought Nazi ideas to power came from:',
     options: [
       'The bourgeoisie and capitalists',
-      'The socialist camp—it was the absence of a strong bourgeoisie that helped them',
+      'The aristocracy',
       'Foreign powers',
-      'The aristocracy'
+      'The socialist camp—it was the absence of a strong bourgeoisie that helped them'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Support came precisely from the socialist camp. The absence of a strong bourgeoisie helped the Nazis to power—contrary to the myth of Nazism as a "capitalist reaction."',
   },
@@ -34,12 +34,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'German socialists opposed Marxism\'s:',
     options: [
-      'Economic analysis',
       'Liberal elements—its internationalism and democracy—not its socialism',
+      'Economic analysis',
       'Revolutionary tactics',
       'Historical materialism'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The doctrines guiding Germany opposed not the socialism in Marxism but its liberal elements—internationalism and democracy—which were seen as obstacles to realizing socialism.',
   },
@@ -65,7 +65,7 @@ export const section12Questions: QuizQuestion[] = [
       'Complete opposites',
       'One and the same',
       'Unrelated',
-      'Both defeated'
+      'Both defeated',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -76,12 +76,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hayek warned that "Conservative Socialism" was:',
     options: [
-      'Already dead in Germany',
       'Becoming the dominant trend in 1940s Britain, as it had prepared Germany for Nazism',
+      'Already dead in Germany',
+      'A contradiction in terms',
       'Only a German phenomenon',
-      'A contradiction in terms'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: '"Conservative Socialism" prepared the atmosphere for National-Socialism in Germany. Hayek warned this same fusion of conservatism and socialism was advancing in Britain.',
   },

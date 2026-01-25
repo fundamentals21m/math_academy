@@ -6,12 +6,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A series $\\sum a_n$ converges absolutely if:',
     options: [
-      '$a_n \\to 0$',
       '$\\sum |a_n|$ converges',
+      '$a_n \\to 0$',
       'The partial sums are bounded',
       '$a_n$ is monotonic'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Absolute convergence means $\\sum |a_n| < \\infty$. This is stronger than ordinary (conditional) convergence.',
   },
@@ -50,10 +50,10 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       '$\\sum \\frac{(-1)^n}{n}$',
       '$\\sum \\frac{(-1)^n}{\\sqrt{n}}$',
-      '$\\sum \\frac{(-1)^n}{n^2}$',
-      '$\\sum \\frac{(-1)^n}{\\ln n}$'
+      '$\\sum \\frac{(-1)^n}{\\ln n}$',
+      '$\\sum \\frac{(-1)^n}{n^2}$'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'For $\\sum (-1)^n/n^2$, we have $\\sum |(-1)^n/n^2| = \\sum 1/n^2$, which is a convergent $p$-series ($p = 2 > 1$). So absolute convergence holds.',
   },
@@ -62,12 +62,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is absolute convergence a stronger property than conditional convergence?',
     options: [
-      'Absolutely convergent series have larger sums',
       'Absolutely convergent series can be rearranged without changing the sum',
+      'Absolutely convergent series have larger sums',
       'Conditionally convergent series always diverge',
       'Absolute convergence only applies to positive series'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Absolutely convergent series can be rearranged in any order with the same sum. Conditionally convergent series can be rearranged to converge to any value or to diverge (Riemann rearrangement theorem).',
   },

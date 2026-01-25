@@ -6,10 +6,26 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a right triangle with legs $a$ and $b$ and hypotenuse $c$, the Pythagorean theorem states:',
     options: [
-      '$a + b = c$',
-      '$a^2 + b^2 = c^2$',
-      '$a \\times b = c$',
-      '$a^2 \\times b^2 = c^2$'
+      '$a^2 + b^2 = c^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean theorem: $a^2 + b^2 = c^2$ where $c$ is the hypotenuse.',
+  },
+      '$a + b = c
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean theorem: $a^2 + b^2 = c^2$ where $c$ is the hypotenuse.',
+  },
+      '$a \\times b = c
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean theorem: $a^2 + b^2 = c^2$ where $c$ is the hypotenuse.',
+  },
+      '$a^2 \\times b^2 = c^2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean theorem: $a^2 + b^2 = c^2$ where $c$ is the hypotenuse.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +36,28 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is a triangle with sides 5, 12, and 13 a right triangle?',
     options: [
-      'Yes, because $5^2 + 12^2 = 13^2$',
-      'No, because $5 + 12 \\neq 13$',
-      'Yes, because $5 + 12 > 13$',
-      'No, because $5^2 + 12^2 \\neq 13^2$'
+      'Yes, because $5 + 12 > 13
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$5^2 + 12^2 = 25 + 144 = 169 = 13^2$, so yes, it is a right triangle.',
+  },
+      'No, because $5 + 12 \\neq 13
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$5^2 + 12^2 = 25 + 144 = 169 = 13^2$, so yes, it is a right triangle.',
+  },
+      'No, because $5^2 + 12^2 \\neq 13^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$5^2 + 12^2 = 25 + 144 = 169 = 13^2$, so yes, it is a right triangle.',
+  },
+      'Yes, because $5^2 + 12^2 = 13^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$5^2 + 12^2 = 25 + 144 = 169 = 13^2$, so yes, it is a right triangle.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$5^2 + 12^2 = 25 + 144 = 169 = 13^2$, so yes, it is a right triangle.',
   },
@@ -46,7 +78,7 @@ export const section03Questions: QuizQuestion[] = [
       'Direct proof',
       'Proof by induction',
       'Proof by contradiction',
-      'Proof by construction'
+      'Proof by construction',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -57,10 +89,10 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\sqrt{2} = \\frac{p}{q}$ in lowest terms, then both $p$ and $q$ must be:',
     options: [
-      'Odd',
       'Even',
       'Prime',
-      'This leads to a contradiction'
+      'Odd',
+      'This leads to a contradiction',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -85,12 +117,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is a Pythagorean triple?',
     options: [
-      '(3, 4, 6)',
       '(5, 12, 13)',
+      '(3, 4, 6)',
       '(6, 7, 8)',
-      '(2, 3, 4)'
+      '(2, 3, 4)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$5^2 + 12^2 = 25 + 144 = 169 = 13^2$. The other options do not satisfy $a^2 + b^2 = c^2$.',
   },
@@ -108,12 +140,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The formula for generating primitive Pythagorean triples is $a = m^2 - n^2$, $b = 2mn$, $c = m^2 + n^2$. What triple does $m=2$, $n=1$ generate?',
     options: [
-      '(3, 4, 5)',
+      '(7, 24, 25)',
       '(5, 12, 13)',
+      '(3, 4, 5)',
       '(8, 15, 17)',
-      '(7, 24, 25)'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: '$a = 4-1 = 3$, $b = 2(2)(1) = 4$, $c = 4+1 = 5$. So the triple is (3, 4, 5).',
   },
@@ -122,12 +154,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the Babylonian method so efficient?',
     options: [
-      'It uses addition only',
       'It converges linearly',
       'It has quadratic convergence (roughly doubles correct digits each step)',
-      'It requires no initial guess'
+      'It uses addition only',
+      'It requires no initial guess',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Quadratic convergence means each iteration roughly doubles the number of correct digits.',
   },

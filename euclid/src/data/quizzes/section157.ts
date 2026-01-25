@@ -7,11 +7,11 @@ export const section157Questions: QuizQuestion[] = [
     question: 'Proposition VI.12 shows how to find what given three straight lines?',
     options: [
       'A line parallel to all three',
+      'The geometric mean of the three',
       'A fourth proportional to the three lines',
       'A line bisecting all three',
-      'The geometric mean of the three'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'VI.12 constructs a fourth line X such that if the given lines are A, B, C, then A:B = C:X.',
   },
@@ -21,11 +21,11 @@ export const section157Questions: QuizQuestion[] = [
     question: 'If lines of length 2, 3, and 6 are given, what is the fourth proportional?',
     options: [
       '4',
-      '9',
       '12',
-      '18'
+      '18',
+      '9',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'If 2:3 = 6:X, then X = (3 × 6)/2 = 9. The fourth proportional maintains the ratio.',
   },

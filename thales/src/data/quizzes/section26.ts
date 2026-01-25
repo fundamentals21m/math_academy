@@ -9,12 +9,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What role did Marin Mersenne play in 17th century mathematics?',
     options: [
-      'He invented calculus',
       'He served as a clearinghouse for mathematical ideas through correspondence',
+      'He invented calculus',
       'He was the king\'s official mathematician',
-      'He founded the first mathematical journal',
+      'He founded the first mathematical journal'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Mersenne was a Franciscan friar who corresponded with virtually all active mathematicians of his day, including Descartes, Fermat, Pascal, Galileo, and Torricelli. His cell in Paris became a meeting place where mathematicians could exchange ideas.',
@@ -25,11 +25,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'What is a Mersenne prime?',
     options: [
       'Any prime number discovered by Mersenne',
-      'A prime of the form 2^p - 1 where p is also prime',
       'A prime that divides a perfect number',
       'A prime with an even number of digits',
+      'A prime of the form 2^p - 1 where p is also prime',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A Mersenne prime is a prime number of the form 2^p - 1 where p is also prime. Examples include 3, 7, 31, and 127. The largest known primes are typically Mersenne primes.',
@@ -40,11 +40,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'What revolutionary concept did Desargues introduce in projective geometry?',
     options: [
       'Negative numbers',
-      'Points at infinity where parallel lines meet',
       'The Cartesian coordinate system',
-      'Imaginary numbers',
+      'Points at infinity where parallel lines meet',
+      'Imaginary numbers'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Desargues introduced the concept of points at infinity, where parallel lines are considered to meet. This was revolutionary for projective geometry, which studies properties preserved under projection.',
@@ -55,11 +55,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'How did Descartes die?',
     options: [
       'In a duel over a mathematical dispute',
-      'Of old age in Paris',
       'From pneumonia after 5 AM lessons with Queen Christina of Sweden',
+      'Of old age in Paris',
       'Executed for heresy',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Queen Christina of Sweden invited Descartes to teach her philosophy, but she insisted on lessons at 5 AM. The cold Swedish winter and early hours proved fatal—Descartes caught pneumonia and died in 1650.',
@@ -70,11 +70,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'What does Descartes\'s Rule of Signs determine?',
     options: [
       'Whether a number is positive or negative',
-      'The bounds on positive and negative roots of a polynomial',
       'The sign of a derivative',
       'Whether two quantities are equal',
+      'The bounds on positive and negative roots of a polynomial',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Descartes\'s Rule of Signs states that the number of positive roots of a polynomial equals the number of sign changes in its coefficients (or less by an even number), and similarly for negative roots using p(-x).',
@@ -114,12 +114,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Pascal build at age 18?',
     options: [
-      'A telescope',
       'A calculating machine (the Pascaline)',
-      'A printing press',
+      'A telescope',
       'A pendulum clock',
+      'A printing press',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Pascal built the Pascaline, an early mechanical calculator, at age 18 to help his father with tax calculations. This was one of the first mechanical calculators ever built.',

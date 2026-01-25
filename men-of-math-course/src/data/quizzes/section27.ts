@@ -6,12 +6,24 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Charles Hermite proved that which famous mathematical constant is transcendental?',
     options: [
-      '$\\pi$',
-      '$e$',
-      '$\\sqrt{2}$',
-      '$\\phi$ (golden ratio)'
+      '$\\pi
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Hermite proved $e$ (Euler\'s number) is transcendental in 1873.',
+  },
+      '$\\sqrt{2}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Hermite proved $e$ (Euler\'s number) is transcendental in 1873.',
+  },
+      '$e
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Hermite proved $e$ (Euler\'s number) is transcendental in 1873.',
+  },
+      '$\\phi$ (golden ratio)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Hermite proved $e$ (Euler\'s number) is transcendental in 1873.',
   },
@@ -21,11 +33,11 @@ export const section27Questions: QuizQuestion[] = [
     question: 'A transcendental number is one that:',
     options: [
       'Is irrational',
-      'Is not the root of any polynomial with integer coefficients',
       'Is imaginary',
-      'Cannot be computed'
+      'Cannot be computed',
+      'Is not the root of any polynomial with integer coefficients',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Transcendental numbers are not algebraic—they don\'t satisfy any polynomial equation with integer coefficients.',
   },
@@ -34,12 +46,24 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hermitian matrices (named after Hermite) satisfy:',
     options: [
-      '$A = A^T$',
-      '$A = A^*$ (equal to conjugate transpose)',
-      '$A^2 = I$',
-      '$\\det(A) = 1$'
-    ],
+      '$A = A^T
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Hermitian matrices equal their conjugate transpose, generalizing symmetric matrices to complex numbers.',
+  },
+      '$A = A^*$ (equal to conjugate transpose)',
+      '$A^2 = I
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Hermitian matrices equal their conjugate transpose, generalizing symmetric matrices to complex numbers.',
+  },
+      '$\\det(A) = 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Hermitian matrices equal their conjugate transpose, generalizing symmetric matrices to complex numbers.',
+  },
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Hermitian matrices equal their conjugate transpose, generalizing symmetric matrices to complex numbers.',
   },
@@ -49,11 +73,11 @@ export const section27Questions: QuizQuestion[] = [
     question: 'Hermite polynomials are important in:',
     options: [
       'Cryptography',
+      'Graph theory',
       'Quantum mechanics',
       'Number theory',
-      'Graph theory'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Hermite polynomials appear in the quantum harmonic oscillator wave functions.',
   },
@@ -62,12 +86,12 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hermite\'s proof that $e$ is transcendental was later extended by Lindemann to prove:',
     options: [
-      '$\\sqrt{2}$ is irrational',
       '$\\pi$ is transcendental',
+      '$\\sqrt{2}$ is irrational',
       '$e + \\pi$ is transcendental',
       'All algebraic numbers are computable'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Lindemann used Hermite\'s methods to prove $\\pi$ is transcendental in 1882.',
   },

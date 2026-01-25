@@ -22,8 +22,8 @@ export const section66Questions: QuizQuestion[] = [
     options: [
       'Direct construction',
       'Proof by contradiction (reductio ad absurdum)',
+      'Parallel lines',
       'Proportional reasoning',
-      'Parallel lines'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,12 +34,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What geometric fact about distances from the center makes III.2 true?',
     options: [
-      'All chords are equal',
       'Points on a chord between the endpoints are closer to the center than radius length',
+      'All chords are equal',
       'The chord is perpendicular to the radius',
       'The center bisects all chords'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Points on the chord between A and B are closer to the center than points on the circumference, so they lie inside the circle.',
   },

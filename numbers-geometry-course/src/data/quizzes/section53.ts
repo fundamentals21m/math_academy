@@ -9,12 +9,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When is -1 a quadratic residue mod p?',
     options: [
-      'When p ≡ 1 (mod 2)',
       'When p ≡ 1 (mod 4)',
+      'When p ≡ 1 (mod 2)',
       'When p ≡ 3 (mod 4)',
-      'Always',
+      'Always'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       '(-1/p) = (-1)^((p-1)/2) = 1 iff (p-1)/2 is even, iff 4 | (p-1), iff p ≡ 1 (mod 4).',
@@ -24,12 +24,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is -1 a square mod 13?',
     options: [
-      'Yes, because 13 ≡ 1 (mod 4)',
       'Yes, because 13 is prime',
       'No, because 13 ≡ 1 (mod 4)',
+      'Yes, because 13 ≡ 1 (mod 4)',
       'No, because 13 ≡ 1 (mod 3)',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       '13 = 12 + 1 ≡ 1 (mod 4), so -1 is a square mod 13. Indeed, 5² = 25 = 26 - 1 ≡ -1 (mod 13).',
@@ -40,11 +40,11 @@ export const section53Questions: QuizQuestion[] = [
     question: 'When is 2 a quadratic residue mod p?',
     options: [
       'When p ≡ 1 (mod 4)',
-      'When p ≡ ±1 (mod 8)',
       'When p ≡ 3 (mod 8)',
-      'When p is odd',
+      'When p ≡ ±1 (mod 8)',
+      'When p is odd'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       '(2/p) = (-1)^((p²-1)/8) = 1 iff p ≡ ±1 (mod 8), i.e., p ≡ 1 or 7 (mod 8).',
@@ -55,9 +55,9 @@ export const section53Questions: QuizQuestion[] = [
     question: 'Is 2 a square mod 17?',
     options: [
       'Yes, because 17 ≡ 1 (mod 8)',
+      'No, because 2 is even',
       'No, because 17 ≡ 1 (mod 8)',
       'Yes, because 17 is prime',
-      'No, because 2 is even',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -70,11 +70,11 @@ export const section53Questions: QuizQuestion[] = [
     question: 'For p = 7, what are (-1/p) and (2/p)?',
     options: [
       '(-1/7) = 1, (2/7) = 1',
-      '(-1/7) = -1, (2/7) = 1',
       '(-1/7) = 1, (2/7) = -1',
       '(-1/7) = -1, (2/7) = -1',
+      '(-1/7) = -1, (2/7) = 1',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       '7 ≡ 3 (mod 4), so (-1/7) = -1. And 7 ≡ -1 (mod 8), so (2/7) = 1.',
@@ -85,11 +85,11 @@ export const section53Questions: QuizQuestion[] = [
     question: 'What does Gauss\'s lemma count to compute (2/p)?',
     options: [
       'The number of primes less than p',
-      'The number of even residues that become negative in (-p/2, p/2)',
       'The number of quadratic residues',
       'The number of divisors of p',
+      'The number of even residues that become negative in (-p/2, p/2)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Gauss\'s lemma counts how many of {2, 4, 6, ..., p-1}, when reduced to (-p/2, p/2), are negative.',

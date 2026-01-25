@@ -6,12 +6,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Inverse Function Theorem requires that at the point $a$, the derivative $f\'(a)$:',
     options: [
-      'Is an invertible linear transformation',
-      'Has all positive eigenvalues',
       'Is symmetric',
-      'Has determinant equal to 1'
+      'Has all positive eigenvalues',
+      'Has determinant equal to 1',
+      'Is an invertible linear transformation',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The key hypothesis is that $f\'(a)$ must be invertible (equivalently, $\\det f\'(a) \\neq 0$). This ensures the linear approximation is locally bijective.',
   },
@@ -20,12 +20,16 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f: \\mathbb{R}^n \\to \\mathbb{R}^n$ is $C^1$ and $f\'(a)$ is invertible, the Inverse Function Theorem guarantees:',
     options: [
-      '$f$ is locally invertible near $a$ with $C^1$ inverse',
+      '$f\\'$ is constant near $a
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The theorem provides local invertibility: there exist neighborhoods $U$ of $a$ and $V$ of $f(a)$ such that $f: U \\to V$ is a bijection with $C^1$ inverse.',
+  },
       '$f$ is globally invertible',
+      '$f$ is locally invertible near $a$ with $C^1$ inverse',
       '$f$ is a linear map',
-      '$f\'$ is constant near $a$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The theorem provides local invertibility: there exist neighborhoods $U$ of $a$ and $V$ of $f(a)$ such that $f: U \\to V$ is a bijection with $C^1$ inverse.',
   },
@@ -48,12 +52,28 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivative of the inverse function $g = f^{-1}$ satisfies:',
     options: [
-      '$g\'(y) = [f\'(g(y))]^{-1}$',
-      '$g\'(y) = [f\'(y)]^{-1}$',
-      '$g\'(y) = -f\'(g(y))$',
-      '$g\'(y) = f\'(g(y))^T$'
-    ],
+      '$g\\'(y) = [f\\'(g(y))]^{-1}
     correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'By the chain rule applied to $g(f(x)) = x$, we get $g\'(f(x)) f\'(x) = I$, so $g\'(y) = [f\'(g(y))]^{-1}$ where $y = f(x)$.',
+  },
+      '$g\\'(y) = [f\\'(y)]^{-1}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'By the chain rule applied to $g(f(x)) = x$, we get $g\'(f(x)) f\'(x) = I$, so $g\'(y) = [f\'(g(y))]^{-1}$ where $y = f(x)$.',
+  },
+      '$g\\'(y) = -f\\'(g(y))
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'By the chain rule applied to $g(f(x)) = x$, we get $g\'(f(x)) f\'(x) = I$, so $g\'(y) = [f\'(g(y))]^{-1}$ where $y = f(x)$.',
+  },
+      '$g\\'(y) = f\\'(g(y))^T
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'By the chain rule applied to $g(f(x)) = x$, we get $g\'(f(x)) f\'(x) = I$, so $g\'(y) = [f\'(g(y))]^{-1}$ where $y = f(x)$.',
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'By the chain rule applied to $g(f(x)) = x$, we get $g\'(f(x)) f\'(x) = I$, so $g\'(y) = [f\'(g(y))]^{-1}$ where $y = f(x)$.',
   },
@@ -62,12 +82,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The proof of the Inverse Function Theorem uses:',
     options: [
+      'The Bolzano-Weierstrass Theorem',
       'The Contraction Mapping Principle',
       'The Intermediate Value Theorem',
-      'The Bolzano-Weierstrass Theorem',
-      'Rolle\'s Theorem'
+      'Rolle\\'s Theorem',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The standard proof constructs the inverse using fixed point iteration. For each $y$ near $f(a)$, the equation $f(x) = y$ is reformulated as finding a fixed point of a contraction.',
   },

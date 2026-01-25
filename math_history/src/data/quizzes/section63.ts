@@ -22,12 +22,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An abelian group is one where:',
     options: [
-      'The operation is commutative',
       'Every element equals its inverse',
+      'The operation is commutative',
       'The group has exactly two elements',
-      'The group has no subgroups',
+      'The group has no subgroups'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'An abelian group (named after Niels Henrik Abel) is a group where the operation is commutative: a·b = b·a for all elements a and b. Examples include (Z, +) and cyclic groups.',
@@ -38,12 +38,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A simple group is one that:',
     options: [
-      'Has no nontrivial normal subgroups',
-      'Has only one element',
       'Is abelian',
-      'Has exactly two subgroups',
+      'Has only one element',
+      'Has no nontrivial normal subgroups',
+      'Has exactly two subgroups'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A simple group has no normal subgroups except {e} and the whole group. Simple groups are the "atoms" of group theory—all groups can be built from simple groups. Examples include cyclic groups of prime order and A_n for n ≥ 5.',
@@ -53,12 +53,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two groups are isomorphic if:',
     options: [
-      'There exists a bijective homomorphism between them',
+      'They have the same subgroups',
       'They have the same number of elements',
       'They are both abelian',
-      'They have the same subgroups',
+      'There exists a bijective homomorphism between them'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Groups G and H are isomorphic (G ≅ H) if there exists a bijective homomorphism between them. This means they have identical structure—they differ only in the "names" of their elements. Having the same size is necessary but not sufficient.',
@@ -84,12 +84,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The First Isomorphism Theorem states that for a homomorphism $\\phi: G \\to H$:',
     options: [
-      '$G/\\ker(\\phi) \\cong \\text{im}(\\phi)$',
       '$G \\cong H$',
+      '$G/\\ker(\\phi) \\cong \\text{im}(\\phi)$',
       '$\\ker(\\phi) = \\{e\\}$',
-      '$G$ and $H$ have the same order',
+      '$G$ and $H$ have the same order'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The First Isomorphism Theorem states that for any group homomorphism φ: G → H, the quotient G/ker(φ) is isomorphic to the image im(φ). This fundamental theorem connects kernels, images, and quotient groups.',

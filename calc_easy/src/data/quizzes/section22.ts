@@ -6,12 +6,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'U-substitution is the integration equivalent of:',
     options: [
-      'The sum rule',
       'The chain rule',
+      'The sum rule',
       'The quotient rule',
       'The power rule'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'U-substitution reverses the chain rule, handling composite functions.',
   },
@@ -20,10 +20,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To integrate $\\int 2x e^{x^2} dx$, let $u = ?$',
     options: [
-      '$u = e^{x^2}$',
-      '$u = x^2$',
-      '$u = 2x$',
-      '$u = e^x$'
+      '$u = x^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Let $u = x^2$, then $du = 2x \\, dx$, so $\\int e^u du = e^{x^2} + C$.',
+  },
+      '$u = e^{x^2}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Let $u = x^2$, then $du = 2x \\, dx$, so $\\int e^u du = e^{x^2} + C$.',
+  },
+      '$u = 2x
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Let $u = x^2$, then $du = 2x \\, dx$, so $\\int e^u du = e^{x^2} + C$.',
+  },
+      '$u = e^x
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Let $u = x^2$, then $du = 2x \\, dx$, so $\\int e^u du = e^{x^2} + C$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +51,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'Integration by parts uses the formula:',
     options: [
       '$\\int uv \\, dx = u + v + C$',
-      '$\\int u \\, dv = uv - \\int v \\, du$',
       '$\\int u \\, dv = u + v$',
+      '$\\int u \\, dv = uv - \\int v \\, du$',
       '$\\int u \\, dv = \\frac{uv}{2}$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Integration by parts: $\\int u \\, dv = uv - \\int v \\, du$.',
   },
@@ -49,11 +65,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'What is a common mistake in integration?',
     options: [
       'Using the power rule',
-      'Forgetting the constant of integration $+ C$',
+      'Using substitution',
       'Checking the answer by differentiating',
-      'Using substitution'
+      'Forgetting the constant of integration $+ C$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Forgetting the constant $+ C$ in indefinite integrals is a common error.',
   },
@@ -62,12 +78,28 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To integrate $\\sin^2(x)$, we use the identity:',
     options: [
-      '$\\sin^2(x) = 1 - \\cos^2(x)$',
-      '$\\sin^2(x) = \\frac{1 - \\cos(2x)}{2}$',
-      '$\\sin^2(x) = 2\\sin(x)$',
-      '$\\sin^2(x) = \\sin(x^2)$'
-    ],
+      '$\\sin^2(x) = 1 - \\cos^2(x)
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The half-angle identity $\\sin^2(x) = \\frac{1 - \\cos(2x)}{2}$ makes integration straightforward.',
+  },
+      '$\\sin^2(x) = \\frac{1 - \\cos(2x)}{2}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The half-angle identity $\\sin^2(x) = \\frac{1 - \\cos(2x)}{2}$ makes integration straightforward.',
+  },
+      '$\\sin^2(x) = 2\\sin(x)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The half-angle identity $\\sin^2(x) = \\frac{1 - \\cos(2x)}{2}$ makes integration straightforward.',
+  },
+      '$\\sin^2(x) = \\sin(x^2)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The half-angle identity $\\sin^2(x) = \\frac{1 - \\cos(2x)}{2}$ makes integration straightforward.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The half-angle identity $\\sin^2(x) = \\frac{1 - \\cos(2x)}{2}$ makes integration straightforward.',
   },

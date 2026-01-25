@@ -6,12 +6,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What do the authors acknowledge could prove their thesis wrong?',
     options: [
-      'Higher crypto prices',
       'Crypto projects genuinely achieving decentralization while maintaining functionality',
+      'Higher crypto prices',
       'More institutional adoption',
       'Better marketing'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'If a crypto project can actually achieve Bitcoin-level decentralization while providing smart contract functionality, the authors\' core argument would be invalidated.',
   },
@@ -34,12 +34,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do the authors include a "why we might be wrong" section?',
     options: [
-      'They\'re not confident in their analysis',
-      'To demonstrate intellectual honesty and acknowledge uncertainty',
+      'They\\'re not confident in their analysis',
       'They want crypto to succeed',
-      'To appeal to crypto investors'
+      'To appeal to crypto investors',
+      'To demonstrate intellectual honesty and acknowledge uncertainty',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Including potential weaknesses in their argument demonstrates intellectual honesty—they\'re not claiming certainty, but presenting their best analysis while acknowledging limitations.',
   },

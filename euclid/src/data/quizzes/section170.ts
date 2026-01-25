@@ -7,11 +7,11 @@ export const section170Questions: QuizQuestion[] = [
     question: 'VI.25 shows how to construct a figure that is:',
     options: [
       'Similar to a given figure and congruent to another',
-      'Similar to one given figure and equal in area to another',
       'Equal in perimeter to two given figures',
-      'Similar to both given figures simultaneously'
+      'Similar to both given figures simultaneously',
+      'Similar to one given figure and equal in area to another',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'VI.25 constructs a rectilineal figure that is similar to one given figure while having the same area as another given figure.',
   },
@@ -21,11 +21,11 @@ export const section170Questions: QuizQuestion[] = [
     question: 'The construction in VI.25 involves finding a line that is:',
     options: [
       'The arithmetic mean of two given lines',
+      'Perpendicular to the base',
       'The geometric mean (mean proportional) between two lines',
       'Parallel to a given line',
-      'Perpendicular to the base'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'VI.25 uses mean proportionals. To scale a figure to match a different area while preserving shape, Euclid finds the mean proportional between appropriate lines.',
   },
@@ -37,7 +37,7 @@ export const section170Questions: QuizQuestion[] = [
       'Take the average of the sides',
       'Find the mean proportional (geometric mean) of the two sides',
       'Add the two sides together',
-      'Take the difference of the two sides'
+      'Take the difference of the two sides',
     ],
     correctIndex: 1,
     difficulty: 'hard',

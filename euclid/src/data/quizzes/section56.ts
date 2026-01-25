@@ -9,7 +9,7 @@ export const section56Questions: QuizQuestion[] = [
       '(a+b)² = a² + 2ab + b²',
       'a² + b² = 2ab + (a-b)²',
       '(a-b)² = a² - 2ab + b²',
-      'a² - b² = (a+b)(a-b)'
+      'a² - b² = (a+b)(a-b)',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -21,11 +21,11 @@ export const section56Questions: QuizQuestion[] = [
     question: 'Rearranging II.7, we can derive the formula for:',
     options: [
       'The square of a sum',
-      'The square of a difference',
+      'The cube of a sum',
       'The difference of squares',
-      'The cube of a sum'
+      'The square of a difference'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'From a² + b² - 2ab = (a-b)², we get the square of a difference formula.',
   },

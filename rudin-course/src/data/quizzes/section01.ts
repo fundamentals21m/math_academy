@@ -21,11 +21,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'If $S = (0, 1) = \\{x \\in \\mathbb{R} : 0 < x < 1\\}$, what are $\\sup S$ and $\\inf S$?',
     options: [
       '$\\sup S = 1$, $\\inf S = 0$, and both belong to $S$',
-      '$\\sup S = 1$, $\\inf S = 0$, and neither belongs to $S$',
       '$\\sup S$ and $\\inf S$ do not exist',
+      '$\\sup S = 1$, $\\inf S = 0$, and neither belongs to $S$',
       '$\\sup S = 0.999...$, $\\inf S = 0.001$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'For the open interval $(0,1)$, the supremum is $1$ and the infimum is $0$. Neither endpoint belongs to the set, but they are still the least upper bound and greatest lower bound respectively.',
   },
@@ -35,11 +35,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'An ordered set $S$ has the least upper bound property if:',
     options: [
       'Every subset of $S$ has a supremum',
-      'Every nonempty subset of $S$ that is bounded above has a supremum in $S$',
+      '$S$ is finite',
       '$S$ contains both a maximum and minimum element',
-      '$S$ is finite'
+      'Every nonempty subset of $S$ that is bounded above has a supremum in $S$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The least upper bound property (or completeness) states that every nonempty subset that is bounded above has a least upper bound (supremum) within $S$. This is the key property that distinguishes $\\mathbb{R}$ from $\\mathbb{Q}$.',
   },
@@ -48,12 +48,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $S$ has the least upper bound property and $B \\subset S$ is nonempty and bounded below, what can we conclude?',
     options: [
-      '$B$ has no infimum',
       '$\\inf B$ exists and belongs to $S$',
+      '$B$ has no infimum',
       '$B$ must be finite',
       '$B$ has a minimum element'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Rudin proves that the LUB property implies the GLB (greatest lower bound) property. If $L$ is the set of lower bounds of $B$, then $L$ is nonempty and bounded above (by any element of $B$). Thus $\\sup L$ exists and equals $\\inf B$.',
   },

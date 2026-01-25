@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section22Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Building geometry from numbers is called:',
+    options: [
+      'Arithmetization of geometry',
+      'Axiomatization',
+      'Geometrization of arithmetic',
+      'Algebraization',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The arithmetization of geometry uses coordinate systems to represent geometric objects as numbers.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Klein\'s Erlanger Programm (1872) characterizes geometry as the study of:',
+    options: [
+      'Coordinates only',
+      'Axioms and postulates',
+      'Transformation groups and their invariants',
+      'Numerical calculations',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Klein viewed geometry as the study of properties invariant under a group of transformations.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'For isometries of ℝ², the invariants include:',
+    options: [
+      'Length, angle, and straightness',
+      'Only length',
+      'Only area',
+      'Only angle',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Isometries preserve all metric properties: distance, angle measure, and collinearity.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Algebraic curves of degree 1 are:',
+    options: [
+      'Parabolas',
+      'Straight lines',
+      'Circles',
+      'Ellipses',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Lines are described by ax + by + c = 0, a polynomial equation of degree 1.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Circles are algebraic curves of degree:',
+    options: [
+      '1',
+      '4',
+      '2',
+      '3',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The circle equation (x-a)² + (y-b)² = r² expands to a degree 2 polynomial.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Elliptic curves, important in number theory and cryptography, have degree:',
+    options: [
+      '2',
+      '1',
+      '4',
+      '3',
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Elliptic curves are defined by cubic (degree 3) polynomial equations.',
+  },
+];

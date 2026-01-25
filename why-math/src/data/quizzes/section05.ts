@@ -9,7 +9,7 @@ export const section05Questions: QuizQuestion[] = [
       'One',
       'Two',
       'Three',
-      'Infinitely many'
+      'Infinitely many',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -22,10 +22,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       '$x = 4$',
       '$x = 2$ only',
-      '$x = \\pm 2$',
-      '$x = \\pm 4$'
+      '$x = \\pm 4$',
+      '$x = \\pm 2$'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$x^2 = 4$, so $x = 2$ or $x = -2$, written as $x = \\pm 2$.',
   },
@@ -34,12 +34,28 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To solve $x^2 - 6x - 16 = 0$ by factoring, we write:',
     options: [
-      '$(x - 4)(x + 4) = 0$',
-      '$(x - 8)(x + 2) = 0$',
-      '$(x + 8)(x - 2) = 0$',
-      '$(x - 16)(x + 1) = 0$'
-    ],
+      '$(x - 4)(x + 4) = 0
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'We need factors of -16 that sum to -6: that\'s -8 and +2. So $(x - 8)(x + 2) = 0$.',
+  },
+      '$(x - 8)(x + 2) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'We need factors of -16 that sum to -6: that\'s -8 and +2. So $(x - 8)(x + 2) = 0$.',
+  },
+      '$(x + 8)(x - 2) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'We need factors of -16 that sum to -6: that\'s -8 and +2. So $(x - 8)(x + 2) = 0$.',
+  },
+      '$(x - 16)(x + 1) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'We need factors of -16 that sum to -6: that\'s -8 and +2. So $(x - 8)(x + 2) = 0$.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'We need factors of -16 that sum to -6: that\'s -8 and +2. So $(x - 8)(x + 2) = 0$.',
   },
@@ -48,10 +64,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Quadratic Formula states that solutions to $ax^2 + bx + c = 0$ are:',
     options: [
-      '$x = \\frac{b \\pm \\sqrt{b^2 - 4ac}}{2a}$',
-      '$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$',
-      '$x = \\frac{-b \\pm \\sqrt{b^2 + 4ac}}{2a}$',
-      '$x = \\frac{b \\pm \\sqrt{b^2 + 4ac}}{a}$'
+      '$x = \\frac{b \\pm \\sqrt{b^2 - 4ac}}{2a}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Quadratic Formula: $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.',
+  },
+      '$x = \\frac{-b \\pm \\sqrt{b^2 + 4ac}}{2a}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Quadratic Formula: $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.',
+  },
+      '$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Quadratic Formula: $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.',
+  },
+      '$x = \\frac{b \\pm \\sqrt{b^2 + 4ac}}{a}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Quadratic Formula: $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -62,12 +94,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The discriminant $b^2 - 4ac$ determines:',
     options: [
+      'The nature of the solutions (real, repeated, or none)',
       'The y-intercept of the parabola',
       'The vertex of the parabola',
-      'The nature of the solutions (real, repeated, or none)',
-      'The x-intercept only'
+      'The x-intercept only',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'If $b^2-4ac > 0$: two real solutions. If $= 0$: one repeated. If $< 0$: no real solutions.',
   },
@@ -78,10 +110,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'Line',
       'Circle',
-      'Parabola',
-      'Hyperbola'
+      'Hyperbola',
+      'Parabola'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The graph of a quadratic polynomial is a parabola.',
   },
@@ -91,11 +123,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'If $a > 0$ in $y = ax^2 + bx + c$, the parabola:',
     options: [
       'Opens downward and has a maximum',
-      'Opens upward and has a minimum',
       'Is a horizontal line',
-      'Opens to the right'
+      'Opens to the right',
+      'Opens upward and has a minimum',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'When $a > 0$, the parabola opens upward and has a minimum at its vertex.',
   },
@@ -104,10 +136,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The vertex form of a parabola is $y = a(x - h)^2 + k$. The vertex is at:',
     options: [
-      '$(0, 0)$',
-      '$(h, k)$',
-      '$(-h, k)$',
-      '$(h, -k)$'
+      '$(0, 0)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'In vertex form $y = a(x - h)^2 + k$, the vertex is at $(h, k)$.',
+  },
+      '$(-h, k)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In vertex form $y = a(x - h)^2 + k$, the vertex is at $(h, k)$.',
+  },
+      '$(h, k)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In vertex form $y = a(x - h)^2 + k$, the vertex is at $(h, k)$.',
+  },
+      '$(h, -k)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In vertex form $y = a(x - h)^2 + k$, the vertex is at $(h, k)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -118,12 +166,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A baseball thrown upward follows $h = 50t - 16t^2$. It reaches 30 feet at:',
     options: [
-      'One time only',
       'Two different times (going up and coming down)',
+      'One time only',
       'Never',
-      'Continuously'
+      'Continuously',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The ball passes 30 feet twice—once on the way up and once on the way down.',
   },
@@ -133,11 +181,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'To maximize the area of a rectangle with fixed perimeter $p$, the shape should be:',
     options: [
       'Very long and thin',
+      'A circle',
       'A square',
       'Any rectangle works the same',
-      'A circle'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Area $A = x(\\frac{p}{2} - x)$ is a downward parabola. Maximum occurs when both dimensions equal $\\frac{p}{4}$—a square.',
   },

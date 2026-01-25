@@ -23,11 +23,11 @@ export const section33Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Differential',
-      'Fluxion',
       'Gradient',
-      'Increment',
+      'Fluxion',
+      'Increment'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'Newton called the derivative the "fluxion" and denoted it with a dot: $\\dot{x}$. The position variable was called the "fluent." This terminology came from thinking of quantities as flowing or changing over time.',
   },
@@ -38,11 +38,11 @@ export const section33Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'It was invented first',
-      'It makes the chain rule look like fraction multiplication',
-      'It uses fewer symbols',
       'It was endorsed by the Royal Society',
+      'It uses fewer symbols',
+      'It makes the chain rule look like fraction multiplication'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Leibniz\'s notation $dy/dx$ makes many calculus operations intuitive. For example, the chain rule $\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$ looks like fraction multiplication, and substitution in integrals becomes natural.',
   },
@@ -53,12 +53,12 @@ export const section33Questions: QuizQuestion[] = [
       'What key insight made Newton and Leibniz the "inventors" of calculus?',
     difficulty: 'medium',
     options: [
-      'They discovered the power rule',
       'They recognized differentiation and integration as inverse operations',
+      'They discovered the power rule',
       'They proved the existence of infinitesimals',
-      'They invented coordinate geometry',
+      'They invented coordinate geometry'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'The crucial insight was recognizing that finding tangents (differentiation) and finding areas (integration) are inverse operations. This connection—the Fundamental Theorem of Calculus—unified two previously separate problem types.',
   },

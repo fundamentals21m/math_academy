@@ -9,7 +9,7 @@ export const section05Questions: QuizQuestion[] = [
       'Preference for working certain hours',
       'The tendency to value present goods over future goods',
       'Preference for saving over spending',
-      'The optimal timing for production'
+      'The optimal timing for production',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'According to Austrian economics, what determines the interest rate?',
     options: [
       'The central bank',
+      'International agreements',
       'The social rate of time preference',
       'The rate of inflation',
-      'International agreements'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The natural interest rate reflects society\'s time preference—how much more people value present goods versus future goods.',
   },
@@ -35,11 +35,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Why does saving lead to economic growth?',
     options: [
       'It increases money in circulation',
-      'It provides funds for capital investment, increasing future production',
       'It reduces consumption, leaving more goods available',
-      'It forces businesses to lower prices'
+      'It forces businesses to lower prices',
+      'It provides funds for capital investment, increasing future production',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Saving means forgoing present consumption, freeing resources for investment in capital goods that increase future output.',
   },
@@ -51,7 +51,7 @@ export const section05Questions: QuizQuestion[] = [
       'The rate charged by the first bank',
       'The interest rate on government bonds',
       'The pure time preference component of interest',
-      'The inflation-adjusted interest rate'
+      'The inflation-adjusted interest rate',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -62,12 +62,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens when time preference decreases in society?',
     options: [
+      'Savings increase and more capital is accumulated',
       'Interest rates rise',
       'More resources are devoted to present consumption',
-      'Savings increase and more capital is accumulated',
-      'Economic growth slows'
+      'Economic growth slows',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Lower time preference means people are more willing to delay gratification, leading to more saving and capital accumulation.',
   },
@@ -76,12 +76,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is interest not exploitation according to Rothbard?',
     options: [
-      'Because governments regulate it',
       'Because it reflects the genuine time preferences of savers and borrowers',
+      'Because governments regulate it',
+      'Because only rich people earn interest',
       'Because interest rates are always low',
-      'Because only rich people earn interest'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Interest compensates savers for forgoing present consumption. It reflects mutual benefit: borrowers get funds now, savers are rewarded for waiting.',
   },

@@ -8,8 +8,8 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'Analytic geometry',
       'Descriptive geometry',
+      'Differential geometry',
       'Projective geometry',
-      'Differential geometry'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Descriptive geometry was initially kept as a military secret because:',
     options: [
-      'It was used for cryptography',
       'It was used for fortification design',
+      'It was used for cryptography',
       'It was used for navigation',
       'It was used for artillery calculations'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Monge developed descriptive geometry for military fortification design, and it was classified for years.',
   },
@@ -35,11 +35,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'What famous institution did Monge help establish?',
     options: [
       'The Sorbonne',
-      'The École Polytechnique',
       'Cambridge University',
-      'The Royal Society'
+      'The École Polytechnique',
+      'The Royal Society',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Monge was instrumental in founding the École Polytechnique, which trained French engineers and scientists.',
   },
@@ -49,11 +49,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'Monge accompanied Napoleon on which military expedition as a scientist?',
     options: [
       'The Russian campaign',
-      'The Egyptian expedition',
       'The Italian campaign',
-      'The Spanish campaign'
+      'The Spanish campaign',
+      'The Egyptian expedition',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Monge joined Napoleon\'s Egyptian expedition (1798-1801) as part of the scientific team.',
   },

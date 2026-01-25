@@ -22,10 +22,10 @@ export const section02Questions: QuizQuestion[] = [
     options: [
       'None - it uses only postulates',
       'Proposition I.1',
-      'Both I.1 and Common Notion 1',
-      'Proposition I.1 and Common Notion 3'
+      'Proposition I.1 and Common Notion 3',
+      'Both I.1 and Common Notion 1'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The proof uses I.1 (to construct an equilateral triangle) and Common Notion 3 (subtracting equals from equals).',
   },
@@ -34,10 +34,10 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is I.2 necessary given that we have compasses?',
     options: [
-      'Euclid\'s compass "collapses" - it cannot transfer distances directly',
+      'Euclid\\'s compass "collapses" - it cannot transfer distances directly',
+      'It is not actually necessary',
       'To prove that circles exist',
       'To show that points can be constructed',
-      'It is not actually necessary'
     ],
     correctIndex: 0,
     difficulty: 'hard',

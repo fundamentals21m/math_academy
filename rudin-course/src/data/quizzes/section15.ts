@@ -7,11 +7,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'A sequence $\\{p_n\\}$ in a metric space is Cauchy if:',
     options: [
       'The sequence converges',
-      'For every $\\varepsilon > 0$, there exists $N$ such that $m, n \\geq N$ implies $d(p_m, p_n) < \\varepsilon$',
+      'Each term equals the previous term',
       'The sequence is bounded',
-      'Each term equals the previous term'
+      'For every $\\varepsilon > 0$, there exists $N$ such that $m, n \\geq N$ implies $d(p_m, p_n) < \\varepsilon$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A Cauchy sequence has terms that become arbitrarily close to each other: for any $\\varepsilon > 0$, eventually $d(p_m, p_n) < \\varepsilon$ for all large $m, n$.',
   },
@@ -20,12 +20,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $\\mathbb{R}^k$, a sequence is Cauchy if and only if:',
     options: [
-      'It is bounded',
-      'It is monotonic',
       'It converges',
+      'It is monotonic',
+      'It is bounded',
       'It has a convergent subsequence'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$\\mathbb{R}^k$ is complete: every Cauchy sequence converges. Conversely, every convergent sequence is Cauchy. So in $\\mathbb{R}^k$, Cauchy $\\Leftrightarrow$ convergent.',
   },
@@ -49,11 +49,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Every Cauchy sequence is:',
     options: [
       'Convergent',
-      'Bounded',
       'Monotonic',
+      'Bounded',
       'Eventually constant'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Every Cauchy sequence is bounded: for $\\varepsilon = 1$, there exists $N$ such that $d(p_m, p_n) < 1$ for $m, n \\geq N$. All terms are within distance $1$ of $p_N$, plus finitely many initial terms.',
   },
@@ -64,10 +64,10 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       '$\\mathbb{R}$ with the standard metric',
       '$\\mathbb{R}^n$ with the Euclidean metric',
-      '$\\mathbb{Q}$ with the standard metric',
-      'A compact metric space'
+      'A compact metric space',
+      '$\\mathbb{Q}$ with the standard metric'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$\\mathbb{Q}$ is not complete. For example, a sequence of rationals approximating $\\sqrt{2}$ is Cauchy but does not converge in $\\mathbb{Q}$. Compact spaces and $\\mathbb{R}^n$ are complete.',
   },

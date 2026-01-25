@@ -6,12 +6,12 @@ export const section108Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In IV.6, how is a square inscribed in a circle?',
     options: [
-      'Using angle bisectors',
       'Using two perpendicular diameters',
+      'Using angle bisectors',
       'Using tangent lines',
       'Using the golden ratio'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Two perpendicular diameters create four points on the circle. Connecting consecutive points forms an inscribed square.',
   },
@@ -35,11 +35,11 @@ export const section108Questions: QuizQuestion[] = [
     question: 'If a circle has radius r, what is the side length of an inscribed square?',
     options: [
       'r',
-      'r√2',
       '2r',
-      'r/√2'
+      'r/√2',
+      'r√2',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The diagonal of the inscribed square equals the diameter (2r). For a square with side s, diagonal = s√2, so s√2 = 2r, giving s = r√2.',
   },

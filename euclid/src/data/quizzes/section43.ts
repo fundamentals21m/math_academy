@@ -7,11 +7,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'What does Proposition I.43 prove about parallelogram complements?',
     options: [
       'They are congruent',
+      'They have perpendicular diagonals',
       'The complements about the diagonal are equal in area',
       'They form a square',
-      'They have perpendicular diagonals'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'I.43: In a parallelogram, the "complements" of parallelograms about the diagonal are equal in area.',
   },
@@ -23,7 +23,7 @@ export const section43Questions: QuizQuestion[] = [
       'A parallelogram divided by one diagonal',
       'A parallelogram with a point on the diagonal creating four smaller parallelograms',
       'Two congruent parallelograms',
-      'A parallelogram inscribed in a circle'
+      'A parallelogram inscribed in a circle',
     ],
     correctIndex: 1,
     difficulty: 'hard',

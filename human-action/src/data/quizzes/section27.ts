@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section27Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Mises argues that interventionism (the "third system") is:',
+    options: [
+      'Inherently unstable—pushing toward either more freedom or total control',
+      'A successful compromise between capitalism and socialism',
+      'The dominant system in developed nations',
+      'Recommended as the ideal system',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'There is no stable "third system." Each intervention creates distortions requiring further intervention, pushing toward either more freedom (markets) or total control (socialism).',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Government intervention ultimately rests on:',
+    options: [
+      'Democratic consent',
+      'Force or threat of force',
+      'Scientific expertise',
+      'Market mechanisms',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '"Government interference always means either violent action or the threat of such action." All interventions—taxes, regulations, prohibitions—ultimately depend on coercion.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Laissez faire properly means:',
+    options: [
+      'No government at all',
+      'Mechanical automatism without human control',
+      'Only the rich should make decisions',
+      'Let individuals choose how to cooperate in the division of labor',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Laissez faire does not mean chaos. It means letting individuals choose how to participate in the economy and letting consumers direct production through their spending.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The fundamental economic question is not "plan or no plan" but:',
+    options: [
+      'Capitalism or socialism',
+      'Growth or stability',
+      'Whose planning—individuals or government',
+      'Efficiency or equity',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '"The alternative is not plan or no plan. The question is whose planning? Should each member of society plan for himself, or should a paternal government alone plan for them all?"',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'When confronted with the failures of intervention, interventionists typically argue:',
+    options: [
+      'Markets should replace intervention',
+      'Government should be abolished',
+      'Economic theory is flawed',
+      'The problem was wrong intervention—their "good interventionism" would work',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Interventionists defend their position by claiming the problem was "spurious interventionism" while advocating their own "good interventionism." This spiral continues until freedom is eliminated.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The Lenin/Russian pattern of socialism differs from the Hindenburg/German pattern in that:',
+    options: [
+      'The Lenin pattern nationalizes enterprises while the German pattern retains private ownership forms with central direction',
+      'The Russian pattern is more efficient',
+      'The German pattern is more democratic',
+      'They are identical',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The Russian pattern nationalizes enterprises directly. The German pattern retains the appearance of markets but directs all significant activity centrally. Both are forms of socialism.',
+  },
+];

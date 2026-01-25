@@ -8,8 +8,13 @@ export const section58Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'When did Gödel prove his incompleteness theorem?',
-    options: ['1920', '1930', '1931', '1950'],
-    correctIndex: 2,
+    options: [
+      '1920',
+      '1930',
+      '1950',
+      '1931',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Gödel proved his incompleteness theorem in 1931. In 1930, he had proved a completeness theorem for the predicate calculus.',
@@ -35,11 +40,11 @@ export const section58Questions: QuizQuestion[] = [
     question: "What does Gödel's Completeness Theorem state?",
     options: [
       'Every formula is provable',
-      'A formula is provable if and only if it is true in all models',
       'Every consistent system has a finite model',
       'No system can prove its own consistency',
+      'A formula is provable if and only if it is true in all models',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       "Gödel's Completeness Theorem states that a formula is provable in L if and only if it is true under all possible interpretations of the nonlogical symbols in L, i.e., in all models of L.",
@@ -49,12 +54,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is an ω-complete model?',
     options: [
-      'A model where every formula is either true or false',
       'A model where A(Sⁿ0) true for all n implies ∀x A(x) is true',
+      'A model where every formula is either true or false',
       'A model with infinitely many elements',
       'A model that satisfies all axioms',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A model is ω-complete if, for any formula A(x), whenever A(Sⁿ0) is true in that model for each natural number n, then ∀x∈N A(x) is also true in that model.',
@@ -78,8 +83,13 @@ export const section58Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: "What philosophical view did Gödel himself hold?",
-    options: ['Formalism', 'Intuitionism', 'Platonism', 'Constructivism'],
-    correctIndex: 2,
+    options: [
+      'Formalism',
+      'Platonism',
+      'Intuitionism',
+      'Constructivism',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Gödel was a Platonist. He saw truth as a property of an eternal, immutable reality independent of finite human minds. He believed that his incompleteness theorem showed there are formulas that are eternally true but not provable.',
@@ -104,12 +114,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From the intuitionist point of view, why is ω-completeness not assumed?',
     options: [
-      'ω-completeness requires infinite proofs',
       'Proving A(Sⁿ0) for each n does not guarantee a proof of ∀x A(x)',
+      'ω-completeness requires infinite proofs',
       'Intuitionists reject the natural numbers',
-      'ω-completeness is inconsistent',
+      'ω-completeness is inconsistent'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'For intuitionists, truth equals provability. Even if A(Sⁿ0) has a proof for each n, this does not guarantee that ∀x∈N A(x) has a proof. Hence intuitionists have no particular reason to think of the world as ω-complete.',
@@ -119,12 +129,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What is the relationship between Gödel's Completeness and Incompleteness theorems?",
     options: [
-      'They contradict each other',
       'Incompleteness implies that some models are not ω-complete',
+      'They contradict each other',
       'Completeness implies incompleteness',
       'They apply to different mathematical systems',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       "Combining the Completeness Theorem (provable iff true in all models) with the Incompleteness Theorem (some formulas are true in ω-complete models but not provable), we conclude that some models are not ω-complete.",

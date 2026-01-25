@@ -23,8 +23,13 @@ export const section42Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'According to Rule 3, what is l ⊗ π?',
-    options: ['l', 'π', '0', 'lπ'],
-    correctIndex: 2,
+    options: [
+      'l',
+      '0',
+      'π',
+      'lπ',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Rule 3 states l ⊗ π = 0, because an edge with dihedral angle π is not a real edge—the faces are coplanar.',
@@ -33,8 +38,13 @@ export const section42Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'What is the Dehn invariant of a unit cube?',
-    options: ['12', 'π/2', '6π', '0'],
-    correctIndex: 3,
+    options: [
+      '12',
+      '0',
+      'π/2',
+      '6π',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The cube has 12 edges with angle π/2, giving 12 ⊗ π/2. But two copies of 1 ⊗ π/2 sum to 1 ⊗ π = 0, so the total is 0.',
@@ -46,11 +56,11 @@ export const section42Questions: QuizQuestion[] = [
       'If two polyhedra have different Dehn invariants, what can we conclude?',
     options: [
       'They have different volumes',
-      'They cannot be cut and pasted into each other',
       'They have different surface areas',
       'Nothing can be concluded',
+      'They cannot be cut and pasted into each other',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Dehn invariant is preserved under cutting and pasting. Different invariants means equidecomposability is impossible.',
@@ -61,12 +71,12 @@ export const section42Questions: QuizQuestion[] = [
     question:
       'What does Rule 1 (l ⊗ (α + β) = l ⊗ α + l ⊗ β) describe geometrically?',
     options: [
-      'Cutting an edge in half',
       'Cutting along an edge, splitting a dihedral angle',
+      'Cutting an edge in half',
       'Rotating the polyhedron',
       'Measuring the volume',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Rule 1 describes what happens when a cut is made along an edge, splitting its dihedral angle α + β into two angles α and β.',
@@ -76,8 +86,13 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question:
       'The mathematical objects l ⊗ α obeying Rules 1 and 2 are called:',
-    options: ['Vectors', 'Matrices', 'Tensors', 'Polynomials'],
-    correctIndex: 2,
+    options: [
+      'Tensors',
+      'Vectors',
+      'Matrices',
+      'Polynomials',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'These objects are called tensors. The set of them forms a tensor product, denoted ℝ ⊗ ℝ/πℤ.',
@@ -88,11 +103,11 @@ export const section42Questions: QuizQuestion[] = [
     question: 'What does the notation ℝ/πℤ represent?',
     options: [
       'The real numbers divided by π',
-      'Angles where we treat π as equivalent to 0',
       'Rational numbers',
       'Complex numbers',
+      'Angles where we treat π as equivalent to 0',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'ℝ/πℤ is the set of real numbers where π = 0 (and hence all integer multiples of π equal 0). It represents angles modulo π.',
@@ -104,11 +119,11 @@ export const section42Questions: QuizQuestion[] = [
       'Why is the Dehn invariant called an "invariant"?',
     options: [
       'It varies with temperature',
+      'It is always equal to 0',
       'It stays the same under cutting and pasting',
       'It was invented by a mathematician named Invariant',
-      'It is always equal to 0',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'An invariant is a quantity that does not change under certain transformations. The Dehn invariant is unchanged by cutting and pasting.',

@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section09Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'According to Mises, reason is:',
+    options: [
+      'A product of social conditioning',
+      'Humanity\'s particular and characteristic feature',
+      'An illusion created by language',
+      'Identical to animal instinct',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Mises holds that reason distinguishes humans from animals. All purposeful action is preceded by thinking and deliberation.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Mises distinguishes between worldview (Weltanschauung) and ideology. Ideology focuses on:',
+    options: [
+      'Ultimate metaphysical questions about existence',
+      'Religious beliefs only',
+      'Scientific facts',
+      'Human interaction and earthly concerns'
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Worldview encompasses all of existence including transcendent matters. Ideology is narrower, focusing on human society and material welfare.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'According to Mises, political power (might) is fundamentally:',
+    options: [
+      'Based on physical force and military strength',
+      'Derived from economic wealth',
+      'Ideological - resting on accepted ideas and beliefs',
+      'A product of divine right',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Mises argues might is "a moral and spiritual phenomenon." Even tyrants need followers who voluntarily obey. Ideas, not guns, are the ultimate source of power.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'In the Misesian view, society is a product of:',
+    options: [
+      'Ideology - ideas precede and shape social cooperation',
+      'Government planning',
+      'Economic base determining superstructure',
+      'Random historical accidents',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Human action creates society, and action is directed by ideology. Therefore society is a product of ideology - inverting the Marxist claim.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Mises views tradition as:',
+    options: [
+      'Valuable intellectual inheritance that must still be judged by reason',
+      'An authority that should never be questioned',
+      'Completely irrelevant to modern society',
+      'The only reliable guide to action',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Tradition transmits ancestral wisdom, but each generation must evaluate inherited ideas critically using reason. It is a tool, not an infallible authority.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Mises criticizes classical liberals for their excessive faith in:',
+    options: [
+      'Gold standard',
+      'Free trade',
+      'The common man\\'s wisdom to always choose good ideologies',
+      'Minimal government',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Classical liberals believed democracy would inevitably bring progress. But the masses can embrace terrible ideologies too - as the 20th century proved.',
+  },
+];

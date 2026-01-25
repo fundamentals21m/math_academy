@@ -7,11 +7,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What attitude toward commerce does the chapter title "The Non-Commercial" criticize?',
     options: [
       'The desire for profit',
-      'Contempt for business and money-making',
       'Excessive consumerism',
-      'International trade'
+      'International trade',
+      'Contempt for business and money-making',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The chapter criticizes those who despise commerce and profit-making while depending on the wealth that commercial activity creates.',
   },
@@ -20,12 +20,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who represents the "non-commercial" mindset in this chapter?',
     options: [
+      'Characters who claim moral superiority over businesspeople',
       'Hank Rearden',
       'Dagny Taggart',
-      'Characters who claim moral superiority over businesspeople',
-      'Francisco d\'Anconia'
+      'Francisco d\\'Anconia',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Various characters express contempt for commercial activity while claiming moral superiority, embodying the "non-commercial" mindset.',
   },
@@ -34,12 +34,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What hypocrisy does Rand expose in the "non-commercial" characters?',
     options: [
-      'They secretly enjoy luxury',
       'They despise commerce while depending on its products',
+      'They secretly enjoy luxury',
       'They claim to work hard but are lazy',
       'They pretend to be poor'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Rand exposes the hypocrisy of those who morally condemn commerce while entirely depending on the wealth, goods, and services it provides.',
   },
@@ -50,10 +50,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'As equally valuable',
       'As less important than business',
+      'As a type of commercial activity',
       'As morally superior because it is not profit-driven',
-      'As a type of commercial activity'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'They view artistic or intellectual pursuits as morally superior to business precisely because they claim to be above "mere" profit-making.',
   },
@@ -78,8 +78,8 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'Profit is celebrated instead of condemned',
       'Those who create wealth are treated as exploiters',
+      'Commercial success is rewarded excessively',
       'Business is given too much respect',
-      'Commercial success is rewarded excessively'
     ],
     correctIndex: 1,
     difficulty: 'hard',

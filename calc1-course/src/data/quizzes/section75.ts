@@ -6,12 +6,28 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The dot product $\\mathbf{a} \\cdot \\mathbf{b}$ in $\\mathbb{R}^n$ equals:',
     options: [
-      '$\\sum_{i=1}^n a_i b_i$',
-      '$(a_1 b_1, ..., a_n b_n)$',
-      '$|\\mathbf{a}||\\mathbf{b}|$',
-      '$\\mathbf{a} + \\mathbf{b}$'
+      '$|\\mathbf{a}||\\mathbf{b}|
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Dot product: $\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + ... + a_n b_n$.',
+  },
+      '$(a_1 b_1, ..., a_n b_n)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Dot product: $\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + ... + a_n b_n$.',
+  },
+      '$\\mathbf{a} + \\mathbf{b}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Dot product: $\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + ... + a_n b_n$.',
+  },
+      '$\\sum_{i=1}^n a_i b_i
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Dot product: $\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + ... + a_n b_n$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Dot product: $\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + ... + a_n b_n$.',
   },
@@ -29,12 +45,28 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The length (norm) of $\\mathbf{v}$ is:',
     options: [
-      '$\\mathbf{v} \\cdot \\mathbf{v}$',
-      '$\\sqrt{\\mathbf{v} \\cdot \\mathbf{v}}$',
-      '$|v_1| + |v_2| + ...$',
-      '$v_1 + v_2 + ...$'
+      '$\\sqrt{\\mathbf{v} \\cdot \\mathbf{v}}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + ... + v_n^2}$.',
+  },
+      '$\\mathbf{v} \\cdot \\mathbf{v}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + ... + v_n^2}$.',
+  },
+      '$v_1 + v_2 + ...
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + ... + v_n^2}$.',
+  },
+      '$|v_1| + |v_2| + ...
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + ... + v_n^2}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + ... + v_n^2}$.',
   },
@@ -53,11 +85,23 @@ export const section75Questions: QuizQuestion[] = [
     question: 'Two vectors are orthogonal if:',
     options: [
       'They have the same length',
-      '$\\mathbf{a} \\cdot \\mathbf{b} = 0$',
-      '$\\mathbf{a} = \\mathbf{b}$',
-      '$\\mathbf{a} + \\mathbf{b} = \\mathbf{0}$'
+      '$\\mathbf{a} = \\mathbf{b}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Orthogonal (perpendicular) means dot product is zero.',
+  },
+      '$\\mathbf{a} \\cdot \\mathbf{b} = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Orthogonal (perpendicular) means dot product is zero.',
+  },
+      '$\\mathbf{a} + \\mathbf{b} = \\mathbf{0}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Orthogonal (perpendicular) means dot product is zero.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Orthogonal (perpendicular) means dot product is zero.',
   },

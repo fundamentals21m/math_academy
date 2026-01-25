@@ -8,11 +8,11 @@ export const section25Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Newton and Leibniz',
-      'Fermat and Descartes',
       'Euler and Gauss',
-      'Cardano and Tartaglia',
+      'Fermat and Descartes',
+      'Cardano and Tartaglia'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'Analytic geometry was independently discovered by Fermat (1629) and Descartes (1637). Both began with the same classical problem and both discovered that second-degree equations give conic sections.',
   },
@@ -23,11 +23,11 @@ export const section25Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Polar coordinates',
-      'Cartesian coordinates',
-      'Spherical coordinates',
       'Cylindrical coordinates',
+      'Spherical coordinates',
+      'Cartesian coordinates'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'The Cartesian coordinate system, using perpendicular x and y axes, is named after René Descartes, whose Latin name was Cartesius.',
   },
@@ -38,12 +38,12 @@ export const section25Questions: QuizQuestion[] = [
       'What type of curve does every second-degree equation in x and y represent?',
     difficulty: 'medium',
     options: [
-      'A straight line',
-      'A cubic curve',
       'A conic section (or degenerate case)',
-      'A transcendental curve',
+      'A cubic curve',
+      'A straight line',
+      'A transcendental curve'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'Both Fermat and Descartes discovered that every quadratic equation $ax^2 + bxy + cy^2 + dx + ey + f = 0$ represents a conic section (ellipse, parabola, or hyperbola) or a degenerate case like two lines.',
   },
@@ -55,11 +55,11 @@ export const section25Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Apollonius',
-      'Archimedes',
       'Nicole Oresme',
-      'Euclid',
+      'Archimedes',
+      'Euclid'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'Nicole Oresme (1323-1382) used coordinates called "longitude" and "latitude" to represent functions like velocity vs. time. He set up the coordinate system before determining the curve—a key step beyond the Greeks.',
   },
@@ -87,11 +87,11 @@ export const section25Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'The solution of cubic equations',
-      'The arc length of curves',
-      'The existence of complex numbers',
       'The volume of a sphere',
+      'The existence of complex numbers',
+      'The arc length of curves'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Descartes claimed "the ratios between straight and curved lines are not known, and I believe cannot be discovered." Just 20 years later, Neil and van Heuraet found the arc length of the semicubical parabola $y^2 = x^3$.',
   },

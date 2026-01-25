@@ -9,11 +9,11 @@ export const section30Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'They have the same area',
-      'Their corresponding vertices lie on three concurrent lines',
-      'They are congruent',
       'They share a common vertex',
+      'They are congruent',
+      'Their corresponding vertices lie on three concurrent lines'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Two triangles $ABC$ and $A\'B\'C\'$ are in perspective from a point $O$ if lines $AA\'$, $BB\'$, and $CC\'$ all pass through $O$ (are concurrent). The point $O$ is called the center of perspectivity.',
   },
@@ -23,12 +23,12 @@ export const section30Questions: QuizQuestion[] = [
     question: 'What does Desargues\' theorem conclude?',
     difficulty: 'easy',
     options: [
-      'The triangles are congruent',
-      'The triangles have equal areas',
       'Corresponding sides meet in collinear points',
-      'The triangles are similar',
+      'The triangles have equal areas',
+      'The triangles are congruent',
+      'The triangles are similar'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'Desargues\' theorem states: if two triangles are in perspective from a point, then they are in perspective from a line—meaning their corresponding sides meet in three collinear points (the "axis of perspectivity").',
   },
@@ -71,11 +71,11 @@ export const section30Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'Drawn on flat paper',
-      'Coordinatized by a division ring',
-      'Embedded in Euclidean space',
       'Colored with two colors',
+      'Embedded in Euclidean space',
+      'Coordinatized by a division ring'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'A projective plane satisfies Desargues\' theorem if and only if it can be coordinatized by a division ring (where division is possible but multiplication may not be commutative). This is equivalent to being embeddable in a projective 3-space.',
   },
@@ -86,12 +86,12 @@ export const section30Questions: QuizQuestion[] = [
       'Why was Desargues\' original work largely forgotten for 200 years?',
     difficulty: 'hard',
     options: [
-      'It contained mathematical errors',
-      'It was written in Latin',
       'He used obscure botanical terminology for geometric concepts',
-      'It was banned by the Church',
+      'It was written in Latin',
+      'It contained mathematical errors',
+      'It was banned by the Church'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'Desargues used strange botanical terminology—calling lines "palms," points "eyes," and pencils of lines "trees." This made his work incomprehensible to most readers. Only one copy survived, rediscovered in 1845.',
   },

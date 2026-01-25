@@ -9,7 +9,7 @@ export const section06Questions: QuizQuestion[] = [
       'A branch that curves back on itself',
       'A branch that extends to infinity',
       'A branch with infinitely many points',
-      'A closed loop on the curve'
+      'A closed loop on the curve',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'How many infinite branches can a conic section have?',
     options: [
       'None',
+      'Infinitely many',
       'At most 2',
       'At most 4',
-      'Infinitely many'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A second-degree curve can have at most 2 infinite branches. Ellipses and circles have none, parabolas have one, and hyperbolas have two.',
   },
@@ -34,12 +34,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which conic section has no infinite branches?',
     options: [
-      'Parabola',
-      'Hyperbola',
       'Ellipse',
+      'Hyperbola',
+      'Parabola',
       'All conics have infinite branches'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'An ellipse (including the circle) is a closed curve with no infinite branches. It is bounded and doesn\'t extend to infinity.',
   },
@@ -49,11 +49,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What determines whether a curve has an infinite branch?',
     options: [
       'The constant term in the equation',
-      'The behavior of the equation as $x$ or $y$ approaches infinity',
       'The number of terms in the equation',
-      'The sign of all coefficients'
+      'The sign of all coefficients',
+      'The behavior of the equation as $x$ or $y$ approaches infinity',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Infinite branches are determined by analyzing the curve\'s behavior as coordinates approach infinity—examining the leading terms of the equation.',
   },

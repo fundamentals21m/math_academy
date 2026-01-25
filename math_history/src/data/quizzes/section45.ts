@@ -22,12 +22,12 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The fundamental identity $\\text{sn}^2(u) + \\text{cn}^2(u) = 1$ generalizes which trigonometric identity?',
     options: [
-      '$\\sin^2(x) + \\cos^2(x) = 1$',
       '$\\tan(x) = \\sin(x)/\\cos(x)$',
+      '$\\sin^2(x) + \\cos^2(x) = 1$',
       '$\\sin(2x) = 2\\sin(x)\\cos(x)$',
-      '$e^{ix} = \\cos(x) + i\\sin(x)$',
+      '$e^{ix} = \\cos(x) + i\\sin(x)$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The Jacobi elliptic functions satisfy $\\text{sn}^2 + \\text{cn}^2 = 1$, which directly generalizes the Pythagorean identity $\\sin^2 + \\cos^2 = 1$ for circular functions.',
@@ -38,12 +38,12 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What makes elliptic functions fundamentally different from trigonometric functions?',
     options: [
-      'They have two independent periods (doubly periodic)',
-      'They are not continuous',
       'They only work for integers',
-      'They have no derivatives',
+      'They are not continuous',
+      'They have two independent periods (doubly periodic)',
+      'They have no derivatives'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'While sine has one period ($2\\pi$), elliptic functions have two independent periods—one real ($4K$) and one imaginary ($2iK\'$). This "double periodicity" in the complex plane is their defining characteristic.',
@@ -53,12 +53,12 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Jacobi theta functions are useful because:',
     options: [
-      'Elliptic functions can be expressed as their ratios, and they converge rapidly',
+      'They have only integer values',
       'They are simpler than polynomials',
       'They eliminate the need for complex numbers',
-      'They have only integer values',
+      'Elliptic functions can be expressed as their ratios, and they converge rapidly'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Jacobi expressed elliptic functions as ratios of theta functions, such as $\\text{sn}(u) = (\\theta_3/\\theta_2) \\cdot (\\theta_1/\\theta_4)$. The theta series converge very rapidly, making numerical computation practical.',
@@ -84,12 +84,12 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Jacobi used theta function identities to prove a result about:',
     options: [
-      'The number of ways to write integers as sums of four squares',
       'The infinitude of prime numbers',
+      'The number of ways to write integers as sums of four squares',
       'The irrationality of $\\pi$',
-      'The unsolvability of the quintic',
+      'The unsolvability of the quintic'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Jacobi\'s Four Squares Theorem gives an exact formula for the number of representations of $n$ as a sum of four squares: it equals $8 \\times$ (sum of divisors of $n$ not divisible by 4). He proved this using identities for theta functions.',

@@ -6,10 +6,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What does Fermat's Little Theorem state when $p$ is prime and $p \\nmid a$?",
     options: [
-      '$a^{p-1} \\equiv 1 \\pmod{p}$',
-      '$a^p \\equiv 1 \\pmod{p}$',
-      '$a^{p-1} \\equiv 0 \\pmod{p}$',
-      '$a \\equiv p \\pmod{p-1}$'
+      '$a^p \\equiv 1 \\pmod{p}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: "Fermat's Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ when $p$ is prime and $p \\nmid a$.",
+  },
+      '$a^{p-1} \\equiv 0 \\pmod{p}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: "Fermat's Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ when $p$ is prime and $p \\nmid a$.",
+  },
+      '$a^{p-1} \\equiv 1 \\pmod{p}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: "Fermat's Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ when $p$ is prime and $p \\nmid a$.",
+  },
+      '$a \\equiv p \\pmod{p-1}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: "Fermat's Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ when $p$ is prime and $p \\nmid a$.",
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -29,12 +45,28 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What does Euler's Theorem state when $\\gcd(a, n) = 1$?",
     options: [
-      '$a^{\\phi(n)} \\equiv 1 \\pmod{n}$',
-      '$a^n \\equiv 1 \\pmod{\\phi(n)}$',
-      '$\\phi(a) \\equiv 1 \\pmod{n}$',
-      '$a \\equiv \\phi(n) \\pmod{n}$'
-    ],
+      '$a^{\\phi(n)} \\equiv 1 \\pmod{n}
     correctIndex: 0,
+    difficulty: 'easy',
+    explanation: "Euler's Theorem generalizes Fermat's: $a^{\\phi(n)} \\equiv 1 \\pmod{n}$ when $\\gcd(a, n) = 1$.",
+  },
+      '$a^n \\equiv 1 \\pmod{\\phi(n)}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: "Euler's Theorem generalizes Fermat's: $a^{\\phi(n)} \\equiv 1 \\pmod{n}$ when $\\gcd(a, n) = 1$.",
+  },
+      '$\\phi(a) \\equiv 1 \\pmod{n}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: "Euler's Theorem generalizes Fermat's: $a^{\\phi(n)} \\equiv 1 \\pmod{n}$ when $\\gcd(a, n) = 1$.",
+  },
+      '$a \\equiv \\phi(n) \\pmod{n}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: "Euler's Theorem generalizes Fermat's: $a^{\\phi(n)} \\equiv 1 \\pmod{n}$ when $\\gcd(a, n) = 1$.",
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: "Euler's Theorem generalizes Fermat's: $a^{\\phi(n)} \\equiv 1 \\pmod{n}$ when $\\gcd(a, n) = 1$.",
   },
@@ -52,12 +84,24 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In RSA, the public key is $(n, a)$. What must be kept secret?',
     options: [
-      'The prime factors $p$ and $q$ of $n$, and $\\phi(n)$',
-      'Only $n$',
-      'Only $a$',
-      'The encrypted message'
+      'Only $a
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Security depends on keeping $p$, $q$, and $\\phi(n) = (p-1)(q-1)$ secret.',
+  },
+      'Only $n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Security depends on keeping $p$, $q$, and $\\phi(n) = (p-1)(q-1)$ secret.',
+  },
+      'The encrypted message',
+      'The prime factors $p$ and $q$ of $n$, and $\\phi(n)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Security depends on keeping $p$, $q$, and $\\phi(n) = (p-1)(q-1)$ secret.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Security depends on keeping $p$, $q$, and $\\phi(n) = (p-1)(q-1)$ secret.',
   },

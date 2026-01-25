@@ -6,12 +6,20 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An alternating series has the form:',
     options: [
-      '$\\sum a_n$ where all $a_n > 0$',
-      '$\\sum (-1)^n a_n$ where $a_n > 0$',
-      '$\\sum (-1)^n$ only',
-      'Any series with negative terms'
-    ],
+      '$\\sum a_n$ where all $a_n > 0
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Alternating series: terms alternate in sign.',
+  },
+      '$\\sum (-1)^n a_n$ where $a_n > 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Alternating series: terms alternate in sign.',
+  },
+      '$\\sum (-1)^n$ only',
+      'Any series with negative terms',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Alternating series: terms alternate in sign.',
   },
@@ -34,12 +42,20 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The alternating harmonic series $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$:',
     options: [
+      'Converges to $\\ln 2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The alternating harmonic series converges to $\\ln 2$.',
+  },
       'Diverges',
-      'Converges to $\\ln 2$',
       'Converges to 1',
-      'Converges to $e$'
+      'Converges to $e
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The alternating harmonic series converges to $\\ln 2$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The alternating harmonic series converges to $\\ln 2$.',
   },
@@ -49,11 +65,11 @@ export const section67Questions: QuizQuestion[] = [
     question: 'A series is absolutely convergent if:',
     options: [
       '$\\sum a_n$ converges',
-      '$\\sum |a_n|$ converges',
+      '$a_n \\to 0$',
       'All terms are positive',
-      '$a_n \\to 0$'
+      '$\\sum |a_n|$ converges'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Absolute convergence: $\\sum |a_n|$ converges.',
   },
@@ -62,12 +78,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Absolute convergence implies:',
     options: [
-      'Conditional convergence',
       'Ordinary convergence',
+      'Conditional convergence',
       'Divergence',
       'Nothing'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'If $\\sum |a_n|$ converges, then $\\sum a_n$ converges.',
   },
@@ -77,11 +93,11 @@ export const section67Questions: QuizQuestion[] = [
     question: 'The alternating harmonic series is:',
     options: [
       'Absolutely convergent',
-      'Conditionally convergent',
       'Divergent',
-      'Both absolutely and conditionally convergent'
+      'Conditionally convergent',
+      'Both absolutely and conditionally convergent',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Converges but not absolutely (harmonic series diverges).',
   },

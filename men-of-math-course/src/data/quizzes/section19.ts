@@ -6,10 +6,10 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Niels Henrik Abel proved that the general equation of which degree has no algebraic solution?',
     options: [
-      'Third degree',
       'Fourth degree',
+      'Third degree',
       'Fifth degree and higher',
-      'Second degree'
+      'Second degree',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Abel died tragically young at age:',
     options: [
+      '26',
       '20',
       '22',
-      '26',
-      '30'
+      '30',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Abel died of tuberculosis at just 26 years old, before receiving recognition for his work.',
   },
@@ -34,12 +34,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Abelian groups are commutative groups named after Abel. In such groups:',
     options: [
-      '$a \\cdot b = b \\cdot a$ for all elements',
-      'All elements have order 2',
       'The group must be finite',
-      'Every element is its own inverse'
+      'All elements have order 2',
+      'Every element is its own inverse',
+      '$a \\cdot b = b \\cdot a$ for all elements',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Abelian groups satisfy the commutative property: the order of operation doesn\'t matter.',
   },
@@ -50,8 +50,8 @@ export const section19Questions: QuizQuestion[] = [
     options: [
       'Definite integrals',
       'Elliptic integrals and functions',
+      'Improper integrals',
       'Triple integrals',
-      'Improper integrals'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -63,11 +63,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'Abel\'s nationality was:',
     options: [
       'German',
-      'Norwegian',
       'Swedish',
-      'Danish'
+      'Norwegian',
+      'Danish',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Abel was Norwegian; the Abel Prize awarded in his name is given by the Norwegian Academy.',
   },

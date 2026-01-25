@@ -22,12 +22,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Energy conservation follows from which symmetry?',
     options: [
-      'Time translation symmetry',
       'Space translation symmetry',
+      'Time translation symmetry',
       'Rotational symmetry',
-      'Reflection symmetry',
+      'Reflection symmetry'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'If the laws of physics are the same today as tomorrow (time translation symmetry), then energy is conserved. When the Lagrangian has no explicit time dependence, the Hamiltonian (total energy) is constant.',
@@ -38,12 +38,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Conservation of linear momentum follows from:',
     options: [
-      'Invariance under spatial translations',
-      'Invariance under rotations',
       'Invariance under time reversal',
-      'Invariance under scaling',
+      'Invariance under rotations',
+      'Invariance under spatial translations',
+      'Invariance under scaling'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'If space is homogeneous (no point is special), the Lagrangian is invariant under translations. By Noether\'s theorem, this implies conservation of linear momentum. This is why collisions in empty space conserve momentum.',
@@ -53,12 +53,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Angular momentum conservation is a consequence of:',
     options: [
-      'Rotational symmetry',
+      'Scale invariance',
       'Time translation symmetry',
       'Space translation symmetry',
-      'Scale invariance',
+      'Rotational symmetry'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'If the laws of physics are the same in all directions (rotational symmetry), then angular momentum is conserved. This is why a spinning figure skater speeds up when pulling in their arms—angular momentum $L = I\\omega$ stays constant.',
@@ -84,12 +84,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In particle physics, gauge symmetries via Noether\'s theorem explain:',
     options: [
-      'Conservation of electric charge and other quantum numbers',
       'Why particles have mass',
+      'Conservation of electric charge and other quantum numbers',
       'The existence of gravity',
-      'The speed of light',
+      'The speed of light'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The Standard Model is built on gauge symmetries (U(1), SU(2), SU(3)). By Noether\'s theorem, these symmetries imply conservation of electric charge, weak isospin, and color charge. The theorem unifies our understanding of why these quantities are conserved.',

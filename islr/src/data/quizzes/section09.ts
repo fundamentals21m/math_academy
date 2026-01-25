@@ -25,12 +25,12 @@ export const section09Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A significant interaction term indicates:',
     options: [
-      'The predictors are independent',
       'The effect of one predictor depends on another',
+      'The predictors are independent',
       'The model is overfitting',
       'The intercept is zero'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Interaction means the effect of TV advertising on sales depends on the level of radio advertising (and vice versa).',
   },
@@ -72,11 +72,11 @@ export const section09Quiz: QuizQuestion[] = [
     question: 'The confidence interval for newspaper coefficient included zero, meaning:',
     options: [
       'Newspaper has a large effect',
-      'We cannot rule out zero effect for newspaper',
       'Newspaper is the most important predictor',
+      'We cannot rule out zero effect for newspaper',
       'The model is incorrect'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A CI containing zero means zero is a plausible value for the true coefficient - the effect may be negligible.',
   },
@@ -85,12 +85,12 @@ export const section09Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the interaction model, the effect of \\$1,000 more TV spending when radio = 0 is approximately:',
     options: [
-      '19 more units sold',
+      '189 more units sold',
       '46 more units sold',
       '100 more units sold',
-      '189 more units sold'
+      '19 more units sold'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'With no radio spending, the TV effect is just the main effect coefficient: about 0.019 × 1000 ≈ 19 units.',
   },
@@ -99,12 +99,12 @@ export const section09Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does RSE = 1.69 mean in the advertising context?',
     options: [
-      '$R^2$ is 1.69',
       'Average prediction error is about 1,690 units',
+      '$R^2$ is 1.69',
       'The slope is 1.69',
       'We need 1.69 more predictors'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'RSE is in the units of Y (sales). RSE ≈ 1.69 means predictions are off by about 1,690 units on average.',
   },
@@ -124,11 +124,11 @@ export const section09Quiz: QuizQuestion[] = [
     question: 'In the interaction model, as radio spending increases, the marginal effect of TV:',
     options: [
       'Decreases',
-      'Stays constant',
       'Increases',
+      'Stays constant',
       'Becomes negative'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Effect of TV = $0.019 + 0.0011 \\times \\text{radio}$. Since the interaction coefficient (0.0011) is positive, TV\'s effect increases with radio.',
   },
@@ -153,10 +153,10 @@ export const section09Quiz: QuizQuestion[] = [
     options: [
       'Only coefficient uncertainty',
       'Only irreducible error',
-      'Both coefficient uncertainty and irreducible error',
-      'Neither type of uncertainty'
+      'Neither type of uncertainty',
+      'Both coefficient uncertainty and irreducible error'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Prediction intervals account for uncertainty in the estimated regression line PLUS the inherent variability in individual outcomes.',
   },

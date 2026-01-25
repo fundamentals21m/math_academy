@@ -8,10 +8,14 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       'A cyclic group',
       'A subgroup of some symmetric group',
-      'A subgroup of $GL_n(\\mathbb{R})$',
-      'A quotient of a free group'
-    ],
+      'A subgroup of $GL_n(\\mathbb{R})
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: "Cayley's Theorem: Every group $G$ is isomorphic to a subgroup of $S_G$ (permutations of the set $G$).",
+  },
+      'A quotient of a free group',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: "Cayley's Theorem: Every group $G$ is isomorphic to a subgroup of $S_G$ (permutations of the set $G$).",
   },
@@ -23,7 +27,7 @@ export const section21Questions: QuizQuestion[] = [
       'The conjugation action',
       'The action on subgroups',
       'The regular (left multiplication) action',
-      'The action on cosets'
+      'The action on cosets',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -57,12 +61,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "The representation from Cayley's Theorem is always:",
     options: [
-      'Faithful (injective)',
       'Surjective',
       'Neither injective nor surjective',
-      'Both injective and surjective'
+      'Both injective and surjective',
+      'Faithful (injective)',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: "Cayley's representation is always faithful: if $\\phi(g) = \\text{id}$, then $gh = h$ for all $h$, so $g = e$.",
   },

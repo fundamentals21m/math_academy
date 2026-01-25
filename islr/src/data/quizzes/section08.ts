@@ -7,12 +7,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A dummy variable is used to represent:',
     options: [
-      'Missing values',
       'Qualitative (categorical) predictors',
+      'Missing values',
       'The error term',
       'The intercept'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Dummy variables (indicator variables) encode categorical predictors as 0/1 values for use in regression.',
   },
@@ -53,11 +53,11 @@ export const section08Quiz: QuizQuestion[] = [
     question: 'A residual plot is used to detect:',
     options: [
       'The value of $R^2$',
-      'Problems like non-linearity or heteroscedasticity',
       'The number of predictors',
+      'Problems like non-linearity or heteroscedasticity',
       'The sample size'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Residual plots (residuals vs. fitted values) reveal patterns that indicate model violations.',
   },
@@ -69,10 +69,10 @@ export const section08Quiz: QuizQuestion[] = [
     options: [
       '$\\beta_1$',
       '$\\beta_3$',
-      '$\\beta_1 + \\beta_3 X_2$',
-      '$\\beta_1 + \\beta_2$'
+      '$\\beta_1 + \\beta_2$',
+      '$\\beta_1 + \\beta_3 X_2$'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'With the interaction, the effect of $X_1$ depends on $X_2$: $\\frac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_2$.',
   },
@@ -81,12 +81,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Polynomial regression $Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\epsilon$ is:',
     options: [
-      'A non-linear model',
       'A linear model (in the parameters)',
+      'A non-linear model',
       'Only valid for binary outcomes',
       'Always overfits'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Despite modeling a curved relationship, the model is linear in the coefficients $\\beta_0, \\beta_1, \\beta_2$.',
   },
@@ -110,11 +110,11 @@ export const section08Quiz: QuizQuestion[] = [
     question: 'A funnel-shaped residual plot (residuals spread out as fitted values increase) indicates:',
     options: [
       'Non-linearity',
-      'Heteroscedasticity',
       'Outliers',
+      'Heteroscedasticity',
       'Perfect fit'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A funnel shape means variance increases with the response level - classic heteroscedasticity.',
   },
@@ -124,11 +124,11 @@ export const section08Quiz: QuizQuestion[] = [
     question: 'The hierarchical principle says that if we include an interaction $X_1 X_2$, we should:',
     options: [
       'Remove the main effects $X_1$ and $X_2$',
-      'Include the main effects $X_1$ and $X_2$',
+      'Use a different response variable',
       'Add higher-order terms like $X_1^2$',
-      'Use a different response variable'
+      'Include the main effects $X_1$ and $X_2$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Main effects should be included even if not significant, because the interaction only makes sense in their context.',
   },
@@ -138,12 +138,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An observation with high leverage but small residual:',
     options: [
-      'Has little effect on the fit',
       'Pulls the regression line toward itself',
+      'Has little effect on the fit',
       'Should always be removed',
       'Indicates model misspecification'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'High leverage points with small residuals fit well BECAUSE they pull the line toward themselves - they strongly influence the fit.',
   },
@@ -153,11 +153,11 @@ export const section08Quiz: QuizQuestion[] = [
     question: 'If VIF for $X_1$ is 10, approximately what proportion of $X_1$\'s variance is explained by other predictors?',
     options: [
       '10%',
-      '50%',
       '90%',
+      '50%',
       '99%'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'VIF = $\\frac{1}{1-R^2_{X_1|X_{-1}}}$. If VIF = 10, then $R^2_{X_1|X_{-1}} = 1 - 0.1 = 0.9$ (90%).',
   },
@@ -167,11 +167,11 @@ export const section08Quiz: QuizQuestion[] = [
     question: 'Studentized residuals greater than 3 in absolute value suggest:',
     options: [
       'Perfect predictions',
-      'Potential outliers',
       'High leverage',
+      'Potential outliers',
       'Collinearity'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Studentized residuals standardize residuals by their estimated standard deviation. Values beyond $\\pm 3$ are unusual.',
   },
@@ -181,11 +181,11 @@ export const section08Quiz: QuizQuestion[] = [
     question: 'To address heteroscedasticity, a common transformation of the response is:',
     options: [
       'Squaring Y',
-      'Taking log(Y) or sqrt(Y)',
+      'Removing Y',
       'Standardizing Y',
-      'Removing Y'
+      'Taking log(Y) or sqrt(Y)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Log or square root transformations often stabilize variance, particularly when variance increases with the mean.',
   },

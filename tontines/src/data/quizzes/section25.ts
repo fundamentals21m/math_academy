@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section25Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Risk-neutral investors ($\\gamma \\to 0$) prefer:',
+    options: [
+      'Flat payouts',
+      'Declining payouts',
+      'Random payouts',
+      'Rapidly growing payouts that maximize expected wealth',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Risk-neutral investors care only about expected value, not variance. They prefer to maximize expected wealth, accepting volatility—the classic tontine\'s explosive growth is closer to optimal for them.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'For moderate risk aversion ($\\gamma = 1-3$), the natural tontine achieves efficiency of:',
+    options: [
+      '97-99.5%',
+      '75-80%',
+      '85-90%',
+      '100%',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For most people (γ = 1-3), the natural tontine captures 97-99.5% of optimal utility—nearly perfect.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Extremely risk-averse investors ($\\gamma \\to \\infty$) prefer:',
+    options: [
+      'Declining payouts',
+      'Explosive payout growth',
+      'Flat (constant) payouts',
+      'Smooth, predictable growth',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Highly risk-averse investors want perfectly stable consumption—flat payouts with no volatility preferred.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Lorenzo Tonti\'s original 1653 design (equal shares of income) is mathematically optimal for:',
+    options: [
+      'Extremely risk-averse investors',
+      'Risk-neutral investors',
+      'Log utility investors',
+      'All investors equally'
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Tonti\'s original design—equal shares of investment income split among survivors—is optimal for extremely risk-averse investors who want flat payouts.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The natural tontine works well for all risk types because:',
+    options: [
+      'It perfectly matches every preference',
+      'Government regulations require it',
+      'It\\'s a good compromise—"approximately right" for everyone',
+      'It eliminates all risk',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The natural tontine is 92-99% efficient across all risk aversions—a remarkable compromise that works well regardless of individual preferences.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The surprising historical connection is that:',
+    options: [
+      'Modern utility theory was invented for tontines',
+      'Tonti\\'s 1653 intuition anticipated utility theory by 350 years',
+      'Tontines were banned because of utility theory',
+      'Utility theory disproves tontines',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Tonti designed his tontine without knowledge of utility theory, yet his design is mathematically optimal for extremely risk-averse investors—intuition anticipated mathematics by 350 years.',
+  },
+];

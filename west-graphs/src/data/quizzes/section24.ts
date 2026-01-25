@@ -7,9 +7,9 @@ export const section24Questions: QuizQuestion[] = [
     question: 'A matroid is defined by a ground set $E$ and a collection $\\mathcal{I}$ of independent sets satisfying:',
     options: [
       'Hereditary and exchange properties',
-      'Closure under union',
       'All subsets are independent',
-      'Only singletons are independent'
+      'Closure under union',
+      'Only singletons are independent',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -22,8 +22,8 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       'Independent sets are matchings',
       'Independent sets are forests (acyclic edge sets)',
+      'Independent sets are cliques',
       'Independent sets are vertex covers',
-      'Independent sets are cliques'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +34,24 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The rank of a set $S$ in a matroid is:',
     options: [
-      'The number of elements in $S$',
-      'The size of the largest independent subset of $S$',
-      'The number of bases containing $S$',
-      'The chromatic number'
-    ],
+      'The number of elements in $S
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Rank $r(S)$ = maximum size of an independent set contained in $S$.',
+  },
+      'The size of the largest independent subset of $S
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Rank $r(S)$ = maximum size of an independent set contained in $S$.',
+  },
+      'The number of bases containing $S
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Rank $r(S)$ = maximum size of an independent set contained in $S$.',
+  },
+      'The chromatic number',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Rank $r(S)$ = maximum size of an independent set contained in $S$.',
   },
@@ -51,7 +63,7 @@ export const section24Questions: QuizQuestion[] = [
       'Complementary bases',
       'Same independent sets',
       'Reversed rank function',
-      'No bases'
+      'No bases',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -64,10 +76,10 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       'All graphs',
       'Only bipartite graphs',
+      'Only trees',
       'Matroids',
-      'Only trees'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Matroids are precisely the structures where greedy gives optimal weighted independent sets.',
   },
@@ -77,11 +89,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'The dual of a graphic matroid (cycles in $G$) is:',
     options: [
       'Another graphic matroid',
+      'The same matroid',
       'The cographic matroid (bonds/cuts in $G$)',
       'Not a matroid',
-      'The same matroid'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Dual of graphic matroid is cographic: independent sets are edge sets not containing cuts.',
   },

@@ -10,9 +10,9 @@ export const section21Questions: QuizQuestion[] = [
     question: 'From which Arabic mathematician\'s name do we get the word "algorithm"?',
     options: [
       'Al-Khwarizmi',
+      'Al-Mamun',
       'Thabit Ibn-Qurra',
       'Omar Khayyam',
-      'Al-Mamun',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -24,12 +24,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From which Arabic word do we get the term "algebra"?',
     options: [
-      'al-Mamun (wisdom)',
       'al-jabr (combining)',
+      'al-Mamun (wisdom)',
       'al-Khayyam (tent-maker)',
-      'al-Qurra (reader)',
+      'al-Qurra (reader)'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'We get "algebra" from al-Khwarizmi\'s book "Hisab al-jabr w\'al-muqabalah". The word "al-jabr" means combining, as in combining terms to solve an equation. In old Spanish, "algebrista" meant a bone-setter!',
@@ -39,12 +39,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What institution did Caliph al-Mamun establish in Baghdad in the 9th century?',
     options: [
-      'The Library of Alexandria',
       'The House of Wisdom',
+      'The Library of Alexandria',
       'The Academy of Athens',
       'The Museum of Mathematics',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Caliph al-Mamun established the "House of Wisdom" (essentially a university) at Baghdad, where he ordered translations of many Greek manuscripts, helping to preserve these works for posterity.',
@@ -70,11 +70,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'What is the first pair of amicable numbers, found using Thabit\'s rule with n = 2?',
     options: [
       '6 and 28',
+      '1184 and 1210',
       '220 and 284',
       '496 and 8128',
-      '1184 and 1210',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Using Thabit\'s rule with n = 2, we get the amicable pair 220 and 284. This was known to the Pythagoreans, but Thabit provided the first general rule for generating such pairs.',
@@ -115,11 +115,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Omar Khayyam is famous not only as a mathematician but also as the author of what literary work?',
     options: [
       'The Arabian Nights',
-      'The Rubaiyat',
       'The Book of Kings',
       'The Conference of Birds',
+      'The Rubaiyat',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Omar Khayyam wrote the Rubaiyat, a famous collection of Persian poetry. Its 19th-century English translation by Edward FitzGerald became a bestseller and is still widely read today.',
@@ -131,10 +131,10 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       'They invented calculus',
       'They proved Fermat\'s Last Theorem',
-      'They bridged Greek antiquity and the European Renaissance',
       'They discovered irrational numbers',
+      'They bridged Greek antiquity and the European Renaissance'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Islamic mathematicians served as a crucial bridge between ancient and modern mathematics. They preserved Greek texts through Arabic translations, transmitted Indian numerals to Europe, and developed algebra as a systematic discipline.',

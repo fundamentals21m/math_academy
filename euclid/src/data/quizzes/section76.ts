@@ -7,11 +7,11 @@ export const section76Questions: QuizQuestion[] = [
     question: 'What does Proposition III.12 prove about externally tangent circles?',
     options: [
       'They have parallel diameters',
-      'The line joining their centers passes through the point of tangency',
       'They have equal radii',
-      'They share a common tangent line'
+      'The line joining their centers passes through the point of tangency',
+      'They share a common tangent line',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'III.12 proves that when two circles touch externally, the line joining their centers passes through the point of tangency.',
   },
@@ -20,12 +20,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For externally tangent circles, where is the point of tangency?',
     options: [
-      'Between the two centers',
       'Outside both circles',
       'At the center of one circle',
-      'Inside one of the circles'
+      'Inside one of the circles',
+      'Between the two centers',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'For external tangency, the tangent point lies between the two centers on the line joining them.',
   },
@@ -37,7 +37,7 @@ export const section76Questions: QuizQuestion[] = [
       'It uses different propositions',
       'The geometric configuration is different (external vs internal)',
       'III.12 uses direct proof while III.11 uses contradiction',
-      'There is no significant difference in method'
+      'There is no significant difference in method',
     ],
     correctIndex: 1,
     difficulty: 'medium',

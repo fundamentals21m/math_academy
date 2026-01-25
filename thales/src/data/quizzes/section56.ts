@@ -39,12 +39,12 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is there a substitutability restriction on Universal Specification?',
     options: [
-      'To avoid infinite loops in proofs',
       'To prevent free variables in t from being captured by quantifiers',
-      'To ensure proofs are constructive',
+      'To avoid infinite loops in proofs',
       'To make the logic decidable',
+      'To ensure proofs are constructive',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The substitutability restriction prevents variable capture. Without it, from ∀x∃yB(x,y) we could incorrectly infer ∃yB(y,y) — from "everybody blames somebody" we would get "somebody blames himself."',
@@ -55,11 +55,11 @@ export const section56Questions: QuizQuestion[] = [
     question: 'What restriction does Universal Generalization (UG) require?',
     options: [
       'The variable x must appear in all formulas',
-      'The variable x must not be free in the assumptions Γ',
       'The formula A(x) must be atomic',
       'The term t must be a constant',
+      'The variable x must not be free in the assumptions Γ',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Universal Generalization requires that x is not free in Γ. Otherwise, from "x is afraid" (where x is assumed to be some specific individual), we could incorrectly conclude "everyone is afraid."',
@@ -86,10 +86,10 @@ export const section56Questions: QuizQuestion[] = [
     options: [
       '∃x¬F(x)',
       '∀xF(x)',
-      '∀x¬F(x)',
       '¬∀xF(x)',
+      '∀x¬F(x)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'From ¬∃xF(x) ("nothing has property F") we can prove ∀x¬F(x) ("everything lacks property F"). The proof uses EG and the deduction rule.',
@@ -114,12 +114,12 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From ∀x¬F(x), what can be proved intuitionistically?',
     options: [
-      '∃xF(x)',
       '¬∃xF(x)',
-      '¬¬∃xF(x)',
       'Both ¬∃xF(x) and ¬¬∃xF(x)',
+      '¬¬∃xF(x)',
+      '∃xF(x)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'From ∀x¬F(x) we can prove both ¬∃xF(x) and (using contraposition) ¬¬∃xF(x). However, we cannot prove ∃xF(x) intuitionistically — that would require double negation elimination, which is not valid in intuitionistic logic.',

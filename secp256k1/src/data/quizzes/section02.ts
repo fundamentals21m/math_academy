@@ -8,8 +8,8 @@ export const section02Questions: QuizQuestion[] = [
     options: [
       'Real numbers are too small',
       'Real numbers require infinite precision and cause rounding errors',
-      'Real numbers don\'t support addition',
-      'Real numbers are not defined mathematically'
+      'Real numbers don\\'t support addition',
+      'Real numbers are not defined mathematically',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $17 \\mod 5$?',
     options: [
-      '$2$',
-      '$3$',
-      '$5$',
-      '$12$'
-    ],
+      '$2
     correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$17 = 3 \\cdot 5 + 2$, so the remainder is $2$. Therefore $17 \\mod 5 = 2$.',
+  },
+      '$3
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$17 = 3 \\cdot 5 + 2$, so the remainder is $2$. Therefore $17 \\mod 5 = 2$.',
+  },
+      '$5
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$17 = 3 \\cdot 5 + 2$, so the remainder is $2$. Therefore $17 \\mod 5 = 2$.',
+  },
+      '$12
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$17 = 3 \\cdot 5 + 2$, so the remainder is $2$. Therefore $17 \\mod 5 = 2$.',
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: '$17 = 3 \\cdot 5 + 2$, so the remainder is $2$. Therefore $17 \\mod 5 = 2$.',
   },
@@ -35,11 +51,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'How do you compute division in a finite field?',
     options: [
       'Regular division, then take mod',
-      'Multiply by the modular inverse',
       'Division is not possible in finite fields',
-      'Subtract until the result is less than the divisor'
+      'Subtract until the result is less than the divisor',
+      'Multiply by the modular inverse',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'In a finite field, $a / b = a \\cdot b^{-1}$ where $b^{-1}$ is the multiplicative inverse: the number such that $b \\cdot b^{-1} \\equiv 1 \\pmod{p}$.',
   },
@@ -48,12 +64,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Fermat\'s Little Theorem, if $p$ is prime, then $a^{p-1} \\equiv$ ?',
     options: [
-      '$0 \\pmod{p}$',
-      '$1 \\pmod{p}$',
-      '$a \\pmod{p}$',
-      '$p \\pmod{p}$'
+      '$0 \\pmod{p}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem states that for prime $p$ and $a \\not\\equiv 0$, we have $a^{p-1} \\equiv 1 \\pmod{p}$.',
+  },
+      '$p \\pmod{p}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem states that for prime $p$ and $a \\not\\equiv 0$, we have $a^{p-1} \\equiv 1 \\pmod{p}$.',
+  },
+      '$1 \\pmod{p}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem states that for prime $p$ and $a \\not\\equiv 0$, we have $a^{p-1} \\equiv 1 \\pmod{p}$.',
+  },
+      '$a \\pmod{p}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem states that for prime $p$ and $a \\not\\equiv 0$, we have $a^{p-1} \\equiv 1 \\pmod{p}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Fermat\'s Little Theorem states that for prime $p$ and $a \\not\\equiv 0$, we have $a^{p-1} \\equiv 1 \\pmod{p}$.',
   },

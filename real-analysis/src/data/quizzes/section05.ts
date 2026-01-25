@@ -7,12 +7,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A sequence $\\{a_n\\}$ converges to $L$ if for every $\\varepsilon > 0$, there exists $N$ such that:',
       options: [
-        '$|a_n - L| < \\varepsilon$ for all $n > N$',
+        '$|a_n - L| \\leq N$ for all $\\varepsilon$',
         '$|a_n - L| > \\varepsilon$ for all $n > N$',
         '$|a_n - L| = \\varepsilon$ for all $n > N$',
-        '$|a_n - L| \\leq N$ for all $\\varepsilon$'
+        '$|a_n - L| < \\varepsilon$ for all $n > N$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The $\\varepsilon$-$N$ definition states that for any tolerance $\\varepsilon > 0$, eventually (for $n > N$) all terms are within $\\varepsilon$ of $L$.'
     },
@@ -30,12 +30,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The sequence $a_n = (-1)^n$ is:',
       options: [
-        'Convergent to $1$',
+        'Divergent',
         'Convergent to $-1$',
         'Convergent to $0$',
-        'Divergent'
+        'Convergent to $1$'
       ],
-      correctIndex: 3,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The sequence alternates between $1$ and $-1$ and does not approach any single value, so it diverges.'
     },
@@ -59,11 +59,11 @@ export const section05Quiz = {
       question: 'A sequence $\\{a_n\\}$ is monotonically increasing if:',
       options: [
         '$a_n > 0$ for all $n$',
-        '$a_{n+1} \\geq a_n$ for all $n$',
         '$a_n \\to \\infty$',
+        '$a_{n+1} \\geq a_n$ for all $n$',
         '$a_n < a_{n+2}$ for all $n$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Monotonically increasing means each term is at least as large as the previous: $a_{n+1} \\geq a_n$.'
     },
@@ -108,11 +108,11 @@ export const section05Quiz = {
       question: 'The squeeze theorem states that if $a_n \\leq b_n \\leq c_n$ and $\\lim a_n = \\lim c_n = L$, then:',
       options: [
         '$\\lim b_n = 0$',
-        '$\\lim b_n = L$',
+        '$\\lim b_n = (L + L)/2$',
         '$b_n$ diverges',
-        '$\\lim b_n = (L + L)/2$'
+        '$\\lim b_n = L$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The squeeze theorem says $b_n$ is forced to converge to $L$ since it is trapped between two sequences both converging to $L$.'
     },
@@ -130,12 +130,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A subsequence of $\\{a_n\\}$ is:',
       options: [
-        'The first $k$ terms',
         'A sequence $\\{a_{n_k}\\}$ where $n_1 < n_2 < n_3 < \\cdots$',
+        'The first $k$ terms',
         'The even-indexed terms only',
         'A rearrangement of the sequence'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'A subsequence uses a strictly increasing sequence of indices $n_k$ to select terms from the original sequence.'
     },
@@ -175,12 +175,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A Cauchy sequence is one where:',
       options: [
-        'Terms get arbitrarily close to each other',
-        'Terms alternate in sign',
         'Terms are all positive',
+        'Terms alternate in sign',
+        'Terms get arbitrarily close to each other',
         'Terms are strictly decreasing'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'A Cauchy sequence has the property that $|a_m - a_n| < \\varepsilon$ for all $m, n$ sufficiently large.'
     },
@@ -198,12 +198,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The limit inferior $\\liminf a_n$ is defined as:',
       options: [
-        '$\\lim_{n \\to \\infty} (\\inf_{k \\geq n} a_k)$',
+        'The smallest term of the sequence',
         '$\\inf\\{a_n : n \\in \\mathbb{N}\\}$',
         '$\\lim_{n \\to \\infty} a_n$',
-        'The smallest term of the sequence'
+        '$\\lim_{n \\to \\infty} (\\inf_{k \\geq n} a_k)$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: '$\\liminf a_n = \\lim_{n \\to \\infty} (\\inf_{k \\geq n} a_k)$ is the limit of the infimum of the tail of the sequence.'
     },
@@ -232,12 +232,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The Monotone Convergence Theorem states that:',
       options: [
-        'Every monotonic sequence converges',
-        'Every bounded sequence converges',
         'Every bounded monotonic sequence converges',
+        'Every bounded sequence converges',
+        'Every monotonic sequence converges',
         'Every Cauchy sequence is monotonic'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The theorem requires both conditions: a sequence that is monotonic AND bounded must converge.'
     },
@@ -295,12 +295,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $a_n \\to L$ and $a_n > 0$ for all $n$, what can we say about $\\sqrt{a_n}$?',
       options: [
-        '$\\sqrt{a_n} \\to \\sqrt{L}$ if $L \\geq 0$',
-        '$\\sqrt{a_n}$ diverges',
         '$\\sqrt{a_n} \\to L^2$',
+        '$\\sqrt{a_n}$ diverges',
+        '$\\sqrt{a_n} \\to \\sqrt{L}$ if $L \\geq 0$',
         '$\\sqrt{a_n} \\to 0$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The square root function is continuous on $[0, \\infty)$, so $\\sqrt{a_n} \\to \\sqrt{L}$.'
     },
@@ -319,11 +319,11 @@ export const section05Quiz = {
       question: 'If $\\limsup a_n = \\liminf a_n = L$, then:',
       options: [
         '$\\{a_n\\}$ diverges',
-        '$\\lim a_n = L$',
+        '$L = 0$',
         '$\\{a_n\\}$ is unbounded',
-        '$L = 0$'
+        '$\\lim a_n = L$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'When limsup equals liminf, the sequence converges and the common value is the limit.'
     },
@@ -341,12 +341,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The sequence $a_n = \\frac{(-1)^n}{n}$ is:',
       options: [
-        'Divergent',
-        'Convergent to $1$',
         'Convergent to $0$',
+        'Convergent to $1$',
+        'Divergent',
         'Convergent to $-1$'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: '$|a_n| = 1/n \\to 0$, so $a_n \\to 0$ despite the alternating sign.'
     },
@@ -410,11 +410,11 @@ export const section05Quiz = {
       question: 'The nested intervals theorem states that if $[a_n, b_n]$ are nested intervals with $b_n - a_n \\to 0$, then:',
       options: [
         '$\\bigcap [a_n, b_n]$ is empty',
-        '$\\bigcap [a_n, b_n]$ contains exactly one point',
+        '$\\bigcap [a_n, b_n] = \\mathbb{R}$',
         '$\\bigcap [a_n, b_n]$ contains infinitely many points',
-        '$\\bigcap [a_n, b_n] = \\mathbb{R}$'
+        '$\\bigcap [a_n, b_n]$ contains exactly one point'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Nested closed intervals with lengths shrinking to $0$ intersect in exactly one point.'
     },
@@ -431,12 +431,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $a_n \\leq b_n$ for all $n$ and both limits exist, then:',
       options: [
-        '$\\lim a_n < \\lim b_n$',
         '$\\lim a_n \\leq \\lim b_n$',
+        '$\\lim a_n < \\lim b_n$',
         '$\\lim a_n = \\lim b_n$',
         'No relationship can be determined'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Limits preserve non-strict inequalities: $\\lim a_n \\leq \\lim b_n$.'
     },
@@ -446,11 +446,11 @@ export const section05Quiz = {
       question: 'A sequence $\\{a_n\\}$ with $a_n = n$ is:',
       options: [
         'Bounded and convergent',
-        'Bounded and divergent',
+        'Unbounded and divergent',
         'Unbounded and convergent',
-        'Unbounded and divergent'
+        'Bounded and divergent'
       ],
-      correctIndex: 3,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'The sequence $n$ grows without bound, so it is unbounded and diverges to $\\infty$.'
     }
@@ -490,11 +490,11 @@ export const section05Quiz = {
       question: 'If $\\{a_n\\}$ is a sequence with $\\limsup a_n = 3$ and $\\liminf a_n = 1$, then:',
       options: [
         '$\\{a_n\\}$ converges to $2$',
-        '$\\{a_n\\}$ diverges',
         '$\\{a_n\\}$ converges to $3$',
+        '$\\{a_n\\}$ diverges',
         '$\\{a_n\\}$ is unbounded'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'A sequence converges if and only if $\\limsup = \\liminf$. Since they differ, the sequence diverges.'
     },
@@ -549,10 +549,10 @@ export const section05Quiz = {
       options: [
         '$a_n \\to \\infty$',
         '$a_n \\to L$',
-        '$a_n \\to 0$',
-        '$a_n$ diverges'
+        '$a_n$ diverges',
+        '$a_n \\to 0$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'If the ratio limit is less than $1$, the sequence decreases geometrically and converges to $0$.'
     },
@@ -561,12 +561,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The sequence $a_n = \\sin(n)$ has:',
       options: [
-        'Limit $0$',
-        'Limit $1$',
         'No limit, but every value in $[-1, 1]$ is a subsequential limit',
+        'Limit $1$',
+        'Limit $0$',
         'Exactly two subsequential limits: $1$ and $-1$'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Since $\\pi$ is irrational, the sequence $n \\mod 2\\pi$ is equidistributed, so $\\sin(n)$ is dense in $[-1, 1]$.'
     },
@@ -599,11 +599,11 @@ export const section05Quiz = {
       question: 'A sequence $\\{a_n\\}$ is called contractive if $|a_{n+2} - a_{n+1}| \\leq c|a_{n+1} - a_n|$ for some $c < 1$. Such a sequence:',
       options: [
         'May diverge',
-        'Is always Cauchy',
         'Is always unbounded',
+        'Is always Cauchy',
         'Must equal a constant'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The differences form a geometric series, so $\\sum |a_{n+1} - a_n|$ converges, implying the sequence is Cauchy.'
     },
@@ -622,11 +622,11 @@ export const section05Quiz = {
       question: 'If $a_n = \\sum_{k=1}^{n} \\frac{1}{k^2}$, then $\\{a_n\\}$:',
       options: [
         'Diverges',
-        'Converges to $\\pi^2/6$',
+        'Converges to $2$',
         'Converges to $1$',
-        'Converges to $2$'
+        'Converges to $\\pi^2/6$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The Basel problem: $\\sum_{k=1}^{\\infty} \\frac{1}{k^2} = \\frac{\\pi^2}{6}$, proven by Euler.'
     },
@@ -653,12 +653,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A sequence $\\{a_n\\}$ satisfying $|a_{n+1} - L| \\leq \\frac{1}{2}|a_n - L|$ for all $n$:',
       options: [
-        'May diverge',
         'Converges to $L$',
+        'May diverge',
         'Oscillates around $L$',
         'Is eventually constant'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The distance to $L$ decreases by at least half each step, so $|a_n - L| \\leq 2^{-n}|a_1 - L| \\to 0$.'
     },

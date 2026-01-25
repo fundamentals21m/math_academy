@@ -7,11 +7,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What does "The Face Without Pain or Fear or Guilt" represent?',
     options: [
       'A criminal who feels no remorse',
-      'The ideal man who lives by reason without internal conflict',
       'A person in denial about reality',
-      'Someone who has given up caring'
+      'The ideal man who lives by reason without internal conflict',
+      'Someone who has given up caring',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The face without pain, fear, or guilt represents the ideal human being—one who lives rationally, has nothing to hide, and experiences no conflict between his values and his actions.',
   },
@@ -20,12 +20,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When does Dagny first glimpse this ideal?',
     options: [
-      'In her childhood dreams',
       'When she encounters someone who embodies rational living',
+      'In her childhood dreams',
       'In a painting at a museum',
-      'In her memories of her father'
+      'In her memories of her father',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Dagny glimpses this ideal when she encounters or perceives someone who lives without the contradictions and guilt that plague most people—someone whose face shows inner peace.',
   },
@@ -35,11 +35,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Why would such a person have no guilt?',
     options: [
       'They have never done anything wrong',
-      'They have no conscience',
       'Their actions align with their rational values',
-      'They have forgotten their past mistakes'
+      'They have no conscience',
+      'They have forgotten their past mistakes',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A person who lives by rational principles and never betrays their values has no reason for guilt. Guilt comes from acting against one\'s own judgment and values.',
   },
@@ -50,8 +50,8 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'Physical bravery in dangerous situations',
       'Ignorance of threats',
-      'Confidence from living by one\'s own mind',
-      'Suppression of natural emotions'
+      'Confidence from living by one\\'s own mind',
+      'Suppression of natural emotions',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -65,7 +65,7 @@ export const section18Questions: QuizQuestion[] = [
       'It makes her want to give up her work',
       'It confirms that her values are achievable in reality',
       'It frightens her into conformity',
-      'It has no lasting impact on her'
+      'It has no lasting impact on her',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -77,11 +77,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What philosophical concept does this ideal face embody?',
     options: [
       'The primacy of emotions',
-      'The integration of mind and values into a unified whole',
       'The rejection of all standards',
-      'The acceptance of original sin'
+      'The acceptance of original sin',
+      'The integration of mind and values into a unified whole',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The ideal face embodies the integration of reason and values—a person whose thoughts, emotions, and actions are all consistent, with no internal warfare or contradiction.',
   },

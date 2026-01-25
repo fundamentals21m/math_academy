@@ -7,12 +7,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a convex polyhedron, Euler\'s formula states that $V - E + F$ equals:',
     options: [
-      '2',
-      '0',
       '1',
-      'It depends on the polyhedron',
+      '0',
+      '2',
+      'It depends on the polyhedron'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Euler\'s polyhedron formula states that for any convex polyhedron, V - E + F = 2, where V is the number of vertices, E is the number of edges, and F is the number of faces.',
@@ -32,12 +32,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Euler characteristic of a torus (donut shape) is:',
     options: [
-      '0',
+      '-2',
       '2',
       '1',
-      '-2',
+      '0'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Euler characteristic χ = 2 - 2g where g is the genus (number of holes). A torus has genus 1, so χ = 2 - 2(1) = 0. This can be verified by any decomposition of the torus.',
@@ -63,12 +63,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The relationship between Euler characteristic $\\chi$ and genus $g$ for orientable surfaces is:',
     options: [
-      '$\\chi = 2 - 2g$',
       '$\\chi = g$',
+      '$\\chi = 2 - 2g$',
       '$\\chi = 2g$',
-      '$\\chi = 2 + 2g$',
+      '$\\chi = 2 + 2g$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'For orientable surfaces, χ = 2 - 2g. A sphere (g=0) has χ=2, a torus (g=1) has χ=0, a double torus (g=2) has χ=-2, and so on. Each additional handle decreases χ by 2.',
@@ -78,12 +78,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Euler\'s formula can be used to prove that $K_5$ (complete graph on 5 vertices) is non-planar because:',
     options: [
-      'The required number of faces contradicts the edge-face inequality',
-      '$K_5$ has too many vertices',
       'The formula gives a negative number of faces',
-      '$K_5$ has odd Euler characteristic',
+      '$K_5$ has too many vertices',
+      'The required number of faces contradicts the edge-face inequality',
+      '$K_5$ has odd Euler characteristic'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'If K₅ (V=5, E=10) were planar, Euler\'s formula gives F=7. But since each face needs ≥3 edges and each edge borders ≤2 faces, we need 3F ≤ 2E, so F ≤ 6.67. This contradicts F=7, proving K₅ is non-planar.',

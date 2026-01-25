@@ -16,11 +16,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'Which statement about the Euclidean algorithm is TRUE?',
     options: [
       'It always requires $n$ steps for $n$-digit numbers',
-      'The number of steps is at most $5$ times the number of digits',
       'It only works for prime numbers',
-      'It requires factoring both numbers first'
+      'It requires factoring both numbers first',
+      'The number of steps is at most $5$ times the number of digits',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Lamé proved the number of steps is at most $5$ times the number of digits of the smaller number.',
   },
@@ -38,12 +38,20 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the complexity of the Euclidean algorithm for computing $\\gcd(a, b)$?',
     options: [
-      '$O(a + b)$',
-      '$O(ab)$',
+      '$O(a + b)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Euclidean algorithm takes $O((\\log a)(\\log b))$ bit operations, making it efficient for large numbers.',
+  },
+      '$O((\\log a)(\\log b))$ bit operations',
+      '$O(ab)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The Euclidean algorithm takes $O((\\log a)(\\log b))$ bit operations, making it efficient for large numbers.',
+  },
       '$O(\\log(\\min(a,b)))$ bit operations',
-      '$O((\\log a)(\\log b))$ bit operations'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The Euclidean algorithm takes $O((\\log a)(\\log b))$ bit operations, making it efficient for large numbers.',
   },

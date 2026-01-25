@@ -7,11 +7,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'When are two curves said to be similar?',
     options: [
       'When they have the same equation',
+      'When they have the same degree',
       'When one can be obtained from the other by uniform scaling',
       'When they intersect',
-      'When they have the same degree'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Two curves are similar if one is a uniformly scaled (enlarged or reduced) version of the other, preserving all angles and proportions.',
   },
@@ -21,11 +21,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'Are all circles similar to each other?',
     options: [
       'No, only circles of the same radius',
-      'Yes, all circles are similar',
       'Only concentric circles',
-      'Only circles with the same center'
+      'Only circles with the same center',
+      'Yes, all circles are similar',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'All circles are similar because any circle can be scaled to match any other circle. They differ only in size, not shape.',
   },
@@ -48,12 +48,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which curves are affinely equivalent to each other?',
     options: [
-      'Only congruent curves',
       'All conics of the same type (all ellipses, all parabolas, all hyperbolas)',
+      'Only congruent curves',
       'Only circles',
-      'All algebraic curves'
+      'All algebraic curves',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'All ellipses are affinely equivalent (any ellipse can be transformed to any other). Similarly for all parabolas and all hyperbolas. But an ellipse cannot be transformed into a hyperbola.',
   },
@@ -63,11 +63,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'Under an affine transformation, what geometric property is preserved?',
     options: [
       'Distances',
-      'Angles',
       'Parallelism of lines',
-      'Perpendicularity'
+      'Angles',
+      'Perpendicularity',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Affine transformations preserve parallelism: if two lines are parallel before the transformation, they remain parallel afterward.',
   },

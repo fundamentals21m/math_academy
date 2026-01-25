@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section30Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The annuity guarantee promises fixed payments regardless of:',
+    options: [
+      'Nothing—payments vary',
+      'How long you live, market performance, interest rates, and other annuitants',
+      'Only market performance',
+      'Only how long you live',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'An annuity promises fixed payments regardless of lifespan, market conditions, interest rates, and how other annuitants fare—backed by insurance company capital.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'In a tontine with extremely healthy pool members, your expected payout is:',
+    options: [
+      'Higher than fair value',
+      'Exactly fair value',
+      'Lower than fair value (healthy members outlive you)',
+      'Unaffected by others\\' health',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'If everyone else is healthier than you, they\'ll likely outlive you and capture more mortality credits. With annuities, the insurer bears this selection risk.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The annuity market has all EXCEPT:',
+    options: [
+      'State insurance guaranty funds',
+      'No loading factors',
+      'Capital adequacy requirements',
+      'Consumer disclosure rules'
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The annuity market has regulatory protection, capital requirements, and disclosure rules—but it definitely has loading factors (15-17%).',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Tontines exist in what legal status in many jurisdictions?',
+    options: [
+      'A regulatory gray area',
+      'Fully legalized and regulated',
+      'Completely banned everywhere',
+      'Only for government use',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Tontines exist in a regulatory gray area in many jurisdictions. They were banned in some U.S. states in the early 20th century, and the legal framework is still developing.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'For someone with cognitive decline, an annuity\'s advantage is:',
+    options: [
+      'Greater upside potential',
+      'Higher returns',
+      'Lower taxes',
+      'Simplicity—no decisions, monitoring, or cognitive load required'
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Annuities are "set and forget"—same check every month with no decisions required. This simplicity is valuable for those with declining cognitive abilities.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Which is NOT an annuity advantage over tontines?',
+    options: [
+      'Guaranteed income',
+      'Established regulatory framework',
+      'Higher expected returns',
+      'Simplicity',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Higher expected returns is a tontine advantage, not an annuity advantage. Annuity advantages include guaranteed income, established markets, and simplicity.',
+  },
+];

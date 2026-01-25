@@ -6,12 +6,20 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Sylow's First Theorem states that if $p^k$ divides $|G|$ where $p$ is prime, then:",
     options: [
-      '$G$ has exactly one subgroup of order $p^k$',
-      '$G$ has a subgroup of order $p^k$',
+      '$G$ has exactly one subgroup of order $p^k
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: "Sylow's First Theorem: If $p^k | |G|$, then $G$ has a subgroup of order $p^k$.",
+  },
+      '$G$ has $p^k$ subgroups',
+      '$G$ has a subgroup of order $p^k
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: "Sylow's First Theorem: If $p^k | |G|$, then $G$ has a subgroup of order $p^k$.",
+  },
       '$G$ is a $p$-group',
-      '$G$ has $p^k$ subgroups'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: "Sylow's First Theorem: If $p^k | |G|$, then $G$ has a subgroup of order $p^k$.",
   },
@@ -20,12 +28,24 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Sylow $p$-subgroup of $G$ is:',
     options: [
-      'Any subgroup of order $p$',
+      'Any subgroup of order $p
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A Sylow $p$-subgroup has order $p^n$ where $p^n$ is the highest power of $p$ dividing $|G|$.',
+  },
+      'The unique subgroup of order $p
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A Sylow $p$-subgroup has order $p^n$ where $p^n$ is the highest power of $p$ dividing $|G|$.',
+  },
       'A maximal $p$-subgroup (subgroup of order $p^n$ where $p^n || |G|$)',
-      'The unique subgroup of order $p$',
-      'A normal subgroup of order $p^k$'
+      'A normal subgroup of order $p^k
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A Sylow $p$-subgroup has order $p^n$ where $p^n$ is the highest power of $p$ dividing $|G|$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A Sylow $p$-subgroup has order $p^n$ where $p^n$ is the highest power of $p$ dividing $|G|$.',
   },
@@ -34,12 +54,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Sylow's Second Theorem states that all Sylow $p$-subgroups are:",
     options: [
-      'Normal',
       'Conjugate to each other',
+      'Normal',
       'Abelian',
-      'Cyclic'
+      'Cyclic',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: "Sylow's Second Theorem: Any two Sylow $p$-subgroups are conjugate in $G$.",
   },
@@ -49,9 +69,13 @@ export const section24Questions: QuizQuestion[] = [
     question: "Sylow's Third Theorem states that $n_p$ (the number of Sylow $p$-subgroups) satisfies:",
     options: [
       '$n_p | |G|$ only',
+      '$n_p | m$ and $n_p \\equiv 1 \\pmod{p}$ where $|G| = p^n m$ with $\\gcd(p, m) = 1
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: "Sylow's Third: $n_p \\equiv 1 \\pmod{p}$ and $n_p$ divides $[G : P]$ where $P$ is a Sylow $p$-subgroup.",
+  },
       '$n_p \\equiv 1 \\pmod{p}$ only',
-      '$n_p | m$ and $n_p \\equiv 1 \\pmod{p}$ where $|G| = p^n m$ with $\\gcd(p, m) = 1$',
-      '$n_p = 1$ always'
+      '$n_p = 1$ always',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -63,11 +87,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'A Sylow $p$-subgroup $P$ is normal in $G$ if and only if:',
     options: [
       '$P$ is abelian',
-      '$n_p = 1$',
+      '$G$ is abelian',
       '$p$ divides $|Z(G)|$',
-      '$G$ is abelian'
+      '$n_p = 1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Since Sylow $p$-subgroups are conjugate, $P$ is normal iff it is the unique Sylow $p$-subgroup, i.e., $n_p = 1$.',
   },

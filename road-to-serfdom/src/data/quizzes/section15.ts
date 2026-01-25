@@ -6,12 +6,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'National economic planning, according to Hayek, inevitably leads to:',
     options: [
-      'International cooperation',
       'International friction—turning economic relations into conflicts between armed states',
+      'International cooperation',
       'Peace through prosperity',
       'Global unity'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'National planning requires shutting out external influences, leading to restrictions on movement of goods and people, creating new blocks of opposed interests.',
   },
@@ -21,11 +21,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'International planning would be worse than national planning because:',
     options: [
       'It is too expensive',
+      'Technology doesn\\'t permit it',
       'The wider the area, the less agreement on ends, and the greater necessity to rely on force',
-      'Technology doesn\'t permit it',
-      'There are too many languages'
+      'There are too many languages',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'As scale increases, common ground decreases. Will Norwegians sacrifice for Portuguese? International planning becomes naked imposition by a small group.',
   },
@@ -35,11 +35,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'International economic authorities with monopolistic control would:',
     options: [
       'Promote efficiency',
-      'Become tyrannical—even with good intentions, controlling essentials like oil gives master-of-fate power',
       'Reduce all conflicts',
-      'Be easily reformed'
+      'Be easily reformed',
+      'Become tyrannical—even with good intentions, controlling essentials like oil gives master-of-fate power',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Control of essential commodities like oil or transport gives far-reaching power. Such monopolies would become the worst conceivable racket, beyond national control.',
   },
@@ -49,11 +49,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'The federal solution Hayek proposes would give international authority:',
     options: [
       'Unlimited planning powers',
-      'Power to restrain nations (say "no" to restrictions) but not to direct them',
+      'No powers at all',
       'Control over all economic activity',
-      'No powers at all'
+      'Power to restrain nations (say "no" to restrictions) but not to direct them'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Federation gives limited powers—mainly negative powers to prevent harm. It can restrain without directing, based on rules not discretion.',
   },
@@ -62,12 +62,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hayek says democracy works best with:',
     options: [
-      'Large centralized governments',
       'A great measure of local self-government—a school of political training',
+      'Large centralized governments',
       'No local government',
       'Direct democracy only'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Nowhere has democracy worked well without substantial local self-government. It provides training in responsibility and allows ordinary people to participate in familiar affairs.',
   },
@@ -77,11 +77,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Hayek\'s goal for international order is:',
     options: [
       'An omnipotent super-state',
-      'A loose association of nations',
       'A community of nations of free men—neither super-state nor mere loose association',
+      'A loose association of nations',
       'Complete isolation of nations'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: '"Neither an omnipotent super-state, nor a loose association of free nations, but a community of nations of free men must be our goal."',
   },

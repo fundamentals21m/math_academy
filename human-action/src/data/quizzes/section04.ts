@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section04Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The ultimate end of every action, according to Mises, is:',
+    options: [
+      'Maximizing profit',
+      'Gaining power',
+      'The removal of some felt uneasiness',
+      'Acquiring material goods',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Whether eating, studying, or building a business, we act because our current state is less satisfactory than the state we hope to achieve through action.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Economic goods differ from free goods in that economic goods are:',
+    options: [
+      'More expensive',
+      'Scarce and must be allocated among competing ends',
+      'Government regulated',
+      'Produced in factories'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Means that are scarce require economizing - these are economic goods. Free goods exist in superabundance and require no allocation.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Value is ordinal rather than cardinal. This means:',
+    options: [
+      'Value is measured in dollars',
+      'We can rank preferences but cannot measure by how much one is preferred',
+      'Value can be added and compared across persons',
+      'Value is determined by government officials',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'We can say A is preferred to B, but not that A is worth "twice as much" as B. There is no unit of value or measurement of satisfaction.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'According to Mises, every action is an:',
+    options: [
+      'Imposition',
+      'Calculation',
+      'Investment',
+      'Exchange'
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Every action is an exchange - the actor gives up his next-best alternative (the cost) to obtain what he values more (the profit).',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The cost of an action is properly understood as:',
+    options: [
+      'The money spent',
+      'The time invested',
+      'The value of the best foregone alternative (opportunity cost)',
+      'The price paid to others',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Cost is the value of the best foregone alternative - what you give up when choosing one option over another.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'In Mises\'s framework, profit and cost are:',
+    options: [
+      'Subjective - they exist in the mind of the actor',
+      'Always monetary',
+      'Determined by the government',
+      'The same for all individuals',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Both profit and cost are subjective - they exist in the actor\'s mind. A mother "profits" from caring for her child even without monetary return.',
+  },
+];

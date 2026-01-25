@@ -7,11 +7,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'The osculating circle at a point on a curve:',
     options: [
       'Passes through the origin',
-      'Best approximates the curve locally, sharing its tangent and curvature',
       'Has infinite radius',
-      'Is always the unit circle'
+      'Is always the unit circle',
+      'Best approximates the curve locally, sharing its tangent and curvature',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The osculating circle "kisses" the curve at a point, matching both direction and curvature.',
   },
@@ -20,12 +20,28 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The radius of curvature $R$ is related to curvature $\\kappa$ by:',
     options: [
-      '$R = \\kappa$',
-      '$R = \\frac{1}{\\kappa}$',
-      '$R = \\kappa^2$',
-      '$R = 2\\kappa$'
-    ],
+      '$R = \\kappa
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Curvature $\\kappa = \\frac{1}{R}$, so $R = \\frac{1}{\\kappa}$.',
+  },
+      '$R = \\frac{1}{\\kappa}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Curvature $\\kappa = \\frac{1}{R}$, so $R = \\frac{1}{\\kappa}$.',
+  },
+      '$R = 2\\kappa
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Curvature $\\kappa = \\frac{1}{R}$, so $R = \\frac{1}{\\kappa}$.',
+  },
+      '$R = \\kappa^2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Curvature $\\kappa = \\frac{1}{R}$, so $R = \\frac{1}{\\kappa}$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Curvature $\\kappa = \\frac{1}{R}$, so $R = \\frac{1}{\\kappa}$.',
   },
@@ -35,11 +51,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'At the vertex of a parabola $y = x^2$:',
     options: [
       'The curvature is zero',
-      'The curvature is at its maximum',
       'The curvature is undefined',
-      'The curvature equals 1'
+      'The curvature is at its maximum',
+      'The curvature equals 1',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The parabola bends most sharply at its vertex (x = 0) and flattens as |x| increases.',
   },
@@ -48,12 +64,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Road curves are banked based on:',
     options: [
-      'The color of the road',
       'The curvature of the turn',
+      'The color of the road',
       'The length of the road',
-      'The number of lanes'
+      'The number of lanes',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Sharper turns (higher curvature) require more banking to keep vehicles safe.',
   },

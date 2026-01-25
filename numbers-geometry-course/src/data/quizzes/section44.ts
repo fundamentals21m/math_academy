@@ -10,11 +10,11 @@ export const section44Questions: QuizQuestion[] = [
     question: "What is Dehn's Theorem?",
     options: [
       'All polyhedra of equal volume are equidecomposable',
-      'The regular tetrahedron is not equidecomposable with the cube',
       'The cube has the largest volume among polyhedra',
       'All dihedral angles are rational multiples of π',
+      'The regular tetrahedron is not equidecomposable with the cube',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       "Dehn's Theorem states that the regular tetrahedron cannot be cut into finitely many pieces and reassembled into a cube.",
@@ -25,12 +25,12 @@ export const section44Questions: QuizQuestion[] = [
     question:
       'What key property must be proved about the tetrahedron\'s dihedral angle α?',
     options: [
+      'α is NOT a rational multiple of π',
       'cos α = 0',
       'α is a rational multiple of π',
-      'α is NOT a rational multiple of π',
       'α = π/4',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'We must prove α is not a rational multiple of π. This ensures the Dehn invariant 6 ⊗ α ≠ 0.',
@@ -42,11 +42,11 @@ export const section44Questions: QuizQuestion[] = [
       'In the inductive proof, what form does cos(nα) take?',
     options: [
       'An integer',
-      'qₙ/3ⁿ where qₙ is not divisible by 3',
       'A power of 2',
-      'nπ',
+      'qₙ/3ⁿ where qₙ is not divisible by 3',
+      'nπ'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The induction proves cos(nα) = qₙ/3ⁿ where qₙ is an integer not divisible by 3, for all positive integers n.',
@@ -58,11 +58,11 @@ export const section44Questions: QuizQuestion[] = [
       'What identity is used in the inductive step?',
     options: [
       'sin²α + cos²α = 1',
+      'e^(iα) = cos(α) + i sin(α)',
       'cos((k+1)α) + cos((k-1)α) = 2cos(kα)cos(α)',
       'tan(α) = sin(α)/cos(α)',
-      'e^(iα) = cos(α) + i sin(α)',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Adding the cosine addition formulas for cos((k+1)α) and cos((k-1)α) gives this identity.',
@@ -89,12 +89,12 @@ export const section44Questions: QuizQuestion[] = [
     question:
       'If α were a rational multiple of π (say α = mπ/n), what would cos(nα) equal?',
     options: [
+      '±1',
       '1/3',
       '0',
-      '±1',
-      'n'
+      'n',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'If α = mπ/n, then nα = mπ, so cos(nα) = cos(mπ) = ±1 depending on whether m is even or odd.',
@@ -106,11 +106,11 @@ export const section44Questions: QuizQuestion[] = [
       'What three mathematical areas combine in the proof of Dehn\'s Theorem?',
     options: [
       'Calculus, statistics, combinatorics',
-      'Trigonometry, number theory, abstract algebra',
       'Geometry, probability, analysis',
       'Linear algebra, topology, logic',
+      'Trigonometry, number theory, abstract algebra',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       "The proof uses the cosine addition formula (trigonometry), divisibility arguments (number theory), and tensor products (abstract algebra).",
@@ -123,8 +123,8 @@ export const section44Questions: QuizQuestion[] = [
     options: [
       '0',
       '6 ⊗ α where cos(α) = 1/3',
-      '12 ⊗ π/2',
       '4 ⊗ π/3',
+      '12 ⊗ π/2',
     ],
     correctIndex: 1,
     difficulty: 'medium',

@@ -36,11 +36,11 @@ export const section10Quiz = {
       question: 'If $f$ is continuous on $[a,b]$, then $f$ is:',
       options: [
         'Unbounded',
-        'Bounded',
         'Differentiable',
+        'Bounded',
         'Constant'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Continuous functions on compact sets are bounded (and attain their bounds).'
     },
@@ -49,12 +49,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous on $[0,1]$ with $f(0) = -1$ and $f(1) = 1$, then there exists $c$ such that:',
       options: [
-        '$f(c) = 0$ for some $c \\in (0,1)$',
+        '$f$ is constant',
         '$f(c) = 2$ for some $c \\in (0,1)$',
         '$f\'(c) = 0$ for some $c \\in (0,1)$',
-        '$f$ is constant'
+        '$f(c) = 0$ for some $c \\in (0,1)$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'By IVT, since $0$ is between $-1$ and $1$, there exists $c$ with $f(c) = 0$.'
     },
@@ -63,12 +63,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'A continuous function maps connected sets to:',
       options: [
-        'Disconnected sets',
         'Connected sets',
+        'Disconnected sets',
         'Bounded sets',
         'Open sets'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Continuous images of connected sets are connected. In $\\mathbb{R}$, connected sets are intervals.'
     },
@@ -91,12 +91,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f: [a,b] \\to \\mathbb{R}$ is continuous and $f([a,b]) = [c,d]$, then:',
       options: [
-        '$f$ is surjective onto $[c,d]$',
-        '$f$ might skip some values in $[c,d]$',
         '$c = f(a)$ and $d = f(b)$',
+        '$f$ might skip some values in $[c,d]$',
+        '$f$ is surjective onto $[c,d]$',
         '$f$ is injective'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'By IVT, $f$ takes all values between its minimum and maximum, so $f$ is surjective onto its range.'
     },
@@ -124,10 +124,10 @@ export const section10Quiz = {
       options: [
         'Has no solution',
         'Has exactly one solution',
-        'Has at least one solution in $(a,b)$',
-        'Has infinitely many solutions'
+        'Has infinitely many solutions',
+        'Has at least one solution in $(a,b)$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'By IVT, there exists at least one $c \\in (a,b)$ where $f(c) = 0$.'
     },
@@ -136,12 +136,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'A continuous strictly increasing function on $[a,b]$:',
       options: [
-        'Has no inverse',
         'Has a continuous inverse',
+        'Has no inverse',
         'Is not continuous',
         'Has a discontinuous inverse'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Strictly monotonic continuous functions on intervals have continuous inverses.'
     },
@@ -174,11 +174,11 @@ export const section10Quiz = {
       question: 'If $f$ is continuous on $\\mathbb{R}$ and $\\lim_{x \\to \\pm\\infty} f(x) = 0$, then:',
       options: [
         '$f$ is identically zero',
-        '$f$ attains a maximum or minimum',
         '$f$ is unbounded',
+        '$f$ attains a maximum or minimum',
         '$f$ has no extreme values'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Such an $f$ is bounded and attains its supremum or infimum at some point.'
     },
@@ -188,11 +188,11 @@ export const section10Quiz = {
       question: 'A polynomial $p(x)$ of odd degree:',
       options: [
         'Has no real roots',
-        'Has at least one real root',
+        'Has only complex roots',
         'Has exactly one real root',
-        'Has only complex roots'
+        'Has at least one real root'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'By IVT: odd degree polynomials go from $-\\infty$ to $+\\infty$ (or vice versa), so they cross zero.'
     },
@@ -233,11 +233,11 @@ export const section10Quiz = {
       question: 'Continuous functions preserve:',
       options: [
         'Openness of sets',
-        'Closedness of sets',
         'Compactness of sets',
+        'Closedness of sets',
         'Both (B) and (C)'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Continuous images of compact sets are compact. Continuous functions don\'t generally preserve open or closed sets.'
     },
@@ -246,12 +246,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous on $[a,b]$ and strictly positive, then:',
       options: [
-        '$f$ has a positive minimum',
-        '$\\inf f = 0$',
         '$f$ might have infimum $0$',
+        '$\\inf f = 0$',
+        '$f$ has a positive minimum',
         '$f$ is constant'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'By EVT, $f$ attains its infimum. Since $f > 0$ everywhere, the infimum is positive.'
     }
@@ -264,11 +264,11 @@ export const section10Quiz = {
       question: 'The equation $x^5 + x = 1$ has:',
       options: [
         'No real solutions',
-        'Exactly one real solution',
+        'Infinitely many real solutions',
         'Exactly two real solutions',
-        'Infinitely many real solutions'
+        'Exactly one real solution'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: '$f(x) = x^5 + x - 1$ is strictly increasing (derivative $5x^4 + 1 > 0$), so it crosses $0$ exactly once.'
     },
@@ -277,12 +277,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous on $[0,1]$ with $f(0) = f(1)$, then for $g(x) = f(x + 1/2) - f(x)$ on $[0, 1/2]$:',
       options: [
-        '$g$ has no zeros',
         'There exists $c$ with $g(c) = 0$, i.e., $f(c) = f(c + 1/2)$',
+        '$g$ has no zeros',
         '$g$ is constant',
         '$g$ is always positive'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: '$g(0) = f(1/2) - f(0)$ and $g(1/2) = f(1) - f(1/2) = f(0) - f(1/2) = -g(0)$. By IVT, $g(c) = 0$ for some $c$.'
     },
@@ -292,11 +292,11 @@ export const section10Quiz = {
       question: 'If $f: [a,b] \\to [a,b]$ is continuous, then the set of fixed points:',
       options: [
         'Is empty',
-        'Contains exactly one point',
         'Is nonempty',
+        'Contains exactly one point',
         'Contains all points'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'By the fixed point theorem for continuous maps on $[a,b]$ into itself.'
     },
@@ -305,12 +305,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous on $[a,b]$ and takes only rational values, then:',
       options: [
-        '$f$ is constant',
-        '$f$ takes all rationals in some interval',
         '$f$ is discontinuous',
+        '$f$ takes all rationals in some interval',
+        '$f$ is constant',
         '$f$ oscillates'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'By IVT, $f$ would take irrational values between any two distinct rationals. So $f$ must be constant.'
     },
@@ -320,11 +320,11 @@ export const section10Quiz = {
       question: 'The function $f(x) = x + \\sin x$ on $\\mathbb{R}$:',
       options: [
         'Is not surjective',
-        'Is bijective onto $\\mathbb{R}$',
+        'Is bounded',
         'Has range $[0, \\infty)$',
-        'Is bounded'
+        'Is bijective onto $\\mathbb{R}$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: '$f\'(x) = 1 + \\cos x \\geq 0$, strictly increasing overall. Range is $\\mathbb{R}$, so bijective.'
     },
@@ -341,12 +341,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous on $[0, \\infty)$ with $f(0) = 1$ and $\\lim_{x \\to \\infty} f(x) = 0$:',
       options: [
-        '$f$ has no maximum',
         '$f$ attains its maximum at some $x \\in [0, \\infty)$',
+        '$f$ has no maximum',
         '$\\sup f = \\infty$',
         '$f$ is strictly decreasing'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: '$f$ is bounded (goes to $0$ at infinity) and continuous. It attains its supremum on the compact set $[0, N]$ for large $N$.'
     },
@@ -370,11 +370,11 @@ export const section10Quiz = {
       question: 'If $f$ and $g$ are continuous on $[a,b]$ with $f(a) < g(a)$ and $f(b) > g(b)$, then:',
       options: [
         '$f$ and $g$ never intersect',
-        '$f(c) = g(c)$ for some $c \\in (a,b)$',
         '$f > g$ everywhere',
+        '$f(c) = g(c)$ for some $c \\in (a,b)$',
         '$f < g$ everywhere'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Apply IVT to $h(x) = f(x) - g(x)$: $h(a) < 0$ and $h(b) > 0$, so $h(c) = 0$ for some $c$.'
     },
@@ -393,11 +393,11 @@ export const section10Quiz = {
       question: 'If $f: \\mathbb{R} \\to \\mathbb{R}$ is continuous and bounded, then:',
       options: [
         '$f$ always attains its supremum',
-        '$f$ might not attain its supremum',
+        '$f$ has a fixed point',
         '$f$ is constant',
-        '$f$ has a fixed point'
+        '$f$ might not attain its supremum'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'E.g., $f(x) = \\arctan(x)$ is bounded by $\\pm\\pi/2$ but never attains these values.'
     },
@@ -443,11 +443,11 @@ export const section10Quiz = {
       question: 'If $f$ is continuous on $[a,b]$ and injective, then $f$ is:',
       options: [
         'Constant',
-        'Strictly monotonic',
         'Differentiable',
+        'Strictly monotonic',
         'Unbounded'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Continuous injective functions on intervals must be strictly monotonic (otherwise IVT gives repeated values).'
     },
@@ -457,11 +457,11 @@ export const section10Quiz = {
       question: 'A continuous function $f: [0,1] \\to \\mathbb{R}$ with $f(0) = 0$ and $f(1) = 1$ must satisfy:',
       options: [
         '$f(1/2) = 1/2$',
-        '$f(x) = x$ for some $x \\in (0,1)$',
+        '$f$ is strictly increasing',
         '$f(x) = x$ for all $x$',
-        '$f$ is strictly increasing'
+        '$f(x) = x$ for some $x \\in (0,1)$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Let $g(x) = f(x) - x$. Then $g(0) = 0$ and $g(1) = 0$. If $f(x) \\neq x$ for all $x \\in (0,1)$, then... actually we need: $g$ continuous with $g(0) = g(1) = 0$, so if not identically $0$, it must be positive and negative somewhere, giving a zero by IVT.'
     },
@@ -479,12 +479,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $K$ is compact in $\\mathbb{R}$ and $f: K \\to \\mathbb{R}$ is continuous, then $f(K)$ is:',
       options: [
-        'Open',
         'Closed and bounded',
+        'Open',
         'Unbounded',
         'Empty'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Continuous image of compact is compact; in $\\mathbb{R}$, compact = closed and bounded.'
     },
@@ -518,12 +518,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f: [0,1] \\to [0,1]$ is continuous with no fixed points, then:',
       options: [
-        'This is impossible',
-        '$f$ is the identity',
         '$f(x) = 1 - x$',
+        '$f$ is the identity',
+        'This is impossible',
         '$f$ must be discontinuous'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'By the fixed point theorem, any continuous $f: [0,1] \\to [0,1]$ must have a fixed point.'
     },
@@ -533,11 +533,11 @@ export const section10Quiz = {
       question: 'The Brouwer fixed point theorem in one dimension states:',
       options: [
         'Every function has a fixed point',
-        'Every continuous $f: [a,b] \\to [a,b]$ has a fixed point',
+        'Only monotonic functions have fixed points',
         'Fixed points are unique',
-        'Only monotonic functions have fixed points'
+        'Every continuous $f: [a,b] \\to [a,b]$ has a fixed point'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'This is the 1D Brouwer theorem, proven via IVT applied to $g(x) = f(x) - x$.'
     },
@@ -546,12 +546,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous on $\\mathbb{R}$ and $f(f(x)) = x$ for all $x$ (involution), then $f$ has:',
       options: [
-        'No fixed points',
         'At least one fixed point',
+        'No fixed points',
         'Exactly two fixed points',
         'Infinitely many fixed points'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'An involution is its own inverse. If $f(a) \\neq a$ for all $a$, consider $f$ restricted to an interval containing $a$ and $f(a)$; IVT arguments show a fixed point exists.'
     },
@@ -574,12 +574,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'A continuous function that maps every interval to an interval is:',
       options: [
-        'Any continuous function',
-        'Only monotonic functions',
         'Only constant functions',
+        'Only monotonic functions',
+        'Any continuous function',
         'Only linear functions'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'By IVT, continuous functions always map intervals to intervals (connected sets to connected sets in $\\mathbb{R}$).'
     },
@@ -588,12 +588,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f: [0,1] \\to \\mathbb{R}$ is continuous and $\\int_0^1 f(x)\\,dx = 0$ with $f \\geq 0$, then:',
       options: [
-        '$f$ is the zero function',
+        '$f$ changes sign',
         '$f$ might be nonzero somewhere',
         '$f(0) = f(1) = 0$',
-        '$f$ changes sign'
+        '$f$ is the zero function'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'If $f \\geq 0$ is continuous and not identically zero, then $\\int f > 0$. So $\\int f = 0$ implies $f \\equiv 0$.'
     },
@@ -602,12 +602,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'The Borsuk-Ulam theorem in 1D states that for continuous $f: S^1 \\to \\mathbb{R}$ (circle to reals):',
       options: [
-        '$f$ is constant',
         'There exist antipodal points $x, -x$ with $f(x) = f(-x)$',
+        '$f$ is constant',
         '$f$ has no zeros',
         '$f$ is injective'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'For any continuous $f$ from the circle to $\\mathbb{R}$, there exist opposite points with equal values.'
     },
@@ -639,11 +639,11 @@ export const section10Quiz = {
       question: 'A function $f: \\mathbb{R} \\to \\mathbb{R}$ that is continuous and injective must be:',
       options: [
         'Bounded',
-        'Strictly monotonic',
         'Differentiable',
+        'Strictly monotonic',
         'Constant'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'On $\\mathbb{R}$, continuous injective implies strictly monotonic (otherwise IVT gives repeated values).'
     },
@@ -654,10 +654,10 @@ export const section10Quiz = {
       options: [
         '$f(x) = x$ for all $x$',
         '$f(x) = 1 - x$ for all $x$',
-        'Either (A) or (B)',
-        '$f$ has no fixed points'
+        '$f$ has no fixed points',
+        'Either (A) or (B)'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: '$f$ is a continuous involution on $[0,1]$ with $f(0) = 0, f(1) = 1$. It must be strictly monotonic and equal to its inverse, giving $f(x) = x$ or $f(x) = 1-x$. Given boundary conditions, only $f(x) = x$ works, unless... Actually $f(1-x)$ doesn\'t satisfy $f(0)=0$. So $f(x) = x$.'
     },
@@ -666,12 +666,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'A Peano curve $f: [0,1] \\to [0,1]^2$:',
       options: [
-        'Is differentiable almost everywhere',
         'Is not differentiable anywhere',
+        'Is differentiable almost everywhere',
         'Is Lipschitz continuous',
         'Is injective'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Peano curves are continuous but nowhere differentiable and not injective.'
     },
@@ -680,12 +680,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'If $f, g: [0,1] \\to [0,1]$ are continuous with $f \\circ g = g \\circ f$:',
       options: [
-        'They have a common fixed point',
         'They have no fixed points',
+        'They have a common fixed point',
         'One is the inverse of the other',
         'Cannot determine'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Commuting continuous self-maps of $[0,1]$ share a common fixed point (a deeper fixed-point theorem).'
     },
@@ -709,11 +709,11 @@ export const section10Quiz = {
       question: 'If $f: [0,1] \\to \\mathbb{R}$ is continuous and $f(1/n) = 0$ for all $n \\in \\mathbb{N}$:',
       options: [
         '$f \\equiv 0$',
-        '$f(0) = 0$',
+        '$f$ is identically zero on $[0, 1/2]$',
         '$f$ might not be zero at $0$',
-        '$f$ is identically zero on $[0, 1/2]$'
+        '$f(0) = 0$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: '$1/n \\to 0$ and $f$ continuous, so $f(0) = \\lim f(1/n) = 0$.'
     },
@@ -730,12 +730,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'A continuous function $f: \\mathbb{R} \\to \\mathbb{R}$ with $f(x+1) = f(x)$ for all $x$:',
       options: [
-        'Is constant',
         'Attains its maximum and minimum',
+        'Is constant',
         'Is unbounded',
         'Has no fixed points'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Periodic continuous functions on $\\mathbb{R}$ are determined by their values on $[0,1]$, where EVT applies.'
     },
@@ -745,11 +745,11 @@ export const section10Quiz = {
       question: 'If $f: [a,b] \\to [a,b]$ is continuous and $f \\circ f = f$:',
       options: [
         '$f$ is the identity',
-        '$f$ is constant',
         '$f$ is a retraction onto its range (which is the set of fixed points)',
+        '$f$ is constant',
         '$f$ has no fixed points'
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: '$f \\circ f = f$ means $f$ is idempotent. The range of $f$ equals its set of fixed points, and $f$ maps $[a,b]$ onto this set.'
     },
@@ -759,11 +759,11 @@ export const section10Quiz = {
       question: 'The graph of a continuous function $f: [a,b] \\to \\mathbb{R}$:',
       options: [
         'Is always a straight line',
-        'Is a compact subset of $\\mathbb{R}^2$',
         'Is an open set',
+        'Is a compact subset of $\\mathbb{R}^2$',
         'Is unbounded'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The graph $\\{(x, f(x)) : x \\in [a,b]\\}$ is the continuous image of compact $[a,b]$ under $(x \\mapsto (x, f(x)))$, hence compact.'
     },
@@ -772,12 +772,12 @@ export const section10Quiz = {
       type: 'multiple-choice',
       question: 'Weierstrass approximation theorem states that continuous functions on $[a,b]$ can be:',
       options: [
-        'Uniformly approximated by polynomials',
+        'Extended to entire functions',
         'Approximated by step functions',
         'Expressed as power series',
-        'Extended to entire functions'
+        'Uniformly approximated by polynomials'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Weierstrass: polynomials are uniformly dense in $C([a,b])$.'
     }

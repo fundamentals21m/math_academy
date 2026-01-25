@@ -1,0 +1,62 @@
+import type { QuizQuestion } from './types';
+
+export const section02Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What handshake pattern does Lightning use for encrypted transport?',
+    options: ['Noise_XX', 'Noise_XK', 'TLS 1.3', 'SSH'],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Lightning uses Noise_XK, where X means the initiator\'s static key is transmitted (encrypted) and K means the responder\'s static key is known ahead of time.',
+  },
+  {
+    id: 2,
+    type: 'numeric',
+    question: 'How many acts are in the Lightning Network handshake?',
+    correctAnswer: 3,
+    numericRange: { min: 1, max: 10, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'The handshake consists of three acts, requiring 1.5 round trips to complete.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'What cipher does Lightning use for message encryption after the handshake?',
+    options: [
+      'AES-256-GCM',
+      'Blowfish',
+      'ChaCha20-Poly1305',
+      '3DES',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Lightning uses ChaCha20-Poly1305 for authenticated encryption with associated data (AEAD).',
+  },
+  {
+    id: 4,
+    type: 'numeric',
+    question: 'After how many messages are encryption keys rotated?',
+    correctAnswer: 1000,
+    numericRange: { min: 100, max: 10000, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'Keys are rotated every 1000 messages to maintain forward secrecy.',
+  },
+  {
+    id: 5,
+    type: 'text',
+    question: 'What elliptic curve does Lightning use for key pairs?',
+    correctAnswer: 'secp256k1',
+    difficulty: 'medium',
+    explanation: 'Lightning uses secp256k1, the same curve used by Bitcoin, for all cryptographic operations.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'What is the default TCP port for Lightning on Bitcoin mainnet?',
+    correctAnswer: 9735,
+    numericRange: { min: 1000, max: 65535, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'The standard port is 9735 for mainnet, 19735 for testnet, and 39735 for signet.',
+  },
+];

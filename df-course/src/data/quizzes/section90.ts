@@ -9,7 +9,7 @@ export const section90Questions: QuizQuestion[] = [
       'A field',
       'A polynomial ring',
       'A finite product of matrix rings over division rings',
-      'A group ring'
+      'A group ring',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section90Questions: QuizQuestion[] = [
       'Every ideal is principal',
       'Every $R$-module is projective',
       '$R$ is a field',
-      'Every $R$-module is injective'
+      'Every $R$-module is injective',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,10 +34,26 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The group algebra $\\mathbb{C}S_3$ decomposes as:',
     options: [
-      '$\\mathbb{C}^6$',
-      '$\\mathbb{C} \\times \\mathbb{C} \\times M_2(\\mathbb{C})$',
-      '$M_3(\\mathbb{C}) \\times M_3(\\mathbb{C})$',
-      '$\\mathbb{C}^3 \\times M_3(\\mathbb{C})$'
+      '$\\mathbb{C} \\times \\mathbb{C} \\times M_2(\\mathbb{C})
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$S_3$ has three irreducible representations: trivial (dim $1$), sign (dim $1$), and standard (dim $2$). By Wedderburn, $\\mathbb{C}S_3 \\cong \\mathbb{C} \\times \\mathbb{C} \\times M_2(\\mathbb{C})$.',
+  },
+      '$\\mathbb{C}^6
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$S_3$ has three irreducible representations: trivial (dim $1$), sign (dim $1$), and standard (dim $2$). By Wedderburn, $\\mathbb{C}S_3 \\cong \\mathbb{C} \\times \\mathbb{C} \\times M_2(\\mathbb{C})$.',
+  },
+      '$M_3(\\mathbb{C}) \\times M_3(\\mathbb{C})
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$S_3$ has three irreducible representations: trivial (dim $1$), sign (dim $1$), and standard (dim $2$). By Wedderburn, $\\mathbb{C}S_3 \\cong \\mathbb{C} \\times \\mathbb{C} \\times M_2(\\mathbb{C})$.',
+  },
+      '$\\mathbb{C}^3 \\times M_3(\\mathbb{C})
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$S_3$ has three irreducible representations: trivial (dim $1$), sign (dim $1$), and standard (dim $2$). By Wedderburn, $\\mathbb{C}S_3 \\cong \\mathbb{C} \\times \\mathbb{C} \\times M_2(\\mathbb{C})$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -64,10 +80,10 @@ export const section90Questions: QuizQuestion[] = [
     options: [
       '$\\mathbb{C}[x]/(x^n - 1)$',
       '$\\mathbb{C}^n$',
-      'Both A and B (they are isomorphic)',
-      '$M_n(\\mathbb{C})$'
+      '$M_n(\\mathbb{C})$',
+      'Both A and B (they are isomorphic)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$\\mathbb{C}C_n \\cong \\mathbb{C}[x]/(x^n - 1) \\cong \\prod_{d|n} \\mathbb{C}[x]/(\\Phi_d(x)) \\cong \\mathbb{C}^n$ since $x^n - 1$ splits into $n$ distinct linear factors over $\\mathbb{C}$.',
   },

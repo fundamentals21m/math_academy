@@ -6,10 +6,26 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The convolution of two $2\\pi$-periodic functions $f$ and $g$ is defined as:',
     options: [
-      '$(f * g)(x) = f(x) \\cdot g(x)$',
-      '$(f * g)(x) = \\frac{1}{2\\pi} \\int_0^{2\\pi} f(y) g(x - y) \\, dy$',
-      '$(f * g)(x) = f(x) + g(x)$',
-      '$(f * g)(x) = \\int_0^\\infty f(y) g(y) \\, dy$'
+      '$(f * g)(x) = \\frac{1}{2\\pi} \\int_0^{2\\pi} f(y) g(x - y) \\, dy
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Periodic convolution integrates $f(y)g(x-y)$ over one period.',
+  },
+      '$(f * g)(x) = f(x) \\cdot g(x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Periodic convolution integrates $f(y)g(x-y)$ over one period.',
+  },
+      '$(f * g)(x) = f(x) + g(x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Periodic convolution integrates $f(y)g(x-y)$ over one period.',
+  },
+      '$(f * g)(x) = \\int_0^\\infty f(y) g(y) \\, dy
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Periodic convolution integrates $f(y)g(x-y)$ over one period.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,12 +36,28 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Fourier coefficients of $f * g$ satisfy:',
     options: [
-      '$\\widehat{f * g}(n) = \\hat{f}(n) + \\hat{g}(n)$',
-      '$\\widehat{f * g}(n) = \\hat{f}(n) \\cdot \\hat{g}(n)$',
-      '$\\widehat{f * g}(n) = \\hat{f}(n) / \\hat{g}(n)$',
-      '$\\widehat{f * g}(n) = \\hat{f}(n) - \\hat{g}(n)$'
+      '$\\widehat{f * g}(n) = \\hat{f}(n) + \\hat{g}(n)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Convolution in physical space corresponds to multiplication in frequency space.',
+  },
+      '$\\widehat{f * g}(n) = \\hat{f}(n) / \\hat{g}(n)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Convolution in physical space corresponds to multiplication in frequency space.',
+  },
+      '$\\widehat{f * g}(n) = \\hat{f}(n) - \\hat{g}(n)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Convolution in physical space corresponds to multiplication in frequency space.',
+  },
+      '$\\widehat{f * g}(n) = \\hat{f}(n) \\cdot \\hat{g}(n)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Convolution in physical space corresponds to multiplication in frequency space.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Convolution in physical space corresponds to multiplication in frequency space.',
   },
@@ -34,12 +66,16 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Convolution is:',
     options: [
-      'Commutative: $f * g = g * f$',
+      'Never defined',
       'Not commutative',
+      'Commutative: $f * g = g * f
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Convolution is commutative and associative.',
+  },
       'Commutative only for even functions',
-      'Never defined'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Convolution is commutative and associative.',
   },
@@ -49,11 +85,15 @@ export const section28Questions: QuizQuestion[] = [
     question: 'If $K_N$ is an approximate identity (good kernel), then $f * K_N$:',
     options: [
       'Diverges',
-      'Converges to $f$ (in appropriate sense)',
       'Equals zero',
-      'Equals $K_N$'
+      'Equals $K_N
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Convolving with an approximate identity smooths and approximates the original function.',
+  },
+      'Converges to $f$ (in appropriate sense)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Convolving with an approximate identity smooths and approximates the original function.',
   },

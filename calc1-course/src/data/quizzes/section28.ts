@@ -6,12 +6,28 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sum rule for derivatives states $(f + g)\' = ?$',
     options: [
-      '$f\' \\cdot g\'$',
-      '$f\' + g\'$',
-      '$f\' - g\'$',
-      '$(fg)\'$'
+      '$f\\' + g\\'
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Sum rule: the derivative of a sum is the sum of derivatives.',
+  },
+      '$f\\' \\cdot g\\'
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Sum rule: the derivative of a sum is the sum of derivatives.',
+  },
+      '$(fg)\\'
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Sum rule: the derivative of a sum is the sum of derivatives.',
+  },
+      '$f\\' - g\\'
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Sum rule: the derivative of a sum is the sum of derivatives.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Sum rule: the derivative of a sum is the sum of derivatives.',
   },
@@ -20,12 +36,28 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The product rule states $(fg)\' = ?$',
     options: [
-      '$f\'g\'$',
-      '$f\'g + fg\'$',
-      '$f\'g - fg\'$',
-      '$f\'/g\'$'
+      '$f\\'g\\'
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.',
+  },
+      '$f\\'g - fg\\'
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.',
+  },
+      '$f\\'g + fg\\'
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.',
+  },
+      '$f\\'/g\\'
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.',
   },
@@ -66,12 +98,28 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f(x) = cf(x)$ where $c$ is a constant, then $(cf)\' = ?$',
     options: [
-      '$f\'$',
-      '$cf\'$',
-      '$c\'f$',
-      '$c + f\'$'
+      '$f\\'
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Constant multiple rule: $(cf)\' = cf\'$.',
+  },
+      '$c\\'f
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Constant multiple rule: $(cf)\' = cf\'$.',
+  },
+      '$c + f\\'
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Constant multiple rule: $(cf)\' = cf\'$.',
+  },
+      '$cf\\'
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Constant multiple rule: $(cf)\' = cf\'$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Constant multiple rule: $(cf)\' = cf\'$.',
   },

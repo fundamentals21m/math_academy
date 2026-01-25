@@ -7,11 +7,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What does Proposition I.24 prove (sometimes called the "Hinge Theorem")?',
     options: [
       'Equal sides imply equal angles',
-      'If two sides are equal but one included angle is greater, then that base is greater',
       'All triangles are similar',
-      'The largest side is opposite the largest angle'
+      'The largest side is opposite the largest angle',
+      'If two sides are equal but one included angle is greater, then that base is greater',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'I.24: If triangles have two pairs of equal sides but one has a greater included angle, it has the greater base.',
   },
@@ -21,11 +21,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What is I.25 in relation to I.24?',
     options: [
       'A generalization',
+      'Unrelated',
       'The converse',
       'A special case',
-      'Unrelated'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'I.25 is the converse: if the base is greater, then the included angle is greater.',
   },

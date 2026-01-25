@@ -6,12 +6,28 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A contraction mapping on a metric space $(X, d)$ is a function $T: X \\to X$ such that:',
     options: [
-      '$d(T(x), T(y)) = d(x, y)$ for all $x, y$',
-      '$d(T(x), T(y)) \\leq c \\cdot d(x, y)$ for some $c < 1$',
-      '$T(x) = x$ for all $x$',
-      '$d(T(x), T(y)) \\geq d(x, y)$'
+      '$d(T(x), T(y)) = d(x, y)$ for all $x, y
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A contraction strictly decreases distances by a factor $c < 1$.',
+  },
+      '$T(x) = x$ for all $x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A contraction strictly decreases distances by a factor $c < 1$.',
+  },
+      '$d(T(x), T(y)) \\leq c \\cdot d(x, y)$ for some $c < 1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A contraction strictly decreases distances by a factor $c < 1$.',
+  },
+      '$d(T(x), T(y)) \\geq d(x, y)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A contraction strictly decreases distances by a factor $c < 1$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A contraction strictly decreases distances by a factor $c < 1$.',
   },
@@ -21,11 +37,11 @@ export const section35Questions: QuizQuestion[] = [
     question: 'The Banach fixed-point theorem states that a contraction on a complete metric space:',
     options: [
       'Has no fixed point',
-      'Has exactly one fixed point',
       'Has infinitely many fixed points',
-      'Is not continuous'
+      'Is not continuous',
+      'Has exactly one fixed point',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Contractions on complete spaces have unique fixed points.',
   },
@@ -34,12 +50,24 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To find the fixed point of a contraction $T$, we can:',
     options: [
-      'Solve $T(x) = 0$',
       'Iterate $x_{n+1} = T(x_n)$ starting from any point',
-      'Compute $T^{-1}$',
-      'Differentiate $T$'
+      'Solve $T(x) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Iteration converges to the unique fixed point: $x_n \\to x^*$ where $T(x^*) = x^*$.',
+  },
+      'Compute $T^{-1}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Iteration converges to the unique fixed point: $x_n \\to x^*$ where $T(x^*) = x^*$.',
+  },
+      'Differentiate $T
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Iteration converges to the unique fixed point: $x_n \\to x^*$ where $T(x^*) = x^*$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Iteration converges to the unique fixed point: $x_n \\to x^*$ where $T(x^*) = x^*$.',
   },
@@ -48,12 +76,28 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $T$ is a contraction with constant $c < 1$, then the error after $n$ iterations satisfies:',
     options: [
-      '$d(x_n, x^*) \\leq c^n d(x_0, x^*)$',
-      '$d(x_n, x^*) = n \\cdot c$',
-      '$d(x_n, x^*) \\geq c^n$',
-      '$d(x_n, x^*) = 1/n$'
-    ],
+      '$d(x_n, x^*) \\leq c^n d(x_0, x^*)
     correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The error decays exponentially: each iteration multiplies the error by at most $c$.',
+  },
+      '$d(x_n, x^*) = 1/n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The error decays exponentially: each iteration multiplies the error by at most $c$.',
+  },
+      '$d(x_n, x^*) = n \\cdot c
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The error decays exponentially: each iteration multiplies the error by at most $c$.',
+  },
+      '$d(x_n, x^*) \\geq c^n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The error decays exponentially: each iteration multiplies the error by at most $c$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The error decays exponentially: each iteration multiplies the error by at most $c$.',
   },
@@ -65,7 +109,7 @@ export const section35Questions: QuizQuestion[] = [
       'Compact',
       'Complete',
       'Connected',
-      'Finite-dimensional'
+      'Finite-dimensional',
     ],
     correctIndex: 1,
     difficulty: 'easy',

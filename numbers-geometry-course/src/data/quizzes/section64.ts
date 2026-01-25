@@ -11,8 +11,8 @@ export const section64Questions: QuizQuestion[] = [
     options: [
       'A curve of degree 3',
       'A curve obtained by cutting a cone with a plane',
-      'A circle with a different radius',
       'A line segment on a cone',
+      'A circle with a different radius',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -24,8 +24,8 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does "hyperbola" roughly mean in Greek?',
     options: [
-      'Too little',
       'Just right',
+      'Too little',
       'Too much',
       'Perfect circle',
     ],
@@ -40,11 +40,11 @@ export const section64Questions: QuizQuestion[] = [
     question: 'Which equation represents a hyperbola?',
     options: [
       'x²/4 + y²/9 = 1',
-      'x²/4 - y²/9 = 1',
       'y = 2x²',
+      'x²/4 - y²/9 = 1',
       'x² + y² = 4',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A hyperbola has opposite signs for x² and y² coefficients.',
@@ -76,10 +76,10 @@ export const section64Questions: QuizQuestion[] = [
     options: [
       'A hyperbola',
       'A parabola',
-      'A circle (special ellipse)',
       'A line',
+      'A circle (special ellipse)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A circle is a special case of an ellipse where a = b = r.',
@@ -89,12 +89,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How can you identify a parabola from its equation?',
     options: [
+      'One of x² or y² is missing',
       'Both x² and y² have positive coefficients',
       'Both x² and y² have opposite signs',
-      'One of x² or y² is missing',
       'The equation is linear',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A parabola has only one squared term (e.g., y = ax²).',
@@ -104,12 +104,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who discovered that all conics are quadratic curves?',
     options: [
-      'Euclid',
-      'Apollonius',
       'Fermat and Descartes',
-      'Newton',
+      'Apollonius',
+      'Euclid',
+      'Newton'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Fermat and Descartes independently made this discovery when they invented analytic geometry.',

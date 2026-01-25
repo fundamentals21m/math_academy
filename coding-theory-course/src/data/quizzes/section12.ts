@@ -6,12 +6,28 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The dual code $\\mathcal{C}^\\perp$ of a linear $[n, k]$ code $\\mathcal{C}$ is a linear code with parameters:',
     options: [
-      '$[n, n-k]$',
-      '$[n, k]$',
-      '$[n-k, k]$',
-      '$[k, n-k]$'
-    ],
+      '$[n, n-k]
     correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'If $\\mathcal{C}$ is an $[n, k]$ code, then its dual $\\mathcal{C}^\\perp$ is an $[n, n-k]$ code. The dimensions are complementary within the ambient space.',
+  },
+      '$[n, k]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $\\mathcal{C}$ is an $[n, k]$ code, then its dual $\\mathcal{C}^\\perp$ is an $[n, n-k]$ code. The dimensions are complementary within the ambient space.',
+  },
+      '$[n-k, k]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $\\mathcal{C}$ is an $[n, k]$ code, then its dual $\\mathcal{C}^\\perp$ is an $[n, n-k]$ code. The dimensions are complementary within the ambient space.',
+  },
+      '$[k, n-k]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $\\mathcal{C}$ is an $[n, k]$ code, then its dual $\\mathcal{C}^\\perp$ is an $[n, n-k]$ code. The dimensions are complementary within the ambient space.',
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'If $\\mathcal{C}$ is an $[n, k]$ code, then its dual $\\mathcal{C}^\\perp$ is an $[n, n-k]$ code. The dimensions are complementary within the ambient space.',
   },
@@ -20,12 +36,28 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two vectors $\\mathbf{x}$ and $\\mathbf{y}$ are orthogonal if:',
     options: [
-      '$\\mathbf{x} \\cdot \\mathbf{y} = 0$',
-      '$\\mathbf{x} + \\mathbf{y} = 0$',
-      '$\\text{wt}(\\mathbf{x}) = \\text{wt}(\\mathbf{y})$',
-      '$\\mathbf{x} = \\mathbf{y}$'
+      '$\\text{wt}(\\mathbf{x}) = \\text{wt}(\\mathbf{y})
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Two vectors are orthogonal when their scalar (inner) product is zero: $\\mathbf{x} \\cdot \\mathbf{y} = x_1y_1 + x_2y_2 + \\cdots + x_ny_n = 0$.',
+  },
+      '$\\mathbf{x} \\cdot \\mathbf{y} = 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Two vectors are orthogonal when their scalar (inner) product is zero: $\\mathbf{x} \\cdot \\mathbf{y} = x_1y_1 + x_2y_2 + \\cdots + x_ny_n = 0$.',
+  },
+      '$\\mathbf{x} + \\mathbf{y} = 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Two vectors are orthogonal when their scalar (inner) product is zero: $\\mathbf{x} \\cdot \\mathbf{y} = x_1y_1 + x_2y_2 + \\cdots + x_ny_n = 0$.',
+  },
+      '$\\mathbf{x} = \\mathbf{y}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Two vectors are orthogonal when their scalar (inner) product is zero: $\\mathbf{x} \\cdot \\mathbf{y} = x_1y_1 + x_2y_2 + \\cdots + x_ny_n = 0$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Two vectors are orthogonal when their scalar (inner) product is zero: $\\mathbf{x} \\cdot \\mathbf{y} = x_1y_1 + x_2y_2 + \\cdots + x_ny_n = 0$.',
   },
@@ -34,12 +66,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\mathbf{G}$ is a generator matrix for $\\mathcal{C}$, then for the dual code $\\mathcal{C}^\\perp$:',
     options: [
-      '$\\mathbf{G}$ is a parity check matrix',
+      '$\\mathbf{G}^{-1}$ is a generator matrix',
       '$\\mathbf{G}$ is also a generator matrix',
+      '$\\mathbf{G}$ is a parity check matrix',
       '$\\mathbf{G}^t$ is a generator matrix',
-      '$\\mathbf{G}^{-1}$ is a generator matrix'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The generator matrix $\\mathbf{G}$ of $\\mathcal{C}$ becomes the parity check matrix of $\\mathcal{C}^\\perp$. Similarly, the parity check matrix $\\mathbf{H}$ of $\\mathcal{C}$ becomes the generator matrix of $\\mathcal{C}^\\perp$.',
   },
@@ -48,10 +80,18 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A code is self-dual if:',
     options: [
-      '$\\mathcal{C}^\\perp = \\mathcal{C}$',
-      '$\\mathcal{C}^\\perp \\cap \\mathcal{C} = \\{0\\}$',
+      '$\\mathcal{C}^\\perp \\cap \\mathcal{C} = \\{0\\}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A self-dual code is one that equals its own dual: $\\mathcal{C}^\\perp = \\mathcal{C}$. This requires the code to have dimension $n/2$.',
+  },
       'Every code word has even weight',
-      'The code has minimum distance 4'
+      '$\\mathcal{C}^\\perp = \\mathcal{C}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A self-dual code is one that equals its own dual: $\\mathcal{C}^\\perp = \\mathcal{C}$. This requires the code to have dimension $n/2$.',
+  },
+      'The code has minimum distance 4',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -71,12 +111,20 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For binary vectors, $\\mathbf{x} \\cdot \\mathbf{y} = 0$ if and only if:',
     options: [
-      '$\\text{wt}(\\mathbf{x} * \\mathbf{y})$ is even',
       '$\\text{wt}(\\mathbf{x} * \\mathbf{y})$ is odd',
-      '$\\mathbf{x} = \\mathbf{y}$',
-      '$\\text{wt}(\\mathbf{x}) = \\text{wt}(\\mathbf{y})$'
+      '$\\mathbf{x} = \\mathbf{y}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'For binary vectors, the inner product $\\mathbf{x} \\cdot \\mathbf{y}$ equals the weight of the intersection $\\mathbf{x} * \\mathbf{y}$ modulo 2. It is 0 iff this weight is even.',
+  },
+      '$\\text{wt}(\\mathbf{x}) = \\text{wt}(\\mathbf{y})
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For binary vectors, the inner product $\\mathbf{x} \\cdot \\mathbf{y}$ equals the weight of the intersection $\\mathbf{x} * \\mathbf{y}$ modulo 2. It is 0 iff this weight is even.',
+  },
+      '$\\text{wt}(\\mathbf{x} * \\mathbf{y})$ is even',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For binary vectors, the inner product $\\mathbf{x} \\cdot \\mathbf{y}$ equals the weight of the intersection $\\mathbf{x} * \\mathbf{y}$ modulo 2. It is 0 iff this weight is even.',
   },

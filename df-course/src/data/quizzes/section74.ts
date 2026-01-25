@@ -6,12 +6,16 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An extension $E/F$ is a radical extension if:',
     options: [
-      '$E = F(\\alpha)$ for some algebraic $\\alpha$',
-      '$E$ is obtained by adjoining a sequence of $n$-th roots',
-      '$\\text{Gal}(E/F)$ is cyclic',
-      '$[E:F]$ is a prime number'
-    ],
+      '$E = F(\\alpha)$ for some algebraic $\\alpha
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A radical extension is one of the form $F = F_0 \\subset F_1 \\subset \\cdots \\subset F_n = E$ where each $F_{i+1} = F_i(\\alpha_i)$ with $\\alpha_i^{n_i} \\in F_i$ for some positive integer $n_i$.',
+  },
+      '$E$ is obtained by adjoining a sequence of $n$-th roots',
+      '$[E:F]$ is a prime number',
+      '$\\text{Gal}(E/F)$ is cyclic',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A radical extension is one of the form $F = F_0 \\subset F_1 \\subset \\cdots \\subset F_n = E$ where each $F_{i+1} = F_i(\\alpha_i)$ with $\\alpha_i^{n_i} \\in F_i$ for some positive integer $n_i$.',
   },
@@ -21,11 +25,19 @@ export const section74Questions: QuizQuestion[] = [
     question: 'A polynomial $f(x) \\in F[x]$ is solvable by radicals if:',
     options: [
       'Its Galois group is abelian',
-      'Its roots lie in some radical extension of $F$',
-      'Its degree is less than $5$',
-      'It has a rational root'
+      'Its degree is less than $5
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A polynomial is solvable by radicals if its roots can be expressed using the field operations and $n$-th roots, which means the roots lie in a radical extension.',
+  },
+      'It has a rational root',
+      'Its roots lie in some radical extension of $F
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A polynomial is solvable by radicals if its roots can be expressed using the field operations and $n$-th roots, which means the roots lie in a radical extension.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A polynomial is solvable by radicals if its roots can be expressed using the field operations and $n$-th roots, which means the roots lie in a radical extension.',
   },
@@ -34,12 +46,12 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The general quintic polynomial is not solvable by radicals because:',
     options: [
-      'Its degree is too high',
       'Its Galois group can be $S_5$, which is not solvable',
+      'Its degree is too high',
       'It always has complex roots',
-      'The discriminant is too complicated'
+      'The discriminant is too complicated',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A polynomial is solvable by radicals if and only if its Galois group is a solvable group. The symmetric group $S_5$ is not solvable (its only normal subgroup is $A_5$, which is simple and non-abelian).',
   },
@@ -62,12 +74,24 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The polynomial $f(x) = x^5 - 4x + 2$ over $\\mathbb{Q}$:',
     options: [
-      'Is solvable by radicals because its degree is $5$',
-      'Is not solvable by radicals; one can show $\\text{Gal}(f) = S_5$',
+      'Is not solvable by radicals; one can show $\\text{Gal}(f) = S_5
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'By Eisenstein with $p = 2$, $f$ is irreducible. Analysis shows $f$ has exactly $3$ real roots. Complex conjugation gives a transposition in $\\text{Gal}(f)$. Irreducibility gives a $5$-cycle. Thus $\\text{Gal}(f) = S_5$, which is not solvable.',
+  },
+      'Is solvable by radicals because its degree is $5
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'By Eisenstein with $p = 2$, $f$ is irreducible. Analysis shows $f$ has exactly $3$ real roots. Complex conjugation gives a transposition in $\\text{Gal}(f)$. Irreducibility gives a $5$-cycle. Thus $\\text{Gal}(f) = S_5$, which is not solvable.',
+  },
+      'Has Galois group $A_5
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'By Eisenstein with $p = 2$, $f$ is irreducible. Analysis shows $f$ has exactly $3$ real roots. Complex conjugation gives a transposition in $\\text{Gal}(f)$. Irreducibility gives a $5$-cycle. Thus $\\text{Gal}(f) = S_5$, which is not solvable.',
+  },
       'Is solvable by radicals because it has a rational root',
-      'Has Galois group $A_5$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'By Eisenstein with $p = 2$, $f$ is irreducible. Analysis shows $f$ has exactly $3$ real roots. Complex conjugation gives a transposition in $\\text{Gal}(f)$. Irreducibility gives a $5$-cycle. Thus $\\text{Gal}(f) = S_5$, which is not solvable.',
   },

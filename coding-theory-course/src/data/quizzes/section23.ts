@@ -7,11 +7,19 @@ export const section23Questions: QuizQuestion[] = [
     question: 'Over $\\mathbb{F}_q$, the polynomial $x^n - 1$ factors into irreducible polynomials when:',
     options: [
       'Only when $n$ is prime',
+      'Always, for any $n$ and $q
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Every polynomial over a field factors uniquely into irreducible factors. The polynomial $x^n - 1$ always factors, though the structure depends on $n$ and $q$.',
+  },
       'Only when $q$ is prime',
-      'Always, for any $n$ and $q$',
-      'Only when $\\gcd(n, q) = 1$'
+      'Only when $\\gcd(n, q) = 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Every polynomial over a field factors uniquely into irreducible factors. The polynomial $x^n - 1$ always factors, though the structure depends on $n$ and $q$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Every polynomial over a field factors uniquely into irreducible factors. The polynomial $x^n - 1$ always factors, though the structure depends on $n$ and $q$.',
   },
@@ -21,11 +29,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'The $n$-th roots of unity in the algebraic closure $\\overline{\\mathbb{F}_q}$ form:',
     options: [
       'A field',
-      'A cyclic group of order $n$ (when $\\gcd(n,q)=1$)',
       'A vector space',
-      'A ring'
+      'A ring',
+      'A cyclic group of order $n$ (when $\\gcd(n,q)=1$)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When $\\gcd(n, q) = 1$, the $n$-th roots of unity in $\\overline{\\mathbb{F}_q}$ form a cyclic group of order $n$ under multiplication.',
   },
@@ -43,10 +51,26 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\alpha$ is a primitive $n$-th root of unity and $\\mathbb{F}_q(\\alpha) = \\mathbb{F}_{q^m}$, then the minimal polynomial of $\\alpha$ over $\\mathbb{F}_q$ has degree:',
     options: [
-      '$n$',
-      '$m$',
-      '$n/m$',
-      '$q^m - 1$'
+      '$n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The minimal polynomial has degree equal to $[\\mathbb{F}_q(\\alpha) : \\mathbb{F}_q] = m$.',
+  },
+      '$n/m
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The minimal polynomial has degree equal to $[\\mathbb{F}_q(\\alpha) : \\mathbb{F}_q] = m$.',
+  },
+      '$m
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The minimal polynomial has degree equal to $[\\mathbb{F}_q(\\alpha) : \\mathbb{F}_q] = m$.',
+  },
+      '$q^m - 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The minimal polynomial has degree equal to $[\\mathbb{F}_q(\\alpha) : \\mathbb{F}_q] = m$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -66,12 +90,24 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The factorization of $x^n - 1$ over $\\mathbb{F}_q$ is closely related to:',
     options: [
-      'The prime factorization of $n$',
-      'The multiplicative order of $q$ modulo divisors of $n$',
-      'The characteristic of $\\mathbb{F}_q$',
-      'The degree of $\\mathbb{F}_q$ over its prime field'
+      'The multiplicative order of $q$ modulo divisors of $n
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The degrees of irreducible factors of $x^n - 1$ over $\\mathbb{F}_q$ are determined by the multiplicative orders of $q$ modulo divisors of $n$, via cyclotomic cosets.',
+  },
+      'The prime factorization of $n
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The degrees of irreducible factors of $x^n - 1$ over $\\mathbb{F}_q$ are determined by the multiplicative orders of $q$ modulo divisors of $n$, via cyclotomic cosets.',
+  },
+      'The characteristic of $\\mathbb{F}_q
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The degrees of irreducible factors of $x^n - 1$ over $\\mathbb{F}_q$ are determined by the multiplicative orders of $q$ modulo divisors of $n$, via cyclotomic cosets.',
+  },
+      'The degree of $\\mathbb{F}_q$ over its prime field',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The degrees of irreducible factors of $x^n - 1$ over $\\mathbb{F}_q$ are determined by the multiplicative orders of $q$ modulo divisors of $n$, via cyclotomic cosets.',
   },

@@ -7,11 +7,11 @@ export const section55Questions: QuizQuestion[] = [
     question: 'Rudin defines $\\cos(x)$ and $\\sin(x)$ via:',
     options: [
       'Geometric definitions using the unit circle',
-      'Power series: $\\cos x = \\sum \\frac{(-1)^n x^{2n}}{(2n)!}$, $\\sin x = \\sum \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$',
+      'Inverse functions of arccos and arcsin',
       'As solutions to $y\'\' + y = 0$',
-      'Inverse functions of arccos and arcsin'
+      'Power series: $\\cos x = \\sum \\frac{(-1)^n x^{2n}}{(2n)!}$, $\\sin x = \\sum \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Rudin defines trigonometric functions analytically via their power series (Definition 8.6). The geometric properties (periodicity, relation to the circle) are then derived as theorems.',
   },
@@ -48,12 +48,28 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The functions $\\sin$ and $\\cos$ are periodic with period:',
     options: [
-      '$\\pi$',
-      '$2\\pi$',
-      '$\\pi/2$',
-      '$4\\pi$'
+      '$2\\pi
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Both $\\sin$ and $\\cos$ have period $2\\pi$: $\\sin(x + 2\\pi) = \\sin x$ and $\\cos(x + 2\\pi) = \\cos x$. This follows from $e^{i(x + 2\\pi)} = e^{ix} \\cdot e^{2\\pi i} = e^{ix}$.',
+  },
+      '$\\pi
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Both $\\sin$ and $\\cos$ have period $2\\pi$: $\\sin(x + 2\\pi) = \\sin x$ and $\\cos(x + 2\\pi) = \\cos x$. This follows from $e^{i(x + 2\\pi)} = e^{ix} \\cdot e^{2\\pi i} = e^{ix}$.',
+  },
+      '$\\pi/2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Both $\\sin$ and $\\cos$ have period $2\\pi$: $\\sin(x + 2\\pi) = \\sin x$ and $\\cos(x + 2\\pi) = \\cos x$. This follows from $e^{i(x + 2\\pi)} = e^{ix} \\cdot e^{2\\pi i} = e^{ix}$.',
+  },
+      '$4\\pi
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Both $\\sin$ and $\\cos$ have period $2\\pi$: $\\sin(x + 2\\pi) = \\sin x$ and $\\cos(x + 2\\pi) = \\cos x$. This follows from $e^{i(x + 2\\pi)} = e^{ix} \\cdot e^{2\\pi i} = e^{ix}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Both $\\sin$ and $\\cos$ have period $2\\pi$: $\\sin(x + 2\\pi) = \\sin x$ and $\\cos(x + 2\\pi) = \\cos x$. This follows from $e^{i(x + 2\\pi)} = e^{ix} \\cdot e^{2\\pi i} = e^{ix}$.',
   },
@@ -63,11 +79,15 @@ export const section55Questions: QuizQuestion[] = [
     question: 'The identity $\\cos^2 x + \\sin^2 x = 1$ follows from:',
     options: [
       'The Pythagorean theorem',
-      '$e^{ix} \\cdot e^{-ix} = e^0 = 1$, i.e., $|e^{ix}|^2 = 1$',
+      'The intermediate value theorem',
+      '$e^{ix} \\cdot e^{-ix} = e^0 = 1$, i.e., $|e^{ix}|^2 = 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Since $e^{ix} \\cdot \\overline{e^{ix}} = e^{ix} \\cdot e^{-ix} = e^0 = 1$, we have $|e^{ix}|^2 = (\\cos x)^2 + (\\sin x)^2 = 1$.',
+  },
       'The power series having unit radius of convergence',
-      'The intermediate value theorem'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Since $e^{ix} \\cdot \\overline{e^{ix}} = e^{ix} \\cdot e^{-ix} = e^0 = 1$, we have $|e^{ix}|^2 = (\\cos x)^2 + (\\sin x)^2 = 1$.',
   },

@@ -6,12 +6,28 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A power series has the form:',
     options: [
-      '$\\sum_{n=0}^{\\infty} a_n$',
-      '$\\sum_{n=0}^{\\infty} a_n x^n$',
-      '$\\sum_{n=0}^{\\infty} a_n n^x$',
-      '$a_0 + a_1 x$'
+      '$\\sum_{n=0}^{\\infty} a_n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Power series: $\\sum a_n x^n$ or more generally $\\sum a_n (x-c)^n$.',
+  },
+      '$a_0 + a_1 x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Power series: $\\sum a_n x^n$ or more generally $\\sum a_n (x-c)^n$.',
+  },
+      '$\\sum_{n=0}^{\\infty} a_n x^n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Power series: $\\sum a_n x^n$ or more generally $\\sum a_n (x-c)^n$.',
+  },
+      '$\\sum_{n=0}^{\\infty} a_n n^x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Power series: $\\sum a_n x^n$ or more generally $\\sum a_n (x-c)^n$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Power series: $\\sum a_n x^n$ or more generally $\\sum a_n (x-c)^n$.',
   },
@@ -20,12 +36,28 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The radius of convergence $R$ is defined so that the series converges for:',
     options: [
-      '$|x| > R$',
-      '$|x| < R$',
-      '$|x| = R$',
-      'All $x$'
-    ],
+      '$|x| > R
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Converges for $|x| < R$, diverges for $|x| > R$.',
+  },
+      '$|x| < R
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Converges for $|x| < R$, diverges for $|x| > R$.',
+  },
+      '$|x| = R
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Converges for $|x| < R$, diverges for $|x| > R$.',
+  },
+      'All $x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Converges for $|x| < R$, diverges for $|x| > R$.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Converges for $|x| < R$, diverges for $|x| > R$.',
   },
@@ -35,11 +67,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'The ratio test gives $R = \\lim |a_n/a_{n+1}|$ when this limit exists. For $\\sum x^n/n!$, $R = ?$',
     options: [
       '$0$',
-      '$1$',
       '$\\infty$',
+      '$1$',
       '$e$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$|a_n/a_{n+1}| = |(n+1)!/n!| = n+1 \\to \\infty$. Converges for all $x$.',
   },
@@ -49,11 +81,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'Inside its radius of convergence, a power series:',
     options: [
       'Is discontinuous',
-      'Represents a continuous (in fact infinitely differentiable) function',
       'Equals zero',
-      'Has finitely many terms'
+      'Has finitely many terms',
+      'Represents a continuous (in fact infinitely differentiable) function',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Power series are infinitely differentiable inside their interval of convergence.',
   },
@@ -63,11 +95,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'For $\\sum_{n=0}^{\\infty} x^n$, the radius of convergence is:',
     options: [
       '$0$',
-      '$1$',
+      '$1/2$',
       '$\\infty$',
-      '$1/2$'
+      '$1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Geometric series converges for $|x| < 1$, so $R = 1$.',
   },
@@ -76,12 +108,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A power series can be differentiated term by term:',
     options: [
-      'Never',
-      'Only at $x = 0$',
       'Inside its radius of convergence',
+      'Only at $x = 0$',
+      'Never',
       'Only for polynomial sums'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Term-by-term differentiation is valid for $|x| < R$.',
   },

@@ -10,11 +10,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'Who first gave rigorous definitions of "calculation" in 1936?',
     options: [
       'Hilbert and Gödel',
-      'Turing and Post',
       'Church and Kleene',
       'Fermat and Euler',
+      'Turing and Post',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Alan Turing and Emil L. Post independently gave rigorous definitions of calculation in 1936. Turing invented the Turing machine, the theoretical ancestor of all modern computers.',
@@ -39,12 +39,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the two basic functions from which others are built?',
     options: [
-      'Addition and multiplication',
       'Identity f(x) = x and successor f(x) = x + 1',
+      'Addition and multiplication',
       'Zero and one',
-      'Max and min',
+      'Max and min'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The basic functions are the identity function f(x) = x and the successor function f(x) = Sx = x + 1. All primitive recursive functions are built from these using five schemes.',
@@ -54,12 +54,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the recursion scheme for defining f(x̄, y)?',
     options: [
-      'f(x̄, y) = g(x̄) + h(y)',
       'f(x̄, 0) = g(x̄), f(x̄, Sy) = h(x̄, y, f(x̄, y))',
+      'f(x̄, y) = g(x̄) + h(y)',
       'f(x̄, y) = y × g(x̄)',
       'f(x̄, y) = f(y, x̄)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The recursion scheme defines f(x̄, 0) = g(x̄) for the base case and f(x̄, Sy) = h(x̄, y, f(x̄, y)) for the recursive step, allowing f to be computed from previously calculable functions g and h.',
@@ -70,11 +70,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'What are primitive recursive functions?',
     options: [
       'Functions defined only using addition',
-      'Functions built from basic functions using schemes (1)–(5)',
       'Functions that can only be computed on paper',
-      'Functions discovered by primitive cultures',
+      'Functions built from basic functions using schemes (1)–(5)',
+      'Functions discovered by primitive cultures'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Primitive recursive functions are those built from the identity and successor functions using substitution, interchange, contraction, superfluous variables, and recursion (schemes 1-5). They include +, ×, exponentiation, factorial, etc.',
@@ -86,8 +86,8 @@ export const section49Questions: QuizQuestion[] = [
     options: [
       'Finding the smallest function',
       'f(x̄) = the smallest y such that g(x̄, y) = 0',
-      'Finding the minimum of two numbers',
       'Reducing a function to its simplest form',
+      'Finding the minimum of two numbers',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -99,12 +99,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Church-Turing thesis?',
     options: [
-      'All computers are equivalent',
       'All reasonable models of computation define the same class of functions',
+      'All computers are equivalent',
       'Church and Turing were the same person',
-      'Mathematics is consistent',
+      'Mathematics is consistent'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The Church-Turing thesis states that all reasonable models of computation (Turing machines, abacus, lambda calculus, modern computers) define exactly the same class of calculable functions.',
@@ -131,10 +131,10 @@ export const section49Questions: QuizQuestion[] = [
     options: [
       'Hilbert',
       'Turing',
-      'Gödel',
       'Church',
+      'Gödel',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Kurt Gödel introduced primitive recursive functions in the proof of his famous Incompleteness Theorem, which showed that arithmetic cannot prove its own consistency.',

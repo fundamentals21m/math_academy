@@ -7,12 +7,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'A sequence of functions $\\{f_n\\}$ converges pointwise to $f$ if:',
       options: [
-        'For each $x$, $\\lim_{n \\to \\infty} f_n(x) = f(x)$',
+        '$f_n = f$ for large $n$',
         '$\\sup_x |f_n(x) - f(x)| \\to 0$',
         'All $f_n$ are continuous',
-        '$f_n = f$ for large $n$'
+        'For each $x$, $\\lim_{n \\to \\infty} f_n(x) = f(x)$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Pointwise convergence: limit exists at each individual point.'
     },
@@ -21,12 +21,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'A sequence $\\{f_n\\}$ converges uniformly to $f$ on $S$ if:',
       options: [
-        'For each $x$, $f_n(x) \\to f(x)$',
         '$\\sup_{x \\in S} |f_n(x) - f(x)| \\to 0$',
+        'For each $x$, $f_n(x) \\to f(x)$',
         '$f_n(0) \\to f(0)$',
         'All $f_n$ are bounded'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Uniform: the rate of convergence is the same at all points.'
     },
@@ -35,12 +35,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'Uniform convergence implies:',
       options: [
-        'Pointwise convergence',
         'Nothing about pointwise convergence',
+        'Pointwise convergence',
         'Differentiability',
         'Bounded functions'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Uniform convergence is stronger than pointwise convergence.'
     },
@@ -50,11 +50,11 @@ export const section15Quiz = {
       question: 'If $f_n \\to f$ uniformly and each $f_n$ is continuous, then $f$ is:',
       options: [
         'Differentiable',
-        'Continuous',
         'Not necessarily continuous',
+        'Continuous',
         'Constant'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Uniform limit of continuous functions is continuous.'
     },
@@ -65,10 +65,10 @@ export const section15Quiz = {
       options: [
         '$f(x) = 0$ for all $x$',
         '$f(x) = 1$ for all $x$',
-        '$f(x) = 0$ for $x \\in [0,1)$, $f(1) = 1$',
-        '$f(x) = x$'
+        '$f(x) = x$',
+        '$f(x) = 0$ for $x \\in [0,1)$, $f(1) = 1$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: '$x^n \\to 0$ for $|x| < 1$, and $1^n = 1$.'
     },
@@ -77,12 +77,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'The convergence of $f_n(x) = x^n$ on $[0, 1]$ is:',
       options: [
-        'Uniform',
         'Not uniform (limit is discontinuous)',
+        'Uniform',
         'Uniform on $[0, 1)$',
         'Both A and C'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Continuous $f_n$ converge to discontinuous $f$, so not uniform on $[0,1]$.'
     },
@@ -105,12 +105,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: '$f_n \\to f$ uniformly iff:',
       options: [
-        '$\\|f_n - f\\|_\\infty \\to 0$',
-        '$|f_n(0) - f(0)| \\to 0$',
         '$\\int |f_n - f| \\to 0$',
+        '$|f_n(0) - f(0)| \\to 0$',
+        '$\\|f_n - f\\|_\\infty \\to 0$',
         '$f_n\'(x) \\to f\'(x)$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Uniform convergence means convergence in the sup-norm.'
     },
@@ -120,11 +120,11 @@ export const section15Quiz = {
       question: 'If $f_n(x) = \\frac{x}{n}$ on $[0, 1]$, then $f_n \\to$:',
       options: [
         '$f(x) = x$',
-        '$f(x) = 0$',
+        'Does not converge',
         '$f(x) = 1$',
-        'Does not converge'
+        '$f(x) = 0$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: '$\\frac{x}{n} \\to 0$ for all $x$ as $n \\to \\infty$.'
     },
@@ -133,12 +133,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'The convergence $f_n(x) = \\frac{x}{n} \\to 0$ on $[0, 1]$ is:',
       options: [
-        'Only pointwise',
         'Uniform',
+        'Only pointwise',
         'Neither',
         'Undefined'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: '$\\sup_{[0,1]} |x/n| = 1/n \\to 0$, so convergence is uniform.'
     },
@@ -161,12 +161,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'The Weierstrass M-test requires:',
       options: [
-        '$|f_n(x)| \\leq M_n$ for all $x$, and $\\sum M_n < \\infty$',
-        '$f_n$ continuous',
         '$f_n$ differentiable',
+        '$f_n$ continuous',
+        '$|f_n(x)| \\leq M_n$ for all $x$, and $\\sum M_n < \\infty$',
         '$M_n \\to 0$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Domination by summable constants implies uniform convergence.'
     },
@@ -175,12 +175,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'If $f_n \\to f$ uniformly on $[a,b]$, then $\\int_a^b f_n \\to$:',
       options: [
-        '$\\int_a^b f$',
+        'The limit may not exist',
         '$f(b) - f(a)$',
         '$0$',
-        'The limit may not exist'
+        '$\\int_a^b f$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Uniform convergence allows interchange of limit and integral.'
     },
@@ -189,12 +189,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'A power series $\\sum a_n x^n$ converges uniformly on:',
       options: [
-        'Its entire interval of convergence',
         'Any closed subinterval of the interior of its interval of convergence',
+        'Its entire interval of convergence',
         'Only at $x = 0$',
         'Never'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Uniform convergence on compact subsets of the open interval of convergence.'
     },
@@ -218,11 +218,11 @@ export const section15Quiz = {
       question: 'If $f_n(x) = \\sin(nx)/n$ on $\\mathbb{R}$, then $f_n \\to$:',
       options: [
         '$\\sin x$',
-        '$0$',
         '$\\cos x$',
+        '$0$',
         'Does not converge'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: '$|\\sin(nx)/n| \\leq 1/n \\to 0$.'
     },
@@ -232,11 +232,11 @@ export const section15Quiz = {
       question: 'The convergence $\\sin(nx)/n \\to 0$ is:',
       options: [
         'Only pointwise',
-        'Uniform on $\\mathbb{R}$',
+        'Not convergent',
         'Uniform only on bounded sets',
-        'Not convergent'
+        'Uniform on $\\mathbb{R}$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: '$\\sup_x |\\sin(nx)/n| = 1/n \\to 0$, so uniform on all of $\\mathbb{R}$.'
     },
@@ -274,11 +274,11 @@ export const section15Quiz = {
       question: 'If $\\sum f_n$ converges uniformly and each $f_n$ is continuous:',
       options: [
         'The sum may be discontinuous',
-        'The sum is continuous',
         'The sum is constant',
+        'The sum is continuous',
         'The sum is differentiable'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Uniform limit of continuous functions is continuous.'
     }
@@ -291,11 +291,11 @@ export const section15Quiz = {
       question: 'The sequence $f_n(x) = nx e^{-nx}$ on $[0, \\infty)$:',
       options: [
         'Converges uniformly to $0$',
-        'Converges pointwise to $0$ but not uniformly',
+        'Converges to $x$',
         'Does not converge',
-        'Converges to $x$'
+        'Converges pointwise to $0$ but not uniformly'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Pointwise limit is $0$, but $\\max f_n = 1/e$ at $x = 1/n$, so not uniform.'
     },
@@ -304,12 +304,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'If $f_n \\to f$ pointwise and $f_n\' \\to g$ uniformly, then:',
       options: [
-        '$f$ may not be differentiable',
         '$f$ is differentiable and $f\' = g$',
+        '$f$ may not be differentiable',
         '$f\'$ doesn\'t exist',
         '$g = 0$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Uniform convergence of derivatives with pointwise convergence of functions implies $f\' = g$.'
     },
@@ -318,12 +318,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'For $f_n(x) = x^n(1-x)$ on $[0,1]$, $\\lim \\int_0^1 f_n = $:',
       options: [
-        '$0$',
         '$1$',
+        '$0$',
         '$\\int_0^1 (\\lim f_n)$',
         '$1/2$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: '$\\int_0^1 x^n(1-x)\\,dx = \\frac{1}{n+1} - \\frac{1}{n+2} \\to 0$.'
     },
@@ -333,11 +333,11 @@ export const section15Quiz = {
       question: 'The Arzelà-Ascoli theorem characterizes:',
       options: [
         'Uniform convergence',
-        'Compact subsets of $C([a,b])$',
         'Differentiability',
+        'Compact subsets of $C([a,b])$',
         'Integrability'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Arzelà-Ascoli: precompact sets in $C([a,b])$ are bounded and equicontinuous.'
     },
@@ -347,11 +347,11 @@ export const section15Quiz = {
       question: 'A family of functions $\\mathcal{F}$ is equicontinuous if:',
       options: [
         'All functions are continuous',
-        'All functions share the same modulus of continuity',
+        'The functions are bounded',
         'Each function is uniformly continuous',
-        'The functions are bounded'
+        'All functions share the same modulus of continuity'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Equicontinuity: for all $\\varepsilon$, one $\\delta$ works for all $f \\in \\mathcal{F}$.'
     },
@@ -368,12 +368,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'The pointwise limit of $f_n(x) = \\frac{nx}{1+n^2x^2}$ for $x > 0$ is:',
       options: [
-        '$x$',
         '$0$',
+        '$x$',
         '$1/x$',
         '$1$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'For fixed $x > 0$: $\\frac{nx}{1+n^2x^2} \\sim \\frac{1}{nx} \\to 0$.'
     },
@@ -396,12 +396,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'If $f_n \\to f$ uniformly and $g_n \\to g$ uniformly on $[a,b]$, then $f_n g_n \\to$:',
       options: [
-        '$fg$ uniformly (if $f_n, g_n$ are bounded)',
-        '$fg$ only pointwise',
         'Does not converge',
+        '$fg$ only pointwise',
+        '$fg$ uniformly (if $f_n, g_n$ are bounded)',
         '$f + g$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Products of uniformly convergent bounded sequences converge uniformly.'
     },
@@ -411,11 +411,11 @@ export const section15Quiz = {
       question: 'The Stone-Weierstrass theorem generalizes:',
       options: [
         'FTC',
-        'Weierstrass approximation (polynomials are dense in $C([a,b])$)',
+        'Intermediate value theorem',
         'Mean value theorem',
-        'Intermediate value theorem'
+        'Weierstrass approximation (polynomials are dense in $C([a,b])$)'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Stone-Weierstrass: subalgebras separating points are dense in $C(X)$.'
     },
@@ -438,12 +438,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'If $\\sum f_n$ converges uniformly and each $f_n$ is integrable:',
       options: [
-        '$\\int \\sum f_n = \\sum \\int f_n$',
         'Integration cannot be interchanged',
+        '$\\int \\sum f_n = \\sum \\int f_n$',
         'The sum is not integrable',
         '$\\int \\sum f_n = 0$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Uniform convergence justifies term-by-term integration.'
     },
@@ -453,11 +453,11 @@ export const section15Quiz = {
       question: 'For the series $\\sum_{n=1}^\\infty x^n$ on $(-1, 1)$:',
       options: [
         'Converges uniformly on $(-1, 1)$',
-        'Converges uniformly on $[-r, r]$ for any $r < 1$',
         'Does not converge uniformly anywhere',
+        'Converges uniformly on $[-r, r]$ for any $r < 1$',
         'Converges only at $x = 0$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Geometric series converges uniformly on compact subsets of $(-1, 1)$.'
     },
@@ -467,11 +467,11 @@ export const section15Quiz = {
       question: 'Term-by-term differentiation of $\\sum f_n$ is valid when:',
       options: [
         '$\\sum f_n$ converges',
-        '$\\sum f_n\'$ converges uniformly (and $\\sum f_n$ converges at one point)',
+        'Always',
         'Each $f_n$ is differentiable',
-        'Always'
+        '$\\sum f_n\'$ converges uniformly (and $\\sum f_n$ converges at one point)'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Need uniform convergence of derivatives plus pointwise convergence of original.'
     },
@@ -480,12 +480,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'The Bernstein polynomials $B_n(f; x)$ approximate:',
       options: [
-        'Only polynomials',
         'Any continuous function uniformly on $[0,1]$',
+        'Only polynomials',
         'Only differentiable functions',
         'Constant functions'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Bernstein polynomials provide constructive proof of Weierstrass theorem.'
     },
@@ -517,12 +517,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'If $f_n$ are equicontinuous and bounded on $[a,b]$:',
       options: [
-        '$\\{f_n\\}$ has a uniformly convergent subsequence',
-        '$\\{f_n\\}$ converges uniformly',
         '$\\{f_n\\}$ has no convergent subsequence',
+        '$\\{f_n\\}$ converges uniformly',
+        '$\\{f_n\\}$ has a uniformly convergent subsequence',
         '$f_n$ are constant'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Arzelà-Ascoli: bounded + equicontinuous implies precompact.'
     },
@@ -531,12 +531,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'The Cauchy criterion for uniform convergence: $f_n$ converges uniformly iff:',
       options: [
-        'For all $\\varepsilon > 0$, $\\exists N$: $m, n > N \\Rightarrow \\|f_m - f_n\\|_\\infty < \\varepsilon$',
+        '$f_n$ are continuous',
         '$f_n(x) \\to f(x)$ for each $x$',
         '$\\sup |f_n| < \\infty$',
-        '$f_n$ are continuous'
+        'For all $\\varepsilon > 0$, $\\exists N$: $m, n > N \\Rightarrow \\|f_m - f_n\\|_\\infty < \\varepsilon$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Cauchy criterion in the uniform norm characterizes uniform convergence.'
     },
@@ -545,12 +545,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'The space $C([a,b])$ with uniform norm is:',
       options: [
-        'Not complete',
         'A complete metric space (Banach space)',
+        'Not complete',
         'Finite dimensional',
         'Not a metric space'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Uniform limits of continuous functions are continuous; $C([a,b])$ is complete.'
     }
@@ -576,12 +576,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'There exists a sequence $f_n \\to f$ pointwise with $\\lim \\int f_n \\neq \\int f$ because:',
       options: [
-        'Pointwise convergence is too weak to interchange limits',
-        'All sequences allow interchange',
         '$f$ is not integrable',
+        'All sequences allow interchange',
+        'Pointwise convergence is too weak to interchange limits',
         'This is impossible'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Classic counterexamples show pointwise convergence doesn\'t preserve integrals.'
     },
@@ -591,11 +591,11 @@ export const section15Quiz = {
       question: 'The Baire category theorem implies:',
       options: [
         '$C([0,1])$ is first category',
-        'The set of continuous nowhere-differentiable functions is residual (comeager) in $C([0,1])$',
+        'Nowhere-differentiable functions don\'t exist',
         'All continuous functions are differentiable',
-        'Nowhere-differentiable functions don\'t exist'
+        'The set of continuous nowhere-differentiable functions is residual (comeager) in $C([0,1])$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Generic continuous functions are nowhere differentiable (Baire category argument).'
     },
@@ -633,11 +633,11 @@ export const section15Quiz = {
       question: 'The Weierstrass function $\\sum a^n \\cos(b^n \\pi x)$ with $0 < a < 1$, $ab > 1 + 3\\pi/2$:',
       options: [
         'Is differentiable everywhere',
-        'Is continuous but nowhere differentiable',
         'Is discontinuous',
+        'Is continuous but nowhere differentiable',
         'Is a polynomial'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Classic example of continuous nowhere-differentiable function.'
     },
@@ -647,11 +647,11 @@ export const section15Quiz = {
       question: 'For power series $\\sum a_n x^n$ with radius $R$:',
       options: [
         'Convergence at $R$ implies uniform convergence on $[0, R]$',
-        'Convergence at $R$ doesn\'t guarantee uniform convergence to $R$',
+        'Abel\'s theorem guarantees uniform convergence',
         'The series never converges at $R$',
-        'Abel\'s theorem guarantees uniform convergence'
+        'Convergence at $R$ doesn\'t guarantee uniform convergence to $R$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Convergence at endpoint doesn\'t imply uniform convergence including endpoint.'
     },
@@ -689,11 +689,11 @@ export const section15Quiz = {
       question: 'The Moore-Osgood theorem: if $f_{mn} \\to f_n$ as $m \\to \\infty$ uniformly in $n$, and $f_n(m) \\to g(m)$:',
       options: [
         'Double limits may not exist',
-        '$\\lim_m \\lim_n f_{mn} = \\lim_n \\lim_m f_{mn}$',
         'The limits are unrelated',
+        '$\\lim_m \\lim_n f_{mn} = \\lim_n \\lim_m f_{mn}$',
         'One limit must be zero'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Moore-Osgood gives conditions for interchanging iterated limits.'
     },
@@ -703,11 +703,11 @@ export const section15Quiz = {
       question: 'Egorov\'s theorem: if $f_n \\to f$ pointwise a.e. on $E$ with $m(E) < \\infty$:',
       options: [
         'Convergence is uniform',
-        'For each $\\varepsilon$, convergence is uniform except on a set of measure $< \\varepsilon$',
+        'This is about differentiation',
         'Convergence is never uniform',
-        'This is about differentiation'
+        'For each $\\varepsilon$, convergence is uniform except on a set of measure $< \\varepsilon$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Egorov: pointwise convergence is nearly uniform on finite measure spaces.'
     },
@@ -716,12 +716,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'A sequence $f_n$ on $[0,1]$ is uniformly bounded but not equicontinuous. Then:',
       options: [
-        'Arzelà-Ascoli still applies',
         'There may be no uniformly convergent subsequence',
+        'Arzelà-Ascoli still applies',
         'All subsequences converge',
         '$f_n$ converges uniformly'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Equicontinuity is essential for Arzelà-Ascoli; without it, compactness fails.'
     },
@@ -745,11 +745,11 @@ export const section15Quiz = {
       question: 'If $f_n \\in C^\\infty$ converge uniformly to $f$, and all $f_n^{(k)}$ converge uniformly for each $k$:',
       options: [
         '$f$ may not be smooth',
-        '$f \\in C^\\infty$',
         '$f$ is analytic',
+        '$f \\in C^\\infty$',
         '$f$ is constant'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Uniform convergence of all derivatives implies the limit is smooth.'
     },
@@ -759,11 +759,11 @@ export const section15Quiz = {
       question: 'The compact-open topology on $C(X, Y)$:',
       options: [
         'Is unrelated to uniform convergence',
-        'Gives uniform convergence on compact sets when $Y$ is a metric space',
+        'Is discrete',
         'Makes all functions continuous',
-        'Is discrete'
+        'Gives uniform convergence on compact sets when $Y$ is a metric space'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Compact-open topology captures uniform convergence on compact subsets.'
     },
@@ -772,12 +772,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'Lusin\'s theorem: every measurable $f$ on $[0,1]$ equals a continuous function except on:',
       options: [
-        'A null set',
         'A set of arbitrarily small measure',
+        'A null set',
         'A dense set',
         'The whole interval'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Lusin: measurable functions are nearly continuous.'
     },
@@ -800,12 +800,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'Runge\'s theorem: every holomorphic function on a compact $K$ can be:',
       options: [
-        'Uniformly approximated by polynomials (if $\\mathbb{C} \\setminus K$ is connected)',
-        'Exactly represented by a polynomial',
         'Approximated only at the boundary',
+        'Exactly represented by a polynomial',
+        'Uniformly approximated by polynomials (if $\\mathbb{C} \\setminus K$ is connected)',
         'Extended to all of $\\mathbb{C}$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Runge: rational (or polynomial) approximation of holomorphic functions.'
     },
@@ -815,11 +815,11 @@ export const section15Quiz = {
       question: 'The principle of uniform boundedness (Banach-Steinhaus) applied to function spaces:',
       options: [
         'Is unrelated to pointwise convergence',
-        'Pointwise bounded operators are uniformly bounded',
+        'Convergence is always uniform',
         'All functions are bounded',
-        'Convergence is always uniform'
+        'Pointwise bounded operators are uniformly bounded'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Uniform boundedness principle: pointwise bounded implies uniformly bounded for operators.'
     },
@@ -828,12 +828,12 @@ export const section15Quiz = {
       type: 'multiple-choice',
       question: 'Mercer\'s theorem concerns:',
       options: [
-        'Pointwise convergence',
         'Uniform convergence of eigenfunction expansions of positive kernels',
+        'Pointwise convergence',
         'Divergence of series',
         'Non-uniform limits'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Mercer: positive definite kernels have uniformly convergent eigenfunction expansions.'
     }

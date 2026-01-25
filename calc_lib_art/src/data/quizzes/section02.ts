@@ -9,7 +9,7 @@ export const section02Questions: QuizQuestion[] = [
       'A very large number',
       'A quantity greater than zero but smaller than any positive number',
       'The number zero',
-      'A negative number'
+      'A negative number',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section02Questions: QuizQuestion[] = [
       'Isaac Newton',
       'Gottfried Leibniz',
       'Bishop George Berkeley',
-      'Archimedes'
+      'Archimedes',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What mathematical concept replaced infinitesimals in rigorous calculus?',
     options: [
       'Complex numbers',
-      'Limits',
       'Vectors',
-      'Matrices'
+      'Matrices',
+      'Limits',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The limit concept, developed in the 19th century, provided a rigorous foundation for calculus without requiring actual infinitesimals.',
   },
@@ -56,12 +56,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which type of infinity is larger?',
     options: [
+      'The set of real numbers (including irrationals)',
       'The set of natural numbers (1, 2, 3, ...)',
-      'The set of integers (..., -2, -1, 0, 1, 2, ...)',
       'The set of rational numbers (fractions)',
-      'The set of real numbers (including irrationals)'
+      'The set of integers (..., -2, -1, 0, 1, 2, ...)',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The real numbers are uncountably infinite—a larger infinity than the natural numbers, integers, or rationals (which are all countably infinite).',
   },
@@ -70,12 +70,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What distinguishes "potential infinity" from "actual infinity"?',
     options: [
-      'Potential infinity is a completed totality; actual infinity is a process',
       'Potential infinity is a process that continues without end; actual infinity is a completed totality',
+      'Potential infinity is a completed totality; actual infinity is a process',
       'They are the same concept with different names',
-      'Potential infinity only applies to negative numbers'
+      'Potential infinity only applies to negative numbers',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Potential infinity refers to a process that can continue indefinitely (counting forever). Actual infinity treats an infinite collection as a completed whole (the set of all natural numbers).',
   },

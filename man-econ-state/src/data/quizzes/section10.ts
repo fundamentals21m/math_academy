@@ -9,7 +9,7 @@ export const section10Questions: QuizQuestion[] = [
       'Government decree',
       'The supply of and demand for money',
       'The gold standard alone',
-      'International agreements'
+      'International agreements',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is inflation according to the Austrian definition?',
     options: [
-      'Rising prices',
       'An increase in the money supply',
+      'Rising prices',
       'Economic growth',
-      'Rising wages'
+      'Rising wages',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Austrians define inflation as the increase in money supply, which typically leads to rising prices as a consequence.',
   },
@@ -34,12 +34,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does increasing the money supply not make society wealthier?',
     options: [
-      'Because the government takes it all',
       'Because money is only a medium of exchange, not real wealth',
+      'Because the government takes it all',
       'Because banks charge interest',
-      'Because people don\'t spend it'
+      'Because people don\\'t spend it',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Money is a medium of exchange. More money just changes prices; it doesn\'t create more goods and services.',
   },
@@ -50,8 +50,8 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'Money always flows to the rich',
       'New money benefits those who receive it first at the expense of later recipients',
+      'Money loses value over time',
       'Inflation affects all prices equally',
-      'Money loses value over time'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -63,11 +63,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'According to Austrian Business Cycle Theory, what causes boom-bust cycles?',
     options: [
       'Animal spirits of entrepreneurs',
-      'Credit expansion by banks that pushes interest rates below natural levels',
       'Overproduction of goods',
-      'Underconsumption by workers'
+      'Credit expansion by banks that pushes interest rates below natural levels',
+      'Underconsumption by workers',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Credit expansion artificially lowers interest rates, encouraging malinvestments that must eventually be liquidated.',
   },
@@ -77,11 +77,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What is fractional reserve banking?',
     options: [
       'Banks that only lend fractions of money',
-      'Banks that keep only a fraction of deposits on hand while lending the rest',
       'Banks that charge fractional interest',
-      'Government-owned banks'
+      'Government-owned banks',
+      'Banks that keep only a fraction of deposits on hand while lending the rest',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Fractional reserve banking means banks lend out most deposits, keeping only a fraction in reserve for withdrawals.',
   },

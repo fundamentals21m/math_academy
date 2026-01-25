@@ -7,11 +7,11 @@ export const section41Questions: QuizQuestion[] = [
     question: 'A set $E$ is Lebesgue measurable (Carathéodory criterion) if for all sets $A$:',
     options: [
       '$m^*(A) = m^*(E)$',
-      '$m^*(A) = m^*(A \\cap E) + m^*(A \\cap E^c)$',
       '$m^*(E) = 0$',
+      '$m^*(A) = m^*(A \\cap E) + m^*(A \\cap E^c)$',
       '$E$ is an interval'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Carathéodory: $E$ is measurable if it "splits" every set additively.',
   },
@@ -22,8 +22,8 @@ export const section41Questions: QuizQuestion[] = [
     options: [
       'Vector space',
       '$\\sigma$-algebra',
+      'Ring (but not $\\sigma$-algebra)',
       'Group',
-      'Ring (but not $\\sigma$-algebra)'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section41Questions: QuizQuestion[] = [
     question: 'All open sets in $\\mathbf{R}^n$ are:',
     options: [
       'Not measurable',
-      'Lebesgue measurable',
       'Measure zero',
-      'Measure infinity'
+      'Measure infinity',
+      'Lebesgue measurable',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Open sets, closed sets, and all Borel sets are Lebesgue measurable.',
   },
@@ -48,10 +48,14 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $m^*(E) = 0$, then $E$ is:',
     options: [
+      'Lebesgue measurable with $m(E) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Sets of outer measure zero are automatically measurable (null sets).',
+  },
       'Not measurable',
-      'Lebesgue measurable with $m(E) = 0$',
       'An open set',
-      'Uncountable'
+      'Uncountable',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -62,12 +66,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Lebesgue $\\sigma$-algebra is:',
     options: [
+      'Larger than the Borel $\\sigma$-algebra (it\\'s the completion)',
       'Smaller than the Borel $\\sigma$-algebra',
       'Equal to the Borel $\\sigma$-algebra',
-      'Larger than the Borel $\\sigma$-algebra (it\'s the completion)',
-      'Unrelated to the Borel $\\sigma$-algebra'
+      'Unrelated to the Borel $\\sigma$-algebra',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The Lebesgue $\\sigma$-algebra contains all Borel sets plus all subsets of null sets.',
   },

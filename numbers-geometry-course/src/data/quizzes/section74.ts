@@ -10,11 +10,11 @@ export const section74Questions: QuizQuestion[] = [
     question: 'How is the natural logarithm defined?',
     options: [
       'As the inverse of 10ˣ',
-      'As the area under xy = 1 from x = 1 to x = t',
       'As the arc length of a hyperbola',
+      'As the area under xy = 1 from x = 1 to x = t',
       'As the solution to x² = t',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'log t is defined as the area under the hyperbola xy = 1 from x = 1 to x = t.',
@@ -50,11 +50,11 @@ export const section74Questions: QuizQuestion[] = [
     question: 'How is the number e defined?',
     options: [
       'e = 2.71828',
-      'e is the number with log e = 1',
       'e = π - 0.4',
-      'e is the smallest transcendental number',
+      'e is the number with log e = 1',
+      'e is the smallest transcendental number'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'e is defined as the unique number whose natural logarithm equals 1: log e = 1.',
@@ -65,11 +65,11 @@ export const section74Questions: QuizQuestion[] = [
     question: 'What is the relationship between eˣ and log x?',
     options: [
       'They are the same function',
-      'They are inverse functions',
-      'eˣ = 1/log x',
       'eˣ + log x = 1',
+      'eˣ = 1/log x',
+      'They are inverse functions'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The exponential eˣ and natural logarithm are inverse functions: x = eʸ ⟺ y = log x.',
@@ -79,12 +79,12 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does the additive property of log hold?',
     options: [
-      'By definition of addition',
       'From the geometry of y = 1/x (scaling preserves area)',
+      'By definition of addition',
       'From calculus',
-      'From the definition of e',
+      'From the definition of e'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The region from a to ab is a × 1/a = 1 times the area from 1 to b, due to y = 1/x.',
@@ -93,8 +93,13 @@ export const section74Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'What is log(aⁿ) for integer n?',
-    options: ['aⁿ log a', 'n + log a', 'n log a', '(log a)ⁿ'],
-    correctIndex: 2,
+    options: [
+      'n log a',
+      'aⁿ log a',
+      'n + log a',
+      '(log a)ⁿ',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'By the additive property applied n times: log(aⁿ) = log(a·a·...·a) = n log a.',
@@ -106,10 +111,10 @@ export const section74Questions: QuizQuestion[] = [
     options: [
       'Algebraic (it satisfies x² - e = 0)',
       'Algebraic (it is a ratio of integers)',
-      'Transcendental (proved by Hermite in 1873)',
       'Neither',
+      'Transcendental (proved by Hermite in 1873)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Hermite proved in 1873 that e is transcendental—not the root of any polynomial with integer coefficients.',

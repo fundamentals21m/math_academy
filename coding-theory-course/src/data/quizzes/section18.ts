@@ -6,12 +6,28 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A $q$-ary Hamming code over $\\mathbb{F}_q$ with redundancy $r$ has length:',
     options: [
-      '$q^r$',
-      '$q^r - 1$',
-      '$(q^r - 1)/(q - 1)$',
-      '$q^{r-1}$'
+      '$q^r - 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The length of a $q$-ary Hamming code is $n = (q^r - 1)/(q - 1)$. This counts the number of distinct 1-dimensional subspaces of $\\mathbb{F}_q^r$.',
+  },
+      '$(q^r - 1)/(q - 1)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The length of a $q$-ary Hamming code is $n = (q^r - 1)/(q - 1)$. This counts the number of distinct 1-dimensional subspaces of $\\mathbb{F}_q^r$.',
+  },
+      '$q^r
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The length of a $q$-ary Hamming code is $n = (q^r - 1)/(q - 1)$. This counts the number of distinct 1-dimensional subspaces of $\\mathbb{F}_q^r$.',
+  },
+      '$q^{r-1}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The length of a $q$-ary Hamming code is $n = (q^r - 1)/(q - 1)$. This counts the number of distinct 1-dimensional subspaces of $\\mathbb{F}_q^r$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The length of a $q$-ary Hamming code is $n = (q^r - 1)/(q - 1)$. This counts the number of distinct 1-dimensional subspaces of $\\mathbb{F}_q^r$.',
   },
@@ -29,12 +45,20 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The parity-check matrix of a non-binary Hamming code has columns that are:',
     options: [
-      'All non-zero vectors in $\\mathbb{F}_q^r$',
-      'One representative from each 1-dimensional subspace of $\\mathbb{F}_q^r$',
+      'Both B and C are correct descriptions',
+      'All non-zero vectors in $\\mathbb{F}_q^r
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The columns are chosen as one representative per 1-dimensional subspace. A standard choice is to normalize so the first non-zero entry is 1, which gives a unique representative.',
+  },
       'All vectors with first non-zero entry equal to 1',
-      'Both B and C are correct descriptions'
+      'One representative from each 1-dimensional subspace of $\\mathbb{F}_q^r
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The columns are chosen as one representative per 1-dimensional subspace. A standard choice is to normalize so the first non-zero entry is 1, which gives a unique representative.',
+  },
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The columns are chosen as one representative per 1-dimensional subspace. A standard choice is to normalize so the first non-zero entry is 1, which gives a unique representative.',
   },
@@ -53,11 +77,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Non-binary Hamming codes have minimum distance:',
     options: [
       '$d = 2$',
-      '$d = 3$',
       '$d = 4$',
+      '$d = 3$',
       '$d = q$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Like binary Hamming codes, non-binary Hamming codes have minimum distance $d = 3$. They are single-error-correcting codes.',
   },
@@ -67,11 +91,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'The dual of a non-binary Hamming code is called:',
     options: [
       'A Reed-Muller code',
-      'A Simplex code',
+      'A BCH code',
       'A Golay code',
-      'A BCH code'
+      'A Simplex code'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The dual of a Hamming code (binary or non-binary) is a Simplex code. It has parameters $[n, r, (q^{r-1})]$ where $n = (q^r-1)/(q-1)$.',
   },

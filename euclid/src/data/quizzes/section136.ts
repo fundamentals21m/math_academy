@@ -7,11 +7,11 @@ export const section136Questions: QuizQuestion[] = [
     question: 'What does "separando" (V.17) do to a componendo proportion?',
     options: [
       'Makes it larger',
-      'From (A+B):B = (C+D):D, it extracts A:B = C:D',
       'Adds the terms',
-      'Multiplies the terms'
+      'Multiplies the terms',
+      'From (A+B):B = (C+D):D, it extracts A:B = C:D',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Separando extracts the "excess" ratio: from a proportion of wholes to parts, we get a proportion of remainders to parts.',
   },
@@ -21,11 +21,11 @@ export const section136Questions: QuizQuestion[] = [
     question: 'If (8):3 = (12):? where 8 = 5+3 and 12 = C+4.5, and the proportion holds componendo, what is C by separando?',
     options: [
       '4.5',
-      '7.5',
       '6',
-      '9'
+      '7.5',
+      '9',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'If (5+3):3 = (C+4.5):4.5, then 8:3 = (C+4.5):4.5. Cross-multiplying: 8×4.5 = 3(C+4.5), so 36 = 3C + 13.5, C = 7.5.',
   },
@@ -35,11 +35,11 @@ export const section136Questions: QuizQuestion[] = [
     question: 'Separando is the inverse operation of:',
     options: [
       'Alternando',
-      'Convertendo',
       'Componendo',
-      'Ex aequali'
+      'Convertendo',
+      'Ex aequali',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'V.17 (separando) and V.18 (componendo) are inverses: componendo adds, separando subtracts.',
   },

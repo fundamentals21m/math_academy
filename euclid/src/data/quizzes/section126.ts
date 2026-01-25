@@ -9,7 +9,7 @@ export const section126Questions: QuizQuestion[] = [
       'Equal magnitudes have no ratio',
       'If A = B, then A:C = B:C and C:A = C:B for any magnitude C',
       'Equal magnitudes must have equal ratios to each other',
-      'Ratios only work for unequal magnitudes'
+      'Ratios only work for unequal magnitudes',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -21,11 +21,11 @@ export const section126Questions: QuizQuestion[] = [
     question: 'V.7 is analogous to which algebraic principle?',
     options: [
       'The distributive property',
-      'The substitution principle: if a = b, then a can replace b in any expression',
+      'The zero property',
       'The commutative property',
-      'The zero property'
+      'The substitution principle: if a = b, then a can replace b in any expression'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'V.7 is like substitution: equal magnitudes give equal ratios when compared to the same reference.',
   },
@@ -34,10 +34,10 @@ export const section126Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which proposition proves the converse of V.7?',
     options: [
-      'V.6',
       'V.8',
+      'V.6',
       'V.9',
-      'V.10'
+      'V.10',
     ],
     correctIndex: 2,
     difficulty: 'medium',

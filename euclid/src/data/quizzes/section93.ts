@@ -8,8 +8,8 @@ export const section93Questions: QuizQuestion[] = [
     options: [
       'Equal central angles',
       'Equal chords',
+      'Parallel lines',
       'Equal radii',
-      'Parallel lines'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section93Questions: QuizQuestion[] = [
     question: 'Together, III.28 and III.29 show that in equal circles, equal chords and equal arcs are:',
     options: [
       'Independent properties',
-      'Equivalent (each implies the other)',
       'Always perpendicular',
-      'Proportional'
+      'Equivalent (each implies the other)',
+      'Proportional',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'III.28 proves equal chords → equal arcs; III.29 proves equal arcs → equal chords. They are equivalent.',
   },
@@ -34,12 +34,12 @@ export const section93Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Propositions III.26-29 together establish what correspondence in equal circles?',
     options: [
-      'Radius ↔ diameter',
       'Angle ↔ arc ↔ chord',
+      'Radius ↔ diameter',
       'Tangent ↔ secant',
-      'Center ↔ circumference'
+      'Center ↔ circumference',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'These four propositions establish that in equal circles, equal angles, equal arcs, and equal chords are all equivalent and mutually determining.',
   },

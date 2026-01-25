@@ -7,11 +7,11 @@ export const section37Questions: QuizQuestion[] = [
     question: 'What does Proposition I.37 prove about triangles?',
     options: [
       'Similar triangles have proportional sides',
-      'Triangles on the same base and between the same parallels are equal in area',
       'All triangles can be bisected',
-      'Congruent triangles have equal areas'
+      'Congruent triangles have equal areas',
+      'Triangles on the same base and between the same parallels are equal in area',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'I.37: Triangles on the same base and between the same parallels are equal in area.',
   },
@@ -23,7 +23,7 @@ export const section37Questions: QuizQuestion[] = [
       'It is the converse',
       'It applies the parallelogram result to triangles (half the area)',
       'They are unrelated',
-      'I.37 contradicts I.35'
+      'I.37 contradicts I.35',
     ],
     correctIndex: 1,
     difficulty: 'medium',

@@ -6,12 +6,28 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The area between curves $y = f(x)$ and $y = g(x)$ from $a$ to $b$ (where $f \\geq g$) is:',
     options: [
-      '$\\int_a^b f(x)\\,dx - \\int_a^b g(x)\\,dx$',
-      '$\\int_a^b [f(x) + g(x)]\\,dx$',
-      '$\\int_a^b f(x) \\cdot g(x)\\,dx$',
-      '$|\\int_a^b f(x)\\,dx|$'
+      '$\\int_a^b f(x) \\cdot g(x)\\,dx
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Area between curves = integral of (top function minus bottom function).',
+  },
+      '$\\int_a^b [f(x) + g(x)]\\,dx
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Area between curves = integral of (top function minus bottom function).',
+  },
+      '$|\\int_a^b f(x)\\,dx|
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Area between curves = integral of (top function minus bottom function).',
+  },
+      '$\\int_a^b f(x)\\,dx - \\int_a^b g(x)\\,dx
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Area between curves = integral of (top function minus bottom function).',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Area between curves = integral of (top function minus bottom function).',
   },
@@ -30,11 +46,15 @@ export const section13Questions: QuizQuestion[] = [
     question: 'To find where two curves intersect, we:',
     options: [
       'Set their derivatives equal',
-      'Set $f(x) = g(x)$ and solve for $x$',
-      'Compute their integrals',
-      'Find where both equal zero'
-    ],
+      'Set $f(x) = g(x)$ and solve for $x
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Intersection points occur where $f(x) = g(x)$.',
+  },
+      'Find where both equal zero',
+      'Compute their integrals',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Intersection points occur where $f(x) = g(x)$.',
   },
@@ -43,12 +63,20 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The curves $y = x$ and $y = x^2$ intersect at:',
     options: [
-      '$x = 0$ only',
       '$x = 1$ only',
-      '$x = 0$ and $x = 1$',
-      '$x = -1$ and $x = 1$'
-    ],
+      '$x = 0$ only',
+      '$x = 0$ and $x = 1
     correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$x = x^2$ gives $x(1-x) = 0$, so $x = 0$ or $x = 1$.',
+  },
+      '$x = -1$ and $x = 1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$x = x^2$ gives $x(1-x) = 0$, so $x = 0$ or $x = 1$.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$x = x^2$ gives $x(1-x) = 0$, so $x = 0$ or $x = 1$.',
   },
@@ -57,10 +85,18 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f(x) < g(x)$ on $[a, b]$, the area between them is:',
     options: [
-      '$\\int_a^b [f(x) - g(x)]\\,dx$',
-      '$\\int_a^b [g(x) - f(x)]\\,dx$',
+      '$\\int_a^b [g(x) - f(x)]\\,dx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Always subtract the lower function from the upper: $\\int_a^b [g(x) - f(x)]\\,dx$.',
+  },
+      '$\\int_a^b [f(x) - g(x)]\\,dx
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Always subtract the lower function from the upper: $\\int_a^b [g(x) - f(x)]\\,dx$.',
+  },
       'Negative',
-      'Undefined'
+      'Undefined',
     ],
     correctIndex: 1,
     difficulty: 'medium',

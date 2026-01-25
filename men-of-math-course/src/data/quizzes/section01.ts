@@ -21,11 +21,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'In the Achilles and the Tortoise paradox, why can Achilles supposedly never catch the tortoise?',
     options: [
       'The tortoise is faster',
-      'Achilles must first reach where the tortoise was, but it has moved',
       'The race is infinitely long',
+      'Achilles must first reach where the tortoise was, but it has moved',
       'Time stops when Achilles runs'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Each time Achilles reaches where the tortoise was, it has moved ahead, creating an infinite sequence of points to traverse.',
   },
@@ -34,12 +34,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Arrow Paradox argues that at any instant, a flying arrow is:',
     options: [
+      'Motionless (occupying a space equal to itself)',
       'Moving at maximum speed',
       'Accelerating',
-      'Motionless (occupying a space equal to itself)',
-      'In two places at once'
+      'In two places at once',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'At any single instant, the arrow occupies a space exactly its size and is not moving, so motion is an illusion.',
   },
@@ -49,11 +49,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'What mathematical concept eventually resolved Zeno\'s paradoxes?',
     options: [
       'Euclidean geometry',
-      'The concept of limits and infinite series',
       'Complex numbers',
-      'Set theory'
+      'Set theory',
+      'The concept of limits and infinite series',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The concept of limits shows that an infinite sum can have a finite value, resolving the paradoxes about infinite divisibility.',
   },

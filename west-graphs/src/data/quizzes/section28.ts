@@ -7,11 +7,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'The spectrum of a graph $G$ is:',
     options: [
       'Its degree sequence',
-      'The multiset of eigenvalues of its adjacency matrix',
       'The chromatic number',
-      'The set of cycle lengths'
+      'The multiset of eigenvalues of its adjacency matrix',
+      'The set of cycle lengths',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Spectrum = eigenvalues of the adjacency matrix $A(G)$, listed with multiplicities.',
   },
@@ -35,11 +35,19 @@ export const section28Questions: QuizQuestion[] = [
     question: 'The smallest eigenvalue of the Laplacian is always:',
     options: [
       '1',
+      '$-1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The all-ones vector $(1,\\ldots,1)^T$ is always a Laplacian eigenvector with eigenvalue 0.',
+  },
+      '$n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The all-ones vector $(1,\\ldots,1)^T$ is always a Laplacian eigenvector with eigenvalue 0.',
+  },
       '0',
-      '$-1$',
-      '$n$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The all-ones vector $(1,\\ldots,1)^T$ is always a Laplacian eigenvector with eigenvalue 0.',
   },
@@ -48,12 +56,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The algebraic connectivity $a(G) = \\mu_2$ is:',
     options: [
-      'The largest eigenvalue',
       'The second-smallest Laplacian eigenvalue',
+      'The largest eigenvalue',
+      'The trace',
       'The determinant',
-      'The trace'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Algebraic connectivity = second-smallest Laplacian eigenvalue. $a(G) > 0$ iff $G$ connected.',
   },
@@ -63,11 +71,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'A strongly regular graph with parameters $(n,k,\\lambda,\\mu)$ has:',
     options: [
       'Exactly 2 distinct eigenvalues',
-      'Exactly 3 distinct eigenvalues',
       '$n$ distinct eigenvalues',
-      'All equal eigenvalues'
+      'Exactly 3 distinct eigenvalues',
+      'All equal eigenvalues',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Strongly regular graphs have exactly 3 distinct adjacency eigenvalues: $k$, $r$, and $s$.',
   },

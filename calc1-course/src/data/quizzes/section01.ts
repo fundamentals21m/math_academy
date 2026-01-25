@@ -7,11 +7,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'What is the method of exhaustion used for?',
     options: [
       'Finding limits of sequences',
-      'Computing areas by inscribing polygons',
       'Solving differential equations',
-      'Factoring polynomials'
+      'Factoring polynomials',
+      'Computing areas by inscribing polygons',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The method of exhaustion approximates the area of a shape by inscribing polygons whose areas converge to the area of the containing shape.',
   },
@@ -21,11 +21,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'When approximating the area under $y = x^2$ from $0$ to $b$ using $n$ rectangles, what is the width of each rectangle?',
     options: [
       '$n/b$',
-      '$b/n$',
       '$b \\cdot n$',
+      '$b/n$',
       '$b^2/n$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The base of length $b$ is divided into $n$ equal parts, so each has width $b/n$.',
   },
@@ -43,12 +43,28 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Archimedes conclude is the area under $y = x^2$ from $0$ to $b$?',
     options: [
-      '$b^2$',
-      '$b^3/2$',
-      '$b^3/3$',
-      '$b^2/2$'
+      '$b^3/3
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Using the method of exhaustion, Archimedes showed that the area under $y = x^2$ from $0$ to $b$ is $b^3/3$.',
+  },
+      '$b^2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Using the method of exhaustion, Archimedes showed that the area under $y = x^2$ from $0$ to $b$ is $b^3/3$.',
+  },
+      '$b^3/2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Using the method of exhaustion, Archimedes showed that the area under $y = x^2$ from $0$ to $b$ is $b^3/3$.',
+  },
+      '$b^2/2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Using the method of exhaustion, Archimedes showed that the area under $y = x^2$ from $0$ to $b$ is $b^3/3$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Using the method of exhaustion, Archimedes showed that the area under $y = x^2$ from $0$ to $b$ is $b^3/3$.',
   },
@@ -60,7 +76,7 @@ export const section01Questions: QuizQuestion[] = [
       'It gives the minimum height',
       'It gives the maximum height since $x^2$ is increasing',
       'It simplifies the calculation',
-      'It was Archimedes\' convention'
+      'It was Archimedes\\' convention',
     ],
     correctIndex: 1,
     difficulty: 'medium',

@@ -6,12 +6,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Carl Gustav Jacob Jacobi is best known for his work on:',
     options: [
-      'Number theory',
       'Elliptic functions',
+      'Number theory',
       'Geometry',
-      'Statistics'
+      'Statistics',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Jacobi made fundamental contributions to the theory of elliptic functions.',
   },
@@ -23,7 +23,7 @@ export const section20Questions: QuizQuestion[] = [
       'Second derivatives',
       'First partial derivatives',
       'Integrals',
-      'Eigenvalues'
+      'Eigenvalues',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Jacobi\'s identity is a fundamental relation in:',
     options: [
       'Linear algebra',
+      'Topology',
       'Lie algebras',
       'Number theory',
-      'Topology'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Jacobi\'s identity $[x,[y,z]] + [y,[z,x]] + [z,[x,y]] = 0$ is fundamental in Lie algebra theory.',
   },
@@ -48,12 +48,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Jacobi contributed to mechanics through:',
     options: [
-      'The Hamilton-Jacobi equation',
       'The Lagrangian',
-      'Newton\'s laws',
-      'Special relativity'
+      'Newton\\'s laws',
+      'Special relativity',
+      'The Hamilton-Jacobi equation',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The Hamilton-Jacobi equation reformulates classical mechanics and connects to quantum mechanics.',
   },
@@ -63,11 +63,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Jacobi competed with which mathematician in developing elliptic function theory?',
     options: [
       'Gauss',
-      'Abel',
       'Cauchy',
-      'Euler'
+      'Euler',
+      'Abel',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Jacobi and Abel developed elliptic function theory independently and nearly simultaneously.',
   },

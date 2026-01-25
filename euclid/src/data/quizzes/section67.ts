@@ -20,12 +20,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to III.3, what is the relationship between perpendicularity and bisection for a diameter and chord?',
     options: [
+      'They are equivalent (each implies the other)',
       'They are unrelated',
       'Perpendicularity implies bisection, but not vice versa',
       'Bisection implies perpendicularity, but not vice versa',
-      'They are equivalent (each implies the other)'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'III.3 is a biconditional: a diameter perpendicular to a chord bisects it, AND a diameter that bisects a chord is perpendicular to it.',
   },
@@ -34,12 +34,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The proof uses which earlier result about isosceles triangles?',
     options: [
-      'I.4 (SAS congruence)',
+      'I.32 (angle sum of triangle)',
       'I.5 (base angles of isosceles triangle are equal)',
       'I.47 (Pythagorean theorem)',
-      'I.32 (angle sum of triangle)'
+      'I.4 (SAS congruence)'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The proof uses I.4 (SAS) to show triangles formed by the center, midpoint, and endpoints are congruent.',
   },

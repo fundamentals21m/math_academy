@@ -20,12 +20,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $\\mathbb{R}^3$, the curl of a vector field $F$ corresponds to:',
     options: [
-      'The exterior derivative of the 1-form associated to $F$, converted back to a vector',
       'The divergence of $F$',
+      'The exterior derivative of the 1-form associated to $F$, converted back to a vector',
       'The gradient of a scalar',
       'The Laplacian of $F$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'If $\\omega_F$ is the 1-form for $F$, then $d\\omega_F$ is a 2-form. Using the Hodge star in $\\mathbb{R}^3$, this converts to a 1-form, giving curl $F$.',
   },
@@ -34,12 +34,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The divergence of a vector field $F$ in $\\mathbb{R}^3$ corresponds to:',
     options: [
-      'The exterior derivative of the 2-form $*\\omega_F$, yielding a 3-form proportional to $\\text{div}(F)\\,dV$',
-      'The exterior derivative of the 1-form $\\omega_F$',
       'A 0-form directly',
+      'The exterior derivative of the 1-form $\\omega_F$',
+      'The exterior derivative of the 2-form $*\\omega_F$, yielding a 3-form proportional to $\\text{div}(F)\\,dV$',
       'The curl of another field'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Divergence is captured by taking $d$ of the 2-form associated to $F$ via the Hodge star. The result is a 3-form $\\text{div}(F) dx \\wedge dy \\wedge dz$.',
   },
@@ -48,12 +48,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The identity $\\text{curl}(\\nabla f) = 0$ corresponds to:',
     options: [
-      '$d(df) = 0$ (since $d^2 = 0$)',
+      'Green\'s theorem',
       'The divergence theorem',
       'The mean value theorem',
-      'Green\'s theorem'
+      '$d(df) = 0$ (since $d^2 = 0$)'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The curl of a gradient is zero because the curl corresponds to $d$ of a 1-form, and $df$ is already the $d$ of the 0-form $f$. So $d(df) = d^2 f = 0$.',
   },
@@ -62,10 +62,14 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The identity $\\text{div}(\\text{curl } F) = 0$ corresponds to:',
     options: [
-      '$d^2 = 0$ applied to the 1-form of $F$',
-      'Stokes\' theorem',
+      'Stokes\\' theorem',
+      '$d^2 = 0$ applied to the 1-form of $F
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Div of curl corresponds to applying $d$ twice (in the appropriate form language), which gives zero by $d^2 = 0$.',
+  },
       'The product rule',
-      'Conservation of mass'
+      'Conservation of mass',
     ],
     correctIndex: 0,
     difficulty: 'medium',

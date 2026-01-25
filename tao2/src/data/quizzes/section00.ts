@@ -6,12 +6,28 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT one of the four axioms required for a distance function $d$ to be a metric?',
     options: [
-      'Reflexivity: $d(x, x) = 0$',
-      'Commutativity: $d(x, y) + d(y, z) = d(y, x) + d(z, y)$',
-      'Symmetry: $d(x, y) = d(y, x)$',
-      'Triangle inequality: $d(x, z) \\leq d(x, y) + d(y, z)$'
+      'Reflexivity: $d(x, x) = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The four metric axioms are reflexivity, positivity (distinct points have positive distance), symmetry, and the triangle inequality. Commutativity of addition is not a metric axiom.',
+  },
+      'Symmetry: $d(x, y) = d(y, x)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The four metric axioms are reflexivity, positivity (distinct points have positive distance), symmetry, and the triangle inequality. Commutativity of addition is not a metric axiom.',
+  },
+      'Triangle inequality: $d(x, z) \\leq d(x, y) + d(y, z)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The four metric axioms are reflexivity, positivity (distinct points have positive distance), symmetry, and the triangle inequality. Commutativity of addition is not a metric axiom.',
+  },
+      'Commutativity: $d(x, y) + d(y, z) = d(y, x) + d(z, y)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The four metric axioms are reflexivity, positivity (distinct points have positive distance), symmetry, and the triangle inequality. Commutativity of addition is not a metric axiom.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The four metric axioms are reflexivity, positivity (distinct points have positive distance), symmetry, and the triangle inequality. Commutativity of addition is not a metric axiom.',
   },
@@ -37,7 +53,28 @@ export const section00Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'In the discrete metric, what is $d_{\\text{disc}}(x, y)$ when $x \\neq y$?',
-    options: ['$0$', '$1$', '$|x - y|$', '$\\infty$'],
+    options: [
+      '$1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'In the discrete metric, $d(x, y) = 0$ if $x = y$, and $d(x, y) = 1$ if $x \\neq y$.',
+  },
+      '$0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In the discrete metric, $d(x, y) = 0$ if $x = y$, and $d(x, y) = 1$ if $x \\neq y$.',
+  },
+      '$|x - y|
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In the discrete metric, $d(x, y) = 0$ if $x = y$, and $d(x, y) = 1$ if $x \\neq y$.',
+  },
+      '$\\infty
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In the discrete metric, $d(x, y) = 0$ if $x = y$, and $d(x, y) = 1$ if $x \\neq y$.',
+  },
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     explanation: 'In the discrete metric, $d(x, y) = 0$ if $x = y$, and $d(x, y) = 1$ if $x \\neq y$.',
@@ -48,9 +85,21 @@ export const section00Questions: QuizQuestion[] = [
     question: 'The sequence $(1/n, 1/n)$ in $\\mathbf{R}^2$ converges to $(0, 0)$ in the Euclidean metric. Does it converge to $(0, 0)$ in the discrete metric?',
     options: [
       'Yes, because all metrics give the same convergence',
-      'No, because $d_{\\text{disc}}((1/n, 1/n), (0, 0)) = 1$ for all $n \\geq 1$',
-      'Yes, because $1/n \\to 0$',
-      'No, because the discrete metric is not defined on $\\mathbf{R}^2$'
+      'Yes, because $1/n \\to 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'In the discrete metric, any two distinct points are distance 1 apart. Since $(1/n, 1/n) \\neq (0, 0)$ for all $n \\geq 1$, we have $d_{\\text{disc}}((1/n, 1/n), (0, 0)) = 1$ always, so there is no convergence.',
+  },
+      'No, because $d_{\\text{disc}}((1/n, 1/n), (0, 0)) = 1$ for all $n \\geq 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In the discrete metric, any two distinct points are distance 1 apart. Since $(1/n, 1/n) \\neq (0, 0)$ for all $n \\geq 1$, we have $d_{\\text{disc}}((1/n, 1/n), (0, 0)) = 1$ always, so there is no convergence.',
+  },
+      'No, because the discrete metric is not defined on $\\mathbf{R}^2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In the discrete metric, any two distinct points are distance 1 apart. Since $(1/n, 1/n) \\neq (0, 0)$ for all $n \\geq 1$, we have $d_{\\text{disc}}((1/n, 1/n), (0, 0)) = 1$ always, so there is no convergence.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

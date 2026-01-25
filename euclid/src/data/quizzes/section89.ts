@@ -7,11 +7,11 @@ export const section89Questions: QuizQuestion[] = [
     question: 'Proposition III.25 is a construction. What does it construct?',
     options: [
       'A tangent line to a circle',
-      'The complete circle given a segment of it',
+      'The center of a given complete circle',
       'A chord of given length',
-      'The center of a given complete circle'
+      'The complete circle given a segment of it'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'III.25 shows how to complete a circle when only a segment (arc and chord) is given.',
   },
@@ -20,10 +20,10 @@ export const section89Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The construction relies on finding what?',
     options: [
-      'The tangent point',
       'The diameter',
+      'The tangent point',
       'The center of the circle',
-      'The inscribed angle'
+      'The inscribed angle',
     ],
     correctIndex: 2,
     difficulty: 'easy',

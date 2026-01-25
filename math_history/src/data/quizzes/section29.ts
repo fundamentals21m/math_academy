@@ -39,11 +39,11 @@ export const section29Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'A center point',
-      'Points at infinity (one for each direction)',
-      'Additional coordinate axes',
       'A third dimension',
+      'Additional coordinate axes',
+      'Points at infinity (one for each direction)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'The projective plane adds one "point at infinity" for each direction (parallel class of lines). These points all lie on a single "line at infinity." This ensures any two distinct lines meet in exactly one point.',
   },
@@ -53,12 +53,12 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What is the cross-ratio of four collinear points?',
     difficulty: 'medium',
     options: [
-      'The sum of distances between consecutive points',
-      'The ratio of two distances',
       'A ratio of ratios: $(AC \\cdot BD)/(AD \\cdot BC)$',
-      'The area of the quadrilateral they form',
+      'The ratio of two distances',
+      'The sum of distances between consecutive points',
+      'The area of the quadrilateral they form'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'The cross-ratio $(A, B; C, D) = \\frac{AC \\cdot BD}{AD \\cdot BC}$ is the fundamental projective invariant. It is preserved under all projections.',
   },
@@ -86,11 +86,11 @@ export const section29Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'They meet in at most $m + n$ points',
-      'They meet in exactly $mn$ points (counting properly)',
       'They meet in $m \\cdot n^2$ points',
-      'They may not meet at all',
+      'They meet in exactly $mn$ points (counting properly)',
+      'They may not meet at all'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'In the projective plane with complex coordinates, Bézout\'s theorem states that curves of degrees $m$ and $n$ meet in exactly $mn$ points (counted with multiplicity). The projective setting eliminates the "missing" intersections at infinity.',
   },

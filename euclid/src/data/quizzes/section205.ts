@@ -7,11 +7,11 @@ export const section205Questions: QuizQuestion[] = [
     question: 'What does Proposition VII.26 prove about products of relatively prime pairs?',
     options: [
       'Products of relatively prime numbers are always prime',
-      'If each of two numbers is relatively prime to each of two others, the products are relatively prime',
+      'The product of all relatively prime pairs is infinite',
       'Relatively prime pairs multiply to give perfect squares',
-      'The product of all relatively prime pairs is infinite'
+      'If each of two numbers is relatively prime to each of two others, the products are relatively prime'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'VII.26: If gcd(a,c) = 1, gcd(a,d) = 1, gcd(b,c) = 1, and gcd(b,d) = 1, then gcd(ab, cd) = 1. Cross-relative primality implies product relative primality.',
   },

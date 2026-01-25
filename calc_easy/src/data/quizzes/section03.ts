@@ -6,12 +6,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of a constant?',
     options: [
-      'The constant itself',
       'One',
       'Zero',
-      'Undefined'
+      'The constant itself',
+      'Undefined',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The derivative of any constant is zero because a constant does not change.',
   },
@@ -20,10 +20,26 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of $y = x$?',
     options: [
-      '$0$',
-      '$1$',
-      '$x$',
-      '$2x$'
+      '$0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'If $y = x$, then $\\frac{dy}{dx} = 1$ because $y$ changes at the same rate as $x$.',
+  },
+      '$x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $y = x$, then $\\frac{dy}{dx} = 1$ because $y$ changes at the same rate as $x$.',
+  },
+      '$2x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $y = x$, then $\\frac{dy}{dx} = 1$ because $y$ changes at the same rate as $x$.',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $y = x$, then $\\frac{dy}{dx} = 1$ because $y$ changes at the same rate as $x$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -43,12 +59,28 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivative of $y = 3x + c$ (where $c$ is a constant) is:',
     options: [
-      '$3 + c$',
-      '$3$',
-      '$c$',
-      '$3x$'
+      '$3
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The derivative of $3x$ is $3$, and the derivative of the constant $c$ is $0$.',
+  },
+      '$3 + c
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The derivative of $3x$ is $3$, and the derivative of the constant $c$ is $0$.',
+  },
+      '$c
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The derivative of $3x$ is $3$, and the derivative of the constant $c$ is $0$.',
+  },
+      '$3x
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The derivative of $3x$ is $3$, and the derivative of the constant $c$ is $0$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The derivative of $3x$ is $3$, and the derivative of the constant $c$ is $0$.',
   },
@@ -58,11 +90,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'Which statement best describes why constants "disappear" when we differentiate?',
     options: [
       'Constants are always equal to zero',
+      'Constants become infinitely small',
       'Constants do not change, so their rate of change is zero',
       'We ignore constants in calculus',
-      'Constants become infinitely small'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A constant has no rate of change—it remains the same regardless of $x$—so its derivative is zero.',
   },

@@ -21,12 +21,12 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Where do parallel lines appear to meet in a perspective drawing?',
     options: [
+      'At a vanishing point on the horizon',
       'At the center of the picture',
       'At random points',
-      'At a vanishing point on the horizon',
-      'They never meet'
+      'They never meet',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'In perspective drawing, parallel lines (except those parallel to the picture plane) appear to meet at a vanishing point on the horizon.',
   },
@@ -35,12 +35,12 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the horizon line in perspective drawing?',
     options: [
-      'The bottom edge of the picture',
       'The line at eye level where all vanishing points for ground-level parallel lines lie',
+      'The bottom edge of the picture',
       'A vertical line through the center',
-      'The top edge of the canvas'
+      'The top edge of the canvas',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The horizon is the line at eye level that contains the vanishing points for all sets of parallel lines on the ground plane.',
   },
@@ -50,11 +50,11 @@ export const section31Questions: QuizQuestion[] = [
     question: 'In a one-point perspective drawing of a tiled floor, the diagonals help determine:',
     options: [
       'The color of the tiles',
-      'The correct spacing of rows receding into the distance',
       'The height of the viewer',
-      'The number of tiles'
+      'The correct spacing of rows receding into the distance',
+      'The number of tiles',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The diagonals of square tiles have their own vanishing point, which helps determine where to place the horizontal lines for each row of tiles.',
   },
@@ -67,12 +67,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In projective geometry, what replaces compass constructions?',
     options: [
+      'Points at infinity (vanishing points)',
       'Protractor constructions',
       'Ruler measurements',
-      'Points at infinity (vanishing points)',
-      'Curved line segments'
+      'Curved line segments',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Points at infinity (vanishing points) allow straightedge-only constructions to accomplish tasks that would otherwise require a compass.',
   },
@@ -82,9 +82,13 @@ export const section32Questions: QuizQuestion[] = [
     question: 'How can you draw a line through point $P$ parallel to line $\\mathcal{L}$ using only a straightedge?',
     options: [
       'It is impossible with straightedge alone',
-      'Draw a line from $P$ through the vanishing point of $\\mathcal{L}$',
       'Draw a perpendicular first',
-      'Measure equal distances with the straightedge'
+      'Draw a line from $P$ through the vanishing point of $\\mathcal{L}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A line through $P$ parallel to $\\mathcal{L}$ is drawn by connecting $P$ to the vanishing point of $\\mathcal{L}$, since parallel lines share the same vanishing point.',
+  },
+      'Measure equal distances with the straightedge',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -96,9 +100,13 @@ export const section32Questions: QuizQuestion[] = [
     question: 'Given two parallel lines and their vanishing point $V$, how do you find the midpoint of a segment $AB$ on one line?',
     options: [
       'Measure with a ruler',
-      'Draw parallel lines from $A$ and $B$ to the other line, then use diagonals and $V$',
       'Use a compass to bisect',
-      'It cannot be done with straightedge alone'
+      'Draw parallel lines from $A$ and $B$ to the other line, then use diagonals and $V
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Using the vanishing point and a second parallel line, you can construct a parallelogram and use its diagonals to find the midpoint.',
+  },
+      'It cannot be done with straightedge alone',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -111,10 +119,10 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'Drawings become more colorful',
       'Lines can be made perfectly straight',
+      'The drawings become three-dimensional',
       'Parallelism becomes a matter of incidence (passing through a point)',
-      'The drawings become three-dimensional'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Points at infinity convert the property of parallelism into incidence—parallel lines all pass through their vanishing point.',
   },
@@ -129,10 +137,10 @@ export const section33Questions: QuizQuestion[] = [
     options: [
       'One',
       'Two',
+      'Five',
       'Three',
-      'Five'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A projective plane is defined by exactly three axioms about incidence of points and lines.',
   },
@@ -141,12 +149,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is one of the projective plane axioms?',
     options: [
-      'Any two points lie on exactly one line',
       'Parallel lines never meet',
       'All lines have the same length',
-      'Every line passes through the origin'
+      'Any two points lie on exactly one line',
+      'Every line passes through the origin',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'One axiom states: Any two "points" lie on exactly one "line."',
   },
@@ -155,10 +163,18 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the model $\\mathbb{R}P^2$, what are the "points"?',
     options: [
-      'Points in $\\mathbb{R}^2$',
-      'Lines through the origin $O$ in $\\mathbb{R}^3$',
+      'Points in $\\mathbb{R}^2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'In $\\mathbb{R}P^2$, each "point" is a line through the origin $O$ in $\\mathbb{R}^3$.',
+  },
       'Circles in the plane',
-      'Triangles in space'
+      'Triangles in space',
+      'Lines through the origin $O$ in $\\mathbb{R}^3
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In $\\mathbb{R}P^2$, each "point" is a line through the origin $O$ in $\\mathbb{R}^3$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -169,10 +185,18 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $\\mathbb{R}P^2$, what are the "lines"?',
     options: [
-      'Lines in $\\mathbb{R}^2$',
-      'Planes through the origin $O$ in $\\mathbb{R}^3$',
+      'Lines in $\\mathbb{R}^2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'In $\\mathbb{R}P^2$, each "line" is a plane through the origin $O$ in $\\mathbb{R}^3$.',
+  },
       'Spheres centered at the origin',
-      'Cylinders around the z-axis'
+      'Planes through the origin $O$ in $\\mathbb{R}^3
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In $\\mathbb{R}P^2$, each "line" is a plane through the origin $O$ in $\\mathbb{R}^3$.',
+  },
+      'Cylinders around the z-axis',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -215,10 +239,18 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A "line" in $\\mathbb{R}P^2$ is defined by what type of equation?',
     options: [
-      '$x^2 + y^2 + z^2 = 1$',
-      '$ax + by + cz = 0$ (linear, homogeneous)',
+      '$x^2 + y^2 + z^2 = 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Lines in $\\mathbb{R}P^2$ are defined by homogeneous linear equations $ax + by + cz = 0$.',
+  },
       '$ax + by + cz = 1$ (linear, non-homogeneous)',
-      '$xyz = 0$'
+      '$ax + by + cz = 0$ (linear, homogeneous)',
+      '$xyz = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Lines in $\\mathbb{R}P^2$ are defined by homogeneous linear equations $ax + by + cz = 0$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -229,10 +261,26 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The "ordinary" points of $\\mathbb{R}P^2$ are those with:',
     options: [
-      '$x = 0$',
-      '$y = 0$',
-      '$z \\neq 0$',
-      '$z = 0$'
+      '$z \\neq 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Ordinary points have $z \\neq 0$ and can be normalized to $(x, y, 1)$, corresponding to $(x, y)$ in $\\mathbb{R}^2$.',
+  },
+      '$x = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Ordinary points have $z \\neq 0$ and can be normalized to $(x, y, 1)$, corresponding to $(x, y)$ in $\\mathbb{R}^2$.',
+  },
+      '$y = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Ordinary points have $z \\neq 0$ and can be normalized to $(x, y, 1)$, corresponding to $(x, y)$ in $\\mathbb{R}^2$.',
+  },
+      '$z = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Ordinary points have $z \\neq 0$ and can be normalized to $(x, y, 1)$, corresponding to $(x, y)$ in $\\mathbb{R}^2$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -271,12 +319,12 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What makes the complex projective plane $\\mathbb{C}P^2$ different from $\\mathbb{R}P^2$?',
     options: [
-      'It has different axioms',
       'The coordinates $x, y, z$ and scalar $t$ are complex numbers instead of real',
+      'It has different axioms',
       'Lines are defined by non-homogeneous equations',
-      'It has no points at infinity'
+      'It has no points at infinity',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In $\\mathbb{C}P^2$, the coordinates are complex numbers and $t$ ranges over nonzero complex numbers. The algebraic structure and axioms remain the same.',
   },
@@ -285,10 +333,22 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $\\mathbb{R}P^3$ (projective 3-space), a "point" is represented by:',
     options: [
-      'A triple $(x, y, z)$',
+      'A triple $(x, y, z)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'In $\\mathbb{R}P^3$, points are represented by quadruples $(w, x, y, z)$ not all zero, with $(tw, tx, ty, tz)$ representing the same point for any $t \\neq 0$.',
+  },
+      'A pair $(x, y)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In $\\mathbb{R}P^3$, points are represented by quadruples $(w, x, y, z)$ not all zero, with $(tw, tx, ty, tz)$ representing the same point for any $t \\neq 0$.',
+  },
       'A quadruple $(w, x, y, z)$ with multiples $(tw, tx, ty, tz)$ representing the same point',
-      'A pair $(x, y)$',
-      'A single coordinate $x$'
+      'A single coordinate $x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In $\\mathbb{R}P^3$, points are represented by quadruples $(w, x, y, z)$ not all zero, with $(tw, tx, ty, tz)$ representing the same point for any $t \\neq 0$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -299,10 +359,26 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $\\mathbb{R}P^3$, what is a "line"?',
     options: [
-      'A 1-dimensional subspace (line through O) in $\\mathbb{R}^4$',
-      'A 2-dimensional subspace (plane through O) in $\\mathbb{R}^4$',
-      'A 3-dimensional subspace in $\\mathbb{R}^4$',
-      'A circle in $\\mathbb{R}^4$'
+      'A 1-dimensional subspace (line through O) in $\\mathbb{R}^4
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'In $\\mathbb{R}P^3$, a "line" is a plane through the origin in $\\mathbb{R}^4$, spanned by two linearly independent vectors.',
+  },
+      'A 3-dimensional subspace in $\\mathbb{R}^4
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'In $\\mathbb{R}P^3$, a "line" is a plane through the origin in $\\mathbb{R}^4$, spanned by two linearly independent vectors.',
+  },
+      'A 2-dimensional subspace (plane through O) in $\\mathbb{R}^4
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'In $\\mathbb{R}P^3$, a "line" is a plane through the origin in $\\mathbb{R}^4$, spanned by two linearly independent vectors.',
+  },
+      'A circle in $\\mathbb{R}^4
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'In $\\mathbb{R}P^3$, a "line" is a plane through the origin in $\\mathbb{R}^4$, spanned by two linearly independent vectors.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -327,12 +403,12 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the equation $ax + by + cz = 0$ called "homogeneous"?',
     options: [
-      'Because all terms have the same degree (degree 1)',
       'Because the coefficients $a, b, c$ are equal',
       'Because it has a unique solution',
-      'Because it describes a sphere'
+      'Because it describes a sphere',
+      'Because all terms have the same degree (degree 1)',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A homogeneous equation has all terms of the same degree. In $ax + by + cz = 0$, each term has degree 1. This ensures that if $(x, y, z)$ is a solution, so is $(tx, ty, tz)$ for any $t$.',
   },
@@ -345,12 +421,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When projecting parallel lines $\\mathcal{L}_1$ and $\\mathcal{L}_2$, what transformation does the map represent?',
     options: [
+      '$x \\mapsto x + l$ (translation)',
       'Rotation',
       'Reflection',
-      '$x \\mapsto x + l$ (translation)',
-      '$x \\mapsto 1/x$ (reciprocation)'
+      '$x \\mapsto 1/x$ (reciprocation)',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Projection from a point at infinity onto parallel lines produces a translation: $x \\mapsto x + l$.',
   },
@@ -359,10 +435,22 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Projection from a finite point onto parallel lines produces:',
     options: [
-      '$x \\mapsto x + l$',
+      '$x \\mapsto x + l
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Projection from a finite point onto parallel lines scales distances by a constant factor: $x \\mapsto kx$.',
+  },
+      '$x \\mapsto 1/x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Projection from a finite point onto parallel lines scales distances by a constant factor: $x \\mapsto kx$.',
+  },
+      '$x \\mapsto x^2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Projection from a finite point onto parallel lines scales distances by a constant factor: $x \\mapsto kx$.',
+  },
       '$x \\mapsto kx$ (scaling)',
-      '$x \\mapsto 1/x$',
-      '$x \\mapsto x^2$'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -373,10 +461,22 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Projection onto perpendicular lines (from an equidistant point) produces:',
     options: [
-      '$x \\mapsto x + l$',
-      '$x \\mapsto kx$',
+      '$x \\mapsto x + l
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'When projecting onto perpendicular lines from an equidistant point, the transformation is $x \\mapsto 1/x$.',
+  },
+      '$x \\mapsto kx
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'When projecting onto perpendicular lines from an equidistant point, the transformation is $x \\mapsto 1/x$.',
+  },
+      '$x \\mapsto -x
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'When projecting onto perpendicular lines from an equidistant point, the transformation is $x \\mapsto 1/x$.',
+  },
       '$x \\mapsto 1/x$ (reciprocation)',
-      '$x \\mapsto -x$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -433,10 +533,22 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'On $\\mathbb{R}P^1$, what is $1/0$?',
     options: [
+      '$\\infty
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'On the projective line, we define $1/0 = \\infty$ and $1/\\infty = 0$, making reciprocation well-defined everywhere.',
+  },
       'Undefined',
-      '$0$',
-      '$1$',
-      '$\\infty$'
+      '$0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'On the projective line, we define $1/0 = \\infty$ and $1/\\infty = 0$, making reciprocation well-defined everywhere.',
+  },
+      '$1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'On the projective line, we define $1/0 = \\infty$ and $1/\\infty = 0$, making reciprocation well-defined everywhere.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -447,12 +559,12 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many points on $\\mathbb{R}P^1$ determine a unique linear fractional transformation?',
     options: [
+      'Three points (and their images)',
       'One point',
       'Two points',
-      'Three points (and their images)',
-      'Four points'
+      'Four points',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Three points and their images determine a unique linear fractional transformation. Once three points are fixed, every other point is determined.',
   },
@@ -462,11 +574,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'The composition of two linear fractional functions is:',
     options: [
       'Not a linear fractional function',
-      'Always the identity',
       'Another linear fractional function',
-      'A quadratic function'
+      'Always the identity',
+      'A quadratic function',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The composition of linear fractional functions is again linear fractional, and corresponds to matrix multiplication of the coefficient matrices.',
   },
@@ -479,10 +591,26 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cross-ratio of four points $p, q, r, s$ on a line is defined as:',
     options: [
-      '$(r - p) + (s - q)$',
-      '$\\frac{(r - p)(s - q)}{(r - q)(s - p)}$',
-      '$(r - p)(s - q)(r - q)(s - p)$',
-      '$\\frac{r + s}{p + q}$'
+      '$(r - p) + (s - q)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The cross-ratio is $\\frac{(r - p)(s - q)}{(r - q)(s - p)}$, a ratio of ratios.',
+  },
+      '$(r - p)(s - q)(r - q)(s - p)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The cross-ratio is $\\frac{(r - p)(s - q)}{(r - q)(s - p)}$, a ratio of ratios.',
+  },
+      '$\\frac{r + s}{p + q}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The cross-ratio is $\\frac{(r - p)(s - q)}{(r - q)(s - p)}$, a ratio of ratios.',
+  },
+      '$\\frac{(r - p)(s - q)}{(r - q)(s - p)}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The cross-ratio is $\\frac{(r - p)(s - q)}{(r - q)(s - p)}$, a ratio of ratios.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -493,10 +621,14 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cross-ratio is called a "ratio of ratios" because:',
     options: [
+      'It is the ratio $\\frac{(r-p)/(s-p)}{(r-q)/(s-q)}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The cross-ratio can be written as $\\frac{(r-p)/(s-p)}{(r-q)/(s-q)}$, making it a ratio of two ratios.',
+  },
       'It involves four additions',
-      'It is the ratio $\\frac{(r-p)/(s-p)}{(r-q)/(s-q)}$',
       'It always equals a ratio of integers',
-      'It is computed by taking ratios repeatedly'
+      'It is computed by taking ratios repeatedly',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -507,12 +639,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cross-ratio is preserved by:',
     options: [
+      'All linear fractional transformations (projections)',
       'Only translations',
       'Only rotations',
-      'All linear fractional transformations (projections)',
-      'No transformations'
+      'No transformations',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The cross-ratio is invariant under all linear fractional transformations, which represent projections.',
   },
@@ -554,11 +686,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'The theorem of "fourth point determination" states:',
     options: [
       'Any fourth point is arbitrary',
-      'Given three points and a cross-ratio value, the fourth point is uniquely determined',
       'Four points always have cross-ratio 1',
-      'The fourth point can be anywhere'
+      'The fourth point can be anywhere',
+      'Given three points and a cross-ratio value, the fourth point is uniquely determined',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Given three points $p, q, r$ and a cross-ratio value $y$, there is exactly one fourth point $x$ such that $[p, q; r, x] = y$.',
   },
@@ -569,10 +701,10 @@ export const section38Questions: QuizQuestion[] = [
     options: [
       'Preserve distances',
       'Preserve angles',
+      'Preserve areas',
       'Preserve the cross-ratio',
-      'Preserve areas'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Linear fractional transformations are exactly the transformations of $\\mathbb{R}P^1$ that preserve the cross-ratio.',
   },
@@ -595,10 +727,26 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $[p, q; r, s] = y$, then $[p, q; s, r] = $',
     options: [
-      '$y$',
-      '$-y$',
-      '$1/y$',
-      '$1 - y$'
+      '$1/y
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Swapping the last two points inverts the cross-ratio: $[p, q; s, r] = 1/y$.',
+  },
+      '$y
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Swapping the last two points inverts the cross-ratio: $[p, q; s, r] = 1/y$.',
+  },
+      '$-y
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Swapping the last two points inverts the cross-ratio: $[p, q; s, r] = 1/y$.',
+  },
+      '$1 - y
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Swapping the last two points inverts the cross-ratio: $[p, q; s, r] = 1/y$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -627,10 +775,26 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The smallest projective plane, the Fano plane $F_2P^2$, has how many points?',
     options: [
-      '$3$',
-      '$5$',
-      '$7$',
-      '$9$'
+      '$3
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Fano plane has 7 points, corresponding to the 7 nonzero points in $F_2^3$.',
+  },
+      '$5
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Fano plane has 7 points, corresponding to the 7 nonzero points in $F_2^3$.',
+  },
+      '$9
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Fano plane has 7 points, corresponding to the 7 nonzero points in $F_2^3$.',
+  },
+      '$7
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Fano plane has 7 points, corresponding to the 7 nonzero points in $F_2^3$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -641,10 +805,22 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the field $F_2 = \\{0, 1\\}$, what is $1 + 1$?',
     options: [
-      '$0$',
-      '$1$',
-      '$2$',
-      'Undefined'
+      '$1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'In $F_2$ (the field with two elements), $1 + 1 = 0$. This is addition modulo 2.',
+  },
+      '$0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'In $F_2$ (the field with two elements), $1 + 1 = 0$. This is addition modulo 2.',
+  },
+      '$2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'In $F_2$ (the field with two elements), $1 + 1 = 0$. This is addition modulo 2.',
+  },
+      'Undefined',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -656,11 +832,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'The invariance of the cross-ratio was discovered by:',
     options: [
       'Euclid around 300 BCE',
-      'Pappus around 300 CE',
       'Newton in the 17th century',
-      'Gauss in the 19th century'
+      'Gauss in the 19th century',
+      'Pappus around 300 CE',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The invariance of the cross-ratio was discovered by Pappus around 300 CE and rediscovered by Desargues around 1640.',
   },
@@ -670,11 +846,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'What additional axiom ensures that a projective plane has coordinates from a field?',
     options: [
       'The parallel axiom',
-      'The theorem of Pappus',
       'The completeness axiom',
-      'The Archimedean axiom'
+      'The Archimedean axiom',
+      'The theorem of Pappus',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The theorem of Pappus is the fourth axiom needed to ensure that the projective plane has coordinates satisfying the field axioms.',
   },

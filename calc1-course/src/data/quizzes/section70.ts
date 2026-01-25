@@ -20,12 +20,12 @@ export const section70Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Uniform convergence implies:',
     options: [
-      'Pointwise convergence',
-      'Divergence',
       'Nothing about individual points',
-      'The limit is constant'
+      'Divergence',
+      'The limit is constant',
+      'Pointwise convergence',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Uniform convergence is stronger than pointwise.',
   },
@@ -35,11 +35,11 @@ export const section70Questions: QuizQuestion[] = [
     question: 'If $f_n$ are continuous and $f_n \\to f$ uniformly, then $f$ is:',
     options: [
       'Differentiable',
+      'Constant',
       'Continuous',
       'Possibly discontinuous',
-      'Constant'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Uniform limit of continuous functions is continuous.',
   },
@@ -77,11 +77,11 @@ export const section70Questions: QuizQuestion[] = [
     question: 'The Weierstrass M-test helps prove:',
     options: [
       'Pointwise convergence',
-      'Uniform convergence of series',
       'Divergence',
+      'Uniform convergence of series',
       'Continuity'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'M-test: if $|f_n(x)| \\leq M_n$ and $\\sum M_n$ converges, series is uniformly convergent.',
   },

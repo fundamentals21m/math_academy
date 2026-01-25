@@ -6,12 +6,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The line graph $L(G)$ has:',
     options: [
-      'Vertices for each vertex of $G$',
       'Vertices for each edge of $G$, adjacent when edges share a vertex',
+      'Vertices for each vertex of $G$',
       'The same number of edges as $G$',
       'Complementary edges to $G$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$L(G)$ has edges of $G$ as vertices; two are adjacent if the original edges share an endpoint.',
   },
@@ -21,11 +21,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'The chromatic index $\\chi\'(G)$ is:',
     options: [
       'The vertex chromatic number',
-      'The minimum colors for proper edge-coloring',
       'The number of edges',
-      'The maximum degree'
+      'The minimum colors for proper edge-coloring',
+      'The maximum degree',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$\\chi\'(G)$ = minimum colors to color edges so no two edges sharing a vertex have the same color.',
   },
@@ -34,12 +34,24 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Vizing\'s Theorem states that $\\chi\'(G)$ is either:',
     options: [
-      '$\\Delta$ or $\\Delta - 1$',
-      '$\\Delta$ or $\\Delta + 1$',
+      '$\\Delta$ or $\\Delta - 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Vizing: $\\Delta(G) \\leq \\chi\'(G) \\leq \\Delta(G) + 1$ (Class 1 or Class 2 graphs).',
+  },
       '$\\Delta$ exactly',
-      '$2\\Delta$'
+      '$2\\Delta
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Vizing: $\\Delta(G) \\leq \\chi\'(G) \\leq \\Delta(G) + 1$ (Class 1 or Class 2 graphs).',
+  },
+      '$\\Delta$ or $\\Delta + 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Vizing: $\\Delta(G) \\leq \\chi\'(G) \\leq \\Delta(G) + 1$ (Class 1 or Class 2 graphs).',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Vizing: $\\Delta(G) \\leq \\chi\'(G) \\leq \\Delta(G) + 1$ (Class 1 or Class 2 graphs).',
   },
@@ -48,12 +60,28 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A graph $G$ is Class 1 if:',
     options: [
-      '$\\chi\'(G) = \\Delta(G) - 1$',
-      '$\\chi\'(G) = \\Delta(G)$',
-      '$\\chi\'(G) = \\Delta(G) + 1$',
-      '$\\chi\'(G) = 2$'
-    ],
+      '$\\chi\\'(G) = \\Delta(G) - 1
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Class 1: $\\chi\' = \\Delta$. Class 2: $\\chi\' = \\Delta + 1$.',
+  },
+      '$\\chi\\'(G) = \\Delta(G)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Class 1: $\\chi\' = \\Delta$. Class 2: $\\chi\' = \\Delta + 1$.',
+  },
+      '$\\chi\\'(G) = 2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Class 1: $\\chi\' = \\Delta$. Class 2: $\\chi\' = \\Delta + 1$.',
+  },
+      '$\\chi\\'(G) = \\Delta(G) + 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Class 1: $\\chi\' = \\Delta$. Class 2: $\\chi\' = \\Delta + 1$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Class 1: $\\chi\' = \\Delta$. Class 2: $\\chi\' = \\Delta + 1$.',
   },
@@ -71,12 +99,28 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For bipartite graphs, König\'s edge-coloring theorem states:',
     options: [
-      '$\\chi\'(G) = \\chi(G)$',
-      '$\\chi\'(G) = \\Delta(G)$',
-      '$\\chi\'(G) = 2$',
-      '$\\chi\'(G) = n$'
-    ],
+      '$\\chi\\'(G) = \\chi(G)
     correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Every bipartite graph is Class 1: $\\chi\' = \\Delta$.',
+  },
+      '$\\chi\\'(G) = \\Delta(G)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Every bipartite graph is Class 1: $\\chi\' = \\Delta$.',
+  },
+      '$\\chi\\'(G) = 2
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Every bipartite graph is Class 1: $\\chi\' = \\Delta$.',
+  },
+      '$\\chi\\'(G) = n
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Every bipartite graph is Class 1: $\\chi\' = \\Delta$.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Every bipartite graph is Class 1: $\\chi\' = \\Delta$.',
   },

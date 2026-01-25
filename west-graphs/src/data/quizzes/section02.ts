@@ -7,9 +7,9 @@ export const section02Questions: QuizQuestion[] = [
     question: 'A walk in a graph is:',
     options: [
       'A sequence of vertices where each consecutive pair is adjacent',
-      'A sequence of distinct vertices',
       'A closed sequence of vertices',
-      'A sequence with no repeated edges'
+      'A sequence of distinct vertices',
+      'A sequence with no repeated edges',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -22,8 +22,8 @@ export const section02Questions: QuizQuestion[] = [
     options: [
       'A path allows repeated vertices, a trail does not',
       'A trail allows repeated vertices but not edges; a path allows neither',
+      'A path must be closed, a trail must be open',
       'There is no difference',
-      'A path must be closed, a trail must be open'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A graph $G$ has an Eulerian circuit if and only if:',
     options: [
-      '$G$ is connected and every vertex has even degree',
       '$G$ is connected and every vertex has odd degree',
       '$G$ is connected and has an even number of vertices',
-      '$G$ has an even number of edges'
+      '$G$ has an even number of edges',
+      '$G$ is connected and every vertex has even degree',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A connected graph has an Eulerian circuit (closed trail using every edge exactly once) iff every vertex has even degree.',
   },
@@ -49,11 +49,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'A connected graph $G$ has an Eulerian trail (but not circuit) if and only if:',
     options: [
       'Every vertex has odd degree',
-      'Exactly two vertices have odd degree',
       'At most two vertices have odd degree',
-      'The graph has an even number of edges'
+      'Exactly two vertices have odd degree',
+      'The graph has an even number of edges',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'An Eulerian trail exists iff $G$ is connected and has exactly 0 or 2 vertices of odd degree. With 0 odd-degree vertices, it is a circuit.',
   },
@@ -71,12 +71,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Königsberg Bridge Problem asked whether there exists:',
     options: [
-      'A Hamiltonian cycle through 7 bridges',
       'An Eulerian trail through 7 bridges',
+      'A Hamiltonian cycle through 7 bridges',
       'A spanning tree of 7 bridges',
-      'A perfect matching of 7 bridges'
+      'A perfect matching of 7 bridges',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Euler proved no Eulerian trail exists because more than 2 vertices have odd degree in the multigraph representing Königsberg.',
   },

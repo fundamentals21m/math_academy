@@ -7,11 +7,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'Who invented perpetual swaps and when?',
     options: [
       'Binance in 2020',
+      'Satoshi Nakamoto in 2009',
       'BitMEX in 2016',
       'Coinbase in 2018',
-      'Satoshi Nakamoto in 2009'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Perpetual swaps were invented by BitMEX in 2016, leveraging Bitcoin\'s ability to settle around the clock.',
   },
@@ -23,7 +23,7 @@ export const section07Questions: QuizQuestion[] = [
       'Every hour',
       'Every 8 hours',
       'Once daily',
-      'Once weekly'
+      'Once weekly',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Between May 2016 and July 2023, what percentage of the time was Bitcoin perpetual funding positive?',
     options: [
+      '72%',
       '50%',
       '65%',
-      '72%',
-      '90%'
+      '90%',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Per BitMEX data, between May 14, 2016 (launch of perpetuals) and July 13, 2023, the funding rate was positive 72% of the time.',
   },
@@ -49,11 +49,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What is "contango" in derivatives markets?',
     options: [
       'When spot price exceeds futures price',
-      'When futures price exceeds spot price',
       'When prices are perfectly equal',
-      'When trading is halted'
+      'When trading is halted',
+      'When futures price exceeds spot price',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Contango is when future prices consistently surpass spot prices—Bitcoin\'s market is structurally inclined toward this condition.',
   },

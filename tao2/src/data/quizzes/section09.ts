@@ -7,11 +7,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'A topological space is defined by specifying:',
     options: [
       'A distance function',
-      'A collection of open sets satisfying certain axioms',
       'A norm',
-      'An inner product'
+      'An inner product',
+      'A collection of open sets satisfying certain axioms',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A topological space is a set $X$ together with a collection of "open sets" satisfying: (1) $\\emptyset$ and $X$ are open, (2) arbitrary unions of open sets are open, (3) finite intersections of open sets are open.',
   },
@@ -23,7 +23,7 @@ export const section09Questions: QuizQuestion[] = [
       'Declaring all sets open',
       'Declaring only $\\emptyset$ and $X$ open',
       'Declaring sets open if they are unions of open balls',
-      'Declaring sets open if they are closed under the metric'
+      'Declaring sets open if they are closed under the metric',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -34,12 +34,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A topological space that can be given a metric inducing its topology is called:',
     options: [
-      'Complete',
       'Metrizable',
+      'Complete',
       'Normal',
       'Hausdorff'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A metrizable space is one whose topology comes from some metric.',
   },
@@ -49,11 +49,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'Which property do all metric spaces have that some topological spaces lack?',
     options: [
       'Compactness',
-      'Connectedness',
       'The Hausdorff property (distinct points have disjoint neighborhoods)',
+      'Connectedness',
       'Completeness'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'All metric spaces are Hausdorff: if $x \\neq y$, balls of radius $d(x,y)/2$ around each are disjoint. Not all topological spaces are Hausdorff.',
   },
@@ -62,12 +62,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a general topological space, a function $f: X \\to Y$ is continuous if:',
     options: [
-      'The preimage of every open set is open',
-      'The image of every open set is open',
       'It satisfies the $\\varepsilon$-$\\delta$ definition',
-      '$f$ is bounded'
+      'The image of every open set is open',
+      '$f$ is bounded',
+      'The preimage of every open set is open',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'In topology, continuity is defined as: preimages of open sets are open. This generalizes the metric space definition.',
   },

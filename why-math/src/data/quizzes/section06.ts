@@ -6,12 +6,28 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A geometric sequence has the form:',
     options: [
-      '$a, a+r, a+2r, a+3r, ...$',
-      '$a, ar, ar^2, ar^3, ...$',
-      '$a, a^2, a^3, a^4, ...$',
-      '$a, 2a, 3a, 4a, ...$'
+      '$a, a+r, a+2r, a+3r, ...
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A geometric sequence multiplies each term by a fixed ratio $r$: $a, ar, ar^2, ar^3, ...$',
+  },
+      '$a, a^2, a^3, a^4, ...
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A geometric sequence multiplies each term by a fixed ratio $r$: $a, ar, ar^2, ar^3, ...$',
+  },
+      '$a, ar, ar^2, ar^3, ...
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A geometric sequence multiplies each term by a fixed ratio $r$: $a, ar, ar^2, ar^3, ...$',
+  },
+      '$a, 2a, 3a, 4a, ...
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A geometric sequence multiplies each term by a fixed ratio $r$: $a, ar, ar^2, ar^3, ...$',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A geometric sequence multiplies each term by a fixed ratio $r$: $a, ar, ar^2, ar^3, ...$',
   },
@@ -20,12 +36,28 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The half-life formula for radioactive decay is:',
     options: [
-      '$Q = Q_0 - \\frac{t}{h}$',
-      '$Q = Q_0 \\times \\frac{t}{h}$',
-      '$Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}$',
-      '$Q = Q_0 \\left(\\frac{1}{2}\\right)^{h/t}$'
+      '$Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'After $t$ time units with half-life $h$: $Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}$.',
+  },
+      '$Q = Q_0 - \\frac{t}{h}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'After $t$ time units with half-life $h$: $Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}$.',
+  },
+      '$Q = Q_0 \\times \\frac{t}{h}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'After $t$ time units with half-life $h$: $Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}$.',
+  },
+      '$Q = Q_0 \\left(\\frac{1}{2}\\right)^{h/t}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'After $t$ time units with half-life $h$: $Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'After $t$ time units with half-life $h$: $Q = Q_0 \\left(\\frac{1}{2}\\right)^{t/h}$.',
   },
@@ -46,7 +78,7 @@ export const section06Questions: QuizQuestion[] = [
       'Linear growth',
       'Exponential growth',
       'Constant value',
-      'Logarithmic growth'
+      'Logarithmic growth',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -67,11 +99,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What does $r^{1/2}$ equal?',
     options: [
       '$r \\div 2$',
-      '$\\sqrt{r}$',
+      '$2r$',
       '$r^2$',
-      '$2r$'
+      '$\\sqrt{r}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'By the laws of exponents, $r^{1/2} = \\sqrt{r}$ (the square root of $r$).',
   },
@@ -80,12 +112,28 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sum of an infinite geometric series $a + ar + ar^2 + ...$ when $|r| < 1$ is:',
     options: [
-      '$\\frac{a}{r}$',
-      '$\\frac{a}{1-r}$',
-      '$\\frac{1-r}{a}$',
-      '$a(1-r)$'
+      '$\\frac{a}{r}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'When $|r| < 1$, the infinite geometric series sums to $\\frac{a}{1-r}$.',
+  },
+      '$\\frac{1-r}{a}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'When $|r| < 1$, the infinite geometric series sums to $\\frac{a}{1-r}$.',
+  },
+      '$a(1-r)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'When $|r| < 1$, the infinite geometric series sums to $\\frac{a}{1-r}$.',
+  },
+      '$\\frac{a}{1-r}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'When $|r| < 1$, the infinite geometric series sums to $\\frac{a}{1-r}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'When $|r| < 1$, the infinite geometric series sums to $\\frac{a}{1-r}$.',
   },
@@ -94,12 +142,24 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Express $0.\\overline{3}$ (0.333...) as a fraction:',
     options: [
-      '$\\frac{3}{10}$',
-      '$\\frac{1}{3}$',
-      '$\\frac{3}{9}$',
-      'Both B and C'
+      'Both B and C',
+      '$\\frac{3}{10}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$0.\\overline{3} = \\frac{3/10}{1 - 1/10} = \\frac{3/10}{9/10} = \\frac{3}{9} = \\frac{1}{3}$.',
+  },
+      '$\\frac{3}{9}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$0.\\overline{3} = \\frac{3/10}{1 - 1/10} = \\frac{3/10}{9/10} = \\frac{3}{9} = \\frac{1}{3}$.',
+  },
+      '$\\frac{1}{3}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$0.\\overline{3} = \\frac{3/10}{1 - 1/10} = \\frac{3/10}{9/10} = \\frac{3}{9} = \\frac{1}{3}$.',
+  },
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$0.\\overline{3} = \\frac{3/10}{1 - 1/10} = \\frac{3/10}{9/10} = \\frac{3}{9} = \\frac{1}{3}$.',
   },
@@ -120,7 +180,7 @@ export const section06Questions: QuizQuestion[] = [
       'The government stops them',
       'Exponential growth quickly exceeds the population',
       'People lose interest',
-      'The ratio $r$ becomes less than 1'
+      'The ratio $r$ becomes less than 1',
     ],
     correctIndex: 1,
     difficulty: 'medium',

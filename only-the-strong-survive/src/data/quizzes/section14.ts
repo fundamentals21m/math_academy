@@ -7,11 +7,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'What does Gall\'s Law state?',
     options: [
       'Complex systems can be designed from scratch',
-      'A complex system that works evolved from a simple system that worked',
       'All systems eventually fail',
+      'A complex system that works evolved from a simple system that worked',
       'Decentralization requires complexity'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Gall\'s Law states: "A complex system that works is invariably found to have evolved from a simple system that worked." You can\'t design complexity from scratch.',
   },
@@ -20,12 +20,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does Gall\'s Law apply to Bitcoin vs. crypto?',
     options: [
-      'Both violate Gall\'s Law equally',
       'Bitcoin is simple and works; crypto tries to build complexity without a working simple base',
-      'Crypto follows Gall\'s Law better',
-      'Gall\'s Law doesn\'t apply to technology'
+      'Both violate Gall\\'s Law equally',
+      'Gall\\'s Law doesn\\'t apply to technology',
+      'Crypto follows Gall\\'s Law better',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Bitcoin is a simple system that works (sound money, settlement layer). Crypto projects try to add complexity without first proving a simple working system—violating Gall\'s Law.',
   },
@@ -35,9 +35,9 @@ export const section14Questions: QuizQuestion[] = [
     question: 'What is the correct approach to building complex Bitcoin functionality according to Gall\'s Law?',
     options: [
       'Start fresh with a new blockchain',
-      'Build layers on top of Bitcoin\'s proven simple base',
+      'Build layers on top of Bitcoin\\'s proven simple base',
       'Fork Bitcoin and add features',
-      'Create a competing currency'
+      'Create a competing currency',
     ],
     correctIndex: 1,
     difficulty: 'medium',

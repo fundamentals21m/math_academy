@@ -48,12 +48,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'What is a composite number?',
       options: [
-        'A number greater than 1 that is not prime',
         'A prime number',
+        'A number greater than 1 that is not prime',
         'A negative number',
         'A number less than 1'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'A composite number is a positive integer greater than 1 that has at least one positive divisor other than 1 and itself.'
     },
@@ -98,12 +98,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Which statement about prime numbers is TRUE?',
       options: [
-        'There are infinitely many primes',
-        'All primes are odd',
         'The largest prime is less than 1 billion',
+        'All primes are odd',
+        'There are infinitely many primes',
         'Prime numbers can be negative'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Euclid proved that there are infinitely many prime numbers. Not all primes are odd (2 is even), and there is no largest prime.'
     }
@@ -133,12 +133,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'The Fundamental Theorem of Arithmetic states that:',
       options: [
-        'Every integer greater than 1 has a unique prime factorization',
+        'The sum of two primes is always composite',
         'There are infinitely many primes',
         'All primes are odd except 2',
-        'The sum of two primes is always composite'
+        'Every integer greater than 1 has a unique prime factorization'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The Fundamental Theorem of Arithmetic states that every integer greater than 1 can be represented uniquely as a product of prime numbers (up to ordering).'
     },
@@ -245,12 +245,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'A Mersenne prime has the form $2^p - 1$. Which statement is TRUE?',
       options: [
-        '$p$ must be prime for $2^p - 1$ to possibly be prime',
         'All numbers of the form $2^p - 1$ are prime',
+        '$p$ must be prime for $2^p - 1$ to possibly be prime',
         '$2^p - 1$ is always composite',
         '$p$ can be any positive integer'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'If $p$ is composite, then $2^p - 1$ is also composite. So $p$ being prime is necessary (but not sufficient) for $2^p - 1$ to be prime.'
     },
@@ -304,12 +304,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Goldbach\'s Conjecture states that:',
       options: [
-        'Every even integer greater than 2 can be expressed as the sum of two primes',
-        'There are infinitely many twin primes',
         'Every odd integer is the sum of three primes',
+        'There are infinitely many twin primes',
+        'Every even integer greater than 2 can be expressed as the sum of two primes',
         'Every prime greater than 3 has the form $6k \\pm 1$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Goldbach\'s Conjecture (still unproven) states that every even integer greater than 2 can be written as the sum of two prime numbers.'
     }

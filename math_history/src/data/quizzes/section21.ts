@@ -7,12 +7,12 @@ export const section21Questions: QuizQuestion[] = [
     question: 'What does the Arabic word "al-jabr" mean?',
     difficulty: 'easy',
     options: [
-      'Calculation',
       'Restoring',
+      'Calculation',
       'Equation',
-      'Unknown',
+      'Unknown'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'The word "algebra" comes from "al-jabr" meaning "restoring." In the context of equations, this meant adding equal terms to both sides.',
   },
@@ -23,11 +23,11 @@ export const section21Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Arithmetic',
-      'Algebra',
       'Algorithm',
-      'Analysis',
+      'Algebra',
+      'Analysis'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'The word "algorithm" derives from al-Khwarizmi\'s name. His book on algebra also gave us the word "algebra" from "al-jabr."',
   },
@@ -55,11 +55,11 @@ export const section21Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Factoring the left side',
-      'Completing the square by adding 25',
-      'Taking the square root of both sides',
       'Dividing by 10',
+      'Taking the square root of both sides',
+      'Completing the square by adding 25'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Al-Khwarizmi completed the square by adding $25 = 5^2$ to both sides. The area $25 + 39 = 64$ gives a square of side $x + 5 = 8$, so $x = 3$.',
   },
@@ -80,12 +80,12 @@ export const section21Questions: QuizQuestion[] = [
       'Without negative coefficients, how many distinct forms does the quadratic equation have?',
     difficulty: 'hard',
     options: [
-      '1 form',
-      '2 forms',
       '3 forms',
-      '4 forms',
+      '2 forms',
+      '1 form',
+      '4 forms'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'Without negative coefficients, there are three forms: $x^2 + ax = b$, $x^2 = ax + b$, and $x^2 + b = ax$. Each required its own solution method.',
   },

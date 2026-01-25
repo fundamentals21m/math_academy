@@ -7,11 +7,15 @@ export const section09Questions: QuizQuestion[] = [
     question: 'An augmenting path with respect to a matching $M$ is:',
     options: [
       'Any path in the graph',
-      'An $M$-alternating path between two $M$-unsaturated vertices',
       'A path of maximum length',
-      'A path using only edges in $M$'
+      'An $M$-alternating path between two $M$-unsaturated vertices',
+      'A path using only edges in $M
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'An augmenting path alternates between non-matching and matching edges, with unmatched endpoints.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'An augmenting path alternates between non-matching and matching edges, with unmatched endpoints.',
   },
@@ -20,12 +24,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Hungarian algorithm finds:',
     options: [
-      'Shortest paths in weighted graphs',
       'Maximum weighted matching in bipartite graphs',
+      'Shortest paths in weighted graphs',
       'Minimum spanning trees',
-      'Graph colorings'
+      'Graph colorings',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Hungarian algorithm solves the assignment problem: maximum weight matching in bipartite graphs.',
   },
@@ -37,7 +41,7 @@ export const section09Questions: QuizQuestion[] = [
       'It is a perfect matching',
       'There is no $M$-augmenting path',
       'All vertices have degree at least 1',
-      'The graph is bipartite'
+      'The graph is bipartite',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -50,8 +54,8 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'A matching maximizing total preference',
       'A stable matching (no blocking pairs)',
+      'The unique optimal matching',
       'A random matching',
-      'The unique optimal matching'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -62,12 +66,28 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The time complexity of the Hopcroft-Karp algorithm for maximum bipartite matching is:',
     options: [
-      '$O(n^2)$',
-      '$O(m \\sqrt{n})$',
-      '$O(n^3)$',
-      '$O(m \\cdot n)$'
+      '$O(n^2)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Hopcroft-Karp achieves $O(m\\sqrt{n})$ by finding maximal sets of shortest augmenting paths.',
+  },
+      '$O(n^3)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Hopcroft-Karp achieves $O(m\\sqrt{n})$ by finding maximal sets of shortest augmenting paths.',
+  },
+      '$O(m \\sqrt{n})
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Hopcroft-Karp achieves $O(m\\sqrt{n})$ by finding maximal sets of shortest augmenting paths.',
+  },
+      '$O(m \\cdot n)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Hopcroft-Karp achieves $O(m\\sqrt{n})$ by finding maximal sets of shortest augmenting paths.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Hopcroft-Karp achieves $O(m\\sqrt{n})$ by finding maximal sets of shortest augmenting paths.',
   },
@@ -77,11 +97,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'A transversal (system of distinct representatives) corresponds to:',
     options: [
       'A vertex cover',
-      'A matching in a bipartite graph',
       'A Hamiltonian path',
-      'A spanning tree'
+      'A spanning tree',
+      'A matching in a bipartite graph',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'An SDR for sets $S_1, \\ldots, S_n$ exists iff the bipartite graph (sets vs elements) has a matching saturating all sets.',
   },

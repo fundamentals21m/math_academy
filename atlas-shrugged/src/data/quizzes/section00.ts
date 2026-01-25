@@ -6,12 +6,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the famous opening line of Atlas Shrugged?',
     options: [
-      '"It was the best of times, it was the worst of times."',
       '"Who is John Galt?"',
+      '"It was the best of times, it was the worst of times."',
       '"Call me Ishmael."',
       '"The railroad was dying."'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '"Who is John Galt?" is the iconic opening line of Atlas Shrugged, a phrase that has become a slang expression of despair in the novel\'s world.',
   },
@@ -22,10 +22,10 @@ export const section00Questions: QuizQuestion[] = [
     options: [
       'President',
       'Chairman of the Board',
+      'Chief Financial Officer',
       'Vice President in Charge of Operations',
-      'Chief Financial Officer'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Dagny Taggart serves as Vice President in Charge of Operations at Taggart Transcontinental, making her the person who actually keeps the railroad running.',
   },
@@ -35,11 +35,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'Who is the President of Taggart Transcontinental?',
     options: [
       'Dagny Taggart',
-      'Hank Rearden',
       'James Taggart',
-      'Eddie Willers'
+      'Hank Rearden',
+      'Eddie Willers',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'James Taggart is the President of the railroad, though he operates through political connections rather than competence. His sister Dagny is the one who actually runs the railroad.',
   },
@@ -51,7 +51,7 @@ export const section00Questions: QuizQuestion[] = [
       'Thriving and prosperous',
       'Newly built and modern',
       'Decaying with crumbling infrastructure',
-      'Completely abandoned'
+      'Completely abandoned',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -65,7 +65,7 @@ export const section00Questions: QuizQuestion[] = [
       'A clock',
       'A calendar',
       'A billboard',
-      'A flag'
+      'A flag',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -76,12 +76,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Into how many parts is Atlas Shrugged divided?',
     options: [
-      'Two',
       'Three',
+      'Two',
       'Four',
-      'Five'
+      'Five',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Atlas Shrugged is divided into three parts: "Non-Contradiction," "Either-Or," and "A Is A"—each named after a principle of Aristotelian logic.',
   },

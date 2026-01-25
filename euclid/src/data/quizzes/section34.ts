@@ -9,7 +9,7 @@ export const section34Questions: QuizQuestion[] = [
       'All angles are right angles',
       'Opposite sides and angles are equal; diagonal bisects the area',
       'Diagonals are perpendicular',
-      'All sides are equal'
+      'All sides are equal',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section34Questions: QuizQuestion[] = [
     question: 'What does "the diameter bisects" the parallelogram mean in I.34?',
     options: [
       'The diagonal has equal length on both sides of center',
-      'The diagonal divides it into two congruent triangles',
       'The diagonal is perpendicular to the sides',
-      'The diagonal passes through the center'
+      'The diagonal passes through the center',
+      'The diagonal divides it into two congruent triangles',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The diagonal (diameter) divides the parallelogram into two congruent triangles of equal area.',
   },

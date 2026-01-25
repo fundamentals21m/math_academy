@@ -9,7 +9,7 @@ export const section11Questions: QuizQuestion[] = [
       'Any government action',
       'The use of coercion to alter voluntary exchanges or restrict individual action',
       'Helpful government programs',
-      'International diplomacy'
+      'International diplomacy',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'What are the three types of intervention according to Rothbard?',
     options: [
       'Federal, state, and local',
-      'Autistic, binary, and triangular',
+      'Direct, indirect, and regulatory',
       'Economic, political, and social',
-      'Direct, indirect, and regulatory'
+      'Autistic, binary, and triangular'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Rothbard classifies intervention as autistic (restricting individual alone), binary (government-individual exchange), or triangular (regulating exchanges).',
   },
@@ -34,12 +34,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does all intervention reduce social utility?',
     options: [
-      'Because government is inefficient',
       'Because at least one party is forced to act against their demonstrated preference',
+      'Because government is inefficient',
       'Because politicians are corrupt',
       'Because taxes fund it'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Intervention overrides voluntary choices. The coerced party would not have chosen that action, demonstrating utility loss.',
   },
@@ -48,12 +48,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is an example of autistic intervention?',
     options: [
+      'Drug prohibition',
       'Taxation',
       'Price controls',
-      'Drug prohibition',
-      'Tariffs'
+      'Tariffs',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Autistic intervention restricts an individual\'s use of their own person or property, like drug laws or censorship.',
   },
@@ -78,8 +78,8 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'Yes, if benefits exceed costs',
       'No, because interpersonal utility comparisons are impossible',
+      'Only during emergencies',
       'Yes, if approved democratically',
-      'Only during emergencies'
     ],
     correctIndex: 1,
     difficulty: 'hard',

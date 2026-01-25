@@ -6,12 +6,28 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the sum rule for derivatives?',
     options: [
-      '$\\frac{d}{dx}(u + v) = u \\cdot v$',
-      '$\\frac{d}{dx}(u + v) = \\frac{du}{dx} + \\frac{dv}{dx}$',
-      '$\\frac{d}{dx}(u + v) = \\frac{du}{dx} \\cdot \\frac{dv}{dx}$',
-      '$\\frac{d}{dx}(u + v) = \\frac{du}{dx} - \\frac{dv}{dx}$'
+      '$\\frac{d}{dx}(u + v) = u \\cdot v
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The derivative of a sum equals the sum of the derivatives.',
+  },
+      '$\\frac{d}{dx}(u + v) = \\frac{du}{dx} - \\frac{dv}{dx}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The derivative of a sum equals the sum of the derivatives.',
+  },
+      '$\\frac{d}{dx}(u + v) = \\frac{du}{dx} + \\frac{dv}{dx}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The derivative of a sum equals the sum of the derivatives.',
+  },
+      '$\\frac{d}{dx}(u + v) = \\frac{du}{dx} \\cdot \\frac{dv}{dx}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The derivative of a sum equals the sum of the derivatives.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The derivative of a sum equals the sum of the derivatives.',
   },
@@ -20,10 +36,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\frac{d}{dx}(x^2 + x^3)$?',
     options: [
-      '$2x + 3x^2$',
-      '$x^2 + x^3$',
-      '$2x \\cdot 3x^2$',
-      '$5x^4$'
+      '$x^2 + x^3
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}(x^2 + x^3) = 2x + 3x^2$ by applying the sum rule and power rule.',
+  },
+      '$2x + 3x^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}(x^2 + x^3) = 2x + 3x^2$ by applying the sum rule and power rule.',
+  },
+      '$2x \\cdot 3x^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}(x^2 + x^3) = 2x + 3x^2$ by applying the sum rule and power rule.',
+  },
+      '$5x^4
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}(x^2 + x^3) = 2x + 3x^2$ by applying the sum rule and power rule.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -34,12 +66,28 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of $3x^4 - 2x^2 + 5$?',
     options: [
-      '$12x^3 - 4x$',
-      '$12x^3 - 4x + 5$',
-      '$3x^3 - 2x$',
-      '$12x^4 - 4x^2$'
-    ],
+      '$12x^3 - 4x
     correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}(3x^4) = 12x^3$, $\\frac{d}{dx}(-2x^2) = -4x$, $\\frac{d}{dx}(5) = 0$. Sum: $12x^3 - 4x$.',
+  },
+      '$12x^3 - 4x + 5
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}(3x^4) = 12x^3$, $\\frac{d}{dx}(-2x^2) = -4x$, $\\frac{d}{dx}(5) = 0$. Sum: $12x^3 - 4x$.',
+  },
+      '$3x^3 - 2x
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}(3x^4) = 12x^3$, $\\frac{d}{dx}(-2x^2) = -4x$, $\\frac{d}{dx}(5) = 0$. Sum: $12x^3 - 4x$.',
+  },
+      '$12x^4 - 4x^2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dx}(3x^4) = 12x^3$, $\\frac{d}{dx}(-2x^2) = -4x$, $\\frac{d}{dx}(5) = 0$. Sum: $12x^3 - 4x$.',
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$\\frac{d}{dx}(3x^4) = 12x^3$, $\\frac{d}{dx}(-2x^2) = -4x$, $\\frac{d}{dx}(5) = 0$. Sum: $12x^3 - 4x$.',
   },
@@ -59,10 +107,10 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'Derivatives are always linear operations',
       'We can only differentiate one term at a time',
-      'Each term\'s rate of change is independent of the others',
-      'Mathematics requires this rule'
+      'Mathematics requires this rule',
+      'Each term\\'s rate of change is independent of the others',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The sum rule reflects that changes in each term contribute independently to the total change.',
   },

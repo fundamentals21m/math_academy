@@ -53,11 +53,11 @@ export const section04Quiz: QuizQuestion[] = [
     question: 'In R, what does seq(1, 10, by = 2) produce?',
     options: [
       '1 2 3 4 5 6 7 8 9 10',
-      '1 3 5 7 9',
+      '1 2',
       '2 4 6 8 10',
-      '1 2'
+      '1 3 5 7 9'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'seq(1, 10, by = 2) creates a sequence from 1 to 10, incrementing by 2: 1, 3, 5, 7, 9.',
   },
@@ -66,12 +66,12 @@ export const section04Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To access the "sales" column from a data frame called Advertising, which is NOT valid?',
     options: [
-      'Advertising$sales',
+      'Advertising.sales',
       'Advertising[, "sales"]',
       'Advertising["sales"]',
-      'Advertising.sales'
+      'Advertising$sales'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'R uses $ for column access, not the dot notation (which is used in Python/pandas). Advertising.sales would look for an object named "Advertising.sales".',
   },
@@ -114,11 +114,11 @@ export const section04Quiz: QuizQuestion[] = [
     question: 'What does x[-c(2,4)] return if x = c(10, 20, 30, 40, 50)?',
     options: [
       '20 40',
-      '10 30 50',
       '10 20 30 40 50',
+      '10 30 50',
       'An error'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Negative indexing in R excludes elements. x[-c(2,4)] removes the 2nd and 4th elements, leaving 10, 30, 50.',
   },
@@ -128,11 +128,11 @@ export const section04Quiz: QuizQuestion[] = [
     question: 'In R, what does A[2, ] return for a matrix A?',
     options: [
       'The second column of A',
-      'The second row of A',
+      'An error',
       'The element at position (2,2)',
-      'An error'
+      'The second row of A'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'A[row, col] accesses matrix elements. Leaving col blank returns the entire row, so A[2, ] returns the second row.',
   },

@@ -6,12 +6,16 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f_n \\to f$ uniformly and $f_n\' \\to g$ uniformly, then:',
     options: [
-      '$f$ is differentiable and $f\' = g$',
+      '$f$ is differentiable and $f\\' = g
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'If $f_n \\to f$ uniformly, $f_n\'$ exists, and $f_n\' \\to g$ uniformly, then $f$ is differentiable with $f\' = g$.',
+  },
       '$f$ might not be differentiable',
       'We need additional assumptions',
-      '$f\' = \\lim f_n$ (not $g$)'
+      '$f\\' = \\lim f_n$ (not $g$)',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'If $f_n \\to f$ uniformly, $f_n\'$ exists, and $f_n\' \\to g$ uniformly, then $f$ is differentiable with $f\' = g$.',
   },
@@ -35,11 +39,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'Consider $f_n(x) = \\frac{\\sin(nx)}{n}$. The functions $f_n$ converge uniformly to:',
     options: [
       '$\\sin(x)$',
-      '$0$',
+      'The sequence does not converge uniformly',
       '$x$',
-      'The sequence does not converge uniformly'
+      '$0$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$|f_n(x)| = |\\sin(nx)/n| \\leq 1/n \\to 0$ uniformly.',
   },
@@ -48,12 +52,24 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $f_n(x) = \\sin(nx)/n$, the derivatives $f_n\'(x) = \\cos(nx)$:',
     options: [
-      'Converge uniformly to $0$',
-      'Converge pointwise to $0$',
+      'Converge pointwise to $0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$f_n\'(x) = \\cos(nx)$ oscillates for most $x$ and does not converge. This shows uniform convergence of $f_n$ does not imply convergence of $f_n\'$.',
+  },
       'Do not converge (oscillate)',
-      'Converge to $\\cos(x)$'
+      'Converge uniformly to $0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$f_n\'(x) = \\cos(nx)$ oscillates for most $x$ and does not converge. This shows uniform convergence of $f_n$ does not imply convergence of $f_n\'$.',
+  },
+      'Converge to $\\cos(x)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$f_n\'(x) = \\cos(nx)$ oscillates for most $x$ and does not converge. This shows uniform convergence of $f_n$ does not imply convergence of $f_n\'$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$f_n\'(x) = \\cos(nx)$ oscillates for most $x$ and does not converge. This shows uniform convergence of $f_n$ does not imply convergence of $f_n\'$.',
   },
@@ -62,12 +78,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The example $f_n(x) = \\sin(nx)/n$ shows that:',
     options: [
-      'Uniform convergence of functions implies uniform convergence of derivatives',
       'Uniform convergence of functions does NOT imply convergence of derivatives',
+      'Uniform convergence of functions implies uniform convergence of derivatives',
       'Differentiation always commutes with limits',
-      'The derivative of a uniform limit is always zero'
+      'The derivative of a uniform limit is always zero',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Even though $f_n \\to 0$ uniformly, the derivatives $f_n\' = \\cos(nx)$ do not converge at all.',
   },

@@ -21,11 +21,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'What proof technique is used in I.25?',
     options: [
       'Direct proof',
-      'Proof by cases and contradiction',
       'Superposition',
-      'Exhaustion'
+      'Proof by cases and contradiction',
+      'Exhaustion',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'I.25 considers cases (angle equal, angle less) and derives contradictions using I.4 and I.24.',
   },

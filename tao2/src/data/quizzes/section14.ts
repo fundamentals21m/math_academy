@@ -21,11 +21,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'To apply the Weierstrass M-test to $\\sum_{n=1}^\\infty \\frac{\\sin(nx)}{n^2}$, we need:',
     options: [
       '$M_n = n^2$ with $\\sum n^2$ convergent',
-      '$M_n = 1/n^2$ with $\\sum 1/n^2$ convergent',
       '$M_n = 1/n$ with $\\sum 1/n$ convergent',
-      'The M-test cannot be applied'
+      '$M_n = 1/n^2$ with $\\sum 1/n^2$ convergent',
+      'The M-test cannot be applied',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Since $|\\sin(nx)| \\leq 1$, we have $|\\sin(nx)/n^2| \\leq 1/n^2$, and $\\sum 1/n^2$ converges.',
   },
@@ -34,12 +34,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If each $f_n$ is continuous and $\\sum f_n$ converges uniformly, then $\\sum f_n$:',
     options: [
-      'Is bounded but might be discontinuous',
       'Is continuous',
+      'Is bounded but might be discontinuous',
       'Is differentiable',
-      'Equals zero'
+      'Equals zero',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The partial sums are continuous, and the uniform limit of continuous functions is continuous.',
   },
@@ -49,11 +49,15 @@ export const section14Questions: QuizQuestion[] = [
     question: 'The series $\\sum_{n=1}^\\infty x^n$ on $[0, 1)$:',
     options: [
       'Converges uniformly',
+      'Converges uniformly on $[0, r]$ for any $r < 1
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The geometric series converges for $|x| < 1$. It converges uniformly on $[0, r]$ for $r < 1$, but not on all of $[0, 1)$ since the sum blows up as $x \\to 1$.',
+  },
       'Converges pointwise but not uniformly',
       'Diverges everywhere',
-      'Converges uniformly on $[0, r]$ for any $r < 1$'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The geometric series converges for $|x| < 1$. It converges uniformly on $[0, r]$ for $r < 1$, but not on all of $[0, 1)$ since the sum blows up as $x \\to 1$.',
   },
@@ -62,12 +66,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The key assumption in the Weierstrass M-test is:',
     options: [
-      'Each $f_n$ is continuous',
       'The series $\\sum M_n$ converges',
+      'Each $f_n$ is continuous',
+      'The functions are differentiable',
       'The domain is compact',
-      'The functions are differentiable'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The M-test requires that $\\sum M_n$ converges, where $M_n$ bounds $|f_n(x)|$ uniformly in $x$.',
   },

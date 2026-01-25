@@ -10,12 +10,12 @@ export const section14Questions: QuizQuestion[] = [
     question:
       'Which mathematician proved that π is transcendental, thereby proving that squaring the circle is impossible?',
     options: [
-      'Wantzel in 1837',
       'Hermite in 1873',
       'Lindemann in 1882',
+      'Wantzel in 1837',
       'Gauss in 1796',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Ferdinand von Lindemann proved in 1882 that π is transcendental (not the root of any polynomial with rational coefficients). Since ruler and compass can only construct algebraic numbers, squaring the circle is impossible.',
@@ -43,11 +43,11 @@ export const section14Questions: QuizQuestion[] = [
       'According to the Rational Root Lemma, if p/q (in lowest terms) is a rational root of a polynomial with integer coefficients, what must be true?',
     options: [
       'p must divide the leading coefficient and q must divide the constant term',
-      'p must divide the constant term and q must divide the leading coefficient',
       'Both p and q must be prime numbers',
-      'p + q must equal the degree of the polynomial',
+      'p must divide the constant term and q must divide the leading coefficient',
+      'p + q must equal the degree of the polynomial'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The Rational Root Lemma states that if p/q is a rational root (in lowest terms) of aₙxⁿ + ... + a₁x + a₀ = 0, then p divides a₀ (the constant term) and q divides aₙ (the leading coefficient).',
@@ -58,12 +58,12 @@ export const section14Questions: QuizQuestion[] = [
     question:
       'Using the Rational Root Lemma, why does x³ - 2 = 0 have no rational solutions?',
     options: [
-      'Because 2 is prime',
       'Because the only possible rational roots are ±1 and ±2, and none of them work',
-      'Because the equation has degree 3',
+      'Because 2 is prime',
       'Because the coefficient of x² is zero',
+      'Because the equation has degree 3',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'By the Rational Root Lemma, any rational root p/q must have p dividing 2 and q dividing 1. So the only possibilities are ±1, ±2. Testing: 1³-2=-1, (-1)³-2=-3, 2³-2=6, (-2)³-2=-10. None equal zero, so ∛2 is irrational.',
@@ -74,12 +74,12 @@ export const section14Questions: QuizQuestion[] = [
     question:
       'In Wantzel\'s proof, what is the field F[√c] when F is a field and c is in F?',
     options: [
-      'All numbers of the form a + b√c where a, b are in F',
       'All square roots of numbers in F',
       'All rational multiples of √c',
       'The intersection of F with the real numbers',
+      'All numbers of the form a + b√c where a, b are in F',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'F[√c] is the field extension consisting of all numbers of the form a + b√c where a and b are elements of F. This is itself a field — closed under addition, subtraction, multiplication, and division.',
@@ -107,11 +107,11 @@ export const section14Questions: QuizQuestion[] = [
       'Why can the regular 17-gon be constructed with ruler and compass?',
     options: [
       'Because 17 is a prime number',
-      'Because 17 = 2⁴ + 1 is a Fermat prime',
       'Because 17 is an odd number',
       'Because cos(360°/17) is rational',
+      'Because 17 = 2⁴ + 1 is a Fermat prime',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Gauss proved that a regular n-gon is constructible if and only if n is a product of a power of 2 and distinct Fermat primes (primes of the form 2^(2^k) + 1). Since 17 = 2⁴ + 1 is a Fermat prime, the regular 17-gon is constructible.',
@@ -138,12 +138,12 @@ export const section14Questions: QuizQuestion[] = [
     question:
       'Which mathematician first proved that doubling the cube and trisecting an arbitrary angle are impossible with ruler and compass?',
     options: [
-      'Gauss in 1796',
       'Wantzel in 1837',
+      'Gauss in 1796',
       'Lindemann in 1882',
-      'Euclid around 300 BC',
+      'Euclid around 300 BC'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Pierre Wantzel published the first rigorous proof in 1837 that doubling the cube and trisecting an arbitrary angle are impossible with ruler and compass. The proof shows these problems require cube roots, which cannot be obtained through any sequence of square root extensions.',

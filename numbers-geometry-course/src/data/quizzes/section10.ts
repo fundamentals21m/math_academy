@@ -24,12 +24,22 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Pythagorean theorem states that:',
     options: [
-      '$a + b = c$',
       '$a^2 + b^2 = c^2$ where $c$ is the hypotenuse',
-      '$a \\times b = c^2$',
+      '$a + b = c
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'The Pythagorean theorem states that in a right triangle, the square on the hypotenuse equals the sum of squares on the other two sides: $a^2 + b^2 = c^2$.',
+  },
+      '$a \\times b = c^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'The Pythagorean theorem states that in a right triangle, the square on the hypotenuse equals the sum of squares on the other two sides: $a^2 + b^2 = c^2$.',
+  },
       'The sum of angles in a triangle is 180°',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The Pythagorean theorem states that in a right triangle, the square on the hypotenuse equals the sum of squares on the other two sides: $a^2 + b^2 = c^2$.',
@@ -39,12 +49,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who gave a beautiful visual proof of the Pythagorean theorem in the 12th century?',
     options: [
+      'Bhaskara II',
       'Euclid',
       'Pythagoras',
-      'Bhaskara II',
       'Descartes',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Bhaskara II, an Indian mathematician of the 12th century, gave a very immediate visual proof of the Pythagorean theorem.',
@@ -55,11 +65,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What is the main weakness of synthetic geometry?',
     options: [
       'It requires calculus',
-      'It fails to explain the similarity between geometry and arithmetic',
       'It was invented too recently',
+      'It fails to explain the similarity between geometry and arithmetic',
       'It cannot prove the Pythagorean theorem',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Synthetic geometry is self-contained and close to intuition, but it fails to explain why geometric quantities (like numbers) can be added, subtracted, and multiplied.',
@@ -71,10 +81,10 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'Euclid (300 BC)',
       'Thales (6th century BC)',
-      'René Descartes (1637)',
       'David Hilbert (1899)',
+      'René Descartes (1637)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Analytic geometry was initiated by René Descartes in his Geometry (1637). It uses coordinates and algebra to study geometric objects.',
@@ -85,11 +95,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'According to legend, who proved that any right-angled triangle fits in a semicircle?',
     options: [
       'Pythagoras',
-      'Thales',
       'Euclid',
       'Gauss',
+      'Thales',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'According to legend, Thales in the 6th century BC proved that any right-angled triangle fits in a semicircle, with the hypotenuse as diameter.',
@@ -100,11 +110,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'Why is geometric intuition described as both a "blessing and a curse"?',
     options: [
       'It is easy to learn but hard to master',
+      'It was useful in ancient times but not today',
       'It gives direct access to results, but they must still be validated by logic',
       'It works in 2D but not 3D',
-      'It was useful in ancient times but not today',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Intuition gives amazingly direct access to mathematical results, but we cannot be satisfied until they have been validated by logic—intuition alone is not proof.',

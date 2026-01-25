@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section43Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The "three-bucket framework" for retirement income consists of:',
+    options: [
+      'Stocks, bonds, and cash',
+      'Social Security, pension, and savings',
+      'Guaranteed floor, longevity pooling, and flexibility reserve',
+      'Short-term, medium-term, and long-term',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The three buckets are: (1) Guaranteed Floor for essentials, (2) Longevity Pooling (tontine) for efficient income, (3) Flexibility Reserve for emergencies and legacy.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Bucket 1 (Guaranteed Floor) should typically be what percentage of the portfolio?',
+    options: [
+      '30-40%',
+      '10-20%',
+      '60-70%',
+      '80-90%',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Bucket 1 (guaranteed floor) should be 30-40% of the portfolio, covering essential expenses with zero depletion risk.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Bucket 2 (Longevity Pooling) includes all EXCEPT:',
+    options: [
+      'Variable Payment Life Annuity (VPLA)',
+      'Emergency cash reserve',
+      'Tontine',
+      'Group Self-Annuitization (GSA)',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Bucket 2 includes tontines, GSA, and VPLA for longevity pooling. Emergency cash reserve belongs in Bucket 3 (Flexibility).',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'In the $500,000 portfolio example, Bucket 2 (Longevity/Tontine) receives:',
+    options: [
+      '$100,000 (20%)',
+      '$150,000 (30%)',
+      '$350,000 (70%)',
+      '$250,000 (50%)',
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'In the example: Bucket 1 = $150k (30%), Bucket 2 = $250k (50%), Bucket 3 = $100k (20%).',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Bucket 1 handles which type of risk?',
+    options: [
+      'Investment risk only',
+      'Inflation risk only',
+      'Longevity and market risk for essentials',
+      'No risks',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Bucket 1 eliminates longevity and market risk for essential expenses—you will never go hungry regardless of markets or lifespan.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'As you age, the optimal allocation shift is:',
+    options: [
+      'More to Bucket 1, less to Bucket 3',
+      'More to Bucket 3, less to Bucket 1',
+      'Equal across all buckets',
+      'All to Bucket 2',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'As flexibility needs decline (less travel, simpler lifestyle), guaranteed floor (Bucket 1) becomes more important while Bucket 3 decreases.',
+  },
+];

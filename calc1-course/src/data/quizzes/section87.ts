@@ -6,12 +6,12 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Curvature $\\kappa$ measures:',
     options: [
-      'The length of the curve',
       'How fast the curve bends',
+      'The length of the curve',
       'The speed along the curve',
-      'The total rotation'
+      'The total rotation',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Curvature = rate of change of direction.',
   },
@@ -21,11 +21,11 @@ export const section87Questions: QuizQuestion[] = [
     question: 'For arc length parametrization, $\\kappa = |\\mathbf{T}\'(s)|$ where $\\mathbf{T}$ is:',
     options: [
       'The position vector',
-      'The unit tangent vector',
+      'The acceleration',
       'The normal vector',
-      'The acceleration'
+      'The unit tangent vector'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$\\mathbf{T} = \\mathbf{r}\'/|\\mathbf{r}\'|$ is the unit tangent.',
   },
@@ -34,12 +34,24 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The curvature of a straight line is:',
     options: [
-      '$1$',
-      '$\\infty$',
-      '$0$',
-      'Undefined'
+      '$\\infty
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A line doesn\'t bend: $\\kappa = 0$.',
+  },
+      '$0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A line doesn\'t bend: $\\kappa = 0$.',
+  },
+      '$1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A line doesn\'t bend: $\\kappa = 0$.',
+  },
+      'Undefined',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A line doesn\'t bend: $\\kappa = 0$.',
   },
@@ -48,10 +60,26 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The curvature of a circle of radius $R$ is:',
     options: [
-      '$R$',
-      '$1/R$',
-      '$R^2$',
-      '$2\\pi R$'
+      '$R
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Circle: $\\kappa = 1/R$. Smaller radius = tighter curve.',
+  },
+      '$R^2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Circle: $\\kappa = 1/R$. Smaller radius = tighter curve.',
+  },
+      '$1/R
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Circle: $\\kappa = 1/R$. Smaller radius = tighter curve.',
+  },
+      '$2\\pi R
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Circle: $\\kappa = 1/R$. Smaller radius = tighter curve.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -62,12 +90,20 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The principal normal $\\mathbf{N}$ is:',
     options: [
-      'Parallel to $\\mathbf{T}$',
-      'The unit vector in the direction of $\\mathbf{T}\'$',
-      'Perpendicular to the curve',
-      'The acceleration vector'
-    ],
+      'Parallel to $\\mathbf{T}
     correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$\\mathbf{N} = \\mathbf{T}\'/|\\mathbf{T}\'|$ points toward center of curvature.',
+  },
+      'The unit vector in the direction of $\\mathbf{T}\\'
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$\\mathbf{N} = \\mathbf{T}\'/|\\mathbf{T}\'|$ points toward center of curvature.',
+  },
+      'Perpendicular to the curve',
+      'The acceleration vector',
+    ],
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: '$\\mathbf{N} = \\mathbf{T}\'/|\\mathbf{T}\'|$ points toward center of curvature.',
   },
@@ -76,12 +112,28 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The radius of curvature $\\rho$ satisfies:',
     options: [
-      '$\\rho = \\kappa$',
-      '$\\rho = 1/\\kappa$',
-      '$\\rho = \\kappa^2$',
-      '$\\rho = \\sqrt{\\kappa}$'
+      '$\\rho = 1/\\kappa
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Radius of curvature = $1/\\kappa$.',
+  },
+      '$\\rho = \\kappa
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Radius of curvature = $1/\\kappa$.',
+  },
+      '$\\rho = \\sqrt{\\kappa}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Radius of curvature = $1/\\kappa$.',
+  },
+      '$\\rho = \\kappa^2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Radius of curvature = $1/\\kappa$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Radius of curvature = $1/\\kappa$.',
   },

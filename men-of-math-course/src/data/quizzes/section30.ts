@@ -6,12 +6,12 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Cantor prove using his diagonal argument?',
     options: [
-      'The integers are countable',
       'The real numbers are uncountable',
+      'The integers are countable',
+      'There is a largest prime number',
       'The rational numbers are uncountable',
-      'There is a largest prime number'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Cantor\'s diagonal argument proves that the real numbers cannot be listed in a sequence, making them uncountable.',
   },
@@ -20,12 +20,28 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the symbol for the cardinality of the natural numbers (the smallest infinity)?',
     options: [
-      '$\\omega$',
-      '$\\aleph_0$',
-      '$\\infty$',
-      '$\\mathfrak{c}$'
+      '$\\omega
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\aleph_0$ (aleph-null) denotes the cardinality of countably infinite sets like the natural numbers.',
+  },
+      '$\\infty
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\aleph_0$ (aleph-null) denotes the cardinality of countably infinite sets like the natural numbers.',
+  },
+      '$\\mathfrak{c}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\aleph_0$ (aleph-null) denotes the cardinality of countably infinite sets like the natural numbers.',
+  },
+      '$\\aleph_0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\aleph_0$ (aleph-null) denotes the cardinality of countably infinite sets like the natural numbers.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$\\aleph_0$ (aleph-null) denotes the cardinality of countably infinite sets like the natural numbers.',
   },
@@ -34,12 +50,24 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Cantor\'s theorem, how does $|P(S)|$ compare to $|S|$ for any set $S$?',
     options: [
-      '$|P(S)| = |S|$',
-      '$|P(S)| < |S|$',
-      '$|P(S)| > |S|$',
-      'They cannot be compared'
-    ],
+      '$|P(S)| = |S|
     correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Cantor\'s theorem states that the power set $P(S)$ is always strictly larger than $S$, so $|P(S)| > |S|$.',
+  },
+      '$|P(S)| < |S|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cantor\'s theorem states that the power set $P(S)$ is always strictly larger than $S$, so $|P(S)| > |S|$.',
+  },
+      '$|P(S)| > |S|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cantor\'s theorem states that the power set $P(S)$ is always strictly larger than $S$, so $|P(S)| > |S|$.',
+  },
+      'They cannot be compared',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Cantor\'s theorem states that the power set $P(S)$ is always strictly larger than $S$, so $|P(S)| > |S|$.',
   },
@@ -48,10 +76,22 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following sets is countable?',
     options: [
-      'The real numbers $\\mathbb{R}$',
+      'The rational numbers $\\mathbb{Q}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The rational numbers are countable because they can be enumerated using a diagonal listing argument.',
+  },
+      'The real numbers $\\mathbb{R}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The rational numbers are countable because they can be enumerated using a diagonal listing argument.',
+  },
       'The irrational numbers',
-      'The rational numbers $\\mathbb{Q}$',
-      'The power set of natural numbers $P(\\mathbb{N})$'
+      'The power set of natural numbers $P(\\mathbb{N})
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The rational numbers are countable because they can be enumerated using a diagonal listing argument.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -64,8 +104,8 @@ export const section30Questions: QuizQuestion[] = [
     options: [
       'Adding the middle third at each step',
       'Removing the middle third at each step',
+      'Halving the interval at each step',
       'Doubling the interval at each step',
-      'Halving the interval at each step'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -79,7 +119,7 @@ export const section30Questions: QuizQuestion[] = [
       'It has infinite length but no points',
       'It has zero length but uncountably many points',
       'It has finite length and countably many points',
-      'It contains all rational numbers'
+      'It contains all rational numbers',
     ],
     correctIndex: 1,
     difficulty: 'hard',

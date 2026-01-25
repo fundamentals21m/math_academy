@@ -6,12 +6,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does PSHVZK stand for?',
     options: [
-      'Provably Secure Hash Verification Zero Knowledge',
       'Perfect Special Honest Verifier Zero Knowledge',
+      'Provably Secure Hash Verification Zero Knowledge',
       'Probabilistic Signature Hiding Verification Zero Knowledge',
       'Private Secret Hash Verification Zero Knowledge'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'PSHVZK stands for Perfect Special Honest Verifier Zero Knowledge.',
   },
@@ -21,11 +21,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'In PSHVZK, "Special" refers to the fact that:',
     options: [
       'The proof is especially short',
-      'The simulator gets access to the verifier\'s randomness',
       'The verifier is especially powerful',
-      'The protocol has special setup requirements'
+      'The protocol has special setup requirements',
+      'The simulator gets access to the verifier\\'s randomness',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '"Special" means the simulator receives the same randomness $\\rho$ that the honest verifier uses.',
   },
@@ -35,11 +35,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'In PSHVZK, "Perfect" means:',
     options: [
       'The protocol never fails',
-      'The simulated and real distributions are identical (not just computationally indistinguishable)',
       'Perfect completeness',
+      'The simulated and real distributions are identical (not just computationally indistinguishable)',
       'The proof is optimal in size'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: '"Perfect" means the distributions are exactly equal, providing information-theoretic ZK.',
   },
@@ -50,8 +50,8 @@ export const section04Questions: QuizQuestion[] = [
     options: [
       'PPT only',
       'Not restricted to polynomial time',
+      'A trusted third party',
       'The same as the prover',
-      'A trusted third party'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -62,12 +62,20 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The simulator in PSHVZK has access to:',
     options: [
-      'The witness $w$',
-      'The statement $x$ and verifier randomness $\\rho$',
-      'The prover\'s secret key',
-      'A random oracle'
+      'The witness $w
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The simulator gets the statement $x$ and randomness $\\rho$, but NOT the witness $w$.',
+  },
+      'The prover\\'s secret key',
+      'A random oracle',
+      'The statement $x$ and verifier randomness $\\rho
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The simulator gets the statement $x$ and randomness $\\rho$, but NOT the witness $w$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The simulator gets the statement $x$ and randomness $\\rho$, but NOT the witness $w$.',
   },
@@ -77,11 +85,11 @@ export const section04Questions: QuizQuestion[] = [
     question: '"Honest Verifier" in PSHVZK means:',
     options: [
       'The verifier never lies',
-      'The verifier follows the protocol and uses truly random challenges',
       'The verifier is trusted',
-      'The verifier reveals the outcome'
+      'The verifier follows the protocol and uses truly random challenges',
+      'The verifier reveals the outcome',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Honest verifier means the verifier follows the protocol exactly, using genuine randomness.',
   },

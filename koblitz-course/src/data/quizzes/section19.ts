@@ -6,12 +6,24 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The elliptic curve discrete log problem (ECDLP) asks: given $P$ and $Q = nP$, find:',
     options: [
-      '$P$',
-      '$Q$',
-      '$n$',
-      'The curve equation'
+      '$n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'ECDLP: Given $Q = nP$, find the scalar $n$.',
+  },
+      '$P
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'ECDLP: Given $Q = nP$, find the scalar $n$.',
+  },
+      '$Q
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'ECDLP: Given $Q = nP$, find the scalar $n$.',
+  },
+      'The curve equation',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'ECDLP: Given $Q = nP$, find the scalar $n$.',
   },
@@ -21,11 +33,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'Why does ECC provide equivalent security with smaller keys than RSA?',
     options: [
       'ECC uses faster algorithms',
-      'No subexponential attack on ECDLP is known',
       'ECC is newer technology',
-      'RSA has more overhead'
+      'No subexponential attack on ECDLP is known',
+      'RSA has more overhead',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Unlike integer DLP, ECDLP has no known subexponential algorithm, requiring smaller keys for same security.',
   },
@@ -45,10 +57,14 @@ export const section19Questions: QuizQuestion[] = [
     options: [
       'The public key',
       'The message hash',
-      'The random nonce $k$',
-      'The curve parameters'
+      'The curve parameters',
+      'The random nonce $k
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Reusing or leaking the nonce $k$ allows private key recovery.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Reusing or leaking the nonce $k$ allows private key recovery.',
   },

@@ -6,12 +6,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The limit $\\lim_{x \\to 0} \\frac{\\sin x}{x}$ is an example of:',
     options: [
-      '$\\infty/\\infty$ form',
       '$0/0$ form',
+      '$\\infty/\\infty$ form',
       '$1/0$ form',
-      'Not indeterminate'
+      'Not indeterminate',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Both $\\sin x \\to 0$ and $x \\to 0$ as $x \\to 0$.',
   },
@@ -20,12 +20,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Taylor polynomials can help evaluate limits by:',
     options: [
+      'Finding derivatives',
       'Replacing functions with their polynomial approximations',
       'Computing integrals',
-      'Finding derivatives',
-      'Graphing'
+      'Graphing',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Expand each function, substitute, and simplify to find the limit.',
   },
@@ -43,12 +43,16 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The form $0 \\cdot \\infty$ is:',
     options: [
-      'Always 0',
-      'Always $\\infty$',
       'An indeterminate form',
-      'Undefined'
+      'Always 0',
+      'Always $\\infty
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$0 \\cdot \\infty$ is indeterminate; the limit depends on the functions.',
+  },
+      'Undefined',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$0 \\cdot \\infty$ is indeterminate; the limit depends on the functions.',
   },
@@ -57,12 +61,28 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using $e^x = 1 + x + x^2/2 + ...$, find $\\lim_{x \\to 0} \\frac{e^x - 1}{x}$.',
     options: [
-      '$0$',
-      '$1$',
-      '$e$',
-      '$\\infty$'
+      '$0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\frac{e^x - 1}{x} = \\frac{x + x^2/2 + ...}{x} = 1 + x/2 + ... \\to 1$.',
+  },
+      '$e
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\frac{e^x - 1}{x} = \\frac{x + x^2/2 + ...}{x} = 1 + x/2 + ... \\to 1$.',
+  },
+      '$\\infty
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\frac{e^x - 1}{x} = \\frac{x + x^2/2 + ...}{x} = 1 + x/2 + ... \\to 1$.',
+  },
+      '$1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\frac{e^x - 1}{x} = \\frac{x + x^2/2 + ...}{x} = 1 + x/2 + ... \\to 1$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$\\frac{e^x - 1}{x} = \\frac{x + x^2/2 + ...}{x} = 1 + x/2 + ... \\to 1$.',
   },
@@ -71,10 +91,26 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using $\\cos x = 1 - x^2/2 + ...$, find $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$.',
     options: [
-      '$0$',
-      '$1/2$',
-      '$1$',
-      '$\\infty$'
+      '$0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\frac{1 - (1 - x^2/2 + ...)}{x^2} = \\frac{x^2/2 + ...}{x^2} \\to 1/2$.',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\frac{1 - (1 - x^2/2 + ...)}{x^2} = \\frac{x^2/2 + ...}{x^2} \\to 1/2$.',
+  },
+      '$1/2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\frac{1 - (1 - x^2/2 + ...)}{x^2} = \\frac{x^2/2 + ...}{x^2} \\to 1/2$.',
+  },
+      '$\\infty
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\frac{1 - (1 - x^2/2 + ...)}{x^2} = \\frac{x^2/2 + ...}{x^2} \\to 1/2$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section31Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Gresham\'s Law states that when government overvalues one currency:',
+    options: [
+      'Good money drives out bad',
+      'Bad money drives out good—people spend overvalued money and hoard the good',
+      'All currencies become equally valued',
+      'Trade increases',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Government cannot force people to value money at more than its worth. People always spend the overvalued (bad) money first and hoard or melt the full-value (good) money.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Currency devaluation\'s advertised trade benefits:',
+    options: [
+      'Depend on others not responding—when everyone devalues, no one gains',
+      'Are permanent and universal',
+      'Increase real wages',
+      'Reduce import prices',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Devaluation benefits are temporary and depend on other nations not responding. When all countries devalue, no one gains trade advantage—everyone just has weaker currency.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Credit expansion artificially lowering interest rates causes:',
+    options: [
+      'Sustainable prosperity',
+      'Permanent reduction in interest rates',
+      'Stable economic growth',
+      'Investment beyond what real savings can support—the boom-bust cycle',
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Artificially low rates stimulate investment beyond real savings. The boom represents malinvestment—resources directed to projects that cannot be completed with available savings. The bust is the inevitable correction.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Foreign exchange "shortages" when rates are fixed above market levels are:',
+    options: [
+      'Real scarcity of currency',
+      'Created by the price control itself',
+      'Caused by speculators',
+      'Unavoidable natural phenomena'
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The "shortage" is created by the price control itself. When government fixes exchange rates above market levels, demand exceeds supply at that rate—the shortage is artificial.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The hidden purpose of devaluation is often to:',
+    options: [
+      'Help exporters fairly',
+      'Increase government revenue',
+      'Reduce real wages without directly challenging unions',
+      'Stabilize the economy'
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Governments justify devaluation as correcting "disequilibrium." The real objective is often reducing real wages without directly confronting unions. Nominal wages stay high while purchasing power falls.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'A metallic standard appears as an obstacle to monetary policy because:',
+    options: [
+      'Gold is too scarce',
+      'It is technologically outdated',
+      'It constrains government\\'s ability to inflate and manipulate currency',
+      'International trade requires paper money',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A metallic standard constrains all attempts to interfere with market phenomena through monetary policies. This is precisely why governments abandoned it—it limits their power to manipulate.',
+  },
+];

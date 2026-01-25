@@ -8,10 +8,10 @@ export const section14Questions: QuizQuestion[] = [
     options: [
       'Polynomials',
       'Exponentials',
-      'Sines and cosines',
-      'Logarithms'
+      'Logarithms',
+      'Sines and cosines'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Fourier series decompose periodic functions into sums of sines and cosines of different frequencies.',
   },
@@ -21,11 +21,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'Fourier developed his mathematical techniques to study:',
     options: [
       'Sound waves',
-      'Heat conduction',
       'Light propagation',
-      'Fluid flow'
+      'Heat conduction',
+      'Fluid flow',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Fourier developed his series to solve the heat equation and understand heat conduction in solids.',
   },
@@ -34,12 +34,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Fourier transform converts a function from the time domain to the:',
     options: [
-      'Space domain',
       'Frequency domain',
+      'Space domain',
       'Complex domain',
-      'Discrete domain'
+      'Discrete domain',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Fourier transform reveals what frequencies are present in a signal.',
   },
@@ -51,7 +51,7 @@ export const section14Questions: QuizQuestion[] = [
       'It used imaginary numbers',
       'It claimed any function could be represented as a trigonometric series',
       'It contradicted Newton',
-      'It was not rigorous enough for Laplace'
+      'It was not rigorous enough for Laplace',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -64,8 +64,8 @@ export const section14Questions: QuizQuestion[] = [
     options: [
       'Ocean currents',
       'The greenhouse effect',
+      'Earthquakes',
       'Continental drift',
-      'Earthquakes'
     ],
     correctIndex: 1,
     difficulty: 'medium',

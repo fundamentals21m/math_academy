@@ -22,11 +22,11 @@ export const section02Quiz = {
       question: 'The inductive hypothesis assumes that:',
       options: [
         'The statement is true for all natural numbers',
-        'The statement is true for some arbitrary $k$',
         'The statement is true for $n = 1$',
+        'The statement is true for some arbitrary $k$',
         'The statement is false for some $n$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The inductive hypothesis assumes the statement $P(k)$ is true for some arbitrary but fixed natural number $k$. We then use this to prove $P(k+1)$.'
     },
@@ -36,11 +36,11 @@ export const section02Quiz = {
       question: 'What is the base case for proving $\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}$?',
       options: [
         '$n = 0$: $0 = \\frac{0 \\cdot 1}{2}$',
-        '$n = 1$: $1 = \\frac{1 \\cdot 2}{2}$',
+        '$n = k$: assume it works',
         '$n = 2$: $3 = \\frac{2 \\cdot 3}{2}$',
-        '$n = k$: assume it works'
+        '$n = 1$: $1 = \\frac{1 \\cdot 2}{2}$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'For this sum, the natural base case is $n = 1$: the left side is $1$, and the right side is $\\frac{1 \\cdot 2}{2} = 1$. Both sides are equal, so the base case holds.'
     },
@@ -49,12 +49,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Mathematical induction is used to prove statements about:',
       options: [
-        'Real numbers only',
-        'Rational numbers only',
         'Natural numbers (or integers $\\geq$ some starting value)',
+        'Rational numbers only',
+        'Real numbers only',
         'Complex numbers only'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Mathematical induction is a proof technique for statements indexed by natural numbers or integers starting from some fixed value.'
     },
@@ -86,12 +86,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Which of the following correctly states the principle of mathematical induction?',
       options: [
-        'If $P(1)$ and $P(k) \\Rightarrow P(k+1)$, then $P(n)$ for all $n \\in \\mathbb{N}$',
-        'If $P(n)$ is true for some $n$, it is true for all $n$',
         'If $P(k+1) \\Rightarrow P(k)$, then $P(n)$ for all $n$',
+        'If $P(n)$ is true for some $n$, it is true for all $n$',
+        'If $P(1)$ and $P(k) \\Rightarrow P(k+1)$, then $P(n)$ for all $n \\in \\mathbb{N}$',
         'If $P(1)$ is false, the statement is false for all $n$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The principle of mathematical induction requires: (1) base case $P(1)$ is true, and (2) for all $k$, $P(k) \\Rightarrow P(k+1)$. Then $P(n)$ holds for all natural numbers.'
     },
@@ -114,12 +114,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'What is the purpose of the inductive step?',
       options: [
-        'To verify the formula for $n = 1$',
         'To show $P(k)$ implies $P(k+1)$',
+        'To verify the formula for $n = 1$',
         'To prove the statement is sometimes true',
         'To find a counterexample'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The inductive step shows that if the statement holds for an arbitrary $k$, then it must also hold for $k+1$. This creates a "chain" of implications from the base case.'
     },
@@ -152,11 +152,11 @@ export const section02Quiz = {
       question: 'Which step comes immediately after stating the inductive hypothesis?',
       options: [
         'Verify the base case',
-        'Prove the statement for $k + 1$',
         'Conclude the proof',
+        'Prove the statement for $k + 1$',
         'Check for counterexamples'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'After assuming $P(k)$ (the inductive hypothesis), we must prove $P(k+1)$ using this assumption.'
     },
@@ -166,11 +166,11 @@ export const section02Quiz = {
       question: 'The well-ordering principle states that:',
       options: [
         'Every set of real numbers has a minimum',
-        'Every non-empty subset of natural numbers has a least element',
+        'Every sequence is bounded',
         'The natural numbers can be ordered in many ways',
-        'Every sequence is bounded'
+        'Every non-empty subset of natural numbers has a least element'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The well-ordering principle states that every non-empty subset of natural numbers contains a smallest element. This is equivalent to the principle of mathematical induction.'
     },
@@ -188,12 +188,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'A recursive definition of a sequence requires:',
       options: [
-        'Only a formula for the $n$-th term',
         'Initial value(s) and a recurrence relation',
+        'Only a formula for the $n$-th term',
         'A proof by induction',
         'An explicit closed form'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'A recursive definition needs base case(s) (initial values) and a rule that defines each term using previous terms (recurrence relation).'
     },
@@ -240,11 +240,11 @@ export const section02Quiz = {
       question: 'Why is the base case necessary in mathematical induction?',
       options: [
         'To make the proof longer',
-        'To establish a starting point for the chain of implications',
+        'It is optional and can be skipped',
         'To verify the formula is correct for large $n$',
-        'It is optional and can be skipped'
+        'To establish a starting point for the chain of implications'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Without a base case, the inductive step only shows implications between consecutive values but never establishes that any case is actually true. The base case starts the chain.'
     },
@@ -253,12 +253,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The notation $P(n)$ in induction proofs represents:',
       options: [
-        'A polynomial function',
-        'A prime number',
         'A statement or proposition about $n$',
+        'A prime number',
+        'A polynomial function',
         'The $n$-th power of $P$'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: '$P(n)$ represents a statement or proposition that depends on the natural number $n$. We prove $P(n)$ is true for all $n$ in the given domain.'
     }
@@ -286,10 +286,10 @@ export const section02Quiz = {
       options: [
         '$\\frac{k(k+1) + k + 1}{2}$',
         '$\\frac{(k+1)(k+2)}{2}$',
-        '$\\frac{k^2 + 3k + 2}{2}$',
-        'All of the above are equivalent'
+        'All of the above are equivalent',
+        '$\\frac{k^2 + 3k + 2}{2}$'
       ],
-      correctIndex: 3,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: '$\\frac{k(k+1)}{2} + (k+1) = \\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Also, $(k+1)(k+2) = k^2 + 3k + 2$.'
     },
@@ -321,12 +321,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Strong induction differs from ordinary induction because:',
       options: [
-        'It does not require a base case',
         'It assumes $P(j)$ for all $j \\leq k$ to prove $P(k+1)$',
+        'It does not require a base case',
         'It only works for inequalities',
         'It proves the statement for even numbers only'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'In strong induction, the inductive hypothesis assumes $P(j)$ is true for all $j$ from the base case up to $k$, not just for $k$ alone.'
     },
@@ -335,12 +335,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $n! > 2^n$ for $n \\geq 4$, the base case at $n = 4$ shows:',
       options: [
-        '$24 > 16$',
         '$6 > 8$',
+        '$24 > 16$',
         '$120 > 32$',
         '$2 > 4$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'For $n = 4$: $4! = 24$ and $2^4 = 16$. Since $24 > 16$, the base case holds.'
     },
@@ -349,12 +349,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'In proving $n! > 2^n$ for $n \\geq 4$, the inductive step uses:',
       options: [
-        '$(k+1)! = (k+1) \\cdot k! > (k+1) \\cdot 2^k$',
-        '$(k+1)! = k! + (k+1)$',
         '$(k+1)! = 2 \\cdot k!$',
+        '$(k+1)! = k! + (k+1)$',
+        '$(k+1)! = (k+1) \\cdot k! > (k+1) \\cdot 2^k$',
         '$(k+1)! = k!^2$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'By definition $(k+1)! = (k+1) \\cdot k!$. Using the inductive hypothesis $k! > 2^k$, we get $(k+1)! > (k+1) \\cdot 2^k > 2 \\cdot 2^k = 2^{k+1}$ for $k \\geq 4$.'
     },
@@ -363,12 +363,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'For the statement $P(n): 7^n - 1$ is divisible by $6$, verify the base case $n = 1$:',
       options: [
-        '$7^1 - 1 = 6$, which is divisible by $6$',
+        '$7^1 - 1 = 8$, which is not divisible by $6$',
         '$7^1 - 1 = 7$, which is not divisible by $6$',
         '$7^0 - 1 = 0$, which is divisible by $6$',
-        '$7^1 - 1 = 8$, which is not divisible by $6$'
+        '$7^1 - 1 = 6$, which is divisible by $6$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: '$7^1 - 1 = 7 - 1 = 6 = 6 \\cdot 1$, so $6 | (7^1 - 1)$ and the base case holds.'
     },
@@ -400,12 +400,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The formula for $\\sum_{i=1}^{n} i^3 = \\left(\\frac{n(n+1)}{2}\\right)^2$ says the sum of cubes equals:',
       options: [
-        'The square of the sum of the first $n$ integers',
         'The cube of $n$',
+        'The square of the sum of the first $n$ integers',
         'Twice the sum of squares',
         'The $n$-th triangular number'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Since $\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}$, the formula states that $\\sum_{i=1}^{n} i^3 = \\left(\\sum_{i=1}^{n} i\\right)^2$.'
     },
@@ -424,11 +424,11 @@ export const section02Quiz = {
       question: 'When is strong induction necessary instead of ordinary induction?',
       options: [
         'When proving statements about prime numbers',
-        'When $P(k+1)$ depends on multiple previous cases, not just $P(k)$',
         'When the base case is $n = 0$',
+        'When $P(k+1)$ depends on multiple previous cases, not just $P(k)$',
         'When the statement involves inequalities'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Strong induction is useful when proving $P(k+1)$ requires knowing $P(j)$ for several values $j \\leq k$, such as in proofs about the Fibonacci sequence or prime factorization.'
     },
@@ -438,11 +438,11 @@ export const section02Quiz = {
       question: 'To prove every integer $n \\geq 2$ has a prime factorization using strong induction:',
       options: [
         'We only need to check $n = 2$',
-        'If $n$ is prime, we are done; if composite, use factorization of smaller integers',
+        'Strong induction cannot be used for this',
         'We need to list all primes less than $n$',
-        'Strong induction cannot be used for this'
+        'If $n$ is prime, we are done; if composite, use factorization of smaller integers'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Base case: $2$ is prime. Inductive step: if $k+1$ is prime, done. If $k+1 = ab$ with $2 \\leq a, b < k+1$, by strong induction hypothesis both $a$ and $b$ have prime factorizations.'
     },
@@ -451,12 +451,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The well-ordering principle can be used to prove induction because:',
       options: [
-        'Both are about natural numbers',
         'If induction fails, the set of counterexamples has a least element, leading to contradiction',
+        'Both are about natural numbers',
         'They are completely unrelated',
         'Well-ordering only applies to real numbers'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'If $P(n)$ fails for some $n$, let $S$ be the set of counterexamples. By well-ordering, $S$ has a least element $m$. But $P(1)$ holds (base case) and $P(m-1) \\Rightarrow P(m)$ (inductive step), contradiction.'
     },
@@ -488,12 +488,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $(1 + x)^n \\geq 1 + nx$ for $x > -1$ and $n \\geq 1$ (Bernoulli\'s inequality), the inductive step multiplies both sides by:',
       options: [
-        '$(1 + x)$',
-        '$n$',
         '$x$',
+        '$n$',
+        '$(1 + x)$',
         '$(1 - x)$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'From $(1+x)^k \\geq 1 + kx$, multiply both sides by $(1+x) > 0$ to get $(1+x)^{k+1} \\geq (1+kx)(1+x) = 1 + (k+1)x + kx^2 \\geq 1 + (k+1)x$.'
     },
@@ -502,12 +502,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'For proving $3^n > n^2$ for $n \\geq 1$, which step is part of the inductive argument?',
       options: [
-        'Show $3 \\cdot 3^k > 3k^2 > (k+1)^2$ for large enough $k$',
+        'Use the formula for geometric series',
         'Show $3^k = k^2$ for all $k$',
         'Show $3^n < n^2$ and reach a contradiction',
-        'Use the formula for geometric series'
+        'Show $3 \\cdot 3^k > 3k^2 > (k+1)^2$ for large enough $k$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Using $3^k > k^2$, we get $3^{k+1} = 3 \\cdot 3^k > 3k^2$. We need $3k^2 \\geq (k+1)^2 = k^2 + 2k + 1$, i.e., $2k^2 \\geq 2k + 1$, true for $k \\geq 2$.'
     },
@@ -533,12 +533,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Using strong induction to prove every integer $n \\geq 2$ can be written as a product of primes, when $n = k+1$ is composite:',
       options: [
-        'We write $k+1 = ab$ with $2 \\leq a, b < k+1$ and apply the hypothesis to $a$ and $b$',
         'We check if $k+1$ is divisible by $2$',
+        'We write $k+1 = ab$ with $2 \\leq a, b < k+1$ and apply the hypothesis to $a$ and $b$',
         'We factor $k$ first, then add $1$',
         'We use ordinary induction on the prime factors'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'If $k+1$ is composite, write $k+1 = ab$ where $2 \\leq a, b < k+1$. By strong induction, both $a$ and $b$ have prime factorizations, so $k+1$ does too.'
     },
@@ -548,11 +548,11 @@ export const section02Quiz = {
       question: 'To prove $F_n < 2^n$ for all Fibonacci numbers ($F_1 = F_2 = 1$), the strong induction hypothesis assumes:',
       options: [
         '$F_k < 2^k$ only',
-        '$F_j < 2^j$ for all $j \\leq k$',
         '$F_{k-1} + F_{k-2} < 2^{k+1}$',
+        '$F_j < 2^j$ for all $j \\leq k$',
         '$F_k = 2^k$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Strong induction assumes $F_j < 2^j$ for all $j \\leq k$. Then $F_{k+1} = F_k + F_{k-1} < 2^k + 2^{k-1} < 2^k + 2^k = 2^{k+1}$.'
     },
@@ -563,10 +563,10 @@ export const section02Quiz = {
       options: [
         '$m = 1$ only',
         '$m = 0$ and $m = 1$',
-        '$m = 1$ and $m = 2$',
-        'No base case is needed'
+        'No base case is needed',
+        '$m = 1$ and $m = 2$'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Since the recurrence uses $F_{m-1}$, we need $m \\geq 1$. Base cases $m = 1$: $F_{n+1} = F_{n+1} \\cdot 1 + F_n \\cdot 0$ and $m = 2$: $F_{n+2} = F_{n+1} \\cdot 1 + F_n \\cdot 1$ establish the pattern.'
     },
@@ -575,12 +575,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The second principle of mathematical induction (strong induction) is equivalent to:',
       options: [
-        'Ordinary induction with a different base case',
         'The well-ordering principle',
+        'Ordinary induction with a different base case',
         'Proof by contradiction only',
         'The Archimedean property'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Strong induction, ordinary induction, and the well-ordering principle are all logically equivalent. Each can be derived from the others.'
     },
@@ -599,11 +599,11 @@ export const section02Quiz = {
       question: 'To prove $\\sum_{i=1}^{n} i \\cdot i! = (n+1)! - 1$ by induction, the inductive step adds $(k+1)(k+1)!$ to get:',
       options: [
         '$(k+1)! - 1 + (k+1)(k+1)! = (k+2)(k+1)! - 1 = (k+2)! - 1$',
-        '$(k+2)! + (k+1)! - 1$',
+        'Both A and C are correct',
         '$(k+1)! \\cdot (k+2) - 1$',
-        'Both A and C are correct'
+        '$(k+2)! + (k+1)! - 1$'
       ],
-      correctIndex: 3,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: '$(k+1)! - 1 + (k+1)(k+1)! = (k+1)!(1 + k + 1) - 1 = (k+1)!(k+2) - 1 = (k+2)! - 1$.'
     },
@@ -612,12 +612,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Prove: $\\sum_{i=0}^{n} \\binom{n}{i} = 2^n$. The induction uses the identity:',
       options: [
-        '$\\binom{n+1}{k} = \\binom{n}{k} + \\binom{n}{k-1}$ (Pascal\'s identity)',
-        '$\\binom{n}{k} = \\binom{n}{n-k}$',
         '$\\binom{n}{0} = 1$',
+        '$\\binom{n}{k} = \\binom{n}{n-k}$',
+        '$\\binom{n+1}{k} = \\binom{n}{k} + \\binom{n}{k-1}$ (Pascal\'s identity)',
         'The factorial definition of $\\binom{n}{k}$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Pascal\'s identity $\\binom{n+1}{k} = \\binom{n}{k} + \\binom{n}{k-1}$ allows us to express $\\sum_{k=0}^{n+1} \\binom{n+1}{k}$ in terms of $\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$.'
     },
@@ -649,12 +649,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $\\sqrt{2}$ is irrational using well-ordering, we assume $\\sqrt{2} = \\frac{p}{q}$ in lowest terms and derive:',
       options: [
-        'A smaller positive integer representation, contradicting minimality of $q$',
-        'That $p$ and $q$ are both even',
         'Both A and B',
+        'That $p$ and $q$ are both even',
+        'A smaller positive integer representation, contradicting minimality of $q$',
         'That $\\sqrt{2}$ is rational'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'If $\\sqrt{2} = p/q$ with $\\gcd(p,q) = 1$, then $p^2 = 2q^2$, so $p$ is even, say $p = 2m$. Then $4m^2 = 2q^2$, so $q^2 = 2m^2$, making $q$ even. This contradicts $\\gcd(p,q) = 1$.'
     },
@@ -663,12 +663,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'For the AM-GM inequality $\\frac{a_1 + \\cdots + a_n}{n} \\geq \\sqrt[n]{a_1 \\cdots a_n}$, Cauchy\'s forward-backward induction proves it for:',
       options: [
-        '$n = 2^k$ first, then fills in other values',
         'All $n$ directly',
+        '$n = 2^k$ first, then fills in other values',
         'Prime $n$ only',
         'Odd $n$ first, then even'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Cauchy\'s ingenious proof first establishes AM-GM for $n = 2^k$ by ordinary induction, then shows that if it holds for $n$, it holds for $n-1$, filling in all values.'
     },
@@ -679,10 +679,10 @@ export const section02Quiz = {
       options: [
         'Including the second-order term from the binomial expansion',
         'Restricting to $x \\geq 0$ to ensure positivity of the quadratic term',
-        'Using the binomial coefficient $\\binom{n}{2}$',
-        'All of the above'
+        'All of the above',
+        'Using the binomial coefficient $\\binom{n}{2}$'
       ],
-      correctIndex: 3,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The inequality includes $\\binom{n}{2}x^2 = \\frac{n(n-1)}{2}x^2$, the second term in the binomial expansion. For $x \\geq 0$, all neglected terms are non-negative.'
     },
@@ -700,12 +700,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove the division algorithm ($a = qb + r$, $0 \\leq r < b$) using well-ordering:',
       options: [
-        'Consider the set $S = \\{a - kb : k \\in \\mathbb{Z}, a - kb \\geq 0\\}$ and take its minimum',
+        'Factor $a$ into primes',
         'Divide $a$ by $b$ and check the remainder',
         'Use induction on $a$',
-        'Factor $a$ into primes'
+        'Consider the set $S = \\{a - kb : k \\in \\mathbb{Z}, a - kb \\geq 0\\}$ and take its minimum'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Let $S = \\{a - kb : k \\in \\mathbb{Z}, a - kb \\geq 0\\}$. $S$ is non-empty and by well-ordering has a minimum $r$. If $r \\geq b$, then $r - b \\in S$ contradicts minimality. So $0 \\leq r < b$.'
     },
@@ -714,12 +714,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'A flawed induction proof that all horses are the same color fails because:',
       options: [
-        'The base case $n = 1$ is wrong',
         'The inductive step fails when going from $n = 1$ to $n = 2$',
+        'The base case $n = 1$ is wrong',
         'Horses cannot be compared mathematically',
         'The well-ordering principle does not apply'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The "proof" assumes overlapping subsets when removing one horse. For $n = 2$ horses, removing one leaves singleton sets that don\'t overlap, so the color cannot be transferred.'
     },
@@ -728,12 +728,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $\\gcd(F_n, F_{n+1}) = 1$ (consecutive Fibonacci numbers are coprime) by induction:',
       options: [
-        'Use $\\gcd(F_{k+1}, F_{k+2}) = \\gcd(F_{k+1}, F_k)$ since $F_{k+2} = F_{k+1} + F_k$',
         'Factor both Fibonacci numbers',
+        'Use $\\gcd(F_{k+1}, F_{k+2}) = \\gcd(F_{k+1}, F_k)$ since $F_{k+2} = F_{k+1} + F_k$',
         'Use the explicit Binet formula',
         'Check divisibility by all primes'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'By the Euclidean algorithm, $\\gcd(F_{k+1}, F_{k+2}) = \\gcd(F_{k+1}, F_{k+2} - F_{k+1}) = \\gcd(F_{k+1}, F_k)$. By induction hypothesis, this equals $1$.'
     },
@@ -751,12 +751,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $\\sum_{i=1}^{n} F_i^2 = F_n F_{n+1}$ by induction, the inductive step uses:',
       options: [
-        '$F_k F_{k+1} + F_{k+1}^2 = F_{k+1}(F_k + F_{k+1}) = F_{k+1} F_{k+2}$',
-        '$F_{k+1}^2 = F_k F_{k+2} + (-1)^k$ (Cassini\'s identity)',
         'The generating function for Fibonacci numbers',
+        '$F_{k+1}^2 = F_k F_{k+2} + (-1)^k$ (Cassini\'s identity)',
+        '$F_k F_{k+1} + F_{k+1}^2 = F_{k+1}(F_k + F_{k+1}) = F_{k+1} F_{k+2}$',
         'Strong induction on both $F_k$ and $F_{k+1}$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Adding $F_{k+1}^2$ to $F_k F_{k+1}$ gives $F_{k+1}(F_k + F_{k+1}) = F_{k+1} \\cdot F_{k+2}$, using the Fibonacci recurrence.'
     },
@@ -765,12 +765,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The Peano axioms define natural numbers using:',
       options: [
-        'The successor function and induction axiom',
+        'Decimal representation',
         'Addition and multiplication',
         'The least upper bound property',
-        'Decimal representation'
+        'The successor function and induction axiom'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Peano\'s axioms include: existence of $0$, every $n$ has a successor $S(n)$, $0$ is not a successor, $S$ is injective, and the induction axiom. Addition and multiplication are then defined recursively.'
     },
@@ -779,12 +779,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Transfinite induction extends mathematical induction to:',
       options: [
-        'Real numbers',
         'Ordinal numbers (including infinite ordinals)',
+        'Real numbers',
         'Negative integers',
         'Complex numbers'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Transfinite induction works for all ordinal numbers. For limit ordinals $\\lambda$, one must prove $P(\\lambda)$ assuming $P(\\alpha)$ for all $\\alpha < \\lambda$, not just predecessors.'
     }

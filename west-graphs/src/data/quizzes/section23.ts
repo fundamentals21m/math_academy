@@ -21,11 +21,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'The Perfect Graph Theorem (Lovász) states that $G$ is perfect iff:',
     options: [
       '$G$ is bipartite',
-      '$\\overline{G}$ is perfect',
       '$G$ is chordal',
-      '$G$ is planar'
+      '$G$ is planar',
+      '$\\overline{G}$ is perfect',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Weak Perfect Graph Theorem: $G$ perfect $\\Leftrightarrow$ $\\overline{G}$ perfect.',
   },
@@ -34,12 +34,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Strong Perfect Graph Theorem characterizes perfect graphs by forbidden:',
     options: [
-      'Cliques',
       'Odd holes and odd anti-holes',
+      'Cliques',
+      'Bridges',
       'Triangles',
-      'Bridges'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'SPGT: $G$ is perfect iff it has no odd hole or odd anti-hole as induced subgraph.',
   },
@@ -48,12 +48,16 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which class of graphs is NOT perfect?',
     options: [
-      'Bipartite graphs',
       'Chordal graphs',
-      'Odd cycles $C_{2k+1}$ for $k \\geq 2$',
-      'Comparability graphs'
-    ],
+      'Bipartite graphs',
+      'Odd cycles $C_{2k+1}$ for $k \\geq 2
     correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Odd cycles $C_5, C_7, \\ldots$ are odd holes, which are imperfect.',
+  },
+      'Comparability graphs',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Odd cycles $C_5, C_7, \\ldots$ are odd holes, which are imperfect.',
   },

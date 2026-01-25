@@ -7,11 +7,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'In the Achilles and the Tortoise paradox, what is the main puzzle?',
     options: [
       'How can a tortoise be faster than Achilles?',
-      'How can Achilles ever catch the tortoise if he must first reach where it was?',
       'Why does Achilles give the tortoise a head start?',
-      'How can Achilles run without moving?'
+      'How can Achilles run without moving?',
+      'How can Achilles ever catch the tortoise if he must first reach where it was?',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The paradox asks how Achilles can ever catch the tortoise when, logically, he must first reach where it was, by which time it has moved ahead—an infinite sequence of catching up.',
   },
@@ -28,12 +28,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Dichotomy Paradox argues that to travel any distance, you must first:',
     options: [
-      'Rest for an infinite time',
       'Travel half the distance, then half of what remains, forever',
+      'Rest for an infinite time',
       'Move faster than light',
-      'Travel in a circle'
+      'Travel in a circle',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Dichotomy says you must travel half the distance, then half of the remainder, and so on infinitely—seemingly making motion impossible.',
   },
@@ -44,8 +44,8 @@ export const section01Questions: QuizQuestion[] = [
     options: [
       'It is too heavy to fly',
       'At each instant it occupies a fixed position',
+      'Time does not exist',
       'The bow is not strong enough',
-      'Time does not exist'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -57,11 +57,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'How does calculus resolve Zeno\'s paradoxes about infinite sequences?',
     options: [
       'By proving motion is impossible',
-      'By showing that infinite series can have finite sums',
       'By ignoring the paradoxes',
-      'By proving time is discrete'
+      'By showing that infinite series can have finite sums',
+      'By proving time is discrete',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Calculus shows that an infinite series of terms can converge to a finite value. For example, $1/2 + 1/4 + 1/8 + \\ldots = 1$, resolving the apparent paradox.',
   },

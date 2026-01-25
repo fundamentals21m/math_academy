@@ -7,11 +7,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'What is the fundamental security assumption underlying secp256k1?',
     options: [
       'RSA problem',
-      'Elliptic Curve Discrete Logarithm Problem (ECDLP)',
       'Factoring large primes',
-      'Collision resistance of SHA-256'
+      'Elliptic Curve Discrete Logarithm Problem (ECDLP)',
+      'Collision resistance of SHA-256',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'All secp256k1 security rests on ECDLP: given $G$ and $Q = dG$, finding $d$ is computationally infeasible.',
   },
@@ -35,11 +35,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'What is "harvest now, decrypt later"?',
     options: [
       'A farming technique',
-      'Recording encrypted data today to decrypt when quantum computers exist',
       'A type of signature aggregation',
-      'A Bitcoin mining strategy'
+      'A Bitcoin mining strategy',
+      'Recording encrypted data today to decrypt when quantum computers exist',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Adversaries may store encrypted communications now, waiting for quantum computers to break the encryption later.',
   },
@@ -49,11 +49,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'Which post-quantum cryptography approach was standardized by NIST?',
     options: [
       'secp512k1',
-      'Lattice-based (CRYSTALS-Dilithium)',
+      'Quantum key distribution',
       'Larger RSA keys',
-      'Quantum key distribution'
+      'Lattice-based (CRYSTALS-Dilithium)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'NIST selected lattice-based schemes like CRYSTALS-Dilithium and hash-based SPHINCS+ as post-quantum signature standards.',
   },
@@ -62,12 +62,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does secp256k1 remain popular despite newer curves like Ed25519?',
     options: [
-      'It\'s faster than all alternatives',
       'Extensive auditing, no suspicious parameters, and massive network effects',
+      'It\'s faster than all alternatives',
       'It\'s the only curve that works with Bitcoin',
       'NIST mandates its use'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'secp256k1 has years of battle-testing, simple parameters with no hidden backdoors, and is the de facto standard for blockchain cryptography.',
   },

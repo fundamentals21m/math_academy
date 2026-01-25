@@ -20,12 +20,16 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the proof of irrationality of $\\sqrt{2}$, if $p^2 = 2q^2$, why must $p$ be even?',
     options: [
-      'Because $q$ is even',
       'Because $p^2$ is even, and odd² = odd',
-      'Because $p > q$',
-      'Because 2 is even'
+      'Because $q$ is even',
+      'Because 2 is even',
+      'Because $p > q
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'If $p^2 = 2q^2$, then $p^2$ is even. Since the square of an odd number is odd, $p$ must be even.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'If $p^2 = 2q^2$, then $p^2$ is even. Since the square of an odd number is odd, $p$ must be even.',
   },
@@ -37,7 +41,7 @@ export const section03Questions: QuizQuestion[] = [
       'He was celebrated as a hero',
       'He was drowned at sea',
       'He became the leader of the Pythagoreans',
-      'He moved to Athens'
+      'He moved to Athens',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -48,12 +52,28 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following numbers is irrational?',
     options: [
-      '$\\frac{22}{7}$',
-      '$\\sqrt{4}$',
-      '$\\sqrt{3}$',
-      '$0.75$'
+      '$\\frac{22}{7}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\sqrt{3}$ is irrational. $\\frac{22}{7}$ is rational (a fraction), $\\sqrt{4} = 2$ is rational, and $0.75 = \\frac{3}{4}$ is rational.',
+  },
+      '$\\sqrt{4}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\sqrt{3}$ is irrational. $\\frac{22}{7}$ is rational (a fraction), $\\sqrt{4} = 2$ is rational, and $0.75 = \\frac{3}{4}$ is rational.',
+  },
+      '$0.75
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\sqrt{3}$ is irrational. $\\frac{22}{7}$ is rational (a fraction), $\\sqrt{4} = 2$ is rational, and $0.75 = \\frac{3}{4}$ is rational.',
+  },
+      '$\\sqrt{3}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\sqrt{3}$ is irrational. $\\frac{22}{7}$ is rational (a fraction), $\\sqrt{4} = 2$ is rational, and $0.75 = \\frac{3}{4}$ is rational.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: '$\\sqrt{3}$ is irrational. $\\frac{22}{7}$ is rational (a fraction), $\\sqrt{4} = 2$ is rational, and $0.75 = \\frac{3}{4}$ is rational.',
   },

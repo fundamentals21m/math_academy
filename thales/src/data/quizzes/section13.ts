@@ -26,12 +26,12 @@ export const section13Questions: QuizQuestion[] = [
     question:
       'What arithmetical operations can be performed using only ruler and compass?',
     options: [
-      'Addition, subtraction, and multiplication only',
       'Addition, subtraction, multiplication, division, and square roots',
+      'Addition, subtraction, and multiplication only',
       'All operations including cube roots',
-      'Only addition and subtraction',
+      'Only addition and subtraction'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'With ruler and compass, we can perform addition, subtraction, multiplication, division (the four rational operations), and square root extraction — but nothing more. Cube roots are impossible.',
@@ -42,12 +42,12 @@ export const section13Questions: QuizQuestion[] = [
     question:
       'To construct the product ab using ruler and compass, which proportion is used?',
     options: [
-      'x : b = a : 1 (fourth proportional)',
       '1 : x = x : ab (mean proportional)',
       'x : 1 = 1 : ab',
+      'x : b = a : 1 (fourth proportional)',
       'a : b = b : x',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'To find x = ab, we use the proportion x : b = a : 1, which can be solved using similar triangles to find the fourth proportional.',
@@ -58,12 +58,12 @@ export const section13Questions: QuizQuestion[] = [
     question:
       'How did the Greeks construct the square root of a number a using ruler and compass?',
     options: [
-      'Using a regular pentagon',
       'Using a semicircle on a segment of length a + 1',
+      'Using a regular pentagon',
       'Using two parallel lines',
       'Using the quadratrix',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'To find √a, draw a semicircle on a segment of length a + 1. A perpendicular from the point dividing the segment into lengths a and 1 meets the semicircle at height √a (the mean proportional).',
@@ -75,11 +75,11 @@ export const section13Questions: QuizQuestion[] = [
       'Why does trisecting a 60° angle lead to a cubic equation?',
     options: [
       'Because 60° has three factors',
-      'Because the triple angle formula for cosine involves cos³θ',
-      'Because triangles have three sides',
       'Because the compass draws circles',
+      'Because triangles have three sides',
+      'Because the triple angle formula for cosine involves cos³θ'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The triple angle formula cos(3θ) = 4cos³θ - 3cosθ leads to a cubic equation when we set cos(3θ) = cos(60°) = 1/2 and solve for cos(θ).',
@@ -91,11 +91,11 @@ export const section13Questions: QuizQuestion[] = [
       'Why can a regular pentagon be constructed with ruler and compass?',
     options: [
       'Because 5 is a prime number',
-      'Because cos(72°) involves only a square root (the golden section)',
       'Because pentagons have an even number of diagonals',
       'Because Euclid said so',
+      'Because cos(72°) involves only a square root (the golden section)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The construction of a regular pentagon requires cos(72°), which equals (−1 + √5)/4. Since this involves only rational operations and a square root (the golden section), it can be constructed with ruler and compass.',
@@ -140,8 +140,8 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'The fourth number in a sequence',
       'The unknown quantity that completes the proportion (here x = ab)',
-      'The fourth power of a number',
       'The fourth side of a quadrilateral',
+      'The fourth power of a number',
     ],
     correctIndex: 1,
     difficulty: 'easy',

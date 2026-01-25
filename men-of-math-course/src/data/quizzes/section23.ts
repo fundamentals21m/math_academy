@@ -7,11 +7,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'James Joseph Sylvester is known for coining which mathematical term?',
     options: [
       'Function',
-      'Matrix',
       'Derivative',
-      'Integral'
+      'Integral',
+      'Matrix',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Sylvester invented the term "matrix" for rectangular arrays of numbers.',
   },
@@ -20,12 +20,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Sylvester made major contributions to:',
     options: [
-      'Topology',
       'Invariant theory',
+      'Topology',
       'Set theory',
-      'Probability'
+      'Probability',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Sylvester was a pioneer in invariant theory, studying properties unchanged under transformations.',
   },
@@ -37,7 +37,7 @@ export const section23Questions: QuizQuestion[] = [
       'Boole',
       'Cayley',
       'Weierstrass',
-      'Riemann'
+      'Riemann',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -49,11 +49,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'In the United States, Sylvester:',
     options: [
       'Never worked there',
+      'Only visited briefly',
       'Founded the American Journal of Mathematics',
       'Became president',
-      'Only visited briefly'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Sylvester founded the American Journal of Mathematics while at Johns Hopkins University.',
   },
@@ -65,7 +65,7 @@ export const section23Questions: QuizQuestion[] = [
       'Physical mechanics',
       'Signature of quadratic forms',
       'Chemical reactions',
-      'Number sequences'
+      'Number sequences',
     ],
     correctIndex: 1,
     difficulty: 'hard',

@@ -22,12 +22,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The solution to the brachistochrone problem is:',
     options: [
-      'A cycloid (path traced by a point on a rolling circle)',
       'A straight line',
+      'A cycloid (path traced by a point on a rolling circle)',
       'A parabola',
-      'A circular arc',
+      'A circular arc'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The brachistochrone curve is an inverted cycloid—the path traced by a point on the rim of a circle rolling along a horizontal line. This was discovered independently by Newton, Leibniz, and the Bernoulli brothers in 1696-97.',
@@ -38,12 +38,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Johann Bernoulli solved the brachistochrone using an analogy with:',
     options: [
-      'Optics and Snell\'s law of refraction',
-      'Sound waves',
       'Electrical circuits',
-      'Fluid dynamics',
+      'Sound waves',
+      'Optics and Snell\'s law of refraction',
+      'Fluid dynamics'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Johann Bernoulli used Fermat\'s principle (light takes the path of least time) and Snell\'s law. He imagined the plane divided into layers with varying "light speed" equal to $\\sqrt{2gy}$. The least-time path in this medium is exactly the cycloid.',
@@ -53,12 +53,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The tautochrone property of the cycloid means:',
     options: [
-      'The descent time is the same regardless of starting point',
+      'The curve is self-similar',
       'The curve has constant curvature',
       'The arc length equals the diameter',
-      'The curve is self-similar',
+      'The descent time is the same regardless of starting point'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A cycloid is also a tautochrone: a bead released from any point on the curve reaches the bottom in the same time. Huygens used this property to design pendulum clocks with period independent of amplitude.',
@@ -84,12 +84,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When Newton solved the brachistochrone, Johann Bernoulli said:',
     options: [
-      '"I recognize the lion by his claw"',
       '"This solution is incorrect"',
+      '"I recognize the lion by his claw"',
       '"I solved it first"',
-      '"Mathematics has reached its peak"',
+      '"Mathematics has reached its peak"'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Newton submitted his solution anonymously, but Johann Bernoulli immediately recognized the author, famously remarking "tanquam ex ungue leonem" (I recognize the lion by his claw). Newton had solved the problem in a single evening.',

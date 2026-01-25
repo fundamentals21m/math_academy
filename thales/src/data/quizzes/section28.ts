@@ -10,11 +10,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'Why was Leibniz refused a Doctor of Law degree in 1666?',
     options: [
       'His thesis was rejected',
-      'He was too young',
       'He failed the examinations',
       'He was a foreigner',
+      'He was too young',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Leibniz was refused the degree of Doctor of Law on the grounds that he was too young. In the same year, he conceived the idea of symbolic logic—a universal language for expressing all rational thinking.',
@@ -24,12 +24,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What idea did Leibniz conceive in 1666, centuries before it was realized?',
     options: [
-      'The theory of relativity',
       'Symbolic logic',
-      'Non-Euclidean geometry',
+      'The theory of relativity',
       'Set theory',
+      'Non-Euclidean geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'In 1666, Leibniz conceived the idea of symbolic logic—a universal language in which all rational thinking could be expressed. This idea was only fully realized in the 19th and 20th centuries.',
@@ -39,12 +39,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who introduced Leibniz to geometry and physics in Paris?',
     options: [
-      'Newton',
-      'Descartes',
       'Huygens',
-      'Fermat',
+      'Descartes',
+      'Newton',
+      'Fermat'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'In Paris, Leibniz met Huygens, who introduced him to geometry and physics. Huygens challenged Leibniz to sum the series 2/n(n+1), which Leibniz solved using the telescoping method.',
@@ -71,10 +71,10 @@ export const section28Questions: QuizQuestion[] = [
     options: [
       '1666',
       '1673',
-      '1684',
       '1686',
+      '1684',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Leibniz\'s work on the calculus appeared in 1684, before Newton had gotten around to publishing his results. This led to a bitter priority dispute between the two mathematicians.',
@@ -99,12 +99,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who put calculus on rigorous foundations using the epsilon-delta definition of limits?',
     options: [
-      'Newton',
       'Leibniz',
-      'Berkeley',
       'Weierstrass',
+      'Berkeley',
+      'Newton',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Karl Weierstrass (1815-1897) put calculus on firm foundations using the epsilon-delta definition of limits. The derivative is now seen not as a quotient but as a limit of quotients.',
@@ -114,12 +114,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who ridiculed Leibniz\'s view that this is "the best of all possible worlds"?',
     options: [
+      'Voltaire',
       'Newton',
       'Berkeley',
-      'Voltaire',
       'Descartes',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Voltaire ridiculed Leibniz\'s optimistic philosophy in his novel Candide. However, Leibniz probably did not mean "happiest" by "best"—he may have meant something like "most energy-efficient."',

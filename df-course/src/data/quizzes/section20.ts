@@ -6,12 +6,28 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Orbit-Stabilizer Theorem states that for a group $G$ acting on a set $X$ and $x \\in X$:',
     options: [
-      '$|G| = |\\text{Orb}(x)| + |\\text{Stab}(x)|$',
-      '$|G| = |\\text{Orb}(x)| \\cdot |\\text{Stab}(x)|$',
-      '$|\\text{Orb}(x)| = |\\text{Stab}(x)|$',
-      '$|G| = |\\text{Orb}(x)|^{|\\text{Stab}(x)|}$'
-    ],
+      '$|G| = |\\text{Orb}(x)| + |\\text{Stab}(x)|
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Orbit-Stabilizer: $|G| = |\\text{Orb}_G(x)| \\cdot |\\text{Stab}_G(x)|$, or equivalently $|\\text{Orb}(x)| = [G : \\text{Stab}(x)]$.',
+  },
+      '$|G| = |\\text{Orb}(x)| \\cdot |\\text{Stab}(x)|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Orbit-Stabilizer: $|G| = |\\text{Orb}_G(x)| \\cdot |\\text{Stab}_G(x)|$, or equivalently $|\\text{Orb}(x)| = [G : \\text{Stab}(x)]$.',
+  },
+      '$|\\text{Orb}(x)| = |\\text{Stab}(x)|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Orbit-Stabilizer: $|G| = |\\text{Orb}_G(x)| \\cdot |\\text{Stab}_G(x)|$, or equivalently $|\\text{Orb}(x)| = [G : \\text{Stab}(x)]$.',
+  },
+      '$|G| = |\\text{Orb}(x)|^{|\\text{Stab}(x)|}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Orbit-Stabilizer: $|G| = |\\text{Orb}_G(x)| \\cdot |\\text{Stab}_G(x)|$, or equivalently $|\\text{Orb}(x)| = [G : \\text{Stab}(x)]$.',
+  },
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Orbit-Stabilizer: $|G| = |\\text{Orb}_G(x)| \\cdot |\\text{Stab}_G(x)|$, or equivalently $|\\text{Orb}(x)| = [G : \\text{Stab}(x)]$.',
   },
@@ -30,11 +46,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'The action of $G$ on itself by left multiplication is called:',
     options: [
       'The conjugation action',
-      'The regular action (Cayley action)',
+      'The adjoint action',
       'The trivial action',
-      'The adjoint action'
+      'The regular action (Cayley action)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The regular (or Cayley) action is $g \\cdot h = gh$. It is transitive and faithful.',
   },
@@ -43,12 +59,28 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The action of $G$ on itself by conjugation is defined by:',
     options: [
-      '$g \\cdot h = gh$',
-      '$g \\cdot h = hg$',
-      '$g \\cdot h = ghg^{-1}$',
-      '$g \\cdot h = g^{-1}hg$'
-    ],
+      '$g \\cdot h = hg
     correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The conjugation action is $g \\cdot h = ghg^{-1}$. The orbits are conjugacy classes.',
+  },
+      '$g \\cdot h = gh
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The conjugation action is $g \\cdot h = ghg^{-1}$. The orbits are conjugacy classes.',
+  },
+      '$g \\cdot h = ghg^{-1}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The conjugation action is $g \\cdot h = ghg^{-1}$. The orbits are conjugacy classes.',
+  },
+      '$g \\cdot h = g^{-1}hg
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The conjugation action is $g \\cdot h = ghg^{-1}$. The orbits are conjugacy classes.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The conjugation action is $g \\cdot h = ghg^{-1}$. The orbits are conjugacy classes.',
   },
@@ -57,10 +89,22 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Burnside's Counting Theorem (Cauchy-Frobenius Lemma) states that the number of orbits equals:",
     options: [
-      '$|G|/|X|$',
-      'The average number of fixed points: $\\frac{1}{|G|} \\sum_{g \\in G} |X^g|$',
-      '$|X|/|G|$',
-      'The number of stabilizers'
+      'The average number of fixed points: $\\frac{1}{|G|} \\sum_{g \\in G} |X^g|
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Burnside: $|X/G| = \\frac{1}{|G|} \\sum_{g \\in G} |X^g|$, where $X^g = \\{x : g \\cdot x = x\\}$.',
+  },
+      '$|G|/|X|
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Burnside: $|X/G| = \\frac{1}{|G|} \\sum_{g \\in G} |X^g|$, where $X^g = \\{x : g \\cdot x = x\\}$.',
+  },
+      '$|X|/|G|
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Burnside: $|X/G| = \\frac{1}{|G|} \\sum_{g \\in G} |X^g|$, where $X^g = \\{x : g \\cdot x = x\\}$.',
+  },
+      'The number of stabilizers',
     ],
     correctIndex: 1,
     difficulty: 'hard',

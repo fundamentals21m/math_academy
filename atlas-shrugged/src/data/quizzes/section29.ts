@@ -7,11 +7,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What happens at the conclusion of Atlas Shrugged?',
     options: [
       'The looters win and establish a permanent dictatorship',
-      'The strikers prepare to return and rebuild civilization',
       'John Galt is killed by the government',
-      'Dagny abandons her principles'
+      'Dagny abandons her principles',
+      'The strikers prepare to return and rebuild civilization',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The novel ends with the collapse of the looters\' world and the strikers preparing to emerge from the valley to rebuild civilization on the foundation of rational principles.',
   },
@@ -21,11 +21,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What does the phrase "In the Name of the Best Within Us" refer to?',
     options: [
       'Religious faith',
+      'Family heritage',
       'The highest human potential—reason and productive achievement',
       'Political loyalty',
-      'Family heritage'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The phrase refers to the highest and best in human nature: the capacity for reason, creativity, and productive achievement that the strikers represent and fight to preserve.',
   },
@@ -34,12 +34,12 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the condition of the outside world when the strikers prepare to return?',
     options: [
-      'Thriving under new leadership',
       'Completely collapsed due to the absence of producers',
+      'Thriving under new leadership',
       'Unchanged from the beginning',
       'Peacefully socialist'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The outside world has completely collapsed. Without the minds that sustained it, civilization cannot function. The lights go out across the nation.',
   },
@@ -49,11 +49,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What does John Galt trace in the air at the end of the novel?',
     options: [
       'A cross',
-      'The sign of the dollar',
       'His signature',
-      'A question mark'
+      'A question mark',
+      'The sign of the dollar',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Galt traces the sign of the dollar in the air over the desolate earth, symbolizing that free trade and productive achievement will be the foundation of the new civilization.',
   },
@@ -63,9 +63,9 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What must the strikers do before they can rebuild?',
     options: [
       'Negotiate with the remaining government',
-      'Wait for the looters\' system to fully collapse',
+      'Wait for the looters\\' system to fully collapse',
       'Gather military force',
-      'Convert the population to their philosophy'
+      'Convert the population to their philosophy',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -77,11 +77,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What is the ultimate message of the novel\'s conclusion?',
     options: [
       'Civilization is doomed to repeat cycles of collapse',
+      'Technology cannot save humanity',
       'The mind is the foundation of human survival and can rebuild what was destroyed',
       'Some people are destined to rule over others',
-      'Technology cannot save humanity'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The conclusion affirms that human reason and productive ability—the mind—can rebuild civilization. What the mind created once, it can create again on a proper foundation.',
   },

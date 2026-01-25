@@ -7,12 +7,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The derivative of $f$ at $a$ is defined as:',
       options: [
-        '$f(a)$',
         '$\\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}$',
+        '$f(a)$',
         '$\\lim_{x \\to \\infty} f(x)$',
         '$f(a+1) - f(a)$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The derivative is the limit of the difference quotient as $h \\to 0$.'
     },
@@ -36,11 +36,11 @@ export const section11Quiz = {
       question: 'The derivative of $f(x) = x^n$ is:',
       options: [
         '$x^{n-1}$',
-        '$nx^{n-1}$',
         '$nx^n$',
+        '$nx^{n-1}$',
         '$x^{n+1}/(n+1)$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The power rule: $(x^n)\' = nx^{n-1}$.'
     },
@@ -50,11 +50,11 @@ export const section11Quiz = {
       question: 'If $f\'(a) > 0$, then near $a$:',
       options: [
         '$f$ is decreasing',
-        '$f$ is increasing',
+        '$f$ has a maximum',
         '$f$ is constant',
-        '$f$ has a maximum'
+        '$f$ is increasing'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Positive derivative means the function is increasing (at least locally).'
     },
@@ -63,12 +63,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The derivative of a constant function is:',
       options: [
-        'The constant',
-        '$1$',
         '$0$',
+        '$1$',
+        'The constant',
         'Undefined'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Constants have zero rate of change: $(c)\' = 0$.'
     },
@@ -100,11 +100,11 @@ export const section11Quiz = {
       question: 'The product rule states that $(fg)\' = $:',
       options: [
         '$f\'g\'$',
-        '$f\'g + fg\'$',
         '$f\' + g\'$',
+        '$f\'g + fg\'$',
         '$f\'g - fg\'$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.'
     },
@@ -114,11 +114,11 @@ export const section11Quiz = {
       question: 'The quotient rule states that $(f/g)\' = $:',
       options: [
         '$f\'/g\'$',
-        '$(f\'g - fg\')/g^2$',
+        '$f\'g\'/g^2$',
         '$(f\'g + fg\')/g^2$',
-        '$f\'g\'/g^2$'
+        '$(f\'g - fg\')/g^2$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Quotient rule: $(f/g)\' = (f\'g - fg\')/g^2$.'
     },
@@ -127,12 +127,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The chain rule states that $(f \\circ g)\' = $:',
       options: [
-        '$f\' \\circ g\'$',
         '$(f\' \\circ g) \\cdot g\'$',
+        '$f\' \\circ g\'$',
         '$f\' + g\'$',
         '$f\'g\'$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Chain rule: $(f(g(x)))\' = f\'(g(x)) \\cdot g\'(x)$.'
     },
@@ -155,12 +155,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The derivative of $\\ln x$ is:',
       options: [
-        '$1/x$',
-        '$x$',
         '$\\ln x$',
+        '$x$',
+        '$1/x$',
         '$e^x$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: '$(\\ln x)\' = 1/x$ for $x > 0$.'
     },
@@ -170,11 +170,11 @@ export const section11Quiz = {
       question: 'The derivative of $\\sin x$ is:',
       options: [
         '$-\\sin x$',
-        '$\\cos x$',
+        '$\\tan x$',
         '$-\\cos x$',
-        '$\\tan x$'
+        '$\\cos x$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: '$(\\sin x)\' = \\cos x$.'
     },
@@ -183,12 +183,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The derivative of $\\cos x$ is:',
       options: [
-        '$\\sin x$',
         '$-\\sin x$',
+        '$\\sin x$',
         '$\\cos x$',
         '$-\\cos x$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: '$(\\cos x)\' = -\\sin x$.'
     },
@@ -235,10 +235,10 @@ export const section11Quiz = {
       options: [
         '$f$ is increasing',
         '$f$ is decreasing',
-        '$f$ is constant',
-        '$f$ is unbounded'
+        '$f$ is unbounded',
+        '$f$ is constant'
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Zero derivative everywhere means the function is constant.'
     },
@@ -247,12 +247,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The notation $\\frac{df}{dx}$ represents:',
       options: [
-        'A fraction',
         'The derivative of $f$ with respect to $x$',
+        'A fraction',
         'The integral of $f$',
         'The limit of $f$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Leibniz notation $df/dx$ denotes the derivative of $f$ with respect to $x$.'
     },
@@ -301,11 +301,11 @@ export const section11Quiz = {
       question: 'If $f\'(x) > 0$ for all $x \\in (a,b)$, then $f$ is:',
       options: [
         'Decreasing on $(a,b)$',
-        'Strictly increasing on $(a,b)$',
+        'Bounded on $(a,b)$',
         'Constant on $(a,b)$',
-        'Bounded on $(a,b)$'
+        'Strictly increasing on $(a,b)$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Positive derivative implies strictly increasing (by MVT).'
     },
@@ -314,12 +314,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'A critical point of $f$ is a point where:',
       options: [
-        '$f(x) = 0$',
         '$f\'(x) = 0$ or $f\'(x)$ does not exist',
+        '$f(x) = 0$',
         '$f$ is discontinuous',
         '$f$ is unbounded'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Critical points are where the derivative is zero or undefined.'
     },
@@ -350,12 +350,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'L\'Hôpital\'s rule applies to limits of the form:',
       options: [
-        '$0/0$ or $\\infty/\\infty$',
-        '$1/0$',
         '$0 \\cdot \\infty$ directly',
+        '$1/0$',
+        '$0/0$ or $\\infty/\\infty$',
         'Any limit'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'L\'Hôpital\'s rule handles indeterminate forms $0/0$ and $\\infty/\\infty$.'
     },
@@ -365,11 +365,11 @@ export const section11Quiz = {
       question: 'Using L\'Hôpital\'s rule, $\\lim_{x \\to 0} \\frac{\\sin x}{x} = $:',
       options: [
         '$0$',
-        '$1$',
+        'Does not exist',
         '$\\infty$',
-        'Does not exist'
+        '$1$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: '$\\frac{d}{dx}\\sin x = \\cos x$, $\\frac{d}{dx} x = 1$. So limit is $\\cos 0 / 1 = 1$.'
     },
@@ -378,12 +378,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'If $f\'(x) = g\'(x)$ for all $x$, then:',
       options: [
-        '$f = g$',
         '$f = g + C$ for some constant $C$',
+        '$f = g$',
         '$f$ and $g$ are unrelated',
         '$f\' = g\' = 0$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Functions with equal derivatives differ by a constant.'
     },
@@ -406,12 +406,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The derivative of $f(x) = \\ln(x^2)$ for $x > 0$ is:',
       options: [
-        '$2/x$',
-        '$1/x^2$',
         '$2x$',
+        '$1/x^2$',
+        '$2/x$',
         '$1/(2x)$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: '$\\ln(x^2) = 2\\ln x$, so derivative is $2/x$. Or by chain rule: $\\frac{1}{x^2} \\cdot 2x = 2/x$.'
     },
@@ -421,11 +421,11 @@ export const section11Quiz = {
       question: 'If $f$ is twice differentiable and $f\'\'(x) > 0$ on $(a,b)$, then $f$ is:',
       options: [
         'Linear',
-        'Concave up (convex)',
+        'Constant',
         'Concave down',
-        'Constant'
+        'Concave up (convex)'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Positive second derivative means concave up (graph lies above tangent lines).'
     },
@@ -442,12 +442,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = x^3$ has at $x = 0$:',
       options: [
-        'A local maximum',
-        'A local minimum',
         'An inflection point',
+        'A local minimum',
+        'A local maximum',
         'No special feature'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: '$f\'(0) = 0$ but $f\'\'(0) = 0$ too. Checking: $f\'\'\'(0) = 6 \\neq 0$, so inflection point.'
     },
@@ -456,12 +456,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'Cauchy\'s Mean Value Theorem states that for suitable $f, g$:',
       options: [
-        '$\\frac{f\'(c)}{g\'(c)} = \\frac{f(b) - f(a)}{g(b) - g(a)}$ for some $c$',
         '$f\'(c) = g\'(c)$',
+        '$\\frac{f\'(c)}{g\'(c)} = \\frac{f(b) - f(a)}{g(b) - g(a)}$ for some $c$',
         '$f(c) = g(c)$',
         '$f\'(c)g\'(c) = 1$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Cauchy MVT generalizes MVT to ratios of functions.'
     },
@@ -471,11 +471,11 @@ export const section11Quiz = {
       question: 'The derivative of $\\arctan x$ is:',
       options: [
         '$1/\\sqrt{1-x^2}$',
-        '$1/(1+x^2)$',
         '$-1/\\sqrt{1-x^2}$',
+        '$1/(1+x^2)$',
         '$\\sec^2 x$'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: '$(\\arctan x)\' = 1/(1+x^2)$.'
     },
@@ -484,12 +484,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'If $f\'(a)$ exists, then $\\lim_{h \\to 0} \\frac{f(a+h) - f(a-h)}{2h} = $:',
       options: [
-        '$f\'(a)$',
+        '$0$',
         '$2f\'(a)$',
         '$f\'(a)/2$',
-        '$0$'
+        '$f\'(a)$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'This symmetric difference quotient also converges to $f\'(a)$ when the derivative exists.'
     },
@@ -498,12 +498,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The inverse function theorem (1D) states that if $f\'(a) \\neq 0$:',
       options: [
-        '$f$ has no inverse',
         '$f^{-1}$ exists locally and $(f^{-1})\'(f(a)) = 1/f\'(a)$',
+        '$f$ has no inverse',
         '$f$ is constant',
         '$f^{-1}$ is not differentiable'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Non-zero derivative allows local inversion with derivative $1/f\'(a)$.'
     },
@@ -553,11 +553,11 @@ export const section11Quiz = {
       question: 'Darboux\'s theorem states that:',
       options: [
         'Every derivative is continuous',
-        'Derivatives satisfy the intermediate value property',
+        'Derivatives are bounded',
         'All functions are differentiable',
-        'Derivatives are bounded'
+        'Derivatives satisfy the intermediate value property'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Darboux: $f\'$ has the IVP even if $f\'$ is discontinuous.'
     },
@@ -566,12 +566,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = x^2 \\sin(1/x)$ for $x \\neq 0$, $f(0) = 0$:',
       options: [
-        'Is not differentiable at $0$',
         'Is differentiable at $0$ with $f\'(0) = 0$',
+        'Is not differentiable at $0$',
         'Is differentiable at $0$ with $f\'(0) = 1$',
         'Is not continuous at $0$'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: '$\\frac{f(h) - 0}{h} = h\\sin(1/h) \\to 0$, so $f\'(0) = 0$.'
     },
@@ -595,11 +595,11 @@ export const section11Quiz = {
       question: 'There exists a function differentiable everywhere with derivative:',
       options: [
         'The Dirichlet function',
-        'A bounded discontinuous function',
         'An unbounded function',
+        'A bounded discontinuous function',
         'A function discontinuous at every point'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Derivatives can be discontinuous (Darboux), but not everywhere discontinuous. Bounded discontinuous examples exist.'
     },
@@ -609,11 +609,11 @@ export const section11Quiz = {
       question: 'The Weierstrass function is:',
       options: [
         'Differentiable everywhere',
-        'Continuous everywhere but differentiable nowhere',
+        'Differentiable almost everywhere',
         'Discontinuous everywhere',
-        'Differentiable almost everywhere'
+        'Continuous everywhere but differentiable nowhere'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Weierstrass constructed a continuous function that is nowhere differentiable.'
     },
@@ -622,12 +622,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'If $f\'\'(x) = 0$ for all $x$, then $f$ is:',
       options: [
-        'Constant',
         'Linear (of the form $ax + b$)',
+        'Constant',
         'Quadratic',
         'Exponential'
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: '$f\'\' = 0$ implies $f\' = c_1$, which implies $f = c_1 x + c_2$.'
     },
@@ -645,12 +645,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'Taylor\'s theorem with Lagrange remainder states $f(x) = P_n(x) + R_n(x)$ where:',
       options: [
-        '$R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x$',
         '$R_n(x) = 0$',
+        '$R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x$',
         '$R_n(x) = f^{(n)}(a)$',
         '$R_n(x) = \\infty$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'The Lagrange form of the remainder involves the $(n+1)$st derivative at an intermediate point.'
     },
@@ -660,11 +660,11 @@ export const section11Quiz = {
       question: 'A function is real analytic at $a$ if:',
       options: [
         'It is infinitely differentiable at $a$',
-        'It equals its Taylor series in a neighborhood of $a$',
         'It is continuous at $a$',
+        'It equals its Taylor series in a neighborhood of $a$',
         'It has a finite Taylor polynomial'
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Analytic means the Taylor series converges to $f$ near $a$. Being $C^\\infty$ is necessary but not sufficient.'
     },
@@ -674,11 +674,11 @@ export const section11Quiz = {
       question: 'The function $f(x) = e^{-1/x^2}$ for $x \\neq 0$, $f(0) = 0$ is:',
       options: [
         'Not differentiable at $0$',
-        '$C^\\infty$ but not analytic at $0$',
+        'Discontinuous at $0$',
         'Analytic everywhere',
-        'Discontinuous at $0$'
+        '$C^\\infty$ but not analytic at $0$'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'All derivatives at $0$ are $0$, so Taylor series is $0$, but $f \\neq 0$ for $x \\neq 0$. Hence $C^\\infty$ but not analytic.'
     },
@@ -687,12 +687,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is differentiable on $(a,b)$ and $\\lim_{x \\to a^+} f\'(x) = L$:',
       options: [
-        '$f\'(a)$ exists and equals $L$',
-        '$f$ extends to $[a,b)$ with $f\'$ continuous at $a$',
         'We cannot conclude $f\'(a)$ exists without more information',
+        '$f$ extends to $[a,b)$ with $f\'$ continuous at $a$',
+        '$f\'(a)$ exists and equals $L$',
         '$f$ must be discontinuous at $a$'
       ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The limit of $f\'$ existing doesn\'t automatically mean $f$ is differentiable at the endpoint.'
     },
@@ -715,12 +715,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is $n$ times differentiable and $f(a) = f\'(a) = \\cdots = f^{(n-1)}(a) = 0$ but $f^{(n)}(a) \\neq 0$:',
       options: [
-        '$a$ is a zero of order $n$',
-        '$a$ is a simple zero',
         '$f$ has a local max at $a$',
+        '$a$ is a simple zero',
+        '$a$ is a zero of order $n$',
         '$f$ is constant'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'When the first $n-1$ derivatives vanish but the $n$th doesn\'t, $a$ is a zero of order $n$.'
     },
@@ -730,11 +730,11 @@ export const section11Quiz = {
       question: 'Faa di Bruno\'s formula gives:',
       options: [
         'The derivative of a product',
-        'The $n$th derivative of a composition',
+        'The Taylor series',
         'The integral of a composition',
-        'The Taylor series'
+        'The $n$th derivative of a composition'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Faa di Bruno\'s formula generalizes the chain rule to higher derivatives.'
     },
@@ -743,12 +743,12 @@ export const section11Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is convex on $(a,b)$, then $f$ is:',
       options: [
-        'Differentiable everywhere',
+        'Both (B) and (C)',
         'Differentiable except at countably many points',
         'Continuous and has left and right derivatives everywhere',
-        'Both (B) and (C)'
+        'Differentiable everywhere'
       ],
-      correctIndex: 3,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Convex functions are continuous, have one-sided derivatives everywhere, and are differentiable except at countably many points.'
     },
@@ -794,11 +794,11 @@ export const section11Quiz = {
       question: 'A function where $f\'$ exists everywhere but is discontinuous at every point:',
       options: [
         'Exists',
-        'Cannot exist (by Darboux)',
+        'Must be constant',
         'Is the Weierstrass function',
-        'Must be constant'
+        'Cannot exist (by Darboux)'
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'By Darboux\'s theorem, derivatives have the IVP, so they cannot be discontinuous at every point (they\'re Baire class 1).'
     }

@@ -9,7 +9,7 @@ export const section63Questions: QuizQuestion[] = [
       'Constructs a rectangle equal to a given square',
       'Constructs a square equal to a given polygon',
       'Divides a square into equal parts',
-      'Constructs a circle equal to a given square'
+      'Constructs a circle equal to a given square',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section63Questions: QuizQuestion[] = [
       'A triangle',
       'A circle',
       'A rectangle',
-      'A parallelogram'
+      'A parallelogram',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'If a rectangle has sides a and b, II.14 constructs a square with side:',
     options: [
       '(a + b) / 2',
-      '√(ab)',
       'ab',
-      '(a + b)²'
+      '(a + b)²',
+      '√(ab)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The square has side √(ab), the geometric mean of a and b, since (√(ab))² = ab equals the rectangle\'s area.',
   },
@@ -48,12 +48,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The ancient problem of "squaring the circle" asks if a circle can be squared like a polygon. This was proved:',
     options: [
+      'Impossible in 1882 when π was shown to be transcendental',
       'Possible by Euclid in Book IV',
       'Possible using only I.47',
-      'Impossible in 1882 when π was shown to be transcendental',
-      'Impossible by Euclid in Book XII'
+      'Impossible by Euclid in Book XII',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Lindemann proved in 1882 that π is transcendental, making it impossible to square the circle with compass and straightedge.',
   },

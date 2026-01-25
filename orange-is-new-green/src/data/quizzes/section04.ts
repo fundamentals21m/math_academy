@@ -7,11 +7,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What triggered the UK Gilt crisis in October 2022?',
     options: [
       'A global pandemic',
-      'A mini-budget with £45 billion in unfunded tax cuts',
       'Brexit negotiations',
-      'A cyberattack on UK banks'
+      'A mini-budget with £45 billion in unfunded tax cuts',
+      'A cyberattack on UK banks',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Chancellor Kwasi Kwarteng\'s mini-budget announcement with £45 billion in unfunded tax cuts triggered a rapid rise in Gilt yields and the subsequent crisis.',
   },
@@ -23,7 +23,7 @@ export const section04Questions: QuizQuestion[] = [
       'A strategy to avoid all market risk',
       'Using government bonds as collateral to match pension obligations',
       'Investing only in cryptocurrency',
-      'A type of tax avoidance scheme'
+      'A type of tax avoidance scheme',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Why did selling Gilts (supposedly the most "liquid" asset) make the crisis worse?',
     options: [
       'There were no buyers for Gilts',
-      'Forced selling further depressed prices, triggering more margin calls—a cascade effect',
+      'The Bank of England banned Gilt trading',
       'Gilts were illiquid by definition',
-      'The Bank of England banned Gilt trading'
+      'Forced selling further depressed prices, triggering more margin calls—a cascade effect'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When pension funds sold Gilts to meet margin calls, it further depressed Gilt prices, causing more margin calls and more forced selling—a classic liquidation cascade.',
   },
@@ -48,12 +48,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How much did the Bank of England pledge to buy in long-dated Gilts to stop the crisis?',
     options: [
-      'Up to £5 billion',
-      'Up to £20 billion',
       'Up to £65 billion',
+      'Up to £20 billion',
+      'Up to £5 billion',
       'Up to £100 billion'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Bank of England intervened by announcing purchases of up to £65 billion in long-dated Gilts to stabilize the market.',
   },

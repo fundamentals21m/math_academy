@@ -7,11 +7,11 @@ export const section80Questions: QuizQuestion[] = [
     question: 'Proposition III.16 proves what fundamental property of tangent lines?',
     options: [
       'A tangent is parallel to the diameter',
-      'A line perpendicular to a diameter at its endpoint is tangent to the circle',
       'A tangent line bisects the circle',
-      'A tangent passes through the center'
+      'A tangent passes through the center',
+      'A line perpendicular to a diameter at its endpoint is tangent to the circle',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'III.16 proves that the line drawn perpendicular to a diameter at its extremity (endpoint on the circle) is tangent to the circle.',
   },
@@ -20,12 +20,12 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the key relationship between a tangent line and the radius at the point of tangency?',
     options: [
-      'They are parallel',
       'They are perpendicular',
+      'They are parallel',
       'They form a 45° angle',
-      'They are equal in length'
+      'They are equal in length',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A tangent line is perpendicular to the radius at the point of tangency. This is fundamental to tangent geometry.',
   },
@@ -37,7 +37,7 @@ export const section80Questions: QuizQuestion[] = [
       'Two parallel tangents',
       'The circle and its tangent (at the tangent point)',
       'The center and the circumference',
-      'Two intersecting chords'
+      'Two intersecting chords',
     ],
     correctIndex: 1,
     difficulty: 'medium',

@@ -6,12 +6,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The root test: if $\\limsup_{n \\to \\infty} \\sqrt[n]{|a_n|} = L$, then $\\sum a_n$:',
     options: [
-      'Converges if $L < 1$, diverges if $L > 1$',
       'Converges if $L > 1$, diverges if $L < 1$',
+      'Converges if $L < 1$, diverges if $L > 1$',
       'Always converges',
       'Always diverges'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Root test: if $\\limsup \\sqrt[n]{|a_n|} < 1$, the series converges absolutely. If $> 1$, it diverges. If $= 1$, the test is inconclusive.',
   },
@@ -35,11 +35,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Apply the ratio test to $\\sum \\frac{n!}{n^n}$. The series:',
     options: [
       'Diverges',
-      'Converges',
+      'Converges conditionally but not absolutely',
       'The ratio test is inconclusive',
-      'Converges conditionally but not absolutely'
+      'Converges'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: '$\\frac{a_{n+1}}{a_n} = \\frac{(n+1)!}{(n+1)^{n+1}} \\cdot \\frac{n^n}{n!} = \\frac{n^n}{(n+1)^n} = \\left(\\frac{n}{n+1}\\right)^n \\to 1/e < 1$. So the series converges.',
   },
@@ -48,12 +48,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For which series is both the root and ratio test inconclusive?',
     options: [
-      '$\\sum \\frac{1}{2^n}$',
       '$\\sum \\frac{1}{n^2}$',
+      '$\\sum \\frac{1}{2^n}$',
       '$\\sum \\frac{1}{n!}$',
       '$\\sum 2^n$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'For $\\sum 1/n^2$: $\\sqrt[n]{1/n^2} = 1/n^{2/n} \\to 1$ and $a_{n+1}/a_n = n^2/(n+1)^2 \\to 1$. Both tests give $L = 1$, inconclusive. (The series converges by the $p$-test.)',
   },

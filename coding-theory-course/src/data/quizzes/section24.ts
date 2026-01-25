@@ -6,12 +6,28 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The $q$-cyclotomic coset of $s$ modulo $n$ is defined as:',
     options: [
-      '$\\{s, s+1, s+2, \\ldots\\} \\pmod{n}$',
-      '$\\{s, qs, q^2s, \\ldots\\} \\pmod{n}$',
-      '$\\{s, s/q, s/q^2, \\ldots\\} \\pmod{n}$',
-      '$\\{s, s+q, s+2q, \\ldots\\} \\pmod{n}$'
+      '$\\{s, s+1, s+2, \\ldots\\} \\pmod{n}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The $q$-cyclotomic coset of $s$ modulo $n$ is $C_s = \\{s, qs, q^2s, \\ldots, q^{m-1}s\\} \\pmod{n}$ where $m$ is the smallest positive integer with $q^m s \\equiv s \\pmod{n}$.',
+  },
+      '$\\{s, s+q, s+2q, \\ldots\\} \\pmod{n}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The $q$-cyclotomic coset of $s$ modulo $n$ is $C_s = \\{s, qs, q^2s, \\ldots, q^{m-1}s\\} \\pmod{n}$ where $m$ is the smallest positive integer with $q^m s \\equiv s \\pmod{n}$.',
+  },
+      '$\\{s, qs, q^2s, \\ldots\\} \\pmod{n}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The $q$-cyclotomic coset of $s$ modulo $n$ is $C_s = \\{s, qs, q^2s, \\ldots, q^{m-1}s\\} \\pmod{n}$ where $m$ is the smallest positive integer with $q^m s \\equiv s \\pmod{n}$.',
+  },
+      '$\\{s, s/q, s/q^2, \\ldots\\} \\pmod{n}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The $q$-cyclotomic coset of $s$ modulo $n$ is $C_s = \\{s, qs, q^2s, \\ldots, q^{m-1}s\\} \\pmod{n}$ where $m$ is the smallest positive integer with $q^m s \\equiv s \\pmod{n}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The $q$-cyclotomic coset of $s$ modulo $n$ is $C_s = \\{s, qs, q^2s, \\ldots, q^{m-1}s\\} \\pmod{n}$ where $m$ is the smallest positive integer with $q^m s \\equiv s \\pmod{n}$.',
   },
@@ -29,12 +45,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The irreducible factors of $x^n - 1$ over $\\mathbb{F}_q$ correspond to:',
     options: [
-      'Prime divisors of $n$',
       '$q$-cyclotomic cosets modulo $n$',
+      'Prime divisors of $n$',
       'Subgroups of $\\mathbb{Z}_n$',
       'Elements of $\\mathbb{F}_q$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Each irreducible factor of $x^n - 1$ over $\\mathbb{F}_q$ corresponds to a $q$-cyclotomic coset. The degree of the factor equals the size of the coset.',
   },

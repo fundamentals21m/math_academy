@@ -7,11 +7,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'What is the basic idea of a Riemann sum?',
     options: [
       'Adding two numbers',
-      'Approximating area under a curve using rectangles',
       'Finding the slope of a curve',
+      'Approximating area under a curve using rectangles',
       'Dividing a number into prime factors'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Riemann sums approximate the area under a curve by dividing the region into thin rectangles and adding up their areas.',
   },
@@ -28,12 +28,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens to a Riemann sum as the number of rectangles increases?',
     options: [
-      'It becomes less accurate',
       'It approaches the exact area (the integral)',
+      'It becomes less accurate',
+      'It becomes infinite',
       'It stays the same',
-      'It becomes infinite'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'As we use more and thinner rectangles, the Riemann sum gets closer to the true area. The limit of this process is the definite integral.',
   },
@@ -52,11 +52,15 @@ export const section09Questions: QuizQuestion[] = [
     question: 'What does the integral symbol $\\int$ represent?',
     options: [
       'Infinity',
+      'The number $i
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Leibniz designed $\\int$ as an elongated S for "summa" (sum), representing the sum of infinitely many infinitesimal pieces.',
+  },
+      'Integration is impossible',
       'An elongated S for "sum" (adding infinitely many pieces)',
-      'The number $i$',
-      'Integration is impossible'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Leibniz designed $\\int$ as an elongated S for "summa" (sum), representing the sum of infinitely many infinitesimal pieces.',
   },

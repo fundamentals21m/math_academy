@@ -6,10 +6,22 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The generator polynomial of a BCH code is:',
     options: [
-      '$g(X) = \\text{LCM}(m_1(X), m_2(X), \\ldots, m_{d-1}(X))$',
-      '$g(X) = m_1(X) + m_2(X) + \\cdots + m_{d-1}(X)$',
-      '$g(X) = X^{d-1} - 1$',
-      'Any irreducible polynomial'
+      '$g(X) = m_1(X) + m_2(X) + \\cdots + m_{d-1}(X)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The BCH code generator is the least common multiple of the minimal polynomials $m_i(X)$ of $\\alpha^i$ for $i = 1, 2, \\ldots, d-1$, where $\\alpha$ is a primitive element.',
+  },
+      '$g(X) = \\text{LCM}(m_1(X), m_2(X), \\ldots, m_{d-1}(X))
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The BCH code generator is the least common multiple of the minimal polynomials $m_i(X)$ of $\\alpha^i$ for $i = 1, 2, \\ldots, d-1$, where $\\alpha$ is a primitive element.',
+  },
+      '$g(X) = X^{d-1} - 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The BCH code generator is the least common multiple of the minimal polynomials $m_i(X)$ of $\\alpha^i$ for $i = 1, 2, \\ldots, d-1$, where $\\alpha$ is a primitive element.',
+  },
+      'Any irreducible polynomial',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -20,12 +32,28 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The BCH bound guarantees that a BCH code with designed distance $d$ has minimum distance:',
     options: [
-      'At least $d$',
-      'Exactly $d$',
-      'At most $d$',
-      'Equal to $d - 1$'
-    ],
+      'At least $d
     correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The BCH bound states that the minimum distance is at least the designed distance $d$. The actual minimum distance may be larger.',
+  },
+      'Exactly $d
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The BCH bound states that the minimum distance is at least the designed distance $d$. The actual minimum distance may be larger.',
+  },
+      'At most $d
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The BCH bound states that the minimum distance is at least the designed distance $d$. The actual minimum distance may be larger.',
+  },
+      'Equal to $d - 1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The BCH bound states that the minimum distance is at least the designed distance $d$. The actual minimum distance may be larger.',
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The BCH bound states that the minimum distance is at least the designed distance $d$. The actual minimum distance may be larger.',
   },
@@ -43,12 +71,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the BCH bound proof, what mathematical structure is used to show the minimum distance?',
     options: [
-      'Vandermonde determinant',
-      'Gaussian elimination',
       'Chinese Remainder Theorem',
-      'Euclidean algorithm'
+      'Gaussian elimination',
+      'Euclidean algorithm',
+      'Vandermonde determinant',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The BCH bound proof uses the fact that a Vandermonde matrix formed from powers of distinct elements has non-zero determinant, forcing certain linear systems to have only the trivial solution.',
   },
@@ -66,12 +94,20 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which elements share the same minimal polynomial over the prime subfield?',
     options: [
+      '$\\alpha$ and $\\alpha^2$ always',
+      '$\\alpha$ and $\\alpha + 1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'In a finite field of characteristic $p$, the Frobenius automorphism $x \\mapsto x^p$ preserves minimal polynomials. Thus $\\alpha$ and $\\alpha^p$ have the same minimal polynomial.',
+  },
       '$\\alpha$ and $\\alpha^p$ where $p$ is the field characteristic',
-      '$\\alpha$ and $\\alpha + 1$',
-      '$\\alpha$ and $-\\alpha$',
-      '$\\alpha$ and $\\alpha^2$ always'
+      '$\\alpha$ and $-\\alpha
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'In a finite field of characteristic $p$, the Frobenius automorphism $x \\mapsto x^p$ preserves minimal polynomials. Thus $\\alpha$ and $\\alpha^p$ have the same minimal polynomial.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'In a finite field of characteristic $p$, the Frobenius automorphism $x \\mapsto x^p$ preserves minimal polynomials. Thus $\\alpha$ and $\\alpha^p$ have the same minimal polynomial.',
   },

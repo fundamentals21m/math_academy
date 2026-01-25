@@ -7,11 +7,15 @@ export const section12Questions: QuizQuestion[] = [
     question: 'A graph is $k$-connected if:',
     options: [
       'It has at least $k$ vertices',
+      'Every vertex has degree at least $k
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$k$-connected means $\\kappa(G) \\geq k$: removing fewer than $k$ vertices leaves the graph connected.',
+  },
+      'It has $k$ components',
       'It remains connected after removing any $k-1$ vertices',
-      'Every vertex has degree at least $k$',
-      'It has $k$ components'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$k$-connected means $\\kappa(G) \\geq k$: removing fewer than $k$ vertices leaves the graph connected.',
   },
@@ -20,12 +24,24 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Menger\'s Theorem (vertex version) states that the maximum number of internally disjoint $u$-$v$ paths equals:',
     options: [
-      'The degree of $u$',
-      'The minimum size of a $u$-$v$ vertex cut',
-      'The distance from $u$ to $v$',
-      '$\\kappa(G)$'
-    ],
+      'The degree of $u
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Menger: max internally disjoint paths = min vertex cut size separating $u$ from $v$.',
+  },
+      'The minimum size of a $u$-$v$ vertex cut',
+      '$\\kappa(G)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Menger: max internally disjoint paths = min vertex cut size separating $u$ from $v$.',
+  },
+      'The distance from $u$ to $v
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Menger: max internally disjoint paths = min vertex cut size separating $u$ from $v$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Menger: max internally disjoint paths = min vertex cut size separating $u$ from $v$.',
   },
@@ -34,10 +50,10 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An ear decomposition of a 2-connected graph starts with:',
     options: [
-      'A single vertex',
       'A spanning tree',
+      'A single vertex',
       'A cycle',
-      'A matching'
+      'A matching',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -49,11 +65,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Whitney\'s Theorem states that $G$ is 2-connected iff:',
     options: [
       'It has no cut vertices',
-      'Every pair of edges lies on a common cycle',
       'It has a Hamiltonian cycle',
-      'It is planar'
+      'Every pair of edges lies on a common cycle',
+      'It is planar',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Whitney: 2-connected $\\Leftrightarrow$ every two edges lie on a common cycle.',
   },
@@ -71,12 +87,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The edge version of Menger\'s Theorem relates to:',
     options: [
-      'Vertex connectivity',
       'Edge-disjoint paths and edge cuts',
+      'Vertex connectivity',
       'Matchings',
-      'Chromatic number'
+      'Chromatic number',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Edge Menger: max edge-disjoint paths = min edge cut size.',
   },

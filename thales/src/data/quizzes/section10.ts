@@ -9,8 +9,13 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question:
       'Which philosopher believed that everything is constantly changing and that "one cannot step into the same river twice"?',
-    options: ['Parmenides', 'Heraclitus', 'Zeno', 'Democritus'],
-    correctIndex: 1,
+    options: [
+      'Parmenides',
+      'Zeno',
+      'Heraclitus',
+      'Democritus',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Heraclitus of Ephesus (c. 500 BC) believed everything is in constant flux. He famously declared that one cannot step into the same river twice, since the waters are always flowing.',
@@ -19,8 +24,13 @@ export const section10Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'What did Heraclitus believe was the fundamental substance?',
-    options: ['Water', 'Air', 'Fire', 'Atoms'],
-    correctIndex: 2,
+    options: [
+      'Fire',
+      'Water',
+      'Air',
+      'Atoms',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Heraclitus believed fire was the fundamental substance. He declared that all matter can be transformed into fire (and vice versa), just as all goods can be exchanged for gold.',
@@ -42,11 +52,11 @@ export const section10Questions: QuizQuestion[] = [
     question: "What was Zeno trying to prove with his famous paradoxes?",
     options: [
       'That atoms exist',
-      'That motion is impossible',
-      'That fire is the primal substance',
       'That the universe is expanding',
+      'That fire is the primal substance',
+      'That motion is impossible'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       "Zeno of Elea produced four paradoxes attempting to prove that motion is impossible. What he really showed was that without the concept of limits (infinite processes), you cannot use mathematics to analyze motion.",
@@ -88,12 +98,12 @@ export const section10Questions: QuizQuestion[] = [
     question:
       'What two forces did Empedocles add to the four classical elements?',
     options: [
+      'Love and strife',
       'Good and evil',
       'Hot and cold',
-      'Love and strife',
       'Light and darkness',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Empedocles postulated love and strife as cosmic forces beyond the four elements. He believed that when love prevails, the cosmos contracts, and when strife prevails, it expands — anticipating modern cosmology.',
@@ -103,8 +113,13 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question:
       "According to Democritus's atomic theory, what fills the space between atoms?",
-    options: ['Air', 'Fire', 'Nothing (empty void)', 'Water'],
-    correctIndex: 2,
+    options: [
+      'Air',
+      'Nothing (empty void)',
+      'Fire',
+      'Water',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       "Democritus proposed that atoms are separated by empty space (the void). The atoms themselves were physically indivisible, indestructible, constantly moving, and infinite in number but varying in shape and size.",
@@ -116,11 +131,11 @@ export const section10Questions: QuizQuestion[] = [
       'What mathematical formula is Democritus credited with discovering?',
     options: [
       'The Pythagorean theorem',
-      'The volume of a pyramid or cone (1/3 × base × height)',
-      'The area of a circle',
       'The sum of angles in a triangle',
+      'The area of a circle',
+      'The volume of a pyramid or cone (1/3 × base × height)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Democritus is credited with discovering that the volume of a pyramid or cone equals one-third of the base area times the height: V = (1/3) × base × height. He also emphasized the importance of mathematical proofs.',

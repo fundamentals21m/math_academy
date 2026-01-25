@@ -6,12 +6,24 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Pythagorean triple $(a, b, c)$ is called primitive if:',
     options: [
-      '$a < b < c$',
-      '$\\gcd(a, b, c) = 1$',
-      '$a + b = c$',
-      '$c$ is prime'
-    ],
+      '$a < b < c
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A primitive Pythagorean triple has no common factor greater than 1, meaning $\\gcd(a, b, c) = 1$.',
+  },
+      '$\\gcd(a, b, c) = 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A primitive Pythagorean triple has no common factor greater than 1, meaning $\\gcd(a, b, c) = 1$.',
+  },
+      '$c$ is prime',
+      '$a + b = c
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A primitive Pythagorean triple has no common factor greater than 1, meaning $\\gcd(a, b, c) = 1$.',
+  },
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A primitive Pythagorean triple has no common factor greater than 1, meaning $\\gcd(a, b, c) = 1$.',
   },
@@ -20,12 +32,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using Euclid\'s formula with $m=3$ and $n=1$, which triple is generated?',
     options: [
-      '$(3, 4, 5)$',
-      '$(5, 12, 13)$',
-      '$(8, 6, 10)$',
-      '$(15, 8, 17)$'
+      '$(5, 12, 13)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'With $m=3, n=1$: $a = m^2-n^2 = 9-1 = 8$, $b = 2mn = 6$, $c = m^2+n^2 = 10$. So the triple is $(8, 6, 10)$.',
+  },
+      '$(3, 4, 5)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'With $m=3, n=1$: $a = m^2-n^2 = 9-1 = 8$, $b = 2mn = 6$, $c = m^2+n^2 = 10$. So the triple is $(8, 6, 10)$.',
+  },
+      '$(15, 8, 17)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'With $m=3, n=1$: $a = m^2-n^2 = 9-1 = 8$, $b = 2mn = 6$, $c = m^2+n^2 = 10$. So the triple is $(8, 6, 10)$.',
+  },
+      '$(8, 6, 10)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'With $m=3, n=1$: $a = m^2-n^2 = 9-1 = 8$, $b = 2mn = 6$, $c = m^2+n^2 = 10$. So the triple is $(8, 6, 10)$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'With $m=3, n=1$: $a = m^2-n^2 = 9-1 = 8$, $b = 2mn = 6$, $c = m^2+n^2 = 10$. So the triple is $(8, 6, 10)$.',
   },
@@ -44,11 +72,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'The Plimpton 322 tablet shows that Pythagorean triples were known by:',
     options: [
       'The Greeks around 500 BCE',
-      'The Babylonians around 1800 BCE',
       'The Egyptians around 3000 BCE',
-      'The Romans around 100 CE'
+      'The Babylonians around 1800 BCE',
+      'The Romans around 100 CE',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Plimpton 322 tablet is a Babylonian clay tablet from around 1800 BCE containing a list of Pythagorean triples.',
   },

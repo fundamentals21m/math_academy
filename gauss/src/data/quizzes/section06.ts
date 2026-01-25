@@ -10,10 +10,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The $n$-th roots of unity are the solutions to:',
     options: [
-      '$z^n = 0$',
-      '$z^n = 1$',
-      '$z^n = -1$',
-      '$z^n = n$'
+      '$z^n = 1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The $n$-th roots of unity are the complex numbers $z$ satisfying $z^n = 1$.',
+  },
+      '$z^n = 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The $n$-th roots of unity are the complex numbers $z$ satisfying $z^n = 1$.',
+  },
+      '$z^n = -1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The $n$-th roots of unity are the complex numbers $z$ satisfying $z^n = 1$.',
+  },
+      '$z^n = n
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The $n$-th roots of unity are the complex numbers $z$ satisfying $z^n = 1$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,9 +50,13 @@ export const section06Questions: QuizQuestion[] = [
     question: 'A regular $n$-gon is constructible with compass and straightedge if $n$ is of the form:',
     options: [
       'Any prime',
-      'Any power of $2$',
       '$2^k p_1 p_2 \\cdots p_m$ where $p_i$ are distinct Fermat primes',
-      'Any odd number'
+      'Any power of $2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By the Gauss-Wantzel theorem, $n$-gons are constructible iff $n = 2^k p_1 \\cdots p_m$ with distinct Fermat primes $p_i$.',
+  },
+      'Any odd number',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -48,11 +68,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'A Fermat prime has the form:',
     options: [
       '$2^n + 1$',
-      '$2^{2^n} + 1$',
+      '$n^2 + 1$',
       '$2^n - 1$',
-      '$n^2 + 1$'
+      '$2^{2^n} + 1$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Fermat primes are primes of the form $F_n = 2^{2^n} + 1$.',
   },
@@ -80,11 +100,15 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Why is the regular $17$-gon constructible?',
     options: [
       '$17$ is prime',
-      '$17$ is a Fermat prime ($17 = 2^{2^2} + 1$)',
       '$17$ is odd',
-      '$17 < 20$'
+      '$17$ is a Fermat prime ($17 = 2^{2^2} + 1$)',
+      '$17 < 20
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$17 = 2^4 + 1 = 2^{2^2} + 1 = F_2$ is a Fermat prime, so the regular $17$-gon is constructible.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$17 = 2^4 + 1 = 2^{2^2} + 1 = F_2$ is a Fermat prime, so the regular $17$-gon is constructible.',
   },
@@ -111,10 +135,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'At what age did Gauss prove the constructibility of the regular $17$-gon?',
     options: [
-      '$15$',
-      '$19$',
-      '$24$',
-      '$30$'
+      '$19
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Gauss proved this at age $19$, on March 30, 1796—his first major discovery, which convinced him to pursue mathematics.',
+  },
+      '$15
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Gauss proved this at age $19$, on March 30, 1796—his first major discovery, which convinced him to pursue mathematics.',
+  },
+      '$24
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Gauss proved this at age $19$, on March 30, 1796—his first major discovery, which convinced him to pursue mathematics.',
+  },
+      '$30
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Gauss proved this at age $19$, on March 30, 1796—his first major discovery, which convinced him to pursue mathematics.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

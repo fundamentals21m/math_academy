@@ -6,12 +6,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Erdős-Stone theorem determines the asymptotic extremal number for:',
     options: [
-      'All graphs',
       'Non-bipartite graphs',
+      'All graphs',
       'Only complete graphs',
       'Only cycles'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Erdős-Stone: $ex(n, H) = (1 - 1/(\\chi(H)-1) + o(1))\\binom{n}{2}$ for $\\chi(H) \\geq 2$.',
   },
@@ -21,11 +21,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'The Wiener index of a connected graph is:',
     options: [
       'The number of edges',
-      'The sum of all pairwise distances',
       'The diameter',
-      'The chromatic number'
+      'The chromatic number',
+      'The sum of all pairwise distances',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Wiener index $W(G) = \\sum_{\\{u,v\\}} d(u,v)$ over all vertex pairs.',
   },
@@ -34,12 +34,20 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Among $n$-vertex trees, the Wiener index is minimized by:',
     options: [
-      'The path $P_n$',
-      'The star $K_{1,n-1}$',
+      'The star $K_{1,n-1}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Star minimizes Wiener index (center at distance 1 from all others).',
+  },
+      'The path $P_n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Star minimizes Wiener index (center at distance 1 from all others).',
+  },
       'A random tree',
-      'The binary tree'
+      'The binary tree',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Star minimizes Wiener index (center at distance 1 from all others).',
   },
@@ -49,11 +57,15 @@ export const section26Questions: QuizQuestion[] = [
     question: 'The list chromatic number $ch(G)$ satisfies:',
     options: [
       '$ch(G) = \\chi(G)$ always',
+      '$ch(G) = \\Delta(G)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'List coloring is at least as hard as ordinary coloring: $ch(G) \\geq \\chi(G)$.',
+  },
       '$ch(G) \\geq \\chi(G)$ always',
       '$ch(G) \\leq \\chi(G)$ always',
-      '$ch(G) = \\Delta(G)$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'List coloring is at least as hard as ordinary coloring: $ch(G) \\geq \\chi(G)$.',
   },
@@ -65,7 +77,7 @@ export const section26Questions: QuizQuestion[] = [
       'The number of cycles',
       'The length of the longest cycle',
       'The girth',
-      'The diameter'
+      'The diameter',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -77,11 +89,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'For $K_{n,n}$, the list chromatic number is:',
     options: [
       '$2$',
-      '$n$',
       '$(1+o(1))\\log_2 n$',
+      '$n$',
       '$n^2$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: '$ch(K_{n,n}) \\approx \\log_2 n$, much larger than $\\chi(K_{n,n}) = 2$.',
   },

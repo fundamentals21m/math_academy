@@ -7,11 +7,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What is "Their Brothers\' Keepers" a reference to?',
     options: [
       'A religious organization in the novel',
-      'The Biblical question "Am I my brother\'s keeper?"',
       'A government welfare program',
-      'A union of workers'
+      'The Biblical question "Am I my brother\\'s keeper?"',
+      'A union of workers',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The title references the Biblical story of Cain and Abel. In the novel, it describes the doctrine that everyone is obligated to support everyone else.',
   },
@@ -34,12 +34,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does the novel distinguish between helping others and being a "brother\'s keeper"?',
     options: [
-      'There is no distinction made',
       'Voluntary help is moral; forced sacrifice is immoral',
+      'There is no distinction made',
       'Only family help is acceptable',
-      'All help is considered exploitation'
+      'All help is considered exploitation',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Rand distinguishes between voluntary benevolence (freely chosen) and forced sacrifice (demanded as duty). The former is moral; the latter is slavery.',
   },
@@ -49,11 +49,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What happens when "collective obligation" becomes law?',
     options: [
       'Society becomes more caring',
-      'The productive become slaves to the unproductive',
+      'Government becomes unnecessary',
       'Everyone shares equally',
-      'Government becomes unnecessary'
+      'The productive become slaves to the unproductive'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When obligation to others is enforced by law, the productive lose their rights and become servants of those who make demands, regardless of whether those demands are just.',
   },
@@ -62,12 +62,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does the novel reject the concept of unchosen obligations?',
     options: [
-      'Because all obligations are impossible',
       'Because morality must be based on voluntary choice',
+      'Because all obligations are impossible',
       'Because only self-interest exists',
       'Because obligations are old-fashioned'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Rand argues that genuine morality requires choice. Obligations you never agreed to, imposed by force, are not morality but slavery.',
   },
@@ -77,11 +77,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What is the contradiction in claiming others have a right to your life?',
     options: [
       'Rights only apply to government',
-      'A right that violates another\'s rights is not a right but a claim to slavery',
       'There is no contradiction',
-      'Rights are purely legal concepts'
+      'Rights are purely legal concepts',
+      'A right that violates another\\'s rights is not a right but a claim to slavery',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'If you claim a "right" to another person\'s labor or life, you are claiming ownership of them—which is slavery. Rights cannot include the power to enslave others.',
   },

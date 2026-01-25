@@ -7,11 +7,11 @@ export const section171Questions: QuizQuestion[] = [
     question: 'VI.26 concerns the relationship between a parallelogram and its:',
     options: [
       'Circumscribed circle',
-      'Gnomon (the L-shaped figure remaining when a similar parallelogram is removed)',
       'Inscribed triangle',
-      'Altitude'
+      'Gnomon (the L-shaped figure remaining when a similar parallelogram is removed)',
+      'Altitude',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'VI.26 deals with the gnomon of a parallelogram, which is the L-shaped region formed when a smaller similar parallelogram is removed from a corner.',
   },
@@ -23,7 +23,7 @@ export const section171Questions: QuizQuestion[] = [
       'Has equal area to the gnomon',
       'Is positioned about the same diameter as the original',
       'Has perpendicular sides',
-      'Is congruent to the gnomon'
+      'Is congruent to the gnomon',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,12 +34,12 @@ export const section171Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The gnomon concept in VI.26 is fundamental to understanding:',
     options: [
-      'Circle theorems',
       'Application of areas (geometric algebra)',
+      'Circle theorems',
+      'Parallel postulate',
       'Angle bisection',
-      'Parallel postulate'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Gnomons are essential to Greek geometric algebra. They allow manipulation of areas (adding/subtracting parallelograms) while maintaining proportional relationships.',
   },

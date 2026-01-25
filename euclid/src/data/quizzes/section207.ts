@@ -6,12 +6,12 @@ export const section207Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Proposition VII.28 states that if two numbers are relatively prime, their sum is relatively prime to:',
     options: [
-      'Their product',
       'Each of the original numbers',
+      'Their product',
       'Their difference',
-      'Neither number'
+      'Neither number',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'VII.28 proves that if gcd(a, b) = 1, then gcd(a + b, a) = 1 and gcd(a + b, b) = 1.',
   },
@@ -36,8 +36,8 @@ export const section207Questions: QuizQuestion[] = [
     options: [
       'Be equal to 1',
       'Also divide the other number, contradicting relative primality',
+      'Divide the product',
       'Be a prime number',
-      'Divide the product'
     ],
     correctIndex: 1,
     difficulty: 'hard',

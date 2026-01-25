@@ -6,12 +6,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the two steps required in a proof by mathematical induction?',
     options: [
-      'Base case and induction step',
       'Assumption and conclusion',
+      'Base case and induction step',
       'Hypothesis and verification',
-      'Initial value and final value'
+      'Initial value and final value',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Induction requires proving the base case $P(1)$ and the induction step $P(k) \\Rightarrow P(k+1)$.',
   },
@@ -38,12 +38,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the binomial expansion of $(x + y)^4$, what is the coefficient of $x^2 y^2$?',
     options: [
-      '6',
       '4',
       '2',
-      '1'
+      '1',
+      '6',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The coefficient is $\\binom{4}{2} = 6$.',
   },
@@ -52,12 +52,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does strong induction differ from ordinary induction?',
     options: [
-      'Strong induction assumes $P(m)$ for all $m \\leq k$ to prove $P(k+1)$',
-      'Strong induction only requires the base case',
       'Strong induction proves $P(n)$ for all integers, not just positive ones',
+      'Strong induction only requires the base case',
+      'Strong induction assumes $P(m)$ for all $m \\leq k$ to prove $P(k+1)$',
       'Strong induction requires two base cases'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'In strong induction, we may assume all previous cases $P(1), P(2), \\ldots, P(k)$ to prove $P(k+1)$.',
   },
@@ -67,9 +67,9 @@ export const section01Questions: QuizQuestion[] = [
     question: 'The Well-Ordering Principle and Mathematical Induction are:',
     options: [
       'Logically equivalent',
+      'Only valid for even numbers',
       'Contradictory statements',
       'Unrelated principles',
-      'Only valid for even numbers'
     ],
     correctIndex: 0,
     difficulty: 'hard',

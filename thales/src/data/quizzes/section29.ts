@@ -9,12 +9,12 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Maclaurin series?',
     options: [
-      'The Taylor series with a = 1',
       'The Taylor series with a = 0',
-      'A series for computing logarithms',
+      'The Taylor series with a = 1',
       'A series that always converges',
+      'A series for computing logarithms',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The Maclaurin series is the special case a = 0 of the Taylor series: f(x) = f(0) + xf\'(0) + (x²/2!)f\'\'(0) + ... Colin Maclaurin published this in his Treatise of Fluxions (1742).',
@@ -25,11 +25,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What is de Moivre\'s formula?',
     options: [
       'e^(iπ) = -1',
-      '(cos x + i sin x)^n = cos nx + i sin nx',
       'V + F - E = 2',
+      '(cos x + i sin x)^n = cos nx + i sin nx',
       '1/1² + 1/2² + 1/3² + ... = π²/6',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'De Moivre\'s formula states that (cos x + i sin x)^n = cos nx + i sin nx. It can be proved for positive integers n by mathematical induction.',
@@ -41,10 +41,10 @@ export const section29Questions: QuizQuestion[] = [
     options: [
       'V + F + E = 2',
       'V - F + E = 2',
-      'V + F - E = 2',
       'V × F = E',
+      'V + F - E = 2',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Euler\'s formula for polyhedra states that V + F - E = 2, where V is the number of vertices, F is the number of faces, and E is the number of edges. For example, a cube has 8 + 6 - 12 = 2.',
@@ -84,12 +84,12 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What theorem did Lagrange first prove about sums of squares?',
     options: [
-      'Every prime is a sum of two squares',
-      'Every natural number is a sum of three squares',
       'Every natural number is a sum of four squares',
-      'Some numbers cannot be expressed as sums of squares',
+      'Every natural number is a sum of three squares',
+      'Every prime is a sum of two squares',
+      'Some numbers cannot be expressed as sums of squares'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Lagrange gave the first proof that every natural number is a sum of four squares. For example, 7 = 2² + 1² + 1² + 1² and 9 = 3² + 0² + 0² + 0².',
@@ -100,11 +100,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What did Laplace reply when Napoleon said he had written a book on the universe without mentioning its creator?',
     options: [
       '"God is implicit in the equations"',
-      '"I don\'t need that hypothesis"',
       '"That is a matter for theologians"',
       '"The creator is mentioned in the appendix"',
+      '"I don\\'t need that hypothesis"',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'When Napoleon observed that Laplace had written about the universe without mentioning God, Laplace famously replied: "I don\'t need that hypothesis." Laplace was more of a mathematical physicist than a pure mathematician.',
@@ -115,11 +115,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What special case of Fermat\'s Last Theorem did Legendre first prove?',
     options: [
       'x³ + y³ = z³ has no solutions',
-      'x⁴ + y⁴ = z⁴ has no solutions',
       'x⁵ + y⁵ = z⁵ has no solutions',
+      'x⁴ + y⁴ = z⁴ has no solutions',
       'x⁶ + y⁶ = z⁶ has no solutions',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Legendre was the first to prove that x⁵ + y⁵ = z⁵ has no nonzero integer solutions. This was an important step toward the full proof of Fermat\'s Last Theorem, which wasn\'t completed until 1994.',
@@ -131,8 +131,8 @@ export const section29Questions: QuizQuestion[] = [
     options: [
       'He accused Lagrange of stealing his ideas',
       'He withheld his own results so Lagrange could publish first',
-      'He immediately published his own more complete results',
       'He refused to respond',
+      'He immediately published his own more complete results',
     ],
     correctIndex: 1,
     difficulty: 'medium',

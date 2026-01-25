@@ -9,7 +9,7 @@ export const section42Questions: QuizQuestion[] = [
       'Is prime',
       'Is irreducible',
       'Can be written as a product of irreducibles, unique up to order and units',
-      'Has infinitely many factorizations'
+      'Has infinitely many factorizations',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section42Questions: QuizQuestion[] = [
       '$p$ is a unit',
       '$p$ is irreducible',
       '$p$ has exactly two divisors',
-      '$p$ generates a maximal ideal'
+      '$p$ generates a maximal ideal',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,10 +34,26 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT a UFD?',
     options: [
-      '$\\mathbb{Z}$',
-      '$\\mathbb{Z}[\\sqrt{-5}]$',
-      '$\\mathbb{Q}[x]$',
-      '$\\mathbb{Z}[i]$'
+      '$\\mathbb{Z}[\\sqrt{-5}]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}[\\sqrt{-5}]$ is not a UFD. For example, $6 = 2 \\cdot 3 = (1+\\sqrt{-5})(1-\\sqrt{-5})$ gives two essentially different factorizations into irreducibles.',
+  },
+      '$\\mathbb{Z}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}[\\sqrt{-5}]$ is not a UFD. For example, $6 = 2 \\cdot 3 = (1+\\sqrt{-5})(1-\\sqrt{-5})$ gives two essentially different factorizations into irreducibles.',
+  },
+      '$\\mathbb{Q}[x]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}[\\sqrt{-5}]$ is not a UFD. For example, $6 = 2 \\cdot 3 = (1+\\sqrt{-5})(1-\\sqrt{-5})$ gives two essentially different factorizations into irreducibles.',
+  },
+      '$\\mathbb{Z}[i]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}[\\sqrt{-5}]$ is not a UFD. For example, $6 = 2 \\cdot 3 = (1+\\sqrt{-5})(1-\\sqrt{-5})$ gives two essentially different factorizations into irreducibles.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -49,11 +65,11 @@ export const section42Questions: QuizQuestion[] = [
     question: 'The relationship between PIDs and UFDs is:',
     options: [
       'Every UFD is a PID',
-      'Every PID is a UFD',
       'They are the same class of rings',
-      'Neither implies the other'
+      'Neither implies the other',
+      'Every PID is a UFD',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Every PID is a UFD, but not conversely. For example, $\\mathbb{Z}[x]$ is a UFD but not a PID (the ideal $(2, x)$ is not principal).',
   },
@@ -62,12 +78,20 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $\\mathbb{Z}$, which element is irreducible but the definition of "prime" adds what extra condition?',
     options: [
-      'Irreducible means $p = ab$ implies $a$ or $b$ is a unit; prime adds $p | ab$ implies $p | a$ or $p | b$',
-      'There is no difference in $\\mathbb{Z}$',
+      'Irreducible elements can be composite',
+      'Irreducible means $p = ab$ implies $a$ or $b$ is a unit; prime adds $p | ab$ implies $p | a$ or $p | b
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Irreducible means: if $p = ab$, then $a$ or $b$ is a unit. Prime means: if $p | ab$, then $p | a$ or $p | b$. In $\\mathbb{Z}$ (a UFD), these conditions are equivalent for non-unit elements.',
+  },
+      'There is no difference in $\\mathbb{Z}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Irreducible means: if $p = ab$, then $a$ or $b$ is a unit. Prime means: if $p | ab$, then $p | a$ or $p | b$. In $\\mathbb{Z}$ (a UFD), these conditions are equivalent for non-unit elements.',
+  },
       'Prime elements must be positive',
-      'Irreducible elements can be composite'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Irreducible means: if $p = ab$, then $a$ or $b$ is a unit. Prime means: if $p | ab$, then $p | a$ or $p | b$. In $\\mathbb{Z}$ (a UFD), these conditions are equivalent for non-unit elements.',
   },

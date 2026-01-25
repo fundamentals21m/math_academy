@@ -7,11 +7,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'According to Mises, what is a medium of exchange?',
     options: [
       'A good acquired for direct consumption',
-      'A good acquired with the intention of exchanging it later for other goods',
       'A government-issued certificate of value',
+      'A good acquired with the intention of exchanging it later for other goods',
       'A commodity that has intrinsic value'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A medium of exchange is a good that people acquire not for their own consumption or production activities, but with the intention of exchanging it later for goods they actually want to use.'
   },
@@ -20,12 +20,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What fundamental problem of barter does indirect exchange solve?',
     options: [
+      'The double coincidence of wants',
       'The problem of measuring value',
       'The problem of storing wealth',
-      'The double coincidence of wants',
-      'The problem of divisibility'
+      'The problem of divisibility',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Direct exchange (barter) requires a double coincidence of wants—each party must want what the other has. Indirect exchange through money eliminates this requirement by allowing exchange to occur in two separate transactions.'
   },
@@ -34,12 +34,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the regression theorem, how is the purchasing power of money originally established?',
     options: [
-      'By government decree',
       'By tracing back to when the money commodity was valued for its direct (non-monetary) uses',
+      'By government decree',
       'By international agreement among trading nations',
       'By the amount of labor required to produce it'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Mises\' regression theorem explains that today\'s purchasing power is based on yesterday\'s, which was based on the day before\'s, going back to when the money commodity was valued solely for its direct use (e.g., gold valued for jewelry before becoming money).'
   },
@@ -63,11 +63,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'What is the Cantillon effect?',
     options: [
       'The tendency of gold to appreciate over time',
-      'The phenomenon where new money benefits first recipients at the expense of later recipients',
       'The stabilizing effect of the gold standard',
-      'The correlation between money supply and interest rates'
+      'The correlation between money supply and interest rates',
+      'The phenomenon where new money benefits first recipients at the expense of later recipients',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The Cantillon effect describes how new money enters the economy at specific points. First recipients can spend it at old prices, gaining real purchasing power, while later recipients find that prices have already risen—causing redistribution of wealth.'
   },
@@ -78,10 +78,10 @@ export const section17Questions: QuizQuestion[] = [
     options: [
       'Government planning and design',
       'International treaties and agreements',
-      'Spontaneous market evolution as participants converged on gold',
-      'Academic recommendation and expert consensus'
+      'Academic recommendation and expert consensus',
+      'Spontaneous market evolution as participants converged on gold'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The gold standard was not deliberately designed by governments but emerged spontaneously as market participants converged on gold as the most suitable money commodity due to its superior qualities: durability, divisibility, portability, uniformity, limited supply, and recognizability.'
   }

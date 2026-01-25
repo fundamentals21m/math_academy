@@ -7,11 +7,11 @@ export const section173Questions: QuizQuestion[] = [
     question: 'VI.28 solves the problem of applying to a line a parallelogram:',
     options: [
       'Equal to a given figure and exceeding by a similar parallelogram',
-      'Equal to a given figure and deficient by a similar parallelogram',
+      'Similar to a given triangle',
       'Congruent to a given parallelogram',
-      'Similar to a given triangle'
+      'Equal to a given figure and deficient by a similar parallelogram'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'VI.28 constructs a parallelogram on part of a given line, equal in area to a given rectilineal figure, with the deficiency (unused part) being similar to a given parallelogram.',
   },
@@ -21,11 +21,11 @@ export const section173Questions: QuizQuestion[] = [
     question: 'For VI.28 to have a solution, the given rectilineal figure must not be:',
     options: [
       'A triangle',
-      'Greater than the parallelogram on half the line (by VI.27)',
       'Equal to any parallelogram',
-      'Less than the given deficiency'
+      'Greater than the parallelogram on half the line (by VI.27)',
+      'Less than the given deficiency',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'VI.28 requires the given figure to be at most equal to the maximum possible parallelogram (from VI.27). If greater, no solution exists because the deficient construction cannot achieve that area.',
   },

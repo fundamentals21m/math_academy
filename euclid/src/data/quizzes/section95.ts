@@ -7,11 +7,11 @@ export const section95Questions: QuizQuestion[] = [
     question: 'Proposition III.31 is one of the most famous theorems in geometry. What does it state?',
     options: [
       'The Pythagorean theorem',
-      'An angle in a semicircle is a right angle',
       'Inscribed angles are equal',
-      'Tangent lines are perpendicular to radii'
+      'Tangent lines are perpendicular to radii',
+      'An angle in a semicircle is a right angle',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'III.31 proves that any angle inscribed in a semicircle is a right angle. This is known as Thales\' theorem.',
   },
@@ -23,7 +23,7 @@ export const section95Questions: QuizQuestion[] = [
       '60°',
       '90°',
       '120°',
-      'Depends on where C is'
+      'Depends on where C is',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section95Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Thales\' theorem follows from III.20 because the central angle for a semicircle is:',
     options: [
-      '90°',
       '180°',
+      '90°',
+      '360°',
       '270°',
-      '360°'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The central angle subtending a semicircle is 180° (a straight angle). By III.20, the inscribed angle is half of this: 90°.',
   },

@@ -6,12 +6,12 @@ export const section200Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition VII.21 state about relatively prime numbers?',
     options: [
-      'Relatively prime numbers are always odd',
       'Numbers relatively prime to one another are the least of those having the same ratio',
+      'Relatively prime numbers are always odd',
       'Two primes are always relatively prime',
       'Relatively prime numbers have no common factors except primes'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'VII.21: If gcd(a,b) = 1 (relatively prime), then a:b is already in lowest terms. No smaller pair of numbers can represent the same ratio.',
   },
@@ -23,7 +23,7 @@ export const section200Questions: QuizQuestion[] = [
       '8:12',
       '15:25',
       '7:11',
-      '9:15'
+      '9:15',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section200Questions: QuizQuestion[] = [
       'It shows that reduction always terminates',
       'It proves that lowest terms are unique: relatively prime pairs are exactly the reduced form',
       'It provides an algorithm for reduction',
-      'It shows all fractions can be converted to decimals'
+      'It shows all fractions can be converted to decimals',
     ],
     correctIndex: 1,
     difficulty: 'hard',

@@ -7,11 +7,11 @@ export const section64Questions: QuizQuestion[] = [
     question: 'What does Book III of the Elements primarily study?',
     options: [
       'Triangles and their properties',
-      'Circles and their properties',
       'Solid geometry',
-      'Theory of proportions'
+      'Theory of proportions',
+      'Circles and their properties',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Book III is devoted to the study of circles, including tangent lines, chords, arcs, and inscribed angles.',
   },
@@ -35,11 +35,11 @@ export const section64Questions: QuizQuestion[] = [
     question: 'What is the difference between a segment of a circle and a sector of a circle?',
     options: [
       'They are the same thing',
-      'A segment is bounded by a chord and arc; a sector is bounded by two radii and an arc',
       'A sector is larger than a segment',
+      'A segment is bounded by a chord and arc; a sector is bounded by two radii and an arc',
       'A segment includes the center; a sector does not'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A segment is cut off by a chord (like a pizza slice without going to the center), while a sector is bounded by two radii from the center (like a pizza slice from the center).',
   },

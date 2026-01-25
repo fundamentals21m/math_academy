@@ -6,12 +6,24 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The lattice of subgroups of a group $G$ is ordered by:',
     options: [
-      'Group order $|H|$',
-      'Inclusion $H \\subseteq K$',
+      'Group order $|H|
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The subgroup lattice is partially ordered by inclusion: $H \\leq K$ means $H \\subseteq K$.',
+  },
       'Normality',
-      'Index $[G:H]$'
+      'Index $[G:H]
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The subgroup lattice is partially ordered by inclusion: $H \\leq K$ means $H \\subseteq K$.',
+  },
+      'Inclusion $H \\subseteq K
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The subgroup lattice is partially ordered by inclusion: $H \\leq K$ means $H \\subseteq K$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The subgroup lattice is partially ordered by inclusion: $H \\leq K$ means $H \\subseteq K$.',
   },
@@ -20,10 +32,26 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the subgroup lattice, the meet (greatest lower bound) of two subgroups $H$ and $K$ is:',
     options: [
-      '$H \\cup K$',
-      '$H \\cap K$',
-      '$\\langle H, K \\rangle$',
-      '$HK$'
+      '$H \\cup K
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The meet is $H \\cap K$, the largest subgroup contained in both $H$ and $K$.',
+  },
+      '$\\langle H, K \\rangle
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The meet is $H \\cap K$, the largest subgroup contained in both $H$ and $K$.',
+  },
+      '$H \\cap K
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The meet is $H \\cap K$, the largest subgroup contained in both $H$ and $K$.',
+  },
+      '$HK
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The meet is $H \\cap K$, the largest subgroup contained in both $H$ and $K$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,10 +62,26 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the subgroup lattice, the join (least upper bound) of two subgroups $H$ and $K$ is:',
     options: [
-      '$H \\cup K$',
-      '$H \\cap K$',
-      '$\\langle H, K \\rangle$',
-      '$H + K$'
+      '$H \\cup K
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The join is $\\langle H, K \\rangle$, the smallest subgroup containing both $H$ and $K$.',
+  },
+      '$\\langle H, K \\rangle
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The join is $\\langle H, K \\rangle$, the smallest subgroup containing both $H$ and $K$.',
+  },
+      '$H \\cap K
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The join is $\\langle H, K \\rangle$, the smallest subgroup containing both $H$ and $K$.',
+  },
+      '$H + K
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The join is $\\langle H, K \\rangle$, the smallest subgroup containing both $H$ and $K$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -57,12 +101,16 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the lattice of subgroups of $\\mathbb{Z}/12\\mathbb{Z}$, which subgroup is directly above $\\langle 6 \\rangle$ (order 2)?',
     options: [
+      '$\\langle 2 \\rangle$ (order 6)',
       '$\\langle 4 \\rangle$ (order 3)',
       '$\\langle 3 \\rangle$ (order 4)',
-      '$\\langle 2 \\rangle$ (order 6)',
-      'Both $\\langle 4 \\rangle$ and $\\langle 2 \\rangle$'
+      'Both $\\langle 4 \\rangle$ and $\\langle 2 \\rangle
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'A subgroup $H$ is directly above $K$ if $K \\subset H$ with no subgroups between them. $\\langle 6 \\rangle \\subset \\langle 2 \\rangle$ (since $6 = 3 \\cdot 2$), and $[\\langle 2 \\rangle : \\langle 6 \\rangle] = 3$ is prime.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'A subgroup $H$ is directly above $K$ if $K \\subset H$ with no subgroups between them. $\\langle 6 \\rangle \\subset \\langle 2 \\rangle$ (since $6 = 3 \\cdot 2$), and $[\\langle 2 \\rangle : \\langle 6 \\rangle] = 3$ is prime.',
   },

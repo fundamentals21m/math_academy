@@ -10,11 +10,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'Who discovered quaternions and when?',
     options: [
       'Gauss in 1801',
+      'Cayley in 1857',
       'Hamilton in 1843',
       'Euler in 1748',
-      'Cayley in 1857',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'William Rowan Hamilton discovered quaternions in 1843. The idea dawned on him while he was strolling along the Royal Canal in Dublin.',
@@ -53,8 +53,13 @@ export const section38Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'What is ij in quaternion multiplication?',
-    options: ['i', 'j', 'k', '-k'],
-    correctIndex: 2,
+    options: [
+      'i',
+      'j',
+      '-k',
+      'k',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'In quaternion multiplication, ij = k. Note that ji = -k, demonstrating non-commutativity.',
@@ -65,11 +70,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'What is the norm N(a) of a quaternion a = a₀ + a₁i + a₂j + a₃k?',
     options: [
       'a₀ + a₁ + a₂ + a₃',
-      'a₀² + a₁² + a₂² + a₃²',
       '|a₀| + |a₁| + |a₂| + |a₃|',
       'max(|a₀|, |a₁|, |a₂|, |a₃|)',
+      'a₀² + a₁² + a₂² + a₃²',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The norm of a quaternion is N(a) = a₀² + a₁² + a₂² + a₃², which equals aā = āa.',
@@ -79,12 +84,12 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the conjugate of a quaternion a = a₀ + a₁i₁ + a₂i₂ + a₃i₃?',
     options: [
+      'a₀ - a₁i₁ - a₂i₂ - a₃i₃',
       'a₀ + a₁i₁ + a₂i₂ + a₃i₃',
       '-a₀ + a₁i₁ + a₂i₂ + a₃i₃',
-      'a₀ - a₁i₁ - a₂i₂ - a₃i₃',
       '-a₀ - a₁i₁ - a₂i₂ - a₃i₃',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The conjugate of a quaternion a = a₀ + a₁i₁ + a₂i₂ + a₃i₃ is ā = a₀ - a₁i₁ - a₂i₂ - a₃i₃. The real part stays the same, while the imaginary parts change sign.',
@@ -94,12 +99,12 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a division ring (skew-field)?',
     options: [
-      'A ring where division is undefined',
-      'A field with finitely many elements',
       'A ring where every nonzero element has a multiplicative inverse',
-      'A ring where multiplication is commutative',
+      'A field with finitely many elements',
+      'A ring where division is undefined',
+      'A ring where multiplication is commutative'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A division ring satisfies all field axioms except possibly the commutative law of multiplication. Every nonzero element has a multiplicative inverse.',
@@ -111,10 +116,10 @@ export const section38Questions: QuizQuestion[] = [
     options: [
       '1/a₀',
       'ā',
-      'ā/N(a)',
       'N(a)/ā',
+      'ā/N(a)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The multiplicative inverse of a nonzero quaternion a is ā/N(a), where ā is the conjugate and N(a) is the norm. We have a · (ā/N(a)) = 1.',

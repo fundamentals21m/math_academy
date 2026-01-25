@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section36Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Smart contract tontines provide all EXCEPT:',
+    options: [
+      'Immutable records',
+      'Guaranteed returns',
+      'Automatic payouts executed by code',
+      'Transparent tracking of balances',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Smart contract tontines provide automatic payouts, transparency, and immutability—but NOT guaranteed returns (no system can guarantee that).',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The "oracle problem" for blockchain tontines refers to:',
+    options: [
+      'Predicting the future',
+      'Calculating mortality rates',
+      'How the smart contract knows when a member has died',
+      'Setting investment returns',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The oracle problem is how blockchains access real-world data—specifically, how to reliably report deaths without creating fraud opportunities.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Which is NOT a proposed solution to the oracle problem?',
+    options: [
+      'Guaranteeing no one dies',
+      'Government death registries',
+      'Proof-of-life systems',
+      'Decentralized oracle networks',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Solutions include government registries, proof-of-life systems, decentralized oracles, and social verification—but you cannot guarantee no one dies.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'In the mortality credit distribution example, if a member with $120k dies and three survivors hold $100k, $150k, and $250k respectively, Member C receives:',
+    options: [
+      '$60k',
+      '$24k',
+      '$36k',
+      '$120k',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Member C: $120k × ($250k/$500k) = $120k × 0.5 = $60k. Distribution is proportional to existing stakes.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'A key challenge for blockchain tontines is "gas costs." These can be addressed by:',
+    options: [
+      'Government subsidies',
+      'Layer 2 solutions or alternative chains',
+      'Using more expensive blockchains',
+      'Eliminating all transactions',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'High Ethereum gas costs can be addressed through Layer 2 solutions (rollups, sidechains) or using alternative blockchains with lower fees.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Blockchain tontines eliminate which type of risk?',
+    options: [
+      'Investment risk',
+      'Mortality risk',
+      'All risks',
+      'Intermediary/counterparty risk',
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Smart contracts eliminate intermediary risk—no insurance company can fail, no manager can embezzle. Investment and mortality risks remain.',
+  },
+];

@@ -6,12 +6,12 @@ export const section144Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does V.25 prove about proportional magnitudes?',
     options: [
-      'All proportional magnitudes are equal',
       'If A:B = C:D with A greatest and D least, then A + D > B + C',
+      'All proportional magnitudes are equal',
       'The means exceed the extremes',
       'Proportions have no order'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'V.25 shows that in a proportion, the sum of the extremes (greatest + least) exceeds the sum of the means.',
   },
@@ -22,10 +22,10 @@ export const section144Questions: QuizQuestion[] = [
     options: [
       '12 + 4 < 8 + 6',
       '12 + 4 = 8 + 6',
+      'We cannot compare',
       '12 + 4 > 8 + 6',
-      'We cannot compare'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Extremes: 12 + 4 = 16. Means: 8 + 6 = 14. Indeed, 16 > 14.',
   },
@@ -35,11 +35,11 @@ export const section144Questions: QuizQuestion[] = [
     question: 'V.25 concludes Book V by showing:',
     options: [
       'Proportions are meaningless',
-      'The theory of ratios connects to inequalities and has rich structural properties',
       'All of Book V was unnecessary',
+      'The theory of ratios connects to inequalities and has rich structural properties',
       'Only integers can be proportional'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'V.25 demonstrates that proportions interact with inequalities in meaningful ways, showing the depth of Eudoxus\'s theory.',
   },

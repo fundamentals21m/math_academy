@@ -20,12 +20,24 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Fermat\'s Little Theorem states that if $p$ is prime and $a$ is not divisible by $p$, then:',
     options: [
-      '$a^p = a$',
-      '$a^{p-1} \\equiv 1 \\pmod{p}$',
-      '$a + p$ is prime',
-      '$a^2 \\equiv -1 \\pmod{p}$'
-    ],
+      '$a^p = a
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ for prime $p$ and $\\gcd(a,p)=1$.',
+  },
+      '$a^{p-1} \\equiv 1 \\pmod{p}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ for prime $p$ and $\\gcd(a,p)=1$.',
+  },
+      '$a^2 \\equiv -1 \\pmod{p}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Fermat\'s Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ for prime $p$ and $\\gcd(a,p)=1$.',
+  },
+      '$a + p$ is prime',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Fermat\'s Little Theorem: $a^{p-1} \\equiv 1 \\pmod{p}$ for prime $p$ and $\\gcd(a,p)=1$.',
   },
@@ -34,12 +46,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What mathematical field did Fermat help create through his correspondence with Pascal?',
     options: [
-      'Calculus',
       'Probability theory',
+      'Calculus',
       'Group theory',
       'Topology'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Fermat and Pascal exchanged letters about gambling problems, founding the mathematical theory of probability.',
   },
@@ -49,11 +61,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Fermat developed a method to find tangent lines that anticipated:',
     options: [
       'Integration',
-      'Differentiation',
       'Limits',
-      'Series'
+      'Series',
+      'Differentiation',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Fermat\'s method of adequality for finding tangents was a precursor to differential calculus.',
   },

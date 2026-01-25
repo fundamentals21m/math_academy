@@ -7,11 +7,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'In the Pollard $p-1$ method, a factor $p$ of $n$ is found when:',
     options: [
       '$p-1$ is a large prime',
-      '$p-1$ has only small prime factors (is smooth)',
       '$p+1$ is smooth',
-      '$p$ is a Sophie Germain prime'
+      '$p$ is a Sophie Germain prime',
+      '$p-1$ has only small prime factors (is smooth)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Pollard\'s $p-1$ method works when $p-1$ is $B$-smooth (all prime factors $\\leq B$).',
   },
@@ -38,12 +38,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a key advantage of the Pollard $p-1$ factoring method?',
     options: [
-      'It always finds factors in polynomial time',
       'It works well when $p-1$ is smooth',
-      'It doesn\'t require any modular arithmetic',
-      'It factors any RSA modulus efficiently'
+      'It always finds factors in polynomial time',
+      'It doesn\\'t require any modular arithmetic',
+      'It factors any RSA modulus efficiently',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Pollard\'s $p-1$ is efficient when one factor $p$ has $p-1$ smooth (many small prime factors).',
   },

@@ -10,11 +10,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'Area is measured by counting:',
     options: [
       'Unit lengths',
-      'Unit squares',
       'Unit cubes',
       'Angles',
+      'Unit squares',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Just as length is measured by counting unit lengths, area is measured by counting unit squares (squares with sides of unit length).',
@@ -34,12 +34,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What problem did $\\sqrt{2}$ pose for the Greeks?',
     options: [
-      'They couldn\'t draw it',
+      'They couldn\\'t draw it',
       'It was too large',
-      'It is irrational, so they didn\'t regard it as a number',
-      'It doesn\'t exist',
+      'It doesn\\'t exist',
+      'It is irrational, so they didn\\'t regard it as a number',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Since $\\sqrt{2}$ is irrational, Greeks didn\'t consider it a number. They kept a separate arithmetic of lengths and areas.',
@@ -50,11 +50,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'How did the Greeks define $\\sqrt{2}$?',
     options: [
       'As 1.414...',
-      'As the diagonal of a unit square',
       'As the side of a square of area 2',
-      'They didn\'t define it at all',
+      'As the diagonal of a unit square',
+      'They didn\\'t define it at all',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Greeks defined $\\sqrt{2}$ geometrically as the side of a square with area 2, avoiding the issue of whether it was a "number."',
@@ -64,12 +64,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The area of a parallelogram is:',
     options: [
-      'side × side',
       'base × height',
-      '½ × base × height',
+      'side × side',
       'base + height',
+      '½ × base × height',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The area of a parallelogram equals base × height. This is shown by cutting a triangle from one end and pasting it to the other to form a rectangle.',
@@ -79,8 +79,8 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The area of a triangle is:',
     options: [
-      'base × height',
       '2 × base × height',
+      'base × height',
       '½ × base × height',
       '(base + height) / 2',
     ],
@@ -110,8 +110,8 @@ export const section14Questions: QuizQuestion[] = [
     question: 'The word "geometry" comes from the Greek for:',
     options: [
       'Earth measurement (land measurement)',
-      'Number counting',
       'Circle drawing',
+      'Number counting',
       'Line extending',
     ],
     correctIndex: 0,

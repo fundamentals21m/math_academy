@@ -6,12 +6,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A metric space $X$ is connected if:',
     options: [
-      'It cannot be written as the union of two non-empty disjoint open sets',
       'Every two points can be joined by a path',
+      'It cannot be written as the union of two non-empty disjoint open sets',
       'It is compact',
       'It contains no isolated points'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A space is connected if it cannot be partitioned into two non-empty disjoint open sets.',
   },
@@ -21,11 +21,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'The Intermediate Value Theorem states that if $f: [a, b] \\to \\mathbf{R}$ is continuous and $y$ is between $f(a)$ and $f(b)$, then:',
     options: [
       '$f$ is constant',
-      'There exists $c \\in [a, b]$ with $f(c) = y$',
       '$f$ is monotonic',
+      'There exists $c \\in [a, b]$ with $f(c) = y$',
       '$f$ has a maximum at some point'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The IVT says continuous functions on intervals take all intermediate values.',
   },
@@ -35,11 +35,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'If $f: X \\to Y$ is continuous and $X$ is connected, then:',
     options: [
       '$f(X)$ is compact',
-      '$f(X)$ is connected',
+      '$Y$ must be connected',
       '$f(X)$ is open',
-      '$Y$ must be connected'
+      '$f(X)$ is connected'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Continuous images of connected sets are connected.',
   },
@@ -48,12 +48,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A space $X$ is path-connected if:',
     options: [
-      'It is connected',
       'For any two points $x, y \\in X$, there exists a continuous path from $x$ to $y$',
+      'It is connected',
       'It contains no holes',
       'Every continuous function on $X$ is bounded'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Path-connected means any two points can be joined by a continuous curve.',
   },

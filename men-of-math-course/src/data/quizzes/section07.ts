@@ -7,11 +7,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'Newton\'s method of fluxions is now called:',
     options: [
       'Algebra',
-      'Calculus',
       'Geometry',
+      'Calculus',
       'Statistics'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Newton\'s fluxions and fluents are what we now call derivatives and integrals in calculus.',
   },
@@ -22,10 +22,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'Force is proportional to the sum of the masses',
       'Force is inversely proportional to distance',
-      'Force is proportional to the product of masses and inversely proportional to distance squared',
-      'Force is constant regardless of distance'
+      'Force is constant regardless of distance',
+      'Force is proportional to the product of masses and inversely proportional to distance squared'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$F = G\\frac{m_1 m_2}{r^2}$ — force is proportional to both masses and inversely proportional to distance squared.',
   },
@@ -34,12 +34,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Newton\'s famous statement "If I have seen further, it is by standing on the shoulders of giants" appeared in a letter to:',
     options: [
-      'Leibniz',
       'Halley',
       'Hooke',
-      'Euler'
+      'Leibniz',
+      'Euler',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Newton wrote this to Robert Hooke in 1675, possibly as a veiled insult since Hooke was short.',
   },
@@ -48,12 +48,28 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The binomial series, discovered by Newton, expands $(1+x)^n$ for:',
     options: [
-      'Only positive integer $n$',
-      'Only negative integer $n$',
-      'Any real number $n$',
-      'Only rational $n$'
+      'Any real number $n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Newton generalized the binomial theorem to work for any real exponent, giving an infinite series.',
+  },
+      'Only positive integer $n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Newton generalized the binomial theorem to work for any real exponent, giving an infinite series.',
+  },
+      'Only negative integer $n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Newton generalized the binomial theorem to work for any real exponent, giving an infinite series.',
+  },
+      'Only rational $n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Newton generalized the binomial theorem to work for any real exponent, giving an infinite series.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Newton generalized the binomial theorem to work for any real exponent, giving an infinite series.',
   },

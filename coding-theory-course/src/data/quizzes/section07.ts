@@ -24,10 +24,14 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The minimum distance of every Hamming code $\\mathcal{H}_r$ is:',
     options: [
-      '3',
       '2',
       '4',
-      '$r$'
+      '$r
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Every Hamming code has minimum distance exactly 3. This allows them to correct any single error or detect up to 2 errors.',
+  },
+      '3',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -38,12 +42,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The parity check matrix of a Hamming code has columns that are:',
     options: [
-      'All non-zero binary $r$-tuples, one for each integer from 1 to $2^r - 1$',
       'The first $n$ columns of the identity matrix',
+      'All non-zero binary $r$-tuples, one for each integer from 1 to $2^r - 1$',
       'Random binary vectors',
       'All binary vectors including the zero vector'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The columns of the Hamming code parity check matrix are all $2^r - 1$ non-zero binary $r$-tuples, arranged in order of increasing value when read as binary numbers.',
   },
@@ -52,12 +56,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Hamming code decoding, if the syndrome equals $(101)_2$, the error is in position:',
     options: [
-      '5',
-      '3',
       '6',
+      '3',
+      '5',
       '1'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The syndrome directly indicates the error position in a Hamming code. $(101)_2 = 4 + 1 = 5$, so the error is in position 5.',
   },

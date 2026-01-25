@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section01Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'According to Mises, human action is:',
+    options: [
+      'Involuntary response to stimuli',
+      'Random behavior without direction',
+      'Instinctive reactions like reflexes',
+      'Purposeful behavior aimed at achieving ends',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Mises defines human action as purposeful behavior - conscious adjustment aimed at achieving desired ends, distinct from reflexes or involuntary responses.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What are the three prerequisites for human action according to Mises?',
+    options: [
+      'Uneasiness, image of improvement, and expectation of efficacy',
+      'Money, time, and resources',
+      'Knowledge, skill, and opportunity',
+      'Goals, plans, and execution',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Action requires: (1) uneasiness with the present state, (2) an image of a better state, and (3) belief that action can bring about the improvement.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Mises considers human action to be an "ultimate given." This means:',
+    options: [
+      'It can be explained by physics or psychology',
+      'It is merely a hypothesis to be tested',
+      'It is a starting point that cannot be reduced to something more fundamental',
+      'It applies only to certain cultures',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Human action is an ultimate given - we cannot explain why humans act, we simply recognize that they do. It is the axiom from which praxeology deduces its theorems.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'In Mises\'s framework, is deliberate inaction considered "action"?',
+    options: [
+      'No, action requires physical movement',
+      'No, inaction is the opposite of action',
+      'Only if it involves mental effort',
+      'Yes, choosing not to act is itself a purposeful choice',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Deliberate inaction is a form of action. Choosing not to act when you could act is itself a purposeful choice.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What does Mises mean when he says action is "necessarily always rational"?',
+    options: [
+      'People always make wise decisions',
+      'Action involves selecting means believed suitable for attaining ends',
+      'People never make mistakes',
+      'All actions are based on perfect information',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Rational action means employing means to achieve ends. It does not mean people always succeed or are wise - they may err about which means work.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Why does action presuppose the category of causality?',
+    options: [
+      'To comply with scientific methodology',
+      'To satisfy legal requirements',
+      'Because we must understand that doing X leads to Y to intervene effectively',
+      'Because causality is required by governments',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'To act is to intervene in events to produce preferred outcomes. This requires knowing cause-and-effect relationships to select appropriate means.',
+  },
+];

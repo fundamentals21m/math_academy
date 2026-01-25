@@ -34,12 +34,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Common Notion 1 states: "Things which are equal to the same thing are also..."',
     options: [
+      'Equal to one another',
       'Greater than each other',
       'Parallel to each other',
-      'Equal to one another',
-      'Similar to each other'
+      'Similar to each other',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Common Notion 1 establishes transitivity of equality: if A = C and B = C, then A = B.',
   },
@@ -49,11 +49,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'According to Euclid\'s definitions, what is a right angle?',
     options: [
       'An angle of exactly 90 degrees',
+      'Half of a straight angle',
       'When a straight line standing on another makes adjacent angles equal to one another',
       'The angle in a semicircle',
-      'Half of a straight angle'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Definition 10: When a straight line standing on a straight line makes the adjacent angles equal, each is a right angle.',
   },
@@ -62,12 +62,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which postulate allows us to draw a circle with any center and any radius?',
     options: [
-      'Postulate 1',
       'Postulate 2',
+      'Postulate 1',
+      'Postulate 4',
       'Postulate 3',
-      'Postulate 4'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Postulate 3: "To describe a circle with any centre and distance."',
   },
@@ -77,11 +77,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What does Common Notion 5 state?',
     options: [
       'Equals added to equals give equals',
-      'Equals subtracted from equals give equals',
       'The whole is greater than the part',
+      'Equals subtracted from equals give equals',
       'Things equal to the same thing are equal to each other'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Common Notion 5: "The whole is greater than the part." This fundamental axiom underlies many geometric proofs.',
   },

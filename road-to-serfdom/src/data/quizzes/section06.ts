@@ -9,7 +9,7 @@ export const section06Questions: QuizQuestion[] = [
       'Use violence',
       'Refuse to recognise autonomous spheres where individual ends are supreme',
       'Are led by dictators',
-      'Hate democracy'
+      'Hate democracy',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -21,11 +21,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Hayek argues that the "common good" or "general welfare" as a guide to planning:',
     options: [
       'Provides clear direction for policy',
-      'Has no sufficiently definite meaning to determine a particular course of action',
+      'Can be precisely measured',
       'Is universally agreed upon',
-      'Can be precisely measured'
+      'Has no sufficiently definite meaning to determine a particular course of action'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'These terms have no sufficiently definite meaning—the welfare of millions cannot be measured on a single scale and depends on things that can be provided in infinite combinations.',
   },
@@ -34,12 +34,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The philosophy of individualism is based on:',
     options: [
-      'The assumption that man is selfish',
       'The recognition that no mind can comprehend all the needs of all people',
+      'The assumption that man is selfish',
       'Opposition to all cooperation',
       'The belief that there are no social ends'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Individualism does not assume selfishness—it starts from the indisputable fact that our powers of imagination cannot include in one scale of values more than a sector of society\'s needs.',
   },
@@ -51,7 +51,7 @@ export const section06Questions: QuizQuestion[] = [
       'It increases',
       'It stays the same',
       'It necessarily decreases',
-      'It becomes irrelevant'
+      'It becomes irrelevant',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -62,12 +62,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hayek compares people agreeing to central planning without agreeing on ends to:',
     options: [
-      'Building a house without a blueprint',
       'A group committing to a journey together without agreeing where to go',
+      'Building a house without a blueprint',
       'Cooking without a recipe',
-      'Singing without sheet music'
+      'Singing without sheet music',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'It is like people committing to take a journey together without agreeing on destination—resulting in a journey most of them do not want.',
   },
@@ -77,11 +77,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'When democratic parliaments cannot agree on a plan, what demand grows?',
     options: [
       'To abandon planning entirely',
+      'To reduce the scope of government',
       'To delegate power to experts and autonomous bodies beyond democratic control',
       'To have more debates',
-      'To reduce the scope of government'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Parliaments come to be seen as ineffective "talking shops," leading to demands that direction be "taken out of politics" and placed in the hands of experts or autonomous bodies.',
   },

@@ -6,12 +6,12 @@ export const section107Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the circumcircle of a triangle?',
     options: [
-      'The circle inscribed in the triangle',
       'The unique circle passing through all three vertices',
+      'The circle inscribed in the triangle',
       'Any circle containing the triangle',
-      'A circle centered at one vertex'
+      'A circle centered at one vertex',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The circumcircle passes through all three vertices of the triangle. It is the unique circle determined by three non-collinear points.',
   },
@@ -23,7 +23,7 @@ export const section107Questions: QuizQuestion[] = [
       'By bisecting the angles',
       'By constructing perpendicular bisectors of two sides',
       'By drawing medians',
-      'By drawing altitudes'
+      'By drawing altitudes',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -37,7 +37,7 @@ export const section107Questions: QuizQuestion[] = [
       'Always outside the triangle',
       'Always on the hypotenuse',
       'Inside the triangle',
-      'At a vertex'
+      'At a vertex',
     ],
     correctIndex: 2,
     difficulty: 'medium',

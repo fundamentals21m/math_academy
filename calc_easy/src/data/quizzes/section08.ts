@@ -9,7 +9,7 @@ export const section08Questions: QuizQuestion[] = [
       'The original function squared',
       'The rate of change of the rate of change (how the slope is changing)',
       'The area under the curve',
-      'The product of two derivatives'
+      'The product of two derivatives',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,10 +20,26 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $y = x^3$, what is $\\frac{d^2y}{dx^2}$?',
     options: [
-      '$3x^2$',
-      '$6x$',
-      '$6$',
-      '$3x$'
+      '$3x^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\frac{dy}{dx} = 3x^2$, then $\\frac{d^2y}{dx^2} = 6x$.',
+  },
+      '$6
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\frac{dy}{dx} = 3x^2$, then $\\frac{d^2y}{dx^2} = 6x$.',
+  },
+      '$6x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\frac{dy}{dx} = 3x^2$, then $\\frac{d^2y}{dx^2} = 6x$.',
+  },
+      '$3x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\frac{dy}{dx} = 3x^2$, then $\\frac{d^2y}{dx^2} = 6x$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +50,28 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The notation $f\'\'(x)$ means the same as:',
     options: [
-      '$f(x) \\cdot f(x)$',
-      '$\\frac{d^2f}{dx^2}$',
-      '$\\frac{df}{dx} \\cdot \\frac{df}{dx}$',
-      '$2 \\cdot f\'(x)$'
+      '$\\frac{d^2f}{dx^2}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$f\'\'(x)$ is the second derivative, also written as $\\frac{d^2f}{dx^2}$.',
+  },
+      '$f(x) \\cdot f(x)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$f\'\'(x)$ is the second derivative, also written as $\\frac{d^2f}{dx^2}$.',
+  },
+      '$\\frac{df}{dx} \\cdot \\frac{df}{dx}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$f\'\'(x)$ is the second derivative, also written as $\\frac{d^2f}{dx^2}$.',
+  },
+      '$2 \\cdot f\\'(x)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$f\'\'(x)$ is the second derivative, also written as $\\frac{d^2f}{dx^2}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$f\'\'(x)$ is the second derivative, also written as $\\frac{d^2f}{dx^2}$.',
   },
@@ -58,11 +90,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'If $\\frac{d^2y}{dx^2} > 0$, the curve is:',
     options: [
       'Concave down (like a frown)',
-      'Concave up (like a smile)',
+      'Decreasing',
       'A straight line',
-      'Decreasing'
+      'Concave up (like a smile)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Positive second derivative means the curve is concave up (bends upward like a smile).',
   },

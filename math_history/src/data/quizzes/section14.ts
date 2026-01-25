@@ -8,11 +8,11 @@ export const section14Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Walk the full distance',
-      'Walk a quarter of the distance',
-      'Stand still',
       'Walk backwards',
+      'Stand still',
+      'Walk a quarter of the distance'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'The Dichotomy says before you can walk half the distance, you must first walk a quarter. Before that, an eighth. And so on infinitely, suggesting you can never even start.',
   },
@@ -43,12 +43,12 @@ export const section14Questions: QuizQuestion[] = [
     question: 'The Arrow paradox questions whether motion is possible because:',
     difficulty: 'medium',
     options: [
-      'Arrows are too heavy to fly',
       'At each instant, the arrow occupies a fixed position and is therefore motionless',
+      'Arrows are too heavy to fly',
       'Arrows move in discrete jumps',
-      'Time moves backwards for arrows',
+      'Time moves backwards for arrows'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'The Arrow paradox argues that at any single instant, the arrow is in one place (motionless). If time consists only of instants, and the arrow is motionless at each instant, then it never moves.',
   },

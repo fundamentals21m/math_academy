@@ -9,12 +9,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who discovered that addition and multiplication can be defined inductively?',
     options: [
+      'Grassmann',
       'Euclid',
       'Gauss',
-      'Grassmann',
       'Von Neumann',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Hermann Grassmann (1861) made the breakthrough by noticing that induction can be used not only for proofs but also for definitions.',
@@ -24,12 +24,32 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Grassmann\'s inductive definition, $m + (i + 1)$ is defined as:',
     options: [
-      '$m + i$',
-      '$(m + i) + 1$',
-      '$m \\times (i + 1)$',
-      '$(m + 1) + i$',
+      '$(m + i) + 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'The inductive definition says $m + (i + 1) = (m + i) + 1$. This defines addition for $n = i+1$ in terms of addition for $n = i$.',
+  },
+      '$m + i
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'The inductive definition says $m + (i + 1) = (m + i) + 1$. This defines addition for $n = i+1$ in terms of addition for $n = i$.',
+  },
+      '$(m + 1) + i
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'The inductive definition says $m + (i + 1) = (m + i) + 1$. This defines addition for $n = i+1$ in terms of addition for $n = i$.',
+  },
+      '$m \\times (i + 1)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'The inductive definition says $m + (i + 1) = (m + i) + 1$. This defines addition for $n = i+1$ in terms of addition for $n = i$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The inductive definition says $m + (i + 1) = (m + i) + 1$. This defines addition for $n = i+1$ in terms of addition for $n = i$.',
@@ -39,12 +59,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Dedekind, which property must the successor function have?',
     options: [
-      'It must be defined on a finite set',
       'It must be onto the whole set',
-      'It must be one-to-one',
+      'It must be defined on a finite set',
       'It must have a fixed point',
+      'It must be one-to-one',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The successor function must be one-to-one (unequal numbers have unequal successors), defined on an infinite set, and NOT onto (1 is not a successor).',
@@ -55,11 +75,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'In von Neumann\'s definition, what is the number 2?',
     options: [
       'The empty set',
-      '$\\{0\\}$',
       '$\\{0, 1\\}$',
-      '$\\{1, 2\\}$',
+      '$\\{0\\}$',
+      '$\\{1, 2\\}$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Von Neumann defines each natural number as the set of its predecessors. So $0 = \\{\\}$, $1 = \\{0\\}$, $2 = \\{0, 1\\}$, etc.',
@@ -85,11 +105,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'The axiom of infinity asserts:',
     options: [
       'All numbers are finite',
-      'There exists an infinite set',
-      'Induction always works',
       'Every set has a successor',
+      'Induction always works',
+      'There exists an infinite set'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The axiom of infinity states that there exists a set $\\Omega$ containing the empty set and closed under the successor operation—thus an infinite set exists.',
@@ -99,8 +119,8 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What crucial insight did Grassmann have about induction?',
     options: [
-      'It can only be used for sums',
       'It fails for multiplication',
+      'It can only be used for sums',
       'It can be used for definitions, not just proofs',
       'It requires the axiom of infinity',
     ],

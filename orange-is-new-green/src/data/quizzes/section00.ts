@@ -6,10 +6,10 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Stanley Druckenmiller, what percentage of Bitcoin holders at the $17,000 peak did NOT sell when it crashed to $3,000?',
     options: [
-      '50%',
       '72%',
+      '50%',
       '86%',
-      '95%'
+      '95%',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the maximum supply of Bitcoin?',
     options: [
-      '18 million',
       '21 million',
+      '18 million',
       '100 million',
-      'Unlimited'
+      'Unlimited',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Bitcoin has a fixed maximum supply of 21 million coins, enforced by the protocol\'s consensus rules.',
   },
@@ -50,10 +50,10 @@ export const section00Questions: QuizQuestion[] = [
     options: [
       'Sell Bitcoin quickly',
       'Trade Bitcoin for altcoins',
-      'Continuously accumulate Bitcoin (measured in satoshis)',
-      'Stake Bitcoin for yield'
+      'Stake Bitcoin for yield',
+      'Continuously accumulate Bitcoin (measured in satoshis)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '"Stack sats" encourages continuous accumulation of Bitcoin, measured in satoshis (the smallest unit), based on the belief in its superior monetary properties.',
   },

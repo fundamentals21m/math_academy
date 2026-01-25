@@ -8,11 +8,11 @@ export const section36Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'It gave wrong answers',
-      'It relied on "infinitesimals" that were logically problematic',
       'It only worked for polynomials',
-      'It required geometric diagrams',
+      'It relied on "infinitesimals" that were logically problematic',
+      'It required geometric diagrams'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'Newton and Leibniz used "infinitely small" quantities that were paradoxical: sometimes treated as nonzero (to divide by them), sometimes as zero (to simplify). Bishop Berkeley famously called them "ghosts of departed quantities."',
   },
@@ -23,11 +23,11 @@ export const section36Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Infinities',
-      'Limits',
-      'Approximations',
       'Series',
+      'Approximations',
+      'Limits'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'The epsilon-delta definition of limits, developed by Cauchy and perfected by Weierstrass, replaced vague infinitesimals with precise statements about "arbitrarily small" quantities.',
   },
@@ -38,12 +38,12 @@ export const section36Questions: QuizQuestion[] = [
       'In the epsilon-delta definition, $\\lim_{x \\to a} f(x) = L$ means:',
     difficulty: 'medium',
     options: [
-      '$f(a) = L$',
       'For every $\\varepsilon > 0$, there exists $\\delta > 0$ such that $|x-a| < \\delta$ implies $|f(x)-L| < \\varepsilon$',
+      '$f(a) = L$',
       '$f(x)$ gets infinitely close to $L$',
-      '$f(x) = L$ for all $x$ near $a$',
+      '$f(x) = L$ for all $x$ near $a$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'The epsilon-delta definition says: we can make $f(x)$ as close to $L$ as we want (within $\\varepsilon$) by taking $x$ sufficiently close to $a$ (within $\\delta$). This avoids any reference to "infinitely small."',
   },
@@ -86,11 +86,11 @@ export const section36Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'They don\'t exist in any sense',
-      'They can be made rigorous using advanced logic',
-      'They are equivalent to zero',
       'They contradict the epsilon-delta definition',
+      'They are equivalent to zero',
+      'They can be made rigorous using advanced logic'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Robinson showed that using model theory, one can construct a rigorous number system containing genuine infinitesimals. This vindicated Newton and Leibniz\'s intuition: infinitesimals can be made meaningful, just not with 17th-century logic.',
   },

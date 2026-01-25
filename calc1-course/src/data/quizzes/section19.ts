@@ -7,11 +7,11 @@ export const section19Questions: QuizQuestion[] = [
     question: '$\\lim_{x \\to a} f(x) = L$ means:',
     options: [
       '$f(a) = L$',
-      '$f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$',
+      '$f$ is continuous at $a$',
       '$f(x) = L$ for all $x$ near $a$',
-      '$f$ is continuous at $a$'
+      '$f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The limit describes the behavior of $f(x)$ as $x$ approaches $a$.',
   },
@@ -20,12 +20,20 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f$ is continuous at $a$ if:',
     options: [
-      '$f(a)$ exists',
       '$\\lim_{x \\to a} f(x)$ exists',
-      '$\\lim_{x \\to a} f(x) = f(a)$',
-      '$f$ is differentiable at $a$'
+      '$f(a)$ exists',
+      '$f$ is differentiable at $a
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Continuity requires: $f(a)$ exists, the limit exists, and they are equal.',
+  },
+      '$\\lim_{x \\to a} f(x) = f(a)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Continuity requires: $f(a)$ exists, the limit exists, and they are equal.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Continuity requires: $f(a)$ exists, the limit exists, and they are equal.',
   },
@@ -57,12 +65,24 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\lim_{x \\to a} f(x) = L$ and $\\lim_{x \\to a} g(x) = M$, then $\\lim_{x \\to a} [f(x) + g(x)] = ?$',
     options: [
-      '$LM$',
-      '$L + M$',
-      '$L - M$',
-      'Cannot determine'
+      '$L + M
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Limit of a sum equals sum of limits: $L + M$.',
+  },
+      '$LM
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Limit of a sum equals sum of limits: $L + M$.',
+  },
+      '$L - M
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Limit of a sum equals sum of limits: $L + M$.',
+  },
+      'Cannot determine',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Limit of a sum equals sum of limits: $L + M$.',
   },
@@ -72,11 +92,15 @@ export const section19Questions: QuizQuestion[] = [
     question: 'The function $f(x) = |x|$ is continuous at $x = 0$ because:',
     options: [
       'It has a corner there',
-      '$\\lim_{x \\to 0}|x| = 0 = f(0)$',
+      'It is not continuous at 0',
+      '$\\lim_{x \\to 0}|x| = 0 = f(0)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The limit equals the function value: $\\lim_{x \\to 0}|x| = 0 = |0|$.',
+  },
       'It is differentiable at 0',
-      'It is not continuous at 0'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The limit equals the function value: $\\lim_{x \\to 0}|x| = 0 = |0|$.',
   },

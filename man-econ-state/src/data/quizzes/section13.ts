@@ -7,9 +7,9 @@ export const section13Questions: QuizQuestion[] = [
     question: 'What is autistic intervention?',
     options: [
       'Intervention affecting international trade',
-      'Government restriction on an individual\'s use of their own person or property',
+      'Government restriction on an individual\\'s use of their own person or property',
       'Intervention in the banking system',
-      'Voluntary self-restriction'
+      'Voluntary self-restriction',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,12 +20,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is binary intervention?',
     options: [
-      'Intervention affecting two countries',
       'Coerced exchange between government and individual (taxation, subsidies)',
+      'Intervention affecting two countries',
+      'Computer-based regulation',
       'Regulation of two industries',
-      'Computer-based regulation'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Binary intervention involves a forced exchange between the State and the individual, such as taxation or conscription.',
   },
@@ -35,11 +35,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'Why does intervention "beget more intervention" according to Rothbard?',
     options: [
       'Bureaucrats want more power',
-      'Each intervention creates problems that seem to require further intervention',
       'The public demands it',
-      'It is required by law'
+      'It is required by law',
+      'Each intervention creates problems that seem to require further intervention',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Intervention creates unintended consequences that are used to justify additional interventions, creating an expansionary dynamic.',
   },
@@ -62,12 +62,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "knowledge problem" created by intervention?',
     options: [
-      'Officials don\'t have degrees',
-      'Intervention destroys the price signals that convey dispersed knowledge',
+      'Officials don\\'t have degrees',
       'People become less educated',
-      'Information is classified'
+      'Information is classified',
+      'Intervention destroys the price signals that convey dispersed knowledge',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Prices convey information that no central authority can possess. Intervention disrupts this signaling mechanism.',
   },
@@ -77,11 +77,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'According to Rothbard, is the "mixed economy" stable?',
     options: [
       'Yes, it balances freedom and control',
+      'Only in democracies',
       'No, it tends toward either full socialism or the free market',
       'It depends on the specific policies',
-      'Only in democracies'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The mixed economy is inherently unstable—it tends either toward more intervention (socialism) or toward liberalization.',
   },

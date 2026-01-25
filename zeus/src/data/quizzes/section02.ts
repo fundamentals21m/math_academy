@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section02Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'What is the Lightning Network?',
+    options: [
+      'A Layer 2 protocol built on top of Bitcoin',
+      'A new blockchain that replaced Bitcoin',
+      'A mining pool for faster transactions',
+      'A type of cryptocurrency exchange',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Lightning Network is a "Layer 2" protocol built on top of Bitcoin that enables instant, nearly-free payments by conducting transactions off the main blockchain.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'What is a payment channel?',
+    options: [
+      'A physical connection between Bitcoin nodes',
+      'A two-party ledger for unlimited off-chain transactions',
+      'A mining algorithm',
+      'A type of Bitcoin address',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A payment channel is a two-party ledger that allows participants to make unlimited transactions between themselves off-chain, with only opening and closing requiring on-chain transactions.',
+  },
+  {
+    id: 3,
+    type: 'numeric',
+    question: 'If a channel has 500,000 sats capacity with 400,000 local and 100,000 remote balance, what is the maximum you can send?',
+    correctAnswer: 400000,
+    numericRange: { min: 0, max: 1000000, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'Your local balance (400,000 sats) is the maximum you can send through that channel. The channel capacity (500,000) stays constant - only the balance distribution changes.',
+  },
+  {
+    id: 4,
+    type: 'text',
+    question: 'What does HTLC stand for?',
+    correctAnswer: 'Hash Time-Locked Contract',
+    difficulty: 'hard',
+    explanation: 'HTLC stands for Hash Time-Locked Contract - a conditional payment that requires knowledge of a secret within a time limit, enabling trustless multi-hop Lightning payments.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'What is "inbound liquidity"?',
+    options: [
+      'The amount you can send through your channels',
+      'The total capacity of all your channels',
+      'The amount others can send you through your channels',
+      'Your on-chain Bitcoin balance',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Inbound liquidity is the sum of remote balances across all your channels - the amount others can send you. You need inbound liquidity to receive Lightning payments.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What prefix identifies a mainnet BOLT11 Lightning invoice?',
+    options: [
+      'btc',
+      'lntb',
+      'bc1',
+      'lnbc',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Mainnet Lightning invoices start with "lnbc" (lightning network bitcoin). Testnet invoices use "lntb". "bc1" is a Bitcoin address prefix, not a Lightning invoice.',
+  },
+];

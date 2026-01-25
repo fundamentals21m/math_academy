@@ -21,11 +21,11 @@ export const section83Questions: QuizQuestion[] = [
     question: 'Which propositions together show the equivalence of: (1) tangent to circle at P, (2) perpendicular to radius at P?',
     options: [
       'III.1 and III.2',
-      'III.16, III.18, and III.19',
       'III.31 only',
+      'III.16, III.18, and III.19',
       'III.3 and III.4'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'III.16 shows perpendicular to diameter endpoint is tangent; III.18 shows tangent is perpendicular to radius; III.19 shows perpendicular to tangent hits center.',
   },
@@ -34,12 +34,12 @@ export const section83Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'III.19 can be used to find the center of a circle if you know:',
     options: [
-      'One chord',
       'One tangent line and its point of tangency',
+      'One chord',
+      'Two parallel chords',
       'The diameter only',
-      'Two parallel chords'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Given a tangent and its point of tangency, the perpendicular to the tangent at that point passes through the center.',
   },

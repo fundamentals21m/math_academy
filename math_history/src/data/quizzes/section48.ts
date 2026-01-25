@@ -7,12 +7,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Lagrangian $L$ is defined as:',
     options: [
-      'Kinetic energy minus potential energy ($T - V$)',
-      'Kinetic energy plus potential energy ($T + V$)',
       'Force times distance',
-      'Mass times acceleration',
+      'Kinetic energy plus potential energy ($T + V$)',
+      'Kinetic energy minus potential energy ($T - V$)',
+      'Mass times acceleration'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The Lagrangian is defined as $L = T - V$, where $T$ is kinetic energy and $V$ is potential energy. This quantity, when integrated over time (the action), is made stationary by the actual path of a mechanical system.',
@@ -22,12 +22,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hamilton\'s principle states that mechanical systems follow paths that make the action:',
     options: [
-      'Stationary (extremal)',
+      'Equal to energy',
       'Maximum',
       'Zero',
-      'Equal to energy',
+      'Stationary (extremal)'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Hamilton\'s principle (the principle of least action) states that the actual path makes the action $S = \\int L\\, dt$ stationary—meaning its first variation is zero. This is usually a minimum but can be a saddle point.',
@@ -53,12 +53,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Hamiltonian $H$ typically represents:',
     options: [
-      'Total energy ($T + V$)',
       'The Lagrangian',
+      'Total energy ($T + V$)',
       'Kinetic energy only',
-      'The action',
+      'The action'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'For most systems, the Hamiltonian $H = \\sum p_i\\dot{q}_i - L$ equals the total energy $T + V$. Hamilton\'s equations describe how position and momentum evolve in phase space, preserving this energy.',
@@ -69,12 +69,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A major advantage of Lagrangian mechanics over Newtonian mechanics is:',
     options: [
-      'It works naturally in any coordinate system and handles constraints easily',
-      'It requires fewer equations',
       'It only applies to simple systems',
-      'It eliminates the need for calculus',
+      'It requires fewer equations',
+      'It works naturally in any coordinate system and handles constraints easily',
+      'It eliminates the need for calculus'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Lagrangian mechanics is coordinate-independent: you can use Cartesian, polar, or any convenient coordinates. Constraints (like a bead on a wire) are handled by choosing appropriate generalized coordinates, eliminating the need for constraint forces.',
@@ -84,12 +84,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Feynman\'s path integral formulation of quantum mechanics uses the action by:',
     options: [
-      'Summing contributions $e^{iS/\\hbar}$ over all possible paths',
+      'Ignoring paths with large action',
       'Finding the single path of minimum action',
       'Setting the action equal to zero',
-      'Ignoring paths with large action',
+      'Summing contributions $e^{iS/\\hbar}$ over all possible paths'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'In Feynman\'s formulation, a quantum particle takes all paths simultaneously, with each weighted by $e^{iS/\\hbar}$. For macroscopic systems where $S \\gg \\hbar$, paths near the classical (stationary action) path dominate, recovering classical mechanics.',

@@ -7,9 +7,9 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Which of the following is NOT a species of second-order curve?',
     options: [
       'Ellipse',
-      'Parabola',
       'Hyperbola',
-      'Cubic'
+      'Parabola',
+      'Cubic',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does the discriminant $\\beta^2 - 4\\alpha\\gamma$ determine the type of conic?',
     options: [
-      'Positive: ellipse, Zero: parabola, Negative: hyperbola',
       'Positive: hyperbola, Zero: parabola, Negative: ellipse',
+      'Positive: ellipse, Zero: parabola, Negative: hyperbola',
       'Positive: parabola, Zero: circle, Negative: line',
-      'It has no effect on the type'
+      'It has no effect on the type',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The discriminant $\\beta^2 - 4\\alpha\\gamma$ determines the conic type: positive gives hyperbola, zero gives parabola, negative gives ellipse (including circle).',
   },
@@ -36,8 +36,8 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'It has no center',
       'It has equal semi-axes (all points equidistant from center)',
+      'It has asymptotes',
       'It extends to infinity',
-      'It has asymptotes'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -48,12 +48,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the canonical form of a parabola?',
     options: [
-      '$x^2/a^2 + y^2/b^2 = 1$',
       '$y^2 = 4px$',
+      '$x^2/a^2 + y^2/b^2 = 1$',
       '$x^2/a^2 - y^2/b^2 = 1$',
       '$x^2 + y^2 = r^2$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The canonical form of a parabola is $y^2 = 4px$ (or equivalently $x^2 = 4py$), where $p$ is the distance from vertex to focus.',
   },
@@ -65,7 +65,7 @@ export const section05Questions: QuizQuestion[] = [
       'Circle',
       'Ellipse',
       'Parabola',
-      'Hyperbola'
+      'Hyperbola',
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'According to Rothbard, can defense services be provided by the free market?',
     options: [
       'No, only government can provide defense',
-      'Yes, defense is an economic service like any other',
       'Only partially—military must be government',
-      'Only during peacetime'
+      'Yes, defense is an economic service like any other',
+      'Only during peacetime',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Rothbard argues defense is an economic service that could be provided by competing private agencies.',
   },
@@ -21,11 +21,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'How does Rothbard define the State?',
     options: [
       'Any organization that provides public goods',
-      'The organization claiming a territorial monopoly on the use of force',
       'An elected government',
-      'The collection of public employees'
+      'The collection of public employees',
+      'The organization claiming a territorial monopoly on the use of force',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The State is defined by its claim to exclusive use of force over a territory and its power to tax without consent.',
   },
@@ -34,12 +34,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is anarcho-capitalism?',
     options: [
-      'Chaos and disorder',
       'A society with private property and free markets but no State',
+      'Chaos and disorder',
       'Capitalism controlled by anarchist groups',
-      'A mixed economy'
+      'A mixed economy',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Anarcho-capitalism envisions a society based on voluntary exchange and private property, with all services—including defense—provided privately.',
   },
@@ -49,11 +49,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'According to Rothbard, why would private defense agencies cooperate rather than fight?',
     options: [
       'Government would force them to',
+      'There would be no weapons',
       'War is expensive; arbitration is cheaper',
       'Customers would not allow fighting',
-      'There would be no weapons'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Conflict destroys value. Defense agencies would find arbitration more profitable than warfare.',
   },
@@ -62,12 +62,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What historical examples does Rothbard cite for private law?',
     options: [
-      'Ancient Rome and Greece',
       'Medieval Iceland, the American West, and merchant law',
+      'Ancient Rome and Greece',
       'Modern corporations',
       'The United Nations'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Rothbard points to medieval Iceland, frontier America, and lex mercatoria as examples of order without state monopoly.',
   },

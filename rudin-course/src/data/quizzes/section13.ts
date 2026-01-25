@@ -21,11 +21,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'If $\\{p_n\\}$ converges in a metric space, the limit is:',
     options: [
       'Not necessarily unique',
-      'Unique',
       'Always rational',
+      'Unique',
       'Always in the sequence'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Limits are unique in metric spaces. If $p_n \\to p$ and $p_n \\to q$, then $d(p, q) \\leq d(p, p_n) + d(p_n, q)$, which can be made arbitrarily small, so $p = q$.',
   },
@@ -35,11 +35,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'A convergent sequence is:',
     options: [
       'Unbounded',
-      'Bounded',
+      'Eventually constant',
       'Monotonic',
-      'Eventually constant'
+      'Bounded'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'If $p_n \\to p$, then for large $n$, $d(p_n, p) < 1$, so $p_n$ is within distance $1$ of $p$. The finitely many initial terms are also at finite distances, so the whole sequence is bounded.',
   },
@@ -48,12 +48,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In $\\mathbb{R}^k$, a sequence $\\{\\mathbf{x}_n\\}$ converges to $\\mathbf{x}$ if and only if:',
     options: [
-      'At least one coordinate converges',
-      'The first coordinate converges',
       'Each coordinate sequence converges to the corresponding coordinate of $\\mathbf{x}$',
+      'The first coordinate converges',
+      'At least one coordinate converges',
       'The norms $|\\mathbf{x}_n|$ converge to $|\\mathbf{x}|$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In $\\mathbb{R}^k$, convergence is equivalent to coordinate-wise convergence: $\\mathbf{x}_n \\to \\mathbf{x}$ iff $(x_n)_j \\to x_j$ for each $j = 1, \\ldots, k$.',
   },

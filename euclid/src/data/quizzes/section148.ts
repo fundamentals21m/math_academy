@@ -7,11 +7,11 @@ export const section148Questions: QuizQuestion[] = [
     question: 'What does VI.3 (the angle bisector theorem) state about a triangle\'s angle bisector?',
     options: [
       'It always bisects the opposite side',
-      'It divides the opposite side in the ratio of the adjacent sides',
       'It is perpendicular to the opposite side',
-      'It equals the other two sides combined'
+      'It divides the opposite side in the ratio of the adjacent sides',
+      'It equals the other two sides combined',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The angle bisector theorem (VI.3) states that an angle bisector divides the opposite side in the same ratio as the adjacent sides.',
   },
@@ -35,11 +35,11 @@ export const section148Questions: QuizQuestion[] = [
     question: 'In modern geometry, the angle bisector theorem is fundamental for:',
     options: [
       'Calculating circle circumference',
-      'Locating the incenter and understanding angle bisector concurrency',
       'Proving all triangles are equilateral',
-      'Computing volumes of solids'
+      'Computing volumes of solids',
+      'Locating the incenter and understanding angle bisector concurrency',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The angle bisector theorem is essential for proving that the three angle bisectors of a triangle are concurrent at the incenter.',
   },

@@ -17,11 +17,11 @@ export const section06Quiz: QuizQuestion[] = [
     question: 'The least squares method minimizes:',
     options: [
       'The sum of residuals',
-      'The sum of squared residuals (RSS)',
+      'The variance of predictions',
       'The sum of absolute residuals',
-      'The variance of predictions'
+      'The sum of squared residuals (RSS)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Least squares finds coefficients that minimize RSS = $\\sum(y_i - \\hat{y}_i)^2$.',
   },
@@ -30,12 +30,12 @@ export const section06Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does $R^2$ measure?',
     options: [
-      'The number of predictors',
       'The proportion of variance explained by the model',
+      'The number of predictors',
       'The slope of the regression line',
       'The intercept of the regression line'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$R^2 = 1 - \\frac{\\text{RSS}}{\\text{TSS}}$ measures how much of the total variance in $Y$ is explained by the model.',
   },
@@ -52,12 +52,12 @@ export const section06Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A slope coefficient $\\beta_1 = 0.05$ means:',
     options: [
-      'A one-unit increase in X is associated with a 0.05 increase in Y',
       'Y is 5% of X',
+      'A one-unit increase in X is associated with a 0.05 increase in Y',
       'The correlation is 0.05',
       'The model explains 5% of variance'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The slope tells us: for each one-unit increase in $X$, we expect $Y$ to increase by $\\beta_1 = 0.05$ units.',
   },
@@ -68,11 +68,11 @@ export const section06Quiz: QuizQuestion[] = [
     question: 'The null hypothesis $H_0: \\beta_1 = 0$ tests whether:',
     options: [
       'The intercept is zero',
-      'There is no relationship between X and Y',
       'The R-squared is zero',
+      'There is no relationship between X and Y',
       'The residuals are zero'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'If $\\beta_1 = 0$, then $X$ has no linear effect on $Y$ - there is no relationship.',
   },
@@ -82,11 +82,11 @@ export const section06Quiz: QuizQuestion[] = [
     question: 'A 95% confidence interval for $\\beta_1$ is approximately:',
     options: [
       '$\\hat{\\beta}_1 \\pm \\text{SE}(\\hat{\\beta}_1)$',
-      '$\\hat{\\beta}_1 \\pm 2 \\cdot \\text{SE}(\\hat{\\beta}_1)$',
+      '$\\hat{\\beta}_1 \\pm \\text{RSS}$',
       '$\\hat{\\beta}_1 \\pm 3 \\cdot \\text{SE}(\\hat{\\beta}_1)$',
-      '$\\hat{\\beta}_1 \\pm \\text{RSS}$'
+      '$\\hat{\\beta}_1 \\pm 2 \\cdot \\text{SE}(\\hat{\\beta}_1)$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A 95% CI is approximately the estimate $\\pm$ 2 standard errors (more precisely, $\\pm$ 1.96 SE).',
   },
@@ -104,12 +104,12 @@ export const section06Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The t-statistic for testing $\\beta_1 = 0$ is calculated as:',
     options: [
-      '$\\hat{\\beta}_1 \\times \\text{SE}(\\hat{\\beta}_1)$',
       '$\\hat{\\beta}_1 / \\text{SE}(\\hat{\\beta}_1)$',
+      '$\\hat{\\beta}_1 \\times \\text{SE}(\\hat{\\beta}_1)$',
       '$\\text{SE}(\\hat{\\beta}_1) / \\hat{\\beta}_1$',
       '$\\hat{\\beta}_1 - \\text{SE}(\\hat{\\beta}_1)$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$t = \\frac{\\hat{\\beta}_1 - 0}{\\text{SE}(\\hat{\\beta}_1)} = \\frac{\\hat{\\beta}_1}{\\text{SE}(\\hat{\\beta}_1)}$',
   },
@@ -134,11 +134,11 @@ export const section06Quiz: QuizQuestion[] = [
     question: 'In simple linear regression, $R^2 = r^2$ where $r$ is:',
     options: [
       'The regression coefficient',
-      'The correlation between X and Y',
       'The residual',
+      'The correlation between X and Y',
       'The standard error'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'In simple linear regression (one predictor), $R^2$ equals the square of the correlation coefficient between $X$ and $Y$.',
   },
@@ -148,11 +148,11 @@ export const section06Quiz: QuizQuestion[] = [
     question: 'A p-value of 0.001 for $\\beta_1$ means:',
     options: [
       'The probability that $\\beta_1 = 0$ is 0.001',
-      'The probability of seeing such extreme results if $\\beta_1 = 0$ is 0.001',
+      'We are 0.1% confident in our result',
       'The effect size is 0.001',
-      'We are 0.1% confident in our result'
+      'The probability of seeing such extreme results if $\\beta_1 = 0$ is 0.001'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The p-value is the probability of observing a t-statistic this extreme (or more) if the null hypothesis ($\\beta_1 = 0$) were true.',
   },
@@ -161,12 +161,12 @@ export const section06Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The formula $\\hat{\\beta}_1 = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}$ shows that $\\hat{\\beta}_1$:',
     options: [
-      'Depends only on $X$ values',
-      'Depends only on $Y$ values',
       'Is a weighted sum of the $y_i$ values',
+      'Depends only on $Y$ values',
+      'Depends only on $X$ values',
       'Always equals the correlation'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The numerator involves products of deviations. This can be rewritten to show $\\hat{\\beta}_1$ is a linear combination of the $y_i$.',
   },

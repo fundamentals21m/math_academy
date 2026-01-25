@@ -7,11 +7,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What does Proposition I.10 construct?',
     options: [
       'The bisector of an angle',
-      'The midpoint of a finite straight line',
       'A perpendicular from a point',
-      'A parallel line'
+      'A parallel line',
+      'The midpoint of a finite straight line',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'I.10: "To bisect a given finite straight line."',
   },
@@ -21,11 +21,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'Which earlier propositions does I.10 use?',
     options: [
       'Only I.1',
-      'I.1 and I.9',
       'I.1, I.4, and I.9',
+      'I.1 and I.9',
       'I.9 only'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'I.10 constructs an equilateral triangle (I.1) on the line, then bisects the vertex angle (I.9).',
   },

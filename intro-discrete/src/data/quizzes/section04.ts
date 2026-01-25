@@ -6,10 +6,26 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The linear congruence $ax \\equiv b \\pmod{n}$ has solutions if and only if:',
     options: [
-      '$\\gcd(a, n)$ divides $b$',
-      '$\\gcd(a, b)$ divides $n$',
-      '$a$ divides $b$',
-      '$n$ divides $ab$'
+      '$\\gcd(a, b)$ divides $n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A linear congruence is solvable iff $\\gcd(a, n) \\mid b$.',
+  },
+      '$a$ divides $b
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A linear congruence is solvable iff $\\gcd(a, n) \\mid b$.',
+  },
+      '$\\gcd(a, n)$ divides $b
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A linear congruence is solvable iff $\\gcd(a, n) \\mid b$.',
+  },
+      '$n$ divides $ab
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A linear congruence is solvable iff $\\gcd(a, n) \\mid b$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -23,7 +39,7 @@ export const section04Questions: QuizQuestion[] = [
       '3',
       '1',
       '0',
-      '15'
+      '15',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -34,12 +50,24 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the Chinese Remainder Theorem require about the moduli $m$ and $n$?',
     options: [
-      '$\\gcd(m, n) = 1$',
-      '$m = n$',
-      '$m$ divides $n$',
-      '$m + n$ is prime'
+      '$m$ divides $n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The CRT requires that the moduli be pairwise relatively prime.',
+  },
+      '$m = n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The CRT requires that the moduli be pairwise relatively prime.',
+  },
+      '$m + n$ is prime',
+      '$\\gcd(m, n) = 1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The CRT requires that the moduli be pairwise relatively prime.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The CRT requires that the moduli be pairwise relatively prime.',
   },
@@ -66,12 +94,28 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\gcd(m, n) = 1$, the CRT guarantees a unique solution modulo:',
     options: [
-      '$mn$',
-      '$m + n$',
-      '$m - n$',
-      '$\\gcd(m, n)$'
+      '$\\gcd(m, n)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The CRT gives a unique solution modulo the product $mn$.',
+  },
+      '$mn
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The CRT gives a unique solution modulo the product $mn$.',
+  },
+      '$m + n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The CRT gives a unique solution modulo the product $mn$.',
+  },
+      '$m - n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The CRT gives a unique solution modulo the product $mn$.',
+  },
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The CRT gives a unique solution modulo the product $mn$.',
   },

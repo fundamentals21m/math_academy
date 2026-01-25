@@ -7,11 +7,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'A differential equation is an equation involving:',
     options: [
       'Only numbers',
-      'A function and its derivatives',
       'Only polynomials',
+      'A function and its derivatives',
       'Integrals only'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A DE relates an unknown function to its derivatives.',
   },
@@ -21,11 +21,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'The order of a differential equation is:',
     options: [
       'The number of terms',
-      'The highest derivative that appears',
+      'The number of solutions',
       'The degree of the polynomial',
-      'The number of solutions'
+      'The highest derivative that appears'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Order = highest derivative. E.g., $y\'\' + y = 0$ is second order.',
   },
@@ -35,11 +35,11 @@ export const section52Questions: QuizQuestion[] = [
     question: '$y\' = 2y$ is what type of equation?',
     options: [
       'Algebraic equation',
-      'First-order differential equation',
       'Second-order differential equation',
-      'Integral equation'
+      'Integral equation',
+      'First-order differential equation',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Highest derivative is $y\'$ (first derivative), so first-order.',
   },
@@ -62,10 +62,22 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The general solution to $y\' = 0$ is:',
     options: [
-      '$y = 0$',
-      '$y = x$',
       '$y = C$ (constant)',
-      '$y = e^x$'
+      '$y = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'If $y\' = 0$, then $y$ is constant.',
+  },
+      '$y = x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'If $y\' = 0$, then $y$ is constant.',
+  },
+      '$y = e^x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'If $y\' = 0$, then $y$ is constant.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -78,8 +90,8 @@ export const section52Questions: QuizQuestion[] = [
     options: [
       'Just a differential equation',
       'A DE together with initial condition(s)',
+      'Multiple differential equations',
       'Only boundary conditions',
-      'Multiple differential equations'
     ],
     correctIndex: 1,
     difficulty: 'easy',

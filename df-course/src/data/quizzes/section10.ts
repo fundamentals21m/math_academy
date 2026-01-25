@@ -6,12 +6,16 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A nonempty subset $H$ of a group $G$ is a subgroup if and only if:',
     options: [
+      'For all $a, b \\in H$, we have $ab^{-1} \\in H
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The one-step subgroup test: $H \\neq \\emptyset$ is a subgroup iff $ab^{-1} \\in H$ for all $a, b \\in H$.',
+  },
       '$H$ contains the identity',
-      'For all $a, b \\in H$, we have $ab^{-1} \\in H$',
+      '$H$ is finite',
       '$H$ is closed under the group operation',
-      '$H$ is finite'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The one-step subgroup test: $H \\neq \\emptyset$ is a subgroup iff $ab^{-1} \\in H$ for all $a, b \\in H$.',
   },
@@ -31,10 +35,18 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'Not necessarily a subgroup',
       'Always a subgroup',
-      'A subgroup only if $H \\subseteq K$ or $K \\subseteq H$',
-      'Equal to $\\{e\\}$'
-    ],
+      'A subgroup only if $H \\subseteq K$ or $K \\subseteq H
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The intersection of any collection of subgroups is always a subgroup.',
+  },
+      'Equal to $\\{e\\}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The intersection of any collection of subgroups is always a subgroup.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The intersection of any collection of subgroups is always a subgroup.',
   },
@@ -45,10 +57,18 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'Always',
       'Never',
-      '$H \\subseteq K$ or $K \\subseteq H$',
-      '$H \\cap K = \\{e\\}$'
+      '$H \\cap K = \\{e\\}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$H \\cup K$ is a subgroup iff one is contained in the other. Otherwise, take $h \\in H \\setminus K$ and $k \\in K \\setminus H$; then $hk$ is in neither.',
+  },
+      '$H \\subseteq K$ or $K \\subseteq H
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: '$H \\cup K$ is a subgroup iff one is contained in the other. Otherwise, take $h \\in H \\setminus K$ and $k \\in K \\setminus H$; then $hk$ is in neither.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: '$H \\cup K$ is a subgroup iff one is contained in the other. Otherwise, take $h \\in H \\setminus K$ and $k \\in K \\setminus H$; then $hk$ is in neither.',
   },
@@ -58,11 +78,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'If $H$ is a subgroup of $G$, then the identity element of $H$ is:',
     options: [
       'Possibly different from the identity of $G$',
-      'The same as the identity element of $G$',
       'Only the same if $H = G$',
+      'The same as the identity element of $G$',
       'Not well-defined'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'If $e_H$ is the identity of $H$, then $e_H \\cdot e_H = e_H$. In $G$, this means $e_H = e_G$.',
   },

@@ -7,11 +7,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'Karl Weierstrass is known as:',
     options: [
       'The Prince of Mathematicians',
-      'The Father of Modern Analysis',
       'The Master of Algebra',
-      'The King of Number Theory'
+      'The King of Number Theory',
+      'The Father of Modern Analysis',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Weierstrass established rigorous foundations for calculus and analysis.',
   },
@@ -21,11 +21,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'Weierstrass constructed a famous example of a function that is:',
     options: [
       'Differentiable everywhere',
-      'Continuous everywhere but differentiable nowhere',
+      'Periodic',
       'Discontinuous everywhere',
-      'Periodic'
+      'Continuous everywhere but differentiable nowhere'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The Weierstrass function is continuous everywhere but differentiable nowhere, a counterintuitive result.',
   },
@@ -34,12 +34,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Weierstrass approximation theorem states that continuous functions can be approximated by:',
     options: [
-      'Trigonometric functions',
       'Polynomials',
+      'Trigonometric functions',
       'Step functions',
       'Exponentials'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Any continuous function on a closed interval can be uniformly approximated by polynomials.',
   },
@@ -49,11 +49,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'Before becoming a mathematician, Weierstrass worked as:',
     options: [
       'An engineer',
-      'A schoolteacher',
       'A lawyer',
-      'A priest'
+      'A schoolteacher',
+      'A priest',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Weierstrass taught at a gymnasium (secondary school) for many years before university recognition.',
   },
@@ -65,7 +65,7 @@ export const section25Questions: QuizQuestion[] = [
       'Emmy Noether',
       'Sofia Kovalevskaya',
       'Ada Lovelace',
-      'Mary Somerville'
+      'Mary Somerville',
     ],
     correctIndex: 1,
     difficulty: 'easy',

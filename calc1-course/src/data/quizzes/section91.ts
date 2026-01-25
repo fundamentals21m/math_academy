@@ -7,11 +7,11 @@ export const section91Questions: QuizQuestion[] = [
     question: 'The dimension of a vector space is:',
     options: [
       'The number of vectors in the space',
-      'The number of vectors in any basis',
       'The largest coordinate',
-      'Always infinite'
+      'Always infinite',
+      'The number of vectors in any basis',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Dimension = number of vectors in a basis.',
   },
@@ -22,8 +22,8 @@ export const section91Questions: QuizQuestion[] = [
     options: [
       'Different numbers of vectors',
       'The same number of vectors',
+      'Orthogonal vectors',
       'At least one common vector',
-      'Orthogonal vectors'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -44,11 +44,11 @@ export const section91Questions: QuizQuestion[] = [
     question: 'In an $n$-dimensional space, any set of $n+1$ vectors is:',
     options: [
       'Linearly independent',
-      'Linearly dependent',
       'A basis',
-      'Orthogonal'
+      'Linearly dependent',
+      'Orthogonal',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'More than $n$ vectors in $n$-dimensional space must be dependent.',
   },
@@ -58,11 +58,11 @@ export const section91Questions: QuizQuestion[] = [
     question: 'A linearly independent set of $n$ vectors in $\\mathbb{R}^n$ is:',
     options: [
       'Not a basis',
-      'A basis',
       'Dependent',
-      'Empty'
+      'Empty',
+      'A basis',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$n$ independent vectors in $n$-dim space form a basis.',
   },
@@ -71,12 +71,12 @@ export const section91Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A spanning set can be reduced to a basis by:',
     options: [
-      'Adding more vectors',
       'Removing dependent vectors',
+      'Adding more vectors',
       'Scaling vectors',
-      'Orthogonalizing'
+      'Orthogonalizing',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Remove redundant (dependent) vectors to get a basis.',
   },

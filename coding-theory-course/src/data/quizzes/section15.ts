@@ -6,12 +6,28 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A code $C$ is called cyclic if for every codeword $(c_0, c_1, \\ldots, c_{n-1}) \\in C$, which of the following is also in $C$?',
     options: [
-      '$(c_1, c_0, c_2, \\ldots, c_{n-1})$',
-      '$(c_{n-1}, c_0, c_1, \\ldots, c_{n-2})$',
-      '$(c_0, c_0, c_1, \\ldots, c_{n-1})$',
-      '$(c_{n-1}, c_{n-2}, \\ldots, c_1, c_0)$'
-    ],
+      '$(c_1, c_0, c_2, \\ldots, c_{n-1})
     correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A cyclic code is closed under cyclic shifts. The cyclic shift of $(c_0, c_1, \\ldots, c_{n-1})$ is $(c_{n-1}, c_0, c_1, \\ldots, c_{n-2})$, where the last coordinate moves to the first position.',
+  },
+      '$(c_{n-1}, c_0, c_1, \\ldots, c_{n-2})
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A cyclic code is closed under cyclic shifts. The cyclic shift of $(c_0, c_1, \\ldots, c_{n-1})$ is $(c_{n-1}, c_0, c_1, \\ldots, c_{n-2})$, where the last coordinate moves to the first position.',
+  },
+      '$(c_0, c_0, c_1, \\ldots, c_{n-1})
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A cyclic code is closed under cyclic shifts. The cyclic shift of $(c_0, c_1, \\ldots, c_{n-1})$ is $(c_{n-1}, c_0, c_1, \\ldots, c_{n-2})$, where the last coordinate moves to the first position.',
+  },
+      '$(c_{n-1}, c_{n-2}, \\ldots, c_1, c_0)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A cyclic code is closed under cyclic shifts. The cyclic shift of $(c_0, c_1, \\ldots, c_{n-1})$ is $(c_{n-1}, c_0, c_1, \\ldots, c_{n-2})$, where the last coordinate moves to the first position.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A cyclic code is closed under cyclic shifts. The cyclic shift of $(c_0, c_1, \\ldots, c_{n-1})$ is $(c_{n-1}, c_0, c_1, \\ldots, c_{n-2})$, where the last coordinate moves to the first position.',
   },
@@ -20,12 +36,28 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the polynomial representation of cyclic codes, codewords are represented as polynomials in which quotient ring?',
     options: [
-      '$\\mathbb{F}_q[x]$',
-      '$\\mathbb{F}_q[x]/(x^n + 1)$',
-      '$\\mathbb{F}_q[x]/(x^n - 1)$',
-      '$\\mathbb{F}_q[x]/(x^{n-1} - 1)$'
+      '$\\mathbb{F}_q[x]/(x^n - 1)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Cyclic codes of length $n$ over $\\mathbb{F}_q$ correspond to ideals in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$. This ring structure captures the cyclic shift operation perfectly.',
+  },
+      '$\\mathbb{F}_q[x]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cyclic codes of length $n$ over $\\mathbb{F}_q$ correspond to ideals in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$. This ring structure captures the cyclic shift operation perfectly.',
+  },
+      '$\\mathbb{F}_q[x]/(x^n + 1)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cyclic codes of length $n$ over $\\mathbb{F}_q$ correspond to ideals in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$. This ring structure captures the cyclic shift operation perfectly.',
+  },
+      '$\\mathbb{F}_q[x]/(x^{n-1} - 1)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cyclic codes of length $n$ over $\\mathbb{F}_q$ correspond to ideals in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$. This ring structure captures the cyclic shift operation perfectly.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Cyclic codes of length $n$ over $\\mathbb{F}_q$ correspond to ideals in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$. This ring structure captures the cyclic shift operation perfectly.',
   },
@@ -57,12 +89,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $c(x)$ is a codeword polynomial in a cyclic code, what polynomial operation corresponds to a cyclic shift of the codeword?',
     options: [
-      'Multiplying by $x$ in $\\mathbb{F}_q[x]/(x^n - 1)$',
+      'Taking the derivative of $c(x)$',
       'Adding $x$ in $\\mathbb{F}_q[x]/(x^n - 1)$',
       'Dividing by $x$ in $\\mathbb{F}_q[x]/(x^n - 1)$',
-      'Taking the derivative of $c(x)$'
+      'Multiplying by $x$ in $\\mathbb{F}_q[x]/(x^n - 1)$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Multiplying by $x$ in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$ shifts all coefficients up by one position, with $x^n \\equiv 1$ wrapping the leading coefficient to the constant term.',
   },

@@ -8,8 +8,8 @@ export const section125Questions: QuizQuestion[] = [
     options: [
       'The result is always zero',
       'If A = mB, C = mD and we subtract E = nB, F = nD, the remainders are (m-n) times their bases',
+      'Only equal multiples can be subtracted',
       'Subtraction destroys the relationship',
-      'Only equal multiples can be subtracted'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,12 +20,12 @@ export const section125Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does V.6 extend V.5?',
     options: [
-      'V.6 is about addition',
       'V.5 handles one pair, V.6 handles two parallel sequences',
+      'V.6 is about addition',
       'They prove the same thing',
       'V.6 contradicts V.5'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'V.5 shows mB - mD = m(B-D). V.6 shows that when we subtract nB from mB and nD from mD, both remainders are (m-n) times their respective units.',
   },
@@ -35,11 +35,11 @@ export const section125Questions: QuizQuestion[] = [
     question: 'If A = 5B, E = 2B, then A - E equals:',
     options: [
       '7B',
-      '3B',
       '10B',
-      '2.5B'
+      '3B',
+      '2.5B',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A - E = 5B - 2B = (5-2)B = 3B.',
   },

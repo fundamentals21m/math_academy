@@ -6,12 +6,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The knapsack problem asks to find a subset of weights that:',
     options: [
-      'Minimizes total weight',
       'Sums to a target value',
+      'Minimizes total weight',
       'Maximizes value given a capacity',
-      'Has exactly $k$ elements'
+      'Has exactly $k$ elements',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The subset sum variant: given weights $w_i$ and target $S$, find subset summing to $S$.',
   },
@@ -23,7 +23,7 @@ export const section11Questions: QuizQuestion[] = [
       'Each term is prime',
       'Each term is greater than the sum of all previous terms',
       'Terms alternate between even and odd',
-      'Each term is a power of 2'
+      'Each term is a power of 2',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'The Merkle-Hellman knapsack cryptosystem was broken by:',
     options: [
       'Quantum computers',
+      'Differential cryptanalysis',
       'Lattice reduction (LLL algorithm)',
       'Brute force',
-      'Differential cryptanalysis'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Shamir and later LLL-based attacks broke Merkle-Hellman in polynomial time.',
   },

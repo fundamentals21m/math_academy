@@ -10,11 +10,11 @@ export const section50Questions: QuizQuestion[] = [
     question: 'What does it mean for a set A of natural numbers to be recursive?',
     options: [
       'A can be listed by some function',
+      'A contains all prime numbers',
       'There is an algorithm to decide membership in A',
       'A is infinite',
-      'A contains all prime numbers',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'A set is recursive (or decidable) if there is a recursive function f such that A = {x | f(x) = 0}. This means we can compute whether any given x is in A.',
@@ -41,10 +41,10 @@ export const section50Questions: QuizQuestion[] = [
     options: [
       'When A is finite',
       'When A is infinite',
-      'When both A and its complement are r.e.',
       'When A contains no primes',
+      'When both A and its complement are r.e.',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       "Kleene's proposition states that A is recursive if and only if both A and A^c (its complement) are recursively enumerable. This is a fundamental result connecting decidability and semi-decidability.",
@@ -54,12 +54,12 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the set of mathematical theorems recursively enumerable?',
     options: [
-      'Because theorems are short',
       'Because we can enumerate all proofs and output the last formula of each',
+      'Because theorems are short',
       'Because there are only finitely many theorems',
       'Because all formulas are theorems',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A theorem is the last formula of a valid proof. Since proofs are finite objects that can be systematically listed, a computer can enumerate all proofs and output the conclusion of each, thereby listing all theorems.',
@@ -84,12 +84,12 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Since the set of theorems is r.e. but not recursive, what follows from Kleene's proposition?",
     options: [
-      'The set of nontheorems is also r.e.',
       'The set of nontheorems is recursive',
-      'The set of nontheorems is not recursively enumerable',
+      'The set of nontheorems is also r.e.',
       'The set of nontheorems is empty',
+      'The set of nontheorems is not recursively enumerable',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       "By Kleene's proposition, a set is recursive iff both it and its complement are r.e. Since theorems are r.e. but not recursive, the complement (nontheorems) cannot be r.e. We can list all theorems, but we cannot list all nontheorems!",
@@ -100,11 +100,11 @@ export const section50Questions: QuizQuestion[] = [
     question: 'Why is the set of proofs recursive?',
     options: [
       'Because there are only finitely many proofs',
-      'Because every formula is a proof',
       'Because there is a finite procedure to check if a list of formulas is a valid proof',
-      'Because proofs cannot contain axioms',
+      'Because every formula is a proof',
+      'Because proofs cannot contain axioms'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'A proof is a finite list of formulas where each is either an axiom or follows from earlier formulas by inference rules. Checking these conditions is a finite mechanical procedure, making the set of proofs recursive (decidable).',
@@ -115,11 +115,11 @@ export const section50Questions: QuizQuestion[] = [
     question: 'What does the Incompleteness Theorem state?',
     options: [
       'Every formula can be proved',
-      'No formula can be proved',
       'There exist formulas p such that neither p nor ¬p are provable',
+      'No formula can be proved',
       'Mathematics is inconsistent',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Incompleteness Theorem states that there are mathematical formulas p such that neither p nor its negation ¬p can be proved. These undecidable statements exist in any sufficiently strong consistent system.',
@@ -129,12 +129,12 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who first proved the Incompleteness Theorem?',
     options: [
+      'Gödel',
       'Turing',
       'Church',
       'Hilbert',
-      'Gödel',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       "Kurt Gödel (1906–1978) first proved the Incompleteness Theorem. Church later used Gödel's result to prove Church's Theorem about the undecidability of theoremhood.",

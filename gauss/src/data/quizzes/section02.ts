@@ -10,12 +10,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Fermat's Little Theorem states that if $p$ is prime and $\\gcd(a, p) = 1$, then:",
     options: [
-      '$a^p \\equiv 1 \\pmod{p}$',
-      '$a^{p-1} \\equiv 1 \\pmod{p}$',
-      '$a^{p+1} \\equiv 1 \\pmod{p}$',
-      '$a^p \\equiv a \\pmod{p-1}$'
+      '$a^{p-1} \\equiv 1 \\pmod{p}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: "Fermat's Little Theorem: If $p$ is prime and $\\gcd(a, p) = 1$, then $a^{p-1} \\equiv 1 \\pmod{p}$.",
+  },
+      '$a^p \\equiv 1 \\pmod{p}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: "Fermat's Little Theorem: If $p$ is prime and $\\gcd(a, p) = 1$, then $a^{p-1} \\equiv 1 \\pmod{p}$.",
+  },
+      '$a^{p+1} \\equiv 1 \\pmod{p}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: "Fermat's Little Theorem: If $p$ is prime and $\\gcd(a, p) = 1$, then $a^{p-1} \\equiv 1 \\pmod{p}$.",
+  },
+      '$a^p \\equiv a \\pmod{p-1}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: "Fermat's Little Theorem: If $p$ is prime and $\\gcd(a, p) = 1$, then $a^{p-1} \\equiv 1 \\pmod{p}$.",
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: "Fermat's Little Theorem: If $p$ is prime and $\\gcd(a, p) = 1$, then $a^{p-1} \\equiv 1 \\pmod{p}$.",
   },
@@ -34,11 +50,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'The order of $a$ modulo $m$ is:',
     options: [
       'The smallest positive $k$ such that $a^k \\equiv 0 \\pmod{m}$',
-      'The smallest positive $k$ such that $a^k \\equiv 1 \\pmod{m}$',
+      'The number of divisors of $m$',
       'The value of $a \\pmod{m}$',
-      'The number of divisors of $m$'
+      'The smallest positive $k$ such that $a^k \\equiv 1 \\pmod{m}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The order of $a$ modulo $m$ is the smallest positive integer $k$ such that $a^k \\equiv 1 \\pmod{m}$.',
   },
@@ -56,12 +72,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A primitive root modulo a prime $p$ is an element $g$ with order:',
     options: [
-      '$p$',
-      '$p - 1$',
-      '$p + 1$',
-      '$2$'
+      '$p
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A primitive root modulo $p$ has order $p - 1$, meaning it generates all non-zero residues.',
+  },
+      '$p + 1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A primitive root modulo $p$ has order $p - 1$, meaning it generates all non-zero residues.',
+  },
+      '$p - 1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A primitive root modulo $p$ has order $p - 1$, meaning it generates all non-zero residues.',
+  },
+      '$2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A primitive root modulo $p$ has order $p - 1$, meaning it generates all non-zero residues.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A primitive root modulo $p$ has order $p - 1$, meaning it generates all non-zero residues.',
   },
@@ -79,12 +111,28 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Wilson's Theorem states that for a prime $p$:",
     options: [
-      '$(p-1)! \\equiv 0 \\pmod{p}$',
-      '$(p-1)! \\equiv 1 \\pmod{p}$',
-      '$(p-1)! \\equiv -1 \\pmod{p}$',
-      '$(p-1)! \\equiv p-1 \\pmod{p}$'
-    ],
+      '$(p-1)! \\equiv 0 \\pmod{p}
     correctIndex: 2,
+    difficulty: 'medium',
+    explanation: "Wilson's Theorem: $(p-1)! \\equiv -1 \\pmod{p}$ for any prime $p$.",
+  },
+      '$(p-1)! \\equiv 1 \\pmod{p}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: "Wilson's Theorem: $(p-1)! \\equiv -1 \\pmod{p}$ for any prime $p$.",
+  },
+      '$(p-1)! \\equiv -1 \\pmod{p}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: "Wilson's Theorem: $(p-1)! \\equiv -1 \\pmod{p}$ for any prime $p$.",
+  },
+      '$(p-1)! \\equiv p-1 \\pmod{p}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: "Wilson's Theorem: $(p-1)! \\equiv -1 \\pmod{p}$ for any prime $p$.",
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: "Wilson's Theorem: $(p-1)! \\equiv -1 \\pmod{p}$ for any prime $p$.",
   },
@@ -112,11 +160,19 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Which of the following moduli have primitive roots?',
     options: [
       'Only prime moduli',
-      '$1, 2, 4, p^k, 2p^k$ for odd primes $p$',
-      'All positive integers',
-      'Only powers of $2$'
-    ],
+      '$1, 2, 4, p^k, 2p^k$ for odd primes $p
     correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Primitive roots exist for $m = 1, 2, 4, p^k$, and $2p^k$ where $p$ is an odd prime.',
+  },
+      'All positive integers',
+      'Only powers of $2
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Primitive roots exist for $m = 1, 2, 4, p^k$, and $2p^k$ where $p$ is an odd prime.',
+  },
+    ],
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Primitive roots exist for $m = 1, 2, 4, p^k$, and $2p^k$ where $p$ is an odd prime.',
   },

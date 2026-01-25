@@ -10,11 +10,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'How did the Pythagoreans discover the power of numbers?',
     options: [
       'Through astronomy',
-      'Through studying plucked strings and music',
       'Through calculus',
       'Through measuring land',
+      'Through studying plucked strings and music',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The Pythagoreans discovered that musical harmony corresponds to simple integer ratios in string lengths, leading them to believe numbers explain all things.',
@@ -23,8 +23,13 @@ export const section18Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'What ratio corresponds to the musical octave?',
-    options: ['3:2', '4:3', '2:1', '5:4'],
-    correctIndex: 2,
+    options: [
+      '3:2',
+      '2:1',
+      '4:3',
+      '5:4',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The octave corresponds to a string length ratio of 2:1. The perfect fifth is 3:2 and the perfect fourth is 4:3.',
@@ -35,11 +40,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What was the "harmony of the spheres"?',
     options: [
       'A musical instrument',
-      'An attempt to explain planetary positions using numbers',
       'A proof of the Pythagorean theorem',
+      'An attempt to explain planetary positions using numbers',
       'A type of geometric shape',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The harmony of the spheres was an idea that planetary positions could be explained by numerical ratios, similar to musical harmonies.',
@@ -49,8 +54,13 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question:
       'Who provided a better explanation for planetary motion than the harmony of the spheres?',
-    options: ['Kepler', 'Aristotle', 'Newton', 'Pythagoras'],
-    correctIndex: 2,
+    options: [
+      'Kepler',
+      'Aristotle',
+      'Pythagoras',
+      'Newton',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       "Newton's theory of gravitation explained planetary motion through inverse-square forces, replacing the Pythagorean musical explanation.",
@@ -100,12 +110,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How was the Pythagorean dream ultimately fulfilled?',
     options: [
-      'By abandoning mathematics',
-      'By restricting to rational numbers only',
       'By expanding numbers to include all real numbers',
-      'By rejecting the connection between numbers and nature',
+      'By restricting to rational numbers only',
+      'By abandoning mathematics',
+      'By rejecting the connection between numbers and nature'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The dream of understanding nature through numbers succeeded by expanding the number concept from rationals to all real numbers, allowing irrational lengths to be represented.',

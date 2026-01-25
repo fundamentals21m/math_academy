@@ -7,12 +7,12 @@ export const section35Questions: QuizQuestion[] = [
     question: 'What is the brachistochrone problem?',
     difficulty: 'easy',
     options: [
-      'Finding the shortest distance between two points',
       'Finding the curve of fastest descent under gravity',
+      'Finding the shortest distance between two points',
       'Finding the area under a curve',
-      'Finding the tangent to a curve',
+      'Finding the tangent to a curve'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'The brachistochrone ("shortest time" in Greek) asks: what curve allows a bead sliding under gravity to travel between two points in the least time? Surprisingly, it\'s not a straight line!',
   },
@@ -23,11 +23,11 @@ export const section35Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'A straight line',
-      'A parabola',
       'A cycloid',
-      'A circle',
+      'A parabola',
+      'A circle'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'The brachistochrone is a cycloid—the curve traced by a point on the rim of a rolling wheel. Johann Bernoulli posed this problem in 1696, and it was solved by Newton, Leibniz, L\'Hôpital, and both Bernoulli brothers.',
   },
@@ -38,11 +38,11 @@ export const section35Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'It has constant curvature',
-      'It is the tautochrone (isochronous curve)',
       'It has no inflection points',
-      'It is algebraic',
+      'It is the tautochrone (isochronous curve)',
+      'It is algebraic'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'The cycloid is also the tautochrone: a bead sliding on an inverted cycloid reaches the bottom in the same time regardless of starting position. Huygens discovered this in 1673 and used it to design pendulum clocks.',
   },
@@ -54,10 +54,10 @@ export const section35Questions: QuizQuestion[] = [
     options: [
       'A parabola',
       'A circular arc',
-      'A catenary ($y = a\\cosh(x/a)$)',
       'A cycloid',
+      'A catenary ($y = a\\cosh(x/a)$)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'A flexible chain hanging under its own weight forms a catenary, $y = a\\cosh(x/a)$. Galileo thought it was a parabola, but Leibniz, Huygens, and Johann Bernoulli found the true answer in 1691.',
   },
@@ -68,12 +68,12 @@ export const section35Questions: QuizQuestion[] = [
       'What did Newton prove about planetary orbits using calculus?',
     difficulty: 'hard',
     options: [
-      'Planets move in circles',
       'An inverse-square force law implies elliptical orbits',
+      'Planets move in circles',
       'Gravity only affects nearby objects',
-      'The speed of planets is constant',
+      'The speed of planets is constant'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'Newton showed that if gravity follows an inverse-square law ($F \\propto 1/r^2$), then orbits must be conic sections (ellipses for bound orbits). This mathematically derived what Kepler had discovered empirically.',
   },
@@ -85,11 +85,11 @@ export const section35Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'Leibniz',
-      'Johann Bernoulli',
       'Newton',
-      'Euler',
+      'Johann Bernoulli',
+      'Euler'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'Newton received Bernoulli\'s challenge at 4 PM after a tiring day at the Royal Mint. He solved it before bed and sent his solution anonymously. Bernoulli recognized the author: "I recognize the lion by his claw."',
   },

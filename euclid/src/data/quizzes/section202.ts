@@ -7,11 +7,11 @@ export const section202Questions: QuizQuestion[] = [
     question: 'What does Proposition VII.23 state about relatively prime numbers and measurement?',
     options: [
       'If a is relatively prime to b, then a measures any multiple of b',
-      'If a is relatively prime to b, and a measures b times c, then a measures c',
       'Relatively prime numbers never measure each other',
+      'If a is relatively prime to b, and a measures b times c, then a measures c',
       'If a measures b, they cannot be relatively prime'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'VII.23: If gcd(a,b) = 1 and a|bc, then a|c. When a is coprime to b, any factor of a that divides bc must come from c.',
   },
@@ -21,11 +21,11 @@ export const section202Questions: QuizQuestion[] = [
     question: 'If gcd(7,6) = 1 and 7 divides 6 times 14 = 84, what can we conclude?',
     options: [
       '7 divides 6',
-      '7 divides 14',
+      '7 and 14 are relatively prime',
       '6 divides 14',
-      '7 and 14 are relatively prime'
+      '7 divides 14'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'By VII.23, since gcd(7,6) = 1 and 7|84 = 6 times 14, we conclude 7|14. Indeed, 14 = 7 times 2.',
   },
@@ -37,7 +37,7 @@ export const section202Questions: QuizQuestion[] = [
       'The infinitude of primes',
       'The unique factorization theorem (Fundamental Theorem of Arithmetic)',
       'The Euclidean algorithm terminates',
-      'Every number has a square root'
+      'Every number has a square root',
     ],
     correctIndex: 1,
     difficulty: 'hard',

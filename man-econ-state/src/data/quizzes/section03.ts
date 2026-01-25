@@ -7,11 +7,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'How are prices determined in a free market?',
     options: [
       'By government decree',
-      'By the interaction of supply and demand',
       'By the cost of production alone',
-      'By agreement among producers'
+      'By agreement among producers',
+      'By the interaction of supply and demand',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Market prices emerge from the interaction of buyers\' demand schedules and sellers\' supply schedules.',
   },
@@ -20,12 +20,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is consumer sovereignty?',
     options: [
-      'Consumers control the government',
       'Consumer preferences ultimately direct production decisions',
+      'Consumers control the government',
+      'Consumers vote on what should be produced',
       'Consumers can buy whatever they want',
-      'Consumers vote on what should be produced'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Consumer sovereignty means producers must satisfy consumer wants to earn profits. Consumer spending directs what gets produced.',
   },
@@ -35,11 +35,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'What role do prices serve in the economy?',
     options: [
       'They make goods more expensive',
-      'They coordinate economic activity by conveying information about scarcity',
       'They benefit sellers at the expense of buyers',
-      'They are arbitrary numbers'
+      'They coordinate economic activity by conveying information about scarcity',
+      'They are arbitrary numbers',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Prices communicate information about relative scarcity and value, allowing millions of people to coordinate their plans.',
   },
@@ -49,11 +49,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'According to Rothbard, what causes a good\'s market price to rise?',
     options: [
       'Producer greed',
-      'Increased demand or decreased supply',
       'Government intervention only',
-      'Inflation only'
+      'Inflation only',
+      'Increased demand or decreased supply',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Prices rise when demand increases (more buyers at each price) or supply decreases (fewer units available).',
   },
@@ -78,8 +78,8 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'They lack computers',
       'They lack the dispersed knowledge that only market prices can aggregate',
+      'Markets are illegal under central planning',
       'They are not smart enough',
-      'Markets are illegal under central planning'
     ],
     correctIndex: 1,
     difficulty: 'hard',

@@ -9,7 +9,7 @@ export const section19Questions: QuizQuestion[] = [
       'Writing equations symbolically',
       'Solving algebraic equations geometrically using curve intersections',
       'Deriving equations from axioms',
-      'Programming equations into a computer'
+      'Programming equations into a computer',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -21,11 +21,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'How can a quadratic equation $x^2 + bx + c = 0$ be solved geometrically?',
     options: [
       'Using only a straight line',
-      'Finding where a line intersects a parabola',
       'Using three circles',
-      'It cannot be solved geometrically'
+      'It cannot be solved geometrically',
+      'Finding where a line intersects a parabola',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A quadratic can be solved by intersecting the parabola $y = x^2$ with the line $y = -bx - c$. The $x$-coordinates of intersection are the roots.',
   },
@@ -34,12 +34,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the advantage of geometric construction of roots?',
     options: [
-      'It gives exact decimal answers',
       'It provides visual insight and approximate values',
+      'It gives exact decimal answers',
       'It works only for linear equations',
-      'It requires no curves'
+      'It requires no curves',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Geometric constructions provide visual understanding of how many real roots exist and their approximate values by showing where curves intersect.',
   },
@@ -50,8 +50,8 @@ export const section19Questions: QuizQuestion[] = [
     options: [
       'Only straight lines',
       'A conic and a line',
+      'Only parabolas',
       'Two circles',
-      'Only parabolas'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -63,11 +63,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'Why is the geometric method of solving equations historically significant?',
     options: [
       'It replaced algebra completely',
-      'It connected algebra with geometry before modern notation existed',
       'It was faster than numerical methods',
-      'It only worked for Greeks'
+      'It connected algebra with geometry before modern notation existed',
+      'It only worked for Greeks',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Before modern symbolic algebra, geometric methods provided a way to solve equations. This connection between algebra and geometry influenced mathematics for centuries.',
   },

@@ -20,12 +20,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Fermat\'s method is most efficient when:',
     options: [
-      'Factors are small',
       'Factors are close together (near $\\sqrt{n}$)',
+      'Factors are small',
       'One factor is 2',
-      'Factors differ greatly in size'
+      'Factors differ greatly in size',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'When $p \\approx q \\approx \\sqrt{n}$, the search for $a = (p+q)/2$ starts near $\\sqrt{n}$.',
   },
@@ -45,10 +45,10 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       '$a$ and $b$ both odd',
       '$a$ and $b$ both even',
-      '$a > b$',
-      '$a$ and $b$ coprime'
+      '$a$ and $b$ coprime',
+      '$a > b$'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'For non-trivial factorization, we need $a > b > 0$ so that $a - b > 0$ and $a + b > a - b$.',
   },

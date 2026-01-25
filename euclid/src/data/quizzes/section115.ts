@@ -22,10 +22,10 @@ export const section115Questions: QuizQuestion[] = [
     options: [
       'At a vertex',
       'On a side',
+      'Outside the polygon',
       'At the center of the polygon (coinciding with the circumcenter)',
-      'Outside the polygon'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'In any regular polygon, the incircle and circumcircle share the same center—the center of symmetry of the polygon.',
   },
@@ -35,11 +35,11 @@ export const section115Questions: QuizQuestion[] = [
     question: 'What makes a point the incenter of a polygon?',
     options: [
       'It is equidistant from all vertices',
+      'It is on the circumcircle',
       'It is equidistant from all sides',
       'It is at the centroid',
-      'It is on the circumcircle'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The incenter is the unique point equidistant from all sides of the polygon. This allows an inscribed circle tangent to every side.',
   },

@@ -7,9 +7,17 @@ export const section34Questions: QuizQuestion[] = [
     question: 'The second derivative $f\'\'(x)$ tells us about:',
     options: [
       'Where $f$ is zero',
-      'Concavity of $f$',
       'The $y$-intercept',
-      'The domain of $f$'
+      'Concavity of $f
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The second derivative determines concavity (curving up or down).',
+  },
+      'The domain of $f
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The second derivative determines concavity (curving up or down).',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -23,7 +31,7 @@ export const section34Questions: QuizQuestion[] = [
       'Concave down',
       'Concave up',
       'Linear',
-      'Decreasing'
+      'Decreasing',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +42,20 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An inflection point occurs where:',
     options: [
-      '$f\'(x) = 0$',
-      '$f(x) = 0$',
       'Concavity changes',
-      '$f$ has a maximum'
+      '$f\\'(x) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Inflection points are where the function changes from concave up to concave down or vice versa.',
+  },
+      '$f(x) = 0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Inflection points are where the function changes from concave up to concave down or vice versa.',
+  },
+      '$f$ has a maximum',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Inflection points are where the function changes from concave up to concave down or vice versa.',
   },
@@ -48,12 +64,24 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Second Derivative Test: if $f\'(c) = 0$ and $f\'\'(c) > 0$, then $f$ has:',
     options: [
-      'A local maximum at $c$',
-      'A local minimum at $c$',
-      'An inflection point at $c$',
-      'No conclusion'
+      'A local maximum at $c
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Zero first derivative and positive second derivative means local minimum.',
+  },
+      'An inflection point at $c
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Zero first derivative and positive second derivative means local minimum.',
+  },
+      'No conclusion',
+      'A local minimum at $c
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Zero first derivative and positive second derivative means local minimum.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Zero first derivative and positive second derivative means local minimum.',
   },
@@ -71,10 +99,14 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When sketching a curve, we analyze:',
     options: [
-      'Only the $y$-intercept',
       'Intercepts, critical points, inflection points, asymptotes, and end behavior',
-      'Only where $f = 0$',
-      'Only the maximum'
+      'Only the $y$-intercept',
+      'Only where $f = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Curve sketching combines information from $f$, $f\'$, and $f\'\'$.',
+  },
+      'Only the maximum',
     ],
     correctIndex: 1,
     difficulty: 'easy',

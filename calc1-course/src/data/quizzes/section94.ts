@@ -6,12 +6,20 @@ export const section94Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The best approximation to $\\mathbf{v}$ in a subspace $W$ is:',
     options: [
-      'Any vector in $W$',
-      'The projection of $\\mathbf{v}$ onto $W$',
-      '$\\mathbf{v}$ itself',
-      'The zero vector'
-    ],
+      'Any vector in $W
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Orthogonal projection minimizes distance.',
+  },
+      'The projection of $\\mathbf{v}$ onto $W
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Orthogonal projection minimizes distance.',
+  },
+      '$\\mathbf{v}$ itself',
+      'The zero vector',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Orthogonal projection minimizes distance.',
   },
@@ -20,12 +28,24 @@ export const section94Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The error $\\mathbf{v} - \\text{proj}_W(\\mathbf{v})$ is:',
     options: [
-      'In $W$',
-      'Orthogonal to $W$',
-      'Parallel to $\\mathbf{v}$',
-      'Zero'
+      'Orthogonal to $W
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The error vector is perpendicular to the subspace.',
+  },
+      'In $W
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The error vector is perpendicular to the subspace.',
+  },
+      'Zero',
+      'Parallel to $\\mathbf{v}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The error vector is perpendicular to the subspace.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The error vector is perpendicular to the subspace.',
   },
@@ -35,11 +55,15 @@ export const section94Questions: QuizQuestion[] = [
     question: 'Least squares finds the best approximate solution to:',
     options: [
       'Any equation',
-      'Overdetermined systems $A\\mathbf{x} = \\mathbf{b}$',
-      'Underdetermined systems only',
-      'Homogeneous systems'
-    ],
+      'Overdetermined systems $A\\mathbf{x} = \\mathbf{b}
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Least squares: minimize $\\|A\\mathbf{x} - \\mathbf{b}\\|$ when exact solution doesn\'t exist.',
+  },
+      'Underdetermined systems only',
+      'Homogeneous systems',
+    ],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Least squares: minimize $\\|A\\mathbf{x} - \\mathbf{b}\\|$ when exact solution doesn\'t exist.',
   },
@@ -48,10 +72,26 @@ export const section94Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The normal equation for least squares is:',
     options: [
-      '$A\\mathbf{x} = \\mathbf{b}$',
-      '$A^T A \\mathbf{x} = A^T \\mathbf{b}$',
-      '$A^{-1}\\mathbf{b} = \\mathbf{x}$',
-      '$\\mathbf{x} = \\mathbf{b}$'
+      '$A\\mathbf{x} = \\mathbf{b}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Normal equation: $A^T A \\hat{\\mathbf{x}} = A^T \\mathbf{b}$.',
+  },
+      '$A^{-1}\\mathbf{b} = \\mathbf{x}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Normal equation: $A^T A \\hat{\\mathbf{x}} = A^T \\mathbf{b}$.',
+  },
+      '$A^T A \\mathbf{x} = A^T \\mathbf{b}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Normal equation: $A^T A \\hat{\\mathbf{x}} = A^T \\mathbf{b}$.',
+  },
+      '$\\mathbf{x} = \\mathbf{b}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Normal equation: $A^T A \\hat{\\mathbf{x}} = A^T \\mathbf{b}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -63,11 +103,11 @@ export const section94Questions: QuizQuestion[] = [
     question: 'In linear regression, we find the line $y = mx + c$ that minimizes:',
     options: [
       'The maximum error',
-      'The sum of squared vertical distances',
       'The number of points off the line',
-      'The horizontal distances'
+      'The horizontal distances',
+      'The sum of squared vertical distances',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Least squares minimizes sum of squared residuals.',
   },
@@ -76,12 +116,28 @@ export const section94Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $W$ is spanned by orthonormal $\\{\\mathbf{u}_1, ..., \\mathbf{u}_k\\}$, then $\\text{proj}_W(\\mathbf{v}) = ?$',
     options: [
-      '$\\sum_{i=1}^k \\mathbf{u}_i$',
-      '$\\sum_{i=1}^k \\langle \\mathbf{v}, \\mathbf{u}_i \\rangle \\mathbf{u}_i$',
-      '$\\langle \\mathbf{v}, \\mathbf{u}_1 \\rangle$',
-      '$\\mathbf{v}$'
+      '$\\sum_{i=1}^k \\mathbf{u}_i
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Projection onto orthonormal set: sum of projections onto each basis vector.',
+  },
+      '$\\mathbf{v}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Projection onto orthonormal set: sum of projections onto each basis vector.',
+  },
+      '$\\sum_{i=1}^k \\langle \\mathbf{v}, \\mathbf{u}_i \\rangle \\mathbf{u}_i
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Projection onto orthonormal set: sum of projections onto each basis vector.',
+  },
+      '$\\langle \\mathbf{v}, \\mathbf{u}_1 \\rangle
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Projection onto orthonormal set: sum of projections onto each basis vector.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Projection onto orthonormal set: sum of projections onto each basis vector.',
   },

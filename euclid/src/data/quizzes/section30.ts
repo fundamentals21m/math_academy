@@ -8,8 +8,8 @@ export const section30Questions: QuizQuestion[] = [
     options: [
       'Parallel lines are unique',
       'Lines parallel to the same line are parallel to each other',
+      'Parallel lines can be constructed',
       'All parallel lines are equidistant',
-      'Parallel lines can be constructed'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which proposition does I.30 use?',
     options: [
-      'I.27',
       'I.28',
+      'I.27',
+      'I.31',
       'I.29',
-      'I.31'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'I.30 uses I.29 to show that alternate angles with the common parallel are equal, hence the two lines are parallel.',
   },

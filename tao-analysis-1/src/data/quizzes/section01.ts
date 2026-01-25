@@ -1,0 +1,91 @@
+import type { QuizQuestion } from './types';
+
+export const section01Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Consider the "proof" that $1 = 2$: Let $a = b$. Then $a^2 = ab$, so $a^2 - b^2 = ab - b^2$, giving $(a+b)(a-b) = b(a-b)$, thus $a + b = b$, and since $a = b$, we get $2b = b$, so $2 = 1$. What is the error?',
+    options: [
+      'Division by $(a - b) = 0$ is invalid',
+      'The algebra is incorrect',
+      'The initial assumption $a = b$ is wrong',
+      'You cannot factor $a^2 - b^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Since $a = b$, we have $a - b = 0$. Dividing both sides by $(a - b)$ is division by zero, which is undefined. This is why rigor in proofs is essential.',
+  },
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Since $a = b$, we have $a - b = 0$. Dividing both sides by $(a - b)$ is division by zero, which is undefined. This is why rigor in proofs is essential.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The sum $1 - 1 + 1 - 1 + 1 - 1 + \\cdots$ can be grouped as $(1-1) + (1-1) + \\cdots = 0$ or as $1 + (-1+1) + (-1+1) + \\cdots = 1$. What does this demonstrate?',
+    options: [
+      'That $0 = 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'This demonstrates that manipulating infinite series (like regrouping terms) can lead to contradictions if not done carefully. This is why we need rigorous definitions of convergence.',
+  },
+      'That rearrangement and grouping of infinite series requires careful justification',
+      'That infinite series always converge',
+      'That parentheses do not matter in mathematics',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'This demonstrates that manipulating infinite series (like regrouping terms) can lead to contradictions if not done carefully. This is why we need rigorous definitions of convergence.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Which of the following is a valid reason for studying counterexamples in analysis?',
+    options: [
+      'They show that mathematics is inconsistent',
+      'They are only useful for confusing students',
+      'They help identify the precise conditions needed for theorems to hold',
+      'They prove that calculus is fundamentally flawed',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Counterexamples help mathematicians understand exactly when theorems apply and when they fail, leading to more precise and correct statements of results.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The function $f(x) = \\begin{cases} 0 & \\text{if } x \\text{ is irrational} \\\\ 1/q & \\text{if } x = p/q \\text{ in lowest terms} \\end{cases}$ (Thomae\'s function) is continuous at all irrational points but discontinuous at all rational points. This example shows that:',
+    options: [
+      'Intuition about continuity from smooth curves can be misleading',
+      'Continuity is impossible to define precisely',
+      'All functions are either continuous everywhere or discontinuous everywhere',
+      'Rational and irrational numbers are the same'
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Thomae\'s function shows that continuity can behave in surprising ways. Functions need not be "all or nothing" regarding continuity, highlighting why precise definitions matter.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Why do mathematicians insist on proving "obvious" statements?',
+    options: [
+      'To fill pages in textbooks',
+      'Because obvious statements are always wrong',
+      'It is merely a tradition with no practical purpose',
+      'Because what seems obvious is sometimes false, and proofs reveal hidden assumptions',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Many "obvious" statements in mathematics have turned out to be false or require additional hypotheses. Proofs ensure we do not build on faulty foundations.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'The "proof" that all horses are the same color uses induction incorrectly. For the base case $n = 1$, how many horses are in the set?',
+    correctAnswer: 1,
+    numericRange: { min: 0, max: 10, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'The base case considers a set with $n = 1$ horse. The flaw in the famous paradox occurs in the inductive step when going from $n = 1$ to $n = 2$.',
+  },
+];

@@ -6,12 +6,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a network flow, the value of a flow is:',
     options: [
-      'The sum of all edge capacities',
       'The net flow out of the source',
+      'The sum of all edge capacities',
+      'The maximum edge capacity',
       'The number of edges with positive flow',
-      'The maximum edge capacity'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Flow value = total flow leaving source = total flow entering sink.',
   },
@@ -21,11 +21,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'The Max-Flow Min-Cut Theorem states:',
     options: [
       'Maximum flow equals minimum number of edges',
-      'Maximum flow value equals minimum cut capacity',
       'Every flow can be decomposed into paths',
-      'Flows are always integral'
+      'Maximum flow value equals minimum cut capacity',
+      'Flows are always integral',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The maximum flow value equals the minimum capacity of an $s$-$t$ cut.',
   },
@@ -34,12 +34,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Ford-Fulkerson finds augmenting paths in:',
     options: [
-      'The original graph',
       'The residual graph',
+      'The original graph',
       'The line graph',
-      'A spanning tree'
+      'A spanning tree',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Ford-Fulkerson repeatedly finds augmenting paths in the residual graph (forward and backward edges).',
   },
@@ -49,11 +49,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'If all capacities are integers, Ford-Fulkerson guarantees:',
     options: [
       'Polynomial time always',
-      'An integral maximum flow',
       'A unique maximum flow',
-      'No augmenting paths exist'
+      'No augmenting paths exist',
+      'An integral maximum flow',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'With integer capacities, Ford-Fulkerson produces an integral max flow (integrality theorem).',
   },
@@ -63,11 +63,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'Edmonds-Karp is Ford-Fulkerson with:',
     options: [
       'Random path selection',
+      'Minimum capacity paths',
       'BFS to find shortest augmenting paths',
       'DFS to find longest augmenting paths',
-      'Minimum capacity paths'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Edmonds-Karp uses BFS for shortest augmenting paths, giving $O(VE^2)$ complexity.',
   },
@@ -79,7 +79,7 @@ export const section13Questions: QuizQuestion[] = [
       'Induction on vertices',
       'Max-flow min-cut theorem',
       'The four-color theorem',
-      'Euler\'s formula'
+      'Euler\\'s formula',
     ],
     correctIndex: 1,
     difficulty: 'hard',

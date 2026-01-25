@@ -7,12 +7,12 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Elliptic integrals originally arose from which problem?',
     options: [
-      'Finding the arc length of an ellipse',
-      'Solving quadratic equations',
       'Computing the area of a circle',
-      'Finding prime numbers',
+      'Solving quadratic equations',
+      'Finding the arc length of an ellipse',
+      'Finding prime numbers'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Elliptic integrals got their name from the problem of computing the arc length of an ellipse. This integral cannot be expressed using elementary functions like polynomials, exponentials, or trigonometric functions.',
@@ -22,12 +22,12 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Legendre classified all elliptic integrals into how many standard forms?',
     options: [
-      'Three (first, second, and third kind)',
+      'Infinitely many forms',
       'Two (first and second kind)',
       'One universal form',
-      'Infinitely many forms',
+      'Three (first, second, and third kind)'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Legendre showed that every elliptic integral can be reduced to a combination of three standard types: the first kind (involving $1/\\sqrt{1-k^2\\sin^2\\theta}$), the second kind (involving $\\sqrt{1-k^2\\sin^2\\theta}$), and the third kind (with an additional parameter).',
@@ -53,12 +53,12 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The addition theorem for elliptic integrals is analogous to:',
     options: [
-      'Trigonometric addition formulas like $\\sin(a+b)$',
       'The product rule for derivatives',
+      'Trigonometric addition formulas like $\\sin(a+b)$',
       'The quadratic formula',
-      'Euler\'s formula $e^{i\\theta}$',
+      'Euler\'s formula $e^{i\\theta}$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Euler discovered that elliptic integrals satisfy addition theorems: if $u = F(\\phi_1, k)$ and $v = F(\\phi_2, k)$, then $u + v = F(\\phi_3, k)$ for some $\\phi_3$ given by a formula. This parallels how $\\arcsin(a) + \\arcsin(b) = \\arcsin(c)$ via the sine addition formula.',
@@ -69,12 +69,12 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The revolutionary insight of Abel and Jacobi was to:',
     options: [
-      'Invert elliptic integrals to create elliptic functions',
-      'Prove elliptic integrals are transcendental',
       'Show elliptic integrals equal $\\pi$',
-      'Reduce elliptic integrals to logarithms',
+      'Prove elliptic integrals are transcendental',
+      'Invert elliptic integrals to create elliptic functions',
+      'Reduce elliptic integrals to logarithms'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Abel and Jacobi realized that instead of studying elliptic integrals directly, one should invert them—just as sine is the inverse of arcsine. The resulting elliptic functions have beautiful properties (like double periodicity) that the integrals lack.',
@@ -84,12 +84,12 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why can\'t the arc length of an ellipse be expressed with elementary functions?',
     options: [
-      'The integral involves $\\sqrt{1-k^2\\sin^2\\theta}$ which has no elementary antiderivative',
+      'Archimedes proved it impossible',
       'Ellipses are too complicated geometrically',
       'The formula requires imaginary numbers',
-      'Archimedes proved it impossible',
+      'The integral involves $\\sqrt{1-k^2\\sin^2\\theta}$ which has no elementary antiderivative'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The arc length integral for an ellipse involves $\\sqrt{1-k^2\\sin^2\\theta}$, and this integrand has no antiderivative in terms of elementary functions (polynomials, exponentials, logarithms, trigonometric functions, and their compositions). This was rigorously proved using differential Galois theory.',

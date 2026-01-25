@@ -8,10 +8,14 @@ export const section80Questions: QuizQuestion[] = [
     options: [
       'A point and a direction vector',
       'A point and a normal vector',
-      'Two points only',
-      'A single equation $x = c$'
-    ],
+      'A single equation $x = c
     correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A plane is determined by a point and a normal (perpendicular) vector.',
+  },
+      'Two points only',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A plane is determined by a point and a normal (perpendicular) vector.',
   },
@@ -23,7 +27,7 @@ export const section80Questions: QuizQuestion[] = [
       'A line',
       'A plane',
       'A point',
-      'A sphere'
+      'A sphere',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,10 +38,26 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The normal vector to the plane $2x + 3y - z = 5$ is:',
     options: [
-      '$(2, 3, 5)$',
-      '$(2, 3, -1)$',
-      '$(5, 0, 0)$',
-      '$(1, 1, 1)$'
+      '$(2, 3, 5)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Normal vector = $(a, b, c)$ from $ax + by + cz = d$.',
+  },
+      '$(5, 0, 0)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Normal vector = $(a, b, c)$ from $ax + by + cz = d$.',
+  },
+      '$(1, 1, 1)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Normal vector = $(a, b, c)$ from $ax + by + cz = d$.',
+  },
+      '$(2, 3, -1)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Normal vector = $(a, b, c)$ from $ax + by + cz = d$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -48,12 +68,12 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two planes are parallel if:',
     options: [
-      'They intersect in a line',
       'Their normal vectors are parallel',
+      'They intersect in a line',
       'They pass through the origin',
-      'Their equations have the same constant'
+      'Their equations have the same constant',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Parallel planes have parallel (proportional) normal vectors.',
   },
@@ -62,12 +82,28 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The distance from point $\\mathbf{P}$ to plane $ax + by + cz = d$ is:',
     options: [
-      '$|ax_0 + by_0 + cz_0 - d|$',
-      '$\\frac{|ax_0 + by_0 + cz_0 - d|}{\\sqrt{a^2 + b^2 + c^2}}$',
-      '$\\sqrt{a^2 + b^2 + c^2}$',
-      '$d$'
+      '$|ax_0 + by_0 + cz_0 - d|
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Distance = $\\frac{|\\mathbf{n} \\cdot \\mathbf{P} - d|}{\\|\\mathbf{n}\\|}$.',
+  },
+      '$d
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Distance = $\\frac{|\\mathbf{n} \\cdot \\mathbf{P} - d|}{\\|\\mathbf{n}\\|}$.',
+  },
+      '$\\frac{|ax_0 + by_0 + cz_0 - d|}{\\sqrt{a^2 + b^2 + c^2}}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Distance = $\\frac{|\\mathbf{n} \\cdot \\mathbf{P} - d|}{\\|\\mathbf{n}\\|}$.',
+  },
+      '$\\sqrt{a^2 + b^2 + c^2}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Distance = $\\frac{|\\mathbf{n} \\cdot \\mathbf{P} - d|}{\\|\\mathbf{n}\\|}$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Distance = $\\frac{|\\mathbf{n} \\cdot \\mathbf{P} - d|}{\\|\\mathbf{n}\\|}$.',
   },
@@ -76,12 +112,28 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A plane through origin has equation:',
     options: [
-      '$ax + by + cz = 1$',
-      '$ax + by + cz = 0$',
-      '$x = y = z$',
-      '$a + b + c = 0$'
+      '$ax + by + cz = 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Through origin: $d = 0$.',
+  },
+      '$x = y = z
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Through origin: $d = 0$.',
+  },
+      '$a + b + c = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Through origin: $d = 0$.',
+  },
+      '$ax + by + cz = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Through origin: $d = 0$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Through origin: $d = 0$.',
   },

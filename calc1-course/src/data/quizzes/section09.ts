@@ -6,12 +6,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The integral of a step function is defined as:',
     options: [
-      'The maximum value times the length',
       'The sum of (value × subinterval length) over all subintervals',
+      'The maximum value times the length',
       'The average value',
       'The derivative of the function'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The integral of a step function sums up the areas of rectangles on each subinterval.',
   },
@@ -29,10 +29,18 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For step functions, the integral is linear. This means:',
     options: [
-      '$\\int (s + t) = \\int s \\cdot \\int t$',
-      '$\\int (s + t) = \\int s + \\int t$ and $\\int cs = c \\int s$',
+      '$\\int (s + t) = \\int s \\cdot \\int t
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Linearity: the integral of a sum is the sum of integrals, and constants factor out.',
+  },
       'The integral is always positive',
-      'The integral equals the maximum value'
+      'The integral equals the maximum value',
+      '$\\int (s + t) = \\int s + \\int t$ and $\\int cs = c \\int s
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Linearity: the integral of a sum is the sum of integrals, and constants factor out.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -53,11 +61,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'If $s(x) \\leq t(x)$ for all $x \\in [a, b]$, then:',
     options: [
       '$\\int_a^b s \\geq \\int_a^b t$',
-      '$\\int_a^b s \\leq \\int_a^b t$',
       '$\\int_a^b s = \\int_a^b t$',
+      '$\\int_a^b s \\leq \\int_a^b t$',
       'Cannot compare'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Comparison property: if $s \\leq t$ pointwise, then $\\int s \\leq \\int t$.',
   },
@@ -68,8 +76,8 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'Only the endpoints of the interval',
       'The values of the function and subinterval lengths',
+      'The derivative of the function',
       'The number of subintervals only',
-      'The derivative of the function'
     ],
     correctIndex: 1,
     difficulty: 'easy',

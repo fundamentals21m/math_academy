@@ -9,12 +9,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the Pauli spin matrices related to in quaternion notation?',
     options: [
-      'The quaternion norm',
       'The matrices ii₁, ii₂, ii₃',
+      'The quaternion norm',
       'The quaternion conjugate',
       'The real part of quaternions',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The Pauli spin matrices are closely related to the matrices ii₁, ii₂, ii₃ (the quaternion basis matrices multiplied by the complex unit i). They are fundamental in describing electron spin.',
@@ -25,11 +25,11 @@ export const section41Questions: QuizQuestion[] = [
     question: 'What is the Klein-Gordon equation?',
     options: [
       'The non-relativistic Schrödinger equation',
-      'The relativistic form of Schrödinger\'s wave equation',
-      'Maxwell\'s equations in quaternion form',
       'The equation for gravitational waves',
+      'The relativistic form of Schrödinger\\'s wave equation',
+      'Maxwell\\'s equations in quaternion form',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The Klein-Gordon equation is the relativistic form of Schrödinger\'s wave equation for the electron. It is a second-order differential equation.',
@@ -53,8 +53,13 @@ export const section41Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'How many components does the wave function ψ have in Dirac\'s equation?',
-    options: ['1', '2', '4', '8'],
-    correctIndex: 2,
+    options: [
+      '4',
+      '1',
+      '2',
+      '8',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The wave function ψ in Dirac\'s equation is a 4-component spinor: ψ = (ψ₀, ψ₁, ψ₂, ψ₃)ᵀ. This is related to the 4×4 matrix structure of the quaternion representation.',
@@ -64,12 +69,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does the electron have spin ½?',
     options: [
-      'Because it is very small',
       'Because p and -p give the same Lorentz transformation but different ψ transformations',
+      'Because it is very small',
       'Because of the Pauli exclusion principle',
       'Because the Klein-Gordon equation requires it',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The biquaternions p and -p both give the same Lorentz transformation x → pxp^(ct), but they induce distinct transformations on ψ (sending it to pψ and -pψ). This double-valued nature is the mathematical reason for spin ½.',
@@ -78,8 +83,13 @@ export const section41Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: 'What particle did Dirac predict from his equation?',
-    options: ['The neutron', 'The neutrino', 'The positron', 'The photon'],
-    correctIndex: 2,
+    options: [
+      'The neutron',
+      'The neutrino',
+      'The photon',
+      'The positron',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Dirac observed that in his equation, μ might as well be replaced by -μ, predicting that the electron must have an anti-particle. This was later discovered and named the positron.',
@@ -106,10 +116,10 @@ export const section41Questions: QuizQuestion[] = [
     options: [
       'It is not invariant',
       'It is Galilean invariant',
-      'It is Lorentz invariant',
       'It changes sign',
+      'It is Lorentz invariant'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Dirac\'s equation is Lorentz invariant. Under a Lorentz transformation, if ψ transforms as ψ → pψ, the equation remains valid in the new reference frame.',

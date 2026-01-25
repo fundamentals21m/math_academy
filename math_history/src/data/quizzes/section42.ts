@@ -7,12 +7,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does it mean for $a$ to be a quadratic residue modulo $p$?',
     options: [
-      'The equation $x^2 \\equiv a \\pmod{p}$ has a solution',
-      '$a$ is divisible by $p$',
       '$a$ is prime',
-      '$a^2 \\equiv 0 \\pmod{p}$',
+      '$a$ is divisible by $p$',
+      'The equation $x^2 \\equiv a \\pmod{p}$ has a solution',
+      '$a^2 \\equiv 0 \\pmod{p}$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'An integer $a$ is a quadratic residue modulo $p$ if there exists some integer $x$ such that $x^2 \\equiv a \\pmod{p}$. In other words, $a$ is a "perfect square" in the world of arithmetic modulo $p$.',
@@ -22,12 +22,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Legendre symbol $\\left(\\frac{a}{p}\\right)$ equals:',
     options: [
-      '1 if $a$ is a quadratic residue mod $p$, and -1 if not',
+      '0 if $a$ is prime',
       '$a$ divided by $p$',
       'The remainder when $a$ is divided by $p$',
-      '0 if $a$ is prime',
+      '1 if $a$ is a quadratic residue mod $p$, and -1 if not'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The Legendre symbol is a compact notation: it equals 1 when $a$ is a quadratic residue mod $p$, and -1 when $a$ is a quadratic non-residue. It equals 0 when $p$ divides $a$.',
@@ -53,12 +53,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Euler\'s criterion, $\\left(\\frac{a}{p}\\right)$ can be computed as:',
     options: [
-      '$a^{(p-1)/2} \\pmod{p}$',
       '$a^{p-1} \\pmod{p}$',
+      '$a^{(p-1)/2} \\pmod{p}$',
       '$a^p \\pmod{p}$',
-      '$a^2 \\pmod{p}$',
+      '$a^2 \\pmod{p}$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Euler\'s criterion states that $\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}$. This gives a computational method: the result is either 1 (residue) or $p-1 \\equiv -1$ (non-residue).',
@@ -69,12 +69,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Quadratic reciprocity states that for distinct odd primes $p$ and $q$:',
     options: [
-      '$\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2} \\cdot \\frac{q-1}{2}}$',
-      '$\\left(\\frac{p}{q}\\right) = \\left(\\frac{q}{p}\\right)$ always',
       '$\\left(\\frac{pq}{2}\\right) = 1$',
-      '$p^q \\equiv q^p \\pmod{pq}$',
+      '$\\left(\\frac{p}{q}\\right) = \\left(\\frac{q}{p}\\right)$ always',
+      '$\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2} \\cdot \\frac{q-1}{2}}$',
+      '$p^q \\equiv q^p \\pmod{pq}$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The law of quadratic reciprocity gives a precise relationship between whether $p$ is a square mod $q$ and whether $q$ is a square mod $p$. The signs agree unless both $p \\equiv 3 \\pmod{4}$ and $q \\equiv 3 \\pmod{4}$, in which case they are opposite.',
@@ -84,12 +84,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Gauss introduced Gaussian integers $\\mathbb{Z}[i]$ in connection with:',
     options: [
-      'Biquadratic (fourth power) reciprocity',
+      'The Prime Number Theorem',
       'Quadratic reciprocity',
       'Fermat\'s Little Theorem',
-      'The Prime Number Theorem',
+      'Biquadratic (fourth power) reciprocity'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Gauss discovered that biquadratic reciprocity (when is $a$ a fourth power mod $p$?) is most naturally stated using Gaussian integers $a + bi$. This was an early example of extending number theory beyond ordinary integers to gain deeper understanding.',

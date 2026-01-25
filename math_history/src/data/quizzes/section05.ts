@@ -5,8 +5,13 @@ export const section05Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'How many postulates did Euclid begin his Elements with?',
-    options: ['3', '4', '5', '10'],
-    correctIndex: 2,
+    options: [
+      '3',
+      '5',
+      '4',
+      '10',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Euclid began the Elements with 5 postulates (geometric assumptions) and 5 common notions (logical principles).',
   },
@@ -17,10 +22,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'The first postulate',
       'The third postulate',
-      'The fifth postulate',
-      'None of them'
+      'None of them',
+      'The fifth postulate'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The fifth postulate, dealing with lines meeting when angles sum to less than 180°, is equivalent to statements about parallel lines.',
   },

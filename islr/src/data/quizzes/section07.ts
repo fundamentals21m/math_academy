@@ -22,11 +22,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'In multiple regression, $\\beta_j$ represents the effect of $X_j$ on $Y$:',
     options: [
       'Ignoring all other predictors',
-      'Holding all other predictors constant',
       'When all other predictors are zero',
+      'Holding all other predictors constant',
       'Only when $X_j$ is large'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Each coefficient represents the average change in $Y$ for a one-unit change in $X_j$, holding all other predictors fixed.',
   },
@@ -36,11 +36,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'The F-statistic tests whether:',
     options: [
       'All coefficients equal each other',
-      'At least one predictor is useful',
+      'R-squared equals 1',
       'The intercept is zero',
-      'R-squared equals 1'
+      'At least one predictor is useful'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The F-test tests $H_0: \\beta_1 = \\beta_2 = \\cdots = \\beta_p = 0$ - whether at least one predictor has a non-zero effect.',
   },
@@ -57,12 +57,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Variable selection refers to:',
     options: [
-      'Choosing the best response variable',
       'Determining which predictors to include',
+      'Choosing the best response variable',
       'Selecting the training data',
       'Choosing between regression and classification'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Variable selection helps identify which of the $p$ predictors are truly associated with the response.',
   },
@@ -73,11 +73,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'With $p = 10$ predictors, how many possible models can be formed using subsets?',
     options: [
       '10',
-      '100',
       '1024',
+      '100',
       '1000'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Each predictor can be included or excluded: $2^{10} = 1024$ possible models.',
   },
@@ -87,11 +87,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'Why can a predictor be significant in simple regression but not in multiple regression?',
     options: [
       'Simple regression is always wrong',
-      'The predictor is correlated with other predictors',
       'Multiple regression has fewer degrees of freedom',
+      'The predictor is correlated with other predictors',
       'The response variable changed'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Correlation among predictors means one predictor can "borrow" the effect of another in simple regression.',
   },
@@ -101,11 +101,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'Adjusted $R^2$ differs from $R^2$ because it:',
     options: [
       'Is always larger',
-      'Penalizes for adding predictors',
+      'Only applies to simple regression',
       'Uses a different formula entirely',
-      'Only applies to simple regression'
+      'Penalizes for adding predictors'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Adjusted $R^2$ penalizes model complexity, so it can decrease when uninformative predictors are added.',
   },
@@ -114,12 +114,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Forward selection starts by:',
     options: [
-      'Including all predictors and removing one at a time',
       'Including no predictors and adding one at a time',
+      'Including all predictors and removing one at a time',
       'Randomly selecting predictors',
       'Testing all possible subsets'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Forward selection starts with no predictors (just intercept) and adds the most significant one at each step.',
   },
@@ -153,11 +153,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'Why shouldn\'t we rely solely on individual t-tests when $p$ is large?',
     options: [
       'T-tests are only valid for small $p$',
-      'Some predictors will appear significant by chance alone',
       'T-tests require normally distributed data',
+      'Some predictors will appear significant by chance alone',
       'The degrees of freedom are wrong'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'With many predictors, about 5% will have p-values below 0.05 by chance. The F-test avoids this multiple testing problem.',
   },
@@ -167,11 +167,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'Backward selection is problematic when:',
     options: [
       '$n$ is large',
-      '$p > n$',
+      'The F-statistic is significant',
       '$R^2$ is high',
-      'The F-statistic is significant'
+      '$p > n$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Backward selection starts with all predictors included. If $p > n$, we cannot fit the full model to start with.',
   },

@@ -9,7 +9,7 @@ export const section12Questions: QuizQuestion[] = [
       'Higher capital efficiency',
       'Better liquidity',
       'Privacy and self-custody',
-      'Lower transaction fees'
+      'Lower transaction fees',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a major disadvantage of DLCs?',
     options: [
-      'They are illegal',
       'Capital inefficiency—both parties must fully collateralize all outcomes',
+      'They are illegal',
       'They cannot be used for Bitcoin',
-      'They require government approval'
+      'They require government approval',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'DLCs suffer from capital inefficiency because both parties must send sufficient collateral to cover all possible contract outcomes, unlike centralized exchanges that use net positioning.',
   },
@@ -35,11 +35,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Are DLCs completely trustless?',
     options: [
       'Yes, they require no trust at all',
-      'No, they still require trust in the oracle (but this is more limited than exchange trust)',
+      'Yes, but only on Lightning Network',
       'No, they require trust in the government',
-      'Yes, but only on Lightning Network'
+      'No, they still require trust in the oracle (but this is more limited than exchange trust)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'DLCs still require oracle trust, but this is more limited and transparent than trusting exchanges, custodians, and the banking system.',
   },

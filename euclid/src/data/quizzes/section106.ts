@@ -7,11 +7,11 @@ export const section106Questions: QuizQuestion[] = [
     question: 'What is the incircle of a triangle?',
     options: [
       'The circle passing through all three vertices',
-      'The largest circle that fits inside, tangent to all three sides',
       'A circle centered at a vertex',
-      'Any circle inside the triangle'
+      'Any circle inside the triangle',
+      'The largest circle that fits inside, tangent to all three sides',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The incircle (inscribed circle) is the largest circle that fits inside the triangle, touching all three sides.',
   },
@@ -22,8 +22,8 @@ export const section106Questions: QuizQuestion[] = [
     options: [
       'By bisecting the sides',
       'By bisecting two angles and finding their intersection',
+      'By drawing altitudes',
       'By drawing the medians',
-      'By drawing altitudes'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section106Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If a triangle has area A and semiperimeter s, what is the incircle radius r?',
     options: [
-      'r = A × s',
       'r = A / s',
+      'r = A × s',
       'r = s / A',
       'r = √(A × s)'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The incircle radius r = A/s, where A is the area and s is the semiperimeter (half the perimeter).',
   },

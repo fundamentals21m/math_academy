@@ -8,8 +8,13 @@ export const section21Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'Who discovered the definition of real numbers using cuts?',
-    options: ['Euclid', 'Gauss', 'Dedekind', 'Descartes'],
-    correctIndex: 2,
+    options: [
+      'Euclid',
+      'Dedekind',
+      'Gauss',
+      'Descartes',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Dedekind discovered in 1858 that irrational numbers could be defined as "cuts" in the rational numbers.',
@@ -30,11 +35,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'What is a Dedekind cut?',
     options: [
       'A way to divide a line segment',
-      'A partition of rationals into lower and upper sets (L, U)',
       'A type of geometric construction',
       'A method for computing square roots',
+      'A partition of rationals into lower and upper sets (L, U)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A Dedekind cut is a partition of the rational numbers into two sets L and U, where every member of L is less than every member of U.',
@@ -60,12 +65,12 @@ export const section21Questions: QuizQuestion[] = [
     question:
       'What makes the Dedekind cut definition elegant?',
     options: [
-      'It uses complex numbers',
       'It requires only sets of rationals, which already exist',
+      'It uses complex numbers',
       'It uses infinite decimal expansions',
       'It requires physical measurements',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Dedekind cuts define irrationals using only sets of rational numbers, which are already assumed to exist. No new objects need to be invented.',
@@ -76,11 +81,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'How does a rational number $a$ differ from an irrational as a cut?',
     options: [
       'Rationals cannot be represented as cuts',
-      'For a rational, the upper set U has a least member (namely a)',
-      'For a rational, the lower set L has a greatest member',
       'There is no difference',
+      'For a rational, the lower set L has a greatest member',
+      'For a rational, the upper set U has a least member (namely a)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'For a rational number a, the cut has U_a = {rationals ≥ a}, so U has a least member. For irrationals, neither L nor U has an extreme member.',
@@ -91,12 +96,12 @@ export const section21Questions: QuizQuestion[] = [
     question:
       "Dedekind's definition resolved problems in which areas of mathematics?",
     options: [
-      'Only geometry',
       'Only calculus',
       'Geometry, algebra, and calculus',
+      'Only geometry',
       'Only number theory',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Dedekind realized that his definition clarified problems in geometry (irrational lengths), calculus (limits), and algebra (complete ordered fields) all at once.',
@@ -108,11 +113,11 @@ export const section21Questions: QuizQuestion[] = [
       'The set L for $\\sqrt{2}$ consists of positive rationals whose squares are:',
     options: [
       'Greater than 2',
-      'Less than 2',
       'Equal to 2',
+      'Less than 2',
       'Negative',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'L contains all positive rationals with squares less than 2. These are the rationals "below" √2. The set U contains those with squares greater than 2.',

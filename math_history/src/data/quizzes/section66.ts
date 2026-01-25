@@ -7,12 +7,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A space is "simply connected" if:',
     options: [
-      'Every loop can be continuously shrunk to a point',
       'It has no boundary',
+      'Every loop can be continuously shrunk to a point',
       'It is two-dimensional',
-      'It has Euler characteristic 2',
+      'It has Euler characteristic 2'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A simply connected space has trivial fundamental group—every loop can be continuously contracted to a point. Examples include R^n and spheres S^n for n ≥ 2. The circle is NOT simply connected.',
@@ -22,12 +22,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The fundamental group of the circle $S^1$ is:',
     options: [
-      '$\\mathbb{Z}$ (the integers)',
-      'The trivial group',
       '$\\mathbb{Z} \\times \\mathbb{Z}$',
-      'A finite group',
+      'The trivial group',
+      '$\\mathbb{Z}$ (the integers)',
+      'A finite group'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'π₁(S¹) = Z. Loops on the circle are classified by their winding number: how many times they go around. Going around once is 1, twice is 2, backwards is -1, etc.',
@@ -38,12 +38,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The fundamental group of the torus $T^2$ is:',
     options: [
-      '$\\mathbb{Z} \\times \\mathbb{Z}$',
+      'A non-abelian group',
       '$\\mathbb{Z}$',
       'The trivial group',
-      'A non-abelian group',
+      '$\\mathbb{Z} \\times \\mathbb{Z}$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'π₁(T²) = Z × Z. The torus has two independent directions for loops (around and through the hole), each contributing a Z factor. Loops are classified by pairs of integers (m, n).',
@@ -69,12 +69,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The fundamental group of a figure-eight (two circles joined at a point) is:',
     options: [
-      'The free group on two generators',
       '$\\mathbb{Z} \\times \\mathbb{Z}$',
+      'The free group on two generators',
       '$\\mathbb{Z}$',
-      'The trivial group',
+      'The trivial group'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'π₁(figure-eight) = F₂, the free group on two generators (one for each circle). Unlike Z × Z (which is abelian), F₂ is non-abelian: going around circle A then B is different from B then A.',
@@ -84,12 +84,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Poincaré Conjecture (proved by Perelman) states that:',
     options: [
-      'A simply connected closed 3-manifold is homeomorphic to the 3-sphere',
-      'All 3-manifolds have trivial fundamental group',
       'The fundamental group is always abelian',
-      'Every surface is simply connected',
+      'All 3-manifolds have trivial fundamental group',
+      'A simply connected closed 3-manifold is homeomorphic to the 3-sphere',
+      'Every surface is simply connected'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The Poincaré Conjecture asked: if a closed 3-manifold has trivial fundamental group (simply connected), must it be topologically a 3-sphere? Perelman proved this is true in 2003, resolving a century-old problem.',

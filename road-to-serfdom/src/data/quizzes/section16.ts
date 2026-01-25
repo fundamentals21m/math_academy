@@ -9,7 +9,7 @@ export const section16Questions: QuizQuestion[] = [
       'To provide a detailed blueprint for society',
       'Essentially critical—to warn and point to principles, not to sketch a detailed programme',
       'To describe historical events',
-      'To propose specific legislation'
+      'To propose specific legislation',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -22,8 +22,8 @@ export const section16Questions: QuizQuestion[] = [
     options: [
       'To build new institutions immediately',
       'To free ourselves from the illusion that what we have done was either wise or inevitable',
+      'To increase government spending',
       'To elect new leaders',
-      'To increase government spending'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'Those who cry loudest for a "New Order" are:',
     options: [
       'The most progressive thinkers',
-      'Most completely under the sway of the ideas that created the evils they oppose',
       'Enemies of socialism',
-      'Classical liberals'
+      'Classical liberals',
+      'Most completely under the sway of the ideas that created the evils they oppose',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Ironically, those demanding a "New Order" are often most completely under the sway of the very ideas that created the problems they claim to solve.',
   },
@@ -48,12 +48,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Young people, according to Hayek, are:',
     options: [
-      'Right to distrust their elders\' ideas, but wrong to think these are liberal ideas—which they hardly know',
       'Completely wrong about everything',
       'More liberal than their parents',
-      'Not interested in politics'
+      'Right to distrust their elders\\' ideas, but wrong to think these are liberal ideas—which they hardly know',
+      'Not interested in politics',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The young are right to distrust elders\' failed ideas, but wrong to think these failures came from liberalism. They hardly know the liberal ideas of the 19th century.',
   },
@@ -63,11 +63,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'Hayek says we have "little right to feel superior" to our 19th-century grandfathers because:',
     options: [
       'They were smarter than us',
-      'It is we, the 20th century, who made a mess of things—not they',
       'They lived longer',
-      'They invented more technology'
+      'They invented more technology',
+      'It is we, the 20th century, who made a mess of things—not they',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '"We have little right to feel superior to our grandfathers. It is we, the twentieth century, and not they, who have made a mess of things."',
   },
@@ -76,12 +76,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hayek\'s final message is that:',
     options: [
-      'We should give up trying',
       'If we failed in the first attempt to create a world of free men, we must try again—freedom remains the only truly progressive policy',
+      'We should give up trying',
+      'We should wait for better times',
       'Totalitarianism is inevitable',
-      'We should wait for better times'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '"If in the first attempt to create a world of free men we have failed, we must try again." Freedom for the individual remains the only truly progressive policy.',
   },

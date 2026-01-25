@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section06Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Uncertainty in human action can be dealt with through:',
+    options: [
+      'Eliminating all risk',
+      'Acting on probability assessments and making provisions for contingencies',
+      'Ignoring the future entirely',
+      'Government guarantees',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'We cope with uncertainty through probability reasoning, insurance, hedging, and other provisions - though uncertainty can never be eliminated entirely.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Class probability (actuarial risk) applies when:',
+    options: [
+      'We know nothing about the event',
+      'Every event is unique',
+      'We know the long-run frequency of a class of events but not individual outcomes',
+      'Government sets the probability',
+    ],
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Class probability is used when we know that X% of a class will experience something, even though we cannot predict individual cases.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Case probability (entrepreneurial judgment) applies to:',
+    options: [
+      'Events with established statistical frequencies',
+      'Government-regulated activities',
+      'Only financial investments',
+      'Unique events for which no class frequency applies',
+    ],
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Case probability applies to unique, unprecedented situations where statistical frequencies cannot guide us - like judging a new business venture.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Insurance is possible because of:',
+    options: [
+      'Class probability - pooling many similar risks where frequencies are known',
+      'Government mandates',
+      'Perfect foresight',
+      'Charity',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Insurance works when class probability applies - we know what fraction of homes will burn, even if we don\'t know which specific homes.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Entrepreneurial error differs from gambling in that:',
+    options: [
+      'It involves more money',
+      'Entrepreneurs make reasoned judgments about unique situations, not bets on random outcomes',
+      'There is no risk involved',
+      'Gambling is more profitable',
+    ],
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Entrepreneurs exercise judgment about unique situations using reason and knowledge. Gambling involves random outcomes without reasoned judgment.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The role of the entrepreneur in dealing with uncertainty is to:',
+    options: [
+      'Eliminate all uncertainty from the market',
+      'Follow government instructions',
+      'Bear uncertainty and make judgments about an unknown future',
+      'Copy what competitors do',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Entrepreneurs bear the burden of uncertainty. They make judgments about the future and bear the consequences of being right or wrong.',
+  },
+];

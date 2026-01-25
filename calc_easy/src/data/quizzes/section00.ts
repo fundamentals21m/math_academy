@@ -9,7 +9,7 @@ export const section00Questions: QuizQuestion[] = [
       'A random set of numbers',
       'A rule that assigns exactly one output to each input',
       'Any equation with variables',
-      'A relationship between two unrelated things'
+      'A relationship between two unrelated things',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -29,12 +29,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the domain of a function?',
     options: [
-      'The set of all possible outputs',
       'The set of all possible inputs',
+      'The set of all possible outputs',
       'The graph of the function',
-      'The slope of the function'
+      'The slope of the function',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The domain is the set of all possible inputs for which the function is defined.',
   },
@@ -52,10 +52,22 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT a valid function?',
     options: [
-      '$f(x) = x^2$',
-      '$f(x) = \\sqrt{x}$ for $x \\geq 0$',
+      '$f(x) = x^2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A function must assign exactly one output to each input. If $x=2$ gives two different outputs, it is not a function.',
+  },
+      '$f(x) = \\sqrt{x}$ for $x \\geq 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A function must assign exactly one output to each input. If $x=2$ gives two different outputs, it is not a function.',
+  },
+      '$f(x) = 2x - 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A function must assign exactly one output to each input. If $x=2$ gives two different outputs, it is not a function.',
+  },
       'A rule where $x = 2$ gives outputs 3 and 5',
-      '$f(x) = 2x - 1$'
     ],
     correctIndex: 2,
     difficulty: 'medium',

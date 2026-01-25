@@ -22,12 +22,12 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A polynomial is symmetric if:',
     options: [
-      'It is unchanged when any two variables are swapped',
       'It has only even powers',
+      'It is unchanged when any two variables are swapped',
       'Its coefficients are all equal',
-      'It has real roots only',
+      'It has real roots only'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A symmetric polynomial remains the same under any permutation of its variables. For example, $x_1 + x_2 + x_3$ and $x_1 x_2 + x_1 x_3 + x_2 x_3$ are symmetric, while $x_1^2 + x_2$ is not.',
@@ -38,12 +38,12 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Fundamental Theorem on Symmetric Polynomials states that every symmetric polynomial:',
     options: [
-      'Can be expressed in terms of elementary symmetric polynomials',
-      'Has integer coefficients',
       'Factors into linear terms',
-      'Has degree at most $n$',
+      'Has integer coefficients',
+      'Can be expressed in terms of elementary symmetric polynomials',
+      'Has degree at most $n$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The theorem states that any symmetric polynomial in $x_1, \\ldots, x_n$ can be written as a polynomial in the elementary symmetric polynomials $e_1, e_2, \\ldots, e_n$. This means we can express symmetric functions of roots using only the polynomial\'s coefficients.',
@@ -53,12 +53,12 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The discriminant $\\Delta$ of a polynomial:',
     options: [
-      'Equals zero if and only if there is a repeated root',
+      'Depends only on the leading coefficient',
       'Always equals the constant term',
       'Is always positive',
-      'Depends only on the leading coefficient',
+      'Equals zero if and only if there is a repeated root'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The discriminant $\\Delta = \\prod_{i<j}(r_i - r_j)^2$ vanishes precisely when two roots coincide. For a quadratic $ax^2 + bx + c$, we get $\\Delta = b^2 - 4ac$, which is zero when the quadratic has a double root.',
@@ -84,12 +84,12 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Symmetric functions connect to Galois theory because:',
     options: [
-      'Solvability by radicals depends on which symmetric functions can be computed via root extractions',
       'All symmetric functions are rational',
+      'Solvability by radicals depends on which symmetric functions can be computed via root extractions',
       'Galois groups are always symmetric groups',
-      'The discriminant determines the Galois group',
+      'The discriminant determines the Galois group'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Galois theory studies which field extensions arise from solving polynomials. A polynomial is solvable by radicals when its roots can be expressed using nested radicals, which corresponds to the Galois group being solvable. Symmetric functions that remain unchanged under the Galois group can be computed from the coefficients.',

@@ -6,12 +6,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Dedekind cut is a subset $\\alpha \\subset \\mathbb{Q}$ satisfying which conditions?',
     options: [
-      '$\\alpha$ is nonempty, $\\alpha \\neq \\mathbb{Q}$, $\\alpha$ is closed downward, and $\\alpha$ has no largest element',
+      '$\\alpha$ is finite and nonempty',
       '$\\alpha$ contains exactly half of the rationals',
       '$\\alpha$ is an interval with rational endpoints',
-      '$\\alpha$ is finite and nonempty'
+      '$\\alpha$ is nonempty, $\\alpha \\neq \\mathbb{Q}$, $\\alpha$ is closed downward, and $\\alpha$ has no largest element'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A Dedekind cut $\\alpha$ is: (i) nonempty, (ii) not all of $\\mathbb{Q}$, (iii) if $p \\in \\alpha$ and $q < p$ then $q \\in \\alpha$, and (iv) $\\alpha$ has no maximum element.',
   },
@@ -20,12 +20,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Dedekind cut representing $\\sqrt{2}$ is:',
     options: [
-      '$\\{p \\in \\mathbb{Q} : p \\leq \\sqrt{2}\\}$',
       '$\\{p \\in \\mathbb{Q} : p < 0 \\text{ or } p^2 < 2\\}$',
+      '$\\{p \\in \\mathbb{Q} : p \\leq \\sqrt{2}\\}$',
       '$\\{p \\in \\mathbb{Q} : p^2 = 2\\}$',
       '$\\{p \\in \\mathbb{Q} : p > \\sqrt{2}\\}$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Since $\\sqrt{2} \\notin \\mathbb{Q}$, we define its cut as $\\alpha = \\{p \\in \\mathbb{Q} : p < 0\\} \\cup \\{p \\in \\mathbb{Q} : p \\geq 0 \\text{ and } p^2 < 2\\}$. This has no maximum and is closed downward.',
   },
@@ -63,11 +63,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'The main purpose of the Dedekind cut construction is to:',
     options: [
       'Prove that $\\mathbb{Q}$ is countable',
-      'Construct $\\mathbb{R}$ from $\\mathbb{Q}$ and prove the LUB property',
+      'Define the complex numbers',
       'Show that $\\sqrt{2}$ is irrational',
-      'Define the complex numbers'
+      'Construct $\\mathbb{R}$ from $\\mathbb{Q}$ and prove the LUB property'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The Dedekind cut construction rigorously builds $\\mathbb{R}$ from $\\mathbb{Q}$. Each real number is identified with a cut, and one proves the resulting ordered field satisfies the least upper bound property.',
   },

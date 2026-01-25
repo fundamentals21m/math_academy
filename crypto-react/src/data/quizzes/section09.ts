@@ -7,12 +7,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'What is the discrete logarithm problem?',
       options: [
-        'Given $g^x \\bmod p = h$, find $x$',
         'Compute $g^x \\bmod p$ given $x$',
+        'Given $g^x \\bmod p = h$, find $x$',
         'Find the prime factors of $n$',
         'Compute $\\gcd(a, b)$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The discrete log problem is finding the exponent $x$ given $g$, $h$, and $p$ where $g^x \\equiv h \\pmod{p}$.'
     },
@@ -39,12 +39,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Why is the discrete log problem important for cryptography?',
       options: [
-        'Exponentiation is easy, but finding the exponent is hard',
-        'It only works with small numbers',
         'It is easy to solve for all numbers',
+        'It only works with small numbers',
+        'Exponentiation is easy, but finding the exponent is hard',
         'It is the same as addition'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The discrete log provides a one-way function: computing $g^x \\bmod p$ is easy, but finding $x$ from the result is computationally hard.'
     },
@@ -62,12 +62,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'In the equation $g^x \\equiv h \\pmod{p}$, what is $g$ called?',
       options: [
-        'The generator (or base)',
+        'The discrete log',
         'The exponent',
         'The modulus',
-        'The discrete log'
+        'The generator (or base)'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: '$g$ is called the generator or base of the group.'
     },
@@ -108,12 +108,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The discrete log is analogous to which operation over real numbers?',
       options: [
-        'Taking a logarithm',
         'Taking a square root',
+        'Taking a logarithm',
         'Finding a derivative',
         'Computing a factorial'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Just as $\\log_g(h)$ finds the exponent $x$ where $g^x = h$ over reals, the discrete log finds $x$ where $g^x \\equiv h \\pmod{p}$.'
     }
@@ -134,12 +134,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'What makes the discrete log hard to compute for large primes?',
       options: [
-        'No polynomial-time algorithm is known',
-        'It requires complex numbers',
         'It cannot be computed for odd primes',
+        'It requires complex numbers',
+        'No polynomial-time algorithm is known',
         'The answer is always infinite'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'For large prime-order groups, the best known algorithms run in sub-exponential time, not polynomial time.'
     },
@@ -157,12 +157,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The order of an element $g$ modulo $p$ is:',
       options: [
-        'The smallest positive $k$ such that $g^k \\equiv 1 \\pmod{p}$',
+        'Always equal to $p$',
         'The value of $g \\bmod p$',
         'The number of digits in $g$',
-        'Always equal to $p$'
+        'The smallest positive $k$ such that $g^k \\equiv 1 \\pmod{p}$'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The order is the smallest positive exponent that returns the identity element (1) under modular exponentiation.'
     },
@@ -203,12 +203,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Baby-step giant-step algorithm solves discrete log in time:',
       options: [
-        '$O(\\sqrt{n})$ where $n$ is the group order',
         '$O(n)$',
+        '$O(\\sqrt{n})$ where $n$ is the group order',
         '$O(n^2)$',
         '$O(\\log n)$'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Baby-step giant-step is a time-memory tradeoff that achieves $O(\\sqrt{n})$ time complexity.'
     },
@@ -226,12 +226,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Pollard\'s rho algorithm for discrete log uses:',
       options: [
-        'Cycle detection to find collisions',
-        'Matrix factorization',
         'Quantum computing',
+        'Matrix factorization',
+        'Cycle detection to find collisions',
         'Brute force enumeration'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Pollard\'s rho uses a pseudo-random walk and Floyd\'s cycle detection to find collisions that reveal the discrete log.'
     }
@@ -252,12 +252,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The index calculus method for discrete log works by:',
       options: [
-        'Finding smooth numbers and solving a system of linear equations',
+        'Applying the Chinese Remainder Theorem directly',
         'Exhaustive search through all possible exponents',
         'Using quantum Fourier transforms',
-        'Applying the Chinese Remainder Theorem directly'
+        'Finding smooth numbers and solving a system of linear equations'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Index calculus factors numbers over a factor base, builds relations, and solves a linear system to find discrete logs.'
     },
@@ -298,12 +298,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The Pohlig-Hellman algorithm is most effective when:',
       options: [
-        'The group order has only small prime factors',
         'The group order is prime',
+        'The group order has only small prime factors',
         'The generator is 2',
         'The modulus is a safe prime'
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Pohlig-Hellman reduces the DLP to subgroups of prime order. If all prime factors are small, each subproblem is easy.'
     },
@@ -321,12 +321,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A "safe prime" $p = 2q + 1$ where $q$ is prime is preferred for DLP because:',
       options: [
-        'The subgroup of order $q$ resists Pohlig-Hellman attacks',
-        'It makes the DLP easier to solve',
         'Safe primes are easier to find',
+        'It makes the DLP easier to solve',
+        'The subgroup of order $q$ resists Pohlig-Hellman attacks',
         'The generator is always 2'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'With $p = 2q+1$, the group $\\mathbb{Z}_p^*$ has a large prime-order subgroup of size $q$, making Pohlig-Hellman ineffective.'
     },
@@ -344,12 +344,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Shor\'s quantum algorithm can solve discrete log in:',
       options: [
-        'Polynomial time on a quantum computer',
+        'Sub-exponential time on a classical computer',
         'Polynomial time on a classical computer',
         'Exponential time on a quantum computer',
-        'Sub-exponential time on a classical computer'
+        'Polynomial time on a quantum computer'
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Shor\'s algorithm uses quantum Fourier transforms to find the period of modular exponentiation, solving DLP in polynomial time.'
     }

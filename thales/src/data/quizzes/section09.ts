@@ -10,11 +10,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'What does it mean for two lengths to be commensurable?',
     options: [
       'They are equal in length',
-      'Their ratio can be expressed as a fraction of whole numbers',
       'They can both be measured with a ruler',
+      'Their ratio can be expressed as a fraction of whole numbers',
       'They are both longer than 1 unit',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Two lengths a and b are commensurable if there exist positive integers p and q such that a/b = p/q. In modern terms, this means their ratio is a rational number.',
@@ -25,12 +25,12 @@ export const section09Questions: QuizQuestion[] = [
     question:
       'What geometric length did the Pythagoreans discover was incommensurable with a unit length?',
     options: [
-      'The circumference of a circle with diameter 1',
       'The diagonal of a unit square',
+      'The circumference of a circle with diameter 1',
       'The side of a regular pentagon',
       'The height of an equilateral triangle',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The Pythagoreans discovered that the diagonal of a unit square, which has length √2, is not commensurable with the side of the square. This was a shocking discovery that challenged their philosophy.',
@@ -57,12 +57,12 @@ export const section09Questions: QuizQuestion[] = [
     question:
       'According to legend, what happened to Hippasus after revealing the secret of incommensurables?',
     options: [
+      'He drowned in a shipwreck',
       'He became the leader of the Pythagoreans',
       'He was awarded a prize by the Greek government',
-      'He drowned in a shipwreck',
       'He moved to Athens to teach',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'According to legend, Hippasus leaked the secret of incommensurables to outsiders and allegedly drowned in a shipwreck as divine punishment. He was described as the "Trotsky" of the Pythagorean society.',
@@ -74,11 +74,11 @@ export const section09Questions: QuizQuestion[] = [
       'Why did the Greeks turn to geometric algebra after discovering incommensurables?',
     options: [
       'They preferred drawing pictures',
-      'They did not know how to handle irrational numbers arithmetically',
       'Geometry was easier to teach',
       'The Greek government banned algebra',
+      'They did not know how to handle irrational numbers arithmetically',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Greeks did not have infinite decimals or algebraic notation for irrational numbers. However, they knew √2 was a length, so they turned to geometry to represent algebraic relationships as areas and lengths.',
@@ -89,12 +89,32 @@ export const section09Questions: QuizQuestion[] = [
     question:
       'What equation did the Pythagoreans use to find rational approximations to $\\sqrt{2}$?',
     options: [
-      '$x + y = 2$',
-      '$x^2 + y^2 = 2$',
-      '$x^2 - 2y^2 = \\pm 1$',
-      '$x/y = 2$',
-    ],
+      '$x + y = 2
     correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      'The Pythagoreans found that solutions to x² - 2y² = ±1 give excellent rational approximations to √2. If (x, y) satisfies this equation, then x/y approximates √2 with error less than 1/y².',
+  },
+      '$x^2 + y^2 = 2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'The Pythagoreans found that solutions to x² - 2y² = ±1 give excellent rational approximations to √2. If (x, y) satisfies this equation, then x/y approximates √2 with error less than 1/y².',
+  },
+      '$x^2 - 2y^2 = \\pm 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'The Pythagoreans found that solutions to x² - 2y² = ±1 give excellent rational approximations to √2. If (x, y) satisfies this equation, then x/y approximates √2 with error less than 1/y².',
+  },
+      '$x/y = 2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'The Pythagoreans found that solutions to x² - 2y² = ±1 give excellent rational approximations to √2. If (x, y) satisfies this equation, then x/y approximates √2 with error less than 1/y².',
+  },
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Pythagoreans found that solutions to x² - 2y² = ±1 give excellent rational approximations to √2. If (x, y) satisfies this equation, then x/y approximates √2 with error less than 1/y².',
@@ -104,8 +124,13 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question:
       'Using the Pythagorean recurrence with $a_1 = 1$, $b_1 = 1$, $a_{n+1} = a_n + 2b_n$, $b_{n+1} = a_n + b_n$, what is the third approximation to $\\sqrt{2}$?',
-    options: ['3/2', '5/3', '7/5', '17/12'],
-    correctIndex: 2,
+    options: [
+      '3/2',
+      '5/3',
+      '17/12',
+      '7/5',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Starting with a₁=1, b₁=1: Then a₂ = 1+2(1) = 3, b₂ = 1+1 = 2 (giving 3/2). Then a₃ = 3+2(2) = 7, b₃ = 3+2 = 5 (giving 7/5). So the third approximation is 7/5 = 1.4.',
@@ -117,11 +142,11 @@ export const section09Questions: QuizQuestion[] = [
       'Which book of Euclid\'s Elements later provided a rigorous treatment of incommensurable ratios?',
     options: [
       'Book I (basic geometry)',
+      'Book V (Eudoxus\\'s theory of proportions)',
       'Book II (geometric algebra)',
-      'Book V (Eudoxus\'s theory of proportions)',
       'Book XIII (regular polyhedra)',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Book V of Euclid\'s Elements contains Eudoxus\'s theory of proportions, which provided a rigorous way to handle ratios of incommensurable magnitudes. This resolved the crisis created by the discovery of irrationals.',

@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section13Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Mises describes monetary calculation as:',
+    options: [
+      'A government invention',
+      'The guiding star of action under division of labor',
+      'Unnecessary in modern economies',
+      'Only useful for large corporations',
+    ],
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Monetary calculation is "the compass of the man embarking upon production." It determines whether actions will satisfy consumers or waste resources.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Capital accounting measures success by:',
+    options: [
+      'Counting physical units produced',
+      'Surveying customer satisfaction',
+      'Checking government approval ratings',
+      'Comparing money value of assets at two points in time'
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Capital accounting establishes money values and compares them over time. The difference reveals profit (success) or loss (failure) in objective terms.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'Monetary calculation is inherently individualistic because:',
+    options: [
+      'It only makes sense from an individual\'s perspective for guiding action',
+      'Only individuals can own money',
+      'Corporations cannot calculate',
+      'Government forbids collective calculation'
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Aggregate statistics like "national wealth" cannot guide anyone\'s decisions. Only individual profit/loss calculations direct actual action.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Goethe called double-entry bookkeeping:',
+    options: [
+      'One of the finest inventions of the human mind',
+      'A waste of time',
+      'A government requirement',
+      'An Italian curiosity',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Double-entry bookkeeping makes systematic profit/loss determination possible. Every transaction is recorded twice, ensuring books balance and catching errors.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'Physical measurements like bridge load capacity only matter for practical action because:',
+    options: [
+      'Engineers demand them',
+      'Government requires safety standards',
+      'Economic calculation tells us WHETHER to build',
+      'Physical laws are absolute'
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'We can measure a bridge\'s capacity perfectly, but SHOULD we build this bridge? Is it worth the resources? Only economic calculation answers that.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'Economic science emerged from:',
+    options: [
+      'Government research programs',
+      'Pure philosophical speculation',
+      'Ancient religious texts',
+      'The practice of monetary calculation'
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Praxeology and economics could only emerge when people developed methods of calculating their actions. Theory followed practice.',
+  },
+];

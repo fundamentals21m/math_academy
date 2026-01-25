@@ -20,10 +20,26 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A = \\{1, 2, 3\\}$ and $B = \\{2, 3, 5\\}$, what is $A \\cup B$?',
     options: [
-      '$\\{2, 3\\}$',
-      '$\\{1, 5\\}$',
-      '$\\{1, 2, 3, 5\\}$',
-      '$\\{1, 2, 3, 2, 3, 5\\}$'
+      '$\\{2, 3\\}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$A \\cup B$ is the union—all elements in either set. Combining both sets (without duplicates): $\\{1, 2, 3, 5\\}$.',
+  },
+      '$\\{1, 5\\}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$A \\cup B$ is the union—all elements in either set. Combining both sets (without duplicates): $\\{1, 2, 3, 5\\}$.',
+  },
+      '$\\{1, 2, 3, 2, 3, 5\\}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$A \\cup B$ is the union—all elements in either set. Combining both sets (without duplicates): $\\{1, 2, 3, 5\\}$.',
+  },
+      '$\\{1, 2, 3, 5\\}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$A \\cup B$ is the union—all elements in either set. Combining both sets (without duplicates): $\\{1, 2, 3, 5\\}$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -52,12 +68,28 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many ways can you arrange 4 different books on a shelf?',
     options: [
-      '$4$',
-      '$16$',
-      '$24$',
-      '$256$'
+      '$4
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'This is a permutation of 4 objects: $4! = 4 \\times 3 \\times 2 \\times 1 = 24$ arrangements.',
+  },
+      '$24
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This is a permutation of 4 objects: $4! = 4 \\times 3 \\times 2 \\times 1 = 24$ arrangements.',
+  },
+      '$16
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This is a permutation of 4 objects: $4! = 4 \\times 3 \\times 2 \\times 1 = 24$ arrangements.',
+  },
+      '$256
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This is a permutation of 4 objects: $4! = 4 \\times 3 \\times 2 \\times 1 = 24$ arrangements.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'This is a permutation of 4 objects: $4! = 4 \\times 3 \\times 2 \\times 1 = 24$ arrangements.',
   },
@@ -75,12 +107,28 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When rolling two dice, how many total outcomes are in the sample space?',
     options: [
-      '$6$',
-      '$12$',
-      '$36$',
-      '$72$'
-    ],
+      '$12
     correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Each die has 6 outcomes. By the multiplication principle: $6 \\times 6 = 36$ total outcomes.',
+  },
+      '$6
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Each die has 6 outcomes. By the multiplication principle: $6 \\times 6 = 36$ total outcomes.',
+  },
+      '$36
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Each die has 6 outcomes. By the multiplication principle: $6 \\times 6 = 36$ total outcomes.',
+  },
+      '$72
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Each die has 6 outcomes. By the multiplication principle: $6 \\times 6 = 36$ total outcomes.',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Each die has 6 outcomes. By the multiplication principle: $6 \\times 6 = 36$ total outcomes.',
   },
@@ -89,12 +137,24 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If sets $A$ and $B$ are disjoint, what is $A \\cap B$?',
     options: [
-      '$A \\cup B$',
-      '$A$',
-      '$B$',
-      '$\\emptyset$ (the empty set)'
+      '$\\emptyset$ (the empty set)',
+      '$A \\cup B
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Disjoint sets have no elements in common, so their intersection is the empty set $\\emptyset$.',
+  },
+      '$B
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Disjoint sets have no elements in common, so their intersection is the empty set $\\emptyset$.',
+  },
+      '$A
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Disjoint sets have no elements in common, so their intersection is the empty set $\\emptyset$.',
+  },
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Disjoint sets have no elements in common, so their intersection is the empty set $\\emptyset$.',
   },
@@ -112,10 +172,14 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does $\\binom{n}{k}$ represent?',
     options: [
+      'The number of ways to choose $k$ objects from $n$ objects (order does not matter)',
       'The number of ways to arrange $n$ objects in $k$ positions',
       'The number of ways to choose $k$ objects from $n$ objects (order matters)',
-      'The number of ways to choose $k$ objects from $n$ objects (order does not matter)',
-      'The product $n \\times k$'
+      'The product $n \\times k
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\binom{n}{k}$ is the combination formula—it counts unordered selections of $k$ items from $n$ items.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

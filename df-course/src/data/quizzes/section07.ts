@@ -14,7 +14,28 @@ export const section07Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'In $Q_8$, what is $ij$?',
-    options: ['$1$', '$-1$', '$k$', '$-k$'],
+    options: [
+      '$1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The quaternion multiplication rule gives $ij = k$.',
+  },
+      '$k
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The quaternion multiplication rule gives $ij = k$.',
+  },
+      '$-1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The quaternion multiplication rule gives $ij = k$.',
+  },
+      '$-k
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The quaternion multiplication rule gives $ij = k$.',
+  },
+    ],
     correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The quaternion multiplication rule gives $ij = k$.',
@@ -23,7 +44,28 @@ export const section07Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'In $Q_8$, what is $ji$?',
-    options: ['$1$', '$-1$', '$k$', '$-k$'],
+    options: [
+      '$-k
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Quaternion multiplication is not commutative: $ji = -ij = -k$.',
+  },
+      '$1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Quaternion multiplication is not commutative: $ji = -ij = -k$.',
+  },
+      '$-1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Quaternion multiplication is not commutative: $ji = -ij = -k$.',
+  },
+      '$k
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Quaternion multiplication is not commutative: $ji = -ij = -k$.',
+  },
+    ],
     correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Quaternion multiplication is not commutative: $ji = -ij = -k$.',
@@ -33,12 +75,16 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is $Q_8$ an abelian group?',
     options: [
-      'Yes, because all groups of order 8 are abelian',
       'Yes, because $i, j, k$ all commute',
-      'No, because $ij \\neq ji$',
-      'No, because it has no identity element'
+      'Yes, because all groups of order 8 are abelian',
+      'No, because it has no identity element',
+      'No, because $ij \\neq ji
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$Q_8$ is non-abelian since $ij = k$ but $ji = -k$, so $ij \\neq ji$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$Q_8$ is non-abelian since $ij = k$ but $ji = -k$, so $ij \\neq ji$.',
   },

@@ -19,11 +19,11 @@ export const section12Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       '$p$ divides $a + b$',
-      '$p$ divides $a$ and $p$ divides $b$',
       '$p$ divides $a$ or $p$ divides $b$',
-      '$p$ divides $a - b$',
+      '$p$ divides $a$ and $p$ divides $b$',
+      '$p$ divides $a - b$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'Euclid\'s Lemma states that if a prime $p$ divides a product $ab$, then $p$ must divide at least one of the factors. It doesn\'t have to divide both.',
   },
@@ -56,11 +56,11 @@ export const section12Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'There are no primes in this system',
-      'The number 6 has two genuinely different factorizations',
       'Multiplication is not commutative',
-      'Negative numbers cannot be factored',
+      'The number 6 has two genuinely different factorizations',
+      'Negative numbers cannot be factored'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'In $\\mathbb{Z}[\\sqrt{-5}]$, $6 = 2 \\times 3 = (1 + \\sqrt{-5})(1 - \\sqrt{-5})$. Both $2, 3$ and $1 \\pm \\sqrt{-5}$ are irreducible (cannot be factored further), but they give different factorizations of 6.',
   },

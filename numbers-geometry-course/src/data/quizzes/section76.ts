@@ -25,11 +25,11 @@ export const section76Questions: QuizQuestion[] = [
     question: 'What is the hyperbolic identity?',
     options: [
       'cosh²θ + sinh²θ = 1',
-      'cosh²θ - sinh²θ = 1',
       'cosh θ + sinh θ = 1',
       'cosh θ - sinh θ = 1',
+      'cosh²θ - sinh²θ = 1',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'cosh²θ - sinh²θ = 1, analogous to cos²θ + sin²θ = 1 for circular functions.',
@@ -39,12 +39,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What curve does (cosh θ, sinh θ) parametrize?',
     options: [
-      'The circle x² + y² = 1',
       'The hyperbola x² - y² = 1',
+      'The circle x² + y² = 1',
       'The parabola y = x²',
       'The ellipse x²/4 + y²/9 = 1',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Since cosh²θ - sinh²θ = 1, the point (cosh θ, sinh θ) lies on x² - y² = 1.',
@@ -70,11 +70,11 @@ export const section76Questions: QuizQuestion[] = [
     question: 'What is cosh(θ + φ)?',
     options: [
       'cosh θ cosh φ - sinh θ sinh φ',
-      'cosh θ cosh φ + sinh θ sinh φ',
       'sinh θ cosh φ + cosh θ sinh φ',
       'cosh θ + cosh φ',
+      'cosh θ cosh φ + sinh θ sinh φ',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'cosh(θ + φ) = cosh θ cosh φ + sinh θ sinh φ (note the + sign, unlike cos).',
@@ -85,11 +85,11 @@ export const section76Questions: QuizQuestion[] = [
     question: 'How are cos θ and cosh θ related?',
     options: [
       'They are unrelated',
-      'cos θ = cosh(iθ)',
       'cos θ = cosh θ',
+      'cos θ = cosh(iθ)',
       'cos θ = i cosh θ',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'By Euler\'s formula, cos θ = cosh(iθ), connecting circular and hyperbolic functions.',
@@ -114,12 +114,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is sinh(-θ)?',
     options: [
-      'sinh θ',
       '-sinh θ',
-      'cosh θ',
+      'sinh θ',
       '-cosh θ',
+      'cosh θ',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'sinh(-θ) = -sinh θ because sinh is an odd function (like sin).',

@@ -6,12 +6,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a Hill cipher matrix to be valid, it must be:',
     options: [
-      'Symmetric',
-      'Orthogonal',
       'Invertible modulo 26',
+      'Orthogonal',
+      'Symmetric',
       'Diagonal'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The encryption matrix must have $\\gcd(\\det(A), 26) = 1$ to be invertible mod 26.',
   },
@@ -30,11 +30,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What is the main advantage of the Hill cipher over simple substitution?',
     options: [
       'Uses a longer key',
-      'Encrypts multiple letters at once, hiding single-letter frequencies',
       'Is computationally faster',
-      'Requires no key exchange'
+      'Requires no key exchange',
+      'Encrypts multiple letters at once, hiding single-letter frequencies',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Hill cipher encrypts letter blocks together, obscuring individual letter frequencies.',
   },
@@ -44,11 +44,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'The Hill cipher is vulnerable to:',
     options: [
       'Brute force only',
-      'Known-plaintext attack using linear algebra',
       'Frequency analysis of single letters',
+      'Known-plaintext attack using linear algebra',
       'Dictionary attack'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'With enough plaintext-ciphertext pairs, the encryption matrix can be recovered using linear algebra.',
   },

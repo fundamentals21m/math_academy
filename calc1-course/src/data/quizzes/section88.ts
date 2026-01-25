@@ -7,11 +7,11 @@ export const section88Questions: QuizQuestion[] = [
     question: 'Kepler\'s First Law states that planets move in:',
     options: [
       'Circles with the sun at center',
-      'Ellipses with the sun at one focus',
       'Parabolas',
-      'Straight lines'
+      'Straight lines',
+      'Ellipses with the sun at one focus',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'First Law: elliptical orbits with sun at a focus.',
   },
@@ -20,12 +20,12 @@ export const section88Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Kepler\'s Second Law (equal areas) states:',
     options: [
-      'Planets move at constant speed',
       'A line from sun to planet sweeps equal areas in equal times',
+      'Planets move at constant speed',
       'All orbits have the same period',
-      'Gravity is constant'
+      'Gravity is constant',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Second Law: equal areas in equal times (conservation of angular momentum).',
   },
@@ -34,12 +34,12 @@ export const section88Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Kepler\'s Third Law relates:',
     options: [
-      'Velocity and mass',
       'Period squared and semi-major axis cubed',
+      'Velocity and mass',
       'Force and distance',
-      'Energy and momentum'
+      'Energy and momentum',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Third Law: $T^2 \\propto a^3$ (period squared proportional to axis cubed).',
   },
@@ -50,8 +50,8 @@ export const section88Questions: QuizQuestion[] = [
     options: [
       'Special relativity',
       'The inverse-square law of gravitation',
+      'Electromagnetism',
       'Quantum mechanics',
-      'Electromagnetism'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -62,10 +62,26 @@ export const section88Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The gravitational force law is $\\mathbf{F} = ?$',
     options: [
-      '$-\\frac{GMm}{r^2} \\hat{\\mathbf{r}}$',
-      '$-GMm \\hat{\\mathbf{r}}$',
-      '$\\frac{GMm}{r} \\hat{\\mathbf{r}}$',
-      '$GMm r^2 \\hat{\\mathbf{r}}$'
+      '$-GMm \\hat{\\mathbf{r}}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Newton\'s law: $F = GMm/r^2$ directed toward the sun.',
+  },
+      '$\\frac{GMm}{r} \\hat{\\mathbf{r}}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Newton\'s law: $F = GMm/r^2$ directed toward the sun.',
+  },
+      '$-\\frac{GMm}{r^2} \\hat{\\mathbf{r}}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Newton\'s law: $F = GMm/r^2$ directed toward the sun.',
+  },
+      '$GMm r^2 \\hat{\\mathbf{r}}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Newton\'s law: $F = GMm/r^2$ directed toward the sun.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

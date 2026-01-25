@@ -7,11 +7,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'A Hamiltonian cycle visits:',
     options: [
       'Every edge exactly once',
-      'Every vertex exactly once',
       'Every face exactly once',
-      'Some vertices multiple times'
+      'Some vertices multiple times',
+      'Every vertex exactly once',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A Hamiltonian cycle visits every vertex exactly once and returns to the start.',
   },
@@ -21,11 +21,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Determining if a graph is Hamiltonian is:',
     options: [
       'Solvable in polynomial time',
-      'NP-complete',
       'Undecidable',
+      'NP-complete',
       'Always yes for connected graphs'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The Hamiltonian cycle problem is NP-complete (no known polynomial algorithm).',
   },
@@ -36,8 +36,8 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       '$G$ is connected',
       '$G$ is Hamiltonian',
+      '$G$ is planar',
       '$G$ is bipartite',
-      '$G$ is planar'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -62,12 +62,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A tournament (orientation of $K_n$) always has:',
     options: [
-      'A directed Hamiltonian cycle',
       'A directed Hamiltonian path',
+      'A directed Hamiltonian cycle',
       'No directed cycles',
-      'Equal in-degrees and out-degrees'
+      'Equal in-degrees and out-degrees',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Every tournament has a directed Hamiltonian path (Rédei\'s theorem). Cycles require strong connectivity.',
   },
@@ -77,11 +77,23 @@ export const section21Questions: QuizQuestion[] = [
     question: 'The hypercube $Q_n$ is:',
     options: [
       'Never Hamiltonian',
-      'Hamiltonian for all $n \\geq 2$',
-      'Hamiltonian only for even $n$',
-      'Hamiltonian only for prime $n$'
-    ],
+      'Hamiltonian for all $n \\geq 2
     correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The hypercube $Q_n$ is Hamiltonian for $n \\geq 2$ (Gray code gives a Hamiltonian cycle).',
+  },
+      'Hamiltonian only for even $n
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The hypercube $Q_n$ is Hamiltonian for $n \\geq 2$ (Gray code gives a Hamiltonian cycle).',
+  },
+      'Hamiltonian only for prime $n
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The hypercube $Q_n$ is Hamiltonian for $n \\geq 2$ (Gray code gives a Hamiltonian cycle).',
+  },
+    ],
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The hypercube $Q_n$ is Hamiltonian for $n \\geq 2$ (Gray code gives a Hamiltonian cycle).',
   },

@@ -43,11 +43,11 @@ export const section03Quiz: QuizQuestion[] = [
     question: 'The Bayes classifier assigns an observation to the class with:',
     options: [
       'The lowest probability',
-      'The highest conditional probability',
+      'A random probability',
       'The average probability',
-      'A random probability'
+      'The highest conditional probability'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The Bayes classifier assigns each observation to the class $j$ that maximizes $P(Y=j|X=x_0)$.',
   },
@@ -57,12 +57,12 @@ export const section03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'As model flexibility increases, what typically happens to training MSE?',
     options: [
-      'It increases',
       'It decreases',
+      'It increases',
       'It stays constant',
       'It first decreases then increases'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Training MSE monotonically decreases with flexibility because more flexible models can fit the training data more closely.',
   },
@@ -72,11 +72,11 @@ export const section03Quiz: QuizQuestion[] = [
     question: 'As model flexibility increases, what typically happens to test MSE?',
     options: [
       'It monotonically increases',
-      'It monotonically decreases',
       'It first decreases then increases (U-shape)',
+      'It monotonically decreases',
       'It stays constant'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Test MSE typically has a U-shape: it decreases initially as bias drops, then increases as variance dominates (overfitting).',
   },
@@ -95,11 +95,11 @@ export const section03Quiz: QuizQuestion[] = [
     question: 'A model with high bias typically:',
     options: [
       'Fits the training data too closely',
-      'Misses important patterns in the data',
       'Has very different predictions for different training sets',
+      'Misses important patterns in the data',
       'Achieves optimal test error'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'High bias means the model is too simple to capture the true relationship, systematically missing patterns (underfitting).',
   },
@@ -120,10 +120,10 @@ export const section03Quiz: QuizQuestion[] = [
     options: [
       'Training error',
       'Reducible error',
-      'Irreducible error',
-      'R-squared'
+      'R-squared',
+      'Irreducible error'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The Bayes error rate is the best achievable error rate, analogous to irreducible error - it represents inherent uncertainty that no classifier can overcome.',
   },
@@ -132,12 +132,12 @@ export const section03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a two-class problem, the Bayes decision boundary occurs where:',
     options: [
-      '$P(Y=1|X) = 1$',
       '$P(Y=1|X) = P(Y=0|X) = 0.5$',
+      '$P(Y=1|X) = 1$',
       '$P(Y=1|X) = 0$',
       'The training error is minimized'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The Bayes boundary is where the conditional probabilities are equal. At this point, both classes are equally likely given the predictors.',
   },
@@ -161,11 +161,11 @@ export const section03Quiz: QuizQuestion[] = [
     question: 'Choosing a very small K in KNN is most likely to result in:',
     options: [
       'High bias, low variance',
-      'Low bias, high variance',
       'High bias, high variance',
+      'Low bias, high variance',
       'Optimal predictions'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Small K = very flexible = low bias (can fit complex boundaries) but high variance (sensitive to individual training points).',
   },

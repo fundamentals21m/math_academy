@@ -27,11 +27,11 @@ export const section16Questions: QuizQuestion[] = [
       'Which of the following is equivalent to Euclid\'s parallel postulate (in absolute geometry)?',
     options: [
       'Every angle can be bisected',
-      'There is at least one triangle whose angle sum is 180°',
-      'Two points determine a unique line',
       'A circle can be drawn with any center and radius',
+      'Two points determine a unique line',
+      'There is at least one triangle whose angle sum is 180°'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'In absolute geometry (postulates I-IV only), the statement "there is at least one triangle whose angle sum is 180°" is equivalent to the parallel postulate. This was one of Legendre\'s equivalent formulations.',
@@ -74,12 +74,12 @@ export const section16Questions: QuizQuestion[] = [
     question:
       'What did Beltrami prove in 1868 about hyperbolic geometry?',
     options: [
+      'That it is consistent if Euclidean geometry is consistent',
       'That it was false',
       'That it was the true geometry of space',
-      'That it is consistent if Euclidean geometry is consistent',
       'That it contradicts Euclidean geometry',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Beltrami gave a Euclidean model for hyperbolic geometry, showing that any contradiction in hyperbolic geometry could be translated into a contradiction in Euclidean geometry. Thus hyperbolic geometry is consistent if Euclidean geometry is.',
@@ -106,12 +106,12 @@ export const section16Questions: QuizQuestion[] = [
     question:
       'What is true about triangles in hyperbolic geometry?',
     options: [
-      'The angle sum is exactly 180°',
       'The angle sum is greater than 180°',
-      'The angle sum is less than 180°',
+      'The angle sum is exactly 180°',
       'Triangles do not exist in hyperbolic geometry',
+      'The angle sum is less than 180°',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'In hyperbolic geometry, the angle sum of any triangle is less than 180°. In elliptic geometry, it is greater than 180°. Only in Euclidean geometry is it exactly 180°.',
@@ -123,11 +123,11 @@ export const section16Questions: QuizQuestion[] = [
       'How many axioms did Hilbert require for a complete axiomatization of Euclidean geometry (1899)?',
     options: [
       '5 axioms',
-      '13 axioms',
       '21 axioms',
-      '50 axioms',
+      '13 axioms',
+      '50 axioms'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Hilbert required 21 axioms to give a completely adequate axiomatic description of three-dimensional Euclidean space, finally fixing the gaps in Euclid\'s original treatment.',
@@ -138,12 +138,12 @@ export const section16Questions: QuizQuestion[] = [
     question:
       'Why did Hilbert add the "axiom of completeness" to his system?',
     options: [
+      'Because without it, Euclid\\'s Proposition 1 (equilateral triangle) could not be proved',
       'To make the system more elegant',
-      'Because without it, Euclid\'s Proposition 1 (equilateral triangle) could not be proved',
       'To replace the parallel postulate',
       'Because Gauss suggested it',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'Hilbert reluctantly added the axiom of completeness when it became apparent that without it, one still could not deduce Euclid\'s Proposition 1—the construction of an equilateral triangle requires knowing that two circles actually intersect.',

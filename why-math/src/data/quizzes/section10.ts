@@ -6,12 +6,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The binary system uses how many digits?',
     options: [
-      '8',
       '10',
+      '8',
+      '16',
       '2',
-      '16'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Binary uses only two digits: 0 and 1.',
   },
@@ -37,10 +37,26 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In binary, $1 + 1 = $',
     options: [
-      '$2$',
-      '$10$',
-      '$11$',
-      '$1$'
+      '$10
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'In binary, $1 + 1 = 10$ (which equals 2 in decimal). You carry the 1.',
+  },
+      '$2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In binary, $1 + 1 = 10$ (which equals 2 in decimal). You carry the 1.',
+  },
+      '$11
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In binary, $1 + 1 = 10$ (which equals 2 in decimal). You carry the 1.',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In binary, $1 + 1 = 10$ (which equals 2 in decimal). You carry the 1.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -60,11 +76,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'Why do computers use the binary system?',
     options: [
       'It requires less memory',
-      'It matches the on/off states of electronic switches',
       'Binary numbers are smaller',
+      'It matches the on/off states of electronic switches',
       'It was invented by computer scientists'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Electronic switches have two natural states: on (1) and off (0), matching binary digits.',
   },
@@ -84,8 +100,8 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'Make all numbers even',
       'Detect single-bit transmission errors',
+      'Speed up transmission',
       'Compress data',
-      'Speed up transmission'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -105,12 +121,24 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The fraction $\\frac{1}{3}$ in binary is:',
     options: [
-      '$0.3_2$',
-      '$0.1_2$',
-      '$0.\\overline{01}_2$ (repeating)',
-      '$0.11_2$'
-    ],
+      '$0.1_2
     correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$\\frac{1}{3} = 0.\\overline{01}_2 = 0.010101..._2$ (a repeating binary fraction).',
+  },
+      '$0.3_2
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$\\frac{1}{3} = 0.\\overline{01}_2 = 0.010101..._2$ (a repeating binary fraction).',
+  },
+      '$0.\\overline{01}_2$ (repeating)',
+      '$0.11_2
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$\\frac{1}{3} = 0.\\overline{01}_2 = 0.010101..._2$ (a repeating binary fraction).',
+  },
+    ],
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: '$\\frac{1}{3} = 0.\\overline{01}_2 = 0.010101..._2$ (a repeating binary fraction).',
   },

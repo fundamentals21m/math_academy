@@ -7,11 +7,11 @@ export const section81Questions: QuizQuestion[] = [
     question: 'Proposition III.17 is a construction. What does it construct?',
     options: [
       'A circle through three points',
+      'A chord of given length',
       'A tangent line from an external point to a circle',
       'The center of a circle',
-      'A chord of given length'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'III.17 shows how to draw a tangent line from a point outside a circle to the circle.',
   },
@@ -23,7 +23,7 @@ export const section81Questions: QuizQuestion[] = [
       'One',
       'Two',
       'Three',
-      'Infinitely many'
+      'Infinitely many',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section81Questions: QuizQuestion[] = [
     question: 'The construction in III.17 uses what auxiliary circle?',
     options: [
       'A circle centered at the external point',
-      'A circle with the line from external point to center as diameter',
       'A circle tangent to the given circle',
-      'No auxiliary circle is needed'
+      'No auxiliary circle is needed',
+      'A circle with the line from external point to center as diameter',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'III.17 draws a circle with AE (external point to center) as diameter. Where this intersects the given circle gives the tangent points (by III.31).',
   },

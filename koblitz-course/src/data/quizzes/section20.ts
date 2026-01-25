@@ -7,11 +7,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'ECPP (Elliptic Curve Primality Proving) produces:',
     options: [
       'A probable prime',
-      'A verifiable certificate of primality',
       'The factorization of $n$',
+      'A verifiable certificate of primality',
       'An approximation of primality'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'ECPP generates a certificate that can be independently verified, proving primality.',
   },
@@ -20,12 +20,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Goldwasser-Kilian algorithm uses elliptic curves to:',
     options: [
-      'Factor large numbers',
       'Prove primality by finding curves with specific group orders',
+      'Factor large numbers',
+      'Compute discrete logs',
       'Generate random primes',
-      'Compute discrete logs'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'It finds curves where the group order has a large prime factor, enabling recursive primality proof.',
   },
@@ -35,11 +35,15 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Schoof\'s algorithm computes:',
     options: [
       'Discrete logarithms on elliptic curves',
-      'The number of points on an elliptic curve over $\\mathbb{F}_p$',
       'The j-invariant of a curve',
-      'Optimal curve parameters'
+      'Optimal curve parameters',
+      'The number of points on an elliptic curve over $\\mathbb{F}_p
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Schoof\'s algorithm counts $\\#E(\\mathbb{F}_p)$ in polynomial time.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Schoof\'s algorithm counts $\\#E(\\mathbb{F}_p)$ in polynomial time.',
   },
@@ -49,11 +53,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'ECPP is compared to which deterministic primality test?',
     options: [
       'Miller-Rabin',
-      'Fermat test',
       'AKS',
+      'Fermat test',
       'Lucas test'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'AKS is deterministic polynomial-time, but ECPP is faster in practice.',
   },

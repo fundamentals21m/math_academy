@@ -20,12 +20,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If an asset is used as collateral with 80% loan-to-value twice in succession, what is the total "exposure" relative to the original collateral?',
     options: [
+      '144%',
       '80%',
       '160%',
-      '144%',
-      '180%'
+      '180%',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'First loan: 80% of original. Second loan (on the borrowed amount): 80% × 80% = 64%. Total exposure: 80% + 64% = 144% of the original collateral—more debt than underlying value.',
   },
@@ -35,11 +35,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'What does the rehypothecation math reveal about DeFi\'s apparent robustness?',
     options: [
       'DeFi is very well collateralized',
-      'The same underlying collateral may support far more "value" than it can actually back',
+      'DeFi is safer than traditional finance',
       'Collateralization ratios are accurate',
-      'DeFi is safer than traditional finance'
+      'The same underlying collateral may support far more "value" than it can actually back'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The math shows that through rehypothecation, a relatively small base of actual collateral can appear to secure a much larger amount of positions—hiding systemic fragility.',
   },

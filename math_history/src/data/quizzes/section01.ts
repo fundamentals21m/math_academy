@@ -6,12 +6,28 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the first four triangular numbers?',
     options: [
-      '$1, 2, 3, 4$',
-      '$1, 3, 6, 10$',
-      '$1, 4, 9, 16$',
-      '$2, 4, 6, 8$'
+      '$1, 2, 3, 4
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Triangular numbers are: $T_1=1$, $T_2=1+2=3$, $T_3=1+2+3=6$, $T_4=1+2+3+4=10$.',
+  },
+      '$1, 4, 9, 16
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Triangular numbers are: $T_1=1$, $T_2=1+2=3$, $T_3=1+2+3=6$, $T_4=1+2+3+4=10$.',
+  },
+      '$1, 3, 6, 10
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Triangular numbers are: $T_1=1$, $T_2=1+2=3$, $T_3=1+2+3=6$, $T_4=1+2+3+4=10$.',
+  },
+      '$2, 4, 6, 8
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Triangular numbers are: $T_1=1$, $T_2=1+2=3$, $T_3=1+2+3=6$, $T_4=1+2+3+4=10$.',
+  },
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Triangular numbers are: $T_1=1$, $T_2=1+2=3$, $T_3=1+2+3=6$, $T_4=1+2+3+4=10$.',
   },
@@ -29,12 +45,28 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sum $1 + 3 + 5 + 7 + 9$ equals:',
     options: [
-      '$16$',
-      '$20$',
-      '$25$',
-      '$36$'
+      '$25
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The sum of the first $n$ odd numbers equals $n^2$. Here we have 5 odd numbers, so the sum is $5^2 = 25$.',
+  },
+      '$16
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The sum of the first $n$ odd numbers equals $n^2$. Here we have 5 odd numbers, so the sum is $5^2 = 25$.',
+  },
+      '$20
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The sum of the first $n$ odd numbers equals $n^2$. Here we have 5 odd numbers, so the sum is $5^2 = 25$.',
+  },
+      '$36
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The sum of the first $n$ odd numbers equals $n^2$. Here we have 5 odd numbers, so the sum is $5^2 = 25$.',
+  },
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The sum of the first $n$ odd numbers equals $n^2$. Here we have 5 odd numbers, so the sum is $5^2 = 25$.',
   },
@@ -45,10 +77,10 @@ export const section01Questions: QuizQuestion[] = [
     options: [
       'They are equal',
       'One is longer than the other',
+      'They form a right angle',
       'Their ratio is a rational number',
-      'They form a right angle'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Two lengths are commensurable if they have a common measure, which is equivalent to their ratio being rational (expressible as a fraction).',
   },

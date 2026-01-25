@@ -1,0 +1,88 @@
+import type { QuizQuestion } from './types';
+
+export const section12Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'A financial contract is actuarially fair if:',
+    options: [
+      'The government guarantees the payments',
+      'Everyone receives the same payout',
+      'Expected present value of benefits equals premium paid',
+      'Returns exceed inflation',
+    ],
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Actuarial fairness means EPV of Benefits = Premium Paid. On average, accounting for mortality probabilities, you get back what you put in.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: '"Ex ante" fairness refers to:',
+    options: [
+      'Fairness after outcomes are known',
+      'Fairness for executives only',
+      'Fairness evaluated before knowing who will live or die',
+      'Fairness in hindsight',
+    ],
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Ex ante (before the fact) evaluates fairness in expectation—before we know outcomes. Actuarial fairness is an ex ante concept.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: '"Ex post" fairness in a tontine means:',
+    options: [
+      'No one gains or loses',
+      'Everyone receives exactly their contribution back',
+      'The administrator profits',
+      'Some members gain, others lose after outcomes are realized',
+    ],
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Ex post (after the fact), there will always be "winners" and "losers"—that\'s the nature of pooling. Early deaths receive less, long livers receive more.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'If a tontine is actuarially fair, then:',
+    options: [
+      'Everyone gets the same amount',
+      'There is no risk involved',
+      'Investment returns are guaranteed',
+      'No one is systematically exploited',
+    ],
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Actuarial fairness means no one is systematically exploited, expected returns equal investment, and variations come from luck, not unfair design.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The key insight for evaluating tontine fairness is to use:',
+    options: [
+      'Expected values before outcomes are known',
+      'Minimum guaranteed payouts',
+      'Actual payouts received',
+      'Maximum possible payouts',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Fairness must be evaluated before we know who will live or die—using expected values that account for mortality probabilities.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'To calculate actuarial fairness, we need to combine:',
+    options: [
+      'Investment returns and inflation',
+      'Survival probabilities and the time value of money',
+      'Historical data and future projections',
+      'Risk tolerance and age',
+    ],
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Actuarial fairness requires combining survival probabilities (how likely to be alive) with discounting (time value of money).',
+  },
+];

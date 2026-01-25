@@ -7,11 +7,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What is the starting point of praxeology according to Mises?',
     options: [
       'Economic data and statistics',
-      'The axiom that humans act purposefully',
       'Historical case studies',
-      'Mathematical models'
+      'The axiom that humans act purposefully',
+      'Mathematical models',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Praxeology begins with the self-evident axiom that humans act—that they employ means to achieve ends.',
   },
@@ -20,12 +20,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What distinguishes human action from mere reactive behavior?',
     options: [
+      'Purposeful employment of means toward ends',
       'The speed of the response',
       'The complexity of the movement',
-      'Purposeful employment of means toward ends',
-      'The involvement of the nervous system'
+      'The involvement of the nervous system',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Human action is characterized by conscious, purposeful behavior—using means to achieve desired ends—not just automatic reactions.',
   },
@@ -35,11 +35,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What is the relationship between economics and praxeology?',
     options: [
       'They are unrelated fields',
-      'Economics is the most developed branch of praxeology',
       'Praxeology is a subset of economics',
-      'Economics replaced praxeology'
+      'Economics replaced praxeology',
+      'Economics is the most developed branch of praxeology',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Economics is the best-developed branch of praxeology, which is the general science of human action.',
   },
@@ -50,8 +50,8 @@ export const section00Questions: QuizQuestion[] = [
     options: [
       'Perfect knowledge of outcomes',
       'Dissatisfaction with the present state and belief that action can improve it',
+      'Written planning',
       'Consultation with others',
-      'Written planning'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -62,12 +62,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does Mises argue that economics cannot be an empirical science like physics?',
     options: [
-      'Economic data is too hard to collect',
       'Controlled experiments with human societies are impossible',
+      'Economic data is too hard to collect',
       'Economists are not as smart as physicists',
       'Economic laws change over time'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Unlike physics, economics cannot conduct controlled experiments. We cannot create two identical societies to test different policies.',
   },
@@ -79,7 +79,7 @@ export const section00Questions: QuizQuestion[] = [
       'The Theory of Money and Credit',
       'Socialism',
       'Human Action',
-      'Liberalism'
+      'Liberalism',
     ],
     correctIndex: 2,
     difficulty: 'easy',

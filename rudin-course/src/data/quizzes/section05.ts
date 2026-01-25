@@ -7,11 +7,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'A complex number $z = a + bi$ has modulus $|z|$ defined as:',
     options: [
       '$a + b$',
-      '$a^2 + b^2$',
       '$\\sqrt{a^2 + b^2}$',
+      '$a^2 + b^2$',
       '$|a| + |b|$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The modulus (or absolute value) of $z = a + bi$ is $|z| = \\sqrt{a^2 + b^2}$, which represents the distance from $z$ to the origin in the complex plane.',
   },
@@ -21,11 +21,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'For complex numbers $z$ and $w$, which identity holds?',
     options: [
       '$|z + w| = |z| + |w|$',
-      '$|zw| = |z| \\cdot |w|$',
       '$|z/w| = |z| - |w|$',
+      '$|zw| = |z| \\cdot |w|$',
       '$|z - w| = ||z| - |w||$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The modulus is multiplicative: $|zw| = |z| \\cdot |w|$. The triangle inequality gives $|z + w| \\leq |z| + |w|$ (not equality in general).',
   },
@@ -35,11 +35,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'The complex conjugate of $z = a + bi$ is $\\bar{z} = a - bi$. What is $z \\cdot \\bar{z}$?',
     options: [
       '$a^2 - b^2$',
-      '$a^2 + b^2$',
+      '$2bi$',
       '$2a$',
-      '$2bi$'
+      '$a^2 + b^2$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$z \\cdot \\bar{z} = (a + bi)(a - bi) = a^2 - (bi)^2 = a^2 - b^2i^2 = a^2 + b^2 = |z|^2$.',
   },
@@ -48,12 +48,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The triangle inequality for complex numbers states:',
     options: [
-      '$|z + w| \\geq |z| + |w|$',
       '$|z + w| \\leq |z| + |w|$',
+      '$|z + w| \\geq |z| + |w|$',
       '$|z + w| = |z| + |w|$ if and only if $z = w$',
       '$|z - w| \\geq |z| - |w|$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The triangle inequality states $|z + w| \\leq |z| + |w|$. Equality holds if and only if one of $z, w$ is a nonnegative real multiple of the other.',
   },
@@ -63,11 +63,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'If $|z| = 1$, then $z^{-1}$ equals:',
     options: [
       '$z$',
-      '$-z$',
       '$\\bar{z}$',
+      '$-z$',
       '$1/\\bar{z}$'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Since $z \\cdot \\bar{z} = |z|^2 = 1$ when $|z| = 1$, we have $z^{-1} = \\bar{z}$. In general, $z^{-1} = \\bar{z}/|z|^2$.',
   },

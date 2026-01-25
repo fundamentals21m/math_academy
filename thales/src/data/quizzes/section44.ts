@@ -9,12 +9,12 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What algorithm naturally produces continued fractions?',
     options: [
-      'The Sieve of Eratosthenes',
       'Euclid\'s Algorithm',
+      'The Sieve of Eratosthenes',
       'Newton\'s Method',
-      'Gaussian elimination',
+      'Gaussian elimination'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Euclid\'s Algorithm for finding the GCD naturally produces continued fractions. The sequence of quotients in the divisions becomes the sequence of partial quotients.',
@@ -49,12 +49,12 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the "convergents" of a continued fraction?',
     options: [
-      'The partial quotients',
       'The finite truncations that approximate the value',
-      'The remainders in Euclid\'s Algorithm',
+      'The partial quotients',
+      'The remainders in Euclid\\'s Algorithm',
       'The denominators only',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Convergents are the rational approximations obtained by truncating the continued fraction: c₀ = a₀, c₁ = (a₀, a₁), c₂ = (a₀, a₁, a₂), etc.',
@@ -66,10 +66,10 @@ export const section44Questions: QuizQuestion[] = [
     options: [
       'pₙ = aₙ + pₙ₋₁',
       'pₙ = aₙ × pₙ₋₁',
-      'pₙ = aₙpₙ₋₁ + pₙ₋₂',
       'pₙ = pₙ₋₁ + pₙ₋₂',
+      'pₙ = aₙpₙ₋₁ + pₙ₋₂'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The recurrence for numerators is pₙ = aₙpₙ₋₁ + pₙ₋₂, starting with p₀ = a₀ and p₁ = a₀a₁ + 1. The same recurrence applies to denominators qₙ.',
@@ -89,12 +89,12 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which numbers have finite continued fraction expansions?',
     options: [
-      'All real numbers',
-      'Only integers',
       'Rational numbers',
-      'Irrational numbers',
+      'Only integers',
+      'All real numbers',
+      'Irrational numbers'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Rational numbers have finite continued fraction expansions (from Euclid\'s Algorithm terminating). Irrational numbers have infinite expansions.',
