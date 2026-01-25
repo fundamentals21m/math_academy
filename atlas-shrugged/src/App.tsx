@@ -9,7 +9,7 @@ import { ErrorDisplay } from '@shared/components/ErrorDisplay';
 import { LoadingSpinner } from '@shared/components/common/LoadingSpinner';
 import { Header, Sidebar } from '@shared/components/layout';
 import { AchievementToastContainer } from '@/components/gamification';
-import { COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL, FEATURES } from '@/config';
+import { COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL, FEATURES, YOUTUBE_PLAYLIST_URL } from '@/config';
 import { curriculum } from '@/data/curriculum';
 
 // Eagerly load Home since it's the landing page
@@ -53,6 +53,7 @@ const courseConfig: CourseConfig = {
       title: section.title,
     })),
   })),
+  youtubePlaylistUrl: YOUTUBE_PLAYLIST_URL,
 };
 
 function SectionRouter() {

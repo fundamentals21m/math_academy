@@ -8,10 +8,10 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'Sells them to the government',
       'Expands production dramatically',
-      'Donates them to charity',
       'Sets them on fire and disappears',
+      'Donates them to charity'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Ellis Wyatt destroys his own oil fields by setting them ablaze, refusing to let the looters seize his life\'s work.',
   },
@@ -21,11 +21,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'What is "Wyatt\'s Torch" in the novel?',
     options: [
       'A type of lamp he invented',
-      'The perpetually burning fire from his destroyed oil fields',
       'A landmark building',
       'A brand of cigarettes',
+      'The perpetually burning fire from his destroyed oil fields'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Wyatt\'s Torch is the eternally burning fire from the oil fields Ellis Wyatt destroyed, becoming a symbol visible across the landscape.',
   },
@@ -34,12 +34,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does Ellis Wyatt destroy his own oil fields?',
     options: [
+      'To prevent the government from seizing them through new regulations',
       'Because they were unprofitable',
       'Due to an accident',
-      'To prevent the government from seizing them through new regulations',
-      'To claim insurance money',
+      'To claim insurance money'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Wyatt destroys his fields rather than surrender them to regulations that would force him to work for those who did not earn his achievement.',
   },
@@ -48,12 +48,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What message does Wyatt leave behind?',
     options: [
-      '"I am leaving it as I found it. Take over. It\\\\'s yours."',
       'An apology for his failure',
+      '"I am leaving it as I found it. Take over. It\'s yours."',
       'Instructions for running the oil fields',
-      'A threat against the government',
+      'A threat against the government'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Wyatt\'s message is a challenge to the looters: the oil fields existed only because of his mind, and without him, they have nothing.',
   },
@@ -64,10 +64,10 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'Hope for the future',
       'The power of government',
-      'Environmental concerns',
       'The destruction that follows when producers are driven out',
+      'Environmental concerns'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Wyatt\'s Torch serves as a constant visual reminder of what happens when society drives away its producers - wealth literally going up in flames.',
   },
@@ -78,10 +78,10 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'Property belongs to society ultimately',
       'The government should protect private property',
-      'A creator has the right to destroy what he created rather than surrender it',
       'Destruction is never justified',
+      'A creator has the right to destroy what he created rather than surrender it'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Wyatt\'s destruction asserts that what he created through his own mind and effort is his to dispose of as he chooses, not society\'s to seize.',
   },

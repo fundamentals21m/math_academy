@@ -6,12 +6,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the model, what does the populace primarily seek?',
     options: [
-      'Security and freedom from oppression',
       'Political offices',
       'Noble titles',
-      'Military command',
+      'Security and freedom from oppression',
+      'Military command'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The populace seeks security, adequate consumption, and freedom from aristocratic oppression.',
   },
@@ -23,7 +23,7 @@ export const section06Questions: QuizQuestion[] = [
       'Religious authority',
       'Foreign alliances',
       'Popular approval',
-      'Disproportionate share of economic output',
+      'Disproportionate share of economic output'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -34,12 +34,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What tension does the executive face regarding the populace and aristocracy?',
     options: [
+      'Satisfying one tends to dissatisfy the other',
       'They have identical interests',
       'Both always support the executive',
-      'Satisfying one tends to dissatisfy the other',
-      'Neither cares about the executive',
+      'Neither cares about the executive'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The executive faces a fundamental tension: policies that please one faction often displease the other.',
   },
@@ -51,7 +51,7 @@ export const section06Questions: QuizQuestion[] = [
       'The aristocracy, always',
       'The populace, as they are more numerous',
       'Neither—perfect neutrality is required',
-      'Whichever is currently stronger',
+      'Whichever is currently stronger'
     ],
     correctIndex: 1,
     difficulty: 'medium',

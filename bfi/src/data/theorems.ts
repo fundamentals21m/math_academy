@@ -36,32 +36,667 @@ interface TheoremEntryWithProof extends TheoremEntryBase {
 export type TheoremEntry = TheoremEntryWithoutProof | TheoremEntryWithProof;
 
 export const theorems: TheoremEntry[] = [
+  // =============================================================================
+  // SECTION 0: INTRODUCTION - KEY CONCEPTS
+  // =============================================================================
   {
-    id: 'def-sample',
-    title: 'Sample Definition',
-    statement: 'A function $f: A \\to B$ is a mapping from set $A$ to set $B$.',
-    sectionId: 1,
-    category: 'Fundamentals',
+    id: 'bfi-001',
+    title: 'Hard Money',
+    statement: 'Money that is difficult to produce and easy to verify, enabling capital accumulation and rational economic calculation. Bitcoin is the hardest money ever created with a fixed supply cap of 21 million.',
+    sectionId: 0,
+    sectionTitle: 'Introduction',
+    category: 'Economics',
     type: 'definition',
   },
   {
-    id: 'thm-sample',
-    title: 'Sample Theorem',
-    statement: 'If $A \\subseteq B$ and $B \\subseteq A$, then $A = B$',
+    id: 'bfi-002',
+    title: 'Bearer Asset',
+    statement: 'An asset that grants ownership to whoever possesses it, without requiring any intermediary to validate the claim. Bitcoin is a digital bearer asset where private key holders control the bitcoin with no counterparty risk.',
+    sectionId: 0,
+    sectionTitle: 'Introduction',
+    category: 'Self-Custody',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-003',
+    title: 'Circular Economy',
+    statement: 'An economic system where goods and services are exchanged directly for Bitcoin without converting back to fiat currency. Individuals who build circular economies have more powerful Bitcoin than those who simply accumulate.',
+    sectionId: 0,
+    sectionTitle: 'Introduction',
+    category: 'Economics',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-004',
+    title: 'Counterparty Risk',
+    statement: 'The risk that another party in a financial transaction will fail to fulfill their obligations. Institutional Bitcoin often introduces counterparty risks that self-custody eliminates.',
+    sectionId: 0,
+    sectionTitle: 'Introduction',
+    category: 'Risk Management',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-005',
+    title: 'Time Preference',
+    statement: 'The relative valuation placed on present goods versus future goods. Individuals typically have lower time preference than institutions, giving them an advantage in holding Bitcoin long-term.',
+    sectionId: 0,
+    sectionTitle: 'Introduction',
+    category: 'Economics',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-006',
+    title: 'Soft Money',
+    statement: 'Money decreed into existence by a central authority that can be printed without inherent production constraints, representing a form of tyranny. Bitcoin frees individuals from the tyranny of soft money.',
+    sectionId: 0,
+    sectionTitle: 'Introduction',
+    category: 'Hard Money',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-007',
+    title: 'Power of Capital',
+    statement: 'While all bitcoin is fungible, the power of capital is determined by its owner. Those with earning potential and value-add capabilities have more powerful capital than passive accumulators.',
+    sectionId: 0,
+    sectionTitle: 'Introduction',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 1: HODL'ING AND INSTITUTIONAL BEHAVIOR
+  // =============================================================================
+  {
+    id: 'bfi-008',
+    title: "HODL'ing is Irrational",
+    statement: "HODL'ing requires a willful ability to resist selling pressure that institutions are structurally incapable of executing. This ability is difficult to model into software and even more difficult through corporate governance structures.",
+    sectionId: 1,
+    sectionTitle: "HODL'ing",
+    category: 'Game Theory',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-009',
+    title: 'Human Action Principle',
+    statement: 'Human action is based on removing the largest source of dissatisfaction that can be removed at the lowest cost at a given moment. This explains why institutions will pressure executives to sell Bitcoin during adverse conditions.',
+    sectionId: 1,
+    sectionTitle: "HODL'ing",
+    category: 'Game Theory',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-010',
+    title: 'Fiduciary Duty vs. Job Security',
+    statement: 'While executives are legally bound to fiduciary duties, job security often proves a more powerful incentive in practice. This explains why institutional actors may not optimize for shareholder value when facing reputational risks.',
+    sectionId: 1,
+    sectionTitle: "HODL'ing",
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 2: BITCOIN'S DEFLATIONARY NATURE
+  // =============================================================================
+  {
+    id: 'bfi-011',
+    title: 'Deflationary Nature of Bitcoin',
+    statement: 'Bitcoin has a fixed supply cap of 21 million units, programmed to reach 0% new issuance by 2140. Bitcoin is already less inflationary than gold (~0.8% vs ~1.5%), making it the largest fixed-supply asset on Earth.',
     sectionId: 2,
-    category: 'Fundamentals',
-    type: 'theorem',
-    hasProof: true,
-    proof: `
-      Let $x \\in A$. Since $A \\subseteq B$, we have $x \\in B$ by definition of subset.
-      Therefore, every element of $A$ is in $B$.
-      
-      Now, let $y \\in B$. Since $B \\subseteq A$, we have $y \\in A$ by definition.
-      Therefore, every element of $B$ is in $A$.
-      
-      Since $A \\subseteq B$ and $B \\subseteq A$, the two sets contain exactly the same elements.
-      Thus, $A = B$.
-    `,
+    sectionTitle: 'Deflation',
+    category: 'Hard Money',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-012',
+    title: 'Monetary Absorption',
+    statement: 'When inserted into a landscape of vastly inflationary monies, supply-capped bitcoin will absorb the monetary energy of its peers as savers naturally seek superior properties.',
+    sectionId: 2,
+    sectionTitle: 'Deflation',
+    category: 'Economics',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-013',
+    title: 'Time Value of Money Problem',
+    statement: "Deflation or lack of inflation is a foreign concept to institutional accounting, where Present Value is the common framework. This makes Bitcoin's future value narrative counterintuitive to institutional frameworks designed for inflation.",
+    sectionId: 2,
+    sectionTitle: 'Deflation',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-014',
+    title: 'Present Value Illusion',
+    statement: 'Using Present Value as a benchmark masks the debasement of expected future payoffs and colors incentives of debt issuers. Future Value thinking is required to properly understand Bitcoin.',
+    sectionId: 2,
+    sectionTitle: 'Deflation',
+    category: 'Economics',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-015',
+    title: 'Shift to Future Value Thinking',
+    statement: 'Institutions must focus on Future Value opposed to Present Value to utilize Bitcoin intelligently and protect purchasing power. This pivot is more intuitive for individuals than institutions.',
+    sectionId: 2,
+    sectionTitle: 'Deflation',
+    category: 'Economics',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 3: CUSTODY AND ETF RISKS
+  // =============================================================================
+  {
+    id: 'bfi-016',
+    title: 'No Bailout Possible in Bitcoin',
+    statement: 'Mistakes that make Bitcoin unspendable are permanent and irreversible. There is no bailout mechanism, distinguishing Bitcoin from fiat where central banks can intervene.',
+    sectionId: 3,
+    sectionTitle: 'Custody Risks',
+    category: 'Self-Custody',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-017',
+    title: 'Custody Failure Catastrophe',
+    statement: 'Institutional custody failures could destroy trillions in value and potentially take down portions of the financial system. If a major ETF custodian fails, assets could be permanently lost.',
+    sectionId: 3,
+    sectionTitle: 'Custody Risks',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-018',
+    title: 'Transaction Malleability Problem',
+    statement: "Pre-Segwit addresses are vulnerable to transaction malleability attacks, a critical flaw that led to Mt. Gox's legendary failure. Legacy custody technology predates Segwit best practices.",
+    sectionId: 3,
+    sectionTitle: 'Custody Risks',
+    category: 'Risk Management',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-019',
+    title: 'ETF Tradeoff',
+    statement: 'ETFs provide price exposure and accessibility but at enormous levels of counterparty risk and custody dependence. True Bitcoin ownership through self-custody remains superior for those capable of managing it.',
+    sectionId: 3,
+    sectionTitle: 'Custody Risks',
+    category: 'Self-Custody',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 4: BITCOIN MASTERY AND EXPERTISE
+  // =============================================================================
+  {
+    id: 'bfi-020',
+    title: 'Bitcoin Mastery Requirements',
+    statement: 'Understanding Bitcoin requires minimal competence across multiple disparate fields: Austrian Economics, Computer Science, History, Mathematics, Game Theory, and Cryptography.',
+    sectionId: 4,
+    sectionTitle: 'Bitcoin Mastery',
+    category: 'Education',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-021',
+    title: 'Scarcity of Bitcoin Expertise',
+    statement: "Arguably, there aren't more than 5,000 people on Earth with the mastery required to successfully implement institutional Bitcoin strategies. This expertise scarcity represents a major barrier to institutional adoption.",
+    sectionId: 4,
+    sectionTitle: 'Bitcoin Mastery',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-022',
+    title: 'Multi-Year Implementation Timeline',
+    statement: "The timeframe from recognizing Bitcoin as a solution to gaining understanding for successful implementation is multi-year and closer to a human lifetime than a quarter. Companies thinking in quarters cannot align with Bitcoin's mastery requirements.",
+    sectionId: 4,
+    sectionTitle: 'Bitcoin Mastery',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 5: BEARER ASSET ADVANTAGES
+  // =============================================================================
+  {
+    id: 'bfi-023',
+    title: 'Bearer Asset Ownership',
+    statement: "A bearer asset's ownership is entirely determined by physical or digital possession, without registration or identity verification. Bitcoin represents the most advanced form of bearer asset ever created.",
+    sectionId: 5,
+    sectionTitle: 'Bearer Assets',
+    category: 'Self-Custody',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-024',
+    title: 'Custody Cost Problem for Physical Assets',
+    statement: 'The cost of custodying physical bearer assets like gold is prohibitively expensive, requiring military-level security and expensive validation. Bitcoin solves this fundamental problem.',
+    sectionId: 5,
+    sectionTitle: 'Bearer Assets',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-025',
+    title: 'Non-Physical Bearer Asset Advantage',
+    statement: "Bitcoin's non-physical nature makes it the most powerful bearer asset ever created. It cannot be stolen through violence and can be stored in mind via a 12-24 word seed phrase.",
+    sectionId: 5,
+    sectionTitle: 'Bearer Assets',
+    category: 'Self-Custody',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-026',
+    title: 'Institutional Discount on Bitcoin',
+    statement: 'Individuals place a significant premium on bearer ownership and apply a deep discount to every layer of institutional ownership. Institutions compete with individuals willing to pay more for true ownership.',
+    sectionId: 5,
+    sectionTitle: 'Bearer Assets',
+    category: 'Game Theory',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-027',
+    title: 'Monetary Sovereignty',
+    statement: 'The ability to sell all assets and put value on a seed phrase enabling movement anywhere in the world represents a level of sovereignty previously unavailable to humans.',
+    sectionId: 5,
+    sectionTitle: 'Bearer Assets',
+    category: 'Self-Custody',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 6: FINANCIAL SURVEILLANCE AND FREEDOM
+  // =============================================================================
+  {
+    id: 'bfi-028',
+    title: 'CBDC Totalitarian Risk',
+    statement: "Central Bank Digital Currencies create risk of totalitarian panopticon around money and spending. Bitcoin's privacy features become increasingly valuable as governments tighten monetary control.",
+    sectionId: 6,
+    sectionTitle: 'Financial Freedom',
+    category: 'Economics',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-029',
+    title: 'Freedom to Transact',
+    statement: 'The freedom to transact is a natural right and natural extension of free speech. Without it, truly free markets cannot exist. Bitcoin enables permissionless transactions.',
+    sectionId: 6,
+    sectionTitle: 'Financial Freedom',
+    category: 'Economics',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-030',
+    title: 'KYC/AML Weaponization',
+    statement: 'Know Your Customer and Anti-Money Laundering regulations have been weaponized to strangle innovation despite most crime occurring in dollars. These regulations force honest companies out while criminals operate freely.',
+    sectionId: 6,
+    sectionTitle: 'Financial Freedom',
+    category: 'Economics',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-031',
+    title: 'Financial Surveillance Capability',
+    statement: 'Governments can block crowdfunding platforms, freeze bank accounts, and cancel credit cards for legal activities they oppose. This demonstrates unprecedented financial surveillance power.',
+    sectionId: 6,
+    sectionTitle: 'Financial Freedom',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-032',
+    title: 'Censorship-Resistant Money',
+    statement: 'Bitcoin held in self-custody cannot be blocked, frozen, or redirected by any government, providing censorship resistance when governments weaponize traditional financial infrastructure.',
+    sectionId: 6,
+    sectionTitle: 'Financial Freedom',
+    category: 'Self-Custody',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 7: CORPORATE TREASURY STRATEGY
+  // =============================================================================
+  {
+    id: 'bfi-033',
+    title: 'Thermodynamically Sound Digital Real Estate',
+    statement: "Bitcoin should be understood not as 'Magic Internet Money' but as thermodynamically sound digital real estate with immutable properties.",
+    sectionId: 7,
+    sectionTitle: 'Corporate Treasury',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-034',
+    title: 'Cash is Melting Ice Cube',
+    statement: 'Every day a company holds cash, it loses purchasing power to monetary debasement. Bitcoin appreciates instead, redefining balance sheet strength from cash as safety to Bitcoin as superior preservation.',
+    sectionId: 7,
+    sectionTitle: 'Corporate Treasury',
+    category: 'Economics',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-035',
+    title: 'Convertible Debt Strategy',
+    statement: 'Companies can use convertible debt at near-zero coupon rates to acquire Bitcoin, betting appreciation exceeds borrowing costs. This accelerates Bitcoin accumulation using corporate finance.',
+    sectionId: 7,
+    sectionTitle: 'Corporate Treasury',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-036',
+    title: 'Dominant Individual Requirement',
+    statement: 'Institutional success with Bitcoin requires a dominant individual with conviction to overcome institutional pressure to sell. Without such leadership, institutions will capitulate.',
+    sectionId: 7,
+    sectionTitle: 'Corporate Treasury',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 8: PORTFOLIO THEORY DISRUPTION
+  // =============================================================================
+  {
+    id: 'bfi-037',
+    title: 'Risk-Free Asset Illusion',
+    statement: "The structural underpinning of every investment portfolio—the idea of 'risk-free assets'—was devastated when bonds lost 30-50%. This shattered Modern Portfolio Theory.",
+    sectionId: 8,
+    sectionTitle: 'Portfolio Theory',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-038',
+    title: 'Liability Driven Investing Failure',
+    statement: 'LDI strategies failed spectacularly when interest rates reversed, requiring emergency central bank intervention. Companies had leveraged bond gains via borrowing, creating systemic fragility.',
+    sectionId: 8,
+    sectionTitle: 'Portfolio Theory',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-039',
+    title: 'New Efficient Frontier',
+    statement: "With bonds no longer 'risk-free,' Bitcoin offers low correlation, superior long-term returns, inflation hedge properties, and no counterparty risk. Bitcoin may become the new foundation for portfolio construction.",
+    sectionId: 8,
+    sectionTitle: 'Portfolio Theory',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-040',
+    title: 'IBIT Record Breaking Success',
+    statement: "BlackRock's IBIT became the fastest ETF to reach $10B, $20B, $30B, $40B, and $50B AUM, validating Bitcoin as institutional asset class and suggesting massive pent-up institutional demand.",
+    sectionId: 8,
+    sectionTitle: 'Portfolio Theory',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 9: DEFERRED COMPENSATION
+  // =============================================================================
+  {
+    id: 'bfi-041',
+    title: 'Non-Qualified Deferred Compensation',
+    statement: "NQDC plans have no contribution limits, broad investment discretion, and can offer Bitcoin when 401(k)s cannot. Executives can defer unlimited amounts, making NQDC ideal for significant Bitcoin accumulation.",
+    sectionId: 9,
+    sectionTitle: 'Deferred Compensation',
+    category: 'Institutional Strategy',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-042',
+    title: 'ERISA Tradeoff',
+    statement: "NQDC participants are unsecured creditors riding the wave with the company's fate. If the company fails, they may lose deferred compensation. This is the cost of unlimited contribution flexibility.",
+    sectionId: 9,
+    sectionTitle: 'Deferred Compensation',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-043',
+    title: 'Direct Treasury Superiority',
+    statement: 'Holding a Bitcoin treasury and using it instead of ETFs eliminates counterparty credit risk entirely. This is the superior long-term strategy compared to ETF-based programs.',
+    sectionId: 9,
+    sectionTitle: 'Deferred Compensation',
+    category: 'Self-Custody',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-044',
+    title: 'Tax-Deferred Growth Advantage',
+    statement: "Bitcoin's volatility becomes less relevant when gains compound tax-free for decades in NQDC or pension plans. This aligns long-term compounding with Bitcoin's optimal holding period.",
+    sectionId: 9,
+    sectionTitle: 'Deferred Compensation',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 10: ETF DYNAMICS
+  // =============================================================================
+  {
+    id: 'bfi-045',
+    title: 'Fiduciary Calculus Shift',
+    statement: "The liability exposure is shifting from fiduciaries fearing Bitcoin drawdowns to fearing exclusion when Bitcoin appreciates significantly while competitors include it. Drawdowns are temporary while missing appreciation is permanent.",
+    sectionId: 10,
+    sectionTitle: 'ETF Dynamics',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-046',
+    title: 'Unintentional Short Bitcoin',
+    statement: 'Funds holding banks, payment processors, fiat currencies, long-duration bonds, and gold miners may be structurally short Bitcoin. These assets compete with Bitcoin and will lose to it over time.',
+    sectionId: 10,
+    sectionTitle: 'ETF Dynamics',
+    category: 'Game Theory',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-047',
+    title: 'Target Date Fund Opportunity',
+    statement: "Target date funds hold trillions in assets with 30-40 year horizons perfect for Bitcoin's volatility profile. Even 1% allocation represents massive demand.",
+    sectionId: 10,
+    sectionTitle: 'ETF Dynamics',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 11: ACCOUNTING AND TREASURY
+  // =============================================================================
+  {
+    id: 'bfi-048',
+    title: 'Mark-to-Market Treatment (ASU 2023-08)',
+    statement: "FASB's ASU 2023-08 enables mark-to-market accounting for Bitcoin, removing the goodwill treatment barrier that discouraged corporate adoption. Companies can now report Bitcoin at current market value.",
+    sectionId: 11,
+    sectionTitle: 'Treasury Accounting',
+    category: 'Institutional Strategy',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-049',
+    title: 'Bitcoin Treasury Optionality',
+    statement: 'A company holding Bitcoin treasury has optionality advantage over competitors. They can hold for appreciation or deploy to lower operating costs, providing flexibility not available to cash holders.',
+    sectionId: 11,
+    sectionTitle: 'Treasury Accounting',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-050',
+    title: 'Operating Profitability Enhancement',
+    statement: 'Companies can systematically sell Bitcoin gains and include them in operating revenue, improving operating profitability. This creates genuine cost reduction because Bitcoin outperforms USD by design.',
+    sectionId: 11,
+    sectionTitle: 'Treasury Accounting',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-051',
+    title: 'Bitcoin as Money',
+    statement: 'Bitcoin is money—the hardest money ever—and not a return-bearing asset, though its monetary properties create purchasing power preservation. This distinction is critical for understanding treasury deployment.',
+    sectionId: 11,
+    sectionTitle: 'Treasury Accounting',
+    category: 'Hard Money',
+    type: 'definition',
+  },
+
+  // =============================================================================
+  // SECTION 12: CREDIT AND COLLATERAL
+  // =============================================================================
+  {
+    id: 'bfi-052',
+    title: 'Creditworthiness Definition',
+    statement: 'Credit is built on trust and trustworthiness characterized by creditworthiness—the ability and willingness to honor obligations. Bitcoin collateral redefines what creditworthiness means.',
+    sectionId: 12,
+    sectionTitle: 'Credit and Collateral',
+    category: 'Economics',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-053',
+    title: 'Collateral Devaluation Cycle',
+    statement: 'The story of virtually every market crash involves collateral becoming devalued significantly over short periods, triggering cascade failures. Traditional collateral has proven unreliable.',
+    sectionId: 12,
+    sectionTitle: 'Credit and Collateral',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-054',
+    title: 'Fiat Debt System Logic',
+    statement: 'In a world of inflationary money, it makes sense to borrow now and pay back with debased currency. Bitcoin changes this incentive structure by preventing debasement.',
+    sectionId: 12,
+    sectionTitle: 'Credit and Collateral',
+    category: 'Economics',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-055',
+    title: 'Bitcoin Collateral Features',
+    statement: "Bitcoin can be used as 10-30% of collateral without mark-to-market triggers for minimum 4 years, with shared upside and lower interest rates. This aligns loan duration with Bitcoin's four-year halving cycle.",
+    sectionId: 12,
+    sectionTitle: 'Credit and Collateral',
+    category: 'Institutional Strategy',
+    type: 'definition',
+  },
+  {
+    id: 'bfi-056',
+    title: 'Behavioral Subordination',
+    statement: 'Bitcoin-collateralized loans become most senior loans behaviorally. Borrowers will sacrifice any other asset before losing Bitcoin, creating AAA-equivalent credit quality regardless of contractual priority.',
+    sectionId: 12,
+    sectionTitle: 'Credit and Collateral',
+    category: 'Game Theory',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-057',
+    title: 'Degen vs. Saver Borrower Behavior',
+    statement: 'Both degens (reckless borrowers) and savers will absolutely prioritize Bitcoin-collateralized loans, creating alignment regardless of borrower profile. This behavioral universality makes Bitcoin collateral reliable.',
+    sectionId: 12,
+    sectionTitle: 'Credit and Collateral',
+    category: 'Game Theory',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 13: PENSION STRATEGIES
+  // =============================================================================
+  {
+    id: 'bfi-058',
+    title: 'Tax-Qualified Pension Advantage',
+    statement: "Tax-qualified pension plans don't ever pay capital gains tax on investments, making them ideal for accumulating Bitcoin gains tax-free.",
+    sectionId: 13,
+    sectionTitle: 'Pensions',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-059',
+    title: 'Pulling the Goalie Strategy',
+    statement: 'When losing near game end, teams pull the goalie to increase volatility—an insurance move that reduces risk of losing. For pensions, increasing Bitcoin volatility is correct risk measure for winning obligation game.',
+    sectionId: 13,
+    sectionTitle: 'Pensions',
+    category: 'Game Theory',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-060',
+    title: 'Right Risk Paradigm',
+    statement: "The right risk measure for pensions isn't volatility of returns but probability of meeting obligations. Bitcoin increases winning odds. Traditional Portfolio Theory measures wrong risk.",
+    sectionId: 13,
+    sectionTitle: 'Pensions',
+    category: 'Risk Management',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-061',
+    title: '100% Bitcoin Allocation for Pensions',
+    statement: 'Given medium-term problem horizon and ability to survive two Bitcoin halving cycles (eight years), 100% allocation is justified for pensions. Limited bailout availability argues for maximum volatility bet.',
+    sectionId: 13,
+    sectionTitle: 'Pensions',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-062',
+    title: 'Six Minutes Left Metaphor',
+    statement: 'There are approximately six minutes left in the game—sufficient time to pull the goalie. Bitcoin is ready. This captures the urgency of institutional Bitcoin adoption.',
+    sectionId: 13,
+    sectionTitle: 'Pensions',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+
+  // =============================================================================
+  // SECTION 14: METRICS AND FRAMEWORKS
+  // =============================================================================
+  {
+    id: 'bfi-063',
+    title: 'Inadequate Reporting Problem',
+    statement: 'Agency problems are driven by inadequate reporting. Pension managers only saw asset returns, not liability-adjusted performance. This causes Bitcoin adoption delays unless reporting improves.',
+    sectionId: 14,
+    sectionTitle: 'Metrics and Frameworks',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-064',
+    title: 'Accounting Standards Shape Behavior',
+    statement: 'FAS87 and FAS132 pension accounting caused irrational equity allocations by masking performance via Expected Return on Assets smoothing. Goodwill treatment similarly discouraged corporate Bitcoin adoption.',
+    sectionId: 14,
+    sectionTitle: 'Metrics and Frameworks',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-065',
+    title: 'New Metrics Required',
+    statement: 'Each institution type needs Bitcoin-specific metrics: Pensions need funded status/termination timeline, corporates need future value focus, credit needs subordination redefinition.',
+    sectionId: 14,
+    sectionTitle: 'Metrics and Frameworks',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-066',
+    title: 'Institutional Incentive Problem',
+    statement: 'The ruthless intractability of institutional incentives determines outcomes more than logic—the core barrier to Bitcoin adoption. Career risk prevents even obviously correct decisions.',
+    sectionId: 14,
+    sectionTitle: 'Metrics and Frameworks',
+    category: 'Institutional Strategy',
+    type: 'proposition',
+  },
+  {
+    id: 'bfi-067',
+    title: 'Transcending Financial System Failures',
+    statement: 'Bitcoin represents an opportunity to transcend systemic failures of previous financial systems—but only with proper institutional frameworks and metrics. Success requires developing right measurement frameworks.',
+    sectionId: 14,
+    sectionTitle: 'Metrics and Frameworks',
+    category: 'Economics',
+    type: 'proposition',
   },
 ];
 

@@ -6,12 +6,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does "The Face Without Pain or Fear or Guilt" represent?',
     options: [
+      'The ideal man who lives by reason without internal conflict',
       'A criminal who feels no remorse',
       'A person in denial about reality',
-      'Someone who has given up caring',
-      'The ideal man who lives by reason without internal conflict',
+      'Someone who has given up caring'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The face without pain, fear, or guilt represents the ideal human being—one who lives rationally, has nothing to hide, and experiences no conflict between his values and his actions.',
   },
@@ -21,11 +21,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'When does Dagny first glimpse this ideal?',
     options: [
       'In her childhood dreams',
-      'In a painting at a museum',
-      'In her memories of her father',
       'When she encounters someone who embodies rational living',
+      'In a painting at a museum',
+      'In her memories of her father'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Dagny glimpses this ideal when she encounters or perceives someone who lives without the contradictions and guilt that plague most people—someone whose face shows inner peace.',
   },
@@ -35,11 +35,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Why would such a person have no guilt?',
     options: [
       'They have never done anything wrong',
-      'Their actions align with their rational values',
       'They have no conscience',
-      'They have forgotten their past mistakes',
+      'Their actions align with their rational values',
+      'They have forgotten their past mistakes'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A person who lives by rational principles and never betrays their values has no reason for guilt. Guilt comes from acting against one\'s own judgment and values.',
   },
@@ -49,11 +49,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What does the absence of fear signify in this ideal person?',
     options: [
       'Physical bravery in dangerous situations',
-      'Confidence from living by one\\\\'s own mind',
       'Ignorance of threats',
       'Suppression of natural emotions',
+      'Confidence from living by one\'s own mind'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The absence of fear comes from knowing that one can rely on one\'s own mind to deal with reality. Fear is conquered by competence and the confidence of rational self-reliance.',
   },
@@ -62,12 +62,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is this vision significant for Dagny\'s journey?',
     options: [
+      'It confirms that her values are achievable in reality',
       'It makes her want to give up her work',
       'It frightens her into conformity',
-      'It confirms that her values are achievable in reality',
-      'It has no lasting impact on her',
+      'It has no lasting impact on her'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The vision is crucial because it shows Dagny that the ideal she has always sought actually exists—that humans can live without the contradictions imposed by irrational morality.',
   },
@@ -76,12 +76,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What philosophical concept does this ideal face embody?',
     options: [
-      'The integration of mind and values into a unified whole',
       'The primacy of emotions',
+      'The integration of mind and values into a unified whole',
       'The rejection of all standards',
-      'The acceptance of original sin',
+      'The acceptance of original sin'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The ideal face embodies the integration of reason and values—a person whose thoughts, emotions, and actions are all consistent, with no internal warfare or contradiction.',
   },

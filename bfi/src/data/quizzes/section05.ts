@@ -6,12 +6,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a bearer asset?',
     options: [
-      'An asset that requires government approval to own',
-      'An asset that generates regular income',
       'An asset where ownership is determined by physical possession, not registration',
+      'An asset that generates regular income',
       'An asset held by a financial institution',
+      'An asset that requires government approval to own'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A bearer asset is a type of financial asset where ownership is determined by physical possession, rather than by registration or the holder\'s identity.'
   },
@@ -23,7 +23,7 @@ export const section05Questions: QuizQuestion[] = [
       '1929 (Great Depression)',
       '1971 (Nixon closed the gold window)',
       '1944 (Bretton Woods)',
-      '2008 (Financial Crisis)',
+      '2008 (Financial Crisis)'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -36,10 +36,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'It generates the highest returns',
       'It is backed by the most governments',
-      'It has the longest history',
       'It is non-physical, easy to validate, and cannot be stolen through violence',
+      'It has the longest history'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Bitcoin\'s non-physical nature makes it the most powerful bearer asset - it cannot be stolen through violence, and unlimited wealth can be stored in a memorized 12-word seed.'
   },
@@ -48,12 +48,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What personal transformation occurs when taking self-custody of bitcoin?',
     options: [
-      'A level of individual sovereignty previously unavailable to humans',
       'Becoming a professional trader',
       'Guaranteed financial returns',
       'Automatic tax benefits',
+      'A level of individual sovereignty previously unavailable to humans'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Knowing one can sell everything, put it on a 12-word seed, and go anywhere in the world is a level of individual sovereignty previously unavailable to human beings.'
   },
@@ -62,12 +62,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What "discount" does the book say institutions must understand?',
     options: [
-      'Trading fee discounts on exchanges',
+      'A deep discount applied to every layer of institutional ownership they yield bearer power to',
       'Volume discounts on large bitcoin purchases',
       'Tax discounts for institutional investors',
-      'A deep discount applied to every layer of institutional ownership they yield bearer power to',
+      'Trading fee discounts on exchanges'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'People place a significant premium on bearer ownership and will apply a deep discount towards every layer of institutional ownership they have to yield this power to.'
   }

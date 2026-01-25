@@ -6,12 +6,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Rand, who are the true "exploiters" in society?',
     options: [
+      'Those who take from producers without giving value in return',
       'The workers in factories',
       'The industrialists and businessmen',
-      'Foreign competitors',
-      'Those who take from producers without giving value in return',
+      'Foreign competitors'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Rand inverts the traditional Marxist view, arguing that those who take from producers through force or manipulation are the true exploiters.',
   },
@@ -21,11 +21,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Who are the "exploited" according to this chapter\'s perspective?',
     options: [
       'Factory workers',
-      'Government employees',
-      'The poor and needy',
       'The productive individuals who create wealth',
+      'Government employees',
+      'The poor and needy'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The chapter argues that productive individuals - the creators of wealth - are exploited by those who claim their products through need or political force.',
   },
@@ -37,7 +37,7 @@ export const section06Questions: QuizQuestion[] = [
       'By denying that exploitation exists',
       'By blaming foreign countries',
       'By reversing who is exploiter and who is exploited',
-      'By focusing only on government exploitation',
+      'By focusing only on government exploitation'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -49,11 +49,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What mechanism allows exploitation of the productive, according to the chapter?',
     options: [
       'Physical force alone',
-      'Moral guilt and the altruist code',
       'Natural scarcity of resources',
       'Superior intelligence of exploiters',
+      'Moral guilt and the altruist code'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The chapter shows that producers are exploited through moral guilt - the altruist code that says they owe their products to others.',
   },
@@ -65,7 +65,7 @@ export const section06Questions: QuizQuestion[] = [
       'The parasitical system would collapse',
       'The exploiters would find other victims',
       'Society would become more equal',
-      'Government would restore order',
+      'Government would restore order'
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -76,12 +76,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What philosophical claim underlies the chapter\'s view of exploitation?',
     options: [
-      'Wealth is created by individual minds and rightfully belongs to creators',
       'Wealth is fixed and must be redistributed',
+      'Wealth is created by individual minds and rightfully belongs to creators',
       'All property is theft',
-      'The state should own all means of production',
+      'The state should own all means of production'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The chapter rests on the premise that wealth is created by individual rational effort and therefore rightfully belongs to those who create it.',
   },

@@ -7,11 +7,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'In Machiavelli\'s framework, corruption is primarily:',
     options: [
       'Individual moral failing',
-      'A structural condition of the political system',
       'Bribery only',
-      'Foreign influence',
+      'A structural condition of the political system',
+      'Foreign influence'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Corruption is a structural condition where normal feedback mechanisms have broken down.',
   },
@@ -20,12 +20,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "J-curve" in political dynamics?',
     options: [
-      'Revolutions occur when improving conditions suddenly reverse',
       'A type of economic graph',
       'A population growth pattern',
       'A military formation',
+      'Revolutions occur when improving conditions suddenly reverse'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The J-curve shows revolutions often occur when rising expectations are suddenly disappointed.',
   },
@@ -34,12 +34,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why can reform trigger instability?',
     options: [
+      'It raises expectations that may not be sustainable',
       'Reform is always bad',
       'People prefer suffering',
-      'Reforms are illegal',
-      'It raises expectations that may not be sustainable',
+      'Reforms are illegal'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Reform raises expectations; if improvements can\'t be sustained, the gap triggers instability.',
   },
@@ -49,11 +49,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What is the "reformer\'s dilemma"?',
     options: [
       'Choosing between good and evil',
-      'Reformers are always assassinated',
       'Reform can trigger the instability it aims to prevent',
-      'Reforms are too expensive',
+      'Reformers are always assassinated',
+      'Reforms are too expensive'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The reformer\'s dilemma is that well-intentioned reform can trigger destabilizing backlash.',
   },

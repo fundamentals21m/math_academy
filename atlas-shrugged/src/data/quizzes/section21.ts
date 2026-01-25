@@ -8,10 +8,10 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       'To mock the inhabitants as greedy',
       'To describe excessive materialism in the valley',
-      'To criticize the outside world\\\\'s economy',
-      'To reclaim "greed" as the rational pursuit of one\\\\'s own happiness',
+      'To reclaim "greed" as the rational pursuit of one\'s own happiness',
+      'To criticize the outside world\'s economy'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The title reclaims "greed" from its negative connotation. In Rand\'s view, the rational pursuit of one\'s own values and happiness is moral, not shameful.',
   },
@@ -23,7 +23,7 @@ export const section21Questions: QuizQuestion[] = [
       'They share resources equally',
       'A central committee assigns work',
       'They live off stored wealth',
-      'They each work and trade based on their skills',
+      'They each work and trade based on their skills'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What oath do the inhabitants of the valley take?',
     options: [
+      '"I swear by my life and my love of it that I will never live for the sake of another man, nor ask another man to live for mine."',
       '"I swear to share all I have with my brothers."',
       '"I swear loyalty to John Galt above all else."',
-      '"I swear by my life and my love of it that I will never live for the sake of another man, nor ask another man to live for mine."',
-      '"I swear to destroy the looters\\\\' world."',
+      '"I swear to destroy the looters\' world."'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'This oath embodies the novel\'s philosophy: the rejection of both sacrificing oneself for others and demanding that others sacrifice for you. It affirms rational self-interest.',
   },
@@ -50,8 +50,8 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       'A strong leader forces cooperation',
       'Rational self-interest naturally leads to productive cooperation',
-      'They have no conflicts because they\\\\\'re isolated',
-      'They suppress their selfish impulses',
+      'They have no conflicts because they\'re isolated',
+      'They suppress their selfish impulses'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -65,7 +65,7 @@ export const section21Questions: QuizQuestion[] = [
       'They live as honored retirees',
       'They serve as the governing council',
       'They continue working at various trades and businesses',
-      'They only supervise others\\\\\' work',
+      'They only supervise others\' work'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -76,12 +76,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does life in the valley demonstrate about the relationship between selfishness and benevolence?',
     options: [
-      'True benevolence flows from rational self-interest, not duty',
       'Selfishness excludes all benevolence',
       'The two are unrelated concepts',
       'Benevolence requires self-sacrifice',
+      'True benevolence flows from rational self-interest, not duty'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The valley shows that genuine goodwill toward others comes from valuing oneself first. People freely help each other because they want to, not from guilt or obligation.',
   },

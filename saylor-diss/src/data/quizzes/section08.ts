@@ -9,7 +9,7 @@ export const section08Questions: QuizQuestion[] = [
       'Linear equations',
       'Algebraic equations only',
       'Integrating equations (differential equations)',
-      'Statistical equations',
+      'Statistical equations'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -20,12 +20,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the general form "Stock(t) = Stock(t-dt) + (Inflow - Outflow) × dt" represent?',
     options: [
-      'How accumulations change over time',
       'A static relationship',
       'A market equilibrium',
       'A probability distribution',
+      'How accumulations change over time'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'This equation shows how a stock changes based on the difference between inflows and outflows.',
   },
@@ -34,12 +34,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What determines the rate of change of discontent in the model?',
     options: [
-      'External events only',
       'The gap between aspirations and actual conditions',
+      'External events only',
       'Random factors only',
-      'Executive decrees',
+      'Executive decrees'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Discontent changes based on the gap between what factions expect and what they receive.',
   },
@@ -49,11 +49,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'In the model, how are the three factions\' behaviors interconnected?',
     options: [
       'They operate independently',
-      'Only the executive affects the others',
-      'Only through external shocks',
       'Through feedback loops where each affects the others',
+      'Only the executive affects the others',
+      'Only through external shocks'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The model captures feedback loops where each faction\'s behavior affects the others.',
   },

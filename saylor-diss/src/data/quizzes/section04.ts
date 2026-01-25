@@ -9,7 +9,7 @@ export const section04Questions: QuizQuestion[] = [
       'Identifying the problem and system boundary',
       'Running simulations',
       'Writing equations',
-      'Validating results',
+      'Validating results'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section04Questions: QuizQuestion[] = [
       'By proving them mathematically',
       'By testing behavior against known patterns and historical data',
       'By expert opinion alone',
-      'By popular vote',
+      'By popular vote'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section04Questions: QuizQuestion[] = [
       'How sensitive users are to the interface',
       'How quickly the model runs',
       'How model behavior changes when parameters vary',
-      'How accurate the graphics are',
+      'How accurate the graphics are'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -47,13 +47,8 @@ export const section04Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'System dynamics was pioneered at which institution?',
-    options: [
-      'Harvard',
-      'Stanford',
-      'Cambridge',
-      'MIT',
-    ],
-    correctIndex: 3,
+    options: ['Harvard', 'Stanford', 'MIT', 'Cambridge'],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'System dynamics was developed by Jay Forrester at MIT in the 1950s-60s.',
   },

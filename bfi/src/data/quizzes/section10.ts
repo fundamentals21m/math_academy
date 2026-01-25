@@ -6,10 +6,10 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "professional embarrassment" mentioned in this section?',
     options: [
-      'Fund managers\\' lack of education',
+      'Fund managers\' lack of education',
       'Ordinary bitcoin holders massively outperformed every professional fund manager',
       'Regulatory failures',
-      'High management fees',
+      'High management fees'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section10Questions: QuizQuestion[] = [
       'Massive tracking error',
       'Regulatory concerns',
       'Significant alpha over time',
-      'Portfolio underperformance',
+      'Portfolio underperformance'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section10Questions: QuizQuestion[] = [
       'Fiduciaries are no longer personally liable',
       'Government now covers all losses',
       'Insurance companies take on all risk',
-      'Greater liability may now be from NOT including bitcoin rather than including it',
+      'Greater liability may now be from NOT including bitcoin rather than including it'
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -49,9 +49,9 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What creates "hidden short positions" against bitcoin according to this section?',
     options: [
       'Holdings in banks, payment processors, and bonds without bitcoin exposure',
-      'Using index funds',
       'Holding cash only',
       'Investing in gold',
+      'Using index funds'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -63,9 +63,9 @@ export const section10Questions: QuizQuestion[] = [
     question: 'Why are target date funds (TDFs) the biggest opportunity for bitcoin integration?',
     options: [
       'They have the lowest fees',
-      'They hold trillions with long horizons and passive investors who won\\\'t panic sell',
+      'They hold trillions with long horizons and passive investors who won\'t panic sell',
       'They are government backed',
-      'They have the highest returns',
+      'They have the highest returns'
     ],
     correctIndex: 1,
     difficulty: 'medium',

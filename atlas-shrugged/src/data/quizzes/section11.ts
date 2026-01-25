@@ -9,7 +9,7 @@ export const section11Questions: QuizQuestion[] = [
       'The nobility of old Europe',
       'The strongest athletes',
       'Those who gain power through political connections rather than merit',
-      'Railroad workers\\\\\' unions',
+      'Railroad workers\' unions'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'How do members of the "aristocracy of pull" gain their position?',
     options: [
       'Through hard work and innovation',
-      'Through political favors, connections, and government power',
       'Through inherited wealth',
       'Through public elections',
+      'Through political favors, connections, and government power'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The aristocracy of pull gains power through political connections, lobbying, and the ability to influence government decisions in their favor.',
   },
@@ -34,12 +34,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens to genuine merit in a system dominated by "pull"?',
     options: [
+      'It becomes irrelevant as connections matter more than ability',
       'It is rewarded even more',
       'It is accurately measured by government',
-      'It receives public recognition',
-      'It becomes irrelevant as connections matter more than ability',
+      'It receives public recognition'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In the pull system, actual ability becomes worthless - what matters is who you know and what favors you can trade.',
   },
@@ -48,12 +48,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which character benefits most from the aristocracy of pull?',
     options: [
-      'James Taggart',
       'Hank Rearden',
+      'James Taggart',
       'Dagny Taggart',
-      'Ellis Wyatt',
+      'Ellis Wyatt'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'James Taggart exemplifies the aristocracy of pull - he maintains power through political connections rather than competence.',
   },
@@ -62,12 +62,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What economic system does the "aristocracy of pull" create?',
     options: [
-      'Crony capitalism or corporatism',
       'Free market capitalism',
       'Pure communism',
-      'Traditional feudalism',
+      'Crony capitalism or corporatism',
+      'Traditional feudalism'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The aristocracy of pull creates crony capitalism - a corrupt system where business success depends on government favor, not free competition.',
   },
@@ -78,10 +78,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'Only that it is inefficient',
       'That it is too traditional',
-      'That it rewards vice (manipulation) and punishes virtue (production)',
       'That it is too democratic',
+      'That it rewards vice (manipulation) and punishes virtue (production)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Rand shows the pull system as morally inverted - rewarding political manipulation while punishing honest productive achievement.',
   },

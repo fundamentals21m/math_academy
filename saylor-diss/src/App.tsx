@@ -7,7 +7,7 @@ import { ErrorProvider } from '@shared/contexts/ErrorContext';
 import { ErrorDisplay } from '@shared/components/ErrorDisplay';
 import { LoadingSpinner } from '@shared/components/common/LoadingSpinner';
 
-import { FEATURES, COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL } from '@/config';
+import { FEATURES, COURSE_ID, COURSE_NAME, COURSE_ICON, HUB_URL, YOUTUBE_PLAYLIST_URL } from '@/config';
 
 
 // Course configuration for shared components
@@ -18,6 +18,7 @@ const courseConfig: CourseConfig = {
   hubUrl: HUB_URL,
   features: FEATURES,
   curriculum,
+  youtubePlaylistUrl: YOUTUBE_PLAYLIST_URL,
 };
 
 // Eagerly load Home since it's the landing page

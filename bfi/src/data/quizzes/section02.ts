@@ -6,12 +6,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What percentage of all bitcoin that will ever exist has already been issued?',
     options: [
-      '95%',
       '80%',
       '50%',
       '99%',
+      '95%'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Of the 21 million bitcoin that will ever exist, 95% has already been issued.'
   },
@@ -20,12 +20,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Bitcoin\'s current annual supply inflation is approximately:',
     options: [
-      '0%',
+      '0.8%',
       '3%',
       '1.5%',
-      '0.8%'
+      '0%'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Bitcoin\'s supply is currently inflating at approximately 0.8% annually, which is half the rate of gold\'s approximately 1.5%.'
   },
@@ -37,7 +37,7 @@ export const section02Questions: QuizQuestion[] = [
       'Net Asset Value',
       'Future Value',
       'Present Value',
-      'Book Value',
+      'Book Value'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -60,7 +60,7 @@ export const section02Questions: QuizQuestion[] = [
       '2100',
       '2050',
       '2140',
-      '2030',
+      '2030'
     ],
     correctIndex: 2,
     difficulty: 'medium',

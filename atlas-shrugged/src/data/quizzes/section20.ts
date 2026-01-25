@@ -9,7 +9,7 @@ export const section20Questions: QuizQuestion[] = [
       'Atlantis',
       'The Valley of Freedom',
       'The Hidden City',
-      'Paradise Valley',
+      'Paradise Valley'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'How does Dagny discover Galt\'s Gulch?',
     options: [
       'She is invited by Francisco',
-      'She follows a map given by Ellis Wyatt',
       'She crashes her plane while pursuing a mysterious aircraft',
-      'She stumbles upon it while hiking',
+      'She follows a map given by Ellis Wyatt',
+      'She stumbles upon it while hiking'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Dagny discovers the valley when she crashes her plane while pursuing Quentin Daniels, who is being recruited to join the strike. Her crash landing brings her into the hidden community.',
   },
@@ -34,12 +34,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who are the inhabitants of Galt\'s Gulch?',
     options: [
-      'The productive minds who have gone on strike',
       'Political refugees from various countries',
       'Wealthy retirees seeking privacy',
-      'Scientists conducting secret research',
+      'The productive minds who have gone on strike',
+      'Scientists conducting secret research'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Galt\'s Gulch is populated by the strikers—the industrialists, artists, scientists, and other men of the mind who have withdrawn from a world that punishes their achievements.',
   },
@@ -51,7 +51,7 @@ export const section20Questions: QuizQuestion[] = [
       'Each according to his needs',
       'The strong shall rule the weak',
       'Majority rule democracy',
-      'Trading value for value without force or fraud',
+      'Trading value for value without force or fraud'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -62,12 +62,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Dagny initially feel about leaving the outside world permanently?',
     options: [
+      'Conflict because she hasn\'t given up on the railroad',
       'Immediate eagerness to stay',
       'Indifference to her former life',
-      'Conflict because she hasn\\\\\'t given up on the railroad',
-      'Fear of the valley\\\\\'s inhabitants',
+      'Fear of the valley\'s inhabitants'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Though attracted to the valley, Dagny feels torn because she hasn\'t yet given up hope for the outside world. Her railroad still means something to her, and she isn\'t ready to quit.',
   },
@@ -79,7 +79,7 @@ export const section20Questions: QuizQuestion[] = [
       'An escape from reality',
       'The proof that a society based on rational self-interest is possible',
       'A utopian fantasy disconnected from human nature',
-      'A temporary refuge until circumstances change',
+      'A temporary refuge until circumstances change'
     ],
     correctIndex: 1,
     difficulty: 'hard',

@@ -6,12 +6,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is "Their Brothers\' Keepers" a reference to?',
     options: [
+      'The Biblical question "Am I my brother\'s keeper?"',
       'A religious organization in the novel',
       'A government welfare program',
-      'A union of workers',
-      'The Biblical question "Am I my brother\\\\\'s keeper?"',
+      'A union of workers'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The title references the Biblical story of Cain and Abel. In the novel, it describes the doctrine that everyone is obligated to support everyone else.',
   },
@@ -21,11 +21,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What does the "brother\'s keeper" doctrine demand?',
     options: [
       'Voluntary charity',
-      'Family responsibility only',
-      'Equal work from everyone',
       'Unlimited obligation to support others regardless of merit',
+      'Family responsibility only',
+      'Equal work from everyone'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The doctrine demands that the able sacrifice for the unable as a matter of duty, with no limit on how much can be demanded and no consideration of merit.',
   },
@@ -37,7 +37,7 @@ export const section24Questions: QuizQuestion[] = [
       'There is no distinction made',
       'Only family help is acceptable',
       'Voluntary help is moral; forced sacrifice is immoral',
-      'All help is considered exploitation',
+      'All help is considered exploitation'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -50,10 +50,10 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       'Society becomes more caring',
       'Government becomes unnecessary',
-      'The productive become slaves to the unproductive',
       'Everyone shares equally',
+      'The productive become slaves to the unproductive'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When obligation to others is enforced by law, the productive lose their rights and become servants of those who make demands, regardless of whether those demands are just.',
   },
@@ -65,7 +65,7 @@ export const section24Questions: QuizQuestion[] = [
       'Because morality must be based on voluntary choice',
       'Because all obligations are impossible',
       'Because only self-interest exists',
-      'Because obligations are old-fashioned',
+      'Because obligations are old-fashioned'
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -77,9 +77,9 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What is the contradiction in claiming others have a right to your life?',
     options: [
       'Rights only apply to government',
-      'A right that violates another\\\'s rights is not a right but a claim to slavery',
+      'A right that violates another\'s rights is not a right but a claim to slavery',
       'There is no contradiction',
-      'Rights are purely legal concepts',
+      'Rights are purely legal concepts'
     ],
     correctIndex: 1,
     difficulty: 'hard',

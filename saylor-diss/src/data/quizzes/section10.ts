@@ -7,11 +7,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'In the model, political power depends on:',
     options: [
       'Military strength alone',
-      'Numbers, wealth, organization, and willingness to act',
       'Religious authority only',
-      'Foreign support',
+      'Numbers, wealth, organization, and willingness to act',
+      'Foreign support'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Political power is a function of multiple factors including numbers, wealth, organization, and mobilization.',
   },
@@ -23,7 +23,7 @@ export const section10Questions: QuizQuestion[] = [
       'All citizens supporting the executive',
       'A simple majority vote',
       'Support from the military only',
-      'Enough combined support to prevent successful rebellion',
+      'Enough combined support to prevent successful rebellion'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section10Questions: QuizQuestion[] = [
       'Wealth, organization, and control of resources',
       'Divine right',
       'They are more numerous',
-      'Popular election',
+      'Popular election'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -49,11 +49,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What happens if the executive loses the minimum winning coalition?',
     options: [
       'Nothing changes',
-      'Automatic re-election',
       'The regime becomes vulnerable to overthrow',
-      'Foreign invasion occurs',
+      'Automatic re-election',
+      'Foreign invasion occurs'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Losing the minimum coalition makes the regime vulnerable to rebellion or revolution.',
   },

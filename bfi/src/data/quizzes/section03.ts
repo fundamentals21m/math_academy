@@ -7,11 +7,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'What is the main obstacle to bitcoin self-custody according to the book?',
     options: [
       'Technical knowledge of cryptography',
-      'Protecting a 12- or 24-word seed phrase',
       'Cost of hardware wallets',
       'Internet connectivity',
+      'Protecting a 12- or 24-word seed phrase'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Hardware wallets have become extremely intuitive, making the only real obstacle to bitcoin self-custody one\'s ability to protect a 12- or 24-word seed phrase.'
   },
@@ -20,12 +20,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What technology issue does the book identify with Coinbase\'s custody?',
     options: [
-      'It requires KYC verification',
-      'It lacks multi-signature capabilities',
       'It uses pre-Segwit addresses',
-      'It doesn\\'t support hardware wallets',
+      'It lacks multi-signature capabilities',
+      'It doesn\'t support hardware wallets',
+      'It requires KYC verification'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Coinbase\'s custody technology predates best practices developed since the Blocksize War, particularly Segregated Witness (Segwit), using pre-Segwit addresses.'
   },
@@ -35,11 +35,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'Which ETF provider manages custody in-house rather than using Coinbase?',
     options: [
       'BlackRock (IBIT)',
-      'Grayscale (GBTC)',
-      'Bitwise (BITB)',
       'Fidelity (FBTC)',
+      'Grayscale (GBTC)',
+      'Bitwise (BITB)'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Fidelity manages all custody in-house for their FBTC ETF, unlike BlackRock, Grayscale, and Bitwise who use Coinbase.'
   },
@@ -48,12 +48,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens if a mistake makes bitcoin unspendable?',
     options: [
-      'There is no bailout possible',
       'The exchange can recover it',
       'Insurance will cover the loss',
-      'The government can intervene',
+      'There is no bailout possible',
+      'The government can intervene'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Holding bitcoin in self-custody differs from fiat because there is no bailout possible - mistakes that make bitcoin unspendable are permanent and irreversible.'
   },
@@ -65,7 +65,7 @@ export const section03Questions: QuizQuestion[] = [
       'Tax advantages and lower fees',
       'Superior custody and direct ownership',
       'Privacy and anonymity',
-      'Price exposure but enormous counterparty risk',
+      'Price exposure but enormous counterparty risk'
     ],
     correctIndex: 3,
     difficulty: 'medium',

@@ -6,12 +6,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the famous opening line of Atlas Shrugged?',
     options: [
+      '"Who is John Galt?"',
       '"It was the best of times, it was the worst of times."',
       '"Call me Ishmael."',
-      '"Who is John Galt?"',
-      '"The railroad was dying."',
+      '"The railroad was dying."'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '"Who is John Galt?" is the iconic opening line of Atlas Shrugged, a phrase that has become a slang expression of despair in the novel\'s world.',
   },
@@ -21,11 +21,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What is Dagny Taggart\'s position at Taggart Transcontinental?',
     options: [
       'President',
-      'Chairman of the Board',
-      'Chief Financial Officer',
       'Vice President in Charge of Operations',
+      'Chairman of the Board',
+      'Chief Financial Officer'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Dagny Taggart serves as Vice President in Charge of Operations at Taggart Transcontinental, making her the person who actually keeps the railroad running.',
   },
@@ -35,11 +35,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'Who is the President of Taggart Transcontinental?',
     options: [
       'Dagny Taggart',
-      'James Taggart',
       'Hank Rearden',
-      'Eddie Willers',
+      'James Taggart',
+      'Eddie Willers'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'James Taggart is the President of the railroad, though he operates through political connections rather than competence. His sister Dagny is the one who actually runs the railroad.',
   },
@@ -48,12 +48,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does the novel characterize the state of New York City in Chapter 1?',
     options: [
-      'Decaying with crumbling infrastructure',
       'Thriving and prosperous',
       'Newly built and modern',
       'Completely abandoned',
+      'Decaying with crumbling infrastructure'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The novel depicts New York City in decline: buildings with cracks running down their facades, gold leaf peeling from spires, and every fourth storefront dark and empty.',
   },
@@ -62,12 +62,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What giant object hangs over the city displaying "September 2"?',
     options: [
-      'A clock',
       'A calendar',
+      'A clock',
       'A billboard',
-      'A flag',
+      'A flag'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A giant calendar hangs over New York City, displaying the date. It serves as a symbol of time passing as civilization slowly crumbles.',
   },
@@ -76,12 +76,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Into how many parts is Atlas Shrugged divided?',
     options: [
-      'Three',
       'Two',
+      'Three',
       'Four',
-      'Five',
+      'Five'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Atlas Shrugged is divided into three parts: "Non-Contradiction," "Either-Or," and "A Is A"—each named after a principle of Aristotelian logic.',
   },

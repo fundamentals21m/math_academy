@@ -6,12 +6,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does "The Top and the Bottom" refer to in this chapter?',
     options: [
+      'The contrast between producers and moochers',
       'Railroad management hierarchy',
       'The physical layout of a building',
-      'Stock market highs and lows',
-      'The contrast between producers and moochers',
+      'Stock market highs and lows'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The chapter title refers to the contrast between those at the "top" who produce value and those at the "bottom" who survive by taking from others.',
   },
@@ -21,11 +21,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Which character represents productive competence in this chapter?',
     options: [
       'James Taggart',
-      'Orren Boyle',
-      'Wesley Mouch',
       'Dagny Taggart',
+      'Orren Boyle',
+      'Wesley Mouch'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Dagny Taggart represents productive competence, actively working to solve problems and keep the railroad running.',
   },
@@ -35,11 +35,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'How do the "moochers" in this chapter justify their actions?',
     options: [
       'By claiming superior intelligence',
-      'Through appeals to need, fairness, and public good',
       'By demonstrating better results',
-      'Through open acknowledgment of self-interest',
+      'Through appeals to need, fairness, and public good',
+      'Through open acknowledgment of self-interest'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The moochers justify taking from producers through moral claims about need, fairness, and serving the public good, rather than through productive achievement.',
   },
@@ -50,10 +50,10 @@ export const section02Questions: QuizQuestion[] = [
     options: [
       'Hands-on management and technical expertise',
       'Innovation and technological advancement',
-      'Political connections and public relations',
       'Cost-cutting and efficiency improvements',
+      'Political connections and public relations'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'James Taggart relies on political connections and public image rather than competence, leaving the actual work of running the railroad to his sister Dagny.',
   },
@@ -65,7 +65,7 @@ export const section02Questions: QuizQuestion[] = [
       'The producers are morally and practically superior',
       'Society needs both producers and non-producers equally',
       'Social status determines moral worth',
-      'Economic equality is the highest goal',
+      'Economic equality is the highest goal'
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -76,12 +76,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does the chapter portray the relationship between competence and moral character?',
     options: [
-      'Productive competence as an expression of virtue',
       'As unrelated qualities',
+      'Productive competence as an expression of virtue',
       'Competence as a sign of moral corruption',
-      'Morality as an obstacle to competence',
+      'Morality as an obstacle to competence'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The chapter presents productive competence as an expression of virtues like rationality, honesty, and integrity, linking ability to moral character.',
   },

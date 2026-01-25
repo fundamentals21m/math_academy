@@ -7,11 +7,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What does LDI stand for?',
     options: [
       'Long Duration Investments',
-      'Liability Driven Investing',
       'Leveraged Debt Instruments',
       'Liquid Digital Infrastructure',
+      'Liability Driven Investing'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'LDI stands for Liability Driven Investing, a strategy where pension returns are measured relative to liabilities rather than absolute returns.'
   },
@@ -21,9 +21,9 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What happened to "risk-free" government bonds in 2022?',
     options: [
       'They lost 30-50% of their value',
-      'They were guaranteed by the IMF',
       'They became more valuable',
       'They were converted to bitcoin',
+      'They were guaranteed by the IMF'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -34,10 +34,10 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Larry Fink famously say about bitcoin before BlackRock\'s pivot?',
     options: [
-      'It\\'s the future of finance',
-      'It\\'s only useful to money launderers',
-      'It\\'s a great store of value',
-      'It\\'s better than gold',
+      'It\'s the future of finance',
+      'It\'s only useful to money launderers',
+      'It\'s a great store of value',
+      'It\'s better than gold'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -50,10 +50,10 @@ export const section08Questions: QuizQuestion[] = [
     options: [
       'Longest time to profitability',
       'Most diverse holdings',
-      'Lowest management fees',
       'Fastest ETF to reach $10B, $20B, $30B, $40B, and $50B AUM',
+      'Lowest management fees'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'IBIT broke every ETF record by being the fastest to reach $10B, $20B, $30B, $40B, and $50B in assets under management.'
   },
@@ -64,10 +64,10 @@ export const section08Questions: QuizQuestion[] = [
     options: [
       'It hides bitcoin from regulators',
       'It disguises bitcoin as bonds',
-      'It will bring bitcoin exposure to retirement accounts through indirect allocation',
       'It protects bitcoin from hackers',
+      'It will bring bitcoin exposure to retirement accounts through indirect allocation'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'BlackRock\'s mutual fund complex is the vehicle that will bring institutional bitcoin exposure to pensions and retirement accounts by making it indirect and almost invisible through target date funds.'
   }

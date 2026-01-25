@@ -6,12 +6,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Where does Francisco d\'Anconia deliver his famous "money speech"?',
     options: [
+      'At James Taggart\'s wedding party',
       'At a board meeting',
-      'At James Taggart\\\\'s wedding party',
       'In a courtroom',
-      'On a radio broadcast',
+      'On a radio broadcast'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Francisco delivers his eloquent defense of money at James Taggart\'s wedding party, shocking the guests with his philosophical clarity.',
   },
@@ -21,11 +21,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'According to Francisco, what is money?',
     options: [
       'The root of all evil',
-      'A necessary evil of capitalism',
       'A tool of exchange representing productive work',
-      'A symbol of greed',
+      'A necessary evil of capitalism',
+      'A symbol of greed'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Francisco argues that money is a tool of exchange that represents productive work and creative achievement, not evil.',
   },
@@ -34,12 +34,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Francisco say is truly "the root of all evil"?',
     options: [
-      'The love of money without earning it',
       'Money itself',
       'Capitalism',
-      'Material possessions',
+      'The love of money without earning it',
+      'Material possessions'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Francisco inverts the common saying, arguing that the desire for money without the willingness to earn it through productive work is the real evil.',
   },
@@ -48,10 +48,10 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the chapter title "The Climax of the d\'Anconias" suggest about Francisco?',
     options: [
-      'He is betraying his family\\\'s traditions',
+      'He is betraying his family\'s traditions',
       'His family is about to gain more power',
       'He is the last of his noble line',
-      'He represents the peak of his family\\\'s legacy',
+      'He represents the peak of his family\'s legacy'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -62,12 +62,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How do the party guests react to Francisco\'s money speech?',
     options: [
+      'With discomfort, hostility, or incomprehension',
       'With thoughtful consideration',
       'With enthusiastic agreement',
-      'With discomfort, hostility, or incomprehension',
-      'With immediate conversion to his views',
+      'With immediate conversion to his views'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Most guests react with discomfort or hostility, unable to accept a moral defense of money that challenges their guilt-based worldview.',
   },
@@ -76,12 +76,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What deeper meaning does Francisco\'s speech reveal about his apparent playboy behavior?',
     options: [
-      'He is acting a role as part of a larger plan',
       'He truly is irresponsible and decadent',
+      'He is acting a role as part of a larger plan',
       'He has given up on his principles',
-      'He is mentally unstable',
+      'He is mentally unstable'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The brilliance of the money speech hints that Francisco\'s playboy persona is a deliberate act, concealing a purposeful mission.',
   },

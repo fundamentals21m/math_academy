@@ -6,12 +6,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Understanding bitcoin is compared to learning to play:',
     options: [
-      'Sports at an Olympic level',
       'Multiple instruments at the same time',
       'A single instrument quickly',
       'Chess at a professional level',
+      'Sports at an Olympic level'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Understanding bitcoin is like learning to play multiple instruments at the same time - guitar, piano, drums, horns - and you need to know how they all come together.'
   },
@@ -20,12 +20,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which fields are required to understand bitcoin according to the book?',
     options: [
-      'Austrian economics, computer science, history, mathematics, game theory, and cryptography',
       'Only computer science and mathematics',
+      'Austrian economics, computer science, history, mathematics, game theory, and cryptography',
       'Finance, marketing, and business administration',
       'Physics, chemistry, and biology'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Learning bitcoin requires minimal competence in many disparate fields: Austrian Economics, Computer Science, History, Mathematics, Game Theory, and Cryptography.'
   },
@@ -46,7 +46,7 @@ export const section04Questions: QuizQuestion[] = [
       'Decades',
       'Years',
       'Quarters',
-      'Daily',
+      'Daily'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -60,7 +60,7 @@ export const section04Questions: QuizQuestion[] = [
       'They can achieve it within a quarter',
       'They should wait until bitcoin is easier to understand',
       'Only tech companies can achieve it',
-      'They should accept they won\\'t contribute much for a while, but starting today gets them there faster',
+      'They should accept they won\'t contribute much for a while, but starting today gets them there faster'
     ],
     correctIndex: 3,
     difficulty: 'medium',

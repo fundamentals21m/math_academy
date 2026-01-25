@@ -8,10 +8,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'Currency',
       'Gold',
-      'Money',
       'Real Estate',
+      'Money'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'As an engineer, Saylor elevated bitcoin from "Magic Internet Money" to "Thermodynamically Sound Digital Real Estate."'
   },
@@ -22,10 +22,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       '$100 million',
       '$500 million',
-      '$250 million',
       '$1 billion',
+      '$250 million'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'In August 2020, Saylor converted $250 million into approximately 21,000 bitcoin.'
   },
@@ -35,9 +35,9 @@ export const section07Questions: QuizQuestion[] = [
     question: 'According to Saylor, cash is like:',
     options: [
       'A melting ice cube',
-      'A safe haven',
       'A stable foundation',
       'A growing tree',
+      'A safe haven'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -48,12 +48,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What financial instrument did Strategy pioneer for bitcoin accumulation?',
     options: [
-      'Convertible debt',
       'Stock buybacks',
+      'Convertible debt',
       'Preferred shares',
-      'Dividends',
+      'Dividends'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Strategy pioneered the use of convertible debt to acquire more bitcoin, borrowing at low interest rates and using proceeds to buy bitcoin.'
   },
@@ -63,11 +63,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What made Strategy succeed where Tesla failed?',
     options: [
       'Better technology',
-      'A dominant individual with conviction (Saylor)',
       'More capital',
+      'A dominant individual with conviction (Saylor)',
       'Government support'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Strategy\'s success is due to it being effectively an extension of one individual (Michael Saylor) who believes in bitcoin and can resist institutional pressure.'
   }

@@ -6,12 +6,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Machiavelli\'s framework, what does "virtù" primarily refer to?',
     options: [
-      'Political skill and effectiveness',
       'Moral virtue and righteousness',
       'Religious devotion',
-      'Physical strength',
+      'Political skill and effectiveness',
+      'Physical strength'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Virtù refers to political skill, effectiveness, and the ability to adapt to circumstances—not moral virtue.',
   },
@@ -23,7 +23,7 @@ export const section02Questions: QuizQuestion[] = [
       'Personal wealth',
       'Military fortune',
       'Good luck charms',
-      'Chance and circumstance beyond human control',
+      'Chance and circumstance beyond human control'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Machiavelli, what is the fundamental driver of political dynamics?',
     options: [
-      'Religious differences',
       'Class conflict between competing interests',
+      'Religious differences',
       'Geographic factors',
-      'Cultural traditions',
+      'Cultural traditions'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Machiavelli sees class conflict—the tension between those who wish to dominate and those who resist domination—as the engine of political life.',
   },

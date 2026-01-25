@@ -9,7 +9,7 @@ export const section10Questions: QuizQuestion[] = [
       'Part Two of the novel, "Either-Or"',
       'The epilogue',
       'The final section',
-      'A flashback sequence',
+      'A flashback sequence'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section10Questions: QuizQuestion[] = [
       'A politician',
       'A scientist or inventor',
       'A union leader',
-      'A journalist',
+      'A journalist'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -36,10 +36,10 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'He should leave for space',
       'He is unambitious',
-      'He is a farmer',
       'He is a practical, reality-oriented thinker',
+      'He is a farmer'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Belonging "on earth" means being oriented toward reality and practical achievement, not lost in mysticism or impractical theory.',
   },
@@ -50,10 +50,10 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'As opposed to each other',
       'As separate domains with no connection',
-      'As naturally allied in pursuing rational achievement',
       'As competing for resources',
+      'As naturally allied in pursuing rational achievement'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Rand presents science and industry as natural allies - both require rational thought applied to reality to create value.',
   },
@@ -62,12 +62,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What threat do the scientists in the novel face?',
     options: [
+      'Regulations, bureaucracy, and intellectual persecution',
       'Competition from other scientists',
       'Lack of natural talent',
-      'Public adoration',
-      'Regulations, bureaucracy, and intellectual persecution',
+      'Public adoration'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Scientists face the same threats as industrialists: increasing regulation, bureaucratic control, and persecution for their achievements.',
   },
@@ -77,11 +77,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What philosophical point does focusing on scientists reinforce?',
     options: [
       'That science is more important than industry',
-      'That scientists should stay out of business',
       'That the mind is the source of all human achievement',
-      'That theory matters more than practice',
+      'That scientists should stay out of business',
+      'That theory matters more than practice'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'By including scientists among the strikers, Rand emphasizes that all productive achievement depends on the rational mind, not just business.',
   },

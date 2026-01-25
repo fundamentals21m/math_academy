@@ -6,12 +6,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the model, discontent is primarily driven by:',
     options: [
-      'The gap between expectations and reality',
       'Absolute poverty levels',
       'Weather conditions',
-      'Foreign propaganda',
+      'The gap between expectations and reality',
+      'Foreign propaganda'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Discontent arises from the gap between what factions expect and what they actually receive.',
   },
@@ -22,10 +22,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'They remain constant',
       'They are random',
-      'They adjust based on recent experience',
       'They are set by the executive',
+      'They adjust based on recent experience'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Expectations adapt over time based on recent experience—good times raise expectations.',
   },
@@ -34,12 +34,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why might improving conditions paradoxically increase discontent?',
     options: [
-      'People become lazier',
       'Expectations rise faster than improvements can be sustained',
+      'People become lazier',
       'The executive becomes weaker',
-      'Foreign enemies become stronger',
+      'Foreign enemies become stronger'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Improvements raise expectations, and if they can\'t be sustained, the gap widens.',
   },
@@ -49,11 +49,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'Discontent in the model is modeled as a:',
     options: [
       'Constant value',
-      'Random variable',
-      'External input',
       'Stock that accumulates over time',
+      'Random variable',
+      'External input'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Discontent is a stock that accumulates or depletes based on the aspiration-reality gap.',
   },

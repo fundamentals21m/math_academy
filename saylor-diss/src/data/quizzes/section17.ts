@@ -7,11 +7,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'How does the model compare different regime types?',
     options: [
       'By moral judgment',
-      'By varying parameters representing executive power and accountability',
       'By historical examples only',
-      'By popular opinion polls',
+      'By varying parameters representing executive power and accountability',
+      'By popular opinion polls'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Different regimes are modeled by varying parameters for executive power, constraints, and accountability.',
   },
@@ -22,10 +22,10 @@ export const section17Questions: QuizQuestion[] = [
     options: [
       'It always produces the best outcomes',
       'It always leads to prosperity',
-      'It can amplify oscillations and instability',
       'It has no effect',
+      'It can amplify oscillations and instability'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Strong unconstrained executives can amplify oscillations during crises rather than dampen them.',
   },
@@ -37,7 +37,7 @@ export const section17Questions: QuizQuestion[] = [
       'More stable feedback and self-correction',
       'Faster decision-making',
       'More military strength',
-      'More popular entertainment',
+      'More popular entertainment'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -49,11 +49,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'The model supports Machiavelli\'s preference for:',
     options: [
       'Pure monarchy',
-      'Pure democracy',
-      'Anarchy',
       'Mixed republican government',
+      'Pure democracy',
+      'Anarchy'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The model supports Machiavelli\'s advocacy for mixed government combining different elements.',
   },

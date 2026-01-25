@@ -7,11 +7,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'What does sensitivity analysis reveal about the model?',
     options: [
       'All parameters are equally important',
+      'Parameters don\'t matter at all',
       'Some parameters have much larger effects than others',
-      'Parameters don\\\'t matter at all',
-      'The model is completely random',
+      'The model is completely random'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Sensitivity analysis shows which parameters have the largest impact on system behavior.',
   },
@@ -22,10 +22,10 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       'The exact population size',
       'The time of year',
-      'The speed of expectation adjustment',
-      'The color of the executive\\\'s clothes',
+      'The color of the executive\'s clothes',
+      'The speed of expectation adjustment'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'How quickly expectations adjust strongly affects whether the system remains stable.',
   },
@@ -34,12 +34,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens when expectation adjustment is too fast?',
     options: [
+      'Oscillations and potential instability',
       'Greater stability',
       'No effect',
-      'Immediate prosperity',
-      'Oscillations and potential instability',
+      'Immediate prosperity'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Fast expectation adjustment can cause overshooting and instability.',
   },
@@ -48,12 +48,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does parameter sensitivity imply for real political systems?',
     options: [
-      'Small changes in key variables can have large effects',
       'All policies have equal effect',
+      'Small changes in key variables can have large effects',
       'Nothing can affect outcomes',
-      'Only military strength matters',
+      'Only military strength matters'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Sensitivity analysis shows that small changes in key variables can produce large effects.',
   },

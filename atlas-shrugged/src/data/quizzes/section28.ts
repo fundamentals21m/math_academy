@@ -9,7 +9,7 @@ export const section28Questions: QuizQuestion[] = [
       'A motor that draws static electricity from the atmosphere',
       'A powerful weapon',
       'A nuclear reactor',
-      'A propaganda machine',
+      'A propaganda machine'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -20,10 +20,10 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Where did Galt originally develop his motor?',
     options: [
-      'In Galt\\\\'s Gulch',
+      'In Galt\'s Gulch',
       'At the Twentieth Century Motor Company',
       'At Rearden Steel',
-      'At a government laboratory',
+      'At a government laboratory'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -37,7 +37,7 @@ export const section28Questions: QuizQuestion[] = [
       'The dangers of technology',
       'Government investment in research',
       'The power of the human mind to transform nature',
-      'The collective efforts of workers',
+      'The collective efforts of workers'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why did Galt refuse to give his motor to the world?',
     options: [
-      'He refused to let his creation be used by those who would enslave the creators',
       'He wanted to sell it for maximum profit',
       'He forgot how he built it',
-      'The motor didn\\\\\'t actually work',
+      'The motor didn\'t actually work',
+      'He refused to let his creation be used by those who would enslave the creators'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Galt would not give his motor to a world that punishes achievement and enslaves the productive. He went on strike rather than benefit those who would destroy him.',
   },
@@ -62,12 +62,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happened to the abandoned motor at Twentieth Century Motor Company?',
     options: [
+      'It was left to rust because no one understood it',
       'It was immediately put into production',
       'The government seized it',
-      'It was sold to a foreign power',
-      'It was left to rust because no one understood it',
+      'It was sold to a foreign power'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'When Galt left, the motor remained but no one could understand or complete it. The mind that created it had gone, and without that mind, the physical object was useless.',
   },
@@ -79,7 +79,7 @@ export const section28Questions: QuizQuestion[] = [
       'Physical resources are more important than ideas',
       'Without the mind that created it, a creation cannot be understood or maintained',
       'Any worker can replicate a great invention',
-      'Government should control all inventions',
+      'Government should control all inventions'
     ],
     correctIndex: 1,
     difficulty: 'hard',

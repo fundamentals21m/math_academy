@@ -9,7 +9,7 @@ export const section01Questions: QuizQuestion[] = [
       'Bitcoin has no intrinsic value',
       'The technology is too complex',
       'It requires willful ability to resist selling pressure',
-      'Government regulations prohibit it',
+      'Government regulations prohibit it'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'What is the "water/diamond paradox" mentioned in the context of human action?',
     options: [
       'Diamonds are always more valuable than water',
-      'A person would forgo all diamonds for their first glass of water',
       'Water is more valuable than diamonds in all situations',
       'Diamonds and water have equal value',
+      'A person would forgo all diamonds for their first glass of water'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The water/diamond paradox illustrates that human action is based on removing the largest source of dissatisfaction at the lowest cost - a thirsty person values water over diamonds.'
   },
@@ -35,9 +35,9 @@ export const section01Questions: QuizQuestion[] = [
     question: 'Which company successfully held bitcoin long-term on their balance sheet?',
     options: [
       'Strategy (MicroStrategy)',
-      'BlackRock',
       'Tesla',
       'Apple',
+      'BlackRock'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -48,12 +48,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why did Tesla exit their bitcoin position according to the book?',
     options: [
-      'Bitcoin\\\'s price crashed',
-      'Elon Musk lost interest',
-      'Regulatory requirements',
+      'Bitcoin\'s price crashed',
       'Institutional pressure after S&P 500 inclusion',
+      'Elon Musk lost interest',
+      'Regulatory requirements'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Tesla exited their bitcoin position shortly after S&P 500 inclusion, demonstrating that institutional pressure will eventually force selling without a dominant individual to resist.'
   },
@@ -62,12 +62,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the book say about the hope for mega-companies like Apple to put bitcoin on their balance sheets?',
     options: [
-      'They are all misguided',
-      'It\\'s likely to happen soon',
+      'It\'s likely to happen soon',
       'Apple has already started accumulating',
-      'Only Apple, not Facebook, would do it',
+      'They are all misguided',
+      'Only Apple, not Facebook, would do it'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The author states that those waiting for mega-companies, governments, or pensions to hold bitcoin long-term "are all misguided" due to structural institutional incentives.'
   }

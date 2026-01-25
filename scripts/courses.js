@@ -21,6 +21,7 @@
  * @property {string} [shortName] - Short name for leaderboard links
  * @property {boolean} [external] - True if link opens in new tab
  * @property {string} [progressGradient] - CSS gradient for progress bar
+ * @property {string} [youtubePlaylistUrl] - YouTube playlist URL (shows icon overlay on card)
  */
 
 /** @type {Section[]} */
@@ -142,9 +143,9 @@ export const COURSES = [
     description: "Master machine learning fundamentals with this interactive course based on James et al.'s acclaimed textbook. From linear regression to deep learning, with interactive visualizations.",
     icon: '📊',
     url: 'islr-deploy/',
-    tags: ['13 Chapters', '62 Sections'],
+    tags: ['13 Chapters', '10 Sections'],
     sections: ['prob_stats'],
-    totalSections: 62,
+    totalSections: 10,
     progressPrefix: 'islr:',
     leaderboardUrl: 'islr-deploy/#/leaderboard',
     shortName: 'Statistical Learning',
@@ -163,6 +164,7 @@ export const COURSES = [
     leaderboardUrl: 'https://bfi-liart.vercel.app/#/leaderboard',
     shortName: 'BFI',
     progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)',
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVHBl4fi5SmDiLeccl9hsB2m',
   },
   {
     id: 'bips',
@@ -482,6 +484,7 @@ export const COURSES = [
     leaderboardUrl: 'saylor-diss-deploy/#/leaderboard',
     shortName: 'Saylor Diss',
     progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVE6me8fF4UWmgm6wEfJgFLo',
   },
 
   // MATH HISTORY
@@ -556,6 +559,7 @@ export const COURSES = [
     leaderboardUrl: 'atlas-shrugged-deploy/#/leaderboard',
     shortName: 'Atlas Shrugged',
     progressGradient: 'linear-gradient(90deg, #ef4444, #f97316)',
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVFUoynHr-Thg3yv1Bf6paNd',
   },
   {
     id: 'man_econ_state',

@@ -6,12 +6,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What triggers rebellion in the model?',
     options: [
-      'Discontent exceeding a threshold',
       'Any level of discontent',
       'Executive decision',
-      'Random events',
+      'Discontent exceeding a threshold',
+      'Random events'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Rebellion occurs when discontent exceeds a threshold where action becomes preferable to suffering.',
   },
@@ -21,11 +21,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'What is the difference between rebellion and revolution in the model?',
     options: [
       'They are the same',
-      'Rebellion is smaller scale; revolution transforms the system',
       'Rebellion is foreign; revolution is domestic',
       'Revolution is peaceful; rebellion is violent',
+      'Rebellion is smaller scale; revolution transforms the system'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Rebellion challenges the executive while revolution fundamentally transforms the political system.',
   },
@@ -34,12 +34,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which faction is more likely to successfully rebel?',
     options: [
+      'The aristocracy, due to organization and resources',
       'The populace, due to numbers alone',
       'Neither can succeed',
-      'Whichever is more religious',
-      'The aristocracy, due to organization and resources',
+      'Whichever is more religious'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The aristocracy\'s better organization and resources make their rebellions more likely to succeed.',
   },
@@ -49,11 +49,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'What does the threshold for rebellion depend on?',
     options: [
       'Only the level of oppression',
-      'The phase of the moon',
       'Costs and risks of rebellion vs. costs of continued suffering',
-      'Foreign military strength',
+      'The phase of the moon',
+      'Foreign military strength'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The threshold balances the costs of rebellion against the costs of continued suffering.',
   },

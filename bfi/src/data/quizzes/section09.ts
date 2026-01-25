@@ -6,12 +6,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does NQDC stand for?',
     options: [
-      'New Qualified Direct Capital',
-      'Non-Qualified Dollar Compensation',
       'Non-Qualified Deferred Compensation',
+      'Non-Qualified Dollar Compensation',
       'National Qualified Defined Contribution',
+      'New Qualified Direct Capital'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'NQDC stands for Non-Qualified Deferred Compensation, a type of plan that allows executives to defer compensation to a future date.'
   },
@@ -23,7 +23,7 @@ export const section09Questions: QuizQuestion[] = [
       'Full ERISA protection',
       'No contribution limits',
       'Government-backed insurance',
-      'Guaranteed returns',
+      'Guaranteed returns'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -36,10 +36,10 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'High management fees',
       'Limited investment options',
-      'Excessive regulation',
       'Participants are unsecured creditors if the company goes bankrupt',
+      'Excessive regulation'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'NQDC plans are not protected by ERISA. If the company goes bankrupt, participants are unsecured creditors and may lose their deferred compensation.'
   },
@@ -48,12 +48,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the superior long-term NQDC bitcoin strategy according to the book?',
     options: [
-      'Company-held bitcoin treasury to back the program',
       'Use only bitcoin ETFs',
       'Diversify across multiple cryptocurrencies',
       'Avoid bitcoin entirely',
+      'Company-held bitcoin treasury to back the program'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Holding a bitcoin treasury and using it in lieu of ETFs eliminates counterparty credit risk entirely - the superior long-term solution.'
   },
@@ -62,10 +62,10 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is NQDC considered perfect for bitcoin?',
     options: [
-      'Long deferral periods (10-20+ years) align with bitcoin\\\'s optimal holding period',
-      'NQDC accounts are FDIC insured',
-      'Short time horizons match bitcoin\\\'s volatility',
+      'Long deferral periods (10-20+ years) align with bitcoin\'s optimal holding period',
+      'Short time horizons match bitcoin\'s volatility',
       'NQDC has lower taxes on bitcoin',
+      'NQDC accounts are FDIC insured'
     ],
     correctIndex: 0,
     difficulty: 'medium',

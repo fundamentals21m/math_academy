@@ -133,6 +133,23 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </NavLink>
                 </li>
               )}
+              {features.transcripts && (
+                <li>
+                  <NavLink
+                    to="/transcripts"
+                    className={({ isActive }) =>
+                      `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                        isActive
+                          ? 'bg-primary-500/10 text-primary-400'
+                          : 'text-dark-300 hover:bg-dark-800 hover:text-dark-100'
+                      }`
+                    }
+                  >
+                    <span className="text-lg">🎙️</span>
+                    Transcripts
+                  </NavLink>
+                </li>
+              )}
             </ul>
           </div>
 

@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'What company developed a loan product using bitcoin as collateral?',
     options: [
       'BlackRock',
-      'Battery Finance (Newmarket Capital)',
       'Coinbase',
       'MicroStrategy',
+      'Battery Finance (Newmarket Capital)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Newmarket Capital and their subsidiary Battery Finance developed a loan product that enables bitcoin to be used as 10-30% of collateral alongside traditional assets.'
   },
@@ -20,12 +20,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the minimum period before bitcoin collateral can be wound down in Battery Finance loans?',
     options: [
-      'Three years',
+      'Four years (aligned with bitcoin\'s halving cycle)',
       'One year',
       'Two years',
-      'Four years (aligned with bitcoin\\\'s halving cycle)',
+      'Three years'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The earliest that bitcoin collateral can be wound down is four years, aligned with bitcoin\'s four-year halving cycle.'
   },
@@ -35,11 +35,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Why does a bitcoin-collateralized loan become behaviorally "senior"?',
     options: [
       'Contractual terms make it senior',
-      'Government regulations require it',
-      'Banks prioritize it automatically',
       'A person will let any other asset go before relinquishing their bitcoin',
+      'Government regulations require it',
+      'Banks prioritize it automatically'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'If a borrower posts bitcoin as collateral, this loan automatically becomes the most senior because behaviorally, a person will let any other asset go before relinquishing their bitcoin.'
   },
@@ -48,12 +48,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the book, what behavior should bitcoin-collateralized borrowers exhibit?',
     options: [
-      'AAA-equivalent credit behavior',
       'Higher default rates',
       'Erratic payment patterns',
-      'Average credit behavior',
+      'AAA-equivalent credit behavior',
+      'Average credit behavior'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Both "degens" and "savers" will prioritize protecting their bitcoin, leading to AAA-equivalent credit behavior on these loans.'
   },
@@ -64,10 +64,10 @@ export const section12Questions: QuizQuestion[] = [
     options: [
       'Only the 2008 housing crisis',
       'Bitcoin price crashes',
-      '2008 housing crisis, 2022 UK Gilt crisis, and 2023 US banking crisis',
-      'Stock market corrections'
+      'Stock market corrections',
+      '2008 housing crisis, 2022 UK Gilt crisis, and 2023 US banking crisis'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The 2008 Global Financial Crisis, 2022 Bank of England pension bailout (UK Gilts), and 2023 US banking crisis all showed that traditional collateral can rapidly become unreliable.'
   }

@@ -6,12 +6,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the model, what determines total economic output?',
     options: [
-      'A production function based on capital and labor',
       'Executive decree',
       'Foreign trade only',
-      'Random chance',
+      'A production function based on capital and labor',
+      'Random chance'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Output is determined by a production function that combines capital and labor inputs.',
   },
@@ -22,10 +22,10 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'Equally to all citizens',
       'To the executive only',
-      'Among factions based on their relative power',
       'By random lottery',
+      'Among factions based on their relative power'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Distribution is determined by the relative power and influence of each faction.',
   },
@@ -34,12 +34,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What role does the executive play in economic distribution?',
     options: [
-      'Complete control over all distribution',
       'Influences distribution through policy, within constraints',
+      'Complete control over all distribution',
       'No role—markets decide',
-      'Only controls foreign trade',
+      'Only controls foreign trade'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The executive influences but doesn\'t fully control distribution—political realities constrain choices.',
   },
@@ -49,11 +49,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'What happens when one faction\'s share of output increases?',
     options: [
       'Everyone benefits equally',
+      'Other factions\' shares must decrease',
       'Total output automatically increases',
-      'Nothing changes for other factions',
-      'Other factions\\\' shares must decrease',
+      'Nothing changes for other factions'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Distribution is a zero-sum game—increasing one faction\'s share reduces others\' shares.',
   },

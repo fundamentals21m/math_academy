@@ -8,10 +8,10 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'The engines that power locomotives',
       'Government officials who make policies',
-      'The workers who perform manual labor',
       'The productive geniuses who drive industry',
+      'The workers who perform manual labor'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '"Prime movers" refers to the creative minds and industrialists whose vision and effort drive economic progress and innovation.',
   },
@@ -22,10 +22,10 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'They are physically unable to relocate',
       'They are stubborn and refuse to change',
-      'They are essential and cannot be replaced',
       'They have government protection',
+      'They are essential and cannot be replaced'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The prime movers are "immovable" because they are irreplaceable - their unique vision and ability cannot be substituted by others.',
   },
@@ -37,7 +37,7 @@ export const section03Questions: QuizQuestion[] = [
       'With increasing demands, regulations, and moral condemnation',
       'With gratitude and respect',
       'With complete indifference',
-      'With generous rewards and freedom',
+      'With generous rewards and freedom'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -49,11 +49,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'What is beginning to happen to the prime movers in the novel\'s world?',
     options: [
       'They are becoming more powerful',
-      'They are being celebrated as heroes',
       'They are mysteriously disappearing',
-      'They are forming a political party',
+      'They are being celebrated as heroes',
+      'They are forming a political party'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Throughout the novel, capable industrialists and innovators are mysteriously vanishing, leaving their industries to collapse.',
   },
@@ -62,12 +62,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What paradox does the chapter highlight about the prime movers\' situation?',
     options: [
-      'They are essential but treated as villains',
       'They are wealthy but unhappy',
       'They are intelligent but make poor decisions',
-      'They are powerful but politically inactive',
+      'They are essential but treated as villains',
+      'They are powerful but politically inactive'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The paradox is that those most essential to society\'s survival are morally condemned as exploiters while those who produce nothing claim moral superiority.',
   },
@@ -76,12 +76,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What philosophical concept does "immovable movers" deliberately echo and challenge?',
     options: [
-      'Plato\\\'s Theory of Forms',
-      'Aristotle\\\'s "unmoved mover" concept',
-      'Hegel\\\'s dialectic',
-      'Kant\\\'s categorical imperative',
+      'Plato\'s Theory of Forms',
+      'Hegel\'s dialectic',
+      'Kant\'s categorical imperative',
+      'Aristotle\'s "unmoved mover" concept'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The phrase inverts Aristotle\'s "unmoved mover" - rather than a divine, passive first cause, Rand celebrates active, worldly creators as the true movers of civilization.',
   },

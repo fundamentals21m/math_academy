@@ -6,12 +6,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What hockey strategy is used as an analogy for pension bitcoin allocation?',
     options: [
-      'Line change',
+      'Pulling the goalie',
       'Power play',
       'Penalty kill',
-      'Pulling the goalie'
+      'Line change'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The "Pulling the Goalie" strategy from hockey - when losing near the end of a game, removing the goalkeeper to add an extra attacker - is the analogy used for pension bitcoin strategy.'
   },
@@ -20,12 +20,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the success rate of "pulling the goalie" vs. a "Hail Mary" pass?',
     options: [
-      'Pulling the goalie is 18-20% vs. Hail Mary\\\'s 8.3%',
       'Hail Mary is more successful',
+      'Pulling the goalie is 18-20% vs. Hail Mary\'s 8.3%',
       'Both have equal success rates',
-      'Neither strategy works',
+      'Neither strategy works'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Pulling the goalie has an 18-20% success rate - more than double the Hail Mary\'s ~8.3% - making it a calculated risk rather than desperation.'
   },
@@ -35,11 +35,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'What special tax advantage do qualified pension plans have?',
     options: [
       'Lower income tax rates',
-      'They never pay capital gains tax on investments',
       'Tax credits for contributions',
-      'Delayed tax payments',
+      'They never pay capital gains tax on investments',
+      'Delayed tax payments'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Tax-qualified pension plans don\'t ever pay capital gains tax on their investments - a massive advantage for accumulating bitcoin gains over long time horizons.'
   },
@@ -50,10 +50,10 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'CalPERS',
       'Wisconsin Pension Fund',
-      'Ontario Teachers Pension Plan',
       'UK Universities Superannuation Scheme',
+      'Ontario Teachers Pension Plan'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Ontario Teachers Pension Plan invested $100 million in FTX, which went bankrupt with its CEO ending up in prison.'
   },
@@ -62,12 +62,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the book, what bitcoin allocation is justified for pensions?',
     options: [
-      '50%',
       '100%',
       '1-5%',
       '10-20%',
+      '50%'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The book argues that 100% allocation is justified for pensions, given they are a medium-term problem and most will outlive the next two bitcoin halving cycles (eight years).'
   }

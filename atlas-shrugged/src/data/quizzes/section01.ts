@@ -8,10 +8,10 @@ export const section01Questions: QuizQuestion[] = [
     options: [
       'A new type of steel alloy',
       'An improved railroad engine',
-      'A new oil refining process',
       'Rearden Metal, a stronger and lighter alloy',
+      'A new oil refining process'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Hank Rearden has spent ten years developing Rearden Metal, a revolutionary alloy that is stronger, lighter, and more durable than traditional steel.',
   },
@@ -23,7 +23,7 @@ export const section01Questions: QuizQuestion[] = [
       'The chains binding workers to their jobs',
       'A decorative chain Dagny wears',
       'The railroad chain of command',
-      'The chain of business relationships and supply dependencies',
+      'The chain of business relationships and supply dependencies'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why are suppliers hesitant to work with Rearden Metal?',
     options: [
-      'The price is too high',
       'Fear of the unknown and pressure from competitors',
+      'The price is too high',
       'It requires special equipment they do not have',
-      'Government regulations prohibit its use',
+      'Government regulations prohibit its use'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Suppliers are hesitant due to fear of the untested metal and social/business pressure from those who oppose innovation and competition.',
   },
@@ -51,7 +51,7 @@ export const section01Questions: QuizQuestion[] = [
       'She is cautious and wants more testing',
       'She embraces it as the solution to her problems',
       'She refuses to consider it',
-      'She defers to her brother\\\\\'s judgment',
+      'She defers to her brother\'s judgment'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -62,12 +62,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What philosophical concept does the chapter introduce through business relationships?',
     options: [
-      'The mutual dependence of productive individuals',
       'The inevitability of government intervention',
       'The superiority of collective decision-making',
-      'The impossibility of honest business dealings',
+      'The mutual dependence of productive individuals',
+      'The impossibility of honest business dealings'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The chapter shows how productive individuals form a chain of mutual value exchange, where each person\'s success depends on others\' competence and integrity.',
   },
@@ -78,10 +78,10 @@ export const section01Questions: QuizQuestion[] = [
     options: [
       'As adversarial negotiations to be won',
       'As necessary evils he must tolerate',
-      'As partnerships based on mutual self-interest and competence',
       'As charity he extends to less capable people',
+      'As partnerships based on mutual self-interest and competence'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Rearden values business relationships built on mutual competence and fair exchange, seeing them as proper partnerships rather than exploitation.',
   },

@@ -7,11 +7,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'What accusation is leveled against Rearden Metal in this chapter?',
     options: [
       'It is too expensive to produce',
-      'It is unsafe and untested',
       'It was stolen from another inventor',
-      'It violates trade agreements',
+      'It is unsafe and untested',
+      'It violates trade agreements'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The State Science Institute and government officials claim Rearden Metal is dangerous and untested, despite evidence of its superiority, as part of their campaign to destroy Rearden.',
   },
@@ -20,12 +20,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do the looters target Rearden Metal specifically?',
     options: [
-      'It represents individual achievement they cannot control',
       'It competes with government steel production',
       'It causes environmental damage',
       'It is being sold to foreign countries',
+      'It represents individual achievement they cannot control'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Rearden Metal symbolizes the product of one man\'s independent mind and achievement. The looters target it because they cannot tolerate any value they did not create or control.',
   },
@@ -34,12 +34,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the real motivation behind the attacks on Rearden Metal?',
     options: [
+      'Envy and the desire to destroy the successful',
       'Scientific disagreement about metallurgy',
       'Genuine concern for public safety',
-      'Economic protectionism for other metals',
-      'Envy and the desire to destroy the successful',
+      'Economic protectionism for other metals'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The attacks on Rearden Metal are driven by envy and hatred of achievement. The looters seek to destroy what they cannot equal rather than admit their own inadequacy.',
   },
@@ -48,12 +48,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does Rearden respond to the persecution of his metal?',
     options: [
-      'He refuses to apologize or compromise his principles',
       'He capitulates and withdraws the product',
+      'He refuses to apologize or compromise his principles',
       'He bribes government officials',
-      'He sells the formula to avoid further trouble',
+      'He sells the formula to avoid further trouble'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Rearden stands firm in his conviction that his metal is good. He refuses to apologize for his achievement or to pretend that the accusations have merit.',
   },
@@ -64,8 +64,8 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       'A sarcastic term used by the media to mock Rearden',
       'A government classification for dangerous materials',
-      'The genuine recognition of Rearden Metal\\\'s superiority',
-      'The nickname given by workers at the mills',
+      'The genuine recognition of Rearden Metal\'s superiority',
+      'The nickname given by workers at the mills'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -78,10 +78,10 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       'The conflict between capitalism and socialism',
       'The dangers of monopoly power',
-      'The hatred of the good for being the good',
       'The importance of government regulation',
+      'The hatred of the good for being the good'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The persecution illustrates "the hatred of the good for being the good"—the irrational desire to destroy excellence and achievement simply because they exist and make the mediocre feel inadequate.',
   },

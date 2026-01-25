@@ -7,11 +7,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'Who composed "The Concerto of Deliverance"?',
     options: [
       'John Galt',
+      'Francisco d\'Anconia',
       'Richard Halley',
-      'Francisco d\\\\'Anconia',
-      'Dagny Taggart',
+      'Dagny Taggart'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Richard Halley, the great composer who disappeared and joined the strike, composed "The Concerto of Deliverance" as an expression of liberation and joy.',
   },
@@ -22,10 +22,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'Escapism from reality',
       'Religious devotion',
-      'The achievement of human joy through creative work',
       'Revolutionary propaganda',
+      'The achievement of human joy through creative work'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Halley\'s music represents the highest form of human achievement in art—the expression of joy and triumph that comes from creating value through one\'s own effort.',
   },
@@ -37,7 +37,7 @@ export const section25Questions: QuizQuestion[] = [
       'He was celebrated for the wrong reasons, after years of unjust persecution',
       'Lack of talent recognition',
       'He had made enough money',
-      'His music was banned by the government',
+      'His music was banned by the government'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the word "deliverance" in the title signify?',
     options: [
-      'Liberation from the morality of self-sacrifice',
       'Religious salvation',
+      'Liberation from the morality of self-sacrifice',
       'Rescue from physical danger',
-      'Death and transcendence',
+      'Death and transcendence'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '"Deliverance" signifies freedom from the chains of altruist morality—the liberation of those who join the strike and reclaim their right to live for their own sake.',
   },
@@ -64,10 +64,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'Art is purely entertainment',
       'Art should avoid philosophical content',
-      'Philosophy and art are unrelated',
       'Art concretizes abstract philosophical values into sensory experience',
+      'Philosophy and art are unrelated'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'For Rand, art translates abstract values into concrete form. Halley\'s music embodies the philosophical ideal of human achievement and joy in a form that can be directly experienced.',
   },
@@ -79,7 +79,7 @@ export const section25Questions: QuizQuestion[] = [
       'The valley has better acoustics',
       'He was too busy with other work before',
       'The outside world has no orchestras',
-      'He only has freedom to create among those who share his values',
+      'He only has freedom to create among those who share his values'
     ],
     correctIndex: 3,
     difficulty: 'hard',

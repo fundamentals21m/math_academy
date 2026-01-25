@@ -6,12 +6,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the central theme explored in "By Our Love"?',
     options: [
-      'Love must be based on shared values, not sacrifice',
       'Romantic love conquers all obstacles',
       'Self-sacrifice is the highest form of love',
-      'Family loyalty supersedes personal choice',
+      'Love must be based on shared values, not sacrifice',
+      'Family loyalty supersedes personal choice'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The chapter explores how genuine love must be based on shared values and mutual admiration, not on the demand for self-sacrifice or the acceptance of the unearned.',
   },
@@ -23,7 +23,7 @@ export const section17Questions: QuizQuestion[] = [
       'By financial pressures',
       'By family disapproval',
       'By physical separation',
-      'By characters being forced to choose between values and relationships',
+      'By characters being forced to choose between values and relationships'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Rand suggest is the corrupted meaning of love in the looters\' world?',
     options: [
+      'Self-immolation for the undeserving',
       'Mutual respect',
       'Passionate attachment',
-      'Self-immolation for the undeserving',
-      'Romantic idealism',
+      'Romantic idealism'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In the looters\' moral code, "love" means sacrificing oneself for those who haven\'t earned it—the duty to destroy oneself for the sake of others regardless of their worth.',
   },
@@ -51,7 +51,7 @@ export const section17Questions: QuizQuestion[] = [
       'Unconditional acceptance',
       'A response to values one perceives in another',
       'Self-denial and compromise',
-      'Social approval and conformity',
+      'Social approval and conformity'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -62,12 +62,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does the phrase "by our love" carry an ironic meaning?',
     options: [
-      'The characters don\\\\'t actually love each other',
-      'It\\\\'s used to justify destructive demands disguised as affection',
+      'The characters don\'t actually love each other',
       'Love has been outlawed by the government',
-      'It refers to love of money',
+      'It\'s used to justify destructive demands disguised as affection',
+      'It refers to love of money'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The phrase is ironic because it\'s used by those who claim love while demanding sacrifice and destruction—turning "love" into a weapon of guilt and manipulation.',
   },
@@ -78,10 +78,10 @@ export const section17Questions: QuizQuestion[] = [
     options: [
       'Whether to marry or remain single',
       'Whether to leave the country',
-      'Whether to betray their values for those who claim to love them',
       'Whether to have children',
+      'Whether to betray their values for those who claim to love them'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The protagonists must choose whether to sacrifice their convictions to please those who claim to love them, or to remain true to themselves even if it means losing those relationships.',
   },
