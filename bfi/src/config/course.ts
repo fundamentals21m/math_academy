@@ -45,11 +45,6 @@ export const BASE_PATH = `/math_academy/${COURSE_ID}/`;
 export const HUB_URL = 'https://mathacademy-cyan.vercel.app';
 
 /**
- * YouTube playlist URL (optional)
- */
-export const YOUTUBE_PLAYLIST_URL = 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVHBl4fi5SmDiLeccl9hsB2m';
-
-/**
  * External links
  */
 export const LINKS = {
