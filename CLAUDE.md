@@ -2,6 +2,31 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## CRITICAL: DO NOT EDIT THIS REPOSITORY DIRECTLY
+
+**This is PRODUCTION.** All changes must go through the dev repository first.
+
+| What | Where |
+|------|-------|
+| **Make changes here** | `/Users/brianhirschfield/Claude/dev-repos/math_academy_dev` |
+| **NOT here** | `/Users/brianhirschfield/Claude/math_academy` (this repo) |
+
+### Workflow
+```
+DEV (math_academy_dev) → Test → User Approval → promote-to-production.sh → PROD
+```
+
+### If you need to make changes:
+1. `cd /Users/brianhirschfield/Claude/dev-repos/math_academy_dev`
+2. Make changes there
+3. Test locally
+4. Ask user for approval
+5. Run `./scripts/promote-to-production.sh`
+
+**See `/Users/brianhirschfield/Claude/dev-repos/math_academy_dev/CLAUDE.md` for full dev workflow.**
+
+---
+
 ## CRITICAL: External URL Policy
 
 **NEVER fabricate, guess, or invent URLs.** This rule has been violated twice and caused production failures.
