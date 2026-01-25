@@ -36,10 +36,14 @@ export const section88Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivative of a vector field $\\mathbf{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$ at $\\mathbf{a}$ is represented by:',
     options: [
-      'A vector in $\\mathbb{R}^m$',
       'An $m \\times n$ matrix (the Jacobian)',
+      'A vector in $\\mathbb{R}^m
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The derivative of $\\mathbf{F}: \\mathbb{R}^n \\to \\mathbb{R}^m$ is an $m \\times n$ Jacobian matrix.',
+  },
       'A scalar',
-      'An $n \\times n$ matrix'
+      'An $n \\times n$ matrix',
     ],
     correctIndex: 1,
     difficulty: 'medium',

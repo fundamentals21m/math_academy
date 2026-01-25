@@ -20,12 +20,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What societal problem does FROST address?',
     options: [
-      'The concentration of trust and single points of failure',
       'Slow computers',
+      'The concentration of trust and single points of failure',
       'Expensive electricity',
-      'Complex mathematics'
+      'Complex mathematics',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'FROST distributes trust across multiple parties, eliminating single points of failure where one person or system can act unilaterally or be compromised.',
   },
@@ -35,11 +35,11 @@ export const section69Questions: QuizQuestion[] = [
     question: 'How does FROST embody the principle of "trust minimization"?',
     options: [
       'By requiring trust in a central authority',
-      'By reducing trust assumptions: no single party can sign or recover the key',
       'By using trusted hardware',
       'By trusting mathematics is wrong',
+      'By reducing trust assumptions: no single party can sign or recover the key',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'FROST minimizes trust by distributing the secret. Security relies on the assumption that fewer than $t$ parties are compromised, not on trusting any single entity.',
   },
@@ -51,7 +51,7 @@ export const section69Questions: QuizQuestion[] = [
       'Mathematics is unnecessary for security',
       'Security requires physical measures only',
       'Mathematical structures (polynomials, groups) directly enable security guarantees',
-      'Mathematics makes systems less secure'
+      'Mathematics makes systems less secure',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -62,12 +62,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the enduring lesson from FROST for building trustworthy systems?',
     options: [
+      'Distribute trust, verify cryptographically, and design for adversarial environments',
       'Trust a single authority completely',
       'Security is impossible',
       'Avoid using mathematics',
-      'Distribute trust, verify cryptographically, and design for adversarial environments'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'FROST teaches that security comes from distributing trust (threshold), cryptographic verification (Schnorr proofs), and assuming adversaries exist (Byzantine tolerance).',
   },

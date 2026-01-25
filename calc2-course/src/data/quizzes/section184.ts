@@ -36,10 +36,26 @@ export const section184Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The interpolation error formula involves the $(n+1)$-th derivative of $f$ evaluated at some point $\\xi$. Where is $\\xi$ located?',
     options: [
-      'At $x_0$',
-      'At $x_n$',
-      'Outside the interval $[x_0, x_n]$',
-      'In the smallest interval containing $x, x_0, x_1, \\ldots, x_n$'
+      'At $x_0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The point $\\xi$ lies somewhere in the smallest interval containing all the interpolation points and the evaluation point $x$.',
+  },
+      'In the smallest interval containing $x, x_0, x_1, \\ldots, x_n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The point $\\xi$ lies somewhere in the smallest interval containing all the interpolation points and the evaluation point $x$.',
+  },
+      'At $x_n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The point $\\xi$ lies somewhere in the smallest interval containing all the interpolation points and the evaluation point $x$.',
+  },
+      'Outside the interval $[x_0, x_n]
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The point $\\xi$ lies somewhere in the smallest interval containing all the interpolation points and the evaluation point $x$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -66,7 +82,7 @@ export const section184Questions: QuizQuestion[] = [
     options: [
       'The interpolation becomes exact',
       'The error decreases exponentially',
-      'Runge\\'s phenomenon: error can grow as $n$ increases',
+      'Runge\\\\'s phenomenon: error can grow as $n$ increases',
       'The polynomial becomes constant',
     ],
     correctIndex: 2,

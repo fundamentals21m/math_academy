@@ -7,11 +7,11 @@ export const section55Questions: QuizQuestion[] = [
     question: 'A linear transformation $T: V \\to W$ is the same as:',
     options: [
       'A ring homomorphism',
-      'An $F$-module homomorphism (where $V, W$ are $F$-vector spaces)',
       'A bijection',
       'A field automorphism',
+      'An $F$-module homomorphism (where $V, W$ are $F$-vector spaces)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A linear transformation is precisely an $F$-module homomorphism between vector spaces. It preserves addition and scalar multiplication.',
   },

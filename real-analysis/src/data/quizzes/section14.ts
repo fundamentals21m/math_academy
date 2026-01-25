@@ -7,12 +7,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The First Fundamental Theorem of Calculus relates:',
       options: [
-        'Limits and continuity',
-        'Integration and differentiation',
-        'Sequences and series',
-        'Sets and functions'
-      ],
-      correctIndex: 1,
+      'Limits and continuity',
+      'Sequences and series',
+      'Sets and functions',
+      'Integration and differentiation',
+    ],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'FTC connects integration and differentiation as inverse operations.'
     },
@@ -21,11 +21,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $F(x) = \\int_a^x f(t)\\,dt$ where $f$ is continuous, then $F\'(x) = $:',
       options: [
-        '$0$',
-        '$f(a)$',
-        '$f(x)$',
-        '$\\int_a^x f\'(t)\\,dt$'
-      ],
+      '$0
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The First FTC: the derivative of the integral is the integrand.'
+    },
+      '$f(x)
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The First FTC: the derivative of the integral is the integrand.'
+    },
+      '$f(a)
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The First FTC: the derivative of the integral is the integrand.'
+    },
+      '$\\int_a^x f\\'(t)\\,dt
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The First FTC: the derivative of the integral is the integrand.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The First FTC: the derivative of the integral is the integrand.'
@@ -35,11 +51,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'An antiderivative of $f$ is a function $F$ such that:',
       options: [
-        '$F = f$',
-        '$F + f = 0$',
-        '$\\int F = f$',
-        '$F\' = f$'
-      ],
+      '$F\\' = f
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'An antiderivative $F$ satisfies $F\'(x) = f(x)$.'
+    },
+      '$F = f
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'An antiderivative $F$ satisfies $F\'(x) = f(x)$.'
+    },
+      '$F + f = 0
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'An antiderivative $F$ satisfies $F\'(x) = f(x)$.'
+    },
+      '$\\int F = f
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'An antiderivative $F$ satisfies $F\'(x) = f(x)$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'An antiderivative $F$ satisfies $F\'(x) = f(x)$.'
@@ -49,11 +81,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The Second Fundamental Theorem of Calculus states that if $F\' = f$ on $[a,b]$:',
       options: [
-        '$\\int_a^b f = F(b) - F(a)$',
-        '$\\int_a^b f = F(a) - F(b)$',
-        '$\\int_a^b f = F\'(b)$',
-        '$\\int_a^b f = f(b) - f(a)$'
-      ],
+      '$\\int_a^b f = F(a) - F(b)
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The Second FTC: $\\int_a^b f = F(b) - F(a)$ where $F\' = f$.'
+    },
+      '$\\int_a^b f = F\\'(b)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'The Second FTC: $\\int_a^b f = F(b) - F(a)$ where $F\' = f$.'
+    },
+      '$\\int_a^b f = f(b) - f(a)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'The Second FTC: $\\int_a^b f = F(b) - F(a)$ where $F\' = f$.'
+    },
+      '$\\int_a^b f = F(b) - F(a)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'The Second FTC: $\\int_a^b f = F(b) - F(a)$ where $F\' = f$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The Second FTC: $\\int_a^b f = F(b) - F(a)$ where $F\' = f$.'
@@ -71,12 +119,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $F$ and $G$ are both antiderivatives of $f$, then $F - G$ is:',
       options: [
-        'Zero',
-        'A constant',
-        'Unbounded',
-        'Periodic'
-      ],
-      correctIndex: 1,
+      'Zero',
+      'Unbounded',
+      'Periodic',
+      'A constant',
+    ],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Any two antiderivatives differ by a constant: $(F - G)\' = f - f = 0$.'
     },
@@ -85,11 +133,23 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The indefinite integral $\\int f(x)\\,dx$ represents:',
       options: [
-        'A unique function',
-        'The derivative of $f$',
-        'The family of all antiderivatives of $f$',
-        'The area under $f$'
-      ],
+      'A unique function',
+      'The family of all antiderivatives of $f
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Indefinite integral gives all antiderivatives: $F(x) + C$.'
+    },
+      'The derivative of $f
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Indefinite integral gives all antiderivatives: $F(x) + C$.'
+    },
+      'The area under $f
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Indefinite integral gives all antiderivatives: $F(x) + C$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Indefinite integral gives all antiderivatives: $F(x) + C$.'
@@ -121,12 +181,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'For the First FTC to apply, the integrand must be:',
       options: [
-        'Continuous',
-        'Differentiable',
-        'Monotonic',
-        'Bounded'
-      ],
-      correctIndex: 0,
+      'Differentiable',
+      'Continuous',
+      'Monotonic',
+      'Bounded',
+    ],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'FTC I requires $f$ to be continuous to guarantee $F\'(x) = f(x)$.'
     },
@@ -144,11 +204,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The notation $[F(x)]_a^b$ means:',
       options: [
-        '$F(a) + F(b)$',
-        '$F(b) - F(a)$',
-        '$F(a) - F(b)$',
-        '$F(a) \\cdot F(b)$'
-      ],
+      '$F(a) + F(b)
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Standard notation: $[F(x)]_a^b = F(b) - F(a)$.'
+    },
+      '$F(a) - F(b)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Standard notation: $[F(x)]_a^b = F(b) - F(a)$.'
+    },
+      '$F(b) - F(a)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Standard notation: $[F(x)]_a^b = F(b) - F(a)$.'
+    },
+      '$F(a) \\cdot F(b)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Standard notation: $[F(x)]_a^b = F(b) - F(a)$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Standard notation: $[F(x)]_a^b = F(b) - F(a)$.'
@@ -166,11 +242,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'An antiderivative of $\\cos x$ is:',
       options: [
-        '$-\\sin x$',
-        '$\\cos x$',
-        '$\\sin x$',
-        '$-\\cos x$'
-      ],
+      '$\\sin x
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Since $\\frac{d}{dx}\\sin x = \\cos x$.'
+    },
+      '$-\\sin x
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Since $\\frac{d}{dx}\\sin x = \\cos x$.'
+    },
+      '$\\cos x
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Since $\\frac{d}{dx}\\sin x = \\cos x$.'
+    },
+      '$-\\cos x
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Since $\\frac{d}{dx}\\sin x = \\cos x$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Since $\\frac{d}{dx}\\sin x = \\cos x$.'
@@ -180,11 +272,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'An antiderivative of $x^n$ (for $n \\neq -1$) is:',
       options: [
-        '$nx^{n-1}$',
-        '$\\frac{x^n}{n}$',
-        '$x^{n+1}$',
-        '$\\frac{x^{n+1}}{n+1}$'
-      ],
+      '$nx^{n-1}
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Power rule for integration: $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.'
+    },
+      '$\\frac{x^{n+1}}{n+1}
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Power rule for integration: $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.'
+    },
+      '$\\frac{x^n}{n}
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Power rule for integration: $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.'
+    },
+      '$x^{n+1}
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Power rule for integration: $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Power rule for integration: $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.'
@@ -202,11 +310,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $F(x) = \\int_2^x t^2\\,dt$, then $F(2) = $:',
       options: [
-        '$0$',
-        '$8$',
-        '$4$',
-        '$2$'
-      ],
+      '$8
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: '$\\int_2^2 t^2\\,dt = 0$ (integral over a single point).'
+    },
+      '$4
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$\\int_2^2 t^2\\,dt = 0$ (integral over a single point).'
+    },
+      '$0
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$\\int_2^2 t^2\\,dt = 0$ (integral over a single point).'
+    },
+      '$2
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$\\int_2^2 t^2\\,dt = 0$ (integral over a single point).'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$\\int_2^2 t^2\\,dt = 0$ (integral over a single point).'
@@ -238,12 +362,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The Fundamental Theorem of Calculus requires $f$ to be:',
       options: [
-        'Monotonic',
-        'Differentiable',
-        'Riemann integrable (for Second FTC)',
-        'Polynomial'
-      ],
-      correctIndex: 2,
+      'Riemann integrable (for Second FTC)',
+      'Monotonic',
+      'Differentiable',
+      'Polynomial',
+    ],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The Second FTC needs $f$ integrable and $F$ with $F\' = f$.'
     }
@@ -255,11 +379,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $F(x) = \\int_0^{x^2} e^t\\,dt$, then $F\'(x) = $:',
       options: [
-        '$e^{x^2}$',
-        '$2x e^x$',
-        '$e^x \\cdot 2x$',
-        '$2x e^{x^2}$'
-      ],
+      '$e^{x^2}
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'By chain rule with FTC: $F\'(x) = e^{x^2} \\cdot 2x$.'
+    },
+      '$2x e^x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'By chain rule with FTC: $F\'(x) = e^{x^2} \\cdot 2x$.'
+    },
+      '$2x e^{x^2}
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'By chain rule with FTC: $F\'(x) = e^{x^2} \\cdot 2x$.'
+    },
+      '$e^x \\cdot 2x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'By chain rule with FTC: $F\'(x) = e^{x^2} \\cdot 2x$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'By chain rule with FTC: $F\'(x) = e^{x^2} \\cdot 2x$.'
@@ -269,11 +409,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $G(x) = \\int_x^1 \\cos t\\,dt$, then $G\'(x) = $:',
       options: [
-        '$-\\cos x$',
-        '$\\cos x$',
-        '$\\sin x$',
-        '$-\\sin x$'
-      ],
+      '$\\cos x
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$G(x) = -\\int_1^x \\cos t\\,dt$, so $G\'(x) = -\\cos x$.'
+    },
+      '$-\\cos x
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$G(x) = -\\int_1^x \\cos t\\,dt$, so $G\'(x) = -\\cos x$.'
+    },
+      '$\\sin x
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$G(x) = -\\int_1^x \\cos t\\,dt$, so $G\'(x) = -\\cos x$.'
+    },
+      '$-\\sin x
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$G(x) = -\\int_1^x \\cos t\\,dt$, so $G\'(x) = -\\cos x$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$G(x) = -\\int_1^x \\cos t\\,dt$, so $G\'(x) = -\\cos x$.'
@@ -283,11 +439,23 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $H(x) = \\int_{x}^{x^2} t^3\\,dt$, then $H\'(x) = $:',
       options: [
-        '$x^6 \\cdot 2x - x^3$',
-        'Both B and C',
-        '$2x^7 - x^3$',
-        '$(x^2)^3 \\cdot 2x - x^3 \\cdot 1$'
-      ],
+      '$x^6 \\cdot 2x - x^3
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Leibniz rule: $H\'(x) = (x^2)^3 \\cdot 2x - x^3 \\cdot 1 = 2x^7 - x^3$.'
+    },
+      '$2x^7 - x^3
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Leibniz rule: $H\'(x) = (x^2)^3 \\cdot 2x - x^3 \\cdot 1 = 2x^7 - x^3$.'
+    },
+      'Both B and C',
+      '$(x^2)^3 \\cdot 2x - x^3 \\cdot 1
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Leibniz rule: $H\'(x) = (x^2)^3 \\cdot 2x - x^3 \\cdot 1 = 2x^7 - x^3$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Leibniz rule: $H\'(x) = (x^2)^3 \\cdot 2x - x^3 \\cdot 1 = 2x^7 - x^3$.'
@@ -343,11 +511,19 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous on $[a,b]$ and $F(x) = \\int_a^x f$, then $F$ is:',
       options: [
-        'Differentiable with $F\' = f$',
-        'Continuous but maybe not differentiable',
-        'Constant',
-        'Discontinuous at $a$'
-      ],
+      'Continuous but maybe not differentiable',
+      'Constant',
+      'Differentiable with $F\\' = f
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'FTC I guarantees $F$ is differentiable with $F\' = f$ when $f$ is continuous.'
+    },
+      'Discontinuous at $a
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'FTC I guarantees $F$ is differentiable with $F\' = f$ when $f$ is continuous.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'FTC I guarantees $F$ is differentiable with $F\' = f$ when $f$ is continuous.'
@@ -357,11 +533,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'Leibniz integral rule: $\\frac{d}{dx}\\int_{a(x)}^{b(x)} f(t)\\,dt = $:',
       options: [
-        '$f(b(x)) - f(a(x))$',
-        '$f(b(x))b\'(x) - f(a(x))a\'(x)$',
-        '$\\int_{a(x)}^{b(x)} f\'(t)\\,dt$',
-        '$b\'(x) - a\'(x)$'
-      ],
+      '$f(b(x)) - f(a(x))
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Leibniz rule combines FTC with chain rule for variable limits.'
+    },
+      '$\\int_{a(x)}^{b(x)} f\\'(t)\\,dt
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Leibniz rule combines FTC with chain rule for variable limits.'
+    },
+      '$b\\'(x) - a\\'(x)
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Leibniz rule combines FTC with chain rule for variable limits.'
+    },
+      '$f(b(x))b\\'(x) - f(a(x))a\\'(x)
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Leibniz rule combines FTC with chain rule for variable limits.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Leibniz rule combines FTC with chain rule for variable limits.'
@@ -401,11 +593,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The function $F(x) = \\int_0^x |t|\\,dt$ equals:',
       options: [
-        '$\\frac{x^2}{2}$ for all $x$',
-        '$x^2$ for $x \\geq 0$, $-x^2$ for $x < 0$',
-        '$|x|$',
-        '$\\frac{x|x|}{2}$'
-      ],
+      '$\\frac{x|x|}{2}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'For $x \\geq 0$: $\\frac{x^2}{2}$. For $x < 0$: $\\frac{x^2}{2}$. Combined: $\\frac{x|x|}{2}$.'
+    },
+      '$\\frac{x^2}{2}$ for all $x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'For $x \\geq 0$: $\\frac{x^2}{2}$. For $x < 0$: $\\frac{x^2}{2}$. Combined: $\\frac{x|x|}{2}$.'
+    },
+      '$x^2$ for $x \\geq 0$, $-x^2$ for $x < 0
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'For $x \\geq 0$: $\\frac{x^2}{2}$. For $x < 0$: $\\frac{x^2}{2}$. Combined: $\\frac{x|x|}{2}$.'
+    },
+      '$|x|
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'For $x \\geq 0$: $\\frac{x^2}{2}$. For $x < 0$: $\\frac{x^2}{2}$. Combined: $\\frac{x|x|}{2}$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'For $x \\geq 0$: $\\frac{x^2}{2}$. For $x < 0$: $\\frac{x^2}{2}$. Combined: $\\frac{x|x|}{2}$.'
@@ -415,12 +623,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'Integration by substitution is justified by:',
       options: [
-        'The chain rule and FTC',
-        'The mean value theorem',
-        'L\'Hôpital\'s rule',
-        'The squeeze theorem'
-      ],
-      correctIndex: 0,
+      'The mean value theorem',
+      'The chain rule and FTC',
+      'L\\'Hôpital\\'s rule',
+      'The squeeze theorem',
+    ],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Substitution reverses the chain rule using FTC.'
     },
@@ -438,12 +646,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $F\'(x) = f(x)$ for all $x$ in $(a,b)$, and $f$ has a jump discontinuity:',
       options: [
-        '$F$ cannot exist',
-        'This is impossible',
-        '$F$ exists but is not differentiable at the jump',
-        'This contradicts the intermediate value property'
-      ],
-      correctIndex: 1,
+      '$F$ cannot exist',
+      '$F$ exists but is not differentiable at the jump',
+      'This contradicts the intermediate value property',
+      'This is impossible',
+    ],
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Derivatives satisfy the intermediate value property, so cannot have jumps.'
     },
@@ -460,11 +668,15 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The error function $\\text{erf}(x) = \\frac{2}{\\sqrt{\\pi}}\\int_0^x e^{-t^2}\\,dt$:',
       options: [
-        'Has an elementary antiderivative',
-        'Equals $e^{-x^2}$',
-        'Cannot be expressed in terms of elementary functions',
-        'Is not differentiable'
-      ],
+      'Cannot be expressed in terms of elementary functions',
+      'Has an elementary antiderivative',
+      'Equals $e^{-x^2}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$e^{-t^2}$ has no elementary antiderivative; erf is defined by this integral.'
+    },
+      'Is not differentiable',
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: '$e^{-t^2}$ has no elementary antiderivative; erf is defined by this integral.'
@@ -474,12 +686,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'For the Second FTC, if $F$ is not continuous on $[a,b]$:',
       options: [
-        'The theorem still applies',
-        '$F\' = f$ cannot hold',
-        '$\\int_a^b f$ doesn\'t exist',
-        'The theorem may fail'
-      ],
-      correctIndex: 3,
+      'The theorem still applies',
+      'The theorem may fail',
+      '$F\\' = f$ cannot hold',
+      '$\\int_a^b f$ doesn\\'t exist',
+    ],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Continuity of $F$ is essential; without it, FTC II can fail.'
     },
@@ -513,11 +725,15 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'A function $F$ is absolutely continuous on $[a,b]$ iff:',
       options: [
-        '$F$ is differentiable everywhere',
-        '$F$ is the integral of its derivative: $F(x) = F(a) + \\int_a^x F\'$',
-        '$F$ is Lipschitz',
-        '$F$ is uniformly continuous'
-      ],
+      '$F$ is the integral of its derivative: $F(x) = F(a) + \\int_a^x F\\'
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Absolute continuity is equivalent to being an indefinite integral of an $L^1$ function.'
+    },
+      '$F$ is differentiable everywhere',
+      '$F$ is Lipschitz',
+      '$F$ is uniformly continuous',
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Absolute continuity is equivalent to being an indefinite integral of an $L^1$ function.'
@@ -527,11 +743,15 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The Cantor function (devil\'s staircase):',
       options: [
-        'Is absolutely continuous',
-        'Satisfies FTC',
-        'Is continuous and $F\' = 0$ a.e., but $F(1) - F(0) = 1$',
-        'Is differentiable everywhere'
-      ],
+      'Is continuous and $F\\' = 0$ a.e., but $F(1) - F(0) = 1
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Cantor function is continuous, $F\' = 0$ a.e., but not absolutely continuous; FTC fails.'
+    },
+      'Is absolutely continuous',
+      'Satisfies FTC',
+      'Is differentiable everywhere',
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Cantor function is continuous, $F\' = 0$ a.e., but not absolutely continuous; FTC fails.'
@@ -541,12 +761,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is Riemann integrable and $F(x) = \\int_a^x f$, then:',
       options: [
-        '$F\'(x) = f(x)$ everywhere',
-        '$F$ is constant',
-        '$F$ is not continuous',
-        '$F$ is differentiable a.e. with $F\' = f$ a.e.'
-      ],
-      correctIndex: 3,
+      '$F$ is differentiable a.e. with $F\\' = f$ a.e.',
+      '$F\\'(x) = f(x)$ everywhere',
+      '$F$ is constant',
+      '$F$ is not continuous',
+    ],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'For integrable $f$, $F$ is Lipschitz hence differentiable a.e., with $F\' = f$ a.e.'
     },
@@ -564,12 +784,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'Volterra\'s function has derivative zero a.e. but:',
       options: [
-        'The derivative is not Lebesgue integrable on sets where it\'s nonzero',
-        'Is absolutely continuous',
-        'Is constant',
-        'Violates the Mean Value Theorem'
-      ],
-      correctIndex: 0,
+      'Is absolutely continuous',
+      'The derivative is not Lebesgue integrable on sets where it\\\'s nonzero',
+      'Is constant',
+      'Violates the Mean Value Theorem',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Volterra\'s function has bounded derivative, but the derivative is badly behaved on a set of positive measure.'
     },
@@ -578,11 +798,15 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The Henstock-Kurzweil integral extends FTC because:',
       options: [
-        'It integrates more functions',
-        'All of the above',
-        'It requires less regularity',
-        'Every derivative is HK-integrable and $\\int_a^b F\' = F(b) - F(a)$'
-      ],
+      'It integrates more functions',
+      'It requires less regularity',
+      'Every derivative is HK-integrable and $\\int_a^b F\\' = F(b) - F(a)
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'HK integral perfectly pairs with FTC: every derivative is integrable.'
+    },
+      'All of the above',
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'HK integral perfectly pairs with FTC: every derivative is integrable.'
@@ -592,11 +816,11 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'A function $f$ that is a derivative but not Riemann integrable:',
       options: [
-        'Cannot exist',
-        'Is continuous',
-        'Exists (e.g., $F\'$ where $F(x) = x^2\\sin(1/x^2)$)',
-        'Is monotonic'
-      ],
+      'Cannot exist',
+      'Is continuous',
+      'Exists (e.g., $F\\\'$ where $F(x) = x^2\\sin(1/x^2)$)',
+      'Is monotonic',
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: '$F(x) = x^2\\sin(1/x^2)$ has bounded derivative that oscillates wildly near 0.'
@@ -615,12 +839,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'If $F$ is differentiable on $[a,b]$ with bounded derivative, then:',
       options: [
-        '$F\'$ may not be Riemann integrable',
-        '$F\'$ is continuous',
-        '$F$ is constant',
-        '$F\'$ is always Riemann integrable'
-      ],
-      correctIndex: 3,
+      '$F\\\'$ may not be Riemann integrable',
+      '$F\\\'$ is continuous',
+      '$F\\\'$ is always Riemann integrable',
+      '$F$ is constant',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Bounded derivatives are Riemann integrable (Lebesgue\'s criterion applies).'
     },
@@ -629,11 +853,19 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The Lebesgue differentiation theorem states that if $F(x) = \\int_a^x f$ for $f \\in L^1$:',
       options: [
-        '$F\'(x) = f(x)$ for almost every $x$',
-        '$F\'(x) = f(x)$ for all $x$',
-        '$F$ is not differentiable',
-        '$F\'$ doesn\'t exist'
-      ],
+      '$F\\'(x) = f(x)$ for all $x
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'For Lebesgue integrable $f$, the integral function is differentiable a.e. with derivative $f$.'
+    },
+      '$F$ is not differentiable',
+      '$F\\'(x) = f(x)$ for almost every $x
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'For Lebesgue integrable $f$, the integral function is differentiable a.e. with derivative $f$.'
+    },
+      '$F\\'$ doesn\\'t exist',
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'For Lebesgue integrable $f$, the integral function is differentiable a.e. with derivative $f$.'
@@ -652,11 +884,27 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'For $F(x) = \\int_0^x f$ where $f$ has a removable discontinuity at $c$:',
       options: [
-        '$F$ is not differentiable at $c$',
-        '$F\'(c)$ exists and equals the limit of $f$ at $c$',
-        '$F$ is discontinuous at $c$',
-        '$F\'(c) = f(c)$'
-      ],
+      '$F$ is not differentiable at $c
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Removable discontinuities don\'t affect the integral function\'s differentiability.'
+    },
+      '$F$ is discontinuous at $c
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Removable discontinuities don\'t affect the integral function\'s differentiability.'
+    },
+      '$F\\'(c) = f(c)
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Removable discontinuities don\'t affect the integral function\'s differentiability.'
+    },
+      '$F\\'(c)$ exists and equals the limit of $f$ at $c
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Removable discontinuities don\'t affect the integral function\'s differentiability.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Removable discontinuities don\'t affect the integral function\'s differentiability.'
@@ -666,11 +914,19 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The Newton integral defines $\\int_a^b f = F(b) - F(a)$ where $F\' = f$. This:',
       options: [
-        'Always equals the Riemann integral',
-        'Requires $f$ continuous',
-        'May differ from Riemann integral for some integrable $f$',
-        'Is undefined for bounded $f$'
-      ],
+      'Always equals the Riemann integral',
+      'May differ from Riemann integral for some integrable $f
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Newton integral depends on choice of antiderivative and may disagree with Riemann.'
+    },
+      'Requires $f$ continuous',
+      'Is undefined for bounded $f
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Newton integral depends on choice of antiderivative and may disagree with Riemann.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Newton integral depends on choice of antiderivative and may disagree with Riemann.'
@@ -689,11 +945,15 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'Lebesgue\'s fundamental theorem: if $F$ is absolutely continuous, then:',
       options: [
-        '$F\' = 0$ a.e.',
-        '$F$ is differentiable everywhere',
-        '$F$ is constant',
-        '$F\'$ exists a.e., is integrable, and $\\int_a^x F\' = F(x) - F(a)$'
-      ],
+      '$F\\'$ exists a.e., is integrable, and $\\int_a^x F\\' = F(x) - F(a)
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Absolute continuity is the precise condition for FTC in the Lebesgue setting.'
+    },
+      '$F\\' = 0$ a.e.',
+      '$F$ is differentiable everywhere',
+      '$F$ is constant',
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Absolute continuity is the precise condition for FTC in the Lebesgue setting.'
@@ -703,12 +963,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'A Lipschitz function on $[a,b]$:',
       options: [
-        'Is absolutely continuous',
-        'May not be absolutely continuous',
-        'Is not differentiable',
-        'Has unbounded derivative'
-      ],
-      correctIndex: 0,
+      'May not be absolutely continuous',
+      'Is not differentiable',
+      'Is absolutely continuous',
+      'Has unbounded derivative',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Lipschitz implies absolute continuity (and bounded derivative a.e.).'
     },
@@ -725,12 +985,12 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'The condition of bounded variation:',
       options: [
-        'Implies absolute continuity',
-        'Is implied by absolute continuity',
-        'Is equivalent to continuity',
-        'Implies differentiability everywhere'
-      ],
-      correctIndex: 1,
+      'Is implied by absolute continuity',
+      'Implies absolute continuity',
+      'Is equivalent to continuity',
+      'Implies differentiability everywhere',
+    ],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Absolute continuity implies bounded variation, but not conversely (Cantor function).'
     },
@@ -739,11 +999,23 @@ export const section14Quiz = {
       type: 'multiple-choice',
       question: 'For the generalized FTC with Stieltjes integral $\\int_a^b f\\,dg$:',
       options: [
-        'Requires $g$ differentiable',
-        'Is undefined for discontinuous $g$',
-        'If $g$ is absolutely continuous, $\\int_a^b f\\,dg = \\int_a^b f g\'\\,dx$',
-        '$f$ must equal $g$'
-      ],
+      'If $g$ is absolutely continuous, $\\int_a^b f\\,dg = \\int_a^b f g\\'\\,dx
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'When $g$ is absolutely continuous, Stieltjes integral reduces to Lebesgue integral.'
+    },
+      'Requires $g$ differentiable',
+      'Is undefined for discontinuous $g
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'When $g$ is absolutely continuous, Stieltjes integral reduces to Lebesgue integral.'
+    },
+      '$f$ must equal $g
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'When $g$ is absolutely continuous, Stieltjes integral reduces to Lebesgue integral.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'When $g$ is absolutely continuous, Stieltjes integral reduces to Lebesgue integral.'

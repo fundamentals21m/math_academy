@@ -6,12 +6,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Summation by parts is the discrete analog of:',
     options: [
+      'Integration by parts',
       'The chain rule',
-      'L\'H\\^opital\'s rule',
+      'L\\'H\\^opital\\'s rule',
       'The product rule',
-      'Integration by parts'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Summation by parts: $\\sum a_n b_n = A_N b_N - \\sum A_n (b_{n+1} - b_n)$ where $A_n = \\sum_{k=1}^n a_k$. This mirrors $\\int u\\,dv = uv - \\int v\\,du$.',
   },
@@ -20,10 +20,18 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Abel\'s theorem concerns:',
     options: [
-      'Continuity of power series at boundary points where they converge',
       'The divergence of the harmonic series',
-      'The irrationality of $e$',
-      'Compact sets in $\\mathbb{R}^n$'
+      'The irrationality of $e
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Abel\'s theorem: if $\\sum c_n$ converges to $s$, then $\\lim_{x \\to 1^-} \\sum c_n x^n = s$. The power series extends continuously to $x = 1$.',
+  },
+      'Continuity of power series at boundary points where they converge',
+      'Compact sets in $\\mathbb{R}^n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Abel\'s theorem: if $\\sum c_n$ converges to $s$, then $\\lim_{x \\to 1^-} \\sum c_n x^n = s$. The power series extends continuously to $x = 1$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -50,10 +58,10 @@ export const section23Questions: QuizQuestion[] = [
     options: [
       'The comparison test',
       'The ratio test',
-      'The Leibniz (alternating series) test or Dirichlet\'s test',
-      'The root test'
+      'The root test',
+      'The Leibniz (alternating series) test or Dirichlet\\'s test',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Take $a_n = (-1)^n$ (bounded partial sums: $0$ or $-1$) and $b_n = 1/n \\downarrow 0$. Dirichlet\'s test applies. Equivalently, use the alternating series test.',
   },
@@ -62,10 +70,26 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using Abel\'s theorem, $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$ equals:',
     options: [
-      '$e$',
-      '$\\pi$',
-      '$1$',
-      '$\\ln 2$'
+      '$e
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'We know $\\ln(1+x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$ for $|x| < 1$. The series at $x = 1$ converges. By Abel\'s theorem, it equals $\\lim_{x \\to 1^-} \\ln(1+x) = \\ln 2$.',
+  },
+      '$\\pi
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'We know $\\ln(1+x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$ for $|x| < 1$. The series at $x = 1$ converges. By Abel\'s theorem, it equals $\\lim_{x \\to 1^-} \\ln(1+x) = \\ln 2$.',
+  },
+      '$\\ln 2
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'We know $\\ln(1+x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$ for $|x| < 1$. The series at $x = 1$ converges. By Abel\'s theorem, it equals $\\lim_{x \\to 1^-} \\ln(1+x) = \\ln 2$.',
+  },
+      '$1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'We know $\\ln(1+x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$ for $|x| < 1$. The series at $x = 1$ converges. By Abel\'s theorem, it equals $\\lim_{x \\to 1^-} \\ln(1+x) = \\ln 2$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',

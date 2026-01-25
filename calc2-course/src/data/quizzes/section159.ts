@@ -7,9 +7,13 @@ export const section159Questions: QuizQuestion[] = [
     question: 'In Bernoulli trials, each trial has:',
     options: [
       'Multiple possible outcomes',
-      'Exactly two outcomes: success with probability $p$ and failure with probability $q = 1-p$',
       'Outcomes that depend on previous trials',
-      'Equally likely outcomes only'
+      'Equally likely outcomes only',
+      'Exactly two outcomes: success with probability $p$ and failure with probability $q = 1-p
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Bernoulli trials are repeated independent trials with two outcomes: success (probability $p$) and failure (probability $q = 1-p$).',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

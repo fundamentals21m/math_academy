@@ -6,12 +6,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the BIP-35 mempool message request?',
     options: [
-      'Transaction IDs in the peer\'s mempool',
       'Block headers',
       'Peer addresses',
-      'Fee estimates'
+      'Fee estimates',
+      'Transaction IDs in the peer\\\'s mempool',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The mempool message requests inventory of all transactions in the peer\'s mempool.',
   },
@@ -20,12 +20,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The mempool message is useful for:',
     options: [
-      'Mining blocks',
       'Synchronizing unconfirmed transactions',
+      'Mining blocks',
       'Validating signatures',
-      'Generating addresses'
+      'Generating addresses',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Nodes can request mempool contents to sync unconfirmed transactions.',
   },
@@ -42,12 +42,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A node might reject mempool requests if:',
     options: [
-      'It\'s not mining',
-      'The request is malformed',
+      'It\\\\'s not mining',
       'Its mempool is too large',
-      'It\'s a light client'
+      'The request is malformed',
+      'It\\\\'s a light client',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Nodes may refuse to send large mempools to prevent bandwidth abuse.',
   },

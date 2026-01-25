@@ -1,0 +1,88 @@
+{
+  "partId": 8,
+  "partTitle": "Linear Transformations",
+  "textbookChapter": "Chapter 8: Linear Transformations",
+  "sections": [
+    {
+      "sectionId": 32,
+      "sectionTitle": "The Idea of a Linear Transformation",
+      "textbookSection": "Section 8.1",
+      "examples": [
+        {
+          "id": "ex-8-1-1",
+          "type": "example",
+          "title": "Verifying Linearity",
+          "statement": "Is $T(x, y) = (2x + y, x - y)$ a linear transformation?",
+          "solution": {
+            "steps": [
+              {"title": "Check additivity", "content": "$T((x_1, y_1) + (x_2, y_2)) = T(x_1+x_2, y_1+y_2) = (2(x_1+x_2) + (y_1+y_2), (x_1+x_2) - (y_1+y_2))$"},
+              {"title": "Compare", "content": "$T(x_1, y_1) + T(x_2, y_2) = (2x_1+y_1, x_1-y_1) + (2x_2+y_2, x_2-y_2) = (2x_1+2x_2+y_1+y_2, x_1+x_2-y_1-y_2)$. Equal!"},
+              {"title": "Check scalar multiplication", "content": "$T(c(x, y)) = T(cx, cy) = (2cx + cy, cx - cy) = c(2x+y, x-y) = cT(x, y)$. Works!"}
+            ],
+            "conclusion": "Yes, $T$ is a linear transformation."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-1-1",
+          "type": "exercise",
+          "number": "8.1.1",
+          "statement": "Is $T(x, y) = (x + 1, y)$ linear?",
+          "solution": "No. $T(0, 0) = (1, 0) \\neq (0, 0)$. A linear transformation must map the zero vector to zero."
+        },
+        {
+          "id": "8-1-2",
+          "type": "exercise",
+          "number": "8.1.2",
+          "statement": "Find the kernel and range of $T(x, y, z) = (x + y, y + z)$.",
+          "solution": "Kernel: $x + y = 0$ and $y + z = 0$. So $y = -x$ and $z = -y = x$. $\\ker(T) = \\{t(1, -1, 1) : t \\in \\mathbb{R}\\}$, dim = 1. Range: $T$ maps to $\\mathbb{R}^2$. Since matrix has rank 2, range = $\\mathbb{R}^2$."
+        }
+      ]
+    },
+    {
+      "sectionId": 33,
+      "sectionTitle": "The Matrix of a Linear Transformation",
+      "textbookSection": "Section 8.2",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "8-2-1",
+          "type": "exercise",
+          "number": "8.2.1",
+          "statement": "Find the matrix for $T(x, y) = (x + 2y, 3x + 4y)$.",
+          "solution": "$T(\\mathbf{e}_1) = T(1, 0) = (1, 3)$ (first column). $T(\\mathbf{e}_2) = T(0, 1) = (2, 4)$ (second column). $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$."
+        },
+        {
+          "id": "8-2-2",
+          "type": "exercise",
+          "number": "8.2.2",
+          "statement": "Find the matrix for reflection across the line $y = x$ in $\\mathbb{R}^2$.",
+          "solution": "$(1, 0) \\mapsto (0, 1)$ and $(0, 1) \\mapsto (1, 0)$. Matrix: $A = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$."
+        }
+      ]
+    },
+    {
+      "sectionId": 34,
+      "sectionTitle": "The Search for a Good Basis",
+      "textbookSection": "Section 8.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "8-3-1",
+          "type": "exercise",
+          "number": "8.3.1",
+          "statement": "If $B = M^{-1}AM$ and $A$ has eigenvalues $2, 3$, what are the eigenvalues of $B$?",
+          "solution": "Similar matrices have the same eigenvalues. Eigenvalues of $B$ are also $2, 3$."
+        },
+        {
+          "id": "8-3-2",
+          "type": "exercise",
+          "number": "8.3.2",
+          "statement": "Find the change of basis matrix from $\\mathcal{B} = \\{(1, 1), (1, -1)\\}$ to the standard basis.",
+          "solution": "The change of basis matrix $P$ has basis vectors as columns: $P = \\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$. To convert $[\\mathbf{v}]_{\\mathcal{B}}$ to standard coordinates: $\\mathbf{v} = P[\\mathbf{v}]_{\\mathcal{B}}$."
+        }
+      ]
+    }
+  ]
+}

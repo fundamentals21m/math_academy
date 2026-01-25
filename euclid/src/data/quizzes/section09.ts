@@ -8,10 +8,10 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'A perpendicular to a line',
       'A line parallel to another',
-      'The bisector of a rectilineal angle',
       'An angle equal to a given angle',
+      'The bisector of a rectilineal angle',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'I.9: "To bisect a given rectilineal angle."',
   },
@@ -20,12 +20,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What shape does the construction in I.9 use?',
     options: [
-      'An equilateral triangle',
       'A square',
       'A circle only',
-      'A rectangle'
+      'An equilateral triangle',
+      'A rectangle',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The construction uses I.1 to create an equilateral triangle, then uses the properties of isosceles triangles.',
   },

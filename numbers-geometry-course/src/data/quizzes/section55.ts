@@ -9,12 +9,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What foundational work established modern number theory?',
     options: [
-      'Newton\\'s Principia',
-      'Euclid\\'s Elements',
-      'Gauss\\'s Disquisitiones Arithmeticae',
-      'Euler\\'s Introductio',
+      'Newton\\\\\'s Principia',
+      'Gauss\\\\\'s Disquisitiones Arithmeticae',
+      'Euclid\\\\\'s Elements',
+      'Euler\\\\\'s Introductio',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Gauss\'s Disquisitiones Arithmeticae (1801) founded modern number theory with its treatment of congruences and quadratic reciprocity.',
@@ -39,12 +39,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What makes Z/pZ special compared to Z/nZ for composite n?',
     options: [
-      'It is a field (every non-zero element has an inverse)',
       'It has more elements',
       'It has more zero divisors',
+      'It is a field (every non-zero element has an inverse)',
       'It has no additive identity',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'When p is prime, Z/pZ is a field: every non-zero element has a multiplicative inverse. For composite n, Z/nZ has zero divisors.',
@@ -69,12 +69,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which theorem characterizes primes exactly?',
     options: [
-      'Fermat\\'s Little Theorem',
+      'Wilson\\\'s Theorem',
+      'Fermat\\\'s Little Theorem',
       'Chinese Remainder Theorem',
-      'Euler\\'s Theorem',
-      'Wilson\\'s Theorem',
+      'Euler\\\'s Theorem',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Wilson\'s Theorem is an "if and only if": p > 1 is prime iff (p-1)! ≡ -1 (mod p). Fermat\'s theorem has pseudoprimes.',
@@ -84,12 +84,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What major area of mathematics grew from generalizing quadratic reciprocity?',
     options: [
-      'Real analysis',
       'Class field theory',
+      'Real analysis',
       'Topology',
-      'Differential geometry'
+      'Differential geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'Class field theory (and later the Langlands program) grew from attempts to generalize quadratic reciprocity to higher powers and number fields.',
@@ -99,12 +99,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What topic follows Finite Arithmetic in this course?',
     options: [
-      'Complex Numbers',
       'Trigonometry',
       'Calculus',
       'Probability',
+      'Complex Numbers',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The next chapter explores Complex Numbers—another extension of our number systems.',

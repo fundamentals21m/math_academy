@@ -7,11 +7,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'What does the rehypothecation algebra in Appendix B calculate?',
     options: [
       'Token prices',
-      'The true systemic exposure when collateral is reused across protocols',
       'Mining profitability',
-      'Transaction throughput'
+      'Transaction throughput',
+      'The true systemic exposure when collateral is reused across protocols',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The appendix provides mathematical formulas to calculate how much actual collateral backs the system when the same assets are pledged multiple times across different protocols.',
   },
@@ -36,10 +36,10 @@ export const section19Questions: QuizQuestion[] = [
     options: [
       'DeFi is very well collateralized',
       'DeFi is safer than traditional finance',
+      'The same underlying collateral may support far more "value" than it can actually back',
       'Collateralization ratios are accurate',
-      'The same underlying collateral may support far more "value" than it can actually back'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The math shows that through rehypothecation, a relatively small base of actual collateral can appear to secure a much larger amount of positions—hiding systemic fragility.',
   },

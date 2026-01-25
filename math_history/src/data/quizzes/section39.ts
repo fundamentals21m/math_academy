@@ -7,9 +7,14 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Cauchy\'s definition, when does an infinite series $\\sum a_n$ converge?',
     options: [
-      'When the sequence of partial sums converges to a limit',
       'When the terms $a_n$ approach zero',
-      'When $|a_n| < 1$ for all $n$',
+      'When $|a_n| < 1$ for all $n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'Cauchy defined convergence of a series in terms of its partial sums: the series converges to $S$ if and only if the partial sums $S_N = a_1 + a_2 + \\cdots + a_N$ approach $S$ as $N \\to \\infty$.',
+  },
+      'When the sequence of partial sums converges to a limit',
       'When the series can be rearranged to sum to any value',
     ],
     correctIndex: 0,
@@ -22,10 +27,30 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the radius of convergence of the geometric series $\\sum x^n$?',
     options: [
-      '$R = \\infty$',
-      '$R = 1$',
-      '$R = 0$',
-      '$R = e$'
+      '$R = \\infty
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'The geometric series $\\sum x^n$ converges when $|x| < 1$ and diverges when $|x| > 1$, so its radius of convergence is $R = 1$. At the boundary points $x = \\pm 1$, the series diverges.',
+  },
+      '$R = 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'The geometric series $\\sum x^n$ converges when $|x| < 1$ and diverges when $|x| > 1$, so its radius of convergence is $R = 1$. At the boundary points $x = \\pm 1$, the series diverges.',
+  },
+      '$R = e
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'The geometric series $\\sum x^n$ converges when $|x| < 1$ and diverges when $|x| > 1$, so its radius of convergence is $R = 1$. At the boundary points $x = \\pm 1$, the series diverges.',
+  },
+      '$R = 1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'The geometric series $\\sum x^n$ converges when $|x| < 1$ and diverges when $|x| > 1$, so its radius of convergence is $R = 1$. At the boundary points $x = \\pm 1$, the series diverges.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -41,7 +66,7 @@ export const section39Questions: QuizQuestion[] = [
       'Divergence',
       'Absolute convergence',
       'Conditional convergence (converges but not absolutely)',
-      'Uniform convergence'
+      'Uniform convergence',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -53,12 +78,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Riemann Rearrangement Theorem states that a conditionally convergent series can be rearranged to:',
     options: [
+      'Converge to any real number, or diverge',
       'Always converge to zero',
       'Only converge to its original sum',
       'Converge to exactly two different values',
-      'Converge to any real number, or diverge'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Riemann proved that for any conditionally convergent series, the terms can be reordered to make the series converge to any prescribed real number, or to diverge to $+\\infty$ or $-\\infty$. This shows that order matters for conditional convergence!',
@@ -69,12 +94,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Weierstrass M-test guarantees uniform convergence of $\\sum f_n(x)$ when:',
     options: [
-      '$|f_n(x)| \\leq M_n$ for all $x$ and $\\sum M_n$ converges',
       'Each $f_n$ is continuous',
+      '$|f_n(x)| \\leq M_n$ for all $x$ and $\\sum M_n$ converges',
       'The series converges pointwise',
       '$f_n(x) \\to 0$ uniformly',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The Weierstrass M-test provides sufficient conditions for uniform convergence: if each term is bounded by a constant $M_n$ independent of $x$, and the sum of these bounds converges, then the function series converges uniformly.',
@@ -85,11 +110,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'Why is uniform convergence important for series of functions?',
     options: [
       'It is equivalent to absolute convergence',
-      'It preserves continuity and allows term-by-term integration',
       'It guarantees the series converges faster',
-      'It ensures all partial sums are bounded'
+      'It ensures all partial sums are bounded',
+      'It preserves continuity and allows term-by-term integration',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Uniform convergence is crucial because it preserves properties like continuity: the uniform limit of continuous functions is continuous. It also justifies term-by-term integration and differentiation under appropriate conditions—operations that fail for merely pointwise convergence.',

@@ -53,11 +53,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'When are channels pruned from the network view?',
     options: [
       'After 24 hours of inactivity',
-      'After 2 weeks without channel_update or 72+ blocks after on-chain close',
       'Never - channels are permanent',
+      'After 2 weeks without channel_update or 72+ blocks after on-chain close',
       'After funding output is spent',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Channels are pruned after 2 weeks without updates or 72 blocks after on-chain closure.',
   },

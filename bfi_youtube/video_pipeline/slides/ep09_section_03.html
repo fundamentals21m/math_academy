@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #7C3AED;
+      --accent-rgb: 124, 58, 237;
+    }
+    body {
+      background: linear-gradient(135deg, #0D1117 0%, #1a0a0a 50%, #0D1117 100%);
+    }
+    .crisis-header {
+      color: #EF4444;
+      font-size: 72px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
+    }
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 30px auto;
+      max-width: 1100px;
+    }
+    .event-card {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .event-date {
+      color: #EF4444;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .event-title {
+      color: #E6EDF3;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .event-desc {
+      color: #8B949E;
+      font-size: 16px;
+    }
+    .loss-stat {
+      background: rgba(239, 68, 68, 0.15);
+      border: 2px solid rgba(239, 68, 68, 0.4);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin: 30px auto;
+      display: inline-block;
+    }
+    .loss-value {
+      color: #EF4444;
+      font-size: 48px;
+      font-weight: bold;
+    }
+    .loss-label {
+      color: #E6EDF3;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .foundation-box {
+      background: rgba(124, 58, 237, 0.1);
+      border: 2px solid rgba(124, 58, 237, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin-top: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .foundation-text {
+      color: #E6EDF3;
+      font-size: 22px;
+    }
+    .foundation-text em {
+      color: #7C3AED;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Time Bomb</div>
+    <div class="crisis-header">2022</div>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-date">2022</div>
+        <div class="event-title">Fed Raised Rates</div>
+        <div class="event-desc">Fastest rate hike cycle in decades</div>
+      </div>
+      <div class="event-card">
+        <div class="event-date">September 2022</div>
+        <div class="event-title">UK Gilt Crisis</div>
+        <div class="event-desc">Bank of England emergency bailout required</div>
+      </div>
+      <div class="event-card">
+        <div class="event-date">2023</div>
+        <div class="event-title">US Bank Failures</div>
+        <div class="event-desc">SVB, Signature Bank, and others collapsed</div>
+      </div>
+    </div>
+    <div class="loss-stat">
+      <div class="loss-value">-30% to -50%</div>
+      <div class="loss-label">Long-duration bond losses</div>
+    </div>
+    <div class="foundation-box">
+      <div class="foundation-text">Modern Portfolio Theory is built on a "risk-free asset." When that foundation crumbles, <em>everything must be rethought</em>.</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -68,10 +68,10 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       'The check polynomial',
       'The parity polynomial',
+      'The minimal polynomial',
       'The generator polynomial',
-      'The minimal polynomial'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The generator polynomial $g(x)$ is the unique monic polynomial of lowest degree that generates the cyclic code as an ideal. It must divide $x^n - 1$.',
   },
@@ -89,10 +89,26 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $c(x)$ is a codeword polynomial in a cyclic code, what polynomial operation corresponds to a cyclic shift of the codeword?',
     options: [
-      'Taking the derivative of $c(x)$',
-      'Adding $x$ in $\\mathbb{F}_q[x]/(x^n - 1)$',
-      'Dividing by $x$ in $\\mathbb{F}_q[x]/(x^n - 1)$',
-      'Multiplying by $x$ in $\\mathbb{F}_q[x]/(x^n - 1)$'
+      'Taking the derivative of $c(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Multiplying by $x$ in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$ shifts all coefficients up by one position, with $x^n \\equiv 1$ wrapping the leading coefficient to the constant term.',
+  },
+      'Adding $x$ in $\\mathbb{F}_q[x]/(x^n - 1)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Multiplying by $x$ in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$ shifts all coefficients up by one position, with $x^n \\equiv 1$ wrapping the leading coefficient to the constant term.',
+  },
+      'Multiplying by $x$ in $\\mathbb{F}_q[x]/(x^n - 1)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Multiplying by $x$ in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$ shifts all coefficients up by one position, with $x^n \\equiv 1$ wrapping the leading coefficient to the constant term.',
+  },
+      'Dividing by $x$ in $\\mathbb{F}_q[x]/(x^n - 1)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Multiplying by $x$ in the quotient ring $\\mathbb{F}_q[x]/(x^n - 1)$ shifts all coefficients up by one position, with $x^n \\equiv 1$ wrapping the leading coefficient to the constant term.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

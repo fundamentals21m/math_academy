@@ -32,10 +32,26 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Abel\'s formula states that the Wronskian satisfies:',
     options: [
-      '$w\' = w$',
-      '$w\' + P_1(x) w = 0$',
-      '$w\'\' = 0$',
-      '$w = \\text{constant}$'
+      '$w\\' + P_1(x) w = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Wronskian satisfies the first-order ODE $w\' + P_1(x) w = 0$, where $P_1$ is the coefficient of $y^{(n-1)}$.',
+  },
+      '$w\\' = w
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Wronskian satisfies the first-order ODE $w\' + P_1(x) w = 0$, where $P_1$ is the coefficient of $y^{(n-1)}$.',
+  },
+      '$w\\'\\' = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Wronskian satisfies the first-order ODE $w\' + P_1(x) w = 0$, where $P_1$ is the coefficient of $y^{(n-1)}$.',
+  },
+      '$w = \\text{constant}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Wronskian satisfies the first-order ODE $w\' + P_1(x) w = 0$, where $P_1$ is the coefficient of $y^{(n-1)}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,8 +64,12 @@ export const section56Questions: QuizQuestion[] = [
     options: [
       'Is always zero',
       'Changes sign',
+      'Equals $P_1(x)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Since an exponential is never zero, if $w(c) \\neq 0$ at any point, then $w(x) \\neq 0$ everywhere. Otherwise $w \\equiv 0$.',
+  },
       'Is either identically zero or never zero',
-      'Equals $P_1(x)$'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -93,7 +113,7 @@ export const section56Questions: QuizQuestion[] = [
       'Zero Wronskian would contradict uniqueness of solutions',
       'Exponentials are positive',
       'The functions are continuous',
-      'The interval is bounded'
+      'The interval is bounded',
     ],
     correctIndex: 0,
     difficulty: 'hard',

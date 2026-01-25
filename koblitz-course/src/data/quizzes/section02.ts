@@ -76,11 +76,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What does Euler\'s theorem generalize?',
     options: [
       'The Euclidean algorithm',
-      'Fermat\\'s Little Theorem',
       'The Chinese Remainder Theorem',
       'Quadratic reciprocity',
+      'Fermat\\\\\'s Little Theorem',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Euler\'s theorem ($a^{\\phi(n)} \\equiv 1 \\pmod{n}$) generalizes Fermat\'s Little Theorem to composite moduli.',
   },

@@ -6,10 +6,26 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A square matrix $A$ is unitary if:',
     options: [
-      '$A A^* = I$',
-      '$A A^t = I$',
-      '$A^2 = I$',
-      '$A + A^* = I$'
+      '$A A^t = I
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A unitary matrix satisfies $AA^* = I$, which means $A^{-1} = A^*$.',
+  },
+      '$A A^* = I
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A unitary matrix satisfies $AA^* = I$, which means $A^{-1} = A^*$.',
+  },
+      '$A^2 = I
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A unitary matrix satisfies $AA^* = I$, which means $A^{-1} = A^*$.',
+  },
+      '$A + A^* = I
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A unitary matrix satisfies $AA^* = I$, which means $A^{-1} = A^*$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -21,9 +37,13 @@ export const section41Questions: QuizQuestion[] = [
     question: 'A matrix is unitary if and only if its columns form:',
     options: [
       'A linearly dependent set',
-      'An orthonormal set',
       'An orthogonal set',
-      'A basis for $\\mathbb{R}^n$'
+      'A basis for $\\mathbb{R}^n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The condition $AA^* = I$ is equivalent to $(c_i, c_j) = \\delta_{ij}$ for columns $c_i$, meaning the columns are orthonormal.',
+  },
+      'An orthonormal set',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,10 +54,26 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A$ is unitary, then $|\\det A| = $?',
     options: [
-      '$0$',
-      '$-1$',
-      '$1$',
-      '$n$'
+      '$0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$1 = \\det(AA^*) = \\det A \\cdot \\overline{\\det A} = |\\det A|^2$, so $|\\det A| = 1$.',
+  },
+      '$-1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$1 = \\det(AA^*) = \\det A \\cdot \\overline{\\det A} = |\\det A|^2$, so $|\\det A| = 1$.',
+  },
+      '$n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$1 = \\det(AA^*) = \\det A \\cdot \\overline{\\det A} = |\\det A|^2$, so $|\\det A| = 1$.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$1 = \\det(AA^*) = \\det A \\cdot \\overline{\\det A} = |\\det A|^2$, so $|\\det A| = 1$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -49,11 +85,11 @@ export const section41Questions: QuizQuestion[] = [
     question: 'Unitary matrices preserve:',
     options: [
       'Only the determinant',
+      'Inner products, lengths, and angles',
       'Only the trace',
       'Only eigenvalues',
-      'Inner products, lengths, and angles'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For unitary $A$: $(Ax, Ay) = (x, A^*Ay) = (x, y)$. This preserves inner products, hence lengths and angles.',
   },
@@ -65,7 +101,7 @@ export const section41Questions: QuizQuestion[] = [
       'Unitary',
       'Skew-Hermitian',
       'Hermitian',
-      'Orthogonal'
+      'Orthogonal',
     ],
     correctIndex: 0,
     difficulty: 'hard',

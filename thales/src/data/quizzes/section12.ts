@@ -13,7 +13,7 @@ export const section12Questions: QuizQuestion[] = [
       'By doubling the side length',
       'By adding four smaller squares',
       'By constructing a square on the diagonal',
-      'By using the quadratrix'
+      'By using the quadratrix',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -29,7 +29,7 @@ export const section12Questions: QuizQuestion[] = [
       '"Knowledge is virtue"',
       '"All is number"',
       '"The unexamined life is not worth living"',
-      '"Let no one ignorant of geometry enter here"'
+      '"Let no one ignorant of geometry enter here"',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -42,12 +42,12 @@ export const section12Questions: QuizQuestion[] = [
     question:
       'According to Plato, how do mathematical objects like numbers and squares exist?',
     options: [
+      'In an immaterial realm, independent of the physical world',
       'As physical objects we can touch',
       'As mental constructs created by humans',
-      'In an immaterial realm, independent of the physical world',
       'Only as approximations in drawings',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Plato believed mathematical objects exist in an immaterial realm, separate from the changing, imperfect physical world. The drawing of a square is material, but the square "as such" is immaterial and perfect.',
@@ -59,11 +59,11 @@ export const section12Questions: QuizQuestion[] = [
       'What is "Platonism" as a philosophy of mathematics?',
     options: [
       'The view that mathematics is merely a human invention',
-      'The view that mathematical objects actually exist independently of human minds',
       'The rejection of infinite sets',
       'The belief that only straightedge and compass constructions are valid',
+      'The view that mathematical objects actually exist independently of human minds',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Platonism holds that mathematical objects (like real numbers and geometric figures) actually exist independently of the human mind. Their properties are discovered, not created.',
@@ -75,11 +75,11 @@ export const section12Questions: QuizQuestion[] = [
       'How did Aristotle view the word "two" differently from Plato?',
     options: [
       'As a noun designating an abstract object',
+      'As an adjective describing concrete objects',
       'As a mystical symbol',
       'As an approximation',
-      'As an adjective describing concrete objects',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'For Aristotle, "two" is not a noun designating an abstract entity but an adjective describing concrete things — like "the two-yard ladder" or "a two-year period." Mathematical objects are abstractions from physical reality.',
@@ -106,12 +106,12 @@ export const section12Questions: QuizQuestion[] = [
     question:
       'What is the distinction Aristotle made between "potential infinity" and "actual infinity"?',
     options: [
-      'Potential infinity is larger than actual infinity',
       'Potential infinity means always extendable; actual infinity means a completed infinite whole',
+      'Potential infinity is larger than actual infinity',
       'They are the same thing with different names',
       'Actual infinity applies only to time, potential infinity only to space',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'Aristotle distinguished between potential infinity (always being able to extend further) and actual infinity (a completed infinite totality). He accepted only potential infinity — a geometer can extend a line as much as needed, but cannot have the whole infinite line.',
@@ -138,12 +138,12 @@ export const section12Questions: QuizQuestion[] = [
     question:
       'Which modern school of mathematical philosophy is most similar to Aristotle\'s human-centered, finitist approach?',
     options: [
-      'Intuitionism',
       'Set theory',
       'Mathematical realism',
+      'Intuitionism',
       'Formalism',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Like 20th-century intuitionists, Aristotle\'s view is human-centered. Intuitionism rejects actual infinities and emphasizes constructive methods, similar to Aristotle\'s rejection of completed infinite wholes.',

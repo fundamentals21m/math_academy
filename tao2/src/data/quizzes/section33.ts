@@ -37,9 +37,13 @@ export const section33Questions: QuizQuestion[] = [
     question: 'In matrix form, the chain rule says the Jacobian of $f \\circ g$ is:',
     options: [
       'The sum of the Jacobians',
+      'The product of Jacobian matrices: $J_f(g(x)) \\cdot J_g(x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Jacobians multiply under composition.',
+  },
       'The inverse of the Jacobian',
       'The difference of Jacobians',
-      'The product of Jacobian matrices: $J_f(g(x)) \\cdot J_g(x)$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -83,7 +87,7 @@ export const section33Questions: QuizQuestion[] = [
       'Only the outer function is differentiable',
       'Both functions are differentiable',
       'Only the inner function is differentiable',
-      'Neither function needs to be differentiable'
+      'Neither function needs to be differentiable',
     ],
     correctIndex: 1,
     difficulty: 'easy',

@@ -8,10 +8,10 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'Reducing the number of shares needed for reconstruction',
       'Making reconstruction faster with parallel computation',
-      'Enabling shares to be updated without changing the secret',
       'Allowing participants to verify their shares are correct without trusting the dealer',
+      'Enabling shares to be updated without changing the secret',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Feldman VSS allows participants to verify their shares are valid. A malicious dealer giving incorrect shares would be detected, whereas plain Shamir requires trusting the dealer.',
   },

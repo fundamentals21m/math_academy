@@ -37,11 +37,11 @@ export const section148Questions: QuizQuestion[] = [
     question: 'The physical interpretation of divergence for a velocity field is:',
     options: [
       'The angular velocity',
+      'The rate of expansion or compression per unit volume',
       'The kinetic energy density',
       'The pressure',
-      'The rate of expansion or compression per unit volume',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Divergence measures the rate at which fluid expands (positive divergence) or compresses (negative divergence) at a point—the local "source strength."',
   },

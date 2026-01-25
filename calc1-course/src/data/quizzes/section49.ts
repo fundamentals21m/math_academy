@@ -21,11 +21,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'Taylor polynomials can help evaluate limits by:',
     options: [
       'Finding derivatives',
-      'Replacing functions with their polynomial approximations',
       'Computing integrals',
+      'Replacing functions with their polynomial approximations',
       'Graphing',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Expand each function, substitute, and simplify to find the limit.',
   },

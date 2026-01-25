@@ -96,10 +96,26 @@ export const section116Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The comparison theorem states that if $s(x, y) \\leq t(x, y)$ everywhere on $Q$, then:',
     options: [
-      '$\\iint_Q s = \\iint_Q t$',
-      '$\\iint_Q s \\geq \\iint_Q t$',
-      '$\\iint_Q s \\cdot \\iint_Q t \\geq 0$',
-      '$\\iint_Q s \\leq \\iint_Q t$'
+      '$\\iint_Q s = \\iint_Q t
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The comparison theorem: if $s \\leq t$ on $Q$, then $\\iint_Q s \\leq \\iint_Q t$. In particular, if $t \\geq 0$, then $\\iint_Q t \\geq 0$.',
+  },
+      '$\\iint_Q s \\geq \\iint_Q t
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The comparison theorem: if $s \\leq t$ on $Q$, then $\\iint_Q s \\leq \\iint_Q t$. In particular, if $t \\geq 0$, then $\\iint_Q t \\geq 0$.',
+  },
+      '$\\iint_Q s \\leq \\iint_Q t
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The comparison theorem: if $s \\leq t$ on $Q$, then $\\iint_Q s \\leq \\iint_Q t$. In particular, if $t \\geq 0$, then $\\iint_Q t \\geq 0$.',
+  },
+      '$\\iint_Q s \\cdot \\iint_Q t \\geq 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The comparison theorem: if $s \\leq t$ on $Q$, then $\\iint_Q s \\leq \\iint_Q t$. In particular, if $t \\geq 0$, then $\\iint_Q t \\geq 0$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -110,12 +126,12 @@ export const section116Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'These properties for step functions are proved by:',
     options: [
-      'Direct computation from the definition or using the iterated formula and 1D theorems',
       'Advanced measure theory',
       'Fourier analysis',
-      'Complex integration'
+      'Complex integration',
+      'Direct computation from the definition or using the iterated formula and 1D theorems',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The properties can be proved either directly from the sum definition or by using the iterated integration formula and the corresponding theorems for one-dimensional integrals.',
   },

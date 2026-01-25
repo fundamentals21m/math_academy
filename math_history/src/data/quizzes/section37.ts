@@ -7,8 +7,18 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Maclaurin series a special case of?',
     options: [
-      'A Taylor series centered at $a = 0$',
-      'A Taylor series centered at $a = 1$',
+      'A Taylor series centered at $a = 1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'The Maclaurin series is simply a Taylor series where the center point $a = 0$. This special case was popularized by Colin Maclaurin, though Taylor had developed the general formula earlier.',
+  },
+      'A Taylor series centered at $a = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'The Maclaurin series is simply a Taylor series where the center point $a = 0$. This special case was popularized by Colin Maclaurin, though Taylor had developed the general formula earlier.',
+  },
       'A Fourier series',
       'A geometric series',
     ],
@@ -22,10 +32,30 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the exponential series $e^x = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\cdots$, what is the coefficient of $x^4$?',
     options: [
-      '$\\frac{1}{4}$',
-      '$\\frac{1}{24}$',
-      '$\\frac{1}{16}$',
-      '$\\frac{1}{120}$'
+      '$\\frac{1}{4}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'The coefficient of $x^n$ in the exponential series is $\\frac{1}{n!}$. For $n = 4$, this is $\\frac{1}{4!} = \\frac{1}{24}$.',
+  },
+      '$\\frac{1}{16}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'The coefficient of $x^n$ in the exponential series is $\\frac{1}{n!}$. For $n = 4$, this is $\\frac{1}{4!} = \\frac{1}{24}$.',
+  },
+      '$\\frac{1}{24}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'The coefficient of $x^n$ in the exponential series is $\\frac{1}{n!}$. For $n = 4$, this is $\\frac{1}{4!} = \\frac{1}{24}$.',
+  },
+      '$\\frac{1}{120}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'The coefficient of $x^n$ in the exponential series is $\\frac{1}{n!}$. For $n = 4$, this is $\\frac{1}{4!} = \\frac{1}{24}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -56,7 +86,7 @@ export const section37Questions: QuizQuestion[] = [
       'Because Euler discovered them that way',
       'Because of the alternating signs in the series',
       'Because the Taylor formula requires this pattern',
-      'Because sine is an odd function and cosine is an even function'
+      'Because sine is an odd function and cosine is an even function',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -69,10 +99,30 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The geometric series $\\frac{1}{1-x} = 1 + x + x^2 + \\cdots$ converges when:',
     options: [
-      '$|x| < 1$',
-      '$x < 1$',
-      '$|x| \\leq 1$',
-      'For all $x$',
+      '$x < 1
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'The geometric series converges if and only if the absolute value of the common ratio is less than 1: $|x| < 1$. At $x = 1$, the series becomes $1 + 1 + 1 + \\cdots$ which diverges. At $x = -1$, it becomes $1 - 1 + 1 - 1 + \\cdots$ which also fails to converge.',
+  },
+      '$|x| < 1
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      'The geometric series converges if and only if the absolute value of the common ratio is less than 1: $|x| < 1$. At $x = 1$, the series becomes $1 + 1 + 1 + \\cdots$ which diverges. At $x = -1$, it becomes $1 - 1 + 1 - 1 + \\cdots$ which also fails to converge.',
+  },
+      '$|x| \\leq 1
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      'The geometric series converges if and only if the absolute value of the common ratio is less than 1: $|x| < 1$. At $x = 1$, the series becomes $1 + 1 + 1 + \\cdots$ which diverges. At $x = -1$, it becomes $1 - 1 + 1 - 1 + \\cdots$ which also fails to converge.',
+  },
+      'For all $x
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      'The geometric series converges if and only if the absolute value of the common ratio is less than 1: $|x| < 1$. At $x = 1$, the series becomes $1 + 1 + 1 + \\cdots$ which diverges. At $x = -1$, it becomes $1 - 1 + 1 - 1 + \\cdots$ which also fails to converge.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -84,12 +134,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Lagrange remainder formula $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ tells us that:',
     options: [
-      'Every Taylor series converges to its function',
       'The error in truncating a Taylor series can be bounded using the next derivative',
+      'Every Taylor series converges to its function',
       'The remainder is always smaller than the last term kept',
-      'Taylor series converge faster than geometric series'
+      'Taylor series converge faster than geometric series',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The Lagrange remainder formula gives an exact expression for the error when we approximate a function by a partial Taylor sum. By bounding $f^{(n+1)}$ on the interval, we can bound the error, proving convergence when the remainder goes to zero as $n \\to \\infty$.',

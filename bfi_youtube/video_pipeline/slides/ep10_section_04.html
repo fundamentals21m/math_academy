@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+    .reason-card {
+      background: rgba(8, 145, 178, 0.05);
+      border: 1px solid rgba(8, 145, 178, 0.2);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: left;
+    }
+    .reason-number {
+      color: #0891B2;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      margin-bottom: 10px;
+    }
+    .reason-title {
+      color: #E6EDF3;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .reason-desc {
+      color: #8B949E;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .reason-highlight {
+      color: #0891B2;
+      font-weight: 600;
+    }
+    .alignment-box {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin-top: 40px;
+      display: inline-block;
+    }
+    .alignment-text {
+      color: #E6EDF3;
+      font-size: 24px;
+    }
+    .alignment-text em {
+      color: #22C55E;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Perfect Fit</div>
+    <div class="section-title">Why NQDC Works for Bitcoin</div>
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="reason-number">REASON 01</div>
+        <div class="reason-title">Long Time Horizons</div>
+        <div class="reason-desc">Executives typically defer for <span class="reason-highlight">10-20+ years</span>, aligning with bitcoin's optimal holding period</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-number">REASON 02</div>
+        <div class="reason-title">Tax-Deferred Growth</div>
+        <div class="reason-desc">Bitcoin's volatility becomes less relevant when gains <span class="reason-highlight">compound tax-free</span> for decades</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-number">REASON 03</div>
+        <div class="reason-title">No Contribution Limits</div>
+        <div class="reason-desc">High earners can allocate <span class="reason-highlight">significant amounts</span> to bitcoin exposure</div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-number">REASON 04</div>
+        <div class="reason-title">Company Alignment</div>
+        <div class="reason-desc">Creates <span class="reason-highlight">shared interest</span> between company and executive in bitcoin's success</div>
+      </div>
+    </div>
+    <div class="alignment-box">
+      <div class="alignment-text">NQDC + Bitcoin = <em>Perfect alignment of time horizons and incentives</em></div>
+    </div>
+  </div>
+</body>
+</html>

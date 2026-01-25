@@ -64,10 +64,22 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $f: \\mathbf{R} \\to \\mathbf{R}$, the condition "$Df(x_0)$ is invertible" means:',
     options: [
-      '$f\'(x_0) \\neq 0$',
-      '$f(x_0) = 0$',
-      '$f\'(x_0) = 1$',
-      '$f$ is linear'
+      '$f(x_0) = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'In one dimension, the derivative is invertible iff it\'s nonzero.',
+  },
+      '$f\\'(x_0) = 1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'In one dimension, the derivative is invertible iff it\'s nonzero.',
+  },
+      '$f$ is linear',
+      '$f\\'(x_0) \\neq 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'In one dimension, the derivative is invertible iff it\'s nonzero.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -78,12 +90,12 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The inverse function theorem is proved using:',
     options: [
-      'The intermediate value theorem',
       'The contraction mapping theorem',
+      'The intermediate value theorem',
       'The extreme value theorem',
-      'Taylor\'s theorem'
+      'Taylor\\\\'s theorem',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The proof constructs the inverse via iteration and uses the contraction mapping principle.',
   },

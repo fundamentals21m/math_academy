@@ -9,12 +9,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the two sides of geometry described in this chapter?',
     options: [
-      'Synthetic (visual) and analytic (algebraic)',
       'Euclidean and non-Euclidean',
       'Plane and solid',
       'Finite and infinite',
+      'Synthetic (visual) and analytic (algebraic)',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Geometry has two sides: the synthetic (visual, self-contained) side that seems intuitively natural, and the analytic (algebraic) side that integrates geometry into the larger world of mathematics.',
@@ -25,8 +25,13 @@ export const section28Questions: QuizQuestion[] = [
     question: 'What discovery sparked the conflict between arithmetic and geometry?',
     options: [
       'The Pythagorean theorem',
+      'Irrational numbers like $\\sqrt{2}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'The conflict began with the discovery of irrational lengths such as √2. At the time, numbers were rational by definition, so irrational lengths could not be numbers, and geometry could not be based on arithmetic.',
+  },
       'Non-Euclidean geometry',
-      'Irrational numbers like $\\sqrt{2}$',
       'The parallel postulate',
     ],
     correctIndex: 2,
@@ -70,11 +75,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'What algebraic structure is the appropriate setting for geometry?',
     options: [
       'Group',
-      'Field',
       'Ring',
+      'Field',
       'Vector space',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Around 1900, it became clear that the concept of field was the appropriate algebraic setting for geometry. We can build Euclid\'s geometry using the field ℝ, and conversely, we can build a field from Euclid\'s geometric concepts.',
@@ -84,12 +89,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What distinguished "potential infinity" from "actual infinity" for the Greeks?',
     options: [
-      'Potential infinity is smaller',
       'Potential infinity is a process; actual infinity is a completed set',
+      'Potential infinity is smaller',
       'They are the same concept',
       'Actual infinity applies only to geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The Greeks accepted potential infinity (a process that continues indefinitely, like generating ℕ by repeatedly adding 1) but not actual infinity (a completed infinite set). Real numbers require actual infinity because they involve infinite subsets of ℚ given all at once.',
@@ -100,11 +105,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'What is a similarity in Euclidean geometry?',
     options: [
       'A map that preserves all distances',
+      'A map that multiplies all lengths by a constant',
       'A reflection in a line',
       'A map that preserves only angles less than 90°',
-      'A map that multiplies all lengths by a constant',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'A similarity is a mapping of ℝ × ℝ that multiplies all lengths by a constant c. A typical example is the dilatation that sends (x, y) to (cx, cy).',

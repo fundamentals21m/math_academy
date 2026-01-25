@@ -58,10 +58,26 @@ export const section81Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The magnitude $\\|\\mathbf{a} \\times \\mathbf{b}\\|$ equals:',
     options: [
-      '$\\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos\\theta$',
-      '$\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|$',
-      '$\\|\\mathbf{a}\\| + \\|\\mathbf{b}\\|$',
-      '$\\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\sin\\theta$'
+      '$\\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\cos\\theta
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\|\\mathbf{a} \\times \\mathbf{b}\\| = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\sin\\theta$.',
+  },
+      '$\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\|\\mathbf{a} \\times \\mathbf{b}\\| = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\sin\\theta$.',
+  },
+      '$\\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\sin\\theta
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\|\\mathbf{a} \\times \\mathbf{b}\\| = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\sin\\theta$.',
+  },
+      '$\\|\\mathbf{a}\\| + \\|\\mathbf{b}\\|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\|\\mathbf{a} \\times \\mathbf{b}\\| = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\| \\sin\\theta$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -120,10 +136,26 @@ export const section81Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\mathbf{a} \\times \\mathbf{a} = ?$',
     options: [
-      '$\\mathbf{a}$',
-      '$2\\mathbf{a}$',
-      '$\\mathbf{0}$',
-      '$\\|\\mathbf{a}\\|^2$'
+      '$\\mathbf{a}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Cross product of parallel vectors is zero.',
+  },
+      '$\\mathbf{0}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Cross product of parallel vectors is zero.',
+  },
+      '$2\\mathbf{a}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Cross product of parallel vectors is zero.',
+  },
+      '$\\|\\mathbf{a}\\|^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Cross product of parallel vectors is zero.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

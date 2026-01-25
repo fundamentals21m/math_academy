@@ -65,7 +65,7 @@ export const section05Questions: QuizQuestion[] = [
       '1.21',
       '0.15',
       '0.70',
-      '0.824'
+      '0.824',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -101,7 +101,7 @@ export const section05Questions: QuizQuestion[] = [
       '10 years',
       '18 years',
       '14 years',
-      '25 years'
+      '25 years',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -112,12 +112,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do tontines need conditional survival probabilities?',
     options: [
-      'To calculate tax obligations',
       'To weight contributions for people of different ages and predict future survivors',
+      'To calculate tax obligations',
       'To determine marketing strategies',
       'To comply with banking regulations',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Tontines need conditional probabilities to know how many members will likely survive to each future year, weight contributions for different ages, and determine fair payouts.',
   },

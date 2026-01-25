@@ -7,11 +7,11 @@ export const section175Questions: QuizQuestion[] = [
     question: 'When transforming $(X, Y)$ to $(U, V)$ via a one-to-one mapping, the new density involves:',
     options: [
       'Only the old density',
+      'The old density times the absolute value of the Jacobian',
       'The square of the old density',
       'The old density divided by the Jacobian',
-      'The old density times the absolute value of the Jacobian'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The change of variables formula: $g(u, v) = f[Q(u,v), R(u,v)] \\cdot |\\partial(Q, R)/\\partial(u, v)|$.',
   },
@@ -20,10 +20,26 @@ export const section175Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the transformation $U = X + Y$, $V = X - Y$, the Jacobian of the inverse transformation is:',
     options: [
-      '$1/2$',
-      '$2$',
-      '$1$',
-      '$-1/2$'
+      '$2
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The inverse is $x = (u+v)/2$, $y = (u-v)/2$. The Jacobian determinant is $|\\partial(x,y)/\\partial(u,v)| = 1/2$.',
+  },
+      '$1
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The inverse is $x = (u+v)/2$, $y = (u-v)/2$. The Jacobian determinant is $|\\partial(x,y)/\\partial(u,v)| = 1/2$.',
+  },
+      '$-1/2
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The inverse is $x = (u+v)/2$, $y = (u-v)/2$. The Jacobian determinant is $|\\partial(x,y)/\\partial(u,v)| = 1/2$.',
+  },
+      '$1/2
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The inverse is $x = (u+v)/2$, $y = (u-v)/2$. The Jacobian determinant is $|\\partial(x,y)/\\partial(u,v)| = 1/2$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

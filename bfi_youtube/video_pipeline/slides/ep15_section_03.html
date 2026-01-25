@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin: 30px auto;
+      max-width: 950px;
+    }
+    .problem-card {
+      background: rgba(8, 145, 178, 0.08);
+      border: 1px solid rgba(8, 145, 178, 0.3);
+      padding: 25px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .problem-title {
+      color: #0891B2;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .problem-desc {
+      color: #E6EDF3;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .mstr-box {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mstr-title {
+      color: #F7931A;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .mstr-text {
+      color: #E6EDF3;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Agency Problem</div>
+    <div class="section-title">Inadequate Reporting</div>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="problem-title">Asset-Only Framework</div>
+        <div class="problem-desc">Managers only saw asset returns. Everything defined by "beating the S&P 500" — liabilities invisible.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-title">The Misunderstanding</div>
+        <div class="problem-desc">Beating S&P by 50 bps when it returns -20% doesn't help the pension at all. But they couldn't see this.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-title">Career Risk</div>
+        <div class="problem-desc">CFO telling CEO "pension is great" when bonds lost 30% — too much career risk, even if liabilities also dropped 30%.</div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-title">Bitcoin Parallel</div>
+        <div class="problem-desc">Without proper metrics, even obvious improvements get rejected due to how they "look" to leadership.</div>
+      </div>
+    </div>
+    <div class="mstr-box">
+      <div class="mstr-title">The Strategy (MSTR) Problem</div>
+      <div class="mstr-text">The market doesn't know how to value MSTR because they don't know how to associate value with their bitcoin treasury. Same problem, new asset.</div>
+    </div>
+  </div>
+</body>
+</html>

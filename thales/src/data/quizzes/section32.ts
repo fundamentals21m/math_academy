@@ -8,8 +8,13 @@ export const section32Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'In what year did Peano publish his Arithmetices Principia?',
-    options: ['1879', '1889', '1899', '1909'],
-    correctIndex: 1,
+    options: [
+      '1879',
+      '1899',
+      '1889',
+      '1909',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Giuseppe Peano (1858-1932) published his axioms for the natural numbers in his Arithmetices Principia in 1889, written in a language he invented.',
@@ -35,11 +40,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'Which of the following is NOT one of Peano\'s axioms?',
     options: [
       'Sx ≠ 0 (zero is not a successor)',
-      'x + 0 = x (identity for addition)',
       'Sx = Sy implies x = y (S is injective)',
       'Mathematical induction',
+      'x + 0 = x (identity for addition)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The equation x + 0 = x is not an axiom but a definition. Peano\'s three axioms are: (1) 0 is not a successor, (2) S is injective, and (3) mathematical induction.',
@@ -49,12 +54,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is the number 2 represented in Peano\'s system?',
     options: [
+      'SS0',
       'S0',
       'SSS0',
-      'SS0',
       '2',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'In Peano\'s system, 1 = S0 (successor of 0) and 2 = SS0 = S(S(0)) (successor of successor of 0).',
@@ -80,11 +85,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'What is 0⁰ in Peano\'s recursive definition of exponentiation?',
     options: [
       '0',
-      'Undefined',
       '1',
+      'Undefined',
       'Indeterminate',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'In Peano\'s recursive definition, x⁰ = 1 for all x, including x = 0. So 0⁰ = 1 by definition.',
@@ -110,11 +115,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'What is 1 ∸ 3 using naive subtraction?',
     options: [
       '-2',
+      '0',
       '2',
       'Undefined',
-      '0',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Naive subtraction (∸) returns 0 when the result would be negative, since negative numbers are not natural numbers. So 1 ∸ 3 = 0.',
@@ -124,12 +129,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What proof technique is used to show that 0 + x = x?',
     options: [
-      'Mathematical induction',
       'Direct computation',
       'Proof by contradiction',
       'Case analysis',
+      'Mathematical induction',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The lemma 0 + x = x is proved by mathematical induction on x. The base case shows 0 + 0 = 0, and the inductive step shows that if 0 + x = x, then 0 + Sx = Sx.',

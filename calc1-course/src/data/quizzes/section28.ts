@@ -66,10 +66,26 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The quotient rule states $(f/g)\' = ?$',
     options: [
-      '$f\'/g\'$',
-      '$\\frac{f\'g - fg\'}{g^2}$',
-      '$\\frac{f\'g + fg\'}{g^2}$',
-      '$\\frac{f\' - g\'}{g}$'
+      '$f\\'/g\\'
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Quotient rule: $(f/g)\' = \\frac{f\'g - fg\'}{g^2}$.',
+  },
+      '$\\frac{f\\'g + fg\\'}{g^2}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Quotient rule: $(f/g)\' = \\frac{f\'g - fg\'}{g^2}$.',
+  },
+      '$\\frac{f\\'g - fg\\'}{g^2}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Quotient rule: $(f/g)\' = \\frac{f\'g - fg\'}{g^2}$.',
+  },
+      '$\\frac{f\\' - g\\'}{g}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Quotient rule: $(f/g)\' = \\frac{f\'g - fg\'}{g^2}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

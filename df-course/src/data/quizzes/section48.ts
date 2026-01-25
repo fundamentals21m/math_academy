@@ -28,10 +28,26 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In lexicographic order with $x > y$, which monomial is largest?',
     options: [
-      '$y^5$',
-      '$xy^2$',
-      '$x^2y$',
-      '$x^2$'
+      '$y^5
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Lex order compares the power of $x$ first. $x^2y$ and $x^2$ both have $x^2$, but then we compare $y$-powers: $x^2y > x^2$. And $x^2 > xy^2 > y^5$. So $x^2y$ is largest.',
+  },
+      '$xy^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Lex order compares the power of $x$ first. $x^2y$ and $x^2$ both have $x^2$, but then we compare $y$-powers: $x^2y > x^2$. And $x^2 > xy^2 > y^5$. So $x^2y$ is largest.',
+  },
+      '$x^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Lex order compares the power of $x$ first. $x^2y$ and $x^2$ both have $x^2$, but then we compare $y$-powers: $x^2y > x^2$. And $x^2 > xy^2 > y^5$. So $x^2y$ is largest.',
+  },
+      '$x^2y
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Lex order compares the power of $x$ first. $x^2y$ and $x^2$ both have $x^2$, but then we compare $y$-powers: $x^2y > x^2$. And $x^2 > xy^2 > y^5$. So $x^2y$ is largest.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

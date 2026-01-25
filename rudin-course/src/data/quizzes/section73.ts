@@ -24,10 +24,26 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The standard $k$-simplex $\\sigma_k$ in $\\mathbb{R}^k$ is:',
     options: [
-      'The unit ball in $\\mathbb{R}^k$',
-      'The unit cube $[0,1]^k$',
-      '$\\{(t_1, \\ldots, t_k) : t_i \\geq 0, \\sum t_i \\leq 1\\}$',
-      '$\\{(t_1, \\ldots, t_k) : \\sum t_i = 1\\}$'
+      'The unit ball in $\\mathbb{R}^k
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The standard $k$-simplex has vertices at the origin and the $k$ standard basis vectors. It is the set of points with non-negative coordinates summing to at most 1.',
+  },
+      'The unit cube $[0,1]^k
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The standard $k$-simplex has vertices at the origin and the $k$ standard basis vectors. It is the set of points with non-negative coordinates summing to at most 1.',
+  },
+      '$\\{(t_1, \\ldots, t_k) : \\sum t_i = 1\\}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The standard $k$-simplex has vertices at the origin and the $k$ standard basis vectors. It is the set of points with non-negative coordinates summing to at most 1.',
+  },
+      '$\\{(t_1, \\ldots, t_k) : t_i \\geq 0, \\sum t_i \\leq 1\\}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The standard $k$-simplex has vertices at the origin and the $k$ standard basis vectors. It is the set of points with non-negative coordinates summing to at most 1.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -38,12 +54,12 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A $k$-chain is:',
     options: [
-      'A formal linear combination of $k$-simplices with integer coefficients',
       'A single simplex with orientation',
       'A sequence of $k$ connected simplices',
+      'A formal linear combination of $k$-simplices with integer coefficients',
       'A $k$-dimensional manifold',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Chains are formal sums $\\sum n_i \\sigma_i$ where $\\sigma_i$ are singular simplices and $n_i$ are integers. They form a group under addition.',
   },
@@ -66,10 +82,14 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A fundamental property of the boundary operator is:',
     options: [
-      '$\\partial^2 = \\text{id}$',
-      '$\\partial^2 = 0$ (the boundary of a boundary is zero)',
+      '$\\partial^2 = \\text{id}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The identity $\\partial \\partial = 0$ is fundamental to algebraic topology. It means cycles (chains with zero boundary) contain all boundaries, enabling homology theory.',
+  },
       '$\\partial$ is injective',
-      '$\\partial$ commutes with all linear maps'
+      '$\\partial^2 = 0$ (the boundary of a boundary is zero)',
+      '$\\partial$ commutes with all linear maps',
     ],
     correctIndex: 1,
     difficulty: 'easy',

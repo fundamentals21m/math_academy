@@ -11,10 +11,10 @@ export const section16Questions: QuizQuestion[] = [
     options: [
       'The unit length',
       'The unit square',
-      'The unit circle',
       'The unit cube',
+      'The unit circle',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Just as area is measured by unit squares, volume is measured by unit cubes (cubes with sides of unit length).',
@@ -39,12 +39,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the tetrahedron important for volume theory?',
     options: [
-      'It is the simplest 3D shape',
       'All polyhedra can be built from tetrahedra',
+      'It is the simplest 3D shape',
       'It has the smallest volume',
       'It is the only shape with flat faces',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Just as any polygon can be cut into triangles, any polyhedron can be built from tetrahedra, making the tetrahedron volume formula fundamental.',
@@ -54,12 +54,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How did the Greeks find the volume of a tetrahedron?',
     options: [
-      'By an infinite construction filling it with prisms',
       'By finite cutting and pasting',
+      'By an infinite construction filling it with prisms',
       'By using calculus',
       'They could not find it',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Greeks were unable to cut and paste the tetrahedron into a cuboid, so they used infinite constructions, like filling it with infinitely many prisms.',
@@ -102,10 +102,10 @@ export const section16Questions: QuizQuestion[] = [
     options: [
       '$\\frac{1}{3}$ × base × height',
       '$\\frac{1}{2}$ × base × height',
-      '$\\frac{1}{4}$ × base × height',
       '$\\frac{1}{8}$ × base × height',
+      '$\\frac{1}{4}$ × base × height',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Each prism has volume (1/8) × base × height, so the two prisms combined give (1/4) × base × height.',

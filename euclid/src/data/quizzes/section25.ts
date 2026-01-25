@@ -6,12 +6,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition I.25 prove?',
     options: [
-      'The greater base implies the greater included angle',
       'The greater angle implies the greater base',
       'Equal bases imply equal angles',
-      'All angles in an equilateral triangle are equal'
+      'The greater base implies the greater included angle',
+      'All angles in an equilateral triangle are equal',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'I.25: If two triangles have two pairs of equal sides but unequal bases, the greater base is opposite the greater included angle.',
   },
@@ -22,10 +22,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'Direct proof',
       'Superposition',
-      'Proof by cases and contradiction',
       'Exhaustion',
+      'Proof by cases and contradiction',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'I.25 considers cases (angle equal, angle less) and derives contradictions using I.4 and I.24.',
   },

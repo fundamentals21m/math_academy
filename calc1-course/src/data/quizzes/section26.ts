@@ -7,11 +7,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'The derivative was historically motivated by:',
     options: [
       'Area problems',
-      'Velocity and tangent line problems',
       'Counting problems',
-      'Probability'
+      'Velocity and tangent line problems',
+      'Probability',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Derivatives arose from studying instantaneous velocity and slopes of tangent lines.',
   },
@@ -35,11 +35,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'Newton and Leibniz independently developed:',
     options: [
       'Euclidean geometry',
+      'Calculus',
       'Probability theory',
       'Number theory',
-      'Calculus'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Newton and Leibniz are credited as co-inventors of calculus.',
   },
@@ -80,10 +80,10 @@ export const section26Questions: QuizQuestion[] = [
     options: [
       'A vertical line',
       'A horizontal line',
-      'The tangent line',
       'Undefined',
+      'The tangent line',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The limiting position of secant lines is the tangent line.',
   },

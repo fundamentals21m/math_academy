@@ -23,7 +23,7 @@ export const section02Questions: QuizQuestion[] = [
       'Personal wealth',
       'Military fortune',
       'Good luck charms',
-      'Chance and circumstance beyond human control'
+      'Chance and circumstance beyond human control',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'According to Machiavelli, what is the fundamental driver of political dynamics?',
     options: [
       'Religious differences',
-      'Geographic factors',
       'Class conflict between competing interests',
+      'Geographic factors',
       'Cultural traditions',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Machiavelli sees class conflict—the tension between those who wish to dominate and those who resist domination—as the engine of political life.',
   },

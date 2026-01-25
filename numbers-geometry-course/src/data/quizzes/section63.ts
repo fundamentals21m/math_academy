@@ -10,11 +10,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'Who first defined complex numbers rigorously as ordered pairs?',
     options: [
       'Euler',
-      'Hamilton',
       'Gauss',
+      'Hamilton',
       'Cardano',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Hamilton in 1833 defined complex numbers as ordered pairs (a, b) with specific operations.',
@@ -24,12 +24,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are quaternions?',
     options: [
-      '4-dimensional extension of complex numbers',
       'Complex numbers with three imaginary units',
+      '4-dimensional extension of complex numbers',
       'Complex numbers modulo 4',
       'Gaussian integers with norm 4',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Quaternions are 4-dimensional: a + bi + cj + dk, where i² = j² = k² = ijk = -1.',
@@ -39,12 +39,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which ring does NOT have unique factorization?',
     options: [
+      'Z[√(-5)]',
       'Z',
       'Z[i]',
       'Q',
-      'Z[√(-5)]',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'In Z[√(-5)], we have 6 = 2 × 3 = (1 + √(-5))(1 - √(-5)), two different irreducible factorizations.',
@@ -54,12 +54,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does "multiplication by i is rotation by 90°" illustrate?',
     options: [
+      'The union of algebra and geometry',
       'The failure of commutativity',
       'The definition of a ring',
-      'The union of algebra and geometry',
-      'The Euclidean algorithm'
+      'The Euclidean algorithm',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'This shows how algebraic operations (×i) have geometric meaning (rotation).',
@@ -71,10 +71,10 @@ export const section63Questions: QuizQuestion[] = [
     options: [
       'The ring has infinitely many elements',
       'Complex numbers are closed under addition',
+      'The norm satisfies the Euclidean property',
       'Gauss proved it by induction',
-      'The norm satisfies the Euclidean property'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The Euclidean property (division with smaller remainder) ensures unique factorization.',
@@ -86,10 +86,10 @@ export const section63Questions: QuizQuestion[] = [
     options: [
       'Euler (1707-1783)',
       'Cardano (1501-1576)',
-      'Wessel and Argand (1797-1806)',
       'Hamilton (1805-1865)',
+      'Wessel and Argand (1797-1806)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Wessel (1797) and Argand (1806) independently discovered the geometric interpretation.',
@@ -114,12 +114,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is special about quaternion multiplication?',
     options: [
-      'It is not commutative',
       'It is always zero',
       'It equals the norm',
       'It only works for integers',
+      'It is not commutative',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Quaternions form a non-commutative algebra: ij = k but ji = -k.',

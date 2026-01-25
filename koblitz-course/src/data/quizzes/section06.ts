@@ -44,11 +44,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'The Vigenère cipher is best described as:',
     options: [
       'A single substitution cipher',
-      'Multiple Caesar ciphers with a repeating keyword',
       'An asymmetric cipher',
+      'Multiple Caesar ciphers with a repeating keyword',
       'A transposition cipher',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Vigenère uses a keyword to cycle through multiple Caesar shifts, making frequency analysis harder.',
   },

@@ -6,10 +6,18 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f$ is absolutely integrable (in $L^1$) if:',
     options: [
+      '$\\int |f| < \\infty
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$L^1$ functions have finite integral of their absolute value.',
+  },
       '$f$ is bounded',
       '$f$ is continuous',
-      '$\\int |f| < \\infty$',
-      '$f \\geq 0$'
+      '$f \\geq 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$L^1$ functions have finite integral of their absolute value.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -51,11 +59,11 @@ export const section45Questions: QuizQuestion[] = [
     question: 'The Dominated Convergence Theorem requires:',
     options: [
       '$f_n \\to f$ uniformly',
+      '$|f_n| \\leq g$ for some integrable $g$, and $f_n \\to f$ pointwise',
       '$f_n$ increasing',
       '$f_n$ bounded',
-      '$|f_n| \\leq g$ for some integrable $g$, and $f_n \\to f$ pointwise',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'DCT: pointwise convergence plus domination by an integrable function.',
   },

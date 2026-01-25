@@ -6,10 +6,22 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a life table, the column $l_x$ represents:',
     options: [
-      'Annual death probability at age $x$',
-      'Deaths between age $x$ and $x+1$',
-      'Expected remaining lifetime at age $x$',
-      'Number alive at age $x$ out of 100,000 born'
+      'Annual death probability at age $x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'In a life table, l_x represents the number of people alive at age x out of a cohort of 100,000 born.',
+  },
+      'Number alive at age $x$ out of 100,000 born',
+      'Deaths between age $x$ and $x+1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'In a life table, l_x represents the number of people alive at age x out of a cohort of 100,000 born.',
+  },
+      'Expected remaining lifetime at age $x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'In a life table, l_x represents the number of people alive at age x out of a cohort of 100,000 born.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -50,10 +62,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To calculate $_2p_{65}$ from a life table, you would compute:',
     options: [
-      '$l_{65} + l_{67}$',
-      '$l_{67} / l_{65}$',
-      '$l_{65} - l_{67}$',
-      '$l_{65} \\times l_{67}$'
+      '$l_{67} / l_{65}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'From life table data, _tp_x = l_{x+t}/l_x. So _2p_{65} = l_{67}/l_{65}.',
+  },
+      '$l_{65} + l_{67}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'From life table data, _tp_x = l_{x+t}/l_x. So _2p_{65} = l_{67}/l_{65}.',
+  },
+      '$l_{65} - l_{67}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'From life table data, _tp_x = l_{x+t}/l_x. So _2p_{65} = l_{67}/l_{65}.',
+  },
+      '$l_{65} \\times l_{67}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'From life table data, _tp_x = l_{x+t}/l_x. So _2p_{65} = l_{67}/l_{65}.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -95,11 +123,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'A key observation about $q_x$ is that it:',
     options: [
       'Equals zero after age 100',
+      'Increases with age (the death rate accelerates)',
       'Remains constant across all ages',
       'Decreases with age',
-      'Increases with age (the death rate accelerates)'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The death rate q_x increases with age. At 65, about 1% die each year. By 85, it\'s closer to 8%. This acceleration is fundamental to tontine design.',
   },
@@ -109,11 +137,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Life tables are compiled from:',
     options: [
       'Insurance company projections',
-      'Census and death records by government agencies',
       'Hospital admission data only',
+      'Census and death records by government agencies',
       'Survey responses about expected lifespan',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Governments compile life tables from census and death records. The U.S. Social Security Administration and similar agencies publish updated tables regularly.',
   },

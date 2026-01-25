@@ -75,10 +75,26 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $x > 0$ and $\\alpha \\in \\mathbb{R}$, the function $f(x) = x^\\alpha$ is:',
     options: [
-      'Continuous only for rational $\\alpha$',
-      'Continuous on $(0, \\infty)$',
-      'Continuous only for $\\alpha > 0$',
-      'Discontinuous at $x = 1$'
+      'Continuous only for rational $\\alpha
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Since $x^\\alpha = e^{\\alpha \\ln x}$ is a composition of continuous functions ($\\ln$ and $\\exp$), it is continuous on $(0, \\infty)$ for all real $\\alpha$.',
+  },
+      'Continuous only for $\\alpha > 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Since $x^\\alpha = e^{\\alpha \\ln x}$ is a composition of continuous functions ($\\ln$ and $\\exp$), it is continuous on $(0, \\infty)$ for all real $\\alpha$.',
+  },
+      'Continuous on $(0, \\infty)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Since $x^\\alpha = e^{\\alpha \\ln x}$ is a composition of continuous functions ($\\ln$ and $\\exp$), it is continuous on $(0, \\infty)$ for all real $\\alpha$.',
+  },
+      'Discontinuous at $x = 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Since $x^\\alpha = e^{\\alpha \\ln x}$ is a composition of continuous functions ($\\ln$ and $\\exp$), it is continuous on $(0, \\infty)$ for all real $\\alpha$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -89,10 +105,26 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\lim_{\\alpha \\to 0} x^\\alpha$ for fixed $x > 0$?',
     options: [
-      '$0$',
-      '$x$',
-      '$1$',
-      '$e$'
+      '$0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'As $\\alpha \\to 0$, $x^\\alpha = e^{\\alpha \\ln x} \\to e^0 = 1$. This holds for any $x > 0$.',
+  },
+      '$x
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'As $\\alpha \\to 0$, $x^\\alpha = e^{\\alpha \\ln x} \\to e^0 = 1$. This holds for any $x > 0$.',
+  },
+      '$e
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'As $\\alpha \\to 0$, $x^\\alpha = e^{\\alpha \\ln x} \\to e^0 = 1$. This holds for any $x > 0$.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'As $\\alpha \\to 0$, $x^\\alpha = e^{\\alpha \\ln x} \\to e^0 = 1$. This holds for any $x > 0$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .comparison-container {
+      display: flex;
+      gap: 50px;
+      margin-top: 50px;
+      justify-content: center;
+    }
+    .company-card {
+      width: 450px;
+      padding: 40px;
+      border-radius: 12px;
+    }
+    .company-card.success {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .company-card.failure {
+      background: rgba(220, 38, 38, 0.1);
+      border: 2px solid rgba(220, 38, 38, 0.3);
+    }
+    .company-name {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .success .company-name { color: #22C55E; }
+    .failure .company-name { color: #DC2626; }
+    .company-leader {
+      color: #8B949E;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    .company-outcome {
+      color: #E6EDF3;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .company-outcome li {
+      margin-bottom: 12px;
+    }
+    .takeaway {
+      text-align: center;
+      margin-top: 50px;
+      color: #F7931A;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Case Studies: 2020</div>
+    <div class="section-title">Strategy vs Tesla</div>
+    <div class="comparison-container">
+      <div class="company-card success">
+        <div class="company-name">Strategy</div>
+        <div class="company-leader">Michael Saylor</div>
+        <ul class="company-outcome">
+          <li>Continued aggressive accumulation</li>
+          <li>~$100B market capitalization</li>
+          <li>Awaiting S&P 500 entry</li>
+          <li>Long-term HODL commitment</li>
+        </ul>
+      </div>
+      <div class="company-card failure">
+        <div class="company-name">Tesla</div>
+        <div class="company-leader">Elon Musk</div>
+        <ul class="company-outcome">
+          <li>Initial treasury purchase</li>
+          <li>Exited after S&P 500 inclusion</li>
+          <li>Institutional pressure to sell</li>
+          <li>Shows limits of corporate holding</li>
+        </ul>
+      </div>
+    </div>
+    <div class="takeaway">Institutional Bitcoin requires a dominant individual to succeed</div>
+  </div>
+</body>
+</html>

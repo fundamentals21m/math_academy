@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 50px;
+    }
+    .stat-card {
+      background: rgba(247, 147, 26, 0.08);
+      border: 1px solid rgba(247, 147, 26, 0.25);
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 12px;
+    }
+    .stat-value {
+      color: #F7931A;
+      font-size: 56px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .stat-label {
+      color: #E6EDF3;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .stat-detail {
+      color: #8B949E;
+      font-size: 16px;
+    }
+    .comparison-row {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-top: 50px;
+    }
+    .compare-item {
+      text-align: center;
+    }
+    .compare-label {
+      color: #8B949E;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .compare-value {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .compare-value.btc { color: #F7931A; }
+    .compare-value.gold { color: #FFD700; }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Fixed Supply</div>
+    <div class="section-title">Bitcoin by the Numbers</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">21M</div>
+        <div class="stat-label">Total Supply Cap</div>
+        <div class="stat-detail">Immutable protocol</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">95%</div>
+        <div class="stat-label">Already Issued</div>
+        <div class="stat-detail">As of 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">450</div>
+        <div class="stat-label">BTC Mined Daily</div>
+        <div class="stat-detail">~165,000 per year</div>
+      </div>
+    </div>
+    <div class="comparison-row">
+      <div class="compare-item">
+        <div class="compare-label">Bitcoin Inflation</div>
+        <div class="compare-value btc">0.8%</div>
+      </div>
+      <div class="compare-item">
+        <div class="compare-label">vs</div>
+        <div class="compare-value" style="color: #8B949E;">→</div>
+      </div>
+      <div class="compare-item">
+        <div class="compare-label">Gold Inflation</div>
+        <div class="compare-value gold">1.5%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

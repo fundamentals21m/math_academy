@@ -23,7 +23,16 @@ export const section10Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'Which of the following is NOT a subgroup of $(\\mathbb{Z}, +)$?',
-    options: ['$2\\mathbb{Z}$ (even integers)', '$3\\mathbb{Z}$ (multiples of 3)', '$\\mathbb{N}$ (natural numbers)', '$\\{0\\}$'],
+    options: [
+      '$2\\mathbb{Z}$ (even integers)',
+      '$3\\mathbb{Z}$ (multiples of 3)',
+      '$\\{0\\}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\mathbb{N}$ is not a subgroup because it does not contain inverses (negative integers).',
+  },
+      '$\\mathbb{N}$ (natural numbers)',
+    ],
     correctIndex: 2,
     difficulty: 'easy',
     explanation: '$\\mathbb{N}$ is not a subgroup because it does not contain inverses (negative integers).',
@@ -77,10 +86,22 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $H$ is a subgroup of $G$, then the identity element of $H$ is:',
     options: [
-      'Possibly different from the identity of $G$',
-      'Only the same if $H = G$',
-      'The same as the identity element of $G$',
-      'Not well-defined'
+      'Possibly different from the identity of $G
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $e_H$ is the identity of $H$, then $e_H \\cdot e_H = e_H$. In $G$, this means $e_H = e_G$.',
+  },
+      'The same as the identity element of $G
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'If $e_H$ is the identity of $H$, then $e_H \\cdot e_H = e_H$. In $G$, this means $e_H = e_G$.',
+  },
+      'Only the same if $H = G
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'If $e_H$ is the identity of $H$, then $e_H \\cdot e_H = e_H$. In $G$, this means $e_H = e_G$.',
+  },
+      'Not well-defined',
     ],
     correctIndex: 2,
     difficulty: 'easy',

@@ -7,11 +7,11 @@ export const section187Questions: QuizQuestion[] = [
     question: 'How does Proposition VII.8 relate to VII.7?',
     options: [
       'VII.8 proves VII.7 is incorrect',
-      'VII.8 extends subtraction from "a part" to "parts" (multiple equal parts)',
       'VII.8 addresses multiplication instead of subtraction',
-      'VII.8 only applies to prime numbers'
+      'VII.8 extends subtraction from "a part" to "parts" (multiple equal parts)',
+      'VII.8 only applies to prime numbers',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Just as VII.6 extended VII.5 for addition, VII.8 extends VII.7 to handle "parts" (like 2/3 or 3/4) rather than just "a part" (like 1/3 or 1/4).',
   },
@@ -21,11 +21,11 @@ export const section187Questions: QuizQuestion[] = [
     question: 'If 12 is three-fourths of 16, and 9 is three-fourths of 12, what is 3 in relation to 4?',
     options: [
       'One-fourth of 4',
+      'Three-fourths of 4',
       'One-half of 4',
       'Two-thirds of 4',
-      'Three-fourths of 4',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'By VII.8: 12 = (3/4)(16) and 9 = (3/4)(12), so 12-9=3 is three-fourths of 16-12=4. Check: (3/4)(4) = 3.',
   },

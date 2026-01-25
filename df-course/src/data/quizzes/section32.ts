@@ -6,10 +6,26 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A group of order $56 = 2^3 \\cdot 7$ has Sylow $7$-subgroups. By Sylow theorems, how many Sylow $7$-subgroups can it have?',
     options: [
-      'Only $1$',
-      '$1$ or $8$',
-      '$1$, $7$, or $8$',
-      '$1$, $2$, $4$, or $8$'
+      'Only $1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The number $n_7$ of Sylow $7$-subgroups must satisfy $n_7 \\equiv 1 \\pmod{7}$ and $n_7 \\mid 8$. The divisors of $8$ are $1, 2, 4, 8$, and only $1$ and $8$ satisfy $n_7 \\equiv 1 \\pmod{7}$.',
+  },
+      '$1$, $7$, or $8
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The number $n_7$ of Sylow $7$-subgroups must satisfy $n_7 \\equiv 1 \\pmod{7}$ and $n_7 \\mid 8$. The divisors of $8$ are $1, 2, 4, 8$, and only $1$ and $8$ satisfy $n_7 \\equiv 1 \\pmod{7}$.',
+  },
+      '$1$ or $8
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The number $n_7$ of Sylow $7$-subgroups must satisfy $n_7 \\equiv 1 \\pmod{7}$ and $n_7 \\mid 8$. The divisors of $8$ are $1, 2, 4, 8$, and only $1$ and $8$ satisfy $n_7 \\equiv 1 \\pmod{7}$.',
+  },
+      '$1$, $2$, $4$, or $8
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The number $n_7$ of Sylow $7$-subgroups must satisfy $n_7 \\equiv 1 \\pmod{7}$ and $n_7 \\mid 8$. The divisors of $8$ are $1, 2, 4, 8$, and only $1$ and $8$ satisfy $n_7 \\equiv 1 \\pmod{7}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

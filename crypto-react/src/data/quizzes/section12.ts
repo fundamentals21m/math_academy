@@ -7,11 +7,27 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The equation for a typical elliptic curve used in cryptography is:',
       options: [
-        '$y = x^2 + a$',
-        '$y^2 = x^3 + ax + b$',
-        '$y^2 = x^2 + 1$',
-        '$y = mx + b$'
-      ],
+      '$y^2 = x^3 + ax + b
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Elliptic curves in cryptography use the short Weierstrass form: $y^2 = x^3 + ax + b$.'
+    },
+      '$y = x^2 + a
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Elliptic curves in cryptography use the short Weierstrass form: $y^2 = x^3 + ax + b$.'
+    },
+      '$y^2 = x^2 + 1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Elliptic curves in cryptography use the short Weierstrass form: $y^2 = x^3 + ax + b$.'
+    },
+      '$y = mx + b
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Elliptic curves in cryptography use the short Weierstrass form: $y^2 = x^3 + ax + b$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Elliptic curves in cryptography use the short Weierstrass form: $y^2 = x^3 + ax + b$.'
@@ -21,11 +37,11 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'Why is ECC more efficient than RSA?',
       options: [
-        'It does not need prime numbers',
-        'It uses simpler math operations',
-        'Same security with much smaller key sizes',
-        'It has no mathematical basis'
-      ],
+      'It does not need prime numbers',
+      'It uses simpler math operations',
+      'Same security with much smaller key sizes',
+      'It has no mathematical basis',
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The elliptic curve discrete log problem is harder, allowing 256-bit ECC to match 3072-bit RSA security.'
@@ -35,11 +51,19 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'What is the identity element in an elliptic curve group?',
       options: [
-        'There is no identity',
-        'The origin $(0, 0)$',
-        'The point $(1, 1)$',
-        'The point at infinity ($\\mathcal{O}$)'
-      ],
+      'The point at infinity ($\\mathcal{O}$)',
+      'There is no identity',
+      'The origin $(0, 0)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'The point at infinity $\\mathcal{O}$ is the identity: $P + \\mathcal{O} = P$ for all points $P$.'
+    },
+      'The point $(1, 1)
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The point at infinity $\\mathcal{O}$ is the identity: $P + \\mathcal{O} = P$ for all points $P$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The point at infinity $\\mathcal{O}$ is the identity: $P + \\mathcal{O} = P$ for all points $P$.'
@@ -49,11 +73,15 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'What operation replaces exponentiation in elliptic curve cryptography?',
       options: [
-        'Scalar multiplication: $nP = P + P + \\cdots + P$',
-        'Division of points',
-        'Cross product',
-        'Matrix exponentiation'
-      ],
+      'Division of points',
+      'Cross product',
+      'Matrix exponentiation',
+      'Scalar multiplication: $nP = P + P + \\cdots + P
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Scalar multiplication (adding a point to itself $n$ times) is the EC equivalent of modular exponentiation.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Scalar multiplication (adding a point to itself $n$ times) is the EC equivalent of modular exponentiation.'
@@ -63,11 +91,11 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'Bitcoin uses which elliptic curve?',
       options: [
-        'P-256 (secp256r1)',
-        'secp256k1',
-        'Curve25519',
-        'brainpoolP256r1'
-      ],
+      'P-256 (secp256r1)',
+      'secp256k1',
+      'Curve25519',
+      'brainpoolP256r1',
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Bitcoin and most cryptocurrencies use the secp256k1 curve for ECDSA digital signatures.'
@@ -86,11 +114,19 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'In point addition, what happens when you add a point $P$ to itself?',
       options: [
-        'The result is always $(0, 0)$',
-        'You get the point at infinity',
-        'You perform point doubling to get $2P$',
-        'Addition is undefined'
-      ],
+      'The result is always $(0, 0)
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Adding $P + P = 2P$ uses the point doubling formula, which involves the tangent line at $P$.'
+    },
+      'You get the point at infinity',
+      'Addition is undefined',
+      'You perform point doubling to get $2P
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Adding $P + P = 2P$ uses the point doubling formula, which involves the tangent line at $P$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Adding $P + P = 2P$ uses the point doubling formula, which involves the tangent line at $P$.'
@@ -100,11 +136,15 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'What is the elliptic curve discrete log problem (ECDLP)?',
       options: [
-        'Factor the curve parameters',
-        'Find all points on the curve',
-        'Compute $P + Q$ for any points',
-        'Given $P$ and $Q = nP$, find the scalar $n$'
-      ],
+      'Factor the curve parameters',
+      'Given $P$ and $Q = nP$, find the scalar $n
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'ECDLP: given points $P$ and $Q$ where $Q = nP$, finding the scalar $n$ is computationally hard.'
+    },
+      'Find all points on the curve',
+      'Compute $P + Q$ for any points',
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'ECDLP: given points $P$ and $Q$ where $Q = nP$, finding the scalar $n$ is computationally hard.'
@@ -114,11 +154,27 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'For a point $(x, y)$ on an elliptic curve, its negation $-P$ is:',
       options: [
-        '$(x, -y)$',
-        '$(-x, y)$',
-        '$(-x, -y)$',
-        '$(y, x)$'
-      ],
+      '$(-x, y)
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Negating a point reflects it across the x-axis: $-P = (x, -y)$.'
+    },
+      '$(-x, -y)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Negating a point reflects it across the x-axis: $-P = (x, -y)$.'
+    },
+      '$(y, x)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Negating a point reflects it across the x-axis: $-P = (x, -y)$.'
+    },
+      '$(x, -y)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Negating a point reflects it across the x-axis: $-P = (x, -y)$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Negating a point reflects it across the x-axis: $-P = (x, -y)$.'
@@ -128,12 +184,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'What property must an elliptic curve satisfy to be secure?',
       options: [
-        'The curve must pass through the origin',
-        'The curve must have a large prime-order subgroup',
-        'All points must have integer coordinates',
-        'The curve must be symmetric about the y-axis'
-      ],
-      correctIndex: 1,
+      'The curve must pass through the origin',
+      'All points must have integer coordinates',
+      'The curve must have a large prime-order subgroup',
+      'The curve must be symmetric about the y-axis',
+    ],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Security requires a large prime-order subgroup to make the ECDLP hard and prevent small-subgroup attacks.'
     }
@@ -145,11 +201,27 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'In elliptic curve point addition $P + Q$ where $P \\neq Q$, the slope $\\lambda$ is:',
       options: [
-        '$\\lambda = y_1 \\cdot y_2$',
-        '$\\lambda = \\frac{x_2 - x_1}{y_2 - y_1}$',
-        '$\\lambda = \\frac{y_2 - y_1}{x_2 - x_1}$',
-        '$\\lambda = x_1 + x_2$'
-      ],
+      '$\\lambda = \\frac{y_2 - y_1}{x_2 - x_1}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'The slope of the line through $P = (x_1, y_1)$ and $Q = (x_2, y_2)$ is $\\lambda = (y_2 - y_1)/(x_2 - x_1)$.'
+    },
+      '$\\lambda = y_1 \\cdot y_2
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'The slope of the line through $P = (x_1, y_1)$ and $Q = (x_2, y_2)$ is $\\lambda = (y_2 - y_1)/(x_2 - x_1)$.'
+    },
+      '$\\lambda = \\frac{x_2 - x_1}{y_2 - y_1}
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'The slope of the line through $P = (x_1, y_1)$ and $Q = (x_2, y_2)$ is $\\lambda = (y_2 - y_1)/(x_2 - x_1)$.'
+    },
+      '$\\lambda = x_1 + x_2
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'The slope of the line through $P = (x_1, y_1)$ and $Q = (x_2, y_2)$ is $\\lambda = (y_2 - y_1)/(x_2 - x_1)$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The slope of the line through $P = (x_1, y_1)$ and $Q = (x_2, y_2)$ is $\\lambda = (y_2 - y_1)/(x_2 - x_1)$.'
@@ -159,11 +231,27 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'In point doubling ($P + P$), the slope $\\lambda$ is computed as:',
       options: [
-        '$\\lambda = \\frac{y_1}{x_1}$',
-        '$\\lambda = \\frac{2y_1}{3x_1^2 + a}$',
-        '$\\lambda = x_1 + y_1$',
-        '$\\lambda = \\frac{3x_1^2 + a}{2y_1}$'
-      ],
+      '$\\lambda = \\frac{y_1}{x_1}
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'The tangent line slope at $P$ is derived from implicit differentiation: $\\lambda = (3x_1^2 + a)/(2y_1)$.'
+    },
+      '$\\lambda = \\frac{2y_1}{3x_1^2 + a}
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'The tangent line slope at $P$ is derived from implicit differentiation: $\\lambda = (3x_1^2 + a)/(2y_1)$.'
+    },
+      '$\\lambda = \\frac{3x_1^2 + a}{2y_1}
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'The tangent line slope at $P$ is derived from implicit differentiation: $\\lambda = (3x_1^2 + a)/(2y_1)$.'
+    },
+      '$\\lambda = x_1 + y_1
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'The tangent line slope at $P$ is derived from implicit differentiation: $\\lambda = (3x_1^2 + a)/(2y_1)$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The tangent line slope at $P$ is derived from implicit differentiation: $\\lambda = (3x_1^2 + a)/(2y_1)$.'
@@ -182,11 +270,11 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The cofactor of an elliptic curve group is:',
       options: [
-        'The ratio of the full group order to the prime subgroup order',
-        'The number of points on the curve',
-        'The value of $a$ in the curve equation',
-        'The field characteristic'
-      ],
+      'The ratio of the full group order to the prime subgroup order',
+      'The number of points on the curve',
+      'The value of $a$ in the curve equation',
+      'The field characteristic',
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Cofactor $h = \\#E / n$ where $\\#E$ is total points and $n$ is the large prime subgroup order.'
@@ -205,12 +293,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'Curve25519 is named for:',
       options: [
-        'Its security level of 255 bits',
-        'The prime $p = 2^{255} - 19$ defining the field',
-        'The year 2025 when it was standardized',
-        'The 25th curve proposed by NIST'
-      ],
-      correctIndex: 1,
+      'Its security level of 255 bits',
+      'The year 2025 when it was standardized',
+      'The prime $p = 2^{255} - 19$ defining the field',
+      'The 25th curve proposed by NIST',
+    ],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Curve25519 uses the prime field $\\mathbb{F}_p$ where $p = 2^{255} - 19$.'
     },
@@ -228,11 +316,27 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'Edwards curves have the form:',
       options: [
-        '$y^2 + xy = x^3 + ax^2 + b$',
-        '$y^2 = x^3 + ax + b$',
-        '$x^2 + y^2 = 1 + dx^2y^2$',
-        '$y = x^3 + ax$'
-      ],
+      '$y^2 + xy = x^3 + ax^2 + b
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Edwards curves use the equation $x^2 + y^2 = 1 + dx^2y^2$, offering fast and complete addition formulas.'
+    },
+      '$y^2 = x^3 + ax + b
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Edwards curves use the equation $x^2 + y^2 = 1 + dx^2y^2$, offering fast and complete addition formulas.'
+    },
+      '$y = x^3 + ax
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Edwards curves use the equation $x^2 + y^2 = 1 + dx^2y^2$, offering fast and complete addition formulas.'
+    },
+      '$x^2 + y^2 = 1 + dx^2y^2
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Edwards curves use the equation $x^2 + y^2 = 1 + dx^2y^2$, offering fast and complete addition formulas.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Edwards curves use the equation $x^2 + y^2 = 1 + dx^2y^2$, offering fast and complete addition formulas.'
@@ -251,12 +355,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'Twisted Edwards curves are used in Ed25519 because:',
       options: [
-        'They work only over binary fields',
-        'They have smaller keys than Weierstrass curves',
-        'They are faster for key generation only',
-        'They provide complete, constant-time addition formulas'
-      ],
-      correctIndex: 3,
+      'They provide complete, constant-time addition formulas',
+      'They work only over binary fields',
+      'They have smaller keys than Weierstrass curves',
+      'They are faster for key generation only',
+    ],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Twisted Edwards curves have unified addition formulas with no special cases, enabling constant-time implementations resistant to timing attacks.'
     }
@@ -268,12 +372,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The MOV attack reduces ECDLP to discrete log in $\\mathbb{F}_{p^k}$ by:',
       options: [
-        'Using the Weil or Tate pairing to map points to field elements',
-        'Factoring the curve order',
-        'Finding collisions in point addition',
-        'Exploiting weak random number generation'
-      ],
-      correctIndex: 0,
+      'Factoring the curve order',
+      'Finding collisions in point addition',
+      'Exploiting weak random number generation',
+      'Using the Weil or Tate pairing to map points to field elements',
+    ],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'MOV uses pairings to embed the curve group into a finite field extension, then solves the easier DLP there. Secure curves have large embedding degree.'
     },
@@ -291,12 +395,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'A "twist" of an elliptic curve $E: y^2 = x^3 + ax + b$ is:',
       options: [
-        'A curve with the same points but different group operation',
-        'A curve isomorphic over a field extension but not over the base field',
-        'A curve rotated 90 degrees in the plane',
-        'A curve with swapped $a$ and $b$ coefficients'
-      ],
-      correctIndex: 1,
+      'A curve isomorphic over a field extension but not over the base field',
+      'A curve with the same points but different group operation',
+      'A curve rotated 90 degrees in the plane',
+      'A curve with swapped $a$ and $b$ coefficients',
+    ],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The quadratic twist $E\'$ is isomorphic to $E$ over $\\mathbb{F}_{p^2}$ but represents a different set of points over $\\mathbb{F}_p$.'
     },
@@ -314,12 +418,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'Side-channel attacks on ECC can be mitigated by:',
       options: [
-        'Using smaller finite fields',
-        'Increasing the key size',
-        'Using constant-time algorithms and randomized projective coordinates',
-        'Publishing the private key'
-      ],
-      correctIndex: 2,
+      'Using smaller finite fields',
+      'Using constant-time algorithms and randomized projective coordinates',
+      'Increasing the key size',
+      'Publishing the private key',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Constant-time scalar multiplication and coordinate randomization prevent timing, power, and cache attacks from leaking the private key.'
     },
@@ -337,12 +441,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'The Koblitz curves (e.g., secp256k1 with $a=0$) have the advantage of:',
       options: [
-        'Resistance to all known attacks',
-        'Larger group order than random curves',
-        'Simpler key generation',
-        'Faster point multiplication using the Frobenius endomorphism'
-      ],
-      correctIndex: 3,
+      'Resistance to all known attacks',
+      'Faster point multiplication using the Frobenius endomorphism',
+      'Larger group order than random curves',
+      'Simpler key generation',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Koblitz curves have efficient endomorphisms that speed up scalar multiplication by decomposing scalars.'
     },
@@ -360,12 +464,12 @@ export const section12Quiz = {
       type: 'multiple-choice',
       question: 'Invalid curve attacks exploit:',
       options: [
-        'Implementations that don\'t verify points are on the correct curve',
-        'Weaknesses in the curve equation itself',
-        'Poor random number generation',
-        'Integer overflow in point addition'
-      ],
-      correctIndex: 0,
+      'Weaknesses in the curve equation itself',
+      'Implementations that don\\\'t verify points are on the correct curve',
+      'Poor random number generation',
+      'Integer overflow in point addition',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'If implementations don\'t validate that received points lie on the expected curve, attackers can send points from weaker curves.'
     },

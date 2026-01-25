@@ -36,10 +36,22 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $F(x, y) = 0$ to implicitly define $y = g(x)$ near $(x_0, y_0)$, we need:',
     options: [
-      '$\\frac{\\partial F}{\\partial x}(x_0, y_0) \\neq 0$',
+      '$\\frac{\\partial F}{\\partial y}(x_0, y_0) \\neq 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The partial derivative with respect to the variable being solved for must be nonzero.',
+  },
+      '$\\frac{\\partial F}{\\partial x}(x_0, y_0) \\neq 0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The partial derivative with respect to the variable being solved for must be nonzero.',
+  },
       '$F$ to be linear',
-      '$F(x_0, y_0) \\neq 0$',
-      '$\\frac{\\partial F}{\\partial y}(x_0, y_0) \\neq 0$'
+      '$F(x_0, y_0) \\neq 0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The partial derivative with respect to the variable being solved for must be nonzero.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

@@ -7,11 +7,11 @@ export const section90Questions: QuizQuestion[] = [
     question: 'What is RGB Protocol?',
     options: [
       'A new blockchain',
-      'Client-side validated smart contracts on Bitcoin',
       'A mining protocol',
-      'An address format'
+      'An address format',
+      'Client-side validated smart contracts on Bitcoin',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'RGB enables smart contracts with validation happening on the client side.',
   },
@@ -20,12 +20,12 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'RGB state is bound to Bitcoin using:',
     options: [
+      'Single-use seals (UTXOs)',
       'Mining difficulty',
       'Block headers',
-      'Single-use seals (UTXOs)',
-      'Timestamps only'
+      'Timestamps only',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'RGB uses Bitcoin UTXOs as single-use seals for state transitions.',
   },
@@ -44,10 +44,10 @@ export const section90Questions: QuizQuestion[] = [
     options: [
       'Mining privately',
       'Encrypting blocks',
+      'Keeping contract data off-chain between parties',
       'Using stealth addresses only',
-      'Keeping contract data off-chain between parties'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Contract data is never on the blockchain, only commitments.',
   },

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .comparison-container {
+      display: flex;
+      gap: 60px;
+      margin-top: 50px;
+      align-items: stretch;
+    }
+    .company-card {
+      flex: 1;
+      border-radius: 12px;
+      padding: 45px;
+      text-align: center;
+    }
+    .company-card.blackrock {
+      background: rgba(139, 148, 158, 0.1);
+      border: 2px solid rgba(139, 148, 158, 0.3);
+    }
+    .company-card.fidelity {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .company-name {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .blackrock .company-name { color: #8B949E; }
+    .fidelity .company-name { color: #22C55E; }
+    .etf-ticker {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .blackrock .etf-ticker { color: #6B7280; }
+    .fidelity .etf-ticker { color: #16A34A; }
+    .custody-type {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #E6EDF3;
+    }
+    .custody-detail {
+      font-size: 20px;
+      color: #8B949E;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .experience {
+      font-size: 18px;
+      padding: 15px 25px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    .blackrock .experience {
+      background: rgba(139, 148, 158, 0.1);
+      color: #8B949E;
+    }
+    .fidelity .experience {
+      background: rgba(34, 197, 94, 0.1);
+      color: #22C55E;
+    }
+    .opacity-warning {
+      background: rgba(247, 147, 26, 0.08);
+      border-left: 4px solid #F7931A;
+      padding: 25px 40px;
+      margin-top: 50px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .opacity-text {
+      color: #E6EDF3;
+      font-size: 24px;
+      line-height: 1.5;
+    }
+    .opacity-text em {
+      color: #F7931A;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Fidelity Alternative</div>
+    <div class="section-title">In-House vs. Third-Party Custody</div>
+    <div class="comparison-container">
+      <div class="company-card blackrock">
+        <div class="company-name">BlackRock</div>
+        <div class="etf-ticker">IBIT</div>
+        <div class="custody-type">Third-Party Custody</div>
+        <div class="custody-detail">Uses Coinbase as custodian</div>
+        <div class="custody-detail">Late to bitcoin (2023)</div>
+        <div class="experience">Chose speed over security</div>
+      </div>
+      <div class="company-card fidelity">
+        <div class="company-name">Fidelity</div>
+        <div class="etf-ticker">FBTC</div>
+        <div class="custody-type">In-House Custody</div>
+        <div class="custody-detail">Manages all custody themselves</div>
+        <div class="custody-detail">In bitcoin for a decade+</div>
+        <div class="experience">Substantial experience advantage</div>
+      </div>
+    </div>
+    <div class="opacity-warning">
+      <div class="opacity-text">Under current opacity, there's <em>no way to verify</em> which custodian is more reliable. We only know about Coinbase because Bitwise made their addresses public.</div>
+    </div>
+  </div>
+</body>
+</html>

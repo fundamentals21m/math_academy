@@ -8,10 +8,10 @@ export const section66Questions: QuizQuestion[] = [
     options: [
       'It passes through the center',
       'It lies entirely outside the circle',
+      'It is tangent to the circle',
       'It falls within the circle (is a chord)',
-      'It is tangent to the circle'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'III.2 states that if two points are on a circle\'s circumference, the straight line joining them (a chord) falls within the circle.',
   },
@@ -20,12 +20,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The proof of III.2 uses which method?',
     options: [
-      'Direct construction',
       'Proof by contradiction (reductio ad absurdum)',
+      'Direct construction',
       'Parallel lines',
       'Proportional reasoning',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Euclid proves III.2 by assuming some point on the line AB lies outside the circle, then deriving a contradiction.',
   },
@@ -34,12 +34,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What geometric fact about distances from the center makes III.2 true?',
     options: [
-      'Points on a chord between the endpoints are closer to the center than radius length',
       'All chords are equal',
       'The chord is perpendicular to the radius',
-      'The center bisects all chords'
+      'Points on a chord between the endpoints are closer to the center than radius length',
+      'The center bisects all chords',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Points on the chord between A and B are closer to the center than points on the circumference, so they lie inside the circle.',
   },

@@ -78,10 +78,10 @@ export const section50Questions: QuizQuestion[] = [
     options: [
       'The functions are polynomials',
       'The functions are equal',
-      'The limit is in $0/0$ or $\\infty/\\infty$ form',
       'The limit equals zero',
+      'The limit is in $0/0$ or $\\infty/\\infty$ form',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'L\'Hôpital\'s Rule requires an indeterminate form.',
   },

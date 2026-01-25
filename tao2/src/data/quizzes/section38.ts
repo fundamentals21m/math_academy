@@ -7,7 +7,7 @@ export const section38Questions: QuizQuestion[] = [
     question: 'Lebesgue measure assigns to each "nice" subset $E$ of $\\mathbf{R}^n$:',
     options: [
       'A vector in $\\mathbf{R}^n
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Measure assigns a "size" (non-negative, possibly infinite) to sets.',
   },

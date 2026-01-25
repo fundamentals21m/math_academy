@@ -9,12 +9,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Euclidean plane defined as?',
     options: [
+      'The Cartesian product $\\mathbb{R} \\times \\mathbb{R}$ with Euclidean distance',
       'The set of all real numbers',
       'The set of all rational points',
       'The set of all integers',
-      'The Cartesian product $\\mathbb{R} \\times \\mathbb{R}$ with Euclidean distance',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The Euclidean plane is defined as the Cartesian product ℝ × ℝ (ordered pairs of real numbers) together with the Euclidean distance formula based on the Pythagorean theorem.',
@@ -59,12 +59,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the Pythagorean theorem true "by definition" in the Euclidean plane?',
     options: [
-      'The distance formula is based on it',
       'Euclid proved it',
       'It is an axiom',
-      'It was discovered by Descartes'
+      'It was discovered by Descartes',
+      'The distance formula is based on it',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The distance formula d(P₁, P₂) = √[(x₂-x₁)² + (y₂-y₁)²] is precisely the Pythagorean theorem applied to the right triangle with legs (x₂-x₁) and (y₂-y₁). So the theorem is true by definition.',
@@ -75,11 +75,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'The set of points equidistant from two distinct points forms:',
     options: [
       'A circle',
+      'A line',
       'A point',
       'A parabola',
-      'A line',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The set of all points equidistant from two distinct points P and Q is a line—specifically, the perpendicular bisector of the segment PQ.',
@@ -140,11 +140,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'To prove the base angles of an isosceles triangle are equal, we can:',
     options: [
       'Use the quadratic formula',
-      'Reflect the triangle in its axis of symmetry',
       'Compute the area',
       'Use polar coordinates',
+      'Reflect the triangle in its axis of symmetry',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'By placing the isosceles triangle symmetrically about the y-axis and reflecting, the triangle maps onto itself. The angle at one base vertex maps to the angle at the other, proving equality.',

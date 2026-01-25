@@ -36,10 +36,26 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is a linear function?',
     options: [
-      '$f(x) = mx + b$',
-      '$f(x) = 2^x$',
-      '$f(x) = x^2$',
-      '$f(x) = x/x$'
+      '$f(x) = 2^x
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A linear function has the form $f(x) = mx + b$ where $m$ and $b$ are constants.',
+  },
+      '$f(x) = x^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A linear function has the form $f(x) = mx + b$ where $m$ and $b$ are constants.',
+  },
+      '$f(x) = mx + b
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A linear function has the form $f(x) = mx + b$ where $m$ and $b$ are constants.',
+  },
+      '$f(x) = x/x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A linear function has the form $f(x) = mx + b$ where $m$ and $b$ are constants.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

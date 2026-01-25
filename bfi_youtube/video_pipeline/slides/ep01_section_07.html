@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      margin-top: 50px;
+    }
+    .concept-card {
+      background: rgba(247, 147, 26, 0.05);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .concept-num {
+      color: #F7931A;
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .concept-title {
+      color: #E6EDF3;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .concept-desc {
+      color: #8B949E;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Foundational Concepts</div>
+    <div class="title">Five Key Ideas</div>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <div class="concept-num">1</div>
+        <div class="concept-title">Hard Money</div>
+        <div class="concept-desc">Difficult to produce, easy to verify. Enables capital accumulation.</div>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">2</div>
+        <div class="concept-title">Bearer Asset</div>
+        <div class="concept-desc">Ownership by possession. No intermediary required.</div>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">3</div>
+        <div class="concept-title">Circular Economy</div>
+        <div class="concept-desc">Direct BTC exchange without fiat conversion.</div>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">4</div>
+        <div class="concept-title">Counterparty Risk</div>
+        <div class="concept-desc">Risk that another party fails their obligations.</div>
+      </div>
+      <div class="concept-card">
+        <div class="concept-num">5</div>
+        <div class="concept-title">Time Preference</div>
+        <div class="concept-desc">Present vs. future goods valuation.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

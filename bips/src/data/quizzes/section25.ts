@@ -7,11 +7,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'What does BIP-39 define?',
     options: [
       'Transaction encoding',
-      'Mnemonic code for generating seeds',
       'Address formats',
       'Network protocol',
+      'Mnemonic code for generating seeds',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'BIP-39 defines mnemonic phrases (seed phrases) for wallet backup.',
   },

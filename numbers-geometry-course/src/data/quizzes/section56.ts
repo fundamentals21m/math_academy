@@ -11,10 +11,10 @@ export const section56Questions: QuizQuestion[] = [
     options: [
       '1',
       'i',
-      '-i',
       '-1',
+      '-i',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'By definition, i = √(-1), so i² = -1. This is the fundamental property of the imaginary unit.',
@@ -24,12 +24,12 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is (2 + 3i) + (4 - i)?',
     options: [
+      '6 + 2i',
       '6 + 4i',
       '8 + 2i',
       '2 + 4i',
-      '6 + 2i',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Add real parts: 2 + 4 = 6. Add imaginary parts: 3 + (-1) = 2. So the answer is 6 + 2i.',
@@ -38,8 +38,13 @@ export const section56Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'What is (1 + i)(1 - i)?',
-    options: ['0', '1', '2', '-2i'],
-    correctIndex: 2,
+    options: [
+      '0',
+      '1',
+      '-2i',
+      '2',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       '(1 + i)(1 - i) = 1 - i² = 1 - (-1) = 2. This is a difference of squares pattern.',
@@ -50,11 +55,11 @@ export const section56Questions: QuizQuestion[] = [
     question: 'What is the absolute value |3 + 4i|?',
     options: [
       '7',
-      '5',
       '12',
       '25',
+      '5',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       '|3 + 4i| = √(3² + 4²) = √(9 + 16) = √25 = 5. This is a 3-4-5 right triangle!',
@@ -79,12 +84,12 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which property does the absolute value of complex numbers satisfy?',
     options: [
-      '|z₁z₂| = |z₁| × |z₂|',
       '|z₁ + z₂| = |z₁| + |z₂|',
       '|z₁ - z₂| = |z₁| - |z₂|',
-      '|z₁/z₂| = |z₁| + |z₂|'
+      '|z₁z₂| = |z₁| × |z₂|',
+      '|z₁/z₂| = |z₁| + |z₂|',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The absolute value is multiplicative: |z₁z₂| = |z₁| × |z₂|. This is equivalent to the Diophantus identity.',

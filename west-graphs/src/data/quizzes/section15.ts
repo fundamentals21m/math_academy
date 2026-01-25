@@ -7,11 +7,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Turán\'s Theorem gives the maximum edges in a graph with no:',
     options: [
       'Cycles',
-      'Perfect matching',
       '$K_{r+1}$ subgraph',
-      'Cut vertices'
+      'Perfect matching',
+      'Cut vertices',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Turán: $ex(n, K_{r+1})$ = max edges avoiding $(r+1)$-clique, achieved by $T(n,r)$.',
   },

@@ -68,10 +68,10 @@ export const section69Questions: QuizQuestion[] = [
     options: [
       'Only exponentials',
       'Only trigonometric functions',
+      '$e^{\\alpha t}\\cos(\\beta t)$ and $e^{\\alpha t}\\sin(\\beta t)$ terms',
       'Logarithmic functions',
-      '$e^{\\alpha t}\\cos(\\beta t)$ and $e^{\\alpha t}\\sin(\\beta t)$ terms'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Complex eigenvalues $\\alpha \\pm i\\beta$ produce real solutions combining exponential decay/growth with oscillation.',
   },
@@ -80,10 +80,26 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A = \\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}$, then $e^{tA}$ equals:',
     options: [
-      '$\\begin{pmatrix} \\cos t & \\sin t \\\\ -\\sin t & \\cos t \\end{pmatrix}$',
-      '$\\begin{pmatrix} e^t & 0 \\\\ 0 & e^{-t} \\end{pmatrix}$',
-      '$\\begin{pmatrix} 1+t & t \\\\ -t & 1-t \\end{pmatrix}$',
-      '$\\begin{pmatrix} \\cosh t & \\sinh t \\\\ -\\sinh t & \\cosh t \\end{pmatrix}$'
+      '$\\begin{pmatrix} e^t & 0 \\\\ 0 & e^{-t} \\end{pmatrix}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'This matrix has eigenvalues $\\pm i$, giving rotation: $e^{tA} = I\\cos t + A\\sin t$.',
+  },
+      '$\\begin{pmatrix} 1+t & t \\\\ -t & 1-t \\end{pmatrix}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'This matrix has eigenvalues $\\pm i$, giving rotation: $e^{tA} = I\\cos t + A\\sin t$.',
+  },
+      '$\\begin{pmatrix} \\cos t & \\sin t \\\\ -\\sin t & \\cos t \\end{pmatrix}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'This matrix has eigenvalues $\\pm i$, giving rotation: $e^{tA} = I\\cos t + A\\sin t$.',
+  },
+      '$\\begin{pmatrix} \\cosh t & \\sinh t \\\\ -\\sinh t & \\cosh t \\end{pmatrix}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'This matrix has eigenvalues $\\pm i$, giving rotation: $e^{tA} = I\\cos t + A\\sin t$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

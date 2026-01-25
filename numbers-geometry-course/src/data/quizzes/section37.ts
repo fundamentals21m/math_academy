@@ -12,7 +12,7 @@ export const section37Questions: QuizQuestion[] = [
       'Angle measure is a deep concept beyond traditional geometry',
       'He did not know about numbers',
       'The Greeks only worked with integers',
-      'Angles cannot be measured'
+      'Angles cannot be measured',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -40,11 +40,11 @@ export const section37Questions: QuizQuestion[] = [
     question: 'How is arc length formally defined?',
     options: [
       'As the product of radius and angle',
-      'As the least upper bound of inscribed polygon lengths',
       'As twice the chord length',
       'As the perimeter divided by 2π',
+      'As the least upper bound of inscribed polygon lengths',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Arc length is defined as the least upper bound (supremum) of the lengths of polygons inscribed in the arc, using the completeness of real numbers.',
@@ -96,10 +96,10 @@ export const section37Questions: QuizQuestion[] = [
     options: [
       'Because angles are defined that way',
       'Because the circle is round',
-      'It is not actually additive',
       'Because of the least upper bound property',
+      'It is not actually additive',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Arc length is additive because of how the least upper bound works: polygons in adjacent arcs can be combined into a polygon in the union, and vice versa.',

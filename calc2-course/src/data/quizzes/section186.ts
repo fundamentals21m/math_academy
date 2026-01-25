@@ -6,10 +6,22 @@ export const section186Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The falling factorial $x^{(n)}$ is defined as:',
     options: [
-      '$x(x-1)(x-2)\\cdots(x-n+1)$',
-      '$x(x+1)(x+2)\\cdots(x+n-1)$',
-      '$x^n$',
-      '$\\frac{x!}{(x-n)!}$ only'
+      '$x(x+1)(x+2)\\cdots(x+n-1)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The falling factorial $x^{(n)} = x(x-1)(x-2)\\cdots(x-n+1)$ is a product of $n$ consecutive descending integers starting from $x$.',
+  },
+      '$x^n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The falling factorial $x^{(n)} = x(x-1)(x-2)\\cdots(x-n+1)$ is a product of $n$ consecutive descending integers starting from $x$.',
+  },
+      '$\\frac{x!}{(x-n)!}$ only',
+      '$x(x-1)(x-2)\\cdots(x-n+1)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The falling factorial $x^{(n)} = x(x-1)(x-2)\\cdots(x-n+1)$ is a product of $n$ consecutive descending integers starting from $x$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -80,12 +92,12 @@ export const section186Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Stirling numbers connect ordinary powers and factorial polynomials. If $x^{(n)} = \\sum_{k=0}^{n} s(n, k) x^k$, what are the $s(n,k)$ called?',
     options: [
-      'Stirling numbers of the first kind',
       'Stirling numbers of the second kind',
       'Euler numbers',
+      'Stirling numbers of the first kind',
       'Bernoulli numbers',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Stirling numbers of the first kind $s(n,k)$ expand falling factorials in terms of ordinary powers. Stirling numbers of the second kind do the reverse.',
   },

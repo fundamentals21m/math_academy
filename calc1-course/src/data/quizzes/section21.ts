@@ -6,12 +6,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ and $g$ are continuous, then $f \\circ g$ (the composition) is:',
     options: [
-      'Always discontinuous',
       'Continuous wherever it is defined',
+      'Always discontinuous',
       'Only continuous at integers',
       'Never defined',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The composition of continuous functions is continuous.',
   },
@@ -59,10 +59,22 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $\\lim_{x \\to a} f(g(x))$, if $g$ is continuous at $a$ and $f$ is continuous at $g(a)$, the limit is:',
     options: [
-      '$f(a)$',
-      '$g(a)$',
-      '$f(g(a))$',
-      'Does not exist'
+      '$f(a)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By continuity of composition: $\\lim f(g(x)) = f(g(a))$.',
+  },
+      '$g(a)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By continuity of composition: $\\lim f(g(x)) = f(g(a))$.',
+  },
+      'Does not exist',
+      '$f(g(a))
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By continuity of composition: $\\lim f(g(x)) = f(g(a))$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

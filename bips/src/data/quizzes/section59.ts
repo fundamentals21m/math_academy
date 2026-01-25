@@ -8,10 +8,10 @@ export const section59Questions: QuizQuestion[] = [
     options: [
       'Signature algorithm',
       'Block format',
+      'Protocol version and user agent strings',
       'Address encoding',
-      'Protocol version and user agent strings'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'BIP-14 standardizes how nodes identify themselves with version and user agent.',
   },
@@ -28,12 +28,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The protocol version number helps nodes:',
     options: [
-      'Determine feature compatibility',
       'Calculate fees',
       'Validate blocks',
-      'Generate addresses'
+      'Generate addresses',
+      'Determine feature compatibility',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Protocol version indicates which features and messages a node supports.',
   },
@@ -42,12 +42,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'User agent strings are sent in which message?',
     options: [
+      'version',
       'verack',
       'ping',
-      'version',
       'getaddr',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Nodes exchange version messages containing their user agent when connecting.',
   },

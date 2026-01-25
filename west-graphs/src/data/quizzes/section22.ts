@@ -6,12 +6,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Tait\'s Theorem connects Hamiltonian cycles in planar graphs to:',
     options: [
-      'Proper 3-edge-coloring of cubic bridgeless planar graphs',
       'Vertex coloring',
       'Perfect matchings',
+      'Proper 3-edge-coloring of cubic bridgeless planar graphs',
       'Spanning trees',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Tait: a 3-connected cubic planar graph is Hamiltonian iff it\'s 3-edge-colorable.',
   },
@@ -23,7 +23,7 @@ export const section22Questions: QuizQuestion[] = [
       'A necessary condition involving face sizes',
       'Sufficient for Hamiltonicity',
       'Equivalent to planarity',
-      'Related to chromatic number'
+      'Related to chromatic number',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A nowhere-zero $k$-flow assigns:',
     options: [
-      'Colors from $\\{1, \\ldots, k\\}$ to vertices',
       'Non-zero values from a group to edges satisfying flow conservation',
+      'Colors from $\\{1, \\ldots, k\\}$ to vertices',
       'Orientations to edges',
-      'Weights to vertices'
+      'Weights to vertices',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A nowhere-zero flow assigns group elements (typically $\\mathbb{Z}_k$) to oriented edges with flow conservation.',
   },
@@ -50,10 +50,10 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       'Matchings',
       'Spanning trees',
+      'Vertex connectivity',
       'Face colorings via duality',
-      'Vertex connectivity'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Flows on planar graphs correspond to colorings of the dual; nowhere-zero $k$-flow dualizes to $k$-face-coloring.',
   },
@@ -65,7 +65,7 @@ export const section22Questions: QuizQuestion[] = [
       'Every planar graph has a nowhere-zero 4-flow',
       'Every planar graph is 3-degenerate',
       'Every cubic planar graph has a Hamiltonian cycle',
-      'Every bridgeless planar graph has a nowhere-zero 4-flow'
+      'Every bridgeless planar graph has a nowhere-zero 4-flow',
     ],
     correctIndex: 3,
     difficulty: 'hard',

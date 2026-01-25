@@ -50,10 +50,14 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A module $I$ is injective if:',
     options: [
-      'Every short exact sequence starting with $I$ splits',
       '$I$ is free',
-      '$I = 0$',
-      '$I$ has no quotients'
+      '$I = 0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$I$ is injective if every injection $I \\hookrightarrow M$ splits, equivalently if $\\text{Hom}(-, I)$ is exact.',
+  },
+      '$I$ has no quotients',
+      'Every short exact sequence starting with $I$ splits',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -64,12 +68,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Every free module is:',
     options: [
+      'Projective',
       'Injective',
       'Neither projective nor injective',
-      'Projective',
       'Both projective and injective',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Every free module is projective. The converse is not true in general (projective does not imply free), though it is true over PIDs.',
   },

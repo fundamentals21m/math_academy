@@ -7,12 +7,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Lagrangian $L$ is defined as:',
     options: [
+      'Kinetic energy minus potential energy ($T - V$)',
       'Force times distance',
       'Kinetic energy plus potential energy ($T + V$)',
-      'Kinetic energy minus potential energy ($T - V$)',
-      'Mass times acceleration'
+      'Mass times acceleration',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The Lagrangian is defined as $L = T - V$, where $T$ is kinetic energy and $V$ is potential energy. This quantity, when integrated over time (the action), is made stationary by the actual path of a mechanical system.',
@@ -23,11 +23,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'Hamilton\'s principle states that mechanical systems follow paths that make the action:',
     options: [
       'Equal to energy',
+      'Stationary (extremal)',
       'Maximum',
       'Zero',
-      'Stationary (extremal)'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Hamilton\'s principle (the principle of least action) states that the actual path makes the action $S = \\int L\\, dt$ stationary—meaning its first variation is zero. This is usually a minimum but can be a saddle point.',
@@ -38,12 +38,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Euler-Lagrange equation $\\frac{\\partial F}{\\partial y} - \\frac{d}{dx}\\frac{\\partial F}{\\partial y\'} = 0$ is:',
     options: [
-      'A necessary condition for extremizing an integral',
       'Always sufficient for a minimum',
       'Only valid for straight lines',
-      'Newton\'s second law',
+      'Newton\\'s second law',
+      'A necessary condition for extremizing an integral',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Euler-Lagrange equation is a necessary condition for a function $y(x)$ to extremize the integral $\\int F(x,y,y\')dx$. It transforms the optimization problem into a differential equation that the optimal path must satisfy.',
@@ -54,11 +54,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'The Hamiltonian $H$ typically represents:',
     options: [
       'The Lagrangian',
-      'Total energy ($T + V$)',
       'Kinetic energy only',
-      'The action'
+      'Total energy ($T + V$)',
+      'The action',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'For most systems, the Hamiltonian $H = \\sum p_i\\dot{q}_i - L$ equals the total energy $T + V$. Hamilton\'s equations describe how position and momentum evolve in phase space, preserving this energy.',
@@ -71,10 +71,10 @@ export const section48Questions: QuizQuestion[] = [
     options: [
       'It only applies to simple systems',
       'It requires fewer equations',
+      'It eliminates the need for calculus',
       'It works naturally in any coordinate system and handles constraints easily',
-      'It eliminates the need for calculus'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Lagrangian mechanics is coordinate-independent: you can use Cartesian, polar, or any convenient coordinates. Constraints (like a bead on a wire) are handled by choosing appropriate generalized coordinates, eliminating the need for constraint forces.',
@@ -84,12 +84,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Feynman\'s path integral formulation of quantum mechanics uses the action by:',
     options: [
+      'Summing contributions $e^{iS/\\hbar}$ over all possible paths',
       'Ignoring paths with large action',
       'Finding the single path of minimum action',
       'Setting the action equal to zero',
-      'Summing contributions $e^{iS/\\hbar}$ over all possible paths'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'In Feynman\'s formulation, a quantum particle takes all paths simultaneously, with each weighted by $e^{iS/\\hbar}$. For macroscopic systems where $S \\gg \\hbar$, paths near the classical (stationary action) path dominate, recovering classical mechanics.',

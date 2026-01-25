@@ -39,7 +39,7 @@ export const section141Questions: QuizQuestion[] = [
       'The fundamental vector product itself (not just its magnitude)',
       'The magnitude of the fundamental vector product',
       'The sum of partial derivatives',
-      'The determinant of the Jacobian matrix'
+      'The determinant of the Jacobian matrix',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -97,7 +97,7 @@ export const section141Questions: QuizQuestion[] = [
       'The total kinetic energy of the fluid',
       'The total mass of fluid',
       'The pressure on the surface',
-      'The rate of fluid volume crossing the surface per unit time'
+      'The rate of fluid volume crossing the surface per unit time',
     ],
     correctIndex: 3,
     difficulty: 'medium',

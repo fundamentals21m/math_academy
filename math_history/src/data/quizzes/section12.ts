@@ -6,7 +6,28 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the prime factorization of 84?',
     difficulty: 'easy',
-    options: ['$2^2 \\cdot 3 \\cdot 7$', '$2 \\cdot 3^2 \\cdot 7$', '$2^2 \\cdot 21$', '$4 \\cdot 21$'],
+    options: [
+      '$2 \\cdot 3^2 \\cdot 7
+    correctIndex: 1,
+    explanation:
+      '$84 = 4 \\times 21 = 2^2 \\times 3 \\times 7$. Note that $21$ and $4$ are not prime, so $4 \\cdot 21$ is not a prime factorization.',
+  },
+      '$2^2 \\cdot 3 \\cdot 7
+    correctIndex: 0,
+    explanation:
+      '$84 = 4 \\times 21 = 2^2 \\times 3 \\times 7$. Note that $21$ and $4$ are not prime, so $4 \\cdot 21$ is not a prime factorization.',
+  },
+      '$2^2 \\cdot 21
+    correctIndex: 0,
+    explanation:
+      '$84 = 4 \\times 21 = 2^2 \\times 3 \\times 7$. Note that $21$ and $4$ are not prime, so $4 \\cdot 21$ is not a prime factorization.',
+  },
+      '$4 \\cdot 21
+    correctIndex: 0,
+    explanation:
+      '$84 = 4 \\times 21 = 2^2 \\times 3 \\times 7$. Note that $21$ and $4$ are not prime, so $4 \\cdot 21$ is not a prime factorization.',
+  },
+    ],
     correctIndex: 0,
     explanation:
       '$84 = 4 \\times 21 = 2^2 \\times 3 \\times 7$. Note that $21$ and $4$ are not prime, so $4 \\cdot 21$ is not a prime factorization.',
@@ -18,10 +39,26 @@ export const section12Questions: QuizQuestion[] = [
       'According to Euclid\'s Lemma, if a prime $p$ divides $ab$, then:',
     difficulty: 'easy',
     options: [
-      '$p$ divides $a + b$',
-      '$p$ divides $a$ or $p$ divides $b$',
-      '$p$ divides $a$ and $p$ divides $b$',
-      '$p$ divides $a - b$'
+      '$p$ divides $a + b
+    correctIndex: 3,
+    explanation:
+      'Euclid\'s Lemma states that if a prime $p$ divides a product $ab$, then $p$ must divide at least one of the factors. It doesn\'t have to divide both.',
+  },
+      '$p$ divides $a$ and $p$ divides $b
+    correctIndex: 1,
+    explanation:
+      'Euclid\'s Lemma states that if a prime $p$ divides a product $ab$, then $p$ must divide at least one of the factors. It doesn\'t have to divide both.',
+  },
+      '$p$ divides $a - b
+    correctIndex: 1,
+    explanation:
+      'Euclid\'s Lemma states that if a prime $p$ divides a product $ab$, then $p$ must divide at least one of the factors. It doesn\'t have to divide both.',
+  },
+      '$p$ divides $a$ or $p$ divides $b
+    correctIndex: 1,
+    explanation:
+      'Euclid\'s Lemma states that if a prime $p$ divides a product $ab$, then $p$ must divide at least one of the factors. It doesn\'t have to divide both.',
+  },
     ],
     correctIndex: 1,
     explanation:
@@ -43,8 +80,13 @@ export const section12Questions: QuizQuestion[] = [
     question:
       'Using prime factorizations, what is $\\gcd(48, 180)$? Given: $48 = 2^4 \\cdot 3$ and $180 = 2^2 \\cdot 3^2 \\cdot 5$.',
     difficulty: 'medium',
-    options: ['4', '6', '12', '36'],
-    correctIndex: 2,
+    options: [
+      '12',
+      '4',
+      '6',
+      '36',
+    ],
+    correctIndex: 0,
     explanation:
       '$\\gcd(48, 180) = 2^{\\min(4,2)} \\cdot 3^{\\min(1,2)} \\cdot 5^{\\min(0,1)} = 2^2 \\cdot 3^1 \\cdot 5^0 = 4 \\times 3 = 12$.',
   },
@@ -58,7 +100,7 @@ export const section12Questions: QuizQuestion[] = [
       'There are no primes in this system',
       'Multiplication is not commutative',
       'The number 6 has two genuinely different factorizations',
-      'Negative numbers cannot be factored'
+      'Negative numbers cannot be factored',
     ],
     correctIndex: 2,
     explanation:

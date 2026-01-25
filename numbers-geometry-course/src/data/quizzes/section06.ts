@@ -9,12 +9,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many divisors does $30 = 2 \\times 3 \\times 5$ have?',
     options: [
-      '8',
       '6',
       '3',
-      '30'
+      '30',
+      '8',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'For $30 = 2^1 \\times 3^1 \\times 5^1$, the number of divisors is $(1+1)(1+1)(1+1) = 2 \\times 2 \\times 2 = 8$. They are: 1, 2, 3, 5, 6, 10, 15, 30.',
@@ -70,11 +70,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'To find $\\gcd(m, n)$ using prime factorizations, we take:',
     options: [
       'The maximum exponent of each prime',
+      'The minimum exponent of each prime',
       'The sum of all exponents',
       'The product of all primes',
-      'The minimum exponent of each prime',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The gcd is found by taking the minimum exponent of each prime that appears in both factorizations. This gives the largest number that divides both $m$ and $n$.',
@@ -84,12 +84,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\gcd(12, 18)$ if $12 = 2^2 \\times 3$ and $18 = 2 \\times 3^2$?',
     options: [
-      '2',
       '6',
+      '2',
       '3',
       '36',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       '$\\gcd(12, 18) = 2^{\\min(2,1)} \\times 3^{\\min(1,2)} = 2^1 \\times 3^1 = 6$.',
@@ -134,12 +134,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A perfect number is one that:',
     options: [
-      'Equals the sum of its proper divisors',
       'Is divisible by all primes',
       'Has exactly two divisors',
       'Is both a square and a cube',
+      'Equals the sum of its proper divisors',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A perfect number equals the sum of its proper divisors (all divisors except itself). For example, $6 = 1 + 2 + 3$ and $28 = 1 + 2 + 4 + 7 + 14$.',

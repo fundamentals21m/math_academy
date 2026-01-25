@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .recommendations-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 25px auto;
+      max-width: 1000px;
+    }
+    .rec-card {
+      background: rgba(8, 145, 178, 0.06);
+      border: 1px solid rgba(8, 145, 178, 0.25);
+      padding: 18px 22px;
+      border-radius: 8px;
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .rec-number {
+      background: rgba(8, 145, 178, 0.2);
+      color: #0891B2;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .rec-content {
+      flex: 1;
+    }
+    .rec-title {
+      color: #E6EDF3;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .rec-desc {
+      color: #8B949E;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Action Items</div>
+    <div class="section-title">Recommendations for Pension Managers</div>
+    <div class="recommendations-grid">
+      <div class="rec-card">
+        <div class="rec-number">1</div>
+        <div class="rec-content">
+          <div class="rec-title">Embrace BlackRock Infrastructure</div>
+          <div class="rec-desc">Leverage their bitcoin ETF and mutual fund capabilities</div>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-number">2</div>
+        <div class="rec-content">
+          <div class="rec-title">Offer Bitcoin in NQDC</div>
+          <div class="rec-desc">Non-Qualified Deferred Compensation plans can include bitcoin</div>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-number">3</div>
+        <div class="rec-content">
+          <div class="rec-title">Utilize Enhanced Funds</div>
+          <div class="rec-desc">Use funds enhanced with bitcoin, consider higher allocations</div>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-number">4</div>
+        <div class="rec-content">
+          <div class="rec-title">Avoid Shorts in Hedges</div>
+          <div class="rec-desc">Don't be unintentionally short bitcoin exposure</div>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-number">5</div>
+        <div class="rec-content">
+          <div class="rec-title">Structured Credit Arbitrage</div>
+          <div class="rec-desc">Take advantage of bitcoin as collateral opportunities</div>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-number">6</div>
+        <div class="rec-content">
+          <div class="rec-title">Build Self-Custody Operations</div>
+          <div class="rec-desc">Use ETFs while developing internal capabilities</div>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-number">7</div>
+        <div class="rec-content">
+          <div class="rec-title">10-Year Termination Plan</div>
+          <div class="rec-desc">Work toward pension termination over maximum 10 years</div>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-number">8</div>
+        <div class="rec-content">
+          <div class="rec-title">Utilize the PBGC Put</div>
+          <div class="rec-desc">Knowing executives are taken care of with NQDC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

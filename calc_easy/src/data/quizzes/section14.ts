@@ -66,12 +66,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivatives of sine and cosine are related because:',
     options: [
-      'They are both always positive',
       'They form a cycle: differentiating repeatedly brings you back',
+      'They are both always positive',
       'They have the same derivative',
-      'They are inverse functions'
+      'They are inverse functions',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$\\sin \\to \\cos \\to -\\sin \\to -\\cos \\to \\sin$. Four derivatives return to the original.',
   },

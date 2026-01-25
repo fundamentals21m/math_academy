@@ -24,12 +24,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What geometric transformation does multiplication by i represent?',
     options: [
+      'Rotation by 90° counterclockwise',
       'Reflection in the real axis',
       'Scaling by factor 2',
-      'Rotation by 90° counterclockwise',
       'Translation by 1 unit',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Multiplying by i adds π/2 to the argument, which is a 90° counterclockwise rotation.',
@@ -39,12 +39,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is i⁴?',
     options: [
-      '-1',
       '1',
+      '-1',
       'i',
       '-i',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'i⁴ = (i²)² = (-1)² = 1. The powers of i cycle with period 4.',
@@ -55,12 +55,12 @@ export const section57Questions: QuizQuestion[] = [
     question:
       'When multiplying two complex numbers in polar form, what happens to their arguments?',
     options: [
-      'They are added',
       'They are multiplied',
       'They are subtracted',
+      'They are added',
       'The larger one is taken',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'In polar form multiplication, absolute values multiply and arguments add.',
@@ -84,8 +84,13 @@ export const section57Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: 'What is i¹⁰⁰?',
-    options: ['1', '-1', 'i', '-i'],
-    correctIndex: 0,
+    options: [
+      '-1',
+      'i',
+      '1',
+      '-i',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       '100 = 4 × 25, so 100 ≡ 0 (mod 4). Thus i¹⁰⁰ = i⁰ = 1.',
@@ -96,11 +101,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'Which mathematician discovered that multiplication adds arguments?',
     options: [
       'Euler',
+      'Viète',
       'Gauss',
       'Newton',
-      'Viète',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'François Viète discovered around 1590 that the product of triangles adds their angles.',
@@ -112,10 +117,10 @@ export const section57Questions: QuizQuestion[] = [
     options: [
       'Every equation has a real solution',
       'Complex numbers form a field',
-      'Every polynomial equation has a complex solution',
       'i² = -1',
+      'Every polynomial equation has a complex solution',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Fundamental Theorem of Algebra states that every polynomial equation has a solution in the complex numbers.',

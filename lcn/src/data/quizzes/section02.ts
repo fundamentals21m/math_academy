@@ -52,10 +52,10 @@ export const section02Questions: QuizQuestion[] = [
     options: [
       'The generic group model',
       'The standard model',
-      'The random oracle model',
       'The algebraic group model',
+      'The random oracle model',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The binding proof treats $H_{\\text{P2C}}$ as a random oracle to bound collision probability.',
   },
@@ -64,10 +64,26 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the binding proof for P2C, the collision probability is bounded by:',
     options: [
-      '$1/p$',
-      '$q^2/p$',
-      '$q/p$',
-      '$2^{-\\lambda}$'
+      '$1/p
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'With $q$ queries and $q^2$ pairs, union bound gives collision probability $\\leq q^2/p$.',
+  },
+      '$q/p
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'With $q$ queries and $q^2$ pairs, union bound gives collision probability $\\leq q^2/p$.',
+  },
+      '$2^{-\\lambda}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'With $q$ queries and $q^2$ pairs, union bound gives collision probability $\\leq q^2/p$.',
+  },
+      '$q^2/p
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'With $q$ queries and $q^2$ pairs, union bound gives collision probability $\\leq q^2/p$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -78,12 +94,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Bitcoin Taproot, P2C is used to:',
     options: [
+      'Commit a script tree to a public key',
       'Hash transaction data',
       'Generate random numbers',
       'Verify signatures',
-      'Commit a script tree to a public key',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Taproot uses P2C to commit a script tree to a public key, enabling both key-path and script-path spending.',
   },

@@ -104,10 +104,10 @@ export const section94Questions: QuizQuestion[] = [
     options: [
       'The maximum error',
       'The number of points off the line',
-      'The horizontal distances',
       'The sum of squared vertical distances',
+      'The horizontal distances',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Least squares minimizes sum of squared residuals.',
   },

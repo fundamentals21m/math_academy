@@ -38,10 +38,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'The signature becomes invalid',
       'The message is revealed',
-      'The private key can be computed by anyone',
       'Nothing happens',
+      'The private key can be computed by anyone',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'With two signatures using the same $k$, an attacker can solve for $k$ and then compute the private key $d$.',
   },
@@ -65,11 +65,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Signature malleability means:',
     options: [
       'Signatures can be forged',
-      'Signatures don\'t verify correctly',
+      'Signatures don\\'t verify correctly',
+      'Both $(r, s)$ and $(r, n-s)$ are valid signatures',
       'Signatures are too large',
-      'Both $(r, s)$ and $(r, n-s)$ are valid signatures'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Given valid $(r, s)$, the pair $(r, -s \\mod n)$ also verifies because negating $s$ negates the verification point, but it has the same x-coordinate.',
   },
@@ -78,10 +78,18 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'BIP 62\'s low-s requirement says:',
     options: [
-      '$s \\leq n/2$',
       '$s$ must be 0',
       '$s$ must be prime',
-      '$s > n$'
+      '$s \\leq n/2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Bitcoin requires $s \\leq n/2$ to eliminate signature malleability, ensuring only one valid signature exists per message.',
+  },
+      '$s > n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Bitcoin requires $s \\leq n/2$ to eliminate signature malleability, ensuring only one valid signature exists per message.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

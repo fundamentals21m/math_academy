@@ -7,11 +7,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What does the second derivative $\\frac{d^2y}{dx^2}$ represent?',
     options: [
       'The original function squared',
-      'The rate of change of the rate of change (how the slope is changing)',
       'The area under the curve',
+      'The rate of change of the rate of change (how the slope is changing)',
       'The product of two derivatives',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The second derivative measures how the first derivative (slope) is changing.',
   },
@@ -92,7 +92,7 @@ export const section08Questions: QuizQuestion[] = [
       'Concave down (like a frown)',
       'Decreasing',
       'A straight line',
-      'Concave up (like a smile)'
+      'Concave up (like a smile)',
     ],
     correctIndex: 3,
     difficulty: 'medium',

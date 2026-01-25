@@ -68,10 +68,10 @@ export const section12Questions: QuizQuestion[] = [
     options: [
       '$\\mathbf{G}^{-1}$ is a generator matrix',
       '$\\mathbf{G}$ is also a generator matrix',
-      '$\\mathbf{G}$ is a parity check matrix',
       '$\\mathbf{G}^t$ is a generator matrix',
+      '$\\mathbf{G}$ is a parity check matrix',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The generator matrix $\\mathbf{G}$ of $\\mathcal{C}$ becomes the parity check matrix of $\\mathcal{C}^\\perp$. Similarly, the parity check matrix $\\mathbf{H}$ of $\\mathcal{C}$ becomes the generator matrix of $\\mathcal{C}^\\perp$.',
   },

@@ -7,11 +7,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'The chromatic number $\\chi(G)$ is:',
     options: [
       'The number of edges',
+      'The minimum colors needed to properly color vertices',
       'The maximum degree plus one',
       'The number of components',
-      'The minimum colors needed to properly color vertices',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: '$\\chi(G)$ is the minimum $k$ such that $G$ has a proper $k$-coloring (adjacent vertices get different colors).',
   },
@@ -49,7 +49,7 @@ export const section14Questions: QuizQuestion[] = [
       '$\\chi(G)$ colors',
       '$\\Delta(G)$ colors',
       '$n$ colors',
-      '$\\Delta(G) + 1$ colors'
+      '$\\Delta(G) + 1$ colors',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -60,12 +60,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Brooks\' Theorem states that $\\chi(G) \\leq \\Delta(G)$ unless:',
     options: [
-      '$G$ is a complete graph or odd cycle',
       '$G$ is bipartite',
       '$G$ is planar',
-      '$G$ is a tree'
+      '$G$ is a complete graph or odd cycle',
+      '$G$ is a tree',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Brooks: $\\chi(G) \\leq \\Delta$ for connected graphs except $K_n$ and odd cycles.',
   },

@@ -10,11 +10,11 @@ export const section59Questions: QuizQuestion[] = [
     question: "What does Gödel's Lemma state about recursive relations?",
     options: [
       'Recursive relations cannot be expressed in formal languages',
-      'Recursive relations are always decidable in polynomial time',
       'Recursive relations can be represented by formulas that prove or disprove instances',
-      'Recursive relations are equivalent to computable functions'
+      'Recursive relations are always decidable in polynomial time',
+      'Recursive relations are equivalent to computable functions',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       "Gödel's Lemma states that if R(m,n) is a recursive relation, there is a formula F(x,y) such that: if R(m,n) then ⊢ F(Sᵐ0, Sⁿ0), and if not R(m,n) then ⊢ ¬F(Sᵐ0, Sⁿ0).",
@@ -26,10 +26,10 @@ export const section59Questions: QuizQuestion[] = [
     options: [
       'There are only finitely many proofs',
       'The axiom of choice guarantees enumeration',
+      'Proofs are finite sequences of formulas, and finite strings are countable',
       'Proofs can be sorted alphabetically',
-      'Proofs are finite sequences of formulas, and finite strings are countable'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Proofs are finite sequences of formulas. Since there are only countably many finite strings of symbols, there are only countably many proofs. We can enumerate them as P₁, P₂, P₃, ...',
@@ -54,12 +54,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Gödel set αg constructed as?',
     options: [
+      '{x ∈ N | ¬∃y F(x, y)}',
       '{x ∈ N | x is prime}',
       '{x ∈ N | ∃y F(x, y)}',
-      '{x ∈ N | ¬∃y F(x, y)}',
       '{x ∈ N | x = g}',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The Gödel set is αg = {x ∈ N | ¬∃y∈N F(x, y)}. This set contains numbers x such that there is no y for which F(x, y) holds—meaning numbers whose membership statement has no proof.',
@@ -71,10 +71,10 @@ export const section59Questions: QuizQuestion[] = [
     options: [
       'g is a natural number',
       'g is a prime number',
-      'This formula is not provable',
       'g is the largest number',
+      'This formula is not provable',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'By the construction, Sᵍ0 ∈ αg is equivalent to ¬∃y F(Sᵍ0, y), which means "there is no proof of Sᵍ0 ∈ αg". So the formula says "I am not provable"—this is the self-referential Gödel sentence.',
@@ -84,12 +84,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens if we assume Sᵍ0 ∈ αg is provable?',
     options: [
+      'We derive both the formula and its negation, contradicting consistency',
       'We get a valid proof of consistency',
       'We prove that all formulas are decidable',
       'We prove that L has a model',
-      'We derive both the formula and its negation, contradicting consistency'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'If Sᵍ0 ∈ αg were provable, some Pₙ proves it, so R(g,n) holds, so ⊢ F(Sᵍ0, Sⁿ0), so ⊢ ∃y F(Sᵍ0, y), which means ⊢ ¬Sᵍ0 ∈ αg. This contradicts our assumption that ⊢ Sᵍ0 ∈ αg.',
@@ -99,12 +99,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From the result (*) that for all n, ⊢ ¬F(Sᵍ0, Sⁿ0), what can we conclude in ω-complete models?',
     options: [
-      '∀y ¬F(Sᵍ0, y) is true',
       '∃y F(Sᵍ0, y) is true',
       'F is not a valid formula',
-      'The model is inconsistent'
+      'The model is inconsistent',
+      '∀y ¬F(Sᵍ0, y) is true',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'By soundness, ¬F(Sᵍ0, Sⁿ0) is true for all n in all models. In an ω-complete model, if A(Sⁿ0) is true for each n, then ∀x A(x) is true. Hence ∀y ¬F(Sᵍ0, y) is true in any ω-complete model.',
@@ -114,12 +114,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What inference is used to go from ∀y ¬G(y) to ¬∃y G(y)?',
     options: [
-      'An inference valid even in intuitionistic logic',
       'Modus ponens',
       'Double negation elimination',
       'The axiom of choice',
+      'An inference valid even in intuitionistic logic',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Even intuitionistic logic allows us to infer ¬∃y G(y) from ∀y ¬G(y). This inference does not require classical principles like the law of excluded middle or double negation elimination.',
@@ -130,11 +130,11 @@ export const section59Questions: QuizQuestion[] = [
     question: 'What is the final conclusion of Theorem 29.2?',
     options: [
       'L is inconsistent',
-      'There is a formula true in ω-complete models but not provable in L',
       'All formulas are decidable',
+      'There is a formula true in ω-complete models but not provable in L',
       'L has no models',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       "Theorem 29.2 (Gödel's Incompleteness - Semantic Version) states: If L is consistent, there is a formula (namely Sᵍ0 ∈ αg) which is true in any ω-complete model but not provable in L.",

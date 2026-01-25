@@ -12,10 +12,10 @@ export const section17Questions: QuizQuestion[] = [
     options: [
       'Areas can only be integers',
       'Areas are always positive',
-      'Area is conserved',
       'Area depends on color',
+      'Area is conserved',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'When we cut and paste, we assume area is conserved—that we never get a polygon larger or smaller than the one we started with.',
@@ -26,11 +26,11 @@ export const section17Questions: QuizQuestion[] = [
     question: "What axiom did Euclid use because he couldn't prove it?",
     options: [
       'The parallel postulate',
+      'The whole is greater than the part',
       'All right angles are equal',
       'Area equals base times height',
-      'The whole is greater than the part'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Euclid could not prove that a polygon could not be cut and pasted onto a smaller part of itself, so he assumed "the whole is greater than the part."',
@@ -39,8 +39,13 @@ export const section17Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'Triangles with the same angles are called:',
-    options: ['Congruent', 'Similar', 'Equal', 'Identical'],
-    correctIndex: 1,
+    options: [
+      'Congruent',
+      'Equal',
+      'Similar',
+      'Identical',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Triangles with the same angles are called similar. Euclid proved that the corresponding sides of similar triangles are proportional.',
@@ -54,7 +59,7 @@ export const section17Questions: QuizQuestion[] = [
       'Constant (the same for all sides)',
       'Always an integer',
       'Different for each side',
-      'Zero for acute triangles'
+      'Zero for acute triangles',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -67,11 +72,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'Who proved that different subdivisions give the same area?',
     options: [
       'Euclid',
+      'Hilbert',
       'Pythagoras',
       'Gauss',
-      'Hilbert',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Hilbert (1899) proved that different subdivisions of the same polygon give the same numerical area, using the concept of signed area.',
@@ -99,7 +104,7 @@ export const section17Questions: QuizQuestion[] = [
       'They have the same number of sides',
       'They are congruent',
       'One can be cut into pieces that reassemble into the other',
-      'They have the same perimeter'
+      'They have the same perimeter',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -112,11 +117,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'What does the Bolyai-Gerwien theorem state?',
     options: [
       'All triangles have the same area',
-      'Polygons with equal area are equidecomposable',
       'Area is not conserved under cutting',
       'The tetrahedron cannot be cut into a cube',
+      'Polygons with equal area are equidecomposable',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The Bolyai-Gerwien theorem states that any two polygons of equal numerical area are equidecomposable—they can be cut into the same pieces.',

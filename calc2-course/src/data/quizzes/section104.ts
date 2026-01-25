@@ -36,10 +36,26 @@ export const section104Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a constant force $f = \\mathbf{c}$, the work done moving from $\\mathbf{a}$ to $\\mathbf{b}$ along any path is:',
     options: [
-      '$\\mathbf{c} \\cdot \\mathbf{a}$',
-      '$\\mathbf{c} \\cdot (\\mathbf{b} - \\mathbf{a})$',
-      '$\\mathbf{c} \\cdot \\mathbf{b}$',
-      '$\\|\\mathbf{c}\\| \\cdot \\|\\mathbf{b} - \\mathbf{a}\\|$'
+      '$\\mathbf{c} \\cdot (\\mathbf{b} - \\mathbf{a})
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a constant force, $W = \\mathbf{c} \\cdot (\\mathbf{b} - \\mathbf{a})$, the dot product of the force and the displacement vector. This is independent of the path.',
+  },
+      '$\\mathbf{c} \\cdot \\mathbf{a}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For a constant force, $W = \\mathbf{c} \\cdot (\\mathbf{b} - \\mathbf{a})$, the dot product of the force and the displacement vector. This is independent of the path.',
+  },
+      '$\\mathbf{c} \\cdot \\mathbf{b}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For a constant force, $W = \\mathbf{c} \\cdot (\\mathbf{b} - \\mathbf{a})$, the dot product of the force and the displacement vector. This is independent of the path.',
+  },
+      '$\\|\\mathbf{c}\\| \\cdot \\|\\mathbf{b} - \\mathbf{a}\\|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For a constant force, $W = \\mathbf{c} \\cdot (\\mathbf{b} - \\mathbf{a})$, the dot product of the force and the displacement vector. This is independent of the path.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -50,12 +66,12 @@ export const section104Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A force field is called conservative if:',
     options: [
+      'The work depends only on the endpoints, not the path',
       'The field is always zero',
       'The work is always positive',
-      'The work depends only on the endpoints, not the path',
-      'The field has no curl'
+      'The field has no curl',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A conservative force field is one for which the work done depends only on the initial and final positions, not on the path taken between them.',
   },
@@ -66,10 +82,10 @@ export const section104Questions: QuizQuestion[] = [
     options: [
       'The change in potential energy',
       'Zero',
+      'The change in kinetic energy',
       'The total energy',
-      'The change in kinetic energy'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The work-energy principle: $\\int f \\cdot dr = \\frac{1}{2}mv^2(b) - \\frac{1}{2}mv^2(a)$. Work equals the change in kinetic energy.',
   },
@@ -78,10 +94,26 @@ export const section104Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From Newton\'s second law $f = mr\'\'$, the work integral $\\int f \\cdot r\' \\, dt$ equals:',
     options: [
-      '$\\frac{1}{2}m[v^2(b) - v^2(a)]$',
-      '$m \\cdot r\'(b)$',
-      '$m[r(b) - r(a)]$',
-      '$\\frac{1}{2}m v(b)$'
+      '$m \\cdot r\\'(b)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Using $f = mr\'\'$ and $v = r\'$: $f \\cdot r\' = mr\'\' \\cdot r\' = m v\' \\cdot v = \\frac{1}{2}m \\frac{d}{dt}(v \\cdot v) = \\frac{1}{2}m \\frac{d}{dt}(v^2)$. Integrating gives the change in kinetic energy.',
+  },
+      '$m[r(b) - r(a)]
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Using $f = mr\'\'$ and $v = r\'$: $f \\cdot r\' = mr\'\' \\cdot r\' = m v\' \\cdot v = \\frac{1}{2}m \\frac{d}{dt}(v \\cdot v) = \\frac{1}{2}m \\frac{d}{dt}(v^2)$. Integrating gives the change in kinetic energy.',
+  },
+      '$\\frac{1}{2}m v(b)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Using $f = mr\'\'$ and $v = r\'$: $f \\cdot r\' = mr\'\' \\cdot r\' = m v\' \\cdot v = \\frac{1}{2}m \\frac{d}{dt}(v \\cdot v) = \\frac{1}{2}m \\frac{d}{dt}(v^2)$. Integrating gives the change in kinetic energy.',
+  },
+      '$\\frac{1}{2}m[v^2(b) - v^2(a)]
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Using $f = mr\'\'$ and $v = r\'$: $f \\cdot r\' = mr\'\' \\cdot r\' = m v\' \\cdot v = \\frac{1}{2}m \\frac{d}{dt}(v \\cdot v) = \\frac{1}{2}m \\frac{d}{dt}(v^2)$. Integrating gives the change in kinetic energy.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

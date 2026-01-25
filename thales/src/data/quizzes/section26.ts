@@ -9,12 +9,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What role did Marin Mersenne play in 17th century mathematics?',
     options: [
-      'He served as a clearinghouse for mathematical ideas through correspondence',
       'He invented calculus',
-      'He was the king\'s official mathematician',
-      'He founded the first mathematical journal'
+      'He was the king\\\\'s official mathematician',
+      'He served as a clearinghouse for mathematical ideas through correspondence',
+      'He founded the first mathematical journal',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Mersenne was a Franciscan friar who corresponded with virtually all active mathematicians of his day, including Descartes, Fermat, Pascal, Galileo, and Torricelli. His cell in Paris became a meeting place where mathematicians could exchange ideas.',
@@ -42,7 +42,7 @@ export const section26Questions: QuizQuestion[] = [
       'Negative numbers',
       'The Cartesian coordinate system',
       'Points at infinity where parallel lines meet',
-      'Imaginary numbers'
+      'Imaginary numbers',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -71,10 +71,10 @@ export const section26Questions: QuizQuestion[] = [
     options: [
       'Whether a number is positive or negative',
       'The sign of a derivative',
-      'Whether two quantities are equal',
       'The bounds on positive and negative roots of a polynomial',
+      'Whether two quantities are equal',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Descartes\'s Rule of Signs states that the number of positive roots of a polynomial equals the number of sign changes in its coefficients (or less by an even number), and similarly for negative roots using p(-x).',
@@ -84,12 +84,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Fermat\'s Little Theorem state?',
     options: [
+      'a^(p-1) ≡ 1 (mod p) for prime p and a not divisible by p',
       'x^n + y^n = z^n has no solutions for n > 2',
       'Every even number is the sum of two primes',
-      'a^(p-1) ≡ 1 (mod p) for prime p and a not divisible by p',
       'The sum of divisors of a perfect number equals twice the number',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Fermat\'s Little Theorem states that if p is prime and a is not divisible by p, then a^(p-1) ≡ 1 (mod p). This theorem is fundamental in modern cryptography, including RSA encryption.',
@@ -114,12 +114,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Pascal build at age 18?',
     options: [
-      'A calculating machine (the Pascaline)',
       'A telescope',
+      'A calculating machine (the Pascaline)',
       'A pendulum clock',
       'A printing press',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Pascal built the Pascaline, an early mechanical calculator, at age 18 to help his father with tax calculations. This was one of the first mechanical calculators ever built.',
@@ -129,12 +129,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What problem led Pascal and Fermat to found probability theory?',
     options: [
-      'The problem of finding prime numbers',
       'The problem of points (dividing stakes in an interrupted game)',
+      'The problem of finding prime numbers',
       'The problem of squaring the circle',
       'The problem of the bridges of Königsberg',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'In 1654, a gambler named the Chevalier de Méré posed the "problem of points" to Pascal: how should stakes be divided if a game is interrupted? Pascal\'s correspondence with Fermat about this problem founded probability theory.',

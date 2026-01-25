@@ -9,7 +9,7 @@ export const section14Questions: QuizQuestion[] = [
       'Doubling the code length',
       'Adding a parity check bit',
       'Removing code words of minimum weight',
-      'Deleting a coordinate position from all code words'
+      'Deleting a coordinate position from all code words',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section14Questions: QuizQuestion[] = [
       'Removing all code words',
       'Taking only code words with 0 in a fixed position, then deleting that position',
       'Doubling each code word',
-      'Adding random bits to code words'
+      'Adding random bits to code words',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,10 +48,26 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If an $[n, k, d]$ code is punctured in one position, the resulting code has parameters:',
     options: [
-      '$[n, k-1, d]$',
-      '$[n+1, k, d]$',
-      '$[n-1, k, d\']$ where $d\' \\geq d - 1$',
-      '$[n-1, k-1, d+1]$'
+      '$[n, k-1, d]
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Puncturing reduces length by 1 but keeps dimension at $k$. The minimum distance can decrease by at most 1, so $d\' \\geq d - 1$.',
+  },
+      '$[n+1, k, d]
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Puncturing reduces length by 1 but keeps dimension at $k$. The minimum distance can decrease by at most 1, so $d\' \\geq d - 1$.',
+  },
+      '$[n-1, k-1, d+1]
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Puncturing reduces length by 1 but keeps dimension at $k$. The minimum distance can decrease by at most 1, so $d\' \\geq d - 1$.',
+  },
+      '$[n-1, k, d\\']$ where $d\\' \\geq d - 1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Puncturing reduces length by 1 but keeps dimension at $k$. The minimum distance can decrease by at most 1, so $d\' \\geq d - 1$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

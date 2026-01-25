@@ -7,11 +7,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What famous triangle of numbers is named after Pascal?',
     options: [
       'The Pythagorean triangle',
+      'Pascal\\\\'s Triangle',
       'The Bermuda Triangle',
-      'Pascal\'s Triangle',
-      'The Golden Triangle'
+      'The Golden Triangle',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Pascal\'s Triangle displays binomial coefficients and has many remarkable properties.',
   },
@@ -22,10 +22,10 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'The product of the two entries above it',
       'The average of the two entries above it',
+      'The sum of the two entries above it',
       'The difference of the two entries above it',
-      'The sum of the two entries above it'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Each entry is the sum of the two entries directly above it, giving the binomial coefficient formula.',
   },
@@ -35,11 +35,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Pascal\'s Wager is an argument concerning:',
     options: [
       'Mathematical probability',
-      'The existence of God',
       'The nature of infinity',
       'Scientific method',
+      'The existence of God',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Pascal\'s Wager argues it is rational to believe in God based on expected value reasoning.',
   },

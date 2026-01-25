@@ -6,10 +6,26 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The linearity property of integrals states:',
     options: [
-      '$\\int (f + g) = \\int f \\cdot \\int g$',
-      '$\\int f/g = \\int f / \\int g$',
-      '$\\int f \\cdot g = \\int f \\cdot \\int g$',
-      '$\\int (f + g) = \\int f + \\int g$ and $\\int cf = c\\int f$'
+      '$\\int (f + g) = \\int f + \\int g$ and $\\int cf = c\\int f
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Linearity: integral of sum = sum of integrals; constants factor out.',
+  },
+      '$\\int (f + g) = \\int f \\cdot \\int g
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Linearity: integral of sum = sum of integrals; constants factor out.',
+  },
+      '$\\int f/g = \\int f / \\int g
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Linearity: integral of sum = sum of integrals; constants factor out.',
+  },
+      '$\\int f \\cdot g = \\int f \\cdot \\int g
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Linearity: integral of sum = sum of integrals; constants factor out.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -68,10 +84,22 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f(x) \\geq 0$ for all $x \\in [a, b]$, then:',
     options: [
-      '$\\int_a^b f < 0$',
-      '$\\int_a^b f \\geq 0$',
-      '$\\int_a^b f = 0$',
-      'Cannot determine the sign'
+      '$\\int_a^b f < 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'If $f \\geq 0$, then the integral (area under curve) is non-negative.',
+  },
+      '$\\int_a^b f = 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $f \\geq 0$, then the integral (area under curve) is non-negative.',
+  },
+      '$\\int_a^b f \\geq 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $f \\geq 0$, then the integral (area under curve) is non-negative.',
+  },
+      'Cannot determine the sign',
     ],
     correctIndex: 1,
     difficulty: 'easy',

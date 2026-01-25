@@ -1,0 +1,876 @@
+{
+  "partId": 4,
+  "partTitle": "Continuous Functions",
+  "textbookChapter": "Chapter 3",
+  "sections": [
+    {
+      "sectionId": 19,
+      "sectionTitle": "Limits and Continuity",
+      "textbookSection": "I 3.1-3.3",
+      "examples": [
+        {
+          "id": "ex-4-19-1",
+          "type": "example",
+          "title": "Definition of Limit",
+          "statement": "State the $\\varepsilon$-$\\delta$ definition of $\\lim_{x \\to a} f(x) = L$ and use it to prove $\\lim_{x \\to 2} (3x - 1) = 5$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "State the definition",
+                "content": "$\\lim_{x \\to a} f(x) = L$ means: for every $\\varepsilon > 0$, there exists $\\delta > 0$ such that $|f(x) - L| < \\varepsilon$ whenever $0 < |x - a| < \\delta$."
+              },
+              {
+                "title": "Set up the inequality",
+                "content": "We need $|(3x - 1) - 5| < \\varepsilon$, i.e., $|3x - 6| < \\varepsilon$, which gives $3|x - 2| < \\varepsilon$."
+              },
+              {
+                "title": "Choose delta",
+                "content": "If we choose $\\delta = \\varepsilon/3$, then $|x - 2| < \\delta$ implies $|3x - 6| = 3|x - 2| < 3\\delta = \\varepsilon$."
+              }
+            ],
+            "conclusion": "For any $\\varepsilon > 0$, $\\delta = \\varepsilon/3$ works, proving $\\lim_{x \\to 2}(3x-1) = 5$."
+          }
+        },
+        {
+          "id": "ex-4-19-2",
+          "type": "example",
+          "title": "Definition of Continuity",
+          "statement": "Define continuity at a point and determine whether $f(x) = \\begin{cases} x^2 & x \\neq 1 \\\\ 3 & x = 1 \\end{cases}$ is continuous at $x = 1$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definition",
+                "content": "$f$ is continuous at $a$ if $\\lim_{x \\to a} f(x) = f(a)$. This requires: (1) $f(a)$ exists, (2) $\\lim_{x \\to a} f(x)$ exists, (3) they are equal."
+              },
+              {
+                "title": "Check condition (1)",
+                "content": "$f(1) = 3$ is defined. ✓"
+              },
+              {
+                "title": "Check condition (2)",
+                "content": "$\\lim_{x \\to 1} f(x) = \\lim_{x \\to 1} x^2 = 1$. ✓"
+              },
+              {
+                "title": "Check condition (3)",
+                "content": "$\\lim_{x \\to 1} f(x) = 1 \\neq 3 = f(1)$. ✗"
+              }
+            ],
+            "conclusion": "$f$ is NOT continuous at $x = 1$ because the limit and the function value differ."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4-19-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use the $\\varepsilon$-$\\delta$ definition to prove $\\lim_{x \\to 3} (2x + 4) = 10$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up",
+                "content": "We need $|(2x + 4) - 10| < \\varepsilon$, i.e., $|2x - 6| < \\varepsilon$."
+              },
+              {
+                "title": "Simplify",
+                "content": "$|2x - 6| = 2|x - 3| < \\varepsilon$ requires $|x - 3| < \\varepsilon/2$."
+              },
+              {
+                "title": "Choose delta",
+                "content": "Let $\\delta = \\varepsilon/2$. Then $0 < |x - 3| < \\delta$ implies $|2x - 6| = 2|x - 3| < 2\\delta = \\varepsilon$."
+              }
+            ],
+            "conclusion": "For any $\\varepsilon > 0$, choosing $\\delta = \\varepsilon/2$ proves the limit."
+          }
+        },
+        {
+          "id": "4-19-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove $\\lim_{x \\to 0} x^2 = 0$ using the $\\varepsilon$-$\\delta$ definition.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up",
+                "content": "We need $|x^2 - 0| < \\varepsilon$, i.e., $|x|^2 < \\varepsilon$."
+              },
+              {
+                "title": "Analyze",
+                "content": "$|x|^2 < \\varepsilon \\Leftrightarrow |x| < \\sqrt{\\varepsilon}$."
+              },
+              {
+                "title": "Choose delta",
+                "content": "Let $\\delta = \\sqrt{\\varepsilon}$. Then $|x - 0| < \\delta$ means $|x| < \\sqrt{\\varepsilon}$, so $x^2 < \\varepsilon$."
+              }
+            ],
+            "conclusion": "For any $\\varepsilon > 0$, $\\delta = \\sqrt{\\varepsilon}$ works."
+          }
+        },
+        {
+          "id": "4-19-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "For what value(s) of $c$ is $f(x) = \\begin{cases} x^2 + c & x < 2 \\\\ 3x & x \\geq 2 \\end{cases}$ continuous at $x = 2$?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find left limit",
+                "content": "$\\lim_{x \\to 2^-} f(x) = \\lim_{x \\to 2^-} (x^2 + c) = 4 + c$"
+              },
+              {
+                "title": "Find right limit and function value",
+                "content": "$\\lim_{x \\to 2^+} f(x) = \\lim_{x \\to 2^+} 3x = 6$ and $f(2) = 6$."
+              },
+              {
+                "title": "Set equal for continuity",
+                "content": "For continuity, we need $4 + c = 6$, so $c = 2$."
+              }
+            ],
+            "conclusion": "$f$ is continuous at $x = 2$ if and only if $c = 2$."
+          }
+        },
+        {
+          "id": "4-19-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Prove that $\\lim_{x \\to 4} \\sqrt{x} = 2$ using the $\\varepsilon$-$\\delta$ definition.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up",
+                "content": "We need $|\\sqrt{x} - 2| < \\varepsilon$."
+              },
+              {
+                "title": "Rationalize",
+                "content": "$|\\sqrt{x} - 2| = \\frac{|x - 4|}{\\sqrt{x} + 2}$."
+              },
+              {
+                "title": "Bound the denominator",
+                "content": "Restrict to $|x - 4| < 1$, so $3 < x < 5$ and $\\sqrt{x} + 2 > \\sqrt{3} + 2 > 3$.\nThus $|\\sqrt{x} - 2| < \\frac{|x - 4|}{3}$."
+              },
+              {
+                "title": "Choose delta",
+                "content": "Let $\\delta = \\min(1, 3\\varepsilon)$. Then $|x - 4| < \\delta$ implies $|\\sqrt{x} - 2| < \\frac{\\delta}{3} \\leq \\varepsilon$."
+              }
+            ],
+            "conclusion": "For any $\\varepsilon > 0$, $\\delta = \\min(1, 3\\varepsilon)$ works."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 20,
+      "sectionTitle": "Basic Limit Theorems",
+      "textbookSection": "I 3.4-3.6",
+      "examples": [
+        {
+          "id": "ex-4-20-1",
+          "type": "example",
+          "title": "Limit Laws",
+          "statement": "State the sum, product, and quotient rules for limits and use them to compute $\\lim_{x \\to 2} \\frac{x^2 + 3x}{x - 1}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Sum rule",
+                "content": "If $\\lim_{x \\to a} f(x) = L$ and $\\lim_{x \\to a} g(x) = M$, then $\\lim_{x \\to a}[f(x) + g(x)] = L + M$."
+              },
+              {
+                "title": "Product rule",
+                "content": "$\\lim_{x \\to a}[f(x) \\cdot g(x)] = L \\cdot M$."
+              },
+              {
+                "title": "Quotient rule",
+                "content": "$\\lim_{x \\to a}\\frac{f(x)}{g(x)} = \\frac{L}{M}$ provided $M \\neq 0$."
+              },
+              {
+                "title": "Apply to problem",
+                "content": "$\\lim_{x \\to 2} (x^2 + 3x) = 4 + 6 = 10$ and $\\lim_{x \\to 2}(x - 1) = 1 \\neq 0$.\nBy quotient rule: $\\lim_{x \\to 2} \\frac{x^2 + 3x}{x - 1} = \\frac{10}{1} = 10$."
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 2} \\frac{x^2 + 3x}{x - 1} = 10$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4-20-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Compute $\\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Note indeterminate form",
+                "content": "Direct substitution gives $\\frac{0}{0}$, so we must simplify."
+              },
+              {
+                "title": "Factor",
+                "content": "$\\frac{x^2 - 9}{x - 3} = \\frac{(x-3)(x+3)}{x-3} = x + 3$ for $x \\neq 3$."
+              },
+              {
+                "title": "Evaluate limit",
+                "content": "$\\lim_{x \\to 3} (x + 3) = 6$."
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3} = 6$"
+          }
+        },
+        {
+          "id": "4-20-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Compute $\\lim_{x \\to 1} \\frac{x^3 - 1}{x - 1}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Factor numerator",
+                "content": "$x^3 - 1 = (x - 1)(x^2 + x + 1)$."
+              },
+              {
+                "title": "Cancel",
+                "content": "$\\frac{x^3 - 1}{x - 1} = x^2 + x + 1$ for $x \\neq 1$."
+              },
+              {
+                "title": "Evaluate",
+                "content": "$\\lim_{x \\to 1}(x^2 + x + 1) = 1 + 1 + 1 = 3$."
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 1} \\frac{x^3 - 1}{x - 1} = 3$"
+          }
+        },
+        {
+          "id": "4-20-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that if $\\lim_{x \\to a} f(x) = L$ and $c$ is a constant, then $\\lim_{x \\to a} cf(x) = cL$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Case c = 0",
+                "content": "If $c = 0$, then $cf(x) = 0$ for all $x$, and $\\lim_{x \\to a} 0 = 0 = c \\cdot L$."
+              },
+              {
+                "title": "Case c ≠ 0",
+                "content": "Given $\\varepsilon > 0$, we need $|cf(x) - cL| < \\varepsilon$, i.e., $|c||f(x) - L| < \\varepsilon$."
+              },
+              {
+                "title": "Use hypothesis",
+                "content": "Since $\\lim_{x \\to a} f(x) = L$, there exists $\\delta > 0$ such that $|f(x) - L| < \\varepsilon/|c|$ when $0 < |x - a| < \\delta$."
+              },
+              {
+                "title": "Conclude",
+                "content": "Then $|cf(x) - cL| = |c||f(x) - L| < |c| \\cdot \\frac{\\varepsilon}{|c|} = \\varepsilon$."
+              }
+            ],
+            "conclusion": "This proves $\\lim_{x \\to a} cf(x) = cL$."
+          }
+        },
+        {
+          "id": "4-20-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Compute $\\lim_{h \\to 0} \\frac{(2+h)^2 - 4}{h}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Expand numerator",
+                "content": "$(2+h)^2 - 4 = 4 + 4h + h^2 - 4 = 4h + h^2 = h(4 + h)$."
+              },
+              {
+                "title": "Simplify",
+                "content": "$\\frac{h(4+h)}{h} = 4 + h$ for $h \\neq 0$."
+              },
+              {
+                "title": "Evaluate limit",
+                "content": "$\\lim_{h \\to 0}(4 + h) = 4$."
+              }
+            ],
+            "conclusion": "$\\lim_{h \\to 0} \\frac{(2+h)^2 - 4}{h} = 4$ (this is $f'(2)$ where $f(x) = x^2$)."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 21,
+      "sectionTitle": "Composite Functions",
+      "textbookSection": "I 3.7-3.8",
+      "examples": [
+        {
+          "id": "ex-4-21-1",
+          "type": "example",
+          "title": "Continuity of Compositions",
+          "statement": "State and explain the theorem on continuity of composite functions.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Theorem statement",
+                "content": "If $g$ is continuous at $a$ and $f$ is continuous at $g(a)$, then the composite function $f \\circ g$ is continuous at $a$."
+              },
+              {
+                "title": "In limit notation",
+                "content": "$\\lim_{x \\to a} f(g(x)) = f(\\lim_{x \\to a} g(x)) = f(g(a))$."
+              },
+              {
+                "title": "Why it works",
+                "content": "As $x \\to a$, $g(x) \\to g(a)$ (by continuity of $g$).\nAs $g(x) \\to g(a)$, $f(g(x)) \\to f(g(a))$ (by continuity of $f$)."
+              }
+            ],
+            "conclusion": "Compositions of continuous functions are continuous."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4-21-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Let $f(x) = x^2$ and $g(x) = \\sqrt{x + 1}$. Find the domain of $f \\circ g$ and verify it is continuous on its domain.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find domain of g",
+                "content": "$g(x) = \\sqrt{x+1}$ requires $x + 1 \\geq 0$, so domain of $g$ is $[-1, \\infty)$."
+              },
+              {
+                "title": "Find f ∘ g",
+                "content": "$(f \\circ g)(x) = f(g(x)) = (\\sqrt{x+1})^2 = x + 1$."
+              },
+              {
+                "title": "Domain of composition",
+                "content": "Domain of $f \\circ g$ is domain of $g$, which is $[-1, \\infty)$."
+              },
+              {
+                "title": "Verify continuity",
+                "content": "$g$ is continuous (square root) and $f$ is continuous (polynomial). By the composition theorem, $f \\circ g$ is continuous on $[-1, \\infty)$."
+              }
+            ],
+            "conclusion": "$(f \\circ g)(x) = x + 1$ on $[-1, \\infty)$, and it is continuous there."
+          }
+        },
+        {
+          "id": "4-21-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Compute $\\lim_{x \\to 0} \\sqrt{x^2 + 4x + 4}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Simplify inside",
+                "content": "$x^2 + 4x + 4 = (x + 2)^2$."
+              },
+              {
+                "title": "Use continuity",
+                "content": "$\\sqrt{(x+2)^2} = |x + 2|$. Since square root is continuous, $\\lim_{x \\to 0} \\sqrt{(x+2)^2} = \\sqrt{(0+2)^2} = 2$."
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 0} \\sqrt{x^2 + 4x + 4} = 2$"
+          }
+        },
+        {
+          "id": "4-21-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "If $\\lim_{x \\to 2} f(x) = 5$, find $\\lim_{x \\to 2} \\sqrt{f(x)}$, assuming $f(x) > 0$ near $x = 2$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply composition theorem",
+                "content": "Let $g(t) = \\sqrt{t}$, which is continuous at $t = 5$."
+              },
+              {
+                "title": "Compute",
+                "content": "$\\lim_{x \\to 2} \\sqrt{f(x)} = \\sqrt{\\lim_{x \\to 2} f(x)} = \\sqrt{5}$."
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 2} \\sqrt{f(x)} = \\sqrt{5}$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 22,
+      "sectionTitle": "Bolzano's Theorem",
+      "textbookSection": "I 3.9-3.10",
+      "examples": [
+        {
+          "id": "ex-4-22-1",
+          "type": "example",
+          "title": "Intermediate Value Theorem",
+          "statement": "State Bolzano's theorem (IVT) and use it to prove that $x^3 - x - 1 = 0$ has a solution in $(1, 2)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "State theorem",
+                "content": "**Bolzano's Theorem (IVT):** If $f$ is continuous on $[a, b]$ and $f(a)$ and $f(b)$ have opposite signs, then there exists $c \\in (a, b)$ such that $f(c) = 0$."
+              },
+              {
+                "title": "Check hypotheses",
+                "content": "Let $f(x) = x^3 - x - 1$. This is continuous (polynomial).\n$f(1) = 1 - 1 - 1 = -1 < 0$\n$f(2) = 8 - 2 - 1 = 5 > 0$"
+              },
+              {
+                "title": "Apply theorem",
+                "content": "Since $f(1) < 0 < f(2)$ and $f$ is continuous, by Bolzano's theorem there exists $c \\in (1, 2)$ with $f(c) = 0$."
+              }
+            ],
+            "conclusion": "The equation $x^3 - x - 1 = 0$ has at least one root in $(1, 2)$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4-22-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Show that $\\cos x = x$ has a solution in $(0, 1)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Define function",
+                "content": "Let $f(x) = \\cos x - x$. This is continuous."
+              },
+              {
+                "title": "Evaluate at endpoints",
+                "content": "$f(0) = \\cos 0 - 0 = 1 > 0$\n$f(1) = \\cos 1 - 1 \\approx 0.540 - 1 = -0.460 < 0$"
+              },
+              {
+                "title": "Apply IVT",
+                "content": "Since $f$ is continuous, $f(0) > 0$, and $f(1) < 0$, by IVT there exists $c \\in (0, 1)$ with $f(c) = 0$."
+              }
+            ],
+            "conclusion": "There exists $c \\in (0, 1)$ such that $\\cos c = c$."
+          }
+        },
+        {
+          "id": "4-22-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that every polynomial of odd degree has at least one real root.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Consider leading behavior",
+                "content": "Let $p(x) = a_n x^n + \\cdots + a_0$ with $n$ odd and $a_n \\neq 0$.\nAs $x \\to +\\infty$, $p(x) \\to +\\infty \\cdot \\text{sign}(a_n)$.\nAs $x \\to -\\infty$, $p(x) \\to -\\infty \\cdot \\text{sign}(a_n)$ (opposite sign because $n$ is odd)."
+              },
+              {
+                "title": "Find values of opposite signs",
+                "content": "For sufficiently large $|x|$, $p(x)$ takes both positive and negative values.\nSay $p(M) > 0$ and $p(-M) < 0$ for large $M$."
+              },
+              {
+                "title": "Apply IVT",
+                "content": "Since $p$ is continuous on $[-M, M]$ with $p(-M) < 0 < p(M)$, by IVT there exists $c \\in (-M, M)$ with $p(c) = 0$."
+              }
+            ],
+            "conclusion": "Every odd-degree polynomial has at least one real root."
+          }
+        },
+        {
+          "id": "4-22-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Show that the equation $2^x = 3 - x$ has a solution.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Define function",
+                "content": "Let $f(x) = 2^x - (3 - x) = 2^x + x - 3$. This is continuous."
+              },
+              {
+                "title": "Find sign changes",
+                "content": "$f(0) = 1 + 0 - 3 = -2 < 0$\n$f(2) = 4 + 2 - 3 = 3 > 0$"
+              },
+              {
+                "title": "Apply IVT",
+                "content": "Since $f(0) < 0 < f(2)$ and $f$ is continuous, by IVT there exists $c \\in (0, 2)$ with $f(c) = 0$, i.e., $2^c = 3 - c$."
+              }
+            ],
+            "conclusion": "The equation $2^x = 3 - x$ has a solution in $(0, 2)$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 23,
+      "sectionTitle": "Inverses of Functions",
+      "textbookSection": "I 3.11-3.12",
+      "examples": [
+        {
+          "id": "ex-4-23-1",
+          "type": "example",
+          "title": "Continuity of Inverse Functions",
+          "statement": "State the theorem on continuity of inverse functions and explain why $f(x) = x^3$ has a continuous inverse.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Theorem",
+                "content": "If $f$ is continuous and strictly monotonic on an interval $I$, then $f^{-1}$ exists and is continuous on $f(I)$."
+              },
+              {
+                "title": "Check f(x) = x³",
+                "content": "$f(x) = x^3$ is continuous on $\\mathbb{R}$.\n$f'(x) = 3x^2 \\geq 0$, with $f'(x) = 0$ only at $x = 0$, so $f$ is strictly increasing."
+              },
+              {
+                "title": "Apply theorem",
+                "content": "Since $f$ is continuous and strictly monotonic, $f^{-1}(x) = \\sqrt[3]{x}$ exists and is continuous on $\\mathbb{R}$."
+              }
+            ],
+            "conclusion": "The cube root function $f^{-1}(x) = \\sqrt[3]{x}$ is continuous on $\\mathbb{R}$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4-23-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Show that $f(x) = x^5 + x$ is strictly increasing and find the domain of $f^{-1}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Show strictly increasing",
+                "content": "$f'(x) = 5x^4 + 1 > 0$ for all $x$ (since $5x^4 \\geq 0$ and $1 > 0$).\nThus $f$ is strictly increasing."
+              },
+              {
+                "title": "Find range of f",
+                "content": "As $x \\to \\infty$, $f(x) \\to \\infty$.\nAs $x \\to -\\infty$, $f(x) \\to -\\infty$.\nSince $f$ is continuous and strictly increasing, range of $f$ is $(-\\infty, \\infty)$."
+              }
+            ],
+            "conclusion": "$f^{-1}$ exists with domain $(-\\infty, \\infty) = \\mathbb{R}$."
+          }
+        },
+        {
+          "id": "4-23-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "If $f$ is continuous and strictly decreasing on $[a, b]$, prove $f^{-1}$ is also strictly decreasing.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Suppose y₁ < y₂ in range",
+                "content": "Let $y_1 < y_2$ with $y_1 = f(x_1)$ and $y_2 = f(x_2)$."
+              },
+              {
+                "title": "Use strictly decreasing",
+                "content": "Since $f$ is strictly decreasing: $f(x_1) < f(x_2) \\Leftrightarrow x_1 > x_2$."
+              },
+              {
+                "title": "Translate to inverse",
+                "content": "$y_1 < y_2 \\Rightarrow x_1 > x_2$, i.e., $f^{-1}(y_1) > f^{-1}(y_2)$."
+              }
+            ],
+            "conclusion": "If $f$ is strictly decreasing, so is $f^{-1}$."
+          }
+        },
+        {
+          "id": "4-23-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Let $f(x) = \\frac{x}{x+1}$ for $x > -1$. Find $f^{-1}$ and verify it is continuous.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Solve for x",
+                "content": "$y = \\frac{x}{x+1} \\Rightarrow y(x+1) = x \\Rightarrow yx + y = x \\Rightarrow y = x - yx = x(1-y)$\n$x = \\frac{y}{1-y}$ for $y \\neq 1$."
+              },
+              {
+                "title": "Write inverse",
+                "content": "$f^{-1}(y) = \\frac{y}{1-y}$ with domain $(-\\infty, 1)$."
+              },
+              {
+                "title": "Verify continuity",
+                "content": "$f^{-1}$ is a rational function, continuous where the denominator is nonzero, i.e., for $y \\neq 1$."
+              }
+            ],
+            "conclusion": "$f^{-1}(x) = \\frac{x}{1-x}$ is continuous on $(-\\infty, 1)$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 24,
+      "sectionTitle": "Extreme Value Theorem",
+      "textbookSection": "I 3.13-3.14",
+      "examples": [
+        {
+          "id": "ex-4-24-1",
+          "type": "example",
+          "title": "Extreme Value Theorem",
+          "statement": "State the Extreme Value Theorem and use it to prove that $f(x) = x^2 - 4x + 5$ attains a minimum on $[0, 3]$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "State theorem",
+                "content": "**Extreme Value Theorem:** If $f$ is continuous on a closed interval $[a, b]$, then $f$ attains both a maximum and a minimum on $[a, b]$."
+              },
+              {
+                "title": "Check hypotheses",
+                "content": "$f(x) = x^2 - 4x + 5$ is a polynomial, hence continuous on $[0, 3]$."
+              },
+              {
+                "title": "Apply theorem",
+                "content": "By EVT, $f$ attains a minimum on $[0, 3]$."
+              },
+              {
+                "title": "Find the minimum",
+                "content": "$f(x) = (x-2)^2 + 1$ has vertex at $x = 2 \\in [0,3]$.\n$f(2) = 1$, $f(0) = 5$, $f(3) = 2$.\nMinimum is $f(2) = 1$."
+              }
+            ],
+            "conclusion": "The minimum value of $f$ on $[0, 3]$ is $1$, attained at $x = 2$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4-24-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find the maximum and minimum values of $f(x) = x^3 - 3x$ on $[-2, 2]$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check continuity",
+                "content": "$f$ is a polynomial, continuous on $[-2, 2]$. By EVT, extrema exist."
+              },
+              {
+                "title": "Find critical points",
+                "content": "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 0 \\Rightarrow x = \\pm 1$.\nBoth are in $[-2, 2]$."
+              },
+              {
+                "title": "Evaluate at critical points and endpoints",
+                "content": "$f(-2) = -8 + 6 = -2$\n$f(-1) = -1 + 3 = 2$\n$f(1) = 1 - 3 = -2$\n$f(2) = 8 - 6 = 2$"
+              }
+            ],
+            "conclusion": "Maximum is $2$ (at $x = -1$ and $x = 2$); minimum is $-2$ (at $x = -2$ and $x = 1$)."
+          }
+        },
+        {
+          "id": "4-24-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Give an example showing EVT fails if the interval is not closed.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Consider f(x) = x on (0, 1)",
+                "content": "$f(x) = x$ is continuous on $(0, 1)$."
+              },
+              {
+                "title": "Check for maximum",
+                "content": "$\\sup_{x \\in (0,1)} f(x) = 1$, but $f(x) < 1$ for all $x \\in (0,1)$.\nThe supremum is not attained."
+              },
+              {
+                "title": "Check for minimum",
+                "content": "$\\inf_{x \\in (0,1)} f(x) = 0$, but $f(x) > 0$ for all $x \\in (0,1)$.\nThe infimum is not attained."
+              }
+            ],
+            "conclusion": "$f(x) = x$ on $(0, 1)$ has no maximum or minimum."
+          }
+        },
+        {
+          "id": "4-24-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Give an example showing EVT fails if the function is not continuous.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Define discontinuous function",
+                "content": "$f(x) = \\begin{cases} x & 0 \\leq x < 1 \\\\ 0 & x = 1 \\end{cases}$ on $[0, 1]$."
+              },
+              {
+                "title": "Check for maximum",
+                "content": "$\\sup f = 1$ (approached as $x \\to 1^-$), but $f(x) < 1$ for all $x \\in [0, 1]$."
+              },
+              {
+                "title": "Identify the issue",
+                "content": "The jump discontinuity at $x = 1$ prevents $f$ from attaining its supremum."
+              }
+            ],
+            "conclusion": "This discontinuous function on a closed interval fails to attain its maximum."
+          }
+        },
+        {
+          "id": "4-24-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Prove: If $f$ is continuous on $[a, b]$ with $f(x) > 0$ for all $x$, then there exists $m > 0$ such that $f(x) \\geq m$ for all $x \\in [a, b]$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply EVT",
+                "content": "Since $f$ is continuous on $[a, b]$, by EVT, $f$ attains its minimum at some point $c \\in [a, b]$."
+              },
+              {
+                "title": "Set m = f(c)",
+                "content": "Let $m = f(c)$. Then $f(x) \\geq f(c) = m$ for all $x \\in [a, b]$."
+              },
+              {
+                "title": "Show m > 0",
+                "content": "Since $f(x) > 0$ for all $x$, in particular $m = f(c) > 0$."
+              }
+            ],
+            "conclusion": "$m = \\min_{x \\in [a,b]} f(x) > 0$ satisfies $f(x) \\geq m$ for all $x \\in [a, b]$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 25,
+      "sectionTitle": "Uniform Continuity",
+      "textbookSection": "I 3.15-3.17",
+      "examples": [
+        {
+          "id": "ex-4-25-1",
+          "type": "example",
+          "title": "Definition of Uniform Continuity",
+          "statement": "Define uniform continuity and explain how it differs from ordinary continuity.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definition",
+                "content": "$f$ is **uniformly continuous** on $S$ if: for every $\\varepsilon > 0$, there exists $\\delta > 0$ such that $|f(x) - f(y)| < \\varepsilon$ whenever $x, y \\in S$ satisfy $|x - y| < \\delta$."
+              },
+              {
+                "title": "Key difference",
+                "content": "In ordinary continuity, $\\delta$ can depend on both $\\varepsilon$ and the point $a$.\nIn uniform continuity, $\\delta$ depends only on $\\varepsilon$ — the same $\\delta$ works at all points."
+              },
+              {
+                "title": "Implication",
+                "content": "Uniform continuity ⇒ continuity, but not conversely in general."
+              }
+            ],
+            "conclusion": "Uniform continuity requires a single $\\delta$ to work uniformly across the entire domain."
+          }
+        },
+        {
+          "id": "ex-4-25-2",
+          "type": "example",
+          "title": "Theorem on Compact Intervals",
+          "statement": "State and explain the theorem relating continuity and uniform continuity on closed intervals.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Theorem",
+                "content": "If $f$ is continuous on a closed bounded interval $[a, b]$, then $f$ is uniformly continuous on $[a, b]$."
+              },
+              {
+                "title": "Why this matters",
+                "content": "On compact (closed and bounded) sets, continuity automatically implies uniform continuity. This is crucial for proving integrability results."
+              },
+              {
+                "title": "Proof idea",
+                "content": "If $f$ were not uniformly continuous, we could find sequences with $|x_n - y_n| \\to 0$ but $|f(x_n) - f(y_n)| \\geq \\varepsilon$ for some $\\varepsilon > 0$. By compactness, extract convergent subsequences — this leads to a contradiction with continuity."
+              }
+            ],
+            "conclusion": "Continuous functions on $[a, b]$ are automatically uniformly continuous."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4-25-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Show that $f(x) = x^2$ is uniformly continuous on $[0, 2]$ but not on $[0, \\infty)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "On [0, 2]",
+                "content": "$f(x) = x^2$ is continuous on the closed bounded interval $[0, 2]$.\nBy the theorem, $f$ is uniformly continuous on $[0, 2]$."
+              },
+              {
+                "title": "On [0, ∞)",
+                "content": "Consider $x_n = n$ and $y_n = n + 1/n$.\n$|x_n - y_n| = 1/n \\to 0$."
+              },
+              {
+                "title": "But f values don't stay close",
+                "content": "$|f(x_n) - f(y_n)| = |n^2 - (n + 1/n)^2| = |n^2 - n^2 - 2 - 1/n^2| = 2 + 1/n^2 \\to 2$."
+              },
+              {
+                "title": "Conclude",
+                "content": "Since $|f(x_n) - f(y_n)| \\not\\to 0$ even though $|x_n - y_n| \\to 0$, $f$ is not uniformly continuous on $[0, \\infty)$."
+              }
+            ],
+            "conclusion": "$f(x) = x^2$ is uniformly continuous on $[0, 2]$ but not on $[0, \\infty)$."
+          }
+        },
+        {
+          "id": "4-25-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that $f(x) = \\frac{1}{x}$ is not uniformly continuous on $(0, 1)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Choose sequences",
+                "content": "Let $x_n = 1/n$ and $y_n = 1/(n+1)$ for $n \\geq 2$.\nBoth are in $(0, 1)$."
+              },
+              {
+                "title": "Show x_n - y_n → 0",
+                "content": "$|x_n - y_n| = |\\frac{1}{n} - \\frac{1}{n+1}| = \\frac{1}{n(n+1)} \\to 0$."
+              },
+              {
+                "title": "Show f values don't converge",
+                "content": "$|f(x_n) - f(y_n)| = |n - (n+1)| = 1$.\nThis does not go to $0$."
+              }
+            ],
+            "conclusion": "$f(x) = 1/x$ is not uniformly continuous on $(0, 1)$."
+          }
+        },
+        {
+          "id": "4-25-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that if $f$ is uniformly continuous on $(a, b)$ and bounded, then $f$ can be extended to a continuous function on $[a, b]$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Define extension at a",
+                "content": "We claim $\\lim_{x \\to a^+} f(x)$ exists. Let $(x_n)$ be any sequence in $(a, b)$ with $x_n \\to a$."
+              },
+              {
+                "title": "Show Cauchy",
+                "content": "Given $\\varepsilon > 0$, by uniform continuity there exists $\\delta > 0$ such that $|f(x) - f(y)| < \\varepsilon$ when $|x - y| < \\delta$.\nSince $x_n \\to a$, for large $n, m$: $|x_n - x_m| < \\delta$, so $|f(x_n) - f(x_m)| < \\varepsilon$.\nThus $(f(x_n))$ is Cauchy, hence convergent."
+              },
+              {
+                "title": "Independence of sequence",
+                "content": "The limit is the same for all sequences approaching $a$ (by uniform continuity)."
+              },
+              {
+                "title": "Define extension",
+                "content": "Set $\\tilde{f}(a) = \\lim_{x \\to a^+} f(x)$ and similarly $\\tilde{f}(b) = \\lim_{x \\to b^-} f(x)$."
+              }
+            ],
+            "conclusion": "The extension $\\tilde{f}$ is continuous on $[a, b]$."
+          }
+        },
+        {
+          "id": "4-25-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Use uniform continuity to prove that if $f$ is continuous on $[a, b]$, then $f$ is integrable on $[a, b]$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply uniform continuity",
+                "content": "Since $f$ is continuous on $[a, b]$, it is uniformly continuous. Given $\\varepsilon > 0$, there exists $\\delta > 0$ such that $|f(x) - f(y)| < \\varepsilon/(b-a)$ whenever $|x - y| < \\delta$."
+              },
+              {
+                "title": "Choose partition",
+                "content": "Take a partition $P$ with mesh $< \\delta$. On each subinterval $[x_{k-1}, x_k]$, the oscillation $M_k - m_k < \\varepsilon/(b-a)$."
+              },
+              {
+                "title": "Bound upper minus lower sum",
+                "content": "$U(f, P) - L(f, P) = \\sum (M_k - m_k)\\Delta x_k < \\frac{\\varepsilon}{b-a} \\sum \\Delta x_k = \\varepsilon$."
+              },
+              {
+                "title": "Conclude integrability",
+                "content": "Since $U(f, P) - L(f, P) < \\varepsilon$ for small enough mesh, $f$ is integrable."
+              }
+            ],
+            "conclusion": "Uniform continuity on $[a,b]$ implies integrability on $[a, b]$."
+          }
+        }
+      ]
+    }
+  ]
+}

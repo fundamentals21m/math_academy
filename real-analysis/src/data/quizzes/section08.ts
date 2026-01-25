@@ -7,11 +7,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'A power series has the form:',
       options: [
-        '$\\sum_{n=0}^{\\infty} a_n$',
-        '$\\sum_{n=0}^{\\infty} c_n (x - a)^n$',
-        '$\\sum_{n=0}^{\\infty} n^x$',
-        '$\\sum_{n=0}^{\\infty} x^{c_n}$'
-      ],
+      '$\\sum_{n=0}^{\\infty} a_n
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'A power series centered at $a$ is $\\sum c_n(x-a)^n$ where $c_n$ are coefficients.'
+    },
+      '$\\sum_{n=0}^{\\infty} n^x
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'A power series centered at $a$ is $\\sum c_n(x-a)^n$ where $c_n$ are coefficients.'
+    },
+      '$\\sum_{n=0}^{\\infty} c_n (x - a)^n
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'A power series centered at $a$ is $\\sum c_n(x-a)^n$ where $c_n$ are coefficients.'
+    },
+      '$\\sum_{n=0}^{\\infty} x^{c_n}
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'A power series centered at $a$ is $\\sum c_n(x-a)^n$ where $c_n$ are coefficients.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'A power series centered at $a$ is $\\sum c_n(x-a)^n$ where $c_n$ are coefficients.'
@@ -21,11 +37,19 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The radius of convergence $R$ of a power series is:',
       options: [
-        'Always $1$',
-        'Always $\\infty$',
-        'The distance from center to where the series stops converging',
-        'The sum of the series'
-      ],
+      'Always $1
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The radius of convergence determines the interval where the series converges absolutely.'
+    },
+      'Always $\\infty
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The radius of convergence determines the interval where the series converges absolutely.'
+    },
+      'The sum of the series',
+      'The distance from center to where the series stops converging',
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The radius of convergence determines the interval where the series converges absolutely.'
@@ -35,11 +59,23 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'If $R$ is the radius of convergence, the series converges absolutely for:',
       options: [
-        '$x = a$ only',
-        '$|x - a| > R$',
-        '$|x - a| = R$',
-        '$|x - a| < R$'
-      ],
+      '$x = a$ only',
+      '$|x - a| < R
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Inside the radius ($|x-a| < R$), the series converges absolutely.'
+    },
+      '$|x - a| > R
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Inside the radius ($|x-a| < R$), the series converges absolutely.'
+    },
+      '$|x - a| = R
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Inside the radius ($|x-a| < R$), the series converges absolutely.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Inside the radius ($|x-a| < R$), the series converges absolutely.'
@@ -49,12 +85,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'At the boundary $|x - a| = R$:',
       options: [
-        'Convergence must be checked separately at each endpoint',
-        'The series always diverges',
-        'The series always converges',
-        'The series converges conditionally'
-      ],
-      correctIndex: 0,
+      'The series always diverges',
+      'Convergence must be checked separately at each endpoint',
+      'The series always converges',
+      'The series converges conditionally',
+    ],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'At the endpoints, the series may converge, diverge, or converge conditionally - each must be tested.'
     },
@@ -63,11 +99,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The power series for $e^x$ is:',
       options: [
-        '$\\sum_{n=0}^{\\infty} x^n$',
-        '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$',
-        '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n}$',
-        '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n!}$'
-      ],
+      '$\\sum_{n=0}^{\\infty} x^n
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The Maclaurin series for $e^x$ is $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$, valid for all $x$.'
+    },
+      '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n}
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The Maclaurin series for $e^x$ is $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$, valid for all $x$.'
+    },
+      '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n!}
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The Maclaurin series for $e^x$ is $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$, valid for all $x$.'
+    },
+      '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The Maclaurin series for $e^x$ is $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$, valid for all $x$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The Maclaurin series for $e^x$ is $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$, valid for all $x$.'
@@ -76,7 +128,28 @@ export const section08Quiz = {
       id: 's08-e06',
       type: 'multiple-choice',
       question: 'The radius of convergence of $\\sum_{n=0}^{\\infty} x^n$ is:',
-      options: ['$0$', '$1$', '$\\infty$', '$e$'],
+      options: [
+      '$0
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'This geometric series converges for $|x| < 1$, so $R = 1$.'
+    },
+      '$\\infty
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'This geometric series converges for $|x| < 1$, so $R = 1$.'
+    },
+      '$e
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'This geometric series converges for $|x| < 1$, so $R = 1$.'
+    },
+      '$1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'This geometric series converges for $|x| < 1$, so $R = 1$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'This geometric series converges for $|x| < 1$, so $R = 1$.'
@@ -85,7 +158,28 @@ export const section08Quiz = {
       id: 's08-e07',
       type: 'multiple-choice',
       question: 'The radius of convergence of $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$ is:',
-      options: ['$0$', '$1$', '$e$', '$\\infty$'],
+      options: [
+      '$0
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The series for $e^x$ converges for all $x \\in \\mathbb{R}$, so $R = \\infty$.'
+    },
+      '$\\infty
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The series for $e^x$ converges for all $x \\in \\mathbb{R}$, so $R = \\infty$.'
+    },
+      '$1
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The series for $e^x$ converges for all $x \\in \\mathbb{R}$, so $R = \\infty$.'
+    },
+      '$e
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The series for $e^x$ converges for all $x \\in \\mathbb{R}$, so $R = \\infty$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The series for $e^x$ converges for all $x \\in \\mathbb{R}$, so $R = \\infty$.'
@@ -109,11 +203,15 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The formula $R = \\lim_{n \\to \\infty} \\left|\\frac{c_n}{c_{n+1}}\\right|$ gives the radius when:',
       options: [
-        'Always',
-        'The limit is $0$',
-        'The coefficients alternate',
-        'The limit exists'
-      ],
+      'The limit exists',
+      'Always',
+      'The limit is $0
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'This formula (derived from the ratio test) gives $R$ when the limit exists.'
+    },
+      'The coefficients alternate',
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'This formula (derived from the ratio test) gives $R$ when the limit exists.'
@@ -132,11 +230,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The Maclaurin series for $\\sin x$ is:',
       options: [
-        '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$',
-        '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$',
-        '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$',
-        '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$'
-      ],
+      '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: '$\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$.'
+    },
+      '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$.'
+    },
+      '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$.'
+    },
+      '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n}
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$.'
@@ -146,11 +260,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The Maclaurin series for $\\cos x$ is:',
       options: [
-        '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$',
-        '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$',
-        '$\\sum_{n=0}^{\\infty} \\frac{x^{2n}}{(2n)!}$',
-        '$\\sum_{n=0}^{\\infty} x^n$'
-      ],
+      '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$.'
+    },
+      '$\\sum_{n=0}^{\\infty} \\frac{x^{2n}}{(2n)!}
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$.'
+    },
+      '$\\sum_{n=0}^{\\infty} x^n
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$.'
+    },
+      '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$.'
@@ -168,12 +298,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The interval of convergence includes the radius endpoints if:',
       options: [
-        'Always',
-        'Never',
-        'The series converges there (must check)',
-        'The coefficients are positive'
-      ],
-      correctIndex: 2,
+      'Always',
+      'Never',
+      'The coefficients are positive',
+      'The series converges there (must check)',
+    ],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Endpoints are included in the interval of convergence only if the series converges at those points.'
     },
@@ -182,11 +312,11 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'A function equals its Taylor series on an interval if it is:',
       options: [
-        'Continuous',
-        'Differentiable',
-        'Bounded',
-        'Analytic on that interval'
-      ],
+      'Continuous',
+      'Differentiable',
+      'Bounded',
+      'Analytic on that interval',
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'A function is analytic if it equals its Taylor series in some neighborhood of each point.'
@@ -195,7 +325,28 @@ export const section08Quiz = {
       id: 's08-e16',
       type: 'multiple-choice',
       question: 'The power series $\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$ represents which function for $|x| < 1$?',
-      options: ['$e^x$', '$\\sin x$', '$-\\ln(1-x)$', '$\\cos x$'],
+      options: [
+      '$e^x
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Integrating $\\frac{1}{1-x} = \\sum x^n$ gives $-\\ln(1-x) = \\sum \\frac{x^n}{n}$.'
+    },
+      '$-\\ln(1-x)
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Integrating $\\frac{1}{1-x} = \\sum x^n$ gives $-\\ln(1-x) = \\sum \\frac{x^n}{n}$.'
+    },
+      '$\\sin x
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Integrating $\\frac{1}{1-x} = \\sum x^n$ gives $-\\ln(1-x) = \\sum \\frac{x^n}{n}$.'
+    },
+      '$\\cos x
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Integrating $\\frac{1}{1-x} = \\sum x^n$ gives $-\\ln(1-x) = \\sum \\frac{x^n}{n}$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Integrating $\\frac{1}{1-x} = \\sum x^n$ gives $-\\ln(1-x) = \\sum \\frac{x^n}{n}$.'
@@ -219,11 +370,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'Integrating a power series $\\sum c_n x^n$ term by term gives:',
       options: [
-        '$\\sum c_n x^{n-1}$',
-        '$\\sum \\frac{c_n x^{n+1}}{n+1} + C$',
-        '$\\sum n c_n x^n$',
-        '$\\sum c_n$'
-      ],
+      '$\\sum c_n x^{n-1}
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Term-by-term integration: $\\int c_n x^n dx = \\frac{c_n x^{n+1}}{n+1}$.'
+    },
+      '$\\sum n c_n x^n
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Term-by-term integration: $\\int c_n x^n dx = \\frac{c_n x^{n+1}}{n+1}$.'
+    },
+      '$\\sum c_n
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Term-by-term integration: $\\int c_n x^n dx = \\frac{c_n x^{n+1}}{n+1}$.'
+    },
+      '$\\sum \\frac{c_n x^{n+1}}{n+1} + C
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Term-by-term integration: $\\int c_n x^n dx = \\frac{c_n x^{n+1}}{n+1}$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Term-by-term integration: $\\int c_n x^n dx = \\frac{c_n x^{n+1}}{n+1}$.'
@@ -232,7 +399,28 @@ export const section08Quiz = {
       id: 's08-e19',
       type: 'multiple-choice',
       question: 'The radius of convergence of $\\sum_{n=0}^{\\infty} \\frac{x^n}{2^n}$ is:',
-      options: ['$1$', '$2$', '$1/2$', '$\\infty$'],
+      options: [
+      '$1
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'This is geometric with ratio $x/2$, converging for $|x/2| < 1$, i.e., $|x| < 2$. So $R = 2$.'
+    },
+      '$1/2
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'This is geometric with ratio $x/2$, converging for $|x/2| < 1$, i.e., $|x| < 2$. So $R = 2$.'
+    },
+      '$\\infty
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'This is geometric with ratio $x/2$, converging for $|x/2| < 1$, i.e., $|x| < 2$. So $R = 2$.'
+    },
+      '$2
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'This is geometric with ratio $x/2$, converging for $|x/2| < 1$, i.e., $|x| < 2$. So $R = 2$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'This is geometric with ratio $x/2$, converging for $|x/2| < 1$, i.e., $|x| < 2$. So $R = 2$.'
@@ -252,7 +440,28 @@ export const section08Quiz = {
       id: 's08-m01',
       type: 'multiple-choice',
       question: 'Using the root test formula $R = 1/\\limsup |c_n|^{1/n}$, find $R$ for $\\sum n^2 x^n$:',
-      options: ['$0$', '$1$', '$2$', '$\\infty$'],
+      options: [
+      '$1
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\limsup |n^2|^{1/n} = \\limsup n^{2/n} = 1$, so $R = 1/1 = 1$.'
+    },
+      '$0
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\limsup |n^2|^{1/n} = \\limsup n^{2/n} = 1$, so $R = 1/1 = 1$.'
+    },
+      '$2
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\limsup |n^2|^{1/n} = \\limsup n^{2/n} = 1$, so $R = 1/1 = 1$.'
+    },
+      '$\\infty
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\limsup |n^2|^{1/n} = \\limsup n^{2/n} = 1$, so $R = 1/1 = 1$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: '$\\limsup |n^2|^{1/n} = \\limsup n^{2/n} = 1$, so $R = 1/1 = 1$.'
@@ -262,11 +471,15 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$ has $R = 1$. At $x = 1$, the series:',
       options: [
-        'Converges absolutely',
-        'Converges conditionally',
-        'Diverges',
-        'Equals $0$'
-      ],
+      'Converges absolutely',
+      'Diverges',
+      'Converges conditionally',
+      'Equals $0
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'At $x = 1$, we get $\\sum 1/n$, the harmonic series, which diverges.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'At $x = 1$, we get $\\sum 1/n$, the harmonic series, which diverges.'
@@ -276,11 +489,11 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$ at $x = -1$:',
       options: [
-        'Diverges',
-        'Oscillates',
-        'Converges absolutely',
-        'Converges conditionally'
-      ],
+      'Diverges',
+      'Oscillates',
+      'Converges absolutely',
+      'Converges conditionally',
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'At $x = -1$, we get $\\sum \\frac{(-1)^n}{n}$, the alternating harmonic series, which converges conditionally.'
@@ -299,11 +512,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'For $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$, differentiating term by term gives:',
       options: [
-        '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$',
-        '$\\sum_{n=1}^{\\infty} \\frac{x^{n-1}}{(n-1)!}$',
-        '$\\sum_{n=0}^{\\infty} \\frac{x^{n+1}}{(n+1)!}$',
-        '$0$'
-      ],
+      '$\\sum_{n=1}^{\\infty} \\frac{x^{n-1}}{(n-1)!}
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$\\frac{d}{dx}\\sum \\frac{x^n}{n!} = \\sum \\frac{nx^{n-1}}{n!} = \\sum \\frac{x^{n-1}}{(n-1)!} = \\sum \\frac{x^n}{n!} = e^x$.'
+    },
+      '$\\sum_{n=0}^{\\infty} \\frac{x^{n+1}}{(n+1)!}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\frac{d}{dx}\\sum \\frac{x^n}{n!} = \\sum \\frac{nx^{n-1}}{n!} = \\sum \\frac{x^{n-1}}{(n-1)!} = \\sum \\frac{x^n}{n!} = e^x$.'
+    },
+      '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\frac{d}{dx}\\sum \\frac{x^n}{n!} = \\sum \\frac{nx^{n-1}}{n!} = \\sum \\frac{x^{n-1}}{(n-1)!} = \\sum \\frac{x^n}{n!} = e^x$.'
+    },
+      '$0
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\frac{d}{dx}\\sum \\frac{x^n}{n!} = \\sum \\frac{nx^{n-1}}{n!} = \\sum \\frac{x^{n-1}}{(n-1)!} = \\sum \\frac{x^n}{n!} = e^x$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$\\frac{d}{dx}\\sum \\frac{x^n}{n!} = \\sum \\frac{nx^{n-1}}{n!} = \\sum \\frac{x^{n-1}}{(n-1)!} = \\sum \\frac{x^n}{n!} = e^x$.'
@@ -312,7 +541,28 @@ export const section08Quiz = {
       id: 's08-m06',
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=0}^{\\infty} \\frac{(2x)^n}{n!}$ represents:',
-      options: ['$e^x$', '$e^{2x}$', '$2e^x$', '$\\sin(2x)$'],
+      options: [
+      '$e^x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Substituting $2x$ into the series for $e^t$: $\\sum \\frac{(2x)^n}{n!} = e^{2x}$.'
+    },
+      '$2e^x
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Substituting $2x$ into the series for $e^t$: $\\sum \\frac{(2x)^n}{n!} = e^{2x}$.'
+    },
+      '$\\sin(2x)
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Substituting $2x$ into the series for $e^t$: $\\sum \\frac{(2x)^n}{n!} = e^{2x}$.'
+    },
+      '$e^{2x}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Substituting $2x$ into the series for $e^t$: $\\sum \\frac{(2x)^n}{n!} = e^{2x}$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Substituting $2x$ into the series for $e^t$: $\\sum \\frac{(2x)^n}{n!} = e^{2x}$.'
@@ -322,11 +572,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The Taylor series for $\\ln(1+x)$ centered at $0$ is:',
       options: [
-        '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$',
-        '$\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$',
-        '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$',
-        '$\\sum_{n=1}^{\\infty} (-1)^n x^n$'
-      ],
+      '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n}
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$.'
+    },
+      '$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$.'
+    },
+      '$\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$.'
+    },
+      '$\\sum_{n=1}^{\\infty} (-1)^n x^n
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: '$\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$.'
@@ -344,11 +610,15 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The binomial series $(1+x)^\\alpha = \\sum_{n=0}^{\\infty} \\binom{\\alpha}{n} x^n$ converges for $|x| < 1$ when:',
       options: [
-        '$\\alpha$ is a positive integer',
-        '$\\alpha = 0$',
-        '$\\alpha$ is any real number',
-        '$\\alpha$ is rational'
-      ],
+      '$\\alpha$ is a positive integer',
+      '$\\alpha = 0
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'For any real $\\alpha$, the binomial series converges absolutely for $|x| < 1$.'
+    },
+      '$\\alpha$ is rational',
+      '$\\alpha$ is any real number',
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'For any real $\\alpha$, the binomial series converges absolutely for $|x| < 1$.'
@@ -358,12 +628,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=1}^{\\infty} \\frac{x^n}{n^2}$ has $R = 1$. At both endpoints:',
       options: [
-        'The series diverges',
-        'Cannot be determined',
-        'The series converges conditionally at one endpoint',
-        'The series converges absolutely'
-      ],
-      correctIndex: 3,
+      'The series converges absolutely',
+      'The series diverges',
+      'Cannot be determined',
+      'The series converges conditionally at one endpoint',
+    ],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'At $x = 1$: $\\sum 1/n^2$ converges. At $x = -1$: $\\sum (-1)^n/n^2$ converges absolutely.'
     },
@@ -372,11 +642,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'If $f(x) = \\sum_{n=0}^{\\infty} c_n x^n$, then $c_n = $:',
       options: [
-        '$\\frac{f^{(n)}(0)}{n!}$',
-        '$f^{(n)}(0)$',
-        '$f(n)$',
-        '$\\frac{f(0)}{n!}$'
-      ],
+      '$f^{(n)}(0)
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'By Taylor\'s theorem, the coefficient $c_n = \\frac{f^{(n)}(0)}{n!}$.'
+    },
+      '$f(n)
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'By Taylor\'s theorem, the coefficient $c_n = \\frac{f^{(n)}(0)}{n!}$.'
+    },
+      '$\\frac{f^{(n)}(0)}{n!}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'By Taylor\'s theorem, the coefficient $c_n = \\frac{f^{(n)}(0)}{n!}$.'
+    },
+      '$\\frac{f(0)}{n!}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'By Taylor\'s theorem, the coefficient $c_n = \\frac{f^{(n)}(0)}{n!}$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'By Taylor\'s theorem, the coefficient $c_n = \\frac{f^{(n)}(0)}{n!}$.'
@@ -385,7 +671,28 @@ export const section08Quiz = {
       id: 's08-m12',
       type: 'multiple-choice',
       question: 'The power series $\\sum_{n=0}^{\\infty} (-1)^n x^{2n}$ equals:',
-      options: ['$\\frac{1}{1+x^2}$', '$\\frac{1}{1-x^2}$', '$\\cos x$', '$e^{-x^2}$'],
+      options: [
+      '$\\frac{1}{1-x^2}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'This is geometric with ratio $-x^2$: $\\sum (-x^2)^n = \\frac{1}{1+x^2}$ for $|x| < 1$.'
+    },
+      '$\\frac{1}{1+x^2}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'This is geometric with ratio $-x^2$: $\\sum (-x^2)^n = \\frac{1}{1+x^2}$ for $|x| < 1$.'
+    },
+      '$\\cos x
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'This is geometric with ratio $-x^2$: $\\sum (-x^2)^n = \\frac{1}{1+x^2}$ for $|x| < 1$.'
+    },
+      '$e^{-x^2}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'This is geometric with ratio $-x^2$: $\\sum (-x^2)^n = \\frac{1}{1+x^2}$ for $|x| < 1$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'This is geometric with ratio $-x^2$: $\\sum (-x^2)^n = \\frac{1}{1+x^2}$ for $|x| < 1$.'
@@ -395,11 +702,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'To find the series for $\\arctan x$, we integrate:',
       options: [
-        '$\\frac{1}{1-x}$',
-        '$\\frac{1}{1+x^2}$',
-        '$\\frac{1}{x}$',
-        '$e^x$'
-      ],
+      '$\\frac{1}{1-x}
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$\\arctan x = \\int \\frac{1}{1+x^2} dx = \\int \\sum (-1)^n x^{2n} dx = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$.'
+    },
+      '$\\frac{1}{x}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\arctan x = \\int \\frac{1}{1+x^2} dx = \\int \\sum (-1)^n x^{2n} dx = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$.'
+    },
+      '$e^x
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\arctan x = \\int \\frac{1}{1+x^2} dx = \\int \\sum (-1)^n x^{2n} dx = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$.'
+    },
+      '$\\frac{1}{1+x^2}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\arctan x = \\int \\frac{1}{1+x^2} dx = \\int \\sum (-1)^n x^{2n} dx = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: '$\\arctan x = \\int \\frac{1}{1+x^2} dx = \\int \\sum (-1)^n x^{2n} dx = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$.'
@@ -408,7 +731,28 @@ export const section08Quiz = {
       id: 's08-m14',
       type: 'multiple-choice',
       question: 'The radius of convergence of $\\sum_{n=0}^{\\infty} n! x^n$ is:',
-      options: ['$0$', '$1$', '$e$', '$\\infty$'],
+      options: [
+      '$1
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Ratio: $\\frac{(n+1)!|x|^{n+1}}{n!|x|^n} = (n+1)|x| \\to \\infty$ for any $x \\neq 0$. So $R = 0$.'
+    },
+      '$e
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Ratio: $\\frac{(n+1)!|x|^{n+1}}{n!|x|^n} = (n+1)|x| \\to \\infty$ for any $x \\neq 0$. So $R = 0$.'
+    },
+      '$0
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Ratio: $\\frac{(n+1)!|x|^{n+1}}{n!|x|^n} = (n+1)|x| \\to \\infty$ for any $x \\neq 0$. So $R = 0$.'
+    },
+      '$\\infty
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Ratio: $\\frac{(n+1)!|x|^{n+1}}{n!|x|^n} = (n+1)|x| \\to \\infty$ for any $x \\neq 0$. So $R = 0$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Ratio: $\\frac{(n+1)!|x|^{n+1}}{n!|x|^n} = (n+1)|x| \\to \\infty$ for any $x \\neq 0$. So $R = 0$.'
@@ -417,7 +761,28 @@ export const section08Quiz = {
       id: 's08-m15',
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=0}^{\\infty} \\frac{x^{2n}}{(2n)!}$ represents:',
-      options: ['$\\sin x$', '$\\cos x$', '$e^x$', '$\\cosh x$'],
+      options: [
+      '$\\cosh x
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\cosh x = \\frac{e^x + e^{-x}}{2} = \\sum \\frac{x^{2n}}{(2n)!}$ (even terms of $e^x$).'
+    },
+      '$\\sin x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$\\cosh x = \\frac{e^x + e^{-x}}{2} = \\sum \\frac{x^{2n}}{(2n)!}$ (even terms of $e^x$).'
+    },
+      '$\\cos x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$\\cosh x = \\frac{e^x + e^{-x}}{2} = \\sum \\frac{x^{2n}}{(2n)!}$ (even terms of $e^x$).'
+    },
+      '$e^x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$\\cosh x = \\frac{e^x + e^{-x}}{2} = \\sum \\frac{x^{2n}}{(2n)!}$ (even terms of $e^x$).'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: '$\\cosh x = \\frac{e^x + e^{-x}}{2} = \\sum \\frac{x^{2n}}{(2n)!}$ (even terms of $e^x$).'
@@ -426,7 +791,28 @@ export const section08Quiz = {
       id: 's08-m16',
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=0}^{\\infty} \\frac{x^{2n+1}}{(2n+1)!}$ represents:',
-      options: ['$\\sin x$', '$\\cos x$', '$e^x$', '$\\sinh x$'],
+      options: [
+      '$\\sin x
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\sinh x = \\frac{e^x - e^{-x}}{2} = \\sum \\frac{x^{2n+1}}{(2n+1)!}$ (odd terms of $e^x$).'
+    },
+      '$\\sinh x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$\\sinh x = \\frac{e^x - e^{-x}}{2} = \\sum \\frac{x^{2n+1}}{(2n+1)!}$ (odd terms of $e^x$).'
+    },
+      '$\\cos x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$\\sinh x = \\frac{e^x - e^{-x}}{2} = \\sum \\frac{x^{2n+1}}{(2n+1)!}$ (odd terms of $e^x$).'
+    },
+      '$e^x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$\\sinh x = \\frac{e^x - e^{-x}}{2} = \\sum \\frac{x^{2n+1}}{(2n+1)!}$ (odd terms of $e^x$).'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: '$\\sinh x = \\frac{e^x - e^{-x}}{2} = \\sum \\frac{x^{2n+1}}{(2n+1)!}$ (odd terms of $e^x$).'
@@ -444,11 +830,11 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'Cauchy-Hadamard formula states $R = 1/\\limsup |c_n|^{1/n}$. This uses:',
       options: [
-        'The ratio test',
-        'The integral test',
-        'The root test',
-        'The comparison test'
-      ],
+      'The ratio test',
+      'The integral test',
+      'The root test',
+      'The comparison test',
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The Cauchy-Hadamard formula is based on the root test applied to the power series.'
@@ -457,7 +843,28 @@ export const section08Quiz = {
       id: 's08-m19',
       type: 'multiple-choice',
       question: 'If the series $\\sum c_n x^n$ has $R = 5$, then $\\sum c_n (2x)^n$ has $R = $:',
-      options: ['$5$', '$2.5$', '$10$', '$5/2$'],
+      options: [
+      '$5
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Substituting $2x$ for $x$: converges when $|2x| < 5$, i.e., $|x| < 2.5$.'
+    },
+      '$10
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Substituting $2x$ for $x$: converges when $|2x| < 5$, i.e., $|x| < 2.5$.'
+    },
+      '$2.5
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Substituting $2x$ for $x$: converges when $|2x| < 5$, i.e., $|x| < 2.5$.'
+    },
+      '$5/2
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Substituting $2x$ for $x$: converges when $|2x| < 5$, i.e., $|x| < 2.5$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Substituting $2x$ for $x$: converges when $|2x| < 5$, i.e., $|x| < 2.5$.'
@@ -467,12 +874,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'A power series and its derivatives have:',
       options: [
-        'Different radii of convergence',
-        'Derivatives have smaller radius',
-        'Derivatives have larger radius',
-        'The same radius of convergence'
-      ],
-      correctIndex: 3,
+      'Different radii of convergence',
+      'The same radius of convergence',
+      'Derivatives have smaller radius',
+      'Derivatives have larger radius',
+    ],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'A power series, its term-by-term derivative, and integral all have the same radius of convergence.'
     }
@@ -484,11 +891,23 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = e^{-1/x^2}$ for $x \\neq 0$ and $f(0) = 0$ is:',
       options: [
-        'Differentiable but not analytic at $0$',
-        'Not differentiable at $0$',
-        'Analytic everywhere',
-        'Equal to its Taylor series at $0$'
-      ],
+      'Not differentiable at $0
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: '$f$ is infinitely differentiable with all derivatives at $0$ equal to $0$, so its Taylor series is $0$, but $f \\neq 0$ for $x \\neq 0$.'
+    },
+      'Analytic everywhere',
+      'Differentiable but not analytic at $0
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$f$ is infinitely differentiable with all derivatives at $0$ equal to $0$, so its Taylor series is $0$, but $f \\neq 0$ for $x \\neq 0$.'
+    },
+      'Equal to its Taylor series at $0
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$f$ is infinitely differentiable with all derivatives at $0$ equal to $0$, so its Taylor series is $0$, but $f \\neq 0$ for $x \\neq 0$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: '$f$ is infinitely differentiable with all derivatives at $0$ equal to $0$, so its Taylor series is $0$, but $f \\neq 0$ for $x \\neq 0$.'
@@ -497,7 +916,28 @@ export const section08Quiz = {
       id: 's08-h02',
       type: 'multiple-choice',
       question: 'The radius of convergence of $\\sum_{n=0}^{\\infty} \\frac{n!}{n^n} x^n$ is:',
-      options: ['$0$', '$1$', '$e$', '$\\infty$'],
+      options: [
+      '$0
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'By Stirling: $n!/n^n \\approx \\sqrt{2\\pi n}/e^n$. Ratio test: $\\frac{c_{n+1}}{c_n} \\to 1/e$, so $R = e$.'
+    },
+      '$e
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'By Stirling: $n!/n^n \\approx \\sqrt{2\\pi n}/e^n$. Ratio test: $\\frac{c_{n+1}}{c_n} \\to 1/e$, so $R = e$.'
+    },
+      '$1
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'By Stirling: $n!/n^n \\approx \\sqrt{2\\pi n}/e^n$. Ratio test: $\\frac{c_{n+1}}{c_n} \\to 1/e$, so $R = e$.'
+    },
+      '$\\infty
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'By Stirling: $n!/n^n \\approx \\sqrt{2\\pi n}/e^n$. Ratio test: $\\frac{c_{n+1}}{c_n} \\to 1/e$, so $R = e$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'By Stirling: $n!/n^n \\approx \\sqrt{2\\pi n}/e^n$. Ratio test: $\\frac{c_{n+1}}{c_n} \\to 1/e$, so $R = e$.'
@@ -506,7 +946,28 @@ export const section08Quiz = {
       id: 's08-h03',
       type: 'multiple-choice',
       question: 'The power series $\\sum_{n=1}^{\\infty} \\frac{x^n}{n^n}$ has $R = $:',
-      options: ['$0$', '$1$', '$e$', '$\\infty$'],
+      options: [
+      '$0
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'By root test: $(1/n^n)^{1/n} = 1/n \\to 0 < 1$ for all $x$. The series converges for all $x$, so $R = \\infty$.'
+    },
+      '$\\infty
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'By root test: $(1/n^n)^{1/n} = 1/n \\to 0 < 1$ for all $x$. The series converges for all $x$, so $R = \\infty$.'
+    },
+      '$1
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'By root test: $(1/n^n)^{1/n} = 1/n \\to 0 < 1$ for all $x$. The series converges for all $x$, so $R = \\infty$.'
+    },
+      '$e
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'By root test: $(1/n^n)^{1/n} = 1/n \\to 0 < 1$ for all $x$. The series converges for all $x$, so $R = \\infty$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'By root test: $(1/n^n)^{1/n} = 1/n \\to 0 < 1$ for all $x$. The series converges for all $x$, so $R = \\infty$.'
@@ -515,7 +976,28 @@ export const section08Quiz = {
       id: 's08-h04',
       type: 'multiple-choice',
       question: 'For $\\sum_{n=0}^{\\infty} 2^n x^{n^2}$ (a lacunary series), the radius of convergence is:',
-      options: ['$0$', '$1/2$', '$1$', '$\\infty$'],
+      options: [
+      '$1
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'For $|x| < 1$: terms go to $0$ since $x^{n^2} \\to 0$ faster than $2^n$ grows. For $|x| > 1$: diverges. $R = 1$.'
+    },
+      '$0
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'For $|x| < 1$: terms go to $0$ since $x^{n^2} \\to 0$ faster than $2^n$ grows. For $|x| > 1$: diverges. $R = 1$.'
+    },
+      '$1/2
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'For $|x| < 1$: terms go to $0$ since $x^{n^2} \\to 0$ faster than $2^n$ grows. For $|x| > 1$: diverges. $R = 1$.'
+    },
+      '$\\infty
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'For $|x| < 1$: terms go to $0$ since $x^{n^2} \\to 0$ faster than $2^n$ grows. For $|x| > 1$: diverges. $R = 1$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'For $|x| < 1$: terms go to $0$ since $x^{n^2} \\to 0$ faster than $2^n$ grows. For $|x| > 1$: diverges. $R = 1$.'
@@ -525,11 +1007,19 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'Abel\'s theorem states that if $\\sum c_n$ converges to $S$, then:',
       options: [
-        '$\\sum c_n x^n$ diverges at $x = 1$',
-        '$\\lim_{x \\to 1^-} \\sum c_n x^n = S$',
-        '$R = 1$ always',
-        'The series converges uniformly'
-      ],
+      '$\\sum c_n x^n$ diverges at $x = 1
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Abel\'s theorem: if $\\sum c_n$ converges, then $\\lim_{x \\to 1^-} \\sum c_n x^n = \\sum c_n$.'
+    },
+      '$R = 1$ always',
+      'The series converges uniformly',
+      '$\\lim_{x \\to 1^-} \\sum c_n x^n = S
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Abel\'s theorem: if $\\sum c_n$ converges, then $\\lim_{x \\to 1^-} \\sum c_n x^n = \\sum c_n$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Abel\'s theorem: if $\\sum c_n$ converges, then $\\lim_{x \\to 1^-} \\sum c_n x^n = \\sum c_n$.'
@@ -553,11 +1043,23 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The product of two power series $\\sum a_n x^n$ and $\\sum b_n x^n$ (both with $R > 0$) is:',
       options: [
-        '$\\sum (a_n + b_n) x^n$',
-        '$\\sum a_n b_n x^n$',
-        'Not a power series',
-        '$\\sum c_n x^n$ where $c_n = \\sum_{k=0}^{n} a_k b_{n-k}$'
-      ],
+      '$\\sum c_n x^n$ where $c_n = \\sum_{k=0}^{n} a_k b_{n-k}
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The Cauchy product: $c_n = \\sum_{k=0}^{n} a_k b_{n-k}$ gives a power series with $R \\geq \\min(R_1, R_2)$.'
+    },
+      '$\\sum (a_n + b_n) x^n
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'The Cauchy product: $c_n = \\sum_{k=0}^{n} a_k b_{n-k}$ gives a power series with $R \\geq \\min(R_1, R_2)$.'
+    },
+      '$\\sum a_n b_n x^n
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'The Cauchy product: $c_n = \\sum_{k=0}^{n} a_k b_{n-k}$ gives a power series with $R \\geq \\min(R_1, R_2)$.'
+    },
+      'Not a power series',
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The Cauchy product: $c_n = \\sum_{k=0}^{n} a_k b_{n-k}$ gives a power series with $R \\geq \\min(R_1, R_2)$.'
@@ -567,12 +1069,12 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'A real analytic function has the property that:',
       options: [
-        'It equals its Taylor series in some neighborhood of each point',
-        'It is continuous',
-        'It is differentiable once',
-        'It is bounded'
-      ],
-      correctIndex: 0,
+      'It is continuous',
+      'It equals its Taylor series in some neighborhood of each point',
+      'It is differentiable once',
+      'It is bounded',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Real analytic means locally equal to a convergent power series.'
     },
@@ -603,11 +1105,15 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The Maclaurin series for $(1-x)^{-1/2}$ involves:',
       options: [
-        'Integer coefficients',
-        'Factorial coefficients',
-        'Binomial coefficients $\\binom{-1/2}{n}$',
-        'Fibonacci numbers'
-      ],
+      'Integer coefficients',
+      'Factorial coefficients',
+      'Fibonacci numbers',
+      'Binomial coefficients $\\binom{-1/2}{n}
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: '$(1-x)^{-1/2} = \\sum \\binom{-1/2}{n} (-x)^n$ where $\\binom{-1/2}{n} = \\frac{(-1/2)(-3/2)\\cdots}{n!}$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: '$(1-x)^{-1/2} = \\sum \\binom{-1/2}{n} (-x)^n$ where $\\binom{-1/2}{n} = \\frac{(-1/2)(-3/2)\\cdots}{n!}$.'
@@ -617,11 +1123,23 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'If $\\sum c_n x^n$ has a natural boundary at $|x| = R$, then:',
       options: [
-        'The series can be analytically continued beyond $R$',
-        '$R = \\infty$',
-        'The function is entire',
-        'The series cannot be analytically continued beyond $|x| = R$'
-      ],
+      'The series cannot be analytically continued beyond $|x| = R
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'A natural boundary means no analytic continuation exists beyond the circle of convergence.'
+    },
+      'The series can be analytically continued beyond $R
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'A natural boundary means no analytic continuation exists beyond the circle of convergence.'
+    },
+      '$R = \\infty
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'A natural boundary means no analytic continuation exists beyond the circle of convergence.'
+    },
+      'The function is entire',
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'A natural boundary means no analytic continuation exists beyond the circle of convergence.'
@@ -631,11 +1149,23 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=0}^{\\infty} x^{2^n}$ (lacunary) has a natural boundary at:',
       options: [
-        '$|x| = 1$',
-        '$x = 0$',
-        '$|x| = 2$',
-        'No boundary exists'
-      ],
+      '$x = 0
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Lacunary series with $n_k/n_{k-1} \\to \\infty$ have the circle of convergence as a natural boundary.'
+    },
+      '$|x| = 2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Lacunary series with $n_k/n_{k-1} \\to \\infty$ have the circle of convergence as a natural boundary.'
+    },
+      '$|x| = 1
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Lacunary series with $n_k/n_{k-1} \\to \\infty$ have the circle of convergence as a natural boundary.'
+    },
+      'No boundary exists',
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Lacunary series with $n_k/n_{k-1} \\to \\infty$ have the circle of convergence as a natural boundary.'
@@ -645,11 +1175,27 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The generating function $\\sum_{n=0}^{\\infty} F_n x^n$ for Fibonacci numbers $F_n$ equals:',
       options: [
-        '$\\frac{1}{1-x-x^2}$',
-        '$\\frac{x}{1-x-x^2}$',
-        '$\\frac{1}{1-x}$',
-        '$e^x$'
-      ],
+      '$\\frac{1}{1-x-x^2}
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Using $F_{n+2} = F_{n+1} + F_n$, one derives $\\sum F_n x^n = \\frac{x}{1-x-x^2}$.'
+    },
+      '$\\frac{1}{1-x}
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Using $F_{n+2} = F_{n+1} + F_n$, one derives $\\sum F_n x^n = \\frac{x}{1-x-x^2}$.'
+    },
+      '$\\frac{x}{1-x-x^2}
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Using $F_{n+2} = F_{n+1} + F_n$, one derives $\\sum F_n x^n = \\frac{x}{1-x-x^2}$.'
+    },
+      '$e^x
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Using $F_{n+2} = F_{n+1} + F_n$, one derives $\\sum F_n x^n = \\frac{x}{1-x-x^2}$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Using $F_{n+2} = F_{n+1} + F_n$, one derives $\\sum F_n x^n = \\frac{x}{1-x-x^2}$.'
@@ -658,7 +1204,28 @@ export const section08Quiz = {
       id: 's08-h15',
       type: 'multiple-choice',
       question: 'The series $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1} x^{2n-1}}{2n-1}$ represents:',
-      options: ['$\\sin x$', '$\\cos x$', '$\\arctan x$', '$\\ln(1+x)$'],
+      options: [
+      '$\\sin x
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: '$\\arctan x = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1} x^{2n-1}}{2n-1}$.'
+    },
+      '$\\cos x
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: '$\\arctan x = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1} x^{2n-1}}{2n-1}$.'
+    },
+      '$\\ln(1+x)
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: '$\\arctan x = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1} x^{2n-1}}{2n-1}$.'
+    },
+      '$\\arctan x
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: '$\\arctan x = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1} x^{2n-1}}{2n-1}$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: '$\\arctan x = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1} x^{2n-1}}{2n-1}$.'
@@ -668,11 +1235,19 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'If $f(x) = \\sum c_n (x-a)^n$ has $R > 0$, then $f$ is:',
       options: [
-        'Continuous on $(a-R, a+R)$ only',
-        'Differentiable exactly once',
-        'Infinitely differentiable on $(a-R, a+R)$',
-        'Discontinuous at $x = a$'
-      ],
+      'Continuous on $(a-R, a+R)$ only',
+      'Infinitely differentiable on $(a-R, a+R)
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Power series define infinitely differentiable (and analytic) functions inside their interval of convergence.'
+    },
+      'Differentiable exactly once',
+      'Discontinuous at $x = a
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Power series define infinitely differentiable (and analytic) functions inside their interval of convergence.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Power series define infinitely differentiable (and analytic) functions inside their interval of convergence.'
@@ -682,11 +1257,19 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'The Taylor series of $\\tan x$ about $x = 0$:',
       options: [
-        'Has $R = \\infty$',
-        'Does not exist',
-        'Has only even powers',
-        'Has $R = \\pi/2$'
-      ],
+      'Has $R = \\pi/2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$\\tan x$ has vertical asymptotes at $x = \\pm\\pi/2$, limiting the radius to $R = \\pi/2$.'
+    },
+      'Has $R = \\infty
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: '$\\tan x$ has vertical asymptotes at $x = \\pm\\pi/2$, limiting the radius to $R = \\pi/2$.'
+    },
+      'Does not exist',
+      'Has only even powers',
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: '$\\tan x$ has vertical asymptotes at $x = \\pm\\pi/2$, limiting the radius to $R = \\pi/2$.'
@@ -704,11 +1287,23 @@ export const section08Quiz = {
       type: 'multiple-choice',
       question: 'If $\\sum c_n z^n$ converges at some $z_0 \\neq 0$, then it converges absolutely for all $z$ with:',
       options: [
-        '$|z| < |z_0|$',
-        '$|z| = |z_0|$',
-        '$|z| > |z_0|$',
-        '$z = z_0$ only'
-      ],
+      '$|z| = |z_0|
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'If the series converges at $z_0$, then $|c_n z_0^n|$ is bounded, implying absolute convergence for $|z| < |z_0|$.'
+    },
+      '$|z| > |z_0|
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'If the series converges at $z_0$, then $|c_n z_0^n|$ is bounded, implying absolute convergence for $|z| < |z_0|$.'
+    },
+      '$|z| < |z_0|
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'If the series converges at $z_0$, then $|c_n z_0^n|$ is bounded, implying absolute convergence for $|z| < |z_0|$.'
+    },
+      '$z = z_0$ only',
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'If the series converges at $z_0$, then $|c_n z_0^n|$ is bounded, implying absolute convergence for $|z| < |z_0|$.'
@@ -717,7 +1312,28 @@ export const section08Quiz = {
       id: 's08-h20',
       type: 'multiple-choice',
       question: 'For the series $\\sum_{p \\text{ prime}} x^p$, the radius of convergence is:',
-      options: ['$0$', '$1$', '$2$', '$\\infty$'],
+      options: [
+      '$0
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'This is a subseries of the geometric series; it converges iff $|x| < 1$, so $R = 1$.'
+    },
+      '$2
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'This is a subseries of the geometric series; it converges iff $|x| < 1$, so $R = 1$.'
+    },
+      '$\\infty
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'This is a subseries of the geometric series; it converges iff $|x| < 1$, so $R = 1$.'
+    },
+      '$1
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'This is a subseries of the geometric series; it converges iff $|x| < 1$, so $R = 1$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'This is a subseries of the geometric series; it converges iff $|x| < 1$, so $R = 1$.'

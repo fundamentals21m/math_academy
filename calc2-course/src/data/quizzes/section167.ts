@@ -6,10 +6,18 @@ export const section167Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A random variable $X$ is continuous if:',
     options: [
-      '$P(X = t) > 0$ for all $t$',
+      '$P(X = t) = 0$ for every real number $t
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A continuous random variable has $P(X = t) = 0$ for every $t$. Probability is spread continuously, not concentrated at points.',
+  },
+      '$P(X = t) > 0$ for all $t
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A continuous random variable has $P(X = t) = 0$ for every $t$. Probability is spread continuously, not concentrated at points.',
+  },
       '$F(t)$ is a step function',
       '$X$ takes only integer values',
-      '$P(X = t) = 0$ for every real number $t$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -112,10 +120,10 @@ export const section167Questions: QuizQuestion[] = [
     options: [
       'Strictly less',
       'Strictly greater',
-      'Equal',
       'Cannot be determined',
+      'Equal',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Since $P(X = a) = P(X = b) = 0$ for continuous distributions, including or excluding the endpoints makes no difference.',
   },

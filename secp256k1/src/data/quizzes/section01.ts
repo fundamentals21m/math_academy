@@ -56,8 +56,16 @@ export const section01Questions: QuizQuestion[] = [
     options: [
       'Not defined for elliptic curves',
       'The reflection of $P$ over the x-axis',
-      'Adding $P$ to itself using the tangent line at $P$',
-      'The point $(2x, 2y)$'
+      'The point $(2x, 2y)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Point doubling uses the tangent line at $P$ instead of a secant. The tangent intersects the curve at exactly one other point, which is then reflected.',
+  },
+      'Adding $P$ to itself using the tangent line at $P
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Point doubling uses the tangent line at $P$ instead of a secant. The tangent intersects the curve at exactly one other point, which is then reflected.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

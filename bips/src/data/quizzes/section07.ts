@@ -6,12 +6,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which section of a BIP explains why the change is needed?',
     options: [
-      'Abstract',
       'Motivation',
+      'Abstract',
       'Specification',
-      'Rationale'
+      'Rationale',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Motivation section explains the problem being solved and why the change is necessary.',
   },
@@ -22,10 +22,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'Motivation',
       'Abstract',
+      'Copyright',
       'Specification',
-      'Copyright'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The Specification section contains the detailed technical description of the proposal.',
   },
@@ -44,10 +44,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'No license specified',
       'Proprietary license',
+      'Public domain or permissive license',
       'GPL only',
-      'Public domain or permissive license'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'BIPs are typically released under public domain (CC0) or permissive licenses like BSD-2-Clause.',
   },

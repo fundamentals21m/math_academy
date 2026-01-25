@@ -9,10 +9,10 @@ export const section58Questions: QuizQuestion[] = [
     options: [
       'Parabolas',
       'Straight line segments',
+      'Ellipses',
       'Circular arcs perpendicular to the boundary circle (and diameters)',
-      'Ellipses'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'In the Poincaré disk model, hyperbolic lines are either diameters of the disk or circular arcs that meet the boundary circle at right angles. This ensures they satisfy the axioms of hyperbolic geometry.',
@@ -25,7 +25,7 @@ export const section58Questions: QuizQuestion[] = [
       'Hyperbolas',
       'Circular arcs',
       'Spirals',
-      'Straight chords of the disk'
+      'Straight chords of the disk',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -72,7 +72,7 @@ export const section58Questions: QuizQuestion[] = [
       'Has zero curvature everywhere',
       'Is a perfect model of the entire hyperbolic plane',
       'Is a surface with constant negative curvature that partially models hyperbolic geometry',
-      'Can only exist in 4-dimensional space'
+      'Can only exist in 4-dimensional space',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -86,10 +86,10 @@ export const section58Questions: QuizQuestion[] = [
     options: [
       'A torus embedded in 4D space',
       'A sphere with the usual metric',
+      'One sheet of $x^2 + y^2 - z^2 = -1$ with the Minkowski metric',
       'A flat plane with distorted distances',
-      'One sheet of $x^2 + y^2 - z^2 = -1$ with the Minkowski metric'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The hyperboloid model uses one sheet of the two-sheeted hyperboloid x² + y² - z² = -1 (with z > 0) in Minkowski space. Distance is measured with the Minkowski metric dx² + dy² - dz². This model has natural symmetries and connects hyperbolic geometry to special relativity.',

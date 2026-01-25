@@ -32,10 +32,26 @@ export const section137Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The vector equation of a parametric surface is:',
     options: [
-      '$\\mathbf{r}(t) = X(t)\\mathbf{i} + Y(t)\\mathbf{j} + Z(t)\\mathbf{k}$',
-      '$\\mathbf{r}(u, v) = X(u, v)\\mathbf{i} + Y(u, v)\\mathbf{j} + Z(u, v)\\mathbf{k}$',
-      '$\\mathbf{r} = x\\mathbf{i} + y\\mathbf{j} + z\\mathbf{k}$',
-      '$\\mathbf{r}(u, v) = u\\mathbf{i} + v\\mathbf{j}$'
+      '$\\mathbf{r}(t) = X(t)\\mathbf{i} + Y(t)\\mathbf{j} + Z(t)\\mathbf{k}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The vector equation $\\mathbf{r}(u, v) = X(u, v)\\mathbf{i} + Y(u, v)\\mathbf{j} + Z(u, v)\\mathbf{k}$ compactly represents the surface as the image of the parameter domain.',
+  },
+      '$\\mathbf{r} = x\\mathbf{i} + y\\mathbf{j} + z\\mathbf{k}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The vector equation $\\mathbf{r}(u, v) = X(u, v)\\mathbf{i} + Y(u, v)\\mathbf{j} + Z(u, v)\\mathbf{k}$ compactly represents the surface as the image of the parameter domain.',
+  },
+      '$\\mathbf{r}(u, v) = X(u, v)\\mathbf{i} + Y(u, v)\\mathbf{j} + Z(u, v)\\mathbf{k}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The vector equation $\\mathbf{r}(u, v) = X(u, v)\\mathbf{i} + Y(u, v)\\mathbf{j} + Z(u, v)\\mathbf{k}$ compactly represents the surface as the image of the parameter domain.',
+  },
+      '$\\mathbf{r}(u, v) = u\\mathbf{i} + v\\mathbf{j}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The vector equation $\\mathbf{r}(u, v) = X(u, v)\\mathbf{i} + Y(u, v)\\mathbf{j} + Z(u, v)\\mathbf{k}$ compactly represents the surface as the image of the parameter domain.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -47,11 +63,11 @@ export const section137Questions: QuizQuestion[] = [
     question: 'A simple parametric surface is one where:',
     options: [
       'The parameter domain is a rectangle',
-      'The mapping $\\mathbf{r}$ is one-to-one',
       'The surface has no boundary',
+      'The mapping $\\mathbf{r}$ is one-to-one',
       'The parametric equations are linear',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A simple parametric surface has a one-to-one mapping $\\mathbf{r}$ from the parameter domain to the surface—distinct parameter values give distinct surface points.',
   },
@@ -62,10 +78,10 @@ export const section137Questions: QuizQuestion[] = [
     options: [
       'The polar angle from the z-axis',
       'The distance from the origin',
-      'The azimuthal angle (related to longitude)',
       'The elevation above the xy-plane',
+      'The azimuthal angle (related to longitude)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'In this parametrization, $u$ is the azimuthal angle (like longitude) and $v$ is related to latitude. Varying $u$ from $0$ to $2\\pi$ traces circles of constant $v$.',
   },
@@ -77,7 +93,7 @@ export const section137Questions: QuizQuestion[] = [
       'Parametric representation can describe surfaces that are not graphs (like spheres)',
       'Parametric surfaces are always simpler',
       'Explicit representation requires more equations',
-      'Parametric surfaces are always smooth'
+      'Parametric surfaces are always smooth',
     ],
     correctIndex: 0,
     difficulty: 'medium',

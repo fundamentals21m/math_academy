@@ -37,10 +37,14 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $V$ has dimension $n$ and $S$ is an independent set with $n$ elements, what is $S$?',
     options: [
+      'A basis for $V
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Theorem 1.7(b) states that any set of $n$ independent elements in an $n$-dimensional space is automatically a basis.',
+  },
       'A proper subset of some basis',
-      'A basis for $V$',
       'Larger than any basis',
-      'It depends on the specific elements'
+      'It depends on the specific elements',
     ],
     correctIndex: 1,
     difficulty: 'medium',

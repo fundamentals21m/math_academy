@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .failures-table {
+      width: 100%;
+      max-width: 900px;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: rgba(13, 17, 23, 0.8);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .failures-table th {
+      background: rgba(239, 68, 68, 0.15);
+      color: #EF4444;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 16px;
+    }
+    .failures-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(239, 68, 68, 0.1);
+      font-size: 18px;
+    }
+    .failures-table tr:last-child td {
+      border-bottom: none;
+    }
+    .col-fund { color: #E6EDF3; }
+    .col-investment { color: #8B949E; }
+    .col-result { color: #EF4444; font-weight: 600; }
+    .irony-box {
+      background: rgba(247, 147, 26, 0.08);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin-top: 35px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .irony-title {
+      color: #F7931A;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .irony-text {
+      color: #E6EDF3;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Irony</div>
+    <div class="section-title">Pension Failures</div>
+    <table class="failures-table">
+      <thead>
+        <tr>
+          <th>Pension Fund</th>
+          <th>Investment</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-fund">Ontario Teachers Pension Plan</td>
+          <td class="col-investment">$100 million in FTX</td>
+          <td class="col-result">Bankrupt, CEO in prison</td>
+        </tr>
+        <tr>
+          <td class="col-fund">CDPQ</td>
+          <td class="col-investment">$150 million in Celsius</td>
+          <td class="col-result">Bankrupt, CEO in prison</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="irony-box">
+      <div class="irony-title">The Painful Irony</div>
+      <div class="irony-text">Major pension funds invested hundreds of millions in fraudulent crypto enterprises — yet they hesitate to allocate even small amounts to actual bitcoin.</div>
+    </div>
+  </div>
+</body>
+</html>

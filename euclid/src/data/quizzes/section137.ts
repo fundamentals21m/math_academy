@@ -22,10 +22,10 @@ export const section137Questions: QuizQuestion[] = [
     options: [
       '2:5 = 4:10',
       '1:3 = 2:6',
-      '5:3 = 10:6',
       '6:3 = 12:6',
+      '5:3 = 10:6',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Componendo: (2+3):3 = (4+6):6, so 5:3 = 10:6.',
   },

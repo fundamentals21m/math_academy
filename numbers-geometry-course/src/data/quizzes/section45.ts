@@ -28,10 +28,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       'It was the first approximation of π',
       'It proved π is rational',
-      'It used only whole numbers',
       'It was the first infinite product in mathematics',
+      'It used only whole numbers',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Viète\'s formula (1593) was the first infinite product in mathematics, expressing 2/π as an infinite product of nested square roots.',
@@ -44,10 +44,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       'Circle measurement',
       'Angle calculation',
-      'Wave analysis',
       'Triangle measurement',
+      'Wave analysis',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'From Greek: trigonon (triangle) + metron (measure). Though the subject has grown far beyond triangles.',
@@ -60,10 +60,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       'The Pythagorean theorem',
       'The tangent addition formula',
-      'De Moivre\\'s formula: e^(iθ) = cos θ + i sin θ',
       'The law of cosines',
+      'De Moivre\\\\\'s formula: e^(iθ) = cos θ + i sin θ',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'De Moivre\'s formula (and Euler\'s formula e^(iθ) = cos θ + i sin θ) beautifully connects trigonometry to complex numbers.',
@@ -85,12 +85,12 @@ export const section45Questions: QuizQuestion[] = [
     question:
       'What physical phenomena are described by circular functions?',
     options: [
-      'Only planetary orbits',
       'Waves, vibrations, and harmonic motion',
+      'Only planetary orbits',
       'Only sound waves',
       'Linear motion',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Circular functions describe all kinds of periodic phenomena: sound waves, light waves, vibrations, tides, and any oscillating system.',
@@ -101,12 +101,12 @@ export const section45Questions: QuizQuestion[] = [
     question:
       'What connects the tangent addition formula to Pythagorean triples?',
     options: [
-      'Rational slopes correspond to rational points on the circle, hence Pythagorean triples',
       'They are unrelated',
+      'Rational slopes correspond to rational points on the circle, hence Pythagorean triples',
       'Both use the number 3',
       'Both were discovered by Pythagoras',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'A rational slope t gives a rational point ((1-t²)/(1+t²), 2t/(1+t²)) on the circle, corresponding to a Pythagorean triple.',
@@ -117,12 +117,12 @@ export const section45Questions: QuizQuestion[] = [
     question:
       'What topic follows Trigonometry in this course?',
     options: [
+      'Finite Arithmetic',
       'Calculus',
       'Complex Numbers',
-      'Finite Arithmetic',
-      'Differential Equations'
+      'Differential Equations',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The next chapter explores Finite Arithmetic—modular arithmetic, clock math, and algebraic structures based on remainders.',

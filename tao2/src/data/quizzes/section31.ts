@@ -64,10 +64,10 @@ export const section31Questions: QuizQuestion[] = [
     options: [
       'A scalar',
       'The Hessian matrix',
+      'The identity matrix',
       'The gradient $\\nabla f(x_0)$ as a row vector',
-      'The identity matrix'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'For real-valued functions, the derivative is the gradient (as a linear functional).',
   },
@@ -76,12 +76,12 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Differentiability implies:',
     options: [
+      'Continuity',
       'The function is linear',
       'Twice differentiability',
-      'Continuity',
       'The function is constant',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Differentiable functions are continuous.',
   },
@@ -90,10 +90,26 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Jacobian matrix of $f: \\mathbf{R}^n \\to \\mathbf{R}^m$ at $x_0$ has dimensions:',
     options: [
-      '$m \\times n$',
-      '$n \\times n$',
-      '$n \\times m$',
-      '$m \\times m$'
+      '$n \\times n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Jacobian is $m \\times n$: $m$ rows (output components) and $n$ columns (input variables).',
+  },
+      '$n \\times m
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Jacobian is $m \\times n$: $m$ rows (output components) and $n$ columns (input variables).',
+  },
+      '$m \\times m
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Jacobian is $m \\times n$: $m$ rows (output components) and $n$ columns (input variables).',
+  },
+      '$m \\times n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Jacobian is $m \\times n$: $m$ rows (output components) and $n$ columns (input variables).',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

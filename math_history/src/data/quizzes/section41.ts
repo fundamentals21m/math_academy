@@ -7,10 +7,30 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Fermat\'s Little Theorem, if $p$ is prime and $\\gcd(a, p) = 1$, then:',
     options: [
-      '$a^{p-1} \\equiv 1 \\pmod{p}$',
-      '$a^p \\equiv 0 \\pmod{p}$',
-      '$a^{p-1} \\equiv p \\pmod{a}$',
-      '$a + p \\equiv 1 \\pmod{p}$',
+      '$a^p \\equiv 0 \\pmod{p}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'Fermat\'s Little Theorem states that if $p$ is prime and $a$ is not divisible by $p$, then $a^{p-1} \\equiv 1 \\pmod{p}$. This means $a^{p-1}$ leaves remainder 1 when divided by $p$.',
+  },
+      '$a^{p-1} \\equiv p \\pmod{a}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Fermat\'s Little Theorem states that if $p$ is prime and $a$ is not divisible by $p$, then $a^{p-1} \\equiv 1 \\pmod{p}$. This means $a^{p-1}$ leaves remainder 1 when divided by $p$.',
+  },
+      '$a + p \\equiv 1 \\pmod{p}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Fermat\'s Little Theorem states that if $p$ is prime and $a$ is not divisible by $p$, then $a^{p-1} \\equiv 1 \\pmod{p}$. This means $a^{p-1}$ leaves remainder 1 when divided by $p$.',
+  },
+      '$a^{p-1} \\equiv 1 \\pmod{p}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Fermat\'s Little Theorem states that if $p$ is prime and $a$ is not divisible by $p$, then $a^{p-1} \\equiv 1 \\pmod{p}$. This means $a^{p-1}$ leaves remainder 1 when divided by $p$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -22,12 +42,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\phi(7)$, the count of integers from 1 to 7 that are relatively prime to 7?',
     options: [
-      '7',
       '6',
+      '7',
       '5',
-      '4'
+      '4',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Since 7 is prime, all integers from 1 to 6 are relatively prime to 7. Therefore $\\phi(7) = 6$. In general, for a prime $p$, $\\phi(p) = p - 1$.',
@@ -41,7 +61,7 @@ export const section41Questions: QuizQuestion[] = [
       '10',
       '2',
       '1',
-      '0'
+      '0',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -56,7 +76,7 @@ export const section41Questions: QuizQuestion[] = [
       '5',
       '6',
       '11',
-      '4'
+      '4',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -69,12 +89,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In RSA encryption, why does decryption work (i.e., why does $(m^e)^d \\equiv m \\pmod{n}$)?',
     options: [
-      'Because $ed \\equiv 1 \\pmod{\\phi(n)}$ and Euler\'s theorem applies',
       'Because $e$ and $d$ are prime numbers',
+      'Because $ed \\equiv 1 \\pmod{\\phi(n)}$ and Euler\\'s theorem applies',
       'Because $n = pq$ is always odd',
       'Because modular arithmetic is reversible',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'RSA chooses $e$ and $d$ such that $ed \\equiv 1 \\pmod{\\phi(n)}$, meaning $ed = k\\phi(n) + 1$ for some integer $k$. By Euler\'s theorem, $m^{\\phi(n)} \\equiv 1 \\pmod{n}$, so $m^{ed} = m^{k\\phi(n)+1} = (m^{\\phi(n)})^k \\cdot m \\equiv 1^k \\cdot m = m$.',
@@ -85,11 +105,11 @@ export const section41Questions: QuizQuestion[] = [
     question: 'Carmichael numbers are problematic for the Fermat primality test because:',
     options: [
       'They are prime but fail the test',
-      'They are composite but pass the test for all bases coprime to them',
       'They have no prime factors',
-      'The test takes too long to compute for them'
+      'The test takes too long to compute for them',
+      'They are composite but pass the test for all bases coprime to them',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Carmichael numbers are composite numbers $n$ for which $a^{n-1} \\equiv 1 \\pmod{n}$ for ALL $a$ coprime to $n$. This means the Fermat test incorrectly suggests they might be prime. The smallest Carmichael number is 561 = 3 × 11 × 17.',

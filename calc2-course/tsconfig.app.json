@@ -1,0 +1,17 @@
+{
+  "extends": "../shared/tsconfig.course.json",
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@shared/*": ["../shared/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@data/*": ["./src/data/*"]
+    }
+  },
+  "include": ["src"]
+}

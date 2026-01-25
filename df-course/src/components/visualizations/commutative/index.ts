@@ -1,0 +1,9 @@
+// Commutative Algebra Visualizations (Sections 77-84)
+export { NoetherianDemo } from './NoetherianDemo';
+export { RadicalDemo } from './RadicalDemo';
+export { NullstellensatzDemo } from './NullstellensatzDemo';
+export { RingLocalizationDemo } from './RingLocalizationDemo';
+export { SpectrumDemo } from './SpectrumDemo';
+export { ArtinianDemo } from './ArtinianDemo';
+export { DVRDemo } from './DVRDemo';
+export { DedekindDemo } from './DedekindDemo';

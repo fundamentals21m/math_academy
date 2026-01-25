@@ -82,10 +82,10 @@ export const section83Questions: QuizQuestion[] = [
     options: [
       'By taking the magnitude first',
       'By cross product',
-      'By integrating each component',
       'Cannot be done for vectors',
+      'By integrating each component',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Integrate componentwise.',
   },
@@ -94,10 +94,26 @@ export const section83Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The product rule $(\\mathbf{r} \\cdot \\mathbf{s})\' = ?$',
     options: [
-      '$\\mathbf{r}\' \\cdot \\mathbf{s}\'$',
-      '$\\mathbf{r}\' \\cdot \\mathbf{s} + \\mathbf{r} \\cdot \\mathbf{s}\'$',
-      '$\\mathbf{r} \\cdot \\mathbf{s}\'$',
-      '$|\\mathbf{r}| |\\mathbf{s}|$'
+      '$\\mathbf{r}\\' \\cdot \\mathbf{s}\\'
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Product rule applies: $(\\mathbf{r} \\cdot \\mathbf{s})\' = \\mathbf{r}\' \\cdot \\mathbf{s} + \\mathbf{r} \\cdot \\mathbf{s}\'$.',
+  },
+      '$\\mathbf{r} \\cdot \\mathbf{s}\\'
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Product rule applies: $(\\mathbf{r} \\cdot \\mathbf{s})\' = \\mathbf{r}\' \\cdot \\mathbf{s} + \\mathbf{r} \\cdot \\mathbf{s}\'$.',
+  },
+      '$|\\mathbf{r}| |\\mathbf{s}|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Product rule applies: $(\\mathbf{r} \\cdot \\mathbf{s})\' = \\mathbf{r}\' \\cdot \\mathbf{s} + \\mathbf{r} \\cdot \\mathbf{s}\'$.',
+  },
+      '$\\mathbf{r}\\' \\cdot \\mathbf{s} + \\mathbf{r} \\cdot \\mathbf{s}\\'
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Product rule applies: $(\\mathbf{r} \\cdot \\mathbf{s})\' = \\mathbf{r}\' \\cdot \\mathbf{s} + \\mathbf{r} \\cdot \\mathbf{s}\'$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -110,10 +126,10 @@ export const section83Questions: QuizQuestion[] = [
     options: [
       'Only the first component has a limit',
       'The magnitude has a limit',
-      '$\\mathbf{r}$ is constant',
       'Each component has a limit',
+      '$\\mathbf{r}$ is constant',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Limits are taken componentwise.',
   },

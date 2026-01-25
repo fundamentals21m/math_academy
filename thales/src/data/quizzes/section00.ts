@@ -10,11 +10,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What are the two primary sources of information on ancient Egyptian mathematics?',
     options: [
       'The Cairo Codex and the Alexandria Scroll',
+      'The Moscow Papyrus and the Rhind Papyrus',
       'The Pyramid Texts and the Book of the Dead',
       'The Ebers Papyrus and the Edwin Smith Papyrus',
-      'The Moscow Papyrus and the Rhind Papyrus',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The Moscow Mathematical Papyrus (c. 1850 BC) and the Rhind Mathematical Papyrus (c. 1650 BC) are our only original sources on ancient Egyptian mathematics.',
@@ -39,12 +39,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is special about Egyptian fractions?',
     options: [
-      'They expressed all fractions as sums of distinct unit fractions (1/n)',
       'They only used fractions with even denominators',
       'They never used fractions smaller than 1/10',
       'They wrote fractions in decimal form',
+      'They expressed all fractions as sums of distinct unit fractions (1/n)',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Egyptians insisted on expressing all fractions (except 2/3) as sums of distinct unit fractions of the form 1/n. For example, 2/9 = 1/6 + 1/18.',
@@ -144,11 +144,11 @@ export const section00Questions: QuizQuestion[] = [
     question: "The Egyptians' approximation for $\\pi$, implied by their circle area formula, was approximately:",
     options: [
       '3.0',
-      '3.16',
       '3.14',
+      '3.16',
       '3.5',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The Egyptians used the formula (8/9)⁴r² for the area of a circle, which implies π ≈ 3.16, remarkably close to the true value of π ≈ 3.14159.',

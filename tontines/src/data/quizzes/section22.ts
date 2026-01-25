@@ -36,10 +36,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The optimal payout formula for power utility is:',
     options: [
-      '$D(t) = A \\cdot g^t$ where $g = (\\beta/v)^{1/\\gamma}$',
-      '$D(t) = W_0 / t$',
-      '$D(t) = \\lambda \\cdot t$',
-      '$D(t) = A \\cdot e^{-t}$'
+      '$D(t) = W_0 / t
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Solving the Euler-Lagrange equation for power utility gives D(t) = A × g^t, where g = (β/v)^(1/γ)—geometric growth.',
+  },
+      '$D(t) = \\lambda \\cdot t
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Solving the Euler-Lagrange equation for power utility gives D(t) = A × g^t, where g = (β/v)^(1/γ)—geometric growth.',
+  },
+      '$D(t) = A \\cdot e^{-t}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Solving the Euler-Lagrange equation for power utility gives D(t) = A × g^t, where g = (β/v)^(1/γ)—geometric growth.',
+  },
+      '$D(t) = A \\cdot g^t$ where $g = (\\beta/v)^{1/\\gamma}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Solving the Euler-Lagrange equation for power utility gives D(t) = A × g^t, where g = (β/v)^(1/γ)—geometric growth.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -89,7 +105,7 @@ export const section22Questions: QuizQuestion[] = [
       'Random payouts',
       'Flat payouts',
       'Declining payouts',
-      'Rapidly growing payouts that maximize expected wealth'
+      'Rapidly growing payouts that maximize expected wealth',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -100,12 +116,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The constant $A$ in the optimal formula is determined by:',
     options: [
+      'The budget constraint (EPV of payouts = initial wealth)',
       'The risk aversion parameter',
       'The interest rate alone',
-      'The budget constraint (EPV of payouts = initial wealth)',
       'Government regulations',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The constant A is chosen so that the expected present value of all payouts equals the initial wealth W_0—the budget/fairness constraint.',
   },

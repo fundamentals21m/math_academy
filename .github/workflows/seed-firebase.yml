@@ -1,0 +1,43 @@
+name: Seed Firebase
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'firebase/functions/src/seedCourseConfig.ts'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force re-seed even without file changes'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  seed:
+    name: Seed Course Config
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Firebase seed
+        run: |
+          echo "Triggering Firebase course config seed..."
+          response=$(curl -sf -w "\n%{http_code}" "${{ secrets.FIREBASE_SEED_URL }}?secret=${{ secrets.FIREBASE_SEED_SECRET }}")
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | head -n -1)
+
+          if [ "$http_code" -eq 200 ]; then
+            echo "Seed completed successfully"
+            echo "$body"
+          else
+            echo "Seed failed with HTTP $http_code"
+            echo "$body"
+            exit 1
+          fi
+
+      - name: Summary
+        run: |
+          echo "# Firebase Seed Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Course configuration seeded to Firebase." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Triggered by:** Changes to \`seedCourseConfig.ts\`" >> $GITHUB_STEP_SUMMARY

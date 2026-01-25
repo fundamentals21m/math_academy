@@ -6,10 +6,14 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Least Upper Bound Property (completeness) of $\\mathbb{R}$ states that:',
     options: [
-      'Every non-empty subset of $\\mathbb{R}$ that is bounded above has a supremum in $\\mathbb{R}$',
       'Every subset of $\\mathbb{R}$ has a supremum',
       'Every Cauchy sequence converges',
-      'Every bounded sequence has a convergent subsequence'
+      'Every bounded sequence has a convergent subsequence',
+      'Every non-empty subset of $\\mathbb{R}$ that is bounded above has a supremum in $\\mathbb{R}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The Least Upper Bound Property (LUB) states that every non-empty subset of $\\mathbb{R}$ bounded above has a least upper bound (supremum) in $\\mathbb{R}$. This is the key property that distinguishes $\\mathbb{R}$ from $\\mathbb{Q}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -76,12 +80,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which property is equivalent to the Least Upper Bound Property?',
     options: [
-      'Every Cauchy sequence of reals converges',
       'Archimedean property',
       'Density of rationals',
+      'Every Cauchy sequence of reals converges',
       'Every bounded set has a maximum',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The completeness of $\\mathbb{R}$ (LUB property) is equivalent to every Cauchy sequence converging. Both express that there are "no gaps" in $\\mathbb{R}$.',
   },

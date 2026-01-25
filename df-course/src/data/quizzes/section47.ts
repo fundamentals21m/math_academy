@@ -20,10 +20,26 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The number of monic irreducible polynomials of degree $2$ over $\\mathbb{Z}_2$ is:',
     options: [
-      '$0$',
-      '$1$',
-      '$2$',
-      '$3$'
+      '$0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Monic degree 2 over $\\mathbb{Z}_2$: $x^2, x^2+1, x^2+x, x^2+x+1$. Check: $x^2 = x \\cdot x$, $x^2+1 = (x+1)^2$, $x^2+x = x(x+1)$ are reducible. Only $x^2+x+1$ is irreducible.',
+  },
+      '$2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Monic degree 2 over $\\mathbb{Z}_2$: $x^2, x^2+1, x^2+x, x^2+x+1$. Check: $x^2 = x \\cdot x$, $x^2+1 = (x+1)^2$, $x^2+x = x(x+1)$ are reducible. Only $x^2+x+1$ is irreducible.',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Monic degree 2 over $\\mathbb{Z}_2$: $x^2, x^2+1, x^2+x, x^2+x+1$. Check: $x^2 = x \\cdot x$, $x^2+1 = (x+1)^2$, $x^2+x = x(x+1)$ are reducible. Only $x^2+x+1$ is irreducible.',
+  },
+      '$3
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Monic degree 2 over $\\mathbb{Z}_2$: $x^2, x^2+1, x^2+x, x^2+x+1$. Check: $x^2 = x \\cdot x$, $x^2+1 = (x+1)^2$, $x^2+x = x(x+1)$ are reducible. Only $x^2+x+1$ is irreducible.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,10 +50,22 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f(x) \\in F[x]$ is irreducible and $\\deg(f) = n$, then $F[x]/(f)$ is:',
     options: [
-      'Isomorphic to $F$',
+      'Isomorphic to $F
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'When $f$ is irreducible, $(f)$ is a maximal ideal in $F[x]$ (since $F[x]$ is a PID), so $F[x]/(f)$ is a field. As a vector space over $F$, it has dimension $n = \\deg(f)$.',
+  },
       'Not a field',
-      'A field extension of $F$ of degree $n$',
-      'Isomorphic to $F^n$'
+      'Isomorphic to $F^n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'When $f$ is irreducible, $(f)$ is a maximal ideal in $F[x]$ (since $F[x]$ is a PID), so $F[x]/(f)$ is a field. As a vector space over $F$, it has dimension $n = \\deg(f)$.',
+  },
+      'A field extension of $F$ of degree $n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'When $f$ is irreducible, $(f)$ is a maximal ideal in $F[x]$ (since $F[x]$ is a PID), so $F[x]/(f)$ is a field. As a vector space over $F$, it has dimension $n = \\deg(f)$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -78,10 +106,18 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A polynomial $f \\in F[x]$ has a repeated root if and only if:',
     options: [
-      '$f$ and $f\'$ have a common factor of positive degree',
       '$f$ is irreducible',
-      '$\\deg(f) > 1$',
-      '$f(0) = 0$'
+      '$\\deg(f) > 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$f$ has a repeated root iff $\\gcd(f, f\') \\neq 1$. If $(x-a)^2 | f$, then $(x-a) | f\'$, so $(x-a)$ is a common factor.',
+  },
+      '$f(0) = 0
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$f$ has a repeated root iff $\\gcd(f, f\') \\neq 1$. If $(x-a)^2 | f$, then $(x-a) | f\'$, so $(x-a)$ is a common factor.',
+  },
+      '$f$ and $f\\'$ have a common factor of positive degree',
     ],
     correctIndex: 0,
     difficulty: 'hard',

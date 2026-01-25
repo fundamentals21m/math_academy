@@ -81,11 +81,11 @@ export const section45Questions: QuizQuestion[] = [
     question: 'A continuous curve that is NOT rectifiable is:',
     options: [
       'The graph of a Lipschitz function',
-      'A space-filling curve (like the Peano curve)',
       'Any curve with a corner',
+      'A space-filling curve (like the Peano curve)',
       'The unit circle',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Space-filling curves like the Peano or Hilbert curves are continuous but have infinite length. Any inscribed polygon can be refined to get arbitrarily large total length. Lipschitz curves and curves with corners are rectifiable.',
   },

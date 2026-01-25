@@ -6,10 +6,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A power series is an expression of the form:',
     options: [
-      '$\\sum_{n=0}^{\\infty} c_n$',
-      '$\\sum_{n=0}^{\\infty} n^x$',
-      '$\\sum_{n=0}^{\\infty} c_n x^n$',
-      '$\\prod_{n=0}^{\\infty} c_n x^n$'
+      '$\\sum_{n=0}^{\\infty} c_n x^n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A power series centered at $0$ has the form $\\sum_{n=0}^{\\infty} c_n x^n$, where $c_n$ are coefficients and $x$ is the variable.',
+  },
+      '$\\sum_{n=0}^{\\infty} c_n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A power series centered at $0$ has the form $\\sum_{n=0}^{\\infty} c_n x^n$, where $c_n$ are coefficients and $x$ is the variable.',
+  },
+      '$\\sum_{n=0}^{\\infty} n^x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A power series centered at $0$ has the form $\\sum_{n=0}^{\\infty} c_n x^n$, where $c_n$ are coefficients and $x$ is the variable.',
+  },
+      '$\\prod_{n=0}^{\\infty} c_n x^n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A power series centered at $0$ has the form $\\sum_{n=0}^{\\infty} c_n x^n$, where $c_n$ are coefficients and $x$ is the variable.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -34,10 +50,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If a power series $\\sum c_n x^n$ has radius of convergence $R$, then it:',
     options: [
-      'Converges absolutely for $|x| < R$ and diverges for $|x| > R$',
-      'Converges for all $x$',
-      'Converges only at $x = 0$',
-      'Converges for $|x| = R$'
+      'Converges for all $x
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Inside the radius ($|x| < R$): absolute convergence. Outside ($|x| > R$): divergence. At the boundary ($|x| = R$): could go either way, needs separate analysis.',
+  },
+      'Converges only at $x = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Inside the radius ($|x| < R$): absolute convergence. Outside ($|x| > R$): divergence. At the boundary ($|x| = R$): could go either way, needs separate analysis.',
+  },
+      'Converges for $|x| = R
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Inside the radius ($|x| < R$): absolute convergence. Outside ($|x| > R$): divergence. At the boundary ($|x| = R$): could go either way, needs separate analysis.',
+  },
+      'Converges absolutely for $|x| < R$ and diverges for $|x| > R
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Inside the radius ($|x| < R$): absolute convergence. Outside ($|x| > R$): divergence. At the boundary ($|x| = R$): could go either way, needs separate analysis.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -48,10 +80,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the radius of convergence of $\\sum_{n=0}^{\\infty} x^n$?',
     options: [
-      '$0$',
-      '$1$',
-      '$\\infty$',
-      '$e$'
+      '$0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'This is the geometric series. $c_n = 1$, so $\\limsup \\sqrt[n]{1} = 1$. Thus $R = 1$. It converges for $|x| < 1$ to $1/(1-x)$.',
+  },
+      '$\\infty
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'This is the geometric series. $c_n = 1$, so $\\limsup \\sqrt[n]{1} = 1$. Thus $R = 1$. It converges for $|x| < 1$ to $1/(1-x)$.',
+  },
+      '$e
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'This is the geometric series. $c_n = 1$, so $\\limsup \\sqrt[n]{1} = 1$. Thus $R = 1$. It converges for $|x| < 1$ to $1/(1-x)$.',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'This is the geometric series. $c_n = 1$, so $\\limsup \\sqrt[n]{1} = 1$. Thus $R = 1$. It converges for $|x| < 1$ to $1/(1-x)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

@@ -38,10 +38,26 @@ export const section84Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The tangent line at $t = t_0$ is:',
     options: [
-      '$\\mathbf{r}\'(t_0)$',
-      '$\\mathbf{r}(t_0) + s \\mathbf{r}\'(t_0)$ for $s \\in \\mathbb{R}$',
-      '$\\mathbf{r}(t_0)$',
-      '$s \\mathbf{r}(t_0)$'
+      '$\\mathbf{r}\\'(t_0)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Tangent line passes through $\\mathbf{r}(t_0)$ with direction $\\mathbf{r}\'(t_0)$.',
+  },
+      '$\\mathbf{r}(t_0)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Tangent line passes through $\\mathbf{r}(t_0)$ with direction $\\mathbf{r}\'(t_0)$.',
+  },
+      '$\\mathbf{r}(t_0) + s \\mathbf{r}\\'(t_0)$ for $s \\in \\mathbb{R}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Tangent line passes through $\\mathbf{r}(t_0)$ with direction $\\mathbf{r}\'(t_0)$.',
+  },
+      '$s \\mathbf{r}(t_0)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Tangent line passes through $\\mathbf{r}(t_0)$ with direction $\\mathbf{r}\'(t_0)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

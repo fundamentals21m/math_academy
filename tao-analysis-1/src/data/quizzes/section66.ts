@@ -6,10 +6,14 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The universal quantifier $\\forall x$ in the statement $\\forall x \\, P(x)$ means:',
     options: [
-      '$P(x)$ is true for a specific element $x$',
+      '$P(x)$ is true for a specific element $x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The universal quantifier $\\forall$ asserts that the predicate $P(x)$ holds for all elements $x$ in the domain of discourse.',
+  },
       '$P(x)$ is true for at least one element $x$ in the domain',
+      '$P(x)$ is true for every element $x$ in the domain',
       '$P(x)$ is true for no element $x$ in the domain',
-      '$P(x)$ is true for every element $x$ in the domain'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -23,7 +27,7 @@ export const section66Questions: QuizQuestion[] = [
       '$P(x)$ is true for at least one element $x$ in the domain',
       '$P(x)$ is true for every element $x$ in the domain',
       '$P(x)$ is true for exactly one element $x$ in the domain',
-      '$P(x)$ is false for all elements $x$ in the domain'
+      '$P(x)$ is false for all elements $x$ in the domain',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -96,10 +100,10 @@ export const section66Questions: QuizQuestion[] = [
     options: [
       'It appears on both sides of an equation',
       'It is not within the scope of any quantifier',
-      'It is within the scope of a quantifier that binds it',
       'It takes a fixed numerical value',
+      'It is within the scope of a quantifier that binds it',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A variable is bound when it falls within the scope of a quantifier ($\\forall x$ or $\\exists x$) that "captures" it. A variable not bound by any quantifier is called free.',
   },
@@ -109,11 +113,11 @@ export const section66Questions: QuizQuestion[] = [
     question: 'The unique existential quantifier $\\exists! x \\, P(x)$ means:',
     options: [
       'There exists at least one $x$ such that $P(x)$ is true',
+      'There exists exactly one $x$ such that $P(x)$ is true',
       'For all $x$, $P(x)$ is true',
       'There exist at least two distinct $x$ such that $P(x)$ is true',
-      'There exists exactly one $x$ such that $P(x)$ is true',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The unique existential quantifier $\\exists!$ asserts both existence and uniqueness: there is at least one $x$ satisfying $P(x)$, and any two elements satisfying $P$ must be equal.',
   },

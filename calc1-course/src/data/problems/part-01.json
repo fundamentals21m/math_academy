@@ -1,0 +1,692 @@
+{
+  "partId": 2,
+  "partTitle": "The Concepts of Integral Calculus",
+  "textbookChapter": "Chapter 1",
+  "sections": [
+    {
+      "sectionId": 6,
+      "sectionTitle": "Cartesian Geometry and Functions",
+      "textbookSection": "I 1.4-1.5",
+      "examples": [
+        {
+          "id": "ex-2-6-1",
+          "type": "example",
+          "title": "Graph of a Function",
+          "statement": "Sketch the graph of $f(x) = |x - 1| + |x + 1|$ and find a formula for $f$ that does not involve absolute values.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Analyze critical points",
+                "content": "The expression changes behavior at $x = -1$ and $x = 1$. We consider three regions."
+              },
+              {
+                "title": "Case 1: $x \\leq -1$",
+                "content": "Both $x - 1 < 0$ and $x + 1 \\leq 0$, so $f(x) = -(x-1) + (-(x+1)) = -x + 1 - x - 1 = -2x$."
+              },
+              {
+                "title": "Case 2: $-1 < x < 1$",
+                "content": "Here $x - 1 < 0$ but $x + 1 > 0$, so $f(x) = -(x-1) + (x+1) = -x + 1 + x + 1 = 2$."
+              },
+              {
+                "title": "Case 3: $x \\geq 1$",
+                "content": "Both $x - 1 \\geq 0$ and $x + 1 > 0$, so $f(x) = (x-1) + (x+1) = 2x$."
+              }
+            ],
+            "conclusion": "$f(x) = \\begin{cases} -2x & \\text{if } x \\leq -1 \\\\ 2 & \\text{if } -1 < x < 1 \\\\ 2x & \\text{if } x \\geq 1 \\end{cases}$\n\nThe graph is a V-shape that flattens to $y = 2$ between $x = -1$ and $x = 1$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-6-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Determine the domain and range of the function $f(x) = \\sqrt{1 - x^2}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find the domain",
+                "content": "We need $1 - x^2 \\geq 0$, which means $x^2 \\leq 1$, so $-1 \\leq x \\leq 1$."
+              },
+              {
+                "title": "Find the range",
+                "content": "When $x = 0$, $f(0) = 1$ (maximum). When $x = \\pm 1$, $f(\\pm 1) = 0$ (minimum). Since $\\sqrt{1-x^2}$ is continuous, the range is $[0, 1]$."
+              }
+            ],
+            "conclusion": "Domain: $[-1, 1]$. Range: $[0, 1]$. The graph is the upper semicircle of the unit circle."
+          }
+        },
+        {
+          "id": "2-6-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "If $f(x) = x^2$ and $g(x) = \\sqrt{x}$, find formulas for $f \\circ g$ and $g \\circ f$, and determine their domains.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute $f \\circ g$",
+                "content": "$(f \\circ g)(x) = f(g(x)) = f(\\sqrt{x}) = (\\sqrt{x})^2 = x$"
+              },
+              {
+                "title": "Domain of $f \\circ g$",
+                "content": "We need $x \\geq 0$ for $\\sqrt{x}$ to be defined. Domain: $[0, \\infty)$."
+              },
+              {
+                "title": "Compute $g \\circ f$",
+                "content": "$(g \\circ f)(x) = g(f(x)) = g(x^2) = \\sqrt{x^2} = |x|$"
+              },
+              {
+                "title": "Domain of $g \\circ f$",
+                "content": "Since $x^2 \\geq 0$ for all $x$, the square root is always defined. Domain: $(-\\infty, \\infty)$."
+              }
+            ],
+            "conclusion": "$(f \\circ g)(x) = x$ with domain $[0, \\infty)$. $(g \\circ f)(x) = |x|$ with domain $\\mathbb{R}$. Note: $f \\circ g \\neq g \\circ f$ in general."
+          }
+        },
+        {
+          "id": "2-6-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that $f(x) = \\frac{x}{1+|x|}$ is a one-to-one function from $\\mathbb{R}$ onto $(-1, 1)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Show one-to-one",
+                "content": "Suppose $f(a) = f(b)$. If $a, b \\geq 0$: $\\frac{a}{1+a} = \\frac{b}{1+b}$ implies $a(1+b) = b(1+a)$, so $a + ab = b + ab$, thus $a = b$.\nIf $a, b < 0$: $\\frac{a}{1-a} = \\frac{b}{1-b}$ implies $a(1-b) = b(1-a)$, so $a - ab = b - ab$, thus $a = b$.\nIf $a \\geq 0$ and $b < 0$: $f(a) \\geq 0$ and $f(b) < 0$, so $f(a) \\neq f(b)$."
+              },
+              {
+                "title": "Show onto $(-1, 1)$",
+                "content": "Given $y \\in (-1, 1)$, we solve for $x$.\nIf $y \\geq 0$: $\\frac{x}{1+x} = y$ gives $x = y(1+x)$, so $x = \\frac{y}{1-y} \\geq 0$.\nIf $y < 0$: $\\frac{x}{1-x} = y$ gives $x = y(1-x)$, so $x = \\frac{y}{1+y} < 0$."
+              },
+              {
+                "title": "Verify range is exactly $(-1, 1)$",
+                "content": "As $x \\to \\infty$, $f(x) \\to 1^-$. As $x \\to -\\infty$, $f(x) \\to -1^+$. Since $f$ is continuous, the range is $(-1, 1)$."
+              }
+            ],
+            "conclusion": "$f$ is a bijection from $\\mathbb{R}$ to $(-1, 1)$. Its inverse is $f^{-1}(y) = \\frac{y}{1-|y|}$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 7,
+      "sectionTitle": "The Concept of Area",
+      "textbookSection": "I 1.6-1.7",
+      "examples": [
+        {
+          "id": "ex-2-7-1",
+          "type": "example",
+          "title": "Area as a Set Function",
+          "statement": "State the key axioms that area must satisfy as a set function, and explain why these axioms uniquely determine the area of a rectangle.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Axiom 1: Non-negativity",
+                "content": "For every set $S$ in the class of measurable sets, $a(S) \\geq 0$."
+              },
+              {
+                "title": "Axiom 2: Additivity",
+                "content": "If $S$ and $T$ are disjoint measurable sets, then $a(S \\cup T) = a(S) + a(T)$."
+              },
+              {
+                "title": "Axiom 3: Normalization",
+                "content": "The unit square $[0,1] \\times [0,1]$ has area 1."
+              },
+              {
+                "title": "Axiom 4: Congruence",
+                "content": "Congruent sets have equal areas. (Area is preserved under rigid motions.)"
+              },
+              {
+                "title": "Rectangle area derivation",
+                "content": "For a rectangle with sides $m$ and $n$ (positive integers), we can partition it into $mn$ unit squares. By additivity, area $= mn$. For rational sides $p/q$ and $r/s$, similar arguments give area $= (p/q)(r/s)$. For real sides, continuity considerations extend this to area $= $ length $\\times$ width."
+              }
+            ],
+            "conclusion": "These axioms uniquely determine that a rectangle with sides $a$ and $b$ has area $ab$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-7-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Using only the area axioms, prove that if $S \\subseteq T$ and both are measurable, then $a(S) \\leq a(T)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Write $T$ as disjoint union",
+                "content": "We can write $T = S \\cup (T - S)$ where $S$ and $T - S$ are disjoint."
+              },
+              {
+                "title": "Apply additivity",
+                "content": "By the additivity axiom: $a(T) = a(S) + a(T - S)$."
+              },
+              {
+                "title": "Apply non-negativity",
+                "content": "By non-negativity, $a(T - S) \\geq 0$, so $a(T) = a(S) + a(T - S) \\geq a(S)$."
+              }
+            ],
+            "conclusion": "Therefore $a(S) \\leq a(T)$ whenever $S \\subseteq T$. This is the monotonicity property of area."
+          }
+        },
+        {
+          "id": "2-7-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that a set consisting of a single point has area zero.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Enclose point in squares",
+                "content": "Let $P$ be a single point. For any $\\epsilon > 0$, we can enclose $P$ in a square of side $\\epsilon$."
+              },
+              {
+                "title": "Apply monotonicity",
+                "content": "Since the point set $\\{P\\}$ is contained in the square, $a(\\{P\\}) \\leq a(\\text{square}) = \\epsilon^2$."
+              },
+              {
+                "title": "Take limit",
+                "content": "Since this holds for all $\\epsilon > 0$ and $a(\\{P\\}) \\geq 0$, we must have $a(\\{P\\}) = 0$."
+              }
+            ],
+            "conclusion": "A single point has area zero. By finite additivity, any finite set of points also has area zero."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 8,
+      "sectionTitle": "Step Functions and Partitions",
+      "textbookSection": "I 1.8-1.10",
+      "examples": [
+        {
+          "id": "ex-2-8-1",
+          "type": "example",
+          "title": "Step Function Example",
+          "statement": "Let $s(x) = \\lfloor x \\rfloor$ (the greatest integer function) on $[0, 3]$. Identify the partition and the constant values on each subinterval.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Identify the partition",
+                "content": "The partition is $P = \\{0, 1, 2, 3\\}$, giving subintervals $[0, 1)$, $[1, 2)$, $[2, 3]$."
+              },
+              {
+                "title": "Find constant values",
+                "content": "On $[0, 1)$: $s(x) = 0$\nOn $[1, 2)$: $s(x) = 1$\nOn $[2, 3)$: $s(x) = 2$\nAt $x = 3$: $s(3) = 3$"
+              },
+              {
+                "title": "Note about endpoints",
+                "content": "The value at partition points doesn't affect the integral—what matters is the value on the open subintervals."
+              }
+            ],
+            "conclusion": "The floor function is a step function with jumps at each integer. Its integral over $[0, 3]$ is $0 \\cdot 1 + 1 \\cdot 1 + 2 \\cdot 1 = 3$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-8-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that if $s$ and $t$ are step functions on $[a, b]$, then so is $s + t$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Setup",
+                "content": "Let $P_s$ be a partition for $s$ and $P_t$ be a partition for $t$."
+              },
+              {
+                "title": "Form common refinement",
+                "content": "Let $P = P_s \\cup P_t$ (the common refinement). Then $P$ is also a partition of $[a, b]$."
+              },
+              {
+                "title": "Check constant on subintervals",
+                "content": "On each open subinterval of $P$, both $s$ and $t$ are constant (since $P$ refines both $P_s$ and $P_t$). Therefore $s + t$ is constant on each open subinterval of $P$."
+              }
+            ],
+            "conclusion": "$s + t$ is a step function with partition $P_s \\cup P_t$."
+          }
+        },
+        {
+          "id": "2-8-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that if $s$ is a step function on $[a, b]$ and $c$ is a constant, then $cs$ is also a step function.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use same partition",
+                "content": "Let $P$ be a partition for $s$. On each open subinterval $(x_{k-1}, x_k)$, $s(x) = s_k$ (constant)."
+              },
+              {
+                "title": "Multiply by constant",
+                "content": "Then $(cs)(x) = c \\cdot s_k$ on $(x_{k-1}, x_k)$, which is also constant."
+              }
+            ],
+            "conclusion": "$cs$ is a step function with the same partition as $s$."
+          }
+        },
+        {
+          "id": "2-8-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Let $s(x) = \\lfloor 2x \\rfloor$ on $[0, 2]$. Find the partition and compute the integral $\\int_0^2 s(x)\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find where jumps occur",
+                "content": "$\\lfloor 2x \\rfloor$ jumps when $2x$ is an integer, i.e., at $x = 0, 0.5, 1, 1.5, 2$."
+              },
+              {
+                "title": "Identify values on each subinterval",
+                "content": "On $[0, 0.5)$: $s(x) = 0$\nOn $[0.5, 1)$: $s(x) = 1$\nOn $[1, 1.5)$: $s(x) = 2$\nOn $[1.5, 2)$: $s(x) = 3$"
+              },
+              {
+                "title": "Compute integral",
+                "content": "$\\int_0^2 s(x)\\,dx = 0 \\cdot 0.5 + 1 \\cdot 0.5 + 2 \\cdot 0.5 + 3 \\cdot 0.5 = 0.5(0 + 1 + 2 + 3) = 3$"
+              }
+            ],
+            "conclusion": "$\\int_0^2 \\lfloor 2x \\rfloor\\,dx = 3$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 9,
+      "sectionTitle": "The Integral for Step Functions",
+      "textbookSection": "I 1.11-1.12",
+      "examples": [
+        {
+          "id": "ex-2-9-1",
+          "type": "example",
+          "title": "Computing a Step Function Integral",
+          "statement": "Let $s$ be the step function on $[0, 4]$ with $s(x) = 2$ for $x \\in [0, 1)$, $s(x) = -1$ for $x \\in [1, 3)$, and $s(x) = 3$ for $x \\in [3, 4]$. Compute $\\int_0^4 s(x)\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply definition",
+                "content": "For a step function, $\\int_a^b s(x)\\,dx = \\sum_{k=1}^{n} s_k \\cdot (x_k - x_{k-1})$ where $s_k$ is the value on the $k$-th subinterval."
+              },
+              {
+                "title": "Compute each term",
+                "content": "First interval $[0, 1)$: $2 \\cdot (1 - 0) = 2$\nSecond interval $[1, 3)$: $(-1) \\cdot (3 - 1) = -2$\nThird interval $[3, 4]$: $3 \\cdot (4 - 3) = 3$"
+              },
+              {
+                "title": "Sum",
+                "content": "$\\int_0^4 s(x)\\,dx = 2 + (-2) + 3 = 3$"
+              }
+            ],
+            "conclusion": "$\\int_0^4 s(x)\\,dx = 3$. Note that the integral can be interpreted as signed area: positive above the $x$-axis, negative below."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-9-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that for step functions $s$ and $t$ on $[a, b]$: $\\int_a^b (s + t) = \\int_a^b s + \\int_a^b t$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use common refinement",
+                "content": "Let $P$ be a common refinement of the partitions for $s$ and $t$. On each subinterval $(x_{k-1}, x_k)$, let $s = s_k$ and $t = t_k$."
+              },
+              {
+                "title": "Compute LHS",
+                "content": "$\\int_a^b (s + t) = \\sum_k (s_k + t_k)(x_k - x_{k-1})$"
+              },
+              {
+                "title": "Expand",
+                "content": "$= \\sum_k s_k(x_k - x_{k-1}) + \\sum_k t_k(x_k - x_{k-1}) = \\int_a^b s + \\int_a^b t$"
+              }
+            ],
+            "conclusion": "The integral is additive: $\\int_a^b (s + t) = \\int_a^b s + \\int_a^b t$."
+          }
+        },
+        {
+          "id": "2-9-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that for a step function $s$ on $[a, b]$ and constant $c$: $\\int_a^b cs = c\\int_a^b s$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Write out the integral",
+                "content": "$\\int_a^b cs = \\sum_k (cs_k)(x_k - x_{k-1})$"
+              },
+              {
+                "title": "Factor out $c$",
+                "content": "$= c \\sum_k s_k(x_k - x_{k-1}) = c \\int_a^b s$"
+              }
+            ],
+            "conclusion": "The integral is homogeneous: $\\int_a^b cs = c\\int_a^b s$."
+          }
+        },
+        {
+          "id": "2-9-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that if $s(x) \\leq t(x)$ for all $x \\in [a, b]$ (step functions), then $\\int_a^b s \\leq \\int_a^b t$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Define $u = t - s$",
+                "content": "Since $s(x) \\leq t(x)$ for all $x$, we have $u(x) = t(x) - s(x) \\geq 0$ for all $x$."
+              },
+              {
+                "title": "Compute integral of $u$",
+                "content": "$\\int_a^b u = \\sum_k u_k(x_k - x_{k-1})$ where $u_k \\geq 0$ and $x_k - x_{k-1} > 0$."
+              },
+              {
+                "title": "Conclude",
+                "content": "Therefore $\\int_a^b u \\geq 0$, which means $\\int_a^b t - \\int_a^b s \\geq 0$."
+              }
+            ],
+            "conclusion": "If $s \\leq t$ pointwise, then $\\int_a^b s \\leq \\int_a^b t$. This is the comparison theorem for step functions."
+          }
+        },
+        {
+          "id": "2-9-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Prove the additivity over intervals: $\\int_a^b s + \\int_b^c s = \\int_a^c s$ for any step function $s$ on $[a, c]$ with $a < b < c$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Refine the partition",
+                "content": "Let $P$ be a partition of $[a, c]$ that includes the point $b$."
+              },
+              {
+                "title": "Split the sum",
+                "content": "$\\int_a^c s = \\sum_{\\text{all } k} s_k(x_k - x_{k-1})$\n$= \\sum_{x_k \\leq b} s_k(x_k - x_{k-1}) + \\sum_{x_{k-1} \\geq b} s_k(x_k - x_{k-1})$"
+              },
+              {
+                "title": "Identify the parts",
+                "content": "The first sum equals $\\int_a^b s$ and the second equals $\\int_b^c s$."
+              }
+            ],
+            "conclusion": "$\\int_a^c s = \\int_a^b s + \\int_b^c s$ for $a < b < c$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 10,
+      "sectionTitle": "Upper and Lower Integrals",
+      "textbookSection": "I 1.13-1.15",
+      "examples": [
+        {
+          "id": "ex-2-10-1",
+          "type": "example",
+          "title": "Upper and Lower Integrals",
+          "statement": "For $f(x) = x$ on $[0, 1]$, compute the upper and lower integrals using step functions.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Partition uniformly",
+                "content": "Use $P_n = \\{0, 1/n, 2/n, \\ldots, n/n\\}$ with $n$ equal subintervals."
+              },
+              {
+                "title": "Lower step function",
+                "content": "On $[(k-1)/n, k/n)$, the infimum of $f(x) = x$ is $(k-1)/n$.\n$\\int_0^1 s_n = \\sum_{k=1}^{n} \\frac{k-1}{n} \\cdot \\frac{1}{n} = \\frac{1}{n^2} \\sum_{k=0}^{n-1} k = \\frac{1}{n^2} \\cdot \\frac{(n-1)n}{2} = \\frac{n-1}{2n}$"
+              },
+              {
+                "title": "Upper step function",
+                "content": "On $[(k-1)/n, k/n)$, the supremum of $f(x) = x$ is $k/n$.\n$\\int_0^1 t_n = \\sum_{k=1}^{n} \\frac{k}{n} \\cdot \\frac{1}{n} = \\frac{1}{n^2} \\sum_{k=1}^{n} k = \\frac{1}{n^2} \\cdot \\frac{n(n+1)}{2} = \\frac{n+1}{2n}$"
+              },
+              {
+                "title": "Take limits",
+                "content": "As $n \\to \\infty$: lower integral $\\to 1/2$, upper integral $\\to 1/2$."
+              }
+            ],
+            "conclusion": "Both the upper and lower integrals equal $1/2$, so $\\int_0^1 x\\,dx = \\frac{1}{2}$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-10-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Let $f(x) = x^2$ on $[0, 1]$. Compute the lower and upper sums using a uniform partition into $n$ parts, and show they both converge to $1/3$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Setup",
+                "content": "Partition: $x_k = k/n$ for $k = 0, 1, \\ldots, n$. Width: $\\Delta x = 1/n$."
+              },
+              {
+                "title": "Lower sum",
+                "content": "On $[(k-1)/n, k/n]$, the minimum of $x^2$ occurs at the left endpoint: $((k-1)/n)^2$.\n$L_n = \\sum_{k=1}^{n} \\left(\\frac{k-1}{n}\\right)^2 \\cdot \\frac{1}{n} = \\frac{1}{n^3} \\sum_{k=0}^{n-1} k^2 = \\frac{1}{n^3} \\cdot \\frac{(n-1)n(2n-1)}{6}$"
+              },
+              {
+                "title": "Upper sum",
+                "content": "On $[(k-1)/n, k/n]$, the maximum of $x^2$ occurs at the right endpoint: $(k/n)^2$.\n$U_n = \\sum_{k=1}^{n} \\left(\\frac{k}{n}\\right)^2 \\cdot \\frac{1}{n} = \\frac{1}{n^3} \\sum_{k=1}^{n} k^2 = \\frac{1}{n^3} \\cdot \\frac{n(n+1)(2n+1)}{6}$"
+              },
+              {
+                "title": "Take limits",
+                "content": "$L_n = \\frac{(n-1)(2n-1)}{6n^2} \\to \\frac{2}{6} = \\frac{1}{3}$\n$U_n = \\frac{(n+1)(2n+1)}{6n^2} \\to \\frac{2}{6} = \\frac{1}{3}$"
+              }
+            ],
+            "conclusion": "Both limits equal $1/3$, so $\\int_0^1 x^2\\,dx = \\frac{1}{3}$."
+          }
+        },
+        {
+          "id": "2-10-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Let $f(x) = 1$ if $x$ is rational and $f(x) = 0$ if $x$ is irrational (Dirichlet function) on $[0, 1]$. Find the upper and lower integrals.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Analyze lower integral",
+                "content": "For any step function $s \\leq f$: on each open interval, there are irrational numbers, so $f$ takes value $0$. Thus $s \\leq 0$ on each open interval.\nTherefore $\\int_0^1 s \\leq 0$, and the supremum of such integrals is $0$."
+              },
+              {
+                "title": "Analyze upper integral",
+                "content": "For any step function $t \\geq f$: on each open interval, there are rational numbers, so $f$ takes value $1$. Thus $t \\geq 1$ on each open interval.\nTherefore $\\int_0^1 t \\geq 1$, and the infimum of such integrals is $1$."
+              },
+              {
+                "title": "Compare",
+                "content": "Lower integral $= 0$, Upper integral $= 1$."
+              }
+            ],
+            "conclusion": "The upper and lower integrals are different, so the Dirichlet function is NOT integrable (in the Riemann sense)."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 11,
+      "sectionTitle": "Monotonic Functions",
+      "textbookSection": "I 1.16-1.17",
+      "examples": [
+        {
+          "id": "ex-2-11-1",
+          "type": "example",
+          "title": "Integrability of Monotonic Functions",
+          "statement": "Prove that every bounded monotonic function on $[a, b]$ is integrable.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Setup for increasing $f$",
+                "content": "Let $f$ be increasing on $[a, b]$. Use uniform partition: $x_k = a + k(b-a)/n$."
+              },
+              {
+                "title": "Form upper and lower sums",
+                "content": "Since $f$ is increasing:\n$s_n(x) = f(x_{k-1})$ on $(x_{k-1}, x_k)$ (lower step function)\n$t_n(x) = f(x_k)$ on $(x_{k-1}, x_k)$ (upper step function)"
+              },
+              {
+                "title": "Compute difference",
+                "content": "$\\int_a^b t_n - \\int_a^b s_n = \\sum_{k=1}^{n} [f(x_k) - f(x_{k-1})] \\cdot \\frac{b-a}{n}$\n$= \\frac{b-a}{n} \\sum_{k=1}^{n} [f(x_k) - f(x_{k-1})]$\n$= \\frac{b-a}{n} [f(b) - f(a)]$ (telescoping)"
+              },
+              {
+                "title": "Take limit",
+                "content": "As $n \\to \\infty$, the difference $\\to 0$."
+              }
+            ],
+            "conclusion": "The upper and lower integrals are equal, so $f$ is integrable."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-11-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Let $f(x) = 1/x$ on $[1, 2]$. Compute upper and lower Riemann sums with a uniform partition of $n$ parts.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Setup",
+                "content": "Partition: $x_k = 1 + k/n$ for $k = 0, 1, \\ldots, n$. Width: $\\Delta x = 1/n$."
+              },
+              {
+                "title": "Note monotonicity",
+                "content": "$f(x) = 1/x$ is decreasing, so max on $[x_{k-1}, x_k]$ is at $x_{k-1}$ and min is at $x_k$."
+              },
+              {
+                "title": "Upper sum",
+                "content": "$U_n = \\sum_{k=1}^{n} \\frac{1}{x_{k-1}} \\cdot \\frac{1}{n} = \\frac{1}{n} \\sum_{k=1}^{n} \\frac{1}{1 + (k-1)/n} = \\frac{1}{n} \\sum_{k=0}^{n-1} \\frac{n}{n+k}$"
+              },
+              {
+                "title": "Lower sum",
+                "content": "$L_n = \\sum_{k=1}^{n} \\frac{1}{x_k} \\cdot \\frac{1}{n} = \\frac{1}{n} \\sum_{k=1}^{n} \\frac{1}{1 + k/n} = \\frac{1}{n} \\sum_{k=1}^{n} \\frac{n}{n+k}$"
+              },
+              {
+                "title": "Note the pattern",
+                "content": "These are Riemann sums that approximate $\\int_1^2 \\frac{1}{x}\\,dx = \\ln 2$."
+              }
+            ],
+            "conclusion": "Both $U_n$ and $L_n$ converge to $\\ln 2 \\approx 0.693$ as $n \\to \\infty$."
+          }
+        },
+        {
+          "id": "2-11-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that if $f$ is integrable on $[a, b]$ and $f(x) \\geq 0$ for all $x$, then $\\int_a^b f \\geq 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use lower step functions",
+                "content": "The constant function $s(x) = 0$ is a step function with $s(x) \\leq f(x)$ for all $x$."
+              },
+              {
+                "title": "Apply definition of lower integral",
+                "content": "The lower integral is $\\sup\\{\\int s : s \\leq f, s \\text{ step}\\} \\geq \\int_a^b 0 = 0$."
+              },
+              {
+                "title": "Conclude",
+                "content": "Since $f$ is integrable, the integral equals the lower integral, so $\\int_a^b f \\geq 0$."
+              }
+            ],
+            "conclusion": "Non-negative functions have non-negative integrals."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 12,
+      "sectionTitle": "Basic Properties of the Integral",
+      "textbookSection": "I 1.18-1.20",
+      "examples": [
+        {
+          "id": "ex-2-12-1",
+          "type": "example",
+          "title": "Properties of the Integral",
+          "statement": "State and prove the linearity property of the integral: if $f$ and $g$ are integrable on $[a, b]$ and $c$ is a constant, then $\\int_a^b (f + cg) = \\int_a^b f + c\\int_a^b g$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Additivity: $\\int(f + g) = \\int f + \\int g$",
+                "content": "For any $\\epsilon > 0$, there exist step functions with:\n$s_1 \\leq f \\leq t_1$ and $\\int t_1 - \\int s_1 < \\epsilon/2$\n$s_2 \\leq g \\leq t_2$ and $\\int t_2 - \\int s_2 < \\epsilon/2$\n\nThen $s_1 + s_2 \\leq f + g \\leq t_1 + t_2$ and\n$\\int(t_1 + t_2) - \\int(s_1 + s_2) < \\epsilon$"
+              },
+              {
+                "title": "Homogeneity: $\\int cf = c \\int f$",
+                "content": "Case $c \\geq 0$: If $s \\leq f \\leq t$, then $cs \\leq cf \\leq ct$, and $\\int ct - \\int cs = c(\\int t - \\int s)$.\n\nCase $c < 0$: If $s \\leq f \\leq t$, then $ct \\leq cf \\leq cs$, and the argument reverses the roles of upper and lower."
+              },
+              {
+                "title": "Combine",
+                "content": "$\\int(f + cg) = \\int f + \\int(cg) = \\int f + c\\int g$"
+              }
+            ],
+            "conclusion": "The integral is a linear operator on the space of integrable functions."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-12-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that if $f$ is integrable on $[a, b]$, then $|f|$ is also integrable, and $\\left|\\int_a^b f\\right| \\leq \\int_a^b |f|$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Show $|f|$ is integrable",
+                "content": "If $s \\leq f \\leq t$ with $\\int t - \\int s < \\epsilon$, we need to bound $|f|$.\nNote: $||f(x)| - |f(y)|| \\leq |f(x) - f(y)|$ for any $x, y$.\nThis means variations in $|f|$ are no larger than variations in $f$, so if $f$ has small upper-lower gap, so does $|f|$."
+              },
+              {
+                "title": "Prove the inequality",
+                "content": "We have $-|f| \\leq f \\leq |f|$, so:\n$-\\int|f| \\leq \\int f \\leq \\int|f|$\n\nThis means $|\\int f| \\leq \\int|f|$."
+              }
+            ],
+            "conclusion": "$\\left|\\int_a^b f\\right| \\leq \\int_a^b |f|$. This is the integral triangle inequality."
+          }
+        },
+        {
+          "id": "2-12-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "If $f$ is integrable on $[a, b]$ with $m \\leq f(x) \\leq M$ for all $x$, prove that $m(b-a) \\leq \\int_a^b f \\leq M(b-a)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply comparison",
+                "content": "Since $m \\leq f(x) \\leq M$ for all $x$, we can compare $f$ with constant functions."
+              },
+              {
+                "title": "Lower bound",
+                "content": "The constant function $g(x) = m$ satisfies $g \\leq f$.\nBy the comparison theorem: $\\int_a^b m \\leq \\int_a^b f$.\nSo $m(b-a) \\leq \\int_a^b f$."
+              },
+              {
+                "title": "Upper bound",
+                "content": "The constant function $h(x) = M$ satisfies $f \\leq h$.\nBy the comparison theorem: $\\int_a^b f \\leq \\int_a^b M$.\nSo $\\int_a^b f \\leq M(b-a)$."
+              }
+            ],
+            "conclusion": "$m(b-a) \\leq \\int_a^b f \\leq M(b-a)$. This bounds the integral in terms of the function's range."
+          }
+        },
+        {
+          "id": "2-12-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Let $f$ be integrable on $[a, b]$ with $\\int_a^b f = 0$ and $f(x) \\geq 0$ for all $x$. If $f$ is continuous at some point $c \\in (a, b)$, prove that $f(c) = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume contradiction",
+                "content": "Suppose $f(c) = \\epsilon > 0$ for some $c \\in (a, b)$."
+              },
+              {
+                "title": "Use continuity",
+                "content": "Since $f$ is continuous at $c$, there exists $\\delta > 0$ such that $f(x) > \\epsilon/2$ for all $x \\in (c - \\delta, c + \\delta) \\cap [a, b]$."
+              },
+              {
+                "title": "Get positive integral",
+                "content": "Let $I = (c - \\delta, c + \\delta) \\cap [a, b]$. Then:\n$\\int_a^b f \\geq \\int_I f > \\frac{\\epsilon}{2} \\cdot |I| > 0$"
+              },
+              {
+                "title": "Contradiction",
+                "content": "This contradicts $\\int_a^b f = 0$."
+              }
+            ],
+            "conclusion": "Therefore $f(c) = 0$ at every point of continuity."
+          }
+        }
+      ]
+    }
+  ]
+}

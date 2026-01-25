@@ -9,12 +9,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Euclid\'s proof of the Pythagorean theorem uses:',
     options: [
+      'Triangle-parallelogram area relationships',
       'Only algebra',
       'Prime factorization',
       'Calculus',
-      'Triangle-parallelogram area relationships'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Euclid\'s proof uses the fact that a triangle has half the area of a parallelogram with the same base and height, combined with congruence.',
@@ -39,12 +39,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The irrationality of $\\sqrt{2}$ led to:',
     options: [
-      'Abandonment of mathematics',
       'Separation of arithmetic and geometry',
+      'Abandonment of mathematics',
       'Proof that the theorem is wrong',
       'Discovery of calculus',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The Greeks responded by separating arithmetic from geometry and developing a "geometric algebra" for lengths and areas.',
@@ -56,10 +56,10 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       'Converting to decimals',
       'Adding them repeatedly',
-      'Using prime factorization',
       'Forming rectangles with them as sides',
+      'Using prime factorization',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'In geometric algebra, the "product" of two lengths is the area of the rectangle with those lengths as adjacent sides.',
@@ -84,12 +84,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who completed the reconciliation by defining real numbers?',
     options: [
-      'Dedekind',
       'Gauss',
+      'Dedekind',
       'Euclid',
-      'Pythagoras'
+      'Pythagoras',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Dedekind (1858) defined the concept of real number to capture all possible lengths, completing the reconciliation of arithmetic and geometry.',
@@ -99,12 +99,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Pythagorean theorem is valuable because:',
     options: [
-      'It relates lengths simply via their squares, even when the lengths have no simple ratio',
       'It avoids using numbers',
       'It only works for rational numbers',
       'It proves all numbers are rational',
+      'It relates lengths simply via their squares, even when the lengths have no simple ratio',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The theorem relates the sides and hypotenuse simply via their squares ($a^2 + b^2 = c^2$), even though the lengths themselves may not be simply related.',

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .timeline-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin: 50px 0;
+    }
+    .timeline-point {
+      text-align: center;
+      width: 300px;
+    }
+    .timeline-date {
+      color: #F7931A;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .timeline-event {
+      background: rgba(247, 147, 26, 0.08);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      padding: 25px;
+      border-radius: 8px;
+    }
+    .timeline-title {
+      color: #E6EDF3;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .timeline-desc {
+      color: #8B949E;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .timeline-arrow {
+      color: #F7931A;
+      font-size: 36px;
+    }
+    .nixon-box {
+      background: rgba(239, 68, 68, 0.1);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+      padding: 35px 50px;
+      border-radius: 12px;
+      margin: 40px auto;
+      max-width: 800px;
+    }
+    .nixon-date {
+      color: #EF4444;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      margin-bottom: 15px;
+    }
+    .nixon-text {
+      color: #E6EDF3;
+      font-size: 26px;
+      line-height: 1.5;
+    }
+    .consequence {
+      background: rgba(139, 148, 158, 0.1);
+      border-left: 4px solid #8B949E;
+      padding: 25px 40px;
+      margin-top: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .consequence-text {
+      color: #8B949E;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Rise and Fall of Cash</div>
+    <div class="section-title">When Cash Lost Its Bearer Status</div>
+    <div class="timeline-container">
+      <div class="timeline-point">
+        <div class="timeline-date">Pre-1971</div>
+        <div class="timeline-event">
+          <div class="timeline-title">Cash = Gold Claim</div>
+          <div class="timeline-desc">Banks secured gold. Cash was a bearer asset representing a claim on gold.</div>
+        </div>
+      </div>
+      <div class="timeline-arrow">→</div>
+      <div class="timeline-point">
+        <div class="timeline-date">August 15, 1971</div>
+        <div class="timeline-event">
+          <div class="timeline-title">Nixon Shock</div>
+          <div class="timeline-desc">Gold window closed. Cash could no longer be exchanged for gold.</div>
+        </div>
+      </div>
+      <div class="timeline-arrow">→</div>
+      <div class="timeline-point">
+        <div class="timeline-date">Post-1971</div>
+        <div class="timeline-event">
+          <div class="timeline-title">Fiat Currency</div>
+          <div class="timeline-desc">Cash lost its power as a bearer asset.</div>
+        </div>
+      </div>
+    </div>
+    <div class="consequence">
+      <div class="consequence-text">People didn't want to hold significant amounts out of fear their government would place further frictions on it.</div>
+    </div>
+  </div>
+</body>
+</html>

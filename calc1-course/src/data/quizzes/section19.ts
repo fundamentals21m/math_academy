@@ -6,10 +6,26 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\lim_{x \\to a} f(x) = L$ means:',
     options: [
-      '$f(a) = L$',
-      '$f$ is continuous at $a$',
-      '$f(x) = L$ for all $x$ near $a$',
-      '$f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$'
+      '$f(a) = L
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The limit describes the behavior of $f(x)$ as $x$ approaches $a$.',
+  },
+      '$f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The limit describes the behavior of $f(x)$ as $x$ approaches $a$.',
+  },
+      '$f$ is continuous at $a
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The limit describes the behavior of $f(x)$ as $x$ approaches $a$.',
+  },
+      '$f(x) = L$ for all $x$ near $a
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The limit describes the behavior of $f(x)$ as $x$ approaches $a$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -51,10 +67,22 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\lim_{x \\to 0} \\frac{\\sin x}{x} = ?$',
     options: [
-      '$0$',
-      '$1$',
-      '$\\infty$',
-      'Does not exist'
+      '$0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.',
+  },
+      '$\\infty
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.',
+  },
+      'Does not exist',
+      '$1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

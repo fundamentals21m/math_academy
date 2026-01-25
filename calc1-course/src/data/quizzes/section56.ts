@@ -118,10 +118,26 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The general solution to $y\'\' + y = 0$ is:',
     options: [
-      '$y = C_1 \\cos x + C_2 \\sin x$',
-      '$y = C_1 e^x + C_2 e^{-x}$',
-      '$y = Ce^{ix}$',
-      '$y = C_1 + C_2 x$'
+      '$y = C_1 e^x + C_2 e^{-x}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Complex roots $\\pm i$ (with $\\alpha = 0$, $\\beta = 1$) give $y = C_1 \\cos x + C_2 \\sin x$.',
+  },
+      '$y = Ce^{ix}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Complex roots $\\pm i$ (with $\\alpha = 0$, $\\beta = 1$) give $y = C_1 \\cos x + C_2 \\sin x$.',
+  },
+      '$y = C_1 + C_2 x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Complex roots $\\pm i$ (with $\\alpha = 0$, $\\beta = 1$) give $y = C_1 \\cos x + C_2 \\sin x$.',
+  },
+      '$y = C_1 \\cos x + C_2 \\sin x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Complex roots $\\pm i$ (with $\\alpha = 0$, $\\beta = 1$) give $y = C_1 \\cos x + C_2 \\sin x$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

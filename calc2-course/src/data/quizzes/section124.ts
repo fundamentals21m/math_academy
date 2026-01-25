@@ -110,10 +110,26 @@ export const section124Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The polar moment of inertia $I_0$ about the origin is related to $I_x$ and $I_y$ by:',
     options: [
-      '$I_0 = I_x + I_y$',
-      '$I_0 = I_x \\cdot I_y$',
-      '$I_0 = I_x - I_y$',
-      '$I_0 = \\sqrt{I_x^2 + I_y^2}$'
+      '$I_0 = I_x \\cdot I_y
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The polar moment of inertia is $I_0 = \\iint_S (x^2 + y^2)f\\,dx\\,dy = I_y + I_x$, since the squared distance from the origin is $x^2 + y^2$.',
+  },
+      '$I_0 = I_x - I_y
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The polar moment of inertia is $I_0 = \\iint_S (x^2 + y^2)f\\,dx\\,dy = I_y + I_x$, since the squared distance from the origin is $x^2 + y^2$.',
+  },
+      '$I_0 = \\sqrt{I_x^2 + I_y^2}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The polar moment of inertia is $I_0 = \\iint_S (x^2 + y^2)f\\,dx\\,dy = I_y + I_x$, since the squared distance from the origin is $x^2 + y^2$.',
+  },
+      '$I_0 = I_x + I_y
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The polar moment of inertia is $I_0 = \\iint_S (x^2 + y^2)f\\,dx\\,dy = I_y + I_x$, since the squared distance from the origin is $x^2 + y^2$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

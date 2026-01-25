@@ -8,8 +8,13 @@ export const section61Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'Who was a prominent and influential proponent of abstract algebra in the 20th century?',
-    options: ['Kurt Gödel', 'Emmy Noether', 'Bertrand Russell', 'David Hilbert'],
-    correctIndex: 1,
+    options: [
+      'Kurt Gödel',
+      'Bertrand Russell',
+      'Emmy Noether',
+      'David Hilbert',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Emmy Noether (1882–1935) was a prominent and influential proponent of abstract algebra. The supreme abstraction of category theory emerged from this trend in mathematics.',
@@ -20,11 +25,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'What is a concrete category?',
     options: [
       'A class of sets with no additional structure',
-      'A class of structured sets with all structure-preserving functions between them',
       'A collection of abstract objects with no functions',
       'A single set with multiple operations',
+      'A class of structured sets with all structure-preserving functions between them',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A concrete category is a class of sets, each endowed with a certain structure, together with the class of all functions which map one set to another while preserving this structure.',
@@ -66,10 +71,10 @@ export const section61Questions: QuizQuestion[] = [
     options: [
       'Only the binary operation',
       'Only the identity element',
-      'The ordering relation',
       'Both the binary operation and the identity element',
+      'The ordering relation',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A monoid homomorphism f: A → A\' must preserve both structure: f(a·b) = f(a)·f(b) and f(1) = 1 (identity maps to identity).',
@@ -81,10 +86,10 @@ export const section61Questions: QuizQuestion[] = [
     options: [
       'Symmetric and transitive',
       'Antisymmetric and transitive',
-      'Reflexive and transitive',
       'Reflexive and symmetric',
+      'Reflexive and transitive',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A pre-ordered set has a binary relation ≤ that is reflexive (a ≤ a) and transitive (if a ≤ b and b ≤ c, then a ≤ c).',
@@ -95,11 +100,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'What is a monotone mapping?',
     options: [
       'A function that reverses order',
+      'A function that preserves order: if a ≤ b then f(a) ≤ f(b)',
       'A function that maps to a single element',
       'A function that creates new orderings',
-      'A function that preserves order: if a ≤ b then f(a) ≤ f(b)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A monotone mapping is a function f from a pre-ordered set A to a pre-ordered set A\' that preserves order: if a ≤ b then f(a) ≤ f(b).',
@@ -124,12 +129,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which two properties always hold in concrete categories?',
     options: [
+      'Identity preserves structure, and composition of structure-preserving functions preserves structure',
       'All functions are invertible, and composition is commutative',
       'All morphisms are bijections, and there are finite objects',
-      'Identity preserves structure, and composition of structure-preserving functions preserves structure',
-      'Every set has infinite elements, and functions are continuous'
+      'Every set has infinite elements, and functions are continuous',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'In all concrete categories: (1) the identity function on any set always preserves structure, and (2) the composition of two structure-preserving functions also preserves structure.',

@@ -9,12 +9,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who discovered that addition and multiplication can be defined inductively?',
     options: [
-      'Grassmann',
       'Euclid',
+      'Grassmann',
       'Gauss',
       'Von Neumann',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Hermann Grassmann (1861) made the breakthrough by noticing that induction can be used not only for proofs but also for definitions.',
@@ -75,9 +75,24 @@ export const section08Questions: QuizQuestion[] = [
     question: 'In von Neumann\'s definition, what is the number 2?',
     options: [
       'The empty set',
-      '$\\{0, 1\\}$',
-      '$\\{0\\}$',
-      '$\\{1, 2\\}$'
+      '$\\{0\\}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'Von Neumann defines each natural number as the set of its predecessors. So $0 = \\{\\}$, $1 = \\{0\\}$, $2 = \\{0, 1\\}$, etc.',
+  },
+      '$\\{1, 2\\}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'Von Neumann defines each natural number as the set of its predecessors. So $0 = \\{\\}$, $1 = \\{0\\}$, $2 = \\{0, 1\\}$, etc.',
+  },
+      '$\\{0, 1\\}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'Von Neumann defines each natural number as the set of its predecessors. So $0 = \\{\\}$, $1 = \\{0\\}$, $2 = \\{0, 1\\}$, etc.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -91,8 +106,13 @@ export const section08Questions: QuizQuestion[] = [
     options: [
       'It requires calculus',
       'It uses only prime numbers',
-      'Ordering is captured by set membership: $m < n \\Leftrightarrow m \\in n$',
       'It avoids the use of sets',
+      'Ordering is captured by set membership: $m < n \\Leftrightarrow m \\in n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'The elegance lies in reducing ordering to membership: $m < n$ if and only if $m$ is a member of $n$. Everything is built from the empty set.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -106,10 +126,10 @@ export const section08Questions: QuizQuestion[] = [
     options: [
       'All numbers are finite',
       'Every set has a successor',
+      'There exists an infinite set',
       'Induction always works',
-      'There exists an infinite set'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The axiom of infinity states that there exists a set $\\Omega$ containing the empty set and closed under the successor operation—thus an infinite set exists.',
@@ -119,12 +139,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What crucial insight did Grassmann have about induction?',
     options: [
+      'It can be used for definitions, not just proofs',
       'It fails for multiplication',
       'It can only be used for sums',
-      'It can be used for definitions, not just proofs',
       'It requires the axiom of infinity',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Grassmann\'s breakthrough was realizing that induction can serve as a method of definition, not just proof. This allowed defining + and × inductively.',
@@ -134,8 +154,13 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What can be derived from the inductive definitions of + and ×?',
     options: [
+      'All ring properties of $\\mathbb{Z}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      'From the inductive definitions, Grassmann proved all ring properties: associativity, commutativity, and distributivity. Thus arithmetic is entirely based on induction!',
+  },
       'Only the commutative law',
-      'All ring properties of $\\mathbb{Z}$',
       'The prime number theorem',
       'The fundamental theorem of calculus',
     ],

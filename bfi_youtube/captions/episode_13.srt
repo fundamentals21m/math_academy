@@ -1,0 +1,236 @@
+1
+00:00:00,000 --> 00:00:05,519
+If a borrower posts Bitcoin as collateral, this loan would automatically become the most senior loan.
+
+2
+00:00:05,519 --> 00:00:10,240
+A person will let any other asset go before relinquishing their Bitcoin to a lender.
+
+3
+00:00:10,240 --> 00:00:13,919
+Credit is one of the fundamental features of any high functioning society.
+
+4
+00:00:14,640 --> 00:00:19,600
+The ability to borrow and lend at a healthy equilibrium is what separates the highest
+
+5
+00:00:19,600 --> 00:00:24,960
+functioning economies from the lowest ones. Credit is built on trust and trustworthiness,
+
+6
+00:00:25,600 --> 00:00:31,600
+characterized by its own term. Creditworthiness. A hallmark of a society built on inflationary
+
+7
+00:00:31,600 --> 00:00:37,280
+money is that debt is ubiquitous. It makes sense to borrow money now, use it for something valuable,
+
+8
+00:00:37,280 --> 00:00:41,920
+and pay back your loan in the future with debased money. In a world without Bitcoin,
+
+9
+00:00:41,920 --> 00:00:45,359
+this is how people win in the Fiat game. You want to be a borrower.
+
+10
+00:00:45,920 --> 00:00:51,600
+The US government has issued close to $40 trillion in debt, far in excess of GDP.
+
+11
+00:00:51,600 --> 00:00:55,759
+There is zero likelihood of ever paying it back without significant dollar devaluation.
+
+12
+00:00:56,399 --> 00:01:02,880
+If we include unfunded liabilities, social security, Medicare, government pensions,
+
+13
+00:01:03,600 --> 00:01:08,959
+we're looking at over $200 trillion. Auto loans total $2 trillion.
+
+14
+00:01:09,760 --> 00:01:15,040
+Student loans, irrevocable and immune to bankruptcy. Another $2 trillion.
+
+15
+00:01:15,680 --> 00:01:21,439
+Fannie Mae and Freddie Mac. Government-backed mortgage lending. $7 trillion.
+
+16
+00:01:21,439 --> 00:01:26,000
+The story of virtually every market crash going back to Sumeria involves collateral becoming
+
+17
+00:01:26,000 --> 00:01:32,319
+devalued significantly over a short period of time. In 2008, the global financial crisis,
+
+18
+00:01:32,319 --> 00:01:39,599
+housing collateral plummeted. People walked away from underwater mortgages. In 2022, the Bank of England
+
+19
+00:01:39,599 --> 00:01:47,439
+pension bailout. UK GILTS rapidly devalued by Fed rate rises, triggering emergency intervention.
+
+20
+00:01:48,079 --> 00:01:54,640
+In 2023, the US banking crisis. Five major banks failed when US Treasuries were devalued by an
+
+21
+00:01:54,640 --> 00:02:01,439
+unprecedented 5% rate rise. UK GILTS and US Treasuries were no longer reliable collateral.
+
+22
+00:02:02,239 --> 00:02:07,920
+We seem to have reached the end of the line. Enter Bitcoin and a company called Battery Finance.
+
+23
+00:02:07,920 --> 00:02:12,800
+New market capital and their subsidiary, Battery Finance, have developed a loan product that
+
+24
+00:02:12,800 --> 00:02:18,159
+might possibly transform credit markets as we know them. Battery Finance enables Bitcoin to be
+
+25
+00:02:18,159 --> 00:02:24,479
+used as 10% to 30% of the collateral for loans alongside traditional assets. The key features.
+
+26
+00:02:25,360 --> 00:02:31,360
+Bitcoin's market price won't factor into the loan to value ratio for a fixed period. Minimum
+
+27
+00:02:31,360 --> 00:02:37,759
+four years. Aligned with Bitcoin's having cycle. Lender and borrower share in Bitcoin's
+
+28
+00:02:37,759 --> 00:02:43,280
+appreciation over the loan life. Longer loan duration means greater share of appreciation for the
+
+29
+00:02:43,280 --> 00:02:49,680
+borrower. Using Bitcoin as collateral reduces the interest rate on the loan. And the loan can be
+
+30
+00:02:49,680 --> 00:02:54,800
+paid off at any time without penalty. The loan carries a single digit interest rate and has a
+
+31
+00:02:54,800 --> 00:03:00,080
+maturity of 10 years. Credit markets operate around the concept of subordination, which loans get
+
+32
+00:03:00,080 --> 00:03:04,879
+paid off first if a borrower has multiple loans. This idea of seniority is about to be flipped
+
+33
+00:03:04,879 --> 00:03:09,840
+on its head by Battery Finance's loan product. If a borrower posts Bitcoin as collateral,
+
+34
+00:03:10,560 --> 00:03:15,439
+this loan would automatically become the most senior loan, not because of contractual priority,
+
+35
+00:03:16,080 --> 00:03:21,199
+but because of behavioral priority. A person will let any other asset go before relinquishing their
+
+36
+00:03:21,199 --> 00:03:28,080
+Bitcoin to a lender. This behavioral reality, combined with accumulated Bitcoin gains over time,
+
+37
+00:03:28,080 --> 00:03:32,560
+means borrowers have extreme incentive to honor Bitcoin collateralized loans first.
+
+38
+00:03:33,520 --> 00:03:37,759
+After four years, there will almost certainly be significant gains at stake.
+
+39
+00:03:38,560 --> 00:03:42,080
+Default rates on these loans should approach triple A equivalent behavior.
+
+40
+00:03:42,960 --> 00:03:47,439
+Traditional subordination structures become inverted. There are two types of Bitcoin borrowers.
+
+41
+00:03:48,159 --> 00:03:53,199
+The Dagen accumulated Bitcoin through reckless borrowing. They're not afraid of debt or high yields.
+
+42
+00:03:53,680 --> 00:03:58,240
+They would be considered a terrible borrower by traditional lenders. They view themselves as
+
+43
+00:03:58,240 --> 00:04:04,000
+speculatively attacking the dollar. But they will absolutely prioritize the home loan if Bitcoin gains
+
+44
+00:04:04,000 --> 00:04:10,000
+are at stake. Battery can charge high yield with confidence they'll repay. The saver typically
+
+45
+00:04:10,000 --> 00:04:16,079
+doesn't like debt and avoids it. They're considered a good risk to traditional lenders. Their Bitcoin
+
+46
+00:04:16,079 --> 00:04:21,759
+is everything to them. They will go to the ends of the world to protect their stack. Using Bitcoin
+
+47
+00:04:21,759 --> 00:04:28,319
+as collateral will strongly impact their behavior. They should exhibit essentially triple A equivalent
+
+48
+00:04:28,319 --> 00:04:34,879
+behavior. For bond portfolio managers, this creates a significant arbitrage opportunity,
+
+49
+00:04:34,879 --> 00:04:40,319
+buying a package of batteries loans over a similarly rated package without Bitcoin as collateral.
+
+50
+00:04:40,319 --> 00:04:47,920
+Let's recap what we learned in this chapter. Traditional collateral has failed. The 2008, 2022,
+
+51
+00:04:47,920 --> 00:04:54,800
+and 2023 crises showed that housing, guilt, and treasuries can rapidly become unreliable.
+
+52
+00:04:55,600 --> 00:05:00,639
+Battery Finance enables Bitcoin collateral without mark-to-market liquidation triggers.
+
+53
+00:05:00,639 --> 00:05:07,199
+Aligned with Bitcoin's four-year cycle. Bitcoin collateral redefines subordination.
+
+54
+00:05:07,199 --> 00:05:11,920
+Behaviorally, it becomes the most senior loan regardless of contractual priority.
+
+55
+00:05:12,720 --> 00:05:18,079
+Both degenz and savers will prioritize Bitcoin collateralized loans, creating potential
+
+56
+00:05:18,079 --> 00:05:24,319
+triple A equivalent credit quality. Credit markets will be transformed. What credit worthiness
+
+57
+00:05:24,319 --> 00:05:31,360
+actually means is being redefined by this innovation. In the next episode, we'll explore pensions.
+
+58
+00:05:31,360 --> 00:05:35,920
+How pension managers can use Bitcoin to pull the goalie and dramatically improve their odds of
+
+59
+00:05:35,920 --> 00:05:45,920
+meeting obligations. See you in the next one.
+

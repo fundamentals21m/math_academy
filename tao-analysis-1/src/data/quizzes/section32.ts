@@ -6,10 +6,26 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The ratio test states that $\\sum a_n$ converges absolutely if:',
     options: [
-      '$\\lim_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| = 1$',
-      '$\\limsup_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| \\leq 1$',
-      '$\\limsup_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| < 1$',
-      '$\\liminf_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| < 1$'
+      '$\\lim_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| = 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The ratio test: if $\\limsup |a_{n+1}/a_n| < 1$, the series converges absolutely. If $\\liminf |a_{n+1}/a_n| > 1$, it diverges. At $1$, the test is inconclusive.',
+  },
+      '$\\limsup_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| \\leq 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The ratio test: if $\\limsup |a_{n+1}/a_n| < 1$, the series converges absolutely. If $\\liminf |a_{n+1}/a_n| > 1$, it diverges. At $1$, the test is inconclusive.',
+  },
+      '$\\liminf_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| < 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The ratio test: if $\\limsup |a_{n+1}/a_n| < 1$, the series converges absolutely. If $\\liminf |a_{n+1}/a_n| > 1$, it diverges. At $1$, the test is inconclusive.',
+  },
+      '$\\limsup_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| < 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The ratio test: if $\\limsup |a_{n+1}/a_n| < 1$, the series converges absolutely. If $\\liminf |a_{n+1}/a_n| > 1$, it diverges. At $1$, the test is inconclusive.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -20,10 +36,26 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The root test states that $\\sum a_n$ converges absolutely if:',
     options: [
-      '$\\liminf_{n \\to \\infty} |a_n|^{1/n} < 1$',
-      '$\\limsup_{n \\to \\infty} |a_n|^{1/n} \\leq 1$',
-      '$\\lim_{n \\to \\infty} |a_n|^{1/n} = 1$',
-      '$\\limsup_{n \\to \\infty} |a_n|^{1/n} < 1$'
+      '$\\limsup_{n \\to \\infty} |a_n|^{1/n} < 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The root test: if $\\limsup |a_n|^{1/n} < 1$, the series converges absolutely. If $\\limsup |a_n|^{1/n} > 1$, it diverges. At $1$, the test is inconclusive.',
+  },
+      '$\\liminf_{n \\to \\infty} |a_n|^{1/n} < 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The root test: if $\\limsup |a_n|^{1/n} < 1$, the series converges absolutely. If $\\limsup |a_n|^{1/n} > 1$, it diverges. At $1$, the test is inconclusive.',
+  },
+      '$\\limsup_{n \\to \\infty} |a_n|^{1/n} \\leq 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The root test: if $\\limsup |a_n|^{1/n} < 1$, the series converges absolutely. If $\\limsup |a_n|^{1/n} > 1$, it diverges. At $1$, the test is inconclusive.',
+  },
+      '$\\lim_{n \\to \\infty} |a_n|^{1/n} = 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The root test: if $\\limsup |a_n|^{1/n} < 1$, the series converges absolutely. If $\\limsup |a_n|^{1/n} > 1$, it diverges. At $1$, the test is inconclusive.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -34,12 +66,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the series $\\sum_{n=1}^{\\infty} \\frac{n!}{n^n}$, the ratio test gives:',
     options: [
-      'Convergence (ratio limit is $1/e < 1$)',
       'Divergence',
+      'Convergence (ratio limit is $1/e < 1$)',
       'Inconclusive',
-      'Conditional convergence'
+      'Conditional convergence',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: '$\\frac{a_{n+1}}{a_n} = \\frac{(n+1)!}{(n+1)^{n+1}} \\cdot \\frac{n^n}{n!} = \\frac{n^n}{(n+1)^n} = \\left(\\frac{n}{n+1}\\right)^n \\to e^{-1} < 1$.',
   },
@@ -79,12 +111,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Comparing the root and ratio tests, which statement is true?',
     options: [
-      'They are equivalent in all cases',
       'The root test is at least as powerful as the ratio test',
+      'They are equivalent in all cases',
       'The ratio test is more powerful than the root test',
       'Neither can determine convergence when the other fails',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Whenever the ratio test gives a conclusive answer, so does the root test. But there exist series where the root test works but the ratio test fails (is inconclusive).',
   },

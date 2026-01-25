@@ -37,11 +37,11 @@ export const section59Questions: QuizQuestion[] = [
     question: 'Every Möbius transformation is a composition of translations, scalings, and:',
     options: [
       'Reflections only',
-      'Rotations only',
       'Inversions and conjugations',
-      'Projections'
+      'Rotations only',
+      'Projections',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The generators include z → z + l, z → kz, z → −z̄, and z → 1/z̄ (inversion-reflection).',
   },
@@ -81,11 +81,11 @@ export const section59Questions: QuizQuestion[] = [
     question: 'The composition of two reflections in non-Euclidean lines is:',
     options: [
       'The identity',
-      'An orientation-preserving Möbius transformation',
       'Another reflection',
       'A parabolic transformation only',
+      'An orientation-preserving Möbius transformation',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Two reflections (each orientation-reversing) compose to give an orientation-preserving transformation.',
   },

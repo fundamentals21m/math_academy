@@ -24,10 +24,18 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does it mean to say there is a "gap" in the rationals at $\\sqrt{2}$?',
     options: [
-      'There is no rational between $1$ and $2$',
+      'There is no rational between $1$ and $2
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The "gap" means the rationals are partitioned into two non-empty sets with no maximum in the lower set and no minimum in the upper set. This gap is filled when we construct $\\mathbb{R}$.',
+  },
+      'Every rational is either less than or greater than $\\sqrt{2}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The "gap" means the rationals are partitioned into two non-empty sets with no maximum in the lower set and no minimum in the upper set. This gap is filled when we construct $\\mathbb{R}$.',
+  },
       'The set $\\{x \\in \\mathbb{Q} : x^2 < 2\\}$ has no greatest element and $\\{x \\in \\mathbb{Q} : x^2 > 2\\}$ has no least element',
-      'Every rational is either less than or greater than $\\sqrt{2}$',
-      '$\\sqrt{2}$ cannot be approximated by rationals'
+      '$\\sqrt{2}$ cannot be approximated by rationals',
     ],
     correctIndex: 1,
     difficulty: 'hard',

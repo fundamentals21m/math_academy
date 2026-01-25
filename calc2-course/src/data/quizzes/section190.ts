@@ -7,11 +7,11 @@ export const section190Questions: QuizQuestion[] = [
     question: 'The Euler summation formula connects:',
     options: [
       'Derivatives and integrals',
+      'Finite sums and integrals',
       'Polynomials and rational functions',
       'Complex and real numbers',
-      'Finite sums and integrals'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The Euler summation formula expresses a finite sum $\\sum_{k=1}^{n} f(k)$ in terms of an integral $\\int_1^n f(x)\\,dx$ plus correction terms.',
   },
@@ -22,10 +22,10 @@ export const section190Questions: QuizQuestion[] = [
     options: [
       'Prime numbers',
       'Fibonacci numbers',
-      'Catalan numbers',
       'Bernoulli numbers',
+      'Catalan numbers',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The correction terms in the Euler summation formula involve the Bernoulli numbers $B_{2k}$.',
   },
@@ -34,10 +34,26 @@ export const section190Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the value of $B_2$, the second Bernoulli number?',
     options: [
-      '$-\\frac{1}{2}$',
-      '$\\frac{1}{6}$',
-      '$-\\frac{1}{30}$',
-      '$\\frac{1}{42}$'
+      '$\\frac{1}{6}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Bernoulli numbers are $B_0 = 1$, $B_1 = -\\frac{1}{2}$, $B_2 = \\frac{1}{6}$, $B_4 = -\\frac{1}{30}$, etc.',
+  },
+      '$-\\frac{1}{2}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Bernoulli numbers are $B_0 = 1$, $B_1 = -\\frac{1}{2}$, $B_2 = \\frac{1}{6}$, $B_4 = -\\frac{1}{30}$, etc.',
+  },
+      '$-\\frac{1}{30}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Bernoulli numbers are $B_0 = 1$, $B_1 = -\\frac{1}{2}$, $B_2 = \\frac{1}{6}$, $B_4 = -\\frac{1}{30}$, etc.',
+  },
+      '$\\frac{1}{42}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Bernoulli numbers are $B_0 = 1$, $B_1 = -\\frac{1}{2}$, $B_2 = \\frac{1}{6}$, $B_4 = -\\frac{1}{30}$, etc.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

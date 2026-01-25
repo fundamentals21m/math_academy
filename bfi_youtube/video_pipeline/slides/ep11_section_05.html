@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .shorts-box {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+      padding: 35px 50px;
+      border-radius: 12px;
+      margin: 30px auto;
+      max-width: 900px;
+      text-align: left;
+    }
+    .shorts-title {
+      color: #EF4444;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .short-list {
+      list-style: none;
+    }
+    .short-item {
+      color: #E6EDF3;
+      font-size: 20px;
+      padding: 12px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      border-bottom: 1px solid rgba(239, 68, 68, 0.15);
+    }
+    .short-item:last-child {
+      border-bottom: none;
+    }
+    .short-item::before {
+      content: "•";
+      color: #EF4444;
+      font-size: 24px;
+    }
+    .short-item strong {
+      color: #F7931A;
+    }
+    .warning-box {
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin-top: 35px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .warning-text {
+      color: #E6EDF3;
+      font-size: 20px;
+    }
+    .warning-text em {
+      color: #0891B2;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Hidden Exposure</div>
+    <div class="section-title">Don't Be Unintentionally Short</div>
+    <div class="shorts-box">
+      <div class="shorts-title">Hidden Short Positions</div>
+      <ul class="short-list">
+        <li class="short-item"><strong>Banks:</strong> Compete with bitcoin for store-of-value function</li>
+        <li class="short-item"><strong>Payment processors:</strong> Compete with bitcoin's payment rails</li>
+        <li class="short-item"><strong>Fiat currencies:</strong> Direct competition for monetary premium</li>
+        <li class="short-item"><strong>Long-duration bonds:</strong> Same role as monetary hedge</li>
+        <li class="short-item"><strong>Gold miners:</strong> Direct competition as hard money</li>
+      </ul>
+    </div>
+    <div class="warning-box">
+      <div class="warning-text">If your fund holds these assets without bitcoin exposure, you may be <em>structurally short bitcoin</em> even without intending to be.</div>
+    </div>
+  </div>
+</body>
+</html>

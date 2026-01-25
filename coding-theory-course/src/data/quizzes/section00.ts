@@ -45,10 +45,26 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a necessary and sufficient condition for a code to detect all sets of $k$ or fewer errors?',
     options: [
-      'Minimum distance at least $k + 1$',
-      'Minimum distance at least $k$',
-      'Minimum distance at least $2k + 1$',
-      'Minimum distance at least $2k$'
+      'Minimum distance at least $k
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A code can detect all sets of $k$ or fewer errors if and only if the minimum distance between any two code words is at least $k + 1$.',
+  },
+      'Minimum distance at least $k + 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A code can detect all sets of $k$ or fewer errors if and only if the minimum distance between any two code words is at least $k + 1$.',
+  },
+      'Minimum distance at least $2k + 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A code can detect all sets of $k$ or fewer errors if and only if the minimum distance between any two code words is at least $k + 1$.',
+  },
+      'Minimum distance at least $2k
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A code can detect all sets of $k$ or fewer errors if and only if the minimum distance between any two code words is at least $k + 1$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -99,11 +115,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'Which of the following is NOT an axiom of a group?',
     options: [
       'Existence of identity',
-      'Commutativity',
       'Associativity',
       'Existence of inverses',
+      'Commutativity',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Commutativity is NOT required for a group. A group only requires associativity, an identity element, and inverses. A group that is also commutative is called an Abelian group.',
   },

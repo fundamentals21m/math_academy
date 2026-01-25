@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0D1117 0%, #1a0a0a 50%, #0D1117 100%);
+    }
+    .nightmare-container {
+      max-width: 1200px;
+    }
+    .scenario-header {
+      color: #EF4444;
+      font-size: 18px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .scenario-title {
+      color: #E6EDF3;
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 50px;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      margin-bottom: 50px;
+    }
+    .stat-box {
+      text-align: center;
+    }
+    .stat-value {
+      color: #EF4444;
+      font-size: 64px;
+      font-weight: bold;
+    }
+    .stat-label {
+      color: #8B949E;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .scenario-text {
+      color: #E6EDF3;
+      font-size: 28px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .poof {
+      color: #EF4444;
+      font-size: 72px;
+      font-weight: bold;
+      margin: 40px 0;
+      text-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+    }
+    .warning-box {
+      background: rgba(239, 68, 68, 0.1);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+    .warning-text {
+      color: #E6EDF3;
+      font-size: 24px;
+    }
+    .warning-text em {
+      color: #EF4444;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content nightmare-container">
+    <div class="scenario-header">Nightmare Scenario: 2030</div>
+    <div class="scenario-title">There Is No Bailout in Bitcoin</div>
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-value">2M</div>
+        <div class="stat-label">Bitcoin in BlackRock IBIT</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">$1M</div>
+        <div class="stat-label">Per Bitcoin</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">$2T</div>
+        <div class="stat-label">Total Value at Risk</div>
+      </div>
+    </div>
+    <div class="scenario-text">Imagine we discover BlackRock cannot sell that bitcoin because its custodian cannot perform the signatures required to move the keys.</div>
+    <div class="poof">Poof.</div>
+    <div class="warning-box">
+      <div class="warning-text">Institutions that fail to take custody seriously will not only fail first, but <em>most severely</em> — potentially taking down their industry with them.</div>
+    </div>
+  </div>
+</body>
+</html>

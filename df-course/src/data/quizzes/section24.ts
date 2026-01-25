@@ -7,17 +7,20 @@ export const section24Questions: QuizQuestion[] = [
     question: "Sylow's First Theorem states that if $p^k$ divides $|G|$ where $p$ is prime, then:",
     options: [
       '$G$ has exactly one subgroup of order $p^k
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: "Sylow's First Theorem: If $p^k | |G|$, then $G$ has a subgroup of order $p^k$.",
-  },
-      '$G$ has $p^k$ subgroups',
-      '$G$ has a subgroup of order $p^k
     correctIndex: 3,
-    difficulty: 'medium',
-    explanation: "Sylow's First Theorem: If $p^k | |G|$, then $G$ has a subgroup of order $p^k$.",
+    difficulty: ',
+      ',
+    explanation: "Sylow',
+      's First Theorem: If $p^k | |G|$, then $G$ has a subgroup of order $p^k$.",
   },
-      '$G$ is a $p$-group',
+      ',
+      ',
+  },
+      \\'$G$ has $p^k$ subgroups\\',
+      \\'$G$ has a subgroup of order $p^k
+    correctIndex: 0,
+    difficulty: \\'medium\\',
+    explanation: ',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -88,8 +91,16 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       '$P$ is abelian',
       '$G$ is abelian',
-      '$p$ divides $|Z(G)|$',
-      '$n_p = 1$'
+      '$n_p = 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Since Sylow $p$-subgroups are conjugate, $P$ is normal iff it is the unique Sylow $p$-subgroup, i.e., $n_p = 1$.',
+  },
+      '$p$ divides $|Z(G)|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Since Sylow $p$-subgroups are conjugate, $P$ is normal iff it is the unique Sylow $p$-subgroup, i.e., $n_p = 1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

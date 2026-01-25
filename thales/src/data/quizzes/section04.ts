@@ -9,8 +9,13 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What types of equations could the Babylonians solve?',
     options: [
-      'Only linear equations like $ax = b$',
       'Quadratic equations and systems of simultaneous equations',
+      'Only linear equations like $ax = b
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'The Babylonians could solve a remarkable variety of equations including quadratics like $x^2 \\pm ax = b$, cubics like $x^3 = a$, and systems of simultaneous equations involving products and sums.',
+  },
       'Only geometric problems, not algebraic ones',
       'Differential equations',
     ],
@@ -96,11 +101,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What is the significance of the clay tablet Plimpton 322?',
     options: [
       'It contains the first known proof of the Pythagorean theorem',
+      'It shows the Babylonians had a theory of Pythagorean triples over 1000 years before Pythagoras',
       'It is the oldest known multiplication table',
       'It contains the first use of the number zero',
-      'It shows the Babylonians had a theory of Pythagorean triples over 1000 years before Pythagoras',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Plimpton 322 (dating from 1900-1600 BC) contains 15 Pythagorean triangles, showing the Babylonians understood how to generate Pythagorean triples systematically over a millennium before Pythagoras.',
@@ -183,12 +188,12 @@ export const section04Questions: QuizQuestion[] = [
     question:
       'The biblical passage 1 Kings 7:23-24 describes a basin with what dimensions?',
     options: [
-      'Diameter 10 cubits, circumference 30 cubits',
       'Diameter 12 cubits, circumference 36 cubits',
       'Diameter 5 cubits, circumference 16 cubits',
+      'Diameter 10 cubits, circumference 30 cubits',
       'Diameter 7 cubits, circumference 22 cubits',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The Bible describes a basin with diameter 10 cubits and circumference 30 cubits, implying π = 3. Some scholars suggest the basin was hexagonal rather than circular!',
@@ -199,12 +204,12 @@ export const section04Questions: QuizQuestion[] = [
     question:
       'What structures led the Babylonians to discover the sum of squares formula?',
     options: [
+      'Ziggurats (stepped pyramids)',
       'Pyramids',
       'Temples',
-      'Ziggurats (stepped pyramids)',
       'City walls',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The Babylonians built ziggurats (stepped pyramids). If each story is a square platform of dimension $m \\times m$ with height 1, the total volume involves the sum $1^2 + 2^2 + \\cdots + n^2$.',

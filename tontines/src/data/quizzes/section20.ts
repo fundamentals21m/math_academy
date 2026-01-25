@@ -20,10 +20,26 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The actuarial fairness constraint in the optimization is:',
     options: [
-      '$\\sum_t {}_tp_x \\cdot v^t \\cdot D(t) = W_0$',
-      '$D(t) = W_0$ for all $t$',
-      '$\\sum_t D(t) = W_0$',
-      '$D(0) = W_0$'
+      '$D(t) = W_0$ for all $t
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The fairness constraint says the expected present value of all payouts must equal the initial contribution: Σ _tp_x × v^t × D(t) = W_0.',
+  },
+      '$\\sum_t D(t) = W_0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The fairness constraint says the expected present value of all payouts must equal the initial contribution: Σ _tp_x × v^t × D(t) = W_0.',
+  },
+      '$\\sum_t {}_tp_x \\cdot v^t \\cdot D(t) = W_0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The fairness constraint says the expected present value of all payouts must equal the initial contribution: Σ _tp_x × v^t × D(t) = W_0.',
+  },
+      '$D(0) = W_0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The fairness constraint says the expected present value of all payouts must equal the initial contribution: Σ _tp_x × v^t × D(t) = W_0.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -35,7 +51,7 @@ export const section20Questions: QuizQuestion[] = [
     question: 'The Lagrangian method is used because:',
     options: [
       'It solves constrained optimization problems',
-      'It\\'s the only mathematical method available',
+      'It\\\\'s the only mathematical method available',
       'It calculates interest rates',
       'It measures survival probabilities',
     ],
@@ -49,11 +65,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'The Lagrange multiplier $\\lambda$ in the optimization represents:',
     options: [
       'The interest rate',
-      'The marginal value of an extra dollar of wealth',
       'The survival probability',
+      'The marginal value of an extra dollar of wealth',
       'The risk aversion parameter',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The Lagrange multiplier λ is the "shadow price" of the budget constraint—it tells us how much additional utility we would get from one more dollar of wealth.',
   },
@@ -95,7 +111,7 @@ export const section20Questions: QuizQuestion[] = [
       'All payouts are equal',
       'Payouts grow at the interest rate',
       'Payouts decline at the mortality rate',
-      'We can\\'t improve utility by shifting money between years without violating the budget',
+      'We can\\\\'t improve utility by shifting money between years without violating the budget',
     ],
     correctIndex: 3,
     difficulty: 'hard',

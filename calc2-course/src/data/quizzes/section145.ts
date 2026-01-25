@@ -6,12 +6,12 @@ export const section145Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A vector field $\\mathbf{F}$ with $\\text{div } \\mathbf{F} = 0$ is called:',
     options: [
-      'Solenoidal',
       'Irrotational',
+      'Solenoidal',
       'Conservative',
       'Harmonic',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A solenoidal (or divergence-free) field has $\\nabla \\cdot \\mathbf{F} = 0$. Examples include magnetic fields and incompressible fluid velocity fields.',
   },
@@ -42,10 +42,18 @@ export const section145Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'On an open interval (rectangular box) in 3-space, $\\mathbf{F}$ is the curl of some $\\mathbf{G}$ if and only if:',
     options: [
-      '$\\text{curl } \\mathbf{F} = \\mathbf{0}$',
-      '$\\text{div } \\mathbf{F} = 0$',
+      '$\\text{curl } \\mathbf{F} = \\mathbf{0}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'On intervals (simply connected regions), $\\text{div } \\mathbf{F} = 0$ is both necessary and sufficient for $\\mathbf{F} = \\text{curl } \\mathbf{G}$.',
+  },
       '$\\mathbf{F}$ is a gradient',
-      '$\\mathbf{F}$ is harmonic'
+      '$\\text{div } \\mathbf{F} = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'On intervals (simply connected regions), $\\text{div } \\mathbf{F} = 0$ is both necessary and sufficient for $\\mathbf{F} = \\text{curl } \\mathbf{G}$.',
+  },
+      '$\\mathbf{F}$ is harmonic',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -56,10 +64,26 @@ export const section145Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\text{curl } \\mathbf{G} = \\mathbf{F}$, then $\\text{curl}(\\mathbf{G} + \\nabla \\varphi)$ equals:',
     options: [
-      '$\\mathbf{F} + \\nabla \\varphi$',
-      '$\\nabla \\varphi$',
-      '$\\mathbf{F}$',
-      '$\\mathbf{0}$'
+      '$\\mathbf{F} + \\nabla \\varphi
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\text{curl}(\\mathbf{G} + \\nabla \\varphi) = \\text{curl } \\mathbf{G} + \\text{curl}(\\nabla \\varphi) = \\mathbf{F} + \\mathbf{0} = \\mathbf{F}$. Adding a gradient doesn\'t change the curl.',
+  },
+      '$\\mathbf{F}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\text{curl}(\\mathbf{G} + \\nabla \\varphi) = \\text{curl } \\mathbf{G} + \\text{curl}(\\nabla \\varphi) = \\mathbf{F} + \\mathbf{0} = \\mathbf{F}$. Adding a gradient doesn\'t change the curl.',
+  },
+      '$\\nabla \\varphi
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\text{curl}(\\mathbf{G} + \\nabla \\varphi) = \\text{curl } \\mathbf{G} + \\text{curl}(\\nabla \\varphi) = \\mathbf{F} + \\mathbf{0} = \\mathbf{F}$. Adding a gradient doesn\'t change the curl.',
+  },
+      '$\\mathbf{0}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\text{curl}(\\mathbf{G} + \\nabla \\varphi) = \\text{curl } \\mathbf{G} + \\text{curl}(\\nabla \\varphi) = \\mathbf{F} + \\mathbf{0} = \\mathbf{F}$. Adding a gradient doesn\'t change the curl.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

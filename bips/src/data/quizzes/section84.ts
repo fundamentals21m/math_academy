@@ -21,11 +21,11 @@ export const section84Questions: QuizQuestion[] = [
     question: 'An HTLC can be claimed by:',
     options: [
       'Mining a block',
+      'Revealing the preimage before timeout',
       'Paying a fee',
       'Signing twice',
-      'Revealing the preimage before timeout',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The receiver reveals the preimage (hash input) to claim funds.',
   },
@@ -43,11 +43,11 @@ export const section84Questions: QuizQuestion[] = [
     question: 'HTLCs enable:',
     options: [
       'Faster mining',
-      'Atomic swaps and Lightning payments',
       'Larger blocks',
-      'Lower fees only'
+      'Atomic swaps and Lightning payments',
+      'Lower fees only',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'HTLCs are the building block for trustless cross-chain and multi-hop payments.',
   },

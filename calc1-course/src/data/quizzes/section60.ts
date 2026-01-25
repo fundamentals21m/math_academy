@@ -106,11 +106,11 @@ export const section60Questions: QuizQuestion[] = [
     question: 'The complex numbers form a:',
     options: [
       'Group under addition only',
-      'Field (with addition and multiplication)',
       'Vector space only',
+      'Field (with addition and multiplication)',
       'Ring but not a field',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Complex numbers are a field (all nonzero elements have multiplicative inverses).',
   },

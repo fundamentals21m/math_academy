@@ -7,11 +7,11 @@ export const section81Questions: QuizQuestion[] = [
     question: 'A simple function is:',
     options: [
       'Any step function',
-      'A measurable function taking only finitely many values',
       'A continuous function',
-      'A function with simple (non-repeated) roots'
+      'A measurable function taking only finitely many values',
+      'A function with simple (non-repeated) roots',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A simple function has the form $s = \\sum_{i=1}^n a_i \\chi_{E_i}$ where $a_i$ are distinct values and $E_i$ are measurable sets. It takes finitely many values.',
   },
@@ -91,11 +91,11 @@ export const section81Questions: QuizQuestion[] = [
     question: 'The standard representation of a simple function $s$ taking values $\\{a_1, \\ldots, a_n\\}$ is:',
     options: [
       'Any sum of characteristic functions',
-      'A polynomial representation',
       '$s = \\sum_{i=1}^n a_i \\chi_{E_i}$ where $E_i = s^{-1}(\\{a_i\\})$ are disjoint',
+      'A polynomial representation',
       'A Fourier series',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The standard (canonical) representation uses the disjoint level sets $E_i = \\{x : s(x) = a_i\\}$. This representation is unique up to ordering.',
   },

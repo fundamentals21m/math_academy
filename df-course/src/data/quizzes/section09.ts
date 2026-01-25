@@ -97,9 +97,13 @@ export const section09Questions: QuizQuestion[] = [
     question: 'A group action is called faithful (effective) if:',
     options: [
       'Every orbit has more than one element',
-      'The only element acting trivially on all of $X$ is $e$',
       'Every stabilizer is trivial',
-      'The action is transitive'
+      'The only element acting trivially on all of $X$ is $e
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'An action is faithful if whenever $g \\cdot x = x$ for all $x \\in X$, we have $g = e$. Equivalently, the homomorphism $G \\to \\text{Sym}(X)$ is injective.',
+  },
+      'The action is transitive',
     ],
     correctIndex: 1,
     difficulty: 'medium',

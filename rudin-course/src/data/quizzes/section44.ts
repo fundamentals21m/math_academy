@@ -32,10 +32,18 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\mathbf{f} \\in \\mathscr{R}(\\alpha)$ on $[a, b]$ (vector-valued), then:',
     options: [
-      '$\\|\\int_a^b \\mathbf{f} \\, d\\alpha\\| = \\int_a^b \\|\\mathbf{f}\\| \\, d\\alpha$',
+      '$\\|\\int_a^b \\mathbf{f} \\, d\\alpha\\| = \\int_a^b \\|\\mathbf{f}\\| \\, d\\alpha
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Theorem 6.25: $\\|\\int_a^b \\mathbf{f} \\, d\\alpha\\| \\leq \\int_a^b \\|\\mathbf{f}\\| \\, d\\alpha$ when $\\alpha$ is monotonically increasing. This is the integral version of the triangle inequality.',
+  },
+      '$\\|\\int_a^b \\mathbf{f} \\, d\\alpha\\| \\geq \\int_a^b \\|\\mathbf{f}\\| \\, d\\alpha
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Theorem 6.25: $\\|\\int_a^b \\mathbf{f} \\, d\\alpha\\| \\leq \\int_a^b \\|\\mathbf{f}\\| \\, d\\alpha$ when $\\alpha$ is monotonically increasing. This is the integral version of the triangle inequality.',
+  },
       '$\\|\\int_a^b \\mathbf{f} \\, d\\alpha\\| \\leq \\int_a^b \\|\\mathbf{f}\\| \\, d\\alpha$ when $\\alpha$ is increasing',
-      '$\\|\\int_a^b \\mathbf{f} \\, d\\alpha\\| \\geq \\int_a^b \\|\\mathbf{f}\\| \\, d\\alpha$',
-      'No inequality holds in general'
+      'No inequality holds in general',
     ],
     correctIndex: 1,
     difficulty: 'medium',

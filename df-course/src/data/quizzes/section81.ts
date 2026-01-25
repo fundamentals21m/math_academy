@@ -6,10 +6,26 @@ export const section81Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The prime spectrum $\\text{Spec } R$ of a ring $R$ is:',
     options: [
-      'The set of all ideals of $R$',
-      'The set of all maximal ideals of $R$',
-      'The set of all prime ideals of $R$',
-      'The set of all nilpotent elements of $R$'
+      'The set of all prime ideals of $R
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\text{Spec } R$ is the set of all prime ideals of $R$. It is equipped with the Zariski topology, making it a topological space fundamental to algebraic geometry.',
+  },
+      'The set of all ideals of $R
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\text{Spec } R$ is the set of all prime ideals of $R$. It is equipped with the Zariski topology, making it a topological space fundamental to algebraic geometry.',
+  },
+      'The set of all maximal ideals of $R
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\text{Spec } R$ is the set of all prime ideals of $R$. It is equipped with the Zariski topology, making it a topological space fundamental to algebraic geometry.',
+  },
+      'The set of all nilpotent elements of $R
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\text{Spec } R$ is the set of all prime ideals of $R$. It is equipped with the Zariski topology, making it a topological space fundamental to algebraic geometry.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -71,7 +87,7 @@ export const section81Questions: QuizQuestion[] = [
       'Always Hausdorff',
       'Never Hausdorff (unless $R$ has Krull dimension $0$)',
       'Hausdorff if and only if $R$ is a field',
-      'Hausdorff if and only if $R$ is Noetherian'
+      'Hausdorff if and only if $R$ is Noetherian',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -83,11 +99,11 @@ export const section81Questions: QuizQuestion[] = [
     question: 'The irreducible closed sets in $\\text{Spec } R$ correspond to:',
     options: [
       'Maximal ideals',
-      'Prime ideals',
       'Radical ideals',
       'Principal ideals',
+      'Prime ideals',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Irreducible closed sets in $\\text{Spec } R$ are exactly $V(P) = \\overline{\\{P\\}}$ for prime ideals $P$. Each prime ideal defines an irreducible closed set (its closure), and all irreducible closed sets arise this way.',
   },

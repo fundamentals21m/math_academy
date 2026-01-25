@@ -6,10 +6,26 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of $\\ln(x)$?',
     options: [
-      '$\\ln(x)$',
-      '$\\frac{1}{x}$',
-      '$e^x$',
-      '$x\\ln(x)$'
+      '$\\ln(x)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\ln(x) = \\frac{1}{x}$.',
+  },
+      '$e^x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\ln(x) = \\frac{1}{x}$.',
+  },
+      '$\\frac{1}{x}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\ln(x) = \\frac{1}{x}$.',
+  },
+      '$x\\ln(x)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\frac{d}{dx}\\ln(x) = \\frac{1}{x}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

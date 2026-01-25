@@ -6,12 +6,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the NODE_BLOOM service bit indicate?',
     options: [
-      'Node is mining',
       'Node supports BIP-37 Bloom filtering',
+      'Node is mining',
       'Node has full blockchain',
-      'Node supports SegWit'
+      'Node supports SegWit',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'NODE_BLOOM indicates support for BIP-37 Bloom filter requests.',
   },
@@ -31,10 +31,10 @@ export const section64Questions: QuizQuestion[] = [
     options: [
       'Requires NODE_BLOOM',
       'Always advertises NODE_BLOOM',
-      'Ignores NODE_BLOOM',
       'Does not advertise NODE_BLOOM',
+      'Ignores NODE_BLOOM',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Due to security concerns, NODE_BLOOM is disabled by default.',
   },

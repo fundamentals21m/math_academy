@@ -7,11 +7,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'Which property states that $a + b = b + a$?',
     options: [
       'Associative Law',
-      'Distributive Law',
       'Commutative Law',
+      'Distributive Law',
       'Identity Law',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The Commutative Law states that the order of operands does not matter for addition and multiplication.',
   },
@@ -50,10 +50,26 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\frac{2}{3} \\div \\frac{4}{5}$?',
     options: [
-      '$\\frac{8}{15}$',
-      '$\\frac{6}{20}$',
-      '$\\frac{10}{12}$',
-      '$\\frac{5}{6}$'
+      '$\\frac{5}{6}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'To divide fractions, invert and multiply: $\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}$.',
+  },
+      '$\\frac{8}{15}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'To divide fractions, invert and multiply: $\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}$.',
+  },
+      '$\\frac{6}{20}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'To divide fractions, invert and multiply: $\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}$.',
+  },
+      '$\\frac{10}{12}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'To divide fractions, invert and multiply: $\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -64,10 +80,26 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the laws of exponents, what is $a^3 \\times a^4$?',
     options: [
-      '$a^7$',
-      '$a^{12}$',
-      '$a^{4/3}$',
-      '$2a^7$'
+      '$a^{12}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The product rule for exponents: $a^m \\times a^n = a^{m+n}$. So $a^3 \\times a^4 = a^{3+4} = a^7$.',
+  },
+      '$a^7
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The product rule for exponents: $a^m \\times a^n = a^{m+n}$. So $a^3 \\times a^4 = a^{3+4} = a^7$.',
+  },
+      '$a^{4/3}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The product rule for exponents: $a^m \\times a^n = a^{m+n}$. So $a^3 \\times a^4 = a^{3+4} = a^7$.',
+  },
+      '$2a^7
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The product rule for exponents: $a^m \\times a^n = a^{m+n}$. So $a^3 \\times a^4 = a^{3+4} = a^7$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -104,7 +136,7 @@ export const section01Questions: QuizQuestion[] = [
       '12 oz for $2.40 (lower total price)',
       'They are the same price per ounce',
       '20 oz for $3.60 (lower price per ounce)',
-      'Cannot be determined'
+      'Cannot be determined',
     ],
     correctIndex: 2,
     difficulty: 'medium',

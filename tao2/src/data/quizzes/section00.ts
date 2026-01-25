@@ -35,7 +35,28 @@ export const section00Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'What is the taxicab (or $l^1$) distance between the points $(1, 2)$ and $(4, 6)$ in $\\mathbf{R}^2$?',
-    options: ['$5$', '$7$', '$25$', '$\\sqrt{25}$'],
+    options: [
+      '$5
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The taxicab distance is $|1-4| + |2-6| = 3 + 4 = 7$.',
+  },
+      '$25
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The taxicab distance is $|1-4| + |2-6| = 3 + 4 = 7$.',
+  },
+      '$\\sqrt{25}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The taxicab distance is $|1-4| + |2-6| = 3 + 4 = 7$.',
+  },
+      '$7
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The taxicab distance is $|1-4| + |2-6| = 3 + 4 = 7$.',
+  },
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The taxicab distance is $|1-4| + |2-6| = 3 + 4 = 7$.',

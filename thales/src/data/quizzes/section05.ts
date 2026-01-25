@@ -10,11 +10,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Who is considered the first Greek mathematician and philosopher?',
     options: [
       'Pythagoras of Samos',
-      'Thales of Miletus',
       'Euclid of Alexandria',
       'Aristotle of Athens',
+      'Thales of Miletus',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Thales of Miletus (600 BC) is considered the first Greek mathematician and philosopher. He visited Egypt and brought back knowledge of geometry, and is credited with being the first to prove geometric theorems.',
@@ -41,10 +41,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'The sum of angles in a triangle equals 180°',
       'The base angles of an isosceles triangle are equal',
-      'An angle inscribed in a semicircle (subtended by a diameter) is a right angle',
       'When two lines intersect, vertically opposite angles are equal',
+      'An angle inscribed in a semicircle (subtended by a diameter) is a right angle',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       "Thales's Theorem states that if A, B, C are points on a circle and AC is a diameter, then ∠ABC is a right angle. In other words, an angle inscribed in a semicircle is always 90°.",
@@ -54,12 +54,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What event did Thales famously predict in May of 585 BC?',
     options: [
+      'A solar eclipse',
       'A great flood',
       'A volcanic eruption',
       'An earthquake',
-      'A solar eclipse',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Thales is said to have predicted the solar eclipse that occurred over the Near East in May of 585 BC. He may have used observations accumulated by the Babylonians over centuries to make this prediction.',
@@ -86,10 +86,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'Anaximenes of Miletus',
       'Anaximander of Miletus',
-      'Thales of Miletus',
       'Heraclitus of Ephesus',
+      'Thales of Miletus',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Heraclitus of Ephesus (500 BC) held that everything is made of fire. Other Ionian philosophers proposed different primal substances: Thales (water), Anaximenes (air), and Anaximander (the Infinite).',
@@ -100,11 +100,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Where did Greek mathematics and philosophy first begin?',
     options: [
       'Athens',
-      'Ionia (western Turkey)',
       'Alexandria',
       'Rome',
+      'Ionia (western Turkey)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Greek philosophy and mathematics began in Ionia (modern western Turkey), where the influence of older civilizations like Babylon was greatest. Later it spread to Italy, then Athens, and finally Alexandria.',
@@ -115,12 +115,12 @@ export const section05Questions: QuizQuestion[] = [
     question:
       'What did Pythagoras and Democritus believe about the nature of reality, in contrast to Thales?',
     options: [
-      'That reality is fundamentally discrete (based on numbers)',
       'That reality is fundamentally continuous',
       'That reality cannot be understood mathematically',
-      'That reality is made of water'
+      'That reality is fundamentally discrete (based on numbers)',
+      'That reality is made of water',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'In contrast to Thales\'s continuous view, Pythagoras and Democritus took the view that reality is basically discrete. Pythagoras taught that "all is number" — everything could be understood in terms of whole numbers and their ratios.',
@@ -131,11 +131,11 @@ export const section05Questions: QuizQuestion[] = [
     question: "What did Anaximander call the primal substance?",
     options: [
       'Water',
-      'Fire',
       'The Infinite (apeiron)',
+      'Fire',
       'Air',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Anaximander of Miletus, a follower of Thales, thought the primal substance was something he called "the Infinite" (apeiron), which could take on the forms of earth, water, air, and fire — roughly corresponding to solid, liquid, gas, and energy.',

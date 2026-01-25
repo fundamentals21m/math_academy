@@ -11,10 +11,10 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'To make counting easier',
       'To make multiplication faster',
-      'To make subtraction always possible',
       'To eliminate fractions',
+      'To make subtraction always possible',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The natural numbers $\\mathbb{N}$ don\'t permit unlimited subtraction (we can\'t take 7 from 3). By adding 0 and negative integers, we get $\\mathbb{Z}$ where any subtraction is possible.',
@@ -24,10 +24,30 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the additive inverse of $-5$?',
     options: [
-      '$-5$',
-      '$0$',
-      '$5$',
-      '$1/5$',
+      '$5
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'The additive inverse of $a$ is the number $b$ such that $a + b = 0$. Since $(-5) + 5 = 0$, the additive inverse of $-5$ is $5$. In general, $-(-a) = a$.',
+  },
+      '$-5
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'The additive inverse of $a$ is the number $b$ such that $a + b = 0$. Since $(-5) + 5 = 0$, the additive inverse of $-5$ is $5$. In general, $-(-a) = a$.',
+  },
+      '$0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'The additive inverse of $a$ is the number $b$ such that $a + b = 0$. Since $(-5) + 5 = 0$, the additive inverse of $-5$ is $5$. In general, $-(-a) = a$.',
+  },
+      '$1/5
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'The additive inverse of $a$ is the number $b$ such that $a + b = 0$. Since $(-5) + 5 = 0$, the additive inverse of $-5$ is $5$. In general, $-(-a) = a$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -40,11 +60,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'Which property states that $a + (b + c) = (a + b) + c$?',
     options: [
       'Commutative law',
+      'Associative law',
       'Distributive law',
       'Identity property',
-      'Associative law'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The associative law says that the grouping of terms doesn\'t matter: $a + (b + c) = (a + b) + c$. This is different from the commutative law ($a + b = b + a$), which says the order doesn\'t matter.',
@@ -89,10 +109,20 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does $(-1) \\times (-1) = 1$?',
     options: [
+      'Because $a \\times (-1) = -a$, so $(-1) \\times (-1) = -(-1) = 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'Using the ring properties, we can prove that $a \\times (-1) = -a$ for any $a$. Therefore $(-1) \\times (-1) = -(-1) = 1$, since the additive inverse of $-1$ is $1$.',
+  },
       'By definition of negative numbers',
-      'Because $a \\times (-1) = -a$, so $(-1) \\times (-1) = -(-1) = 1$',
       'Because multiplication is commutative',
-      'Because $-1 + (-1) = -2$',
+      'Because $-1 + (-1) = -2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'Using the ring properties, we can prove that $a \\times (-1) = -a$ for any $a$. Therefore $(-1) \\times (-1) = -(-1) = 1$, since the additive inverse of $-1$ is $1$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -139,12 +169,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the difference between a ring and a field?',
     options: [
-      'A field has addition, a ring doesn\\'t',
-      'A field has multiplicative inverses for all nonzero elements, a ring doesn\\'t necessarily',
-      'A ring has the commutative law, a field doesn\\'t',
+      'A field has addition, a ring doesn\\\\'t',
+      'A ring has the commutative law, a field doesn\\\\'t',
+      'A field has multiplicative inverses for all nonzero elements, a ring doesn\\\\'t necessarily',
       'There is no difference',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Both rings and fields satisfy the ring properties (associative, commutative, distributive laws, etc.). A field additionally requires that every nonzero element has a multiplicative inverse. $\\mathbb{Z}$ is a ring but not a field; $\\mathbb{Q}$ is a field.',
@@ -154,10 +184,30 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Calculate $\\frac{2}{3} + \\frac{1}{4}$ using the formula $\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}$.',
     options: [
-      '$\\frac{11}{12}$',
-      '$\\frac{3}{7}$',
-      '$\\frac{8}{12}$',
-      '$\\frac{5}{7}$'
+      '$\\frac{3}{7}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'Using the formula: $\\frac{2}{3} + \\frac{1}{4} = \\frac{2 \\cdot 4 + 1 \\cdot 3}{3 \\cdot 4} = \\frac{8 + 3}{12} = \\frac{11}{12}$.',
+  },
+      '$\\frac{8}{12}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'Using the formula: $\\frac{2}{3} + \\frac{1}{4} = \\frac{2 \\cdot 4 + 1 \\cdot 3}{3 \\cdot 4} = \\frac{8 + 3}{12} = \\frac{11}{12}$.',
+  },
+      '$\\frac{5}{7}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'Using the formula: $\\frac{2}{3} + \\frac{1}{4} = \\frac{2 \\cdot 4 + 1 \\cdot 3}{3 \\cdot 4} = \\frac{8 + 3}{12} = \\frac{11}{12}$.',
+  },
+      '$\\frac{11}{12}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'Using the formula: $\\frac{2}{3} + \\frac{1}{4} = \\frac{2 \\cdot 4 + 1 \\cdot 3}{3 \\cdot 4} = \\frac{8 + 3}{12} = \\frac{11}{12}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

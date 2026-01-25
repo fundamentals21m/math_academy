@@ -10,7 +10,7 @@ export const section68Questions: QuizQuestion[] = [
       'They contain the same elements',
       'There exists a bijection (one-to-one correspondence) between them',
       'They are both infinite',
-      'They have the same number of subsets'
+      'They have the same number of subsets',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -25,7 +25,7 @@ export const section68Questions: QuizQuestion[] = [
       'It is finite',
       'It contains only natural numbers',
       'Its elements can be put in one-to-one correspondence with the natural numbers',
-      'It contains the number zero'
+      'It contains the number zero',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -41,7 +41,7 @@ export const section68Questions: QuizQuestion[] = [
       'The natural numbers are uncountable',
       'The rational numbers are uncountable',
       'All infinite sets have the same size',
-      'The real numbers are uncountable'
+      'The real numbers are uncountable',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -70,9 +70,14 @@ export const section68Questions: QuizQuestion[] = [
     question: 'The Continuum Hypothesis states that:',
     options: [
       'All infinite sets are countable',
-      'There is no cardinality strictly between $\\aleph_0$ and $\\mathfrak{c}$',
       'The real numbers are countable',
-      'There are exactly two sizes of infinity'
+      'There are exactly two sizes of infinity',
+      'There is no cardinality strictly between $\\aleph_0$ and $\\mathfrak{c}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation:
+      'The Continuum Hypothesis (CH) claims c = ℵ₁, meaning no set has cardinality strictly between the naturals and reals. Gödel and Cohen proved CH is independent of standard set theory axioms—it can neither be proved nor disproved.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -84,10 +89,30 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cardinality of the real numbers equals:',
     options: [
-      '$\\aleph_0 + 1$',
-      '$\\aleph_0$',
-      '$2^{\\aleph_0}$',
-      '$\\aleph_0^2$'
+      '$\\aleph_0 + 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation:
+      'The cardinality of R equals 2^(ℵ₀), the cardinality of the power set of N. This is because real numbers can be represented as infinite binary sequences (subsets of N). This is strictly greater than ℵ₀.',
+  },
+      '$\\aleph_0
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation:
+      'The cardinality of R equals 2^(ℵ₀), the cardinality of the power set of N. This is because real numbers can be represented as infinite binary sequences (subsets of N). This is strictly greater than ℵ₀.',
+  },
+      '$\\aleph_0^2
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation:
+      'The cardinality of R equals 2^(ℵ₀), the cardinality of the power set of N. This is because real numbers can be represented as infinite binary sequences (subsets of N). This is strictly greater than ℵ₀.',
+  },
+      '$2^{\\aleph_0}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation:
+      'The cardinality of R equals 2^(ℵ₀), the cardinality of the power set of N. This is because real numbers can be represented as infinite binary sequences (subsets of N). This is strictly greater than ℵ₀.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

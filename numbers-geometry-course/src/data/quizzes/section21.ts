@@ -10,11 +10,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Who discovered the definition of real numbers using cuts?',
     options: [
       'Euclid',
-      'Dedekind',
       'Gauss',
       'Descartes',
+      'Dedekind',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Dedekind discovered in 1858 that irrational numbers could be defined as "cuts" in the rational numbers.',
@@ -35,11 +35,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'What is a Dedekind cut?',
     options: [
       'A way to divide a line segment',
+      'A partition of rationals into lower and upper sets (L, U)',
       'A type of geometric construction',
       'A method for computing square roots',
-      'A partition of rationals into lower and upper sets (L, U)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'A Dedekind cut is a partition of the rational numbers into two sets L and U, where every member of L is less than every member of U.',
@@ -65,12 +65,12 @@ export const section21Questions: QuizQuestion[] = [
     question:
       'What makes the Dedekind cut definition elegant?',
     options: [
-      'It requires only sets of rationals, which already exist',
       'It uses complex numbers',
       'It uses infinite decimal expansions',
+      'It requires only sets of rationals, which already exist',
       'It requires physical measurements',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Dedekind cuts define irrationals using only sets of rational numbers, which are already assumed to exist. No new objects need to be invented.',
@@ -83,7 +83,7 @@ export const section21Questions: QuizQuestion[] = [
       'Rationals cannot be represented as cuts',
       'There is no difference',
       'For a rational, the lower set L has a greatest member',
-      'For a rational, the upper set U has a least member (namely a)'
+      'For a rational, the upper set U has a least member (namely a)',
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -112,12 +112,12 @@ export const section21Questions: QuizQuestion[] = [
     question:
       'The set L for $\\sqrt{2}$ consists of positive rationals whose squares are:',
     options: [
+      'Less than 2',
       'Greater than 2',
       'Equal to 2',
-      'Less than 2',
       'Negative',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'L contains all positive rationals with squares less than 2. These are the rationals "below" √2. The set U contains those with squares greater than 2.',

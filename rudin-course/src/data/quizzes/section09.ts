@@ -6,10 +6,18 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A metric space is a set $X$ with a function $d: X \\times X \\to \\mathbb{R}$ satisfying:',
     options: [
-      '$d(x,y) > 0$ for all $x, y$',
-      '$d(x,y) \\geq 0$, $d(x,y) = 0 \\Leftrightarrow x = y$, $d(x,y) = d(y,x)$, and $d(x,z) \\leq d(x,y) + d(y,z)$',
+      '$d(x,y) \\geq 0$, $d(x,y) = 0 \\Leftrightarrow x = y$, $d(x,y) = d(y,x)$, and $d(x,z) \\leq d(x,y) + d(y,z)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A metric satisfies: (i) positivity: $d(x,y) \\geq 0$, (ii) identity: $d(x,y) = 0 \\iff x = y$, (iii) symmetry: $d(x,y) = d(y,x)$, and (iv) triangle inequality: $d(x,z) \\leq d(x,y) + d(y,z)$.',
+  },
+      '$d(x,y) > 0$ for all $x, y
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A metric satisfies: (i) positivity: $d(x,y) \\geq 0$, (ii) identity: $d(x,y) = 0 \\iff x = y$, (iii) symmetry: $d(x,y) = d(y,x)$, and (iv) triangle inequality: $d(x,z) \\leq d(x,y) + d(y,z)$.',
+  },
       '$d(x,y) = |x - y|$ always',
-      '$d$ must be continuous'
+      '$d$ must be continuous',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -37,7 +45,7 @@ export const section09Questions: QuizQuestion[] = [
       '$E$ is bounded',
       '$E$ is finite',
       '$E$ is the complement of a bounded set',
-      '$E$ contains all its limit points'
+      '$E$ contains all its limit points',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -62,10 +70,22 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The closure $\\bar{E}$ of a set $E$ is:',
     options: [
-      'The interior of $E$',
+      'The interior of $E
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The closure $\\bar{E} = E \\cup E\'$ where $E\'$ is the set of limit points of $E$. Equivalently, $\\bar{E}$ is the smallest closed set containing $E$.',
+  },
+      'The complement of $E
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The closure $\\bar{E} = E \\cup E\'$ where $E\'$ is the set of limit points of $E$. Equivalently, $\\bar{E}$ is the smallest closed set containing $E$.',
+  },
+      'The boundary of $E
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The closure $\\bar{E} = E \\cup E\'$ where $E\'$ is the set of limit points of $E$. Equivalently, $\\bar{E}$ is the smallest closed set containing $E$.',
+  },
       '$E$ together with all its limit points',
-      'The complement of $E$',
-      'The boundary of $E$'
     ],
     correctIndex: 1,
     difficulty: 'easy',

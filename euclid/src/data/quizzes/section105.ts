@@ -23,7 +23,7 @@ export const section105Questions: QuizQuestion[] = [
       'To make the tangent lines parallel',
       'Because the sum of central angle and corresponding triangle angle equals 180°',
       'To ensure the tangents meet at right angles',
-      'To bisect the circle\\'s arcs',
+      'To bisect the circle\\\\\'s arcs',
     ],
     correctIndex: 1,
     difficulty: 'hard',

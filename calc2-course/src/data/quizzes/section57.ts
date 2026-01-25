@@ -24,10 +24,26 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The polynomial $x^{m-1}$ is annihilated by:',
     options: [
-      '$D$',
-      '$D^{m-1}$',
-      '$D^m$',
-      '$(D - 1)^m$'
+      '$D
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$D^m(x^{m-1}) = 0$ since differentiation $m$ times gives zero for a polynomial of degree $m-1$.',
+  },
+      '$D^m
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$D^m(x^{m-1}) = 0$ since differentiation $m$ times gives zero for a polynomial of degree $m-1$.',
+  },
+      '$D^{m-1}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$D^m(x^{m-1}) = 0$ since differentiation $m$ times gives zero for a polynomial of degree $m-1$.',
+  },
+      '$(D - 1)^m
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$D^m(x^{m-1}) = 0$ since differentiation $m$ times gives zero for a polynomial of degree $m-1$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

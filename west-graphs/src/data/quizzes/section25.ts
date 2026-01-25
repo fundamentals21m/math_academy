@@ -52,9 +52,17 @@ export const section25Questions: QuizQuestion[] = [
     question: 'The recurrence $R(s,t) \\leq R(s-1,t) + R(s,t-1)$ proves:',
     options: [
       '$R(s,t)$ is always finite',
-      '$R(s,t) \\leq \\binom{s+t-2}{s-1}$',
+      '$R(s,t) \\leq \\binom{s+t-2}{s-1}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This recurrence proves existence of $R(s,t)$ and gives upper bound $\\binom{s+t-2}{s-1}$.',
+  },
+      '$R(s,t) = st
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'This recurrence proves existence of $R(s,t)$ and gives upper bound $\\binom{s+t-2}{s-1}$.',
+  },
       'Both that $R(s,t)$ is finite and the binomial bound',
-      '$R(s,t) = st$'
     ],
     correctIndex: 2,
     difficulty: 'medium',

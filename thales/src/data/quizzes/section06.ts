@@ -9,12 +9,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Where did Pythagoras found the Pythagorean Brotherhood?',
     options: [
-      'Croton, southern Italy',
       'Athens, Greece',
+      'Croton, southern Italy',
       'Samos, Greece',
       'Alexandria, Egypt',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'About 525 BC, Pythagoras emigrated to Croton (modern Crotone) in southern Italy, where he founded a society half-way between a political party and a religious cult, known as the Pythagorean Brotherhood.',
@@ -24,12 +24,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What was Pythagoras's famous philosophical claim?",
     options: [
-      '"All is number"',
       '"All is water"',
       '"All is fire"',
+      '"All is number"',
       '"All is infinite"',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Pythagoras taught that "all is number" — everything could be understood in terms of whole numbers and their ratios. This contrasted with Thales\'s claim that "all is water."',
@@ -39,12 +39,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are amicable numbers?',
     options: [
+      'Numbers where each is the sum of the proper divisors of the other',
       'Numbers that are both prime',
       'Numbers that differ by exactly 1',
       'Numbers that are both perfect squares',
-      'Numbers where each is the sum of the proper divisors of the other',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Two natural numbers are amicable if each is the sum of the proper divisors of the other. The smallest amicable pair is (220, 284). Pythagoras said "friendship is as 220 is to 284."',
@@ -55,11 +55,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Why did Pythagoras call 10 the "divine number"?',
     options: [
       'It was the number of gods in Greek mythology',
-      'It is the largest single-digit number',
       'It is a triangular number (1+2+3+4) and the Pythagorean star has 10 vertices',
+      'It is the largest single-digit number',
       'It represents the 10 commandments',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Pythagoras called 10 the "divine number" because it is the fourth triangular number (10 = 1+2+3+4) and the five-pointed Pythagorean star (pentagram) has 10 vertices.',
@@ -68,8 +68,13 @@ export const section06Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'Who actually introduced the word "mathematics"?',
-    options: ['Thales', 'Pythagoras', 'Aristotle', 'Euclid'],
-    correctIndex: 1,
+    options: [
+      'Thales',
+      'Aristotle',
+      'Euclid',
+      'Pythagoras',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The word "mathematics" was introduced by Pythagoras. The first part is an old Indo-European root related to the English word "mind." The modern meaning of "mathematics" is due to Aristotle.',
@@ -82,10 +87,10 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'The existence of negative numbers',
       'The infinity of prime numbers',
-      'The existence of perfect numbers',
       'The irrationality of √2',
+      'The existence of perfect numbers',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       "The discovery that √2 (the diagonal of a unit square) is irrational challenged Pythagoras's belief that everything could be expressed as ratios of whole numbers. This created a crisis in Greek mathematics.",
@@ -132,11 +137,11 @@ export const section06Questions: QuizQuestion[] = [
       'Which of these is NOT one of the three means studied by the Pythagoreans?',
     options: [
       'Geometric mean',
-      'Quadratic mean',
       'Arithmetic mean',
       'Harmonic mean',
+      'Quadratic mean',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The Pythagoreans studied three means: arithmetic ((a+b)/2), geometric (√ab), and harmonic (2ab/(a+b)). The quadratic mean (root mean square) was not part of their original study.',

@@ -6,10 +6,26 @@ export const section111Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To construct a potential function by integrating along coordinate axes in 2D, one formula is:',
     options: [
-      '$\\varphi(x, y) = \\int_a^x f_1(t, y) \\, dt$',
-      '$\\varphi(x, y) = \\int_a^x \\int_b^y f_1 f_2 \\, dt \\, ds$',
-      '$\\varphi(x, y) = f_1(x, y) + f_2(x, y)$',
-      '$\\varphi(x, y) = \\int_a^x f_1(t, b) \\, dt + \\int_b^y f_2(x, t) \\, dt$'
+      '$\\varphi(x, y) = \\int_a^x f_1(t, b) \\, dt + \\int_b^y f_2(x, t) \\, dt
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'One method: integrate $f_1$ horizontally from $(a, b)$ to $(x, b)$, then integrate $f_2$ vertically from $(x, b)$ to $(x, y)$: $\\varphi(x, y) = \\int_a^x f_1(t, b) \\, dt + \\int_b^y f_2(x, t) \\, dt$.',
+  },
+      '$\\varphi(x, y) = \\int_a^x f_1(t, y) \\, dt
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'One method: integrate $f_1$ horizontally from $(a, b)$ to $(x, b)$, then integrate $f_2$ vertically from $(x, b)$ to $(x, y)$: $\\varphi(x, y) = \\int_a^x f_1(t, b) \\, dt + \\int_b^y f_2(x, t) \\, dt$.',
+  },
+      '$\\varphi(x, y) = \\int_a^x \\int_b^y f_1 f_2 \\, dt \\, ds
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'One method: integrate $f_1$ horizontally from $(a, b)$ to $(x, b)$, then integrate $f_2$ vertically from $(x, b)$ to $(x, y)$: $\\varphi(x, y) = \\int_a^x f_1(t, b) \\, dt + \\int_b^y f_2(x, t) \\, dt$.',
+  },
+      '$\\varphi(x, y) = f_1(x, y) + f_2(x, y)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'One method: integrate $f_1$ horizontally from $(a, b)$ to $(x, b)$, then integrate $f_2$ vertically from $(x, b)$ to $(x, y)$: $\\varphi(x, y) = \\int_a^x f_1(t, b) \\, dt + \\int_b^y f_2(x, t) \\, dt$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -20,10 +36,26 @@ export const section111Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The method of indefinite integrals works by integrating $\\frac{\\partial\\varphi}{\\partial x} = f_1$ to get:',
     options: [
-      '$\\varphi(x, y, z) = \\int f_1(x, y, z) \\, dx + A(y, z)$',
-      '$\\varphi(x, y, z) = f_1(x, y, z)$',
-      '$\\varphi(x, y, z) = \\int f_1 \\, dy$',
-      '$\\varphi(x, y, z) = x \\cdot f_1$'
+      '$\\varphi(x, y, z) = f_1(x, y, z)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Integrating $\\frac{\\partial\\varphi}{\\partial x} = f_1$ with respect to $x$ gives $\\varphi = \\int f_1 \\, dx + A(y, z)$, where $A(y, z)$ is a "constant" depending on the other variables.',
+  },
+      '$\\varphi(x, y, z) = \\int f_1(x, y, z) \\, dx + A(y, z)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Integrating $\\frac{\\partial\\varphi}{\\partial x} = f_1$ with respect to $x$ gives $\\varphi = \\int f_1 \\, dx + A(y, z)$, where $A(y, z)$ is a "constant" depending on the other variables.',
+  },
+      '$\\varphi(x, y, z) = \\int f_1 \\, dy
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Integrating $\\frac{\\partial\\varphi}{\\partial x} = f_1$ with respect to $x$ gives $\\varphi = \\int f_1 \\, dx + A(y, z)$, where $A(y, z)$ is a "constant" depending on the other variables.',
+  },
+      '$\\varphi(x, y, z) = x \\cdot f_1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Integrating $\\frac{\\partial\\varphi}{\\partial x} = f_1$ with respect to $x$ gives $\\varphi = \\int f_1 \\, dx + A(y, z)$, where $A(y, z)$ is a "constant" depending on the other variables.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -36,10 +68,10 @@ export const section111Questions: QuizQuestion[] = [
     options: [
       'Each is constant',
       'They sum to zero',
-      'All three expressions for $\\varphi$ agree',
       'They are all polynomials',
+      'All three expressions for $\\varphi$ agree',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Each partial integration gives $\\varphi$ plus an arbitrary function of the other variables. These must be chosen so all three expressions for $\\varphi$ are consistent (agree everywhere).',
   },

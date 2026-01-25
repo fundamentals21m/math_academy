@@ -8,10 +8,10 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'Binding, hiding, soundness',
       'Commitment, challenge, response',
+      'Completeness, soundness, zero-knowledge',
       'Privacy, integrity, availability',
-      'Completeness, soundness, zero-knowledge'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A ZKAK must satisfy completeness (honest prover succeeds), soundness (cheating prover fails), and zero-knowledge (verifier learns nothing).',
   },
@@ -35,11 +35,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'Soundness protects against:',
     options: [
       'A malicious verifier',
-      'A prover trying to prove a false statement',
       'Network attackers',
-      'Quantum computers'
+      'Quantum computers',
+      'A prover trying to prove a false statement',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Soundness ensures a prover cannot convince the verifier of a false statement (when $(\\sigma, x, w) \\notin \\mathcal{R}$).',
   },

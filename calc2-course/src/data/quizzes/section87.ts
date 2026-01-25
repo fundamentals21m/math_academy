@@ -50,10 +50,26 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the surface $f(x, y, z) = c$, the tangent plane at $(a, b, d)$ has normal vector:',
     options: [
-      '$(a, b, d)$',
-      '$\\nabla f(a, b, d)$',
-      '$(1, 1, 1)$',
-      '$f(a, b, d)$'
+      '$(a, b, d)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The gradient at a point is normal to the level surface, so it\'s the normal vector to the tangent plane.',
+  },
+      '$(1, 1, 1)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The gradient at a point is normal to the level surface, so it\'s the normal vector to the tangent plane.',
+  },
+      '$f(a, b, d)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The gradient at a point is normal to the level surface, so it\'s the normal vector to the tangent plane.',
+  },
+      '$\\nabla f(a, b, d)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The gradient at a point is normal to the level surface, so it\'s the normal vector to the tangent plane.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -64,10 +80,26 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The equation of the tangent plane to $f(x,y,z) = c$ at $(a,b,d)$ is:',
     options: [
-      '$f(x,y,z) = c$',
-      '$x + y + z = a + b + d$',
-      '$\\nabla f(a,b,d) \\cdot (x-a, y-b, z-d) = 0$',
-      '$(x-a)^2 + (y-b)^2 + (z-d)^2 = 0$'
+      '$f(x,y,z) = c
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The tangent plane consists of vectors perpendicular to $\\nabla f$: $\\nabla f \\cdot (\\mathbf{x} - \\mathbf{a}) = 0$.',
+  },
+      '$x + y + z = a + b + d
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The tangent plane consists of vectors perpendicular to $\\nabla f$: $\\nabla f \\cdot (\\mathbf{x} - \\mathbf{a}) = 0$.',
+  },
+      '$(x-a)^2 + (y-b)^2 + (z-d)^2 = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The tangent plane consists of vectors perpendicular to $\\nabla f$: $\\nabla f \\cdot (\\mathbf{x} - \\mathbf{a}) = 0$.',
+  },
+      '$\\nabla f(a,b,d) \\cdot (x-a, y-b, z-d) = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The tangent plane consists of vectors perpendicular to $\\nabla f$: $\\nabla f \\cdot (\\mathbf{x} - \\mathbf{a}) = 0$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -78,10 +110,26 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $f(x,y,z) = x^2 + y^2 + z^2$, the tangent plane to the sphere $x^2+y^2+z^2 = 1$ at $(1,0,0)$ is:',
     options: [
-      '$2x = 2$, i.e., $x = 1$',
-      '$x = 0$',
-      '$x + y + z = 1$',
-      '$x = 1$'
+      '$2x = 2$, i.e., $x = 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\nabla f = (2x, 2y, 2z)$, at $(1,0,0)$: $\\nabla f = (2,0,0)$. Tangent plane: $2(x-1) + 0 + 0 = 0$, i.e., $x = 1$.',
+  },
+      '$x = 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\nabla f = (2x, 2y, 2z)$, at $(1,0,0)$: $\\nabla f = (2,0,0)$. Tangent plane: $2(x-1) + 0 + 0 = 0$, i.e., $x = 1$.',
+  },
+      '$x = 0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\nabla f = (2x, 2y, 2z)$, at $(1,0,0)$: $\\nabla f = (2,0,0)$. Tangent plane: $2(x-1) + 0 + 0 = 0$, i.e., $x = 1$.',
+  },
+      '$x + y + z = 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\nabla f = (2x, 2y, 2z)$, at $(1,0,0)$: $\\nabla f = (2,0,0)$. Tangent plane: $2(x-1) + 0 + 0 = 0$, i.e., $x = 1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

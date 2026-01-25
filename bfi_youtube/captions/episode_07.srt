@@ -1,0 +1,240 @@
+1
+00:00:00,000 --> 00:00:05,360
+A byproduct of being responsible for one's own private keys is a natural desire for privacy.
+
+2
+00:00:05,360 --> 00:00:10,480
+This is a thorny issue because most people are conditioned to be willing to give up their privacy around money.
+
+3
+00:00:10,480 --> 00:00:17,039
+But as we'll see in this chapter, the freedom to transact without surveillance may be one of Bitcoin's most important properties.
+
+4
+00:00:17,039 --> 00:00:21,519
+China is already using a CBDC, a central bank digital currency,
+
+5
+00:00:21,519 --> 00:00:25,440
+and that has given Western society a preview of the nightmare we will experience
+
+6
+00:00:25,440 --> 00:00:30,480
+if we allow our governments to implement a totalitarian panopticon around money and spending.
+
+7
+00:00:30,480 --> 00:00:36,159
+Most people using Bitcoin are doing so strictly for price exposure and don't care about maintaining privacy.
+
+8
+00:00:36,159 --> 00:00:37,520
+But they should.
+
+9
+00:00:37,520 --> 00:00:43,200
+They will be looking for more and more solutions to regain their privacy as the central banks tighten their grip further.
+
+10
+00:00:43,200 --> 00:00:50,479
+There are many people that believe that the freedom to transact is a natural right and a natural extension of freedom of speech.
+
+11
+00:00:50,560 --> 00:00:54,719
+In the digital world, monetary transactions are little more than messages,
+
+12
+00:00:54,719 --> 00:00:57,359
+not different from texts or emails.
+
+13
+00:00:57,359 --> 00:01:02,079
+Like with speech, there cannot be truly free markets without the total freedom to transact.
+
+14
+00:01:02,079 --> 00:01:08,159
+The US uses its status as the central issuer of the world's current reserve currency, the US dollar,
+
+15
+00:01:08,159 --> 00:01:15,359
+and the world's reserve asset, US government bonds, to maintain its status as the dominant leader in the world.
+
+16
+00:01:15,439 --> 00:01:23,040
+The US uses Swift Payment Network Access to provide oversight over seemingly every transaction in the global financial system.
+
+17
+00:01:23,040 --> 00:01:29,439
+Know your customer and anti-money laundering regulations claim that nobody transacting has any right to privacy.
+
+18
+00:01:29,439 --> 00:01:34,319
+The reality is that the majority of criminal activity in the world happens in US dollars.
+
+19
+00:01:34,319 --> 00:01:38,239
+A much preferred network for crime than an unencrypted public ledger.
+
+20
+00:01:38,239 --> 00:01:43,680
+These regulations have strangled innovation and made it untenable for companies to operate honestly,
+
+21
+00:01:43,680 --> 00:01:47,760
+causing many to leave the US for friendlier jurisdictions.
+
+22
+00:01:47,760 --> 00:01:54,799
+The Canadian Freedom Convoy in January of 2022 brought this privacy issue to light when it comes to personal spending.
+
+23
+00:01:54,799 --> 00:01:58,079
+Whether you agree or not with what the truckers were protesting,
+
+24
+00:01:58,079 --> 00:02:07,120
+many people in Canada and the US appreciated their fight and wanted to support them by donating money for clothing and firewood.
+
+25
+00:02:07,120 --> 00:02:12,400
+Several methods of donating were established that raised millions of dollars for these truckers,
+
+26
+00:02:12,400 --> 00:02:18,319
+which never saw their way into their hands as a result of direct intervention by the Trudeau government.
+
+27
+00:02:19,680 --> 00:02:23,199
+GoFundMe raised 10 million Canadian dollars.
+
+28
+00:02:24,240 --> 00:02:29,039
+Only about 1 million was released before the platform was forced to take action by the government.
+
+29
+00:02:30,159 --> 00:02:34,159
+After GoFundMe was blocked, supporters turned to give send Go.
+
+30
+00:02:34,719 --> 00:02:43,120
+They collected $9.58 million, 44% from the United States, over 109,000 donations.
+
+31
+00:02:43,759 --> 00:02:48,000
+The Canadian government worked to block protesters access to these funds as well,
+
+32
+00:02:48,000 --> 00:02:50,479
+but the intervention didn't end at the blockade.
+
+33
+00:02:50,479 --> 00:02:55,360
+The Trudeau government invoked the Emergencies Act in order to freeze the bank accounts of the individuals
+
+34
+00:02:55,360 --> 00:03:01,199
+who donated to the protests. Banks were told they can't provide any financial or related services
+
+35
+00:03:01,199 --> 00:03:05,759
+to people associated with the protests, a move that resulted in frozen accounts,
+
+36
+00:03:05,759 --> 00:03:08,080
+stranded money, and cancelled credit cards.
+
+37
+00:03:08,879 --> 00:03:13,919
+Most people have likely never heard of a GoFundMe campaign being hijacked and redirected by a government.
+
+38
+00:03:14,800 --> 00:03:20,400
+This was an unprecedented display of financial surveillance and control over peaceful citizens.
+
+39
+00:03:21,360 --> 00:03:26,479
+The Canadian Freedom Convoy demonstrated exactly why Bitcoin users value privacy.
+
+40
+00:03:27,120 --> 00:03:32,479
+When governments can block crowdfunding platforms, freeze bank accounts for political views,
+
+41
+00:03:32,479 --> 00:03:38,080
+cancel credit cards for donating to legal causes, and track and punish donors to political movements.
+
+42
+00:03:38,080 --> 00:03:42,800
+Then the need for a censorship-resistant permissionless money becomes self-evident.
+
+43
+00:03:42,800 --> 00:03:48,560
+Bitcoin held in self-custody could not have been blocked, frozen, or redirected by any government.
+
+44
+00:03:49,199 --> 00:03:52,800
+Bitcoin users will increasingly demand privacy-preserving solutions.
+
+45
+00:03:53,439 --> 00:03:57,919
+Institutions that don't understand this fundamental value proposition will find themselves
+
+46
+00:03:57,919 --> 00:04:01,680
+offering products that sophisticated Bitcoin users don't want.
+
+47
+00:04:02,639 --> 00:04:07,840
+The current idea most individuals and institutions have about using Bitcoin is solely for its
+
+48
+00:04:07,840 --> 00:04:13,280
+price exposure, with very little to do with the powerful property of it as a digital bearer asset.
+
+49
+00:04:14,159 --> 00:04:19,360
+This just underscores how early we all are and how little the majority of the world understands
+
+50
+00:04:19,360 --> 00:04:25,680
+Bitcoin. Let's recap what we learned in this chapter. CBDC's Threat and Financial Privacy.
+
+51
+00:04:25,680 --> 00:04:31,519
+China's CBDC is a preview of the totalitarian Panopticon Western governments could implement.
+
+52
+00:04:31,519 --> 00:04:36,800
+Freedom to transact is an extension of free speech, monetary transactions in the digital world are
+
+53
+00:04:36,800 --> 00:04:41,920
+just messages. The Freedom Convoy showed government power over money. Crowdfunding was blocked,
+
+54
+00:04:41,920 --> 00:04:47,839
+bank accounts were frozen, and credit cards were cancelled. KYC AML regulations are weaponized.
+
+55
+00:04:47,839 --> 00:04:52,800
+While most crime happens in dollars, these regulations strangle innovation and honest business.
+
+56
+00:04:53,600 --> 00:04:58,800
+Bitcoin in self-custody is censorship resistant. It could not have been blocked, frozen,
+
+57
+00:04:58,800 --> 00:05:06,800
+or redirected by any government. This concludes Part 1. Bitcoin is for individuals.
+
+58
+00:05:08,240 --> 00:05:15,439
+In the next episode, we begin Part 2. Individuals run institutions, starting with strategy.
+
+59
+00:05:16,079 --> 00:05:20,959
+The company formerly known as MicroStrategy. And how Michael Saler proved that one
+
+60
+00:05:20,959 --> 00:05:32,399
+individual can make institutional Bitcoin work. See you in the next one.
+

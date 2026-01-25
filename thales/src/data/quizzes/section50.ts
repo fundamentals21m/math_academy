@@ -9,12 +9,12 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does it mean for a set A of natural numbers to be recursive?',
     options: [
+      'There is an algorithm to decide membership in A',
       'A can be listed by some function',
       'A contains all prime numbers',
-      'There is an algorithm to decide membership in A',
       'A is infinite',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'A set is recursive (or decidable) if there is a recursive function f such that A = {x | f(x) = 0}. This means we can compute whether any given x is in A.',
@@ -25,11 +25,11 @@ export const section50Questions: QuizQuestion[] = [
     question: 'What does it mean for a set A to be recursively enumerable (r.e.)?',
     options: [
       'A has finitely many elements',
-      'A can be listed by a recursive function (possibly with repetitions)',
       'A is the same as its complement',
+      'A can be listed by a recursive function (possibly with repetitions)',
       'A contains only recursive functions',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'A set A is recursively enumerable if there is a recursive function g such that A = {g(0), g(1), g(2), ...}. We can generate all elements, but may not know when the listing is complete.',
@@ -40,11 +40,11 @@ export const section50Questions: QuizQuestion[] = [
     question: "According to Kleene's proposition, when is a set A recursive?",
     options: [
       'When A is finite',
+      'When both A and its complement are r.e.',
       'When A is infinite',
       'When A contains no primes',
-      'When both A and its complement are r.e.',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       "Kleene's proposition states that A is recursive if and only if both A and A^c (its complement) are recursively enumerable. This is a fundamental result connecting decidability and semi-decidability.",
@@ -54,12 +54,12 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the set of mathematical theorems recursively enumerable?',
     options: [
-      'Because we can enumerate all proofs and output the last formula of each',
       'Because theorems are short',
       'Because there are only finitely many theorems',
       'Because all formulas are theorems',
+      'Because we can enumerate all proofs and output the last formula of each',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A theorem is the last formula of a valid proof. Since proofs are finite objects that can be systematically listed, a computer can enumerate all proofs and output the conclusion of each, thereby listing all theorems.',
@@ -99,12 +99,12 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the set of proofs recursive?',
     options: [
-      'Because there are only finitely many proofs',
       'Because there is a finite procedure to check if a list of formulas is a valid proof',
+      'Because there are only finitely many proofs',
       'Because every formula is a proof',
-      'Because proofs cannot contain axioms'
+      'Because proofs cannot contain axioms',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A proof is a finite list of formulas where each is either an axiom or follows from earlier formulas by inference rules. Checking these conditions is a finite mechanical procedure, making the set of proofs recursive (decidable).',
@@ -129,12 +129,12 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who first proved the Incompleteness Theorem?',
     options: [
-      'Gödel',
       'Turing',
       'Church',
+      'Gödel',
       'Hilbert',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       "Kurt Gödel (1906–1978) first proved the Incompleteness Theorem. Church later used Gödel's result to prove Church's Theorem about the undecidability of theoremhood.",

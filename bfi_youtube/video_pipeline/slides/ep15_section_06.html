@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 30px auto;
+      max-width: 1050px;
+    }
+    .summary-card {
+      background: rgba(8, 145, 178, 0.08);
+      border: 1px solid rgba(8, 145, 178, 0.3);
+      padding: 25px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .summary-title {
+      color: #0891B2;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .summary-list {
+      list-style: none;
+    }
+    .summary-list li {
+      color: #E6EDF3;
+      font-size: 15px;
+      padding: 6px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+    .summary-list li::before {
+      content: "•";
+      color: #F7931A;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Series Summary</div>
+    <div class="section-title">Key Lessons</div>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-title">For Investors</div>
+        <ul class="summary-list">
+          <li>Bitcoin is the greatest performing asset in history</li>
+          <li>Drawdowns are structural — always recover to ATH</li>
+          <li>Small allocations cause significant outperformance</li>
+          <li>Don't be unintentionally short bitcoin</li>
+        </ul>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">For Fiduciaries</div>
+        <ul class="summary-list">
+          <li>Liability exposure from NOT offering bitcoin</li>
+          <li>Drawdowns are short, returns are enduring</li>
+          <li>More likely to be sued for lack of returns than losses</li>
+        </ul>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">For Executives</div>
+        <ul class="summary-list">
+          <li>Don't need treasury bitcoin to benefit</li>
+          <li>NQDC and selling into rising markets are less risky</li>
+          <li>Lower operating costs without balance sheet risk</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

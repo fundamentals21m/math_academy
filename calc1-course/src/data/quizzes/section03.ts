@@ -9,7 +9,7 @@ export const section03Questions: QuizQuestion[] = [
       'Commutativity of addition',
       'Distributive law',
       'Existence of multiplicative inverses for all real numbers',
-      'Associativity of multiplication'
+      'Associativity of multiplication',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -20,12 +20,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the completeness axiom (least upper bound property) guarantee?',
     options: [
+      'Every nonempty set bounded above has a supremum',
       'Every set has a maximum',
       'The real line has no gaps',
       'Every real number is rational',
-      'Every nonempty set bounded above has a supremum'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The completeness axiom states that every nonempty set of real numbers bounded above has a least upper bound (supremum).',
   },
@@ -34,10 +34,26 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $a < b$ and $c > 0$, what can we conclude?',
     options: [
-      '$ac < bc$',
-      '$ac > bc$',
-      '$ac = bc$',
-      'Cannot determine without knowing $a$ and $b$'
+      '$ac > bc
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Multiplying both sides of an inequality by a positive number preserves the direction: $ac < bc$.',
+  },
+      '$ac = bc
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Multiplying both sides of an inequality by a positive number preserves the direction: $ac < bc$.',
+  },
+      '$ac < bc
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Multiplying both sides of an inequality by a positive number preserves the direction: $ac < bc$.',
+  },
+      'Cannot determine without knowing $a$ and $b
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Multiplying both sides of an inequality by a positive number preserves the direction: $ac < bc$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

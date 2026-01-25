@@ -6,12 +6,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the next step after differentiating a function?',
     options: [
-      'Evaluating the derivative at specific points to understand the function\'s behavior',
       'Finding the maximum value',
+      'Evaluating the derivative at specific points to understand the function\\\'s behavior',
       'Integrating the result',
-      'Graphing the original function'
+      'Graphing the original function',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'After finding the derivative, we often evaluate it at specific points to understand rates of change, slopes, and behavior.',
   },
@@ -30,11 +30,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'If $\\frac{dy}{dx} = 0$ at a point, what does this tell us?',
     options: [
       'The function equals zero at that point',
-      'The function has a horizontal tangent (possible maximum, minimum, or inflection point)',
       'The function is undefined',
-      'The function is increasing'
+      'The function is increasing',
+      'The function has a horizontal tangent (possible maximum, minimum, or inflection point)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When the derivative is zero, the tangent line is horizontal, indicating a potential maximum, minimum, or inflection point.',
   },
@@ -46,7 +46,7 @@ export const section05Questions: QuizQuestion[] = [
       'Decreasing on that interval',
       'Constant on that interval',
       'Increasing on that interval',
-      'Undefined on that interval'
+      'Undefined on that interval',
     ],
     correctIndex: 2,
     difficulty: 'easy',

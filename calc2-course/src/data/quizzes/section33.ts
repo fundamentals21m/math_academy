@@ -37,11 +37,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'In a real Euclidean space, Hermitian transformations are called:',
     options: [
       'Unitary',
-      'Symmetric',
       'Orthogonal',
+      'Symmetric',
       'Normal',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'In real spaces, the Hermitian condition $(T(x), y) = (x, T(y))$ is called symmetry, so Hermitian operators are called symmetric.',
   },

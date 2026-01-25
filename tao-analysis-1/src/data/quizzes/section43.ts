@@ -81,11 +81,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'The function $f(x) = 1/x$ on $[1, \\infty)$ does NOT satisfy the conclusion of the Extreme Value Theorem because:',
     options: [
       '$f$ is not continuous',
+      'The domain is not bounded',
       'The domain is not closed',
       '$f$ is not differentiable',
-      'The domain is not bounded'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The interval $[1, \\infty)$ is closed but unbounded. The Extreme Value Theorem requires a closed AND bounded interval.',
   },

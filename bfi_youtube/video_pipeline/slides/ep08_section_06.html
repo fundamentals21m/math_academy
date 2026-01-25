@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #7C3AED;
+      --accent-rgb: 124, 58, 237;
+    }
+    .mechanism-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      margin: 40px 0;
+    }
+    .flow-box {
+      background: rgba(247, 147, 26, 0.08);
+      border: 1px solid rgba(247, 147, 26, 0.3);
+      padding: 25px 35px;
+      border-radius: 8px;
+      text-align: center;
+      width: 200px;
+    }
+    .flow-step {
+      color: #F7931A;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      margin-bottom: 10px;
+    }
+    .flow-text {
+      color: #E6EDF3;
+      font-size: 20px;
+    }
+    .flow-arrow {
+      color: #F7931A;
+      font-size: 28px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin: 40px auto;
+      max-width: 900px;
+    }
+    .benefit-card {
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      padding: 25px;
+      border-radius: 8px;
+      text-align: left;
+    }
+    .benefit-title {
+      color: #22C55E;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .benefit-desc {
+      color: #E6EDF3;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .innovation-box {
+      background: rgba(124, 58, 237, 0.1);
+      border: 2px solid rgba(124, 58, 237, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin-top: 30px;
+      display: inline-block;
+    }
+    .innovation-text {
+      color: #E6EDF3;
+      font-size: 24px;
+    }
+    .innovation-text em {
+      color: #7C3AED;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Financial Innovation</div>
+    <div class="section-title">Convertible Debt Strategy</div>
+    <div class="mechanism-flow">
+      <div class="flow-box">
+        <div class="flow-step">Step 1</div>
+        <div class="flow-text">Issue convertible bonds</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">
+        <div class="flow-step">Step 2</div>
+        <div class="flow-text">Borrow at low rates</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">
+        <div class="flow-step">Step 3</div>
+        <div class="flow-text">Buy more bitcoin</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">
+        <div class="flow-step">Step 4</div>
+        <div class="flow-text">BTC appreciates &gt; cost</div>
+      </div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-title">Near-Zero Coupon Rates</div>
+        <div class="benefit-desc">Investors accept low rates for equity upside potential</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-title">30%+ Annual Appreciation</div>
+        <div class="benefit-desc">Historical bitcoin returns far exceed borrowing costs</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-title">Conversion Dilution</div>
+        <div class="benefit-desc">If bonds convert, BTC holdings grow proportionally more</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-title">Accumulation Vehicle</div>
+        <div class="benefit-desc">Corporate finance becomes bitcoin acquisition engine</div>
+      </div>
+    </div>
+    <div class="innovation-box">
+      <div class="innovation-text">Strategy turned corporate finance into a <em>bitcoin accumulation vehicle</em> others are copying.</div>
+    </div>
+  </div>
+</body>
+</html>

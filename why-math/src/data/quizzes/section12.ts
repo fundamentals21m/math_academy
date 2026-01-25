@@ -135,10 +135,26 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A coin is tossed 3 times. What is the probability of getting at least one head?',
     options: [
-      '$\\frac{1}{8}$',
-      '$\\frac{3}{8}$',
-      '$\\frac{1}{2}$',
-      '$\\frac{7}{8}$'
+      '$\\frac{1}{8}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Use the complement: $P(\\text{at least one head}) = 1 - P(\\text{all tails}) = 1 - \\frac{1}{8} = \\frac{7}{8}$.',
+  },
+      '$\\frac{7}{8}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Use the complement: $P(\\text{at least one head}) = 1 - P(\\text{all tails}) = 1 - \\frac{1}{8} = \\frac{7}{8}$.',
+  },
+      '$\\frac{3}{8}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Use the complement: $P(\\text{at least one head}) = 1 - P(\\text{all tails}) = 1 - \\frac{1}{8} = \\frac{7}{8}$.',
+  },
+      '$\\frac{1}{2}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Use the complement: $P(\\text{at least one head}) = 1 - P(\\text{all tails}) = 1 - \\frac{1}{8} = \\frac{7}{8}$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -218,10 +234,26 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the birthday problem, with how many people is there a >50% chance that two share a birthday?',
     options: [
-      '$183$',
-      '$50$',
-      '$23$',
-      '$365$'
+      '$183
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Surprisingly, with just 23 people, the probability that at least two share a birthday exceeds 50%!',
+  },
+      '$50
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Surprisingly, with just 23 people, the probability that at least two share a birthday exceeds 50%!',
+  },
+      '$365
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Surprisingly, with just 23 people, the probability that at least two share a birthday exceeds 50%!',
+  },
+      '$23
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Surprisingly, with just 23 people, the probability that at least two share a birthday exceeds 50%!',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

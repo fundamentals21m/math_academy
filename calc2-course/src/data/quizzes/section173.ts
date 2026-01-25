@@ -32,10 +32,26 @@ export const section173Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The marginal pmf $p_X(x_i)$ is obtained from the joint pmf by:',
     options: [
-      '$p_X(x_i) = p(x_i, 0)$',
-      '$p_X(x_i) = \\prod_j p(x_i, y_j)$',
-      '$p_X(x_i) = \\sum_j p(x_i, y_j)$',
-      '$p_X(x_i) = p(x_i, x_i)$'
+      '$p_X(x_i) = p(x_i, 0)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Sum over all values of $Y$: $p_X(x_i) = P(X = x_i) = \\sum_j p(x_i, y_j)$.',
+  },
+      '$p_X(x_i) = \\prod_j p(x_i, y_j)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Sum over all values of $Y$: $p_X(x_i) = P(X = x_i) = \\sum_j p(x_i, y_j)$.',
+  },
+      '$p_X(x_i) = p(x_i, x_i)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Sum over all values of $Y$: $p_X(x_i) = P(X = x_i) = \\sum_j p(x_i, y_j)$.',
+  },
+      '$p_X(x_i) = \\sum_j p(x_i, y_j)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Sum over all values of $Y$: $p_X(x_i) = P(X = x_i) = \\sum_j p(x_i, y_j)$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

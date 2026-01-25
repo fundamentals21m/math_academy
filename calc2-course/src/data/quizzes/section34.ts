@@ -9,7 +9,7 @@ export const section34Questions: QuizQuestion[] = [
       'Pure imaginary',
       'Complex with nonzero imaginary part',
       'Real',
-      'Zero'
+      'Zero',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section34Questions: QuizQuestion[] = [
       'Real',
       'Negative real',
       'Positive real',
-      'Pure imaginary'
+      'Pure imaginary',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section34Questions: QuizQuestion[] = [
       'Zero',
       'Real and negative',
       'Real and positive',
-      'Complex (non-real)'
+      'Complex (non-real)',
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -49,11 +49,11 @@ export const section34Questions: QuizQuestion[] = [
     question: 'In quantum mechanics, physical observables are represented by Hermitian operators because:',
     options: [
       'Hermitian operators are always invertible',
-      'Hermitian operators have real eigenvalues (measurement outcomes)',
       'Hermitian operators are easy to compute',
-      'Hermitian operators have orthonormal eigenvectors'
+      'Hermitian operators have orthonormal eigenvectors',
+      'Hermitian operators have real eigenvalues (measurement outcomes)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Physical measurements must yield real values. Hermitian operators guarantee real eigenvalues, which represent possible measurement outcomes.',
   },

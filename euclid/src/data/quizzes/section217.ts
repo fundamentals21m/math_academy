@@ -8,10 +8,10 @@ export const section217Questions: QuizQuestion[] = [
     options: [
       'The number is prime',
       'The number is composite',
+      'n measures (divides) the number',
       'The number equals n',
-      'n measures (divides) the number'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'VII.38 states that if m has an nth part, then n divides m.',
   },
@@ -21,11 +21,11 @@ export const section217Questions: QuizQuestion[] = [
     question: 'If 24 has a "sixth part," what can we conclude?',
     options: [
       '24 divides 6',
-      '6 divides 24',
       '6 and 24 are coprime',
       '24 is prime',
+      '6 divides 24',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Having a sixth part means 24/6 = 4 is a positive integer, so 6 divides 24.',
   },

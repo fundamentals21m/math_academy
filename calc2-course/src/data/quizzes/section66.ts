@@ -28,10 +28,26 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the matrix differential equation $Y\' = AY$ with constant $A$, if $Y(0) = I$, then $Y(t) =$',
     options: [
-      '$tA$',
-      '$I + tA$',
-      '$A^t$',
-      '$e^{tA}$'
+      '$e^{tA}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The unique solution to $Y\' = AY$ with $Y(0) = I$ is the matrix exponential $Y(t) = e^{tA}$.',
+  },
+      '$tA
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The unique solution to $Y\' = AY$ with $Y(0) = I$ is the matrix exponential $Y(t) = e^{tA}$.',
+  },
+      '$I + tA
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The unique solution to $Y\' = AY$ with $Y(0) = I$ is the matrix exponential $Y(t) = e^{tA}$.',
+  },
+      '$A^t
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The unique solution to $Y\' = AY$ with $Y(0) = I$ is the matrix exponential $Y(t) = e^{tA}$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -42,12 +58,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The uniqueness theorem implies that if two solutions agree at one point, they:',
     options: [
+      'Agree everywhere',
       'May differ elsewhere',
       'Must both be zero',
-      'Agree everywhere',
       'Are linearly dependent',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'By uniqueness, if $Y_1(t_0) = Y_2(t_0)$, then $Y_1(t) = Y_2(t)$ for all $t$.',
   },
@@ -57,11 +73,11 @@ export const section66Questions: QuizQuestion[] = [
     question: 'The proof of uniqueness for $Y\' = AY$ typically uses:',
     options: [
       'Integration by parts',
-      'Gronwall\'s inequality or a contraction argument',
       'The quadratic formula',
-      'Taylor\'s theorem only'
+      'Gronwall\\\\'s inequality or a contraction argument',
+      'Taylor\\\\'s theorem only',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Uniqueness proofs often employ Gronwall\'s inequality or show that the difference of two solutions satisfies an inequality forcing it to zero.',
   },

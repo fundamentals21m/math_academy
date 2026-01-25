@@ -7,11 +7,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What mathematical system did Descartes invent that unified algebra and geometry?',
     options: [
       'Differential calculus',
-      'The Cartesian coordinate system',
       'Boolean algebra',
-      'Set theory'
+      'The Cartesian coordinate system',
+      'Set theory',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Descartes invented the coordinate system that bears his name, allowing geometric shapes to be described by algebraic equations.',
   },
@@ -37,7 +37,7 @@ export const section04Questions: QuizQuestion[] = [
       'Constants',
       'Coefficients',
       'Exponents',
-      'Unknown quantities (variables)'
+      'Unknown quantities (variables)',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -79,11 +79,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Descartes\'s Rule of Signs helps determine:',
     options: [
       'The derivative of a polynomial',
-      'Whether a number is prime',
       'The number of positive and negative real roots',
+      'Whether a number is prime',
       'The area under a curve',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The Rule of Signs uses sign changes in coefficients to bound the number of positive and negative real roots.',
   },

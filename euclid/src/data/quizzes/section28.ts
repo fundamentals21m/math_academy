@@ -23,7 +23,7 @@ export const section28Questions: QuizQuestion[] = [
       'It extends I.27 to more angle conditions',
       'It is the converse',
       'It contradicts I.27',
-      'They are equivalent'
+      'They are equivalent',
     ],
     correctIndex: 0,
     difficulty: 'medium',

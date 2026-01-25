@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #7C3AED;
+      --accent-rgb: 124, 58, 237;
+    }
+    .profile-container {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .profile-icon {
+      font-size: 120px;
+      background: rgba(124, 58, 237, 0.1);
+      border: 2px solid rgba(124, 58, 237, 0.3);
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .profile-info {
+      text-align: left;
+      max-width: 600px;
+    }
+    .profile-name {
+      color: #E6EDF3;
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .profile-title {
+      color: #7C3AED;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .profile-detail {
+      color: #8B949E;
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .reframing-box {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 35px 50px;
+      border-radius: 12px;
+      margin-top: 50px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .reframe-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+    .reframe-item {
+      text-align: center;
+    }
+    .reframe-old {
+      color: #8B949E;
+      font-size: 24px;
+      text-decoration: line-through;
+    }
+    .reframe-new {
+      color: #F7931A;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .reframe-symbol {
+      color: #F7931A;
+      font-size: 36px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Individual</div>
+    <div class="section-title">Michael Saylor</div>
+    <div class="profile-container">
+      <div class="profile-icon">👤</div>
+      <div class="profile-info">
+        <div class="profile-name">Michael Saylor</div>
+        <div class="profile-title">Founder & Chairman, Strategy</div>
+        <div class="profile-detail">• MIT-trained engineer</div>
+        <div class="profile-detail">• Founded company with $250,000 DuPont grant</div>
+        <div class="profile-detail">• Unlikeliest character to lead bitcoin adoption</div>
+      </div>
+    </div>
+    <div class="reframing-box">
+      <div class="reframe-arrow">
+        <div class="reframe-item">
+          <div class="reframe-old">"Magic Internet Money"</div>
+        </div>
+        <div class="reframe-symbol">→</div>
+        <div class="reframe-item">
+          <div class="reframe-new">"Thermodynamically Sound Digital Real Estate"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

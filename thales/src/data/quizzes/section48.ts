@@ -11,10 +11,10 @@ export const section48Questions: QuizQuestion[] = [
     options: [
       'Any triple (x, y, z) with x² + y² = z²',
       'A triple where x, y, z are all prime',
-      'A triple (x, y, z) with x² + y² = z² and gcd(x, y, z) = 1',
       'The smallest Pythagorean triple',
+      'A triple (x, y, z) with x² + y² = z² and gcd(x, y, z) = 1',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A primitive Pythagorean triple satisfies x² + y² = z² with gcd(x, y, z) = 1. Non-primitive triples are just multiples of primitive ones.',
@@ -24,12 +24,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the parametrization of primitive Pythagorean triples (with y even)?',
     options: [
-      'x = u² - v², y = 2uv, z = u² + v²',
       'x = u + v, y = u - v, z = uv',
+      'x = u² - v², y = 2uv, z = u² + v²',
       'x = 2u, y = 2v, z = 2(u + v)',
       'x = u/v, y = v/u, z = 1',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'For primitive triples with y even, we have x = u² - v², y = 2uv, z = u² + v² where gcd(u, v) = 1, u > v, and u, v are not both odd.',
@@ -41,10 +41,10 @@ export const section48Questions: QuizQuestion[] = [
     options: [
       'm + n is a square',
       'm - n is a square',
+      'Both m and n are perfect squares',
       'm = n',
-      'Both m and n are perfect squares'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'This key lemma follows from the divisor counting function: τ(mn) = τ(m)τ(n) when gcd(m,n) = 1, and τ(x) is odd iff x is a square.',
@@ -55,11 +55,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'Who proved Fermat\'s Last Theorem completely in 1994?',
     options: [
       'Leonhard Euler',
-      'Pierre de Fermat',
       'Andrew Wiles',
+      'Pierre de Fermat',
       'Carl Friedrich Gauss',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Andrew Wiles of Princeton University proved Fermat\'s Last Theorem in 1994, building on work by Ribet, Taniyama, Shimura, Mazur, Frey, and Taylor.',
@@ -69,12 +69,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which case of Fermat\'s Last Theorem did Fermat himself prove?',
     options: [
+      'n = 4',
       'n = 3',
       'n = 5',
-      'n = 4',
       'All odd primes',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Fermat proved the n = 4 case using his method of descent. The n = 3 case was later proved by Euler, and other cases took centuries more.',
@@ -102,7 +102,7 @@ export const section48Questions: QuizQuestion[] = [
       '50 years',
       '150 years',
       '1000 years',
-      '350 years'
+      '350 years',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -115,11 +115,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'Who knew the parametrization of Pythagorean triples ~4000 years ago?',
     options: [
       'The Egyptians',
-      'The Mesopotamians',
       'The Greeks',
       'The Chinese',
+      'The Mesopotamians',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'According to Neugebauer, the Mesopotamians (Babylonians) knew how to generate Pythagorean triples about 4000 years ago, as evidenced by clay tablets like Plimpton 322.',
@@ -130,11 +130,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'What stronger result did Fermat actually prove for n = 4?',
     options: [
       'x⁴ + y⁴ = z⁴ has no solutions',
-      'x⁴ + y⁴ = z² has no solutions',
       'x⁴ - y⁴ = z⁴ has no solutions',
+      'x⁴ + y⁴ = z² has no solutions',
       'x² + y² = z⁴ has no solutions',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Fermat proved the stronger result that x⁴ + y⁴ = z² has no positive integer solutions. Since any solution to x⁴ + y⁴ = z⁴ would give x⁴ + y⁴ = (z²)², this implies the n = 4 case of FLT.',

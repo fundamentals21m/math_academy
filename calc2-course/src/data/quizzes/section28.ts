@@ -6,10 +6,26 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To find eigenvectors for eigenvalue $\\lambda$, we solve:',
     options: [
-      '$AX = X$',
-      '$AX = \\lambda$',
-      '$(\\lambda I - A)X = 0$',
-      '$\\det(A - X) = \\lambda$'
+      '$(\\lambda I - A)X = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Eigenvectors satisfy $AX = \\lambda X$, which rearranges to $(\\lambda I - A)X = 0$. We find nontrivial solutions to this homogeneous system.',
+  },
+      '$AX = X
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Eigenvectors satisfy $AX = \\lambda X$, which rearranges to $(\\lambda I - A)X = 0$. We find nontrivial solutions to this homogeneous system.',
+  },
+      '$AX = \\lambda
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Eigenvectors satisfy $AX = \\lambda X$, which rearranges to $(\\lambda I - A)X = 0$. We find nontrivial solutions to this homogeneous system.',
+  },
+      '$\\det(A - X) = \\lambda
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Eigenvectors satisfy $AX = \\lambda X$, which rearranges to $(\\lambda I - A)X = 0$. We find nontrivial solutions to this homogeneous system.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -35,11 +51,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'If an eigenvalue has algebraic multiplicity 2, its eigenspace:',
     options: [
       'Must have dimension 1',
-      'Has dimension 1 or 2',
       'Must have dimension 2',
+      'Has dimension 1 or 2',
       'Has dimension 0',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The geometric multiplicity (dimension of eigenspace) is at least 1 and at most the algebraic multiplicity. So for algebraic multiplicity 2, the eigenspace dimension is 1 or 2.',
   },

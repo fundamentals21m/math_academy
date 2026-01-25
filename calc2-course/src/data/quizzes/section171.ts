@@ -36,10 +36,26 @@ export const section171Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The density of the standard normal distribution is:',
     options: [
-      '$\\phi(t) = \\frac{1}{\\sqrt{2\\pi}} e^{-t^2/2}$',
-      '$\\phi(t) = e^{-t^2}$',
-      '$\\phi(t) = \\frac{1}{2} e^{-|t|}$',
-      '$\\phi(t) = \\frac{1}{\\pi(1+t^2)}$'
+      '$\\phi(t) = e^{-t^2}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The standard normal density is $\\phi(t) = \\frac{1}{\\sqrt{2\\pi}} e^{-t^2/2}$.',
+  },
+      '$\\phi(t) = \\frac{1}{2} e^{-|t|}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The standard normal density is $\\phi(t) = \\frac{1}{\\sqrt{2\\pi}} e^{-t^2/2}$.',
+  },
+      '$\\phi(t) = \\frac{1}{\\sqrt{2\\pi}} e^{-t^2/2}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The standard normal density is $\\phi(t) = \\frac{1}{\\sqrt{2\\pi}} e^{-t^2/2}$.',
+  },
+      '$\\phi(t) = \\frac{1}{\\pi(1+t^2)}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The standard normal density is $\\phi(t) = \\frac{1}{\\sqrt{2\\pi}} e^{-t^2/2}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -81,11 +97,11 @@ export const section171Questions: QuizQuestion[] = [
     question: 'For a normal distribution with mean $m$ and standard deviation $\\sigma$, approximately what percentage lies within one standard deviation of the mean?',
     options: [
       'About 50%',
-      'About 68%',
       'About 95%',
+      'About 68%',
       'About 99.7%',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'About 68% of a normal distribution lies within one standard deviation of the mean ($m \\pm \\sigma$).',
   },
@@ -95,11 +111,11 @@ export const section171Questions: QuizQuestion[] = [
     question: 'The symmetry property $\\Phi(-t) = 1 - \\Phi(t)$ follows from:',
     options: [
       'The density being always positive',
+      'The density being symmetric about 0',
       'The mean being 0',
       'The variance being 1',
-      'The density being symmetric about 0'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The standard normal density $\\phi(t)$ is symmetric about 0: $\\phi(-t) = \\phi(t)$. This symmetry implies $\\Phi(-t) = 1 - \\Phi(t)$.',
   },

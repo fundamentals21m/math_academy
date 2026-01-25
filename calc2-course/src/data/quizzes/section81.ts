@@ -6,10 +6,26 @@ export const section81Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The directional derivative of $f$ at $\\mathbf{a}$ in the direction of unit vector $\\mathbf{u}$ is:',
     options: [
-      '$f(\\mathbf{a}) \\cdot \\mathbf{u}$',
-      '$f\'(\\mathbf{a}; \\mathbf{u})$ where $\\|\\mathbf{u}\\| = 1$',
-      '$\\nabla f(\\mathbf{a})$',
-      '$f\'(\\mathbf{a}; \\mathbf{u})/\\|\\mathbf{u}\\|$'
+      '$f(\\mathbf{a}) \\cdot \\mathbf{u}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The directional derivative is $f\'(\\mathbf{a}; \\mathbf{u})$ where $\\mathbf{u}$ is a unit vector in the direction of interest.',
+  },
+      '$\\nabla f(\\mathbf{a})
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The directional derivative is $f\'(\\mathbf{a}; \\mathbf{u})$ where $\\mathbf{u}$ is a unit vector in the direction of interest.',
+  },
+      '$f\\'(\\mathbf{a}; \\mathbf{u})$ where $\\|\\mathbf{u}\\| = 1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The directional derivative is $f\'(\\mathbf{a}; \\mathbf{u})$ where $\\mathbf{u}$ is a unit vector in the direction of interest.',
+  },
+      '$f\\'(\\mathbf{a}; \\mathbf{u})/\\|\\mathbf{u}\\|
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The directional derivative is $f\'(\\mathbf{a}; \\mathbf{u})$ where $\\mathbf{u}$ is a unit vector in the direction of interest.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,10 +36,22 @@ export const section81Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The partial derivative $\\frac{\\partial f}{\\partial x_i}$ at $\\mathbf{a}$ is the directional derivative in the direction:',
     options: [
-      '$\\mathbf{a}$',
-      'The gradient $\\nabla f(\\mathbf{a})$',
-      'The $i$th standard basis vector $\\mathbf{e}_i$',
-      'Any unit vector'
+      '$\\mathbf{a}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The partial derivative $\\frac{\\partial f}{\\partial x_i}(\\mathbf{a}) = f\'(\\mathbf{a}; \\mathbf{e}_i)$ is the derivative along the $i$th coordinate axis.',
+  },
+      'The gradient $\\nabla f(\\mathbf{a})
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The partial derivative $\\frac{\\partial f}{\\partial x_i}(\\mathbf{a}) = f\'(\\mathbf{a}; \\mathbf{e}_i)$ is the derivative along the $i$th coordinate axis.',
+  },
+      'Any unit vector',
+      'The $i$th standard basis vector $\\mathbf{e}_i
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The partial derivative $\\frac{\\partial f}{\\partial x_i}(\\mathbf{a}) = f\'(\\mathbf{a}; \\mathbf{e}_i)$ is the derivative along the $i$th coordinate axis.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -64,10 +92,26 @@ export const section81Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $f(x, y) = x^2y + y^3$, the partial derivative $\\frac{\\partial f}{\\partial y}$ is:',
     options: [
-      '$x^2 + 3y^2$',
-      '$2xy$',
-      '$2x + 3y^2$',
-      '$2xy + 3y^2$'
+      '$2xy
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Treating $x$ as constant: $\\frac{\\partial}{\\partial y}(x^2y + y^3) = x^2 + 3y^2$.',
+  },
+      '$2x + 3y^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Treating $x$ as constant: $\\frac{\\partial}{\\partial y}(x^2y + y^3) = x^2 + 3y^2$.',
+  },
+      '$x^2 + 3y^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Treating $x$ as constant: $\\frac{\\partial}{\\partial y}(x^2y + y^3) = x^2 + 3y^2$.',
+  },
+      '$2xy + 3y^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Treating $x$ as constant: $\\frac{\\partial}{\\partial y}(x^2y + y^3) = x^2 + 3y^2$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

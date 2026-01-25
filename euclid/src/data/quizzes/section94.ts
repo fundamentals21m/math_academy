@@ -20,12 +20,12 @@ export const section94Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The construction for bisecting an arc involves bisecting:',
     options: [
+      'The chord',
       'The central angle',
       'The inscribed angle',
       'The radius',
-      'The chord'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'To bisect the arc, bisect its chord perpendicularly. The perpendicular bisector passes through the center and hits the arc at its midpoint.',
   },

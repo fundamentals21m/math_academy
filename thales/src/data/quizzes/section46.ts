@@ -40,12 +40,12 @@ export const section46Questions: QuizQuestion[] = [
     question:
       'If (x₀, y₀) is one solution of ax + by = c with gcd(a,b) = 1, what is the general solution?',
     options: [
-      'x = x₀ + at, y = y₀ + bt',
       'x = x₀ + bt, y = y₀ - at',
+      'x = x₀ + at, y = y₀ + bt',
       'x = x₀ - bt, y = y₀ + at',
       'x = x₀ + ct, y = y₀ - ct',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The general solution is x = x₀ + bt and y = y₀ - at for integer t. Adding bt to x and subtracting at from y keeps ax + by constant.',
@@ -55,12 +55,12 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How do continued fractions help solve ax + by = c?',
     options: [
+      'The penultimate convergent provides a particular solution',
       'They give the decimal expansion of c',
       'They factor a and b into primes',
       'They only work for quadratic equations',
-      'The penultimate convergent provides a particular solution',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The penultimate convergent pₙ₋₁/qₙ₋₁ of a/b satisfies pₙqₙ₋₁ - pₙ₋₁qₙ = ±1, which gives a particular solution that can be scaled by c.',
@@ -87,12 +87,12 @@ export const section46Questions: QuizQuestion[] = [
     question:
       'Why must any common divisor of a and b also divide ax + by?',
     options: [
-      'Because any divisor of a and b divides any linear combination',
       'Because x and y are integers',
       'Because gcd(a, b) = 1',
-      'Because c must be positive'
+      'Because c must be positive',
+      'Because any divisor of a and b divides any linear combination',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'If d divides both a and b, then a = da\' and b = db\' for integers a\', b\'. Thus ax + by = d(a\'x + b\'y), so d divides ax + by.',
@@ -104,11 +104,11 @@ export const section46Questions: QuizQuestion[] = [
       'What is the first step in solving 25x + 55y = 50?',
     options: [
       'Divide by 50',
-      'Find gcd(25, 55) and check divisibility',
       'Guess a solution',
+      'Find gcd(25, 55) and check divisibility',
       'Convert to a quadratic equation',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'First find gcd(25, 55) = 5 and verify 5 divides 50. Then simplify to 5x + 11y = 10 (dividing everything by 5) before finding solutions.',
@@ -120,10 +120,10 @@ export const section46Questions: QuizQuestion[] = [
     options: [
       'Diophantus of Alexandria',
       'Euclid',
-      'Brahmagupta of India',
       'Fibonacci',
+      'Brahmagupta of India',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'While named after Diophantus (~250 AD), who allowed rational solutions, Brahmagupta of India (628 AD) gave the first complete solution for integer solutions.',
@@ -135,11 +135,11 @@ export const section46Questions: QuizQuestion[] = [
       'If 5x + 11y = 10 has solution (x₀, y₀) = (-20, 10), how many integer solutions exist?',
     options: [
       'None',
+      'Infinitely many',
       'Exactly one',
       'Exactly two',
-      'Infinitely many',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Once one solution exists, there are infinitely many: x = -20 + 11t, y = 10 - 5t for all integers t. Each integer t gives a different valid solution.',

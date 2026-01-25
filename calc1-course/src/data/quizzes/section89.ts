@@ -8,10 +8,10 @@ export const section89Questions: QuizQuestion[] = [
     options: [
       'Only closure under addition',
       'Only having a zero vector',
-      'Being finite-dimensional',
       'Closure under addition, scalar multiplication, and other algebraic properties',
+      'Being finite-dimensional',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Vector space axioms: closure, associativity, identity, inverses, distributivity, etc.',
   },
@@ -124,10 +124,22 @@ export const section89Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The set of polynomials of degree $\\leq n$ has dimension:',
     options: [
-      '$n$',
+      '$n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Basis: $1, x, x^2, ..., x^n$ (total $n+1$ vectors).',
+  },
+      '$n + 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Basis: $1, x, x^2, ..., x^n$ (total $n+1$ vectors).',
+  },
       'Infinite',
-      '$2n$',
-      '$n + 1$'
+      '$2n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Basis: $1, x, x^2, ..., x^n$ (total $n+1$ vectors).',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

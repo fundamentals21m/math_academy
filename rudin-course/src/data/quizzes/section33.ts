@@ -110,10 +110,26 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\lim_{x \\to \\infty} f(x) = L$ (finite), which statement must be true?',
     options: [
-      '$f$ is bounded on $\\mathbb{R}$',
-      '$f$ is bounded on $[a, \\infty)$ for some $a$',
-      '$f$ is monotonic for large $x$',
-      '$f$ is uniformly continuous on $\\mathbb{R}$'
+      '$f$ is bounded on $\\mathbb{R}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'If $\\lim_{x \\to \\infty} f(x) = L$, then for $\\epsilon = 1$, there exists $a$ such that $x > a$ implies $|f(x) - L| < 1$. Thus $|f(x)| < |L| + 1$ for $x > a$, so $f$ is bounded on $(a, \\infty)$.',
+  },
+      '$f$ is monotonic for large $x
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $\\lim_{x \\to \\infty} f(x) = L$, then for $\\epsilon = 1$, there exists $a$ such that $x > a$ implies $|f(x) - L| < 1$. Thus $|f(x)| < |L| + 1$ for $x > a$, so $f$ is bounded on $(a, \\infty)$.',
+  },
+      '$f$ is uniformly continuous on $\\mathbb{R}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $\\lim_{x \\to \\infty} f(x) = L$, then for $\\epsilon = 1$, there exists $a$ such that $x > a$ implies $|f(x) - L| < 1$. Thus $|f(x)| < |L| + 1$ for $x > a$, so $f$ is bounded on $(a, \\infty)$.',
+  },
+      '$f$ is bounded on $[a, \\infty)$ for some $a
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $\\lim_{x \\to \\infty} f(x) = L$, then for $\\epsilon = 1$, there exists $a$ such that $x > a$ implies $|f(x) - L| < 1$. Thus $|f(x)| < |L| + 1$ for $x > a$, so $f$ is bounded on $(a, \\infty)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

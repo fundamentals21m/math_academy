@@ -28,10 +28,22 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The degree of $\\Phi_n(x)$ equals:',
     options: [
-      '$n$',
-      '$\\phi(n)$ (Euler\'s totient function)',
-      '$n - 1$',
-      '$\\lfloor n/2 \\rfloor$'
+      '$n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The degree of $\\Phi_n(x)$ is $\\phi(n)$, the number of integers from $1$ to $n$ that are relatively prime to $n$, since this counts the primitive $n$-th roots of unity.',
+  },
+      '$n - 1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The degree of $\\Phi_n(x)$ is $\\phi(n)$, the number of integers from $1$ to $n$ that are relatively prime to $n$, since this counts the primitive $n$-th roots of unity.',
+  },
+      '$\\lfloor n/2 \\rfloor
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The degree of $\\Phi_n(x)$ is $\\phi(n)$, the number of integers from $1$ to $n$ that are relatively prime to $n$, since this counts the primitive $n$-th roots of unity.',
+  },
+      '$\\phi(n)$ (Euler\\'s totient function)',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -64,10 +76,26 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\Phi_6(x)$ equals:',
     options: [
-      '$x^6 - 1$',
-      '$x^2 + 1$',
-      '$x^2 + x + 1$',
-      '$x^2 - x + 1$'
+      '$x^6 - 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'We have $x^6 - 1 = \\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = (x-1)(x+1)(x^2+x+1)\\Phi_6(x)$. Dividing: $\\Phi_6(x) = (x^6-1)/[(x-1)(x+1)(x^2+x+1)] = (x^6-1)/(x^4+x^3-x-1) = x^2 - x + 1$.',
+  },
+      '$x^2 + 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'We have $x^6 - 1 = \\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = (x-1)(x+1)(x^2+x+1)\\Phi_6(x)$. Dividing: $\\Phi_6(x) = (x^6-1)/[(x-1)(x+1)(x^2+x+1)] = (x^6-1)/(x^4+x^3-x-1) = x^2 - x + 1$.',
+  },
+      '$x^2 - x + 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'We have $x^6 - 1 = \\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = (x-1)(x+1)(x^2+x+1)\\Phi_6(x)$. Dividing: $\\Phi_6(x) = (x^6-1)/[(x-1)(x+1)(x^2+x+1)] = (x^6-1)/(x^4+x^3-x-1) = x^2 - x + 1$.',
+  },
+      '$x^2 + x + 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'We have $x^6 - 1 = \\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = (x-1)(x+1)(x^2+x+1)\\Phi_6(x)$. Dividing: $\\Phi_6(x) = (x^6-1)/[(x-1)(x+1)(x^2+x+1)] = (x^6-1)/(x^4+x^3-x-1) = x^2 - x + 1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

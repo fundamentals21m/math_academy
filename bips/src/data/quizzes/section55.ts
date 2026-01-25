@@ -8,10 +8,10 @@ export const section55Questions: QuizQuestion[] = [
     options: [
       'A signature scheme',
       'A new address format',
+      'A transaction where sender and receiver both contribute inputs',
       'A mining protocol',
-      'A transaction where sender and receiver both contribute inputs'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'PayJoin involves the receiver adding inputs to the payment transaction.',
   },
@@ -20,12 +20,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'PayJoin improves privacy by:',
     options: [
-      'Breaking common input ownership heuristics',
       'Encrypting transactions',
+      'Breaking common input ownership heuristics',
       'Using stealth addresses',
-      'Mixing with other users'
+      'Mixing with other users',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'PayJoin breaks the assumption that all inputs belong to the sender.',
   },
@@ -42,12 +42,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'PayJoin requires:',
     options: [
-      'Special address format',
       'Receiver to have spendable UTXOs',
+      'Special address format',
       'Lightning Network',
-      'Mining support'
+      'Mining support',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The receiver must have UTXOs to contribute to the PayJoin transaction.',
   },

@@ -84,10 +84,18 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the quadratic sieve, the factor base consists of:',
     options: [
-      'All primes up to $n$',
+      'All primes up to $n
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The factor base includes small primes $p$ where $\\left(\\frac{n}{p}\\right) = 1$.',
+  },
+      'Primes $p$ for which $n$ is a quadratic residue mod $p
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The factor base includes small primes $p$ where $\\left(\\frac{n}{p}\\right) = 1$.',
+  },
       'Only twin primes',
-      'Primes $p$ for which $n$ is a quadratic residue mod $p$',
-      'Powers of 2'
+      'Powers of 2',
     ],
     correctIndex: 2,
     difficulty: 'hard',

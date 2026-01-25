@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .hopes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .hope-card {
+      background: rgba(139, 148, 158, 0.08);
+      border: 1px solid rgba(139, 148, 158, 0.2);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .hope-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    .hope-title {
+      color: #E6EDF3;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .hope-problem {
+      color: #DC2626;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .verdict-box {
+      background: rgba(220, 38, 38, 0.1);
+      border: 2px solid rgba(220, 38, 38, 0.3);
+      padding: 30px 50px;
+      margin: 50px auto;
+      max-width: 700px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .verdict-text {
+      color: #E6EDF3;
+      font-size: 28px;
+      font-weight: 500;
+    }
+    .verdict-text em {
+      color: #DC2626;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Misguided Hopes</div>
+    <div class="section-title">What Bitcoiners Are Waiting For</div>
+    <div class="hopes-grid">
+      <div class="hope-card">
+        <div class="hope-icon">🏢</div>
+        <div class="hope-title">Mega-Corps</div>
+        <div class="hope-problem">Apple, Meta on balance sheet? Structural incentives prevent long-term holding.</div>
+      </div>
+      <div class="hope-card">
+        <div class="hope-icon">🏛️</div>
+        <div class="hope-title">Governments</div>
+        <div class="hope-problem">Even El Salvador's future is uncertain when Bukele leaves office.</div>
+      </div>
+      <div class="hope-card">
+        <div class="hope-icon">💰</div>
+        <div class="hope-title">Pensions & Endowments</div>
+        <div class="hope-problem">Fiduciary duty and quarterly pressure override conviction.</div>
+      </div>
+    </div>
+    <div class="verdict-box">
+      <div class="verdict-text">They are all <em>misguided</em>. Structural incentives work against long-term holding.</div>
+    </div>
+  </div>
+</body>
+</html>

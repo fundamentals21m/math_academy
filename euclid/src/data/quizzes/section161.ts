@@ -7,11 +7,11 @@ export const section161Questions: QuizQuestion[] = [
     question: 'Proposition VI.16 states: If four lines are proportional (A:B = C:D), then:',
     options: [
       'All four lines are equal',
+      'The rectangle on A and D equals the rectangle on B and C',
       'The rectangle on A and B equals the rectangle on C and D',
       'The sum A + D equals B + C',
-      'The rectangle on A and D equals the rectangle on B and C'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'VI.16 proves that if A:B = C:D, then the rectangle contained by the extremes (A × D) equals the rectangle contained by the means (B × C).',
   },
@@ -20,12 +20,12 @@ export const section161Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The phrase "rectangle contained by" two lines means:',
     options: [
-      'A rectangle with those lines as adjacent sides',
       'A rectangle with those lines as diagonals',
       'A rectangle inscribed between those lines',
-      'A rectangle with perimeter equal to the sum of those lines'
+      'A rectangle with those lines as adjacent sides',
+      'A rectangle with perimeter equal to the sum of those lines',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The rectangle contained by lines A and B is the rectangle with sides of length A and B, having area A × B.',
   },
@@ -36,10 +36,10 @@ export const section161Questions: QuizQuestion[] = [
     options: [
       'If a/b = c/d, then a + b = c + d',
       'If a/b = c/d, then a - b = c - d',
-      'If a/b = c/d, then ad = bc (cross multiplication)',
       'If a/b = c/d, then a^2 = cd',
+      'If a/b = c/d, then ad = bc (cross multiplication)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Cross multiplication: a/b = c/d implies ad = bc. Geometrically, the rectangle on extremes equals the rectangle on means.',
   },

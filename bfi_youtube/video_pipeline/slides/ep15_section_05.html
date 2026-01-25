@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .metrics-table {
+      width: 100%;
+      max-width: 950px;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: rgba(13, 17, 23, 0.8);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .metrics-table th {
+      background: rgba(8, 145, 178, 0.2);
+      color: #0891B2;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 16px;
+    }
+    .metrics-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(8, 145, 178, 0.1);
+      font-size: 17px;
+    }
+    .metrics-table tr:last-child td {
+      border-bottom: none;
+    }
+    .col-institution { color: #F7931A; font-weight: 600; }
+    .col-metric { color: #E6EDF3; }
+    .warning-box {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .warning-title {
+      color: #F7931A;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .warning-text {
+      color: #E6EDF3;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Path Forward</div>
+    <div class="section-title">New Metrics Required</div>
+    <table class="metrics-table">
+      <thead>
+        <tr>
+          <th>Institution Type</th>
+          <th>New Metric Needed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-institution">Pensions</td>
+          <td class="col-metric">Funded status or projected time to termination — not just asset returns</td>
+        </tr>
+        <tr>
+          <td class="col-institution">Corporate Balance Sheets</td>
+          <td class="col-metric">Redefine strength: future value over present value</td>
+        </tr>
+        <tr>
+          <td class="col-institution">Structured Credit</td>
+          <td class="col-metric">Redefine credit quality: bitcoin's impact on subordination</td>
+        </tr>
+        <tr>
+          <td class="col-institution">Asset Managers</td>
+          <td class="col-metric">Track clients' overall allocation to bitcoin</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="warning-box">
+      <div class="warning-title">The Warning</div>
+      <div class="warning-text">Without these new optics, institutional bitcoin efforts will be temporary — no more resilient to calamity than before their participation.</div>
+    </div>
+  </div>
+</body>
+</html>

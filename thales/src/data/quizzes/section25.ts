@@ -10,11 +10,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'Who invented logarithms, spending 20 years constructing the tables?',
     options: [
       'Henry Briggs',
-      'John Napier',
       'Johann Kepler',
+      'John Napier',
       'Simon Stevin',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'John Napier (1550-1617), a Scottish aristocrat, spent 20 years constructing tables of logarithms. His "Construction of the Wonderful Canon of Logarithms" was published in 1619, two years after his death.',
@@ -25,11 +25,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'What terms did Henry Briggs introduce for the parts of a logarithm?',
     options: [
       'Numerator and denominator',
-      'Mantissa and characteristic',
       'Base and exponent',
       'Integer and fraction',
+      'Mantissa and characteristic',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Briggs introduced the terms "mantissa" (the decimal part) and "characteristic" (the integer part) for base-10 logarithms. The practical advantage is that 173, 17.3, 1.73, and 0.173 all have the same mantissa.',
@@ -56,10 +56,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'The rings of Saturn',
       'The planet Neptune',
+      'Sunspots',
       'The moons of Jupiter',
-      'Sunspots'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Galileo was the first to use the telescope for astronomy (1609) and discovered the moons of Jupiter in 1610. These discoveries seemed to support the Copernican heliocentric hypothesis.',
@@ -85,11 +85,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'What is Kepler\'s First Law of planetary motion?',
     options: [
       'Planets move in circular orbits',
+      'Planets move in elliptical orbits with the Sun at one focus',
       'Planets move at constant speed',
       'All planets have the same orbital period',
-      'Planets move in elliptical orbits with the Sun at one focus',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Kepler\'s First Law (1609) states that each planet describes an ellipse with the Sun at one focus. This was a major break from the ancient assumption of circular orbits.',
@@ -99,12 +99,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Kepler\'s Third Law, what quantity is proportional to the cube of a planet\'s orbital semi-major axis?',
     options: [
-      'The planet\\'s mass',
-      'The planet\\'s velocity',
-      'The planet\\'s distance from Earth',
-      'The square of the planet\\'s orbital period',
+      'The planet\\\\\'s mass',
+      'The square of the planet\\\\\'s orbital period',
+      'The planet\\\\\'s velocity',
+      'The planet\\\\\'s distance from Earth',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Kepler\'s Third Law (1619) states that T² ∝ a³, where T is the orbital period and a is the semi-major axis. This law was later confirmed by Newton\'s theory of universal gravitation.',
@@ -114,12 +114,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Whose astronomical observations did Kepler use to formulate his laws?',
     options: [
+      'Tycho Brahe',
       'Ptolemy',
       'Copernicus',
-      'Tycho Brahe',
-      'Galileo'
+      'Galileo',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Kepler used the highly accurate observational data of Tycho Brahe (1546-1601), a Danish astronomer. Kepler became Brahe\'s assistant in Prague in 1599 and inherited his data after Brahe\'s death in 1601.',
@@ -129,12 +129,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What cynical view did Kepler express about astrology?',
     options: [
-      '"The daughter must support the mother by her charms" — astronomers needed it for income',
       'It was completely true and scientific',
       'It was the most important branch of mathematics',
+      '"The daughter must support the mother by her charms" — astronomers needed it for income',
       'It should be banned by the Church',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Kepler wrote that it was fine for philosophers to criticize the "daughter" of astronomy (astrology), without realizing that "the daughter must support the mother by her charms." He pointed out that astronomers couldn\'t make a living unless they encouraged belief in horoscopes.',

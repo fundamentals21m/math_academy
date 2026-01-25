@@ -23,11 +23,11 @@ export const section51Questions: QuizQuestion[] = [
     question: 'A polynomial is symmetric if:',
     options: [
       'It has only even powers',
-      'It is unchanged when any two variables are swapped',
       'Its coefficients are all equal',
-      'It has real roots only'
+      'It is unchanged when any two variables are swapped',
+      'It has real roots only',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'A symmetric polynomial remains the same under any permutation of its variables. For example, $x_1 + x_2 + x_3$ and $x_1 x_2 + x_1 x_3 + x_2 x_3$ are symmetric, while $x_1^2 + x_2$ is not.',
@@ -38,10 +38,15 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Fundamental Theorem on Symmetric Polynomials states that every symmetric polynomial:',
     options: [
+      'Can be expressed in terms of elementary symmetric polynomials',
       'Factors into linear terms',
       'Has integer coefficients',
-      'Can be expressed in terms of elementary symmetric polynomials',
-      'Has degree at most $n$'
+      'Has degree at most $n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'The theorem states that any symmetric polynomial in $x_1, \\ldots, x_n$ can be written as a polynomial in the elementary symmetric polynomials $e_1, e_2, \\ldots, e_n$. This means we can express symmetric functions of roots using only the polynomial\'s coefficients.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -69,12 +74,12 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Newton\'s identities express:',
     options: [
-      'Power sums $p_k = \\sum x_i^k$ in terms of elementary symmetric polynomials',
       'Roots in terms of coefficients',
+      'Power sums $p_k = \\sum x_i^k$ in terms of elementary symmetric polynomials',
       'The discriminant as a determinant',
       'Complex roots as conjugate pairs',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Newton\'s identities give recursive formulas relating the power sums $p_k = x_1^k + x_2^k + \\cdots + x_n^k$ to the elementary symmetric polynomials. This lets us compute $\\sum r_i^k$ for any $k$ using only the polynomial\'s coefficients.',
@@ -87,7 +92,7 @@ export const section51Questions: QuizQuestion[] = [
       'All symmetric functions are rational',
       'Solvability by radicals depends on which symmetric functions can be computed via root extractions',
       'Galois groups are always symmetric groups',
-      'The discriminant determines the Galois group'
+      'The discriminant determines the Galois group',
     ],
     correctIndex: 1,
     difficulty: 'hard',

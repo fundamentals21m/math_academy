@@ -8,10 +8,10 @@ export const section20Questions: QuizQuestion[] = [
     options: [
       'ECDSA signatures',
       'RSA signatures',
-      'Schnorr signatures',
       'EdDSA signatures',
+      'Schnorr signatures',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'BIP-340 specifies Schnorr signatures for Bitcoin, replacing ECDSA for Taproot.',
   },
@@ -21,11 +21,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'What is a key advantage of Schnorr signatures over ECDSA?',
     options: [
       'Smaller key sizes',
-      'Native support for signature aggregation',
       'Faster verification',
-      'Better randomness'
+      'Native support for signature aggregation',
+      'Better randomness',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Schnorr signatures have the linearity property enabling native multi-signature aggregation.',
   },

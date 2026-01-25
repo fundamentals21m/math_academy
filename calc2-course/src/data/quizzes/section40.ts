@@ -29,11 +29,11 @@ export const section40Questions: QuizQuestion[] = [
     question: 'To find the diagonalizing matrix $C$ for a Hermitian matrix:',
     options: [
       'Use the eigenvalues as columns',
-      'Use orthonormal eigenvectors as columns',
       'Use the matrix $A$ itself',
-      'Use the identity matrix'
+      'Use orthonormal eigenvectors as columns',
+      'Use the identity matrix',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The columns of $C$ are orthonormal eigenvectors $u_1, \\ldots, u_n$. The orthonormality gives $C^{-1} = C^*$.',
   },
@@ -74,10 +74,10 @@ export const section40Questions: QuizQuestion[] = [
     options: [
       'Any invertible matrix',
       'A unitary matrix only',
+      'A diagonal matrix',
       'A real orthogonal matrix',
-      'A diagonal matrix'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Real symmetric matrices have real eigenvalues and can have real orthonormal eigenvectors, so the diagonalizing matrix can be real orthogonal.',
   },
@@ -87,11 +87,11 @@ export const section40Questions: QuizQuestion[] = [
     question: 'The condition $C^{-1} = C^*$ means that the diagonalizing transformation:',
     options: [
       'Is not invertible',
+      'Preserves inner products',
       'Has determinant zero',
       'Is the identity',
-      'Preserves inner products'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: '$C^{-1} = C^*$ defines a unitary matrix. Unitary matrices preserve inner products: $(Cx, Cy) = (x, C^*Cy) = (x, y)$.',
   },

@@ -59,11 +59,11 @@ export const section89Questions: QuizQuestion[] = [
     question: 'The group ring $\\mathbb{C}G$ for a finite group $G$ is:',
     options: [
       'Always an integral domain',
+      'Semisimple (a product of matrix rings)',
       'Always a field',
       'Always commutative',
-      'Semisimple (a product of matrix rings)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'By Maschke\'s theorem, $\\mathbb{C}G$ is semisimple when $G$ is finite. By Wedderburn, it decomposes as a product of matrix rings over $\\mathbb{C}$.',
   },

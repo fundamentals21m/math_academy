@@ -6,12 +6,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Existence-Uniqueness Theorem for $L(y) = 0$ guarantees a unique solution when:',
     options: [
-      'Initial values $y(x_0), y\\'(x_0), \\ldots, y^{(n-1)}(x_0)$ are given',
       'Initial value $y(x_0)$ is given',
       'No initial conditions are given',
       'Only $y^{(n)}(x_0)$ is given',
+      'Initial values $y(x_0), y\\\'(x_0), \\ldots, y^{(n-1)}(x_0)$ are given',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'An $n$th-order equation requires $n$ initial conditions: the value and first $n-1$ derivatives at a point.',
   },
@@ -20,10 +20,26 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The initial-value vector of a function $f$ at $x_0$ is:',
     options: [
-      '$(f(x_0))$',
-      '$(f(x_0), f\'(x_0))$',
-      '$(f\'(x_0), f\'\'(x_0), \\ldots, f^{(n)}(x_0))$',
-      '$(f(x_0), f\'(x_0), \\ldots, f^{(n-1)}(x_0))$'
+      '$(f(x_0))
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The initial-value vector contains the value and first $n-1$ derivatives at $x_0$, which are the $n$ pieces of information needed.',
+  },
+      '$(f(x_0), f\\'(x_0))
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The initial-value vector contains the value and first $n-1$ derivatives at $x_0$, which are the $n$ pieces of information needed.',
+  },
+      '$(f(x_0), f\\'(x_0), \\ldots, f^{(n-1)}(x_0))
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The initial-value vector contains the value and first $n-1$ derivatives at $x_0$, which are the $n$ pieces of information needed.',
+  },
+      '$(f\\'(x_0), f\\'\\'(x_0), \\ldots, f^{(n)}(x_0))
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The initial-value vector contains the value and first $n-1$ derivatives at $x_0$, which are the $n$ pieces of information needed.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -82,12 +98,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Compared to nonlinear equations, linear equations avoid which pathology?',
     options: [
+      'Blow-up in finite time',
       'Having real-valued solutions',
       'Having continuous solutions',
-      'Blow-up in finite time',
-      'Having polynomial solutions'
+      'Having polynomial solutions',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Nonlinear solutions may blow up in finite time (fail to exist globally). Linear equations with continuous coefficients always have global solutions.',
   },

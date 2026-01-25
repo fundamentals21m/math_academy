@@ -39,9 +39,13 @@ export const section52Questions: QuizQuestion[] = [
     question: 'An algebra $\\mathscr{A}$ of functions "separates points" means:',
     options: [
       'For all $f \\in \\mathscr{A}$, $f$ is one-to-one',
+      'For distinct $x, y$, there exists $f \\in \\mathscr{A}$ with $f(x) \\neq f(y)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Separating points means the algebra has "enough" functions to distinguish any two distinct points: given $x \\neq y$, some $f \\in \\mathscr{A}$ satisfies $f(x) \\neq f(y)$.',
+  },
       'The functions in $\\mathscr{A}$ have disjoint supports',
-      'For distinct $x, y$, there exists $f \\in \\mathscr{A}$ with $f(x) \\neq f(y)$',
-      '$\\mathscr{A}$ contains only injective functions'
+      '$\\mathscr{A}$ contains only injective functions',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -73,7 +77,7 @@ export const section52Questions: QuizQuestion[] = [
       'Self-adjoint (closed under complex conjugation)',
       'The same as the real version',
       'Containing only real-valued functions',
-      'Finite-dimensional'
+      'Finite-dimensional',
     ],
     correctIndex: 0,
     difficulty: 'hard',

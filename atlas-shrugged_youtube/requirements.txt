@@ -1,0 +1,31 @@
+# Atlas Shrugged YouTube Series - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Video generation
+moviepy>=1.0.3
+
+# Browser automation for slide rendering
+selenium>=4.0.0
+
+# Image processing
+Pillow>=9.0.0
+
+# Audio transcription for captions
+openai-whisper>=20230314
+
+# API requests (ElevenLabs)
+requests>=2.28.0
+
+# Audio metadata
+mutagen>=1.45.0
+
+# PyTorch (required by whisper)
+torch>=2.0.0
+
+# Optional: GPU acceleration for whisper
+# torch[cuda]>=2.0.0  # Uncomment for NVIDIA GPU support
+
+# YouTube upload automation
+google-api-python-client>=2.100.0
+google-auth-oauthlib>=1.1.0
+google-auth-httplib2>=0.1.1

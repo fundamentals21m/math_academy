@@ -38,10 +38,10 @@ export const section69Questions: QuizQuestion[] = [
     options: [
       'Larger intermediate fields',
       'There is no relationship with size',
-      'Smaller intermediate fields',
       'The same intermediate field',
+      'Smaller intermediate fields',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The correspondence reverses inclusions: if $H_1 \\leq H_2 \\leq \\text{Gal}(E/F)$, then $E^{H_1} \\supseteq E^{H_2}$. More automorphisms fixing elements means fewer fixed elements.',
   },
@@ -50,10 +50,14 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An intermediate field $K$ of a Galois extension $E/F$ corresponds to a normal subgroup of $\\text{Gal}(E/F)$ if and only if:',
     options: [
-      '$K/F$ is normal (i.e., $K/F$ is Galois)',
       '$K/F$ is separable',
+      '$K/F$ is normal (i.e., $K/F$ is Galois)',
       '$E/K$ is normal',
-      '$K = F$ or $K = E$'
+      '$K = F$ or $K = E
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The subgroup $\\text{Gal}(E/K)$ is normal in $\\text{Gal}(E/F)$ if and only if $K/F$ is a normal extension. In this case, $\\text{Gal}(K/F) \\cong \\text{Gal}(E/F)/\\text{Gal}(E/K)$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

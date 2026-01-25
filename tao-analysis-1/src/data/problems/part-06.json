@@ -1,0 +1,139 @@
+{
+  "partId": 6,
+  "partTitle": "Limits of Sequences",
+  "textbookChapter": "Chapter 6",
+  "sections": [
+    {
+      "sectionId": 21,
+      "sectionTitle": "Convergence and limit laws",
+      "textbookSection": "6.1",
+      "examples": [
+        {
+          "id": "ex-6-21-1",
+          "type": "example",
+          "title": "Limit of $1/n$",
+          "statement": "Prove that $\\lim_{n \\to \\infty} 1/n = 0$ using the $\\varepsilon$-$N$ definition.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Let $\\varepsilon > 0$",
+                "content": "Choose $N = \\lceil 1/\\varepsilon \\rceil$."
+              },
+              {
+                "title": "For $n > N$",
+                "content": "$|1/n - 0| = 1/n < 1/N \\leq \\varepsilon$."
+              }
+            ],
+            "conclusion": "$\\lim_{n \\to \\infty} 1/n = 0$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-21-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that limits are unique: if $(a_n) \\to L$ and $(a_n) \\to M$, then $L = M$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use triangle inequality",
+                "content": "$|L - M| \\leq |L - a_n| + |a_n - M|$."
+              },
+              {
+                "title": "For any $\\varepsilon > 0$",
+                "content": "Choose $N$ such that $|a_n - L| < \\varepsilon/2$ and $|a_n - M| < \\varepsilon/2$ for $n > N$."
+              },
+              {
+                "title": "Conclude",
+                "content": "$|L - M| < \\varepsilon$ for any $\\varepsilon > 0$, so $L = M$."
+              }
+            ],
+            "conclusion": "Limits are unique."
+          }
+        },
+        {
+          "id": "6-21-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that if $(a_n) \\to L$ and $(b_n) \\to M$, then $(a_n + b_n) \\to L + M$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Let $\\varepsilon > 0$",
+                "content": "Choose $N_1$ such that $|a_n - L| < \\varepsilon/2$ for $n > N_1$."
+              },
+              {
+                "title": "Similarly for $(b_n)$",
+                "content": "Choose $N_2$ such that $|b_n - M| < \\varepsilon/2$ for $n > N_2$."
+              },
+              {
+                "title": "For $n > \\max(N_1, N_2)$",
+                "content": "$|(a_n + b_n) - (L + M)| \\leq |a_n - L| + |b_n - M| < \\varepsilon$."
+              }
+            ],
+            "conclusion": "$(a_n + b_n) \\to L + M$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 23,
+      "sectionTitle": "Subsequences",
+      "textbookSection": "6.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "6-23-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that if $(a_n) \\to L$, then every subsequence $(a_{n_k}) \\to L$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Note $n_k \\geq k$",
+                "content": "By induction, $n_1 \\geq 1$, and $n_{k+1} > n_k \\geq k$, so $n_{k+1} \\geq k+1$."
+              },
+              {
+                "title": "For $\\varepsilon > 0$, choose $N$",
+                "content": "Such that $|a_n - L| < \\varepsilon$ for $n > N$."
+              },
+              {
+                "title": "For $k > N$",
+                "content": "$n_k \\geq k > N$, so $|a_{n_k} - L| < \\varepsilon$."
+              }
+            ],
+            "conclusion": "Every subsequence converges to $L$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 25,
+      "sectionTitle": "The Bolzano-Weierstrass theorem",
+      "textbookSection": "6.6",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "6-25-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Using Bolzano-Weierstrass, show that every sequence in $[0, 1]$ has a convergent subsequence.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Bolzano-Weierstrass",
+                "content": "Every sequence in $[0,1]$ is bounded (by $0$ and $1$)."
+              },
+              {
+                "title": "Conclude",
+                "content": "By Bolzano-Weierstrass, it has a convergent subsequence."
+              }
+            ],
+            "conclusion": "Every sequence in $[0,1]$ has a convergent subsequence with limit in $[0,1]$ (since $[0,1]$ is closed)."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -37,11 +37,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What does it mean for the derivative to measure "sensitivity"?',
     options: [
       'The function is easily damaged',
-      'How much the output changes per unit change in input',
       'The function responds to touch',
-      'The function is always positive'
+      'The function is always positive',
+      'How much the output changes per unit change in input',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Sensitivity means how responsive the output is to changes in input. If $f\'(a) = 3$, a small change $\\Delta x$ produces about $3 \\Delta x$ change in output.',
   },
@@ -79,11 +79,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'If a function is differentiable at a point, it must be:',
     options: [
       'Constant',
-      'Positive',
       'Continuous at that point',
+      'Positive',
       'Linear',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Differentiability implies continuity—if a function has a derivative at a point, it must be continuous there. (The converse is false.)',
   },

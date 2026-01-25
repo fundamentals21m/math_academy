@@ -6,10 +6,26 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If position is $\\mathbf{r}(t)$, then velocity is:',
     options: [
-      '$\\mathbf{r}\'(t)$',
-      '$\\mathbf{r}(t)$',
-      '$\\mathbf{r}\'\'(t)$',
-      '$|\\mathbf{r}(t)|$'
+      '$\\mathbf{r}(t)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Velocity = derivative of position.',
+  },
+      '$\\mathbf{r}\\'\\'(t)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Velocity = derivative of position.',
+  },
+      '$|\\mathbf{r}(t)|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Velocity = derivative of position.',
+  },
+      '$\\mathbf{r}\\'(t)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Velocity = derivative of position.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -68,10 +84,26 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For projectile motion with gravity, $\\mathbf{r}\'\'(t) = ?$',
     options: [
-      '$(0, 0)$',
-      '$(g, g)$',
-      '$(v_0, 0)$',
-      '$(0, -g)$'
+      '$(0, 0)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Constant downward acceleration: $\\mathbf{a} = (0, -g)$ in 2D.',
+  },
+      '$(g, g)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Constant downward acceleration: $\\mathbf{a} = (0, -g)$ in 2D.',
+  },
+      '$(0, -g)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Constant downward acceleration: $\\mathbf{a} = (0, -g)$ in 2D.',
+  },
+      '$(v_0, 0)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Constant downward acceleration: $\\mathbf{a} = (0, -g)$ in 2D.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -82,12 +114,12 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In uniform circular motion, the acceleration points:',
     options: [
-      'Tangent to the circle',
       'Toward the center (centripetal)',
+      'Tangent to the circle',
       'Away from the center',
       'In the direction of velocity',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Centripetal acceleration points toward the center.',
   },

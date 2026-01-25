@@ -6,10 +6,18 @@ export const section164Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A random variable $X$ on a sample space $S$ is:',
     options: [
-      'A real-valued function defined on $S$',
       'A probability measure',
-      'A subset of $S$',
-      'A constant'
+      'A subset of $S
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A random variable is a real-valued function that assigns a numerical value $X(\\omega)$ to each outcome $\\omega \\in S$.',
+  },
+      'A real-valued function defined on $S
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A random variable is a real-valued function that assigns a numerical value $X(\\omega)$ to each outcome $\\omega \\in S$.',
+  },
+      'A constant',
     ],
     correctIndex: 0,
     difficulty: 'easy',

@@ -12,10 +12,10 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'Parmenides',
       'Zeno',
-      'Heraclitus',
       'Democritus',
+      'Heraclitus',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Heraclitus of Ephesus (c. 500 BC) believed everything is in constant flux. He famously declared that one cannot step into the same river twice, since the waters are always flowing.',
@@ -25,12 +25,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Heraclitus believe was the fundamental substance?',
     options: [
-      'Fire',
       'Water',
       'Air',
       'Atoms',
+      'Fire',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Heraclitus believed fire was the fundamental substance. He declared that all matter can be transformed into fire (and vice versa), just as all goods can be exchanged for gold.',
@@ -40,7 +40,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question:
       'Which philosopher took the view that change is an illusion and nothing really changes?',
-    options: ['Heraclitus', 'Empedocles', 'Parmenides', 'Democritus'],
+    options: [
+      'Heraclitus',
+      'Empedocles',
+      'Parmenides',
+      'Democritus',
+    ],
     correctIndex: 2,
     difficulty: 'easy',
     explanation:
@@ -53,10 +58,10 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'That atoms exist',
       'That the universe is expanding',
+      'That motion is impossible',
       'That fire is the primal substance',
-      'That motion is impossible'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       "Zeno of Elea produced four paradoxes attempting to prove that motion is impossible. What he really showed was that without the concept of limits (infinite processes), you cannot use mathematics to analyze motion.",
@@ -67,12 +72,12 @@ export const section10Questions: QuizQuestion[] = [
     question:
       "In Zeno's Dichotomy paradox, why does he conclude a point can never travel from 0 to 1?",
     options: [
-      'Because the distance is infinite',
       'Because it must first cover infinitely many smaller distances (1/2, 1/4, 1/8, ...)',
+      'Because the distance is infinite',
       'Because time stops at 1',
       'Because points cannot move',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The Dichotomy argues that to go from 0 to 1, you must first cover 1/2, then 1/4, then 1/8, etc. After n steps you have covered 1 - 1/2ⁿ, which never equals 1 for any finite n. The modern solution uses limits.',
@@ -83,11 +88,11 @@ export const section10Questions: QuizQuestion[] = [
     question: "How do modern mathematicians resolve Zeno's paradoxes?",
     options: [
       'By proving motion does not exist',
-      'By using the concept of limits',
       'By assuming time is discrete',
+      'By using the concept of limits',
       'By rejecting mathematics entirely',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Modern mathematics resolves Zeno\'s paradoxes using limits. For example, the infinite sum 1/2 + 1/4 + 1/8 + ... has a limit of exactly 1. The rigorous definition of limits was developed by 19th-century mathematicians.',
@@ -131,11 +136,11 @@ export const section10Questions: QuizQuestion[] = [
       'What mathematical formula is Democritus credited with discovering?',
     options: [
       'The Pythagorean theorem',
+      'The volume of a pyramid or cone (1/3 × base × height)',
       'The sum of angles in a triangle',
       'The area of a circle',
-      'The volume of a pyramid or cone (1/3 × base × height)'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Democritus is credited with discovering that the volume of a pyramid or cone equals one-third of the base area times the height: V = (1/3) × base × height. He also emphasized the importance of mathematical proofs.',

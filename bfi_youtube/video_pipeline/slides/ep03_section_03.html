@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .problem-container {
+      margin-top: 50px;
+    }
+    .problem-box {
+      background: rgba(220, 38, 38, 0.1);
+      border: 2px solid rgba(220, 38, 38, 0.3);
+      border-radius: 12px;
+      padding: 40px 50px;
+      margin-bottom: 40px;
+    }
+    .problem-title {
+      color: #DC2626;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .problem-text {
+      color: #E6EDF3;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .debasement-example {
+      background: rgba(139, 148, 158, 0.1);
+      border-left: 4px solid #8B949E;
+      padding: 30px 40px;
+      margin-top: 30px;
+    }
+    .debasement-title {
+      color: #8B949E;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 15px;
+    }
+    .debasement-calc {
+      color: #E6EDF3;
+      font-size: 28px;
+    }
+    .debasement-calc .amount {
+      color: #F7931A;
+    }
+    .debasement-calc .arrow {
+      color: #DC2626;
+      margin: 0 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Problem for Institutions</div>
+    <div class="section-title">Why Deflation Breaks Traditional Finance</div>
+    <div class="problem-container">
+      <div class="problem-box">
+        <div class="problem-title">Present Value Framework Fails</div>
+        <div class="problem-text">Every accountant emphasizes Present Value as the common way to view cash flows. Deflation is a foreign concept in this framework—it masks the debasement of expected future payoffs.</div>
+      </div>
+      <div class="debasement-example">
+        <div class="debasement-title">Hidden Debasement at "2-3% CPI"</div>
+        <div class="debasement-calc">
+          <span class="amount">$1,000</span> today
+          <span class="arrow">→</span>
+          <span class="amount">~$800</span> purchasing power in 10 years
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

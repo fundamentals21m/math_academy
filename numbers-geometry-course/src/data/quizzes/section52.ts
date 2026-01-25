@@ -39,12 +39,12 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Legendre symbol (3/7)?',
     options: [
+      '1',
       '0',
       '-1',
       '3',
-      '1',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Using Euler\'s criterion: 3^((7-1)/2) = 3³ = 27 = 3×7 + 6 ≡ 6 ≡ -1 (mod 7). Wait, let me recompute: 3³ = 27 = 28 - 1 ≡ -1. So (3/7) = -1. Actually checking: 1²=1, 2²=4, 3²=2, 4²=2, 5²=4, 6²=1. So QRs are {1,2,4} and 3 is NOT a QR. (3/7) = -1.',
@@ -55,11 +55,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'What does Euler\'s criterion state?',
     options: [
       '(a/p) = a^(p-1)',
-      '(a/p) ≡ a^((p-1)/2) (mod p)',
       '(a/p) = a/p',
       '(a/p) = p^a',
+      '(a/p) ≡ a^((p-1)/2) (mod p)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Euler\'s criterion states that (a/p) ≡ a^((p-1)/2) (mod p), giving a computational method.',
@@ -70,11 +70,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'Is 2 a quadratic residue mod 7?',
     options: [
       'Yes, because 2 < 7',
-      'No, because 2 is even',
       'Yes, because 3² ≡ 2 (mod 7)',
+      'No, because 2 is even',
       'No, because 2^3 ≡ 1 (mod 7)',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       '3² = 9 = 7 + 2 ≡ 2 (mod 7), so 2 is a quadratic residue with square root 3 (and also 4).',
@@ -85,11 +85,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'What is the product of two quadratic non-residues mod p?',
     options: [
       'A non-residue',
-      'A residue',
       '0',
+      'A residue',
       'Undefined',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Since the Legendre symbol is multiplicative: (-1)(-1) = 1. The product of two non-residues is a residue.',

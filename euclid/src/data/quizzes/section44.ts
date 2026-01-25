@@ -7,11 +7,11 @@ export const section44Questions: QuizQuestion[] = [
     question: 'What does Proposition I.44 construct?',
     options: [
       'A square equal to a triangle',
-      'A parallelogram on a given line equal to a given triangle with a given angle',
       'A triangle equal to a parallelogram',
-      'A rectangle from a parallelogram'
+      'A rectangle from a parallelogram',
+      'A parallelogram on a given line equal to a given triangle with a given angle',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'I.44: To apply to a given straight line a parallelogram equal to a given triangle in a given angle.',
   },
@@ -21,11 +21,11 @@ export const section44Questions: QuizQuestion[] = [
     question: 'What is "application of areas" that I.44 introduces?',
     options: [
       'Measuring areas with units',
-      'Comparing areas of circles and squares',
       'Constructing a parallelogram of given area on a specific line segment',
-      'Calculating areas numerically'
+      'Comparing areas of circles and squares',
+      'Calculating areas numerically',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Application of areas: constructing a figure of specified area on a given line—a powerful Greek geometric technique.',
   },

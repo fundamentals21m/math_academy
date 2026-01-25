@@ -6,10 +6,26 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The projection of $\\mathbf{b}$ onto $\\mathbf{a}$ is:',
     options: [
-      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}$',
-      '$\\mathbf{a} \\cdot \\mathbf{b}$',
-      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$',
-      '$\\frac{\\mathbf{b}}{\\|\\mathbf{a}\\|}$'
+      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\text{proj}_{\\mathbf{a}} \\mathbf{b} = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$.',
+  },
+      '$\\mathbf{a} \\cdot \\mathbf{b}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\text{proj}_{\\mathbf{a}} \\mathbf{b} = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$.',
+  },
+      '$\\frac{\\mathbf{b}}{\\|\\mathbf{a}\\|}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\text{proj}_{\\mathbf{a}} \\mathbf{b} = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$.',
+  },
+      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\text{proj}_{\\mathbf{a}} \\mathbf{b} = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -80,12 +96,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\mathbf{a} \\cdot \\mathbf{b} > 0$, then the angle between them is:',
     options: [
+      'Acute (< 90°)',
       'Obtuse (> 90°)',
       'Exactly 90°',
       '180°',
-      'Acute (< 90°)',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Positive dot product means $\\cos\\theta > 0$, so $\\theta < 90°$.',
   },

@@ -1,0 +1,308 @@
+1
+00:00:00,000 --> 00:00:04,000
+Cryptography is ruthless, and there are two types of people in the world.
+
+2
+00:00:04,000 --> 00:00:07,000
+Those who have been burned and those who have yet to be.
+
+3
+00:00:07,000 --> 00:00:09,000
+Everybody is early to Bitcoin.
+
+4
+00:00:09,000 --> 00:00:12,000
+It is only 16 years old, after all.
+
+5
+00:00:12,000 --> 00:00:17,000
+In 2024, stories of Bitcoin being lost on hard drives are becoming rarer.
+
+6
+00:00:17,000 --> 00:00:21,000
+But we still see high-profile reports of lost Bitcoin in significant amounts.
+
+7
+00:00:21,000 --> 00:00:25,000
+This chapter explores why custody is perhaps the most critical challenge for institutions.
+
+8
+00:00:25,000 --> 00:00:29,000
+In 2023, a former Bitcoin core developer, Luke Dashcher,
+
+9
+00:00:29,000 --> 00:00:35,000
+reportedly lost hundreds of Bitcoins in a setup that was supposedly too complicated for anybody to rescue.
+
+10
+00:00:35,000 --> 00:00:40,000
+These stories are becoming rarer because the hardware available to individuals for self-custody
+
+11
+00:00:40,000 --> 00:00:43,000
+has improved greatly in the past half decade.
+
+12
+00:00:43,000 --> 00:00:46,000
+Hardware wallets have become extremely intuitive and easy to use.
+
+13
+00:00:46,000 --> 00:00:52,000
+The only real obstacle to Bitcoin's self-custody now is one's ability to protect a 12 or 24-word seed phrase.
+
+14
+00:00:52,000 --> 00:00:55,000
+That ability is no small thing.
+
+15
+00:00:55,000 --> 00:01:01,000
+There are a number of trade-offs to consider, and the reality is that it takes a long time of mulling through one's personal discomfort
+
+16
+00:01:01,000 --> 00:01:05,000
+before the security of your Bitcoin allows you to sleep soundly at night.
+
+17
+00:01:05,000 --> 00:01:11,000
+The soundest sleepers are those who have the least issue trusting someone to hold their seed for them.
+
+18
+00:01:11,000 --> 00:01:14,000
+But this is backwards and untenable.
+
+19
+00:01:14,000 --> 00:01:17,000
+It's not a foundation for individuals or institutions to build on.
+
+20
+00:01:17,000 --> 00:01:21,000
+Holding Bitcoin in self-custody is not like holding fiat for a simple reason.
+
+21
+00:01:21,000 --> 00:01:27,000
+The likelihood of a mistake that makes the Bitcoin unspendable is much higher, and there is no bailout possible.
+
+22
+00:01:27,000 --> 00:01:30,000
+Let me paint you a nightmare scenario for 2030.
+
+23
+00:01:30,000 --> 00:01:35,000
+Imagine BlackRock's iBit ETF has acquired two million Bitcoin on behalf of its users.
+
+24
+00:01:35,000 --> 00:01:39,000
+Bitcoin reaches gold's market capitalization of $20 trillion.
+
+25
+00:01:39,000 --> 00:01:42,000
+That's about $1 million per Bitcoin.
+
+26
+00:01:43,000 --> 00:01:49,000
+BlackRock's ETF would represent 10% of that value, or $2 trillion.
+
+27
+00:01:49,000 --> 00:01:55,000
+That's $2 trillion of value on balance sheets of companies all over the world.
+
+28
+00:01:55,000 --> 00:02:03,000
+Now imagine we discover that BlackRock cannot sell back that Bitcoin because its custodian cannot perform the signatures required to move the keys.
+
+29
+00:02:03,000 --> 00:02:06,000
+BlackRock loses $2 trillion.
+
+30
+00:02:06,000 --> 00:02:11,000
+All of their customers have to write down 100% of that value on their balance sheets.
+
+31
+00:02:11,000 --> 00:02:13,000
+Poof.
+
+32
+00:02:13,000 --> 00:02:24,000
+Institutions that fail to take custody seriously will not only fail first, but also the most severely, with the potential to take down their industry and a portion of the financial system with them.
+
+33
+00:02:24,000 --> 00:02:29,000
+The world that understands BlackRock knows very little about their custodian coinbase.
+
+34
+00:02:29,000 --> 00:02:34,000
+The problems with coinbase being trusted to hold that much Bitcoin should concern everybody greatly.
+
+35
+00:02:34,000 --> 00:02:36,000
+Let's look at the pros and cons.
+
+36
+00:02:36,000 --> 00:02:40,000
+On the pros side, coinbase has been doing custody for a long time.
+
+37
+00:02:40,000 --> 00:02:43,000
+That's about the only item in the pro column.
+
+38
+00:02:43,000 --> 00:02:54,000
+On the cons side, their custody technology predates best practices developed since the block size war, particularly segregated witness, or Segwit.
+
+39
+00:02:54,000 --> 00:03:01,000
+Pre-Segwit addresses are vulnerable to the transaction-malleability problem that led to the legendary failure of Matt Gox exchange.
+
+40
+00:03:01,000 --> 00:03:06,000
+BlackRock spent the majority of the last decade hating Bitcoin until 2023.
+
+41
+00:03:07,000 --> 00:03:12,000
+They wanted to fast track their adoption, choosing speed over security.
+
+42
+00:03:12,000 --> 00:03:20,000
+When Bitwise made their addresses public, we discovered that Coinbase was holding the Bitcoin for the ETF in pre-Segwit addresses.
+
+43
+00:03:20,000 --> 00:03:24,000
+The one in front of the Bitcoin address told us this.
+
+44
+00:03:24,000 --> 00:03:35,000
+This is now a ticking time bomb on the scenario that in 2030, Coinbase's failure leads to the destruction of $2 trillion of value.
+
+45
+00:03:36,000 --> 00:03:41,000
+Fidelity investments has a very successful spot, Bitcoin ETF, FBTC.
+
+46
+00:03:41,000 --> 00:03:46,000
+And in contrast to BlackRock, they manage all of the custody in-house themselves.
+
+47
+00:03:46,000 --> 00:03:51,000
+Fidelity has been in Bitcoin for a very long time, the majority of the past decade.
+
+48
+00:03:51,000 --> 00:03:55,000
+They understood they could not trust Coinbase with the Sutter Maserah Sari.
+
+49
+00:03:56,000 --> 00:04:03,000
+They understood they could not trust any of the qualified custodians with their keys.
+
+50
+00:04:03,000 --> 00:04:07,000
+This gives Fidelity a substantial advantage over BlackRock due to their experience.
+
+51
+00:04:07,000 --> 00:04:14,000
+Under the current level of opacity, there is no way to know if Fidelity is a more reliable custodian than Coinbase.
+
+52
+00:04:14,000 --> 00:04:20,000
+The only reason we know about Coinbase's technology limitations is because Bitwise made their addresses public,
+
+53
+00:04:21,000 --> 00:04:23,000
+and we were able to see the details.
+
+54
+00:04:23,000 --> 00:04:34,000
+The larger calculation of the ETF with regard to custody is that companies and individuals who aren't ready to deal with their own self-custody of Bitcoin can gain exposure through the ETF.
+
+55
+00:04:34,000 --> 00:04:39,000
+Here's what the ETF provides. Easy exposure to Bitcoin's price volatility.
+
+56
+00:04:39,000 --> 00:04:44,000
+No need to understand self-custody. It fits into existing brokerage accounts.
+
+57
+00:04:44,000 --> 00:04:47,000
+It's a familiar investment vehicle structure.
+
+58
+00:04:47,000 --> 00:04:50,000
+Here's what the ETF costs.
+
+59
+00:04:50,000 --> 00:04:53,000
+An enormous level of counterparty risk.
+
+60
+00:04:53,000 --> 00:04:56,000
+No ability to verify custody yourself.
+
+61
+00:04:56,000 --> 00:04:59,000
+Dependence on the custodians' competence.
+
+62
+00:04:59,000 --> 00:05:02,000
+And it's not true Bitcoin ownership.
+
+63
+00:05:02,000 --> 00:05:07,000
+While gaining ETF exposure is a rational position for those not ready for self-custody,
+
+64
+00:05:07,000 --> 00:05:13,000
+it does not make for a landscape to provide robust solutions to the public using Bitcoin.
+
+65
+00:05:13,000 --> 00:05:18,000
+The ETF is capable of capturing the volatility of Bitcoin's price exposure.
+
+66
+00:05:18,000 --> 00:05:23,000
+But at an enormous level of counterparty risk, let's recap what we learned in this chapter.
+
+67
+00:05:23,000 --> 00:05:32,000
+Hardware wallets have made self-custody accessible, but the only real obstacle remains one's ability to protect a 12 or 24-word seed phrase.
+
+68
+00:05:32,000 --> 00:05:35,000
+There is no bailout in Bitcoin.
+
+69
+00:05:35,000 --> 00:05:40,000
+Mistakes that make Bitcoin unspendable are permanent and irreversible.
+
+70
+00:05:40,000 --> 00:05:49,000
+Institutional custody failures could be catastrophic, potentially destroying trillions in value and taking down the financial system.
+
+71
+00:05:49,000 --> 00:05:57,000
+Coinbase's legacy technology predates seguit best practices, creating systemic risk for ETFs using them as custodian.
+
+72
+00:05:57,000 --> 00:06:02,000
+ETFs provide price exposure, but enormous counterparty risk.
+
+73
+00:06:02,000 --> 00:06:06,000
+They are not a substitute for true Bitcoin ownership through self-custody.
+
+74
+00:06:06,000 --> 00:06:10,000
+In the next episode, we'll explore chapter 4.
+
+75
+00:06:10,000 --> 00:06:17,000
+Bitcoin requires more, patience, and time than institutions have.
+
+76
+00:06:17,000 --> 00:06:22,000
+We'll examine why understanding Bitcoin is like learning multiple instruments at the same time.
+
+77
+00:06:22,000 --> 00:06:25,000
+See you in the next one.
+

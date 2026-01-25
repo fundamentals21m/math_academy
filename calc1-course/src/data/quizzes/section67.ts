@@ -29,9 +29,17 @@ export const section67Questions: QuizQuestion[] = [
     question: 'The Alternating Series Test (Leibniz): $\\sum (-1)^n a_n$ converges if:',
     options: [
       '$a_n > 0$ only',
-      '$a_n$ decreasing and $a_n \\to 0$',
       '$a_n$ increasing',
-      '$a_n \\to 1$'
+      '$a_n \\to 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Leibniz test: need $a_n$ decreasing to 0.',
+  },
+      '$a_n$ decreasing and $a_n \\to 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Leibniz test: need $a_n$ decreasing to 0.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -65,9 +73,13 @@ export const section67Questions: QuizQuestion[] = [
     question: 'A series is absolutely convergent if:',
     options: [
       '$\\sum a_n$ converges',
-      '$a_n \\to 0$',
+      '$\\sum |a_n|$ converges',
+      '$a_n \\to 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Absolute convergence: $\\sum |a_n|$ converges.',
+  },
       'All terms are positive',
-      '$\\sum |a_n|$ converges'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -78,12 +90,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Absolute convergence implies:',
     options: [
-      'Ordinary convergence',
       'Conditional convergence',
       'Divergence',
-      'Nothing'
+      'Nothing',
+      'Ordinary convergence',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'If $\\sum |a_n|$ converges, then $\\sum a_n$ converges.',
   },

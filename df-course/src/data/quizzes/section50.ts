@@ -55,11 +55,11 @@ export const section50Questions: QuizQuestion[] = [
     question: 'If $N$ is a submodule of $M$, then $M/N$ is:',
     options: [
       'A ring',
-      'A field',
       'An $R$-module called the quotient module',
+      'A field',
       'Not well-defined',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The quotient $M/N$ is an $R$-module with operations: $(m_1 + N) + (m_2 + N) = (m_1 + m_2) + N$ and $r(m + N) = rm + N$.',
   },

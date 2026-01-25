@@ -62,12 +62,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Putzer\'s formula $e^{tA} = \\sum_{k=0}^{n-1} r_{k+1}(t)P_k$ involves scalar functions $r_k(t)$ that satisfy:',
     options: [
+      'A triangular system of first-order ODEs',
       'Algebraic equations',
       '$r_k(t) = e^{\\lambda_k t}$ directly',
       'The heat equation',
-      'A triangular system of first-order ODEs',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The functions $r_k(t)$ satisfy $r_1\' = \\lambda_1 r_1$, $r_1(0) = 1$, and $r_k\' = \\lambda_k r_k + r_{k-1}$, $r_k(0) = 0$.',
   },
@@ -78,10 +78,10 @@ export const section71Questions: QuizQuestion[] = [
     options: [
       'Only works for diagonalizable matrices',
       'Requires computing eigenvectors',
+      'Avoids using eigenvalues entirely',
       'Works for any matrix using only eigenvalues (with multiplicities)',
-      'Avoids using eigenvalues entirely'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Putzer\'s method needs only the eigenvalues (including repeated ones), not the eigenvectors, making it practical for defective matrices.',
   },

@@ -1,0 +1,1087 @@
+{
+  "partId": 11,
+  "partTitle": "Sequences and Series",
+  "textbookChapter": "Chapter 10",
+  "sections": [
+    {
+      "sectionId": 64,
+      "sectionTitle": "Sequences",
+      "textbookSection": "I 10.1-10.5",
+      "examples": [
+        {
+          "id": "ex-11-64-1",
+          "type": "example",
+          "title": "Proving Convergence from Definition",
+          "statement": "Prove that $\\lim_{n \\to \\infty} \\frac{1}{n} = 0$ using the $\\varepsilon$-$N$ definition.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set Up",
+                "content": "We need to show: for every $\\varepsilon > 0$, there exists $N$ such that $n > N \\Rightarrow |1/n - 0| < \\varepsilon$."
+              },
+              {
+                "title": "Find N",
+                "content": "We need $|1/n| < \\varepsilon$, i.e., $1/n < \\varepsilon$, i.e., $n > 1/\\varepsilon$.\n\nChoose $N = \\lceil 1/\\varepsilon \\rceil$."
+              },
+              {
+                "title": "Verify",
+                "content": "For $n > N \\geq 1/\\varepsilon$:\n$$\\frac{1}{n} < \\frac{1}{N} \\leq \\varepsilon$$"
+              }
+            ],
+            "conclusion": "Therefore $\\lim_{n \\to \\infty} \\frac{1}{n} = 0$."
+          }
+        },
+        {
+          "id": "ex-11-64-2",
+          "type": "example",
+          "title": "Using Limit Laws",
+          "statement": "Find $\\lim_{n \\to \\infty} \\frac{3n^2 + 2n}{n^2 + 1}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Divide by Highest Power",
+                "content": "Divide numerator and denominator by $n^2$:\n$$\\frac{3n^2 + 2n}{n^2 + 1} = \\frac{3 + 2/n}{1 + 1/n^2}$$"
+              },
+              {
+                "title": "Apply Limit Laws",
+                "content": "As $n \\to \\infty$: $2/n \\to 0$ and $1/n^2 \\to 0$.\n$$\\lim_{n \\to \\infty} \\frac{3 + 2/n}{1 + 1/n^2} = \\frac{3 + 0}{1 + 0} = 3$$"
+              }
+            ],
+            "conclusion": "$\\lim_{n \\to \\infty} \\frac{3n^2 + 2n}{n^2 + 1} = 3$"
+          }
+        },
+        {
+          "id": "ex-11-64-3",
+          "type": "example",
+          "title": "Monotone Convergence",
+          "statement": "Let $a_1 = 1$ and $a_{n+1} = \\frac{1}{2}(a_n + 2)$. Show the sequence converges and find its limit.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Show Bounded Above",
+                "content": "Claim: $a_n < 2$ for all $n$.\n\nBase: $a_1 = 1 < 2$.\n\nInductive step: If $a_n < 2$, then $a_{n+1} = \\frac{1}{2}(a_n + 2) < \\frac{1}{2}(2 + 2) = 2$."
+              },
+              {
+                "title": "Show Increasing",
+                "content": "$$a_{n+1} - a_n = \\frac{1}{2}(a_n + 2) - a_n = 1 - \\frac{a_n}{2} = \\frac{2 - a_n}{2} > 0$$\nsince $a_n < 2$."
+              },
+              {
+                "title": "Find the Limit",
+                "content": "By the Monotone Convergence Theorem, the limit $L$ exists.\n$$L = \\frac{1}{2}(L + 2) \\Rightarrow 2L = L + 2 \\Rightarrow L = 2$$"
+              }
+            ],
+            "conclusion": "The sequence converges to $L = 2$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "11-64-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that $\\lim_{n \\to \\infty} \\frac{1}{n^2} = 0$ using the $\\varepsilon$-$N$ definition.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find N",
+                "content": "We need $1/n^2 < \\varepsilon$, i.e., $n^2 > 1/\\varepsilon$, i.e., $n > 1/\\sqrt{\\varepsilon}$.\n\nChoose $N = \\lceil 1/\\sqrt{\\varepsilon} \\rceil$."
+              },
+              {
+                "title": "Verify",
+                "content": "For $n > N$: $1/n^2 < 1/N^2 \\leq \\varepsilon$."
+              }
+            ],
+            "conclusion": "$\\lim_{n \\to \\infty} \\frac{1}{n^2} = 0$"
+          }
+        },
+        {
+          "id": "11-64-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Find $\\lim_{n \\to \\infty} \\frac{2n^3 - n}{n^3 + 5n^2}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Divide by n³",
+                "content": "$$\\frac{2n^3 - n}{n^3 + 5n^2} = \\frac{2 - 1/n^2}{1 + 5/n} \\to \\frac{2 - 0}{1 + 0} = 2$$"
+              }
+            ],
+            "conclusion": "The limit is $2$."
+          }
+        },
+        {
+          "id": "11-64-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Find $\\lim_{n \\to \\infty} \\frac{\\sin n}{n}$ using the Squeeze Theorem.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Squeeze Theorem",
+                "content": "Since $-1 \\leq \\sin n \\leq 1$:\n$$-\\frac{1}{n} \\leq \\frac{\\sin n}{n} \\leq \\frac{1}{n}$$\n\nBoth $-1/n \\to 0$ and $1/n \\to 0$."
+              }
+            ],
+            "conclusion": "By the Squeeze Theorem, $\\lim_{n \\to \\infty} \\frac{\\sin n}{n} = 0$."
+          }
+        },
+        {
+          "id": "11-64-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "For what values of $r$ does the sequence $\\{r^n\\}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Analyze by Cases",
+                "content": "- If $|r| < 1$: $r^n \\to 0$\n- If $r = 1$: $r^n = 1 \\to 1$\n- If $r > 1$: $r^n \\to \\infty$ (diverges)\n- If $r \\leq -1$: oscillates (diverges)"
+              }
+            ],
+            "conclusion": "$\\{r^n\\}$ converges iff $|r| < 1$ or $r = 1$."
+          }
+        },
+        {
+          "id": "11-64-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Show that $\\{(-1)^n\\}$ diverges using the subsequence criterion.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find Two Subsequences",
+                "content": "Even terms: $a_2, a_4, a_6, \\ldots = 1, 1, 1, \\ldots \\to 1$\n\nOdd terms: $a_1, a_3, a_5, \\ldots = -1, -1, -1, \\ldots \\to -1$"
+              },
+              {
+                "title": "Conclude",
+                "content": "Since these subsequences converge to different limits, the original sequence diverges."
+              }
+            ],
+            "conclusion": "$\\{(-1)^n\\}$ diverges."
+          }
+        },
+        {
+          "id": "11-64-6",
+          "type": "exercise",
+          "number": 6,
+          "statement": "Find $\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Recognize Standard Limit",
+                "content": "This is the definition of the number $e$:\n$$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e \\approx 2.71828$$"
+              }
+            ],
+            "conclusion": "$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$"
+          }
+        },
+        {
+          "id": "11-64-7",
+          "type": "exercise",
+          "number": 7,
+          "statement": "Let $a_1 = 2$ and $a_{n+1} = \\frac{1}{2}\\left(a_n + \\frac{3}{a_n}\\right)$. Find the limit if it exists.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume Limit Exists",
+                "content": "If $a_n \\to L$, then:\n$$L = \\frac{1}{2}\\left(L + \\frac{3}{L}\\right)$$\n$$2L = L + \\frac{3}{L}$$\n$$L = \\frac{3}{L}$$\n$$L^2 = 3$$"
+              }
+            ],
+            "conclusion": "$L = \\sqrt{3}$ (taking positive root since $a_n > 0$)."
+          }
+        },
+        {
+          "id": "11-64-8",
+          "type": "exercise",
+          "number": 8,
+          "statement": "Prove: if $a_n \\to L$ and $b_n \\to M$, then $a_n + b_n \\to L + M$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use ε-N Definition",
+                "content": "Let $\\varepsilon > 0$. Since $a_n \\to L$, there exists $N_1$ such that $n > N_1 \\Rightarrow |a_n - L| < \\varepsilon/2$.\n\nSince $b_n \\to M$, there exists $N_2$ such that $n > N_2 \\Rightarrow |b_n - M| < \\varepsilon/2$."
+              },
+              {
+                "title": "Combine",
+                "content": "Let $N = \\max(N_1, N_2)$. For $n > N$:\n$$|(a_n + b_n) - (L + M)| \\leq |a_n - L| + |b_n - M| < \\frac{\\varepsilon}{2} + \\frac{\\varepsilon}{2} = \\varepsilon$$"
+              }
+            ],
+            "conclusion": "$a_n + b_n \\to L + M$"
+          }
+        },
+        {
+          "id": "11-64-9",
+          "type": "exercise",
+          "number": 9,
+          "statement": "Find $\\lim_{n \\to \\infty} n^{1/n}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Take Logarithm",
+                "content": "Let $y = n^{1/n}$. Then $\\ln y = \\frac{\\ln n}{n}$."
+              },
+              {
+                "title": "Evaluate",
+                "content": "Using L'Hôpital's rule (treating $n$ as continuous):\n$$\\lim_{n \\to \\infty} \\frac{\\ln n}{n} = \\lim_{n \\to \\infty} \\frac{1/n}{1} = 0$$\n\nTherefore $\\ln y \\to 0$, so $y \\to e^0 = 1$."
+              }
+            ],
+            "conclusion": "$\\lim_{n \\to \\infty} n^{1/n} = 1$"
+          }
+        },
+        {
+          "id": "11-64-10",
+          "type": "exercise",
+          "number": 10,
+          "statement": "The Fibonacci sequence is defined by $F_1 = F_2 = 1$ and $F_{n+2} = F_{n+1} + F_n$. If $\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n}$ exists, find it.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set Up Equation",
+                "content": "Assume $L = \\lim \\frac{F_{n+1}}{F_n}$ exists.\n\nFrom the recurrence: $\\frac{F_{n+2}}{F_{n+1}} = \\frac{F_{n+1} + F_n}{F_{n+1}} = 1 + \\frac{F_n}{F_{n+1}}$"
+              },
+              {
+                "title": "Take Limits",
+                "content": "$$L = 1 + \\frac{1}{L}$$\n$$L^2 = L + 1$$\n$$L^2 - L - 1 = 0$$\n$$L = \\frac{1 + \\sqrt{5}}{2}$$"
+              }
+            ],
+            "conclusion": "$L = \\frac{1 + \\sqrt{5}}{2} = \\varphi$ (the golden ratio)."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 65,
+      "sectionTitle": "Infinite Series",
+      "textbookSection": "I 10.6-10.10",
+      "examples": [
+        {
+          "id": "ex-11-65-1",
+          "type": "example",
+          "title": "Geometric Series",
+          "statement": "Find $\\sum_{n=0}^{\\infty} \\left(\\frac{1}{2}\\right)^n$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Formula",
+                "content": "For $|r| < 1$: $\\sum_{n=0}^{\\infty} r^n = \\frac{1}{1-r}$.\n\nHere $r = 1/2$."
+              },
+              {
+                "title": "Compute",
+                "content": "$$\\sum_{n=0}^{\\infty} \\left(\\frac{1}{2}\\right)^n = \\frac{1}{1 - 1/2} = \\frac{1}{1/2} = 2$$"
+              }
+            ],
+            "conclusion": "$\\sum_{n=0}^{\\infty} (1/2)^n = 2$"
+          }
+        },
+        {
+          "id": "ex-11-65-2",
+          "type": "example",
+          "title": "Telescoping Series",
+          "statement": "Evaluate $\\sum_{n=1}^{\\infty} \\frac{1}{n(n+1)}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Partial Fractions",
+                "content": "$$\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$$"
+              },
+              {
+                "title": "Compute Partial Sum",
+                "content": "$$S_N = \\sum_{n=1}^{N} \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right)$$\n$$= \\left(1 - \\frac{1}{2}\\right) + \\left(\\frac{1}{2} - \\frac{1}{3}\\right) + \\cdots + \\left(\\frac{1}{N} - \\frac{1}{N+1}\\right)$$\n$$= 1 - \\frac{1}{N+1}$$"
+              },
+              {
+                "title": "Take Limit",
+                "content": "$$\\lim_{N \\to \\infty} \\left(1 - \\frac{1}{N+1}\\right) = 1$$"
+              }
+            ],
+            "conclusion": "$\\sum_{n=1}^{\\infty} \\frac{1}{n(n+1)} = 1$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "11-65-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find $\\sum_{n=1}^{\\infty} \\left(\\frac{1}{3}\\right)^n$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Adjust Starting Index",
+                "content": "$$\\sum_{n=1}^{\\infty} \\left(\\frac{1}{3}\\right)^n = \\sum_{n=0}^{\\infty} \\left(\\frac{1}{3}\\right)^n - 1 = \\frac{1}{1-1/3} - 1 = \\frac{3}{2} - 1 = \\frac{1}{2}$$"
+              }
+            ],
+            "conclusion": "$\\sum_{n=1}^{\\infty} (1/3)^n = 1/2$"
+          }
+        },
+        {
+          "id": "11-65-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{n}{n+1}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Divergence Test",
+                "content": "$$\\lim_{n \\to \\infty} \\frac{n}{n+1} = 1 \\neq 0$$"
+              }
+            ],
+            "conclusion": "The series diverges by the divergence test."
+          }
+        },
+        {
+          "id": "11-65-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Show that the harmonic series $\\sum_{n=1}^{\\infty} \\frac{1}{n}$ diverges.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Oresme's Proof",
+                "content": "Group terms:\n$$1 + \\frac{1}{2} + \\left(\\frac{1}{3} + \\frac{1}{4}\\right) + \\left(\\frac{1}{5} + \\cdots + \\frac{1}{8}\\right) + \\cdots$$\n$$> 1 + \\frac{1}{2} + \\frac{1}{2} + \\frac{1}{2} + \\cdots = \\infty$$"
+              }
+            ],
+            "conclusion": "The harmonic series diverges."
+          }
+        },
+        {
+          "id": "11-65-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Find $\\sum_{n=1}^{\\infty} \\frac{1}{n(n+2)}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Partial Fractions",
+                "content": "$$\\frac{1}{n(n+2)} = \\frac{1}{2}\\left(\\frac{1}{n} - \\frac{1}{n+2}\\right)$$"
+              },
+              {
+                "title": "Telescoping",
+                "content": "$$S_N = \\frac{1}{2}\\left[\\left(1 - \\frac{1}{3}\\right) + \\left(\\frac{1}{2} - \\frac{1}{4}\\right) + \\cdots\\right]$$\n$$= \\frac{1}{2}\\left(1 + \\frac{1}{2} - \\frac{1}{N+1} - \\frac{1}{N+2}\\right) \\to \\frac{1}{2} \\cdot \\frac{3}{2} = \\frac{3}{4}$$"
+              }
+            ],
+            "conclusion": "$\\sum_{n=1}^{\\infty} \\frac{1}{n(n+2)} = \\frac{3}{4}$"
+          }
+        },
+        {
+          "id": "11-65-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Express $0.\\overline{27}$ as a fraction.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Write as Series",
+                "content": "$$0.272727\\ldots = \\frac{27}{100} + \\frac{27}{10000} + \\cdots = \\frac{27}{100}\\sum_{n=0}^{\\infty} \\left(\\frac{1}{100}\\right)^n$$"
+              },
+              {
+                "title": "Evaluate",
+                "content": "$$= \\frac{27}{100} \\cdot \\frac{1}{1 - 1/100} = \\frac{27}{100} \\cdot \\frac{100}{99} = \\frac{27}{99} = \\frac{3}{11}$$"
+              }
+            ],
+            "conclusion": "$0.\\overline{27} = \\frac{3}{11}$"
+          }
+        },
+        {
+          "id": "11-65-6",
+          "type": "exercise",
+          "number": 6,
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ converge or diverge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply p-Series Test",
+                "content": "This is a p-series with $p = 2 > 1$."
+              }
+            ],
+            "conclusion": "The series converges. (Its sum is $\\pi^2/6$.)"
+          }
+        },
+        {
+          "id": "11-65-7",
+          "type": "exercise",
+          "number": 7,
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n}}$ converge or diverge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply p-Series Test",
+                "content": "This is a p-series with $p = 1/2 < 1$."
+              }
+            ],
+            "conclusion": "The series diverges."
+          }
+        },
+        {
+          "id": "11-65-8",
+          "type": "exercise",
+          "number": 8,
+          "statement": "Find $\\sum_{n=0}^{\\infty} \\frac{2^n + 3^n}{6^n}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Split the Sum",
+                "content": "$$\\sum_{n=0}^{\\infty} \\frac{2^n + 3^n}{6^n} = \\sum_{n=0}^{\\infty} \\left(\\frac{1}{3}\\right)^n + \\sum_{n=0}^{\\infty} \\left(\\frac{1}{2}\\right)^n$$"
+              },
+              {
+                "title": "Evaluate Each",
+                "content": "$$= \\frac{1}{1 - 1/3} + \\frac{1}{1 - 1/2} = \\frac{3}{2} + 2 = \\frac{7}{2}$$"
+              }
+            ],
+            "conclusion": "$\\sum_{n=0}^{\\infty} \\frac{2^n + 3^n}{6^n} = \\frac{7}{2}$"
+          }
+        },
+        {
+          "id": "11-65-9",
+          "type": "exercise",
+          "number": 9,
+          "statement": "If $\\sum a_n$ converges, what can you conclude about $\\lim a_n$?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Necessary Condition",
+                "content": "If $\\sum a_n$ converges, then $\\lim_{n \\to \\infty} a_n = 0$.\n\nThis is a necessary condition, not sufficient (harmonic series is counterexample)."
+              }
+            ],
+            "conclusion": "$\\lim a_n = 0$ (necessary but not sufficient for convergence)."
+          }
+        },
+        {
+          "id": "11-65-10",
+          "type": "exercise",
+          "number": 10,
+          "statement": "Does changing finitely many terms of a series affect whether it converges?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Analyze",
+                "content": "Changing, adding, or removing finitely many terms:\n- Does NOT affect whether the series converges or diverges\n- MAY change the sum if it converges"
+              }
+            ],
+            "conclusion": "Convergence/divergence is unaffected; the sum may change."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 66,
+      "sectionTitle": "Convergence Tests for Positive Series",
+      "textbookSection": "I 10.11-10.15",
+      "examples": [
+        {
+          "id": "ex-11-66-1",
+          "type": "example",
+          "title": "Direct Comparison Test",
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{1}{2^n + 1}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find Comparison",
+                "content": "For all $n \\geq 1$:\n$$\\frac{1}{2^n + 1} < \\frac{1}{2^n}$$"
+              },
+              {
+                "title": "Conclude",
+                "content": "$\\sum (1/2)^n$ is a convergent geometric series. By comparison, $\\sum \\frac{1}{2^n + 1}$ converges."
+              }
+            ],
+            "conclusion": "The series converges by comparison with a geometric series."
+          }
+        },
+        {
+          "id": "ex-11-66-2",
+          "type": "example",
+          "title": "Ratio Test",
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{n^2}{n!}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Ratio",
+                "content": "$$\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2/(n+1)!}{n^2/n!} = \\frac{(n+1)^2}{n^2(n+1)} = \\frac{n+1}{n^2}$$"
+              },
+              {
+                "title": "Take Limit",
+                "content": "$$L = \\lim_{n \\to \\infty} \\frac{n+1}{n^2} = 0 < 1$$"
+              }
+            ],
+            "conclusion": "The series converges by the ratio test."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "11-66-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use the comparison test: Does $\\sum_{n=2}^{\\infty} \\frac{1}{\\ln n}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compare",
+                "content": "For $n \\geq 2$: $\\ln n < n$, so $\\frac{1}{\\ln n} > \\frac{1}{n}$."
+              },
+              {
+                "title": "Conclude",
+                "content": "Since $\\sum 1/n$ diverges and $1/\\ln n > 1/n$, by comparison, $\\sum 1/\\ln n$ diverges."
+              }
+            ],
+            "conclusion": "The series diverges."
+          }
+        },
+        {
+          "id": "11-66-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Use limit comparison: Does $\\sum_{n=1}^{\\infty} \\frac{n}{n^3 + 1}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Identify Comparison",
+                "content": "For large $n$: $\\frac{n}{n^3 + 1} \\approx \\frac{1}{n^2}$"
+              },
+              {
+                "title": "Compute Limit",
+                "content": "$$\\lim_{n \\to \\infty} \\frac{n/(n^3+1)}{1/n^2} = \\lim_{n \\to \\infty} \\frac{n^3}{n^3 + 1} = 1$$"
+              },
+              {
+                "title": "Conclude",
+                "content": "Since $\\sum 1/n^2$ converges and $L = 1$ is finite and positive, $\\sum \\frac{n}{n^3+1}$ converges."
+              }
+            ],
+            "conclusion": "The series converges by limit comparison."
+          }
+        },
+        {
+          "id": "11-66-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Use the integral test: Does $\\sum_{n=2}^{\\infty} \\frac{1}{n \\ln n}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Evaluate Integral",
+                "content": "$$\\int_2^{\\infty} \\frac{1}{x \\ln x}\\,dx = [\\ln(\\ln x)]_2^{\\infty} = \\infty$$"
+              }
+            ],
+            "conclusion": "The series diverges by the integral test."
+          }
+        },
+        {
+          "id": "11-66-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Does $\\sum_{n=2}^{\\infty} \\frac{1}{n(\\ln n)^2}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Integral Test",
+                "content": "$$\\int_2^{\\infty} \\frac{1}{x(\\ln x)^2}\\,dx = \\left[-\\frac{1}{\\ln x}\\right]_2^{\\infty} = 0 + \\frac{1}{\\ln 2} = \\frac{1}{\\ln 2}$$"
+              }
+            ],
+            "conclusion": "The series converges."
+          }
+        },
+        {
+          "id": "11-66-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Use the ratio test: Does $\\sum_{n=0}^{\\infty} \\frac{2^n}{n!}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Ratio",
+                "content": "$$\\frac{a_{n+1}}{a_n} = \\frac{2^{n+1}/(n+1)!}{2^n/n!} = \\frac{2}{n+1}$$"
+              },
+              {
+                "title": "Take Limit",
+                "content": "$$L = \\lim_{n \\to \\infty} \\frac{2}{n+1} = 0 < 1$$"
+              }
+            ],
+            "conclusion": "The series converges. (In fact, $\\sum \\frac{2^n}{n!} = e^2$.)"
+          }
+        },
+        {
+          "id": "11-66-6",
+          "type": "exercise",
+          "number": 6,
+          "statement": "Use the root test: Does $\\sum_{n=1}^{\\infty} \\left(\\frac{n}{2n+1}\\right)^n$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Root",
+                "content": "$$\\sqrt[n]{a_n} = \\frac{n}{2n+1} \\to \\frac{1}{2}$$"
+              }
+            ],
+            "conclusion": "Since $L = 1/2 < 1$, the series converges."
+          }
+        },
+        {
+          "id": "11-66-7",
+          "type": "exercise",
+          "number": 7,
+          "statement": "Apply the ratio test to $\\sum \\frac{1}{n}$. What happens?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute",
+                "content": "$$\\frac{a_{n+1}}{a_n} = \\frac{n}{n+1} \\to 1$$"
+              }
+            ],
+            "conclusion": "The ratio test is inconclusive when $L = 1$."
+          }
+        },
+        {
+          "id": "11-66-8",
+          "type": "exercise",
+          "number": 8,
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{n!}{n^n}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Ratio Test",
+                "content": "$$\\frac{a_{n+1}}{a_n} = \\frac{(n+1)!/(n+1)^{n+1}}{n!/n^n} = \\frac{(n+1) \\cdot n^n}{(n+1)^{n+1}} = \\left(\\frac{n}{n+1}\\right)^n$$"
+              },
+              {
+                "title": "Evaluate Limit",
+                "content": "$$\\lim_{n \\to \\infty} \\left(\\frac{n}{n+1}\\right)^n = \\lim_{n \\to \\infty} \\frac{1}{(1 + 1/n)^n} = \\frac{1}{e} < 1$$"
+              }
+            ],
+            "conclusion": "The series converges."
+          }
+        },
+        {
+          "id": "11-66-9",
+          "type": "exercise",
+          "number": 9,
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{\\sin^2 n}{n^2}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Comparison",
+                "content": "Since $0 \\leq \\sin^2 n \\leq 1$:\n$$0 \\leq \\frac{\\sin^2 n}{n^2} \\leq \\frac{1}{n^2}$$"
+              },
+              {
+                "title": "Conclude",
+                "content": "$\\sum 1/n^2$ converges, so by comparison, $\\sum \\frac{\\sin^2 n}{n^2}$ converges."
+              }
+            ],
+            "conclusion": "The series converges by comparison."
+          }
+        },
+        {
+          "id": "11-66-10",
+          "type": "exercise",
+          "number": 10,
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{n^2 + 3n}{n^4 - 2}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Limit Comparison with 1/n²",
+                "content": "$$\\lim_{n \\to \\infty} \\frac{(n^2 + 3n)/(n^4 - 2)}{1/n^2} = \\lim_{n \\to \\infty} \\frac{n^4 + 3n^3}{n^4 - 2} = 1$$"
+              }
+            ],
+            "conclusion": "Since $\\sum 1/n^2$ converges and $L = 1$, the series converges."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 67,
+      "sectionTitle": "Alternating Series and Absolute Convergence",
+      "textbookSection": "I 10.16-10.20",
+      "examples": [
+        {
+          "id": "ex-11-67-1",
+          "type": "example",
+          "title": "Alternating Series Test",
+          "statement": "Show that $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$ converges.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Conditions",
+                "content": "Let $b_n = 1/n$.\n1. $b_n > 0$ ✓\n2. $b_{n+1} = 1/(n+1) < 1/n = b_n$ ✓\n3. $\\lim b_n = 0$ ✓"
+              }
+            ],
+            "conclusion": "By the Alternating Series Test, the series converges."
+          }
+        },
+        {
+          "id": "ex-11-67-2",
+          "type": "example",
+          "title": "Absolute vs Conditional",
+          "statement": "Classify the convergence of $\\sum \\frac{(-1)^{n+1}}{n}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Absolute Convergence",
+                "content": "$\\sum |a_n| = \\sum 1/n$ is the harmonic series, which diverges."
+              },
+              {
+                "title": "Classify",
+                "content": "The series converges (by alternating series test) but not absolutely."
+              }
+            ],
+            "conclusion": "The alternating harmonic series converges conditionally."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "11-67-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{n+1}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Limit",
+                "content": "$$\\lim_{n \\to \\infty} \\frac{n}{n+1} = 1 \\neq 0$$"
+              }
+            ],
+            "conclusion": "The series diverges (terms don't approach 0)."
+          }
+        },
+        {
+          "id": "11-67-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Show that $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^2 + 1}$ converges.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Alternating Series Test",
+                "content": "Let $b_n = 1/(n^2 + 1)$.\n1. $b_n > 0$ ✓\n2. $b_{n+1} < b_n$ ✓ (denominator increases)\n3. $\\lim b_n = 0$ ✓"
+              }
+            ],
+            "conclusion": "The series converges by the alternating series test."
+          }
+        },
+        {
+          "id": "11-67-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Approximate $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n!}$ with error less than 0.01.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find N",
+                "content": "Need $b_{N+1} = 1/(N+1)! < 0.01$.\n\n$5! = 120$, so $1/120 \\approx 0.0083 < 0.01$.\n\nUse $N = 4$ terms."
+              },
+              {
+                "title": "Compute",
+                "content": "$$S_4 = 1 - 1 + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} = \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} \\approx 0.375$$"
+              }
+            ],
+            "conclusion": "The approximation is $\\approx 0.375$ with error $< 0.01$."
+          }
+        },
+        {
+          "id": "11-67-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Classify the convergence of $\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n^2}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Absolute Convergence",
+                "content": "$\\sum |a_n| = \\sum 1/n^2$ converges (p-series, p = 2)."
+              }
+            ],
+            "conclusion": "The series converges absolutely."
+          }
+        },
+        {
+          "id": "11-67-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Classify the convergence of $\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{\\sqrt{n}}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Convergence",
+                "content": "By alternating series test: $b_n = 1/\\sqrt{n}$ is positive, decreasing, and $\\to 0$. ✓"
+              },
+              {
+                "title": "Check Absolute",
+                "content": "$\\sum 1/\\sqrt{n}$ is a p-series with $p = 1/2 < 1$, so it diverges."
+              }
+            ],
+            "conclusion": "The series converges conditionally."
+          }
+        },
+        {
+          "id": "11-67-6",
+          "type": "exercise",
+          "number": 6,
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{\\sin n}{n^2}$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Absolute Convergence",
+                "content": "$$\\left|\\frac{\\sin n}{n^2}\\right| \\leq \\frac{1}{n^2}$$\n\n$\\sum 1/n^2$ converges, so $\\sum |a_n|$ converges by comparison."
+              }
+            ],
+            "conclusion": "The series converges absolutely."
+          }
+        },
+        {
+          "id": "11-67-7",
+          "type": "exercise",
+          "number": 7,
+          "statement": "Does $\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{2^n}$ converge absolutely?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Ratio Test on |aₙ|",
+                "content": "$$\\frac{|a_{n+1}|}{|a_n|} = \\frac{(n+1)/2^{n+1}}{n/2^n} = \\frac{n+1}{2n} \\to \\frac{1}{2}$$"
+              }
+            ],
+            "conclusion": "Since $L = 1/2 < 1$, the series converges absolutely."
+          }
+        },
+        {
+          "id": "11-67-8",
+          "type": "exercise",
+          "number": 8,
+          "statement": "What does Riemann's rearrangement theorem say about conditionally convergent series?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Statement",
+                "content": "If $\\sum a_n$ converges conditionally, then its terms can be rearranged to:\n- Converge to any real number\n- Diverge to $+\\infty$ or $-\\infty$\n- Oscillate without converging"
+              }
+            ],
+            "conclusion": "Rearrangement can give any sum for conditionally convergent series."
+          }
+        },
+        {
+          "id": "11-67-9",
+          "type": "exercise",
+          "number": 9,
+          "statement": "If $\\sum a_n$ converges absolutely, what can you say about rearrangements?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Theorem",
+                "content": "Any rearrangement of an absolutely convergent series converges to the same sum."
+              }
+            ],
+            "conclusion": "Absolute convergence guarantees the sum is independent of order."
+          }
+        },
+        {
+          "id": "11-67-10",
+          "type": "exercise",
+          "number": 10,
+          "statement": "Complete the classification: If $\\sum |a_n|$ diverges and $\\sum a_n$ converges, the series is ____.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definition",
+                "content": "This is the definition of conditional convergence."
+              }
+            ],
+            "conclusion": "Conditionally convergent."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 68,
+      "sectionTitle": "Improper Integrals",
+      "textbookSection": "I 10.21-10.25",
+      "examples": [
+        {
+          "id": "ex-11-68-1",
+          "type": "example",
+          "title": "Type I Improper Integral",
+          "statement": "Evaluate $\\int_0^{\\infty} e^{-x}\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definition",
+                "content": "$$\\int_0^{\\infty} e^{-x}\\,dx = \\lim_{t \\to \\infty} \\int_0^t e^{-x}\\,dx$$"
+              },
+              {
+                "title": "Evaluate",
+                "content": "$$= \\lim_{t \\to \\infty} [-e^{-x}]_0^t = \\lim_{t \\to \\infty} (-e^{-t} + 1) = 0 + 1 = 1$$"
+              }
+            ],
+            "conclusion": "$\\int_0^{\\infty} e^{-x}\\,dx = 1$"
+          }
+        },
+        {
+          "id": "ex-11-68-2",
+          "type": "example",
+          "title": "Type II Improper Integral",
+          "statement": "Evaluate $\\int_0^1 \\frac{1}{\\sqrt{x}}\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definition",
+                "content": "The integrand has a discontinuity at $x = 0$:\n$$\\int_0^1 \\frac{1}{\\sqrt{x}}\\,dx = \\lim_{t \\to 0^+} \\int_t^1 x^{-1/2}\\,dx$$"
+              },
+              {
+                "title": "Evaluate",
+                "content": "$$= \\lim_{t \\to 0^+} [2\\sqrt{x}]_t^1 = \\lim_{t \\to 0^+} (2 - 2\\sqrt{t}) = 2 - 0 = 2$$"
+              }
+            ],
+            "conclusion": "$\\int_0^1 \\frac{1}{\\sqrt{x}}\\,dx = 2$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "11-68-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Evaluate $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Evaluate",
+                "content": "$$\\int_1^{\\infty} x^{-2}\\,dx = \\lim_{t \\to \\infty} [-x^{-1}]_1^t = \\lim_{t \\to \\infty} \\left(-\\frac{1}{t} + 1\\right) = 1$$"
+              }
+            ],
+            "conclusion": "$\\int_1^{\\infty} \\frac{1}{x^2}\\,dx = 1$"
+          }
+        },
+        {
+          "id": "11-68-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Does $\\int_1^{\\infty} \\frac{1}{x}\\,dx$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Evaluate",
+                "content": "$$\\int_1^t \\frac{1}{x}\\,dx = \\ln t \\to \\infty \\text{ as } t \\to \\infty$$"
+              }
+            ],
+            "conclusion": "The integral diverges."
+          }
+        },
+        {
+          "id": "11-68-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "For what values of $p$ does $\\int_1^{\\infty} \\frac{1}{x^p}\\,dx$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "p-Integral Test",
+                "content": "The integral converges if and only if $p > 1$.\n\nWhen $p > 1$: $\\int_1^{\\infty} x^{-p}\\,dx = \\frac{1}{p-1}$"
+              }
+            ],
+            "conclusion": "Converges iff $p > 1$."
+          }
+        },
+        {
+          "id": "11-68-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "For what values of $p$ does $\\int_0^1 \\frac{1}{x^p}\\,dx$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Analyze Near Zero",
+                "content": "Near $x = 0$, the integral converges iff $p < 1$.\n\nWhen $p < 1$: $\\int_0^1 x^{-p}\\,dx = \\frac{1}{1-p}$"
+              }
+            ],
+            "conclusion": "Converges iff $p < 1$."
+          }
+        },
+        {
+          "id": "11-68-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Use comparison to determine if $\\int_1^{\\infty} \\frac{1}{x^2 + 1}\\,dx$ converges.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compare",
+                "content": "For $x \\geq 1$: $\\frac{1}{x^2 + 1} < \\frac{1}{x^2}$.\n\nSince $\\int_1^{\\infty} 1/x^2\\,dx$ converges, so does $\\int_1^{\\infty} \\frac{1}{x^2+1}\\,dx$."
+              }
+            ],
+            "conclusion": "The integral converges by comparison."
+          }
+        },
+        {
+          "id": "11-68-6",
+          "type": "exercise",
+          "number": 6,
+          "statement": "Use limit comparison to test $\\int_1^{\\infty} \\frac{x}{x^3 + 5}\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compare with 1/x²",
+                "content": "$$\\lim_{x \\to \\infty} \\frac{x/(x^3+5)}{1/x^2} = \\lim_{x \\to \\infty} \\frac{x^3}{x^3+5} = 1$$"
+              },
+              {
+                "title": "Conclude",
+                "content": "Since $L = 1$ (finite, positive) and $\\int_1^{\\infty} 1/x^2\\,dx$ converges, the given integral converges."
+              }
+            ],
+            "conclusion": "The integral converges."
+          }
+        },
+        {
+          "id": "11-68-7",
+          "type": "exercise",
+          "number": 7,
+          "statement": "Evaluate $\\int_0^1 \\frac{1}{x}\\,dx$ (if it converges).",
+          "solution": {
+            "steps": [
+              {
+                "title": "Evaluate",
+                "content": "$$\\int_t^1 \\frac{1}{x}\\,dx = -\\ln t \\to \\infty \\text{ as } t \\to 0^+$$"
+              }
+            ],
+            "conclusion": "The integral diverges."
+          }
+        },
+        {
+          "id": "11-68-8",
+          "type": "exercise",
+          "number": 8,
+          "statement": "Does $\\int_{-\\infty}^{\\infty} \\frac{1}{1+x^2}\\,dx$ converge? If so, find its value.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Split and Evaluate",
+                "content": "$$\\int_{-\\infty}^{\\infty} \\frac{1}{1+x^2}\\,dx = \\int_{-\\infty}^{0} + \\int_0^{\\infty} = 2\\int_0^{\\infty} \\frac{1}{1+x^2}\\,dx$$\n$$= 2[\\arctan x]_0^{\\infty} = 2(\\pi/2 - 0) = \\pi$$"
+              }
+            ],
+            "conclusion": "$\\int_{-\\infty}^{\\infty} \\frac{1}{1+x^2}\\,dx = \\pi$"
+          }
+        },
+        {
+          "id": "11-68-9",
+          "type": "exercise",
+          "number": 9,
+          "statement": "What is the relationship between the integral test and the p-series?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Connection",
+                "content": "The integral test shows:\n$$\\sum_{n=1}^{\\infty} \\frac{1}{n^p} \\text{ converges} \\Leftrightarrow \\int_1^{\\infty} \\frac{1}{x^p}\\,dx \\text{ converges}$$\n\nBoth converge iff $p > 1$."
+              }
+            ],
+            "conclusion": "The p-series test is derived from the integral test."
+          }
+        },
+        {
+          "id": "11-68-10",
+          "type": "exercise",
+          "number": 10,
+          "statement": "Does $\\int_1^{\\infty} e^{-x^2}\\,dx$ converge?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Comparison",
+                "content": "For $x \\geq 1$: $x^2 \\geq x$, so $e^{-x^2} \\leq e^{-x}$.\n\nSince $\\int_1^{\\infty} e^{-x}\\,dx = e^{-1}$ converges, so does $\\int_1^{\\infty} e^{-x^2}\\,dx$."
+              }
+            ],
+            "conclusion": "The integral converges by comparison."
+          }
+        }
+      ]
+    }
+  ]
+}

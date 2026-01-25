@@ -36,12 +36,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The ordering on $\\mathbb{R}$ (constructed via Cauchy sequences) is:',
     options: [
-      'A total order (trichotomy holds)',
       'A partial order only',
       'Not transitive',
-      'Dependent on the choice of representative sequences'
+      'Dependent on the choice of representative sequences',
+      'A total order (trichotomy holds)',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The ordering is a total order: for any two reals $x, y$, exactly one of $x < y$, $x = y$, or $x > y$ holds. This trichotomy is essential for analysis.',
   },
@@ -77,11 +77,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'The property "$x \\leq y$ and $y \\leq x$ implies $x = y$" is called:',
     options: [
       'Transitivity',
-      'Antisymmetry',
       'Reflexivity',
+      'Antisymmetry',
       'Trichotomy',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Antisymmetry states that if $x \\leq y$ and $y \\leq x$, then $x = y$. This is one of the defining properties of a partial (and total) order.',
   },
@@ -91,11 +91,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Between any two distinct real numbers $x < y$, there exists:',
     options: [
       'No other real number',
+      'Infinitely many rational numbers',
       'Exactly one rational number',
       'Only irrational numbers',
-      'Infinitely many rational numbers'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The rationals are dense in the reals: between any two distinct reals $x < y$, there are infinitely many rationals $q$ with $x < q < y$.',
   },

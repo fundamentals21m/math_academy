@@ -6,8 +6,13 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who developed the method of exhaustion?',
     difficulty: 'easy',
-    options: ['Pythagoras', 'Eudoxus of Cnidus', 'Plato', 'Aristotle'],
-    correctIndex: 1,
+    options: [
+      'Pythagoras',
+      'Plato',
+      'Eudoxus of Cnidus',
+      'Aristotle',
+    ],
+    correctIndex: 2,
     explanation:
       'Eudoxus of Cnidus (c. 408-355 BCE) developed the method of exhaustion, which was later perfected by Archimedes.',
   },
@@ -19,10 +24,10 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       'Direct measurement with rulers',
       'Counting unit squares',
+      'Using algebraic formulas',
       'Double contradiction: showing the area is neither greater nor less than the claimed value',
-      'Using algebraic formulas'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'The method of exhaustion uses double reductio ad absurdum: it proves the area cannot be greater than the claimed value (using inscribed polygons) and cannot be less (using circumscribed polygons).',
   },
@@ -33,10 +38,17 @@ export const section15Questions: QuizQuestion[] = [
       'What is the Axiom of Eudoxus (Archimedean Property)?',
     difficulty: 'medium',
     options: [
-      'Every circle has area $\\pi r^2$',
-      'The whole is greater than the part',
-      'Parallel lines never meet',
-      'Given any two magnitudes, repeatedly doubling the smaller will eventually exceed the larger'
+      ',
+  },
+      ',
+      'Every circle has area $\\pi r^2
+    correctIndex: 0,
+    explanation:
+      ',
+      ',
+      ',
+      ',
+      ',
     ],
     correctIndex: 3,
     explanation:
@@ -52,6 +64,7 @@ export const section15Questions: QuizQuestion[] = [
     correctIndex: 2,
     explanation:
       'Archimedes proved the parabolic segment has area $4/3$ times the inscribed triangle: $T(1 + 1/4 + 1/16 + \\cdots) = T \\cdot \\frac{4}{3}$.',
+  }= T \\cdot \\frac{4}{3}$.',
   },
   {
     id: 's15-h01',
@@ -60,12 +73,12 @@ export const section15Questions: QuizQuestion[] = [
       'Why was the method of exhaustion eventually replaced by calculus?',
     difficulty: 'hard',
     options: [
-      'It required knowing the answer first and had no general algorithm',
       'It gave wrong answers',
       'It was too easy',
-      'Archimedes asked mathematicians to stop using it'
+      'It required knowing the answer first and had no general algorithm',
+      'Archimedes asked mathematicians to stop using it',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     explanation:
       'The method of exhaustion required guessing the answer first, then proving it correct via lengthy contradiction arguments. Calculus provides systematic algorithms that work for any problem, making it far more practical.',
   },

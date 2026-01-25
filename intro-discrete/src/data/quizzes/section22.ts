@@ -6,10 +6,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The division algorithm for polynomials over a field states that $f = qg + r$ where:',
     options: [
-      '$\\deg(r) = \\deg(g)$',
-      '$\\deg(r) < \\deg(g)$ or $r = 0$',
-      '$\\deg(r) > \\deg(g)$',
-      '$r = f$'
+      '$\\deg(r) = \\deg(g)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The remainder $r$ must have degree strictly less than the divisor $g$, or be zero.',
+  },
+      '$\\deg(r) > \\deg(g)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The remainder $r$ must have degree strictly less than the divisor $g$, or be zero.',
+  },
+      '$\\deg(r) < \\deg(g)$ or $r = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The remainder $r$ must have degree strictly less than the divisor $g$, or be zero.',
+  },
+      '$r = f
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The remainder $r$ must have degree strictly less than the divisor $g$, or be zero.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -21,11 +37,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'When dividing polynomials, the GCD is normalized to be:',
     options: [
       'Of degree 0',
-      'Monic (leading coefficient 1)',
       'Equal to 1',
+      'Monic (leading coefficient 1)',
       'Of maximum degree',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'We normalize the GCD to be monic to ensure uniqueness.',
   },
@@ -35,11 +51,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'The polynomial GCD can be computed using:',
     options: [
       'Factoring only',
-      'Derivatives',
       'The Euclidean algorithm',
+      'Derivatives',
       'Integration',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The Euclidean algorithm works for polynomials over fields, just as for integers.',
   },

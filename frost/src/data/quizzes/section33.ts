@@ -96,10 +96,26 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'With $k = 1475$, $s = 17$, and $c = 13$, what should the aggregated response $z$ equal?',
     options: [
-      '$z = 221$',
-      '$z = 1475$',
-      '$z = 1696$',
-      '$z = 1254$'
+      '$z = 221
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$z = k + s \\cdot c = 1475 + 17 \\cdot 13 = 1475 + 221 = 1696$.',
+  },
+      '$z = 1696
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$z = k + s \\cdot c = 1475 + 17 \\cdot 13 = 1475 + 221 = 1696$.',
+  },
+      '$z = 1475
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$z = k + s \\cdot c = 1475 + 17 \\cdot 13 = 1475 + 221 = 1696$.',
+  },
+      '$z = 1254
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$z = k + s \\cdot c = 1475 + 17 \\cdot 13 = 1475 + 221 = 1696$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

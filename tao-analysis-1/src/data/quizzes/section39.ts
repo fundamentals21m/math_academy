@@ -101,10 +101,26 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f(x) = |x|$ is the absolute value function, then $f$ satisfies:',
     options: [
-      '$f(x) \\geq 0$ for all $x$ and $f(x) = 0$ iff $x = 0$',
-      '$f(xy) = f(x)f(y)$ for all $x, y$',
-      '$f(x + y) = f(x) + f(y)$ for all $x, y$',
-      '$f(-x) = -f(x)$ for all $x$'
+      '$f(xy) = f(x)f(y)$ for all $x, y
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The absolute value satisfies $|x| \\geq 0$ with equality iff $x = 0$. It also satisfies $|xy| = |x||y|$, but NOT $|x+y| = |x| + |y|$ in general.',
+  },
+      '$f(x) \\geq 0$ for all $x$ and $f(x) = 0$ iff $x = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The absolute value satisfies $|x| \\geq 0$ with equality iff $x = 0$. It also satisfies $|xy| = |x||y|$, but NOT $|x+y| = |x| + |y|$ in general.',
+  },
+      '$f(x + y) = f(x) + f(y)$ for all $x, y
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The absolute value satisfies $|x| \\geq 0$ with equality iff $x = 0$. It also satisfies $|xy| = |x||y|$, but NOT $|x+y| = |x| + |y|$ in general.',
+  },
+      '$f(-x) = -f(x)$ for all $x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The absolute value satisfies $|x| \\geq 0$ with equality iff $x = 0$. It also satisfies $|xy| = |x||y|$, but NOT $|x+y| = |x| + |y|$ in general.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

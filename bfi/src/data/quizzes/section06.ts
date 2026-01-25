@@ -6,12 +6,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does CBDC stand for?',
     options: [
-      'Central Bank Digital Currency',
       'Centralized Bitcoin Digital Coin',
+      'Central Bank Digital Currency',
       'Commercial Bank Digital Credit',
-      'Cryptocurrency Banking Digital Certificate'
+      'Cryptocurrency Banking Digital Certificate',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'CBDC stands for Central Bank Digital Currency, which is already being used in China.'
   },
@@ -21,11 +21,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'The book argues that freedom to transact is a natural extension of:',
     options: [
       'Property rights',
-      'Freedom of speech',
       'Freedom of assembly',
-      'Right to privacy'
+      'Freedom of speech',
+      'Right to privacy',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Many believe that freedom to transact is a natural right and an extension of freedom of speech, as monetary transactions in the digital world are little more than messages.'
   },
@@ -51,7 +51,7 @@ export const section06Questions: QuizQuestion[] = [
       'GoFundMe kept the money',
       'All funds were distributed to truckers',
       'The funds were donated to charity',
-      'About $1 million was released before government intervention'
+      'About $1 million was released before government intervention',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -63,9 +63,9 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Why is bitcoin censorship-resistant according to this section?',
     options: [
       'In self-custody, it could not have been blocked, frozen, or redirected',
-      'It\'s backed by governments',
+      'It\\\'s backed by governments',
       'It uses secret encryption',
-      'It\'s anonymous'
+      'It\\\'s anonymous',
     ],
     correctIndex: 0,
     difficulty: 'medium',

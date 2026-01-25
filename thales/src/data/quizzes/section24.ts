@@ -10,7 +10,7 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What does "Tartaglia" mean, and why was Niccolo given this name?',
     options: [
       '"The genius" — for his mathematical ability',
-      '"The stammerer" — his jaws were split by a soldier\\'s sword',
+      '"The stammerer" — his jaws were split by a soldier\\\\'s sword',
       '"The teacher" — for his lectures at Verona',
       '"The victor" — for winning the cubic contest',
     ],
@@ -39,12 +39,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happened in the mathematical contest between Tartaglia and Fiore?',
     options: [
+      'Tartaglia solved all of Fiore\\\'s problems and Fiore couldn\\\'t solve Tartaglia\\\'s',
       'They tied',
       'Fiore won all the problems',
-      'Tartaglia solved all of Fiore\\'s problems and Fiore couldn\\'t solve Tartaglia\\'s',
       'The contest was declared invalid',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Tartaglia won decisively. He solved all of Fiore\'s problems (which were all of the form x³ + bx = c), while Fiore couldn\'t solve Tartaglia\'s problems (which were of the form x³ + ax² = c).',
@@ -54,12 +54,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why was Cardano imprisoned for heresy?',
     options: [
-      'He published a horoscope of Jesus Christ',
-      'He criticized the Pope\\'s mathematics',
+      'He criticized the Pope\\\\\'s mathematics',
       'He used imaginary numbers',
       'He broke his promise to Tartaglia',
+      'He published a horoscope of Jesus Christ',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Cardano was imprisoned in 1570 for heresy because he published a horoscope of Jesus Christ. This was heretical because it suggested that God was subject to the stars. He was freed only after he recanted.',
@@ -72,7 +72,7 @@ export const section24Questions: QuizQuestion[] = [
       'First use of decimal notation',
       'First use of the equals sign',
       'First use of imaginary numbers in print',
-      'First use of algebraic symbols'
+      'First use of algebraic symbols',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -87,7 +87,7 @@ export const section24Questions: QuizQuestion[] = [
       'He guessed and checked',
       'He factored it directly',
       'He used geometric constructions',
-      'He reduced it to a cubic equation'
+      'He reduced it to a cubic equation',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -101,10 +101,10 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       'It has only complex solutions',
       'It has no solutions',
-      'It cannot be solved by radicals',
       'It actually gives three real roots',
+      'It cannot be solved by radicals',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Bombelli showed that when the cubic formula produces complex radicals (the "irreducible case" where q² - p³ < 0), the equation actually has three distinct real roots! The complex numbers cancel out to give real answers.',
@@ -114,12 +114,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What was proved about the quintic (degree 5) equation in the 19th century?',
     options: [
-      'It cannot be solved by radicals in general',
       'It can be solved by a formula involving fifth roots',
       'It has no solutions',
       'It always has five real roots',
+      'It cannot be solved by radicals in general',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Ruffini, Abel, and Galois proved that the general equation of degree 5 or more cannot be solved by radicals (i.e., by formulas involving roots). This was one of the profound results of 19th century algebra.',

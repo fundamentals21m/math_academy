@@ -6,10 +6,22 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $\\phi: G \\to H$ between groups is a homomorphism if:',
     options: [
-      '$\\phi(a + b) = \\phi(a) + \\phi(b)$ for all $a, b \\in G$',
-      '$\\phi(ab) = \\phi(a)\\phi(b)$ for all $a, b \\in G$',
+      '$\\phi(ab) = \\phi(a)\\phi(b)$ for all $a, b \\in G
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A homomorphism preserves the group operation: $\\phi(ab) = \\phi(a)\\phi(b)$. Note that $\\phi(e_G) = e_H$ follows from this property.',
+  },
+      '$\\phi(a + b) = \\phi(a) + \\phi(b)$ for all $a, b \\in G
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A homomorphism preserves the group operation: $\\phi(ab) = \\phi(a)\\phi(b)$. Note that $\\phi(e_G) = e_H$ follows from this property.',
+  },
       '$\\phi$ is bijective',
-      '$\\phi(e_G) = e_H$'
+      '$\\phi(e_G) = e_H
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A homomorphism preserves the group operation: $\\phi(ab) = \\phi(a)\\phi(b)$. Note that $\\phi(e_G) = e_H$ follows from this property.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -76,10 +88,26 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\phi: G \\to H$ is a homomorphism, then $\\phi(g^{-1}) = $',
     options: [
-      '$\\phi(g)^{-1}$',
-      '$\\phi(g)$',
-      '$e_H$',
-      '$g^{-1}$'
+      '$\\phi(g)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Homomorphisms preserve inverses: $\\phi(g)\\phi(g^{-1}) = \\phi(gg^{-1}) = \\phi(e_G) = e_H$, so $\\phi(g^{-1}) = \\phi(g)^{-1}$.',
+  },
+      '$e_H
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Homomorphisms preserve inverses: $\\phi(g)\\phi(g^{-1}) = \\phi(gg^{-1}) = \\phi(e_G) = e_H$, so $\\phi(g^{-1}) = \\phi(g)^{-1}$.',
+  },
+      '$\\phi(g)^{-1}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Homomorphisms preserve inverses: $\\phi(g)\\phi(g^{-1}) = \\phi(gg^{-1}) = \\phi(e_G) = e_H$, so $\\phi(g^{-1}) = \\phi(g)^{-1}$.',
+  },
+      '$g^{-1}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Homomorphisms preserve inverses: $\\phi(g)\\phi(g^{-1}) = \\phi(gg^{-1}) = \\phi(e_G) = e_H$, so $\\phi(g^{-1}) = \\phi(g)^{-1}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

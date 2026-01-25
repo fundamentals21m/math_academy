@@ -1,0 +1,69 @@
+{
+  "partId": 13,
+  "partTitle": "Appendix B: The Decimal System",
+  "textbookChapter": "Appendix B",
+  "sections": [
+    {
+      "sectionId": 65,
+      "sectionTitle": "The decimal system",
+      "textbookSection": "B.1",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "13-65-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that the decimal expansion $0.999\\ldots = 1$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Let $x = 0.999\\ldots$",
+                "content": "Then $10x = 9.999\\ldots$"
+              },
+              {
+                "title": "Subtract",
+                "content": "$10x - x = 9.999\\ldots - 0.999\\ldots = 9$, so $9x = 9$."
+              },
+              {
+                "title": "Solve",
+                "content": "$x = 1$."
+              }
+            ],
+            "conclusion": "$0.999\\ldots = 1$. Alternatively: $0.999\\ldots = \\sum_{n=1}^{\\infty} 9 \\cdot 10^{-n} = 9 \\cdot \\frac{1/10}{1 - 1/10} = 1$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 66,
+      "sectionTitle": "Decimals of real numbers",
+      "textbookSection": "B.2",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "13-66-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Show that every real number in $(0, 1)$ has a decimal expansion.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Construct digits inductively",
+                "content": "For $x \\in (0, 1)$, let $d_1 = \\lfloor 10x \\rfloor$. Let $x_1 = 10x - d_1 \\in [0, 1)$."
+              },
+              {
+                "title": "Continue",
+                "content": "Let $d_n = \\lfloor 10x_{n-1} \\rfloor$ and $x_n = 10x_{n-1} - d_n$."
+              },
+              {
+                "title": "The expansion converges",
+                "content": "$x = \\sum_{n=1}^{\\infty} d_n \\cdot 10^{-n}$."
+              }
+            ],
+            "conclusion": "Every real in $(0, 1)$ has a decimal expansion."
+          }
+        }
+      ]
+    }
+  ]
+}

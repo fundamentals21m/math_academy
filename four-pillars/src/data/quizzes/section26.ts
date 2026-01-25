@@ -6,10 +6,26 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The inner product (dot product) of u = (u₁, u₂) and v = (v₁, v₂) is:',
     options: [
-      '$(u_1 + v_1, u_2 + v_2)$',
-      '$u_1 + u_2 + v_1 + v_2$',
-      '$(u_1 v_1, u_2 v_2)$',
-      '$u_1 v_1 + u_2 v_2$'
+      '$u_1 v_1 + u_2 v_2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The inner product multiplies corresponding components and sums them.',
+  },
+      '$(u_1 + v_1, u_2 + v_2)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The inner product multiplies corresponding components and sums them.',
+  },
+      '$u_1 + u_2 + v_1 + v_2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The inner product multiplies corresponding components and sums them.',
+  },
+      '$(u_1 v_1, u_2 v_2)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The inner product multiplies corresponding components and sums them.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -121,11 +137,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'The diagonals of a rhombus are perpendicular because:',
     options: [
       'All quadrilaterals have perpendicular diagonals',
-      'The diagonals have directions u + v and u − v with (u + v)·(u − v) = |u|² − |v|² = 0',
       'A rhombus is a square',
       'The diagonals bisect each other',
+      'The diagonals have directions u + v and u − v with (u + v)·(u − v) = |u|² − |v|² = 0',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'In a rhombus |u| = |v|, so (u + v)·(u − v) = |u|² − |v|² = 0.',
   },

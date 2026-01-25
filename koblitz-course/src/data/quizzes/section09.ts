@@ -7,9 +7,13 @@ export const section09Questions: QuizQuestion[] = [
     question: 'In RSA, the public modulus $n$ is:',
     options: [
       'A large prime',
+      'A product of two large primes $p \\cdot q
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'RSA modulus $n = pq$ where $p$ and $q$ are large, distinct primes.',
+  },
       'Any large integer',
       'A power of 2',
-      'A product of two large primes $p \\cdot q$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -59,12 +63,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The security of RSA relies on the difficulty of:',
     options: [
-      'Factoring large integers',
       'Computing discrete logarithms',
       'Solving systems of linear equations',
+      'Factoring large integers',
       'Finding hash collisions',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'RSA security is based on the computational difficulty of factoring $n = pq$.',
   },

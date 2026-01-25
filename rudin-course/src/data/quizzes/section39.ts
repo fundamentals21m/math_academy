@@ -6,10 +6,22 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Taylor\'s Theorem states that if $f \\in C^{n}$ on $[a, b]$ and $f^{(n+1)}$ exists on $(a, b)$, then for $x \\in [a, b]$:',
     options: [
+      '$f(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(a)}{k!}(x-a)^k + R_n(x)$ where $R_n$ involves $f^{(n+1)}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Taylor\'s Theorem gives $f(x) = P_n(x) + R_n(x)$ where $P_n$ is the Taylor polynomial of degree $n$ and $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x$ (Lagrange form).',
+  },
       '$f(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(a)}{k!}(x-a)^k$ exactly',
-      '$f(x) = \\sum_{k=0}^{n} f^{(k)}(a)(x-a)^k$',
-      '$f(x) = \\sum_{k=0}^{\\infty} \\frac{f^{(k)}(a)}{k!}(x-a)^k$',
-      '$f(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(a)}{k!}(x-a)^k + R_n(x)$ where $R_n$ involves $f^{(n+1)}$'
+      '$f(x) = \\sum_{k=0}^{n} f^{(k)}(a)(x-a)^k
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Taylor\'s Theorem gives $f(x) = P_n(x) + R_n(x)$ where $P_n$ is the Taylor polynomial of degree $n$ and $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x$ (Lagrange form).',
+  },
+      '$f(x) = \\sum_{k=0}^{\\infty} \\frac{f^{(k)}(a)}{k!}(x-a)^k
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Taylor\'s Theorem gives $f(x) = P_n(x) + R_n(x)$ where $P_n$ is the Taylor polynomial of degree $n$ and $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x$ (Lagrange form).',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -20,10 +32,26 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Lagrange form of the remainder in Taylor\'s Theorem is:',
     options: [
-      '$R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x$',
-      '$R_n(x) = \\frac{f^{(n)}(c)}{n!}(x-a)^n$',
-      '$R_n(x) = \\int_a^x f^{(n+1)}(t) dt$',
-      '$R_n(x) = f(x) - f(a)$'
+      '$R_n(x) = \\frac{f^{(n)}(c)}{n!}(x-a)^n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The Lagrange remainder is $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ where $c$ lies strictly between $a$ and $x$. This is proven using the Generalized Mean Value Theorem.',
+  },
+      '$R_n(x) = \\int_a^x f^{(n+1)}(t) dt
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Lagrange remainder is $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ where $c$ lies strictly between $a$ and $x$. This is proven using the Generalized Mean Value Theorem.',
+  },
+      '$R_n(x) = f(x) - f(a)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Lagrange remainder is $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ where $c$ lies strictly between $a$ and $x$. This is proven using the Generalized Mean Value Theorem.',
+  },
+      '$R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Lagrange remainder is $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ where $c$ lies strictly between $a$ and $x$. This is proven using the Generalized Mean Value Theorem.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

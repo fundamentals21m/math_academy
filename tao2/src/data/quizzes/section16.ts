@@ -25,11 +25,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'To interchange limits and derivatives ($\\lim f_n\' = (\\lim f_n)\'$), we need:',
     options: [
       'Pointwise convergence of $f_n$ only',
+      'Uniform convergence of $f_n\\'$ (and pointwise convergence of $f_n$ at one point)',
       'Uniform convergence of $f_n$ only',
-      'Uniform convergence of $f_n\'$ (and pointwise convergence of $f_n$ at one point)',
-      'Both $f_n$ and $f_n\'$ to converge pointwise'
+      'Both $f_n$ and $f_n\\'$ to converge pointwise',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The key requirement is uniform convergence of the derivatives. We also need $f_n$ to converge at least at one point.',
   },
@@ -38,10 +38,22 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Consider $f_n(x) = \\frac{\\sin(nx)}{n}$. The functions $f_n$ converge uniformly to:',
     options: [
-      '$\\sin(x)$',
+      '$0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$|f_n(x)| = |\\sin(nx)/n| \\leq 1/n \\to 0$ uniformly.',
+  },
+      '$\\sin(x)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$|f_n(x)| = |\\sin(nx)/n| \\leq 1/n \\to 0$ uniformly.',
+  },
       'The sequence does not converge uniformly',
-      '$x$',
-      '$0$'
+      '$x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$|f_n(x)| = |\\sin(nx)/n| \\leq 1/n \\to 0$ uniformly.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -78,12 +90,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The example $f_n(x) = \\sin(nx)/n$ shows that:',
     options: [
-      'Uniform convergence of functions does NOT imply convergence of derivatives',
       'Uniform convergence of functions implies uniform convergence of derivatives',
       'Differentiation always commutes with limits',
       'The derivative of a uniform limit is always zero',
+      'Uniform convergence of functions does NOT imply convergence of derivatives',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Even though $f_n \\to 0$ uniformly, the derivatives $f_n\' = \\cos(nx)$ do not converge at all.',
   },

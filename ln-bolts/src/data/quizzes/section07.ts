@@ -31,10 +31,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'commitment_signed → update_add_htlc → revoke_and_ack',
       'update_add_htlc → revoke_and_ack → commitment_signed',
+      'update_add_htlc → commitment_signed → revoke_and_ack',
       'revoke_and_ack → commitment_signed → update_add_htlc',
-      'update_add_htlc → commitment_signed → revoke_and_ack'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The flow is: send updates (like update_add_htlc), then commitment_signed with signatures, then receiver sends revoke_and_ack.',
   },
@@ -46,7 +46,7 @@ export const section07Questions: QuizQuestion[] = [
       'Only the funder',
       'Either party',
       'Only the fundee',
-      'Only routing nodes'
+      'Only routing nodes',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -59,10 +59,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'Emergency fund for on-chain fees',
       'Buffer for routing fees',
-      'Ensure each party has something to lose if they cheat',
       'Minimum balance for node operation',
+      'Ensure each party has something to lose if they cheat',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The channel reserve ensures each party has "skin in the game" - funds they would lose if they broadcast a revoked commitment.',
   },

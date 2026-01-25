@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #7C3AED;
+      --accent-rgb: 124, 58, 237;
+    }
+    .allocation-box {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin: 30px auto;
+      display: inline-block;
+    }
+    .allocation-text {
+      color: #E6EDF3;
+      font-size: 28px;
+    }
+    .allocation-text em {
+      color: #22C55E;
+      font-style: normal;
+      font-weight: 600;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 40px auto;
+      max-width: 1100px;
+    }
+    .benefit-card {
+      background: rgba(247, 147, 26, 0.05);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .benefit-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .benefit-text {
+      color: #E6EDF3;
+      font-size: 18px;
+    }
+    .question-box {
+      background: rgba(124, 58, 237, 0.1);
+      border: 2px solid rgba(124, 58, 237, 0.3);
+      padding: 30px 50px;
+      border-radius: 12px;
+      margin-top: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .question-text {
+      color: #E6EDF3;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    .answer-text {
+      color: #7C3AED;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">New Portfolio Construction</div>
+    <div class="section-title">Where Does Bitcoin Belong?</div>
+    <div class="allocation-box">
+      <div class="allocation-text">BlackRock research: <em>1-5% bitcoin allocation</em> significantly improves risk-adjusted returns</div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">📊</div>
+        <div class="benefit-text">Low correlation to stocks & bonds</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📈</div>
+        <div class="benefit-text">Superior long-term returns historically</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🛡️</div>
+        <div class="benefit-text">Inflation hedge properties</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🕐</div>
+        <div class="benefit-text">24/7 global liquidity</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🔒</div>
+        <div class="benefit-text">No counterparty risk in self-custody</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🌐</div>
+        <div class="benefit-text">Different risk profile than traditional assets</div>
+      </div>
+    </div>
+    <div class="question-box">
+      <div class="question-text">If there's no "risk-free" asset, where does bitcoin belong?</div>
+      <div class="answer-text">Bitcoin may be the new foundation — not risk-free, but with different risks and superior long-term returns.</div>
+    </div>
+  </div>
+</body>
+</html>

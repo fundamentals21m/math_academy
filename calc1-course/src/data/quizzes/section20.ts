@@ -71,10 +71,22 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Squeeze Theorem states: if $g(x) \\leq f(x) \\leq h(x)$ and $\\lim g = \\lim h = L$, then:',
     options: [
+      '$\\lim f = L
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Squeeze (Sandwich) Theorem: $f$ is squeezed to the same limit $L$.',
+  },
       '$\\lim f$ does not exist',
-      '$\\lim f \\leq L$',
-      '$\\lim f = L$',
-      '$\\lim f \\geq L$'
+      '$\\lim f \\leq L
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Squeeze (Sandwich) Theorem: $f$ is squeezed to the same limit $L$.',
+  },
+      '$\\lim f \\geq L
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Squeeze (Sandwich) Theorem: $f$ is squeezed to the same limit $L$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -85,10 +97,22 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ and $g$ are continuous at $a$, then $f + g$ is:',
     options: [
-      'Discontinuous at $a$',
+      'Discontinuous at $a
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Continuity is preserved under addition (and multiplication, and division when denominator is nonzero).',
+  },
       'Cannot determine',
-      'Only defined at $a$',
-      'Continuous at $a$'
+      'Continuous at $a
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Continuity is preserved under addition (and multiplication, and division when denominator is nonzero).',
+  },
+      'Only defined at $a
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Continuity is preserved under addition (and multiplication, and division when denominator is nonzero).',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

@@ -96,10 +96,26 @@ export const section86Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f(x,y)$ has continuous partials and $x = r\\cos\\theta$, $y = r\\sin\\theta$, then $\\frac{\\partial f}{\\partial r} =$',
     options: [
-      '$\\frac{\\partial f}{\\partial x}(-r\\sin\\theta) + \\frac{\\partial f}{\\partial y}(r\\cos\\theta)$',
-      '$\\frac{\\partial f}{\\partial x}\\cos\\theta + \\frac{\\partial f}{\\partial y}\\sin\\theta$',
-      '$\\frac{\\partial f}{\\partial x} + \\frac{\\partial f}{\\partial y}$',
-      '$r\\frac{\\partial f}{\\partial x}$'
+      '$\\frac{\\partial f}{\\partial x}(-r\\sin\\theta) + \\frac{\\partial f}{\\partial y}(r\\cos\\theta)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Using chain rule: $\\frac{\\partial f}{\\partial r} = \\frac{\\partial f}{\\partial x}\\frac{\\partial x}{\\partial r} + \\frac{\\partial f}{\\partial y}\\frac{\\partial y}{\\partial r} = \\frac{\\partial f}{\\partial x}\\cos\\theta + \\frac{\\partial f}{\\partial y}\\sin\\theta$.',
+  },
+      '$\\frac{\\partial f}{\\partial x} + \\frac{\\partial f}{\\partial y}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Using chain rule: $\\frac{\\partial f}{\\partial r} = \\frac{\\partial f}{\\partial x}\\frac{\\partial x}{\\partial r} + \\frac{\\partial f}{\\partial y}\\frac{\\partial y}{\\partial r} = \\frac{\\partial f}{\\partial x}\\cos\\theta + \\frac{\\partial f}{\\partial y}\\sin\\theta$.',
+  },
+      '$\\frac{\\partial f}{\\partial x}\\cos\\theta + \\frac{\\partial f}{\\partial y}\\sin\\theta
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Using chain rule: $\\frac{\\partial f}{\\partial r} = \\frac{\\partial f}{\\partial x}\\frac{\\partial x}{\\partial r} + \\frac{\\partial f}{\\partial y}\\frac{\\partial y}{\\partial r} = \\frac{\\partial f}{\\partial x}\\cos\\theta + \\frac{\\partial f}{\\partial y}\\sin\\theta$.',
+  },
+      '$r\\frac{\\partial f}{\\partial x}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Using chain rule: $\\frac{\\partial f}{\\partial r} = \\frac{\\partial f}{\\partial x}\\frac{\\partial x}{\\partial r} + \\frac{\\partial f}{\\partial y}\\frac{\\partial y}{\\partial r} = \\frac{\\partial f}{\\partial x}\\cos\\theta + \\frac{\\partial f}{\\partial y}\\sin\\theta$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -110,12 +126,12 @@ export const section86Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The chain rule requires the outer function to be:',
     options: [
+      'Differentiable',
       'Continuous',
       'Twice differentiable',
       'Constant',
-      'Differentiable',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The chain rule applies when the outer function is differentiable at the relevant point.',
   },

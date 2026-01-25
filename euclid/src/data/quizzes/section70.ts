@@ -22,10 +22,10 @@ export const section70Questions: QuizQuestion[] = [
     options: [
       'Internal touching means the circles intersect at two points',
       'There is no difference',
+      'Internal touching means one circle is inside the other at the point of tangency',
       'External touching means the circles overlap',
-      'Internal touching means one circle is inside the other at the point of tangency'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Internal tangency means one circle lies inside the other and they share exactly one point. External tangency means the circles are outside each other and share one point.',
   },
@@ -37,7 +37,7 @@ export const section70Questions: QuizQuestion[] = [
       'It equals the absolute difference of the radii',
       'It equals the sum of the radii',
       'It equals zero (same center)',
-      'It equals the product of the radii'
+      'It equals the product of the radii',
     ],
     correctIndex: 0,
     difficulty: 'medium',

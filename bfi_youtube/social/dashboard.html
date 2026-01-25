@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFI Engagement Dashboard</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-orange: #f97316;
+            --accent-green: #22c55e;
+            --accent-blue: #3b82f6;
+            --accent-purple: #a855f7;
+            --accent-yellow: #eab308;
+            --border: #30363d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h1 .icon {
+            font-size: 2rem;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+
+        .stat-card.orange::before { background: var(--accent-orange); }
+        .stat-card.green::before { background: var(--accent-green); }
+        .stat-card.blue::before { background: var(--accent-blue); }
+        .stat-card.purple::before { background: var(--accent-purple); }
+        .stat-card.yellow::before { background: var(--accent-yellow); }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .stat-subtext {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Progress Section */
+        .section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge {
+            background: var(--bg-tertiary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .badge.complete {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--accent-green);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            background: var(--bg-tertiary);
+            border-radius: 999px;
+            height: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 999px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-fill.orange { background: var(--accent-orange); }
+        .progress-fill.green { background: var(--accent-green); }
+        .progress-fill.blue { background: var(--accent-blue); }
+        .progress-fill.purple { background: var(--accent-purple); }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .content-item {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .content-item:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-2px);
+        }
+
+        .content-item.done {
+            border-color: var(--accent-green);
+            background: rgba(34, 197, 94, 0.1);
+        }
+
+        .content-item.done::after {
+            content: ' ✓';
+            color: var(--accent-green);
+        }
+
+        .content-item .ep {
+            font-weight: 600;
+            color: var(--accent-orange);
+        }
+
+        /* Schedule Section */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+        }
+
+        .day-header {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            padding: 0.5rem;
+            font-weight: 600;
+        }
+
+        .day-cell {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.75rem;
+            min-height: 80px;
+            font-size: 0.75rem;
+        }
+
+        .day-cell.today {
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 0 1px var(--accent-orange);
+        }
+
+        .day-cell .date {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .day-cell .task {
+            background: var(--bg-secondary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            margin-bottom: 0.25rem;
+            font-size: 0.7rem;
+        }
+
+        .task.post { border-left: 2px solid var(--accent-blue); }
+        .task.carousel { border-left: 2px solid var(--accent-purple); }
+        .task.short { border-left: 2px solid var(--accent-orange); }
+        .task.done { opacity: 0.5; text-decoration: line-through; }
+
+        /* Links Section */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .link-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .link-card:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-2px);
+        }
+
+        .link-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+        }
+
+        .link-text h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .link-text p {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .checklist input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent-green);
+        }
+
+        .checklist label {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .checklist .done {
+            text-decoration: line-through;
+            color: var(--text-secondary);
+        }
+
+        /* Metrics placeholder */
+        .metrics-placeholder {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .metrics-placeholder .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Two column layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            .schedule-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Week selector */
+        .week-nav {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .week-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .week-btn:hover {
+            border-color: var(--accent-orange);
+        }
+
+        .week-btn.active {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <span class="icon">₿</span>
+                BFI Engagement Dashboard
+            </h1>
+            <div class="last-updated">
+                Last updated: <span id="lastUpdated"></span>
+            </div>
+        </header>
+
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+            <div class="stat-card orange">
+                <div class="stat-label">LinkedIn Posts</div>
+                <div class="stat-value" id="postsCreated">45</div>
+                <div class="stat-subtext">3 per episode × 15 episodes</div>
+            </div>
+            <div class="stat-card purple">
+                <div class="stat-label">Carousel Templates</div>
+                <div class="stat-value" id="carouselsCreated">15</div>
+                <div class="stat-subtext">Ready for design</div>
+            </div>
+            <div class="stat-card blue">
+                <div class="stat-label">Shorts Metadata</div>
+                <div class="stat-value" id="shortsCreated">45</div>
+                <div class="stat-subtext">3 clips per episode</div>
+            </div>
+            <div class="stat-card green">
+                <div class="stat-label">Hub Categories</div>
+                <div class="stat-value">2</div>
+                <div class="stat-subtext">Featured + Austrian</div>
+            </div>
+            <div class="stat-card yellow">
+                <div class="stat-label">Posting Schedule</div>
+                <div class="stat-value">12</div>
+                <div class="stat-subtext">Weeks of content</div>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div>
+                <!-- Content Progress -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2>📝 LinkedIn Posts</h2>
+                        <span class="badge complete">45/45 Created</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill orange" style="width: 100%"></div>
+                    </div>
+                    <div class="content-grid" id="postsGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Carousels -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2>🎠 Carousel Templates</h2>
+                        <span class="badge complete">15/15 Created</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill purple" style="width: 100%"></div>
+                    </div>
+                    <div class="content-grid" id="carouselsGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Shorts -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2>🎬 YouTube Shorts</h2>
+                        <span class="badge">45 metadata files ready</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill blue" style="width: 100%"></div>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 1rem;">
+                        Metadata created. Run <code>shorts_generator.py</code> with video source to extract clips.
+                    </p>
+                    <div class="content-grid" id="shortsGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Week Schedule -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2>📅 Posting Schedule</h2>
+                    </div>
+                    <div class="week-nav" id="weekNav">
+                        <!-- Populated by JS -->
+                    </div>
+                    <div class="schedule-grid" id="scheduleGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <!-- Quick Actions -->
+                <div class="section">
+                    <h2 style="margin-bottom: 1rem;">⚡ Quick Actions</h2>
+                    <div class="links-grid" style="grid-template-columns: 1fr;">
+                        <a href="https://bfi-liart.vercel.app" target="_blank" class="link-card">
+                            <div class="link-icon">🎓</div>
+                            <div class="link-text">
+                                <h3>BFI Course</h3>
+                                <p>View the interactive course</p>
+                            </div>
+                        </a>
+                        <a href="https://mathacademy-cyan.vercel.app" target="_blank" class="link-card">
+                            <div class="link-icon">🏠</div>
+                            <div class="link-text">
+                                <h3>Math Academy Hub</h3>
+                                <p>Main course hub</p>
+                            </div>
+                        </a>
+                        <a href="linkedin_posts/" class="link-card">
+                            <div class="link-icon">📄</div>
+                            <div class="link-text">
+                                <h3>LinkedIn Posts</h3>
+                                <p>View all 45 posts</p>
+                            </div>
+                        </a>
+                        <a href="carousels/" class="link-card">
+                            <div class="link-icon">🎨</div>
+                            <div class="link-text">
+                                <h3>Carousel Templates</h3>
+                                <p>View carousel content</p>
+                            </div>
+                        </a>
+                        <a href="posting_schedule.md" class="link-card">
+                            <div class="link-icon">📋</div>
+                            <div class="link-text">
+                                <h3>Full Schedule</h3>
+                                <p>12-week content calendar</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Setup Checklist -->
+                <div class="section">
+                    <h2 style="margin-bottom: 1rem;">✅ Setup Checklist</h2>
+                    <ul class="checklist" id="checklist">
+                        <li>
+                            <input type="checkbox" id="check1" checked>
+                            <label for="check1" class="done">Add BFI to austrian category</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check2" checked>
+                            <label for="check2" class="done">Generate 45 LinkedIn posts</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check3" checked>
+                            <label for="check3" class="done">Generate carousel templates</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check4" checked>
+                            <label for="check4" class="done">Generate shorts metadata</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check5" checked>
+                            <label for="check5" class="done">Add UTM to YouTube descriptions</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check6">
+                            <label for="check6">Update LinkedIn profile URL</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check7">
+                            <label for="check7">Update YouTube descriptions</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check8">
+                            <label for="check8">Add pinned comments to videos</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check9">
+                            <label for="check9">Create first carousel in Canva</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check10">
+                            <label for="check10">Extract first YouTube Short</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check11">
+                            <label for="check11">Schedule Week 1 posts</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Metrics Placeholder -->
+                <div class="section">
+                    <h2 style="margin-bottom: 1rem;">📊 Metrics (Coming Soon)</h2>
+                    <div class="metrics-placeholder">
+                        <div class="icon">📈</div>
+                        <p>Run <code>track_views.py</code> weekly<br>to populate metrics here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Update last updated time
+        document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+
+        // Populate posts grid
+        const postsGrid = document.getElementById('postsGrid');
+        for (let ep = 1; ep <= 15; ep++) {
+            ['A', 'B', 'C'].forEach(type => {
+                const item = document.createElement('div');
+                item.className = 'content-item';
+                item.innerHTML = `<span class="ep">Ep ${ep}</span> Type ${type}`;
+                item.title = `ep${String(ep).padStart(2, '0')}_post_${type.toLowerCase()}.md`;
+                postsGrid.appendChild(item);
+            });
+        }
+
+        // Populate carousels grid
+        const carouselsGrid = document.getElementById('carouselsGrid');
+        for (let ep = 1; ep <= 15; ep++) {
+            const item = document.createElement('div');
+            item.className = 'content-item';
+            item.innerHTML = `<span class="ep">Ep ${ep}</span> Carousel`;
+            item.title = `ep${String(ep).padStart(2, '0')}_carousel.md`;
+            carouselsGrid.appendChild(item);
+        }
+
+        // Populate shorts grid
+        const shortsGrid = document.getElementById('shortsGrid');
+        for (let ep = 1; ep <= 15; ep++) {
+            for (let clip = 1; clip <= 3; clip++) {
+                const item = document.createElement('div');
+                item.className = 'content-item';
+                item.innerHTML = `<span class="ep">Ep ${ep}</span> Short ${clip}`;
+                item.title = `ep${String(ep).padStart(2, '0')}_short_${String(clip).padStart(2, '0')}_metadata.json`;
+                shortsGrid.appendChild(item);
+            }
+        }
+
+        // Week schedule data
+        const weekSchedules = {
+            1: [
+                { day: 'Mon', tasks: [{ type: 'post', text: 'Ep1 Type A' }] },
+                { day: 'Tue', tasks: [{ type: 'short', text: 'Ep1 Intro' }] },
+                { day: 'Wed', tasks: [{ type: 'post', text: 'Ep2 Type B' }] },
+                { day: 'Thu', tasks: [{ type: 'carousel', text: 'Ep1-2 Overview' }] },
+                { day: 'Fri', tasks: [{ type: 'post', text: 'Ep1 Type C' }] },
+                { day: 'Sat', tasks: [] },
+                { day: 'Sun', tasks: [] }
+            ],
+            2: [
+                { day: 'Mon', tasks: [{ type: 'post', text: 'Ep3 Type A' }] },
+                { day: 'Tue', tasks: [{ type: 'short', text: 'Ep2-3 Clip' }] },
+                { day: 'Wed', tasks: [{ type: 'post', text: 'Ep4 Type B' }] },
+                { day: 'Thu', tasks: [{ type: 'carousel', text: 'Ep3-4' }] },
+                { day: 'Fri', tasks: [{ type: 'post', text: 'Ep3 Type C' }] },
+                { day: 'Sat', tasks: [] },
+                { day: 'Sun', tasks: [] }
+            ],
+            3: [
+                { day: 'Mon', tasks: [{ type: 'post', text: 'Ep5 Type A' }] },
+                { day: 'Tue', tasks: [{ type: 'short', text: 'Ep5 Time' }] },
+                { day: 'Wed', tasks: [{ type: 'post', text: 'Ep6 Type B' }] },
+                { day: 'Thu', tasks: [{ type: 'post', text: 'Ep7 Type C' }] },
+                { day: 'Fri', tasks: [{ type: 'carousel', text: 'Part 1 End' }] },
+                { day: 'Sat', tasks: [] },
+                { day: 'Sun', tasks: [] }
+            ],
+            4: [
+                { day: 'Mon', tasks: [{ type: 'post', text: 'Ep8 Type A' }] },
+                { day: 'Tue', tasks: [{ type: 'short', text: 'Saylor' }] },
+                { day: 'Wed', tasks: [{ type: 'post', text: 'Ep8 Type B' }] },
+                { day: 'Thu', tasks: [{ type: 'post', text: 'Ep8 Type C' }] },
+                { day: 'Fri', tasks: [{ type: 'carousel', text: 'Strategy' }] },
+                { day: 'Sat', tasks: [] },
+                { day: 'Sun', tasks: [] }
+            ]
+        };
+
+        // Week navigation
+        const weekNav = document.getElementById('weekNav');
+        for (let w = 1; w <= 12; w++) {
+            const btn = document.createElement('button');
+            btn.className = 'week-btn' + (w === 1 ? ' active' : '');
+            btn.textContent = `Wk ${w}`;
+            btn.onclick = () => showWeek(w);
+            weekNav.appendChild(btn);
+        }
+
+        function showWeek(week) {
+            // Update active button
+            document.querySelectorAll('.week-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i + 1 === week);
+            });
+
+            // Update schedule grid
+            const grid = document.getElementById('scheduleGrid');
+            grid.innerHTML = '';
+
+            const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+            // Headers
+            days.forEach(day => {
+                const header = document.createElement('div');
+                header.className = 'day-header';
+                header.textContent = day;
+                grid.appendChild(header);
+            });
+
+            // Get schedule for this week (or generate placeholder)
+            const schedule = weekSchedules[week] || days.map(day => ({ day, tasks: [] }));
+
+            schedule.forEach((dayData, i) => {
+                const cell = document.createElement('div');
+                cell.className = 'day-cell';
+
+                // Mark today
+                const today = new Date().getDay();
+                const dayIndex = (i + 1) % 7; // Convert Mon=0 to Sun=6
+                if (dayIndex === today && week === 1) {
+                    cell.classList.add('today');
+                }
+
+                const date = document.createElement('div');
+                date.className = 'date';
+                date.textContent = dayData.day;
+                cell.appendChild(date);
+
+                dayData.tasks.forEach(task => {
+                    const taskEl = document.createElement('div');
+                    taskEl.className = `task ${task.type}`;
+                    taskEl.textContent = task.text;
+                    cell.appendChild(taskEl);
+                });
+
+                if (dayData.tasks.length === 0) {
+                    const empty = document.createElement('div');
+                    empty.style.color = 'var(--text-secondary)';
+                    empty.style.fontSize = '0.7rem';
+                    empty.textContent = '—';
+                    cell.appendChild(empty);
+                }
+
+                grid.appendChild(cell);
+            });
+        }
+
+        // Initial load
+        showWeek(1);
+
+        // Checklist persistence
+        const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            // Load saved state
+            const saved = localStorage.getItem(`bfi-check-${checkbox.id}`);
+            if (saved === 'true') {
+                checkbox.checked = true;
+                checkbox.nextElementSibling.classList.add('done');
+            } else if (saved === 'false') {
+                checkbox.checked = false;
+                checkbox.nextElementSibling.classList.remove('done');
+            }
+
+            // Save on change
+            checkbox.addEventListener('change', () => {
+                localStorage.setItem(`bfi-check-${checkbox.id}`, checkbox.checked);
+                checkbox.nextElementSibling.classList.toggle('done', checkbox.checked);
+            });
+        });
+
+        // Click to mark content items as done
+        document.querySelectorAll('.content-item').forEach(item => {
+            const key = `bfi-content-${item.title}`;
+            if (localStorage.getItem(key) === 'done') {
+                item.classList.add('done');
+            }
+
+            item.addEventListener('click', () => {
+                item.classList.toggle('done');
+                if (item.classList.contains('done')) {
+                    localStorage.setItem(key, 'done');
+                } else {
+                    localStorage.removeItem(key);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -6,10 +6,26 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An elliptic curve over a field $K$ (in Weierstrass form) is defined by:',
     options: [
-      '$y = x^3 + ax + b$',
-      '$y^3 = x^3 + ax + b$',
-      '$y^2 = x^2 + ax + b$',
-      '$y^2 = x^3 + ax + b$'
+      '$y = x^3 + ax + b
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Weierstrass form: $y^2 = x^3 + ax + b$ with non-zero discriminant.',
+  },
+      '$y^2 = x^3 + ax + b
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Weierstrass form: $y^2 = x^3 + ax + b$ with non-zero discriminant.',
+  },
+      '$y^3 = x^3 + ax + b
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Weierstrass form: $y^2 = x^3 + ax + b$ with non-zero discriminant.',
+  },
+      '$y^2 = x^2 + ax + b
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Weierstrass form: $y^2 = x^3 + ax + b$ with non-zero discriminant.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

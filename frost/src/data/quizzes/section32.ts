@@ -6,10 +6,26 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the standard Schnorr verification equation that FROST signatures satisfy?',
     options: [
-      '$[z]G = R - [c]Y$',
-      '$[z]G = R \\cdot [c]Y$',
-      '$[z]G = R + [c]Y$',
-      '$z = R + c \\cdot Y$'
+      '$[z]G = R + [c]Y
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'FROST signatures satisfy the standard Schnorr verification: $[z]G = R + [c]Y$ where $c = H_2(R, Y, m)$. This is identical to single-party Schnorr verification.',
+  },
+      '$[z]G = R - [c]Y
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'FROST signatures satisfy the standard Schnorr verification: $[z]G = R + [c]Y$ where $c = H_2(R, Y, m)$. This is identical to single-party Schnorr verification.',
+  },
+      '$[z]G = R \\cdot [c]Y
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'FROST signatures satisfy the standard Schnorr verification: $[z]G = R + [c]Y$ where $c = H_2(R, Y, m)$. This is identical to single-party Schnorr verification.',
+  },
+      '$z = R + c \\cdot Y
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'FROST signatures satisfy the standard Schnorr verification: $[z]G = R + [c]Y$ where $c = H_2(R, Y, m)$. This is identical to single-party Schnorr verification.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -41,7 +57,7 @@ export const section32Questions: QuizQuestion[] = [
       'The threshold $t$, total participants $n$, and which participants signed',
       'Only the message',
       'Only the public key',
-      'Nothing - all information is public'
+      'Nothing - all information is public',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -52,12 +68,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does FROST signature verification cost compare to single-party Schnorr verification?',
     options: [
-      'Identical cost - same operations: 1 hash, 2 scalar multiplications, 1 addition, 1 comparison',
       'FROST is more expensive (more scalar multiplications)',
+      'Identical cost - same operations: 1 hash, 2 scalar multiplications, 1 addition, 1 comparison',
       'FROST is less expensive (fewer operations)',
       'FROST requires exponentially more computation',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Verification cost is identical: compute $c = H_2(R, Y, m)$, compute $[z]G$ and $R + [c]Y$, compare. No additional operations needed for threshold signatures.',
   },
@@ -68,10 +84,10 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'Traditional multisig is smaller',
       'Both are the same size',
-      'FROST signatures are larger',
       'FROST: 64 bytes; Traditional: ~34 + 72 bytes per signer (much larger)',
+      'FROST signatures are larger',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'FROST produces a 64-byte signature regardless of $t$ or $n$. Traditional Bitcoin multisig adds ~34 bytes (pubkey) + ~72 bytes (signature) per signer, growing linearly with the number of signers.',
   },

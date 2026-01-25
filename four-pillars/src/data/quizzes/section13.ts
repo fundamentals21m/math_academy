@@ -6,12 +6,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The altitude to the hypotenuse of a right triangle creates:',
     options: [
-      'Two smaller triangles similar to the original',
       'Two equilateral triangles',
       'An isosceles triangle',
       'Two congruent triangles',
+      'Two smaller triangles similar to the original',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The altitude creates two triangles, each similar to the original right triangle.',
   },
@@ -50,10 +50,14 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If h is the altitude to the hypotenuse c = p + q (with p, q the segments), then h equals:',
     options: [
+      '$\\sqrt{pq}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The altitude is the geometric mean of the two segments of the hypotenuse: $h = \\sqrt{pq}$.',
+  },
       'p + q',
       '(p + q)/2',
       'pq',
-      '$\\sqrt{pq}$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -79,9 +83,13 @@ export const section13Questions: QuizQuestion[] = [
     question: 'The similar triangles proof of the Pythagorean theorem shows $a^2 + b^2 = c^2$ by:',
     options: [
       'Using coordinates',
-      'Showing $a^2 = cp$ and $b^2 = cq$, so $a^2 + b^2 = c(p+q) = c^2$',
       'Using the parallel postulate',
-      'Calculating areas of squares'
+      'Calculating areas of squares',
+      'Showing $a^2 = cp$ and $b^2 = cq$, so $a^2 + b^2 = c(p+q) = c^2
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'From similarity: $a/c = p/a$ gives $a^2 = cp$; $b/c = q/b$ gives $b^2 = cq$. Sum: $a^2 + b^2 = c^2$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -92,12 +100,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To construct $\\sqrt{5}$, one can use a right triangle with legs:',
     options: [
-      '2 and 2',
       '1 and 2',
+      '2 and 2',
       '1 and 1',
       '1 and 3',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'With legs 1 and 2: hypotenuse = $\\sqrt{1^2 + 2^2} = \\sqrt{5}$.',
   },

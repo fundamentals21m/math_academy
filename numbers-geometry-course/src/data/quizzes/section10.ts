@@ -9,12 +9,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does geometry contrast with arithmetic?',
     options: [
-      'Both are discrete and computational',
       'Geometry is continuous and visual; arithmetic is discrete and logical',
+      'Both are discrete and computational',
       'Arithmetic is continuous; geometry is discrete',
       'They have no relationship to each other',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Geometry is continuous, fluid, dynamic, and visual, while arithmetic is discrete, static, computational, and logical. They are complementary.',
@@ -65,11 +65,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What is the main weakness of synthetic geometry?',
     options: [
       'It requires calculus',
-      'It was invented too recently',
       'It fails to explain the similarity between geometry and arithmetic',
+      'It was invented too recently',
       'It cannot prove the Pythagorean theorem',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Synthetic geometry is self-contained and close to intuition, but it fails to explain why geometric quantities (like numbers) can be added, subtracted, and multiplied.',
@@ -80,11 +80,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'Who initiated analytic geometry?',
     options: [
       'Euclid (300 BC)',
+      'René Descartes (1637)',
       'Thales (6th century BC)',
       'David Hilbert (1899)',
-      'René Descartes (1637)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Analytic geometry was initiated by René Descartes in his Geometry (1637). It uses coordinates and algebra to study geometric objects.',
@@ -125,11 +125,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What new mathematical world does analytic geometry open?',
     options: [
       'Set theory and logic',
-      'Algebra and calculus',
       'Number theory only',
+      'Algebra and calculus',
       'Topology and manifolds',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Analytic geometry enriches both arithmetic and geometry with new concepts, opening the whole new mathematical world of algebra and calculus.',

@@ -72,10 +72,22 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $f_n(x) = \\frac{x}{n}$, the pointwise limit on $\\mathbb{R}$ is:',
     options: [
-      '$f(x) = x$',
-      '$f(x) = 1$',
-      '$f(x) = 0$',
-      'Does not exist'
+      '$f(x) = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\lim_{n \\to \\infty} x/n = 0$ for each fixed $x$.',
+  },
+      '$f(x) = x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\lim_{n \\to \\infty} x/n = 0$ for each fixed $x$.',
+  },
+      '$f(x) = 1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\lim_{n \\to \\infty} x/n = 0$ for each fixed $x$.',
+  },
+      'Does not exist',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -86,12 +98,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Pointwise convergence is "point by point", meaning:',
     options: [
-      'Convergence may be faster at some points than others',
       'All points converge at the same rate',
       'Only finitely many points are considered',
+      'Convergence may be faster at some points than others',
       'The rate of convergence is uniform',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Rate of convergence can vary from point to point.',
   },

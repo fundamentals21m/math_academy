@@ -6,10 +6,26 @@ export const section169Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cauchy distribution has density:',
     options: [
-      '$f(t) = e^{-t}$',
-      '$f(t) = 1/(\\pi(1 + t^2))$',
-      '$f(t) = t^2/\\pi$',
-      '$f(t) = 1/\\sqrt{2\\pi} e^{-t^2/2}$'
+      '$f(t) = e^{-t}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Cauchy density is $f(t) = \\frac{1}{\\pi(1 + t^2)}$.',
+  },
+      '$f(t) = t^2/\\pi
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Cauchy density is $f(t) = \\frac{1}{\\pi(1 + t^2)}$.',
+  },
+      '$f(t) = 1/\\sqrt{2\\pi} e^{-t^2/2}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Cauchy density is $f(t) = \\frac{1}{\\pi(1 + t^2)}$.',
+  },
+      '$f(t) = 1/(\\pi(1 + t^2))
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Cauchy density is $f(t) = \\frac{1}{\\pi(1 + t^2)}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,10 +36,26 @@ export const section169Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cauchy distribution function is:',
     options: [
-      '$F(t) = t$',
-      '$F(t) = 1 - e^{-t}$',
-      '$F(t) = 1/2 + (1/\\pi)\\arctan t$',
-      '$F(t) = t^2$'
+      '$F(t) = 1/2 + (1/\\pi)\\arctan t
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Cauchy CDF is $F(t) = \\frac{1}{2} + \\frac{1}{\\pi}\\arctan t$.',
+  },
+      '$F(t) = t
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Cauchy CDF is $F(t) = \\frac{1}{2} + \\frac{1}{\\pi}\\arctan t$.',
+  },
+      '$F(t) = 1 - e^{-t}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Cauchy CDF is $F(t) = \\frac{1}{2} + \\frac{1}{\\pi}\\arctan t$.',
+  },
+      '$F(t) = t^2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Cauchy CDF is $F(t) = \\frac{1}{2} + \\frac{1}{\\pi}\\arctan t$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -35,11 +67,11 @@ export const section169Questions: QuizQuestion[] = [
     question: 'If $\\theta$ is uniformly distributed on $[-\\pi/2, \\pi/2]$, then $Y = \\tan\\theta$ has:',
     options: [
       'Uniform distribution',
+      'Cauchy distribution',
       'Normal distribution',
       'Exponential distribution',
-      'Cauchy distribution'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The tangent of a uniformly distributed angle produces the Cauchy distribution. This is the "spinning pointer" construction.',
   },
@@ -48,12 +80,12 @@ export const section169Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A remarkable property of the Cauchy distribution is:',
     options: [
+      'It has no finite expectation or variance',
       'It has the smallest variance',
       'It is always positive',
-      'It has no finite expectation or variance',
       'It equals the normal distribution',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Cauchy distribution has such heavy tails that $\\int_{-\\infty}^{\\infty} |t| f(t)\\,dt$ diverges. It has no finite mean or variance.',
   },

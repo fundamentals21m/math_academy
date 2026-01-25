@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .tradeoff-container {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    .tradeoff-card {
+      width: 400px;
+      padding: 35px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .tradeoff-card.risk {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+    }
+    .tradeoff-card.benefit {
+      background: rgba(34, 197, 94, 0.08);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .tradeoff-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    .tradeoff-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .risk .tradeoff-title { color: #EF4444; }
+    .benefit .tradeoff-title { color: #22C55E; }
+    .tradeoff-desc {
+      color: #E6EDF3;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .wave-box {
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 30px 50px;
+      border-radius: 8px;
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .wave-title {
+      color: #0891B2;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .wave-text {
+      color: #E6EDF3;
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The ERISA Tradeoff</div>
+    <div class="section-title">Riding the Wave</div>
+    <div class="tradeoff-container">
+      <div class="tradeoff-card risk">
+        <div class="tradeoff-icon">⚠️</div>
+        <div class="tradeoff-title">The Risk</div>
+        <div class="tradeoff-desc">NQDC is not ERISA-protected. Participants are unsecured creditors. If the company goes bankrupt, deferred compensation may be lost.</div>
+      </div>
+      <div class="tradeoff-card benefit">
+        <div class="tradeoff-icon">🤝</div>
+        <div class="tradeoff-title">The Benefit</div>
+        <div class="tradeoff-desc">For bitcoin, this creates unique alignment. Company and executive both benefit from bitcoin's appreciation — shared incentives.</div>
+      </div>
+    </div>
+    <div class="wave-box">
+      <div class="wave-title">"Riding the Wave"</div>
+      <div class="wave-text">You're tied to the company's fate — but with bitcoin, that alignment creates powerful shared interests in success.</div>
+    </div>
+  </div>
+</body>
+</html>

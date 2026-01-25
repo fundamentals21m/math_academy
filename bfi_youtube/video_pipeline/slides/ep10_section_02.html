@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .definition-box {
+      background: rgba(8, 145, 178, 0.08);
+      border-left: 4px solid #0891B2;
+      padding: 25px 40px;
+      margin: 30px auto;
+      max-width: 900px;
+      text-align: left;
+    }
+    .definition-label {
+      color: #0891B2;
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .definition-text {
+      color: #E6EDF3;
+      font-size: 24px;
+      line-height: 1.4;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+    .benefit-card {
+      background: rgba(8, 145, 178, 0.05);
+      border: 1px solid rgba(8, 145, 178, 0.2);
+      padding: 25px;
+      border-radius: 8px;
+      text-align: left;
+    }
+    .benefit-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .benefit-title {
+      color: #0891B2;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .benefit-desc {
+      color: #E6EDF3;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .vs-box {
+      background: rgba(247, 147, 26, 0.08);
+      border: 1px solid rgba(247, 147, 26, 0.3);
+      padding: 20px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+      display: inline-block;
+    }
+    .vs-text {
+      color: #E6EDF3;
+      font-size: 22px;
+    }
+    .vs-text em {
+      color: #F7931A;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">What is NQDC?</div>
+    <div class="section-title">Non-Qualified Deferred Compensation</div>
+    <div class="definition-box">
+      <div class="definition-label">Definition</div>
+      <div class="definition-text">NQDC plans allow highly compensated employees to defer compensation to a future date — not subject to ERISA regulations.</div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">∞</div>
+        <div class="benefit-title">No Contribution Limits</div>
+        <div class="benefit-desc">Executives can defer unlimited amounts, unlike 401(k) caps</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📈</div>
+        <div class="benefit-title">Tax-Deferred Growth</div>
+        <div class="benefit-desc">Bitcoin gains compound without annual tax drag</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">₿</div>
+        <div class="benefit-title">Broad Investment Discretion</div>
+        <div class="benefit-desc">Companies can offer bitcoin when 401(k)s cannot</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🔗</div>
+        <div class="benefit-title">"Golden Handcuffs"</div>
+        <div class="benefit-desc">Vesting over time creates retention incentives</div>
+      </div>
+    </div>
+    <div class="vs-box">
+      <div class="vs-text">Unlike 401(k): <em>No ERISA regulations • No contribution limits • Bitcoin possible</em></div>
+    </div>
+  </div>
+</body>
+</html>

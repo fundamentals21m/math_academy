@@ -66,10 +66,26 @@ export const section103Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two paths $\\alpha$ and $\\beta$ with the same graph are called equivalent. If they trace the curve in the same direction:',
     options: [
-      '$\\int f \\cdot d\\alpha = -\\int f \\cdot d\\beta$',
-      '$\\int f \\cdot d\\alpha = \\int f \\cdot d\\beta$',
-      '$\\int f \\cdot d\\alpha = 0$',
-      '$\\int f \\cdot d\\beta = 0$'
+      '$\\int f \\cdot d\\alpha = -\\int f \\cdot d\\beta
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'If equivalent paths $\\alpha$ and $\\beta$ trace the same curve in the same direction (orientation-preserving), then $\\int f \\cdot d\\alpha = \\int f \\cdot d\\beta$.',
+  },
+      '$\\int f \\cdot d\\alpha = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If equivalent paths $\\alpha$ and $\\beta$ trace the same curve in the same direction (orientation-preserving), then $\\int f \\cdot d\\alpha = \\int f \\cdot d\\beta$.',
+  },
+      '$\\int f \\cdot d\\beta = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If equivalent paths $\\alpha$ and $\\beta$ trace the same curve in the same direction (orientation-preserving), then $\\int f \\cdot d\\alpha = \\int f \\cdot d\\beta$.',
+  },
+      '$\\int f \\cdot d\\alpha = \\int f \\cdot d\\beta
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If equivalent paths $\\alpha$ and $\\beta$ trace the same curve in the same direction (orientation-preserving), then $\\int f \\cdot d\\alpha = \\int f \\cdot d\\beta$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -80,10 +96,22 @@ export const section103Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If paths $\\alpha$ and $\\beta$ trace the same curve in opposite directions:',
     options: [
-      '$\\int f \\cdot d\\alpha = \\int f \\cdot d\\beta$',
-      '$\\int f \\cdot d\\alpha + \\int f \\cdot d\\beta = 1$',
-      '$\\int f \\cdot d\\alpha = -\\int f \\cdot d\\beta$',
-      'Both integrals are zero'
+      '$\\int f \\cdot d\\alpha = -\\int f \\cdot d\\beta
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'If $\\alpha$ and $\\beta$ trace the same curve in opposite directions, then $\\int f \\cdot d\\alpha = -\\int f \\cdot d\\beta$. Reversing direction negates the integral.',
+  },
+      '$\\int f \\cdot d\\alpha = \\int f \\cdot d\\beta
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'If $\\alpha$ and $\\beta$ trace the same curve in opposite directions, then $\\int f \\cdot d\\alpha = -\\int f \\cdot d\\beta$. Reversing direction negates the integral.',
+  },
+      '$\\int f \\cdot d\\alpha + \\int f \\cdot d\\beta = 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'If $\\alpha$ and $\\beta$ trace the same curve in opposite directions, then $\\int f \\cdot d\\alpha = -\\int f \\cdot d\\beta$. Reversing direction negates the integral.',
+  },
+      'Both integrals are zero',
     ],
     correctIndex: 2,
     difficulty: 'medium',

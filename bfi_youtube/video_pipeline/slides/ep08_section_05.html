@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #7C3AED;
+      --accent-rgb: 124, 58, 237;
+    }
+    .comparison-container {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    .company-card {
+      width: 450px;
+      padding: 35px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .company-card.strategy {
+      background: rgba(34, 197, 94, 0.08);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .company-card.tesla {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+    }
+    .company-name {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .strategy .company-name { color: #22C55E; }
+    .tesla .company-name { color: #EF4444; }
+    .company-list {
+      list-style: none;
+    }
+    .company-list li {
+      color: #E6EDF3;
+      font-size: 20px;
+      padding: 10px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .strategy .company-list li::before {
+      content: "✓";
+      color: #22C55E;
+      font-weight: bold;
+    }
+    .tesla .company-list li::before {
+      content: "✗";
+      color: #EF4444;
+      font-weight: bold;
+    }
+    .validation-box {
+      background: rgba(124, 58, 237, 0.1);
+      border: 2px solid rgba(124, 58, 237, 0.3);
+      padding: 30px 50px;
+      border-radius: 8px;
+      margin-top: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .validation-text {
+      color: #E6EDF3;
+      font-size: 24px;
+      line-height: 1.5;
+    }
+    .validation-text em {
+      color: #7C3AED;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Contrast</div>
+    <div class="section-title">Strategy vs Tesla</div>
+    <div class="comparison-container">
+      <div class="company-card strategy">
+        <div class="company-name">Strategy</div>
+        <ul class="company-list">
+          <li>Continued accumulating aggressively</li>
+          <li>Never sold during downturns</li>
+          <li>Transformed company identity</li>
+          <li>Market cap: $1B → $100B</li>
+        </ul>
+      </div>
+      <div class="company-card tesla">
+        <div class="company-name">Tesla</div>
+        <ul class="company-list">
+          <li>Initial purchase for treasury</li>
+          <li>Exited position after S&P inclusion</li>
+          <li>Bitcoin was peripheral to business</li>
+          <li>Institutional pressure forced exit</li>
+        </ul>
+      </div>
+    </div>
+    <div class="validation-box">
+      <div class="validation-text">This validates Chapter 1: <em>Institutional pressure will eventually force selling</em>. Only a dominant individual like Saylor can resist.</div>
+    </div>
+  </div>
+</body>
+</html>

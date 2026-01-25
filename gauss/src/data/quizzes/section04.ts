@@ -143,11 +143,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Gauss discovered that equivalence classes of forms can be composed (multiplied). This structure is now called:',
     options: [
       'The Gauss ring',
-      'The class group',
       'The form lattice',
+      'The class group',
       'The quadratic field',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The set of equivalence classes with Gauss\'s composition law forms the class group, a fundamental object in algebraic number theory.',
   },

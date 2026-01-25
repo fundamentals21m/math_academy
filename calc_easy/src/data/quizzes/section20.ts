@@ -96,10 +96,26 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\int \\sin(x) \\, dx$?',
     options: [
-      '$\\cos(x) + C$',
-      '$\\sin(x) + C$',
-      '$-\\cos(x) + C$',
-      '$-\\sin(x) + C$'
+      '$\\cos(x) + C
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Since $\\frac{d}{dx}(-\\cos(x)) = \\sin(x)$, we have $\\int \\sin(x) \\, dx = -\\cos(x) + C$.',
+  },
+      '$\\sin(x) + C
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Since $\\frac{d}{dx}(-\\cos(x)) = \\sin(x)$, we have $\\int \\sin(x) \\, dx = -\\cos(x) + C$.',
+  },
+      '$-\\sin(x) + C
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Since $\\frac{d}{dx}(-\\cos(x)) = \\sin(x)$, we have $\\int \\sin(x) \\, dx = -\\cos(x) + C$.',
+  },
+      '$-\\cos(x) + C
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Since $\\frac{d}{dx}(-\\cos(x)) = \\sin(x)$, we have $\\int \\sin(x) \\, dx = -\\cos(x) + C$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

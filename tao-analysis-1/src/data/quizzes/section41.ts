@@ -32,10 +32,26 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the $\\epsilon$-$\\delta$ definition, $f$ is continuous at $a$ if for every $\\epsilon > 0$, there exists $\\delta > 0$ such that:',
     options: [
-      '$0 < |x - a| < \\delta$ implies $|f(x) - f(a)| < \\epsilon$',
-      '$|x - a| < \\epsilon$ implies $|f(x) - f(a)| < \\delta$',
-      '$|f(x) - f(a)| < \\delta$ implies $|x - a| < \\epsilon$',
-      '$|x - a| < \\delta$ implies $|f(x) - f(a)| < \\epsilon$'
+      '$0 < |x - a| < \\delta$ implies $|f(x) - f(a)| < \\epsilon
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For continuity, we use $|x - a| < \\delta$ (not $0 < |x - a|$) because we include the point $a$ itself and require $f(a)$ to match the limit.',
+  },
+      '$|x - a| < \\delta$ implies $|f(x) - f(a)| < \\epsilon
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'For continuity, we use $|x - a| < \\delta$ (not $0 < |x - a|$) because we include the point $a$ itself and require $f(a)$ to match the limit.',
+  },
+      '$|x - a| < \\epsilon$ implies $|f(x) - f(a)| < \\delta
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'For continuity, we use $|x - a| < \\delta$ (not $0 < |x - a|$) because we include the point $a$ itself and require $f(a)$ to match the limit.',
+  },
+      '$|f(x) - f(a)| < \\delta$ implies $|x - a| < \\epsilon
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'For continuity, we use $|x - a| < \\delta$ (not $0 < |x - a|$) because we include the point $a$ itself and require $f(a)$ to match the limit.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -98,10 +114,14 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The function $f(x) = \\begin{cases} 1 & x \\geq 0 \\\\ -1 & x < 0 \\end{cases}$ is:',
     options: [
-      'Continuous everywhere',
-      'Continuous at $x = 0$',
       'Discontinuous at $x = 0$ with a jump discontinuity',
-      'Discontinuous at $x = 0$ with a removable discontinuity'
+      'Continuous everywhere',
+      'Continuous at $x = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The left limit is $-1$ and the right limit is $1$ at $x = 0$. Since they differ, there is a jump discontinuity at $0$.',
+  },
+      'Discontinuous at $x = 0$ with a removable discontinuity',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -112,10 +132,14 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f: X \\to \\mathbb{R}$ is continuous on $X$ if and only if:',
     options: [
-      '$f$ is bounded on $X$',
+      '$f$ is bounded on $X
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The topological definition of continuity: $f$ is continuous iff for every open set $U \\subseteq \\mathbb{R}$, the preimage $f^{-1}(U)$ is open in $X$.',
+  },
       'The preimage of every closed set is open',
+      'The preimage of every open set is open',
       'The image of every open set is open',
-      'The preimage of every open set is open'
     ],
     correctIndex: 3,
     difficulty: 'hard',

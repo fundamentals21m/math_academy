@@ -42,10 +42,18 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To disprove $\\forall x \\, P(x)$, it suffices to:',
     options: [
-      'Show that $P(x)$ fails for all $x$',
-      'Find a single counterexample: some $x_0$ with $\\neg P(x_0)$',
+      'Find a single counterexample: some $x_0$ with $\\neg P(x_0)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A universal statement is false if there exists even one counterexample. Since $\\neg(\\forall x \\, P(x)) \\equiv \\exists x \\, \\neg P(x)$, one counterexample suffices.',
+  },
+      'Show that $P(x)$ fails for all $x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A universal statement is false if there exists even one counterexample. Since $\\neg(\\forall x \\, P(x)) \\equiv \\exists x \\, \\neg P(x)$, one counterexample suffices.',
+  },
       'Prove that $P(x)$ is sometimes true',
-      'Show that the domain is empty'
+      'Show that the domain is empty',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -57,11 +65,11 @@ export const section68Questions: QuizQuestion[] = [
     question: 'Consider proving: "For all $\\epsilon > 0$, there exists $N \\in \\mathbb{N}$ such that $1/N < \\epsilon$." Which is the correct proof structure?',
     options: [
       'Assume no such $N$ exists. Then $1/N \\geq \\epsilon$ for all $N$, contradiction.',
+      'Let $\\epsilon > 0$ be given. Choose $N > 1/\\epsilon$ (which exists by the Archimedean property). Then $1/N < \\epsilon$.',
       'Choose $N = 1$. Then for $\\epsilon = 2$, we have $1/N = 1 < 2 = \\epsilon$.',
       'Let $N$ be arbitrary. Then there exists $\\epsilon > 1/N$.',
-      'Let $\\epsilon > 0$ be given. Choose $N > 1/\\epsilon$ (which exists by the Archimedean property). Then $1/N < \\epsilon$.',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For $\\forall \\epsilon \\, \\exists N$, we first let $\\epsilon$ be arbitrary, then construct $N$ that may depend on $\\epsilon$. The Archimedean property guarantees such an $N$ exists.',
   },

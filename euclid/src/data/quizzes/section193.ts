@@ -21,11 +21,11 @@ export const section193Questions: QuizQuestion[] = [
     question: 'Given 6:3 = 10:5 and 3:2 = 5:x, what value of x makes the chain valid for applying ex aequali?',
     options: [
       'x = 3',
-      'x = 10/3',
       'x = 15/2',
       'x = 5/3',
+      'x = 10/3',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'For the proportion 3:2 = 5:x, we need 3x = 10, so x = 10/3. This maintains the proportion chain needed for ex aequali.',
   },

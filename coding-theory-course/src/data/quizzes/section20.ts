@@ -6,10 +6,14 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A cyclic code $C$ is said to have the invariance property under a permutation $\\pi$ if:',
     options: [
+      '$\\pi$ maps every codeword to another codeword in $C
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A code has invariance under $\\pi$ if applying $\\pi$ to any codeword produces another codeword in the same code. This means $\\pi(C) = C$.',
+  },
       '$\\pi$ maps every codeword to itself',
-      '$\\pi$ maps every codeword to another codeword in $C$',
       '$\\pi$ fixes the generator polynomial',
-      '$\\pi$ is the identity permutation'
+      '$\\pi$ is the identity permutation',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -61,8 +65,12 @@ export const section20Questions: QuizQuestion[] = [
     options: [
       'Only cyclic shifts',
       'Only the identity',
-      'The full symmetric group $S_7$',
-      'Cyclic shifts and the Frobenius automorphism'
+      'Cyclic shifts and the Frobenius automorphism',
+      'The full symmetric group $S_7
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The automorphism group of the $[7,4,3]$ cyclic Hamming code includes the cyclic shifts (order 7) and the Frobenius map $x \\mapsto x^2 \\pmod{7}$, forming a group of order 21.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',

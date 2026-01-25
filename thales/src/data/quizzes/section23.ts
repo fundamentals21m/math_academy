@@ -24,12 +24,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In what year did the symbols + and − first appear in print?',
     options: [
-      '1489',
       '1450',
       '1525',
+      '1489',
       '1558',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Johannes Widman\'s "Mercantile Arithmetic" (1489) was the first book to use the modern symbols + and − in print.',
@@ -42,7 +42,7 @@ export const section23Questions: QuizQuestion[] = [
       'Johannes Widman',
       'Thomas Harriot',
       'Christoff Rudolff',
-      'Robert Recorde'
+      'Robert Recorde',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -70,11 +70,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'Who illustrated Luca Pacioli\'s book "Divina Proportione" (Divine Ratio)?',
     options: [
       'Michelangelo',
-      'Raphael',
       'Leonardo da Vinci',
+      'Raphael',
       'Botticelli',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Leonardo da Vinci illustrated Luca Pacioli\'s "Divina Proportione" (1509), which was about the golden ratio and regular polyhedra.',
@@ -84,12 +84,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What mathematical first is Michael Stifel credited with?',
     options: [
+      'First use of negative integers as exponents',
       'First use of the equals sign',
       'First use of the plus sign',
-      'First use of negative integers as exponents',
-      'First use of the square root symbol'
+      'First use of the square root symbol',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Michael Stifel (1487-1567) was the first to use negative integers as exponents. He is also remembered for predicting the end of the world for October 18, 1533—a prediction that landed him in jail when it failed to come true!',
@@ -99,12 +99,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How did Columbus use Regiomontanus\'s astronomical tables on his fourth voyage?',
     options: [
+      'To intimidate natives by predicting a lunar eclipse',
       'To navigate across the Atlantic',
       'To determine his latitude',
       'To calculate the circumference of the Earth',
-      'To intimidate natives by predicting a lunar eclipse'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Columbus used Regiomontanus\'s Ephemerides to predict the lunar eclipse of February 29, 1504. When stranded with hostile natives in Jamaica, he used this knowledge to intimidate them by claiming he would make the moon disappear.',
@@ -114,12 +114,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "spherical excess" of a spherical triangle?',
     options: [
-      'The amount by which its angles sum exceeds 180°',
       'The difference between its perimeter and a plane triangle',
       'The area of the triangle divided by the radius',
-      'The radius of its inscribed circle'
+      'The radius of its inscribed circle',
+      'The amount by which its angles sum exceeds 180°',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The spherical excess is A + B + C - 180°, where A, B, and C are the angles of the spherical triangle. Unlike plane triangles (whose angles sum to exactly 180°), spherical triangles have angles that sum to more than 180°.',

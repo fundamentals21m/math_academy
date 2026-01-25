@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# Run lint-staged for quiz file validation
+npx lint-staged
+
+# Validate course data if courses.js or seedCourseConfig.ts changed
+if git diff --cached --name-only | grep -qE "(scripts/courses\.js|firebase/functions/src/seedCourseConfig\.ts)"; then
+  echo "Course data files changed, running validation..."
+  node scripts/validate-courses.js
+fi

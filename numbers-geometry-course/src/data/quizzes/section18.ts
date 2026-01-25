@@ -56,11 +56,11 @@ export const section18Questions: QuizQuestion[] = [
       'Who provided a better explanation for planetary motion than the harmony of the spheres?',
     options: [
       'Kepler',
+      'Newton',
       'Aristotle',
       'Pythagoras',
-      'Newton',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       "Newton's theory of gravitation explained planetary motion through inverse-square forces, replacing the Pythagorean musical explanation.",
@@ -70,12 +70,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Pythagorean comma?',
     options: [
-      'A type of punctuation',
       'The small difference between 7 octaves and 12 perfect fifths',
+      'A type of punctuation',
       'A musical instrument',
       'A theorem about triangles',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The Pythagorean comma is the small discrepancy between 7 octaves (2^7 = 128) and 12 perfect fifths ((3/2)^12 ≈ 129.75), showing perfect tuning is impossible.',
@@ -110,12 +110,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How was the Pythagorean dream ultimately fulfilled?',
     options: [
-      'By expanding numbers to include all real numbers',
       'By restricting to rational numbers only',
       'By abandoning mathematics',
-      'By rejecting the connection between numbers and nature'
+      'By rejecting the connection between numbers and nature',
+      'By expanding numbers to include all real numbers',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The dream of understanding nature through numbers succeeded by expanding the number concept from rationals to all real numbers, allowing irrational lengths to be represented.',

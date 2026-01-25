@@ -10,11 +10,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'According to Klein, what defines a geometry?',
     options: [
       'Its axioms',
+      'Its group of isometries',
       'Its coordinate system',
       'Its dimensionality',
-      'Its group of isometries',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Klein\'s Erlangen Program (1872) proposed that geometry is defined by its group of isometries. Euclidean geometry is everything preserved by Euclidean isometries.',
@@ -34,12 +34,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In spherical geometry, what are the "lines"?',
     options: [
+      'Great circles',
       'Small circles',
       'Parallels of latitude',
-      'Great circles',
       'Meridians only',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'In spherical geometry, the "lines" are great circles—the intersections of the sphere with planes through its center. These are the "equidistant sets" of the spherical reflections.',
@@ -80,11 +80,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'What is the orientation-preserving subgroup?',
     options: [
       'All isometries',
-      'Composites of an even number of reflections',
       'Only translations',
-      'Composites of an odd number of reflections'
+      'Composites of an even number of reflections',
+      'Composites of an odd number of reflections',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The orientation-preserving subgroup consists of isometries that are composites of an even number of reflections. This includes rotations and translations, but not single reflections or glide reflections.',
@@ -97,7 +97,7 @@ export const section26Questions: QuizQuestion[] = [
       'Euclid defined it',
       'All isometries preserve it',
       'The orientation-preserving subgroup differs from the whole group',
-      'It is visible on a clock face'
+      'It is visible on a clock face',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -108,7 +108,12 @@ export const section26Questions: QuizQuestion[] = [
     id: 8,
     type: 'multiple-choice',
     question: 'On the sphere, what is the composite of two reflections?',
-    options: ['A translation', 'Always a rotation', 'A glide reflection', 'Another reflection'],
+    options: [
+      'A translation',
+      'Always a rotation',
+      'A glide reflection',
+      'Another reflection',
+    ],
     correctIndex: 1,
     difficulty: 'hard',
     explanation:

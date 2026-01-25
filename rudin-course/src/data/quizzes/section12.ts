@@ -6,12 +6,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A metric space $X$ is connected if:',
     options: [
-      '$X$ cannot be written as the union of two nonempty disjoint open sets',
       '$X$ is compact',
       '$X$ is bounded',
-      'Every point of $X$ is a limit point'
+      'Every point of $X$ is a limit point',
+      '$X$ cannot be written as the union of two nonempty disjoint open sets',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$X$ is connected if there do not exist nonempty open sets $A$ and $B$ with $A \\cap B = \\emptyset$ and $A \\cup B = X$. Equivalently, the only clopen sets are $\\emptyset$ and $X$.',
   },
@@ -34,10 +34,22 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $E \\subset \\mathbb{R}$ is connected and $x, y \\in E$ with $x < y$, then:',
     options: [
-      'Only $x$ and $y$ are in $E$',
-      '$E$ contains only rationals between $x$ and $y$',
-      'Every $z$ with $x < z < y$ is in $E$',
-      '$E$ must be finite'
+      'Only $x$ and $y$ are in $E
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Connected subsets of $\\mathbb{R}$ are intervals. If $x, y \\in E$, then every point between them must also be in $E$, otherwise $E$ could be split into two separated pieces.',
+  },
+      '$E$ contains only rationals between $x$ and $y
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Connected subsets of $\\mathbb{R}$ are intervals. If $x, y \\in E$, then every point between them must also be in $E$, otherwise $E$ could be split into two separated pieces.',
+  },
+      '$E$ must be finite',
+      'Every $z$ with $x < z < y$ is in $E
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Connected subsets of $\\mathbb{R}$ are intervals. If $x, y \\in E$, then every point between them must also be in $E$, otherwise $E$ could be split into two separated pieces.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -48,12 +60,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The image of a connected set under a continuous function is:',
     options: [
+      'Connected',
       'Compact',
       'Closed',
       'Open',
-      'Connected'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Continuous functions preserve connectedness: if $f: X \\to Y$ is continuous and $X$ is connected, then $f(X)$ is connected. This is because the preimages of a separation would give a separation of $X$.',
   },
@@ -62,12 +74,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which statement characterizes connected subsets of $\\mathbb{R}$?',
     options: [
-      'A subset $E$ is connected iff $E$ is an interval',
       'A subset $E$ is connected iff $E$ is compact',
+      'A subset $E$ is connected iff $E$ is an interval',
       'A subset $E$ is connected iff $E$ is closed',
-      'A subset $E$ is connected iff $E$ is perfect'
+      'A subset $E$ is connected iff $E$ is perfect',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'In $\\mathbb{R}$, a set is connected if and only if it is an interval (bounded, unbounded, open, closed, or half-open). This is a special characterization that holds in $\\mathbb{R}$ but not in higher dimensions.',
   },

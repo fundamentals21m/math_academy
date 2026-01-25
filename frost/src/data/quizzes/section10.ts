@@ -36,10 +36,26 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the formula for the Lagrange basis polynomial $L_i(x)$?',
     options: [
-      '$L_i(x) = \\sum_{j \\neq i} \\frac{x - x_j}{x_i - x_j}$',
-      '$L_i(x) = \\sum_{j \\neq i} (x - x_j)(x_i - x_j)$',
-      '$L_i(x) = \\prod_{j \\neq i} \\frac{x_i - x_j}{x - x_j}$',
-      '$L_i(x) = \\prod_{j \\neq i} \\frac{x - x_j}{x_i - x_j}$'
+      '$L_i(x) = \\sum_{j \\neq i} \\frac{x - x_j}{x_i - x_j}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Lagrange basis polynomial is $L_i(x) = \\prod_{j \\neq i} \\frac{x - x_j}{x_i - x_j}$. The product of terms ensures $L_i(x_j) = 0$ when any $(x - x_j) = 0$, and the denominator normalizes so $L_i(x_i) = 1$.',
+  },
+      '$L_i(x) = \\prod_{j \\neq i} \\frac{x - x_j}{x_i - x_j}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The Lagrange basis polynomial is $L_i(x) = \\prod_{j \\neq i} \\frac{x - x_j}{x_i - x_j}$. The product of terms ensures $L_i(x_j) = 0$ when any $(x - x_j) = 0$, and the denominator normalizes so $L_i(x_i) = 1$.',
+  },
+      '$L_i(x) = \\sum_{j \\neq i} (x - x_j)(x_i - x_j)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The Lagrange basis polynomial is $L_i(x) = \\prod_{j \\neq i} \\frac{x - x_j}{x_i - x_j}$. The product of terms ensures $L_i(x_j) = 0$ when any $(x - x_j) = 0$, and the denominator normalizes so $L_i(x_i) = 1$.',
+  },
+      '$L_i(x) = \\prod_{j \\neq i} \\frac{x_i - x_j}{x - x_j}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The Lagrange basis polynomial is $L_i(x) = \\prod_{j \\neq i} \\frac{x - x_j}{x_i - x_j}$. The product of terms ensures $L_i(x_j) = 0$ when any $(x - x_j) = 0$, and the denominator normalizes so $L_i(x_i) = 1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',

@@ -36,10 +36,26 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A(t)$ and $B(t)$ are differentiable matrix functions, then $(AB)\' =$',
     options: [
-      '$A\'B\'$',
-      '$A\'B + AB\'$',
-      '$BA\' + B\'A$',
-      '$A\'B\' + AB$'
+      '$A\\'B\\'
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The product rule for matrix functions is $(AB)\' = A\'B + AB\'$. Note that order matters since matrix multiplication is not commutative.',
+  },
+      '$BA\\' + B\\'A
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The product rule for matrix functions is $(AB)\' = A\'B + AB\'$. Note that order matters since matrix multiplication is not commutative.',
+  },
+      '$A\\'B\\' + AB
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The product rule for matrix functions is $(AB)\' = A\'B + AB\'$. Note that order matters since matrix multiplication is not commutative.',
+  },
+      '$A\\'B + AB\\'
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The product rule for matrix functions is $(AB)\' = A\'B + AB\'$. Note that order matters since matrix multiplication is not commutative.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -98,10 +114,26 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $Y(t)$ is a matrix solution of $Y\' = AY$ and $Y(t_0) = I$, then for any initial vector $c$, the solution with $Y(t_0) = c$ is:',
     options: [
-      '$Y(t)c$',
-      '$Y(t) + c$',
-      '$cY(t)$',
-      '$Y(t)^{-1}c$'
+      '$Y(t) + c
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The fundamental matrix $Y(t)$ with $Y(t_0) = I$ gives solutions as $Y(t)c$ for initial condition $c$.',
+  },
+      '$Y(t)c
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The fundamental matrix $Y(t)$ with $Y(t_0) = I$ gives solutions as $Y(t)c$ for initial condition $c$.',
+  },
+      '$cY(t)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The fundamental matrix $Y(t)$ with $Y(t_0) = I$ gives solutions as $Y(t)c$ for initial condition $c$.',
+  },
+      '$Y(t)^{-1}c
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The fundamental matrix $Y(t)$ with $Y(t_0) = I$ gives solutions as $Y(t)c$ for initial condition $c$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

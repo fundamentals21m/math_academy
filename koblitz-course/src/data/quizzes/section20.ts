@@ -7,9 +7,13 @@ export const section20Questions: QuizQuestion[] = [
     question: 'ECPP (Elliptic Curve Primality Proving) produces:',
     options: [
       'A probable prime',
-      'The factorization of $n$',
+      'The factorization of $n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'ECPP generates a certificate that can be independently verified, proving primality.',
+  },
+      'An approximation of primality',
       'A verifiable certificate of primality',
-      'An approximation of primality'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -53,11 +57,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'ECPP is compared to which deterministic primality test?',
     options: [
       'Miller-Rabin',
-      'AKS',
       'Fermat test',
-      'Lucas test'
+      'AKS',
+      'Lucas test',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'AKS is deterministic polynomial-time, but ECPP is faster in practice.',
   },

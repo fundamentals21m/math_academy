@@ -35,11 +35,23 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The lower sum $L(f, P)$ satisfies:',
       options: [
-        '$L(f, P) \\geq U(f, P)$',
-        '$L(f, P) \\leq U(f, P)$',
-        '$L(f, P) = U(f, P)$ always',
-        '$L(f, P) = 0$'
-      ],
+      '$L(f, P) \\leq U(f, P)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Lower sum uses infima, which are less than or equal to suprema.'
+    },
+      '$L(f, P) \\geq U(f, P)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Lower sum uses infima, which are less than or equal to suprema.'
+    },
+      '$L(f, P) = U(f, P)$ always',
+      '$L(f, P) = 0
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Lower sum uses infima, which are less than or equal to suprema.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Lower sum uses infima, which are less than or equal to suprema.'
@@ -49,12 +61,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'A bounded function $f$ is Riemann integrable on $[a,b]$ if:',
       options: [
-        '$f$ is continuous',
-        '$f$ is monotonic',
-        'The upper and lower integrals are equal',
-        '$f$ is differentiable'
-      ],
-      correctIndex: 2,
+      'The upper and lower integrals are equal',
+      '$f$ is continuous',
+      '$f$ is monotonic',
+      '$f$ is differentiable',
+    ],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: '$f$ is Riemann integrable iff $\\overline{\\int} f = \\underline{\\int} f$.'
     },
@@ -63,11 +75,11 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'Every continuous function on $[a,b]$ is:',
       options: [
-        'Not integrable',
-        'Monotonic',
-        'Unbounded',
-        'Riemann integrable'
-      ],
+      'Not integrable',
+      'Monotonic',
+      'Unbounded',
+      'Riemann integrable',
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Continuous functions on closed bounded intervals are Riemann integrable.'
@@ -77,12 +89,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'Every monotonic function on $[a,b]$ is:',
       options: [
-        'Riemann integrable',
-        'Differentiable',
-        'Continuous',
-        'Unbounded'
-      ],
-      correctIndex: 0,
+      'Differentiable',
+      'Riemann integrable',
+      'Continuous',
+      'Unbounded',
+    ],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Monotonic functions have at most countably many discontinuities, so they\'re integrable.'
     },
@@ -99,11 +111,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'If $f \\geq 0$ on $[a,b]$, then $\\int_a^b f \\geq $:',
       options: [
-        '$-1$',
-        '$0$',
-        '$1$',
-        '$f(a)$'
-      ],
+      '$-1
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The integral of a non-negative function is non-negative.'
+    },
+      '$1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The integral of a non-negative function is non-negative.'
+    },
+      '$f(a)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The integral of a non-negative function is non-negative.'
+    },
+      '$0
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The integral of a non-negative function is non-negative.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The integral of a non-negative function is non-negative.'
@@ -113,12 +141,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ and $g$ are integrable on $[a,b]$, then $f + g$ is:',
       options: [
-        'Not integrable',
-        'Continuous',
-        'Integrable',
-        'Constant'
-      ],
-      correctIndex: 2,
+      'Not integrable',
+      'Integrable',
+      'Continuous',
+      'Constant',
+    ],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The sum of integrable functions is integrable.'
     },
@@ -127,11 +155,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: '$\\int_a^b cf\\,dx = $:',
       options: [
-        '$c + \\int_a^b f\\,dx$',
-        '$c$',
-        '$\\int_a^b f\\,dx / c$',
-        '$c \\cdot \\int_a^b f\\,dx$'
-      ],
+      '$c + \\int_a^b f\\,dx
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Constants factor out of integrals.'
+    },
+      '$c
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Constants factor out of integrals.'
+    },
+      '$c \\cdot \\int_a^b f\\,dx
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Constants factor out of integrals.'
+    },
+      '$\\int_a^b f\\,dx / c
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Constants factor out of integrals.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Constants factor out of integrals.'
@@ -141,11 +185,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: '$\\int_a^b f + \\int_b^c f = $:',
       options: [
-        '$\\int_a^c f$',
-        '$\\int_a^b f$',
-        '$0$',
-        '$\\int_b^c f$'
-      ],
+      '$\\int_a^b f
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Additivity over intervals: integrals over adjacent intervals sum.'
+    },
+      '$0
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Additivity over intervals: integrals over adjacent intervals sum.'
+    },
+      '$\\int_a^c f
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Additivity over intervals: integrals over adjacent intervals sum.'
+    },
+      '$\\int_b^c f
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Additivity over intervals: integrals over adjacent intervals sum.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Additivity over intervals: integrals over adjacent intervals sum.'
@@ -155,11 +215,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: '$\\int_a^a f\\,dx = $:',
       options: [
-        '$f(a)$',
-        '$0$',
-        '$1$',
-        '$a$'
-      ],
+      '$0
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'An integral over a single point (degenerate interval) is zero.'
+    },
+      '$f(a)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'An integral over a single point (degenerate interval) is zero.'
+    },
+      '$1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'An integral over a single point (degenerate interval) is zero.'
+    },
+      '$a
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'An integral over a single point (degenerate interval) is zero.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'An integral over a single point (degenerate interval) is zero.'
@@ -191,11 +267,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: '$\\int_b^a f\\,dx = $:',
       options: [
-        '$\\int_a^b f\\,dx$',
-        '$f(a) - f(b)$',
-        '$0$',
-        '$-\\int_a^b f\\,dx$'
-      ],
+      '$\\int_a^b f\\,dx
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Reversing limits changes the sign of the integral.'
+    },
+      '$-\\int_a^b f\\,dx
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Reversing limits changes the sign of the integral.'
+    },
+      '$f(a) - f(b)
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Reversing limits changes the sign of the integral.'
+    },
+      '$0
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Reversing limits changes the sign of the integral.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Reversing limits changes the sign of the integral.'
@@ -219,11 +311,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'If $|f| \\leq M$ on $[a,b]$, then $|\\int_a^b f| \\leq $:',
       options: [
-        '$M$',
-        '$M(b-a)$',
-        '$M^2$',
-        '$\\sqrt{M}$'
-      ],
+      '$M
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: '$|\\int f| \\leq \\int |f| \\leq M(b-a)$.'
+    },
+      '$M^2
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$|\\int f| \\leq \\int |f| \\leq M(b-a)$.'
+    },
+      '$\\sqrt{M}
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$|\\int f| \\leq \\int |f| \\leq M(b-a)$.'
+    },
+      '$M(b-a)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$|\\int f| \\leq \\int |f| \\leq M(b-a)$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: '$|\\int f| \\leq \\int |f| \\leq M(b-a)$.'
@@ -233,11 +341,11 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The Dirichlet function (1 on rationals, 0 on irrationals) on $[0,1]$ is:',
       options: [
-        'Riemann integrable',
-        'Continuous',
-        'Not Riemann integrable',
-        'Monotonic'
-      ],
+      'Riemann integrable',
+      'Continuous',
+      'Not Riemann integrable',
+      'Monotonic',
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Upper sum is always 1, lower sum is always 0; they never equal.'
@@ -247,11 +355,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'A Riemann sum for $f$ with partition $P$ and sample points $t_i$ is:',
       options: [
-        '$\\max f(t_i)$',
-        '$\\sum \\Delta x_i$',
-        '$\\sum f(x_i)$',
-        '$\\sum f(t_i) \\Delta x_i$'
-      ],
+      '$\\sum f(t_i) \\Delta x_i
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Riemann sums approximate the integral using function values at sample points.'
+    },
+      '$\\max f(t_i)
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Riemann sums approximate the integral using function values at sample points.'
+    },
+      '$\\sum \\Delta x_i
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Riemann sums approximate the integral using function values at sample points.'
+    },
+      '$\\sum f(x_i)
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Riemann sums approximate the integral using function values at sample points.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Riemann sums approximate the integral using function values at sample points.'
@@ -272,11 +396,15 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'Riemann\'s criterion for integrability states that $f$ is integrable iff:',
       options: [
-        'For every $\\varepsilon > 0$, there exists $P$ with $U(f,P) - L(f,P) < \\varepsilon$',
-        '$f$ is continuous',
-        '$f$ is bounded',
-        '$f$ is monotonic'
-      ],
+      '$f$ is continuous',
+      '$f$ is bounded',
+      '$f$ is monotonic',
+      'For every $\\varepsilon > 0$, there exists $P$ with $U(f,P) - L(f,P) < \\varepsilon
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Upper and lower sums can be made arbitrarily close.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Upper and lower sums can be made arbitrarily close.'
@@ -286,11 +414,11 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'Lebesgue\'s criterion: $f$ is Riemann integrable on $[a,b]$ iff:',
       options: [
-        '$f$ is continuous',
-        '$f$ is bounded and continuous almost everywhere',
-        '$f$ is differentiable',
-        '$f$ is monotonic'
-      ],
+      '$f$ is continuous',
+      '$f$ is bounded and continuous almost everywhere',
+      '$f$ is differentiable',
+      '$f$ is monotonic',
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: '$f$ is Riemann integrable iff bounded with discontinuities forming a set of measure zero.'
@@ -314,11 +442,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'If $P\'$ is a refinement of $P$, then:',
       options: [
-        '$L(f, P\') = L(f, P)$',
-        '$U(f, P\') \\geq U(f, P)$ and $L(f, P\') \\leq L(f, P)$',
-        '$U(f, P\') = U(f, P)$',
-        '$U(f, P\') \\leq U(f, P)$ and $L(f, P\') \\geq L(f, P)$'
-      ],
+      '$L(f, P\\') = L(f, P)
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Refinement decreases upper sums and increases lower sums.'
+    },
+      '$U(f, P\\') \\geq U(f, P)$ and $L(f, P\\') \\leq L(f, P)
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Refinement decreases upper sums and increases lower sums.'
+    },
+      '$U(f, P\\') \\leq U(f, P)$ and $L(f, P\\') \\geq L(f, P)
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Refinement decreases upper sums and increases lower sums.'
+    },
+      '$U(f, P\\') = U(f, P)
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Refinement decreases upper sums and increases lower sums.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Refinement decreases upper sums and increases lower sums.'
@@ -337,11 +481,15 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The product $fg$ of two integrable functions is:',
       options: [
-        'Always integrable',
-        'Never integrable',
-        'Integrable only if $f = g$',
-        'Integrable only if both are continuous'
-      ],
+      'Never integrable',
+      'Always integrable',
+      'Integrable only if $f = g
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Products of bounded integrable functions are integrable.'
+    },
+      'Integrable only if both are continuous',
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Products of bounded integrable functions are integrable.'
@@ -351,11 +499,19 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is integrable and $g = f$ except at finitely many points:',
       options: [
-        '$g$ is not integrable',
-        '$g$ is integrable with $\\int g = \\int f$',
-        '$\\int g > \\int f$',
-        'Cannot determine'
-      ],
+      '$g$ is not integrable',
+      '$\\int g > \\int f
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Changing values at finitely many points doesn\'t affect integrability or the integral.'
+    },
+      'Cannot determine',
+      '$g$ is integrable with $\\int g = \\int f
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Changing values at finitely many points doesn\'t affect integrability or the integral.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Changing values at finitely many points doesn\'t affect integrability or the integral.'
@@ -365,11 +521,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The Mean Value Theorem for integrals states that if $f$ is continuous on $[a,b]$:',
       options: [
-        '$\\int_a^b f = f(b) - f(a)$',
-        '$\\int_a^b f = f(a)(b-a)$',
-        'There exists $c$ with $f(c) = \\frac{1}{b-a}\\int_a^b f$',
-        'There exists $c$ with $f\'(c) = 0$'
-      ],
+      '$\\int_a^b f = f(b) - f(a)
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Some value $f(c)$ equals the average value of $f$ over $[a,b]$.'
+    },
+      '$\\int_a^b f = f(a)(b-a)
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Some value $f(c)$ equals the average value of $f$ over $[a,b]$.'
+    },
+      'There exists $c$ with $f\\'(c) = 0
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Some value $f(c)$ equals the average value of $f$ over $[a,b]$.'
+    },
+      'There exists $c$ with $f(c) = \\frac{1}{b-a}\\int_a^b f
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Some value $f(c)$ equals the average value of $f$ over $[a,b]$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Some value $f(c)$ equals the average value of $f$ over $[a,b]$.'
@@ -379,11 +551,23 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is integrable and $|f(x)| \\leq g(x)$ where $g$ is integrable:',
       options: [
-        'Nothing can be concluded',
-        '$\\int f = \\int g$',
-        '$f = g$',
-        '$|\\int f| \\leq \\int g$'
-      ],
+      '$|\\int f| \\leq \\int g
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$|\\int f| \\leq \\int |f| \\leq \\int g$.'
+    },
+      'Nothing can be concluded',
+      '$\\int f = \\int g
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$|\\int f| \\leq \\int |f| \\leq \\int g$.'
+    },
+      '$f = g
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$|\\int f| \\leq \\int |f| \\leq \\int g$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: '$|\\int f| \\leq \\int |f| \\leq \\int g$.'
@@ -393,11 +577,11 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'A function with countably many discontinuities:',
       options: [
-        'Is always integrable (if bounded)',
-        'May or may not be integrable',
-        'Is never integrable',
-        'Is always continuous somewhere'
-      ],
+      'Is always integrable (if bounded)',
+      'May or may not be integrable',
+      'Is never integrable',
+      'Is always continuous somewhere',
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Countable sets have measure zero, so bounded functions with countably many discontinuities are integrable.'
@@ -415,11 +599,19 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'For the Thomae function (0 at irrationals, $1/q$ at $p/q$ reduced):',
       options: [
-        'Not Riemann integrable',
-        'Riemann integrable with $\\int = 0$',
-        'Continuous everywhere',
-        'Integrable with $\\int = 1$'
-      ],
+      'Not Riemann integrable',
+      'Continuous everywhere',
+      'Integrable with $\\int = 1
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Thomae is continuous at irrationals (measure 1), discontinuous at rationals (measure 0), so integrable with $\\int = 0$.'
+    },
+      'Riemann integrable with $\\int = 0
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Thomae is continuous at irrationals (measure 1), discontinuous at rationals (measure 0), so integrable with $\\int = 0$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Thomae is continuous at irrationals (measure 1), discontinuous at rationals (measure 0), so integrable with $\\int = 0$.'
@@ -429,11 +621,15 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'Integration by parts for Riemann integrals requires:',
       options: [
-        '$f$ and $g$ to be continuous',
-        '$f = g$',
-        '$f\'$ and $g\'$ to be integrable (or $f$ and $g$ to be $C^1$)',
-        'No conditions'
-      ],
+      '$f$ and $g$ to be continuous',
+      '$f = g
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$\\int f g\' = fg - \\int f\' g$ requires derivatives to be integrable.'
+    },
+      'No conditions',
+      '$f\\'$ and $g\\'$ to be integrable (or $f$ and $g$ to be $C^1$)',
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: '$\\int f g\' = fg - \\int f\' g$ requires derivatives to be integrable.'
@@ -443,11 +639,11 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is Riemann integrable, then $|f|$ is:',
       options: [
-        'Not necessarily integrable',
-        'Differentiable',
-        'Continuous',
-        'Riemann integrable'
-      ],
+      'Not necessarily integrable',
+      'Differentiable',
+      'Continuous',
+      'Riemann integrable',
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: '$|f|$ is integrable whenever $f$ is, with $|\\int f| \\leq \\int |f|$.'
@@ -479,12 +675,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'A step function on $[a,b]$ is:',
       options: [
-        'Continuous',
-        'Piecewise constant',
-        'Differentiable',
-        'Monotonic'
-      ],
-      correctIndex: 1,
+      'Continuous',
+      'Differentiable',
+      'Monotonic',
+      'Piecewise constant',
+    ],
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Step functions take finitely many values on subintervals.'
     },
@@ -493,11 +689,11 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'Every integrable function can be approximated by step functions in the sense that:',
       options: [
-        'They equal $f$ at all points',
-        'Step functions are continuous',
-        'Upper and lower sums of $f$ are limits of step function integrals',
-        'This is false'
-      ],
+      'They equal $f$ at all points',
+      'Step functions are continuous',
+      'Upper and lower sums of $f$ are limits of step function integrals',
+      'This is false',
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Upper and lower sums are integrals of step functions that approximate $f$.'
@@ -533,11 +729,23 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The Riemann integral exists iff for every $\\varepsilon > 0$:',
       options: [
-        'There exists $\\delta$ such that all Riemann sums for partitions with mesh $< \\delta$ differ by $< \\varepsilon$',
-        'The set of discontinuities has measure $< \\varepsilon$',
-        '$f$ is uniformly continuous',
-        '$f$ is bounded by $\\varepsilon$'
-      ],
+      'The set of discontinuities has measure $< \\varepsilon
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Equivalent to Cauchy criterion for Riemann sums.'
+    },
+      '$f$ is uniformly continuous',
+      'There exists $\\delta$ such that all Riemann sums for partitions with mesh $< \\delta$ differ by $< \\varepsilon
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Equivalent to Cauchy criterion for Riemann sums.'
+    },
+      '$f$ is bounded by $\\varepsilon
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Equivalent to Cauchy criterion for Riemann sums.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Equivalent to Cauchy criterion for Riemann sums.'
@@ -561,12 +769,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'There exists a Riemann integrable function that is discontinuous on a:',
       options: [
-        'Nowhere',
-        'Set of positive measure',
-        'Dense set of measure zero',
-        'Countable set only'
-      ],
-      correctIndex: 2,
+      'Nowhere',
+      'Set of positive measure',
+      'Countable set only',
+      'Dense set of measure zero',
+    ],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'E.g., the Thomae function is discontinuous on rationals (dense, measure zero).'
     },
@@ -575,12 +783,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The composition $g \\circ f$ of integrable $f$ and continuous $g$:',
       options: [
-        'Depends on specific functions',
-        'Is never integrable',
-        'Is integrable only if $f$ is continuous',
-        'Is always integrable'
-      ],
-      correctIndex: 3,
+      'Depends on specific functions',
+      'Is always integrable',
+      'Is never integrable',
+      'Is integrable only if $f$ is continuous',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Continuous function of an integrable function is integrable.'
     },
@@ -589,12 +797,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The Darboux integral is defined using:',
       options: [
-        'Upper and lower sums (suprema and infima)',
-        'Riemann sums with arbitrary sample points',
-        'Limits of derivatives',
-        'Measure theory'
-      ],
-      correctIndex: 0,
+      'Riemann sums with arbitrary sample points',
+      'Upper and lower sums (suprema and infima)',
+      'Limits of derivatives',
+      'Measure theory',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Darboux approach uses $\\sup$ over lower sums and $\\inf$ over upper sums.'
     },
@@ -625,11 +833,19 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'If $f_n \\to f$ uniformly on $[a,b]$ and each $f_n$ is integrable:',
       options: [
-        '$f$ may not be integrable',
-        '$\\int f = 0$',
-        '$f$ is integrable and $\\int f_n \\to \\int f$',
-        '$f$ is continuous'
-      ],
+      '$f$ may not be integrable',
+      '$\\int f = 0
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Uniform limit of integrable functions is integrable, and integrals converge.'
+    },
+      '$f$ is continuous',
+      '$f$ is integrable and $\\int f_n \\to \\int f
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Uniform limit of integrable functions is integrable, and integrals converge.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Uniform limit of integrable functions is integrable, and integrals converge.'
@@ -639,11 +855,19 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The improper integral $\\int_0^1 x^{-1/2}\\,dx$:',
       options: [
-        'Diverges',
-        'Is not defined',
-        'Converges to $1$',
-        'Converges to $2$'
-      ],
+      'Diverges',
+      'Is not defined',
+      'Converges to $2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$\\int_0^1 x^{-1/2}\\,dx = [2\\sqrt{x}]_0^1 = 2 - 0 = 2$.'
+    },
+      'Converges to $1
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: '$\\int_0^1 x^{-1/2}\\,dx = [2\\sqrt{x}]_0^1 = 2 - 0 = 2$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: '$\\int_0^1 x^{-1/2}\\,dx = [2\\sqrt{x}]_0^1 = 2 - 0 = 2$.'
@@ -653,12 +877,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'A bounded derivative $f\'$ on $[a,b]$ is:',
       options: [
-        'Always Riemann integrable',
-        'Always continuous',
-        'Sometimes not integrable',
-        'Always differentiable'
-      ],
-      correctIndex: 0,
+      'Always continuous',
+      'Sometimes not integrable',
+      'Always differentiable',
+      'Always Riemann integrable',
+    ],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Bounded derivatives are Riemann integrable (they\'re Darboux/Baire class 1).'
     },
@@ -667,12 +891,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The Volterra function has a bounded derivative that is:',
       options: [
-        'Continuous everywhere',
-        'Riemann integrable but not continuous on a set of positive measure',
-        'Not Riemann integrable',
-        'Constant'
-      ],
-      correctIndex: 1,
+      'Continuous everywhere',
+      'Not Riemann integrable',
+      'Riemann integrable but not continuous on a set of positive measure',
+      'Constant',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Volterra\'s example: bounded derivative discontinuous on a fat Cantor set, still integrable.'
     },
@@ -681,11 +905,15 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'For the Riemann-Stieltjes integral $\\int f\\,dg$:',
       options: [
-        '$g$ must be differentiable',
-        '$f = g$',
-        '$f$ continuous and $g$ of bounded variation suffices',
-        '$g$ must be continuous'
-      ],
+      '$g$ must be differentiable',
+      '$f = g
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Riemann-Stieltjes integral exists for continuous $f$ and bounded variation $g$.'
+    },
+      '$g$ must be continuous',
+      '$f$ continuous and $g$ of bounded variation suffices',
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Riemann-Stieltjes integral exists for continuous $f$ and bounded variation $g$.'
@@ -704,11 +932,15 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The characteristic function of the Cantor set on $[0,1]$ is:',
       options: [
-        'Not Riemann integrable',
-        'Monotonic',
-        'Continuous',
-        'Riemann integrable with integral $0$'
-      ],
+      'Not Riemann integrable',
+      'Monotonic',
+      'Riemann integrable with integral $0
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Cantor set has measure zero, so indicator is discontinuous on a null set, hence integrable with $\\int = 0$.'
+    },
+      'Continuous',
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Cantor set has measure zero, so indicator is discontinuous on a null set, hence integrable with $\\int = 0$.'
@@ -718,11 +950,11 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'A function of bounded variation on $[a,b]$ can be written as:',
       options: [
-        'Difference of two increasing functions',
-        'Difference of two decreasing functions',
-        'Product of two continuous functions',
-        'Sum of two constants'
-      ],
+      'Difference of two increasing functions',
+      'Difference of two decreasing functions',
+      'Product of two continuous functions',
+      'Sum of two constants',
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Jordan decomposition: $f = g - h$ where $g, h$ are increasing.'
@@ -732,11 +964,27 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The total variation of $f(x) = \\sin x$ on $[0, 2\\pi]$ is:',
       options: [
-        '$0$',
-        '$4$',
-        '$2$',
-        '$2\\pi$'
-      ],
+      '$4
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Sine goes from $0$ to $1$ to $0$ to $-1$ to $0$: total variation $1 + 1 + 1 + 1 = 4$.'
+    },
+      '$0
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Sine goes from $0$ to $1$ to $0$ to $-1$ to $0$: total variation $1 + 1 + 1 + 1 = 4$.'
+    },
+      '$2
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Sine goes from $0$ to $1$ to $0$ to $-1$ to $0$: total variation $1 + 1 + 1 + 1 = 4$.'
+    },
+      '$2\\pi
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Sine goes from $0$ to $1$ to $0$ to $-1$ to $0$: total variation $1 + 1 + 1 + 1 = 4$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Sine goes from $0$ to $1$ to $0$ to $-1$ to $0$: total variation $1 + 1 + 1 + 1 = 4$.'
@@ -746,12 +994,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is Riemann integrable, then $f^2$ is:',
       options: [
-        'Not necessarily integrable',
-        'Continuous',
-        'Riemann integrable',
-        'Monotonic'
-      ],
-      correctIndex: 2,
+      'Riemann integrable',
+      'Not necessarily integrable',
+      'Continuous',
+      'Monotonic',
+    ],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'If $f$ is bounded and integrable, so is $f^2$ (product of integrable functions).'
     },
@@ -769,12 +1017,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The regulated integral (using step function limits) equals the Riemann integral when:',
       options: [
-        'Never',
-        'For continuous functions',
-        'Only for monotonic functions',
-        'For all Riemann integrable functions'
-      ],
-      correctIndex: 3,
+      'Never',
+      'For all Riemann integrable functions',
+      'For continuous functions',
+      'Only for monotonic functions',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Regulated and Riemann integrals coincide for Riemann integrable functions.'
     },
@@ -783,12 +1031,12 @@ export const section13Quiz = {
       type: 'multiple-choice',
       question: 'The space of Riemann integrable functions on $[a,b]$ with $\\|f\\|_1 = \\int |f|$ is:',
       options: [
-        'Not complete (not a Banach space)',
-        'A Banach space',
-        'Finite dimensional',
-        'Empty'
-      ],
-      correctIndex: 0,
+      'A Banach space',
+      'Not complete (not a Banach space)',
+      'Finite dimensional',
+      'Empty',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'The space is not complete; Lebesgue theory provides the completion.'
     }

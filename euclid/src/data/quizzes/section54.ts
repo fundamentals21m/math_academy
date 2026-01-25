@@ -21,11 +21,11 @@ export const section54Questions: QuizQuestion[] = [
     question: 'What technique is II.5 the geometric basis for?',
     options: [
       'Long division',
-      'Cross multiplication',
       'Completing the square',
+      'Cross multiplication',
       'Factoring trinomials',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'II.5 provides the geometric foundation for completing the square, a technique essential for solving quadratic equations.',
   },

@@ -7,10 +7,30 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the value of $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ (the Basel problem)?',
     options: [
-      '$e$',
-      '$\\frac{\\pi}{4}$',
-      '$\\frac{\\pi^2}{6}$',
-      '$2$'
+      '$\\frac{\\pi^2}{6}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Euler solved the Basel problem in 1734, showing that the sum of reciprocals of perfect squares equals $\\frac{\\pi^2}{6}$. This surprising appearance of $\\pi$ in a problem about integers was one of his most celebrated achievements.',
+  },
+      '$e
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'Euler solved the Basel problem in 1734, showing that the sum of reciprocals of perfect squares equals $\\frac{\\pi^2}{6}$. This surprising appearance of $\\pi$ in a problem about integers was one of his most celebrated achievements.',
+  },
+      '$\\frac{\\pi}{4}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'Euler solved the Basel problem in 1734, showing that the sum of reciprocals of perfect squares equals $\\frac{\\pi^2}{6}$. This surprising appearance of $\\pi$ in a problem about integers was one of his most celebrated achievements.',
+  },
+      '$2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'Euler solved the Basel problem in 1734, showing that the sum of reciprocals of perfect squares equals $\\frac{\\pi^2}{6}$. This surprising appearance of $\\pi$ in a problem about integers was one of his most celebrated achievements.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -22,10 +42,30 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Euler\'s identity $e^{i\\pi} + 1 = 0$ connects which five mathematical constants?',
     options: [
-      '$e$, $i$, $2$, $\\pi$, and $-1$',
-      '$e$, $\\pi$, $\\phi$, $1$, and $2$',
-      '$\\pi$, $e$, $\\gamma$, $i$, and $1$',
-      '$e$, $i$, $\\pi$, $1$, and $0$'
+      '$e$, $i$, $2$, $\\pi$, and $-1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'Euler\'s identity connects the five most important constants in mathematics: $e$ (base of natural logarithm), $i$ (imaginary unit), $\\pi$ (ratio of circumference to diameter), $1$ (multiplicative identity), and $0$ (additive identity).',
+  },
+      '$e$, $\\pi$, $\\phi$, $1$, and $2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'Euler\'s identity connects the five most important constants in mathematics: $e$ (base of natural logarithm), $i$ (imaginary unit), $\\pi$ (ratio of circumference to diameter), $1$ (multiplicative identity), and $0$ (additive identity).',
+  },
+      '$e$, $i$, $\\pi$, $1$, and $0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'Euler\'s identity connects the five most important constants in mathematics: $e$ (base of natural logarithm), $i$ (imaginary unit), $\\pi$ (ratio of circumference to diameter), $1$ (multiplicative identity), and $0$ (additive identity).',
+  },
+      '$\\pi$, $e$, $\\gamma$, $i$, and $1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation:
+      'Euler\'s identity connects the five most important constants in mathematics: $e$ (base of natural logarithm), $i$ (imaginary unit), $\\pi$ (ratio of circumference to diameter), $1$ (multiplicative identity), and $0$ (additive identity).',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -71,10 +111,10 @@ export const section38Questions: QuizQuestion[] = [
     options: [
       'The sum $\\sum 1/p$ over primes converges',
       'Every even number is a sum of two primes',
+      '$\\pi$ is irrational',
       'There are infinitely many prime numbers',
-      '$\\pi$ is irrational'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Euler gave a new proof that there are infinitely many primes using his product formula. If there were only finitely many primes, the product would be finite. But the sum side diverges when $s = 1$ (harmonic series), giving a contradiction.',
@@ -84,10 +124,30 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Euler-Mascheroni constant $\\gamma$ is defined as the limit of:',
     options: [
-      '$e - \\pi$',
-      '$\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$',
-      '$\\lim_{n \\to \\infty} \\frac{\\ln n}{n}$',
-      '$1 + \\frac{1}{2} + \\cdots + \\frac{1}{n} - \\ln n$ as $n \\to \\infty$'
+      '$e - \\pi
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation:
+      'Euler discovered that the difference between the partial sums of the harmonic series and $\\ln n$ approaches a constant $\\gamma \\approx 0.5772$. Whether this constant is rational or irrational remains an open problem in mathematics.',
+  },
+      '$\\sum_{n=1}^{\\infty} \\frac{1}{n^2}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation:
+      'Euler discovered that the difference between the partial sums of the harmonic series and $\\ln n$ approaches a constant $\\gamma \\approx 0.5772$. Whether this constant is rational or irrational remains an open problem in mathematics.',
+  },
+      '$1 + \\frac{1}{2} + \\cdots + \\frac{1}{n} - \\ln n$ as $n \\to \\infty
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation:
+      'Euler discovered that the difference between the partial sums of the harmonic series and $\\ln n$ approaches a constant $\\gamma \\approx 0.5772$. Whether this constant is rational or irrational remains an open problem in mathematics.',
+  },
+      '$\\lim_{n \\to \\infty} \\frac{\\ln n}{n}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation:
+      'Euler discovered that the difference between the partial sums of the harmonic series and $\\ln n$ approaches a constant $\\gamma \\approx 0.5772$. Whether this constant is rational or irrational remains an open problem in mathematics.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',

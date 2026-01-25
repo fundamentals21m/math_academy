@@ -47,10 +47,10 @@ export const section20Questions: QuizQuestion[] = [
     options: [
       'The conjugation action',
       'The adjoint action',
+      'The regular action (Cayley action)',
       'The trivial action',
-      'The regular action (Cayley action)'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The regular (or Cayley) action is $g \\cdot h = gh$. It is transitive and faithful.',
   },

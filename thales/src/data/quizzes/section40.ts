@@ -9,12 +9,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why was Hamilton\'s application of quaternions to physics initially difficult?',
     options: [
+      'Physical space has only three dimensions, not four',
       'Quaternions are too abstract',
       'Complex numbers were preferred',
       'Physicists rejected non-commutative algebra',
-      'Physical space has only three dimensions, not four'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Hamilton was stymied by the fact that physical space has only three dimensions. A quaternion has four components, which doesn\'t directly match 3D space.',
@@ -23,8 +23,13 @@ export const section40Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'Who developed vector analysis using dot and cross products from quaternion multiplication?',
-    options: ['Hamilton', 'Maxwell', 'Heaviside', 'Einstein'],
-    correctIndex: 2,
+    options: [
+      'Hamilton',
+      'Heaviside',
+      'Maxwell',
+      'Einstein',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Oliver Heaviside extracted the scalar (dot) product and vector (cross) product from quaternion multiplication, developing vector analysis which replaced quaternions in physics.',
@@ -35,11 +40,11 @@ export const section40Questions: QuizQuestion[] = [
     question: 'What is the scalar (dot) product of two vectors ξ and η?',
     options: [
       'The scalar part of ξη',
-      'The negative of the scalar part of ξη',
       'The vector part of ξη',
       'The norm of ξη',
+      'The negative of the scalar part of ξη',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The dot product ξ ∘ η = x₁y₁ + x₂y₂ + x₃y₃ is the negative of the scalar part of the quaternion product ξη.',
@@ -79,12 +84,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is a Lorentz transformation expressed using biquaternions?',
     options: [
-      'x → pxp^(ct)',
       'x → px',
       'x → xp',
       'x → p + x',
+      'x → pxp^(ct)',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A Lorentz transformation sends x to pxp^(ct), where p is a biquaternion of norm 1. This preserves the norm N(x), which corresponds to the spacetime interval.',
@@ -97,7 +102,7 @@ export const section40Questions: QuizQuestion[] = [
       'x^t = x^c',
       'x^c = x',
       'x^t = x',
-      'N(x) = 1'
+      'N(x) = 1',
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -109,12 +114,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is Einstein\'s famous mass-energy equation?',
     options: [
-      'E = mc²',
       'E = mv',
+      'E = mc²',
       'E = mc',
       'E = m²c',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Einstein\'s equation E = mc² identifies the total energy of a particle, consisting of rest energy m₀c² plus kinetic energy.',
@@ -125,11 +130,11 @@ export const section40Questions: QuizQuestion[] = [
     question: 'Who first noted that Maxwell\'s equations are preserved under Lorentz transformations?',
     options: [
       'Maxwell',
-      'Poincaré',
       'Einstein',
+      'Poincaré',
       'Lorentz',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The fact that Maxwell\'s equations are preserved under Lorentz transformations appears to have first been noted by Henri Poincaré.',

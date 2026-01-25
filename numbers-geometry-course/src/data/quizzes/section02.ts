@@ -54,7 +54,7 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which statement about $n = 2 \\times 3 \\times 5 \\times 7 + 1 = 211$ is correct?',
     options: [
-      '$n$ is guaranteed to be prime by Euclid\\'s construction',
+      '$n$ is guaranteed to be prime by Euclid\\\\'s construction',
       '$n$ must be composite because it is large',
       '$n$ must be divisible by 11',
       '$n$ has a prime divisor different from 2, 3, 5, and 7 (which could be $n$ itself)',
@@ -159,12 +159,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why are there no primes of the form $6n + 3$ (except for 3 itself)?',
     options: [
-      'Because $6n + 3 = 3(2n + 1)$, so 3 divides any such number',
       'Because all such numbers are even',
-      'Because Dirichlet\'s theorem excludes them',
+      'Because $6n + 3 = 3(2n + 1)$, so 3 divides any such number',
+      'Because Dirichlet\\\'s theorem excludes them',
       'Because they are all perfect squares',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       '$6n + 3 = 3(2n + 1)$, which means 3 divides every number of this form. So none of them can be prime (except 3 itself when $n = 0$). This is why Dirichlet\'s theorem requires $\\gcd(a,b) = 1$.',

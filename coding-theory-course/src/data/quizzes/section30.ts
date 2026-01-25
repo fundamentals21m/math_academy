@@ -36,10 +36,22 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The idempotent generator of a QR code $\\mathcal{Q}$ over $\\mathbb{F}_q$ of length $n$ has the form:',
     options: [
+      '$e(x) = \\sum_{i \\in Q} x^i$ where $Q$ is the set of quadratic residues mod $n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The idempotent of a QR code can be expressed as $e(x) = \\sum_{i \\in Q} x^i$ (up to a scalar), where $Q$ is the set of quadratic residues modulo $n$.',
+  },
       'The generator polynomial $g(x)$ itself',
-      'Any polynomial of degree less than $n$',
-      '$e(x) = \\sum_{i \\in Q} x^i$ where $Q$ is the set of quadratic residues mod $n$',
-      'A primitive polynomial over $\\mathbb{F}_q$'
+      'Any polynomial of degree less than $n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The idempotent of a QR code can be expressed as $e(x) = \\sum_{i \\in Q} x^i$ (up to a scalar), where $Q$ is the set of quadratic residues modulo $n$.',
+  },
+      'A primitive polynomial over $\\mathbb{F}_q
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The idempotent of a QR code can be expressed as $e(x) = \\sum_{i \\in Q} x^i$ (up to a scalar), where $Q$ is the set of quadratic residues modulo $n$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -85,10 +97,14 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The relationship between the idempotent $e(x)$ and generator polynomial $g(x)$ of a cyclic code is:',
     options: [
-      '$g(x)$ divides $e(x)$ and they generate the same ideal',
       '$e(x) = g(x)$ always',
+      '$g(x)$ divides $e(x)$ and they generate the same ideal',
       '$e(x)$ and $g(x)$ are coprime',
-      '$g(x) = e(x)^2$',
+      '$g(x) = e(x)^2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The idempotent $e(x)$ and generator polynomial $g(x)$ generate the same cyclic code, and $g(x)$ divides $e(x)$. The idempotent is the unique polynomial satisfying $e^2 = e$ that generates the code.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

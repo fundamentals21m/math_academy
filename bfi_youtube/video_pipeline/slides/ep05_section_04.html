@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .comparison-container {
+      display: flex;
+      gap: 60px;
+      margin-top: 50px;
+      align-items: stretch;
+      justify-content: center;
+    }
+    .scenario-card {
+      width: 450px;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .scenario-card.easy {
+      background: rgba(34, 197, 94, 0.08);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .scenario-card.hard {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+    }
+    .scenario-icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+    .scenario-quote {
+      font-size: 24px;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .easy .scenario-quote { color: #22C55E; }
+    .hard .scenario-quote { color: #EF4444; }
+    .scenario-subtext {
+      color: #8B949E;
+      font-size: 18px;
+    }
+    .commitment-box {
+      background: rgba(247, 147, 26, 0.08);
+      border-left: 4px solid #F7931A;
+      padding: 30px 50px;
+      margin-top: 50px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .commitment-text {
+      color: #E6EDF3;
+      font-size: 26px;
+      line-height: 1.5;
+    }
+    .commitment-text em {
+      color: #F7931A;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Predicament</div>
+    <div class="section-title">A Different Kind of Commitment</div>
+    <div class="comparison-container">
+      <div class="scenario-card easy">
+        <div class="scenario-icon">🎸</div>
+        <div class="scenario-quote">"I'll be a badass rock star in a year or two"</div>
+        <div class="scenario-subtext">Socially acceptable ambition</div>
+      </div>
+      <div class="scenario-card hard">
+        <div class="scenario-icon">₿</div>
+        <div class="scenario-quote">"I'm going to be a scholar nobody appreciates, and all our wealth is in magic internet money"</div>
+        <div class="scenario-subtext">A harder conversation</div>
+      </div>
+    </div>
+    <div class="commitment-box">
+      <div class="commitment-text">Bitcoin will experience ups and downs that all but a few seasoned investors have the stomach for. The commitment is <em>not for the faint of heart</em>.</div>
+    </div>
+  </div>
+</body>
+</html>

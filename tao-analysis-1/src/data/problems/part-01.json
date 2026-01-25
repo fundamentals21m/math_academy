@@ -1,0 +1,139 @@
+{
+  "partId": 1,
+  "partTitle": "Introduction",
+  "textbookChapter": "Chapter 1",
+  "sections": [
+    {
+      "sectionId": 0,
+      "sectionTitle": "What is analysis?",
+      "textbookSection": "1.1",
+      "examples": [
+        {
+          "id": "ex-1-0-1",
+          "type": "example",
+          "title": "The Limit Definition",
+          "statement": "Consider the sequence $a_n = 1/n$. Explain intuitively why $\\lim_{n \\to \\infty} a_n = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Understand the sequence",
+                "content": "The sequence $a_n = 1/n$ gives us $1, 1/2, 1/3, 1/4, \\ldots$"
+              },
+              {
+                "title": "Observe the behavior",
+                "content": "As $n$ gets larger, $1/n$ gets closer and closer to $0$. For any small positive number $\\varepsilon$, we can find $n$ large enough so that $1/n < \\varepsilon$."
+              }
+            ],
+            "conclusion": "The sequence approaches $0$ because we can make $1/n$ as small as we like by taking $n$ sufficiently large."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-0-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Consider the sequence $a_n = n^2/(n^2 + 1)$. What do you expect $\\lim_{n \\to \\infty} a_n$ to be? Explain your reasoning.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Divide numerator and denominator by $n^2$",
+                "content": "We get $a_n = \\frac{n^2}{n^2 + 1} = \\frac{1}{1 + 1/n^2}$."
+              },
+              {
+                "title": "Take the limit",
+                "content": "As $n \\to \\infty$, we have $1/n^2 \\to 0$, so the denominator approaches $1$."
+              }
+            ],
+            "conclusion": "$\\lim_{n \\to \\infty} a_n = 1$. The sequence approaches $1$ from below."
+          }
+        },
+        {
+          "id": "1-0-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Give an example of a sequence that does not converge. Explain why it fails to converge.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Consider $a_n = (-1)^n$",
+                "content": "This sequence alternates: $-1, 1, -1, 1, -1, \\ldots$"
+              },
+              {
+                "title": "Show non-convergence",
+                "content": "This sequence cannot converge because consecutive terms are always distance $2$ apart. For $\\varepsilon < 1$, no tail of the sequence is $\\varepsilon$-close."
+              }
+            ],
+            "conclusion": "The sequence $(-1)^n$ oscillates forever and never settles down to any single value."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 1,
+      "sectionTitle": "Why do analysis?",
+      "textbookSection": "1.2",
+      "examples": [
+        {
+          "id": "ex-1-1-1",
+          "type": "example",
+          "title": "Rearrangement of Conditionally Convergent Series",
+          "statement": "The series $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots$ converges to $\\ln 2$. Show that by rearranging terms, we can make it sum to any value.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Riemann's rearrangement theorem",
+                "content": "For any conditionally convergent series and any real number $S$, there exists a rearrangement that converges to $S$."
+              },
+              {
+                "title": "Key insight",
+                "content": "The positive terms $1 + 1/3 + 1/5 + \\cdots$ diverge to $+\\infty$, and the negative terms $-1/2 - 1/4 - 1/6 - \\cdots$ diverge to $-\\infty$. By choosing how many positive and negative terms to include at each stage, we can steer toward any target."
+              }
+            ],
+            "conclusion": "This paradox shows why rigorous treatment of infinite series is essential—naive manipulations can lead to contradictory results."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-1-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "The following 'proof' claims $1 = 0$. Find the error:\n\n$S = 1 - 1 + 1 - 1 + \\cdots$\n$S = 1 - (1 - 1 + 1 - 1 + \\cdots) = 1 - S$\nTherefore $2S = 1$, so $S = 1/2$.\nBut also $S = (1-1) + (1-1) + \\cdots = 0$.\nSo $1/2 = 0$, hence $1 = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Identify the error",
+                "content": "The series $S = 1 - 1 + 1 - 1 + \\cdots$ does not converge. The partial sums oscillate between $0$ and $1$."
+              },
+              {
+                "title": "Invalid manipulations",
+                "content": "Both manipulations ($S = 1 - S$ and $S = (1-1) + (1-1) + \\cdots$) are only valid for convergent series. For non-convergent series, these operations are not justified."
+              }
+            ],
+            "conclusion": "The error is assuming that $S$ is a well-defined real number. Since the series diverges, algebraic manipulations are meaningless."
+          }
+        },
+        {
+          "id": "1-1-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Why can't we interchange the order of summation and limits without justification? Give a simple example.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Example: $\\lim_{n \\to \\infty} \\sum_{k=1}^{n} 1/k$ vs $\\sum_{k=1}^{\\infty} 1/k$",
+                "content": "Consider $f_n(x) = x/n$ for $x \\in [0,1]$. Then $\\lim_{n \\to \\infty} f_n(x) = 0$ for each $x$, but $\\int_0^1 f_n(x) dx = 1/(2n) \\to 0$."
+              },
+              {
+                "title": "The interchange fails",
+                "content": "More dramatically, let $f_n(x) = n \\cdot \\mathbf{1}_{[0,1/n]}(x)$. Then $\\int_0^1 f_n = 1$ for all $n$, but $\\lim f_n = 0$ a.e., so $\\int \\lim f_n = 0 \\neq 1 = \\lim \\int f_n$."
+              }
+            ],
+            "conclusion": "Interchanging limits with sums or integrals requires justification via uniform convergence or dominated convergence."
+          }
+        }
+      ]
+    }
+  ]
+}

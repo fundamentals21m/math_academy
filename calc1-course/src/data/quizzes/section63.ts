@@ -20,10 +20,26 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivative of $e^{it}$ is:',
     options: [
-      '$ie^{it}$',
-      '$e^{it}$',
-      '$-ie^{it}$',
-      '$te^{it}$'
+      '$e^{it}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dt}e^{it} = ie^{it}$ (chain rule).',
+  },
+      '$ie^{it}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dt}e^{it} = ie^{it}$ (chain rule).',
+  },
+      '$-ie^{it}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dt}e^{it} = ie^{it}$ (chain rule).',
+  },
+      '$te^{it}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\frac{d}{dt}e^{it} = ie^{it}$ (chain rule).',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -64,10 +80,26 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using $e^{it} = \\cos t + i\\sin t$, we can express $\\cos t$ as:',
     options: [
-      '$\\frac{e^{it} + e^{-it}}{2i}$',
-      '$\\frac{e^{it} - e^{-it}}{2}$',
-      '$\\frac{e^{it} + e^{-it}}{2}$',
-      '$e^{it}$'
+      '$\\frac{e^{it} + e^{-it}}{2}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$\\cos t = \\frac{e^{it} + e^{-it}}{2}$ (from Euler\'s formula).',
+  },
+      '$\\frac{e^{it} + e^{-it}}{2i}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$\\cos t = \\frac{e^{it} + e^{-it}}{2}$ (from Euler\'s formula).',
+  },
+      '$\\frac{e^{it} - e^{-it}}{2}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$\\cos t = \\frac{e^{it} + e^{-it}}{2}$ (from Euler\'s formula).',
+  },
+      '$e^{it}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$\\cos t = \\frac{e^{it} + e^{-it}}{2}$ (from Euler\'s formula).',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

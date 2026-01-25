@@ -92,10 +92,26 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A$ is a $2 \\times 2$ matrix with distinct real eigenvalues $\\lambda_1, \\lambda_2$ and eigenvectors $v_1, v_2$, the general solution is:',
     options: [
-      '$c_1 \\cos(\\lambda_1 t) + c_2 \\sin(\\lambda_2 t)$',
-      '$e^{(\\lambda_1 + \\lambda_2)t}(c_1 v_1 + c_2 v_2)$',
-      '$(c_1 + c_2 t)e^{\\lambda_1 t}$',
-      '$c_1 e^{\\lambda_1 t} v_1 + c_2 e^{\\lambda_2 t} v_2$'
+      '$c_1 \\cos(\\lambda_1 t) + c_2 \\sin(\\lambda_2 t)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'With distinct eigenvalues, the general solution is a linear combination of the exponential solutions for each eigenvalue-eigenvector pair.',
+  },
+      '$e^{(\\lambda_1 + \\lambda_2)t}(c_1 v_1 + c_2 v_2)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'With distinct eigenvalues, the general solution is a linear combination of the exponential solutions for each eigenvalue-eigenvector pair.',
+  },
+      '$c_1 e^{\\lambda_1 t} v_1 + c_2 e^{\\lambda_2 t} v_2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'With distinct eigenvalues, the general solution is a linear combination of the exponential solutions for each eigenvalue-eigenvector pair.',
+  },
+      '$(c_1 + c_2 t)e^{\\lambda_1 t}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'With distinct eigenvalues, the general solution is a linear combination of the exponential solutions for each eigenvalue-eigenvector pair.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

@@ -10,10 +10,9 @@ export const section79Questions: QuizQuestion[] = [
       'A unique prime ideal containing it',
       'A nonempty variety $V(I) \\neq \\emptyset
     correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The Weak Nullstellensatz says that over an algebraically closed field, every proper ideal has a common zero. Equivalently, the maximal ideals of $k[x_1, \\ldots, x_n]$ are exactly $(x_1 - a_1, \\ldots, x_n - a_n)$ for $a_i \\in k$.',
-  },
-      'A radical equal to itself',
+    difficulty: ',
+      ',
+    explanation: ',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -24,10 +23,18 @@ export const section79Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Strong Nullstellensatz (Hilbert\'s Nullstellensatz) states that for $k$ algebraically closed:',
     options: [
-      '$V(I) = V(J)$ implies $I = J$',
-      '$I(V(I)) = \\sqrt{I}$ for all ideals $I$',
+      '$I(V(I)) = \\sqrt{I}$ for all ideals $I
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Strong Nullstellensatz says $I(V(I)) = \\sqrt{I}$. This gives a bijection between radical ideals and algebraic varieties, which is the foundation of algebraic geometry.',
+  },
+      '$V(I) = V(J)$ implies $I = J
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Strong Nullstellensatz says $I(V(I)) = \\sqrt{I}$. This gives a bijection between radical ideals and algebraic varieties, which is the foundation of algebraic geometry.',
+  },
       'Every ideal is radical',
-      'Every variety is finite'
+      'Every variety is finite',
     ],
     correctIndex: 1,
     difficulty: 'medium',

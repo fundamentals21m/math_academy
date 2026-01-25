@@ -40,10 +40,10 @@ export const section29Questions: QuizQuestion[] = [
     options: [
       'Only the identity permutation',
       'All permutations of coordinates',
-      '$\\text{PSL}_2(n)$ as a subgroup',
       'Only cyclic shifts',
+      '$\\text{PSL}_2(n)$ as a subgroup',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Extended QR codes have large automorphism groups. For an extended QR code of length $n+1$, the projective special linear group $\\text{PSL}_2(n)$ is contained in its automorphism group.',
   },

@@ -32,10 +32,22 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The intersection of sets $A$ and $B$, denoted $A \\cap B$, consists of:',
     options: [
-      'Elements that are in $A$ or in $B$',
-      'Elements that are in $A$ but not in $B$',
-      'Elements that are in both $A$ and $B$',
-      'The empty set'
+      'Elements that are in $A$ or in $B
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The intersection $A \\cap B = \\{x : x \\in A \\text{ and } x \\in B\\}$ contains only elements common to both sets.',
+  },
+      'Elements that are in both $A$ and $B
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The intersection $A \\cap B = \\{x : x \\in A \\text{ and } x \\in B\\}$ contains only elements common to both sets.',
+  },
+      'Elements that are in $A$ but not in $B
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The intersection $A \\cap B = \\{x : x \\in A \\text{ and } x \\in B\\}$ contains only elements common to both sets.',
+  },
+      'The empty set',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -46,10 +58,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The set difference $A \\setminus B$ (also written $A - B$) is defined as:',
     options: [
-      '$\\{x : x \\in A \\text{ and } x \\in B\\}$',
-      '$\\{x : x \\in A \\text{ or } x \\in B\\}$',
-      '$\\{x : x \\notin A \\text{ and } x \\in B\\}$',
-      '$\\{x : x \\in A \\text{ and } x \\notin B\\}$'
+      '$\\{x : x \\in A \\text{ and } x \\notin B\\}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The set difference $A \\setminus B$ contains elements that are in $A$ but not in $B$.',
+  },
+      '$\\{x : x \\in A \\text{ and } x \\in B\\}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The set difference $A \\setminus B$ contains elements that are in $A$ but not in $B$.',
+  },
+      '$\\{x : x \\in A \\text{ or } x \\in B\\}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The set difference $A \\setminus B$ contains elements that are in $A$ but not in $B$.',
+  },
+      '$\\{x : x \\notin A \\text{ and } x \\in B\\}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The set difference $A \\setminus B$ contains elements that are in $A$ but not in $B$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -99,12 +127,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The axiom of extensionality states that two sets are equal if and only if:',
     options: [
-      'They have exactly the same elements',
       'They have the same cardinality',
       'One is a subset of the other',
+      'They have exactly the same elements',
       'They are both non-empty',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Extensionality says $A = B$ iff $\\forall x (x \\in A \\leftrightarrow x \\in B)$. Sets are determined entirely by their members.',
   },

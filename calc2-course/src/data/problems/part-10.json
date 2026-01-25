@@ -1,0 +1,42 @@
+{
+  "partId": 11,
+  "partTitle": "Multiple Integrals",
+  "textbookChapter": "Chapter 11",
+  "sections": [
+    {
+      "sectionId": 128,
+      "sectionTitle": "Double Integrals",
+      "textbookSection": "§11.1-11.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "11-1-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Evaluate $\\iint_R xy\\,dA$ where $R = [0,1] \\times [0,2]$.",
+          "solution": {
+            "steps": [
+              {"title": "Set up iterated integral", "content": "$\\int_0^1 \\int_0^2 xy\\,dy\\,dx$."},
+              {"title": "Inner integral", "content": "$\\int_0^2 xy\\,dy = x \\cdot \\frac{y^2}{2}\\big|_0^2 = 2x$."},
+              {"title": "Outer integral", "content": "$\\int_0^1 2x\\,dx = x^2 \\big|_0^1 = 1$."}
+            ],
+            "conclusion": "$\\iint_R xy\\,dA = 1$."
+          }
+        },
+        {
+          "id": "11-1-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Convert $\\iint_R f(x,y)\\,dA$ to polar coordinates where $R$ is the disk $x^2 + y^2 \\leq 4$.",
+          "solution": {
+            "steps": [
+              {"title": "Substitution", "content": "$x = r\\cos\\theta$, $y = r\\sin\\theta$, $dA = r\\,dr\\,d\\theta$."},
+              {"title": "Bounds", "content": "$0 \\leq r \\leq 2$, $0 \\leq \\theta \\leq 2\\pi$."}
+            ],
+            "conclusion": "$\\iint_R f(x,y)\\,dA = \\int_0^{2\\pi} \\int_0^2 f(r\\cos\\theta, r\\sin\\theta) \\, r\\,dr\\,d\\theta$."
+          }
+        }
+      ]
+    }
+  ]
+}

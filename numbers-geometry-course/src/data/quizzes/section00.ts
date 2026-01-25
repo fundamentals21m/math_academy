@@ -30,11 +30,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What is the technique of "infinite descent" used to prove?',
     options: [
       'That certain things exist',
-      'That certain things are impossible',
       'That sequences always converge',
       'That all numbers are rational',
+      'That certain things are impossible',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Infinite descent proves impossibility: if assuming something exists leads to an infinite descending sequence of natural numbers (which is impossible), then the assumption must be false.',
@@ -81,11 +81,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What is an Egyptian fraction?',
     options: [
       'A fraction used only in ancient Egypt',
-      'Any fraction less than 1',
       'A sum of distinct unit fractions (fractions of the form $1/n$)',
+      'Any fraction less than 1',
       'A fraction with denominator 10',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'An Egyptian fraction is a sum of distinct unit fractions. For example, $\\frac{2}{3} = \\frac{1}{2} + \\frac{1}{6}$ is an Egyptian fraction representation.',

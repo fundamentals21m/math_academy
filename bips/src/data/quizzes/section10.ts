@@ -7,11 +7,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What does BIP-34 require to be included in the coinbase transaction?',
     options: [
       'Timestamp',
-      'Block height',
       'Merkle root',
-      'Previous block hash'
+      'Previous block hash',
+      'Block height',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'BIP-34 requires the block height to be included in the coinbase scriptSig.',
   },
@@ -21,11 +21,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'Why was BIP-34 necessary?',
     options: [
       'To enable SegWit',
+      'To prevent duplicate transaction IDs',
       'To increase block size',
       'To improve privacy',
-      'To prevent duplicate transaction IDs',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Including block height prevents coinbase transactions from having identical txids across different blocks.',
   },

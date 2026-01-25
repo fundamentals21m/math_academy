@@ -28,10 +28,22 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the ring $\\mathbb{Z}$ and multiplicative set $S = \\{1, 2, 4, 8, \\ldots\\} = \\{2^n : n \\geq 0\\}$, what is $S^{-1}\\mathbb{Z}$?',
     options: [
+      '$\\mathbb{Q}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$S^{-1}\\mathbb{Z}$ consists of fractions $a/2^n$ where $a \\in \\mathbb{Z}$ and $n \\geq 0$. This is $\\mathbb{Z}[1/2]$, the ring of dyadic rationals.',
+  },
+      '$\\mathbb{Z}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$S^{-1}\\mathbb{Z}$ consists of fractions $a/2^n$ where $a \\in \\mathbb{Z}$ and $n \\geq 0$. This is $\\mathbb{Z}[1/2]$, the ring of dyadic rationals.',
+  },
+      '$\\mathbb{Z}_2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$S^{-1}\\mathbb{Z}$ consists of fractions $a/2^n$ where $a \\in \\mathbb{Z}$ and $n \\geq 0$. This is $\\mathbb{Z}[1/2]$, the ring of dyadic rationals.',
+  },
       '$\\mathbb{Z}[1/2]$ (integers with denominators powers of 2)',
-      '$\\mathbb{Q}$',
-      '$\\mathbb{Z}$',
-      '$\\mathbb{Z}_2$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -101,7 +113,7 @@ export const section38Questions: QuizQuestion[] = [
       'Always injective',
       'Always surjective',
       'Always an isomorphism',
-      'Injective if and only if $S$ contains no zero divisors'
+      'Injective if and only if $S$ contains no zero divisors',
     ],
     correctIndex: 3,
     difficulty: 'hard',

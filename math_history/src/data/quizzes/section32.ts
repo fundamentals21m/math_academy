@@ -7,12 +7,12 @@ export const section32Questions: QuizQuestion[] = [
     question: 'What is the "principle of duality" in projective geometry?',
     difficulty: 'easy',
     options: [
+      'Points and lines can be interchanged to produce equally valid theorems',
       'Every line has exactly two points',
       'The plane has two sides',
       'Every theorem has two proofs',
-      'Points and lines can be interchanged to produce equally valid theorems'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     explanation:
       'Duality states that in projective geometry, swapping "point" and "line" throughout any valid statement produces another valid statement. This is possible because the axioms are symmetric in points and lines.',
   },
@@ -22,12 +22,12 @@ export const section32Questions: QuizQuestion[] = [
     question: 'What is the dual of "three points are collinear"?',
     difficulty: 'easy',
     options: [
-      'Three lines are concurrent (pass through one point)',
       'Three lines are parallel',
       'Three points form a triangle',
-      'Three points are equidistant'
+      'Three points are equidistant',
+      'Three lines are concurrent (pass through one point)',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     explanation:
       'Using the duality dictionary: "points" → "lines" and "collinear" → "concurrent." So "three points are collinear" becomes "three lines are concurrent."',
   },
@@ -37,12 +37,12 @@ export const section32Questions: QuizQuestion[] = [
     question: 'What is Brianchon\'s theorem?',
     difficulty: 'medium',
     options: [
+      'The dual of Pascal\\\'s theorem—about hexagons circumscribed around conics',
       'A theorem about triangle medians',
-      'The dual of Pascal\'s theorem—about hexagons circumscribed around conics',
-      'The converse of Desargues\' theorem',
-      'A theorem about parallel lines'
+      'The converse of Desargues\\\' theorem',
+      'A theorem about parallel lines',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'Brianchon\'s theorem (1806) is the dual of Pascal\'s: if a hexagon is circumscribed about a conic (sides tangent), then the three main diagonals (connecting opposite vertices) are concurrent.',
   },
@@ -54,11 +54,11 @@ export const section32Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Because all coordinates are positive',
-      'Because projections preserve distances',
       'Because the incidence condition $ax + by + cz = 0$ is symmetric in point and line coordinates',
-      'Because the plane is infinite'
+      'Because projections preserve distances',
+      'Because the plane is infinite',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'A point $(x:y:z)$ lies on line $(a:b:c)$ iff $ax + by + cz = 0$. This equation is symmetric—swapping the roles of $(x,y,z)$ and $(a,b,c)$ preserves incidence. This is the algebraic foundation of duality.',
   },
@@ -71,7 +71,7 @@ export const section32Questions: QuizQuestion[] = [
       'The conic reflected across an axis',
       'A conic with the same area',
       'The conic rotated 90 degrees',
-      'The set of tangent lines to the conic (which also satisfy a quadratic equation)'
+      'The set of tangent lines to the conic (which also satisfy a quadratic equation)',
     ],
     correctIndex: 3,
     explanation:
@@ -84,12 +84,12 @@ export const section32Questions: QuizQuestion[] = [
       'Who first rigorously established the algebraic foundation of duality using homogeneous coordinates?',
     difficulty: 'hard',
     options: [
-      'Plücker',
       'Desargues',
       'Pascal',
-      'Euclid'
+      'Plücker',
+      'Euclid',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     explanation:
       'Julius Plücker (1830s) developed homogeneous coordinates systematically, providing a rigorous algebraic basis for the duality principle that Poncelet and Gergonne had been using geometrically.',
   },

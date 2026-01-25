@@ -48,8 +48,12 @@ export const section16Questions: QuizQuestion[] = [
     options: [
       'All three sequences must be constant',
       '$(a_n)$ and $(c_n)$ may not be equivalent',
-      '$(c_n) \\sim (a_n)$ but not $(a_n) \\sim (c_n)$',
-      '$(a_n) \\sim (c_n)$ (transitivity)'
+      '$(a_n) \\sim (c_n)$ (transitivity)',
+      '$(c_n) \\sim (a_n)$ but not $(a_n) \\sim (c_n)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Equivalence of Cauchy sequences is transitive: if $|a_n - b_n| < \\varepsilon/2$ and $|b_n - c_n| < \\varepsilon/2$ for large $n$, then $|a_n - c_n| \\leq |a_n - b_n| + |b_n - c_n| < \\varepsilon$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -90,10 +94,22 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Cauchy sequence $(a_n)$ is called a "zero sequence" or equivalent to zero if:',
     options: [
-      '$a_n = 0$ for all $n$',
-      'For every $\\varepsilon > 0$, $|a_n| \\leq \\varepsilon$ for all sufficiently large $n$',
-      '$a_1 = 0$',
-      'The sequence is unbounded'
+      'For every $\\varepsilon > 0$, $|a_n| \\leq \\varepsilon$ for all sufficiently large $n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A sequence is equivalent to zero (represents the real number $0$) if its terms eventually become arbitrarily small in absolute value, i.e., $|a_n| \\to 0$.',
+  },
+      '$a_n = 0$ for all $n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A sequence is equivalent to zero (represents the real number $0$) if its terms eventually become arbitrarily small in absolute value, i.e., $|a_n| \\to 0$.',
+  },
+      '$a_1 = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A sequence is equivalent to zero (represents the real number $0$) if its terms eventually become arbitrarily small in absolute value, i.e., $|a_n| \\to 0$.',
+  },
+      'The sequence is unbounded',
     ],
     correctIndex: 1,
     difficulty: 'medium',

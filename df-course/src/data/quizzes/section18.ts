@@ -44,10 +44,10 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'Every group has a unique composition series',
       'Composition series may have different lengths',
+      'The composition factors are unique up to permutation and isomorphism',
       'Simple groups have no composition series',
-      'The composition factors are unique up to permutation and isomorphism'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Jordan-Holder: Any two composition series of $G$ have the same length and the same factors up to ordering and isomorphism.',
   },
@@ -86,12 +86,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A group $G$ is solvable if:',
     options: [
-      'It has a composition series',
       'It has a composition series with abelian factors',
+      'It has a composition series',
       'It is simple',
-      'It has a composition series with cyclic factors of prime order'
+      'It has a composition series with cyclic factors of prime order',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A group is solvable if it has a subnormal series with abelian factors (or equivalently, if all composition factors are of prime order).',
   },

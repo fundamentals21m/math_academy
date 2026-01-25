@@ -108,7 +108,7 @@ export const section154Questions: QuizQuestion[] = [
       'The outcome is predetermined',
       'The probability is unknown',
       'All outcomes are equally likely',
-      'The sample space is infinite'
+      'The sample space is infinite',
     ],
     correctIndex: 2,
     difficulty: 'easy',

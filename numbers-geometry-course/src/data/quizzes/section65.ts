@@ -8,8 +8,13 @@ export const section65Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'What is the eccentricity of a parabola?',
-    options: ['e = 0', 'e < 1', 'e = 1', 'e > 1'],
-    correctIndex: 2,
+    options: [
+      'e = 0',
+      'e = 1',
+      'e < 1',
+      'e > 1',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A parabola has eccentricity exactly 1, the transitional case between ellipse and hyperbola.',
@@ -19,12 +24,12 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens to parallel rays hitting a parabolic mirror?',
     options: [
-      'They scatter randomly',
       'They all reflect through the focus',
+      'They scatter randomly',
       'They reflect back parallel',
       'They are absorbed',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The focal property of the parabola: parallel rays reflect through the focus.',
@@ -35,11 +40,11 @@ export const section65Questions: QuizQuestion[] = [
     question: 'What is true about the sum of focal distances for any point on an ellipse?',
     options: [
       'It varies depending on the point',
-      'It is constant (= 2a)',
       'It equals the eccentricity',
       'It equals 1',
+      'It is constant (= 2a)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'For any point P on an ellipse, F₁P + F₂P = 2a (the length of the major axis).',
@@ -64,12 +69,12 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For an ellipse x²/a² + y²/b² = 1 with a > b, what is the eccentricity?',
     options: [
-      'e = √(1 - b²/a²)',
       'e = a/b',
+      'e = √(1 - b²/a²)',
       'e = b/a',
       'e = √(1 - a²/b²)',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The eccentricity of an ellipse is e = √(1 - b²/a²), which is less than 1.',
@@ -81,10 +86,10 @@ export const section65Questions: QuizQuestion[] = [
     options: [
       'Euclid',
       'Apollonius',
-      'Archimedes',
       'Diocles',
+      'Archimedes',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Diocles proved this around 200 B.C. in his book "On Burning Mirrors."',

@@ -7,12 +7,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In hyperbolic geometry, given a line and a point not on it, how many parallel lines pass through the point?',
     options: [
-      'Infinitely many',
       'Exactly one',
       'Exactly two',
+      'Infinitely many',
       'None',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'In hyperbolic geometry, there are infinitely many lines through a point that do not intersect a given line. Two of these are "limiting parallels" that approach the line asymptotically, and infinitely many "ultra-parallels" diverge from the line.',
@@ -25,7 +25,7 @@ export const section57Questions: QuizQuestion[] = [
       'Exactly 180 degrees',
       'Strictly less than 180 degrees',
       'Strictly greater than 180 degrees',
-      'It varies unpredictably'
+      'It varies unpredictably',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -38,12 +38,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "angular defect" of a hyperbolic triangle?',
     options: [
-      'The sum of the triangle\'s angles',
+      '$180°$ minus the sum of the triangle\\\'s angles',
+      'The sum of the triangle\\\'s angles',
       'The largest angle in the triangle',
-      '$180°$ minus the sum of the triangle\'s angles',
-      'The difference between the largest and smallest angles'
+      'The difference between the largest and smallest angles',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The angular defect δ = 180° - (α + β + γ) measures how much the angle sum falls short of the Euclidean value. Remarkably, the area of a hyperbolic triangle equals k²δ, where k is a constant related to curvature.',
@@ -56,7 +56,7 @@ export const section57Questions: QuizQuestion[] = [
       'Have the same area but different perimeters',
       'Exist just like in Euclidean geometry',
       'Can only exist for right triangles',
-      'Cannot exist - same angles implies congruence'
+      'Cannot exist - same angles implies congruence',
     ],
     correctIndex: 3,
     difficulty: 'medium',

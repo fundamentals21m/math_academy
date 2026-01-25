@@ -7,11 +7,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'Playfair\'s Axiom states that through a point not on a line, there is:',
     options: [
       'No line parallel to the given line',
-      'Infinitely many lines parallel to the given line',
       'Exactly one line parallel to the given line',
-      'Exactly two lines parallel to the given line'
+      'Infinitely many lines parallel to the given line',
+      'Exactly two lines parallel to the given line',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Playfair\'s Axiom (1795) is equivalent to Euclid\'s fifth postulate: exactly one parallel exists.',
   },
@@ -22,10 +22,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'A circle can be drawn with any center and radius',
       'All right angles are equal',
+      'The sum of angles in a triangle is 180°',
       'A line can be drawn through any two points',
-      'The sum of angles in a triangle is 180°'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The statement that angles in a triangle sum to 180° is logically equivalent to the parallel postulate.',
   },
@@ -34,12 +34,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who were the three mathematicians who independently discovered non-Euclidean geometry?',
     options: [
-      'Gauss, Bolyai, Lobachevsky',
       'Newton, Leibniz, Euler',
+      'Gauss, Bolyai, Lobachevsky',
       'Euclid, Archimedes, Ptolemy',
-      'Descartes, Fermat, Pascal'
+      'Descartes, Fermat, Pascal',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Gauss (Germany), Bolyai (Hungary), and Lobachevsky (Russia) independently discovered that consistent geometries exist where the parallel postulate fails.',
   },
@@ -48,12 +48,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The parallel postulate was eventually:',
     options: [
-      'Proven from the other postulates',
       'Shown to be independent of the other postulates',
+      'Proven from the other postulates',
       'Shown to be false',
-      'Removed from geometry'
+      'Removed from geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The parallel postulate is independent: it cannot be proven from the other axioms, and geometries exist where it fails.',
   },

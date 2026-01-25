@@ -6,10 +6,26 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the Division Algorithm, for integers $a$ and $b$ with $b > 0$, there exist unique integers $q$ and $r$ such that $a = bq + r$ where:',
     options: [
-      '$0 < r < b$',
-      '$r < b$',
-      '$0 \\leq r \\leq b$',
-      '$0 \\leq r < b$'
+      '$0 < r < b
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Division Algorithm states that for $a, b \\in \\mathbb{Z}$ with $b > 0$, there exist unique $q, r \\in \\mathbb{Z}$ such that $a = bq + r$ where $0 \\leq r < b$.',
+  },
+      '$r < b
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Division Algorithm states that for $a, b \\in \\mathbb{Z}$ with $b > 0$, there exist unique $q, r \\in \\mathbb{Z}$ such that $a = bq + r$ where $0 \\leq r < b$.',
+  },
+      '$0 \\leq r < b
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Division Algorithm states that for $a, b \\in \\mathbb{Z}$ with $b > 0$, there exist unique $q, r \\in \\mathbb{Z}$ such that $a = bq + r$ where $0 \\leq r < b$.',
+  },
+      '$0 \\leq r \\leq b
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Division Algorithm states that for $a, b \\in \\mathbb{Z}$ with $b > 0$, there exist unique $q, r \\in \\mathbb{Z}$ such that $a = bq + r$ where $0 \\leq r < b$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

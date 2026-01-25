@@ -20,12 +20,12 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In three dimensions, rotations are generally:',
     options: [
-      'Non-commutative',
       'Always about the same axis',
       'Commutative',
-      'Equal to reflections'
+      'Equal to reflections',
+      'Non-commutative',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Unlike 2D rotations, 3D rotations do not commute: r₁r₂ ≠ r₂r₁ in general.',
   },
@@ -66,12 +66,12 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Rodrigues\' formula gives the image of a vector $\\mathbf{v}$ under rotation about axis $\\mathbf{n}$ using:',
     options: [
+      'Dot product, cross product, and angle',
       'Matrix multiplication only',
       'Translation and scaling',
       'Quaternion multiplication only',
-      'Dot product, cross product, and angle'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Rodrigues\' formula uses v, n·v, n×v, and cos θ, sin θ to compute the rotated vector.',
   },

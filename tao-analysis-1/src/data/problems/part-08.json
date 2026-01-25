@@ -1,0 +1,85 @@
+{
+  "partId": 8,
+  "partTitle": "Infinite Sets",
+  "textbookChapter": "Chapter 8",
+  "sections": [
+    {
+      "sectionId": 34,
+      "sectionTitle": "Countability",
+      "textbookSection": "8.1",
+      "examples": [
+        {
+          "id": "ex-8-34-1",
+          "type": "example",
+          "title": "Countability of $\\mathbb{Q}$",
+          "statement": "Show that the rational numbers are countable.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Arrange in a grid",
+                "content": "List all $p/q$ with $p \\in \\mathbb{Z}$, $q \\in \\mathbb{N}^+$ in a 2D array."
+              },
+              {
+                "title": "Diagonal enumeration",
+                "content": "Traverse diagonally: $0/1, 1/1, -1/1, 1/2, -1/2, 2/1, \\ldots$, skipping duplicates."
+              }
+            ],
+            "conclusion": "$\\mathbb{Q}$ is countable as a countable union of countable sets."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-34-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that the countable union of countable sets is countable.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Label the sets",
+                "content": "Let $A_1, A_2, A_3, \\ldots$ be countable sets with $A_n = \\{a_{n,1}, a_{n,2}, \\ldots\\}$."
+              },
+              {
+                "title": "Arrange in a grid",
+                "content": "Row $n$ contains elements of $A_n$. Enumerate diagonally."
+              }
+            ],
+            "conclusion": "$\\bigcup_{n=1}^{\\infty} A_n$ is countable."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 35,
+      "sectionTitle": "Uncountable sets",
+      "textbookSection": "8.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "8-35-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use Cantor's diagonal argument to show that $\\mathbb{R}$ is uncountable.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume countable",
+                "content": "Suppose $\\mathbb{R}$ (or $(0,1)$) can be listed as $r_1, r_2, r_3, \\ldots$ with decimal expansions."
+              },
+              {
+                "title": "Construct anti-diagonal",
+                "content": "Define $d$ by: the $n$-th digit of $d$ differs from the $n$-th digit of $r_n$."
+              },
+              {
+                "title": "Contradiction",
+                "content": "$d$ differs from every $r_n$ in at least one digit, so $d \\notin \\{r_1, r_2, \\ldots\\}$."
+              }
+            ],
+            "conclusion": "No enumeration can list all reals; $\\mathbb{R}$ is uncountable."
+          }
+        }
+      ]
+    }
+  ]
+}

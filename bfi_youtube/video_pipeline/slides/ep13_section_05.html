@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .concept-box {
+      background: rgba(8, 145, 178, 0.08);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 30px 50px;
+      border-radius: 12px;
+      margin: 25px auto;
+      max-width: 900px;
+      text-align: left;
+    }
+    .concept-title {
+      color: #0891B2;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .concept-text {
+      color: #E6EDF3;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .concept-text em {
+      color: #F7931A;
+      font-style: normal;
+      font-weight: 600;
+    }
+    .priority-comparison {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 35px 0;
+    }
+    .priority-card {
+      width: 380px;
+      padding: 25px 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .priority-card.old {
+      background: rgba(139, 148, 158, 0.1);
+      border: 1px solid rgba(139, 148, 158, 0.3);
+    }
+    .priority-card.new {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .priority-label {
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .old .priority-label { color: #8B949E; }
+    .new .priority-label { color: #22C55E; }
+    .priority-title {
+      color: #E6EDF3;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .priority-desc {
+      color: #8B949E;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Insight</div>
+    <div class="section-title">Subordination Redefined</div>
+    <div class="concept-box">
+      <div class="concept-title">Why Bitcoin Collateral Creates Senior Loans</div>
+      <div class="concept-text">A person will let any other asset go before relinquishing their bitcoin. This <em>behavioral priority</em> means bitcoin-collateralized loans become the most senior — regardless of contract terms.</div>
+    </div>
+    <div class="priority-comparison">
+      <div class="priority-card old">
+        <div class="priority-label">Traditional View</div>
+        <div class="priority-title">Contractual Priority</div>
+        <div class="priority-desc">Loan documents determine which creditors get paid first</div>
+      </div>
+      <div class="priority-card new">
+        <div class="priority-label">New Reality</div>
+        <div class="priority-title">Behavioral Priority</div>
+        <div class="priority-desc">Borrowers will prioritize bitcoin loans first — AAA equivalent behavior</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

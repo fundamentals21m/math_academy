@@ -6,12 +6,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What famous theorem does Proposition I.32 prove?',
     options: [
-      'The angle sum of a triangle equals two right angles (180°)',
       'The Pythagorean theorem',
       'The triangle inequality',
+      'The angle sum of a triangle equals two right angles (180°)',
       'The exterior angle theorem',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'I.32: "In any triangle... the three interior angles of the triangle are equal to two right angles."',
   },
@@ -37,7 +37,7 @@ export const section32Questions: QuizQuestion[] = [
       'I.13',
       'I.31',
       'I.29',
-      'I.27'
+      'I.27',
     ],
     correctIndex: 1,
     difficulty: 'medium',

@@ -8,10 +8,10 @@ export const section38Questions: QuizQuestion[] = [
     options: [
       'The sum p + q + r + s',
       'Nothing — s can be any point',
+      'The cross-ratio [p, q; r, s]',
       'The average of p, q, r',
-      'The cross-ratio [p, q; r, s]'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Once the cross-ratio value is fixed, there is exactly one s with that cross-ratio.',
   },
@@ -20,12 +20,12 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Any three points on ℝP¹ can be sent to any other three points by:',
     options: [
-      'A unique linear fractional transformation',
       'Infinitely many transformations',
       'No transformation',
-      'Only a translation'
+      'Only a translation',
+      'A unique linear fractional transformation',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'There is exactly one linear fractional function mapping any triple to any other triple.',
   },
@@ -37,7 +37,7 @@ export const section38Questions: QuizQuestion[] = [
       'Two points',
       'Four points',
       'Five points',
-      'Three points'
+      'Three points',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Any invariant of four points under linear fractional transformations is:',
     options: [
+      'A function of the cross-ratio',
       'Always equal to 1',
       'Independent of the cross-ratio',
-      'A function of the cross-ratio',
-      'Always undefined'
+      'Always undefined',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'All four-point invariants can be expressed in terms of the cross-ratio.',
   },
@@ -63,11 +63,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'If [p, q; r, s] = y, then [p, q; s, r] = :',
     options: [
       'y',
-      '1/y',
       '−y',
+      '1/y',
       '1 − y',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Swapping the last two points inverts the cross-ratio.',
   },
@@ -76,12 +76,12 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cross-ratio group consists of how many transformations?',
     options: [
-      '6',
       '4',
       '2',
-      '24'
+      '24',
+      '6',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Permuting four variables produces six distinct functions: y, 1/y, 1−y, 1−1/y, 1/(1−y), y/(y−1).',
   },

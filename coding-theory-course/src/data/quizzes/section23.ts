@@ -29,11 +29,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'The $n$-th roots of unity in the algebraic closure $\\overline{\\mathbb{F}_q}$ form:',
     options: [
       'A field',
+      'A cyclic group of order $n$ (when $\\gcd(n,q)=1$)',
       'A vector space',
       'A ring',
-      'A cyclic group of order $n$ (when $\\gcd(n,q)=1$)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'When $\\gcd(n, q) = 1$, the $n$-th roots of unity in $\\overline{\\mathbb{F}_q}$ form a cyclic group of order $n$ under multiplication.',
   },

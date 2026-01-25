@@ -7,11 +7,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'What does BIP-13 define?',
     options: [
       'Block structure',
-      'Transaction format',
       'Address format for P2SH',
-      'Network protocol'
+      'Transaction format',
+      'Network protocol',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'BIP-13 defines the address format for Pay-to-Script-Hash outputs.',
   },
@@ -28,12 +28,12 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What encoding do P2SH addresses use?',
     options: [
+      'Base58Check',
       'Hexadecimal',
       'Bech32',
       'Bech32m',
-      'Base58Check'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'P2SH addresses use Base58Check encoding with a specific version prefix.',
   },

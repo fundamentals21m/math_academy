@@ -7,12 +7,12 @@ export const section35Questions: QuizQuestion[] = [
     question: 'What is the brachistochrone problem?',
     difficulty: 'easy',
     options: [
-      'Finding the curve of fastest descent under gravity',
       'Finding the shortest distance between two points',
       'Finding the area under a curve',
-      'Finding the tangent to a curve'
+      'Finding the tangent to a curve',
+      'Finding the curve of fastest descent under gravity',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     explanation:
       'The brachistochrone ("shortest time" in Greek) asks: what curve allows a bead sliding under gravity to travel between two points in the least time? Surprisingly, it\'s not a straight line!',
   },
@@ -25,7 +25,7 @@ export const section35Questions: QuizQuestion[] = [
       'A straight line',
       'A cycloid',
       'A parabola',
-      'A circle'
+      'A circle',
     ],
     correctIndex: 1,
     explanation:
@@ -40,7 +40,7 @@ export const section35Questions: QuizQuestion[] = [
       'It has constant curvature',
       'It has no inflection points',
       'It is the tautochrone (isochronous curve)',
-      'It is algebraic'
+      'It is algebraic',
     ],
     correctIndex: 2,
     explanation:
@@ -53,11 +53,11 @@ export const section35Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'A parabola',
+      'A catenary ($y = a\\cosh(x/a)$)',
       'A circular arc',
       'A cycloid',
-      'A catenary ($y = a\\cosh(x/a)$)'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     explanation:
       'A flexible chain hanging under its own weight forms a catenary, $y = a\\cosh(x/a)$. Galileo thought it was a parabola, but Leibniz, Huygens, and Johann Bernoulli found the true answer in 1691.',
   },
@@ -71,7 +71,7 @@ export const section35Questions: QuizQuestion[] = [
       'An inverse-square force law implies elliptical orbits',
       'Planets move in circles',
       'Gravity only affects nearby objects',
-      'The speed of planets is constant'
+      'The speed of planets is constant',
     ],
     correctIndex: 0,
     explanation:
@@ -84,12 +84,12 @@ export const section35Questions: QuizQuestion[] = [
       'Who reportedly solved the brachistochrone problem in one evening after receiving it at 4 PM?',
     difficulty: 'hard',
     options: [
-      'Leibniz',
       'Newton',
+      'Leibniz',
       'Johann Bernoulli',
-      'Euler'
+      'Euler',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'Newton received Bernoulli\'s challenge at 4 PM after a tiring day at the Royal Mint. He solved it before bed and sent his solution anonymously. Bernoulli recognized the author: "I recognize the lion by his claw."',
   },

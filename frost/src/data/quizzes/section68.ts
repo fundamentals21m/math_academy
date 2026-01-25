@@ -7,11 +7,11 @@ export const section68Questions: QuizQuestion[] = [
     question: 'What is an open research question regarding FROST key refresh?',
     options: [
       'Key refresh is fully solved',
-      'Making keys longer',
       'Efficient proactive security: refreshing shares without changing the public key',
-      'Removing the need for keys'
+      'Making keys longer',
+      'Removing the need for keys',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Proactive security refreshes shares periodically so that an attacker must compromise $t$ parties simultaneously, not just over time. Efficient protocols remain an active research area.',
   },
@@ -22,10 +22,10 @@ export const section68Questions: QuizQuestion[] = [
     options: [
       'Groups cannot change',
       'Dynamic groups are not useful',
+      'Adding or removing participants while maintaining security properties',
       'Making groups larger',
-      'Adding or removing participants while maintaining security properties'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Changing the participant set ($n$) or threshold ($t$) requires protocols to redistribute shares securely, ideally without revealing the secret or requiring trusted parties.',
   },
@@ -63,11 +63,11 @@ export const section68Questions: QuizQuestion[] = [
     question: 'Why is formal verification of FROST implementations an important research area?',
     options: [
       'To make FROST slower',
-      'To mathematically prove implementations match security specifications',
       'Formal verification is outdated',
       'To reduce code size',
+      'To mathematically prove implementations match security specifications',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Formal verification uses mathematical proofs to ensure implementations correctly follow specifications, catching subtle bugs that testing might miss in security-critical code.',
   },

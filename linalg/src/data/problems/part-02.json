@@ -1,0 +1,184 @@
+{
+  "partId": 2,
+  "partTitle": "Solving Linear Equations",
+  "textbookChapter": "Chapter 2: Solving Linear Equations",
+  "sections": [
+    {
+      "sectionId": 4,
+      "sectionTitle": "Vectors and Linear Equations",
+      "textbookSection": "Section 2.1",
+      "examples": [
+        {
+          "id": "ex-2-1-1",
+          "type": "example",
+          "title": "Row and Column Pictures",
+          "statement": "For the system $x - y = 1$, $x + y = 3$, describe both the row picture and column picture.",
+          "solution": {
+            "steps": [
+              {"title": "Row picture", "content": "Two lines in the $xy$-plane: $x - y = 1$ and $x + y = 3$. They intersect at $(2, 1)$."},
+              {"title": "Column picture", "content": "$x\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} + y\\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}$. Find $x, y$ so the combination equals $(1, 3)$."}
+            ],
+            "conclusion": "Both pictures give the solution $x = 2$, $y = 1$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-1-1",
+          "type": "exercise",
+          "number": "2.1.1",
+          "statement": "Solve $2x + y = 5$, $4x + 3y = 13$ using both row and column pictures.",
+          "solution": "Row picture: subtract 2 times the first equation from the second: $y = 3$. Then $2x + 3 = 5$ gives $x = 1$. Column picture: $1\\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix} + 3\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ 13 \\end{pmatrix}$. Solution: $x = 1$, $y = 3$."
+        }
+      ]
+    },
+    {
+      "sectionId": 5,
+      "sectionTitle": "The Idea of Elimination",
+      "textbookSection": "Section 2.2",
+      "examples": [
+        {
+          "id": "ex-2-2-1",
+          "type": "example",
+          "title": "Gaussian Elimination",
+          "statement": "Use elimination to solve: $x + 2y + z = 2$, $3x + 8y + z = 12$, $4y + z = 2$.",
+          "solution": {
+            "steps": [
+              {"title": "Eliminate x from row 2", "content": "Row 2 - 3(Row 1): $2y - 2z = 6$"},
+              {"title": "Back substitute", "content": "From $4y + z = 2$ and $2y - 2z = 6$: multiply second by 2: $4y - 4z = 12$. Subtract from first: $5z = -10$, so $z = -2$."},
+              {"title": "Continue back substitution", "content": "$4y + (-2) = 2 \\Rightarrow y = 1$. Then $x + 2(1) + (-2) = 2 \\Rightarrow x = 2$."}
+            ],
+            "conclusion": "$x = 2$, $y = 1$, $z = -2$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-2-1",
+          "type": "exercise",
+          "number": "2.2.1",
+          "statement": "Use elimination to solve: $x + y = 1$, $2x + 3y = 5$.",
+          "solution": "Row 2 - 2(Row 1): $y = 3$. Back substitute: $x + 3 = 1$ gives $x = -2$. Solution: $x = -2$, $y = 3$."
+        },
+        {
+          "id": "2-2-2",
+          "type": "exercise",
+          "number": "2.2.2",
+          "statement": "What goes wrong when applying elimination to $x + y = 1$, $2x + 2y = 3$?",
+          "solution": "Row 2 - 2(Row 1) gives $0 = 1$, a contradiction. The system has no solution (the lines are parallel but not identical)."
+        }
+      ]
+    },
+    {
+      "sectionId": 6,
+      "sectionTitle": "Elimination Using Matrices",
+      "textbookSection": "Section 2.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "2-3-1",
+          "type": "exercise",
+          "number": "2.3.1",
+          "statement": "Write the elementary matrix $E$ that subtracts 3 times row 1 from row 2 for a $3 \\times 3$ matrix.",
+          "solution": "$E = \\begin{pmatrix} 1 & 0 & 0 \\\\ -3 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$. Multiplying $EA$ subtracts 3 times row 1 from row 2 of $A$."
+        }
+      ]
+    },
+    {
+      "sectionId": 7,
+      "sectionTitle": "Rules for Matrix Operations",
+      "textbookSection": "Section 2.4",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "2-4-1",
+          "type": "exercise",
+          "number": "2.4.1",
+          "statement": "Compute $AB$ where $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $B = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$.",
+          "solution": "$AB = \\begin{pmatrix} 1(0)+2(1) & 1(1)+2(0) \\\\ 3(0)+4(1) & 3(1)+4(0) \\end{pmatrix} = \\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}$."
+        },
+        {
+          "id": "2-4-2",
+          "type": "exercise",
+          "number": "2.4.2",
+          "statement": "Show that $AB \\neq BA$ using the matrices from the previous exercise.",
+          "solution": "$BA = \\begin{pmatrix} 0(1)+1(3) & 0(2)+1(4) \\\\ 1(1)+0(3) & 1(2)+0(4) \\end{pmatrix} = \\begin{pmatrix} 3 & 4 \\\\ 1 & 2 \\end{pmatrix} \\neq \\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix} = AB$."
+        }
+      ]
+    },
+    {
+      "sectionId": 8,
+      "sectionTitle": "Inverse Matrices",
+      "textbookSection": "Section 2.5",
+      "examples": [
+        {
+          "id": "ex-2-5-1",
+          "type": "example",
+          "title": "Finding the Inverse",
+          "statement": "Find $A^{-1}$ where $A = \\begin{pmatrix} 1 & 2 \\\\ 1 & 3 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {"title": "Set up augmented matrix", "content": "$\\begin{pmatrix} 1 & 2 & | & 1 & 0 \\\\ 1 & 3 & | & 0 & 1 \\end{pmatrix}$"},
+              {"title": "Row 2 - Row 1", "content": "$\\begin{pmatrix} 1 & 2 & | & 1 & 0 \\\\ 0 & 1 & | & -1 & 1 \\end{pmatrix}$"},
+              {"title": "Row 1 - 2(Row 2)", "content": "$\\begin{pmatrix} 1 & 0 & | & 3 & -2 \\\\ 0 & 1 & | & -1 & 1 \\end{pmatrix}$"}
+            ],
+            "conclusion": "$A^{-1} = \\begin{pmatrix} 3 & -2 \\\\ -1 & 1 \\end{pmatrix}$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-5-1",
+          "type": "exercise",
+          "number": "2.5.1",
+          "statement": "Find $A^{-1}$ for $A = \\begin{pmatrix} 2 & 1 \\\\ 5 & 3 \\end{pmatrix}$.",
+          "solution": "Using the $2 \\times 2$ formula: $A^{-1} = \\frac{1}{ad-bc}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} = \\frac{1}{6-5}\\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix} = \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix}$."
+        },
+        {
+          "id": "2-5-2",
+          "type": "exercise",
+          "number": "2.5.2",
+          "statement": "Show that if $A$ and $B$ are invertible, then $(AB)^{-1} = B^{-1}A^{-1}$.",
+          "solution": "We verify: $(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1} = AIA^{-1} = AA^{-1} = I$. Similarly for the other side. Thus $B^{-1}A^{-1}$ is the inverse of $AB$."
+        }
+      ]
+    },
+    {
+      "sectionId": 9,
+      "sectionTitle": "LU Factorization",
+      "textbookSection": "Section 2.6",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "2-6-1",
+          "type": "exercise",
+          "number": "2.6.1",
+          "statement": "Find the LU factorization of $A = \\begin{pmatrix} 2 & 1 \\\\ 6 & 4 \\end{pmatrix}$.",
+          "solution": "Elimination: subtract 3 times row 1 from row 2 to get $U = \\begin{pmatrix} 2 & 1 \\\\ 0 & 1 \\end{pmatrix}$. The multiplier 3 goes into $L$: $L = \\begin{pmatrix} 1 & 0 \\\\ 3 & 1 \\end{pmatrix}$. Verify: $LU = \\begin{pmatrix} 2 & 1 \\\\ 6 & 4 \\end{pmatrix} = A$."
+        }
+      ]
+    },
+    {
+      "sectionId": 10,
+      "sectionTitle": "Transposes and Permutations",
+      "textbookSection": "Section 2.7",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "2-7-1",
+          "type": "exercise",
+          "number": "2.7.1",
+          "statement": "If $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{pmatrix}$, compute $A^T$ and $A^TA$.",
+          "solution": "$A^T = \\begin{pmatrix} 1 & 4 \\\\ 2 & 5 \\\\ 3 & 6 \\end{pmatrix}$. $A^TA = \\begin{pmatrix} 1 & 4 \\\\ 2 & 5 \\\\ 3 & 6 \\end{pmatrix}\\begin{pmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{pmatrix} = \\begin{pmatrix} 17 & 22 & 27 \\\\ 22 & 29 & 36 \\\\ 27 & 36 & 45 \\end{pmatrix}$."
+        },
+        {
+          "id": "2-7-2",
+          "type": "exercise",
+          "number": "2.7.2",
+          "statement": "Verify that $A^TA$ is symmetric.",
+          "solution": "$(A^TA)^T = A^T(A^T)^T = A^TA$. So $A^TA$ is always symmetric. For the example above, the matrix is clearly symmetric: entries $(i,j) = (j,i)$."
+        }
+      ]
+    }
+  ]
+}

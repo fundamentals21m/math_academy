@@ -25,11 +25,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'According to the Three Reflections Theorem, every Euclidean isometry is a composite of:',
     options: [
       'At most two reflections',
-      'Exactly three reflections',
       'One, two, or three reflections',
+      'Exactly three reflections',
       'Any number of reflections',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Three Reflections Theorem states that each isometry of the Euclidean plane is the composite of one, two, or three reflections. This covers all cases: reflections (1), rotations and translations (2), and glide reflections (3).',
@@ -41,10 +41,10 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       'A translation',
       'Another reflection',
-      'A rotation',
       'A glide reflection',
+      'A rotation',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'When two reflection lines intersect, their composite is a rotation about the point of intersection. The rotation angle is twice the angle between the lines.',
@@ -85,11 +85,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'Is composition of isometries commutative?',
     options: [
       'Always',
-      'Generally not',
       'Never',
+      'Generally not',
       'Only for translations',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Composition of isometries is generally not commutative. For example, f₂f₁ may differ from f₁f₂. The order in which transformations are applied matters.',

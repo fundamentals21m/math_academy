@@ -67,11 +67,11 @@ export const section189Questions: QuizQuestion[] = [
     question: 'For the composite Simpson\'s rule with $n$ subintervals, $n$ must be:',
     options: [
       'An odd number',
-      'An even number',
       'Any positive integer',
+      'An even number',
       'A power of 2',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Simpson\'s rule uses pairs of subintervals (three points each), so $n$ must be even.',
   },
@@ -110,10 +110,26 @@ export const section189Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The composite Simpson\'s rule has error of order:',
     options: [
-      '$O(h^2)$',
-      '$O(h^3)$',
-      '$O(h^4)$',
-      '$O(h^5)$'
+      '$O(h^4)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Simpson\'s rule has $O(h^4)$ error. Halving the step size reduces the error by a factor of 16, making it much more accurate than the trapezoidal rule.',
+  },
+      '$O(h^2)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Simpson\'s rule has $O(h^4)$ error. Halving the step size reduces the error by a factor of 16, making it much more accurate than the trapezoidal rule.',
+  },
+      '$O(h^3)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Simpson\'s rule has $O(h^4)$ error. Halving the step size reduces the error by a factor of 16, making it much more accurate than the trapezoidal rule.',
+  },
+      '$O(h^5)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Simpson\'s rule has $O(h^4)$ error. Halving the step size reduces the error by a factor of 16, making it much more accurate than the trapezoidal rule.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

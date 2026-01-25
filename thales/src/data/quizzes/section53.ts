@@ -41,10 +41,10 @@ export const section53Questions: QuizQuestion[] = [
     options: [
       'No S are P',
       'Some S are P',
-      'All S are P',
       'Some S are not P',
+      'All S are P',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'In Aristotle\'s notation: SaP means "All S are P", SeP means "No S are P", SiP means "Some S are P", and SoP means "Some S are not P". The vowels a, e, i, o come from the Latin words "affirmo" and "nego".',
@@ -71,10 +71,10 @@ export const section53Questions: QuizQuestion[] = [
     options: [
       'That not all primes are odd',
       'That the continuum hypothesis is independent',
-      'That Frege\'s comprehension scheme leads to a contradiction',
-      'That every function has a fixed point'
+      'That every function has a fixed point',
+      'That Frege\\\\'s comprehension scheme leads to a contradiction',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Russell\'s Paradox (1901) showed that Frege\'s unrestricted comprehension scheme leads to contradiction. Consider the set y of all sets that don\'t contain themselves: y ∈ y ↔ ¬(y ∈ y), which is a contradiction.',
@@ -86,10 +86,10 @@ export const section53Questions: QuizQuestion[] = [
     options: [
       'p × p = p',
       'p ∨ ¬p and ¬¬p ↔ p',
+      '¬(p ∧ q) = ¬p ∨ ¬q and ¬(p ∨ q) = ¬p ∧ ¬q',
       '(p ⇒ q) ↔ (¬q ⇒ ¬p)',
-      '¬(p ∧ q) = ¬p ∨ ¬q and ¬(p ∨ q) = ¬p ∧ ¬q'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'De Morgan\'s Laws state that ¬(p ∧ q) = ¬p ∨ ¬q and ¬(p ∨ q) = ¬p ∧ ¬q. These were formalized by Augustus De Morgan in 1847, along with Boole\'s work on symbolic logic.',
@@ -115,11 +115,11 @@ export const section53Questions: QuizQuestion[] = [
     question: 'What did Kronecker object to in mathematical proofs?',
     options: [
       'The use of infinity',
-      'All of the above',
       'Irrational numbers',
-      'Nonconstructive arguments'
+      'All of the above',
+      'Nonconstructive arguments',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Kronecker (1823–1891) objected to all of these. He said "God made the whole numbers, all the rest is the work of man." He rejected nonconstructive proofs that don\'t tell you which case holds, and was skeptical of irrational and infinite quantities.',
@@ -129,12 +129,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does Zermelo-Fraenkel set theory avoid Russell\'s Paradox?',
     options: [
-      'By requiring separation from an existing set: ∃y∀x(x ∈ y ↔ (x ∈ z ∧ P(x)))',
       'By forbidding all infinite sets',
+      'By requiring separation from an existing set: ∃y∀x(x ∈ y ↔ (x ∈ z ∧ P(x)))',
       'By using only constructive proofs',
       'By eliminating the membership relation',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Zermelo-Fraenkel set theory modifies comprehension to the axiom of separation: you can only form a subset of an existing set. Instead of ∃y∀x(x ∈ y ↔ P(x)), it requires ∀z∃y∀x(x ∈ y ↔ (x ∈ z ∧ P(x))). This prevents forming "the set of all sets not containing themselves."',

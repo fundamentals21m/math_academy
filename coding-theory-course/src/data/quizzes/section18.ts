@@ -76,10 +76,26 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Non-binary Hamming codes have minimum distance:',
     options: [
-      '$d = 2$',
-      '$d = 4$',
-      '$d = 3$',
-      '$d = q$'
+      '$d = 2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Like binary Hamming codes, non-binary Hamming codes have minimum distance $d = 3$. They are single-error-correcting codes.',
+  },
+      '$d = 4
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Like binary Hamming codes, non-binary Hamming codes have minimum distance $d = 3$. They are single-error-correcting codes.',
+  },
+      '$d = q
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Like binary Hamming codes, non-binary Hamming codes have minimum distance $d = 3$. They are single-error-correcting codes.',
+  },
+      '$d = 3
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Like binary Hamming codes, non-binary Hamming codes have minimum distance $d = 3$. They are single-error-correcting codes.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -91,11 +107,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'The dual of a non-binary Hamming code is called:',
     options: [
       'A Reed-Muller code',
+      'A Simplex code',
       'A BCH code',
       'A Golay code',
-      'A Simplex code'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The dual of a Hamming code (binary or non-binary) is a Simplex code. It has parameters $[n, r, (q^{r-1})]$ where $n = (q^r-1)/(q-1)$.',
   },

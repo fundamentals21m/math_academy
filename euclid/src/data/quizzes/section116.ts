@@ -7,11 +7,11 @@ export const section116Questions: QuizQuestion[] = [
     question: 'How is the circumcenter of a regular pentagon found in IV.14?',
     options: [
       'By drawing altitudes',
-      'By bisecting two adjacent angles',
       'By using the Pythagorean theorem',
       'By drawing medians',
+      'By bisecting two adjacent angles',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Like IV.13 (incircle), the circumcenter is found by bisecting angles. For a regular pentagon, the same point is equidistant from vertices AND sides.',
   },

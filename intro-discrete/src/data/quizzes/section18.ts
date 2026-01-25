@@ -99,7 +99,7 @@ export const section18Questions: QuizQuestion[] = [
       '5',
       '3',
       '4',
-      '6'
+      '6',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -111,11 +111,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'If $|G| = p$ (prime), then $G$ is:',
     options: [
       'Non-abelian',
-      'Cyclic',
       'Not cyclic',
-      'Trivial'
+      'Cyclic',
+      'Trivial',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A group of prime order is cyclic (any non-identity element generates the whole group).',
   },
@@ -124,12 +124,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Lagrange\'s theorem implies which classical result?',
     options: [
-      'Fermat\\'s Little Theorem',
       'Fundamental theorem of arithmetic',
+      'Fermat\\\\\'s Little Theorem',
       'Pythagorean theorem',
       'Quadratic formula',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Applying Lagrange to $(\\mathbb{Z}/p\\mathbb{Z})^*$ (order $p-1$) gives $a^{p-1} \\equiv 1 \\mod p$, which is Fermat\'s Little Theorem.',
   },

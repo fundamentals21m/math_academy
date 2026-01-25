@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #7C3AED;
+      --accent-rgb: 124, 58, 237;
+    }
+    body {
+      background: linear-gradient(135deg, #0D1117 0%, #1a1528 50%, #0D1117 100%);
+    }
+    .quote-box {
+      background: rgba(124, 58, 237, 0.08);
+      border-left: 4px solid #7C3AED;
+      padding: 30px 50px;
+      margin: 40px auto;
+      max-width: 1000px;
+      text-align: left;
+    }
+    .quote-text {
+      color: #E6EDF3;
+      font-size: 28px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .context-box {
+      background: rgba(247, 147, 26, 0.08);
+      border: 1px solid rgba(247, 147, 26, 0.3);
+      padding: 30px 50px;
+      border-radius: 8px;
+      margin: 30px auto;
+      max-width: 900px;
+    }
+    .context-text {
+      color: #E6EDF3;
+      font-size: 24px;
+      line-height: 1.5;
+    }
+    .context-text em {
+      color: #F7931A;
+      font-style: normal;
+    }
+    .episode-info {
+      margin-top: 40px;
+    }
+    .part-badge {
+      background: rgba(124, 58, 237, 0.2);
+      border: 1px solid rgba(124, 58, 237, 0.4);
+      color: #7C3AED;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    .episode-num {
+      color: #7C3AED;
+      font-size: 18px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .episode-title {
+      color: #E6EDF3;
+      font-size: 48px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="quote-box">
+      <div class="quote-text">"The world came to the realization that there does not exist a risk-free asset, and at the same time, they would grapple with the question of where bitcoin belongs in an investment portfolio."</div>
+    </div>
+    <div class="context-box">
+      <div class="context-text">BlackRock was the largest investment manager of pension schemes utilizing <em>Liability Driven Investments</em>. Understanding their history with LDI is crucial to understanding why they pivoted to bitcoin.</div>
+    </div>
+    <div class="episode-info">
+      <div class="part-badge">Part 2 Finale</div>
+      <div class="episode-num">Episode 9</div>
+      <div class="episode-title">BlackRock: Redefining Portfolio Construction</div>
+    </div>
+  </div>
+</body>
+</html>

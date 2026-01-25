@@ -39,7 +39,7 @@ export const section58Questions: QuizQuestion[] = [
       'Reflection across the real axis',
       'Reflection across the imaginary axis',
       'Rotation by 90°',
-      'Inversion in the unit circle'
+      'Inversion in the unit circle',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -94,10 +94,26 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A complex number $z$ is real if and only if:',
     options: [
-      '$z = -\\bar{z}$',
-      '$z^2 > 0$',
-      '$|z| = 1$',
-      '$z = \\bar{z}$'
+      '$z = -\\bar{z}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'z = z̄ means x + iy = x − iy, so 2iy = 0, thus y = 0 and z is real.',
+  },
+      '$z^2 > 0
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'z = z̄ means x + iy = x − iy, so 2iy = 0, thus y = 0 and z is real.',
+  },
+      '$z = \\bar{z}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'z = z̄ means x + iy = x − iy, so 2iy = 0, thus y = 0 and z is real.',
+  },
+      '$|z| = 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'z = z̄ means x + iy = x − iy, so 2iy = 0, thus y = 0 and z is real.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',

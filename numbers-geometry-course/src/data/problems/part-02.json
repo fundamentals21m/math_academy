@@ -1,0 +1,144 @@
+{
+  "partId": 2,
+  "partTitle": "Geometry",
+  "textbookChapter": "Part 2",
+  "sections": [
+    {
+      "sectionId": 10,
+      "sectionTitle": "Geometry",
+      "textbookSection": "Section 10",
+      "examples": [
+        {
+          "id": "ex-2-10-1",
+          "type": "example",
+          "title": "Pythagorean Theorem",
+          "statement": "Prove the Pythagorean theorem using similar triangles.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Drop altitude",
+                "content": "In right triangle $ABC$ with right angle at $C$, drop altitude $CD$ to hypotenuse $AB$."
+              },
+              {
+                "title": "Similar triangles",
+                "content": "$\\triangle ACD \\sim \\triangle ABC$: $\\frac{AC}{AB} = \\frac{AD}{AC}$, so $AC^2 = AB \\cdot AD$\n$\\triangle BCD \\sim \\triangle ABC$: $\\frac{BC}{AB} = \\frac{BD}{BC}$, so $BC^2 = AB \\cdot BD$"
+              },
+              {
+                "title": "Add equations",
+                "content": "$AC^2 + BC^2 = AB(AD + BD) = AB \\cdot AB = AB^2$"
+              }
+            ],
+            "conclusion": "$a^2 + b^2 = c^2$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-10-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "A ladder 10 feet long leans against a wall. If the base is 6 feet from the wall, how high up the wall does the ladder reach?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Pythagorean theorem",
+                "content": "$6^2 + h^2 = 10^2$\n$36 + h^2 = 100$\n$h^2 = 64$"
+              }
+            ],
+            "conclusion": "$h = 8$ feet"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 11,
+      "sectionTitle": "Polygons and Circles",
+      "textbookSection": "Section 11",
+      "examples": [
+        {
+          "id": "ex-2-11-1",
+          "type": "example",
+          "title": "Inscribed Angle Theorem",
+          "statement": "Prove that an inscribed angle is half the central angle subtending the same arc.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Case 1: Center on side",
+                "content": "If center $O$ lies on one side of the inscribed angle at $A$, form isosceles triangle $OAB$.\nExternal angle at $O$ equals $2 \\angle A$."
+              },
+              {
+                "title": "General case",
+                "content": "Draw diameter through $A$, splitting the inscribed angle into two parts.\nEach part is half its corresponding central angle."
+              }
+            ],
+            "conclusion": "Inscribed angle = $\\frac{1}{2}$ central angle."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-11-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "An inscribed angle subtends an arc of $120°$. What is the measure of the inscribed angle?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply theorem",
+                "content": "The central angle equals the arc measure: $120°$.\nThe inscribed angle is half the central angle."
+              }
+            ],
+            "conclusion": "Inscribed angle $= \\frac{120°}{2} = 60°$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 14,
+      "sectionTitle": "Constructibility",
+      "textbookSection": "Section 14",
+      "examples": [
+        {
+          "id": "ex-2-14-1",
+          "type": "example",
+          "title": "Constructible Numbers",
+          "statement": "Show that $\\sqrt{2}$ is constructible with compass and straightedge.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Construction",
+                "content": "1. Draw a unit segment $OA$\n2. Construct a perpendicular at $A$\n3. Mark point $B$ on the perpendicular with $AB = 1$"
+              },
+              {
+                "title": "Apply Pythagorean theorem",
+                "content": "$OB = \\sqrt{OA^2 + AB^2} = \\sqrt{1 + 1} = \\sqrt{2}$"
+              }
+            ],
+            "conclusion": "$\\sqrt{2}$ is constructible as a diagonal of a unit square."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "2-14-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Explain why $\\sqrt[3]{2}$ is not constructible.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Field theory",
+                "content": "Constructible numbers form a field closed under square roots.\nStarting from $\\mathbb{Q}$, each construction extends by degree 2."
+              },
+              {
+                "title": "Degree argument",
+                "content": "$[\\mathbb{Q}(\\sqrt[3]{2}):\\mathbb{Q}] = 3$ (since $x^3 - 2$ is irreducible).\n3 is not a power of 2."
+              }
+            ],
+            "conclusion": "Since 3 is not a power of 2, $\\sqrt[3]{2}$ is not constructible."
+          }
+        }
+      ]
+    }
+  ]
+}

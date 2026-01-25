@@ -64,10 +64,10 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'Because $s_i$ is encrypted',
       'Because $\\lambda_i$ hides the value',
-      'Because the random nonce share $k_i$ masks the key share contribution',
       'Because the challenge $c$ is secret',
+      'Because the random nonce share $k_i$ masks the key share contribution',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The random nonce share $k_i$ acts as a one-time pad, masking the contribution $s_i \\cdot \\lambda_i \\cdot c$. An observer seeing $z_i$ cannot extract $s_i$ without knowing $k_i$.',
   },

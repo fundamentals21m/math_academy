@@ -6,10 +6,26 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The hyperbolic sine is defined as:',
     options: [
-      '$\\sinh x = \\frac{e^x - e^{-x}}{2}$',
-      '$\\sinh x = \\frac{e^x + e^{-x}}{2}$',
-      '$\\sinh x = e^x - 1$',
-      '$\\sinh x = \\ln(\\sin x)$'
+      '$\\sinh x = \\frac{e^x + e^{-x}}{2}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\sinh x = \\frac{e^x - e^{-x}}{2}$.',
+  },
+      '$\\sinh x = e^x - 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\sinh x = \\frac{e^x - e^{-x}}{2}$.',
+  },
+      '$\\sinh x = \\ln(\\sin x)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\sinh x = \\frac{e^x - e^{-x}}{2}$.',
+  },
+      '$\\sinh x = \\frac{e^x - e^{-x}}{2}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\sinh x = \\frac{e^x - e^{-x}}{2}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

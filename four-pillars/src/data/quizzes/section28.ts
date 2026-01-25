@@ -6,10 +6,26 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cauchy-Schwarz inequality states:',
     options: [
-      '$|\\mathbf{u} \\cdot \\mathbf{v}| = |\\mathbf{u}||\\mathbf{v}|$',
-      '$\\mathbf{u} \\cdot \\mathbf{v} = 0$',
-      '$|\\mathbf{u} \\cdot \\mathbf{v}| \\geq |\\mathbf{u}||\\mathbf{v}|$',
-      '$|\\mathbf{u} \\cdot \\mathbf{v}| \\leq |\\mathbf{u}||\\mathbf{v}|$'
+      '$|\\mathbf{u} \\cdot \\mathbf{v}| \\leq |\\mathbf{u}||\\mathbf{v}|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The absolute value of the inner product is at most the product of lengths.',
+  },
+      '$|\\mathbf{u} \\cdot \\mathbf{v}| = |\\mathbf{u}||\\mathbf{v}|
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The absolute value of the inner product is at most the product of lengths.',
+  },
+      '$\\mathbf{u} \\cdot \\mathbf{v} = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The absolute value of the inner product is at most the product of lengths.',
+  },
+      '$|\\mathbf{u} \\cdot \\mathbf{v}| \\geq |\\mathbf{u}||\\mathbf{v}|
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The absolute value of the inner product is at most the product of lengths.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -132,12 +148,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The algebraic proof of Cauchy-Schwarz uses the fact that (u + xv)·(u + xv) ≥ 0 is a quadratic in x with:',
     options: [
+      'All of the above',
       'Non-positive discriminant',
       'Positive leading coefficient',
-      'All of the above',
       'No real roots when u ≠ 0, v ≠ 0',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'A non-negative quadratic with positive leading coefficient has discriminant ≤ 0.',
   },

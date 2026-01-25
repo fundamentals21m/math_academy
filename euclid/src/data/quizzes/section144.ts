@@ -9,7 +9,7 @@ export const section144Questions: QuizQuestion[] = [
       'If A:B = C:D with A greatest and D least, then A + D > B + C',
       'All proportional magnitudes are equal',
       'The means exceed the extremes',
-      'Proportions have no order'
+      'Proportions have no order',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -22,10 +22,10 @@ export const section144Questions: QuizQuestion[] = [
     options: [
       '12 + 4 < 8 + 6',
       '12 + 4 = 8 + 6',
-      'We cannot compare',
       '12 + 4 > 8 + 6',
+      'We cannot compare',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Extremes: 12 + 4 = 16. Means: 8 + 6 = 14. Indeed, 16 > 14.',
   },
@@ -36,10 +36,10 @@ export const section144Questions: QuizQuestion[] = [
     options: [
       'Proportions are meaningless',
       'All of Book V was unnecessary',
+      'Only integers can be proportional',
       'The theory of ratios connects to inequalities and has rich structural properties',
-      'Only integers can be proportional'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'V.25 demonstrates that proportions interact with inequalities in meaningful ways, showing the depth of Eudoxus\'s theory.',
   },

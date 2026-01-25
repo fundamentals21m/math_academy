@@ -87,11 +87,11 @@ export const section121Questions: QuizQuestion[] = [
     question: 'Which property of sets of content zero is used in extending integrability beyond continuous functions?',
     options: [
       'Every set of content zero is empty',
-      'Subsets of sets of content zero also have content zero',
       'Sets of content zero are always bounded',
-      'The union of infinitely many sets of content zero has content zero'
+      'Subsets of sets of content zero also have content zero',
+      'The union of infinitely many sets of content zero has content zero',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A key property is that every subset of a set of content zero also has content zero. Additionally, the finite union of bounded sets of content zero has content zero.',
   },

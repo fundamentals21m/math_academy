@@ -24,10 +24,10 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       'A cubic with no solutions',
       'A cubic with negative coefficients',
+      'A cubic that cannot be solved',
       'A cubic with no quadratic term',
-      'A cubic that cannot be solved'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'A depressed cubic has no $x^2$ term, taking the form $y^3 = py + q$. Any cubic can be transformed into this form by a linear substitution.',
   },
@@ -38,10 +38,26 @@ export const section22Questions: QuizQuestion[] = [
       'In Cardano\'s method, what substitution transforms $y^3 = py + q$ into a system?',
     difficulty: 'medium',
     options: [
-      '$y = u - v$',
-      '$y = u/v$',
-      '$y = uv$',
-      '$y = u + v$'
+      '$y = u - v
+    correctIndex: 2,
+    explanation:
+      'Setting $y = u + v$ and expanding gives $y^3 = u^3 + v^3 + 3uv(u + v) = u^3 + v^3 + 3uvy$. Comparing coefficients yields $3uv = p$ and $u^3 + v^3 = q$.',
+  },
+      '$y = u/v
+    correctIndex: 3,
+    explanation:
+      'Setting $y = u + v$ and expanding gives $y^3 = u^3 + v^3 + 3uv(u + v) = u^3 + v^3 + 3uvy$. Comparing coefficients yields $3uv = p$ and $u^3 + v^3 = q$.',
+  },
+      '$y = u + v
+    correctIndex: 3,
+    explanation:
+      'Setting $y = u + v$ and expanding gives $y^3 = u^3 + v^3 + 3uv(u + v) = u^3 + v^3 + 3uvy$. Comparing coefficients yields $3uv = p$ and $u^3 + v^3 = q$.',
+  },
+      '$y = uv
+    correctIndex: 3,
+    explanation:
+      'Setting $y = u + v$ and expanding gives $y^3 = u^3 + v^3 + 3uv(u + v) = u^3 + v^3 + 3uvy$. Comparing coefficients yields $3uv = p$ and $u^3 + v^3 = q$.',
+  },
     ],
     correctIndex: 3,
     explanation:
@@ -54,12 +70,12 @@ export const section22Questions: QuizQuestion[] = [
       'Viete\'s trigonometric solution shows that solving the cubic $4y^3 - 3y = c$ is equivalent to:',
     difficulty: 'medium',
     options: [
-      'Trisecting an angle',
       'Finding a square root',
       'Doubling a cube',
-      'Squaring a circle'
+      'Trisecting an angle',
+      'Squaring a circle',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     explanation:
       'Since $4\\cos^3\\theta - 3\\cos\\theta = \\cos 3\\theta$, setting $y = \\cos\\theta$ converts the cubic into $\\cos 3\\theta = c$. Solving requires trisecting the angle $\\cos^{-1}(c)$.',
   },
@@ -80,12 +96,12 @@ export const section22Questions: QuizQuestion[] = [
       'The solution of the cubic was described by Cardano as:',
     difficulty: 'hard',
     options: [
-      'A minor improvement over Greek methods',
       'A truly celestial gift surpassing mortal talent',
+      'A minor improvement over Greek methods',
       'An obvious extension of quadratic methods',
       'A simple algebraic trick',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'Cardano wrote that the solution "surpasses all human subtlety and the perspicuity of mortal talent and is a truly celestial gift." It was the first major advance in mathematics since ancient Greece.',
   },

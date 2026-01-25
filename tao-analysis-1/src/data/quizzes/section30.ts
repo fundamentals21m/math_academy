@@ -6,10 +6,18 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $a_n \\geq 0$ for all $n$, then $\\sum_{n=1}^{\\infty} a_n$ converges if and only if:',
     options: [
-      'There exists $M$ such that $a_n < M$ for all $n$',
-      '$a_n \\to 0$',
+      'There exists $M$ such that $a_n < M$ for all $n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For non-negative terms, partial sums form an increasing sequence. An increasing sequence converges iff it is bounded above (monotone convergence theorem).',
+  },
+      '$a_n \\to 0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'For non-negative terms, partial sums form an increasing sequence. An increasing sequence converges iff it is bounded above (monotone convergence theorem).',
+  },
+      'The partial sums are bounded above',
       'The sequence $(a_n)$ is decreasing',
-      'The partial sums are bounded above'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -92,11 +100,11 @@ export const section30Questions: QuizQuestion[] = [
     question: 'For non-negative terms, if $\\sum a_n$ converges then:',
     options: [
       'Only finitely many rearrangements converge',
-      'Rearrangements may converge to different values',
       'Any rearrangement of the series also converges to the same sum',
+      'Rearrangements may converge to different values',
       'Rearrangements may diverge',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For series of non-negative terms, rearrangement does not affect convergence or the sum. This is because all partial sums remain bounded by the original sum.',
   },

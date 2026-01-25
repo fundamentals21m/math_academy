@@ -36,10 +36,22 @@ export const section150Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ is a finitely additive set function and $\\varnothing$ is in the Boolean algebra, what is $f(\\varnothing)$?',
     options: [
-      '$0$',
-      '$-1$',
-      '$1$',
-      'Undefined'
+      '$-1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Since $A = A \\cup \\varnothing$ with $A$ and $\\varnothing$ disjoint, we have $f(A) = f(A) + f(\\varnothing)$, which implies $f(\\varnothing) = 0$.',
+  },
+      '$1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Since $A = A \\cup \\varnothing$ with $A$ and $\\varnothing$ disjoint, we have $f(A) = f(A) + f(\\varnothing)$, which implies $f(\\varnothing) = 0$.',
+  },
+      'Undefined',
+      '$0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Since $A = A \\cup \\varnothing$ with $A$ and $\\varnothing$ disjoint, we have $f(A) = f(A) + f(\\varnothing)$, which implies $f(\\varnothing) = 0$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -80,12 +92,12 @@ export const section150Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Boolean algebra $\\mathscr{B}$ of subsets of $S$ must be closed under which operations?',
     options: [
+      'Complementation and union',
       'Union only',
       'Complementation only',
-      'Complementation and union',
-      'Intersection only'
+      'Intersection only',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A Boolean algebra is defined as a nonempty collection closed under complementation and union. Closure under intersection and set difference then follows from these properties.',
   },

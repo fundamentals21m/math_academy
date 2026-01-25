@@ -11,10 +11,10 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'How to calculate the area of a circle',
       'How to construct a regular heptagon',
-      'How to measure the distance to the Sun',
       'How to determine the ratio of gold to silver in an alloy',
+      'How to measure the distance to the Sun',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Archimedes discovered that by immersing an object in water and measuring the displaced volume, he could determine its composition. This allowed him to tell King Hieron whether a goldsmith had cheated him.',
@@ -24,12 +24,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What bounds did Archimedes establish for the value of π using 96-sided polygons?',
     options: [
-      '3 10/71 < π < 3 1/7',
       '3 < π < 4',
       '3.14 < π < 3.15',
+      '3 10/71 < π < 3 1/7',
       '22/7 < π < 25/8',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'By inscribing and circumscribing 96-gons around a circle, Archimedes proved that 3 10/71 < π < 3 1/7 (approximately 3.1408 to 3.1429). This was the first rigorous bounding of π.',
@@ -39,12 +39,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What ancient mathematical technique, used by Archimedes to prove the area of a circle equals πr², was a precursor to integral calculus?',
     options: [
-      'The method of tangents',
       'The method of exhaustion',
+      'The method of tangents',
       'The method of fluxions',
       'The method of indivisibles',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The method of exhaustion uses a proof by contradiction: if the area is greater than πr², we get a contradiction; if less, another contradiction. By the Law of Excluded Middle, they must be equal.',
@@ -54,12 +54,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When was Archimedes\'s Cattle Problem finally solved?',
     options: [
-      '1965, using a computer',
       '1868, when Beltrami published his work',
+      '1965, using a computer',
       '1899, when Hilbert axiomatized geometry',
       '1906, when the Method was rediscovered',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Cattle Problem was so difficult that it wasn\'t solved until 1965, when H.C. Williams, R.A. German, and C.R. Zarnke used a computer. The answer has 206,545 digits!',
@@ -84,12 +84,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Archimedes\'s Principle, what force does a body immersed in fluid experience?',
     options: [
+      'An upward buoyant force equal to the weight of fluid displaced',
       'A downward force equal to its weight',
       'A horizontal force proportional to its velocity',
-      'An upward buoyant force equal to the weight of fluid displaced',
       'A force inversely proportional to its density',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Archimedes\'s Principle states that a body immersed in fluid experiences an upward buoyant force equal to the weight of the fluid it displaces. This is the foundation of hydrostatics.',
@@ -115,11 +115,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'How did Archimedes die?',
     options: [
       'He died peacefully of old age in Alexandria',
-      'He was executed by King Hieron for treason',
       'He was killed by a Roman soldier when Syracuse fell',
+      'He was executed by King Hieron for treason',
       'He drowned in his bath during an experiment',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'When Syracuse fell to the Romans in 212 BC, Archimedes was killed by an unknown soldier, despite orders from General Marcellus to bring him unharmed. Plutarch recorded the story in his biography of Marcellus.',

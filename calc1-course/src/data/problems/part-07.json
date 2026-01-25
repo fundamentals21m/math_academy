@@ -1,0 +1,744 @@
+{
+  "partId": 8,
+  "partTitle": "Polynomial Approximations to Functions",
+  "textbookChapter": "Chapter 7",
+  "sections": [
+    {
+      "sectionId": 46,
+      "sectionTitle": "Introduction to Taylor Polynomials",
+      "textbookSection": "I 7.1-7.3",
+      "examples": [
+        {
+          "id": "ex-8-46-1",
+          "type": "example",
+          "title": "Taylor Polynomial of e^x",
+          "statement": "Find the Taylor polynomial of degree $n$ for $f(x) = e^x$ centered at $a = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Derivatives",
+                "content": "For $f(x) = e^x$, all derivatives are the same:\n$$f^{(k)}(x) = e^x$$\n\nAt $x = 0$: $f^{(k)}(0) = e^0 = 1$ for all $k$."
+              },
+              {
+                "title": "Write the Taylor Polynomial",
+                "content": "The Taylor polynomial of degree $n$ centered at $a = 0$ (Maclaurin polynomial) is:\n$$T_n(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(0)}{k!}x^k = \\sum_{k=0}^{n} \\frac{x^k}{k!}$$"
+              },
+              {
+                "title": "Expand",
+                "content": "$$T_n(x) = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\cdots + \\frac{x^n}{n!}$$"
+              }
+            ],
+            "conclusion": "$T_n(x) = \\sum_{k=0}^{n} \\frac{x^k}{k!} = 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots + \\frac{x^n}{n!}$"
+          }
+        },
+        {
+          "id": "ex-8-46-2",
+          "type": "example",
+          "title": "Taylor Polynomial of sin x",
+          "statement": "Find the Taylor polynomial of degree 5 for $f(x) = \\sin x$ centered at $a = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Derivatives at 0",
+                "content": "$f(x) = \\sin x \\Rightarrow f(0) = 0$\n$f'(x) = \\cos x \\Rightarrow f'(0) = 1$\n$f''(x) = -\\sin x \\Rightarrow f''(0) = 0$\n$f'''(x) = -\\cos x \\Rightarrow f'''(0) = -1$\n$f^{(4)}(x) = \\sin x \\Rightarrow f^{(4)}(0) = 0$\n$f^{(5)}(x) = \\cos x \\Rightarrow f^{(5)}(0) = 1$"
+              },
+              {
+                "title": "Write the Taylor Polynomial",
+                "content": "$$T_5(x) = 0 + 1 \\cdot x + 0 \\cdot \\frac{x^2}{2!} + (-1) \\cdot \\frac{x^3}{3!} + 0 \\cdot \\frac{x^4}{4!} + 1 \\cdot \\frac{x^5}{5!}$$"
+              },
+              {
+                "title": "Simplify",
+                "content": "$$T_5(x) = x - \\frac{x^3}{6} + \\frac{x^5}{120}$$"
+              }
+            ],
+            "conclusion": "$T_5(x) = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} = x - \\frac{x^3}{6} + \\frac{x^5}{120}$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-46-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find the Taylor polynomial of degree 4 for $f(x) = \\cos x$ centered at $a = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Derivatives at 0",
+                "content": "$f(0) = 1$, $f'(0) = 0$, $f''(0) = -1$, $f'''(0) = 0$, $f^{(4)}(0) = 1$"
+              },
+              {
+                "title": "Form the Polynomial",
+                "content": "$T_4(x) = 1 + 0 + \\frac{-1}{2!}x^2 + 0 + \\frac{1}{4!}x^4 = 1 - \\frac{x^2}{2} + \\frac{x^4}{24}$"
+              }
+            ],
+            "conclusion": "$T_4(x) = 1 - \\frac{x^2}{2} + \\frac{x^4}{24}$"
+          }
+        },
+        {
+          "id": "8-46-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Find the Taylor polynomial of degree 3 for $f(x) = \\ln(1+x)$ centered at $a = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Derivatives",
+                "content": "$f(x) = \\ln(1+x) \\Rightarrow f(0) = 0$\n$f'(x) = \\frac{1}{1+x} \\Rightarrow f'(0) = 1$\n$f''(x) = -\\frac{1}{(1+x)^2} \\Rightarrow f''(0) = -1$\n$f'''(x) = \\frac{2}{(1+x)^3} \\Rightarrow f'''(0) = 2$"
+              },
+              {
+                "title": "Form the Polynomial",
+                "content": "$T_3(x) = 0 + x + \\frac{-1}{2}x^2 + \\frac{2}{6}x^3 = x - \\frac{x^2}{2} + \\frac{x^3}{3}$"
+              }
+            ],
+            "conclusion": "$T_3(x) = x - \\frac{x^2}{2} + \\frac{x^3}{3}$"
+          }
+        },
+        {
+          "id": "8-46-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Find the Taylor polynomial of degree 2 for $f(x) = \\sqrt{1+x}$ centered at $a = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Derivatives",
+                "content": "$f(x) = (1+x)^{1/2} \\Rightarrow f(0) = 1$\n$f'(x) = \\frac{1}{2}(1+x)^{-1/2} \\Rightarrow f'(0) = \\frac{1}{2}$\n$f''(x) = -\\frac{1}{4}(1+x)^{-3/2} \\Rightarrow f''(0) = -\\frac{1}{4}$"
+              },
+              {
+                "title": "Form the Polynomial",
+                "content": "$T_2(x) = 1 + \\frac{1}{2}x + \\frac{-1/4}{2}x^2 = 1 + \\frac{x}{2} - \\frac{x^2}{8}$"
+              }
+            ],
+            "conclusion": "$T_2(x) = 1 + \\frac{x}{2} - \\frac{x^2}{8}$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 47,
+      "sectionTitle": "Taylor's Formula with Remainder",
+      "textbookSection": "I 7.4-7.7",
+      "examples": [
+        {
+          "id": "ex-8-47-1",
+          "type": "example",
+          "title": "Lagrange Form of the Remainder",
+          "statement": "State Taylor's theorem with the Lagrange form of the remainder and explain its significance.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Taylor's Theorem Statement",
+                "content": "If $f$ has $n+1$ continuous derivatives on an interval containing $a$ and $x$, then:\n$$f(x) = T_n(x) + R_n(x)$$\nwhere $T_n(x)$ is the Taylor polynomial of degree $n$ centered at $a$."
+              },
+              {
+                "title": "Lagrange Form of Remainder",
+                "content": "The remainder $R_n(x)$ can be written as:\n$$R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$\nfor some $c$ between $a$ and $x$."
+              },
+              {
+                "title": "Significance",
+                "content": "This allows us to bound the error in approximating $f(x)$ by $T_n(x)$:\n$$|R_n(x)| \\leq \\frac{M}{(n+1)!}|x-a|^{n+1}$$\nwhere $M$ is a bound on $|f^{(n+1)}|$ in the interval."
+              }
+            ],
+            "conclusion": "Taylor's theorem gives both the polynomial approximation and a precise error estimate."
+          }
+        },
+        {
+          "id": "ex-8-47-2",
+          "type": "example",
+          "title": "Error Bound for e^x Approximation",
+          "statement": "Use Taylor's theorem to estimate the error when $e^{0.1}$ is approximated by $1 + 0.1 + \\frac{(0.1)^2}{2}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Identify the Approximation",
+                "content": "We're using $T_2(0.1) = 1 + 0.1 + 0.005 = 1.105$ to approximate $e^{0.1}$."
+              },
+              {
+                "title": "Apply the Error Formula",
+                "content": "$$R_2(0.1) = \\frac{e^c}{3!}(0.1)^3$$\nfor some $c$ between 0 and 0.1."
+              },
+              {
+                "title": "Bound the Error",
+                "content": "Since $e^c < e^{0.1} < e < 3$ for $0 < c < 0.1$:\n$$|R_2(0.1)| < \\frac{3}{6}(0.001) = 0.0005$$"
+              },
+              {
+                "title": "Conclusion",
+                "content": "The approximation $e^{0.1} \\approx 1.105$ is accurate to within 0.0005.\n\n(Actual: $e^{0.1} \\approx 1.10517$)"
+              }
+            ],
+            "conclusion": "The error is at most 0.0005, so $e^{0.1} \\approx 1.105$ is correct to 3 decimal places."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-47-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use the Taylor polynomial of degree 3 to approximate $\\sin(0.1)$ and bound the error.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Taylor Polynomial",
+                "content": "$T_3(x) = x - \\frac{x^3}{6}$ for $\\sin x$ at $a = 0$.\n\n$T_3(0.1) = 0.1 - \\frac{0.001}{6} \\approx 0.0998333$"
+              },
+              {
+                "title": "Remainder Bound",
+                "content": "$R_3(x) = \\frac{f^{(4)}(c)}{4!}x^4 = \\frac{\\sin c}{24}(0.1)^4$\n\nSince $|\\sin c| \\leq 1$:\n$|R_3(0.1)| \\leq \\frac{1}{24}(0.0001) < 0.0000042$"
+              }
+            ],
+            "conclusion": "$\\sin(0.1) \\approx 0.0998333$ with error less than $5 \\times 10^{-6}$"
+          }
+        },
+        {
+          "id": "8-47-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "How many terms of the Maclaurin series for $e^x$ are needed to compute $e^1$ accurate to 5 decimal places?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Error Requirement",
+                "content": "We need $|R_n(1)| < 0.000005 = 5 \\times 10^{-6}$"
+              },
+              {
+                "title": "Remainder Formula",
+                "content": "$|R_n(1)| = \\frac{e^c}{(n+1)!} < \\frac{3}{(n+1)!}$ (since $e < 3$)"
+              },
+              {
+                "title": "Find n",
+                "content": "$\\frac{3}{(n+1)!} < 5 \\times 10^{-6}$\n\n$(n+1)! > 600000$\n\n$9! = 362880$, $10! = 3628800$\n\nSo $n + 1 = 10$, meaning $n = 9$."
+              }
+            ],
+            "conclusion": "We need 10 terms (through $x^9/9!$) for 5 decimal place accuracy."
+          }
+        },
+        {
+          "id": "8-47-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Find the Taylor polynomial of degree 2 for $f(x) = e^x$ centered at $a = 1$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Derivatives at a = 1",
+                "content": "$f(1) = e$, $f'(1) = e$, $f''(1) = e$"
+              },
+              {
+                "title": "Form the Polynomial",
+                "content": "$T_2(x) = e + e(x-1) + \\frac{e}{2}(x-1)^2$\n\n$= e\\left[1 + (x-1) + \\frac{(x-1)^2}{2}\\right]$"
+              }
+            ],
+            "conclusion": "$T_2(x) = e\\left[1 + (x-1) + \\frac{(x-1)^2}{2}\\right]$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 48,
+      "sectionTitle": "Big O and Little o Notation",
+      "textbookSection": "I 7.8-7.10",
+      "examples": [
+        {
+          "id": "ex-8-48-1",
+          "type": "example",
+          "title": "Definition and Examples of Big O",
+          "statement": "Define big O notation and show that $\\sin x = x + O(x^3)$ as $x \\to 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definition of Big O",
+                "content": "We write $f(x) = O(g(x))$ as $x \\to a$ if there exist constants $M > 0$ and $\\delta > 0$ such that:\n$$|f(x)| \\leq M|g(x)|$$\nfor all $x$ with $0 < |x - a| < \\delta$."
+              },
+              {
+                "title": "Taylor Expansion of sin x",
+                "content": "$\\sin x = x - \\frac{x^3}{6} + \\frac{x^5}{120} - \\cdots$\n\nSo $\\sin x - x = -\\frac{x^3}{6} + \\frac{x^5}{120} - \\cdots$"
+              },
+              {
+                "title": "Show sin x - x = O(x³)",
+                "content": "By Taylor's theorem:\n$\\sin x - x = -\\frac{\\cos c}{6}x^3$ for some $c$ between 0 and $x$.\n\nSince $|\\cos c| \\leq 1$:\n$|\\sin x - x| \\leq \\frac{|x|^3}{6}$"
+              },
+              {
+                "title": "Conclusion",
+                "content": "Thus $\\sin x - x = O(x^3)$, or equivalently $\\sin x = x + O(x^3)$."
+              }
+            ],
+            "conclusion": "$\\sin x = x + O(x^3)$ as $x \\to 0$, meaning the error in approximating $\\sin x$ by $x$ is bounded by a constant times $|x|^3$."
+          }
+        },
+        {
+          "id": "ex-8-48-2",
+          "type": "example",
+          "title": "Little o Notation",
+          "statement": "Define little o notation and show that $\\cos x - 1 = o(x)$ as $x \\to 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definition of Little o",
+                "content": "We write $f(x) = o(g(x))$ as $x \\to a$ if:\n$$\\lim_{x \\to a} \\frac{f(x)}{g(x)} = 0$$\n\nThis means $f$ grows slower than $g$."
+              },
+              {
+                "title": "Apply to cos x - 1",
+                "content": "We need to show $\\lim_{x \\to 0} \\frac{\\cos x - 1}{x} = 0$."
+              },
+              {
+                "title": "Evaluate the Limit",
+                "content": "Using the Taylor expansion $\\cos x = 1 - \\frac{x^2}{2} + O(x^4)$:\n\n$\\frac{\\cos x - 1}{x} = \\frac{-\\frac{x^2}{2} + O(x^4)}{x} = -\\frac{x}{2} + O(x^3) \\to 0$"
+              }
+            ],
+            "conclusion": "$\\cos x - 1 = o(x)$ as $x \\to 0$. In fact, $\\cos x - 1 = O(x^2)$, which is a stronger statement."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-48-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Show that $e^x = 1 + x + O(x^2)$ as $x \\to 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Taylor Expansion",
+                "content": "$e^x = 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$\n\nSo $e^x - 1 - x = \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$"
+              },
+              {
+                "title": "Bound the Remainder",
+                "content": "By Taylor's theorem: $|e^x - 1 - x| = \\frac{e^c}{2}x^2$ for some $c$ between 0 and $x$.\n\nFor $|x| < 1$: $|e^x - 1 - x| \\leq \\frac{e}{2}x^2$"
+              }
+            ],
+            "conclusion": "$e^x - 1 - x = O(x^2)$, so $e^x = 1 + x + O(x^2)$"
+          }
+        },
+        {
+          "id": "8-48-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Determine whether $x^2 = o(x)$ or $x^2 = O(x)$ as $x \\to 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Little o",
+                "content": "$\\lim_{x \\to 0} \\frac{x^2}{x} = \\lim_{x \\to 0} x = 0$\n\nSo $x^2 = o(x)$ as $x \\to 0$."
+              },
+              {
+                "title": "Note on Big O",
+                "content": "Since $x^2 = o(x)$, it follows that $x^2 = O(x)$ as well.\n\n(Little o implies Big O, but not conversely.)"
+              }
+            ],
+            "conclusion": "$x^2 = o(x)$ as $x \\to 0$ (and therefore also $x^2 = O(x)$)"
+          }
+        },
+        {
+          "id": "8-48-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Write $\\ln(1+x) = x + O(x^2)$ and verify this relationship.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Taylor Expansion",
+                "content": "$\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots$\n\nSo $\\ln(1+x) - x = -\\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots$"
+              },
+              {
+                "title": "Verify O(x²)",
+                "content": "$\\left|\\frac{\\ln(1+x) - x}{x^2}\\right| = \\left|-\\frac{1}{2} + \\frac{x}{3} - \\cdots\\right|$\n\nAs $x \\to 0$, this approaches $\\frac{1}{2}$, which is bounded."
+              }
+            ],
+            "conclusion": "$\\ln(1+x) = x + O(x^2)$ since $|\\ln(1+x) - x| \\leq C|x|^2$ near 0"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 49,
+      "sectionTitle": "L'Hôpital's Rule",
+      "textbookSection": "I 7.11-7.14",
+      "examples": [
+        {
+          "id": "ex-8-49-1",
+          "type": "example",
+          "title": "Basic Application of L'Hôpital's Rule",
+          "statement": "Evaluate $\\lim_{x \\to 0} \\frac{\\sin x}{x}$ using L'Hôpital's rule.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check the Indeterminate Form",
+                "content": "As $x \\to 0$: $\\sin x \\to 0$ and $x \\to 0$.\n\nThis is the indeterminate form $\\frac{0}{0}$."
+              },
+              {
+                "title": "Apply L'Hôpital's Rule",
+                "content": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = \\lim_{x \\to 0} \\frac{\\frac{d}{dx}[\\sin x]}{\\frac{d}{dx}[x]} = \\lim_{x \\to 0} \\frac{\\cos x}{1}$$"
+              },
+              {
+                "title": "Evaluate",
+                "content": "$$= \\cos 0 = 1$$"
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$"
+          }
+        },
+        {
+          "id": "ex-8-49-2",
+          "type": "example",
+          "title": "Repeated Application",
+          "statement": "Evaluate $\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Form",
+                "content": "As $x \\to 0$: numerator $\\to e^0 - 1 - 0 = 0$ and denominator $\\to 0$.\n\nForm: $\\frac{0}{0}$"
+              },
+              {
+                "title": "First Application",
+                "content": "$$\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2} = \\lim_{x \\to 0} \\frac{e^x - 1}{2x}$$\n\nStill $\\frac{0}{0}$."
+              },
+              {
+                "title": "Second Application",
+                "content": "$$= \\lim_{x \\to 0} \\frac{e^x}{2} = \\frac{1}{2}$$"
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 0} \\frac{e^x - 1 - x}{x^2} = \\frac{1}{2}$"
+          }
+        },
+        {
+          "id": "ex-8-49-3",
+          "type": "example",
+          "title": "Infinity Over Infinity Form",
+          "statement": "Evaluate $\\lim_{x \\to \\infty} \\frac{\\ln x}{x}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Form",
+                "content": "As $x \\to \\infty$: $\\ln x \\to \\infty$ and $x \\to \\infty$.\n\nForm: $\\frac{\\infty}{\\infty}$"
+              },
+              {
+                "title": "Apply L'Hôpital's Rule",
+                "content": "$$\\lim_{x \\to \\infty} \\frac{\\ln x}{x} = \\lim_{x \\to \\infty} \\frac{1/x}{1} = \\lim_{x \\to \\infty} \\frac{1}{x} = 0$$"
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to \\infty} \\frac{\\ln x}{x} = 0$ (logarithms grow slower than polynomials)"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-49-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Evaluate $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$ using L'Hôpital's rule.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check Form and Apply Twice",
+                "content": "$\\frac{0}{0}$ form. Apply L'Hôpital's:\n\n$\\lim_{x \\to 0} \\frac{\\sin x}{2x}$ (still $\\frac{0}{0}$)\n\n$= \\lim_{x \\to 0} \\frac{\\cos x}{2} = \\frac{1}{2}$"
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} = \\frac{1}{2}$"
+          }
+        },
+        {
+          "id": "8-49-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Evaluate $\\lim_{x \\to 0^+} x \\ln x$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Rewrite as a Quotient",
+                "content": "Form: $0 \\cdot (-\\infty)$. Rewrite:\n$x \\ln x = \\frac{\\ln x}{1/x}$ which is $\\frac{-\\infty}{\\infty}$"
+              },
+              {
+                "title": "Apply L'Hôpital's Rule",
+                "content": "$\\lim_{x \\to 0^+} \\frac{\\ln x}{1/x} = \\lim_{x \\to 0^+} \\frac{1/x}{-1/x^2} = \\lim_{x \\to 0^+} (-x) = 0$"
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 0^+} x \\ln x = 0$"
+          }
+        },
+        {
+          "id": "8-49-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Evaluate $\\lim_{x \\to \\infty} \\frac{x^2}{e^x}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply L'Hôpital's Rule Twice",
+                "content": "$\\frac{\\infty}{\\infty}$ form.\n\n$\\lim \\frac{x^2}{e^x} = \\lim \\frac{2x}{e^x}$ (still $\\frac{\\infty}{\\infty}$)\n\n$= \\lim \\frac{2}{e^x} = 0$"
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to \\infty} \\frac{x^2}{e^x} = 0$ (exponentials grow faster than polynomials)"
+          }
+        },
+        {
+          "id": "8-49-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Evaluate $\\lim_{x \\to 0} \\frac{\\tan x - x}{x^3}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply L'Hôpital's Rule",
+                "content": "$\\frac{0}{0}$ form.\n\n$\\lim \\frac{\\sec^2 x - 1}{3x^2} = \\lim \\frac{\\tan^2 x}{3x^2}$"
+              },
+              {
+                "title": "Use Known Limit",
+                "content": "$= \\frac{1}{3} \\lim_{x \\to 0} \\left(\\frac{\\tan x}{x}\\right)^2 = \\frac{1}{3} \\cdot 1^2 = \\frac{1}{3}$"
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 0} \\frac{\\tan x - x}{x^3} = \\frac{1}{3}$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 50,
+      "sectionTitle": "Other Forms of Taylor's Formula",
+      "textbookSection": "I 7.15-7.17",
+      "examples": [
+        {
+          "id": "ex-8-50-1",
+          "type": "example",
+          "title": "Integral Form of Remainder",
+          "statement": "State the integral form of the remainder in Taylor's theorem.",
+          "solution": {
+            "steps": [
+              {
+                "title": "The Integral Remainder",
+                "content": "An alternative to the Lagrange form is the integral form:\n$$R_n(x) = \\frac{1}{n!}\\int_a^x (x-t)^n f^{(n+1)}(t)\\,dt$$"
+              },
+              {
+                "title": "Advantage",
+                "content": "This form doesn't require finding a mysterious point $c$. The remainder is expressed exactly as an integral."
+              },
+              {
+                "title": "Connection to Lagrange Form",
+                "content": "The Mean Value Theorem for Integrals shows that the integral equals:\n$$\\frac{f^{(n+1)}(c)}{n!} \\cdot \\frac{(x-a)^{n+1}}{n+1} = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$\nfor some $c$ between $a$ and $x$."
+              }
+            ],
+            "conclusion": "The integral form $R_n(x) = \\frac{1}{n!}\\int_a^x (x-t)^n f^{(n+1)}(t)\\,dt$ gives an exact expression for the error."
+          }
+        },
+        {
+          "id": "ex-8-50-2",
+          "type": "example",
+          "title": "Cauchy Form of Remainder",
+          "statement": "State the Cauchy form of the remainder and compare it to the Lagrange form.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Cauchy Form",
+                "content": "$$R_n(x) = \\frac{f^{(n+1)}(c)}{n!}(x-c)^n(x-a)$$\nfor some $c$ between $a$ and $x$."
+              },
+              {
+                "title": "Comparison with Lagrange",
+                "content": "Lagrange: $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$\n\nCauchy: $R_n(x) = \\frac{f^{(n+1)}(c)}{n!}(x-c)^n(x-a)$"
+              },
+              {
+                "title": "When Each is Useful",
+                "content": "The Cauchy form is sometimes easier to bound when the $(n+1)$-st derivative has special properties near $a$."
+              }
+            ],
+            "conclusion": "Different forms of the remainder are useful in different situations for bounding errors."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-50-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use the integral form to write the remainder $R_2(x)$ for $e^x$ centered at $a = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply the Formula",
+                "content": "For $f(x) = e^x$, we have $f^{(3)}(t) = e^t$.\n\n$R_2(x) = \\frac{1}{2!}\\int_0^x (x-t)^2 e^t\\,dt = \\frac{1}{2}\\int_0^x (x-t)^2 e^t\\,dt$"
+              },
+              {
+                "title": "Interpretation",
+                "content": "This integral gives the exact error when approximating $e^x$ by $1 + x + \\frac{x^2}{2}$."
+              }
+            ],
+            "conclusion": "$R_2(x) = \\frac{1}{2}\\int_0^x (x-t)^2 e^t\\,dt$"
+          }
+        },
+        {
+          "id": "8-50-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Show that for $f(x) = (1+x)^\\alpha$ with $\\alpha \\notin \\mathbb{Z}^+$, the Maclaurin series is the binomial series: $\\sum_{k=0}^\\infty \\binom{\\alpha}{k} x^k$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute Derivatives",
+                "content": "$f^{(k)}(x) = \\alpha(\\alpha-1)(\\alpha-2)\\cdots(\\alpha-k+1)(1+x)^{\\alpha-k}$\n\n$f^{(k)}(0) = \\alpha(\\alpha-1)\\cdots(\\alpha-k+1)$"
+              },
+              {
+                "title": "Form the Series",
+                "content": "Coefficient of $x^k$: $\\frac{f^{(k)}(0)}{k!} = \\frac{\\alpha(\\alpha-1)\\cdots(\\alpha-k+1)}{k!} = \\binom{\\alpha}{k}$"
+              },
+              {
+                "title": "The Binomial Series",
+                "content": "$(1+x)^\\alpha = \\sum_{k=0}^\\infty \\binom{\\alpha}{k} x^k$\n\nwhere $\\binom{\\alpha}{k} = \\frac{\\alpha!}{k!(\\alpha-k)!}$ is extended to non-integer $\\alpha$."
+              }
+            ],
+            "conclusion": "The binomial series $(1+x)^\\alpha = \\sum_{k=0}^\\infty \\binom{\\alpha}{k} x^k$ converges for $|x| < 1$."
+          }
+        },
+        {
+          "id": "8-50-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Find the Maclaurin series for $\\frac{1}{1+x}$ and determine its radius of convergence.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use the Binomial Series",
+                "content": "$\\frac{1}{1+x} = (1+x)^{-1}$\n\n$\\binom{-1}{k} = \\frac{(-1)(-2)\\cdots(-k)}{k!} = (-1)^k$"
+              },
+              {
+                "title": "Write the Series",
+                "content": "$\\frac{1}{1+x} = \\sum_{k=0}^\\infty (-1)^k x^k = 1 - x + x^2 - x^3 + \\cdots$"
+              },
+              {
+                "title": "Radius of Convergence",
+                "content": "The geometric series converges for $|x| < 1$."
+              }
+            ],
+            "conclusion": "$\\frac{1}{1+x} = \\sum_{k=0}^\\infty (-x)^k$ for $|x| < 1$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 51,
+      "sectionTitle": "Further Operations with Taylor Series",
+      "textbookSection": "I 7.18-7.20",
+      "examples": [
+        {
+          "id": "ex-8-51-1",
+          "type": "example",
+          "title": "Multiplication of Taylor Series",
+          "statement": "Find the first few terms of the Taylor series for $e^x \\sin x$ by multiplying series.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Write the Individual Series",
+                "content": "$e^x = 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$\n\n$\\sin x = x - \\frac{x^3}{6} + \\cdots$"
+              },
+              {
+                "title": "Multiply (Collecting Like Powers)",
+                "content": "$e^x \\sin x = \\left(1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots\\right)\\left(x - \\frac{x^3}{6} + \\cdots\\right)$\n\n$x^1$ term: $1 \\cdot x = x$\n$x^2$ term: $x \\cdot x = x^2$\n$x^3$ term: $\\frac{x^2}{2} \\cdot x + 1 \\cdot (-\\frac{x^3}{6}) = \\frac{x^3}{2} - \\frac{x^3}{6} = \\frac{x^3}{3}$"
+              }
+            ],
+            "conclusion": "$e^x \\sin x = x + x^2 + \\frac{x^3}{3} + \\cdots$"
+          }
+        },
+        {
+          "id": "ex-8-51-2",
+          "type": "example",
+          "title": "Integration of Taylor Series",
+          "statement": "Find the Taylor series for $\\int_0^x e^{-t^2}\\,dt$ (the error function integral).",
+          "solution": {
+            "steps": [
+              {
+                "title": "Start with e^(-t²)",
+                "content": "$e^u = \\sum_{n=0}^\\infty \\frac{u^n}{n!}$\n\nSubstitute $u = -t^2$:\n$e^{-t^2} = \\sum_{n=0}^\\infty \\frac{(-t^2)^n}{n!} = \\sum_{n=0}^\\infty \\frac{(-1)^n t^{2n}}{n!}$"
+              },
+              {
+                "title": "Integrate Term by Term",
+                "content": "$\\int_0^x e^{-t^2}\\,dt = \\sum_{n=0}^\\infty \\frac{(-1)^n}{n!} \\int_0^x t^{2n}\\,dt$\n\n$= \\sum_{n=0}^\\infty \\frac{(-1)^n}{n!} \\cdot \\frac{x^{2n+1}}{2n+1}$"
+              },
+              {
+                "title": "Expand",
+                "content": "$= x - \\frac{x^3}{3} + \\frac{x^5}{10} - \\frac{x^7}{42} + \\cdots$"
+              }
+            ],
+            "conclusion": "$\\int_0^x e^{-t^2}\\,dt = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{n!(2n+1)}$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-51-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find the first four nonzero terms of the Taylor series for $\\tan x$ using division of series.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set Up the Division",
+                "content": "$\\tan x = \\frac{\\sin x}{\\cos x}$\n\nLet $\\tan x = a_1 x + a_3 x^3 + a_5 x^5 + \\cdots$\n\nThen $\\sin x = \\cos x \\cdot \\tan x$"
+              },
+              {
+                "title": "Match Coefficients",
+                "content": "$(1 - \\frac{x^2}{2} + \\frac{x^4}{24} - \\cdots)(a_1 x + a_3 x^3 + \\cdots) = x - \\frac{x^3}{6} + \\frac{x^5}{120} - \\cdots$\n\n$x$: $a_1 = 1$\n$x^3$: $a_3 - \\frac{a_1}{2} = -\\frac{1}{6}$, so $a_3 = \\frac{1}{3}$\n$x^5$: $a_5 - \\frac{a_3}{2} + \\frac{a_1}{24} = \\frac{1}{120}$, so $a_5 = \\frac{2}{15}$"
+              }
+            ],
+            "conclusion": "$\\tan x = x + \\frac{x^3}{3} + \\frac{2x^5}{15} + \\frac{17x^7}{315} + \\cdots$"
+          }
+        },
+        {
+          "id": "8-51-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Find the Taylor series for $\\ln(1+x)$ by integrating the series for $\\frac{1}{1+x}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Start with the Geometric Series",
+                "content": "$\\frac{1}{1+x} = 1 - x + x^2 - x^3 + \\cdots$ for $|x| < 1$"
+              },
+              {
+                "title": "Integrate",
+                "content": "$\\ln(1+x) = \\int_0^x \\frac{1}{1+t}\\,dt = \\int_0^x (1 - t + t^2 - \\cdots)\\,dt$\n\n$= x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\frac{x^4}{4} + \\cdots$"
+              }
+            ],
+            "conclusion": "$\\ln(1+x) = \\sum_{n=1}^\\infty \\frac{(-1)^{n+1} x^n}{n}$ for $|x| < 1$"
+          }
+        },
+        {
+          "id": "8-51-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Find the Taylor series for $\\arctan x$ by integrating the appropriate series.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use the Derivative",
+                "content": "$\\frac{d}{dx}[\\arctan x] = \\frac{1}{1+x^2}$\n\n$\\frac{1}{1+x^2} = 1 - x^2 + x^4 - x^6 + \\cdots$"
+              },
+              {
+                "title": "Integrate",
+                "content": "$\\arctan x = \\int_0^x \\frac{1}{1+t^2}\\,dt = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\frac{x^7}{7} + \\cdots$"
+              }
+            ],
+            "conclusion": "$\\arctan x = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{2n+1}$ for $|x| \\leq 1$"
+          }
+        },
+        {
+          "id": "8-51-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Use the series for $\\arctan x$ to derive Leibniz's formula $\\frac{\\pi}{4} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots$",
+          "solution": {
+            "steps": [
+              {
+                "title": "Substitute x = 1",
+                "content": "Since $\\arctan 1 = \\frac{\\pi}{4}$ and the series converges at $x = 1$:\n\n$\\frac{\\pi}{4} = \\arctan 1 = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots$"
+              },
+              {
+                "title": "Note on Convergence",
+                "content": "The series $\\sum_{n=0}^\\infty \\frac{(-1)^n}{2n+1}$ converges by the Alternating Series Test, but very slowly."
+              }
+            ],
+            "conclusion": "$\\frac{\\pi}{4} = \\sum_{n=0}^\\infty \\frac{(-1)^n}{2n+1} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots$ (Leibniz's formula)"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -7,11 +7,11 @@ export const section157Questions: QuizQuestion[] = [
     question: 'Proposition VI.12 shows how to find what given three straight lines?',
     options: [
       'A line parallel to all three',
-      'The geometric mean of the three',
       'A fourth proportional to the three lines',
+      'The geometric mean of the three',
       'A line bisecting all three',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'VI.12 constructs a fourth line X such that if the given lines are A, B, C, then A:B = C:X.',
   },
@@ -35,11 +35,11 @@ export const section157Questions: QuizQuestion[] = [
     question: 'The construction in VI.12 uses which key technique?',
     options: [
       'Drawing a circle through three points',
-      'Constructing parallel lines to create similar triangles',
       'Bisecting an angle',
-      'Drawing perpendicular lines'
+      'Constructing parallel lines to create similar triangles',
+      'Drawing perpendicular lines',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'VI.12 arranges the three given lines and uses a parallel line. By VI.2, parallels cut proportional segments, yielding the fourth proportional.',
   },

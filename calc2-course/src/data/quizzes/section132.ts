@@ -66,12 +66,12 @@ export const section132Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In polar coordinates, the r-curves (constant $\\theta$) are:',
     options: [
+      'Straight lines through the origin',
       'Circles centered at the origin',
       'Ellipses',
-      'Straight lines through the origin',
       'Spirals',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'When $\\theta$ is constant, varying $r$ traces a ray from the origin at angle $\\theta$ to the positive x-axis.',
   },
@@ -80,10 +80,26 @@ export const section132Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To compute $\\iint_S \\sqrt{a^2 - x^2 - y^2}\\,dx\\,dy$ over the first quadrant of the disk $x^2 + y^2 \\leq a^2$, polar coordinates transform this to:',
     options: [
-      '$\\int_0^{\\pi/2}\\int_0^a \\sqrt{a^2 - r^2}\\,r\\,dr\\,d\\theta$',
-      '$\\int_0^{2\\pi}\\int_0^a \\sqrt{a^2 - r^2}\\,r\\,dr\\,d\\theta$',
-      '$\\int_0^{\\pi/2}\\int_0^a \\sqrt{a^2 - r^2}\\,dr\\,d\\theta$',
-      '$\\int_0^a\\int_0^{\\pi/2} \\sqrt{a^2 - r^2}\\,dr\\,d\\theta$'
+      '$\\int_0^{2\\pi}\\int_0^a \\sqrt{a^2 - r^2}\\,r\\,dr\\,d\\theta
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'First quadrant means $0 \\leq \\theta \\leq \\pi/2$. The disk $x^2 + y^2 \\leq a^2$ becomes $0 \\leq r \\leq a$. Include the factor $r$ from the Jacobian.',
+  },
+      '$\\int_0^{\\pi/2}\\int_0^a \\sqrt{a^2 - r^2}\\,dr\\,d\\theta
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'First quadrant means $0 \\leq \\theta \\leq \\pi/2$. The disk $x^2 + y^2 \\leq a^2$ becomes $0 \\leq r \\leq a$. Include the factor $r$ from the Jacobian.',
+  },
+      '$\\int_0^{\\pi/2}\\int_0^a \\sqrt{a^2 - r^2}\\,r\\,dr\\,d\\theta
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'First quadrant means $0 \\leq \\theta \\leq \\pi/2$. The disk $x^2 + y^2 \\leq a^2$ becomes $0 \\leq r \\leq a$. Include the factor $r$ from the Jacobian.',
+  },
+      '$\\int_0^a\\int_0^{\\pi/2} \\sqrt{a^2 - r^2}\\,dr\\,d\\theta
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'First quadrant means $0 \\leq \\theta \\leq \\pi/2$. The disk $x^2 + y^2 \\leq a^2$ becomes $0 \\leq r \\leq a$. Include the factor $r$ from the Jacobian.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

@@ -6,10 +6,22 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The indefinite integral $\\int_a^x f(t)\\,dt$ is a function of:',
     options: [
-      '$t$',
-      '$a$',
-      '$x$',
-      'It is a constant'
+      '$x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'With variable upper limit $x$, the integral is a function of $x$.',
+  },
+      '$t
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'With variable upper limit $x$, the integral is a function of $x$.',
+  },
+      '$a
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'With variable upper limit $x$, the integral is a function of $x$.',
+  },
+      'It is a constant',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -78,10 +90,10 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'Decreasing',
       'Constant',
-      'Increasing (or non-decreasing)',
       'Oscillating',
+      'Increasing (or non-decreasing)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When $f \\geq 0$, the accumulated area increases as $x$ increases.',
   },

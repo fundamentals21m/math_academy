@@ -6,12 +6,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does naively using Shamir Secret Sharing for threshold Schnorr signatures fail?',
     options: [
+      'The secret $s$ must be reconstructed to compute $z = k + s \\cdot c$, creating a single point of failure',
       'Shamir shares are too large to fit in a signature',
       'Shamir polynomials are incompatible with elliptic curves',
       'Lagrange interpolation is too slow for real-time signing',
-      'The secret $s$ must be reconstructed to compute $z = k + s \\cdot c$, creating a single point of failure'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'To compute the Schnorr response $z = k + s \\cdot c$, naive SSS would require reconstructing $s$ on some device. That device then knows the full private key - exactly the single point of failure we wanted to avoid.',
   },
@@ -48,10 +48,10 @@ export const section14Questions: QuizQuestion[] = [
     options: [
       'Shamir sharing only works with prime fields',
       'Nonces must be larger than the prime field order',
-      'A dealer would need to choose $k$, meaning they would know it - defeating the purpose',
       'Lagrange coefficients cannot be computed for nonces',
+      'A dealer would need to choose $k$, meaning they would know it - defeating the purpose',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Shamir sharing requires a dealer to generate the polynomial. If someone generates $k$ and distributes shares, they know $k$. Combined with $s$, they could forge signatures - creating a single point of failure.',
   },

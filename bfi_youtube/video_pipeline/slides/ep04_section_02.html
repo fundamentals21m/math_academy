@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .evolution-container {
+      display: flex;
+      gap: 60px;
+      margin-top: 50px;
+      align-items: stretch;
+    }
+    .evolution-card {
+      flex: 1;
+      background: rgba(247, 147, 26, 0.05);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: left;
+    }
+    .evolution-card.highlight {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.4);
+    }
+    .card-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .card-title {
+      color: #F7931A;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .card-text {
+      color: #E6EDF3;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .key-insight {
+      background: rgba(247, 147, 26, 0.08);
+      border-left: 4px solid #F7931A;
+      padding: 30px 40px;
+      margin-top: 50px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .key-insight-text {
+      color: #E6EDF3;
+      font-size: 26px;
+      line-height: 1.5;
+    }
+    .key-insight-text em {
+      color: #F7931A;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Custody Challenge</div>
+    <div class="section-title">Stories of Lost Bitcoin Are Becoming Rarer</div>
+    <div class="evolution-container">
+      <div class="evolution-card">
+        <div class="card-icon">2023</div>
+        <div class="card-title">Luke Dashjr Incident</div>
+        <div class="card-text">Former Bitcoin Core developer reportedly lost hundreds of BTC in a setup "too complicated to rescue"</div>
+      </div>
+      <div class="evolution-card highlight">
+        <div class="card-icon">Today</div>
+        <div class="card-title">Hardware Wallets</div>
+        <div class="card-text">Extremely intuitive and easy to use. Self-custody has become accessible to everyone.</div>
+      </div>
+      <div class="evolution-card">
+        <div class="card-icon">The Real Obstacle</div>
+        <div class="card-title">Seed Phrase Protection</div>
+        <div class="card-text">The only remaining challenge: protecting your 12- or 24-word seed phrase</div>
+      </div>
+    </div>
+    <div class="key-insight">
+      <div class="key-insight-text">It takes time to work through your personal discomfort before your bitcoin security <em>lets you sleep soundly at night</em>.</div>
+    </div>
+  </div>
+</body>
+</html>

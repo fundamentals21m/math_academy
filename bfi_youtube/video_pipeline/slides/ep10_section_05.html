@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .options-container {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .option-card {
+      width: 420px;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .option-card.etf {
+      background: rgba(139, 148, 158, 0.1);
+      border: 1px solid rgba(139, 148, 158, 0.3);
+    }
+    .option-card.treasury {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .option-label {
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .etf .option-label { color: #8B949E; }
+    .treasury .option-label { color: #22C55E; }
+    .option-title {
+      color: #E6EDF3;
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .option-list {
+      list-style: none;
+    }
+    .option-list li {
+      color: #E6EDF3;
+      font-size: 18px;
+      padding: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .option-list li::before {
+      content: "•";
+      color: #8B949E;
+    }
+    .treasury .option-list li::before {
+      color: #22C55E;
+    }
+    .roadmap-box {
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .roadmap-title {
+      color: #0891B2;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .roadmap-steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .roadmap-step {
+      color: #E6EDF3;
+      font-size: 18px;
+    }
+    .roadmap-arrow {
+      color: #0891B2;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Implementation</div>
+    <div class="section-title">Two Paths Forward</div>
+    <div class="options-container">
+      <div class="option-card etf">
+        <div class="option-label">Option 1</div>
+        <div class="option-title">Bitcoin ETFs (IBIT, FBTC)</div>
+        <ul class="option-list">
+          <li>Easiest to implement</li>
+          <li>Standard custody through ETF provider</li>
+          <li>Counterparty risk from ETF & custodian</li>
+          <li>Good starting point</li>
+        </ul>
+      </div>
+      <div class="option-card treasury">
+        <div class="option-label">Option 2 (Superior)</div>
+        <div class="option-title">Direct Treasury</div>
+        <ul class="option-list">
+          <li>Company holds actual bitcoin</li>
+          <li>Eliminates ETF counterparty risk</li>
+          <li>Requires custody infrastructure</li>
+          <li>Superior long-term solution</li>
+        </ul>
+      </div>
+    </div>
+    <div class="roadmap-box">
+      <div class="roadmap-title">Recommended Approach</div>
+      <div class="roadmap-steps">
+        <div class="roadmap-step">Start with ETFs</div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-step">Build custody capability</div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-step">Transition to treasury</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

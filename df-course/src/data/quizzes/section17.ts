@@ -6,10 +6,26 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The First Isomorphism Theorem states that if $\\phi: G \\to H$ is a homomorphism, then:',
     options: [
-      '$G/\\ker(\\phi) \\cong \\phi(G)$',
-      '$G \\cong H$',
-      '$\\ker(\\phi) \\cong \\phi(G)$',
-      '$G \\cong H/\\phi(G)$'
+      '$G \\cong H
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The First Isomorphism Theorem: $G/\\ker(\\phi) \\cong \\text{im}(\\phi) = \\phi(G)$.',
+  },
+      '$\\ker(\\phi) \\cong \\phi(G)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The First Isomorphism Theorem: $G/\\ker(\\phi) \\cong \\text{im}(\\phi) = \\phi(G)$.',
+  },
+      '$G \\cong H/\\phi(G)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The First Isomorphism Theorem: $G/\\ker(\\phi) \\cong \\text{im}(\\phi) = \\phi(G)$.',
+  },
+      '$G/\\ker(\\phi) \\cong \\phi(G)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The First Isomorphism Theorem: $G/\\ker(\\phi) \\cong \\text{im}(\\phi) = \\phi(G)$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -20,10 +36,26 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Second Isomorphism Theorem (Diamond Isomorphism Theorem) states that if $H \\leq G$ and $N \\trianglelefteq G$, then:',
     options: [
-      '$HN \\cong H \\times N$',
-      '$H \\cap N \\trianglelefteq H$ and $H/(H \\cap N) \\cong HN/N$',
-      '$H/N \\cong G/N$',
-      '$H \\cong N$'
+      '$HN \\cong H \\times N
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The Second Isomorphism Theorem: $H \\cap N \\trianglelefteq H$ and $H/(H \\cap N) \\cong HN/N$.',
+  },
+      '$H/N \\cong G/N
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Second Isomorphism Theorem: $H \\cap N \\trianglelefteq H$ and $H/(H \\cap N) \\cong HN/N$.',
+  },
+      '$H \\cong N
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Second Isomorphism Theorem: $H \\cap N \\trianglelefteq H$ and $H/(H \\cap N) \\cong HN/N$.',
+  },
+      '$H \\cap N \\trianglelefteq H$ and $H/(H \\cap N) \\cong HN/N
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The Second Isomorphism Theorem: $H \\cap N \\trianglelefteq H$ and $H/(H \\cap N) \\cong HN/N$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',

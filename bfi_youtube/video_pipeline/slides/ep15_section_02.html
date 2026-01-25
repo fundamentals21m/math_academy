@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .timeline-row {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 25px 0;
+    }
+    .timeline-card {
+      width: 300px;
+      background: rgba(13, 17, 23, 0.8);
+      border: 1px solid rgba(8, 145, 178, 0.3);
+      padding: 20px 25px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .timeline-year {
+      color: #F7931A;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .timeline-desc {
+      color: #E6EDF3;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .ldi-box {
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin: 30px auto;
+      max-width: 850px;
+    }
+    .ldi-title {
+      color: #0891B2;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .ldi-text {
+      color: #E6EDF3;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .parallel-box {
+      background: rgba(247, 147, 26, 0.08);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 20px 35px;
+      border-radius: 8px;
+      margin-top: 25px;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .parallel-text {
+      color: #E6EDF3;
+      font-size: 18px;
+    }
+    .parallel-text em {
+      color: #F7931A;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The LDI Story</div>
+    <div class="section-title">Liability Driven Investing</div>
+    <div class="timeline-row">
+      <div class="timeline-card">
+        <div class="timeline-year">1990s-2003</div>
+        <div class="timeline-desc">Traditional pensions — right as the heyday ended and the hangover set in after the dot-com crash</div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-year">2003-2005</div>
+        <div class="timeline-desc">Developed LDI to fix pension problems — faced ruthless institutional resistance</div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-year">2005+</div>
+        <div class="timeline-desc">Walked away following CFA ethics — a space that could be saved but willfully refused</div>
+      </div>
+    </div>
+    <div class="ldi-box">
+      <div class="ldi-title">The LDI Insight</div>
+      <div class="ldi-text">Investment returns aren't the key driver of meeting liabilities — protection against rates dropping is. Equities were prioritized due to incentives, not sound analysis.</div>
+    </div>
+    <div class="parallel-box">
+      <div class="parallel-text">The most pertinent parallel to bitcoin today: <em>the ruthless intractability of institutional incentives</em></div>
+    </div>
+  </div>
+</body>
+</html>

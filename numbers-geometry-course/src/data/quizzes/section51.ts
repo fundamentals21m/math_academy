@@ -10,11 +10,11 @@ export const section51Questions: QuizQuestion[] = [
     question: 'What condition must the moduli satisfy for the Chinese Remainder Theorem?',
     options: [
       'They must all be prime',
-      'They must be consecutive integers',
       'They must be pairwise coprime',
-      'They must all be even'
+      'They must be consecutive integers',
+      'They must all be even',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'CRT requires the moduli to be pairwise coprime, meaning gcd(mᵢ, mⱼ) = 1 for all i ≠ j.',
@@ -24,8 +24,13 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question:
       'If m₁ = 3 and m₂ = 5, what is the modulus of the unique solution guaranteed by CRT?',
-    options: ['8', '15', '3', '5'],
-    correctIndex: 1,
+    options: [
+      '15',
+      '8',
+      '3',
+      '5',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The solution is unique modulo M = m₁ × m₂ = 3 × 5 = 15.',
@@ -47,10 +52,10 @@ export const section51Questions: QuizQuestion[] = [
     options: [
       'Euclid',
       'Fermat',
-      'Euler',
       'Sun Zi',
+      'Euler',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The Chinese mathematician Sun Zi (3rd century) posed problems that led to this theorem.',
@@ -77,10 +82,10 @@ export const section51Questions: QuizQuestion[] = [
     options: [
       'It makes factoring easier',
       'It reduces the key size',
-      'Operations can be done mod p and mod q separately',
       'It eliminates the need for prime numbers',
+      'Operations can be done mod p and mod q separately',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'In RSA with n = pq, CRT allows computing x^d mod p and x^d mod q separately, then combining. This is faster.',
@@ -107,11 +112,11 @@ export const section51Questions: QuizQuestion[] = [
       'Can we apply CRT to solve x ≡ 1 (mod 4) and x ≡ 3 (mod 6)?',
     options: [
       'Yes, the answer is unique mod 24',
-      'No, because 4 and 6 are not coprime',
       'Yes, but there are multiple solutions',
+      'No, because 4 and 6 are not coprime',
       'No, because the remainders are different',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'gcd(4, 6) = 2 ≠ 1, so CRT does not directly apply. We would need additional conditions for a solution.',

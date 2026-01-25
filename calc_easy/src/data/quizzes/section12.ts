@@ -9,7 +9,7 @@ export const section12Questions: QuizQuestion[] = [
       'The length of the curve',
       'How sharply the curve bends at a point',
       'The area under the curve',
-      'The height of the curve'
+      'The height of the curve',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section12Questions: QuizQuestion[] = [
       'One',
       'Infinity',
       'Zero',
-      'Undefined'
+      'Undefined',
     ],
     correctIndex: 2,
     difficulty: 'easy',

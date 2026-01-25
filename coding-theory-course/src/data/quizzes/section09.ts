@@ -6,10 +6,18 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An irreducible polynomial $f(X) \\in F_p[X]$ of degree $n$ is primitive if:',
     options: [
+      'It divides $X^{p^n-1} - 1$ but not $X^k - 1$ for any $k < p^n - 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A primitive polynomial divides $X^{p^n-1} - 1$ (all non-zero field elements satisfy $x^{p^n-1} = 1$) but does not divide $X^k - 1$ for any smaller $k$. This ensures the associated element has maximal order.',
+  },
       'Its degree is prime',
-      'It divides $X^{p^n} - 1$',
+      'It divides $X^{p^n} - 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A primitive polynomial divides $X^{p^n-1} - 1$ (all non-zero field elements satisfy $x^{p^n-1} = 1$) but does not divide $X^k - 1$ for any smaller $k$. This ensures the associated element has maximal order.',
+  },
       'It has all coefficients equal to 1',
-      'It divides $X^{p^n-1} - 1$ but not $X^k - 1$ for any $k < p^n - 1$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -34,12 +42,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Over $\\mathbb{B}$, the polynomial $X^3 + X + 1$ is:',
     options: [
-      'Primitive',
       'Reducible',
       'Irreducible but not primitive',
       'The zero polynomial',
+      'Primitive',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$X^3 + X + 1$ is irreducible over $\\mathbb{B}$ (neither 0 nor 1 is a root). Since $2^3 - 1 = 7$ is prime, any irreducible cubic is automatically primitive.',
   },
@@ -50,10 +58,10 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'Reducible',
       'Primitive',
-      'Not a valid polynomial',
       'Irreducible but not primitive',
+      'Not a valid polynomial',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'This polynomial is irreducible but not primitive. The element $\\alpha$ it generates satisfies $\\alpha^5 = 1$ (order 5, not 15), so it is not a primitive element of $GF(16)$.',
   },

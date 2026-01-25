@@ -7,11 +7,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'What problem does BIP-62 address?',
     options: [
       'Double spending',
+      'Transaction malleability',
       'Block size limits',
       'Network latency',
-      'Transaction malleability',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'BIP-62 attempted to address transaction malleability issues.',
   },

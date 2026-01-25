@@ -9,7 +9,7 @@ export const section12Questions: QuizQuestion[] = [
       '$f$ is bounded',
       '$f$ is continuous',
       '$f$ is differentiable',
-      '$f$ might be discontinuous'
+      '$f$ might be discontinuous',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -21,9 +21,13 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Consider $f_n(x) = x^n$ on $[0, 1]$ with pointwise limit $f$. Why is $f$ discontinuous at $x = 1$?',
     options: [
       'Because the domain is not open',
+      'Because $1^n = 1$ for all $n$, but nearby $x^n \\to 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$f(1) = 1$ but $f(x) = 0$ for all $x < 1$, creating a jump discontinuity. This shows pointwise limits need not preserve continuity.',
+  },
       'Because the functions $f_n$ are discontinuous',
-      'Because $1^n = 1$ for all $n$, but nearby $x^n \\to 0$',
-      'Because the convergence is uniform'
+      'Because the convergence is uniform',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -35,11 +39,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'The statement "uniform limits of continuous functions are continuous" is sometimes called:',
     options: [
       'The Intermediate Value Theorem',
-      'The Uniform Limit Theorem',
       'The Extreme Value Theorem',
+      'The Uniform Limit Theorem',
       'The Weierstrass Theorem',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'This result is often called the Uniform Limit Theorem.',
   },
@@ -51,7 +55,7 @@ export const section12Questions: QuizQuestion[] = [
       'Might or might not be continuous',
       'Must be discontinuous',
       'Must be continuous',
-      'Must be bounded'
+      'Must be bounded',
     ],
     correctIndex: 0,
     difficulty: 'medium',

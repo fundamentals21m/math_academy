@@ -6,10 +6,22 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the recursive definition of multiplication, $n \\times 0 = 0$ and $n \\times S(m) = n \\times m + n$. Using this, what is $3 \\times 2$?',
     options: [
-      '$3 \\times 1 + 3 = (3 \\times 0 + 3) + 3 = 0 + 3 + 3 = 6$',
-      '$2 \\times 3 + 2 = 8$',
+      '$2 \\times 3 + 2 = 8
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$3 \\times 2 = 3 \\times S(1) = 3 \\times 1 + 3 = (3 \\times S(0)) + 3 = (3 \\times 0 + 3) + 3 = (0 + 3) + 3 = 6$.',
+  },
+      '$3 \\times 1 + 3 = (3 \\times 0 + 3) + 3 = 0 + 3 + 3 = 6
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$3 \\times 2 = 3 \\times S(1) = 3 \\times 1 + 3 = (3 \\times S(0)) + 3 = (3 \\times 0 + 3) + 3 = (0 + 3) + 3 = 6$.',
+  },
       '$3 + 3 = 6$ without using the definition',
-      '$3 \\times 2 = 3 + 2 = 5$'
+      '$3 \\times 2 = 3 + 2 = 5
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$3 \\times 2 = 3 \\times S(1) = 3 \\times 1 + 3 = (3 \\times S(0)) + 3 = (3 \\times 0 + 3) + 3 = (0 + 3) + 3 = 6$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -22,10 +34,10 @@ export const section04Questions: QuizQuestion[] = [
     options: [
       'Addition with itself',
       'Subtraction with multiplication',
-      'Division with addition',
       'Multiplication with addition',
+      'Division with addition',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Distributivity connects multiplication and addition, showing how multiplication "distributes" over sums.',
   },
@@ -65,12 +77,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The property $a \\times 1 = a$ is called:',
     options: [
+      'The multiplicative identity property',
       'The zero property',
       'Associativity',
-      'The multiplicative identity property',
       'Commutativity',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The number $1$ is the multiplicative identity: multiplying any number by $1$ returns that number unchanged.',
   },

@@ -56,11 +56,11 @@ export const section34Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Integration and differentiation cancel by definition',
-      'Derivatives are always equal to the original function',
       'The rate of change of area under a curve equals the height of the curve',
-      'The integral is just the antiderivative by another name'
+      'Derivatives are always equal to the original function',
+      'The integral is just the antiderivative by another name',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'When $x$ increases by a small amount $h$, the area under the curve increases by approximately $f(x) \\cdot h$ (a thin rectangle). So the rate of change of area is $f(x)$—the height of the curve at that point.',
   },
@@ -83,10 +83,10 @@ export const section34Questions: QuizQuestion[] = [
     options: [
       'It made geometric proofs obsolete',
       'It eliminated the need for limits',
+      'It unified tangent problems and area problems into a single theory',
       'It proved that all functions are differentiable',
-      'It unified tangent problems and area problems into a single theory'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     explanation:
       'Before FTC, finding tangents and finding areas were separate problems requiring different techniques. The Fundamental Theorem showed they are inverse operations, unifying them into a coherent theory and making both much easier to compute.',
   },

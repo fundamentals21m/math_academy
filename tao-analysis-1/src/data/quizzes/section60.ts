@@ -126,10 +126,18 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ is continuous on $[a,b]$ and $\\alpha$ is monotonically increasing on $[a,b]$, then:',
     options: [
-      '$f \\in \\mathcal{R}(\\alpha)$ on $[a,b]$',
       '$f \\in \\mathcal{R}(\\alpha)$ only if $\\alpha$ is continuous',
+      '$f \\in \\mathcal{R}(\\alpha)$ on $[a,b]
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A fundamental theorem states that if $f$ is continuous and $\\alpha$ is monotonically increasing, then $f$ is Riemann-Stieltjes integrable with respect to $\\alpha$.',
+  },
       '$f \\in \\mathcal{R}(\\alpha)$ only if $\\alpha$ is differentiable',
-      '$f$ may or may not be in $\\mathcal{R}(\\alpha)$'
+      '$f$ may or may not be in $\\mathcal{R}(\\alpha)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A fundamental theorem states that if $f$ is continuous and $\\alpha$ is monotonically increasing, then $f$ is Riemann-Stieltjes integrable with respect to $\\alpha$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

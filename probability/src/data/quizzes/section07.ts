@@ -7,11 +7,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'Which interpretation of probability defines it as the long-run relative frequency?',
     options: [
       'Bayesian interpretation',
+      'Frequency interpretation',
       'Classical interpretation',
       'Subjective interpretation',
-      'Frequency interpretation'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The frequency interpretation says probability is the long-run relative frequency with which an event occurs in repeated experiments.'
   },
@@ -20,12 +20,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The classical interpretation of probability applies when:',
     options: [
-      'Outcomes are equally likely',
       'We have personal beliefs about outcomes',
       'We have historical data',
-      'Events are mutually exclusive'
+      'Events are mutually exclusive',
+      'Outcomes are equally likely',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The classical interpretation applies when outcomes are equally likely, defining probability as the ratio of favorable outcomes to total outcomes.'
   },
@@ -35,11 +35,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'Who formalized the axiomatic approach to probability in 1933?',
     options: [
       'Laplace',
-      'Kolmogorov',
       'Pascal',
-      'Fermat'
+      'Kolmogorov',
+      'Fermat',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Andrey Kolmogorov formalized the axiomatic approach to probability in 1933, providing a rigorous mathematical foundation.'
   },
@@ -48,12 +48,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If a forecaster says P(rain) = 0.7 and P(no rain) = 0.5, what is wrong?',
     options: [
+      'The probabilities of complementary events must sum to 1',
       'The probabilities are too high',
       'The probabilities are negative',
-      'The probabilities of complementary events must sum to 1',
-      'Nothing is wrong'
+      'Nothing is wrong',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Complementary events (rain and no rain) must have probabilities that sum to 1. Here 0.7 + 0.5 = 1.2 ≠ 1, violating the axioms.'
   },

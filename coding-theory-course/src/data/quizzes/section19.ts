@@ -37,11 +37,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'In the ring $\\mathbb{F}_q[x]/(x^n - 1)$ where $\\gcd(n, q) = 1$, every cyclic code has:',
     options: [
       'A unique generator polynomial only',
-      'Both a unique generator polynomial and a unique idempotent generator',
       'A unique idempotent generator only',
-      'Neither a unique generator nor a unique idempotent'
+      'Neither a unique generator nor a unique idempotent',
+      'Both a unique generator polynomial and a unique idempotent generator',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When $\\gcd(n, q) = 1$, each cyclic code has both a unique monic generator polynomial $g(x)$ dividing $x^n - 1$ and a unique idempotent generator $e(x)$.',
   },
@@ -111,10 +111,18 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Primitive idempotents in $\\mathbb{F}_q[x]/(x^n - 1)$ correspond to:',
     options: [
-      'Irreducible factors of $x^n - 1$',
       'The trivial code',
       'The entire ring',
-      'Reducible factors of $x^n - 1$'
+      'Irreducible factors of $x^n - 1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Primitive idempotents are non-zero idempotents that cannot be written as a sum of two non-zero orthogonal idempotents. They correspond bijectively to the irreducible factors of $x^n - 1$.',
+  },
+      'Reducible factors of $x^n - 1
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Primitive idempotents are non-zero idempotents that cannot be written as a sum of two non-zero orthogonal idempotents. They correspond bijectively to the irreducible factors of $x^n - 1$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

@@ -11,10 +11,10 @@ export const section35Questions: QuizQuestion[] = [
     options: [
       'The area is always rational',
       'The area is always odd',
-      'The area equals the perimeter',
       'The area is never a perfect square',
+      'The area equals the perimeter',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Fermat proved in 1640 that the area of a rational right triangle is never a perfect square. This is proved using infinite descent.',
@@ -34,12 +34,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What proof technique did Fermat use?',
     options: [
+      'Infinite descent',
       'Mathematical induction',
       'Contradiction',
       'Exhaustive search',
-      'Infinite descent'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Fermat used infinite descent: if a rational right triangle with square area existed, we could construct a smaller one with the same property, and repeat forever—impossible.',
@@ -50,11 +50,11 @@ export const section35Questions: QuizQuestion[] = [
     question: 'Who first asked if a rational right triangle can have square area?',
     options: [
       'Euclid',
-      'Fibonacci',
       'Diophantus',
       'Fermat',
+      'Fibonacci',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Fibonacci raised the question in his Liber Quadratorum (Book of Squares) in 1225. It took over 400 years until Fermat answered it.',
@@ -135,12 +135,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What special case of Fermat\'s Last Theorem follows from this result?',
     options: [
-      '$x^4 + y^4 = z^4$ has no solutions',
       '$x^2 + y^2 = z^2$ has no solutions',
+      '$x^4 + y^4 = z^4$ has no solutions',
       '$x^3 + y^3 = z^3$ has no solutions',
       '$x^5 + y^5 = z^5$ has no solutions',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The case n = 4 of Fermat\'s Last Theorem follows: if x⁴ + y⁴ = z⁴, then z⁴ - y⁴ = (x²)², contradicting the impossibility of a⁴ - b⁴ = c².',

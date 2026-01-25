@@ -7,10 +7,26 @@ export const section20Questions: QuizQuestion[] = [
     question: 'What is Pell\'s equation?',
     difficulty: 'easy',
     options: [
-      '$x^2 + y^2 = N$',
-      '$x^2 - y^2 = N$',
-      '$x^2 + Ny^2 = 1$',
-      '$x^2 - Ny^2 = 1$'
+      '$x^2 + y^2 = N
+    correctIndex: 1,
+    explanation:
+      'Pell\'s equation is $x^2 - Ny^2 = 1$, where $N$ is a positive integer that is not a perfect square, and we seek integer solutions $(x, y)$.',
+  },
+      '$x^2 - Ny^2 = 1
+    correctIndex: 3,
+    explanation:
+      'Pell\'s equation is $x^2 - Ny^2 = 1$, where $N$ is a positive integer that is not a perfect square, and we seek integer solutions $(x, y)$.',
+  },
+      '$x^2 - y^2 = N
+    correctIndex: 3,
+    explanation:
+      'Pell\'s equation is $x^2 - Ny^2 = 1$, where $N$ is a positive integer that is not a perfect square, and we seek integer solutions $(x, y)$.',
+  },
+      '$x^2 + Ny^2 = 1
+    correctIndex: 3,
+    explanation:
+      'Pell\'s equation is $x^2 - Ny^2 = 1$, where $N$ is a positive integer that is not a perfect square, and we seek integer solutions $(x, y)$.',
+  },
     ],
     correctIndex: 3,
     explanation:
@@ -22,9 +38,21 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Is $(3, 2)$ a solution to $x^2 - 2y^2 = 1$?',
     difficulty: 'easy',
     options: [
-      'Yes, because $9 - 8 = 1$',
-      'No, because $9 - 8 = 0$',
-      'Yes, because $9 + 8 = 17$',
+      'No, because $9 - 8 = 0
+    correctIndex: 1,
+    explanation:
+      'Substituting: $3^2 - 2 \\cdot 2^2 = 9 - 2(4) = 9 - 8 = 1$. Yes, $(3, 2)$ is a solution.',
+  },
+      'Yes, because $9 - 8 = 1
+    correctIndex: 0,
+    explanation:
+      'Substituting: $3^2 - 2 \\cdot 2^2 = 9 - 2(4) = 9 - 8 = 1$. Yes, $(3, 2)$ is a solution.',
+  },
+      'Yes, because $9 + 8 = 17
+    correctIndex: 0,
+    explanation:
+      'Substituting: $3^2 - 2 \\cdot 2^2 = 9 - 2(4) = 9 - 8 = 1$. Yes, $(3, 2)$ is a solution.',
+  },
       'No, because $3$ and $2$ are too small',
     ],
     correctIndex: 0,
@@ -38,9 +66,17 @@ export const section20Questions: QuizQuestion[] = [
       'Why is Pell\'s equation connected to approximating $\\sqrt{N}$?',
     difficulty: 'medium',
     options: [
-      'Solutions give exact values of $\\sqrt{N}$',
-      'If $(x, y)$ is a solution, then $x/y$ closely approximates $\\sqrt{N}$',
+      'Solutions give exact values of $\\sqrt{N}
+    correctIndex: 2,
+    explanation:
+      'If $x^2 - Ny^2 = 1$, then $x^2 \\approx Ny^2$, so $x/y \\approx \\sqrt{N}$. Larger solutions give better approximations.',
+  },
       'The equation has no connection to square roots',
+      'If $(x, y)$ is a solution, then $x/y$ closely approximates $\\sqrt{N}
+    correctIndex: 1,
+    explanation:
+      'If $x^2 - Ny^2 = 1$, then $x^2 \\approx Ny^2$, so $x/y \\approx \\sqrt{N}$. Larger solutions give better approximations.',
+  },
       'Solutions are always perfect squares',
     ],
     correctIndex: 1,
@@ -80,12 +116,12 @@ export const section20Questions: QuizQuestion[] = [
       'Bhāskara II solved $x^2 - 61y^2 = 1$ in the 12th century. When was this achievement matched in Europe?',
     difficulty: 'hard',
     options: [
+      'In the 17th century by Fermat and Wallis',
       'In the 13th century by Fibonacci',
       'In the 15th century by Cardano',
       'In the 19th century by Gauss',
-      'In the 17th century by Fermat and Wallis'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     explanation:
       'Bhāskara solved $x^2 - 61y^2 = 1$ around 1150 CE using the chakravala method. Europeans didn\'t solve this until Fermat challenged mathematicians with it in the 1650s—about 500 years later.',
   },

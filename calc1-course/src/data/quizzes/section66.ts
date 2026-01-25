@@ -8,8 +8,12 @@ export const section66Questions: QuizQuestion[] = [
     options: [
       '$\\sum a_n$ diverges',
       'Cannot determine',
+      '$\\sum a_n = \\sum b_n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Smaller series converges if larger series does.',
+  },
       '$\\sum a_n$ converges',
-      '$\\sum a_n = \\sum b_n$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -46,10 +50,26 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The ratio test: if $\\lim |a_{n+1}/a_n| = L$, then series converges if:',
     options: [
-      '$L < 1$',
-      '$L > 1$',
-      '$L = 1$',
-      '$L = 0$'
+      '$L > 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Ratio test: converges if $L < 1$, diverges if $L > 1$.',
+  },
+      '$L = 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Ratio test: converges if $L < 1$, diverges if $L > 1$.',
+  },
+      '$L = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Ratio test: converges if $L < 1$, diverges if $L > 1$.',
+  },
+      '$L < 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Ratio test: converges if $L < 1$, diverges if $L > 1$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

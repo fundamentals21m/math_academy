@@ -6,12 +6,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the Bolzano-Weierstrass theorem state?',
     options: [
-      'Every monotone sequence converges',
       'Every bounded sequence has a convergent subsequence',
+      'Every monotone sequence converges',
       'Every convergent sequence is bounded',
       'Every Cauchy sequence converges',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Bolzano-Weierstrass theorem states that every bounded sequence in $\\mathbb{R}$ has a convergent subsequence. This is a fundamental result in real analysis.',
   },
@@ -106,7 +106,7 @@ export const section26Questions: QuizQuestion[] = [
       'The sequence is bounded',
       'Some subsequence of $(a_n)$ converges',
       'Every subsequence of $(a_n)$ converges to the same limit',
-      'The sequence is monotone'
+      'The sequence is monotone',
     ],
     correctIndex: 2,
     difficulty: 'medium',

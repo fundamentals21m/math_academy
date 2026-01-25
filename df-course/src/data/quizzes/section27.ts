@@ -67,7 +67,28 @@ export const section27Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'How many abelian groups of order 8 are there (up to isomorphism)?',
-    options: ['$1$', '$2$', '$3$', '$4$'],
+    options: [
+      '$3
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$8 = 2^3$. Partitions of 3: $(3), (2,1), (1,1,1)$ give $\\mathbb{Z}_8$, $\\mathbb{Z}_4 \\times \\mathbb{Z}_2$, $\\mathbb{Z}_2^3$. So 3 groups.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$8 = 2^3$. Partitions of 3: $(3), (2,1), (1,1,1)$ give $\\mathbb{Z}_8$, $\\mathbb{Z}_4 \\times \\mathbb{Z}_2$, $\\mathbb{Z}_2^3$. So 3 groups.',
+  },
+      '$2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$8 = 2^3$. Partitions of 3: $(3), (2,1), (1,1,1)$ give $\\mathbb{Z}_8$, $\\mathbb{Z}_4 \\times \\mathbb{Z}_2$, $\\mathbb{Z}_2^3$. So 3 groups.',
+  },
+      '$4
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$8 = 2^3$. Partitions of 3: $(3), (2,1), (1,1,1)$ give $\\mathbb{Z}_8$, $\\mathbb{Z}_4 \\times \\mathbb{Z}_2$, $\\mathbb{Z}_2^3$. So 3 groups.',
+  },
+    ],
     correctIndex: 2,
     difficulty: 'medium',
     explanation: '$8 = 2^3$. Partitions of 3: $(3), (2,1), (1,1,1)$ give $\\mathbb{Z}_8$, $\\mathbb{Z}_4 \\times \\mathbb{Z}_2$, $\\mathbb{Z}_2^3$. So 3 groups.',

@@ -97,11 +97,11 @@ export const section98Questions: QuizQuestion[] = [
     question: 'Matrix multiplication is:',
     options: [
       'Commutative',
-      'Not commutative in general',
       'Always undefined',
+      'Not commutative in general',
       'Same as addition',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'In general, $AB \\neq BA$.',
   },

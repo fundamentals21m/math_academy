@@ -38,10 +38,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       '$f$ must be differentiable',
       '$f$ must be continuous',
-      '$f$ must have a local maximum or minimum',
       'Both one-sided limits $\\lim_{x \\to c^-} f(x)$ and $\\lim_{x \\to c^+} f(x)$ exist',
+      '$f$ must have a local maximum or minimum',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Monotonic functions have one-sided limits at every interior point. They may have jump discontinuities but cannot oscillate.',
   },
@@ -51,9 +51,13 @@ export const section45Questions: QuizQuestion[] = [
     question: 'For a monotonically increasing function $f$ on $(a,b)$, the set of discontinuities is:',
     options: [
       'Empty',
-      'At most countable',
       'Uncountable',
-      'Equal to $(a,b)$'
+      'Equal to $(a,b)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'A monotonic function can only have jump discontinuities, and there can be at most countably many of them (each jump corresponds to a rational in a certain interval).',
+  },
+      'At most countable',
     ],
     correctIndex: 1,
     difficulty: 'hard',

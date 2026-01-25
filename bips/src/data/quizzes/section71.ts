@@ -7,11 +7,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'What does BIP-324 provide?',
     options: [
       'New address format',
-      'Encrypted P2P transport (v2)',
       'Block encryption',
+      'Encrypted P2P transport (v2)',
       'Transaction encryption',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'BIP-324 defines encrypted and authenticated P2P communication.',
   },
@@ -42,7 +42,7 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'V2 transport connections can be distinguished from v1 by:',
     options: [
-      'Initial bytes don\\'t look like the v1 magic',
+      'Initial bytes don\\\\'t look like the v1 magic',
       'User agent',
       'Port number',
       'Block height',

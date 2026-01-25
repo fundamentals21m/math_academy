@@ -6,10 +6,26 @@ export const section107Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The second fundamental theorem for line integrals states that:',
     options: [
-      '$\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = 0$',
-      '$\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\nabla\\varphi(\\mathbf{b})$',
-      '$\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\varphi(\\mathbf{a})$',
-      '$\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\varphi(\\mathbf{b}) - \\varphi(\\mathbf{a})$'
+      '$\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\varphi(\\mathbf{b}) - \\varphi(\\mathbf{a})
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The second fundamental theorem: $\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\varphi(\\mathbf{b}) - \\varphi(\\mathbf{a})$. The line integral of a gradient equals the change in the potential.',
+  },
+      '$\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = 0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The second fundamental theorem: $\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\varphi(\\mathbf{b}) - \\varphi(\\mathbf{a})$. The line integral of a gradient equals the change in the potential.',
+  },
+      '$\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\nabla\\varphi(\\mathbf{b})
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The second fundamental theorem: $\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\varphi(\\mathbf{b}) - \\varphi(\\mathbf{a})$. The line integral of a gradient equals the change in the potential.',
+  },
+      '$\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\varphi(\\mathbf{a})
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The second fundamental theorem: $\\int_{\\mathbf{a}}^{\\mathbf{b}} \\nabla\\varphi \\cdot d\\alpha = \\varphi(\\mathbf{b}) - \\varphi(\\mathbf{a})$. The line integral of a gradient equals the change in the potential.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -81,11 +97,11 @@ export const section107Questions: QuizQuestion[] = [
     question: 'If $f = \\nabla\\varphi$ represents a force field, the work done moving from $\\mathbf{a}$ to $\\mathbf{b}$:',
     options: [
       'Depends on the path taken',
-      'Is always positive',
       'Depends only on the values of $\\varphi$ at the endpoints',
-      'Is always zero'
+      'Is always positive',
+      'Is always zero',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For a gradient field, work $= \\varphi(\\mathbf{b}) - \\varphi(\\mathbf{a})$, depending only on the potential values at the endpoints, not on the path taken.',
   },
@@ -95,11 +111,11 @@ export const section107Questions: QuizQuestion[] = [
     question: 'The theorem implies that line integrals of gradients are:',
     options: [
       'Always zero',
-      'Independent of the path',
       'Path-dependent',
+      'Independent of the path',
       'Undefined',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Since $\\int \\nabla\\varphi \\cdot d\\alpha = \\varphi(\\mathbf{b}) - \\varphi(\\mathbf{a})$ depends only on endpoints, the line integral of a gradient is independent of the path.',
   },

@@ -6,10 +6,18 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The extended real number system $\\overline{\\mathbb{R}}$ consists of:',
     options: [
-      '$\\mathbb{R}$ together with $0$ and $1$',
+      '$\\mathbb{R}$ together with $0$ and $1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The extended reals are $\\overline{\\mathbb{R}} = \\mathbb{R} \\cup \\{+\\infty, -\\infty\\}$. These symbols extend the ordering: $-\\infty < x < +\\infty$ for all $x \\in \\mathbb{R}$.',
+  },
+      '$\\mathbb{R}$ together with $+\\infty$ and $-\\infty
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The extended reals are $\\overline{\\mathbb{R}} = \\mathbb{R} \\cup \\{+\\infty, -\\infty\\}$. These symbols extend the ordering: $-\\infty < x < +\\infty$ for all $x \\in \\mathbb{R}$.',
+  },
       'All complex numbers',
-      '$\\mathbb{R}$ together with $+\\infty$ and $-\\infty$',
-      '$\\mathbb{R}$ together with infinitesimals'
+      '$\\mathbb{R}$ together with infinitesimals',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -46,10 +54,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which arithmetic operation is NOT defined in the extended reals?',
     options: [
-      '$\\infty - \\infty$',
-      '$\\infty \\cdot \\infty$',
-      '$3 + \\infty$',
-      '$1 / \\infty$'
+      '$\\infty \\cdot \\infty
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The expression $\\infty - \\infty$ is indeterminate and undefined. Also $0 \\cdot \\infty$ and $\\infty / \\infty$ are undefined. However, $x + \\infty = \\infty$ for $x \\in \\mathbb{R}$.',
+  },
+      '$3 + \\infty
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The expression $\\infty - \\infty$ is indeterminate and undefined. Also $0 \\cdot \\infty$ and $\\infty / \\infty$ are undefined. However, $x + \\infty = \\infty$ for $x \\in \\mathbb{R}$.',
+  },
+      '$1 / \\infty
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The expression $\\infty - \\infty$ is indeterminate and undefined. Also $0 \\cdot \\infty$ and $\\infty / \\infty$ are undefined. However, $x + \\infty = \\infty$ for $x \\in \\mathbb{R}$.',
+  },
+      '$\\infty - \\infty
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The expression $\\infty - \\infty$ is indeterminate and undefined. Also $0 \\cdot \\infty$ and $\\infty / \\infty$ are undefined. However, $x + \\infty = \\infty$ for $x \\in \\mathbb{R}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

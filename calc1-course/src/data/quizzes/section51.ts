@@ -6,10 +6,22 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\lim_{x \\to \\infty} \\frac{\\ln x}{x}$ equals:',
     options: [
-      '$\\infty$',
-      '$0$',
-      '$1$',
-      'Does not exist'
+      '$\\infty
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By L\'Hôpital: $\\frac{1/x}{1} = 1/x \\to 0$. Log grows slower than any power.',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By L\'Hôpital: $\\frac{1/x}{1} = 1/x \\to 0$. Log grows slower than any power.',
+  },
+      'Does not exist',
+      '$0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By L\'Hôpital: $\\frac{1/x}{1} = 1/x \\to 0$. Log grows slower than any power.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -50,10 +62,26 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\lim_{x \\to \\infty} \\frac{x^{100}}{e^x}$ equals:',
     options: [
-      '$\\infty$',
-      '$100$',
-      '$1$',
-      '$0$'
+      '$\\infty
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Any polynomial divided by $e^x$ goes to 0.',
+  },
+      '$0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Any polynomial divided by $e^x$ goes to 0.',
+  },
+      '$100
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Any polynomial divided by $e^x$ goes to 0.',
+  },
+      '$1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Any polynomial divided by $e^x$ goes to 0.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -64,12 +92,12 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The growth rate hierarchy (slowest to fastest) is:',
     options: [
-      'logarithm < polynomial < exponential',
       'polynomial < exponential < logarithm',
       'exponential < logarithm < polynomial',
-      'polynomial < logarithm < exponential'
+      'logarithm < polynomial < exponential',
+      'polynomial < logarithm < exponential',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$\\ln x < x^n < e^x$ for large $x$.',
   },

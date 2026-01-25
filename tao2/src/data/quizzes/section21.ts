@@ -110,10 +110,26 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The coefficient of $x^n$ in $(1-x)^{-2} = \\sum c_n x^n$ is:',
     options: [
-      '$n$',
-      '$2^n$',
-      '$n + 1$',
-      '$1$'
+      '$n
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'We have $(1-x)^{-2} = \\sum_{n=0}^\\infty (n+1) x^n$.',
+  },
+      '$n + 1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'We have $(1-x)^{-2} = \\sum_{n=0}^\\infty (n+1) x^n$.',
+  },
+      '$2^n
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'We have $(1-x)^{-2} = \\sum_{n=0}^\\infty (n+1) x^n$.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'We have $(1-x)^{-2} = \\sum_{n=0}^\\infty (n+1) x^n$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

@@ -6,12 +6,12 @@ export const section97Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A quadratic form $Q(y) = yAy^t$ is positive definite if and only if:',
     options: [
-      'All eigenvalues of $A$ are zero',
       'All eigenvalues of $A$ are positive',
+      'All eigenvalues of $A$ are zero',
       'All eigenvalues of $A$ are negative',
-      'The eigenvalues of $A$ have mixed signs'
+      'The eigenvalues of $A$ have mixed signs',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A real symmetric matrix $A$ has $Q(y) > 0$ for all $y \\neq 0$ (positive definite) if and only if all its eigenvalues are positive.',
   },
@@ -20,10 +20,22 @@ export const section97Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If all eigenvalues of the Hessian $H(a)$ at a stationary point $a$ are positive, then $f$ has:',
     options: [
-      'A relative maximum at $a$',
-      'A saddle point at $a$',
-      'A relative minimum at $a$',
-      'No conclusion can be drawn'
+      'A relative maximum at $a
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'If all eigenvalues are positive, the Hessian is positive definite. This means $f(a + y) - f(a) > 0$ for small $y \\neq 0$, so $f$ has a relative minimum at $a$.',
+  },
+      'A saddle point at $a
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'If all eigenvalues are positive, the Hessian is positive definite. This means $f(a + y) - f(a) > 0$ for small $y \\neq 0$, so $f$ has a relative minimum at $a$.',
+  },
+      'No conclusion can be drawn',
+      'A relative minimum at $a
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'If all eigenvalues are positive, the Hessian is positive definite. This means $f(a + y) - f(a) > 0$ for small $y \\neq 0$, so $f$ has a relative minimum at $a$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

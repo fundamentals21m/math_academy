@@ -1,0 +1,29 @@
+{
+  "partId": 10,
+  "partTitle": "Line Integrals",
+  "textbookChapter": "Chapter 10",
+  "sections": [
+    {
+      "sectionId": 115,
+      "sectionTitle": "Introduction to Line Integrals",
+      "textbookSection": "§10.1-10.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "10-1-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Evaluate $\\int_C \\mathbf{F} \\cdot d\\mathbf{r}$ where $\\mathbf{F} = (y, x)$ and $C$ is the line segment from $(0,0)$ to $(1,1)$.",
+          "solution": {
+            "steps": [
+              {"title": "Parametrize C", "content": "$\\mathbf{r}(t) = (t, t)$ for $t \\in [0, 1]$, so $d\\mathbf{r} = (1, 1)dt$."},
+              {"title": "Substitute", "content": "$\\mathbf{F}(\\mathbf{r}(t)) = (t, t)$, so $\\mathbf{F} \\cdot d\\mathbf{r} = t + t = 2t\\,dt$."},
+              {"title": "Integrate", "content": "$\\int_0^1 2t\\,dt = t^2 \\big|_0^1 = 1$."}
+            ],
+            "conclusion": "$\\int_C \\mathbf{F} \\cdot d\\mathbf{r} = 1$."
+          }
+        }
+      ]
+    }
+  ]
+}

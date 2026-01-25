@@ -92,10 +92,26 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $g$ is continuous and $F(x) = \\int_a^{x^2} g(t) \\, dt$, then $F\'(x) = $',
     options: [
-      '$g(x^2)$',
-      '$g(x^2) \\cdot 2x + g(a)$',
-      '$2x \\cdot g(x^2)$',
-      '$\\int_a^{x^2} g\'(t) \\, dt$'
+      '$g(x^2)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By the chain rule combined with FTC: Let $G(u) = \\int_a^u g(t)\\,dt$, so $F(x) = G(x^2)$. Then $F\'(x) = G\'(x^2) \\cdot 2x = g(x^2) \\cdot 2x$.',
+  },
+      '$g(x^2) \\cdot 2x + g(a)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By the chain rule combined with FTC: Let $G(u) = \\int_a^u g(t)\\,dt$, so $F(x) = G(x^2)$. Then $F\'(x) = G\'(x^2) \\cdot 2x = g(x^2) \\cdot 2x$.',
+  },
+      '$\\int_a^{x^2} g\\'(t) \\, dt
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By the chain rule combined with FTC: Let $G(u) = \\int_a^u g(t)\\,dt$, so $F(x) = G(x^2)$. Then $F\'(x) = G\'(x^2) \\cdot 2x = g(x^2) \\cdot 2x$.',
+  },
+      '$2x \\cdot g(x^2)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'By the chain rule combined with FTC: Let $G(u) = \\int_a^u g(t)\\,dt$, so $F(x) = G(x^2)$. Then $F\'(x) = G\'(x^2) \\cdot 2x = g(x^2) \\cdot 2x$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -106,10 +122,26 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which hypothesis is NOT required for the Second FTC to hold?',
     options: [
-      '$f$ is Riemann integrable on $[a, b]$',
-      '$F$ is differentiable on $[a, b]$',
-      '$F\' = f$ on $[a, b]$',
-      '$f$ is continuous on $[a, b]$'
+      '$f$ is continuous on $[a, b]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Second FTC (Theorem 6.21) requires: (1) $f \\in \\mathscr{R}$, (2) $F$ differentiable with $F\' = f$. It does NOT require $f$ to be continuous. For example, $f$ could be a step function with $F$ piecewise linear.',
+  },
+      '$f$ is Riemann integrable on $[a, b]
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The Second FTC (Theorem 6.21) requires: (1) $f \\in \\mathscr{R}$, (2) $F$ differentiable with $F\' = f$. It does NOT require $f$ to be continuous. For example, $f$ could be a step function with $F$ piecewise linear.',
+  },
+      '$F$ is differentiable on $[a, b]
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The Second FTC (Theorem 6.21) requires: (1) $f \\in \\mathscr{R}$, (2) $F$ differentiable with $F\' = f$. It does NOT require $f$ to be continuous. For example, $f$ could be a step function with $F$ piecewise linear.',
+  },
+      '$F\\' = f$ on $[a, b]
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The Second FTC (Theorem 6.21) requires: (1) $f \\in \\mathscr{R}$, (2) $F$ differentiable with $F\' = f$. It does NOT require $f$ to be continuous. For example, $f$ could be a step function with $F$ piecewise linear.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

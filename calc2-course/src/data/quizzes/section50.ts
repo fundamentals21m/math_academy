@@ -32,10 +32,26 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Constant-coefficient operators commute, meaning:',
     options: [
-      '$AB = BA$',
-      '$AB = -BA$',
-      '$AB = 0$',
-      '$A + B = BA$'
+      '$AB = -BA
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Since $D^r D^s = D^s D^r = D^{r+s}$, products of constant-coefficient operators commute.',
+  },
+      '$AB = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Since $D^r D^s = D^s D^r = D^{r+s}$, products of constant-coefficient operators commute.',
+  },
+      '$AB = BA
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Since $D^r D^s = D^s D^r = D^{r+s}$, products of constant-coefficient operators commute.',
+  },
+      '$A + B = BA
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Since $D^r D^s = D^s D^r = D^{r+s}$, products of constant-coefficient operators commute.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

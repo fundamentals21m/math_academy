@@ -66,10 +66,10 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is secp256k1\'s prime $p = 2^{256} - 2^{32} - 977$ special?',
     options: [
-      'It\'s the largest 256-bit prime',
+      'It\\\'s the largest 256-bit prime',
       'It was chosen randomly by the NSA',
-      'It\'s a pseudo-Mersenne prime allowing fast modular reduction',
-      'It\'s the product of two smaller primes'
+      'It\\\'s a pseudo-Mersenne prime allowing fast modular reduction',
+      'It\\\'s the product of two smaller primes',
     ],
     correctIndex: 2,
     difficulty: 'medium',

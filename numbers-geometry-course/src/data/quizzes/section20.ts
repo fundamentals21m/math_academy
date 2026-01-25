@@ -10,12 +10,12 @@ export const section20Questions: QuizQuestion[] = [
     question:
       "What defect exists in Euclid's axioms regarding circle intersections?",
     options: [
-      'Circles cannot be drawn',
       'His axioms guarantee circles exist but not their intersections',
+      'Circles cannot be drawn',
       'Circles have no center',
       'There is no defect',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       "Euclid's axioms guarantee that circles can be drawn, but they do not guarantee that two circles actually intersect. Coordinates solve this by turning the question into one about solutions of equations.",
@@ -62,12 +62,12 @@ export const section20Questions: QuizQuestion[] = [
     question:
       'Points constructible by ruler and compass have coordinates involving only:',
     options: [
-      'Rational operations and square roots',
       'Integers',
       'Rational numbers',
       'Cube roots',
+      'Rational operations and square roots',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Constructible points have coordinates obtainable from 1 by the rational operations (+, −, ×, ÷) and square roots. Cube roots cannot be constructed.',
@@ -78,12 +78,12 @@ export const section20Questions: QuizQuestion[] = [
     question:
       'The intersection of two lines is found using what type of operations?',
     options: [
+      'Only rational operations',
       'Only square roots',
       'Cube roots',
       'Trigonometric functions',
-      'Only rational operations',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Solving two linear equations to find their intersection requires only rational operations (addition, subtraction, multiplication, division).',
@@ -94,11 +94,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Finding where a line meets a circle requires:',
     options: [
       'Only rational operations',
+      'Rational operations and square roots',
       'Cube roots',
       'Trigonometry',
-      'Rational operations and square roots',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Substituting the line equation into the circle equation gives a quadratic, which is solved using the quadratic formula—requiring rational operations plus a square root.',
@@ -109,12 +109,12 @@ export const section20Questions: QuizQuestion[] = [
     question:
       'Why is the cube root of 2 ($\\sqrt[3]{2}$) not constructible by ruler and compass?',
     options: [
-      'It cannot be expressed using rational operations and square roots alone',
       'It is too large',
       'It is irrational',
       'Euclid forbade it',
+      'It cannot be expressed using rational operations and square roots alone',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Cube root of 2 satisfies x³ = 2, which cannot be reduced to equations solvable by rational operations and square roots. This proves "doubling the cube" is impossible.',
@@ -125,11 +125,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'How is the product of two lengths $a$ and $b$ constructed?',
     options: [
       'By joining them end to end',
-      'It cannot be constructed',
       'Using similar triangles',
+      'It cannot be constructed',
       'By drawing a circle',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Similar triangles can be used to construct the product ab. If you have lengths 1, a, and b, proportionality gives a length equal to ab.',
@@ -141,11 +141,11 @@ export const section20Questions: QuizQuestion[] = [
       'For how many years did mathematicians try to solve problems like doubling the cube before they were proven impossible?',
     options: [
       'About 100 years',
-      'About 2000 years',
       'About 500 years',
+      'About 2000 years',
       'About 5000 years',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Problems like doubling the cube, trisecting the angle, and squaring the circle were attempted for about 2000 years before being proven impossible using algebraic methods in the 19th century.',

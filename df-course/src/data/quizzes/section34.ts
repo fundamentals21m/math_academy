@@ -76,10 +76,22 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In an integral domain, if $ab = 0$, then:',
     options: [
-      '$a = b$',
+      '$a = b
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'An integral domain is a commutative ring with $1 \\neq 0$ and no zero divisors. The condition "no zero divisors" means precisely that $ab = 0$ implies $a = 0$ or $b = 0$.',
+  },
+      '$a = 0$ or $b = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'An integral domain is a commutative ring with $1 \\neq 0$ and no zero divisors. The condition "no zero divisors" means precisely that $ab = 0$ implies $a = 0$ or $b = 0$.',
+  },
       '$a$ and $b$ are both units',
-      '$a = 0$ or $b = 0$',
-      '$a + b = 0$'
+      '$a + b = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'An integral domain is a commutative ring with $1 \\neq 0$ and no zero divisors. The condition "no zero divisors" means precisely that $ab = 0$ implies $a = 0$ or $b = 0$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -90,10 +102,22 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is an integral domain?',
     options: [
-      '$\\mathbb{Z}_6$',
-      '$\\mathbb{Z}_4$',
+      '$\\mathbb{Z}_7
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}_7$ is an integral domain because $7$ is prime, so $\\mathbb{Z}_7$ is actually a field (hence an integral domain). $\\mathbb{Z}_6$ and $\\mathbb{Z}_4$ have zero divisors, and $M_2(\\mathbb{R})$ is non-commutative with zero divisors.',
+  },
+      '$\\mathbb{Z}_6
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}_7$ is an integral domain because $7$ is prime, so $\\mathbb{Z}_7$ is actually a field (hence an integral domain). $\\mathbb{Z}_6$ and $\\mathbb{Z}_4$ have zero divisors, and $M_2(\\mathbb{R})$ is non-commutative with zero divisors.',
+  },
+      '$\\mathbb{Z}_4
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}_7$ is an integral domain because $7$ is prime, so $\\mathbb{Z}_7$ is actually a field (hence an integral domain). $\\mathbb{Z}_6$ and $\\mathbb{Z}_4$ have zero divisors, and $M_2(\\mathbb{R})$ is non-commutative with zero divisors.',
+  },
       '$M_2(\\mathbb{R})$ (2x2 matrices over $\\mathbb{R}$)',
-      '$\\mathbb{Z}_7$'
     ],
     correctIndex: 3,
     difficulty: 'medium',

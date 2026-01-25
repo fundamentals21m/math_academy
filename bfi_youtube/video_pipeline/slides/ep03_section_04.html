@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .comparison-container {
+      display: flex;
+      gap: 50px;
+      margin-top: 50px;
+      justify-content: center;
+    }
+    .asset-card {
+      width: 450px;
+      padding: 40px;
+      border-radius: 12px;
+    }
+    .asset-card.fiat {
+      background: rgba(220, 38, 38, 0.1);
+      border: 2px solid rgba(220, 38, 38, 0.3);
+    }
+    .asset-card.btc {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+    }
+    .asset-name {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+    .fiat .asset-name { color: #DC2626; }
+    .btc .asset-name { color: #F7931A; }
+    .asset-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(139, 148, 158, 0.2);
+    }
+    .asset-row:last-child {
+      border-bottom: none;
+    }
+    .asset-label {
+      color: #8B949E;
+      font-size: 16px;
+    }
+    .asset-value {
+      color: #E6EDF3;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .highlight {
+      background: rgba(247, 147, 26, 0.2);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Bitcoin vs Dollar</div>
+    <div class="section-title">10-Year Payment Comparison</div>
+    <div class="comparison-container">
+      <div class="asset-card fiat">
+        <div class="asset-name">$1,000 USD</div>
+        <div class="asset-row">
+          <span class="asset-label">Present Value (10%)</span>
+          <span class="asset-value">~$375</span>
+        </div>
+        <div class="asset-row">
+          <span class="asset-label">Inflation Erosion</span>
+          <span class="asset-value">Significant</span>
+        </div>
+        <div class="asset-row">
+          <span class="asset-label">Real Value</span>
+          <span class="asset-value">< $375</span>
+        </div>
+        <div class="asset-row">
+          <span class="asset-label">Debasement Risk</span>
+          <span class="asset-value">Ongoing</span>
+        </div>
+      </div>
+      <div class="asset-card btc">
+        <div class="asset-name">0.01 BTC</div>
+        <div class="asset-row">
+          <span class="asset-label">Purchasing Power</span>
+          <span class="asset-value">Retained</span>
+        </div>
+        <div class="asset-row">
+          <span class="asset-label">3 Halvings Effect</span>
+          <span class="asset-value">~3x vs USD</span>
+        </div>
+        <div class="asset-row">
+          <span class="asset-label">Expected Value</span>
+          <span class="asset-value highlight">~$8,000</span>
+        </div>
+        <div class="asset-row">
+          <span class="asset-label">Central Issuer</span>
+          <span class="asset-value">None</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

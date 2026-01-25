@@ -7,11 +7,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'In mathematical induction, the first step is to:',
       options: [
-        'Assume the statement is true for some $k$',
-        'Prove the base case (usually $n = 1$)',
-        'Show the statement holds for $k + 1$',
-        'Prove the statement for all $n$'
-      ],
+      'Assume the statement is true for some $k
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Mathematical induction always begins with proving the base case, typically showing the statement is true for $n = 1$ (or sometimes $n = 0$).'
+    },
+      'Show the statement holds for $k + 1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Mathematical induction always begins with proving the base case, typically showing the statement is true for $n = 1$ (or sometimes $n = 0$).'
+    },
+      'Prove the statement for all $n
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Mathematical induction always begins with proving the base case, typically showing the statement is true for $n = 1$ (or sometimes $n = 0$).'
+    },
+      'Prove the base case (usually $n = 1$)',
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Mathematical induction always begins with proving the base case, typically showing the statement is true for $n = 1$ (or sometimes $n = 0$).'
@@ -21,11 +33,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The inductive hypothesis assumes that:',
       options: [
-        'The statement is true for all natural numbers',
-        'The statement is true for $n = 1$',
-        'The statement is true for some arbitrary $k$',
-        'The statement is false for some $n$'
-      ],
+      'The statement is true for all natural numbers',
+      'The statement is true for some arbitrary $k
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The inductive hypothesis assumes the statement $P(k)$ is true for some arbitrary but fixed natural number $k$. We then use this to prove $P(k+1)$.'
+    },
+      'The statement is true for $n = 1
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The inductive hypothesis assumes the statement $P(k)$ is true for some arbitrary but fixed natural number $k$. We then use this to prove $P(k+1)$.'
+    },
+      'The statement is false for some $n
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The inductive hypothesis assumes the statement $P(k)$ is true for some arbitrary but fixed natural number $k$. We then use this to prove $P(k+1)$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The inductive hypothesis assumes the statement $P(k)$ is true for some arbitrary but fixed natural number $k$. We then use this to prove $P(k+1)$.'
@@ -35,11 +59,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'What is the base case for proving $\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}$?',
       options: [
-        '$n = 0$: $0 = \\frac{0 \\cdot 1}{2}$',
-        '$n = k$: assume it works',
-        '$n = 2$: $3 = \\frac{2 \\cdot 3}{2}$',
-        '$n = 1$: $1 = \\frac{1 \\cdot 2}{2}$'
-      ],
+      '$n = 1$: $1 = \\frac{1 \\cdot 2}{2}
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'For this sum, the natural base case is $n = 1$: the left side is $1$, and the right side is $\\frac{1 \\cdot 2}{2} = 1$. Both sides are equal, so the base case holds.'
+    },
+      '$n = 0$: $0 = \\frac{0 \\cdot 1}{2}
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'For this sum, the natural base case is $n = 1$: the left side is $1$, and the right side is $\\frac{1 \\cdot 2}{2} = 1$. Both sides are equal, so the base case holds.'
+    },
+      '$n = k$: assume it works',
+      '$n = 2$: $3 = \\frac{2 \\cdot 3}{2}
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'For this sum, the natural base case is $n = 1$: the left side is $1$, and the right side is $\\frac{1 \\cdot 2}{2} = 1$. Both sides are equal, so the base case holds.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'For this sum, the natural base case is $n = 1$: the left side is $1$, and the right side is $\\frac{1 \\cdot 2}{2} = 1$. Both sides are equal, so the base case holds.'
@@ -49,12 +85,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Mathematical induction is used to prove statements about:',
       options: [
-        'Natural numbers (or integers $\\geq$ some starting value)',
-        'Rational numbers only',
-        'Real numbers only',
-        'Complex numbers only'
-      ],
-      correctIndex: 0,
+      'Rational numbers only',
+      'Real numbers only',
+      'Complex numbers only',
+      'Natural numbers (or integers $\\geq$ some starting value)',
+    ],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Mathematical induction is a proof technique for statements indexed by natural numbers or integers starting from some fixed value.'
     },
@@ -63,11 +99,15 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'After proving the base case and inductive step, what can we conclude?',
       options: [
-        'The statement is true for $n = 1$ only',
-        'The statement is true for all natural numbers $n$',
-        'The statement might be true',
-        'The statement needs more verification'
-      ],
+      'The statement is true for $n = 1$ only',
+      'The statement might be true',
+      'The statement needs more verification',
+      'The statement is true for all natural numbers $n
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The principle of mathematical induction states: if $P(1)$ is true and $P(k) \\Rightarrow P(k+1)$ for all $k$, then $P(n)$ is true for all natural numbers $n$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The principle of mathematical induction states: if $P(1)$ is true and $P(k) \\Rightarrow P(k+1)$ for all $k$, then $P(n)$ is true for all natural numbers $n$.'
@@ -86,11 +126,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Which of the following correctly states the principle of mathematical induction?',
       options: [
-        'If $P(k+1) \\Rightarrow P(k)$, then $P(n)$ for all $n$',
-        'If $P(n)$ is true for some $n$, it is true for all $n$',
-        'If $P(1)$ and $P(k) \\Rightarrow P(k+1)$, then $P(n)$ for all $n \\in \\mathbb{N}$',
-        'If $P(1)$ is false, the statement is false for all $n$'
-      ],
+      'If $P(k+1) \\Rightarrow P(k)$, then $P(n)$ for all $n
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The principle of mathematical induction requires: (1) base case $P(1)$ is true, and (2) for all $k$, $P(k) \\Rightarrow P(k+1)$. Then $P(n)$ holds for all natural numbers.'
+    },
+      'If $P(n)$ is true for some $n$, it is true for all $n
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The principle of mathematical induction requires: (1) base case $P(1)$ is true, and (2) for all $k$, $P(k) \\Rightarrow P(k+1)$. Then $P(n)$ holds for all natural numbers.'
+    },
+      'If $P(1)$ is false, the statement is false for all $n
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The principle of mathematical induction requires: (1) base case $P(1)$ is true, and (2) for all $k$, $P(k) \\Rightarrow P(k+1)$. Then $P(n)$ holds for all natural numbers.'
+    },
+      'If $P(1)$ and $P(k) \\Rightarrow P(k+1)$, then $P(n)$ for all $n \\in \\mathbb{N}
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The principle of mathematical induction requires: (1) base case $P(1)$ is true, and (2) for all $k$, $P(k) \\Rightarrow P(k+1)$. Then $P(n)$ holds for all natural numbers.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The principle of mathematical induction requires: (1) base case $P(1)$ is true, and (2) for all $k$, $P(k) \\Rightarrow P(k+1)$. Then $P(n)$ holds for all natural numbers.'
@@ -100,11 +156,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'In proving $1 + 3 + 5 + \\cdots + (2n-1) = n^2$, what is the $(k+1)$-th odd number?',
       options: [
-        '$2k - 1$',
-        '$2k + 1$',
-        '$2(k+1) - 1$',
-        'Both B and C are correct'
-      ],
+      '$2k - 1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The $(k+1)$-th odd number is $2(k+1) - 1 = 2k + 2 - 1 = 2k + 1$. So both expressions represent the same value.'
+    },
+      'Both B and C are correct',
+      '$2k + 1
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The $(k+1)$-th odd number is $2(k+1) - 1 = 2k + 2 - 1 = 2k + 1$. So both expressions represent the same value.'
+    },
+      '$2(k+1) - 1
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The $(k+1)$-th odd number is $2(k+1) - 1 = 2k + 2 - 1 = 2k + 1$. So both expressions represent the same value.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The $(k+1)$-th odd number is $2(k+1) - 1 = 2k + 2 - 1 = 2k + 1$. So both expressions represent the same value.'
@@ -114,11 +182,19 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'What is the purpose of the inductive step?',
       options: [
-        'To show $P(k)$ implies $P(k+1)$',
-        'To verify the formula for $n = 1$',
-        'To prove the statement is sometimes true',
-        'To find a counterexample'
-      ],
+      'To verify the formula for $n = 1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The inductive step shows that if the statement holds for an arbitrary $k$, then it must also hold for $k+1$. This creates a "chain" of implications from the base case.'
+    },
+      'To show $P(k)$ implies $P(k+1)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'The inductive step shows that if the statement holds for an arbitrary $k$, then it must also hold for $k+1$. This creates a "chain" of implications from the base case.'
+    },
+      'To prove the statement is sometimes true',
+      'To find a counterexample',
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The inductive step shows that if the statement holds for an arbitrary $k$, then it must also hold for $k+1$. This creates a "chain" of implications from the base case.'
@@ -137,11 +213,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'When proving $2^n > n$ for all $n \\geq 1$, what is the base case verification?',
       options: [
-        '$2^0 = 1 > 0$',
-        '$2^1 = 2 > 1$',
-        '$2^2 = 4 > 2$',
-        'All of the above work as base cases'
-      ],
+      '$2^1 = 2 > 1
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'For $n \\geq 1$, the base case is $n = 1$: we verify $2^1 = 2 > 1$, which is true.'
+    },
+      '$2^0 = 1 > 0
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'For $n \\geq 1$, the base case is $n = 1$: we verify $2^1 = 2 > 1$, which is true.'
+    },
+      '$2^2 = 4 > 2
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'For $n \\geq 1$, the base case is $n = 1$: we verify $2^1 = 2 > 1$, which is true.'
+    },
+      'All of the above work as base cases',
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'For $n \\geq 1$, the base case is $n = 1$: we verify $2^1 = 2 > 1$, which is true.'
@@ -151,11 +239,15 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Which step comes immediately after stating the inductive hypothesis?',
       options: [
-        'Verify the base case',
-        'Conclude the proof',
-        'Prove the statement for $k + 1$',
-        'Check for counterexamples'
-      ],
+      'Verify the base case',
+      'Prove the statement for $k + 1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'After assuming $P(k)$ (the inductive hypothesis), we must prove $P(k+1)$ using this assumption.'
+    },
+      'Conclude the proof',
+      'Check for counterexamples',
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'After assuming $P(k)$ (the inductive hypothesis), we must prove $P(k+1)$ using this assumption.'
@@ -165,12 +257,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The well-ordering principle states that:',
       options: [
-        'Every set of real numbers has a minimum',
-        'Every sequence is bounded',
-        'The natural numbers can be ordered in many ways',
-        'Every non-empty subset of natural numbers has a least element'
-      ],
-      correctIndex: 3,
+      'Every set of real numbers has a minimum',
+      'Every non-empty subset of natural numbers has a least element',
+      'Every sequence is bounded',
+      'The natural numbers can be ordered in many ways',
+    ],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The well-ordering principle states that every non-empty subset of natural numbers contains a smallest element. This is equivalent to the principle of mathematical induction.'
     },
@@ -188,12 +280,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'A recursive definition of a sequence requires:',
       options: [
-        'Initial value(s) and a recurrence relation',
-        'Only a formula for the $n$-th term',
-        'A proof by induction',
-        'An explicit closed form'
-      ],
-      correctIndex: 0,
+      'Only a formula for the $n$-th term',
+      'A proof by induction',
+      'An explicit closed form',
+      'Initial value(s) and a recurrence relation',
+    ],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'A recursive definition needs base case(s) (initial values) and a rule that defines each term using previous terms (recurrence relation).'
     },
@@ -202,11 +294,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'If $a_1 = 2$ and $a_{n+1} = a_n + 3$, what is $a_3$?',
       options: [
-        '$5$',
-        '$8$',
-        '$11$',
-        '$6$'
-      ],
+      '$5
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: '$a_1 = 2$, $a_2 = a_1 + 3 = 2 + 3 = 5$, $a_3 = a_2 + 3 = 5 + 3 = 8$.'
+    },
+      '$11
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$a_1 = 2$, $a_2 = a_1 + 3 = 2 + 3 = 5$, $a_3 = a_2 + 3 = 5 + 3 = 8$.'
+    },
+      '$8
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$a_1 = 2$, $a_2 = a_1 + 3 = 2 + 3 = 5$, $a_3 = a_2 + 3 = 5 + 3 = 8$.'
+    },
+      '$6
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$a_1 = 2$, $a_2 = a_1 + 3 = 2 + 3 = 5$, $a_3 = a_2 + 3 = 5 + 3 = 8$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: '$a_1 = 2$, $a_2 = a_1 + 3 = 2 + 3 = 5$, $a_3 = a_2 + 3 = 5 + 3 = 8$.'
@@ -216,11 +324,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'In proving a statement for all $n \\geq 5$, what should be the base case?',
       options: [
-        '$n = 0$',
-        '$n = 1$',
-        '$n = 5$',
-        'Any value of $n$'
-      ],
+      '$n = 0
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'When proving a statement for $n \\geq 5$, the base case should be $n = 5$, the smallest value in the domain.'
+    },
+      '$n = 5
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'When proving a statement for $n \\geq 5$, the base case should be $n = 5$, the smallest value in the domain.'
+    },
+      '$n = 1
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'When proving a statement for $n \\geq 5$, the base case should be $n = 5$, the smallest value in the domain.'
+    },
+      'Any value of $n
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'When proving a statement for $n \\geq 5$, the base case should be $n = 5$, the smallest value in the domain.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'When proving a statement for $n \\geq 5$, the base case should be $n = 5$, the smallest value in the domain.'
@@ -239,11 +363,15 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Why is the base case necessary in mathematical induction?',
       options: [
-        'To make the proof longer',
-        'It is optional and can be skipped',
-        'To verify the formula is correct for large $n$',
-        'To establish a starting point for the chain of implications'
-      ],
+      'To establish a starting point for the chain of implications',
+      'To make the proof longer',
+      'It is optional and can be skipped',
+      'To verify the formula is correct for large $n
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Without a base case, the inductive step only shows implications between consecutive values but never establishes that any case is actually true. The base case starts the chain.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Without a base case, the inductive step only shows implications between consecutive values but never establishes that any case is actually true. The base case starts the chain.'
@@ -253,11 +381,19 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The notation $P(n)$ in induction proofs represents:',
       options: [
-        'A statement or proposition about $n$',
-        'A prime number',
-        'A polynomial function',
-        'The $n$-th power of $P$'
-      ],
+      'A prime number',
+      'A polynomial function',
+      'A statement or proposition about $n
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: '$P(n)$ represents a statement or proposition that depends on the natural number $n$. We prove $P(n)$ is true for all $n$ in the given domain.'
+    },
+      'The $n$-th power of $P
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$P(n)$ represents a statement or proposition that depends on the natural number $n$. We prove $P(n)$ is true for all $n$ in the given domain.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$P(n)$ represents a statement or proposition that depends on the natural number $n$. We prove $P(n)$ is true for all $n$ in the given domain.'
@@ -270,11 +406,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}$ by induction, after assuming it holds for $k$, we need to show that $\\sum_{i=1}^{k+1} i = $',
       options: [
-        '$\\frac{k(k+1)}{2}$',
-        '$\\frac{(k+1)(k+2)}{2}$',
-        '$\\frac{k(k+2)}{2}$',
-        '$\\frac{(k+1)^2}{2}$'
-      ],
+      '$\\frac{k(k+1)}{2}
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Substituting $n = k+1$ into the formula gives $\\frac{(k+1)(k+2)}{2}$. We must prove this equals $\\sum_{i=1}^{k} i + (k+1) = \\frac{k(k+1)}{2} + (k+1)$.'
+    },
+      '$\\frac{k(k+2)}{2}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Substituting $n = k+1$ into the formula gives $\\frac{(k+1)(k+2)}{2}$. We must prove this equals $\\sum_{i=1}^{k} i + (k+1) = \\frac{k(k+1)}{2} + (k+1)$.'
+    },
+      '$\\frac{(k+1)^2}{2}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Substituting $n = k+1$ into the formula gives $\\frac{(k+1)(k+2)}{2}$. We must prove this equals $\\sum_{i=1}^{k} i + (k+1) = \\frac{k(k+1)}{2} + (k+1)$.'
+    },
+      '$\\frac{(k+1)(k+2)}{2}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Substituting $n = k+1$ into the formula gives $\\frac{(k+1)(k+2)}{2}$. We must prove this equals $\\sum_{i=1}^{k} i + (k+1) = \\frac{k(k+1)}{2} + (k+1)$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Substituting $n = k+1$ into the formula gives $\\frac{(k+1)(k+2)}{2}$. We must prove this equals $\\sum_{i=1}^{k} i + (k+1) = \\frac{k(k+1)}{2} + (k+1)$.'
@@ -284,11 +436,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'In proving $\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}$, the inductive step uses: $\\frac{k(k+1)}{2} + (k+1) = $',
       options: [
-        '$\\frac{k(k+1) + k + 1}{2}$',
-        '$\\frac{(k+1)(k+2)}{2}$',
-        'All of the above are equivalent',
-        '$\\frac{k^2 + 3k + 2}{2}$'
-      ],
+      'All of the above are equivalent',
+      '$\\frac{k(k+1) + k + 1}{2}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\frac{k(k+1)}{2} + (k+1) = \\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Also, $(k+1)(k+2) = k^2 + 3k + 2$.'
+    },
+      '$\\frac{(k+1)(k+2)}{2}
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$\\frac{k(k+1)}{2} + (k+1) = \\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Also, $(k+1)(k+2) = k^2 + 3k + 2$.'
+    },
+      '$\\frac{k^2 + 3k + 2}{2}
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$\\frac{k(k+1)}{2} + (k+1) = \\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Also, $(k+1)(k+2) = k^2 + 3k + 2$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: '$\\frac{k(k+1)}{2} + (k+1) = \\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Also, $(k+1)(k+2) = k^2 + 3k + 2$.'
@@ -298,11 +462,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Prove: $\\sum_{i=0}^{n} 2^i = 2^{n+1} - 1$. In the inductive step, we add $2^{k+1}$ to both sides. The right side becomes:',
       options: [
-        '$2^{k+2} - 1$',
-        '$2 \\cdot 2^{k+1} - 1$',
-        '$2^{k+1} + 2^{k+1} - 1$',
-        'All of the above'
-      ],
+      '$2^{k+2} - 1
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$(2^{k+1} - 1) + 2^{k+1} = 2 \\cdot 2^{k+1} - 1 = 2^{k+2} - 1$. All expressions are equivalent.'
+    },
+      '$2 \\cdot 2^{k+1} - 1
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$(2^{k+1} - 1) + 2^{k+1} = 2 \\cdot 2^{k+1} - 1 = 2^{k+2} - 1$. All expressions are equivalent.'
+    },
+      'All of the above',
+      '$2^{k+1} + 2^{k+1} - 1
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$(2^{k+1} - 1) + 2^{k+1} = 2 \\cdot 2^{k+1} - 1 = 2^{k+2} - 1$. All expressions are equivalent.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: '$(2^{k+1} - 1) + 2^{k+1} = 2 \\cdot 2^{k+1} - 1 = 2^{k+2} - 1$. All expressions are equivalent.'
@@ -335,11 +511,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $n! > 2^n$ for $n \\geq 4$, the base case at $n = 4$ shows:',
       options: [
-        '$6 > 8$',
-        '$24 > 16$',
-        '$120 > 32$',
-        '$2 > 4$'
-      ],
+      '$6 > 8
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'For $n = 4$: $4! = 24$ and $2^4 = 16$. Since $24 > 16$, the base case holds.'
+    },
+      '$120 > 32
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'For $n = 4$: $4! = 24$ and $2^4 = 16$. Since $24 > 16$, the base case holds.'
+    },
+      '$2 > 4
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'For $n = 4$: $4! = 24$ and $2^4 = 16$. Since $24 > 16$, the base case holds.'
+    },
+      '$24 > 16
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'For $n = 4$: $4! = 24$ and $2^4 = 16$. Since $24 > 16$, the base case holds.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'For $n = 4$: $4! = 24$ and $2^4 = 16$. Since $24 > 16$, the base case holds.'
@@ -349,11 +541,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'In proving $n! > 2^n$ for $n \\geq 4$, the inductive step uses:',
       options: [
-        '$(k+1)! = 2 \\cdot k!$',
-        '$(k+1)! = k! + (k+1)$',
-        '$(k+1)! = (k+1) \\cdot k! > (k+1) \\cdot 2^k$',
-        '$(k+1)! = k!^2$'
-      ],
+      '$(k+1)! = 2 \\cdot k!
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'By definition $(k+1)! = (k+1) \\cdot k!$. Using the inductive hypothesis $k! > 2^k$, we get $(k+1)! > (k+1) \\cdot 2^k > 2 \\cdot 2^k = 2^{k+1}$ for $k \\geq 4$.'
+    },
+      '$(k+1)! = k! + (k+1)
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'By definition $(k+1)! = (k+1) \\cdot k!$. Using the inductive hypothesis $k! > 2^k$, we get $(k+1)! > (k+1) \\cdot 2^k > 2 \\cdot 2^k = 2^{k+1}$ for $k \\geq 4$.'
+    },
+      '$(k+1)! = k!^2
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'By definition $(k+1)! = (k+1) \\cdot k!$. Using the inductive hypothesis $k! > 2^k$, we get $(k+1)! > (k+1) \\cdot 2^k > 2 \\cdot 2^k = 2^{k+1}$ for $k \\geq 4$.'
+    },
+      '$(k+1)! = (k+1) \\cdot k! > (k+1) \\cdot 2^k
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'By definition $(k+1)! = (k+1) \\cdot k!$. Using the inductive hypothesis $k! > 2^k$, we get $(k+1)! > (k+1) \\cdot 2^k > 2 \\cdot 2^k = 2^{k+1}$ for $k \\geq 4$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'By definition $(k+1)! = (k+1) \\cdot k!$. Using the inductive hypothesis $k! > 2^k$, we get $(k+1)! > (k+1) \\cdot 2^k > 2 \\cdot 2^k = 2^{k+1}$ for $k \\geq 4$.'
@@ -363,11 +571,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'For the statement $P(n): 7^n - 1$ is divisible by $6$, verify the base case $n = 1$:',
       options: [
-        '$7^1 - 1 = 8$, which is not divisible by $6$',
-        '$7^1 - 1 = 7$, which is not divisible by $6$',
-        '$7^0 - 1 = 0$, which is divisible by $6$',
-        '$7^1 - 1 = 6$, which is divisible by $6$'
-      ],
+      '$7^1 - 1 = 6$, which is divisible by $6
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$7^1 - 1 = 7 - 1 = 6 = 6 \\cdot 1$, so $6 | (7^1 - 1)$ and the base case holds.'
+    },
+      '$7^1 - 1 = 8$, which is not divisible by $6
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$7^1 - 1 = 7 - 1 = 6 = 6 \\cdot 1$, so $6 | (7^1 - 1)$ and the base case holds.'
+    },
+      '$7^1 - 1 = 7$, which is not divisible by $6
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$7^1 - 1 = 7 - 1 = 6 = 6 \\cdot 1$, so $6 | (7^1 - 1)$ and the base case holds.'
+    },
+      '$7^0 - 1 = 0$, which is divisible by $6
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$7^1 - 1 = 7 - 1 = 6 = 6 \\cdot 1$, so $6 | (7^1 - 1)$ and the base case holds.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: '$7^1 - 1 = 7 - 1 = 6 = 6 \\cdot 1$, so $6 | (7^1 - 1)$ and the base case holds.'
@@ -377,11 +601,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $6 | (7^n - 1)$ by induction, write $7^{k+1} - 1$ in terms of $7^k - 1$:',
       options: [
-        '$7 \\cdot 7^k - 1 = 7(7^k - 1) + 6$',
-        '$7^{k+1} - 1 = 7^k + 6$',
-        '$7^{k+1} - 1 = (7-1)^{k+1}$',
-        '$7^{k+1} - 1 = 7^k - 7$'
-      ],
+      '$7^{k+1} - 1 = 7^k + 6
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$7^{k+1} - 1 = 7 \\cdot 7^k - 1 = 7 \\cdot 7^k - 7 + 6 = 7(7^k - 1) + 6$. Both $7(7^k - 1)$ and $6$ are divisible by $6$.'
+    },
+      '$7 \\cdot 7^k - 1 = 7(7^k - 1) + 6
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$7^{k+1} - 1 = 7 \\cdot 7^k - 1 = 7 \\cdot 7^k - 7 + 6 = 7(7^k - 1) + 6$. Both $7(7^k - 1)$ and $6$ are divisible by $6$.'
+    },
+      '$7^{k+1} - 1 = (7-1)^{k+1}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$7^{k+1} - 1 = 7 \\cdot 7^k - 1 = 7 \\cdot 7^k - 7 + 6 = 7(7^k - 1) + 6$. Both $7(7^k - 1)$ and $6$ are divisible by $6$.'
+    },
+      '$7^{k+1} - 1 = 7^k - 7
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$7^{k+1} - 1 = 7 \\cdot 7^k - 1 = 7 \\cdot 7^k - 7 + 6 = 7(7^k - 1) + 6$. Both $7(7^k - 1)$ and $6$ are divisible by $6$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$7^{k+1} - 1 = 7 \\cdot 7^k - 1 = 7 \\cdot 7^k - 7 + 6 = 7(7^k - 1) + 6$. Both $7(7^k - 1)$ and $6$ are divisible by $6$.'
@@ -400,11 +640,15 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The formula for $\\sum_{i=1}^{n} i^3 = \\left(\\frac{n(n+1)}{2}\\right)^2$ says the sum of cubes equals:',
       options: [
-        'The cube of $n$',
-        'The square of the sum of the first $n$ integers',
-        'Twice the sum of squares',
-        'The $n$-th triangular number'
-      ],
+      'The square of the sum of the first $n$ integers',
+      'The cube of $n
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Since $\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}$, the formula states that $\\sum_{i=1}^{n} i^3 = \\left(\\sum_{i=1}^{n} i\\right)^2$.'
+    },
+      'Twice the sum of squares',
+      'The $n$-th triangular number',
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Since $\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}$, the formula states that $\\sum_{i=1}^{n} i^3 = \\left(\\sum_{i=1}^{n} i\\right)^2$.'
@@ -423,11 +667,19 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'When is strong induction necessary instead of ordinary induction?',
       options: [
-        'When proving statements about prime numbers',
-        'When the base case is $n = 0$',
-        'When $P(k+1)$ depends on multiple previous cases, not just $P(k)$',
-        'When the statement involves inequalities'
-      ],
+      'When $P(k+1)$ depends on multiple previous cases, not just $P(k)
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Strong induction is useful when proving $P(k+1)$ requires knowing $P(j)$ for several values $j \\leq k$, such as in proofs about the Fibonacci sequence or prime factorization.'
+    },
+      'When proving statements about prime numbers',
+      'When the base case is $n = 0
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Strong induction is useful when proving $P(k+1)$ requires knowing $P(j)$ for several values $j \\leq k$, such as in proofs about the Fibonacci sequence or prime factorization.'
+    },
+      'When the statement involves inequalities',
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Strong induction is useful when proving $P(k+1)$ requires knowing $P(j)$ for several values $j \\leq k$, such as in proofs about the Fibonacci sequence or prime factorization.'
@@ -437,11 +689,19 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove every integer $n \\geq 2$ has a prime factorization using strong induction:',
       options: [
-        'We only need to check $n = 2$',
-        'Strong induction cannot be used for this',
-        'We need to list all primes less than $n$',
-        'If $n$ is prime, we are done; if composite, use factorization of smaller integers'
-      ],
+      'We only need to check $n = 2
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Base case: $2$ is prime. Inductive step: if $k+1$ is prime, done. If $k+1 = ab$ with $2 \\leq a, b < k+1$, by strong induction hypothesis both $a$ and $b$ have prime factorizations.'
+    },
+      'Strong induction cannot be used for this',
+      'If $n$ is prime, we are done; if composite, use factorization of smaller integers',
+      'We need to list all primes less than $n
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Base case: $2$ is prime. Inductive step: if $k+1$ is prime, done. If $k+1 = ab$ with $2 \\leq a, b < k+1$, by strong induction hypothesis both $a$ and $b$ have prime factorizations.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Base case: $2$ is prime. Inductive step: if $k+1$ is prime, done. If $k+1 = ab$ with $2 \\leq a, b < k+1$, by strong induction hypothesis both $a$ and $b$ have prime factorizations.'
@@ -451,12 +711,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The well-ordering principle can be used to prove induction because:',
       options: [
-        'If induction fails, the set of counterexamples has a least element, leading to contradiction',
-        'Both are about natural numbers',
-        'They are completely unrelated',
-        'Well-ordering only applies to real numbers'
-      ],
-      correctIndex: 0,
+      'Both are about natural numbers',
+      'If induction fails, the set of counterexamples has a least element, leading to contradiction',
+      'They are completely unrelated',
+      'Well-ordering only applies to real numbers',
+    ],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'If $P(n)$ fails for some $n$, let $S$ be the set of counterexamples. By well-ordering, $S$ has a least element $m$. But $P(1)$ holds (base case) and $P(m-1) \\Rightarrow P(m)$ (inductive step), contradiction.'
     },
@@ -465,11 +725,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'In the recursive definition $a_1 = 1$, $a_n = 2a_{n-1} + 1$, find $a_4$:',
       options: [
-        '$7$',
-        '$15$',
-        '$31$',
-        '$9$'
-      ],
+      '$15
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$a_1 = 1$, $a_2 = 2(1) + 1 = 3$, $a_3 = 2(3) + 1 = 7$, $a_4 = 2(7) + 1 = 15$.'
+    },
+      '$7
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$a_1 = 1$, $a_2 = 2(1) + 1 = 3$, $a_3 = 2(3) + 1 = 7$, $a_4 = 2(7) + 1 = 15$.'
+    },
+      '$31
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$a_1 = 1$, $a_2 = 2(1) + 1 = 3$, $a_3 = 2(3) + 1 = 7$, $a_4 = 2(7) + 1 = 15$.'
+    },
+      '$9
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$a_1 = 1$, $a_2 = 2(1) + 1 = 3$, $a_3 = 2(3) + 1 = 7$, $a_4 = 2(7) + 1 = 15$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: '$a_1 = 1$, $a_2 = 2(1) + 1 = 3$, $a_3 = 2(3) + 1 = 7$, $a_4 = 2(7) + 1 = 15$.'
@@ -488,11 +764,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $(1 + x)^n \\geq 1 + nx$ for $x > -1$ and $n \\geq 1$ (Bernoulli\'s inequality), the inductive step multiplies both sides by:',
       options: [
-        '$x$',
-        '$n$',
-        '$(1 + x)$',
-        '$(1 - x)$'
-      ],
+      '$(1 + x)
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'From $(1+x)^k \\geq 1 + kx$, multiply both sides by $(1+x) > 0$ to get $(1+x)^{k+1} \\geq (1+kx)(1+x) = 1 + (k+1)x + kx^2 \\geq 1 + (k+1)x$.'
+    },
+      '$x
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'From $(1+x)^k \\geq 1 + kx$, multiply both sides by $(1+x) > 0$ to get $(1+x)^{k+1} \\geq (1+kx)(1+x) = 1 + (k+1)x + kx^2 \\geq 1 + (k+1)x$.'
+    },
+      '$n
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'From $(1+x)^k \\geq 1 + kx$, multiply both sides by $(1+x) > 0$ to get $(1+x)^{k+1} \\geq (1+kx)(1+x) = 1 + (k+1)x + kx^2 \\geq 1 + (k+1)x$.'
+    },
+      '$(1 - x)
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'From $(1+x)^k \\geq 1 + kx$, multiply both sides by $(1+x) > 0$ to get $(1+x)^{k+1} \\geq (1+kx)(1+x) = 1 + (k+1)x + kx^2 \\geq 1 + (k+1)x$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'From $(1+x)^k \\geq 1 + kx$, multiply both sides by $(1+x) > 0$ to get $(1+x)^{k+1} \\geq (1+kx)(1+x) = 1 + (k+1)x + kx^2 \\geq 1 + (k+1)x$.'
@@ -502,11 +794,19 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'For proving $3^n > n^2$ for $n \\geq 1$, which step is part of the inductive argument?',
       options: [
-        'Use the formula for geometric series',
-        'Show $3^k = k^2$ for all $k$',
-        'Show $3^n < n^2$ and reach a contradiction',
-        'Show $3 \\cdot 3^k > 3k^2 > (k+1)^2$ for large enough $k$'
-      ],
+      'Show $3 \\cdot 3^k > 3k^2 > (k+1)^2$ for large enough $k
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Using $3^k > k^2$, we get $3^{k+1} = 3 \\cdot 3^k > 3k^2$. We need $3k^2 \\geq (k+1)^2 = k^2 + 2k + 1$, i.e., $2k^2 \\geq 2k + 1$, true for $k \\geq 2$.'
+    },
+      'Use the formula for geometric series',
+      'Show $3^k = k^2$ for all $k
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Using $3^k > k^2$, we get $3^{k+1} = 3 \\cdot 3^k > 3k^2$. We need $3k^2 \\geq (k+1)^2 = k^2 + 2k + 1$, i.e., $2k^2 \\geq 2k + 1$, true for $k \\geq 2$.'
+    },
+      'Show $3^n < n^2$ and reach a contradiction',
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Using $3^k > k^2$, we get $3^{k+1} = 3 \\cdot 3^k > 3k^2$. We need $3k^2 \\geq (k+1)^2 = k^2 + 2k + 1$, i.e., $2k^2 \\geq 2k + 1$, true for $k \\geq 2$.'
@@ -516,11 +816,27 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'A proof by induction of $\\sum_{i=1}^{n} \\frac{1}{i(i+1)} = \\frac{n}{n+1}$ uses the fact that $\\frac{1}{(k+1)(k+2)} = $',
       options: [
-        '$\\frac{1}{k+1} - \\frac{1}{k+2}$',
-        '$\\frac{1}{k+1} + \\frac{1}{k+2}$',
-        '$\\frac{1}{(k+1)^2}$',
-        '$\\frac{2}{k+2}$'
-      ],
+      '$\\frac{1}{k+1} + \\frac{1}{k+2}
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'By partial fractions: $\\frac{1}{(k+1)(k+2)} = \\frac{1}{k+1} - \\frac{1}{k+2}$. Then $\\frac{k}{k+1} + \\frac{1}{k+1} - \\frac{1}{k+2} = 1 - \\frac{1}{k+2} = \\frac{k+1}{k+2}$.'
+    },
+      '$\\frac{1}{(k+1)^2}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'By partial fractions: $\\frac{1}{(k+1)(k+2)} = \\frac{1}{k+1} - \\frac{1}{k+2}$. Then $\\frac{k}{k+1} + \\frac{1}{k+1} - \\frac{1}{k+2} = 1 - \\frac{1}{k+2} = \\frac{k+1}{k+2}$.'
+    },
+      '$\\frac{1}{k+1} - \\frac{1}{k+2}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'By partial fractions: $\\frac{1}{(k+1)(k+2)} = \\frac{1}{k+1} - \\frac{1}{k+2}$. Then $\\frac{k}{k+1} + \\frac{1}{k+1} - \\frac{1}{k+2} = 1 - \\frac{1}{k+2} = \\frac{k+1}{k+2}$.'
+    },
+      '$\\frac{2}{k+2}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'By partial fractions: $\\frac{1}{(k+1)(k+2)} = \\frac{1}{k+1} - \\frac{1}{k+2}$. Then $\\frac{k}{k+1} + \\frac{1}{k+1} - \\frac{1}{k+2} = 1 - \\frac{1}{k+2} = \\frac{k+1}{k+2}$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'By partial fractions: $\\frac{1}{(k+1)(k+2)} = \\frac{1}{k+1} - \\frac{1}{k+2}$. Then $\\frac{k}{k+1} + \\frac{1}{k+1} - \\frac{1}{k+2} = 1 - \\frac{1}{k+2} = \\frac{k+1}{k+2}$.'
@@ -533,11 +849,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Using strong induction to prove every integer $n \\geq 2$ can be written as a product of primes, when $n = k+1$ is composite:',
       options: [
-        'We check if $k+1$ is divisible by $2$',
-        'We write $k+1 = ab$ with $2 \\leq a, b < k+1$ and apply the hypothesis to $a$ and $b$',
-        'We factor $k$ first, then add $1$',
-        'We use ordinary induction on the prime factors'
-      ],
+      'We check if $k+1$ is divisible by $2
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'If $k+1$ is composite, write $k+1 = ab$ where $2 \\leq a, b < k+1$. By strong induction, both $a$ and $b$ have prime factorizations, so $k+1$ does too.'
+    },
+      'We factor $k$ first, then add $1
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'If $k+1$ is composite, write $k+1 = ab$ where $2 \\leq a, b < k+1$. By strong induction, both $a$ and $b$ have prime factorizations, so $k+1$ does too.'
+    },
+      'We write $k+1 = ab$ with $2 \\leq a, b < k+1$ and apply the hypothesis to $a$ and $b
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'If $k+1$ is composite, write $k+1 = ab$ where $2 \\leq a, b < k+1$. By strong induction, both $a$ and $b$ have prime factorizations, so $k+1$ does too.'
+    },
+      'We use ordinary induction on the prime factors',
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'If $k+1$ is composite, write $k+1 = ab$ where $2 \\leq a, b < k+1$. By strong induction, both $a$ and $b$ have prime factorizations, so $k+1$ does too.'
@@ -547,11 +875,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $F_n < 2^n$ for all Fibonacci numbers ($F_1 = F_2 = 1$), the strong induction hypothesis assumes:',
       options: [
-        '$F_k < 2^k$ only',
-        '$F_{k-1} + F_{k-2} < 2^{k+1}$',
-        '$F_j < 2^j$ for all $j \\leq k$',
-        '$F_k = 2^k$'
-      ],
+      '$F_k < 2^k$ only',
+      '$F_{k-1} + F_{k-2} < 2^{k+1}
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Strong induction assumes $F_j < 2^j$ for all $j \\leq k$. Then $F_{k+1} = F_k + F_{k-1} < 2^k + 2^{k-1} < 2^k + 2^k = 2^{k+1}$.'
+    },
+      '$F_k = 2^k
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Strong induction assumes $F_j < 2^j$ for all $j \\leq k$. Then $F_{k+1} = F_k + F_{k-1} < 2^k + 2^{k-1} < 2^k + 2^k = 2^{k+1}$.'
+    },
+      '$F_j < 2^j$ for all $j \\leq k
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Strong induction assumes $F_j < 2^j$ for all $j \\leq k$. Then $F_{k+1} = F_k + F_{k-1} < 2^k + 2^{k-1} < 2^k + 2^k = 2^{k+1}$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Strong induction assumes $F_j < 2^j$ for all $j \\leq k$. Then $F_{k+1} = F_k + F_{k-1} < 2^k + 2^{k-1} < 2^k + 2^k = 2^{k+1}$.'
@@ -561,11 +901,19 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'In proving $F_{n+m} = F_{n+1}F_m + F_n F_{m-1}$ by induction on $m$, which base cases are needed?',
       options: [
-        '$m = 1$ only',
-        '$m = 0$ and $m = 1$',
-        'No base case is needed',
-        '$m = 1$ and $m = 2$'
-      ],
+      '$m = 1$ only',
+      '$m = 0$ and $m = 1
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Since the recurrence uses $F_{m-1}$, we need $m \\geq 1$. Base cases $m = 1$: $F_{n+1} = F_{n+1} \\cdot 1 + F_n \\cdot 0$ and $m = 2$: $F_{n+2} = F_{n+1} \\cdot 1 + F_n \\cdot 1$ establish the pattern.'
+    },
+      '$m = 1$ and $m = 2
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Since the recurrence uses $F_{m-1}$, we need $m \\geq 1$. Base cases $m = 1$: $F_{n+1} = F_{n+1} \\cdot 1 + F_n \\cdot 0$ and $m = 2$: $F_{n+2} = F_{n+1} \\cdot 1 + F_n \\cdot 1$ establish the pattern.'
+    },
+      'No base case is needed',
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Since the recurrence uses $F_{m-1}$, we need $m \\geq 1$. Base cases $m = 1$: $F_{n+1} = F_{n+1} \\cdot 1 + F_n \\cdot 0$ and $m = 2$: $F_{n+2} = F_{n+1} \\cdot 1 + F_n \\cdot 1$ establish the pattern.'
@@ -575,12 +923,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The second principle of mathematical induction (strong induction) is equivalent to:',
       options: [
-        'The well-ordering principle',
-        'Ordinary induction with a different base case',
-        'Proof by contradiction only',
-        'The Archimedean property'
-      ],
-      correctIndex: 0,
+      'Ordinary induction with a different base case',
+      'Proof by contradiction only',
+      'The Archimedean property',
+      'The well-ordering principle',
+    ],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Strong induction, ordinary induction, and the well-ordering principle are all logically equivalent. Each can be derived from the others.'
     },
@@ -598,11 +946,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $\\sum_{i=1}^{n} i \\cdot i! = (n+1)! - 1$ by induction, the inductive step adds $(k+1)(k+1)!$ to get:',
       options: [
-        '$(k+1)! - 1 + (k+1)(k+1)! = (k+2)(k+1)! - 1 = (k+2)! - 1$',
-        'Both A and C are correct',
-        '$(k+1)! \\cdot (k+2) - 1$',
-        '$(k+2)! + (k+1)! - 1$'
-      ],
+      '$(k+1)! - 1 + (k+1)(k+1)! = (k+2)(k+1)! - 1 = (k+2)! - 1
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: '$(k+1)! - 1 + (k+1)(k+1)! = (k+1)!(1 + k + 1) - 1 = (k+1)!(k+2) - 1 = (k+2)! - 1$.'
+    },
+      '$(k+1)! \\cdot (k+2) - 1
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: '$(k+1)! - 1 + (k+1)(k+1)! = (k+1)!(1 + k + 1) - 1 = (k+1)!(k+2) - 1 = (k+2)! - 1$.'
+    },
+      'Both A and C are correct',
+      '$(k+2)! + (k+1)! - 1
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: '$(k+1)! - 1 + (k+1)(k+1)! = (k+1)!(1 + k + 1) - 1 = (k+1)!(k+2) - 1 = (k+2)! - 1$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: '$(k+1)! - 1 + (k+1)(k+1)! = (k+1)!(1 + k + 1) - 1 = (k+1)!(k+2) - 1 = (k+2)! - 1$.'
@@ -612,11 +972,23 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Prove: $\\sum_{i=0}^{n} \\binom{n}{i} = 2^n$. The induction uses the identity:',
       options: [
-        '$\\binom{n}{0} = 1$',
-        '$\\binom{n}{k} = \\binom{n}{n-k}$',
-        '$\\binom{n+1}{k} = \\binom{n}{k} + \\binom{n}{k-1}$ (Pascal\'s identity)',
-        'The factorial definition of $\\binom{n}{k}$'
-      ],
+      '$\\binom{n+1}{k} = \\binom{n}{k} + \\binom{n}{k-1}$ (Pascal\\'s identity)',
+      '$\\binom{n}{0} = 1
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Pascal\'s identity $\\binom{n+1}{k} = \\binom{n}{k} + \\binom{n}{k-1}$ allows us to express $\\sum_{k=0}^{n+1} \\binom{n+1}{k}$ in terms of $\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$.'
+    },
+      '$\\binom{n}{k} = \\binom{n}{n-k}
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Pascal\'s identity $\\binom{n+1}{k} = \\binom{n}{k} + \\binom{n}{k-1}$ allows us to express $\\sum_{k=0}^{n+1} \\binom{n+1}{k}$ in terms of $\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$.'
+    },
+      'The factorial definition of $\\binom{n}{k}
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Pascal\'s identity $\\binom{n+1}{k} = \\binom{n}{k} + \\binom{n}{k-1}$ allows us to express $\\sum_{k=0}^{n+1} \\binom{n+1}{k}$ in terms of $\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Pascal\'s identity $\\binom{n+1}{k} = \\binom{n}{k} + \\binom{n}{k-1}$ allows us to express $\\sum_{k=0}^{n+1} \\binom{n+1}{k}$ in terms of $\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$.'
@@ -626,11 +998,19 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The formula $\\sum_{i=1}^{n} i^3 = \\left(\\sum_{i=1}^{n} i\\right)^2$ can be proved by induction. The key algebraic step is:',
       options: [
-        'Showing $\\left(\\frac{k(k+1)}{2}\\right)^2 + (k+1)^3 = \\left(\\frac{(k+1)(k+2)}{2}\\right)^2$',
-        'Using the binomial theorem',
-        'Factoring $(k+1)^3$ as $k^3 + 3k^2 + 3k + 1$',
-        'Both A and C are used'
-      ],
+      'Showing $\\left(\\frac{k(k+1)}{2}\\right)^2 + (k+1)^3 = \\left(\\frac{(k+1)(k+2)}{2}\\right)^2
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'We expand $(k+1)^3$ and show that $\\frac{k^2(k+1)^2}{4} + (k+1)^3 = \\frac{(k+1)^2(k+2)^2}{4}$. This requires factoring and algebraic manipulation.'
+    },
+      'Both A and C are used',
+      'Using the binomial theorem',
+      'Factoring $(k+1)^3$ as $k^3 + 3k^2 + 3k + 1
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'We expand $(k+1)^3$ and show that $\\frac{k^2(k+1)^2}{4} + (k+1)^3 = \\frac{(k+1)^2(k+2)^2}{4}$. This requires factoring and algebraic manipulation.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'We expand $(k+1)^3$ and show that $\\frac{k^2(k+1)^2}{4} + (k+1)^3 = \\frac{(k+1)^2(k+2)^2}{4}$. This requires factoring and algebraic manipulation.'
@@ -649,11 +1029,15 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $\\sqrt{2}$ is irrational using well-ordering, we assume $\\sqrt{2} = \\frac{p}{q}$ in lowest terms and derive:',
       options: [
-        'Both A and B',
-        'That $p$ and $q$ are both even',
-        'A smaller positive integer representation, contradicting minimality of $q$',
-        'That $\\sqrt{2}$ is rational'
-      ],
+      'That $p$ and $q$ are both even',
+      'A smaller positive integer representation, contradicting minimality of $q
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'If $\\sqrt{2} = p/q$ with $\\gcd(p,q) = 1$, then $p^2 = 2q^2$, so $p$ is even, say $p = 2m$. Then $4m^2 = 2q^2$, so $q^2 = 2m^2$, making $q$ even. This contradicts $\\gcd(p,q) = 1$.'
+    },
+      'Both A and B',
+      'That $\\sqrt{2}$ is rational',
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'If $\\sqrt{2} = p/q$ with $\\gcd(p,q) = 1$, then $p^2 = 2q^2$, so $p$ is even, say $p = 2m$. Then $4m^2 = 2q^2$, so $q^2 = 2m^2$, making $q$ even. This contradicts $\\gcd(p,q) = 1$.'
@@ -663,12 +1047,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'For the AM-GM inequality $\\frac{a_1 + \\cdots + a_n}{n} \\geq \\sqrt[n]{a_1 \\cdots a_n}$, Cauchy\'s forward-backward induction proves it for:',
       options: [
-        'All $n$ directly',
-        '$n = 2^k$ first, then fills in other values',
-        'Prime $n$ only',
-        'Odd $n$ first, then even'
-      ],
-      correctIndex: 1,
+      'All $n$ directly',
+      'Prime $n$ only',
+      '$n = 2^k$ first, then fills in other values',
+      'Odd $n$ first, then even',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Cauchy\'s ingenious proof first establishes AM-GM for $n = 2^k$ by ordinary induction, then shows that if it holds for $n$, it holds for $n-1$, filling in all values.'
     },
@@ -677,11 +1061,15 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Prove: $(1 + x)^n \\geq 1 + nx + \\frac{n(n-1)}{2}x^2$ for $x \\geq 0$, $n \\geq 2$. This extends Bernoulli by:',
       options: [
-        'Including the second-order term from the binomial expansion',
-        'Restricting to $x \\geq 0$ to ensure positivity of the quadratic term',
-        'All of the above',
-        'Using the binomial coefficient $\\binom{n}{2}$'
-      ],
+      'Including the second-order term from the binomial expansion',
+      'All of the above',
+      'Restricting to $x \\geq 0$ to ensure positivity of the quadratic term',
+      'Using the binomial coefficient $\\binom{n}{2}
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'The inequality includes $\\binom{n}{2}x^2 = \\frac{n(n-1)}{2}x^2$, the second term in the binomial expansion. For $x \\geq 0$, all neglected terms are non-negative.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The inequality includes $\\binom{n}{2}x^2 = \\frac{n(n-1)}{2}x^2$, the second term in the binomial expansion. For $x \\geq 0$, all neglected terms are non-negative.'
@@ -700,11 +1088,15 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove the division algorithm ($a = qb + r$, $0 \\leq r < b$) using well-ordering:',
       options: [
-        'Factor $a$ into primes',
-        'Divide $a$ by $b$ and check the remainder',
-        'Use induction on $a$',
-        'Consider the set $S = \\{a - kb : k \\in \\mathbb{Z}, a - kb \\geq 0\\}$ and take its minimum'
-      ],
+      'Factor $a$ into primes',
+      'Divide $a$ by $b$ and check the remainder',
+      'Consider the set $S = \\{a - kb : k \\in \\mathbb{Z}, a - kb \\geq 0\\}$ and take its minimum',
+      'Use induction on $a
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Let $S = \\{a - kb : k \\in \\mathbb{Z}, a - kb \\geq 0\\}$. $S$ is non-empty and by well-ordering has a minimum $r$. If $r \\geq b$, then $r - b \\in S$ contradicts minimality. So $0 \\leq r < b$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Let $S = \\{a - kb : k \\in \\mathbb{Z}, a - kb \\geq 0\\}$. $S$ is non-empty and by well-ordering has a minimum $r$. If $r \\geq b$, then $r - b \\in S$ contradicts minimality. So $0 \\leq r < b$.'
@@ -714,11 +1106,15 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'A flawed induction proof that all horses are the same color fails because:',
       options: [
-        'The inductive step fails when going from $n = 1$ to $n = 2$',
-        'The base case $n = 1$ is wrong',
-        'Horses cannot be compared mathematically',
-        'The well-ordering principle does not apply'
-      ],
+      'The base case $n = 1$ is wrong',
+      'The inductive step fails when going from $n = 1$ to $n = 2
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'The "proof" assumes overlapping subsets when removing one horse. For $n = 2$ horses, removing one leaves singleton sets that don\'t overlap, so the color cannot be transferred.'
+    },
+      'Horses cannot be compared mathematically',
+      'The well-ordering principle does not apply',
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The "proof" assumes overlapping subsets when removing one horse. For $n = 2$ horses, removing one leaves singleton sets that don\'t overlap, so the color cannot be transferred.'
@@ -728,11 +1124,15 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $\\gcd(F_n, F_{n+1}) = 1$ (consecutive Fibonacci numbers are coprime) by induction:',
       options: [
-        'Factor both Fibonacci numbers',
-        'Use $\\gcd(F_{k+1}, F_{k+2}) = \\gcd(F_{k+1}, F_k)$ since $F_{k+2} = F_{k+1} + F_k$',
-        'Use the explicit Binet formula',
-        'Check divisibility by all primes'
-      ],
+      'Factor both Fibonacci numbers',
+      'Use the explicit Binet formula',
+      'Check divisibility by all primes',
+      'Use $\\gcd(F_{k+1}, F_{k+2}) = \\gcd(F_{k+1}, F_k)$ since $F_{k+2} = F_{k+1} + F_k
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'By the Euclidean algorithm, $\\gcd(F_{k+1}, F_{k+2}) = \\gcd(F_{k+1}, F_{k+2} - F_{k+1}) = \\gcd(F_{k+1}, F_k)$. By induction hypothesis, this equals $1$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'By the Euclidean algorithm, $\\gcd(F_{k+1}, F_{k+2}) = \\gcd(F_{k+1}, F_{k+2} - F_{k+1}) = \\gcd(F_{k+1}, F_k)$. By induction hypothesis, this equals $1$.'
@@ -751,11 +1151,19 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'To prove $\\sum_{i=1}^{n} F_i^2 = F_n F_{n+1}$ by induction, the inductive step uses:',
       options: [
-        'The generating function for Fibonacci numbers',
-        '$F_{k+1}^2 = F_k F_{k+2} + (-1)^k$ (Cassini\'s identity)',
-        '$F_k F_{k+1} + F_{k+1}^2 = F_{k+1}(F_k + F_{k+1}) = F_{k+1} F_{k+2}$',
-        'Strong induction on both $F_k$ and $F_{k+1}$'
-      ],
+      'The generating function for Fibonacci numbers',
+      '$F_k F_{k+1} + F_{k+1}^2 = F_{k+1}(F_k + F_{k+1}) = F_{k+1} F_{k+2}
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Adding $F_{k+1}^2$ to $F_k F_{k+1}$ gives $F_{k+1}(F_k + F_{k+1}) = F_{k+1} \\cdot F_{k+2}$, using the Fibonacci recurrence.'
+    },
+      '$F_{k+1}^2 = F_k F_{k+2} + (-1)^k$ (Cassini\\'s identity)',
+      'Strong induction on both $F_k$ and $F_{k+1}
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Adding $F_{k+1}^2$ to $F_k F_{k+1}$ gives $F_{k+1}(F_k + F_{k+1}) = F_{k+1} \\cdot F_{k+2}$, using the Fibonacci recurrence.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Adding $F_{k+1}^2$ to $F_k F_{k+1}$ gives $F_{k+1}(F_k + F_{k+1}) = F_{k+1} \\cdot F_{k+2}$, using the Fibonacci recurrence.'
@@ -765,12 +1173,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'The Peano axioms define natural numbers using:',
       options: [
-        'Decimal representation',
-        'Addition and multiplication',
-        'The least upper bound property',
-        'The successor function and induction axiom'
-      ],
-      correctIndex: 3,
+      'Decimal representation',
+      'Addition and multiplication',
+      'The successor function and induction axiom',
+      'The least upper bound property',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Peano\'s axioms include: existence of $0$, every $n$ has a successor $S(n)$, $0$ is not a successor, $S$ is injective, and the induction axiom. Addition and multiplication are then defined recursively.'
     },
@@ -779,12 +1187,12 @@ export const section02Quiz = {
       type: 'multiple-choice',
       question: 'Transfinite induction extends mathematical induction to:',
       options: [
-        'Ordinal numbers (including infinite ordinals)',
-        'Real numbers',
-        'Negative integers',
-        'Complex numbers'
-      ],
-      correctIndex: 0,
+      'Real numbers',
+      'Negative integers',
+      'Complex numbers',
+      'Ordinal numbers (including infinite ordinals)',
+    ],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Transfinite induction works for all ordinal numbers. For limit ordinals $\\lambda$, one must prove $P(\\lambda)$ assuming $P(\\alpha)$ for all $\\alpha < \\lambda$, not just predecessors.'
     }

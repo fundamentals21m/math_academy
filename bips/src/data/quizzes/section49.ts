@@ -8,10 +8,10 @@ export const section49Questions: QuizQuestion[] = [
     options: [
       'Address format',
       'Transaction encoding',
-      'Block structure',
       'Bitcoin URI scheme',
+      'Block structure',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'BIP-21 defines the "bitcoin:" URI scheme for payment requests.',
   },

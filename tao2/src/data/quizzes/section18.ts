@@ -9,7 +9,7 @@ export const section18Questions: QuizQuestion[] = [
       'A power series that converges everywhere',
       'A series that diverges',
       'A polynomial of high degree',
-      'An infinite sum $\\sum_{n=0}^\\infty a_n x^n$ treated algebraically without regard to convergence'
+      'An infinite sum $\\sum_{n=0}^\\infty a_n x^n$ treated algebraically without regard to convergence',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -69,9 +69,13 @@ export const section18Questions: QuizQuestion[] = [
     question: 'The ring of formal power series $\\mathbf{R}[[x]]$ is:',
     options: [
       'A field',
-      'Not a ring',
       'An integral domain',
-      'Isomorphic to $\\mathbf{R}$'
+      'Not a ring',
+      'Isomorphic to $\\mathbf{R}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Formal power series form an integral domain. A series is invertible iff its constant term is nonzero.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -46,11 +46,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'The formula $\\sum_{k=1}^{n} k = \\frac{n(n+1)}{2}$ can be proved by:',
     options: [
       'Only direct computation',
-      'Mathematical induction',
       'The ratio test',
+      'Mathematical induction',
       'The comparison test',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'This formula is classically proved by induction. Base case: $n=1$ gives $1 = \\frac{1 \\cdot 2}{2}$. The inductive step adds $(n+1)$ to both sides.',
   },

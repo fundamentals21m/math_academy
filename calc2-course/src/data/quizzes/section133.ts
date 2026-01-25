@@ -6,10 +6,26 @@ export const section133Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a linear transformation $x = Au + Bv$, $y = Cu + Dv$, the Jacobian determinant is:',
     options: [
-      '$A + B + C + D$',
-      '$AD - BC$',
-      '$AC - BD$',
-      '$AB + CD$'
+      '$AD - BC
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Jacobian is $J = \\begin{vmatrix} A & C \\\\ B & D \\end{vmatrix} = AD - BC$, the same as the determinant of the transformation matrix.',
+  },
+      '$A + B + C + D
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Jacobian is $J = \\begin{vmatrix} A & C \\\\ B & D \\end{vmatrix} = AD - BC$, the same as the determinant of the transformation matrix.',
+  },
+      '$AC - BD
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Jacobian is $J = \\begin{vmatrix} A & C \\\\ B & D \\end{vmatrix} = AD - BC$, the same as the determinant of the transformation matrix.',
+  },
+      '$AB + CD
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Jacobian is $J = \\begin{vmatrix} A & C \\\\ B & D \\end{vmatrix} = AD - BC$, the same as the determinant of the transformation matrix.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -50,12 +66,12 @@ export const section133Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Linear transformations map parallel lines to:',
     options: [
-      'Parallel lines',
       'Circles',
       'Parabolas',
+      'Parallel lines',
       'Perpendicular lines',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Linear transformations preserve parallelism—parallel lines map to parallel lines. Consequently, rectangles map to parallelograms.',
   },

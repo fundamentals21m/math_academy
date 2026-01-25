@@ -9,12 +9,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a Platonic solid?',
     options: [
+      'A polyhedron where all faces are identical regular polygons and the same number of faces meet at each vertex',
       'Any three-dimensional shape with flat faces',
       'A solid that was discovered by Plato',
       'Any polyhedron with more than 6 faces',
-      'A polyhedron where all faces are identical regular polygons and the same number of faces meet at each vertex',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'A Platonic solid (regular polyhedron) is a 3D solid where all faces are congruent regular polygons and the same number of faces meet at each vertex. There are exactly five such solids.',
@@ -39,12 +39,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many regular tilings of the plane exist?',
     options: [
-      '3',
       '2',
       '4',
       'Infinitely many',
+      '3',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'There are exactly three regular tilings of the plane: using equilateral triangles (6 per vertex), squares (4 per vertex), or regular hexagons (3 per vertex). The angles must sum to exactly 360° at each vertex.',
@@ -55,12 +55,12 @@ export const section08Questions: QuizQuestion[] = [
     question:
       "In Plato's Timaeus, which Platonic solid was associated with the cosmos (universe)?",
     options: [
-      'Dodecahedron',
       'Tetrahedron',
       'Cube',
+      'Dodecahedron',
       'Icosahedron',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       "Plato associated the dodecahedron with the cosmos in his Timaeus. Its 12 pentagonal faces corresponded to the 12 signs of the zodiac. The other solids represented the four classical elements: fire (tetrahedron), earth (cube), air (octahedron), and water (icosahedron).",
@@ -70,10 +70,30 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What is Euler's polyhedron formula?",
     options: [
-      '$F + V + E = 0$',
-      '$F + V - E = 2$',
-      '$F - V + E = 2$',
-      '$F \\times V = E$',
+      '$F + V - E = 2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      "Euler's polyhedron formula states that for any convex polyhedron, F + V - E = 2, where F is the number of faces, V is the number of vertices, and E is the number of edges.",
+  },
+      '$F + V + E = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      "Euler's polyhedron formula states that for any convex polyhedron, F + V - E = 2, where F is the number of faces, V is the number of vertices, and E is the number of edges.",
+  },
+      '$F - V + E = 2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      "Euler's polyhedron formula states that for any convex polyhedron, F + V - E = 2, where F is the number of faces, V is the number of vertices, and E is the number of edges.",
+  },
+      '$F \\times V = E
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      "Euler's polyhedron formula states that for any convex polyhedron, F + V - E = 2, where F is the number of faces, V is the number of vertices, and E is the number of edges.",
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -85,12 +105,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which two Platonic solids are duals of each other?',
     options: [
+      'Cube and octahedron',
       'Tetrahedron and cube',
       'Tetrahedron and octahedron',
-      'Cube and octahedron',
-      'Icosahedron and cube'
+      'Icosahedron and cube',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The cube and octahedron are duals — placing a vertex at each face center of a cube yields an octahedron, and vice versa. Similarly, the dodecahedron and icosahedron are duals. The tetrahedron is self-dual.',
@@ -99,8 +119,13 @@ export const section08Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'Which Platonic solid has 20 triangular faces?',
-    options: ['Tetrahedron', 'Octahedron', 'Dodecahedron', 'Icosahedron'],
-    correctIndex: 3,
+    options: [
+      'Tetrahedron',
+      'Icosahedron',
+      'Octahedron',
+      'Dodecahedron',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The icosahedron has 20 triangular faces, 12 vertices, and 30 edges. It is the Platonic solid with the most faces and has 5 triangles meeting at each vertex.',

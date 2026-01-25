@@ -6,10 +6,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The number of non-negative integer solutions to $x_1 + x_2 + \\cdots + x_r = n$ is:',
     options: [
-      '$\\binom{n + r - 1}{r - 1}$',
-      '$\\binom{n}{r}$',
-      '$\\binom{n - 1}{r - 1}$',
-      '$n^r$'
+      '$\\binom{n}{r}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The stars and bars formula gives $\\binom{n + r - 1}{r - 1} = \\binom{n + r - 1}{n}$ non-negative integer solutions.'
+  },
+      '$\\binom{n - 1}{r - 1}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The stars and bars formula gives $\\binom{n + r - 1}{r - 1} = \\binom{n + r - 1}{n}$ non-negative integer solutions.'
+  },
+      '$n^r
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The stars and bars formula gives $\\binom{n + r - 1}{r - 1} = \\binom{n + r - 1}{n}$ non-negative integer solutions.'
+  },
+      '$\\binom{n + r - 1}{r - 1}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The stars and bars formula gives $\\binom{n + r - 1}{r - 1} = \\binom{n + r - 1}{n}$ non-negative integer solutions.'
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -29,12 +45,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The "stars and bars" method represents solutions using:',
     options: [
-      'Stars for dividers and bars for units',
       'Stars for units (the total) and bars for dividers between groups',
+      'Stars for dividers and bars for units',
       'Stars for variables and bars for constants',
-      'Stars for positive numbers and bars for negative numbers'
+      'Stars for positive numbers and bars for negative numbers',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In stars and bars, we use $n$ stars (representing the total) and $r-1$ bars (dividing the stars into $r$ groups). Each arrangement corresponds to one solution.'
   },
@@ -52,10 +68,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The number of *positive* integer solutions to $x_1 + x_2 + \\cdots + x_r = n$ is:',
     options: [
-      '$\\binom{n + r - 1}{r - 1}$',
-      '$\\binom{n}{r}$',
-      '$\\binom{n - 1}{r - 1}$',
-      '$\\binom{n + r}{r}$'
+      '$\\binom{n + r - 1}{r - 1}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For positive solutions (each $x_i \\geq 1$), we substitute $y_i = x_i - 1$ and get $\\binom{n - 1}{r - 1}$.'
+  },
+      '$\\binom{n - 1}{r - 1}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For positive solutions (each $x_i \\geq 1$), we substitute $y_i = x_i - 1$ and get $\\binom{n - 1}{r - 1}$.'
+  },
+      '$\\binom{n}{r}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For positive solutions (each $x_i \\geq 1$), we substitute $y_i = x_i - 1$ and get $\\binom{n - 1}{r - 1}$.'
+  },
+      '$\\binom{n + r}{r}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For positive solutions (each $x_i \\geq 1$), we substitute $y_i = x_i - 1$ and get $\\binom{n - 1}{r - 1}$.'
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

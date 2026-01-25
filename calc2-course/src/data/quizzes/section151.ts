@@ -36,10 +36,26 @@ export const section151Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The counting measure $\\nu(A)$ on a finite set $S$ assigns to each subset $A$:',
     options: [
-      'The sum of elements in $A$',
-      'The number of elements in $A$',
-      'The product of elements in $A$',
-      'The maximum element in $A$'
+      'The sum of elements in $A
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The counting measure assigns to each subset $A$ its cardinality, i.e., the number of elements in $A$.',
+  },
+      'The product of elements in $A
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The counting measure assigns to each subset $A$ its cardinality, i.e., the number of elements in $A$.',
+  },
+      'The maximum element in $A
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The counting measure assigns to each subset $A$ its cardinality, i.e., the number of elements in $A$.',
+  },
+      'The number of elements in $A
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The counting measure assigns to each subset $A$ its cardinality, i.e., the number of elements in $A$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

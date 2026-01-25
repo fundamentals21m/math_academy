@@ -59,11 +59,11 @@ export const section161Questions: QuizQuestion[] = [
     question: 'A countable union of countable sets is:',
     options: [
       'Always uncountable',
-      'Always finite',
       'Countable',
+      'Always finite',
       'Neither countable nor uncountable',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'One of the key properties of countable sets: a countable union of countable sets remains countable.',
   },
@@ -75,7 +75,7 @@ export const section161Questions: QuizQuestion[] = [
       'The real numbers in $(0, 1)$ are uncountable',
       'The rationals are uncountable',
       'The integers are uncountable',
-      'All infinite sets are countable'
+      'All infinite sets are countable',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -87,11 +87,11 @@ export const section161Questions: QuizQuestion[] = [
     question: 'The power set (set of all subsets) of a countably infinite set is:',
     options: [
       'Finite',
-      'Uncountable',
       'Countably infinite',
-      'Empty'
+      'Empty',
+      'Uncountable',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The power set of a countably infinite set is uncountable. This is proved by a diagonal argument: assuming a bijection leads to the paradoxical set $B = \\{a \\in A : a \\notin f(a)\\}$.',
   },

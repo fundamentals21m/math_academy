@@ -6,12 +6,12 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Curvature $\\kappa$ measures:',
     options: [
-      'How fast the curve bends',
       'The length of the curve',
       'The speed along the curve',
+      'How fast the curve bends',
       'The total rotation',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Curvature = rate of change of direction.',
   },
@@ -23,7 +23,7 @@ export const section87Questions: QuizQuestion[] = [
       'The position vector',
       'The acceleration',
       'The normal vector',
-      'The unit tangent vector'
+      'The unit tangent vector',
     ],
     correctIndex: 3,
     difficulty: 'medium',

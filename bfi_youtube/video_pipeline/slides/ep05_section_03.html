@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .instruments-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+    }
+    .instrument {
+      font-size: 48px;
+      padding: 20px;
+      background: rgba(247, 147, 26, 0.1);
+      border-radius: 12px;
+    }
+    .plus {
+      color: #F7931A;
+      font-size: 36px;
+      align-self: center;
+    }
+    .disciplines-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .discipline-card {
+      background: rgba(247, 147, 26, 0.05);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      padding: 25px;
+      border-radius: 8px;
+      text-align: left;
+    }
+    .discipline-name {
+      color: #F7931A;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .discipline-desc {
+      color: #8B949E;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .lifetime-box {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin-top: 40px;
+      display: inline-block;
+    }
+    .lifetime-text {
+      color: #E6EDF3;
+      font-size: 26px;
+    }
+    .lifetime-text em {
+      color: #F7931A;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Bitcoin is Harder</div>
+    <div class="section-title">Like Learning Multiple Instruments at Once</div>
+    <div class="instruments-row">
+      <div class="instrument">🎸</div>
+      <div class="plus">+</div>
+      <div class="instrument">🎹</div>
+      <div class="plus">+</div>
+      <div class="instrument">🥁</div>
+      <div class="plus">+</div>
+      <div class="instrument">🎺</div>
+      <div class="plus">+</div>
+      <div class="instrument">🎼</div>
+    </div>
+    <div class="disciplines-grid">
+      <div class="discipline-card">
+        <div class="discipline-name">Austrian Economics</div>
+        <div class="discipline-desc">Sound money & time preference</div>
+      </div>
+      <div class="discipline-card">
+        <div class="discipline-name">Computer Science</div>
+        <div class="discipline-desc">Protocol & network function</div>
+      </div>
+      <div class="discipline-card">
+        <div class="discipline-name">History</div>
+        <div class="discipline-desc">Monetary history & why bitcoin matters</div>
+      </div>
+      <div class="discipline-card">
+        <div class="discipline-name">Mathematics</div>
+        <div class="discipline-desc">Cryptographic foundations</div>
+      </div>
+      <div class="discipline-card">
+        <div class="discipline-name">Game Theory</div>
+        <div class="discipline-desc">Network incentives & Nash equilibrium</div>
+      </div>
+      <div class="discipline-card">
+        <div class="discipline-name">Cryptography</div>
+        <div class="discipline-desc">Public & private key infrastructure</div>
+      </div>
+    </div>
+    <div class="lifetime-box">
+      <div class="lifetime-text">Mastering bitcoin means accepting a <em>lifetime of study</em></div>
+    </div>
+  </div>
+</body>
+</html>

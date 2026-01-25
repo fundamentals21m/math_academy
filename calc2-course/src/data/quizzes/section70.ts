@@ -6,12 +6,12 @@ export const section70Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cayley-Hamilton theorem states that every square matrix:',
     options: [
+      'Satisfies its own characteristic equation',
       'Is diagonalizable',
       'Has real eigenvalues',
       'Commutes with its transpose',
-      'Satisfies its own characteristic equation',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'If $p(\\lambda) = \\det(\\lambda I - A)$ is the characteristic polynomial of $A$, then $p(A) = O$ (the zero matrix).',
   },
@@ -102,10 +102,26 @@ export const section70Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a $3 \\times 3$ matrix with characteristic polynomial $\\lambda^3 - 6\\lambda^2 + 11\\lambda - 6$, Cayley-Hamilton gives:',
     options: [
-      '$A^3 = 6A^2 - 11A + 6I$',
-      '$A^3 + 6A^2 + 11A + 6I = O$',
-      '$A^3 - 6A^2 + 11A - 6I = O$',
-      '$A = 6I$'
+      '$A^3 = 6A^2 - 11A + 6I
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Substituting $A$ for $\\lambda$ in the characteristic polynomial gives $A^3 - 6A^2 + 11A - 6I = O$.',
+  },
+      '$A^3 - 6A^2 + 11A - 6I = O
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Substituting $A$ for $\\lambda$ in the characteristic polynomial gives $A^3 - 6A^2 + 11A - 6I = O$.',
+  },
+      '$A^3 + 6A^2 + 11A + 6I = O
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Substituting $A$ for $\\lambda$ in the characteristic polynomial gives $A^3 - 6A^2 + 11A - 6I = O$.',
+  },
+      '$A = 6I
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Substituting $A$ for $\\lambda$ in the characteristic polynomial gives $A^3 - 6A^2 + 11A - 6I = O$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -76,10 +76,26 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $D^2 y = 0$ (root $0$ with multiplicity $2$), the solutions are:',
     options: [
-      '$1, x$',
-      '$e^x, e^{-x}$',
-      '$\\sin x, \\cos x$',
-      '$x, x^2$'
+      '$e^x, e^{-x}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Root $r = 0$ with multiplicity $2$ gives $e^{0 \\cdot x} = 1$ and $xe^{0 \\cdot x} = x$.',
+  },
+      '$\\sin x, \\cos x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Root $r = 0$ with multiplicity $2$ gives $e^{0 \\cdot x} = 1$ and $xe^{0 \\cdot x} = x$.',
+  },
+      '$1, x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Root $r = 0$ with multiplicity $2$ gives $e^{0 \\cdot x} = 1$ and $xe^{0 \\cdot x} = x$.',
+  },
+      '$x, x^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Root $r = 0$ with multiplicity $2$ gives $e^{0 \\cdot x} = 1$ and $xe^{0 \\cdot x} = x$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

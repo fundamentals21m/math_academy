@@ -6,10 +6,22 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The binomial series $(1+x)^\\alpha$ equals:',
     options: [
-      '$1 + \\alpha x$',
+      '$1 + \\alpha x
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Binomial series: $(1+x)^\\alpha = \\sum \\binom{\\alpha}{n} x^n$ for $|x| < 1$.',
+  },
       '$e^{\\alpha \\ln(1+x)}$ only',
-      '$(1+x)^n$ only for integer $n$',
-      '$\\sum_{n=0}^{\\infty} \\binom{\\alpha}{n} x^n$'
+      '$\\sum_{n=0}^{\\infty} \\binom{\\alpha}{n} x^n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Binomial series: $(1+x)^\\alpha = \\sum \\binom{\\alpha}{n} x^n$ for $|x| < 1$.',
+  },
+      '$(1+x)^n$ only for integer $n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Binomial series: $(1+x)^\\alpha = \\sum \\binom{\\alpha}{n} x^n$ for $|x| < 1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -76,10 +88,26 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The binomial series for $(1+x)^{-1}$ gives:',
     options: [
-      '$1 + x + x^2 + ...$',
-      '$1 - x$',
-      '$1 - x + x^2 - x^3 + ...$',
-      '$-1 + x$'
+      '$1 + x + x^2 + ...
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$(1+x)^{-1} = 1 - x + x^2 - ... = \\frac{1}{1+x}$ for $|x| < 1$.',
+  },
+      '$1 - x + x^2 - x^3 + ...
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$(1+x)^{-1} = 1 - x + x^2 - ... = \\frac{1}{1+x}$ for $|x| < 1$.',
+  },
+      '$1 - x
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$(1+x)^{-1} = 1 - x + x^2 - ... = \\frac{1}{1+x}$ for $|x| < 1$.',
+  },
+      '$-1 + x
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$(1+x)^{-1} = 1 - x + x^2 - ... = \\frac{1}{1+x}$ for $|x| < 1$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -120,12 +148,12 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When $\\alpha$ is a non-negative integer, the binomial series:',
     options: [
-      'Has infinitely many terms',
       'Terminates (is a polynomial)',
+      'Has infinitely many terms',
       'Diverges',
       'Has radius of convergence 0',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'For integer $\\alpha \\geq 0$, $\\binom{\\alpha}{n} = 0$ for $n > \\alpha$.',
   },

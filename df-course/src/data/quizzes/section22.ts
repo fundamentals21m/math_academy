@@ -36,10 +36,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Class Equation for a finite group $G$ is:',
     options: [
-      '$|G| = |Z(G)| - \\sum [G : C_G(g_i)]$',
-      '$|G| = \\sum |C_G(g_i)|$',
-      '$|G| = |Z(G)| \\cdot \\sum [G : C_G(g_i)]$',
-      '$|G| = |Z(G)| + \\sum [G : C_G(g_i)]$'
+      '$|G| = |Z(G)| - \\sum [G : C_G(g_i)]
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Class Equation: $|G| = |Z(G)| + \\sum_{i} [G : C_G(g_i)]$, summing over representatives of non-central conjugacy classes.',
+  },
+      '$|G| = |Z(G)| + \\sum [G : C_G(g_i)]
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Class Equation: $|G| = |Z(G)| + \\sum_{i} [G : C_G(g_i)]$, summing over representatives of non-central conjugacy classes.',
+  },
+      '$|G| = \\sum |C_G(g_i)|
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Class Equation: $|G| = |Z(G)| + \\sum_{i} [G : C_G(g_i)]$, summing over representatives of non-central conjugacy classes.',
+  },
+      '$|G| = |Z(G)| \\cdot \\sum [G : C_G(g_i)]
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Class Equation: $|G| = |Z(G)| + \\sum_{i} [G : C_G(g_i)]$, summing over representatives of non-central conjugacy classes.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -80,10 +96,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An element $g \\in G$ is in the center $Z(G)$ if and only if:',
     options: [
-      'Its conjugacy class has size $> 1$',
-      'Its conjugacy class is $\\{g\\}$',
-      '$C_G(g) = \\{e\\}$',
-      '$N_G(\\langle g \\rangle) = \\langle g \\rangle$'
+      'Its conjugacy class is $\\{g\\}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$g \\in Z(G)$ iff $g$ commutes with all elements iff $xgx^{-1} = g$ for all $x$ iff conjugacy class is $\\{g\\}$.',
+  },
+      'Its conjugacy class has size $> 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$g \\in Z(G)$ iff $g$ commutes with all elements iff $xgx^{-1} = g$ for all $x$ iff conjugacy class is $\\{g\\}$.',
+  },
+      '$C_G(g) = \\{e\\}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$g \\in Z(G)$ iff $g$ commutes with all elements iff $xgx^{-1} = g$ for all $x$ iff conjugacy class is $\\{g\\}$.',
+  },
+      '$N_G(\\langle g \\rangle) = \\langle g \\rangle
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$g \\in Z(G)$ iff $g$ commutes with all elements iff $xgx^{-1} = g$ for all $x$ iff conjugacy class is $\\{g\\}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

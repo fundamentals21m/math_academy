@@ -34,10 +34,22 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Eudoxus\'s definition of equal ratios states that $a:b = c:d$ if and only if:',
     options: [
-      '$a \\times d = b \\times c$',
+      '$a \\times d = b \\times c
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'This definition works for all magnitudes, rational or irrational, anticipating Dedekind cuts by over 2000 years.',
+  },
+      'For all integers $m, n$: $ma \\lessgtr nb$ exactly when $mc \\lessgtr nd
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'This definition works for all magnitudes, rational or irrational, anticipating Dedekind cuts by over 2000 years.',
+  },
       '$a/b$ and $c/d$ have the same decimal expansion',
-      '$a + b = c + d$',
-      'For all integers $m, n$: $ma \\lessgtr nb$ exactly when $mc \\lessgtr nd$'
+      '$a + b = c + d
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'This definition works for all magnitudes, rational or irrational, anticipating Dedekind cuts by over 2000 years.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -51,7 +63,7 @@ export const section02Questions: QuizQuestion[] = [
       'Euclid',
       'Archimedes',
       'Pythagoras',
-      'Aristotle'
+      'Aristotle',
     ],
     correctIndex: 0,
     difficulty: 'easy',

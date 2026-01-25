@@ -7,9 +7,14 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Riemann surface was introduced to resolve the problem of:',
     options: [
-      'Multi-valued functions like $\\sqrt{z}$ and $\\log z$',
       'Finding roots of polynomials',
       'Computing real integrals',
+      'Multi-valued functions like $\\sqrt{z}$ and $\\log z
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation:
+      'Riemann surfaces were introduced to make "multi-valued" functions like the square root and logarithm single-valued. Instead of a function with multiple outputs on $\\mathbb{C}$, we have a single-valued function on a more complex surface.',
+  },
       'Proving the Fundamental Theorem of Algebra',
     ],
     correctIndex: 0,
@@ -22,12 +27,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A branch point of a multi-valued function is:',
     options: [
-      'A point where the function is zero',
       'A point where sheets of the Riemann surface meet',
+      'A point where the function is zero',
       'A maximum of the function',
-      'A point where the function is analytic'
+      'A point where the function is analytic',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Branch points are where the different "sheets" of a Riemann surface connect. For $\\sqrt{z}$, the branch points are at $z = 0$ and $z = \\infty$—these are where circling the point causes you to move between sheets.',
@@ -41,7 +46,7 @@ export const section55Questions: QuizQuestion[] = [
       'Infinitely many sheets',
       'A single copy of the complex plane',
       'Two sheets glued together along a branch cut',
-      'Three disconnected planes'
+      'Three disconnected planes',
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -7,9 +7,13 @@ export const section06Questions: QuizQuestion[] = [
     question: 'How does Schnorr\'s signing formula differ from ECDSA?',
     options: [
       'They are identical',
-      'Schnorr: $s = k + ed$; ECDSA: $s = k^{-1}(z + rd)$',
       'Schnorr requires no nonce',
-      'ECDSA is simpler'
+      'ECDSA is simpler',
+      'Schnorr: $s = k + ed$; ECDSA: $s = k^{-1}(z + rd)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Schnorr uses $s = k + ed$ (no inverse needed), while ECDSA uses $s = k^{-1}(z + rd)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,12 +24,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the main advantage of Schnorr signature aggregation (MuSig)?',
     options: [
+      'Multiple signatures combine into one indistinguishable from a single signature',
       'Signatures become smaller',
       'Private keys are no longer needed',
-      'Multiple signatures combine into one indistinguishable from a single signature',
-      'Verification becomes slower'
+      'Verification becomes slower',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'MuSig allows multiple parties to produce a single aggregated signature that looks identical to a regular single-signer signature.',
   },
@@ -64,8 +68,8 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why was Schnorr not used in Bitcoin originally?',
     options: [
-      'It wasn\\'t invented yet',
-      'It\\'s less secure than ECDSA',
+      'It wasn\\\\\'t invented yet',
+      'It\\\\\'s less secure than ECDSA',
       'It requires larger keys',
       'It was patented until 2008',
     ],
@@ -81,7 +85,7 @@ export const section06Questions: QuizQuestion[] = [
       'Only ECDSA',
       'Schnorr signatures with x-only public keys',
       'RSA signatures',
-      'No signatures at all'
+      'No signatures at all',
     ],
     correctIndex: 1,
     difficulty: 'medium',

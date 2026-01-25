@@ -90,9 +90,13 @@ export const section32Questions: QuizQuestion[] = [
     question: 'To find absolute extrema on $[a, b]$, we check:',
     options: [
       'Only critical points',
+      'Critical points and endpoints',
       'Only endpoints',
-      'Only where $f\'\'(x) = 0$',
-      'Critical points and endpoints'
+      'Only where $f\\'\\'(x) = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Absolute extrema can occur at critical points OR endpoints.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

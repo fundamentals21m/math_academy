@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .recap-list {
+      text-align: left;
+      max-width: 1100px;
+      margin: 0 auto 30px;
+    }
+    .recap-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(8, 145, 178, 0.15);
+    }
+    .recap-item:last-child {
+      border-bottom: none;
+    }
+    .recap-bullet {
+      color: #0891B2;
+      font-size: 22px;
+      font-weight: bold;
+      min-width: 30px;
+    }
+    .recap-text {
+      color: #E6EDF3;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .next-episode {
+      margin-top: 40px;
+      padding: 30px 50px;
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .next-label {
+      color: #0891B2;
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .next-title {
+      color: #E6EDF3;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    .next-subtitle {
+      color: #8B949E;
+      font-size: 18px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Episode 10 Recap</div>
+    <div class="section-title">Key Takeaways</div>
+    <div class="recap-list">
+      <div class="recap-item">
+        <div class="recap-bullet">1</div>
+        <div class="recap-text">NQDC plans have no contribution limits and broad investment discretion — ideal for bitcoin</div>
+      </div>
+      <div class="recap-item">
+        <div class="recap-bullet">2</div>
+        <div class="recap-text">ERISA tradeoff: participants are unsecured creditors — "riding the wave" with the company</div>
+      </div>
+      <div class="recap-item">
+        <div class="recap-bullet">3</div>
+        <div class="recap-text">Start with ETFs, evolve to treasury — use ETFs to launch quickly, then build internal capability</div>
+      </div>
+      <div class="recap-item">
+        <div class="recap-bullet">4</div>
+        <div class="recap-text">Direct treasury eliminates counterparty risk — the superior long-term solution</div>
+      </div>
+      <div class="recap-item">
+        <div class="recap-bullet">5</div>
+        <div class="recap-text">Long time horizons align perfectly — 10-20+ year deferrals match bitcoin's optimal holding period</div>
+      </div>
+    </div>
+    <div class="next-episode">
+      <div class="next-label">Next Episode</div>
+      <div class="next-title">Mutual Funds / ETFs</div>
+      <div class="next-subtitle">How fund managers can integrate bitcoin to improve portfolio performance</div>
+    </div>
+  </div>
+</body>
+</html>

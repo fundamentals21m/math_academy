@@ -7,13 +7,12 @@ export const section21Questions: QuizQuestion[] = [
     question: "Cayley's Theorem states that every group $G$ is isomorphic to:",
     options: [
       'A cyclic group',
-      'A subgroup of some symmetric group',
       'A subgroup of $GL_n(\\mathbb{R})
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: "Cayley's Theorem: Every group $G$ is isomorphic to a subgroup of $S_G$ (permutations of the set $G$).",
-  },
-      'A quotient of a free group',
+    correctIndex: 3,
+    difficulty: ',
+      ',
+    explanation: "Cayley',
+      'A subgroup of some symmetric group',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -38,10 +37,26 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "By Cayley's Theorem, a group of order $n$ embeds into:",
     options: [
-      '$S_n$',
-      '$S_{n-1}$',
-      '$S_{2n}$',
-      '$A_n$'
+      '$S_{n-1}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A group of order $n$ embeds into $S_n$ via the regular representation.',
+  },
+      '$S_{2n}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A group of order $n$ embeds into $S_n$ via the regular representation.',
+  },
+      '$S_n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A group of order $n$ embeds into $S_n$ via the regular representation.',
+  },
+      '$A_n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A group of order $n$ embeds into $S_n$ via the regular representation.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -62,11 +77,11 @@ export const section21Questions: QuizQuestion[] = [
     question: "The representation from Cayley's Theorem is always:",
     options: [
       'Surjective',
+      'Faithful (injective)',
       'Neither injective nor surjective',
       'Both injective and surjective',
-      'Faithful (injective)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: "Cayley's representation is always faithful: if $\\phi(g) = \\text{id}$, then $gh = h$ for all $h$, so $g = e$.",
   },

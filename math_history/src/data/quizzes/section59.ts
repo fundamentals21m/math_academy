@@ -7,12 +7,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In spherical geometry, "lines" are:',
     options: [
-      'Great circles on the sphere',
       'Any circle on the sphere',
       'Straight lines tangent to the sphere',
+      'Great circles on the sphere',
       'Lines of latitude',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'In spherical geometry, the role of "straight lines" is played by great circles—circles whose center coincides with the center of the sphere. These are the shortest paths (geodesics) between points on the sphere.',
@@ -23,11 +23,11 @@ export const section59Questions: QuizQuestion[] = [
     question: 'In elliptic geometry, given a line and a point not on it, how many parallel lines exist through that point?',
     options: [
       'Exactly one',
-      'None',
       'Infinitely many',
-      'Exactly two'
+      'Exactly two',
+      'None',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'In elliptic geometry, there are no parallel lines—every pair of lines intersects. This contrasts with Euclidean geometry (exactly one parallel) and hyperbolic geometry (infinitely many parallels).',
@@ -38,12 +38,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In spherical geometry, the sum of angles in a triangle is:',
     options: [
+      'Greater than 180 degrees',
       'Less than 180 degrees',
       'Exactly 180 degrees',
-      'Greater than 180 degrees',
-      'Always 270 degrees'
+      'Always 270 degrees',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'On a sphere, triangle angle sums exceed 180°. The excess (called angular excess ε) is proportional to the triangle\'s area: Area = R²ε. A triangle with three 90° angles (sum = 270°) is possible on a sphere.',
@@ -53,12 +53,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Girard\'s theorem states that the area of a spherical triangle equals:',
     options: [
+      '$R^2$ times the angular excess (in radians)',
       'Half the base times height',
       '$R^2$ times the angular defect',
       'The sum of its angles',
-      '$R^2$ times the angular excess (in radians)'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Girard\'s theorem (1629) states that Area = R²ε, where R is the sphere\'s radius and ε is the angular excess (sum of angles minus 180°, in radians). This is analogous to the area-defect relationship in hyperbolic geometry.',
@@ -69,12 +69,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The three constant-curvature geometries have curvature:',
     options: [
-      'Euclidean: K = 0, Hyperbolic: K < 0, Elliptic: K > 0',
       'Euclidean: K > 0, Hyperbolic: K = 0, Elliptic: K < 0',
+      'Euclidean: K = 0, Hyperbolic: K < 0, Elliptic: K > 0',
       'All three have K = 0',
       'Euclidean: K < 0, Hyperbolic: K > 0, Elliptic: K = 0',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Euclidean geometry is flat (K = 0). Hyperbolic geometry has negative (saddle-like) curvature. Elliptic/spherical geometry has positive (sphere-like) curvature. These are the only three geometries with constant curvature.',
@@ -87,7 +87,7 @@ export const section59Questions: QuizQuestion[] = [
       'It uses flat planes instead of spheres',
       'Antipodal points are identified, so two lines meet at one point, not two',
       'It has negative curvature',
-      'Parallel lines exist in elliptic geometry'
+      'Parallel lines exist in elliptic geometry',
     ],
     correctIndex: 1,
     difficulty: 'hard',

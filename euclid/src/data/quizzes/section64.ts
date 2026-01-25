@@ -23,7 +23,7 @@ export const section64Questions: QuizQuestion[] = [
       'When it passes through the center',
       'When it meets the circle at exactly one point and does not cut it',
       'When it intersects the circle at two points',
-      'When it lies entirely inside the circle'
+      'When it lies entirely inside the circle',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -37,7 +37,7 @@ export const section64Questions: QuizQuestion[] = [
       'They are the same thing',
       'A sector is larger than a segment',
       'A segment is bounded by a chord and arc; a sector is bounded by two radii and an arc',
-      'A segment includes the center; a sector does not'
+      'A segment includes the center; a sector does not',
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'What company developed a loan product using bitcoin as collateral?',
     options: [
       'BlackRock',
-      'Coinbase',
       'Battery Finance (Newmarket Capital)',
-      'MicroStrategy'
+      'Coinbase',
+      'MicroStrategy',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Newmarket Capital and their subsidiary Battery Finance developed a loan product that enables bitcoin to be used as 10-30% of collateral alongside traditional assets.'
   },
@@ -23,7 +23,7 @@ export const section12Questions: QuizQuestion[] = [
       'Three years',
       'One year',
       'Two years',
-      'Four years (aligned with bitcoin\'s halving cycle)'
+      'Four years (aligned with bitcoin\\\'s halving cycle)',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -34,12 +34,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does a bitcoin-collateralized loan become behaviorally "senior"?',
     options: [
-      'A person will let any other asset go before relinquishing their bitcoin',
       'Contractual terms make it senior',
       'Government regulations require it',
-      'Banks prioritize it automatically'
+      'Banks prioritize it automatically',
+      'A person will let any other asset go before relinquishing their bitcoin',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'If a borrower posts bitcoin as collateral, this loan automatically becomes the most senior because behaviorally, a person will let any other asset go before relinquishing their bitcoin.'
   },
@@ -48,12 +48,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the book, what behavior should bitcoin-collateralized borrowers exhibit?',
     options: [
-      'Higher default rates',
       'AAA-equivalent credit behavior',
+      'Higher default rates',
       'Erratic payment patterns',
-      'Average credit behavior'
+      'Average credit behavior',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Both "degens" and "savers" will prioritize protecting their bitcoin, leading to AAA-equivalent credit behavior on these loans.'
   },

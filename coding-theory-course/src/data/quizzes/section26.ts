@@ -69,10 +69,10 @@ export const section26Questions: QuizQuestion[] = [
     options: [
       'A product of two irreducible quadratics',
       'A product of four linear factors',
-      'Irreducible',
       'A product of an irreducible cubic and a linear factor',
+      'Irreducible',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'This is the 5th cyclotomic polynomial, which is irreducible over $\\mathbb{F}_2$ since the order of 2 modulo 5 is 4.',
   },

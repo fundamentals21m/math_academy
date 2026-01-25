@@ -8,10 +8,10 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       'The sum of diagonal elements',
       'The largest diagonal element',
-      'Zero',
       'The product of diagonal elements',
+      'Zero',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The determinant of a diagonal matrix is the product of its diagonal elements: $\\det \\text{diag}(a_{11}, \\ldots, a_{nn}) = a_{11} \\cdot a_{22} \\cdots a_{nn}$.',
   },
@@ -19,7 +19,28 @@ export const section22Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'What is the determinant of the upper triangular matrix $\\begin{bmatrix} 2 & 3 & 1 \\\\ 0 & -1 & 4 \\\\ 0 & 0 & 5 \\end{bmatrix}$?',
-    options: ['$-10$', '$10$', '$6$', '$-6$'],
+    options: [
+      '$10
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'For an upper triangular matrix, the determinant is the product of diagonal elements: $2 \\cdot (-1) \\cdot 5 = -10$.',
+  },
+      '$6
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'For an upper triangular matrix, the determinant is the product of diagonal elements: $2 \\cdot (-1) \\cdot 5 = -10$.',
+  },
+      '$-6
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'For an upper triangular matrix, the determinant is the product of diagonal elements: $2 \\cdot (-1) \\cdot 5 = -10$.',
+  },
+      '$-10
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'For an upper triangular matrix, the determinant is the product of diagonal elements: $2 \\cdot (-1) \\cdot 5 = -10$.',
+  },
+    ],
     correctIndex: 0,
     difficulty: 'easy',
     explanation: 'For an upper triangular matrix, the determinant is the product of diagonal elements: $2 \\cdot (-1) \\cdot 5 = -10$.',
@@ -29,12 +50,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Adding a multiple of one row to another row:',
     options: [
+      'Leaves the determinant unchanged',
       'Doubles the determinant',
       'Reverses the sign of the determinant',
-      'Leaves the determinant unchanged',
-      'Sets the determinant to zero'
+      'Sets the determinant to zero',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Adding a multiple of one row to another is a row operation that leaves the determinant unchanged, making it ideal for reduction to triangular form.',
   },

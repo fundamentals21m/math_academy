@@ -89,11 +89,11 @@ export const section157Questions: QuizQuestion[] = [
     question: 'For three events to be mutually independent, how many equations must hold?',
     options: [
       '1',
+      '4',
       '3',
       '7',
-      '4'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For $A, B, C$: three pairwise conditions $P(A \\cap B) = P(A)P(B)$, etc., plus $P(A \\cap B \\cap C) = P(A)P(B)P(C)$. Total: 4 equations.',
   },
@@ -104,10 +104,10 @@ export const section157Questions: QuizQuestion[] = [
     options: [
       'Never independent',
       'Always disjoint',
-      'Independent',
       'Equal in probability',
+      'Independent',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'If $A$ and $B$ are independent, then $A$ and $B\'$, $A\'$ and $B$, and $A\'$ and $B\'$ are all independent pairs.',
   },

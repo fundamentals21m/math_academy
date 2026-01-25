@@ -66,10 +66,26 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The area of a region in polar coordinates is given by:',
     options: [
-      '$\\int_\\alpha^\\beta \\frac{1}{2}r^2\\,d\\theta$',
-      '$\\int_\\alpha^\\beta r\\,d\\theta$',
-      '$\\int_\\alpha^\\beta r^2\\,d\\theta$',
-      '$\\int_\\alpha^\\beta \\pi r^2\\,d\\theta$'
+      '$\\int_\\alpha^\\beta r\\,d\\theta
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Area in polar: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$.',
+  },
+      '$\\int_\\alpha^\\beta r^2\\,d\\theta
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Area in polar: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$.',
+  },
+      '$\\int_\\alpha^\\beta \\frac{1}{2}r^2\\,d\\theta
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Area in polar: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$.',
+  },
+      '$\\int_\\alpha^\\beta \\pi r^2\\,d\\theta
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Area in polar: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -81,11 +97,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'The polar equation $r = 2$ represents:',
     options: [
       'A line',
-      'A circle of radius 2 centered at origin',
       'A parabola',
-      'A spiral'
+      'A spiral',
+      'A circle of radius 2 centered at origin',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$r = 2$ means all points at distance 2 from the origin: a circle.',
   },

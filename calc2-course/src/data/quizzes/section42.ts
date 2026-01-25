@@ -36,10 +36,18 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For an orthogonal matrix, $\\det A = $?',
     options: [
-      '$0$ or $1$',
+      '$0$ or $1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$(\\det A)^2 = \\det(AA^t) = \\det I = 1$, so $\\det A = \\pm 1$.',
+  },
       'Any real number',
-      '$1$ or $-1$',
-      '$1$ only'
+      '$1$ only',
+      '$1$ or $-1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$(\\det A)^2 = \\det(AA^t) = \\det I = 1$, so $\\det A = \\pm 1$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -80,12 +88,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The $2 \\times 2$ rotation matrix $\\begin{bmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{bmatrix}$ is:',
     options: [
-      'Orthogonal and proper',
       'Only orthogonal',
       'Orthogonal and improper',
-      'Not orthogonal'
+      'Orthogonal and proper',
+      'Not orthogonal',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The columns are orthonormal, so it\'s orthogonal. $\\det = \\cos^2\\theta + \\sin^2\\theta = 1 > 0$, so it\'s proper (a rotation).',
   },
@@ -94,12 +102,12 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Every real symmetric matrix can be diagonalized by:',
     options: [
+      'A real orthogonal matrix',
       'Any matrix',
       'A complex unitary matrix only',
       'A diagonal matrix',
-      'A real orthogonal matrix',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Real symmetric matrices have real eigenvalues and real eigenvectors, so the diagonalizing orthonormal eigenvector matrix is real orthogonal.',
   },

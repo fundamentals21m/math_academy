@@ -39,10 +39,10 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'Always positive',
       'Zero',
-      'Undefined',
       'Negative (representing area below the x-axis)',
+      'Undefined',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The integral gives signed area—negative for regions below the x-axis.',
   },

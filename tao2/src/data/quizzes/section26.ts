@@ -84,10 +84,26 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The $L^2$ norm of a function $f$ is defined as:',
     options: [
-      '$\\|f\\|_2 = \\sup |f|$',
-      '$\\|f\\|_2 = \\int |f|$',
-      '$\\|f\\|_2 = \\sqrt{\\langle f, f \\rangle}$',
-      '$\\|f\\|_2 = |f(0)|$'
+      '$\\|f\\|_2 = \\sup |f|
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The $L^2$ norm is $\\|f\\|_2 = \\sqrt{\\langle f, f \\rangle} = \\sqrt{\\frac{1}{2\\pi}\\int_0^{2\\pi} |f|^2 dx}$.',
+  },
+      '$\\|f\\|_2 = \\int |f|
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The $L^2$ norm is $\\|f\\|_2 = \\sqrt{\\langle f, f \\rangle} = \\sqrt{\\frac{1}{2\\pi}\\int_0^{2\\pi} |f|^2 dx}$.',
+  },
+      '$\\|f\\|_2 = |f(0)|
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The $L^2$ norm is $\\|f\\|_2 = \\sqrt{\\langle f, f \\rangle} = \\sqrt{\\frac{1}{2\\pi}\\int_0^{2\\pi} |f|^2 dx}$.',
+  },
+      '$\\|f\\|_2 = \\sqrt{\\langle f, f \\rangle}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The $L^2$ norm is $\\|f\\|_2 = \\sqrt{\\langle f, f \\rangle} = \\sqrt{\\frac{1}{2\\pi}\\int_0^{2\\pi} |f|^2 dx}$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

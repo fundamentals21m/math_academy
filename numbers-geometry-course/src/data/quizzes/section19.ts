@@ -9,12 +9,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who introduced coordinates in his Geometry of 1637?',
     options: [
+      'Descartes',
       'Euclid',
       'Fermat',
       'Pythagoras',
-      'Descartes',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Descartes introduced coordinates in his Geometry of 1637. Fermat independently discovered the same idea in 1629 but did not publish at the time.',
@@ -24,12 +24,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the coordinates of the origin?',
     options: [
-      '(0, 0)',
       '(1, 1)',
+      '(0, 0)',
       '(0, 1)',
       '(1, 0)',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The origin O has coordinates (0, 0), as it lies at the intersection of the perpendicular axes.',
@@ -39,12 +39,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The equation $y = mx$ represents:',
     options: [
+      'A straight line through the origin',
       'A circle centered at the origin',
       'A parabola',
       'An ellipse',
-      'A straight line through the origin',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The equation y = mx represents a straight line through the origin, where m is the slope (ratio y/x).',
@@ -107,11 +107,11 @@ export const section19Questions: QuizQuestion[] = [
       'What theorem is used to derive the equation of a circle from coordinates?',
     options: [
       'The parallel axiom',
-      'Thales\' theorem',
-      'The Pythagorean theorem',
+      'Thales\\\\' theorem',
       'The fundamental theorem of arithmetic',
+      'The Pythagorean theorem',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Pythagorean theorem tells us that a point at distance r from the origin satisfies x² + y² = r², since r is the hypotenuse of a right triangle with sides x and y.',

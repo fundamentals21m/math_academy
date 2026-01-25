@@ -6,10 +6,26 @@ export const section144Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Laplacian of a scalar field $\\varphi$ is:',
     options: [
-      '$\\nabla \\varphi$',
-      '$\\nabla \\times \\nabla \\varphi$',
-      '$\\nabla^2 \\varphi = \\frac{\\partial^2 \\varphi}{\\partial x^2} + \\frac{\\partial^2 \\varphi}{\\partial y^2} + \\frac{\\partial^2 \\varphi}{\\partial z^2}$',
-      '$\\nabla \\cdot \\varphi$'
+      '$\\nabla \\varphi
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Laplacian $\\nabla^2 \\varphi = \\text{div}(\\nabla \\varphi) = \\frac{\\partial^2 \\varphi}{\\partial x^2} + \\frac{\\partial^2 \\varphi}{\\partial y^2} + \\frac{\\partial^2 \\varphi}{\\partial z^2}$.',
+  },
+      '$\\nabla \\times \\nabla \\varphi
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Laplacian $\\nabla^2 \\varphi = \\text{div}(\\nabla \\varphi) = \\frac{\\partial^2 \\varphi}{\\partial x^2} + \\frac{\\partial^2 \\varphi}{\\partial y^2} + \\frac{\\partial^2 \\varphi}{\\partial z^2}$.',
+  },
+      '$\\nabla \\cdot \\varphi
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Laplacian $\\nabla^2 \\varphi = \\text{div}(\\nabla \\varphi) = \\frac{\\partial^2 \\varphi}{\\partial x^2} + \\frac{\\partial^2 \\varphi}{\\partial y^2} + \\frac{\\partial^2 \\varphi}{\\partial z^2}$.',
+  },
+      '$\\nabla^2 \\varphi = \\frac{\\partial^2 \\varphi}{\\partial x^2} + \\frac{\\partial^2 \\varphi}{\\partial y^2} + \\frac{\\partial^2 \\varphi}{\\partial z^2}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The Laplacian $\\nabla^2 \\varphi = \\text{div}(\\nabla \\varphi) = \\frac{\\partial^2 \\varphi}{\\partial x^2} + \\frac{\\partial^2 \\varphi}{\\partial y^2} + \\frac{\\partial^2 \\varphi}{\\partial z^2}$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -21,11 +37,11 @@ export const section144Questions: QuizQuestion[] = [
     question: 'A function $\\varphi$ with $\\nabla^2 \\varphi = 0$ is called:',
     options: [
       'Irrotational',
-      'Harmonic',
       'Solenoidal',
       'Conservative',
+      'Harmonic',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A harmonic function satisfies Laplace\'s equation $\\nabla^2 \\varphi = 0$. Such functions arise in potential theory, heat conduction, and electrostatics.',
   },
@@ -86,10 +102,26 @@ export const section144Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The identity $\\text{curl}(\\text{curl } \\mathbf{F})$ equals:',
     options: [
-      '$\\nabla^2 \\mathbf{F}$',
-      '$\\text{grad}(\\text{div } \\mathbf{F}) + \\nabla^2 \\mathbf{F}$',
-      '$\\text{grad}(\\text{div } \\mathbf{F}) - \\nabla^2 \\mathbf{F}$',
-      '$\\text{div}(\\text{grad } \\mathbf{F})$'
+      '$\\text{grad}(\\text{div } \\mathbf{F}) - \\nabla^2 \\mathbf{F}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The vector identity: $\\nabla \\times (\\nabla \\times \\mathbf{F}) = \\nabla(\\nabla \\cdot \\mathbf{F}) - \\nabla^2 \\mathbf{F}$, where $\\nabla^2 \\mathbf{F}$ is the component-wise Laplacian.',
+  },
+      '$\\nabla^2 \\mathbf{F}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The vector identity: $\\nabla \\times (\\nabla \\times \\mathbf{F}) = \\nabla(\\nabla \\cdot \\mathbf{F}) - \\nabla^2 \\mathbf{F}$, where $\\nabla^2 \\mathbf{F}$ is the component-wise Laplacian.',
+  },
+      '$\\text{grad}(\\text{div } \\mathbf{F}) + \\nabla^2 \\mathbf{F}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The vector identity: $\\nabla \\times (\\nabla \\times \\mathbf{F}) = \\nabla(\\nabla \\cdot \\mathbf{F}) - \\nabla^2 \\mathbf{F}$, where $\\nabla^2 \\mathbf{F}$ is the component-wise Laplacian.',
+  },
+      '$\\text{div}(\\text{grad } \\mathbf{F})
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The vector identity: $\\nabla \\times (\\nabla \\times \\mathbf{F}) = \\nabla(\\nabla \\cdot \\mathbf{F}) - \\nabla^2 \\mathbf{F}$, where $\\nabla^2 \\mathbf{F}$ is the component-wise Laplacian.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

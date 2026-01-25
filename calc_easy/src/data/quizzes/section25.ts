@@ -23,7 +23,7 @@ export const section25Questions: QuizQuestion[] = [
       'The power rule',
       'The quotient rule',
       'The product rule',
-      'The Pythagorean theorem applied to infinitesimal pieces'
+      'The Pythagorean theorem applied to infinitesimal pieces',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -62,12 +62,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Thompson, "What one fool can do, another can." This means:',
     options: [
-      'Anyone can learn calculus with effort',
       'Mathematics is only for geniuses',
       'Calculus is too difficult to learn',
+      'Anyone can learn calculus with effort',
       'Fools should avoid mathematics',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Thompson\'s message is that calculus is accessible to anyone willing to learn.',
   },

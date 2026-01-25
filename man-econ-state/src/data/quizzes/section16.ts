@@ -6,10 +6,10 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does government spending lack market discipline?',
     options: [
-      'Spenders don\'t bear the costs and recipients don\'t choose the goods',
+      'Spenders don\\\\'t bear the costs and recipients don\\\\'t choose the goods',
       'Government workers are lazy',
       'There is not enough money',
-      'Bureaucracy is inherently slow'
+      'Bureaucracy is inherently slow',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -21,11 +21,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'What are transfer payments?',
     options: [
       'Payments for government services',
-      'Payments taken from some and given to others without production',
       'International wire transfers',
-      'Tax refunds'
+      'Payments taken from some and given to others without production',
+      'Tax refunds',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Transfer payments redistribute wealth—they don\'t pay for production, just move resources from one group to another.',
   },
@@ -65,7 +65,7 @@ export const section16Questions: QuizQuestion[] = [
       'Spending rises during crises but never fully returns to pre-crisis levels',
       'Spending increases smoothly over time',
       'Spending follows a mechanical formula',
-      'Spending is controlled by a ratchet mechanism'
+      'Spending is controlled by a ratchet mechanism',
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -77,11 +77,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'According to Rothbard, what do both the welfare state and warfare state have in common?',
     options: [
       'They both help the poor',
-      'They are both constitutional',
       'They both consume resources that would otherwise serve consumers',
+      'They are both constitutional',
       'They are both popular',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Both welfare and warfare states divert resources from productive uses determined by consumers to political uses.',
   },

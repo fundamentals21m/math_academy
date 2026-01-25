@@ -1,0 +1,248 @@
+1
+00:00:00,000 --> 00:00:04,320
+The world came to the realization that there does not exist a risk-free asset.
+
+2
+00:00:04,320 --> 00:00:09,960
+And at the same time, they would grapple with the question of where Bitcoin belongs in an investment portfolio.
+
+3
+00:00:09,960 --> 00:00:15,960
+BlackRock was the largest investment manager of pension schemes, utilizing a strategy called
+
+4
+00:00:15,960 --> 00:00:19,600
+liability-driven investments.
+
+5
+00:00:19,600 --> 00:00:25,859
+Understanding their history with LDI is crucial to understanding why they pivoted so dramatically to Bitcoin.
+
+6
+00:00:25,859 --> 00:00:33,259
+The idea behind liability-driven investing is that the return on pension assets isn't as important as the return relative to the liability.
+
+7
+00:00:33,259 --> 00:00:41,380
+If the S&P 500 goes down by 20%, but your investment manager only goes down by 19%, they would be lauded as heroes.
+
+8
+00:00:41,380 --> 00:00:44,899
+Even though the plan now has a large hold of fill.
+
+9
+00:00:44,899 --> 00:00:51,500
+If interest rates decrease by 100 basis points, pension liabilities increase by around 12%.
+
+10
+00:00:51,500 --> 00:00:56,659
+So the plan should want either an investment or a hedge that pays off that 12%.
+
+11
+00:00:56,659 --> 00:01:03,740
+Long-duration bonds were one of the greatest performing asset classes from 2004 through 2022.
+
+12
+00:01:03,740 --> 00:01:05,780
+Rates went straight down.
+
+13
+00:01:05,780 --> 00:01:12,859
+If you forgot they were tracking a liability, you might confuse pension assets with gains available for company operations.
+
+14
+00:01:12,859 --> 00:01:18,620
+Companies were accessing their gains without selling assets by borrowing against them.
+
+15
+00:01:18,620 --> 00:01:24,379
+They posted bonds with unrealized gains as collateral for loans to fund operations.
+
+16
+00:01:24,379 --> 00:01:31,140
+This practice took place without incident as long as interest rates continued to decrease or stay the same.
+
+17
+00:01:31,140 --> 00:01:35,819
+But if rates changed direction, the collateral backing the loans decreases in value.
+
+18
+00:01:35,819 --> 00:01:38,739
+In 2022, the time bomb went off.
+
+19
+00:01:38,739 --> 00:01:40,340
+The Fed raised rates.
+
+20
+00:01:40,340 --> 00:01:43,980
+Long-duration bonds lost 30% to 50% of value.
+
+21
+00:01:43,980 --> 00:01:49,659
+The UK guilt crisis in September 2022 required a bank of England emergency bailout.
+
+22
+00:01:49,659 --> 00:01:56,379
+In 2023, five major US banks failed, Silicon Valley Bank, Signature Bank, and others.
+
+23
+00:01:56,379 --> 00:02:04,980
+The structural underpinning of virtually every investment portfolio in the world is the idea of a risk-free asset and high-quality government bonds.
+
+24
+00:02:04,980 --> 00:02:11,500
+This was devastated in 2022 because those risk-free assets performed horribly.
+
+25
+00:02:11,500 --> 00:02:17,860
+The capital asset pricing model and modern portfolio theory are built on a foundation of a risk-free asset.
+
+26
+00:02:17,860 --> 00:02:21,659
+When that foundation crumbles, everything must be rethought.
+
+27
+00:02:21,659 --> 00:02:26,340
+Larry Fink famously called Bitcoin only useful to money-launders.
+
+28
+00:02:26,340 --> 00:02:34,539
+Yet in 2023, BlackRock filed for a spot Bitcoin ETF and has become one of Bitcoin's most significant institutional advocates.
+
+29
+00:02:34,539 --> 00:02:35,819
+What changed?
+
+30
+00:02:35,819 --> 00:02:39,500
+The IBIT ETF launched in January 2024.
+
+31
+00:02:39,500 --> 00:02:44,419
+It reached over $50 billion in assets under management in its first year.
+
+32
+00:02:44,419 --> 00:02:55,780
+It broke every ETF record, fastest to $10 billion, $20 billion, $30 billion, $40 billion, and $50 billion in AUM.
+
+33
+00:02:55,780 --> 00:02:59,139
+This validated Bitcoin as an institutional asset class.
+
+34
+00:02:59,139 --> 00:03:00,659
+In a way, nothing else could have.
+
+35
+00:03:00,659 --> 00:03:06,539
+BlackRock's entrance into Bitcoin is significant, not just because of IBIT, but because of what they will do next.
+
+36
+00:03:06,539 --> 00:03:09,699
+Integrating Bitcoin into their mutual fund complex.
+
+37
+00:03:09,699 --> 00:03:13,939
+BlackRock manages trillions in target date funds for 401Ks.
+
+38
+00:03:13,939 --> 00:03:18,740
+Adding even 1-2% Bitcoin allocation would create massive demand.
+
+39
+00:03:18,740 --> 00:03:25,740
+Investors might get Bitcoin exposure without explicitly knowing it, which is likely what it will take for mass adoption.
+
+40
+00:03:25,740 --> 00:03:28,900
+This is the ultimate Trojan horse.
+
+41
+00:03:28,900 --> 00:03:35,180
+BlackRock's mutual fund complex is the vehicle that finally brings institutional Bitcoin exposure to pensions and retirement accounts
+
+42
+00:03:35,180 --> 00:03:37,460
+by making it indirect and almost invisible.
+
+43
+00:03:37,460 --> 00:03:49,819
+BlackRock's research has suggested that a small allocation to Bitcoin, 1-5%, can significantly improve portfolio risk-adjusted returns due to Bitcoin's low correlation with traditional assets.
+
+44
+00:03:49,819 --> 00:03:54,659
+With bonds no longer risk-free, portfolio construction must be rethought.
+
+45
+00:03:54,659 --> 00:03:58,460
+Bitcoin offers low correlation to stocks and bonds.
+
+46
+00:03:58,460 --> 00:04:01,300
+Superior long-term returns historically.
+
+47
+00:04:01,300 --> 00:04:07,900
+Inflation hedge properties, 24-7 liquidity, and no counterparty risk in self-custody.
+
+48
+00:04:07,900 --> 00:04:14,099
+If there's no risk-free asset, where does Bitcoin belong in an investment portfolio?
+
+49
+00:04:14,099 --> 00:04:23,300
+Bitcoin may be the new foundation, not risk-free, but with different risks than traditional assets and superior long-term returns.
+
+50
+00:04:23,300 --> 00:04:26,180
+Let's recap what we learned in this chapter.
+
+51
+00:04:26,180 --> 00:04:34,379
+LDI strategies failed spectacularly when rates reversed in 2022, requiring bank of England emergency intervention.
+
+52
+00:04:34,379 --> 00:04:37,500
+Risk-free assets proved to be an illusion.
+
+53
+00:04:37,500 --> 00:04:43,740
+Government bonds lost 30-50% of value, shattering modern portfolio theory.
+
+54
+00:04:43,740 --> 00:04:51,620
+BlackRock pivoted dramatically from calling Bitcoin only useful to money-launders, to launching the largest Bitcoin ETF.
+
+55
+00:04:51,620 --> 00:05:02,500
+IBIT broke every ETF record, fastest to $10,020,030,040,050,050,050 in assets under management.
+
+56
+00:05:02,500 --> 00:05:09,579
+The mutual fund integration will be the Trojan horse that brings Bitcoin to retirement accounts worldwide.
+
+57
+00:05:09,579 --> 00:05:12,660
+This concludes Part 2.
+
+58
+00:05:12,660 --> 00:05:16,220
+In the next episode, we begin Part 3.
+
+59
+00:05:16,220 --> 00:05:18,220
+Institutional Bitcoin.
+
+60
+00:05:18,220 --> 00:05:20,899
+Starting with deferred compensation.
+
+61
+00:05:20,980 --> 00:05:25,420
+How executives can use NQDC plans to gain Bitcoin exposure.
+
+62
+00:05:25,420 --> 00:05:26,500
+See you in the next one.
+

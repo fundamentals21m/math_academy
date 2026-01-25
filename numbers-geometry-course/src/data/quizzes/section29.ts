@@ -41,11 +41,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'The Babylonians used what number base for their arithmetic?',
     options: [
       'Base 2',
-      'Base 60',
       'Base 10',
       'Base 12',
+      'Base 60',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Babylonians wrote their numbers in base 60 (sexagesimal). This is why multiples of 60 appear as "round" numbers in the Plimpton 322 tablet.',
@@ -55,12 +55,12 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which is the smallest Pythagorean triple?',
     options: [
-      '(1, 2, 3)',
       '(3, 4, 5)',
+      '(1, 2, 3)',
       '(2, 3, 4)',
       '(5, 12, 13)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       '(3, 4, 5) is the smallest Pythagorean triple: 3² + 4² = 9 + 16 = 25 = 5². (1, 2, 3) does not work since 1 + 4 ≠ 9.',
@@ -70,12 +70,12 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $(3, 4, 5)$ is a Pythagorean triple, which of these is also?',
     options: [
+      '(6, 8, 10)',
       '(4, 5, 6)',
       '(3, 5, 7)',
-      '(6, 8, 10)',
       '(9, 16, 25)',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'If (a, b, c) is a Pythagorean triple, then so is (ka, kb, kc) for any natural number k. Here (6, 8, 10) = 2 × (3, 4, 5), so 36 + 64 = 100.',
@@ -100,12 +100,12 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do multiples of a Pythagorean triple represent the "same" triangle?',
     options: [
-      'They have the same angles',
       'They have the same perimeter',
       'Multiplication changes nothing',
+      'They have the same angles',
       'They are congruent',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Multiplying all sides by a constant k changes the size but not the shape of the triangle. The angles remain the same—it\'s just a different choice of unit length. This is why we focus on primitive triples.',
@@ -116,11 +116,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'Who discovered the meaning of the numbers on Plimpton 322?',
     options: [
       'Pythagoras',
+      'Neugebauer and Sachs',
       'Euclid',
       'Diophantus',
-      'Neugebauer and Sachs',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Otto Neugebauer and Abraham Sachs discovered the meaning of the pairs (b, c) on Plimpton 322 in 1945. They showed that c² - b² is always a perfect square, revealing the tablet as a list of Pythagorean triples.',

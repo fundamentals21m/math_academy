@@ -34,12 +34,12 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two finite-dimensional vector spaces over $F$ are isomorphic if and only if:',
     options: [
-      'They have the same dimension',
       'They have the same basis',
+      'They have the same dimension',
       'One is a subspace of the other',
       'They are both zero',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Dimension is a complete invariant for finite-dimensional vector spaces: $V \\cong W$ iff $\\dim(V) = \\dim(W)$.',
   },
@@ -78,10 +78,22 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The dimension of $\\mathbb{R}^3$ as a vector space over $\\mathbb{R}$ is:',
     options: [
-      '$1$',
+      '$1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\mathbb{R}^3$ has the standard basis $\\{(1,0,0), (0,1,0), (0,0,1)\\}$, which has $3$ elements. So $\\dim_\\mathbb{R}(\\mathbb{R}^3) = 3$.',
+  },
       'Infinite',
-      '$9$',
-      '$3$'
+      '$3
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\mathbb{R}^3$ has the standard basis $\\{(1,0,0), (0,1,0), (0,0,1)\\}$, which has $3$ elements. So $\\dim_\\mathbb{R}(\\mathbb{R}^3) = 3$.',
+  },
+      '$9
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$\\mathbb{R}^3$ has the standard basis $\\{(1,0,0), (0,1,0), (0,0,1)\\}$, which has $3$ elements. So $\\dim_\\mathbb{R}(\\mathbb{R}^3) = 3$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

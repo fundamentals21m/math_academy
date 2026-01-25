@@ -54,10 +54,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\sum_{k=1}^{n} c$ where $c$ is a constant?',
     options: [
-      '$nc$',
-      '$c$',
-      '$c^n$',
-      '$n + c$'
+      '$c
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Adding $c$ a total of $n$ times gives $nc$.',
+  },
+      '$c^n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Adding $c$ a total of $n$ times gives $nc$.',
+  },
+      '$nc
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Adding $c$ a total of $n$ times gives $nc$.',
+  },
+      '$n + c
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Adding $c$ a total of $n$ times gives $nc$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

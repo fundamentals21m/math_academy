@@ -6,10 +6,14 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is Fermat\'s Last Theorem?',
     options: [
+      'No three positive integers satisfy $a^n + b^n = c^n$ for $n > 2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Fermat claimed no solutions exist for $a^n + b^n = c^n$ when $n > 2$. It was proved by Andrew Wiles in 1995.',
+  },
       'Every even number is the sum of two primes',
       'There are infinitely many prime numbers',
-      'No three positive integers satisfy $a^n + b^n = c^n$ for $n > 2$',
-      'Every number is the sum of four squares'
+      'Every number is the sum of four squares',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -49,7 +53,7 @@ export const section05Questions: QuizQuestion[] = [
       'Probability theory',
       'Calculus',
       'Group theory',
-      'Topology'
+      'Topology',
     ],
     correctIndex: 0,
     difficulty: 'easy',

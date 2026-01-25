@@ -36,10 +36,18 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the zero matrix $O$, the exponential $e^O$ equals:',
     options: [
-      '$O$',
-      'Undefined',
       '$I$ (identity matrix)',
-      '$e \\cdot I$'
+      '$O
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$e^O = I + O + \\frac{O^2}{2!} + \\cdots = I$ since all powers of $O$ are $O$.',
+  },
+      'Undefined',
+      '$e \\cdot I
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$e^O = I + O + \\frac{O^2}{2!} + \\cdots = I$ since all powers of $O$ are $O$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

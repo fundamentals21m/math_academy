@@ -25,11 +25,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'Is 7 a sum of two squares?',
     options: [
       'Yes: 7 = 2² + 3²',
-      'Yes: 7 = 1² + 2² + something',
       'No, because 7 ≡ 3 (mod 4)',
+      'Yes: 7 = 1² + 2² + something',
       'No, because 7 is odd',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       '7 ≡ 3 (mod 4), so by Fermat\'s theorem, 7 cannot be written as a sum of two squares.',
@@ -39,12 +39,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Write 13 as a sum of two squares:',
     options: [
+      '13 = 2² + 3²',
       '13 = 1² + 12²',
       '13 = 3² + 4²',
-      '13 = 2² + 3²',
       '13 cannot be so written',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       '13 = 4 + 9 = 2² + 3². Since 13 ≡ 1 (mod 4), it must be a sum of two squares.',
@@ -56,10 +56,10 @@ export const section61Questions: QuizQuestion[] = [
     options: [
       'They share the same prime factors',
       'They use the same division algorithm',
-      'There is no connection',
       'n = a² + b² iff n = N(a + bi)',
+      'There is no connection',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'An integer is a sum of two squares if and only if it is the norm of some Gaussian integer.',
@@ -69,12 +69,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is 45 a sum of two squares?',
     options: [
-      'Yes, because 3² appears, so even power of 3',
       'No, 45 = 9 × 5 has a factor ≡ 3 (mod 4)',
       'Cannot determine without more information',
+      'Yes, because 3² appears, so even power of 3',
       'No, 45 is odd',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       '45 = 3² × 5. The prime 3 ≡ 3 (mod 4) appears to even power (2), so 45 = 3² + 6².',
@@ -99,12 +99,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is 21 a sum of two squares?',
     options: [
-      'No: 21 = 3 × 7, both ≡ 3 (mod 4) to odd powers',
       'Yes: 21 = 4² + 2² + 1²',
       'Yes: 21 = 3² + 12²',
       'No: 21 is odd',
+      'No: 21 = 3 × 7, both ≡ 3 (mod 4) to odd powers',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       '21 = 3 × 7. Both 3 and 7 are ≡ 3 (mod 4) and appear to odd power (1), so 21 is not a sum of two squares.',
@@ -114,12 +114,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is 17 as a sum of two squares?',
     options: [
-      '17 = 3² + 4²',
       '17 = 1² + 4²',
+      '17 = 3² + 4²',
       '17 = 2² + 3²',
       '17 = 0² + 17²',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       '17 = 1 + 16 = 1² + 4². Since 17 ≡ 1 (mod 4), it must be expressible as a sum of two squares.',

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #7C3AED;
+      --accent-rgb: 124, 58, 237;
+    }
+    .ldi-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .flow-box {
+      background: rgba(124, 58, 237, 0.08);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      padding: 20px 30px;
+      border-radius: 8px;
+      text-align: center;
+      width: 200px;
+    }
+    .flow-text {
+      color: #E6EDF3;
+      font-size: 18px;
+    }
+    .flow-arrow {
+      color: #7C3AED;
+      font-size: 24px;
+    }
+    .paradox-box {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin: 30px auto;
+      max-width: 800px;
+    }
+    .paradox-text {
+      color: #E6EDF3;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .paradox-text em {
+      color: #EF4444;
+      font-style: normal;
+    }
+    .danger-box {
+      background: rgba(247, 147, 26, 0.08);
+      border-left: 4px solid #F7931A;
+      padding: 25px 40px;
+      margin: 30px auto;
+      max-width: 900px;
+      text-align: left;
+    }
+    .danger-title {
+      color: #F7931A;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .danger-text {
+      color: #E6EDF3;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">LDI Explained</div>
+    <div class="section-title">Liability Driven Investing</div>
+    <div class="ldi-flow">
+      <div class="flow-box">
+        <div class="flow-text">Rates ↓ 100bps</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">
+        <div class="flow-text">Liabilities ↑ 12%</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">
+        <div class="flow-text">Need hedge that pays 12%</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">
+        <div class="flow-text">Long-duration bonds</div>
+      </div>
+    </div>
+    <div class="paradox-box">
+      <div class="paradox-text">If S&P drops 20% but your manager drops only 19%, they're <em>heroes</em> — even though the plan now has a large hole to fill.</div>
+    </div>
+    <div class="danger-box">
+      <div class="danger-title">The Hidden Danger</div>
+      <div class="danger-text">Companies borrowed against unrealized bond gains to fund operations. This worked only as long as rates kept falling. If rates reverse, the collateral backing those loans collapses.</div>
+    </div>
+  </div>
+</body>
+</html>

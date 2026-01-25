@@ -7,11 +7,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'Michael Saylor described bitcoin as "Thermodynamically Sound Digital ______."',
     options: [
       'Currency',
-      'Real Estate',
       'Gold',
-      'Money'
+      'Money',
+      'Real Estate',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'As an engineer, Saylor elevated bitcoin from "Magic Internet Money" to "Thermodynamically Sound Digital Real Estate."'
   },
@@ -23,7 +23,7 @@ export const section07Questions: QuizQuestion[] = [
       '$100 million',
       '$500 million',
       '$250 million',
-      '$1 billion'
+      '$1 billion',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Saylor, cash is like:',
     options: [
+      'A melting ice cube',
       'A safe haven',
       'A stable foundation',
       'A growing tree',
-      'A melting ice cube'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Saylor\'s view is that cash is a "melting ice cube" - every day you hold it, you lose purchasing power to monetary debasement.'
   },
@@ -51,7 +51,7 @@ export const section07Questions: QuizQuestion[] = [
       'Convertible debt',
       'Stock buybacks',
       'Preferred shares',
-      'Dividends'
+      'Dividends',
     ],
     correctIndex: 0,
     difficulty: 'medium',

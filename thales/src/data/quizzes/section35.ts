@@ -9,12 +9,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the two well-known ways of constructing the reals from the rationals?',
     options: [
-      'Dedekind cuts and Cauchy sequences',
       'Peano axioms and field axioms',
+      'Dedekind cuts and Cauchy sequences',
       'Equivalence classes and quotient rings',
-      'Matrix representations and polynomial rings'
+      'Matrix representations and polynomial rings',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The two classic constructions are Dedekind cuts (due to Eudoxus/Dedekind) and Cauchy sequences (preferred by analysts).',
@@ -39,12 +39,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a Cauchy sequence?',
     options: [
+      'A sequence where |aₘ - aₙ| can be made arbitrarily small for large m, n',
       'A sequence where consecutive terms differ by a constant',
       'A sequence that is always increasing',
-      'A sequence where |aₘ - aₙ| can be made arbitrarily small for large m, n',
-      'A sequence of integers only'
+      'A sequence of integers only',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A Cauchy sequence is one where the terms get arbitrarily close to each other: |aₘ - aₙ| can be made as small as desired by taking m and n sufficiently large.',
@@ -54,12 +54,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which ancient mathematician\'s work anticipated the idea behind Dedekind cuts?',
     options: [
+      'Eudoxus',
       'Euclid',
       'Pythagoras',
       'Archimedes',
-      'Eudoxus',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Eudoxus, a member of Plato\'s Academy, developed a theory of proportions for geometric quantities that can be interpreted as defining equality of real numbers via the rationals below and above them.',
@@ -72,7 +72,7 @@ export const section35Questions: QuizQuestion[] = [
       'A field with a total ordering on its elements',
       'A field that is also a ring',
       'A field where every element has an inverse',
-      'A field with a subset P (positives) closed under + and · with trichotomy'
+      'A field with a subset P (positives) closed under + and · with trichotomy',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -85,11 +85,11 @@ export const section35Questions: QuizQuestion[] = [
     question: 'Why can the complex numbers ℂ not be ordered?',
     options: [
       'Because there are infinitely many complex numbers',
-      'Because they have no additive identity',
       'Because we cannot consistently classify i as positive or negative',
+      'Because they have no additive identity',
       'Because multiplication is not commutative',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'If i ∈ P, then -1 = i·i ∈ P, contradicting 1 ∈ P. If -i ∈ P, then -1 = (-i)(-i) ∈ P, same contradiction. So neither i nor -i can be in P, violating the trichotomy axiom.',
@@ -100,11 +100,11 @@ export const section35Questions: QuizQuestion[] = [
     question: 'What does it mean for an ordered field to be complete?',
     options: [
       'Every polynomial has a root',
-      'Every nonempty set of positive elements has a greatest lower bound',
       'Every element has a multiplicative inverse',
+      'Every nonempty set of positive elements has a greatest lower bound',
       'Every Cauchy sequence has rational terms',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'An ordered field is complete if every nonempty set of positive elements has a greatest lower bound (infimum). This is the property that distinguishes ℝ from ℚ.',
@@ -114,12 +114,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is ℚ not a complete ordered field?',
     options: [
-      'Because √2 is the infimum of a set of rationals but √2 ∉ ℚ',
       'Because ℚ is not ordered',
       'Because ℚ has zero divisors',
       'Because ℚ is finite',
+      'Because √2 is the infimum of a set of rationals but √2 ∉ ℚ',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       '√2 is the greatest lower bound of all positive rationals r with r² > 2. Since √2 is irrational, this infimum does not exist in ℚ, so ℚ is not complete.',

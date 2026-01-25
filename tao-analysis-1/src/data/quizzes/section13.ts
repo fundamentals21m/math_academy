@@ -32,10 +32,26 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is the triangle inequality for absolute values?',
     options: [
-      '$|x + y| \\leq |x| + |y|$',
-      '$|x + y| \\geq |x| + |y|$',
-      '$|x + y| = |x| + |y|$',
-      '$|xy| \\leq |x| + |y|$'
+      '$|x + y| \\geq |x| + |y|
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The triangle inequality states $|x + y| \\leq |x| + |y|$. Equality holds when $x$ and $y$ have the same sign (or one is zero).',
+  },
+      '$|x + y| = |x| + |y|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The triangle inequality states $|x + y| \\leq |x| + |y|$. Equality holds when $x$ and $y$ have the same sign (or one is zero).',
+  },
+      '$|xy| \\leq |x| + |y|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The triangle inequality states $|x + y| \\leq |x| + |y|$. Equality holds when $x$ and $y$ have the same sign (or one is zero).',
+  },
+      '$|x + y| \\leq |x| + |y|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The triangle inequality states $|x + y| \\leq |x| + |y|$. Equality holds when $x$ and $y$ have the same sign (or one is zero).',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -83,10 +99,10 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'Triangle inequality',
       'Subadditivity',
-      'Homogeneity',
       'Multiplicativity of absolute value',
+      'Homogeneity',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The equation $|xy| = |x| \\cdot |y|$ shows that absolute value is multiplicative. This property is essential for many proofs in analysis.',
   },
@@ -96,11 +112,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'For rational $x, y$ with $x \\neq 0$, which exponent law is $(x^n)^m = x^{nm}$?',
     options: [
       'Product of powers',
-      'Power of a power',
       'Power of a product',
       'Quotient of powers',
+      'Power of a power',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'This is the "power of a power" rule: raising $x^n$ to the power $m$ gives $x^{nm}$.',
   },

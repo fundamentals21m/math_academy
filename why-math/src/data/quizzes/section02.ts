@@ -7,11 +7,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Which of the following is a prime number?',
     options: [
       '4',
-      '17',
       '9',
       '1',
+      '17',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '17 is prime (only divisible by 1 and 17). 1 is not prime by definition, 4 = 2×2, and 9 = 3×3.',
   },
@@ -20,10 +20,26 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the prime factorization of 171?',
     options: [
-      '$3 \\times 57$',
-      '$3^2 \\times 19$',
-      '$9 \\times 19$',
-      '$3 \\times 3 \\times 17$'
+      '$3 \\times 57
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$171 = 3 \\times 57 = 3 \\times 3 \\times 19 = 3^2 \\times 19$.',
+  },
+      '$9 \\times 19
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$171 = 3 \\times 57 = 3 \\times 3 \\times 19 = 3^2 \\times 19$.',
+  },
+      '$3^2 \\times 19
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$171 = 3 \\times 57 = 3 \\times 3 \\times 19 = 3^2 \\times 19$.',
+  },
+      '$3 \\times 3 \\times 17
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$171 = 3 \\times 57 = 3 \\times 3 \\times 19 = 3^2 \\times 19$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -166,11 +182,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What distinguishes the decimal expansion of an irrational number?',
     options: [
       'It always terminates',
+      'It neither terminates nor repeats',
       'It always repeats',
       'It contains only odd digits',
-      'It neither terminates nor repeats'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Irrational numbers have decimal expansions that neither terminate nor repeat.',
   },
@@ -181,10 +197,10 @@ export const section02Questions: QuizQuestion[] = [
     options: [
       'Because it is odd',
       'Because it is too small',
-      'Because it divides every integer',
       'Because it has only one positive divisor (itself)',
+      'Because it divides every integer',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A prime must have exactly two distinct positive divisors: 1 and itself. The number 1 has only one divisor.',
   },

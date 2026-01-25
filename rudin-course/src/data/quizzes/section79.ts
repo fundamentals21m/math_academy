@@ -7,9 +7,13 @@ export const section79Questions: QuizQuestion[] = [
     question: 'A measure space is a triple $(X, \\mathcal{M}, \\mu)$ where:',
     options: [
       '$X = \\mathbb{R}$, $\\mathcal{M}$ is the Borel sets, $\\mu$ is Lebesgue measure',
+      '$X$ is a set, $\\mathcal{M}$ is a $\\sigma$-algebra, and $\\mu$ is a countably additive measure on $\\mathcal{M}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A measure space consists of a set, a $\\sigma$-algebra of measurable sets, and a countably additive non-negative measure. This is the abstract framework for integration.',
+  },
       '$X$ is a metric space, $\\mathcal{M}$ is the open sets, $\\mu$ is any function',
       '$X$ is finite, $\\mathcal{M} = 2^X$, $\\mu$ is counting measure',
-      '$X$ is a set, $\\mathcal{M}$ is a $\\sigma$-algebra, and $\\mu$ is a countably additive measure on $\\mathcal{M}$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -20,12 +24,12 @@ export const section79Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A $\\sigma$-algebra $\\mathcal{M}$ on $X$ must satisfy:',
     options: [
-      '$X \\in \\mathcal{M}$, closed under complements, and closed under countable unions',
       'Closed under finite unions only',
       'Contains only open sets',
-      'Is a finite collection'
+      '$X \\in \\mathcal{M}$, closed under complements, and closed under countable unions',
+      'Is a finite collection',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A $\\sigma$-algebra contains the whole space, is closed under complementation, and is closed under countable unions (hence also countable intersections).',
   },
@@ -34,10 +38,22 @@ export const section79Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A measure $\\mu$ is called $\\sigma$-finite if:',
     options: [
-      '$\\mu(X) < \\infty$',
-      '$X = \\bigcup_{n=1}^\\infty E_n$ with $\\mu(E_n) < \\infty$ for all $n$',
-      '$\\mu(E) < \\infty$ for all $E \\in \\mathcal{M}$',
-      '$\\mathcal{M}$ is countable'
+      '$\\mu(X) < \\infty
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\sigma$-finiteness means $X$ is a countable union of sets with finite measure. Lebesgue measure on $\\mathbb{R}^n$ is $\\sigma$-finite but not finite.',
+  },
+      '$\\mu(E) < \\infty$ for all $E \\in \\mathcal{M}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\sigma$-finiteness means $X$ is a countable union of sets with finite measure. Lebesgue measure on $\\mathbb{R}^n$ is $\\sigma$-finite but not finite.',
+  },
+      '$X = \\bigcup_{n=1}^\\infty E_n$ with $\\mu(E_n) < \\infty$ for all $n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\sigma$-finiteness means $X$ is a countable union of sets with finite measure. Lebesgue measure on $\\mathbb{R}^n$ is $\\sigma$-finite but not finite.',
+  },
+      '$\\mathcal{M}$ is countable',
     ],
     correctIndex: 1,
     difficulty: 'medium',

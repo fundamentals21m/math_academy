@@ -46,10 +46,26 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A$ is constant, the power series for $e^{tA}Y_0$ has coefficients:',
     options: [
-      '$c_n = Y_0$',
-      '$c_n = \\frac{A^n}{n!}Y_0$',
-      '$c_n = nA^{n-1}Y_0$',
-      '$c_n = A^n Y_0$'
+      '$c_n = \\frac{A^n}{n!}Y_0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$e^{tA}Y_0 = \\sum_{n=0}^{\\infty} \\frac{(tA)^n}{n!}Y_0 = \\sum_{n=0}^{\\infty} \\frac{A^n Y_0}{n!}t^n$.',
+  },
+      '$c_n = Y_0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$e^{tA}Y_0 = \\sum_{n=0}^{\\infty} \\frac{(tA)^n}{n!}Y_0 = \\sum_{n=0}^{\\infty} \\frac{A^n Y_0}{n!}t^n$.',
+  },
+      '$c_n = nA^{n-1}Y_0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$e^{tA}Y_0 = \\sum_{n=0}^{\\infty} \\frac{(tA)^n}{n!}Y_0 = \\sum_{n=0}^{\\infty} \\frac{A^n Y_0}{n!}t^n$.',
+  },
+      '$c_n = A^n Y_0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$e^{tA}Y_0 = \\sum_{n=0}^{\\infty} \\frac{(tA)^n}{n!}Y_0 = \\sum_{n=0}^{\\infty} \\frac{A^n Y_0}{n!}t^n$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -61,11 +77,11 @@ export const section75Questions: QuizQuestion[] = [
     question: 'The radius of convergence of the power series solution depends on:',
     options: [
       'Only the initial condition',
+      'The analyticity of $A(t)$ and singularities of the equation',
       'The dimension of the system',
       'Whether $A$ is symmetric',
-      'The analyticity of $A(t)$ and singularities of the equation',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The series converges where $A(t)$ is analytic; singularities of $A(t)$ limit the radius of convergence.',
   },

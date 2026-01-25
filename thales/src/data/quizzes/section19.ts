@@ -9,12 +9,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who is credited with founding trigonometry by creating the first table of chords?',
     options: [
-      'Hipparchus',
       'Ptolemy',
       'Menelaus',
       'Heron',
+      'Hipparchus',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Hipparchus (190–120 BC) created the first trigonometric table, which gave the length of the chord cut off by each angle at the center of a unit circle. In modern terms, chord(x) = 2sin(x/2).',
@@ -24,12 +24,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Heron\'s formula calculate?',
     options: [
-      'The area of a triangle given its three sides',
       'The volume of a sphere',
       'The length of a chord in a circle',
+      'The area of a triangle given its three sides',
       'The sum of angles in a polygon',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Heron\'s formula gives the area of a triangle as √(s(s-a)(s-b)(s-c)), where s = (a+b+c)/2 is the semi-perimeter and a, b, c are the side lengths. The formula was probably discovered by Archimedes.',
@@ -42,7 +42,7 @@ export const section19Questions: QuizQuestion[] = [
       'The sum of opposite angles equals 180°',
       'The diagonals bisect each other',
       'All four sides are equal in length',
-      'The product of diagonals equals the sum of products of opposite sides'
+      'The product of diagonals equals the sum of products of opposite sides',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -54,12 +54,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What was Diophantus\'s major work called?',
     options: [
-      'The Almagest',
       'The Arithmetica',
+      'The Almagest',
       'The Elements',
       'The Collection',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Diophantus wrote the Arithmetica, originally containing 13 books of algebraic problems. He was the first to make systematic use of symbolic notation for algebraic expressions.',
@@ -85,11 +85,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'Who was Hypatia?',
     options: [
       'The wife of Ptolemy who edited his works',
+      'A female mathematician who wrote commentaries on Apollonius and Diophantus',
       'The founder of the Library of Alexandria',
       'A Roman empress who patronized mathematics',
-      'A female mathematician who wrote commentaries on Apollonius and Diophantus',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Hypatia (c. 360–415 AD) was the daughter of Theon of Alexandria and wrote commentaries on Apollonius and Diophantus. She was murdered by a mob during an anti-pagan riot and is the first female mathematician known to history.',
@@ -100,11 +100,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'What important mathematical concept does Pappus\'s Theorem express?',
     options: [
       'The distributive property of multiplication',
-      'The associativity of addition',
       'The commutativity of multiplication',
+      'The associativity of addition',
       'The existence of multiplicative inverses',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Pappus\'s Theorem, about collinearity of intersection points, expresses the commutativity of multiplication and is fundamental to projective geometry. Hilbert used it in his axiomatic presentation of Euclidean geometry.',
@@ -114,12 +114,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In what year did Emperor Justinian close the pagan schools of philosophy at Athens?',
     options: [
-      '415 AD',
       '529 AD',
+      '415 AD',
       '320 AD',
       '641 AD',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'In 529 AD, Emperor Justinian closed the pagan schools of philosophy at Athens, marking the beginning of the "Dark Ages" of Europe. The Arabs would conquer Alexandria in 641 AD.',
@@ -129,12 +129,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which mathematician founded spherical trigonometry and proved a theorem about collinear points on a triangle?',
     options: [
-      'Menelaus',
       'Hipparchus',
+      'Menelaus',
       'Ptolemy',
       'Pappus',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Menelaus (c. 70–140 AD) was the first to study spherical trigonometry. His theorem states that if D, E, F lie on lines BC, AC, AB of triangle ABC, they are collinear if and only if BD·CE·AF = CD·AE·BF.',

@@ -7,9 +7,13 @@ export const section16Questions: QuizQuestion[] = [
     question: 'The chromatic polynomial $P(G, k)$ counts:',
     options: [
       'The number of edges using $k$ colors',
-      'The number of cliques of size $k$',
+      'The number of cliques of size $k
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$P(G, k)$ = number of ways to properly color $G$ with at most $k$ colors.',
+  },
+      'The number of proper $k$-colorings',
       'The chromatic number',
-      'The number of proper $k$-colorings'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -20,10 +24,26 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The chromatic polynomial of $K_n$ is:',
     options: [
-      '$k(k-1)(k-2)\\cdots(k-n+1)$',
-      '$k(k-1)^{n-1}$',
-      '$k^n$',
-      '$(k-1)^n$'
+      '$k(k-1)^{n-1}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'For $K_n$: first vertex gets $k$ choices, second $k-1$, ..., giving $k(k-1)\\cdots(k-n+1)$.',
+  },
+      '$k(k-1)(k-2)\\cdots(k-n+1)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'For $K_n$: first vertex gets $k$ choices, second $k-1$, ..., giving $k(k-1)\\cdots(k-n+1)$.',
+  },
+      '$k^n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'For $K_n$: first vertex gets $k$ choices, second $k-1$, ..., giving $k(k-1)\\cdots(k-n+1)$.',
+  },
+      '$(k-1)^n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'For $K_n$: first vertex gets $k$ choices, second $k-1$, ..., giving $k(k-1)\\cdots(k-n+1)$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -64,12 +84,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A chordal graph is one where:',
     options: [
-      'Every vertex is in a triangle',
       'Every cycle of length $\\geq 4$ has a chord',
+      'Every vertex is in a triangle',
       'It has no triangles',
       'It is planar',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Chordal = every cycle of length 4 or more has a chord (edge between non-consecutive vertices).',
   },

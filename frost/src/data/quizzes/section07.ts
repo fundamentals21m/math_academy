@@ -20,12 +20,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the "zero-knowledge" property mean for Schnorr signatures?',
     options: [
-      'The signature contains zero bytes of data',
       'The signature reveals no information about the secret key beyond what the public key already reveals',
+      'The signature contains zero bytes of data',
       'Verification requires zero computational resources',
       'The signer learns nothing about the message they are signing',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Zero-knowledge means signatures reveal nothing about $s$ beyond what could be computed from $Y = [s]G$ alone. Both $z$ and $R$ appear random, and multiple signatures do not leak cumulative information.',
   },
@@ -52,10 +52,14 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the hash function modeled as a "random oracle" in Schnorr security proofs?',
     options: [
-      'To prevent attackers from predicting $H(R \\| Y \\| m)$ before committing to $R$',
       'To ensure signatures are always the same length',
       'To make verification faster',
-      'To allow deterministic signature generation'
+      'To prevent attackers from predicting $H(R \\| Y \\| m)$ before committing to $R
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The random oracle model ensures attackers cannot predict $H(R \\| Y \\| m)$ without first choosing $R$. This prevents "working backwards" from a desired challenge to forge a signature.',
+  },
+      'To allow deterministic signature generation',
     ],
     correctIndex: 0,
     difficulty: 'hard',

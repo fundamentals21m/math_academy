@@ -7,11 +7,11 @@ export const section45Questions: QuizQuestion[] = [
     question: 'Partial fraction decomposition is used to integrate:',
     options: [
       'Trigonometric functions',
-      'Rational functions (polynomial/polynomial)',
       'Exponential functions',
       'Logarithmic functions',
+      'Rational functions (polynomial/polynomial)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Partial fractions decompose rational functions into simpler fractions.',
   },
@@ -134,10 +134,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       'The numerator is a constant',
       'All coefficients are integers',
+      'The degree of numerator is less than degree of denominator',
       'The denominator is linear',
-      'The degree of numerator is less than degree of denominator'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The fraction must be proper (deg num < deg denom). Use long division first if not.',
   },

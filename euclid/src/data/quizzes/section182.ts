@@ -6,12 +6,12 @@ export const section182Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition VII.3 extend from VII.2?',
     options: [
-      'Finding the GCD of two numbers',
       'Finding the greatest common measure of three numbers',
+      'Finding the GCD of two numbers',
       'Finding prime factors',
       'Testing for relative primality',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Proposition VII.3 extends the Euclidean algorithm to find the greatest common measure of three numbers.',
   },
@@ -21,11 +21,11 @@ export const section182Questions: QuizQuestion[] = [
     question: 'To find GCD(24, 36, 60) using VII.3, what is the correct approach?',
     options: [
       'Find the smallest number and test if it divides the others',
+      'Find GCD(24, 36) first, then find GCD of that result with 60',
       'Find GCD(24, 60) first, then add 36',
       'Multiply all three numbers, then divide by 2',
-      'Find GCD(24, 36) first, then find GCD of that result with 60'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'VII.3 uses the result from VII.2: first find GCD(24, 36) = 12, then find GCD(12, 60) = 12. So GCD(24, 36, 60) = 12.',
   },

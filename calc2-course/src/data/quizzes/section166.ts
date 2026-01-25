@@ -54,12 +54,12 @@ export const section166Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The geometric distribution $P(X = k) = (1-p)^{k-1}p$ models:',
     options: [
-      'Number of trials until the first success',
       'Number of successes in $n$ trials',
       'Total number of outcomes',
-      'Continuous waiting time'
+      'Number of trials until the first success',
+      'Continuous waiting time',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The geometric distribution models the number of Bernoulli trials needed to get the first success.',
   },
@@ -94,10 +94,26 @@ export const section166Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the Poisson distribution, $P(X \\geq 2)$ equals:',
     options: [
-      '$1 - e^{-\\lambda}$',
-      '$\\lambda e^{-\\lambda}$',
-      '$1 - e^{-\\lambda} - \\lambda e^{-\\lambda}$',
-      '$e^{-\\lambda}$'
+      '$1 - e^{-\\lambda}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$P(X \\geq 2) = 1 - P(X = 0) - P(X = 1) = 1 - e^{-\\lambda} - \\lambda e^{-\\lambda}$.',
+  },
+      '$1 - e^{-\\lambda} - \\lambda e^{-\\lambda}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$P(X \\geq 2) = 1 - P(X = 0) - P(X = 1) = 1 - e^{-\\lambda} - \\lambda e^{-\\lambda}$.',
+  },
+      '$\\lambda e^{-\\lambda}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$P(X \\geq 2) = 1 - P(X = 0) - P(X = 1) = 1 - e^{-\\lambda} - \\lambda e^{-\\lambda}$.',
+  },
+      '$e^{-\\lambda}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$P(X \\geq 2) = 1 - P(X = 0) - P(X = 1) = 1 - e^{-\\lambda} - \\lambda e^{-\\lambda}$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

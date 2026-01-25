@@ -1,0 +1,180 @@
+{
+  "partId": 3,
+  "partTitle": "Classical Greek Mathematics",
+  "textbookChapter": "Part 3",
+  "sections": [
+    {
+      "sectionId": 13,
+      "sectionTitle": "Constructions with Ruler and Compass",
+      "textbookSection": "Section 13",
+      "examples": [
+        {
+          "id": "ex-3-13-1",
+          "type": "example",
+          "title": "Bisecting a Line Segment",
+          "statement": "Describe the compass-and-straightedge construction to bisect a line segment $AB$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Draw two circles",
+                "content": "With compass point at $A$, draw a circle with radius greater than $\\frac{1}{2}AB$.\n\nWith compass point at $B$, draw a circle with the same radius."
+              },
+              {
+                "title": "Find intersection points",
+                "content": "Let the two circles intersect at points $P$ and $Q$ (above and below the line)."
+              },
+              {
+                "title": "Draw the perpendicular bisector",
+                "content": "Draw line $PQ$. This line intersects $AB$ at its midpoint $M$."
+              }
+            ],
+            "conclusion": "$M$ is the midpoint of $AB$, and $PQ$ is perpendicular to $AB$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "3-13-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Describe how to construct a perpendicular to a line through a given point on the line.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Mark two equidistant points",
+                "content": "From point $P$ on line $\\ell$, use compass to mark points $A$ and $B$ on $\\ell$ equidistant from $P$."
+              },
+              {
+                "title": "Construct perpendicular bisector of AB",
+                "content": "Draw circles centered at $A$ and $B$ with equal radii greater than $AP$. Let them intersect at $Q$."
+              },
+              {
+                "title": "Complete construction",
+                "content": "Line $PQ$ is perpendicular to $\\ell$ at $P$."
+              }
+            ],
+            "conclusion": "The perpendicular passes through $P$ and is perpendicular to $\\ell$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 15,
+      "sectionTitle": "Euclid",
+      "textbookSection": "Section 15",
+      "examples": [
+        {
+          "id": "ex-3-15-1",
+          "type": "example",
+          "title": "Euclid's Proposition I.1",
+          "statement": "Prove Euclid's first proposition: On a given finite straight line, construct an equilateral triangle.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Given line segment AB",
+                "content": "Let $AB$ be the given line segment."
+              },
+              {
+                "title": "Draw circle centered at A",
+                "content": "With center $A$ and radius $AB$, draw circle $c_1$."
+              },
+              {
+                "title": "Draw circle centered at B",
+                "content": "With center $B$ and radius $BA$, draw circle $c_2$."
+              },
+              {
+                "title": "Find intersection",
+                "content": "Let $C$ be one intersection point of $c_1$ and $c_2$.\n\nSince $C$ is on $c_1$: $AC = AB$.\nSince $C$ is on $c_2$: $BC = BA$.\n\nTherefore $AB = AC = BC$."
+              }
+            ],
+            "conclusion": "Triangle $ABC$ is equilateral."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "3-15-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove Euclid's Proposition I.5: The base angles of an isosceles triangle are equal.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up",
+                "content": "Let triangle $ABC$ have $AB = AC$."
+              },
+              {
+                "title": "Draw angle bisector",
+                "content": "Let $AD$ be the bisector of angle $A$, with $D$ on $BC$."
+              },
+              {
+                "title": "Prove congruence",
+                "content": "In triangles $ABD$ and $ACD$:\n- $AB = AC$ (given)\n- $AD = AD$ (common)\n- $\\angle BAD = \\angle CAD$ (angle bisector)\n\nBy SAS, $\\triangle ABD \\cong \\triangle ACD$."
+              },
+              {
+                "title": "Conclude",
+                "content": "Therefore $\\angle ABD = \\angle ACD$, i.e., $\\angle B = \\angle C$."
+              }
+            ],
+            "conclusion": "The base angles of an isosceles triangle are equal."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 18,
+      "sectionTitle": "Archimedes",
+      "textbookSection": "Section 18",
+      "examples": [
+        {
+          "id": "ex-3-18-1",
+          "type": "example",
+          "title": "Archimedes' Approximation of π",
+          "statement": "Explain how Archimedes bounded $\\pi$ between $\\frac{223}{71}$ and $\\frac{22}{7}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Method overview",
+                "content": "Archimedes inscribed and circumscribed regular polygons around a circle of diameter 1."
+              },
+              {
+                "title": "Start with hexagons",
+                "content": "A regular hexagon inscribed in a circle has perimeter $6 \\times \\frac{d}{2} = 3d$.\n\nSo $\\pi > 3$ (circumference > inscribed perimeter)."
+              },
+              {
+                "title": "Double sides repeatedly",
+                "content": "Going from 6 to 12 to 24 to 48 to 96 sides, the inscribed and circumscribed perimeters squeeze $\\pi$."
+              },
+              {
+                "title": "Final bounds (96-gon)",
+                "content": "For a 96-gon: $\\frac{223}{71} < \\pi < \\frac{22}{7}$\n\nDecimal: $3.1408... < \\pi < 3.1428...$"
+              }
+            ],
+            "conclusion": "Archimedes' method of exhaustion gave remarkable accuracy without decimal notation."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "3-18-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Archimedes proved that the area of a circle equals the area of a right triangle with base equal to the circumference and height equal to the radius. Verify this is consistent with $A = \\pi r^2$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up the triangle",
+                "content": "Base $b = 2\\pi r$ (circumference)\nHeight $h = r$ (radius)"
+              },
+              {
+                "title": "Calculate triangle area",
+                "content": "$A_{\\text{triangle}} = \\frac{1}{2} \\times b \\times h = \\frac{1}{2} \\times 2\\pi r \\times r = \\pi r^2$"
+              }
+            ],
+            "conclusion": "The triangle area equals $\\pi r^2$, confirming Archimedes' result."
+          }
+        }
+      ]
+    }
+  ]
+}

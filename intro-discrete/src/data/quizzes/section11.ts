@@ -24,10 +24,14 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The statement $\\exists x \\, P(x)$ means:',
     options: [
-      'There exists an $x$ such that $P(x)$ is true',
       'For all $x$, $P(x)$ is true',
       'There is no $x$ with $P(x)$ true',
-      '$P(x)$ is true for exactly one $x$'
+      'There exists an $x$ such that $P(x)$ is true',
+      '$P(x)$ is true for exactly one $x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\exists$ is the existential quantifier meaning "there exists".',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -38,10 +42,26 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The negation of $\\forall x \\, P(x)$ is:',
     options: [
-      '$\\forall x \\, \\neg P(x)$',
-      '$\\exists x \\, \\neg P(x)$',
-      '$\\neg \\exists x \\, P(x)$',
-      '$\\exists x \\, P(x)$'
+      '$\\forall x \\, \\neg P(x)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'To negate "all", we say "there exists one that is not".',
+  },
+      '$\\neg \\exists x \\, P(x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'To negate "all", we say "there exists one that is not".',
+  },
+      '$\\exists x \\, P(x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'To negate "all", we say "there exists one that is not".',
+  },
+      '$\\exists x \\, \\neg P(x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'To negate "all", we say "there exists one that is not".',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -52,10 +72,26 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The negation of $\\exists x \\, P(x)$ is:',
     options: [
-      '$\\neg \\forall x \\, P(x)$',
-      '$\\exists x \\, \\neg P(x)$',
-      '$\\forall x \\, \\neg P(x)$',
-      '$\\forall x \\, P(x)$'
+      '$\\neg \\forall x \\, P(x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'To negate "there exists", we say "for all, it is not".',
+  },
+      '$\\forall x \\, \\neg P(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'To negate "there exists", we say "for all, it is not".',
+  },
+      '$\\exists x \\, \\neg P(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'To negate "there exists", we say "for all, it is not".',
+  },
+      '$\\forall x \\, P(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'To negate "there exists", we say "for all, it is not".',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -66,10 +102,26 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The statement "All primes greater than 2 are odd" is written as:',
     options: [
-      '$\\exists p \\, (\\text{prime}(p) \\Rightarrow \\text{odd}(p))$',
-      '$\\exists p \\, (p > 2 \\land \\text{prime}(p) \\land \\text{odd}(p))$',
-      '$\\forall p \\, (\\text{prime}(p) \\land \\text{odd}(p))$',
-      '$\\forall p \\, ((p > 2 \\land \\text{prime}(p)) \\Rightarrow \\text{odd}(p))$'
+      '$\\forall p \\, ((p > 2 \\land \\text{prime}(p)) \\Rightarrow \\text{odd}(p))
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Universal statements about conditionally-defined properties use implications.',
+  },
+      '$\\exists p \\, (\\text{prime}(p) \\Rightarrow \\text{odd}(p))
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Universal statements about conditionally-defined properties use implications.',
+  },
+      '$\\exists p \\, (p > 2 \\land \\text{prime}(p) \\land \\text{odd}(p))
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Universal statements about conditionally-defined properties use implications.',
+  },
+      '$\\forall p \\, (\\text{prime}(p) \\land \\text{odd}(p))
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Universal statements about conditionally-defined properties use implications.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',

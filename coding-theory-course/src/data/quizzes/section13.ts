@@ -50,10 +50,14 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The MacWilliams identity relates:',
     options: [
-      'The weight enumerator of $\\mathcal{C}$ to that of $\\mathcal{C}^\\perp$',
       'The generator matrix to the parity check matrix',
+      'The weight enumerator of $\\mathcal{C}$ to that of $\\mathcal{C}^\\perp
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The MacWilliams identity expresses the weight enumerator of the dual code $\\mathcal{C}^\\perp$ in terms of the weight enumerator of $\\mathcal{C}$.',
+  },
       'The minimum distance to the dimension',
-      'Binary codes to ternary codes'
+      'Binary codes to ternary codes',
     ],
     correctIndex: 0,
     difficulty: 'medium',

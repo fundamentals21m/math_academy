@@ -6,10 +6,22 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The nullity of a linear transformation $T$ is defined as:',
     options: [
-      'The dimension of the null space $N(T)$',
-      'The dimension of the range $T(V)$',
-      'The dimension of $V$',
-      'The number of eigenvalues'
+      'The dimension of the range $T(V)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The nullity is $\\dim N(T)$, the dimension of the null space (kernel) of the transformation.',
+  },
+      'The dimension of $V
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The nullity is $\\dim N(T)$, the dimension of the null space (kernel) of the transformation.',
+  },
+      'The dimension of the null space $N(T)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The nullity is $\\dim N(T)$, the dimension of the null space (kernel) of the transformation.',
+  },
+      'The number of eigenvalues',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -21,9 +33,17 @@ export const section11Questions: QuizQuestion[] = [
     question: 'The rank of a linear transformation $T$ is defined as:',
     options: [
       'The dimension of the null space',
-      'The dimension of the range $T(V)$',
-      'The dimension of the domain $V$',
-      'The number of zeros in the matrix'
+      'The dimension of the domain $V
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The rank is $\\dim T(V)$, the dimension of the range (image) of the transformation.',
+  },
+      'The dimension of the range $T(V)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The rank is $\\dim T(V)$, the dimension of the range (image) of the transformation.',
+  },
+      'The number of zeros in the matrix',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,10 +54,26 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Nullity Plus Rank Theorem states that for $T: V \\to W$ with $\\dim V = n$:',
     options: [
-      '$\\text{nullity} \\times \\text{rank} = n$',
-      '$\\text{nullity} - \\text{rank} = n$',
-      '$\\text{nullity} + \\text{rank} = n$',
-      '$\\text{nullity} = \\text{rank}$'
+      '$\\text{nullity} \\times \\text{rank} = n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The fundamental theorem states $\\dim N(T) + \\dim T(V) = \\dim V$. Information lost (nullity) plus information preserved (rank) equals the original dimension.',
+  },
+      '$\\text{nullity} - \\text{rank} = n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The fundamental theorem states $\\dim N(T) + \\dim T(V) = \\dim V$. Information lost (nullity) plus information preserved (rank) equals the original dimension.',
+  },
+      '$\\text{nullity} = \\text{rank}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The fundamental theorem states $\\dim N(T) + \\dim T(V) = \\dim V$. Information lost (nullity) plus information preserved (rank) equals the original dimension.',
+  },
+      '$\\text{nullity} + \\text{rank} = n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The fundamental theorem states $\\dim N(T) + \\dim T(V) = \\dim V$. Information lost (nullity) plus information preserved (rank) equals the original dimension.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -57,10 +93,18 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the zero transformation $T(x) = 0$ on an $n$-dimensional space:',
     options: [
-      'Nullity is 0, rank is $n$',
+      'Nullity is 0, rank is $n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The zero transformation maps everything to 0, so $N(T) = V$ and $T(V) = \\{0\\}$. Thus nullity = $n$ and rank = 0.',
+  },
+      'Nullity is $n$, rank is 0',
       'Nullity and rank are both undefined',
-      'Nullity is $n/2$, rank is $n/2$',
-      'Nullity is $n$, rank is 0'
+      'Nullity is $n/2$, rank is $n/2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The zero transformation maps everything to 0, so $N(T) = V$ and $T(V) = \\{0\\}$. Thus nullity = $n$ and rank = 0.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

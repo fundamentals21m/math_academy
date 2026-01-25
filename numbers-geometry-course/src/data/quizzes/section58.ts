@@ -9,12 +9,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What property defines an isometry?',
     options: [
+      'Preserves distances',
       'Preserves angles',
       'Preserves areas',
       'Fixes the origin',
-      'Preserves distances',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'An isometry is a transformation that preserves distances between points.',
@@ -26,10 +26,10 @@ export const section58Questions: QuizQuestion[] = [
     options: [
       'f(z) = z + θ',
       'f(z) = θz',
-      'f(z) = e^(iθ)z',
       'f(z) = z̄',
+      'f(z) = e^(iθ)z',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Rotation by θ is f(z) = e^(iθ)z, which multiplies the argument by θ while preserving absolute value.',
@@ -53,8 +53,13 @@ export const section58Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'How many fixed points does a non-identity rotation have?',
-    options: ['None', 'Exactly one', 'Exactly two', 'Infinitely many'],
-    correctIndex: 1,
+    options: [
+      'None',
+      'Exactly two',
+      'Exactly one',
+      'Infinitely many',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A rotation has exactly one fixed point—its center of rotation.',
@@ -64,12 +69,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is z · z̄ equal to?',
     options: [
-      '|z|²',
       'z²',
       '|z|',
       '2z',
+      '|z|²',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'z · z̄ = (a + bi)(a - bi) = a² + b² = |z|².',
@@ -95,11 +100,11 @@ export const section58Questions: QuizQuestion[] = [
     question: 'What is the general form of an orientation-preserving isometry?',
     options: [
       'f(z) = z + c',
+      'f(z) = e^(iθ)z + c',
       'f(z) = e^(iθ)z̄ + c',
       'f(z) = |z|',
-      'f(z) = e^(iθ)z + c',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Every orientation-preserving isometry can be written as f(z) = e^(iθ)z + c (rotation + translation).',

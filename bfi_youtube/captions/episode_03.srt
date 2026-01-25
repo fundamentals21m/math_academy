@@ -1,0 +1,192 @@
+1
+00:00:00,000 --> 00:00:09,000
+An important feature that makes it unintuitive for both individuals and institutions to integrate Bitcoin into their financial landscapes is its deflationary nature.
+
+2
+00:00:09,000 --> 00:00:18,000
+Bitcoin is the largest fixed supply asset on earth, programmed by its immutable protocol to cap out at 21 million whole units.
+
+3
+00:00:18,000 --> 00:00:22,000
+This creates a fundamental clash with how institutions think about money.
+
+4
+00:00:22,000 --> 00:00:32,000
+As of September 2025, Bitcoin had a market capitalization of over $2 trillion, making it the fifth largest asset in the world behind a handful of stocks and gold.
+
+5
+00:00:32,000 --> 00:00:38,000
+Of the 21 million Bitcoin that will ever exist, 95% has already been issued.
+
+6
+00:00:38,000 --> 00:00:45,000
+Current mining issuance is 3.1125 Bitcoin per block, roughly every 10 minutes.
+
+7
+00:00:45,000 --> 00:00:52,000
+That's about 450 Bitcoin per day, or approximately 165,000 Bitcoin per year.
+
+8
+00:00:52,000 --> 00:01:00,000
+Bitcoin is already less inflationary than gold, which sees approximately 1.5% annual increase in supply.
+
+9
+00:01:00,000 --> 00:01:07,000
+Bitcoin supply is currently inflating at roughly 0.8% half that rate.
+
+10
+00:01:07,000 --> 00:01:15,000
+This issuance will continue to have every 4 years until 21-40, after which there will be no new Bitcoin issued.
+
+11
+00:01:15,000 --> 00:01:28,000
+When inserted into a monetary landscape of vastly inflationary monies like Fiat currencies, stocks, bonds, and real estate, the supply-capped Bitcoin will continue to absorb the monetary energy of its peers.
+
+12
+00:01:28,000 --> 00:01:33,000
+Why is deflation, or even the lack of inflation, a problem for institutions?
+
+13
+00:01:33,000 --> 00:01:46,000
+Unlike annuity programs that provide for cost of living adjustments by increasing annual payments, participants on the Bitcoin network will generally follow its reward schedule and require lower amounts over time.
+
+14
+00:01:46,000 --> 00:01:52,000
+Every accountant emphasizes present value as the common way to view streams of cash flows.
+
+15
+00:01:52,000 --> 00:02:02,000
+Deflation is a foreign concept in this framework. Consider hidden debatement. US dollars are being devalued in purchasing power by inflationary forces.
+
+16
+00:02:03,000 --> 00:02:11,000
+Even at 2-3% CPI, $1,000 in 10 years has a purchasing power of only about $800 today.
+
+17
+00:02:11,000 --> 00:02:19,000
+Using present value as a benchmark, masks the debatement of expected future payoffs and colors the incentives of debt issuers.
+
+18
+00:02:19,000 --> 00:02:26,000
+Traditional valuation methods hide the significant counterparty risk that comes with debt-based financial instruments.
+
+19
+00:02:26,000 --> 00:02:33,000
+The discussion becomes clear when one compares a future pay-off payable in Bitcoin with a future pay-off payable in US dollars.
+
+20
+00:02:33,000 --> 00:02:41,000
+Consider a $1,000 payment in 10 years. Present value at 10% discount rate is about $375.
+
+21
+00:02:41,000 --> 00:02:45,000
+But that purchasing power is eroded by inflation.
+
+22
+00:02:45,000 --> 00:02:52,000
+The real value is significantly less than $375 and it's subject to further currency debatements.
+
+23
+00:02:53,000 --> 00:02:59,000
+Now consider 0.01 Bitcoin in 10 years. It at least retains purchasing power.
+
+24
+00:02:59,000 --> 00:03:03,000
+Three havings means it roughly doubles three times against the dollar.
+
+25
+00:03:03,000 --> 00:03:08,000
+Expected future value, approximately $8,000 in today's purchasing power.
+
+26
+00:03:08,000 --> 00:03:20,000
+And there's no central issuer to debase it. It is unacceptable to view a Bitcoin pay-off today as worth anything less than its current dollar equivalent on an apples-to-apples basis with a Fiat-denominated bond.
+
+27
+00:03:21,000 --> 00:03:26,000
+These estimates assume no further currency debatements, which is a highly unreasonable assumption.
+
+28
+00:03:26,000 --> 00:03:34,000
+In order for individuals and institutions to utilize Bitcoin intelligently, they will need different optics from those they use today.
+
+29
+00:03:34,000 --> 00:03:45,000
+Bitcoin's primary use case is to protect purchasing power. The contrast in purchasing power will require institutions to focus more on future value as opposed to present value.
+
+30
+00:03:46,000 --> 00:03:51,000
+This pivot will be much more intuitive for individuals to adopt than institutions.
+
+31
+00:03:51,000 --> 00:04:00,000
+Institutions will need to understand the time and risk preferences of individuals and how Bitcoin is already reshaping them.
+
+32
+00:04:00,000 --> 00:04:08,000
+All companies need to understand the impact of Bitcoin on the value systems of individuals to continue offering competitive compensation to their employees.
+
+33
+00:04:09,000 --> 00:04:18,000
+Once these dynamics are understood, we can begin to look at how institutions can use their balance sheets to offer financial services to either retail individuals or other institutions.
+
+34
+00:04:18,000 --> 00:04:24,000
+The key insight is this. Bitcoin flips the traditional financial model upside down.
+
+35
+00:04:24,000 --> 00:04:32,000
+In Fiat Finance, a promise to pay tomorrow is worth less than cash today because inflation erodes value.
+
+36
+00:04:32,000 --> 00:04:40,000
+In Bitcoin Finance, a promise to pay tomorrow may be worth more than Bitcoin today because deflation increases purchasing power.
+
+37
+00:04:40,000 --> 00:04:49,000
+This requires a complete rewiring of institutional thinking and that rewiring must start with understanding why individuals are already making this shift.
+
+38
+00:04:49,000 --> 00:04:52,000
+Let's recap what we learned in this chapter.
+
+39
+00:04:52,000 --> 00:05:00,000
+Bitcoin is the largest fixed supply asset on earth with 21 million units capped by a mutable protocol, 95% already issued.
+
+40
+00:05:00,000 --> 00:05:11,000
+Bitcoin is already less inflationary than gold at approximately 0.8% annual supply increase, having every four years until 0% in 2140.
+
+41
+00:05:11,000 --> 00:05:19,000
+Present Value Masks Debatement. Traditional Financial Valuation hides the erosion of purchasing power in Fiat currencies.
+
+42
+00:05:19,000 --> 00:05:25,000
+Institutions must shift to future value thinking to properly understand Bitcoin's role in protecting purchasing power.
+
+43
+00:05:25,000 --> 00:05:31,000
+Companies must understand Bitcoin's impact on individuals to offer competitive compensation and financial services.
+
+44
+00:05:31,000 --> 00:05:36,000
+In the next episode, we'll explore chapter 3.
+
+45
+00:05:36,000 --> 00:05:38,000
+Bitcoin.
+
+46
+00:05:38,000 --> 00:05:41,000
+Custody. Requires higher understanding.
+
+47
+00:05:41,000 --> 00:05:47,000
+We'll examine the complex trade-offs between security, accessibility, and control.
+
+48
+00:05:47,000 --> 00:05:50,000
+See you in the next one.
+

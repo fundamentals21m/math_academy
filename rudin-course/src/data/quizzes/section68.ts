@@ -33,11 +33,11 @@ export const section68Questions: QuizQuestion[] = [
     question: 'The integral of a continuous function $f$ over a $k$-cell is defined using:',
     options: [
       'The Fundamental Theorem of Calculus directly',
-      'Partitions and Riemann sums, taking limits as the mesh goes to zero',
       'Measure theory and Lebesgue integration',
-      'Contour integration'
+      'Contour integration',
+      'Partitions and Riemann sums, taking limits as the mesh goes to zero',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The Riemann integral over a $k$-cell uses partitions of the cell into sub-cells, forming Riemann sums, and taking limits as the partition becomes finer.',
   },
@@ -48,8 +48,12 @@ export const section68Questions: QuizQuestion[] = [
     options: [
       'The order of integration cannot be changed',
       'The double integral equals zero',
-      '$\\int\\int f(x,y) \\, dA = \\int_a^b \\left(\\int_c^d f(x,y) \\, dy\\right) dx = \\int_c^d \\left(\\int_a^b f(x,y) \\, dx\\right) dy$',
-      'The integral depends on the path of integration'
+      'The integral depends on the path of integration',
+      '$\\int\\int f(x,y) \\, dA = \\int_a^b \\left(\\int_c^d f(x,y) \\, dy\\right) dx = \\int_c^d \\left(\\int_a^b f(x,y) \\, dx\\right) dy
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Fubini\'s theorem allows computing double integrals as iterated single integrals, and the order of integration can be exchanged for continuous functions.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

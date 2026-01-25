@@ -1,0 +1,147 @@
+{
+  "partId": 10,
+  "partTitle": "Applications",
+  "textbookChapter": "Chapter 10: Applications",
+  "sections": [
+    {
+      "sectionId": 38,
+      "sectionTitle": "Graphs and Networks",
+      "textbookSection": "Section 10.1",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "10-1-1",
+          "type": "exercise",
+          "number": "10.1.1",
+          "statement": "Write the incidence matrix for a triangle graph with 3 nodes and 3 edges.",
+          "solution": "Label edges: 1 from node 1 to 2, 2 from node 2 to 3, 3 from node 3 to 1. $A = \\begin{pmatrix} -1 & 1 & 0 \\\\ 0 & -1 & 1 \\\\ 1 & 0 & -1 \\end{pmatrix}$."
+        },
+        {
+          "id": "10-1-2",
+          "type": "exercise",
+          "number": "10.1.2",
+          "statement": "For a connected graph with $n$ nodes and $m$ edges, what is the dimension of the nullspace of the incidence matrix?",
+          "solution": "For a connected graph, dim$(N(A)) = 1$ (the constant vector $(1, 1, ..., 1)$ is in the nullspace: all potentials equal means no current flows)."
+        }
+      ]
+    },
+    {
+      "sectionId": 39,
+      "sectionTitle": "Matrices in Engineering",
+      "textbookSection": "Section 10.2",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "10-2-1",
+          "type": "exercise",
+          "number": "10.2.1",
+          "statement": "In a spring system, $K = A^TCA$ where $C$ is diagonal with spring constants. Why is $K$ always symmetric?",
+          "solution": "$K^T = (A^TCA)^T = A^TC^T(A^T)^T = A^TCA = K$ since $C$ is diagonal (and thus symmetric). The stiffness matrix is always symmetric."
+        }
+      ]
+    },
+    {
+      "sectionId": 40,
+      "sectionTitle": "Markov Matrices, Population, and Economics",
+      "textbookSection": "Section 10.3",
+      "examples": [
+        {
+          "id": "ex-10-3-1",
+          "type": "example",
+          "title": "Finding Steady State",
+          "statement": "Find the steady state for $A = \\begin{pmatrix} 0.8 & 0.3 \\\\ 0.2 & 0.7 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {"title": "Solve $(A - I)\\mathbf{u} = 0$", "content": "$\\begin{pmatrix} -0.2 & 0.3 \\\\ 0.2 & -0.3 \\end{pmatrix}\\mathbf{u} = 0$ gives $-0.2u_1 + 0.3u_2 = 0$, so $u_1 = 1.5u_2$."},
+              {"title": "Normalize", "content": "Probabilities sum to 1: $u_1 + u_2 = 1$. So $1.5u_2 + u_2 = 1$ gives $u_2 = 0.4$, $u_1 = 0.6$."}
+            ],
+            "conclusion": "Steady state: $\\mathbf{u} = (0.6, 0.4)$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "10-3-1",
+          "type": "exercise",
+          "number": "10.3.1",
+          "statement": "Verify that $A = \\begin{pmatrix} 0.7 & 0.4 \\\\ 0.3 & 0.6 \\end{pmatrix}$ is a Markov matrix and find its steady state.",
+          "solution": "Columns sum to 1: $0.7 + 0.3 = 1$, $0.4 + 0.6 = 1$. Yes, Markov. Steady state: $(A-I)\\mathbf{u} = 0$. $-0.3u_1 + 0.4u_2 = 0$ gives $u_1 = (4/3)u_2$. Normalize: $u_1 + u_2 = 1$ gives $u_2 = 3/7$, $u_1 = 4/7$. Steady state: $(4/7, 3/7)$."
+        },
+        {
+          "id": "10-3-2",
+          "type": "exercise",
+          "number": "10.3.2",
+          "statement": "Show that every Markov matrix has eigenvalue $\\lambda = 1$.",
+          "solution": "$(A - I)\\mathbf{1} \\neq \\mathbf{0}$ in general, but $A^T\\mathbf{1} = \\mathbf{1}$ since columns sum to 1. So 1 is an eigenvalue of $A^T$, hence of $A$ (same eigenvalues)."
+        }
+      ]
+    },
+    {
+      "sectionId": 41,
+      "sectionTitle": "Linear Programming",
+      "textbookSection": "Section 10.4",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "10-4-1",
+          "type": "exercise",
+          "number": "10.4.1",
+          "statement": "In linear programming, why do optimal solutions occur at corners of the feasible region?",
+          "solution": "The objective function $c^T\\mathbf{x}$ is linear, so level sets are hyperplanes. The feasible region is a polyhedron. Moving in any direction either increases or decreases the objective. The maximum/minimum occurs where we can't move further in the optimal direction while staying feasible - a corner."
+        }
+      ]
+    },
+    {
+      "sectionId": 42,
+      "sectionTitle": "Fourier Series: Linear Algebra for Functions",
+      "textbookSection": "Section 10.5",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "10-5-1",
+          "type": "exercise",
+          "number": "10.5.1",
+          "statement": "Verify that $\\sin(x)$ and $\\sin(2x)$ are orthogonal on $[0, 2\\pi]$ using $\\int_0^{2\\pi} \\sin(x)\\sin(2x)dx$.",
+          "solution": "$\\int_0^{2\\pi} \\sin x \\sin 2x\\, dx = \\int_0^{2\\pi} \\frac{1}{2}[\\cos(x-2x) - \\cos(x+2x)]dx = \\frac{1}{2}\\int_0^{2\\pi}[\\cos(-x) - \\cos(3x)]dx = \\frac{1}{2}[\\sin x - \\frac{\\sin 3x}{3}]_0^{2\\pi} = 0$."
+        }
+      ]
+    },
+    {
+      "sectionId": 43,
+      "sectionTitle": "Computer Graphics",
+      "textbookSection": "Section 10.6",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "10-6-1",
+          "type": "exercise",
+          "number": "10.6.1",
+          "statement": "Find the matrix for rotation by $90°$ counterclockwise.",
+          "solution": "$R = \\begin{pmatrix} \\cos 90° & -\\sin 90° \\\\ \\sin 90° & \\cos 90° \\end{pmatrix} = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$."
+        },
+        {
+          "id": "10-6-2",
+          "type": "exercise",
+          "number": "10.6.2",
+          "statement": "Find the matrix that reflects across the $x$-axis, then rotates by $90°$.",
+          "solution": "Reflection: $\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$. Rotation: $\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$. Combined: $\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix} = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$."
+        }
+      ]
+    },
+    {
+      "sectionId": 44,
+      "sectionTitle": "Linear Algebra for Cryptography",
+      "textbookSection": "Section 10.7",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "10-7-1",
+          "type": "exercise",
+          "number": "10.7.1",
+          "statement": "In Hill cipher, the message vector $\\mathbf{m}$ is encrypted as $\\mathbf{c} = A\\mathbf{m} \\mod 26$. If $A = \\begin{pmatrix} 3 & 5 \\\\ 2 & 7 \\end{pmatrix}$, encrypt $\\mathbf{m} = (8, 5)$ (letters I, F).",
+          "solution": "$\\mathbf{c} = \\begin{pmatrix} 3 & 5 \\\\ 2 & 7 \\end{pmatrix}\\begin{pmatrix} 8 \\\\ 5 \\end{pmatrix} = \\begin{pmatrix} 49 \\\\ 51 \\end{pmatrix} \\mod 26 = \\begin{pmatrix} 23 \\\\ 25 \\end{pmatrix}$ = (X, Z)."
+        }
+      ]
+    }
+  ]
+}

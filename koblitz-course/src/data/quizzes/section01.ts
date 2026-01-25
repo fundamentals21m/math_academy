@@ -5,7 +5,28 @@ export const section01Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'What is $\\gcd(48, 18)$?',
-    options: ['$2$', '$3$', '$6$', '$9$'],
+    options: [
+      '$2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Using Euclidean algorithm: $48 = 2 \\cdot 18 + 12$, $18 = 1 \\cdot 12 + 6$, $12 = 2 \\cdot 6 + 0$. So $\\gcd(48, 18) = 6$.',
+  },
+      '$6
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Using Euclidean algorithm: $48 = 2 \\cdot 18 + 12$, $18 = 1 \\cdot 12 + 6$, $12 = 2 \\cdot 6 + 0$. So $\\gcd(48, 18) = 6$.',
+  },
+      '$3
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Using Euclidean algorithm: $48 = 2 \\cdot 18 + 12$, $18 = 1 \\cdot 12 + 6$, $12 = 2 \\cdot 6 + 0$. So $\\gcd(48, 18) = 6$.',
+  },
+      '$9
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Using Euclidean algorithm: $48 = 2 \\cdot 18 + 12$, $18 = 1 \\cdot 12 + 6$, $12 = 2 \\cdot 6 + 0$. So $\\gcd(48, 18) = 6$.',
+  },
+    ],
     correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Using Euclidean algorithm: $48 = 2 \\cdot 18 + 12$, $18 = 1 \\cdot 12 + 6$, $12 = 2 \\cdot 6 + 0$. So $\\gcd(48, 18) = 6$.',
@@ -16,11 +37,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'Which statement about the Euclidean algorithm is TRUE?',
     options: [
       'It always requires $n$ steps for $n$-digit numbers',
+      'The number of steps is at most $5$ times the number of digits',
       'It only works for prime numbers',
       'It requires factoring both numbers first',
-      'The number of steps is at most $5$ times the number of digits',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Lamé proved the number of steps is at most $5$ times the number of digits of the smaller number.',
   },

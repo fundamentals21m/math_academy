@@ -1,0 +1,324 @@
+1
+00:00:00,000 --> 00:00:03,600
+The most common solutions to basic human problems take time.
+
+2
+00:00:03,600 --> 00:00:07,280
+Many entail building new skills that require habits and structure,
+
+3
+00:00:07,280 --> 00:00:09,519
+and it's a long way towards mastery.
+
+4
+00:00:09,519 --> 00:00:15,039
+Understanding Bitcoin is no different, except it's far more demanding than most realize.
+
+5
+00:00:15,039 --> 00:00:18,879
+This chapter explores why the time required to master Bitcoin
+
+6
+00:00:18,879 --> 00:00:22,239
+creates a fundamental mismatch with institutional timelines.
+
+7
+00:00:22,239 --> 00:00:24,559
+Imagine wanting to learn to play the guitar.
+
+8
+00:00:24,559 --> 00:00:28,320
+It would take an ordinary person with a 40-hour-a-week job several years
+
+9
+00:00:28,320 --> 00:00:30,800
+just to be able to play something competent for a recital.
+
+10
+00:00:31,359 --> 00:00:34,640
+The first year of guitar involves learning to read music,
+
+11
+00:00:34,640 --> 00:00:38,960
+learning basic fingering techniques, learning how to hold a pick and strike the strings,
+
+12
+00:00:38,960 --> 00:00:43,759
+learning basic open chords, e, a, g, c, d.
+
+13
+00:00:44,719 --> 00:00:49,039
+Perhaps after a year, you're strumming these chords without muffled strings.
+
+14
+00:00:49,039 --> 00:00:53,200
+With significant time investment, you might successfully play a song.
+
+15
+00:00:54,000 --> 00:00:58,640
+A person holding down a demanding job would have to carve out two hours a day
+
+16
+00:00:58,640 --> 00:01:02,000
+just to do something minimally competent on the guitar at the end of the year.
+
+17
+00:01:02,960 --> 00:01:04,959
+This will have significant consequences.
+
+18
+00:01:05,680 --> 00:01:07,680
+You can't socialize with friends.
+
+19
+00:01:08,239 --> 00:01:10,400
+You can't spend time with spouse and children.
+
+20
+00:01:11,040 --> 00:01:12,959
+You're sacrificing career prospects.
+
+21
+00:01:13,599 --> 00:01:14,480
+It is what it is.
+
+22
+00:01:15,280 --> 00:01:18,079
+You're not going to play the guitar without putting in the time,
+
+23
+00:01:18,079 --> 00:01:19,519
+and time is very costly.
+
+24
+00:01:20,159 --> 00:01:24,879
+It can't be faked, and it's a particularly gratifying win when it is realized for that reason.
+
+25
+00:01:24,879 --> 00:01:28,079
+Since the launch of the Bitcoin Core Protocol in 2009,
+
+26
+00:01:28,640 --> 00:01:32,640
+more and more people have decided that it is important to understand this thing.
+
+27
+00:01:33,519 --> 00:01:38,319
+It turns out that understanding Bitcoin is like learning to play multiple instruments at the same time.
+
+28
+00:01:38,799 --> 00:01:44,079
+Guitar, piano, drums, horns, and you've got to know how they all come together.
+
+29
+00:01:44,640 --> 00:01:48,079
+You also need to learn music theory, how to conduct an orchestra,
+
+30
+00:01:48,079 --> 00:01:50,799
+and understand why music exists in the first place.
+
+31
+00:01:51,519 --> 00:01:55,359
+Learning Bitcoin requires having minimal competence in many disparate fields.
+
+32
+00:01:56,000 --> 00:02:00,159
+Austrian economics, understanding sound money and time preference,
+
+33
+00:02:00,799 --> 00:02:04,079
+computer science, how the protocol and network function,
+
+34
+00:02:04,719 --> 00:02:08,319
+history, monetary history, and why Bitcoin matters.
+
+35
+00:02:09,120 --> 00:02:11,520
+Mathematics, the cryptographic foundations,
+
+36
+00:02:12,479 --> 00:02:16,000
+game theory, network incentives, and Nash equilibrium.
+
+37
+00:02:16,719 --> 00:02:20,159
+Cryptography, public and private key infrastructure.
+
+38
+00:02:20,960 --> 00:02:24,159
+Deciding to master Bitcoin is accepting a lifetime of study,
+
+39
+00:02:24,719 --> 00:02:27,599
+as well as being likely faded to never completely understand it.
+
+40
+00:02:28,319 --> 00:02:31,919
+The type of person who takes on such a challenge is in quite a predicament.
+
+41
+00:02:31,919 --> 00:02:35,039
+It's one thing to tell your wife you'll be a badass rock star in a year or two.
+
+42
+00:02:35,680 --> 00:02:39,520
+But it's quite another to tell her that you're going to be a scholar that nobody appreciates,
+
+43
+00:02:39,520 --> 00:02:42,240
+and all of your wealth is going into magic internet money.
+
+44
+00:02:43,039 --> 00:02:47,360
+Would you expect anything less from somebody who would devote a large portion of their wealth
+
+45
+00:02:47,360 --> 00:02:48,240
+to this discovery?
+
+46
+00:02:48,879 --> 00:02:51,520
+Would you expect anything less than the pursuit of mastery?
+
+47
+00:02:52,400 --> 00:02:56,960
+Bitcoin will experience the types of ups and downs that all but a few seasoned investors
+
+48
+00:02:56,960 --> 00:02:57,759
+have the stomach for.
+
+49
+00:02:58,560 --> 00:03:01,120
+The commitment is not for the faint of heart.
+
+50
+00:03:01,120 --> 00:03:03,439
+Companies are not used to thinking of time in this way.
+
+51
+00:03:04,080 --> 00:03:08,400
+Yes, they have projects and project managers and governance structures to try to achieve
+
+52
+00:03:08,400 --> 00:03:13,520
+long-term and large ambitions. But these ambitions are ones that require and receive permission.
+
+53
+00:03:14,159 --> 00:03:18,719
+A company wishing to carry out a five-year project will likely first get permission from their
+
+54
+00:03:18,719 --> 00:03:23,599
+board. This entails buying opinions from management consultants like McKinsey,
+
+55
+00:03:23,599 --> 00:03:28,639
+bankers like JP Morgan and Goldman Sachs, and auditors like EY and PWC.
+
+56
+00:03:29,439 --> 00:03:33,360
+It requires severance packages to executives who fought the effort and lost,
+
+57
+00:03:33,360 --> 00:03:36,400
+and promoting new executives around the CEO who championed it.
+
+58
+00:03:37,120 --> 00:03:42,080
+It usually requires an existential problem to get all of the battleships aligned around a single
+
+59
+00:03:42,080 --> 00:03:46,800
+long-term objective. Here's the fundamental problem.
+
+60
+00:03:47,759 --> 00:03:52,960
+Outside of an existential desire, companies like Easy and Quick Solutions.
+
+61
+00:03:53,919 --> 00:04:00,960
+They think in terms of quarters, not years, and not multiple years, the time frame from a person
+
+62
+00:04:00,960 --> 00:04:05,759
+seeing Bitcoin as a solution to a problem, and gaining the understanding of Bitcoin to have the
+
+63
+00:04:05,759 --> 00:04:12,240
+skill and conviction to successfully implement such a solution is multi-year and closer to a human
+
+64
+00:04:12,240 --> 00:04:17,600
+lifetime than a quarter. Companies which embark on this path will need to develop new optics to
+
+65
+00:04:17,600 --> 00:04:22,079
+determine the success of these efforts. Traditional quarterly metrics won't apply.
+
+66
+00:04:22,800 --> 00:04:27,120
+Most companies consist of employees who haven't spent more than an hour developing the competent
+
+67
+00:04:27,120 --> 00:04:33,040
+skills to feel any confidence implementing a Bitcoin strategy. Training current staff will
+
+68
+00:04:33,040 --> 00:04:39,439
+take years if they can be encouraged to learn. Companies can hire Bitcoin experts, but we're in the
+
+69
+00:04:39,439 --> 00:04:46,079
+early days. Arguably, there aren't more than 5,000 people on Earth that have the mastery required
+
+70
+00:04:46,079 --> 00:04:52,079
+to successfully implement institutional Bitcoin strategies. There are no easy answers. Companies
+
+71
+00:04:52,079 --> 00:04:58,240
+need to accept that they won't contribute much to Bitcoin for quite a while. But starting today,
+
+72
+00:04:58,240 --> 00:05:01,680
+we'll get them there faster. Let's recap what we learned in this chapter.
+
+73
+00:05:02,240 --> 00:05:07,120
+Mastery takes time. Just as learning guitar requires years of dedicated practice,
+
+74
+00:05:07,120 --> 00:05:12,560
+understanding Bitcoin requires sustained commitment. Bitcoin requires multidisciplinary knowledge,
+
+75
+00:05:12,560 --> 00:05:18,639
+economics, computer science, history, mathematics, game theory, and cryptography.
+
+76
+00:05:19,199 --> 00:05:25,360
+Companies think in quarters, not years, but Bitcoin mastery is closer to a human lifetime than a quarter.
+
+77
+00:05:25,920 --> 00:05:31,759
+Bitcoin expertise is scarce. Arguably fewer than 5,000 people on Earth have the required mastery
+
+78
+00:05:31,759 --> 00:05:37,759
+for institutional implementation. The only advice? Start today. There are no easy answers,
+
+79
+00:05:37,759 --> 00:05:43,199
+but beginning the journey now will get institutions there faster than waiting. In the next episode,
+
+80
+00:05:43,199 --> 00:05:52,879
+we'll explore. Chapter 5 Bitcoin is a bearer asset. We'll examine why this extraordinary property
+
+81
+00:05:52,879 --> 00:06:00,480
+makes Bitcoin fundamentally different from everything else. See you in the next one.
+

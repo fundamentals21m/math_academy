@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .flip-container {
+      display: flex;
+      gap: 50px;
+      margin-top: 50px;
+      justify-content: center;
+    }
+    .flip-card {
+      width: 450px;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .flip-card.fiat {
+      background: rgba(139, 148, 158, 0.1);
+      border: 2px solid rgba(139, 148, 158, 0.3);
+    }
+    .flip-card.btc {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+    }
+    .flip-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    .fiat .flip-title { color: #8B949E; }
+    .btc .flip-title { color: #F7931A; }
+    .flip-statement {
+      color: #E6EDF3;
+      font-size: 22px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .flip-reason {
+      color: #8B949E;
+      font-size: 16px;
+      font-style: italic;
+    }
+    .key-insight {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+      padding: 30px 50px;
+      margin: 50px auto;
+      max-width: 800px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .key-insight-text {
+      color: #E6EDF3;
+      font-size: 24px;
+    }
+    .key-insight-text em {
+      color: #22C55E;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Implications</div>
+    <div class="section-title">Bitcoin Flips Finance Upside Down</div>
+    <div class="flip-container">
+      <div class="flip-card fiat">
+        <div class="flip-title">Fiat Finance</div>
+        <div class="flip-statement">A promise to pay tomorrow is worth <strong>less</strong> than cash today</div>
+        <div class="flip-reason">Because inflation erodes value</div>
+      </div>
+      <div class="flip-card btc">
+        <div class="flip-title">Bitcoin Finance</div>
+        <div class="flip-statement">A promise to pay tomorrow may be worth <strong>more</strong> than bitcoin today</div>
+        <div class="flip-reason">Because deflation increases purchasing power</div>
+      </div>
+    </div>
+    <div class="key-insight">
+      <div class="key-insight-text">This requires a <em>complete rewiring</em> of institutional thinking.</div>
+    </div>
+  </div>
+</body>
+</html>

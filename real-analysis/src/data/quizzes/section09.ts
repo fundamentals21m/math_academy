@@ -7,11 +7,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The $\\varepsilon$-$\\delta$ definition of $\\lim_{x \\to a} f(x) = L$ states:',
       options: [
-        'For all $\\delta > 0$, there exists $\\varepsilon > 0$ such that $|f(x) - L| < \\varepsilon$ when $0 < |x - a| < \\delta$',
-        'For all $\\varepsilon > 0$, there exists $\\delta > 0$ such that $|f(x) - L| < \\varepsilon$ when $0 < |x - a| < \\delta$',
-        '$f(a) = L$',
-        'For all $x$ near $a$, $f(x) = L$'
-      ],
+      'For all $\\delta > 0$, there exists $\\varepsilon > 0$ such that $|f(x) - L| < \\varepsilon$ when $0 < |x - a| < \\delta
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The $\\varepsilon$-$\\delta$ definition: for every tolerance $\\varepsilon$, we can find $\\delta$ such that $f(x)$ is within $\\varepsilon$ of $L$ whenever $x$ is within $\\delta$ of $a$.'
+    },
+      '$f(a) = L
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The $\\varepsilon$-$\\delta$ definition: for every tolerance $\\varepsilon$, we can find $\\delta$ such that $f(x)$ is within $\\varepsilon$ of $L$ whenever $x$ is within $\\delta$ of $a$.'
+    },
+      'For all $\\varepsilon > 0$, there exists $\\delta > 0$ such that $|f(x) - L| < \\varepsilon$ when $0 < |x - a| < \\delta
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The $\\varepsilon$-$\\delta$ definition: for every tolerance $\\varepsilon$, we can find $\\delta$ such that $f(x)$ is within $\\varepsilon$ of $L$ whenever $x$ is within $\\delta$ of $a$.'
+    },
+      'For all $x$ near $a$, $f(x) = L
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The $\\varepsilon$-$\\delta$ definition: for every tolerance $\\varepsilon$, we can find $\\delta$ such that $f(x)$ is within $\\varepsilon$ of $L$ whenever $x$ is within $\\delta$ of $a$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The $\\varepsilon$-$\\delta$ definition: for every tolerance $\\varepsilon$, we can find $\\delta$ such that $f(x)$ is within $\\varepsilon$ of $L$ whenever $x$ is within $\\delta$ of $a$.'
@@ -21,11 +37,19 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A function $f$ is continuous at $a$ if:',
       options: [
-        '$f(a)$ exists',
-        '$\\lim_{x \\to a} f(x)$ exists',
-        '$\\lim_{x \\to a} f(x) = f(a)$',
-        '$f$ is differentiable at $a$'
-      ],
+      '$\\lim_{x \\to a} f(x) = f(a)
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Continuity requires three things: $f(a)$ exists, the limit exists, and they are equal.'
+    },
+      '$f(a)$ exists',
+      '$\\lim_{x \\to a} f(x)$ exists',
+      '$f$ is differentiable at $a
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Continuity requires three things: $f(a)$ exists, the limit exists, and they are equal.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Continuity requires three things: $f(a)$ exists, the limit exists, and they are equal.'
@@ -35,11 +59,15 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = x^2$ is continuous at $x = 2$ because:',
       options: [
-        '$f(2) = 4$ and $\\lim_{x \\to 2} x^2 = 4$',
-        '$f$ is a polynomial',
-        '$f$ is bounded',
-        'Both (A) and (B)'
-      ],
+      '$f(2) = 4$ and $\\lim_{x \\to 2} x^2 = 4
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Polynomials are continuous everywhere, and we can verify $\\lim_{x \\to 2} x^2 = 4 = f(2)$.'
+    },
+      '$f$ is a polynomial',
+      'Both (A) and (B)',
+      '$f$ is bounded',
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Polynomials are continuous everywhere, and we can verify $\\lim_{x \\to 2} x^2 = 4 = f(2)$.'
@@ -48,7 +76,28 @@ export const section09Quiz = {
       id: 's09-e04',
       type: 'multiple-choice',
       question: 'If $\\lim_{x \\to a} f(x) = L$ and $\\lim_{x \\to a} g(x) = M$, then $\\lim_{x \\to a} [f(x) + g(x)] = $',
-      options: ['$L \\cdot M$', '$L + M$', '$L - M$', '$L/M$'],
+      options: [
+      '$L \\cdot M
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The limit of a sum is the sum of the limits.'
+    },
+      '$L - M
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The limit of a sum is the sum of the limits.'
+    },
+      '$L + M
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The limit of a sum is the sum of the limits.'
+    },
+      '$L/M
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The limit of a sum is the sum of the limits.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The limit of a sum is the sum of the limits.'
@@ -58,11 +107,19 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The one-sided limit $\\lim_{x \\to a^+} f(x)$ means:',
       options: [
-        '$x$ approaches $a$ from the right (values greater than $a$)',
-        '$x$ approaches $a$ from the left',
-        '$f(x)$ approaches $a$',
-        '$x$ equals $a$'
-      ],
+      '$x$ approaches $a$ from the left',
+      '$x$ approaches $a$ from the right (values greater than $a$)',
+      '$f(x)$ approaches $a
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The notation $a^+$ indicates approaching from the right (from values greater than $a$).'
+    },
+      '$x$ equals $a
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'The notation $a^+$ indicates approaching from the right (from values greater than $a$).'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The notation $a^+$ indicates approaching from the right (from values greater than $a$).'
@@ -72,11 +129,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: '$\\lim_{x \\to a} f(x) = L$ exists if and only if:',
       options: [
-        '$\\lim_{x \\to a^+} f(x) = L$',
-        'Both one-sided limits exist and are equal to $L$',
-        '$\\lim_{x \\to a^-} f(x) = L$',
-        '$f(a) = L$'
-      ],
+      'Both one-sided limits exist and are equal to $L
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'The two-sided limit exists iff both one-sided limits exist and are equal.'
+    },
+      '$\\lim_{x \\to a^+} f(x) = L
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The two-sided limit exists iff both one-sided limits exist and are equal.'
+    },
+      '$\\lim_{x \\to a^-} f(x) = L
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The two-sided limit exists iff both one-sided limits exist and are equal.'
+    },
+      '$f(a) = L
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The two-sided limit exists iff both one-sided limits exist and are equal.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The two-sided limit exists iff both one-sided limits exist and are equal.'
@@ -86,12 +159,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = |x|$ at $x = 0$ is:',
       options: [
-        'Discontinuous',
-        'Differentiable',
-        'Continuous but not differentiable',
-        'Not defined'
-      ],
-      correctIndex: 2,
+      'Discontinuous',
+      'Continuous but not differentiable',
+      'Differentiable',
+      'Not defined',
+    ],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: '$|x|$ is continuous at $0$ (limit equals $f(0) = 0$) but has a corner, making it not differentiable there.'
     },
@@ -100,11 +173,19 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A removable discontinuity at $x = a$ occurs when:',
       options: [
-        '$\\lim_{x \\to a} f(x)$ does not exist',
-        '$f(a) = \\infty$',
-        '$\\lim_{x \\to a^+} f(x) \\neq \\lim_{x \\to a^-} f(x)$',
-        '$\\lim_{x \\to a} f(x)$ exists but $\\neq f(a)$ (or $f(a)$ undefined)'
-      ],
+      '$\\lim_{x \\to a} f(x)$ does not exist',
+      '$f(a) = \\infty
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'Removable discontinuity: the limit exists but doesn\'t equal the function value (or function is undefined there).'
+    },
+      '$\\lim_{x \\to a} f(x)$ exists but $\\neq f(a)$ (or $f(a)$ undefined)',
+      '$\\lim_{x \\to a^+} f(x) \\neq \\lim_{x \\to a^-} f(x)
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'Removable discontinuity: the limit exists but doesn\'t equal the function value (or function is undefined there).'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Removable discontinuity: the limit exists but doesn\'t equal the function value (or function is undefined there).'
@@ -136,11 +217,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ and $g$ are continuous at $a$, then $f + g$ is:',
       options: [
-        'Not necessarily continuous at $a$',
-        'Continuous at $a$',
-        'Continuous only if $f(a) = g(a)$',
-        'Differentiable at $a$'
-      ],
+      'Continuous at $a
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'The sum of continuous functions is continuous.'
+    },
+      'Not necessarily continuous at $a
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The sum of continuous functions is continuous.'
+    },
+      'Continuous only if $f(a) = g(a)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The sum of continuous functions is continuous.'
+    },
+      'Differentiable at $a
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The sum of continuous functions is continuous.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The sum of continuous functions is continuous.'
@@ -150,11 +247,15 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A jump discontinuity occurs when:',
       options: [
-        'The limit does not exist',
-        'The function is undefined',
-        'Both one-sided limits exist but are different',
-        '$f(a) = \\infty$'
-      ],
+      'Both one-sided limits exist but are different',
+      'The limit does not exist',
+      'The function is undefined',
+      '$f(a) = \\infty
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Jump discontinuity: $\\lim_{x \\to a^-} f(x) \\neq \\lim_{x \\to a^+} f(x)$, both finite.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Jump discontinuity: $\\lim_{x \\to a^-} f(x) \\neq \\lim_{x \\to a^+} f(x)$, both finite.'
@@ -173,11 +274,23 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The squeeze theorem for limits states that if $g(x) \\leq f(x) \\leq h(x)$ near $a$ and $\\lim g(x) = \\lim h(x) = L$:',
       options: [
-        '$\\lim f(x) = 0$',
-        '$f(a) = L$',
-        '$f$ is continuous',
-        '$\\lim f(x) = L$'
-      ],
+      '$\\lim f(x) = 0
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'If $f$ is squeezed between two functions with the same limit, $f$ has that limit too.'
+    },
+      '$f(a) = L
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'If $f$ is squeezed between two functions with the same limit, $f$ has that limit too.'
+    },
+      '$\\lim f(x) = L
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'If $f$ is squeezed between two functions with the same limit, $f$ has that limit too.'
+    },
+      '$f$ is continuous',
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'If $f$ is squeezed between two functions with the same limit, $f$ has that limit too.'
@@ -208,7 +321,28 @@ export const section09Quiz = {
       id: 's09-e17',
       type: 'multiple-choice',
       question: '$\\lim_{x \\to 0} \\frac{\\sin x}{x} = $',
-      options: ['$0$', '$1$', '$\\pi$', '$\\infty$'],
+      options: [
+      '$0
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.'
+    },
+      '$\\pi
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.'
+    },
+      '$\\infty
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.'
+    },
+      '$1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.'
@@ -218,11 +352,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous at $a$ and $g$ is continuous at $f(a)$, then $g \\circ f$ is:',
       options: [
-        'Not necessarily continuous at $a$',
-        'Continuous at $a$',
-        'Continuous at $f(a)$',
-        'Differentiable at $a$'
-      ],
+      'Continuous at $a
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Composition of continuous functions is continuous.'
+    },
+      'Not necessarily continuous at $a
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Composition of continuous functions is continuous.'
+    },
+      'Continuous at $f(a)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Composition of continuous functions is continuous.'
+    },
+      'Differentiable at $a
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Composition of continuous functions is continuous.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Composition of continuous functions is continuous.'
@@ -252,11 +402,23 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Uniform continuity of $f$ on $S$ means:',
       options: [
-        'For all $a \\in S$ and $\\varepsilon > 0$, there exists $\\delta > 0$ (depending on $a$ and $\\varepsilon$)',
-        '$f$ is bounded on $S$',
-        'For all $\\varepsilon > 0$, there exists $\\delta > 0$ (independent of $x$) such that $|f(x) - f(y)| < \\varepsilon$ when $|x - y| < \\delta$',
-        '$f$ is differentiable on $S$'
-      ],
+      'For all $\\varepsilon > 0$, there exists $\\delta > 0$ (independent of $x$) such that $|f(x) - f(y)| < \\varepsilon$ when $|x - y| < \\delta
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Uniform continuity: the same $\\delta$ works for all points, unlike pointwise continuity.'
+    },
+      'For all $a \\in S$ and $\\varepsilon > 0$, there exists $\\delta > 0$ (depending on $a$ and $\\varepsilon$)',
+      '$f$ is bounded on $S
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Uniform continuity: the same $\\delta$ works for all points, unlike pointwise continuity.'
+    },
+      '$f$ is differentiable on $S
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Uniform continuity: the same $\\delta$ works for all points, unlike pointwise continuity.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Uniform continuity: the same $\\delta$ works for all points, unlike pointwise continuity.'
@@ -280,12 +442,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'On a closed bounded interval $[a, b]$, every continuous function is:',
       options: [
-        'Uniformly continuous',
-        'Differentiable',
-        'Constant',
-        'Unbounded'
-      ],
-      correctIndex: 0,
+      'Differentiable',
+      'Uniformly continuous',
+      'Constant',
+      'Unbounded',
+    ],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Heine-Cantor theorem: continuous on compact $\\Rightarrow$ uniformly continuous.'
     },
@@ -293,7 +455,28 @@ export const section09Quiz = {
       id: 's09-m04',
       type: 'multiple-choice',
       question: '$\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} = $',
-      options: ['$0$', '$1/2$', '$1$', '$\\infty$'],
+      options: [
+      '$0
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Using Taylor or L\'Hôpital: $1 - \\cos x \\approx x^2/2$, so the limit is $1/2$.'
+    },
+      '$1
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Using Taylor or L\'Hôpital: $1 - \\cos x \\approx x^2/2$, so the limit is $1/2$.'
+    },
+      '$\\infty
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Using Taylor or L\'Hôpital: $1 - \\cos x \\approx x^2/2$, so the limit is $1/2$.'
+    },
+      '$1/2
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Using Taylor or L\'Hôpital: $1 - \\cos x \\approx x^2/2$, so the limit is $1/2$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Using Taylor or L\'Hôpital: $1 - \\cos x \\approx x^2/2$, so the limit is $1/2$.'
@@ -303,11 +486,23 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = \\sin(1/x)$ as $x \\to 0$:',
       options: [
-        'Has limit $0$',
-        'Does not have a limit (oscillates)',
-        'Has limit $1$',
-        'Has limit $\\infty$'
-      ],
+      'Does not have a limit (oscillates)',
+      'Has limit $0
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'As $x \\to 0$, $1/x \\to \\pm\\infty$, and $\\sin$ oscillates between $-1$ and $1$ without settling.'
+    },
+      'Has limit $1
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'As $x \\to 0$, $1/x \\to \\pm\\infty$, and $\\sin$ oscillates between $-1$ and $1$ without settling.'
+    },
+      'Has limit $\\infty
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'As $x \\to 0$, $1/x \\to \\pm\\infty$, and $\\sin$ oscillates between $-1$ and $1$ without settling.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'As $x \\to 0$, $1/x \\to \\pm\\infty$, and $\\sin$ oscillates between $-1$ and $1$ without settling.'
@@ -317,11 +512,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = x \\sin(1/x)$ for $x \\neq 0$, $f(0) = 0$ is:',
       options: [
-        'Discontinuous at $0$',
-        'Not defined at $0$',
-        'Continuous at $0$',
-        'Differentiable at $0$'
-      ],
+      'Continuous at $0
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$|x \\sin(1/x)| \\leq |x| \\to 0$, so by squeeze theorem, $\\lim_{x \\to 0} x\\sin(1/x) = 0 = f(0)$.'
+    },
+      'Discontinuous at $0
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$|x \\sin(1/x)| \\leq |x| \\to 0$, so by squeeze theorem, $\\lim_{x \\to 0} x\\sin(1/x) = 0 = f(0)$.'
+    },
+      'Not defined at $0
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$|x \\sin(1/x)| \\leq |x| \\to 0$, so by squeeze theorem, $\\lim_{x \\to 0} x\\sin(1/x) = 0 = f(0)$.'
+    },
+      'Differentiable at $0
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$|x \\sin(1/x)| \\leq |x| \\to 0$, so by squeeze theorem, $\\lim_{x \\to 0} x\\sin(1/x) = 0 = f(0)$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: '$|x \\sin(1/x)| \\leq |x| \\to 0$, so by squeeze theorem, $\\lim_{x \\to 0} x\\sin(1/x) = 0 = f(0)$.'
@@ -339,11 +550,15 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A function $f$ has an essential discontinuity at $a$ if:',
       options: [
-        'The limit exists but differs from $f(a)$',
-        '$f(a)$ is undefined',
-        'Both one-sided limits exist but differ',
-        'At least one one-sided limit is infinite or does not exist'
-      ],
+      'The limit exists but differs from $f(a)
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Essential discontinuity: the limit doesn\'t exist (oscillation, infinite limits, etc.).'
+    },
+      'At least one one-sided limit is infinite or does not exist',
+      '$f(a)$ is undefined',
+      'Both one-sided limits exist but differ',
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Essential discontinuity: the limit doesn\'t exist (oscillation, infinite limits, etc.).'
@@ -353,11 +568,23 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The sequential characterization of continuity: $f$ is continuous at $a$ iff:',
       options: [
-        'For every sequence $x_n \\to a$, we have $f(x_n) \\to f(a)$',
-        '$f(a)$ exists',
-        '$f$ is bounded near $a$',
-        '$f$ is monotonic near $a$'
-      ],
+      '$f(a)$ exists',
+      '$f$ is bounded near $a
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Sequential continuity: $x_n \\to a$ implies $f(x_n) \\to f(a)$.'
+    },
+      'For every sequence $x_n \\to a$, we have $f(x_n) \\to f(a)
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Sequential continuity: $x_n \\to a$ implies $f(x_n) \\to f(a)$.'
+    },
+      '$f$ is monotonic near $a
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Sequential continuity: $x_n \\to a$ implies $f(x_n) \\to f(a)$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Sequential continuity: $x_n \\to a$ implies $f(x_n) \\to f(a)$.'
@@ -366,7 +593,24 @@ export const section09Quiz = {
       id: 's09-m10',
       type: 'multiple-choice',
       question: '$\\lim_{x \\to \\infty} \\frac{x}{x + 1} = $',
-      options: ['$0$', '$1$', '$\\infty$', 'Does not exist'],
+      options: [
+      '$0
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$\\frac{x}{x+1} = \\frac{1}{1 + 1/x} \\to 1$ as $x \\to \\infty$.'
+    },
+      '$\\infty
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\frac{x}{x+1} = \\frac{1}{1 + 1/x} \\to 1$ as $x \\to \\infty$.'
+    },
+      '$1
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\frac{x}{x+1} = \\frac{1}{1 + 1/x} \\to 1$ as $x \\to \\infty$.'
+    },
+      'Does not exist',
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: '$\\frac{x}{x+1} = \\frac{1}{1 + 1/x} \\to 1$ as $x \\to \\infty$.'
@@ -375,7 +619,28 @@ export const section09Quiz = {
       id: 's09-m11',
       type: 'multiple-choice',
       question: 'The function $f(x) = 1/x$ is uniformly continuous on:',
-      options: ['$(0, 1)$', '$(0, \\infty)$', '$[1, \\infty)$', '$\\mathbb{R} \\setminus \\{0\\}$'],
+      options: [
+      '$(0, 1)
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'On $[1, \\infty)$, the derivative is bounded: $|f\'(x)| = 1/x^2 \\leq 1$. Not uniformly continuous near $0$.'
+    },
+      '$(0, \\infty)
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'On $[1, \\infty)$, the derivative is bounded: $|f\'(x)| = 1/x^2 \\leq 1$. Not uniformly continuous near $0$.'
+    },
+      '$\\mathbb{R} \\setminus \\{0\\}
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'On $[1, \\infty)$, the derivative is bounded: $|f\'(x)| = 1/x^2 \\leq 1$. Not uniformly continuous near $0$.'
+    },
+      '$[1, \\infty)
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'On $[1, \\infty)$, the derivative is bounded: $|f\'(x)| = 1/x^2 \\leq 1$. Not uniformly continuous near $0$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'On $[1, \\infty)$, the derivative is bounded: $|f\'(x)| = 1/x^2 \\leq 1$. Not uniformly continuous near $0$.'
@@ -407,11 +672,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A Lipschitz continuous function with constant $K$ satisfies:',
       options: [
-        '$|f(x)| \\leq K$ for all $x$',
-        '$|f\'(x)| \\leq K$ for all $x$',
-        '$|f(x) - f(y)| \\leq K|x - y|$ for all $x, y$',
-        '$f(x) = Kx$'
-      ],
+      '$|f(x) - f(y)| \\leq K|x - y|$ for all $x, y
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Lipschitz condition bounds how fast the function can change.'
+    },
+      '$|f(x)| \\leq K$ for all $x
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Lipschitz condition bounds how fast the function can change.'
+    },
+      '$|f\\'(x)| \\leq K$ for all $x
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Lipschitz condition bounds how fast the function can change.'
+    },
+      '$f(x) = Kx
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Lipschitz condition bounds how fast the function can change.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Lipschitz condition bounds how fast the function can change.'
@@ -421,12 +702,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Every Lipschitz continuous function is:',
       options: [
-        'Differentiable',
-        'Constant',
-        'Bounded',
-        'Uniformly continuous'
-      ],
-      correctIndex: 3,
+      'Differentiable',
+      'Constant',
+      'Uniformly continuous',
+      'Bounded',
+    ],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Lipschitz implies uniform continuity (take $\\delta = \\varepsilon/K$).'
     },
@@ -434,7 +715,28 @@ export const section09Quiz = {
       id: 's09-m16',
       type: 'multiple-choice',
       question: '$\\lim_{x \\to 0} \\frac{\\tan x}{x} = $',
-      options: ['$0$', '$1$', '$\\pi$', '$\\infty$'],
+      options: [
+      '$1
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\frac{\\tan x}{x} = \\frac{\\sin x}{x} \\cdot \\frac{1}{\\cos x} \\to 1 \\cdot 1 = 1$.'
+    },
+      '$0
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\frac{\\tan x}{x} = \\frac{\\sin x}{x} \\cdot \\frac{1}{\\cos x} \\to 1 \\cdot 1 = 1$.'
+    },
+      '$\\pi
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\frac{\\tan x}{x} = \\frac{\\sin x}{x} \\cdot \\frac{1}{\\cos x} \\to 1 \\cdot 1 = 1$.'
+    },
+      '$\\infty
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$\\frac{\\tan x}{x} = \\frac{\\sin x}{x} \\cdot \\frac{1}{\\cos x} \\to 1 \\cdot 1 = 1$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: '$\\frac{\\tan x}{x} = \\frac{\\sin x}{x} \\cdot \\frac{1}{\\cos x} \\to 1 \\cdot 1 = 1$.'
@@ -444,11 +746,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The oscillation of $f$ at $a$ is $0$ if and only if:',
       options: [
-        '$f$ is continuous at $a$',
-        '$f(a) = 0$',
-        '$f$ is bounded near $a$',
-        '$f$ is differentiable at $a$'
-      ],
+      '$f(a) = 0
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Zero oscillation at a point is equivalent to continuity at that point.'
+    },
+      '$f$ is bounded near $a
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Zero oscillation at a point is equivalent to continuity at that point.'
+    },
+      '$f$ is continuous at $a
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Zero oscillation at a point is equivalent to continuity at that point.'
+    },
+      '$f$ is differentiable at $a
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Zero oscillation at a point is equivalent to continuity at that point.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Zero oscillation at a point is equivalent to continuity at that point.'
@@ -458,11 +776,15 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The Dirichlet function $D(x) = 1$ if $x$ rational, $0$ if irrational, is:',
       options: [
-        'Continuous everywhere',
-        'Continuous nowhere',
-        'Continuous only at irrationals',
-        'Continuous only at $0$'
-      ],
+      'Continuous everywhere',
+      'Continuous only at irrationals',
+      'Continuous nowhere',
+      'Continuous only at $0
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'At every point, both rationals and irrationals are arbitrarily close, so the limit doesn\'t exist anywhere.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'At every point, both rationals and irrationals are arbitrarily close, so the limit doesn\'t exist anywhere.'
@@ -472,11 +794,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous at $a$ and $f(a) > 0$, then:',
       options: [
-        '$f(x) > 0$ for all $x$',
-        '$f$ is constant near $a$',
-        'There exists $\\delta > 0$ such that $f(x) > 0$ for $|x - a| < \\delta$',
-        '$f$ is increasing near $a$'
-      ],
+      'There exists $\\delta > 0$ such that $f(x) > 0$ for $|x - a| < \\delta
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Sign preservation: continuous functions preserve sign in a neighborhood of points where they\'re nonzero.'
+    },
+      '$f(x) > 0$ for all $x
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Sign preservation: continuous functions preserve sign in a neighborhood of points where they\'re nonzero.'
+    },
+      '$f$ is constant near $a
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Sign preservation: continuous functions preserve sign in a neighborhood of points where they\'re nonzero.'
+    },
+      '$f$ is increasing near $a
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Sign preservation: continuous functions preserve sign in a neighborhood of points where they\'re nonzero.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Sign preservation: continuous functions preserve sign in a neighborhood of points where they\'re nonzero.'
@@ -497,11 +835,15 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = \\sqrt{x}$ on $[0, \\infty)$ is:',
       options: [
-        'Lipschitz continuous',
-        'Not uniformly continuous',
-        'Uniformly continuous only on $[1, \\infty)$',
-        'Uniformly continuous'
-      ],
+      'Lipschitz continuous',
+      'Uniformly continuous',
+      'Not uniformly continuous',
+      'Uniformly continuous only on $[1, \\infty)
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: '$\\sqrt{x}$ is uniformly continuous on $[0, \\infty)$. Though not Lipschitz (derivative unbounded at $0$), it satisfies $|\\sqrt{x} - \\sqrt{y}| \\leq \\sqrt{|x-y|}$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: '$\\sqrt{x}$ is uniformly continuous on $[0, \\infty)$. Though not Lipschitz (derivative unbounded at $0$), it satisfies $|\\sqrt{x} - \\sqrt{y}| \\leq \\sqrt{|x-y|}$.'
@@ -525,12 +867,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The Thomae function (ruler function) is continuous exactly at:',
       options: [
-        'All rationals',
-        'All irrationals',
-        'Nowhere',
-        'Everywhere'
-      ],
-      correctIndex: 1,
+      'All rationals',
+      'Nowhere',
+      'All irrationals',
+      'Everywhere',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Thomae\'s function equals $0$ at irrationals, $1/q$ at $p/q$ reduced. It\'s continuous at irrationals, discontinuous at rationals.'
     },
@@ -539,12 +881,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A function can have a countable set of discontinuities and still be:',
       options: [
-        'Differentiable everywhere',
-        'Continuous',
-        'Riemann integrable',
-        'Uniformly continuous'
-      ],
-      correctIndex: 2,
+      'Differentiable everywhere',
+      'Continuous',
+      'Uniformly continuous',
+      'Riemann integrable',
+    ],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Lebesgue\'s criterion: bounded functions with measure-zero discontinuities are Riemann integrable.'
     },
@@ -553,11 +895,19 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The modulus of continuity $\\omega(\\delta) = \\sup\\{|f(x) - f(y)| : |x - y| < \\delta\\}$ for a uniformly continuous $f$:',
       options: [
-        'Is always constant',
-        'Does not exist',
-        'Is always equal to $\\delta$',
-        'Satisfies $\\omega(\\delta) \\to 0$ as $\\delta \\to 0$'
-      ],
+      'Satisfies $\\omega(\\delta) \\to 0$ as $\\delta \\to 0
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'For uniformly continuous functions, $\\omega(\\delta) \\to 0$ as $\\delta \\to 0$.'
+    },
+      'Is always constant',
+      'Does not exist',
+      'Is always equal to $\\delta
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'For uniformly continuous functions, $\\omega(\\delta) \\to 0$ as $\\delta \\to 0$.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'For uniformly continuous functions, $\\omega(\\delta) \\to 0$ as $\\delta \\to 0$.'
@@ -567,11 +917,15 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A continuous function $f: \\mathbb{Q} \\to \\mathbb{R}$ (domain is rationals only):',
       options: [
-        'Can be extended to $\\mathbb{R}$ iff it is uniformly continuous',
-        'Can always be extended to a continuous function on $\\mathbb{R}$',
-        'Is automatically uniformly continuous',
-        'Cannot exist'
-      ],
+      'Can always be extended to a continuous function on $\\mathbb{R}
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Extension to $\\mathbb{R}$ requires uniform continuity to define limits at irrationals consistently.'
+    },
+      'Is automatically uniformly continuous',
+      'Can be extended to $\\mathbb{R}$ iff it is uniformly continuous',
+      'Cannot exist',
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Extension to $\\mathbb{R}$ requires uniform continuity to define limits at irrationals consistently.'
@@ -590,11 +944,15 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$ with $|f\'(x)| \\leq M$, then $f$ is:',
       options: [
-        'Constant',
-        'Lipschitz with constant $M$',
-        'Unbounded',
-        'Discontinuous somewhere'
-      ],
+      'Lipschitz with constant $M
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'By the Mean Value Theorem, $|f(x) - f(y)| \\leq M|x - y|$.'
+    },
+      'Constant',
+      'Unbounded',
+      'Discontinuous somewhere',
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'By the Mean Value Theorem, $|f(x) - f(y)| \\leq M|x - y|$.'
@@ -604,11 +962,15 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The set of continuity points of any function $f: \\mathbb{R} \\to \\mathbb{R}$ is:',
       options: [
-        'Always closed',
-        'Always open',
-        'A $G_\\delta$ set (countable intersection of open sets)',
-        'Can be any subset of $\\mathbb{R}$'
-      ],
+      'A $G_\\delta$ set (countable intersection of open sets)',
+      'Always closed',
+      'Always open',
+      'Can be any subset of $\\mathbb{R}
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The set of continuity points is always a $G_\\delta$ set, a topological fact.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The set of continuity points is always a $G_\\delta$ set, a topological fact.'
@@ -632,12 +994,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is monotonic on $(a, b)$, its discontinuities are:',
       options: [
-        'At most countable, all jump discontinuities',
-        'All removable',
-        'Essential',
-        'Nowhere dense'
-      ],
-      correctIndex: 0,
+      'All removable',
+      'Essential',
+      'Nowhere dense',
+      'At most countable, all jump discontinuities',
+    ],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Monotonic functions can only have jump discontinuities, and there are at most countably many.'
     },
@@ -645,7 +1007,24 @@ export const section09Quiz = {
       id: 's09-h12',
       type: 'multiple-choice',
       question: '$\\lim_{x \\to 0^+} x^x = $',
-      options: ['$0$', '$1$', '$e$', 'Does not exist'],
+      options: [
+      '$1
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$x^x = e^{x \\ln x}$. Since $x \\ln x \\to 0$ as $x \\to 0^+$, we get $e^0 = 1$.'
+    },
+      '$0
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: '$x^x = e^{x \\ln x}$. Since $x \\ln x \\to 0$ as $x \\to 0^+$, we get $e^0 = 1$.'
+    },
+      '$e
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: '$x^x = e^{x \\ln x}$. Since $x \\ln x \\to 0$ as $x \\to 0^+$, we get $e^0 = 1$.'
+    },
+      'Does not exist',
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: '$x^x = e^{x \\ln x}$. Since $x \\ln x \\to 0$ as $x \\to 0^+$, we get $e^0 = 1$.'
@@ -655,11 +1034,19 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A Hölder continuous function with exponent $\\alpha$ satisfies:',
       options: [
-        '$|f(x)| \\leq C|x|^\\alpha$',
-        '$|f(x) - f(y)| \\leq C|x - y|^\\alpha$ for some $C$ and $0 < \\alpha \\leq 1$',
-        '$f$ is differentiable with bounded derivative',
-        '$f$ is constant'
-      ],
+      '$|f(x)| \\leq C|x|^\\alpha
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Hölder continuity generalizes Lipschitz ($\\alpha = 1$) to fractional exponents.'
+    },
+      '$f$ is differentiable with bounded derivative',
+      '$f$ is constant',
+      '$|f(x) - f(y)| \\leq C|x - y|^\\alpha$ for some $C$ and $0 < \\alpha \\leq 1
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Hölder continuity generalizes Lipschitz ($\\alpha = 1$) to fractional exponents.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Hölder continuity generalizes Lipschitz ($\\alpha = 1$) to fractional exponents.'
@@ -669,11 +1056,19 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The function $f(x) = x^2 \\sin(1/x)$ for $x \\neq 0$, $f(0) = 0$, at $x = 0$ is:',
       options: [
-        'Discontinuous',
-        'Continuous but not differentiable',
-        'Differentiable with $f\'(0) = 0$',
-        'Differentiable with $f\'(0) = 1$'
-      ],
+      'Discontinuous',
+      'Differentiable with $f\\'(0) = 0
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: '$\\frac{f(h) - f(0)}{h} = h \\sin(1/h) \\to 0$, so $f\'(0) = 0$.'
+    },
+      'Continuous but not differentiable',
+      'Differentiable with $f\\'(0) = 1
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: '$\\frac{f(h) - f(0)}{h} = h \\sin(1/h) \\to 0$, so $f\'(0) = 0$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: '$\\frac{f(h) - f(0)}{h} = h \\sin(1/h) \\to 0$, so $f\'(0) = 0$.'
@@ -683,11 +1078,23 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $\\lim_{x \\to a} f(x) = L$ and $\\lim_{x \\to a} g(x) = 0$ with $g(x) \\neq 0$ near $a$:',
       options: [
-        '$\\lim f(x)/g(x) = \\infty$',
-        '$\\lim f(x)/g(x) = 0$',
-        '$\\lim f(x)/g(x) = L$',
-        '$\\lim f(x)/g(x)$ may not exist'
-      ],
+      '$\\lim f(x)/g(x) = \\infty
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'This is an indeterminate form if $L \\neq 0$; the limit depends on how fast each approaches its value.'
+    },
+      '$\\lim f(x)/g(x)$ may not exist',
+      '$\\lim f(x)/g(x) = 0
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'This is an indeterminate form if $L \\neq 0$; the limit depends on how fast each approaches its value.'
+    },
+      '$\\lim f(x)/g(x) = L
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'This is an indeterminate form if $L \\neq 0$; the limit depends on how fast each approaches its value.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'This is an indeterminate form if $L \\neq 0$; the limit depends on how fast each approaches its value.'
@@ -705,12 +1112,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'If $f$ is uniformly continuous on $\\mathbb{R}$ and bounded below, then:',
       options: [
-        '$f$ might be unbounded above',
-        '$f$ is bounded',
-        '$f$ is Lipschitz',
-        '$f$ is constant'
-      ],
-      correctIndex: 0,
+      '$f$ is bounded',
+      '$f$ is Lipschitz',
+      '$f$ might be unbounded above',
+      '$f$ is constant',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'E.g., $f(x) = \\sqrt{|x|}$ is uniformly continuous, bounded below by $0$, but unbounded above.'
     },
@@ -719,12 +1126,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Darboux\'s theorem for derivatives states that if $f$ is differentiable on $[a, b]$:',
       options: [
-        '$f\'$ is continuous',
-        '$f\'$ has the intermediate value property',
-        '$f\'$ is bounded',
-        '$f\'$ is Riemann integrable'
-      ],
-      correctIndex: 1,
+      '$f\\'$ is continuous',
+      '$f\\'$ is bounded',
+      '$f\\'$ is Riemann integrable',
+      '$f\\'$ has the intermediate value property',
+    ],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Derivatives have the IVP even if they\'re not continuous. This is Darboux\'s theorem.'
     },
@@ -733,11 +1140,15 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A function $f$ on $(a, b)$ is uniformly continuous iff:',
       options: [
-        '$f$ is continuous',
-        'For every $\\varepsilon > 0$, there exists $\\delta > 0$ independent of the point',
-        'Both (B) and (C)',
-        'Whenever $x_n - y_n \\to 0$, we have $f(x_n) - f(y_n) \\to 0$'
-      ],
+      '$f$ is continuous',
+      'For every $\\varepsilon > 0$, there exists $\\delta > 0$ independent of the point',
+      'Whenever $x_n - y_n \\to 0$, we have $f(x_n) - f(y_n) \\to 0
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'The sequence characterization (C) is equivalent to the $\\varepsilon$-$\\delta$ definition (B).'
+    },
+      'Both (B) and (C)',
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The sequence characterization (C) is equivalent to the $\\varepsilon$-$\\delta$ definition (B).'
@@ -747,12 +1158,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A continuous bijection $f: [a, b] \\to [c, d]$ has:',
       options: [
-        'An inverse that may or may not be continuous',
-        'A discontinuous inverse',
-        'No inverse',
-        'A continuous inverse'
-      ],
-      correctIndex: 3,
+      'An inverse that may or may not be continuous',
+      'A continuous inverse',
+      'A discontinuous inverse',
+      'No inverse',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'A continuous bijection from a compact interval to an interval has a continuous inverse.'
     }

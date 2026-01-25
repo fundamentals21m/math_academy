@@ -7,11 +7,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'What is Taproot (BIP-341)?',
     options: [
       'A mining protocol',
-      'SegWit version 1 spending rules',
       'A new address format',
       'A wallet standard',
+      'SegWit version 1 spending rules',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'BIP-341 defines Taproot, the spending rules for SegWit version 1 outputs.',
   },

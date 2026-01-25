@@ -36,10 +36,14 @@ export const section82Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $f(x,y) = \\begin{cases} \\frac{xy^2}{x^2+y^4} & (x,y) \\neq (0,0) \\\\ 0 & (x,y) = (0,0) \\end{cases}$, the directional derivatives at origin:',
     options: [
+      'Exist but $f$ is not continuous at $(0,0)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Along any line through origin, the limit is 0, so all directional derivatives are 0. But along $x = y^2$, $f \\to 1/2$, so $f$ is discontinuous.',
+  },
       'Do not exist in any direction',
       'All equal zero',
       'All equal 1',
-      'Exist but $f$ is not continuous at $(0,0)$'
     ],
     correctIndex: 3,
     difficulty: 'hard',

@@ -6,10 +6,26 @@ export const section182Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Taylor polynomial of degree $n$ for $f$ centered at $a$ is given by:',
     options: [
-      '$T_n(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(a)}{k!}(x - a)^k$',
-      '$T_n(x) = \\sum_{k=0}^{n} f(a) \\cdot x^k$',
-      '$T_n(x) = \\sum_{k=0}^{n} \\frac{f(a)}{k}(x - a)^k$',
-      '$T_n(x) = f(a) + f\'(a)(x-a)$'
+      '$T_n(x) = \\sum_{k=0}^{n} f(a) \\cdot x^k
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Taylor polynomial uses the derivatives of $f$ at the point $a$, divided by $k!$, multiplied by $(x-a)^k$.',
+  },
+      '$T_n(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(a)}{k!}(x - a)^k
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Taylor polynomial uses the derivatives of $f$ at the point $a$, divided by $k!$, multiplied by $(x-a)^k$.',
+  },
+      '$T_n(x) = \\sum_{k=0}^{n} \\frac{f(a)}{k}(x - a)^k
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Taylor polynomial uses the derivatives of $f$ at the point $a$, divided by $k!$, multiplied by $(x-a)^k$.',
+  },
+      '$T_n(x) = f(a) + f\\'(a)(x-a)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Taylor polynomial uses the derivatives of $f$ at the point $a$, divided by $k!$, multiplied by $(x-a)^k$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -50,10 +66,26 @@ export const section182Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the determinant of a Vandermonde matrix with distinct points $x_0, x_1, \\ldots, x_n$?',
     options: [
-      '$0$',
-      '$1$',
-      '$\\prod_{0 \\leq i < j \\leq n} (x_j - x_i)$',
-      '$\\sum_{k=0}^{n} x_k$'
+      '$\\prod_{0 \\leq i < j \\leq n} (x_j - x_i)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The Vandermonde determinant is $\\prod_{0 \\leq i < j \\leq n} (x_j - x_i)$, which is nonzero when all $x_k$ are distinct, guaranteeing a unique interpolating polynomial.',
+  },
+      '$0
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The Vandermonde determinant is $\\prod_{0 \\leq i < j \\leq n} (x_j - x_i)$, which is nonzero when all $x_k$ are distinct, guaranteeing a unique interpolating polynomial.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The Vandermonde determinant is $\\prod_{0 \\leq i < j \\leq n} (x_j - x_i)$, which is nonzero when all $x_k$ are distinct, guaranteeing a unique interpolating polynomial.',
+  },
+      '$\\sum_{k=0}^{n} x_k
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The Vandermonde determinant is $\\prod_{0 \\leq i < j \\leq n} (x_j - x_i)$, which is nonzero when all $x_k$ are distinct, guaranteeing a unique interpolating polynomial.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

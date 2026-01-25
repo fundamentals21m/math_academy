@@ -62,12 +62,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Matrix multiplication is:',
     options: [
-      'Associative but not commutative',
       'Commutative and associative',
       'Commutative but not associative',
       'Neither commutative nor associative',
+      'Associative but not commutative',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Matrix multiplication is associative: $(AB)C = A(BC)$. However, it is generally NOT commutative: $AB \\neq BA$ in general.',
   },
@@ -102,10 +102,26 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The transpose of a product satisfies:',
     options: [
-      '$(AB)^T = A^T B^T$',
-      '$(AB)^T = BA$',
-      '$(AB)^T = AB$',
-      '$(AB)^T = B^T A^T$'
+      '$(AB)^T = B^T A^T
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The transpose of a product reverses the order: $(AB)^T = B^T A^T$. This mirrors the formula for inverses: $(AB)^{-1} = B^{-1}A^{-1}$.',
+  },
+      '$(AB)^T = A^T B^T
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The transpose of a product reverses the order: $(AB)^T = B^T A^T$. This mirrors the formula for inverses: $(AB)^{-1} = B^{-1}A^{-1}$.',
+  },
+      '$(AB)^T = BA
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The transpose of a product reverses the order: $(AB)^T = B^T A^T$. This mirrors the formula for inverses: $(AB)^{-1} = B^{-1}A^{-1}$.',
+  },
+      '$(AB)^T = AB
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The transpose of a product reverses the order: $(AB)^T = B^T A^T$. This mirrors the formula for inverses: $(AB)^{-1} = B^{-1}A^{-1}$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

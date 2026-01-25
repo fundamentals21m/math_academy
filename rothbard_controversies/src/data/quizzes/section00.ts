@@ -7,7 +7,7 @@ export const section00Questions: QuizQuestion[] = [
     question: 'According to Gene Epstein, what book by Rothbard changed his life as a PhD candidate?',
     options: [
       'The Ethics of Liberty',
-      'America\\'s Great Depression',
+      'America\\\\'s Great Depression',
       'For a New Liberty',
       'Man, Economy, and State',
     ],
@@ -23,7 +23,7 @@ export const section00Questions: QuizQuestion[] = [
       'Capital goods are the source of all profit',
       'There are no financial returns to owners of capital goods as such',
       'Capital goods have no intrinsic value',
-      'Capital goods determine interest rates directly'
+      'Capital goods determine interest rates directly',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What theory did Rothbard devastatingly refute regarding barbershops having empty chairs?',
     options: [
       'Perfect competition theory',
-      'Game theory',
       'Monopolistic competition theory',
-      'Labor theory of value'
+      'Game theory',
+      'Labor theory of value',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Rothbard showed that the conclusion that monopolistic competitors necessarily operate with excess capacity was a prisoner of how the demand curve was made tangent to the cost curve—demonstrating two ways to draw the graph where the firm operates at full capacity.',
   },
@@ -78,10 +78,10 @@ export const section00Questions: QuizQuestion[] = [
     options: [
       'Friedrich Hayek',
       'Carl Menger',
-      'Murray Rothbard Sr.',
       'Ludwig von Mises',
+      'Murray Rothbard Sr.',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Ludwig von Mises was Rothbard\'s mentor. Epstein notes that reading Mises\'s Human Action cemented his understanding of why wages rise in a free market with rising productivity.',
   },

@@ -20,12 +20,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How do BIP-68 and BIP-112 work together?',
     options: [
-      'BIP-68 defines the encoding, BIP-112 provides the script opcode',
       'They are completely independent',
+      'BIP-68 defines the encoding, BIP-112 provides the script opcode',
       'BIP-112 replaced BIP-68',
-      'BIP-68 is for blocks, BIP-112 is for time'
+      'BIP-68 is for blocks, BIP-112 is for time',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'BIP-68 defines how relative timelocks are encoded in nSequence, while BIP-112 adds the CSV opcode to verify them in script.',
   },
@@ -42,10 +42,10 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does CSV verify against?',
     options: [
-      'The transaction\\'s nLockTime',
+      'The transaction\\\\'s nLockTime',
       'The block timestamp',
       'The signature',
-      'The input\\'s nSequence value',
+      'The input\\\\'s nSequence value',
     ],
     correctIndex: 3,
     difficulty: 'medium',

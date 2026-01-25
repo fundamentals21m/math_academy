@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .pros-cons-container {
+      display: flex;
+      gap: 60px;
+      margin-top: 50px;
+    }
+    .column {
+      flex: 1;
+      border-radius: 12px;
+      padding: 40px;
+    }
+    .column.pro {
+      background: rgba(34, 197, 94, 0.08);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .column.con {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+    }
+    .column-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+    .pro .column-title { color: #22C55E; }
+    .con .column-title { color: #EF4444; }
+    .list-item {
+      color: #E6EDF3;
+      font-size: 22px;
+      line-height: 1.5;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(139, 148, 158, 0.2);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .list-item:last-child {
+      border-bottom: none;
+    }
+    .pro .list-item::before {
+      content: "+";
+      color: #22C55E;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .con .list-item::before {
+      content: "−";
+      color: #EF4444;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .highlight-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid #EF4444;
+      padding: 25px 35px;
+      margin-top: 40px;
+    }
+    .highlight-text {
+      color: #E6EDF3;
+      font-size: 24px;
+      line-height: 1.5;
+    }
+    .highlight-text code {
+      color: #EF4444;
+      background: rgba(239, 68, 68, 0.2);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'SF Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Coinbase Problem</div>
+    <div class="section-title">A Ticking Time Bomb</div>
+    <div class="pros-cons-container">
+      <div class="column pro">
+        <div class="column-title">Pro</div>
+        <div class="list-item">Has been doing custody for a long time</div>
+        <div class="list-item" style="color: #8B949E; font-style: italic;">(That's about it)</div>
+      </div>
+      <div class="column con">
+        <div class="column-title">Cons</div>
+        <div class="list-item">Technology predates SegWit best practices</div>
+        <div class="list-item">Pre-SegWit addresses vulnerable to "transaction malleability"</div>
+        <div class="list-item">Same problem that caused Mt. Gox to fail</div>
+        <div class="list-item">BlackRock chose speed over security</div>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="highlight-text">Bitwise made their addresses public. The <code>1...</code> prefix revealed Coinbase was using pre-SegWit addresses for the ETF.</div>
+    </div>
+  </div>
+</body>
+</html>

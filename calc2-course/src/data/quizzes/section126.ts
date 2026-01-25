@@ -7,11 +7,11 @@ export const section126Questions: QuizQuestion[] = [
     question: 'Green\'s theorem relates:',
     options: [
       'A triple integral to a surface integral',
-      'A line integral to the gradient of a function',
       'A double integral over a region to a line integral around its boundary',
+      'A line integral to the gradient of a function',
       'Two double integrals over different regions',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Green\'s theorem states $\\iint_R (\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y})\\,dx\\,dy = \\oint_C P\\,dx + Q\\,dy$, relating a double integral to a line integral.',
   },
@@ -21,11 +21,11 @@ export const section126Questions: QuizQuestion[] = [
     question: 'In Green\'s theorem, the line integral is taken around the boundary curve $C$ in the:',
     options: [
       'Clockwise direction',
-      'Counterclockwise (positive) direction',
       'Direction of increasing arc length',
       'Either direction with appropriate sign',
+      'Counterclockwise (positive) direction',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The standard form of Green\'s theorem requires the line integral to be taken in the counterclockwise (positive) direction, keeping the region on the left.',
   },
@@ -34,12 +34,12 @@ export const section126Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Jordan curve is:',
     options: [
+      'A simple closed curve (no self-intersections)',
       'Any closed curve',
       'A piecewise linear curve',
       'A curve that encloses zero area',
-      'A simple closed curve (no self-intersections)'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A Jordan curve (simple closed curve) is a closed curve with no self-intersections—distinct parameter values give distinct points, except at the endpoints.',
   },
@@ -48,10 +48,26 @@ export const section126Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Green\'s theorem for a Type I region is proved by showing that $-\\iint_R \\frac{\\partial P}{\\partial y}\\,dx\\,dy$ equals:',
     options: [
-      '$\\oint_C P\\,dx$',
-      '$\\oint_C Q\\,dy$',
-      '$\\oint_C P\\,dy$',
-      '$\\iint_R P\\,dx\\,dy$'
+      '$\\oint_C Q\\,dy
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'For Type I regions, one proves $-\\iint_R \\frac{\\partial P}{\\partial y}\\,dx\\,dy = \\oint_C P\\,dx$ by iterated integration and comparing with the line integral.',
+  },
+      '$\\oint_C P\\,dx
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'For Type I regions, one proves $-\\iint_R \\frac{\\partial P}{\\partial y}\\,dx\\,dy = \\oint_C P\\,dx$ by iterated integration and comparing with the line integral.',
+  },
+      '$\\oint_C P\\,dy
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'For Type I regions, one proves $-\\iint_R \\frac{\\partial P}{\\partial y}\\,dx\\,dy = \\oint_C P\\,dx$ by iterated integration and comparing with the line integral.',
+  },
+      '$\\iint_R P\\,dx\\,dy
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'For Type I regions, one proves $-\\iint_R \\frac{\\partial P}{\\partial y}\\,dx\\,dy = \\oint_C P\\,dx$ by iterated integration and comparing with the line integral.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

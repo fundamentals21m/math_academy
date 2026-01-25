@@ -36,10 +36,10 @@ export const section02Questions: QuizQuestion[] = [
     options: [
       'Over $500 billion',
       'Over $1.5 trillion',
-      'Over $5.5 trillion',
       'Over $10 trillion',
+      'Over $5.5 trillion',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Money market fund assets have grown to over $5.5 trillion, reflecting massive demand for short-term cash-equivalent investments.',
   },

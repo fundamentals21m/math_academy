@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .tdf-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin: 35px auto;
+      max-width: 950px;
+    }
+    .tdf-card {
+      background: rgba(8, 145, 178, 0.08);
+      border: 1px solid rgba(8, 145, 178, 0.3);
+      padding: 25px 30px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .tdf-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .tdf-title {
+      color: #0891B2;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .tdf-desc {
+      color: #E6EDF3;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .opportunity-box {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin-top: 35px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .opportunity-text {
+      color: #E6EDF3;
+      font-size: 22px;
+    }
+    .opportunity-text em {
+      color: #22C55E;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Biggest Opportunity</div>
+    <div class="section-title">Target Date Funds</div>
+    <div class="tdf-grid">
+      <div class="tdf-card">
+        <div class="tdf-icon">$</div>
+        <div class="tdf-title">Massive Scale</div>
+        <div class="tdf-desc">TDFs hold trillions in assets. Even 1% bitcoin allocation = massive demand.</div>
+      </div>
+      <div class="tdf-card">
+        <div class="tdf-icon">40+</div>
+        <div class="tdf-title">Long Horizons</div>
+        <div class="tdf-desc">Young workers have 30-40 year horizons — perfect for bitcoin's volatility profile.</div>
+      </div>
+      <div class="tdf-card">
+        <div class="tdf-icon">zen</div>
+        <div class="tdf-title">Passive Investors</div>
+        <div class="tdf-desc">TDF investors won't panic sell during drawdowns — they don't watch daily prices.</div>
+      </div>
+      <div class="tdf-card">
+        <div class="tdf-icon">auto</div>
+        <div class="tdf-title">Auto Rebalancing</div>
+        <div class="tdf-desc">TDF structure naturally rebalances, selling high and buying low over time.</div>
+      </div>
+    </div>
+    <div class="opportunity-box">
+      <div class="opportunity-text">"Set it and forget it" funds could include bitcoin <em>with minimal friction</em></div>
+    </div>
+  </div>
+</body>
+</html>

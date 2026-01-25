@@ -9,7 +9,7 @@ export const section00Questions: QuizQuestion[] = [
       'The set of negligible functions',
       'The set of polynomial functions',
       'The set of exponential functions',
-      'The security parameter'
+      'The security parameter',
     ],
     correctIndex: 0,
     difficulty: 'easy',

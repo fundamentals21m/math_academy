@@ -90,10 +90,10 @@ export const section44Questions: QuizQuestion[] = [
     options: [
       'Never',
       '$f$ is continuous',
-      '$f$ is simple',
       '$f$ is non-negative and "large enough"',
+      '$f$ is simple',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Non-negative measurable functions can have infinite integral (e.g., $f = 1$ on $\\mathbf{R}$).',
   },

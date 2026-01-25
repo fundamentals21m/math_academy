@@ -6,10 +6,26 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a natural tontine, the payout at time $t$ is:',
     options: [
-      '$D(t) = A \\cdot {}_tp_x$',
-      '$D(t) = A / {}_tp_x$',
-      '$D(t) = A$',
-      '$D(t) = A \\cdot t$'
+      '$D(t) = A / {}_tp_x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The natural tontine has D(t) = A / _tp_x—payout is inversely proportional to survival probability.',
+  },
+      '$D(t) = A \\cdot {}_tp_x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The natural tontine has D(t) = A / _tp_x—payout is inversely proportional to survival probability.',
+  },
+      '$D(t) = A
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The natural tontine has D(t) = A / _tp_x—payout is inversely proportional to survival probability.',
+  },
+      '$D(t) = A \\cdot t
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The natural tontine has D(t) = A / _tp_x—payout is inversely proportional to survival probability.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -36,10 +52,10 @@ export const section23Questions: QuizQuestion[] = [
     options: [
       'Payouts become unpredictable',
       'Payouts decrease proportionally',
+      'Payouts increase—you receive more when you\\\'re less likely to survive',
       'Payouts stay constant',
-      'Payouts increase—you receive more when you\'re less likely to survive'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Since D(t) = A / _tp_x, lower survival probability means higher payout. You receive more when you\'re less likely to be alive to receive it.',
   },
@@ -62,12 +78,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Compared to the classic tontine (800% final payout), the natural tontine reaches approximately:',
     options: [
+      '44% final payout',
       '200% final payout',
       '400% final payout',
-      '44% final payout',
       'The same 800%',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The natural tontine\'s payouts grow smoothly to about 44% of the initial contribution, versus the classic tontine\'s explosive 800%.',
   },

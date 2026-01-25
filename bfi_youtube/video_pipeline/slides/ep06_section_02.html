@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .definition-box {
+      background: rgba(247, 147, 26, 0.08);
+      border-left: 4px solid #F7931A;
+      padding: 30px 50px;
+      margin-bottom: 50px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .definition-label {
+      color: #F7931A;
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .definition-text {
+      color: #E6EDF3;
+      font-size: 28px;
+      line-height: 1.5;
+    }
+    .evolution-row {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .era-card {
+      width: 350px;
+      padding: 35px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .era-card.past {
+      background: rgba(139, 148, 158, 0.1);
+      border: 1px solid rgba(139, 148, 158, 0.3);
+    }
+    .era-card.present {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+    }
+    .era-label {
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .past .era-label { color: #8B949E; }
+    .present .era-label { color: #F7931A; }
+    .era-title {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #E6EDF3;
+    }
+    .era-desc {
+      color: #8B949E;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .key-point {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin-top: 40px;
+      display: inline-block;
+    }
+    .key-point-text {
+      color: #E6EDF3;
+      font-size: 24px;
+    }
+    .key-point-text em {
+      color: #F7931A;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">What is a Bearer Asset?</div>
+    <div class="section-title">Ownership Through Possession</div>
+    <div class="definition-box">
+      <div class="definition-label">Definition</div>
+      <div class="definition-text">A bearer asset is a financial asset where <strong>ownership is determined by physical possession</strong>, rather than by registration or the holder's identity.</div>
+    </div>
+    <div class="evolution-row">
+      <div class="era-card past">
+        <div class="era-label">Gold Standard Era</div>
+        <div class="era-title">Cash = Bearer Asset</div>
+        <div class="era-desc">Cash represented a claim on Central Bank gold reserves. Whoever held it owned the claim.</div>
+      </div>
+      <div class="era-card present">
+        <div class="era-label">Bitcoin Era</div>
+        <div class="era-title">Keys = Ownership</div>
+        <div class="era-desc">Ownership established through private keys. No claim on another asset — you own the bitcoin directly.</div>
+      </div>
+    </div>
+    <div class="key-point">
+      <div class="key-point-text">Bitcoin emphasizes the importance of <em>securing private keys</em></div>
+    </div>
+  </div>
+</body>
+</html>

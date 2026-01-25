@@ -41,10 +41,18 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does $a \\mid b$ mean?',
     options: [
-      '$a$ is less than $b$',
       '$a$ divides $b$ (there exists $k$ such that $ak = b$)',
-      '$b$ divides $a$',
-      '$a$ and $b$ share no common factors'
+      '$a$ is less than $b
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The notation $a \\mid b$ means "$a$ divides $b$", i.e., $b = ak$ for some integer $k$.',
+  },
+      '$b$ divides $a
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The notation $a \\mid b$ means "$a$ divides $b$", i.e., $b = ak$ for some integer $k$.',
+  },
+      '$a$ and $b$ share no common factors',
     ],
     correctIndex: 1,
     difficulty: 'easy',

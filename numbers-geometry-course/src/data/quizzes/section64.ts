@@ -9,12 +9,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a conic section?',
     options: [
-      'A curve of degree 3',
       'A curve obtained by cutting a cone with a plane',
+      'A curve of degree 3',
       'A line segment on a cone',
       'A circle with a different radius',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Conic sections are curves obtained by intersecting a cone with a plane.',
@@ -26,10 +26,10 @@ export const section64Questions: QuizQuestion[] = [
     options: [
       'Just right',
       'Too little',
-      'Too much',
       'Perfect circle',
+      'Too much',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Hyperbola means "too much" (the plane slopes too steeply, cutting both halves of the cone).',
@@ -53,8 +53,13 @@ export const section64Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'What degree are conic section equations?',
-    options: ['1', '2', '3', '4'],
-    correctIndex: 1,
+    options: [
+      '2',
+      '1',
+      '3',
+      '4',
+    ],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Conic sections are quadratic curves—their equations have degree 2.',
@@ -63,8 +68,13 @@ export const section64Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'Which conic section is the transitional case?',
-    options: ['Circle', 'Ellipse', 'Hyperbola', 'Parabola'],
-    correctIndex: 3,
+    options: [
+      'Circle',
+      'Parabola',
+      'Ellipse',
+      'Hyperbola',
+    ],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The parabola is the "just right" transitional case between hyperbola and ellipse.',
@@ -75,11 +85,11 @@ export const section64Questions: QuizQuestion[] = [
     question: 'What is the equation x² + y² = r² an example of?',
     options: [
       'A hyperbola',
+      'A circle (special ellipse)',
       'A parabola',
       'A line',
-      'A circle (special ellipse)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A circle is a special case of an ellipse where a = b = r.',
@@ -89,12 +99,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How can you identify a parabola from its equation?',
     options: [
-      'One of x² or y² is missing',
       'Both x² and y² have positive coefficients',
       'Both x² and y² have opposite signs',
       'The equation is linear',
+      'One of x² or y² is missing',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'A parabola has only one squared term (e.g., y = ax²).',
@@ -104,12 +114,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who discovered that all conics are quadratic curves?',
     options: [
-      'Fermat and Descartes',
       'Apollonius',
       'Euclid',
-      'Newton'
+      'Fermat and Descartes',
+      'Newton',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Fermat and Descartes independently made this discovery when they invented analytic geometry.',

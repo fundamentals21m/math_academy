@@ -10,11 +10,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'What is an additive function?',
     options: [
       'A function that adds numbers',
-      'A function satisfying f(α + β) = f(α) + f(β)',
       'A function that is always positive',
+      'A function satisfying f(α + β) = f(α) + f(β)',
       'A function defined only on integers',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'An additive function f satisfies the functional equation f(α + β) = f(α) + f(β) for all α and β in its domain.',
@@ -27,10 +27,10 @@ export const section43Questions: QuizQuestion[] = [
     options: [
       'They are too complicated',
       'They do help directly',
-      'If f(π) = 0, then k = 0, giving only the zero function',
       'They are not continuous',
+      'If f(π) = 0, then k = 0, giving only the zero function',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'For the Dehn invariant we need f(π) = 0. If f(x) = kx, then kπ = 0 implies k = 0, so f is identically zero—not useful!',
@@ -55,12 +55,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a "basis over ℚ" for a finite set S of reals?',
     options: [
-      'A set of rationally independent numbers that generate S via rational combinations',
       'The smallest element of S',
+      'A set of rationally independent numbers that generate S via rational combinations',
       'The GCD of elements of S',
       'The average of S',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'A basis over ℚ for S is a rationally independent set {β₁, ..., βₙ} such that every element of S is a rational combination of the βᵢ.',
@@ -72,11 +72,11 @@ export const section43Questions: QuizQuestion[] = [
       'If α and π are rationally independent, what can we say about l ⊗ α?',
     options: [
       'It equals l × α',
+      'It is nonzero whenever l ≠ 0',
       'It equals 0',
       'It depends on the cube',
-      'It is nonzero whenever l ≠ 0',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Rational Independence Theorem: if α and π are rationally independent, then l ⊗ α = 0 only if l = 0.',
@@ -87,12 +87,12 @@ export const section43Questions: QuizQuestion[] = [
     question:
       'Can a √2 × (1/√2) rectangle be converted to a 1 × 1 square by horizontal and vertical cuts?',
     options: [
+      'No, because √2 and 1 are rationally independent',
       'Yes, because they have the same area',
       'Yes, with exactly 4 cuts',
-      'No, because √2 and 1 are rationally independent',
       'It depends on the starting orientation',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'Though they have equal area, the tensor √2 ⊗ (1/√2) ≠ 1 ⊗ 1 in ℝ ⊗ ℝ because √2 and 1 are rationally independent.',
@@ -120,11 +120,11 @@ export const section43Questions: QuizQuestion[] = [
       'What property makes the construction of bases over ℚ possible for any finite set?',
     options: [
       'All finite sets are countable',
-      'We can select rationally independent elements one at a time',
       'The set must contain π',
+      'We can select rationally independent elements one at a time',
       'Finite sets have finitely many subsets',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Starting with any element, we add elements that are rationally independent of previous choices until all elements are rational combinations of the basis.',

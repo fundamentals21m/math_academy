@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .comparison-table {
+      width: 100%;
+      max-width: 900px;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: rgba(13, 17, 23, 0.8);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: rgba(8, 145, 178, 0.2);
+      color: #0891B2;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 16px;
+    }
+    .comparison-table th:not(:first-child) {
+      text-align: right;
+    }
+    .comparison-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(8, 145, 178, 0.1);
+      font-size: 18px;
+    }
+    .comparison-table td:not(:first-child) {
+      text-align: right;
+    }
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    .col-metric { color: #E6EDF3; }
+    .col-current { color: #8B949E; }
+    .col-proposed { color: #E6EDF3; }
+    .negative { color: #EF4444 !important; font-weight: 600; }
+    .positive { color: #22C55E !important; font-weight: 600; }
+    .highlight { color: #F7931A !important; font-weight: 600; }
+    .result-box {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .result-text {
+      color: #E6EDF3;
+      font-size: 22px;
+    }
+    .result-text em {
+      color: #22C55E;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Real-World Example</div>
+    <div class="section-title">Mining Company Comparison</div>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Q3 2023 Metric</th>
+          <th>Current Strategy</th>
+          <th>Proposed Strategy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-metric">Revenue</td>
+          <td class="col-current">$76,700,000</td>
+          <td class="col-proposed">$76,700,000</td>
+        </tr>
+        <tr>
+          <td class="col-metric">Operating Expenses</td>
+          <td class="col-current">$88,000,000</td>
+          <td class="col-proposed">$76,462,468</td>
+        </tr>
+        <tr>
+          <td class="col-metric">Net Operating Income</td>
+          <td class="negative">-$11,300,000</td>
+          <td class="positive">+$237,532</td>
+        </tr>
+        <tr>
+          <td class="col-metric">Net Margin</td>
+          <td class="negative">-14.73%</td>
+          <td class="positive">+0.31%</td>
+        </tr>
+        <tr>
+          <td class="col-metric">BTC Treasury Deployed</td>
+          <td class="col-current">No</td>
+          <td class="highlight">Yes (16%)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="result-box">
+      <div class="result-text">Using just <em>16% of treasury</em> with 35% assumed return transforms a loss into profit</div>
+    </div>
+  </div>
+</body>
+</html>

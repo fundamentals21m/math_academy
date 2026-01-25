@@ -37,11 +37,11 @@ export const section99Questions: QuizQuestion[] = [
     question: 'Geometrically, the condition $\\nabla f = \\lambda \\nabla g$ means:',
     options: [
       'The level set of $f$ is perpendicular to the constraint surface',
-      'The level set of $f$ is tangent to the constraint surface',
       'The gradients of $f$ and $g$ are perpendicular',
+      'The level set of $f$ is tangent to the constraint surface',
       '$f$ and $g$ have the same level sets',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'When $\\nabla f = \\lambda \\nabla g$, the gradients are parallel. Since each gradient is normal to its level set, this means the level set of $f$ is tangent to the constraint surface $g = 0$ at the extremum.',
   },
@@ -106,10 +106,14 @@ export const section99Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Lagrange multiplier method requires that the constraint gradients be:',
     options: [
+      'Linearly independent at the extremum',
       'Zero at the extremum',
       'Equal to each other',
-      'Perpendicular to the gradient of $f$',
-      'Linearly independent at the extremum'
+      'Perpendicular to the gradient of $f
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For the method to be valid, the gradients $\\nabla g_1, \\ldots, \\nabla g_m$ must be linearly independent at the extremum. This is equivalent to requiring that not all relevant Jacobian determinants vanish.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

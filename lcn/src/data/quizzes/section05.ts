@@ -37,9 +37,13 @@ export const section05Questions: QuizQuestion[] = [
     question: 'In the protocol, the prover\'s first message includes:',
     options: [
       '$a$ and $b$ directly',
+      '$S$, $T_1$, and $T_2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The prover sends $S = s_a G_0 + s_b G_1 + s_S H$, $T_1 = (as_b + bs_a)G_0 + \\tau_1 H$, and $T_2 = s_a s_b G_0 + \\tau_2 H$.',
+  },
       'The verification equations',
       'Only the witness',
-      '$S$, $T_1$, and $T_2$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -53,7 +57,7 @@ export const section05Questions: QuizQuestion[] = [
       'A polynomial evaluated at the challenge',
       'A group element',
       'A random value',
-      'A hash output'
+      'A hash output',
     ],
     correctIndex: 0,
     difficulty: 'medium',

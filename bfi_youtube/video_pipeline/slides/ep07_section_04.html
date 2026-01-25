@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .convoy-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .convoy-icon {
+      font-size: 56px;
+    }
+    .convoy-date {
+      color: #8B949E;
+      font-size: 20px;
+    }
+    .platforms-row {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    .platform-card {
+      width: 400px;
+      padding: 35px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .platform-card.blocked {
+      background: rgba(239, 68, 68, 0.1);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+    }
+    .platform-name {
+      color: #E6EDF3;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .platform-stat {
+      margin: 15px 0;
+    }
+    .stat-amount {
+      color: #22C55E;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .stat-label {
+      color: #8B949E;
+      font-size: 18px;
+    }
+    .blocked-label {
+      background: rgba(239, 68, 68, 0.2);
+      color: #EF4444;
+      font-size: 16px;
+      padding: 8px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .context-box {
+      background: rgba(139, 148, 158, 0.1);
+      border-left: 4px solid #8B949E;
+      padding: 25px 40px;
+      margin-top: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .context-text {
+      color: #E6EDF3;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Case Study</div>
+    <div class="section-title">The Canadian Freedom Convoy</div>
+    <div class="convoy-header">
+      <div class="convoy-icon">🚚</div>
+      <div class="convoy-date">January 2022</div>
+    </div>
+    <div class="platforms-row">
+      <div class="platform-card blocked">
+        <div class="platform-name">GoFundMe</div>
+        <div class="platform-stat">
+          <div class="stat-amount">$10M CAD</div>
+          <div class="stat-label">raised</div>
+        </div>
+        <div class="platform-stat">
+          <div class="stat-amount">~$1M</div>
+          <div class="stat-label">released before shutdown</div>
+        </div>
+        <div class="blocked-label">Blocked by Government</div>
+      </div>
+      <div class="platform-card blocked">
+        <div class="platform-name">GiveSendGo</div>
+        <div class="platform-stat">
+          <div class="stat-amount">$9.58M</div>
+          <div class="stat-label">collected</div>
+        </div>
+        <div class="platform-stat">
+          <div class="stat-amount">109,000+</div>
+          <div class="stat-label">donations (44% from US)</div>
+        </div>
+        <div class="blocked-label">Also Blocked</div>
+      </div>
+    </div>
+    <div class="context-box">
+      <div class="context-text">People wanted to donate for clothing and firewood. Millions raised — but the money never reached the truckers.</div>
+    </div>
+  </div>
+</body>
+</html>

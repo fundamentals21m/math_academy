@@ -16,11 +16,11 @@ export const section31Questions: QuizQuestion[] = [
     question: 'The binary QR code of length 7 is equivalent to which well-known code?',
     options: [
       'The repetition code',
-      'The $[8, 4, 4]$ extended Hamming code',
       'The $[7, 4, 3]$ Hamming code',
-      'The simplex code'
+      'The $[8, 4, 4]$ extended Hamming code',
+      'The simplex code',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The binary QR code of length 7 is the $[7, 4, 3]$ Hamming code. This demonstrates the connection between QR codes and other important code families.',
   },

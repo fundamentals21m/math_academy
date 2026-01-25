@@ -6,10 +6,22 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f \\in \\mathscr{R}(\\alpha)$ on $[a, b]$ and $c \\in (a, b)$, then:',
     options: [
-      '$\\int_a^b f \\, d\\alpha = \\int_a^c f \\, d\\alpha \\cdot \\int_c^b f \\, d\\alpha$',
-      '$\\int_a^b f \\, d\\alpha = \\int_c^b f \\, d\\alpha - \\int_a^c f \\, d\\alpha$',
-      '$\\int_a^b f \\, d\\alpha = \\int_a^c f \\, d\\alpha + \\int_c^b f \\, d\\alpha$',
-      'The integral cannot be split'
+      '$\\int_a^b f \\, d\\alpha = \\int_a^c f \\, d\\alpha + \\int_c^b f \\, d\\alpha
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Theorem 6.12(c): If $f \\in \\mathscr{R}(\\alpha)$ on $[a,b]$ and $c \\in (a,b)$, then $f \\in \\mathscr{R}(\\alpha)$ on $[a,c]$ and $[c,b]$, and $\\int_a^b f \\, d\\alpha = \\int_a^c f \\, d\\alpha + \\int_c^b f \\, d\\alpha$.',
+  },
+      '$\\int_a^b f \\, d\\alpha = \\int_a^c f \\, d\\alpha \\cdot \\int_c^b f \\, d\\alpha
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Theorem 6.12(c): If $f \\in \\mathscr{R}(\\alpha)$ on $[a,b]$ and $c \\in (a,b)$, then $f \\in \\mathscr{R}(\\alpha)$ on $[a,c]$ and $[c,b]$, and $\\int_a^b f \\, d\\alpha = \\int_a^c f \\, d\\alpha + \\int_c^b f \\, d\\alpha$.',
+  },
+      '$\\int_a^b f \\, d\\alpha = \\int_c^b f \\, d\\alpha - \\int_a^c f \\, d\\alpha
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Theorem 6.12(c): If $f \\in \\mathscr{R}(\\alpha)$ on $[a,b]$ and $c \\in (a,b)$, then $f \\in \\mathscr{R}(\\alpha)$ on $[a,c]$ and $[c,b]$, and $\\int_a^b f \\, d\\alpha = \\int_a^c f \\, d\\alpha + \\int_c^b f \\, d\\alpha$.',
+  },
+      'The integral cannot be split',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,10 +32,22 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f \\in \\mathscr{R}(\\alpha)$ and $g \\in \\mathscr{R}(\\alpha)$ on $[a, b]$, then:',
     options: [
-      '$f + g$ may not be in $\\mathscr{R}(\\alpha)$',
+      '$f + g$ may not be in $\\mathscr{R}(\\alpha)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Theorem 6.13: If $f, g \\in \\mathscr{R}(\\alpha)$, then $fg \\in \\mathscr{R}(\\alpha)$. Also $f + g$, $cf$ (for constant $c$), and $|f|$ are in $\\mathscr{R}(\\alpha)$.',
+  },
+      '$fg \\in \\mathscr{R}(\\alpha)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Theorem 6.13: If $f, g \\in \\mathscr{R}(\\alpha)$, then $fg \\in \\mathscr{R}(\\alpha)$. Also $f + g$, $cf$ (for constant $c$), and $|f|$ are in $\\mathscr{R}(\\alpha)$.',
+  },
       '$f/g \\in \\mathscr{R}(\\alpha)$ always',
-      '$fg$ may not be in $\\mathscr{R}(\\alpha)$',
-      '$fg \\in \\mathscr{R}(\\alpha)$'
+      '$fg$ may not be in $\\mathscr{R}(\\alpha)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Theorem 6.13: If $f, g \\in \\mathscr{R}(\\alpha)$, then $fg \\in \\mathscr{R}(\\alpha)$. Also $f + g$, $cf$ (for constant $c$), and $|f|$ are in $\\mathscr{R}(\\alpha)$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

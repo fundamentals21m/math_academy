@@ -12,7 +12,7 @@ export const section38Questions: QuizQuestion[] = [
       'As the lengths of sides of a triangle',
       'As roots of a polynomial equation',
       'As the area and perimeter of a sector',
-      'As the coordinates of a point at angle θ on the unit circle'
+      'As the coordinates of a point at angle θ on the unit circle',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -24,12 +24,12 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the Pythagorean identity for cos and sin?',
     options: [
-      'cos θ + sin θ = 1',
       'cos² θ + sin² θ = 1',
+      'cos θ + sin θ = 1',
       'cos θ × sin θ = 1',
       'cos² θ - sin² θ = 1',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Since (cos θ, sin θ) lies on the unit circle x² + y² = 1, we have cos² θ + sin² θ = 1.',
@@ -40,11 +40,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'What is the period of the cosine and sine functions?',
     options: [
       'π',
-      'π/2',
       '2π',
+      'π/2',
       '4π',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Both cos and sin have period 2π, meaning cos(θ + 2π) = cos θ and sin(θ + 2π) = sin θ. This corresponds to one complete rotation around the circle.',
@@ -69,12 +69,12 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is lim(θ→0) sin θ / θ?',
     options: [
-      '1',
       '0',
       'π',
       'Does not exist',
+      '1',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'This fundamental limit equals 1. It can be proved by the squeeze theorem using sin θ < θ < tan θ for small positive θ.',
@@ -116,10 +116,10 @@ export const section38Questions: QuizQuestion[] = [
     options: [
       'They are unrelated functions',
       'They have different periods',
+      'Because sin θ = cos(θ - π/2)',
       'Because of a computational error',
-      'Because sin θ = cos(θ - π/2)'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'From the unit circle, sin θ = cos(π/2 - θ) = cos(-(θ - π/2)) = cos(θ - π/2). So the sine wave is the cosine wave shifted right by π/2.',

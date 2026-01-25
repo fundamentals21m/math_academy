@@ -33,9 +33,13 @@ export const section57Questions: QuizQuestion[] = [
     question: 'The general solution to nonhomogeneous equation is:',
     options: [
       'Only the particular solution',
+      '$y_h + y_p$ (homogeneous solution + particular solution)',
       'Only the homogeneous solution',
-      '$y_h \\cdot y_p$',
-      '$y_h + y_p$ (homogeneous solution + particular solution)'
+      '$y_h \\cdot y_p
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'General solution = complementary (homogeneous) + particular.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -64,10 +68,26 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $y\'\' - y = e^{2x}$, we guess particular solution:',
     options: [
-      '$y_p = Axe^{2x}$',
-      '$y_p = Ae^{2x}$',
-      '$y_p = Ae^x$',
-      '$y_p = A$'
+      '$y_p = Axe^{2x}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Since $e^{2x}$ is not a solution to homogeneous equation, try $y_p = Ae^{2x}$.',
+  },
+      '$y_p = Ae^x
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Since $e^{2x}$ is not a solution to homogeneous equation, try $y_p = Ae^{2x}$.',
+  },
+      '$y_p = A
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Since $e^{2x}$ is not a solution to homogeneous equation, try $y_p = Ae^{2x}$.',
+  },
+      '$y_p = Ae^{2x}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Since $e^{2x}$ is not a solution to homogeneous equation, try $y_p = Ae^{2x}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

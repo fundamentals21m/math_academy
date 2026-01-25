@@ -8,10 +8,10 @@ export const section75Questions: QuizQuestion[] = [
     options: [
       'Double spending',
       'Block orphaning',
-      'Mining difficulty',
       'Duplicate transaction IDs',
+      'Mining difficulty',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'BIP-30 prevents duplicate txids by requiring uniqueness in the UTXO set.',
   },
@@ -44,10 +44,10 @@ export const section75Questions: QuizQuestion[] = [
     options: [
       'Lower fees',
       'Faster confirmations',
+      'Better privacy',
       'Loss of original UTXO when overwritten',
-      'Better privacy'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A duplicate txid could overwrite the original, causing fund loss.',
   },

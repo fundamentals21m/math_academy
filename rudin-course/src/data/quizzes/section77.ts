@@ -61,7 +61,7 @@ export const section77Questions: QuizQuestion[] = [
       'Only intersections',
       'All set operations including complements',
       'Countable unions only',
-      'Finite unions and set differences'
+      'Finite unions and set differences',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -72,10 +72,26 @@ export const section77Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The outer measure $\\mu^*$ is defined by:',
     options: [
-      '$\\mu^*(E) = \\inf\\{\\sum \\mu(A_n) : E \\subset \\bigcup A_n, A_n \\in \\mathcal{R}\\}$',
-      '$\\mu^*(E) = \\sup\\{\\mu(A) : A \\subset E, A \\in \\mathcal{R}\\}$',
-      '$\\mu^*(E) = \\mu(E)$ when $E \\in \\mathcal{R}$',
-      '$\\mu^*(E) = 0$ for all $E$'
+      '$\\mu^*(E) = \\sup\\{\\mu(A) : A \\subset E, A \\in \\mathcal{R}\\}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Outer measure covers $E$ by countable unions of sets from $\\mathcal{R}$ and takes the infimum of the sum of their measures. It may exceed the inner measure.',
+  },
+      '$\\mu^*(E) = \\inf\\{\\sum \\mu(A_n) : E \\subset \\bigcup A_n, A_n \\in \\mathcal{R}\\}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Outer measure covers $E$ by countable unions of sets from $\\mathcal{R}$ and takes the infimum of the sum of their measures. It may exceed the inner measure.',
+  },
+      '$\\mu^*(E) = \\mu(E)$ when $E \\in \\mathcal{R}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Outer measure covers $E$ by countable unions of sets from $\\mathcal{R}$ and takes the infimum of the sum of their measures. It may exceed the inner measure.',
+  },
+      '$\\mu^*(E) = 0$ for all $E
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Outer measure covers $E$ by countable unions of sets from $\\mathcal{R}$ and takes the infimum of the sum of their measures. It may exceed the inner measure.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

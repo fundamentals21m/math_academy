@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0D1117 0%, #1a1520 50%, #0D1117 100%);
+    }
+    .story-container {
+      max-width: 1100px;
+    }
+    .story-intro {
+      color: #8B949E;
+      font-size: 24px;
+      font-style: italic;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    .comparison-row {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    .scenario-card {
+      width: 400px;
+      padding: 35px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .scenario-card.old {
+      background: rgba(139, 148, 158, 0.1);
+      border: 1px solid rgba(139, 148, 158, 0.3);
+    }
+    .scenario-card.new {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+    }
+    .scenario-icon {
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+    .scenario-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .old .scenario-title { color: #8B949E; }
+    .new .scenario-title { color: #F7931A; }
+    .scenario-desc {
+      color: #E6EDF3;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .power-box {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+      padding: 30px 50px;
+      border-radius: 8px;
+      margin-top: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .power-text {
+      color: #E6EDF3;
+      font-size: 26px;
+      line-height: 1.5;
+    }
+    .power-text em {
+      color: #22C55E;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content story-container">
+    <div class="tag">Diamonds from Kiev</div>
+    <div class="section-title">A Story of Sovereignty</div>
+    <div class="story-intro">"My great-grandmother came to the US in the early 1900s from Ukraine at age ten, put on a boat by herself with five diamond stones sewn into her pillowcase."</div>
+    <div class="comparison-row">
+      <div class="scenario-card old">
+        <div class="scenario-icon">💎</div>
+        <div class="scenario-title">Then: Diamonds</div>
+        <div class="scenario-desc">Could be discovered. Could be stolen. Terrorizing thoughts the entire journey.</div>
+      </div>
+      <div class="scenario-card new">
+        <div class="scenario-icon">🧠</div>
+        <div class="scenario-title">Now: 12 Words</div>
+        <div class="scenario-desc">Memorize a seed phrase. Store unlimited wealth in your mind. Cannot be stolen through violence.</div>
+      </div>
+    </div>
+    <div class="power-box">
+      <div class="power-text">Knowing you can sell everything, put it on a 12-word seed, and go anywhere in the world — this is <em>individual sovereignty</em> previously unavailable to human beings.</div>
+    </div>
+  </div>
+</body>
+</html>

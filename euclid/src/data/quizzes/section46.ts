@@ -6,12 +6,12 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition I.46 construct?',
     options: [
-      'A rectangle on a given line',
       'A square on a given straight line',
+      'A rectangle on a given line',
       'A rhombus on a given line',
-      'A circle inscribed in a square'
+      'A circle inscribed in a square',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'I.46: "On a given straight line to describe a square."',
   },
@@ -23,7 +23,7 @@ export const section46Questions: QuizQuestion[] = [
       'It proves right angles exist',
       'It establishes parallel lines',
       'It allows construction of squares on the sides of a right triangle',
-      'It defines what a square is'
+      'It defines what a square is',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section46Questions: QuizQuestion[] = [
       'I.1 and I.3',
       'I.29 and I.30',
       'I.4 and I.8',
-      'I.11, I.31, and I.34'
+      'I.11, I.31, and I.34',
     ],
     correctIndex: 3,
     difficulty: 'hard',

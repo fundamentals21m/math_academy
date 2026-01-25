@@ -28,12 +28,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Every bounded monotonic function on $[a, b]$ is:',
     options: [
+      'Integrable',
       'Continuous',
       'Differentiable',
-      'Integrable',
       'A polynomial',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A key theorem: bounded monotonic functions are always integrable.',
   },
@@ -42,10 +42,26 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which function is monotonically decreasing on $[0, \\infty)$?',
     options: [
-      '$f(x) = 1/x$ for $x > 0$',
-      '$f(x) = e^x$',
-      '$f(x) = x^2$',
-      '$f(x) = \\sin x$'
+      '$f(x) = e^x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$1/x$ decreases as $x$ increases (for $x > 0$).',
+  },
+      '$f(x) = 1/x$ for $x > 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$1/x$ decreases as $x$ increases (for $x > 0$).',
+  },
+      '$f(x) = x^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$1/x$ decreases as $x$ increases (for $x > 0$).',
+  },
+      '$f(x) = \\sin x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$1/x$ decreases as $x$ increases (for $x > 0$).',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -57,11 +73,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'If $f$ is increasing and $g$ is increasing, then $f + g$ is:',
     options: [
       'Decreasing',
-      'Increasing',
       'Neither',
-      'Cannot determine'
+      'Increasing',
+      'Cannot determine',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The sum of increasing functions is increasing.',
   },
@@ -71,7 +87,7 @@ export const section11Questions: QuizQuestion[] = [
     question: 'A step function is:',
     options: [
       'Always monotonic',
-      'Monotonic if its values don\\'t decrease across subintervals',
+      'Monotonic if its values don\\\\'t decrease across subintervals',
       'Never monotonic',
       'Only monotonic if constant',
     ],

@@ -36,12 +36,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a function $f: A \\to B$, the set $A$ is called the:',
     options: [
-      'Codomain',
       'Domain',
+      'Codomain',
       'Range',
-      'Image'
+      'Image',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The domain is the set of inputs. The codomain $B$ is the set of potential outputs, while the range (or image) is the set of actual outputs.',
   },
@@ -74,8 +74,12 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'It is injective',
       'It has finite domain',
+      'For every $b \\in B$, there exists $a \\in A$ with $f(a) = b
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Surjectivity means every element of the codomain is hit: the range equals the codomain.',
+  },
       'It is a bijection',
-      'For every $b \\in B$, there exists $a \\in A$ with $f(a) = b$'
     ],
     correctIndex: 3,
     difficulty: 'medium',

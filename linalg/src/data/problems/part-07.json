@@ -1,0 +1,97 @@
+{
+  "partId": 7,
+  "partTitle": "The Singular Value Decomposition",
+  "textbookChapter": "Chapter 7: The Singular Value Decomposition (SVD)",
+  "sections": [
+    {
+      "sectionId": 28,
+      "sectionTitle": "Image Processing by Linear Algebra",
+      "textbookSection": "Section 7.1",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "7-1-1",
+          "type": "exercise",
+          "number": "7.1.1",
+          "statement": "A $100 \\times 100$ grayscale image matrix has rank 5. How many numbers are needed to store it using SVD?",
+          "solution": "SVD with rank 5: need 5 singular values, 5 columns of $U$ ($100 \\times 5 = 500$ numbers), and 5 rows of $V^T$ ($5 \\times 100 = 500$ numbers). Total: $5 + 500 + 500 = 1005$ numbers, vs. $100 \\times 100 = 10000$ for the full matrix."
+        }
+      ]
+    },
+    {
+      "sectionId": 29,
+      "sectionTitle": "Bases and Matrices in the SVD",
+      "textbookSection": "Section 7.2",
+      "examples": [
+        {
+          "id": "ex-7-2-1",
+          "type": "example",
+          "title": "Computing the SVD",
+          "statement": "Find the SVD of $A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 0 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {"title": "Compute $A^TA$", "content": "$A^TA = \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$, eigenvalues: $2, 0$"},
+              {"title": "Singular values", "content": "$\\sigma_1 = \\sqrt{2}$, $\\sigma_2 = 0$. Rank = 1."},
+              {"title": "Right singular vectors", "content": "$V$: eigenvectors of $A^TA$: $\\mathbf{v}_1 = (1/\\sqrt{2}, 1/\\sqrt{2})$, $\\mathbf{v}_2 = (1/\\sqrt{2}, -1/\\sqrt{2})$"},
+              {"title": "Left singular vectors", "content": "$\\mathbf{u}_1 = A\\mathbf{v}_1/\\sigma_1 = (1, 0)$. Choose $\\mathbf{u}_2 = (0, 1)$ orthogonal."}
+            ],
+            "conclusion": "$A = U\\Sigma V^T = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}\\begin{pmatrix} \\sqrt{2} & 0 \\\\ 0 & 0 \\end{pmatrix}\\begin{pmatrix} 1/\\sqrt{2} & 1/\\sqrt{2} \\\\ 1/\\sqrt{2} & -1/\\sqrt{2} \\end{pmatrix}$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "7-2-1",
+          "type": "exercise",
+          "number": "7.2.1",
+          "statement": "Find the singular values of $A = \\begin{pmatrix} 3 & 0 \\\\ 0 & 4 \\end{pmatrix}$.",
+          "solution": "$A^TA = \\begin{pmatrix} 9 & 0 \\\\ 0 & 16 \\end{pmatrix}$. Eigenvalues: $16, 9$. Singular values: $\\sigma_1 = 4$, $\\sigma_2 = 3$."
+        },
+        {
+          "id": "7-2-2",
+          "type": "exercise",
+          "number": "7.2.2",
+          "statement": "What are the singular values of an orthogonal matrix $Q$?",
+          "solution": "$Q^TQ = I$, so eigenvalues of $Q^TQ$ are all 1. Singular values: all equal to 1."
+        }
+      ]
+    },
+    {
+      "sectionId": 30,
+      "sectionTitle": "Principal Component Analysis (PCA)",
+      "textbookSection": "Section 7.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "7-3-1",
+          "type": "exercise",
+          "number": "7.3.1",
+          "statement": "Centered data points: $(1, 2)$, $(2, 1)$, $(-1, -2)$, $(-2, -1)$. Find the first principal component.",
+          "solution": "Data matrix $X = \\begin{pmatrix} 1 & 2 \\\\ 2 & 1 \\\\ -1 & -2 \\\\ -2 & -1 \\end{pmatrix}$. $X^TX = \\begin{pmatrix} 10 & 8 \\\\ 8 & 10 \\end{pmatrix}$. Eigenvalues: $18, 2$. First eigenvector: $(1/\\sqrt{2}, 1/\\sqrt{2})$. First principal component direction: $(1, 1)/\\sqrt{2}$."
+        },
+        {
+          "id": "7-3-2",
+          "type": "exercise",
+          "number": "7.3.2",
+          "statement": "If singular values are $\\sigma_1 = 10, \\sigma_2 = 1$, what fraction of variance is captured by the first principal component?",
+          "solution": "Total variance $\\propto \\sigma_1^2 + \\sigma_2^2 = 100 + 1 = 101$. First PC captures $100/101 \\approx 99\\%$ of the variance."
+        }
+      ]
+    },
+    {
+      "sectionId": 31,
+      "sectionTitle": "The Geometry of the SVD",
+      "textbookSection": "Section 7.4",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "7-4-1",
+          "type": "exercise",
+          "number": "7.4.1",
+          "statement": "The SVD shows $A$ maps the unit sphere to an ellipse. What are the semi-axes of this ellipse for $A = \\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix}$?",
+          "solution": "Singular values: $\\sigma_1 = 3$, $\\sigma_2 = 2$. The unit circle maps to an ellipse with semi-axes of length 3 (along $x$-axis) and 2 (along $y$-axis)."
+        }
+      ]
+    }
+  ]
+}

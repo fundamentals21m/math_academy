@@ -6,10 +6,26 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $x > 0$ and $n \\in \\mathbb{N}$, the $n$-th root $x^{1/n}$ is defined as:',
     options: [
-      '$x$ divided by $n$',
-      'The unique positive real $y$ such that $y^n = x$',
-      'The $n$-th term of the sequence converging to $x$',
-      '$\\ln(x)/n$'
+      '$x$ divided by $n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'For positive real $x$ and positive integer $n$, $x^{1/n}$ is defined as the unique positive real number $y$ satisfying $y^n = x$. Existence and uniqueness follow from the completeness of $\\mathbb{R}$.',
+  },
+      'The $n$-th term of the sequence converging to $x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'For positive real $x$ and positive integer $n$, $x^{1/n}$ is defined as the unique positive real number $y$ satisfying $y^n = x$. Existence and uniqueness follow from the completeness of $\\mathbb{R}$.',
+  },
+      'The unique positive real $y$ such that $y^n = x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'For positive real $x$ and positive integer $n$, $x^{1/n}$ is defined as the unique positive real number $y$ satisfying $y^n = x$. Existence and uniqueness follow from the completeness of $\\mathbb{R}$.',
+  },
+      '$\\ln(x)/n
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'For positive real $x$ and positive integer $n$, $x^{1/n}$ is defined as the unique positive real number $y$ satisfying $y^n = x$. Existence and uniqueness follow from the completeness of $\\mathbb{R}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -22,10 +38,10 @@ export const section20Questions: QuizQuestion[] = [
     options: [
       'The Archimedean property only',
       'The density of rationals',
-      'The intermediate value theorem',
       'The Least Upper Bound Property (completeness)',
+      'The intermediate value theorem',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The existence proof uses the LUB property: consider $S = \\{t > 0 : t^n < x\\}$. This set is non-empty and bounded above, so $\\sup(S)$ exists and equals $x^{1/n}$.',
   },
@@ -69,10 +85,18 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The law $x^r \\cdot x^s = x^{r+s}$ for positive real $x$ and rationals $r, s$:',
     options: [
-      'Holds for all positive $x$ and rationals $r, s$',
       'Fails for some rationals',
       'Only holds when $r$ and $s$ are integers',
-      'Requires $x > 1$'
+      'Requires $x > 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The standard exponent laws extend to rational exponents: $x^r \\cdot x^s = x^{r+s}$, $(x^r)^s = x^{rs}$, and $(xy)^r = x^r y^r$ for all positive reals $x, y$ and rationals $r, s$.',
+  },
+      'Holds for all positive $x$ and rationals $r, s
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The standard exponent laws extend to rational exponents: $x^r \\cdot x^s = x^{r+s}$, $(x^r)^s = x^{rs}$, and $(xy)^r = x^r y^r$ for all positive reals $x, y$ and rationals $r, s$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

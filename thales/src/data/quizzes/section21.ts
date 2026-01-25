@@ -9,12 +9,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From which Arabic mathematician\'s name do we get the word "algorithm"?',
     options: [
-      'Al-Khwarizmi',
       'Al-Mamun',
       'Thabit Ibn-Qurra',
       'Omar Khayyam',
+      'Al-Khwarizmi',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Al-Khwarizmi wrote a book on Indian numerals whose Latin translation began "Spoken has Algoritmi..."—giving us the word "algorithm" from his Latinized name.',
@@ -24,12 +24,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From which Arabic word do we get the term "algebra"?',
     options: [
-      'al-jabr (combining)',
       'al-Mamun (wisdom)',
       'al-Khayyam (tent-maker)',
-      'al-Qurra (reader)'
+      'al-Qurra (reader)',
+      'al-jabr (combining)',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'We get "algebra" from al-Khwarizmi\'s book "Hisab al-jabr w\'al-muqabalah". The word "al-jabr" means combining, as in combining terms to solve an equation. In old Spanish, "algebrista" meant a bone-setter!',
@@ -39,12 +39,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What institution did Caliph al-Mamun establish in Baghdad in the 9th century?',
     options: [
-      'The House of Wisdom',
       'The Library of Alexandria',
+      'The House of Wisdom',
       'The Academy of Athens',
       'The Museum of Mathematics',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Caliph al-Mamun established the "House of Wisdom" (essentially a university) at Baghdad, where he ordered translations of many Greek manuscripts, helping to preserve these works for posterity.',
@@ -55,11 +55,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'What are "amicable numbers"?',
     options: [
       'Consecutive prime numbers',
-      'Numbers whose proper divisors sum to each other',
       'Numbers that form a magic square',
+      'Numbers whose proper divisors sum to each other',
       'Numbers that can be expressed as sums of two squares',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Two numbers are amicable if the sum of proper divisors of each equals the other. For example, 220 and 284: the proper divisors of 220 sum to 284, and the proper divisors of 284 sum to 220.',
@@ -69,12 +69,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the first pair of amicable numbers, found using Thabit\'s rule with n = 2?',
     options: [
+      '220 and 284',
       '6 and 28',
       '1184 and 1210',
-      '220 and 284',
       '496 and 8128',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Using Thabit\'s rule with n = 2, we get the amicable pair 220 and 284. This was known to the Pythagoreans, but Thabit provided the first general rule for generating such pairs.',
@@ -84,12 +84,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which Islamic mathematician believed in actual infinity (unlike Aristotle\'s potential infinity)?',
     options: [
-      'Al-Khwarizmi',
       'Thabit Ibn-Qurra',
+      'Al-Khwarizmi',
       'Omar Khayyam',
       'Al-Mamun',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Thabit Ibn-Qurra believed in actual infinity, as opposed to Aristotle\'s concept of potential infinity. He was an extraordinary polymath who also did pioneering work in spherical trigonometry and calculus.',
@@ -100,11 +100,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Omar Khayyam developed a method for solving cubic equations using what approach?',
     options: [
       'Algebraic formulas like the quadratic formula',
-      'Numerical approximation',
       'Geometric intersection of curves',
+      'Numerical approximation',
       'Successive substitution',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Omar Khayyam developed a geometric method for finding positive real roots of cubic and quartic equations by intersecting conic sections (hyperbolas and circles) and finding their intersection points.',
@@ -116,10 +116,10 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       'The Arabian Nights',
       'The Book of Kings',
-      'The Conference of Birds',
       'The Rubaiyat',
+      'The Conference of Birds',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Omar Khayyam wrote the Rubaiyat, a famous collection of Persian poetry. Its 19th-century English translation by Edward FitzGerald became a bestseller and is still widely read today.',
@@ -129,12 +129,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What was the primary importance of Islamic mathematics for the history of mathematics?',
     options: [
+      'They bridged Greek antiquity and the European Renaissance',
       'They invented calculus',
-      'They proved Fermat\'s Last Theorem',
+      'They proved Fermat\\\'s Last Theorem',
       'They discovered irrational numbers',
-      'They bridged Greek antiquity and the European Renaissance'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Islamic mathematicians served as a crucial bridge between ancient and modern mathematics. They preserved Greek texts through Arabic translations, transmitted Indian numerals to Europe, and developed algebra as a systematic discipline.',

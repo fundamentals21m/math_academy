@@ -11,10 +11,10 @@ export const section30Questions: QuizQuestion[] = [
     options: [
       'Trisecting an angle with ruler and compass',
       'Squaring the circle with ruler and compass',
-      'Doubling the cube with ruler and compass',
       'The regular 17-gon with ruler and compass',
+      'Doubling the cube with ruler and compass',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Gauss was inspired to become a mathematician by discovering a ruler and compass construction for the regular 17-gon when he was only a teenager.',
@@ -39,12 +39,12 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the Legendre symbol (n/p) equal when n is a quadratic residue mod p?',
     options: [
-      '1',
       '0',
+      '1',
       '-1',
       'p',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The Legendre symbol (n/p) equals 1 when n is a quadratic residue modulo p (meaning n ≡ r² (mod p) for some r), and -1 when n is a quadratic non-residue.',
@@ -68,7 +68,12 @@ export const section30Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'How many different proofs of Quadratic Reciprocity did Gauss give?',
-    options: ['One', 'Two', 'Six', 'Twelve'],
+    options: [
+      'One',
+      'Two',
+      'Six',
+      'Twelve',
+    ],
     correctIndex: 2,
     difficulty: 'medium',
     explanation:
@@ -79,12 +84,12 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What astronomical achievement led to Gauss's appointment at Göttingen?",
     options: [
-      'Predicting the return of Halley\\'s Comet',
-      'Calculating the position of the asteroid Ceres',
+      'Predicting the return of Halley\\\\\'s Comet',
       'Discovering the planet Neptune',
-      'Mapping the Moon\\'s surface',
+      'Calculating the position of the asteroid Ceres',
+      'Mapping the Moon\\\\\'s surface',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'In 1807, subsequent to his calculation of the position of the asteroid Ceres, Gauss was appointed director of the observatory at Göttingen.',
@@ -96,10 +101,10 @@ export const section30Questions: QuizQuestion[] = [
     options: [
       'n^p ≡ (n/p) (mod p)',
       'n^2 ≡ (n/p) (mod p)',
-      'n^(p-1)/2 ≡ (n/p) (mod p)',
       'n^(p+1)/2 ≡ (n/p) (mod p)',
+      'n^(p-1)/2 ≡ (n/p) (mod p)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       "Euler's criterion states that n^((p-1)/2) ≡ (n/p) (mod p). This follows from Fermat's Little Theorem and provides a computational method for the Legendre symbol.",
@@ -110,11 +115,11 @@ export const section30Questions: QuizQuestion[] = [
     question: 'What did Gauss call the Law of Quadratic Reciprocity?',
     options: [
       'The fundamental theorem',
-      'The golden theorem (theorema aureum)',
       'The prime theorem',
       'The reciprocal law',
+      'The golden theorem (theorema aureum)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Gauss called the Law of Quadratic Reciprocity the "theorema aureum" (golden theorem) and considered it one of the most beautiful results in number theory.',
@@ -124,12 +129,12 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What unit of measure is named after Gauss?',
     options: [
+      'A unit of magnetic intensity',
       'A unit of gravitational force',
       'A unit of electrical resistance',
       'A unit of light wavelength',
-      'A unit of magnetic intensity',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The gauss is a unit of measure denoting magnetic intensity, named after Gauss for his pioneering work in electromagnetism.',

@@ -15,10 +15,26 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sequential characterization of limits states that $\\lim_{x \\to c} f(x) = L$ iff:',
     options: [
-      'For every sequence $x_n \\to c$ with $x_n \\neq c$, $f(x_n) \\to L$',
-      '$f$ is continuous at $c$',
-      '$f(c) = L$',
-      'There exists a sequence $x_n \\to c$ with $f(x_n) \\to L$'
+      '$f$ is continuous at $c
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Sequential criterion: limit exists iff for ALL sequences approaching c, function values approach L.'
+  },
+      'For every sequence $x_n \\to c$ with $x_n \\neq c$, $f(x_n) \\to L
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Sequential criterion: limit exists iff for ALL sequences approaching c, function values approach L.'
+  },
+      '$f(c) = L
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Sequential criterion: limit exists iff for ALL sequences approaching c, function values approach L.'
+  },
+      'There exists a sequence $x_n \\to c$ with $f(x_n) \\to L
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Sequential criterion: limit exists iff for ALL sequences approaching c, function values approach L.'
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -29,10 +45,18 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f$ is uniformly continuous on $S$ iff for every $\\varepsilon > 0$:',
     options: [
-      'There exists $\\delta > 0$ (depending on $x$) such that $|x - y| < \\delta \\Rightarrow |f(x) - f(y)| < \\varepsilon$',
-      'There exists $\\delta > 0$ (independent of $x$) such that for all $x, y \\in S$: $|x - y| < \\delta \\Rightarrow |f(x) - f(y)| < \\varepsilon$',
+      'There exists $\\delta > 0$ (depending on $x$) such that $|x - y| < \\delta \\Rightarrow |f(x) - f(y)| < \\varepsilon
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Uniform continuity: one $\\delta$ works for all points in $S$.'
+  },
       '$f$ is continuous at every point',
-      '$f$ is bounded'
+      'There exists $\\delta > 0$ (independent of $x$) such that for all $x, y \\in S$: $|x - y| < \\delta \\Rightarrow |f(x) - f(y)| < \\varepsilon
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Uniform continuity: one $\\delta$ works for all points in $S$.'
+  },
+      '$f$ is bounded',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -44,11 +68,11 @@ export const chapter03Quiz: QuizQuestion[] = [
     question: 'Every continuous function on a compact set is:',
     options: [
       'Differentiable',
-      'Uniformly continuous',
       'Monotonic',
-      'Constant'
+      'Constant',
+      'Uniformly continuous',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Heine-Cantor theorem: continuity on compact sets implies uniform continuity.'
   },
@@ -57,10 +81,22 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The function $f(x) = \\sin(1/x)$ for $x \\neq 0$ has what behavior as $x \\to 0$?',
     options: [
-      'Limit exists and equals $0$',
-      'Limit exists and equals $1$',
       'Limit does not exist (oscillates)',
-      'Limit is $+\\infty$'
+      'Limit exists and equals $0
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$\\sin(1/x)$ oscillates between $-1$ and $1$ as $x \\to 0$; no limit exists.'
+  },
+      'Limit exists and equals $1
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$\\sin(1/x)$ oscillates between $-1$ and $1$ as $x \\to 0$; no limit exists.'
+  },
+      'Limit is $+\\infty
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$\\sin(1/x)$ oscillates between $-1$ and $1$ as $x \\to 0$; no limit exists.'
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -71,10 +107,22 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The oscillation of $f$ at $c$ is defined as $\\omega_f(c) = \\lim_{\\delta \\to 0} \\sup\\{|f(x) - f(y)| : x, y \\in (c-\\delta, c+\\delta) \\cap S\\}$. Then $f$ is continuous at $c$ iff:',
     options: [
-      '$\\omega_f(c) > 0$',
-      '$\\omega_f(c) = 0$',
-      '$\\omega_f(c) = 1$',
-      '$\\omega_f(c)$ is undefined'
+      '$\\omega_f(c) > 0
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Oscillation measures discontinuity; $\\omega_f(c) = 0$ iff $f$ is continuous at $c$.'
+  },
+      '$\\omega_f(c) = 1
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Oscillation measures discontinuity; $\\omega_f(c) = 0$ iff $f$ is continuous at $c$.'
+  },
+      '$\\omega_f(c)$ is undefined',
+      '$\\omega_f(c) = 0
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Oscillation measures discontinuity; $\\omega_f(c) = 0$ iff $f$ is continuous at $c$.'
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -101,11 +149,11 @@ export const chapter03Quiz: QuizQuestion[] = [
     question: 'A continuous bijection from a compact space to a Hausdorff space:',
     options: [
       'May not have continuous inverse',
-      'Has continuous inverse (is a homeomorphism)',
       'Is not bijective',
-      'Cannot exist'
+      'Has continuous inverse (is a homeomorphism)',
+      'Cannot exist',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Continuous bijection from compact to Hausdorff is automatically a homeomorphism.'
   },
@@ -115,11 +163,11 @@ export const chapter03Quiz: QuizQuestion[] = [
     question: 'The Weierstrass Extreme Value Theorem states:',
     options: [
       'Every function has a maximum',
-      'A continuous function on a compact set attains its supremum and infimum',
       'Bounded functions are continuous',
-      'Continuous functions are bounded'
+      'Continuous functions are bounded',
+      'A continuous function on a compact set attains its supremum and infimum',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'EVT: continuous function on compact set achieves max and min.'
   },
@@ -128,10 +176,18 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f: [a,b] \\to \\mathbb{R}$ is Lipschitz if:',
     options: [
-      '$|f(x) - f(y)| \\leq L|x - y|$ for some $L > 0$ and all $x, y$',
       '$f$ is continuous',
+      '$|f(x) - f(y)| \\leq L|x - y|$ for some $L > 0$ and all $x, y
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Lipschitz condition: $|f(x) - f(y)| \\leq L|x-y|$ implies uniform continuity.'
+  },
       '$f$ is differentiable',
-      '$|f(x)| \\leq L$ for all $x$'
+      '$|f(x)| \\leq L$ for all $x
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Lipschitz condition: $|f(x) - f(y)| \\leq L|x-y|$ implies uniform continuity.'
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -143,9 +199,13 @@ export const chapter03Quiz: QuizQuestion[] = [
     question: 'The function $f(x) = \\sqrt{x}$ on $[0,1]$ is:',
     options: [
       'Lipschitz',
-      'Uniformly continuous but not Lipschitz',
       'Neither uniformly continuous nor Lipschitz',
-      'Differentiable at $0$'
+      'Uniformly continuous but not Lipschitz',
+      'Differentiable at $0
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$\\sqrt{x}$ is uniformly continuous on $[0,1]$ (compact), but $|\\sqrt{x} - 0|/|x-0| = 1/\\sqrt{x} \\to \\infty$.'
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -157,10 +217,26 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ is differentiable at $c$, then:',
     options: [
-      '$f$ is continuous at $c$',
-      '$f\'$ is continuous at $c$',
-      '$f$ is differentiable in a neighborhood of $c$',
-      '$f$ is twice differentiable at $c$'
+      '$f\\'$ is continuous at $c
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Differentiability implies continuity, but not continuity of the derivative.'
+  },
+      '$f$ is differentiable in a neighborhood of $c
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Differentiability implies continuity, but not continuity of the derivative.'
+  },
+      '$f$ is twice differentiable at $c
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Differentiability implies continuity, but not continuity of the derivative.'
+  },
+      '$f$ is continuous at $c
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Differentiability implies continuity, but not continuity of the derivative.'
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -171,10 +247,22 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Mean Value Theorem states that if $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$:',
     options: [
-      'There exists $c \\in (a,b)$ with $f\'(c) = 0$',
-      'There exists $c \\in (a,b)$ with $f\'(c) = \\frac{f(b) - f(a)}{b - a}$',
-      '$f(a) = f(b)$',
-      '$f$ is constant'
+      'There exists $c \\in (a,b)$ with $f\\'(c) = 0
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'MVT: tangent line at some interior point is parallel to the secant line.'
+  },
+      '$f(a) = f(b)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'MVT: tangent line at some interior point is parallel to the secant line.'
+  },
+      '$f$ is constant',
+      'There exists $c \\in (a,b)$ with $f\\'(c) = \\frac{f(b) - f(a)}{b - a}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'MVT: tangent line at some interior point is parallel to the secant line.'
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -185,10 +273,22 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Rolle\'s Theorem is a special case of MVT when:',
     options: [
-      '$f\'(a) = f\'(b)$',
-      '$f(a) = f(b)$',
+      '$f(a) = f(b)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Rolle: if $f(a) = f(b)$, then there exists $c$ with $f\'(c) = 0$.'
+  },
+      '$f\\'(a) = f\\'(b)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Rolle: if $f(a) = f(b)$, then there exists $c$ with $f\'(c) = 0$.'
+  },
       '$f$ is polynomial',
-      '$a = 0$'
+      '$a = 0
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Rolle: if $f(a) = f(b)$, then there exists $c$ with $f\'(c) = 0$.'
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -199,12 +299,12 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function with $f\' > 0$ on an interval is:',
     options: [
-      'Constant',
       'Strictly increasing',
+      'Constant',
       'Strictly decreasing',
-      'Bounded'
+      'Bounded',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Positive derivative implies strictly increasing (by MVT).'
   },
@@ -213,10 +313,18 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Inverse Function Theorem (1D) states that if $f$ is $C^1$ and $f\'(c) \\neq 0$:',
     options: [
+      '$f$ has a local $C^1$ inverse near $c
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Non-zero derivative at a point guarantees local invertibility with smooth inverse.'
+  },
       '$f$ has no inverse',
-      '$f$ has a local $C^1$ inverse near $c$',
       '$f$ is constant',
-      '$f\'(c) = 1$'
+      '$f\\'(c) = 1
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Non-zero derivative at a point guarantees local invertibility with smooth inverse.'
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -228,10 +336,18 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Taylor\'s theorem with remainder: if $f \\in C^{n+1}$, then $f(x) = T_n(x) + R_n(x)$ where $R_n$ is:',
     options: [
-      'The Lagrange remainder: $\\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x-a)^{n+1}$ for some $\\xi$ between $a$ and $x$',
       'Always zero',
-      '$f(x) - f(a)$',
-      'Undefined'
+      'The Lagrange remainder: $\\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x-a)^{n+1}$ for some $\\xi$ between $a$ and $x
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Lagrange form of remainder gives exact error bound involving $(n+1)$st derivative.'
+  },
+      '$f(x) - f(a)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Lagrange form of remainder gives exact error bound involving $(n+1)$st derivative.'
+  },
+      'Undefined',
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -242,10 +358,22 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'L\'Hôpital\'s rule applies to indeterminate forms:',
     options: [
-      'Only $0/0$',
-      'Only $\\infty/\\infty$',
-      'Both $0/0$ and $\\infty/\\infty$',
-      '$0 \\cdot \\infty$ directly'
+      'Only $0/0
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'L\'Hôpital\'s rule handles $0/0$ and $\\infty/\\infty$; other forms need rearrangement.'
+  },
+      'Both $0/0$ and $\\infty/\\infty
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'L\'Hôpital\'s rule handles $0/0$ and $\\infty/\\infty$; other forms need rearrangement.'
+  },
+      'Only $\\infty/\\infty
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'L\'Hôpital\'s rule handles $0/0$ and $\\infty/\\infty$; other forms need rearrangement.'
+  },
+      '$0 \\cdot \\infty$ directly',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -257,11 +385,11 @@ export const chapter03Quiz: QuizQuestion[] = [
     question: 'The second derivative test: if $f\'(c) = 0$ and $f\'\'(c) > 0$, then $c$ is a:',
     options: [
       'Local maximum',
-      'Local minimum',
       'Saddle point',
-      'Inflection point'
+      'Local minimum',
+      'Inflection point',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Positive second derivative at critical point indicates local minimum (concave up).'
   },
@@ -270,10 +398,14 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An inflection point of $f$ is where:',
     options: [
-      '$f\' = 0$',
-      '$f$ changes concavity ($f\'\'$ changes sign)',
+      '$f\\' = 0
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Inflection points are where concavity changes, i.e., $f\'\'$ changes sign.'
+  },
       '$f$ has a maximum',
-      '$f$ is not differentiable'
+      '$f$ is not differentiable',
+      '$f$ changes concavity ($f\\'\\'$ changes sign)',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -284,10 +416,18 @@ export const chapter03Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cauchy\'s Mean Value Theorem: if $f, g$ are continuous on $[a,b]$ and differentiable on $(a,b)$ with $g\' \\neq 0$:',
     options: [
-      'There exists $c$ with $\\frac{f\'(c)}{g\'(c)} = \\frac{f(b) - f(a)}{g(b) - g(a)}$',
-      '$f = g$',
-      '$f\' = g\'$ somewhere',
-      'The theorem doesn\'t exist'
+      '$f = g
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Cauchy MVT generalizes MVT and is key to proving L\'Hôpital\'s rule.'
+  },
+      'There exists $c$ with $\\frac{f\\'(c)}{g\\'(c)} = \\frac{f(b) - f(a)}{g(b) - g(a)}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Cauchy MVT generalizes MVT and is key to proving L\'Hôpital\'s rule.'
+  },
+      '$f\\' = g\\'$ somewhere',
+      'The theorem doesn\\'t exist',
     ],
     correctIndex: 0,
     difficulty: 'hard',

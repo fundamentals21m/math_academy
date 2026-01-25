@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    :root {
+      --accent-color: #d4a84b;
+      --accent-rgb: 212, 168, 75;
+      --bg-color: #0a0908;
+      --text-primary: #f5f0e6;
+      --text-secondary: #a09080;
+      --slide-width: 1920px;
+      --slide-height: 1080px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: var(--slide-width);
+      height: var(--slide-height);
+      background: var(--bg-color);
+      font-family: Georgia, 'Times New Roman', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at center, transparent 35%, rgba(0, 0, 0, 0.65) 100%);
+      pointer-events: none;
+    }
+
+    .frame {
+      position: absolute;
+      top: 40px; left: 40px; right: 40px; bottom: 40px;
+      border: 1px solid rgba(var(--accent-rgb), 0.3);
+    }
+
+    .frame::before, .frame::after {
+      content: '';
+      position: absolute;
+      width: 20px; height: 20px;
+      border: 2px solid var(--accent-color);
+    }
+
+    .frame::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+    .frame::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+    .corner-tl, .corner-br {
+      position: absolute;
+      width: 20px; height: 20px;
+      border: 2px solid var(--accent-color);
+    }
+
+    .corner-tl { top: 38px; right: 38px; border-left: none; border-bottom: none; }
+    .corner-br { bottom: 38px; left: 38px; border-right: none; border-top: none; }
+
+    .glow {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 700px; height: 500px;
+      background: radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.08) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .content {
+      text-align: center;
+      z-index: 10;
+    }
+
+    .episode-label {
+      color: var(--accent-color);
+      font-size: 28px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .episode-title {
+      color: var(--text-primary);
+      font-size: 84px;
+      font-style: italic;
+      line-height: 1.15;
+      margin-bottom: 60px;
+      text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+      max-width: 1400px;
+    }
+
+    .part-info {
+      color: var(--text-secondary);
+      font-size: 22px;
+      letter-spacing: 0.15em;
+    }
+
+    .part-info .separator {
+      color: var(--accent-color);
+      margin: 0 15px;
+    }
+
+    body.part-1 { --accent-color: #d4a84b; --accent-rgb: 212, 168, 75; }
+    body.part-2 { --accent-color: #8b4545; --accent-rgb: 139, 69, 69; }
+    body.part-3 { --accent-color: #4a6fa5; --accent-rgb: 74, 111, 165; }
+  </style>
+</head>
+<body class="part-2">
+  <div class="glow"></div>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="episode-label">Episode 11</div>
+    <div class="episode-title">The Aristocracy of Pull</div>
+    <div class="part-info">Part 2 <span class="separator">&bull;</span> Either-Or</div>
+  </div>
+</body>
+</html>

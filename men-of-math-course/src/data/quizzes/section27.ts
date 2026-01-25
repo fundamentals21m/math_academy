@@ -73,11 +73,11 @@ export const section27Questions: QuizQuestion[] = [
     question: 'Hermite polynomials are important in:',
     options: [
       'Cryptography',
-      'Graph theory',
       'Quantum mechanics',
+      'Graph theory',
       'Number theory',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Hermite polynomials appear in the quantum harmonic oscillator wave functions.',
   },
@@ -89,7 +89,7 @@ export const section27Questions: QuizQuestion[] = [
       '$\\pi$ is transcendental',
       '$\\sqrt{2}$ is irrational',
       '$e + \\pi$ is transcendental',
-      'All algebraic numbers are computable'
+      'All algebraic numbers are computable',
     ],
     correctIndex: 0,
     difficulty: 'medium',

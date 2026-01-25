@@ -96,10 +96,22 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The substitution property of equality states:',
     options: [
+      'If $x = y$, then $x < y$ or $x > y
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Substitution (also called Leibniz\'s law) says that equal objects are indistinguishable: if $x = y$, then for any property $P$, we have $P(x) \\Leftrightarrow P(y)$.',
+  },
+      'If $x = y$ and $y = z$, then $x = z
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Substitution (also called Leibniz\'s law) says that equal objects are indistinguishable: if $x = y$, then for any property $P$, we have $P(x) \\Leftrightarrow P(y)$.',
+  },
+      'For all $x$, $x = x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Substitution (also called Leibniz\'s law) says that equal objects are indistinguishable: if $x = y$, then for any property $P$, we have $P(x) \\Leftrightarrow P(y)$.',
+  },
       'If $x = y$, then $x$ can be replaced by $y$ in any expression without changing its truth value',
-      'If $x = y$, then $x < y$ or $x > y$',
-      'If $x = y$ and $y = z$, then $x = z$',
-      'For all $x$, $x = x$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -141,11 +153,11 @@ export const section69Questions: QuizQuestion[] = [
     question: 'In the Peano axioms for natural numbers, the axiom "$n = m$ if and only if $S(n) = S(m)$" (where $S$ is the successor function) implies that $S$ is:',
     options: [
       'Bijective',
-      'Injective (one-to-one)',
       'Surjective (onto)',
       'Constant',
+      'Injective (one-to-one)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'This axiom says $S(n) = S(m) \\Rightarrow n = m$, which is exactly the definition of injectivity. $S$ is not surjective since $0$ is not in the range of $S$ (another Peano axiom).',
   },

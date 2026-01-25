@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .problem-box {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+      padding: 35px 50px;
+      border-radius: 12px;
+      margin: 30px auto;
+      max-width: 900px;
+      text-align: left;
+    }
+    .problem-title {
+      color: #EF4444;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .problem-text {
+      color: #E6EDF3;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    .problem-text em {
+      color: #EF4444;
+      font-style: normal;
+      font-weight: 600;
+    }
+    .treatment-flow {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    .treatment-card {
+      background: rgba(13, 17, 23, 0.8);
+      border: 1px solid rgba(139, 148, 158, 0.3);
+      padding: 25px 35px;
+      border-radius: 10px;
+      text-align: center;
+      width: 280px;
+    }
+    .treatment-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+    .treatment-label {
+      color: #8B949E;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .treatment-value {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .treatment-card.down .treatment-value { color: #EF4444; }
+    .treatment-card.up .treatment-value { color: #22C55E; }
+    .result-text {
+      color: #8B949E;
+      font-size: 18px;
+      margin-top: 30px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Barrier</div>
+    <div class="section-title">The Accounting Problem</div>
+    <div class="problem-box">
+      <div class="problem-title">The Old Goodwill Treatment</div>
+      <div class="problem-text">Until 2024, FASB had no guidance for how to account for bitcoin. Under the old interpretation, value was <em>written down</em> during drawdowns but <em>never written back up</em>.</div>
+    </div>
+    <div class="treatment-flow">
+      <div class="treatment-card down">
+        <div class="treatment-icon">📉</div>
+        <div class="treatment-label">When BTC Falls</div>
+        <div class="treatment-value">Written Down ✓</div>
+      </div>
+      <div class="treatment-card up">
+        <div class="treatment-icon">📈</div>
+        <div class="treatment-label">When BTC Rises</div>
+        <div class="treatment-value">Never Written Up ✗</div>
+      </div>
+    </div>
+    <div class="result-text">Very difficult to explain to investors why holding bitcoin if they never benefited from increases</div>
+  </div>
+</body>
+</html>

@@ -750,7 +750,7 @@ export const COURSES = [
   {
     id: 'zeus',
     title: 'Zeus Lightning Wallet',
-    description: 'Master the Zeus mobile Lightning wallet. From Bitcoin fundamentals to channel management, learn self-custody Lightning payments with embedded and remote node modes.',
+    description: 'Master the Zeus mobile wallet for Bitcoin and Lightning Network. From embedded nodes to channel management, learn self-custodial Lightning payments with the most powerful mobile wallet.',
     icon: '⚡',
     url: 'zeus-deploy/',
     tags: ['4 Parts', '10 Sections'],
@@ -758,7 +758,7 @@ export const COURSES = [
     totalSections: 10,
     progressPrefix: 'zeus:',
     leaderboardUrl: 'zeus-deploy/#/leaderboard',
-    shortName: 'Zeus',
+    shortName: 'Zeus Wallet',
     progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
   },
 

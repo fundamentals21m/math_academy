@@ -1,0 +1,264 @@
+1
+00:00:00,000 --> 00:00:04,480
+The crux of the matter is the notion that holdling is an irrational and unreasonable act,
+
+2
+00:00:04,480 --> 00:00:08,640
+or at least requires a willful ability to be irrational or unreasonable.
+
+3
+00:00:08,640 --> 00:00:11,919
+It might seem odd to begin a book about institutional bitcoin,
+
+4
+00:00:11,919 --> 00:00:15,279
+with a section titled, Bitcoin is for individuals.
+
+5
+00:00:16,320 --> 00:00:20,960
+But this foundation is critical to any organization that aspires to use bitcoin successfully.
+
+6
+00:00:21,920 --> 00:00:24,640
+Many have tried and few have succeeded.
+
+7
+00:00:24,640 --> 00:00:29,440
+The very short history of bitcoin has many examples of institutions that have either perished,
+
+8
+00:00:29,440 --> 00:00:33,119
+or brought themselves to the brink of destruction trying to offer consumer products.
+
+9
+00:00:33,759 --> 00:00:39,840
+Their failures share common themes. First, products that didn't have the structural integrity
+
+10
+00:00:39,840 --> 00:00:48,079
+to withstand bitcoin's volatility. Second, products that didn't respect the constraints of bitcoin.
+
+11
+00:00:48,960 --> 00:00:53,439
+Third, products that went against the natural order of human action.
+
+12
+00:00:54,320 --> 00:00:57,280
+Consider the graveyard of bitcoin institutions.
+
+13
+00:00:57,600 --> 00:01:03,439
+Exchanges like meat gocks and FTX failed due to custody failures and fraud.
+
+14
+00:01:04,640 --> 00:01:10,719
+Yeild products like Celsius, BlockFi, and Anchor, collapsed from unsustainable yield promises.
+
+15
+00:01:11,599 --> 00:01:18,239
+Altcoins like Terra, Luna, BSV, and B-Cache proved to be failed hard forks and Ponzi schemes.
+
+16
+00:01:18,799 --> 00:01:22,480
+Castodians like Prime Trust, failed to mismanagement of client assets.
+
+17
+00:01:23,040 --> 00:01:26,400
+All of these companies' failures took down large chunks of the industry,
+
+18
+00:01:26,480 --> 00:01:29,200
+and did a lot to slow the worldwide adoption of bitcoin.
+
+19
+00:01:29,200 --> 00:01:34,560
+The author realized how distinct a human act it was to hodl bitcoin, holding on for dear life.
+
+20
+00:01:34,799 --> 00:01:39,680
+When considering whether some artificial intelligence could ever buy, sell, or hodl it.
+
+21
+00:01:40,319 --> 00:01:45,599
+Even amongst humans, the vast majority of bitcoin that has ever been acquired has changed hands
+
+22
+00:01:45,599 --> 00:01:51,760
+several times over. If humans have a hard time hanging onto their bitcoin, why would AI be any
+
+23
+00:01:51,760 --> 00:01:58,879
+different? Here's the core insight. Hodling requires a willful ability to be irrational or unreasonable.
+
+24
+00:01:59,439 --> 00:02:03,439
+This ability is difficult to model into software, and even more difficult to execute through
+
+25
+00:02:03,439 --> 00:02:07,760
+corporate or institutional governance, where reputations are built and destroyed at these crucial
+
+26
+00:02:07,760 --> 00:02:13,599
+points. Human action is based on an individual's unique set of circumstances at a given moment.
+
+27
+00:02:13,599 --> 00:02:18,639
+Specifically, the largest source of dissatisfaction that can be removed at the lowest cost.
+
+28
+00:02:19,280 --> 00:02:24,960
+This is the water diamond paradox. A person would forego all the diamonds in the world for their
+
+29
+00:02:24,960 --> 00:02:30,879
+first glass of water. At an institutional level, the decision to remove the largest source of
+
+30
+00:02:30,879 --> 00:02:36,159
+dissatisfaction stems from the human beings who have the power and their particular source of pain,
+
+31
+00:02:36,800 --> 00:02:43,360
+theoretically, and legally. Corporate governors are bound by a fiduciary duty to deliver profits
+
+32
+00:02:43,360 --> 00:02:51,199
+to shareholders. However, in practice, other incentives often prove more powerful. Consider job
+
+33
+00:02:51,199 --> 00:02:57,120
+security. Keeping their job is often a more powerful incentive than maximizing shareholder value.
+
+34
+00:02:58,000 --> 00:03:02,639
+External pressure from activist investors and political forces can override profit motives,
+
+35
+00:03:03,199 --> 00:03:07,520
+and short-term thinking driven by quarterly reporting cycles creates pressure to show immediate
+
+36
+00:03:07,520 --> 00:03:14,319
+results rather than long-term value creation. In 2020, two companies, MicroStrategy,
+
+37
+00:03:14,319 --> 00:03:20,400
+NowStrategy, and Tesla made the bold move to put Bitcoin on their balance sheet. Neither was in the
+
+38
+00:03:20,400 --> 00:03:27,599
+S&P 500. Both were extensions of an individual who believed in Bitcoin, Michael Sailor, and Elon Musk.
+
+39
+00:03:28,240 --> 00:03:33,840
+The outcomes were dramatically different. Strategy continued accumulating Bitcoin aggressively.
+
+40
+00:03:34,400 --> 00:03:41,360
+They now have a nearly $100 billion market capitalization. They await S&P 500 entry despite
+
+41
+00:03:41,360 --> 00:03:46,800
+meeting the criteria. They demonstrate long-term HODL commitment.
+
+42
+00:03:48,159 --> 00:03:55,439
+Tesla initially purchased Bitcoin for Treasury. They exited their position shortly after S&P 500
+
+43
+00:03:55,439 --> 00:04:01,280
+inclusion. Their experience demonstrates institutional pressure to sell and shows the limits of
+
+44
+00:04:01,280 --> 00:04:08,240
+corporate Bitcoin holding. This contrast perfectly illustrates why institutional Bitcoin holdings
+
+45
+00:04:08,240 --> 00:04:13,840
+require a dominant individual to succeed. Many Bitcoiners are waiting for mega companies like Apple
+
+46
+00:04:13,840 --> 00:04:19,120
+or Facebook to put Bitcoin on their balance sheet. Some think governments will get into the game.
+
+47
+00:04:19,120 --> 00:04:23,199
+Others are waiting for pensions and endowments to commit asset allocation to Bitcoin.
+
+48
+00:04:23,839 --> 00:04:29,199
+They are all misguided. Even Bitcoin institutions like publicly traded mining companies
+
+49
+00:04:29,199 --> 00:04:34,079
+eventually succumb to the pressure of selling their Bitcoin. The structural incentives of
+
+50
+00:04:34,079 --> 00:04:41,040
+institutional governance work against long-term Bitcoin holding. El Salvador is the nation
+
+51
+00:04:41,600 --> 00:04:46,000
+with the most aggressive strategy to publicly accumulate and use Bitcoin.
+
+52
+00:04:47,040 --> 00:04:51,680
+President Bukile has a superior understanding of both Bitcoin and his country.
+
+53
+00:04:52,959 --> 00:04:58,639
+But even with all of this in place, we don't know what El Salvador will look like when Bukile is
+
+54
+00:04:58,639 --> 00:05:04,399
+no longer the president. Countries can have a longer time horizon than companies. However,
+
+55
+00:05:05,040 --> 00:05:10,079
+most nations are unable to develop a long horizon and end up endlessly borrowing from the IMF
+
+56
+00:05:10,079 --> 00:05:15,839
+and World Bank. Western democracies have generally short-time horizons as leaders are elected
+
+57
+00:05:15,839 --> 00:05:22,480
+every few years. Let's recap what we learned in this chapter. Bitcoin is peer-to-peer. It is a cash
+
+58
+00:05:22,480 --> 00:05:27,120
+system designed for individuals and companies are always an individual acting on their behalf.
+
+59
+00:05:27,680 --> 00:05:33,120
+H-oldling is irrational. It requires a willful ability to resist selling pressure that institutions
+
+60
+00:05:33,120 --> 00:05:39,439
+are structurally incapable of. Institutional failures in Bitcoin, FTX, Celseus, and others share
+
+61
+00:05:39,439 --> 00:05:44,160
+common themes of not respecting Bitcoin's nature. Corporate balance sheet holdings require a
+
+62
+00:05:44,160 --> 00:05:53,199
+dominant individual, like Sailor, to overcome institutional pressure to sell. BlackRock's ETF
+
+63
+00:05:53,199 --> 00:05:59,600
+may be the vehicle that finally brings institutional Bitcoin exposure by making it indirect and almost
+
+64
+00:05:59,600 --> 00:06:08,399
+invisible. In the next episode, we'll explore chapter 2. Bitcoin requires a deflationary mindset.
+
+65
+00:06:09,199 --> 00:06:14,959
+We'll examine why Bitcoin's fixed supply creates unique challenges for institutions accustomed
+
+66
+00:06:14,959 --> 00:06:24,959
+to inflationary thinking. See you in the next one.
+

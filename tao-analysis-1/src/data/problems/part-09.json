@@ -1,0 +1,100 @@
+{
+  "partId": 9,
+  "partTitle": "Continuous Functions",
+  "textbookChapter": "Chapter 9",
+  "sections": [
+    {
+      "sectionId": 40,
+      "sectionTitle": "Limiting values of functions",
+      "textbookSection": "9.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "9-40-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that $\\lim_{x \\to 2} x^2 = 4$ using the $\\varepsilon$-$\\delta$ definition.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Given $\\varepsilon > 0$",
+                "content": "Need $|x^2 - 4| < \\varepsilon$ when $0 < |x - 2| < \\delta$."
+              },
+              {
+                "title": "Factor",
+                "content": "$|x^2 - 4| = |x-2||x+2|$. If $|x-2| < 1$, then $|x+2| < 5$."
+              },
+              {
+                "title": "Choose $\\delta$",
+                "content": "Take $\\delta = \\min(1, \\varepsilon/5)$. Then $|x^2 - 4| < 5 \\cdot (\\varepsilon/5) = \\varepsilon$."
+              }
+            ],
+            "conclusion": "$\\lim_{x \\to 2} x^2 = 4$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 41,
+      "sectionTitle": "Continuous functions",
+      "textbookSection": "9.4",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "9-41-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that the composition of continuous functions is continuous.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Let $f: A \\to B$ and $g: B \\to C$ be continuous",
+                "content": "Want to show $g \\circ f$ is continuous at $a \\in A$."
+              },
+              {
+                "title": "Use $\\varepsilon$-$\\delta$",
+                "content": "Given $\\varepsilon > 0$, since $g$ is continuous at $f(a)$, there exists $\\delta_1$ such that $|y - f(a)| < \\delta_1 \\Rightarrow |g(y) - g(f(a))| < \\varepsilon$."
+              },
+              {
+                "title": "Use continuity of $f$",
+                "content": "Since $f$ is continuous at $a$, there exists $\\delta$ such that $|x - a| < \\delta \\Rightarrow |f(x) - f(a)| < \\delta_1$."
+              }
+            ],
+            "conclusion": "For $|x - a| < \\delta$: $|g(f(x)) - g(f(a))| < \\varepsilon$. So $g \\circ f$ is continuous."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 44,
+      "sectionTitle": "Intermediate value theorem",
+      "textbookSection": "9.7",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "9-44-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use IVT to prove that $x^3 - x - 1 = 0$ has a solution in $(1, 2)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Define $f(x) = x^3 - x - 1$",
+                "content": "$f$ is continuous (polynomial)."
+              },
+              {
+                "title": "Evaluate at endpoints",
+                "content": "$f(1) = 1 - 1 - 1 = -1 < 0$. $f(2) = 8 - 2 - 1 = 5 > 0$."
+              },
+              {
+                "title": "Apply IVT",
+                "content": "Since $f(1) < 0 < f(2)$ and $f$ is continuous, there exists $c \\in (1, 2)$ with $f(c) = 0$."
+              }
+            ],
+            "conclusion": "The equation has a root in $(1, 2)$."
+          }
+        }
+      ]
+    }
+  ]
+}

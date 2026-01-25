@@ -50,10 +50,14 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In modular arithmetic (used in practice), how is division by $\\lambda_i$ computed?',
     options: [
-      'Using multiplication by the modular inverse of $\\lambda_i$',
       'Using floating point division',
       'Using subtraction',
-      'Using the square root'
+      'Using the square root',
+      'Using multiplication by the modular inverse of $\\lambda_i
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'In modular arithmetic mod $q$, division by $\\lambda_i$ is computed as multiplication by its modular inverse: $k_i / \\lambda_i = k_i \\cdot \\lambda_i^{-1} \\mod q$. There are no fractions in the actual computation.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -94,12 +98,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the main purpose of share conversion in FROST?',
     options: [
-      'To make shares smaller for storage',
       'To enable combining additively-shared nonces with polynomially-shared secret keys',
+      'To make shares smaller for storage',
       'To encrypt the shares',
       'To verify the shares are correct',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Share conversion allows FROST to combine the additively-shared nonce $k$ with the polynomially-shared secret key $s$ in the Schnorr response formula $z = k + s \\cdot c$, enabling distributed computation without reconstruction.',
   },

@@ -8,10 +8,10 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'Legal protection for crime victims',
       'A religious ritual',
-      'The victim\'s moral acceptance of their own exploitation',
-      'A type of legal contract'
+      'A type of legal contract',
+      'The victim\\\\'s moral acceptance of their own exploitation',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The sanction of the victim is the victim\'s own moral acceptance of their exploitation - agreeing that they deserve to be sacrificed.',
   },
@@ -48,12 +48,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens when a producer withdraws their sanction?',
     options: [
-      'The exploitative system loses its power over them',
       'Nothing changes',
       'They are immediately replaced',
       'The government intervenes',
+      'The exploitative system loses its power over them',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When producers withdraw their moral sanction - when they refuse to feel guilty - the looters\' moral leverage disappears.',
   },
@@ -77,11 +77,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'What does Rand identify as the fundamental choice facing productive individuals?',
     options: [
       'Whether to make more money or less',
+      'Whether to continue sanctioning their own sacrifice or to refuse',
       'Whether to enter politics',
       'Whether to join a union',
-      'Whether to continue sanctioning their own sacrifice or to refuse'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The fundamental choice is whether to continue accepting the moral code that condemns success, or to reject it and withdraw sanction.',
   },

@@ -66,10 +66,26 @@ export const section183Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For linear interpolation through two points $(x_0, y_0)$ and $(x_1, y_1)$, what is $L_0(x)$?',
     options: [
-      '$\\frac{x - x_0}{x_1 - x_0}$',
-      '$\\frac{x_1 - x}{x_1 + x_0}$',
-      '$\\frac{x_0 - x_1}{x - x_1}$',
-      '$\\frac{x - x_1}{x_0 - x_1}$'
+      '$\\frac{x - x_1}{x_0 - x_1}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$L_0(x) = \\frac{x - x_1}{x_0 - x_1}$ equals 1 at $x_0$ and 0 at $x_1$, as required by the Lagrange basis property.',
+  },
+      '$\\frac{x - x_0}{x_1 - x_0}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$L_0(x) = \\frac{x - x_1}{x_0 - x_1}$ equals 1 at $x_0$ and 0 at $x_1$, as required by the Lagrange basis property.',
+  },
+      '$\\frac{x_1 - x}{x_1 + x_0}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$L_0(x) = \\frac{x - x_1}{x_0 - x_1}$ equals 1 at $x_0$ and 0 at $x_1$, as required by the Lagrange basis property.',
+  },
+      '$\\frac{x_0 - x_1}{x - x_1}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$L_0(x) = \\frac{x - x_1}{x_0 - x_1}$ equals 1 at $x_0$ and 0 at $x_1$, as required by the Lagrange basis property.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -80,12 +96,12 @@ export const section183Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a practical drawback of the Lagrange formula?',
     options: [
-      'It only works for linear functions',
       'Adding a new point requires recomputing all basis polynomials',
+      'It only works for linear functions',
       'It cannot handle negative function values',
       'It requires the points to be equally spaced',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'When a new point is added, every Lagrange basis polynomial $L_k(x)$ must be recalculated since each depends on all interpolation points.',
   },

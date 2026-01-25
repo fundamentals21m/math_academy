@@ -24,12 +24,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who first stated the Fundamental Theorem of Algebra?',
     options: [
-      'Albert Girard',
       'Gauss',
+      'Albert Girard',
       'Euler',
       'Weierstrass',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The theorem was first stated by Albert Girard (1595–1632) in 1629. Proofs were later given by d\'Alembert and Gauss.',
@@ -39,12 +39,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the Fundamental Theorem of Algebra considered "curious"?',
     options: [
-      'Because its proof uses continuity (analysis), not just algebra',
       'Because it has no known proof',
       'Because Gauss discovered it by accident',
       'Because it only works for real numbers',
+      'Because its proof uses continuity (analysis), not just algebra',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The proof of this fundamental theorem of ALGEBRA requires the notion of continuity, which belongs to ANALYSIS rather than algebra. It often happens that proving properties of a system requires going outside that system.',
@@ -54,12 +54,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many roots (counting multiplicity) does a degree-m polynomial have over ℂ?',
     options: [
-      'Exactly m',
       'At most m',
       'At least m',
+      'Exactly m',
       'm or m-1',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'By the corollary to the Fundamental Theorem, a polynomial of degree m with complex coefficients has exactly m linear factors: p(z) = (z - z₁)(z - z₂)···(z - zₘ). Thus it has exactly m roots, counting multiplicity.',
@@ -69,12 +69,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does it mean that ℂ is "algebraically closed"?',
     options: [
+      'Every polynomial over ℂ has all its roots in ℂ',
       'No further numbers can be added to ℂ',
       'ℂ is a closed subset of some larger set',
-      'Every polynomial over ℂ has all its roots in ℂ',
       'Addition in ℂ is associative',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A field is algebraically closed if every polynomial with coefficients in that field has all its roots in that field. ℂ is algebraically closed—we don\'t need any further extension to solve polynomial equations.',
@@ -99,12 +99,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If a polynomial with real coefficients has root 3 + 2i, what other root must it have?',
     options: [
+      '3 - 2i',
       '-3 + 2i',
       '-3 - 2i',
       '2 + 3i',
-      '3 - 2i',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'For polynomials with real coefficients, complex roots come in conjugate pairs. If x + yi is a root, then x - yi is also a root. So if 3 + 2i is a root, so is 3 - 2i.',
@@ -114,12 +114,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Whose proof of the Fundamental Theorem is argued to have a flaw by Stillwell?',
     options: [
-      'd\\'Alembert\\'s',
-      'Gauss\\'s',
-      'Girard\\'s',
-      'Weierstrass\\'s',
+      'd\\\\'Alembert\\\\'s',
+      'Girard\\\\'s',
+      'Gauss\\\\'s',
+      'Weierstrass\\\\'s',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'John Stillwell [1989] argues that there is a flaw in Gauss\'s proof, and the first rigorous proof was given only after Weierstrass established the basic properties of continuous functions.',
@@ -131,10 +131,10 @@ export const section37Questions: QuizQuestion[] = [
     options: [
       'Proving the theorem',
       'Computing complex number products',
+      'Drawing regular polygons',
       'Finding roots of polynomials by tracing curves',
-      'Drawing regular polygons'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Before modern computers, a mechanical device traced out the w curve for any given radius. As the radius decreased, a bell would ring when the curve passed through the origin, indicating a root had been found.',

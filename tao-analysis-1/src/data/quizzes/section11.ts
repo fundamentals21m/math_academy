@@ -60,10 +60,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'It gives different equivalence classes',
       'It makes the proofs shorter',
+      'Subtraction is not yet defined on natural numbers',
       'Addition is not commutative',
-      'Subtraction is not yet defined on natural numbers'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'We cannot use $a - b = c - d$ because subtraction on $\\mathbb{N}$ is not always defined (e.g., $2 - 5$). The condition $a + d = b + c$ uses only addition.',
   },

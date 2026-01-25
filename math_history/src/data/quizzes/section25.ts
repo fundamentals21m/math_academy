@@ -10,7 +10,7 @@ export const section25Questions: QuizQuestion[] = [
       'Newton and Leibniz',
       'Euler and Gauss',
       'Fermat and Descartes',
-      'Cardano and Tartaglia'
+      'Cardano and Tartaglia',
     ],
     correctIndex: 2,
     explanation:
@@ -25,7 +25,7 @@ export const section25Questions: QuizQuestion[] = [
       'Polar coordinates',
       'Cylindrical coordinates',
       'Spherical coordinates',
-      'Cartesian coordinates'
+      'Cartesian coordinates',
     ],
     correctIndex: 3,
     explanation:
@@ -38,12 +38,12 @@ export const section25Questions: QuizQuestion[] = [
       'What type of curve does every second-degree equation in x and y represent?',
     difficulty: 'medium',
     options: [
-      'A conic section (or degenerate case)',
       'A cubic curve',
       'A straight line',
-      'A transcendental curve'
+      'A conic section (or degenerate case)',
+      'A transcendental curve',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     explanation:
       'Both Fermat and Descartes discovered that every quadratic equation $ax^2 + bxy + cy^2 + dx + ey + f = 0$ represents a conic section (ellipse, parabola, or hyperbola) or a degenerate case like two lines.',
   },
@@ -54,12 +54,12 @@ export const section25Questions: QuizQuestion[] = [
       'Who used coordinates called "longitude" and "latitude" to represent functions before Descartes?',
     difficulty: 'medium',
     options: [
-      'Apollonius',
       'Nicole Oresme',
+      'Apollonius',
       'Archimedes',
-      'Euclid'
+      'Euclid',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'Nicole Oresme (1323-1382) used coordinates called "longitude" and "latitude" to represent functions like velocity vs. time. He set up the coordinate system before determining the curve—a key step beyond the Greeks.',
   },
@@ -72,10 +72,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'Only translation (shifting the origin)',
       'Only rotation of axes',
-      'Rotation (to eliminate xy term) then translation',
       'Translation then rotation',
+      'Rotation (to eliminate xy term) then translation',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'First, a rotation is used to eliminate the $xy$ term (making $b\' = 0$). Then a translation shifts the origin to eliminate linear terms, yielding the standard form.',
   },
@@ -87,11 +87,11 @@ export const section25Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'The solution of cubic equations',
+      'The arc length of curves',
       'The volume of a sphere',
       'The existence of complex numbers',
-      'The arc length of curves'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     explanation:
       'Descartes claimed "the ratios between straight and curved lines are not known, and I believe cannot be discovered." Just 20 years later, Neil and van Heuraet found the arc length of the semicubical parabola $y^2 = x^3$.',
   },

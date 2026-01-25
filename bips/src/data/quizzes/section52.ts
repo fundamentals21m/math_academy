@@ -30,10 +30,10 @@ export const section52Questions: QuizQuestion[] = [
     options: [
       'Encrypted',
       'Incompatible with existing wallets',
+      'Backward compatible with BIP-21',
       'Only for Lightning',
-      'Backward compatible with BIP-21'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'BIP-72 maintains BIP-21 compatibility; wallets without BIP-70 use the address directly.',
   },

@@ -43,8 +43,13 @@ export const section30Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'Using Euclid\'s formula with $u = 2$, $v = 1$, which triple do we get?',
-    options: ['(3, 4, 5)', '(5, 12, 13)', '(8, 15, 17)', '(6, 8, 10)'],
-    correctIndex: 0,
+    options: [
+      '(5, 12, 13)',
+      '(8, 15, 17)',
+      '(3, 4, 5)',
+      '(6, 8, 10)',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'With u = 2, v = 1: a = 2(2)(1) = 4, b = 4 - 1 = 3, c = 4 + 1 = 5. So we get the triple (3, 4, 5).',
@@ -56,11 +61,11 @@ export const section30Questions: QuizQuestion[] = [
       'What key theorem from number theory is used to prove Euclid\'s parameterization?',
     options: [
       'The Pythagorean theorem',
-      'Fermat\\'s Last Theorem',
       'Unique prime factorization',
+      'Fermat\\\\\'s Last Theorem',
       'The quadratic formula',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The proof relies on unique prime factorization. If the product of relatively prime numbers is a square, then each factor must itself be a square.',

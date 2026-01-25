@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .strategy-comparison {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 30px 0;
+    }
+    .strategy-card {
+      width: 380px;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .strategy-card.hail-mary {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+    }
+    .strategy-card.pull-goalie {
+      background: rgba(34, 197, 94, 0.08);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .strategy-name {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .hail-mary .strategy-name { color: #EF4444; }
+    .pull-goalie .strategy-name { color: #22C55E; }
+    .strategy-rate {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .hail-mary .strategy-rate { color: #EF4444; }
+    .pull-goalie .strategy-rate { color: #22C55E; }
+    .strategy-label {
+      color: #8B949E;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .strategy-desc {
+      color: #E6EDF3;
+      font-size: 16px;
+    }
+    .insight-box {
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .insight-text {
+      color: #E6EDF3;
+      font-size: 20px;
+      font-style: italic;
+    }
+    .insight-text em {
+      color: #0891B2;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Strategy</div>
+    <div class="section-title">Pulling The Goalie</div>
+    <div class="strategy-comparison">
+      <div class="strategy-card hail-mary">
+        <div class="strategy-name">Hail Mary (Football)</div>
+        <div class="strategy-rate">~8%</div>
+        <div class="strategy-label">Success Rate</div>
+        <div class="strategy-desc">Desperate move with nearly no likelihood of success</div>
+      </div>
+      <div class="strategy-card pull-goalie">
+        <div class="strategy-name">Pull the Goalie (Hockey)</div>
+        <div class="strategy-rate">18-20%</div>
+        <div class="strategy-label">Success Rate</div>
+        <div class="strategy-desc">More than double — a calculated risk, not desperation</div>
+      </div>
+    </div>
+    <div class="insight-box">
+      <div class="insight-text">"Pulling the goalie actually <em>reduces the risk of losing the game</em> — it's an insurance move."<br><br>— Brown/Asness Paper (2018)</div>
+    </div>
+  </div>
+</body>
+</html>

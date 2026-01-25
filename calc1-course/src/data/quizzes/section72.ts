@@ -96,10 +96,26 @@ export const section72Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Taylor series for $\\cos x$ at $a = 0$ is:',
     options: [
-      '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$',
-      '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$',
-      '$\\sum_{n=0}^{\\infty} x^n$',
-      '$1 - x + x^2 - ...$'
+      '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - ...$',
+  },
+      '$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - ...$',
+  },
+      '$\\sum_{n=0}^{\\infty} x^n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - ...$',
+  },
+      '$1 - x + x^2 - ...
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - ...$',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -111,11 +127,11 @@ export const section72Questions: QuizQuestion[] = [
     question: 'A function equals its Taylor series inside the radius of convergence if:',
     options: [
       'Always',
-      'The remainder goes to zero',
       'The function is polynomial',
-      'Never'
+      'The remainder goes to zero',
+      'Never',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Need $R_n(x) \\to 0$ to ensure $f(x) = $ Taylor series.',
   },

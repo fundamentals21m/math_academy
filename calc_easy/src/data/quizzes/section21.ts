@@ -8,10 +8,10 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       'A sequence of numbers',
       'A type of function',
-      'A geometric shape',
       'The sum of the terms of a sequence',
+      'A geometric shape',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A series is the sum of the terms of a sequence, like $1 + \\frac{1}{2} + \\frac{1}{4} + ...$',
   },
@@ -34,10 +34,26 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The geometric series $1 + r + r^2 + r^3 + ...$ converges when:',
     options: [
-      '$r > 1$',
-      '$r = 1$',
-      '$|r| < 1$',
-      '$r < 0$'
+      '$r > 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A geometric series converges if and only if $|r| < 1$, giving sum $\\frac{1}{1-r}$.',
+  },
+      '$|r| < 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A geometric series converges if and only if $|r| < 1$, giving sum $\\frac{1}{1-r}$.',
+  },
+      '$r = 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A geometric series converges if and only if $|r| < 1$, giving sum $\\frac{1}{1-r}$.',
+  },
+      '$r < 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'A geometric series converges if and only if $|r| < 1$, giving sum $\\frac{1}{1-r}$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -28,12 +28,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $(a_n)$ is a bounded sequence, then $\\sup_n a_n$:',
     options: [
+      'Exists and is a real number',
       'May not exist',
       'Is always a term of the sequence',
-      'Exists and is a real number',
       'Equals the limit of the sequence',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'By the Least Upper Bound Property, any non-empty set of reals bounded above has a supremum in $\\mathbb{R}$. A bounded sequence has a finite supremum.',
   },
@@ -103,10 +103,18 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $(a_n)$ is an increasing sequence bounded above, then:',
     options: [
-      '$\\lim a_n = \\sup_n a_n$',
-      '$\\lim a_n = \\inf_n a_n$',
+      '$\\lim a_n = \\inf_n a_n
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'A bounded increasing sequence converges, and its limit equals its supremum: $\\lim_{n \\to \\infty} a_n = \\sup_n a_n$. This is the Monotone Convergence Theorem.',
+  },
+      '$\\lim a_n = \\sup_n a_n
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'A bounded increasing sequence converges, and its limit equals its supremum: $\\lim_{n \\to \\infty} a_n = \\sup_n a_n$. This is the Monotone Convergence Theorem.',
+  },
       'The sequence diverges',
-      'The limit does not exist'
+      'The limit does not exist',
     ],
     correctIndex: 0,
     difficulty: 'hard',

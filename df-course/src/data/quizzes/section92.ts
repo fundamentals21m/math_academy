@@ -7,11 +7,11 @@ export const section92Questions: QuizQuestion[] = [
     question: 'The character table of a group $G$ is a square matrix because:',
     options: [
       '$G$ has $|G|$ elements',
+      'The number of irreducible characters equals the number of conjugacy classes',
       'All characters have the same dimension',
       'The orthogonality relations require it',
-      'The number of irreducible characters equals the number of conjugacy classes',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The rows are indexed by irreducible characters and columns by conjugacy classes. These have equal count, making the table square.',
   },

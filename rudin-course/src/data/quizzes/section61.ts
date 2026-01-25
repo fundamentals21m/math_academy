@@ -32,12 +32,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Contraction Mapping Principle states that a contraction on a complete metric space:',
     options: [
+      'Has exactly one fixed point',
       'Has finitely many fixed points',
       'Has at least one fixed point',
-      'Has exactly one fixed point',
-      'Has a fixed point only if the space is compact'
+      'Has a fixed point only if the space is compact',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Contraction Mapping Principle (Banach Fixed Point Theorem) guarantees existence and uniqueness of a fixed point for any contraction on a complete metric space.',
   },
@@ -76,12 +76,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT required for the Contraction Mapping Principle?',
     options: [
-      'The space must be compact',
       'The space must be complete',
+      'The space must be compact',
       'The mapping must be a contraction',
-      'The contraction constant must be strictly less than 1'
+      'The contraction constant must be strictly less than 1',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Compactness is not required. The theorem requires completeness of the metric space and a contraction constant $c < 1$. Compactness is a stronger condition that implies other fixed point theorems.',
   },
@@ -91,11 +91,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'The Contraction Mapping Principle is used to prove:',
     options: [
       'The Fundamental Theorem of Calculus',
-      'The Inverse Function Theorem and existence theorems for ODEs',
       'The Bolzano-Weierstrass Theorem',
-      'The Heine-Borel Theorem'
+      'The Inverse Function Theorem and existence theorems for ODEs',
+      'The Heine-Borel Theorem',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Contraction Mapping Principle is a fundamental tool for proving existence and uniqueness results, including the Inverse Function Theorem, Implicit Function Theorem, and Picard\'s theorem for ODEs.',
   },

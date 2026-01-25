@@ -10,7 +10,7 @@ export const section71Questions: QuizQuestion[] = [
       'A mechanical gear system',
       'A finite memory only',
       'A calculator with buttons',
-      'An infinite tape, a read/write head, states, and a transition table'
+      'An infinite tape, a read/write head, states, and a transition table',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -22,12 +22,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Church-Turing thesis states that:',
     options: [
-      'Any computable function can be computed by a Turing machine',
       'All problems are solvable',
       'Turing machines are the fastest computers',
       'Only finite problems can be solved',
+      'Any computable function can be computed by a Turing machine',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The Church-Turing thesis asserts that Turing machines capture the intuitive notion of "algorithm"—any function computable by any reasonable method can be computed by a Turing machine. All proposed alternatives have been proven equivalent.',
@@ -54,11 +54,11 @@ export const section71Questions: QuizQuestion[] = [
     question: 'A Universal Turing Machine is significant because:',
     options: [
       'It uses no memory',
-      'It runs faster than all other machines',
       'It can simulate any other Turing machine given its description',
-      'It can only solve simple problems'
+      'It runs faster than all other machines',
+      'It can only solve simple problems',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'A Universal Turing Machine takes as input a description of any machine M and input x, and simulates M on x. This is the theoretical foundation of stored-program computers—one machine running different programs rather than separate hardware for each task.',
@@ -69,12 +69,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Turing\'s negative solution to the Entscheidungsproblem showed that:',
     options: [
+      'There is no algorithm to decide if arbitrary statements are provable',
       'Only arithmetic statements are undecidable',
       'All mathematical statements can be decided',
       'The Entscheidungsproblem was poorly posed',
-      'There is no algorithm to decide if arbitrary statements are provable'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The Entscheidungsproblem asked for an algorithm to decide provability of any statement. Turing showed no such algorithm exists, connecting to Gödel\'s incompleteness. This was a major blow to Hilbert\'s foundational program.',
@@ -84,12 +84,12 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hilbert\'s 10th problem (deciding if Diophantine equations have integer solutions) was proven:',
     options: [
-      'Undecidable by Matiyasevich in 1970',
       'Decidable by Turing in 1936',
       'Equivalent to P = NP',
+      'Undecidable by Matiyasevich in 1970',
       'Solvable in polynomial time',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Hilbert\'s 10th problem asked for an algorithm to determine if a given Diophantine equation has integer solutions. Building on work by Davis, Putnam, and Robinson, Matiyasevich proved in 1970 that no such algorithm exists—the problem is undecidable.',

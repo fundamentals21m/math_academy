@@ -6,12 +6,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who is Elinor Ostrom and why is she referenced?',
     options: [
-      'A Nobel laureate who studied governance of common pool resources',
       'A cryptocurrency developer',
       'A Bitcoin miner',
       'A financial regulator',
+      'A Nobel laureate who studied governance of common pool resources',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Elinor Ostrom won the Nobel Prize for her work on how communities successfully govern shared resources without top-down control—relevant to understanding decentralized systems.',
   },
@@ -21,11 +21,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What is a "common pool resource"?',
     options: [
       'A cryptocurrency liquidity pool',
+      'A shared resource where one person\\\\'s use affects availability for others',
       'A shared wallet',
       'A mining pool',
-      'A shared resource where one person\'s use affects availability for others'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Common pool resources (like fisheries or forests) are shared resources that can be depleted—Ostrom studied how communities govern these without either privatization or central control.',
   },
@@ -34,7 +34,7 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does Ostrom\'s framework apply to blockchain governance?',
     options: [
-      'It doesn\\'t apply to digital systems',
+      'It doesn\\\\'t apply to digital systems',
       'It proves centralization is necessary',
       'It provides principles for how decentralized communities can govern shared infrastructure',
       'It only applies to physical resources',

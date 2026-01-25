@@ -6,10 +6,26 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The characteristic polynomial of an $n \\times n$ matrix $A$ is:',
     options: [
-      '$\\det(A - \\lambda I)$',
-      '$\\det A - \\lambda$',
-      '$\\det(\\lambda I - A)$',
-      '$\\lambda^n - \\det A$'
+      '$\\det(A - \\lambda I)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The characteristic polynomial is defined as $f(\\lambda) = \\det(\\lambda I - A)$. Note: $\\det(A - \\lambda I) = (-1)^n \\det(\\lambda I - A)$ gives the same roots.',
+  },
+      '$\\det(\\lambda I - A)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The characteristic polynomial is defined as $f(\\lambda) = \\det(\\lambda I - A)$. Note: $\\det(A - \\lambda I) = (-1)^n \\det(\\lambda I - A)$ gives the same roots.',
+  },
+      '$\\det A - \\lambda
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The characteristic polynomial is defined as $f(\\lambda) = \\det(\\lambda I - A)$. Note: $\\det(A - \\lambda I) = (-1)^n \\det(\\lambda I - A)$ gives the same roots.',
+  },
+      '$\\lambda^n - \\det A
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The characteristic polynomial is defined as $f(\\lambda) = \\det(\\lambda I - A)$. Note: $\\det(A - \\lambda I) = (-1)^n \\det(\\lambda I - A)$ gives the same roots.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -19,7 +35,28 @@ export const section27Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'The degree of the characteristic polynomial of an $n \\times n$ matrix is:',
-    options: ['$n-1$', '$n$', '$n+1$', '$2n$'],
+    options: [
+      '$n-1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The characteristic polynomial $\\det(\\lambda I - A)$ is a polynomial of degree $n$ with leading term $\\lambda^n$.',
+  },
+      '$n+1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The characteristic polynomial $\\det(\\lambda I - A)$ is a polynomial of degree $n$ with leading term $\\lambda^n$.',
+  },
+      '$n
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The characteristic polynomial $\\det(\\lambda I - A)$ is a polynomial of degree $n$ with leading term $\\lambda^n$.',
+  },
+      '$2n
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The characteristic polynomial $\\det(\\lambda I - A)$ is a polynomial of degree $n$ with leading term $\\lambda^n$.',
+  },
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The characteristic polynomial $\\det(\\lambda I - A)$ is a polynomial of degree $n$ with leading term $\\lambda^n$.',
@@ -59,10 +96,26 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sum of all eigenvalues of a matrix $A$ equals:',
     options: [
-      '$\\text{tr} \\, A$',
-      '$\\det A$',
-      '$\\text{rank} \\, A$',
-      '$n \\cdot \\det A$'
+      '$\\det A
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Comparing coefficients of $\\lambda^{n-1}$ in the characteristic polynomial shows that the sum of eigenvalues equals the trace $\\text{tr} \\, A = a_{11} + a_{22} + \\cdots + a_{nn}$.',
+  },
+      '$\\text{rank} \\, A
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Comparing coefficients of $\\lambda^{n-1}$ in the characteristic polynomial shows that the sum of eigenvalues equals the trace $\\text{tr} \\, A = a_{11} + a_{22} + \\cdots + a_{nn}$.',
+  },
+      '$n \\cdot \\det A
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Comparing coefficients of $\\lambda^{n-1}$ in the characteristic polynomial shows that the sum of eigenvalues equals the trace $\\text{tr} \\, A = a_{11} + a_{22} + \\cdots + a_{nn}$.',
+  },
+      '$\\text{tr} \\, A
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Comparing coefficients of $\\lambda^{n-1}$ in the characteristic polynomial shows that the sum of eigenvalues equals the trace $\\text{tr} \\, A = a_{11} + a_{22} + \\cdots + a_{nn}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -75,10 +128,10 @@ export const section27Questions: QuizQuestion[] = [
     options: [
       'At most $n$ eigenvalues',
       'At least $n$ eigenvalues',
-      'An infinite number of eigenvalues',
       'Exactly $n$ eigenvalues (counting multiplicity)',
+      'An infinite number of eigenvalues',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'By the fundamental theorem of algebra, the degree-$n$ characteristic polynomial has exactly $n$ complex roots (counting multiplicity), so every $n \\times n$ complex matrix has exactly $n$ eigenvalues.',
   },

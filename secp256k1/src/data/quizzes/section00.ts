@@ -6,12 +6,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What problem does public-key cryptography solve?',
     options: [
+      'Enabling secure communication without pre-shared secrets',
       'Making data smaller for storage',
       'Speeding up calculations',
-      'Enabling secure communication without pre-shared secrets',
       'Generating random numbers',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Public-key cryptography allows Alice and Bob to communicate securely without having to meet first to exchange a secret key.',
   },
@@ -23,7 +23,7 @@ export const section00Questions: QuizQuestion[] = [
       'RSA was invented after Bitcoin',
       'Elliptic curves provide equivalent security with much smaller keys',
       'RSA cannot be used for signatures',
-      'Elliptic curves are simpler to understand'
+      'Elliptic curves are simpler to understand',
     ],
     correctIndex: 1,
     difficulty: 'medium',

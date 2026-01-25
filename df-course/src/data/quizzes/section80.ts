@@ -6,10 +6,22 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The localization $S^{-1}R$ of a ring $R$ at a multiplicative set $S$ consists of:',
     options: [
-      'Elements of $R$ divisible by elements of $S$',
-      'Equivalence classes of fractions $r/s$ with $r \\in R$, $s \\in S$',
+      'Equivalence classes of fractions $r/s$ with $r \\in R$, $s \\in S
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$S^{-1}R$ consists of equivalence classes of fractions $r/s$ where $r \\in R$ and $s \\in S$, with $r_1/s_1 = r_2/s_2$ if $t(r_1 s_2 - r_2 s_1) = 0$ for some $t \\in S$.',
+  },
+      'Elements of $R$ divisible by elements of $S
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$S^{-1}R$ consists of equivalence classes of fractions $r/s$ where $r \\in R$ and $s \\in S$, with $r_1/s_1 = r_2/s_2$ if $t(r_1 s_2 - r_2 s_1) = 0$ for some $t \\in S$.',
+  },
       'Elements of $R$ that are units',
-      'The intersection $R \\cap S$'
+      'The intersection $R \\cap S
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$S^{-1}R$ consists of equivalence classes of fractions $r/s$ where $r \\in R$ and $s \\in S$, with $r_1/s_1 = r_2/s_2$ if $t(r_1 s_2 - r_2 s_1) = 0$ for some $t \\in S$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,10 +32,22 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a prime ideal $P$ of $R$, the localization $R_P$ is defined as $S^{-1}R$ where:',
     options: [
-      '$S = P$',
-      '$S = \\{1\\}$',
-      '$S = R \\setminus P$',
-      '$S = R^*$ (units of $R$)'
+      '$S = P
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'When $P$ is prime, $S = R \\setminus P$ is multiplicatively closed. The localization $R_P = (R \\setminus P)^{-1}R$ is a local ring with maximal ideal $PR_P$.',
+  },
+      '$S = \\{1\\}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'When $P$ is prime, $S = R \\setminus P$ is multiplicatively closed. The localization $R_P = (R \\setminus P)^{-1}R$ is a local ring with maximal ideal $PR_P$.',
+  },
+      '$S = R^*$ (units of $R$)',
+      '$S = R \\setminus P
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'When $P$ is prime, $S = R \\setminus P$ is multiplicatively closed. The localization $R_P = (R \\setminus P)^{-1}R$ is a local ring with maximal ideal $PR_P$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -34,10 +58,26 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The localization $R_f$ for $f \\in R$ is $S^{-1}R$ where:',
     options: [
-      '$S = \\{f\\}$',
-      '$S = R \\setminus (f)$',
-      '$S = (f)$',
-      '$S = \\{f^n : n \\geq 0\\}$'
+      '$S = \\{f\\}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$R_f$ is localization at the multiplicative set $S = \\{1, f, f^2, f^3, \\ldots\\}$. This inverts all powers of $f$, making $f$ a unit in $R_f$.',
+  },
+      '$S = R \\setminus (f)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$R_f$ is localization at the multiplicative set $S = \\{1, f, f^2, f^3, \\ldots\\}$. This inverts all powers of $f$, making $f$ a unit in $R_f$.',
+  },
+      '$S = \\{f^n : n \\geq 0\\}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$R_f$ is localization at the multiplicative set $S = \\{1, f, f^2, f^3, \\ldots\\}$. This inverts all powers of $f$, making $f$ a unit in $R_f$.',
+  },
+      '$S = (f)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$R_f$ is localization at the multiplicative set $S = \\{1, f, f^2, f^3, \\ldots\\}$. This inverts all powers of $f$, making $f$ a unit in $R_f$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -48,10 +88,26 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The prime ideals of $R_P$ are in bijection with:',
     options: [
-      'Prime ideals of $R$ contained in $P$',
-      'All prime ideals of $R$',
-      'Prime ideals of $R$ containing $P$',
-      'Maximal ideals of $R$'
+      'All prime ideals of $R
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Prime ideals of $S^{-1}R$ correspond bijectively to prime ideals of $R$ that are disjoint from $S$. For $R_P$ where $S = R \\setminus P$, these are exactly the primes contained in $P$.',
+  },
+      'Prime ideals of $R$ contained in $P
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Prime ideals of $S^{-1}R$ correspond bijectively to prime ideals of $R$ that are disjoint from $S$. For $R_P$ where $S = R \\setminus P$, these are exactly the primes contained in $P$.',
+  },
+      'Prime ideals of $R$ containing $P
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Prime ideals of $S^{-1}R$ correspond bijectively to prime ideals of $R$ that are disjoint from $S$. For $R_P$ where $S = R \\setminus P$, these are exactly the primes contained in $P$.',
+  },
+      'Maximal ideals of $R
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Prime ideals of $S^{-1}R$ correspond bijectively to prime ideals of $R$ that are disjoint from $S$. For $R_P$ where $S = R \\setminus P$, these are exactly the primes contained in $P$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

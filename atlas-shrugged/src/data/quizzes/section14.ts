@@ -6,7 +6,7 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does "Account Overdrawn" refer to in this chapter?',
     options: [
-      'A character\\'s personal bank account',
+      'A character\\\\\'s personal bank account',
       'Society consuming more than it produces',
       'A specific corporate bankruptcy',
       'Railroad ticket sales',
@@ -22,10 +22,10 @@ export const section14Questions: QuizQuestion[] = [
     options: [
       'Economic growth and prosperity',
       'International investment',
-      'Political reform',
       'Shortages, breakdowns, and systemic failures',
+      'Political reform',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'As the productive are driven out and accumulated wealth is consumed, shortages, infrastructure failures, and economic collapse accelerate.',
   },
@@ -36,10 +36,10 @@ export const section14Questions: QuizQuestion[] = [
     options: [
       'Because laws prevent it',
       'Because the military intervenes',
+      'Because international trade saves them',
       'Because there is increasingly less to take as producers disappear',
-      'Because international trade saves them'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The looters face a limit: as producers leave or stop producing, there is less wealth to redistribute, and the system cannot sustain itself.',
   },
@@ -51,7 +51,7 @@ export const section14Questions: QuizQuestion[] = [
       'Their own policies',
       'Foreign enemies',
       'Natural disasters',
-      'The producers who are leaving and the "selfish" who won\'t sacrifice'
+      'The producers who are leaving and the "selfish" who won\\\'t sacrifice',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -62,12 +62,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What economic principle does the chapter illustrate?',
     options: [
-      'That consumption without production leads to eventual collapse',
       'That wealth is unlimited and can be redistributed forever',
+      'That consumption without production leads to eventual collapse',
       'That government spending creates prosperity',
-      'That natural resources determine wealth'
+      'That natural resources determine wealth',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The chapter illustrates that wealth must be produced before it can be consumed - drawing on accumulated capital without replenishing it leads to collapse.',
   },

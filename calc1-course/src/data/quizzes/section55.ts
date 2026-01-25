@@ -6,10 +6,26 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A second-order linear ODE with constant coefficients has the form:',
     options: [
-      '$y\' + ay = 0$',
-      '$y\'\' = y^2$',
-      '$y\'\' + ay\' + by = 0$',
-      '$(y\')^2 + y = 0$'
+      '$y\\'\\' + ay\\' + by = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Second-order linear constant coefficient: $y\'\' + ay\' + by = 0$.',
+  },
+      '$y\\' + ay = 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Second-order linear constant coefficient: $y\'\' + ay\' + by = 0$.',
+  },
+      '$y\\'\\' = y^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Second-order linear constant coefficient: $y\'\' + ay\' + by = 0$.',
+  },
+      '$(y\\')^2 + y = 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Second-order linear constant coefficient: $y\'\' + ay\' + by = 0$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -50,10 +66,26 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The characteristic equation for $y\'\' + ay\' + by = 0$ is:',
     options: [
-      '$r^2 + ar + b = 0$',
-      '$r + a = 0$',
-      '$r^2 = ab$',
-      '$e^r + a = 0$'
+      '$r + a = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Substituting $y = e^{rx}$ gives $r^2 + ar + b = 0$.',
+  },
+      '$r^2 = ab
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Substituting $y = e^{rx}$ gives $r^2 + ar + b = 0$.',
+  },
+      '$r^2 + ar + b = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Substituting $y = e^{rx}$ gives $r^2 + ar + b = 0$.',
+  },
+      '$e^r + a = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Substituting $y = e^{rx}$ gives $r^2 + ar + b = 0$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -94,10 +126,26 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The characteristic equation for $y\'\' - 4y = 0$ is:',
     options: [
-      '$r - 4 = 0$',
-      '$r^2 + 4 = 0$',
-      '$r^2 - 4 = 0$',
-      '$r^2 = 0$'
+      '$r - 4 = 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$y\'\' - 4y = 0$ gives $r^2 - 4 = 0$, so $r = \\pm 2$.',
+  },
+      '$r^2 - 4 = 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$y\'\' - 4y = 0$ gives $r^2 - 4 = 0$, so $r = \\pm 2$.',
+  },
+      '$r^2 + 4 = 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$y\'\' - 4y = 0$ gives $r^2 - 4 = 0$, so $r = \\pm 2$.',
+  },
+      '$r^2 = 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$y\'\' - 4y = 0$ gives $r^2 - 4 = 0$, so $r = \\pm 2$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

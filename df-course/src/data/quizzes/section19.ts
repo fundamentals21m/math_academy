@@ -75,10 +75,22 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The kernel of the sign homomorphism $\\text{sgn}: S_n \\to \\{\\pm 1\\}$ is:',
     options: [
-      '$A_n$',
-      '$S_n$',
-      '$\\{e\\}$',
-      'The set of transpositions'
+      '$S_n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\ker(\\text{sgn}) = \\{\\sigma : \\text{sgn}(\\sigma) = 1\\} = A_n$.',
+  },
+      '$\\{e\\}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\ker(\\text{sgn}) = \\{\\sigma : \\text{sgn}(\\sigma) = 1\\} = A_n$.',
+  },
+      '$A_n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\ker(\\text{sgn}) = \\{\\sigma : \\text{sgn}(\\sigma) = 1\\} = A_n$.',
+  },
+      'The set of transpositions',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -90,9 +102,17 @@ export const section19Questions: QuizQuestion[] = [
     question: 'Is $A_n$ a normal subgroup of $S_n$?',
     options: [
       'No, because $S_n$ is not abelian',
+      'Only for $n \\geq 5
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Any subgroup of index 2 is normal. Since $[S_n : A_n] = 2$, $A_n$ is normal in $S_n$.',
+  },
       'Yes, because it has index 2',
-      'Only for $n \\geq 5$',
-      'Only for $n \\leq 4$'
+      'Only for $n \\leq 4
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Any subgroup of index 2 is normal. Since $[S_n : A_n] = 2$, $A_n$ is normal in $S_n$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

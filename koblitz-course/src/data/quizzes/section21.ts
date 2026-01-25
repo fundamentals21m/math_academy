@@ -7,11 +7,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Lenstra\'s ECM (Elliptic Curve Method) is used for:',
     options: [
       'Primality testing',
-      'Integer factorization',
       'Discrete logarithms',
       'Key generation',
+      'Integer factorization',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'ECM is a factorization algorithm that finds small to medium factors efficiently.',
   },
@@ -22,10 +22,10 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       'The size of $n$ being factored',
       'The field characteristic',
+      'The size of the smallest prime factor',
       'The number of curves tried',
-      'The size of the smallest prime factor'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Unlike QS/NFS, ECM\'s complexity depends on the factor size, not $n$.',
   },
@@ -34,10 +34,10 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'ECM generalizes which classical factoring method?',
     options: [
-      'Pollard\'s $p-1$ method',
-      'Fermat\'s method',
+      'Pollard\\\'s $p-1$ method',
+      'Fermat\\\'s method',
       'Trial division',
-      'Quadratic sieve'
+      'Quadratic sieve',
     ],
     correctIndex: 0,
     difficulty: 'medium',

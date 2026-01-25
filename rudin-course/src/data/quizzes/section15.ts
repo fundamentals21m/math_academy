@@ -6,10 +6,14 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A sequence $\\{p_n\\}$ in a metric space is Cauchy if:',
     options: [
+      'For every $\\varepsilon > 0$, there exists $N$ such that $m, n \\geq N$ implies $d(p_m, p_n) < \\varepsilon
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A Cauchy sequence has terms that become arbitrarily close to each other: for any $\\varepsilon > 0$, eventually $d(p_m, p_n) < \\varepsilon$ for all large $m, n$.',
+  },
       'The sequence converges',
       'Each term equals the previous term',
       'The sequence is bounded',
-      'For every $\\varepsilon > 0$, there exists $N$ such that $m, n \\geq N$ implies $d(p_m, p_n) < \\varepsilon$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -35,9 +39,13 @@ export const section15Questions: QuizQuestion[] = [
     question: 'A metric space is complete if:',
     options: [
       'It is bounded',
-      'Every Cauchy sequence converges (to a point in the space)',
       'It is compact',
-      'It contains $\\mathbb{Q}$'
+      'It contains $\\mathbb{Q}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Completeness means Cauchy sequences converge within the space. $\\mathbb{R}^k$ is complete, but $\\mathbb{Q}$ is not (the Cauchy sequence $(1.4, 1.41, 1.414, \\ldots)$ has limit $\\sqrt{2} \\notin \\mathbb{Q}$).',
+  },
+      'Every Cauchy sequence converges (to a point in the space)',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -51,7 +59,7 @@ export const section15Questions: QuizQuestion[] = [
       'Convergent',
       'Monotonic',
       'Bounded',
-      'Eventually constant'
+      'Eventually constant',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -63,11 +71,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Which space is NOT complete?',
     options: [
       '$\\mathbb{R}$ with the standard metric',
+      '$\\mathbb{Q}$ with the standard metric',
       '$\\mathbb{R}^n$ with the Euclidean metric',
       'A compact metric space',
-      '$\\mathbb{Q}$ with the standard metric'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: '$\\mathbb{Q}$ is not complete. For example, a sequence of rationals approximating $\\sqrt{2}$ is Cauchy but does not converge in $\\mathbb{Q}$. Compact spaces and $\\mathbb{R}^n$ are complete.',
   },

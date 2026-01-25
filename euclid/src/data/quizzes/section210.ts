@@ -9,7 +9,7 @@ export const section210Questions: QuizQuestion[] = [
       'Is divisible by 2',
       'Is a perfect square',
       'Has a prime factor',
-      'Has exactly two factors'
+      'Has exactly two factors',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section210Questions: QuizQuestion[] = [
     question: 'Which of the following correctly identifies a prime factor of 91?',
     options: [
       '2',
+      '7',
       '3',
       '9',
-      '7'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '91 = 7 * 13, so 7 is a prime factor of 91.',
   },
@@ -34,12 +34,12 @@ export const section210Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The proof of VII.31 uses a descent argument: if the smallest divisor greater than 1 were composite, then:',
     options: [
-      'The number would be prime',
       'That divisor would have a smaller divisor greater than 1, contradiction',
+      'The number would be prime',
       'The number would equal 1',
       'The divisor would equal the number itself',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'If the smallest divisor d > 1 were composite, it would have a divisor 1 < e < d that also divides the original number, contradicting minimality of d.',
   },

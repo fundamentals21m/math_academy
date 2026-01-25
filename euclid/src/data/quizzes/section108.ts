@@ -6,12 +6,12 @@ export const section108Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In IV.6, how is a square inscribed in a circle?',
     options: [
-      'Using two perpendicular diameters',
       'Using angle bisectors',
       'Using tangent lines',
-      'Using the golden ratio'
+      'Using two perpendicular diameters',
+      'Using the golden ratio',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Two perpendicular diameters create four points on the circle. Connecting consecutive points forms an inscribed square.',
   },
@@ -20,12 +20,12 @@ export const section108Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the inscribed figure in IV.6 a square and not just a rectangle?',
     options: [
-      'Because the diameters are equal in length',
       'Because all radii are equal and the diameters are perpendicular',
+      'Because the diameters are equal in length',
       'Because the circle is round',
-      'By assumption'
+      'By assumption',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Equal radii and perpendicular diameters ensure all four sides are equal (equilateral). The angles are right because each is inscribed in a semicircle (III.31).',
   },

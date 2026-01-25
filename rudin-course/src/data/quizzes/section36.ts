@@ -6,10 +6,26 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Darboux\'s Theorem states that if $f$ is differentiable on $[a, b]$, then $f\'$:',
     options: [
-      'Has the intermediate value property on $[a, b]$',
-      'Is bounded on $[a, b]$',
-      'Is continuous on $[a, b]$',
-      'Is Riemann integrable on $[a, b]$'
+      'Is bounded on $[a, b]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Darboux\'s Theorem: If $f$ is differentiable on $[a,b]$, then $f\'$ takes every value between $f\'(a)$ and $f\'(b)$, even though $f\'$ need not be continuous. This is a remarkable property that derivatives share with continuous functions.',
+  },
+      'Has the intermediate value property on $[a, b]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Darboux\'s Theorem: If $f$ is differentiable on $[a,b]$, then $f\'$ takes every value between $f\'(a)$ and $f\'(b)$, even though $f\'$ need not be continuous. This is a remarkable property that derivatives share with continuous functions.',
+  },
+      'Is continuous on $[a, b]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Darboux\'s Theorem: If $f$ is differentiable on $[a,b]$, then $f\'$ takes every value between $f\'(a)$ and $f\'(b)$, even though $f\'$ need not be continuous. This is a remarkable property that derivatives share with continuous functions.',
+  },
+      'Is Riemann integrable on $[a, b]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Darboux\'s Theorem: If $f$ is differentiable on $[a,b]$, then $f\'$ takes every value between $f\'(a)$ and $f\'(b)$, even though $f\'$ need not be continuous. This is a remarkable property that derivatives share with continuous functions.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -78,10 +94,10 @@ export const section36Questions: QuizQuestion[] = [
     options: [
       'Must be a jump discontinuity',
       'Must be a removable discontinuity',
-      'Cannot be a jump discontinuity (by Darboux\\'s Theorem)',
-      'Must be an essential discontinuity where $f\\'$ is unbounded',
+      'Must be an essential discontinuity where $f\\\\'$ is unbounded',
+      'Cannot be a jump discontinuity (by Darboux\\\\'s Theorem)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'By Darboux\'s Theorem, $f\'$ has the IVP, so $f\'$ cannot have a jump discontinuity (which would skip intermediate values). Discontinuities of derivatives must be of the "oscillatory" type, like in $x^2\\sin(1/x)$.',
   },

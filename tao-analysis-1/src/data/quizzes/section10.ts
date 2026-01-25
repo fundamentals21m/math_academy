@@ -73,10 +73,22 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following sets is uncountable?',
     options: [
-      'The integers $\\mathbb{Z}$',
-      'The rational numbers $\\mathbb{Q}$',
+      'The integers $\\mathbb{Z}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cantor proved that $\\mathbb{R}$ is uncountable using the diagonal argument. In contrast, $\\mathbb{Z}$ and $\\mathbb{Q}$ are countable.',
+  },
+      'The real numbers $\\mathbb{R}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Cantor proved that $\\mathbb{R}$ is uncountable using the diagonal argument. In contrast, $\\mathbb{Z}$ and $\\mathbb{Q}$ are countable.',
+  },
+      'The rational numbers $\\mathbb{Q}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Cantor proved that $\\mathbb{R}$ is uncountable using the diagonal argument. In contrast, $\\mathbb{Z}$ and $\\mathbb{Q}$ are countable.',
+  },
       'The even natural numbers',
-      'The real numbers $\\mathbb{R}$'
     ],
     correctIndex: 3,
     difficulty: 'medium',

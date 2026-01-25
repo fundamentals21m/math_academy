@@ -35,7 +35,7 @@ export const section64Questions: QuizQuestion[] = [
       '-2',
       '2',
       '1',
-      '0'
+      '0',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -63,10 +63,30 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The relationship between Euler characteristic $\\chi$ and genus $g$ for orientable surfaces is:',
     options: [
-      '$\\chi = g$',
-      '$\\chi = 2 - 2g$',
-      '$\\chi = 2g$',
-      '$\\chi = 2 + 2g$'
+      '$\\chi = 2 - 2g
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      'For orientable surfaces, χ = 2 - 2g. A sphere (g=0) has χ=2, a torus (g=1) has χ=0, a double torus (g=2) has χ=-2, and so on. Each additional handle decreases χ by 2.',
+  },
+      '$\\chi = g
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'For orientable surfaces, χ = 2 - 2g. A sphere (g=0) has χ=2, a torus (g=1) has χ=0, a double torus (g=2) has χ=-2, and so on. Each additional handle decreases χ by 2.',
+  },
+      '$\\chi = 2g
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'For orientable surfaces, χ = 2 - 2g. A sphere (g=0) has χ=2, a torus (g=1) has χ=0, a double torus (g=2) has χ=-2, and so on. Each additional handle decreases χ by 2.',
+  },
+      '$\\chi = 2 + 2g
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'For orientable surfaces, χ = 2 - 2g. A sphere (g=0) has χ=2, a torus (g=1) has χ=0, a double torus (g=2) has χ=-2, and so on. Each additional handle decreases χ by 2.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -79,11 +99,11 @@ export const section64Questions: QuizQuestion[] = [
     question: 'Euler\'s formula can be used to prove that $K_5$ (complete graph on 5 vertices) is non-planar because:',
     options: [
       'The formula gives a negative number of faces',
-      '$K_5$ has too many vertices',
       'The required number of faces contradicts the edge-face inequality',
-      '$K_5$ has odd Euler characteristic'
+      '$K_5$ has too many vertices',
+      '$K_5$ has odd Euler characteristic',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'If K₅ (V=5, E=10) were planar, Euler\'s formula gives F=7. But since each face needs ≥3 edges and each edge borders ≤2 faces, we need 3F ≤ 2E, so F ≤ 6.67. This contradicts F=7, proving K₅ is non-planar.',

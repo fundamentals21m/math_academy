@@ -36,10 +36,18 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The IVT can be used to show that $x^3 - x - 1 = 0$ has a root in $[1, 2]$ because:',
     options: [
-      '$f(1) > 0$ and $f(2) > 0$',
-      '$f(1) = -1 < 0$ and $f(2) = 5 > 0$',
+      '$f(1) > 0$ and $f(2) > 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$f(1) = 1 - 1 - 1 = -1 < 0$ and $f(2) = 8 - 2 - 1 = 5 > 0$. By IVT, there is a root.',
+  },
       '$f$ is not continuous',
-      'The equation has no real roots'
+      '$f(1) = -1 < 0$ and $f(2) = 5 > 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$f(1) = 1 - 1 - 1 = -1 < 0$ and $f(2) = 8 - 2 - 1 = 5 > 0$. By IVT, there is a root.',
+  },
+      'The equation has no real roots',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -50,10 +58,18 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ is continuous on $[a,b]$ and $f(a) < k < f(b)$, then:',
     options: [
-      'No $c$ exists with $f(c) = k$',
+      'There exists $c \\in (a,b)$ with $f(c) = k
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The general IVT: continuous functions take all intermediate values.',
+  },
+      'No $c$ exists with $f(c) = k
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The general IVT: continuous functions take all intermediate values.',
+  },
       '$f$ must be increasing',
-      'There exists $c \\in (a,b)$ with $f(c) = k$',
-      '$k$ must equal zero'
+      '$k$ must equal zero',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -73,12 +89,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The IVT requires:',
     options: [
-      'Continuity on a closed interval',
       'Differentiability',
       'The function to be monotonic',
+      'Continuity on a closed interval',
       'The function to be polynomial',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The key hypothesis is continuity on a closed interval.',
   },

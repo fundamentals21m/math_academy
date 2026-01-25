@@ -111,11 +111,11 @@ export const section73Questions: QuizQuestion[] = [
     question: 'To show that a polynomial $f(x) \\in \\mathbb{Q}[x]$ of degree $5$ has Galois group $S_5$, it suffices to show:',
     options: [
       '$f$ is irreducible',
-      '$f$ has five distinct roots',
       '$f$ is irreducible and has exactly two non-real roots',
-      '$f$ is monic'
+      '$f$ has five distinct roots',
+      '$f$ is monic',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'If $f$ is irreducible of degree $5$, then $\\text{Gal}(f)$ is a transitive subgroup of $S_5$, so contains a $5$-cycle. Having exactly $2$ non-real roots means complex conjugation restricts to a transposition. A transitive subgroup of $S_5$ containing a $5$-cycle and a transposition must be all of $S_5$.',
   },

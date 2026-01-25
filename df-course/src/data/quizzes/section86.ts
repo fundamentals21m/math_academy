@@ -6,10 +6,26 @@ export const section86Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Group cohomology $H^n(G, A)$ is defined for:',
     options: [
-      'Any group $G$ and any abelian group $A$',
-      'Only abelian groups $G$',
-      'Only finite groups $G$',
-      'Any group $G$ and any $G$-module $A$'
+      'Any group $G$ and any $G$-module $A
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Group cohomology $H^n(G, A)$ is defined for a group $G$ and a $G$-module $A$ (an abelian group with a $G$-action). It can be computed as $\\text{Ext}^n_{\\mathbb{Z}G}(\\mathbb{Z}, A)$.',
+  },
+      'Any group $G$ and any abelian group $A
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Group cohomology $H^n(G, A)$ is defined for a group $G$ and a $G$-module $A$ (an abelian group with a $G$-action). It can be computed as $\\text{Ext}^n_{\\mathbb{Z}G}(\\mathbb{Z}, A)$.',
+  },
+      'Only abelian groups $G
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Group cohomology $H^n(G, A)$ is defined for a group $G$ and a $G$-module $A$ (an abelian group with a $G$-action). It can be computed as $\\text{Ext}^n_{\\mathbb{Z}G}(\\mathbb{Z}, A)$.',
+  },
+      'Only finite groups $G
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Group cohomology $H^n(G, A)$ is defined for a group $G$ and a $G$-module $A$ (an abelian group with a $G$-action). It can be computed as $\\text{Ext}^n_{\\mathbb{Z}G}(\\mathbb{Z}, A)$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -77,11 +93,11 @@ export const section86Questions: QuizQuestion[] = [
     question: 'Group cohomology can be computed using:',
     options: [
       'Gaussian elimination only',
-      'The bar resolution of $\\mathbb{Z}$ as a $\\mathbb{Z}G$-module',
       'Smith normal form',
+      'The bar resolution of $\\mathbb{Z}$ as a $\\mathbb{Z}G$-module',
       'Eigenvalue decomposition',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The standard bar resolution is a free resolution of $\\mathbb{Z}$ as a $\\mathbb{Z}G$-module. Applying $\\text{Hom}_{\\mathbb{Z}G}(-, A)$ and taking cohomology gives $H^n(G, A)$.',
   },

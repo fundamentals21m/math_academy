@@ -9,7 +9,7 @@ export const section121Questions: QuizQuestion[] = [
       'They cannot be added',
       'Only equal multiples can be added',
       'The sums have different ratios',
-      'mB + nB = (m+n)B and similarly for the other sequence'
+      'mB + nB = (m+n)B and similarly for the other sequence',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -35,11 +35,11 @@ export const section121Questions: QuizQuestion[] = [
     question: 'If A = 3B, C = 3D, E = 2B, and F = 2D, what is (A+E):(C+F)?',
     options: [
       '5:5',
-      '3:2',
       '5B:5D, which simplifies to B:D',
+      '3:2',
       'It equals B:D',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A + E = 3B + 2B = 5B and C + F = 3D + 2D = 5D. So (A+E):(C+F) = 5B:5D = B:D.',
   },

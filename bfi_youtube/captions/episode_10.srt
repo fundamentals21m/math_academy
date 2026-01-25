@@ -1,0 +1,284 @@
+1
+00:00:00,000 --> 00:00:05,040
+Holding a Bitcoin Treasury and using it in lieu of ETFs is a superior strategy that eliminates
+
+2
+00:00:05,040 --> 00:00:07,799
+the counterparty credit risk entirely.
+
+3
+00:00:07,799 --> 00:00:12,560
+Deferred compensation is one of the most powerful tools for executives and highly compensated
+
+4
+00:00:12,560 --> 00:00:16,440
+employees to gain Bitcoin exposure through their employers.
+
+5
+00:00:16,440 --> 00:00:20,760
+This chapter explores how companies can use non-qualified deferred compensation plans
+
+6
+00:00:20,760 --> 00:00:27,280
+to offer Bitcoin benefits, non-qualified deferred compensation plans, NQDC plans, allow
+
+7
+00:00:27,280 --> 00:00:32,560
+highly compensated employees to defer a portion of their compensation to a future date.
+
+8
+00:00:32,560 --> 00:00:38,920
+Unlike 401K plans, NQDC plans are not subject to a rise of regulations and have no contribution
+
+9
+00:00:38,920 --> 00:00:40,039
+limits.
+
+10
+00:00:40,039 --> 00:00:44,439
+This makes them ideal for significant Bitcoin accumulation.
+
+11
+00:00:44,439 --> 00:00:47,240
+Executives can defer unlimited amounts.
+
+12
+00:00:47,240 --> 00:00:51,659
+Taxes are deferred until distribution, allowing Bitcoin gains to compound without annual
+
+13
+00:00:51,659 --> 00:00:53,359
+tax drag.
+
+14
+00:00:53,359 --> 00:00:56,280
+Companies have broad discretion over investment options.
+
+15
+00:00:56,280 --> 00:01:02,880
+They can offer Bitcoin when 401K plans cannot and deferred amounts typically vest over time,
+
+16
+00:01:02,880 --> 00:01:07,120
+creating golden handcuffs, retention incentives for key employees.
+
+17
+00:01:07,120 --> 00:01:09,599
+There's an important trade-off to understand.
+
+18
+00:01:09,599 --> 00:01:13,040
+NQDC plans are not protected by a riser.
+
+19
+00:01:13,040 --> 00:01:15,480
+Participants are unsecured creditors of the company.
+
+20
+00:01:15,480 --> 00:01:19,519
+If the company goes bankrupt, they may lose their deferred compensation.
+
+21
+00:01:19,519 --> 00:01:22,079
+This is why it's called riding the wave.
+
+22
+00:01:22,079 --> 00:01:24,200
+You're tied to the company's fate.
+
+23
+00:01:24,200 --> 00:01:28,319
+But for Bitcoin, this creates a unique alignment of interests.
+
+24
+00:01:28,319 --> 00:01:32,959
+The company and the executive both benefit from Bitcoin's appreciation, creating shared
+
+25
+00:01:32,959 --> 00:01:34,239
+incentives.
+
+26
+00:01:34,239 --> 00:01:37,000
+Why is NQDC perfect for Bitcoin?
+
+27
+00:01:37,000 --> 00:01:40,239
+First, long-time horizons.
+
+28
+00:01:40,239 --> 00:01:44,840
+Executives typically defer for 10 to 20 plus years, aligning with Bitcoin's optimal holding
+
+29
+00:01:44,840 --> 00:01:45,840
+period.
+
+30
+00:01:45,840 --> 00:01:49,079
+Second, tax-deferred growth.
+
+31
+00:01:49,079 --> 00:01:53,599
+Bitcoin's volatility becomes less relevant when gains compound tax-free for decades.
+
+32
+00:01:53,599 --> 00:01:56,480
+Third, no contribution limits.
+
+33
+00:01:56,480 --> 00:02:00,200
+High earners can allocate significant amounts to Bitcoin exposure.
+
+34
+00:02:00,200 --> 00:02:02,920
+Fourth, company alignment.
+
+35
+00:02:02,920 --> 00:02:07,280
+It creates shared interest between company and executive in Bitcoin's success.
+
+36
+00:02:07,280 --> 00:02:09,919
+There are two main implementation options.
+
+37
+00:02:09,919 --> 00:02:14,319
+Option one, use Bitcoin ETFs like IBIT or FBTC.
+
+38
+00:02:14,319 --> 00:02:18,800
+This is the easiest to implement, standard custody through the ETF provider.
+
+39
+00:02:18,800 --> 00:02:22,599
+But it comes with counterparty risk from the ETF and custodian.
+
+40
+00:02:22,599 --> 00:02:25,000
+Option two, direct treasury.
+
+41
+00:02:25,000 --> 00:02:27,120
+The company holds actual Bitcoin.
+
+42
+00:02:27,120 --> 00:02:29,639
+This eliminates ETF counterparty risk.
+
+43
+00:02:29,639 --> 00:02:34,840
+It requires custody infrastructure to be built, but it's the superior long-term solution.
+
+44
+00:02:34,840 --> 00:02:40,439
+The recommended approach is to start with ETFs to get the program operational quickly.
+
+45
+00:02:40,439 --> 00:02:44,080
+Then build internal Bitcoin custody capability.
+
+46
+00:02:44,080 --> 00:02:50,800
+Finally, transition to company-held Bitcoin treasury to back the NQDC program, eliminating
+
+47
+00:02:50,800 --> 00:02:52,680
+all counterparty risk.
+
+48
+00:02:52,680 --> 00:02:58,120
+When a company offers Bitcoin in its NQDC plan, it may need to hedge the exposure.
+
+49
+00:02:58,120 --> 00:03:03,360
+If an executive defers $1 million into a Bitcoin option and Bitcoin triples, the company
+
+50
+00:03:03,360 --> 00:03:05,400
+owes $3 million.
+
+51
+00:03:05,400 --> 00:03:07,919
+They need to have actually bought the Bitcoin.
+
+52
+00:03:07,919 --> 00:03:14,199
+It may be that none of the available ETFs would satisfy robust due diligence.
+
+53
+00:03:14,199 --> 00:03:19,960
+A golden opportunity exists for someone to create an ETF exclusively used for hedging
+
+54
+00:03:19,960 --> 00:03:21,719
+Bitcoin exposure.
+
+55
+00:03:21,719 --> 00:03:26,800
+Optimized for delivering price exposure as closely as possible, reducing custodial risk
+
+56
+00:03:26,800 --> 00:03:31,919
+to an absolute minimum, and providing complete transparency with ongoing proof of digital
+
+57
+00:03:31,919 --> 00:03:35,439
+signatures, let's recap what we learned in this chapter.
+
+58
+00:03:35,439 --> 00:03:40,680
+NQDC plans have no contribution limits and broad investment discretion, making them ideal
+
+59
+00:03:40,680 --> 00:03:42,520
+for Bitcoin exposure.
+
+60
+00:03:42,520 --> 00:03:46,439
+The ARIASA trade-off means participants are unsecured creditors.
+
+61
+00:03:46,439 --> 00:03:50,360
+They are writing the wave with the company's fate.
+
+62
+00:03:50,360 --> 00:03:52,400
+Start with ETFs.
+
+63
+00:03:52,400 --> 00:03:54,400
+Evolve to treasury.
+
+64
+00:03:54,400 --> 00:03:59,759
+Use ETFs to launch quickly, then build toward company-held Bitcoin.
+
+65
+00:03:59,759 --> 00:04:02,719
+Direct treasury eliminates counterparty risk.
+
+66
+00:04:02,719 --> 00:04:08,599
+The superior long-term solution removes all ETFs and custodial dependencies.
+
+67
+00:04:08,599 --> 00:04:12,840
+Long-time horizons align perfectly.
+
+68
+00:04:12,840 --> 00:04:18,560
+Use deferring for 10-20-plus years match Bitcoin's optimal holding period.
+
+69
+00:04:18,560 --> 00:04:23,439
+In the next episode, we'll explore mutual funds and ETFs.
+
+70
+00:04:23,439 --> 00:04:28,439
+How fund managers can integrate Bitcoin to dramatically improve portfolio performance.
+
+71
+00:04:28,439 --> 00:04:29,199
+See you in the next one.
+

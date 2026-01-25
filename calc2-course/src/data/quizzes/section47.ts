@@ -6,10 +6,26 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A linear differential equation of order $n$ has the form:',
     options: [
-      '$P_0(x)y^n + P_1(x)y^{n-1} + \\cdots + P_n(x)y = R(x)$',
-      '$P_0(x)y^{(n)} + P_1(x)y^{(n-1)} + \\cdots + P_n(x)y = R(x)$',
-      '$y^n + y^{n-1} + \\cdots + y = R(x)$',
-      '$y^{(n)} = P(x)$'
+      '$P_0(x)y^{(n)} + P_1(x)y^{(n-1)} + \\cdots + P_n(x)y = R(x)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Linear means linear in $y$ and its derivatives $y\', y\'\', \\ldots, y^{(n)}$. The notation $y^{(k)}$ denotes the $k$-th derivative.',
+  },
+      '$P_0(x)y^n + P_1(x)y^{n-1} + \\cdots + P_n(x)y = R(x)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Linear means linear in $y$ and its derivatives $y\', y\'\', \\ldots, y^{(n)}$. The notation $y^{(k)}$ denotes the $k$-th derivative.',
+  },
+      '$y^n + y^{n-1} + \\cdots + y = R(x)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Linear means linear in $y$ and its derivatives $y\', y\'\', \\ldots, y^{(n)}$. The notation $y^{(k)}$ denotes the $k$-th derivative.',
+  },
+      '$y^{(n)} = P(x)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Linear means linear in $y$ and its derivatives $y\', y\'\', \\ldots, y^{(n)}$. The notation $y^{(k)}$ denotes the $k$-th derivative.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

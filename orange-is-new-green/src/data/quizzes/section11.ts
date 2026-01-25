@@ -22,10 +22,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       '200',
       '1,000',
+      '2,000',
       '4,000',
-      '2,000'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: '($40,000 - $20,000) / $10 = 2,000 CETs, each specifying the payout for that $10 price range.',
   },
@@ -36,10 +36,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'Canceling the contract',
       'Doubling the position size',
-      'Entering a new DLC when the old one expires to maintain continuous hedge',
       'Converting to a different cryptocurrency',
+      'Entering a new DLC when the old one expires to maintain continuous hedge',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Rolling involves entering a new DLC as the old one expires to maintain a continuous hedge, similar to rolling traditional futures contracts.',
   },

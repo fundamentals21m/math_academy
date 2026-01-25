@@ -8,8 +8,12 @@ export const section33Questions: QuizQuestion[] = [
     options: [
       'Finite',
       'Abelian',
+      'Isomorphic to $\\mathbb{Z} \\times \\mathbb{Z}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The free group $F_2$ is non-abelian (since $ab \\neq ba$ in $F_2$) and infinite. It is NOT isomorphic to $\\mathbb{Z} \\times \\mathbb{Z}$, which is the free abelian group on two generators.',
+  },
       'Non-abelian and infinite',
-      'Isomorphic to $\\mathbb{Z} \\times \\mathbb{Z}$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,10 +24,26 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the free group $F(a, b)$, what is the reduced form of $aba^{-1}b^{-1}ab$?',
     options: [
-      '$ab$',
-      '$b$',
-      '$a^2$',
-      '$aba^{-1}b^{-1}ab$'
+      '$aba^{-1}b^{-1}ab
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The word $aba^{-1}b^{-1}ab$ is already reduced since no adjacent pair consists of an element and its inverse. This is the commutator $[a,b]$ followed by $ab$.',
+  },
+      '$ab
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The word $aba^{-1}b^{-1}ab$ is already reduced since no adjacent pair consists of an element and its inverse. This is the commutator $[a,b]$ followed by $ab$.',
+  },
+      '$b
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The word $aba^{-1}b^{-1}ab$ is already reduced since no adjacent pair consists of an element and its inverse. This is the commutator $[a,b]$ followed by $ab$.',
+  },
+      '$a^2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The word $aba^{-1}b^{-1}ab$ is already reduced since no adjacent pair consists of an element and its inverse. This is the commutator $[a,b]$ followed by $ab$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -34,10 +54,22 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The presentation $\\langle a, b \\mid aba^{-1}b^{-1} \\rangle$ defines:',
     options: [
-      'The free abelian group $\\mathbb{Z}^2$',
-      'The free group $F_2$',
+      'The free group $F_2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The relation $aba^{-1}b^{-1} = 1$ means $ab = ba$, so $a$ and $b$ commute. This makes the group the free abelian group on two generators, isomorphic to $\\mathbb{Z}^2$.',
+  },
       'The trivial group',
-      'The dihedral group $D_4$'
+      'The free abelian group $\\mathbb{Z}^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The relation $aba^{-1}b^{-1} = 1$ means $ab = ba$, so $a$ and $b$ commute. This makes the group the free abelian group on two generators, isomorphic to $\\mathbb{Z}^2$.',
+  },
+      'The dihedral group $D_4
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The relation $aba^{-1}b^{-1} = 1$ means $ab = ba$, so $a$ and $b$ commute. This makes the group the free abelian group on two generators, isomorphic to $\\mathbb{Z}^2$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -75,11 +107,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'If $F$ is a free group, which statement is TRUE?',
     options: [
       '$F$ has only finitely many subgroups',
-      'Every subgroup of $F$ is free',
       'Every quotient of $F$ is free',
+      'Every subgroup of $F$ is free',
       '$F$ is always abelian',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The Nielsen-Schreier theorem states that every subgroup of a free group is free. However, quotients of free groups need not be free (any group is a quotient of some free group).',
   },

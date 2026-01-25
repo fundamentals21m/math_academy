@@ -10,11 +10,11 @@ export const section62Questions: QuizQuestion[] = [
     question: 'What are the components of a graph (oriented multigraph)?',
     options: [
       'Objects and morphisms only',
-      'Arrows, objects, and source/target mappings S and T',
       'Sets and functions between them',
       'Vertices and edges with weights',
+      'Arrows, objects, and source/target mappings S and T',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A graph consists of a class of arrows (directed edges), a class of objects (nodes), and two mappings S (source) and T (target) from arrows to objects.',
@@ -23,7 +23,12 @@ export const section62Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'How many conditions must a graph satisfy to be a category?',
-    options: ['Two', 'Three', 'Four', 'Five'],
+    options: [
+      'Two',
+      'Three',
+      'Four',
+      'Five',
+    ],
     correctIndex: 2,
     difficulty: 'easy',
     explanation:
@@ -48,7 +53,12 @@ export const section62Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'In the discrete category corresponding to a set A, what is the composition a ∘ a?',
-    options: ['Undefined', 'The empty set', 'a', '1'],
+    options: [
+      'Undefined',
+      'The empty set',
+      'a',
+      '1',
+    ],
     correctIndex: 2,
     difficulty: 'medium',
     explanation:
@@ -59,12 +69,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When a monoid is viewed as a category, how many objects does it have?',
     options: [
-      'One',
       'Zero',
+      'One',
       'As many as the monoid has elements',
       'Infinitely many',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A monoid viewed as a category has exactly one object (usually denoted *). The elements of the monoid become the arrows, and composition is the monoid operation.',
@@ -90,12 +100,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a pre-ordered set (A, ≤) viewed as a category, what are the arrows?',
     options: [
-      'All elements of A',
       'All pairs (a, b) where a ≤ b',
+      'All elements of A',
       'All functions from A to A',
       'Only the identity elements',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The arrows in this category are pairs (a, b) where a ≤ b. The source is S((a,b)) = a and the target is T((a,b)) = b.',
@@ -107,11 +117,11 @@ export const section62Questions: QuizQuestion[] = [
       'Why does the identity arrow 1ₐ = (a, a) exist for each element in a pre-ordered set category?',
     options: [
       'By the transitivity of ≤',
-      'By the antisymmetry of ≤',
       'By the reflexivity of ≤',
+      'By the antisymmetry of ≤',
       'By the symmetry of ≤',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Reflexivity of ≤ means a ≤ a for all a, so (a, a) is always a valid arrow. This becomes the identity arrow for object a.',
@@ -124,7 +134,7 @@ export const section62Questions: QuizQuestion[] = [
       '2 objects, 1 nonidentity arrow',
       '2 objects, 0 nonidentity arrows',
       '1 object, 2 nonidentity arrows',
-      '2 objects, 2 nonidentity arrows'
+      '2 objects, 2 nonidentity arrows',
     ],
     correctIndex: 0,
     difficulty: 'easy',

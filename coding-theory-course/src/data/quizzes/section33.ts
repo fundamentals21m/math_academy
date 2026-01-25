@@ -6,10 +6,14 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The weight distribution of an MDS code is:',
     options: [
+      'Completely determined by $n$, $k$, and $q
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A remarkable property of MDS codes is that their weight distribution depends only on the parameters $n$, $k$, and the field size $q$, not on the specific code.',
+  },
       'Dependent on the specific generator matrix',
-      'Completely determined by $n$, $k$, and $q$',
       'Always uniform',
-      'Unknown in general'
+      'Unknown in general',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -29,10 +33,22 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The weight enumerator $W_C(x, y)$ of an $[n, k]$ MDS code over $\\mathbb{F}_q$ has the form:',
     options: [
-      '$(x + y)^n$',
-      '$x^n + (q^k - 1)y^n$',
-      '$\\sum_{i=0}^{k} A_i x^{n-d-i+1} y^{d+i-1}$ for specific coefficients $A_i$',
-      'Cannot be determined without knowing the generator matrix'
+      '$(x + y)^n
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'MDS codes have a specific weight distribution formula. The non-zero weights range from $d = n-k+1$ to $n$, and the number of codewords of each weight is determined by a closed-form expression.',
+  },
+      '$\\sum_{i=0}^{k} A_i x^{n-d-i+1} y^{d+i-1}$ for specific coefficients $A_i
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'MDS codes have a specific weight distribution formula. The non-zero weights range from $d = n-k+1$ to $n$, and the number of codewords of each weight is determined by a closed-form expression.',
+  },
+      '$x^n + (q^k - 1)y^n
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'MDS codes have a specific weight distribution formula. The non-zero weights range from $d = n-k+1$ to $n$, and the number of codewords of each weight is determined by a closed-form expression.',
+  },
+      'Cannot be determined without knowing the generator matrix',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -43,10 +59,26 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For an $[n, k, d]$ MDS code, the number of codewords of minimum weight $d$ is:',
     options: [
-      '$n(q-1)$',
-      '$q^k - 1$',
-      '$\\binom{n}{k}$',
-      '$\\binom{n}{d}(q-1)$'
+      '$n(q-1)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The number of minimum weight codewords in an MDS code is $A_d = \\binom{n}{d}(q-1)$. This follows from the MDS weight distribution formula.',
+  },
+      '$\\binom{n}{d}(q-1)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The number of minimum weight codewords in an MDS code is $A_d = \\binom{n}{d}(q-1)$. This follows from the MDS weight distribution formula.',
+  },
+      '$q^k - 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The number of minimum weight codewords in an MDS code is $A_d = \\binom{n}{d}(q-1)$. This follows from the MDS weight distribution formula.',
+  },
+      '$\\binom{n}{k}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The number of minimum weight codewords in an MDS code is $A_d = \\binom{n}{d}(q-1)$. This follows from the MDS weight distribution formula.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -66,12 +98,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The MacWilliams identity relates the weight enumerator of a code to that of its dual. For MDS codes, this identity:',
     options: [
-      'Confirms that the dual is also MDS',
       'Shows that all weights must be even',
+      'Confirms that the dual is also MDS',
       'Implies the code is self-dual',
       'Cannot be applied',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The MacWilliams identity applied to an MDS code yields the weight enumerator of its dual, which is also MDS. This provides a consistency check for MDS code properties.',
   },

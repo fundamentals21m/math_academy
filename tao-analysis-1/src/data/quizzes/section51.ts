@@ -24,10 +24,26 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ is differentiable at $x_0$ with $f\'(x_0) \\neq 0$, and $f^{-1}$ is the inverse function, then $(f^{-1})\'(f(x_0))$ equals:',
     options: [
-      '$f\'(x_0)$',
-      '$-f\'(x_0)$',
-      '$\\frac{1}{f\'(f^{-1}(x_0))}$',
-      '$\\frac{1}{f\'(x_0)}$'
+      '$f\\'(x_0)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The inverse function theorem gives $(f^{-1})\'(y) = \\frac{1}{f\'(f^{-1}(y))}$. At $y = f(x_0)$, we have $f^{-1}(f(x_0)) = x_0$, so $(f^{-1})\'(f(x_0)) = \\frac{1}{f\'(x_0)}$.',
+  },
+      '$\\frac{1}{f\\'(x_0)}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The inverse function theorem gives $(f^{-1})\'(y) = \\frac{1}{f\'(f^{-1}(y))}$. At $y = f(x_0)$, we have $f^{-1}(f(x_0)) = x_0$, so $(f^{-1})\'(f(x_0)) = \\frac{1}{f\'(x_0)}$.',
+  },
+      '$-f\\'(x_0)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The inverse function theorem gives $(f^{-1})\'(y) = \\frac{1}{f\'(f^{-1}(y))}$. At $y = f(x_0)$, we have $f^{-1}(f(x_0)) = x_0$, so $(f^{-1})\'(f(x_0)) = \\frac{1}{f\'(x_0)}$.',
+  },
+      '$\\frac{1}{f\\'(f^{-1}(x_0))}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The inverse function theorem gives $(f^{-1})\'(y) = \\frac{1}{f\'(f^{-1}(y))}$. At $y = f(x_0)$, we have $f^{-1}(f(x_0)) = x_0$, so $(f^{-1})\'(f(x_0)) = \\frac{1}{f\'(x_0)}$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -69,9 +85,13 @@ export const section51Questions: QuizQuestion[] = [
     question: 'If $f\'(x_0) = 0$ but $f$ is still locally invertible near $x_0$, what can we conclude?',
     options: [
       'The inverse function theorem still applies',
-      'This is impossible; $f\'(x_0) \\neq 0$ is necessary for local invertibility',
-      '$(f^{-1})\'$ exists but equals $0$ at $f(x_0)$',
-      '$f^{-1}$ is differentiable at $f(x_0)$ with infinite derivative'
+      '$(f^{-1})\\'$ exists but equals $0$ at $f(x_0)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'If $f\'(x_0) = 0$, then $f$ is not locally invertible near $x_0$ in the differentiable sense. A function with zero derivative cannot be strictly monotonic in any neighborhood of that point (it has a horizontal tangent).',
+  },
+      'This is impossible; $f\\'(x_0) \\neq 0$ is necessary for local invertibility',
+      '$f^{-1}$ is differentiable at $f(x_0)$ with infinite derivative',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -91,10 +111,26 @@ export const section51Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ and $f^{-1}$ are both differentiable, and we differentiate $f(f^{-1}(y)) = y$ with respect to $y$, we get:',
     options: [
-      '$f\'(f^{-1}(y)) = 1$',
-      '$(f^{-1})\'(y) = f\'(y)$',
-      '$f\'(f^{-1}(y)) \\cdot (f^{-1})\'(y) = 1$',
-      '$f\'(f^{-1}(y)) + (f^{-1})\'(y) = 1$'
+      '$f\\'(f^{-1}(y)) \\cdot (f^{-1})\\'(y) = 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Using the chain rule on $f(f^{-1}(y)) = y$, we get $f\'(f^{-1}(y)) \\cdot (f^{-1})\'(y) = 1$. This is the derivation of the inverse function derivative formula.',
+  },
+      '$f\\'(f^{-1}(y)) = 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Using the chain rule on $f(f^{-1}(y)) = y$, we get $f\'(f^{-1}(y)) \\cdot (f^{-1})\'(y) = 1$. This is the derivation of the inverse function derivative formula.',
+  },
+      '$(f^{-1})\\'(y) = f\\'(y)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Using the chain rule on $f(f^{-1}(y)) = y$, we get $f\'(f^{-1}(y)) \\cdot (f^{-1})\'(y) = 1$. This is the derivation of the inverse function derivative formula.',
+  },
+      '$f\\'(f^{-1}(y)) + (f^{-1})\\'(y) = 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Using the chain rule on $f(f^{-1}(y)) = y$, we get $f\'(f^{-1}(y)) \\cdot (f^{-1})\'(y) = 1$. This is the derivation of the inverse function derivative formula.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -6,10 +6,26 @@ export const section72Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An alternative to computing $e^{tA}$ directly is to use the Laplace transform, giving:',
     options: [
-      '$e^{tA} = \\mathcal{L}^{-1}\\{(sI - A)^{-1}\\}$',
-      '$e^{tA} = \\mathcal{L}^{-1}\\{A\\}$',
-      '$e^{tA} = \\mathcal{L}\\{I + tA\\}$',
-      '$e^{tA} = sI - A$'
+      '$e^{tA} = \\mathcal{L}^{-1}\\{A\\}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Taking Laplace transforms of $Y\' = AY$, $Y(0) = I$ gives $\\mathcal{L}\\{e^{tA}\\} = (sI - A)^{-1}$.',
+  },
+      '$e^{tA} = \\mathcal{L}\\{I + tA\\}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Taking Laplace transforms of $Y\' = AY$, $Y(0) = I$ gives $\\mathcal{L}\\{e^{tA}\\} = (sI - A)^{-1}$.',
+  },
+      '$e^{tA} = sI - A
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Taking Laplace transforms of $Y\' = AY$, $Y(0) = I$ gives $\\mathcal{L}\\{e^{tA}\\} = (sI - A)^{-1}$.',
+  },
+      '$e^{tA} = \\mathcal{L}^{-1}\\{(sI - A)^{-1}\\}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Taking Laplace transforms of $Y\' = AY$, $Y(0) = I$ gives $\\mathcal{L}\\{e^{tA}\\} = (sI - A)^{-1}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -21,11 +37,11 @@ export const section72Questions: QuizQuestion[] = [
     question: 'The Jordan normal form approach computes $e^{tA}$ by writing $A = PJP^{-1}$ where $J$ is:',
     options: [
       'Diagonal',
-      'Upper triangular with eigenvalues on diagonal and 1s or 0s above',
       'Symmetric',
-      'Orthogonal'
+      'Orthogonal',
+      'Upper triangular with eigenvalues on diagonal and 1s or 0s above',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The Jordan form $J$ has eigenvalues on the diagonal and 1s above the diagonal within each Jordan block.',
   },

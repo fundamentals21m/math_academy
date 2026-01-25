@@ -62,10 +62,26 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int x e^x\\,dx = ?$',
     options: [
-      '$xe^x + e^x + C$',
-      '$xe^x - e^x + C$',
-      '$x^2e^x/2 + C$',
-      '$e^x + C$'
+      '$xe^x + e^x + C
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By parts: $xe^x - \\int e^x\\,dx = xe^x - e^x + C$.',
+  },
+      '$x^2e^x/2 + C
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By parts: $xe^x - \\int e^x\\,dx = xe^x - e^x + C$.',
+  },
+      '$e^x + C
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By parts: $xe^x - \\int e^x\\,dx = xe^x - e^x + C$.',
+  },
+      '$xe^x - e^x + C
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By parts: $xe^x - \\int e^x\\,dx = xe^x - e^x + C$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -79,7 +95,7 @@ export const section38Questions: QuizQuestion[] = [
       'Algebraic, Trig, Inverse trig, Log, Exponential',
       'Exponential, Trig, Algebraic, Inverse trig, Log',
       'Log, Inverse trig, Algebraic, Trig, Exponential',
-      'Any order works equally well'
+      'Any order works equally well',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -90,10 +106,26 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int \\ln x\\,dx = ?$',
     options: [
-      '$1/x + C$',
-      '$x\\ln x + x + C$',
-      '$\\ln x / x + C$',
-      '$x\\ln x - x + C$'
+      '$1/x + C
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Let $u = \\ln x$, $dv = dx$. Then $\\int \\ln x\\,dx = x\\ln x - x + C$.',
+  },
+      '$x\\ln x + x + C
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Let $u = \\ln x$, $dv = dx$. Then $\\int \\ln x\\,dx = x\\ln x - x + C$.',
+  },
+      '$x\\ln x - x + C
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Let $u = \\ln x$, $dv = dx$. Then $\\int \\ln x\\,dx = x\\ln x - x + C$.',
+  },
+      '$\\ln x / x + C
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Let $u = \\ln x$, $dv = dx$. Then $\\int \\ln x\\,dx = x\\ln x - x + C$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -105,11 +137,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'Integration by parts may need to be applied:',
     options: [
       'Exactly once',
-      'Multiple times for some integrals',
       'Never more than twice',
       'Only for polynomials',
+      'Multiple times for some integrals',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Some integrals (like $\\int x^2 e^x\\,dx$) require multiple applications.',
   },

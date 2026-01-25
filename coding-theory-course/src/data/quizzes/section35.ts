@@ -6,10 +6,26 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Reed-Solomon code over $\\mathbb{F}_q$ with designed distance $\\delta$ has parameters:',
     options: [
-      '$[q, q-\\delta, \\delta]$',
-      '$[q-1, q-\\delta, \\delta]$',
-      '$[q-1, q-\\delta-1, \\delta]$',
-      '$[2q, q-\\delta, \\delta]$'
+      '$[q-1, q-\\delta, \\delta]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Reed-Solomon codes have length $n = q - 1$, dimension $k = n - \\delta + 1 = q - \\delta$, and minimum distance $d = \\delta$, giving parameters $[q-1, q-\\delta, \\delta]$.',
+  },
+      '$[q, q-\\delta, \\delta]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Reed-Solomon codes have length $n = q - 1$, dimension $k = n - \\delta + 1 = q - \\delta$, and minimum distance $d = \\delta$, giving parameters $[q-1, q-\\delta, \\delta]$.',
+  },
+      '$[q-1, q-\\delta-1, \\delta]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Reed-Solomon codes have length $n = q - 1$, dimension $k = n - \\delta + 1 = q - \\delta$, and minimum distance $d = \\delta$, giving parameters $[q-1, q-\\delta, \\delta]$.',
+  },
+      '$[2q, q-\\delta, \\delta]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Reed-Solomon codes have length $n = q - 1$, dimension $k = n - \\delta + 1 = q - \\delta$, and minimum distance $d = \\delta$, giving parameters $[q-1, q-\\delta, \\delta]$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,12 +36,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Reed-Solomon codes are constructed using:',
     options: [
+      'Evaluation of polynomials at all non-zero field elements',
       'Cyclic shifts of a generator codeword',
       'Random matrix generation',
       'Tensor products of smaller codes',
-      'Evaluation of polynomials at all non-zero field elements',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Reed-Solomon codewords are formed by evaluating polynomials of degree $< k$ at all non-zero elements of $\\mathbb{F}_q$: $(f(\\alpha), f(\\alpha^2), \\ldots, f(\\alpha^{q-1}))$ where $\\alpha$ is primitive.',
   },
@@ -66,10 +82,26 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The generator polynomial of a Reed-Solomon code with designed distance $\\delta$ is:',
     options: [
-      '$g(x) = \\prod_{i=1}^{\\delta-1}(x - \\alpha^i)$',
-      '$g(x) = x^{\\delta} - 1$',
-      '$g(x) = (x - 1)^{\\delta}$',
-      '$g(x) = x^n - 1$',
+      '$g(x) = x^{\\delta} - 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The generator polynomial is $g(x) = \\prod_{i=1}^{\\delta-1}(x - \\alpha^i)$ where $\\alpha$ is a primitive element. This has $\\delta - 1$ consecutive roots.',
+  },
+      '$g(x) = (x - 1)^{\\delta}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The generator polynomial is $g(x) = \\prod_{i=1}^{\\delta-1}(x - \\alpha^i)$ where $\\alpha$ is a primitive element. This has $\\delta - 1$ consecutive roots.',
+  },
+      '$g(x) = \\prod_{i=1}^{\\delta-1}(x - \\alpha^i)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The generator polynomial is $g(x) = \\prod_{i=1}^{\\delta-1}(x - \\alpha^i)$ where $\\alpha$ is a primitive element. This has $\\delta - 1$ consecutive roots.',
+  },
+      '$g(x) = x^n - 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The generator polynomial is $g(x) = \\prod_{i=1}^{\\delta-1}(x - \\alpha^i)$ where $\\alpha$ is a primitive element. This has $\\delta - 1$ consecutive roots.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

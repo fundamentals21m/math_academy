@@ -49,10 +49,26 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The order of $a$ modulo $m$ is:',
     options: [
-      'The smallest positive $k$ such that $a^k \\equiv 0 \\pmod{m}$',
-      'The number of divisors of $m$',
-      'The value of $a \\pmod{m}$',
-      'The smallest positive $k$ such that $a^k \\equiv 1 \\pmod{m}$'
+      'The smallest positive $k$ such that $a^k \\equiv 0 \\pmod{m}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The order of $a$ modulo $m$ is the smallest positive integer $k$ such that $a^k \\equiv 1 \\pmod{m}$.',
+  },
+      'The smallest positive $k$ such that $a^k \\equiv 1 \\pmod{m}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The order of $a$ modulo $m$ is the smallest positive integer $k$ such that $a^k \\equiv 1 \\pmod{m}$.',
+  },
+      'The number of divisors of $m
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The order of $a$ modulo $m$ is the smallest positive integer $k$ such that $a^k \\equiv 1 \\pmod{m}$.',
+  },
+      'The value of $a \\pmod{m}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The order of $a$ modulo $m$ is the smallest positive integer $k$ such that $a^k \\equiv 1 \\pmod{m}$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

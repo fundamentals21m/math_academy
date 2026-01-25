@@ -21,11 +21,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'Relative timelocks are measured from when?',
     options: [
       'A fixed block height',
-      'The confirmation of the referenced output',
       'The creation of the transaction',
+      'The confirmation of the referenced output',
       'The previous halving',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Relative timelocks count from when the spent output was confirmed, not from a fixed point.',
   },

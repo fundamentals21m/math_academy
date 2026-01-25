@@ -11,10 +11,10 @@ export const section36Questions: QuizQuestion[] = [
     options: [
       'Euclid',
       'De Moivre',
-      'Cauchy',
       'Cardano',
+      'Cauchy',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Girolamo Cardano (1501–1576) introduced complex numbers in his Ars Magna (1545) to solve cubic equations, famously telling readers to "put aside the mental tortures involved."',
@@ -25,11 +25,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'What is the multiplication rule for complex numbers as ordered pairs (a, b) · (c, d)?',
     options: [
       '(a + c, b + d)',
-      '(ac - bd, ad + bc)',
       '(ac, bd)',
+      '(ac - bd, ad + bc)',
       '(ac + bd, ad - bc)',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The multiplication rule for complex numbers as pairs is (a, b) · (c, d) = (ac - bd, ad + bc). This corresponds to (a + bi)(c + di) = (ac - bd) + (ad + bc)i.',
@@ -39,12 +39,12 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the ordered pair representation, which pair represents i?',
     options: [
+      '(0, 1)',
       '(1, 0)',
       '(-1, 0)',
-      '(0, 1)',
       '(0, -1)',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'In the ordered pair representation, (0, 1) plays the role of i. We can verify: (0, 1) · (0, 1) = (0·0 - 1·1, 0·1 + 1·0) = (-1, 0), confirming that i² = -1.',
@@ -55,11 +55,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'What is the absolute value of the complex number 3 + 4i?',
     options: [
       '7',
-      '12',
       '5',
+      '12',
       '25',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The absolute value |a + bi| = √(a² + b²). So |3 + 4i| = √(9 + 16) = √25 = 5.',
@@ -69,12 +69,12 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How can ℂ be defined as a quotient ring?',
     options: [
+      'ℝ[x]/(x² + 1)',
       'ℝ[x]/(x)',
       'ℝ[x]/(x² - 1)',
       'ℤ[x]/(x² + 1)',
-      'ℝ[x]/(x² + 1)',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'ℂ = ℝ[x]/(x² + 1), where polynomials differing by a multiple of x² + 1 are equivalent. The equivalence class of x plays the role of i, since x² ≡ -1.',
@@ -102,7 +102,7 @@ export const section36Questions: QuizQuestion[] = [
       'That |uv| = |u||v| for complex numbers',
       'The triangle inequality',
       'The commutativity of multiplication',
-      'De Moivre\\'s theorem',
+      'De Moivre\\\\\'s theorem',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -129,12 +129,12 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does De Moivre\'s theorem state about (r(cos θ + i sin θ))^m?',
     options: [
-      'r^m(cos(mθ) + i sin(mθ))',
       'r^m(cos θ + i sin(mθ))',
       'mr(cos(mθ) + i sin(mθ))',
       'r(cos(m + θ) + i sin(m + θ))',
+      'r^m(cos(mθ) + i sin(mθ))',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'De Moivre\'s theorem states: (r(cos θ + i sin θ))^m = r^m(cos(mθ) + i sin(mθ)). Powers multiply the absolute value and multiply the angle by m.',

@@ -20,12 +20,12 @@ export const section87Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two circular segments are "similar" if:',
     options: [
+      'They contain equal angles (inscribed angles in them are equal)',
       'They have equal areas',
       'They have equal arcs',
-      'They contain equal angles (inscribed angles in them are equal)',
-      'They have the same radius'
+      'They have the same radius',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Similar segments admit equal angles—any inscribed angle in one segment equals any inscribed angle in the other.',
   },

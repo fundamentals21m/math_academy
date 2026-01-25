@@ -24,10 +24,26 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Given $z_1 - z_2 = s \\cdot (c_1 - c_2)$, what formula extracts the private key $s$?',
     options: [
-      '$s = (z_1 - z_2) \\cdot (c_1 - c_2)$',
-      '$s = (z_1 + z_2) / (c_1 + c_2)$',
-      '$s = (c_1 - c_2) / (z_1 - z_2)$',
-      '$s = (z_1 - z_2) / (c_1 - c_2)$'
+      '$s = (z_1 - z_2) / (c_1 - c_2)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'From $z_1 - z_2 = s \\cdot (c_1 - c_2)$, we solve for $s$ by dividing: $s = (z_1 - z_2) / (c_1 - c_2)$. This simple algebra completely breaks the signature scheme.',
+  },
+      '$s = (z_1 - z_2) \\cdot (c_1 - c_2)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'From $z_1 - z_2 = s \\cdot (c_1 - c_2)$, we solve for $s$ by dividing: $s = (z_1 - z_2) / (c_1 - c_2)$. This simple algebra completely breaks the signature scheme.',
+  },
+      '$s = (z_1 + z_2) / (c_1 + c_2)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'From $z_1 - z_2 = s \\cdot (c_1 - c_2)$, we solve for $s$ by dividing: $s = (z_1 - z_2) / (c_1 - c_2)$. This simple algebra completely breaks the signature scheme.',
+  },
+      '$s = (c_1 - c_2) / (z_1 - z_2)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'From $z_1 - z_2 = s \\cdot (c_1 - c_2)$, we solve for $s$ by dividing: $s = (z_1 - z_2) / (c_1 - c_2)$. This simple algebra completely breaks the signature scheme.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -47,12 +63,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which real-world incident was caused by nonce reuse in ECDSA signatures?',
     options: [
-      'The PlayStation 3 private key extraction',
       'The DAO hack in Ethereum',
       'The Mt. Gox exchange collapse',
-      'The Bitcoin block size debate'
+      'The Bitcoin block size debate',
+      'The PlayStation 3 private key extraction',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'In 2010, Sony used a constant nonce for all PS3 ECDSA signatures. Hackers extracted Sony\'s private key and could then sign any code to run on the PS3.',
   },

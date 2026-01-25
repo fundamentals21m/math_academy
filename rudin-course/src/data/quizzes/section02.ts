@@ -8,8 +8,12 @@ export const section02Questions: QuizQuestion[] = [
     options: [
       '$x + y = y + x$ for all $x, y$ (commutativity of addition)',
       '$x \\cdot (y + z) = x \\cdot y + x \\cdot z$ (distributive law)',
+      'There exists an element $0$ such that $x + 0 = x$ for all $x
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Not every element has a multiplicative inverse—specifically, $0$ has no multiplicative inverse. The correct axiom states that every nonzero element has a multiplicative inverse.',
+  },
       'Every element has a multiplicative inverse',
-      'There exists an element $0$ such that $x + 0 = x$ for all $x$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -22,8 +26,12 @@ export const section02Questions: QuizQuestion[] = [
     options: [
       'It is an axiom of fields',
       'Because multiplication is commutative',
+      'Because $0 \\cdot x = (0 + 0) \\cdot x = 0 \\cdot x + 0 \\cdot x$, so $0 \\cdot x = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Using distributivity: $0 \\cdot x = (0 + 0) \\cdot x = 0 \\cdot x + 0 \\cdot x$. Adding the additive inverse of $0 \\cdot x$ to both sides gives $0 = 0 \\cdot x$.',
+  },
       'Because $0$ has no multiplicative inverse',
-      'Because $0 \\cdot x = (0 + 0) \\cdot x = 0 \\cdot x + 0 \\cdot x$, so $0 \\cdot x = 0$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -34,10 +42,18 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An ordered field is a field $F$ with an order relation $<$ such that:',
     options: [
-      '$x < y$ implies $x + z < y + z$, and $x > 0, y > 0$ implies $xy > 0$',
       'Every element is either positive or negative',
-      '$x < y$ if and only if $x - y < 0$',
-      'The field is finite'
+      '$x < y$ implies $x + z < y + z$, and $x > 0, y > 0$ implies $xy > 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'An ordered field requires the order to be compatible with field operations: translation preserves order ($x < y \\Rightarrow x+z < y+z$) and the product of positive elements is positive.',
+  },
+      '$x < y$ if and only if $x - y < 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'An ordered field requires the order to be compatible with field operations: translation preserves order ($x < y \\Rightarrow x+z < y+z$) and the product of positive elements is positive.',
+  },
+      'The field is finite',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -48,10 +64,22 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In an ordered field, if $x \\neq 0$, what can we conclude about $x^2$?',
     options: [
+      '$x^2 > 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'If $x > 0$, then $x \\cdot x > 0$ (product of positives). If $x < 0$, then $-x > 0$, so $(-x)(-x) = x^2 > 0$. Either way, $x^2 > 0$ for $x \\neq 0$.',
+  },
       '$x^2$ could be positive, negative, or zero',
-      '$x^2 > 0$',
-      '$x^2 < 0$',
-      '$x^2 = 1$'
+      '$x^2 < 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $x > 0$, then $x \\cdot x > 0$ (product of positives). If $x < 0$, then $-x > 0$, so $(-x)(-x) = x^2 > 0$. Either way, $x^2 > 0$ for $x \\neq 0$.',
+  },
+      '$x^2 = 1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $x > 0$, then $x \\cdot x > 0$ (product of positives). If $x < 0$, then $-x > 0$, so $(-x)(-x) = x^2 > 0$. Either way, $x^2 > 0$ for $x \\neq 0$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -62,10 +90,14 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why can the complex numbers $\\mathbb{C}$ not be made into an ordered field?',
     options: [
+      'Because $i^2 = -1 < 0$, but $i^2$ should be positive if $i \\neq 0
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'In any ordered field, $x^2 > 0$ for $x \\neq 0$. But in $\\mathbb{C}$, $i \\neq 0$ and $i^2 = -1$. If $\\mathbb{C}$ were ordered, we would need $i^2 > 0$, meaning $-1 > 0$, a contradiction.',
+  },
       'Because $\\mathbb{C}$ is not a field',
       'Because complex numbers cannot be compared',
-      'Because $i^2 = -1 < 0$, but $i^2$ should be positive if $i \\neq 0$',
-      'Because $\\mathbb{C}$ is uncountable'
+      'Because $\\mathbb{C}$ is uncountable',
     ],
     correctIndex: 2,
     difficulty: 'hard',

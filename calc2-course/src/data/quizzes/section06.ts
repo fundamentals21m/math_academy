@@ -36,10 +36,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the standard inner product on $V_n$, what is $(x, y)$?',
     options: [
-      '$\\sum_{i=1}^n x_i y_i$',
-      '$\\sum_{i=1}^n x_i + y_i$',
-      '$\\sum_{i=1}^n |x_i - y_i|$',
-      '$\\max_i |x_i y_i|$'
+      '$\\sum_{i=1}^n x_i + y_i
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The standard inner product (dot product) on $V_n$ is defined as $(x, y) = \\sum_{i=1}^n x_i y_i$.',
+  },
+      '$\\sum_{i=1}^n |x_i - y_i|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The standard inner product (dot product) on $V_n$ is defined as $(x, y) = \\sum_{i=1}^n x_i y_i$.',
+  },
+      '$\\sum_{i=1}^n x_i y_i
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The standard inner product (dot product) on $V_n$ is defined as $(x, y) = \\sum_{i=1}^n x_i y_i$.',
+  },
+      '$\\max_i |x_i y_i|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The standard inner product (dot product) on $V_n$ is defined as $(x, y) = \\sum_{i=1}^n x_i y_i$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

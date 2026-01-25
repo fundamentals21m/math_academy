@@ -102,10 +102,18 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f: \\mathbb{R}^n \\to \\mathbb{R}^m$ is a submersion at $a$ with $f(a) = c$, then $f^{-1}(c)$ near $a$ is:',
     options: [
-      'A smooth manifold of dimension $n - m$',
-      'A smooth manifold of dimension $m$',
+      'A smooth manifold of dimension $m
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The preimage theorem states that if $f$ is a submersion at all points of $f^{-1}(c)$, then $f^{-1}(c)$ is a smooth manifold of dimension $n - m$ (the codimension of the image).',
+  },
       'A single point',
-      'An open set'
+      'A smooth manifold of dimension $n - m
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The preimage theorem states that if $f$ is a submersion at all points of $f^{-1}(c)$, then $f^{-1}(c)$ is a smooth manifold of dimension $n - m$ (the codimension of the image).',
+  },
+      'An open set',
     ],
     correctIndex: 0,
     difficulty: 'hard',

@@ -76,10 +76,18 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the Approximation Theorem, the element of $S$ nearest to $x$ is:',
     options: [
-      'Any element of $S$',
-      'The projection of $x$ onto $S$',
+      'Any element of $S
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The best approximation theorem states that the projection of $x$ onto $S$ is the unique element of $S$ that minimizes the distance $\\|x - t\\|$ over all $t \\in S$.',
+  },
       'The zero element',
-      'The element of $S$ with largest norm'
+      'The projection of $x$ onto $S
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The best approximation theorem states that the projection of $x$ onto $S$ is the unique element of $S$ that minimizes the distance $\\|x - t\\|$ over all $t \\in S$.',
+  },
+      'The element of $S$ with largest norm',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -91,11 +99,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'Fourier coefficients $a_k = \\frac{1}{\\pi}\\int_0^{2\\pi} f(x)\\cos kx\\, dx$ arise from projecting $f$ onto:',
     options: [
       'The space of all functions',
+      'The subspace spanned by trigonometric functions',
       'The space of polynomials',
       'The zero subspace',
-      'The subspace spanned by trigonometric functions',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Fourier coefficients come from projecting $f$ onto the subspace spanned by $\\{1, \\cos x, \\sin x, \\cos 2x, \\sin 2x, \\ldots\\}$, which form an orthogonal set in $C(0, 2\\pi)$.',
   },

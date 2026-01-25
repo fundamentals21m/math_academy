@@ -158,10 +158,22 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When is $2$ a quadratic residue modulo an odd prime $p$?',
     options: [
-      'When $p \\equiv \\pm 1 \\pmod{8}$',
-      'When $p \\equiv 1 \\pmod{4}$',
-      'When $p \\equiv \\pm 3 \\pmod{8}$',
-      'Always'
+      'When $p \\equiv 1 \\pmod{4}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$2$ is a QR mod $p$ if and only if $p \\equiv \\pm 1 \\pmod{8}$, i.e., $p \\equiv 1$ or $7 \\pmod{8}$.',
+  },
+      'When $p \\equiv \\pm 3 \\pmod{8}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$2$ is a QR mod $p$ if and only if $p \\equiv \\pm 1 \\pmod{8}$, i.e., $p \\equiv 1$ or $7 \\pmod{8}$.',
+  },
+      'When $p \\equiv \\pm 1 \\pmod{8}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$2$ is a QR mod $p$ if and only if $p \\equiv \\pm 1 \\pmod{8}$, i.e., $p \\equiv 1$ or $7 \\pmod{8}$.',
+  },
+      'Always',
     ],
     correctIndex: 0,
     difficulty: 'hard',

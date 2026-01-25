@@ -6,10 +6,18 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a sequence $\\{s_n\\}$ of real numbers, $\\limsup_{n \\to \\infty} s_n$ is defined as:',
     options: [
-      '$\\lim_{n \\to \\infty} (\\sup_{k \\geq n} s_k)$',
       'The largest term of the sequence',
       'The average of all terms',
-      '$\\sup_n s_n$'
+      '$\\sup_n s_n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Let $a_n = \\sup_{k \\geq n} s_k$. This sequence is decreasing and $\\limsup s_n = \\lim_{n \\to \\infty} a_n$. It equals the largest subsequential limit.',
+  },
+      '$\\lim_{n \\to \\infty} (\\sup_{k \\geq n} s_k)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Let $a_n = \\sup_{k \\geq n} s_k$. This sequence is decreasing and $\\limsup s_n = \\lim_{n \\to \\infty} a_n$. It equals the largest subsequential limit.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -20,10 +28,18 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\{s_n\\}$ is bounded, then $\\limsup s_n$ is:',
     options: [
-      'Necessarily equal to $\\lim s_n$',
       'The largest limit of any convergent subsequence',
-      '$+\\infty$',
-      'Undefined'
+      'Necessarily equal to $\\lim s_n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a bounded sequence, $\\limsup s_n$ equals the largest subsequential limit (which exists by Bolzano-Weierstrass). Similarly, $\\liminf s_n$ is the smallest subsequential limit.',
+  },
+      '$+\\infty
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For a bounded sequence, $\\limsup s_n$ equals the largest subsequential limit (which exists by Bolzano-Weierstrass). Similarly, $\\liminf s_n$ is the smallest subsequential limit.',
+  },
+      'Undefined',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,10 +50,26 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sequence $\\{s_n\\}$ converges to $s$ if and only if:',
     options: [
-      '$\\limsup s_n = +\\infty$',
-      '$\\liminf s_n = -\\infty$',
-      '$\\limsup s_n = \\liminf s_n = s$',
-      '$\\limsup s_n > \\liminf s_n$'
+      '$\\limsup s_n = +\\infty
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Convergence to $s$ means all subsequential limits equal $s$, which happens iff $\\limsup s_n = \\liminf s_n = s$.',
+  },
+      '$\\liminf s_n = -\\infty
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Convergence to $s$ means all subsequential limits equal $s$, which happens iff $\\limsup s_n = \\liminf s_n = s$.',
+  },
+      '$\\limsup s_n > \\liminf s_n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Convergence to $s$ means all subsequential limits equal $s$, which happens iff $\\limsup s_n = \\liminf s_n = s$.',
+  },
+      '$\\limsup s_n = \\liminf s_n = s
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Convergence to $s$ means all subsequential limits equal $s$, which happens iff $\\limsup s_n = \\liminf s_n = s$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -48,10 +80,26 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $s_n = (-1)^n$, what are $\\limsup s_n$ and $\\liminf s_n$?',
     options: [
-      '$\\limsup = 1$, $\\liminf = 1$',
-      '$\\limsup = 0$, $\\liminf = 0$',
-      '$\\limsup = -1$, $\\liminf = 1$',
-      '$\\limsup = 1$, $\\liminf = -1$'
+      '$\\limsup = 1$, $\\liminf = 1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The sequence alternates: $-1, 1, -1, 1, \\ldots$. The subsequential limits are $\\{-1, 1\\}$, so $\\limsup = 1$ and $\\liminf = -1$.',
+  },
+      '$\\limsup = 1$, $\\liminf = -1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The sequence alternates: $-1, 1, -1, 1, \\ldots$. The subsequential limits are $\\{-1, 1\\}$, so $\\limsup = 1$ and $\\liminf = -1$.',
+  },
+      '$\\limsup = 0$, $\\liminf = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The sequence alternates: $-1, 1, -1, 1, \\ldots$. The subsequential limits are $\\{-1, 1\\}$, so $\\limsup = 1$ and $\\liminf = -1$.',
+  },
+      '$\\limsup = -1$, $\\liminf = 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The sequence alternates: $-1, 1, -1, 1, \\ldots$. The subsequential limits are $\\{-1, 1\\}$, so $\\limsup = 1$ and $\\liminf = -1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -62,12 +110,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For any sequence, $\\liminf s_n \\leq \\limsup s_n$:',
     options: [
-      'Is always true',
       'Is always false',
       'Is true only for bounded sequences',
-      'Is true only for convergent sequences'
+      'Is true only for convergent sequences',
+      'Is always true',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'By definition, $\\liminf s_n \\leq \\limsup s_n$ always. The sequence converges iff equality holds (and both are finite).',
   },

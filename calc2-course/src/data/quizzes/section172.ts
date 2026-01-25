@@ -62,10 +62,26 @@ export const section172Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The marginal distribution $F_X(t)$ is obtained from the joint distribution by:',
     options: [
-      '$F_X(t) = F(t, 0)$',
-      '$F_X(t) = F(t, t)$',
-      '$F_X(t) = \\lim_{b \\to \\infty} F(t, b)$',
-      '$F_X(t) = F(0, t)$'
+      '$F_X(t) = \\lim_{b \\to \\infty} F(t, b)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The marginal $F_X(t) = P(X \\leq t) = \\lim_{b \\to \\infty} P(X \\leq t, Y \\leq b) = \\lim_{b \\to \\infty} F(t, b)$.',
+  },
+      '$F_X(t) = F(t, 0)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The marginal $F_X(t) = P(X \\leq t) = \\lim_{b \\to \\infty} P(X \\leq t, Y \\leq b) = \\lim_{b \\to \\infty} F(t, b)$.',
+  },
+      '$F_X(t) = F(t, t)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The marginal $F_X(t) = P(X \\leq t) = \\lim_{b \\to \\infty} P(X \\leq t, Y \\leq b) = \\lim_{b \\to \\infty} F(t, b)$.',
+  },
+      '$F_X(t) = F(0, t)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The marginal $F_X(t) = P(X \\leq t) = \\lim_{b \\to \\infty} P(X \\leq t, Y \\leq b) = \\lim_{b \\to \\infty} F(t, b)$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -106,12 +122,12 @@ export const section172Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Knowing only the marginal distributions $F_X$ and $F_Y$:',
     options: [
-      'Is not sufficient to determine the joint distribution',
       'Determines independence',
       'Completely determines the joint distribution',
-      'Means $X$ and $Y$ are independent'
+      'Means $X$ and $Y$ are independent',
+      'Is not sufficient to determine the joint distribution',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Marginals alone do not determine the joint distribution. Many different joint distributions can have the same marginals.',
   },

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #7C3AED;
+      --accent-rgb: 124, 58, 237;
+    }
+    .pivot-container {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+    }
+    .pivot-card {
+      width: 380px;
+      padding: 35px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .pivot-card.before {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+    }
+    .pivot-card.after {
+      background: rgba(34, 197, 94, 0.08);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .pivot-label {
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .before .pivot-label { color: #EF4444; }
+    .after .pivot-label { color: #22C55E; }
+    .pivot-quote {
+      font-size: 22px;
+      font-style: italic;
+      line-height: 1.4;
+      color: #E6EDF3;
+    }
+    .pivot-arrow {
+      color: #7C3AED;
+      font-size: 48px;
+    }
+    .records-box {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 30px 50px;
+      border-radius: 12px;
+      margin: 40px auto;
+      max-width: 900px;
+    }
+    .records-title {
+      color: #F7931A;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .records-list {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .record-item {
+      text-align: center;
+    }
+    .record-value {
+      color: #F7931A;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .record-label {
+      color: #8B949E;
+      font-size: 14px;
+    }
+    .validation {
+      color: #E6EDF3;
+      font-size: 24px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Pivot</div>
+    <div class="section-title">Larry Fink's Transformation</div>
+    <div class="pivot-container">
+      <div class="pivot-card before">
+        <div class="pivot-label">Before</div>
+        <div class="pivot-quote">"Bitcoin is only useful to money launderers"</div>
+      </div>
+      <div class="pivot-arrow">→</div>
+      <div class="pivot-card after">
+        <div class="pivot-label">After (2023)</div>
+        <div class="pivot-quote">Filed for spot bitcoin ETF, became bitcoin's greatest institutional advocate</div>
+      </div>
+    </div>
+    <div class="records-box">
+      <div class="records-title">IBIT Broke Every ETF Record (Fastest to...)</div>
+      <div class="records-list">
+        <div class="record-item">
+          <div class="record-value">$10B</div>
+          <div class="record-label">AUM</div>
+        </div>
+        <div class="record-item">
+          <div class="record-value">$20B</div>
+          <div class="record-label">AUM</div>
+        </div>
+        <div class="record-item">
+          <div class="record-value">$30B</div>
+          <div class="record-label">AUM</div>
+        </div>
+        <div class="record-item">
+          <div class="record-value">$40B</div>
+          <div class="record-label">AUM</div>
+        </div>
+        <div class="record-item">
+          <div class="record-value">$50B+</div>
+          <div class="record-label">Year 1</div>
+        </div>
+      </div>
+    </div>
+    <div class="validation">This validated bitcoin as an institutional asset class.</div>
+  </div>
+</body>
+</html>

@@ -103,10 +103,26 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Babylonian method for approximating $\\sqrt{N}$ uses the formula:',
     options: [
-      '$x_{n+1} = \\frac{N}{x_n}$',
-      '$x_{n+1} = \\frac{1}{2}\\left(x_n + \\frac{N}{x_n}\\right)$',
-      '$x_{n+1} = x_n + N$',
-      '$x_{n+1} = \\sqrt{x_n}$'
+      '$x_{n+1} = \\frac{N}{x_n}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The Babylonian method averages $x_n$ and $\\frac{N}{x_n}$ to get a better approximation.',
+  },
+      '$x_{n+1} = x_n + N
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Babylonian method averages $x_n$ and $\\frac{N}{x_n}$ to get a better approximation.',
+  },
+      '$x_{n+1} = \\sqrt{x_n}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Babylonian method averages $x_n$ and $\\frac{N}{x_n}$ to get a better approximation.',
+  },
+      '$x_{n+1} = \\frac{1}{2}\\left(x_n + \\frac{N}{x_n}\\right)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Babylonian method averages $x_n$ and $\\frac{N}{x_n}$ to get a better approximation.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -141,11 +157,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'The formula for generating primitive Pythagorean triples is $a = m^2 - n^2$, $b = 2mn$, $c = m^2 + n^2$. What triple does $m=2$, $n=1$ generate?',
     options: [
       '(7, 24, 25)',
-      '(5, 12, 13)',
       '(3, 4, 5)',
+      '(5, 12, 13)',
       '(8, 15, 17)',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: '$a = 4-1 = 3$, $b = 2(2)(1) = 4$, $c = 4+1 = 5$. So the triple is (3, 4, 5).',
   },
@@ -155,11 +171,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'Why is the Babylonian method so efficient?',
     options: [
       'It converges linearly',
-      'It has quadratic convergence (roughly doubles correct digits each step)',
       'It uses addition only',
+      'It has quadratic convergence (roughly doubles correct digits each step)',
       'It requires no initial guess',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Quadratic convergence means each iteration roughly doubles the number of correct digits.',
   },

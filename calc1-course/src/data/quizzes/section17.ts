@@ -66,10 +66,26 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The average value of $f$ on $[a, b]$ is:',
     options: [
-      '$\\frac{1}{b-a}\\int_a^b f(x)\\,dx$',
-      '$\\frac{f(a) + f(b)}{2}$',
-      '$\\int_a^b f(x)\\,dx$',
-      '$\\frac{f(b) - f(a)}{b - a}$'
+      '$\\frac{f(a) + f(b)}{2}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Average value: $f_{avg} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$.',
+  },
+      '$\\int_a^b f(x)\\,dx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Average value: $f_{avg} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$.',
+  },
+      '$\\frac{1}{b-a}\\int_a^b f(x)\\,dx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Average value: $f_{avg} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$.',
+  },
+      '$\\frac{f(b) - f(a)}{b - a}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Average value: $f_{avg} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

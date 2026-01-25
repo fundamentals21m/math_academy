@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .strategy-box {
+      background: rgba(8, 145, 178, 0.08);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 35px 50px;
+      border-radius: 12px;
+      margin: 30px auto;
+      max-width: 950px;
+      text-align: left;
+    }
+    .strategy-title {
+      color: #0891B2;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .step-list {
+      list-style: none;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(8, 145, 178, 0.15);
+    }
+    .step-item:last-child {
+      border-bottom: none;
+    }
+    .step-number {
+      background: rgba(8, 145, 178, 0.2);
+      color: #0891B2;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .step-text {
+      color: #E6EDF3;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .step-text em {
+      color: #F7931A;
+      font-style: normal;
+      font-weight: 600;
+    }
+    .why-box {
+      background: rgba(139, 148, 158, 0.1);
+      border: 1px solid rgba(139, 148, 158, 0.3);
+      padding: 20px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .why-text {
+      color: #E6EDF3;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Opportunity</div>
+    <div class="section-title">Operating Profitability</div>
+    <div class="strategy-box">
+      <div class="strategy-title">Treasury Deployment Strategy</div>
+      <ul class="step-list">
+        <li class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-text">Assume a forward-looking return (<em>30-40% annually</em> is reasonable based on historical data)</div>
+        </li>
+        <li class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-text">Establish a clearly defined program that <em>regularly sells</em> a portion of bitcoin</div>
+        </li>
+        <li class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-text">Demonstrate to auditors and regulators the <em>ability to execute</em></div>
+        </li>
+        <li class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-text">Classify treasury gains as <em>operating income</em> instead of capital gains</div>
+        </li>
+      </ul>
+    </div>
+    <div class="why-box">
+      <div class="why-text">CFOs are judged on operating profitability — this strategy directly improves that metric</div>
+    </div>
+  </div>
+</body>
+</html>

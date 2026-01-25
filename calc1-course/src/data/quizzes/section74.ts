@@ -7,11 +7,11 @@ export const section74Questions: QuizQuestion[] = [
     question: 'A vector in $\\mathbb{R}^n$ is:',
     options: [
       'A single real number',
-      'A matrix',
       'An ordered $n$-tuple of real numbers',
+      'A matrix',
       'A function',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Vectors in $\\mathbb{R}^n$ are $n$-tuples: $(x_1, x_2, ..., x_n)$.',
   },
@@ -50,10 +50,26 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Scalar multiplication $c(a_1, a_2) = ?$',
     options: [
-      '$(ca_1, a_2)$',
-      '$(a_1, ca_2)$',
-      '$(c + a_1, c + a_2)$',
-      '$(ca_1, ca_2)$'
+      '$(ca_1, a_2)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Multiply each component by the scalar.',
+  },
+      '$(a_1, ca_2)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Multiply each component by the scalar.',
+  },
+      '$(ca_1, ca_2)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Multiply each component by the scalar.',
+  },
+      '$(c + a_1, c + a_2)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Multiply each component by the scalar.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

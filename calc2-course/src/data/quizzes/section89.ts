@@ -80,10 +80,26 @@ export const section89Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\mathbf{F}(t) = (\\cos t, \\sin t)$ and $g(x,y) = x^2 + y^2$, then $(g \\circ \\mathbf{F})\'(t) =$',
     options: [
-      '$2\\cos t \\cdot (-\\sin t) + 2\\sin t \\cdot \\cos t = 0$',
-      '$2$',
-      '$-2\\sin t \\cos t$',
-      '$1$'
+      '$2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\nabla g = (2x, 2y)$, $\\mathbf{F}\'(t) = (-\\sin t, \\cos t)$. At $\\mathbf{F}(t)$: $(2\\cos t, 2\\sin t) \\cdot (-\\sin t, \\cos t) = 0$.',
+  },
+      '$-2\\sin t \\cos t
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\nabla g = (2x, 2y)$, $\\mathbf{F}\'(t) = (-\\sin t, \\cos t)$. At $\\mathbf{F}(t)$: $(2\\cos t, 2\\sin t) \\cdot (-\\sin t, \\cos t) = 0$.',
+  },
+      '$2\\cos t \\cdot (-\\sin t) + 2\\sin t \\cdot \\cos t = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\nabla g = (2x, 2y)$, $\\mathbf{F}\'(t) = (-\\sin t, \\cos t)$. At $\\mathbf{F}(t)$: $(2\\cos t, 2\\sin t) \\cdot (-\\sin t, \\cos t) = 0$.',
+  },
+      '$1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\nabla g = (2x, 2y)$, $\\mathbf{F}\'(t) = (-\\sin t, \\cos t)$. At $\\mathbf{F}(t)$: $(2\\cos t, 2\\sin t) \\cdot (-\\sin t, \\cos t) = 0$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

@@ -37,11 +37,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'The proof of the Dimensionality Theorem uses a map $T$ from $N(L)$ to:',
     options: [
       'The real numbers',
+      'The space of $n$-tuples (initial-value vectors)',
       'The space of polynomials',
       'The space of continuous functions',
-      'The space of $n$-tuples (initial-value vectors)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$T(f) = (f(x_0), f\'(x_0), \\ldots, f^{(n-1)}(x_0))$ maps each solution to its initial-value vector in $\\mathbb{R}^n$.',
   },
@@ -50,10 +50,14 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The map $T$ in the proof is one-to-one because:',
     options: [
+      'The uniqueness theorem says $T(f) = 0$ implies $f = 0
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'If $T(f) = 0$, all initial conditions are zero. By uniqueness, the only solution with these conditions is $f \\equiv 0$.',
+  },
       'All solutions are constant',
-      'The uniqueness theorem says $T(f) = 0$ implies $f = 0$',
       'The space is finite-dimensional',
-      '$T$ is a polynomial'
+      '$T$ is a polynomial',
     ],
     correctIndex: 1,
     difficulty: 'hard',

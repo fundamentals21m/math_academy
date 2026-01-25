@@ -1,0 +1,41 @@
+{
+  "partId": 2,
+  "partTitle": "Linear Transformations and Matrices",
+  "textbookChapter": "Chapter 2",
+  "sections": [
+    {
+      "sectionId": 10,
+      "sectionTitle": "Linear Transformations",
+      "textbookSection": "§2.1-2.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "2-1-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Let $T: V \\to W$ be a linear transformation. Prove that $T(0_V) = 0_W$.",
+          "solution": {
+            "steps": [
+              {"title": "Use linearity", "content": "Since $T$ is linear, $T(0_V) = T(0 \\cdot v) = 0 \\cdot T(v) = 0_W$ for any $v \\in V$."}
+            ],
+            "conclusion": "Therefore $T(0_V) = 0_W$."
+          }
+        },
+        {
+          "id": "2-1-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that the kernel of a linear transformation is a subspace.",
+          "solution": {
+            "steps": [
+              {"title": "Zero element", "content": "$T(0) = 0$, so $0 \\in \\ker(T)$."},
+              {"title": "Closure under addition", "content": "If $T(x) = 0$ and $T(y) = 0$, then $T(x+y) = T(x) + T(y) = 0$."},
+              {"title": "Closure under scalar multiplication", "content": "If $T(x) = 0$, then $T(cx) = cT(x) = c \\cdot 0 = 0$."}
+            ],
+            "conclusion": "$\\ker(T)$ satisfies all subspace axioms."
+          }
+        }
+      ]
+    }
+  ]
+}

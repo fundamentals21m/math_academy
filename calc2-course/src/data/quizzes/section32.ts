@@ -8,10 +8,10 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'Symmetry',
       'Linearity',
-      'Hermitian symmetry',
       'Positive definiteness',
+      'Hermitian symmetry',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Hermitian symmetry generalizes symmetry to complex spaces: $(x, y) = \\overline{(y, x)}$, ensuring $(x, x)$ is always real.',
   },
@@ -50,10 +50,26 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The conjugate of an eigenvalue $\\lambda$ can be expressed as:',
     options: [
-      '$\\bar{\\lambda} = \\frac{(T(x), x)}{(x, x)}$',
-      '$\\bar{\\lambda} = (T(x), T(x))$',
-      '$\\bar{\\lambda} = \\frac{(x, x)}{(T(x), T(x))}$',
-      '$\\bar{\\lambda} = \\frac{(x, T(x))}{(x, x)}$'
+      '$\\bar{\\lambda} = \\frac{(x, T(x))}{(x, x)}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'From Hermitian symmetry, $\\bar{\\lambda} = \\overline{\\frac{(T(x), x)}{(x, x)}} = \\frac{\\overline{(T(x), x)}}{(x, x)} = \\frac{(x, T(x))}{(x, x)}$.',
+  },
+      '$\\bar{\\lambda} = \\frac{(T(x), x)}{(x, x)}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'From Hermitian symmetry, $\\bar{\\lambda} = \\overline{\\frac{(T(x), x)}{(x, x)}} = \\frac{\\overline{(T(x), x)}}{(x, x)} = \\frac{(x, T(x))}{(x, x)}$.',
+  },
+      '$\\bar{\\lambda} = (T(x), T(x))
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'From Hermitian symmetry, $\\bar{\\lambda} = \\overline{\\frac{(T(x), x)}{(x, x)}} = \\frac{\\overline{(T(x), x)}}{(x, x)} = \\frac{(x, T(x))}{(x, x)}$.',
+  },
+      '$\\bar{\\lambda} = \\frac{(x, x)}{(T(x), T(x))}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'From Hermitian symmetry, $\\bar{\\lambda} = \\overline{\\frac{(T(x), x)}{(x, x)}} = \\frac{\\overline{(T(x), x)}}{(x, x)} = \\frac{(x, T(x))}{(x, x)}$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

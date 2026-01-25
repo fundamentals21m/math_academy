@@ -32,10 +32,22 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using L\'Hopital\'s rule, $\\lim_{x \\to 0} \\frac{\\sin x}{x}$ equals:',
     options: [
-      '$1$',
-      '$0$',
-      '$\\infty$',
-      'Does not exist'
+      '$0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'This is $\\frac{0}{0}$ form. Applying L\'Hopital\'s rule: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = \\lim_{x \\to 0} \\frac{\\cos x}{1} = \\cos 0 = 1$.',
+  },
+      '$\\infty
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'This is $\\frac{0}{0}$ form. Applying L\'Hopital\'s rule: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = \\lim_{x \\to 0} \\frac{\\cos x}{1} = \\cos 0 = 1$.',
+  },
+      '$1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'This is $\\frac{0}{0}$ form. Applying L\'Hopital\'s rule: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = \\lim_{x \\to 0} \\frac{\\cos x}{1} = \\cos 0 = 1$.',
+  },
+      'Does not exist',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -73,10 +85,26 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{x^2}{e^x}$ using L\'Hopital\'s rule:',
     options: [
-      '$\\infty$',
-      '$1$',
-      '$0$',
-      '$2$'
+      '$\\infty
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This is $\\frac{\\infty}{\\infty}$. Apply L\'Hopital twice: $\\lim \\frac{x^2}{e^x} = \\lim \\frac{2x}{e^x} = \\lim \\frac{2}{e^x} = 0$. Exponentials grow faster than polynomials.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'This is $\\frac{\\infty}{\\infty}$. Apply L\'Hopital twice: $\\lim \\frac{x^2}{e^x} = \\lim \\frac{2x}{e^x} = \\lim \\frac{2}{e^x} = 0$. Exponentials grow faster than polynomials.',
+  },
+      '$2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'This is $\\frac{\\infty}{\\infty}$. Apply L\'Hopital twice: $\\lim \\frac{x^2}{e^x} = \\lim \\frac{2x}{e^x} = \\lim \\frac{2}{e^x} = 0$. Exponentials grow faster than polynomials.',
+  },
+      '$0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'This is $\\frac{\\infty}{\\infty}$. Apply L\'Hopital twice: $\\lim \\frac{x^2}{e^x} = \\lim \\frac{2x}{e^x} = \\lim \\frac{2}{e^x} = 0$. Exponentials grow faster than polynomials.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -87,10 +115,18 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Consider $f(x) = x^2\\sin(1/x)$ for $x \\neq 0$ and $f(0) = 0$. Then $\\lim_{x \\to 0} \\frac{f(x)}{x}$:',
     options: [
-      'Requires L\'Hopital\'s rule to evaluate',
-      'Equals $1$',
+      'Equals $0
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: '$\\frac{f(x)}{x} = x\\sin(1/x)$ for $x \\neq 0$. Since $|\\sin(1/x)| \\leq 1$, we have $|x\\sin(1/x)| \\leq |x| \\to 0$. By the squeeze theorem, the limit is $0$. L\'Hopital\'s rule would be problematic here since $f\'(x)$ oscillates.',
+  },
+      'Requires L\\'Hopital\\'s rule to evaluate',
+      'Equals $1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$\\frac{f(x)}{x} = x\\sin(1/x)$ for $x \\neq 0$. Since $|\\sin(1/x)| \\leq 1$, we have $|x\\sin(1/x)| \\leq |x| \\to 0$. By the squeeze theorem, the limit is $0$. L\'Hopital\'s rule would be problematic here since $f\'(x)$ oscillates.',
+  },
       'Does not exist',
-      'Equals $0$'
     ],
     correctIndex: 3,
     difficulty: 'hard',

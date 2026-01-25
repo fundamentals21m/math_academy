@@ -8,11 +8,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'Multiple linear regression extends simple linear regression by:',
     options: [
       'Using non-linear functions',
-      'Including multiple predictor variables',
       'Fitting multiple separate models',
-      'Removing the intercept'
+      'Including multiple predictor variables',
+      'Removing the intercept',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Multiple regression uses multiple predictors: $Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\epsilon$',
   },
@@ -36,11 +36,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'The F-statistic tests whether:',
     options: [
       'All coefficients equal each other',
+      'At least one predictor is useful',
       'R-squared equals 1',
       'The intercept is zero',
-      'At least one predictor is useful'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The F-test tests $H_0: \\beta_1 = \\beta_2 = \\cdots = \\beta_p = 0$ - whether at least one predictor has a non-zero effect.',
   },
@@ -57,12 +57,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Variable selection refers to:',
     options: [
-      'Determining which predictors to include',
       'Choosing the best response variable',
       'Selecting the training data',
-      'Choosing between regression and classification'
+      'Choosing between regression and classification',
+      'Determining which predictors to include',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Variable selection helps identify which of the $p$ predictors are truly associated with the response.',
   },
@@ -73,11 +73,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'With $p = 10$ predictors, how many possible models can be formed using subsets?',
     options: [
       '10',
-      '1024',
       '100',
-      '1000'
+      '1024',
+      '1000',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Each predictor can be included or excluded: $2^{10} = 1024$ possible models.',
   },
@@ -88,10 +88,10 @@ export const section07Quiz: QuizQuestion[] = [
     options: [
       'Simple regression is always wrong',
       'Multiple regression has fewer degrees of freedom',
+      'The response variable changed',
       'The predictor is correlated with other predictors',
-      'The response variable changed'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Correlation among predictors means one predictor can "borrow" the effect of another in simple regression.',
   },
@@ -103,7 +103,7 @@ export const section07Quiz: QuizQuestion[] = [
       'Is always larger',
       'Only applies to simple regression',
       'Uses a different formula entirely',
-      'Penalizes for adding predictors'
+      'Penalizes for adding predictors',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -117,7 +117,7 @@ export const section07Quiz: QuizQuestion[] = [
       'Including no predictors and adding one at a time',
       'Including all predictors and removing one at a time',
       'Randomly selecting predictors',
-      'Testing all possible subsets'
+      'Testing all possible subsets',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -138,12 +138,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When predictors are highly correlated (collinear), which is true?',
     options: [
-      'R-squared will be low',
       'Individual coefficient p-values may be high even if F-test is significant',
+      'R-squared will be low',
       'The model cannot be fit',
-      'All coefficients will be positive'
+      'All coefficients will be positive',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Collinearity inflates standard errors of individual coefficients, making them appear non-significant even when the predictors together are useful.',
   },
@@ -152,10 +152,14 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why shouldn\'t we rely solely on individual t-tests when $p$ is large?',
     options: [
-      'T-tests are only valid for small $p$',
-      'T-tests require normally distributed data',
+      'T-tests are only valid for small $p
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'With many predictors, about 5% will have p-values below 0.05 by chance. The F-test avoids this multiple testing problem.',
+  },
       'Some predictors will appear significant by chance alone',
-      'The degrees of freedom are wrong'
+      'T-tests require normally distributed data',
+      'The degrees of freedom are wrong',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -166,10 +170,14 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Backward selection is problematic when:',
     options: [
+      '$p > n
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Backward selection starts with all predictors included. If $p > n$, we cannot fit the full model to start with.',
+  },
       '$n$ is large',
       'The F-statistic is significant',
       '$R^2$ is high',
-      '$p > n$'
     ],
     correctIndex: 3,
     difficulty: 'hard',

@@ -26,10 +26,10 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       '$f_n \\to f$ pointwise',
       'Always, without any conditions',
-      'Only when $f_n$ are all positive',
       '$f_n \\to f$ uniformly',
+      'Only when $f_n$ are all positive',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Uniform convergence justifies interchanging the limit and integral. Pointwise convergence alone is not sufficient.',
   },

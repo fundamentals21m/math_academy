@@ -97,10 +97,26 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the binary cyclic code with $g(x) = x^3 + x + 1$ dividing $x^7 - 1$, what is $h(x)$?',
     options: [
-      '$x^4 + x^3 + 1$',
-      '$x^4 + x^2 + x + 1$',
-      '$x^3 + x^2 + 1$',
-      '$x^4 + x^3 + x^2 + 1$'
+      '$x^4 + x^3 + 1
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Computing $(x^7 - 1)/(x^3 + x + 1) = (x^7 + 1)/(x^3 + x + 1)$ over $\\mathbb{F}_2$ gives $h(x) = x^4 + x^3 + x^2 + 1$.',
+  },
+      '$x^4 + x^3 + x^2 + 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Computing $(x^7 - 1)/(x^3 + x + 1) = (x^7 + 1)/(x^3 + x + 1)$ over $\\mathbb{F}_2$ gives $h(x) = x^4 + x^3 + x^2 + 1$.',
+  },
+      '$x^4 + x^2 + x + 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Computing $(x^7 - 1)/(x^3 + x + 1) = (x^7 + 1)/(x^3 + x + 1)$ over $\\mathbb{F}_2$ gives $h(x) = x^4 + x^3 + x^2 + 1$.',
+  },
+      '$x^3 + x^2 + 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Computing $(x^7 - 1)/(x^3 + x + 1) = (x^7 + 1)/(x^3 + x + 1)$ over $\\mathbb{F}_2$ gives $h(x) = x^4 + x^3 + x^2 + 1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',

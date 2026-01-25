@@ -37,7 +37,7 @@ export const section14Questions: QuizQuestion[] = [
       'Stocks and bonds',
       'Bitcoin for long-term savings and Bitcoin MMF for short-term cash',
       'Gold and silver',
-      'Stablecoins and altcoins'
+      'Stablecoins and altcoins',
     ],
     correctIndex: 1,
     difficulty: 'easy',

@@ -31,10 +31,10 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'Multi-signature only',
       'Script-path spending only',
-      'Key-path spending only (no scripts)',
       'Both key and script paths',
+      'Key-path spending only (no scripts)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'BIP-86 is for simple single-key Taproot, committing to an unspendable script path.',
   },

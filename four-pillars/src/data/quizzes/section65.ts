@@ -84,10 +84,10 @@ export const section65Questions: QuizQuestion[] = [
     options: [
       'Axiom systems',
       'Number of dimensions',
-      'Groups of transformations',
       'Coordinate systems',
+      'Groups of transformations',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Klein proposed that each geometry is defined by its symmetry group: Euclidean by isometries, projective by projective transformations, etc.',
   },

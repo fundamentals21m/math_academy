@@ -6,10 +6,26 @@ export const section38Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A square matrix $A$ is Hermitian if and only if:',
     options: [
-      '$A = A^t$',
-      '$A = \\bar{A}$',
-      '$A = \\bar{A}^t$',
-      '$A = -\\bar{A}^t$'
+      '$A = \\bar{A}^t
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A Hermitian matrix satisfies $a_{ij} = \\bar{a}_{ji}$, which is equivalent to $A = \\bar{A}^t$ (the transpose of the conjugate).',
+  },
+      '$A = A^t
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A Hermitian matrix satisfies $a_{ij} = \\bar{a}_{ji}$, which is equivalent to $A = \\bar{A}^t$ (the transpose of the conjugate).',
+  },
+      '$A = \\bar{A}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A Hermitian matrix satisfies $a_{ij} = \\bar{a}_{ji}$, which is equivalent to $A = \\bar{A}^t$ (the transpose of the conjugate).',
+  },
+      '$A = -\\bar{A}^t
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A Hermitian matrix satisfies $a_{ij} = \\bar{a}_{ji}$, which is equivalent to $A = \\bar{A}^t$ (the transpose of the conjugate).',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -35,11 +51,11 @@ export const section38Questions: QuizQuestion[] = [
     question: 'All diagonal elements of a skew-Hermitian matrix are:',
     options: [
       'Real',
+      'Pure imaginary',
       'Positive real',
       'Negative real',
-      'Pure imaginary',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For skew-Hermitian, $a_{ii} = -\\bar{a}_{ii}$, so $a_{ii} + \\bar{a}_{ii} = 0$, meaning $2\\text{Re}(a_{ii}) = 0$. Thus $a_{ii}$ is purely imaginary.',
   },
@@ -50,10 +66,10 @@ export const section38Questions: QuizQuestion[] = [
     options: [
       'Skew-Hermitian',
       'Unitary',
-      'Hermitian',
       'Nilpotent',
+      'Hermitian',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$B^* = \\frac{1}{2}(A^* + A) = B$, so $B$ is Hermitian. This is the Hermitian part of any matrix $A$.',
   },

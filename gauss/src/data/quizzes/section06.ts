@@ -67,10 +67,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Fermat prime has the form:',
     options: [
-      '$2^n + 1$',
-      '$n^2 + 1$',
-      '$2^n - 1$',
-      '$2^{2^n} + 1$'
+      '$2^n + 1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Fermat primes are primes of the form $F_n = 2^{2^n} + 1$.',
+  },
+      '$n^2 + 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Fermat primes are primes of the form $F_n = 2^{2^n} + 1$.',
+  },
+      '$2^{2^n} + 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Fermat primes are primes of the form $F_n = 2^{2^n} + 1$.',
+  },
+      '$2^n - 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Fermat primes are primes of the form $F_n = 2^{2^n} + 1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

@@ -76,10 +76,26 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The minimal polynomial of $\\sqrt{2}$ over $\\mathbb{Q}$ is:',
     options: [
-      '$x - \\sqrt{2}$',
-      '$x^2 + 2$',
-      '$x^2 - 2$',
-      '$x^4 - 4$'
+      '$x - \\sqrt{2}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\sqrt{2}$ satisfies $x^2 - 2 = 0$, and this polynomial is irreducible over $\\mathbb{Q}$ (has no rational roots). So it is the minimal polynomial.',
+  },
+      '$x^2 - 2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\sqrt{2}$ satisfies $x^2 - 2 = 0$, and this polynomial is irreducible over $\\mathbb{Q}$ (has no rational roots). So it is the minimal polynomial.',
+  },
+      '$x^2 + 2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\sqrt{2}$ satisfies $x^2 - 2 = 0$, and this polynomial is irreducible over $\\mathbb{Q}$ (has no rational roots). So it is the minimal polynomial.',
+  },
+      '$x^4 - 4
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\sqrt{2}$ satisfies $x^2 - 2 = 0$, and this polynomial is irreducible over $\\mathbb{Q}$ (has no rational roots). So it is the minimal polynomial.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

@@ -106,10 +106,18 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\lim_{x \\to a} \\frac{f\'(x)}{g\'(x)}$ does not exist, can we conclude that $\\lim_{x \\to a} \\frac{f(x)}{g(x)}$ does not exist?',
     options: [
-      'Yes, the original limit must also not exist',
       'No, the original limit may still exist',
-      'Yes, if the indeterminate form is $0/0$',
-      'Yes, if the indeterminate form is $\\infty/\\infty$'
+      'Yes, the original limit must also not exist',
+      'Yes, if the indeterminate form is $0/0
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'L\'Hospital\'s Rule is one-directional. Example: $\\lim_{x \\to \\infty} \\frac{x + \\sin x}{x} = 1$, but $\\frac{1 + \\cos x}{1}$ oscillates and has no limit. The original limit can exist even when the derivative ratio has no limit.',
+  },
+      'Yes, if the indeterminate form is $\\infty/\\infty
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'L\'Hospital\'s Rule is one-directional. Example: $\\lim_{x \\to \\infty} \\frac{x + \\sin x}{x} = 1$, but $\\frac{1 + \\cos x}{1}$ oscillates and has no limit. The original limit can exist even when the derivative ratio has no limit.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',

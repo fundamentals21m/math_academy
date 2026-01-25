@@ -25,11 +25,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Is 1 a prime number?',
     options: [
       'Yes, because it is only divisible by itself',
-      'Yes, because it is the first positive integer',
       'No, because it has only one positive divisor',
+      'Yes, because it is the first positive integer',
       'No, because it is even',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: '1 has only one positive divisor (itself), so it does not meet the definition of prime.',
   },

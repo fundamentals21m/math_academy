@@ -1,0 +1,551 @@
+{
+  "partId": 1,
+  "partTitle": "Introduction",
+  "textbookChapter": "Chapter 1",
+  "sections": [
+    {
+      "sectionId": 0,
+      "sectionTitle": "Historical Introduction",
+      "textbookSection": "I 1.1-1.2",
+      "examples": [
+        {
+          "id": "ex-1-0-1",
+          "type": "example",
+          "title": "Area of a Parabolic Segment",
+          "statement": "Show that the area of a parabolic segment (the region bounded by a parabola and a chord) is $\\frac{4}{3}$ times the area of the inscribed triangle with the same base and vertex at the point where the tangent is parallel to the chord.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up coordinates",
+                "content": "Place the parabola as $y = x^2$ with the chord along the $x$-axis from $x = -a$ to $x = a$. The vertex of the inscribed triangle is at $(0, 0)$ where the tangent $y' = 2x = 0$ is horizontal (parallel to the chord)."
+              },
+              {
+                "title": "Calculate triangle area",
+                "content": "The inscribed triangle has base $2a$ and height $a^2$, so its area is $\\frac{1}{2} \\cdot 2a \\cdot a^2 = a^3$."
+              },
+              {
+                "title": "Calculate parabolic segment area",
+                "content": "The parabolic segment area is $\\int_{-a}^{a} (a^2 - x^2)\\,dx = \\left[a^2 x - \\frac{x^3}{3}\\right]_{-a}^{a} = 2a^3 - \\frac{2a^3}{3} = \\frac{4a^3}{3}$."
+              },
+              {
+                "title": "Compare areas",
+                "content": "The ratio is $\\frac{4a^3/3}{a^3} = \\frac{4}{3}$."
+              }
+            ],
+            "conclusion": "This is Archimedes' famous result, derived over 2000 years before calculus was formally developed. He proved it using the method of exhaustion."
+          }
+        }
+      ],
+      "exercises": []
+    },
+    {
+      "sectionId": 1,
+      "sectionTitle": "The Method of Exhaustion",
+      "textbookSection": "I 1.3",
+      "examples": [
+        {
+          "id": "ex-1-1-1",
+          "type": "example",
+          "title": "Archimedes' Method",
+          "statement": "Use inscribed and circumscribed rectangles to approximate the area under $y = x^2$ from $x = 0$ to $x = b$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Partition the interval",
+                "content": "Divide $[0, b]$ into $n$ equal subintervals, each of width $\\Delta x = b/n$. The partition points are $x_k = kb/n$ for $k = 0, 1, \\ldots, n$."
+              },
+              {
+                "title": "Form lower sum",
+                "content": "Using left endpoints: $s_n = \\sum_{k=0}^{n-1} (kb/n)^2 \\cdot (b/n) = \\frac{b^3}{n^3} \\sum_{k=0}^{n-1} k^2 = \\frac{b^3}{n^3} \\cdot \\frac{(n-1)n(2n-1)}{6}$"
+              },
+              {
+                "title": "Form upper sum",
+                "content": "Using right endpoints: $S_n = \\sum_{k=1}^{n} (kb/n)^2 \\cdot (b/n) = \\frac{b^3}{n^3} \\sum_{k=1}^{n} k^2 = \\frac{b^3}{n^3} \\cdot \\frac{n(n+1)(2n+1)}{6}$"
+              },
+              {
+                "title": "Take limits",
+                "content": "As $n \\to \\infty$: $s_n \\to \\frac{b^3}{3}$ and $S_n \\to \\frac{b^3}{3}$"
+              }
+            ],
+            "conclusion": "The area under $y = x^2$ from $0$ to $b$ is $\\frac{b^3}{3}$. This is the method of exhaustion in action."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-1-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Compute the area under the curve $y = x^3$ from $x = 0$ to $x = b$ using inscribed and circumscribed rectangles, then verify that both sums approach the same limit as $n \\to \\infty$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up the approximation",
+                "content": "Partition $[0, b]$ into $n$ equal parts with $\\Delta x = b/n$ and $x_k = kb/n$."
+              },
+              {
+                "title": "Compute lower sum",
+                "content": "$s_n = \\sum_{k=0}^{n-1} (kb/n)^3 \\cdot (b/n) = \\frac{b^4}{n^4} \\sum_{k=0}^{n-1} k^3 = \\frac{b^4}{n^4} \\cdot \\frac{(n-1)^2 n^2}{4}$"
+              },
+              {
+                "title": "Compute upper sum",
+                "content": "$S_n = \\sum_{k=1}^{n} (kb/n)^3 \\cdot (b/n) = \\frac{b^4}{n^4} \\sum_{k=1}^{n} k^3 = \\frac{b^4}{n^4} \\cdot \\frac{n^2(n+1)^2}{4}$"
+              },
+              {
+                "title": "Evaluate limits",
+                "content": "As $n \\to \\infty$:\n$s_n = \\frac{b^4(n-1)^2}{4n^2} \\to \\frac{b^4}{4}$\n$S_n = \\frac{b^4(n+1)^2}{4n^2} \\to \\frac{b^4}{4}$"
+              }
+            ],
+            "conclusion": "The area under $y = x^3$ from $0$ to $b$ is $\\frac{b^4}{4}$."
+          }
+        },
+        {
+          "id": "1-1-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that $1^2 + 2^2 + \\cdots + n^2 = \\frac{n(n+1)(2n+1)}{6}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Base case",
+                "content": "For $n = 1$: LHS $= 1$, RHS $= \\frac{1 \\cdot 2 \\cdot 3}{6} = 1$. ✓"
+              },
+              {
+                "title": "Inductive hypothesis",
+                "content": "Assume $1^2 + 2^2 + \\cdots + k^2 = \\frac{k(k+1)(2k+1)}{6}$ for some $k \\geq 1$."
+              },
+              {
+                "title": "Inductive step",
+                "content": "$1^2 + \\cdots + k^2 + (k+1)^2 = \\frac{k(k+1)(2k+1)}{6} + (k+1)^2$\n$= (k+1)\\left[\\frac{k(2k+1)}{6} + (k+1)\\right]$\n$= (k+1) \\cdot \\frac{k(2k+1) + 6(k+1)}{6}$\n$= (k+1) \\cdot \\frac{2k^2 + 7k + 6}{6}$\n$= (k+1) \\cdot \\frac{(k+2)(2k+3)}{6}$\n$= \\frac{(k+1)(k+2)(2(k+1)+1)}{6}$"
+              }
+            ],
+            "conclusion": "By induction, $\\sum_{i=1}^{n} i^2 = \\frac{n(n+1)(2n+1)}{6}$ for all $n \\geq 1$."
+          }
+        },
+        {
+          "id": "1-1-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that $1^3 + 2^3 + \\cdots + n^3 = \\left(\\frac{n(n+1)}{2}\\right)^2$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Base case",
+                "content": "For $n = 1$: LHS $= 1$, RHS $= \\left(\\frac{1 \\cdot 2}{2}\\right)^2 = 1$. ✓"
+              },
+              {
+                "title": "Inductive hypothesis",
+                "content": "Assume $1^3 + 2^3 + \\cdots + k^3 = \\left(\\frac{k(k+1)}{2}\\right)^2$ for some $k \\geq 1$."
+              },
+              {
+                "title": "Inductive step",
+                "content": "$1^3 + \\cdots + k^3 + (k+1)^3 = \\frac{k^2(k+1)^2}{4} + (k+1)^3$\n$= (k+1)^2\\left[\\frac{k^2}{4} + (k+1)\\right]$\n$= (k+1)^2 \\cdot \\frac{k^2 + 4k + 4}{4}$\n$= (k+1)^2 \\cdot \\frac{(k+2)^2}{4}$\n$= \\left(\\frac{(k+1)(k+2)}{2}\\right)^2$"
+              }
+            ],
+            "conclusion": "By induction, $\\sum_{i=1}^{n} i^3 = \\left(\\frac{n(n+1)}{2}\\right)^2 = \\left(\\sum_{i=1}^{n} i\\right)^2$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "sectionTitle": "Set Theory Basics",
+      "textbookSection": "I 2.1-2.3",
+      "examples": [
+        {
+          "id": "ex-1-2-1",
+          "type": "example",
+          "title": "Set Operations",
+          "statement": "If $A = \\{1, 2, 3, 4\\}$ and $B = \\{3, 4, 5, 6\\}$, find $A \\cup B$, $A \\cap B$, $A - B$, and $B - A$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Union",
+                "content": "$A \\cup B = \\{x : x \\in A \\text{ or } x \\in B\\} = \\{1, 2, 3, 4, 5, 6\\}$"
+              },
+              {
+                "title": "Intersection",
+                "content": "$A \\cap B = \\{x : x \\in A \\text{ and } x \\in B\\} = \\{3, 4\\}$"
+              },
+              {
+                "title": "Set difference A - B",
+                "content": "$A - B = \\{x : x \\in A \\text{ and } x \\notin B\\} = \\{1, 2\\}$"
+              },
+              {
+                "title": "Set difference B - A",
+                "content": "$B - A = \\{x : x \\in B \\text{ and } x \\notin A\\} = \\{5, 6\\}$"
+              }
+            ],
+            "conclusion": "Note that $A \\cup B$ can be written as the disjoint union $(A - B) \\cup (A \\cap B) \\cup (B - A)$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-2-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove De Morgan's Laws: $(A \\cup B)^c = A^c \\cap B^c$ and $(A \\cap B)^c = A^c \\cup B^c$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Prove $(A \\cup B)^c \\subseteq A^c \\cap B^c$",
+                "content": "Let $x \\in (A \\cup B)^c$. Then $x \\notin A \\cup B$, so $x \\notin A$ and $x \\notin B$. Thus $x \\in A^c$ and $x \\in B^c$, so $x \\in A^c \\cap B^c$."
+              },
+              {
+                "title": "Prove $A^c \\cap B^c \\subseteq (A \\cup B)^c$",
+                "content": "Let $x \\in A^c \\cap B^c$. Then $x \\in A^c$ and $x \\in B^c$, so $x \\notin A$ and $x \\notin B$. Thus $x \\notin A \\cup B$, so $x \\in (A \\cup B)^c$."
+              },
+              {
+                "title": "Second law follows similarly",
+                "content": "The second law $(A \\cap B)^c = A^c \\cup B^c$ can be proved by the same technique, or by applying the first law to $A^c$ and $B^c$."
+              }
+            ],
+            "conclusion": "De Morgan's Laws hold for any sets $A$ and $B$."
+          }
+        },
+        {
+          "id": "1-2-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that $A \\subseteq B$ if and only if $A \\cap B = A$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Forward direction",
+                "content": "Assume $A \\subseteq B$. We always have $A \\cap B \\subseteq A$. For the reverse, if $x \\in A$, then $x \\in B$ (since $A \\subseteq B$), so $x \\in A \\cap B$. Thus $A \\subseteq A \\cap B$, and therefore $A = A \\cap B$."
+              },
+              {
+                "title": "Reverse direction",
+                "content": "Assume $A \\cap B = A$. If $x \\in A$, then $x \\in A \\cap B$ (since $A = A \\cap B$), so $x \\in B$. Thus $A \\subseteq B$."
+              }
+            ],
+            "conclusion": "$A \\subseteq B \\Leftrightarrow A \\cap B = A$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "sectionTitle": "The Real Number System",
+      "textbookSection": "I 3.1-3.5",
+      "examples": [
+        {
+          "id": "ex-1-3-1",
+          "type": "example",
+          "title": "Field Axioms",
+          "statement": "Using only the field axioms, prove that $(-a)(-b) = ab$ for all real numbers $a$ and $b$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Start with $(-a)(-b) + (-a)b$",
+                "content": "By distributivity: $(-a)(-b) + (-a)b = (-a)[(-b) + b] = (-a) \\cdot 0 = 0$"
+              },
+              {
+                "title": "Identify $(-a)b$",
+                "content": "Similarly, $(-a)b + ab = [(-a) + a]b = 0 \\cdot b = 0$, so $(-a)b = -(ab)$."
+              },
+              {
+                "title": "Substitute back",
+                "content": "From step 1: $(-a)(-b) + (-a)b = 0$, so $(-a)(-b) = -[(-a)b] = -[-(ab)] = ab$."
+              }
+            ],
+            "conclusion": "$(-a)(-b) = ab$. The product of two negatives is positive."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-3-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that if $ab = 0$, then $a = 0$ or $b = 0$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume $a \\neq 0$",
+                "content": "If $a \\neq 0$, then $a$ has a multiplicative inverse $a^{-1}$."
+              },
+              {
+                "title": "Multiply both sides",
+                "content": "$ab = 0 \\Rightarrow a^{-1}(ab) = a^{-1} \\cdot 0 = 0$"
+              },
+              {
+                "title": "Apply associativity",
+                "content": "$a^{-1}(ab) = (a^{-1}a)b = 1 \\cdot b = b$"
+              }
+            ],
+            "conclusion": "Therefore $b = 0$. If $a \\neq 0$, then $b = 0$; equivalently, $a = 0$ or $b = 0$."
+          }
+        },
+        {
+          "id": "1-3-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that $|ab| = |a| \\cdot |b|$ for all real numbers $a$ and $b$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Case 1: Both non-negative",
+                "content": "If $a \\geq 0$ and $b \\geq 0$, then $ab \\geq 0$, so $|ab| = ab = |a| \\cdot |b|$."
+              },
+              {
+                "title": "Case 2: One negative",
+                "content": "If $a < 0$ and $b \\geq 0$, then $ab \\leq 0$, so $|ab| = -ab = (-a)b = |a| \\cdot |b|$. Similarly if $a \\geq 0$ and $b < 0$."
+              },
+              {
+                "title": "Case 3: Both negative",
+                "content": "If $a < 0$ and $b < 0$, then $ab > 0$, so $|ab| = ab = (-a)(-b) = |a| \\cdot |b|$."
+              }
+            ],
+            "conclusion": "In all cases, $|ab| = |a| \\cdot |b|$."
+          }
+        },
+        {
+          "id": "1-3-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove the triangle inequality: $|a + b| \\leq |a| + |b|$ for all real $a, b$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Establish bounds on $a$ and $b$",
+                "content": "By definition of absolute value: $-|a| \\leq a \\leq |a|$ and $-|b| \\leq b \\leq |b|$."
+              },
+              {
+                "title": "Add inequalities",
+                "content": "Adding: $-(|a| + |b|) \\leq a + b \\leq |a| + |b|$."
+              },
+              {
+                "title": "Apply absolute value definition",
+                "content": "The inequality $-c \\leq x \\leq c$ (for $c \\geq 0$) is equivalent to $|x| \\leq c$."
+              }
+            ],
+            "conclusion": "Therefore $|a + b| \\leq |a| + |b|$."
+          }
+        },
+        {
+          "id": "1-3-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Prove that for any nonempty set $S$ of real numbers bounded above, $\\sup S$ is unique.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume two supremums",
+                "content": "Suppose $M$ and $M'$ are both supremums of $S$."
+              },
+              {
+                "title": "Apply least upper bound property",
+                "content": "Since $M$ is the least upper bound and $M'$ is an upper bound, $M \\leq M'$. Similarly, since $M'$ is the least upper bound and $M$ is an upper bound, $M' \\leq M$."
+              },
+              {
+                "title": "Conclude",
+                "content": "Therefore $M = M'$."
+              }
+            ],
+            "conclusion": "The supremum is unique when it exists."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 4,
+      "sectionTitle": "Mathematical Induction",
+      "textbookSection": "I 4.1-4.4",
+      "examples": [
+        {
+          "id": "ex-1-4-1",
+          "type": "example",
+          "title": "Strong Induction",
+          "statement": "Prove that every integer $n \\geq 2$ can be written as a product of primes.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Base case",
+                "content": "For $n = 2$: $2$ is prime, so it is a product of primes (a single prime)."
+              },
+              {
+                "title": "Strong inductive hypothesis",
+                "content": "Assume every integer $k$ with $2 \\leq k < n$ can be written as a product of primes."
+              },
+              {
+                "title": "Inductive step",
+                "content": "If $n$ is prime, we're done. If $n$ is composite, then $n = ab$ for some integers $a, b$ with $2 \\leq a, b < n$. By the inductive hypothesis, both $a$ and $b$ are products of primes, so $n = ab$ is also a product of primes."
+              }
+            ],
+            "conclusion": "By strong induction, every integer $n \\geq 2$ is a product of primes."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-4-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove by induction that $1 + 2 + \\cdots + n = \\frac{n(n+1)}{2}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Base case",
+                "content": "For $n = 1$: LHS $= 1$, RHS $= \\frac{1 \\cdot 2}{2} = 1$. ✓"
+              },
+              {
+                "title": "Inductive hypothesis",
+                "content": "Assume $1 + 2 + \\cdots + k = \\frac{k(k+1)}{2}$ for some $k \\geq 1$."
+              },
+              {
+                "title": "Inductive step",
+                "content": "$1 + 2 + \\cdots + k + (k+1) = \\frac{k(k+1)}{2} + (k+1) = (k+1)\\left(\\frac{k}{2} + 1\\right) = (k+1) \\cdot \\frac{k+2}{2} = \\frac{(k+1)(k+2)}{2}$"
+              }
+            ],
+            "conclusion": "By induction, $\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}$ for all $n \\geq 1$."
+          }
+        },
+        {
+          "id": "1-4-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that $n! > 2^n$ for all $n \\geq 4$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Base case",
+                "content": "For $n = 4$: $4! = 24$ and $2^4 = 16$. Since $24 > 16$, the base case holds."
+              },
+              {
+                "title": "Inductive hypothesis",
+                "content": "Assume $k! > 2^k$ for some $k \\geq 4$."
+              },
+              {
+                "title": "Inductive step",
+                "content": "$(k+1)! = (k+1) \\cdot k! > (k+1) \\cdot 2^k$. Since $k \\geq 4$, we have $k+1 \\geq 5 > 2$, so $(k+1) \\cdot 2^k > 2 \\cdot 2^k = 2^{k+1}$."
+              }
+            ],
+            "conclusion": "By induction, $n! > 2^n$ for all $n \\geq 4$."
+          }
+        },
+        {
+          "id": "1-4-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Use the well-ordering principle to prove there is no integer between 0 and 1.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume contradiction",
+                "content": "Suppose $S = \\{n \\in \\mathbb{Z} : 0 < n < 1\\}$ is nonempty."
+              },
+              {
+                "title": "Apply well-ordering",
+                "content": "If $S$ is nonempty, let $m$ be the smallest positive integer in $S$ (exists by well-ordering)."
+              },
+              {
+                "title": "Derive contradiction",
+                "content": "Then $0 < m < 1$, so $0 < m^2 < m < 1$. But $m^2$ is a positive integer (being $m \\cdot m$) in $S$ smaller than $m$, contradicting minimality."
+              }
+            ],
+            "conclusion": "Therefore $S$ is empty; there is no integer strictly between 0 and 1."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 5,
+      "sectionTitle": "Summation Notation",
+      "textbookSection": "I 4.5-4.7",
+      "examples": [
+        {
+          "id": "ex-1-5-1",
+          "type": "example",
+          "title": "Telescoping Sums",
+          "statement": "Evaluate $\\sum_{k=1}^{n} \\frac{1}{k(k+1)}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Partial fractions",
+                "content": "$\\frac{1}{k(k+1)} = \\frac{1}{k} - \\frac{1}{k+1}$"
+              },
+              {
+                "title": "Write out the sum",
+                "content": "$\\sum_{k=1}^{n} \\left(\\frac{1}{k} - \\frac{1}{k+1}\\right) = \\left(1 - \\frac{1}{2}\\right) + \\left(\\frac{1}{2} - \\frac{1}{3}\\right) + \\cdots + \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right)$"
+              },
+              {
+                "title": "Cancel terms",
+                "content": "Most terms cancel (telescope), leaving $1 - \\frac{1}{n+1} = \\frac{n}{n+1}$."
+              }
+            ],
+            "conclusion": "$\\sum_{k=1}^{n} \\frac{1}{k(k+1)} = \\frac{n}{n+1}$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-5-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Evaluate $\\sum_{k=1}^{n} k \\cdot k!$",
+          "solution": {
+            "steps": [
+              {
+                "title": "Rewrite the summand",
+                "content": "$k \\cdot k! = (k+1-1) \\cdot k! = (k+1)! - k!$"
+              },
+              {
+                "title": "Apply telescoping",
+                "content": "$\\sum_{k=1}^{n} [(k+1)! - k!] = (2! - 1!) + (3! - 2!) + \\cdots + ((n+1)! - n!)$"
+              },
+              {
+                "title": "Simplify",
+                "content": "Telescoping gives $(n+1)! - 1!$"
+              }
+            ],
+            "conclusion": "$\\sum_{k=1}^{n} k \\cdot k! = (n+1)! - 1$"
+          }
+        },
+        {
+          "id": "1-5-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Prove that $\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use binomial theorem",
+                "content": "The binomial theorem states $(1 + x)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^k$."
+              },
+              {
+                "title": "Substitute x = 1",
+                "content": "Setting $x = 1$: $(1 + 1)^n = \\sum_{k=0}^{n} \\binom{n}{k} \\cdot 1^k = \\sum_{k=0}^{n} \\binom{n}{k}$"
+              }
+            ],
+            "conclusion": "Therefore $\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$. Combinatorially: this counts all subsets of an $n$-element set."
+          }
+        },
+        {
+          "id": "1-5-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Prove that $\\sum_{k=0}^{n} (-1)^k \\binom{n}{k} = 0$ for $n \\geq 1$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use binomial theorem",
+                "content": "$(1 + x)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^k$"
+              },
+              {
+                "title": "Substitute x = -1",
+                "content": "Setting $x = -1$: $(1 - 1)^n = \\sum_{k=0}^{n} \\binom{n}{k} (-1)^k$"
+              },
+              {
+                "title": "Simplify",
+                "content": "$0^n = 0$ for $n \\geq 1$."
+              }
+            ],
+            "conclusion": "Therefore $\\sum_{k=0}^{n} (-1)^k \\binom{n}{k} = 0$ for $n \\geq 1$. This means the number of even-sized subsets equals the number of odd-sized subsets."
+          }
+        }
+      ]
+    }
+  ]
+}

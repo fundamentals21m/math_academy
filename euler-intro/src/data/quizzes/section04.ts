@@ -36,12 +36,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many values of $y$ typically correspond to each value of $x$ for a conic?',
     options: [
-      'Two',
       'One',
       'Three',
+      'Two',
       'Infinitely many',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Solving the quadratic equation in $y$ gives two values (via the $\\pm$ in the quadratic formula), reflecting that a vertical line typically intersects a conic in two points.',
   },
@@ -52,10 +52,10 @@ export const section04Questions: QuizQuestion[] = [
     options: [
       'Any line through the center',
       'The longest chord of the conic',
+      'A tangent line to the conic',
       'The locus of midpoints of parallel chords',
-      'A tangent line to the conic'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A diameter is the locus of midpoints of parallel chords. Euler shows this is always a straight line because $(y_1 + y_2)/2$ is linear in $x$.',
   },
@@ -64,10 +64,26 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Vieta\'s formulas, what is $y_1 + y_2$ for the roots of $\\gamma y^2 + (\\beta x + \\varepsilon)y + ... = 0$?',
     options: [
-      '$(\\beta x + \\varepsilon)/\\gamma$',
-      '$\\gamma/(\\beta x + \\varepsilon)$',
-      '$(\\beta x + \\varepsilon)^2/\\gamma$',
-      '$-(\\beta x + \\varepsilon)/\\gamma$'
+      '$-(\\beta x + \\varepsilon)/\\gamma
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'By Vieta\'s formulas, the sum of roots of $ay^2 + by + c = 0$ is $-b/a$. Here, $y_1 + y_2 = -(\\beta x + \\varepsilon)/\\gamma$.',
+  },
+      '$(\\beta x + \\varepsilon)/\\gamma
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By Vieta\'s formulas, the sum of roots of $ay^2 + by + c = 0$ is $-b/a$. Here, $y_1 + y_2 = -(\\beta x + \\varepsilon)/\\gamma$.',
+  },
+      '$\\gamma/(\\beta x + \\varepsilon)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By Vieta\'s formulas, the sum of roots of $ay^2 + by + c = 0$ is $-b/a$. Here, $y_1 + y_2 = -(\\beta x + \\varepsilon)/\\gamma$.',
+  },
+      '$(\\beta x + \\varepsilon)^2/\\gamma
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By Vieta\'s formulas, the sum of roots of $ay^2 + by + c = 0$ is $-b/a$. Here, $y_1 + y_2 = -(\\beta x + \\varepsilon)/\\gamma$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

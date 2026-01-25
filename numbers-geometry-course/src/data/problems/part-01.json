@@ -1,0 +1,148 @@
+{
+  "partId": 1,
+  "partTitle": "Arithmetic",
+  "textbookChapter": "Part 1",
+  "sections": [
+    {
+      "sectionId": 0,
+      "sectionTitle": "The Natural Numbers",
+      "textbookSection": "Section 0",
+      "examples": [
+        {
+          "id": "ex-1-0-1",
+          "type": "example",
+          "title": "Peano Axioms",
+          "statement": "Explain how the Peano axioms define the natural numbers.",
+          "solution": {
+            "steps": [
+              {
+                "title": "List the axioms",
+                "content": "1. $0$ is a natural number\n2. Every natural number $n$ has a successor $S(n)$\n3. $0$ is not the successor of any natural number\n4. Different numbers have different successors\n5. (Induction) If $P(0)$ and $P(n) \\Rightarrow P(S(n))$, then $P(n)$ for all $n$"
+              },
+              {
+                "title": "Construct the naturals",
+                "content": "$0, S(0)=1, S(1)=2, S(2)=3, \\ldots$"
+              }
+            ],
+            "conclusion": "The Peano axioms uniquely characterize $\\mathbb{N}$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-0-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove by induction that $1 + 2 + \\cdots + n = \\frac{n(n+1)}{2}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Base case",
+                "content": "$n=1$: LHS $= 1$, RHS $= \\frac{1 \\cdot 2}{2} = 1$ ✓"
+              },
+              {
+                "title": "Inductive step",
+                "content": "Assume true for $n$. For $n+1$:\n$(1 + 2 + \\cdots + n) + (n+1) = \\frac{n(n+1)}{2} + (n+1)$\n$= \\frac{n(n+1) + 2(n+1)}{2} = \\frac{(n+1)(n+2)}{2}$ ✓"
+              }
+            ],
+            "conclusion": "By induction, the formula holds for all $n \\geq 1$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 1,
+      "sectionTitle": "Division, Divisors, and Primes",
+      "textbookSection": "Section 1",
+      "examples": [
+        {
+          "id": "ex-1-1-1",
+          "type": "example",
+          "title": "Division Algorithm",
+          "statement": "State and prove the division algorithm.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Statement",
+                "content": "For any integers $a \\geq 0$ and $b > 0$, there exist unique integers $q \\geq 0$ and $0 \\leq r < b$ such that $a = bq + r$."
+              },
+              {
+                "title": "Existence",
+                "content": "Consider $\\{a - bk : k \\geq 0, a - bk \\geq 0\\}$.\nThis set is non-empty (contains $a$) and has a minimum element $r = a - bq$.\nIf $r \\geq b$, then $r - b \\geq 0$ is smaller, contradiction. So $r < b$."
+              },
+              {
+                "title": "Uniqueness",
+                "content": "If $a = bq_1 + r_1 = bq_2 + r_2$, then $b(q_1 - q_2) = r_2 - r_1$.\nSince $|r_2 - r_1| < b$, we need $q_1 = q_2$ and thus $r_1 = r_2$."
+              }
+            ],
+            "conclusion": "The quotient $q$ and remainder $r$ are uniquely determined."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-1-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find $\\gcd(84, 36)$ using the Euclidean algorithm.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Euclidean algorithm",
+                "content": "$84 = 36 \\cdot 2 + 12$\n$36 = 12 \\cdot 3 + 0$"
+              },
+              {
+                "title": "Conclude",
+                "content": "The last non-zero remainder is 12."
+              }
+            ],
+            "conclusion": "$\\gcd(84, 36) = 12$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 5,
+      "sectionTitle": "Unique Prime Factorization",
+      "textbookSection": "Section 5",
+      "examples": [
+        {
+          "id": "ex-1-5-1",
+          "type": "example",
+          "title": "Fundamental Theorem of Arithmetic",
+          "statement": "State the Fundamental Theorem of Arithmetic.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Statement",
+                "content": "Every integer $n > 1$ can be written as a product of primes:\n$n = p_1^{a_1} \\cdot p_2^{a_2} \\cdots p_k^{a_k}$\nwhere $p_1 < p_2 < \\cdots < p_k$ are primes and $a_i \\geq 1$."
+              },
+              {
+                "title": "Uniqueness",
+                "content": "This representation is unique up to the order of the factors."
+              }
+            ],
+            "conclusion": "Prime factorization is the foundation of number theory."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "1-5-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find the prime factorization of 2520.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Factor step by step",
+                "content": "$2520 = 2 \\cdot 1260 = 2^2 \\cdot 630 = 2^3 \\cdot 315$\n$315 = 3 \\cdot 105 = 3^2 \\cdot 35 = 3^2 \\cdot 5 \\cdot 7$"
+              }
+            ],
+            "conclusion": "$2520 = 2^3 \\cdot 3^2 \\cdot 5 \\cdot 7$"
+          }
+        }
+      ]
+    }
+  ]
+}

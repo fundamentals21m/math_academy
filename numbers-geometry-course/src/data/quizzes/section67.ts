@@ -9,12 +9,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Menaechmus construct using two parabolas?',
     options: [
+      '∛2',
       '√2',
       'π',
       'e',
-      '∛2',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Menaechmus showed how to construct ∛2 (cube root of 2) by intersecting two parabolas.',
@@ -24,12 +24,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Bézout\'s theorem, how many points can a degree 2 curve and a degree 3 curve have in common?',
     options: [
-      'At most 6',
       'At most 3',
       'At most 5',
+      'At most 6',
       'At most 9',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'By Bézout\'s theorem, curves of degree m and n intersect in at most mn points: 2 × 3 = 6.',
@@ -39,12 +39,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many intersection points can two conics have?',
     options: [
-      'At most 2',
       'At most 4',
+      'At most 2',
       'At most 3',
       'At most 8',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Two conics (degree 2 curves) can intersect in at most 2 × 2 = 4 points.',
@@ -55,11 +55,11 @@ export const section67Questions: QuizQuestion[] = [
     question: 'Who discovered how to solve quartic equations using conic intersections?',
     options: [
       'Menaechmus',
-      'Cardano',
       'Ferrari',
+      'Cardano',
       'Tartaglia',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Lodovico Ferrari (1522-1565) discovered that quartics could be solved via conic intersections.',
@@ -69,12 +69,12 @@ export const section67Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the Menaechmus construction important?',
     options: [
-      'It solved problems beyond compass-and-straightedge',
       'It proved π is irrational',
       'It showed compass-and-straightedge cannot construct ∛2',
       'It discovered the parabola',
+      'It solved problems beyond compass-and-straightedge',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Menaechmus showed that conic sections could solve problems (like doubling the cube) that compass and straightedge cannot.',
@@ -87,7 +87,7 @@ export const section67Questions: QuizQuestion[] = [
       'The area of triangles',
       'The discriminant of polynomials',
       'The number of intersection points of curves',
-      'The focus of a parabola'
+      'The focus of a parabola',
     ],
     correctIndex: 2,
     difficulty: 'easy',

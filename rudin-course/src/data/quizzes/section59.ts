@@ -92,10 +92,26 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A \\in L(\\mathbb{R}^n, \\mathbb{R}^m)$ and $B \\in L(\\mathbb{R}^m, \\mathbb{R}^k)$, then $\\|BA\\|$ satisfies:',
     options: [
-      '$\\|BA\\| \\geq \\|B\\| \\|A\\|$',
-      '$\\|BA\\| = \\|B\\| \\|A\\|$',
-      '$\\|BA\\| \\leq \\|B\\| \\|A\\|$',
-      '$\\|BA\\| = \\|B\\| + \\|A\\|$'
+      '$\\|BA\\| \\leq \\|B\\| \\|A\\|
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The operator norm is submultiplicative: $\\|BA\\| \\leq \\|B\\| \\|A\\|$. This follows from $|BAx| \\leq \\|B\\| |Ax| \\leq \\|B\\| \\|A\\| |x|$.',
+  },
+      '$\\|BA\\| \\geq \\|B\\| \\|A\\|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The operator norm is submultiplicative: $\\|BA\\| \\leq \\|B\\| \\|A\\|$. This follows from $|BAx| \\leq \\|B\\| |Ax| \\leq \\|B\\| \\|A\\| |x|$.',
+  },
+      '$\\|BA\\| = \\|B\\| \\|A\\|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The operator norm is submultiplicative: $\\|BA\\| \\leq \\|B\\| \\|A\\|$. This follows from $|BAx| \\leq \\|B\\| |Ax| \\leq \\|B\\| \\|A\\| |x|$.',
+  },
+      '$\\|BA\\| = \\|B\\| + \\|A\\|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The operator norm is submultiplicative: $\\|BA\\| \\leq \\|B\\| \\|A\\|$. This follows from $|BAx| \\leq \\|B\\| |Ax| \\leq \\|B\\| \\|A\\| |x|$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -107,9 +123,13 @@ export const section59Questions: QuizQuestion[] = [
     question: 'A linear transformation $A: \\mathbb{R}^n \\to \\mathbb{R}^n$ is invertible if and only if:',
     options: [
       '$A$ is one-to-one (equivalently, onto)',
-      '$\\|A\\| > 0$',
+      '$\\|A\\| > 0
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'For finite-dimensional spaces, a linear map is invertible iff it is one-to-one iff it is onto. Also, $A$ is invertible iff it maps every basis to a basis. Note that $\\|A\\| > 0$ only means $A \\neq 0$.',
+  },
+      'Both A and C are correct',
       '$A$ maps some basis to a basis',
-      'Both A and C are correct'
     ],
     correctIndex: 3,
     difficulty: 'hard',

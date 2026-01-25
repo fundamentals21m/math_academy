@@ -6,12 +6,12 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the Riemann-Stieltjes integral $\\int_a^b f \\, d\\alpha$, the function $\\alpha$ is called:',
     options: [
-      'The integrator',
       'The integrand',
+      'The integrator',
       'The antiderivative',
       'The measure',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'In $\\int_a^b f \\, d\\alpha$, $f$ is the integrand and $\\alpha$ is the integrator. When $\\alpha(x) = x$, we recover the ordinary Riemann integral $\\int_a^b f \\, dx$.',
   },
@@ -20,10 +20,26 @@ export const section41Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a partition $P = \\{x_0, x_1, \\ldots, x_n\\}$ of $[a, b]$, the upper Riemann-Stieltjes sum is:',
     options: [
-      '$U(P, f, \\alpha) = \\sum_{i=1}^n M_i \\Delta x_i$ where $\\Delta x_i = x_i - x_{i-1}$',
-      '$U(P, f, \\alpha) = \\sum_{i=1}^n f(x_i) \\alpha(x_i)$',
-      '$U(P, f, \\alpha) = \\sum_{i=1}^n M_i \\Delta \\alpha_i$ where $\\Delta \\alpha_i = \\alpha(x_i) - \\alpha(x_{i-1})$',
-      '$U(P, f, \\alpha) = \\sup_P \\sum_{i=1}^n f(x_i)$'
+      '$U(P, f, \\alpha) = \\sum_{i=1}^n M_i \\Delta x_i$ where $\\Delta x_i = x_i - x_{i-1}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The upper sum is $U(P, f, \\alpha) = \\sum_{i=1}^n M_i \\Delta\\alpha_i$ where $M_i = \\sup\\{f(x) : x \\in [x_{i-1}, x_i]\\}$ and $\\Delta\\alpha_i = \\alpha(x_i) - \\alpha(x_{i-1})$.',
+  },
+      '$U(P, f, \\alpha) = \\sum_{i=1}^n f(x_i) \\alpha(x_i)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The upper sum is $U(P, f, \\alpha) = \\sum_{i=1}^n M_i \\Delta\\alpha_i$ where $M_i = \\sup\\{f(x) : x \\in [x_{i-1}, x_i]\\}$ and $\\Delta\\alpha_i = \\alpha(x_i) - \\alpha(x_{i-1})$.',
+  },
+      '$U(P, f, \\alpha) = \\sup_P \\sum_{i=1}^n f(x_i)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The upper sum is $U(P, f, \\alpha) = \\sum_{i=1}^n M_i \\Delta\\alpha_i$ where $M_i = \\sup\\{f(x) : x \\in [x_{i-1}, x_i]\\}$ and $\\Delta\\alpha_i = \\alpha(x_i) - \\alpha(x_{i-1})$.',
+  },
+      '$U(P, f, \\alpha) = \\sum_{i=1}^n M_i \\Delta \\alpha_i$ where $\\Delta \\alpha_i = \\alpha(x_i) - \\alpha(x_{i-1})
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The upper sum is $U(P, f, \\alpha) = \\sum_{i=1}^n M_i \\Delta\\alpha_i$ where $M_i = \\sup\\{f(x) : x \\in [x_{i-1}, x_i]\\}$ and $\\Delta\\alpha_i = \\alpha(x_i) - \\alpha(x_{i-1})$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -35,9 +51,21 @@ export const section41Questions: QuizQuestion[] = [
     question: 'The function $f$ is Riemann-Stieltjes integrable with respect to $\\alpha$ on $[a, b]$ if:',
     options: [
       'Both $f$ and $\\alpha$ are monotonic',
-      '$f$ is continuous on $[a, b]$',
-      '$\\alpha$ is continuous on $[a, b]$',
-      '$\\sup_P L(P, f, \\alpha) = \\inf_P U(P, f, \\alpha)$'
+      '$\\sup_P L(P, f, \\alpha) = \\inf_P U(P, f, \\alpha)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By definition, $f \\in \\mathscr{R}(\\alpha)$ on $[a,b]$ if and only if $\\sup_P L(P, f, \\alpha) = \\inf_P U(P, f, \\alpha)$, i.e., the lower integral equals the upper integral.',
+  },
+      '$f$ is continuous on $[a, b]
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By definition, $f \\in \\mathscr{R}(\\alpha)$ on $[a,b]$ if and only if $\\sup_P L(P, f, \\alpha) = \\inf_P U(P, f, \\alpha)$, i.e., the lower integral equals the upper integral.',
+  },
+      '$\\alpha$ is continuous on $[a, b]
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By definition, $f \\in \\mathscr{R}(\\alpha)$ on $[a,b]$ if and only if $\\sup_P L(P, f, \\alpha) = \\inf_P U(P, f, \\alpha)$, i.e., the lower integral equals the upper integral.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

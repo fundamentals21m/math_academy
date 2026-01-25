@@ -6,10 +6,18 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the construction of the rationals from the integers, a rational number is formally defined as:',
     options: [
-      'An ordered pair $(a, b)$ where $a, b \\in \\mathbb{Z}$ and $b \\neq 0$',
+      'An equivalence class of ordered pairs $(a, b)$ where $a, b \\in \\mathbb{Z}$ and $b \\neq 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Rationals are constructed as equivalence classes of pairs $(a, b)$ under the relation $(a, b) \\sim (c, d)$ iff $ad = bc$. This ensures that $\\frac{1}{2}$ and $\\frac{2}{4}$ represent the same rational.',
+  },
+      'An ordered pair $(a, b)$ where $a, b \\in \\mathbb{Z}$ and $b \\neq 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Rationals are constructed as equivalence classes of pairs $(a, b)$ under the relation $(a, b) \\sim (c, d)$ iff $ad = bc$. This ensures that $\\frac{1}{2}$ and $\\frac{2}{4}$ represent the same rational.',
+  },
       'A decimal expansion that eventually terminates or repeats',
-      'An equivalence class of ordered pairs $(a, b)$ where $a, b \\in \\mathbb{Z}$ and $b \\neq 0$',
-      'Any number that can be written as a fraction'
+      'Any number that can be written as a fraction',
     ],
     correctIndex: 2,
     difficulty: 'medium',

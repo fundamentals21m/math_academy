@@ -84,10 +84,26 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The notation $F(x)\\Big|_a^b$ means:',
     options: [
-      '$F(a) \\cdot F(b)$',
-      '$F(b) - F(a)$',
-      '$F(a) - F(b)$',
-      '$F(a) + F(b)$'
+      '$F(b) - F(a)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The evaluation notation: $F(x)\\Big|_a^b = F(b) - F(a)$.',
+  },
+      '$F(a) \\cdot F(b)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The evaluation notation: $F(x)\\Big|_a^b = F(b) - F(a)$.',
+  },
+      '$F(a) - F(b)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The evaluation notation: $F(x)\\Big|_a^b = F(b) - F(a)$.',
+  },
+      '$F(a) + F(b)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The evaluation notation: $F(x)\\Big|_a^b = F(b) - F(a)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

@@ -106,10 +106,18 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A subspace $U$ is invariant under $T$ if:',
     options: [
-      '$T$ maps every vector in $U$ to a vector in $U$',
       '$T$ maps every vector in $U$ to zero',
-      '$T$ is the identity on $U$',
-      '$U$ is the entire space'
+      '$T$ maps every vector in $U$ to a vector in $U
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A subspace $U$ is invariant under $T$ if $T(u) \\in U$ for all $u \\in U$. In particular, every eigenspace is an invariant subspace.',
+  },
+      '$T$ is the identity on $U
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A subspace $U$ is invariant under $T$ if $T(u) \\in U$ for all $u \\in U$. In particular, every eigenspace is an invariant subspace.',
+  },
+      '$U$ is the entire space',
     ],
     correctIndex: 0,
     difficulty: 'easy',

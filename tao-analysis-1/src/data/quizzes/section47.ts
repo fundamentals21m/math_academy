@@ -76,11 +76,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'If $\\lim_{x \\to \\infty} f(x) = L$ and $\\lim_{x \\to -\\infty} f(x) = M$ with $L \\neq M$, then $f$ has:',
     options: [
       'One horizontal asymptote',
-      'No horizontal asymptotes',
       'Two different horizontal asymptotes',
+      'No horizontal asymptotes',
       'A vertical asymptote',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The function approaches different values as $x \\to +\\infty$ and $x \\to -\\infty$, giving two distinct horizontal asymptotes $y = L$ and $y = M$.',
   },

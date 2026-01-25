@@ -9,10 +9,10 @@ export const section36Questions: QuizQuestion[] = [
     options: [
       'It gave wrong answers',
       'It only worked for polynomials',
+      'It required geometric diagrams',
       'It relied on "infinitesimals" that were logically problematic',
-      'It required geometric diagrams'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'Newton and Leibniz used "infinitely small" quantities that were paradoxical: sometimes treated as nonzero (to divide by them), sometimes as zero (to simplify). Bishop Berkeley famously called them "ghosts of departed quantities."',
   },
@@ -23,11 +23,11 @@ export const section36Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Infinities',
+      'Limits',
       'Series',
       'Approximations',
-      'Limits'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     explanation:
       'The epsilon-delta definition of limits, developed by Cauchy and perfected by Weierstrass, replaced vague infinitesimals with precise statements about "arbitrarily small" quantities.',
   },
@@ -38,10 +38,26 @@ export const section36Questions: QuizQuestion[] = [
       'In the epsilon-delta definition, $\\lim_{x \\to a} f(x) = L$ means:',
     difficulty: 'medium',
     options: [
-      'For every $\\varepsilon > 0$, there exists $\\delta > 0$ such that $|x-a| < \\delta$ implies $|f(x)-L| < \\varepsilon$',
-      '$f(a) = L$',
-      '$f(x)$ gets infinitely close to $L$',
-      '$f(x) = L$ for all $x$ near $a$'
+      '$f(a) = L
+    correctIndex: 3,
+    explanation:
+      'The epsilon-delta definition says: we can make $f(x)$ as close to $L$ as we want (within $\\varepsilon$) by taking $x$ sufficiently close to $a$ (within $\\delta$). This avoids any reference to "infinitely small."',
+  },
+      '$f(x)$ gets infinitely close to $L
+    correctIndex: 0,
+    explanation:
+      'The epsilon-delta definition says: we can make $f(x)$ as close to $L$ as we want (within $\\varepsilon$) by taking $x$ sufficiently close to $a$ (within $\\delta$). This avoids any reference to "infinitely small."',
+  },
+      '$f(x) = L$ for all $x$ near $a
+    correctIndex: 0,
+    explanation:
+      'The epsilon-delta definition says: we can make $f(x)$ as close to $L$ as we want (within $\\varepsilon$) by taking $x$ sufficiently close to $a$ (within $\\delta$). This avoids any reference to "infinitely small."',
+  },
+      'For every $\\varepsilon > 0$, there exists $\\delta > 0$ such that $|x-a| < \\delta$ implies $|f(x)-L| < \\varepsilon
+    correctIndex: 0,
+    explanation:
+      'The epsilon-delta definition says: we can make $f(x)$ as close to $L$ as we want (within $\\varepsilon$) by taking $x$ sufficiently close to $a$ (within $\\delta$). This avoids any reference to "infinitely small."',
+  },
     ],
     correctIndex: 0,
     explanation:
@@ -54,11 +70,11 @@ export const section36Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'A function with infinitely many roots',
-      'A function continuous everywhere but differentiable nowhere',
       'A function equal to its own derivative',
+      'A function continuous everywhere but differentiable nowhere',
       'A function with no maximum value',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'Weierstrass constructed a function that is continuous at every point but has no derivative at any point. This shocked mathematicians who assumed continuous functions must be "smooth" except at isolated points.',
   },
@@ -70,11 +86,11 @@ export const section36Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'Euler',
-      'D\'Alembert',
-      'Bishop Berkeley',
+      'D\\\'Alembert',
       'Lagrange',
+      'Bishop Berkeley',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'Bishop George Berkeley wrote "The Analyst" (1734), a devastating critique of calculus foundations. He pointed out that dividing by $h$ (treating it as nonzero) then setting $h = 0$ was logically inconsistent.',
   },
@@ -85,12 +101,12 @@ export const section36Questions: QuizQuestion[] = [
       'What did Abraham Robinson\'s nonstandard analysis (1960s) show about infinitesimals?',
     difficulty: 'hard',
     options: [
-      'They don\'t exist in any sense',
+      'They can be made rigorous using advanced logic',
+      'They don\\\'t exist in any sense',
       'They contradict the epsilon-delta definition',
       'They are equivalent to zero',
-      'They can be made rigorous using advanced logic'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     explanation:
       'Robinson showed that using model theory, one can construct a rigorous number system containing genuine infinitesimals. This vindicated Newton and Leibniz\'s intuition: infinitesimals can be made meaningful, just not with 17th-century logic.',
   },

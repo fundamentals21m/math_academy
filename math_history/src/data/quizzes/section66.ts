@@ -7,12 +7,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A space is "simply connected" if:',
     options: [
-      'It has no boundary',
       'Every loop can be continuously shrunk to a point',
+      'It has no boundary',
       'It is two-dimensional',
-      'It has Euler characteristic 2'
+      'It has Euler characteristic 2',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'A simply connected space has trivial fundamental group—every loop can be continuously contracted to a point. Examples include R^n and spheres S^n for n ≥ 2. The circle is NOT simply connected.',
@@ -22,10 +22,15 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The fundamental group of the circle $S^1$ is:',
     options: [
-      '$\\mathbb{Z} \\times \\mathbb{Z}$',
-      'The trivial group',
+      '$\\mathbb{Z} \\times \\mathbb{Z}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'π₁(S¹) = Z. Loops on the circle are classified by their winding number: how many times they go around. Going around once is 1, twice is 2, backwards is -1, etc.',
+  },
       '$\\mathbb{Z}$ (the integers)',
-      'A finite group'
+      'The trivial group',
+      'A finite group',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -39,9 +44,19 @@ export const section66Questions: QuizQuestion[] = [
     question: 'The fundamental group of the torus $T^2$ is:',
     options: [
       'A non-abelian group',
-      '$\\mathbb{Z}$',
+      '$\\mathbb{Z} \\times \\mathbb{Z}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'π₁(T²) = Z × Z. The torus has two independent directions for loops (around and through the hole), each contributing a Z factor. Loops are classified by pairs of integers (m, n).',
+  },
+      '$\\mathbb{Z}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'π₁(T²) = Z × Z. The torus has two independent directions for loops (around and through the hole), each contributing a Z factor. Loops are classified by pairs of integers (m, n).',
+  },
       'The trivial group',
-      '$\\mathbb{Z} \\times \\mathbb{Z}$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -53,12 +68,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two loops are homotopic if:',
     options: [
-      'One can be continuously deformed into the other',
       'They have the same length',
       'They pass through the same points',
       'They have the same starting point only',
+      'One can be continuously deformed into the other',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Homotopy is continuous deformation. Two loops based at the same point are homotopic if one can be "morphed" into the other continuously without breaking or leaving the space. The fundamental group consists of homotopy classes of loops.',
@@ -69,10 +84,20 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The fundamental group of a figure-eight (two circles joined at a point) is:',
     options: [
-      '$\\mathbb{Z} \\times \\mathbb{Z}$',
       'The free group on two generators',
-      '$\\mathbb{Z}$',
-      'The trivial group'
+      '$\\mathbb{Z} \\times \\mathbb{Z}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation:
+      'π₁(figure-eight) = F₂, the free group on two generators (one for each circle). Unlike Z × Z (which is abelian), F₂ is non-abelian: going around circle A then B is different from B then A.',
+  },
+      '$\\mathbb{Z}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'π₁(figure-eight) = F₂, the free group on two generators (one for each circle). Unlike Z × Z (which is abelian), F₂ is non-abelian: going around circle A then B is different from B then A.',
+  },
+      'The trivial group',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -87,7 +112,7 @@ export const section66Questions: QuizQuestion[] = [
       'The fundamental group is always abelian',
       'All 3-manifolds have trivial fundamental group',
       'A simply connected closed 3-manifold is homeomorphic to the 3-sphere',
-      'Every surface is simply connected'
+      'Every surface is simply connected',
     ],
     correctIndex: 2,
     difficulty: 'hard',

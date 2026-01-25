@@ -6,10 +6,26 @@ export const section135Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cylindrical coordinates $(r, \\theta, z)$ are related to Cartesian coordinates by:',
     options: [
-      '$x = r\\sin\\theta\\cos\\varphi$, $y = r\\sin\\theta\\sin\\varphi$, $z = r\\cos\\theta$',
-      '$x = r\\cos z$, $y = r\\sin z$, $z = \\theta$',
-      '$x = r$, $y = \\theta$, $z = z$',
-      '$x = r\\cos\\theta$, $y = r\\sin\\theta$, $z = z$'
+      '$x = r\\sin\\theta\\cos\\varphi$, $y = r\\sin\\theta\\sin\\varphi$, $z = r\\cos\\theta
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Cylindrical coordinates use polar coordinates in the xy-plane ($x = r\\cos\\theta$, $y = r\\sin\\theta$) while leaving $z$ unchanged.',
+  },
+      '$x = r\\cos\\theta$, $y = r\\sin\\theta$, $z = z
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Cylindrical coordinates use polar coordinates in the xy-plane ($x = r\\cos\\theta$, $y = r\\sin\\theta$) while leaving $z$ unchanged.',
+  },
+      '$x = r\\cos z$, $y = r\\sin z$, $z = \\theta
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Cylindrical coordinates use polar coordinates in the xy-plane ($x = r\\cos\\theta$, $y = r\\sin\\theta$) while leaving $z$ unchanged.',
+  },
+      '$x = r$, $y = \\theta$, $z = z
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Cylindrical coordinates use polar coordinates in the xy-plane ($x = r\\cos\\theta$, $y = r\\sin\\theta$) while leaving $z$ unchanged.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -52,10 +68,10 @@ export const section135Questions: QuizQuestion[] = [
     options: [
       'A plane',
       'A sphere',
-      'A vertical cylinder centered on the z-axis',
       'A cone',
+      'A vertical cylinder centered on the z-axis',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$r = c$ describes all points at distance $c$ from the z-axis, forming a vertical cylinder of radius $c$ centered on the z-axis.',
   },
@@ -96,10 +112,10 @@ export const section135Questions: QuizQuestion[] = [
     options: [
       'Spherical symmetry',
       'No particular symmetry',
+      'Cylindrical symmetry (about the z-axis)',
       'Planar symmetry',
-      'Cylindrical symmetry (about the z-axis)'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Cylindrical coordinates are ideal for regions bounded by cylinders, cones, or surfaces of revolution about the z-axis, where the symmetry simplifies the integration limits.',
   },

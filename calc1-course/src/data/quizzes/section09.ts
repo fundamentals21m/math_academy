@@ -6,12 +6,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The integral of a step function is defined as:',
     options: [
-      'The sum of (value × subinterval length) over all subintervals',
       'The maximum value times the length',
       'The average value',
-      'The derivative of the function'
+      'The sum of (value × subinterval length) over all subintervals',
+      'The derivative of the function',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The integral of a step function sums up the areas of rectangles on each subinterval.',
   },
@@ -60,10 +60,22 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $s(x) \\leq t(x)$ for all $x \\in [a, b]$, then:',
     options: [
-      '$\\int_a^b s \\geq \\int_a^b t$',
-      '$\\int_a^b s = \\int_a^b t$',
-      '$\\int_a^b s \\leq \\int_a^b t$',
-      'Cannot compare'
+      '$\\int_a^b s \\leq \\int_a^b t
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Comparison property: if $s \\leq t$ pointwise, then $\\int s \\leq \\int t$.',
+  },
+      '$\\int_a^b s \\geq \\int_a^b t
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Comparison property: if $s \\leq t$ pointwise, then $\\int s \\leq \\int t$.',
+  },
+      '$\\int_a^b s = \\int_a^b t
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Comparison property: if $s \\leq t$ pointwise, then $\\int s \\leq \\int t$.',
+  },
+      'Cannot compare',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -74,12 +86,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The integral of a step function depends on:',
     options: [
-      'Only the endpoints of the interval',
       'The values of the function and subinterval lengths',
+      'Only the endpoints of the interval',
       'The derivative of the function',
       'The number of subintervals only',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The integral depends on what value the function takes on each subinterval and the length of that subinterval.',
   },

@@ -7,11 +7,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'In the Cauchy sequence construction, a real number is defined as:',
     options: [
       'A Cauchy sequence of rationals',
+      'An equivalence class of Cauchy sequences of rationals',
       'A limit of a Cauchy sequence',
       'A decimal expansion',
-      'An equivalence class of Cauchy sequences of rationals',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A real number is an equivalence class of Cauchy sequences, where two sequences are equivalent if their difference converges to zero. This ensures each real has a unique representation (as a class).',
   },
@@ -80,10 +80,26 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To show multiplication of reals is well-defined, we must prove that if $(a_n) \\sim (a_n\')$ and $(b_n) \\sim (b_n\')$, then:',
     options: [
-      '$(a_n + b_n) \\sim (a_n\' + b_n\')$',
-      '$(a_n \\cdot b_n) \\sim (a_n\' \\cdot b_n\')$',
-      '$a_n = a_n\'$ for all $n$',
-      '$(a_n / b_n) \\sim (a_n\' / b_n\')$'
+      '$(a_n + b_n) \\sim (a_n\\' + b_n\\')
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Well-definedness of multiplication requires showing that changing representatives does not change the equivalence class of the product. This uses boundedness of Cauchy sequences.',
+  },
+      '$a_n = a_n\\'$ for all $n
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Well-definedness of multiplication requires showing that changing representatives does not change the equivalence class of the product. This uses boundedness of Cauchy sequences.',
+  },
+      '$(a_n \\cdot b_n) \\sim (a_n\\' \\cdot b_n\\')
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Well-definedness of multiplication requires showing that changing representatives does not change the equivalence class of the product. This uses boundedness of Cauchy sequences.',
+  },
+      '$(a_n / b_n) \\sim (a_n\\' / b_n\\')
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Well-definedness of multiplication requires showing that changing representatives does not change the equivalence class of the product. This uses boundedness of Cauchy sequences.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',

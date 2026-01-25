@@ -77,11 +77,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'If $0$ is an eigenvalue of $T$, what can we conclude?',
     options: [
       '$T$ is the identity transformation',
-      '$T$ is invertible',
       '$T$ has a nontrivial null space',
+      '$T$ is invertible',
       'All vectors are eigenvectors',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'If $0$ is an eigenvalue, then $T(x) = 0$ for some nonzero $x$, meaning the null space of $T$ contains nonzero vectors (is nontrivial).',
   },

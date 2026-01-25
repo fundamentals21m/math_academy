@@ -59,11 +59,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'Two codes of length $n$ are equivalent if:',
     options: [
       'They have the same minimum distance',
-      'They have the same number of code words',
       'One can be obtained from the other by permuting coordinate positions',
-      'Their generator matrices are identical'
+      'They have the same number of code words',
+      'Their generator matrices are identical',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Two codes are equivalent if there exists a permutation of the $n$ coordinate positions that maps one code to the other. Equivalent codes have the same weight distribution and minimum distance.',
   },
@@ -72,10 +72,26 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a linear $[n, k, d]$ code with parity check matrix $\\mathbf{H} = (\\mathbf{A} \\mid \\mathbf{I}_{n-k})$, a generator matrix is:',
     options: [
-      '$\\mathbf{G} = \\mathbf{H}$',
-      '$\\mathbf{G} = (\\mathbf{A} \\mid \\mathbf{I}_k)$',
-      '$\\mathbf{G} = \\mathbf{H}^t$',
-      '$\\mathbf{G} = (\\mathbf{I}_k \\mid -\\mathbf{A}^t)$'
+      '$\\mathbf{G} = (\\mathbf{I}_k \\mid -\\mathbf{A}^t)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'When the parity check matrix is $\\mathbf{H} = (\\mathbf{A} \\mid \\mathbf{I}_{n-k})$, the corresponding generator matrix in systematic form is $\\mathbf{G} = (\\mathbf{I}_k \\mid -\\mathbf{A}^t)$.',
+  },
+      '$\\mathbf{G} = \\mathbf{H}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'When the parity check matrix is $\\mathbf{H} = (\\mathbf{A} \\mid \\mathbf{I}_{n-k})$, the corresponding generator matrix in systematic form is $\\mathbf{G} = (\\mathbf{I}_k \\mid -\\mathbf{A}^t)$.',
+  },
+      '$\\mathbf{G} = (\\mathbf{A} \\mid \\mathbf{I}_k)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'When the parity check matrix is $\\mathbf{H} = (\\mathbf{A} \\mid \\mathbf{I}_{n-k})$, the corresponding generator matrix in systematic form is $\\mathbf{G} = (\\mathbf{I}_k \\mid -\\mathbf{A}^t)$.',
+  },
+      '$\\mathbf{G} = \\mathbf{H}^t
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'When the parity check matrix is $\\mathbf{H} = (\\mathbf{A} \\mid \\mathbf{I}_{n-k})$, the corresponding generator matrix in systematic form is $\\mathbf{G} = (\\mathbf{I}_k \\mid -\\mathbf{A}^t)$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -88,10 +104,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'A code with exactly 5 code words',
       'Any code with minimum distance 3',
-      'A polynomial code over a field',
       'A code where all code words have weight 4',
+      'A polynomial code over a field',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Polynomial codes over fields are always linear codes. A code with 5 code words cannot be linear (the number of code words must be a power of $q$). The other properties do not guarantee linearity.',
   },

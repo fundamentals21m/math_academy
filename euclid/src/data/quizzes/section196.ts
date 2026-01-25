@@ -8,10 +8,10 @@ export const section196Questions: QuizQuestion[] = [
     options: [
       'If a number measures two others, it measures their product',
       'If a product is measured by a number, then one of the factors is measured by it',
-      'If a number multiplied by another produces a third, then the third is measured by the second',
       'Products are always measured by primes',
+      'If a number multiplied by another produces a third, then the third is measured by the second',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'VII.17: If a times b = c, then c is measured by b (and by a). In other words, factors of a product divide that product.',
   },
@@ -21,11 +21,11 @@ export const section196Questions: QuizQuestion[] = [
     question: 'If 7 times 5 = 35, what does VII.17 tell us?',
     options: [
       '35 is prime',
-      '5 measures 35 and 7 measures 35',
       '35 measures both 5 and 7',
-      'The GCD of 5 and 7 is 35'
+      '5 measures 35 and 7 measures 35',
+      'The GCD of 5 and 7 is 35',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'By VII.17, since 7 times 5 = 35, both factors (5 and 7) measure the product 35. Indeed, 35 = 5 times 7 = 7 times 5.',
   },

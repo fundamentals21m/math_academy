@@ -6,10 +6,18 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Rudin defines $\\cos(x)$ and $\\sin(x)$ via:',
     options: [
+      'Power series: $\\cos x = \\sum \\frac{(-1)^n x^{2n}}{(2n)!}$, $\\sin x = \\sum \\frac{(-1)^n x^{2n+1}}{(2n+1)!}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Rudin defines trigonometric functions analytically via their power series (Definition 8.6). The geometric properties (periodicity, relation to the circle) are then derived as theorems.',
+  },
       'Geometric definitions using the unit circle',
       'Inverse functions of arccos and arcsin',
-      'As solutions to $y\'\' + y = 0$',
-      'Power series: $\\cos x = \\sum \\frac{(-1)^n x^{2n}}{(2n)!}$, $\\sin x = \\sum \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$'
+      'As solutions to $y\\'\\' + y = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Rudin defines trigonometric functions analytically via their power series (Definition 8.6). The geometric properties (periodicity, relation to the circle) are then derived as theorems.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -20,10 +28,26 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Euler\'s formula states that for real $x$:',
     options: [
-      '$e^{ix} = \\cos x + i \\sin x$',
-      '$e^{ix} = \\cos x - i \\sin x$',
-      '$e^x = \\cos x + \\sin x$',
-      '$i^x = \\cos x + i \\sin x$'
+      '$e^{ix} = \\cos x - i \\sin x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Euler\'s formula $e^{ix} = \\cos x + i\\sin x$ follows directly from the power series definitions. The real part of $e^{ix}$ is $\\cos x$ and the imaginary part is $\\sin x$.',
+  },
+      '$e^x = \\cos x + \\sin x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Euler\'s formula $e^{ix} = \\cos x + i\\sin x$ follows directly from the power series definitions. The real part of $e^{ix}$ is $\\cos x$ and the imaginary part is $\\sin x$.',
+  },
+      '$e^{ix} = \\cos x + i \\sin x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Euler\'s formula $e^{ix} = \\cos x + i\\sin x$ follows directly from the power series definitions. The real part of $e^{ix}$ is $\\cos x$ and the imaginary part is $\\sin x$.',
+  },
+      '$i^x = \\cos x + i \\sin x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Euler\'s formula $e^{ix} = \\cos x + i\\sin x$ follows directly from the power series definitions. The real part of $e^{ix}$ is $\\cos x$ and the imaginary part is $\\sin x$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -35,9 +59,17 @@ export const section55Questions: QuizQuestion[] = [
     question: 'The number $\\pi$ is defined in Rudin as:',
     options: [
       'The ratio of circumference to diameter of a circle',
-      'Twice the smallest positive zero of $\\cos$',
-      '$4 \\arctan(1)$',
-      'The area of the unit circle'
+      '$4 \\arctan(1)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Rudin defines $\\pi$ analytically: he proves $\\cos$ has a smallest positive zero (call it $x_0$), and defines $\\pi = 2x_0$. The geometric interpretation follows as a theorem.',
+  },
+      'The area of the unit circle',
+      'Twice the smallest positive zero of $\\cos
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Rudin defines $\\pi$ analytically: he proves $\\cos$ has a smallest positive zero (call it $x_0$), and defines $\\pi = 2x_0$. The geometric interpretation follows as a theorem.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

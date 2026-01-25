@@ -6,10 +6,14 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To compute $\\text{Gal}(f)$ for $f \\in \\mathbb{Q}[x]$, which is NOT a standard technique?',
     options: [
-      'Factor $f$ over $\\mathbb{R}$',
       'Compute the discriminant',
       'Reduce $f$ modulo various primes',
-      'Check if $f$ is irreducible'
+      'Factor $f$ over $\\mathbb{R}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Irreducibility, the discriminant, and reduction mod $p$ are all useful for computing Galois groups. Factoring over $\\mathbb{R}$ only tells us about real vs. complex roots, not the full Galois structure.',
+  },
+      'Check if $f$ is irreducible',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -82,10 +86,26 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If an irreducible polynomial $f \\in \\mathbb{Q}[x]$ of degree $n$ has Galois group $\\text{Gal}(f) = \\mathbb{Z}/n\\mathbb{Z}$, then the splitting field has degree:',
     options: [
-      '$n$',
-      '$n!$',
-      '$2n$',
-      '$\\phi(n)$'
+      '$n!
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The degree of the splitting field equals $|\\text{Gal}(f)|$. If $\\text{Gal}(f) \\cong \\mathbb{Z}/n\\mathbb{Z}$, then the splitting field has degree $n$ over $\\mathbb{Q}$.',
+  },
+      '$2n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The degree of the splitting field equals $|\\text{Gal}(f)|$. If $\\text{Gal}(f) \\cong \\mathbb{Z}/n\\mathbb{Z}$, then the splitting field has degree $n$ over $\\mathbb{Q}$.',
+  },
+      '$\\phi(n)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The degree of the splitting field equals $|\\text{Gal}(f)|$. If $\\text{Gal}(f) \\cong \\mathbb{Z}/n\\mathbb{Z}$, then the splitting field has degree $n$ over $\\mathbb{Q}$.',
+  },
+      '$n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The degree of the splitting field equals $|\\text{Gal}(f)|$. If $\\text{Gal}(f) \\cong \\mathbb{Z}/n\\mathbb{Z}$, then the splitting field has degree $n$ over $\\mathbb{Q}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

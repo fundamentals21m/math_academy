@@ -63,10 +63,26 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\mathbb{Z}_6$ is isomorphic to which direct product?',
     options: [
-      '$\\mathbb{Z}_2 \\times \\mathbb{Z}_2$',
-      '$\\mathbb{Z}_3 \\times \\mathbb{Z}_3$',
-      '$\\mathbb{Z}_2 \\times \\mathbb{Z}_3$',
-      '$\\mathbb{Z}_4 \\times \\mathbb{Z}_2$'
+      '$\\mathbb{Z}_2 \\times \\mathbb{Z}_2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}_6 \\cong \\mathbb{Z}_2 \\times \\mathbb{Z}_3$ since $\\gcd(2, 3) = 1$. By the Chinese Remainder Theorem, $\\mathbb{Z}_{mn} \\cong \\mathbb{Z}_m \\times \\mathbb{Z}_n$ when $\\gcd(m,n) = 1$.',
+  },
+      '$\\mathbb{Z}_2 \\times \\mathbb{Z}_3
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}_6 \\cong \\mathbb{Z}_2 \\times \\mathbb{Z}_3$ since $\\gcd(2, 3) = 1$. By the Chinese Remainder Theorem, $\\mathbb{Z}_{mn} \\cong \\mathbb{Z}_m \\times \\mathbb{Z}_n$ when $\\gcd(m,n) = 1$.',
+  },
+      '$\\mathbb{Z}_3 \\times \\mathbb{Z}_3
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}_6 \\cong \\mathbb{Z}_2 \\times \\mathbb{Z}_3$ since $\\gcd(2, 3) = 1$. By the Chinese Remainder Theorem, $\\mathbb{Z}_{mn} \\cong \\mathbb{Z}_m \\times \\mathbb{Z}_n$ when $\\gcd(m,n) = 1$.',
+  },
+      '$\\mathbb{Z}_4 \\times \\mathbb{Z}_2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{Z}_6 \\cong \\mathbb{Z}_2 \\times \\mathbb{Z}_3$ since $\\gcd(2, 3) = 1$. By the Chinese Remainder Theorem, $\\mathbb{Z}_{mn} \\cong \\mathbb{Z}_m \\times \\mathbb{Z}_n$ when $\\gcd(m,n) = 1$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -78,11 +94,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'Is $\\mathbb{Z}_4$ isomorphic to $\\mathbb{Z}_2 \\times \\mathbb{Z}_2$?',
     options: [
       'Yes, they both have order 4',
+      'No, $\\mathbb{Z}_4$ is cyclic but $\\mathbb{Z}_2 \\times \\mathbb{Z}_2$ is not',
       'No, they have different numbers of elements',
       'Yes, both are abelian',
-      'No, $\\mathbb{Z}_4$ is cyclic but $\\mathbb{Z}_2 \\times \\mathbb{Z}_2$ is not'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$\\mathbb{Z}_4$ is cyclic (has an element of order 4), while $\\mathbb{Z}_2 \\times \\mathbb{Z}_2$ has no element of order 4 (max order is 2).',
   },

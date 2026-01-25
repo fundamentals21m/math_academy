@@ -6,10 +6,14 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To differentiate a series $\\sum f_n(x)$ term by term, Theorem 7.17 requires:',
     options: [
+      '$\\sum f_n\\'$ converges uniformly and $\\sum f_n(x_0)$ converges for some $x_0
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Theorem 7.17: If $\\{f_n\'\\}$ converges uniformly on $[a,b]$, each $f_n\'$ is continuous, and $\\sum f_n(x_0)$ converges for some $x_0 \\in [a,b]$, then $\\sum f_n$ converges uniformly and $(\\sum f_n)\' = \\sum f_n\'$.',
+  },
       '$\\sum f_n$ converges uniformly',
       'Each $f_n$ is differentiable',
-      '$\\sum f_n\'$ converges uniformly and $\\sum f_n(x_0)$ converges for some $x_0$',
-      '$\\sum |f_n\'|$ converges'
+      '$\\sum |f_n\\'|$ converges',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -22,10 +26,10 @@ export const section50Questions: QuizQuestion[] = [
     options: [
       'Differentiation is a local operation',
       'Functions may not be differentiable',
+      'The derivatives control the rate of convergence needed for the limit to be differentiable',
       'Integration is easier than differentiation',
-      'The derivatives control the rate of convergence needed for the limit to be differentiable'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Differentiation is a "local" operation that can amplify small oscillations. For the derivative of the limit to equal the limit of derivatives, we need control over how the derivatives behave (uniform convergence of $f_n\'$), not just the functions themselves.',
   },
@@ -57,9 +61,13 @@ export const section50Questions: QuizQuestion[] = [
     question: 'If $f_n \\to f$ uniformly on $[a, b]$, $f_n$ is differentiable, and $f_n\' \\to g$ uniformly, then:',
     options: [
       '$f$ may not be differentiable',
-      '$f$ is differentiable and $f\' = g$',
-      '$f\' = g$ only at isolated points',
-      '$g$ may not be continuous'
+      '$f\\' = g$ only at isolated points',
+      '$g$ may not be continuous',
+      '$f$ is differentiable and $f\\' = g
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'This is the sequence version of Theorem 7.17: uniform convergence of both $f_n$ and $f_n\'$ (with $f_n\'$ continuous) implies $f$ is differentiable with $f\' = g$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

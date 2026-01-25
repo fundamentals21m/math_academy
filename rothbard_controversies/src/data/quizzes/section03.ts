@@ -6,12 +6,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the fundamental axiom of praxeology?',
     options: [
-      'Individual human beings act—they have goals and employ means to achieve them',
       'All men are created equal',
+      'Individual human beings act—they have goals and employ means to achieve them',
       'Supply equals demand in equilibrium',
       'Markets are efficient',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The fundamental axiom of praxeology is that individual human beings act—that is, they have goals and purposes, and they employ means to try to attain these goals.',
   },
@@ -22,10 +22,10 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'They are competing theories',
       'Psychology replaces praxeology',
+      'Praxeology takes preferences as given; psychology studies why people adopt them',
       'They are the same discipline',
-      'Praxeology takes preferences as given; psychology studies why people adopt them'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Psychology studies how and why people adopt preferences; praxeology takes preferences as given and studies the formal implications of acting on those preferences. They are complementary.',
   },

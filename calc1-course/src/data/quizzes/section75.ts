@@ -110,10 +110,26 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cauchy-Schwarz inequality states:',
     options: [
-      '$|\\mathbf{a} \\cdot \\mathbf{b}| = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|$',
-      '$|\\mathbf{a} \\cdot \\mathbf{b}| \\leq \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|$',
-      '$|\\mathbf{a} \\cdot \\mathbf{b}| \\geq \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|$',
-      '$\\mathbf{a} \\cdot \\mathbf{b} = 0$'
+      '$|\\mathbf{a} \\cdot \\mathbf{b}| = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Cauchy-Schwarz: dot product magnitude is at most the product of lengths.',
+  },
+      '$|\\mathbf{a} \\cdot \\mathbf{b}| \\geq \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cauchy-Schwarz: dot product magnitude is at most the product of lengths.',
+  },
+      '$|\\mathbf{a} \\cdot \\mathbf{b}| \\leq \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cauchy-Schwarz: dot product magnitude is at most the product of lengths.',
+  },
+      '$\\mathbf{a} \\cdot \\mathbf{b} = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Cauchy-Schwarz: dot product magnitude is at most the product of lengths.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

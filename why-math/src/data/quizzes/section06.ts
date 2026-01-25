@@ -76,11 +76,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'The compound interest formula $A = P(1+i)^n$ models:',
     options: [
       'Linear growth',
-      'Exponential growth',
       'Constant value',
       'Logarithmic growth',
+      'Exponential growth',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Compound interest produces exponential growth because the base $(1+i)$ is raised to a power.',
   },
@@ -98,10 +98,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does $r^{1/2}$ equal?',
     options: [
-      '$r \\div 2$',
-      '$2r$',
-      '$r^2$',
-      '$\\sqrt{r}$'
+      '$r \\div 2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By the laws of exponents, $r^{1/2} = \\sqrt{r}$ (the square root of $r$).',
+  },
+      '$2r
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'By the laws of exponents, $r^{1/2} = \\sqrt{r}$ (the square root of $r$).',
+  },
+      '$\\sqrt{r}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'By the laws of exponents, $r^{1/2} = \\sqrt{r}$ (the square root of $r$).',
+  },
+      '$r^2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'By the laws of exponents, $r^{1/2} = \\sqrt{r}$ (the square root of $r$).',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -178,11 +194,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Why do pyramid schemes inevitably collapse?',
     options: [
       'The government stops them',
-      'Exponential growth quickly exceeds the population',
       'People lose interest',
+      'Exponential growth quickly exceeds the population',
       'The ratio $r$ becomes less than 1',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Geometric growth (e.g., each person recruits 5 more) quickly requires more participants than exist on Earth.',
   },

@@ -24,12 +24,12 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is Diophantus\'s major surviving work called?',
     options: [
-      'Arithmetica',
       'Elements',
       'Almagest',
+      'Arithmetica',
       'Conics',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Diophantus\'s major work is the Arithmetica, a collection of problems about finding integers or rationals satisfying various conditions. It inspired Fermat and Euler.',
@@ -41,10 +41,10 @@ export const section36Questions: QuizQuestion[] = [
     options: [
       'Equations with complex solutions',
       'Quadratic equations only',
-      'Equations to be solved in integers or rationals',
       'Equations without solutions',
+      'Equations to be solved in integers or rationals',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Diophantine equations are equations to be solved in integers or rational numbers, named in honor of Diophantus. They combine algebra, geometry, and number theory.',
@@ -55,11 +55,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'Which famous mathematician praised Diophantus\'s methods as "as general as those in use today"?',
     options: [
       'Newton',
-      'Euler',
       'Gauss',
+      'Euler',
       'Fermat',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Euler praised Diophantus, writing that his methods "are as general as those which are in use today" and that "there is hardly any method yet invented... of which there are not sufficiently distinct traces to be discovered in Diophantus."',
@@ -70,11 +70,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'What is special about rational points on cubic curves (elliptic curves)?',
     options: [
       'There are always infinitely many',
-      'There are always none',
       'They form a finitely generated group',
+      'There are always none',
       'They cannot be studied geometrically',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Mordell\'s theorem (1922) states that the rational points on an elliptic curve form a finitely generated group. This is much more subtle than the quadratic case, where there are either 0 or infinitely many points.',
@@ -110,11 +110,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'What is the Birch and Swinnerton-Dyer (BSD) conjecture about?',
     options: [
       'Prime numbers',
+      'Rational points on elliptic curves',
       'Non-Euclidean geometry',
       'Pythagorean triples',
-      'Rational points on elliptic curves'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The BSD conjecture connects the number of rational points on an elliptic curve to properties of an associated analytic function. It is one of the Millennium Prize Problems, with a $1 million reward.',

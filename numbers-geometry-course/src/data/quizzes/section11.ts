@@ -10,11 +10,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'What are the two basic tools of Euclidean geometry?',
     options: [
       'Protractor and ruler',
-      'Ruler and compass',
       'Compass and calculator',
       'Ruler and set square',
+      'Ruler and compass',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Euclidean geometry uses the ruler (for drawing straight lines) and the compass (for drawing circles) as its two basic construction tools.',
@@ -24,12 +24,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is Euclid\'s first proposition in the Elements?',
     options: [
-      'The Pythagorean theorem',
       'Construction of an equilateral triangle',
+      'The Pythagorean theorem',
       'The parallel postulate',
       'Bisecting an angle',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Euclid\'s first proposition shows how to construct an equilateral triangle with a given side, using two intersecting circles.',
@@ -39,12 +39,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How do you construct a perpendicular to a line through an external point $O$?',
     options: [
-      'Draw a circle centered at $O$ that cuts the line at two points, then bisect the angle',
       'Use a protractor',
+      'Draw a circle centered at $O$ that cuts the line at two points, then bisect the angle',
       'Draw parallel lines',
       'It is impossible with ruler and compass',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Draw a circle centered at O large enough to cut the line at points A and B. The bisector of angle AOB is the required perpendicular.',
@@ -56,10 +56,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       '1637',
       '1837',
-      '1899',
       '1796',
+      '1899',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Gauss discovered the construction of the regular 17-gon in 1796, leading to a complete algebraic theory of constructibility.',
@@ -69,12 +69,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The regular $n$-gon is constructible if and only if $n$ is:',
     options: [
+      'A product of a power of 2 and distinct Fermat primes',
       'Any prime number',
       'A power of 2',
-      'A product of a power of 2 and distinct Fermat primes',
       'Any odd number',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The Gauss-Wantzel theorem states that the regular n-gon is constructible iff n is a product of a power of 2 by distinct Fermat primes (primes of the form $2^{2^k} + 1$).',
@@ -87,7 +87,7 @@ export const section11Questions: QuizQuestion[] = [
       'Perpendicular lines',
       'Circles only',
       'Parallel lines',
-      'Nothing—it cannot be done'
+      'Nothing—it cannot be done',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -102,7 +102,7 @@ export const section11Questions: QuizQuestion[] = [
       'Euclid',
       'Descartes',
       'Hilbert',
-      'Pierre Wantzel'
+      'Pierre Wantzel',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -114,12 +114,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why can the regular 7-gon NOT be constructed with ruler and compass?',
     options: [
-      '7 is not of the form "power of 2 times distinct Fermat primes"',
       'It was simply never discovered',
+      '7 is not of the form "power of 2 times distinct Fermat primes"',
       'The ancient Greeks forbade it',
-      'It requires a protractor'
+      'It requires a protractor',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The regular 7-gon is impossible because 7 is not a Fermat prime (it is not of the form $2^{2^k} + 1$) and cannot be expressed as required by the Gauss-Wantzel theorem.',

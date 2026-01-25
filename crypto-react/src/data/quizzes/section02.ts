@@ -6,7 +6,12 @@ export const section02Quiz = {
       id: 's02-e01',
       type: 'multiple-choice',
       question: 'What base does the binary number system use?',
-      options: ['Base 2', 'Base 8', 'Base 10', 'Base 16'],
+      options: [
+      'Base 2',
+      'Base 8',
+      'Base 10',
+      'Base 16',
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Binary uses base 2, meaning it only has two digits: 0 and 1.'
@@ -15,8 +20,13 @@ export const section02Quiz = {
       id: 's02-e02',
       type: 'multiple-choice',
       question: 'What base does the hexadecimal number system use?',
-      options: ['Base 2', 'Base 8', 'Base 10', 'Base 16'],
-      correctIndex: 3,
+      options: [
+      'Base 2',
+      'Base 16',
+      'Base 8',
+      'Base 10',
+    ],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Hexadecimal uses base 16 with digits 0-9 and letters A-F (representing 10-15).'
     },
@@ -42,8 +52,13 @@ export const section02Quiz = {
       id: 's02-e05',
       type: 'multiple-choice',
       question: 'In hexadecimal, what letter represents the decimal value 10?',
-      options: ['A', 'B', 'F', 'X'],
-      correctIndex: 0,
+      options: [
+      'B',
+      'F',
+      'X',
+      'A',
+    ],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'In hexadecimal: A=10, B=11, C=12, D=13, E=14, F=15.'
     },
@@ -60,8 +75,13 @@ export const section02Quiz = {
       id: 's02-e07',
       type: 'multiple-choice',
       question: 'How many bits are in one byte?',
-      options: ['4 bits', '8 bits', '16 bits', '32 bits'],
-      correctIndex: 1,
+      options: [
+      '8 bits',
+      '4 bits',
+      '16 bits',
+      '32 bits',
+    ],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'A byte consists of 8 bits and can represent values from 0 to 255.'
     },
@@ -78,8 +98,13 @@ export const section02Quiz = {
       id: 's02-e09',
       type: 'multiple-choice',
       question: 'Which of the following is NOT a valid binary digit?',
-      options: ['0', '1', '2', 'Both 0 and 1 are valid'],
-      correctIndex: 2,
+      options: [
+      '0',
+      '1',
+      'Both 0 and 1 are valid',
+      '2',
+    ],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Binary (base 2) only uses the digits 0 and 1. The digit 2 is not valid in binary.'
     },
@@ -117,7 +142,28 @@ export const section02Quiz = {
       id: 's02-m03',
       type: 'multiple-choice',
       question: 'What is $13$ in binary?',
-      options: ['$1101_2$', '$1011_2$', '$1110_2$', '$1111_2$'],
+      options: [
+      '$1011_2
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$13 = 8 + 4 + 1 = 2^3 + 2^2 + 2^0$, so the binary representation is $1101_2$.'
+    },
+      '$1110_2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$13 = 8 + 4 + 1 = 2^3 + 2^2 + 2^0$, so the binary representation is $1101_2$.'
+    },
+      '$1111_2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$13 = 8 + 4 + 1 = 2^3 + 2^2 + 2^0$, so the binary representation is $1101_2$.'
+    },
+      '$1101_2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$13 = 8 + 4 + 1 = 2^3 + 2^2 + 2^0$, so the binary representation is $1101_2$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$13 = 8 + 4 + 1 = 2^3 + 2^2 + 2^0$, so the binary representation is $1101_2$.'
@@ -135,7 +181,28 @@ export const section02Quiz = {
       id: 's02-m05',
       type: 'multiple-choice',
       question: 'What is the hexadecimal representation of the binary number $10110110_2$?',
-      options: ['$\\text{B6}_{16}$', '$\\text{6B}_{16}$', '$\\text{D6}_{16}$', '$\\text{B4}_{16}$'],
+      options: [
+      '$\\text{6B}_{16}
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Group binary digits in fours from right: $1011\\ 0110$. $1011_2 = 11 = \\text{B}$, $0110_2 = 6$. So the answer is $\\text{B6}_{16}$.'
+    },
+      '$\\text{B6}_{16}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Group binary digits in fours from right: $1011\\ 0110$. $1011_2 = 11 = \\text{B}$, $0110_2 = 6$. So the answer is $\\text{B6}_{16}$.'
+    },
+      '$\\text{D6}_{16}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Group binary digits in fours from right: $1011\\ 0110$. $1011_2 = 11 = \\text{B}$, $0110_2 = 6$. So the answer is $\\text{B6}_{16}$.'
+    },
+      '$\\text{B4}_{16}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Group binary digits in fours from right: $1011\\ 0110$. $1011_2 = 11 = \\text{B}$, $0110_2 = 6$. So the answer is $\\text{B6}_{16}$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Group binary digits in fours from right: $1011\\ 0110$. $1011_2 = 11 = \\text{B}$, $0110_2 = 6$. So the answer is $\\text{B6}_{16}$.'
@@ -153,7 +220,28 @@ export const section02Quiz = {
       id: 's02-m07',
       type: 'multiple-choice',
       question: 'In binary addition, what is $1011_2 + 0101_2$?',
-      options: ['$10000_2$', '$1110_2$', '$1111_2$', '$10001_2$'],
+      options: [
+      '$1110_2
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$1011_2 = 11$ and $0101_2 = 5$. $11 + 5 = 16 = 10000_2$.'
+    },
+      '$10000_2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$1011_2 = 11$ and $0101_2 = 5$. $11 + 5 = 16 = 10000_2$.'
+    },
+      '$1111_2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$1011_2 = 11$ and $0101_2 = 5$. $11 + 5 = 16 = 10000_2$.'
+    },
+      '$10001_2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$1011_2 = 11$ and $0101_2 = 5$. $11 + 5 = 16 = 10000_2$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$1011_2 = 11$ and $0101_2 = 5$. $11 + 5 = 16 = 10000_2$.'
@@ -171,7 +259,28 @@ export const section02Quiz = {
       id: 's02-m09',
       type: 'multiple-choice',
       question: 'What is the binary representation of the hexadecimal digit $\\text{C}$?',
-      options: ['$1100_2$', '$1010_2$', '$1011_2$', '$1110_2$'],
+      options: [
+      '$1010_2
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'C in hex equals 12 in decimal. $12 = 8 + 4 = 1100_2$.'
+    },
+      '$1011_2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'C in hex equals 12 in decimal. $12 = 8 + 4 = 1100_2$.'
+    },
+      '$1100_2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'C in hex equals 12 in decimal. $12 = 8 + 4 = 1100_2$.'
+    },
+      '$1110_2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'C in hex equals 12 in decimal. $12 = 8 + 4 = 1100_2$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'C in hex equals 12 in decimal. $12 = 8 + 4 = 1100_2$.'
@@ -210,7 +319,28 @@ export const section02Quiz = {
       id: 's02-h03',
       type: 'multiple-choice',
       question: 'What is the result of the bitwise XOR operation $1010_2 \\oplus 1100_2$?',
-      options: ['$0110_2$', '$1110_2$', '$1000_2$', '$0010_2$'],
+      options: [
+      '$1110_2
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'XOR returns 1 when bits differ. Comparing bit by bit: $1 \\oplus 1 = 0$, $0 \\oplus 1 = 1$, $1 \\oplus 0 = 1$, $0 \\oplus 0 = 0$. Result: $0110_2$.'
+    },
+      '$1000_2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'XOR returns 1 when bits differ. Comparing bit by bit: $1 \\oplus 1 = 0$, $0 \\oplus 1 = 1$, $1 \\oplus 0 = 1$, $0 \\oplus 0 = 0$. Result: $0110_2$.'
+    },
+      '$0110_2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'XOR returns 1 when bits differ. Comparing bit by bit: $1 \\oplus 1 = 0$, $0 \\oplus 1 = 1$, $1 \\oplus 0 = 1$, $0 \\oplus 0 = 0$. Result: $0110_2$.'
+    },
+      '$0010_2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'XOR returns 1 when bits differ. Comparing bit by bit: $1 \\oplus 1 = 0$, $0 \\oplus 1 = 1$, $1 \\oplus 0 = 1$, $0 \\oplus 0 = 0$. Result: $0110_2$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'XOR returns 1 when bits differ. Comparing bit by bit: $1 \\oplus 1 = 0$, $0 \\oplus 1 = 1$, $1 \\oplus 0 = 1$, $0 \\oplus 0 = 0$. Result: $0110_2$.'
@@ -228,7 +358,28 @@ export const section02Quiz = {
       id: 's02-h05',
       type: 'multiple-choice',
       question: 'In two\'s complement representation with 8 bits, what decimal value does $11111111_2$ represent?',
-      options: ['$-1$', '$255$', '$-127$', '$127$'],
+      options: [
+      '$255
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'In two\'s complement, the leftmost bit is the sign bit. $11111111_2$ represents $-1$ because inverting the bits gives $00000000$ and adding 1 gives $00000001$.'
+    },
+      '$-127
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'In two\'s complement, the leftmost bit is the sign bit. $11111111_2$ represents $-1$ because inverting the bits gives $00000000$ and adding 1 gives $00000001$.'
+    },
+      '$-1
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'In two\'s complement, the leftmost bit is the sign bit. $11111111_2$ represents $-1$ because inverting the bits gives $00000000$ and adding 1 gives $00000001$.'
+    },
+      '$127
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'In two\'s complement, the leftmost bit is the sign bit. $11111111_2$ represents $-1$ because inverting the bits gives $00000000$ and adding 1 gives $00000001$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'In two\'s complement, the leftmost bit is the sign bit. $11111111_2$ represents $-1$ because inverting the bits gives $00000000$ and adding 1 gives $00000001$.'
@@ -246,7 +397,28 @@ export const section02Quiz = {
       id: 's02-h07',
       type: 'multiple-choice',
       question: 'What is the hexadecimal representation of $4095$?',
-      options: ['$\\text{FFF}_{16}$', '$\\text{FFE}_{16}$', '$\\text{1000}_{16}$', '$\\text{EFF}_{16}$'],
+      options: [
+      '$\\text{FFE}_{16}
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: '$4095 = 4096 - 1 = 16^3 - 1 = \\text{FFF}_{16}$. Each F represents 15, and $15 \\times 256 + 15 \\times 16 + 15 = 4095$.'
+    },
+      '$\\text{1000}_{16}
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$4095 = 4096 - 1 = 16^3 - 1 = \\text{FFF}_{16}$. Each F represents 15, and $15 \\times 256 + 15 \\times 16 + 15 = 4095$.'
+    },
+      '$\\text{FFF}_{16}
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$4095 = 4096 - 1 = 16^3 - 1 = \\text{FFF}_{16}$. Each F represents 15, and $15 \\times 256 + 15 \\times 16 + 15 = 4095$.'
+    },
+      '$\\text{EFF}_{16}
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$4095 = 4096 - 1 = 16^3 - 1 = \\text{FFF}_{16}$. Each F represents 15, and $15 \\times 256 + 15 \\times 16 + 15 = 4095$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: '$4095 = 4096 - 1 = 16^3 - 1 = \\text{FFF}_{16}$. Each F represents 15, and $15 \\times 256 + 15 \\times 16 + 15 = 4095$.'
@@ -264,7 +436,28 @@ export const section02Quiz = {
       id: 's02-h09',
       type: 'multiple-choice',
       question: 'What is the result of left-shifting $00001101_2$ by 3 positions?',
-      options: ['$01101000_2$', '$00001101_2$', '$11010000_2$', '$00011010_2$'],
+      options: [
+      '$00001101_2
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'Left shifting by 3 moves all bits 3 positions to the left, filling with zeros: $00001101 \\ll 3 = 01101000$. This is equivalent to multiplying by $2^3 = 8$.'
+    },
+      '$01101000_2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Left shifting by 3 moves all bits 3 positions to the left, filling with zeros: $00001101 \\ll 3 = 01101000$. This is equivalent to multiplying by $2^3 = 8$.'
+    },
+      '$11010000_2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Left shifting by 3 moves all bits 3 positions to the left, filling with zeros: $00001101 \\ll 3 = 01101000$. This is equivalent to multiplying by $2^3 = 8$.'
+    },
+      '$00011010_2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'Left shifting by 3 moves all bits 3 positions to the left, filling with zeros: $00001101 \\ll 3 = 01101000$. This is equivalent to multiplying by $2^3 = 8$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Left shifting by 3 moves all bits 3 positions to the left, filling with zeros: $00001101 \\ll 3 = 01101000$. This is equivalent to multiplying by $2^3 = 8$.'

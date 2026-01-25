@@ -6,10 +6,26 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $S$ and $T$ are linear transformations from $V$ to $W$, then $(S + T)(x)$ is defined as:',
     options: [
-      '$S(x) + T(x)$',
-      '$S(T(x))$',
-      '$S(x) \\cdot T(x)$',
-      '$S(x + T(x))$'
+      '$S(T(x))
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The sum of two linear transformations is defined pointwise: $(S + T)(x) = S(x) + T(x)$ for all $x$ in $V$.',
+  },
+      '$S(x) + T(x)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The sum of two linear transformations is defined pointwise: $(S + T)(x) = S(x) + T(x)$ for all $x$ in $V$.',
+  },
+      '$S(x) \\cdot T(x)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The sum of two linear transformations is defined pointwise: $(S + T)(x) = S(x) + T(x)$ for all $x$ in $V$.',
+  },
+      '$S(x + T(x))
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The sum of two linear transformations is defined pointwise: $(S + T)(x) = S(x) + T(x)$ for all $x$ in $V$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

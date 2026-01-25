@@ -117,11 +117,11 @@ export const section30Questions: QuizQuestion[] = [
     question: 'What is paradoxical about the Cantor set?',
     options: [
       'It has infinite length but no points',
-      'It has zero length but uncountably many points',
       'It has finite length and countably many points',
       'It contains all rational numbers',
+      'It has zero length but uncountably many points',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The Cantor set has total length zero (the lengths removed sum to 1) but contains uncountably many points.',
   },

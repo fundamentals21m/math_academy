@@ -7,7 +7,7 @@ export const section14Questions: QuizQuestion[] = [
     question: 'The lattice of subgroups of a group $G$ is ordered by:',
     options: [
       'Group order $|H|
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The subgroup lattice is partially ordered by inclusion: $H \\leq K$ means $H \\subseteq K$.',
   },

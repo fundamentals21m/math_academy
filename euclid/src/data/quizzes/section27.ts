@@ -6,12 +6,12 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Proposition I.27 prove about lines cut by a transversal?',
     options: [
-      'Parallel lines have equal alternate angles',
       'If alternate angles are equal, the lines are parallel',
+      'Parallel lines have equal alternate angles',
       'All transversals create equal angles',
-      'Perpendicular lines are parallel'
+      'Perpendicular lines are parallel',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'I.27: "If a straight line falling on two straight lines make the alternate angles equal to one another, the straight lines will be parallel."',
   },
@@ -23,7 +23,7 @@ export const section27Questions: QuizQuestion[] = [
       'Yes, it is essential',
       'Only partially',
       'No, it is proved without it',
-      'It uses a weaker form'
+      'It uses a weaker form',
     ],
     correctIndex: 2,
     difficulty: 'hard',

@@ -24,10 +24,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cayley\'s Formula states that the number of labeled trees on $n$ vertices is:',
     options: [
-      '$n!$',
-      '$2^n$',
-      '$n^{n-2}$',
-      '$\\binom{2n-2}{n-1}$'
+      '$n^{n-2}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Cayley\'s Formula: there are exactly $n^{n-2}$ labeled trees on $n$ vertices.',
+  },
+      '$n!
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Cayley\'s Formula: there are exactly $n^{n-2}$ labeled trees on $n$ vertices.',
+  },
+      '$2^n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Cayley\'s Formula: there are exactly $n^{n-2}$ labeled trees on $n$ vertices.',
+  },
+      '$\\binom{2n-2}{n-1}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Cayley\'s Formula: there are exactly $n^{n-2}$ labeled trees on $n$ vertices.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -61,10 +77,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Prüfer sequence for a labeled tree on $n$ vertices has length:',
     options: [
-      '$n - 2$',
-      '$n - 1$',
-      '$n$',
-      '$2n - 2$'
+      '$n - 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Prüfer sequences have length $n-2$. The bijection with $[n]^{n-2}$ proves Cayley\'s formula.',
+  },
+      '$n
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Prüfer sequences have length $n-2$. The bijection with $[n]^{n-2}$ proves Cayley\'s formula.',
+  },
+      '$2n - 2
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Prüfer sequences have length $n-2$. The bijection with $[n]^{n-2}$ proves Cayley\'s formula.',
+  },
+      '$n - 2
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Prüfer sequences have length $n-2$. The bijection with $[n]^{n-2}$ proves Cayley\'s formula.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

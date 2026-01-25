@@ -6,10 +6,22 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An element $\\alpha$ is transcendental over $F$ if:',
     options: [
-      '$\\alpha$ generates an infinite extension of $F$',
-      'There is no nonzero polynomial $f \\in F[x]$ with $f(\\alpha) = 0$',
-      '$\\alpha \\notin F$',
-      '$\\alpha$ is irrational'
+      '$\\alpha$ generates an infinite extension of $F
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'An element $\\alpha$ is transcendental over $F$ if it is not algebraic, meaning no nonzero polynomial in $F[x]$ has $\\alpha$ as a root.',
+  },
+      '$\\alpha \\notin F
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'An element $\\alpha$ is transcendental over $F$ if it is not algebraic, meaning no nonzero polynomial in $F[x]$ has $\\alpha$ as a root.',
+  },
+      'There is no nonzero polynomial $f \\in F[x]$ with $f(\\alpha) = 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'An element $\\alpha$ is transcendental over $F$ if it is not algebraic, meaning no nonzero polynomial in $F[x]$ has $\\alpha$ as a root.',
+  },
+      '$\\alpha$ is irrational',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,10 +32,22 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The transcendence degree of $\\mathbb{C}$ over $\\mathbb{Q}$ is:',
     options: [
-      '$0$',
-      '$1$',
+      '$0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{C}$ has uncountable cardinality while any extension of $\\mathbb{Q}$ by countably many elements is countable. Hence the transcendence degree of $\\mathbb{C}/\\mathbb{Q}$ is uncountable (specifically, $|\\mathbb{R}| = 2^{\\aleph_0}$).',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{C}$ has uncountable cardinality while any extension of $\\mathbb{Q}$ by countably many elements is countable. Hence the transcendence degree of $\\mathbb{C}/\\mathbb{Q}$ is uncountable (specifically, $|\\mathbb{R}| = 2^{\\aleph_0}$).',
+  },
+      '$2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{C}$ has uncountable cardinality while any extension of $\\mathbb{Q}$ by countably many elements is countable. Hence the transcendence degree of $\\mathbb{C}/\\mathbb{Q}$ is uncountable (specifically, $|\\mathbb{R}| = 2^{\\aleph_0}$).',
+  },
       'Uncountable',
-      '$2$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -34,10 +58,26 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A transcendence basis of $E/F$ is:',
     options: [
-      'Any generating set for $E$ over $F$',
-      'A basis for $E$ as a vector space over $F$',
-      'The smallest field containing $F$ and $E$',
-      'A maximal algebraically independent subset of $E$ over $F$'
+      'A maximal algebraically independent subset of $E$ over $F
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A transcendence basis is a maximal algebraically independent set. Equivalently, it is a minimal set $B$ such that $E$ is algebraic over $F(B)$.',
+  },
+      'Any generating set for $E$ over $F
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A transcendence basis is a maximal algebraically independent set. Equivalently, it is a minimal set $B$ such that $E$ is algebraic over $F(B)$.',
+  },
+      'A basis for $E$ as a vector space over $F
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A transcendence basis is a maximal algebraically independent set. Equivalently, it is a minimal set $B$ such that $E$ is algebraic over $F(B)$.',
+  },
+      'The smallest field containing $F$ and $E
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A transcendence basis is a maximal algebraically independent set. Equivalently, it is a minimal set $B$ such that $E$ is algebraic over $F(B)$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -48,10 +88,26 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The field $F(x)$ of rational functions in one variable over $F$ has transcendence degree over $F$ equal to:',
     options: [
-      '$1$',
-      '$0$',
-      '$\\infty$',
-      'It depends on $F$'
+      '$0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The indeterminate $x$ is transcendental over $F$, and $F(x)$ is algebraic over $F(x)$ (it equals $F(x)$). So $\\{x\\}$ is a transcendence basis, giving transcendence degree $1$.',
+  },
+      '$1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The indeterminate $x$ is transcendental over $F$, and $F(x)$ is algebraic over $F(x)$ (it equals $F(x)$). So $\\{x\\}$ is a transcendence basis, giving transcendence degree $1$.',
+  },
+      '$\\infty
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The indeterminate $x$ is transcendental over $F$, and $F(x)$ is algebraic over $F(x)$ (it equals $F(x)$). So $\\{x\\}$ is a transcendence basis, giving transcendence degree $1$.',
+  },
+      'It depends on $F
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The indeterminate $x$ is transcendental over $F$, and $F(x)$ is algebraic over $F(x)$ (it equals $F(x)$). So $\\{x\\}$ is a transcendence basis, giving transcendence degree $1$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

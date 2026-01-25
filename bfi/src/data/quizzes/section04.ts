@@ -7,11 +7,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Understanding bitcoin is compared to learning to play:',
     options: [
       'Sports at an Olympic level',
+      'Multiple instruments at the same time',
       'A single instrument quickly',
       'Chess at a professional level',
-      'Multiple instruments at the same time'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Understanding bitcoin is like learning to play multiple instruments at the same time - guitar, piano, drums, horns - and you need to know how they all come together.'
   },
@@ -44,11 +44,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'How do companies typically think in terms of time, according to the book?',
     options: [
       'Decades',
-      'Quarters',
       'Years',
-      'Daily'
+      'Quarters',
+      'Daily',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Companies think in terms of quarters, not years, and not multiple years - creating a fundamental mismatch with bitcoin\'s longer time horizons.'
   },
@@ -59,10 +59,10 @@ export const section04Questions: QuizQuestion[] = [
     options: [
       'They can achieve it within a quarter',
       'They should wait until bitcoin is easier to understand',
-      'They should accept they won\'t contribute much for a while, but starting today gets them there faster',
-      'Only tech companies can achieve it'
+      'Only tech companies can achieve it',
+      'They should accept they won\\'t contribute much for a while, but starting today gets them there faster',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The book states there are no easy answers - companies need to accept they won\'t contribute much to bitcoin for quite a while, but starting today will get them there faster.'
   }

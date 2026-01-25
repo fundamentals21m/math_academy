@@ -1,0 +1,148 @@
+1
+00:00:00,000 --> 00:00:06,000
+A company that holds Bitcoin in its treasury has a significant optionality advantage over one that does not.
+
+2
+00:00:06,599 --> 00:00:10,400
+We have covered the story of strategy, formerly micro-strategy,
+
+3
+00:00:10,400 --> 00:00:15,000
+solving their existential problem of how to protect their cash from government debasement.
+
+4
+00:00:15,800 --> 00:00:23,199
+That problem was so relatable that many individuals adopted that strategy for themselves to great success.
+
+5
+00:00:24,000 --> 00:00:30,000
+So many people have started their own Bitcoin treasuries, but very few companies have followed suit.
+
+6
+00:00:30,000 --> 00:00:35,600
+For the most part, only Bitcoin mining companies like Riot and Mara are holding Bitcoin in their treasury.
+
+7
+00:00:36,000 --> 00:00:40,399
+Most mining companies eventually sell off their treasury to pay employees or debt.
+
+8
+00:00:40,799 --> 00:00:48,000
+One of the large barriers for companies was that until 2024, FASB had no guidance for how to account for Bitcoin.
+
+9
+00:00:48,799 --> 00:00:56,600
+Under the old interpretation, the value of Bitcoin was held constant and written down when there was a drawdown, but never written back up.
+
+10
+00:00:57,600 --> 00:01:02,000
+This made it very difficult to explain to investors why they were holding Bitcoin.
+
+11
+00:01:02,000 --> 00:01:12,599
+If they never benefited from price increases, but always suffered from decreases, the accounting problem was fixed when FASB issued accounting standards update 2023-08.
+
+12
+00:01:13,200 --> 00:01:21,400
+This clarified the accounting treatment as a full mark to market approach, where the account value of Bitcoin would be carried and reported according to the prevailing market price.
+
+13
+00:01:22,200 --> 00:01:30,799
+Companies can now report their Bitcoin holdings at current market value, reflecting both gains and losses in real time.
+
+14
+00:01:31,599 --> 00:01:36,599
+This is expected to pave the way for much more widespread Bitcoin treasury adoption.
+
+15
+00:01:36,799 --> 00:01:40,599
+Bitcoin can be uniquely used by companies to lower their operating costs.
+
+16
+00:01:41,200 --> 00:01:50,400
+This is of interest to CFOs and management teams because operating profitability is typically how they are judged by their boards and what their incentive compensation payouts depend on.
+
+17
+00:01:51,000 --> 00:01:57,200
+A company that holds Bitcoin in its treasury can either hold it and let it accumulate gains that investors will view as extraordinary.
+
+18
+00:01:57,599 --> 00:02:05,599
+Or they can deploy that treasury by regularly selling a portion into rising markets and getting accountants to include those gains in operating revenue.
+
+19
+00:02:06,599 --> 00:02:15,199
+Assume a forward looking return of Bitcoin as an actuarial assumption. 30% or 40% a year is reasonable based on historical data.
+
+20
+00:02:16,000 --> 00:02:20,599
+Establish a clearly defined program that actually sells a certain amount of Bitcoin regularly.
+
+21
+00:02:21,199 --> 00:02:27,800
+Classify a percentage of treasury gains as operating income instead of capital gains. Let me give you a real-world example.
+
+22
+00:02:28,199 --> 00:02:42,599
+Consider a large Bitcoin mining company. With their current strategy, they have revenue of about $77 million and operating expenses of $88 million, a net operating loss of $11 million and a negative 15% margin.
+
+23
+00:02:43,400 --> 00:02:55,800
+With the proposed strategy, deploying just 16% of their Bitcoin treasury with a 35% assumed return, they lower their costs below their revenue and produce a positive net operating income.
+
+24
+00:02:56,599 --> 00:03:00,800
+The company goes from a negative 15% margin to a positive margin.
+
+25
+00:03:01,800 --> 00:03:10,199
+If actual Bitcoin performance differs from 35%, the difference can be amortized outside of operating income below the line.
+
+26
+00:03:10,599 --> 00:03:18,400
+This is not a corporate finance trick. It may appear that a company can use Bitcoin cosmetically to fool investors into thinking it's profitable when it isn't.
+
+27
+00:03:19,000 --> 00:03:25,199
+That is far from what is being suggested here. Bitcoin is money. The hardest money the world has ever seen.
+
+28
+00:03:25,599 --> 00:03:36,599
+Not a return bearing asset. It protects purchasing power from monetary debasement. It protects against censorship and confiscation.
+
+29
+00:03:37,000 --> 00:03:48,199
+It lowers costs over time relative to USD. And it has always increased over periods exceeding five years. There's no free lunch though. Bitcoin is scarce.
+
+30
+00:03:48,599 --> 00:03:54,199
+Deploying it incurs significant opportunity cost. You sacrifice long-term price potential.
+
+31
+00:03:54,599 --> 00:03:59,599
+You sacrifice superior monetary properties. Let's recap what we learned in this chapter.
+
+32
+00:04:00,000 --> 00:04:08,000
+FastB ASU 2023-08 enables market to market accounting for Bitcoin, removing a major barrier to corporate adoption.
+
+33
+00:04:08,199 --> 00:04:15,199
+Bitcoin Treasuries provide optionality. Companies can hold for appreciation or deploy to lower operating costs.
+
+34
+00:04:16,000 --> 00:04:22,199
+Operating profitability can be improved by systematically selling Bitcoin gains and including them in operating revenue.
+
+35
+00:04:22,800 --> 00:04:30,800
+This isn't accounting trickery. Bitcoin genuinely lowers costs over time because USD underperforms Bitcoin by design.
+
+36
+00:04:31,399 --> 00:04:39,199
+But there is no free lunch. Deploying Bitcoin means sacrificing its long-term potential and superior monetary properties.
+
+37
+00:04:39,800 --> 00:04:48,600
+In the next episode, we'll explore structured credit. How Bitcoin as collateral is transforming the credit worthiness of loans. See you in the next one.
+

@@ -7,9 +7,13 @@ export const section11Questions: QuizQuestion[] = [
     question: 'A set $P$ is perfect if:',
     options: [
       '$P$ is open',
+      '$P$ is closed and every point of $P$ is a limit point of $P
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A perfect set is closed and has no isolated points—every point is a limit point. This means $P = P\'$ where $P\'$ is the set of limit points.',
+  },
       '$P$ contains all rationals',
       '$P$ is finite',
-      '$P$ is closed and every point of $P$ is a limit point of $P$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -35,11 +39,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'The Cantor set is:',
     options: [
       'Countable and perfect',
-      'Uncountable and perfect',
       'Countable and not perfect',
-      'Empty'
+      'Uncountable and perfect',
+      'Empty',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Cantor set is uncountable (it bijects with all sequences of 0s and 2s in base 3) and perfect (closed with no isolated points).',
   },
@@ -48,10 +52,26 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the "total length" (Lebesgue measure) of the Cantor set?',
     options: [
-      '$1$',
-      '$1/3$',
-      '$0$',
-      '$\\infty$'
+      '$1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The removed intervals have total length $1/3 + 2/9 + 4/27 + \\cdots = (1/3)/(1 - 2/3) = 1$. So the Cantor set has measure $1 - 1 = 0$, yet it is uncountable.',
+  },
+      '$1/3
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The removed intervals have total length $1/3 + 2/9 + 4/27 + \\cdots = (1/3)/(1 - 2/3) = 1$. So the Cantor set has measure $1 - 1 = 0$, yet it is uncountable.',
+  },
+      '$\\infty
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The removed intervals have total length $1/3 + 2/9 + 4/27 + \\cdots = (1/3)/(1 - 2/3) = 1$. So the Cantor set has measure $1 - 1 = 0$, yet it is uncountable.',
+  },
+      '$0
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The removed intervals have total length $1/3 + 2/9 + 4/27 + \\cdots = (1/3)/(1 - 2/3) = 1$. So the Cantor set has measure $1 - 1 = 0$, yet it is uncountable.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -63,11 +83,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'Every nonempty perfect set in $\\mathbb{R}^k$ is:',
     options: [
       'Finite',
+      'Uncountable',
       'Countable',
       'Open',
-      'Uncountable'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Rudin proves that every nonempty perfect set in $\\mathbb{R}^k$ is uncountable. The proof uses the fact that perfect sets cannot be written as a countable union of singletons, combined with the Baire category theorem ideas.',
   },

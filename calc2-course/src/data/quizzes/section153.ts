@@ -6,10 +6,26 @@ export const section153Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In probability terminology, an event $A$ is said to have occurred if:',
     options: [
-      '$P(A) = 1$',
-      '$P(A) > 0$',
-      'The outcome $x$ satisfies $x \\in A$',
-      '$A = S$'
+      'The outcome $x$ satisfies $x \\in A
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'If an experiment produces outcome $x$, and $x \\in A$, then we say event $A$ has occurred.',
+  },
+      '$P(A) = 1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'If an experiment produces outcome $x$, and $x \\in A$, then we say event $A$ has occurred.',
+  },
+      '$P(A) > 0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'If an experiment produces outcome $x$, and $x \\in A$, then we say event $A$ has occurred.',
+  },
+      '$A = S
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'If an experiment produces outcome $x$, and $x \\in A$, then we say event $A$ has occurred.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,10 +36,26 @@ export const section153Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The impossible event is represented by:',
     options: [
-      'The sample space $S$',
-      'The complement of $S$',
-      'Any set with $P(A) < 1$',
-      'The empty set $\\varnothing$'
+      'The sample space $S
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The empty set $\\varnothing$ is the impossible event because no outcome can belong to it, so it never occurs.',
+  },
+      'The complement of $S
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The empty set $\\varnothing$ is the impossible event because no outcome can belong to it, so it never occurs.',
+  },
+      'The empty set $\\varnothing
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The empty set $\\varnothing$ is the impossible event because no outcome can belong to it, so it never occurs.',
+  },
+      'Any set with $P(A) < 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The empty set $\\varnothing$ is the impossible event because no outcome can belong to it, so it never occurs.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -64,10 +96,26 @@ export const section153Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two events $A$ and $B$ are called mutually exclusive if:',
     options: [
-      '$A \\cup B = S$',
-      '$A \\cap B = \\varnothing$',
-      '$P(A) = P(B)$',
-      '$A \\subseteq B$'
+      '$A \\cap B = \\varnothing
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Events are mutually exclusive (or disjoint) if they cannot both occur, i.e., $A \\cap B = \\varnothing$.',
+  },
+      '$A \\cup B = S
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Events are mutually exclusive (or disjoint) if they cannot both occur, i.e., $A \\cap B = \\varnothing$.',
+  },
+      '$P(A) = P(B)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Events are mutually exclusive (or disjoint) if they cannot both occur, i.e., $A \\cap B = \\varnothing$.',
+  },
+      '$A \\subseteq B
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Events are mutually exclusive (or disjoint) if they cannot both occur, i.e., $A \\cap B = \\varnothing$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -78,12 +126,12 @@ export const section153Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which statement is TRUE about events with probability zero?',
     options: [
-      'An event with probability zero may be nonempty',
       'An event with probability zero must be the empty set',
       'An event with probability zero is always impossible',
       'Probability zero is not possible for any event',
+      'An event with probability zero may be nonempty',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'An event with probability zero is not necessarily impossible (empty). Some nonempty subsets may be assigned probability zero, especially in infinite sample spaces.',
   },

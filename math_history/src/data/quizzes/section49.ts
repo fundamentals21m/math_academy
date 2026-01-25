@@ -7,12 +7,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Noether\'s theorem connects:',
     options: [
-      'Symmetries of a system to conserved quantities',
       'Energy to mass',
+      'Symmetries of a system to conserved quantities',
       'Position to velocity',
       'Force to acceleration',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Noether\'s theorem (1918) states that every continuous symmetry of the action corresponds to a conserved quantity. This deep result explains why conservation laws exist and predicts new ones from symmetries.',
@@ -22,12 +22,12 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Energy conservation follows from which symmetry?',
     options: [
-      'Space translation symmetry',
       'Time translation symmetry',
+      'Space translation symmetry',
       'Rotational symmetry',
-      'Reflection symmetry'
+      'Reflection symmetry',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'If the laws of physics are the same today as tomorrow (time translation symmetry), then energy is conserved. When the Lagrangian has no explicit time dependence, the Hamiltonian (total energy) is constant.',
@@ -41,7 +41,7 @@ export const section49Questions: QuizQuestion[] = [
       'Invariance under time reversal',
       'Invariance under rotations',
       'Invariance under spatial translations',
-      'Invariance under scaling'
+      'Invariance under scaling',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -56,7 +56,7 @@ export const section49Questions: QuizQuestion[] = [
       'Scale invariance',
       'Time translation symmetry',
       'Space translation symmetry',
-      'Rotational symmetry'
+      'Rotational symmetry',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -85,11 +85,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'In particle physics, gauge symmetries via Noether\'s theorem explain:',
     options: [
       'Why particles have mass',
-      'Conservation of electric charge and other quantum numbers',
       'The existence of gravity',
-      'The speed of light'
+      'Conservation of electric charge and other quantum numbers',
+      'The speed of light',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'The Standard Model is built on gauge symmetries (U(1), SU(2), SU(3)). By Noether\'s theorem, these symmetries imply conservation of electric charge, weak isospin, and color charge. The theorem unifies our understanding of why these quantities are conserved.',

@@ -52,10 +52,10 @@ export const section54Questions: QuizQuestion[] = [
     options: [
       'Constant volume',
       'Volume changing with flow rates',
-      'Either constant or changing volume',
       'Only chemical reactions',
+      'Either constant or changing volume',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Mixing problems can have constant volume (in = out) or varying volume.',
   },

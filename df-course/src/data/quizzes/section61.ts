@@ -32,12 +32,12 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Jordan block $J_k(\\lambda)$ is a $k \\times k$ matrix with:',
     options: [
+      '$\\lambda$ on the diagonal, $1$s on the superdiagonal, $0$ elsewhere',
       '$\\lambda$ on the diagonal and $0$ elsewhere',
       '$\\lambda$ in the $(1,1)$ position only',
       '$1$s everywhere',
-      '$\\lambda$ on the diagonal, $1$s on the superdiagonal, $0$ elsewhere'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$J_k(\\lambda)$ has $\\lambda$ on the main diagonal, $1$s on the superdiagonal (entries just above the diagonal), and $0$s elsewhere.',
   },

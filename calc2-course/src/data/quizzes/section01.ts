@@ -102,10 +102,22 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is the zero element in the function space of all continuous functions on $[a, b]$?',
     options: [
+      'The function $f(x) = 0$ for all $x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The zero element in a function space is the function whose value is 0 for every $x$ in its domain. This satisfies $f + 0 = f$ for all functions $f$.',
+  },
       'The empty function',
-      'The function $f(x) = 1$',
-      'The function $f(x) = x$',
-      'The function $f(x) = 0$ for all $x$'
+      'The function $f(x) = 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The zero element in a function space is the function whose value is 0 for every $x$ in its domain. This satisfies $f + 0 = f$ for all functions $f$.',
+  },
+      'The function $f(x) = x
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The zero element in a function space is the function whose value is 0 for every $x$ in its domain. This satisfies $f + 0 = f$ for all functions $f$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

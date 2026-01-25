@@ -105,10 +105,26 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The general power rule $(v^n)\' = ?$ (where $v = v(x)$)',
     options: [
-      '$nv^{n-1}$',
-      '$v^n/n$',
-      '$nv^{n-1}v\'$',
-      '$nv\'$'
+      '$nv^{n-1}v\\'
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'General power rule: $(v^n)\' = nv^{n-1} \\cdot v\'$.',
+  },
+      '$nv^{n-1}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'General power rule: $(v^n)\' = nv^{n-1} \\cdot v\'$.',
+  },
+      '$v^n/n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'General power rule: $(v^n)\' = nv^{n-1} \\cdot v\'$.',
+  },
+      '$nv\\'
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'General power rule: $(v^n)\' = nv^{n-1} \\cdot v\'$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

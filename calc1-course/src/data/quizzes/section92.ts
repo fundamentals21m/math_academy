@@ -6,10 +6,18 @@ export const section92Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An inner product on a real vector space satisfies:',
     options: [
-      'Only $\\langle \\mathbf{u}, \\mathbf{v} \\rangle = \\langle \\mathbf{v}, \\mathbf{u} \\rangle$',
+      'Only $\\langle \\mathbf{u}, \\mathbf{v} \\rangle = \\langle \\mathbf{v}, \\mathbf{u} \\rangle
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Inner product: symmetric, linear, positive definite.',
+  },
+      'Symmetry, linearity, and positive definiteness',
       '$\\langle \\mathbf{u}, \\mathbf{v} \\rangle = 0$ always',
-      'Only $\\langle \\mathbf{v}, \\mathbf{v} \\rangle \\geq 0$',
-      'Symmetry, linearity, and positive definiteness'
+      'Only $\\langle \\mathbf{v}, \\mathbf{v} \\rangle \\geq 0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Inner product: symmetric, linear, positive definite.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -20,10 +28,26 @@ export const section92Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The standard inner product on $\\mathbb{R}^n$ is:',
     options: [
-      '$\\mathbf{u} \\cdot \\mathbf{v} = \\sum u_i v_i$',
-      '$\\mathbf{u} + \\mathbf{v}$',
-      '$\\mathbf{u} \\times \\mathbf{v}$',
-      '$|\\mathbf{u}| |\\mathbf{v}|$'
+      '$\\mathbf{u} + \\mathbf{v}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Standard inner product = dot product.',
+  },
+      '$\\mathbf{u} \\times \\mathbf{v}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Standard inner product = dot product.',
+  },
+      '$\\mathbf{u} \\cdot \\mathbf{v} = \\sum u_i v_i
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Standard inner product = dot product.',
+  },
+      '$|\\mathbf{u}| |\\mathbf{v}|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Standard inner product = dot product.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

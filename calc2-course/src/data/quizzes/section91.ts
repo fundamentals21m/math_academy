@@ -6,12 +6,12 @@ export const section91Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a partial differential equation (PDE)?',
     options: [
+      'An equation involving a scalar field and its partial derivatives',
       'An equation involving only ordinary derivatives',
       'An equation that can only be solved numerically',
-      'An equation involving a scalar field and its partial derivatives',
       'An equation with no derivatives',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A partial differential equation (PDE) is an equation involving a scalar field $f$ and one or more of its partial derivatives with respect to the independent variables.',
   },
@@ -20,10 +20,22 @@ export const section91Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the PDE $\\frac{\\partial f(x, y)}{\\partial x} = 0$, the most general solution is:',
     options: [
-      '$f(x, y) = g(y)$ where $g$ is any function of $y$',
       '$f(x, y) = C$ where $C$ is a constant',
-      '$f(x, y) = g(x)$ where $g$ is any function of $x$',
-      '$f(x, y) = xy$'
+      '$f(x, y) = g(y)$ where $g$ is any function of $y
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $\\frac{\\partial f}{\\partial x} = 0$, then $f$ does not depend on $x$. The most general solution is $f(x, y) = g(y)$, where $g$ is an arbitrary function of $y$ alone. This makes the solution space infinite-dimensional.',
+  },
+      '$f(x, y) = g(x)$ where $g$ is any function of $x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'If $\\frac{\\partial f}{\\partial x} = 0$, then $f$ does not depend on $x$. The most general solution is $f(x, y) = g(y)$, where $g$ is an arbitrary function of $y$ alone. This makes the solution space infinite-dimensional.',
+  },
+      '$f(x, y) = xy
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'If $\\frac{\\partial f}{\\partial x} = 0$, then $f$ does not depend on $x$. The most general solution is $f(x, y) = g(y)$, where $g$ is an arbitrary function of $y$ alone. This makes the solution space infinite-dimensional.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -57,11 +69,11 @@ export const section91Questions: QuizQuestion[] = [
     question: 'The key difference between solutions of ODEs and PDEs is that:',
     options: [
       'ODE solutions depend on arbitrary functions, PDE solutions depend on constants',
-      'PDE solutions depend on arbitrary functions, ODE solutions depend on constants',
       'Both depend on the same number of arbitrary quantities',
+      'PDE solutions depend on arbitrary functions, ODE solutions depend on constants',
       'Neither depends on arbitrary quantities',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'ODE solutions typically depend on arbitrary constants, making the solution space finite-dimensional. PDE solutions depend on arbitrary functions, making the solution space infinite-dimensional. This is a fundamental difference between the two theories.',
   },
@@ -71,11 +83,11 @@ export const section91Questions: QuizQuestion[] = [
     question: 'What role do auxiliary conditions (initial/boundary conditions) play in PDE problems?',
     options: [
       'They make the problem harder to solve',
+      'They select particular solutions from the infinite-dimensional solution space',
       'They are optional and not mathematically significant',
       'They always guarantee a unique solution exists',
-      'They select particular solutions from the infinite-dimensional solution space'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Auxiliary conditions (such as initial conditions or boundary conditions) are needed to select particular solutions from the wealth of solutions in the infinite-dimensional solution space of a PDE.',
   },

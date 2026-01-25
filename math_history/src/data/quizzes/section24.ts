@@ -7,10 +7,10 @@ export const section24Questions: QuizQuestion[] = [
     question: 'What is the "casus irreducibilis"?',
     difficulty: 'easy',
     options: [
-      'A cubic where Cardano\'s formula involves $\\sqrt{-1}$ even though all roots are real',
+      'A cubic where Cardano\\\'s formula involves $\\sqrt{-1}$ even though all roots are real',
       'A cubic with no real roots',
       'A cubic that cannot be solved',
-      'A cubic with three equal roots'
+      'A cubic with three equal roots',
     ],
     correctIndex: 0,
     explanation:
@@ -23,11 +23,11 @@ export const section24Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Cardano',
-      'Bombelli',
       'Euler',
       'Gauss',
+      'Bombelli',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Rafael Bombelli (1526-1572) was the first to systematically work with complex numbers in his Algebra (1572), showing that Cardano\'s formula actually works even when it involves $\\sqrt{-1}$.',
   },
@@ -38,10 +38,26 @@ export const section24Questions: QuizQuestion[] = [
       'If $(2 + i)$ is a cube root in Cardano\'s formula, what is the other cube root?',
     difficulty: 'medium',
     options: [
-      '$(2 + i)$',
-      '$(-2 + i)$',
-      '$(2 - i)$',
-      '$(-2 - i)$'
+      '$(2 - i)
+    correctIndex: 0,
+    explanation:
+      'The two cube roots in Cardano\'s formula are always complex conjugates. If one is $2 + i$, the other is $2 - i$. Their sum $(2 + i) + (2 - i) = 4$ is always real.',
+  },
+      '$(2 + i)
+    correctIndex: 2,
+    explanation:
+      'The two cube roots in Cardano\'s formula are always complex conjugates. If one is $2 + i$, the other is $2 - i$. Their sum $(2 + i) + (2 - i) = 4$ is always real.',
+  },
+      '$(-2 + i)
+    correctIndex: 2,
+    explanation:
+      'The two cube roots in Cardano\'s formula are always complex conjugates. If one is $2 + i$, the other is $2 - i$. Their sum $(2 + i) + (2 - i) = 4$ is always real.',
+  },
+      '$(-2 - i)
+    correctIndex: 2,
+    explanation:
+      'The two cube roots in Cardano\'s formula are always complex conjugates. If one is $2 + i$, the other is $2 - i$. Their sum $(2 + i) + (2 - i) = 4$ is always real.',
+  },
     ],
     correctIndex: 2,
     explanation:
@@ -54,10 +70,26 @@ export const section24Questions: QuizQuestion[] = [
       'What is $(2 + i)(2 - i)$?',
     difficulty: 'medium',
     options: [
-      '$3$',
-      '$4$',
-      '$4 - i^2$',
-      '$5$'
+      '$3
+    correctIndex: 1,
+    explanation:
+      '$(2 + i)(2 - i) = 4 - i^2 = 4 - (-1) = 5$. In general, $z \\cdot \\bar{z} = a^2 + b^2$ for $z = a + bi$.',
+  },
+      '$5
+    correctIndex: 3,
+    explanation:
+      '$(2 + i)(2 - i) = 4 - i^2 = 4 - (-1) = 5$. In general, $z \\cdot \\bar{z} = a^2 + b^2$ for $z = a + bi$.',
+  },
+      '$4
+    correctIndex: 3,
+    explanation:
+      '$(2 + i)(2 - i) = 4 - i^2 = 4 - (-1) = 5$. In general, $z \\cdot \\bar{z} = a^2 + b^2$ for $z = a + bi$.',
+  },
+      '$4 - i^2
+    correctIndex: 3,
+    explanation:
+      '$(2 + i)(2 - i) = 4 - i^2 = 4 - (-1) = 5$. In general, $z \\cdot \\bar{z} = a^2 + b^2$ for $z = a + bi$.',
+  },
     ],
     correctIndex: 3,
     explanation:
@@ -70,10 +102,26 @@ export const section24Questions: QuizQuestion[] = [
       'Compute $(2 + i)^2$.',
     difficulty: 'hard',
     options: [
-      '$3 + 4i$',
-      '$4 + 4i$',
-      '$5 + 4i$',
-      '$4 + 2i$',
+      '$4 + 4i
+    correctIndex: 1,
+    explanation:
+      '$(2 + i)^2 = 4 + 4i + i^2 = 4 + 4i - 1 = 3 + 4i$.',
+  },
+      '$3 + 4i
+    correctIndex: 0,
+    explanation:
+      '$(2 + i)^2 = 4 + 4i + i^2 = 4 + 4i - 1 = 3 + 4i$.',
+  },
+      '$5 + 4i
+    correctIndex: 0,
+    explanation:
+      '$(2 + i)^2 = 4 + 4i + i^2 = 4 + 4i - 1 = 3 + 4i$.',
+  },
+      '$4 + 2i
+    correctIndex: 0,
+    explanation:
+      '$(2 + i)^2 = 4 + 4i + i^2 = 4 + 4i - 1 = 3 + 4i$.',
+  },
     ],
     correctIndex: 0,
     explanation:
@@ -87,11 +135,11 @@ export const section24Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'Cubics always have complex roots',
+      'Cardano\\\'s formula is the only possible approach',
       'The casus irreducibilis proves there is no real-only formula',
-      'Cardano\'s formula is the only possible approach',
       'Complex numbers make calculations easier',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'The casus irreducibilis shows that when a cubic has three distinct real roots, any algebraic formula must involve complex numbers. Only transcendental methods (like Viete\'s trigonometric approach) can avoid them.',
   },

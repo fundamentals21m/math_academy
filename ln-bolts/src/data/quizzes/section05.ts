@@ -17,10 +17,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'Both parties equally',
       'A third party',
+      'The funder only',
       'The fundee only',
-      'The funder only'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'In v1 channels, the funder initiates and provides all initial capital; the fundee contributes none.',
   },
@@ -29,12 +29,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the purpose of the temporary_channel_id?',
     options: [
-      'A random ID used until the funding tx is known',
       'A permanent identifier',
       'For testing purposes only',
-      'To hide the channel from the network'
+      'To hide the channel from the network',
+      'A random ID used until the funding tx is known',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The temporary_channel_id is a 32-byte random ID used until the funding transaction is known, after which a permanent ID is derived.',
   },
@@ -43,12 +43,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is the permanent channel_id derived?',
     options: [
-      'Hash of both node IDs',
       'funding_txid XOR funding_output_index',
+      'Hash of both node IDs',
       'Random 32 bytes',
       'Hash of the funding amount',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The permanent channel_id is derived by XORing the funding txid with the output index (left-padded to 32 bytes).',
   },

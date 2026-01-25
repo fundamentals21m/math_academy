@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'What does Proposition I.12 construct?',
     options: [
       'A perpendicular from a point on a line',
-      'A perpendicular from a point not on a line to that line',
       'A parallel through a point',
-      'An angle equal to a given angle'
+      'An angle equal to a given angle',
+      'A perpendicular from a point not on a line to that line',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'I.12: "To draw a straight line perpendicular to a given infinite straight line from a given point not on it."',
   },
@@ -22,10 +22,10 @@ export const section12Questions: QuizQuestion[] = [
     options: [
       'Constructing an equilateral triangle',
       'Using the parallel postulate',
-      'Bisecting an angle',
       'Drawing a circle centered at the given point that intersects the line at two points',
+      'Bisecting an angle',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Draw a circle centered at the point that crosses the line twice, then bisect the chord between the intersections.',
   },

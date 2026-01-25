@@ -88,10 +88,26 @@ export const section94Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $F(x_1, \\ldots, x_n) = 0$ defines $x_n$ implicitly as a differentiable function of $x_1, \\ldots, x_{n-1}$, then $D_k f = $ (for $k < n$):',
     options: [
-      '$D_k F$',
-      '$-\\frac{D_k F}{D_n F}$',
-      '$-D_k F$',
-      '$\\frac{D_k F}{D_n F}$'
+      '$D_k F
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'By the general implicit function theorem, $D_k f = -\\frac{D_k F}{D_n F}$ at points where $D_n F \\neq 0$. This generalizes the two-variable formula to $n$ dimensions.',
+  },
+      '$-D_k F
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By the general implicit function theorem, $D_k f = -\\frac{D_k F}{D_n F}$ at points where $D_n F \\neq 0$. This generalizes the two-variable formula to $n$ dimensions.',
+  },
+      '$\\frac{D_k F}{D_n F}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By the general implicit function theorem, $D_k f = -\\frac{D_k F}{D_n F}$ at points where $D_n F \\neq 0$. This generalizes the two-variable formula to $n$ dimensions.',
+  },
+      '$-\\frac{D_k F}{D_n F}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'By the general implicit function theorem, $D_k f = -\\frac{D_k F}{D_n F}$ at points where $D_n F \\neq 0$. This generalizes the two-variable formula to $n$ dimensions.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .bitcoin-symbol {
+      color: #F7931A;
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+    .benefit-card {
+      background: rgba(247, 147, 26, 0.05);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: left;
+    }
+    .benefit-icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    .benefit-title {
+      color: #F7931A;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .benefit-desc {
+      color: #E6EDF3;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .genesis-box {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin-top: 40px;
+      display: inline-block;
+    }
+    .genesis-date {
+      color: #F7931A;
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      margin-bottom: 10px;
+    }
+    .genesis-text {
+      color: #E6EDF3;
+      font-size: 24px;
+    }
+    .node-info {
+      color: #8B949E;
+      font-size: 20px;
+      margin-top: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">A Very Special Bearer Asset</div>
+    <div class="section-title">Why Bitcoin is Different</div>
+    <div class="bitcoin-symbol">₿</div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🔓</div>
+        <div class="benefit-title">No Central Issuer</div>
+        <div class="benefit-desc">No risk of devaluation or frictions imposed by any authority</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🌐</div>
+        <div class="benefit-title">Decentralized Network</div>
+        <div class="benefit-desc">Thousands of nodes worldwide, each doing independent validation</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📜</div>
+        <div class="benefit-title">Immutable Protocol</div>
+        <div class="benefit-desc">No node or group can change the rules or be exempted from them</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🔐</div>
+        <div class="benefit-title">Cryptographic Model</div>
+        <div class="benefit-desc">Private keys are impossible to guess, yet trivially easy to validate</div>
+      </div>
+    </div>
+    <div class="genesis-box">
+      <div class="genesis-date">January 3, 2009</div>
+      <div class="genesis-text">Bitcoin created and issued by the protocol set in motion by Satoshi Nakamoto</div>
+    </div>
+  </div>
+</body>
+</html>

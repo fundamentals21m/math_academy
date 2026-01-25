@@ -6,10 +6,26 @@ export const section108Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f = \\nabla\\varphi$, the function $\\varphi$ is called:',
     options: [
-      'A potential function for $f$',
-      'The divergence of $f$',
-      'The gradient of $f$',
-      'The curl of $f$'
+      'The divergence of $f
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $f = \\nabla\\varphi$, then $\\varphi$ is called a potential function for $f$. The level sets of $\\varphi$ are called equipotential surfaces.',
+  },
+      'A potential function for $f
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'If $f = \\nabla\\varphi$, then $\\varphi$ is called a potential function for $f$. The level sets of $\\varphi$ are called equipotential surfaces.',
+  },
+      'The gradient of $f
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'If $f = \\nabla\\varphi$, then $\\varphi$ is called a potential function for $f$. The level sets of $\\varphi$ are called equipotential surfaces.',
+  },
+      'The curl of $f
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'If $f = \\nabla\\varphi$, then $\\varphi$ is called a potential function for $f$. The level sets of $\\varphi$ are called equipotential surfaces.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -83,7 +99,7 @@ export const section108Questions: QuizQuestion[] = [
       'Kinetic energy is constant',
       'Potential energy is constant',
       'Work done is always zero',
-      'Kinetic energy plus potential energy is constant'
+      'Kinetic energy plus potential energy is constant',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -95,11 +111,11 @@ export const section108Questions: QuizQuestion[] = [
     question: 'A force field will NOT be conservative if:',
     options: [
       'It is continuous',
-      'Friction or viscosity exists in the system',
       'It acts in three dimensions',
+      'Friction or viscosity exists in the system',
       'It is bounded',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Force fields with friction or viscosity are not conservative because they convert mechanical energy into heat. Such forces cannot be written as gradients of a potential.',
   },

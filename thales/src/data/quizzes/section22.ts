@@ -9,12 +9,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many outstanding European mathematicians were there in the thousand years from 400 to 1400 AD?',
     options: [
-      'One (Fibonacci)',
       'None',
+      'One (Fibonacci)',
       'About a dozen',
-      'Hundreds'
+      'Hundreds',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'In the thousand years from 400 to 1400 AD, there was exactly one outstanding European mathematician: Leonardo of Pisa, better known as Fibonacci.',
@@ -24,12 +24,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Gerbert\'s mathematical abilities lead his contemporaries to believe about him?',
     options: [
-      'That he had a pact with the devil',
       'That he was divinely inspired',
+      'That he had a pact with the devil',
       'That he was secretly Greek',
       'That he was immortal',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Gerbert\'s mathematical knowledge so overawed his contemporaries that they believed he had a pact with the devil! Despite this reputation, he became Pope Sylvester II.',
@@ -41,10 +41,10 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       'He received it as a gift from the Caliph',
       'He purchased it from merchants',
-      'He inherited it from his teacher',
       'He disguised himself as a Muslim and attended lectures in Cordova',
+      'He inherited it from his teacher',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Around 1120, Adelhard of Bath attended lectures at Cordova in Spain, disguising himself as a Muslim. There he obtained a copy of Euclid\'s Elements in Arabic, which he translated into Latin.',
@@ -57,7 +57,7 @@ export const section22Questions: QuizQuestion[] = [
       'The divergence of the harmonic series',
       'The Pythagorean theorem',
       'The quadratic formula',
-      'Fermat\\'s Last Theorem',
+      'Fermat\\\\\'s Last Theorem',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -86,10 +86,10 @@ export const section22Questions: QuizQuestion[] = [
     options: [
       '1.414',
       '2.718',
-      '1.618',
       '3.142',
+      '1.618',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The golden ratio φ = (1 + √5)/2 ≈ 1.618. It is connected to the Fibonacci sequence: the ratio of consecutive Fibonacci numbers approaches φ as the numbers get larger.',
@@ -100,11 +100,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'What identity did Fibonacci prove in his Liber quadratorum?',
     options: [
       '(a+b)² = a² + 2ab + b²',
-      '(a²+b²)(c²+d²) = (ac-bd)² + (bc+ad)²',
       'a² + b² = c² for right triangles',
+      '(a²+b²)(c²+d²) = (ac-bd)² + (bc+ad)²',
       '(a-b)(a+b) = a² - b²',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Fibonacci proved the two-squares identity: (a²+b²)(c²+d²) = (ac-bd)² + (bc+ad)². This shows that if each of two integers is a sum of two squares, then so is their product.',
@@ -117,7 +117,7 @@ export const section22Questions: QuizQuestion[] = [
       'Calculating compound interest',
       'Dividing inheritance',
       'Building pyramids',
-      'Breeding rabbits'
+      'Breeding rabbits',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -129,12 +129,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Where do Fibonacci numbers appear in nature?',
     options: [
-      'The number of planets in the solar system',
       'The spiral patterns of sunflower seeds',
+      'The number of planets in the solar system',
       'The phases of the moon',
       'The colors of the rainbow',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Fibonacci numbers appear in sunflower seed spirals: if there are 21 clockwise arcs, there are typically 13 counterclockwise arcs—consecutive Fibonacci numbers! This pattern appears in many plants.',

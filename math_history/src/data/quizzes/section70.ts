@@ -10,7 +10,7 @@ export const section70Questions: QuizQuestion[] = [
       'Is necessarily inconsistent',
       'Contains true statements that cannot be proved within the system',
       'Can prove all true statements',
-      'Contains no true statements'
+      'Contains no true statements',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -25,7 +25,7 @@ export const section70Questions: QuizQuestion[] = [
       '"F is inconsistent"',
       '"This sentence is false"',
       '"This sentence is not provable in F"',
-      '"All statements are provable"'
+      '"All statements are provable"',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -39,11 +39,11 @@ export const section70Questions: QuizQuestion[] = [
     question: 'Gödel\'s Second Incompleteness Theorem states that a consistent system:',
     options: [
       'Has no unprovable statements',
+      'Cannot prove its own consistency',
       'Must be incomplete',
       'Can prove every true statement',
-      'Cannot prove its own consistency'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The Second Theorem shows that if F is consistent and sufficiently powerful, then the statement "F is consistent" cannot be proved within F itself. This demolished Hilbert\'s hope of proving mathematics consistent from within.',
@@ -53,12 +53,12 @@ export const section70Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Gödel numbering allows statements about proofs to become:',
     options: [
-      'Arithmetic statements about natural numbers',
       'Geometric statements',
       'Statements about physical reality',
+      'Arithmetic statements about natural numbers',
       'Statements that are always true',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Gödel numbering assigns unique natural numbers to symbols, formulas, and proofs. This encoding allows metamathematical statements (statements about the system) to be expressed as arithmetic statements within the system itself—the key to self-reference.',
@@ -69,12 +69,12 @@ export const section70Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Gödel\'s incompleteness theorems ended Hilbert\'s program because they showed:',
     options: [
-      'Mathematics is inconsistent',
       'No sufficiently powerful system can be both complete and able to prove its own consistency',
+      'Mathematics is inconsistent',
       'All mathematical statements are undecidable',
-      'Arithmetic doesn\'t exist'
+      'Arithmetic doesn\\\'t exist',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'Hilbert wanted a complete, consistent formal system whose consistency could be proved. Gödel showed: (1) no such system is complete, and (2) no such system can prove its own consistency. This made Hilbert\'s program, in its original form, impossible.',
@@ -86,10 +86,10 @@ export const section70Questions: QuizQuestion[] = [
     options: [
       'Formal systems have limitations',
       'Some true arithmetic statements are unprovable in any given consistent system',
+      'Mathematics requires axioms',
       'Human minds are superior to computers',
-      'Mathematics requires axioms'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The claim that Gödel\'s theorems prove human minds exceed machines is a misinterpretation. The theorems apply to ANY formal system (human or machine). They show limitations of formal systems, not that humans somehow transcend formalization. Options B, C, D are actually correct implications.',

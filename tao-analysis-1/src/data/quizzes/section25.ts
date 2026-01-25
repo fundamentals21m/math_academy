@@ -59,10 +59,26 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which limit is correct?',
     options: [
-      '$\\lim_{n \\to \\infty} n^{1/n} = 1$',
-      '$\\lim_{n \\to \\infty} n^{1/n} = e$',
-      '$\\lim_{n \\to \\infty} n^{1/n} = 0$',
-      '$\\lim_{n \\to \\infty} n^{1/n} = \\infty$'
+      '$\\lim_{n \\to \\infty} n^{1/n} = e
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Taking logarithm: $\\ln(n^{1/n}) = \\frac{\\ln n}{n} \\to 0$ as $n \\to \\infty$. Therefore $n^{1/n} \\to e^0 = 1$.',
+  },
+      '$\\lim_{n \\to \\infty} n^{1/n} = 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Taking logarithm: $\\ln(n^{1/n}) = \\frac{\\ln n}{n} \\to 0$ as $n \\to \\infty$. Therefore $n^{1/n} \\to e^0 = 1$.',
+  },
+      '$\\lim_{n \\to \\infty} n^{1/n} = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Taking logarithm: $\\ln(n^{1/n}) = \\frac{\\ln n}{n} \\to 0$ as $n \\to \\infty$. Therefore $n^{1/n} \\to e^0 = 1$.',
+  },
+      '$\\lim_{n \\to \\infty} n^{1/n} = \\infty
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Taking logarithm: $\\ln(n^{1/n}) = \\frac{\\ln n}{n} \\to 0$ as $n \\to \\infty$. Therefore $n^{1/n} \\to e^0 = 1$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

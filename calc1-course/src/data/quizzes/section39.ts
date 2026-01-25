@@ -36,10 +36,26 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivative of $\\ln x$ is:',
     options: [
-      '$x$',
-      '$e^x$',
-      '$1/x$',
-      '$\\ln x / x$'
+      '$x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'By FTC I: $(\\ln x)\' = 1/x$.',
+  },
+      '$1/x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By FTC I: $(\\ln x)\' = 1/x$.',
+  },
+      '$e^x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By FTC I: $(\\ln x)\' = 1/x$.',
+  },
+      '$\\ln x / x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By FTC I: $(\\ln x)\' = 1/x$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -116,11 +132,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'As $x \\to \\infty$, $\\ln x$:',
     options: [
       'Approaches 0',
+      'Approaches $\\infty$ (slowly)',
       'Approaches 1',
       'Oscillates',
-      'Approaches $\\infty$ (slowly)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: '$\\ln x \\to \\infty$ as $x \\to \\infty$, but slower than any positive power of $x$.',
   },

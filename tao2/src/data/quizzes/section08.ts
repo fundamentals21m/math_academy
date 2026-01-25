@@ -7,11 +7,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'A metric space $X$ is connected if:',
     options: [
       'Every two points can be joined by a path',
-      'It cannot be written as the union of two non-empty disjoint open sets',
       'It is compact',
-      'It contains no isolated points'
+      'It cannot be written as the union of two non-empty disjoint open sets',
+      'It contains no isolated points',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A space is connected if it cannot be partitioned into two non-empty disjoint open sets.',
   },
@@ -20,10 +20,14 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Intermediate Value Theorem states that if $f: [a, b] \\to \\mathbf{R}$ is continuous and $y$ is between $f(a)$ and $f(b)$, then:',
     options: [
+      'There exists $c \\in [a, b]$ with $f(c) = y
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The IVT says continuous functions on intervals take all intermediate values.',
+  },
       '$f$ is constant',
       '$f$ is monotonic',
-      'There exists $c \\in [a, b]$ with $f(c) = y$',
-      '$f$ has a maximum at some point'
+      '$f$ has a maximum at some point',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -34,12 +38,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f: X \\to Y$ is continuous and $X$ is connected, then:',
     options: [
+      '$f(X)$ is connected',
       '$f(X)$ is compact',
       '$Y$ must be connected',
       '$f(X)$ is open',
-      '$f(X)$ is connected'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Continuous images of connected sets are connected.',
   },
@@ -48,10 +52,14 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A space $X$ is path-connected if:',
     options: [
-      'For any two points $x, y \\in X$, there exists a continuous path from $x$ to $y$',
       'It is connected',
+      'For any two points $x, y \\in X$, there exists a continuous path from $x$ to $y
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Path-connected means any two points can be joined by a continuous curve.',
+  },
       'It contains no holes',
-      'Every continuous function on $X$ is bounded'
+      'Every continuous function on $X$ is bounded',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -63,11 +71,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'Which of the following is TRUE about connectedness?',
     options: [
       'Connected implies path-connected',
-      'Path-connected implies connected',
       'Connected and path-connected are equivalent',
-      'Neither implies the other'
+      'Neither implies the other',
+      'Path-connected implies connected',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Path-connected implies connected, but not vice versa. The topologist\'s sine curve is connected but not path-connected.',
   },

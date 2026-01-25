@@ -6,10 +6,26 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Legendre equation is:',
     options: [
-      '$y\'\' + y = 0$',
-      '$x^2 y\'\' + xy\' + y = 0$',
-      '$y\'\' + xy = 0$',
-      '$(1 - x^2)y\'\' - 2xy\' + \\alpha(\\alpha + 1)y = 0$'
+      '$y\\'\\' + y = 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The Legendre equation has the specific form $(1 - x^2)y\'\' - 2xy\' + \\alpha(\\alpha + 1)y = 0$.',
+  },
+      '$(1 - x^2)y\\'\\' - 2xy\\' + \\alpha(\\alpha + 1)y = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Legendre equation has the specific form $(1 - x^2)y\'\' - 2xy\' + \\alpha(\\alpha + 1)y = 0$.',
+  },
+      '$x^2 y\\'\\' + xy\\' + y = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Legendre equation has the specific form $(1 - x^2)y\'\' - 2xy\' + \\alpha(\\alpha + 1)y = 0$.',
+  },
+      '$y\\'\\' + xy = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Legendre equation has the specific form $(1 - x^2)y\'\' - 2xy\' + \\alpha(\\alpha + 1)y = 0$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

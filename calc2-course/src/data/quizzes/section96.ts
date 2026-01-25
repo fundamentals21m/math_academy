@@ -24,10 +24,26 @@ export const section96Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The second-order Taylor formula for a scalar field $f$ at a stationary point $a$ is:',
     options: [
-      '$f(a + y) - f(a) = \\nabla f(a) \\cdot y$',
-      '$f(a + y) - f(a) = \\frac{1}{2}yH(a)y^t + \\|y\\|^2 E_2(a, y)$',
-      '$f(a + y) - f(a) = yH(a)$',
-      '$f(a + y) - f(a) = 0$'
+      '$f(a + y) - f(a) = \\nabla f(a) \\cdot y
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'At a stationary point where $\\nabla f(a) = 0$, the second-order Taylor formula gives $f(a + y) - f(a) = \\frac{1}{2}yH(a)y^t + \\|y\\|^2 E_2(a, y)$, where $E_2 \\to 0$ as $y \\to 0$.',
+  },
+      '$f(a + y) - f(a) = yH(a)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'At a stationary point where $\\nabla f(a) = 0$, the second-order Taylor formula gives $f(a + y) - f(a) = \\frac{1}{2}yH(a)y^t + \\|y\\|^2 E_2(a, y)$, where $E_2 \\to 0$ as $y \\to 0$.',
+  },
+      '$f(a + y) - f(a) = \\frac{1}{2}yH(a)y^t + \\|y\\|^2 E_2(a, y)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'At a stationary point where $\\nabla f(a) = 0$, the second-order Taylor formula gives $f(a + y) - f(a) = \\frac{1}{2}yH(a)y^t + \\|y\\|^2 E_2(a, y)$, where $E_2 \\to 0$ as $y \\to 0$.',
+  },
+      '$f(a + y) - f(a) = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'At a stationary point where $\\nabla f(a) = 0$, the second-order Taylor formula gives $f(a + y) - f(a) = \\frac{1}{2}yH(a)y^t + \\|y\\|^2 E_2(a, y)$, where $E_2 \\to 0$ as $y \\to 0$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

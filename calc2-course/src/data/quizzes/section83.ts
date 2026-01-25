@@ -55,9 +55,13 @@ export const section83Questions: QuizQuestion[] = [
     question: 'For $f: \\mathbb{R}^n \\to \\mathbb{R}$ differentiable at $\\mathbf{a}$, the total derivative can be represented by:',
     options: [
       'The Hessian matrix',
-      'The gradient vector: $df_{\\mathbf{a}}(\\mathbf{h}) = \\nabla f(\\mathbf{a}) \\cdot \\mathbf{h}$',
       'The Laplacian',
-      'The Jacobian matrix'
+      'The Jacobian matrix',
+      'The gradient vector: $df_{\\mathbf{a}}(\\mathbf{h}) = \\nabla f(\\mathbf{a}) \\cdot \\mathbf{h}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'For scalar fields, the total derivative is $df_{\\mathbf{a}}(\\mathbf{h}) = \\nabla f(\\mathbf{a}) \\cdot \\mathbf{h}$, a linear functional.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -68,10 +72,14 @@ export const section83Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The condition $\\lim_{\\mathbf{h} \\to \\mathbf{0}} \\frac{f(\\mathbf{a}+\\mathbf{h}) - f(\\mathbf{a}) - df_{\\mathbf{a}}(\\mathbf{h})}{\\|\\mathbf{h}\\|} = 0$ means:',
     options: [
+      '$f$ is differentiable at $\\mathbf{a}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'This limit condition is the definition of differentiability: the linear approximation error is $o(\\|\\mathbf{h}\\|)$.',
+  },
       '$f$ is continuous',
       '$f$ has partial derivatives',
-      '$f$ is differentiable at $\\mathbf{a}$',
-      '$f$ is constant'
+      '$f$ is constant',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -82,10 +90,26 @@ export const section83Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f(x,y) = x^2 + 3xy$, the total derivative $df$ at any point is:',
     options: [
-      '$(2x + 3y, 3x)$',
-      '$2x + 3y + 3x$',
-      '$6xy$',
-      'The linear map $(h_1, h_2) \\mapsto (2x + 3y)h_1 + 3xh_2$'
+      '$(2x + 3y, 3x)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: '$\\nabla f = (2x + 3y, 3x)$, so $df(h_1, h_2) = (2x+3y)h_1 + 3xh_2$.',
+  },
+      '$2x + 3y + 3x
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$\\nabla f = (2x + 3y, 3x)$, so $df(h_1, h_2) = (2x+3y)h_1 + 3xh_2$.',
+  },
+      'The linear map $(h_1, h_2) \\mapsto (2x + 3y)h_1 + 3xh_2
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$\\nabla f = (2x + 3y, 3x)$, so $df(h_1, h_2) = (2x+3y)h_1 + 3xh_2$.',
+  },
+      '$6xy
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: '$\\nabla f = (2x + 3y, 3x)$, so $df(h_1, h_2) = (2x+3y)h_1 + 3xh_2$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .tradeoff-container {
+      display: flex;
+      gap: 60px;
+      margin-top: 50px;
+      align-items: stretch;
+    }
+    .tradeoff-card {
+      flex: 1;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: left;
+    }
+    .tradeoff-card.provides {
+      background: rgba(34, 197, 94, 0.08);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .tradeoff-card.costs {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+    }
+    .tradeoff-title {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .provides .tradeoff-title { color: #22C55E; }
+    .costs .tradeoff-title { color: #EF4444; }
+    .tradeoff-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 12px 0;
+      color: #E6EDF3;
+      font-size: 22px;
+      line-height: 1.4;
+    }
+    .tradeoff-item .icon {
+      font-size: 20px;
+      min-width: 30px;
+    }
+    .provides .icon { color: #22C55E; }
+    .costs .icon { color: #EF4444; }
+    .bottom-line {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 30px 50px;
+      margin-top: 50px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .bottom-line-text {
+      color: #E6EDF3;
+      font-size: 26px;
+      line-height: 1.5;
+    }
+    .bottom-line-text em {
+      color: #F7931A;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The ETF Tradeoff</div>
+    <div class="section-title">What You Get vs. What You Risk</div>
+    <div class="tradeoff-container">
+      <div class="tradeoff-card provides">
+        <div class="tradeoff-title">What ETF Provides</div>
+        <div class="tradeoff-item"><span class="icon">+</span> Easy exposure to bitcoin's price</div>
+        <div class="tradeoff-item"><span class="icon">+</span> No need to understand self-custody</div>
+        <div class="tradeoff-item"><span class="icon">+</span> Fits into existing brokerage accounts</div>
+        <div class="tradeoff-item"><span class="icon">+</span> Familiar investment vehicle</div>
+      </div>
+      <div class="tradeoff-card costs">
+        <div class="tradeoff-title">What ETF Costs</div>
+        <div class="tradeoff-item"><span class="icon">−</span> Enormous counterparty risk</div>
+        <div class="tradeoff-item"><span class="icon">−</span> No ability to verify custody yourself</div>
+        <div class="tradeoff-item"><span class="icon">−</span> Dependence on custodian's competence</div>
+        <div class="tradeoff-item"><span class="icon">−</span> Not true bitcoin ownership</div>
+      </div>
+    </div>
+    <div class="bottom-line">
+      <div class="bottom-line-text">The ETF captures bitcoin's price volatility — but at <em>enormous counterparty risk</em>. It is not a substitute for true bitcoin ownership.</div>
+    </div>
+  </div>
+</body>
+</html>

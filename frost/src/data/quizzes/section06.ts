@@ -95,11 +95,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Why is the linearity property $[s_1]G + [s_2]G = [s_1 + s_2]G$ crucial for FROST?',
     options: [
       'It allows faster computation of scalar multiplication',
-      'It makes signatures smaller on-chain',
       'It enables combining partial signature shares without revealing individual secrets',
+      'It makes signatures smaller on-chain',
       'It provides quantum resistance',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Linearity allows FROST participants to compute $z_i = k_i + s_i \\lambda_i \\cdot c$ locally, and when summed: $\\sum z_i = k + s \\cdot c$. The final signature is correct without anyone computing $s$ directly.',
   },

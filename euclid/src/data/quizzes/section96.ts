@@ -7,11 +7,11 @@ export const section96Questions: QuizQuestion[] = [
     question: 'Proposition III.32 relates what two angles?',
     options: [
       'Two central angles',
-      'Two inscribed angles',
       'The angle between tangent and chord, and the inscribed angle in the alternate segment',
+      'Two inscribed angles',
       'A central angle and a tangent angle',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'III.32 proves that the angle between a tangent and a chord at the tangent point equals the inscribed angle in the alternate segment.',
   },

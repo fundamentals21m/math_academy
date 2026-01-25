@@ -25,12 +25,12 @@ export const section09Questions: QuizQuestion[] = [
     question:
       'What geometric length did the Pythagoreans discover was incommensurable with a unit length?',
     options: [
-      'The diagonal of a unit square',
       'The circumference of a circle with diameter 1',
       'The side of a regular pentagon',
       'The height of an equilateral triangle',
+      'The diagonal of a unit square',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The Pythagoreans discovered that the diagonal of a unit square, which has length √2, is not commensurable with the side of the square. This was a shocking discovery that challenged their philosophy.',
@@ -42,11 +42,11 @@ export const section09Questions: QuizQuestion[] = [
       'In the proof that $\\sqrt{2}$ is irrational, what contradiction is reached?',
     options: [
       'The number becomes negative',
-      'Both p and q must be even, contradicting that they have no common factors',
       'The square root cannot be computed',
+      'Both p and q must be even, contradicting that they have no common factors',
       'p becomes larger than q',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Assuming √2 = p/q with p and q having no common factors, we show that p² = 2q², so p is even. Writing p = 2r, we get q² = 2r², so q is also even. But this contradicts our assumption that p and q have no common factors.',
@@ -57,12 +57,12 @@ export const section09Questions: QuizQuestion[] = [
     question:
       'According to legend, what happened to Hippasus after revealing the secret of incommensurables?',
     options: [
-      'He drowned in a shipwreck',
       'He became the leader of the Pythagoreans',
+      'He drowned in a shipwreck',
       'He was awarded a prize by the Greek government',
       'He moved to Athens to teach',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'According to legend, Hippasus leaked the secret of incommensurables to outsiders and allegedly drowned in a shipwreck as divine punishment. He was described as the "Trotsky" of the Pythagorean society.',
@@ -125,12 +125,12 @@ export const section09Questions: QuizQuestion[] = [
     question:
       'Using the Pythagorean recurrence with $a_1 = 1$, $b_1 = 1$, $a_{n+1} = a_n + 2b_n$, $b_{n+1} = a_n + b_n$, what is the third approximation to $\\sqrt{2}$?',
     options: [
+      '7/5',
       '3/2',
       '5/3',
       '17/12',
-      '7/5',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Starting with a₁=1, b₁=1: Then a₂ = 1+2(1) = 3, b₂ = 1+1 = 2 (giving 3/2). Then a₃ = 3+2(2) = 7, b₃ = 3+2 = 5 (giving 7/5). So the third approximation is 7/5 = 1.4.',
@@ -142,7 +142,7 @@ export const section09Questions: QuizQuestion[] = [
       'Which book of Euclid\'s Elements later provided a rigorous treatment of incommensurable ratios?',
     options: [
       'Book I (basic geometry)',
-      'Book V (Eudoxus\\'s theory of proportions)',
+      'Book V (Eudoxus\\\\'s theory of proportions)',
       'Book II (geometric algebra)',
       'Book XIII (regular polyhedra)',
     ],

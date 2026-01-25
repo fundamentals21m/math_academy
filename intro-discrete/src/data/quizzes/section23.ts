@@ -129,11 +129,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'Every non-constant polynomial over a field factors uniquely into:',
     options: [
       'Linear factors',
+      'Monic irreducible factors',
       'Degree-2 factors',
       'Integer factors',
-      'Monic irreducible factors',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Unique factorization: every polynomial factors as constant times monic irreducibles, uniquely up to order.',
   },

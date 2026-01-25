@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .resources-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 25px 0;
+    }
+    .resources-box {
+      width: 450px;
+      background: rgba(13, 17, 23, 0.8);
+      border: 1px solid rgba(8, 145, 178, 0.3);
+      padding: 25px 30px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .resources-title {
+      color: #0891B2;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .book-item {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(8, 145, 178, 0.1);
+    }
+    .book-item:last-child {
+      border-bottom: none;
+    }
+    .book-title {
+      color: #F7931A;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .book-author {
+      color: #8B949E;
+      font-size: 14px;
+    }
+    .podcast-item {
+      color: #E6EDF3;
+      font-size: 15px;
+      padding: 6px 0;
+    }
+    .contact-box {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 20px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+      display: inline-block;
+    }
+    .contact-title {
+      color: #F7931A;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .contact-text {
+      color: #E6EDF3;
+      font-size: 18px;
+    }
+    .contact-text span {
+      color: #F7931A;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Go Deeper</div>
+    <div class="section-title">Recommended Resources</div>
+    <div class="resources-row">
+      <div class="resources-box">
+        <div class="resources-title">Essential Books</div>
+        <div class="book-item">
+          <div class="book-title">The Bitcoin Standard</div>
+          <div class="book-author">Saifedean Ammous</div>
+        </div>
+        <div class="book-item">
+          <div class="book-title">Broken Money</div>
+          <div class="book-author">Lyn Alden</div>
+        </div>
+        <div class="book-item">
+          <div class="book-title">Bitcoin is Venice</div>
+          <div class="book-author">Allen Farrington & Sacha Meyers</div>
+        </div>
+        <div class="book-item">
+          <div class="book-title">Atlas Shrugged</div>
+          <div class="book-author">Ayn Rand</div>
+        </div>
+      </div>
+      <div class="resources-box">
+        <div class="resources-title">Podcasts</div>
+        <div class="podcast-item">• The Reorg</div>
+        <div class="podcast-item">• The Path to Bitcoin</div>
+        <div class="podcast-item">• The Block Reward</div>
+        <div class="podcast-item">• Rock Paper Bitcoin</div>
+      </div>
+    </div>
+    <div class="contact-box">
+      <div class="contact-title">Actuarial Bitcoin Advisors</div>
+      <div class="contact-text">Twitter: <span>@Fundamentals21m</span> • Email: <span>bh1r@pm.me</span></div>
+    </div>
+  </div>
+</body>
+</html>

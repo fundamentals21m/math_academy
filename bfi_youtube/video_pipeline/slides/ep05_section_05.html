@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .permission-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+    .flow-item {
+      background: rgba(139, 148, 158, 0.1);
+      border: 1px solid rgba(139, 148, 158, 0.3);
+      padding: 20px 30px;
+      border-radius: 8px;
+      color: #8B949E;
+      font-size: 18px;
+    }
+    .flow-arrow {
+      color: #8B949E;
+      font-size: 24px;
+    }
+    .time-comparison {
+      display: flex;
+      gap: 60px;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .time-box {
+      text-align: center;
+      padding: 40px;
+      border-radius: 12px;
+      width: 300px;
+    }
+    .time-box.quarters {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+    }
+    .time-box.years {
+      background: rgba(34, 197, 94, 0.08);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+    }
+    .time-label {
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 15px;
+    }
+    .quarters .time-label { color: #EF4444; }
+    .years .time-label { color: #22C55E; }
+    .time-value {
+      font-size: 48px;
+      font-weight: bold;
+      color: #E6EDF3;
+    }
+    .time-desc {
+      color: #8B949E;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .vs-text {
+      color: #F7931A;
+      font-size: 36px;
+      align-self: center;
+    }
+    .problem-box {
+      background: rgba(247, 147, 26, 0.1);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin-top: 40px;
+      display: inline-block;
+    }
+    .problem-text {
+      color: #E6EDF3;
+      font-size: 24px;
+    }
+    .problem-text em {
+      color: #F7931A;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Why Companies Struggle</div>
+    <div class="section-title">The Permission Structure</div>
+    <div class="permission-flow">
+      <div class="flow-item">Board Approval</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">McKinsey Opinion</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">JP Morgan / Goldman</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">EY / PwC Audit</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">Executive Shuffle</div>
+    </div>
+    <div class="time-comparison">
+      <div class="time-box quarters">
+        <div class="time-label">How Companies Think</div>
+        <div class="time-value">Quarters</div>
+        <div class="time-desc">90-day cycles</div>
+      </div>
+      <div class="vs-text">vs</div>
+      <div class="time-box years">
+        <div class="time-label">What Bitcoin Requires</div>
+        <div class="time-value">Years</div>
+        <div class="time-desc">Multi-year commitment</div>
+      </div>
+    </div>
+    <div class="problem-box">
+      <div class="problem-text">Companies like <em>easy and quick</em> solutions. Bitcoin offers neither.</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -24,12 +24,12 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The determinant function $\\det: M_n(\\mathbb{R}) \\to \\mathbb{R}$ is:',
     options: [
-      'Always positive',
       'Multilinear and alternating in the rows (or columns)',
+      'Always positive',
       'Linear in the matrix entries',
       'Continuous but not differentiable',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The determinant is the unique function that is multilinear (linear in each row), alternating (changes sign when rows are swapped), and satisfies $\\det(I) = 1$.',
   },
@@ -98,10 +98,26 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For an $n \\times n$ matrix with columns $a_1, \\ldots, a_n$, $|\\det(A)|$ equals:',
     options: [
-      'The sum of the lengths $|a_1| + \\cdots + |a_n|$',
-      'The $n$-dimensional volume of the parallelepiped spanned by $a_1, \\ldots, a_n$',
-      'The product $|a_1| \\cdots |a_n|$',
-      'The area of the triangle with vertices $a_1, \\ldots, a_n$'
+      'The sum of the lengths $|a_1| + \\cdots + |a_n|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The absolute value of the determinant gives the volume of the parallelepiped whose edges are the column vectors. The sign indicates orientation.',
+  },
+      'The product $|a_1| \\cdots |a_n|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The absolute value of the determinant gives the volume of the parallelepiped whose edges are the column vectors. The sign indicates orientation.',
+  },
+      'The area of the triangle with vertices $a_1, \\ldots, a_n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The absolute value of the determinant gives the volume of the parallelepiped whose edges are the column vectors. The sign indicates orientation.',
+  },
+      'The $n$-dimensional volume of the parallelepiped spanned by $a_1, \\ldots, a_n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The absolute value of the determinant gives the volume of the parallelepiped whose edges are the column vectors. The sign indicates orientation.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

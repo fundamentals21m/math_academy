@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .debt-table {
+      width: 100%;
+      max-width: 950px;
+      margin: 25px auto;
+      border-collapse: collapse;
+      background: rgba(13, 17, 23, 0.8);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .debt-table th {
+      background: rgba(239, 68, 68, 0.15);
+      color: #EF4444;
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 15px;
+    }
+    .debt-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid rgba(239, 68, 68, 0.1);
+      font-size: 17px;
+    }
+    .debt-table tr:last-child td {
+      border-bottom: none;
+    }
+    .col-entity { color: #E6EDF3; }
+    .col-amount { color: #EF4444; font-weight: 600; }
+    .col-notes { color: #8B949E; font-size: 14px; }
+    .fiat-box {
+      background: rgba(247, 147, 26, 0.08);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 20px 40px;
+      border-radius: 8px;
+      margin-top: 25px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .fiat-text {
+      color: #E6EDF3;
+      font-size: 20px;
+    }
+    .fiat-text em {
+      color: #F7931A;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Fiat Debt System</div>
+    <div class="section-title">Debt is Ubiquitous</div>
+    <table class="debt-table">
+      <thead>
+        <tr>
+          <th>Entity</th>
+          <th>Debt Amount</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-entity">US Government</td>
+          <td class="col-amount">$40 trillion</td>
+          <td class="col-notes">Far exceeds GDP, no chance of repayment</td>
+        </tr>
+        <tr>
+          <td class="col-entity">US Unfunded Liabilities</td>
+          <td class="col-amount">$200+ trillion</td>
+          <td class="col-notes">Social Security, Medicare, pensions</td>
+        </tr>
+        <tr>
+          <td class="col-entity">Fannie Mae / Freddie Mac</td>
+          <td class="col-amount">$7 trillion</td>
+          <td class="col-notes">Government-backed mortgage lending</td>
+        </tr>
+        <tr>
+          <td class="col-entity">Auto Loans</td>
+          <td class="col-amount">$2 trillion</td>
+          <td class="col-notes">VW, Toyota, Ford as largest issuers</td>
+        </tr>
+        <tr>
+          <td class="col-entity">Student Loans</td>
+          <td class="col-amount">$2 trillion</td>
+          <td class="col-notes">Irrevocable, immune to bankruptcy</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="fiat-box">
+      <div class="fiat-text">In a world without bitcoin, this is how people win — <em>you want to be a borrower</em></div>
+    </div>
+  </div>
+</body>
+</html>

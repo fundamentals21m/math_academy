@@ -37,11 +37,11 @@ export const section185Questions: QuizQuestion[] = [
     question: 'What is an advantage of Newton\'s interpolation formula over Lagrange\'s?',
     options: [
       'It requires fewer data points',
-      'Adding a new point only adds one term',
       'It works only for polynomials',
+      'Adding a new point only adds one term',
       'It requires no arithmetic operations',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Newton\'s formula is incremental: adding a new point $x_{n+1}$ only requires computing one new divided difference and adding one term.',
   },
@@ -110,10 +110,22 @@ export const section185Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Newton\'s forward difference formula, $p(x_0 + sh) = \\sum_{k=0}^{n} \\binom{s}{k} \\Delta^k f_0$, what is $\\binom{s}{k}$?',
     options: [
-      'The ordinary binomial coefficient $\\frac{n!}{k!(n-k)!}$',
-      '$s^k$',
+      'The ordinary binomial coefficient $\\frac{n!}{k!(n-k)!}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The generalized binomial coefficient extends to non-integer $s$: $\\binom{s}{k} = \\frac{s(s-1)\\cdots(s-k+1)}{k!}$.',
+  },
+      '$s^k
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The generalized binomial coefficient extends to non-integer $s$: $\\binom{s}{k} = \\frac{s(s-1)\\cdots(s-k+1)}{k!}$.',
+  },
+      'The generalized binomial coefficient $\\frac{s(s-1)(s-2)\\cdots(s-k+1)}{k!}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The generalized binomial coefficient extends to non-integer $s$: $\\binom{s}{k} = \\frac{s(s-1)\\cdots(s-k+1)}{k!}$.',
+  },
       'The Stirling number of the first kind',
-      'The generalized binomial coefficient $\\frac{s(s-1)(s-2)\\cdots(s-k+1)}{k!}$'
     ],
     correctIndex: 3,
     difficulty: 'medium',

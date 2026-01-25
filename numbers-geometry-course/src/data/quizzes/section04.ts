@@ -9,12 +9,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does $15x + 12y = 4$ have no integer solution?',
     options: [
+      'Because $\\gcd(15, 12) = 3$ does not divide 4',
       'Because 15 and 12 are too large',
       'Because 4 is even',
       'Because there are two unknowns',
-      'Because $\\gcd(15, 12) = 3$ does not divide 4',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Any common divisor of 15 and 12 must also divide $15x + 12y$ for any integers $x, y$. Since $\\gcd(15, 12) = 3$ and 3 does not divide 4, no integer solution exists.',
@@ -79,12 +79,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the Euclidean algorithm, what operation is repeated?',
     options: [
-      'Subtracting the smaller from the larger',
       'Adding the two numbers',
       'Multiplying the two numbers',
-      'Dividing both numbers by 2'
+      'Dividing both numbers by 2',
+      'Subtracting the smaller from the larger',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The Euclidean algorithm repeatedly subtracts the smaller number from the larger, keeping the smaller, until both numbers are equal. That final value is the gcd.',

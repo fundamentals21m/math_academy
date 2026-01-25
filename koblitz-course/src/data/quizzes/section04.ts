@@ -75,10 +75,26 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the multiplicative group $\\mathbb{F}_p^*$ isomorphic to?',
     options: [
-      'The integers mod $p$',
-      'A cyclic group of order $p$',
-      'A cyclic group of order $p+1$',
-      'A cyclic group of order $p-1$'
+      'A cyclic group of order $p-1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{F}_p^* = \\mathbb{F}_p \\setminus \\{0\\}$ has $p-1$ elements and is cyclic.',
+  },
+      'The integers mod $p
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{F}_p^* = \\mathbb{F}_p \\setminus \\{0\\}$ has $p-1$ elements and is cyclic.',
+  },
+      'A cyclic group of order $p
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{F}_p^* = \\mathbb{F}_p \\setminus \\{0\\}$ has $p-1$ elements and is cyclic.',
+  },
+      'A cyclic group of order $p+1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$\\mathbb{F}_p^* = \\mathbb{F}_p \\setminus \\{0\\}$ has $p-1$ elements and is cyclic.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

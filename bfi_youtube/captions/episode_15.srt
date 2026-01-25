@@ -1,0 +1,260 @@
+1
+00:00:00,000 --> 00:00:05,120
+If Bitcoin is going to help the current financial system transcend the problems of previous systems,
+
+2
+00:00:05,120 --> 00:00:10,160
+then institutions that wish to utilize it are going to need to develop optics and metrics that
+
+3
+00:00:10,160 --> 00:00:17,199
+demonstrate success and failure. After 30 years as an actuary, determining investment strategies
+
+4
+00:00:17,199 --> 00:00:22,719
+for pensions, running hedging operations, and explaining P&L performance for guaranteed
+
+5
+00:00:22,719 --> 00:00:28,960
+annuities. My career has followed a trajectory that fits perfectly with the moment we find ourselves
+
+6
+00:00:28,960 --> 00:00:34,960
+in with Bitcoin. The lessons learned from institutional failures applied directly to Bitcoin
+
+7
+00:00:34,960 --> 00:00:40,880
+adoption today. In 2003, a mentor came up with a novel idea about how to manage pensions that
+
+8
+00:00:40,880 --> 00:00:47,520
+would become known as liability-driven investing, or LDI. The message was clear. Investment returns
+
+9
+00:00:47,520 --> 00:00:52,079
+aren't the key driver of a pensions ability to meet its liabilities. Protection against rates
+
+10
+00:00:52,079 --> 00:00:58,240
+dropping is. Liabilities had large exposures to rates, but very small exposures to equities.
+
+11
+00:00:59,039 --> 00:01:04,319
+Equity returns were prioritized because of a confluence of incentives, and those with executives
+
+12
+00:01:04,319 --> 00:01:09,920
+ears were ignorant of the risks we were illustrating. This is the most pertinent parallel to where we
+
+13
+00:01:09,920 --> 00:01:16,719
+are today with Bitcoin. The ruthless and tractability of institutional incentives. LDI became very
+
+14
+00:01:16,719 --> 00:01:22,000
+popular in the UK, but companies that offset liability increases with investment gains ultimately
+
+15
+00:01:22,000 --> 00:01:26,319
+leveraged them via borrowing, causing the very bank of England bailout that demonstrated the
+
+16
+00:01:26,319 --> 00:01:31,920
+system's fragility. The agency problem that caused US corporate pensions to willfully ignore LDI
+
+17
+00:01:31,920 --> 00:01:37,439
+was driven by inadequate reporting. This will be a common theme for all companies regarding Bitcoin.
+
+18
+00:01:38,159 --> 00:01:44,079
+Pension managers only saw asset returns from investment consultants. Everything was in an asset
+
+19
+00:01:44,079 --> 00:01:51,040
+only framework that defined benchmarks, strategies, and the goal of beating the S&P 500.
+
+20
+00:01:51,680 --> 00:01:57,680
+But beating the S&P by 50 basis points when it returns negative 20% doesn't help the pension at all.
+
+21
+00:01:58,319 --> 00:02:04,959
+Without liability integrated reporting, managers couldn't see this truth. A CFO telling the CEO,
+
+22
+00:02:04,959 --> 00:02:11,360
+the pension is doing great when bonds lost 30% was too much career risk. Even if liabilities also
+
+23
+00:02:11,360 --> 00:02:18,400
+dropped 30%. The market doesn't know how to value strategy, MSTR, because they don't know how to
+
+24
+00:02:18,400 --> 00:02:25,599
+associate value with their Bitcoin treasury. Same problem. New asset. The accounting standards FAS87
+
+25
+00:02:25,599 --> 00:02:32,240
+and FAS132 will go down in history as one of the great unintended consequences ever. Companies could
+
+26
+00:02:32,240 --> 00:02:37,680
+assume an 8% return regardless of actual performance, taking a direct credit toward earnings.
+
+27
+00:02:38,479 --> 00:02:44,479
+Bad years were amortized over 15 plus years, masking the true impact of underperformance.
+
+28
+00:02:45,759 --> 00:02:50,800
+CFOs derived bonuses from these earnings and were obstinately unwilling to put them at risk.
+
+29
+00:02:51,680 --> 00:02:57,840
+The tail wagged the dog, equity heavy strategies were chosen to hit 8% regardless of liability
+
+30
+00:02:57,840 --> 00:03:04,080
+exposure. Just as these standards derailed pension reform, the goodwill treatment of Bitcoin
+
+31
+00:03:04,080 --> 00:03:09,520
+dissuaded companies from substantial balance sheet allocations. Until FASB fixed it with
+
+32
+00:03:09,520 --> 00:03:14,319
+mark-to-market treatment. If Bitcoin is going to help the current financial system transcend the
+
+33
+00:03:14,319 --> 00:03:19,039
+problems of previous systems, institutions will need to develop new optics and metrics.
+
+34
+00:03:19,680 --> 00:03:25,280
+Pensions need to measure overall funded status or projected time to termination, not just asset
+
+35
+00:03:25,280 --> 00:03:30,479
+returns. Corporate balance sheets need a redefinition of balance sheet strength, emphasizing future
+
+36
+00:03:31,439 --> 00:03:35,599
+value over present value. Structured credit needs a redefinition of credit quality factoring in
+
+37
+00:03:35,599 --> 00:03:41,759
+Bitcoin's impact on subordination and seniority. Asset managers like BlackRock need to track clients
+
+38
+00:03:41,759 --> 00:03:47,520
+overall allocation to Bitcoin. In the absence of these new optics, any institution's efforts to
+
+39
+00:03:47,520 --> 00:03:52,560
+take advantage of Bitcoin will be temporary, and they will be no more resilient to a calamity
+
+40
+00:03:52,560 --> 00:03:57,120
+than they were before their participation in the space. Let me summarize the key lessons from
+
+41
+00:03:57,120 --> 00:04:03,199
+this entire series. For investors, Bitcoin is the greatest performing asset in history despite
+
+42
+00:04:03,199 --> 00:04:09,360
+drawdowns. Drawdowns are structural and have always recovered to all-time highs. Small allocations
+
+43
+00:04:09,360 --> 00:04:16,720
+cause significant outperformance. Don't be unintentionally short Bitcoin. For fiduciaries,
+
+44
+00:04:17,360 --> 00:04:24,399
+fiduciary liability exposure exists from not offering Bitcoin. Drawdowns are short, returns are
+
+45
+00:04:24,399 --> 00:04:29,600
+enduring. You're more likely to face a lawsuit for lack of returns than drawdown losses.
+
+46
+00:04:30,560 --> 00:04:36,319
+For executives, you don't need to hold Bitcoin on treasury to benefit. Less risky options include
+
+47
+00:04:36,319 --> 00:04:42,720
+NQDC and selling into rising markets. You can lower operating costs without balance sheet risk.
+
+48
+00:04:42,720 --> 00:04:47,680
+The lessons from three decades of institutional finance are clear. Incentives matter more than
+
+49
+00:04:47,680 --> 00:04:53,040
+logic, reporting frameworks determine strategy and accounting standards can derail even the most
+
+50
+00:04:53,040 --> 00:04:58,399
+sensible reforms. Bitcoin represents the opportunity to transcend the systemic failures,
+
+51
+00:04:58,959 --> 00:05:02,720
+but only if institutions develop the right frameworks for measuring success.
+
+52
+00:05:03,600 --> 00:05:09,040
+Without new metrics that capture Bitcoin's unique properties, institutional adoption will remain
+
+53
+00:05:09,040 --> 00:05:14,480
+temporary and fragile. For those who want to dive deeper, I recommend the Bitcoin standard by
+
+54
+00:05:14,480 --> 00:05:20,639
+Syphidy and Amuse, broken money by Lynn Alden. Bitcoin is Venice by Alan Farrington and Sasha
+
+55
+00:05:20,639 --> 00:05:28,240
+Myers and Atlas Shrugged by Ein Rand. For podcasts, check out the reorg, the path to Bitcoin,
+
+56
+00:05:28,240 --> 00:05:34,079
+the block reward, and rock paper Bitcoin. For consulting services through actuarial Bitcoin
+
+57
+00:05:34,079 --> 00:05:42,480
+advisors, reach out on Twitter at Fundamentals21M or email bh1rrpm.me. This concludes Bitcoin for
+
+58
+00:05:42,480 --> 00:05:48,000
+institutions. Thank you for watching this series. I hope it has provided valuable frameworks for
+
+59
+00:05:48,000 --> 00:05:54,319
+thinking about Bitcoin from an institutional perspective. The key takeaways, Bitcoin is fundamentally
+
+60
+00:05:54,319 --> 00:06:00,879
+for individuals, but individuals run institutions. Understanding this tension is critical for success.
+
+61
+00:06:01,839 --> 00:06:06,800
+Institutional resistance is ruthless, but it can be overcome with the right metrics,
+
+62
+00:06:06,800 --> 00:06:12,720
+the right frameworks, and the right individuals driving change. The opportunity is real,
+
+63
+00:06:13,519 --> 00:06:16,480
+but only for those who develop proper institutional frameworks.
+
+64
+00:06:17,279 --> 00:06:21,759
+Subscribe for more content and check out the interactive course at the link in the description.
+
+65
+00:06:22,399 --> 00:06:26,560
+I'm Brian Hirschfield. Until next time.
+

@@ -30,11 +30,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What is another name for the unique prime factorization theorem?',
     options: [
       'The Prime Number Theorem',
+      'Fermat\\\\'s Last Theorem',
       'The Fundamental Theorem of Arithmetic',
-      'Fermat\'s Last Theorem',
-      'The Euclidean Algorithm'
+      'The Euclidean Algorithm',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Unique prime factorization is also called the Fundamental Theorem of Arithmetic because it is the foundation of number theory — every natural number factors into primes in exactly one way.',
@@ -124,12 +124,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does unique prime factorization help prove $\\sqrt{2}$ is irrational?',
     options: [
-      'It shows that in $m^2 = 2n^2$, the prime 2 appears an odd number of times on one side',
       'It shows 2 is prime',
+      'It shows that in $m^2 = 2n^2$, the prime 2 appears an odd number of times on one side',
       'It shows all square roots are irrational',
       'It has nothing to do with irrationality',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'In $m^2$, every prime appears an even number of times. In $2n^2$, the prime 2 appears an odd number of times (the evens from $n^2$ plus one more). This contradicts unique factorization, so no such $m, n$ exist.',
@@ -139,10 +139,30 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is irrational by the unique prime factorization argument?',
     options: [
-      '$\\sqrt{4}$',
-      '$\\sqrt{9}$',
-      '$\\sqrt{6}$',
-      '$\\sqrt{25}$',
+      '$\\sqrt{4}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      '$\\sqrt{4} = 2$, $\\sqrt{9} = 3$, and $\\sqrt{25} = 5$ are all rational (perfect squares). But $6 = 2 \\times 3$ is not a perfect square, so $\\sqrt{6}$ is irrational.',
+  },
+      '$\\sqrt{6}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      '$\\sqrt{4} = 2$, $\\sqrt{9} = 3$, and $\\sqrt{25} = 5$ are all rational (perfect squares). But $6 = 2 \\times 3$ is not a perfect square, so $\\sqrt{6}$ is irrational.',
+  },
+      '$\\sqrt{9}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      '$\\sqrt{4} = 2$, $\\sqrt{9} = 3$, and $\\sqrt{25} = 5$ are all rational (perfect squares). But $6 = 2 \\times 3$ is not a perfect square, so $\\sqrt{6}$ is irrational.',
+  },
+      '$\\sqrt{25}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation:
+      '$\\sqrt{4} = 2$, $\\sqrt{9} = 3$, and $\\sqrt{25} = 5$ are all rational (perfect squares). But $6 = 2 \\times 3$ is not a perfect square, so $\\sqrt{6}$ is irrational.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -154,12 +174,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is unique prime factorization called "fundamental"?',
     options: [
-      'Because it is the foundation upon which number theory is built',
       'Because it was the first theorem ever proved',
       'Because it is very easy to prove',
       'Because it only applies to fundamental particles',
+      'Because it is the foundation upon which number theory is built',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Unique prime factorization is called the Fundamental Theorem of Arithmetic because it establishes that primes are the basic building blocks of all natural numbers — the foundation of number theory.',

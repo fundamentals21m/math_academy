@@ -25,11 +25,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'What is special about the Lo Shu magic square from ancient China?',
     options: [
       'All numbers are prime',
-      'All rows, columns, and diagonals sum to the same value',
       'It encodes the value of π',
       'It contains the first nine square numbers',
+      'All rows, columns, and diagonals sum to the same value',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The Lo Shu magic square has the property that all rows, columns, and both diagonals sum to 15. According to legend, it was brought to humankind on the back of a tortoise from the River Lo.',
@@ -39,12 +39,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who was the first mathematician to give systematic rules for working with zero and negative numbers?',
     options: [
-      'Aryabhata',
       'Brahmagupta',
+      'Aryabhata',
       'Bhaskara',
       'Diophantus',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Brahmagupta (b. 598 AD) was the first to give a systematic presentation of rules for working with zero and negative numbers in his Brahmasphuita Siddhanta, including rules for signs in division.',
@@ -70,11 +70,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Which Indian mathematician gave trigonometry its modern form by defining sin A = (chord 2A)/2?',
     options: [
       'Mahavira',
-      'Brahmagupta',
       'Aryabhata',
-      'Bhaskara'
+      'Brahmagupta',
+      'Bhaskara',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Aryabhata (b. 476 AD) was one of the first to use the sine function instead of chords, defining sin A = (chord 2A)/2. This simplified the addition formulas and gave trigonometry its modern form.',
@@ -85,11 +85,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'What unique feature distinguished Indian mathematical texts from Greek ones?',
     options: [
       'They were written in hieroglyphics',
+      'They were written in verse',
       'They contained no proofs',
       'They used Roman numerals',
-      'They were written in verse'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Unlike the ancient Greeks, Indian mathematicians wrote their mathematics books in verse! For example, Bhaskara posed algebra problems as poetic riddles about bees, camels, and lotus flowers.',
@@ -99,12 +99,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Bhaskara claim was the value of a/0 (a number divided by zero)?',
     options: [
-      'infinity',
       '1',
       'undefined',
-      '0'
+      'infinity',
+      '0',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Bhaskara (1114–1185) declared that a/0 = ∞ (infinity). While this is not quite correct by modern standards, it shows the Indian mathematicians were grappling with the concept of division by zero.',
@@ -114,12 +114,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Chu Shih Chieh\'s "Precious Mirror of the Four Elements" (1303) contains what mathematical object, 350 years before Pascal?',
     options: [
-      'Pascal\\'s Triangle',
       'The quadratic formula',
+      'Pascal\\\'s Triangle',
       'The Fibonacci sequence',
       'The golden ratio',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Chu Shih Chieh gave Pascal\'s Triangle in his 1303 work, about 350 years before Pascal rediscovered it in 1653. The triangle was also known in India.',

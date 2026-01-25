@@ -6,10 +6,26 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A = \\{1, 2, 3\\}$ and $B = \\{2, 3, 5\\}$, what is $A \\cap B$?',
     options: [
-      '$\\{1, 2, 3, 5\\}$',
-      '$\\{2, 3\\}$',
-      '$\\{1, 5\\}$',
-      '$\\{2\\}$'
+      '$\\{1, 2, 3, 5\\}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$A \\cap B$ is the intersection—elements in both sets. Both $A$ and $B$ contain 2 and 3, so $A \\cap B = \\{2, 3\\}$.',
+  },
+      '$\\{1, 5\\}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$A \\cap B$ is the intersection—elements in both sets. Both $A$ and $B$ contain 2 and 3, so $A \\cap B = \\{2, 3\\}$.',
+  },
+      '$\\{2\\}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$A \\cap B$ is the intersection—elements in both sets. Both $A$ and $B$ contain 2 and 3, so $A \\cap B = \\{2, 3\\}$.',
+  },
+      '$\\{2, 3\\}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$A \\cap B$ is the intersection—elements in both sets. Both $A$ and $B$ contain 2 and 3, so $A \\cap B = \\{2, 3\\}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

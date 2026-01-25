@@ -21,9 +21,9 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What is an FX swap?',
     options: [
       'A direct exchange of currencies',
-      'A derivative exchanging one currency\'s performance for another\'s over time',
+      'A derivative exchanging one currency\\\'s performance for another\\\'s over time',
       'A type of cryptocurrency',
-      'A government bond'
+      'A government bond',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -34,12 +34,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens when you hedge Bitcoin against the dollar (sell BTC exposure)?',
     options: [
+      'You receive a premium because you\\\'re giving up expected positive returns',
       'You pay a premium for protection',
       'Nothing—hedging Bitcoin is impossible',
-      'You receive a premium because you\'re giving up expected positive returns',
-      'You automatically lose money'
+      'You automatically lose money',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Unlike hedging weak currencies, selling Bitcoin exposure means relinquishing returns that, on average, remain positive—so you get paid a premium for hedging.',
   },

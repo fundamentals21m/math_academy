@@ -6,12 +6,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An automorphism of a group $G$ is:',
     options: [
+      'An isomorphism from $G$ to itself',
       'Any homomorphism from $G$ to itself',
       'Any bijection from $G$ to itself',
       'A homomorphism with trivial kernel',
-      'An isomorphism from $G$ to itself',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'An automorphism is an isomorphism $\\phi: G \\to G$.',
   },
@@ -50,10 +50,26 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The group of all automorphisms of $G$ is denoted:',
     options: [
-      '$\\text{Aut}(G)$',
-      '$\\text{Hom}(G)$',
-      '$\\text{End}(G)$',
-      '$\\text{Iso}(G)$'
+      '$\\text{Hom}(G)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\text{Aut}(G)$ is the group of automorphisms under composition.',
+  },
+      '$\\text{Aut}(G)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\text{Aut}(G)$ is the group of automorphisms under composition.',
+  },
+      '$\\text{End}(G)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\text{Aut}(G)$ is the group of automorphisms under composition.',
+  },
+      '$\\text{Iso}(G)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$\\text{Aut}(G)$ is the group of automorphisms under composition.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -64,10 +80,26 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The inner automorphism group $\\text{Inn}(G)$ is isomorphic to:',
     options: [
-      '$G$',
-      '$G/Z(G)$',
-      '$Z(G)$',
-      '$\\text{Aut}(G)/G$'
+      '$G
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The map $g \\mapsto \\phi_g$ has kernel $Z(G)$, so $\\text{Inn}(G) \\cong G/Z(G)$.',
+  },
+      '$Z(G)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The map $g \\mapsto \\phi_g$ has kernel $Z(G)$, so $\\text{Inn}(G) \\cong G/Z(G)$.',
+  },
+      '$G/Z(G)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The map $g \\mapsto \\phi_g$ has kernel $Z(G)$, so $\\text{Inn}(G) \\cong G/Z(G)$.',
+  },
+      '$\\text{Aut}(G)/G
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The map $g \\mapsto \\phi_g$ has kernel $Z(G)$, so $\\text{Inn}(G) \\cong G/Z(G)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

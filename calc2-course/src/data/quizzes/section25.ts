@@ -6,10 +6,26 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The identity $A(\\text{cof} \\, A)^T = (\\det A) \\cdot I$ implies that when $\\det A \\neq 0$:',
     options: [
-      '$A^{-1} = \\frac{1}{\\det A}(\\text{cof} \\, A)^T$',
-      '$A^{-1} = (\\text{cof} \\, A)^T$',
-      '$A^{-1} = (\\det A)(\\text{cof} \\, A)^T$',
-      '$A^{-1} = (\\text{cof} \\, A)$'
+      '$A^{-1} = (\\text{cof} \\, A)^T
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'From $A(\\text{cof} \\, A)^T = (\\det A) I$, dividing by $\\det A$ gives $A^{-1} = \\frac{1}{\\det A}(\\text{cof} \\, A)^T$.',
+  },
+      '$A^{-1} = (\\det A)(\\text{cof} \\, A)^T
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'From $A(\\text{cof} \\, A)^T = (\\det A) I$, dividing by $\\det A$ gives $A^{-1} = \\frac{1}{\\det A}(\\text{cof} \\, A)^T$.',
+  },
+      '$A^{-1} = (\\text{cof} \\, A)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'From $A(\\text{cof} \\, A)^T = (\\det A) I$, dividing by $\\det A$ gives $A^{-1} = \\frac{1}{\\det A}(\\text{cof} \\, A)^T$.',
+  },
+      '$A^{-1} = \\frac{1}{\\det A}(\\text{cof} \\, A)^T
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'From $A(\\text{cof} \\, A)^T = (\\det A) I$, dividing by $\\det A$ gives $A^{-1} = \\frac{1}{\\det A}(\\text{cof} \\, A)^T$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -23,7 +39,7 @@ export const section25Questions: QuizQuestion[] = [
       'Transpose',
       'Adjugate (classical adjoint)',
       'Inverse',
-      'Conjugate'
+      'Conjugate',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -66,10 +82,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'More efficient than Gaussian elimination',
       'About as efficient as Gaussian elimination',
-      'Less efficient than Gaussian elimination',
       'The only valid method',
+      'Less efficient than Gaussian elimination',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: "Cramer's rule requires computing $n+1$ determinants of size $n$, making it far slower than Gaussian elimination for large $n$. It is mainly useful for theoretical analysis or small systems.",
   },
@@ -78,10 +94,26 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a $2 \\times 2$ system $ax + by = e$, $cx + dy = f$ with $ad - bc \\neq 0$, the solution for $x$ is:',
     options: [
-      '$\\frac{ed - bf}{ad - bc}$',
-      '$\\frac{af - ce}{ad - bc}$',
-      '$\\frac{ae - cf}{ad - bc}$',
-      '$\\frac{ad - bc}{ed - bf}$'
+      '$\\frac{af - ce}{ad - bc}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: "By Cramer's rule, $x = \\frac{\\det \\begin{bmatrix} e & b \\\\ f & d \\end{bmatrix}}{\\det \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}} = \\frac{ed - bf}{ad - bc}$.",
+  },
+      '$\\frac{ae - cf}{ad - bc}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: "By Cramer's rule, $x = \\frac{\\det \\begin{bmatrix} e & b \\\\ f & d \\end{bmatrix}}{\\det \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}} = \\frac{ed - bf}{ad - bc}$.",
+  },
+      '$\\frac{ad - bc}{ed - bf}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: "By Cramer's rule, $x = \\frac{\\det \\begin{bmatrix} e & b \\\\ f & d \\end{bmatrix}}{\\det \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}} = \\frac{ed - bf}{ad - bc}$.",
+  },
+      '$\\frac{ed - bf}{ad - bc}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: "By Cramer's rule, $x = \\frac{\\det \\begin{bmatrix} e & b \\\\ f & d \\end{bmatrix}}{\\det \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}} = \\frac{ed - bf}{ad - bc}$.",
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

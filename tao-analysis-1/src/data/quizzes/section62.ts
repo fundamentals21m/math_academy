@@ -75,10 +75,26 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ is Riemann integrable on $[a,b]$ and $|f(x)| \\leq M$ for all $x \\in [a,b]$, then:',
     options: [
-      '$\\left| \\int_a^b f(x) \\, dx \\right| \\leq M$',
-      '$\\left| \\int_a^b f(x) \\, dx \\right| = M(b-a)$',
-      '$\\int_a^b f(x) \\, dx \\leq M$',
-      '$\\left| \\int_a^b f(x) \\, dx \\right| \\leq M(b-a)$'
+      '$\\left| \\int_a^b f(x) \\, dx \\right| \\leq M
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'This is a consequence of the triangle inequality for integrals: $|\\int_a^b f| \\leq \\int_a^b |f| \\leq M(b-a)$.',
+  },
+      '$\\left| \\int_a^b f(x) \\, dx \\right| \\leq M(b-a)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'This is a consequence of the triangle inequality for integrals: $|\\int_a^b f| \\leq \\int_a^b |f| \\leq M(b-a)$.',
+  },
+      '$\\left| \\int_a^b f(x) \\, dx \\right| = M(b-a)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'This is a consequence of the triangle inequality for integrals: $|\\int_a^b f| \\leq \\int_a^b |f| \\leq M(b-a)$.',
+  },
+      '$\\int_a^b f(x) \\, dx \\leq M
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'This is a consequence of the triangle inequality for integrals: $|\\int_a^b f| \\leq \\int_a^b |f| \\leq M(b-a)$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

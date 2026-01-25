@@ -30,8 +30,12 @@ export const section78Questions: QuizQuestion[] = [
     options: [
       'They are all zero',
       'They are orthogonal',
+      'They span $\\mathbb{R}^n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Dependent: at least one is a linear combo of the others.',
+  },
       'One can be written as a linear combination of the others',
-      'They span $\\mathbb{R}^n$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -42,12 +46,12 @@ export const section78Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A basis for a vector space is:',
     options: [
+      'A linearly independent spanning set',
       'Any spanning set',
       'Any linearly independent set',
       'The zero vector',
-      'A linearly independent spanning set'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Basis = linearly independent AND spans the space.',
   },

@@ -6,10 +6,26 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Eisenstein criterion applies to $f(x) = a_nx^n + \\cdots + a_0 \\in \\mathbb{Z}[x]$ when there exists a prime $p$ such that:',
     options: [
-      '$p | a_n$, $p | a_i$ for $i < n$, $p^2 \\nmid a_0$',
-      '$p^2 | a_0$',
-      '$p | a_i$ for all $i$',
-      '$p \\nmid a_n$, $p | a_i$ for $i < n$, $p^2 \\nmid a_0$'
+      '$p | a_n$, $p | a_i$ for $i < n$, $p^2 \\nmid a_0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Eisenstein requires: $p \\nmid a_n$ (leading coefficient), $p | a_i$ for all $i < n$, and $p^2 \\nmid a_0$ (constant term). Then $f$ is irreducible over $\\mathbb{Q}$.',
+  },
+      '$p^2 | a_0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Eisenstein requires: $p \\nmid a_n$ (leading coefficient), $p | a_i$ for all $i < n$, and $p^2 \\nmid a_0$ (constant term). Then $f$ is irreducible over $\\mathbb{Q}$.',
+  },
+      '$p \\nmid a_n$, $p | a_i$ for $i < n$, $p^2 \\nmid a_0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Eisenstein requires: $p \\nmid a_n$ (leading coefficient), $p | a_i$ for all $i < n$, and $p^2 \\nmid a_0$ (constant term). Then $f$ is irreducible over $\\mathbb{Q}$.',
+  },
+      '$p | a_i$ for all $i
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Eisenstein requires: $p \\nmid a_n$ (leading coefficient), $p | a_i$ for all $i < n$, and $p^2 \\nmid a_0$ (constant term). Then $f$ is irreducible over $\\mathbb{Q}$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

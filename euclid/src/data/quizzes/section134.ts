@@ -22,10 +22,10 @@ export const section134Questions: QuizQuestion[] = [
     options: [
       'Adding to both terms',
       'Ratios cannot be simplified',
+      'Dividing both terms by the same factor (canceling common factors)',
       'Subtracting from both terms',
-      'Dividing both terms by the same factor (canceling common factors)'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Since A:B = mA:mB, reversing this gives mA:mB = A:B. Common factors can be canceled.',
   },
@@ -34,12 +34,12 @@ export const section134Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which ratios are all equal by V.15?',
     options: [
-      '2:3, 4:6, 6:9',
       '2:3, 4:5, 6:7',
       '2:3, 3:4, 4:5',
-      '1:2, 2:3, 3:4'
+      '1:2, 2:3, 3:4',
+      '2:3, 4:6, 6:9',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '2:3 = 4:6 = 6:9 because 4:6 = 2(2:3) and 6:9 = 3(2:3). All are the same ratio scaled.',
   },

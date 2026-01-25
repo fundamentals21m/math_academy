@@ -9,7 +9,7 @@ export const section07Questions: QuizQuestion[] = [
       'Invertible modulo 26',
       'Orthogonal',
       'Symmetric',
-      'Diagonal'
+      'Diagonal',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -31,10 +31,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'Uses a longer key',
       'Is computationally faster',
-      'Requires no key exchange',
       'Encrypts multiple letters at once, hiding single-letter frequencies',
+      'Requires no key exchange',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Hill cipher encrypts letter blocks together, obscuring individual letter frequencies.',
   },
@@ -45,10 +45,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'Brute force only',
       'Frequency analysis of single letters',
+      'Dictionary attack',
       'Known-plaintext attack using linear algebra',
-      'Dictionary attack'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'With enough plaintext-ciphertext pairs, the encryption matrix can be recovered using linear algebra.',
   },

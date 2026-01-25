@@ -102,10 +102,26 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $T: V \\to W$ is linear, the transpose (dual) map $T^*: W^* \\to V^*$ is defined by:',
     options: [
-      '$T^*(f) = T \\circ f$',
-      '$T^*(f) = f \\circ T$',
-      '$T^* = T$',
-      '$T^*(f) = f(T)$'
+      '$T^*(f) = T \\circ f
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The dual map $T^*: W^* \\to V^*$ is defined by $(T^*f)(v) = f(T(v))$, or equivalently $T^*(f) = f \\circ T$. Note the reversal of direction.',
+  },
+      '$T^* = T
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The dual map $T^*: W^* \\to V^*$ is defined by $(T^*f)(v) = f(T(v))$, or equivalently $T^*(f) = f \\circ T$. Note the reversal of direction.',
+  },
+      '$T^*(f) = f(T)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The dual map $T^*: W^* \\to V^*$ is defined by $(T^*f)(v) = f(T(v))$, or equivalently $T^*(f) = f \\circ T$. Note the reversal of direction.',
+  },
+      '$T^*(f) = f \\circ T
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The dual map $T^*: W^* \\to V^*$ is defined by $(T^*f)(v) = f(T(v))$, or equivalently $T^*(f) = f \\circ T$. Note the reversal of direction.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',

@@ -54,12 +54,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $m < n$ (fewer equations than unknowns), a homogeneous system $AX = 0$:',
     options: [
+      'Always has nontrivial solutions',
       'Has only the trivial solution',
       'Has no solutions',
-      'Always has nontrivial solutions',
-      'May or may not have nontrivial solutions'
+      'May or may not have nontrivial solutions',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'If $m < n$, then rank$(A) \\leq m < n$, so nullity = $n$ - rank $\\geq n - m > 0$. This means there are nontrivial solutions.',
   },

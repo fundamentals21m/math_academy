@@ -8,10 +8,10 @@ export const section80Questions: QuizQuestion[] = [
     options: [
       'Extra nonce space',
       'Larger headers',
-      'Multiple signatures',
       'General purpose nVersion bits',
+      'Multiple signatures',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'BIP-320 allows miners to use upper version bits for mining optimization.',
   },
@@ -20,12 +20,12 @@ export const section80Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'BIP-320 legitimizes which mining technique?',
     options: [
-      'Covert ASICBoost',
       'Overt ASICBoost',
+      'Covert ASICBoost',
       'Selfish mining',
-      'Pool hopping'
+      'Pool hopping',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'BIP-320 formalizes overt ASICBoost using version bit rolling.',
   },

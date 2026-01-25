@@ -20,12 +20,12 @@ export const section113Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the measure of each interior angle of a regular pentagon?',
     options: [
-      '108°',
       '90°',
       '72°',
-      '120°'
+      '120°',
+      '108°',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A regular pentagon has interior angles of (5-2)×180°/5 = 108° each.',
   },
@@ -37,7 +37,7 @@ export const section113Questions: QuizQuestion[] = [
       '√2',
       'φ (golden ratio, ≈1.618)',
       '2',
-      'π/2'
+      'π/2',
     ],
     correctIndex: 1,
     difficulty: 'hard',

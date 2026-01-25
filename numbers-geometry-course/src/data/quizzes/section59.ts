@@ -10,11 +10,11 @@ export const section59Questions: QuizQuestion[] = [
     question: 'What is a Gaussian integer?',
     options: [
       'Any complex number',
-      'a + bi where a, b are integers',
       'a + bi where a, b are rational',
       'Any real number',
+      'a + bi where a, b are integers',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A Gaussian integer is a complex number a + bi where both a and b are ordinary integers.',
@@ -54,12 +54,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is N(z) equal to?',
     options: [
+      'z · z̄',
       'z²',
       '|z|',
       '|z̄|',
-      'z · z̄',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'N(z) = z · z̄ = |z|². For z = a + bi, this equals a² + b².',
@@ -68,7 +68,12 @@ export const section59Questions: QuizQuestion[] = [
     id: 5,
     type: 'multiple-choice',
     question: 'What is (1 + i)(1 - i)?',
-    options: ['0', '1', '2', '2i'],
+    options: [
+      '0',
+      '1',
+      '2',
+      '2i',
+    ],
     correctIndex: 2,
     difficulty: 'easy',
     explanation:
@@ -81,10 +86,10 @@ export const section59Questions: QuizQuestion[] = [
     options: [
       'N(α) = N(β)',
       'Nothing in general',
-      'N(α) divides N(β)',
       'N(α) > N(β)',
+      'N(α) divides N(β)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'If α | β, then β = αγ, so N(β) = N(α)N(γ), meaning N(α) | N(β).',
@@ -94,12 +99,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is i⁻¹ in Z[i]?',
     options: [
-      '-i',
       '1',
+      '-i',
       '-1',
       'i',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'i⁻¹ = 1/i = i/i² = i/(-1) = -i. Check: i · (-i) = -i² = 1 ✓',

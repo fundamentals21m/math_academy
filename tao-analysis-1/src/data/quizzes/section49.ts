@@ -83,7 +83,7 @@ export const section49Questions: QuizQuestion[] = [
       '$f$ has a local maximum',
       '$f$ has a local minimum',
       '$f$ is discontinuous',
-      '$f\'(x_0) = 0$ or $f\'(x_0)$ does not exist'
+      '$f\\\'(x_0) = 0$ or $f\\\'(x_0)$ does not exist',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -104,11 +104,11 @@ export const section49Questions: QuizQuestion[] = [
     question: 'The second derivative test states that if $f\'(x_0) = 0$ and $f\'\'(x_0) > 0$, then:',
     options: [
       '$x_0$ is a local maximum',
-      '$x_0$ is a local minimum',
       '$x_0$ is an inflection point',
+      '$x_0$ is a local minimum',
       'The test is inconclusive',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'If $f\'(x_0) = 0$ and $f\'\'(x_0) > 0$, the function is concave up at $x_0$, indicating a local minimum. If $f\'\'(x_0) < 0$, it would be a local maximum.',
   },

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .scenario-box {
+      background: rgba(247, 147, 26, 0.08);
+      border: 1px solid rgba(247, 147, 26, 0.3);
+      padding: 30px 50px;
+      border-radius: 12px;
+      margin: 30px auto;
+      max-width: 800px;
+    }
+    .scenario-title {
+      color: #F7931A;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .scenario-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .scenario-item {
+      text-align: center;
+    }
+    .scenario-value {
+      color: #E6EDF3;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .scenario-label {
+      color: #8B949E;
+      font-size: 16px;
+    }
+    .scenario-arrow {
+      color: #F7931A;
+      font-size: 28px;
+    }
+    .problem-text {
+      color: #E6EDF3;
+      font-size: 22px;
+      margin-top: 20px;
+    }
+    .opportunity-box {
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 30px 50px;
+      border-radius: 12px;
+      margin: 40px auto;
+      max-width: 900px;
+    }
+    .opportunity-title {
+      color: #0891B2;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .opportunity-list {
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .opportunity-item {
+      color: #E6EDF3;
+      font-size: 20px;
+      padding: 10px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .opportunity-item::before {
+      content: "✓";
+      color: #0891B2;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Hedging Challenge</div>
+    <div class="section-title">Companies Must Hedge Their Exposure</div>
+    <div class="scenario-box">
+      <div class="scenario-title">The Problem</div>
+      <div class="scenario-flow">
+        <div class="scenario-item">
+          <div class="scenario-value">$1M</div>
+          <div class="scenario-label">Executive defers</div>
+        </div>
+        <div class="scenario-arrow">→</div>
+        <div class="scenario-item">
+          <div class="scenario-value">BTC 3x</div>
+          <div class="scenario-label">Bitcoin triples</div>
+        </div>
+        <div class="scenario-arrow">→</div>
+        <div class="scenario-item">
+          <div class="scenario-value">$3M</div>
+          <div class="scenario-label">Company owes</div>
+        </div>
+      </div>
+      <div class="problem-text">The company needs to have actually bought the bitcoin to meet this obligation.</div>
+    </div>
+    <div class="opportunity-box">
+      <div class="opportunity-title">Golden Opportunity: A Better ETF</div>
+      <div class="opportunity-list">
+        <div class="opportunity-item">Optimized exclusively for hedging bitcoin exposure</div>
+        <div class="opportunity-item">Delivers price exposure as closely as possible</div>
+        <div class="opportunity-item">Reduces custodial risk to an absolute minimum</div>
+        <div class="opportunity-item">Complete transparency with ongoing proof of digital signatures</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

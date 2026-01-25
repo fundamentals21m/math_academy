@@ -9,12 +9,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the principle of descent (downward induction) state?',
     options: [
+      'Any descending sequence of natural numbers has a least member',
       'Every natural number can be reached by counting from 1',
       'Every natural number has a successor',
-      'Any descending sequence of natural numbers has a least member',
       'The sum of natural numbers is always finite',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Descent says that any descending sequence of natural numbers must eventually stop—it has a least member. This is because you cannot go down forever starting from a natural number.',
@@ -25,11 +25,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What are the two steps required in a proof by (ascent) induction?',
     options: [
       'Existence step and uniqueness step',
-      'Base step and induction step',
       'Forward step and backward step',
+      'Base step and induction step',
       'Initial step and final step',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Proof by induction requires: (1) a base step showing S(1) is true, and (2) an induction step showing S(i) implies S(i+1). Together, these prove S(n) for all natural numbers.',
@@ -39,12 +39,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following results was proved using descent?',
     options: [
-      'Unique prime factorization',
       'The formula for the sum of first n natural numbers',
       'The geometric series formula',
+      'Unique prime factorization',
       'The sum of cubes formula',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Unique prime factorization is proved by descent: if a counterexample exists, there is a least one. The sum formulas are typically proved by ascent (upward) induction.',
@@ -100,11 +100,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'In the induction step, we assume $S(i)$ is true and prove:',
     options: [
       '$S(1)$ is true',
+      '$S(i+1)$ is true',
       '$S(i-1)$ is true',
       '$S(n)$ is true for all n',
-      '$S(i+1)$ is true'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The induction step assumes S(i) is true (the "induction hypothesis") and uses this to prove S(i+1) is true. Combined with the base step, this proves S(n) for all n.',
@@ -114,10 +114,30 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the formula for the geometric series $1 + r + r^2 + \\cdots + r^n$?',
     options: [
-      '$\\frac{1 - r^{n+1}}{1 - r}$',
-      '$\\frac{r^n - 1}{r - 1}$',
-      '$\\frac{r^{n+1}}{1 + r}$',
-      '$nr$'
+      '$\\frac{r^n - 1}{r - 1}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation:
+      'The geometric series $1 + r + r^2 + \\cdots + r^n = \\frac{1 - r^{n+1}}{1 - r}$. This can be proved by induction or derived by multiplying both sides by $(1-r)$.',
+  },
+      '$\\frac{1 - r^{n+1}}{1 - r}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'The geometric series $1 + r + r^2 + \\cdots + r^n = \\frac{1 - r^{n+1}}{1 - r}$. This can be proved by induction or derived by multiplying both sides by $(1-r)$.',
+  },
+      '$\\frac{r^{n+1}}{1 + r}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'The geometric series $1 + r + r^2 + \\cdots + r^n = \\frac{1 - r^{n+1}}{1 - r}$. This can be proved by induction or derived by multiplying both sides by $(1-r)$.',
+  },
+      '$nr
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation:
+      'The geometric series $1 + r + r^2 + \\cdots + r^n = \\frac{1 - r^{n+1}}{1 - r}$. This can be proved by induction or derived by multiplying both sides by $(1-r)$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -131,10 +151,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'It was discovered by Euclid',
       'It only works for prime n',
-      'It connects the sum of cubes to the square of the sum',
       'It requires calculus to prove',
+      'It connects the sum of cubes to the square of the sum',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The remarkable fact is that $1^3 + 2^3 + \\cdots + n^3 = \\left(\\frac{n(n+1)}{2}\\right)^2 = (1 + 2 + \\cdots + n)^2$. The sum of cubes equals the square of the sum!',

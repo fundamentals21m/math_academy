@@ -6,12 +6,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cantor\'s diagonal argument proves that:',
     options: [
-      'The real numbers are uncountable',
       'The integers are countable',
+      'The real numbers are uncountable',
       'The rationals are countable',
       'Every infinite set is countable',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Cantor\'s diagonal argument shows that no enumeration of real numbers can be complete. Given any list, we can construct a real number not in the list, proving $\\mathbb{R}$ is uncountable.',
   },
@@ -42,10 +42,26 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The interval $(0, 1)$ has the same cardinality as:',
     options: [
-      '$\\mathbb{R}$',
-      '$\\mathbb{N}$',
-      '$\\mathbb{Q}$',
-      '$\\{0, 1\\}$'
+      '$\\mathbb{N}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The function $f(x) = \\tan(\\pi x - \\pi/2)$ is a bijection from $(0,1)$ to $\\mathbb{R}$. So $|(0,1)| = |\\mathbb{R}|$, both uncountable with cardinality $\\mathfrak{c}$.',
+  },
+      '$\\mathbb{Q}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The function $f(x) = \\tan(\\pi x - \\pi/2)$ is a bijection from $(0,1)$ to $\\mathbb{R}$. So $|(0,1)| = |\\mathbb{R}|$, both uncountable with cardinality $\\mathfrak{c}$.',
+  },
+      '$\\{0, 1\\}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The function $f(x) = \\tan(\\pi x - \\pi/2)$ is a bijection from $(0,1)$ to $\\mathbb{R}$. So $|(0,1)| = |\\mathbb{R}|$, both uncountable with cardinality $\\mathfrak{c}$.',
+  },
+      '$\\mathbb{R}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The function $f(x) = \\tan(\\pi x - \\pi/2)$ is a bijection from $(0,1)$ to $\\mathbb{R}$. So $|(0,1)| = |\\mathbb{R}|$, both uncountable with cardinality $\\mathfrak{c}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -59,7 +75,7 @@ export const section35Questions: QuizQuestion[] = [
       'Countably infinite',
       'Finite',
       'Uncountable with cardinality $|\\mathbb{R}|
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: '$|\\mathcal{P}(\\mathbb{N})| = 2^{\\aleph_0} = \\mathfrak{c} = |\\mathbb{R}|$. Each subset corresponds to a binary sequence, which can be mapped to a real in $[0,1]$.',
   },
@@ -109,11 +125,11 @@ export const section35Questions: QuizQuestion[] = [
     question: 'The set of all infinite binary sequences $\\{0, 1\\}^{\\mathbb{N}}$ is:',
     options: [
       'Empty',
-      'Uncountable',
       'Countably infinite',
       'Finite',
+      'Uncountable',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$\\{0,1\\}^{\\mathbb{N}}$ is in bijection with $\\mathcal{P}(\\mathbb{N})$ (via characteristic functions) and also with $[0,1]$ (via binary expansions). All have cardinality $\\mathfrak{c}$, which is uncountable.',
   },

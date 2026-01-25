@@ -76,10 +76,22 @@ export const section117Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A bounded function $f$ is integrable on $Q$ if and only if:',
     options: [
-      '$\\underline{I}(f) = \\overline{I}(f)$',
-      '$\\underline{I}(f) < \\overline{I}(f)$',
+      '$\\underline{I}(f) < \\overline{I}(f)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A function is integrable iff its lower and upper integrals are equal: $\\underline{I}(f) = \\overline{I}(f)$. When equal, this common value is the double integral.',
+  },
+      '$\\underline{I}(f) = \\overline{I}(f)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A function is integrable iff its lower and upper integrals are equal: $\\underline{I}(f) = \\overline{I}(f)$. When equal, this common value is the double integral.',
+  },
       '$f$ is continuous',
-      '$\\overline{I}(f) = 0$'
+      '$\\overline{I}(f) = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A function is integrable iff its lower and upper integrals are equal: $\\underline{I}(f) = \\overline{I}(f)$. When equal, this common value is the double integral.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -90,12 +102,12 @@ export const section117Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'This definition of the double integral is analogous to:',
     options: [
-      'The Riemann sum definition in 1D',
       'The Darboux definition in 1D using upper and lower sums',
+      'The Riemann sum definition in 1D',
       'The Lebesgue integral',
-      'The Newton-Leibniz formula'
+      'The Newton-Leibniz formula',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The definition using upper and lower integrals (via step functions) parallels the Darboux approach to the one-dimensional Riemann integral. Integrability means the upper and lower integrals coincide.',
   },

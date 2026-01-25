@@ -24,12 +24,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the Peano axioms, the successor function $S$ satisfies $S(n) = S(m) \\implies n = m$. This property is called:',
     options: [
+      'Injectivity (one-to-one)',
       'Surjectivity',
       'Associativity',
       'Commutativity',
-      'Injectivity (one-to-one)'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'This property states that distinct natural numbers have distinct successors. A function with this property is called injective or one-to-one.',
   },

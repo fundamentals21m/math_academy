@@ -32,10 +32,26 @@ export const section152Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a finite sample space $S = \\{a_1, a_2, \\ldots, a_n\\}$ with equally likely outcomes, the probability of a subset $A$ with $k$ elements is:',
     options: [
-      '$k$',
-      '$n/k$',
-      '$k/n$',
-      '$1/k$'
+      '$k
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'With equally likely outcomes, each point has probability $1/n$. A subset $A$ with $k$ elements has probability $P(A) = k/n = |A|/|S|$.',
+  },
+      '$k/n
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'With equally likely outcomes, each point has probability $1/n$. A subset $A$ with $k$ elements has probability $P(A) = k/n = |A|/|S|$.',
+  },
+      '$n/k
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'With equally likely outcomes, each point has probability $1/n$. A subset $A$ with $k$ elements has probability $P(A) = k/n = |A|/|S|$.',
+  },
+      '$1/k
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'With equally likely outcomes, each point has probability $1/n$. A subset $A$ with $k$ elements has probability $P(A) = k/n = |A|/|S|$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -48,10 +64,10 @@ export const section152Questions: QuizQuestion[] = [
     options: [
       'A random variable',
       'A distribution function',
+      'A probability space',
       'An expectation',
-      'A probability space'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The complete description of a probabilistic model is the probability space $(S, \\mathscr{B}, P)$.',
   },
@@ -90,10 +106,26 @@ export const section152Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $P(a_i)$ denotes the probability of outcome $a_i$ in a finite sample space, which condition must the point probabilities satisfy?',
     options: [
-      '$\\sum_i P(a_i) = 0$',
-      '$\\sum_i P(a_i) = 1$ and $P(a_i) \\geq 0$',
-      '$\\prod_i P(a_i) = 1$',
-      '$P(a_i) < 0$ for some $i$'
+      '$\\sum_i P(a_i) = 0
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Point probabilities must be nonnegative and sum to 1: $\\sum_i P(a_i) = 1$ with $P(a_i) \\geq 0$ for all $i$.',
+  },
+      '$\\prod_i P(a_i) = 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Point probabilities must be nonnegative and sum to 1: $\\sum_i P(a_i) = 1$ with $P(a_i) \\geq 0$ for all $i$.',
+  },
+      '$\\sum_i P(a_i) = 1$ and $P(a_i) \\geq 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Point probabilities must be nonnegative and sum to 1: $\\sum_i P(a_i) = 1$ with $P(a_i) \\geq 0$ for all $i$.',
+  },
+      '$P(a_i) < 0$ for some $i
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Point probabilities must be nonnegative and sum to 1: $\\sum_i P(a_i) = 1$ with $P(a_i) \\geq 0$ for all $i$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

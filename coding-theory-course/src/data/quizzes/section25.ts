@@ -6,12 +6,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Berlekamp\'s algorithm is used to:',
     options: [
-      'Factor polynomials over finite fields',
       'Encode messages into codewords',
+      'Factor polynomials over finite fields',
       'Compute the minimum distance of a code',
       'Find the generator matrix of a code',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Berlekamp\'s algorithm is a deterministic algorithm for factoring polynomials over finite fields $\\mathbb{F}_q$. It is widely used in coding theory for factoring $x^n - 1$.',
   },
@@ -80,10 +80,26 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To find the Berlekamp subalgebra, we construct a matrix $Q$ where the $i$-th row represents:',
     options: [
-      '$x^i \\pmod{f(x)}$',
-      '$x^{qi} \\pmod{f(x)}$',
-      '$f(x)^i$',
-      'The $i$-th derivative of $f(x)$'
+      '$x^{qi} \\pmod{f(x)}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The matrix $Q$ has rows representing $x^{qi} \\pmod{f(x)}$ for $i = 0, 1, \\ldots, \\deg(f)-1$. The null space of $Q - I$ gives the Berlekamp subalgebra.',
+  },
+      '$x^i \\pmod{f(x)}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The matrix $Q$ has rows representing $x^{qi} \\pmod{f(x)}$ for $i = 0, 1, \\ldots, \\deg(f)-1$. The null space of $Q - I$ gives the Berlekamp subalgebra.',
+  },
+      '$f(x)^i
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The matrix $Q$ has rows representing $x^{qi} \\pmod{f(x)}$ for $i = 0, 1, \\ldots, \\deg(f)-1$. The null space of $Q - I$ gives the Berlekamp subalgebra.',
+  },
+      'The $i$-th derivative of $f(x)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The matrix $Q$ has rows representing $x^{qi} \\pmod{f(x)}$ for $i = 0, 1, \\ldots, \\deg(f)-1$. The null space of $Q - I$ gives the Berlekamp subalgebra.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',

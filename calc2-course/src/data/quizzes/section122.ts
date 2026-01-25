@@ -66,10 +66,26 @@ export const section122Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a Type I region $S$ with $\\varphi_1(x) \\leq y \\leq \\varphi_2(x)$ for $a \\leq x \\leq b$, the double integral is computed by:',
     options: [
-      '$\\int_a^b [\\int_{\\varphi_1(x)}^{\\varphi_2(x)} f(x,y)\\,dy]\\,dx$',
-      '$\\int_c^d [\\int_a^b f(x,y)\\,dx]\\,dy$',
-      '$\\int_a^b \\int_c^d f(x,y)\\,dy\\,dx$',
-      '$\\int_a^b [\\int_a^b f(x,y)\\,dx]\\,dy$'
+      '$\\int_c^d [\\int_a^b f(x,y)\\,dx]\\,dy
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For a Type I region, we integrate first with respect to $y$ from $\\varphi_1(x)$ to $\\varphi_2(x)$, then with respect to $x$ from $a$ to $b$. The inner limits depend on $x$.',
+  },
+      '$\\int_a^b [\\int_{\\varphi_1(x)}^{\\varphi_2(x)} f(x,y)\\,dy]\\,dx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a Type I region, we integrate first with respect to $y$ from $\\varphi_1(x)$ to $\\varphi_2(x)$, then with respect to $x$ from $a$ to $b$. The inner limits depend on $x$.',
+  },
+      '$\\int_a^b \\int_c^d f(x,y)\\,dy\\,dx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a Type I region, we integrate first with respect to $y$ from $\\varphi_1(x)$ to $\\varphi_2(x)$, then with respect to $x$ from $a$ to $b$. The inner limits depend on $x$.',
+  },
+      '$\\int_a^b [\\int_a^b f(x,y)\\,dx]\\,dy
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a Type I region, we integrate first with respect to $y$ from $\\varphi_1(x)$ to $\\varphi_2(x)$, then with respect to $x$ from $a$ to $b$. The inner limits depend on $x$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -82,10 +98,10 @@ export const section122Questions: QuizQuestion[] = [
     options: [
       'Positive area',
       'Infinite length',
-      'Non-measurable area',
       'Content zero',
+      'Non-measurable area',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Theorem 11.8 states that the graph of a continuous function on a closed interval has content zero. This is key to proving integrability on Type I regions.',
   },
@@ -95,11 +111,11 @@ export const section122Questions: QuizQuestion[] = [
     question: 'A region of Type II differs from Type I in that:',
     options: [
       'It is bounded by horizontal lines instead of vertical lines',
-      'It must be a rectangle',
       'Horizontal lines intersect it in segments (x varies between functions of y)',
-      'It cannot be integrated over'
+      'It must be a rectangle',
+      'It cannot be integrated over',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'In a Type II region, $\\psi_1(y) \\leq x \\leq \\psi_2(y)$ for $c \\leq y \\leq d$. Horizontal lines intersect the region in segments, and we integrate first with respect to $x$.',
   },

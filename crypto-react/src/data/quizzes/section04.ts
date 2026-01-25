@@ -6,7 +6,28 @@ export const section04Quiz = {
       id: 's04-e01',
       type: 'multiple-choice',
       question: 'What is the smallest prime number?',
-      options: ['$2$', '$1$', '$3$', '$0$'],
+      options: [
+      '$1
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: '$2$ is the smallest prime and the only even prime number.'
+    },
+      '$3
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2$ is the smallest prime and the only even prime number.'
+    },
+      '$2
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2$ is the smallest prime and the only even prime number.'
+    },
+      '$0
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2$ is the smallest prime and the only even prime number.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$2$ is the smallest prime and the only even prime number.'
@@ -16,11 +37,11 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Why is $1$ not considered a prime number?',
       options: [
-        'By definition, primes have exactly two distinct divisors',
-        '$1$ is too small',
-        '$1$ is an even number',
-        '$1$ cannot be factored'
-      ],
+      'By definition, primes have exactly two distinct divisors',
+      '$1$ is too small',
+      '$1$ is an even number',
+      '$1$ cannot be factored',
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'A prime has exactly two distinct divisors: $1$ and itself. The number $1$ has only one divisor (itself).'
@@ -29,7 +50,28 @@ export const section04Quiz = {
       id: 's04-e03',
       type: 'multiple-choice',
       question: 'Which of the following is a prime number?',
-      options: ['$17$', '$15$', '$21$', '$25$'],
+      options: [
+      '$15
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: '$17$ is prime. $15 = 3 \\times 5$, $21 = 3 \\times 7$, $25 = 5 \\times 5$.'
+    },
+      '$21
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$17$ is prime. $15 = 3 \\times 5$, $21 = 3 \\times 7$, $25 = 5 \\times 5$.'
+    },
+      '$17
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$17$ is prime. $15 = 3 \\times 5$, $21 = 3 \\times 7$, $25 = 5 \\times 5$.'
+    },
+      '$25
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$17$ is prime. $15 = 3 \\times 5$, $21 = 3 \\times 7$, $25 = 5 \\times 5$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$17$ is prime. $15 = 3 \\times 5$, $21 = 3 \\times 7$, $25 = 5 \\times 5$.'
@@ -61,7 +103,28 @@ export const section04Quiz = {
       id: 's04-e06',
       type: 'multiple-choice',
       question: 'Which of these is the only even prime number?',
-      options: ['$2$', '$4$', '$6$', '$8$'],
+      options: [
+      '$4
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: '$2$ is the only even prime. All other even numbers are divisible by 2, so they\'re composite.'
+    },
+      '$6
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2$ is the only even prime. All other even numbers are divisible by 2, so they\'re composite.'
+    },
+      '$2
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2$ is the only even prime. All other even numbers are divisible by 2, so they\'re composite.'
+    },
+      '$8
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2$ is the only even prime. All other even numbers are divisible by 2, so they\'re composite.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$2$ is the only even prime. All other even numbers are divisible by 2, so they\'re composite.'
@@ -79,7 +142,24 @@ export const section04Quiz = {
       id: 's04-e08',
       type: 'multiple-choice',
       question: 'Is $2$ divisible by any number other than $1$ and itself?',
-      options: ['No, so it is prime', 'Yes, by $0$', 'Yes, by $-1$', 'Yes, by $2$'],
+      options: [
+      'Yes, by $0
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: '$2$ has exactly two divisors: $1$ and $2$. Therefore, it is prime.'
+    },
+      'Yes, by $-1
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2$ has exactly two divisors: $1$ and $2$. Therefore, it is prime.'
+    },
+      'Yes, by $2
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2$ has exactly two divisors: $1$ and $2$. Therefore, it is prime.'
+    },
+      'No, so it is prime',
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$2$ has exactly two divisors: $1$ and $2$. Therefore, it is prime.'
@@ -98,12 +178,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Which statement about prime numbers is TRUE?',
       options: [
-        'The largest prime is less than 1 billion',
-        'All primes are odd',
-        'There are infinitely many primes',
-        'Prime numbers can be negative'
-      ],
-      correctIndex: 2,
+      'The largest prime is less than 1 billion',
+      'All primes are odd',
+      'Prime numbers can be negative',
+      'There are infinitely many primes',
+    ],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Euclid proved that there are infinitely many prime numbers. Not all primes are odd (2 is even), and there is no largest prime.'
     }
@@ -114,7 +194,28 @@ export const section04Quiz = {
       id: 's04-m01',
       type: 'multiple-choice',
       question: 'Which of these is NOT a prime number?',
-      options: ['$91$', '$89$', '$97$', '$83$'],
+      options: [
+      '$89
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$91 = 7 \\times 13$. The numbers $89$, $97$, and $83$ are all prime.'
+    },
+      '$97
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$91 = 7 \\times 13$. The numbers $89$, $97$, and $83$ are all prime.'
+    },
+      '$91
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$91 = 7 \\times 13$. The numbers $89$, $97$, and $83$ are all prime.'
+    },
+      '$83
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$91 = 7 \\times 13$. The numbers $89$, $97$, and $83$ are all prime.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$91 = 7 \\times 13$. The numbers $89$, $97$, and $83$ are all prime.'
@@ -133,12 +234,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'The Fundamental Theorem of Arithmetic states that:',
       options: [
-        'The sum of two primes is always composite',
-        'There are infinitely many primes',
-        'All primes are odd except 2',
-        'Every integer greater than 1 has a unique prime factorization'
-      ],
-      correctIndex: 3,
+      'The sum of two primes is always composite',
+      'There are infinitely many primes',
+      'Every integer greater than 1 has a unique prime factorization',
+      'All primes are odd except 2',
+    ],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The Fundamental Theorem of Arithmetic states that every integer greater than 1 can be represented uniquely as a product of prime numbers (up to ordering).'
     },
@@ -155,7 +256,28 @@ export const section04Quiz = {
       id: 's04-m05',
       type: 'multiple-choice',
       question: 'To check if $n$ is prime, we only need to check for divisors up to:',
-      options: ['$\\sqrt{n}$', '$n/2$', '$n-1$', '$n$'],
+      options: [
+      '$n/2
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'If $n$ has a factor greater than $\\sqrt{n}$, then it must also have a factor less than $\\sqrt{n}$. So checking up to $\\sqrt{n}$ is sufficient.'
+    },
+      '$\\sqrt{n}
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'If $n$ has a factor greater than $\\sqrt{n}$, then it must also have a factor less than $\\sqrt{n}$. So checking up to $\\sqrt{n}$ is sufficient.'
+    },
+      '$n-1
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'If $n$ has a factor greater than $\\sqrt{n}$, then it must also have a factor less than $\\sqrt{n}$. So checking up to $\\sqrt{n}$ is sufficient.'
+    },
+      '$n
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'If $n$ has a factor greater than $\\sqrt{n}$, then it must also have a factor less than $\\sqrt{n}$. So checking up to $\\sqrt{n}$ is sufficient.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'If $n$ has a factor greater than $\\sqrt{n}$, then it must also have a factor less than $\\sqrt{n}$. So checking up to $\\sqrt{n}$ is sufficient.'
@@ -173,7 +295,28 @@ export const section04Quiz = {
       id: 's04-m07',
       type: 'multiple-choice',
       question: 'What is the prime factorization of $100$?',
-      options: ['$2^2 \\times 5^2$', '$2 \\times 50$', '$4 \\times 25$', '$10^2$'],
+      options: [
+      '$2 \\times 50
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$100 = 4 \\times 25 = 2^2 \\times 5^2$. Only the first option shows the complete prime factorization.'
+    },
+      '$4 \\times 25
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$100 = 4 \\times 25 = 2^2 \\times 5^2$. Only the first option shows the complete prime factorization.'
+    },
+      '$2^2 \\times 5^2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$100 = 4 \\times 25 = 2^2 \\times 5^2$. Only the first option shows the complete prime factorization.'
+    },
+      '$10^2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$100 = 4 \\times 25 = 2^2 \\times 5^2$. Only the first option shows the complete prime factorization.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$100 = 4 \\times 25 = 2^2 \\times 5^2$. Only the first option shows the complete prime factorization.'
@@ -191,7 +334,28 @@ export const section04Quiz = {
       id: 's04-m09',
       type: 'multiple-choice',
       question: 'Twin primes are pairs of primes that differ by 2. Which is a twin prime pair?',
-      options: ['$(11, 13)$', '$(7, 11)$', '$(13, 17)$', '$(19, 21)$'],
+      options: [
+      '$(7, 11)
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$(11, 13)$ are twin primes since both are prime and differ by 2. Note: 21 = 3 × 7 is not prime.'
+    },
+      '$(11, 13)
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$(11, 13)$ are twin primes since both are prime and differ by 2. Note: 21 = 3 × 7 is not prime.'
+    },
+      '$(13, 17)
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$(11, 13)$ are twin primes since both are prime and differ by 2. Note: 21 = 3 × 7 is not prime.'
+    },
+      '$(19, 21)
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$(11, 13)$ are twin primes since both are prime and differ by 2. Note: 21 = 3 × 7 is not prime.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$(11, 13)$ are twin primes since both are prime and differ by 2. Note: 21 = 3 × 7 is not prime.'
@@ -245,12 +409,12 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'A Mersenne prime has the form $2^p - 1$. Which statement is TRUE?',
       options: [
-        'All numbers of the form $2^p - 1$ are prime',
-        '$p$ must be prime for $2^p - 1$ to possibly be prime',
-        '$2^p - 1$ is always composite',
-        '$p$ can be any positive integer'
-      ],
-      correctIndex: 1,
+      'All numbers of the form $2^p - 1$ are prime',
+      '$2^p - 1$ is always composite',
+      '$p$ must be prime for $2^p - 1$ to possibly be prime',
+      '$p$ can be any positive integer',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'If $p$ is composite, then $2^p - 1$ is also composite. So $p$ being prime is necessary (but not sufficient) for $2^p - 1$ to be prime.'
     },
@@ -267,7 +431,28 @@ export const section04Quiz = {
       id: 's04-h06',
       type: 'multiple-choice',
       question: 'The Prime Number Theorem states that the number of primes up to $n$ is approximately:',
-      options: ['$\\frac{n}{\\ln n}$', '$\\sqrt{n}$', '$\\frac{n}{2}$', '$\\ln n$'],
+      options: [
+      '$\\sqrt{n}
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'The Prime Number Theorem states that $\\pi(n) \\sim \\frac{n}{\\ln n}$, where $\\pi(n)$ is the number of primes up to $n$.'
+    },
+      '$\\frac{n}{2}
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The Prime Number Theorem states that $\\pi(n) \\sim \\frac{n}{\\ln n}$, where $\\pi(n)$ is the number of primes up to $n$.'
+    },
+      '$\\ln n
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The Prime Number Theorem states that $\\pi(n) \\sim \\frac{n}{\\ln n}$, where $\\pi(n)$ is the number of primes up to $n$.'
+    },
+      '$\\frac{n}{\\ln n}
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The Prime Number Theorem states that $\\pi(n) \\sim \\frac{n}{\\ln n}$, where $\\pi(n)$ is the number of primes up to $n$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The Prime Number Theorem states that $\\pi(n) \\sim \\frac{n}{\\ln n}$, where $\\pi(n)$ is the number of primes up to $n$.'
@@ -285,7 +470,28 @@ export const section04Quiz = {
       id: 's04-h08',
       type: 'multiple-choice',
       question: 'Which of the following is a counterexample to "$2^p - 1$ is prime for all primes $p$"?',
-      options: ['$p = 11$', '$p = 2$', '$p = 3$', '$p = 5$'],
+      options: [
+      '$p = 2
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: '$2^{11} - 1 = 2047 = 23 \\times 89$, which is composite. But $2^2 - 1 = 3$, $2^3 - 1 = 7$, $2^5 - 1 = 31$ are all prime.'
+    },
+      '$p = 11
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$2^{11} - 1 = 2047 = 23 \\times 89$, which is composite. But $2^2 - 1 = 3$, $2^3 - 1 = 7$, $2^5 - 1 = 31$ are all prime.'
+    },
+      '$p = 3
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$2^{11} - 1 = 2047 = 23 \\times 89$, which is composite. But $2^2 - 1 = 3$, $2^3 - 1 = 7$, $2^5 - 1 = 31$ are all prime.'
+    },
+      '$p = 5
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$2^{11} - 1 = 2047 = 23 \\times 89$, which is composite. But $2^2 - 1 = 3$, $2^3 - 1 = 7$, $2^5 - 1 = 31$ are all prime.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: '$2^{11} - 1 = 2047 = 23 \\times 89$, which is composite. But $2^2 - 1 = 3$, $2^3 - 1 = 7$, $2^5 - 1 = 31$ are all prime.'
@@ -304,11 +510,15 @@ export const section04Quiz = {
       type: 'multiple-choice',
       question: 'Goldbach\'s Conjecture states that:',
       options: [
-        'Every odd integer is the sum of three primes',
-        'There are infinitely many twin primes',
-        'Every even integer greater than 2 can be expressed as the sum of two primes',
-        'Every prime greater than 3 has the form $6k \\pm 1$'
-      ],
+      'Every odd integer is the sum of three primes',
+      'There are infinitely many twin primes',
+      'Every prime greater than 3 has the form $6k \\pm 1
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Goldbach\'s Conjecture (still unproven) states that every even integer greater than 2 can be written as the sum of two prime numbers.'
+    },
+      'Every even integer greater than 2 can be expressed as the sum of two primes',
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Goldbach\'s Conjecture (still unproven) states that every even integer greater than 2 can be written as the sum of two prime numbers.'

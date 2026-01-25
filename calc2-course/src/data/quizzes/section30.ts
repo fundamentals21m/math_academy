@@ -5,7 +5,28 @@ export const section30Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'What is the trace of the matrix $A = \\begin{bmatrix} 3 & 1 & 2 \\\\ 0 & 5 & -1 \\\\ 4 & 2 & 7 \\end{bmatrix}$?',
-    options: ['$8$', '$15$', '$12$', '$10$'],
+    options: [
+      '$8
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The trace is the sum of diagonal elements: $\\text{tr}\\, A = 3 + 5 + 7 = 15$.',
+  },
+      '$12
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The trace is the sum of diagonal elements: $\\text{tr}\\, A = 3 + 5 + 7 = 15$.',
+  },
+      '$10
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The trace is the sum of diagonal elements: $\\text{tr}\\, A = 3 + 5 + 7 = 15$.',
+  },
+      '$15
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The trace is the sum of diagonal elements: $\\text{tr}\\, A = 3 + 5 + 7 = 15$.',
+  },
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The trace is the sum of diagonal elements: $\\text{tr}\\, A = 3 + 5 + 7 = 15$.',
@@ -75,10 +96,26 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $B = C^{-1}AC$ (similar matrices), what is the relationship between $\\text{tr}\\, A$ and $\\text{tr}\\, B$?',
     options: [
-      '$\\text{tr}\\, B = \\text{tr}\\, A$',
-      '$\\text{tr}\\, B = \\text{tr}\\, A + \\text{tr}\\, C$',
-      '$\\text{tr}\\, B = \\text{tr}\\, A \\cdot \\text{tr}\\, C$',
-      '$\\text{tr}\\, B = (\\text{tr}\\, A)^{-1}$'
+      '$\\text{tr}\\, B = \\text{tr}\\, A + \\text{tr}\\, C
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Similar matrices have the same trace. This follows from the cyclic property: $\\text{tr}(C^{-1}AC) = \\text{tr}(ACC^{-1}) = \\text{tr}\\, A$.',
+  },
+      '$\\text{tr}\\, B = \\text{tr}\\, A \\cdot \\text{tr}\\, C
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Similar matrices have the same trace. This follows from the cyclic property: $\\text{tr}(C^{-1}AC) = \\text{tr}(ACC^{-1}) = \\text{tr}\\, A$.',
+  },
+      '$\\text{tr}\\, B = \\text{tr}\\, A
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Similar matrices have the same trace. This follows from the cyclic property: $\\text{tr}(C^{-1}AC) = \\text{tr}(ACC^{-1}) = \\text{tr}\\, A$.',
+  },
+      '$\\text{tr}\\, B = (\\text{tr}\\, A)^{-1}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Similar matrices have the same trace. This follows from the cyclic property: $\\text{tr}(C^{-1}AC) = \\text{tr}(ACC^{-1}) = \\text{tr}\\, A$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

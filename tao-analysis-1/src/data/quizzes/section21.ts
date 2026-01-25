@@ -35,7 +35,7 @@ export const section21Questions: QuizQuestion[] = [
       'Not necessarily unique',
       'Always rational',
       'Unique',
-      'Always the supremum of the sequence'
+      'Always the supremum of the sequence',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -72,10 +72,22 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The limit law for products states that if $\\lim a_n = L$ and $\\lim b_n = M$, then:',
     options: [
-      '$\\lim(a_n b_n) = LM$',
-      '$\\lim(a_n b_n) = L + M$',
-      '$\\lim(a_n / b_n) = L/M$',
-      '$\\lim(a_n b_n)$ may not exist'
+      '$\\lim(a_n b_n) = L + M
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The product of convergent sequences converges to the product of the limits: $\\lim(a_n b_n) = (\\lim a_n)(\\lim b_n) = LM$.',
+  },
+      '$\\lim(a_n b_n) = LM
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The product of convergent sequences converges to the product of the limits: $\\lim(a_n b_n) = (\\lim a_n)(\\lim b_n) = LM$.',
+  },
+      '$\\lim(a_n / b_n) = L/M
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The product of convergent sequences converges to the product of the limits: $\\lim(a_n b_n) = (\\lim a_n)(\\lim b_n) = LM$.',
+  },
+      '$\\lim(a_n b_n)$ may not exist',
     ],
     correctIndex: 0,
     difficulty: 'easy',

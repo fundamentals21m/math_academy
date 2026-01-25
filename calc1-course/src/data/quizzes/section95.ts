@@ -58,10 +58,26 @@ export const section95Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The null space (kernel) of $T$ is:',
     options: [
-      '$\\{\\mathbf{v} : T(\\mathbf{v}) = \\mathbf{v}\\}$',
-      'The range of $T$',
-      '$\\{\\mathbf{v} : T(\\mathbf{v}) = \\mathbf{0}\\}$',
-      'All of $V$'
+      '$\\{\\mathbf{v} : T(\\mathbf{v}) = \\mathbf{0}\\}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Kernel = vectors mapped to zero.',
+  },
+      '$\\{\\mathbf{v} : T(\\mathbf{v}) = \\mathbf{v}\\}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Kernel = vectors mapped to zero.',
+  },
+      'The range of $T
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Kernel = vectors mapped to zero.',
+  },
+      'All of $V
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Kernel = vectors mapped to zero.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -98,10 +114,18 @@ export const section95Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$T$ is one-to-one (injective) if and only if:',
     options: [
-      'Kernel = $\\{\\mathbf{0}\\}$',
       'Range = codomain',
+      'Kernel = $\\{\\mathbf{0}\\}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Injective iff only $\\mathbf{0}$ maps to $\\mathbf{0}$.',
+  },
       '$T$ is onto',
-      '$T = I$'
+      '$T = I
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Injective iff only $\\mathbf{0}$ maps to $\\mathbf{0}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

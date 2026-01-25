@@ -6,10 +6,14 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A direction field (slope field) shows:',
     options: [
-      'The slope $y\' = f(x, y)$ at many points',
-      'The values of $y$',
+      'The values of $y
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Direction fields plot small line segments with slope given by the DE at each point.',
+  },
       'The integral curves exactly',
-      'Only the critical points'
+      'The slope $y\\' = f(x, y)$ at many points',
+      'Only the critical points',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -22,10 +26,10 @@ export const section58Questions: QuizQuestion[] = [
     options: [
       'A horizontal line',
       'Any curve in the plane',
-      'A curve that is tangent to the direction field at every point',
       'The graph of the slope function',
+      'A curve that is tangent to the direction field at every point',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Integral curves are solutions; they follow the direction field.',
   },
@@ -60,12 +64,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Direction fields are useful for:',
     options: [
+      'Visualizing qualitative behavior of solutions',
       'Finding exact solutions',
       'Algebraic manipulation',
       'Computing integrals',
-      'Visualizing qualitative behavior of solutions'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Direction fields give qualitative insight without solving explicitly.',
   },
@@ -74,10 +78,22 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For autonomous equation $y\' = f(y)$, the direction field depends only on:',
     options: [
-      '$y$',
-      '$x$',
-      'Both $x$ and $y$',
-      'Neither'
+      '$x
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Autonomous: $y\'$ depends only on $y$, so slopes are constant along horizontal lines.',
+  },
+      'Both $x$ and $y
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Autonomous: $y\'$ depends only on $y$, so slopes are constant along horizontal lines.',
+  },
+      'Neither',
+      '$y
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Autonomous: $y\'$ depends only on $y$, so slopes are constant along horizontal lines.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

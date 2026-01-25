@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .fas-box {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+      padding: 30px 45px;
+      border-radius: 12px;
+      margin: 25px auto;
+      max-width: 900px;
+      text-align: left;
+    }
+    .fas-title {
+      color: #EF4444;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .fas-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(239, 68, 68, 0.15);
+    }
+    .fas-item:last-child {
+      border-bottom: none;
+    }
+    .fas-label {
+      color: #EF4444;
+      font-weight: 600;
+      min-width: 180px;
+      font-size: 16px;
+    }
+    .fas-desc {
+      color: #E6EDF3;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .result-box {
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 20px 40px;
+      border-radius: 8px;
+      margin-top: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .result-text {
+      color: #E6EDF3;
+      font-size: 18px;
+    }
+    .result-text em {
+      color: #0891B2;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Unintended Consequences</div>
+    <div class="section-title">Bad Accounting Incentives</div>
+    <div class="fas-box">
+      <div class="fas-title">FAS87 / FAS132 Problems</div>
+      <div class="fas-item">
+        <div class="fas-label">ERoA Assumption:</div>
+        <div class="fas-desc">Companies assumed 8% return regardless of actual performance — direct credit to earnings</div>
+      </div>
+      <div class="fas-item">
+        <div class="fas-label">Smoothing Mechanism:</div>
+        <div class="fas-desc">Bad years amortized over 15+ years, masking true impact of underperformance</div>
+      </div>
+      <div class="fas-item">
+        <div class="fas-label">CFO Incentives:</div>
+        <div class="fas-desc">Bonuses derived from these earnings — obstinately unwilling to put them at risk</div>
+      </div>
+      <div class="fas-item">
+        <div class="fas-label">The Result:</div>
+        <div class="fas-desc">Tail wagged the dog — equity-heavy strategies chosen to hit 8% regardless of risk</div>
+      </div>
+    </div>
+    <div class="result-box">
+      <div class="result-text">Just as FAS87 derailed pension reform, <em>goodwill treatment</em> discouraged bitcoin treasury adoption — until FASB's mark-to-market fix</div>
+    </div>
+  </div>
+</body>
+</html>

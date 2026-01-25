@@ -7,12 +7,12 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What does $17 \\equiv 2 \\pmod{5}$ mean?',
     difficulty: 'easy',
     options: [
-      '17 and 2 have the same remainder when divided by 5',
       '17 divided by 2 equals 5',
+      '17 and 2 have the same remainder when divided by 5',
       '17 equals 2 times 5',
-      '17 minus 2 equals 5'
+      '17 minus 2 equals 5',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     explanation:
       '$a \\equiv b \\pmod{m}$ means $a$ and $b$ have the same remainder when divided by $m$. Here, $17 = 3 \\times 5 + 2$ and $2 = 0 \\times 5 + 2$, so both have remainder 2.',
   },
@@ -22,12 +22,12 @@ export const section18Questions: QuizQuestion[] = [
     question: 'In which ancient text did the Chinese Remainder Theorem first appear?',
     difficulty: 'easy',
     options: [
-      'Euclid\'s Elements',
-      'The Sunzi Suanjing (Master Sun\'s Mathematical Manual)',
-      'Ptolemy\'s Almagest',
+      'Euclid\\'s Elements',
+      'Ptolemy\\'s Almagest',
+      'The Sunzi Suanjing (Master Sun\\'s Mathematical Manual)',
       'The Rhind Papyrus',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'The Chinese Remainder Theorem first appears in the Sunzi Suanjing, a Chinese mathematical text from the 3rd-5th century CE.',
   },
@@ -48,12 +48,12 @@ export const section18Questions: QuizQuestion[] = [
       'For the Chinese Remainder Theorem to guarantee a unique solution modulo $M = m_1 m_2 \\cdots m_k$, what condition must the moduli satisfy?',
     difficulty: 'medium',
     options: [
+      'They must be pairwise coprime (any two share no common factor > 1)',
       'They must all be prime',
       'They must be consecutive integers',
-      'They must be pairwise coprime (any two share no common factor > 1)',
-      'They must all be powers of 2'
+      'They must all be powers of 2',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'The Chinese Remainder Theorem requires the moduli to be pairwise coprime, meaning $\\gcd(m_i, m_j) = 1$ for all $i \\neq j$. They don\'t need to be prime—just mutually coprime.',
   },
@@ -77,7 +77,7 @@ export const section18Questions: QuizQuestion[] = [
       'RSA cryptographic decryption speedup',
       'Parallel computation on large integers',
       'Error-correcting codes',
-      'Sorting algorithms'
+      'Sorting algorithms',
     ],
     correctIndex: 3,
     explanation:

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .clarification-box {
+      background: rgba(247, 147, 26, 0.08);
+      border: 2px solid rgba(247, 147, 26, 0.3);
+      padding: 25px 40px;
+      border-radius: 8px;
+      margin: 25px auto;
+      max-width: 800px;
+    }
+    .clarification-text {
+      color: #E6EDF3;
+      font-size: 22px;
+    }
+    .clarification-text em {
+      color: #F7931A;
+      font-style: normal;
+      font-weight: 600;
+    }
+    .two-col {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .col-card {
+      width: 420px;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .col-card.what {
+      background: rgba(8, 145, 178, 0.08);
+      border: 1px solid rgba(8, 145, 178, 0.3);
+    }
+    .col-card.cost {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    .col-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .what .col-title { color: #0891B2; }
+    .cost .col-title { color: #EF4444; }
+    .col-list {
+      list-style: none;
+    }
+    .col-list li {
+      color: #E6EDF3;
+      font-size: 17px;
+      padding: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .col-list li::before {
+      content: "•";
+      color: #8B949E;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">Important Clarification</div>
+    <div class="section-title">This Is Not a Trick</div>
+    <div class="clarification-box">
+      <div class="clarification-text">Bitcoin is <em>money</em> — the hardest money the world has ever seen — not a return-bearing asset</div>
+    </div>
+    <div class="two-col">
+      <div class="col-card what">
+        <div class="col-title">What Bitcoin Does</div>
+        <ul class="col-list">
+          <li>Protects purchasing power from debasement</li>
+          <li>Protects against censorship/confiscation</li>
+          <li>Lowers costs over time relative to USD</li>
+          <li>Always increases over 5+ year periods</li>
+        </ul>
+      </div>
+      <div class="col-card cost">
+        <div class="col-title">The Opportunity Cost</div>
+        <ul class="col-list">
+          <li>Bitcoin is scarce</li>
+          <li>Deploying it incurs significant cost</li>
+          <li>Sacrifice long-term price potential</li>
+          <li>Sacrifice superior monetary properties</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

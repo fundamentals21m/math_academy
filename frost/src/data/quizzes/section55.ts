@@ -50,12 +50,12 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happens if a signature share fails verification?',
     options: [
+      'The signer should be identified and excluded, and signing restarted',
       'The protocol automatically fixes it',
       'All shares are discarded',
-      'The signer should be identified and excluded, and signing restarted',
       'The share is used anyway',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A failed verification indicates the signer provided an incorrect share (malicious or buggy). The coordinator should exclude that signer and restart with a valid subset.',
   },
@@ -64,10 +64,14 @@ export const section55Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the verification equation $z_i \\cdot G = R_i + c \\cdot \\lambda_i \\cdot Y_i$, what does $\\lambda_i$ represent?',
     options: [
-      'The Lagrange coefficient for signer $i$',
-      'The signer\'s private key',
+      'The signer\\'s private key',
+      'The Lagrange coefficient for signer $i
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\lambda_i$ is the Lagrange coefficient that weights signer $i$\'s contribution based on which signers are participating in this signing session.',
+  },
       'A random nonce',
-      'The message hash'
+      'The message hash',
     ],
     correctIndex: 0,
     difficulty: 'easy',

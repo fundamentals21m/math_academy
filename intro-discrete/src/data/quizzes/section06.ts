@@ -28,10 +28,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "De Morgan's Law states that $(A \\cup B)^c$ equals:",
     options: [
-      '$A^c \\cap B^c$',
-      '$A^c \\cup B^c$',
-      '$(A \\cap B)^c$',
-      '$A \\cup B^c$'
+      '$A^c \\cup B^c
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: "De Morgan's Laws: $(A \\cup B)^c = A^c \\cap B^c$ and $(A \\cap B)^c = A^c \\cup B^c$.",
+  },
+      '$(A \\cap B)^c
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: "De Morgan's Laws: $(A \\cup B)^c = A^c \\cap B^c$ and $(A \\cap B)^c = A^c \\cup B^c$.",
+  },
+      '$A^c \\cap B^c
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: "De Morgan's Laws: $(A \\cup B)^c = A^c \\cap B^c$ and $(A \\cap B)^c = A^c \\cup B^c$.",
+  },
+      '$A \\cup B^c
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: "De Morgan's Laws: $(A \\cup B)^c = A^c \\cap B^c$ and $(A \\cap B)^c = A^c \\cup B^c$.",
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

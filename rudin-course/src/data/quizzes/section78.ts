@@ -8,7 +8,7 @@ export const section78Questions: QuizQuestion[] = [
     options: [
       '$m(A) = 1$ for all non-empty sets',
       '$m(A) = $ number of elements in $A
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Lebesgue measure extends length: intervals have measure equal to their length, and the measure is countably additive on measurable sets.',
   },
@@ -46,12 +46,12 @@ export const section78Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cantor set $C$ is an example of a set that is:',
     options: [
+      'Uncountable with Lebesgue measure zero',
       'Countable with positive measure',
       'Uncountable with positive measure',
-      'Uncountable with Lebesgue measure zero',
       'Finite with measure zero',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Cantor set is constructed by removing middle thirds. It is uncountable (has cardinality $2^{\\aleph_0}$) but has measure zero (the removed intervals have total length 1).',
   },

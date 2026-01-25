@@ -37,9 +37,17 @@ export const section140Questions: QuizQuestion[] = [
     question: 'When $f = 1$, the surface integral $\\iint_S dS$ equals:',
     options: [
       'The volume under the surface',
-      'The perimeter of $S$',
+      'The surface area of $S
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'With $f = 1$, $\\iint_S dS = \\iint_S 1\\,dS = a(S)$, the surface area.',
+  },
+      'The perimeter of $S
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'With $f = 1$, $\\iint_S dS = \\iint_S 1\\,dS = a(S)$, the surface area.',
+  },
       'Zero',
-      'The surface area of $S$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -52,10 +60,10 @@ export const section140Questions: QuizQuestion[] = [
     options: [
       'The center of mass',
       'The moment of inertia',
-      'The total mass',
       'The average density',
+      'The total mass',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'When $f$ is mass per unit area (surface density), integrating over the surface gives total mass: $m = \\iint_S f\\,dS$.',
   },
@@ -94,10 +102,26 @@ export const section140Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The rate of fluid flow through surface $S$ in the direction of normal $\\mathbf{n}$ is given by the integral:',
     options: [
-      '$\\iint_S \\mathbf{F}\\,dS$',
-      '$\\iint_S \\mathbf{F} \\times \\mathbf{n}\\,dS$',
-      '$\\iint_S \\mathbf{F} \\cdot \\mathbf{n}\\,dS$',
-      '$\\iint_S |\\mathbf{F}|\\,dS$'
+      '$\\iint_S \\mathbf{F}\\,dS
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The flux of $\\mathbf{F}$ through $S$ is $\\iint_S \\mathbf{F} \\cdot \\mathbf{n}\\,dS$, measuring how much of $\\mathbf{F}$ passes through the surface in the direction of the normal.',
+  },
+      '$\\iint_S \\mathbf{F} \\cdot \\mathbf{n}\\,dS
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The flux of $\\mathbf{F}$ through $S$ is $\\iint_S \\mathbf{F} \\cdot \\mathbf{n}\\,dS$, measuring how much of $\\mathbf{F}$ passes through the surface in the direction of the normal.',
+  },
+      '$\\iint_S \\mathbf{F} \\times \\mathbf{n}\\,dS
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The flux of $\\mathbf{F}$ through $S$ is $\\iint_S \\mathbf{F} \\cdot \\mathbf{n}\\,dS$, measuring how much of $\\mathbf{F}$ passes through the surface in the direction of the normal.',
+  },
+      '$\\iint_S |\\mathbf{F}|\\,dS
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The flux of $\\mathbf{F}$ through $S$ is $\\iint_S \\mathbf{F} \\cdot \\mathbf{n}\\,dS$, measuring how much of $\\mathbf{F}$ passes through the surface in the direction of the normal.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

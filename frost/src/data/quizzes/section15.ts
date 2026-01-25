@@ -20,10 +20,14 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the key difference between additive shares and Shamir (polynomial) shares?',
     options: [
-      'Additive shares require ALL shares to reconstruct, while Shamir allows any $t$-of-$n$',
       'Additive shares are more secure than Shamir shares',
       'Shamir shares are simpler to compute than additive shares',
-      'Additive shares can only be used for encryption, not signatures'
+      'Additive shares require ALL shares to reconstruct, while Shamir allows any $t$-of-$n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Additive secret sharing is $t$-of-$t$ (all shares needed), while Shamir secret sharing provides threshold flexibility with any $t$-of-$n$ shares sufficient for reconstruction.',
+  },
+      'Additive shares can only be used for encryption, not signatures',
     ],
     correctIndex: 0,
     difficulty: 'medium',

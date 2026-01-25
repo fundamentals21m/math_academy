@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .advantage-box {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+      padding: 30px 50px;
+      border-radius: 12px;
+      margin: 25px auto;
+      max-width: 850px;
+      text-align: center;
+    }
+    .advantage-label {
+      color: #22C55E;
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .advantage-text {
+      color: #E6EDF3;
+      font-size: 26px;
+      font-weight: 600;
+    }
+    .opportunity-grid {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin: 35px 0;
+    }
+    .opportunity-card {
+      width: 400px;
+      padding: 25px 30px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .opportunity-card.not-done {
+      background: rgba(139, 148, 158, 0.1);
+      border: 1px solid rgba(139, 148, 158, 0.3);
+    }
+    .opportunity-card.should {
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+    }
+    .opportunity-label {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .not-done .opportunity-label { color: #8B949E; }
+    .should .opportunity-label { color: #0891B2; }
+    .opportunity-text {
+      color: #E6EDF3;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .small-biz-note {
+      color: #8B949E;
+      font-size: 16px;
+      margin-top: 25px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Juicy Apple</div>
+    <div class="section-title">Tax-Exempt Status</div>
+    <div class="advantage-box">
+      <div class="advantage-label">Key Advantage</div>
+      <div class="advantage-text">Tax-qualified pension plans don't ever pay capital gains tax</div>
+    </div>
+    <div class="opportunity-grid">
+      <div class="opportunity-card not-done">
+        <div class="opportunity-label">What Hasn't Been Done</div>
+        <div class="opportunity-text">Companies loading pension trusts with bitcoin, enjoying superior returns tax-free over long time horizons</div>
+      </div>
+      <div class="opportunity-card should">
+        <div class="opportunity-label">What Should Happen</div>
+        <div class="opportunity-text">Companies starting new qualified pension plans to accumulate bitcoin tax-free — outside Roth IRAs, few other options exist</div>
+      </div>
+    </div>
+    <div class="small-biz-note">Small employers (under 100 employees) should consider defined benefit plans with bitcoin contributions</div>
+  </div>
+</body>
+</html>

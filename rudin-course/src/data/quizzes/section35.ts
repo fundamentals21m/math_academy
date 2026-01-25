@@ -66,12 +66,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f\'(x) > 0$ for all $x \\in (a, b)$, then on $[a, b]$:',
     options: [
-      '$f$ is strictly increasing',
       '$f$ is constant',
       '$f$ is convex',
+      '$f$ is strictly increasing',
       '$f$ is bounded',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'By the MVT, if $x_1 < x_2$ in $[a,b]$, then $f(x_2) - f(x_1) = f\'(c)(x_2 - x_1)$ for some $c \\in (x_1, x_2)$. Since $f\'(c) > 0$ and $x_2 - x_1 > 0$, we have $f(x_2) > f(x_1)$.',
   },
@@ -80,10 +80,26 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Generalized Mean Value Theorem (Cauchy\'s MVT) states that for $f, g$ continuous on $[a,b]$, differentiable on $(a,b)$:',
     options: [
-      '$\\frac{f\'(c)}{g\'(c)} = \\frac{f(b) - f(a)}{g(b) - g(a)}$ for some $c \\in (a,b)$, if $g\'(c) \\neq 0$',
-      '$f\'(c) \\cdot g\'(c) = [f(b) - f(a)][g(b) - g(a)]$ for some $c \\in (a,b)$',
-      '$[f(b) - f(a)]g\'(c) = [g(b) - g(a)]f\'(c)$ for some $c \\in (a,b)$',
-      '$f\'(c) + g\'(c) = \\frac{f(b) - f(a) + g(b) - g(a)}{b - a}$'
+      '$\\frac{f\\'(c)}{g\\'(c)} = \\frac{f(b) - f(a)}{g(b) - g(a)}$ for some $c \\in (a,b)$, if $g\\'(c) \\neq 0
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Cauchy\'s MVT: There exists $c \\in (a,b)$ such that $[f(b) - f(a)]g\'(c) = [g(b) - g(a)]f\'(c)$. This is the basis for L\'Hospital\'s Rule. Note: we don\'t require $g\'(c) \\neq 0$ in the statement.',
+  },
+      '$[f(b) - f(a)]g\\'(c) = [g(b) - g(a)]f\\'(c)$ for some $c \\in (a,b)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Cauchy\'s MVT: There exists $c \\in (a,b)$ such that $[f(b) - f(a)]g\'(c) = [g(b) - g(a)]f\'(c)$. This is the basis for L\'Hospital\'s Rule. Note: we don\'t require $g\'(c) \\neq 0$ in the statement.',
+  },
+      '$f\\'(c) \\cdot g\\'(c) = [f(b) - f(a)][g(b) - g(a)]$ for some $c \\in (a,b)
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Cauchy\'s MVT: There exists $c \\in (a,b)$ such that $[f(b) - f(a)]g\'(c) = [g(b) - g(a)]f\'(c)$. This is the basis for L\'Hospital\'s Rule. Note: we don\'t require $g\'(c) \\neq 0$ in the statement.',
+  },
+      '$f\\'(c) + g\\'(c) = \\frac{f(b) - f(a) + g(b) - g(a)}{b - a}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Cauchy\'s MVT: There exists $c \\in (a,b)$ such that $[f(b) - f(a)]g\'(c) = [g(b) - g(a)]f\'(c)$. This is the basis for L\'Hospital\'s Rule. Note: we don\'t require $g\'(c) \\neq 0$ in the statement.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

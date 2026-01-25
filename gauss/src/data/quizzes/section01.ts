@@ -19,10 +19,22 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The linear congruence $ax \\equiv b \\pmod{m}$ has a solution if and only if:',
     options: [
-      '$a$ divides $b$',
-      '$\\gcd(a, m)$ divides $b$',
-      '$m$ divides $a$',
-      '$a$ and $m$ are coprime'
+      '$a$ divides $b
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A linear congruence $ax \\equiv b \\pmod{m}$ has a solution if and only if $\\gcd(a, m) \\mid b$.',
+  },
+      '$m$ divides $a
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A linear congruence $ax \\equiv b \\pmod{m}$ has a solution if and only if $\\gcd(a, m) \\mid b$.',
+  },
+      '$a$ and $m$ are coprime',
+      '$\\gcd(a, m)$ divides $b
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A linear congruence $ax \\equiv b \\pmod{m}$ has a solution if and only if $\\gcd(a, m) \\mid b$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -135,10 +147,26 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $x \\equiv 1 \\pmod{2}$ and $x \\equiv 1 \\pmod{3}$ and $x \\equiv 1 \\pmod{5}$, what is $x \\pmod{30}$?',
     options: [
-      '$0$',
-      '$1$',
-      '$15$',
-      '$29$'
+      '$1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'If $x \\equiv 1$ modulo $2$, $3$, and $5$, then $x \\equiv 1 \\pmod{\\text{lcm}(2,3,5)} = 1 \\pmod{30}$.',
+  },
+      '$0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $x \\equiv 1$ modulo $2$, $3$, and $5$, then $x \\equiv 1 \\pmod{\\text{lcm}(2,3,5)} = 1 \\pmod{30}$.',
+  },
+      '$15
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $x \\equiv 1$ modulo $2$, $3$, and $5$, then $x \\equiv 1 \\pmod{\\text{lcm}(2,3,5)} = 1 \\pmod{30}$.',
+  },
+      '$29
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'If $x \\equiv 1$ modulo $2$, $3$, and $5$, then $x \\equiv 1 \\pmod{\\text{lcm}(2,3,5)} = 1 \\pmod{30}$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

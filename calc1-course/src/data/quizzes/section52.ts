@@ -7,11 +7,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'A differential equation is an equation involving:',
     options: [
       'Only numbers',
-      'Only polynomials',
       'A function and its derivatives',
-      'Integrals only'
+      'Only polynomials',
+      'Integrals only',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A DE relates an unknown function to its derivatives.',
   },
@@ -21,11 +21,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'The order of a differential equation is:',
     options: [
       'The number of terms',
+      'The highest derivative that appears',
       'The number of solutions',
       'The degree of the polynomial',
-      'The highest derivative that appears'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Order = highest derivative. E.g., $y\'\' + y = 0$ is second order.',
   },
@@ -49,11 +49,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'A solution to a DE is:',
     options: [
       'A number',
-      'A function that satisfies the equation',
       'The derivative of the equation',
-      'An integral'
+      'A function that satisfies the equation',
+      'An integral',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'A solution is a function $y(x)$ that makes the DE true.',
   },
@@ -88,12 +88,12 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An initial value problem (IVP) consists of:',
     options: [
-      'Just a differential equation',
       'A DE together with initial condition(s)',
+      'Just a differential equation',
       'Multiple differential equations',
       'Only boundary conditions',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'An IVP specifies a DE plus initial values like $y(0) = 1$.',
   },

@@ -27,9 +27,9 @@ export const section17Questions: QuizQuestion[] = [
       'How did Aristarchus determine the relative distances of the Sun and Moon from Earth?',
     options: [
       'By measuring the angle between Sun and Moon when the Moon is at first quarter',
-      'By measuring the size of Earth\'s shadow during a lunar eclipse',
+      'By measuring the size of Earth\\\'s shadow during a lunar eclipse',
       'By timing the duration of solar eclipses',
-      'By observing the phases of Venus'
+      'By observing the phases of Venus',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -43,11 +43,11 @@ export const section17Questions: QuizQuestion[] = [
       'What revolutionary astronomical hypothesis did Aristarchus propose?',
     options: [
       'That the Earth is flat',
+      'That the Earth orbits the Sun (heliocentric model)',
       'That the Moon is larger than the Earth',
       'That stars are very distant suns',
-      'That the Earth orbits the Sun (heliocentric model)',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'According to Plutarch, Aristarchus proposed that "the Earth moves in an oblique circle about the Sun." This heliocentric model predates Copernicus by nearly 1,800 years.',
@@ -59,11 +59,11 @@ export const section17Questions: QuizQuestion[] = [
       'Apollonius of Perga wrote a famous treatise on conics. How many propositions did it contain?',
     options: [
       '100 propositions',
+      '400 propositions',
       '200 propositions',
       '1000 propositions',
-      '400 propositions',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Apollonius\'s treatise on Conics contained 400 propositions arranged in eight books. It was the definitive treatment of conic sections for nearly two thousand years.',
@@ -90,12 +90,12 @@ export const section17Questions: QuizQuestion[] = [
     question:
       'What was Eratosthenes\'s position at Alexandria?',
     options: [
-      'Head of the Academy',
       'Chief librarian at the Library of Alexandria',
+      'Head of the Academy',
       'Governor of the city',
       'Temple priest',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Eratosthenes of Cyrene became the chief librarian at Alexandria. His wide-ranging interests earned him the nickname "Beta" from students who felt he was second-best in many fields rather than first in one.',
@@ -109,7 +109,7 @@ export const section17Questions: QuizQuestion[] = [
       'By sailing around it',
       'By observing lunar eclipses',
       'By counting steps between cities',
-      'By measuring the difference in the Sun\\'s angle at Alexandria vs. Syene on the summer solstice',
+      'By measuring the difference in the Sun\\\\'s angle at Alexandria vs. Syene on the summer solstice',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -122,12 +122,12 @@ export const section17Questions: QuizQuestion[] = [
     question:
       'What was Eratosthenes\'s estimate for the circumference of the Earth?',
     options: [
-      'About 45,000 km (250,000 stadia)',
       'About 10,000 km',
+      'About 45,000 km (250,000 stadia)',
       'About 25,000 km',
       'About 100,000 km',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Eratosthenes calculated 250,000 stadia, which is about 45,000 km. This is remarkably close to the actual value of 40,000 km—the kilometer was originally defined as 1/40,000 of the Earth\'s circumference.',
@@ -139,11 +139,11 @@ export const section17Questions: QuizQuestion[] = [
       'Which of these is NOT attributed to Eratosthenes?',
     options: [
       'The Sieve for finding prime numbers',
-      'Proving the parallel postulate',
       'Inventing the Julian calendar',
       'Measuring the circumference of the Earth',
+      'Proving the parallel postulate',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Eratosthenes invented the Sieve for primes, the Julian calendar (with leap years), and measured Earth\'s circumference. The parallel postulate was never proved—it is independent of Euclid\'s other axioms.',

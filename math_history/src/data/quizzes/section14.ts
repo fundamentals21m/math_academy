@@ -8,11 +8,11 @@ export const section14Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Walk the full distance',
+      'Walk a quarter of the distance',
       'Walk backwards',
       'Stand still',
-      'Walk a quarter of the distance'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     explanation:
       'The Dichotomy says before you can walk half the distance, you must first walk a quarter. Before that, an eighth. And so on infinitely, suggesting you can never even start.',
   },
@@ -21,8 +21,13 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the sum of the infinite series $\\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\frac{1}{16} + \\cdots$?',
     difficulty: 'easy',
-    options: ['1/2', '1', '2', 'Infinity'],
-    correctIndex: 1,
+    options: [
+      '1/2',
+      '2',
+      'Infinity',
+      '1',
+    ],
+    correctIndex: 3,
     explanation:
       'This is a geometric series with first term $a = 1/2$ and ratio $r = 1/2$. The sum is $\\frac{a}{1-r} = \\frac{1/2}{1/2} = 1$.',
   },
@@ -32,8 +37,13 @@ export const section14Questions: QuizQuestion[] = [
     question:
       'In the Achilles and Tortoise paradox, if Achilles runs 10 m/s and the tortoise walks 1 m/s with a 100m head start, how far does Achilles run before catching the tortoise?',
     difficulty: 'medium',
-    options: ['100 m', '110 m', '111.11... m', '1000 m'],
-    correctIndex: 2,
+    options: [
+      '111.11... m',
+      '100 m',
+      '110 m',
+      '1000 m',
+    ],
+    correctIndex: 0,
     explanation:
       'The distances form a geometric series: $100 + 10 + 1 + 0.1 + \\cdots = \\frac{100}{1-0.1} = \\frac{100}{0.9} = 111.\\overline{1}$ meters.',
   },
@@ -43,12 +53,12 @@ export const section14Questions: QuizQuestion[] = [
     question: 'The Arrow paradox questions whether motion is possible because:',
     difficulty: 'medium',
     options: [
-      'At each instant, the arrow occupies a fixed position and is therefore motionless',
       'Arrows are too heavy to fly',
+      'At each instant, the arrow occupies a fixed position and is therefore motionless',
       'Arrows move in discrete jumps',
-      'Time moves backwards for arrows'
+      'Time moves backwards for arrows',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     explanation:
       'The Arrow paradox argues that at any single instant, the arrow is in one place (motionless). If time consists only of instants, and the arrow is motionless at each instant, then it never moves.',
   },
@@ -60,11 +70,11 @@ export const section14Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'Infinite sums are always infinite',
-      'An infinite sum can converge to a finite value',
       'Motion is impossible',
+      'An infinite sum can converge to a finite value',
       'Space is not infinitely divisible',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'Zeno assumed completing infinitely many tasks requires infinite time. The resolution is that infinite series can converge to finite sums, so infinitely many "tasks" of decreasing duration can be completed in finite time.',
   },

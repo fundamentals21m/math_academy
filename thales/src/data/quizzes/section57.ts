@@ -12,7 +12,7 @@ export const section57Questions: QuizQuestion[] = [
       'True, False, and Natural',
       'Set, Function, and Proposition',
       '1 (unit), Ω (truth values), and N (natural numbers)',
-      'Integer, Real, and Complex'
+      'Integer, Real, and Complex',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -39,12 +39,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is the logical connective ⊤ (truth) defined in type theory?',
     options: [
+      '⊤ ≡ * = *',
       '⊤ ≡ 1',
       '⊤ ≡ ∀x.x',
       '⊤ ≡ N',
-      '⊤ ≡ * = *',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Truth is defined as * = *, where * is the unique element of the unit type 1. Since * is always equal to itself, this represents a tautology.',
@@ -84,12 +84,12 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is falsity (⊥) defined in intuitionistic type theory?',
     options: [
-      '⊥ ≡ ∀t∈Ω.t (everything is true)',
       '⊥ ≡ * ≠ *',
       '⊥ ≡ 0',
       '⊥ ≡ ∅',
+      '⊥ ≡ ∀t∈Ω.t (everything is true)',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Falsity is defined as ⊥ ≡ ∀t∈Ω.t, meaning "every proposition is true." This is a contradiction, since not every proposition can be true. This definition makes ⊥ a "negative" connective.',
@@ -115,11 +115,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'According to the chapter, what is the only source of nonconstructive proofs in arithmetic and analysis?',
     options: [
       'The law of excluded middle',
-      'The axiom of choice',
       'Double negation elimination',
-      'Proof by contradiction'
+      'Proof by contradiction',
+      'The axiom of choice',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'As far as we know, the only proofs in arithmetic and analysis which are essentially nonconstructive depend on the axiom of choice, which asserts that for any nonempty collection of nonempty sets, there exists a set containing exactly one element from each.',
@@ -130,11 +130,11 @@ export const section57Questions: QuizQuestion[] = [
     question: 'How many truth values does the type Ω have in intuitionistic type theory?',
     options: [
       'Exactly two (true and false)',
-      'Exactly three (true, false, unknown)',
       'More than two (infinitely many)',
+      'Exactly three (true, false, unknown)',
       'Zero (truth values are undefined)',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'In intuitionistic type theory, Ω has more than two truth values. Unlike classical logic where every proposition is either true or false, intuitionistic logic allows for propositions whose truth value is not yet determined.',

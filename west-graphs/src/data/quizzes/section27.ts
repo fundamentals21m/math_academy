@@ -6,10 +6,22 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the Erdős-Rényi model $G(n,p)$, each edge appears:',
     options: [
-      'With probability $1/n$',
+      'With probability $1/n
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$G(n,p)$: each of the $\\binom{n}{2}$ possible edges appears independently with probability $p$.',
+  },
       'Deterministically',
-      'Independently with probability $p$',
-      'With probability $p^2$'
+      'With probability $p^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$G(n,p)$: each of the $\\binom{n}{2}$ possible edges appears independently with probability $p$.',
+  },
+      'Independently with probability $p
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$G(n,p)$: each of the $\\binom{n}{2}$ possible edges appears independently with probability $p$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -140,12 +152,12 @@ export const section27Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The probabilistic method pioneered by Erdős can prove:',
     options: [
+      'Existence of structures without explicit construction',
       'Only upper bounds on parameters',
       'Only lower bounds on Ramsey numbers',
       'Algorithm correctness',
-      'Existence of structures without explicit construction'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Probabilistic method: show random objects have desired property with positive probability, proving existence.',
   },

@@ -6,10 +6,22 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The differential equation for exponential growth is:',
     options: [
-      '$y\' = -ky$',
-      '$y\' = k$',
-      '$y\'\' = ky$',
-      '$y\' = ky$ (with $k > 0$)'
+      '$y\\' = ky$ (with $k > 0$)',
+      '$y\\' = -ky
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Exponential growth: rate of change proportional to current amount.',
+  },
+      '$y\\' = k
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Exponential growth: rate of change proportional to current amount.',
+  },
+      '$y\\'\\' = ky
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Exponential growth: rate of change proportional to current amount.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -80,10 +92,26 @@ export const section42Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The half-life $T$ of a decaying substance satisfies:',
     options: [
-      '$e^{kT} = 2$',
-      '$kT = 1$',
-      '$e^{kT} = 1/2$',
-      '$T = k$'
+      '$e^{kT} = 2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'At half-life, $y(T) = y_0/2$, so $e^{kT} = 1/2$ (where $k < 0$).',
+  },
+      '$kT = 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'At half-life, $y(T) = y_0/2$, so $e^{kT} = 1/2$ (where $k < 0$).',
+  },
+      '$T = k
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'At half-life, $y(T) = y_0/2$, so $e^{kT} = 1/2$ (where $k < 0$).',
+  },
+      '$e^{kT} = 1/2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'At half-life, $y(T) = y_0/2$, so $e^{kT} = 1/2$ (where $k < 0$).',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

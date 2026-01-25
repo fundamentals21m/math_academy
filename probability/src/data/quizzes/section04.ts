@@ -9,7 +9,7 @@ export const section04Questions: QuizQuestion[] = [
       'Permutations count unordered selections; combinations count ordered arrangements',
       'Permutations count ordered arrangements; combinations count unordered selections',
       'Permutations are always larger than combinations',
-      'There is no difference'
+      'There is no difference',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -29,10 +29,26 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The formula for $\\binom{n}{r}$ is:',
     options: [
-      '$\\frac{n!}{(n-r)!}$',
-      '$\\frac{n!}{r!}$',
-      '$\\frac{n!}{r!(n-r)!}$',
-      '$n^r$'
+      '$\\frac{n!}{(n-r)!}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The binomial coefficient $\\binom{n}{r} = \\frac{n!}{r!(n-r)!}$'
+  },
+      '$\\frac{n!}{r!}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The binomial coefficient $\\binom{n}{r} = \\frac{n!}{r!(n-r)!}$'
+  },
+      '$n^r
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The binomial coefficient $\\binom{n}{r} = \\frac{n!}{r!(n-r)!}$'
+  },
+      '$\\frac{n!}{r!(n-r)!}
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The binomial coefficient $\\binom{n}{r} = \\frac{n!}{r!(n-r)!}$'
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -43,10 +59,26 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Pascal\'s Identity states that $\\binom{n}{r}$ equals:',
     options: [
-      '$\\binom{n+1}{r+1}$',
-      '$\\binom{n-1}{r-1} \\cdot \\binom{n-1}{r}$',
-      '$\\binom{n-1}{r-1} - \\binom{n-1}{r}$',
-      '$\\binom{n-1}{r-1} + \\binom{n-1}{r}$'
+      '$\\binom{n-1}{r-1} + \\binom{n-1}{r}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Pascal\'s Identity: $\\binom{n}{r} = \\binom{n-1}{r-1} + \\binom{n-1}{r}$. This reflects choosing to either include or exclude a specific element.'
+  },
+      '$\\binom{n+1}{r+1}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Pascal\'s Identity: $\\binom{n}{r} = \\binom{n-1}{r-1} + \\binom{n-1}{r}$. This reflects choosing to either include or exclude a specific element.'
+  },
+      '$\\binom{n-1}{r-1} \\cdot \\binom{n-1}{r}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Pascal\'s Identity: $\\binom{n}{r} = \\binom{n-1}{r-1} + \\binom{n-1}{r}$. This reflects choosing to either include or exclude a specific element.'
+  },
+      '$\\binom{n-1}{r-1} - \\binom{n-1}{r}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Pascal\'s Identity: $\\binom{n}{r} = \\binom{n-1}{r-1} + \\binom{n-1}{r}$. This reflects choosing to either include or exclude a specific element.'
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -66,10 +98,26 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The symmetry property states that $\\binom{n}{r}$ equals:',
     options: [
-      '$\\binom{n}{n-r}$',
-      '$\\binom{r}{n}$',
-      '$\\binom{n-r}{r}$',
-      '$\\binom{n+r}{n}$'
+      '$\\binom{r}{n}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Symmetry: $\\binom{n}{r} = \\binom{n}{n-r}$. Choosing $r$ objects to include is equivalent to choosing $n-r$ objects to exclude.'
+  },
+      '$\\binom{n}{n-r}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Symmetry: $\\binom{n}{r} = \\binom{n}{n-r}$. Choosing $r$ objects to include is equivalent to choosing $n-r$ objects to exclude.'
+  },
+      '$\\binom{n-r}{r}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Symmetry: $\\binom{n}{r} = \\binom{n}{n-r}$. Choosing $r$ objects to include is equivalent to choosing $n-r$ objects to exclude.'
+  },
+      '$\\binom{n+r}{n}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Symmetry: $\\binom{n}{r} = \\binom{n}{n-r}$. Choosing $r$ objects to include is equivalent to choosing $n-r$ objects to exclude.'
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

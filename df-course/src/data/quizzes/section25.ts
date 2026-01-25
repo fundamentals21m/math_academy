@@ -38,10 +38,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'It is abelian',
       'It has order 12',
-      'It contains the Klein four-group $V_4$ as a normal subgroup',
       'It has a Sylow 2-subgroup',
+      'It contains the Klein four-group $V_4$ as a normal subgroup',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '$A_4$ contains $V_4 = \\{e, (12)(34), (13)(24), (14)(23)\\}$ which is normal.',
   },
@@ -79,10 +79,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'Solvable',
       'A $p$-group',
+      'Not solvable',
       'Cyclic',
-      'Not solvable'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'A non-abelian simple group is not solvable (solvable groups have abelian composition factors).',
   },

@@ -11,10 +11,10 @@ export const section12Questions: QuizQuestion[] = [
     options: [
       'None',
       'Exactly two',
-      'Infinitely many',
       'Exactly one',
+      'Infinitely many',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Playfair\'s axiom (1795) states that through any point not on a line, there is exactly one line parallel to it.',
@@ -24,12 +24,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the sum of the interior angles of a triangle in Euclidean geometry?',
     options: [
-      '180° (two right angles)',
       '90° (one right angle)',
+      '180° (two right angles)',
       '270° (three right angles)',
       '360° (four right angles)',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'In Euclidean geometry, the angle sum of any triangle is 180° (two right angles). This is a consequence of the parallel axiom.',
@@ -40,11 +40,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Two lines cut by a transversal are parallel when their interior angles sum to:',
     options: [
       '90°',
-      '360°',
       '180°',
+      '360°',
       '270°',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'When a transversal cuts two lines, they are parallel if and only if the interior angles on the same side sum to 180° (two right angles).',
@@ -54,12 +54,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Vertically opposite angles are:',
     options: [
+      'Always equal',
       'Always complementary (sum to 90°)',
       'Always supplementary (sum to 180°)',
-      'Always equal',
       'Always right angles',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'When two lines cross, vertically opposite angles are always equal. Each angle plus its adjacent angle equals 180°.',
@@ -79,12 +79,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which statement is NOT equivalent to the parallel axiom?',
     options: [
-      'The angle sum of a triangle is 180°',
       'Every number has a prime factorization',
+      'The angle sum of a triangle is 180°',
       'Rectangles of any size exist',
-      'Exactly one parallel exists through any external point'
+      'Exactly one parallel exists through any external point',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'The prime factorization theorem is from arithmetic, not geometry. The other three are all equivalent formulations of the parallel axiom.',
@@ -95,11 +95,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Why is the existence of rectangles important?',
     options: [
       'It proves the Pythagorean theorem',
-      'It is the key to the concept of area and connecting geometry to arithmetic',
       'It shows that all angles are equal',
+      'It is the key to the concept of area and connecting geometry to arithmetic',
       'It disproves non-Euclidean geometry',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The existence of rectangles is key to the intuitive concept of area and to finding a common ground for geometry and arithmetic.',

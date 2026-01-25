@@ -8,8 +8,12 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'The protocol becomes incomplete',
       'The commitment becomes unbinding',
-      'The adversary knows $a$ and can check if $l = a$',
-      'The verification equations fail'
+      'The verification equations fail',
+      'The adversary knows $a$ and can check if $l = a
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Without blinding, $l = a$ directly. The adversary knows $a$ and can distinguish real ($l = a$) from simulated (random $l$).',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -69,9 +73,13 @@ export const section06Questions: QuizQuestion[] = [
     question: 'Why can\'t we remove $\\tau_2$ from the protocol?',
     options: [
       'Completeness would fail',
-      'The adversary could compute $s_a s_b$ from $l, r, x$ and check $T_2$',
       'The protocol would become non-interactive',
-      '$T_2$ is needed for binding'
+      'The adversary could compute $s_a s_b$ from $l, r, x$ and check $T_2
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'Given $a, b, x, l, r$, the adversary can compute $s_a = (l-a)/x$ and $s_b = (r-b)/x$, then check if $T_2 = s_a s_b G_0$.',
+  },
+      '$T_2$ is needed for binding',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -82,12 +90,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Each blinding factor serves to make its corresponding transcript value:',
     options: [
-      'Uniformly distributed',
       'Computationally hard',
       'Binding',
       'Non-malleable',
+      'Uniformly distributed',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Blinding factors ensure transcript values are uniformly distributed, allowing simulation without the witness.',
   },
@@ -97,11 +105,11 @@ export const section06Questions: QuizQuestion[] = [
     question: 'In the proof of PSHVZK, the key step is showing:',
     options: [
       'The protocol is complete',
+      'Real and simulated transcript distributions are equal',
       'The simulator runs in polynomial time',
       'The witness is extractable',
-      'Real and simulated transcript distributions are equal'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The proof shows that both distributions factor the same way, proving they are identical.',
   },

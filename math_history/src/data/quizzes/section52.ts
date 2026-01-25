@@ -7,12 +7,12 @@ export const section52Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Abel-Ruffini theorem states that:',
     options: [
+      'There is no general formula using radicals to solve quintic equations',
       'All quintics can be solved by radicals',
       'Quintic equations have no solutions',
-      'There is no general formula using radicals to solve quintic equations',
-      'The quadratic formula is wrong'
+      'The quadratic formula is wrong',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The Abel-Ruffini theorem (1824) proves that there is no general algebraic formula—using only arithmetic operations and root extraction—for solving polynomial equations of degree 5 or higher. Quintics have solutions, but no universal radical formula exists.',
@@ -25,7 +25,7 @@ export const section52Questions: QuizQuestion[] = [
       'Gauss',
       'Newton',
       'Euler',
-      'Galois'
+      'Galois',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -54,11 +54,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'The fact that the general quintic is unsolvable by radicals means:',
     options: [
       'No quintic equation has solutions',
-      'No universal formula exists, but specific quintics may still be solvable',
       'All quintics are equally difficult',
-      'Numerical methods cannot approximate roots'
+      'No universal formula exists, but specific quintics may still be solvable',
+      'Numerical methods cannot approximate roots',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The theorem concerns the general quintic—there\'s no formula that works for all. Specific quintics with special structure (like $x^5 - 2 = 0$) can still be solved by radicals if their Galois group is solvable. All quintics have roots by the Fundamental Theorem of Algebra.',
@@ -72,7 +72,7 @@ export const section52Questions: QuizQuestion[] = [
       'Is infinite',
       'Has too many elements',
       'Contains $A_5$, which is simple and non-abelian',
-      'Is commutative'
+      'Is commutative',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -85,11 +85,11 @@ export const section52Questions: QuizQuestion[] = [
     question: 'Even though the quintic has no radical solution, it can be solved using:',
     options: [
       'Geometric constructions',
+      'Elliptic functions or numerical methods',
       'Only complex numbers',
       'Infinite series that never converge',
-      'Elliptic functions or numerical methods'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Hermite showed that quintic equations can be solved using elliptic modular functions. Additionally, numerical methods like Newton\'s method can find roots to arbitrary precision. The quintic can also be expressed using hypergeometric functions.',

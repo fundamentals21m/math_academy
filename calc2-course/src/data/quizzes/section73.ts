@@ -6,10 +6,18 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The general solution of the nonhomogeneous system $Y\' = AY + F(t)$ is:',
     options: [
-      '$e^{tA}F(t)$',
-      '$Y_h + Y_p$ where $Y_h$ solves $Y\' = AY$ and $Y_p$ is a particular solution',
+      '$e^{tA}F(t)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The general solution is the sum of the general homogeneous solution and any particular solution.',
+  },
       'Only the particular solution',
-      '$Y_h \\cdot Y_p$'
+      '$Y_h + Y_p$ where $Y_h$ solves $Y\\' = AY$ and $Y_p$ is a particular solution',
+      '$Y_h \\cdot Y_p
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The general solution is the sum of the general homogeneous solution and any particular solution.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -110,12 +118,12 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The method of undetermined coefficients for systems works when:',
     options: [
-      '$F(t)$ involves exponentials, polynomials, sines, and cosines',
       '$F(t)$ is any continuous function',
       '$A$ is diagonal',
       '$F(t)$ is constant',
+      '$F(t)$ involves exponentials, polynomials, sines, and cosines',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Undetermined coefficients applies when $F(t)$ is a combination of functions that reproduce themselves under differentiation.',
   },

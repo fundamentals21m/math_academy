@@ -7,12 +7,12 @@ export const section26Questions: QuizQuestion[] = [
     question: 'What technique did Fermat call "adequality"?',
     difficulty: 'easy',
     options: [
-      'Setting nearly equal quantities equal to find extrema',
       'Solving quadratic equations',
       'Constructing perpendicular lines',
-      'Calculating areas under curves'
+      'Calculating areas under curves',
+      'Setting nearly equal quantities equal to find extrema',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     explanation:
       'Fermat\'s "adequality" (adaequalitas) was the technique of setting $f(x + e) \\approx f(x)$ for small $e$, simplifying, dividing by $e$, then setting $e = 0$. This finds maxima and minima.',
   },
@@ -22,12 +22,12 @@ export const section26Questions: QuizQuestion[] = [
     question: 'What does a tangent line to a curve at a point represent?',
     difficulty: 'easy',
     options: [
-      'The line perpendicular to the curve',
       'The line that best approximates the curve near that point',
+      'The line perpendicular to the curve',
       'Any line through the point',
       'The line connecting two points on the curve',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'A tangent line at a point is the line that best approximates (or "touches") the curve at that point. It\'s the limit of secant lines as the second point approaches the first.',
   },
@@ -41,7 +41,7 @@ export const section26Questions: QuizQuestion[] = [
       '3',
       '9',
       '6',
-      '2'
+      '2',
     ],
     correctIndex: 2,
     explanation:
@@ -55,11 +55,11 @@ export const section26Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Integration',
+      'The derivative',
       'Matrix multiplication',
       'Completing the square',
-      'The derivative'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     explanation:
       'Fermat\'s adequality is essentially computing $\\lim_{e \\to 0} \\frac{f(a+e) - f(a)}{e}$, which is exactly the definition of the derivative $f\'(a)$.',
   },
@@ -80,12 +80,12 @@ export const section26Questions: QuizQuestion[] = [
       'How many years before Newton and Leibniz did Fermat discover his method for tangents?',
     difficulty: 'hard',
     options: [
-      'About 40 years',
       'About 20 years',
+      'About 40 years',
       'About 10 years',
-      'About 100 years'
+      'About 100 years',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     explanation:
       'Fermat discovered his methods around 1629. Newton and Leibniz developed calculus in the late 1660s and 1670s—about 40 years later. Fermat never systematized his approach into a general theory.',
   },

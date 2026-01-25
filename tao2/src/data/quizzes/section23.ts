@@ -126,10 +126,26 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The complex exponential $e^z$ for $z = x + iy$ equals:',
     options: [
-      '$e^x e^{iy} = e^x(\\cos y + i \\sin y)$',
-      '$e^x + e^{iy}$',
-      '$e^x \\cos y$',
-      '$(e^x)^{iy}$'
+      '$e^x + e^{iy}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$e^z = e^{x+iy} = e^x \\cdot e^{iy} = e^x(\\cos y + i \\sin y)$.',
+  },
+      '$e^x e^{iy} = e^x(\\cos y + i \\sin y)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$e^z = e^{x+iy} = e^x \\cdot e^{iy} = e^x(\\cos y + i \\sin y)$.',
+  },
+      '$e^x \\cos y
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$e^z = e^{x+iy} = e^x \\cdot e^{iy} = e^x(\\cos y + i \\sin y)$.',
+  },
+      '$(e^x)^{iy}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$e^z = e^{x+iy} = e^x \\cdot e^{iy} = e^x(\\cos y + i \\sin y)$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

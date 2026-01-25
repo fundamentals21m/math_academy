@@ -84,10 +84,26 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Maclaurin polynomial is the Taylor polynomial at:',
     options: [
-      '$a = 1$',
-      '$a = \\pi$',
-      '$a = e$',
-      '$a = 0$'
+      '$a = 1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Maclaurin = Taylor centered at $a = 0$.',
+  },
+      '$a = \\pi
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Maclaurin = Taylor centered at $a = 0$.',
+  },
+      '$a = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Maclaurin = Taylor centered at $a = 0$.',
+  },
+      '$a = e
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Maclaurin = Taylor centered at $a = 0$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

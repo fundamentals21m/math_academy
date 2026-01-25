@@ -6,12 +6,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A tree is a connected graph that:',
     options: [
-      'Has at least one cycle',
       'Has no cycles',
+      'Has at least one cycle',
       'Is bipartite',
       'Has maximum degree 2',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A tree is a connected acyclic graph. It has no cycles.',
   },
@@ -51,11 +51,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'Which is NOT equivalent to "$G$ is a tree"?',
     options: [
       '$G$ is connected and has $n-1$ edges',
-      '$G$ has no cycles and has $n-1$ edges',
       '$G$ is connected and every edge is a bridge',
-      'Between any two vertices there is exactly one path'
+      '$G$ has no cycles and has $n-1$ edges',
+      'Between any two vertices there is exactly one path',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'All four are equivalent characterizations of trees! The question is tricky - they are all valid.',
   },
@@ -75,10 +75,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'A vertex of degree at least 3',
       'An Eulerian trail',
+      'At least two leaves (vertices of degree 1)',
       'A perfect matching',
-      'At least two leaves (vertices of degree 1)'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'A tree with $n \\geq 2$ vertices has at least 2 leaves. This follows from the degree sum being $2(n-1)$ with all degrees $\\geq 1$.',
   },
@@ -87,12 +87,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The center of a tree is:',
     options: [
-      'Either 1 or 2 adjacent vertices',
       'Always a single vertex',
       'The vertex with maximum degree',
-      'The set of all leaves'
+      'The set of all leaves',
+      'Either 1 or 2 adjacent vertices',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The center of a tree (vertices minimizing eccentricity) consists of either one vertex or two adjacent vertices.',
   },

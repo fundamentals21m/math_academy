@@ -66,10 +66,22 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Bessel function $J_0(0)$ equals:',
     options: [
-      '$1$',
-      '$0$',
-      '$\\infty$',
-      'Undefined'
+      '$0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Bessel function $J_0(x)$ has the series expansion starting with $1 - \\frac{x^2}{4} + \\cdots$, so $J_0(0) = 1$.',
+  },
+      '$\\infty
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Bessel function $J_0(x)$ has the series expansion starting with $1 - \\frac{x^2}{4} + \\cdots$, so $J_0(0) = 1$.',
+  },
+      'Undefined',
+      '$1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Bessel function $J_0(x)$ has the series expansion starting with $1 - \\frac{x^2}{4} + \\cdots$, so $J_0(0) = 1$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -80,10 +92,18 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the Bessel equation of order $\\nu = 0$, the indicial equation has:',
     options: [
-      'Two distinct roots $r = 0$ and $r = 1$',
-      'A repeated root $r = 0$',
+      'A repeated root $r = 0
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'When $\\nu = 0$, the indicial equation $r^2 - \\nu^2 = r^2 = 0$ has a double root at $r = 0$, requiring logarithmic terms for the second solution.',
+  },
+      'Two distinct roots $r = 0$ and $r = 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'When $\\nu = 0$, the indicial equation $r^2 - \\nu^2 = r^2 = 0$ has a double root at $r = 0$, requiring logarithmic terms for the second solution.',
+  },
       'Complex roots',
-      'No real roots'
+      'No real roots',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -94,10 +114,26 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The recurrence relation for the coefficients in $J_\\nu(x)$ is:',
     options: [
-      '$a_{n+2} = a_n$',
-      '$a_{n+1} = \\frac{a_n}{n+1}$',
-      '$a_{n+2} = -\\frac{a_n}{(n+2)(n+2+2\\nu)}$',
-      '$a_{n+1} = -a_n$'
+      '$a_{n+2} = -\\frac{a_n}{(n+2)(n+2+2\\nu)}
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The Bessel equation yields a two-term recurrence where $a_{n+2}$ relates to $a_n$, with odd-indexed coefficients being zero.',
+  },
+      '$a_{n+2} = a_n
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The Bessel equation yields a two-term recurrence where $a_{n+2}$ relates to $a_n$, with odd-indexed coefficients being zero.',
+  },
+      '$a_{n+1} = \\frac{a_n}{n+1}
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The Bessel equation yields a two-term recurrence where $a_{n+2}$ relates to $a_n$, with odd-indexed coefficients being zero.',
+  },
+      '$a_{n+1} = -a_n
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The Bessel equation yields a two-term recurrence where $a_{n+2}$ relates to $a_n$, with odd-indexed coefficients being zero.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

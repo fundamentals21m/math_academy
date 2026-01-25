@@ -6,12 +6,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What percentage of all bitcoin that will ever exist has already been issued?',
     options: [
+      '95%',
       '80%',
       '50%',
-      '95%',
-      '99%'
+      '99%',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Of the 21 million bitcoin that will ever exist, 95% has already been issued.'
   },
@@ -34,12 +34,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What valuation approach does the book recommend institutions shift toward?',
     options: [
-      'Future Value',
       'Net Asset Value',
+      'Future Value',
       'Present Value',
-      'Book Value'
+      'Book Value',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The book argues that institutions must shift from Present Value to Future Value thinking to properly understand bitcoin\'s role in protecting purchasing power.'
   },
@@ -58,11 +58,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'After what year will there be no new bitcoin issued?',
     options: [
       '2100',
-      '2140',
       '2050',
-      '2030'
+      '2140',
+      '2030',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Bitcoin\'s issuance will continue to halve every four years until 2140, after which there will be no new bitcoin issued.'
   }

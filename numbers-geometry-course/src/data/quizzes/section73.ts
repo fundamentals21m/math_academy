@@ -9,12 +9,12 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is the area under a curve defined?',
     options: [
-      'As the least upper bound of polygon areas',
       'By a formula involving x and y',
+      'As the least upper bound of polygon areas',
       'Using calculus only',
       'By counting grid squares',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The area is defined as the least upper bound of all polygon areas contained in the region.',
@@ -26,10 +26,10 @@ export const section73Questions: QuizQuestion[] = [
     options: [
       'Multiplied by M + N',
       'Multiplied by M²',
-      'Multiplied by M × N',
       'Unchanged',
+      'Multiplied by M × N',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Scaling by M in x and N in y multiplies area by MN—this is why circle area is proportional to r².',
@@ -55,11 +55,11 @@ export const section73Questions: QuizQuestion[] = [
     question: 'What is the area under y = x² from x = 0 to x = 1?',
     options: [
       '1/2',
-      '1/4',
       '1/3',
+      '1/4',
       '1',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Archimedes showed this area is 1/3 by summing squares 1² + 2² + ... + (n-1)² and taking the limit.',
@@ -69,12 +69,12 @@ export const section73Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is the parabola special among algebraic curves?',
     options: [
-      'It has the largest area',
       'Its area function is algebraic (not transcendental)',
+      'It has the largest area',
       'It is the only curve with finite area',
       'It was discovered first',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The parabola\'s area function (x³/3) is algebraic, unlike the circle or hyperbola.',
@@ -83,8 +83,13 @@ export const section73Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: 'For a unit circle sector with angle θ, what is the area?',
-    options: ['θ', 'θ/2', '2θ', 'πθ'],
-    correctIndex: 1,
+    options: [
+      'θ',
+      '2θ',
+      'θ/2',
+      'πθ',
+    ],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A sector with angle θ has area θ/2, so the parameter in (cos θ, sin θ) is twice the area.',
@@ -111,10 +116,10 @@ export const section73Questions: QuizQuestion[] = [
     options: [
       'n(n+1)/2',
       'n³/3',
+      'n(n+1)(2n+1)/6',
       'n²(n+1)²/4',
-      'n(n+1)(2n+1)/6'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'This formula, known to Archimedes, is n(n+1)(2n+1)/6 and is key to finding the parabola area.',

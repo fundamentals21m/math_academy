@@ -8,11 +8,11 @@ export const section33Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Fermat and Descartes',
-      'Newton and Leibniz',
       'Euler and Bernoulli',
+      'Newton and Leibniz',
       'Cauchy and Weierstrass',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'Isaac Newton (1642–1727) and Gottfried Wilhelm Leibniz (1646–1716) independently developed calculus in the late 17th century. Newton developed it earlier (~1666) but Leibniz published first (1684).',
   },
@@ -22,12 +22,12 @@ export const section33Questions: QuizQuestion[] = [
     question: 'What term did Newton use for the derivative (rate of change)?',
     difficulty: 'easy',
     options: [
+      'Fluxion',
       'Differential',
       'Gradient',
-      'Fluxion',
-      'Increment'
+      'Increment',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     explanation:
       'Newton called the derivative the "fluxion" and denoted it with a dot: $\\dot{x}$. The position variable was called the "fluent." This terminology came from thinking of quantities as flowing or changing over time.',
   },
@@ -40,7 +40,7 @@ export const section33Questions: QuizQuestion[] = [
       'It was invented first',
       'It was endorsed by the Royal Society',
       'It uses fewer symbols',
-      'It makes the chain rule look like fraction multiplication'
+      'It makes the chain rule look like fraction multiplication',
     ],
     correctIndex: 3,
     explanation:
@@ -53,12 +53,12 @@ export const section33Questions: QuizQuestion[] = [
       'What key insight made Newton and Leibniz the "inventors" of calculus?',
     difficulty: 'medium',
     options: [
-      'They recognized differentiation and integration as inverse operations',
       'They discovered the power rule',
+      'They recognized differentiation and integration as inverse operations',
       'They proved the existence of infinitesimals',
-      'They invented coordinate geometry'
+      'They invented coordinate geometry',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     explanation:
       'The crucial insight was recognizing that finding tangents (differentiation) and finding areas (integration) are inverse operations. This connection—the Fundamental Theorem of Calculus—unified two previously separate problem types.',
   },
@@ -70,11 +70,11 @@ export const section33Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'Descartes',
-      'Barrow',
       'Fermat',
       'Cavalieri',
+      'Barrow',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     explanation:
       'Isaac Barrow (Newton\'s teacher) proved a geometric version of what became the Fundamental Theorem of Calculus in 1670. However, he didn\'t recognize it as a fundamental principle—that insight came from his student Newton.',
   },

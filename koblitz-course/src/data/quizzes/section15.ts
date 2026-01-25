@@ -6,10 +6,26 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Fermat\'s factorization method represents $n$ as:',
     options: [
-      '$n = p + q$',
-      '$n = a^2 - b^2 = (a-b)(a+b)$',
-      '$n = 2^k \\cdot m$',
-      '$n = p^a \\cdot q^b$'
+      '$n = a^2 - b^2 = (a-b)(a+b)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Fermat factorization: $n = a^2 - b^2 = (a-b)(a+b)$ gives factors when $a, b$ are found.',
+  },
+      '$n = p + q
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Fermat factorization: $n = a^2 - b^2 = (a-b)(a+b)$ gives factors when $a, b$ are found.',
+  },
+      '$n = 2^k \\cdot m
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Fermat factorization: $n = a^2 - b^2 = (a-b)(a+b)$ gives factors when $a, b$ are found.',
+  },
+      '$n = p^a \\cdot q^b
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Fermat factorization: $n = a^2 - b^2 = (a-b)(a+b)$ gives factors when $a, b$ are found.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +36,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Fermat\'s method is most efficient when:',
     options: [
-      'Factors are close together (near $\\sqrt{n}$)',
       'Factors are small',
+      'Factors are close together (near $\\sqrt{n}$)',
       'One factor is 2',
       'Factors differ greatly in size',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'When $p \\approx q \\approx \\sqrt{n}$, the search for $a = (p+q)/2$ starts near $\\sqrt{n}$.',
   },
@@ -45,8 +61,12 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       '$a$ and $b$ both odd',
       '$a$ and $b$ both even',
+      '$a > b
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'For non-trivial factorization, we need $a > b > 0$ so that $a - b > 0$ and $a + b > a - b$.',
+  },
       '$a$ and $b$ coprime',
-      '$a > b$'
     ],
     correctIndex: 3,
     difficulty: 'easy',

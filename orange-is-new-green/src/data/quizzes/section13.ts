@@ -8,10 +8,10 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'A stablecoin on Ethereum',
       'A Bitcoin savings account',
-      'Dollar-stable balances using Bitcoin short positions through exchange APIs',
       'A hardware wallet',
+      'Dollar-stable balances using Bitcoin short positions through exchange APIs',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Stablesats allows users to hold dollar-stable balances by executing Bitcoin short positions through exchange APIs, though with custodial trade-offs.',
   },
@@ -21,11 +21,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'What services might third-party DLC providers offer?',
     options: [
       'Bitcoin custody',
-      'CET backups, oracle services, automatic rolling, and counterparty matching',
       'Mining pools',
-      'Exchange listings'
+      'CET backups, oracle services, automatic rolling, and counterparty matching',
+      'Exchange listings',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Third-party providers can handle DLC complexity by offering CET storage, oracle services, automatic position rolling, and matching counterparties.',
   },

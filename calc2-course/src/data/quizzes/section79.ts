@@ -62,10 +62,22 @@ export const section79Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $f(x,y) = \\frac{xy}{x^2 + y^2}$ (with $f(0,0) = 0$), approaching $(0,0)$ along $y = mx$ gives:',
     options: [
-      '$0$ for all $m$',
       '$\\frac{m}{1+m^2}$ (depends on $m$)',
-      '$1$ for all $m$',
-      '$m$ for all $m$'
+      '$0$ for all $m
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Along $y = mx$: $f(x, mx) = \\frac{mx^2}{x^2 + m^2x^2} = \\frac{m}{1+m^2}$, which depends on the slope $m$.',
+  },
+      '$1$ for all $m
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Along $y = mx$: $f(x, mx) = \\frac{mx^2}{x^2 + m^2x^2} = \\frac{m}{1+m^2}$, which depends on the slope $m$.',
+  },
+      '$m$ for all $m
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'Along $y = mx$: $f(x, mx) = \\frac{mx^2}{x^2 + m^2x^2} = \\frac{m}{1+m^2}$, which depends on the slope $m$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -78,10 +90,10 @@ export const section79Questions: QuizQuestion[] = [
     options: [
       'The limit exists and equals the average of path limits',
       'The function is continuous',
-      'The function is differentiable',
       'The limit does not exist',
+      'The function is differentiable',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'If different paths give different limits, the overall limit does not exist (the limit must be unique if it exists).',
   },
@@ -91,11 +103,11 @@ export const section79Questions: QuizQuestion[] = [
     question: 'For $f: \\mathbb{R}^n \\to \\mathbb{R}^m$ given by $f(\\mathbf{x}) = (f_1(\\mathbf{x}), \\ldots, f_m(\\mathbf{x}))$, continuity means:',
     options: [
       'Only $f_1$ needs to be continuous',
+      'Each component $f_i$ is continuous',
       '$f_1 \\cdot f_2 \\cdots f_m$ is continuous',
       '$\\sum_i f_i$ is continuous',
-      'Each component $f_i$ is continuous'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A vector-valued function is continuous iff each component function is continuous.',
   },

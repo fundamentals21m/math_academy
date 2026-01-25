@@ -85,9 +85,13 @@ export const section11Questions: QuizQuestion[] = [
     question: 'The sequence $f_n(x) = x^n$ on $[0, 1]$ converges:',
     options: [
       'Uniformly to the pointwise limit',
-      'Uniformly on $[0, 1]$ and pointwise on $(0, 1)$',
+      'Pointwise but not uniformly',
+      'Uniformly on $[0, 1]$ and pointwise on $(0, 1)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The limit function is discontinuous at $x = 1$, but each $f_n$ is continuous. Since uniform limits of continuous functions are continuous, the convergence cannot be uniform.',
+  },
       'Neither pointwise nor uniformly',
-      'Pointwise but not uniformly'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -98,12 +102,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Uniform convergence implies pointwise convergence. Is the converse true?',
     options: [
-      'No, pointwise convergence does not imply uniform convergence',
       'Yes, always',
       'Yes, if the domain is compact',
-      'Yes, if the functions are continuous'
+      'No, pointwise convergence does not imply uniform convergence',
+      'Yes, if the functions are continuous',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Pointwise convergence does not imply uniform convergence. The example $f_n(x) = x^n$ on $[0, 1]$ demonstrates this.',
   },

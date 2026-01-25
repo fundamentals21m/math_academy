@@ -9,12 +9,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When did Gödel prove his incompleteness theorem?',
     options: [
+      '1931',
       '1920',
       '1930',
       '1950',
-      '1931',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Gödel proved his incompleteness theorem in 1931. In 1930, he had proved a completeness theorem for the predicate calculus.',
@@ -24,12 +24,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does it mean for a formal language to be consistent?',
     options: [
+      'There is no proof of a contradiction (⊥)',
       'All formulas are provable',
       'No formula is provable',
-      'There is no proof of a contradiction (⊥)',
       'Every statement has exactly one proof',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'A formal language is consistent if there is no proof whose last line is ⊥ (falsehood). In other words, a consistent language does not contain a proof of a contradiction.',
@@ -54,12 +54,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is an ω-complete model?',
     options: [
-      'A model where A(Sⁿ0) true for all n implies ∀x A(x) is true',
       'A model where every formula is either true or false',
       'A model with infinitely many elements',
+      'A model where A(Sⁿ0) true for all n implies ∀x A(x) is true',
       'A model that satisfies all axioms',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A model is ω-complete if, for any formula A(x), whenever A(Sⁿ0) is true in that model for each natural number n, then ∀x∈N A(x) is also true in that model.',
@@ -69,12 +69,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What does Gödel's Incompleteness Theorem state?",
     options: [
-      'No formal language can describe arithmetic',
       'There is a formula true in all ω-complete models but not provable in L',
+      'No formal language can describe arithmetic',
       'All arithmetic statements are decidable',
       'Consistency implies completeness',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       "Gödel's Incompleteness Theorem states that there is a formula in L which is true in any ω-complete model, but not provable in L, assuming L is consistent. This shows the existence of true but unprovable statements.",
@@ -101,10 +101,10 @@ export const section58Questions: QuizQuestion[] = [
     options: [
       '"This sentence is true"',
       '"This sentence is false"',
-      '"This sentence is not provable"',
       '"This sentence contradicts itself"',
+      '"This sentence is not provable"',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The Gödel sentence G essentially says "This sentence is not provable in L." If G were provable, it would be true (by soundness), but then what it says would be false—a contradiction. So G is not provable, which makes it true but unprovable.',
@@ -114,12 +114,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'From the intuitionist point of view, why is ω-completeness not assumed?',
     options: [
-      'Proving A(Sⁿ0) for each n does not guarantee a proof of ∀x A(x)',
       'ω-completeness requires infinite proofs',
+      'Proving A(Sⁿ0) for each n does not guarantee a proof of ∀x A(x)',
       'Intuitionists reject the natural numbers',
-      'ω-completeness is inconsistent'
+      'ω-completeness is inconsistent',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'For intuitionists, truth equals provability. Even if A(Sⁿ0) has a proof for each n, this does not guarantee that ∀x∈N A(x) has a proof. Hence intuitionists have no particular reason to think of the world as ω-complete.',
@@ -129,12 +129,12 @@ export const section58Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "What is the relationship between Gödel's Completeness and Incompleteness theorems?",
     options: [
-      'Incompleteness implies that some models are not ω-complete',
       'They contradict each other',
       'Completeness implies incompleteness',
+      'Incompleteness implies that some models are not ω-complete',
       'They apply to different mathematical systems',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       "Combining the Completeness Theorem (provable iff true in all models) with the Incompleteness Theorem (some formulas are true in ω-complete models but not provable), we conclude that some models are not ω-complete.",

@@ -12,7 +12,7 @@ export const section45Questions: QuizQuestion[] = [
       'Every integer is the sum of four squares',
       'There are infinitely many primes',
       'Every integer > 1 has a unique prime factorization',
-      'The gcd of two numbers can be found by division'
+      'The gcd of two numbers can be found by division',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -24,12 +24,12 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Bézout\'s Identity say about gcd(a, b)?',
     options: [
+      'gcd(a,b) = ax + by for some integers x, y',
       'gcd(a,b) = a - b',
       'gcd(a,b) is always prime',
-      'gcd(a,b) = ax + by for some integers x, y',
       'gcd(a,b) divides a × b',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'Bézout\'s Identity states that gcd(a,b) is the smallest positive integer that can be expressed as ax + by for integer coefficients x and y.',
@@ -42,7 +42,7 @@ export const section45Questions: QuizQuestion[] = [
       'a divides c',
       'a divides b',
       'b divides c',
-      'a = bc'
+      'a = bc',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -57,7 +57,7 @@ export const section45Questions: QuizQuestion[] = [
       'p divides b + c',
       'p divides b or p divides c',
       'p divides b - c',
-      'p = b or p = c'
+      'p = b or p = c',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -70,11 +70,11 @@ export const section45Questions: QuizQuestion[] = [
     question: 'Why is the smallest divisor > 1 of any integer n > 1 always prime?',
     options: [
       'By the definition of prime numbers',
-      'Because n is always prime',
-      'By Euclid\\'s Algorithm',
       'Because if it were composite, its factors would be smaller divisors',
+      'Because n is always prime',
+      'By Euclid\\\'s Algorithm',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'If the smallest divisor d > 1 were composite, say d = ab with 1 < a < d, then a would also divide n, contradicting that d was smallest.',
@@ -84,12 +84,12 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does the uniqueness of prime factorization follow from the Fundamental Lemma?',
     options: [
-      'If p₁...pᵣ = q₁...qₛ, then p₁ must equal some qⱼ',
       'By counting divisors',
-      'By Euclid\\'s Algorithm',
+      'By Euclid\\\\\'s Algorithm',
       'By induction on the sum of exponents',
+      'If p₁...pᵣ = q₁...qₛ, then p₁ must equal some qⱼ',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'If p₁...pᵣ = q₁...qₛ, then p₁ divides q₁...qₛ. By the Fundamental Lemma (applied repeatedly), p₁ must equal some qⱼ. Cancel and repeat.',
@@ -100,11 +100,11 @@ export const section45Questions: QuizQuestion[] = [
     question: 'How can continued fractions help find x, y in gcd(a,b) = ax + by?',
     options: [
       'The quotients are x and y',
-      'The pₙ₋₁ and qₙ₋₁ from the second-to-last convergent give x, y',
       'The convergents provide candidate solutions',
+      'The pₙ₋₁ and qₙ₋₁ from the second-to-last convergent give x, y',
       'Only works when gcd = 1',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'From the continued fraction a/b = (a₀,...,aₙ), we get aqₙ₋₁ - bpₙ₋₁ = ±d where d = gcd(a,b). So x = ±qₙ₋₁ and y = ∓pₙ₋₁.',
@@ -116,10 +116,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       'The integers ℤ',
       'The rationals ℚ',
-      'The natural numbers ℕ',
       'ℤ[√-5]',
+      'The natural numbers ℕ',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'In ℤ[√-5], we have 6 = 2 × 3 = (1+√-5)(1-√-5), two different factorizations into irreducibles. This failure motivated Kummer and Dedekind to develop ideal theory.',
@@ -130,11 +130,11 @@ export const section45Questions: QuizQuestion[] = [
     question: 'Who gave the first complete solution to linear Diophantine equations?',
     options: [
       'Euclid',
-      'Brahmagupta',
       'Diophantus',
       'Fermat',
+      'Brahmagupta',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'While Diophantus (c. 250 AD) studied these equations with rational solutions, Brahmagupta of India (628 AD) gave the first complete solution for integer solutions.',

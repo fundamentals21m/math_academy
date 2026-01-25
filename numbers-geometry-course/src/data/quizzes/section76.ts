@@ -39,12 +39,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What curve does (cosh θ, sinh θ) parametrize?',
     options: [
-      'The hyperbola x² - y² = 1',
       'The circle x² + y² = 1',
       'The parabola y = x²',
       'The ellipse x²/4 + y²/9 = 1',
+      'The hyperbola x² - y² = 1',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Since cosh²θ - sinh²θ = 1, the point (cosh θ, sinh θ) lies on x² - y² = 1.',
@@ -54,12 +54,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Is cosh θ always ≥ 1?',
     options: [
+      'Yes, cosh θ ≥ 1 always',
       'No, it can be negative',
       'No, it can be between 0 and 1',
-      'Yes, cosh θ ≥ 1 always',
       'Only for θ > 0',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'cosh θ = (eᶿ + e⁻ᶿ)/2 ≥ √(eᶿ · e⁻ᶿ) = 1 by AM-GM, with equality when θ = 0.',
@@ -69,12 +69,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is cosh(θ + φ)?',
     options: [
+      'cosh θ cosh φ + sinh θ sinh φ',
       'cosh θ cosh φ - sinh θ sinh φ',
       'sinh θ cosh φ + cosh θ sinh φ',
       'cosh θ + cosh φ',
-      'cosh θ cosh φ + sinh θ sinh φ',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'cosh(θ + φ) = cosh θ cosh φ + sinh θ sinh φ (note the + sign, unlike cos).',
@@ -100,11 +100,11 @@ export const section76Questions: QuizQuestion[] = [
     question: 'What does adding points Pθ + Pφ on the hyperbola mean?',
     options: [
       'Adding their coordinates',
-      'Taking the point Pθ+φ',
       'Averaging their positions',
+      'Taking the point Pθ+φ',
       'Finding their intersection',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Adding points on the hyperbola means adding their parameters: Pθ + Pφ = Pθ+φ.',
@@ -114,12 +114,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is sinh(-θ)?',
     options: [
-      '-sinh θ',
       'sinh θ',
+      '-sinh θ',
       '-cosh θ',
       'cosh θ',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'sinh(-θ) = -sinh θ because sinh is an odd function (like sin).',

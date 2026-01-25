@@ -6,12 +6,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What triggered the UK Gilt crisis in October 2022?',
     options: [
+      'A mini-budget with £45 billion in unfunded tax cuts',
       'A global pandemic',
       'Brexit negotiations',
-      'A mini-budget with £45 billion in unfunded tax cuts',
       'A cyberattack on UK banks',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Chancellor Kwasi Kwarteng\'s mini-budget announcement with £45 billion in unfunded tax cuts triggered a rapid rise in Gilt yields and the subsequent crisis.',
   },
@@ -36,10 +36,10 @@ export const section04Questions: QuizQuestion[] = [
     options: [
       'There were no buyers for Gilts',
       'The Bank of England banned Gilt trading',
+      'Forced selling further depressed prices, triggering more margin calls—a cascade effect',
       'Gilts were illiquid by definition',
-      'Forced selling further depressed prices, triggering more margin calls—a cascade effect'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'When pension funds sold Gilts to meet margin calls, it further depressed Gilt prices, causing more margin calls and more forced selling—a classic liquidation cascade.',
   },
@@ -48,12 +48,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How much did the Bank of England pledge to buy in long-dated Gilts to stop the crisis?',
     options: [
-      'Up to £65 billion',
       'Up to £20 billion',
       'Up to £5 billion',
-      'Up to £100 billion'
+      'Up to £100 billion',
+      'Up to £65 billion',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The Bank of England intervened by announcing purchases of up to £65 billion in long-dated Gilts to stabilize the market.',
   },

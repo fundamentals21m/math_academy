@@ -6,12 +6,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Arthur Cayley proved that every matrix satisfies:',
     options: [
+      'Its own characteristic equation',
       'The identity equation',
       'A linear equation',
-      'Its own characteristic equation',
       'The determinant equation',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Cayley-Hamilton theorem states every square matrix satisfies its own characteristic polynomial.',
   },
@@ -21,11 +21,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'Cayley is considered the founder of:',
     options: [
       'Analysis',
-      'Topology',
       'Abstract algebra and matrix theory',
-      'Number theory'
+      'Topology',
+      'Number theory',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Cayley pioneered abstract algebra and formalized matrix theory as a distinct mathematical discipline.',
   },
@@ -37,7 +37,7 @@ export const section24Questions: QuizQuestion[] = [
       'Complex numbers',
       'Real numbers',
       'Quaternions',
-      'Octonions'
+      'Octonions',
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -48,12 +48,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cayley worked professionally as a:',
     options: [
-      'Lawyer before becoming a professor',
       'Professor only',
       'Engineer',
-      'Physician'
+      'Lawyer before becoming a professor',
+      'Physician',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Cayley practiced law for 14 years while doing mathematics before becoming a professor at Cambridge.',
   },
@@ -65,7 +65,7 @@ export const section24Questions: QuizQuestion[] = [
       'Functions',
       'Group structures',
       'Number patterns',
-      'Physical systems'
+      'Physical systems',
     ],
     correctIndex: 1,
     difficulty: 'medium',

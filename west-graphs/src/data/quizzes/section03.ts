@@ -36,12 +36,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In any graph, the number of vertices with odd degree is:',
     options: [
-      'Always even',
       'Always zero',
       'Always odd',
-      'Could be any number'
+      'Could be any number',
+      'Always even',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Since $\\sum d(v) = 2|E|$ is even, and odd numbers must pair up to sum to even, the count of odd-degree vertices must be even.',
   },
@@ -59,10 +59,26 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A simple graph $G$ with $n$ vertices and $m$ edges satisfies:',
     options: [
-      '$m \\leq n$',
-      '$m \\leq \\binom{n}{2}$',
-      '$m \\leq n^2$',
-      '$m \\leq n!$'
+      '$m \\leq \\binom{n}{2}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A simple graph has at most one edge per vertex pair. Maximum is $\\binom{n}{2} = n(n-1)/2$ edges (achieved by $K_n$).',
+  },
+      '$m \\leq n
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A simple graph has at most one edge per vertex pair. Maximum is $\\binom{n}{2} = n(n-1)/2$ edges (achieved by $K_n$).',
+  },
+      '$m \\leq n^2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A simple graph has at most one edge per vertex pair. Maximum is $\\binom{n}{2} = n(n-1)/2$ edges (achieved by $K_n$).',
+  },
+      '$m \\leq n!
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'A simple graph has at most one edge per vertex pair. Maximum is $\\binom{n}{2} = n(n-1)/2$ edges (achieved by $K_n$).',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

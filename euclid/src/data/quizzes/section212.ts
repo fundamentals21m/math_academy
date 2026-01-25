@@ -9,7 +9,7 @@ export const section212Questions: QuizQuestion[] = [
       'The least common multiple (LCM) of any quantity of given numbers',
       'The GCD of multiple numbers',
       'The prime factorization',
-      'The arithmetic mean'
+      'The arithmetic mean',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section212Questions: QuizQuestion[] = [
     question: 'The method in VII.33 for finding LCM of multiple numbers uses:',
     options: [
       'Finding all primes first',
+      'Repeated application of LCM for two numbers',
       'The Euclidean algorithm directly',
       'Trial division only',
-      'Repeated application of LCM for two numbers',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'VII.33 uses the result from VII.34 repeatedly: LCM(a, b, c) = LCM(LCM(a, b), c).',
   },

@@ -11,10 +11,10 @@ export const section70Questions: QuizQuestion[] = [
     options: [
       'x² + y² = 1',
       'xy = d',
-      'x² - dy² = 1',
       'x² + dy² = d',
+      'x² - dy² = 1',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Pell\'s equation is x² - dy² = 1, where d is a positive non-square integer.',
@@ -24,12 +24,12 @@ export const section70Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who developed the complete theory of Pell\'s equation using continued fractions?',
     options: [
-      'Lagrange',
       'Pell',
+      'Lagrange',
       'Fermat',
       'Euler',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Lagrange (1770) proved the complete theory using continued fractions, though the equation is named after Pell.',
@@ -39,12 +39,12 @@ export const section70Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the fundamental solution to x² - 3y² = 1?',
     options: [
+      '(2, 1)',
       '(1, 0)',
       '(7, 4)',
       '(3, 1)',
-      '(2, 1)',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       '2² - 3(1)² = 4 - 3 = 1, and (2, 1) is the smallest positive solution.',
@@ -70,11 +70,11 @@ export const section70Questions: QuizQuestion[] = [
     question: 'How are all solutions generated from the fundamental solution?',
     options: [
       'By multiplication',
-      'By taking powers',
       'By addition',
       'By division',
+      'By taking powers',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'All solutions come from taking powers of (x₁ + y₁√d) where (x₁, y₁) is the fundamental solution.',
@@ -86,10 +86,10 @@ export const section70Questions: QuizQuestion[] = [
     options: [
       'It equals (61, 1)',
       'It is very small',
-      'It doesn\\'t exist',
       'It is extremely large (10 digits)',
+      'It doesn\\\\\'t exist',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'The fundamental solution (1766319049, 226153980) is surprisingly large, a fact that challenged mathematicians.',
@@ -102,7 +102,7 @@ export const section70Questions: QuizQuestion[] = [
       'Irrationals are algebraic',
       'All equations have solutions',
       'Good rational approximations exist for any irrational',
-      'Continued fractions terminate'
+      'Continued fractions terminate',
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -113,7 +113,12 @@ export const section70Questions: QuizQuestion[] = [
     id: 8,
     type: 'multiple-choice',
     question: 'Which mathematician challenged others to solve x² - 61y² = 1?',
-    options: ['Euler', 'Fermat', 'Gauss', 'Newton'],
+    options: [
+      'Euler',
+      'Fermat',
+      'Gauss',
+      'Newton',
+    ],
     correctIndex: 1,
     difficulty: 'medium',
     explanation:

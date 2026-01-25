@@ -1,0 +1,95 @@
+{
+  "partId": 12,
+  "partTitle": "Linear Algebra in Probability & Statistics",
+  "textbookChapter": "Chapter 12: Linear Algebra in Probability & Statistics",
+  "sections": [
+    {
+      "sectionId": 48,
+      "sectionTitle": "Mean, Variance, and Probability",
+      "textbookSection": "Section 12.1",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "12-1-1",
+          "type": "exercise",
+          "number": "12.1.1",
+          "statement": "Express the mean of data $(x_1, ..., x_n)$ as a dot product.",
+          "solution": "$\\bar{x} = \\frac{1}{n}(x_1 + ... + x_n) = \\frac{1}{n}\\mathbf{1}^T\\mathbf{x}$ where $\\mathbf{1} = (1, 1, ..., 1)^T$."
+        },
+        {
+          "id": "12-1-2",
+          "type": "exercise",
+          "number": "12.1.2",
+          "statement": "Show that variance $= E[X^2] - (E[X])^2$.",
+          "solution": "Var$(X) = E[(X - \\mu)^2] = E[X^2 - 2\\mu X + \\mu^2] = E[X^2] - 2\\mu E[X] + \\mu^2 = E[X^2] - 2\\mu^2 + \\mu^2 = E[X^2] - \\mu^2$."
+        }
+      ]
+    },
+    {
+      "sectionId": 49,
+      "sectionTitle": "Covariance Matrices and Joint Probabilities",
+      "textbookSection": "Section 12.2",
+      "examples": [
+        {
+          "id": "ex-12-2-1",
+          "type": "example",
+          "title": "Computing Sample Covariance",
+          "statement": "Find the sample covariance matrix for data points $(1, 2)$, $(3, 4)$, $(2, 3)$.",
+          "solution": {
+            "steps": [
+              {"title": "Center the data", "content": "Mean: $(2, 3)$. Centered: $(-1, -1)$, $(1, 1)$, $(0, 0)$"},
+              {"title": "Form centered data matrix", "content": "$X = \\begin{pmatrix} -1 & -1 \\\\ 1 & 1 \\\\ 0 & 0 \\end{pmatrix}$"},
+              {"title": "Compute $S$", "content": "$S = \\frac{1}{n-1}X^TX = \\frac{1}{2}\\begin{pmatrix} 2 & 2 \\\\ 2 & 2 \\end{pmatrix} = \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$"}
+            ],
+            "conclusion": "Sample covariance matrix: $S = \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$. Note: Var$(X_1) = 1$, Cov$(X_1, X_2) = 1$, perfect correlation."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "12-2-1",
+          "type": "exercise",
+          "number": "12.2.1",
+          "statement": "Why is a covariance matrix always positive semidefinite?",
+          "solution": "For any vector $\\mathbf{a}$, $\\mathbf{a}^T\\Sigma\\mathbf{a} = \\mathbf{a}^T E[(\\mathbf{X}-\\boldsymbol{\\mu})(\\mathbf{X}-\\boldsymbol{\\mu})^T]\\mathbf{a} = E[(\\mathbf{a}^T(\\mathbf{X}-\\boldsymbol{\\mu}))^2] \\geq 0$ since it's an expected square."
+        },
+        {
+          "id": "12-2-2",
+          "type": "exercise",
+          "number": "12.2.2",
+          "statement": "If $\\Sigma = \\begin{pmatrix} 4 & 2 \\\\ 2 & 1 \\end{pmatrix}$, find the correlation coefficient between $X_1$ and $X_2$.",
+          "solution": "$\\rho = \\frac{\\text{Cov}(X_1, X_2)}{\\sqrt{\\text{Var}(X_1)\\text{Var}(X_2)}} = \\frac{2}{\\sqrt{4 \\cdot 1}} = \\frac{2}{2} = 1$. Perfect positive correlation."
+        }
+      ]
+    },
+    {
+      "sectionId": 50,
+      "sectionTitle": "Multivariate Gaussian and Weighted Least Squares",
+      "textbookSection": "Section 12.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "12-3-1",
+          "type": "exercise",
+          "number": "12.3.1",
+          "statement": "If $\\mathbf{X} \\sim N(\\boldsymbol{\\mu}, \\Sigma)$ and $\\mathbf{Y} = A\\mathbf{X} + \\mathbf{b}$, what is the distribution of $\\mathbf{Y}$?",
+          "solution": "$\\mathbf{Y} \\sim N(A\\boldsymbol{\\mu} + \\mathbf{b}, A\\Sigma A^T)$. Linear transformations of Gaussians are Gaussian."
+        },
+        {
+          "id": "12-3-2",
+          "type": "exercise",
+          "number": "12.3.2",
+          "statement": "In weighted least squares, why do we use $(A^T\\Sigma^{-1}A)\\hat{\\mathbf{x}} = A^T\\Sigma^{-1}\\mathbf{b}$ instead of the standard normal equations?",
+          "solution": "When errors have different variances (heteroscedasticity) or are correlated, ordinary least squares is inefficient. Weighted least squares with weight $\\Sigma^{-1}$ gives the best linear unbiased estimator (BLUE), down-weighting observations with higher variance."
+        },
+        {
+          "id": "12-3-3",
+          "type": "exercise",
+          "number": "12.3.3",
+          "statement": "Show that the ellipsoids $(\\mathbf{x} - \\boldsymbol{\\mu})^T\\Sigma^{-1}(\\mathbf{x} - \\boldsymbol{\\mu}) = c$ are level sets of the Gaussian density.",
+          "solution": "The Gaussian density is $f(\\mathbf{x}) \\propto \\exp(-\\frac{1}{2}(\\mathbf{x}-\\boldsymbol{\\mu})^T\\Sigma^{-1}(\\mathbf{x}-\\boldsymbol{\\mu}))$. Taking log: $\\log f(\\mathbf{x}) = -\\frac{1}{2}(\\mathbf{x}-\\boldsymbol{\\mu})^T\\Sigma^{-1}(\\mathbf{x}-\\boldsymbol{\\mu}) + \\text{const}$. Level sets of $\\log f$ (and hence $f$) are where the quadratic form equals a constant."
+        }
+      ]
+    }
+  ]
+}

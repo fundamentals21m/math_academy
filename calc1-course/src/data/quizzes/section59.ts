@@ -102,10 +102,26 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The solution $\\ln|y| = x^2/2 + C$ can be written as:',
     options: [
-      '$y = e^{x^2/2}$',
-      '$y = x^2/2 + C$',
-      '$y = Ae^{x^2/2}$ where $A = e^C$',
-      '$y = C\\ln(x^2/2)$'
+      '$y = e^{x^2/2}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Exponentiate: $|y| = e^C e^{x^2/2}$, so $y = Ae^{x^2/2}$.',
+  },
+      '$y = x^2/2 + C
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Exponentiate: $|y| = e^C e^{x^2/2}$, so $y = Ae^{x^2/2}$.',
+  },
+      '$y = C\\ln(x^2/2)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Exponentiate: $|y| = e^C e^{x^2/2}$, so $y = Ae^{x^2/2}$.',
+  },
+      '$y = Ae^{x^2/2}$ where $A = e^C
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Exponentiate: $|y| = e^C e^{x^2/2}$, so $y = Ae^{x^2/2}$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

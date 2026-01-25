@@ -7,11 +7,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What does LDI stand for?',
     options: [
       'Long Duration Investments',
-      'Leveraged Debt Instruments',
       'Liability Driven Investing',
-      'Liquid Digital Infrastructure'
+      'Leveraged Debt Instruments',
+      'Liquid Digital Infrastructure',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'LDI stands for Liability Driven Investing, a strategy where pension returns are measured relative to liabilities rather than absolute returns.'
   },
@@ -20,12 +20,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What happened to "risk-free" government bonds in 2022?',
     options: [
+      'They lost 30-50% of their value',
       'They were guaranteed by the IMF',
       'They became more valuable',
       'They were converted to bitcoin',
-      'They lost 30-50% of their value'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In 2022, supposedly "risk-free" government bonds lost 30-50% of value, devastating Modern Portfolio Theory which was built on the assumption of a risk-free asset.'
   },
@@ -34,12 +34,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Larry Fink famously say about bitcoin before BlackRock\'s pivot?',
     options: [
-      'It\'s only useful to money launderers',
-      'It\'s the future of finance',
-      'It\'s a great store of value',
-      'It\'s better than gold'
+      'It\\'s the future of finance',
+      'It\\'s only useful to money launderers',
+      'It\\'s a great store of value',
+      'It\\'s better than gold',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Larry Fink famously called bitcoin "only useful to money launderers" before BlackRock dramatically pivoted to launch the largest bitcoin ETF (IBIT).'
   },
@@ -49,11 +49,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What record did BlackRock\'s IBIT ETF break?',
     options: [
       'Longest time to profitability',
-      'Fastest ETF to reach $10B, $20B, $30B, $40B, and $50B AUM',
       'Most diverse holdings',
-      'Lowest management fees'
+      'Lowest management fees',
+      'Fastest ETF to reach $10B, $20B, $30B, $40B, and $50B AUM',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'IBIT broke every ETF record by being the fastest to reach $10B, $20B, $30B, $40B, and $50B in assets under management.'
   },
@@ -65,7 +65,7 @@ export const section08Questions: QuizQuestion[] = [
       'It hides bitcoin from regulators',
       'It disguises bitcoin as bonds',
       'It will bring bitcoin exposure to retirement accounts through indirect allocation',
-      'It protects bitcoin from hackers'
+      'It protects bitcoin from hackers',
     ],
     correctIndex: 2,
     difficulty: 'medium',

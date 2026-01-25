@@ -6,10 +6,26 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$f(x) \\equiv g(x) \\pmod{m(x)}$ means:',
     options: [
-      '$f(x) = g(x)$',
-      '$m(x)$ divides $f(x) - g(x)$',
-      '$f(x)$ divides $m(x)$',
-      '$\\deg(f) = \\deg(g)$'
+      '$f(x) = g(x)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Polynomial congruence: $f \\equiv g \\pmod{m}$ means $m \\mid (f - g)$.',
+  },
+      '$f(x)$ divides $m(x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Polynomial congruence: $f \\equiv g \\pmod{m}$ means $m \\mid (f - g)$.',
+  },
+      '$\\deg(f) = \\deg(g)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Polynomial congruence: $f \\equiv g \\pmod{m}$ means $m \\mid (f - g)$.',
+  },
+      '$m(x)$ divides $f(x) - g(x)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Polynomial congruence: $f \\equiv g \\pmod{m}$ means $m \\mid (f - g)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,12 +36,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $p(x)$ is irreducible, then $F[x]/(p(x))$ is:',
     options: [
+      'A field',
       'A ring but not a field',
       'Not a ring',
-      'A field',
-      'Always infinite'
+      'Always infinite',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Quotienting by an irreducible polynomial gives a field.',
   },
@@ -48,12 +64,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A finite field exists with $q$ elements if and only if:',
     options: [
-      '$q$ is a prime power',
       '$q$ is prime',
+      '$q$ is a prime power',
       '$q$ is even',
-      '$q$ is any positive integer'
+      '$q$ is any positive integer',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Finite fields exist exactly for prime powers $q = p^n$.',
   },

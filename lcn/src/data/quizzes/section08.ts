@@ -7,11 +7,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'In the Algebraic Group Model (AGM), adversaries must:',
     options: [
       'Run in polynomial time',
-      'Provide representations of all output group elements',
       'Use only standard cryptographic operations',
       'Have access to a random oracle',
+      'Provide representations of all output group elements',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'AGM adversaries are "algebraic" - they must provide coefficients showing how each output element relates to previously seen elements.',
   },
@@ -49,7 +49,7 @@ export const section08Questions: QuizQuestion[] = [
       'SUNF (blind signature security)',
       'The discrete log problem',
       'Collision resistance',
-      'Random oracle security'
+      'Random oracle security',
     ],
     correctIndex: 0,
     difficulty: 'medium',

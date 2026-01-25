@@ -37,9 +37,13 @@ export const section10Questions: QuizQuestion[] = [
     question: 'In Diffie-Hellman key exchange, Alice and Bob share:',
     options: [
       'Their private keys',
-      'The computed shared secret $g^{ab} \\bmod p$',
-      'Nothing - it\'s one-way communication',
-      'The prime $p$ and generator $g$ only'
+      'The prime $p$ and generator $g$ only',
+      'The computed shared secret $g^{ab} \\bmod p
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'They publicly share $p$, $g$, and their public values $g^a$, $g^b$. The shared secret $g^{ab}$ is computed privately.',
+  },
+      'Nothing - it\\'s one-way communication',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -50,12 +54,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'ElGamal encryption is based on:',
     options: [
-      'Discrete logarithm problem',
       'Integer factorization',
+      'Discrete logarithm problem',
       'Lattice problems',
-      'Error-correcting codes'
+      'Error-correcting codes',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'ElGamal\'s security relies on the difficulty of the discrete logarithm problem.',
   },

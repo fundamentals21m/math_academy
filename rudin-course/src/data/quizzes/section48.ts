@@ -6,10 +6,22 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\{f_n\\}$ converges uniformly to $f$ on $E$ and each $f_n$ is continuous on $E$, then:',
     options: [
-      '$f$ is continuous on $E$',
       '$f$ may be discontinuous',
-      '$f$ is differentiable on $E$',
-      '$f$ is uniformly continuous on $E$'
+      '$f$ is differentiable on $E
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Theorem 7.12: The uniform limit of continuous functions is continuous. This is one of the most important consequences of uniform convergence.',
+  },
+      '$f$ is continuous on $E
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Theorem 7.12: The uniform limit of continuous functions is continuous. This is one of the most important consequences of uniform convergence.',
+  },
+      '$f$ is uniformly continuous on $E
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Theorem 7.12: The uniform limit of continuous functions is continuous. This is one of the most important consequences of uniform convergence.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

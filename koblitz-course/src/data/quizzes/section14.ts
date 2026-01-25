@@ -6,12 +6,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Pollard\'s rho algorithm finds factors using:',
     options: [
-      'A pseudo-random walk with cycle detection',
       'Trial division',
       'Matrix operations',
+      'A pseudo-random walk with cycle detection',
       'Continued fractions',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Pollard rho uses $f(x) = x^2 + c \\bmod n$ and detects cycles via Floyd\'s algorithm.',
   },
@@ -20,10 +20,26 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The expected running time of Pollard\'s rho to find a factor $p$ is:',
     options: [
-      '$O(p)$',
-      '$O(p^2)$',
-      '$O(\\log p)$',
-      '$O(\\sqrt{p})$'
+      '$O(p)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Birthday paradox: collision expected after $O(\\sqrt{p})$ iterations.',
+  },
+      '$O(p^2)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Birthday paradox: collision expected after $O(\\sqrt{p})$ iterations.',
+  },
+      '$O(\\sqrt{p})
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Birthday paradox: collision expected after $O(\\sqrt{p})$ iterations.',
+  },
+      '$O(\\log p)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Birthday paradox: collision expected after $O(\\sqrt{p})$ iterations.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -36,10 +52,10 @@ export const section14Questions: QuizQuestion[] = [
     options: [
       'One',
       'Three',
-      'Two (slow and fast)',
       'Logarithmically many',
+      'Two (slow and fast)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Floyd\'s "tortoise and hare": slow pointer moves 1 step, fast moves 2 steps.',
   },

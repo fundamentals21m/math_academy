@@ -7,11 +7,11 @@ export const section62Questions: QuizQuestion[] = [
     question: 'What does BIP-37 define?',
     options: [
       'Address encoding',
+      'Bloom filters for SPV clients',
       'Block compression',
       'Transaction format',
-      'Bloom filters for SPV clients'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'BIP-37 defines Bloom filters for lightweight SPV client transaction filtering.',
   },
@@ -23,7 +23,7 @@ export const section62Questions: QuizQuestion[] = [
       'Privacy leaks and DoS vulnerability',
       'Too slow',
       'Incompatible with SegWit',
-      'Patent issues'
+      'Patent issues',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -43,11 +43,11 @@ export const section62Questions: QuizQuestion[] = [
     question: 'BIP-37 was replaced by which filtering approach?',
     options: [
       'Full block download',
-      'BIP-157/158 compact block filters',
       'Trusted servers',
-      'Lightning Network'
+      'Lightning Network',
+      'BIP-157/158 compact block filters',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Compact block filters (BIP-157/158) provide better privacy than Bloom filters.',
   },

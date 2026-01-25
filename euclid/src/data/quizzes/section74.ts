@@ -9,7 +9,7 @@ export const section74Questions: QuizQuestion[] = [
       'Are concentric',
       'Are tangent',
       'Cut (intersect) each other',
-      'Are parallel'
+      'Are parallel',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section74Questions: QuizQuestion[] = [
     question: 'According to III.10, two circles can cut each other at:',
     options: [
       'Zero, one, or two points',
-      'At most two points',
       'Exactly two points only',
       'Any number of points',
+      'At most two points',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'III.10 proves the maximum is two intersection points. Circles may also have 0 (disjoint) or 1 (tangent) points in common.',
   },
@@ -37,7 +37,7 @@ export const section74Questions: QuizQuestion[] = [
       'III.5 (intersecting circles have different centers)',
       'III.1 (finding the center)',
       'I.47 (Pythagorean theorem)',
-      'III.3 (perpendicular bisector)'
+      'III.3 (perpendicular bisector)',
     ],
     correctIndex: 0,
     difficulty: 'hard',

@@ -118,10 +118,26 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f: \\mathbb{R}^n \\to \\mathbb{R}^m$ is differentiable at $x$, then:',
     options: [
-      '$f$ is continuous at $x$',
-      'All partial derivatives of $f$ are continuous at $x$',
-      '$f$ is twice differentiable at $x$',
-      '$f\'$ is continuous at $x$'
+      'All partial derivatives of $f$ are continuous at $x
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Differentiability implies continuity. The converse is false: a function can be continuous without being differentiable. Also, existence of partial derivatives does not imply differentiability.',
+  },
+      '$f$ is continuous at $x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Differentiability implies continuity. The converse is false: a function can be continuous without being differentiable. Also, existence of partial derivatives does not imply differentiability.',
+  },
+      '$f$ is twice differentiable at $x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Differentiability implies continuity. The converse is false: a function can be continuous without being differentiable. Also, existence of partial derivatives does not imply differentiability.',
+  },
+      '$f\\'$ is continuous at $x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Differentiability implies continuity. The converse is false: a function can be continuous without being differentiable. Also, existence of partial derivatives does not imply differentiability.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

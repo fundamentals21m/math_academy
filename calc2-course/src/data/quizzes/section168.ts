@@ -6,10 +6,26 @@ export const section168Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The uniform distribution on $[a, b]$ has density:',
     options: [
-      '$f(t) = 1/(b-a)$ for $a < t < b$',
-      '$f(t) = 1$ for all $t$',
-      '$f(t) = (b-a)$ for $a < t < b$',
-      '$f(t) = t/(b-a)$'
+      '$f(t) = 1$ for all $t
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The uniform density is constant: $f(t) = 1/(b-a)$ for $t \\in (a, b)$ and 0 elsewhere.',
+  },
+      '$f(t) = 1/(b-a)$ for $a < t < b
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The uniform density is constant: $f(t) = 1/(b-a)$ for $t \\in (a, b)$ and 0 elsewhere.',
+  },
+      '$f(t) = (b-a)$ for $a < t < b
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The uniform density is constant: $f(t) = 1/(b-a)$ for $t \\in (a, b)$ and 0 elsewhere.',
+  },
+      '$f(t) = t/(b-a)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The uniform density is constant: $f(t) = 1/(b-a)$ for $t \\in (a, b)$ and 0 elsewhere.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -51,11 +67,11 @@ export const section168Questions: QuizQuestion[] = [
     question: 'The characteristic property of the uniform distribution is that:',
     options: [
       'All intervals have the same probability',
-      'Longer intervals have smaller probability',
       'Intervals of equal length have equal probability',
-      'Only the endpoints have positive probability'
+      'Longer intervals have smaller probability',
+      'Only the endpoints have positive probability',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For uniform distributions, $P(X \\in I)$ depends only on the length of $I$, not its location. Equal-length intervals have equal probability.',
   },

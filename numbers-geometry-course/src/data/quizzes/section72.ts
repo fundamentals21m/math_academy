@@ -39,12 +39,12 @@ export const section72Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is sin x transcendental?',
     options: [
+      'Its graph meets the x-axis infinitely many times',
       'It is defined using angles',
       'It is not continuous',
-      'Its graph meets the x-axis infinitely many times',
       'It involves π',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'An algebraic curve meets the x-axis only finitely many times, but y = sin x meets it at 0, ±π, ±2π, ...',
@@ -55,11 +55,11 @@ export const section72Questions: QuizQuestion[] = [
     question: 'Which of the following is an algebraic function?',
     options: [
       'sin x',
-      '√x',
       'log x',
+      '√x',
       'eˣ',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       '√x is algebraic because y = √x satisfies y² - x = 0, a polynomial equation.',
@@ -69,12 +69,12 @@ export const section72Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why must periodic functions be transcendental?',
     options: [
-      'They repeat, meeting horizontal lines infinitely many times',
       'They are defined by integrals',
+      'They repeat, meeting horizontal lines infinitely many times',
       'They involve π',
-      'They cannot be computed exactly'
+      'They cannot be computed exactly',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'A periodic function meets horizontal lines infinitely often, but algebraic curves have only finite intersections.',
@@ -83,8 +83,13 @@ export const section72Questions: QuizQuestion[] = [
     id: 6,
     type: 'multiple-choice',
     question: 'What geometric object will define the exponential function?',
-    options: ['The circle', 'The parabola', 'The hyperbola', 'The ellipse'],
-    correctIndex: 2,
+    options: [
+      'The circle',
+      'The parabola',
+      'The ellipse',
+      'The hyperbola',
+    ],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'The exponential function inherits its properties from the area under the hyperbola xy = 1.',
@@ -111,10 +116,10 @@ export const section72Questions: QuizQuestion[] = [
     options: [
       'The number of variables',
       'The number of intersection points',
-      'The dimension of the curve',
       'The highest power in the defining polynomial',
+      'The dimension of the curve',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The degree is the highest total power of the polynomial p(x, y), e.g., x² + xy + y² has degree 2.',

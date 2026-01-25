@@ -8,10 +8,10 @@ export const section90Questions: QuizQuestion[] = [
     options: [
       'A field',
       'A polynomial ring',
-      'A finite product of matrix rings over division rings',
       'A group ring',
+      'A finite product of matrix rings over division rings',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Wedderburn-Artin: Every semisimple ring is isomorphic to $\\prod_{i=1}^r M_{n_i}(D_i)$ where each $D_i$ is a division ring.',
   },
@@ -20,12 +20,12 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A ring $R$ is semisimple if and only if:',
     options: [
-      'Every ideal is principal',
       'Every $R$-module is projective',
+      'Every ideal is principal',
       '$R$ is a field',
       'Every $R$-module is injective',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A ring is semisimple if and only if every module is projective, equivalently if every module is injective, equivalently if every module is a direct sum of simple modules.',
   },
@@ -64,10 +64,26 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The number of simple components in the Wedderburn decomposition of $\\mathbb{C}G$ equals:',
     options: [
-      '$|G|$',
-      'The number of elements of order $2$ in $G$',
-      'The number of conjugacy classes in $G$',
-      '$1$'
+      'The number of conjugacy classes in $G
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The number of simple components equals the number of irreducible representations, which equals the number of conjugacy classes of $G$.',
+  },
+      '$|G|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The number of simple components equals the number of irreducible representations, which equals the number of conjugacy classes of $G$.',
+  },
+      'The number of elements of order $2$ in $G
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The number of simple components equals the number of irreducible representations, which equals the number of conjugacy classes of $G$.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The number of simple components equals the number of irreducible representations, which equals the number of conjugacy classes of $G$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

@@ -6,12 +6,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The general linear group $GL_n(\\mathbb{R})$ consists of all $n \\times n$ real matrices that are:',
     options: [
+      'Invertible (nonzero determinant)',
       'Orthogonal',
       'Symmetric',
       'Have determinant 1',
-      'Invertible (nonzero determinant)',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$GL_n(\\mathbb{R})$ is the group of all invertible $n \\times n$ real matrices, i.e., matrices with nonzero determinant.',
   },
@@ -20,10 +20,22 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The special linear group $SL_n(\\mathbb{R})$ is the set of all $n \\times n$ real matrices with:',
     options: [
-      'Determinant $0$',
-      'Determinant $1$',
-      'Determinant $-1$',
-      'Positive determinant'
+      'Determinant $0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$SL_n(\\mathbb{R}) = \\{A \\in GL_n(\\mathbb{R}) : \\det(A) = 1\\}$ is the special linear group.',
+  },
+      'Determinant $-1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$SL_n(\\mathbb{R}) = \\{A \\in GL_n(\\mathbb{R}) : \\det(A) = 1\\}$ is the special linear group.',
+  },
+      'Determinant $1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$SL_n(\\mathbb{R}) = \\{A \\in GL_n(\\mathbb{R}) : \\det(A) = 1\\}$ is the special linear group.',
+  },
+      'Positive determinant',
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -34,10 +46,26 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $A, B \\in GL_n(\\mathbb{R})$, what is $\\det(AB)$?',
     options: [
-      '$\\det(A) + \\det(B)$',
-      '$\\det(A) - \\det(B)$',
-      '$\\det(A) \\cdot \\det(B)$',
-      '$\\det(A) / \\det(B)$'
+      '$\\det(A) + \\det(B)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The determinant is multiplicative: $\\det(AB) = \\det(A) \\det(B)$. This is why $SL_n$ is closed under multiplication.',
+  },
+      '$\\det(A) \\cdot \\det(B)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The determinant is multiplicative: $\\det(AB) = \\det(A) \\det(B)$. This is why $SL_n$ is closed under multiplication.',
+  },
+      '$\\det(A) - \\det(B)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The determinant is multiplicative: $\\det(AB) = \\det(A) \\det(B)$. This is why $SL_n$ is closed under multiplication.',
+  },
+      '$\\det(A) / \\det(B)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'The determinant is multiplicative: $\\det(AB) = \\det(A) \\det(B)$. This is why $SL_n$ is closed under multiplication.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

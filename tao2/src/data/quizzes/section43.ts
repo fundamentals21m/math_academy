@@ -65,7 +65,7 @@ export const section43Questions: QuizQuestion[] = [
       'Field',
       'Group but not a vector space',
       'Vector space',
-      'Empty set'
+      'Empty set',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -103,11 +103,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'Simple functions are used to:',
     options: [
       'Solve differential equations',
-      'Study convergence of power series',
       'Approximate measurable functions and define the Lebesgue integral',
+      'Study convergence of power series',
       'Prove the inverse function theorem',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Simple functions are building blocks for defining the Lebesgue integral.',
   },

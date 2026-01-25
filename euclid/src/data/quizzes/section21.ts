@@ -9,7 +9,7 @@ export const section21Questions: QuizQuestion[] = [
       'Triangles on the same base with vertex inside vs outside',
       'Areas of triangles',
       'Isosceles and scalene triangles',
-      'Right and acute triangles'
+      'Right and acute triangles',
     ],
     correctIndex: 0,
     difficulty: 'medium',

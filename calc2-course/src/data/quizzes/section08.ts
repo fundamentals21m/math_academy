@@ -9,7 +9,7 @@ export const section08Questions: QuizQuestion[] = [
       'A dependent sequence',
       'An orthogonal sequence spanning the same subspaces',
       'A sequence of unit vectors',
-      'A sequence of zero vectors'
+      'A sequence of zero vectors',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,10 +20,26 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the Gram-Schmidt process, $y_{r+1}$ is computed by:',
     options: [
-      '$y_{r+1} = x_{r+1}$',
-      '$y_{r+1} = \\sum_{i=1}^r x_i$',
-      '$y_{r+1} = x_{r+1} - \\sum_{i=1}^r \\frac{(x_{r+1}, y_i)}{(y_i, y_i)} y_i$',
-      '$y_{r+1} = x_{r+1} / \\|x_{r+1}\\|$'
+      '$y_{r+1} = x_{r+1}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The formula subtracts from $x_{r+1}$ its projections along each of the previously computed orthogonal vectors $y_1, \\ldots, y_r$.',
+  },
+      '$y_{r+1} = x_{r+1} - \\sum_{i=1}^r \\frac{(x_{r+1}, y_i)}{(y_i, y_i)} y_i
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The formula subtracts from $x_{r+1}$ its projections along each of the previously computed orthogonal vectors $y_1, \\ldots, y_r$.',
+  },
+      '$y_{r+1} = \\sum_{i=1}^r x_i
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The formula subtracts from $x_{r+1}$ its projections along each of the previously computed orthogonal vectors $y_1, \\ldots, y_r$.',
+  },
+      '$y_{r+1} = x_{r+1} / \\|x_{r+1}\\|
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'The formula subtracts from $x_{r+1}$ its projections along each of the previously computed orthogonal vectors $y_1, \\ldots, y_r$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -67,7 +83,7 @@ export const section08Questions: QuizQuestion[] = [
       'The original vectors $x_1, \\ldots, x_k$ are dependent',
       'The process has failed',
       'The original vectors are orthogonal',
-      'The inner product is zero'
+      'The inner product is zero',
     ],
     correctIndex: 0,
     difficulty: 'medium',

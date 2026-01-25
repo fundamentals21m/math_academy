@@ -10,7 +10,7 @@ export const section21Questions: QuizQuestion[] = [
       'Restoring',
       'Calculation',
       'Equation',
-      'Unknown'
+      'Unknown',
     ],
     correctIndex: 0,
     explanation:
@@ -23,11 +23,11 @@ export const section21Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Arithmetic',
-      'Algorithm',
       'Algebra',
-      'Analysis'
+      'Algorithm',
+      'Analysis',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'The word "algorithm" derives from al-Khwarizmi\'s name. His book on algebra also gave us the word "algebra" from "al-jabr."',
   },
@@ -38,12 +38,12 @@ export const section21Questions: QuizQuestion[] = [
       'Why did al-Khwarizmi\'s work become more influential than Brahmagupta\'s earlier work?',
     difficulty: 'medium',
     options: [
-      'Brahmagupta\'s work was lost',
+      'Brahmagupta\\'s work was lost',
       'Al-Khwarizmi discovered more formulas',
-      'Arabic mathematics was positioned to unite Eastern algebra and Western geometry',
       'Brahmagupta used incorrect methods',
+      'Arabic mathematics was positioned to unite Eastern algebra and Western geometry',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'Arabic mathematics developed at the right time and place to absorb both the geometry of the Greeks and the algebra of India, recognizing algebra as a separate field with its own methods.',
   },
@@ -55,11 +55,11 @@ export const section21Questions: QuizQuestion[] = [
     difficulty: 'medium',
     options: [
       'Factoring the left side',
+      'Completing the square by adding 25',
       'Dividing by 10',
       'Taking the square root of both sides',
-      'Completing the square by adding 25'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     explanation:
       'Al-Khwarizmi completed the square by adding $25 = 5^2$ to both sides. The area $25 + 39 = 64$ gives a square of side $x + 5 = 8$, so $x = 3$.',
   },
@@ -80,12 +80,12 @@ export const section21Questions: QuizQuestion[] = [
       'Without negative coefficients, how many distinct forms does the quadratic equation have?',
     difficulty: 'hard',
     options: [
-      '3 forms',
       '2 forms',
+      '3 forms',
       '1 form',
-      '4 forms'
+      '4 forms',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     explanation:
       'Without negative coefficients, there are three forms: $x^2 + ax = b$, $x^2 = ax + b$, and $x^2 + b = ax$. Each required its own solution method.',
   },

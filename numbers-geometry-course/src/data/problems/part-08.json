@@ -1,0 +1,93 @@
+{
+  "partId": 8,
+  "partTitle": "Space",
+  "textbookChapter": "Part 8",
+  "sections": [
+    {
+      "sectionId": 64,
+      "sectionTitle": "Three-Dimensional Space",
+      "textbookSection": "Section 64",
+      "examples": [
+        {
+          "id": "ex-8-64-1",
+          "type": "example",
+          "title": "Distance in 3D",
+          "statement": "Derive the distance formula in three dimensions.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Extend 2D formula",
+                "content": "For points $(x_1, y_1, z_1)$ and $(x_2, y_2, z_2)$:\nFirst, distance in $xy$-plane: $\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$"
+              },
+              {
+                "title": "Add third dimension",
+                "content": "$d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}$"
+              }
+            ],
+            "conclusion": "3D distance formula is the natural extension of 2D."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-64-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find the distance from $(1, 2, 3)$ to $(4, 6, 3)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply formula",
+                "content": "$d = \\sqrt{(4-1)^2 + (6-2)^2 + (3-3)^2}$\n$= \\sqrt{9 + 16 + 0} = \\sqrt{25} = 5$"
+              }
+            ],
+            "conclusion": "Distance = 5 units"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 68,
+      "sectionTitle": "Spheres and Planes",
+      "textbookSection": "Section 68",
+      "examples": [
+        {
+          "id": "ex-8-68-1",
+          "type": "example",
+          "title": "Sphere Equation",
+          "statement": "Write the equation of a sphere with center $(a,b,c)$ and radius $r$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Definition",
+                "content": "A sphere is the set of points at distance $r$ from the center."
+              },
+              {
+                "title": "Equation",
+                "content": "$(x-a)^2 + (y-b)^2 + (z-c)^2 = r^2$"
+              }
+            ],
+            "conclusion": "This is the natural 3D extension of the circle equation."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "8-68-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find the center and radius of $x^2 + y^2 + z^2 - 4x + 6y - 2z = 11$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Complete the square",
+                "content": "$(x^2 - 4x + 4) + (y^2 + 6y + 9) + (z^2 - 2z + 1) = 11 + 4 + 9 + 1$\n$(x-2)^2 + (y+3)^2 + (z-1)^2 = 25$"
+              }
+            ],
+            "conclusion": "Center: $(2, -3, 1)$, Radius: $5$"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -6,10 +6,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A complex number $z = a + bi$ has modulus $|z|$ defined as:',
     options: [
-      '$a + b$',
-      '$\\sqrt{a^2 + b^2}$',
-      '$a^2 + b^2$',
-      '$|a| + |b|$'
+      '$\\sqrt{a^2 + b^2}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The modulus (or absolute value) of $z = a + bi$ is $|z| = \\sqrt{a^2 + b^2}$, which represents the distance from $z$ to the origin in the complex plane.',
+  },
+      '$a + b
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The modulus (or absolute value) of $z = a + bi$ is $|z| = \\sqrt{a^2 + b^2}$, which represents the distance from $z$ to the origin in the complex plane.',
+  },
+      '$a^2 + b^2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The modulus (or absolute value) of $z = a + bi$ is $|z| = \\sqrt{a^2 + b^2}$, which represents the distance from $z$ to the origin in the complex plane.',
+  },
+      '$|a| + |b|
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The modulus (or absolute value) of $z = a + bi$ is $|z| = \\sqrt{a^2 + b^2}$, which represents the distance from $z$ to the origin in the complex plane.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,10 +36,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For complex numbers $z$ and $w$, which identity holds?',
     options: [
-      '$|z + w| = |z| + |w|$',
-      '$|z/w| = |z| - |w|$',
-      '$|zw| = |z| \\cdot |w|$',
-      '$|z - w| = ||z| - |w||$'
+      '$|z + w| = |z| + |w|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The modulus is multiplicative: $|zw| = |z| \\cdot |w|$. The triangle inequality gives $|z + w| \\leq |z| + |w|$ (not equality in general).',
+  },
+      '$|zw| = |z| \\cdot |w|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The modulus is multiplicative: $|zw| = |z| \\cdot |w|$. The triangle inequality gives $|z + w| \\leq |z| + |w|$ (not equality in general).',
+  },
+      '$|z/w| = |z| - |w|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The modulus is multiplicative: $|zw| = |z| \\cdot |w|$. The triangle inequality gives $|z + w| \\leq |z| + |w|$ (not equality in general).',
+  },
+      '$|z - w| = ||z| - |w||
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The modulus is multiplicative: $|zw| = |z| \\cdot |w|$. The triangle inequality gives $|z + w| \\leq |z| + |w|$ (not equality in general).',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -48,10 +80,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The triangle inequality for complex numbers states:',
     options: [
-      '$|z + w| \\leq |z| + |w|$',
-      '$|z + w| \\geq |z| + |w|$',
-      '$|z + w| = |z| + |w|$ if and only if $z = w$',
-      '$|z - w| \\geq |z| - |w|$'
+      '$|z + w| \\geq |z| + |w|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The triangle inequality states $|z + w| \\leq |z| + |w|$. Equality holds if and only if one of $z, w$ is a nonnegative real multiple of the other.',
+  },
+      '$|z + w| = |z| + |w|$ if and only if $z = w
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The triangle inequality states $|z + w| \\leq |z| + |w|$. Equality holds if and only if one of $z, w$ is a nonnegative real multiple of the other.',
+  },
+      '$|z + w| \\leq |z| + |w|
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The triangle inequality states $|z + w| \\leq |z| + |w|$. Equality holds if and only if one of $z, w$ is a nonnegative real multiple of the other.',
+  },
+      '$|z - w| \\geq |z| - |w|
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The triangle inequality states $|z + w| \\leq |z| + |w|$. Equality holds if and only if one of $z, w$ is a nonnegative real multiple of the other.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

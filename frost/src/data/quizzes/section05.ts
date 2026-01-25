@@ -51,11 +51,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'In a Schnorr signature $\\sigma = (R, z)$, what is $R$?',
     options: [
       'A random scalar chosen by the signer',
-      'The hash of the message being signed',
       'The commitment point $R = [k]G$ where $k$ is the nonce',
-      'The public key of the signer'
+      'The hash of the message being signed',
+      'The public key of the signer',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$R = [k]G$ is the commitment - a curve point computed by scalar multiplying the generator $G$ by the random nonce $k$. It commits the signer to their nonce choice.',
   },

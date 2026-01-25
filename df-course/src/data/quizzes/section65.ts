@@ -6,10 +6,26 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The splitting field of $f(x) = x^3 - 2$ over $\\mathbb{Q}$ is:',
     options: [
-      '$\\mathbb{Q}(\\sqrt[3]{2})$',
-      '$\\mathbb{Q}(i)$',
-      '$\\mathbb{Q}(\\sqrt[3]{2}, \\omega)$ where $\\omega = e^{2\\pi i/3}$',
-      '$\\mathbb{Q}(\\sqrt{2})$'
+      '$\\mathbb{Q}(\\sqrt[3]{2})
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The roots of $x^3 - 2$ are $\\sqrt[3]{2}, \\sqrt[3]{2}\\omega, \\sqrt[3]{2}\\omega^2$ where $\\omega = e^{2\\pi i/3}$ is a primitive cube root of unity. The splitting field must contain all roots, so it is $\\mathbb{Q}(\\sqrt[3]{2}, \\omega)$.',
+  },
+      '$\\mathbb{Q}(\\sqrt[3]{2}, \\omega)$ where $\\omega = e^{2\\pi i/3}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The roots of $x^3 - 2$ are $\\sqrt[3]{2}, \\sqrt[3]{2}\\omega, \\sqrt[3]{2}\\omega^2$ where $\\omega = e^{2\\pi i/3}$ is a primitive cube root of unity. The splitting field must contain all roots, so it is $\\mathbb{Q}(\\sqrt[3]{2}, \\omega)$.',
+  },
+      '$\\mathbb{Q}(i)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The roots of $x^3 - 2$ are $\\sqrt[3]{2}, \\sqrt[3]{2}\\omega, \\sqrt[3]{2}\\omega^2$ where $\\omega = e^{2\\pi i/3}$ is a primitive cube root of unity. The splitting field must contain all roots, so it is $\\mathbb{Q}(\\sqrt[3]{2}, \\omega)$.',
+  },
+      '$\\mathbb{Q}(\\sqrt{2})
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The roots of $x^3 - 2$ are $\\sqrt[3]{2}, \\sqrt[3]{2}\\omega, \\sqrt[3]{2}\\omega^2$ where $\\omega = e^{2\\pi i/3}$ is a primitive cube root of unity. The splitting field must contain all roots, so it is $\\mathbb{Q}(\\sqrt[3]{2}, \\omega)$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -77,9 +93,13 @@ export const section65Questions: QuizQuestion[] = [
     question: 'Which statement about splitting fields is FALSE?',
     options: [
       'The splitting field of a polynomial is unique up to isomorphism',
-      'The splitting field of a degree $n$ polynomial always has degree $n!$ over $F$',
       'The splitting field is always a finite extension',
-      'Every polynomial over $F$ has a splitting field'
+      'Every polynomial over $F$ has a splitting field',
+      'The splitting field of a degree $n$ polynomial always has degree $n!$ over $F
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The degree of a splitting field divides $n!$ but need not equal $n!$. For example, $x^2 - 2$ has splitting field $\\mathbb{Q}(\\sqrt{2})$ of degree $2$, not $2! = 2$ (which happens to be equal here, but for $x^4 - 1$ the splitting field has degree $2$, not $4! = 24$).',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

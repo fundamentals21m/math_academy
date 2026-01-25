@@ -6,10 +6,26 @@ export const section105Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The arc-length function $s(t)$ for a path $\\alpha$ on $[a, t]$ is:',
     options: [
-      '$s(t) = \\int_a^t \\alpha(u) \\, du$',
-      '$s(t) = \\int_a^t \\|\\alpha\'(u)\\| \\, du$',
-      '$s(t) = \\|\\alpha(t) - \\alpha(a)\\|$',
-      '$s(t) = t - a$'
+      '$s(t) = \\int_a^t \\alpha(u) \\, du
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The arc-length function is $s(t) = \\int_a^t \\|\\alpha\'(u)\\| \\, du$, which gives the length of the curve from $\\alpha(a)$ to $\\alpha(t)$.',
+  },
+      '$s(t) = \\|\\alpha(t) - \\alpha(a)\\|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The arc-length function is $s(t) = \\int_a^t \\|\\alpha\'(u)\\| \\, du$, which gives the length of the curve from $\\alpha(a)$ to $\\alpha(t)$.',
+  },
+      '$s(t) = \\int_a^t \\|\\alpha\\'(u)\\| \\, du
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The arc-length function is $s(t) = \\int_a^t \\|\\alpha\'(u)\\| \\, du$, which gives the length of the curve from $\\alpha(a)$ to $\\alpha(t)$.',
+  },
+      '$s(t) = t - a
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The arc-length function is $s(t) = \\int_a^t \\|\\alpha\'(u)\\| \\, du$, which gives the length of the curve from $\\alpha(a)$ to $\\alpha(t)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,10 +36,26 @@ export const section105Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivative of arc length satisfies $s\'(t) = $:',
     options: [
-      '$\\alpha(t)$',
-      '$\\alpha\'(t)$',
-      '$\\|\\alpha\'(t)\\|$',
-      '$1$'
+      '$\\|\\alpha\\'(t)\\|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'By the fundamental theorem of calculus, $s\'(t) = \\|\\alpha\'(t)\\|$, which is the speed along the curve.',
+  },
+      '$\\alpha(t)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By the fundamental theorem of calculus, $s\'(t) = \\|\\alpha\'(t)\\|$, which is the speed along the curve.',
+  },
+      '$\\alpha\\'(t)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By the fundamental theorem of calculus, $s\'(t) = \\|\\alpha\'(t)\\|$, which is the speed along the curve.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'By the fundamental theorem of calculus, $s\'(t) = \\|\\alpha\'(t)\\|$, which is the speed along the curve.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',

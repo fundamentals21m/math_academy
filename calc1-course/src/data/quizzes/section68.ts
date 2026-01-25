@@ -32,10 +32,22 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int_a^{\\infty} f(x)\\,dx$ is defined as:',
     options: [
+      '$\\lim_{b \\to \\infty} \\int_a^b f(x)\\,dx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Improper integrals are limits of proper integrals.',
+  },
       'Cannot be defined',
-      '$\\int_a^{\\infty} f\'(x)\\,dx$',
-      '$f(\\infty) - f(a)$',
-      '$\\lim_{b \\to \\infty} \\int_a^b f(x)\\,dx$'
+      '$\\int_a^{\\infty} f\\'(x)\\,dx
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Improper integrals are limits of proper integrals.',
+  },
+      '$f(\\infty) - f(a)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Improper integrals are limits of proper integrals.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

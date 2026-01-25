@@ -7,11 +7,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'What is the discrete logarithm problem?',
       options: [
-        'Compute $g^x \\bmod p$ given $x$',
-        'Given $g^x \\bmod p = h$, find $x$',
-        'Find the prime factors of $n$',
-        'Compute $\\gcd(a, b)$'
-      ],
+      'Compute $g^x \\bmod p$ given $x
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The discrete log problem is finding the exponent $x$ given $g$, $h$, and $p$ where $g^x \\equiv h \\pmod{p}$.'
+    },
+      'Find the prime factors of $n
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The discrete log problem is finding the exponent $x$ given $g$, $h$, and $p$ where $g^x \\equiv h \\pmod{p}$.'
+    },
+      'Given $g^x \\bmod p = h$, find $x
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The discrete log problem is finding the exponent $x$ given $g$, $h$, and $p$ where $g^x \\equiv h \\pmod{p}$.'
+    },
+      'Compute $\\gcd(a, b)
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'The discrete log problem is finding the exponent $x$ given $g$, $h$, and $p$ where $g^x \\equiv h \\pmod{p}$.'
+    },
+    ],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The discrete log problem is finding the exponent $x$ given $g$, $h$, and $p$ where $g^x \\equiv h \\pmod{p}$.'
@@ -39,11 +55,11 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Why is the discrete log problem important for cryptography?',
       options: [
-        'It is easy to solve for all numbers',
-        'It only works with small numbers',
-        'Exponentiation is easy, but finding the exponent is hard',
-        'It is the same as addition'
-      ],
+      'It is easy to solve for all numbers',
+      'It only works with small numbers',
+      'Exponentiation is easy, but finding the exponent is hard',
+      'It is the same as addition',
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The discrete log provides a one-way function: computing $g^x \\bmod p$ is easy, but finding $x$ from the result is computationally hard.'
@@ -62,12 +78,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'In the equation $g^x \\equiv h \\pmod{p}$, what is $g$ called?',
       options: [
-        'The discrete log',
-        'The exponent',
-        'The modulus',
-        'The generator (or base)'
-      ],
-      correctIndex: 3,
+      'The discrete log',
+      'The generator (or base)',
+      'The exponent',
+      'The modulus',
+    ],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: '$g$ is called the generator or base of the group.'
     },
@@ -85,11 +101,23 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Which of the following is the "easy" direction in discrete log cryptography?',
       options: [
-        'Computing $g^x \\bmod p$ given $g$, $x$, and $p$',
-        'Finding $x$ given $g^x \\bmod p$',
-        'Factoring $p$ into primes',
-        'Computing $\\sqrt{x} \\bmod p$'
-      ],
+      'Finding $x$ given $g^x \\bmod p
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: 'Modular exponentiation can be done efficiently using square-and-multiply, even for large numbers.'
+    },
+      'Computing $g^x \\bmod p$ given $g$, $x$, and $p
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Modular exponentiation can be done efficiently using square-and-multiply, even for large numbers.'
+    },
+      'Factoring $p$ into primes',
+      'Computing $\\sqrt{x} \\bmod p
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'Modular exponentiation can be done efficiently using square-and-multiply, even for large numbers.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Modular exponentiation can be done efficiently using square-and-multiply, even for large numbers.'
@@ -108,12 +136,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The discrete log is analogous to which operation over real numbers?',
       options: [
-        'Taking a square root',
-        'Taking a logarithm',
-        'Finding a derivative',
-        'Computing a factorial'
-      ],
-      correctIndex: 1,
+      'Taking a logarithm',
+      'Taking a square root',
+      'Finding a derivative',
+      'Computing a factorial',
+    ],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Just as $\\log_g(h)$ finds the exponent $x$ where $g^x = h$ over reals, the discrete log finds $x$ where $g^x \\equiv h \\pmod{p}$.'
     }
@@ -134,12 +162,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'What makes the discrete log hard to compute for large primes?',
       options: [
-        'It cannot be computed for odd primes',
-        'It requires complex numbers',
-        'No polynomial-time algorithm is known',
-        'The answer is always infinite'
-      ],
-      correctIndex: 2,
+      'It cannot be computed for odd primes',
+      'No polynomial-time algorithm is known',
+      'It requires complex numbers',
+      'The answer is always infinite',
+    ],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'For large prime-order groups, the best known algorithms run in sub-exponential time, not polynomial time.'
     },
@@ -157,11 +185,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The order of an element $g$ modulo $p$ is:',
       options: [
-        'Always equal to $p$',
-        'The value of $g \\bmod p$',
-        'The number of digits in $g$',
-        'The smallest positive $k$ such that $g^k \\equiv 1 \\pmod{p}$'
-      ],
+      'Always equal to $p
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'The order is the smallest positive exponent that returns the identity element (1) under modular exponentiation.'
+    },
+      'The smallest positive $k$ such that $g^k \\equiv 1 \\pmod{p}
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'The order is the smallest positive exponent that returns the identity element (1) under modular exponentiation.'
+    },
+      'The value of $g \\bmod p
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'The order is the smallest positive exponent that returns the identity element (1) under modular exponentiation.'
+    },
+      'The number of digits in $g
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'The order is the smallest positive exponent that returns the identity element (1) under modular exponentiation.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The order is the smallest positive exponent that returns the identity element (1) under modular exponentiation.'
@@ -180,11 +224,27 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A generator $g$ of $\\mathbb{Z}_p^*$ has order:',
       options: [
-        '$p - 1$',
-        '$p$',
-        '$p + 1$',
-        '$1$'
-      ],
+      '$p
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'A generator creates all $p-1$ non-zero elements of $\\mathbb{Z}_p^*$, so its order is $p-1$.'
+    },
+      '$p + 1
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'A generator creates all $p-1$ non-zero elements of $\\mathbb{Z}_p^*$, so its order is $p-1$.'
+    },
+      '$1
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'A generator creates all $p-1$ non-zero elements of $\\mathbb{Z}_p^*$, so its order is $p-1$.'
+    },
+      '$p - 1
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'A generator creates all $p-1$ non-zero elements of $\\mathbb{Z}_p^*$, so its order is $p-1$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'A generator creates all $p-1$ non-zero elements of $\\mathbb{Z}_p^*$, so its order is $p-1$.'
@@ -203,11 +263,23 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Baby-step giant-step algorithm solves discrete log in time:',
       options: [
-        '$O(n)$',
-        '$O(\\sqrt{n})$ where $n$ is the group order',
-        '$O(n^2)$',
-        '$O(\\log n)$'
-      ],
+      '$O(n)
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Baby-step giant-step is a time-memory tradeoff that achieves $O(\\sqrt{n})$ time complexity.'
+    },
+      '$O(n^2)
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Baby-step giant-step is a time-memory tradeoff that achieves $O(\\sqrt{n})$ time complexity.'
+    },
+      '$O(\\log n)
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'Baby-step giant-step is a time-memory tradeoff that achieves $O(\\sqrt{n})$ time complexity.'
+    },
+      '$O(\\sqrt{n})$ where $n$ is the group order',
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Baby-step giant-step is a time-memory tradeoff that achieves $O(\\sqrt{n})$ time complexity.'
@@ -226,12 +298,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Pollard\'s rho algorithm for discrete log uses:',
       options: [
-        'Quantum computing',
-        'Matrix factorization',
-        'Cycle detection to find collisions',
-        'Brute force enumeration'
-      ],
-      correctIndex: 2,
+      'Cycle detection to find collisions',
+      'Quantum computing',
+      'Matrix factorization',
+      'Brute force enumeration',
+    ],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Pollard\'s rho uses a pseudo-random walk and Floyd\'s cycle detection to find collisions that reveal the discrete log.'
     }
@@ -275,12 +347,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'Which assumption is stronger: Discrete Log Problem (DLP) or Computational Diffie-Hellman (CDH)?',
       options: [
-        'DLP is stronger (DLP hard implies CDH hard)',
-        'CDH is stronger',
-        'They are equivalent',
-        'Neither implies the other'
-      ],
-      correctIndex: 0,
+      'CDH is stronger',
+      'They are equivalent',
+      'DLP is stronger (DLP hard implies CDH hard)',
+      'Neither implies the other',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'If you can solve DLP, you can solve CDH. But solving CDH doesn\'t necessarily give you discrete logs. So DLP hardness implies CDH hardness.'
     },
@@ -298,12 +370,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'The Pohlig-Hellman algorithm is most effective when:',
       options: [
-        'The group order is prime',
-        'The group order has only small prime factors',
-        'The generator is 2',
-        'The modulus is a safe prime'
-      ],
-      correctIndex: 1,
+      'The group order is prime',
+      'The generator is 2',
+      'The group order has only small prime factors',
+      'The modulus is a safe prime',
+    ],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Pohlig-Hellman reduces the DLP to subgroups of prime order. If all prime factors are small, each subproblem is easy.'
     },
@@ -321,12 +393,12 @@ export const section09Quiz = {
       type: 'multiple-choice',
       question: 'A "safe prime" $p = 2q + 1$ where $q$ is prime is preferred for DLP because:',
       options: [
-        'Safe primes are easier to find',
-        'It makes the DLP easier to solve',
-        'The subgroup of order $q$ resists Pohlig-Hellman attacks',
-        'The generator is always 2'
-      ],
-      correctIndex: 2,
+      'Safe primes are easier to find',
+      'The subgroup of order $q$ resists Pohlig-Hellman attacks',
+      'It makes the DLP easier to solve',
+      'The generator is always 2',
+    ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'With $p = 2q+1$, the group $\\mathbb{Z}_p^*$ has a large prime-order subgroup of size $q$, making Pohlig-Hellman ineffective.'
     },

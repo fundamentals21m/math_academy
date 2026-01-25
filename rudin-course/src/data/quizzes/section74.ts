@@ -86,10 +86,22 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\omega$ is a closed form ($d\\omega = 0$) and $c$ is a cycle ($\\partial c = 0$), then:',
     options: [
-      '$\\int_c \\omega = 1$',
-      '$\\int_c \\omega = 0$',
-      '$\\int_c \\omega$ depends only on the homology class of $c$',
-      '$\\omega$ must be exact'
+      '$\\int_c \\omega = 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'For closed forms, $\\int_c \\omega$ is unchanged if $c$ is replaced by a homologous cycle. This is because $\\int_{c+\\partial b} \\omega = \\int_c \\omega + \\int_{\\partial b} \\omega = \\int_c \\omega + \\int_b d\\omega = \\int_c \\omega$.',
+  },
+      '$\\int_c \\omega = 0
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'For closed forms, $\\int_c \\omega$ is unchanged if $c$ is replaced by a homologous cycle. This is because $\\int_{c+\\partial b} \\omega = \\int_c \\omega + \\int_{\\partial b} \\omega = \\int_c \\omega + \\int_b d\\omega = \\int_c \\omega$.',
+  },
+      '$\\omega$ must be exact',
+      '$\\int_c \\omega$ depends only on the homology class of $c
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'For closed forms, $\\int_c \\omega$ is unchanged if $c$ is replaced by a homologous cycle. This is because $\\int_{c+\\partial b} \\omega = \\int_c \\omega + \\int_{\\partial b} \\omega = \\int_c \\omega + \\int_b d\\omega = \\int_c \\omega$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'hard',

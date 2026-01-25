@@ -6,12 +6,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f: X \\to Y$ is continuous and $K \\subseteq X$ is compact, then:',
     options: [
-      '$f(K)$ is compact',
       '$f(K)$ is open',
       '$f(K)$ is closed but not necessarily compact',
-      '$f^{-1}(K)$ is compact'
+      '$f(K)$ is compact',
+      '$f^{-1}(K)$ is compact',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Continuous images of compact sets are compact. This is one of the most important properties relating continuity and compactness.',
   },
@@ -22,10 +22,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       '$f$ is bounded',
       '$f$ is uniformly continuous',
-      'All of the above',
       '$f$ attains its maximum and minimum values',
+      'All of the above',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'On a compact domain, a continuous real-valued function is bounded, attains its max and min, and is uniformly continuous.',
   },
@@ -52,10 +52,26 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which function is continuous but NOT uniformly continuous on $(0, 1)$?',
     options: [
-      '$f(x) = x$',
-      '$f(x) = x^2$',
-      '$f(x) = \\sin(x)$',
-      '$f(x) = 1/x$'
+      '$f(x) = 1/x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$f(x) = 1/x$ is continuous on $(0, 1)$ but not uniformly continuous because it becomes unbounded as $x \\to 0$.',
+  },
+      '$f(x) = x
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$f(x) = 1/x$ is continuous on $(0, 1)$ but not uniformly continuous because it becomes unbounded as $x \\to 0$.',
+  },
+      '$f(x) = x^2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$f(x) = 1/x$ is continuous on $(0, 1)$ but not uniformly continuous because it becomes unbounded as $x \\to 0$.',
+  },
+      '$f(x) = \\sin(x)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$f(x) = 1/x$ is continuous on $(0, 1)$ but not uniformly continuous because it becomes unbounded as $x \\to 0$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -66,12 +82,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Every continuous function on a compact metric space is:',
     options: [
-      'Uniformly continuous',
       'Lipschitz continuous',
+      'Uniformly continuous',
       'Constant',
-      'Differentiable'
+      'Differentiable',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A fundamental theorem: continuous functions on compact spaces are automatically uniformly continuous.',
   },

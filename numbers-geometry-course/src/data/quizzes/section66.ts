@@ -10,11 +10,11 @@ export const section66Questions: QuizQuestion[] = [
     question: 'What is the discriminant of the quadratic equation ax² + bxy + cy² + dx + ey + f = 0?',
     options: [
       'a + c',
+      'b² - 4ac',
       'ac - b²',
       'd² + e²',
-      'b² - 4ac',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'The discriminant is b² - 4ac, which determines the type of conic section.',
@@ -24,12 +24,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If the discriminant b² - 4ac < 0, what type of conic is it?',
     options: [
-      'Ellipse',
       'Hyperbola',
       'Parabola',
       'Two parallel lines',
+      'Ellipse',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'A negative discriminant indicates an ellipse (or circle, or degenerate point).',
@@ -39,12 +39,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do we rotate the coordinate axes?',
     options: [
-      'To eliminate the xy term',
       'To make the curve larger',
+      'To eliminate the xy term',
       'To change the discriminant',
       'To add linear terms',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Rotation eliminates the xy term, simplifying the equation toward standard form.',
@@ -55,11 +55,11 @@ export const section66Questions: QuizQuestion[] = [
     question: 'What is true about the discriminant under rotation?',
     options: [
       'It changes sign',
-      'It is invariant',
       'It doubles',
       'It becomes zero',
+      'It is invariant',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The discriminant is an invariant—it remains the same regardless of coordinate transformations.',
@@ -70,11 +70,11 @@ export const section66Questions: QuizQuestion[] = [
     question: 'What type of conic is xy = 1?',
     options: [
       'Ellipse',
-      'Hyperbola',
       'Parabola',
+      'Hyperbola',
       'Circle',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'For xy = 1, we have a = 0, b = 1, c = 0, so Δ = 1 > 0, making it a hyperbola.',
@@ -84,12 +84,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a degenerate conic?',
     options: [
+      'A conic that is a point, line, or pair of lines',
       'A conic with eccentricity 1',
       'A conic with no focus',
-      'A conic that is a point, line, or pair of lines',
       'A conic that extends to infinity',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Degenerate conics occur when the plane passes through the cone\'s apex, giving points or lines.',
@@ -101,10 +101,10 @@ export const section66Questions: QuizQuestion[] = [
     options: [
       '0',
       '1',
-      '4',
       '-4',
+      '4',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'Here a = 1, b = 0, c = 1, so Δ = 0² - 4(1)(1) = -4 < 0, confirming it\'s an ellipse (circle).',
@@ -114,12 +114,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For the equation xy + x - y = 1, what type of conic is this?',
     options: [
+      'Hyperbola',
       'Ellipse',
       'Circle',
-      'Hyperbola',
       'Parabola',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'With a = 0, b = 1, c = 0, we get Δ = 1 > 0, so it\'s a hyperbola.',

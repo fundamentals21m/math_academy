@@ -1,0 +1,87 @@
+{
+  "partId": 11,
+  "partTitle": "Numerical Linear Algebra",
+  "textbookChapter": "Chapter 11: Numerical Linear Algebra",
+  "sections": [
+    {
+      "sectionId": 45,
+      "sectionTitle": "Gaussian Elimination in Practice",
+      "textbookSection": "Section 11.1",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "11-1-1",
+          "type": "exercise",
+          "number": "11.1.1",
+          "statement": "Why is partial pivoting important in numerical computation?",
+          "solution": "Without pivoting, small pivots can cause large multipliers, amplifying roundoff errors. Partial pivoting chooses the largest absolute value in the column as the pivot, keeping multipliers $\\leq 1$ and reducing error growth."
+        },
+        {
+          "id": "11-1-2",
+          "type": "exercise",
+          "number": "11.1.2",
+          "statement": "Estimate the operation count for LU factorization of an $n \\times n$ matrix.",
+          "solution": "For column $k$, we do roughly $(n-k)^2$ operations. Total: $\\sum_{k=1}^{n-1}(n-k)^2 \\approx n^3/3$ multiplications and $n^3/3$ additions. Total: $\\approx \\frac{2n^3}{3}$ operations."
+        }
+      ]
+    },
+    {
+      "sectionId": 46,
+      "sectionTitle": "Norms and Condition Numbers",
+      "textbookSection": "Section 11.2",
+      "examples": [
+        {
+          "id": "ex-11-2-1",
+          "type": "example",
+          "title": "Computing Condition Number",
+          "statement": "Find the condition number of $A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 0.001 \\end{pmatrix}$.",
+          "solution": {
+            "steps": [
+              {"title": "Singular values", "content": "Since $A$ is diagonal, $\\sigma_1 = 1$, $\\sigma_2 = 0.001$"},
+              {"title": "Condition number", "content": "$\\kappa(A) = \\sigma_{\\max}/\\sigma_{\\min} = 1/0.001 = 1000$"}
+            ],
+            "conclusion": "$\\kappa(A) = 1000$. The matrix is moderately ill-conditioned."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "11-2-1",
+          "type": "exercise",
+          "number": "11.2.1",
+          "statement": "What is the condition number of an orthogonal matrix?",
+          "solution": "All singular values of an orthogonal matrix equal 1. $\\kappa = \\sigma_{\\max}/\\sigma_{\\min} = 1/1 = 1$. Orthogonal matrices are perfectly conditioned."
+        },
+        {
+          "id": "11-2-2",
+          "type": "exercise",
+          "number": "11.2.2",
+          "statement": "If $\\kappa(A) = 10^6$ and data has relative error $10^{-8}$, estimate the potential relative error in the solution.",
+          "solution": "Relative error in solution $\\leq \\kappa(A) \\times$ relative error in data $= 10^6 \\times 10^{-8} = 10^{-2} = 1\\%$. Even with very accurate data, the solution may have only 2 correct digits."
+        }
+      ]
+    },
+    {
+      "sectionId": 47,
+      "sectionTitle": "Iterative Methods and Preconditioners",
+      "textbookSection": "Section 11.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "11-3-1",
+          "type": "exercise",
+          "number": "11.3.1",
+          "statement": "For Jacobi iteration $\\mathbf{x}^{(k+1)} = D^{-1}(\\mathbf{b} - (L+U)\\mathbf{x}^{(k)})$ on $A = D + L + U$, what condition ensures convergence?",
+          "solution": "The iteration matrix is $M = D^{-1}(L+U)$. Convergence requires all eigenvalues of $M$ to satisfy $|\\lambda| < 1$ (spectral radius $< 1$). This is guaranteed if $A$ is strictly diagonally dominant: $|a_{ii}| > \\sum_{j \\neq i} |a_{ij}|$ for all $i$."
+        },
+        {
+          "id": "11-3-2",
+          "type": "exercise",
+          "number": "11.3.2",
+          "statement": "Why are iterative methods preferred over direct methods for large sparse systems?",
+          "solution": "Direct methods (like LU) have $O(n^3)$ complexity and can fill in zeros, destroying sparsity. Iterative methods preserve sparsity, use only matrix-vector products ($O(\\text{nnz})$), and may converge in far fewer than $n$ iterations for well-conditioned problems."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+1
+00:00:00,000 --> 00:00:03,439
+When the money used by the world is hard to make and easy to validate,
+
+2
+00:00:03,439 --> 00:00:06,320
+it becomes an exceptional tool for capital accumulation,
+
+3
+00:00:06,320 --> 00:00:10,320
+coordination of trade, and generally aligning the incentives of spenders,
+
+4
+00:00:10,320 --> 00:00:15,199
+savers, entrepreneurs, and planners. This is the promise of Bitcoin.
+
+5
+00:00:15,199 --> 00:00:21,519
+But can institutions capture this promise? That's the question this series will answer.
+
+6
+00:00:22,399 --> 00:00:27,600
+Welcome to Bitcoin for Institutions. I'm Brian and this is Bitcoin for Institutions.
+
+7
+00:00:28,079 --> 00:00:32,479
+An interactive video course exploring how institutional investors can approach the world's
+
+8
+00:00:32,479 --> 00:00:37,920
+largest fixed supply asset. Over the next 15 episodes, we'll work through three parts.
+
+9
+00:00:38,640 --> 00:00:45,520
+Bitcoin is for individuals, individuals run institutions, and institutional Bitcoin.
+
+10
+00:00:46,399 --> 00:00:52,079
+We'll explore why Bitcoin favors individuals, how key people drive institutional adoption,
+
+11
+00:00:52,079 --> 00:00:57,520
+and specific strategies for institutional Bitcoin exposure. A note before we begin.
+
+12
+00:00:58,560 --> 00:01:03,359
+This course presents a thesis that Bitcoin is fundamentally designed for individuals,
+
+13
+00:01:03,359 --> 00:01:08,879
+not institutions. Understanding this tension is critical for any organization that aspires to
+
+14
+00:01:08,879 --> 00:01:15,200
+use Bitcoin successfully. Let's begin. Is Bitcoin not Bitcoin? Does its ownership change its
+
+15
+00:01:15,200 --> 00:01:21,599
+properties? The answer, perhaps surprisingly, is yes. The power of Bitcoin as capital
+
+16
+00:01:21,599 --> 00:01:26,799
+is fundamentally determined by its owner. Under a system of hard money, capital flows into the
+
+17
+00:01:26,799 --> 00:01:33,200
+strongest and most capable hands. Entrepreneurs who make the best capital allocation decisions
+
+18
+00:01:33,200 --> 00:01:38,879
+end up keeping their capital. While those who make poor decisions see their capital flow to those
+
+19
+00:01:38,879 --> 00:01:43,760
+who better meet the demands of the market. This creates a fundamental asymmetry.
+
+20
+00:01:44,560 --> 00:01:50,079
+Individuals who hold their own keys have full control. They can build circular economies.
+
+21
+00:01:50,719 --> 00:01:56,480
+They have patient, long-term time horizons. They value privacy and sovereignty.
+
+22
+00:01:57,359 --> 00:02:01,920
+Institutions face structural challenges. Custody requires intermediaries.
+
+23
+00:02:02,560 --> 00:02:05,120
+Quarterly performance pressure drives short-term thinking.
+
+24
+00:02:05,840 --> 00:02:11,599
+Regulatory and compliance constraints limit flexibility. Fiduciary duties override individual
+
+25
+00:02:11,599 --> 00:02:17,439
+conviction. Money by decree is no different from that which is counterfeit. No group of humans in
+
+26
+00:02:17,439 --> 00:02:22,319
+history with the power to print money has ever proven itself capable of resisting the temptation to
+
+27
+00:02:22,319 --> 00:02:27,759
+do so. From the earliest traders with glass beads through the coin clipping Roman emperors
+
+28
+00:02:27,759 --> 00:02:32,960
+to the counterfeiting politicians and central bankers of today, the pattern repeats endlessly.
+
+29
+00:02:33,599 --> 00:02:39,039
+A decree that cannot be resisted is considered tyranny. Bitcoin frees individuals from a kind of
+
+30
+00:02:39,039 --> 00:02:44,800
+tyranny that most people don't realize exists. By creating money that cannot be debased by decree,
+
+31
+00:02:44,800 --> 00:02:49,039
+Bitcoin enables individuals to preserve the fruits of their labor across time.
+
+32
+00:02:49,039 --> 00:02:54,400
+A capability that was previously available only to those with access, to scarce, physical,
+
+33
+00:02:54,400 --> 00:03:00,319
+assets like gold or land. It is a misconception that the game is to build the biggest stack.
+
+34
+00:03:00,319 --> 00:03:05,439
+The game is to accumulate the most powerful form of capital. While all Bitcoin is treated as
+
+35
+00:03:05,439 --> 00:03:11,360
+fungible, the truth is that the power of the capital is determined by its owner. Strong holders,
+
+36
+00:03:12,000 --> 00:03:16,479
+those with earning potential and value add capabilities, have more optionality and power with
+
+37
+00:03:16,479 --> 00:03:21,520
+their Bitcoin. Bitcoin holders who build circular economies and trading networks create more
+
+38
+00:03:21,520 --> 00:03:27,360
+powerful capital than passive accumulators. Even dedicated institutions like Strategy will act
+
+39
+00:03:27,360 --> 00:03:33,039
+like individuals with limited power in the Bitcoin economy. This is the first insight institutions
+
+40
+00:03:33,039 --> 00:03:38,639
+must grasp. The quantity of Bitcoin matters less than the quality of the holder. This course is
+
+41
+00:03:38,639 --> 00:03:43,680
+organized into three parts, progressing from the fundamental nature of Bitcoin to specific
+
+42
+00:03:43,680 --> 00:03:50,560
+institutional strategies. Part 1. Bitcoin is for individuals. We'll explore why individuals have
+
+43
+00:03:50,560 --> 00:03:57,439
+structural advantages over institutions and holding Bitcoin. Topics include why ShowDLEing
+
+44
+00:03:57,439 --> 00:04:02,800
+is irrational, the deflationary mindset, custody trade-offs, time preference,
+
+45
+00:04:03,439 --> 00:04:12,319
+bearer asset properties and privacy. Part 2. Individuals run institutions. We'll examine how key
+
+46
+00:04:12,319 --> 00:04:17,759
+individuals drive institutional adoption, focusing on Michael's Sailor's Strategy and Black Rock's
+
+47
+00:04:17,759 --> 00:04:25,279
+transformation under Larry Fink. Part 3. Institutional Bitcoin. We'll cover specific use cases,
+
+48
+00:04:25,279 --> 00:04:31,519
+deferred compensation, ETFs, Treasury management, structured credit and pensions,
+
+49
+00:04:31,519 --> 00:04:36,720
+culminating in frameworks for institutional Bitcoin exposure. Each episode builds on the
+
+50
+00:04:36,720 --> 00:04:41,920
+previous, creating a comprehensive understanding of Bitcoin from an institutional perspective.
+
+51
+00:04:41,920 --> 00:04:48,399
+Before diving into the chapters, let's establish five foundational concepts. First, hard money.
+
+52
+00:04:48,959 --> 00:04:53,600
+Money that is difficult to produce and easy to verify, enabling capital accumulation and
+
+53
+00:04:53,600 --> 00:04:59,759
+rational economic calculation. Bitcoin is the hardest money ever created, with a fixed supply
+
+54
+00:04:59,839 --> 00:05:09,759
+cap of 21 million and global instant verifiability. Second, bearer asset. An asset that grants ownership to
+
+55
+00:05:09,759 --> 00:05:16,319
+whoever possesses it without requiring any intermediary to validate the claim. Bitcoin is a digital
+
+56
+00:05:16,319 --> 00:05:23,519
+bearer asset, whoever controls the private keys controls the Bitcoin. Third, circular economy.
+
+57
+00:05:24,079 --> 00:05:29,279
+An economic system where goods and services are exchanged directly for Bitcoin without converting
+
+58
+00:05:29,279 --> 00:05:36,160
+back to fiat currency. Individuals who build circular economies have more powerful Bitcoin than
+
+59
+00:05:36,160 --> 00:05:43,519
+those who simply accumulate. Fourth, counterparty risk. The risk that another party in a financial
+
+60
+00:05:43,519 --> 00:05:50,240
+transaction will fail to fulfill their obligations. Institutional Bitcoin often introduces counter-party
+
+61
+00:05:50,240 --> 00:05:57,839
+risks that self-custody eliminates. Fifth, time preference. The relative valuation placed on
+
+62
+00:05:57,839 --> 00:06:04,480
+present goods versus future goods. Individuals typically have lower time preference than institutions,
+
+63
+00:06:04,480 --> 00:06:09,680
+giving them an advantage in holding Bitcoin long-term. Let's recap what we covered in this introduction.
+
+64
+00:06:10,480 --> 00:06:15,439
+Bitcoin empowers individuals in ways that institutions cannot fully replicate due to structural
+
+65
+00:06:15,439 --> 00:06:21,120
+constraints. The power of Bitcoin as capital depends on its owner. Not just the quantity held.
+
+66
+00:06:21,759 --> 00:06:26,319
+Hard money enables capital to flow to those who make the best allocation decisions.
+
+67
+00:06:27,120 --> 00:06:32,720
+Soft money. Fiat currency represents a form of tyranny that Bitcoin seeks to address.
+
+68
+00:06:33,680 --> 00:06:39,040
+Institutions must understand why individuals value Bitcoin to successfully integrated into
+
+69
+00:06:39,040 --> 00:06:46,800
+their strategies. In the next episode, we'll examine chapter one. Hodling. Bitcoin is irrational.
+
+70
+00:06:46,800 --> 00:06:51,600
+We'll explore why the rational approach to Bitcoin may not be what you think, and why institutional
+
+71
+00:06:51,600 --> 00:06:58,079
+failures like FTX and Celsius share common themes. If you found this helpful, subscribe and check
+
+72
+00:06:58,079 --> 00:07:08,319
+out the interactive course at the link in the description. See you in the next one.
+

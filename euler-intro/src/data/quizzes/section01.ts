@@ -6,10 +6,26 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If we translate the origin to a new point $(f, g)$, what is the transformation for the $x$-coordinate?',
     options: [
-      '$x = t - f$',
-      '$x = t/f$',
-      '$x = tf$',
-      '$x = t + f$'
+      '$x = t - f
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'When translating to a new origin at $(f, g)$, the transformation is $x = t + f$ and $y = u + g$, where $(t, u)$ are the new coordinates.',
+  },
+      '$x = t/f
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'When translating to a new origin at $(f, g)$, the transformation is $x = t + f$ and $y = u + g$, where $(t, u)$ are the new coordinates.',
+  },
+      '$x = t + f
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'When translating to a new origin at $(f, g)$, the transformation is $x = t + f$ and $y = u + g$, where $(t, u)$ are the new coordinates.',
+  },
+      '$x = tf
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'When translating to a new origin at $(f, g)$, the transformation is $x = t + f$ and $y = u + g$, where $(t, u)$ are the new coordinates.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -94,12 +110,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are oblique coordinates?',
     options: [
+      'Coordinates where the ordinate makes an arbitrary angle with the axis',
       'Coordinates where both axes are curved',
       'Coordinates that only allow positive values',
-      'Coordinates where the ordinate makes an arbitrary angle with the axis',
       'Coordinates in three dimensions',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In oblique coordinates, the ordinate makes an arbitrary angle $\\phi$ with the axis, rather than being perpendicular (orthogonal) to it.',
   },

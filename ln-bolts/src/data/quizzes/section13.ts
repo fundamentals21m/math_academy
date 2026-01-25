@@ -23,7 +23,7 @@ export const section13Questions: QuizQuestion[] = [
       'Lower fees and no timelock delays',
       'More outputs',
       'Higher security',
-      'Better for disputes'
+      'Better for disputes',
     ],
     correctIndex: 0,
     difficulty: 'easy',

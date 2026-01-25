@@ -24,12 +24,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does a natural transformation t from F to G assign to each object a?',
     options: [
-      'An object in A',
       'An arrow t(a) from F(a) to G(a) in B',
+      'An object in A',
       'A functor from A to B',
       'An identity arrow',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'A natural transformation t assigns to every object a of category A an arrow t(a) in B from F(a) to G(a).',
@@ -85,12 +85,12 @@ export const section64Questions: QuizQuestion[] = [
     question:
       'When sets are viewed as functors from a one-object category, what corresponds to a function between sets?',
     options: [
-      'A natural transformation',
       'A functor',
+      'A natural transformation',
       'An identity arrow',
       'A composition',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'When sets S and S\' are viewed as functors F and F\', a function f: S → S\' corresponds to a natural transformation from F to F\'.',
@@ -117,10 +117,10 @@ export const section64Questions: QuizQuestion[] = [
     options: [
       'f(a + b) = f(a) + f(b)',
       'f(1) = 1',
-      'f(ab) = af(b)',
       'f is bijective',
+      'f(ab) = af(b)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'An M-homomorphism f from M-set (M, X, m) to (M, X\', m\') must satisfy f(ab) = af(b), meaning f is compatible with the monoid action.',
@@ -132,10 +132,10 @@ export const section64Questions: QuizQuestion[] = [
     options: [
       'They make simple ideas more complicated',
       'They only apply to set theory',
+      'They embody methods of many branches of mathematics and unify their results',
       'They replace all other mathematical notation',
-      'They embody methods of many branches of mathematics and unify their results'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The abstract definitions of category theory embody the ideas and methods of many branches of mathematics at once, and thus serve to unify their separate proofs and results.',

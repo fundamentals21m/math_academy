@@ -23,7 +23,7 @@ export const section126Questions: QuizQuestion[] = [
       'The distributive property',
       'The zero property',
       'The commutative property',
-      'The substitution principle: if a = b, then a can replace b in any expression'
+      'The substitution principle: if a = b, then a can replace b in any expression',
     ],
     correctIndex: 3,
     difficulty: 'medium',

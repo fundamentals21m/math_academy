@@ -37,9 +37,17 @@ export const section57Questions: QuizQuestion[] = [
     question: 'The determinant function is:',
     options: [
       'Independent of row operations',
-      'Additive: $\\det(A + B) = \\det(A) + \\det(B)$',
+      'Linear in each row (multilinear), alternating, and $\\det(I) = 1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The determinant is characterized by being multilinear (linear in each row), alternating (swapping rows changes sign), and normalized ($\\det(I) = 1$).',
+  },
+      'Additive: $\\det(A + B) = \\det(A) + \\det(B)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The determinant is characterized by being multilinear (linear in each row), alternating (swapping rows changes sign), and normalized ($\\det(I) = 1$).',
+  },
       'Always positive',
-      'Linear in each row (multilinear), alternating, and $\\det(I) = 1$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -50,10 +58,26 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\det(AB) = $',
     options: [
-      '$\\det(A) \\cdot \\det(B)$',
-      '$\\det(A) + \\det(B)$',
-      '$\\det(A + B)$',
-      '$\\det(A) / \\det(B)$'
+      '$\\det(A) + \\det(B)
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The determinant is multiplicative: $\\det(AB) = \\det(A) \\cdot \\det(B)$. This is a fundamental property that makes determinants useful for studying matrix groups.',
+  },
+      '$\\det(A + B)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The determinant is multiplicative: $\\det(AB) = \\det(A) \\cdot \\det(B)$. This is a fundamental property that makes determinants useful for studying matrix groups.',
+  },
+      '$\\det(A) / \\det(B)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The determinant is multiplicative: $\\det(AB) = \\det(A) \\cdot \\det(B)$. This is a fundamental property that makes determinants useful for studying matrix groups.',
+  },
+      '$\\det(A) \\cdot \\det(B)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The determinant is multiplicative: $\\det(AB) = \\det(A) \\cdot \\det(B)$. This is a fundamental property that makes determinants useful for studying matrix groups.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

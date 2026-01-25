@@ -6,10 +6,26 @@ export const section100Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A matrix $A$ is invertible if there exists $B$ such that:',
     options: [
-      '$A + B = I$',
-      '$AB = BA = I$',
-      '$AB = 0$',
-      '$A = B$'
+      '$A + B = I
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Inverse: $AA^{-1} = A^{-1}A = I$.',
+  },
+      '$AB = 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Inverse: $AA^{-1} = A^{-1}A = I$.',
+  },
+      '$A = B
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Inverse: $AA^{-1} = A^{-1}A = I$.',
+  },
+      '$AB = BA = I
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Inverse: $AA^{-1} = A^{-1}A = I$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

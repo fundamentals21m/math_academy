@@ -89,11 +89,11 @@ export const section112Questions: QuizQuestion[] = [
     question: 'An integrating factor $\\mu(x, y)$ is a function such that multiplying by $\\mu$:',
     options: [
       'Makes $P$ and $Q$ equal',
-      'Makes the solution unique',
       'Makes the equation exact',
+      'Makes the solution unique',
       'Makes the equation linear',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'An integrating factor $\\mu$ transforms a non-exact equation into an exact one: if $P \\, dx + Q \\, dy = 0$ is not exact, then $\\mu P \\, dx + \\mu Q \\, dy = 0$ may be exact.',
   },

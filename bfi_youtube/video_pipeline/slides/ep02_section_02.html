@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .graveyard-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .grave-card {
+      background: rgba(220, 38, 38, 0.1);
+      border: 1px solid rgba(220, 38, 38, 0.3);
+      padding: 25px 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .grave-category {
+      color: #DC2626;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .grave-names {
+      color: #E6EDF3;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .grave-cause {
+      color: #8B949E;
+      font-size: 14px;
+      margin-top: 12px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Graveyard of Bitcoin Institutions</div>
+    <div class="section-title">Common Failure Themes</div>
+    <div class="graveyard-grid">
+      <div class="grave-card">
+        <div class="grave-category">Exchanges</div>
+        <div class="grave-names">Mt. Gox<br>FTX</div>
+        <div class="grave-cause">Custody failures & fraud</div>
+      </div>
+      <div class="grave-card">
+        <div class="grave-category">Yield Products</div>
+        <div class="grave-names">Celsius<br>BlockFi<br>Anchor</div>
+        <div class="grave-cause">Unsustainable yields</div>
+      </div>
+      <div class="grave-card">
+        <div class="grave-category">Altcoins</div>
+        <div class="grave-names">TERRA/LUNA<br>BSV<br>BCash</div>
+        <div class="grave-cause">Failed forks & ponzis</div>
+      </div>
+      <div class="grave-card">
+        <div class="grave-category">Custodians</div>
+        <div class="grave-names">Prime Trust</div>
+        <div class="grave-cause">Asset mismanagement</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

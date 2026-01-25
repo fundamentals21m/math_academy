@@ -66,12 +66,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To differentiate $y = x^2 \\cdot \\sin(x)$, you would use:',
     options: [
+      'The product rule',
       'The sum rule',
       'The quotient rule',
-      'The product rule',
       'Only the power rule',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Since this is a product of two functions ($x^2$ and $\\sin(x)$), use the product rule.',
   },
@@ -80,10 +80,26 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using the product rule, $\\frac{d}{dx}(x \\cdot x) = ?$',
     options: [
-      '$x$',
-      '$1$',
-      '$2x$',
-      '$x^2$'
+      '$2x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Let $u = v = x$. Then $u\\frac{dv}{dx} + v\\frac{du}{dx} = x(1) + x(1) = 2x$. This matches $\\frac{d}{dx}(x^2) = 2x$.',
+  },
+      '$x
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Let $u = v = x$. Then $u\\frac{dv}{dx} + v\\frac{du}{dx} = x(1) + x(1) = 2x$. This matches $\\frac{d}{dx}(x^2) = 2x$.',
+  },
+      '$1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Let $u = v = x$. Then $u\\frac{dv}{dx} + v\\frac{du}{dx} = x(1) + x(1) = 2x$. This matches $\\frac{d}{dx}(x^2) = 2x$.',
+  },
+      '$x^2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Let $u = v = x$. Then $u\\frac{dv}{dx} + v\\frac{du}{dx} = x(1) + x(1) = 2x$. This matches $\\frac{d}{dx}(x^2) = 2x$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

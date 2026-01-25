@@ -72,11 +72,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'In the BCH bound proof, what mathematical structure is used to show the minimum distance?',
     options: [
       'Chinese Remainder Theorem',
+      'Vandermonde determinant',
       'Gaussian elimination',
       'Euclidean algorithm',
-      'Vandermonde determinant',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The BCH bound proof uses the fact that a Vandermonde matrix formed from powers of distinct elements has non-zero determinant, forcing certain linear systems to have only the trivial solution.',
   },

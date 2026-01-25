@@ -114,10 +114,22 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The number $\\pi$ can be characterized as:',
     options: [
-      'The smallest positive zero of $\\sin$',
+      'The smallest positive zero of $\\sin
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'These are all equivalent characterizations of $\\pi$.',
+  },
+      'Half the smallest positive period of $\\sin
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'These are all equivalent characterizations of $\\pi$.',
+  },
+      'The smallest positive zero of $\\cos
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'These are all equivalent characterizations of $\\pi$.',
+  },
       'All of the above are equivalent',
-      'Half the smallest positive period of $\\sin$',
-      'The smallest positive zero of $\\cos$'
     ],
     correctIndex: 1,
     difficulty: 'medium',

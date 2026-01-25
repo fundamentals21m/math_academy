@@ -6,10 +6,14 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An infinite series $\\sum_{n=1}^{\\infty} a_n$ converges if and only if:',
     options: [
-      'The terms $a_n$ are bounded',
-      '$\\lim_{n \\to \\infty} a_n = 0$',
       'The sequence of partial sums $S_N = \\sum_{n=1}^{N} a_n$ converges',
-      'The terms $a_n$ are monotone decreasing'
+      'The terms $a_n$ are bounded',
+      '$\\lim_{n \\to \\infty} a_n = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'By definition, an infinite series converges if its sequence of partial sums converges. The condition $a_n \\to 0$ is necessary but not sufficient (e.g., the harmonic series).',
+  },
+      'The terms $a_n$ are monotone decreasing',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -42,10 +46,26 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The geometric series $\\sum_{n=0}^{\\infty} r^n$ converges if and only if:',
     options: [
-      '$|r| < 1$',
-      '$r < 1$',
-      '$|r| \\leq 1$',
-      '$r \\leq 1$'
+      '$r < 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The geometric series converges to $\\frac{1}{1-r}$ when $|r| < 1$. When $|r| \\geq 1$, the series diverges (terms don\'t approach zero).',
+  },
+      '$|r| \\leq 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The geometric series converges to $\\frac{1}{1-r}$ when $|r| < 1$. When $|r| \\geq 1$, the series diverges (terms don\'t approach zero).',
+  },
+      '$r \\leq 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The geometric series converges to $\\frac{1}{1-r}$ when $|r| < 1$. When $|r| \\geq 1$, the series diverges (terms don\'t approach zero).',
+  },
+      '$|r| < 1
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The geometric series converges to $\\frac{1}{1-r}$ when $|r| < 1$. When $|r| \\geq 1$, the series diverges (terms don\'t approach zero).',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

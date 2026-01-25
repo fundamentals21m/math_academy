@@ -24,10 +24,22 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Jacobian determinant of a primitive mapping $G(x) = (x_1, \\ldots, g(x), \\ldots, x_n)$ is:',
     options: [
+      '$\\frac{\\partial g}{\\partial x_m}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a primitive mapping changing coordinate $m$, the Jacobian matrix is nearly the identity, with the $m$-th row being the gradient of $g$. The determinant is $\\partial g/\\partial x_m$.',
+  },
       '$\\det(DG)$ where $DG$ is the full Jacobian matrix',
-      '$1$',
-      '$\\frac{\\partial g}{\\partial x_m}$',
-      '$g(x)$'
+      '$1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For a primitive mapping changing coordinate $m$, the Jacobian matrix is nearly the identity, with the $m$-th row being the gradient of $g$. The determinant is $\\partial g/\\partial x_m$.',
+  },
+      '$g(x)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'For a primitive mapping changing coordinate $m$, the Jacobian matrix is nearly the identity, with the $m$-th row being the gradient of $g$. The determinant is $\\partial g/\\partial x_m$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -38,12 +50,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Any $C^1$ diffeomorphism can locally be written as:',
     options: [
-      'A rotation followed by a translation',
       'A composition of primitive mappings',
+      'A rotation followed by a translation',
       'A single primitive mapping',
       'A linear transformation',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'This is a key structural result: any sufficiently smooth diffeomorphism can be decomposed into a composition of primitive mappings, each changing only one coordinate.',
   },
@@ -52,12 +64,12 @@ export const section69Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The significance of primitive mappings in integration theory is:',
     options: [
-      'They simplify the proof of the change of variables formula',
       'They preserve volume',
       'They are the only maps for which the Jacobian can be computed',
-      'They commute with all other maps'
+      'They commute with all other maps',
+      'They simplify the proof of the change of variables formula',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Primitive mappings are useful because the change of variables formula is easy to verify for them, and general diffeomorphisms decompose into primitive ones.',
   },
@@ -67,11 +79,11 @@ export const section69Questions: QuizQuestion[] = [
     question: 'If $G$ is a primitive mapping with $\\frac{\\partial g}{\\partial x_m} > 0$, then $G$ is:',
     options: [
       'Always a global diffeomorphism',
-      'Locally a diffeomorphism (orientation-preserving)',
       'A contraction',
-      'Volume-preserving'
+      'Locally a diffeomorphism (orientation-preserving)',
+      'Volume-preserving',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'When $\\partial g/\\partial x_m > 0$, the Jacobian determinant is positive, so $G$ is locally invertible and orientation-preserving. It may not be global.',
   },

@@ -8,11 +8,11 @@ export const section29Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'They remain parallel',
-      'They appear to meet at a vanishing point',
       'They become curved',
+      'They appear to meet at a vanishing point',
       'They disappear',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     explanation:
       'In perspective projection, parallel lines that recede into the distance appear to converge at a "vanishing point." Think of railroad tracks seeming to meet on the horizon.',
   },
@@ -23,11 +23,11 @@ export const section29Questions: QuizQuestion[] = [
     difficulty: 'easy',
     options: [
       'Distances between points',
-      'Angles between lines',
       'Collinearity (points on a line stay on a line)',
+      'Angles between lines',
       'Parallelism of lines',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'Central projection preserves collinearity—if points lie on a line, their images also lie on a line. It does NOT preserve distances, angles, or parallelism.',
   },
@@ -40,10 +40,10 @@ export const section29Questions: QuizQuestion[] = [
     options: [
       'A center point',
       'A third dimension',
+      'Points at infinity (one for each direction)',
       'Additional coordinate axes',
-      'Points at infinity (one for each direction)'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     explanation:
       'The projective plane adds one "point at infinity" for each direction (parallel class of lines). These points all lie on a single "line at infinity." This ensures any two distinct lines meet in exactly one point.',
   },
@@ -53,10 +53,14 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What is the cross-ratio of four collinear points?',
     difficulty: 'medium',
     options: [
-      'A ratio of ratios: $(AC \\cdot BD)/(AD \\cdot BC)$',
       'The ratio of two distances',
       'The sum of distances between consecutive points',
-      'The area of the quadrilateral they form'
+      'The area of the quadrilateral they form',
+      'A ratio of ratios: $(AC \\cdot BD)/(AD \\cdot BC)
+    correctIndex: 3,
+    explanation:
+      'The cross-ratio $(A, B; C, D) = \\frac{AC \\cdot BD}{AD \\cdot BC}$ is the fundamental projective invariant. It is preserved under all projections.',
+  },
     ],
     correctIndex: 0,
     explanation:
@@ -69,12 +73,12 @@ export const section29Questions: QuizQuestion[] = [
       'According to Newton, how many basic types of cubic curves produce all 72+ species under projection?',
     difficulty: 'hard',
     options: [
-      '3',
       '5',
+      '3',
       '10',
       '72',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'Newton observed that all cubic curves are "shadows" (projections) of just 5 basic types. This unifying principle shows that projective geometry simplifies curve classification dramatically.',
   },
@@ -86,11 +90,11 @@ export const section29Questions: QuizQuestion[] = [
     difficulty: 'hard',
     options: [
       'They meet in at most $m + n$ points',
-      'They meet in $m \\cdot n^2$ points',
       'They meet in exactly $mn$ points (counting properly)',
-      'They may not meet at all'
+      'They meet in $m \\cdot n^2$ points',
+      'They may not meet at all',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     explanation:
       'In the projective plane with complex coordinates, Bézout\'s theorem states that curves of degrees $m$ and $n$ meet in exactly $mn$ points (counted with multiplicity). The projective setting eliminates the "missing" intersections at infinity.',
   },

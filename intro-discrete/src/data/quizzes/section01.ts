@@ -40,10 +40,10 @@ export const section01Questions: QuizQuestion[] = [
     options: [
       '4',
       '2',
-      '1',
       '6',
+      '1',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The coefficient is $\\binom{4}{2} = 6$.',
   },
@@ -52,10 +52,14 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does strong induction differ from ordinary induction?',
     options: [
+      'Strong induction assumes $P(m)$ for all $m \\leq k$ to prove $P(k+1)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'In strong induction, we may assume all previous cases $P(1), P(2), \\ldots, P(k)$ to prove $P(k+1)$.',
+  },
       'Strong induction proves $P(n)$ for all integers, not just positive ones',
       'Strong induction only requires the base case',
-      'Strong induction assumes $P(m)$ for all $m \\leq k$ to prove $P(k+1)$',
-      'Strong induction requires two base cases'
+      'Strong induction requires two base cases',
     ],
     correctIndex: 2,
     difficulty: 'medium',

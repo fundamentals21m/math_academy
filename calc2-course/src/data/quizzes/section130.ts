@@ -6,12 +6,12 @@ export const section130Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The winding number $W(\\alpha; P_0)$ of a closed curve $\\alpha$ with respect to a point $P_0$ not on the curve is:',
     options: [
+      'Always an integer (positive, negative, or zero)',
       'Always a positive integer',
       'Any real number',
       'Always zero or one',
-      'Always an integer (positive, negative, or zero)',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The winding number is always an integer. It counts how many times the curve winds around the point, with positive values for counterclockwise and negative for clockwise.',
   },
@@ -46,10 +46,22 @@ export const section130Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A curve traces a circle counterclockwise if the winding number with respect to interior points is:',
     options: [
-      '$-1$',
-      '$0$',
-      '$+1$',
-      'Undefined'
+      '$-1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A curve traced counterclockwise (positive direction) has winding number $+1$ for all points inside. Clockwise traversal gives $-1$.',
+  },
+      '$+1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A curve traced counterclockwise (positive direction) has winding number $+1$ for all points inside. Clockwise traversal gives $-1$.',
+  },
+      '$0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A curve traced counterclockwise (positive direction) has winding number $+1$ for all points inside. Clockwise traversal gives $-1$.',
+  },
+      'Undefined',
     ],
     correctIndex: 2,
     difficulty: 'easy',

@@ -45,10 +45,26 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The irreducible factors of $x^n - 1$ over $\\mathbb{F}_q$ correspond to:',
     options: [
-      '$q$-cyclotomic cosets modulo $n$',
-      'Prime divisors of $n$',
-      'Subgroups of $\\mathbb{Z}_n$',
-      'Elements of $\\mathbb{F}_q$'
+      'Prime divisors of $n
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Each irreducible factor of $x^n - 1$ over $\\mathbb{F}_q$ corresponds to a $q$-cyclotomic coset. The degree of the factor equals the size of the coset.',
+  },
+      'Subgroups of $\\mathbb{Z}_n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Each irreducible factor of $x^n - 1$ over $\\mathbb{F}_q$ corresponds to a $q$-cyclotomic coset. The degree of the factor equals the size of the coset.',
+  },
+      '$q$-cyclotomic cosets modulo $n
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Each irreducible factor of $x^n - 1$ over $\\mathbb{F}_q$ corresponds to a $q$-cyclotomic coset. The degree of the factor equals the size of the coset.',
+  },
+      'Elements of $\\mathbb{F}_q
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Each irreducible factor of $x^n - 1$ over $\\mathbb{F}_q$ corresponds to a $q$-cyclotomic coset. The degree of the factor equals the size of the coset.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -68,10 +84,22 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The 2-cyclotomic coset $C_0$ modulo any $n$ contains:',
     options: [
-      'All elements from $0$ to $n-1$',
-      'Only the element $0$',
+      'Only the element $0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$C_0 = \\{0 \\cdot 2^k \\pmod n : k \\geq 0\\} = \\{0\\}$. The coset containing 0 is always just $\\{0\\}$, corresponding to the factor $(x - 1)$.',
+  },
+      'All elements from $0$ to $n-1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$C_0 = \\{0 \\cdot 2^k \\pmod n : k \\geq 0\\} = \\{0\\}$. The coset containing 0 is always just $\\{0\\}$, corresponding to the factor $(x - 1)$.',
+  },
       'All even elements',
-      'All powers of 2 less than $n$'
+      'All powers of 2 less than $n
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$C_0 = \\{0 \\cdot 2^k \\pmod n : k \\geq 0\\} = \\{0\\}$. The coset containing 0 is always just $\\{0\\}$, corresponding to the factor $(x - 1)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',

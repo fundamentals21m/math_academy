@@ -102,10 +102,26 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Dirichlet kernel $D_N$ is defined as:',
     options: [
-      '$D_N(x) = e^{iNx}$',
-      '$D_N(x) = \\sum_{n=-N}^N e^{inx}$',
-      '$D_N(x) = \\sin(Nx)$',
-      '$D_N(x) = N$'
+      '$D_N(x) = e^{iNx}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Dirichlet kernel is $D_N(x) = \\sum_{n=-N}^N e^{inx}$, and $S_N f = f * D_N$.',
+  },
+      '$D_N(x) = \\sin(Nx)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Dirichlet kernel is $D_N(x) = \\sum_{n=-N}^N e^{inx}$, and $S_N f = f * D_N$.',
+  },
+      '$D_N(x) = \\sum_{n=-N}^N e^{inx}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Dirichlet kernel is $D_N(x) = \\sum_{n=-N}^N e^{inx}$, and $S_N f = f * D_N$.',
+  },
+      '$D_N(x) = N
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Dirichlet kernel is $D_N(x) = \\sum_{n=-N}^N e^{inx}$, and $S_N f = f * D_N$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

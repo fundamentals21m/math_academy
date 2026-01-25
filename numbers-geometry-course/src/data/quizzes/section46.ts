@@ -9,12 +9,12 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If it is 9 o\'clock now, what time will it be in 17 hours (mod 12)?',
     options: [
-      '5 o\\'clock',
-      '8 o\\'clock',
-      '26 o\\'clock',
-      '2 o\\'clock',
+      '5 o\\\\'clock',
+      '8 o\\\\'clock',
+      '2 o\\\\'clock',
+      '26 o\\\\'clock',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       '9 + 17 = 26 ≡ 2 (mod 12). So the answer is 2 o\'clock.',
@@ -70,12 +70,12 @@ export const section46Questions: QuizQuestion[] = [
     question:
       'If today is Wednesday (day 3) and you count 100 days forward, what day of the week is it?',
     options: [
-      'Friday',
       'Wednesday',
       'Thursday',
       'Saturday',
+      'Friday',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       '3 + 100 = 103. 103 = 14 × 7 + 5, so 103 ≡ 5 (mod 7). Day 5 is Friday.',
@@ -111,12 +111,12 @@ export const section46Questions: QuizQuestion[] = [
     question:
       'If a sum of two squares equals n, which value of n mod 4 is impossible?',
     options: [
+      '3',
       '0',
       '1',
-      '3',
       '2',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Since squares are 0 or 1 mod 4, sums of two squares can be 0+0=0, 0+1=1, or 1+1=2 mod 4. So 3 is impossible.',

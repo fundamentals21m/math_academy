@@ -6,10 +6,26 @@ export const section119Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The ordinate set of a nonnegative function $f$ over a rectangle $Q$ is:',
     options: [
-      'The set of points $(x, y)$ in $Q$',
-      'The level sets of $f$',
-      'The graph of $f$',
-      'The set of points $(x, y, z)$ with $(x, y) \\in Q$ and $0 \\leq z \\leq f(x, y)$'
+      'The set of points $(x, y)$ in $Q
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The ordinate set is the 3D region between $Q$ (in the $xy$-plane) and the surface $z = f(x, y)$: all points $(x, y, z)$ with $(x, y) \\in Q$ and $0 \\leq z \\leq f(x, y)$.',
+  },
+      'The set of points $(x, y, z)$ with $(x, y) \\in Q$ and $0 \\leq z \\leq f(x, y)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The ordinate set is the 3D region between $Q$ (in the $xy$-plane) and the surface $z = f(x, y)$: all points $(x, y, z)$ with $(x, y) \\in Q$ and $0 \\leq z \\leq f(x, y)$.',
+  },
+      'The level sets of $f
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The ordinate set is the 3D region between $Q$ (in the $xy$-plane) and the surface $z = f(x, y)$: all points $(x, y, z)$ with $(x, y) \\in Q$ and $0 \\leq z \\leq f(x, y)$.',
+  },
+      'The graph of $f
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The ordinate set is the 3D region between $Q$ (in the $xy$-plane) and the surface $z = f(x, y)$: all points $(x, y, z)$ with $(x, y) \\in Q$ and $0 \\leq z \\leq f(x, y)$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -62,10 +78,10 @@ export const section119Questions: QuizQuestion[] = [
     options: [
       'The disk method in single-variable calculus',
       'The chain rule',
-      'Cavalieri\'s principle (volume by cross-sections)',
-      'Integration by parts'
+      'Integration by parts',
+      'Cavalieri\\\\'s principle (volume by cross-sections)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'This is Cavalieri\'s principle: volume equals the integral of cross-sectional areas. Slicing the solid and integrating the areas of the slices gives the total volume.',
   },

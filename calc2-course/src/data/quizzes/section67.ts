@@ -7,11 +7,11 @@ export const section67Questions: QuizQuestion[] = [
     question: 'The law of exponents $e^{A+B} = e^A e^B$ holds for matrices when:',
     options: [
       'Always',
+      'When $AB = BA$ (commuting matrices)',
       'When $A$ and $B$ are both diagonal',
       'When $A$ and $B$ are both symmetric',
-      'When $AB = BA$ (commuting matrices)'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The law $e^{A+B} = e^A e^B$ holds if and only if $A$ and $B$ commute: $AB = BA$.',
   },

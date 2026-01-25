@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #0891B2;
+      --accent-rgb: 8, 145, 178;
+    }
+    .crisis-row {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 30px 0;
+    }
+    .crisis-card {
+      width: 300px;
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.3);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .crisis-year {
+      color: #EF4444;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .crisis-name {
+      color: #E6EDF3;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .crisis-desc {
+      color: #8B949E;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .conclusion-box {
+      background: rgba(8, 145, 178, 0.1);
+      border: 2px solid rgba(8, 145, 178, 0.3);
+      padding: 25px 50px;
+      border-radius: 8px;
+      margin-top: 35px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .conclusion-text {
+      color: #E6EDF3;
+      font-size: 22px;
+    }
+    .conclusion-text em {
+      color: #0891B2;
+      font-style: normal;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Problem</div>
+    <div class="section-title">Collateral Failures</div>
+    <div class="crisis-row">
+      <div class="crisis-card">
+        <div class="crisis-year">2008</div>
+        <div class="crisis-name">Global Financial Crisis</div>
+        <div class="crisis-desc">Housing collateral plummeted, people walked away from underwater mortgages</div>
+      </div>
+      <div class="crisis-card">
+        <div class="crisis-year">2022</div>
+        <div class="crisis-name">UK Pension Bailout</div>
+        <div class="crisis-desc">UK Gilts rapidly devalued by Fed rate rises, triggering emergency intervention</div>
+      </div>
+      <div class="crisis-card">
+        <div class="crisis-year">2023</div>
+        <div class="crisis-name">US Banking Crisis</div>
+        <div class="crisis-desc">Five major banks failed when US Treasuries devalued by 5% rate rise</div>
+      </div>
+    </div>
+    <div class="conclusion-box">
+      <div class="conclusion-text">UK Gilts and US Treasuries were no longer reliable collateral.<br><br>We've reached the end of the line. <em>Enter bitcoin.</em></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -20,10 +20,10 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the main goal of the dissertation?',
     options: [
-      'To test if Machiavelli\'s insights are mathematically consistent',
+      'To test if Machiavelli\\\'s insights are mathematically consistent',
       'To translate The Prince into modern English',
       'To prove Machiavelli was wrong',
-      'To compare Machiavelli to modern politicians'
+      'To compare Machiavelli to modern politicians',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -33,7 +33,12 @@ export const section00Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'Which institution did Saylor attend when writing this dissertation?',
-    options: ['Harvard', 'Stanford', 'MIT', 'Princeton'],
+    options: [
+      'Harvard',
+      'Stanford',
+      'MIT',
+      'Princeton',
+    ],
     correctIndex: 2,
     difficulty: 'easy',
     explanation: 'This was Saylor\'s 1987 MIT thesis.',

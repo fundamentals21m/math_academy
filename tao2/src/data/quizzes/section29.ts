@@ -6,10 +6,26 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Parseval\'s identity (Plancherel theorem) states that:',
     options: [
-      '$\\|f\\|_2^2 = |\\hat{f}(0)|^2$',
-      '$\\|f\\|_2 = \\sup_n |\\hat{f}(n)|$',
-      '$\\|f\\|_2^2 = \\sum_{n=-\\infty}^\\infty |\\hat{f}(n)|^2$',
-      '$\\|f\\|_2 = \\int |\\hat{f}|$'
+      '$\\|f\\|_2^2 = \\sum_{n=-\\infty}^\\infty |\\hat{f}(n)|^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Parseval: the $L^2$ norm squared equals the sum of squared Fourier coefficients.',
+  },
+      '$\\|f\\|_2^2 = |\\hat{f}(0)|^2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Parseval: the $L^2$ norm squared equals the sum of squared Fourier coefficients.',
+  },
+      '$\\|f\\|_2 = \\sup_n |\\hat{f}(n)|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Parseval: the $L^2$ norm squared equals the sum of squared Fourier coefficients.',
+  },
+      '$\\|f\\|_2 = \\int |\\hat{f}|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Parseval: the $L^2$ norm squared equals the sum of squared Fourier coefficients.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -20,12 +36,12 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Parseval\'s identity implies that the Fourier series of an $L^2$ function:',
     options: [
-      'Converges in $L^2$ norm',
       'Always converges pointwise',
+      'Converges in $L^2$ norm',
       'Converges uniformly',
       'Diverges',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The Fourier series converges to $f$ in the $L^2$ sense.',
   },

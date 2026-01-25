@@ -6,10 +6,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The multinomial coefficient $\\binom{n}{n_1, n_2, \\ldots, n_r}$ equals:',
     options: [
-      '$\\frac{n!}{(n_1 + n_2 + \\cdots + n_r)!}$',
-      '$\\frac{n!}{n_1! \\cdot n_2! \\cdots n_r!}$',
-      '$n_1! \\cdot n_2! \\cdots n_r!$',
-      '$\\frac{(n_1 + n_2 + \\cdots + n_r)!}{n!}$'
+      '$\\frac{n!}{n_1! \\cdot n_2! \\cdots n_r!}
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The multinomial coefficient for dividing $n$ objects into groups of sizes $n_1, n_2, \\ldots, n_r$ is $\\frac{n!}{n_1! \\cdot n_2! \\cdots n_r!}$.'
+  },
+      '$\\frac{n!}{(n_1 + n_2 + \\cdots + n_r)!}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The multinomial coefficient for dividing $n$ objects into groups of sizes $n_1, n_2, \\ldots, n_r$ is $\\frac{n!}{n_1! \\cdot n_2! \\cdots n_r!}$.'
+  },
+      '$n_1! \\cdot n_2! \\cdots n_r!
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The multinomial coefficient for dividing $n$ objects into groups of sizes $n_1, n_2, \\ldots, n_r$ is $\\frac{n!}{n_1! \\cdot n_2! \\cdots n_r!}$.'
+  },
+      '$\\frac{(n_1 + n_2 + \\cdots + n_r)!}{n!}
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'The multinomial coefficient for dividing $n$ objects into groups of sizes $n_1, n_2, \\ldots, n_r$ is $\\frac{n!}{n_1! \\cdot n_2! \\cdots n_r!}$.'
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -29,10 +45,26 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When $r = 2$, the multinomial coefficient $\\binom{n}{n_1, n_2}$ reduces to:',
     options: [
-      '$n!$',
-      '$\\frac{n!}{2}$',
-      '$\\binom{n}{n_1}$',
-      '$n_1 \\cdot n_2$'
+      '$n!
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'When $r = 2$, $\\binom{n}{n_1, n_2} = \\frac{n!}{n_1! \\cdot n_2!} = \\binom{n}{n_1}$, the binomial coefficient.'
+  },
+      '$\\binom{n}{n_1}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'When $r = 2$, $\\binom{n}{n_1, n_2} = \\frac{n!}{n_1! \\cdot n_2!} = \\binom{n}{n_1}$, the binomial coefficient.'
+  },
+      '$\\frac{n!}{2}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'When $r = 2$, $\\binom{n}{n_1, n_2} = \\frac{n!}{n_1! \\cdot n_2!} = \\binom{n}{n_1}$, the binomial coefficient.'
+  },
+      '$n_1 \\cdot n_2
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'When $r = 2$, $\\binom{n}{n_1, n_2} = \\frac{n!}{n_1! \\cdot n_2!} = \\binom{n}{n_1}$, the binomial coefficient.'
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -53,9 +85,21 @@ export const section05Questions: QuizQuestion[] = [
     question: 'To divide 12 students into 3 *unlabeled* groups of 4 each, we compute $\\binom{12}{4,4,4}$ and then:',
     options: [
       'Do nothing more',
-      'Multiply by $3!$',
-      'Multiply by $4!$',
-      'Divide by $3!$'
+      'Multiply by $3!
+    correctIndex: 2,
+    difficulty: 'hard',
+    explanation: 'When groups are indistinguishable (unlabeled), we divide by the number of ways to arrange identical groups. With 3 identical groups, divide by $3! = 6$.'
+  },
+      'Divide by $3!
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'When groups are indistinguishable (unlabeled), we divide by the number of ways to arrange identical groups. With 3 identical groups, divide by $3! = 6$.'
+  },
+      'Multiply by $4!
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'When groups are indistinguishable (unlabeled), we divide by the number of ways to arrange identical groups. With 3 identical groups, divide by $3! = 6$.'
+  },
     ],
     correctIndex: 3,
     difficulty: 'hard',

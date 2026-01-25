@@ -1,0 +1,143 @@
+{
+  "partId": 4,
+  "partTitle": "Integers and Rationals",
+  "textbookChapter": "Chapter 4",
+  "sections": [
+    {
+      "sectionId": 10,
+      "sectionTitle": "The integers",
+      "textbookSection": "4.1",
+      "examples": [
+        {
+          "id": "ex-4-10-1",
+          "type": "example",
+          "title": "Integer Equivalence",
+          "statement": "Show that $(3, 1)$ and $(5, 3)$ represent the same integer.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Recall the equivalence",
+                "content": "$(a, b) \\sim (c, d)$ iff $a + d = b + c$."
+              },
+              {
+                "title": "Check",
+                "content": "$3 + 3 = 6 = 1 + 5$. So $(3,1) \\sim (5,3)$."
+              }
+            ],
+            "conclusion": "Both pairs represent the integer $2$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "4-10-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that the equivalence relation on $\\mathbb{N} \\times \\mathbb{N}$ defined by $(a,b) \\sim (c,d)$ iff $a+d = b+c$ is reflexive, symmetric, and transitive.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Reflexive",
+                "content": "$(a,b) \\sim (a,b)$ since $a + b = b + a$. ✓"
+              },
+              {
+                "title": "Symmetric",
+                "content": "If $(a,b) \\sim (c,d)$, then $a+d = b+c$, so $c+b = d+a$, giving $(c,d) \\sim (a,b)$. ✓"
+              },
+              {
+                "title": "Transitive",
+                "content": "If $(a,b) \\sim (c,d)$ and $(c,d) \\sim (e,f)$, then $a+d = b+c$ and $c+f = d+e$. Adding: $a+d+c+f = b+c+d+e$, so $a+f = b+e$, giving $(a,b) \\sim (e,f)$. ✓"
+              }
+            ],
+            "conclusion": "The relation is an equivalence relation."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 11,
+      "sectionTitle": "The rationals",
+      "textbookSection": "4.2",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "4-11-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that $a/b = c/d$ iff $ad = bc$ (for $b, d \\neq 0$).",
+          "solution": {
+            "steps": [
+              {
+                "title": "By definition",
+                "content": "$a/b$ and $c/d$ are equivalence classes under $(a,b) \\sim (c,d)$ iff $ad = bc$."
+              }
+            ],
+            "conclusion": "$a/b = c/d$ iff $ad = bc$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 12,
+      "sectionTitle": "Absolute value and exponentiation",
+      "textbookSection": "4.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "4-12-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove the triangle inequality: $|x + y| \\leq |x| + |y|$ for all rationals $x, y$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Consider cases",
+                "content": "If $x, y \\geq 0$: $|x+y| = x+y = |x|+|y|$. If $x, y \\leq 0$: $|x+y| = -(x+y) = |x|+|y|$."
+              },
+              {
+                "title": "Mixed signs",
+                "content": "If $x \\geq 0$ and $y < 0$: $|x+y| \\leq \\max(x, |y|) \\leq x + |y| = |x| + |y|$."
+              }
+            ],
+            "conclusion": "$|x + y| \\leq |x| + |y|$ in all cases."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 13,
+      "sectionTitle": "Gaps in the rationals",
+      "textbookSection": "4.4",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "4-13-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Prove that there is no rational number $p$ such that $p^2 = 2$ (Proposition 4.4.4).",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume $p = a/b$ with $\\gcd(a,b) = 1$",
+                "content": "Then $p^2 = a^2/b^2 = 2$, so $a^2 = 2b^2$."
+              },
+              {
+                "title": "Deduce $a$ is even",
+                "content": "Since $a^2 = 2b^2$, $a^2$ is even, so $a$ is even. Write $a = 2k$."
+              },
+              {
+                "title": "Deduce $b$ is even",
+                "content": "$(2k)^2 = 2b^2$ gives $4k^2 = 2b^2$, so $b^2 = 2k^2$. Thus $b$ is even."
+              },
+              {
+                "title": "Contradiction",
+                "content": "Both $a$ and $b$ even contradicts $\\gcd(a,b) = 1$."
+              }
+            ],
+            "conclusion": "There is no rational whose square is $2$."
+          }
+        }
+      ]
+    }
+  ]
+}

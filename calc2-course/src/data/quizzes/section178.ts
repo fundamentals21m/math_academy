@@ -6,10 +6,26 @@ export const section178Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Chebyshev\'s inequality states that for any $c > 0$:',
     options: [
-      '$P(|X - E(X)| > c) \\geq \\text{Var}(X)/c^2$',
-      '$P(|X - E(X)| > c) = \\text{Var}(X)/c^2$',
-      '$P(|X - E(X)| > c) \\leq \\text{Var}(X)/c^2$',
-      '$P(|X - E(X)| > c) \\leq c^2/\\text{Var}(X)$'
+      '$P(|X - E(X)| > c) \\leq \\text{Var}(X)/c^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Chebyshev\'s inequality: $P(|X - E(X)| > c) \\leq \\frac{\\text{Var}(X)}{c^2}$.',
+  },
+      '$P(|X - E(X)| > c) \\geq \\text{Var}(X)/c^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Chebyshev\'s inequality: $P(|X - E(X)| > c) \\leq \\frac{\\text{Var}(X)}{c^2}$.',
+  },
+      '$P(|X - E(X)| > c) = \\text{Var}(X)/c^2
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Chebyshev\'s inequality: $P(|X - E(X)| > c) \\leq \\frac{\\text{Var}(X)}{c^2}$.',
+  },
+      '$P(|X - E(X)| > c) \\leq c^2/\\text{Var}(X)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Chebyshev\'s inequality: $P(|X - E(X)| > c) \\leq \\frac{\\text{Var}(X)}{c^2}$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,10 +36,26 @@ export const section178Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using Chebyshev\'s inequality with $c = k\\sigma$, the probability of deviating more than $k$ standard deviations is at most:',
     options: [
-      '$k^2$',
-      '$1/k$',
-      '$k/\\sigma$',
-      '$1/k^2$'
+      '$1/k^2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$P(|X - E(X)| > k\\sigma) \\leq \\frac{\\sigma^2}{(k\\sigma)^2} = \\frac{1}{k^2}$.',
+  },
+      '$k^2
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$P(|X - E(X)| > k\\sigma) \\leq \\frac{\\sigma^2}{(k\\sigma)^2} = \\frac{1}{k^2}$.',
+  },
+      '$1/k
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$P(|X - E(X)| > k\\sigma) \\leq \\frac{\\sigma^2}{(k\\sigma)^2} = \\frac{1}{k^2}$.',
+  },
+      '$k/\\sigma
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$P(|X - E(X)| > k\\sigma) \\leq \\frac{\\sigma^2}{(k\\sigma)^2} = \\frac{1}{k^2}$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -64,12 +96,12 @@ export const section178Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Chebyshev\'s inequality is remarkable because:',
     options: [
-      'It applies to ANY distribution with finite variance',
       'It gives exact probabilities',
+      'It applies to ANY distribution with finite variance',
       'It applies only to normal distributions',
       'It requires the distribution to be continuous',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Chebyshev\'s inequality is universal: it holds for any distribution with finite variance, regardless of shape.',
   },
@@ -79,11 +111,11 @@ export const section178Questions: QuizQuestion[] = [
     question: 'Compared to Chebyshev\'s bound, the normal distribution has:',
     options: [
       'The same tail probabilities',
-      'Much smaller tail probabilities',
       'Much larger tail probabilities',
       'No tail probabilities',
+      'Much smaller tail probabilities',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Chebyshev bounds are loose. For normal distributions, $P(|X-\\mu| > 2\\sigma) \\approx 4.6\\%$, much less than Chebyshev\'s 25%.',
   },

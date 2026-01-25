@@ -7,11 +7,19 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'When does a modular inverse of $a \\bmod n$ exist?',
       options: [
-        'When $n$ is prime',
-        'When $a < n$',
-        'When $\\gcd(a, n) = 1$',
-        'Always'
-      ],
+      'When $n$ is prime',
+      'When $a < n
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: 'The modular inverse exists if and only if $a$ and $n$ are coprime ($\\gcd = 1$).',
+    },
+      'Always',
+      'When $\\gcd(a, n) = 1
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The modular inverse exists if and only if $a$ and $n$ are coprime ($\\gcd = 1$).',
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The modular inverse exists if and only if $a$ and $n$ are coprime ($\\gcd = 1$).',
@@ -29,7 +37,28 @@ export const section06Quiz = {
       id: 's06-e03',
       type: 'multiple-choice',
       question: 'What is $2^{-1} \\bmod 5$?',
-      options: ['$3$', '$2$', '$4$', '$1$'],
+      options: [
+      '$2
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$2 \\times 3 = 6 = 5 + 1 \\equiv 1 \\pmod{5}$. Therefore $2^{-1} \\equiv 3 \\pmod{5}$.',
+    },
+      '$3
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2 \\times 3 = 6 = 5 + 1 \\equiv 1 \\pmod{5}$. Therefore $2^{-1} \\equiv 3 \\pmod{5}$.',
+    },
+      '$4
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2 \\times 3 = 6 = 5 + 1 \\equiv 1 \\pmod{5}$. Therefore $2^{-1} \\equiv 3 \\pmod{5}$.',
+    },
+      '$1
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$2 \\times 3 = 6 = 5 + 1 \\equiv 1 \\pmod{5}$. Therefore $2^{-1} \\equiv 3 \\pmod{5}$.',
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$2 \\times 3 = 6 = 5 + 1 \\equiv 1 \\pmod{5}$. Therefore $2^{-1} \\equiv 3 \\pmod{5}$.',
@@ -39,11 +68,27 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'Does $4^{-1} \\bmod 8$ exist?',
       options: [
-        'Yes, it equals $4$',
-        'Yes, it equals $2$',
-        'Yes, it equals $6$',
-        'No, because $\\gcd(4,8) = 4 \\ne 1$'
-      ],
+      'Yes, it equals $4
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$\\gcd(4, 8) = 4 \\ne 1$, so no modular inverse exists.',
+    },
+      'No, because $\\gcd(4,8) = 4 \\ne 1
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: '$\\gcd(4, 8) = 4 \\ne 1$, so no modular inverse exists.',
+    },
+      'Yes, it equals $2
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: '$\\gcd(4, 8) = 4 \\ne 1$, so no modular inverse exists.',
+    },
+      'Yes, it equals $6
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: '$\\gcd(4, 8) = 4 \\ne 1$, so no modular inverse exists.',
+    },
+    ],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: '$\\gcd(4, 8) = 4 \\ne 1$, so no modular inverse exists.',
@@ -62,11 +107,27 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'If $a \\cdot a^{-1} \\equiv 1 \\pmod{n}$, what is $a^{-1}$ called?',
       options: [
-        'The modular inverse of $a$',
-        'The modular exponent of $a$',
-        'The GCD of $a$ and $n$',
-        'The remainder of $a$',
-      ],
+      'The modular exponent of $a
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: '$a^{-1}$ is called the modular multiplicative inverse of $a$ modulo $n$.',
+    },
+      'The GCD of $a$ and $n
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$a^{-1}$ is called the modular multiplicative inverse of $a$ modulo $n$.',
+    },
+      'The remainder of $a
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$a^{-1}$ is called the modular multiplicative inverse of $a$ modulo $n$.',
+    },
+      'The modular inverse of $a
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$a^{-1}$ is called the modular multiplicative inverse of $a$ modulo $n$.',
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$a^{-1}$ is called the modular multiplicative inverse of $a$ modulo $n$.',
@@ -84,7 +145,24 @@ export const section06Quiz = {
       id: 's06-e08',
       type: 'multiple-choice',
       question: 'What is $1^{-1} \\bmod n$ for any modulus $n$?',
-      options: ['$1$', '$n-1$', '$0$', 'Does not exist'],
+      options: [
+      '$n-1
+      correctIndex: 1,
+      difficulty: 'easy',
+      explanation: '$1 \\times 1 = 1 \\equiv 1 \\pmod{n}$, so $1$ is its own inverse.',
+    },
+      '$1
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$1 \\times 1 = 1 \\equiv 1 \\pmod{n}$, so $1$ is its own inverse.',
+    },
+      '$0
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$1 \\times 1 = 1 \\equiv 1 \\pmod{n}$, so $1$ is its own inverse.',
+    },
+      'Does not exist',
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$1 \\times 1 = 1 \\equiv 1 \\pmod{n}$, so $1$ is its own inverse.',
@@ -124,11 +202,27 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'To find $a^{-1} \\bmod n$ using the Extended Euclidean Algorithm, we solve:',
       options: [
-        '$ax = n$ for $x$',
-        '$ax + ny = 1$ for $x$',
-        '$a + n = x$ for $x$',
-        '$a^x \\equiv 1 \\pmod{n}$ for $x$'
-      ],
+      '$ax = n$ for $x
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'From Bézout\'s identity, if $\\gcd(a, n) = 1$, then $ax + ny = 1$. Taking mod $n$: $ax \\equiv 1 \\pmod{n}$, so $x = a^{-1}$.',
+    },
+      '$a + n = x$ for $x
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'From Bézout\'s identity, if $\\gcd(a, n) = 1$, then $ax + ny = 1$. Taking mod $n$: $ax \\equiv 1 \\pmod{n}$, so $x = a^{-1}$.',
+    },
+      '$a^x \\equiv 1 \\pmod{n}$ for $x
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'From Bézout\'s identity, if $\\gcd(a, n) = 1$, then $ax + ny = 1$. Taking mod $n$: $ax \\equiv 1 \\pmod{n}$, so $x = a^{-1}$.',
+    },
+      '$ax + ny = 1$ for $x
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: 'From Bézout\'s identity, if $\\gcd(a, n) = 1$, then $ax + ny = 1$. Taking mod $n$: $ax \\equiv 1 \\pmod{n}$, so $x = a^{-1}$.',
+    },
+    ],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'From Bézout\'s identity, if $\\gcd(a, n) = 1$, then $ax + ny = 1$. Taking mod $n$: $ax \\equiv 1 \\pmod{n}$, so $x = a^{-1}$.',
@@ -146,7 +240,28 @@ export const section06Quiz = {
       id: 's06-m04',
       type: 'multiple-choice',
       question: 'If $p$ is prime, how many elements in $\\mathbb{Z}_p^*$ have multiplicative inverses?',
-      options: ['$p - 1$', '$p$', '$p - 2$', '$1$'],
+      options: [
+      '$p
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'All $p - 1$ non-zero elements have inverses since $\\gcd(a, p) = 1$ for all $1 \\le a < p$.',
+    },
+      '$p - 2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'All $p - 1$ non-zero elements have inverses since $\\gcd(a, p) = 1$ for all $1 \\le a < p$.',
+    },
+      '$p - 1
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'All $p - 1$ non-zero elements have inverses since $\\gcd(a, p) = 1$ for all $1 \\le a < p$.',
+    },
+      '$1
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'All $p - 1$ non-zero elements have inverses since $\\gcd(a, p) = 1$ for all $1 \\le a < p$.',
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'All $p - 1$ non-zero elements have inverses since $\\gcd(a, p) = 1$ for all $1 \\le a < p$.',
@@ -164,7 +279,28 @@ export const section06Quiz = {
       id: 's06-m06',
       type: 'multiple-choice',
       question: 'If $a^{-1} \\equiv b \\pmod{n}$, what is $b^{-1} \\bmod n$?',
-      options: ['$a$', '$b$', '$n - a$', '$ab$'],
+      options: [
+      '$b
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: 'Since $ab \\equiv 1 \\pmod{n}$, the inverse of $b$ is $a$ (the inverse operation is symmetric).',
+    },
+      '$n - a
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Since $ab \\equiv 1 \\pmod{n}$, the inverse of $b$ is $a$ (the inverse operation is symmetric).',
+    },
+      '$a
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Since $ab \\equiv 1 \\pmod{n}$, the inverse of $b$ is $a$ (the inverse operation is symmetric).',
+    },
+      '$ab
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Since $ab \\equiv 1 \\pmod{n}$, the inverse of $b$ is $a$ (the inverse operation is symmetric).',
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Since $ab \\equiv 1 \\pmod{n}$, the inverse of $b$ is $a$ (the inverse operation is symmetric).',
@@ -182,7 +318,28 @@ export const section06Quiz = {
       id: 's06-m08',
       type: 'multiple-choice',
       question: 'In $\\mathbb{Z}_{15}$, which element does NOT have a multiplicative inverse?',
-      options: ['$6$', '$7$', '$11$', '$13$'],
+      options: [
+      '$7
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$\\gcd(6, 15) = 3 \\ne 1$, so $6$ has no inverse. The others are coprime to $15$.',
+    },
+      '$11
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\gcd(6, 15) = 3 \\ne 1$, so $6$ has no inverse. The others are coprime to $15$.',
+    },
+      '$13
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\gcd(6, 15) = 3 \\ne 1$, so $6$ has no inverse. The others are coprime to $15$.',
+    },
+      '$6
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$\\gcd(6, 15) = 3 \\ne 1$, so $6$ has no inverse. The others are coprime to $15$.',
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$\\gcd(6, 15) = 3 \\ne 1$, so $6$ has no inverse. The others are coprime to $15$.',
@@ -200,7 +357,28 @@ export const section06Quiz = {
       id: 's06-m10',
       type: 'multiple-choice',
       question: 'How many integers in $\\{1, 2, \\ldots, 12\\}$ have multiplicative inverses modulo $12$?',
-      options: ['$4$', '$6$', '$11$', '$12$'],
+      options: [
+      '$6
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: 'Only integers coprime to $12$ have inverses: $\\{1, 5, 7, 11\\}$. That\'s $\\varphi(12) = 4$.',
+    },
+      '$11
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Only integers coprime to $12$ have inverses: $\\{1, 5, 7, 11\\}$. That\'s $\\varphi(12) = 4$.',
+    },
+      '$12
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Only integers coprime to $12$ have inverses: $\\{1, 5, 7, 11\\}$. That\'s $\\varphi(12) = 4$.',
+    },
+      '$4
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: 'Only integers coprime to $12$ have inverses: $\\{1, 5, 7, 11\\}$. That\'s $\\varphi(12) = 4$.',
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Only integers coprime to $12$ have inverses: $\\{1, 5, 7, 11\\}$. That\'s $\\varphi(12) = 4$.',
@@ -222,11 +400,27 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'If $p$ is prime, then $a^{-1} \\bmod p$ can also be computed as:',
       options: [
-        '$a^{p} \\bmod p$',
-        '$a^{p-1} \\bmod p$',
-        '$a^{p-2} \\bmod p$',
-        '$p - a$'
-      ],
+      '$a^{p-2} \\bmod p
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: "By Fermat's Little Theorem, $a^{p-1} \\equiv 1 \\pmod{p}$. Thus $a \\cdot a^{p-2} \\equiv 1 \\pmod{p}$, so $a^{-1} \\equiv a^{p-2} \\pmod{p}$.",
+    },
+      '$a^{p} \\bmod p
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: "By Fermat's Little Theorem, $a^{p-1} \\equiv 1 \\pmod{p}$. Thus $a \\cdot a^{p-2} \\equiv 1 \\pmod{p}$, so $a^{-1} \\equiv a^{p-2} \\pmod{p}$.",
+    },
+      '$a^{p-1} \\bmod p
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: "By Fermat's Little Theorem, $a^{p-1} \\equiv 1 \\pmod{p}$. Thus $a \\cdot a^{p-2} \\equiv 1 \\pmod{p}$, so $a^{-1} \\equiv a^{p-2} \\pmod{p}$.",
+    },
+      '$p - a
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: "By Fermat's Little Theorem, $a^{p-1} \\equiv 1 \\pmod{p}$. Thus $a \\cdot a^{p-2} \\equiv 1 \\pmod{p}$, so $a^{-1} \\equiv a^{p-2} \\pmod{p}$.",
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: "By Fermat's Little Theorem, $a^{p-1} \\equiv 1 \\pmod{p}$. Thus $a \\cdot a^{p-2} \\equiv 1 \\pmod{p}$, so $a^{-1} \\equiv a^{p-2} \\pmod{p}$.",
@@ -245,11 +439,27 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'If $(ab)^{-1} \\bmod n$ exists, it equals:',
       options: [
-        '$(ab)^2 \\bmod n$',
-        '$(a^{-1} + b^{-1}) \\bmod n$',
-        '$a \\cdot b \\bmod n$',
-        '$a^{-1} \\cdot b^{-1} \\bmod n$'
-      ],
+      '$(ab)^2 \\bmod n
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: '$(ab)(a^{-1}b^{-1}) = (aa^{-1})(bb^{-1}) = 1 \\cdot 1 = 1$. So $(ab)^{-1} = a^{-1}b^{-1}$.',
+    },
+      '$(a^{-1} + b^{-1}) \\bmod n
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: '$(ab)(a^{-1}b^{-1}) = (aa^{-1})(bb^{-1}) = 1 \\cdot 1 = 1$. So $(ab)^{-1} = a^{-1}b^{-1}$.',
+    },
+      '$a^{-1} \\cdot b^{-1} \\bmod n
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: '$(ab)(a^{-1}b^{-1}) = (aa^{-1})(bb^{-1}) = 1 \\cdot 1 = 1$. So $(ab)^{-1} = a^{-1}b^{-1}$.',
+    },
+      '$a \\cdot b \\bmod n
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: '$(ab)(a^{-1}b^{-1}) = (aa^{-1})(bb^{-1}) = 1 \\cdot 1 = 1$. So $(ab)^{-1} = a^{-1}b^{-1}$.',
+    },
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: '$(ab)(a^{-1}b^{-1}) = (aa^{-1})(bb^{-1}) = 1 \\cdot 1 = 1$. So $(ab)^{-1} = a^{-1}b^{-1}$.',
@@ -268,11 +478,27 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'In RSA, the decryption exponent $d$ satisfies $ed \\equiv 1 \\pmod{\\varphi(n)}$. This means $d$ is:',
       options: [
-        'The modular inverse of $e$ modulo $\\varphi(n)$',
-        'The GCD of $e$ and $\\varphi(n)$',
-        'The prime factorization of $n$',
-        'Equal to $e$',
-      ],
+      'The GCD of $e$ and $\\varphi(n)
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'The RSA decryption exponent $d$ is computed as $d = e^{-1} \\bmod \\varphi(n)$ using the Extended Euclidean Algorithm.',
+    },
+      'The prime factorization of $n
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The RSA decryption exponent $d$ is computed as $d = e^{-1} \\bmod \\varphi(n)$ using the Extended Euclidean Algorithm.',
+    },
+      'The modular inverse of $e$ modulo $\\varphi(n)
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The RSA decryption exponent $d$ is computed as $d = e^{-1} \\bmod \\varphi(n)$ using the Extended Euclidean Algorithm.',
+    },
+      'Equal to $e
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The RSA decryption exponent $d$ is computed as $d = e^{-1} \\bmod \\varphi(n)$ using the Extended Euclidean Algorithm.',
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The RSA decryption exponent $d$ is computed as $d = e^{-1} \\bmod \\varphi(n)$ using the Extended Euclidean Algorithm.',
@@ -291,11 +517,23 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'The equation $ax \\equiv b \\pmod{n}$ has a solution if and only if:',
       options: [
-        '$a < n$',
-        '$\\gcd(a, n)$ divides $b$',
-        '$b < a$',
-        '$n$ is prime'
-      ],
+      '$a < n
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'The linear congruence $ax \\equiv b \\pmod{n}$ has solutions iff $\\gcd(a, n) | b$. When it does, there are exactly $\\gcd(a, n)$ solutions modulo $n$.',
+    },
+      '$b < a
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'The linear congruence $ax \\equiv b \\pmod{n}$ has solutions iff $\\gcd(a, n) | b$. When it does, there are exactly $\\gcd(a, n)$ solutions modulo $n$.',
+    },
+      '$\\gcd(a, n)$ divides $b
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'The linear congruence $ax \\equiv b \\pmod{n}$ has solutions iff $\\gcd(a, n) | b$. When it does, there are exactly $\\gcd(a, n)$ solutions modulo $n$.',
+    },
+      '$n$ is prime',
+    ],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'The linear congruence $ax \\equiv b \\pmod{n}$ has solutions iff $\\gcd(a, n) | b$. When it does, there are exactly $\\gcd(a, n)$ solutions modulo $n$.',
@@ -314,11 +552,27 @@ export const section06Quiz = {
       type: 'multiple-choice',
       question: 'If $n = pq$ where $p, q$ are distinct primes, how many elements in $\\mathbb{Z}_n$ have multiplicative inverses?',
       options: [
-        '$pq$',
-        '$pq - 1$',
-        '$(p-1)(q-1)$',
-        '$(p-1) + (q-1)$'
-      ],
+      '$(p-1)(q-1)
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The number of invertible elements is $\\varphi(pq) = \\varphi(p)\\varphi(q) = (p-1)(q-1)$.',
+    },
+      '$pq
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'The number of invertible elements is $\\varphi(pq) = \\varphi(p)\\varphi(q) = (p-1)(q-1)$.',
+    },
+      '$pq - 1
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'The number of invertible elements is $\\varphi(pq) = \\varphi(p)\\varphi(q) = (p-1)(q-1)$.',
+    },
+      '$(p-1) + (q-1)
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'The number of invertible elements is $\\varphi(pq) = \\varphi(p)\\varphi(q) = (p-1)(q-1)$.',
+    },
+    ],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The number of invertible elements is $\\varphi(pq) = \\varphi(p)\\varphi(q) = (p-1)(q-1)$.',

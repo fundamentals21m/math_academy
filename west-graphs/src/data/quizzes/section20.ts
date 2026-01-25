@@ -6,10 +6,22 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The line graph $L(G)$ has:',
     options: [
+      'Vertices for each vertex of $G
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: '$L(G)$ has edges of $G$ as vertices; two are adjacent if the original edges share an endpoint.',
+  },
+      'The same number of edges as $G
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$L(G)$ has edges of $G$ as vertices; two are adjacent if the original edges share an endpoint.',
+  },
+      'Complementary edges to $G
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: '$L(G)$ has edges of $G$ as vertices; two are adjacent if the original edges share an endpoint.',
+  },
       'Vertices for each edge of $G$, adjacent when edges share a vertex',
-      'Vertices for each vertex of $G$',
-      'The same number of edges as $G$',
-      'Complementary edges to $G$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -20,12 +32,12 @@ export const section20Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The chromatic index $\\chi\'(G)$ is:',
     options: [
+      'The minimum colors for proper edge-coloring',
       'The vertex chromatic number',
       'The number of edges',
-      'The minimum colors for proper edge-coloring',
       'The maximum degree',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '$\\chi\'(G)$ = minimum colors to color edges so no two edges sharing a vertex have the same color.',
   },

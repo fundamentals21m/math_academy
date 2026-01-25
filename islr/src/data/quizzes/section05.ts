@@ -7,12 +7,12 @@ export const section05Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'With a large sample size $n$ and small number of predictors $p$, which method would generally perform better?',
     options: [
-      'Flexible methods',
       'Inflexible methods',
       'They perform equally',
-      'Cannot determine'
+      'Flexible methods',
+      'Cannot determine',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'With large $n$, we have enough data to estimate complex patterns without overfitting, so flexible methods can shine.',
   },
@@ -22,11 +22,11 @@ export const section05Quiz: QuizQuestion[] = [
     question: 'When the true relationship between $X$ and $Y$ is highly non-linear, which method is preferred?',
     options: [
       'Linear regression',
-      'A more flexible method',
       'Any parametric method',
-      'An inflexible method'
+      'A more flexible method',
+      'An inflexible method',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Non-linear relationships require flexible methods that can capture curves and complex patterns.',
   },
@@ -37,10 +37,10 @@ export const section05Quiz: QuizQuestion[] = [
     options: [
       'Gender',
       'Brand of car',
+      'Eye color',
       'Temperature',
-      'Eye color'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Temperature is quantitative (numerical). Gender, brand, and eye color are qualitative (categorical).',
   },
@@ -58,11 +58,11 @@ export const section05Quiz: QuizQuestion[] = [
     question: 'The bias-variance tradeoff means:',
     options: [
       'Bias and variance are always equal',
+      'Reducing one often increases the other',
       'They are unrelated concepts',
       'Both can be minimized simultaneously',
-      'Reducing one often increases the other'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The tradeoff means that more flexible models (lower bias) typically have higher variance, and vice versa.',
   },
@@ -75,7 +75,7 @@ export const section05Quiz: QuizQuestion[] = [
       'Overfit the training data',
       'Perform very well',
       'Have low variance',
-      'Underfit the data'
+      'Underfit the data',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -86,12 +86,12 @@ export const section05Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For inference about which predictors affect the response, we prefer:',
     options: [
-      'Neural networks',
       'Linear regression',
+      'Neural networks',
       'Random forests',
-      'Support vector machines'
+      'Support vector machines',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Linear regression coefficients are interpretable - each coefficient shows the effect of that predictor on the response.',
   },
@@ -102,10 +102,10 @@ export const section05Quiz: QuizQuestion[] = [
     options: [
       'More flexible methods to capture the noise',
       'Any method will work equally well',
+      'More predictors',
       'Less flexible methods to avoid fitting noise',
-      'More predictors'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'When noise is high, flexible methods may fit the noise. Simpler methods are more robust to noisy data.',
   },
@@ -117,7 +117,7 @@ export const section05Quiz: QuizQuestion[] = [
       'Supervised learning',
       'Classification',
       'Regression',
-      'Unsupervised learning'
+      'Unsupervised learning',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -138,12 +138,12 @@ export const section05Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If training error is 2% and test error is 20%, the model is likely:',
     options: [
-      'Overfitting',
       'Underfitting',
+      'Overfitting',
       'Optimal',
-      'Unbiased'
+      'Unbiased',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Large gap between training error (2%) and test error (20%) indicates overfitting - the model learned training-specific patterns.',
   },
@@ -155,7 +155,7 @@ export const section05Quiz: QuizQuestion[] = [
       'Can be reduced with more data',
       'Is independent of our modeling choices',
       'Can be reduced with better models',
-      'Equals zero in the Bayes classifier'
+      'Equals zero in the Bayes classifier',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -167,9 +167,9 @@ export const section05Quiz: QuizQuestion[] = [
     question: 'When comparing two models, if Model A has lower training error but higher test error than Model B, we should choose:',
     options: [
       'Model A (lower training error)',
-      'Either model (they\'re equivalent)',
+      'Either model (they\\\'re equivalent)',
       'Model B (lower test error)',
-      'A third model'
+      'A third model',
     ],
     correctIndex: 2,
     difficulty: 'hard',

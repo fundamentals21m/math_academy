@@ -20,12 +20,12 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Over a field of characteristic $0$, every algebraic extension is:',
     options: [
-      'Separable',
       'Inseparable',
       'Normal',
-      'Galois'
+      'Separable',
+      'Galois',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'In characteristic $0$, every irreducible polynomial is separable because if $f$ has a repeated root, then $\\gcd(f, f\') \\neq 1$, but $\\deg(f\') = \\deg(f) - 1$ and $f\' \\neq 0$, forcing $f$ reducible.',
   },
@@ -36,10 +36,10 @@ export const section66Questions: QuizQuestion[] = [
     options: [
       'Separable and irreducible',
       'Separable but reducible',
-      'Inseparable but irreducible',
       'Inseparable and reducible',
+      'Inseparable but irreducible',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'If $a \\notin F^p$, then $x^p - a$ is irreducible over $F$. However, in the algebraic closure, $x^p - a = (x - \\alpha)^p$ where $\\alpha^p = a$, so it has $\\alpha$ as a $p$-fold repeated root. Thus it is inseparable.',
   },
@@ -48,10 +48,14 @@ export const section66Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A finite field $\\mathbb{F}_q$ is:',
     options: [
+      'Always a perfect field',
       'Never a perfect field',
       'Perfect only if $q$ is prime',
-      'Always a perfect field',
-      'Perfect only if $q$ is a power of $2$'
+      'Perfect only if $q$ is a power of $2
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A field is perfect if every algebraic extension is separable. Finite fields are perfect because the Frobenius map $x \\mapsto x^p$ is surjective (hence bijective) on a finite field, so every element is a $p$-th power.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',

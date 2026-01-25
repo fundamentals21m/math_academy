@@ -9,7 +9,7 @@ export const section00Questions: QuizQuestion[] = [
       'Bitcoin Improvement Proposal',
       'Bitcoin Implementation Protocol',
       'Bitcoin Interchange Process',
-      'Bitcoin Integration Plan'
+      'Bitcoin Integration Plan',
     ],
     correctIndex: 0,
     difficulty: 'easy',

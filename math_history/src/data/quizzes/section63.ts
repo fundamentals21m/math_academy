@@ -7,12 +7,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT one of the group axioms?',
     options: [
-      'Commutativity',
       'Associativity',
       'Identity element',
+      'Commutativity',
       'Inverse elements',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The four group axioms are closure, associativity, identity, and inverses. Commutativity (a·b = b·a) is NOT required for a group. Groups that are commutative are called "abelian" groups, but many groups are non-abelian.',
@@ -22,12 +22,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An abelian group is one where:',
     options: [
-      'Every element equals its inverse',
       'The operation is commutative',
+      'Every element equals its inverse',
       'The group has exactly two elements',
-      'The group has no subgroups'
+      'The group has no subgroups',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'An abelian group (named after Niels Henrik Abel) is a group where the operation is commutative: a·b = b·a for all elements a and b. Examples include (Z, +) and cyclic groups.',
@@ -54,11 +54,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'Two groups are isomorphic if:',
     options: [
       'They have the same subgroups',
+      'There exists a bijective homomorphism between them',
       'They have the same number of elements',
       'They are both abelian',
-      'There exists a bijective homomorphism between them'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'Groups G and H are isomorphic (G ≅ H) if there exists a bijective homomorphism between them. This means they have identical structure—they differ only in the "names" of their elements. Having the same size is necessary but not sufficient.',
@@ -69,12 +69,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The classification of finite simple groups includes:',
     options: [
-      'Cyclic groups of prime order, alternating groups $A_n$ (n≥5), groups of Lie type, and 26 sporadic groups',
       'Only cyclic groups and symmetric groups',
       'All abelian groups',
       'Only groups with fewer than 100 elements',
+      'Cyclic groups of prime order, alternating groups $A_n$ (n≥5), groups of Lie type, and 26 sporadic groups',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'The classification theorem (a monumental achievement spanning tens of thousands of pages) states that finite simple groups are: cyclic groups Z/pZ for prime p, alternating groups A_n for n ≥ 5, various families of Lie type groups, and exactly 26 "sporadic" groups including the Monster.',
@@ -84,10 +84,25 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The First Isomorphism Theorem states that for a homomorphism $\\phi: G \\to H$:',
     options: [
-      '$G \\cong H$',
-      '$G/\\ker(\\phi) \\cong \\text{im}(\\phi)$',
-      '$\\ker(\\phi) = \\{e\\}$',
-      '$G$ and $H$ have the same order'
+      '$G \\cong H
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation:
+      'The First Isomorphism Theorem states that for any group homomorphism φ: G → H, the quotient G/ker(φ) is isomorphic to the image im(φ). This fundamental theorem connects kernels, images, and quotient groups.',
+  },
+      '$\\ker(\\phi) = \\{e\\}
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'The First Isomorphism Theorem states that for any group homomorphism φ: G → H, the quotient G/ker(φ) is isomorphic to the image im(φ). This fundamental theorem connects kernels, images, and quotient groups.',
+  },
+      '$G$ and $H$ have the same order',
+      '$G/\\ker(\\phi) \\cong \\text{im}(\\phi)
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation:
+      'The First Isomorphism Theorem states that for any group homomorphism φ: G → H, the quotient G/ker(φ) is isomorphic to the image im(φ). This fundamental theorem connects kernels, images, and quotient groups.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'hard',

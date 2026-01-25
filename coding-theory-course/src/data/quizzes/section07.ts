@@ -43,9 +43,13 @@ export const section07Questions: QuizQuestion[] = [
     question: 'The parity check matrix of a Hamming code has columns that are:',
     options: [
       'The first $n$ columns of the identity matrix',
-      'All non-zero binary $r$-tuples, one for each integer from 1 to $2^r - 1$',
       'Random binary vectors',
-      'All binary vectors including the zero vector'
+      'All non-zero binary $r$-tuples, one for each integer from 1 to $2^r - 1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The columns of the Hamming code parity check matrix are all $2^r - 1$ non-zero binary $r$-tuples, arranged in order of increasing value when read as binary numbers.',
+  },
+      'All binary vectors including the zero vector',
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -56,12 +60,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Hamming code decoding, if the syndrome equals $(101)_2$, the error is in position:',
     options: [
+      '5',
       '6',
       '3',
-      '5',
-      '1'
+      '1',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The syndrome directly indicates the error position in a Hamming code. $(101)_2 = 4 + 1 = 5$, so the error is in position 5.',
   },

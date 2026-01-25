@@ -10,11 +10,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What is a perfect number?',
     options: [
       'A number that is divisible by all single-digit numbers',
+      'A number equal to the sum of its proper divisors',
       'A number that is both prime and even',
       'A number whose digits sum to 10',
-      'A number equal to the sum of its proper divisors',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A perfect number equals the sum of its proper divisors. For example, 6 = 1 + 2 + 3, and 28 = 1 + 2 + 4 + 7 + 14. They can also be described as numbers that are "amicable with themselves."',
@@ -23,8 +23,13 @@ export const section07Questions: QuizQuestion[] = [
     id: 2,
     type: 'multiple-choice',
     question: 'What are the first two perfect numbers?',
-    options: ['4 and 8', '6 and 28', '10 and 15', '12 and 24'],
-    correctIndex: 1,
+    options: [
+      '4 and 8',
+      '10 and 15',
+      '6 and 28',
+      '12 and 24',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'The first two perfect numbers are 6 (= 1+2+3) and 28 (= 1+2+4+7+14). The third and fourth perfect numbers are 496 and 8128.',
@@ -34,12 +39,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "According to Euclid's theorem, when is $2^{m-1}(2^m - 1)$ a perfect number?",
     options: [
+      'When $2^m - 1$ is prime',
       'When m is any positive integer',
       'When m is even',
       'When $2^m - 1$ is a perfect square',
-      'When $2^m - 1$ is prime',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       "Euclid proved in Book IX of the Elements that $2^{m-1}(2^m - 1)$ is perfect whenever $2^m - 1$ is prime. This connects perfect numbers to Mersenne primes.",
@@ -69,12 +74,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $2^m - 1$ to possibly be prime, what condition must m satisfy?',
     options: [
-      'm must be prime',
       'm must be a perfect square',
+      'm must be prime',
       'm must be even',
-      'm must be a power of 2'
+      'm must be a power of 2',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'For $2^m - 1$ to be prime, m must be prime. If m = ab with a, b > 1, then $2^m - 1$ can be factored. However, the converse is not true: $2^{11} - 1 = 2047 = 23 × 89$ is not prime even though 11 is prime.',
@@ -85,11 +90,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'What did Frank Nelson Cole prove in his famous 1903 lecture?',
     options: [
       'That there are infinitely many perfect numbers',
-      'That $2^{67} - 1$ is not prime, disproving Mersenne',
       'That odd perfect numbers exist',
       'That perfect numbers are always even',
+      'That $2^{67} - 1$ is not prime, disproving Mersenne',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'In 1903, Cole silently calculated $2^{67} - 1$ and then the product 193,707,721 × 761,838,257,287. The results matched, proving that $2^{67} - 1$ is not prime and Mersenne was wrong. He received a standing ovation.',
@@ -121,10 +126,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'Whether 6 is a perfect number',
       'Whether 28 equals the sum of its proper divisors',
+      'Whether Euclid\\\'s perfect number formula is correct',
       'Whether there are infinitely many Mersenne primes',
-      'Whether Euclid\'s perfect number formula is correct',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Two major open problems remain: (1) Are there infinitely many Mersenne primes? (2) Do odd perfect numbers exist? Both have been unsolved for centuries.',

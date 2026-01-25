@@ -22,10 +22,10 @@ export const section56Questions: QuizQuestion[] = [
     options: [
       'The square of a sum',
       'The cube of a sum',
+      'The square of a difference',
       'The difference of squares',
-      'The square of a difference'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'From a² + b² - 2ab = (a-b)², we get the square of a difference formula.',
   },

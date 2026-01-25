@@ -36,10 +36,14 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What fundamental property of Lagrange coefficients makes the share conversion theorem work?',
     options: [
-      'They sum to 1: $\\sum_{i \\in S} \\lambda_i = 1$',
       'They are always positive integers',
       'They are always less than the secret',
-      'They are always prime numbers'
+      'They are always prime numbers',
+      'They sum to 1: $\\sum_{i \\in S} \\lambda_i = 1
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'The Lagrange coefficients for any set $S$ sum to 1: $\\sum_{i \\in S} \\lambda_i = 1$. This follows from the fact that the constant polynomial 1 interpolates through points $(x_i, 1)$ for all $i$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -79,7 +83,28 @@ export const section16Questions: QuizQuestion[] = [
     id: 4,
     type: 'multiple-choice',
     question: 'If participants $\\{1, 2, 3\\}$ have Lagrange coefficients $\\lambda_1 = 3$, $\\lambda_2 = -3$, $\\lambda_3 = 1$, what is their sum?',
-    options: ['$0$', '$1$', '$3$', '$7$'],
+    options: [
+      '$0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: '$\\lambda_1 + \\lambda_2 + \\lambda_3 = 3 + (-3) + 1 = 1$. This confirms the fundamental property that Lagrange coefficients always sum to 1.',
+  },
+      '$3
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\lambda_1 + \\lambda_2 + \\lambda_3 = 3 + (-3) + 1 = 1$. This confirms the fundamental property that Lagrange coefficients always sum to 1.',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\lambda_1 + \\lambda_2 + \\lambda_3 = 3 + (-3) + 1 = 1$. This confirms the fundamental property that Lagrange coefficients always sum to 1.',
+  },
+      '$7
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: '$\\lambda_1 + \\lambda_2 + \\lambda_3 = 3 + (-3) + 1 = 1$. This confirms the fundamental property that Lagrange coefficients always sum to 1.',
+  },
+    ],
     correctIndex: 1,
     difficulty: 'easy',
     explanation: '$\\lambda_1 + \\lambda_2 + \\lambda_3 = 3 + (-3) + 1 = 1$. This confirms the fundamental property that Lagrange coefficients always sum to 1.',

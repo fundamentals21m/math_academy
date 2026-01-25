@@ -111,11 +111,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'The exponential function describes:',
     options: [
       'Only financial growth',
-      'Constant growth rates like population, radioactive decay, and compound interest',
       'Linear relationships',
       'Periodic phenomena',
+      'Constant growth rates like population, radioactive decay, and compound interest',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Exponential functions model any process where the rate of change is proportional to the current amount.',
   },

@@ -6,10 +6,22 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A power series $\\sum_{n=0}^{\\infty} c_n z^n$ converges:',
     options: [
-      'For all $z \\in \\mathbb{C}$',
+      'For all $z \\in \\mathbb{C}
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Theorem 3.39: Every power series has a radius of convergence $R \\in [0, \\infty]$. The series converges absolutely for $|z| < R$ and diverges for $|z| > R$. Behavior at $|z| = R$ varies.',
+  },
+      'Only at $z = 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Theorem 3.39: Every power series has a radius of convergence $R \\in [0, \\infty]$. The series converges absolutely for $|z| < R$ and diverges for $|z| > R$. Behavior at $|z| = R$ varies.',
+  },
+      'Only for real $z
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'Theorem 3.39: Every power series has a radius of convergence $R \\in [0, \\infty]$. The series converges absolutely for $|z| < R$ and diverges for $|z| > R$. Behavior at $|z| = R$ varies.',
+  },
       'In a disk $|z| < R$ for some $0 \\leq R \\leq \\infty$ (the radius of convergence)',
-      'Only at $z = 0$',
-      'Only for real $z$'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,10 +32,18 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The radius of convergence $R$ of $\\sum c_n z^n$ satisfies:',
     options: [
+      '$1/R = \\limsup_{n \\to \\infty} |c_n|^{1/n}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Hadamard formula (Theorem 3.39): $1/R = \\limsup |c_n|^{1/n}$, with $R = 0$ if $\\limsup = \\infty$ and $R = \\infty$ if $\\limsup = 0$. The ratio test formula works when the limit exists.',
+  },
       '$R = \\lim |c_n/c_{n+1}|$ always',
-      '$R = \\sum |c_n|$',
-      '$1/R = \\limsup_{n \\to \\infty} |c_n|^{1/n}$',
-      '$R = 1$ always'
+      '$R = \\sum |c_n|
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The Hadamard formula (Theorem 3.39): $1/R = \\limsup |c_n|^{1/n}$, with $R = 0$ if $\\limsup = \\infty$ and $R = \\infty$ if $\\limsup = 0$. The ratio test formula works when the limit exists.',
+  },
+      '$R = 1$ always',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -34,12 +54,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Inside the radius of convergence, a power series defines a function that is:',
     options: [
-      'Infinitely differentiable (analytic)',
       'Continuous but may not be differentiable',
       'Differentiable but may not be analytic',
+      'Infinitely differentiable (analytic)',
       'Bounded but may not be continuous',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Power series are infinitely differentiable inside their radius of convergence, and can be differentiated term-by-term any number of times. The function equals its Taylor series - this is what "analytic" means.',
   },

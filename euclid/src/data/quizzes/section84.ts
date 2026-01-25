@@ -7,11 +7,11 @@ export const section84Questions: QuizQuestion[] = [
     question: 'Proposition III.20 relates which two types of angles?',
     options: [
       'Adjacent angles',
-      'Vertical angles',
       'Central angle and inscribed angle on the same arc',
+      'Vertical angles',
       'Complementary angles',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'III.20 proves the central angle is double the inscribed angle when both subtend the same arc.',
   },
@@ -21,11 +21,11 @@ export const section84Questions: QuizQuestion[] = [
     question: 'If an inscribed angle is 35°, the central angle on the same arc is:',
     options: [
       '17.5°',
-      '70°',
       '35°',
-      '105°'
+      '70°',
+      '105°',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The central angle is double the inscribed angle: 2 × 35° = 70°.',
   },

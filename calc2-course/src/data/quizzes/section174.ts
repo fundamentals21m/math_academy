@@ -66,10 +66,26 @@ export const section174Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The marginal density $f_X(x)$ is obtained by:',
     options: [
-      '$f_X(x) = \\int_{-\\infty}^{\\infty} f(x, y)\\,dy$',
-      '$f_X(x) = f(x, 0)$',
-      '$f_X(x) = \\int_{-\\infty}^{\\infty} f(x, y)\\,dx$',
-      '$f_X(x) = f(x, x)$'
+      '$f_X(x) = f(x, 0)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Integrate out the other variable: $f_X(x) = \\int_{-\\infty}^{\\infty} f(x, y)\\,dy$.',
+  },
+      '$f_X(x) = \\int_{-\\infty}^{\\infty} f(x, y)\\,dx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Integrate out the other variable: $f_X(x) = \\int_{-\\infty}^{\\infty} f(x, y)\\,dy$.',
+  },
+      '$f_X(x) = \\int_{-\\infty}^{\\infty} f(x, y)\\,dy
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Integrate out the other variable: $f_X(x) = \\int_{-\\infty}^{\\infty} f(x, y)\\,dy$.',
+  },
+      '$f_X(x) = f(x, x)
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Integrate out the other variable: $f_X(x) = \\int_{-\\infty}^{\\infty} f(x, y)\\,dy$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

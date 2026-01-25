@@ -24,10 +24,26 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The geometric series $\\sum_{n=0}^{\\infty} r^n$ converges when:',
     options: [
-      '$r > 1$',
-      '$r = 1$',
-      '$|r| < 1$',
-      'For all $r$'
+      '$r > 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Geometric series converges iff $|r| < 1$.',
+  },
+      '$r = 1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Geometric series converges iff $|r| < 1$.',
+  },
+      'For all $r
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Geometric series converges iff $|r| < 1$.',
+  },
+      '$|r| < 1
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Geometric series converges iff $|r| < 1$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -107,10 +123,18 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The harmonic series $\\sum_{n=1}^{\\infty} \\frac{1}{n}$:',
     options: [
-      'Converges to 1',
       'Diverges',
-      'Converges to $e$',
-      'Converges to $\\ln 2$'
+      'Converges to 1',
+      'Converges to $e
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The harmonic series diverges (even though $1/n \\to 0$).',
+  },
+      'Converges to $\\ln 2
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The harmonic series diverges (even though $1/n \\to 0$).',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',

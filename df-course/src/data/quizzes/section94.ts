@@ -89,7 +89,7 @@ export const section94Questions: QuizQuestion[] = [
     question: 'The restriction $\\text{Res}_H^G(V)$ of a representation $V$ of $G$ to $H \\leq G$:',
     options: [
       'Has smaller dimension than $V
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Restriction keeps the same vector space but only allows the subgroup $H$ to act. The dimension is unchanged.',
   },
@@ -114,12 +114,12 @@ export const section94Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $G = S_3$ and $H = A_3 \\cong \\mathbb{Z}/3\\mathbb{Z}$, then $\\text{Ind}_{A_3}^{S_3}(1)$ equals:',
     options: [
-      'The trivial plus sign representation ($1 \\oplus \\text{sgn}$)',
       'The trivial representation',
       'The sign representation',
+      'The trivial plus sign representation ($1 \\oplus \\text{sgn}$)',
       'The $2$-dimensional standard representation',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: '$\\text{Ind}_{A_3}^{S_3}(1)$ has dimension $[S_3:A_3] \\cdot 1 = 2$. By Frobenius reciprocity, it decomposes as the sum of representations whose restrictions to $A_3$ contain the trivial representation: these are the trivial and sign characters of $S_3$.',
   },

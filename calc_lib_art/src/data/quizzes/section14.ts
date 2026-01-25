@@ -15,7 +15,7 @@ export const section14Questions: QuizQuestion[] = [
     question: 'What is the main mystery Wigner described?',
     options: [
       'Why mathematics is so difficult',
-      'Why physicists don\\'t use more mathematics',
+      'Why physicists don\\\\'t use more mathematics',
       'Why mathematics developed for pure reasons describes physical reality so precisely',
       'Why mathematicians ignore physics',
     ],
@@ -29,11 +29,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'Riemannian geometry was developed in 1854 as pure mathematics. It was later used for:',
     options: [
       'Counting money',
+      'Einstein\\\\\'s general relativity (60 years later)',
       'Building bridges',
-      'Einstein\\'s general relativity (60 years later)',
       'Weather prediction',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Riemann developed curved-space geometry as pure mathematics. Sixty years later, Einstein needed exactly this for general relativity.',
   },
@@ -59,7 +59,7 @@ export const section14Questions: QuizQuestion[] = [
       'A distraction from real work',
       'Something to avoid',
       'A way to confuse students',
-      'A guide to discovering true physical laws'
+      'A guide to discovering true physical laws',
     ],
     correctIndex: 3,
     difficulty: 'easy',

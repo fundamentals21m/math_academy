@@ -39,7 +39,7 @@ export const section46Questions: QuizQuestion[] = [
       'Distinct real exponentials',
       'Repeated real roots',
       'Trigonometric functions with exponential decay/growth',
-      'Polynomials only'
+      'Polynomials only',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -80,10 +80,26 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When the discriminant $d = 0$ (repeated root $r = -a/2$), the general solution is:',
     options: [
-      '$y = (c_1 + c_2 x)e^{rx}$',
-      '$y = c_1 e^{rx} + c_2 e^{-rx}$',
-      '$y = c_1 \\cos rx + c_2 \\sin rx$',
-      '$y = c_1 + c_2 x$'
+      '$y = c_1 e^{rx} + c_2 e^{-rx}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'A repeated root gives only one exponential solution. The second independent solution is $xe^{rx}$, so $y = (c_1 + c_2 x)e^{rx}$.',
+  },
+      '$y = c_1 \\cos rx + c_2 \\sin rx
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A repeated root gives only one exponential solution. The second independent solution is $xe^{rx}$, so $y = (c_1 + c_2 x)e^{rx}$.',
+  },
+      '$y = c_1 + c_2 x
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A repeated root gives only one exponential solution. The second independent solution is $xe^{rx}$, so $y = (c_1 + c_2 x)e^{rx}$.',
+  },
+      '$y = (c_1 + c_2 x)e^{rx}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A repeated root gives only one exponential solution. The second independent solution is $xe^{rx}$, so $y = (c_1 + c_2 x)e^{rx}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

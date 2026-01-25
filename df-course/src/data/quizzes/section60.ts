@@ -58,12 +58,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The companion matrix of $f(x) = x^n + a_{n-1}x^{n-1} + \\cdots + a_1x + a_0$ is:',
     options: [
+      'A matrix with $1$s on the superdiagonal and $-a_0, -a_1, \\ldots, -a_{n-1}$ in the last column',
       'The identity matrix',
       'Always $n \\times n$ identity',
       'A diagonal matrix',
-      'A matrix with $1$s on the superdiagonal and $-a_0, -a_1, \\ldots, -a_{n-1}$ in the last column'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The companion matrix has $1$s on the subdiagonal (or superdiagonal, depending on convention) and the negatives of coefficients in the last row (or column).',
   },
@@ -72,12 +72,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The rational canonical form is:',
     options: [
-      'A block diagonal matrix with companion matrices on the diagonal',
       'Always diagonal',
+      'A block diagonal matrix with companion matrices on the diagonal',
       'The identity matrix',
-      'Never block diagonal'
+      'Never block diagonal',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The rational canonical form is block diagonal with companion matrices $C(f_1), C(f_2), \\ldots, C(f_k)$ corresponding to the invariant factors.',
   },

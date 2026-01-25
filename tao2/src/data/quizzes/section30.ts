@@ -33,11 +33,11 @@ export const section30Questions: QuizQuestion[] = [
     question: 'Every linear transformation $T: \\mathbf{R}^n \\to \\mathbf{R}^m$ can be represented by:',
     options: [
       'A scalar',
-      'A polynomial',
       'An $m \\times n$ matrix',
+      'A polynomial',
       'An $n \\times m$ matrix',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Linear maps from $\\mathbf{R}^n$ to $\\mathbf{R}^m$ correspond to $m \\times n$ matrices.',
   },
@@ -46,10 +46,26 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The operator norm of a linear map $T: \\mathbf{R}^n \\to \\mathbf{R}^m$ is defined as:',
     options: [
-      '$\\|T\\| = \\|T(0)\\|$',
-      '$\\|T\\| = \\sup_{x \\neq 0} \\frac{\\|Tx\\|}{\\|x\\|}$',
-      '$\\|T\\| = \\sum |T_{ij}|$',
-      '$\\|T\\| = \\det(T)$'
+      '$\\|T\\| = \\|T(0)\\|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The operator norm is the supremum of $\\|Tx\\|/\\|x\\|$ over nonzero $x$.',
+  },
+      '$\\|T\\| = \\sum |T_{ij}|
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The operator norm is the supremum of $\\|Tx\\|/\\|x\\|$ over nonzero $x$.',
+  },
+      '$\\|T\\| = \\det(T)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The operator norm is the supremum of $\\|Tx\\|/\\|x\\|$ over nonzero $x$.',
+  },
+      '$\\|T\\| = \\sup_{x \\neq 0} \\frac{\\|Tx\\|}{\\|x\\|}
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The operator norm is the supremum of $\\|Tx\\|/\\|x\\|$ over nonzero $x$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -92,10 +108,10 @@ export const section30Questions: QuizQuestion[] = [
     options: [
       'Unbounded',
       'Invertible',
+      'Continuous',
       'Discontinuous',
-      'Continuous'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'All linear maps on finite-dimensional normed spaces are continuous (bounded).',
   },

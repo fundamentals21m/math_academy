@@ -1,0 +1,286 @@
+{
+  "partId": 5,
+  "partTitle": "Renaissance Mathematics",
+  "textbookChapter": "Part 5",
+  "sections": [
+    {
+      "sectionId": 25,
+      "sectionTitle": "Logarithms and Astronomy",
+      "textbookSection": "Section 25",
+      "examples": [
+        {
+          "id": "ex-5-25-1",
+          "type": "example",
+          "title": "Computing with Logarithms",
+          "statement": "Use logarithms to compute $\\sqrt[5]{248832}$ given that $\\log 248832 \\approx 5.396$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply logarithm rule",
+                "content": "$\\log \\sqrt[5]{248832} = \\log (248832)^{1/5} = \\frac{1}{5} \\log 248832$"
+              },
+              {
+                "title": "Calculate",
+                "content": "$= \\frac{1}{5} \\times 5.396 = 1.0792$"
+              },
+              {
+                "title": "Find antilog",
+                "content": "$\\sqrt[5]{248832} = 10^{1.0792} = 12$"
+              }
+            ],
+            "conclusion": "$\\sqrt[5]{248832} = 12$. Verify: $12^5 = 248832$ ✓"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "5-25-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Napier's original logarithms were defined so that $\\text{Nap}(10^7) = 0$ and $\\text{Nap}(10^7(1-10^{-7})^n) = n$. Show that for small $x$, $\\text{Nap}(x) \\approx 10^7 \\ln(10^7/x)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Express in modern terms",
+                "content": "If $x = 10^7(1-10^{-7})^n$, then $\\text{Nap}(x) = n$."
+              },
+              {
+                "title": "Take natural logarithm",
+                "content": "$\\ln x = \\ln 10^7 + n \\ln(1-10^{-7})$\n$\\approx 7\\ln 10 - n \\cdot 10^{-7}$ (since $\\ln(1-z) \\approx -z$)"
+              },
+              {
+                "title": "Solve for n",
+                "content": "$n = \\text{Nap}(x) \\approx 10^7(7\\ln 10 - \\ln x) = 10^7 \\ln(10^7/x)$"
+              }
+            ],
+            "conclusion": "Napier's logarithm is essentially $10^7$ times the natural logarithm."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 26,
+      "sectionTitle": "Kepler and Planetary Motion",
+      "textbookSection": "Section 26",
+      "examples": [
+        {
+          "id": "ex-5-26-1",
+          "type": "example",
+          "title": "Kepler's Third Law",
+          "statement": "Verify Kepler's third law: $T^2 \\propto a^3$ using Earth (T=1 year, a=1 AU) and Mars (T=1.88 years, a=1.52 AU).",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute T²/a³ for Earth",
+                "content": "$\\frac{T^2}{a^3} = \\frac{1^2}{1^3} = 1$"
+              },
+              {
+                "title": "Compute T²/a³ for Mars",
+                "content": "$\\frac{T^2}{a^3} = \\frac{1.88^2}{1.52^3} = \\frac{3.534}{3.512} \\approx 1.006$"
+              }
+            ],
+            "conclusion": "Both ratios are approximately equal, confirming Kepler's third law."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "5-26-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Jupiter's orbital period is 11.86 years. Using Kepler's third law, find Jupiter's average distance from the Sun in AU.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply Kepler's third law",
+                "content": "$T^2 = a^3$ (in AU and years)\n$11.86^2 = a^3$"
+              },
+              {
+                "title": "Solve for a",
+                "content": "$a^3 = 140.66$\n$a = \\sqrt[3]{140.66} \\approx 5.20$ AU"
+              }
+            ],
+            "conclusion": "Jupiter is approximately 5.2 AU from the Sun."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 27,
+      "sectionTitle": "Descartes and Analytic Geometry",
+      "textbookSection": "Section 27",
+      "examples": [
+        {
+          "id": "ex-5-27-1",
+          "type": "example",
+          "title": "Descartes' Method for Tangents",
+          "statement": "Find the tangent to the parabola $y = x^2$ at the point $(2, 4)$ using Descartes' method of double roots.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up the line",
+                "content": "Let the tangent line be $y = mx + c$ passing through $(2, 4)$.\nSo $4 = 2m + c$, giving $c = 4 - 2m$."
+              },
+              {
+                "title": "Find intersection",
+                "content": "Intersection: $x^2 = mx + c$\n$x^2 - mx - (4 - 2m) = 0$"
+              },
+              {
+                "title": "Apply double root condition",
+                "content": "For tangency, $x = 2$ is a double root:\n$(x-2)^2 = x^2 - 4x + 4$\n\nComparing: $-m = -4$, so $m = 4$."
+              }
+            ],
+            "conclusion": "The tangent line is $y = 4x - 4$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "5-27-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use Descartes' method to find the tangent to $y = x^3$ at $(1, 1)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Set up",
+                "content": "Line: $y = m(x-1) + 1 = mx - m + 1$\nIntersection: $x^3 = mx - m + 1$"
+              },
+              {
+                "title": "Double root condition",
+                "content": "$x^3 - mx + (m-1) = 0$ has $x=1$ as double root.\nFactor: $(x-1)^2(x+a) = x^3 + (a-2)x^2 + (1-2a)x + a$"
+              },
+              {
+                "title": "Compare coefficients",
+                "content": "Coefficient of $x^2$: $a - 2 = 0 \\Rightarrow a = 2$\nCoefficient of $x$: $1 - 2a = -m \\Rightarrow m = 3$"
+              }
+            ],
+            "conclusion": "The tangent line is $y = 3x - 2$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 28,
+      "sectionTitle": "Fermat and Number Theory",
+      "textbookSection": "Section 28",
+      "examples": [
+        {
+          "id": "ex-5-28-1",
+          "type": "example",
+          "title": "Fermat's Little Theorem",
+          "statement": "Use Fermat's little theorem to find the remainder when $7^{222}$ is divided by 11.",
+          "solution": {
+            "steps": [
+              {
+                "title": "State Fermat's little theorem",
+                "content": "If $p$ is prime and $\\gcd(a,p) = 1$, then $a^{p-1} \\equiv 1 \\pmod{p}$."
+              },
+              {
+                "title": "Apply with a=7, p=11",
+                "content": "$7^{10} \\equiv 1 \\pmod{11}$"
+              },
+              {
+                "title": "Reduce exponent",
+                "content": "$222 = 10 \\times 22 + 2$\n$7^{222} = (7^{10})^{22} \\cdot 7^2 \\equiv 1^{22} \\cdot 49 \\pmod{11}$"
+              },
+              {
+                "title": "Final calculation",
+                "content": "$49 = 44 + 5 \\equiv 5 \\pmod{11}$"
+              }
+            ],
+            "conclusion": "The remainder is 5."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "5-28-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use Fermat's little theorem to show that $n^7 - n$ is divisible by 42 for all integers $n$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Factor 42",
+                "content": "$42 = 2 \\times 3 \\times 7$\nNeed to show $n^7 - n \\equiv 0$ mod 2, 3, and 7."
+              },
+              {
+                "title": "Mod 7",
+                "content": "By Fermat's little theorem, $n^7 \\equiv n \\pmod{7}$.\nSo $n^7 - n \\equiv 0 \\pmod{7}$."
+              },
+              {
+                "title": "Mod 2",
+                "content": "$n^7 - n = n(n^6 - 1)$. Either $n$ or $n^6-1$ is even."
+              },
+              {
+                "title": "Mod 3",
+                "content": "$n^7 - n = n(n^2-1)(n^4+n^2+1)$. If $n \\not\\equiv 0$, then $n^2 \\equiv 1 \\pmod{3}$."
+              }
+            ],
+            "conclusion": "$n^7 - n$ is divisible by 2, 3, and 7, hence by 42."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 29,
+      "sectionTitle": "Pascal and Probability",
+      "textbookSection": "Section 29",
+      "examples": [
+        {
+          "id": "ex-5-29-1",
+          "type": "example",
+          "title": "Pascal's Triangle Identity",
+          "statement": "Prove the identity $\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}$ combinatorially.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Interpretation",
+                "content": "$\\binom{n}{k}$ counts ways to choose $k$ items from $n$ items."
+              },
+              {
+                "title": "Fix an element",
+                "content": "Consider item #1. Either it's in the subset or not."
+              },
+              {
+                "title": "Case 1: Item #1 is included",
+                "content": "Choose remaining $k-1$ items from the other $n-1$ items: $\\binom{n-1}{k-1}$ ways."
+              },
+              {
+                "title": "Case 2: Item #1 is not included",
+                "content": "Choose all $k$ items from the other $n-1$ items: $\\binom{n-1}{k}$ ways."
+              }
+            ],
+            "conclusion": "Total: $\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "5-29-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "The Problem of Points: Two players need 3 wins each to win a prize. Player A has 2 wins, B has 1 win. How should the prize be divided if the game stops now?",
+          "solution": {
+            "steps": [
+              {
+                "title": "Analyze remaining games",
+                "content": "At most 3 more games needed. A needs 1 more win, B needs 2 more wins."
+              },
+              {
+                "title": "List outcomes",
+                "content": "Possible sequences (A wins, B wins, or A/B wins):\n- A wins immediately: A (prob 1/2)\n- BA then A: probability 1/4\n- BBA: probability 1/8\n- BBB: probability 1/8"
+              },
+              {
+                "title": "Calculate probabilities",
+                "content": "P(A wins) = 1/2 + 1/4 + 1/8 = 7/8\nP(B wins) = 1/8"
+              }
+            ],
+            "conclusion": "A should receive 7/8 of the prize, B should receive 1/8."
+          }
+        }
+      ]
+    }
+  ]
+}

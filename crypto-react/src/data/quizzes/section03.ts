@@ -33,8 +33,13 @@ export const section03Quiz = {
       id: 's03-e04',
       type: 'multiple-choice',
       question: 'If a clock shows 10:00 and you add 5 hours, what time does it show?',
-      options: ['3:00', '15:00', '5:00', '2:00'],
-      correctIndex: 0,
+      options: [
+      '15:00',
+      '5:00',
+      '2:00',
+      '3:00',
+    ],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Clock arithmetic is mod 12: $10 + 5 = 15 \\equiv 3 \\pmod{12}$.'
     },
@@ -61,11 +66,27 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'What does $a \\equiv b \\pmod{n}$ mean?',
       options: [
-        '$a$ is greater than $b$',
-        '$a$ equals $b$',
-        '$a$ and $b$ have the same remainder when divided by $n$',
-        '$n$ divides $a$ but not $b$'
-      ],
+      '$a$ and $b$ have the same remainder when divided by $n
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: 'The congruence notation $a \\equiv b \\pmod{n}$ means $a$ and $b$ leave the same remainder when divided by $n$.'
+    },
+      '$a$ is greater than $b
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The congruence notation $a \\equiv b \\pmod{n}$ means $a$ and $b$ leave the same remainder when divided by $n$.'
+    },
+      '$a$ equals $b
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The congruence notation $a \\equiv b \\pmod{n}$ means $a$ and $b$ leave the same remainder when divided by $n$.'
+    },
+      '$n$ divides $a$ but not $b
+      correctIndex: 2,
+      difficulty: 'easy',
+      explanation: 'The congruence notation $a \\equiv b \\pmod{n}$ means $a$ and $b$ leave the same remainder when divided by $n$.'
+    },
+    ],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The congruence notation $a \\equiv b \\pmod{n}$ means $a$ and $b$ leave the same remainder when divided by $n$.'
@@ -83,7 +104,28 @@ export const section03Quiz = {
       id: 's03-e09',
       type: 'multiple-choice',
       question: 'Which of the following is congruent to $15 \\pmod{4}$?',
-      options: ['$3$', '$1$', '$2$', '$0$'],
+      options: [
+      '$1
+      correctIndex: 3,
+      difficulty: 'easy',
+      explanation: '$15 = 4 \\times 3 + 3$, so $15 \\equiv 3 \\pmod{4}$.'
+    },
+      '$2
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$15 = 4 \\times 3 + 3$, so $15 \\equiv 3 \\pmod{4}$.'
+    },
+      '$0
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$15 = 4 \\times 3 + 3$, so $15 \\equiv 3 \\pmod{4}$.'
+    },
+      '$3
+      correctIndex: 0,
+      difficulty: 'easy',
+      explanation: '$15 = 4 \\times 3 + 3$, so $15 \\equiv 3 \\pmod{4}$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: '$15 = 4 \\times 3 + 3$, so $15 \\equiv 3 \\pmod{4}$.'
@@ -131,7 +173,28 @@ export const section03Quiz = {
       id: 's03-m04',
       type: 'multiple-choice',
       question: 'Which of these numbers is congruent to $-5 \\pmod{12}$?',
-      options: ['$7$', '$5$', '$-5$', '$17$'],
+      options: [
+      '$5
+      correctIndex: 3,
+      difficulty: 'medium',
+      explanation: '$-5 + 12 = 7$, so $-5 \\equiv 7 \\pmod{12}$.'
+    },
+      '$-5
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$-5 + 12 = 7$, so $-5 \\equiv 7 \\pmod{12}$.'
+    },
+      '$17
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$-5 + 12 = 7$, so $-5 \\equiv 7 \\pmod{12}$.'
+    },
+      '$7
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$-5 + 12 = 7$, so $-5 \\equiv 7 \\pmod{12}$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$-5 + 12 = 7$, so $-5 \\equiv 7 \\pmod{12}$.'
@@ -158,7 +221,28 @@ export const section03Quiz = {
       id: 's03-m07',
       type: 'multiple-choice',
       question: 'If $a \\equiv 3 \\pmod{5}$ and $b \\equiv 4 \\pmod{5}$, what is $a \\times b \\pmod{5}$?',
-      options: ['$2$', '$12$', '$7$', '$1$'],
+      options: [
+      '$12
+      correctIndex: 1,
+      difficulty: 'medium',
+      explanation: '$a \\times b \\equiv 3 \\times 4 \\equiv 12 \\equiv 2 \\pmod{5}$.'
+    },
+      '$2
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$a \\times b \\equiv 3 \\times 4 \\equiv 12 \\equiv 2 \\pmod{5}$.'
+    },
+      '$7
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$a \\times b \\equiv 3 \\times 4 \\equiv 12 \\equiv 2 \\pmod{5}$.'
+    },
+      '$1
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$a \\times b \\equiv 3 \\times 4 \\equiv 12 \\equiv 2 \\pmod{5}$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$a \\times b \\equiv 3 \\times 4 \\equiv 12 \\equiv 2 \\pmod{5}$.'
@@ -176,7 +260,28 @@ export const section03Quiz = {
       id: 's03-m09',
       type: 'multiple-choice',
       question: 'For what value of $x$ (where $0 \\le x < 7$) is $25 \\equiv x \\pmod{7}$?',
-      options: ['$4$', '$3$', '$5$', '$6$'],
+      options: [
+      '$3
+      correctIndex: 2,
+      difficulty: 'medium',
+      explanation: '$25 = 7 \\times 3 + 4$, so $25 \\equiv 4 \\pmod{7}$.'
+    },
+      '$5
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$25 = 7 \\times 3 + 4$, so $25 \\equiv 4 \\pmod{7}$.'
+    },
+      '$4
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$25 = 7 \\times 3 + 4$, so $25 \\equiv 4 \\pmod{7}$.'
+    },
+      '$6
+      correctIndex: 0,
+      difficulty: 'medium',
+      explanation: '$25 = 7 \\times 3 + 4$, so $25 \\equiv 4 \\pmod{7}$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$25 = 7 \\times 3 + 4$, so $25 \\equiv 4 \\pmod{7}$.'
@@ -216,11 +321,23 @@ export const section03Quiz = {
       type: 'multiple-choice',
       question: 'Which statement about modular arithmetic is FALSE?',
       options: [
-        'If $a \\equiv b \\pmod{n}$, then $n$ divides $(a - b)$',
-        '$(a + b) \\bmod n = ((a \\bmod n) + (b \\bmod n)) \\bmod n$',
-        '$(a \\times b) \\bmod n = ((a \\bmod n) \\times (b \\bmod n)) \\bmod n$',
-        'We can always divide in modular arithmetic'
-      ],
+      'If $a \\equiv b \\pmod{n}$, then $n$ divides $(a - b)
+      correctIndex: 2,
+      difficulty: 'hard',
+      explanation: 'Division in modular arithmetic requires finding a modular inverse, which only exists when $\\gcd(a, n) = 1$. We cannot always divide.'
+    },
+      '$(a + b) \\bmod n = ((a \\bmod n) + (b \\bmod n)) \\bmod n
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Division in modular arithmetic requires finding a modular inverse, which only exists when $\\gcd(a, n) = 1$. We cannot always divide.'
+    },
+      'We can always divide in modular arithmetic',
+      '$(a \\times b) \\bmod n = ((a \\bmod n) \\times (b \\bmod n)) \\bmod n
+      correctIndex: 3,
+      difficulty: 'hard',
+      explanation: 'Division in modular arithmetic requires finding a modular inverse, which only exists when $\\gcd(a, n) = 1$. We cannot always divide.'
+    },
+    ],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Division in modular arithmetic requires finding a modular inverse, which only exists when $\\gcd(a, n) = 1$. We cannot always divide.'
@@ -247,7 +364,28 @@ export const section03Quiz = {
       id: 's03-h06',
       type: 'multiple-choice',
       question: 'If $17 \\equiv x \\pmod{5}$ and $-17 \\equiv y \\pmod{5}$, what is $x + y$?',
-      options: ['$5$', '$0$', '$2$', '$10$'],
+      options: [
+      '$0
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: '$17 \\bmod 5 = 2$ and $-17 \\bmod 5 = 3$ (since $-17 + 20 = 3$). So $x + y = 2 + 3 = 5$.'
+    },
+      '$5
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$17 \\bmod 5 = 2$ and $-17 \\bmod 5 = 3$ (since $-17 + 20 = 3$). So $x + y = 2 + 3 = 5$.'
+    },
+      '$2
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$17 \\bmod 5 = 2$ and $-17 \\bmod 5 = 3$ (since $-17 + 20 = 3$). So $x + y = 2 + 3 = 5$.'
+    },
+      '$10
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: '$17 \\bmod 5 = 2$ and $-17 \\bmod 5 = 3$ (since $-17 + 20 = 3$). So $x + y = 2 + 3 = 5$.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: '$17 \\bmod 5 = 2$ and $-17 \\bmod 5 = 3$ (since $-17 + 20 = 3$). So $x + y = 2 + 3 = 5$.'
@@ -274,7 +412,28 @@ export const section03Quiz = {
       id: 's03-h09',
       type: 'multiple-choice',
       question: 'For which value of $n$ does $a \\equiv b \\pmod{n}$ imply that $a$ and $b$ have the same last digit in decimal?',
-      options: ['$n = 10$', '$n = 2$', '$n = 5$', '$n = 100$'],
+      options: [
+      '$n = 2
+      correctIndex: 1,
+      difficulty: 'hard',
+      explanation: 'The last digit of a number is its remainder when divided by 10. So $a \\equiv b \\pmod{10}$ means $a$ and $b$ have the same last digit.'
+    },
+      '$n = 10
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The last digit of a number is its remainder when divided by 10. So $a \\equiv b \\pmod{10}$ means $a$ and $b$ have the same last digit.'
+    },
+      '$n = 5
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The last digit of a number is its remainder when divided by 10. So $a \\equiv b \\pmod{10}$ means $a$ and $b$ have the same last digit.'
+    },
+      '$n = 100
+      correctIndex: 0,
+      difficulty: 'hard',
+      explanation: 'The last digit of a number is its remainder when divided by 10. So $a \\equiv b \\pmod{10}$ means $a$ and $b$ have the same last digit.'
+    },
+    ],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The last digit of a number is its remainder when divided by 10. So $a \\equiv b \\pmod{10}$ means $a$ and $b$ have the same last digit.'

@@ -33,11 +33,11 @@ export const section34Questions: QuizQuestion[] = [
     question: 'If $\\sum_{x \\in X} f(x) < \\infty$ for non-negative $f$, then the set $\\{x \\in X : f(x) > 0\\}$ is:',
     options: [
       'Possibly uncountable',
-      'At most countable',
       'Finite',
       'Empty',
+      'At most countable',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'If the sum converges, only countably many terms can be positive. For each $n$, at most finitely many $x$ have $f(x) > 1/n$. The union over all $n$ is countable.',
   },
@@ -47,9 +47,17 @@ export const section34Questions: QuizQuestion[] = [
     question: 'For absolutely convergent series, the sum over a countable set $X$ is:',
     options: [
       'Always equal to zero',
-      'Dependent on the enumeration of $X$',
-      'Defined only for finite $X$',
-      'Independent of the order of summation'
+      'Independent of the order of summation',
+      'Dependent on the enumeration of $X
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For absolutely convergent series (where $\\sum |f(x)| < \\infty$), the sum is well-defined and independent of the order. This extends the rearrangement theorem to countable index sets.',
+  },
+      'Defined only for finite $X
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'For absolutely convergent series (where $\\sum |f(x)| < \\infty$), the sum is well-defined and independent of the order. This extends the rearrangement theorem to countable index sets.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

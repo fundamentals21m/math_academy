@@ -9,12 +9,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When is -1 a quadratic residue mod p?',
     options: [
-      'When p ≡ 1 (mod 4)',
       'When p ≡ 1 (mod 2)',
+      'When p ≡ 1 (mod 4)',
       'When p ≡ 3 (mod 4)',
-      'Always'
+      'Always',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       '(-1/p) = (-1)^((p-1)/2) = 1 iff (p-1)/2 is even, iff 4 | (p-1), iff p ≡ 1 (mod 4).',
@@ -26,10 +26,10 @@ export const section53Questions: QuizQuestion[] = [
     options: [
       'Yes, because 13 is prime',
       'No, because 13 ≡ 1 (mod 4)',
-      'Yes, because 13 ≡ 1 (mod 4)',
       'No, because 13 ≡ 1 (mod 3)',
+      'Yes, because 13 ≡ 1 (mod 4)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       '13 = 12 + 1 ≡ 1 (mod 4), so -1 is a square mod 13. Indeed, 5² = 25 = 26 - 1 ≡ -1 (mod 13).',
@@ -42,7 +42,7 @@ export const section53Questions: QuizQuestion[] = [
       'When p ≡ 1 (mod 4)',
       'When p ≡ 3 (mod 8)',
       'When p ≡ ±1 (mod 8)',
-      'When p is odd'
+      'When p is odd',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -69,12 +69,12 @@ export const section53Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For p = 7, what are (-1/p) and (2/p)?',
     options: [
+      '(-1/7) = -1, (2/7) = 1',
       '(-1/7) = 1, (2/7) = 1',
       '(-1/7) = 1, (2/7) = -1',
       '(-1/7) = -1, (2/7) = -1',
-      '(-1/7) = -1, (2/7) = 1',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       '7 ≡ 3 (mod 4), so (-1/7) = -1. And 7 ≡ -1 (mod 8), so (2/7) = 1.',
@@ -110,11 +110,11 @@ export const section53Questions: QuizQuestion[] = [
     question: 'If p ≡ 5 (mod 8), which statements are true?',
     options: [
       '-1 is a square, 2 is a square',
-      '-1 is a square, 2 is not a square',
       '-1 is not a square, 2 is a square',
+      '-1 is a square, 2 is not a square',
       '-1 is not a square, 2 is not a square',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'p ≡ 5 (mod 8) means p ≡ 1 (mod 4), so -1 is a square. But p ≡ 5 ≡ -3 (mod 8), so 2 is not a square.',

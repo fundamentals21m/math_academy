@@ -11,11 +11,11 @@ export const section15Questions: QuizQuestion[] = [
       'What institution did Ptolemy I establish in Alexandria that became the mathematical center of the ancient world?',
     options: [
       'The Academy',
+      'The Museum',
       'The Lyceum',
       'The Library of Pergamon',
-      'The Museum',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Ptolemy I established the Museum in Alexandria, which soon acquired a library of over 600,000 papyrus scrolls. For more than 600 years, Alexandria was the mathematical and scientific center of the world.',
@@ -28,10 +28,10 @@ export const section15Questions: QuizQuestion[] = [
     options: [
       '"Mathematics is the queen of sciences"',
       '"Let no one ignorant of geometry enter"',
+      '"Give me a place to stand and I will move the Earth"',
       '"There is no royal road to learning"',
-      '"Give me a place to stand and I will move the Earth"'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'When the impatient King Ptolemy asked if there was a shorter way to learn geometry, Euclid famously replied: "There is no royal road to learning."',
@@ -58,12 +58,12 @@ export const section15Questions: QuizQuestion[] = [
     question:
       'In Euclid\'s system, what is the difference between "axioms" and "postulates"?',
     options: [
-      'Axioms deal with mathematics in general; postulates deal with geometry specifically',
       'Axioms are true and postulates are assumptions',
       'Postulates are more fundamental than axioms',
-      'There is no difference—they are synonyms'
+      'There is no difference—they are synonyms',
+      'Axioms deal with mathematics in general; postulates deal with geometry specifically',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'Euclid subdivided his assumptions into axioms (dealing with mathematics in general, like "equals added to equals are equal") and postulates (dealing with geometry specifically, like the ability to draw lines and circles).',
@@ -90,12 +90,12 @@ export const section15Questions: QuizQuestion[] = [
     question:
       'What gap in rigor exists in Euclid\'s very first proposition (constructing an equilateral triangle)?',
     options: [
-      'He doesn\\'t prove that the triangle is equilateral',
-      'He doesn\\'t prove that the two circles actually intersect',
-      'He doesn\\'t prove that the segment AB exists',
-      'He doesn\\'t prove that triangles exist',
+      'He doesn\\\\\'t prove that the two circles actually intersect',
+      'He doesn\\\\\'t prove that the triangle is equilateral',
+      'He doesn\\\\\'t prove that the segment AB exists',
+      'He doesn\\\\\'t prove that triangles exist',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'In Proposition 1, Euclid draws two circles and considers their point of intersection. However, two circles may meet in two points, one point, or not at all—and Euclid\'s axioms don\'t guarantee that these particular circles meet.',
@@ -123,11 +123,11 @@ export const section15Questions: QuizQuestion[] = [
       'How did Euclid approach the concept of area before having a theory of irrational multiplication?',
     options: [
       'He avoided discussing area entirely',
-      'He defined area as length times width',
-      'He used Archimedes\\' method of exhaustion',
       'He used dissection—two polygons have equal area if one can be cut and reassembled into the other',
+      'He defined area as length times width',
+      'He used Archimedes\\\\' method of exhaustion',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Euclid defined equal area through dissection: two polygons have the same area if one can be dissected into triangles and reassembled to form a polygon congruent to the second. Only in Book VI, after Eudoxus\'s theory, is "length times width" justified.',

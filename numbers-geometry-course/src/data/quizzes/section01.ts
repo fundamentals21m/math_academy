@@ -12,7 +12,7 @@ export const section01Questions: QuizQuestion[] = [
       'Quotient = 1, Remainder = 2',
       'Quotient = 7, Remainder = 0',
       'Quotient = 3, Remainder = 1',
-      'Quotient = 2, Remainder = 1'
+      'Quotient = 2, Remainder = 1',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -49,12 +49,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is the definition of a prime number?',
     options: [
-      'A number divisible only by 1 and itself (and greater than 1)',
       'A number greater than 10',
       'An odd number',
+      'A number divisible only by 1 and itself (and greater than 1)',
       'A number with exactly 3 divisors',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'A prime number $p > 1$ is a natural number divisible only by 1 and $p$. Primes are the "atoms" of multiplication because they cannot be factored further.',
@@ -64,12 +64,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is 1 not considered a prime number?',
     options: [
+      'Because factors of 1 are redundant in factorizations',
       'Because 1 is too small',
       'Because 1 is even',
       'Because 1 has no divisors',
-      'Because factors of 1 are redundant in factorizations',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The number 1 is not considered prime because factors of 1 are redundant. Including 1 as a prime would make factorizations non-unique (e.g., $6 = 2 \\times 3 = 1 \\times 2 \\times 3$).',

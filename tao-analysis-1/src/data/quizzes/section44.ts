@@ -80,10 +80,14 @@ export const section44Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The equation $x^5 + x - 1 = 0$ has a root in $[0,1]$ because:',
     options: [
-      'The function is continuous, equals $-1$ at $0$, and equals $1$ at $1$',
       'The function is a polynomial',
       'Every polynomial has a real root',
-      'The function is monotonically increasing'
+      'The function is continuous, equals $-1$ at $0$, and equals $1$ at $1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Let $f(x) = x^5 + x - 1$. Then $f(0) = -1 < 0$ and $f(1) = 1 > 0$. Since $f$ is continuous and changes sign, IVT gives a root.',
+  },
+      'The function is monotonically increasing',
     ],
     correctIndex: 0,
     difficulty: 'medium',

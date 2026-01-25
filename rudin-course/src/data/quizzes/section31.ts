@@ -34,10 +34,10 @@ export const section31Questions: QuizQuestion[] = [
     options: [
       'Jump discontinuity',
       'Removable discontinuity',
-      'No discontinuity (can be made continuous)',
       'Discontinuity of the second kind',
+      'No discontinuity (can be made continuous)',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'As $x \\to 0$, $\\sin(1/x)$ oscillates between $-1$ and $1$ infinitely often, so neither $\\lim_{x \\to 0^+}$ nor $\\lim_{x \\to 0^-}$ exists. This is a discontinuity of the second kind.',
   },
@@ -46,10 +46,26 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ has a jump discontinuity at $c$, which statement is true?',
     options: [
-      '$f$ is unbounded in every neighborhood of $c$',
-      '$f(c^+)$ and $f(c^-)$ both exist but $f(c^+) \\neq f(c^-)$',
-      'The discontinuity can be removed by redefining $f(c)$',
-      '$f(c^+) - f(c^-) = 0$'
+      '$f$ is unbounded in every neighborhood of $c
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A jump discontinuity is characterized by both one-sided limits existing but being unequal: $f(c^+) \\neq f(c^-)$. The "jump" is the difference $f(c^+) - f(c^-)$.',
+  },
+      'The discontinuity can be removed by redefining $f(c)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A jump discontinuity is characterized by both one-sided limits existing but being unequal: $f(c^+) \\neq f(c^-)$. The "jump" is the difference $f(c^+) - f(c^-)$.',
+  },
+      '$f(c^+) - f(c^-) = 0
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A jump discontinuity is characterized by both one-sided limits existing but being unequal: $f(c^+) \\neq f(c^-)$. The "jump" is the difference $f(c^+) - f(c^-)$.',
+  },
+      '$f(c^+)$ and $f(c^-)$ both exist but $f(c^+) \\neq f(c^-)
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A jump discontinuity is characterized by both one-sided limits existing but being unequal: $f(c^+) \\neq f(c^-)$. The "jump" is the difference $f(c^+) - f(c^-)$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -62,10 +78,10 @@ export const section31Questions: QuizQuestion[] = [
     options: [
       'Only finitely many discontinuities',
       'Uncountably many discontinuities',
+      'Discontinuities of the second kind',
       'At most countably many discontinuities, all of the first kind',
-      'Discontinuities of the second kind'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Theorem 4.30 in Rudin: Monotonic functions have only discontinuities of the first kind (jumps), and the set of discontinuities is at most countable. This follows because each jump corresponds to a disjoint interval in the range, and $\\mathbb{R}$ has only countably many disjoint intervals of positive length.',
   },

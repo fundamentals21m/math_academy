@@ -92,10 +92,26 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A polynomial $f(x) \\in R[x]$ is called monic if:',
     options: [
-      'Its constant term is $1$',
-      'Its degree is $1$',
-      'All its coefficients are $1$',
-      'Its leading coefficient is $1$'
+      'Its constant term is $1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'A monic polynomial is one whose leading coefficient (coefficient of the highest degree term) is $1$.',
+  },
+      'Its leading coefficient is $1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A monic polynomial is one whose leading coefficient (coefficient of the highest degree term) is $1$.',
+  },
+      'Its degree is $1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A monic polynomial is one whose leading coefficient (coefficient of the highest degree term) is $1$.',
+  },
+      'All its coefficients are $1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'A monic polynomial is one whose leading coefficient (coefficient of the highest degree term) is $1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -106,10 +122,14 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $R$ has zero divisors, then for $f, g \\in R[x]$ with $fg \\neq 0$:',
     options: [
-      '$\\deg(fg) \\leq \\deg(f) + \\deg(g)$, and strict inequality is possible',
       '$\\deg(fg) = \\deg(f) + \\deg(g)$ always',
-      '$\\deg(fg) > \\deg(f) + \\deg(g)$',
-      '$\\deg(fg)$ is undefined'
+      '$\\deg(fg) > \\deg(f) + \\deg(g)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'When $R$ has zero divisors, the leading coefficients of $f$ and $g$ might multiply to $0$, causing $\\deg(fg) < \\deg(f) + \\deg(g)$. For example, in $\\mathbb{Z}_6[x]$: $(2x)(3x) = 6x^2 = 0$.',
+  },
+      '$\\deg(fg)$ is undefined',
+      '$\\deg(fg) \\leq \\deg(f) + \\deg(g)$, and strict inequality is possible',
     ],
     correctIndex: 0,
     difficulty: 'hard',

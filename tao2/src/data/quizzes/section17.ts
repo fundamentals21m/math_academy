@@ -6,10 +6,14 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Stone-Weierstrass theorem states that polynomials are:',
     options: [
-      'The only continuous functions on $[a, b]$',
-      'The only functions with derivatives',
+      'The only continuous functions on $[a, b]
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'The Stone-Weierstrass theorem says every continuous function on $[a, b]$ can be uniformly approximated by polynomials.',
+  },
       'Dense in $C([a, b])$ with respect to the sup norm',
-      'Complete in the $L^2$ norm'
+      'The only functions with derivatives',
+      'Complete in the $L^2$ norm',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -71,7 +75,7 @@ export const section17Questions: QuizQuestion[] = [
       'Contain only polynomials',
       'Separate points and contain constants',
       'Be finite-dimensional',
-      'Consist of differentiable functions'
+      'Consist of differentiable functions',
     ],
     correctIndex: 1,
     difficulty: 'hard',

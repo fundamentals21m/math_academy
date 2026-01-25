@@ -50,10 +50,22 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For any subset $A$ of $G$, which containment always holds?',
     options: [
-      '$N_G(A) \\subseteq C_G(A)$',
-      '$C_G(A) \\subseteq N_G(A)$',
-      '$C_G(A) = N_G(A)$',
-      'Neither is contained in the other'
+      '$N_G(A) \\subseteq C_G(A)
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'If $g$ commutes with every element of $A$, then $gAg^{-1} = A$. So $C_G(A) \\subseteq N_G(A)$.',
+  },
+      '$C_G(A) = N_G(A)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $g$ commutes with every element of $A$, then $gAg^{-1} = A$. So $C_G(A) \\subseteq N_G(A)$.',
+  },
+      '$C_G(A) \\subseteq N_G(A)
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'If $g$ commutes with every element of $A$, then $gAg^{-1} = A$. So $C_G(A) \\subseteq N_G(A)$.',
+  },
+      'Neither is contained in the other',
     ],
     correctIndex: 1,
     difficulty: 'medium',

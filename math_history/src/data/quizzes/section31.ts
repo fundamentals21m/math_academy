@@ -7,12 +7,12 @@ export const section31Questions: QuizQuestion[] = [
     question: 'How old was Blaise Pascal when he discovered his famous theorem about hexagons and conics?',
     difficulty: 'easy',
     options: [
-      '12 years old',
       '16 years old',
+      '12 years old',
       '25 years old',
       '40 years old',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explanation:
       'Pascal proved his "mystic hexagon" theorem in 1640 at age 16. He derived over 400 corollaries from it and impressed even Descartes, who initially doubted a teenager could have produced such work.',
   },
@@ -40,7 +40,7 @@ export const section31Questions: QuizQuestion[] = [
       'A line connecting opposite vertices',
       'The longest diagonal',
       'A tangent to the conic',
-      'The line through the three intersection points of opposite sides'
+      'The line through the three intersection points of opposite sides',
     ],
     correctIndex: 3,
     explanation:
@@ -53,12 +53,12 @@ export const section31Questions: QuizQuestion[] = [
       'How many different hexagons can be formed from 6 points on a conic?',
     difficulty: 'medium',
     options: [
-      '60',
       '15',
+      '60',
       '6',
-      '720'
+      '720',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     explanation:
       'From 6 points, there are 60 different ways to order them into a hexagon (accounting for cyclic and reflection symmetries). Each ordering gives a different Pascal line, creating intricate configurations.',
   },
@@ -69,10 +69,10 @@ export const section31Questions: QuizQuestion[] = [
       'When the "conic" in Pascal\'s theorem degenerates into two lines, what classical theorem results?',
     difficulty: 'hard',
     options: [
-      'Desargues\' theorem',
-      'Pappus\' theorem',
-      'Menelaus\' theorem',
-      'Ceva\'s theorem',
+      'Desargues\\\' theorem',
+      'Pappus\\\' theorem',
+      'Menelaus\\\' theorem',
+      'Ceva\\\'s theorem',
     ],
     correctIndex: 1,
     explanation:
@@ -87,10 +87,10 @@ export const section31Questions: QuizQuestion[] = [
     options: [
       'The theorem fails',
       'The conic becomes a parabola',
+      'The Pascal line passes through the center',
       'The side between them becomes a tangent to the conic',
-      'The Pascal line passes through the center'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation:
       'If two adjacent vertices coincide (say $B = C$), then "side $BC$" becomes the tangent line to the conic at that point. This gives a construction for tangent lines using only a straightedge!',
   },

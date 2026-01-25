@@ -7,11 +7,11 @@ export const section14Questions: QuizQuestion[] = [
     question: 'In Apostol\'s approach, $\\sin x$ and $\\cos x$ are defined using:',
     options: [
       'Right triangles',
-      'Integration (area functions)',
       'Unit circle geometry',
       'Infinite series',
+      'Integration (area functions)',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Apostol defines trigonometric functions analytically using integrals.',
   },
@@ -20,10 +20,26 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which identity holds for all $x$?',
     options: [
-      '$\\sin^2 x + \\cos^2 x = 0$',
-      '$\\sin x \\cdot \\cos x = 1$',
-      '$\\sin x + \\cos x = 1$',
-      '$\\sin^2 x + \\cos^2 x = 1$'
+      '$\\sin^2 x + \\cos^2 x = 1
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean identity: $\\sin^2 x + \\cos^2 x = 1$.',
+  },
+      '$\\sin^2 x + \\cos^2 x = 0
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean identity: $\\sin^2 x + \\cos^2 x = 1$.',
+  },
+      '$\\sin x \\cdot \\cos x = 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean identity: $\\sin^2 x + \\cos^2 x = 1$.',
+  },
+      '$\\sin x + \\cos x = 1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The Pythagorean identity: $\\sin^2 x + \\cos^2 x = 1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -52,10 +68,18 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The function $\\sin x$ is:',
     options: [
-      'Odd: $\\sin(-x) = -\\sin x$',
-      'Even: $\\sin(-x) = \\sin x$',
+      'Even: $\\sin(-x) = \\sin x
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Sine is an odd function: $\\sin(-x) = -\\sin x$.',
+  },
       'Neither even nor odd',
-      'Both even and odd'
+      'Odd: $\\sin(-x) = -\\sin x
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Sine is an odd function: $\\sin(-x) = -\\sin x$.',
+  },
+      'Both even and odd',
     ],
     correctIndex: 0,
     difficulty: 'easy',

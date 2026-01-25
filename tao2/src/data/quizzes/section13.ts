@@ -85,11 +85,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'The space $C(X)$ of continuous bounded functions on $X$ with the sup norm is:',
     options: [
       'Not a metric space',
-      'A complete metric space',
       'A metric space but not complete',
-      'Complete only if $X$ is compact'
+      'Complete only if $X$ is compact',
+      'A complete metric space',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The space of bounded continuous functions with the sup norm is always complete. Uniform limits of continuous functions are continuous.',
   },
@@ -101,7 +101,7 @@ export const section13Questions: QuizQuestion[] = [
       '$f_n \\to f$ pointwise but not uniformly',
       'We cannot determine convergence',
       '$f_n \\to f$ uniformly',
-      '$f_n \\to f$ only on compact sets'
+      '$f_n \\to f$ only on compact sets',
     ],
     correctIndex: 2,
     difficulty: 'easy',

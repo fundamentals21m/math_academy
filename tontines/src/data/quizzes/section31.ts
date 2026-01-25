@@ -36,10 +36,10 @@ export const section31Questions: QuizQuestion[] = [
     options: [
       '20%',
       '0.5%',
+      '2.5%',
       '10%',
-      '2.5%'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'At γ = 3, breakeven loading is about 2.5%. If annuity loading were only 2.5%, you\'d be indifferent—but actual loadings are 12-18%.',
   },
@@ -62,12 +62,12 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The analysis assumes all EXCEPT:',
     options: [
-      'Guaranteed tontine payouts',
       'Large tontine pool',
       'Fair pool composition',
       'Similar investment returns',
+      'Guaranteed tontine payouts',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The analysis assumes large pool, fair composition, similar returns, and rational decision-making—but NOT guaranteed tontine payouts (that\'s an annuity feature).',
   },

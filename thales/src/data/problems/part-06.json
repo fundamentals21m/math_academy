@@ -1,0 +1,290 @@
+{
+  "partId": 6,
+  "partTitle": "The Calculus and Its Foundations",
+  "textbookChapter": "Part 6",
+  "sections": [
+    {
+      "sectionId": 30,
+      "sectionTitle": "The Law of Quadratic Reciprocity",
+      "textbookSection": "Section 30",
+      "examples": [
+        {
+          "id": "ex-6-30-1",
+          "type": "example",
+          "title": "Legendre Symbol Calculation",
+          "statement": "Compute the Legendre symbol $\\left(\\frac{5}{23}\\right)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Check quadratic residue",
+                "content": "We need to determine if 5 is a square mod 23."
+              },
+              {
+                "title": "Use quadratic reciprocity",
+                "content": "$\\left(\\frac{5}{23}\\right) = \\left(\\frac{23}{5}\\right)$ since both 5 and 23 are $\\equiv 1 \\pmod{4}$."
+              },
+              {
+                "title": "Reduce",
+                "content": "$\\left(\\frac{23}{5}\\right) = \\left(\\frac{3}{5}\\right)$ since $23 \\equiv 3 \\pmod{5}$."
+              },
+              {
+                "title": "Evaluate",
+                "content": "Squares mod 5: $1, 4$. Since 3 is not a square, $\\left(\\frac{3}{5}\\right) = -1$."
+              }
+            ],
+            "conclusion": "$\\left(\\frac{5}{23}\\right) = -1$, so 5 is not a quadratic residue mod 23."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-30-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Using quadratic reciprocity, determine whether $x^2 \\equiv 2 \\pmod{p}$ is solvable for primes $p \\equiv 1 \\pmod{8}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "State the supplement",
+                "content": "$\\left(\\frac{2}{p}\\right) = (-1)^{(p^2-1)/8}$"
+              },
+              {
+                "title": "For p ≡ 1 (mod 8)",
+                "content": "$p = 8k + 1$ for some integer $k$.\n$p^2 - 1 = 64k^2 + 16k = 8(8k^2 + 2k)$"
+              },
+              {
+                "title": "Evaluate exponent",
+                "content": "$(p^2-1)/8 = 8k^2 + 2k = 2k(4k+1)$, which is even."
+              }
+            ],
+            "conclusion": "$\\left(\\frac{2}{p}\\right) = (-1)^{\\text{even}} = 1$, so 2 is a quadratic residue mod $p$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 31,
+      "sectionTitle": "Newton and Leibniz",
+      "textbookSection": "Section 31",
+      "examples": [
+        {
+          "id": "ex-6-31-1",
+          "type": "example",
+          "title": "Newton's Binomial Series",
+          "statement": "Use Newton's generalized binomial theorem to expand $(1+x)^{1/2}$ to four terms.",
+          "solution": {
+            "steps": [
+              {
+                "title": "State Newton's formula",
+                "content": "$(1+x)^r = \\sum_{k=0}^{\\infty} \\binom{r}{k} x^k$ where $\\binom{r}{k} = \\frac{r(r-1)\\cdots(r-k+1)}{k!}$"
+              },
+              {
+                "title": "Compute binomial coefficients",
+                "content": "$\\binom{1/2}{0} = 1$\n$\\binom{1/2}{1} = \\frac{1}{2}$\n$\\binom{1/2}{2} = \\frac{(1/2)(-1/2)}{2} = -\\frac{1}{8}$\n$\\binom{1/2}{3} = \\frac{(1/2)(-1/2)(-3/2)}{6} = \\frac{1}{16}$"
+              },
+              {
+                "title": "Write expansion",
+                "content": "$\\sqrt{1+x} = 1 + \\frac{1}{2}x - \\frac{1}{8}x^2 + \\frac{1}{16}x^3 - \\cdots$"
+              }
+            ],
+            "conclusion": "Newton extended the binomial theorem beyond positive integers."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-31-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use Leibniz's notation to verify the product rule: if $y = uv$, then $dy = u\\,dv + v\\,du$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Consider infinitesimal change",
+                "content": "If $y = uv$, then $y + dy = (u + du)(v + dv)$"
+              },
+              {
+                "title": "Expand",
+                "content": "$y + dy = uv + u\\,dv + v\\,du + du\\,dv$"
+              },
+              {
+                "title": "Neglect higher order",
+                "content": "Since $du\\,dv$ is infinitesimally small compared to $du$ and $dv$:\n$dy = u\\,dv + v\\,du$"
+              }
+            ],
+            "conclusion": "Leibniz's notation makes the product rule intuitive: $d(uv) = u\\,dv + v\\,du$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 32,
+      "sectionTitle": "The Bernoullis and Euler",
+      "textbookSection": "Section 32",
+      "examples": [
+        {
+          "id": "ex-6-32-1",
+          "type": "example",
+          "title": "Euler's Basel Problem",
+          "statement": "Show that $\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Euler's approach",
+                "content": "Consider $\\frac{\\sin x}{x} = 1 - \\frac{x^2}{3!} + \\frac{x^4}{5!} - \\cdots$"
+              },
+              {
+                "title": "Factor by roots",
+                "content": "$\\frac{\\sin x}{x} = \\left(1 - \\frac{x^2}{\\pi^2}\\right)\\left(1 - \\frac{x^2}{4\\pi^2}\\right)\\left(1 - \\frac{x^2}{9\\pi^2}\\right)\\cdots$"
+              },
+              {
+                "title": "Compare x² coefficients",
+                "content": "From Taylor: coefficient of $x^2$ is $-\\frac{1}{6}$\nFrom product: $-\\left(\\frac{1}{\\pi^2} + \\frac{1}{4\\pi^2} + \\frac{1}{9\\pi^2} + \\cdots\\right) = -\\frac{1}{\\pi^2}\\sum\\frac{1}{n^2}$"
+              },
+              {
+                "title": "Solve",
+                "content": "$-\\frac{1}{6} = -\\frac{1}{\\pi^2}\\sum_{n=1}^{\\infty}\\frac{1}{n^2}$\n$\\sum_{n=1}^{\\infty}\\frac{1}{n^2} = \\frac{\\pi^2}{6}$"
+              }
+            ],
+            "conclusion": "$\\zeta(2) = \\frac{\\pi^2}{6}$ — Euler's solution to the Basel problem."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-32-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use Euler's product formula $\\zeta(s) = \\prod_p \\frac{1}{1-p^{-s}}$ to prove there are infinitely many primes.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Assume finitely many primes",
+                "content": "Suppose primes are $p_1, p_2, \\ldots, p_n$."
+              },
+              {
+                "title": "Evaluate at s = 1",
+                "content": "$\\zeta(1) = \\sum_{n=1}^{\\infty} \\frac{1}{n} = \\prod_{i=1}^{n} \\frac{1}{1-p_i^{-1}}$\n\nThe right side is finite (finite product of finite terms)."
+              },
+              {
+                "title": "Contradiction",
+                "content": "But $\\zeta(1) = 1 + \\frac{1}{2} + \\frac{1}{3} + \\cdots$ is the harmonic series, which diverges."
+              }
+            ],
+            "conclusion": "Contradiction! There must be infinitely many primes."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 33,
+      "sectionTitle": "Analysis in the 18th Century",
+      "textbookSection": "Section 33",
+      "examples": [
+        {
+          "id": "ex-6-33-1",
+          "type": "example",
+          "title": "Euler's Formula",
+          "statement": "Derive Euler's formula $e^{ix} = \\cos x + i\\sin x$ using power series.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Power series expansions",
+                "content": "$e^{ix} = \\sum_{n=0}^{\\infty} \\frac{(ix)^n}{n!} = 1 + ix + \\frac{(ix)^2}{2!} + \\frac{(ix)^3}{3!} + \\cdots$"
+              },
+              {
+                "title": "Separate real and imaginary",
+                "content": "$= 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots + i\\left(x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots\\right)$"
+              },
+              {
+                "title": "Recognize series",
+                "content": "Real part: $\\cos x = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots$\nImaginary part: $\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots$"
+              }
+            ],
+            "conclusion": "$e^{ix} = \\cos x + i\\sin x$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-33-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use Euler's formula to prove $\\cos^2 x + \\sin^2 x = 1$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Compute |e^{ix}|²",
+                "content": "$|e^{ix}|^2 = e^{ix} \\cdot \\overline{e^{ix}} = e^{ix} \\cdot e^{-ix} = e^0 = 1$"
+              },
+              {
+                "title": "Expand using Euler",
+                "content": "$|e^{ix}|^2 = |\\cos x + i\\sin x|^2 = \\cos^2 x + \\sin^2 x$"
+              }
+            ],
+            "conclusion": "Therefore $\\cos^2 x + \\sin^2 x = 1$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 34,
+      "sectionTitle": "Lagrange and Laplace",
+      "textbookSection": "Section 34",
+      "examples": [
+        {
+          "id": "ex-6-34-1",
+          "type": "example",
+          "title": "Lagrange's Mean Value Theorem",
+          "statement": "Prove that for differentiable $f$ on $[a,b]$, there exists $c \\in (a,b)$ with $f'(c) = \\frac{f(b)-f(a)}{b-a}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Define auxiliary function",
+                "content": "$g(x) = f(x) - \\frac{f(b)-f(a)}{b-a}(x-a)$"
+              },
+              {
+                "title": "Check endpoints",
+                "content": "$g(a) = f(a)$\n$g(b) = f(b) - (f(b)-f(a)) = f(a) = g(a)$"
+              },
+              {
+                "title": "Apply Rolle's theorem",
+                "content": "Since $g(a) = g(b)$, there exists $c \\in (a,b)$ with $g'(c) = 0$."
+              },
+              {
+                "title": "Conclude",
+                "content": "$g'(c) = f'(c) - \\frac{f(b)-f(a)}{b-a} = 0$\n$f'(c) = \\frac{f(b)-f(a)}{b-a}$"
+              }
+            ],
+            "conclusion": "The mean value theorem guarantees the existence of such a point $c$."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-34-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Use Lagrange's remainder formula to estimate the error in $e \\approx 1 + 1 + \\frac{1}{2} + \\frac{1}{6} + \\frac{1}{24}$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "State remainder",
+                "content": "For $e^x$ at $x=1$: $R_n = \\frac{e^c}{(n+1)!}$ for some $c \\in (0,1)$."
+              },
+              {
+                "title": "Apply to n=4",
+                "content": "Using terms through $\\frac{1}{4!}$:\n$R_4 = \\frac{e^c}{5!} < \\frac{e^1}{120} < \\frac{3}{120} = 0.025$"
+              },
+              {
+                "title": "Compute approximation",
+                "content": "$1 + 1 + 0.5 + 0.167 + 0.042 = 2.708$"
+              }
+            ],
+            "conclusion": "Error is less than 0.025. (Actual: $e \\approx 2.718$)"
+          }
+        }
+      ]
+    }
+  ]
+}

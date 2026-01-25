@@ -9,7 +9,7 @@ export const section40Questions: QuizQuestion[] = [
       'Multiplying all rows together',
       'Taking only the first row',
       'Computing the determinant',
-      'Taking rows of the matrix (after converting $\\pm 1$ to $0/1$) and their complements'
+      'Taking rows of the matrix (after converting $\\pm 1$ to $0/1$) and their complements',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -71,7 +71,7 @@ export const section40Questions: QuizQuestion[] = [
       'Are always cyclic',
       'Achieve the Plotkin bound with equality',
       'Are MDS codes',
-      'Have the largest possible dimension'
+      'Have the largest possible dimension',
     ],
     correctIndex: 1,
     difficulty: 'medium',

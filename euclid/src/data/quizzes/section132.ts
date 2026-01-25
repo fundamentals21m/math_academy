@@ -21,11 +21,11 @@ export const section132Questions: QuizQuestion[] = [
     question: 'V.13 can be stated as a logical rule:',
     options: [
       'If X = Y, then X < Y',
-      'If X = Y and Y > Z, then X > Z',
       'If X > Y, then X = Y',
-      'Ratios cannot be compared'
+      'If X = Y and Y > Z, then X > Z',
+      'Ratios cannot be compared',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'V.13 is the substitution rule for ratio inequalities: equal ratios can replace each other in comparisons.',
   },
@@ -34,12 +34,12 @@ export const section132Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is V.13 useful for chaining ratio relationships?',
     options: [
+      'It allows us to combine equalities and inequalities to derive new inequalities',
       'It is not useful',
       'It proves all ratios are equal',
-      'It allows us to combine equalities and inequalities to derive new inequalities',
-      'It only works for whole numbers'
+      'It only works for whole numbers',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'V.13 lets us build chains mixing equalities and inequalities, concluding relationships between the first and last ratios.',
   },

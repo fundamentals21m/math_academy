@@ -9,12 +9,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does a functor F between categories A and B map?',
     options: [
-      'Both objects and arrows of A to objects and arrows of B',
       'Only objects of A to objects of B',
+      'Both objects and arrows of A to objects and arrows of B',
       'Only arrows of A to arrows of B',
       'Sets to functions',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'A functor F from category A to category B maps both objects of A to objects of B and arrows of A to arrows of B, while preserving the categorical structure.',
@@ -24,7 +24,7 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT a condition for a functor?',
     options: [
-      'F(g) has source F(a) and target F(a\\') if g: a → a\\'',
+      'F(g) has source F(a) and target F(a\\\\\') if g: a → a\\\\\'',
       'F(1ₐ) = 1_{F(a)}',
       'F(g ∘ h) = F(g) ∘ F(h)',
       'F must be injective on objects',
@@ -41,11 +41,11 @@ export const section63Questions: QuizQuestion[] = [
       'Why is every function between sets automatically a functor between discrete categories?',
     options: [
       'Because sets have no structure',
-      'Because each element is both an object and its own identity arrow',
       'Because discrete categories have no arrows',
+      'Because each element is both an object and its own identity arrow',
       'Because functions preserve order',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'In a discrete category, each element a is both an object and the identity arrow 1ₐ. Since F(a) = F(1ₐ) = 1_{F(a)}, the functor conditions are automatically satisfied.',
@@ -57,10 +57,10 @@ export const section63Questions: QuizQuestion[] = [
     options: [
       'The subsets of the monoid',
       'The identity element only',
-      'The binary operation',
       'The elements of the monoid',
+      'The binary operation',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'When a monoid is viewed as a one-object category, the elements of the monoid become the arrows, and composition of arrows is the monoid operation.',
@@ -72,10 +72,10 @@ export const section63Questions: QuizQuestion[] = [
     options: [
       'Not a functor',
       'A functor only if bijective',
-      'Always a functor',
       'A graph morphism',
+      'Always a functor',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Every monoid homomorphism is automatically a functor between the corresponding one-object categories, because it preserves identity and composition (the monoid operation).',
@@ -115,12 +115,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the objects and arrows in the category Cat?',
     options: [
-      'Objects are small categories, arrows are functors',
       'Objects are sets, arrows are functions',
       'Objects are graphs, arrows are graph morphisms',
+      'Objects are small categories, arrows are functors',
       'Objects are groups, arrows are homomorphisms',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Cat is the category whose objects are small categories and whose arrows are functors from one small category to another.',
@@ -130,12 +130,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the text, which mathematical entities can be viewed as functors?',
     options: [
+      'Sets, graphs, and M-sets',
       'Only continuous functions',
       'Only homomorphisms',
-      'Sets, graphs, and M-sets',
       'Only bijective functions',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'The text shows that sets can be viewed as functors from a one-element category, graphs as functors from a two-object category, and M-sets as functors from a monoid category.',

@@ -9,7 +9,7 @@ export const section10Questions: QuizQuestion[] = [
       'The total market cap of all cryptocurrencies',
       'The amount of Bitcoin in circulation',
       'The sum of assets deposited in DeFi protocols',
-      'The total trading volume on exchanges'
+      'The total trading volume on exchanges',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do the authors argue TVL is a misleading metric?',
     options: [
-      'It\'s too difficult to calculate accurately',
+      'It\\\\'s too difficult to calculate accurately',
+      'It counts the same underlying collateral multiple times due to rehypothecation',
       'It excludes Bitcoin',
-      'It doesn\'t account for inflation',
-      'It counts the same underlying collateral multiple times due to rehypothecation'
+      'It doesn\\\\'t account for inflation',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'When the same ETH is deposited, converted to derivative tokens, and those deposited elsewhere, TVL counts each step separately. The "locked value" is inflated beyond the actual underlying assets.',
   },
@@ -37,7 +37,7 @@ export const section10Questions: QuizQuestion[] = [
       'They create a false sense of security and attract more capital',
       'They discourage new investment',
       'They have no effect on behavior',
-      'They cause prices to drop'
+      'They cause prices to drop',
     ],
     correctIndex: 0,
     difficulty: 'medium',

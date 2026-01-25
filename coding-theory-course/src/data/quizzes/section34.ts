@@ -41,12 +41,12 @@ export const section34Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For binary codes ($q = 2$), the only non-trivial MDS codes are:',
     options: [
+      'Repetition codes, single parity check codes, and the trivial codes',
       'Hamming codes',
       'Reed-Solomon codes',
-      'Repetition codes, single parity check codes, and the trivial codes',
-      'BCH codes'
+      'BCH codes',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Over $\\mathbb{F}_2$, the only MDS codes are the trivial ones: the $[n, 1, n]$ repetition code, the $[n, n-1, 2]$ single parity check code, and codes with $k = 0$ or $k = n$.',
   },
@@ -56,11 +56,11 @@ export const section34Questions: QuizQuestion[] = [
     question: 'The existence of MDS codes of length $n = q + 1$ is guaranteed by:',
     options: [
       'Hamming codes',
+      'Reed-Solomon codes and their extensions',
       'Random code constructions',
       'BCH codes',
-      'Reed-Solomon codes and their extensions'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Reed-Solomon codes achieve length $n = q - 1$, and their extensions (extended Reed-Solomon codes) achieve length $n = q + 1$, meeting the MDS conjecture bound.',
   },
@@ -79,11 +79,11 @@ export const section34Questions: QuizQuestion[] = [
     question: 'The MDS conjecture has been proven for:',
     options: [
       'All finite fields',
-      'Prime fields $\\mathbb{F}_p$ and some specific cases',
       'Only binary fields',
+      'Prime fields $\\mathbb{F}_p$ and some specific cases',
       'No cases at all',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The MDS conjecture has been proven for prime fields and several other specific cases, but remains open in general. Significant progress was made by Ball (2012) for prime fields.',
   },

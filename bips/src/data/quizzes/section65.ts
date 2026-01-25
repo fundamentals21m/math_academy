@@ -8,10 +8,10 @@ export const section65Questions: QuizQuestion[] = [
     options: [
       'Mining optimization',
       'Faster block validation',
+      'Announcing new blocks with headers instead of inv',
       'Header compression',
-      'Announcing new blocks with headers instead of inv'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'sendheaders signals that a peer prefers receiving headers directly.',
   },
@@ -23,7 +23,7 @@ export const section65Questions: QuizQuestion[] = [
       'Reduces round-trips for block announcements',
       'Smaller messages',
       'Better encryption',
-      'Lower fees'
+      'Lower fees',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -43,11 +43,11 @@ export const section65Questions: QuizQuestion[] = [
     question: 'sendheaders is a:',
     options: [
       'Regular block announcement',
-      'Transaction message',
       'One-time preference message',
+      'Transaction message',
       'Fee message',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'sendheaders is sent once to set the preference for the connection.',
   },

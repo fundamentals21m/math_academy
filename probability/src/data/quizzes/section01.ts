@@ -7,11 +7,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'What is combinatorial analysis?',
     options: [
       'The study of complex numbers',
-      'The mathematical theory of counting',
       'The analysis of differential equations',
-      'The theory of limits and continuity'
+      'The theory of limits and continuity',
+      'The mathematical theory of counting',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Combinatorial analysis (or combinatorics) is the branch of mathematics concerned with counting, arrangement, and combination of objects according to specified rules.'
   },
@@ -23,7 +23,7 @@ export const section01Questions: QuizQuestion[] = [
       'Mathematics',
       'Statistics',
       'Common sense',
-      'Logic'
+      'Logic',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -34,12 +34,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To find the probability of a randomly selected arrangement having some property, what do we need to count?',
     options: [
+      'The total arrangements and the arrangements with the desired property',
       'The median and mean of all arrangements',
       'Only the total number of arrangements',
       'Only the arrangements with the desired property',
-      'The total arrangements and the arrangements with the desired property'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'We need to count both the total number of possible arrangements (sample space) and the number of arrangements with the desired property (event), then take their ratio.'
   },
@@ -51,7 +51,7 @@ export const section01Questions: QuizQuestion[] = [
       'Pascal and Fermat',
       'Newton and Leibniz',
       'Euler and Gauss',
-      'Fermat and Descartes'
+      'Fermat and Descartes',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -65,7 +65,7 @@ export const section01Questions: QuizQuestion[] = [
       'The set of all possible arrangements with the desired property',
       'The set of all possible outcomes of an experiment',
       'A subset of favorable outcomes',
-      'The average of all outcomes'
+      'The average of all outcomes',
     ],
     correctIndex: 1,
     difficulty: 'easy',

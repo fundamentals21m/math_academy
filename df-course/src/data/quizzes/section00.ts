@@ -6,12 +6,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f: A \\to B$ is called a bijection if it is:',
     options: [
-      'Both injective and surjective',
       'Only surjective (onto)',
+      'Both injective and surjective',
       'Only injective (one-to-one)',
-      'Neither injective nor surjective'
+      'Neither injective nor surjective',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A bijection is a function that is both injective (one-to-one) and surjective (onto). This means every element in $B$ is mapped to by exactly one element in $A$.',
   },
@@ -20,10 +20,26 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is NOT a requirement for a relation $\\sim$ on a set $A$ to be an equivalence relation?',
     options: [
-      'Reflexivity: $a \\sim a$ for all $a \\in A$',
-      'Antisymmetry: if $a \\sim b$ and $b \\sim a$, then $a = b$',
-      'Transitivity: if $a \\sim b$ and $b \\sim c$, then $a \\sim c$',
-      'Symmetry: if $a \\sim b$, then $b \\sim a$'
+      'Reflexivity: $a \\sim a$ for all $a \\in A
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'Antisymmetry is a property of partial orders, not equivalence relations. An equivalence relation requires reflexivity, symmetry, and transitivity.',
+  },
+      'Transitivity: if $a \\sim b$ and $b \\sim c$, then $a \\sim c
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Antisymmetry is a property of partial orders, not equivalence relations. An equivalence relation requires reflexivity, symmetry, and transitivity.',
+  },
+      'Symmetry: if $a \\sim b$, then $b \\sim a
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Antisymmetry is a property of partial orders, not equivalence relations. An equivalence relation requires reflexivity, symmetry, and transitivity.',
+  },
+      'Antisymmetry: if $a \\sim b$ and $b \\sim a$, then $a = b
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Antisymmetry is a property of partial orders, not equivalence relations. An equivalence relation requires reflexivity, symmetry, and transitivity.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -73,10 +89,14 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The composition of two bijections $f: A \\to B$ and $g: B \\to C$ is:',
     options: [
+      'Always a bijection from $A$ to $C
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The composition of two bijections is always a bijection. If $f$ and $g$ are both injective and surjective, then $g \\circ f$ is also injective and surjective.',
+  },
       'Only surjective but not injective',
       'Only injective but not surjective',
-      'Always a bijection from $A$ to $C$',
-      'Not necessarily a bijection'
+      'Not necessarily a bijection',
     ],
     correctIndex: 2,
     difficulty: 'medium',

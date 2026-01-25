@@ -22,10 +22,10 @@ export const section207Questions: QuizQuestion[] = [
     options: [
       '7',
       '11',
+      '18',
       '1',
-      '18'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Since gcd(7, 11) = 1, by VII.28, gcd(7 + 11, 7) = gcd(18, 7) = 1.',
   },
@@ -35,11 +35,11 @@ export const section207Questions: QuizQuestion[] = [
     question: 'The proof of VII.28 proceeds by showing that if a common factor divided both the sum and one number, it would:',
     options: [
       'Be equal to 1',
-      'Also divide the other number, contradicting relative primality',
       'Divide the product',
+      'Also divide the other number, contradicting relative primality',
       'Be a prime number',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'If d divides both (a + b) and a, then d divides (a + b) - a = b, so d is a common divisor of a and b, contradicting gcd(a, b) = 1.',
   },

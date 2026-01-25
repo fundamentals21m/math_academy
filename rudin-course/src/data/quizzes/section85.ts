@@ -81,11 +81,11 @@ export const section85Questions: QuizQuestion[] = [
     question: 'The space $L^2(\\mu)$ is:',
     options: [
       'An incomplete inner product space',
-      'Not a vector space',
       'A complete inner product space (Hilbert space)',
+      'Not a vector space',
       'Complete only for finite measures',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The Riesz-Fischer theorem: $L^2$ is complete, making it a Hilbert space. This is fundamental for Fourier analysis and quantum mechanics.',
   },

@@ -6,12 +6,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the descriptor multi(k, KEY1, KEY2, ...) represent?',
     options: [
+      'k-of-n multisig',
       'Hash timelock',
       'Single signature',
-      'k-of-n multisig',
-      'Taproot script'
+      'Taproot script',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'multi(k, ...) creates a k-of-n multisig script.',
   },
@@ -42,12 +42,12 @@ export const section35Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To create a SegWit multisig, you would use:',
     options: [
-      'wsh(multi(...))',
       'multi(...)',
       'sh(multi(...))',
-      'wpkh(multi(...))'
+      'wsh(multi(...))',
+      'wpkh(multi(...))',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'wsh(multi(...)) creates a native SegWit multisig output.',
   },

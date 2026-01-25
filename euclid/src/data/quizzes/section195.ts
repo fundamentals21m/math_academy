@@ -22,10 +22,10 @@ export const section195Questions: QuizQuestion[] = [
     options: [
       'VII.1 (the Euclidean algorithm)',
       'VII.10 (measurement by parts)',
-      'VII.5 (part of a part)',
       'VII.15 (unit and number alternation)',
+      'VII.5 (part of a part)',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Euclid proves VII.16 using VII.15, which established an alternation property for the unit. This connects the abstract measurement relationships to concrete multiplication.',
   },
@@ -36,7 +36,7 @@ export const section195Questions: QuizQuestion[] = [
     options: [
       'It was not obvious to ancient Greeks',
       'It establishes commutativity from first principles using only the definitions of number and multiplication',
-      'It was Euclid\\'s most difficult proof',
+      'It was Euclid\\\\'s most difficult proof',
       'It proves commutativity only works for certain numbers',
     ],
     correctIndex: 1,

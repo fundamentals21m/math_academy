@@ -6,12 +6,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a permutation?',
     options: [
+      'An ordered arrangement of objects',
       'An unordered selection of objects',
       'A random sample of objects',
-      'An ordered arrangement of objects',
-      'A probability distribution'
+      'A probability distribution',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A permutation is an ordered arrangement of objects. When order matters, we count permutations.'
   },
@@ -52,10 +52,26 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many circular permutations are there of $n$ distinct objects?',
     options: [
-      '$(n-1)!$',
-      '$n!$',
-      '$(n+1)!$',
-      '$\\frac{n!}{2}$'
+      '$n!
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'For circular arrangements, rotations are considered identical, so we fix one object and arrange the remaining $(n-1)$ objects, giving $(n-1)!$ arrangements.'
+  },
+      '$(n-1)!
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For circular arrangements, rotations are considered identical, so we fix one object and arrange the remaining $(n-1)$ objects, giving $(n-1)!$ arrangements.'
+  },
+      '$(n+1)!
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For circular arrangements, rotations are considered identical, so we fix one object and arrange the remaining $(n-1)$ objects, giving $(n-1)!$ arrangements.'
+  },
+      '$\\frac{n!}{2}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For circular arrangements, rotations are considered identical, so we fix one object and arrange the remaining $(n-1)$ objects, giving $(n-1)!$ arrangements.'
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

@@ -7,11 +7,11 @@ export const section83Questions: QuizQuestion[] = [
     question: 'Proposition III.19 proves what about a perpendicular to a tangent at the tangent point?',
     options: [
       'It is parallel to the diameter',
-      'It passes through the center of the circle',
       'It is tangent to another circle',
-      'It bisects the tangent line'
+      'It bisects the tangent line',
+      'It passes through the center of the circle',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'III.19 proves that a line perpendicular to a tangent at the point of tangency passes through the center of the circle.',
   },
@@ -23,7 +23,7 @@ export const section83Questions: QuizQuestion[] = [
       'III.1 and III.2',
       'III.31 only',
       'III.16, III.18, and III.19',
-      'III.3 and III.4'
+      'III.3 and III.4',
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -34,12 +34,12 @@ export const section83Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'III.19 can be used to find the center of a circle if you know:',
     options: [
-      'One tangent line and its point of tangency',
       'One chord',
+      'One tangent line and its point of tangency',
       'Two parallel chords',
       'The diameter only',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Given a tangent and its point of tangency, the perpendicular to the tangent at that point passes through the center.',
   },

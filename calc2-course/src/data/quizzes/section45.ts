@@ -6,10 +6,26 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The general form of a first-order linear differential equation is:',
     options: [
-      '$y\' + P(x)y = Q(x)$',
-      '$y\' = y^2 + P(x)$',
-      '$y\'\' + P(x)y\' = 0$',
-      '$y\' = P(x)y^2$'
+      '$y\\' = y^2 + P(x)
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'A first-order linear equation has the form $y\' + P(x)y = Q(x)$, linear in both $y$ and $y\'$.',
+  },
+      '$y\\'\\' + P(x)y\\' = 0
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A first-order linear equation has the form $y\' + P(x)y = Q(x)$, linear in both $y$ and $y\'$.',
+  },
+      '$y\\' + P(x)y = Q(x)
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A first-order linear equation has the form $y\' + P(x)y = Q(x)$, linear in both $y$ and $y\'$.',
+  },
+      '$y\\' = P(x)y^2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A first-order linear equation has the form $y\' + P(x)y = Q(x)$, linear in both $y$ and $y\'$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -22,10 +38,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       'No solutions exist',
       'Infinitely many solutions',
-      'One and only one solution',
       'At most two solutions',
+      'One and only one solution',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The existence-uniqueness theorem guarantees exactly one solution when $P$ and $Q$ are continuous on an open interval containing $a$.',
   },
@@ -96,10 +112,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       'Two particular solutions',
       'Two homogeneous solutions',
-      'Only the particular solution',
       'The homogeneous solution plus a particular solution',
+      'Only the particular solution',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The first term $be^{-A(x)}$ is the homogeneous solution with initial value $b$; the integral term is a particular solution of the nonhomogeneous equation.',
   },

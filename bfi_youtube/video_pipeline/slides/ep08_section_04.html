@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    :root {
+      --accent-color: #7C3AED;
+      --accent-rgb: 124, 58, 237;
+    }
+    .timeline-container {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    .phase-card {
+      width: 320px;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      background: rgba(247, 147, 26, 0.05);
+      border: 1px solid rgba(247, 147, 26, 0.2);
+    }
+    .phase-years {
+      color: #F7931A;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      margin-bottom: 15px;
+    }
+    .phase-btc {
+      color: #E6EDF3;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .phase-price {
+      color: #8B949E;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .phase-desc {
+      color: #8B949E;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .growth-box {
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+      padding: 30px 50px;
+      border-radius: 12px;
+      margin-top: 40px;
+      display: inline-block;
+    }
+    .growth-row {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .growth-item {
+      text-align: center;
+    }
+    .growth-value {
+      color: #E6EDF3;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .growth-label {
+      color: #8B949E;
+      font-size: 16px;
+    }
+    .growth-arrow {
+      color: #22C55E;
+      font-size: 36px;
+    }
+    .growth-result {
+      color: #22C55E;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="tag">The Accumulation</div>
+    <div class="section-title">Strategy's Bitcoin Journey</div>
+    <div class="timeline-container">
+      <div class="phase-card">
+        <div class="phase-years">2020–2021</div>
+        <div class="phase-btc">~125,000 BTC</div>
+        <div class="phase-price">$10K – $60K range</div>
+        <div class="phase-desc">Initial accumulation phase</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-years">2022–2023</div>
+        <div class="phase-btc">~190,000 BTC</div>
+        <div class="phase-price">$16K – $30K range</div>
+        <div class="phase-desc">Bear market buying</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-years">2024–2025</div>
+        <div class="phase-btc">500,000+ BTC</div>
+        <div class="phase-price">$60K – $100K range</div>
+        <div class="phase-desc">Convertible debt acceleration</div>
+      </div>
+    </div>
+    <div class="growth-box">
+      <div class="growth-row">
+        <div class="growth-item">
+          <div class="growth-value">$1B</div>
+          <div class="growth-label">Market cap (2020)</div>
+        </div>
+        <div class="growth-arrow">→</div>
+        <div class="growth-item">
+          <div class="growth-result">~$100B</div>
+          <div class="growth-label">Market cap (today)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

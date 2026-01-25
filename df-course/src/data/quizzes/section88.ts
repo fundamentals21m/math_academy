@@ -6,10 +6,26 @@ export const section88Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$H^2(G, A)$ classifies:',
     options: [
-      'Subgroups of $G$',
-      'Extensions of $G$ by $A$',
-      'Automorphisms of $G$',
-      'Homomorphisms from $G$ to $A$'
+      'Subgroups of $G
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: '$H^2(G, A)$ classifies equivalence classes of group extensions $1 \\to A \\to E \\to G \\to 1$ where the $G$-action on $A$ (by conjugation) is the given one.',
+  },
+      'Automorphisms of $G
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$H^2(G, A)$ classifies equivalence classes of group extensions $1 \\to A \\to E \\to G \\to 1$ where the $G$-action on $A$ (by conjugation) is the given one.',
+  },
+      'Extensions of $G$ by $A
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$H^2(G, A)$ classifies equivalence classes of group extensions $1 \\to A \\to E \\to G \\to 1$ where the $G$-action on $A$ (by conjugation) is the given one.',
+  },
+      'Homomorphisms from $G$ to $A
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$H^2(G, A)$ classifies equivalence classes of group extensions $1 \\to A \\to E \\to G \\to 1$ where the $G$-action on $A$ (by conjugation) is the given one.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -20,10 +36,14 @@ export const section88Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A central extension of $G$ by $A$ is an extension where:',
     options: [
+      '$A$ is in the center of the extension group $E
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'In a central extension $1 \\to A \\to E \\to G \\to 1$, the subgroup $A$ lies in the center of $E$. This corresponds to the trivial $G$-action on $A$.',
+  },
       '$A$ is trivial',
       '$G$ is abelian',
-      '$A$ is in the center of the extension group $E$',
-      'The extension splits'
+      'The extension splits',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -36,10 +56,10 @@ export const section88Questions: QuizQuestion[] = [
     options: [
       'The extension is central',
       '$G$ is trivial',
-      'The extension splits (has a section)',
       '$A$ is trivial',
+      'The extension splits (has a section)',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The zero cohomology class corresponds to the split extension, where $E \\cong A \\rtimes G$ (semidirect product). A splitting is a group homomorphism $s: G \\to E$ with $\\pi \\circ s = \\text{id}_G$.',
   },

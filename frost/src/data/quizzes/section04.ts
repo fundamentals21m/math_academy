@@ -8,8 +8,12 @@ export const section04Questions: QuizQuestion[] = [
     options: [
       'Existence of an identity element',
       'Existence of inverses for each element',
-      'Commutativity: $g_1 + g_2 = g_2 + g_1$',
       'Divisibility: any element can be divided by any non-zero element',
+      'Commutativity: $g_1 + g_2 = g_2 + g_1
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'An abelian group requires: identity, inverses, associativity, and commutativity. Divisibility is not a group property - groups have multiplication (repeated addition) but not general division.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -43,11 +47,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What is the Discrete Logarithm Problem in elliptic curves?',
     options: [
       'Given $s$, computing $Y = [s]G$ is hard',
-      'Given $Y = [s]G$, computing $s$ is hard',
       'Given $G$, finding any point on the curve is hard',
       'Given two points, computing their sum is hard',
+      'Given $Y = [s]G$, computing $s$ is hard',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The Discrete Logarithm Problem states that given $Y = [s]G$, computing $s$ is computationally infeasible. This is the one-way function that secures elliptic curve cryptography.',
   },

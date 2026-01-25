@@ -55,11 +55,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'The remainder helps us:',
     options: [
       'Compute exact values',
-      'Solve equations',
       'Bound the approximation error',
+      'Solve equations',
       'Find antiderivatives',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The remainder formula lets us bound how far $P_n(x)$ is from $f(x)$.',
   },
@@ -126,8 +126,12 @@ export const section47Questions: QuizQuestion[] = [
     options: [
       'No integration',
       'Only the first derivative',
+      'The antiderivative of $f
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Integral form: $R_n(x) = \\frac{1}{n!}\\int_a^x (x-t)^n f^{(n+1)}(t)\\,dt$.',
+  },
       'A definite integral of the $(n+1)$th derivative',
-      'The antiderivative of $f$'
     ],
     correctIndex: 2,
     difficulty: 'hard',

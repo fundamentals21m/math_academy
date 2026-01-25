@@ -46,10 +46,26 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To compute $A^{-1}$ using row operations, we reduce the augmented matrix:',
     options: [
-      '$[A | I]$ to $[I | A^{-1}]$',
-      '$[A | A]$ to $[I | I]$',
-      '$[A | 0]$ to $[I | A^{-1}]$',
-      '$[I | A]$ to $[A^{-1} | I]$'
+      '$[A | A]$ to $[I | I]
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'We form $[A | I]$ and apply row operations until the left side becomes $I$. The right side then contains $A^{-1}$.',
+  },
+      '$[A | 0]$ to $[I | A^{-1}]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'We form $[A | I]$ and apply row operations until the left side becomes $I$. The right side then contains $A^{-1}$.',
+  },
+      '$[A | I]$ to $[I | A^{-1}]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'We form $[A | I]$ and apply row operations until the left side becomes $I$. The right side then contains $A^{-1}$.',
+  },
+      '$[I | A]$ to $[A^{-1} | I]
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'We form $[A | I]$ and apply row operations until the left side becomes $I$. The right side then contains $A^{-1}$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'medium',

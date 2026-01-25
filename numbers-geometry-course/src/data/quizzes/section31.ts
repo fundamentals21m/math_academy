@@ -8,7 +8,12 @@ export const section31Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'Around what year did Diophantus discover his method for Pythagorean triples?',
-    options: ['500 B.C.', '300 B.C.', '250 A.D.', '1000 A.D.'],
+    options: [
+      '500 B.C.',
+      '300 B.C.',
+      '250 A.D.',
+      '1000 A.D.',
+    ],
     correctIndex: 2,
     difficulty: 'medium',
     explanation:
@@ -33,8 +38,13 @@ export const section31Questions: QuizQuestion[] = [
     id: 3,
     type: 'multiple-choice',
     question: 'What known point on the unit circle does Diophantus use to start his construction?',
-    options: ['(0, 0)', '(1, 0)', '(-1, 0)', '(0, 1)'],
-    correctIndex: 2,
+    options: [
+      '(0, 0)',
+      '(-1, 0)',
+      '(1, 0)',
+      '(0, 1)',
+    ],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       'Diophantus uses the obvious rational point (-1, 0) on the unit circle. Lines through this point with rational slope intersect the circle at other rational points.',
@@ -79,12 +89,12 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does Diophantus\'s formula relate to Euclid\'s?',
     options: [
+      'Setting $t = v/u$ recovers Euclid\\\\'s formula',
       'They are completely different',
-      'Setting $t = v/u$ recovers Euclid\\'s formula',
-      'Euclid\\'s is more general',
+      'Euclid\\\\'s is more general',
       'Diophantus came first',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Setting t = v/u in Diophantus\'s formula and clearing denominators gives (2uv, u² - v², u² + v²), which is exactly Euclid\'s formula.',
@@ -95,11 +105,11 @@ export const section31Questions: QuizQuestion[] = [
     question: 'What is a "rational function"?',
     options: [
       'A function whose values are always rational',
-      'A function built from a variable and constants by +, −, ×, ÷',
       'A function with rational domain',
+      'A function built from a variable and constants by +, −, ×, ÷',
       'A function that equals a ratio',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'A rational function is built from a variable t and constants using only the rational operations: addition, subtraction, multiplication, and division.',
@@ -144,12 +154,12 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is Diophantus\'s formula simpler than Euclid\'s?',
     options: [
-      'It uses only one parameter instead of three',
       'It uses smaller numbers',
       'It avoids square roots',
       'It works for all triangles',
+      'It uses only one parameter instead of three',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation:
       'Diophantus\'s formula uses only the single parameter t, while Euclid\'s requires three parameters u, v, and w. Working with rationals instead of integers simplifies the story considerably.',

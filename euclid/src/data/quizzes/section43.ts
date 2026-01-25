@@ -21,11 +21,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'What geometric configuration does I.43 describe?',
     options: [
       'A parallelogram divided by one diagonal',
-      'A parallelogram with a point on the diagonal creating four smaller parallelograms',
       'Two congruent parallelograms',
       'A parallelogram inscribed in a circle',
+      'A parallelogram with a point on the diagonal creating four smaller parallelograms',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Through a point on the diagonal, draw parallels to the sides, creating four parallelograms; the non-diagonal ones are equal.',
   },

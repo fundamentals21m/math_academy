@@ -39,12 +39,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which axioms make (R, 0, -, +) into a group?',
     options: [
+      'Axioms 1-3 (associativity, identity, inverse for +)',
       'All 7 axioms',
       'Axioms 4-6 (commutativity, identity, associativity for ·)',
-      'Axioms 1-3 (associativity, identity, inverse for +)',
       'Axiom 7 (distributivity)',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Axioms 1-3 (associativity of +, identity for +, and inverse for +) are exactly the group axioms for the additive structure (R, 0, -, +).',
@@ -70,11 +70,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'What defines an integral domain?',
     options: [
       'A ring where every element has an inverse',
+      'A commutative ring with no zero divisors',
       'A ring that contains the integers',
       'A ring where multiplication is not commutative',
-      'A commutative ring with no zero divisors',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'An integral domain is a commutative ring where 0 ≠ 1 and there are no zero divisors: if xy = 0, then x = 0 or y = 0.',
@@ -84,12 +84,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why is ℤ not a field?',
     options: [
-      'Because not every nonzero element has a multiplicative inverse',
       'Because it is not commutative',
       'Because it has zero divisors',
+      'Because not every nonzero element has a multiplicative inverse',
       'Because 0 = 1 in ℤ',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'ℤ is not a field because not every nonzero integer has a multiplicative inverse in ℤ. For example, 2 has no integer n such that 2n = 1.',
@@ -98,8 +98,13 @@ export const section33Questions: QuizQuestion[] = [
     id: 7,
     type: 'multiple-choice',
     question: 'Which of the following is a non-commutative ring?',
-    options: ['ℤ', 'ℚ', '2×2 matrices over ℤ', 'ℤₙ'],
-    correctIndex: 2,
+    options: [
+      'ℤ',
+      'ℚ',
+      'ℤₙ',
+      '2×2 matrices over ℤ',
+    ],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The ring of 2×2 matrices over ℤ is non-commutative because matrix multiplication does not satisfy AB = BA in general. The other options (ℤ, ℚ, ℤₙ) are all commutative.',
@@ -110,11 +115,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'What is the cancellation law in an integral domain?',
     options: [
       'If a + c = b + c, then a = b',
+      'If ac = bc and c ≠ 0, then a = b',
       'If a ≠ 0, then a has an inverse',
       'If a = b, then ac = bc',
-      'If ac = bc and c ≠ 0, then a = b'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The cancellation law states: if ac = bc and c ≠ 0, then a = b. This follows from the absence of zero divisors in an integral domain.',
@@ -125,11 +130,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'What can be proved from the ring axioms about x · 0?',
     options: [
       'x · 0 = x',
-      'x · 0 = 0',
       'x · 0 = 1',
       'x · 0 = -x',
+      'x · 0 = 0',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'From the ring axioms, we can prove that x · 0 = 0 for all x. This is because x · 0 = x · (0 + 0) = x · 0 + x · 0, and subtracting x · 0 from both sides gives 0 = x · 0.',

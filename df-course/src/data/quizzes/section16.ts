@@ -6,10 +6,26 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: "Lagrange's Theorem states that for a finite group $G$ and subgroup $H$:",
     options: [
-      '$|H|$ divides $|G|$',
-      '$|G|$ divides $|H|$',
-      '$|H| = |G|$',
-      '$|H| + [G:H] = |G|$'
+      '$|G|$ divides $|H|
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: "Lagrange's Theorem: If $H$ is a subgroup of finite group $G$, then $|H|$ divides $|G|$, and $|G| = |H| \\cdot [G:H]$.",
+  },
+      '$|H| = |G|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: "Lagrange's Theorem: If $H$ is a subgroup of finite group $G$, then $|H|$ divides $|G|$, and $|G| = |H| \\cdot [G:H]$.",
+  },
+      '$|H|$ divides $|G|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: "Lagrange's Theorem: If $H$ is a subgroup of finite group $G$, then $|H|$ divides $|G|$, and $|G| = |H| \\cdot [G:H]$.",
+  },
+      '$|H| + [G:H] = |G|
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: "Lagrange's Theorem: If $H$ is a subgroup of finite group $G$, then $|H|$ divides $|G|$, and $|G| = |H| \\cdot [G:H]$.",
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',

@@ -66,10 +66,26 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The ratio test gives $R = \\lim |a_n/a_{n+1}|$ when this limit exists. For $\\sum x^n/n!$, $R = ?$',
     options: [
-      '$0$',
-      '$\\infty$',
-      '$1$',
-      '$e$'
+      '$0
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: '$|a_n/a_{n+1}| = |(n+1)!/n!| = n+1 \\to \\infty$. Converges for all $x$.',
+  },
+      '$1
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$|a_n/a_{n+1}| = |(n+1)!/n!| = n+1 \\to \\infty$. Converges for all $x$.',
+  },
+      '$e
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$|a_n/a_{n+1}| = |(n+1)!/n!| = n+1 \\to \\infty$. Converges for all $x$.',
+  },
+      '$\\infty
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: '$|a_n/a_{n+1}| = |(n+1)!/n!| = n+1 \\to \\infty$. Converges for all $x$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -82,10 +98,10 @@ export const section71Questions: QuizQuestion[] = [
     options: [
       'Is discontinuous',
       'Equals zero',
-      'Has finitely many terms',
       'Represents a continuous (in fact infinitely differentiable) function',
+      'Has finitely many terms',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Power series are infinitely differentiable inside their interval of convergence.',
   },
@@ -94,10 +110,26 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $\\sum_{n=0}^{\\infty} x^n$, the radius of convergence is:',
     options: [
-      '$0$',
-      '$1/2$',
-      '$\\infty$',
-      '$1$'
+      '$0
+    correctIndex: 2,
+    difficulty: 'easy',
+    explanation: 'Geometric series converges for $|x| < 1$, so $R = 1$.',
+  },
+      '$1/2
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Geometric series converges for $|x| < 1$, so $R = 1$.',
+  },
+      '$1
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Geometric series converges for $|x| < 1$, so $R = 1$.',
+  },
+      '$\\infty
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'Geometric series converges for $|x| < 1$, so $R = 1$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -108,10 +140,14 @@ export const section71Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A power series can be differentiated term by term:',
     options: [
+      'Only at $x = 0
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Term-by-term differentiation is valid for $|x| < R$.',
+  },
       'Inside its radius of convergence',
-      'Only at $x = 0$',
       'Never',
-      'Only for polynomial sums'
+      'Only for polynomial sums',
     ],
     correctIndex: 0,
     difficulty: 'medium',

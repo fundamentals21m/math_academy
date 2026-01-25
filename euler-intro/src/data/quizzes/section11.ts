@@ -21,11 +21,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'Can a cubic curve have a curved asymptote?',
     options: [
       'No, asymptotes are always straight lines',
+      'Yes, it can approach a parabola asymptotically',
       'Only if the cubic degenerates',
       'Only in complex coordinates',
-      'Yes, it can approach a parabola asymptotically',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Yes! Some cubics have parabolic asymptotes—they approach a parabola rather than a straight line as they extend to infinity.',
   },
@@ -51,7 +51,7 @@ export const section11Questions: QuizQuestion[] = [
       '1',
       '0',
       '2',
-      '3'
+      '3',
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -63,11 +63,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'How does Euler find asymptotes of higher-degree curves?',
     options: [
       'By graphing and visual inspection',
-      'By analyzing the leading terms and their behavior at infinity',
       'By computing derivatives',
-      'By numerical approximation'
+      'By numerical approximation',
+      'By analyzing the leading terms and their behavior at infinity',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Euler finds asymptotes by examining the dominant terms of the equation as variables approach infinity, extracting the limiting behavior.',
   },

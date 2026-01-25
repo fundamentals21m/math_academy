@@ -9,7 +9,7 @@ export const section181Questions: QuizQuestion[] = [
       'Their least common multiple',
       'Their product',
       'Their difference',
-      'Their greatest common measure (GCD)'
+      'Their greatest common measure (GCD)',
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section181Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using the Euclidean algorithm (VII.2), what is the GCD of 48 and 18?',
     options: [
-      '6',
       '3',
+      '6',
       '2',
-      '9'
+      '9',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Applying the algorithm: 48 = 2(18) + 12, then 18 = 1(12) + 6, then 12 = 2(6) + 0. The last non-zero remainder is 6, so GCD(48, 18) = 6.',
   },
@@ -37,7 +37,7 @@ export const section181Questions: QuizQuestion[] = [
       'Because one number eventually becomes zero',
       'Because both numbers are finite',
       'Because the remainders form a strictly decreasing sequence of positive integers',
-      'Because Euclid\\'s postulates guarantee it',
+      'Because Euclid\\\\'s postulates guarantee it',
     ],
     correctIndex: 2,
     difficulty: 'hard',

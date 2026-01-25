@@ -1,0 +1,43 @@
+{
+  "partId": 6,
+  "partTitle": "Linear Differential Equations",
+  "textbookChapter": "Chapter 6",
+  "sections": [
+    {
+      "sectionId": 51,
+      "sectionTitle": "Introduction to Differential Equations",
+      "textbookSection": "§6.1-6.3",
+      "examples": [],
+      "exercises": [
+        {
+          "id": "6-1-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Solve the differential equation $y' + 2y = 0$ with $y(0) = 3$.",
+          "solution": {
+            "steps": [
+              {"title": "Separation of variables", "content": "$\\frac{dy}{y} = -2\\,dx$."},
+              {"title": "Integrate", "content": "$\\ln|y| = -2x + C$, so $y = Ce^{-2x}$."},
+              {"title": "Apply initial condition", "content": "$y(0) = C = 3$."}
+            ],
+            "conclusion": "$y = 3e^{-2x}$."
+          }
+        },
+        {
+          "id": "6-1-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Find the general solution of $y'' - 5y' + 6y = 0$.",
+          "solution": {
+            "steps": [
+              {"title": "Characteristic equation", "content": "$r^2 - 5r + 6 = 0$, so $(r-2)(r-3) = 0$."},
+              {"title": "Roots", "content": "$r = 2$ and $r = 3$."},
+              {"title": "General solution", "content": "$y = c_1 e^{2x} + c_2 e^{3x}$."}
+            ],
+            "conclusion": "$y = c_1 e^{2x} + c_2 e^{3x}$."
+          }
+        }
+      ]
+    }
+  ]
+}

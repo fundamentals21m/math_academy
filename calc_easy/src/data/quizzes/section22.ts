@@ -6,12 +6,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'U-substitution is the integration equivalent of:',
     options: [
-      'The chain rule',
       'The sum rule',
       'The quotient rule',
-      'The power rule'
+      'The power rule',
+      'The chain rule',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'U-substitution reverses the chain rule, handling composite functions.',
   },
@@ -50,10 +50,26 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Integration by parts uses the formula:',
     options: [
-      '$\\int uv \\, dx = u + v + C$',
-      '$\\int u \\, dv = u + v$',
-      '$\\int u \\, dv = uv - \\int v \\, du$',
-      '$\\int u \\, dv = \\frac{uv}{2}$'
+      '$\\int uv \\, dx = u + v + C
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Integration by parts: $\\int u \\, dv = uv - \\int v \\, du$.',
+  },
+      '$\\int u \\, dv = uv - \\int v \\, du
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Integration by parts: $\\int u \\, dv = uv - \\int v \\, du$.',
+  },
+      '$\\int u \\, dv = u + v
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Integration by parts: $\\int u \\, dv = uv - \\int v \\, du$.',
+  },
+      '$\\int u \\, dv = \\frac{uv}{2}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'Integration by parts: $\\int u \\, dv = uv - \\int v \\, du$.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -64,10 +80,14 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a common mistake in integration?',
     options: [
+      'Forgetting the constant of integration $+ C
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Forgetting the constant $+ C$ in indefinite integrals is a common error.',
+  },
       'Using the power rule',
       'Using substitution',
       'Checking the answer by differentiating',
-      'Forgetting the constant of integration $+ C$'
     ],
     correctIndex: 3,
     difficulty: 'easy',

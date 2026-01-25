@@ -7,11 +7,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'What is time preference according to Mises?',
     options: [
       'The preference for leisure time over work time',
-      'The preference for present goods over future goods of the same kind and quantity',
       'The preference for spending time on production rather than consumption',
+      'The preference for present goods over future goods of the same kind and quantity',
       'The preference for shorter production periods',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Time preference is the universal preference for present goods over future goods of the same kind and quantity. Every acting person values a present good more highly than the same good available in the future.'
   },
@@ -21,11 +21,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'According to Mises, what are capital goods?',
     options: [
       'Money and financial instruments',
-      'Consumer goods that last a long time',
       'Produced factors of production used to make other goods',
+      'Consumer goods that last a long time',
       'Natural resources like land and minerals',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Capital goods are produced factors of production—goods that have been made by human effort and are used to produce other goods. They are intermediate stages in the production process, deriving their value from their contribution to producing consumer goods.'
   },
@@ -64,10 +64,10 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'Investment creates saving through the multiplier effect',
       'Saving and investment are independent of each other',
-      'Genuine investment requires prior genuine saving',
       'Government can create investment without private saving',
+      'Genuine investment requires prior genuine saving',
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Genuine investment requires prior genuine saving. Saving releases resources from producing consumer goods, making them available for producing capital goods. When banks create credit not backed by real saving, they create the illusion of capital without the reality.'
   },
@@ -78,10 +78,10 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'Less capital and more immediate output',
       'Government planning and lower interest rates',
-      'Reduced saving and increased consumption',
       'More capital accumulation and ultimately greater productivity',
+      'Reduced saving and increased consumption',
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Lengthening the period of production—adopting more roundabout methods—requires capital accumulation through saving. While results are delayed, this ultimately produces enormously greater productivity. This is the source of modern prosperity.'
   }

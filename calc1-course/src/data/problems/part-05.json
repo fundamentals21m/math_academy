@@ -1,0 +1,633 @@
+{
+  "partId": 6,
+  "partTitle": "Integration and Differentiation",
+  "textbookChapter": "Chapter 5",
+  "sections": [
+    {
+      "sectionId": 35,
+      "sectionTitle": "First Fundamental Theorem",
+      "textbookSection": "I 5.1-5.3",
+      "examples": [
+        {
+          "id": "ex-6-35-1",
+          "type": "example",
+          "title": "First Fundamental Theorem of Calculus",
+          "statement": "State the First Fundamental Theorem and use it to find $\\frac{d}{dx}\\int_0^x t^3\\,dt$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Statement",
+                "content": "**First Fundamental Theorem:** If $f$ is continuous on $[a, b]$ and $F(x) = \\int_a^x f(t)\\,dt$, then $F$ is differentiable on $(a, b)$ and $F'(x) = f(x)$."
+              },
+              {
+                "title": "Apply to problem",
+                "content": "Here $f(t) = t^3$ is continuous, so by FTC I:\n$\\frac{d}{dx}\\int_0^x t^3\\,dt = x^3$"
+              }
+            ],
+            "conclusion": "$\\frac{d}{dx}\\int_0^x t^3\\,dt = x^3$"
+          }
+        },
+        {
+          "id": "ex-6-35-2",
+          "type": "example",
+          "title": "FTC I with Chain Rule",
+          "statement": "Find $\\frac{d}{dx}\\int_0^{x^2} \\sin t\\,dt$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Let u = x²",
+                "content": "Let $F(u) = \\int_0^u \\sin t\\,dt$. Then we want $\\frac{d}{dx}F(x^2)$."
+              },
+              {
+                "title": "Apply chain rule",
+                "content": "$\\frac{d}{dx}F(x^2) = F'(x^2) \\cdot \\frac{d}{dx}(x^2)$"
+              },
+              {
+                "title": "Apply FTC I",
+                "content": "By FTC I, $F'(u) = \\sin u$, so $F'(x^2) = \\sin(x^2)$."
+              },
+              {
+                "title": "Combine",
+                "content": "$\\frac{d}{dx}\\int_0^{x^2} \\sin t\\,dt = \\sin(x^2) \\cdot 2x = 2x\\sin(x^2)$"
+              }
+            ],
+            "conclusion": "$\\frac{d}{dx}\\int_0^{x^2} \\sin t\\,dt = 2x\\sin(x^2)$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-35-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Find $\\frac{d}{dx}\\int_1^x \\frac{1}{t}\\,dt$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Apply FTC I directly",
+                "content": "Since $f(t) = 1/t$ is continuous for $t > 0$, by FTC I:\n$\\frac{d}{dx}\\int_1^x \\frac{1}{t}\\,dt = \\frac{1}{x}$"
+              }
+            ],
+            "conclusion": "$\\frac{d}{dx}\\int_1^x \\frac{1}{t}\\,dt = \\frac{1}{x}$. Note: $\\int_1^x \\frac{1}{t}\\,dt = \\ln x$."
+          }
+        },
+        {
+          "id": "6-35-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Find $\\frac{d}{dx}\\int_x^5 \\cos(t^2)\\,dt$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Reverse limits",
+                "content": "$\\int_x^5 \\cos(t^2)\\,dt = -\\int_5^x \\cos(t^2)\\,dt$"
+              },
+              {
+                "title": "Apply FTC I",
+                "content": "$\\frac{d}{dx}\\left(-\\int_5^x \\cos(t^2)\\,dt\\right) = -\\cos(x^2)$"
+              }
+            ],
+            "conclusion": "$\\frac{d}{dx}\\int_x^5 \\cos(t^2)\\,dt = -\\cos(x^2)$"
+          }
+        },
+        {
+          "id": "6-35-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Find $\\frac{d}{dx}\\int_{\\sin x}^{\\cos x} e^{t^2}\\,dt$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Split the integral",
+                "content": "$\\int_{\\sin x}^{\\cos x} e^{t^2}\\,dt = \\int_0^{\\cos x} e^{t^2}\\,dt - \\int_0^{\\sin x} e^{t^2}\\,dt$"
+              },
+              {
+                "title": "Differentiate each part",
+                "content": "$\\frac{d}{dx}\\int_0^{\\cos x} e^{t^2}\\,dt = e^{\\cos^2 x} \\cdot (-\\sin x)$\n$\\frac{d}{dx}\\int_0^{\\sin x} e^{t^2}\\,dt = e^{\\sin^2 x} \\cdot \\cos x$"
+              },
+              {
+                "title": "Combine",
+                "content": "$= -\\sin x \\cdot e^{\\cos^2 x} - \\cos x \\cdot e^{\\sin^2 x}$"
+              }
+            ],
+            "conclusion": "$\\frac{d}{dx}\\int_{\\sin x}^{\\cos x} e^{t^2}\\,dt = -\\sin x \\cdot e^{\\cos^2 x} - \\cos x \\cdot e^{\\sin^2 x}$"
+          }
+        },
+        {
+          "id": "6-35-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "If $F(x) = \\int_0^x (x - t)f(t)\\,dt$, find $F'(x)$ and $F''(x)$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Rewrite F(x)",
+                "content": "$F(x) = \\int_0^x (x - t)f(t)\\,dt = x\\int_0^x f(t)\\,dt - \\int_0^x tf(t)\\,dt$"
+              },
+              {
+                "title": "Find F'(x)",
+                "content": "Using product rule and FTC I:\n$F'(x) = \\int_0^x f(t)\\,dt + x \\cdot f(x) - xf(x) = \\int_0^x f(t)\\,dt$"
+              },
+              {
+                "title": "Find F''(x)",
+                "content": "Apply FTC I again:\n$F''(x) = f(x)$"
+              }
+            ],
+            "conclusion": "$F'(x) = \\int_0^x f(t)\\,dt$ and $F''(x) = f(x)$."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 36,
+      "sectionTitle": "Second Fundamental Theorem",
+      "textbookSection": "I 5.4-5.6",
+      "examples": [
+        {
+          "id": "ex-6-36-1",
+          "type": "example",
+          "title": "Second Fundamental Theorem of Calculus",
+          "statement": "State the Second Fundamental Theorem and use it to evaluate $\\int_0^2 x^3\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Statement",
+                "content": "**Second Fundamental Theorem:** If $f$ is continuous on $[a, b]$ and $F$ is any antiderivative of $f$ (i.e., $F' = f$), then $\\int_a^b f(x)\\,dx = F(b) - F(a)$."
+              },
+              {
+                "title": "Find antiderivative",
+                "content": "For $f(x) = x^3$, an antiderivative is $F(x) = \\frac{x^4}{4}$."
+              },
+              {
+                "title": "Apply FTC II",
+                "content": "$\\int_0^2 x^3\\,dx = \\left[\\frac{x^4}{4}\\right]_0^2 = \\frac{16}{4} - 0 = 4$"
+              }
+            ],
+            "conclusion": "$\\int_0^2 x^3\\,dx = 4$"
+          }
+        },
+        {
+          "id": "ex-6-36-2",
+          "type": "example",
+          "title": "Relationship Between FTC I and II",
+          "statement": "Explain how the two Fundamental Theorems are related.",
+          "solution": {
+            "steps": [
+              {
+                "title": "FTC I says",
+                "content": "Differentiation undoes integration: $\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$."
+              },
+              {
+                "title": "FTC II says",
+                "content": "Integration undoes differentiation: $\\int_a^b F'(x)\\,dx = F(b) - F(a)$."
+              },
+              {
+                "title": "Connection",
+                "content": "FTC I tells us that $G(x) = \\int_a^x f(t)\\,dt$ is an antiderivative of $f$.\nFTC II tells us how to use any antiderivative to compute definite integrals."
+              },
+              {
+                "title": "Uniqueness",
+                "content": "All antiderivatives of $f$ differ by a constant. If $F' = f$ and $G' = f$, then $F - G = C$ for some constant $C$."
+              }
+            ],
+            "conclusion": "Together, FTC I and II establish that differentiation and integration are inverse operations."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-36-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Evaluate $\\int_1^4 (3x^2 - 2x + 1)\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find antiderivative",
+                "content": "$F(x) = x^3 - x^2 + x$"
+              },
+              {
+                "title": "Apply FTC II",
+                "content": "$\\int_1^4 (3x^2 - 2x + 1)\\,dx = [x^3 - x^2 + x]_1^4$\n$= (64 - 16 + 4) - (1 - 1 + 1) = 52 - 1 = 51$"
+              }
+            ],
+            "conclusion": "$\\int_1^4 (3x^2 - 2x + 1)\\,dx = 51$"
+          }
+        },
+        {
+          "id": "6-36-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Evaluate $\\int_0^{\\pi/2} \\cos x\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find antiderivative",
+                "content": "$F(x) = \\sin x$"
+              },
+              {
+                "title": "Apply FTC II",
+                "content": "$\\int_0^{\\pi/2} \\cos x\\,dx = [\\sin x]_0^{\\pi/2} = \\sin(\\pi/2) - \\sin(0) = 1 - 0 = 1$"
+              }
+            ],
+            "conclusion": "$\\int_0^{\\pi/2} \\cos x\\,dx = 1$"
+          }
+        },
+        {
+          "id": "6-36-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Evaluate $\\int_1^e \\frac{1}{x}\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Find antiderivative",
+                "content": "$F(x) = \\ln x$"
+              },
+              {
+                "title": "Apply FTC II",
+                "content": "$\\int_1^e \\frac{1}{x}\\,dx = [\\ln x]_1^e = \\ln e - \\ln 1 = 1 - 0 = 1$"
+              }
+            ],
+            "conclusion": "$\\int_1^e \\frac{1}{x}\\,dx = 1$"
+          }
+        },
+        {
+          "id": "6-36-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "If $\\int_0^3 f(x)\\,dx = 7$ and $\\int_0^5 f(x)\\,dx = 12$, find $\\int_3^5 f(x)\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use additivity",
+                "content": "$\\int_0^5 f(x)\\,dx = \\int_0^3 f(x)\\,dx + \\int_3^5 f(x)\\,dx$"
+              },
+              {
+                "title": "Solve",
+                "content": "$12 = 7 + \\int_3^5 f(x)\\,dx$\n$\\int_3^5 f(x)\\,dx = 5$"
+              }
+            ],
+            "conclusion": "$\\int_3^5 f(x)\\,dx = 5$"
+          }
+        },
+        {
+          "id": "6-36-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Prove that $\\int_a^b f(x)\\,dx = -\\int_b^a f(x)\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Use FTC II",
+                "content": "$\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F' = f$."
+              },
+              {
+                "title": "Compute other direction",
+                "content": "$\\int_b^a f(x)\\,dx = F(a) - F(b) = -(F(b) - F(a))$"
+              },
+              {
+                "title": "Compare",
+                "content": "$\\int_b^a f(x)\\,dx = -\\int_a^b f(x)\\,dx$"
+              }
+            ],
+            "conclusion": "Reversing limits of integration negates the integral."
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 37,
+      "sectionTitle": "Integration by Substitution",
+      "textbookSection": "I 5.7-5.9",
+      "examples": [
+        {
+          "id": "ex-6-37-1",
+          "type": "example",
+          "title": "Substitution Method",
+          "statement": "Derive the substitution rule and use it to compute $\\int_0^1 2x(x^2 + 1)^5\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Substitution rule",
+                "content": "If $u = g(x)$, then $\\int f(g(x))g'(x)\\,dx = \\int f(u)\\,du$.\nFor definite integrals: $\\int_a^b f(g(x))g'(x)\\,dx = \\int_{g(a)}^{g(b)} f(u)\\,du$."
+              },
+              {
+                "title": "Apply to problem",
+                "content": "Let $u = x^2 + 1$, so $du = 2x\\,dx$.\nWhen $x = 0$: $u = 1$. When $x = 1$: $u = 2$."
+              },
+              {
+                "title": "Transform integral",
+                "content": "$\\int_0^1 2x(x^2 + 1)^5\\,dx = \\int_1^2 u^5\\,du$"
+              },
+              {
+                "title": "Evaluate",
+                "content": "$= \\left[\\frac{u^6}{6}\\right]_1^2 = \\frac{64}{6} - \\frac{1}{6} = \\frac{63}{6} = \\frac{21}{2}$"
+              }
+            ],
+            "conclusion": "$\\int_0^1 2x(x^2 + 1)^5\\,dx = \\frac{21}{2}$"
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-37-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Evaluate $\\int \\sin^3 x \\cos x\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Substitute",
+                "content": "Let $u = \\sin x$, so $du = \\cos x\\,dx$."
+              },
+              {
+                "title": "Transform",
+                "content": "$\\int \\sin^3 x \\cos x\\,dx = \\int u^3\\,du$"
+              },
+              {
+                "title": "Integrate",
+                "content": "$= \\frac{u^4}{4} + C = \\frac{\\sin^4 x}{4} + C$"
+              }
+            ],
+            "conclusion": "$\\int \\sin^3 x \\cos x\\,dx = \\frac{\\sin^4 x}{4} + C$"
+          }
+        },
+        {
+          "id": "6-37-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Evaluate $\\int_0^{\\pi/4} \\tan x \\sec^2 x\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Substitute",
+                "content": "Let $u = \\tan x$, so $du = \\sec^2 x\\,dx$.\nWhen $x = 0$: $u = 0$. When $x = \\pi/4$: $u = 1$."
+              },
+              {
+                "title": "Transform",
+                "content": "$\\int_0^{\\pi/4} \\tan x \\sec^2 x\\,dx = \\int_0^1 u\\,du$"
+              },
+              {
+                "title": "Evaluate",
+                "content": "$= \\left[\\frac{u^2}{2}\\right]_0^1 = \\frac{1}{2}$"
+              }
+            ],
+            "conclusion": "$\\int_0^{\\pi/4} \\tan x \\sec^2 x\\,dx = \\frac{1}{2}$"
+          }
+        },
+        {
+          "id": "6-37-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Evaluate $\\int \\frac{e^x}{1 + e^x}\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Substitute",
+                "content": "Let $u = 1 + e^x$, so $du = e^x\\,dx$."
+              },
+              {
+                "title": "Transform",
+                "content": "$\\int \\frac{e^x}{1 + e^x}\\,dx = \\int \\frac{1}{u}\\,du$"
+              },
+              {
+                "title": "Integrate",
+                "content": "$= \\ln|u| + C = \\ln(1 + e^x) + C$"
+              }
+            ],
+            "conclusion": "$\\int \\frac{e^x}{1 + e^x}\\,dx = \\ln(1 + e^x) + C$"
+          }
+        },
+        {
+          "id": "6-37-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Evaluate $\\int_0^4 \\frac{x}{\\sqrt{x^2 + 9}}\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Substitute",
+                "content": "Let $u = x^2 + 9$, so $du = 2x\\,dx$, i.e., $x\\,dx = \\frac{1}{2}du$.\nWhen $x = 0$: $u = 9$. When $x = 4$: $u = 25$."
+              },
+              {
+                "title": "Transform",
+                "content": "$\\int_0^4 \\frac{x}{\\sqrt{x^2 + 9}}\\,dx = \\int_9^{25} \\frac{1}{2\\sqrt{u}}\\,du = \\frac{1}{2}\\int_9^{25} u^{-1/2}\\,du$"
+              },
+              {
+                "title": "Evaluate",
+                "content": "$= \\frac{1}{2}[2u^{1/2}]_9^{25} = [\\sqrt{u}]_9^{25} = 5 - 3 = 2$"
+              }
+            ],
+            "conclusion": "$\\int_0^4 \\frac{x}{\\sqrt{x^2 + 9}}\\,dx = 2$"
+          }
+        },
+        {
+          "id": "6-37-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Evaluate $\\int \\frac{\\ln x}{x}\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Substitute",
+                "content": "Let $u = \\ln x$, so $du = \\frac{1}{x}\\,dx$."
+              },
+              {
+                "title": "Transform",
+                "content": "$\\int \\frac{\\ln x}{x}\\,dx = \\int u\\,du$"
+              },
+              {
+                "title": "Integrate",
+                "content": "$= \\frac{u^2}{2} + C = \\frac{(\\ln x)^2}{2} + C$"
+              }
+            ],
+            "conclusion": "$\\int \\frac{\\ln x}{x}\\,dx = \\frac{(\\ln x)^2}{2} + C$"
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": 38,
+      "sectionTitle": "Integration by Parts",
+      "textbookSection": "I 5.10-5.12",
+      "examples": [
+        {
+          "id": "ex-6-38-1",
+          "type": "example",
+          "title": "Integration by Parts Formula",
+          "statement": "Derive the integration by parts formula and use it to compute $\\int x e^x\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Derivation",
+                "content": "From the product rule: $(uv)' = u'v + uv'$.\nIntegrate: $uv = \\int u'v\\,dx + \\int uv'\\,dx$.\nRearrange: $\\int uv'\\,dx = uv - \\int u'v\\,dx$."
+              },
+              {
+                "title": "Standard form",
+                "content": "$\\int u\\,dv = uv - \\int v\\,du$"
+              },
+              {
+                "title": "Apply to ∫xe^x dx",
+                "content": "Let $u = x$ and $dv = e^x\\,dx$.\nThen $du = dx$ and $v = e^x$."
+              },
+              {
+                "title": "Compute",
+                "content": "$\\int xe^x\\,dx = xe^x - \\int e^x\\,dx = xe^x - e^x + C = e^x(x - 1) + C$"
+              }
+            ],
+            "conclusion": "$\\int xe^x\\,dx = e^x(x - 1) + C$"
+          }
+        },
+        {
+          "id": "ex-6-38-2",
+          "type": "example",
+          "title": "LIATE Rule",
+          "statement": "Explain the LIATE guideline for choosing $u$ in integration by parts.",
+          "solution": {
+            "steps": [
+              {
+                "title": "LIATE order",
+                "content": "When choosing $u$, prefer (in order):\n**L**ogarithmic functions\n**I**nverse trig functions\n**A**lgebraic functions (polynomials)\n**T**rigonometric functions\n**E**xponential functions"
+              },
+              {
+                "title": "Rationale",
+                "content": "Choose $u$ to be the function that becomes simpler when differentiated.\nLogarithms and inverse trig simplify nicely when differentiated.\nExponentials and trig stay the same, making them good choices for $dv$."
+              },
+              {
+                "title": "Example",
+                "content": "In $\\int x\\sin x\\,dx$: $x$ is algebraic (A), $\\sin x$ is trig (T).\nA comes before T, so let $u = x$."
+              }
+            ],
+            "conclusion": "LIATE is a helpful mnemonic for selecting $u$ in integration by parts."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "id": "6-38-1",
+          "type": "exercise",
+          "number": 1,
+          "statement": "Evaluate $\\int x\\cos x\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Choose u and dv",
+                "content": "Let $u = x$ and $dv = \\cos x\\,dx$.\nThen $du = dx$ and $v = \\sin x$."
+              },
+              {
+                "title": "Apply formula",
+                "content": "$\\int x\\cos x\\,dx = x\\sin x - \\int \\sin x\\,dx$"
+              },
+              {
+                "title": "Complete",
+                "content": "$= x\\sin x + \\cos x + C$"
+              }
+            ],
+            "conclusion": "$\\int x\\cos x\\,dx = x\\sin x + \\cos x + C$"
+          }
+        },
+        {
+          "id": "6-38-2",
+          "type": "exercise",
+          "number": 2,
+          "statement": "Evaluate $\\int \\ln x\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Choose u and dv",
+                "content": "Let $u = \\ln x$ and $dv = dx$.\nThen $du = \\frac{1}{x}dx$ and $v = x$."
+              },
+              {
+                "title": "Apply formula",
+                "content": "$\\int \\ln x\\,dx = x\\ln x - \\int x \\cdot \\frac{1}{x}\\,dx = x\\ln x - \\int 1\\,dx$"
+              },
+              {
+                "title": "Complete",
+                "content": "$= x\\ln x - x + C = x(\\ln x - 1) + C$"
+              }
+            ],
+            "conclusion": "$\\int \\ln x\\,dx = x(\\ln x - 1) + C$"
+          }
+        },
+        {
+          "id": "6-38-3",
+          "type": "exercise",
+          "number": 3,
+          "statement": "Evaluate $\\int x^2 e^x\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "First application",
+                "content": "Let $u = x^2$, $dv = e^x dx$. Then $du = 2x\\,dx$, $v = e^x$.\n$\\int x^2 e^x\\,dx = x^2 e^x - 2\\int xe^x\\,dx$"
+              },
+              {
+                "title": "Second application",
+                "content": "From earlier: $\\int xe^x\\,dx = e^x(x - 1) + C$."
+              },
+              {
+                "title": "Combine",
+                "content": "$= x^2 e^x - 2e^x(x - 1) + C = e^x(x^2 - 2x + 2) + C$"
+              }
+            ],
+            "conclusion": "$\\int x^2 e^x\\,dx = e^x(x^2 - 2x + 2) + C$"
+          }
+        },
+        {
+          "id": "6-38-4",
+          "type": "exercise",
+          "number": 4,
+          "statement": "Evaluate $\\int e^x \\sin x\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "First application",
+                "content": "Let $u = e^x$, $dv = \\sin x\\,dx$. Then $du = e^x dx$, $v = -\\cos x$.\n$I = \\int e^x \\sin x\\,dx = -e^x \\cos x + \\int e^x \\cos x\\,dx$"
+              },
+              {
+                "title": "Second application",
+                "content": "For $\\int e^x \\cos x\\,dx$: $u = e^x$, $dv = \\cos x\\,dx$.\n$= e^x \\sin x - \\int e^x \\sin x\\,dx = e^x \\sin x - I$"
+              },
+              {
+                "title": "Solve for I",
+                "content": "$I = -e^x \\cos x + e^x \\sin x - I$\n$2I = e^x(\\sin x - \\cos x)$\n$I = \\frac{e^x(\\sin x - \\cos x)}{2}$"
+              }
+            ],
+            "conclusion": "$\\int e^x \\sin x\\,dx = \\frac{e^x(\\sin x - \\cos x)}{2} + C$"
+          }
+        },
+        {
+          "id": "6-38-5",
+          "type": "exercise",
+          "number": 5,
+          "statement": "Evaluate $\\int_0^1 \\arctan x\\,dx$.",
+          "solution": {
+            "steps": [
+              {
+                "title": "Choose u and dv",
+                "content": "Let $u = \\arctan x$ and $dv = dx$.\nThen $du = \\frac{1}{1+x^2}dx$ and $v = x$."
+              },
+              {
+                "title": "Apply formula",
+                "content": "$\\int_0^1 \\arctan x\\,dx = [x\\arctan x]_0^1 - \\int_0^1 \\frac{x}{1+x^2}\\,dx$"
+              },
+              {
+                "title": "Evaluate first term",
+                "content": "$[x\\arctan x]_0^1 = 1 \\cdot \\frac{\\pi}{4} - 0 = \\frac{\\pi}{4}$"
+              },
+              {
+                "title": "Evaluate second integral",
+                "content": "$\\int_0^1 \\frac{x}{1+x^2}\\,dx = \\frac{1}{2}[\\ln(1+x^2)]_0^1 = \\frac{1}{2}(\\ln 2 - 0) = \\frac{\\ln 2}{2}$"
+              },
+              {
+                "title": "Combine",
+                "content": "$= \\frac{\\pi}{4} - \\frac{\\ln 2}{2}$"
+              }
+            ],
+            "conclusion": "$\\int_0^1 \\arctan x\\,dx = \\frac{\\pi}{4} - \\frac{\\ln 2}{2}$"
+          }
+        }
+      ]
+    }
+  ]
+}

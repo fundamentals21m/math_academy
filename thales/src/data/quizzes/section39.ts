@@ -25,11 +25,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'What is an integer quaternion?',
     options: [
       'A quaternion with rational coefficients',
-      'A quaternion with integer coefficients',
       'A quaternion that represents an integer',
       'A quaternion with norm equal to 1',
+      'A quaternion with integer coefficients',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'An integer quaternion (also called a Lipschitz integer) is a quaternion whose coefficients a₀, a₁, a₂, a₃ are all integers.',
@@ -39,12 +39,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why does proving every prime is a norm of an integer quaternion prove Lagrange\'s theorem?',
     options: [
+      'Because N(ab) = N(a)N(b) and every n is a product of primes',
       'Because all numbers are prime',
       'Because quaternions contain all integers',
       'Because primes are the only numbers that matter',
-      'Because N(ab) = N(a)N(b) and every n is a product of primes',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Since the norm is multiplicative (N(ab) = N(a)N(b)) and every natural number is a product of primes, if each prime is a norm of an integer quaternion, then so is every natural number.',
@@ -69,12 +69,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How is 7 expressed as a sum of four squares?',
     options: [
-      '7 = 2² + 1² + 1² + 1²',
       '7 = 2² + 2² + 0² + 0²',
+      '7 = 2² + 1² + 1² + 1²',
       '7 = 3² + 0² + 0² + 0²',
       '7 = 1² + 1² + 1² + 1²',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       '7 = 4 + 1 + 1 + 1 = 2² + 1² + 1² + 1². Note that 7 requires all four squares since 7 ≡ 7 (mod 8) and cannot be written as a sum of three squares.',
@@ -99,12 +99,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What technique is used to show that the minimal multiplier m₀ equals 1?',
     options: [
-      'Descent argument',
       'Contradiction',
       'Induction',
-      'Direct computation'
+      'Direct computation',
+      'Descent argument',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The proof uses a descent argument: assuming m₀ > 1, we construct a smaller multiplier m₁ < m₀ that still works, contradicting the minimality of m₀. This forces m₀ = 1.',
@@ -115,11 +115,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'How is the prime 2 expressed as a sum of four squares?',
     options: [
       '2 = 2² + 0² + 0² + 0²',
+      '2 = 1² + 1² + 0² + 0²',
       '2 = 1² + 1² + 1² + 1²',
       '2 cannot be expressed as four squares',
-      '2 = 1² + 1² + 0² + 0²',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation:
       '2 = 1² + 1² + 0² + 0² = 1 + 1 + 0 + 0. This is the simplest case and shows that 2 is the norm of the integer quaternion 1 + i₁.',

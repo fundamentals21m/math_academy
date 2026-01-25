@@ -9,7 +9,7 @@ export const section16Questions: QuizQuestion[] = [
       'An exterior angle equals the sum of the non-adjacent interior angles',
       'Exterior angles sum to 360°',
       'An exterior angle is greater than either non-adjacent interior angle',
-      'Exterior angles are supplementary to interior angles'
+      'Exterior angles are supplementary to interior angles',
     ],
     correctIndex: 2,
     difficulty: 'medium',

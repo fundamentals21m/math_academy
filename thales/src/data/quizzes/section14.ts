@@ -27,11 +27,11 @@ export const section14Questions: QuizQuestion[] = [
       'What is the difference between an algebraic number and a transcendental number?',
     options: [
       'Algebraic numbers are irrational; transcendental numbers are rational',
-      'Algebraic numbers are roots of polynomials with rational coefficients; transcendental numbers are not',
       'Algebraic numbers can be written as fractions; transcendental numbers cannot',
+      'Algebraic numbers are roots of polynomials with rational coefficients; transcendental numbers are not',
       'Algebraic numbers are complex; transcendental numbers are real',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'An algebraic number is a root of some polynomial equation with rational (or equivalently, integer) coefficients. A transcendental number is not a root of any such polynomial. Examples: √2 is algebraic (root of x²-2=0), but π and e are transcendental.',
@@ -43,11 +43,11 @@ export const section14Questions: QuizQuestion[] = [
       'According to the Rational Root Lemma, if p/q (in lowest terms) is a rational root of a polynomial with integer coefficients, what must be true?',
     options: [
       'p must divide the leading coefficient and q must divide the constant term',
-      'Both p and q must be prime numbers',
       'p must divide the constant term and q must divide the leading coefficient',
-      'p + q must equal the degree of the polynomial'
+      'Both p and q must be prime numbers',
+      'p + q must equal the degree of the polynomial',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'The Rational Root Lemma states that if p/q is a rational root (in lowest terms) of aₙxⁿ + ... + a₁x + a₀ = 0, then p divides a₀ (the constant term) and q divides aₙ (the leading coefficient).',
@@ -58,12 +58,12 @@ export const section14Questions: QuizQuestion[] = [
     question:
       'Using the Rational Root Lemma, why does x³ - 2 = 0 have no rational solutions?',
     options: [
-      'Because the only possible rational roots are ±1 and ±2, and none of them work',
       'Because 2 is prime',
       'Because the coefficient of x² is zero',
+      'Because the only possible rational roots are ±1 and ±2, and none of them work',
       'Because the equation has degree 3',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation:
       'By the Rational Root Lemma, any rational root p/q must have p dividing 2 and q dividing 1. So the only possibilities are ±1, ±2. Testing: 1³-2=-1, (-1)³-2=-3, 2³-2=6, (-2)³-2=-10. None equal zero, so ∛2 is irrational.',
@@ -74,12 +74,12 @@ export const section14Questions: QuizQuestion[] = [
     question:
       'In Wantzel\'s proof, what is the field F[√c] when F is a field and c is in F?',
     options: [
+      'All numbers of the form a + b√c where a, b are in F',
       'All square roots of numbers in F',
       'All rational multiples of √c',
       'The intersection of F with the real numbers',
-      'All numbers of the form a + b√c where a, b are in F',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation:
       'F[√c] is the field extension consisting of all numbers of the form a + b√c where a and b are elements of F. This is itself a field — closed under addition, subtraction, multiplication, and division.',
@@ -122,12 +122,12 @@ export const section14Questions: QuizQuestion[] = [
     question:
       'Which of the following is a Fermat prime?',
     options: [
+      '257 (since 257 = 2⁸ + 1 = 2^(2³) + 1)',
       '7 (since 7 = 2³ - 1)',
       '31 (since 31 = 2⁵ - 1)',
-      '257 (since 257 = 2⁸ + 1 = 2^(2³) + 1)',
       '127 (since 127 = 2⁷ - 1)',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'A Fermat prime has the form 2^(2^k) + 1. For k=3: 2^(2³) + 1 = 2⁸ + 1 = 257, which is prime. The known Fermat primes are 3, 5, 17, 257, and 65537. The numbers 7, 31, 127 are Mersenne primes (of form 2ⁿ - 1), not Fermat primes.',
@@ -138,12 +138,12 @@ export const section14Questions: QuizQuestion[] = [
     question:
       'Which mathematician first proved that doubling the cube and trisecting an arbitrary angle are impossible with ruler and compass?',
     options: [
-      'Wantzel in 1837',
       'Gauss in 1796',
       'Lindemann in 1882',
-      'Euclid around 300 BC'
+      'Euclid around 300 BC',
+      'Wantzel in 1837',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation:
       'Pierre Wantzel published the first rigorous proof in 1837 that doubling the cube and trisecting an arbitrary angle are impossible with ruler and compass. The proof shows these problems require cube roots, which cannot be obtained through any sequence of square root extensions.',

@@ -38,8 +38,12 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'A scalar',
       'A matrix',
-      'The vector $(\\frac{\\partial f}{\\partial x_1}, \\ldots, \\frac{\\partial f}{\\partial x_n})$',
-      'The Laplacian'
+      'The Laplacian',
+      'The vector $(\\frac{\\partial f}{\\partial x_1}, \\ldots, \\frac{\\partial f}{\\partial x_n})
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The gradient is the vector of partial derivatives.',
+  },
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -50,10 +54,26 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The directional derivative of $f$ at $x_0$ in direction $v$ is:',
     options: [
-      '$\\nabla f \\cdot v$ only when $\\|v\\| = 1$',
-      '$f(v)$',
-      '$\\|\\nabla f\\|$',
-      '$\\lim_{t \\to 0} \\frac{f(x_0 + tv) - f(x_0)}{t}$'
+      '$\\lim_{t \\to 0} \\frac{f(x_0 + tv) - f(x_0)}{t}
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The directional derivative is the rate of change along direction $v$.',
+  },
+      '$\\nabla f \\cdot v$ only when $\\|v\\| = 1
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The directional derivative is the rate of change along direction $v$.',
+  },
+      '$f(v)
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The directional derivative is the rate of change along direction $v$.',
+  },
+      '$\\|\\nabla f\\|
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The directional derivative is the rate of change along direction $v$.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',

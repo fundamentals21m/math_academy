@@ -7,10 +7,30 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Fermat\'s Last Theorem states that the equation $x^n + y^n = z^n$ has no positive integer solutions for:',
     options: [
-      '$n > 2$',
-      '$n > 1$',
-      '$n = 2$',
-      'All $n$',
+      '$n > 1
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation:
+      'Fermat\'s Last Theorem applies to exponents greater than 2. For $n = 2$, there are infinitely many solutions called Pythagorean triples (like $3^2 + 4^2 = 5^2$). Fermat claimed there are no solutions for any $n > 2$.',
+  },
+      '$n > 2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Fermat\'s Last Theorem applies to exponents greater than 2. For $n = 2$, there are infinitely many solutions called Pythagorean triples (like $3^2 + 4^2 = 5^2$). Fermat claimed there are no solutions for any $n > 2$.',
+  },
+      '$n = 2
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Fermat\'s Last Theorem applies to exponents greater than 2. For $n = 2$, there are infinitely many solutions called Pythagorean triples (like $3^2 + 4^2 = 5^2$). Fermat claimed there are no solutions for any $n > 2$.',
+  },
+      'All $n
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation:
+      'Fermat\'s Last Theorem applies to exponents greater than 2. For $n = 2$, there are infinitely many solutions called Pythagorean triples (like $3^2 + 4^2 = 5^2$). Fermat claimed there are no solutions for any $n > 2$.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -23,11 +43,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'Who finally proved Fermat\'s Last Theorem?',
     options: [
       'Pierre de Fermat (1637)',
-      'Andrew Wiles (1995)',
       'Leonhard Euler (1770)',
-      'Carl Friedrich Gauss (1801)'
+      'Andrew Wiles (1995)',
+      'Carl Friedrich Gauss (1801)',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation:
       'Andrew Wiles announced his proof in 1993 and published the corrected version (with Richard Taylor) in 1995, after 358 years of effort by mathematicians worldwide. The proof was over 100 pages of deep modern mathematics.',
@@ -38,10 +58,15 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Fermat himself proved his theorem for which case?',
     options: [
-      'All prime $n$',
+      'All prime $n
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation:
+      'Fermat proved the case $n = 4$ using his method of infinite descent: he showed that if a solution existed, a smaller one would too, leading to an impossible infinite regression. This is the only case Fermat is known to have actually proved.',
+  },
       '$n = 3$ using complex numbers',
+      'He proved no cases',
       '$n = 4$ using infinite descent',
-      'He proved no cases'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -53,12 +78,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Ernst Kummer\'s work on FLT led him to invent:',
     options: [
+      'Ideal numbers (to restore unique factorization)',
       'Calculus',
       'Complex numbers',
       'Modular arithmetic',
-      'Ideal numbers (to restore unique factorization)'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation:
       'Kummer discovered that unique factorization fails in certain number rings needed for FLT. He invented "ideal numbers" (later formalized as ideals by Dedekind) to restore unique factorization at a higher level, founding algebraic number theory.',
@@ -69,12 +94,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Wiles\'s proof of FLT relied on proving a special case of:',
     options: [
-      'The Taniyama-Shimura-Weil (modularity) conjecture',
       'The Riemann Hypothesis',
-      'Goldbach\'s Conjecture',
+      'Goldbach\\\'s Conjecture',
+      'The Taniyama-Shimura-Weil (modularity) conjecture',
       'The Four Color Theorem',
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation:
       'Wiles proved that semistable elliptic curves over $\\mathbb{Q}$ are modular. Ken Ribet had shown that a counterexample to FLT would produce a non-modular elliptic curve, so Wiles\'s modularity result implies FLT.',
@@ -85,9 +110,9 @@ export const section43Questions: QuizQuestion[] = [
     question: 'Frey\'s key insight was that a counterexample $a^p + b^p = c^p$ would produce:',
     options: [
       'A new prime number',
-      'An elliptic curve that couldn\'t be modular',
+      'An elliptic curve that couldn\\\'t be modular',
       'A contradiction in calculus',
-      'An infinite sequence of solutions'
+      'An infinite sequence of solutions',
     ],
     correctIndex: 1,
     difficulty: 'hard',

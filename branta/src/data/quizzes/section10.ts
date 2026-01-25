@@ -7,11 +7,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What HTTP method is used to verify a payment with Branta?',
     options: [
       'POST',
+      'GET',
       'PUT',
       'PATCH',
-      'GET',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'GET /v1/payments/{payment_string} is used to verify and retrieve information about a registered payment.',
   },
@@ -57,11 +57,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'Why should Lightning invoices be URL-encoded when used in the GET request path?',
     options: [
       'To compress the data',
-      'They may contain special characters that break the URL',
       'For additional security',
-      'Lightning invoices don\'t need encoding'
+      'Lightning invoices don\\\'t need encoding',
+      'They may contain special characters that break the URL',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Lightning invoices often contain special characters that need to be URL-encoded to be safely included in the request path.',
   },

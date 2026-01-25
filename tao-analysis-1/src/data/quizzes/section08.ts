@@ -66,10 +66,26 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For any function $f: A \\to B$ and subsets $S, T \\subseteq B$, which equality always holds?',
     options: [
-      '$f^{-1}(S \\cup T) = f^{-1}(S) \\cup f^{-1}(T)$',
-      '$f(S \\cup T) = f(S) \\cap f(T)$',
-      '$f^{-1}(S) = f(S)$',
-      '$f^{-1}(S \\cap T) = f^{-1}(S) \\cup f^{-1}(T)$'
+      '$f(S \\cup T) = f(S) \\cap f(T)
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'Inverse images preserve unions: $f^{-1}(S \\cup T) = f^{-1}(S) \\cup f^{-1}(T)$. They also preserve intersections, complements, and set differences.',
+  },
+      '$f^{-1}(S) = f(S)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Inverse images preserve unions: $f^{-1}(S \\cup T) = f^{-1}(S) \\cup f^{-1}(T)$. They also preserve intersections, complements, and set differences.',
+  },
+      '$f^{-1}(S \\cap T) = f^{-1}(S) \\cup f^{-1}(T)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Inverse images preserve unions: $f^{-1}(S \\cup T) = f^{-1}(S) \\cup f^{-1}(T)$. They also preserve intersections, complements, and set differences.',
+  },
+      '$f^{-1}(S \\cup T) = f^{-1}(S) \\cup f^{-1}(T)
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'Inverse images preserve unions: $f^{-1}(S \\cup T) = f^{-1}(S) \\cup f^{-1}(T)$. They also preserve intersections, complements, and set differences.',
+  },
     ],
     correctIndex: 0,
     difficulty: 'hard',

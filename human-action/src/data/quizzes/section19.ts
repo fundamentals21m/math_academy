@@ -7,11 +7,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'According to Mises, what is the fundamental cause of interest?',
     options: [
       'The productivity of capital',
-      'The exploitation of workers by capitalists',
       'Time preference—the preference for present goods over future goods',
-      'Government monetary policy'
+      'The exploitation of workers by capitalists',
+      'Government monetary policy',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Interest arises from the universal human preference for present goods over future goods (time preference). This is the only satisfactory explanation—interest would exist even in a world of perfect certainty and no exploitation.'
   },
@@ -21,11 +21,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'What is "originary interest"?',
     options: [
       'The interest rate set by the central bank',
-      'The pure time-preference component of interest, abstracted from risk and uncertainty',
       'The first interest payment on a loan',
+      'The pure time-preference component of interest, abstracted from risk and uncertainty',
       'The historical origin of interest in ancient economies',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Originary interest is the pure expression of time preference—the discount applied to future goods compared to present goods, abstracted from all other considerations like risk, uncertainty, and expected inflation.'
   },
@@ -34,12 +34,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Can originary interest be zero or negative?',
     options: [
-      'No, it is always positive because time preference is an essential feature of action',
       'Yes, in deflationary conditions',
       'Yes, with sufficient government intervention',
-      'Yes, when savings exceed investment'
+      'Yes, when savings exceed investment',
+      'No, it is always positive because time preference is an essential feature of action',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Originary interest cannot be zero or negative. A zero or negative rate would mean people value future goods as much as or more than present goods, contradicting the very nature of action. If people didn\'t prefer earlier satisfaction, they would never begin to act.'
   },
@@ -48,7 +48,7 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What components does the gross market rate of interest include beyond originary interest?',
     options: [
-      'Only the central bank\\'s policy rate',
+      'Only the central bank\\\\'s policy rate',
       'Only the cost of administering loans',
       'Only compensation for expected inflation',
       'Risk premium, entrepreneurial component, and price (inflation) premium',
@@ -62,12 +62,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does interest differ from entrepreneurial profit?',
     options: [
+      'Interest arises from time preference and exists with certainty; profit arises from uncertainty and foresight',
       'There is no difference; they are synonyms',
       'Interest is earned by workers; profit by capitalists',
       'Interest is always positive; profit is always negative',
-      'Interest arises from time preference and exists with certainty; profit arises from uncertainty and foresight',
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Interest arises from time preference and would exist even in a world of perfect foresight—it is always positive. Entrepreneurial profit arises from uncertainty and the ability to anticipate future conditions better than others—it can be positive (profit) or negative (loss).'
   },

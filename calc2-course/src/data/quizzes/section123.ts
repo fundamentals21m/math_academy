@@ -6,10 +6,26 @@ export const section123Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The area of a plane region $S$ can be computed using the double integral:',
     options: [
-      '$\\iint_S f(x,y)\\,dx\\,dy$',
-      '$\\iint_S (x + y)\\,dx\\,dy$',
-      '$\\iint_S xy\\,dx\\,dy$',
-      '$\\iint_S dx\\,dy$'
+      '$\\iint_S dx\\,dy
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The area of a region $S$ is given by $a(S) = \\iint_S dx\\,dy$. This is equivalent to integrating the constant function $f(x,y) = 1$ over the region.',
+  },
+      '$\\iint_S f(x,y)\\,dx\\,dy
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The area of a region $S$ is given by $a(S) = \\iint_S dx\\,dy$. This is equivalent to integrating the constant function $f(x,y) = 1$ over the region.',
+  },
+      '$\\iint_S (x + y)\\,dx\\,dy
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The area of a region $S$ is given by $a(S) = \\iint_S dx\\,dy$. This is equivalent to integrating the constant function $f(x,y) = 1$ over the region.',
+  },
+      '$\\iint_S xy\\,dx\\,dy
+    correctIndex: 3,
+    difficulty: 'easy',
+    explanation: 'The area of a region $S$ is given by $a(S) = \\iint_S dx\\,dy$. This is equivalent to integrating the constant function $f(x,y) = 1$ over the region.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'easy',

@@ -25,11 +25,11 @@ export const section36Questions: QuizQuestion[] = [
     question: 'Which of the following statements is equivalent to the Axiom of Choice?',
     options: [
       'Every continuous function is differentiable',
-      'Every bounded sequence converges',
       'Every vector space has a basis',
+      'Every bounded sequence converges',
       'Every open cover has a finite subcover',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The statement "every vector space has a basis" is equivalent to the Axiom of Choice. This is a deep result in set theory and linear algebra.',
   },
@@ -58,10 +58,10 @@ export const section36Questions: QuizQuestion[] = [
     options: [
       'It can be proved from the other axioms of ZF set theory',
       'It can be disproved from the other axioms of ZF set theory',
+      'It is independent of the other axioms of ZF set theory',
       'It contradicts the axiom of infinity',
-      'It is independent of the other axioms of ZF set theory'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'G\\"odel and Cohen showed that the Axiom of Choice is independent of ZF: it cannot be proved or disproved from the other axioms.',
   },
@@ -70,12 +70,12 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a finite collection of non-empty sets $\\{X_1, X_2, \\ldots, X_n\\}$, the existence of a choice function:',
     options: [
-      'Can be proved without the Axiom of Choice by induction',
       'Requires the Axiom of Choice',
       'Is impossible to establish',
-      'Depends on whether the sets are countable'
+      'Depends on whether the sets are countable',
+      'Can be proved without the Axiom of Choice by induction',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'For finitely many non-empty sets, we can prove the existence of a choice function by induction without needing the Axiom of Choice.',
   },

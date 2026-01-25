@@ -10,7 +10,7 @@ export const section10Quiz: QuizQuestion[] = [
       'Averaging responses of the K nearest neighbors',
       'Fitting a linear equation',
       'Using the maximum response value',
-      'Minimizing squared residuals globally'
+      'Minimizing squared residuals globally',
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -20,8 +20,13 @@ export const section10Quiz: QuizQuestion[] = [
     id: 's10-e02',
     type: 'multiple-choice',
     question: 'KNN is an example of which type of method?',
-    options: ['Parametric', 'Non-parametric', 'Bayesian', 'Regularized'],
-    correctIndex: 1,
+    options: [
+      'Parametric',
+      'Bayesian',
+      'Non-parametric',
+      'Regularized',
+    ],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'KNN makes no assumptions about the functional form of $f$ - it is non-parametric.',
   },
@@ -30,12 +35,12 @@ export const section10Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A small value of K in KNN (like K=1) typically results in:',
     options: [
-      'A smooth prediction function',
       'Low bias, high variance',
+      'A smooth prediction function',
       'High bias, low variance',
-      'Optimal predictions'
+      'Optimal predictions',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Small K = very flexible = can fit complex patterns (low bias) but is sensitive to noise (high variance).',
   },
@@ -54,10 +59,10 @@ export const section10Quiz: QuizQuestion[] = [
     options: [
       'The true relationship is highly non-linear',
       'We have very few predictors',
+      'We have unlimited data',
       'The true relationship is approximately linear',
-      'We have unlimited data'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'When the true relationship is linear (or close to it), linear regression\'s correct assumption gives it an advantage.',
   },
@@ -70,7 +75,7 @@ export const section10Quiz: QuizQuestion[] = [
       'A very flexible fit',
       'Low bias, high variance',
       'Perfect test predictions',
-      'High bias, low variance'
+      'High bias, low variance',
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -81,12 +86,12 @@ export const section10Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'With $p = 20$ predictors, KNN is likely to:',
     options: [
-      'Perform poorly due to the curse of dimensionality',
       'Outperform linear regression',
+      'Perform poorly due to the curse of dimensionality',
       'Be unaffected by the number of predictors',
-      'Require exactly 20 neighbors'
+      'Require exactly 20 neighbors',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'In high dimensions, neighbors are far away and not truly "similar," degrading KNN performance.',
   },
@@ -96,11 +101,11 @@ export const section10Quiz: QuizQuestion[] = [
     question: 'Why might linear regression outperform KNN even when the relationship is slightly non-linear?',
     options: [
       'Linear regression is always better',
-      'Linear regression\'s lower variance can offset its higher bias',
       'KNN cannot handle non-linearity',
-      'KNN requires normally distributed data'
+      'Linear regression\\\'s lower variance can offset its higher bias',
+      'KNN requires normally distributed data',
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The bias-variance tradeoff: a small increase in bias from assuming linearity may be offset by reduced variance.',
   },
@@ -109,12 +114,12 @@ export const section10Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'KNN is most appropriate when:',
     options: [
+      '$p$ is small and the relationship is non-linear',
       '$p$ is large and $n$ is small',
       'Interpretability is important',
-      '$p$ is small and the relationship is non-linear',
-      'The relationship is known to be linear'
+      'The relationship is known to be linear',
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'KNN works best with few predictors (avoids curse of dimensionality) and when flexibility is needed for non-linear patterns.',
   },
@@ -134,11 +139,11 @@ export const section10Quiz: QuizQuestion[] = [
     question: 'In the curse of dimensionality, as $p$ increases:',
     options: [
       'All points become equidistant from each other',
+      'The nearest neighbors become relatively farther away',
       'Linear regression fails completely',
       'KNN predictions become more accurate',
-      'The nearest neighbors become relatively farther away'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'In high dimensions, distances become less meaningful - even nearest neighbors are relatively far away.',
   },
@@ -147,12 +152,12 @@ export const section10Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Linear regression uses how many parameters regardless of sample size $n$?',
     options: [
-      '$p + 1$ parameters',
       '$p$ parameters',
       '$n$ parameters',
-      '$n \\times p$ parameters'
+      '$n \\times p$ parameters',
+      '$p + 1$ parameters',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Linear regression estimates $p$ slope coefficients plus one intercept = $p + 1$ parameters total.',
   },
@@ -164,7 +169,7 @@ export const section10Quiz: QuizQuestion[] = [
       'It requires large computer memory',
       'It stores training data and uses it directly for predictions',
       'It memorizes the test data',
-      'It has poor memory of past predictions'
+      'It has poor memory of past predictions',
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -178,7 +183,7 @@ export const section10Quiz: QuizQuestion[] = [
       'The relationship was linear',
       'The sample size was small',
       'The relationship was highly non-linear',
-      'There were many predictors'
+      'There were many predictors',
     ],
     correctIndex: 2,
     difficulty: 'hard',

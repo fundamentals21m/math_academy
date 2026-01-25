@@ -7,9 +7,17 @@ export const section49Questions: QuizQuestion[] = [
     question: 'If $f_n \\to f$ uniformly on $[a, b]$ and each $f_n \\in \\mathscr{R}$ on $[a, b]$, then:',
     options: [
       '$f$ may not be integrable',
-      '$f \\in \\mathscr{R}$ and $\\int_a^b f_n \\to \\int_a^b f$',
       '$\\int_a^b f_n$ may not converge',
-      '$f \\in \\mathscr{R}$ but $\\int_a^b f_n$ may not converge to $\\int_a^b f$'
+      '$f \\in \\mathscr{R}$ and $\\int_a^b f_n \\to \\int_a^b f
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Theorem 7.16: If $f_n \\in \\mathscr{R}(\\alpha)$, $f_n \\to f$ uniformly on $[a,b]$, and $\\alpha$ is monotonically increasing, then $f \\in \\mathscr{R}(\\alpha)$ and $\\lim \\int f_n \\, d\\alpha = \\int f \\, d\\alpha$.',
+  },
+      '$f \\in \\mathscr{R}$ but $\\int_a^b f_n$ may not converge to $\\int_a^b f
+    correctIndex: 1,
+    difficulty: 'medium',
+    explanation: 'Theorem 7.16: If $f_n \\in \\mathscr{R}(\\alpha)$, $f_n \\to f$ uniformly on $[a,b]$, and $\\alpha$ is monotonically increasing, then $f \\in \\mathscr{R}(\\alpha)$ and $\\lim \\int f_n \\, d\\alpha = \\int f \\, d\\alpha$.',
+  },
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -38,10 +46,18 @@ export const section49Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Consider $f_n(x) = n x(1-x^2)^n$ on $[0, 1]$. The pointwise limit is $f(x) = 0$. Then:',
     options: [
-      '$\\lim_{n \\to \\infty} \\int_0^1 f_n(x) \\, dx = 0$',
+      '$\\lim_{n \\to \\infty} \\int_0^1 f_n(x) \\, dx = 0
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'With $u = 1 - x^2$: $\\int_0^1 nx(1-x^2)^n dx = \\frac{n}{2}\\int_0^1 u^n du = \\frac{n}{2(n+1)} \\to \\frac{1}{2}$. But $f(x) = 0$ everywhere, so $\\int f = 0$. The convergence is NOT uniform (concentrated near $x = 0$).',
+  },
+      '$\\lim_{n \\to \\infty} \\int_0^1 f_n(x) \\, dx = \\frac{1}{2}
+    correctIndex: 3,
+    difficulty: 'hard',
+    explanation: 'With $u = 1 - x^2$: $\\int_0^1 nx(1-x^2)^n dx = \\frac{n}{2}\\int_0^1 u^n du = \\frac{n}{2(n+1)} \\to \\frac{1}{2}$. But $f(x) = 0$ everywhere, so $\\int f = 0$. The convergence is NOT uniform (concentrated near $x = 0$).',
+  },
       'Convergence is uniform',
       'The limit of integrals does not exist',
-      '$\\lim_{n \\to \\infty} \\int_0^1 f_n(x) \\, dx = \\frac{1}{2}$'
     ],
     correctIndex: 3,
     difficulty: 'hard',

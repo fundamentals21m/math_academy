@@ -9,12 +9,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is tan(θ + φ) in terms of tan θ and tan φ?',
     options: [
-      'tan θ + tan φ',
       '(tan θ + tan φ)/(1 - tan θ tan φ)',
+      'tan θ + tan φ',
       'tan θ tan φ',
-      '(tan θ - tan φ)/(1 + tan θ tan φ)'
+      '(tan θ - tan φ)/(1 + tan θ tan φ)',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation:
       'The tangent addition formula is tan(θ + φ) = (tan θ + tan φ)/(1 - tan θ tan φ), derived from the sine and cosine addition formulas.',
@@ -27,7 +27,7 @@ export const section40Questions: QuizQuestion[] = [
       'It involves square roots',
       'It only works for small angles',
       'It is purely rational—if s and t are rational, so is (s+t)/(1-st)',
-      'It requires complex numbers'
+      'It requires complex numbers',
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -56,11 +56,11 @@ export const section40Questions: QuizQuestion[] = [
     question: 'What problem does the rational addition formula solve?',
     options: [
       'Squaring the circle',
-      'Finding equally spaced rational points on a circle',
       'Trisecting any angle',
       'Computing π exactly',
+      'Finding equally spaced rational points on a circle',
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation:
       'The formula lets us generate equally spaced rational points on a circle arc, which is what the Babylonians were attempting with Plimpton 322.',
@@ -71,12 +71,12 @@ export const section40Questions: QuizQuestion[] = [
     question:
       'If Pythagorean triples can be "multiplied," what is the "square" of (3, 4, 5)?',
     options: [
-      '(-7, 24, 25)',
       '(6, 8, 10)',
+      '(-7, 24, 25)',
       '(9, 16, 25)',
       '(5, 12, 13)',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation:
       'Using complex multiplication: (3 + 4i)² = 9 + 24i - 16 = -7 + 24i, giving the triple (-7, 24, 25).',
@@ -104,11 +104,11 @@ export const section40Questions: QuizQuestion[] = [
       'How does the half-angle substitution t = tan(θ/2) relate to Diophantus?',
     options: [
       'It is unrelated',
+      'It gives the same parametrization of rational points on the circle',
       'It was discovered by Diophantus',
       'It contradicts his work',
-      'It gives the same parametrization of rational points on the circle',
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation:
       'The formulas cos θ = (1-t²)/(1+t²) and sin θ = 2t/(1+t²) are exactly Diophantus\'s parametrization of rational points on the unit circle.',

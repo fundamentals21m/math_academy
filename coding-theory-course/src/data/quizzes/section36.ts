@@ -55,9 +55,21 @@ export const section36Questions: QuizQuestion[] = [
     question: 'The automorphism group of the binary Golay code $\\mathcal{G}_{23}$ is:',
     options: [
       'The trivial group',
-      'The symmetric group $S_{23}$',
-      'The cyclic group $\\mathbb{Z}_{23}$',
-      'The Mathieu group $M_{23}$'
+      'The symmetric group $S_{23}
+    correctIndex: 2,
+    difficulty: 'medium',
+    explanation: 'The automorphism group of $\\mathcal{G}_{23}$ is the Mathieu group $M_{23}$, one of the sporadic simple groups. This is a remarkable connection between coding theory and group theory.',
+  },
+      'The Mathieu group $M_{23}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The automorphism group of $\\mathcal{G}_{23}$ is the Mathieu group $M_{23}$, one of the sporadic simple groups. This is a remarkable connection between coding theory and group theory.',
+  },
+      'The cyclic group $\\mathbb{Z}_{23}
+    correctIndex: 3,
+    difficulty: 'medium',
+    explanation: 'The automorphism group of $\\mathcal{G}_{23}$ is the Mathieu group $M_{23}$, one of the sporadic simple groups. This is a remarkable connection between coding theory and group theory.',
+  },
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -77,8 +89,12 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two codes $C_1$ and $C_2$ are called equivalent if:',
     options: [
-      'There exists a coordinate permutation mapping $C_1$ to $C_2$',
       'They have the same weight distribution',
+      'There exists a coordinate permutation mapping $C_1$ to $C_2
+    correctIndex: 1,
+    difficulty: 'easy',
+    explanation: 'For binary codes, equivalence means there is a permutation $\\pi \\in S_n$ such that $\\pi(C_1) = C_2$. Equivalent codes have the same error-correcting capability.',
+  },
       'They have the same length',
       'They have the same dimension',
     ],
@@ -91,10 +107,18 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The automorphism group of the $[7, 4, 3]$ Hamming code is:',
     options: [
-      'The symmetric group $S_7$',
       '$\\text{GL}_3(\\mathbb{F}_2) \\cong \\text{PSL}_2(7)$ of order 168',
-      'The cyclic group $\\mathbb{Z}_7$',
-      'The trivial group'
+      'The symmetric group $S_7
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The automorphism group of the $[7, 4, 3]$ Hamming code is $\\text{GL}_3(\\mathbb{F}_2)$, the general linear group of $3 \\times 3$ invertible matrices over $\\mathbb{F}_2$, which has order $168$.',
+  },
+      'The cyclic group $\\mathbb{Z}_7
+    correctIndex: 1,
+    difficulty: 'hard',
+    explanation: 'The automorphism group of the $[7, 4, 3]$ Hamming code is $\\text{GL}_3(\\mathbb{F}_2)$, the general linear group of $3 \\times 3$ invertible matrices over $\\mathbb{F}_2$, which has order $168$.',
+  },
+      'The trivial group',
     ],
     correctIndex: 1,
     difficulty: 'hard',
