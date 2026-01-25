@@ -48,3 +48,9 @@ secrets.txt
 # Working files
 calc_easy_pdfs/
 why_math_chunks/
+
+# Video files - too large for git
+*.mp4
+*.mov
+*.avi
+*.mkv
