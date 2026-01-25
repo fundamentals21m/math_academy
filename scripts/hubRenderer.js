@@ -9,12 +9,6 @@
  */
 import { SECTIONS as STATIC_SECTIONS, COURSES as STATIC_COURSES, getCoursesForSection as getStaticCoursesForSection } from './courses.js';
 
-function getYoutubeUrl(course) {
-  if (course.youtubePlaylistUrl) return course.youtubePlaylistUrl;
-  var sc = STATIC_COURSES.find(function(c) { return c.id === course.id; });
-  return sc ? sc.youtubePlaylistUrl : null;
-}
-
 /**
  * Escape HTML special characters to prevent XSS
  * @param {string} str
@@ -83,6 +77,29 @@ let DATA_SECTIONS = STATIC_SECTIONS;
 let DATA_COURSES = STATIC_COURSES;
 let dataSource = 'static'; // 'static' or 'firebase'
 
+/**
+ * Determine which environment to use based on hostname
+ * - localhost/127.0.0.1 or preview URLs = staging
+ * - Production domain = production
+ * @returns {'staging' | 'production'}
+ */
+export function getEnvironment() {
+  const hostname = window.location.hostname;
+
+  // Development/preview environments use staging
+  if (
+    hostname === 'localhost' ||
+    hostname === '127.0.0.1' ||
+    hostname.includes('preview') ||
+    hostname.includes('vercel.app') && !hostname.includes('mathacademy-cyan')
+  ) {
+    return 'staging';
+  }
+
+  // Production
+  return 'production';
+}
+
 // Progress data - loaded from localStorage or Firebase
 let progressData = null;
 const PROGRESS_STORAGE_KEY = 'magic-internet-math-progress';
@@ -97,8 +114,9 @@ const DEFAULT_EXPANDED = ['featured'];
 /**
  * Load course configuration from Firebase
  * Falls back to static data if Firebase fails
+ * @param {string} [forceEnvironment] - Optional environment override ('staging' or 'production')
  */
-async function loadFromFirebase() {
+async function loadFromFirebase(forceEnvironment) {
   try {
     // Check if Firebase is available
     if (!window.callFunction) {
@@ -106,7 +124,11 @@ async function loadFromFirebase() {
       return false;
     }
 
-    const config = await window.callFunction('getCourseConfig');
+    // Determine environment to use
+    const environment = forceEnvironment || getEnvironment();
+    console.log(`Loading course config from Firebase (${environment} environment)`);
+
+    const config = await window.callFunction('getCourseConfig', { environment });
     
     if (config && config.sections && config.courses) {
       // Map Firebase data to match static data structure
@@ -358,12 +380,8 @@ function renderCourseCard(course) {
     ? `<div class="card-progress-bar" style="--progress: ${progress}%; --gradient: ${safeGradient}"></div>`
     : '';
 
-  var ytUrl = getYoutubeUrl(course);
-  var youtubeHtml = ytUrl ? '<span class="youtube-playlist-link" onclick="event.preventDefault();event.stopPropagation();window.open(\'' + escapeHtml(ytUrl) + '\',\'_blank\')"><svg class="youtube-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>' : '';
-
   return `
     <a href="${escapeHtml(course.url)}" ${targetAttr} class="course-card ${progress > 0 ? 'has-progress' : ''}" data-course-id="${escapeHtml(course.id)}">
-      ${youtubeHtml}
       <div class="course-icon">${escapeHtml(course.icon || '')}</div>
       <h3 class="course-title">${escapeHtml(course.title)}</h3>
       <p class="course-description">${escapeHtml(course.description)}</p>
@@ -561,9 +579,10 @@ export function getDataSource() {
 
 /**
  * Force reload data from Firebase
+ * @param {string} [forceEnvironment] - Optional environment override ('staging' or 'production')
  */
-export async function reloadFromFirebase() {
-  const loaded = await loadFromFirebase();
+export async function reloadFromFirebase(forceEnvironment) {
+  const loaded = await loadFromFirebase(forceEnvironment);
   if (loaded) {
     // Re-render if already mounted
     const container = document.getElementById('courses-container');

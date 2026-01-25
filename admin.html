@@ -137,6 +137,48 @@
           </div>
         </div>
       </div>
+
+      <!-- Deployment Panel -->
+      <div class="panel deployment-panel">
+        <div class="panel-header">
+          <h2>Deployment</h2>
+          <span class="environment-badge" id="env-badge">Staging</span>
+        </div>
+        <div class="panel-content">
+          <div id="deployment-status" class="deployment-status">
+            <div class="deployment-loading">
+              <div class="loading-spinner-small"></div>
+              <span>Loading deployment status...</span>
+            </div>
+          </div>
+          <div class="deployment-actions">
+            <div class="deployment-action-group">
+              <h4>Firebase Data</h4>
+              <p class="deployment-hint">Promote staging course configuration to production</p>
+              <div class="deployment-buttons">
+                <button class="btn-primary" id="promote-firebase-btn" disabled>
+                  Promote to Production
+                </button>
+                <button class="btn-secondary" id="revert-firebase-btn" disabled>
+                  Revert Last Change
+                </button>
+              </div>
+            </div>
+            <div class="deployment-action-group">
+              <h4>Vercel Deployment</h4>
+              <p class="deployment-hint">Promote preview deployment to production (optional)</p>
+              <div class="deployment-buttons">
+                <button class="btn-secondary" id="promote-vercel-btn" disabled>
+                  Promote Vercel Preview
+                </button>
+                <button class="btn-secondary" id="revert-vercel-btn" disabled>
+                  Revert Vercel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Unsaved Changes Banner -->
@@ -247,6 +289,44 @@
       <div class="modal-footer">
         <button class="btn-secondary" id="cancel-course-btn">Cancel</button>
         <button class="btn-primary" id="save-course-btn">Save Course</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deployment Confirm Modal -->
+  <div id="deployment-modal" class="modal-overlay" style="display: none;">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="deployment-modal-title">Confirm Deployment</h3>
+        <button class="modal-close" id="close-deployment-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="deployment-modal-message">Are you sure you want to proceed?</p>
+        <div id="deployment-modal-details" class="deployment-modal-details"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="cancel-deployment-btn">Cancel</button>
+        <button class="btn-primary" id="confirm-deployment-btn">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Revert Backup Modal -->
+  <div id="revert-modal" class="modal-overlay" style="display: none;">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Revert to Backup</h3>
+        <button class="modal-close" id="close-revert-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Select a backup to revert to:</p>
+        <div id="backup-list" class="backup-list">
+          <!-- Rendered by adminRenderer.js -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="cancel-revert-btn">Cancel</button>
+        <button class="btn-danger" id="confirm-revert-btn" disabled>Revert Production</button>
       </div>
     </div>
   </div>

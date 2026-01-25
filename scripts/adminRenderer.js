@@ -17,6 +17,8 @@ let state = {
   draggedType: null, // 'section' or 'course'
   editingCategoryId: null, // For edit vs add mode
   editingCourseId: null, // For course editing
+  deploymentStatus: null, // Deployment status from Firebase
+  selectedBackupId: null, // Selected backup for revert
 };
 
 // Wait for Firebase Auth to be ready and get current user
@@ -143,19 +145,23 @@ async function checkAdminAndLoad(npub) {
  */
 async function loadData() {
   showLoading('Loading course configuration...');
-  
+
   try {
-    const config = await window.callFunction('getCourseConfig');
-    
+    // Always load from staging environment for admin
+    const config = await window.callFunction('getCourseConfig', { environment: 'staging' });
+
     state.sections = config.sections || [];
     state.courses = config.courses || [];
     state.admins = config.admins || [];
-    
+
     // Store original state for change detection
     state.originalSections = JSON.parse(JSON.stringify(state.sections));
     state.originalCourses = JSON.parse(JSON.stringify(state.courses));
-    
+
     renderAll();
+
+    // Load deployment status in background
+    loadDeploymentStatus();
   } catch (error) {
     console.error('Error loading data:', error);
     showToast('Failed to load configuration', 'error');
@@ -432,6 +438,21 @@ function setupEventListeners() {
   // Save/discard buttons
   document.getElementById('save-changes-btn')?.addEventListener('click', saveAllChanges);
   document.getElementById('discard-changes-btn')?.addEventListener('click', discardChanges);
+
+  // Deployment buttons
+  document.getElementById('promote-firebase-btn')?.addEventListener('click', showPromoteModal);
+  document.getElementById('revert-firebase-btn')?.addEventListener('click', showRevertModal);
+  document.getElementById('promote-vercel-btn')?.addEventListener('click', handlePromoteVercel);
+  document.getElementById('revert-vercel-btn')?.addEventListener('click', handleRevertVercel);
+
+  // Deployment modal
+  document.getElementById('close-deployment-modal')?.addEventListener('click', closeDeploymentModal);
+  document.getElementById('cancel-deployment-btn')?.addEventListener('click', closeDeploymentModal);
+
+  // Revert modal
+  document.getElementById('close-revert-modal')?.addEventListener('click', closeRevertModal);
+  document.getElementById('cancel-revert-btn')?.addEventListener('click', closeRevertModal);
+  document.getElementById('confirm-revert-btn')?.addEventListener('click', handleRevertFirebase);
   
   // Close modals on overlay click
   document.querySelectorAll('.modal-overlay').forEach(overlay => {
@@ -1028,6 +1049,299 @@ async function saveCourseDetails() {
     console.error('Error updating course:', error);
     showToast('Failed to update course: ' + error.message, 'error');
   }
+}
+
+// ======================
+// Deployment Operations
+// ======================
+
+/**
+ * Load deployment status
+ */
+async function loadDeploymentStatus() {
+  try {
+    const status = await window.callFunction('getDeploymentStatus');
+    state.deploymentStatus = status;
+    renderDeploymentStatus();
+  } catch (error) {
+    console.error('Error loading deployment status:', error);
+    // Show error state in deployment panel
+    const container = document.getElementById('deployment-status');
+    if (container) {
+      container.innerHTML = `
+        <div class="deployment-loading" style="color: #ef4444;">
+          <span>Failed to load deployment status</span>
+        </div>
+      `;
+    }
+  }
+}
+
+/**
+ * Render deployment status
+ */
+function renderDeploymentStatus() {
+  const container = document.getElementById('deployment-status');
+  if (!container || !state.deploymentStatus) return;
+
+  const status = state.deploymentStatus;
+
+  // Format timestamps
+  const formatTime = (timestamp) => {
+    if (!timestamp) return 'Never';
+    const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp._seconds * 1000);
+    return date.toLocaleString();
+  };
+
+  const formatNpub = (npub) => {
+    if (!npub) return 'Unknown';
+    return `${npub.slice(0, 8)}...${npub.slice(-4)}`;
+  };
+
+  const syncStatus = status.hasChanges
+    ? `<div class="deployment-sync-status pending">
+         <span class="deployment-sync-icon">&#9888;</span>
+         <span>Staging has unpromoted changes</span>
+       </div>`
+    : `<div class="deployment-sync-status synced">
+         <span class="deployment-sync-icon">&#10003;</span>
+         <span>Staging and production are in sync</span>
+       </div>`;
+
+  container.innerHTML = `
+    <div class="deployment-info">
+      <div class="deployment-env">
+        <div class="deployment-env-label">Staging</div>
+        <div class="deployment-env-time">${formatTime(status.stagingLastUpdated)}</div>
+        <div class="deployment-env-by">by ${formatNpub(status.stagingUpdatedBy)}</div>
+      </div>
+      <div class="deployment-env">
+        <div class="deployment-env-label">Production</div>
+        <div class="deployment-env-time">${formatTime(status.productionLastUpdated)}</div>
+        <div class="deployment-env-by">by ${formatNpub(status.productionUpdatedBy)}</div>
+      </div>
+      ${syncStatus}
+    </div>
+  `;
+
+  // Enable/disable buttons based on status
+  const promoteBtn = document.getElementById('promote-firebase-btn');
+  const revertBtn = document.getElementById('revert-firebase-btn');
+  const promoteVercelBtn = document.getElementById('promote-vercel-btn');
+  const revertVercelBtn = document.getElementById('revert-vercel-btn');
+
+  if (promoteBtn) {
+    promoteBtn.disabled = !status.hasChanges;
+  }
+  if (revertBtn) {
+    revertBtn.disabled = !status.backups || status.backups.length === 0;
+  }
+  // Vercel buttons are always enabled if we made it this far
+  if (promoteVercelBtn) {
+    promoteVercelBtn.disabled = false;
+  }
+  if (revertVercelBtn) {
+    revertVercelBtn.disabled = false;
+  }
+}
+
+/**
+ * Show promote confirmation modal
+ */
+function showPromoteModal() {
+  const modal = document.getElementById('deployment-modal');
+  const title = document.getElementById('deployment-modal-title');
+  const message = document.getElementById('deployment-modal-message');
+  const details = document.getElementById('deployment-modal-details');
+  const confirmBtn = document.getElementById('confirm-deployment-btn');
+
+  title.textContent = 'Promote to Production';
+  message.textContent = 'This will copy all staging changes to production. A backup of the current production will be created automatically.';
+  details.innerHTML = `
+    <p><strong>Action:</strong> Copy staging to production</p>
+    <p><strong>Backup:</strong> Current production will be saved</p>
+    <p><strong>Impact:</strong> Changes will be live immediately</p>
+  `;
+
+  confirmBtn.onclick = handlePromoteFirebase;
+  confirmBtn.className = 'btn-primary';
+  confirmBtn.textContent = 'Promote';
+
+  modal.style.display = 'flex';
+}
+
+/**
+ * Handle promote to production
+ */
+async function handlePromoteFirebase() {
+  closeDeploymentModal();
+  showLoading('Promoting to production...');
+
+  try {
+    const result = await window.callFunction('promoteToProduction');
+
+    if (result.success) {
+      showToast('Successfully promoted to production', 'success');
+      await loadDeploymentStatus();
+    } else {
+      showToast('Failed to promote to production', 'error');
+    }
+  } catch (error) {
+    console.error('Error promoting to production:', error);
+    showToast('Error: ' + error.message, 'error');
+  }
+
+  showAdminContent();
+}
+
+/**
+ * Show revert modal with backup selection
+ */
+function showRevertModal() {
+  const modal = document.getElementById('revert-modal');
+  const backupList = document.getElementById('backup-list');
+  const confirmBtn = document.getElementById('confirm-revert-btn');
+
+  state.selectedBackupId = null;
+  confirmBtn.disabled = true;
+
+  if (!state.deploymentStatus?.backups || state.deploymentStatus.backups.length === 0) {
+    backupList.innerHTML = '<div class="no-backups">No backups available</div>';
+  } else {
+    backupList.innerHTML = state.deploymentStatus.backups.map((backup, index) => {
+      const date = backup.timestamp.toDate ? backup.timestamp.toDate() : new Date(backup.timestamp._seconds * 1000);
+      const timeAgo = formatTimeAgo(date);
+      const npubShort = backup.createdBy ? `${backup.createdBy.slice(0, 8)}...` : 'Unknown';
+
+      return `
+        <div class="backup-item" data-backup-id="${escapeHtml(backup.id)}">
+          <input type="radio" name="backup" value="${escapeHtml(backup.id)}">
+          <div class="backup-item-info">
+            <div class="backup-item-time">${date.toLocaleString()} (${timeAgo})</div>
+            <div class="backup-item-by">Created by ${npubShort}</div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    // Add click handlers
+    backupList.querySelectorAll('.backup-item').forEach(item => {
+      item.addEventListener('click', () => {
+        // Deselect all
+        backupList.querySelectorAll('.backup-item').forEach(i => i.classList.remove('selected'));
+        backupList.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+
+        // Select this one
+        item.classList.add('selected');
+        item.querySelector('input[type="radio"]').checked = true;
+        state.selectedBackupId = item.dataset.backupId;
+        confirmBtn.disabled = false;
+      });
+    });
+  }
+
+  modal.style.display = 'flex';
+}
+
+/**
+ * Handle revert production
+ */
+async function handleRevertFirebase() {
+  if (!state.selectedBackupId) {
+    showToast('Please select a backup to revert to', 'error');
+    return;
+  }
+
+  closeRevertModal();
+  showLoading('Reverting production...');
+
+  try {
+    const result = await window.callFunction('revertProduction', {
+      backupId: state.selectedBackupId
+    });
+
+    if (result.success) {
+      showToast(`Successfully reverted to backup: ${result.revertedTo}`, 'success');
+      await loadDeploymentStatus();
+    } else {
+      showToast('Failed to revert production', 'error');
+    }
+  } catch (error) {
+    console.error('Error reverting production:', error);
+    showToast('Error: ' + error.message, 'error');
+  }
+
+  showAdminContent();
+}
+
+/**
+ * Handle Vercel promote
+ */
+async function handlePromoteVercel() {
+  showLoading('Promoting Vercel deployment...');
+
+  try {
+    const result = await window.callFunction('promoteVercelDeployment');
+
+    if (result.success) {
+      showToast(`Vercel deployment promoted: ${result.deploymentUrl}`, 'success');
+    } else {
+      showToast(result.message || 'Failed to promote Vercel deployment', 'error');
+    }
+  } catch (error) {
+    console.error('Error promoting Vercel:', error);
+    showToast('Error: ' + error.message, 'error');
+  }
+
+  showAdminContent();
+}
+
+/**
+ * Handle Vercel revert
+ */
+async function handleRevertVercel() {
+  showLoading('Reverting Vercel deployment...');
+
+  try {
+    const result = await window.callFunction('revertVercelDeployment');
+
+    if (result.success) {
+      showToast(`Vercel deployment reverted: ${result.deploymentUrl}`, 'success');
+    } else {
+      showToast(result.message || 'Failed to revert Vercel deployment', 'error');
+    }
+  } catch (error) {
+    console.error('Error reverting Vercel:', error);
+    showToast('Error: ' + error.message, 'error');
+  }
+
+  showAdminContent();
+}
+
+function closeDeploymentModal() {
+  document.getElementById('deployment-modal').style.display = 'none';
+}
+
+function closeRevertModal() {
+  document.getElementById('revert-modal').style.display = 'none';
+  state.selectedBackupId = null;
+}
+
+/**
+ * Format time ago (e.g., "2 hours ago")
+ */
+function formatTimeAgo(date) {
+  const now = new Date();
+  const diffMs = now - date;
+  const diffMins = Math.floor(diffMs / (1000 * 60));
+  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (diffMins < 1) return 'just now';
+  if (diffMins < 60) return `${diffMins} min ago`;
+  if (diffHours < 24) return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
+  if (diffDays < 7) return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+  return date.toLocaleDateString();
 }
 
 // =================
