@@ -12,6 +12,65 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  hub-critical-files:
+    name: Hub Critical Files Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check .vercelignore doesn't exclude hub files
+        run: |
+          echo "Checking .vercelignore for hub-breaking exclusions..."
+
+          # These patterns in .vercelignore would break the hub
+          FORBIDDEN_PATTERNS=("^scripts$" "^styles$" "^index.html$" "^admin.html$")
+
+          ERRORS=0
+          for pattern in "${FORBIDDEN_PATTERNS[@]}"; do
+            if grep -qE "$pattern" .vercelignore 2>/dev/null; then
+              echo "❌ FATAL: .vercelignore excludes '$pattern' - this breaks the hub!"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+
+          if [ $ERRORS -gt 0 ]; then
+            echo ""
+            echo "The hub requires these directories/files to be deployed:"
+            echo "  - scripts/ (courses.js, hubRenderer.js, nostrAuth.js)"
+            echo "  - styles/ (main.css, hub.css)"
+            echo "  - index.html"
+            echo "  - admin.html"
+            exit 1
+          fi
+
+          echo "✅ .vercelignore looks safe for hub deployment"
+
+      - name: Verify critical hub files exist
+        run: |
+          CRITICAL_FILES=(
+            "index.html"
+            "scripts/courses.js"
+            "scripts/hubRenderer.js"
+            "scripts/nostrAuth.js"
+            "styles/main.css"
+            "styles/hub.css"
+          )
+
+          MISSING=0
+          for file in "${CRITICAL_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Missing critical hub file: $file"
+              MISSING=$((MISSING + 1))
+            fi
+          done
+
+          if [ $MISSING -gt 0 ]; then
+            exit 1
+          fi
+
+          echo "✅ All critical hub files present"
+
   baseline-tests:
     name: Baseline Regression Tests
     runs-on: ubuntu-latest
@@ -238,7 +297,7 @@ jobs:
   summary:
     name: Test Summary
     runs-on: ubuntu-latest
-    needs: [baseline-tests, snapshot-tests, type-check, lint-check, build-check, firebase-tests]
+    needs: [hub-critical-files, baseline-tests, snapshot-tests, type-check, lint-check, build-check, firebase-tests]
     if: always()
     steps:
       - name: Generate summary
@@ -246,6 +305,7 @@ jobs:
           echo "# Regression Test Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "## Results" >> $GITHUB_STEP_SUMMARY
+          echo "- Hub Critical Files: ${{ needs.hub-critical-files.result }}" >> $GITHUB_STEP_SUMMARY
           echo "- Baseline Tests: ${{ needs.baseline-tests.result }}" >> $GITHUB_STEP_SUMMARY
           echo "- Snapshot Tests: ${{ needs.snapshot-tests.result }}" >> $GITHUB_STEP_SUMMARY
           echo "- Type Check: ${{ needs.type-check.result }}" >> $GITHUB_STEP_SUMMARY
