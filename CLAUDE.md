@@ -2,6 +2,20 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## MANDATORY: ONE STEP AT A TIME
+
+**Do ONE action, then STOP and wait for user direction.**
+
+- Run ONE command, then stop and report
+- Make ONE edit, then stop and report
+- Do not chain actions together
+- Do not assume approval for the next step
+- Wait for explicit user instruction before proceeding
+
+**This is the most important rule. Violating it wastes the user's time and money.**
+
+---
+
 ## CRITICAL: DO NOT EDIT THIS REPOSITORY DIRECTLY
 
 **This is PRODUCTION.** All changes must go through the dev repository first.
