@@ -20,6 +20,32 @@ const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
 const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 const SectionQuizPage = lazy(() => import('@/pages/SectionQuizPage'));
+const TranscriptsIndex = lazy(() => import('@/pages/TranscriptsIndex'));
+
+// Lazy load transcript pages
+const transcriptModules = import.meta.glob('./pages/transcripts/*.tsx', { eager: false });
+const transcriptLoaders: Record<string, () => Promise<{ default: React.ComponentType }>> = {};
+for (const path of Object.keys(transcriptModules)) {
+  // Extract transcript ID from filename (e.g., './pages/transcripts/Cd156ZeusCashu.tsx' -> 'cd156-zeus-cashu')
+  const filename = path.split('/').pop()?.replace('.tsx', '');
+  if (filename && filename !== 'index') {
+    // Convert PascalCase to kebab-case (include digits to handle names like Cd156ZeusCashu)
+    const id = filename.replace(/([a-z\d])([A-Z])/g, '$1-$2').toLowerCase();
+    transcriptLoaders[id] = transcriptModules[path] as () => Promise<{ default: React.ComponentType }>;
+  }
+}
+
+// Map transcript IDs from data to component IDs
+const transcriptIdMap: Record<string, string> = {
+  'cd156-zeus-cashu': 'cd156-zeus-cashu',
+  'slp376-zeus-sovereign': 'slp376-zeus-sovereign',
+  'tls90-building-zeus': 'tls90-building-zeus',
+  'lnj019-zeus-intro': 'lnj019-zeus-intro',
+  'walker-bitcoin-adoption': 'walker-bitcoin-adoption',
+  'zeus-v080-release': 'zeus-v080-release',
+  'bitcoin-mag-zeus-fight': 'bitcoin-mag-zeus-fight',
+  'thriller-founder-talk': 'thriller-founder-talk',
+};
 
 // =============================================================================
 // SECTION CONFIGURATION
@@ -74,6 +100,48 @@ function SectionRouter() {
       <div className="text-center">
         <h1 className="text-2xl font-bold text-dark-100 mb-4">Section Not Found</h1>
         <p className="text-dark-400">This section is not yet implemented.</p>
+      </div>
+    </div>
+  );
+}
+
+function TranscriptRouter() {
+  const { id } = useParams<{ id: string }>();
+  const transcriptId = id || '';
+
+  // Map data ID to component ID if mapping exists
+  const componentId = transcriptIdMap[transcriptId] || transcriptId;
+  const loader = transcriptLoaders[componentId];
+
+  if (loader) {
+    const TranscriptComponent = lazy(loader);
+    return (
+      <Suspense fallback={<LoadingSpinner message="Loading transcript..." />}>
+        <TranscriptComponent />
+      </Suspense>
+    );
+  }
+
+  // For transcripts without dedicated pages, show a placeholder
+  return (
+    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
+      <div className="text-center max-w-md px-4">
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-dark-800 flex items-center justify-center">
+          <span className="text-3xl">🎙️</span>
+        </div>
+        <h1 className="text-2xl font-bold text-dark-100 mb-4">Transcript Coming Soon</h1>
+        <p className="text-dark-400 mb-6">
+          This transcript summary is being prepared. Check back soon for the full educational content.
+        </p>
+        <a
+          href="#/transcripts"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 transition-colors"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Transcripts
+        </a>
       </div>
     </div>
   );
@@ -137,6 +205,19 @@ function AppContent() {
                 </Suspense>
               }
             />
+          )}
+          {FEATURES.transcripts && (
+            <>
+              <Route
+                path="/transcripts"
+                element={
+                  <Suspense fallback={<LoadingSpinner message="Loading transcripts..." />}>
+                    <TranscriptsIndex />
+                  </Suspense>
+                }
+              />
+              <Route path="/transcript/:id" element={<TranscriptRouter />} />
+            </>
           )}
 
           {/* Dynamic section routes - lazy loaded via SectionRouter */}

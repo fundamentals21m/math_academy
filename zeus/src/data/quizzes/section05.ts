@@ -6,12 +6,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What light client protocol does the embedded node use?',
     options: [
-      'SPV (Simple Payment Verification)',
       'Neutrino',
+      'SPV (Simple Payment Verification)',
       'Full node sync',
-      'Electrum protocol'
+      'Electrum protocol',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The embedded node uses Neutrino, a light client protocol that doesn\'t require downloading the full ~500GB blockchain, fetching only the data it needs.',
   },
@@ -30,11 +30,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What is a Static Channel Backup (SCB)?',
     options: [
       'A copy of all your transaction history',
-      'An encrypted seed phrase',
       'A backup that lets you recover funds from channels if your phone is lost',
-      'A snapshot of the Bitcoin blockchain'
+      'An encrypted seed phrase',
+      'A snapshot of the Bitcoin blockchain',
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A Static Channel Backup lets you recover funds from channels if your phone is lost. It triggers a cooperative close to recover funds on-chain, but doesn\'t restore channel state.',
   },
@@ -53,10 +53,10 @@ export const section05Questions: QuizQuestion[] = [
     options: [
       'Personal spending',
       'Receiving payments on mobile',
+      'High-volume routing to earn fees',
       'Self-custody without extra hardware',
-      'High-volume routing to earn fees'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Embedded mode is ideal for personal use but not for running a routing node to earn fees. Routing nodes need to be always online, which is impractical for a phone.',
   },
@@ -65,12 +65,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Where should you NEVER store your seed phrase?',
     options: [
-      'In a notes app or cloud storage',
+      'On paper in a fireproof safe',
       'In a bank safety deposit box',
       'Written on metal plates',
-      'On paper in a fireproof safe'
+      'In a notes app or cloud storage',
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Never store your seed phrase digitally - no photos, no cloud storage, no notes apps. Write it on paper or metal and store in secure physical locations.',
   },
