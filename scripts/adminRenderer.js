@@ -727,10 +727,13 @@ async function saveAllChanges() {
     state.originalSections = JSON.parse(JSON.stringify(state.sections));
     state.originalCourses = JSON.parse(JSON.stringify(state.courses));
     state.hasUnsavedChanges = false;
-    
+
     document.getElementById('unsaved-banner').style.display = 'none';
     showToast('Changes saved successfully', 'success');
     showAdminContent();
+
+    // Refresh deployment status to show changes pending
+    await loadDeploymentStatus();
   } catch (error) {
     console.error('Error saving changes:', error);
     showToast('Failed to save changes: ' + error.message, 'error');
