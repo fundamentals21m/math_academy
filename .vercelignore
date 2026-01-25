@@ -88,8 +88,8 @@ e2e
 # Shared module source (bundled into deploy dirs)
 shared
 
-# Scripts (not needed for static hosting)
-scripts
+# Scripts - DO NOT EXCLUDE (contains courses.js, hubRenderer.js, nostrAuth.js)
+# scripts
 
 # Storybook
 .storybook
