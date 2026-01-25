@@ -82,6 +82,18 @@
       <header class="admin-header">
         <h1>Course Management</h1>
         <div class="admin-header-actions">
+          <div class="deployment-inline-controls">
+            <span class="sync-indicator" id="sync-indicator" title="Loading status...">
+              <span class="sync-dot"></span>
+              <span class="sync-text">Loading...</span>
+            </span>
+            <button class="btn-primary btn-small" id="promote-firebase-btn" disabled>
+              Promote to Prod
+            </button>
+            <button class="btn-secondary btn-small" id="revert-firebase-btn" disabled>
+              Revert
+            </button>
+          </div>
           <a href="index.html" class="back-link">
             <span>&larr;</span> Back to Hub
           </a>
@@ -138,47 +150,6 @@
         </div>
       </div>
 
-      <!-- Deployment Panel -->
-      <div class="panel deployment-panel">
-        <div class="panel-header">
-          <h2>Deployment</h2>
-          <span class="environment-badge" id="env-badge">Staging</span>
-        </div>
-        <div class="panel-content">
-          <div id="deployment-status" class="deployment-status">
-            <div class="deployment-loading">
-              <div class="loading-spinner-small"></div>
-              <span>Loading deployment status...</span>
-            </div>
-          </div>
-          <div class="deployment-actions">
-            <div class="deployment-action-group">
-              <h4>Firebase Data</h4>
-              <p class="deployment-hint">Promote staging course configuration to production</p>
-              <div class="deployment-buttons">
-                <button class="btn-primary" id="promote-firebase-btn" disabled>
-                  Promote to Production
-                </button>
-                <button class="btn-secondary" id="revert-firebase-btn" disabled>
-                  Revert Last Change
-                </button>
-              </div>
-            </div>
-            <div class="deployment-action-group">
-              <h4>Vercel Deployment</h4>
-              <p class="deployment-hint">Promote preview deployment to production (optional)</p>
-              <div class="deployment-buttons">
-                <button class="btn-secondary" id="promote-vercel-btn" disabled>
-                  Promote Vercel Preview
-                </button>
-                <button class="btn-secondary" id="revert-vercel-btn" disabled>
-                  Revert Vercel
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Unsaved Changes Banner -->

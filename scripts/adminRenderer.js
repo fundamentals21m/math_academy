@@ -442,8 +442,6 @@ function setupEventListeners() {
   // Deployment buttons
   document.getElementById('promote-firebase-btn')?.addEventListener('click', showPromoteModal);
   document.getElementById('revert-firebase-btn')?.addEventListener('click', showRevertModal);
-  document.getElementById('promote-vercel-btn')?.addEventListener('click', handlePromoteVercel);
-  document.getElementById('revert-vercel-btn')?.addEventListener('click', handleRevertVercel);
 
   // Deployment modal
   document.getElementById('close-deployment-modal')?.addEventListener('click', closeDeploymentModal);
@@ -1065,83 +1063,45 @@ async function loadDeploymentStatus() {
     renderDeploymentStatus();
   } catch (error) {
     console.error('Error loading deployment status:', error);
-    // Show error state in deployment panel
-    const container = document.getElementById('deployment-status');
-    if (container) {
-      container.innerHTML = `
-        <div class="deployment-loading" style="color: #ef4444;">
-          <span>Failed to load deployment status</span>
-        </div>
-      `;
+    // Show error state in sync indicator
+    const indicator = document.getElementById('sync-indicator');
+    if (indicator) {
+      indicator.className = 'sync-indicator error';
+      indicator.title = 'Failed to load status';
+      indicator.querySelector('.sync-text').textContent = 'Error';
     }
   }
 }
 
 /**
- * Render deployment status
+ * Render deployment status (inline sync indicator)
  */
 function renderDeploymentStatus() {
-  const container = document.getElementById('deployment-status');
-  if (!container || !state.deploymentStatus) return;
+  const indicator = document.getElementById('sync-indicator');
+  if (!indicator || !state.deploymentStatus) return;
 
   const status = state.deploymentStatus;
 
-  // Format timestamps
-  const formatTime = (timestamp) => {
-    if (!timestamp) return 'Never';
-    const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp._seconds * 1000);
-    return date.toLocaleString();
-  };
-
-  const formatNpub = (npub) => {
-    if (!npub) return 'Unknown';
-    return `${npub.slice(0, 8)}...${npub.slice(-4)}`;
-  };
-
-  const syncStatus = status.hasChanges
-    ? `<div class="deployment-sync-status pending">
-         <span class="deployment-sync-icon">&#9888;</span>
-         <span>Staging has unpromoted changes</span>
-       </div>`
-    : `<div class="deployment-sync-status synced">
-         <span class="deployment-sync-icon">&#10003;</span>
-         <span>Staging and production are in sync</span>
-       </div>`;
-
-  container.innerHTML = `
-    <div class="deployment-info">
-      <div class="deployment-env">
-        <div class="deployment-env-label">Staging</div>
-        <div class="deployment-env-time">${formatTime(status.stagingLastUpdated)}</div>
-        <div class="deployment-env-by">by ${formatNpub(status.stagingUpdatedBy)}</div>
-      </div>
-      <div class="deployment-env">
-        <div class="deployment-env-label">Production</div>
-        <div class="deployment-env-time">${formatTime(status.productionLastUpdated)}</div>
-        <div class="deployment-env-by">by ${formatNpub(status.productionUpdatedBy)}</div>
-      </div>
-      ${syncStatus}
-    </div>
-  `;
+  // Update sync indicator
+  if (status.hasChanges) {
+    indicator.className = 'sync-indicator pending';
+    indicator.title = 'Staging has unpromoted changes';
+    indicator.querySelector('.sync-text').textContent = 'Changes pending';
+  } else {
+    indicator.className = 'sync-indicator synced';
+    indicator.title = 'Staging and production are in sync';
+    indicator.querySelector('.sync-text').textContent = 'In sync';
+  }
 
   // Enable/disable buttons based on status
   const promoteBtn = document.getElementById('promote-firebase-btn');
   const revertBtn = document.getElementById('revert-firebase-btn');
-  const promoteVercelBtn = document.getElementById('promote-vercel-btn');
-  const revertVercelBtn = document.getElementById('revert-vercel-btn');
 
   if (promoteBtn) {
     promoteBtn.disabled = !status.hasChanges;
   }
   if (revertBtn) {
     revertBtn.disabled = !status.backups || status.backups.length === 0;
-  }
-  // Vercel buttons are always enabled if we made it this far
-  if (promoteVercelBtn) {
-    promoteVercelBtn.disabled = false;
-  }
-  if (revertVercelBtn) {
-    revertVercelBtn.disabled = false;
   }
 }
 

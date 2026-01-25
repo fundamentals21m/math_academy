@@ -44,6 +44,56 @@
   color: #f1f5f9;
 }
 
+/* Inline Deployment Controls */
+.deployment-inline-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-right: 1rem;
+  border-right: 1px solid var(--border);
+  margin-right: 0.5rem;
+}
+
+.sync-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  padding: 0.375rem 0.75rem;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 0.375rem;
+}
+
+.sync-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #64748b;
+}
+
+.sync-indicator.synced .sync-dot {
+  background: #4ade80;
+}
+
+.sync-indicator.pending .sync-dot {
+  background: #fbbf24;
+  animation: pulse-dot 1.5s infinite;
+}
+
+.sync-indicator.error .sync-dot {
+  background: #ef4444;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.sync-text {
+  white-space: nowrap;
+}
+
 /* Buttons */
 .btn-primary {
   background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
