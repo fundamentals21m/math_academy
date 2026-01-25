@@ -27,6 +27,29 @@ DEV (math_academy_dev) → Test → User Approval → promote-to-production.sh �
 
 ---
 
+## MANDATORY: Production is Read-Only
+
+**The ONLY commands allowed in this repository:**
+- `vercel --prod` (deploying already-promoted code)
+- `git push` (pushing already-committed changes)
+- `./scripts/promote-to-production.sh` (receiving from dev)
+- `./scripts/deploy-with-hub.sh` (deploying courses)
+
+**NOT allowed in production:**
+- `npm run build` ❌
+- Editing any `.tsx`, `.ts`, `.js`, `.css` file ❌
+- `git add` of new changes ❌
+- Any file creation or modification ❌
+
+If you find yourself about to do any of the above, STOP. Go to dev first:
+```bash
+cd /Users/brianhirschfield/Claude/dev-repos/math_academy_dev
+```
+
+**Violations cost the user time and money. There are no exceptions.**
+
+---
+
 ## CRITICAL: External URL Policy
 
 **NEVER fabricate, guess, or invent URLs.** This rule has been violated twice and caused production failures.
