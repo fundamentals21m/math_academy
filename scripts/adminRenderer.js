@@ -1101,7 +1101,8 @@ function renderDeploymentStatus() {
   const revertBtn = document.getElementById('revert-firebase-btn');
 
   if (promoteBtn) {
-    promoteBtn.disabled = !status.hasChanges;
+    // Always enable - user may need to push even without detected changes (e.g., after seeding)
+    promoteBtn.disabled = false;
   }
   if (revertBtn) {
     revertBtn.disabled = !status.backups || status.backups.length === 0;

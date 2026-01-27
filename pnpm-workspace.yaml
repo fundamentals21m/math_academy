@@ -17,6 +17,7 @@ packages:
   - 'course-template'
   - 'crypto-react'
   - 'df-course'
+  - 'dh-taleb'
   - 'euclid'
   - 'euler-intro'
   - 'four-pillars'
