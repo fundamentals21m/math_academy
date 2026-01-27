@@ -2,6 +2,36 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## MANDATORY: NEVER REMOVE EXISTING FEATURES
+
+**Existing production features must be preserved. Removing them without explicit user request is a critical failure.**
+
+### Rule 1: Never Delete Code Without Explicit Request
+- Do NOT remove functions, styles, components, or properties unless the user explicitly asks
+- "Add feature X" does NOT mean "remove feature Y"
+- If a file has code you don't recognize, leave it alone
+
+### Rule 2: Verify Before Modifying
+Before editing any file in `hub/`, `shared/`, or course configs:
+1. Read the entire file first
+2. Note all existing features and functionality
+3. After your changes, verify those features are still present
+
+### Rule 3: Verify After Modifying
+After any edit to `hub/`, `shared/`, or course files:
+1. Check that all code that existed before still exists
+2. If you accidentally removed something, restore it immediately
+3. Report to the user what you preserved
+
+### Rule 4: When In Doubt, Ask
+If your task might affect existing features:
+- STOP and ask the user before proceeding
+- List what features exist and confirm they should remain
+
+**Violations of these rules break production for real users.**
+
+---
+
 ## MANDATORY: ONE STEP AT A TIME
 
 **Do ONE action, then STOP and wait for user direction.**
