@@ -6,12 +6,12 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What did Cantor prove using his diagonal argument?',
     options: [
-      'The real numbers are uncountable',
       'The integers are countable',
       'There is a largest prime number',
       'The rational numbers are uncountable',
+      'The real numbers are uncountable'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Cantor\'s diagonal argument proves that the real numbers cannot be listed in a sequence, making them uncountable.',
   },
@@ -20,26 +20,10 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the symbol for the cardinality of the natural numbers (the smallest infinity)?',
     options: [
-      '$\\omega
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: '$\\aleph_0$ (aleph-null) denotes the cardinality of countably infinite sets like the natural numbers.',
-  },
-      '$\\infty
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$\\aleph_0$ (aleph-null) denotes the cardinality of countably infinite sets like the natural numbers.',
-  },
-      '$\\mathfrak{c}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$\\aleph_0$ (aleph-null) denotes the cardinality of countably infinite sets like the natural numbers.',
-  },
-      '$\\aleph_0
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$\\aleph_0$ (aleph-null) denotes the cardinality of countably infinite sets like the natural numbers.',
-  },
+      '$\\aleph_0$',
+      '$\\omega$',
+      '$\\infty$',
+      '$\\mathfrak{c}$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -50,22 +34,10 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Cantor\'s theorem, how does $|P(S)|$ compare to $|S|$ for any set $S$?',
     options: [
-      '$|P(S)| = |S|
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Cantor\'s theorem states that the power set $P(S)$ is always strictly larger than $S$, so $|P(S)| > |S|$.',
-  },
-      '$|P(S)| < |S|
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Cantor\'s theorem states that the power set $P(S)$ is always strictly larger than $S$, so $|P(S)| > |S|$.',
-  },
-      '$|P(S)| > |S|
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Cantor\'s theorem states that the power set $P(S)$ is always strictly larger than $S$, so $|P(S)| > |S|$.',
-  },
-      'They cannot be compared',
+      '$|P(S)| = |S|$',
+      '$|P(S)| > |S|$',
+      '$|P(S)| < |S|$',
+      'They cannot be compared'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -76,22 +48,10 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following sets is countable?',
     options: [
-      'The rational numbers $\\mathbb{Q}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The rational numbers are countable because they can be enumerated using a diagonal listing argument.',
-  },
-      'The real numbers $\\mathbb{R}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The rational numbers are countable because they can be enumerated using a diagonal listing argument.',
-  },
+      'The real numbers $\\mathbb{R}$',
       'The irrational numbers',
-      'The power set of natural numbers $P(\\mathbb{N})
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The rational numbers are countable because they can be enumerated using a diagonal listing argument.',
-  },
+      'The rational numbers $\\mathbb{Q}$',
+      'The power set of natural numbers $P(\\mathbb{N})$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -103,11 +63,11 @@ export const section30Questions: QuizQuestion[] = [
     question: 'What is the Cantor set constructed by?',
     options: [
       'Adding the middle third at each step',
-      'Removing the middle third at each step',
       'Halving the interval at each step',
       'Doubling the interval at each step',
+      'Removing the middle third at each step'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The Cantor set is constructed by repeatedly removing the middle third of each remaining interval.',
   },
@@ -116,12 +76,12 @@ export const section30Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is paradoxical about the Cantor set?',
     options: [
+      'It has zero length but uncountably many points',
       'It has infinite length but no points',
       'It has finite length and countably many points',
-      'It contains all rational numbers',
-      'It has zero length but uncountably many points',
+      'It contains all rational numbers'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The Cantor set has total length zero (the lengths removed sum to 1) but contains uncountably many points.',
   },

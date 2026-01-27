@@ -9,7 +9,7 @@ export const section03Questions: QuizQuestion[] = [
       'Commutativity of addition',
       'Distributive law',
       'Existence of multiplicative inverses for all real numbers',
-      'Associativity of multiplication',
+      'Associativity of multiplication'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -20,12 +20,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the completeness axiom (least upper bound property) guarantee?',
     options: [
-      'Every nonempty set bounded above has a supremum',
       'Every set has a maximum',
       'The real line has no gaps',
       'Every real number is rational',
+      'Every nonempty set bounded above has a supremum'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The completeness axiom states that every nonempty set of real numbers bounded above has a least upper bound (supremum).',
   },
@@ -34,26 +34,10 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $a < b$ and $c > 0$, what can we conclude?',
     options: [
-      '$ac > bc
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Multiplying both sides of an inequality by a positive number preserves the direction: $ac < bc$.',
-  },
-      '$ac = bc
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Multiplying both sides of an inequality by a positive number preserves the direction: $ac < bc$.',
-  },
-      '$ac < bc
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Multiplying both sides of an inequality by a positive number preserves the direction: $ac < bc$.',
-  },
-      'Cannot determine without knowing $a$ and $b
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Multiplying both sides of an inequality by a positive number preserves the direction: $ac < bc$.',
-  },
+      '$ac < bc$',
+      '$ac > bc$',
+      '$ac = bc$',
+      'Cannot determine without knowing $a$ and $b$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -64,22 +48,10 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the supremum of the set $\\{x \\in \\mathbb{R} : x^2 < 2\\}$?',
     options: [
-      '$\\sqrt{2}
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'The set is the open interval $(-\\sqrt{2}, \\sqrt{2})$. Its supremum is $\\sqrt{2}$.',
-  },
-      '$1
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'The set is the open interval $(-\\sqrt{2}, \\sqrt{2})$. Its supremum is $\\sqrt{2}$.',
-  },
-      '$2
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'The set is the open interval $(-\\sqrt{2}, \\sqrt{2})$. Its supremum is $\\sqrt{2}$.',
-  },
-      'Does not exist',
+      '$1$',
+      '$\\sqrt{2}$',
+      '$2$',
+      'Does not exist'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -99,26 +71,10 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is an order axiom property?',
     options: [
-      '$a \\cdot 0 = 0$ for all $a
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Trichotomy (exactly one of $a < b$, $a = b$, $a > b$ holds) is an order axiom.',
-  },
-      'For any $a, b$, either $a < b$, $a = b$, or $a > b
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Trichotomy (exactly one of $a < b$, $a = b$, $a > b$ holds) is an order axiom.',
-  },
-      '$a + a = 2a$ for all $a
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Trichotomy (exactly one of $a < b$, $a = b$, $a > b$ holds) is an order axiom.',
-  },
-      '$a + (-a) = 0$ for all $a
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Trichotomy (exactly one of $a < b$, $a = b$, $a > b$ holds) is an order axiom.',
-  },
+      '$a \\cdot 0 = 0$ for all $a$',
+      '$a + a = 2a$ for all $a$',
+      'For any $a, b$, either $a < b$, $a = b$, or $a > b$',
+      '$a + (-a) = 0$ for all $a$'
     ],
     correctIndex: 2,
     difficulty: 'medium',

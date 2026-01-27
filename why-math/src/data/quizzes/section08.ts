@@ -6,12 +6,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A vector is a quantity that has:',
     options: [
+      'Both magnitude and direction',
       'Direction only',
       'Magnitude only',
-      'Both magnitude and direction',
-      'Neither magnitude nor direction',
+      'Neither magnitude nor direction'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Vectors have both magnitude (size) and direction, unlike scalars which have only magnitude.',
   },
@@ -39,11 +39,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'The Doppler effect explains why:',
     options: [
       'Sound is louder near the source',
-      'Sound travels faster in water',
       'A car horn sounds higher when approaching and lower when receding',
-      'Light is brighter from nearby stars',
+      'Sound travels faster in water',
+      'Light is brighter from nearby stars'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The Doppler effect causes frequency shifts—higher pitch when approaching, lower when receding.',
   },
@@ -54,10 +54,10 @@ export const section08Questions: QuizQuestion[] = [
     options: [
       '186,000 miles/second',
       '343 miles/hour',
-      '100 feet/second',
       '1100 feet/second',
+      '100 feet/second'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Sound travels at about 1100 ft/s (750 mph). Light travels at 186,000 miles/second.',
   },
@@ -66,26 +66,10 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If an observer moves toward a stationary sound source at speed $v$, the perceived frequency is:',
     options: [
-      '$(1 + v/c)f
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Moving toward the source: $f\' = (1 + v/c)f$, where $c$ is the speed of sound.',
-  },
-      '$f
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Moving toward the source: $f\' = (1 + v/c)f$, where $c$ is the speed of sound.',
-  },
-      '$f/v
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Moving toward the source: $f\' = (1 + v/c)f$, where $c$ is the speed of sound.',
-  },
-      '$(1 - v/c)f
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Moving toward the source: $f\' = (1 + v/c)f$, where $c$ is the speed of sound.',
-  },
+      '$f$',
+      '$f/v$',
+      '$(1 - v/c)f$',
+      '$(1 + v/c)f$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -99,7 +83,7 @@ export const section08Questions: QuizQuestion[] = [
       'Because the car acts as both a moving receiver and a moving source',
       'Because radar uses two signals',
       'Because of rounding',
-      'Because light has two polarizations',
+      'Because light has two polarizations'
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -110,12 +94,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To add two vectors geometrically, you:',
     options: [
-      'Draw them tip-to-tail and connect start to end',
       'Add their magnitudes',
+      'Draw them tip-to-tail and connect start to end',
       'Multiply them together',
-      'Find their average',
+      'Find their average'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Vector addition: place the second vector\'s tail at the first vector\'s tip. The sum goes from start to end.',
   },
@@ -125,11 +109,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'How can a sailboat sail into the wind?',
     options: [
       'It uses a motor when going upwind',
-      'By angling the sail to create forward thrust and zigzagging (tacking)',
       'Wind actually pushes equally in all directions',
-      'It cannot sail into the wind',
+      'By angling the sail to create forward thrust and zigzagging (tacking)',
+      'It cannot sail into the wind'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The sail creates a force that can be decomposed; the keel resists sideways motion. By tacking, the boat makes progress upwind.',
   },
@@ -141,7 +125,7 @@ export const section08Questions: QuizQuestion[] = [
       'Stars turning red as they age',
       'The color of Mars',
       'Dust between stars making them appear red',
-      'Light appearing redder from receding objects due to the Doppler effect',
+      'Light appearing redder from receding objects due to the Doppler effect'
     ],
     correctIndex: 3,
     difficulty: 'medium',

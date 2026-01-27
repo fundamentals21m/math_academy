@@ -6,26 +6,10 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If each dimension of a region is multiplied by $m$, the area is multiplied by:',
     options: [
-      '$m^2
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Area scales by $m^2$ when linear dimensions scale by $m$.',
-  },
-      '$m
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Area scales by $m^2$ when linear dimensions scale by $m$.',
-  },
-      '$2m
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Area scales by $m^2$ when linear dimensions scale by $m$.',
-  },
-      '$m^3
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Area scales by $m^2$ when linear dimensions scale by $m$.',
-  },
+      '$m$',
+      '$2m$',
+      '$m^3$',
+      '$m^2$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -36,26 +20,10 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If each dimension of a solid is multiplied by $m$, the volume is multiplied by:',
     options: [
-      '$m^2
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Volume scales by $m^3$ when linear dimensions scale by $m$.',
-  },
-      '$m
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Volume scales by $m^3$ when linear dimensions scale by $m$.',
-  },
-      '$3m
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Volume scales by $m^3$ when linear dimensions scale by $m$.',
-  },
-      '$m^3
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Volume scales by $m^3$ when linear dimensions scale by $m$.',
-  },
+      '$m^3$',
+      '$m^2$',
+      '$m$',
+      '$3m$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -69,7 +37,7 @@ export const section07Questions: QuizQuestion[] = [
       '$4.50',
       '$6.75',
       '$5.25',
-      '$9.00',
+      '$9.00'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -92,7 +60,7 @@ export const section07Questions: QuizQuestion[] = [
       '600 ft',
       '900 ft',
       '1350 ft',
-      '1800 ft',
+      '1800 ft'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -106,7 +74,7 @@ export const section07Questions: QuizQuestion[] = [
       'Stays constant as objects get larger',
       'Decreases as objects get larger',
       'Has no relationship to size',
-      'Increases as objects get larger',
+      'Increases as objects get larger'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -117,12 +85,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Large animals cool more slowly than small animals because:',
     options: [
+      'They have relatively less surface area per unit volume',
       'They have more insulation',
       'They are warmer to begin with',
-      'Their skin is thicker',
-      'They have relatively less surface area per unit volume',
+      'Their skin is thicker'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Heat is stored in volume but escapes through surface. Larger animals have less surface per volume.',
   },
@@ -134,7 +102,7 @@ export const section07Questions: QuizQuestion[] = [
       'They are very strong',
       'They have large surface area relative to volume (high air resistance)',
       'They weigh very little',
-      'They have shock absorbers',
+      'They have shock absorbers'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -145,12 +113,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Archimedes discovered that the volume of an irregular object equals:',
     options: [
-      'The water it displaces when submerged',
       'Its weight divided by density',
       'Its surface area times depth',
-      'Half its bounding box volume',
+      'The water it displaces when submerged',
+      'Half its bounding box volume'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Archimedes found that the volume of a submerged object equals the volume of water displaced.',
   },
@@ -161,10 +129,10 @@ export const section07Questions: QuizQuestion[] = [
     options: [
       'About 5',
       'About 3',
-      'Only 1',
       'About 2',
+      'Only 1'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Volume scales by $m^3 = 5$, so $m = \\sqrt[3]{5} \\approx 1.71 < 2$. The half-dollar\'s diameter is less than twice a dime\'s—only 1 dime fits!',
   },

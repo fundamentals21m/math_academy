@@ -6,28 +6,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The reflection in the imaginary axis (vertical line $x = 0$) is given by:',
     options: [
-      '$z \\mapsto -\\bar{z}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'The reflection in x = 0 is z ↦ −z̄, which sends x + iy to −x + iy.',
-  },
-      '$z \\mapsto \\bar{z}
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The reflection in x = 0 is z ↦ −z̄, which sends x + iy to −x + iy.',
-  },
-      '$z \\mapsto 1/z
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The reflection in x = 0 is z ↦ −z̄, which sends x + iy to −x + iy.',
-  },
-      '$z \\mapsto -z
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The reflection in x = 0 is z ↦ −z̄, which sends x + iy to −x + iy.',
-  },
+      '$z \\mapsto \\bar{z}$',
+      '$z \\mapsto -z$',
+      '$z \\mapsto 1/z$',
+      '$z \\mapsto -\\bar{z}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The reflection in x = 0 is z ↦ −z̄, which sends x + iy to −x + iy.',
   },
@@ -36,12 +20,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Every Möbius transformation is a composition of translations, scalings, and:',
     options: [
-      'Reflections only',
       'Inversions and conjugations',
       'Rotations only',
-      'Projections',
+      'Reflections only',
+      'Projections'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The generators include z → z + l, z → kz, z → −z̄, and z → 1/z̄ (inversion-reflection).',
   },
@@ -50,28 +34,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The reflection in a semicircular non-Euclidean line with center $c$ and radius $r$ is:',
     options: [
-      '$z \\mapsto c + r\\bar{z}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The reflection formula for a semicircle with center c and radius r is z ↦ c + r²/(z̄ − c).',
-  },
-      '$z \\mapsto 2c - z
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'The reflection formula for a semicircle with center c and radius r is z ↦ c + r²/(z̄ − c).',
-  },
-      '$z \\mapsto c + r^2/(\\bar{z} - c)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'The reflection formula for a semicircle with center c and radius r is z ↦ c + r²/(z̄ − c).',
-  },
-      '$z \\mapsto r^2/z
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'The reflection formula for a semicircle with center c and radius r is z ↦ c + r²/(z̄ − c).',
-  },
+      '$z \\mapsto c + r\\bar{z}$',
+      '$z \\mapsto c + r^2/(\\bar{z} - c)$',
+      '$z \\mapsto r^2/z$',
+      '$z \\mapsto 2c - z$'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The reflection formula for a semicircle with center c and radius r is z ↦ c + r²/(z̄ − c).',
   },
@@ -80,12 +48,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The composition of two reflections in non-Euclidean lines is:',
     options: [
-      'The identity',
       'Another reflection',
-      'A parabolic transformation only',
+      'The identity',
       'An orientation-preserving Möbius transformation',
+      'A parabolic transformation only'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Two reflections (each orientation-reversing) compose to give an orientation-preserving transformation.',
   },
@@ -95,15 +63,11 @@ export const section59Questions: QuizQuestion[] = [
     question: 'The map $z \\mapsto 1/\\bar{z}$ fixes every point on:',
     options: [
       'The real axis',
-      'No points',
       'The imaginary axis',
-      'The unit semicircle $|z| = 1, y > 0
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'If |z| = 1, then z·z̄ = 1, so 1/z̄ = z. Points on the unit circle are fixed.',
-  },
+      'No points',
+      'The unit semicircle $|z| = 1, y > 0$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'If |z| = 1, then z·z̄ = 1, so 1/z̄ = z. Points on the unit circle are fixed.',
   },
@@ -112,24 +76,12 @@ export const section59Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An orientation-reversing Möbius transformation can be written as:',
     options: [
-      '$(az + b)/(cz + d)$ with $ad - bc < 0
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Orientation-reversing maps involve conjugation: (az̄ + b)/(cz̄ + d) with ad − bc < 0.',
-  },
-      '$(a\\bar{z} + b)/(c\\bar{z} + d)$ with $ad - bc < 0
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Orientation-reversing maps involve conjugation: (az̄ + b)/(cz̄ + d) with ad − bc < 0.',
-  },
-      '$(az + b)/(cz + d)$ with $ad - bc > 0
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Orientation-reversing maps involve conjugation: (az̄ + b)/(cz̄ + d) with ad − bc < 0.',
-  },
-      'Any linear function',
+      '$(a\\bar{z} + b)/(c\\bar{z} + d)$ with $ad - bc < 0$',
+      '$(az + b)/(cz + d)$ with $ad - bc > 0$',
+      '$(az + b)/(cz + d)$ with $ad - bc < 0$',
+      'Any linear function'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Orientation-reversing maps involve conjugation: (az̄ + b)/(cz̄ + d) with ad − bc < 0.',
   },

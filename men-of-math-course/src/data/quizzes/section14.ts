@@ -9,7 +9,7 @@ export const section14Questions: QuizQuestion[] = [
       'Polynomials',
       'Exponentials',
       'Logarithms',
-      'Sines and cosines',
+      'Sines and cosines'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Fourier developed his mathematical techniques to study:',
     options: [
+      'Heat conduction',
       'Sound waves',
       'Light propagation',
-      'Fluid flow',
-      'Heat conduction',
+      'Fluid flow'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Fourier developed his series to solve the heat equation and understand heat conduction in solids.',
   },
@@ -37,7 +37,7 @@ export const section14Questions: QuizQuestion[] = [
       'Space domain',
       'Frequency domain',
       'Complex domain',
-      'Discrete domain',
+      'Discrete domain'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -51,7 +51,7 @@ export const section14Questions: QuizQuestion[] = [
       'It used imaginary numbers',
       'It contradicted Newton',
       'It claimed any function could be represented as a trigonometric series',
-      'It was not rigorous enough for Laplace',
+      'It was not rigorous enough for Laplace'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -62,12 +62,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Fourier also made contributions to understanding what global phenomenon?',
     options: [
-      'The greenhouse effect',
       'Ocean currents',
       'Earthquakes',
       'Continental drift',
+      'The greenhouse effect'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Fourier was among the first to study what we now call the greenhouse effect and Earth\'s energy balance.',
   },

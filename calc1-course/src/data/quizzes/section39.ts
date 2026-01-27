@@ -6,26 +6,10 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The natural logarithm is defined as:',
     options: [
-      '$\\log_{10} x
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Apostol defines $\\ln x$ as the integral of $1/t$ from 1 to $x$.',
-  },
-      '$e^x
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Apostol defines $\\ln x$ as the integral of $1/t$ from 1 to $x$.',
-  },
-      '$\\log_2 x
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Apostol defines $\\ln x$ as the integral of $1/t$ from 1 to $x$.',
-  },
-      '$\\ln x = \\int_1^x \\frac{1}{t}\\,dt
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Apostol defines $\\ln x$ as the integral of $1/t$ from 1 to $x$.',
-  },
+      '$\\log_{10} x$',
+      '$\\ln x = \\int_1^x \\frac{1}{t}\\,dt$',
+      '$e^x$',
+      '$\\log_2 x$'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -36,26 +20,10 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivative of $\\ln x$ is:',
     options: [
-      '$x
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'By FTC I: $(\\ln x)\' = 1/x$.',
-  },
-      '$1/x
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'By FTC I: $(\\ln x)\' = 1/x$.',
-  },
-      '$e^x
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'By FTC I: $(\\ln x)\' = 1/x$.',
-  },
-      '$\\ln x / x
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'By FTC I: $(\\ln x)\' = 1/x$.',
-  },
+      '$x$',
+      '$e^x$',
+      '$1/x$',
+      '$\\ln x / x$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -75,22 +43,10 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The domain of $\\ln x$ is:',
     options: [
-      '$x > 0
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'The natural log is only defined for positive $x$.',
-  },
       'All real numbers',
-      '$x \\neq 0
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The natural log is only defined for positive $x$.',
-  },
-      '$x \\geq 0
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The natural log is only defined for positive $x$.',
-  },
+      '$x \\neq 0$',
+      '$x \\geq 0$',
+      '$x > 0$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -101,26 +57,10 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int \\frac{1}{x}\\,dx = ?$',
     options: [
-      '$\\ln x + C
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'The antiderivative of $1/x$ is $\\ln|x| + C$ (absolute value for $x < 0$).',
-  },
-      '$\\ln |x| + C
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The antiderivative of $1/x$ is $\\ln|x| + C$ (absolute value for $x < 0$).',
-  },
-      '$x + C
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The antiderivative of $1/x$ is $\\ln|x| + C$ (absolute value for $x < 0$).',
-  },
-      '$-1/x^2 + C
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The antiderivative of $1/x$ is $\\ln|x| + C$ (absolute value for $x < 0$).',
-  },
+      '$\\ln |x| + C$',
+      '$\\ln x + C$',
+      '$x + C$',
+      '$-1/x^2 + C$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -134,7 +74,7 @@ export const section39Questions: QuizQuestion[] = [
       'Approaches 0',
       'Approaches $\\infty$ (slowly)',
       'Approaches 1',
-      'Oscillates',
+      'Oscillates'
     ],
     correctIndex: 1,
     difficulty: 'easy',

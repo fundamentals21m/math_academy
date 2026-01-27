@@ -9,7 +9,7 @@ export const section90Questions: QuizQuestion[] = [
       'Be closed under addition and scalar multiplication',
       'Contain all vectors',
       'Be finite',
-      'Have the same dimension as the parent space',
+      'Have the same dimension as the parent space'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -20,18 +20,10 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The zero vector subspace $\\{\\mathbf{0}\\}$ has dimension:',
     options: [
-      '$1
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'The trivial subspace has dimension 0.',
-  },
+      '$1$',
+      '$0$',
       'Undefined',
-      'Infinite',
-      '$0
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'The trivial subspace has dimension 0.',
-  },
+      'Infinite'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -43,11 +35,11 @@ export const section90Questions: QuizQuestion[] = [
     question: 'In $\\mathbb{R}^3$, a plane through the origin is:',
     options: [
       'Not a subspace',
-      'A subspace of dimension 2',
       'A subspace of dimension 3',
-      'A subspace of dimension 1',
+      'A subspace of dimension 2',
+      'A subspace of dimension 1'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Plane through origin in $\\mathbb{R}^3$ is a 2D subspace.',
   },
@@ -56,14 +48,10 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The set $\\{(x, y) : x + y = 1\\}$ in $\\mathbb{R}^2$ is:',
     options: [
-      'Not a subspace (doesn\\'t contain origin)',
       'A subspace',
       'Empty',
-      'All of $\\mathbb{R}^2
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$x + y = 1$ doesn\'t pass through origin, so not a subspace.',
-  },
+      'All of $\\mathbb{R}^2$',
+      'Not a subspace (doesn\'t contain origin)'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -74,12 +62,12 @@ export const section90Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The intersection of two subspaces is:',
     options: [
+      'Always a subspace',
       'Not necessarily a subspace',
       'Always empty',
-      'Always a subspace',
-      'The whole space',
+      'The whole space'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Intersection of subspaces is a subspace.',
   },
@@ -89,11 +77,11 @@ export const section90Questions: QuizQuestion[] = [
     question: 'The solution set of $A\\mathbf{x} = \\mathbf{0}$ (null space) is:',
     options: [
       'Never a subspace',
-      'Always the whole space',
-      'Always trivial',
       'A subspace',
+      'Always the whole space',
+      'Always trivial'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Null space is a subspace (homogeneous solutions).',
   },

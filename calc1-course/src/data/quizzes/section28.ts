@@ -6,26 +6,10 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sum rule for derivatives states $(f + g)\' = ?$',
     options: [
-      '$f\\' + g\\'
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Sum rule: the derivative of a sum is the sum of derivatives.',
-  },
-      '$f\\' \\cdot g\\'
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Sum rule: the derivative of a sum is the sum of derivatives.',
-  },
-      '$(fg)\\'
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Sum rule: the derivative of a sum is the sum of derivatives.',
-  },
-      '$f\\' - g\\'
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Sum rule: the derivative of a sum is the sum of derivatives.',
-  },
+      '$f\' \\cdot g\'$',
+      '$(fg)\'$',
+      '$f\' - g\'$',
+      '$f\' + g\'$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -36,26 +20,10 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The product rule states $(fg)\' = ?$',
     options: [
-      '$f\\'g\\'
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.',
-  },
-      '$f\\'g - fg\\'
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.',
-  },
-      '$f\\'g + fg\\'
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.',
-  },
-      '$f\\'/g\\'
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Product rule: $(fg)\' = f\'g + fg\'$.',
-  },
+      '$f\'g + fg\'$',
+      '$f\'g\'$',
+      '$f\'g - fg\'$',
+      '$f\'/g\'$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -66,26 +34,10 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The quotient rule states $(f/g)\' = ?$',
     options: [
-      '$f\\'/g\\'
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Quotient rule: $(f/g)\' = \\frac{f\'g - fg\'}{g^2}$.',
-  },
-      '$\\frac{f\\'g + fg\\'}{g^2}
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Quotient rule: $(f/g)\' = \\frac{f\'g - fg\'}{g^2}$.',
-  },
-      '$\\frac{f\\'g - fg\\'}{g^2}
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Quotient rule: $(f/g)\' = \\frac{f\'g - fg\'}{g^2}$.',
-  },
-      '$\\frac{f\\' - g\\'}{g}
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Quotient rule: $(f/g)\' = \\frac{f\'g - fg\'}{g^2}$.',
-  },
+      '$f\'/g\'$',
+      '$\\frac{f\'g - fg\'}{g^2}$',
+      '$\\frac{f\'g + fg\'}{g^2}$',
+      '$\\frac{f\' - g\'}{g}$'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -114,26 +66,10 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f(x) = cf(x)$ where $c$ is a constant, then $(cf)\' = ?$',
     options: [
-      '$f\\'
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Constant multiple rule: $(cf)\' = cf\'$.',
-  },
-      '$c\\'f
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Constant multiple rule: $(cf)\' = cf\'$.',
-  },
-      '$c + f\\'
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Constant multiple rule: $(cf)\' = cf\'$.',
-  },
-      '$cf\\'
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Constant multiple rule: $(cf)\' = cf\'$.',
-  },
+      '$f\'$',
+      '$c\'f$',
+      '$cf\'$',
+      '$c + f\'$'
     ],
     correctIndex: 2,
     difficulty: 'easy',

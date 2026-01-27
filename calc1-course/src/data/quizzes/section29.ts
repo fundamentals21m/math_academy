@@ -6,22 +6,10 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivative $f\'(a)$ represents:',
     options: [
-      'The area under the curve at $a
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Geometrically, $f\'(a)$ is the slope of the tangent line at $x = a$.',
-  },
-      'The slope of the tangent line at $(a, f(a))
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Geometrically, $f\'(a)$ is the slope of the tangent line at $x = a$.',
-  },
-      'The maximum value of $f
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Geometrically, $f\'(a)$ is the slope of the tangent line at $x = a$.',
-  },
+      'The area under the curve at $a$',
+      'The maximum value of $f$',
       'The $y$-intercept of the graph',
+      'The slope of the tangent line at $(a, f(a))$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -32,26 +20,10 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The equation of the tangent line to $y = f(x)$ at $x = a$ is:',
     options: [
-      '$y = f(a)
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Point-slope form: $y - f(a) = f\'(a)(x - a)$.',
-  },
-      '$y = f\\'(a)
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Point-slope form: $y - f(a) = f\'(a)(x - a)$.',
-  },
-      '$y - f(a) = f\\'(a)(x - a)
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Point-slope form: $y - f(a) = f\'(a)(x - a)$.',
-  },
-      '$y = x - a
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Point-slope form: $y - f(a) = f\'(a)(x - a)$.',
-  },
+      '$y - f(a) = f\'(a)(x - a)$',
+      '$y = f(a)$',
+      '$y = f\'(a)$',
+      '$y = x - a$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -71,12 +43,12 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f\'(a) > 0$, then near $x = a$:',
     options: [
-      '$f$ is increasing',
       '$f$ is decreasing',
+      '$f$ is increasing',
       '$f$ is constant',
-      '$f$ has a maximum',
+      '$f$ has a maximum'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Positive derivative means the function is increasing.',
   },
@@ -87,10 +59,10 @@ export const section29Questions: QuizQuestion[] = [
     options: [
       'Vertical',
       'Does not exist',
-      'At 45°',
       'Horizontal',
+      'At 45°'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Zero slope means a horizontal tangent line.',
   },

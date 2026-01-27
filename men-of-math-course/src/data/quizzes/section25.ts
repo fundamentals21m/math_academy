@@ -8,10 +8,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'The Prince of Mathematicians',
       'The Master of Algebra',
-      'The King of Number Theory',
       'The Father of Modern Analysis',
+      'The King of Number Theory'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Weierstrass established rigorous foundations for calculus and analysis.',
   },
@@ -20,12 +20,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Weierstrass constructed a famous example of a function that is:',
     options: [
-      'Continuous everywhere but differentiable nowhere',
       'Differentiable everywhere',
       'Periodic',
       'Discontinuous everywhere',
+      'Continuous everywhere but differentiable nowhere'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The Weierstrass function is continuous everywhere but differentiable nowhere, a counterintuitive result.',
   },
@@ -34,12 +34,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Weierstrass approximation theorem states that continuous functions can be approximated by:',
     options: [
+      'Polynomials',
       'Trigonometric functions',
       'Step functions',
-      'Polynomials',
-      'Exponentials',
+      'Exponentials'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Any continuous function on a closed interval can be uniformly approximated by polynomials.',
   },
@@ -51,7 +51,7 @@ export const section25Questions: QuizQuestion[] = [
       'An engineer',
       'A schoolteacher',
       'A lawyer',
-      'A priest',
+      'A priest'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -64,10 +64,10 @@ export const section25Questions: QuizQuestion[] = [
     options: [
       'Emmy Noether',
       'Ada Lovelace',
-      'Mary Somerville',
       'Sofia Kovalevskaya',
+      'Mary Somerville'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Weierstrass privately tutored Sofia Kovalevskaya, helping her earn a doctorate.',
   },

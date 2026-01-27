@@ -7,11 +7,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'To multiply and divide line segments, we first need:',
     options: [
       'A protractor',
-      'A unit length segment',
-      'A ruler with markings',
       'Numerical coordinates',
+      'A ruler with markings',
+      'A unit length segment'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A chosen unit length 1 is required so that 1 · a = a for any length a.',
   },
@@ -21,9 +21,9 @@ export const section03Questions: QuizQuestion[] = [
     question: 'To construct the product ab geometrically, we use:',
     options: [
       'Similar triangles and parallel lines',
-      'Angle bisection',
       'Circle intersection',
-      'A calculator',
+      'Angle bisection',
+      'A calculator'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -34,20 +34,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The diagonal of the unit square has length:',
     options: [
-      '$\\sqrt{2}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'By the Pythagorean theorem: d² = 1² + 1² = 2, so d = √2.',
-  },
       '1',
-      '$\\sqrt{3}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'By the Pythagorean theorem: d² = 1² + 1² = 2, so d = √2.',
-  },
+      '$\\sqrt{2}$',
       '2',
+      '$\\sqrt{3}$'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'By the Pythagorean theorem: d² = 1² + 1² = 2, so d = √2.',
   },
@@ -56,12 +48,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Pythagoreans proved that $\\sqrt{2}$ is:',
     options: [
-      'Irrational (not a ratio of integers)',
-      'A rational number m/n',
       'A natural number',
-      'Negative',
+      'A rational number m/n',
+      'Irrational (not a ratio of integers)',
+      'Negative'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'If √2 = m/n in lowest terms, then both m and n would be even—a contradiction.',
   },
@@ -71,9 +63,9 @@ export const section03Questions: QuizQuestion[] = [
     question: 'The Greeks viewed the product of two lengths a and b as:',
     options: [
       'Another line segment',
-      'A numerical value',
       'A cube',
-      'A rectangle with sides a and b',
+      'A numerical value',
+      'A rectangle with sides a and b'
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -84,12 +76,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The discovery of irrational lengths showed that:',
     options: [
-      'All lengths are ratios of integers',
-      'Geometry is simpler than arithmetic',
       'Geometry includes more than rational numbers',
-      'The Pythagorean theorem is false',
+      'Geometry is simpler than arithmetic',
+      'All lengths are ratios of integers',
+      'The Pythagorean theorem is false'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The diagonal of the unit square is constructible but irrational, expanding geometry beyond rationals.',
   },

@@ -6,12 +6,12 @@ export const section82Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An ellipse is defined as the set of points where:',
     options: [
-      'Sum of distances from two foci is constant',
       'Distance from one focus is constant',
       'Product of distances from two foci is constant',
       'Difference of distances from two foci is constant',
+      'Sum of distances from two foci is constant'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Ellipse: sum of distances to foci = constant.',
   },
@@ -20,12 +20,12 @@ export const section82Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A parabola is defined as points equidistant from:',
     options: [
+      'A focus and a directrix',
       'Two foci',
       'Two parallel lines',
-      'The origin',
-      'A focus and a directrix',
+      'The origin'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Parabola: distance to focus = distance to directrix.',
   },
@@ -37,7 +37,7 @@ export const section82Questions: QuizQuestion[] = [
       'Sum of distances to foci is constant',
       'Difference of distances to foci is constant',
       'Distance to one focus is constant',
-      'Product of distances is constant',
+      'Product of distances is constant'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,26 +48,10 @@ export const section82Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The standard form of an ellipse centered at origin is:',
     options: [
-      '$y = ax^2
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Ellipse: $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$.',
-  },
-      '$\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Ellipse: $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$.',
-  },
-      '$x^2 + y^2 = r^2
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Ellipse: $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$.',
-  },
-      '$\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Ellipse: $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$.',
-  },
+      '$y = ax^2$',
+      '$\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$',
+      '$\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$',
+      '$x^2 + y^2 = r^2$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -78,26 +62,10 @@ export const section82Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The eccentricity $e$ of an ellipse satisfies:',
     options: [
-      '$e = 0
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Ellipse: $0 < e < 1$. Circle: $e = 0$.',
-  },
-      '$0 < e < 1
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Ellipse: $0 < e < 1$. Circle: $e = 0$.',
-  },
-      '$e > 1
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Ellipse: $0 < e < 1$. Circle: $e = 0$.',
-  },
-      '$e = 1
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Ellipse: $0 < e < 1$. Circle: $e = 0$.',
-  },
+      '$e = 0$',
+      '$e > 1$',
+      '$e = 1$',
+      '$0 < e < 1$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -108,26 +76,10 @@ export const section82Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A parabola has eccentricity:',
     options: [
-      '$e = 1/2
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Parabola: $e = 1$. Hyperbola: $e > 1$.',
-  },
-      '$e = 0
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Parabola: $e = 1$. Hyperbola: $e > 1$.',
-  },
-      '$e = 1
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Parabola: $e = 1$. Hyperbola: $e > 1$.',
-  },
-      '$e = 2
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Parabola: $e = 1$. Hyperbola: $e > 1$.',
-  },
+      '$e = 1$',
+      '$e = 1/2$',
+      '$e = 0$',
+      '$e = 2$'
     ],
     correctIndex: 0,
     difficulty: 'easy',

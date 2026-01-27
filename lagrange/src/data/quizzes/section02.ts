@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section02Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'In the intrinsic (coordinate-free) formulation, the configuration space of a mechanical system is:',
+    options: [
+      'A differentiable manifold $Q$',
+      'Always Euclidean space $\\mathbb{R}^n$',
+      'A vector space',
+      'A discrete set of points',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'In the intrinsic formulation, the configuration space is a differentiable manifold $Q$, which allows for curved spaces and constraints without requiring global Cartesian coordinates.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The tangent bundle $TQ$ of a configuration manifold $Q$ represents:',
+    options: [
+      'All possible positions and velocities of the system',
+      'Only the positions of the system',
+      'Only the momenta of the system',
+      'The symmetry group of the system',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The tangent bundle $TQ$ consists of all pairs $(q, \\dot{q})$ where $q \\in Q$ is a position and $\\dot{q}$ is a velocity tangent to $Q$ at $q$. It is the natural domain for the Lagrangian.',
+  },
+  {
+    id: 3,
+    type: 'text',
+    question: 'What is the name of the bundle where the Lagrangian $L(q, \\dot{q})$ is naturally defined?',
+    correctAnswer: 'tangent bundle',
+    difficulty: 'easy',
+    explanation: 'The Lagrangian $L(q, \\dot{q})$ is defined on the tangent bundle $TQ$, as it depends on both position $q$ and velocity $\\dot{q}$.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'A fiber of the tangent bundle $TQ$ at a point $q \\in Q$ is:',
+    options: [
+      'The tangent space $T_qQ$ at that point',
+      'The entire manifold $Q$',
+      'A curve through $q$',
+      'The set of all paths ending at $q$',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The fiber over $q$ is the tangent space $T_qQ$, which is the vector space of all possible velocities at the point $q$. The tangent bundle is the union of all these fibers.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'If the configuration space $Q$ has dimension $n$, what is the dimension of the tangent bundle $TQ$?',
+    correctAnswer: 2,
+    numericRange: { min: 1, max: 10, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'For an $n$-dimensional manifold $Q$, the tangent bundle $TQ$ has dimension $2n$ (answer as a multiplier: $2 \\times n$). Each point contributes $n$ position coordinates and $n$ velocity coordinates.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The advantage of the intrinsic formulation is that:',
+    options: [
+      'Equations are independent of coordinate choice',
+      'Calculations are always simpler',
+      'Only Cartesian coordinates can be used',
+      'Constraints cannot be included',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The intrinsic (coordinate-free) formulation expresses physics in terms that do not depend on arbitrary coordinate choices, making the geometric structure more transparent.',
+  },
+];

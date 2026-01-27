@@ -7,11 +7,11 @@ export const section48Questions: QuizQuestion[] = [
     question: 'An isometry of the plane is a function that preserves:',
     options: [
       'Angles only',
-      'Color',
-      'Area only',
       'Distance',
+      'Area only',
+      'Color'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'An isometry is a distance-preserving map: |f(P) − f(Q)| = |P − Q|.',
   },
@@ -20,12 +20,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Every isometry of the plane is one of:',
     options: [
+      'Rotation, translation, or scaling',
       'Rotation or reflection only',
       'Rotation, translation, reflection, or glide reflection',
-      'Rotation, translation, or scaling',
-      'Translation or scaling',
+      'Translation or scaling'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The four types of isometries are: rotation, translation, reflection, and glide reflection.',
   },
@@ -34,20 +34,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The product of reflections in two lines meeting at angle $\\theta$ is:',
     options: [
-      'A rotation through angle $2\\theta
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Two reflections in lines meeting at angle θ produce a rotation through 2θ.',
-  },
       'A translation',
+      'A rotation through angle $\\theta$',
       'A glide reflection',
-      'A rotation through angle $\\theta
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Two reflections in lines meeting at angle θ produce a rotation through 2θ.',
-  },
+      'A rotation through angle $2\\theta$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Two reflections in lines meeting at angle θ produce a rotation through 2θ.',
   },
@@ -56,20 +48,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The product of reflections in two parallel lines at distance $d$ apart is:',
     options: [
-      'A translation through distance $d
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Two reflections in parallel lines distance d apart give a translation through 2d.',
-  },
+      'A translation through distance $2d$',
       'A rotation',
-      'The identity',
-      'A translation through distance $2d
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Two reflections in parallel lines distance d apart give a translation through 2d.',
-  },
+      'A translation through distance $d$',
+      'The identity'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Two reflections in parallel lines distance d apart give a translation through 2d.',
   },
@@ -78,12 +62,12 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Orientation-preserving isometries are exactly:',
     options: [
-      'Rotations and translations',
       'Reflections and glide reflections',
-      'All isometries',
+      'Rotations and translations',
       'Translations only',
+      'All isometries'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Rotations and translations preserve orientation; reflections and glide reflections reverse it.',
   },
@@ -92,10 +76,10 @@ export const section48Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Every isometry of the plane is a product of at most:',
     options: [
-      'Two reflections',
       'One reflection',
+      'Two reflections',
       'Three reflections',
-      'Four reflections',
+      'Four reflections'
     ],
     correctIndex: 2,
     difficulty: 'hard',

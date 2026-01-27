@@ -6,26 +6,10 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The projection of $\\mathbf{b}$ onto $\\mathbf{a}$ is:',
     options: [
-      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: '$\\text{proj}_{\\mathbf{a}} \\mathbf{b} = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$.',
-  },
-      '$\\mathbf{a} \\cdot \\mathbf{b}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$\\text{proj}_{\\mathbf{a}} \\mathbf{b} = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$.',
-  },
-      '$\\frac{\\mathbf{b}}{\\|\\mathbf{a}\\|}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$\\text{proj}_{\\mathbf{a}} \\mathbf{b} = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$.',
-  },
-      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$\\text{proj}_{\\mathbf{a}} \\mathbf{b} = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$.',
-  },
+      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}$',
+      '$\\mathbf{a} \\cdot \\mathbf{b}$',
+      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|^2} \\mathbf{a}$',
+      '$\\frac{\\mathbf{b}}{\\|\\mathbf{a}\\|}$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -36,26 +20,10 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The scalar projection of $\\mathbf{b}$ onto $\\mathbf{a}$ is:',
     options: [
-      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Scalar projection = $\\|\\mathbf{b}\\| \\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}$.',
-  },
-      '$\\mathbf{a} \\cdot \\mathbf{b}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Scalar projection = $\\|\\mathbf{b}\\| \\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}$.',
-  },
-      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{b}\\|}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Scalar projection = $\\|\\mathbf{b}\\| \\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}$.',
-  },
-      '$\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Scalar projection = $\\|\\mathbf{b}\\| \\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}$.',
-  },
+      '$\\mathbf{a} \\cdot \\mathbf{b}$',
+      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{b}\\|}$',
+      '$\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|$',
+      '$\\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\|}$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -66,26 +34,10 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The angle $\\theta$ between vectors satisfies:',
     options: [
-      '$\\cos\\theta = \\mathbf{a} + \\mathbf{b}
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: '$\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|}$.',
-  },
-      '$\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|}$.',
-  },
-      '$\\sin\\theta = \\mathbf{a} \\cdot \\mathbf{b}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|}$.',
-  },
-      '$\\theta = \\mathbf{a} \\cdot \\mathbf{b}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|}$.',
-  },
+      '$\\cos\\theta = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\|\\mathbf{a}\\| \\|\\mathbf{b}\\|}$',
+      '$\\cos\\theta = \\mathbf{a} + \\mathbf{b}$',
+      '$\\sin\\theta = \\mathbf{a} \\cdot \\mathbf{b}$',
+      '$\\theta = \\mathbf{a} \\cdot \\mathbf{b}$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -96,12 +48,12 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\mathbf{a} \\cdot \\mathbf{b} > 0$, then the angle between them is:',
     options: [
-      'Acute (< 90°)',
       'Obtuse (> 90°)',
+      'Acute (< 90°)',
       'Exactly 90°',
-      '180°',
+      '180°'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Positive dot product means $\\cos\\theta > 0$, so $\\theta < 90°$.',
   },
@@ -119,26 +71,10 @@ export const section76Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The component of $\\mathbf{b}$ orthogonal to $\\mathbf{a}$ is:',
     options: [
-      '$\\mathbf{b}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Subtract projection to get perpendicular component.',
-  },
-      '$\\text{proj}_{\\mathbf{a}} \\mathbf{b}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Subtract projection to get perpendicular component.',
-  },
-      '$\\mathbf{a}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Subtract projection to get perpendicular component.',
-  },
-      '$\\mathbf{b} - \\text{proj}_{\\mathbf{a}} \\mathbf{b}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Subtract projection to get perpendicular component.',
-  },
+      '$\\mathbf{b}$',
+      '$\\text{proj}_{\\mathbf{a}} \\mathbf{b}$',
+      '$\\mathbf{b} - \\text{proj}_{\\mathbf{a}} \\mathbf{b}$',
+      '$\\mathbf{a}$'
     ],
     correctIndex: 2,
     difficulty: 'medium',

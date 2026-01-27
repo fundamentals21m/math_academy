@@ -8,10 +8,10 @@ export const section14Questions: QuizQuestion[] = [
     options: [
       'Right triangles',
       'Unit circle geometry',
-      'Infinite series',
       'Integration (area functions)',
+      'Infinite series'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Apostol defines trigonometric functions analytically using integrals.',
   },
@@ -20,26 +20,10 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which identity holds for all $x$?',
     options: [
-      '$\\sin^2 x + \\cos^2 x = 1
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'The Pythagorean identity: $\\sin^2 x + \\cos^2 x = 1$.',
-  },
-      '$\\sin^2 x + \\cos^2 x = 0
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The Pythagorean identity: $\\sin^2 x + \\cos^2 x = 1$.',
-  },
-      '$\\sin x \\cdot \\cos x = 1
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The Pythagorean identity: $\\sin^2 x + \\cos^2 x = 1$.',
-  },
-      '$\\sin x + \\cos x = 1
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The Pythagorean identity: $\\sin^2 x + \\cos^2 x = 1$.',
-  },
+      '$\\sin^2 x + \\cos^2 x = 0$',
+      '$\\sin x \\cdot \\cos x = 1$',
+      '$\\sin x + \\cos x = 1$',
+      '$\\sin^2 x + \\cos^2 x = 1$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -68,18 +52,10 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The function $\\sin x$ is:',
     options: [
-      'Even: $\\sin(-x) = \\sin x
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Sine is an odd function: $\\sin(-x) = -\\sin x$.',
-  },
+      'Odd: $\\sin(-x) = -\\sin x$',
+      'Even: $\\sin(-x) = \\sin x$',
       'Neither even nor odd',
-      'Odd: $\\sin(-x) = -\\sin x
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Sine is an odd function: $\\sin(-x) = -\\sin x$.',
-  },
-      'Both even and odd',
+      'Both even and odd'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -90,26 +66,10 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The period of $\\sin x$ is:',
     options: [
-      '$\\pi
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: '$\\sin(x + 2\\pi) = \\sin x$ for all $x$; the period is $2\\pi$.',
-  },
-      '$\\pi/2
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$\\sin(x + 2\\pi) = \\sin x$ for all $x$; the period is $2\\pi$.',
-  },
-      '$2\\pi
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$\\sin(x + 2\\pi) = \\sin x$ for all $x$; the period is $2\\pi$.',
-  },
-      '$4\\pi
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$\\sin(x + 2\\pi) = \\sin x$ for all $x$; the period is $2\\pi$.',
-  },
+      '$\\pi$',
+      '$2\\pi$',
+      '$\\pi/2$',
+      '$4\\pi$'
     ],
     correctIndex: 1,
     difficulty: 'easy',

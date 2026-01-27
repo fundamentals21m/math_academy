@@ -9,7 +9,7 @@ export const section13Questions: QuizQuestion[] = [
       'Long division',
       'Matrix multiplication',
       'Fourier analysis',
-      'Prime factorization',
+      'Prime factorization'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -20,12 +20,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What differential equation describes how sound waves propagate?',
     options: [
-      'Newton\\\\'s Second Law',
-      'The wave equation',
-      'Euler\\\\'s identity',
+      'Newton\'s Second Law',
+      'Euler\'s identity',
       'The heat equation',
+      'The wave equation'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The wave equation is a partial differential equation that describes how vibrations travel through strings, air, and other media.',
   },
@@ -34,12 +34,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does MP3 compression work?',
     options: [
+      'By using Fourier transforms to identify frequencies we can\'t hear and discarding them',
       'By removing all high notes',
-      'By using Fourier transforms to identify frequencies we can\\'t hear and discarding them',
       'By playing music faster',
-      'By converting to a different file format',
+      'By converting to a different file format'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'MP3 uses Fourier analysis to identify frequency components our ears can\'t detect, then removes them to reduce file size.',
   },
@@ -48,12 +48,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are Bézier curves used for?',
     options: [
-      'Drawing smooth curves in fonts and vector graphics',
       'Calculating prime numbers',
+      'Drawing smooth curves in fonts and vector graphics',
       'Predicting weather',
-      'Measuring earthquake intensity',
+      'Measuring earthquake intensity'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Bézier curves are parametric curves used in every font, vector graphic, and CAD drawing. They ensure smooth, continuous curves.',
   },
@@ -64,10 +64,10 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'By taking photographs',
       'By using random colors',
-      'By copying real light bulbs',
       'By solving the rendering equation (an integral equation)',
+      'By copying real light bulbs'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Photorealistic rendering requires solving the rendering equation, which describes how light bounces around a scene using integrals.',
   },
@@ -78,10 +78,10 @@ export const section13Questions: QuizQuestion[] = [
     options: [
       'The color blue',
       'File compression',
-      'Derivatives (the gradient shows where intensity changes rapidly)',
       'Random sampling',
+      'Derivatives (the gradient shows where intensity changes rapidly)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Edges in images are found using derivatives—specifically the gradient $\\nabla I$, which is large where image intensity changes rapidly.',
   },

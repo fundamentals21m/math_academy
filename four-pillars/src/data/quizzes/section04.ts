@@ -7,11 +7,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Two triangles are similar if:',
     options: [
       'They have the same area',
-      'One is inside the other',
       'Their corresponding angles are equal',
       'They have the same perimeter',
+      'One is inside the other'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Similarity means equal corresponding angles; this implies proportional sides.',
   },
@@ -20,12 +20,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If triangles ABC and A\'B\'C\' are similar with sides b, c and b\', c\' opposite corresponding angles, then:',
     options: [
-      'b · c = b\\\\\' · c\\\\\'',
-      'b/c = b\\\\\'/c\\\\\'',
-      'b + c = b\\\\\' + c\\\\\'',
-      'b - c = b\\\\\' - c\\\\\'',
+      'b + c = b\' + c\'',
+      'b · c = b\' · c\'',
+      'b/c = b\'/c\'',
+      'b - c = b\' - c\''
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Similar triangles have proportional corresponding sides: the ratios are equal.',
   },
@@ -35,11 +35,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'The proof that similar triangles have proportional sides relies on:',
     options: [
       'The Pythagorean theorem',
-      'Angle bisection',
-      'The Thales theorem (parallel lines)',
       'Circle properties',
+      'Angle bisection',
+      'The Thales theorem (parallel lines)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'By superimposing triangles, BC and B\'C\' become parallel, and Thales theorem applies.',
   },
@@ -48,20 +48,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Using similar triangles, we can prove that the diagonal of the unit square equals:',
     options: [
-      '2',
-      '$\\sqrt{2}
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Comparing half-square and quarter-square triangles: 1/d = (d/2)/1, so d² = 2.',
-  },
+      '$\\sqrt{2}$',
       '1',
-      '$\\sqrt{3}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Comparing half-square and quarter-square triangles: 1/d = (d/2)/1, so d² = 2.',
-  },
+      '2',
+      '$\\sqrt{3}$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Comparing half-square and quarter-square triangles: 1/d = (d/2)/1, so d² = 2.',
   },
@@ -71,11 +63,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'Pappus\'s theorem (parallel case) states: if AB ∥ ED and FE ∥ BC, then:',
     options: [
       'AB = BC',
-      'The areas are equal',
-      'The triangles are congruent',
       'AF ∥ CD',
+      'The triangles are congruent',
+      'The areas are equal'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Pappus\'s theorem relates parallel conditions among six points on two lines.',
   },
@@ -84,12 +76,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Desargues\'s theorem (parallel case) concerns two triangles that are:',
     options: [
-      'In perspective from a point O',
-      'Equal in area',
       'Congruent',
-      'Inscribed in a circle',
+      'Equal in area',
+      'In perspective from a point O',
+      'Inscribed in a circle'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'If triangles are in perspective from O with two pairs of parallel sides, the third pair is also parallel.',
   },

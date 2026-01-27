@@ -7,11 +7,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'What mathematical system did Descartes invent that unified algebra and geometry?',
     options: [
       'Differential calculus',
-      'Boolean algebra',
       'The Cartesian coordinate system',
-      'Set theory',
+      'Boolean algebra',
+      'Set theory'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Descartes invented the coordinate system that bears his name, allowing geometric shapes to be described by algebraic equations.',
   },
@@ -20,12 +20,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is Descartes\'s most famous philosophical statement?',
     options: [
-      'I think, therefore I am',
       'Knowledge is power',
       'The unexamined life is not worth living',
-      'Man is the measure of all things',
+      'I think, therefore I am',
+      'Man is the measure of all things'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '"Cogito, ergo sum" (I think, therefore I am) was Descartes\'s foundational principle of certainty.',
   },
@@ -37,7 +37,7 @@ export const section04Questions: QuizQuestion[] = [
       'Constants',
       'Coefficients',
       'Exponents',
-      'Unknown quantities (variables)',
+      'Unknown quantities (variables)'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -48,26 +48,10 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The equation of a circle centered at the origin with radius $r$ in Cartesian coordinates is:',
     options: [
-      '$x + y = r
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The distance formula gives $\\sqrt{x^2 + y^2} = r$, so $x^2 + y^2 = r^2$.',
-  },
-      '$xy = r
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The distance formula gives $\\sqrt{x^2 + y^2} = r$, so $x^2 + y^2 = r^2$.',
-  },
-      '$x^2 + y^2 = r^2
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The distance formula gives $\\sqrt{x^2 + y^2} = r$, so $x^2 + y^2 = r^2$.',
-  },
-      '$x^2 - y^2 = r^2
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The distance formula gives $\\sqrt{x^2 + y^2} = r$, so $x^2 + y^2 = r^2$.',
-  },
+      '$x^2 + y^2 = r^2$',
+      '$x + y = r$',
+      '$xy = r$',
+      '$x^2 - y^2 = r^2$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -81,7 +65,7 @@ export const section04Questions: QuizQuestion[] = [
       'The derivative of a polynomial',
       'The number of positive and negative real roots',
       'Whether a number is prime',
-      'The area under a curve',
+      'The area under a curve'
     ],
     correctIndex: 1,
     difficulty: 'medium',

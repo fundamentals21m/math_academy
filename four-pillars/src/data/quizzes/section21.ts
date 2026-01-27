@@ -7,11 +7,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'An isometry of ℝ² is determined by the images of:',
     options: [
       'One point',
-      'Four points',
-      'Three non-collinear points',
       'Two points',
+      'Four points',
+      'Three non-collinear points'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Any point P is determined by its distances from three non-collinear points; isometries preserve these distances.',
   },
@@ -21,9 +21,9 @@ export const section21Questions: QuizQuestion[] = [
     question: 'The Three Reflections Theorem says every isometry is a combination of at most:',
     options: [
       'Three reflections',
-      'Two reflections',
       'One reflection',
-      'Four reflections',
+      'Two reflections',
+      'Four reflections'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Translations and rotations are products of:',
     options: [
       'One reflection',
-      'They cannot be expressed as reflections',
-      'Three reflections',
       'Two reflections',
+      'Three reflections',
+      'They cannot be expressed as reflections'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Translations = two parallel reflections; rotations = two intersecting reflections.',
   },
@@ -48,12 +48,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Glide reflections are products of:',
     options: [
+      'One reflection',
       'Two reflections',
       'Three reflections',
-      'One reflection',
-      'Zero reflections',
+      'Zero reflections'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A glide reflection with nonzero translation requires exactly three reflections.',
   },
@@ -63,11 +63,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Translations and rotations ____ orientation.',
     options: [
       'Reverse',
-      'Have no effect on',
-      'Preserve',
       'Sometimes preserve, sometimes reverse',
+      'Have no effect on',
+      'Preserve'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Even numbers of reflections preserve orientation (clockwise stays clockwise).',
   },
@@ -76,12 +76,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Reflections and glide reflections ____ orientation.',
     options: [
-      'Sometimes preserve, sometimes reverse',
       'Reverse',
       'Preserve',
-      'Double',
+      'Sometimes preserve, sometimes reverse',
+      'Double'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Odd numbers of reflections reverse orientation (clockwise becomes counterclockwise).',
   },

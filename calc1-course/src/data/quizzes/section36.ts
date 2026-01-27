@@ -6,26 +6,10 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Second Fundamental Theorem states that if $F\' = f$, then $\\int_a^b f(x)\\,dx = ?$',
     options: [
-      '$F(b) - F(a)
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'FTC II: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F$ is any antiderivative of $f$.',
-  },
-      '$F(a) - F(b)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'FTC II: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F$ is any antiderivative of $f$.',
-  },
-      '$F\\'(b) - F\\'(a)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'FTC II: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F$ is any antiderivative of $f$.',
-  },
-      '$F(a) + F(b)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'FTC II: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F$ is any antiderivative of $f$.',
-  },
+      '$F(a) - F(b)$',
+      '$F\'(b) - F\'(a)$',
+      '$F(a) + F(b)$',
+      '$F(b) - F(a)$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -54,26 +38,10 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A primitive (antiderivative) of $f$ is a function $F$ such that:',
     options: [
-      '$F = f
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'An antiderivative $F$ satisfies $F\'(x) = f(x)$.',
-  },
-      '$\\int F = f
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'An antiderivative $F$ satisfies $F\'(x) = f(x)$.',
-  },
-      '$F\\'\\' = f
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'An antiderivative $F$ satisfies $F\'(x) = f(x)$.',
-  },
-      '$F\\' = f
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'An antiderivative $F$ satisfies $F\'(x) = f(x)$.',
-  },
+      '$F\' = f$',
+      '$F = f$',
+      '$\\int F = f$',
+      '$F\'\' = f$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -84,26 +52,10 @@ export const section36Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The notation $F(x)\\Big|_a^b$ means:',
     options: [
-      '$F(b) - F(a)
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'The evaluation notation: $F(x)\\Big|_a^b = F(b) - F(a)$.',
-  },
-      '$F(a) \\cdot F(b)
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The evaluation notation: $F(x)\\Big|_a^b = F(b) - F(a)$.',
-  },
-      '$F(a) - F(b)
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The evaluation notation: $F(x)\\Big|_a^b = F(b) - F(a)$.',
-  },
-      '$F(a) + F(b)
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The evaluation notation: $F(x)\\Big|_a^b = F(b) - F(a)$.',
-  },
+      '$F(a) \\cdot F(b)$',
+      '$F(b) - F(a)$',
+      '$F(a) - F(b)$',
+      '$F(a) + F(b)$'
     ],
     correctIndex: 1,
     difficulty: 'easy',

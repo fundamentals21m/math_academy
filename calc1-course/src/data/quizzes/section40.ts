@@ -6,26 +6,10 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The functional equation $\\ln(ab) = ?$',
     options: [
-      '$\\ln a \\cdot \\ln b
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Log of a product: $\\ln(ab) = \\ln a + \\ln b$.',
-  },
-      '$\\ln a + \\ln b
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Log of a product: $\\ln(ab) = \\ln a + \\ln b$.',
-  },
-      '$\\ln a - \\ln b
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Log of a product: $\\ln(ab) = \\ln a + \\ln b$.',
-  },
-      '$(\\ln a)^{\\ln b}
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Log of a product: $\\ln(ab) = \\ln a + \\ln b$.',
-  },
+      '$\\ln a \\cdot \\ln b$',
+      '$\\ln a - \\ln b$',
+      '$\\ln a + \\ln b$',
+      '$(\\ln a)^{\\ln b}$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -36,26 +20,10 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\ln(a/b) = ?$',
     options: [
-      '$\\ln a - \\ln b
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Log of a quotient: $\\ln(a/b) = \\ln a - \\ln b$.',
-  },
-      '$\\ln a / \\ln b
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Log of a quotient: $\\ln(a/b) = \\ln a - \\ln b$.',
-  },
-      '$\\ln a \\cdot \\ln b
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Log of a quotient: $\\ln(a/b) = \\ln a - \\ln b$.',
-  },
-      '$\\ln a + \\ln b
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Log of a quotient: $\\ln(a/b) = \\ln a - \\ln b$.',
-  },
+      '$\\ln a / \\ln b$',
+      '$\\ln a \\cdot \\ln b$',
+      '$\\ln a + \\ln b$',
+      '$\\ln a - \\ln b$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -66,26 +34,10 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\ln(a^r) = ?$',
     options: [
-      '$a^r \\ln a
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Log of a power: $\\ln(a^r) = r\\ln a$.',
-  },
-      '$(\\ln a)^r
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Log of a power: $\\ln(a^r) = r\\ln a$.',
-  },
-      '$\\ln a + r
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Log of a power: $\\ln(a^r) = r\\ln a$.',
-  },
-      '$r \\ln a
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Log of a power: $\\ln(a^r) = r\\ln a$.',
-  },
+      '$r \\ln a$',
+      '$a^r \\ln a$',
+      '$(\\ln a)^r$',
+      '$\\ln a + r$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -96,26 +48,10 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The change of base formula: $\\log_a x = ?$',
     options: [
-      '$\\frac{\\ln a}{\\ln x}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Change of base: $\\log_a x = \\frac{\\ln x}{\\ln a}$.',
-  },
-      '$\\ln x - \\ln a
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Change of base: $\\log_a x = \\frac{\\ln x}{\\ln a}$.',
-  },
-      '$\\frac{\\ln x}{\\ln a}
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Change of base: $\\log_a x = \\frac{\\ln x}{\\ln a}$.',
-  },
-      '$\\ln x \\cdot \\ln a
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Change of base: $\\log_a x = \\frac{\\ln x}{\\ln a}$.',
-  },
+      '$\\frac{\\ln a}{\\ln x}$',
+      '$\\frac{\\ln x}{\\ln a}$',
+      '$\\ln x - \\ln a$',
+      '$\\ln x \\cdot \\ln a$'
     ],
     correctIndex: 1,
     difficulty: 'medium',

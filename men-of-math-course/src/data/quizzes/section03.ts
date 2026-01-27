@@ -6,12 +6,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What famous exclamation is attributed to Archimedes upon discovering buoyancy?',
     options: [
-      'Eureka!',
       'E = mc²!',
+      'Eureka!',
       'QED!',
-      'Cogito ergo sum!',
+      'Cogito ergo sum!'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Legend says Archimedes shouted "Eureka!" (I have found it!) when he discovered the principle of buoyancy in his bath.',
   },
@@ -20,22 +20,10 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the value Archimedes calculated for pi, expressed as bounds?',
     options: [
-      '$3\\frac{10}{71} < \\pi < 3\\frac{1}{7}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Archimedes proved that $3\\frac{10}{71} < \\pi < 3\\frac{1}{7}$ using inscribed and circumscribed 96-gons.',
-  },
-      '$3 < \\pi < 4
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Archimedes proved that $3\\frac{10}{71} < \\pi < 3\\frac{1}{7}$ using inscribed and circumscribed 96-gons.',
-  },
+      '$3 < \\pi < 4$',
       '$\\pi = \\frac{22}{7}$ exactly',
-      '$3.14 < \\pi < 3.15
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Archimedes proved that $3\\frac{10}{71} < \\pi < 3\\frac{1}{7}$ using inscribed and circumscribed 96-gons.',
-  },
+      '$3\\frac{10}{71} < \\pi < 3\\frac{1}{7}$',
+      '$3.14 < \\pi < 3.15$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -46,12 +34,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which Archimedean discovery relates the volume of a sphere to a cylinder?',
     options: [
-      'The sphere\\\'s volume is half the cylinder\\\'s',
-      'The sphere\\\'s volume is two-thirds the cylinder\\\'s',
-      'The sphere\\\'s volume is three-quarters the cylinder\\\'s',
+      'The sphere\'s volume is half the cylinder\'s',
+      'The sphere\'s volume is three-quarters the cylinder\'s',
       'They have equal volumes',
+      'The sphere\'s volume is two-thirds the cylinder\'s'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A sphere has $\\frac{2}{3}$ the volume of a circumscribed cylinder. Archimedes was so proud of this he had it inscribed on his tomb.',
   },
@@ -60,12 +48,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Archimedes Palimpsest revealed his work on a technique anticipating:',
     options: [
+      'Calculus (infinitesimals)',
       'Algebra',
       'Number theory',
-      'Probability',
-      'Calculus (infinitesimals)',
+      'Probability'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The Method revealed Archimedes used infinitesimal techniques similar to integration, centuries before calculus was invented.',
   },

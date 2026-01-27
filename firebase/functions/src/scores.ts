@@ -5,7 +5,7 @@ import * as admin from 'firebase-admin';
 const SYNC_RATE_LIMIT_MAX = 30; // Max syncs per user per window
 const SYNC_RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute window
 
-type CourseId = 'ba' | 'crypto' | 'aa' | 'linalg' | 'advlinalg' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art' | 'calc_easy' | 'wm' | 'four_pillars' | 'mom' | 'euclid' | 'thales' | 'gauss' | 'human_action' | 'atlas_shrugged' | 'template';
+type CourseId = 'ba' | 'crypto' | 'aa' | 'linalg' | 'advlinalg' | 'islr' | 'ra' | 'calc1' | 'calc_lib_art' | 'calc_easy' | 'wm' | 'four_pillars' | 'mom' | 'euclid' | 'thales' | 'gauss' | 'human_action' | 'atlas_shrugged' | 'template' | 'mod-race' | 'base-race' | 'bfi' | 'frost' | 'koblitz' | 'coding' | 'west_graphs' | 'numbers-geometry' | 'ross-prob' | 'intro-discrete' | 'rudin' | 'df' | 'euler-intro' | 'tao-analysis-1' | 'man_econ_state' | 'road_to_serfdom' | 'orange_btc' | 'math_history';
 
 interface ScoreUpdate {
   courseId: CourseId;
@@ -96,9 +96,9 @@ export const syncScores = functions.https.onCall(
       );
     }
 
-    const validCourses: CourseId[] = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom', 'euclid', 'thales', 'gauss', 'human_action', 'atlas_shrugged', 'template'];
+    const validCourses: CourseId[] = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom', 'euclid', 'thales', 'gauss', 'human_action', 'atlas_shrugged', 'template', 'mod-race', 'base-race', 'bfi', 'frost', 'koblitz', 'coding', 'west_graphs', 'numbers-geometry', 'ross-prob', 'intro-discrete', 'rudin', 'df', 'euler-intro', 'tao-analysis-1', 'man_econ_state', 'road_to_serfdom', 'orange_btc', 'math_history'];
     const batch = admin.firestore().batch();
-    const userScores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0, euclid: 0, thales: 0, gauss: 0, human_action: 0, atlas_shrugged: 0, template: 0 };
+    const userScores: Record<CourseId, number> = { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0, euclid: 0, thales: 0, gauss: 0, human_action: 0, atlas_shrugged: 0, template: 0, 'mod-race': 0, 'base-race': 0, bfi: 0, frost: 0, koblitz: 0, coding: 0, west_graphs: 0, 'numbers-geometry': 0, 'ross-prob': 0, 'intro-discrete': 0, rudin: 0, df: 0, 'euler-intro': 0, 'tao-analysis-1': 0, man_econ_state: 0, road_to_serfdom: 0, orange_btc: 0, math_history: 0 };
 
     for (const score of scores) {
       if (!validCourses.includes(score.courseId)) {
@@ -183,7 +183,7 @@ export const getLeaderboard = functions.https.onCall(
   }> => {
     const { courseId, limit = 50 } = data || {};
 
-    const validOptions = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom', 'euclid', 'thales', 'gauss', 'human_action', 'atlas_shrugged', 'template', 'overall'];
+    const validOptions = ['ba', 'crypto', 'aa', 'linalg', 'advlinalg', 'islr', 'ra', 'calc1', 'calc_lib_art', 'calc_easy', 'wm', 'four_pillars', 'mom', 'euclid', 'thales', 'gauss', 'human_action', 'atlas_shrugged', 'template', 'mod-race', 'base-race', 'bfi', 'frost', 'koblitz', 'coding', 'west_graphs', 'numbers-geometry', 'ross-prob', 'intro-discrete', 'rudin', 'df', 'euler-intro', 'tao-analysis-1', 'man_econ_state', 'road_to_serfdom', 'orange_btc', 'math_history', 'overall'];
     if (!courseId || !validOptions.includes(courseId)) {
       throw new functions.https.HttpsError(
         'invalid-argument',
@@ -370,7 +370,7 @@ export const getUserScores = functions.https.onCall(
 
     return {
       found: true,
-      scores: userData.scores || { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0, euclid: 0, thales: 0, gauss: 0, human_action: 0, atlas_shrugged: 0, template: 0 },
+      scores: userData.scores || { ba: 0, crypto: 0, aa: 0, linalg: 0, advlinalg: 0, islr: 0, ra: 0, calc1: 0, calc_lib_art: 0, calc_easy: 0, wm: 0, four_pillars: 0, mom: 0, euclid: 0, thales: 0, gauss: 0, human_action: 0, atlas_shrugged: 0, template: 0, 'mod-race': 0, 'base-race': 0, bfi: 0, frost: 0, koblitz: 0, coding: 0, west_graphs: 0, 'numbers-geometry': 0, 'ross-prob': 0, 'intro-discrete': 0, rudin: 0, df: 0, 'euler-intro': 0, 'tao-analysis-1': 0, man_econ_state: 0, road_to_serfdom: 0, orange_btc: 0, math_history: 0 },
       totalXP: userData.totalXP || 0,
       level: userData.level || 1,
       displayName: userData.displayName || null,

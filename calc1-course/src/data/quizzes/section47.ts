@@ -7,17 +7,9 @@ export const section47Questions: QuizQuestion[] = [
     question: 'Taylor\'s theorem gives the error (remainder) as:',
     options: [
       'Always exactly zero',
-      '$f(a)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The remainder $R_n(x) = f(x) - P_n(x)$ is the approximation error.',
-  },
-      'The $(n+1)$th Taylor term',
-      'The difference $f(x) - P_n(x)
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The remainder $R_n(x) = f(x) - P_n(x)$ is the approximation error.',
-  },
+      'The difference $f(x) - P_n(x)$',
+      '$f(a)$',
+      'The $(n+1)$th Taylor term'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -28,22 +20,10 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Lagrange form of the remainder is:',
     options: [
-      '$\\frac{f^{(n)}(a)}{n!}(x-a)^n
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Lagrange remainder: $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$.',
-  },
-      '$\\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Lagrange remainder: $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$.',
-  },
-      '$f(x) - f(a)
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Lagrange remainder: $R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$.',
-  },
-      'Always zero',
+      '$\\frac{f^{(n)}(a)}{n!}(x-a)^n$',
+      '$f(x) - f(a)$',
+      '$\\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ for some $c$ between $a$ and $x$',
+      'Always zero'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -55,11 +35,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'The remainder helps us:',
     options: [
       'Compute exact values',
-      'Bound the approximation error',
       'Solve equations',
       'Find antiderivatives',
+      'Bound the approximation error'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The remainder formula lets us bound how far $P_n(x)$ is from $f(x)$.',
   },
@@ -68,22 +48,10 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $e^x$, all derivatives are $e^c$, so the remainder at $a = 0$ is bounded by:',
     options: [
-      '$x^n
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Since $e^c \\leq e^x$ for $0 < c < x$, $|R_n| \\leq \\frac{e^x |x|^{n+1}}{(n+1)!}$.',
-  },
-      '$e^x
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'Since $e^c \\leq e^x$ for $0 < c < x$, $|R_n| \\leq \\frac{e^x |x|^{n+1}}{(n+1)!}$.',
-  },
-      'Cannot be bounded',
-      '$\\frac{e^x |x|^{n+1}}{(n+1)!}$ when $x > 0
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'Since $e^c \\leq e^x$ for $0 < c < x$, $|R_n| \\leq \\frac{e^x |x|^{n+1}}{(n+1)!}$.',
-  },
+      '$\\frac{e^x |x|^{n+1}}{(n+1)!}$ when $x > 0$',
+      '$x^n$',
+      '$e^x$',
+      'Cannot be bounded'
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -94,26 +62,10 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'As $n \\to \\infty$, the Taylor remainder for $e^x$ goes to:',
     options: [
-      '$0
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'For $e^x$, the remainder $\\to 0$ as $n \\to \\infty$ (series converges to $e^x$).',
-  },
-      '$\\infty
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'For $e^x$, the remainder $\\to 0$ as $n \\to \\infty$ (series converges to $e^x$).',
-  },
-      '$1
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'For $e^x$, the remainder $\\to 0$ as $n \\to \\infty$ (series converges to $e^x$).',
-  },
-      'Depends on $x
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'For $e^x$, the remainder $\\to 0$ as $n \\to \\infty$ (series converges to $e^x$).',
-  },
+      '$\\infty$',
+      '$0$',
+      '$1$',
+      'Depends on $x$'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -126,12 +78,8 @@ export const section47Questions: QuizQuestion[] = [
     options: [
       'No integration',
       'Only the first derivative',
-      'The antiderivative of $f
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Integral form: $R_n(x) = \\frac{1}{n!}\\int_a^x (x-t)^n f^{(n+1)}(t)\\,dt$.',
-  },
       'A definite integral of the $(n+1)$th derivative',
+      'The antiderivative of $f$'
     ],
     correctIndex: 2,
     difficulty: 'hard',

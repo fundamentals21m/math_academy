@@ -6,39 +6,24 @@ export const section38Quiz: QuizQuestion[] = [
   {
     id: 's38-q1',
     question: 'The incidence matrix of a graph has rows for:',
-    options: [
-      'Nodes',
-      'Paths',
-      'Cycles',
-      'Edges',
-    ],
-    correctIndex: 3,
+    options: ['Nodes', 'Paths', 'Edges', 'Cycles'],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Each row represents an edge, columns represent nodes.'
   },
   {
     id: 's38-q2',
     question: 'The null space of the incidence matrix contains:',
-    options: [
-      'Node potentials (up to a constant)',
-      'Edge flows',
-      'Shortest paths',
-      'Cycles',
-    ],
-    correctIndex: 0,
+    options: ['Edge flows', 'Shortest paths', 'Cycles', 'Node potentials (up to a constant)'],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Ax = 0 when all nodes have equal potential (constant vector).'
   },
   {
     id: 's38-q3',
     question: 'Kirchhoff\'s Current Law says currents sum to zero at:',
-    options: [
-      'Edges',
-      'The boundary',
-      'Nodes',
-      'Cycles',
-    ],
-    correctIndex: 2,
+    options: ['Nodes', 'Edges', 'The boundary', 'Cycles'],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Current in = current out at every node (conservation).'
   },
@@ -57,51 +42,31 @@ export const section39Quiz: QuizQuestion[] = [
   {
     id: 's39-q1',
     question: 'A Markov matrix has columns that:',
-    options: [
-      'Sum to 0',
-      'Sum to 1',
-      'Are orthogonal',
-      'Are unit vectors',
-    ],
-    correctIndex: 1,
+    options: ['Sum to 0', 'Are orthogonal', 'Sum to 1', 'Are unit vectors'],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Columns are probability distributions: non-negative, sum to 1.'
   },
   {
     id: 's39-q2',
     question: 'Every Markov matrix has eigenvalue:',
-    options: [
-      '1',
-      '0',
-      '-1',
-      '2',
-    ],
-    correctIndex: 0,
+    options: ['0', '-1', '2', '1'],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'λ = 1 always (eigenvector is steady state distribution).'
   },
   {
     id: 's39-q3',
     question: 'The steady state satisfies:',
-    options: [
-      'Ax = 0',
-      'Ax = 2x',
-      'Ax = x',
-      'A²x = x',
-    ],
-    correctIndex: 2,
+    options: ['Ax = x', 'Ax = 0', 'Ax = 2x', 'A²x = x'],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Steady state x satisfies Ax = x (eigenvalue 1).'
   },
   {
     id: 's39-q4',
     question: 'For a positive Markov matrix, Aᵏ converges to:',
-    options: [
-      'Zero matrix',
-      'Rank-1 matrix (steady state × ones)',
-      'Identity',
-      'Diagonal matrix',
-    ],
+    options: ['Zero matrix', 'Rank-1 matrix (steady state × ones)', 'Identity', 'Diagonal matrix'],
     correctIndex: 1,
     difficulty: 'hard',
     explanation: 'All columns converge to the steady state eigenvector.'
@@ -113,20 +78,15 @@ export const section40Quiz: QuizQuestion[] = [
   {
     id: 's40-q1',
     question: 'Linear programming optimizes a linear objective subject to:',
-    options: ['Quadratic constraints', 'Linear inequality constraints', 'No constraints', 'Equality constraints only'],
-    correctIndex: 1,
+    options: ['Quadratic constraints', 'No constraints', 'Linear inequality constraints', 'Equality constraints only'],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'LP: minimize cᵀx subject to Ax ≤ b, x ≥ 0.'
   },
   {
     id: 's40-q2',
     question: 'The feasible region of an LP is:',
-    options: [
-      'A sphere',
-      'A line',
-      'A hyperboloid',
-      'A polyhedron (polytope)',
-    ],
+    options: ['A sphere', 'A line', 'A hyperboloid', 'A polyhedron (polytope)'],
     correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Linear inequalities create a convex polytope.'
@@ -134,26 +94,16 @@ export const section40Quiz: QuizQuestion[] = [
   {
     id: 's40-q3',
     question: 'The optimal solution of an LP (if bounded) occurs at:',
-    options: [
-      'The center',
-      'A vertex (corner)',
-      'An edge',
-      'Any point',
-    ],
-    correctIndex: 1,
+    options: ['A vertex (corner)', 'The center', 'An edge', 'Any point'],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Optimum is at a vertex of the feasible polytope.'
   },
   {
     id: 's40-q4',
     question: 'The simplex method moves along:',
-    options: [
-      'Random directions',
-      'The interior',
-      'Edges of the polytope',
-      'Diagonals',
-    ],
-    correctIndex: 2,
+    options: ['Random directions', 'Edges of the polytope', 'The interior', 'Diagonals'],
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Simplex walks along edges from vertex to vertex.'
   }
@@ -164,25 +114,15 @@ export const section41Quiz: QuizQuestion[] = [
   {
     id: 's41-q1',
     question: 'Fourier series represents functions as sums of:',
-    options: [
-      'Polynomials',
-      'Sines and cosines',
-      'Exponentials',
-      'Step functions',
-    ],
-    correctIndex: 1,
+    options: ['Polynomials', 'Exponentials', 'Sines and cosines', 'Step functions'],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'f(x) = a₀ + Σ(aₙcos(nx) + bₙsin(nx)).'
   },
   {
     id: 's41-q2',
     question: 'The functions sin(nx) and sin(mx) for n ≠ m are:',
-    options: [
-      'Parallel',
-      'Equal',
-      'Opposite',
-      'Orthogonal',
-    ],
+    options: ['Parallel', 'Equal', 'Opposite', 'Orthogonal'],
     correctIndex: 3,
     difficulty: 'medium',
     explanation: '∫sin(nx)sin(mx)dx = 0 for n ≠ m (orthogonality).'
@@ -190,12 +130,7 @@ export const section41Quiz: QuizQuestion[] = [
   {
     id: 's41-q3',
     question: 'Fourier coefficients are found using:',
-    options: [
-      'Inner products (integrals)',
-      'Derivatives',
-      'Matrix inversion',
-      'Eigenvalues',
-    ],
+    options: ['Inner products (integrals)', 'Derivatives', 'Matrix inversion', 'Eigenvalues'],
     correctIndex: 0,
     difficulty: 'medium',
     explanation: 'aₙ = (2/π)∫f(x)cos(nx)dx, projection onto basis.'
@@ -203,13 +138,8 @@ export const section41Quiz: QuizQuestion[] = [
   {
     id: 's41-q4',
     question: 'Parseval\'s theorem relates energy in time domain to:',
-    options: [
-      'Phase',
-      'Amplitude only',
-      'Nothing',
-      'Energy in frequency domain',
-    ],
-    correctIndex: 3,
+    options: ['Phase', 'Energy in frequency domain', 'Amplitude only', 'Nothing'],
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: '∫|f|² = Σ|coefficients|² (energy conservation).'
   }
@@ -220,21 +150,16 @@ export const section42Quiz: QuizQuestion[] = [
   {
     id: 's42-q1',
     question: '2D rotation by θ is represented by matrix:',
-    options: ['[[θ, 0], [0, θ]]', '[[cos θ, -sin θ], [sin θ, cos θ]]', '[[1, θ], [0, 1]]', '[[θ, 1], [1, θ]]'],
-    correctIndex: 1,
+    options: ['[[θ, 0], [0, θ]]', '[[1, θ], [0, 1]]', '[[cos θ, -sin θ], [sin θ, cos θ]]', '[[θ, 1], [1, θ]]'],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Rotation matrix preserves lengths and rotates by θ.'
   },
   {
     id: 's42-q2',
     question: 'Homogeneous coordinates use dimension:',
-    options: [
-      'n',
-      'n + 1',
-      'n - 1',
-      '2n',
-    ],
-    correctIndex: 1,
+    options: ['n', 'n - 1', '2n', 'n + 1'],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '(x, y) becomes (x, y, 1) to allow translation as matrix.'
   },
@@ -249,13 +174,8 @@ export const section42Quiz: QuizQuestion[] = [
   {
     id: 's42-q4',
     question: 'Composing transformations A then B gives:',
-    options: [
-      'BA',
-      'A + B',
-      'AB',
-      'A - B',
-    ],
-    correctIndex: 0,
+    options: ['A + B', 'BA', 'AB', 'A - B'],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Apply A first, then B: result is BA (right to left).'
   }
@@ -266,25 +186,15 @@ export const section43Quiz: QuizQuestion[] = [
   {
     id: 's43-q1',
     question: 'The Hill cipher encrypts using:',
-    options: [
-      'Addition mod 26',
-      'Matrix multiplication mod 26',
-      'XOR',
-      'Substitution',
-    ],
-    correctIndex: 1,
+    options: ['Addition mod 26', 'XOR', 'Matrix multiplication mod 26', 'Substitution'],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Ciphertext = A × plaintext (mod 26).'
   },
   {
     id: 's43-q2',
     question: 'For the Hill cipher, the key matrix must be:',
-    options: [
-      'Symmetric',
-      'Orthogonal',
-      'Diagonal',
-      'Invertible mod 26',
-    ],
+    options: ['Symmetric', 'Orthogonal', 'Diagonal', 'Invertible mod 26'],
     correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Need A⁻¹ (mod 26) to exist for decryption.'
@@ -292,26 +202,16 @@ export const section43Quiz: QuizQuestion[] = [
   {
     id: 's43-q3',
     question: 'RSA encryption relies on the difficulty of:',
-    options: [
-      'Matrix inversion',
-      'Solving linear systems',
-      'Computing eigenvalues',
-      'Factoring large numbers',
-    ],
-    correctIndex: 3,
+    options: ['Factoring large numbers', 'Matrix inversion', 'Solving linear systems', 'Computing eigenvalues'],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'RSA security: hard to factor n = pq for large primes.'
   },
   {
     id: 's43-q4',
     question: 'Public-key cryptography uses:',
-    options: [
-      'Same key for encryption and decryption',
-      'No keys',
-      'Random keys each time',
-      'Different keys for encryption and decryption',
-    ],
-    correctIndex: 3,
+    options: ['Same key for encryption and decryption', 'Different keys for encryption and decryption', 'No keys', 'Random keys each time'],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Public key encrypts, private key decrypts (asymmetric).'
   }
@@ -322,52 +222,32 @@ export const section44Quiz: QuizQuestion[] = [
   {
     id: 's44-q1',
     question: 'A grayscale image can be represented as:',
-    options: [
-      'A matrix of pixel intensities',
-      'A vector',
-      'A single number',
-      'A complex number',
-    ],
-    correctIndex: 0,
+    options: ['A vector', 'A single number', 'A matrix of pixel intensities', 'A complex number'],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Image = m×n matrix where entries are pixel values.'
   },
   {
     id: 's44-q2',
     question: 'Image compression via SVD keeps:',
-    options: [
-      'All singular values',
-      'Only the smallest singular values',
-      'Only the largest k singular values',
-      'Random singular values',
-    ],
-    correctIndex: 2,
+    options: ['All singular values', 'Only the smallest singular values', 'Random singular values', 'Only the largest k singular values'],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Low-rank approximation: keep top k singular values/vectors.'
   },
   {
     id: 's44-q3',
     question: 'Blurring an image is equivalent to:',
-    options: [
-      'Matrix addition',
-      'Taking the inverse',
-      'Computing eigenvalues',
-      'Convolution with a smoothing kernel',
-    ],
-    correctIndex: 3,
+    options: ['Convolution with a smoothing kernel', 'Matrix addition', 'Taking the inverse', 'Computing eigenvalues'],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Blur = convolution with averaging or Gaussian kernel.'
   },
   {
     id: 's44-q4',
     question: 'Edge detection uses kernels that approximate:',
-    options: [
-      'Integration',
-      'Fourier transform',
-      'Derivatives (gradients)',
-      'Identity',
-    ],
-    correctIndex: 2,
+    options: ['Integration', 'Derivatives (gradients)', 'Fourier transform', 'Identity'],
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Edges = high gradient; Sobel/Laplacian detect derivatives.'
   }
@@ -378,38 +258,23 @@ export const chapter10Quiz: QuizQuestion[] = [
   {
     id: 'ch10-q1',
     question: 'In a graph, the left null space of incidence matrix A represents:',
-    options: [
-      'Spanning trees',
-      'Node degrees',
-      'Shortest paths',
-      'Cycle flows',
-    ],
-    correctIndex: 3,
+    options: ['Spanning trees', 'Node degrees', 'Cycle flows', 'Shortest paths'],
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'yᵀA = 0 gives flows around cycles (Kirchhoff\'s Voltage Law).'
   },
   {
     id: 'ch10-q2',
     question: 'All eigenvalues of a Markov matrix satisfy:',
-    options: [
-      '|λ| ≤ 1',
-      '|λ| = 1',
-      'λ > 1',
-      'λ < 0',
-    ],
-    correctIndex: 0,
+    options: ['|λ| = 1', 'λ > 1', 'λ < 0', '|λ| ≤ 1'],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Markov eigenvalues have |λ| ≤ 1; λ = 1 is always present.'
   },
   {
     id: 'ch10-q3',
     question: 'The dual of a linear program relates to:',
-    options: [
-      'A different LP with transposed constraints',
-      'A quadratic program',
-      'An integer program',
-      'A nonlinear program',
-    ],
+    options: ['A different LP with transposed constraints', 'A quadratic program', 'An integer program', 'A nonlinear program'],
     correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Primal and dual LPs have related optimal values.'
@@ -417,76 +282,56 @@ export const chapter10Quiz: QuizQuestion[] = [
   {
     id: 'ch10-q4',
     question: 'Fourier series uses which type of basis?',
-    options: [
-      'Polynomial',
-      'Standard',
-      'Orthogonal (trigonometric)',
-      'Random',
-    ],
-    correctIndex: 2,
+    options: ['Polynomial', 'Orthogonal (trigonometric)', 'Standard', 'Random'],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Sines and cosines form an orthogonal basis for functions.'
   },
   {
     id: 'ch10-q5',
     question: 'Scaling by factor s in 2D has matrix:',
-    options: ['[[s, 0], [0, s]]', '[[1, s], [s, 1]]', '[[s, s], [0, 0]]', '[[0, s], [s, 0]]'],
-    correctIndex: 0,
+    options: ['[[1, s], [s, 1]]', '[[s, s], [0, 0]]', '[[s, 0], [0, s]]', '[[0, s], [s, 0]]'],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Uniform scaling: sI = [[s, 0], [0, s]].'
   },
   {
     id: 'ch10-q6',
     question: 'In Hill cipher, gcd(det(A), 26) must equal:',
-    options: [
-      '1',
-      '0',
-      '2',
-      '26',
-    ],
-    correctIndex: 0,
+    options: ['0', '2', '26', '1'],
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'det(A) must be coprime to 26 for A⁻¹ (mod 26) to exist.'
   },
   {
     id: 'ch10-q7',
     question: 'SVD image compression stores O(k(m+n)) instead of:',
-    options: [
-      'O(m+n)',
-      'O(k)',
-      'O(mn)',
-      'O(1)',
-    ],
-    correctIndex: 2,
+    options: ['O(mn)', 'O(m+n)', 'O(k)', 'O(1)'],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Full image: O(mn). Rank-k SVD: O(k(m+n)), huge savings.'
   },
   {
     id: 'ch10-q8',
     question: 'The Google PageRank uses:',
-    options: [
-      'Symmetric matrices',
-      'Orthogonal matrices',
-      'Markov matrices',
-      'Diagonal matrices',
-    ],
-    correctIndex: 2,
+    options: ['Symmetric matrices', 'Markov matrices', 'Orthogonal matrices', 'Diagonal matrices'],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'PageRank is the steady state of a Markov chain.'
   },
   {
     id: 'ch10-q9',
     question: 'Shearing transformation has matrix:',
-    options: ['[[1, k], [0, 1]]', '[[k, 0], [0, k]]', '[[0, 1], [1, 0]]', '[[k, k], [k, k]]'],
-    correctIndex: 0,
+    options: ['[[k, 0], [0, k]]', '[[0, 1], [1, 0]]', '[[1, k], [0, 1]]', '[[k, k], [k, k]]'],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Shear: [[1, k], [0, 1]] shifts x by ky, keeps y.'
   },
   {
     id: 'ch10-q10',
     question: 'The Gibbs phenomenon in Fourier series refers to:',
-    options: ['Perfect convergence', 'Overshoot near discontinuities', 'Undershoot everywhere', 'Zero coefficients'],
-    correctIndex: 1,
+    options: ['Perfect convergence', 'Undershoot everywhere', 'Zero coefficients', 'Overshoot near discontinuities'],
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Fourier series overshoots by ~9% at jump discontinuities.'
   }

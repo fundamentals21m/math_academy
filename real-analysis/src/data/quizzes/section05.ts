@@ -7,26 +7,10 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A sequence $\\{a_n\\}$ converges to $L$ if for every $\\varepsilon > 0$, there exists $N$ such that:',
       options: [
-      '$|a_n - L| \\leq N$ for all $\\varepsilon
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'The $\\varepsilon$-$N$ definition states that for any tolerance $\\varepsilon > 0$, eventually (for $n > N$) all terms are within $\\varepsilon$ of $L$.'
-    },
-      '$|a_n - L| < \\varepsilon$ for all $n > N
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'The $\\varepsilon$-$N$ definition states that for any tolerance $\\varepsilon > 0$, eventually (for $n > N$) all terms are within $\\varepsilon$ of $L$.'
-    },
-      '$|a_n - L| > \\varepsilon$ for all $n > N
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'The $\\varepsilon$-$N$ definition states that for any tolerance $\\varepsilon > 0$, eventually (for $n > N$) all terms are within $\\varepsilon$ of $L$.'
-    },
-      '$|a_n - L| = \\varepsilon$ for all $n > N
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'The $\\varepsilon$-$N$ definition states that for any tolerance $\\varepsilon > 0$, eventually (for $n > N$) all terms are within $\\varepsilon$ of $L$.'
-    },
+        '$|a_n - L| > \\varepsilon$ for all $n > N$',
+        '$|a_n - L| = \\varepsilon$ for all $n > N$',
+        '$|a_n - L| \\leq N$ for all $\\varepsilon$',
+        '$|a_n - L| < \\varepsilon$ for all $n > N$'
     ],
       correctIndex: 3,
       difficulty: 'easy',
@@ -36,25 +20,8 @@ export const section05Quiz = {
       id: 's05-e02',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\frac{1}{n}$?',
-      options: [
-      '$1
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'As $n$ grows without bound, $1/n$ approaches $0$. For any $\\varepsilon > 0$, choose $N > 1/\\varepsilon$.'
-    },
-      '$\\infty
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'As $n$ grows without bound, $1/n$ approaches $0$. For any $\\varepsilon > 0$, choose $N > 1/\\varepsilon$.'
-    },
-      'Does not exist',
-      '$0
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'As $n$ grows without bound, $1/n$ approaches $0$. For any $\\varepsilon > 0$, choose $N > 1/\\varepsilon$.'
-    },
-    ],
-      correctIndex: 2,
+      options: ['$0$', '$1$', '$\\infty$', 'Does not exist'],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'As $n$ grows without bound, $1/n$ approaches $0$. For any $\\varepsilon > 0$, choose $N > 1/\\varepsilon$.'
     },
@@ -63,24 +30,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The sequence $a_n = (-1)^n$ is:',
       options: [
-      'Convergent to $-1
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'The sequence alternates between $1$ and $-1$ and does not approach any single value, so it diverges.'
-    },
-      'Convergent to $0
-      correctIndex: 0,
-      difficulty: 'easy',
-      explanation: 'The sequence alternates between $1$ and $-1$ and does not approach any single value, so it diverges.'
-    },
-      'Divergent',
-      'Convergent to $1
-      correctIndex: 0,
-      difficulty: 'easy',
-      explanation: 'The sequence alternates between $1$ and $-1$ and does not approach any single value, so it diverges.'
-    },
+        'Convergent to $1$',
+        'Divergent',
+        'Convergent to $-1$',
+        'Convergent to $0$'
     ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The sequence alternates between $1$ and $-1$ and does not approach any single value, so it diverges.'
     },
@@ -89,16 +44,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A sequence is bounded if:',
       options: [
-      'It converges',
-      'It is monotonic',
-      'All terms are positive',
-      'There exists $M > 0$ such that $|a_n| \\leq M$ for all $n
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'A sequence is bounded if all its terms lie within some fixed interval $[-M, M]$.'
-    },
+        'It converges',
+        'It is monotonic',
+        'There exists $M > 0$ such that $|a_n| \\leq M$ for all $n$',
+        'All terms are positive'
     ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'A sequence is bounded if all its terms lie within some fixed interval $[-M, M]$.'
     },
@@ -107,28 +58,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A sequence $\\{a_n\\}$ is monotonically increasing if:',
       options: [
-      '$a_n > 0$ for all $n
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'Monotonically increasing means each term is at least as large as the previous: $a_{n+1} \\geq a_n$.'
-    },
-      '$a_n \\to \\infty
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'Monotonically increasing means each term is at least as large as the previous: $a_{n+1} \\geq a_n$.'
-    },
-      '$a_n < a_{n+2}$ for all $n
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'Monotonically increasing means each term is at least as large as the previous: $a_{n+1} \\geq a_n$.'
-    },
-      '$a_{n+1} \\geq a_n$ for all $n
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'Monotonically increasing means each term is at least as large as the previous: $a_{n+1} \\geq a_n$.'
-    },
+        '$a_n > 0$ for all $n$',
+        '$a_n \\to \\infty$',
+        '$a_n < a_{n+2}$ for all $n$',
+        '$a_{n+1} \\geq a_n$ for all $n$'
     ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Monotonically increasing means each term is at least as large as the previous: $a_{n+1} \\geq a_n$.'
     },
@@ -136,29 +71,8 @@ export const section05Quiz = {
       id: 's05-e06',
       type: 'multiple-choice',
       question: 'If $\\lim a_n = L$ and $\\lim b_n = M$, then $\\lim(a_n + b_n) = $',
-      options: [
-      '$L + M
+      options: ['$L + M$', '$L \\cdot M$', '$L - M$', '$L / M$'],
       correctIndex: 0,
-      difficulty: 'easy',
-      explanation: 'The limit of a sum equals the sum of the limits: $\\lim(a_n + b_n) = \\lim a_n + \\lim b_n = L + M$.'
-    },
-      '$L \\cdot M
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'The limit of a sum equals the sum of the limits: $\\lim(a_n + b_n) = \\lim a_n + \\lim b_n = L + M$.'
-    },
-      '$L - M
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'The limit of a sum equals the sum of the limits: $\\lim(a_n + b_n) = \\lim a_n + \\lim b_n = L + M$.'
-    },
-      '$L / M
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'The limit of a sum equals the sum of the limits: $\\lim(a_n + b_n) = \\lim a_n + \\lim b_n = L + M$.'
-    },
-    ],
-      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The limit of a sum equals the sum of the limits: $\\lim(a_n + b_n) = \\lim a_n + \\lim b_n = L + M$.'
     },
@@ -166,29 +80,8 @@ export const section05Quiz = {
       id: 's05-e07',
       type: 'multiple-choice',
       question: 'If $\\lim a_n = L$ and $\\lim b_n = M$, then $\\lim(a_n \\cdot b_n) = $',
-      options: [
-      '$L \\cdot M
-      correctIndex: 0,
-      difficulty: 'easy',
-      explanation: 'The limit of a product equals the product of the limits: $\\lim(a_n \\cdot b_n) = L \\cdot M$.'
-    },
-      '$L + M
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'The limit of a product equals the product of the limits: $\\lim(a_n \\cdot b_n) = L \\cdot M$.'
-    },
-      '$L - M
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'The limit of a product equals the product of the limits: $\\lim(a_n \\cdot b_n) = L \\cdot M$.'
-    },
-      '$L / M
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'The limit of a product equals the product of the limits: $\\lim(a_n \\cdot b_n) = L \\cdot M$.'
-    },
-    ],
-      correctIndex: 2,
+      options: ['$L + M$', '$L \\cdot M$', '$L - M$', '$L / M$'],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The limit of a product equals the product of the limits: $\\lim(a_n \\cdot b_n) = L \\cdot M$.'
     },
@@ -204,13 +97,8 @@ export const section05Quiz = {
       id: 's05-e09',
       type: 'multiple-choice',
       question: 'Every convergent sequence is:',
-      options: [
-      'Bounded',
-      'Unbounded',
-      'Monotonic',
-      'Strictly increasing',
-    ],
-      correctIndex: 0,
+      options: ['Unbounded', 'Monotonic', 'Bounded', 'Strictly increasing'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'If $a_n \\to L$, then eventually $|a_n - L| < 1$, so $|a_n| < |L| + 1$. Combining with finitely many initial terms gives a bound.'
     },
@@ -219,22 +107,10 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The squeeze theorem states that if $a_n \\leq b_n \\leq c_n$ and $\\lim a_n = \\lim c_n = L$, then:',
       options: [
-      '$\\lim b_n = L
-      correctIndex: 0,
-      difficulty: 'easy',
-      explanation: 'The squeeze theorem says $b_n$ is forced to converge to $L$ since it is trapped between two sequences both converging to $L$.'
-    },
-      '$\\lim b_n = 0
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'The squeeze theorem says $b_n$ is forced to converge to $L$ since it is trapped between two sequences both converging to $L$.'
-    },
-      '$\\lim b_n = (L + L)/2
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'The squeeze theorem says $b_n$ is forced to converge to $L$ since it is trapped between two sequences both converging to $L$.'
-    },
-      '$b_n$ diverges',
+        '$\\lim b_n = 0$',
+        '$b_n$ diverges',
+        '$\\lim b_n = (L + L)/2$',
+        '$\\lim b_n = L$'
     ],
       correctIndex: 3,
       difficulty: 'easy',
@@ -244,29 +120,8 @@ export const section05Quiz = {
       id: 's05-e11',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\frac{1}{n^2}$?',
-      options: [
-      '$0
+      options: ['$0$', '$1$', '$\\infty$', '$-1$'],
       correctIndex: 0,
-      difficulty: 'easy',
-      explanation: 'Since $n^2 \\to \\infty$, we have $1/n^2 \\to 0$.'
-    },
-      '$1
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'Since $n^2 \\to \\infty$, we have $1/n^2 \\to 0$.'
-    },
-      '$\\infty
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'Since $n^2 \\to \\infty$, we have $1/n^2 \\to 0$.'
-    },
-      '$-1
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'Since $n^2 \\to \\infty$, we have $1/n^2 \\to 0$.'
-    },
-    ],
-      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Since $n^2 \\to \\infty$, we have $1/n^2 \\to 0$.'
     },
@@ -275,16 +130,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A subsequence of $\\{a_n\\}$ is:',
       options: [
-      'The first $k$ terms',
-      'A sequence $\\{a_{n_k}\\}$ where $n_1 < n_2 < n_3 < \\cdots
+        'The first $k$ terms',
+        'A sequence $\\{a_{n_k}\\}$ where $n_1 < n_2 < n_3 < \\cdots$',
+        'The even-indexed terms only',
+        'A rearrangement of the sequence'
+      ],
       correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'A subsequence uses a strictly increasing sequence of indices $n_k$ to select terms from the original sequence.'
-    },
-      'The even-indexed terms only',
-      'A rearrangement of the sequence',
-    ],
-      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'A subsequence uses a strictly increasing sequence of indices $n_k$ to select terms from the original sequence.'
     },
@@ -293,20 +144,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $a_n \\to L$, then every subsequence of $\\{a_n\\}$:',
       options: [
-      'Diverges',
-      'Converges to $0
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'Every subsequence of a convergent sequence converges to the same limit.'
-    },
-      'Is unbounded',
-      'Converges to $L
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'Every subsequence of a convergent sequence converges to the same limit.'
-    },
+        'Diverges',
+        'Converges to $0$',
+        'Converges to $L$',
+        'Is unbounded'
     ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Every subsequence of a convergent sequence converges to the same limit.'
     },
@@ -322,29 +165,8 @@ export const section05Quiz = {
       id: 's05-e15',
       type: 'multiple-choice',
       question: 'The sequence $a_n = 1 - \\frac{1}{n}$ converges to:',
-      options: [
-      '$0
-      correctIndex: 2,
-      difficulty: 'easy',
-      explanation: 'As $n \\to \\infty$, $1/n \\to 0$, so $1 - 1/n \\to 1$.'
-    },
-      '$2
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'As $n \\to \\infty$, $1/n \\to 0$, so $1 - 1/n \\to 1$.'
-    },
-      '$1
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'As $n \\to \\infty$, $1/n \\to 0$, so $1 - 1/n \\to 1$.'
-    },
-      '$-1
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'As $n \\to \\infty$, $1/n \\to 0$, so $1 - 1/n \\to 1$.'
-    },
-    ],
-      correctIndex: 1,
+      options: ['$0$', '$2$', '$-1$', '$1$'],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'As $n \\to \\infty$, $1/n \\to 0$, so $1 - 1/n \\to 1$.'
     },
@@ -353,12 +175,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A Cauchy sequence is one where:',
       options: [
-      'Terms are all positive',
-      'Terms alternate in sign',
-      'Terms are strictly decreasing',
-      'Terms get arbitrarily close to each other',
-    ],
-      correctIndex: 3,
+        'Terms get arbitrarily close to each other',
+        'Terms alternate in sign',
+        'Terms are all positive',
+        'Terms are strictly decreasing'
+      ],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'A Cauchy sequence has the property that $|a_m - a_n| < \\varepsilon$ for all $m, n$ sufficiently large.'
     },
@@ -366,13 +188,8 @@ export const section05Quiz = {
       id: 's05-e17',
       type: 'multiple-choice',
       question: 'In $\\mathbb{R}$, every Cauchy sequence:',
-      options: [
-      'Converges',
-      'Diverges',
-      'Is unbounded',
-      'Oscillates',
-    ],
-      correctIndex: 0,
+      options: ['Diverges', 'Converges', 'Is unbounded', 'Oscillates'],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The completeness of $\\mathbb{R}$ guarantees that every Cauchy sequence in $\\mathbb{R}$ converges.'
     },
@@ -381,24 +198,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The limit inferior $\\liminf a_n$ is defined as:',
       options: [
-      'The smallest term of the sequence',
-      '$\\lim_{n \\to \\infty} (\\inf_{k \\geq n} a_k)
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: '$\\liminf a_n = \\lim_{n \\to \\infty} (\\inf_{k \\geq n} a_k)$ is the limit of the infimum of the tail of the sequence.'
-    },
-      '$\\inf\\{a_n : n \\in \\mathbb{N}\\}
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: '$\\liminf a_n = \\lim_{n \\to \\infty} (\\inf_{k \\geq n} a_k)$ is the limit of the infimum of the tail of the sequence.'
-    },
-      '$\\lim_{n \\to \\infty} a_n
-      correctIndex: 3,
-      difficulty: 'easy',
-      explanation: '$\\liminf a_n = \\lim_{n \\to \\infty} (\\inf_{k \\geq n} a_k)$ is the limit of the infimum of the tail of the sequence.'
-    },
+        '$\\inf\\{a_n : n \\in \\mathbb{N}\\}$',
+        '$\\lim_{n \\to \\infty} a_n$',
+        '$\\lim_{n \\to \\infty} (\\inf_{k \\geq n} a_k)$',
+        'The smallest term of the sequence'
     ],
-      correctIndex: 3,
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: '$\\liminf a_n = \\lim_{n \\to \\infty} (\\inf_{k \\geq n} a_k)$ is the limit of the infimum of the tail of the sequence.'
     },
@@ -406,25 +211,8 @@ export const section05Quiz = {
       id: 's05-e19',
       type: 'multiple-choice',
       question: 'If $a_n \\geq 0$ for all $n$ and $\\lim a_n = L$, then:',
-      options: [
-      '$L < 0
+      options: ['$L < 0$', '$L = 0$', '$L$ can be any real number', '$L \\geq 0$'],
       correctIndex: 3,
-      difficulty: 'easy',
-      explanation: 'Limits preserve non-strict inequalities. If $a_n \\geq 0$ for all $n$, then $L \\geq 0$.'
-    },
-      '$L = 0
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'Limits preserve non-strict inequalities. If $a_n \\geq 0$ for all $n$, then $L \\geq 0$.'
-    },
-      '$L$ can be any real number',
-      '$L \\geq 0
-      correctIndex: 1,
-      difficulty: 'easy',
-      explanation: 'Limits preserve non-strict inequalities. If $a_n \\geq 0$ for all $n$, then $L \\geq 0$.'
-    },
-    ],
-      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Limits preserve non-strict inequalities. If $a_n \\geq 0$ for all $n$, then $L \\geq 0$.'
     },
@@ -444,12 +232,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The Monotone Convergence Theorem states that:',
       options: [
-      'Every bounded sequence converges',
-      'Every monotonic sequence converges',
-      'Every Cauchy sequence is monotonic',
-      'Every bounded monotonic sequence converges',
+        'Every bounded monotonic sequence converges',
+        'Every monotonic sequence converges',
+        'Every bounded sequence converges',
+        'Every Cauchy sequence is monotonic'
     ],
-      correctIndex: 3,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The theorem requires both conditions: a sequence that is monotonic AND bounded must converge.'
     },
@@ -457,28 +245,7 @@ export const section05Quiz = {
       id: 's05-m02',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n$?',
-      options: [
-      '$1
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'This is the definition of $e \\approx 2.71828$. The sequence is increasing and bounded above.'
-    },
-      '$\\infty
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'This is the definition of $e \\approx 2.71828$. The sequence is increasing and bounded above.'
-    },
-      '$e
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'This is the definition of $e \\approx 2.71828$. The sequence is increasing and bounded above.'
-    },
-      '$0
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'This is the definition of $e \\approx 2.71828$. The sequence is increasing and bounded above.'
-    },
-    ],
+      options: ['$1$', '$e$', '$\\infty$', '$0$'],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'This is the definition of $e \\approx 2.71828$. The sequence is increasing and bounded above.'
@@ -487,28 +254,7 @@ export const section05Quiz = {
       id: 's05-m03',
       type: 'multiple-choice',
       question: 'If $|r| < 1$, then $\\lim_{n \\to \\infty} r^n = $',
-      options: [
-      '$1
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'When $|r| < 1$, repeated multiplication makes the terms shrink to $0$.'
-    },
-      '$0
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'When $|r| < 1$, repeated multiplication makes the terms shrink to $0$.'
-    },
-      '$r
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'When $|r| < 1$, repeated multiplication makes the terms shrink to $0$.'
-    },
-      '$\\infty
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'When $|r| < 1$, repeated multiplication makes the terms shrink to $0$.'
-    },
-    ],
+      options: ['$1$', '$r$', '$0$', '$\\infty$'],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'When $|r| < 1$, repeated multiplication makes the terms shrink to $0$.'
@@ -518,12 +264,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The Bolzano-Weierstrass theorem states that:',
       options: [
-      'Every sequence has a convergent subsequence',
-      'Every monotonic sequence converges',
-      'Every bounded sequence has a convergent subsequence',
-      'Every Cauchy sequence converges',
+        'Every sequence has a convergent subsequence',
+        'Every monotonic sequence converges',
+        'Every Cauchy sequence converges',
+        'Every bounded sequence has a convergent subsequence'
     ],
-      correctIndex: 2,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Bolzano-Weierstrass: every bounded sequence in $\\mathbb{R}$ has a convergent subsequence.'
     },
@@ -531,29 +277,8 @@ export const section05Quiz = {
       id: 's05-m05',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\frac{n^2}{2n^2 + 1}$?',
-      options: [
-      '$1/2
+      options: ['$1/2$', '$0$', '$1$', '$2$'],
       correctIndex: 0,
-      difficulty: 'medium',
-      explanation: 'Divide by $n^2$: $\\frac{1}{2 + 1/n^2} \\to \\frac{1}{2}$ as $n \\to \\infty$.'
-    },
-      '$0
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'Divide by $n^2$: $\\frac{1}{2 + 1/n^2} \\to \\frac{1}{2}$ as $n \\to \\infty$.'
-    },
-      '$1
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'Divide by $n^2$: $\\frac{1}{2 + 1/n^2} \\to \\frac{1}{2}$ as $n \\to \\infty$.'
-    },
-      '$2
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'Divide by $n^2$: $\\frac{1}{2 + 1/n^2} \\to \\frac{1}{2}$ as $n \\to \\infty$.'
-    },
-    ],
-      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Divide by $n^2$: $\\frac{1}{2 + 1/n^2} \\to \\frac{1}{2}$ as $n \\to \\infty$.'
     },
@@ -570,24 +295,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $a_n \\to L$ and $a_n > 0$ for all $n$, what can we say about $\\sqrt{a_n}$?',
       options: [
-      '$\\sqrt{a_n} \\to L^2
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'The square root function is continuous on $[0, \\infty)$, so $\\sqrt{a_n} \\to \\sqrt{L}$.'
-    },
-      '$\\sqrt{a_n} \\to \\sqrt{L}$ if $L \\geq 0
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'The square root function is continuous on $[0, \\infty)$, so $\\sqrt{a_n} \\to \\sqrt{L}$.'
-    },
-      '$\\sqrt{a_n}$ diverges',
-      '$\\sqrt{a_n} \\to 0
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'The square root function is continuous on $[0, \\infty)$, so $\\sqrt{a_n} \\to \\sqrt{L}$.'
-    },
+        '$\\sqrt{a_n}$ diverges',
+        '$\\sqrt{a_n} \\to \\sqrt{L}$ if $L \\geq 0$',
+        '$\\sqrt{a_n} \\to L^2$',
+        '$\\sqrt{a_n} \\to 0$'
     ],
-      correctIndex: 2,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'The square root function is continuous on $[0, \\infty)$, so $\\sqrt{a_n} \\to \\sqrt{L}$.'
     },
@@ -595,24 +308,7 @@ export const section05Quiz = {
       id: 's05-m08',
       type: 'multiple-choice',
       question: 'The sequence $a_n = \\frac{\\sin n}{n}$ converges to:',
-      options: [
-      '$0
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: 'Since $|\\sin n| \\leq 1$, we have $|a_n| \\leq 1/n \\to 0$. By the squeeze theorem, $a_n \\to 0$.'
-    },
-      '$1
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'Since $|\\sin n| \\leq 1$, we have $|a_n| \\leq 1/n \\to 0$. By the squeeze theorem, $a_n \\to 0$.'
-    },
-      '$-1
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'Since $|\\sin n| \\leq 1$, we have $|a_n| \\leq 1/n \\to 0$. By the squeeze theorem, $a_n \\to 0$.'
-    },
-      'Does not converge',
-    ],
+      options: ['$1$', '$-1$', '$0$', 'Does not converge'],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Since $|\\sin n| \\leq 1$, we have $|a_n| \\leq 1/n \\to 0$. By the squeeze theorem, $a_n \\to 0$.'
@@ -622,18 +318,10 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $\\limsup a_n = \\liminf a_n = L$, then:',
       options: [
-      '$\\{a_n\\}$ diverges',
-      '$\\lim a_n = L
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'When limsup equals liminf, the sequence converges and the common value is the limit.'
-    },
-      '$L = 0
-      correctIndex: 3,
-      difficulty: 'medium',
-      explanation: 'When limsup equals liminf, the sequence converges and the common value is the limit.'
-    },
-      '$\\{a_n\\}$ is unbounded',
+        '$\\{a_n\\}$ diverges',
+        '$\\{a_n\\}$ is unbounded',
+        '$L = 0$',
+        '$\\lim a_n = L$'
     ],
       correctIndex: 3,
       difficulty: 'medium',
@@ -643,28 +331,7 @@ export const section05Quiz = {
       id: 's05-m10',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\frac{n!}{n^n}$?',
-      options: [
-      '$1
-      correctIndex: 3,
-      difficulty: 'medium',
-      explanation: '$\\frac{n!}{n^n} = \\frac{1 \\cdot 2 \\cdots n}{n \\cdot n \\cdots n} \\leq \\frac{1}{n} \\to 0$ since each factor $k/n \\leq 1$ and $1/n \\to 0$.'
-    },
-      '$e
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: '$\\frac{n!}{n^n} = \\frac{1 \\cdot 2 \\cdots n}{n \\cdot n \\cdots n} \\leq \\frac{1}{n} \\to 0$ since each factor $k/n \\leq 1$ and $1/n \\to 0$.'
-    },
-      '$\\infty
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: '$\\frac{n!}{n^n} = \\frac{1 \\cdot 2 \\cdots n}{n \\cdot n \\cdots n} \\leq \\frac{1}{n} \\to 0$ since each factor $k/n \\leq 1$ and $1/n \\to 0$.'
-    },
-      '$0
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: '$\\frac{n!}{n^n} = \\frac{1 \\cdot 2 \\cdots n}{n \\cdot n \\cdots n} \\leq \\frac{1}{n} \\to 0$ since each factor $k/n \\leq 1$ and $1/n \\to 0$.'
-    },
-    ],
+      options: ['$0$', '$1$', '$e$', '$\\infty$'],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: '$\\frac{n!}{n^n} = \\frac{1 \\cdot 2 \\cdots n}{n \\cdot n \\cdots n} \\leq \\frac{1}{n} \\to 0$ since each factor $k/n \\leq 1$ and $1/n \\to 0$.'
@@ -674,24 +341,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The sequence $a_n = \\frac{(-1)^n}{n}$ is:',
       options: [
-      'Convergent to $1
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: '$|a_n| = 1/n \\to 0$, so $a_n \\to 0$ despite the alternating sign.'
-    },
-      'Convergent to $0
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: '$|a_n| = 1/n \\to 0$, so $a_n \\to 0$ despite the alternating sign.'
-    },
-      'Divergent',
-      'Convergent to $-1
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: '$|a_n| = 1/n \\to 0$, so $a_n \\to 0$ despite the alternating sign.'
-    },
+        'Divergent',
+        'Convergent to $0$',
+        'Convergent to $1$',
+        'Convergent to $-1$'
     ],
-      correctIndex: 0,
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: '$|a_n| = 1/n \\to 0$, so $a_n \\to 0$ despite the alternating sign.'
     },
@@ -708,20 +363,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $a_n$ is a Cauchy sequence in $\\mathbb{Q}$, then:',
       options: [
-      'It must converge in $\\mathbb{R}
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: '$\\mathbb{Q}$ is not complete, so a Cauchy sequence in $\\mathbb{Q}$ may not converge in $\\mathbb{Q}$, but it always converges in $\\mathbb{R}$.'
-    },
-      'It must converge in $\\mathbb{Q}
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: '$\\mathbb{Q}$ is not complete, so a Cauchy sequence in $\\mathbb{Q}$ may not converge in $\\mathbb{Q}$, but it always converges in $\\mathbb{R}$.'
-    },
-      'It must diverge',
-      'It is unbounded',
+        'It must converge in $\\mathbb{Q}$',
+        'It must diverge',
+        'It must converge in $\\mathbb{R}$',
+        'It is unbounded'
     ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: '$\\mathbb{Q}$ is not complete, so a Cauchy sequence in $\\mathbb{Q}$ may not converge in $\\mathbb{Q}$, but it always converges in $\\mathbb{R}$.'
     },
@@ -729,29 +376,8 @@ export const section05Quiz = {
       id: 's05-m14',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\sqrt[n]{n}$?',
-      options: [
-      '$0
+      options: ['$0$', '$e$', '$\\infty$', '$1$'],
       correctIndex: 3,
-      difficulty: 'medium',
-      explanation: '$n^{1/n} = e^{\\ln(n)/n} \\to e^0 = 1$ since $\\ln(n)/n \\to 0$.'
-    },
-      '$e
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: '$n^{1/n} = e^{\\ln(n)/n} \\to e^0 = 1$ since $\\ln(n)/n \\to 0$.'
-    },
-      '$\\infty
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: '$n^{1/n} = e^{\\ln(n)/n} \\to e^0 = 1$ since $\\ln(n)/n \\to 0$.'
-    },
-      '$1
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: '$n^{1/n} = e^{\\ln(n)/n} \\to e^0 = 1$ since $\\ln(n)/n \\to 0$.'
-    },
-    ],
-      correctIndex: 1,
       difficulty: 'medium',
       explanation: '$n^{1/n} = e^{\\ln(n)/n} \\to e^0 = 1$ since $\\ln(n)/n \\to 0$.'
     },
@@ -760,24 +386,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The sequence $a_n = 1 + \\frac{1}{2} + \\frac{1}{3} + \\cdots + \\frac{1}{n}$ (partial sums of harmonic series):',
       options: [
-      'Converges to $1
-      correctIndex: 1,
-      difficulty: 'medium',
-      explanation: 'The harmonic series diverges, so its partial sums grow without bound.'
-    },
-      'Diverges to $\\infty
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'The harmonic series diverges, so its partial sums grow without bound.'
-    },
-      'Converges to $e
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'The harmonic series diverges, so its partial sums grow without bound.'
-    },
-      'Oscillates',
+        'Diverges to $\\infty$',
+        'Converges to $1$',
+        'Converges to $e$',
+        'Oscillates'
     ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The harmonic series diverges, so its partial sums grow without bound.'
     },
@@ -785,25 +399,8 @@ export const section05Quiz = {
       id: 's05-m16',
       type: 'multiple-choice',
       question: 'If $\\lim a_n = 0$ and $\\{b_n\\}$ is bounded, then $\\lim(a_n b_n) = $',
-      options: [
-      '$\\infty
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'If $|b_n| \\leq M$ and $a_n \\to 0$, then $|a_n b_n| \\leq M|a_n| \\to 0$.'
-    },
-      'Does not exist',
-      '$0
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: 'If $|b_n| \\leq M$ and $a_n \\to 0$, then $|a_n b_n| \\leq M|a_n| \\to 0$.'
-    },
-      'Depends on $b_n
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: 'If $|b_n| \\leq M$ and $a_n \\to 0$, then $|a_n b_n| \\leq M|a_n| \\to 0$.'
-    },
-    ],
-      correctIndex: 0,
+      options: ['$\\infty$', '$0$', 'Does not exist', 'Depends on $b_n$'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'If $|b_n| \\leq M$ and $a_n \\to 0$, then $|a_n b_n| \\leq M|a_n| \\to 0$.'
     },
@@ -813,11 +410,11 @@ export const section05Quiz = {
       question: 'The nested intervals theorem states that if $[a_n, b_n]$ are nested intervals with $b_n - a_n \\to 0$, then:',
       options: [
         '$\\bigcap [a_n, b_n]$ is empty',
-        '$\\bigcap [a_n, b_n] = \\mathbb{R}$',
         '$\\bigcap [a_n, b_n]$ contains infinitely many points',
-        '$\\bigcap [a_n, b_n]$ contains exactly one point'
-      ],
-      correctIndex: 3,
+        '$\\bigcap [a_n, b_n]$ contains exactly one point',
+        '$\\bigcap [a_n, b_n] = \\mathbb{R}$'
+    ],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Nested closed intervals with lengths shrinking to $0$ intersect in exactly one point.'
     },
@@ -834,24 +431,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $a_n \\leq b_n$ for all $n$ and both limits exist, then:',
       options: [
-      '$\\lim a_n < \\lim b_n
-      correctIndex: 2,
-      difficulty: 'medium',
-      explanation: 'Limits preserve non-strict inequalities: $\\lim a_n \\leq \\lim b_n$.'
-    },
-      '$\\lim a_n = \\lim b_n
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: 'Limits preserve non-strict inequalities: $\\lim a_n \\leq \\lim b_n$.'
-    },
-      '$\\lim a_n \\leq \\lim b_n
-      correctIndex: 0,
-      difficulty: 'medium',
-      explanation: 'Limits preserve non-strict inequalities: $\\lim a_n \\leq \\lim b_n$.'
-    },
-      'No relationship can be determined',
+        '$\\lim a_n < \\lim b_n$',
+        '$\\lim a_n = \\lim b_n$',
+        'No relationship can be determined',
+        '$\\lim a_n \\leq \\lim b_n$'
     ],
-      correctIndex: 0,
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Limits preserve non-strict inequalities: $\\lim a_n \\leq \\lim b_n$.'
     },
@@ -860,12 +445,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A sequence $\\{a_n\\}$ with $a_n = n$ is:',
       options: [
-      'Bounded and convergent',
-      'Unbounded and convergent',
-      'Bounded and divergent',
-      'Unbounded and divergent',
+        'Unbounded and divergent',
+        'Bounded and convergent',
+        'Bounded and divergent',
+        'Unbounded and convergent'
     ],
-      correctIndex: 3,
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The sequence $n$ grows without bound, so it is unbounded and diverges to $\\infty$.'
     }
@@ -876,28 +461,7 @@ export const section05Quiz = {
       id: 's05-h01',
       type: 'multiple-choice',
       question: 'Let $a_1 = 1$ and $a_{n+1} = \\frac{1}{2}(a_n + \\frac{2}{a_n})$. This sequence converges to:',
-      options: [
-      '$1
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: 'This is Newton\'s method for $\\sqrt{2}$. If $L$ is the limit, then $L = \\frac{1}{2}(L + 2/L)$, giving $L^2 = 2$.'
-    },
-      '$2
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'This is Newton\'s method for $\\sqrt{2}$. If $L$ is the limit, then $L = \\frac{1}{2}(L + 2/L)$, giving $L^2 = 2$.'
-    },
-      '$\\sqrt{2}
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'This is Newton\'s method for $\\sqrt{2}$. If $L$ is the limit, then $L = \\frac{1}{2}(L + 2/L)$, giving $L^2 = 2$.'
-    },
-      '$\\sqrt{3}
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'This is Newton\'s method for $\\sqrt{2}$. If $L$ is the limit, then $L = \\frac{1}{2}(L + 2/L)$, giving $L^2 = 2$.'
-    },
-    ],
+      options: ['$1$', '$\\sqrt{2}$', '$2$', '$\\sqrt{3}$'],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'This is Newton\'s method for $\\sqrt{2}$. If $L$ is the limit, then $L = \\frac{1}{2}(L + 2/L)$, giving $L^2 = 2$.'
@@ -906,28 +470,7 @@ export const section05Quiz = {
       id: 's05-h02',
       type: 'multiple-choice',
       question: 'The sequence $a_n = \\sum_{k=1}^{n} \\frac{1}{k!}$ converges to:',
-      options: [
-      '$e - 1
-      correctIndex: 0,
-      difficulty: 'hard',
-      explanation: 'Since $e = \\sum_{k=0}^{\\infty} \\frac{1}{k!} = 1 + \\sum_{k=1}^{\\infty} \\frac{1}{k!}$, the sum starting at $k=1$ equals $e - 1$.'
-    },
-      '$1
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: 'Since $e = \\sum_{k=0}^{\\infty} \\frac{1}{k!} = 1 + \\sum_{k=1}^{\\infty} \\frac{1}{k!}$, the sum starting at $k=1$ equals $e - 1$.'
-    },
-      '$2
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: 'Since $e = \\sum_{k=0}^{\\infty} \\frac{1}{k!} = 1 + \\sum_{k=1}^{\\infty} \\frac{1}{k!}$, the sum starting at $k=1$ equals $e - 1$.'
-    },
-      '$e
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: 'Since $e = \\sum_{k=0}^{\\infty} \\frac{1}{k!} = 1 + \\sum_{k=1}^{\\infty} \\frac{1}{k!}$, the sum starting at $k=1$ equals $e - 1$.'
-    },
-    ],
+      options: ['$1$', '$2$', '$e - 1$', '$e$'],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Since $e = \\sum_{k=0}^{\\infty} \\frac{1}{k!} = 1 + \\sum_{k=1}^{\\infty} \\frac{1}{k!}$, the sum starting at $k=1$ equals $e - 1$.'
@@ -936,29 +479,8 @@ export const section05Quiz = {
       id: 's05-h03',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\left(\\frac{n+1}{n}\\right)^n$?',
-      options: [
-      '$1
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: '$\\left(\\frac{n+1}{n}\\right)^n = \\left(1 + \\frac{1}{n}\\right)^n \\to e$.'
-    },
-      '$e^{-1}
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: '$\\left(\\frac{n+1}{n}\\right)^n = \\left(1 + \\frac{1}{n}\\right)^n \\to e$.'
-    },
-      '$e
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: '$\\left(\\frac{n+1}{n}\\right)^n = \\left(1 + \\frac{1}{n}\\right)^n \\to e$.'
-    },
-      '$\\infty
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: '$\\left(\\frac{n+1}{n}\\right)^n = \\left(1 + \\frac{1}{n}\\right)^n \\to e$.'
-    },
-    ],
-      correctIndex: 1,
+      options: ['$1$', '$e^{-1}$', '$\\infty$', '$e$'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: '$\\left(\\frac{n+1}{n}\\right)^n = \\left(1 + \\frac{1}{n}\\right)^n \\to e$.'
     },
@@ -967,20 +489,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $\\{a_n\\}$ is a sequence with $\\limsup a_n = 3$ and $\\liminf a_n = 1$, then:',
       options: [
-      '$\\{a_n\\}$ converges to $2
-      correctIndex: 3,
-      difficulty: 'hard',
-      explanation: 'A sequence converges if and only if $\\limsup = \\liminf$. Since they differ, the sequence diverges.'
-    },
-      '$\\{a_n\\}$ converges to $3
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: 'A sequence converges if and only if $\\limsup = \\liminf$. Since they differ, the sequence diverges.'
-    },
-      '$\\{a_n\\}$ is unbounded',
-      '$\\{a_n\\}$ diverges',
+        '$\\{a_n\\}$ diverges',
+        '$\\{a_n\\}$ converges to $2$',
+        '$\\{a_n\\}$ converges to $3$',
+        '$\\{a_n\\}$ is unbounded'
     ],
-      correctIndex: 2,
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'A sequence converges if and only if $\\limsup = \\liminf$. Since they differ, the sequence diverges.'
     },
@@ -988,28 +502,7 @@ export const section05Quiz = {
       id: 's05-h05',
       type: 'multiple-choice',
       question: 'Let $a_n = \\frac{1}{n}\\sum_{k=1}^{n} k = \\frac{n+1}{2}$. What is $\\lim_{n \\to \\infty} \\frac{a_n}{n}$?',
-      options: [
-      '$1/2
-      correctIndex: 0,
-      difficulty: 'hard',
-      explanation: '$\\frac{a_n}{n} = \\frac{(n+1)/2}{n} = \\frac{n+1}{2n} \\to \\frac{1}{2}$.'
-    },
-      '$0
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: '$\\frac{a_n}{n} = \\frac{(n+1)/2}{n} = \\frac{n+1}{2n} \\to \\frac{1}{2}$.'
-    },
-      '$1
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: '$\\frac{a_n}{n} = \\frac{(n+1)/2}{n} = \\frac{n+1}{2n} \\to \\frac{1}{2}$.'
-    },
-      '$\\infty
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: '$\\frac{a_n}{n} = \\frac{(n+1)/2}{n} = \\frac{n+1}{2n} \\to \\frac{1}{2}$.'
-    },
-    ],
+      options: ['$0$', '$1/2$', '$1$', '$\\infty$'],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: '$\\frac{a_n}{n} = \\frac{(n+1)/2}{n} = \\frac{n+1}{2n} \\to \\frac{1}{2}$.'
@@ -1018,28 +511,7 @@ export const section05Quiz = {
       id: 's05-h06',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\left(1 - \\frac{1}{n}\\right)^n$?',
-      options: [
-      '$e^{-1}
-      correctIndex: 0,
-      difficulty: 'hard',
-      explanation: '$\\left(1 - \\frac{1}{n}\\right)^n = \\left(\\frac{n-1}{n}\\right)^n \\to e^{-1} = 1/e$.'
-    },
-      '$0
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: '$\\left(1 - \\frac{1}{n}\\right)^n = \\left(\\frac{n-1}{n}\\right)^n \\to e^{-1} = 1/e$.'
-    },
-      '$1
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: '$\\left(1 - \\frac{1}{n}\\right)^n = \\left(\\frac{n-1}{n}\\right)^n \\to e^{-1} = 1/e$.'
-    },
-      '$e
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: '$\\left(1 - \\frac{1}{n}\\right)^n = \\left(\\frac{n-1}{n}\\right)^n \\to e^{-1} = 1/e$.'
-    },
-    ],
+      options: ['$0$', '$1$', '$e^{-1}$', '$e$'],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: '$\\left(1 - \\frac{1}{n}\\right)^n = \\left(\\frac{n-1}{n}\\right)^n \\to e^{-1} = 1/e$.'
@@ -1048,29 +520,8 @@ export const section05Quiz = {
       id: 's05-h07',
       type: 'multiple-choice',
       question: 'The sequence $a_n = \\left(1 + \\frac{1}{n}\\right)^{n+1}$ converges to:',
-      options: [
-      '$1
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: '$\\left(1 + \\frac{1}{n}\\right)^{n+1} = \\left(1 + \\frac{1}{n}\\right)^n \\cdot \\left(1 + \\frac{1}{n}\\right) \\to e \\cdot 1 = e$.'
-    },
-      '$e^2
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: '$\\left(1 + \\frac{1}{n}\\right)^{n+1} = \\left(1 + \\frac{1}{n}\\right)^n \\cdot \\left(1 + \\frac{1}{n}\\right) \\to e \\cdot 1 = e$.'
-    },
-      '$e
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: '$\\left(1 + \\frac{1}{n}\\right)^{n+1} = \\left(1 + \\frac{1}{n}\\right)^n \\cdot \\left(1 + \\frac{1}{n}\\right) \\to e \\cdot 1 = e$.'
-    },
-      '$\\infty
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: '$\\left(1 + \\frac{1}{n}\\right)^{n+1} = \\left(1 + \\frac{1}{n}\\right)^n \\cdot \\left(1 + \\frac{1}{n}\\right) \\to e \\cdot 1 = e$.'
-    },
-    ],
-      correctIndex: 1,
+      options: ['$1$', '$e^2$', '$\\infty$', '$e$'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: '$\\left(1 + \\frac{1}{n}\\right)^{n+1} = \\left(1 + \\frac{1}{n}\\right)^n \\cdot \\left(1 + \\frac{1}{n}\\right) \\to e \\cdot 1 = e$.'
     },
@@ -1086,29 +537,8 @@ export const section05Quiz = {
       id: 's05-h09',
       type: 'multiple-choice',
       question: 'Cesàro\'s theorem states that if $a_n \\to L$, then $\\frac{1}{n}\\sum_{k=1}^{n} a_k \\to$:',
-      options: [
-      '$0
-      correctIndex: 2,
-      difficulty: 'hard',
-      explanation: 'The Cesàro mean (arithmetic mean) of a convergent sequence converges to the same limit.'
-    },
-      '$L/2
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'The Cesàro mean (arithmetic mean) of a convergent sequence converges to the same limit.'
-    },
-      '$L
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'The Cesàro mean (arithmetic mean) of a convergent sequence converges to the same limit.'
-    },
-      '$nL
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'The Cesàro mean (arithmetic mean) of a convergent sequence converges to the same limit.'
-    },
-    ],
-      correctIndex: 1,
+      options: ['$L$', '$0$', '$L/2$', '$nL$'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The Cesàro mean (arithmetic mean) of a convergent sequence converges to the same limit.'
     },
@@ -1117,24 +547,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $a_n > 0$ and $\\frac{a_{n+1}}{a_n} \\to L$ with $L < 1$, then:',
       options: [
-      '$a_n \\to 0
-      correctIndex: 0,
-      difficulty: 'hard',
-      explanation: 'If the ratio limit is less than $1$, the sequence decreases geometrically and converges to $0$.'
-    },
-      '$a_n \\to \\infty
-      correctIndex: 3,
-      difficulty: 'hard',
-      explanation: 'If the ratio limit is less than $1$, the sequence decreases geometrically and converges to $0$.'
-    },
-      '$a_n \\to L
-      correctIndex: 3,
-      difficulty: 'hard',
-      explanation: 'If the ratio limit is less than $1$, the sequence decreases geometrically and converges to $0$.'
-    },
-      '$a_n$ diverges',
+        '$a_n \\to \\infty$',
+        '$a_n \\to 0$',
+        '$a_n \\to L$',
+        '$a_n$ diverges'
     ],
-      correctIndex: 3,
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'If the ratio limit is less than $1$, the sequence decreases geometrically and converges to $0$.'
     },
@@ -1143,12 +561,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'The sequence $a_n = \\sin(n)$ has:',
       options: [
-        'No limit, but every value in $[-1, 1]$ is a subsequential limit',
-        'Limit $1$',
         'Limit $0$',
+        'Limit $1$',
+        'No limit, but every value in $[-1, 1]$ is a subsequential limit',
         'Exactly two subsequential limits: $1$ and $-1$'
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Since $\\pi$ is irrational, the sequence $n \\mod 2\\pi$ is equidistributed, so $\\sin(n)$ is dense in $[-1, 1]$.'
     },
@@ -1158,11 +576,11 @@ export const section05Quiz = {
       question: 'If $\\{a_n\\}$ is a bounded sequence and $\\{a_{n_k}\\}$, $\\{a_{m_k}\\}$ are two convergent subsequences with limits $L_1$ and $L_2$, then:',
       options: [
         '$L_1 = L_2$ always',
-        '$L_1$ and $L_2$ are both in $[\\liminf a_n, \\limsup a_n]$',
         '$L_1 = \\liminf a_n$ and $L_2 = \\limsup a_n$',
-        'No relationship exists'
-      ],
-      correctIndex: 1,
+        'No relationship exists',
+        '$L_1$ and $L_2$ are both in $[\\liminf a_n, \\limsup a_n]$'
+    ],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'All subsequential limits lie between the liminf and limsup of the sequence.'
     },
@@ -1170,29 +588,8 @@ export const section05Quiz = {
       id: 's05-h13',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\sqrt[n]{n!}$?',
-      options: [
-      '$0
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'By Stirling\'s approximation, $n! \\approx (n/e)^n \\sqrt{2\\pi n}$, so $\\sqrt[n]{n!} \\approx n/e \\to \\infty$.'
-    },
-      '$\\infty
-      correctIndex: 3,
-      difficulty: 'hard',
-      explanation: 'By Stirling\'s approximation, $n! \\approx (n/e)^n \\sqrt{2\\pi n}$, so $\\sqrt[n]{n!} \\approx n/e \\to \\infty$.'
-    },
-      '$1
-      correctIndex: 3,
-      difficulty: 'hard',
-      explanation: 'By Stirling\'s approximation, $n! \\approx (n/e)^n \\sqrt{2\\pi n}$, so $\\sqrt[n]{n!} \\approx n/e \\to \\infty$.'
-    },
-      '$e
-      correctIndex: 3,
-      difficulty: 'hard',
-      explanation: 'By Stirling\'s approximation, $n! \\approx (n/e)^n \\sqrt{2\\pi n}$, so $\\sqrt[n]{n!} \\approx n/e \\to \\infty$.'
-    },
-    ],
-      correctIndex: 3,
+      options: ['$\\infty$', '$0$', '$1$', '$e$'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'By Stirling\'s approximation, $n! \\approx (n/e)^n \\sqrt{2\\pi n}$, so $\\sqrt[n]{n!} \\approx n/e \\to \\infty$.'
     },
@@ -1201,12 +598,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A sequence $\\{a_n\\}$ is called contractive if $|a_{n+2} - a_{n+1}| \\leq c|a_{n+1} - a_n|$ for some $c < 1$. Such a sequence:',
       options: [
-      'May diverge',
-      'Is always unbounded',
-      'Is always Cauchy',
-      'Must equal a constant',
-    ],
-      correctIndex: 2,
+        'May diverge',
+        'Is always Cauchy',
+        'Is always unbounded',
+        'Must equal a constant'
+      ],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'The differences form a geometric series, so $\\sum |a_{n+1} - a_n|$ converges, implying the sequence is Cauchy.'
     },
@@ -1214,29 +611,8 @@ export const section05Quiz = {
       id: 's05-h15',
       type: 'multiple-choice',
       question: 'What is $\\lim_{n \\to \\infty} \\frac{\\ln n}{n}$?',
-      options: [
-      '$1
+      options: ['$1$', '$e$', '$0$', '$\\infty$'],
       correctIndex: 2,
-      difficulty: 'hard',
-      explanation: 'By L\'Hôpital\'s rule or noting that $\\ln n$ grows slower than any positive power of $n$, we get $\\ln n / n \\to 0$.'
-    },
-      '$e
-      correctIndex: 0,
-      difficulty: 'hard',
-      explanation: 'By L\'Hôpital\'s rule or noting that $\\ln n$ grows slower than any positive power of $n$, we get $\\ln n / n \\to 0$.'
-    },
-      '$0
-      correctIndex: 0,
-      difficulty: 'hard',
-      explanation: 'By L\'Hôpital\'s rule or noting that $\\ln n$ grows slower than any positive power of $n$, we get $\\ln n / n \\to 0$.'
-    },
-      '$\\infty
-      correctIndex: 0,
-      difficulty: 'hard',
-      explanation: 'By L\'Hôpital\'s rule or noting that $\\ln n$ grows slower than any positive power of $n$, we get $\\ln n / n \\to 0$.'
-    },
-    ],
-      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'By L\'Hôpital\'s rule or noting that $\\ln n$ grows slower than any positive power of $n$, we get $\\ln n / n \\to 0$.'
     },
@@ -1245,22 +621,10 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $a_n = \\sum_{k=1}^{n} \\frac{1}{k^2}$, then $\\{a_n\\}$:',
       options: [
-      'Diverges',
-      'Converges to $\\pi^2/6
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'The Basel problem: $\\sum_{k=1}^{\\infty} \\frac{1}{k^2} = \\frac{\\pi^2}{6}$, proven by Euler.'
-    },
-      'Converges to $2
-      correctIndex: 3,
-      difficulty: 'hard',
-      explanation: 'The Basel problem: $\\sum_{k=1}^{\\infty} \\frac{1}{k^2} = \\frac{\\pi^2}{6}$, proven by Euler.'
-    },
-      'Converges to $1
-      correctIndex: 3,
-      difficulty: 'hard',
-      explanation: 'The Basel problem: $\\sum_{k=1}^{\\infty} \\frac{1}{k^2} = \\frac{\\pi^2}{6}$, proven by Euler.'
-    },
+        'Diverges',
+        'Converges to $1$',
+        'Converges to $2$',
+        'Converges to $\\pi^2/6$'
     ],
       correctIndex: 3,
       difficulty: 'hard',
@@ -1270,29 +634,8 @@ export const section05Quiz = {
       id: 's05-h17',
       type: 'multiple-choice',
       question: 'The sequence defined by $a_1 = 2$, $a_{n+1} = \\frac{a_n + 2/a_n}{2}$ converges to:',
-      options: [
-      '$\\sqrt{2}
+      options: ['$\\sqrt{2}$', '$1$', '$2$', '$4$'],
       correctIndex: 0,
-      difficulty: 'hard',
-      explanation: 'This is the Babylonian method for $\\sqrt{2}$. At the fixed point, $L = (L + 2/L)/2$ gives $L^2 = 2$.'
-    },
-      '$1
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'This is the Babylonian method for $\\sqrt{2}$. At the fixed point, $L = (L + 2/L)/2$ gives $L^2 = 2$.'
-    },
-      '$2
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'This is the Babylonian method for $\\sqrt{2}$. At the fixed point, $L = (L + 2/L)/2$ gives $L^2 = 2$.'
-    },
-      '$4
-      correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'This is the Babylonian method for $\\sqrt{2}$. At the fixed point, $L = (L + 2/L)/2$ gives $L^2 = 2$.'
-    },
-    ],
-      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'This is the Babylonian method for $\\sqrt{2}$. At the fixed point, $L = (L + 2/L)/2$ gives $L^2 = 2$.'
     },
@@ -1310,20 +653,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'A sequence $\\{a_n\\}$ satisfying $|a_{n+1} - L| \\leq \\frac{1}{2}|a_n - L|$ for all $n$:',
       options: [
-      'May diverge',
-      'Converges to $L
+        'May diverge',
+        'Converges to $L$',
+        'Oscillates around $L$',
+        'Is eventually constant'
+      ],
       correctIndex: 1,
-      difficulty: 'hard',
-      explanation: 'The distance to $L$ decreases by at least half each step, so $|a_n - L| \\leq 2^{-n}|a_1 - L| \\to 0$.'
-    },
-      'Oscillates around $L
-      correctIndex: 0,
-      difficulty: 'hard',
-      explanation: 'The distance to $L$ decreases by at least half each step, so $|a_n - L| \\leq 2^{-n}|a_1 - L| \\to 0$.'
-    },
-      'Is eventually constant',
-    ],
-      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The distance to $L$ decreases by at least half each step, so $|a_n - L| \\leq 2^{-n}|a_1 - L| \\to 0$.'
     },
@@ -1332,16 +667,12 @@ export const section05Quiz = {
       type: 'multiple-choice',
       question: 'If $\\{a_n\\}$ and $\\{b_n\\}$ are Cauchy sequences, then $\\{a_n + b_n\\}$ is:',
       options: [
-      'Not necessarily Cauchy',
-      'Convergent to $0
-      correctIndex: 3,
-      difficulty: 'hard',
-      explanation: '$|a_m + b_m - a_n - b_n| \\leq |a_m - a_n| + |b_m - b_n|$, and both terms can be made small, so the sum is Cauchy.'
-    },
-      'Unbounded',
-      'Cauchy',
+        'Not necessarily Cauchy',
+        'Convergent to $0$',
+        'Cauchy',
+        'Unbounded'
     ],
-      correctIndex: 1,
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: '$|a_m + b_m - a_n - b_n| \\leq |a_m - a_n| + |b_m - b_n|$, and both terms can be made small, so the sum is Cauchy.'
     }

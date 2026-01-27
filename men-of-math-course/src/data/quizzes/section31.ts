@@ -6,12 +6,12 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a Dedekind cut?',
     options: [
-      'A partition of rational numbers into two sets',
       'A method for dividing integers',
+      'A partition of rational numbers into two sets',
       'A technique for solving equations',
-      'A way to count infinite sets',
+      'A way to count infinite sets'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A Dedekind cut is a partition of the rational numbers $\\mathbb{Q}$ into a lower set $L$ and an upper set $U$, used to construct real numbers.',
   },
@@ -23,7 +23,7 @@ export const section31Questions: QuizQuestion[] = [
       'The lower set is empty',
       'The upper set is finite',
       'The lower set has no maximum and the upper set has no minimum',
-      'Both sets are countable',
+      'Both sets are countable'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -37,7 +37,7 @@ export const section31Questions: QuizQuestion[] = [
       'Groups',
       'Matrices',
       'Fields',
-      'Ideals',
+      'Ideals'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to Dedekind\'s definition, when is a set infinite?',
     options: [
-      'When it cannot be counted',
       'When it can be put in bijection with a proper subset of itself',
+      'When it cannot be counted',
       'When it has more than a million elements',
-      'When it contains irrational numbers',
+      'When it contains irrational numbers'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A set is Dedekind-infinite if and only if it can be matched one-to-one with a proper subset of itself.',
   },
@@ -62,18 +62,10 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Dedekind\'s construction of natural numbers, what represents the number 0?',
     options: [
-      'The set $\\{1\\}
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'In the set-theoretic construction, 0 is represented by the empty set $\\emptyset$.',
-  },
+      'The set $\\{1\\}$',
+      'The empty set $\\emptyset$',
       'The set of all integers',
-      'The empty set $\\emptyset
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'In the set-theoretic construction, 0 is represented by the empty set $\\emptyset$.',
-  },
-      'The number 1',
+      'The number 1'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -84,26 +76,10 @@ export const section31Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the successor of a natural number $n$ in Dedekind\'s construction?',
     options: [
-      '$n + 1
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'The successor $S(n) = n \\cup \\{n\\}$, so each natural number is the set of all smaller natural numbers.',
-  },
-      '$\\{n\\}
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'The successor $S(n) = n \\cup \\{n\\}$, so each natural number is the set of all smaller natural numbers.',
-  },
-      '$2n
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'The successor $S(n) = n \\cup \\{n\\}$, so each natural number is the set of all smaller natural numbers.',
-  },
-      '$n \\cup \\{n\\}
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'The successor $S(n) = n \\cup \\{n\\}$, so each natural number is the set of all smaller natural numbers.',
-  },
+      '$n + 1$',
+      '$\\{n\\}$',
+      '$n \\cup \\{n\\}$',
+      '$2n$'
     ],
     correctIndex: 2,
     difficulty: 'hard',

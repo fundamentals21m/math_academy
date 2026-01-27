@@ -7,7 +7,7 @@ import { httpsCallable } from 'firebase/functions';
 import { getFirebaseFunctions, isFirebaseConfigured } from '../firebase/config';
 import { isValidCourseId } from '../types/courses';
 import { SYNC_INTERVAL_MS, DEBOUNCE_MS, RATE_LIMIT_MS } from '../constants';
-import type { CourseId, ScoreUpdate, SyncPayload } from './types';
+import type { CourseId, ScoreUpdate, SyncPayload, SyncState, SyncStatus } from './types';
 import { getLogger } from '../utils/logger';
 import { validateSectionData } from '../validation/schemas';
 import { XP_CONFIG } from '../gamification/types';
@@ -121,6 +121,36 @@ export class SyncManager {
   private lastSyncTime: number = 0;
   private isAuthenticated: boolean = false;
   private displayName: string | null = null;
+  private syncState: SyncState = { status: 'idle', lastSyncedAt: null, error: null };
+  private statusListeners: Set<(state: SyncState) => void> = new Set();
+
+  /**
+   * Get current sync state
+   */
+  getSyncState(): SyncState {
+    return { ...this.syncState };
+  }
+
+  /**
+   * Subscribe to sync state changes
+   */
+  onStatusChange(callback: (state: SyncState) => void): () => void {
+    this.statusListeners.add(callback);
+    // Immediately call with current state
+    callback(this.getSyncState());
+    // Return unsubscribe function
+    return () => this.statusListeners.delete(callback);
+  }
+
+  /**
+   * Update sync state and notify listeners
+   */
+  private updateSyncState(updates: Partial<SyncState>): void {
+    this.syncState = { ...this.syncState, ...updates };
+    for (const listener of this.statusListeners) {
+      listener(this.getSyncState());
+    }
+  }
 
   /**
    * Set authentication status
@@ -213,9 +243,13 @@ export class SyncManager {
       return { success: false, error: 'Rate limited' };
     }
 
+    // Update status to syncing
+    this.updateSyncState({ status: 'syncing', error: null });
+
     try {
       const extracted = extractScoresFromStorage();
       if (!extracted) {
+        this.updateSyncState({ status: 'idle' });
         return { success: false, error: 'No scores to sync' };
       }
 
@@ -236,12 +270,18 @@ export class SyncManager {
       const result = await syncScores(payload);
       this.lastSyncTime = now;
 
+      // Update status to success
+      this.updateSyncState({ status: 'success', lastSyncedAt: new Date(), error: null });
+
       return { success: result.data.success, totalXP: result.data.totalXP };
      } catch (error) {
        logger.error('Sync failed:', error);
+       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+       // Update status to error
+       this.updateSyncState({ status: 'error', error: errorMessage });
        return {
          success: false,
-         error: error instanceof Error ? error.message : 'Unknown error',
+         error: errorMessage,
        };
      }
   }

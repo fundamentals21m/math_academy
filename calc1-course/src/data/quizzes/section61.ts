@@ -6,26 +6,10 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The modulus of $z = a + bi$ is:',
     options: [
-      '$a + b
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: '$|z| = \\sqrt{a^2 + b^2}$ is the distance from origin in the complex plane.',
-  },
-      '$|a| + |b|
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$|z| = \\sqrt{a^2 + b^2}$ is the distance from origin in the complex plane.',
-  },
-      '$\\sqrt{a^2 + b^2}
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$|z| = \\sqrt{a^2 + b^2}$ is the distance from origin in the complex plane.',
-  },
-      '$a^2 + b^2
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$|z| = \\sqrt{a^2 + b^2}$ is the distance from origin in the complex plane.',
-  },
+      '$a + b$',
+      '$\\sqrt{a^2 + b^2}$',
+      '$|a| + |b|$',
+      '$a^2 + b^2$'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -36,26 +20,10 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The argument of $z$ is:',
     options: [
-      'The real part of $z
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'The argument is the angle from the positive real axis.',
-  },
-      'The angle $\\theta$ such that $z = |z|(\\cos\\theta + i\\sin\\theta)
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The argument is the angle from the positive real axis.',
-  },
-      'The modulus of $z
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The argument is the angle from the positive real axis.',
-  },
-      '$|z|^2
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The argument is the angle from the positive real axis.',
-  },
+      'The real part of $z$',
+      'The modulus of $z$',
+      'The angle $\\theta$ such that $z = |z|(\\cos\\theta + i\\sin\\theta)$',
+      '$|z|^2$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -67,11 +35,11 @@ export const section61Questions: QuizQuestion[] = [
     question: 'In the complex plane, the point $z = 1 + i$ lies in:',
     options: [
       'Quadrant IV',
-      'Quadrant I',
       'Quadrant II',
       'Quadrant III',
+      'Quadrant I'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '$z = 1 + i$ has positive real and positive imaginary parts: Quadrant I.',
   },
@@ -89,26 +57,10 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The polar form of a complex number is:',
     options: [
-      '$a + bi
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Polar form: $z = r(\\cos\\theta + i\\sin\\theta) = r\\text{cis}\\theta$.',
-  },
-      '$r + \\theta i
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Polar form: $z = r(\\cos\\theta + i\\sin\\theta) = r\\text{cis}\\theta$.',
-  },
-      '$e^{r\\theta}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Polar form: $z = r(\\cos\\theta + i\\sin\\theta) = r\\text{cis}\\theta$.',
-  },
-      '$r(\\cos\\theta + i\\sin\\theta)
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Polar form: $z = r(\\cos\\theta + i\\sin\\theta) = r\\text{cis}\\theta$.',
-  },
+      '$r(\\cos\\theta + i\\sin\\theta)$',
+      '$a + bi$',
+      '$r + \\theta i$',
+      '$e^{r\\theta}$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -119,26 +71,10 @@ export const section61Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $|z| = r$, then $|z^2| = ?$',
     options: [
-      '$r
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$|z^n| = |z|^n$, so $|z^2| = r^2$.',
-  },
-      '$2r
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: '$|z^n| = |z|^n$, so $|z^2| = r^2$.',
-  },
-      '$r^2
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: '$|z^n| = |z|^n$, so $|z^2| = r^2$.',
-  },
-      '$\\sqrt{r}
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: '$|z^n| = |z|^n$, so $|z^2| = r^2$.',
-  },
+      '$r$',
+      '$r^2$',
+      '$2r$',
+      '$\\sqrt{r}$'
     ],
     correctIndex: 1,
     difficulty: 'medium',

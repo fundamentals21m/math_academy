@@ -5,28 +5,7 @@ export const section00Questions: QuizQuestion[] = [
     id: 1,
     type: 'multiple-choice',
     question: 'What is $x^2$ when $x=3$?',
-    options: [
-      '$6
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: '$3^2 = 9$',
-  },
-      '$9
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$3^2 = 9$',
-  },
-      '$3
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$3^2 = 9$',
-  },
-      '$12
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$3^2 = 9$',
-  },
-    ],
+    options: ['$3$', '$6$', '$9$', '$12$'],
     correctIndex: 0,
     difficulty: 'easy',
     explanation: '$3^2 = 9$',
@@ -36,28 +15,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which of the following is a linear function?',
     options: [
-      '$f(x) = 2^x
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'A linear function has the form $f(x) = mx + b$ where $m$ and $b$ are constants.',
-  },
-      '$f(x) = mx + b
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'A linear function has the form $f(x) = mx + b$ where $m$ and $b$ are constants.',
-  },
-      '$f(x) = x^2
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'A linear function has the form $f(x) = mx + b$ where $m$ and $b$ are constants.',
-  },
-      '$f(x) = x/x
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'A linear function has the form $f(x) = mx + b$ where $m$ and $b$ are constants.',
-  },
+      '$f(x) = 2^x$',
+      '$f(x) = mx + b$',
+      '$f(x) = x^2$',
+      '$f(x) = x/x$'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A linear function has the form $f(x) = mx + b$ where $m$ and $b$ are constants.',
   },

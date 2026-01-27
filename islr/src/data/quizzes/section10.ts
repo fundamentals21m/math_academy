@@ -7,12 +7,12 @@ export const section10Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'KNN regression predicts the response by:',
     options: [
-      'Averaging responses of the K nearest neighbors',
       'Fitting a linear equation',
+      'Averaging responses of the K nearest neighbors',
       'Using the maximum response value',
-      'Minimizing squared residuals globally',
+      'Minimizing squared residuals globally'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'KNN regression predicts $\\hat{f}(x_0) = \\frac{1}{K}\\sum_{i \\in \\mathcal{N}_0} y_i$, the average of the K nearest neighbors\' responses.',
   },
@@ -20,12 +20,7 @@ export const section10Quiz: QuizQuestion[] = [
     id: 's10-e02',
     type: 'multiple-choice',
     question: 'KNN is an example of which type of method?',
-    options: [
-      'Parametric',
-      'Bayesian',
-      'Non-parametric',
-      'Regularized',
-    ],
+    options: ['Parametric', 'Bayesian', 'Non-parametric', 'Regularized'],
     correctIndex: 2,
     difficulty: 'easy',
     explanation: 'KNN makes no assumptions about the functional form of $f$ - it is non-parametric.',
@@ -35,12 +30,12 @@ export const section10Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A small value of K in KNN (like K=1) typically results in:',
     options: [
-      'Low bias, high variance',
       'A smooth prediction function',
       'High bias, low variance',
       'Optimal predictions',
+      'Low bias, high variance'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Small K = very flexible = can fit complex patterns (low bias) but is sensitive to noise (high variance).',
   },
@@ -57,12 +52,12 @@ export const section10Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Linear regression is preferred over KNN when:',
     options: [
+      'The true relationship is approximately linear',
       'The true relationship is highly non-linear',
       'We have very few predictors',
-      'We have unlimited data',
-      'The true relationship is approximately linear',
+      'We have unlimited data'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'When the true relationship is linear (or close to it), linear regression\'s correct assumption gives it an advantage.',
   },
@@ -73,11 +68,11 @@ export const section10Quiz: QuizQuestion[] = [
     question: 'A large value of K in KNN (like K=100) typically results in:',
     options: [
       'A very flexible fit',
-      'Low bias, high variance',
-      'Perfect test predictions',
       'High bias, low variance',
+      'Low bias, high variance',
+      'Perfect test predictions'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Large K = less flexible = averages many neighbors = smoother but potentially biased predictions.',
   },
@@ -87,11 +82,11 @@ export const section10Quiz: QuizQuestion[] = [
     question: 'With $p = 20$ predictors, KNN is likely to:',
     options: [
       'Outperform linear regression',
-      'Perform poorly due to the curse of dimensionality',
       'Be unaffected by the number of predictors',
-      'Require exactly 20 neighbors',
+      'Perform poorly due to the curse of dimensionality',
+      'Require exactly 20 neighbors'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'In high dimensions, neighbors are far away and not truly "similar," degrading KNN performance.',
   },
@@ -102,10 +97,10 @@ export const section10Quiz: QuizQuestion[] = [
     options: [
       'Linear regression is always better',
       'KNN cannot handle non-linearity',
-      'Linear regression\\\'s lower variance can offset its higher bias',
       'KNN requires normally distributed data',
+      'Linear regression\'s lower variance can offset its higher bias'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The bias-variance tradeoff: a small increase in bias from assuming linearity may be offset by reduced variance.',
   },
@@ -117,7 +112,7 @@ export const section10Quiz: QuizQuestion[] = [
       '$p$ is small and the relationship is non-linear',
       '$p$ is large and $n$ is small',
       'Interpretability is important',
-      'The relationship is known to be linear',
+      'The relationship is known to be linear'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -141,7 +136,7 @@ export const section10Quiz: QuizQuestion[] = [
       'All points become equidistant from each other',
       'The nearest neighbors become relatively farther away',
       'Linear regression fails completely',
-      'KNN predictions become more accurate',
+      'KNN predictions become more accurate'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -154,10 +149,10 @@ export const section10Quiz: QuizQuestion[] = [
     options: [
       '$p$ parameters',
       '$n$ parameters',
-      '$n \\times p$ parameters',
       '$p + 1$ parameters',
+      '$n \\times p$ parameters'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Linear regression estimates $p$ slope coefficients plus one intercept = $p + 1$ parameters total.',
   },
@@ -167,11 +162,11 @@ export const section10Quiz: QuizQuestion[] = [
     question: 'KNN is called a "memory-based" or "instance-based" method because:',
     options: [
       'It requires large computer memory',
-      'It stores training data and uses it directly for predictions',
       'It memorizes the test data',
       'It has poor memory of past predictions',
+      'It stores training data and uses it directly for predictions'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'KNN doesn\'t fit parameters; it stores all training data and queries it to make each prediction.',
   },
@@ -180,12 +175,12 @@ export const section10Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When comparing methods on simulated data, KNN-1 outperformed linear regression only when:',
     options: [
+      'The relationship was highly non-linear',
       'The relationship was linear',
       'The sample size was small',
-      'The relationship was highly non-linear',
-      'There were many predictors',
+      'There were many predictors'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'KNN-1 (most flexible) only wins decisively when the true relationship is substantially non-linear, where linear regression\'s bias hurts.',
   },

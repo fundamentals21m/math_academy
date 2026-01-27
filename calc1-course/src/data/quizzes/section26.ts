@@ -7,11 +7,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'The derivative was historically motivated by:',
     options: [
       'Area problems',
-      'Counting problems',
       'Velocity and tangent line problems',
-      'Probability',
+      'Counting problems',
+      'Probability'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Derivatives arose from studying instantaneous velocity and slopes of tangent lines.',
   },
@@ -20,12 +20,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The instantaneous velocity is the limit of:',
     options: [
-      'Average velocity as the time interval approaches zero',
       'Distance over time for large time intervals',
       'Position at time zero',
-      'Acceleration',
+      'Average velocity as the time interval approaches zero',
+      'Acceleration'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Instantaneous velocity = $\\lim_{\\Delta t \\to 0} \\frac{\\Delta s}{\\Delta t}$.',
   },
@@ -35,11 +35,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'Newton and Leibniz independently developed:',
     options: [
       'Euclidean geometry',
-      'Calculus',
       'Probability theory',
       'Number theory',
+      'Calculus'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Newton and Leibniz are credited as co-inventors of calculus.',
   },
@@ -48,26 +48,10 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The slope of the secant line through $(a, f(a))$ and $(a+h, f(a+h))$ is:',
     options: [
-      '$f(a+h) - f(a)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Slope = rise/run = $\\frac{f(a+h) - f(a)}{h}$.',
-  },
-      '$f(a+h) + f(a)
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Slope = rise/run = $\\frac{f(a+h) - f(a)}{h}$.',
-  },
-      '$h
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Slope = rise/run = $\\frac{f(a+h) - f(a)}{h}$.',
-  },
-      '$\\frac{f(a+h) - f(a)}{h}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Slope = rise/run = $\\frac{f(a+h) - f(a)}{h}$.',
-  },
+      '$\\frac{f(a+h) - f(a)}{h}$',
+      '$f(a+h) - f(a)$',
+      '$f(a+h) + f(a)$',
+      '$h$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -79,11 +63,11 @@ export const section26Questions: QuizQuestion[] = [
     question: 'As $h \\to 0$, the secant line becomes:',
     options: [
       'A vertical line',
-      'A horizontal line',
-      'Undefined',
       'The tangent line',
+      'A horizontal line',
+      'Undefined'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The limiting position of secant lines is the tangent line.',
   },
@@ -92,26 +76,10 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The difference quotient $\\frac{f(x+h) - f(x)}{h}$ represents:',
     options: [
-      'The average rate of change of $f$ over $[x, x+h]
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'The difference quotient gives the average rate of change.',
-  },
-      'The integral of $f
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The difference quotient gives the average rate of change.',
-  },
-      'The maximum of $f
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The difference quotient gives the average rate of change.',
-  },
-      'The area under $f
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The difference quotient gives the average rate of change.',
-  },
+      'The integral of $f$',
+      'The maximum of $f$',
+      'The average rate of change of $f$ over $[x, x+h]$',
+      'The area under $f$'
     ],
     correctIndex: 2,
     difficulty: 'easy',

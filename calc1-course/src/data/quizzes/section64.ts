@@ -6,22 +6,10 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A sequence $\\{a_n\\}$ converges to $L$ if:',
     options: [
-      '$a_n = L$ for all $n
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Convergence: $a_n$ gets arbitrarily close to $L$ for large $n$.',
-  },
+      '$a_n = L$ for all $n$',
+      'For every $\\varepsilon > 0$, $|a_n - L| < \\varepsilon$ for all large enough $n$',
       '$a_n$ is increasing',
-      'For every $\\varepsilon > 0$, $|a_n - L| < \\varepsilon$ for all large enough $n
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Convergence: $a_n$ gets arbitrarily close to $L$ for large $n$.',
-  },
-      '$a_n < L$ for all $n
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Convergence: $a_n$ gets arbitrarily close to $L$ for large $n$.',
-  },
+      '$a_n < L$ for all $n$'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -44,7 +32,7 @@ export const section64Questions: QuizQuestion[] = [
       'Diverges',
       'Oscillates',
       'Converges',
-      'Is constant',
+      'Is constant'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -55,12 +43,12 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Zeno\'s paradox involves:',
     options: [
-      'The sum of an infinite geometric series',
       'Divergent series',
       'Complex numbers',
       'Differential equations',
+      'The sum of an infinite geometric series'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Zeno\'s paradox relates to $1/2 + 1/4 + 1/8 + ... = 1$.',
   },
@@ -69,14 +57,10 @@ export const section64Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sequence $a_n = (-1)^n$:',
     options: [
+      'Diverges (oscillates)',
       'Converges to 0',
       'Converges to 1',
-      'Converges to $-1
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$a_n = 1, -1, 1, -1, ...$ oscillates and does not converge.',
-  },
-      'Diverges (oscillates)',
+      'Converges to $-1$'
     ],
     correctIndex: 0,
     difficulty: 'easy',

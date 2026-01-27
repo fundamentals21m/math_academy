@@ -7,11 +7,11 @@ export const section65Questions: QuizQuestion[] = [
     question: 'The parallel postulate was long believed to be:',
     options: [
       'False',
-      'Discovered by Lobachevsky',
-      'Provable from the other axioms',
       'Unique to spherical geometry',
+      'Discovered by Lobachevsky',
+      'Provable from the other axioms'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'For centuries, mathematicians tried to prove the parallel postulate from Euclid\'s other axioms.',
   },
@@ -20,12 +20,12 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who is called "the Copernicus of geometry" for publishing non-Euclidean geometry?',
     options: [
-      'Bolyai',
       'Lobachevsky',
       'Gauss',
-      'Saccheri',
+      'Bolyai',
+      'Saccheri'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Lobachevsky published his work in Russian in 1829 and earned this title for his revolutionary contribution.',
   },
@@ -35,15 +35,11 @@ export const section65Questions: QuizQuestion[] = [
     question: 'The Poincaré disk model represents hyperbolic geometry inside:',
     options: [
       'The upper half plane',
-      'The open unit disk $|z| < 1
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'The Poincaré disk model uses the interior of the unit disk, with the boundary at infinity.',
-  },
-      'The entire complex plane',
+      'The open unit disk $|z| < 1$',
       'A sphere',
+      'The entire complex plane'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The Poincaré disk model uses the interior of the unit disk, with the boundary at infinity.',
   },
@@ -52,28 +48,12 @@ export const section65Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In spherical geometry, the angle sum of a triangle is:',
     options: [
-      'Equal to $\\pi
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Spherical geometry has positive curvature, so triangle angle sums exceed π (180°).',
-  },
-      'Less than $\\pi
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Spherical geometry has positive curvature, so triangle angle sums exceed π (180°).',
-  },
-      'Exactly $2\\pi
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Spherical geometry has positive curvature, so triangle angle sums exceed π (180°).',
-  },
-      'Greater than $\\pi
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Spherical geometry has positive curvature, so triangle angle sums exceed π (180°).',
-  },
+      'Less than $\\pi$',
+      'Equal to $\\pi$',
+      'Greater than $\\pi$',
+      'Exactly $2\\pi$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Spherical geometry has positive curvature, so triangle angle sums exceed π (180°).',
   },
@@ -83,9 +63,9 @@ export const section65Questions: QuizQuestion[] = [
     question: 'Klein\'s Erlangen program characterizes geometries by their:',
     options: [
       'Axiom systems',
-      'Number of dimensions',
       'Coordinate systems',
-      'Groups of transformations',
+      'Number of dimensions',
+      'Groups of transformations'
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -97,9 +77,9 @@ export const section65Questions: QuizQuestion[] = [
     question: 'Einstein\'s general relativity uses non-Euclidean geometry because:',
     options: [
       'Spacetime is curved by matter and energy',
-      'Light travels in circles',
       'Space is discrete',
-      'Time is an illusion',
+      'Light travels in circles',
+      'Time is an illusion'
     ],
     correctIndex: 0,
     difficulty: 'hard',

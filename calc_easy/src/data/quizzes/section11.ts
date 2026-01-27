@@ -7,11 +7,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'To find a maximum or minimum of a function, we first:',
     options: [
       'Set the function equal to zero',
-      'Find the second derivative',
       'Set the derivative equal to zero',
-      'Graph the function',
+      'Find the second derivative',
+      'Graph the function'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Critical points occur where $f\'(x) = 0$ (or undefined). These are candidates for maxima/minima.',
   },
@@ -22,10 +22,10 @@ export const section11Questions: QuizQuestion[] = [
     options: [
       'Zero of the function',
       'Inflection point',
-      'Asymptote',
       'Critical point or stationary point',
+      'Asymptote'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Points where the derivative is zero are called critical points or stationary points.',
   },
@@ -35,11 +35,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'If $f\'\'(x) > 0$ at a critical point, the function has a:',
     options: [
       'Maximum',
-      'Minimum',
       'Cannot be determined',
       'Inflection point',
+      'Minimum'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'If the second derivative is positive at a critical point, the curve is concave up—a minimum.',
   },
@@ -60,7 +60,7 @@ export const section11Questions: QuizQuestion[] = [
       'The second derivative changes sign (concavity changes)',
       'The derivative equals zero',
       'The function equals zero',
-      'The function is undefined',
+      'The function is undefined'
     ],
     correctIndex: 0,
     difficulty: 'medium',

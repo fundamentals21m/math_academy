@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section05Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Hamilton\'s canonical equations of motion are:',
+    options: [
+      '$\\dot{q} = \\frac{\\partial H}{\\partial p}$ and $\\dot{p} = -\\frac{\\partial H}{\\partial q}$',
+      '$\\dot{q} = -\\frac{\\partial H}{\\partial p}$ and $\\dot{p} = \\frac{\\partial H}{\\partial q}$',
+      '$\\dot{q} = \\frac{\\partial H}{\\partial q}$ and $\\dot{p} = \\frac{\\partial H}{\\partial p}$',
+      '$\\dot{q} = \\frac{\\partial L}{\\partial p}$ and $\\dot{p} = -\\frac{\\partial L}{\\partial q}$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Hamilton\'s equations $\\dot{q} = \\frac{\\partial H}{\\partial p}$ and $\\dot{p} = -\\frac{\\partial H}{\\partial q}$ are first-order equations equivalent to the second-order Euler-Lagrange equations.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The Hamiltonian $H$ is related to the Lagrangian $L$ by:',
+    options: [
+      '$H = p\\dot{q} - L$ (Legendre transform)',
+      '$H = L + p\\dot{q}$',
+      '$H = L$',
+      '$H = -L$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Hamiltonian is the Legendre transform of the Lagrangian: $H(q, p) = p\\dot{q} - L(q, \\dot{q})$, where $\\dot{q}$ is expressed in terms of $p$.',
+  },
+  {
+    id: 3,
+    type: 'text',
+    question: 'In Hamiltonian mechanics, $q$ and $p$ are called conjugate variables. What is the space spanned by all $(q, p)$ pairs called?',
+    correctAnswer: 'phase space',
+    difficulty: 'easy',
+    explanation: 'Phase space is the space of all $(q, p)$ pairs. For $n$ degrees of freedom, phase space is $2n$-dimensional. Hamiltonian dynamics describes trajectories in phase space.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'For a time-independent Hamiltonian, which quantity is conserved?',
+    options: [
+      'The Hamiltonian $H$ (total energy)',
+      'Only kinetic energy',
+      'Only potential energy',
+      'The Lagrangian $L$',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'When $H$ has no explicit time dependence, $\\frac{dH}{dt} = \\frac{\\partial H}{\\partial t} = 0$, so $H$ is conserved. For natural systems, $H = T + V$ is the total energy.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'For a harmonic oscillator with $H = \\frac{p^2}{2m} + \\frac{1}{2}kq^2$, if $m = 1$ kg, $k = 4$ N/m, $q = 1$ m, and $p = 2$ kg$\\cdot$m/s, what is $H$ in Joules?',
+    correctAnswer: 4,
+    numericRange: { min: 0, max: 100, precision: 1 },
+    difficulty: 'easy',
+    explanation: '$H = \\frac{p^2}{2m} + \\frac{1}{2}kq^2 = \\frac{4}{2 \\times 1} + \\frac{1}{2} \\times 4 \\times 1 = 2 + 2 = 4$ J.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The Hamiltonian formulation is defined on:',
+    options: [
+      'The cotangent bundle $T^*Q$ (phase space)',
+      'The tangent bundle $TQ$',
+      'The configuration space $Q$ only',
+      'Euclidean space $\\mathbb{R}^3$',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The Hamiltonian is a function on the cotangent bundle $T^*Q$, where points are $(q, p)$ pairs. The Legendre transform maps from $TQ$ (Lagrangian domain) to $T^*Q$ (Hamiltonian domain).',
+  },
+];

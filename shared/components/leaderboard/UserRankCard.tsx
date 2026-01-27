@@ -4,6 +4,7 @@
 
 import { useState, useCallback } from 'react';
 import { useNostrAuth } from '../../contexts/NostrAuthContext';
+import { SyncStatusIndicator } from './SyncStatusIndicator';
 
 interface UserRankCardProps {
   rank: number | null;
@@ -102,6 +103,11 @@ export function UserRankCard({ rank, totalXP, level, courseXP }: UserRankCardPro
           </div>
           <div className="text-xs text-dark-400">Level</div>
         </div>
+      </div>
+
+      {/* Sync status */}
+      <div className="mt-3 pt-3 border-t border-dark-700/50">
+        <SyncStatusIndicator />
       </div>
 
       {/* Course breakdown */}

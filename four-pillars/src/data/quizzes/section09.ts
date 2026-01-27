@@ -6,12 +6,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A shearing transformation preserves:',
     options: [
-      'Area',
       'Angles',
-      'Shape',
       'Perpendicularity',
+      'Shape',
+      'Area'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Shearing slides layers parallel to the base; the base and height are unchanged, so area is preserved.',
   },
@@ -20,12 +20,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The area of a parallelogram equals:',
     options: [
-      'Diagonal times diagonal',
       'Base times height',
       'Side times side',
-      'Perimeter divided by 2',
+      'Diagonal times diagonal',
+      'Perimeter divided by 2'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Area = base × height, where height is perpendicular distance between parallel sides.',
   },
@@ -35,11 +35,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'The area of a triangle is related to a parallelogram by:',
     options: [
       'Triangle area = parallelogram area',
-      'They are unrelated',
       'Triangle area = (1/2) × parallelogram area',
       'Triangle area = 2 × parallelogram area',
+      'They are unrelated'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A diagonal divides a parallelogram into two congruent triangles, each with half the area.',
   },
@@ -48,12 +48,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two parallelograms with the same base and equal heights have:',
     options: [
+      'Different areas',
       'The same shape',
       'Equal areas',
-      'Different areas',
-      'Equal perimeters',
+      'Equal perimeters'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Area depends only on base and height, not on the slant of the sides.',
   },
@@ -63,9 +63,9 @@ export const section09Questions: QuizQuestion[] = [
     question: 'To prove parallelogram area = base × height, Euclid uses:',
     options: [
       'Calculus',
-      'The Pythagorean theorem',
       'Coordinate geometry',
-      'Shearing to transform it into a rectangle',
+      'The Pythagorean theorem',
+      'Shearing to transform it into a rectangle'
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -77,9 +77,9 @@ export const section09Questions: QuizQuestion[] = [
     question: 'All triangles with the same base and apex on a line parallel to the base have:',
     options: [
       'The same area',
-      'The same perimeter',
       'The same angles',
-      'Congruent shapes',
+      'The same perimeter',
+      'Congruent shapes'
     ],
     correctIndex: 0,
     difficulty: 'hard',

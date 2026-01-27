@@ -8,10 +8,10 @@ export const section21Questions: QuizQuestion[] = [
     options: [
       'Octonions',
       'Dual numbers',
-      'p-adic numbers',
       'Quaternions',
+      'p-adic numbers'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Hamilton invented quaternions, a 4-dimensional number system extending complex numbers.',
   },
@@ -21,11 +21,11 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Hamilton famously carved the quaternion formula on which Dublin landmark?',
     options: [
       'Dublin Castle',
-      'St. Patrick\\\\\'s Cathedral',
-      'Broom Bridge',
+      'St. Patrick\'s Cathedral',
       'Trinity College',
+      'Broom Bridge'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Hamilton carved $i^2 = j^2 = k^2 = ijk = -1$ on Broom Bridge after his eureka moment.',
   },
@@ -34,12 +34,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Quaternion multiplication is notable because it is:',
     options: [
-      'Commutative',
       'Non-commutative',
+      'Commutative',
       'Associative only',
-      'Neither associative nor commutative',
+      'Neither associative nor commutative'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Quaternion multiplication is non-commutative: $ij = k$ but $ji = -k$.',
   },
@@ -48,12 +48,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hamilton reformulated classical mechanics using:',
     options: [
-      'Energy and phase space',
       'Force vectors',
+      'Energy and phase space',
       'Acceleration only',
-      'Stress tensors',
+      'Stress tensors'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Hamiltonian mechanics uses energy functions and phase space (position and momentum).',
   },
@@ -62,12 +62,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Quaternions are now widely used in:',
     options: [
-      '3D computer graphics and robotics',
       'Stock market analysis',
       'Cryptography',
-      'Machine learning only',
+      '3D computer graphics and robotics',
+      'Machine learning only'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Quaternions efficiently represent 3D rotations without gimbal lock, used in games and robotics.',
   },

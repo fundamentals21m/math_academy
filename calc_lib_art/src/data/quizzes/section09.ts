@@ -6,12 +6,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the basic idea of a Riemann sum?',
     options: [
-      'Approximating area under a curve using rectangles',
       'Adding two numbers',
       'Finding the slope of a curve',
-      'Dividing a number into prime factors',
+      'Approximating area under a curve using rectangles',
+      'Dividing a number into prime factors'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Riemann sums approximate the area under a curve by dividing the region into thin rectangles and adding up their areas.',
   },
@@ -31,7 +31,7 @@ export const section09Questions: QuizQuestion[] = [
       'It becomes less accurate',
       'It becomes infinite',
       'It stays the same',
-      'It approaches the exact area (the integral)',
+      'It approaches the exact area (the integral)'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -51,14 +51,10 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the integral symbol $\\int$ represent?',
     options: [
-      'Infinity',
-      'The number $i
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Leibniz designed $\\int$ as an elongated S for "summa" (sum), representing the sum of infinitely many infinitesimal pieces.',
-  },
-      'Integration is impossible',
       'An elongated S for "sum" (adding infinitely many pieces)',
+      'Infinity',
+      'The number $i$',
+      'Integration is impossible'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -72,7 +68,7 @@ export const section09Questions: QuizQuestion[] = [
       'The same positive area',
       'Signed (negative) area—below the x-axis counts as negative',
       'Zero',
-      'The integral is undefined',
+      'The integral is undefined'
     ],
     correctIndex: 1,
     difficulty: 'medium',

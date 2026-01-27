@@ -11,46 +11,31 @@ export const section13Quiz: DifficultyQuizData = {
     {
       id: 's13-e01',
       question: 'The kernel (null space) of a linear transformation T: V → W is:',
-      options: ['{v ∈ V : T(v) = 0}', '{w ∈ W : T(v) = w for some v}', 'V', 'W'],
-      correctIndex: 0,
+      options: ['{w ∈ W : T(v) = w for some v}', 'V', '{v ∈ V : T(v) = 0}', 'W'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'ker(T) = {v ∈ V : T(v) = 0}, the set of vectors mapping to zero.'
     },
     {
       id: 's13-e02',
       question: 'For any linear transformation T, T(0) equals:',
-      options: [
-      '1',
-      '0',
-      'Undefined',
-      'T',
-    ],
-      correctIndex: 1,
+      options: ['1', 'Undefined', 'T', '0'],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'T(0) = T(0 · v) = 0 · T(v) = 0. Linear maps always send zero to zero.'
     },
     {
       id: 's13-e03',
       question: 'The zero transformation T(v) = 0 for all v is:',
-      options: [
-      'Not linear',
-      'An isomorphism',
-      'Not well-defined',
-      'Linear',
-    ],
-      correctIndex: 3,
+      options: ['Linear', 'Not linear', 'An isomorphism', 'Not well-defined'],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The zero map is linear: T(av + bw) = 0 = a·0 + b·0 = aT(v) + bT(w).'
     },
     {
       id: 's13-e04',
       question: 'The identity map I: V → V defined by I(v) = v is:',
-      options: [
-      'Not linear',
-      'A linear isomorphism',
-      'Linear but not bijective',
-      'Only defined for finite-dimensional V',
-    ],
+      options: ['Not linear', 'A linear isomorphism', 'Linear but not bijective', 'Only defined for finite-dimensional V'],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The identity map is linear, injective, and surjective—hence an isomorphism.'
@@ -58,26 +43,16 @@ export const section13Quiz: DifficultyQuizData = {
     {
       id: 's13-e05',
       question: 'If T: ℝ² → ℝ² is defined by T(x, y) = (2x, 2y), then T is:',
-      options: [
-      'Linear',
-      'Not linear',
-      'Not well-defined',
-      'Only linear for x = y',
-    ],
-      correctIndex: 0,
+      options: ['Not linear', 'Not well-defined', 'Linear', 'Only linear for x = y'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Scalar multiplication is linear: T(av + bw) = aT(v) + bT(w).'
     },
     {
       id: 's13-e06',
       question: 'If T: ℝ² → ℝ² is defined by T(x, y) = (x + 1, y), then T is:',
-      options: [
-      'Linear',
-      'Not linear',
-      'An isomorphism',
-      'Has trivial kernel',
-    ],
-      correctIndex: 1,
+      options: ['Linear', 'An isomorphism', 'Has trivial kernel', 'Not linear'],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'T(0,0) = (1,0) ≠ (0,0), so T is not linear.'
     },
@@ -86,78 +61,48 @@ export const section13Quiz: DifficultyQuizData = {
     {
       id: 's13-m01',
       question: 'A function T: V → W is a linear transformation if:',
-      options: [
-      'T is bijective',
-      'T(0) = 0',
-      'T(αv + βw) = αT(v) + βT(w) for all scalars α, β and vectors v, w',
-      'T is surjective',
-    ],
-      correctIndex: 2,
+      options: ['T(αv + βw) = αT(v) + βT(w) for all scalars α, β and vectors v, w', 'T is bijective', 'T(0) = 0', 'T is surjective'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'T is linear iff it preserves linear combinations: T(αv + βw) = αT(v) + βT(w).'
     },
     {
       id: 's13-m02',
       question: 'The image (range) of T: V → W is:',
-      options: [
-      'All of W',
-      'Equal to V',
-      'The zero vector only',
-      'A subspace of W',
-    ],
-      correctIndex: 3,
+      options: ['All of W', 'A subspace of W', 'Equal to V', 'The zero vector only'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Im(T) = {T(v) : v ∈ V} is always a subspace of W.'
     },
     {
       id: 's13-m03',
       question: 'T is injective (one-to-one) if and only if:',
-      options: [
-      'ker(T) = {0}',
-      'T is surjective',
-      'Im(T) = W',
-      'T is the identity',
-    ],
-      correctIndex: 0,
+      options: ['T is surjective', 'Im(T) = W', 'ker(T) = {0}', 'T is the identity'],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'T is injective iff the only vector mapping to 0 is the zero vector itself.'
     },
     {
       id: 's13-m04',
       question: 'If T: V → W is linear and S ⊆ V is a subspace, then T(S) is:',
-      options: [
-      'Not necessarily a subspace',
-      'Equal to W',
-      'A subspace of W',
-      'Empty',
-    ],
-      correctIndex: 2,
+      options: ['Not necessarily a subspace', 'Equal to W', 'Empty', 'A subspace of W'],
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The image of a subspace under a linear map is always a subspace.'
     },
     {
       id: 's13-m05',
       question: 'If T: V → W is linear, then rank(T) is defined as:',
-      options: [
-      'dim(ker T)',
-      'dim(V)',
-      'dim(W)',
-      'dim(Im T)',
-    ],
-      correctIndex: 3,
+      options: ['dim(Im T)', 'dim(ker T)', 'dim(V)', 'dim(W)'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The rank of T is the dimension of its image (range).'
     },
     {
       id: 's13-m06',
       question: 'T is surjective (onto) if and only if:',
-      options: [
-      'ker(T) = {0}',
-      'T is injective',
-      'T is the identity',
-      'Im(T) = W',
-    ],
-      correctIndex: 3,
+      options: ['ker(T) = {0}', 'Im(T) = W', 'T is injective', 'T is the identity'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'T is surjective iff every element of W is in the image of T.'
     },
@@ -166,72 +111,47 @@ export const section13Quiz: DifficultyQuizData = {
     {
       id: 's13-h01',
       question: 'For T: V → W linear, dim(ker T) + dim(Im T) equals:',
-      options: [
-      'dim(V)',
-      'dim(W)',
-      'dim(V) + dim(W)',
-      '0',
-    ],
-      correctIndex: 0,
+      options: ['dim(W)', 'dim(V) + dim(W)', 'dim(V)', '0'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'This is the rank-nullity theorem: nullity(T) + rank(T) = dim(V).'
     },
     {
       id: 's13-h02',
       question: 'If T: ℝ³ → ℝ² is linear and surjective, then dim(ker T) equals:',
-      options: [
-      '0',
-      '2',
-      '1',
-      '3',
-    ],
-      correctIndex: 2,
+      options: ['0', '2', '3', '1'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'By rank-nullity: 3 = dim(ker T) + dim(Im T) = dim(ker T) + 2, so dim(ker T) = 1.'
     },
     {
       id: 's13-h03',
       question: 'If dim(V) = dim(W) and T: V → W is linear, then:',
-      options: [
-      'T is always an isomorphism',
-      'T injective ⟺ T surjective ⟺ T isomorphism',
-      'T is never an isomorphism',
-      'T must be the zero map',
-    ],
-      correctIndex: 1,
+      options: ['T injective ⟺ T surjective ⟺ T isomorphism', 'T is always an isomorphism', 'T is never an isomorphism', 'T must be the zero map'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'For equal finite dimensions, injective ⟺ surjective ⟺ bijective.'
     },
     {
       id: 's13-h04',
       question: 'A linear T: V → W is determined by its values on:',
-      options: [
-      'All of V',
-      'Any spanning set for V',
-      'Any single non-zero vector',
-      'Any basis for V',
-    ],
-      correctIndex: 3,
+      options: ['All of V', 'Any basis for V', 'Any spanning set for V', 'Any single non-zero vector'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'A linear map is uniquely determined by its values on a basis.'
     },
     {
       id: 's13-h05',
       question: 'The composition of linear transformations is:',
-      options: ['Never linear', 'Always linear', 'Linear only if both are isomorphisms', 'Linear only if both are the same'],
-      correctIndex: 1,
+      options: ['Never linear', 'Linear only if both are isomorphisms', 'Always linear', 'Linear only if both are the same'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'If T and U are linear, then UT is also linear.'
     },
     {
       id: 's13-h06',
       question: 'If T: V → W is linear and V is finite-dimensional, then:',
-      options: [
-      'W must be finite-dimensional',
-      'ker(T) is infinite-dimensional',
-      'rank(T) = dim(V)',
-      'Im(T) is finite-dimensional',
-    ],
+      options: ['W must be finite-dimensional', 'ker(T) is infinite-dimensional', 'rank(T) = dim(V)', 'Im(T) is finite-dimensional'],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The image of a finite-dimensional space is finite-dimensional (Im(T) ⊆ W is spanned by images of a basis).'
@@ -248,73 +168,48 @@ export const section15Quiz: DifficultyQuizData = {
     {
       id: 's15-e01',
       question: 'A linear transformation T: ℝⁿ → ℝᵐ can be represented by:',
-      options: [
-      'An n × m matrix',
-      'An n × n matrix',
-      'An m × n matrix',
-      'A 1 × 1 matrix',
-    ],
-      correctIndex: 2,
+      options: ['An m × n matrix', 'An n × m matrix', 'An n × n matrix', 'A 1 × 1 matrix'],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'T: ℝⁿ → ℝᵐ is represented by an m × n matrix (m rows, n columns).'
     },
     {
       id: 's15-e02',
       question: 'If T is represented by matrix A, then T(v) equals:',
-      options: [
-      'Av',
-      'A + v',
-      'vA',
-      'A - v',
-    ],
-      correctIndex: 0,
+      options: ['A + v', 'Av', 'vA', 'A - v'],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'Matrix multiplication: T(v) = Av (matrix times column vector).'
     },
     {
       id: 's15-e03',
       question: 'The matrix of the identity map I: ℝⁿ → ℝⁿ is:',
-      options: [
-      'The zero matrix',
-      'The n × n identity matrix',
-      'Any invertible matrix',
-      'Undefined',
-    ],
-      correctIndex: 1,
+      options: ['The zero matrix', 'Any invertible matrix', 'The n × n identity matrix', 'Undefined'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The identity map has the identity matrix as its representation in any basis.'
     },
     {
       id: 's15-e04',
       question: 'If A represents T and B represents U, then AB represents:',
-      options: ['T + U', 'TU (composition)', 'UT (composition)', 'T - U'],
-      correctIndex: 2,
+      options: ['T + U', 'TU (composition)', 'T - U', 'UT (composition)'],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Matrix multiplication AB corresponds to composition: first U, then T, so UT.'
     },
     {
       id: 's15-e05',
       question: 'The zero transformation is represented by:',
-      options: [
-      'The identity matrix',
-      'The zero matrix',
-      'Any matrix',
-      'No matrix',
-    ],
-      correctIndex: 1,
+      options: ['The zero matrix', 'The identity matrix', 'Any matrix', 'No matrix'],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'T(v) = 0 for all v corresponds to the zero matrix.'
     },
     {
       id: 's15-e06',
       question: 'An n × n matrix represents a linear operator on:',
-      options: [
-      'An (n+1)-dimensional space',
-      'Any space',
-      'An (n-1)-dimensional space',
-      'An n-dimensional space',
-    ],
-      correctIndex: 3,
+      options: ['An (n+1)-dimensional space', 'An n-dimensional space', 'Any space', 'An (n-1)-dimensional space'],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'An n × n matrix represents a linear map from an n-dimensional space to itself.'
     },
@@ -323,25 +218,15 @@ export const section15Quiz: DifficultyQuizData = {
     {
       id: 's15-m01',
       question: 'A linear transformation T: V → W is an isomorphism if T is:',
-      options: [
-      'Injective',
-      'Surjective',
-      'Continuous',
-      'Bijective and linear',
-    ],
-      correctIndex: 3,
+      options: ['Injective', 'Surjective', 'Bijective and linear', 'Continuous'],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'An isomorphism is a bijective linear transformation.'
     },
     {
       id: 's15-m02',
       question: 'Two finite-dimensional vector spaces over F are isomorphic iff:',
-      options: [
-      'They have the same elements',
-      'One contains the other',
-      'They are equal',
-      'They have the same dimension',
-    ],
+      options: ['They have the same elements', 'One contains the other', 'They are equal', 'They have the same dimension'],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Finite-dimensional spaces over the same field are isomorphic iff they have equal dimension.'
@@ -349,38 +234,23 @@ export const section15Quiz: DifficultyQuizData = {
     {
       id: 's15-m03',
       question: 'Two matrices A and B are similar if:',
-      options: [
-      'A = B',
-      'AB = BA',
-      'B = P⁻¹AP for some invertible P',
-      'A + B = 0',
-    ],
-      correctIndex: 2,
+      options: ['B = P⁻¹AP for some invertible P', 'A = B', 'AB = BA', 'A + B = 0'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Similar matrices represent the same linear operator in different bases.'
     },
     {
       id: 's15-m04',
       question: 'An n × n matrix represents an isomorphism iff it is:',
-      options: [
-      'Symmetric',
-      'Diagonal',
-      'Invertible',
-      'Upper triangular',
-    ],
-      correctIndex: 2,
+      options: ['Symmetric', 'Invertible', 'Diagonal', 'Upper triangular'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'A linear operator is an isomorphism iff its matrix (in any basis) is invertible.'
     },
     {
       id: 's15-m05',
       question: 'If T: V → W is an isomorphism, then T⁻¹ is:',
-      options: [
-      'Not linear',
-      'Not defined',
-      'Linear',
-      'Only partially defined',
-    ],
+      options: ['Not linear', 'Not defined', 'Linear', 'Only partially defined'],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The inverse of an isomorphism is also a linear isomorphism.'
@@ -388,13 +258,8 @@ export const section15Quiz: DifficultyQuizData = {
     {
       id: 's15-m06',
       question: 'Matrix multiplication corresponds to:',
-      options: [
-      'Addition of transformations',
-      'Scalar multiplication',
-      'Composition of transformations',
-      'Taking transpose',
-    ],
-      correctIndex: 2,
+      options: ['Addition of transformations', 'Scalar multiplication', 'Taking transpose', 'Composition of transformations'],
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'If A and B represent T and U, then AB represents the composition.'
     },
@@ -403,78 +268,48 @@ export const section15Quiz: DifficultyQuizData = {
     {
       id: 's15-h01',
       question: 'If T: V → W is linear and B, B\' are ordered bases for V, W, the matrix [T]_{B\',B} has:',
-      options: [
-      'Rows from T applied to B',
-      'All 1s',
-      'All 0s',
-      'Columns that are coordinate vectors of T(vᵢ)',
-    ],
-      correctIndex: 3,
+      options: ['Columns that are coordinate vectors of T(vᵢ)', 'Rows from T applied to B', 'All 1s', 'All 0s'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The jth column of [T]_{B\',B} is the coordinate vector of T(vⱼ) relative to B\'.'
     },
     {
       id: 's15-h02',
       question: 'If A is the matrix of T: V → V relative to basis B, and P is a change-of-basis matrix, the matrix relative to the new basis is:',
-      options: [
-      'P⁻¹AP',
-      'PAP',
-      'AP⁻¹',
-      'PA',
-    ],
-      correctIndex: 0,
+      options: ['PAP', 'P⁻¹AP', 'AP⁻¹', 'PA'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Under change of basis by P, the matrix transforms as P⁻¹AP.'
     },
     {
       id: 's15-h03',
       question: 'Similar matrices have:',
-      options: [
-      'The same rank, determinant, and eigenvalues',
-      'The same entries',
-      'The same size only',
-      'Nothing in common',
-    ],
-      correctIndex: 0,
+      options: ['The same entries', 'The same size only', 'The same rank, determinant, and eigenvalues', 'Nothing in common'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Similar matrices share all basis-independent properties: rank, determinant, trace, eigenvalues, etc.'
     },
     {
       id: 's15-h04',
       question: 'The relation "V is isomorphic to W" is:',
-      options: [
-      'An equivalence relation',
-      'Not symmetric',
-      'Not transitive',
-      'Not reflexive',
-    ],
-      correctIndex: 0,
+      options: ['Not symmetric', 'Not transitive', 'Not reflexive', 'An equivalence relation'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Isomorphism is reflexive (identity), symmetric (inverse), and transitive (composition).'
     },
     {
       id: 's15-h05',
       question: 'If A and B are similar matrices, then:',
-      options: [
-      'A = B',
-      'They have the same characteristic polynomial',
-      'They have different ranks',
-      'One is the transpose of the other',
-    ],
-      correctIndex: 1,
+      options: ['They have the same characteristic polynomial', 'A = B', 'They have different ranks', 'One is the transpose of the other'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Similar matrices represent the same operator and share the characteristic polynomial.'
     },
     {
       id: 's15-h06',
       question: 'The set of all n × n invertible matrices over F forms:',
-      options: [
-      'A group under multiplication',
-      'A field',
-      'A vector space',
-      'A ring',
-    ],
-      correctIndex: 0,
+      options: ['A field', 'A group under multiplication', 'A vector space', 'A ring'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'GL(n, F) is a group under matrix multiplication (the general linear group).'
     },
@@ -489,25 +324,15 @@ export const section17Quiz: DifficultyQuizData = {
     {
       id: 's17-e01',
       question: 'A linear functional on V is a linear transformation from V to:',
-      options: [
-      'V',
-      'F (the scalar field)',
-      'V × V',
-      'Any vector space',
-    ],
-      correctIndex: 1,
+      options: ['V', 'V × V', 'F (the scalar field)', 'Any vector space'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'A linear functional maps vectors to scalars: f: V → F.'
     },
     {
       id: 's17-e02',
       question: 'If f: ℝ³ → ℝ is defined by f(x, y, z) = x + 2y + 3z, then f is:',
-      options: [
-      'Not linear',
-      'An isomorphism',
-      'Not well-defined',
-      'A linear functional',
-    ],
+      options: ['Not linear', 'An isomorphism', 'Not well-defined', 'A linear functional'],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'f is linear: f(av + bw) = af(v) + bf(w). It maps vectors to scalars.'
@@ -515,51 +340,31 @@ export const section17Quiz: DifficultyQuizData = {
     {
       id: 's17-e03',
       question: 'The dual space V* is a subset of:',
-      options: [
-      'V',
-      'The set of all functions from V to F',
-      'The power set of V',
-      'F',
-    ],
-      correctIndex: 1,
+      options: ['The set of all functions from V to F', 'V', 'The power set of V', 'F'],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'V* consists of linear functions from V to F, a subset of all functions V → F.'
     },
     {
       id: 's17-e04',
       question: 'V* itself is:',
-      options: [
-      'A vector space over F',
-      'A field',
-      'Not a vector space',
-      'Equal to V',
-    ],
-      correctIndex: 0,
+      options: ['A field', 'A vector space over F', 'Not a vector space', 'Equal to V'],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The dual space V* is a vector space (with pointwise operations).'
     },
     {
       id: 's17-e05',
       question: 'The zero functional f(v) = 0 for all v:',
-      options: [
-      'Is not in V*',
-      'Is the zero vector of V*',
-      'Is not linear',
-      'Is an isomorphism',
-    ],
-      correctIndex: 1,
+      options: ['Is not in V*', 'Is not linear', 'Is the zero vector of V*', 'Is an isomorphism'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The zero functional is linear and serves as the additive identity in V*.'
     },
     {
       id: 's17-e06',
       question: 'For the standard basis {e₁, e₂, e₃} of ℝ³, a dual basis functional f₁ satisfies:',
-      options: [
-      'f₁(e₁) = 0',
-      'f₁(eᵢ) = 1 for all i',
-      'f₁ = e₁',
-      'f₁(e₁) = 1, f₁(e₂) = f₁(e₃) = 0',
-    ],
+      options: ['f₁(e₁) = 0', 'f₁(eᵢ) = 1 for all i', 'f₁ = e₁', 'f₁(e₁) = 1, f₁(e₂) = f₁(e₃) = 0'],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The dual basis has fᵢ(eⱼ) = δᵢⱼ (1 if i=j, 0 otherwise).'
@@ -569,25 +374,15 @@ export const section17Quiz: DifficultyQuizData = {
     {
       id: 's17-m01',
       question: 'The dual space V* of V is:',
-      options: [
-      'Equal to V',
-      'The space of all linear functionals on V',
-      'Always infinite-dimensional',
-      'A subspace of V',
-    ],
-      correctIndex: 1,
+      options: ['The space of all linear functionals on V', 'Equal to V', 'Always infinite-dimensional', 'A subspace of V'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'V* = L(V, F) is the space of all linear functionals on V.'
     },
     {
       id: 's17-m02',
       question: 'If dim(V) = n, then dim(V*) equals:',
-      options: [
-      '0',
-      'n',
-      '1',
-      'n²',
-    ],
+      options: ['0', 'n', '1', 'n²'],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'The dual space has the same dimension as the original space.'
@@ -595,12 +390,7 @@ export const section17Quiz: DifficultyQuizData = {
     {
       id: 's17-m03',
       question: 'The dual basis {f₁,...,fₙ} of {v₁,...,vₙ} satisfies:',
-      options: [
-      'fᵢ(vⱼ) = 0 for all i,j',
-      'fᵢ(vⱼ) = 1 for all i,j',
-      'fᵢ(vⱼ) = δᵢⱼ (Kronecker delta)',
-      'fᵢ = vᵢ',
-    ],
+      options: ['fᵢ(vⱼ) = 0 for all i,j', 'fᵢ(vⱼ) = 1 for all i,j', 'fᵢ(vⱼ) = δᵢⱼ (Kronecker delta)', 'fᵢ = vᵢ'],
       correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The dual basis is defined by fᵢ(vⱼ) = δᵢⱼ = 1 if i=j, 0 otherwise.'
@@ -608,26 +398,16 @@ export const section17Quiz: DifficultyQuizData = {
     {
       id: 's17-m04',
       question: 'If T: V → W is linear, the transpose Tᵗ maps:',
-      options: [
-      'W* → V*',
-      'V* → W*',
-      'V → W*',
-      'W → V',
-    ],
-      correctIndex: 0,
+      options: ['V* → W*', 'V → W*', 'W → V', 'W* → V*'],
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The transpose Tᵗ: W* → V* is defined by (Tᵗg)(v) = g(T(v)).'
     },
     {
       id: 's17-m05',
       question: '(ST)ᵗ equals:',
-      options: [
-      'SᵗTᵗ',
-      '(Sᵗ)(Tᵗ)',
-      'Tᵗ + Sᵗ',
-      'TᵗSᵗ',
-    ],
-      correctIndex: 3,
+      options: ['TᵗSᵗ', 'SᵗTᵗ', '(Sᵗ)(Tᵗ)', 'Tᵗ + Sᵗ'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The transpose reverses the order of composition: (ST)ᵗ = TᵗSᵗ.'
     },
@@ -644,46 +424,31 @@ export const section17Quiz: DifficultyQuizData = {
     {
       id: 's17-h01',
       question: 'The annihilator of a subspace W ⊆ V is:',
-      options: [
-      'A subspace of V*',
-      'A subspace of V',
-      'Equal to W',
-      'Equal to V*',
-    ],
-      correctIndex: 0,
+      options: ['A subspace of V', 'Equal to W', 'A subspace of V*', 'Equal to V*'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Ann(W) = {f ∈ V* : f(w) = 0 for all w ∈ W} is a subspace of V*.'
     },
     {
       id: 's17-h02',
       question: 'dim(Ann(W)) equals:',
-      options: ['dim(W)', 'dim(V) - dim(W)', 'dim(V*)', '0'],
-      correctIndex: 1,
+      options: ['dim(W)', 'dim(V*)', '0', 'dim(V) - dim(W)'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'For W ⊆ V: dim(Ann(W)) = dim(V*) - dim(W) = dim(V) - dim(W).'
     },
     {
       id: 's17-h03',
       question: 'The canonical map from V to V** is:',
-      options: [
-      'Not injective',
-      'The zero map',
-      'An isomorphism when V is finite-dimensional',
-      'Not linear',
-    ],
-      correctIndex: 2,
+      options: ['An isomorphism when V is finite-dimensional', 'Not injective', 'The zero map', 'Not linear'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The canonical embedding v ↦ êᵥ is an isomorphism when dim(V) < ∞.'
     },
     {
       id: 's17-h04',
       question: 'For finite-dimensional V, V is naturally isomorphic to V** via:',
-      options: [
-      'Any isomorphism',
-      'The canonical evaluation map',
-      'A basis-dependent isomorphism',
-      'The identity',
-    ],
+      options: ['Any isomorphism', 'The canonical evaluation map', 'A basis-dependent isomorphism', 'The identity'],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'The canonical isomorphism sends v to the evaluation functional êᵥ(f) = f(v).'
@@ -691,26 +456,16 @@ export const section17Quiz: DifficultyQuizData = {
     {
       id: 's17-h05',
       question: 'The matrix of Tᵗ relative to dual bases is:',
-      options: [
-      'The same as T',
-      'The inverse of the matrix of T',
-      'Unrelated to T',
-      'The transpose of the matrix of T',
-    ],
-      correctIndex: 3,
+      options: ['The same as T', 'The inverse of the matrix of T', 'The transpose of the matrix of T', 'Unrelated to T'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The matrix of Tᵗ is the transpose of the matrix of T (relative to dual bases).'
     },
     {
       id: 's17-h06',
       question: 'If W is a subspace of V, then Ann(Ann(W)) under the canonical identification V ≅ V** equals:',
-      options: [
-      '{0}',
-      'V',
-      'W',
-      'V*',
-    ],
-      correctIndex: 2,
+      options: ['{0}', 'V', 'V*', 'W'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Under the canonical identification, Ann(Ann(W)) = W (for finite-dimensional V).'
     },
@@ -727,38 +482,23 @@ export const chapter03Quiz: DifficultyQuizData = {
     {
       id: 'ch03-h01',
       question: 'The zero transformation T(v) = 0 for all v is:',
-      options: [
-      'Not linear',
-      'An isomorphism',
-      'Not well-defined',
-      'Linear but not injective',
-    ],
-      correctIndex: 3,
+      options: ['Linear but not injective', 'Not linear', 'An isomorphism', 'Not well-defined'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The zero map is linear but has kernel = V, so it\'s not injective (unless V = {0}).'
     },
     {
       id: 'ch03-h02',
       question: 'If T: ℝ³ → ℝ² is linear and surjective, then dim(ker T) equals:',
-      options: [
-      '1',
-      '0',
-      '2',
-      '3',
-    ],
-      correctIndex: 0,
+      options: ['0', '1', '2', '3'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'By rank-nullity: 3 = dim(ker T) + dim(Im T) = dim(ker T) + 2, so dim(ker T) = 1.'
     },
     {
       id: 'ch03-h03',
       question: 'The set L(V, W) of all linear transformations from V to W is:',
-      options: [
-      'A group',
-      'A ring',
-      'A vector space over F',
-      'Just a set',
-    ],
+      options: ['A group', 'A ring', 'A vector space over F', 'Just a set'],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'L(V, W) is a vector space under pointwise addition and scalar multiplication.'
@@ -766,12 +506,7 @@ export const chapter03Quiz: DifficultyQuizData = {
     {
       id: 'ch03-h04',
       question: 'The set L(V, V) of linear operators on V forms:',
-      options: [
-      'A field',
-      'A vector space only',
-      'Neither',
-      'An algebra',
-    ],
+      options: ['A field', 'A vector space only', 'Neither', 'An algebra'],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'L(V, V) is an algebra: a vector space with a compatible multiplication (composition).'
@@ -779,12 +514,7 @@ export const chapter03Quiz: DifficultyQuizData = {
     {
       id: 'ch03-h05',
       question: 'Composition of linear transformations is:',
-      options: [
-      'Associative',
-      'Commutative',
-      'Both',
-      'Neither',
-    ],
+      options: ['Associative', 'Commutative', 'Both', 'Neither'],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Composition is associative but generally NOT commutative.'
@@ -792,25 +522,15 @@ export const chapter03Quiz: DifficultyQuizData = {
     {
       id: 'ch03-h06',
       question: 'An n × n matrix represents an isomorphism iff it is:',
-      options: [
-      'Invertible',
-      'Symmetric',
-      'Diagonal',
-      'Upper triangular',
-    ],
-      correctIndex: 0,
+      options: ['Symmetric', 'Invertible', 'Diagonal', 'Upper triangular'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'A linear operator is an isomorphism iff its matrix (in any basis) is invertible.'
     },
     {
       id: 'ch03-h07',
       question: 'rank(T) + nullity(T) = dim(V) is called:',
-      options: [
-      'The fundamental theorem',
-      'Sylvester\\'s law',
-      'The rank-nullity theorem',
-      'The dimension formula',
-    ],
+      options: ['The fundamental theorem', 'Sylvester\'s law', 'The rank-nullity theorem', 'The dimension formula'],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'This is the rank-nullity theorem (or dimension theorem).'
@@ -818,25 +538,15 @@ export const chapter03Quiz: DifficultyQuizData = {
     {
       id: 'ch03-h08',
       question: 'If dim(V) = dim(W) and T: V → W is linear, then:',
-      options: [
-      'T is always an isomorphism',
-      'T is never an isomorphism',
-      'T injective ⟺ T surjective ⟺ T isomorphism',
-      'T must be the zero map',
-    ],
-      correctIndex: 2,
+      options: ['T is always an isomorphism', 'T is never an isomorphism', 'T must be the zero map', 'T injective ⟺ T surjective ⟺ T isomorphism'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'For equal finite dimensions, injective ⟺ surjective ⟺ bijective.'
     },
     {
       id: 'ch03-h09',
       question: 'The identity map I: V → V has matrix relative to any basis:',
-      options: [
-      'The identity matrix Iₙ',
-      'The zero matrix',
-      'A diagonal matrix with all diagonal entries equal to n',
-      'Depends on the basis',
-    ],
+      options: ['The identity matrix Iₙ', 'The zero matrix', 'A diagonal matrix with all diagonal entries equal to n', 'Depends on the basis'],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The identity transformation always has the identity matrix as its representation.'
@@ -844,13 +554,8 @@ export const chapter03Quiz: DifficultyQuizData = {
     {
       id: 'ch03-h10',
       question: 'If A and B are similar matrices, then:',
-      options: [
-      'A = B',
-      'They have different ranks',
-      'They have the same characteristic polynomial',
-      'One is the transpose of the other',
-    ],
-      correctIndex: 2,
+      options: ['A = B', 'They have the same characteristic polynomial', 'They have different ranks', 'One is the transpose of the other'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Similar matrices represent the same operator and share the characteristic polynomial.'
     },

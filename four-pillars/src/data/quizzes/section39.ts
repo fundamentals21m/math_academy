@@ -7,11 +7,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'A field is a set with operations + and × satisfying:',
     options: [
       'Only the commutative law',
-      'The nine field axioms (associative, commutative, distributive, identity, inverse laws)',
-      'No particular laws',
       'Only the associative law',
+      'No particular laws',
+      'The nine field axioms (associative, commutative, distributive, identity, inverse laws)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A field must satisfy all nine fundamental algebraic laws.',
   },
@@ -21,9 +21,9 @@ export const section39Questions: QuizQuestion[] = [
     question: 'The Fano plane F₂P² has how many points?',
     options: [
       '7',
-      '5',
       '3',
-      '15',
+      '5',
+      '15'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'The field F₂ has how many elements?',
     options: [
       '1',
-      'Infinitely many',
-      '3',
       '2',
+      '3',
+      'Infinitely many'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'F₂ = {0, 1} with addition mod 2.',
   },
@@ -48,12 +48,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In F₂, 1 + 1 = :',
     options: [
-      '0',
-      '1',
       '2',
-      '−1',
+      '1',
+      '0',
+      '−1'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'In F₂, addition is mod 2, so 1 + 1 = 0.',
   },
@@ -63,11 +63,11 @@ export const section39Questions: QuizQuestion[] = [
     question: 'The cross-ratio was first discovered by:',
     options: [
       'Euclid',
-      'Hilbert',
-      'Pappus (around 300 CE)',
       'Newton',
+      'Hilbert',
+      'Pappus (around 300 CE)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Pappus proved the invariance of the cross-ratio around 300 CE.',
   },
@@ -76,12 +76,12 @@ export const section39Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To ensure a projective plane FP² has coordinates from a field, we need:',
     options: [
-      'The Pythagorean theorem',
-      'Only the three basic axioms',
       'The Pappus theorem as an additional axiom',
-      'Complex numbers',
+      'Only the three basic axioms',
+      'The Pythagorean theorem',
+      'Complex numbers'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The Pappus theorem guarantees the coordinate system satisfies field axioms.',
   },

@@ -9,7 +9,7 @@ export const section33Questions: QuizQuestion[] = [
       'Publish a paper',
       'Attend a math lecture',
       'Earn a doctorate in mathematics',
-      'Win a Fields Medal',
+      'Win a Fields Medal'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section33Questions: QuizQuestion[] = [
       'The first',
       'The second',
       'The fourth',
-      'The third',
+      'The third'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -34,26 +34,10 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What special property do the moments of inertia have in the Kovalevskaya top?',
     options: [
-      '$I_1 = I_2 = I_3
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The Kovalevskaya top has $I_1 = I_2 = 2I_3$ with the center of mass offset in the equatorial plane.',
-  },
-      '$I_1 = 2I_2 = 2I_3
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The Kovalevskaya top has $I_1 = I_2 = 2I_3$ with the center of mass offset in the equatorial plane.',
-  },
-      '$I_1 = I_2 = 2I_3
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The Kovalevskaya top has $I_1 = I_2 = 2I_3$ with the center of mass offset in the equatorial plane.',
-  },
-      '$I_1 + I_2 = I_3
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'The Kovalevskaya top has $I_1 = I_2 = 2I_3$ with the center of mass offset in the equatorial plane.',
-  },
+      '$I_1 = I_2 = 2I_3$',
+      '$I_1 = I_2 = I_3$',
+      '$I_1 = 2I_2 = 2I_3$',
+      '$I_1 + I_2 = I_3$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -64,12 +48,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the Cauchy-Kovalevskaya theorem guarantee for analytic PDEs?',
     options: [
-      'Local existence and uniqueness of analytic solutions',
       'Global solutions always exist',
+      'Local existence and uniqueness of analytic solutions',
       'Solutions are always periodic',
-      'Solutions can be computed in polynomial time',
+      'Solutions can be computed in polynomial time'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The Cauchy-Kovalevskaya theorem guarantees that for analytic initial data and analytic PDEs, a unique local analytic solution exists.',
   },
@@ -79,11 +63,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'Why did Kovalevskaya contract a marriage with Vladimir Kovalevsky?',
     options: [
       'For love at first sight',
-      'To escape Russia and study abroad',
       'To inherit his wealth',
-      'To collaborate on research',
+      'To escape Russia and study abroad',
+      'To collaborate on research'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Women in Russia could not travel alone or attend university, so a marriage of convenience allowed her to study in Germany.',
   },
@@ -95,7 +79,7 @@ export const section33Questions: QuizQuestion[] = [
       'Prix Fermat',
       'Prix Gauss',
       'Prix Lagrange',
-      'Prix Bordin',
+      'Prix Bordin'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -106,12 +90,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Who was Kovalevskaya\'s mathematical mentor in Berlin?',
     options: [
+      'Weierstrass',
       'Riemann',
       'Gauss',
-      'Weierstrass',
-      'Kronecker',
+      'Kronecker'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Karl Weierstrass tutored Kovalevskaya privately since women were not allowed to attend university lectures.',
   },

@@ -6,12 +6,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Lobachevsky is famous for developing:',
     options: [
-      'Non-Euclidean geometry',
       'Euclidean geometry',
       'Projective geometry',
       'Coordinate geometry',
+      'Non-Euclidean geometry'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Lobachevsky independently developed hyperbolic (non-Euclidean) geometry.',
   },
@@ -20,12 +20,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Lobachevsky\'s geometry, through a point not on a line, how many parallel lines exist?',
     options: [
+      'Infinitely many',
       'Exactly one',
       'None',
-      'Exactly two',
-      'Infinitely many',
+      'Exactly two'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'In hyperbolic geometry, infinitely many lines through a point are parallel to a given line.',
   },
@@ -35,11 +35,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Which postulate of Euclid did Lobachevsky replace?',
     options: [
       'The first postulate',
-      'The fourth postulate',
       'The fifth (parallel) postulate',
-      'The second postulate',
+      'The fourth postulate',
+      'The second postulate'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Lobachevsky replaced Euclid\'s fifth postulate about parallel lines.',
   },
@@ -50,10 +50,10 @@ export const section18Questions: QuizQuestion[] = [
     options: [
       'More than 180°',
       'Exactly 180°',
-      'Always 60° per angle',
       'Less than 180°',
+      'Always 60° per angle'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'In hyperbolic geometry, triangle angle sums are always less than 180°.',
   },
@@ -63,11 +63,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Who independently discovered similar non-Euclidean geometry around the same time?',
     options: [
       'Gauss only',
-      'János Bolyai',
       'Cauchy',
       'Riemann only',
+      'János Bolyai'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'János Bolyai independently developed hyperbolic geometry around the same time as Lobachevsky.',
   },

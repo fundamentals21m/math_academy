@@ -6,12 +6,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the method of exhaustion used for?',
     options: [
-      'Computing areas by inscribing polygons',
       'Finding limits of sequences',
+      'Computing areas by inscribing polygons',
       'Solving differential equations',
-      'Factoring polynomials',
+      'Factoring polynomials'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The method of exhaustion approximates the area of a shape by inscribing polygons whose areas converge to the area of the containing shape.',
   },
@@ -20,26 +20,10 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When approximating the area under $y = x^2$ from $0$ to $b$ using $n$ rectangles, what is the width of each rectangle?',
     options: [
-      '$n/b
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The base of length $b$ is divided into $n$ equal parts, so each has width $b/n$.',
-  },
-      '$b \\cdot n
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The base of length $b$ is divided into $n$ equal parts, so each has width $b/n$.',
-  },
-      '$b^2/n
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The base of length $b$ is divided into $n$ equal parts, so each has width $b/n$.',
-  },
-      '$b/n
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The base of length $b$ is divided into $n$ equal parts, so each has width $b/n$.',
-  },
+      '$n/b$',
+      '$b \\cdot n$',
+      '$b/n$',
+      '$b^2/n$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -59,26 +43,10 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does Archimedes conclude is the area under $y = x^2$ from $0$ to $b$?',
     options: [
-      '$b^3/3
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Using the method of exhaustion, Archimedes showed that the area under $y = x^2$ from $0$ to $b$ is $b^3/3$.',
-  },
-      '$b^2
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Using the method of exhaustion, Archimedes showed that the area under $y = x^2$ from $0$ to $b$ is $b^3/3$.',
-  },
-      '$b^3/2
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Using the method of exhaustion, Archimedes showed that the area under $y = x^2$ from $0$ to $b$ is $b^3/3$.',
-  },
-      '$b^2/2
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Using the method of exhaustion, Archimedes showed that the area under $y = x^2$ from $0$ to $b$ is $b^3/3$.',
-  },
+      '$b^2$',
+      '$b^3/2$',
+      '$b^2/2$',
+      '$b^3/3$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -89,12 +57,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the upper sum $S_n$ for $y = x^2$, why do we use the right endpoint of each subinterval?',
     options: [
-      'It gives the minimum height',
       'It gives the maximum height since $x^2$ is increasing',
+      'It gives the minimum height',
       'It simplifies the calculation',
-      'It was Archimedes\\\\' convention',
+      'It was Archimedes\' convention'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Since $y = x^2$ is an increasing function on $[0, b]$, the maximum value on each subinterval occurs at the right endpoint.',
   },

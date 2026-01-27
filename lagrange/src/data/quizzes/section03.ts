@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section03Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'A holonomic constraint is one that:',
+    options: [
+      'Can be expressed as $f(q^1, q^2, ..., q^n, t) = 0$',
+      'Involves velocities that cannot be integrated',
+      'Only applies to rigid bodies',
+      'Cannot be incorporated into the Lagrangian',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'A holonomic constraint depends only on coordinates and possibly time, expressed as $f(q, t) = 0$. It can be used to reduce the number of degrees of freedom.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Which of the following is an example of a non-holonomic constraint?',
+    options: [
+      'A wheel rolling without slipping',
+      'A particle constrained to a sphere',
+      'A pendulum of fixed length',
+      'Two particles at constant distance apart',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Rolling without slipping is non-holonomic because the constraint $\\dot{x} = r\\dot{\\theta}$ involves velocities and cannot be integrated to a constraint on positions alone.',
+  },
+  {
+    id: 3,
+    type: 'text',
+    question: 'What is the name of the multipliers introduced to incorporate constraints into the Lagrangian formulation?',
+    correctAnswer: 'Lagrange multipliers',
+    difficulty: 'easy',
+    explanation: 'Lagrange multipliers $\\lambda$ are introduced to enforce constraints. The modified Lagrangian becomes $L\' = L + \\lambda f(q,t)$ where $f = 0$ is the constraint.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'For a particle constrained to move on a surface $f(x,y,z) = 0$, the constraint force is:',
+    options: [
+      'Proportional to $\\nabla f$, normal to the surface',
+      'Tangent to the surface',
+      'Always zero',
+      'Equal to the gravitational force',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The constraint force is $\\mathbf{F}_c = \\lambda \\nabla f$, which is perpendicular to the constraint surface (along the normal). This force does no work for motion along the surface.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'A system has 6 generalized coordinates and 2 independent holonomic constraints. How many degrees of freedom does it have?',
+    correctAnswer: 4,
+    numericRange: { min: 0, max: 10, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'Degrees of freedom = coordinates minus constraints = $6 - 2 = 4$. Each holonomic constraint removes one degree of freedom.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The virtual work done by constraint forces in a system with holonomic constraints is:',
+    options: [
+      'Zero for virtual displacements consistent with constraints',
+      'Always positive',
+      'Equal to the kinetic energy',
+      'Undefined',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'For ideal holonomic constraints, the constraint forces do no virtual work because they are perpendicular to allowed virtual displacements. This is the principle of virtual work.',
+  },
+];

@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section00Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The Lagrangian $L$ of a mechanical system is defined as:',
+    options: [
+      '$L = T - V$ (kinetic minus potential energy)',
+      '$L = T + V$ (kinetic plus potential energy)',
+      '$L = T \\times V$ (kinetic times potential energy)',
+      '$L = V - T$ (potential minus kinetic energy)',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Lagrangian is defined as $L = T - V$, where $T$ is kinetic energy and $V$ is potential energy. This definition leads to equations of motion that are equivalent to Newton\'s laws.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The Euler-Lagrange equation is:',
+    options: [
+      '$\\frac{d}{dt}\\frac{\\partial L}{\\partial \\dot{q}} - \\frac{\\partial L}{\\partial q} = 0$',
+      '$\\frac{d}{dt}\\frac{\\partial L}{\\partial q} - \\frac{\\partial L}{\\partial \\dot{q}} = 0$',
+      '$\\frac{\\partial L}{\\partial q} + \\frac{\\partial L}{\\partial \\dot{q}} = 0$',
+      '$\\frac{d}{dt}\\frac{\\partial L}{\\partial \\dot{q}} + \\frac{\\partial L}{\\partial q} = 0$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Euler-Lagrange equation $\\frac{d}{dt}\\frac{\\partial L}{\\partial \\dot{q}} - \\frac{\\partial L}{\\partial q} = 0$ is the fundamental equation of Lagrangian mechanics, derived from the principle of stationary action.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'For a simple pendulum of length $\\ell$ and mass $m$, what is the correct Lagrangian?',
+    options: [
+      '$L = \\frac{1}{2}m\\ell^2\\dot{\\theta}^2 + mg\\ell\\cos\\theta$',
+      '$L = \\frac{1}{2}m\\ell^2\\dot{\\theta}^2 - mg\\ell\\cos\\theta$',
+      '$L = \\frac{1}{2}m\\ell\\dot{\\theta}^2 + mg\\ell\\sin\\theta$',
+      '$L = m\\ell^2\\dot{\\theta}^2 - mg\\ell\\cos\\theta$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'For a pendulum, $T = \\frac{1}{2}m(\\ell\\dot{\\theta})^2 = \\frac{1}{2}m\\ell^2\\dot{\\theta}^2$ and $V = -mg\\ell\\cos\\theta$ (taking the lowest point as reference). Thus $L = T - V = \\frac{1}{2}m\\ell^2\\dot{\\theta}^2 + mg\\ell\\cos\\theta$.',
+  },
+  {
+    id: 4,
+    type: 'text',
+    question: 'What is the name of the quantity $p = \\frac{\\partial L}{\\partial \\dot{q}}$ called?',
+    correctAnswer: 'conjugate momentum',
+    difficulty: 'easy',
+    explanation: 'The quantity $p = \\frac{\\partial L}{\\partial \\dot{q}}$ is called the conjugate momentum (or canonical momentum, generalized momentum). It is "conjugate" to the generalized coordinate $q$.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'For a free particle with Lagrangian $L = \\frac{1}{2}m\\dot{x}^2$, what is the value of $\\frac{\\partial L}{\\partial x}$?',
+    correctAnswer: 0,
+    numericRange: { min: -10, max: 10, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'Since $L = \\frac{1}{2}m\\dot{x}^2$ contains no $x$ (only $\\dot{x}$), we have $\\frac{\\partial L}{\\partial x} = 0$. This means the coordinate $x$ is cyclic, and momentum is conserved.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'What principle underlies the derivation of the Euler-Lagrange equations?',
+    options: [
+      'The principle of stationary action (Hamilton\'s principle)',
+      'Newton\'s third law',
+      'Conservation of energy',
+      'The principle of virtual work',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Euler-Lagrange equations are derived from Hamilton\'s principle (principle of stationary action), which states that the physical path between two points makes the action $S = \\int L \\, dt$ stationary.',
+  },
+];

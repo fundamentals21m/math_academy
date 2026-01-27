@@ -7,11 +7,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What was the main accusation against Leibniz in the priority dispute?',
     options: [
       'That his notation was inferior',
+      'That he plagiarized calculus from Newton\'s manuscripts',
       'That he published too many papers',
-      'That he plagiarized calculus from Newton\\\\'s manuscripts',
-      'That he was not a real mathematician',
+      'That he was not a real mathematician'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Newton\'s supporters accused Leibniz of stealing the idea of calculus after seeing Newton\'s private manuscripts during a visit to London in 1676.',
   },
@@ -21,11 +21,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What was suspicious about the Royal Society\'s 1712 investigation into the priority dispute?',
     options: [
       'Leibniz was not allowed to defend himself',
-      'Newton, as president, secretly wrote much of the report himself',
       'The committee members were all German',
-      'The investigation lasted only one day',
+      'Newton, as president, secretly wrote much of the report himself',
+      'The investigation lasted only one day'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Newton abused his position as Royal Society president by secretly writing much of the supposedly "impartial" report that condemned Leibniz.',
   },
@@ -34,12 +34,12 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the modern historical consensus about the invention of calculus?',
     options: [
-      'Both invented it independently',
       'Newton invented it and Leibniz stole it',
       'Leibniz invented it and Newton stole it',
       'Neither really invented calculus',
+      'Both invented it independently'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Historians agree that Newton and Leibniz independently invented calculus—Newton first (privately) around 1666, Leibniz around 1675.',
   },
@@ -48,10 +48,10 @@ export const section05Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What negative consequence did the priority dispute have for British mathematics?',
     options: [
-      'British mathematicians refused to adopt Leibniz\\\\'s superior notation for over a century',
+      'British mathematicians refused to adopt Leibniz\'s superior notation for over a century',
       'Britain banned mathematics teaching',
       'All British mathematicians moved to Germany',
-      'British universities closed their math departments',
+      'British universities closed their math departments'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -71,11 +71,11 @@ export const section05Questions: QuizQuestion[] = [
     question: 'What happened to Leibniz in his final years?',
     options: [
       'He became wealthy and famous',
-      'He was celebrated as a hero in Germany',
-      'He became president of the Royal Society',
       'He died largely alone and forgotten, with even his employer not attending his funeral',
+      'He was celebrated as a hero in Germany',
+      'He became president of the Royal Society'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Leibniz died in 1716, his reputation tarnished by the dispute. Even his employer didn\'t attend his funeral. History would later vindicate his independent discovery.',
   },

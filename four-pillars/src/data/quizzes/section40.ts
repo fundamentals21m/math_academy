@@ -6,12 +6,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The projective Pappus theorem is an example of an:',
     options: [
-      'Incidence theorem',
       'Angle theorem',
-      'Area theorem',
+      'Incidence theorem',
       'Length theorem',
+      'Area theorem'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The Pappus theorem involves only points, lines, and their incidences (meetings).',
   },
@@ -20,10 +20,10 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Desargues theorem concerns two triangles that are:',
     options: [
-      'Similar',
       'Congruent',
+      'Similar',
       'In perspective from a point',
-      'Equilateral',
+      'Equilateral'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -35,9 +35,9 @@ export const section40Questions: QuizQuestion[] = [
     question: 'The Pappus and Desargues theorems cannot be proved from the three basic projective axioms because:',
     options: [
       'They are false',
-      'They require coordinates',
       'They involve numbers',
-      'Counterexample planes exist (like the Moulton plane)',
+      'They require coordinates',
+      'Counterexample planes exist (like the Moulton plane)'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A Pappian plane is a projective plane satisfying:',
     options: [
-      'Only the Pappus theorem',
       'The three axioms plus Pappus and Desargues theorems',
       'Only the three basic axioms',
-      'None of the above',
+      'Only the Pappus theorem',
+      'None of the above'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Pappian planes satisfy all five axioms and have field coordinates.',
   },
@@ -64,8 +64,8 @@ export const section40Questions: QuizQuestion[] = [
     options: [
       'The associative law of multiplication',
       'The commutative law of multiplication (ab = ba)',
-      'The inverse law',
       'The distributive law',
+      'The inverse law'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -76,10 +76,10 @@ export const section40Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Desargues theorem implies which algebraic law?',
     options: [
-      'The distributive law',
       'The commutative law of multiplication',
+      'The distributive law',
       'The associative law of multiplication (a(bc) = (ab)c)',
-      'The identity law',
+      'The identity law'
     ],
     correctIndex: 2,
     difficulty: 'hard',

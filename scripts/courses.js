@@ -21,6 +21,7 @@
  * @property {string} [shortName] - Short name for leaderboard links
  * @property {boolean} [external] - True if link opens in new tab
  * @property {string} [progressGradient] - CSS gradient for progress bar
+ * @property {string} [youtubePlaylistUrl] - YouTube playlist URL (shows icon overlay on card)
  */
 
 /** @type {Section[]} */
@@ -163,6 +164,7 @@ export const COURSES = [
     leaderboardUrl: 'https://bfi-liart.vercel.app/#/leaderboard',
     shortName: 'BFI',
     progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)',
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVHBl4fi5SmDiLeccl9hsB2m',
   },
   {
     id: 'bips',
@@ -321,6 +323,20 @@ export const COURSES = [
     leaderboardUrl: 'tao2-deploy/#/leaderboard',
     shortName: 'Tao Analysis II',
     progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)',
+  },
+  {
+    id: 'lagrange',
+    title: 'Mécanique analytique (Lagrange)',
+    description: 'Master analytical mechanics: Lagrangian and Hamiltonian formulations, non-inertial reference frames, and rigid body dynamics.',
+    icon: '⚙️',
+    url: 'https://lagrange-deploy.vercel.app/',
+    tags: ['4 Parts', '21 Sections'],
+    sections: ['calculus'],
+    totalSections: 21,
+    progressPrefix: 'lagrange:',
+    leaderboardUrl: 'https://lagrange-deploy.vercel.app/#/leaderboard',
+    shortName: 'Lagrange',
+    progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
   },
 
   // ALGEBRA (Note: Basic Algebra also appears here via sections array)
@@ -482,6 +498,7 @@ export const COURSES = [
     leaderboardUrl: 'saylor-diss-deploy/#/leaderboard',
     shortName: 'Saylor Diss',
     progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVE6me8fF4UWmgm6wEfJgFLo',
   },
 
   // MATH HISTORY
@@ -556,6 +573,7 @@ export const COURSES = [
     leaderboardUrl: 'atlas-shrugged-deploy/#/leaderboard',
     shortName: 'Atlas Shrugged',
     progressGradient: 'linear-gradient(90deg, #ef4444, #f97316)',
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVFUoynHr-Thg3yv1Bf6paNd',
   },
   {
     id: 'man_econ_state',
@@ -832,6 +850,20 @@ export const COURSES = [
     leaderboardUrl: 'https://dh-taleb-deploy.vercel.app/#/leaderboard',
     shortName: 'Dynamic Hedging',
     progressGradient: 'linear-gradient(90deg, #10b981, #34d399)',
+  },
+  {
+    id: 'shreve2',
+    title: 'Stochastic Calculus for Finance',
+    description: "Master continuous-time models for quantitative finance with Shreve's classic textbook. From Brownian motion and Itô calculus to Black-Scholes, exotic options, and term structure models.",
+    icon: '∫',
+    url: 'https://shreve2-deploy.vercel.app/',
+    tags: ['11 Parts', '54 Sections'],
+    sections: ['prob_stats', 'calculus'],
+    totalSections: 54,
+    progressPrefix: 'shreve2:',
+    leaderboardUrl: 'https://shreve2-deploy.vercel.app/#/leaderboard',
+    shortName: 'Stochastic Calculus',
+    progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)',
   },
 ];
 

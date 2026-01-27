@@ -6,12 +6,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a series in mathematics?',
     options: [
+      'The sum of the terms of a sequence',
       'A sequence of numbers',
       'A type of function',
-      'The sum of the terms of a sequence',
-      'A geometric shape',
+      'A geometric shape'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A series is the sum of the terms of a sequence, like $1 + \\frac{1}{2} + \\frac{1}{4} + ...$',
   },
@@ -20,12 +20,12 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A convergent series:',
     options: [
-      'Approaches a finite sum as more terms are added',
       'Has terms that get larger and larger',
+      'Approaches a finite sum as more terms are added',
       'Always equals zero',
-      'Has no pattern',
+      'Has no pattern'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A convergent series has a finite sum even though it may have infinitely many terms.',
   },
@@ -34,26 +34,10 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The geometric series $1 + r + r^2 + r^3 + ...$ converges when:',
     options: [
-      '$r > 1
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'A geometric series converges if and only if $|r| < 1$, giving sum $\\frac{1}{1-r}$.',
-  },
-      '$|r| < 1
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'A geometric series converges if and only if $|r| < 1$, giving sum $\\frac{1}{1-r}$.',
-  },
-      '$r = 1
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'A geometric series converges if and only if $|r| < 1$, giving sum $\\frac{1}{1-r}$.',
-  },
-      '$r < 0
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'A geometric series converges if and only if $|r| < 1$, giving sum $\\frac{1}{1-r}$.',
-  },
+      '$r > 1$',
+      '$r = 1$',
+      '$|r| < 1$',
+      '$r < 0$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -74,13 +58,9 @@ export const section21Questions: QuizQuestion[] = [
     question: 'Taylor series allow us to:',
     options: [
       'Only add whole numbers',
-      'Represent functions as infinite polynomials',
-      'Find exact values of $\\pi
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Taylor series express functions as infinite sums of polynomial terms.',
-  },
+      'Find exact values of $\\pi$',
       'Avoid using calculus',
+      'Represent functions as infinite polynomials'
     ],
     correctIndex: 3,
     difficulty: 'medium',

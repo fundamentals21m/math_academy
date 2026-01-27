@@ -8,11 +8,11 @@ export const section08Quiz: QuizQuestion[] = [
     question: 'A dummy variable is used to represent:',
     options: [
       'Missing values',
-      'The error term',
       'Qualitative (categorical) predictors',
-      'The intercept',
+      'The error term',
+      'The intercept'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Dummy variables (indicator variables) encode categorical predictors as 0/1 values for use in regression.',
   },
@@ -20,13 +20,8 @@ export const section08Quiz: QuizQuestion[] = [
     id: 's08-e02',
     type: 'multiple-choice',
     question: 'For a categorical variable with 4 levels, how many dummy variables are needed?',
-    options: [
-      '2',
-      '4',
-      '5',
-      '3',
-    ],
-    correctIndex: 3,
+    options: ['2', '4', '3', '5'],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'With $k$ levels, we need $k-1$ dummy variables. One level serves as the baseline (intercept).',
   },
@@ -38,7 +33,7 @@ export const section08Quiz: QuizQuestion[] = [
       'The intercept to vary',
       'Non-linear transformations of Y',
       'Missing data imputation',
-      'The effect of one predictor to depend on another',
+      'The effect of one predictor to depend on another'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -57,16 +52,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A residual plot is used to detect:',
     options: [
-      'The value of $R^2
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Residual plots (residuals vs. fitted values) reveal patterns that indicate model violations.',
-  },
-      'The number of predictors',
-      'The sample size',
       'Problems like non-linearity or heteroscedasticity',
+      'The value of $R^2$',
+      'The number of predictors',
+      'The sample size'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Residual plots (residuals vs. fitted values) reveal patterns that indicate model violations.',
   },
@@ -76,28 +67,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the model $Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\beta_3 X_1 X_2 + \\epsilon$, the effect of $X_1$ on $Y$ is:',
     options: [
-      '$\\beta_1
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'With the interaction, the effect of $X_1$ depends on $X_2$: $\\frac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_2$.',
-  },
-      '$\\beta_3
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'With the interaction, the effect of $X_1$ depends on $X_2$: $\\frac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_2$.',
-  },
-      '$\\beta_1 + \\beta_3 X_2
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'With the interaction, the effect of $X_1$ depends on $X_2$: $\\frac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_2$.',
-  },
-      '$\\beta_1 + \\beta_2
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'With the interaction, the effect of $X_1$ depends on $X_2$: $\\frac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_2$.',
-  },
+      '$\\beta_1$',
+      '$\\beta_1 + \\beta_3 X_2$',
+      '$\\beta_3$',
+      '$\\beta_1 + \\beta_2$'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'With the interaction, the effect of $X_1$ depends on $X_2$: $\\frac{\\partial Y}{\\partial X_1} = \\beta_1 + \\beta_3 X_2$.',
   },
@@ -107,11 +82,11 @@ export const section08Quiz: QuizQuestion[] = [
     question: 'Polynomial regression $Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\epsilon$ is:',
     options: [
       'A non-linear model',
-      'A linear model (in the parameters)',
       'Only valid for binary outcomes',
-      'Always overfits',
+      'A linear model (in the parameters)',
+      'Always overfits'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Despite modeling a curved relationship, the model is linear in the coefficients $\\beta_0, \\beta_1, \\beta_2$.',
   },
@@ -120,12 +95,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'VIF (Variance Inflation Factor) measures:',
     options: [
-      'Collinearity among predictors',
       'Non-linearity in the data',
       'The size of residuals',
       'Model accuracy',
+      'Collinearity among predictors'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'VIF quantifies how much the variance of a coefficient is inflated due to correlation with other predictors.',
   },
@@ -134,12 +109,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A funnel-shaped residual plot (residuals spread out as fitted values increase) indicates:',
     options: [
-      'Non-linearity',
       'Heteroscedasticity',
+      'Non-linearity',
       'Outliers',
-      'Perfect fit',
+      'Perfect fit'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'A funnel shape means variance increases with the response level - classic heteroscedasticity.',
   },
@@ -148,24 +123,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The hierarchical principle says that if we include an interaction $X_1 X_2$, we should:',
     options: [
-      'Remove the main effects $X_1$ and $X_2
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Main effects should be included even if not significant, because the interaction only makes sense in their context.',
-  },
-      'Include the main effects $X_1$ and $X_2
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Main effects should be included even if not significant, because the interaction only makes sense in their context.',
-  },
+      'Remove the main effects $X_1$ and $X_2$',
+      'Include the main effects $X_1$ and $X_2$',
       'Use a different response variable',
-      'Add higher-order terms like $X_1^2
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Main effects should be included even if not significant, because the interaction only makes sense in their context.',
-  },
+      'Add higher-order terms like $X_1^2$'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Main effects should be included even if not significant, because the interaction only makes sense in their context.',
   },
@@ -178,7 +141,7 @@ export const section08Quiz: QuizQuestion[] = [
       'Has little effect on the fit',
       'Should always be removed',
       'Pulls the regression line toward itself',
-      'Indicates model misspecification',
+      'Indicates model misspecification'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -191,10 +154,10 @@ export const section08Quiz: QuizQuestion[] = [
     options: [
       '10%',
       '50%',
-      '90%',
       '99%',
+      '90%'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'VIF = $\\frac{1}{1-R^2_{X_1|X_{-1}}}$. If VIF = 10, then $R^2_{X_1|X_{-1}} = 1 - 0.1 = 0.9$ (90%).',
   },
@@ -203,12 +166,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Studentized residuals greater than 3 in absolute value suggest:',
     options: [
-      'Perfect predictions',
       'Potential outliers',
+      'Perfect predictions',
       'High leverage',
-      'Collinearity',
+      'Collinearity'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Studentized residuals standardize residuals by their estimated standard deviation. Values beyond $\\pm 3$ are unusual.',
   },
@@ -217,12 +180,12 @@ export const section08Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To address heteroscedasticity, a common transformation of the response is:',
     options: [
-      'Taking log(Y) or sqrt(Y)',
       'Squaring Y',
+      'Taking log(Y) or sqrt(Y)',
       'Removing Y',
-      'Standardizing Y',
+      'Standardizing Y'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Log or square root transformations often stabilize variance, particularly when variance increases with the mean.',
   },

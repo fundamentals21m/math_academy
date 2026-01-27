@@ -9,7 +9,7 @@ export const section93Questions: QuizQuestion[] = [
       'Every pair has inner product zero',
       'All vectors have the same length',
       'They span the space',
-      'They are linearly dependent',
+      'They are linearly dependent'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section93Questions: QuizQuestion[] = [
       'Vectors are parallel',
       'Each vector has norm 1',
       'The set spans the space',
-      'Vectors are dependent',
+      'Vectors are dependent'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -36,10 +36,10 @@ export const section93Questions: QuizQuestion[] = [
     options: [
       'Makes vectors parallel',
       'Reduces dimension',
-      'Computes inverses',
       'Produces an orthogonal (or orthonormal) set from any independent set',
+      'Computes inverses'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Gram-Schmidt orthogonalizes a linearly independent set.',
   },
@@ -50,10 +50,10 @@ export const section93Questions: QuizQuestion[] = [
     options: [
       'Always dependent',
       'Empty',
-      'Linearly independent',
       'A basis for the whole space',
+      'Linearly independent'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Nonzero orthogonal vectors are automatically independent.',
   },
@@ -62,14 +62,10 @@ export const section93Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To normalize a vector $\\mathbf{v}$:',
     options: [
+      'Divide by its norm: $\\mathbf{v}/\\|\\mathbf{v}\\|$',
       'Add its components',
       'Multiply by 2',
-      'Square each component',
-      'Divide by its norm: $\\mathbf{v}/\\|\\mathbf{v}\\|
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Normalizing: $\\hat{\\mathbf{v}} = \\mathbf{v}/\\|\\mathbf{v}\\|$ has norm 1.',
-  },
+      'Square each component'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -81,13 +77,9 @@ export const section93Questions: QuizQuestion[] = [
     question: 'Coordinates in an orthonormal basis $\\{\\mathbf{e}_1, ..., \\mathbf{e}_n\\}$ are found by:',
     options: [
       'Solving a system of equations',
+      'Taking inner products: $c_i = \\langle \\mathbf{v}, \\mathbf{e}_i \\rangle$',
       'Cross products',
-      'Taking inner products: $c_i = \\langle \\mathbf{v}, \\mathbf{e}_i \\rangle
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Orthonormal basis: $\\mathbf{v} = \\sum \\langle \\mathbf{v}, \\mathbf{e}_i \\rangle \\mathbf{e}_i$.',
-  },
-      'Random selection',
+      'Random selection'
     ],
     correctIndex: 1,
     difficulty: 'medium',

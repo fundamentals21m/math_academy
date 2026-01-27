@@ -9,7 +9,7 @@ export const section10Questions: QuizQuestion[] = [
       'The rate of flow at time 10',
       'The average flow rate',
       'The total amount of water that flowed in from time 0 to 10',
-      'The maximum flow rate',
+      'The maximum flow rate'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -21,11 +21,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What is the relationship between velocity and position?',
     options: [
       'Position is the derivative of velocity',
-      'Position is the integral of velocity',
       'Velocity is the integral of position',
       'They are unrelated',
+      'Position is the integral of velocity'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Position is obtained by integrating velocity over time: $x(t) = \\int v(t)\\,dt$. (Velocity is the derivative of position.)',
   },
@@ -37,7 +37,7 @@ export const section10Questions: QuizQuestion[] = [
       'Net displacement can be negative (if you go backward); total distance is always positive',
       'They are the same thing',
       'Total distance is always less than displacement',
-      'Net displacement is always greater',
+      'Net displacement is always greater'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -64,10 +64,10 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'A measurement error',
       'A rounding error',
-      'The maximum value of F',
       'The unknown initial value (since we only know the rate of change)',
+      'The maximum value of F'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'When reconstructing from a rate, we don\'t know the starting value. Any constant $C$ works because its derivative is zero—it doesn\'t affect the rate.',
   },
@@ -78,10 +78,10 @@ export const section10Questions: QuizQuestion[] = [
     options: [
       'The derivative of power',
       'Power squared',
-      'The integral of power over time',
       'Power divided by time',
+      'The integral of power over time'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Energy (joules) = $\\int P(t)\\,dt$. Power is the rate of energy consumption; integrating gives total energy used.',
   },

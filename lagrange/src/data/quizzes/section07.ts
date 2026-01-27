@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section07Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'A symplectic matrix $M$ satisfies the condition:',
+    options: [
+      '$M^T J M = J$ where $J = \\begin{pmatrix} 0 & I \\\\ -I & 0 \\end{pmatrix}$',
+      '$M^T M = I$ (orthogonal)',
+      '$\\det(M) = 0$',
+      '$M = M^T$ (symmetric)',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A symplectic matrix preserves the symplectic form: $M^T J M = J$, where $J$ is the standard symplectic matrix. This ensures Hamiltonian structure is preserved.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The symplectic form $\\omega$ on phase space is:',
+    options: [
+      '$\\omega = \\sum_i dq^i \\wedge dp_i$',
+      '$\\omega = \\sum_i dq^i \\cdot dp_i$',
+      '$\\omega = \\sum_i q^i p_i$',
+      '$\\omega = dq + dp$',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The canonical symplectic form $\\omega = \\sum_i dq^i \\wedge dp_i$ is a closed, non-degenerate 2-form that defines the geometric structure of Hamiltonian mechanics.',
+  },
+  {
+    id: 3,
+    type: 'text',
+    question: 'What property of the symplectic form $\\omega$ means that $d\\omega = 0$?',
+    correctAnswer: 'closed',
+    difficulty: 'medium',
+    explanation: 'A differential form with $d\\omega = 0$ is called closed. The symplectic form is both closed and non-degenerate, making phase space a symplectic manifold.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'Liouville\'s theorem states that Hamiltonian flow:',
+    options: [
+      'Preserves phase space volume',
+      'Always increases entropy',
+      'Conserves only energy',
+      'Is always periodic',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Liouville\'s theorem states that Hamiltonian evolution preserves phase space volume. This is a consequence of the symplectic structure and has important implications for statistical mechanics.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'For a system with $n = 3$ degrees of freedom, what is the dimension of phase space?',
+    correctAnswer: 6,
+    numericRange: { min: 0, max: 20, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'Phase space has dimension $2n$ where $n$ is the number of degrees of freedom. With 3 coordinates $q^i$ and 3 conjugate momenta $p_i$, we get $2 \\times 3 = 6$ dimensions.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The group of symplectic matrices in $2n$ dimensions is denoted:',
+    options: [
+      '$\\text{Sp}(2n, \\mathbb{R})$',
+      '$\\text{SO}(2n)$',
+      '$\\text{GL}(2n, \\mathbb{R})$',
+      '$\\text{U}(n)$',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The symplectic group $\\text{Sp}(2n, \\mathbb{R})$ consists of all $2n \\times 2n$ real matrices preserving the symplectic form. It is distinct from orthogonal or unitary groups.',
+  },
+];

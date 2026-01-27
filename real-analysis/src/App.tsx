@@ -33,6 +33,13 @@ const Leaderboard = lazy(() => import('@/pages/Leaderboard'));
 const Theorems = lazy(() => import('@/pages/Theorems'));
 const InteractiveModules = lazy(() => import('@/pages/InteractiveModules'));
 
+// Problem set pages
+const ProblemsIndex = lazy(() => import('@/pages/problems/ProblemsIndex'));
+const ProblemsPart01 = lazy(() => import('@/pages/problems/ProblemsPart01'));
+const ProblemsPart02 = lazy(() => import('@/pages/problems/ProblemsPart02'));
+const ProblemsPart03 = lazy(() => import('@/pages/problems/ProblemsPart03'));
+const ProblemsPart04 = lazy(() => import('@/pages/problems/ProblemsPart04'));
+
 // Auto-discover sections using Vite glob imports
 const sectionModules = import.meta.glob('./pages/sections/Section*.tsx');
 const sectionLoaders: SectionLoaders = createSectionLoadersFromGlob(sectionModules);
@@ -131,6 +138,48 @@ function AppContent() {
 
           {/* Dynamic section routes */}
           <Route path="/section/:id" element={<SectionRouter />} />
+
+          {/* Problem set routes */}
+          <Route
+            path="/problems"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsIndex />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/1"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart01 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/2"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart02 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/3"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart03 />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/problems/4"
+            element={
+              <Suspense fallback={<LoadingSpinner message="Loading problems..." />}>
+                <ProblemsPart04 />
+              </Suspense>
+            }
+          />
 
           {/* Fallback */}
           <Route path="*" element={<Home />} />

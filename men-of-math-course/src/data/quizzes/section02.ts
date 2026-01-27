@@ -7,11 +7,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What technique did Eudoxus develop to calculate areas and volumes?',
     options: [
       'Algebraic substitution',
-      'Differential calculus',
       'The method of exhaustion',
-      'Trigonometric identities',
+      'Differential calculus',
+      'Trigonometric identities'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The method of exhaustion approximates areas by inscribing polygons with increasingly many sides, exhausting the difference.',
   },
@@ -21,11 +21,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'What crisis in Greek mathematics did Eudoxus\'s theory of proportions resolve?',
     options: [
       'The discovery of zero',
-      'The discovery of irrational numbers',
       'The problem of parallel lines',
-      'The impossibility of squaring the circle',
+      'The discovery of irrational numbers',
+      'The impossibility of squaring the circle'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The discovery that $\\sqrt{2}$ is irrational threatened Greek mathematics based on whole number ratios. Eudoxus\'s theory handled all magnitudes.',
   },
@@ -34,22 +34,10 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Eudoxus\'s definition of equal ratios states that $a:b = c:d$ if and only if:',
     options: [
-      '$a \\times d = b \\times c
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'This definition works for all magnitudes, rational or irrational, anticipating Dedekind cuts by over 2000 years.',
-  },
-      'For all integers $m, n$: $ma \\lessgtr nb$ exactly when $mc \\lessgtr nd
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'This definition works for all magnitudes, rational or irrational, anticipating Dedekind cuts by over 2000 years.',
-  },
+      '$a \\times d = b \\times c$',
       '$a/b$ and $c/d$ have the same decimal expansion',
-      '$a + b = c + d
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'This definition works for all magnitudes, rational or irrational, anticipating Dedekind cuts by over 2000 years.',
-  },
+      '$a + b = c + d$',
+      'For all integers $m, n$: $ma \\lessgtr nb$ exactly when $mc \\lessgtr nd$'
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -63,7 +51,7 @@ export const section02Questions: QuizQuestion[] = [
       'Euclid',
       'Archimedes',
       'Pythagoras',
-      'Aristotle',
+      'Aristotle'
     ],
     correctIndex: 0,
     difficulty: 'easy',

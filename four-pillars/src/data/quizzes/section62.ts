@@ -6,28 +6,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The non-Euclidean distance from $i$ to $2i$ on the imaginary axis is:',
     options: [
-      '$2
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'On the imaginary axis, ndist(pi, qi) = log(q/p) = log(2/1) = log 2.',
-  },
-      '$\\log 2
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'On the imaginary axis, ndist(pi, qi) = log(q/p) = log(2/1) = log 2.',
-  },
-      '$\\log 3
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'On the imaginary axis, ndist(pi, qi) = log(q/p) = log(2/1) = log 2.',
-  },
-      '$1
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'On the imaginary axis, ndist(pi, qi) = log(q/p) = log(2/1) = log 2.',
-  },
+      '$2$',
+      '$\\log 2$',
+      '$1$',
+      '$\\log 3$'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'On the imaginary axis, ndist(pi, qi) = log(q/p) = log(2/1) = log 2.',
   },
@@ -36,12 +20,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The hyperbolic distance formula uses which function?',
     options: [
-      'Logarithm',
-      'Sine',
       'Exponential',
-      'Square root',
+      'Sine',
+      'Logarithm',
+      'Square root'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Hyperbolic distance is |log(CR)| where CR is the cross-ratio, involving the logarithm.',
   },
@@ -51,15 +35,11 @@ export const section62Questions: QuizQuestion[] = [
     question: 'The transformation $z \\mapsto kz$ preserves hyperbolic distance because:',
     options: [
       'It preserves Euclidean distance',
-      'It is a rotation',
-      'The factors of $k$ cancel in the ratio $q/p
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'ndist(kpi, kqi) = log(kq/kp) = log(q/p) = ndist(pi, qi). The k cancels.',
-  },
       'It fixes all points',
+      'It is a rotation',
+      'The factors of $k$ cancel in the ratio $q/p$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'ndist(kpi, kqi) = log(kq/kp) = log(q/p) = ndist(pi, qi). The k cancels.',
   },
@@ -68,12 +48,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The hyperbolic distance from any interior point to the boundary is:',
     options: [
-      'One',
-      'Zero',
       'Infinite',
-      'Finite but positive',
+      'Zero',
+      'One',
+      'Finite but positive'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'As you approach the boundary, log(1/ε) → ∞. The boundary is infinitely far from any interior point.',
   },
@@ -82,28 +62,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The hyperbolic line element (metric) at $z = x + iy$ is:',
     options: [
-      '$ds = |dz|/y
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'The hyperbolic metric is ds = |dz|/y = √(dx² + dy²)/y, inversely proportional to height.',
-  },
-      '$ds = |dz|
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'The hyperbolic metric is ds = |dz|/y = √(dx² + dy²)/y, inversely proportional to height.',
-  },
-      '$ds = |dz| \\cdot y
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'The hyperbolic metric is ds = |dz|/y = √(dx² + dy²)/y, inversely proportional to height.',
-  },
-      '$ds = |dz|/x
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'The hyperbolic metric is ds = |dz|/y = √(dx² + dy²)/y, inversely proportional to height.',
-  },
+      '$ds = |dz|$',
+      '$ds = |dz|/y$',
+      '$ds = |dz|/x$',
+      '$ds = |dz| \\cdot y$'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The hyperbolic metric is ds = |dz|/y = √(dx² + dy²)/y, inversely proportional to height.',
   },
@@ -112,12 +76,12 @@ export const section62Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The shortest path between two points in the hyperbolic plane is:',
     options: [
+      'A Euclidean straight line',
       'A horizontal line',
       'The arc of the non-Euclidean line through them',
-      'A Euclidean straight line',
-      'Any smooth curve',
+      'Any smooth curve'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Non-Euclidean lines are geodesics: they minimize hyperbolic distance between points.',
   },

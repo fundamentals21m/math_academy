@@ -7,11 +7,11 @@ export const section28Questions: QuizQuestion[] = [
     question: 'Leopold Kronecker is famous for saying "God made the integers; all else is the work of:',
     options: [
       'Nature',
-      'The devil',
       'Man',
-      'Mathematicians',
+      'The devil',
+      'Mathematicians'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Kronecker\'s quote reflects his belief that only integers are truly fundamental in mathematics.',
   },
@@ -20,12 +20,12 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Kronecker advocated for which philosophical position in mathematics?',
     options: [
-      'Constructivism/Finitism',
       'Platonism',
       'Formalism',
-      'Logicism',
+      'Constructivism/Finitism',
+      'Logicism'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Kronecker believed mathematics should only use constructive methods and finite processes.',
   },
@@ -37,7 +37,7 @@ export const section28Questions: QuizQuestion[] = [
       'Gauss',
       'Euler',
       'Weierstrass',
-      'Cantor',
+      'Cantor'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -48,14 +48,10 @@ export const section28Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Kronecker delta $\\delta_{ij}$ equals:',
     options: [
+      '1 if $i=j$, 0 otherwise',
       'Always 1',
       'Always 0',
-      '$i + j
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'The Kronecker delta is 1 when indices are equal and 0 otherwise.',
-  },
-      '1 if $i=j$, 0 otherwise',
+      '$i + j$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -69,7 +65,7 @@ export const section28Questions: QuizQuestion[] = [
       'Topology',
       'Algebraic number theory',
       'Statistics',
-      'Geometry',
+      'Geometry'
     ],
     correctIndex: 1,
     difficulty: 'medium',

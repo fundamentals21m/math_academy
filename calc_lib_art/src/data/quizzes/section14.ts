@@ -14,12 +14,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the main mystery Wigner described?',
     options: [
-      'Why mathematics is so difficult',
-      'Why physicists don\\\\'t use more mathematics',
       'Why mathematics developed for pure reasons describes physical reality so precisely',
-      'Why mathematicians ignore physics',
+      'Why mathematics is so difficult',
+      'Why physicists don\'t use more mathematics',
+      'Why mathematicians ignore physics'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Wigner marveled that mathematics invented for abstract, aesthetic reasons repeatedly turns out to describe physical reality with stunning accuracy.',
   },
@@ -29,9 +29,9 @@ export const section14Questions: QuizQuestion[] = [
     question: 'Riemannian geometry was developed in 1854 as pure mathematics. It was later used for:',
     options: [
       'Counting money',
-      'Einstein\\\\\'s general relativity (60 years later)',
+      'Einstein\'s general relativity (60 years later)',
       'Building bridges',
-      'Weather prediction',
+      'Weather prediction'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -42,12 +42,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Complex numbers (involving $i = \\sqrt{-1}$) were invented for abstract algebra but turned out to be essential for:',
     options: [
-      'Quantum mechanics',
       'Cooking recipes',
       'Counting animals',
-      'Weather forecasting',
+      'Quantum mechanics',
+      'Weather forecasting'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Complex numbers, which seemed like pure mathematical fiction, turned out to be fundamental to quantum mechanics.',
   },
@@ -59,7 +59,7 @@ export const section14Questions: QuizQuestion[] = [
       'A distraction from real work',
       'Something to avoid',
       'A way to confuse students',
-      'A guide to discovering true physical laws',
+      'A guide to discovering true physical laws'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -70,12 +70,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Calculus can be considered a "liberal art" because:',
     options: [
-      'It is politically liberal',
       'It combines practical power with deep philosophical questions about reality',
+      'It is politically liberal',
       'It requires no technical skill',
-      'It was invented by liberal politicians',
+      'It was invented by liberal politicians'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Like the classical liberal arts, calculus is both practically powerful and raises profound questions about the nature of reality and human understanding.',
   },

@@ -7,11 +7,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'The slope of a line measures:',
     options: [
       'Its length',
-      'The angle with the y-axis',
       'Its steepness (rise over run)',
       'Its y-intercept',
+      'The angle with the y-axis'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Slope m = (change in y)/(change in x) = rise/run.',
   },
@@ -20,28 +20,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The slope-intercept form of a line is:',
     options: [
-      '$y - y_1 = m(x - x_1)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: '$y = mx + b$ where m is slope and b is the y-intercept.',
-  },
-      '$ax + by = c
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$y = mx + b$ where m is slope and b is the y-intercept.',
-  },
-      '$y = mx + b
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$y = mx + b$ where m is slope and b is the y-intercept.',
-  },
-      '$x = k
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$y = mx + b$ where m is slope and b is the y-intercept.',
-  },
+      '$ax + by = c$',
+      '$y - y_1 = m(x - x_1)$',
+      '$y = mx + b$',
+      '$x = k$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: '$y = mx + b$ where m is slope and b is the y-intercept.',
   },
@@ -50,12 +34,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two lines are parallel if and only if:',
     options: [
-      'They have the same slope',
       'They have the same y-intercept',
-      'They pass through the origin',
       'Their slopes multiply to -1',
+      'They pass through the origin',
+      'They have the same slope'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Parallel lines never meet, which occurs exactly when their slopes are equal.',
   },
@@ -64,12 +48,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two lines are perpendicular if and only if the product of their slopes is:',
     options: [
-      '1',
-      '0',
-      'Undefined',
       '-1',
+      '0',
+      '1',
+      'Undefined'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Perpendicular lines have slopes m₁ and m₂ with m₁ · m₂ = -1.',
   },
@@ -78,28 +62,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The equation of the line through $(2, 3)$ with slope $4$ is:',
     options: [
-      '$y - 3 = 4(x - 2)$, i.e., $y = 4x - 5
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'Point-slope form: $y - 3 = 4(x - 2)$, which simplifies to $y = 4x - 5$.',
-  },
-      '$y = 4x + 3
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Point-slope form: $y - 3 = 4(x - 2)$, which simplifies to $y = 4x - 5$.',
-  },
-      '$y = 3x + 4
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Point-slope form: $y - 3 = 4(x - 2)$, which simplifies to $y = 4x - 5$.',
-  },
-      '$y = 2x + 3
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Point-slope form: $y - 3 = 4(x - 2)$, which simplifies to $y = 4x - 5$.',
-  },
+      '$y = 4x + 3$',
+      '$y - 3 = 4(x - 2)$, i.e., $y = 4x - 5$',
+      '$y = 2x + 3$',
+      '$y = 3x + 4$'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Point-slope form: $y - 3 = 4(x - 2)$, which simplifies to $y = 4x - 5$.',
   },
@@ -108,12 +76,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A vertical line has:',
     options: [
+      'Slope 0',
       'Slope 1',
       'Undefined slope',
-      'Slope 0',
-      'Negative slope',
+      'Negative slope'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'A vertical line has the form x = k; the "run" is 0, making slope undefined.',
   },

@@ -6,22 +6,10 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A nonhomogeneous equation has the form:',
     options: [
-      '$y\\'\\' + ay\\' + by = 0
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Nonhomogeneous has a non-zero right-hand side (forcing term).',
-  },
-      '$y\\'\\' + ay\\' + by = f(x)$ where $f(x) \\neq 0
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Nonhomogeneous has a non-zero right-hand side (forcing term).',
-  },
-      '$y\\' = y^2
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Nonhomogeneous has a non-zero right-hand side (forcing term).',
-  },
-      'Any equation with variable coefficients',
+      '$y\'\' + ay\' + by = 0$',
+      '$y\' = y^2$',
+      '$y\'\' + ay\' + by = f(x)$ where $f(x) \\neq 0$',
+      'Any equation with variable coefficients'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -33,13 +21,9 @@ export const section57Questions: QuizQuestion[] = [
     question: 'The general solution to nonhomogeneous equation is:',
     options: [
       'Only the particular solution',
-      '$y_h + y_p$ (homogeneous solution + particular solution)',
       'Only the homogeneous solution',
-      '$y_h \\cdot y_p
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'General solution = complementary (homogeneous) + particular.',
-  },
+      '$y_h \\cdot y_p$',
+      '$y_h + y_p$ (homogeneous solution + particular solution)'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -50,14 +34,10 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The method of undetermined coefficients is used when:',
     options: [
-      '$f(x)$ is any function',
-      '$f(x) = 0
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Undetermined coefficients works for special right-hand sides.',
-  },
       '$f(x)$ is a polynomial, exponential, sine, cosine, or combination',
-      'The equation has variable coefficients',
+      '$f(x)$ is any function',
+      '$f(x) = 0$',
+      'The equation has variable coefficients'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -68,26 +48,10 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $y\'\' - y = e^{2x}$, we guess particular solution:',
     options: [
-      '$y_p = Axe^{2x}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Since $e^{2x}$ is not a solution to homogeneous equation, try $y_p = Ae^{2x}$.',
-  },
-      '$y_p = Ae^x
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Since $e^{2x}$ is not a solution to homogeneous equation, try $y_p = Ae^{2x}$.',
-  },
-      '$y_p = A
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Since $e^{2x}$ is not a solution to homogeneous equation, try $y_p = Ae^{2x}$.',
-  },
-      '$y_p = Ae^{2x}
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Since $e^{2x}$ is not a solution to homogeneous equation, try $y_p = Ae^{2x}$.',
-  },
+      '$y_p = Axe^{2x}$',
+      '$y_p = Ae^{2x}$',
+      '$y_p = Ae^x$',
+      '$y_p = A$'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -98,14 +62,10 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If the right-hand side is a solution to the homogeneous equation, we:',
     options: [
-      'Multiply our guess by $x
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'When $f(x)$ solves the homogeneous part, multiply the guess by $x$ (or $x^2$ if needed).',
-  },
       'Guess the same form',
       'Use a different method entirely',
-      'The equation has no solution',
+      'Multiply our guess by $x$',
+      'The equation has no solution'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -116,26 +76,10 @@ export const section57Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $y\'\' + y = \\cos x$, since $\\cos x$ solves $y\'\' + y = 0$, we guess:',
     options: [
-      '$y_p = A\\cos x + B\\sin x
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Multiply by $x$ because $\\cos x$, $\\sin x$ are homogeneous solutions.',
-  },
-      '$y_p = Ae^x
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Multiply by $x$ because $\\cos x$, $\\sin x$ are homogeneous solutions.',
-  },
-      '$y_p = x(A\\cos x + B\\sin x)
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Multiply by $x$ because $\\cos x$, $\\sin x$ are homogeneous solutions.',
-  },
-      '$y_p = Ax
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Multiply by $x$ because $\\cos x$, $\\sin x$ are homogeneous solutions.',
-  },
+      '$y_p = A\\cos x + B\\sin x$',
+      '$y_p = Ae^x$',
+      '$y_p = Ax$',
+      '$y_p = x(A\\cos x + B\\sin x)$'
     ],
     correctIndex: 3,
     difficulty: 'hard',

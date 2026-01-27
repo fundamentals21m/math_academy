@@ -6,18 +6,10 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A definite integral $\\int_a^b f(x) \\, dx$ represents:',
     options: [
-      'The derivative at points $a$ and $b
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'A definite integral calculates the (signed) area between the curve and the x-axis.',
-  },
+      'The derivative at points $a$ and $b$',
       'The slope of the secant line',
-      'The area under the curve between $x = a$ and $x = b
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'A definite integral calculates the (signed) area between the curve and the x-axis.',
-  },
       'The maximum value of the function',
+      'The area under the curve between $x = a$ and $x = b$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -37,12 +29,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If a function is negative on an interval, its definite integral on that interval is:',
     options: [
+      'Negative (representing area below the x-axis)',
       'Always positive',
       'Zero',
-      'Negative (representing area below the x-axis)',
-      'Undefined',
+      'Undefined'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The integral gives signed area—negative for regions below the x-axis.',
   },
@@ -51,12 +43,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Fundamental Theorem of Calculus connects:',
     options: [
-      'Differentiation and integration',
       'Algebra and geometry',
+      'Differentiation and integration',
       'Trigonometry and calculus',
-      'Limits and infinity',
+      'Limits and infinity'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The Fundamental Theorem shows that differentiation and integration are inverse operations.',
   },

@@ -6,12 +6,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Extreme Value Theorem states that a continuous function on a closed interval $[a,b]$:',
     options: [
-      'Attains its maximum and minimum',
       'Has no extrema',
       'Is differentiable',
-      'Is monotonic',
+      'Attains its maximum and minimum',
+      'Is monotonic'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'EVT: continuous functions on closed bounded intervals attain max and min values.',
   },
@@ -21,11 +21,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'Why does $f(x) = 1/x$ on $(0, 1)$ NOT contradict the EVT?',
     options: [
       '$f$ is not continuous',
-      'The interval $(0, 1)$ is not closed',
       '$f$ is not bounded',
       '$f$ has a maximum',
+      'The interval $(0, 1)$ is not closed'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The EVT requires a closed interval. $(0,1)$ is open, so EVT doesn\'t apply.',
   },
@@ -34,26 +34,10 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'On $[0, 2]$, the function $f(x) = x^2 - 2x$ attains its minimum at:',
     options: [
-      '$x = 0
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$f\'(x) = 2x - 2 = 0$ gives $x = 1$. Check: $f(0) = 0$, $f(1) = -1$, $f(2) = 0$. Min at $x = 1$.',
-  },
-      '$x = 2
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$f\'(x) = 2x - 2 = 0$ gives $x = 1$. Check: $f(0) = 0$, $f(1) = -1$, $f(2) = 0$. Min at $x = 1$.',
-  },
-      '$x = 1
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$f\'(x) = 2x - 2 = 0$ gives $x = 1$. Check: $f(0) = 0$, $f(1) = -1$, $f(2) = 0$. Min at $x = 1$.',
-  },
-      '$x = -1
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$f\'(x) = 2x - 2 = 0$ gives $x = 1$. Check: $f(0) = 0$, $f(1) = -1$, $f(2) = 0$. Min at $x = 1$.',
-  },
+      '$x = 1$',
+      '$x = 0$',
+      '$x = 2$',
+      '$x = -1$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -74,11 +58,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'A continuous function on a closed interval is:',
     options: [
       'Always unbounded',
-      'Always zero somewhere',
       'Bounded',
-      'Differentiable',
+      'Always zero somewhere',
+      'Differentiable'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Continuous functions on closed bounded intervals are bounded (they attain max and min).',
   },
@@ -89,10 +73,10 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       'Field axioms',
       'Associativity',
-      'Commutativity',
       'Completeness (least upper bound property)',
+      'Commutativity'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The EVT relies on the completeness of the real numbers.',
   },

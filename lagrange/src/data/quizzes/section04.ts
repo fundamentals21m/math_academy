@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section04Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The Lorentz force on a charged particle in electromagnetic fields is:',
+    options: [
+      '$\\mathbf{F} = q(\\mathbf{E} + \\mathbf{v} \\times \\mathbf{B})$',
+      '$\\mathbf{F} = q(\\mathbf{E} - \\mathbf{v} \\times \\mathbf{B})$',
+      '$\\mathbf{F} = q\\mathbf{E} \\cdot \\mathbf{B}$',
+      '$\\mathbf{F} = q(\\mathbf{E} + \\mathbf{B})$',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The Lorentz force $\\mathbf{F} = q(\\mathbf{E} + \\mathbf{v} \\times \\mathbf{B})$ combines the electric force $q\\mathbf{E}$ and the magnetic force $q\\mathbf{v} \\times \\mathbf{B}$.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The Lagrangian for a charged particle in an electromagnetic field (with potentials $\\phi$ and $\\mathbf{A}$) is:',
+    options: [
+      '$L = \\frac{1}{2}m|\\mathbf{v}|^2 - q\\phi + q\\mathbf{v} \\cdot \\mathbf{A}$',
+      '$L = \\frac{1}{2}m|\\mathbf{v}|^2 + q\\phi - q\\mathbf{v} \\cdot \\mathbf{A}$',
+      '$L = \\frac{1}{2}m|\\mathbf{v}|^2 - q\\phi - q\\mathbf{v} \\cdot \\mathbf{A}$',
+      '$L = \\frac{1}{2}m|\\mathbf{v}|^2 + q\\phi + q\\mathbf{v} \\cdot \\mathbf{A}$',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The Lagrangian $L = \\frac{1}{2}m|\\mathbf{v}|^2 - q\\phi + q\\mathbf{v} \\cdot \\mathbf{A}$ yields the Lorentz force through the Euler-Lagrange equations. Note the velocity-dependent term $q\\mathbf{v} \\cdot \\mathbf{A}$.',
+  },
+  {
+    id: 3,
+    type: 'text',
+    question: 'The electric field $\\mathbf{E}$ can be expressed in terms of potentials as $\\mathbf{E} = -\\nabla\\phi - \\partial\\mathbf{A}/\\partial t$. What is the name of $\\phi$?',
+    correctAnswer: 'scalar potential',
+    difficulty: 'easy',
+    explanation: 'The scalar potential $\\phi$ (or electrostatic potential) combined with the vector potential $\\mathbf{A}$ allows expression of electromagnetic fields in terms of potentials.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The canonical momentum for a charged particle in an electromagnetic field is:',
+    options: [
+      '$\\mathbf{p} = m\\mathbf{v} + q\\mathbf{A}$',
+      '$\\mathbf{p} = m\\mathbf{v} - q\\mathbf{A}$',
+      '$\\mathbf{p} = m\\mathbf{v}$',
+      '$\\mathbf{p} = q\\mathbf{A}$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The canonical momentum $\\mathbf{p} = \\frac{\\partial L}{\\partial \\mathbf{v}} = m\\mathbf{v} + q\\mathbf{A}$ differs from the kinetic momentum $m\\mathbf{v}$ by the term $q\\mathbf{A}$.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The magnetic field does no work on a charged particle because:',
+    options: [
+      'The magnetic force is always perpendicular to velocity',
+      'Magnetic fields have no energy',
+      'The magnetic force is always zero',
+      'Magnetic fields only affect neutral particles',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Since $\\mathbf{F}_B = q\\mathbf{v} \\times \\mathbf{B}$ is perpendicular to $\\mathbf{v}$, the work $\\mathbf{F}_B \\cdot \\mathbf{v} = 0$. The magnetic force changes direction but not speed.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'A particle with charge $q = 2$ C moves with velocity $v = 3$ m/s perpendicular to a magnetic field $B = 0.5$ T. What is the magnitude of the magnetic force in Newtons?',
+    correctAnswer: 3,
+    numericRange: { min: 0, max: 100, precision: 1 },
+    difficulty: 'easy',
+    explanation: 'The magnetic force magnitude is $|\\mathbf{F}| = qvB\\sin(90°) = 2 \\times 3 \\times 0.5 \\times 1 = 3$ N.',
+  },
+];

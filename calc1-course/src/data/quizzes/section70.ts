@@ -7,13 +7,9 @@ export const section70Questions: QuizQuestion[] = [
     question: 'Uniform convergence of $f_n \\to f$ on a set $S$ means:',
     options: [
       'Pointwise convergence at each point',
+      '$\\sup_{x \\in S} |f_n(x) - f(x)| \\to 0$',
       '$f_n$ and $f$ are both continuous',
-      '$\\sup_{x \\in S} |f_n(x) - f(x)| \\to 0
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Uniform: the maximum difference goes to zero (same $N$ works for all $x$).',
-  },
-      '$f_n = f$ eventually',
+      '$f_n = f$ eventually'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -26,10 +22,10 @@ export const section70Questions: QuizQuestion[] = [
     options: [
       'Nothing about individual points',
       'Divergence',
-      'The limit is constant',
       'Pointwise convergence',
+      'The limit is constant'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Uniform convergence is stronger than pointwise.',
   },
@@ -40,10 +36,10 @@ export const section70Questions: QuizQuestion[] = [
     options: [
       'Differentiable',
       'Constant',
-      'Continuous',
       'Possibly discontinuous',
+      'Continuous'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Uniform limit of continuous functions is continuous.',
   },
@@ -52,14 +48,10 @@ export const section70Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f_n \\to f$ uniformly on $[a, b]$, then:',
     options: [
+      '$\\int_a^b f_n \\to \\int_a^b f$',
       'Integration and limit cannot be interchanged',
       '$f$ is not integrable',
-      'The integrals may differ',
-      '$\\int_a^b f_n \\to \\int_a^b f
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Uniform convergence allows interchange of limit and integral.',
-  },
+      'The integrals may differ'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -71,13 +63,9 @@ export const section70Questions: QuizQuestion[] = [
     question: 'For $f_n(x) = x^n$ on $[0, 1]$, convergence is:',
     options: [
       'Uniform',
-      'Neither pointwise nor uniform',
       'Pointwise but not uniform',
-      'Uniform on $[0, 1)
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Limit is discontinuous at $x = 1$, so not uniform (but pointwise).',
-  },
+      'Neither pointwise nor uniform',
+      'Uniform on $[0, 1)$'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -89,11 +77,11 @@ export const section70Questions: QuizQuestion[] = [
     question: 'The Weierstrass M-test helps prove:',
     options: [
       'Pointwise convergence',
-      'Uniform convergence of series',
       'Divergence',
-      'Continuity',
+      'Uniform convergence of series',
+      'Continuity'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'M-test: if $|f_n(x)| \\leq M_n$ and $\\sum M_n$ converges, series is uniformly convergent.',
   },

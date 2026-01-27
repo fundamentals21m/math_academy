@@ -8,38 +8,23 @@ export const section30Quiz: DifficultyQuizData = {
     {
       id: 's30-e01',
       question: 'det(I) where I is the n × n identity matrix equals:',
-      options: [
-      '1',
-      '0',
-      'n',
-      'n!',
-    ],
-      correctIndex: 0,
+      options: ['0', 'n', '1', 'n!'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'The determinant of the identity matrix is 1 (normalization condition).'
     },
     {
       id: 's30-e02',
       question: 'If A has two identical rows, then det(A) equals:',
-      options: [
-      '1',
-      '0',
-      '-1',
-      'Undefined',
-    ],
-      correctIndex: 1,
+      options: ['1', '-1', 'Undefined', '0'],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The alternating property implies det = 0 when two rows are equal.'
     },
     {
       id: 's30-e03',
       question: 'det of a 2 × 2 matrix [[a,b],[c,d]] equals:',
-      options: [
-      'ad - bc',
-      'a + d',
-      'ac + bd',
-      'ab - cd',
-    ],
+      options: ['ad - bc', 'a + d', 'ac + bd', 'ab - cd'],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'det([[a,b],[c,d]]) = ad - bc.'
@@ -47,12 +32,7 @@ export const section30Quiz: DifficultyQuizData = {
     {
       id: 's30-e04',
       question: 'A square matrix with determinant 0 is called:',
-      options: [
-      'Invertible',
-      'Singular',
-      'Orthogonal',
-      'Unitary',
-    ],
+      options: ['Invertible', 'Singular', 'Orthogonal', 'Unitary'],
       correctIndex: 1,
       difficulty: 'easy',
       explanation: 'A singular matrix has determinant zero and is not invertible.'
@@ -60,25 +40,15 @@ export const section30Quiz: DifficultyQuizData = {
     {
       id: 's30-e05',
       question: 'The determinant of an upper triangular matrix is:',
-      options: [
-      '0',
-      '1',
-      'The sum of diagonal entries',
-      'The product of diagonal entries',
-    ],
-      correctIndex: 3,
+      options: ['0', '1', 'The product of diagonal entries', 'The sum of diagonal entries'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'For triangular matrices, det = product of diagonal entries.'
     },
     {
       id: 's30-e06',
       question: 'If we swap two rows of matrix A, the determinant:',
-      options: [
-      'Stays the same',
-      'Doubles',
-      'Becomes zero',
-      'Changes sign',
-    ],
+      options: ['Stays the same', 'Doubles', 'Becomes zero', 'Changes sign'],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Swapping two rows negates the determinant (alternating property).'
@@ -88,12 +58,7 @@ export const section30Quiz: DifficultyQuizData = {
     {
       id: 's30-m01',
       question: 'A determinant function D on n × n matrices is:',
-      options: [
-      'Alternating and multilinear',
-      'Linear in each row',
-      'Always positive',
-      'Equal to the trace',
-    ],
+      options: ['Alternating and multilinear', 'Linear in each row', 'Always positive', 'Equal to the trace'],
       correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The determinant is multilinear (linear in each row) and alternating (changes sign when rows are swapped).'
@@ -101,60 +66,40 @@ export const section30Quiz: DifficultyQuizData = {
     {
       id: 's30-m02',
       question: 'If we multiply one row of A by scalar c, the determinant becomes:',
-      options: [
-      'det(A)/c',
-      'det(A) + c',
-      'c·det(A)',
-      'c²·det(A)',
-    ],
-      correctIndex: 2,
+      options: ['det(A)/c', 'c·det(A)', 'det(A) + c', 'c²·det(A)'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Multilinearity: scaling one row by c scales the determinant by c.'
     },
     {
       id: 's30-m03',
       question: 'det(AB) equals:',
-      options: ['det(A) + det(B)', 'det(A) · det(B)', 'det(A)/det(B)', 'det(A + B)'],
-      correctIndex: 1,
+      options: ['det(A) + det(B)', 'det(A)/det(B)', 'det(A) · det(B)', 'det(A + B)'],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The determinant is multiplicative: det(AB) = det(A)det(B).'
     },
     {
       id: 's30-m04',
       question: 'det(Aᵀ) equals:',
-      options: [
-      '1/det(A)',
-      'det(A)',
-      '-det(A)',
-      '(det(A))²',
-    ],
-      correctIndex: 1,
+      options: ['1/det(A)', '-det(A)', '(det(A))²', 'det(A)'],
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The determinant of the transpose equals the original determinant.'
     },
     {
       id: 's30-m05',
       question: 'A is invertible if and only if:',
-      options: [
-      'det(A) = 1',
-      'det(A) > 0',
-      'det(A) ≠ 0',
-      'det(A) = n',
-    ],
-      correctIndex: 2,
+      options: ['det(A) ≠ 0', 'det(A) = 1', 'det(A) > 0', 'det(A) = n'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'A matrix is invertible iff its determinant is non-zero.'
     },
     {
       id: 's30-m06',
       question: 'det(cA) for an n × n matrix A equals:',
-      options: [
-      'c·det(A)',
-      'det(A)/c',
-      'c + det(A)',
-      'cⁿ·det(A)',
-    ],
-      correctIndex: 3,
+      options: ['c·det(A)', 'cⁿ·det(A)', 'det(A)/c', 'c + det(A)'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Each of n rows is multiplied by c, so det(cA) = cⁿ det(A).'
     }
@@ -163,51 +108,31 @@ export const section30Quiz: DifficultyQuizData = {
     {
       id: 's30-h01',
       question: 'A k-linear function on V^k is:',
-      options: [
-      'Degree k polynomial',
-      'A function to F^k',
-      'Always symmetric',
-      'Linear in each of k arguments',
-    ],
-      correctIndex: 3,
+      options: ['Degree k polynomial', 'A function to F^k', 'Linear in each of k arguments', 'Always symmetric'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'A k-linear (multilinear) function is linear in each of its k arguments separately.'
     },
     {
       id: 's30-h02',
       question: 'An alternating multilinear function satisfies:',
-      options: [
-      'f is symmetric',
-      'f(v₁, ..., vₖ) = f(v₁) + ... + f(vₖ)',
-      'f(v, v, ...) = 0 when any two arguments are equal',
-      'f is constant',
-    ],
-      correctIndex: 2,
+      options: ['f is symmetric', 'f(v₁, ..., vₖ) = f(v₁) + ... + f(vₖ)', 'f is constant', 'f(v, v, ...) = 0 when any two arguments are equal'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Alternating means f = 0 when two arguments coincide, equivalently, swapping arguments negates f.'
     },
     {
       id: 's30-h03',
       question: 'The cofactor Cᵢⱼ of entry aᵢⱼ is:',
-      options: [
-      'aᵢⱼ',
-      'The (i,j) minor',
-      '(-1)^{i+j} times the (i,j) minor',
-      'det(A)/aᵢⱼ',
-    ],
-      correctIndex: 2,
+      options: ['(-1)^{i+j} times the (i,j) minor', 'aᵢⱼ', 'The (i,j) minor', 'det(A)/aᵢⱼ'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Cᵢⱼ = (-1)^{i+j} Mᵢⱼ where Mᵢⱼ is the determinant of the (n-1)×(n-1) submatrix.'
     },
     {
       id: 's30-h04',
       question: 'Cramer\'s rule expresses the solution of Ax = b in terms of:',
-      options: [
-      'Inverses only',
-      'Ratios of determinants',
-      'Eigenvalues',
-      'Traces',
-    ],
+      options: ['Inverses only', 'Ratios of determinants', 'Eigenvalues', 'Traces'],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'xᵢ = det(Aᵢ)/det(A) where Aᵢ has the i-th column replaced by b.'
@@ -215,26 +140,16 @@ export const section30Quiz: DifficultyQuizData = {
     {
       id: 's30-h05',
       question: 'The adjugate (classical adjoint) of A satisfies:',
-      options: [
-      'adj(A) = A⁻¹',
-      'adj(A) = Aᵀ',
-      'A + adj(A) = I',
-      'A · adj(A) = det(A) · I',
-    ],
-      correctIndex: 3,
+      options: ['adj(A) = A⁻¹', 'adj(A) = Aᵀ', 'A · adj(A) = det(A) · I', 'A + adj(A) = I'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'A · adj(A) = adj(A) · A = det(A) · I.'
     },
     {
       id: 's30-h06',
       question: 'The determinant of an n × n matrix A can be expressed as a sum over:',
-      options: [
-      'n terms',
-      'n! terms',
-      'n² terms',
-      '2ⁿ terms',
-    ],
-      correctIndex: 1,
+      options: ['n terms', 'n² terms', '2ⁿ terms', 'n! terms'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'det(A) = Σ_{σ ∈ Sₙ} sgn(σ) A_{1,σ(1)} ··· A_{n,σ(n)} has n! terms.'
     }
@@ -249,51 +164,31 @@ export const chapter05Quiz: DifficultyQuizData = {
     {
       id: 'ch05-h01',
       question: 'det(cA) for an n × n matrix A equals:',
-      options: [
-      'c·det(A)',
-      'det(A)/c',
-      'c + det(A)',
-      'cⁿ·det(A)',
-    ],
-      correctIndex: 3,
+      options: ['cⁿ·det(A)', 'c·det(A)', 'det(A)/c', 'c + det(A)'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'Each of n rows is multiplied by c, so det(cA) = cⁿ det(A).'
     },
     {
       id: 'ch05-h02',
       question: 'Cramer\'s rule expresses the solution of Ax = b in terms of:',
-      options: [
-      'Ratios of determinants',
-      'Inverses only',
-      'Eigenvalues',
-      'Traces',
-    ],
-      correctIndex: 0,
+      options: ['Inverses only', 'Ratios of determinants', 'Eigenvalues', 'Traces'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'xᵢ = det(Aᵢ)/det(A) where Aᵢ has the i-th column replaced by b.'
     },
     {
       id: 'ch05-h03',
       question: 'If A is obtained from B by adding a multiple of one row to another:',
-      options: [
-      'det(A) = det(B)',
-      'det(A) = -det(B)',
-      'det(A) = 0',
-      'det(A) = 2det(B)',
-    ],
-      correctIndex: 0,
+      options: ['det(A) = -det(B)', 'det(A) = 0', 'det(A) = det(B)', 'det(A) = 2det(B)'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Adding a multiple of one row to another doesn\'t change the determinant.'
     },
     {
       id: 'ch05-h04',
       question: 'The determinant is used to compute:',
-      options: [
-      'Only eigenvalues',
-      'Only row rank',
-      'Only column rank',
-      'Area/volume scaling, invertibility, eigenvalues',
-    ],
+      options: ['Only eigenvalues', 'Only row rank', 'Only column rank', 'Area/volume scaling, invertibility, eigenvalues'],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Determinants determine invertibility, scaling of areas/volumes, and appear in eigenvalue computations.'
@@ -301,38 +196,23 @@ export const chapter05Quiz: DifficultyQuizData = {
     {
       id: 'ch05-h05',
       question: 'For the exterior algebra ∧V with dim(V) = n, the total dimension of ∧V is:',
-      options: [
-      'n',
-      'n!',
-      '2ⁿ',
-      'n²',
-    ],
-      correctIndex: 2,
+      options: ['2ⁿ', 'n', 'n!', 'n²'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'dim(∧V) = Σₖ C(n,k) = 2ⁿ.'
     },
     {
       id: 'ch05-h06',
       question: 'If det(A) = 5, then det(2A) for a 3 × 3 matrix equals:',
-      options: [
-      '10',
-      '8',
-      '40',
-      '125',
-    ],
-      correctIndex: 2,
+      options: ['10', '40', '8', '125'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'det(2A) = 2³ · det(A) = 8 · 5 = 40.'
     },
     {
       id: 'ch05-h07',
       question: 'The adjugate (classical adjoint) of A satisfies:',
-      options: [
-      'adj(A) = A⁻¹',
-      'adj(A) = Aᵀ',
-      'A · adj(A) = det(A) · I',
-      'A + adj(A) = I',
-    ],
+      options: ['adj(A) = A⁻¹', 'adj(A) = Aᵀ', 'A · adj(A) = det(A) · I', 'A + adj(A) = I'],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'A · adj(A) = adj(A) · A = det(A) · I.'
@@ -340,25 +220,15 @@ export const chapter05Quiz: DifficultyQuizData = {
     {
       id: 'ch05-h08',
       question: 'The uniqueness of the determinant means:',
-      options: [
-      'All of the above',
-      'Every matrix has exactly one determinant',
-      'There is only one alternating multilinear function with D(I) = 1',
-      'Determinants are always unique',
-    ],
-      correctIndex: 0,
+      options: ['Every matrix has exactly one determinant', 'There is only one alternating multilinear function with D(I) = 1', 'Determinants are always unique', 'All of the above'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The determinant is the unique alternating n-linear function with D(I) = 1.'
     },
     {
       id: 'ch05-h09',
       question: 'For invertible A, det(A⁻¹) equals:',
-      options: [
-      '1/det(A)',
-      'det(A)',
-      '-det(A)',
-      '(det(A))²',
-    ],
+      options: ['1/det(A)', 'det(A)', '-det(A)', '(det(A))²'],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'det(A⁻¹) = 1/det(A) since det(A)det(A⁻¹) = det(I) = 1.'
@@ -366,12 +236,7 @@ export const chapter05Quiz: DifficultyQuizData = {
     {
       id: 'ch05-h10',
       question: 'The sign (signature) of a permutation σ is:',
-      options: [
-      'Always +1',
-      '+1 or -1 depending on parity',
-      'Always -1',
-      '0',
-    ],
+      options: ['Always +1', '+1 or -1 depending on parity', 'Always -1', '0'],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'sgn(σ) = +1 for even permutations, -1 for odd permutations.'

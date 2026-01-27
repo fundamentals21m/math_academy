@@ -6,12 +6,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Jean-Victor Poncelet made major contributions to which branch of geometry?',
     options: [
+      'Projective geometry',
       'Euclidean geometry',
       'Differential geometry',
-      'Coordinate geometry',
-      'Projective geometry',
+      'Coordinate geometry'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Poncelet is considered one of the founders of modern projective geometry.',
   },
@@ -21,11 +21,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Poncelet developed much of his geometry while:',
     options: [
       'Teaching at the Sorbonne',
-      'Working as an engineer in Paris',
       'A prisoner of war in Russia',
-      'Studying under Monge',
+      'Working as an engineer in Paris',
+      'Studying under Monge'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Poncelet was captured during Napoleon\'s Russian campaign and developed projective geometry while imprisoned.',
   },
@@ -34,12 +34,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In projective geometry, parallel lines:',
     options: [
-      'Meet at a point at infinity',
       'Never meet',
       'Are always perpendicular',
-      'Do not exist',
+      'Meet at a point at infinity',
+      'Do not exist'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Projective geometry adds "points at infinity" where parallel lines meet, eliminating the special case of parallelism.',
   },
@@ -49,11 +49,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'Poncelet\'s closure theorem deals with:',
     options: [
       'Closed curves',
-      'Polygons inscribed in conics',
       'Integration methods',
       'Solid geometry',
+      'Polygons inscribed in conics'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Poncelet\'s closure theorem describes when a sequence of tangent lines to a conic inscribed in another conic closes up.',
   },
@@ -62,12 +62,12 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The principle of duality in projective geometry states that:',
     options: [
-      'Every construction can be done in two ways',
       'Every theorem has a dual theorem with points and lines interchanged',
+      'Every construction can be done in two ways',
       'Parallel lines have dual perpendicular lines',
-      'Every curve has a dual curve',
+      'Every curve has a dual curve'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Duality means every projective theorem has a dual with "point" and "line" swapped throughout.',
   },

@@ -8,8 +8,8 @@ export const section46Questions: QuizQuestion[] = [
     options: [
       'The Desargues theorem only',
       'The Pappus theorem',
-      'The Pythagorean theorem',
       'Direct calculation',
+      'The Pythagorean theorem'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,16 +20,12 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If we assume the Pappus theorem, proving $(b + c)a = ba + ca$ separately is:',
     options: [
-      'Impossible',
       'Essential',
-      'Unnecessary because Pappus implies $ab = ba
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Pappus implies commutativity, so (b + c)a = a(b + c) = ab + ac = ba + ca.',
-  },
-      'Required by the scissors theorem',
+      'Impossible',
+      'Unnecessary because Pappus implies $ab = ba$',
+      'Required by the scissors theorem'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Pappus implies commutativity, so (b + c)a = a(b + c) = ab + ac = ba + ca.',
   },
@@ -38,12 +34,12 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the distributive law proof, multiplication maps points from the x-axis to the y-axis via:',
     options: [
-      'Lines parallel to the line from 1 to a',
       'Perpendicular lines',
-      'Random directions',
       'Circular arcs',
+      'Random directions',
+      'Lines parallel to the line from 1 to a'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Points are mapped using lines parallel to the line from 1 on the x-axis to a on the y-axis.',
   },
@@ -52,12 +48,12 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Both distributive laws hold for the quaternions because:',
     options: [
-      'Quaternions are just complex numbers',
-      'Quaternions are commutative',
-      'The proof fails for quaternions',
       'Matrix multiplication distributes over matrix addition from both sides',
+      'Quaternions are commutative',
+      'Quaternions are just complex numbers',
+      'The proof fails for quaternions'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Quaternions are 2×2 complex matrices, and matrix multiplication distributes regardless of commutativity.',
   },
@@ -67,11 +63,11 @@ export const section46Questions: QuizQuestion[] = [
     question: 'Which field axioms follow directly from the construction (without needing Pappus or Desargues)?',
     options: [
       'Commutative laws',
-      'Distributive law',
       'Identity and inverse laws',
       'Associative laws',
+      'Distributive law'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The identity laws (a + 0 = a, a · 1 = a) and inverse laws follow directly from the construction.',
   },
@@ -80,10 +76,10 @@ export const section46Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The complete summary of field axiom proofs shows that Pappus is needed for:',
     options: [
-      'Identity laws only',
       'Associativity only',
+      'Identity laws only',
       'Commutativity and distributivity',
-      'Inverse laws only',
+      'Inverse laws only'
     ],
     correctIndex: 2,
     difficulty: 'hard',

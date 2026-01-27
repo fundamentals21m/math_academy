@@ -7,9 +7,9 @@ export const section33Questions: QuizQuestion[] = [
     question: 'The first axiom of a projective plane states that any two "points":',
     options: [
       'Are the same',
-      'Have the same coordinates',
       'Are parallel',
-      'Lie on a unique "line"',
+      'Have the same coordinates',
+      'Lie on a unique "line"'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -21,9 +21,9 @@ export const section33Questions: QuizQuestion[] = [
     question: 'The second axiom of a projective plane states that any two "lines":',
     options: [
       'Contain a unique common "point"',
-      'Are perpendicular',
       'Are parallel',
-      'Have no intersection',
+      'Are perpendicular',
+      'Have no intersection'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'In the model ℝP², a "point" is:',
     options: [
       'An ordered pair (x, y)',
-      'A triple (x, y, z)',
       'A line through the origin O in ℝ³',
       'A plane through O in ℝ³',
+      'A triple (x, y, z)'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'In ℝP², "points" are lines through the origin in ℝ³.',
   },
@@ -48,12 +48,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the model ℝP², a "line" is:',
     options: [
-      'A plane through O in ℝ³',
-      'An ordinary line y = mx + b',
       'A line through O in ℝ³',
-      'A circle',
+      'An ordinary line y = mx + b',
+      'A plane through O in ℝ³',
+      'A circle'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'In ℝP², "lines" are planes through the origin in ℝ³.',
   },
@@ -63,11 +63,11 @@ export const section33Questions: QuizQuestion[] = [
     question: 'Each line in the Euclidean plane has how many points at infinity?',
     options: [
       'Zero',
-      'One',
-      'Infinitely many',
       'Two',
+      'Infinitely many',
+      'One'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Each line has exactly one point at infinity (both directions converge to the same point).',
   },
@@ -76,12 +76,12 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The "horizon" or "line at infinity" in ℝP² corresponds to:',
     options: [
-      'All horizontal lines through O in ℝ³',
-      'All vertical lines through O in ℝ³',
-      'The z-axis',
       'All lines through O in the horizontal plane z = 0',
+      'All vertical lines through O in ℝ³',
+      'All horizontal lines through O in ℝ³',
+      'The z-axis'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The horizon is the plane of horizontal lines through O (i.e., the xy-plane z = 0).',
   },

@@ -6,12 +6,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How many generations of the Bernoulli family produced significant mathematicians?',
     options: [
-      'Three',
       'One',
       'Two',
       'Four',
+      'Three'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Three generations of Bernoullis made major contributions to mathematics and physics.',
   },
@@ -20,12 +20,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Bernoulli numbers appear in formulas for:',
     options: [
+      'Sums of powers of integers',
       'Prime factorization',
       'Trigonometric identities',
-      'Sums of powers of integers',
-      'Logarithms',
+      'Logarithms'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Bernoulli numbers appear in formulas for $\\sum k^n$ and in the Euler-Maclaurin formula.',
   },
@@ -35,11 +35,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'Bernoulli\'s principle in fluid dynamics relates fluid speed to:',
     options: [
       'Temperature',
-      'Viscosity',
-      'Density',
       'Pressure',
+      'Viscosity',
+      'Density'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Bernoulli\'s principle states that faster-moving fluid has lower pressure, explaining airplane lift.',
   },
@@ -51,7 +51,7 @@ export const section09Questions: QuizQuestion[] = [
       'Shortest distance between two points',
       'Maximum enclosed area',
       'Fastest descent under gravity',
-      'Minimum surface area',
+      'Minimum surface area'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -63,11 +63,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'The rivalry between which two Bernoulli brothers was legendary?',
     options: [
       'Johann and Daniel',
-      'Jakob and Johann',
       'Daniel and Nicolaus',
       'Nicolaus and Johann',
+      'Jakob and Johann'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Jakob and Johann Bernoulli had a famously bitter rivalry despite both being brilliant mathematicians.',
   },

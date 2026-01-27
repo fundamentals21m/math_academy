@@ -7,11 +7,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'What mathematical technique did Lagrange develop to find extrema with constraints?',
     options: [
       'Integration by parts',
-      'The chain rule',
-      'Taylor series',
       'Lagrange multipliers',
+      'The chain rule',
+      'Taylor series'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Lagrange multipliers allow finding maxima and minima of functions subject to constraints.',
   },
@@ -21,11 +21,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'Lagrangian mechanics reformulates Newton\'s laws using:',
     options: [
       'Force and acceleration',
-      'Energy (kinetic minus potential)',
       'Momentum and impulse',
-      'Pressure and volume',
+      'Energy (kinetic minus potential)',
+      'Pressure and volume'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Lagrangian $L = T - V$ (kinetic minus potential energy) reformulates mechanics elegantly.',
   },
@@ -37,7 +37,7 @@ export const section11Questions: QuizQuestion[] = [
       'Equals the order of the group',
       'Is always even',
       'Is always prime',
-      'Divides the order of the group',
+      'Divides the order of the group'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The calculus of variations, developed by Lagrange, finds:',
     options: [
+      'Functions that extremize integrals',
       'Integrals of functions',
       'Derivatives of functions',
-      'Functions that extremize integrals',
-      'Limits of sequences',
+      'Limits of sequences'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The calculus of variations finds functions (not numbers) that maximize or minimize integral quantities.',
   },
@@ -62,12 +62,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which work by Lagrange presented mechanics without geometric diagrams?',
     options: [
-      'Mécanique Analytique',
       'Principia Mathematica',
+      'Mécanique Analytique',
       'Elements',
-      'Disquisitiones Arithmeticae',
+      'Disquisitiones Arithmeticae'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Mécanique Analytique (1788) developed mechanics purely analytically, famously containing no diagrams.',
   },

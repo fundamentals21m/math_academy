@@ -7,11 +7,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'Évariste Galois founded which branch of mathematics?',
     options: [
       'Topology',
-      'Group theory',
       'Analysis',
       'Set theory',
+      'Group theory'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Galois invented group theory to study when polynomial equations are solvable by radicals.',
   },
@@ -23,7 +23,7 @@ export const section22Questions: QuizQuestion[] = [
       'A duel',
       'A laboratory accident',
       'War',
-      'Disease',
+      'Disease'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'Galois theory connects polynomial solvability to:',
     options: [
       'The degree of the polynomial',
-      'The size of its coefficients',
-      'The number of real roots',
       'The structure of its symmetry group',
+      'The size of its coefficients',
+      'The number of real roots'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'A polynomial is solvable by radicals if and only if its Galois group is solvable.',
   },
@@ -51,7 +51,7 @@ export const section22Questions: QuizQuestion[] = [
       'Slept peacefully',
       'Tried to escape Paris',
       'Wrote down his mathematical ideas frantically',
-      'Met with Cauchy',
+      'Met with Cauchy'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -65,7 +65,7 @@ export const section22Questions: QuizQuestion[] = [
       'Function',
       'Differential equation',
       'Matrix',
-      'Field extension',
+      'Field extension'
     ],
     correctIndex: 3,
     difficulty: 'hard',

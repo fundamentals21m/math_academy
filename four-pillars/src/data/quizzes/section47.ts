@@ -7,9 +7,9 @@ export const section47Questions: QuizQuestion[] = [
     question: 'The idea of developing projective geometry without numbers originated with:',
     options: [
       'Euclid',
-      'Pythagoras',
       'Isaac Newton',
-      'Christian von Staudt (1847)',
+      'Pythagoras',
+      'Christian von Staudt (1847)'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hessenberg proved in 1904 that:',
     options: [
-      'Both theorems are equivalent',
       'Pappus implies Desargues',
       'Desargues implies Pappus',
-      'Neither theorem implies the other',
+      'Both theorems are equivalent',
+      'Neither theorem implies the other'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Hessenberg showed that the Pappus theorem implies the Desargues theorem.',
   },
@@ -34,12 +34,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The "alternativity" law $a^{-1}(ab) = b = (ba)a^{-1}$ is implied by:',
     options: [
-      'The little Desargues theorem',
       'The Pappus theorem',
-      'None of the above',
+      'The little Desargues theorem',
       'The Desargues theorem',
+      'None of the above'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Ruth Moufang showed that little Desargues implies alternativity.',
   },
@@ -48,12 +48,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Commutative multiplication on Euclidean space $\\mathbb{R}^n$ is possible only for:',
     options: [
-      'All n',
       'n = 1, 2, and 4',
-      'n = 2 only',
+      'All n',
       'n = 1 and 2 only',
+      'n = 2 only'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Commutative multiplication exists only on ℝ¹ (reals) and ℝ² (complex numbers).',
   },
@@ -63,11 +63,11 @@ export const section47Questions: QuizQuestion[] = [
     question: 'The octonion projective space $\\mathbb{O}P^3$ does not exist because:',
     options: [
       'Octonions are not defined',
-      'There is no coordinate system',
-      'Desargues holds in 3D projective spaces, implying associativity (which O lacks)',
       'The octonions have too many elements',
+      'There is no coordinate system',
+      'Desargues holds in 3D projective spaces, implying associativity (which O lacks)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'In 3D projective spaces, Desargues holds automatically, which would force O to be associative—but it is not.',
   },
@@ -76,12 +76,12 @@ export const section47Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The octonion projective plane $\\mathbb{O}P^2$ satisfies:',
     options: [
-      'Desargues but not little Desargues',
-      'Pappus but not Desargues',
       'Little Desargues but not Desargues',
-      'Both Pappus and Desargues',
+      'Pappus but not Desargues',
+      'Desargues but not little Desargues',
+      'Both Pappus and Desargues'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'OP² satisfies little Desargues (octonions are alternative) but not full Desargues (octonions are not associative).',
   },

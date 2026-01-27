@@ -6,18 +6,10 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f$ is monotonically increasing if:',
     options: [
-      '$f(x) > 0$ for all $x
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Monotonically increasing means larger inputs give larger (or equal) outputs.',
-  },
+      '$f(x) > 0$ for all $x$',
       '$f$ is continuous',
-      '$f$ has a derivative',
-      '$x_1 < x_2$ implies $f(x_1) \\leq f(x_2)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Monotonically increasing means larger inputs give larger (or equal) outputs.',
-  },
+      '$x_1 < x_2$ implies $f(x_1) \\leq f(x_2)$',
+      '$f$ has a derivative'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -28,12 +20,12 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Every bounded monotonic function on $[a, b]$ is:',
     options: [
-      'Integrable',
       'Continuous',
       'Differentiable',
       'A polynomial',
+      'Integrable'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'A key theorem: bounded monotonic functions are always integrable.',
   },
@@ -42,26 +34,10 @@ export const section11Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which function is monotonically decreasing on $[0, \\infty)$?',
     options: [
-      '$f(x) = e^x
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$1/x$ decreases as $x$ increases (for $x > 0$).',
-  },
-      '$f(x) = 1/x$ for $x > 0
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$1/x$ decreases as $x$ increases (for $x > 0$).',
-  },
-      '$f(x) = x^2
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$1/x$ decreases as $x$ increases (for $x > 0$).',
-  },
-      '$f(x) = \\sin x
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$1/x$ decreases as $x$ increases (for $x > 0$).',
-  },
+      '$f(x) = 1/x$ for $x > 0$',
+      '$f(x) = e^x$',
+      '$f(x) = x^2$',
+      '$f(x) = \\sin x$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -73,11 +49,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'If $f$ is increasing and $g$ is increasing, then $f + g$ is:',
     options: [
       'Decreasing',
-      'Neither',
       'Increasing',
-      'Cannot determine',
+      'Neither',
+      'Cannot determine'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The sum of increasing functions is increasing.',
   },
@@ -87,11 +63,11 @@ export const section11Questions: QuizQuestion[] = [
     question: 'A step function is:',
     options: [
       'Always monotonic',
-      'Monotonic if its values don\\\\'t decrease across subintervals',
       'Never monotonic',
-      'Only monotonic if constant',
+      'Monotonic if its values don\'t decrease across subintervals',
+      'Only monotonic if constant'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'A step function is monotonic if its constant values are non-decreasing (or non-increasing) from left to right.',
   },

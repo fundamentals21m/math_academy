@@ -7,11 +7,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'The distance formula in ℝ² comes from:',
     options: [
       'The parallel postulate',
-      'Trigonometric identities',
-      'The Pythagorean theorem',
       'The inscribed angle theorem',
+      'Trigonometric identities',
+      'The Pythagorean theorem'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Distance = √((x₂-x₁)² + (y₂-y₁)²) follows from applying the Pythagorean theorem to horizontal and vertical displacements.',
   },
@@ -20,28 +20,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The equation of a circle with center (a, b) and radius r is:',
     options: [
-      '$(x + a)^2 + (y + b)^2 = r
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'A circle is all points at distance r from (a, b), so the squared distance equals r².',
-  },
-      '$(x - a) + (y - b) = r
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'A circle is all points at distance r from (a, b), so the squared distance equals r².',
-  },
-      '$x^2 + y^2 = a + b + r
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'A circle is all points at distance r from (a, b), so the squared distance equals r².',
-  },
-      '$(x - a)^2 + (y - b)^2 = r^2
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'A circle is all points at distance r from (a, b), so the squared distance equals r².',
-  },
+      '$(x - a)^2 + (y - b)^2 = r^2$',
+      '$(x - a) + (y - b) = r$',
+      '$(x + a)^2 + (y + b)^2 = r$',
+      '$x^2 + y^2 = a + b + r$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A circle is all points at distance r from (a, b), so the squared distance equals r².',
   },
@@ -51,11 +35,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'The set of points equidistant from two distinct points A and B forms:',
     options: [
       'A circle',
-      'An ellipse',
-      'A point',
       'A line (the perpendicular bisector of AB)',
+      'A point',
+      'An ellipse'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The perpendicular bisector of AB is the locus of all points equidistant from A and B.',
   },
@@ -64,28 +48,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The triangle inequality states: for any three non-collinear points O, P, Q:',
     options: [
-      '$|OP| \\cdot |PQ| = |OQ|
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Two sides of a triangle are together greater than the third side.',
-  },
-      '$|OP| + |PQ| = |OQ|
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Two sides of a triangle are together greater than the third side.',
-  },
-      '$|OP| - |PQ| > |OQ|
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Two sides of a triangle are together greater than the third side.',
-  },
-      '$|OP| + |PQ| > |OQ|
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Two sides of a triangle are together greater than the third side.',
-  },
+      '$|OP| + |PQ| = |OQ|$',
+      '$|OP| \\cdot |PQ| = |OQ|$',
+      '$|OP| + |PQ| > |OQ|$',
+      '$|OP| - |PQ| > |OQ|$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Two sides of a triangle are together greater than the third side.',
   },
@@ -95,11 +63,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'Three non-collinear points lie on:',
     options: [
       'No circle',
-      'Exactly one circle',
-      'Exactly two circles',
       'Infinitely many circles',
+      'Exactly two circles',
+      'Exactly one circle'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The perpendicular bisectors of any two sides meet at a unique point equidistant from all three points.',
   },
@@ -109,9 +77,9 @@ export const section17Questions: QuizQuestion[] = [
     question: 'The triangle inequality becomes an equality if and only if:',
     options: [
       'The three points are collinear',
-      'The triangle is isosceles',
       'The triangle is equilateral',
-      'The triangle is right-angled',
+      'The triangle is isosceles',
+      'The triangle is right-angled'
     ],
     correctIndex: 0,
     difficulty: 'hard',

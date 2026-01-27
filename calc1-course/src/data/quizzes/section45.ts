@@ -8,10 +8,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       'Trigonometric functions',
       'Exponential functions',
-      'Logarithmic functions',
       'Rational functions (polynomial/polynomial)',
+      'Logarithmic functions'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Partial fractions decompose rational functions into simpler fractions.',
   },
@@ -20,26 +20,10 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To decompose $\\frac{1}{(x-1)(x+2)}$, we write:',
     options: [
-      '$\\frac{A}{x-1} + \\frac{B}{x+2}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Distinct linear factors give one constant over each factor.',
-  },
-      '$\\frac{1}{x-1} \\cdot \\frac{1}{x+2}
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Distinct linear factors give one constant over each factor.',
-  },
-      '$\\frac{A}{(x-1)(x+2)}
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Distinct linear factors give one constant over each factor.',
-  },
-      '$\\frac{Ax + B}{(x-1)(x+2)}
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Distinct linear factors give one constant over each factor.',
-  },
+      '$\\frac{1}{x-1} \\cdot \\frac{1}{x+2}$',
+      '$\\frac{A}{(x-1)(x+2)}$',
+      '$\\frac{Ax + B}{(x-1)(x+2)}$',
+      '$\\frac{A}{x-1} + \\frac{B}{x+2}$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -50,18 +34,10 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For repeated factor $(x-1)^2$, the decomposition includes:',
     options: [
+      '$\\frac{A}{x-1} + \\frac{B}{(x-1)^2}$',
       '$\\frac{A}{x-1}$ only',
-      '$\\frac{Ax + B}{(x-1)^2}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Repeated linear factor of degree 2 needs terms for both powers.',
-  },
-      '$\\frac{A}{x-1} + \\frac{B}{(x-1)^2}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Repeated linear factor of degree 2 needs terms for both powers.',
-  },
-      '$\\frac{A}{(x-1)^2}$ only',
+      '$\\frac{Ax + B}{(x-1)^2}$',
+      '$\\frac{A}{(x-1)^2}$ only'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -72,26 +48,10 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int \\frac{1}{x-3}\\,dx = ?$',
     options: [
-      '$\\ln|x-3| + C
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$\\int \\frac{1}{x-a}\\,dx = \\ln|x-a| + C$.',
-  },
-      '$\\frac{1}{(x-3)^2} + C
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$\\int \\frac{1}{x-a}\\,dx = \\ln|x-a| + C$.',
-  },
-      '$\\ln|x| - 3 + C
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$\\int \\frac{1}{x-a}\\,dx = \\ln|x-a| + C$.',
-  },
-      '$-\\frac{1}{x-3} + C
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$\\int \\frac{1}{x-a}\\,dx = \\ln|x-a| + C$.',
-  },
+      '$\\frac{1}{(x-3)^2} + C$',
+      '$\\ln|x-3| + C$',
+      '$\\ln|x| - 3 + C$',
+      '$-\\frac{1}{x-3} + C$'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -102,26 +62,10 @@ export const section45Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For irreducible quadratic $x^2 + 1$, the partial fraction term is:',
     options: [
-      '$\\frac{A}{x^2+1}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Irreducible quadratic needs a linear numerator $Ax + B$.',
-  },
-      '$\\frac{A}{x+i} + \\frac{B}{x-i}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Irreducible quadratic needs a linear numerator $Ax + B$.',
-  },
-      '$A\\arctan x
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Irreducible quadratic needs a linear numerator $Ax + B$.',
-  },
-      '$\\frac{Ax + B}{x^2 + 1}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Irreducible quadratic needs a linear numerator $Ax + B$.',
-  },
+      '$\\frac{A}{x^2+1}$',
+      '$\\frac{A}{x+i} + \\frac{B}{x-i}$',
+      '$\\frac{Ax + B}{x^2 + 1}$',
+      '$A\\arctan x$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -134,10 +78,10 @@ export const section45Questions: QuizQuestion[] = [
     options: [
       'The numerator is a constant',
       'All coefficients are integers',
-      'The degree of numerator is less than degree of denominator',
       'The denominator is linear',
+      'The degree of numerator is less than degree of denominator'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The fraction must be proper (deg num < deg denom). Use long division first if not.',
   },

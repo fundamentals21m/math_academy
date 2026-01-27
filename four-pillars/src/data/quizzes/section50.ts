@@ -6,28 +6,12 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A linear fractional function has the form:',
     options: [
-      '$f(x) = ax + b
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Linear fractional (Möbius) functions are ratios of linear expressions with non-zero determinant.',
-  },
-      '$f(x) = \\frac{ax + b}{cx + d}$ with $ad - bc \\neq 0
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Linear fractional (Möbius) functions are ratios of linear expressions with non-zero determinant.',
-  },
-      '$f(x) = a/x
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Linear fractional (Möbius) functions are ratios of linear expressions with non-zero determinant.',
-  },
-      '$f(x) = ax^2 + bx + c
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Linear fractional (Möbius) functions are ratios of linear expressions with non-zero determinant.',
-  },
+      '$f(x) = ax + b$',
+      '$f(x) = \\frac{ax + b}{cx + d}$ with $ad - bc \\neq 0$',
+      '$f(x) = ax^2 + bx + c$',
+      '$f(x) = a/x$'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Linear fractional (Möbius) functions are ratios of linear expressions with non-zero determinant.',
   },
@@ -36,10 +20,10 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A linear fractional transformation is completely determined by its action on:',
     options: [
-      'Any two points',
       'Any one point',
+      'Any two points',
       'Any three points',
-      'Any four points',
+      'Any four points'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -51,9 +35,9 @@ export const section50Questions: QuizQuestion[] = [
     question: 'The group PGL(2, $\\mathbb{R}$) consists of matrices where:',
     options: [
       'All entries are positive',
-      'The trace is zero',
       'The determinant is 1',
-      'Two matrices are equivalent if one is a scalar multiple of the other',
+      'The trace is zero',
+      'Two matrices are equivalent if one is a scalar multiple of the other'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -65,9 +49,9 @@ export const section50Questions: QuizQuestion[] = [
     question: 'Every linear fractional transformation is a composition of:',
     options: [
       'Translations, scalings, and inversion',
-      'Only translations',
       'Two rotations',
-      'Only rotations and reflections',
+      'Only translations',
+      'Only rotations and reflections'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -80,8 +64,8 @@ export const section50Questions: QuizQuestion[] = [
     options: [
       'Elliptic',
       'Parabolic',
-      'Loxodromic',
       'Hyperbolic',
+      'Loxodromic'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -92,12 +76,12 @@ export const section50Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The fundamental invariant of linear fractional transformations is:',
     options: [
-      'Angle',
       'Distance',
-      'Area',
+      'Angle',
       'The cross-ratio',
+      'Area'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Linear fractional transformations preserve the cross-ratio of any four points.',
   },

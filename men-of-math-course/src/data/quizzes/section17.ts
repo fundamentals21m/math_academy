@@ -6,12 +6,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cauchy is most famous for his contributions to:',
     options: [
-      'Mathematical analysis and rigor',
       'Number theory',
       'Geometry',
-      'Probability',
+      'Mathematical analysis and rigor',
+      'Probability'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Cauchy established rigorous foundations for calculus and analysis.',
   },
@@ -22,10 +22,10 @@ export const section17Questions: QuizQuestion[] = [
     options: [
       'Increasingly larger',
       'Prime numbers',
-      'Arbitrarily close to each other',
       'Alternately positive and negative',
+      'Arbitrarily close to each other'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'In a Cauchy sequence, the distance between successive terms becomes arbitrarily small.',
   },
@@ -34,12 +34,12 @@ export const section17Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Cauchy\'s integral formula relates the value of a function inside a contour to:',
     options: [
-      'Its derivative',
       'An integral over the contour',
+      'Its derivative',
       'Its Taylor series',
-      'Its zeros',
+      'Its zeros'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Cauchy\'s integral formula expresses $f(z_0)$ as a contour integral, a central result in complex analysis.',
   },
@@ -49,11 +49,11 @@ export const section17Questions: QuizQuestion[] = [
     question: 'The Cauchy-Schwarz inequality relates:',
     options: [
       'Areas of triangles',
-      'Sums and products',
       'Inner products and norms',
-      'Derivatives and integrals',
+      'Sums and products',
+      'Derivatives and integrals'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The Cauchy-Schwarz inequality states $|\\langle u,v \\rangle| \\leq \\|u\\| \\cdot \\|v\\|$.',
   },
@@ -64,10 +64,10 @@ export const section17Questions: QuizQuestion[] = [
     options: [
       'A revolutionary',
       'Apolitical',
-      'A republican',
       'A royalist who went into exile',
+      'A republican'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Cauchy was a devout royalist who went into voluntary exile when Charles X was overthrown.',
   },

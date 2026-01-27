@@ -6,12 +6,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which notation for calculus do we primarily use today, Newton\'s or Leibniz\'s?',
     options: [
-      'Leibniz\\\\'s $\\frac{dy}{dx}$ notation',
-      'Newton\\\\'s dot notation exclusively',
+      'Newton\'s dot notation exclusively',
       'A completely different notation',
-      'Both equally',
+      'Leibniz\'s $\\frac{dy}{dx}$ notation',
+      'Both equally'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Leibniz\'s notation ($\\frac{dy}{dx}$, $\\int$) became standard because it better suggests the operations being performed.',
   },
@@ -20,26 +20,10 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What symbol did Leibniz introduce for integration?',
     options: [
-      '$\\Sigma
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Leibniz introduced the integral sign $\\int$, an elongated S for "summa" (sum).',
-  },
-      '$\\partial
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Leibniz introduced the integral sign $\\int$, an elongated S for "summa" (sum).',
-  },
-      '$\\int
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Leibniz introduced the integral sign $\\int$, an elongated S for "summa" (sum).',
-  },
-      '$\\Delta
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Leibniz introduced the integral sign $\\int$, an elongated S for "summa" (sum).',
-  },
+      '$\\Sigma$',
+      '$\\partial$',
+      '$\\Delta$',
+      '$\\int$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -50,12 +34,12 @@ export const section08Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Leibniz dreamed of creating a universal language of logic called:',
     options: [
-      'Mathesis universalis',
       'Characteristica universalis',
+      'Mathesis universalis',
       'Lingua mathematica',
-      'Ars combinatoria',
+      'Ars combinatoria'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The characteristica universalis was Leibniz\'s vision of a universal formal language for all reasoning.',
   },
@@ -65,11 +49,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'What number system did Leibniz develop that is fundamental to computers?',
     options: [
       'Decimal',
-      'Hexadecimal',
-      'Octal',
       'Binary',
+      'Hexadecimal',
+      'Octal'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Leibniz developed the binary (base-2) number system, using only 0 and 1, now fundamental to computing.',
   },
@@ -81,7 +65,7 @@ export const section08Questions: QuizQuestion[] = [
       'The discovery of gravity',
       'The laws of motion',
       'The invention of calculus',
-      'The theory of light',
+      'The theory of light'
     ],
     correctIndex: 2,
     difficulty: 'easy',

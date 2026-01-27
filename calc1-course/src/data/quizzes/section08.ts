@@ -21,11 +21,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'A step function on $[a, b]$ is:',
     options: [
       'A continuous function',
-      'A linear function',
-      'A polynomial',
       'A function constant on each subinterval of some partition',
+      'A linear function',
+      'A polynomial'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A step function has a constant value on each subinterval of some partition.',
   },
@@ -44,11 +44,11 @@ export const section08Questions: QuizQuestion[] = [
     question: 'If $s$ and $t$ are step functions, then $s + t$ is:',
     options: [
       'Not always a step function',
-      'Always a step function',
       'A polynomial',
-      'Undefined',
+      'Always a step function',
+      'Undefined'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The sum of step functions is a step function (use the common refinement of their partitions).',
   },
@@ -67,17 +67,9 @@ export const section08Questions: QuizQuestion[] = [
     question: 'A refinement of partition $P$ is:',
     options: [
       'A partition with fewer points',
-      'An approximation of $P
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'A refinement adds more points to the partition.',
-  },
-      'A partition containing all points of $P$ (and possibly more)',
-      'The same as $P
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'A refinement adds more points to the partition.',
-  },
+      'An approximation of $P$',
+      'The same as $P$',
+      'A partition containing all points of $P$ (and possibly more)'
     ],
     correctIndex: 3,
     difficulty: 'medium',

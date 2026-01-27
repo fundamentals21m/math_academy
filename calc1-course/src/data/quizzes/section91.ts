@@ -7,11 +7,11 @@ export const section91Questions: QuizQuestion[] = [
     question: 'The dimension of a vector space is:',
     options: [
       'The number of vectors in the space',
-      'The number of vectors in any basis',
       'The largest coordinate',
-      'Always infinite',
+      'The number of vectors in any basis',
+      'Always infinite'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Dimension = number of vectors in a basis.',
   },
@@ -20,12 +20,12 @@ export const section91Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Any two bases of a finite-dimensional space have:',
     options: [
-      'The same number of vectors',
       'Different numbers of vectors',
       'Orthogonal vectors',
       'At least one common vector',
+      'The same number of vectors'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'All bases have the same cardinality (the dimension).',
   },
@@ -43,12 +43,12 @@ export const section91Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In an $n$-dimensional space, any set of $n+1$ vectors is:',
     options: [
+      'Linearly dependent',
       'Linearly independent',
       'A basis',
-      'Orthogonal',
-      'Linearly dependent',
+      'Orthogonal'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'More than $n$ vectors in $n$-dimensional space must be dependent.',
   },
@@ -57,12 +57,12 @@ export const section91Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A linearly independent set of $n$ vectors in $\\mathbb{R}^n$ is:',
     options: [
-      'A basis',
       'Not a basis',
+      'A basis',
       'Dependent',
-      'Empty',
+      'Empty'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$n$ independent vectors in $n$-dim space form a basis.',
   },
@@ -74,7 +74,7 @@ export const section91Questions: QuizQuestion[] = [
       'Adding more vectors',
       'Scaling vectors',
       'Removing dependent vectors',
-      'Orthogonalizing',
+      'Orthogonalizing'
     ],
     correctIndex: 2,
     difficulty: 'medium',

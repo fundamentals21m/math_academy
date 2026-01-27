@@ -6,26 +6,10 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The volume of a solid of revolution using the disk method is:',
     options: [
-      '$\\int_a^b \\pi[f(x)]^2\\,dx
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Disk method: $V = \\int_a^b \\pi[f(x)]^2\\,dx$ (sum of disk volumes).',
-  },
-      '$\\int_a^b f(x)\\,dx
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Disk method: $V = \\int_a^b \\pi[f(x)]^2\\,dx$ (sum of disk volumes).',
-  },
-      '$\\int_a^b 2\\pi f(x)\\,dx
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Disk method: $V = \\int_a^b \\pi[f(x)]^2\\,dx$ (sum of disk volumes).',
-  },
-      '$\\int_a^b [f(x)]^2\\,dx
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Disk method: $V = \\int_a^b \\pi[f(x)]^2\\,dx$ (sum of disk volumes).',
-  },
+      '$\\int_a^b f(x)\\,dx$',
+      '$\\int_a^b 2\\pi f(x)\\,dx$',
+      '$\\int_a^b \\pi[f(x)]^2\\,dx$',
+      '$\\int_a^b [f(x)]^2\\,dx$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -36,26 +20,10 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When rotating $y = f(x)$ about the $x$-axis, each disk has radius:',
     options: [
-      '$x
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The radius of each disk is the $y$-value, which is $f(x)$.',
-  },
-      '$dx
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The radius of each disk is the $y$-value, which is $f(x)$.',
-  },
-      '$f(x)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The radius of each disk is the $y$-value, which is $f(x)$.',
-  },
-      '$\\pi f(x)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The radius of each disk is the $y$-value, which is $f(x)$.',
-  },
+      '$x$',
+      '$dx$',
+      '$\\pi f(x)$',
+      '$f(x)$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -78,7 +46,7 @@ export const section16Questions: QuizQuestion[] = [
       'The region has a hole (inner and outer radius)',
       'The region has no hole',
       'Rotating about the $y$-axis only',
-      'The function is negative',
+      'The function is negative'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -89,26 +57,10 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The shell method formula when rotating about the $y$-axis is:',
     options: [
-      '$\\int_a^b \\pi[f(x)]^2\\,dx
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Shell method: $V = \\int_a^b 2\\pi x f(x)\\,dx$ (circumference × height × thickness).',
-  },
-      '$\\int_a^b f(x)\\,dx
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Shell method: $V = \\int_a^b 2\\pi x f(x)\\,dx$ (circumference × height × thickness).',
-  },
-      '$\\int_a^b x\\,dx
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Shell method: $V = \\int_a^b 2\\pi x f(x)\\,dx$ (circumference × height × thickness).',
-  },
-      '$\\int_a^b 2\\pi x f(x)\\,dx
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Shell method: $V = \\int_a^b 2\\pi x f(x)\\,dx$ (circumference × height × thickness).',
-  },
+      '$\\int_a^b \\pi[f(x)]^2\\,dx$',
+      '$\\int_a^b 2\\pi x f(x)\\,dx$',
+      '$\\int_a^b f(x)\\,dx$',
+      '$\\int_a^b x\\,dx$'
     ],
     correctIndex: 1,
     difficulty: 'hard',

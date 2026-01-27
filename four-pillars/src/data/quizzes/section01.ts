@@ -7,9 +7,9 @@ export const section01Questions: QuizQuestion[] = [
     question: 'To construct an equilateral triangle on segment AB, Euclid uses:',
     options: [
       'A protractor to measure 60° angles',
-      'Parallel lines',
       'A single circle centered at the midpoint',
-      'Two circles centered at A and B with radius AB',
+      'Parallel lines',
+      'Two circles centered at A and B with radius AB'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why are all three sides of the constructed triangle equal?',
     options: [
-      'The circles are congruent',
-      'Because we used a ruler to measure',
       'CA and CB are radii of circles with radius AB',
-      'The construction is approximate',
+      'Because we used a ruler to measure',
+      'The circles are congruent',
+      'The construction is approximate'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'CA = AB (radius of first circle), CB = AB (radius of second circle), so CA = AB = CB.',
   },
@@ -36,8 +36,8 @@ export const section01Questions: QuizQuestion[] = [
     options: [
       'Sides are all different lengths',
       'Equal sides meet at equal angles',
-      'Vertices lie on a straight line',
       'Angles are all right angles',
+      'Vertices lie on a straight line'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The regular 17-gon was first constructed by:',
     options: [
+      'Euclid',
       'Archimedes',
       'Gauss',
-      'Euclid',
-      'Newton',
+      'Newton'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Carl Friedrich Gauss constructed the regular 17-gon in 1796 at age 19.',
   },
@@ -62,12 +62,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A gap in Euclid\'s equilateral triangle proof is:',
     options: [
-      'He assumed without proof that the two circles intersect',
-      'He didn\\\'t prove AB has positive length',
-      'The compass settings were wrong',
+      'He didn\'t prove AB has positive length',
       'He used a protractor',
+      'The compass settings were wrong',
+      'He assumed without proof that the two circles intersect'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Euclid provides no axiom guaranteeing that two circles positioned this way must intersect.',
   },
@@ -76,24 +76,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A prime $p$ for which the regular $p$-gon is constructible must have the form:',
     options: [
-      '$p = 2^n + 1
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'By the Gauss-Wantzel theorem, only Fermat primes (3, 5, 17, 257, 65537) give constructible p-gons.',
-  },
-      '$p = 2^n
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'By the Gauss-Wantzel theorem, only Fermat primes (3, 5, 17, 257, 65537) give constructible p-gons.',
-  },
-      '$p = n^2 + 1
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'By the Gauss-Wantzel theorem, only Fermat primes (3, 5, 17, 257, 65537) give constructible p-gons.',
-  },
       '$p = 2^{2^m} + 1$ (Fermat prime)',
+      '$p = 2^n$',
+      '$p = 2^n + 1$',
+      '$p = n^2 + 1$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'By the Gauss-Wantzel theorem, only Fermat primes (3, 5, 17, 257, 65537) give constructible p-gons.',
   },

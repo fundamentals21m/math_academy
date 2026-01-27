@@ -7,21 +7,9 @@ export const section06Questions: QuizQuestion[] = [
     question: 'A function $f: A \\to B$ is defined by:',
     options: [
       'A set of ordered pairs',
-      'A rule assigning each element of $A$ to exactly one element of $B
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'A function assigns each element of the domain to exactly one element of the codomain.',
-  },
-      'Any relation between $A$ and $B
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'A function assigns each element of the domain to exactly one element of the codomain.',
-  },
-      'A bijection from $A$ to $B
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'A function assigns each element of the domain to exactly one element of the codomain.',
-  },
+      'Any relation between $A$ and $B$',
+      'A rule assigning each element of $A$ to exactly one element of $B$',
+      'A bijection from $A$ to $B$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -32,22 +20,10 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the domain of $f(x) = \\sqrt{x - 2}$?',
     options: [
-      '$x \\geq 2
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'We need $x - 2 \\geq 0$, so $x \\geq 2$.',
-  },
       'All real numbers',
-      '$x \\geq 0
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'We need $x - 2 \\geq 0$, so $x \\geq 2$.',
-  },
-      '$x > 2
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'We need $x - 2 \\geq 0$, so $x \\geq 2$.',
-  },
+      '$x \\geq 0$',
+      '$x > 2$',
+      '$x \\geq 2$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -58,26 +34,10 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Cartesian coordinates, the point $(3, 4)$ has distance from the origin equal to:',
     options: [
-      '$7
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Distance $= \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.',
-  },
-      '$12
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Distance $= \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.',
-  },
-      '$\\sqrt{7}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Distance $= \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.',
-  },
-      '$5
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Distance $= \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.',
-  },
+      '$5$',
+      '$7$',
+      '$12$',
+      '$\\sqrt{7}$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -89,21 +49,9 @@ export const section06Questions: QuizQuestion[] = [
     question: 'What is the range of $f(x) = x^2$?',
     options: [
       'All real numbers',
-      '$y > 0
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Since $x^2 \\geq 0$ for all real $x$, the range is $[0, \\infty)$.',
-  },
-      '$y \\geq 0
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Since $x^2 \\geq 0$ for all real $x$, the range is $[0, \\infty)$.',
-  },
-      '$y \\leq 0
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Since $x^2 \\geq 0$ for all real $x$, the range is $[0, \\infty)$.',
-  },
+      '$y \\geq 0$',
+      '$y > 0$',
+      '$y \\leq 0$'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -123,22 +71,10 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The graph of $y = x^2 - 4$ intersects the $x$-axis at:',
     options: [
-      '$x = 0
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Setting $x^2 - 4 = 0$ gives $x^2 = 4$, so $x = \\pm 2$.',
-  },
-      '$x = \\pm 2
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Setting $x^2 - 4 = 0$ gives $x^2 = 4$, so $x = \\pm 2$.',
-  },
+      '$x = 0$',
       '$x = 2$ only',
-      '$x = 4
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Setting $x^2 - 4 = 0$ gives $x^2 = 4$, so $x = \\pm 2$.',
-  },
+      '$x = \\pm 2$',
+      '$x = 4$'
     ],
     correctIndex: 2,
     difficulty: 'medium',

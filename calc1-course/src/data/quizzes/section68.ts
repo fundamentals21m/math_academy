@@ -6,22 +6,10 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An improper integral with infinite limit is:',
     options: [
-      '$\\int_a^b f(x)\\,dx
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Improper: one or both limits infinite, or integrand unbounded.',
-  },
+      '$\\int_a^b f(x)\\,dx$',
       'Any definite integral',
-      '$\\int f(x)\\,dx
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Improper: one or both limits infinite, or integrand unbounded.',
-  },
-      '$\\int_a^{\\infty} f(x)\\,dx
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Improper: one or both limits infinite, or integrand unbounded.',
-  },
+      '$\\int_a^{\\infty} f(x)\\,dx$',
+      '$\\int f(x)\\,dx$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -32,22 +20,10 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int_a^{\\infty} f(x)\\,dx$ is defined as:',
     options: [
-      '$\\lim_{b \\to \\infty} \\int_a^b f(x)\\,dx
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Improper integrals are limits of proper integrals.',
-  },
       'Cannot be defined',
-      '$\\int_a^{\\infty} f\\'(x)\\,dx
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Improper integrals are limits of proper integrals.',
-  },
-      '$f(\\infty) - f(a)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Improper integrals are limits of proper integrals.',
-  },
+      '$\\int_a^{\\infty} f\'(x)\\,dx$',
+      '$f(\\infty) - f(a)$',
+      '$\\lim_{b \\to \\infty} \\int_a^b f(x)\\,dx$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -67,18 +43,10 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int_1^{\\infty} \\frac{1}{x}\\,dx$:',
     options: [
-      'Converges to $\\ln 2
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$\\int_1^b \\frac{dx}{x} = \\ln b \\to \\infty$. Diverges.',
-  },
-      'Converges to 1',
       'Diverges',
-      'Converges to $e
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$\\int_1^b \\frac{dx}{x} = \\ln b \\to \\infty$. Diverges.',
-  },
+      'Converges to $\\ln 2$',
+      'Converges to 1',
+      'Converges to $e$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -89,26 +57,10 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\int_1^{\\infty} \\frac{1}{x^p}\\,dx$ converges when:',
     options: [
-      '$p > 1
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Like the $p$-series, converges iff $p > 1$.',
-  },
-      '$p > 0
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Like the $p$-series, converges iff $p > 1$.',
-  },
-      '$p \\geq 1
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Like the $p$-series, converges iff $p > 1$.',
-  },
-      '$p < 1
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Like the $p$-series, converges iff $p > 1$.',
-  },
+      '$p > 0$',
+      '$p > 1$',
+      '$p \\geq 1$',
+      '$p < 1$'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -119,18 +71,10 @@ export const section68Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'An integral $\\int_0^1 \\frac{1}{\\sqrt{x}}\\,dx$ is improper because:',
     options: [
-      'Upper limit is $\\infty
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: '$1/\\sqrt{x} \\to \\infty$ as $x \\to 0^+$. This converges to 2.',
-  },
-      'Integrand is unbounded at $x = 0
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$1/\\sqrt{x} \\to \\infty$ as $x \\to 0^+$. This converges to 2.',
-  },
+      'Upper limit is $\\infty$',
       'Integrand is negative',
-      'It is not improper',
+      'Integrand is unbounded at $x = 0$',
+      'It is not improper'
     ],
     correctIndex: 2,
     difficulty: 'medium',

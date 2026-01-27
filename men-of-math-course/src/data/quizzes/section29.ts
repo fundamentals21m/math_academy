@@ -6,26 +6,10 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Riemann Hypothesis concerns the zeros of which function?',
     options: [
-      'The exponential function $e^x
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The Riemann Hypothesis states that all non-trivial zeros of the Riemann zeta function $\\zeta(s)$ lie on the critical line $\\text{Re}(s) = \\frac{1}{2}$.',
-  },
-      'The gamma function $\\Gamma(s)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The Riemann Hypothesis states that all non-trivial zeros of the Riemann zeta function $\\zeta(s)$ lie on the critical line $\\text{Re}(s) = \\frac{1}{2}$.',
-  },
-      'The Bessel function $J_n(x)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The Riemann Hypothesis states that all non-trivial zeros of the Riemann zeta function $\\zeta(s)$ lie on the critical line $\\text{Re}(s) = \\frac{1}{2}$.',
-  },
-      'The Riemann zeta function $\\zeta(s)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The Riemann Hypothesis states that all non-trivial zeros of the Riemann zeta function $\\zeta(s)$ lie on the critical line $\\text{Re}(s) = \\frac{1}{2}$.',
-  },
+      'The exponential function $e^x$',
+      'The gamma function $\\Gamma(s)$',
+      'The Riemann zeta function $\\zeta(s)$',
+      'The Bessel function $J_n(x)$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -36,26 +20,10 @@ export const section29Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the value of the Riemann zeta function $\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2}$?',
     options: [
-      '$\\frac{\\pi}{4}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Euler proved that $\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$, solving the Basel problem.',
-  },
-      '$\\ln 2
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Euler proved that $\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$, solving the Basel problem.',
-  },
-      '$\\frac{\\pi^2}{6}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Euler proved that $\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$, solving the Basel problem.',
-  },
-      '$e
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Euler proved that $\\zeta(2) = \\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$, solving the Basel problem.',
-  },
+      '$\\frac{\\pi}{4}$',
+      '$\\ln 2$',
+      '$e$',
+      '$\\frac{\\pi^2}{6}$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -69,7 +37,7 @@ export const section29Questions: QuizQuestion[] = [
       'The metric tensor',
       'The number of dimensions',
       'The coordinate system',
-      'The boundary conditions',
+      'The boundary conditions'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -81,11 +49,11 @@ export const section29Questions: QuizQuestion[] = [
     question: 'The Riemann Hypothesis is one of the Millennium Prize Problems. What is the prize for solving it?',
     options: [
       '$100,000',
-      '$500,000',
       '$1,000,000',
-      '$10,000,000',
+      '$500,000',
+      '$10,000,000'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Each of the seven Millennium Prize Problems carries a prize of $1,000,000 from the Clay Mathematics Institute.',
   },
@@ -95,13 +63,9 @@ export const section29Questions: QuizQuestion[] = [
     question: 'What does the critical line refer to in the context of the Riemann Hypothesis?',
     options: [
       'The real axis',
-      'The line $\\text{Re}(s) = \\frac{1}{2}
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'The critical line is $\\text{Re}(s) = \\frac{1}{2}$ in the complex plane, where all non-trivial zeros of $\\zeta(s)$ are conjectured to lie.',
-  },
       'The imaginary axis',
-      'The unit circle',
+      'The line $\\text{Re}(s) = \\frac{1}{2}$',
+      'The unit circle'
     ],
     correctIndex: 2,
     difficulty: 'medium',

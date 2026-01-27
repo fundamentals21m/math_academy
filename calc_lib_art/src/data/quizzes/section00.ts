@@ -6,12 +6,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What are the two fundamental operations of calculus?',
     options: [
+      'Differentiation and integration',
       'Addition and subtraction',
       'Multiplication and division',
-      'Exponentiation and logarithms',
-      'Differentiation and integration',
+      'Exponentiation and logarithms'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The two pillars of calculus are differentiation (measuring rates of change) and integration (measuring accumulation).',
   },
@@ -21,11 +21,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'What does differentiation measure?',
     options: [
       'Total area under a curve',
-      'The average of a function',
       'Instantaneous rate of change',
-      'The maximum value of a function',
+      'The average of a function',
+      'The maximum value of a function'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Differentiation measures instantaneous rate of change—how fast something is changing at a specific moment.',
   },
@@ -34,12 +34,12 @@ export const section00Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does integration compute?',
     options: [
-      'Accumulated totals (such as area under a curve)',
       'The slope at a point',
       'The speed of an object',
-      'The derivative of a function',
+      'Accumulated totals (such as area under a curve)',
+      'The derivative of a function'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Integration computes accumulated totals—adding up infinitely many infinitesimal pieces to find areas, volumes, and other quantities.',
   },
@@ -49,11 +49,11 @@ export const section00Questions: QuizQuestion[] = [
     question: 'The word "calculus" comes from the Latin word for:',
     options: [
       'Infinite',
-      'Small stone (used for counting)',
       'Change',
       'Mathematics',
+      'Small stone (used for counting)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: '"Calculus" comes from the Latin word for a small stone or pebble, which were used for counting on an abacus.',
   },
@@ -73,7 +73,7 @@ export const section00Questions: QuizQuestion[] = [
       'Determining prime numbers',
       'Calculating the orbit of a planet',
       'Finding the optimal shape for a bridge',
-      'Modeling population growth',
+      'Modeling population growth'
     ],
     correctIndex: 0,
     difficulty: 'medium',

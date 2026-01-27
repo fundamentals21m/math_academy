@@ -7,11 +7,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Carl Gustav Jacob Jacobi is best known for his work on:',
     options: [
       'Number theory',
-      'Geometry',
-      'Statistics',
       'Elliptic functions',
+      'Geometry',
+      'Statistics'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Jacobi made fundamental contributions to the theory of elliptic functions.',
   },
@@ -21,11 +21,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'The Jacobian matrix consists of:',
     options: [
       'Second derivatives',
-      'First partial derivatives',
       'Integrals',
-      'Eigenvalues',
+      'First partial derivatives',
+      'Eigenvalues'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Jacobian is the matrix of all first-order partial derivatives of a vector-valued function.',
   },
@@ -35,11 +35,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Jacobi\'s identity is a fundamental relation in:',
     options: [
       'Linear algebra',
-      'Lie algebras',
       'Topology',
       'Number theory',
+      'Lie algebras'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Jacobi\'s identity $[x,[y,z]] + [y,[z,x]] + [z,[x,y]] = 0$ is fundamental in Lie algebra theory.',
   },
@@ -50,8 +50,8 @@ export const section20Questions: QuizQuestion[] = [
     options: [
       'The Hamilton-Jacobi equation',
       'The Lagrangian',
-      'Newton\\\\\'s laws',
-      'Special relativity',
+      'Newton\'s laws',
+      'Special relativity'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -63,11 +63,11 @@ export const section20Questions: QuizQuestion[] = [
     question: 'Jacobi competed with which mathematician in developing elliptic function theory?',
     options: [
       'Gauss',
-      'Cauchy',
       'Abel',
-      'Euler',
+      'Cauchy',
+      'Euler'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Jacobi and Abel developed elliptic function theory independently and nearly simultaneously.',
   },

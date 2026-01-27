@@ -7,11 +7,11 @@ export const section96Questions: QuizQuestion[] = [
     question: 'The nullity of $T$ is:',
     options: [
       'dim(range($T$))',
-      'dim(kernel($T$))',
       'dim($V$)',
-      '0 always',
+      'dim(kernel($T$))',
+      '0 always'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Nullity = dimension of the kernel.',
   },
@@ -22,10 +22,10 @@ export const section96Questions: QuizQuestion[] = [
     options: [
       'dim(kernel($T$))',
       'Always equal to nullity',
-      'dim(range($T$))',
       'dim($V$) - dim($W$)',
+      'dim(range($T$))'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Rank = dimension of the range (image).',
   },
@@ -34,12 +34,12 @@ export const section96Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Rank-Nullity Theorem states:',
     options: [
+      'rank + nullity = dim(domain)',
       'rank = nullity',
       'rank × nullity = dim(domain)',
-      'rank - nullity = 0',
-      'rank + nullity = dim(domain)',
+      'rank - nullity = 0'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Rank-Nullity: rank($T$) + nullity($T$) = dim($V$).',
   },
@@ -57,12 +57,12 @@ export const section96Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $T: \\mathbb{R}^4 \\to \\mathbb{R}^6$, the maximum possible rank is:',
     options: [
-      '4',
       '6',
+      '4',
       '10',
-      '2',
+      '2'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Rank $\\leq$ min(dim domain, dim codomain) = min(4, 6) = 4.',
   },
@@ -71,12 +71,12 @@ export const section96Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$T$ is invertible if and only if:',
     options: [
-      'rank = dim(domain) = dim(codomain)',
       'rank = 0',
       'nullity = dim(domain)',
-      'nullity > 0',
+      'rank = dim(domain) = dim(codomain)',
+      'nullity > 0'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Invertible: bijective, which requires full rank and matching dimensions.',
   },

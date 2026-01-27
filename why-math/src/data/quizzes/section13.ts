@@ -6,12 +6,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two sets have the same cardinality if:',
     options: [
-      'They can be put into one-to-one correspondence',
       'They have the same number of elements (for finite sets only)',
       'They have no elements in common',
       'One is a subset of the other',
+      'They can be put into one-to-one correspondence'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Cardinality is defined by one-to-one correspondence, which works for both finite and infinite sets.',
   },
@@ -20,12 +20,12 @@ export const section13Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A set is countably infinite if:',
     options: [
-      'It has finitely many elements',
       'It can be put into one-to-one correspondence with the positive integers',
+      'It has finitely many elements',
       'It cannot be listed',
-      'It has more elements than the real numbers',
+      'It has more elements than the real numbers'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Countably infinite means the elements can be "listed" in a sequence that corresponds to 1, 2, 3, ...',
   },
@@ -35,11 +35,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'Which of the following sets is countable?',
     options: [
       'The real numbers between 0 and 1',
-      'All irrational numbers',
-      'The set of all real numbers',
       'The set of all rational numbers',
+      'All irrational numbers',
+      'The set of all real numbers'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The rationals are countable (can be listed using the diagonal method). The reals and irrationals are uncountable.',
   },
@@ -57,13 +57,9 @@ export const section13Questions: QuizQuestion[] = [
     question: 'The set of all integers $\\mathbb{Z} = \\{..., -2, -1, 0, 1, 2, ...\\}$ is:',
     options: [
       'Uncountable because it extends infinitely in both directions',
-      'Countable because it can be listed as $0, 1, -1, 2, -2, 3, -3, ...
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'By alternating between positive and negative integers, we can list all integers: $0, 1, -1, 2, -2, ...$',
-  },
       'Larger than the natural numbers',
-      'Not comparable to the natural numbers',
+      'Countable because it can be listed as $0, 1, -1, 2, -2, 3, -3, ...$',
+      'Not comparable to the natural numbers'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -77,7 +73,7 @@ export const section13Questions: QuizQuestion[] = [
       'The rationals are countable',
       'The integers are countable',
       'All infinite sets have the same cardinality',
-      'The real numbers in $[0, 1)$ are uncountable',
+      'The real numbers in $[0, 1)$ are uncountable'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -91,7 +87,7 @@ export const section13Questions: QuizQuestion[] = [
       'There are different sizes of infinity',
       'There is only one size of infinity',
       'All infinities are the same size',
-      'Infinity cannot be compared',
+      'Infinity cannot be compared'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -103,11 +99,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'Which has larger cardinality: the natural numbers $\\mathbb{N}$ or the real numbers $\\mathbb{R}$?',
     options: [
       'They have the same cardinality',
-      '$\\mathbb{N}$ is larger',
       '$\\mathbb{R}$ is larger',
-      'They cannot be compared',
+      '$\\mathbb{N}$ is larger',
+      'They cannot be compared'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The reals $\\mathbb{R}$ are uncountable (cardinality $\\aleph_1$), while $\\mathbb{N}$ is countable (cardinality $\\aleph_0$). Since $\\aleph_0 < \\aleph_1$, $\\mathbb{R}$ is larger.',
   },
@@ -119,7 +115,7 @@ export const section13Questions: QuizQuestion[] = [
       'There are more rationals than irrationals',
       'Irrationals are countable',
       'Between any two rationals there is an irrational, yet there are far more irrationals',
-      'Rationals and irrationals have the same cardinality',
+      'Rationals and irrationals have the same cardinality'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -131,11 +127,11 @@ export const section13Questions: QuizQuestion[] = [
     question: 'The interval $(0, 1)$ and the entire real line $(-\\infty, \\infty)$ have:',
     options: [
       'Different cardinalities because $(-\\infty, \\infty)$ is infinitely longer',
-      'The same cardinality because there exists a one-to-one correspondence between them',
       'The same cardinality because both are uncountable',
       'Incomparable cardinalities',
+      'The same cardinality because there exists a one-to-one correspondence between them'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Using geometric constructions (similar triangles), we can create a one-to-one correspondence between $(0,1)$ and $(-\\infty, \\infty)$, so they have the same cardinality.',
   },

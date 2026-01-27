@@ -7,11 +7,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'What does the derivative represent geometrically?',
     options: [
       'The area under the curve',
-      'The length of the curve',
-      'The distance from the origin',
       'The slope of the tangent line at a point',
+      'The length of the curve',
+      'The distance from the origin'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The derivative at a point gives the slope of the line tangent to the curve at that point.',
   },
@@ -21,11 +21,11 @@ export const section10Questions: QuizQuestion[] = [
     question: 'A tangent line to a curve at a point:',
     options: [
       'Crosses the curve at that point',
-      'Touches the curve at exactly one point and has the same slope as the curve there',
       'Is always horizontal',
-      'Is always vertical',
+      'Touches the curve at exactly one point and has the same slope as the curve there',
+      'Is always vertical'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The tangent line touches the curve at one point and shares the curve\'s slope at that point.',
   },
@@ -34,26 +34,10 @@ export const section10Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The equation of the tangent line at $(a, f(a))$ is:',
     options: [
-      '$y = f(a) + f\\'(a)(x - a)
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Using point-slope form with slope $f\'(a)$ at point $(a, f(a))$: $y = f(a) + f\'(a)(x - a)$.',
-  },
-      '$y = f(a) + f\\'(a)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Using point-slope form with slope $f\'(a)$ at point $(a, f(a))$: $y = f(a) + f\'(a)(x - a)$.',
-  },
-      '$y = a + f(a)(x - a)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Using point-slope form with slope $f\'(a)$ at point $(a, f(a))$: $y = f(a) + f\'(a)(x - a)$.',
-  },
-      '$y = f\\'(a) \\cdot x
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Using point-slope form with slope $f\'(a)$ at point $(a, f(a))$: $y = f(a) + f\'(a)(x - a)$.',
-  },
+      '$y = f(a) + f\'(a)$',
+      '$y = a + f(a)(x - a)$',
+      '$y = f\'(a) \\cdot x$',
+      '$y = f(a) + f\'(a)(x - a)$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -76,7 +60,7 @@ export const section10Questions: QuizQuestion[] = [
       'Perpendicular to the tangent line',
       'The same as the tangent line',
       'Parallel to the $x$-axis',
-      'Always passes through the origin',
+      'Always passes through the origin'
     ],
     correctIndex: 0,
     difficulty: 'medium',

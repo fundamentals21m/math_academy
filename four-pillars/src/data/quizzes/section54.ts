@@ -7,11 +7,11 @@ export const section54Questions: QuizQuestion[] = [
     question: 'The regular tetrahedron has how many rotational symmetries?',
     options: [
       '4',
-      '24',
-      '8',
       '12',
+      '8',
+      '24'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The tetrahedron has 12 rotations: 1 identity, 8 face rotations, and 3 edge rotations.',
   },
@@ -20,28 +20,12 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The rotation group of the tetrahedron is isomorphic to:',
     options: [
-      'The symmetric group $S_4
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Rotations give even permutations of the 4 vertices, so the group is A₄.',
-  },
-      'The alternating group $A_4
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Rotations give even permutations of the 4 vertices, so the group is A₄.',
-  },
-      'The cyclic group $\\mathbb{Z}_{12}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Rotations give even permutations of the 4 vertices, so the group is A₄.',
-  },
-      'The dihedral group $D_{12}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Rotations give even permutations of the 4 vertices, so the group is A₄.',
-  },
+      'The cyclic group $\\mathbb{Z}_{12}$',
+      'The symmetric group $S_4$',
+      'The alternating group $A_4$',
+      'The dihedral group $D_{12}$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Rotations give even permutations of the 4 vertices, so the group is A₄.',
   },
@@ -51,11 +35,11 @@ export const section54Questions: QuizQuestion[] = [
     question: 'The 24 unit quaternions for the tetrahedron include:',
     options: [
       'Only ±1, ±i, ±j, ±k',
-      '±1, ±i, ±j, ±k and 16 quaternions of the form ½(±1 ± i ± j ± k)',
-      '48 quaternions total',
       'Only quaternions with integer coefficients',
+      '48 quaternions total',
+      '±1, ±i, ±j, ±k and 16 quaternions of the form ½(±1 ± i ± j ± k)'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The 24 quaternions are: 8 of the form ±1, ±i, ±j, ±k, and 16 of the form ½(±1 ± i ± j ± k) with even sign changes.',
   },
@@ -64,12 +48,12 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The 24 unit quaternions for the tetrahedron form the vertices of:',
     options: [
-      'A 4D tetrahedron',
-      'A 4D cube',
       'The 24-cell',
-      'The 600-cell',
+      'A 4D cube',
+      'A 4D tetrahedron',
+      'The 600-cell'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The 24 quaternions are the vertices of the 24-cell, a regular 4D polytope.',
   },
@@ -80,8 +64,8 @@ export const section54Questions: QuizQuestion[] = [
     options: [
       '12',
       '24',
-      '60',
       '48',
+      '60'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -92,12 +76,12 @@ export const section54Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cube and octahedron have the same rotation group because they are:',
     options: [
-      'Dual polyhedra',
-      'Similar',
       'Congruent',
-      'Both have 6 faces',
+      'Similar',
+      'Dual polyhedra',
+      'Both have 6 faces'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Dual polyhedra have vertices corresponding to face centers, so their symmetry groups are identical.',
   },

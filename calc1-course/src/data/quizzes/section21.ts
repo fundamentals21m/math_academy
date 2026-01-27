@@ -9,7 +9,7 @@ export const section21Questions: QuizQuestion[] = [
       'Continuous wherever it is defined',
       'Always discontinuous',
       'Only continuous at integers',
-      'Never defined',
+      'Never defined'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -20,26 +20,10 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The composition $(f \\circ g)(x)$ means:',
     options: [
-      '$f(x) \\cdot g(x)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$(f \\circ g)(x) = f(g(x))$: apply $g$ first, then $f$.',
-  },
-      '$f(x) + g(x)
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$(f \\circ g)(x) = f(g(x))$: apply $g$ first, then $f$.',
-  },
-      '$g(f(x))
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$(f \\circ g)(x) = f(g(x))$: apply $g$ first, then $f$.',
-  },
-      '$f(g(x))
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: '$(f \\circ g)(x) = f(g(x))$: apply $g$ first, then $f$.',
-  },
+      '$f(x) \\cdot g(x)$',
+      '$f(g(x))$',
+      '$f(x) + g(x)$',
+      '$g(f(x))$'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -59,22 +43,10 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For $\\lim_{x \\to a} f(g(x))$, if $g$ is continuous at $a$ and $f$ is continuous at $g(a)$, the limit is:',
     options: [
-      '$f(a)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'By continuity of composition: $\\lim f(g(x)) = f(g(a))$.',
-  },
-      '$g(a)
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'By continuity of composition: $\\lim f(g(x)) = f(g(a))$.',
-  },
-      'Does not exist',
-      '$f(g(a))
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'By continuity of composition: $\\lim f(g(x)) = f(g(a))$.',
-  },
+      '$f(a)$',
+      '$g(a)$',
+      '$f(g(a))$',
+      'Does not exist'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -94,22 +66,10 @@ export const section21Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The domain of $f \\circ g$ consists of all $x$ such that:',
     options: [
-      '$x$ is in the domain of $g$ and $g(x)$ is in the domain of $f
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'We need $g(x)$ to be defined, and then $f$ must be defined at that value.',
-  },
-      '$x$ is in the domain of $f
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'We need $g(x)$ to be defined, and then $f$ must be defined at that value.',
-  },
-      '$g(x) = f(x)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'We need $g(x)$ to be defined, and then $f$ must be defined at that value.',
-  },
+      '$x$ is in the domain of $f$',
+      '$g(x) = f(x)$',
       '$x$ is any real number',
+      '$x$ is in the domain of $g$ and $g(x)$ is in the domain of $f$'
     ],
     correctIndex: 3,
     difficulty: 'medium',

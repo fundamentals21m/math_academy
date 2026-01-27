@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section06Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The Poisson bracket of two functions $f$ and $g$ is defined as:',
+    options: [
+      '$\\{f, g\\} = \\sum_i \\left( \\frac{\\partial f}{\\partial q^i}\\frac{\\partial g}{\\partial p_i} - \\frac{\\partial f}{\\partial p_i}\\frac{\\partial g}{\\partial q^i} \\right)$',
+      '$\\{f, g\\} = \\sum_i \\left( \\frac{\\partial f}{\\partial q^i}\\frac{\\partial g}{\\partial p_i} + \\frac{\\partial f}{\\partial p_i}\\frac{\\partial g}{\\partial q^i} \\right)$',
+      '$\\{f, g\\} = \\frac{\\partial f}{\\partial q}\\frac{\\partial g}{\\partial p}$',
+      '$\\{f, g\\} = fg - gf$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Poisson bracket is $\\{f, g\\} = \\sum_i \\left( \\frac{\\partial f}{\\partial q^i}\\frac{\\partial g}{\\partial p_i} - \\frac{\\partial f}{\\partial p_i}\\frac{\\partial g}{\\partial q^i} \\right)$. It is antisymmetric and satisfies the Jacobi identity.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The fundamental Poisson bracket $\\{q^i, p_j\\}$ equals:',
+    options: [
+      '$\\delta^i_j$ (Kronecker delta)',
+      '$0$',
+      '$1$ for all $i, j$',
+      '$q^i p_j$',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The fundamental Poisson brackets are $\\{q^i, p_j\\} = \\delta^i_j$, $\\{q^i, q^j\\} = 0$, and $\\{p_i, p_j\\} = 0$. These are analogous to canonical commutation relations in quantum mechanics.',
+  },
+  {
+    id: 3,
+    type: 'multiple-choice',
+    question: 'The time evolution of a function $f(q, p)$ is given by:',
+    options: [
+      '$\\frac{df}{dt} = \\{f, H\\} + \\frac{\\partial f}{\\partial t}$',
+      '$\\frac{df}{dt} = \\{H, f\\}$',
+      '$\\frac{df}{dt} = \\frac{\\partial f}{\\partial t}$',
+      '$\\frac{df}{dt} = f \\cdot H$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The equation $\\frac{df}{dt} = \\{f, H\\} + \\frac{\\partial f}{\\partial t}$ gives time evolution in Hamiltonian mechanics. If $f$ has no explicit time dependence, $\\frac{df}{dt} = \\{f, H\\}$.',
+  },
+  {
+    id: 4,
+    type: 'text',
+    question: 'If $\\{f, H\\} = 0$ for a quantity $f$ with no explicit time dependence, what property does $f$ have?',
+    correctAnswer: 'conserved',
+    difficulty: 'easy',
+    explanation: 'If $\\{f, H\\} = 0$ and $\\frac{\\partial f}{\\partial t} = 0$, then $\\frac{df}{dt} = 0$, meaning $f$ is conserved (constant in time). This is a powerful way to identify conservation laws.',
+  },
+  {
+    id: 5,
+    type: 'multiple-choice',
+    question: 'The Poisson bracket satisfies the Jacobi identity:',
+    options: [
+      '$\\{f, \\{g, h\\}\\} + \\{g, \\{h, f\\}\\} + \\{h, \\{f, g\\}\\} = 0$',
+      '$\\{f, \\{g, h\\}\\} = \\{\\{f, g\\}, h\\}$',
+      '$\\{f, g\\} = \\{g, f\\}$',
+      '$\\{f, gh\\} = \\{f, g\\}\\{f, h\\}$',
+    ],
+    correctIndex: 0,
+    difficulty: 'hard',
+    explanation: 'The Jacobi identity $\\{f, \\{g, h\\}\\} + \\{g, \\{h, f\\}\\} + \\{h, \\{f, g\\}\\} = 0$ is one of the defining properties of a Poisson bracket, making phase space a Poisson manifold.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'Calculate $\\{q, p^2\\}$ where $q$ and $p$ are conjugate variables.',
+    correctAnswer: 2,
+    numericRange: { min: 0, max: 10, precision: 0 },
+    difficulty: 'medium',
+    explanation: 'Using the Leibniz rule: $\\{q, p^2\\} = 2p\\{q, p\\} = 2p \\cdot 1 = 2p$. For the numerical answer, the coefficient is 2 (times $p$).',
+  },
+];

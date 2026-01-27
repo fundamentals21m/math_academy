@@ -6,26 +6,10 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If position is $\\mathbf{r}(t)$, then velocity is:',
     options: [
-      '$\\mathbf{r}(t)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Velocity = derivative of position.',
-  },
-      '$\\mathbf{r}\\'\\'(t)
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Velocity = derivative of position.',
-  },
-      '$|\\mathbf{r}(t)|
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Velocity = derivative of position.',
-  },
-      '$\\mathbf{r}\\'(t)
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Velocity = derivative of position.',
-  },
+      '$\\mathbf{r}\'(t)$',
+      '$\\mathbf{r}(t)$',
+      '$\\mathbf{r}\'\'(t)$',
+      '$|\\mathbf{r}(t)|$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -36,26 +20,10 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Acceleration is:',
     options: [
-      '$\\mathbf{r}\\'(t)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Acceleration = derivative of velocity = second derivative of position.',
-  },
-      '$|\\mathbf{r}\\'(t)|
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Acceleration = derivative of velocity = second derivative of position.',
-  },
-      '$\\mathbf{r}\\'\\'(t)
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Acceleration = derivative of velocity = second derivative of position.',
-  },
-      '$\\mathbf{r}(t)
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Acceleration = derivative of velocity = second derivative of position.',
-  },
+      '$\\mathbf{r}\'(t)$',
+      '$\\mathbf{r}\'\'(t)$',
+      '$|\\mathbf{r}\'(t)|$',
+      '$\\mathbf{r}(t)$'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -67,13 +35,9 @@ export const section85Questions: QuizQuestion[] = [
     question: 'Speed is:',
     options: [
       'Velocity',
-      'The magnitude of velocity: $|\\mathbf{v}(t)|
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Speed = $|\\mathbf{r}\'(t)|$ (scalar, not vector).',
-  },
       'Acceleration',
-      'The direction of motion',
+      'The magnitude of velocity: $|\\mathbf{v}(t)|$',
+      'The direction of motion'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -84,26 +48,10 @@ export const section85Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For projectile motion with gravity, $\\mathbf{r}\'\'(t) = ?$',
     options: [
-      '$(0, 0)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Constant downward acceleration: $\\mathbf{a} = (0, -g)$ in 2D.',
-  },
-      '$(g, g)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Constant downward acceleration: $\\mathbf{a} = (0, -g)$ in 2D.',
-  },
-      '$(0, -g)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Constant downward acceleration: $\\mathbf{a} = (0, -g)$ in 2D.',
-  },
-      '$(v_0, 0)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Constant downward acceleration: $\\mathbf{a} = (0, -g)$ in 2D.',
-  },
+      '$(0, 0)$',
+      '$(g, g)$',
+      '$(v_0, 0)$',
+      '$(0, -g)$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -117,7 +65,7 @@ export const section85Questions: QuizQuestion[] = [
       'Toward the center (centripetal)',
       'Tangent to the circle',
       'Away from the center',
-      'In the direction of velocity',
+      'In the direction of velocity'
     ],
     correctIndex: 0,
     difficulty: 'medium',

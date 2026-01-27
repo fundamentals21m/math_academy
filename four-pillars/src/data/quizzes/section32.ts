@@ -7,11 +7,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'The point where parallel lines appear to meet in perspective is called:',
     options: [
       'The origin',
-      'The focus',
-      'The center',
       'The vanishing point (or point at infinity)',
+      'The center',
+      'The focus'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Artists call it the vanishing point; mathematicians call it the point at infinity.',
   },
@@ -20,12 +20,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The line at infinity is:',
     options: [
-      'The horizon, consisting of all vanishing points',
+      'A line that doesn\'t exist',
       'A vertical line',
-      'A line that doesn\\\\'t exist',
-      'The x-axis',
+      'The horizon, consisting of all vanishing points',
+      'The x-axis'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'All points at infinity form the line at infinity, which appears as the horizon.',
   },
@@ -35,11 +35,11 @@ export const section32Questions: QuizQuestion[] = [
     question: 'Unlike the costruzione legittima, the straightedge-only construction requires:',
     options: [
       'A compass and ruler',
-      'Coordinate calculations',
-      'Only incidence properties (points and intersections)',
       'Calculus',
+      'Coordinate calculations',
+      'Only incidence properties (points and intersections)'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The straightedge method uses only line intersections, not measurement or parallel construction.',
   },
@@ -48,12 +48,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the straightedge construction, a tile is a quadrilateral whose opposite sides:',
     options: [
-      'Are perpendicular',
-      'Are equal in length',
-      'Do not intersect',
       'Meet on the horizon',
+      'Are equal in length',
+      'Are perpendicular',
+      'Do not intersect'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Parallel sides meet at a point at infinity on the horizon.',
   },
@@ -64,8 +64,8 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'Length',
       'Straightness and intersection',
-      'Parallelism',
       'Angle',
+      'Parallelism'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -76,10 +76,10 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When points at infinity are added to the Euclidean plane:',
     options: [
+      'Some pairs of lines don\'t intersect',
       'All lines become curves',
-      'Some pairs of lines don\\\\'t intersect',
       'Any two distinct lines have exactly one common point',
-      'The parallel postulate still holds',
+      'The parallel postulate still holds'
     ],
     correctIndex: 2,
     difficulty: 'hard',

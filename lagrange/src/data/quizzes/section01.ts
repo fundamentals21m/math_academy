@@ -1,0 +1,72 @@
+import type { QuizQuestion } from './types';
+
+export const section01Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'Fermat\'s principle states that light travels between two points:',
+    options: [
+      'Along the path of stationary (extremal) optical path length',
+      'Along the shortest geometric distance',
+      'Along a circular arc',
+      'At constant speed regardless of medium',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Fermat\'s principle states that light travels along the path where the optical path length $\\int n \\, ds$ is stationary. This leads to the laws of reflection and refraction.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Snell\'s law of refraction can be written as:',
+    options: [
+      '$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$',
+      '$n_1 \\cos\\theta_1 = n_2 \\cos\\theta_2$',
+      '$n_1 \\tan\\theta_1 = n_2 \\tan\\theta_2$',
+      '$n_1 / \\sin\\theta_1 = n_2 / \\sin\\theta_2$',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Snell\'s law $n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$ relates the angles of incidence and refraction to the refractive indices of the two media. It follows from Fermat\'s principle.',
+  },
+  {
+    id: 3,
+    type: 'numeric',
+    question: 'Light passes from air ($n_1 = 1.0$) into water ($n_2 = 1.33$). If the angle of incidence is $30°$, what is $\\sin\\theta_2$ (the sine of the refraction angle)?',
+    correctAnswer: 0.376,
+    numericRange: { min: 0, max: 1, precision: 3 },
+    difficulty: 'medium',
+    explanation: 'Using Snell\'s law: $n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$, so $\\sin\\theta_2 = \\frac{n_1}{n_2}\\sin\\theta_1 = \\frac{1.0}{1.33} \\times 0.5 \\approx 0.376$.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The connection between Fermat\'s principle and Lagrangian mechanics is that both:',
+    options: [
+      'Are based on variational principles (extremizing an integral)',
+      'Conserve kinetic energy',
+      'Apply only to periodic systems',
+      'Require Cartesian coordinates',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'Both Fermat\'s principle (minimizing optical path) and Lagrangian mechanics (Hamilton\'s principle of stationary action) are variational principles that determine physical paths by extremizing an integral.',
+  },
+  {
+    id: 5,
+    type: 'text',
+    question: 'What physical phenomenon occurs when light passes from a denser medium to a less dense medium at an angle greater than the critical angle?',
+    correctAnswer: 'total internal reflection',
+    difficulty: 'medium',
+    explanation: 'Total internal reflection occurs when light traveling in a denser medium hits the boundary at an angle greater than the critical angle $\\theta_c = \\arcsin(n_2/n_1)$. No light is transmitted into the less dense medium.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'For light going from glass ($n = 1.5$) to air ($n = 1.0$), calculate the critical angle in degrees (rounded to nearest integer).',
+    correctAnswer: 42,
+    numericRange: { min: 0, max: 90, precision: 0 },
+    difficulty: 'hard',
+    explanation: 'The critical angle is $\\theta_c = \\arcsin(n_2/n_1) = \\arcsin(1.0/1.5) = \\arcsin(0.667) \\approx 41.8° \\approx 42°$.',
+  },
+];

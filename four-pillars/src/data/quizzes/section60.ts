@@ -7,11 +7,11 @@ export const section60Questions: QuizQuestion[] = [
     question: 'A "generalized circle" in complex analysis includes:',
     options: [
       'Only circles',
-      'All conic sections',
-      'Only ellipses',
       'Circles and straight lines',
+      'Only ellipses',
+      'All conic sections'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Generalized circles are either circles or lines (viewed as circles through ∞).',
   },
@@ -20,10 +20,10 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Möbius transformations map generalized circles to:',
     options: [
-      'Only lines',
       'Only circles',
+      'Only lines',
       'Generalized circles',
-      'Arbitrary curves',
+      'Arbitrary curves'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -35,9 +35,9 @@ export const section60Questions: QuizQuestion[] = [
     question: 'Under inversion $z \\mapsto 1/z$, a line through the origin maps to:',
     options: [
       'A circle through the origin',
-      'A circle not through the origin',
       'A line not through the origin',
-      'A line through the origin',
+      'A circle not through the origin',
+      'A line through the origin'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why do Möbius transformations preserve non-Euclidean lines?',
     options: [
-      'They preserve areas',
       'They preserve angles and the boundary',
       'They preserve distances',
-      'They are linear',
+      'They preserve areas',
+      'They are linear'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Non-Euclidean lines meet the boundary at right angles; conformality and boundary preservation maintain this.',
   },
@@ -64,8 +64,8 @@ export const section60Questions: QuizQuestion[] = [
     options: [
       'A semicircle centered at 1 with radius 2',
       'A semicircle centered at 2 with radius 2',
-      'A vertical line',
       'A semicircle centered at 2 with radius 1',
+      'A vertical line'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -76,12 +76,12 @@ export const section60Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A vertical line $x = a$ (with $a \\neq 0$) under inversion $z \\mapsto 1/z$ becomes:',
     options: [
-      'A circle through the origin',
-      'A horizontal line',
       'A vertical line',
-      'The same vertical line',
+      'A horizontal line',
+      'A circle through the origin',
+      'The same vertical line'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Lines not through the origin map to circles through the origin under inversion.',
   },

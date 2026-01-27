@@ -9,7 +9,7 @@ export const section12Questions: QuizQuestion[] = [
       'The length of the curve',
       'How sharply the curve bends at a point',
       'The area under the curve',
-      'The height of the curve',
+      'The height of the curve'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -23,7 +23,7 @@ export const section12Questions: QuizQuestion[] = [
       'One',
       'Infinity',
       'Zero',
-      'Undefined',
+      'Undefined'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -34,12 +34,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A circle with a small radius has:',
     options: [
-      'Large curvature',
       'Small curvature',
       'Infinite curvature',
       'Zero curvature',
+      'Large curvature'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Smaller circles bend more sharply, so they have larger curvature. Curvature = 1/radius.',
   },
@@ -48,12 +48,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The formula for curvature involves:',
     options: [
+      'Both first and second derivatives',
       'Only the second derivative',
       'Only the first derivative',
-      'Neither derivative',
-      'Both first and second derivatives',
+      'Neither derivative'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Curvature formula: $\\kappa = \\frac{|y\'\'|}{(1 + (y\')^2)^{3/2}}$ uses both $y\'$ and $y\'\'$.',
   },
@@ -62,18 +62,10 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Where on the parabola $y = x^2$ is the curvature greatest?',
     options: [
-      'At large values of $x
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'The parabola bends most sharply at its vertex and flattens out as $|x|$ increases.',
-  },
-      'Curvature is constant everywhere',
-      'At $x = 1
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'The parabola bends most sharply at its vertex and flattens out as $|x|$ increases.',
-  },
+      'At large values of $x$',
       'At the vertex ($x = 0$)',
+      'Curvature is constant everywhere',
+      'At $x = 1$'
     ],
     correctIndex: 1,
     difficulty: 'medium',

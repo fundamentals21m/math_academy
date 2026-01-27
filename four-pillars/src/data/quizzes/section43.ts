@@ -7,9 +7,9 @@ export const section43Questions: QuizQuestion[] = [
     question: 'Projective arithmetic constructs addition and multiplication using:',
     options: [
       'Compass and straightedge',
-      'Computer calculations',
       'Protractor only',
-      'Straightedge only',
+      'Computer calculations',
+      'Straightedge only'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In projective arithmetic, "parallel lines" means lines that meet:',
     options: [
-      'At right angles',
-      'Never',
       'On a designated line at infinity',
-      'At the origin',
+      'Never',
+      'At right angles',
+      'At the origin'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: '"Parallel" in projective geometry means meeting on the designated line at infinity.',
   },
@@ -35,15 +35,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'The construction of $a + b$ is different from the construction of $b + a$ because:',
     options: [
       'Addition is undefined for negative numbers',
-      'One attaches $Oa$ at $b$, the other attaches $Ob$ at $a
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'The sum a + b attaches segment Oa at point b, while b + a attaches Ob at point a—different constructions.',
-  },
-      'Subtraction is involved',
+      'One attaches $Oa$ at $b$, the other attaches $Ob$ at $a$',
       'They use different lines at infinity',
+      'Subtraction is involved'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The sum a + b attaches segment Oa at point b, while b + a attaches Ob at point a—different constructions.',
   },
@@ -52,12 +48,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The position of the product $ab$ depends on the choice of:',
     options: [
+      'The line at infinity only',
       'The origin only',
       'The point 1 on the x-axis (but not the y-axis)',
-      'The line at infinity only',
-      'Nothing—it is always unique',
+      'Nothing—it is always unique'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Choosing 1 on the x-axis sets the unit of length. The position of ab depends on this choice.',
   },
@@ -66,12 +62,12 @@ export const section43Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The sum $a + b$ is independent of the choice of the auxiliary line $L$ because of:',
     options: [
-      'The little Desargues theorem',
       'The Pythagorean theorem',
-      'The definition of infinity',
       'Symmetry of the plane',
+      'The definition of infinity',
+      'The little Desargues theorem'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The little Desargues theorem shows that different choices of L give the same sum.',
   },
@@ -81,19 +77,11 @@ export const section43Questions: QuizQuestion[] = [
     question: 'When we try to construct $a + \\infty$, the result is:',
     options: [
       'Undefined or incompatible with ordinary arithmetic',
-      'Always $a
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'Operations involving ∞ are incompatible with ordinary arithmetic, which is why ∞ is excluded from the points we add and multiply.',
-  },
       'Always zero',
-      'Equal to $\\infty
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Operations involving ∞ are incompatible with ordinary arithmetic, which is why ∞ is excluded from the points we add and multiply.',
-  },
+      'Always $a$',
+      'Equal to $\\infty$'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Operations involving ∞ are incompatible with ordinary arithmetic, which is why ∞ is excluded from the points we add and multiply.',
   },

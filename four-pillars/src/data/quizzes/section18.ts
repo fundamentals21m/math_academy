@@ -7,11 +7,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Drawing a line through two points corresponds algebraically to:',
     options: [
       'Solving a quadratic equation',
-      'Finding the distance between the points',
       'Finding a linear equation satisfied by both points',
       'Computing a square root',
+      'Finding the distance between the points'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'A line is described by a linear equation ax + by + c = 0 passing through the two given points.',
   },
@@ -20,10 +20,10 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The intersection points of two circles lie on:',
     options: [
-      'A parabola',
       'Another circle',
+      'A parabola',
       'A line (the radical axis)',
-      'An ellipse',
+      'An ellipse'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Solving line-circle or circle-circle intersections requires:',
     options: [
       'Only +, −, ×, ÷',
-      'Only +, −, ×, ÷, and √',
-      'Calculus',
       'Trigonometric functions',
+      'Calculus',
+      'Only +, −, ×, ÷, and √'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The quadratic formula introduces square roots; no higher operations are needed.',
   },
@@ -48,12 +48,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The algebraic criterion for constructibility says a point is constructible iff its coordinates are obtainable from 1 by:',
     options: [
-      '+, −, ×, ÷ only',
-      '+, −, × only',
-      '+, −, ×, ÷, √, and ∛',
       '+, −, ×, ÷, and √',
+      '+, −, × only',
+      '+, −, ×, ÷ only',
+      '+, −, ×, ÷, √, and ∛'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Descartes showed that straightedge-and-compass constructions correspond to +, −, ×, ÷, √.',
   },
@@ -63,11 +63,11 @@ export const section18Questions: QuizQuestion[] = [
     question: 'Doubling the cube is impossible with straightedge and compass because:',
     options: [
       '$\\sqrt{2}$ is irrational',
-      'The parallel postulate fails',
       '$\\sqrt[3]{2}$ cannot be expressed using only square roots',
       'Cubes cannot be drawn',
+      'The parallel postulate fails'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Cube doubling requires ∛2, which is not expressible via +, −, ×, ÷, √.',
   },
@@ -76,12 +76,12 @@ export const section18Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Wantzel proved certain constructions impossible in:',
     options: [
-      'The 19th century',
-      'The 17th century',
       'Ancient Greece',
-      'The 20th century',
+      'The 17th century',
+      'The 19th century',
+      'The 20th century'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Pierre Wantzel (1837) proved the impossibility of trisecting angles and doubling cubes with straightedge and compass.',
   },

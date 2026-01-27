@@ -6,25 +6,15 @@ export const section32Quiz: QuizQuestion[] = [
   {
     id: 's32-q1',
     question: 'A transformation T is linear if:',
-    options: [
-      'T(x + y) = T(x) + T(y) and T(cx) = cT(x)',
-      'T(x) = Ax for some A',
-      'T(0) = 0',
-      'All of these are equivalent',
-    ],
-    correctIndex: 0,
+    options: ['T(x) = Ax for some A', 'T(0) = 0', 'T(x + y) = T(x) + T(y) and T(cx) = cT(x)', 'All of these are equivalent'],
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Linearity means preserving addition and scalar multiplication.'
   },
   {
     id: 's32-q2',
     question: 'The matrix of a linear transformation is found by:',
-    options: [
-      'Guessing',
-      'Taking the inverse',
-      'Computing the determinant',
-      'Applying T to standard basis vectors',
-    ],
+    options: ['Guessing', 'Taking the inverse', 'Computing the determinant', 'Applying T to standard basis vectors'],
     correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Column j of A is T(eⱼ), where eⱼ is the jth standard basis vector.'
@@ -32,26 +22,16 @@ export const section32Quiz: QuizQuestion[] = [
   {
     id: 's32-q3',
     question: 'The kernel of a linear transformation is:',
-    options: [
-      'The range',
-      'The identity',
-      'The null space',
-      'The inverse',
-    ],
-    correctIndex: 2,
+    options: ['The null space', 'The range', 'The identity', 'The inverse'],
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'ker(T) = {x : T(x) = 0} = null space of the matrix.'
   },
   {
     id: 's32-q4',
     question: 'rank(T) + nullity(T) = :',
-    options: [
-      '0',
-      'dim(range)',
-      'dim(domain)',
-      '1',
-    ],
-    correctIndex: 2,
+    options: ['0', 'dim(domain)', 'dim(range)', '1'],
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Rank-nullity theorem: dim(range) + dim(kernel) = dim(domain).'
   }
@@ -62,37 +42,32 @@ export const section33Quiz: QuizQuestion[] = [
   {
     id: 's33-q1',
     question: 'Rotation by angle θ in 2D has matrix:',
-    options: ['[[cos θ, -sin θ], [sin θ, cos θ]]', '[[sin θ, cos θ], [cos θ, sin θ]]', '[[1, θ], [θ, 1]]', '[[θ, 0], [0, θ]]'],
-    correctIndex: 0,
+    options: ['[[sin θ, cos θ], [cos θ, sin θ]]', '[[1, θ], [θ, 1]]', '[[cos θ, -sin θ], [sin θ, cos θ]]', '[[θ, 0], [0, θ]]'],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Rotation: [[cos θ, -sin θ], [sin θ, cos θ]].'
   },
   {
     id: 's33-q2',
     question: 'Projection onto the x-axis has matrix:',
-    options: ['[[1, 0], [0, 0]]', '[[0, 0], [0, 1]]', '[[1, 0], [0, 1]]', '[[0, 1], [1, 0]]'],
-    correctIndex: 0,
+    options: ['[[0, 0], [0, 1]]', '[[1, 0], [0, 1]]', '[[0, 1], [1, 0]]', '[[1, 0], [0, 0]]'],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: '(x, y) → (x, 0), so matrix is [[1, 0], [0, 0]].'
   },
   {
     id: 's33-q3',
     question: 'The composition ST corresponds to matrix:',
-    options: [
-      'S + T',
-      'S - T',
-      'TS',
-      'ST (matrix product)',
-    ],
-    correctIndex: 3,
+    options: ['ST (matrix product)', 'S + T', 'S - T', 'TS'],
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Composition of linear maps = product of matrices.'
   },
   {
     id: 's33-q4',
     question: 'Reflection across the line y = x has matrix:',
-    options: ['[[0, 1], [1, 0]]', '[[1, 0], [0, -1]]', '[[-1, 0], [0, 1]]', '[[1, 0], [0, 1]]'],
-    correctIndex: 0,
+    options: ['[[1, 0], [0, -1]]', '[[0, 1], [1, 0]]', '[[-1, 0], [0, 1]]', '[[1, 0], [0, 1]]'],
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: '(x, y) → (y, x), so matrix swaps coordinates: [[0, 1], [1, 0]].'
   }
@@ -111,25 +86,15 @@ export const section34Quiz: QuizQuestion[] = [
   {
     id: 's34-q2',
     question: 'Similar matrices represent:',
-    options: [
-      'Different transformations',
-      'The same transformation in different bases',
-      'Inverse transformations',
-      'Orthogonal transformations',
-    ],
-    correctIndex: 1,
+    options: ['Different transformations', 'Inverse transformations', 'Orthogonal transformations', 'The same transformation in different bases'],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'B = P⁻¹AP means A and B are the same transformation, different bases.'
   },
   {
     id: 's34-q3',
     question: 'Diagonalization A = SDS⁻¹ is a change of basis to:',
-    options: [
-      'Eigenvector basis',
-      'Standard basis',
-      'Random basis',
-      'Orthonormal basis',
-    ],
+    options: ['Eigenvector basis', 'Standard basis', 'Random basis', 'Orthonormal basis'],
     correctIndex: 0,
     difficulty: 'hard',
     explanation: 'In the eigenvector basis, the transformation is diagonal.'
@@ -137,13 +102,8 @@ export const section34Quiz: QuizQuestion[] = [
   {
     id: 's34-q4',
     question: 'Similar matrices always have the same:',
-    options: [
-      'Entries',
-      'Eigenvectors',
-      'Columns',
-      'Eigenvalues',
-    ],
-    correctIndex: 3,
+    options: ['Entries', 'Eigenvalues', 'Eigenvectors', 'Columns'],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Similar matrices share eigenvalues, determinant, trace, rank.'
   }
@@ -154,12 +114,7 @@ export const chapter08Quiz: QuizQuestion[] = [
   {
     id: 'ch08-q1',
     question: 'T(x) = x + b (translation) is:',
-    options: [
-      'Linear',
-      'Linear only if b = 0',
-      'Not linear',
-      'Always invertible',
-    ],
+    options: ['Linear', 'Linear only if b = 0', 'Not linear', 'Always invertible'],
     correctIndex: 2,
     difficulty: 'easy',
     explanation: 'T(0) = b ≠ 0 (unless b = 0), so not linear.'
@@ -167,13 +122,8 @@ export const chapter08Quiz: QuizQuestion[] = [
   {
     id: 'ch08-q2',
     question: 'The image (range) of T: ℝ² → ℝ³ is a subspace of:',
-    options: [
-      'ℝ²',
-      'ℝ³',
-      'ℝ⁵',
-      'ℝ',
-    ],
-    correctIndex: 1,
+    options: ['ℝ²', 'ℝ⁵', 'ℝ', 'ℝ³'],
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Range is a subspace of the codomain ℝ³.'
   },
@@ -188,72 +138,47 @@ export const chapter08Quiz: QuizQuestion[] = [
   {
     id: 'ch08-q4',
     question: 'Scaling by factor k in all directions has matrix:',
-    options: ['kI', 'I/k', 'k + I', 'kᵀ'],
-    correctIndex: 0,
+    options: ['I/k', 'kI', 'k + I', 'kᵀ'],
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Uniform scaling: x → kx, matrix is kI.'
   },
   {
     id: 'ch08-q5',
     question: 'The derivative d/dx is a linear transformation on:',
-    options: [
-      'ℝ²',
-      'The space of polynomials',
-      'ℝ³',
-      'Only constants',
-    ],
-    correctIndex: 1,
+    options: ['ℝ²', 'ℝ³', 'The space of polynomials', 'Only constants'],
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'd/dx(f + g) = df/dx + dg/dx and d/dx(cf) = c(df/dx).'
   },
   {
     id: 'ch08-q6',
     question: 'Integration ∫₀ˣ is linear because:',
-    options: [
-      'It gives polynomials',
-      '∫(f+g) = ∫f + ∫g and ∫(cf) = c∫f',
-      'It\\\'s the inverse of d/dx',
-      'It maps to ℝ',
-    ],
-    correctIndex: 1,
+    options: ['It gives polynomials', 'It\'s the inverse of d/dx', 'It maps to ℝ', '∫(f+g) = ∫f + ∫g and ∫(cf) = c∫f'],
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Integration is linear: respects sums and scalar multiples.'
   },
   {
     id: 'ch08-q7',
     question: 'The matrix of T relative to basis B has columns that are:',
-    options: [
-      'The basis vectors',
-      'Eigenvalues',
-      'Random',
-      'T(basis vectors) in coordinates relative to B',
-    ],
-    correctIndex: 3,
+    options: ['T(basis vectors) in coordinates relative to B', 'The basis vectors', 'Eigenvalues', 'Random'],
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Column j is [T(vⱼ)]_B, coordinates of T(vⱼ) in basis B.'
   },
   {
     id: 'ch08-q8',
     question: 'An isomorphism is a linear transformation that is:',
-    options: [
-      '1-1 and onto (bijective)',
-      'Only 1-1',
-      'Only onto',
-      'Neither 1-1 nor onto',
-    ],
-    correctIndex: 0,
+    options: ['Only 1-1', '1-1 and onto (bijective)', 'Only onto', 'Neither 1-1 nor onto'],
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Isomorphism = bijective linear map = invertible.'
   },
   {
     id: 'ch08-q9',
     question: 'dim(V) = dim(W) and T: V → W is 1-1 implies T is:',
-    options: [
-      'Not onto',
-      'Not linear',
-      'Onto',
-      'Zero',
-    ],
+    options: ['Not onto', 'Not linear', 'Onto', 'Zero'],
     correctIndex: 2,
     difficulty: 'hard',
     explanation: 'By rank-nullity: 1-1 means nullity = 0, so rank = dim(V) = dim(W), hence onto.'
@@ -261,13 +186,8 @@ export const chapter08Quiz: QuizQuestion[] = [
   {
     id: 'ch08-q10',
     question: 'Jordan form is used when a matrix is:',
-    options: [
-      'Diagonalizable',
-      'Symmetric',
-      'Not diagonalizable',
-      'Orthogonal',
-    ],
-    correctIndex: 2,
+    options: ['Diagonalizable', 'Symmetric', 'Orthogonal', 'Not diagonalizable'],
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Jordan form generalizes diagonalization for non-diagonalizable matrices.'
   }

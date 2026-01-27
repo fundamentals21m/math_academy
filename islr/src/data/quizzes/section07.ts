@@ -10,7 +10,7 @@ export const section07Quiz: QuizQuestion[] = [
       'Using non-linear functions',
       'Fitting multiple separate models',
       'Including multiple predictor variables',
-      'Removing the intercept',
+      'Removing the intercept'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -23,10 +23,10 @@ export const section07Quiz: QuizQuestion[] = [
     options: [
       'Ignoring all other predictors',
       'When all other predictors are zero',
-      'Holding all other predictors constant',
-      'Only when $X_j$ is large'
+      'Only when $X_j$ is large',
+      'Holding all other predictors constant'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Each coefficient represents the average change in $Y$ for a one-unit change in $X_j$, holding all other predictors fixed.',
   },
@@ -35,12 +35,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The F-statistic tests whether:',
     options: [
-      'All coefficients equal each other',
       'At least one predictor is useful',
+      'All coefficients equal each other',
       'R-squared equals 1',
-      'The intercept is zero',
+      'The intercept is zero'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The F-test tests $H_0: \\beta_1 = \\beta_2 = \\cdots = \\beta_p = 0$ - whether at least one predictor has a non-zero effect.',
   },
@@ -58,11 +58,11 @@ export const section07Quiz: QuizQuestion[] = [
     question: 'Variable selection refers to:',
     options: [
       'Choosing the best response variable',
-      'Selecting the training data',
-      'Choosing between regression and classification',
       'Determining which predictors to include',
+      'Selecting the training data',
+      'Choosing between regression and classification'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Variable selection helps identify which of the $p$ predictors are truly associated with the response.',
   },
@@ -75,7 +75,7 @@ export const section07Quiz: QuizQuestion[] = [
       '10',
       '100',
       '1024',
-      '1000',
+      '1000'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -89,7 +89,7 @@ export const section07Quiz: QuizQuestion[] = [
       'Simple regression is always wrong',
       'Multiple regression has fewer degrees of freedom',
       'The response variable changed',
-      'The predictor is correlated with other predictors',
+      'The predictor is correlated with other predictors'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -100,12 +100,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Adjusted $R^2$ differs from $R^2$ because it:',
     options: [
+      'Penalizes for adding predictors',
       'Is always larger',
       'Only applies to simple regression',
-      'Uses a different formula entirely',
-      'Penalizes for adding predictors',
+      'Uses a different formula entirely'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Adjusted $R^2$ penalizes model complexity, so it can decrease when uninformative predictors are added.',
   },
@@ -114,12 +114,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Forward selection starts by:',
     options: [
-      'Including no predictors and adding one at a time',
       'Including all predictors and removing one at a time',
+      'Including no predictors and adding one at a time',
       'Randomly selecting predictors',
-      'Testing all possible subsets',
+      'Testing all possible subsets'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Forward selection starts with no predictors (just intercept) and adds the most significant one at each step.',
   },
@@ -138,12 +138,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'When predictors are highly correlated (collinear), which is true?',
     options: [
-      'Individual coefficient p-values may be high even if F-test is significant',
       'R-squared will be low',
       'The model cannot be fit',
-      'All coefficients will be positive',
+      'Individual coefficient p-values may be high even if F-test is significant',
+      'All coefficients will be positive'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Collinearity inflates standard errors of individual coefficients, making them appear non-significant even when the predictors together are useful.',
   },
@@ -152,16 +152,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why shouldn\'t we rely solely on individual t-tests when $p$ is large?',
     options: [
-      'T-tests are only valid for small $p
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'With many predictors, about 5% will have p-values below 0.05 by chance. The F-test avoids this multiple testing problem.',
-  },
-      'Some predictors will appear significant by chance alone',
+      'T-tests are only valid for small $p$',
       'T-tests require normally distributed data',
       'The degrees of freedom are wrong',
+      'Some predictors will appear significant by chance alone'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'With many predictors, about 5% will have p-values below 0.05 by chance. The F-test avoids this multiple testing problem.',
   },
@@ -170,16 +166,12 @@ export const section07Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Backward selection is problematic when:',
     options: [
-      '$p > n
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'Backward selection starts with all predictors included. If $p > n$, we cannot fit the full model to start with.',
-  },
+      '$p > n$',
       '$n$ is large',
       'The F-statistic is significant',
-      '$R^2$ is high',
+      '$R^2$ is high'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Backward selection starts with all predictors included. If $p > n$, we cannot fit the full model to start with.',
   },

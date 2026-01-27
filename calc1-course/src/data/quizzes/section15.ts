@@ -6,26 +6,10 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In polar coordinates, a point is represented by:',
     options: [
-      '$(x, y)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Polar coordinates use $(r, \\theta)$: distance from origin and angle from positive $x$-axis.',
-  },
-      '$(\\rho, z)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Polar coordinates use $(r, \\theta)$: distance from origin and angle from positive $x$-axis.',
-  },
-      '$(r, x, y)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Polar coordinates use $(r, \\theta)$: distance from origin and angle from positive $x$-axis.',
-  },
-      '$(r, \\theta)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Polar coordinates use $(r, \\theta)$: distance from origin and angle from positive $x$-axis.',
-  },
+      '$(x, y)$',
+      '$(\\rho, z)$',
+      '$(r, \\theta)$',
+      '$(r, x, y)$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -36,26 +20,10 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To convert from polar to Cartesian: $x = ?$',
     options: [
-      '$r\\sin\\theta
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: '$x = r\\cos\\theta$ and $y = r\\sin\\theta$.',
-  },
-      '$\\theta\\cos r
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$x = r\\cos\\theta$ and $y = r\\sin\\theta$.',
-  },
-      '$r\\cos\\theta
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$x = r\\cos\\theta$ and $y = r\\sin\\theta$.',
-  },
-      '$r/\\cos\\theta
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$x = r\\cos\\theta$ and $y = r\\sin\\theta$.',
-  },
+      '$r\\sin\\theta$',
+      '$\\theta\\cos r$',
+      '$r/\\cos\\theta$',
+      '$r\\cos\\theta$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -66,26 +34,10 @@ export const section15Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The area of a region in polar coordinates is given by:',
     options: [
-      '$\\int_\\alpha^\\beta r\\,d\\theta
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Area in polar: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$.',
-  },
-      '$\\int_\\alpha^\\beta r^2\\,d\\theta
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Area in polar: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$.',
-  },
-      '$\\int_\\alpha^\\beta \\frac{1}{2}r^2\\,d\\theta
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Area in polar: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$.',
-  },
-      '$\\int_\\alpha^\\beta \\pi r^2\\,d\\theta
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Area in polar: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$.',
-  },
+      '$\\int_\\alpha^\\beta \\frac{1}{2}r^2\\,d\\theta$',
+      '$\\int_\\alpha^\\beta r\\,d\\theta$',
+      '$\\int_\\alpha^\\beta r^2\\,d\\theta$',
+      '$\\int_\\alpha^\\beta \\pi r^2\\,d\\theta$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -97,11 +49,11 @@ export const section15Questions: QuizQuestion[] = [
     question: 'The polar equation $r = 2$ represents:',
     options: [
       'A line',
-      'A parabola',
-      'A spiral',
       'A circle of radius 2 centered at origin',
+      'A parabola',
+      'A spiral'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: '$r = 2$ means all points at distance 2 from the origin: a circle.',
   },

@@ -7,11 +7,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'Building geometry from numbers is called:',
     options: [
       'Axiomatization',
-      'Geometrization of arithmetic',
       'Arithmetization of geometry',
       'Algebraization',
+      'Geometrization of arithmetic'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The arithmetization of geometry uses coordinate systems to represent geometric objects as numbers.',
   },
@@ -20,12 +20,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Klein\'s Erlanger Programm (1872) characterizes geometry as the study of:',
     options: [
-      'Coordinates only',
       'Axioms and postulates',
-      'Numerical calculations',
+      'Coordinates only',
       'Transformation groups and their invariants',
+      'Numerical calculations'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Klein viewed geometry as the study of properties invariant under a group of transformations.',
   },
@@ -35,11 +35,11 @@ export const section22Questions: QuizQuestion[] = [
     question: 'For isometries of ℝ², the invariants include:',
     options: [
       'Only length',
-      'Length, angle, and straightness',
-      'Only area',
       'Only angle',
+      'Only area',
+      'Length, angle, and straightness'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Isometries preserve all metric properties: distance, angle measure, and collinearity.',
   },
@@ -48,12 +48,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Algebraic curves of degree 1 are:',
     options: [
-      'Parabolas',
-      'Circles',
       'Straight lines',
-      'Ellipses',
+      'Circles',
+      'Parabolas',
+      'Ellipses'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Lines are described by ax + by + c = 0, a polynomial equation of degree 1.',
   },
@@ -62,12 +62,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Circles are algebraic curves of degree:',
     options: [
-      '2',
       '1',
-      '4',
+      '2',
       '3',
+      '4'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'The circle equation (x-a)² + (y-b)² = r² expands to a degree 2 polynomial.',
   },
@@ -76,12 +76,12 @@ export const section22Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Elliptic curves, important in number theory and cryptography, have degree:',
     options: [
-      '2',
       '1',
-      '4',
+      '2',
       '3',
+      '4'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Elliptic curves are defined by cubic (degree 3) polynomial equations.',
   },

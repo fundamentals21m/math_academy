@@ -6,12 +6,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'James Joseph Sylvester is known for coining which mathematical term?',
     options: [
+      'Matrix',
       'Function',
       'Derivative',
-      'Matrix',
-      'Integral',
+      'Integral'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Sylvester invented the term "matrix" for rectangular arrays of numbers.',
   },
@@ -20,12 +20,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Sylvester made major contributions to:',
     options: [
-      'Invariant theory',
       'Topology',
+      'Invariant theory',
       'Set theory',
-      'Probability',
+      'Probability'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Sylvester was a pioneer in invariant theory, studying properties unchanged under transformations.',
   },
@@ -36,10 +36,10 @@ export const section23Questions: QuizQuestion[] = [
     options: [
       'Boole',
       'Weierstrass',
-      'Riemann',
       'Cayley',
+      'Riemann'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Sylvester and Cayley were close collaborators in developing matrix theory and invariant theory.',
   },
@@ -49,11 +49,11 @@ export const section23Questions: QuizQuestion[] = [
     question: 'In the United States, Sylvester:',
     options: [
       'Never worked there',
-      'Founded the American Journal of Mathematics',
       'Only visited briefly',
       'Became president',
+      'Founded the American Journal of Mathematics'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Sylvester founded the American Journal of Mathematics while at Johns Hopkins University.',
   },
@@ -62,12 +62,12 @@ export const section23Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Sylvester\'s law of inertia concerns:',
     options: [
+      'Signature of quadratic forms',
       'Physical mechanics',
       'Chemical reactions',
-      'Signature of quadratic forms',
-      'Number sequences',
+      'Number sequences'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Sylvester\'s law states that the signature (number of positive/negative eigenvalues) of a quadratic form is invariant.',
   },

@@ -7,11 +7,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'Two figures are congruent if:',
     options: [
       'They have the same area',
-      'Their perimeters are equal',
-      'One can be moved to coincide exactly with the other',
       'They have the same number of sides',
+      'Their perimeters are equal',
+      'One can be moved to coincide exactly with the other'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Congruence means exact coincidence when superimposed.',
   },
@@ -20,12 +20,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The SAS congruence condition requires:',
     options: [
-      'Two angles and one side equal',
-      'Three sides equal',
-      'All three angles equal',
       'Two sides and the included angle equal',
+      'Three sides equal',
+      'Two angles and one side equal',
+      'All three angles equal'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Side-Angle-Side: two sides and the angle between them determine a triangle.',
   },
@@ -35,11 +35,11 @@ export const section07Questions: QuizQuestion[] = [
     question: 'In modern treatments, SAS is:',
     options: [
       'Proved from more basic axioms',
-      'Not needed',
       'Taken as an axiom',
       'Derived from ASA',
+      'Not needed'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Euclid\'s "superposition" proof is logically problematic; SAS is now taken as an axiom.',
   },
@@ -48,12 +48,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The isosceles triangle theorem states: if AB = AC, then:',
     options: [
+      '∠BAC = 90°',
       'BC = AB',
       '∠ABC = ∠ACB',
-      '∠BAC = 90°',
-      'The triangle is equilateral',
+      'The triangle is equilateral'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Equal sides imply equal base angles (the angles opposite the equal sides).',
   },
@@ -62,12 +62,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Pappus proved the isosceles triangle theorem by:',
     options: [
-      'Comparing the triangle with its mirror image',
       'Constructing additional points',
-      'Area calculations',
       'Using the parallel axiom',
+      'Area calculations',
+      'Comparing the triangle with its mirror image'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Pappus showed △ABC ≅ △ACB by SAS, comparing the triangle to itself reflected.',
   },
@@ -76,12 +76,12 @@ export const section07Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In a parallelogram, opposite sides are equal because:',
     options: [
-      'Parallel lines are always equal',
       'The diagonal creates congruent triangles via ASA',
       'They are both radii of a circle',
-      'The area is constant',
+      'Parallel lines are always equal',
+      'The area is constant'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Drawing diagonal AC creates triangles with equal alternate angles; ASA gives AB = CD, BC = DA.',
   },

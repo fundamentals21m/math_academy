@@ -9,7 +9,7 @@ export const section01Questions: QuizQuestion[] = [
       'Associative Law',
       'Commutative Law',
       'Distributive Law',
-      'Identity Law',
+      'Identity Law'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,26 +20,10 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the value of $3 \\times (4 + 5)$ using the distributive law?',
     options: [
-      '$3 \\times 4 + 5 = 17
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The distributive law: $a \\times (b + c) = a \\times b + a \\times c$. So $3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27$.',
-  },
-      '$3 \\times 4 + 3 \\times 5 = 27
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The distributive law: $a \\times (b + c) = a \\times b + a \\times c$. So $3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27$.',
-  },
-      '$3 + 4 \\times 5 = 23
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The distributive law: $a \\times (b + c) = a \\times b + a \\times c$. So $3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27$.',
-  },
-      '$(3 + 4) \\times 5 = 35
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'The distributive law: $a \\times (b + c) = a \\times b + a \\times c$. So $3 \\times (4 + 5) = 3 \\times 4 + 3 \\times 5 = 12 + 15 = 27$.',
-  },
+      '$3 \\times 4 + 5 = 17$',
+      '$3 + 4 \\times 5 = 23$',
+      '$3 \\times 4 + 3 \\times 5 = 27$',
+      '$(3 + 4) \\times 5 = 35$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -50,26 +34,10 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is $\\frac{2}{3} \\div \\frac{4}{5}$?',
     options: [
-      '$\\frac{5}{6}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'To divide fractions, invert and multiply: $\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}$.',
-  },
-      '$\\frac{8}{15}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'To divide fractions, invert and multiply: $\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}$.',
-  },
-      '$\\frac{6}{20}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'To divide fractions, invert and multiply: $\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}$.',
-  },
-      '$\\frac{10}{12}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'To divide fractions, invert and multiply: $\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}$.',
-  },
+      '$\\frac{8}{15}$',
+      '$\\frac{6}{20}$',
+      '$\\frac{10}{12}$',
+      '$\\frac{5}{6}$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -80,26 +48,10 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'According to the laws of exponents, what is $a^3 \\times a^4$?',
     options: [
-      '$a^{12}
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The product rule for exponents: $a^m \\times a^n = a^{m+n}$. So $a^3 \\times a^4 = a^{3+4} = a^7$.',
-  },
-      '$a^7
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'The product rule for exponents: $a^m \\times a^n = a^{m+n}$. So $a^3 \\times a^4 = a^{3+4} = a^7$.',
-  },
-      '$a^{4/3}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'The product rule for exponents: $a^m \\times a^n = a^{m+n}$. So $a^3 \\times a^4 = a^{3+4} = a^7$.',
-  },
-      '$2a^7
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'The product rule for exponents: $a^m \\times a^n = a^{m+n}$. So $a^3 \\times a^4 = a^{3+4} = a^7$.',
-  },
+      '$a^7$',
+      '$a^{12}$',
+      '$a^{4/3}$',
+      '$2a^7$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -120,11 +72,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'A stock rises from $40 to $50. What is the percentage increase?',
     options: [
       '10%',
-      '20%',
-      '50%',
       '25%',
+      '20%',
+      '50%'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Percentage change = $\\frac{50 - 40}{40} \\times 100\\% = \\frac{10}{40} \\times 100\\% = 25\\%$.',
   },
@@ -136,7 +88,7 @@ export const section01Questions: QuizQuestion[] = [
       '12 oz for $2.40 (lower total price)',
       'They are the same price per ounce',
       '20 oz for $3.60 (lower price per ounce)',
-      'Cannot be determined',
+      'Cannot be determined'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -156,12 +108,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In the order of operations (PEMDAS), what comes first?',
     options: [
-      'Parentheses',
       'Addition',
       'Multiplication',
       'Exponents',
+      'Parentheses'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'PEMDAS: Parentheses, Exponents, Multiplication/Division, Addition/Subtraction. Parentheses come first.',
   },

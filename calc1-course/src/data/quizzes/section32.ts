@@ -6,14 +6,10 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A critical point of $f$ is a point where:',
     options: [
-      '$f(x) = 0
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Critical points occur where the derivative is zero or undefined.',
-  },
-      '$f\\'(x) = 0$ or $f\\'(x)$ does not exist',
+      '$f\'(x) = 0$ or $f\'(x)$ does not exist',
+      '$f(x) = 0$',
       '$f$ is discontinuous',
-      '$f(x)$ is maximum',
+      '$f(x)$ is maximum'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -24,22 +20,10 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ has a local maximum at $c$ and $f\'(c)$ exists, then:',
     options: [
-      '$f\\'(c) > 0
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Fermat\'s theorem: local extrema with existing derivative have $f\'(c) = 0$.',
-  },
-      '$f\\'(c) < 0
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Fermat\'s theorem: local extrema with existing derivative have $f\'(c) = 0$.',
-  },
-      '$f\\'(c) = 0
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Fermat\'s theorem: local extrema with existing derivative have $f\'(c) = 0$.',
-  },
-      '$f\\'(c)$ is undefined',
+      '$f\'(c) > 0$',
+      '$f\'(c) = 0$',
+      '$f\'(c) < 0$',
+      '$f\'(c)$ is undefined'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -59,26 +43,10 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The First Derivative Test: if $f\'$ changes from positive to negative at $c$, then $f$ has:',
     options: [
-      'A local maximum at $c
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Positive to negative derivative means increasing then decreasing: local max.',
-  },
-      'A local minimum at $c
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Positive to negative derivative means increasing then decreasing: local max.',
-  },
-      'An inflection point at $c
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Positive to negative derivative means increasing then decreasing: local max.',
-  },
-      'No extremum at $c
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Positive to negative derivative means increasing then decreasing: local max.',
-  },
+      'A local minimum at $c$',
+      'An inflection point at $c$',
+      'A local maximum at $c$',
+      'No extremum at $c$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -90,13 +58,9 @@ export const section32Questions: QuizQuestion[] = [
     question: 'To find absolute extrema on $[a, b]$, we check:',
     options: [
       'Only critical points',
-      'Critical points and endpoints',
       'Only endpoints',
-      'Only where $f\\'\\'(x) = 0
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Absolute extrema can occur at critical points OR endpoints.',
-  },
+      'Only where $f\'\'(x) = 0$',
+      'Critical points and endpoints'
     ],
     correctIndex: 3,
     difficulty: 'medium',

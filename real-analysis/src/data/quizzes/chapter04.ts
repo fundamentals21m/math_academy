@@ -14,28 +14,12 @@ export const chapter04Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Darboux upper integral is defined as:',
     options: [
-      '$\\inf_P U(f, P)
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'Upper Darboux integral: $\\overline{\\int}_a^b f = \\inf_P U(f, P)$ over all partitions.'
-  },
-      '$\\sup_P L(f, P)
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Upper Darboux integral: $\\overline{\\int}_a^b f = \\inf_P U(f, P)$ over all partitions.'
-  },
-      '$\\lim_{\\|P\\| \\to 0} U(f, P)
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Upper Darboux integral: $\\overline{\\int}_a^b f = \\inf_P U(f, P)$ over all partitions.'
-  },
-      '$\\int_a^b f
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Upper Darboux integral: $\\overline{\\int}_a^b f = \\inf_P U(f, P)$ over all partitions.'
-  },
+      '$\\inf_P U(f, P)$',
+      '$\\sup_P L(f, P)$',
+      '$\\lim_{\\|P\\| \\to 0} U(f, P)$',
+      '$\\int_a^b f$'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Upper Darboux integral: $\\overline{\\int}_a^b f = \\inf_P U(f, P)$ over all partitions.'
   },
@@ -45,13 +29,9 @@ export const chapter04Quiz: QuizQuestion[] = [
     question: 'A bounded function $f$ on $[a,b]$ is Riemann integrable iff:',
     options: [
       '$f$ is continuous',
+      'For every $\\varepsilon > 0$, there exists partition $P$ with $U(f,P) - L(f,P) < \\varepsilon$',
       '$f$ is monotonic',
-      'For every $\\varepsilon > 0$, there exists partition $P$ with $U(f,P) - L(f,P) < \\varepsilon
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Riemann criterion: $f$ is integrable iff upper and lower sums can be made arbitrarily close.'
-  },
-      '$f$ is differentiable',
+      '$f$ is differentiable'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -65,7 +45,7 @@ export const chapter04Quiz: QuizQuestion[] = [
       '$f$ is continuous',
       '$f$ is monotonic',
       '$f$ is bounded and continuous almost everywhere (discontinuities have measure zero)',
-      '$f$ is bounded',
+      '$f$ is bounded'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -79,13 +59,9 @@ export const chapter04Quiz: QuizQuestion[] = [
       'Not Riemann integrable',
       'Continuous everywhere',
       'Discontinuous everywhere',
-      'Riemann integrable with $\\int = 0
-    correctIndex: 3,
-    difficulty: 'hard',
-    explanation: 'Thomae function is continuous at irrationals, discontinuous at rationals (measure zero).'
-  },
+      'Riemann integrable with $\\int = 0$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Thomae function is continuous at irrationals, discontinuous at rationals (measure zero).'
   },
@@ -97,7 +73,7 @@ export const chapter04Quiz: QuizQuestion[] = [
       'Is Riemann integrable',
       'May not be Riemann integrable',
       'Is continuous',
-      'Is differentiable',
+      'Is differentiable'
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -108,12 +84,12 @@ export const chapter04Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Riemann-Stieltjes integral $\\int_a^b f\\,dg$ reduces to Riemann integral when:',
     options: [
-      '$g(x) = x$',
       '$g(x) = x^2$',
+      '$g(x) = x$',
       '$f = g$',
       '$g$ is constant'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'When $g(x) = x$, $dg = dx$, so $\\int f\\,dg = \\int f\\,dx$.'
   },
@@ -122,28 +98,12 @@ export const chapter04Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The improper integral $\\int_1^\\infty \\frac{1}{x^p}\\,dx$ converges iff:',
     options: [
-      '$p > 0
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: '$\\int_1^\\infty x^{-p}\\,dx = [\\frac{x^{1-p}}{1-p}]_1^\\infty$ converges iff $1-p < 0$, i.e., $p > 1$.'
-  },
-      '$p < 1
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: '$\\int_1^\\infty x^{-p}\\,dx = [\\frac{x^{1-p}}{1-p}]_1^\\infty$ converges iff $1-p < 0$, i.e., $p > 1$.'
-  },
-      '$p > 1
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: '$\\int_1^\\infty x^{-p}\\,dx = [\\frac{x^{1-p}}{1-p}]_1^\\infty$ converges iff $1-p < 0$, i.e., $p > 1$.'
-  },
-      '$p = 1
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: '$\\int_1^\\infty x^{-p}\\,dx = [\\frac{x^{1-p}}{1-p}]_1^\\infty$ converges iff $1-p < 0$, i.e., $p > 1$.'
-  },
+      '$p > 0$',
+      '$p < 1$',
+      '$p > 1$',
+      '$p = 1$'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: '$\\int_1^\\infty x^{-p}\\,dx = [\\frac{x^{1-p}}{1-p}]_1^\\infty$ converges iff $1-p < 0$, i.e., $p > 1$.'
   },
@@ -153,16 +113,12 @@ export const chapter04Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f$ is integrable and $F(x) = \\int_a^x f$, then $F$ is:',
     options: [
-      'Differentiable everywhere with $F\\' = f
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Integral function is always continuous, differentiable almost everywhere.'
-  },
+      'Differentiable everywhere with $F\' = f$',
       'Not continuous',
-      'Continuous and differentiable a.e. with $F\\' = f$ a.e.',
       'Constant',
+      'Continuous and differentiable a.e. with $F\' = f$ a.e.'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Integral function is always continuous, differentiable almost everywhere.'
   },
@@ -174,7 +130,7 @@ export const chapter04Quiz: QuizQuestion[] = [
       'Continuous at the point of differentiation',
       'Differentiable',
       'Bounded',
-      'Monotonic',
+      'Monotonic'
     ],
     correctIndex: 0,
     difficulty: 'hard',
@@ -186,11 +142,11 @@ export const chapter04Quiz: QuizQuestion[] = [
     question: 'A function $F$ is absolutely continuous on $[a,b]$ iff:',
     options: [
       '$F$ is differentiable',
-      '$F$ is continuous',
-      '$F$ is bounded',
       '$F$ is the indefinite integral of an $L^1$ function',
+      '$F$ is continuous',
+      '$F$ is bounded'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Absolute continuity $\\Leftrightarrow$ $F(x) = F(a) + \\int_a^x F\'$ for integrable $F\'$.'
   },
@@ -201,14 +157,10 @@ export const chapter04Quiz: QuizQuestion[] = [
     options: [
       'Is absolutely continuous',
       'Is differentiable everywhere',
-      'Is continuous with $F\\' = 0$ a.e., but $F(1) - F(0) = 1
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Cantor function is continuous, $F\' = 0$ a.e., but $F(1) \\neq F(0)$; not absolutely continuous.'
-  },
-      'Satisfies FTC',
+      'Is continuous with $F\' = 0$ a.e., but $F(1) - F(0) = 1$',
+      'Satisfies FTC'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'Cantor function is continuous, $F\' = 0$ a.e., but $F(1) \\neq F(0)$; not absolutely continuous.'
   },
@@ -217,24 +169,12 @@ export const chapter04Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Leibniz rule for differentiating $\\int_{a(x)}^{b(x)} f(t)\\,dt$:',
     options: [
-      '$\\int_{a(x)}^{b(x)} f\\'(t)\\,dt
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Leibniz: $\\frac{d}{dx}\\int_{a(x)}^{b(x)} f = f(b(x))b\'(x) - f(a(x))a\'(x)$.'
-  },
-      '$f(b(x))b\\'(x) - f(a(x))a\\'(x)
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'Leibniz: $\\frac{d}{dx}\\int_{a(x)}^{b(x)} f = f(b(x))b\'(x) - f(a(x))a\'(x)$.'
-  },
-      '$f(x)(b(x) - a(x))
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'Leibniz: $\\frac{d}{dx}\\int_{a(x)}^{b(x)} f = f(b(x))b\'(x) - f(a(x))a\'(x)$.'
-  },
+      '$\\int_{a(x)}^{b(x)} f\'(t)\\,dt$',
+      '$f(x)(b(x) - a(x))$',
       'Does not exist',
+      '$f(b(x))b\'(x) - f(a(x))a\'(x)$'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Leibniz: $\\frac{d}{dx}\\int_{a(x)}^{b(x)} f = f(b(x))b\'(x) - f(a(x))a\'(x)$.'
   },
@@ -243,12 +183,12 @@ export const chapter04Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Henstock-Kurzweil integral:',
     options: [
-      'Is more restrictive than Riemann',
       'Integrates every derivative (perfect FTC)',
+      'Is more restrictive than Riemann',
       'Requires continuity',
       'Is the same as Riemann'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'HK integral: every derivative is integrable and FTC holds without exceptions.'
   },
@@ -258,26 +198,10 @@ export const chapter04Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Uniform convergence $f_n \\to f$ means:',
     options: [
-      '$\\sup_x |f_n(x) - f(x)| \\to 0
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'Uniform: the rate of convergence is independent of $x$ (sup-norm convergence).'
-  },
-      'For each $x$, $f_n(x) \\to f(x)
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Uniform: the rate of convergence is independent of $x$ (sup-norm convergence).'
-  },
-      '$\\int |f_n - f| \\to 0
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Uniform: the rate of convergence is independent of $x$ (sup-norm convergence).'
-  },
-      '$f_n\\' \\to f\\'
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Uniform: the rate of convergence is independent of $x$ (sup-norm convergence).'
-  },
+      'For each $x$, $f_n(x) \\to f(x)$',
+      '$\\sup_x |f_n(x) - f(x)| \\to 0$',
+      '$\\int |f_n - f| \\to 0$',
+      '$f_n\' \\to f\'$'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -291,7 +215,7 @@ export const chapter04Quiz: QuizQuestion[] = [
       '$f$ may be discontinuous',
       '$f$ is differentiable',
       '$f$ is continuous',
-      '$f_n$ are bounded',
+      '$f_n$ are bounded'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -303,11 +227,11 @@ export const chapter04Quiz: QuizQuestion[] = [
     question: 'The Weierstrass M-test: if $|f_n(x)| \\leq M_n$ and $\\sum M_n < \\infty$:',
     options: [
       '$\\sum f_n$ converges pointwise',
-      '$\\sum f_n$ converges uniformly and absolutely',
       '$\\sum f_n$ diverges',
-      '$f_n \\to 0$ uniformly'
+      '$f_n \\to 0$ uniformly',
+      '$\\sum f_n$ converges uniformly and absolutely'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'M-test gives uniform and absolute convergence when dominated by convergent series.'
   },
@@ -316,12 +240,12 @@ export const chapter04Quiz: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Dini\'s theorem: if $f_n$ are continuous, $f_n \\downarrow f$ pointwise, and $f$ is continuous:',
     options: [
+      'Convergence is uniform on compact sets',
       'Convergence may not be uniform',
       'Convergence is only at one point',
-      '$f$ is constant',
-      'Convergence is uniform on compact sets',
+      '$f$ is constant'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Dini: monotone pointwise convergence of continuous functions is uniform on compact sets.'
   },
@@ -331,11 +255,11 @@ export const chapter04Quiz: QuizQuestion[] = [
     question: 'For term-by-term differentiation of $\\sum f_n$:',
     options: [
       'Uniform convergence of $\\sum f_n$ suffices',
+      'Need $\\sum f_n$ convergent at one point AND $\\sum f_n\'$ uniformly convergent',
       'Pointwise convergence suffices',
-      'Never valid',
-      'Need $\\sum f_n$ convergent at one point AND $\\sum f_n\\'$ uniformly convergent',
+      'Never valid'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Differentiation requires uniform convergence of derivatives, not just the original series.'
   },
@@ -347,7 +271,7 @@ export const chapter04Quiz: QuizQuestion[] = [
       'Finite sets',
       'All continuous functions',
       'Closed, bounded, and equicontinuous families',
-      'Differentiable functions',
+      'Differentiable functions'
     ],
     correctIndex: 2,
     difficulty: 'hard',
@@ -360,18 +284,10 @@ export const chapter04Quiz: QuizQuestion[] = [
     options: [
       'Finite dimensional',
       'Empty',
-      'Dense in $C(X)
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'Stone-Weierstrass generalizes Weierstrass approximation to arbitrary compact spaces.'
-  },
-      'Equal to $C(X)
-    correctIndex: 1,
-    difficulty: 'hard',
-    explanation: 'Stone-Weierstrass generalizes Weierstrass approximation to arbitrary compact spaces.'
-  },
+      'Equal to $C(X)$',
+      'Dense in $C(X)$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Stone-Weierstrass generalizes Weierstrass approximation to arbitrary compact spaces.'
   }

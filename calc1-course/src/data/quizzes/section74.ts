@@ -9,7 +9,7 @@ export const section74Questions: QuizQuestion[] = [
       'A single real number',
       'An ordered $n$-tuple of real numbers',
       'A matrix',
-      'A function',
+      'A function'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,26 +20,10 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Vector addition $(a_1, a_2) + (b_1, b_2) = ?$',
     options: [
-      '$(a_1 b_1, a_2 b_2)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Add componentwise.',
-  },
-      '$(a_1 - b_1, a_2 - b_2)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Add componentwise.',
-  },
-      '$a_1 + a_2 + b_1 + b_2
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Add componentwise.',
-  },
-      '$(a_1 + b_1, a_2 + b_2)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Add componentwise.',
-  },
+      '$(a_1 b_1, a_2 b_2)$',
+      '$(a_1 - b_1, a_2 - b_2)$',
+      '$(a_1 + b_1, a_2 + b_2)$',
+      '$a_1 + a_2 + b_1 + b_2$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -50,26 +34,10 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Scalar multiplication $c(a_1, a_2) = ?$',
     options: [
-      '$(ca_1, a_2)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Multiply each component by the scalar.',
-  },
-      '$(a_1, ca_2)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Multiply each component by the scalar.',
-  },
-      '$(ca_1, ca_2)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Multiply each component by the scalar.',
-  },
-      '$(c + a_1, c + a_2)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Multiply each component by the scalar.',
-  },
+      '$(ca_1, a_2)$',
+      '$(a_1, ca_2)$',
+      '$(c + a_1, c + a_2)$',
+      '$(ca_1, ca_2)$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -80,22 +48,10 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The zero vector in $\\mathbb{R}^3$ is:',
     options: [
-      '$(1, 1, 1)
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Zero vector: all components are 0.',
-  },
-      '$(0, 0, 0)
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Zero vector: all components are 0.',
-  },
-      '$0
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Zero vector: all components are 0.',
-  },
-      'Undefined',
+      '$(0, 0, 0)$',
+      '$(1, 1, 1)$',
+      '$0$',
+      'Undefined'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -115,12 +71,12 @@ export const section74Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\mathbb{R}^n$ with vector addition and scalar multiplication forms:',
     options: [
-      'A vector space',
       'A field',
+      'A vector space',
       'A group only',
-      'A ring',
+      'A ring'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$\\mathbb{R}^n$ is the prototypical vector space.',
   },

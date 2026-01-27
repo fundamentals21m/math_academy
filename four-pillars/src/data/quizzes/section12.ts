@@ -7,11 +7,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'An inscribed angle is an angle whose vertex lies on:',
     options: [
       'The center of the circle',
-      'On a diameter',
-      'Outside the circle',
       'The circumference of the circle',
+      'Outside the circle',
+      'On a diameter'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'An inscribed angle has its vertex on the circle and sides as chords.',
   },
@@ -20,12 +20,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The inscribed angle theorem states: an inscribed angle is ____ the central angle subtending the same arc.',
     options: [
+      'Equal to',
       'Twice',
       'Half of',
-      'Equal to',
-      'Unrelated to',
+      'Unrelated to'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Inscribed angle = (1/2) × central angle for the same arc.',
   },
@@ -35,9 +35,9 @@ export const section12Questions: QuizQuestion[] = [
     question: 'Thales\' circle theorem says: an angle inscribed in a semicircle is:',
     options: [
       'Acute',
-      'Variable',
       'Obtuse',
-      'A right angle (90°)',
+      'Variable',
+      'A right angle (90°)'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'All inscribed angles subtending the same arc are:',
     options: [
-      'Complementary',
       'Equal',
       'Supplementary',
-      'Different',
+      'Complementary',
+      'Different'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'They all equal half the central angle, hence are equal to each other.',
   },
@@ -63,11 +63,11 @@ export const section12Questions: QuizQuestion[] = [
     question: 'A cyclic quadrilateral has all four vertices on a circle. Its opposite angles:',
     options: [
       'Are equal',
-      'Sum to 90°',
       'Sum to 180°',
       'Are both right angles',
+      'Sum to 90°'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Opposite angles of a cyclic quadrilateral are supplementary (sum to π).',
   },
@@ -76,12 +76,12 @@ export const section12Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To construct a tangent to a circle at point P on the circle:',
     options: [
-      'Draw the line perpendicular to the radius OP at P',
-      'Connect P to two other points on the circle',
       'Draw any line through P',
-      'Bisect the diameter through P',
+      'Connect P to two other points on the circle',
+      'Draw the line perpendicular to the radius OP at P',
+      'Bisect the diameter through P'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The tangent at P is perpendicular to the radius at the point of tangency.',
   },

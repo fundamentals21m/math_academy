@@ -8,16 +8,8 @@ export const section99Questions: QuizQuestion[] = [
     options: [
       '$A$ is square',
       '$A$ has more rows than columns',
-      '$\\mathbf{b}$ is in the column space of $A
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Consistent means a solution exists, i.e., $\\mathbf{b} \\in \\text{Col}(A)$.',
-  },
-      '$\\mathbf{b} = \\mathbf{0}
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Consistent means a solution exists, i.e., $\\mathbf{b} \\in \\text{Col}(A)$.',
-  },
+      '$\\mathbf{b} = \\mathbf{0}$',
+      '$\\mathbf{b}$ is in the column space of $A$'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -28,12 +20,12 @@ export const section99Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Row echelon form (REF) has:',
     options: [
-      'All zeros',
       'Leading 1s with zeros below them',
+      'All zeros',
       'No zeros',
-      'Only diagonal entries',
+      'Only diagonal entries'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'REF: staircase pattern of leading entries.',
   },
@@ -43,11 +35,11 @@ export const section99Questions: QuizQuestion[] = [
     question: 'Gaussian elimination uses:',
     options: [
       'Only row swaps',
-      'Matrix multiplication',
       'Elementary row operations to reach REF',
-      'Column operations',
+      'Matrix multiplication',
+      'Column operations'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Gaussian elimination: row operations to simplify the system.',
   },
@@ -56,14 +48,10 @@ export const section99Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A homogeneous system $A\\mathbf{x} = \\mathbf{0}$:',
     options: [
-      'Always has the trivial solution $\\mathbf{x} = \\mathbf{0}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Homogeneous systems always have $\\mathbf{x} = \\mathbf{0}$ as a solution.',
-  },
       'Never has a solution',
       'Has a unique nonzero solution',
-      'Is always inconsistent',
+      'Always has the trivial solution $\\mathbf{x} = \\mathbf{0}$',
+      'Is always inconsistent'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -77,7 +65,7 @@ export const section99Questions: QuizQuestion[] = [
       'The number of rows',
       'The number of zeros',
       'The number of columns',
-      'The number of pivot positions',
+      'The number of pivot positions'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -91,7 +79,7 @@ export const section99Questions: QuizQuestion[] = [
       'There are free variables (more unknowns than pivots)',
       'It is inconsistent',
       'rank$(A)$ = number of unknowns',
-      'The system is homogeneous with trivial solution only',
+      'The system is homogeneous with trivial solution only'
     ],
     correctIndex: 0,
     difficulty: 'medium',

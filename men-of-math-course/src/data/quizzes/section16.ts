@@ -7,11 +7,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'Gauss is often called the:',
     options: [
       'Father of Algebra',
-      'Newton of France',
       'Prince of Mathematicians',
-      'Master of Analysis',
+      'Newton of France',
+      'Master of Analysis'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Carl Friedrich Gauss earned the title "Prince of Mathematicians" for his extraordinary contributions.',
   },
@@ -20,12 +20,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'At age 19, Gauss proved that a regular polygon with how many sides can be constructed with compass and straightedge?',
     options: [
-      '17 sides',
       '7 sides',
       '13 sides',
-      '19 sides',
+      '17 sides',
+      '19 sides'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Gauss proved the 17-gon (heptadecagon) is constructible, the first advance in this problem since antiquity.',
   },
@@ -34,12 +34,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Gauss\'s Disquisitiones Arithmeticae is a foundational work in:',
     options: [
-      'Number theory',
       'Calculus',
       'Statistics',
       'Geometry',
+      'Number theory'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The Disquisitiones Arithmeticae (1801) established modern number theory.',
   },
@@ -48,12 +48,12 @@ export const section16Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Gauss contributed to astronomy by calculating the orbit of:',
     options: [
-      'Halley\\\\\'s Comet',
       'The asteroid Ceres',
+      'Halley\'s Comet',
       'Neptune',
-      'Saturn\\\\\'s rings',
+      'Saturn\'s rings'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Gauss developed methods to calculate Ceres\'s orbit from limited observations after it was lost.',
   },
@@ -63,11 +63,11 @@ export const section16Questions: QuizQuestion[] = [
     question: 'The Gaussian distribution (bell curve) is also known as the:',
     options: [
       'Uniform distribution',
-      'Poisson distribution',
-      'Binomial distribution',
       'Normal distribution',
+      'Poisson distribution',
+      'Binomial distribution'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The Gaussian or normal distribution is the famous bell-shaped probability distribution.',
   },

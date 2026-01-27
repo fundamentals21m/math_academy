@@ -9,7 +9,7 @@ export const section26Questions: QuizQuestion[] = [
       'Calculus',
       'Geometry',
       'Statistics',
-      'Boolean algebra',
+      'Boolean algebra'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'In Boolean algebra, variables take values of:',
     options: [
+      'True or false (1 or 0)',
       'Any real number',
       'Positive integers',
-      'True or false (1 or 0)',
-      'Complex numbers',
+      'Complex numbers'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Boolean variables are binary: true/false, 1/0, on/off.',
   },
@@ -37,7 +37,7 @@ export const section26Questions: QuizQuestion[] = [
       'Physics',
       'Logic and reasoning',
       'Chemistry',
-      'Economics',
+      'Economics'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section26Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Boole was largely:',
     options: [
-      'Self-taught',
       'University educated',
       'Trained by Gauss',
-      'A child prodigy from nobility',
+      'Self-taught',
+      'A child prodigy from nobility'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Boole was self-taught, never attending university before becoming a professor.',
   },
@@ -65,7 +65,7 @@ export const section26Questions: QuizQuestion[] = [
       'Only mathematics',
       'Fluid dynamics',
       'Only philosophy',
-      'Digital circuits and computer programming',
+      'Digital circuits and computer programming'
     ],
     correctIndex: 3,
     difficulty: 'easy',

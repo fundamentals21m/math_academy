@@ -7,11 +7,11 @@ export const section25Questions: QuizQuestion[] = [
     question: 'Arc length measures:',
     options: [
       'The area under a curve',
-      'The actual distance along a curve',
       'The height of a curve',
-      'The slope of a curve',
+      'The actual distance along a curve',
+      'The slope of a curve'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Arc length is the distance you would travel if you walked along the curve.',
   },
@@ -23,7 +23,7 @@ export const section25Questions: QuizQuestion[] = [
       'The power rule',
       'The quotient rule',
       'The product rule',
-      'The Pythagorean theorem applied to infinitesimal pieces',
+      'The Pythagorean theorem applied to infinitesimal pieces'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -34,12 +34,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A catenary is:',
     options: [
+      'The curve formed by a hanging chain',
       'A type of parabola',
       'A circle',
-      'The curve formed by a hanging chain',
-      'An ellipse',
+      'An ellipse'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'A catenary is the curve a uniform chain makes when hanging freely under gravity.',
   },
@@ -48,12 +48,12 @@ export const section25Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'For a straight line, the arc length formula gives:',
     options: [
-      'The same result as the distance formula',
       'Zero',
+      'The same result as the distance formula',
       'Infinity',
-      'An undefined value',
+      'An undefined value'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'For a straight line, the arc length formula reduces to the standard distance formula.',
   },
@@ -65,7 +65,7 @@ export const section25Questions: QuizQuestion[] = [
       'Mathematics is only for geniuses',
       'Calculus is too difficult to learn',
       'Anyone can learn calculus with effort',
-      'Fools should avoid mathematics',
+      'Fools should avoid mathematics'
     ],
     correctIndex: 2,
     difficulty: 'easy',

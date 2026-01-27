@@ -8,8 +8,8 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       'u = v',
       'Neither is a scalar multiple of the other',
-      'They have the same length',
       'u + v = 0',
+      'They have the same length'
     ],
     correctIndex: 1,
     difficulty: 'easy',
@@ -20,12 +20,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The direction of a nonzero vector u is represented by:',
     options: [
+      'Its length',
       'Its angle with the x-axis',
       'The line through 0 and u',
-      'Its length',
-      'Its coordinates',
+      'Its coordinates'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'All scalar multiples au lie on the same line through the origin, defining the direction.',
   },
@@ -34,12 +34,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Segments from v to w and from s to t are parallel if:',
     options: [
-      'w − v = a(t − s) for some a ≠ 0',
       'v = s',
-      '|v − w| = |s − t|',
       'v + w = s + t',
+      '|v − w| = |s − t|',
+      'w − v = a(t − s) for some a ≠ 0'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Parallel means the direction vectors w − v and t − s are scalar multiples.',
   },
@@ -48,12 +48,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The vector Thales theorem states: if w − v is parallel to t − s (on two lines through 0), then:',
     options: [
-      'v + w = s + t',
-      'w = v',
       'v = as and w = at for the same scalar a',
-      's = t',
+      'w = v',
+      'v + w = s + t',
+      's = t'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Parallel transversals cut the two lines in proportional segments: v = as implies w = at.',
   },
@@ -63,11 +63,11 @@ export const section24Questions: QuizQuestion[] = [
     question: 'If au + bv = 0 with a ≠ 0, then:',
     options: [
       'u and v are linearly independent',
-      'u = v',
-      'a = b = 0',
       'u = (−b/a)v (u is a multiple of v)',
+      'a = b = 0',
+      'u = v'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'If au + bv = 0 with a ≠ 0, we can solve for u = (−b/a)v, showing u is a multiple of v.',
   },
@@ -76,20 +76,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The proof of the vector Pappus theorem uses the fact that for real numbers:',
     options: [
-      '$a + b = b + a
-    correctIndex: 2,
-    difficulty: 'hard',
-    explanation: 'The key step exchanges ab for ba, relying on commutativity of real multiplication.',
-  },
       '$ab \\neq ba$ in general',
+      '$a + b = b + a$',
       '$ab = ba$ (commutativity)',
-      '$a(b + c) = ab + ac
-    correctIndex: 0,
-    difficulty: 'hard',
-    explanation: 'The key step exchanges ab for ba, relying on commutativity of real multiplication.',
-  },
+      '$a(b + c) = ab + ac$'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'hard',
     explanation: 'The key step exchanges ab for ba, relying on commutativity of real multiplication.',
   },

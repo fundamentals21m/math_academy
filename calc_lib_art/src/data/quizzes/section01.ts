@@ -7,11 +7,11 @@ export const section01Questions: QuizQuestion[] = [
     question: 'In the Achilles and the Tortoise paradox, what is the main puzzle?',
     options: [
       'How can a tortoise be faster than Achilles?',
-      'Why does Achilles give the tortoise a head start?',
       'How can Achilles ever catch the tortoise if he must first reach where it was?',
-      'How can Achilles run without moving?',
+      'Why does Achilles give the tortoise a head start?',
+      'How can Achilles run without moving?'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The paradox asks how Achilles can ever catch the tortoise when, logically, he must first reach where it was, by which time it has moved ahead—an infinite sequence of catching up.',
   },
@@ -28,12 +28,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Dichotomy Paradox argues that to travel any distance, you must first:',
     options: [
-      'Travel half the distance, then half of what remains, forever',
       'Rest for an infinite time',
       'Move faster than light',
-      'Travel in a circle',
+      'Travel half the distance, then half of what remains, forever',
+      'Travel in a circle'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The Dichotomy says you must travel half the distance, then half of the remainder, and so on infinitely—seemingly making motion impossible.',
   },
@@ -42,12 +42,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Arrow Paradox questions how an arrow can be moving if:',
     options: [
-      'At each instant it occupies a fixed position',
       'It is too heavy to fly',
       'Time does not exist',
       'The bow is not strong enough',
+      'At each instant it occupies a fixed position'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The Arrow Paradox notes that at any single instant, the arrow occupies a definite position—indistinguishable from being at rest. How then can it be "moving"?',
   },
@@ -56,12 +56,12 @@ export const section01Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How does calculus resolve Zeno\'s paradoxes about infinite sequences?',
     options: [
+      'By showing that infinite series can have finite sums',
       'By proving motion is impossible',
       'By ignoring the paradoxes',
-      'By proving time is discrete',
-      'By showing that infinite series can have finite sums',
+      'By proving time is discrete'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'Calculus shows that an infinite series of terms can converge to a finite value. For example, $1/2 + 1/4 + 1/8 + \\ldots = 1$, resolving the apparent paradox.',
   },
@@ -73,7 +73,7 @@ export const section01Questions: QuizQuestion[] = [
       'Negative numbers',
       'The concept of limits and convergent series',
       'Complex numbers',
-      'Matrix multiplication',
+      'Matrix multiplication'
     ],
     correctIndex: 1,
     difficulty: 'hard',

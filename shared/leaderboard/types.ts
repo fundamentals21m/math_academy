@@ -89,3 +89,17 @@ export interface LeaderboardNotification {
   message: string;
   timestamp: Date;
 }
+
+/**
+ * Sync status for tracking sync state
+ */
+export type SyncStatus = 'idle' | 'syncing' | 'success' | 'error';
+
+/**
+ * Sync state for UI display
+ */
+export interface SyncState {
+  status: SyncStatus;
+  lastSyncedAt: Date | null;
+  error: string | null;
+}

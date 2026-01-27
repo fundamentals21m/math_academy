@@ -6,12 +6,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The four-step method for solving word problems is:',
     options: [
-      'Define x, Translate, Solve, Check',
       'Read, Write, Check, Submit',
+      'Define x, Translate, Solve, Check',
       'Guess, Test, Revise, Confirm',
-      'Add, Subtract, Multiply, Divide',
+      'Add, Subtract, Multiply, Divide'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The four-step method: Define x (state the unknown), Translate (make an equation), Solve, Check.',
   },
@@ -30,11 +30,11 @@ export const section04Questions: QuizQuestion[] = [
     question: 'The fundamental distance-rate-time formula is:',
     options: [
       'Distance = Rate + Time',
-      'Distance = Rate × Time',
       'Distance = Rate / Time',
-      'Distance = Rate - Time',
+      'Distance = Rate × Time',
+      'Distance = Rate - Time'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Distance = Rate × Time, or $d = rt$.',
   },
@@ -46,7 +46,7 @@ export const section04Questions: QuizQuestion[] = [
       '52.5 mph (the average of 60 and 45)',
       '55 mph',
       '50 mph',
-      '51.4 mph (total distance / total time)',
+      '51.4 mph (total distance / total time)'
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -75,12 +75,12 @@ export const section04Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Law of the Lever states that for balance:',
     options: [
+      'Weight₁ × Distance₁ = Weight₂ × Distance₂',
       'Weight₁ + Distance₁ = Weight₂ + Distance₂',
       'Weight₁ / Distance₁ = Weight₂ / Distance₂',
-      'Weight₁ × Distance₁ = Weight₂ × Distance₂',
-      'Weight₁ - Distance₁ = Weight₂ - Distance₂',
+      'Weight₁ - Distance₁ = Weight₂ - Distance₂'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'The Law of the Lever: $W_1 \\times d_1 = W_2 \\times d_2$.',
   },
@@ -101,7 +101,7 @@ export const section04Questions: QuizQuestion[] = [
       '180°F',
       '212°F',
       '100°F',
-      '132°F',
+      '132°F'
     ],
     correctIndex: 1,
     difficulty: 'easy',

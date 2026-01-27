@@ -6,12 +6,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Niels Henrik Abel proved that the general equation of which degree has no algebraic solution?',
     options: [
+      'Fifth degree and higher',
       'Fourth degree',
       'Third degree',
-      'Fifth degree and higher',
-      'Second degree',
+      'Second degree'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Abel proved the quintic (fifth-degree) and higher polynomial equations cannot be solved by radicals.',
   },
@@ -21,11 +21,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'Abel died tragically young at age:',
     options: [
       '20',
-      '22',
-      '30',
       '26',
+      '22',
+      '30'
     ],
-    correctIndex: 3,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Abel died of tuberculosis at just 26 years old, before receiving recognition for his work.',
   },
@@ -35,11 +35,11 @@ export const section19Questions: QuizQuestion[] = [
     question: 'Abelian groups are commutative groups named after Abel. In such groups:',
     options: [
       'The group must be finite',
-      '$a \\cdot b = b \\cdot a$ for all elements',
       'All elements have order 2',
-      'Every element is its own inverse',
+      '$a \\cdot b = b \\cdot a$ for all elements',
+      'Every element is its own inverse'
     ],
-    correctIndex: 1,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Abelian groups satisfy the commutative property: the order of operation doesn\'t matter.',
   },
@@ -48,12 +48,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Abel made major contributions to which mathematical objects involving integrals?',
     options: [
-      'Elliptic integrals and functions',
       'Definite integrals',
       'Improper integrals',
       'Triple integrals',
+      'Elliptic integrals and functions'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Abel made foundational contributions to the theory of elliptic functions.',
   },
@@ -62,12 +62,12 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Abel\'s nationality was:',
     options: [
+      'Norwegian',
       'German',
       'Swedish',
-      'Danish',
-      'Norwegian',
+      'Danish'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Abel was Norwegian; the Abel Prize awarded in his name is given by the Norwegian Academy.',
   },

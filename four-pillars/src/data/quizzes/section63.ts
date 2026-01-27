@@ -7,9 +7,9 @@ export const section63Questions: QuizQuestion[] = [
     question: 'A hyperbolic translation has how many fixed points on the boundary?',
     options: [
       'Zero',
-      'Infinitely many',
       'One',
-      'Two',
+      'Infinitely many',
+      'Two'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -21,9 +21,9 @@ export const section63Questions: QuizQuestion[] = [
     question: 'An elliptic (rotational) Möbius transformation has its fixed point:',
     options: [
       'In the upper half plane (interior)',
-      'At infinity',
       'On the boundary only',
-      'On the real axis',
+      'At infinity',
+      'On the real axis'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -35,11 +35,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'The transformation $z \\mapsto z + 1$ is:',
     options: [
       'Hyperbolic (translation)',
-      'A reflection',
       'Parabolic (limit rotation)',
       'Elliptic (rotation)',
+      'A reflection'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'z → z + 1 has only one fixed point (∞), making it parabolic.',
   },
@@ -48,10 +48,10 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Points on a horocycle are:',
     options: [
-      'On a non-Euclidean line',
       'Equidistant from a point in the interior',
+      'On a non-Euclidean line',
       'Tangent to the boundary at one point',
-      'Fixed by all transformations',
+      'Fixed by all transformations'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -63,11 +63,11 @@ export const section63Questions: QuizQuestion[] = [
     question: 'For $f(z) = (az + b)/(cz + d)$ with $ad - bc = 1$, the trace $\\tau = a + d$ classifies transformations as:',
     options: [
       '$|\\tau| > 2$: elliptic, $|\\tau| < 2$: hyperbolic',
-      '$|\\tau| > 2$: hyperbolic, $|\\tau| < 2$: elliptic',
-      '$|\\tau| = 1$: hyperbolic',
       '$\\tau = 0$: always parabolic',
+      '$|\\tau| = 1$: hyperbolic',
+      '$|\\tau| > 2$: hyperbolic, $|\\tau| < 2$: elliptic'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: '|τ| > 2: hyperbolic, |τ| < 2: elliptic, |τ| = 2: parabolic.',
   },
@@ -76,12 +76,12 @@ export const section63Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Parabolic transformations have no analogue in:',
     options: [
-      'Projective geometry',
-      'Spherical geometry',
-      'Affine geometry',
       'Euclidean geometry',
+      'Spherical geometry',
+      'Projective geometry',
+      'Affine geometry'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'Euclidean geometry has only translations and rotations; limit rotations (parabolics) are unique to hyperbolic geometry.',
   },

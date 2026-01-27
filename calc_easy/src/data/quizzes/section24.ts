@@ -8,10 +8,10 @@ export const section24Questions: QuizQuestion[] = [
     options: [
       'Passes through the origin',
       'Has infinite radius',
-      'Is always the unit circle',
       'Best approximates the curve locally, sharing its tangent and curvature',
+      'Is always the unit circle'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The osculating circle "kisses" the curve at a point, matching both direction and curvature.',
   },
@@ -20,26 +20,10 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The radius of curvature $R$ is related to curvature $\\kappa$ by:',
     options: [
-      '$R = \\kappa
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Curvature $\\kappa = \\frac{1}{R}$, so $R = \\frac{1}{\\kappa}$.',
-  },
-      '$R = \\frac{1}{\\kappa}
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Curvature $\\kappa = \\frac{1}{R}$, so $R = \\frac{1}{\\kappa}$.',
-  },
-      '$R = 2\\kappa
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Curvature $\\kappa = \\frac{1}{R}$, so $R = \\frac{1}{\\kappa}$.',
-  },
-      '$R = \\kappa^2
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Curvature $\\kappa = \\frac{1}{R}$, so $R = \\frac{1}{\\kappa}$.',
-  },
+      '$R = \\kappa$',
+      '$R = 2\\kappa$',
+      '$R = \\kappa^2$',
+      '$R = \\frac{1}{\\kappa}$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -50,12 +34,12 @@ export const section24Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'At the vertex of a parabola $y = x^2$:',
     options: [
+      'The curvature is at its maximum',
       'The curvature is zero',
       'The curvature is undefined',
-      'The curvature is at its maximum',
-      'The curvature equals 1',
+      'The curvature equals 1'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The parabola bends most sharply at its vertex (x = 0) and flattens as |x| increases.',
   },
@@ -67,7 +51,7 @@ export const section24Questions: QuizQuestion[] = [
       'The color of the road',
       'The curvature of the turn',
       'The length of the road',
-      'The number of lanes',
+      'The number of lanes'
     ],
     correctIndex: 1,
     difficulty: 'easy',

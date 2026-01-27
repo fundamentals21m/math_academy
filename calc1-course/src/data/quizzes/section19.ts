@@ -6,26 +6,10 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\lim_{x \\to a} f(x) = L$ means:',
     options: [
-      '$f(a) = L
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The limit describes the behavior of $f(x)$ as $x$ approaches $a$.',
-  },
-      '$f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The limit describes the behavior of $f(x)$ as $x$ approaches $a$.',
-  },
-      '$f$ is continuous at $a
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The limit describes the behavior of $f(x)$ as $x$ approaches $a$.',
-  },
-      '$f(x) = L$ for all $x$ near $a
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The limit describes the behavior of $f(x)$ as $x$ approaches $a$.',
-  },
+      '$f(a) = L$',
+      '$f$ is continuous at $a$',
+      '$f(x) = L$ for all $x$ near $a$',
+      '$f(x)$ gets arbitrarily close to $L$ as $x$ approaches $a$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -36,18 +20,10 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A function $f$ is continuous at $a$ if:',
     options: [
+      '$\\lim_{x \\to a} f(x) = f(a)$',
       '$\\lim_{x \\to a} f(x)$ exists',
       '$f(a)$ exists',
-      '$f$ is differentiable at $a
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Continuity requires: $f(a)$ exists, the limit exists, and they are equal.',
-  },
-      '$\\lim_{x \\to a} f(x) = f(a)
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Continuity requires: $f(a)$ exists, the limit exists, and they are equal.',
-  },
+      '$f$ is differentiable at $a$'
     ],
     correctIndex: 0,
     difficulty: 'medium',
@@ -67,22 +43,10 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: '$\\lim_{x \\to 0} \\frac{\\sin x}{x} = ?$',
     options: [
-      '$0
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.',
-  },
-      '$\\infty
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.',
-  },
-      'Does not exist',
-      '$1
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'This is a fundamental limit: $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.',
-  },
+      '$0$',
+      '$1$',
+      '$\\infty$',
+      'Does not exist'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -93,22 +57,10 @@ export const section19Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $\\lim_{x \\to a} f(x) = L$ and $\\lim_{x \\to a} g(x) = M$, then $\\lim_{x \\to a} [f(x) + g(x)] = ?$',
     options: [
-      '$L + M
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Limit of a sum equals sum of limits: $L + M$.',
-  },
-      '$LM
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Limit of a sum equals sum of limits: $L + M$.',
-  },
-      '$L - M
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Limit of a sum equals sum of limits: $L + M$.',
-  },
-      'Cannot determine',
+      '$LM$',
+      '$L - M$',
+      '$L + M$',
+      'Cannot determine'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -121,12 +73,8 @@ export const section19Questions: QuizQuestion[] = [
     options: [
       'It has a corner there',
       'It is not continuous at 0',
-      '$\\lim_{x \\to 0}|x| = 0 = f(0)
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'The limit equals the function value: $\\lim_{x \\to 0}|x| = 0 = |0|$.',
-  },
       'It is differentiable at 0',
+      '$\\lim_{x \\to 0}|x| = 0 = f(0)$'
     ],
     correctIndex: 3,
     difficulty: 'medium',

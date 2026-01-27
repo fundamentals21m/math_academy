@@ -8,10 +8,10 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'It has a simple closed-form solution',
       'It has exactly three solutions',
-      'It can exhibit chaotic behavior',
       'It is equivalent to the two-body problem',
+      'It can exhibit chaotic behavior'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'Poincare discovered that the three-body problem can exhibit chaos, where tiny changes in initial conditions lead to vastly different outcomes.',
   },
@@ -20,12 +20,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Which branch of mathematics did Poincare essentially create?',
     options: [
+      'Algebraic topology',
       'Number theory',
       'Linear algebra',
-      'Calculus',
-      'Algebraic topology',
+      'Calculus'
     ],
-    correctIndex: 3,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Poincare founded algebraic topology, using algebraic structures (like the fundamental group) to study topological spaces.',
   },
@@ -34,12 +34,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the fundamental group $\\pi_1(X)$ measure?',
     options: [
-      'How loops can be deformed within a space',
       'The volume of a space',
+      'How loops can be deformed within a space',
       'The number of dimensions',
-      'The curvature of a surface',
+      'The curvature of a surface'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'The fundamental group captures information about loops in a space and whether they can be continuously shrunk to a point.',
   },
@@ -50,10 +50,10 @@ export const section32Questions: QuizQuestion[] = [
     options: [
       'Actual straight lines',
       'Circles centered at the origin',
-      'Spirals',
       'Circular arcs perpendicular to the boundary',
+      'Spirals'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'In the Poincare disk model of hyperbolic geometry, geodesics appear as circular arcs that meet the boundary at right angles.',
   },
@@ -62,12 +62,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the Poincare Recurrence Theorem state?',
     options: [
-      'Almost every state will return arbitrarily close to itself',
       'All systems eventually stop moving',
       'Energy is always conserved',
       'Chaos is impossible in closed systems',
+      'Almost every state will return arbitrarily close to itself'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'The theorem states that in a bounded phase space with volume-preserving dynamics, almost every orbit returns arbitrarily close to its starting point.',
   },
@@ -76,12 +76,12 @@ export const section32Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Poincare Conjecture was about which type of manifold?',
     options: [
-      '2-dimensional surfaces',
       '3-dimensional manifolds',
+      '2-dimensional surfaces',
       '4-dimensional spacetime',
-      'Infinite-dimensional spaces',
+      'Infinite-dimensional spaces'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The Poincare Conjecture states that every simply connected, closed 3-manifold is homeomorphic to the 3-sphere.',
   },
@@ -93,7 +93,7 @@ export const section32Questions: QuizQuestion[] = [
       'Henri Poincare',
       'Grigori Perelman',
       'David Hilbert',
-      'Andrew Wiles',
+      'Andrew Wiles'
     ],
     correctIndex: 1,
     difficulty: 'easy',

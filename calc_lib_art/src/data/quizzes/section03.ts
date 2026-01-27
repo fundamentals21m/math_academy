@@ -6,12 +6,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'During what event did Newton develop his method of fluxions (calculus)?',
     options: [
-      'The Great Plague of 1665-66',
       'The Great Fire of London',
       'The English Civil War',
       'The Glorious Revolution',
+      'The Great Plague of 1665-66'
     ],
-    correctIndex: 0,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Newton developed calculus during the plague years of 1665-66 when Cambridge University was closed and he retreated to his family farm.',
   },
@@ -23,7 +23,7 @@ export const section03Questions: QuizQuestion[] = [
       'The method of fluxions',
       'The method of limits',
       'Differential calculus',
-      'The method of infinitesimals',
+      'The method of infinitesimals'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -43,11 +43,11 @@ export const section03Questions: QuizQuestion[] = [
     question: 'What famous insight did Newton have involving a falling apple?',
     options: [
       'Apples fall faster than oranges',
-      'Apples always fall straight down',
       'The same force that makes apples fall also keeps the Moon in orbit',
-      'The Earth attracts apples but not the Moon',
+      'Apples always fall straight down',
+      'The Earth attracts apples but not the Moon'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Newton realized that the same gravitational force pulling the apple downward is what curves the Moon\'s path into an orbit around Earth.',
   },
@@ -58,10 +58,10 @@ export const section03Questions: QuizQuestion[] = [
     options: [
       'The Elements',
       'On the Origin of Species',
-      'Dialogue Concerning Two Chief World Systems',
       'Principia Mathematica',
+      'Dialogue Concerning Two Chief World Systems'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Newton\'s "Principia Mathematica" (Mathematical Principles of Natural Philosophy) laid the foundation for classical mechanics.',
   },
@@ -70,12 +70,12 @@ export const section03Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Why did Newton present his physics using geometry rather than calculus in the Principia?',
     options: [
-      'He hadn\\\\\'t invented calculus yet',
-      'He believed geometry would be more acceptable to readers',
+      'He hadn\'t invented calculus yet',
       'Geometry was easier to understand',
-      'Calculus didn\\\\\'t apply to physics',
+      'Calculus didn\'t apply to physics',
+      'He believed geometry would be more acceptable to readers'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'hard',
     explanation: 'Newton deliberately used classical geometry in the Principia, believing it would be more acceptable to readers—though this made the book nearly unreadable.',
   },

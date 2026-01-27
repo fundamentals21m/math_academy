@@ -1,0 +1,77 @@
+import type { QuizQuestion } from './types';
+
+export const section10Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'An isometry of Euclidean space is a transformation that:',
+    options: [
+      'Preserves distances between points',
+      'Preserves angles but not distances',
+      'Scales all distances by a constant factor',
+      'Preserves only the origin',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'An isometry preserves the Euclidean distance: $|f(x) - f(y)| = |x - y|$ for all points $x, y$. This includes rotations, translations, and reflections.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'Which of the following is NOT an isometry of $\\mathbb{R}^3$?',
+    options: [
+      'Scaling by factor 2',
+      'Rotation about the $z$-axis',
+      'Translation by vector $(1, 2, 3)$',
+      'Reflection through a plane',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'Scaling changes distances (doubles them if factor is 2), so it is not an isometry. Rotations, translations, and reflections all preserve distances.',
+  },
+  {
+    id: 3,
+    type: 'text',
+    question: 'What is the name of an isometry that can be expressed as $x \\mapsto Rx + t$ where $R$ is a rotation matrix and $t$ is a translation vector?',
+    correctAnswer: 'rigid motion',
+    difficulty: 'medium',
+    explanation: 'A rigid motion (or proper isometry) combines rotation and translation. It preserves distances and orientation. The set of all rigid motions forms the group $SE(3)$.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The composition of two rotations about different axes is:',
+    options: [
+      'A rotation (about some axis)',
+      'Always a translation',
+      'Never a rotation',
+      'A reflection',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The composition of any two rotations (in 3D) is another rotation. This follows from the group property of $SO(3)$: it is closed under composition.',
+  },
+  {
+    id: 5,
+    type: 'numeric',
+    question: 'A rotation in 2D by angle $\\theta_1$ followed by rotation by angle $\\theta_2$ gives a rotation by what angle (in terms of $\\theta_1 + \\theta_2 = 90°$, answer in degrees)?',
+    correctAnswer: 90,
+    numericRange: { min: 0, max: 360, precision: 0 },
+    difficulty: 'easy',
+    explanation: 'In 2D, rotations commute and simply add: $R(\\theta_1)R(\\theta_2) = R(\\theta_1 + \\theta_2)$. If $\\theta_1 + \\theta_2 = 90°$, the result is a 90-degree rotation.',
+  },
+  {
+    id: 6,
+    type: 'multiple-choice',
+    question: 'The fixed points of a rotation in $\\mathbb{R}^3$ (other than the identity) form:',
+    options: [
+      'A line through the origin (the rotation axis)',
+      'A plane through the origin',
+      'Only the origin',
+      'The entire space',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'A non-identity rotation in 3D fixes exactly the points on its axis of rotation, which is a line through the origin. All other points move in circles around this axis.',
+  },
+];

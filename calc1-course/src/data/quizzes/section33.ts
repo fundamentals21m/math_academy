@@ -20,22 +20,10 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Rolle\'s Theorem is a special case of MVT when:',
     options: [
-      '$f\\'(a) = f\\'(b)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Rolle: if $f(a) = f(b)$, then there exists $c$ with $f\'(c) = 0$.',
-  },
-      '$a = b
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Rolle: if $f(a) = f(b)$, then there exists $c$ with $f\'(c) = 0$.',
-  },
-      '$f$ is constant',
-      '$f(a) = f(b)
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Rolle: if $f(a) = f(b)$, then there exists $c$ with $f\'(c) = 0$.',
-  },
+      '$f\'(a) = f\'(b)$',
+      '$f(a) = f(b)$',
+      '$a = b$',
+      '$f$ is constant'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -48,10 +36,10 @@ export const section33Questions: QuizQuestion[] = [
     options: [
       'Increasing',
       'Decreasing',
-      'Undefined',
       'Constant',
+      'Undefined'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Zero derivative everywhere implies constant function (by MVT).',
   },
@@ -60,26 +48,10 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'If $f\'(x) > 0$ for all $x$ in $(a, b)$, then $f$ is:',
     options: [
-      'Constant on $(a,b)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Positive derivative implies strictly increasing.',
-  },
-      'Has a minimum in $(a,b)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Positive derivative implies strictly increasing.',
-  },
-      'Strictly increasing on $[a,b]
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Positive derivative implies strictly increasing.',
-  },
-      'Decreasing on $(a,b)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Positive derivative implies strictly increasing.',
-  },
+      'Constant on $(a,b)$',
+      'Has a minimum in $(a,b)$',
+      'Decreasing on $(a,b)$',
+      'Strictly increasing on $[a,b]$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -99,18 +71,10 @@ export const section33Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The MVT requires $f$ to be:',
     options: [
-      'Differentiable on $[a, b]
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'MVT hypotheses: continuous on closed interval, differentiable on open interior.',
-  },
-      'Continuous on $[a, b]$ and differentiable on $(a, b)
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'MVT hypotheses: continuous on closed interval, differentiable on open interior.',
-  },
+      'Continuous on $[a, b]$ and differentiable on $(a, b)$',
+      'Differentiable on $[a, b]$',
       'Twice differentiable',
-      'A polynomial',
+      'A polynomial'
     ],
     correctIndex: 0,
     difficulty: 'medium',

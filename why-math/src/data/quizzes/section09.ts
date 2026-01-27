@@ -6,12 +6,12 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Einstein\'s postulate about the speed of light states that:',
     options: [
-      'Light speed varies depending on the source\\\\\'s motion',
       'Light speed is constant relative to any observer moving at constant velocity',
+      'Light speed varies depending on the source\'s motion',
       'Light speed is infinite',
-      'Light speed depends on the medium only',
+      'Light speed depends on the medium only'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Einstein postulated that light travels at speed $c$ relative to any observer in uniform motion.',
   },
@@ -21,11 +21,11 @@ export const section09Questions: QuizQuestion[] = [
     question: 'According to special relativity, two events that are simultaneous for one observer:',
     options: [
       'Are simultaneous for all observers',
-      'Cannot be measured',
       'May not be simultaneous for a moving observer',
-      'Must occur at the same location',
+      'Cannot be measured',
+      'Must occur at the same location'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: 'Simultaneity is relative—events simultaneous in one frame may not be in another moving frame.',
   },
@@ -34,26 +34,10 @@ export const section09Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The time dilation formula states that a moving clock runs slower by factor:',
     options: [
-      '$v/c
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
-  },
-      '$1 - v/c
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
-  },
-      '$(v/c)^2
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
-  },
-      '$\\sqrt{1 - (v/c)^2}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Time dilation: $t\' = t\\sqrt{1 - (v/c)^2}$, so the moving clock runs slower by the square root factor.',
-  },
+      '$v/c$',
+      '$1 - v/c$',
+      '$\\sqrt{1 - (v/c)^2}$',
+      '$(v/c)^2$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -76,7 +60,7 @@ export const section09Questions: QuizQuestion[] = [
       'They travel faster than light',
       'Gravity accelerates them',
       'They are created at lower altitudes',
-      'Time dilation extends their lifetime in our reference frame',
+      'Time dilation extends their lifetime in our reference frame'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -90,7 +74,7 @@ export const section09Questions: QuizQuestion[] = [
       'Shorter in the direction of motion',
       'Longer in the direction of motion',
       'Wider perpendicular to motion',
-      'Unchanged in all dimensions',
+      'Unchanged in all dimensions'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -113,7 +97,7 @@ export const section09Questions: QuizQuestion[] = [
       'It lives longer',
       'The distance to Earth is contracted',
       'Earth moves toward it faster',
-      'Time speeds up for it',
+      'Time speeds up for it'
     ],
     correctIndex: 1,
     difficulty: 'hard',
@@ -126,10 +110,10 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'Time travel to the future',
       'Length contraction',
-      'Simultaneous events',
       'Traveling faster than light',
+      'Simultaneous events'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Nothing can travel faster than the speed of light $c$—it is the cosmic speed limit.',
   },
@@ -140,10 +124,10 @@ export const section09Questions: QuizQuestion[] = [
     options: [
       'Pendulum swings',
       'Sand falling through glass',
-      'Light bouncing between mirrors',
       'Atomic vibrations',
+      'Light bouncing between mirrors'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'The Einstein-Langevin clock uses a light flash bouncing between mirrors to measure time precisely.',
   },

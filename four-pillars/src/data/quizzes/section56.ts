@@ -6,12 +6,12 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Classical Chinese and Japanese art often uses:',
     options: [
-      'Affine projection (parallels preserved)',
       'Vanishing points at infinity',
-      'No perspective at all',
+      'Affine projection (parallels preserved)',
       'Spherical perspective',
+      'No perspective at all'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'Asian art typically uses projection from infinity (affine maps), preserving parallel lines.',
   },
@@ -20,12 +20,12 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Hamilton discovered the quaternions in:',
     options: [
-      '1899',
       '1799',
-      '1930',
+      '1899',
       '1843',
+      '1930'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'Hamilton discovered the quaternions on October 16, 1843, famously carving the formula into Brougham Bridge.',
   },
@@ -35,11 +35,11 @@ export const section56Questions: QuizQuestion[] = [
     question: 'A number system on $\\mathbb{R}^3$ with multiplicative absolute value is:',
     options: [
       'The quaternions',
-      'Impossible',
-      'The complex numbers',
       'The octonions',
+      'The complex numbers',
+      'Impossible'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'medium',
     explanation: 'Such number systems exist only in dimensions 1, 2, 4, and 8 (ℝ, ℂ, ℍ, 𝕆).',
   },
@@ -48,12 +48,12 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The 24-cell is exceptional because it exists only in:',
     options: [
-      '5 dimensions',
       '4 dimensions',
       '3 dimensions',
-      'All dimensions ≥ 4',
+      '5 dimensions',
+      'All dimensions ≥ 4'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The 24-cell is one of three exceptional regular polytopes that exist only in 4D.',
   },
@@ -63,11 +63,11 @@ export const section56Questions: QuizQuestion[] = [
     question: 'According to Klein\'s Erlangen program, Euclidean geometry studies invariants of:',
     options: [
       'The projective group',
-      'All transformations',
       'The isometry group',
       'The affine group',
+      'All transformations'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Euclidean geometry = invariants of isometries; affine = invariants of affine maps; projective = invariants of projective maps.',
   },
@@ -76,10 +76,10 @@ export const section56Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The 600-cell has 120 vertices that correspond to the quaternions representing rotations of:',
     options: [
-      'The cube',
       'The tetrahedron',
+      'The cube',
       'The icosahedron',
-      'The 24-cell',
+      'The 24-cell'
     ],
     correctIndex: 2,
     difficulty: 'hard',

@@ -6,26 +6,10 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of $\\sin(x)$?',
     options: [
-      '$-\\sin(x)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$.',
-  },
-      '$\\tan(x)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$.',
-  },
-      '$\\cos(x)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$.',
-  },
-      '$-\\cos(x)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$.',
-  },
+      '$-\\sin(x)$',
+      '$\\tan(x)$',
+      '$-\\cos(x)$',
+      '$\\cos(x)$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -36,26 +20,10 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of $\\cos(x)$?',
     options: [
-      '$\\sin(x)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
-  },
-      '$\\cos(x)
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
-  },
-      '$-\\cos(x)
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
-  },
-      '$-\\sin(x)
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
-  },
+      '$-\\sin(x)$',
+      '$\\sin(x)$',
+      '$\\cos(x)$',
+      '$-\\cos(x)$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -66,12 +34,12 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The derivatives of sine and cosine are related because:',
     options: [
-      'They form a cycle: differentiating repeatedly brings you back',
       'They are both always positive',
+      'They form a cycle: differentiating repeatedly brings you back',
       'They have the same derivative',
-      'They are inverse functions',
+      'They are inverse functions'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'medium',
     explanation: '$\\sin \\to \\cos \\to -\\sin \\to -\\cos \\to \\sin$. Four derivatives return to the original.',
   },
@@ -80,26 +48,10 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is the derivative of $\\tan(x)$?',
     options: [
-      '$\\sec^2(x)
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: '$\\frac{d}{dx}\\tan(x) = \\sec^2(x)$.',
-  },
-      '$\\cot(x)
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$\\frac{d}{dx}\\tan(x) = \\sec^2(x)$.',
-  },
-      '$\\sec(x)
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$\\frac{d}{dx}\\tan(x) = \\sec^2(x)$.',
-  },
-      '$\\cos^2(x)
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: '$\\frac{d}{dx}\\tan(x) = \\sec^2(x)$.',
-  },
+      '$\\cot(x)$',
+      '$\\sec(x)$',
+      '$\\sec^2(x)$',
+      '$\\cos^2(x)$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -110,26 +62,10 @@ export const section14Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The second derivative of $\\sin(x)$ is:',
     options: [
-      '$\\sin(x)
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$, then $\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
-  },
-      '$-\\sin(x)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$, then $\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
-  },
-      '$-\\cos(x)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$, then $\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
-  },
-      '$\\cos(x)
-    correctIndex: 3,
-    difficulty: 'medium',
-    explanation: '$\\frac{d}{dx}\\sin(x) = \\cos(x)$, then $\\frac{d}{dx}\\cos(x) = -\\sin(x)$.',
-  },
+      '$\\sin(x)$',
+      '$-\\cos(x)$',
+      '$\\cos(x)$',
+      '$-\\sin(x)$'
     ],
     correctIndex: 3,
     difficulty: 'medium',

@@ -8,12 +8,7 @@ export const section46Quiz: DifficultyQuizData = {
     {
       id: 's46-e01',
       question: 'The norm ||v|| induced by an inner product is:',
-      options: [
-      '⟨v,v⟩',
-      '|⟨v,v⟩|',
-      '√⟨v,v⟩',
-      '⟨v,v⟩²',
-    ],
+      options: ['⟨v,v⟩', '|⟨v,v⟩|', '√⟨v,v⟩', '⟨v,v⟩²'],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: '||v|| = √⟨v,v⟩.'
@@ -21,12 +16,7 @@ export const section46Quiz: DifficultyQuizData = {
     {
       id: 's46-e02',
       question: 'Vectors u and v are orthogonal if:',
-      options: [
-      '||u|| = ||v||',
-      'u = v',
-      'u + v = 0',
-      '⟨u,v⟩ = 0',
-    ],
+      options: ['||u|| = ||v||', 'u = v', 'u + v = 0', '⟨u,v⟩ = 0'],
       correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Orthogonal means ⟨u,v⟩ = 0.'
@@ -34,12 +24,7 @@ export const section46Quiz: DifficultyQuizData = {
     {
       id: 's46-e03',
       question: 'For an orthonormal basis {e₁,...,eₙ}, ⟨eᵢ,eⱼ⟩ equals:',
-      options: [
-      'δᵢⱼ (1 if i=j, 0 otherwise)',
-      '1 for all i,j',
-      '0 for all i,j',
-      'n',
-    ],
+      options: ['δᵢⱼ (1 if i=j, 0 otherwise)', '1 for all i,j', '0 for all i,j', 'n'],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Orthonormal means ⟨eᵢ,eⱼ⟩ = δᵢⱼ.'
@@ -47,25 +32,15 @@ export const section46Quiz: DifficultyQuizData = {
     {
       id: 's46-e04',
       question: 'λ is an eigenvalue of T iff:',
-      options: [
-      'T(v) = v for some v',
-      'det(T) = λ',
-      'T(v) = λv for some non-zero v',
-      'trace(T) = λ',
-    ],
-      correctIndex: 2,
+      options: ['T(v) = v for some v', 'T(v) = λv for some non-zero v', 'det(T) = λ', 'trace(T) = λ'],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'An eigenvalue λ satisfies T(v) = λv for some non-zero eigenvector v.'
     },
     {
       id: 's46-e05',
       question: 'The eigenvalues of T are the:',
-      options: [
-      'Diagonal entries',
-      'Entries of T',
-      'Roots of the characteristic polynomial',
-      'Pivots',
-    ],
+      options: ['Diagonal entries', 'Entries of T', 'Roots of the characteristic polynomial', 'Pivots'],
       correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Eigenvalues are exactly the roots of the characteristic polynomial.'
@@ -73,13 +48,8 @@ export const section46Quiz: DifficultyQuizData = {
     {
       id: 's46-e06',
       question: 'If V is n-dimensional over F, the characteristic polynomial has degree:',
-      options: [
-      '1',
-      'n',
-      'n - 1',
-      '2n',
-    ],
-      correctIndex: 1,
+      options: ['1', 'n - 1', '2n', 'n'],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'The characteristic polynomial has degree n = dim(V).'
     }
@@ -88,73 +58,48 @@ export const section46Quiz: DifficultyQuizData = {
     {
       id: 's46-m01',
       question: 'The Gram-Schmidt process produces:',
-      options: ['Eigenvalues', 'An orthonormal basis from any basis', 'The determinant', 'The trace'],
-      correctIndex: 1,
+      options: ['An orthonormal basis from any basis', 'Eigenvalues', 'The determinant', 'The trace'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Gram-Schmidt orthogonalizes and normalizes a given basis.'
     },
     {
       id: 's46-m02',
       question: 'The Cauchy-Schwarz inequality states:',
-      options: [
-      '|⟨u,v⟩| ≤ ||u|| + ||v||',
-      '|⟨u,v⟩| ≥ ||u|| · ||v||',
-      '|⟨u,v⟩| ≤ ||u|| · ||v||',
-      '⟨u,v⟩ = ||u|| · ||v||',
-    ],
-      correctIndex: 2,
+      options: ['|⟨u,v⟩| ≤ ||u|| + ||v||', '|⟨u,v⟩| ≤ ||u|| · ||v||', '|⟨u,v⟩| ≥ ||u|| · ||v||', '⟨u,v⟩ = ||u|| · ||v||'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: '|⟨u,v⟩| ≤ ||u|| ||v|| with equality iff u and v are linearly dependent.'
     },
     {
       id: 's46-m03',
       question: 'The characteristic polynomial of T is:',
-      options: [
-      'det(T)',
-      'trace(T - λI)',
-      'det(T)λ',
-      'det(T - λI)',
-    ],
-      correctIndex: 3,
+      options: ['det(T)', 'trace(T - λI)', 'det(T - λI)', 'det(T)λ'],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The characteristic polynomial is f(λ) = det(T - λI) or det(λI - T).'
     },
     {
       id: 's46-m04',
       question: 'The sum of eigenvalues equals:',
-      options: [
-      'trace(T)',
-      'det(T)',
-      'rank(T)',
-      '0',
-    ],
-      correctIndex: 0,
+      options: ['det(T)', 'rank(T)', '0', 'trace(T)'],
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'The trace equals the sum of eigenvalues (with multiplicity).'
     },
     {
       id: 's46-m05',
       question: 'The product of eigenvalues equals:',
-      options: [
-      'trace(T)',
-      'rank(T)',
-      'nullity(T)',
-      'det(T)',
-    ],
-      correctIndex: 3,
+      options: ['det(T)', 'trace(T)', 'rank(T)', 'nullity(T)'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'The determinant equals the product of eigenvalues (with multiplicity).'
     },
     {
       id: 's46-m06',
       question: 'Eigenvectors for distinct eigenvalues are:',
-      options: [
-      'Linearly independent',
-      'Equal',
-      'Orthogonal',
-      'Parallel',
-    ],
-      correctIndex: 0,
+      options: ['Equal', 'Linearly independent', 'Orthogonal', 'Parallel'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Eigenvectors corresponding to distinct eigenvalues are always linearly independent.'
     }
@@ -163,78 +108,48 @@ export const section46Quiz: DifficultyQuizData = {
     {
       id: 's46-h01',
       question: 'The Riesz representation theorem says every linear functional f on a finite-dimensional inner product space has the form:',
-      options: [
-      'f(v) = ||v||',
-      'f(v) = 0',
-      'f(v) = trace(v)',
-      'f(v) = ⟨v,u⟩ for unique u',
-    ],
-      correctIndex: 3,
+      options: ['f(v) = ||v||', 'f(v) = 0', 'f(v) = ⟨v,u⟩ for unique u', 'f(v) = trace(v)'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Every linear functional equals f(v) = ⟨v,u⟩ for a unique u.'
     },
     {
       id: 's46-h02',
       question: 'A polynomial p annihilates T if:',
-      options: [
-      'p(T) = I',
-      'p(T) = 0',
-      'p(λ) = 0 for some eigenvalue',
-      'deg(p) = n',
-    ],
-      correctIndex: 1,
+      options: ['p(T) = I', 'p(λ) = 0 for some eigenvalue', 'deg(p) = n', 'p(T) = 0'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'p annihilates T means p(T) = 0 (the zero operator).'
     },
     {
       id: 's46-h03',
       question: 'The minimal polynomial of T is:',
-      options: [
-      'The characteristic polynomial',
-      'Always degree 1',
-      'Not unique',
-      'The monic polynomial of least degree annihilating T',
-    ],
-      correctIndex: 3,
+      options: ['The monic polynomial of least degree annihilating T', 'The characteristic polynomial', 'Always degree 1', 'Not unique'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'The minimal polynomial is the unique monic polynomial of smallest degree that annihilates T.'
     },
     {
       id: 's46-h04',
       question: 'The Cayley-Hamilton theorem states:',
-      options: [
-      'Every matrix is diagonalizable',
-      'The minimal polynomial equals the characteristic polynomial',
-      'Eigenvalues are always real',
-      'Every operator is annihilated by its characteristic polynomial',
-    ],
-      correctIndex: 3,
+      options: ['Every matrix is diagonalizable', 'Every operator is annihilated by its characteristic polynomial', 'The minimal polynomial equals the characteristic polynomial', 'Eigenvalues are always real'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'Cayley-Hamilton: if f is the characteristic polynomial of T, then f(T) = 0.'
     },
     {
       id: 's46-h05',
       question: 'The algebraic multiplicity of eigenvalue λ is:',
-      options: [
-      'The multiplicity of λ as root of characteristic polynomial',
-      'dim(ker(T - λI))',
-      'Always 1',
-      'The trace',
-    ],
-      correctIndex: 0,
+      options: ['dim(ker(T - λI))', 'Always 1', 'The multiplicity of λ as root of characteristic polynomial', 'The trace'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Algebraic multiplicity = power of (x - λ) in the characteristic polynomial.'
     },
     {
       id: 's46-h06',
       question: 'Geometric multiplicity ≤ algebraic multiplicity is:',
-      options: [
-      'Sometimes true',
-      'Never true',
-      'Always true',
-      'True only for symmetric matrices',
-    ],
-      correctIndex: 2,
+      options: ['Sometimes true', 'Never true', 'True only for symmetric matrices', 'Always true'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Geometric multiplicity (dim of eigenspace) is always ≤ algebraic multiplicity.'
     }
@@ -247,64 +162,39 @@ export const section47Quiz: DifficultyQuizData = {
     {
       id: 's47-e01',
       question: 'A matrix is diagonalizable if it can be written as:',
-      options: [
-      'A = P + D',
-      'A = PDP⁻¹ where D is diagonal',
-      'A = D²',
-      'A = I',
-    ],
-      correctIndex: 1,
+      options: ['A = PDP⁻¹ where D is diagonal', 'A = P + D', 'A = D²', 'A = I'],
+      correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Diagonalizable means A = PDP⁻¹ where D is diagonal and P is invertible.'
     },
     {
       id: 's47-e02',
       question: 'If A is diagonal, its eigenvalues are:',
-      options: [
-      'All zero',
-      'The off-diagonal entries',
-      'The diagonal entries',
-      'Undefined',
-    ],
-      correctIndex: 2,
+      options: ['All zero', 'The diagonal entries', 'The off-diagonal entries', 'Undefined'],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'For a diagonal matrix, the eigenvalues are exactly the diagonal entries.'
     },
     {
       id: 's47-e03',
       question: 'A matrix with n distinct eigenvalues is:',
-      options: [
-      'Never diagonalizable',
-      'Always diagonalizable',
-      'Singular',
-      'Nilpotent',
-    ],
-      correctIndex: 1,
+      options: ['Never diagonalizable', 'Singular', 'Always diagonalizable', 'Nilpotent'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Distinct eigenvalues give linearly independent eigenvectors, so the matrix is diagonalizable.'
     },
     {
       id: 's47-e04',
       question: 'Similar matrices have:',
-      options: [
-      'Different eigenvalues',
-      'Different ranks',
-      'The same characteristic polynomial',
-      'The same entries',
-    ],
-      correctIndex: 2,
+      options: ['Different eigenvalues', 'Different ranks', 'The same entries', 'The same characteristic polynomial'],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Similar matrices share eigenvalues, characteristic polynomial, trace, determinant, rank.'
     },
     {
       id: 's47-e05',
       question: '(T*)* equals:',
-      options: [
-      'T',
-      'I',
-      'T*',
-      '0',
-    ],
+      options: ['T', 'I', 'T*', '0'],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'The adjoint of the adjoint is the original operator.'
@@ -312,13 +202,8 @@ export const section47Quiz: DifficultyQuizData = {
     {
       id: 's47-e06',
       question: 'The columns of P in A = PDP⁻¹ are:',
-      options: [
-      'The rows of A',
-      'The eigenvalues of A',
-      'The diagonal of D',
-      'The eigenvectors of A',
-    ],
-      correctIndex: 3,
+      options: ['The rows of A', 'The eigenvectors of A', 'The eigenvalues of A', 'The diagonal of D'],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'The columns of P are the eigenvectors corresponding to the eigenvalues in D.'
     }
@@ -327,77 +212,47 @@ export const section47Quiz: DifficultyQuizData = {
     {
       id: 's47-m01',
       question: 'The adjoint T* of operator T satisfies:',
-      options: [
-      '⟨Tv,w⟩ = ⟨v,T*w⟩',
-      'T*T = I',
-      'T* = T',
-      'T* = T⁻¹',
-    ],
-      correctIndex: 0,
+      options: ['T*T = I', 'T* = T', '⟨Tv,w⟩ = ⟨v,T*w⟩', 'T* = T⁻¹'],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'The adjoint satisfies ⟨Tv,w⟩ = ⟨v,T*w⟩ for all v, w.'
     },
     {
       id: 's47-m02',
       question: 'The matrix of T* relative to an orthonormal basis is:',
-      options: [
-      'The same as T',
-      'The conjugate transpose',
-      'The transpose of T\\\'s matrix',
-      'The inverse',
-    ],
-      correctIndex: 1,
+      options: ['The same as T', 'The transpose of T\'s matrix', 'The inverse', 'The conjugate transpose'],
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'For orthonormal bases, [T*] = [T]* (conjugate transpose).'
     },
     {
       id: 's47-m03',
       question: 'A subspace W is T-invariant if:',
-      options: [
-      'T(W) = V',
-      'T(W) ⊆ W',
-      'W ⊆ T(V)',
-      'T(W) = {0}',
-    ],
-      correctIndex: 1,
+      options: ['T(W) ⊆ W', 'T(W) = V', 'W ⊆ T(V)', 'T(W) = {0}'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'W is T-invariant if T maps W into itself: T(w) ∈ W for all w ∈ W.'
     },
     {
       id: 's47-m04',
       question: 'A matrix is diagonalizable iff:',
-      options: [
-      'It has n linearly independent eigenvectors',
-      'It is symmetric',
-      'It is invertible',
-      'det ≠ 0',
-    ],
-      correctIndex: 0,
+      options: ['It is symmetric', 'It has n linearly independent eigenvectors', 'It is invertible', 'det ≠ 0'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: 'An n × n matrix is diagonalizable iff it has n linearly independent eigenvectors.'
     },
     {
       id: 's47-m05',
       question: 'If T is diagonalizable with eigenvalues λ₁,...,λₙ, then T² has eigenvalues:',
-      options: [
-      '2λ₁,...,2λₙ',
-      'λ₁+1,...,λₙ+1',
-      '√λ₁,...,√λₙ',
-      'λ₁²,...,λₙ²',
-    ],
-      correctIndex: 3,
+      options: ['2λ₁,...,2λₙ', 'λ₁+1,...,λₙ+1', 'λ₁²,...,λₙ²', '√λ₁,...,√λₙ'],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'If Tv = λv, then T²v = T(Tv) = T(λv) = λTv = λ²v.'
     },
     {
       id: 's47-m06',
       question: 'Two matrices represent the same linear operator iff they are:',
-      options: [
-      'Equal',
-      'Transpose of each other',
-      'Have the same trace',
-      'Similar',
-    ],
+      options: ['Equal', 'Transpose of each other', 'Have the same trace', 'Similar'],
       correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Similar matrices (A = P⁻¹BP) represent the same operator in different bases.'
@@ -407,13 +262,8 @@ export const section47Quiz: DifficultyQuizData = {
     {
       id: 's47-h01',
       question: 'T is diagonalizable iff the minimal polynomial:',
-      options: [
-      'Has degree n',
-      'Has no repeated roots',
-      'Equals the characteristic polynomial',
-      'Is constant',
-    ],
-      correctIndex: 1,
+      options: ['Has no repeated roots', 'Has degree n', 'Equals the characteristic polynomial', 'Is constant'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'T is diagonalizable iff the minimal polynomial splits into distinct linear factors.'
     },
@@ -428,52 +278,32 @@ export const section47Quiz: DifficultyQuizData = {
     {
       id: 's47-h03',
       question: 'V = W₁ ⊕ W₂ (direct sum) means:',
-      options: [
-      'V = W₁ + W₂ and W₁ ∩ W₂ = {0}',
-      'W₁ = W₂',
-      'W₁ ⊆ W₂',
-      'dim(V) = 2',
-    ],
-      correctIndex: 0,
+      options: ['W₁ = W₂', 'W₁ ⊆ W₂', 'V = W₁ + W₂ and W₁ ∩ W₂ = {0}', 'dim(V) = 2'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Direct sum means V is the sum and the intersection is trivial.'
     },
     {
       id: 's47-h04',
       question: 'The primary decomposition theorem says if the minimal polynomial factors as p₁^{r₁}...pₖ^{rₖ}:',
-      options: [
-      'T is diagonalizable',
-      'T = 0',
-      'V = ker(p₁(T)^{r₁}) ⊕ ... ⊕ ker(pₖ(T)^{rₖ})',
-      'All eigenvalues are distinct',
-    ],
-      correctIndex: 2,
+      options: ['T is diagonalizable', 'T = 0', 'All eigenvalues are distinct', 'V = ker(p₁(T)^{r₁}) ⊕ ... ⊕ ker(pₖ(T)^{rₖ})'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Primary decomposition: V decomposes as a direct sum of primary components ker(pᵢ(T)^{rᵢ}).'
     },
     {
       id: 's47-h05',
       question: 'T is triangulable if:',
-      options: [
-      'T has all eigenvalues in F',
-      'There exists a basis with respect to which the matrix is upper triangular',
-      'T is diagonalizable',
-      'T = 0',
-    ],
-      correctIndex: 1,
+      options: ['There exists a basis with respect to which the matrix is upper triangular', 'T has all eigenvalues in F', 'T is diagonalizable', 'T = 0'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: 'T is triangulable iff there\'s a basis giving an upper triangular matrix.'
     },
     {
       id: 's47-h06',
       question: 'By Cayley-Hamilton, an n × n matrix A satisfies:',
-      options: [
-      'A = 0',
-      'Aⁿ = 0',
-      'A is invertible',
-      'The characteristic polynomial equation',
-    ],
-      correctIndex: 3,
+      options: ['A = 0', 'The characteristic polynomial equation', 'Aⁿ = 0', 'A is invertible'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'If p(λ) is the characteristic polynomial of A, then p(A) = 0.'
     }
@@ -486,38 +316,23 @@ export const section48Quiz: DifficultyQuizData = {
     {
       id: 's48-e01',
       question: 'A Jordan block Jₖ(λ) has:',
-      options: [
-      'λ on diagonal, 1s on superdiagonal',
-      'All zeros',
-      'λ on diagonal only',
-      'Random entries',
-    ],
-      correctIndex: 0,
+      options: ['All zeros', 'λ on diagonal only', 'λ on diagonal, 1s on superdiagonal', 'Random entries'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'Jordan block: λ on diagonal, 1s just above diagonal, zeros elsewhere.'
     },
     {
       id: 's48-e02',
       question: 'A is diagonalizable iff all Jordan blocks have size:',
-      options: [
-      'n',
-      '1',
-      '2',
-      '0',
-    ],
-      correctIndex: 1,
+      options: ['n', '2', '0', '1'],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Diagonalizable means all Jordan blocks are 1 × 1 (just eigenvalues on diagonal).'
     },
     {
       id: 's48-e03',
       question: 'T is nilpotent if:',
-      options: [
-      'Tᵏ = 0 for some k',
-      'T = 0',
-      'T has eigenvalue 0',
-      'T is invertible',
-    ],
+      options: ['Tᵏ = 0 for some k', 'T = 0', 'T has eigenvalue 0', 'T is invertible'],
       correctIndex: 0,
       difficulty: 'easy',
       explanation: 'Nilpotent means some power of T is zero.'
@@ -525,34 +340,24 @@ export const section48Quiz: DifficultyQuizData = {
     {
       id: 's48-e04',
       question: 'The only eigenvalue of a nilpotent operator is:',
-      options: [
-      '0',
-      '1',
-      '-1',
-      'No eigenvalues',
-    ],
-      correctIndex: 0,
+      options: ['1', '0', '-1', 'No eigenvalues'],
+      correctIndex: 1,
       difficulty: 'easy',
       explanation: 'If T is nilpotent and Tv = λv with v ≠ 0, then 0 = Tᵏv = λᵏv, so λ = 0.'
     },
     {
       id: 's48-e05',
       question: 'A 2×2 Jordan block J₂(3) equals:',
-      options: ['[[3,0],[0,3]]', '[[3,1],[0,3]]', '[[3,3],[1,1]]', '[[1,3],[3,1]]'],
-      correctIndex: 1,
+      options: ['[[3,0],[0,3]]', '[[3,3],[1,1]]', '[[3,1],[0,3]]', '[[1,3],[3,1]]'],
+      correctIndex: 2,
       difficulty: 'easy',
       explanation: 'J₂(3) has 3 on the diagonal and 1 on the superdiagonal.'
     },
     {
       id: 's48-e06',
       question: 'For an n × n matrix, the sum of sizes of all Jordan blocks equals:',
-      options: [
-      'The rank',
-      'n',
-      'The trace',
-      'The determinant',
-    ],
-      correctIndex: 1,
+      options: ['The rank', 'The trace', 'The determinant', 'n'],
+      correctIndex: 3,
       difficulty: 'easy',
       explanation: 'Total size of Jordan blocks = dimension of the space = n.'
     }
@@ -561,77 +366,47 @@ export const section48Quiz: DifficultyQuizData = {
     {
       id: 's48-m01',
       question: 'A unitary operator U satisfies:',
-      options: [
-      'U² = I',
-      'U = U*',
-      'U*U = UU* = I',
-      'U = 0',
-    ],
-      correctIndex: 2,
+      options: ['U*U = UU* = I', 'U² = I', 'U = U*', 'U = 0'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Unitary means U*U = UU* = I, i.e., U* = U⁻¹.'
     },
     {
       id: 's48-m02',
       question: 'Unitary operators preserve:',
-      options: [
-      'Only length',
-      'Only angles',
-      'Inner products (hence lengths and angles)',
-      'Nothing',
-    ],
-      correctIndex: 2,
+      options: ['Only length', 'Inner products (hence lengths and angles)', 'Only angles', 'Nothing'],
+      correctIndex: 1,
       difficulty: 'medium',
       explanation: '⟨Uv,Uw⟩ = ⟨v,w⟩ for unitary U, preserving inner products.'
     },
     {
       id: 's48-m03',
       question: 'Jordan canonical form exists when:',
-      options: [
-      'The characteristic polynomial splits over F',
-      'Always',
-      'T is diagonalizable',
-      'F = ℝ',
-    ],
-      correctIndex: 0,
+      options: ['Always', 'T is diagonalizable', 'The characteristic polynomial splits over F', 'F = ℝ'],
+      correctIndex: 2,
       difficulty: 'medium',
       explanation: 'Jordan form exists iff all eigenvalues are in F (characteristic polynomial splits).'
     },
     {
       id: 's48-m04',
       question: 'The Jordan form is unique up to:',
-      options: [
-      'Similarity',
-      'Nothing (completely unique)',
-      'Permutation of blocks',
-      'Scalar multiplication',
-    ],
-      correctIndex: 2,
+      options: ['Similarity', 'Nothing (completely unique)', 'Scalar multiplication', 'Permutation of blocks'],
+      correctIndex: 3,
       difficulty: 'medium',
       explanation: 'Jordan form is unique up to ordering of the Jordan blocks.'
     },
     {
       id: 's48-m05',
       question: 'An orthogonal matrix (real case) satisfies:',
-      options: [
-      'A = Aᵀ',
-      'A² = I',
-      'AᵀA = AAᵀ = I',
-      'det(A) = 0',
-    ],
-      correctIndex: 2,
+      options: ['AᵀA = AAᵀ = I', 'A = Aᵀ', 'A² = I', 'det(A) = 0'],
+      correctIndex: 0,
       difficulty: 'medium',
       explanation: 'Orthogonal matrices satisfy AᵀA = I (unitary with real entries).'
     },
     {
       id: 's48-m06',
       question: 'If A has Jordan form with blocks of sizes 3, 2, 1 for eigenvalue λ, the geometric multiplicity of λ is:',
-      options: [
-      '6',
-      '3',
-      '1',
-      'Undefined',
-    ],
+      options: ['6', '3', '1', 'Undefined'],
       correctIndex: 1,
       difficulty: 'medium',
       explanation: 'Geometric multiplicity = number of Jordan blocks for that eigenvalue.'
@@ -641,25 +416,15 @@ export const section48Quiz: DifficultyQuizData = {
     {
       id: 's48-h01',
       question: 'Eigenvalues of a unitary operator have absolute value:',
-      options: [
-      '0',
-      '1',
-      '> 1',
-      '< 1',
-    ],
-      correctIndex: 1,
+      options: ['0', '> 1', '1', '< 1'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'If Uv = λv and U is unitary, then |λ| = 1.'
     },
     {
       id: 's48-h02',
       question: 'The generalized eigenspace for λ is:',
-      options: [
-      'ker(T - λI)',
-      'V',
-      '{0}',
-      'ker((T - λI)ⁿ) for sufficiently large n',
-    ],
+      options: ['ker(T - λI)', 'V', '{0}', 'ker((T - λI)ⁿ) for sufficiently large n'],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'The generalized eigenspace is ker((T - λI)^k) for large enough k.'
@@ -667,12 +432,7 @@ export const section48Quiz: DifficultyQuizData = {
     {
       id: 's48-h03',
       question: 'The number of 1s above the diagonal in Jordan form equals:',
-      options: [
-      'n - (geometric multiplicity summed over eigenvalues)',
-      'n',
-      'The trace',
-      '0',
-    ],
+      options: ['n - (geometric multiplicity summed over eigenvalues)', 'n', 'The trace', '0'],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: '1s above diagonal = n - (number of Jordan blocks) = n - Σ(geometric multiplicities).'
@@ -680,12 +440,7 @@ export const section48Quiz: DifficultyQuizData = {
     {
       id: 's48-h04',
       question: 'The cyclic subspace generated by v under T is:',
-      options: [
-      '{v}',
-      'span{v, Tv, T²v, ...}',
-      'V',
-      'ker(T)',
-    ],
+      options: ['{v}', 'span{v, Tv, T²v, ...}', 'V', 'ker(T)'],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'The T-cyclic subspace generated by v is Z(v;T) = span{v, Tv, T²v, ...}.'
@@ -693,25 +448,15 @@ export const section48Quiz: DifficultyQuizData = {
     {
       id: 's48-h05',
       question: 'Two matrices are similar iff they have:',
-      options: [
-      'The same trace',
-      'The same determinant',
-      'The same size',
-      'The same invariant factors',
-    ],
-      correctIndex: 3,
+      options: ['The same trace', 'The same determinant', 'The same invariant factors', 'The same size'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'Matrices are similar iff they have the same invariant factors (equivalently, same rational form).'
     },
     {
       id: 's48-h06',
       question: 'An n × n nilpotent matrix can have Jordan blocks of size at most:',
-      options: [
-      '1',
-      'n/2',
-      '2',
-      'n',
-    ],
+      options: ['1', 'n/2', '2', 'n'],
       correctIndex: 3,
       difficulty: 'hard',
       explanation: 'A nilpotent has only eigenvalue 0; blocks can be as large as n (for a cyclic nilpotent).'
@@ -727,12 +472,7 @@ export const chapter08Quiz: DifficultyQuizData = {
     {
       id: 'ch08-h01',
       question: 'The parallelogram law states ||u+v||² + ||u-v||² equals:',
-      options: [
-      '2||u||² + 2||v||²',
-      '||u||² + ||v||²',
-      '4||u|| ||v||',
-      '0',
-    ],
+      options: ['2||u||² + 2||v||²', '||u||² + ||v||²', '4||u|| ||v||', '0'],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: '||u+v||² + ||u-v||² = 2||u||² + 2||v||² (parallelogram law).'
@@ -740,12 +480,7 @@ export const chapter08Quiz: DifficultyQuizData = {
     {
       id: 'ch08-h02',
       question: 'The orthogonal complement W⊥ of subspace W consists of:',
-      options: [
-      'Vectors in W',
-      'Vectors orthogonal to every vector in W',
-      'W itself',
-      '{0}',
-    ],
+      options: ['Vectors in W', 'Vectors orthogonal to every vector in W', 'W itself', '{0}'],
       correctIndex: 1,
       difficulty: 'hard',
       explanation: 'W⊥ = {v : ⟨v,w⟩ = 0 for all w ∈ W}.'
@@ -753,59 +488,39 @@ export const chapter08Quiz: DifficultyQuizData = {
     {
       id: 'ch08-h03',
       question: 'dim(W) + dim(W⊥) equals:',
-      options: [
-      '0',
-      'dim(W)',
-      '2·dim(W)',
-      'dim(V)',
-    ],
-      correctIndex: 3,
+      options: ['0', 'dim(W)', 'dim(V)', '2·dim(W)'],
+      correctIndex: 2,
       difficulty: 'hard',
       explanation: 'V = W ⊕ W⊥, so dim(W) + dim(W⊥) = dim(V).'
     },
     {
       id: 'ch08-h04',
       question: 'For orthogonal projection P, P* equals:',
-      options: ['I - P', '-P', 'P', 'P²'],
-      correctIndex: 2,
+      options: ['I - P', '-P', 'P²', 'P'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Orthogonal projections are self-adjoint: P* = P.'
     },
     {
       id: 'ch08-h05',
       question: 'det of a unitary matrix has absolute value:',
-      options: [
-      '0',
-      'n',
-      '1',
-      'Varies',
-    ],
-      correctIndex: 2,
+      options: ['1', '0', 'n', 'Varies'],
+      correctIndex: 0,
       difficulty: 'hard',
       explanation: '|det(U)| = 1 for unitary U since det(U)*det(U*) = det(U)det(U)* = |det(U)|² = 1.'
     },
     {
       id: 'ch08-h06',
       question: 'QR decomposition expresses A as:',
-      options: [
-      'Unitary times upper triangular',
-      'Diagonal times lower triangular',
-      'Lower times upper triangular',
-      'Sum of rank-1 matrices',
-    ],
-      correctIndex: 0,
+      options: ['Diagonal times lower triangular', 'Unitary times upper triangular', 'Lower times upper triangular', 'Sum of rank-1 matrices'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'A = QR where Q is unitary (orthogonal for real) and R is upper triangular.'
     },
     {
       id: 'ch08-h07',
       question: 'The distance from v to subspace W is minimized by:',
-      options: [
-      'Any point in W',
-      'The zero vector',
-      'The orthogonal projection of v onto W',
-      'v itself',
-    ],
+      options: ['Any point in W', 'The zero vector', 'The orthogonal projection of v onto W', 'v itself'],
       correctIndex: 2,
       difficulty: 'hard',
       explanation: 'The closest point in W to v is the orthogonal projection Pᵂv.'
@@ -813,25 +528,15 @@ export const chapter08Quiz: DifficultyQuizData = {
     {
       id: 'ch08-h08',
       question: 'On ℝⁿ with standard inner product, symmetric matrices are:',
-      options: [
-      'Never diagonalizable',
-      'Nilpotent',
-      'Orthogonally diagonalizable',
-      'Unitary',
-    ],
-      correctIndex: 2,
+      options: ['Never diagonalizable', 'Nilpotent', 'Unitary', 'Orthogonally diagonalizable'],
+      correctIndex: 3,
       difficulty: 'hard',
       explanation: 'Real symmetric matrices are orthogonally diagonalizable (spectral theorem).'
     },
     {
       id: 'ch08-h09',
       question: 'Skew-Hermitian (T* = -T) operators have eigenvalues that are:',
-      options: [
-      'Purely imaginary',
-      'Real',
-      'Positive',
-      'Zero',
-    ],
+      options: ['Purely imaginary', 'Real', 'Positive', 'Zero'],
       correctIndex: 0,
       difficulty: 'hard',
       explanation: 'If T* = -T and Tv = λv, then λ = -λ*, so λ is purely imaginary.'
@@ -839,13 +544,8 @@ export const chapter08Quiz: DifficultyQuizData = {
     {
       id: 'ch08-h10',
       question: 'The spectral theorem for normal operators says:',
-      options: [
-      'Normal operators are nilpotent',
-      'Normal operators have no eigenvalues',
-      'Normal operators equal zero',
-      'Normal operators on complex spaces are unitarily diagonalizable',
-    ],
-      correctIndex: 3,
+      options: ['Normal operators are nilpotent', 'Normal operators on complex spaces are unitarily diagonalizable', 'Normal operators have no eigenvalues', 'Normal operators equal zero'],
+      correctIndex: 1,
       difficulty: 'hard',
       explanation: 'A normal operator on a complex inner product space is diagonalizable by a unitary change of basis.'
     }

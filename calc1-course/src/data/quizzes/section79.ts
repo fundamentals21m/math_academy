@@ -6,26 +6,10 @@ export const section79Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'A line in $\\mathbb{R}^n$ through point $\\mathbf{P}$ with direction $\\mathbf{d}$ is:',
     options: [
-      '$\\{\\mathbf{P} + t\\mathbf{d} : t \\in \\mathbb{R}\\}
-    correctIndex: 0,
-    difficulty: 'medium',
-    explanation: 'Parametric form: $\\mathbf{r}(t) = \\mathbf{P} + t\\mathbf{d}$.',
-  },
-      '$\\{\\mathbf{P} + \\mathbf{d}\\}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Parametric form: $\\mathbf{r}(t) = \\mathbf{P} + t\\mathbf{d}$.',
-  },
-      '$\\{t\\mathbf{P} : t \\in \\mathbb{R}\\}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Parametric form: $\\mathbf{r}(t) = \\mathbf{P} + t\\mathbf{d}$.',
-  },
-      '$\\mathbf{P} \\cdot \\mathbf{d}
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Parametric form: $\\mathbf{r}(t) = \\mathbf{P} + t\\mathbf{d}$.',
-  },
+      '$\\{\\mathbf{P} + \\mathbf{d}\\}$',
+      '$\\{t\\mathbf{P} : t \\in \\mathbb{R}\\}$',
+      '$\\{\\mathbf{P} + t\\mathbf{d} : t \\in \\mathbb{R}\\}$',
+      '$\\mathbf{P} \\cdot \\mathbf{d}$'
     ],
     correctIndex: 2,
     difficulty: 'medium',
@@ -36,22 +20,10 @@ export const section79Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The parametric equations for a line are:',
     options: [
-      '$x = P_1 d_1
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'Each coordinate is linear in parameter $t$.',
-  },
-      '$x = P_1 + td_1$, $y = P_2 + td_2$, etc.',
-      '$x = t$, $y = t
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Each coordinate is linear in parameter $t$.',
-  },
-      '$x + y = 0
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Each coordinate is linear in parameter $t$.',
-  },
+      '$x = P_1 d_1$',
+      '$x = t$, $y = t$',
+      '$x + y = 0$',
+      '$x = P_1 + td_1$, $y = P_2 + td_2$, etc.'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -62,12 +34,12 @@ export const section79Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two lines are parallel if:',
     options: [
-      'They intersect',
       'Their direction vectors are scalar multiples',
+      'They intersect',
       'They are perpendicular',
-      'They have the same $y$-intercept',
+      'They have the same $y$-intercept'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'easy',
     explanation: 'Parallel: same or opposite direction.',
   },
@@ -76,26 +48,10 @@ export const section79Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The line through $(1, 2, 3)$ with direction $(1, 0, -1)$ has parametric equations:',
     options: [
-      '$x = t$, $y = 2t$, $z = 3t
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Add $t$ times direction to point.',
-  },
-      '$x = 1$, $y = 2$, $z = 3
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Add $t$ times direction to point.',
-  },
-      '$x = 1 + t$, $y = 2$, $z = 3 - t
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Add $t$ times direction to point.',
-  },
-      '$x = 1 + 2t$, $y = 2 + 3t$, $z = 3
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Add $t$ times direction to point.',
-  },
+      '$x = t$, $y = 2t$, $z = 3t$',
+      '$x = 1 + t$, $y = 2$, $z = 3 - t$',
+      '$x = 1$, $y = 2$, $z = 3$',
+      '$x = 1 + 2t$, $y = 2 + 3t$, $z = 3$'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -108,10 +64,10 @@ export const section79Questions: QuizQuestion[] = [
     options: [
       'Must intersect',
       'Are always perpendicular',
-      'Must be coplanar',
       'May be skew (not intersect and not parallel)',
+      'Must be coplanar'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'In 3D, non-parallel lines can be skew (no intersection).',
   },

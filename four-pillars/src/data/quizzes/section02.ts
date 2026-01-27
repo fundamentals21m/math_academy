@@ -6,12 +6,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To bisect a line segment AB, we construct:',
     options: [
-      'Two circles centered at A and B with radius AB, finding both intersection points',
       'A single circle centered at the midpoint',
-      'Two parallel lines',
+      'Two circles centered at A and B with radius AB, finding both intersection points',
       'A perpendicular from A',
+      'Two parallel lines'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The line connecting both intersection points of these circles is the perpendicular bisector.',
   },
@@ -20,12 +20,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To bisect an angle POQ, we first draw a circle centered at O, then:',
     options: [
-      'Draw a parallel line',
       'Bisect the arc',
-      'Extend the angle arms',
+      'Draw a parallel line',
       'Construct the perpendicular bisector of the chord AB',
+      'Extend the angle arms'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'After marking points A and B on the angle arms, the perpendicular bisector of AB bisects the angle.',
   },
@@ -35,9 +35,9 @@ export const section02Questions: QuizQuestion[] = [
     question: 'The Thales theorem states that parallel lines cut transversals in:',
     options: [
       'Equal segments',
-      'Perpendicular segments',
       'Random segments',
-      'Proportional segments',
+      'Perpendicular segments',
+      'Proportional segments'
     ],
     correctIndex: 3,
     difficulty: 'medium',
@@ -48,12 +48,12 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'To construct a parallel to line L through point P, we use:',
     options: [
-      'Angle bisection',
       'Two perpendicular constructions',
       'One perpendicular construction',
-      'Circle intersection',
+      'Angle bisection',
+      'Circle intersection'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'First construct perpendicular M to L through P, then construct perpendicular to M through P.',
   },
@@ -63,11 +63,11 @@ export const section02Questions: QuizQuestion[] = [
     question: 'Why can angle trisection NOT be done the same way as segment trisection?',
     options: [
       'Angles are harder to measure',
-      'It can be done the same way',
       'There is no parallel-line tool for dividing angles',
-      'Angles don\\\\\'t have length',
+      'Angles don\'t have length',
+      'It can be done the same way'
     ],
-    correctIndex: 2,
+    correctIndex: 1,
     difficulty: 'hard',
     explanation: 'Parallel lines provide the tool for dividing segments; no analogous tool exists for angles.',
   },
@@ -76,10 +76,10 @@ export const section02Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Thales theorem is fundamental because it allows us to:',
     options: [
-      'Bisect angles',
       'Construct circles',
+      'Bisect angles',
       'Use algebra in geometry (multiply/divide lengths)',
-      'Prove lines are perpendicular',
+      'Prove lines are perpendicular'
     ],
     correctIndex: 2,
     difficulty: 'hard',

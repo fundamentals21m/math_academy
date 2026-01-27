@@ -6,12 +6,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What is a tangent line to a curve at a point?',
     options: [
-      'A line that best approximates the curve near that point',
       'A line that crosses the curve at two points',
       'A vertical line through the point',
-      'A line parallel to the x-axis',
+      'A line that best approximates the curve near that point',
+      'A line parallel to the x-axis'
     ],
-    correctIndex: 0,
+    correctIndex: 2,
     difficulty: 'easy',
     explanation: 'The tangent line at a point is the line that best approximates the curve near that point—it shows the instantaneous direction of the curve.',
   },
@@ -22,10 +22,10 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'A line tangent to a curve',
       'A line parallel to the curve',
-      'A line passing through two points on a curve',
       'A vertical line',
+      'A line passing through two points on a curve'
     ],
-    correctIndex: 2,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'A secant line passes through two points on a curve. As the two points get closer together, the secant approaches the tangent.',
   },
@@ -34,12 +34,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'How do we find the tangent line from secant lines?',
     options: [
-      'By averaging many secant lines',
       'By taking the limit as the two points on the secant merge into one',
+      'By averaging many secant lines',
       'By drawing a perpendicular line',
-      'By extending the secant to infinity',
+      'By extending the secant to infinity'
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     difficulty: 'medium',
     explanation: 'The tangent is the limit of secant lines as the two points approach each other—what the secant "wants to become" as the gap closes.',
   },
@@ -48,12 +48,12 @@ export const section06Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'What does the slope of the tangent line tell us?',
     options: [
-      'The instantaneous rate of change of the function',
       'The area under the curve',
+      'The instantaneous rate of change of the function',
       'The maximum value of the function',
-      'The y-intercept of the function',
+      'The y-intercept of the function'
     ],
-    correctIndex: 0,
+    correctIndex: 1,
     difficulty: 'easy',
     explanation: 'The slope of the tangent line is the derivative—it tells us the instantaneous rate of change of the function at that point.',
   },
@@ -73,10 +73,10 @@ export const section06Questions: QuizQuestion[] = [
     options: [
       'At every point',
       'Only at the y-intercept',
-      'At inflection points',
       'At maxima and minima (where the derivative is zero)',
+      'At inflection points'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'The tangent line is horizontal where the derivative equals zero—at local maxima and minima where the function momentarily stops rising or falling.',
   },

@@ -1,0 +1,72 @@
+import type { QuizQuestion } from './types';
+
+export const section09Questions: QuizQuestion[] = [
+  {
+    id: 1,
+    type: 'multiple-choice',
+    question: 'The Euclidean group $SE(3)$ consists of:',
+    options: [
+      'Rotations and translations in 3D space',
+      'Only rotations in 3D space',
+      'Only translations in 3D space',
+      'Reflections and rotations',
+    ],
+    correctIndex: 0,
+    difficulty: 'easy',
+    explanation: 'The special Euclidean group $SE(3)$ is the group of all rigid motions in 3D: rotations (from $SO(3)$) combined with translations. It has dimension 6.',
+  },
+  {
+    id: 2,
+    type: 'multiple-choice',
+    question: 'The rotation group $SO(3)$ consists of $3 \\times 3$ real matrices $R$ satisfying:',
+    options: [
+      '$R^T R = I$ and $\\det(R) = 1$',
+      '$R^T R = I$ and $\\det(R) = -1$',
+      '$R^T = R$ (symmetric)',
+      '$R^2 = I$',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: '$SO(3)$ consists of orthogonal matrices ($R^T R = I$) with determinant $+1$. The determinant condition excludes improper rotations (reflections).',
+  },
+  {
+    id: 3,
+    type: 'numeric',
+    question: 'What is the dimension of the rotation group $SO(3)$?',
+    correctAnswer: 3,
+    numericRange: { min: 0, max: 10, precision: 0 },
+    difficulty: 'easy',
+    explanation: '$SO(3)$ has dimension 3, corresponding to three independent rotation angles (e.g., Euler angles or axis-angle representation). A rotation can be about any axis in 3D space.',
+  },
+  {
+    id: 4,
+    type: 'multiple-choice',
+    question: 'The Lie algebra $\\mathfrak{so}(3)$ of $SO(3)$ consists of:',
+    options: [
+      '$3 \\times 3$ antisymmetric matrices',
+      '$3 \\times 3$ symmetric matrices',
+      '$3 \\times 3$ orthogonal matrices',
+      '$3 \\times 3$ diagonal matrices',
+    ],
+    correctIndex: 0,
+    difficulty: 'medium',
+    explanation: 'The Lie algebra $\\mathfrak{so}(3)$ consists of antisymmetric matrices ($A^T = -A$). These are the "infinitesimal generators" of rotations and can be identified with angular velocities.',
+  },
+  {
+    id: 5,
+    type: 'text',
+    question: 'What mathematical structure describes the tangent space at the identity of a Lie group?',
+    correctAnswer: 'Lie algebra',
+    difficulty: 'easy',
+    explanation: 'The Lie algebra of a Lie group $G$ is the tangent space at the identity element, equipped with the Lie bracket operation. It captures the local structure of the group.',
+  },
+  {
+    id: 6,
+    type: 'numeric',
+    question: 'What is the dimension of $SE(3)$, the group of rigid motions in 3D?',
+    correctAnswer: 6,
+    numericRange: { min: 0, max: 20, precision: 0 },
+    difficulty: 'medium',
+    explanation: '$SE(3)$ has dimension $6 = 3 + 3$: three dimensions for rotations ($SO(3)$) plus three dimensions for translations ($\\mathbb{R}^3$).',
+  },
+];

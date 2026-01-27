@@ -41,7 +41,6 @@ const SECTIONS = [
   { id: 'prob_stats', title: 'Probability and Statistics', subtitle: 'Random variables, distributions, and statistical inference', style: 'subject' },
   { id: 'games', title: 'Games', subtitle: 'Practice with competitive math challenges', style: 'featured' },
   { id: 'podcast_focus', title: 'Podcast Focus Subjects', subtitle: 'Deep dives into topics from our podcasts', style: 'subject' },
-  { id: 'literature', title: 'Literature', subtitle: 'Classic works of literature with reading comprehension', style: 'subject' },
 ];
 
 // Course data
@@ -97,7 +96,6 @@ const COURSES = [
   { id: 'dh-taleb', title: 'Dynamic Hedging', description: "Master options risk management with Nassim Taleb's classic. From delta hedging and the Greeks to exotic options, learn the practitioner's approach to managing vanilla and exotic derivatives.", icon: '📈', url: 'https://dh-taleb-deploy.vercel.app/', tags: ['8 Parts', '32 Sections'], sections: ['prob_stats'], totalSections: 32, progressPrefix: 'dh-taleb:', leaderboardUrl: 'https://dh-taleb-deploy.vercel.app/#/leaderboard', shortName: 'Dynamic Hedging', progressGradient: 'linear-gradient(90deg, #10b981, #34d399)' },
   { id: 'shreve2', title: 'Stochastic Calculus for Finance', description: "Master continuous-time models for quantitative finance with Shreve's classic textbook. From Brownian motion and Itô calculus to Black-Scholes, exotic options, and term structure models.", icon: '∫', url: 'https://shreve2-deploy.vercel.app/', tags: ['11 Parts', '54 Sections'], sections: ['prob_stats', 'calculus'], totalSections: 54, progressPrefix: 'shreve2:', leaderboardUrl: 'https://shreve2-deploy.vercel.app/#/leaderboard', shortName: 'Stochastic Calculus', progressGradient: 'linear-gradient(90deg, #8b5cf6, #a78bfa)' },
   { id: 'lagrange', title: 'Mécanique analytique (Lagrange)', description: 'Master analytical mechanics: Lagrangian and Hamiltonian formulations, non-inertial reference frames, and rigid body dynamics.', icon: '⚙️', url: 'https://lagrange-deploy.vercel.app/', tags: ['4 Parts', '21 Sections'], sections: ['calculus'], totalSections: 21, progressPrefix: 'lagrange:', leaderboardUrl: 'https://lagrange-deploy.vercel.app/#/leaderboard', shortName: 'Lagrange', progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)' },
-  { id: 'orwell-1984', title: 'Nineteen Eighty-Four', description: "George Orwell's dystopian masterpiece exploring totalitarianism, surveillance, and the manipulation of truth. Complete with reading comprehension quizzes and interactive visualizations.", icon: '👁️', url: 'https://orwell-1984-deploy.vercel.app/', tags: ['4 Parts', '25 Sections'], sections: ['literature'], totalSections: 25, progressPrefix: 'orwell-1984:', leaderboardUrl: 'https://orwell-1984-deploy.vercel.app/#/leaderboard', shortName: '1984', progressGradient: 'linear-gradient(90deg, #e11d48, #f43f5e)' },
 ];
 
 // Seed function only adds NEW courses - existing courses are never modified

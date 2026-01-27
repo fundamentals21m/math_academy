@@ -6,28 +6,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cross-ratio of four points p, q, r, s is defined as:',
     options: [
-      '$(r - p) + (s - q)
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'The cross-ratio is a specific ratio of ratios of distances.',
-  },
-      '$\\frac{r + s}{p + q}
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The cross-ratio is a specific ratio of ratios of distances.',
-  },
-      '$(r - p)(s - q)(r - q)(s - p)
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The cross-ratio is a specific ratio of ratios of distances.',
-  },
-      '$\\frac{(r - p)(s - q)}{(r - q)(s - p)}
-    correctIndex: 1,
-    difficulty: 'easy',
-    explanation: 'The cross-ratio is a specific ratio of ratios of distances.',
-  },
+      '$(r - p) + (s - q)$',
+      '$(r - p)(s - q)(r - q)(s - p)$',
+      '$\\frac{r + s}{p + q}$',
+      '$\\frac{(r - p)(s - q)}{(r - q)(s - p)}$'
     ],
-    correctIndex: 1,
+    correctIndex: 3,
     difficulty: 'easy',
     explanation: 'The cross-ratio is a specific ratio of ratios of distances.',
   },
@@ -37,9 +21,9 @@ export const section37Questions: QuizQuestion[] = [
     question: 'The cross-ratio is invariant under:',
     options: [
       'Linear fractional transformations (projections)',
-      'Translation only',
       'Rotation only',
-      'Squaring',
+      'Translation only',
+      'Squaring'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -52,8 +36,8 @@ export const section37Questions: QuizQuestion[] = [
     options: [
       '1',
       '4/3',
-      '2',
       '3/2',
+      '2'
     ],
     correctIndex: 1,
     difficulty: 'medium',
@@ -64,12 +48,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Translation x → x + l changes the cross-ratio:',
     options: [
-      'By multiplying it by l',
       'By adding l to it',
-      'By subtracting l',
+      'By multiplying it by l',
       'Not at all',
+      'By subtracting l'
     ],
-    correctIndex: 3,
+    correctIndex: 2,
     difficulty: 'medium',
     explanation: 'Translation adds the same constant to all four points, so differences are unchanged.',
   },
@@ -79,9 +63,9 @@ export const section37Questions: QuizQuestion[] = [
     question: 'Scaling x → kx changes the cross-ratio:',
     options: [
       'By multiplying it by k',
-      'By dividing by k',
       'By multiplying it by k²',
-      'Not at all',
+      'By dividing by k',
+      'Not at all'
     ],
     correctIndex: 3,
     difficulty: 'hard',
@@ -92,12 +76,12 @@ export const section37Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The cross-ratio is the quantity preserved by projection that allows us to recognize:',
     options: [
-      'Right angles',
-      'Equal lengths',
       'Equal tiles in perspective',
-      'Parallel lines',
+      'Equal lengths',
+      'Right angles',
+      'Parallel lines'
     ],
-    correctIndex: 2,
+    correctIndex: 0,
     difficulty: 'hard',
     explanation: 'The cross-ratio preserves the "equal spacing" information even when lengths appear distorted.',
   },

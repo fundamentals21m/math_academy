@@ -6,26 +6,10 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The dot product $\\mathbf{a} \\cdot \\mathbf{b}$ in $\\mathbb{R}^n$ equals:',
     options: [
-      '$|\\mathbf{a}||\\mathbf{b}|
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: 'Dot product: $\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + ... + a_n b_n$.',
-  },
-      '$(a_1 b_1, ..., a_n b_n)
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Dot product: $\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + ... + a_n b_n$.',
-  },
-      '$\\mathbf{a} + \\mathbf{b}
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Dot product: $\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + ... + a_n b_n$.',
-  },
-      '$\\sum_{i=1}^n a_i b_i
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Dot product: $\\mathbf{a} \\cdot \\mathbf{b} = a_1 b_1 + a_2 b_2 + ... + a_n b_n$.',
-  },
+      '$|\\mathbf{a}||\\mathbf{b}|$',
+      '$(a_1 b_1, ..., a_n b_n)$',
+      '$\\sum_{i=1}^n a_i b_i$',
+      '$\\mathbf{a} + \\mathbf{b}$'
     ],
     correctIndex: 2,
     difficulty: 'easy',
@@ -45,26 +29,10 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The length (norm) of $\\mathbf{v}$ is:',
     options: [
-      '$\\sqrt{\\mathbf{v} \\cdot \\mathbf{v}}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: '$\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + ... + v_n^2}$.',
-  },
-      '$\\mathbf{v} \\cdot \\mathbf{v}
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + ... + v_n^2}$.',
-  },
-      '$v_1 + v_2 + ...
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + ... + v_n^2}$.',
-  },
-      '$|v_1| + |v_2| + ...
-    correctIndex: 3,
-    difficulty: 'easy',
-    explanation: '$\\|\\mathbf{v}\\| = \\sqrt{\\mathbf{v} \\cdot \\mathbf{v}} = \\sqrt{v_1^2 + ... + v_n^2}$.',
-  },
+      '$\\mathbf{v} \\cdot \\mathbf{v}$',
+      '$v_1 + v_2 + ...$',
+      '$|v_1| + |v_2| + ...$',
+      '$\\sqrt{\\mathbf{v} \\cdot \\mathbf{v}}$'
     ],
     correctIndex: 3,
     difficulty: 'easy',
@@ -84,22 +52,10 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'Two vectors are orthogonal if:',
     options: [
+      '$\\mathbf{a} \\cdot \\mathbf{b} = 0$',
       'They have the same length',
-      '$\\mathbf{a} = \\mathbf{b}
-    correctIndex: 2,
-    difficulty: 'easy',
-    explanation: 'Orthogonal (perpendicular) means dot product is zero.',
-  },
-      '$\\mathbf{a} \\cdot \\mathbf{b} = 0
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Orthogonal (perpendicular) means dot product is zero.',
-  },
-      '$\\mathbf{a} + \\mathbf{b} = \\mathbf{0}
-    correctIndex: 0,
-    difficulty: 'easy',
-    explanation: 'Orthogonal (perpendicular) means dot product is zero.',
-  },
+      '$\\mathbf{a} = \\mathbf{b}$',
+      '$\\mathbf{a} + \\mathbf{b} = \\mathbf{0}$'
     ],
     correctIndex: 0,
     difficulty: 'easy',
@@ -110,26 +66,10 @@ export const section75Questions: QuizQuestion[] = [
     type: 'multiple-choice',
     question: 'The Cauchy-Schwarz inequality states:',
     options: [
-      '$|\\mathbf{a} \\cdot \\mathbf{b}| = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|
-    correctIndex: 2,
-    difficulty: 'medium',
-    explanation: 'Cauchy-Schwarz: dot product magnitude is at most the product of lengths.',
-  },
-      '$|\\mathbf{a} \\cdot \\mathbf{b}| \\geq \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Cauchy-Schwarz: dot product magnitude is at most the product of lengths.',
-  },
-      '$|\\mathbf{a} \\cdot \\mathbf{b}| \\leq \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Cauchy-Schwarz: dot product magnitude is at most the product of lengths.',
-  },
-      '$\\mathbf{a} \\cdot \\mathbf{b} = 0
-    correctIndex: 1,
-    difficulty: 'medium',
-    explanation: 'Cauchy-Schwarz: dot product magnitude is at most the product of lengths.',
-  },
+      '$|\\mathbf{a} \\cdot \\mathbf{b}| = \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|$',
+      '$|\\mathbf{a} \\cdot \\mathbf{b}| \\leq \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|$',
+      '$|\\mathbf{a} \\cdot \\mathbf{b}| \\geq \\|\\mathbf{a}\\| \\|\\mathbf{b}\\|$',
+      '$\\mathbf{a} \\cdot \\mathbf{b} = 0$'
     ],
     correctIndex: 1,
     difficulty: 'medium',
