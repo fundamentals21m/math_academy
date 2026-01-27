@@ -15,8 +15,9 @@
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  flex: 1 1 0;        /* Equal width, shrink equally */
-  min-width: 0;       /* Allow shrinking below content size */
+  flex: 0 0 calc(25% - 0.75rem);  /* 4 per row, accounting for gap */
+  min-width: 200px;               /* Minimum readable width */
+  max-width: calc(25% - 0.75rem); /* Enforce max 4 per row */
 }
 
 .course-card:hover {
@@ -149,7 +150,7 @@
 
 .courses-grid.expanded {
   display: flex;
-  flex-wrap: nowrap;  /* Force single row */
+  flex-wrap: wrap;  /* Allow wrapping to new rows */
 }
 
 @keyframes slideDown {
