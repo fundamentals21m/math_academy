@@ -98,8 +98,6 @@ export interface CourseConfig {
   description?: string;
   /** Optional accent color */
   accent?: string;
-  /** Optional YouTube playlist URL */
-  youtubePlaylistUrl?: string;
 }
 
 const CourseConfigContext = createContext<CourseConfig | null>(null);

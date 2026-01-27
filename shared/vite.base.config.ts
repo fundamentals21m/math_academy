@@ -41,9 +41,13 @@ export function createCourseViteConfig(options: CourseViteOptions): UserConfig {
         // Ensure dependencies resolve from course's node_modules to prevent duplicates
         'react': path.resolve(courseDir, './node_modules/react'),
         'react-dom': path.resolve(courseDir, './node_modules/react-dom'),
+        'react-router-dom': path.resolve(courseDir, './node_modules/react-router-dom'),
+        'framer-motion': path.resolve(courseDir, './node_modules/framer-motion'),
         'katex': path.resolve(courseDir, './node_modules/katex'),
+        'firebase': path.resolve(courseDir, './node_modules/firebase'),
+        'nostr-tools': path.resolve(courseDir, './node_modules/nostr-tools'),
       },
-      dedupe: ['react', 'react-dom', 'katex'],
+      dedupe: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'katex', 'firebase', 'nostr-tools'],
     },
     optimizeDeps: {
       include: ['katex'],

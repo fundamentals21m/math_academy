@@ -3630,12 +3630,24 @@ importers:
       firebase:
         specifier: ^12.8.0
         version: 12.8.0
+      framer-motion:
+        specifier: ^12.23.26
+        version: 12.25.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       katex:
         specifier: ^0.16.0
         version: 0.16.27
+      nostr-tools:
+        specifier: ^2.7.0
+        version: 2.19.4(typescript@5.9.3)
       react:
         specifier: ^19.2.3
         version: 19.2.3
+      react-dom:
+        specifier: ^19.2.0
+        version: 19.2.3(react@19.2.3)
+      react-router-dom:
+        specifier: ^6.30.2
+        version: 6.30.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.4.0

@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFI Carousel Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Libraries for automated export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0f0f0f;
+            --bg-slide: #1a1a1a;
+            --bg-card: #242424;
+            --orange: #f97316;
+            --orange-glow: rgba(249, 115, 22, 0.3);
+            --text-white: #ffffff;
+            --text-gray: #a1a1aa;
+            --text-dim: #71717a;
+            --bitcoin-orange: #f7931a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-white);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .header {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        select, button {
+            background: var(--bg-card);
+            border: 1px solid #333;
+            color: var(--text-white);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border-color: var(--orange);
+        }
+
+        button.primary {
+            background: var(--orange);
+            border-color: var(--orange);
+        }
+
+        .instructions {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+
+        .instructions h3 {
+            margin-bottom: 0.75rem;
+            color: var(--orange);
+        }
+
+        .instructions p {
+            color: var(--text-gray);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .instructions code {
+            background: var(--bg-dark);
+            padding: 0.125rem 0.375rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Carousel Preview Grid */
+        .carousel-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .slide-preview {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1rem;
+            border: 1px solid #333;
+        }
+
+        .slide-preview h4 {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin-bottom: 0.75rem;
+        }
+
+        .slide-container {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* ========== SLIDE DESIGN SYSTEM ========== */
+
+        .slide {
+            width: 1080px;
+            height: 1350px;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+            position: relative;
+            overflow: hidden;
+            transform-origin: top left;
+        }
+
+        /* Decorative elements */
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--orange-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .slide::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange), var(--bitcoin-orange));
+        }
+
+        /* Grid pattern overlay */
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        /* Header bar */
+        .slide-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            padding: 30px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--orange);
+            letter-spacing: -0.5px;
+        }
+
+        .episode-tag {
+            background: rgba(249, 115, 22, 0.15);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--orange);
+        }
+
+        /* Main content area */
+        .slide-content {
+            position: absolute;
+            top: 140px;
+            left: 60px;
+            right: 60px;
+            bottom: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Typography */
+        .slide-eyebrow {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 24px;
+        }
+
+        .slide-title {
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            letter-spacing: -2px;
+        }
+
+        .slide-title.large {
+            font-size: 84px;
+        }
+
+        .slide-title.medium {
+            font-size: 64px;
+        }
+
+        .slide-subtitle {
+            font-size: 36px;
+            font-weight: 400;
+            color: var(--text-gray);
+            line-height: 1.5;
+            max-width: 800px;
+        }
+
+        .slide-body {
+            font-size: 32px;
+            line-height: 1.6;
+            color: var(--text-gray);
+            max-width: 900px;
+        }
+
+        .highlight {
+            color: var(--orange);
+            font-weight: 600;
+        }
+
+        .emphasis {
+            color: var(--text-white);
+            font-style: italic;
+        }
+
+        /* Quote style */
+        .quote-block {
+            border-left: 6px solid var(--orange);
+            padding-left: 40px;
+            margin: 40px 0;
+        }
+
+        .quote-text {
+            font-size: 42px;
+            font-weight: 500;
+            line-height: 1.4;
+            font-style: italic;
+            color: var(--text-white);
+        }
+
+        /* List items */
+        .concept-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .concept-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 32px;
+            font-size: 28px;
+            line-height: 1.4;
+        }
+
+        .concept-number {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--orange), var(--bitcoin-orange));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .concept-content strong {
+            color: var(--text-white);
+            font-weight: 700;
+        }
+
+        .concept-content span {
+            color: var(--text-gray);
+        }
+
+        /* Comparison layout */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .comparison-box {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .comparison-box.highlight-box {
+            border-color: var(--orange);
+            background: rgba(249, 115, 22, 0.05);
+        }
+
+        .comparison-label {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .comparison-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .comparison-list {
+            list-style: none;
+        }
+
+        .comparison-list li {
+            font-size: 24px;
+            color: var(--text-gray);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .comparison-list li::before {
+            content: '→';
+            color: var(--orange);
+        }
+
+        /* Stats display */
+        .stats-row {
+            display: flex;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 72px;
+            font-weight: 800;
+            color: var(--orange);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 20px;
+            color: var(--text-gray);
+            margin-top: 12px;
+        }
+
+        /* CTA Slide */
+        .cta-content {
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 60px;
+        }
+
+        .cta-links {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .cta-link {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--bg-card);
+            border: 2px solid #333;
+            border-radius: 16px;
+            padding: 24px 48px;
+            width: 700px;
+            text-decoration: none;
+            color: var(--text-white);
+            transition: all 0.2s;
+        }
+
+        .cta-link.primary {
+            background: linear-gradient(135deg, var(--orange), var(--bitcoin-orange));
+            border-color: var(--orange);
+        }
+
+        .cta-icon {
+            font-size: 40px;
+        }
+
+        .cta-text {
+            text-align: left;
+        }
+
+        .cta-text strong {
+            display: block;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .cta-text span {
+            font-size: 20px;
+            color: var(--text-gray);
+        }
+
+        .cta-link.primary .cta-text span {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Footer */
+        .slide-footer {
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            right: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .author {
+            font-size: 20px;
+            color: var(--text-dim);
+        }
+
+        .swipe-indicator {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            color: var(--text-dim);
+        }
+
+        .swipe-arrow {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-card);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        /* Hook slide special styling */
+        .hook-slide .slide-content {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .hook-slide .slide-title {
+            font-size: 96px;
+            background: linear-gradient(135deg, var(--text-white) 0%, var(--text-gray) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hook-slide .slide-subtitle {
+            max-width: 700px;
+            text-align: center;
+        }
+
+        /* Tombstone list for failures */
+        .tombstone-list {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin: 60px 0;
+        }
+
+        .tombstone {
+            background: var(--bg-card);
+            border: 2px solid #ef4444;
+            border-radius: 16px;
+            padding: 30px 50px;
+            text-align: center;
+        }
+
+        .tombstone-name {
+            font-size: 36px;
+            font-weight: 700;
+            color: #ef4444;
+        }
+
+        .tombstone-rip {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-top: 8px;
+        }
+
+        /* Scaling for preview */
+        .slide-scaled {
+            transform: scale(0.25);
+            transform-origin: top left;
+            width: 270px;
+            height: 337.5px;
+        }
+
+        .slide-scaled .slide {
+            transform: none;
+        }
+
+        /* Full size view */
+        .full-view {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .full-view.active {
+            display: flex;
+        }
+
+        .full-view .slide {
+            transform: scale(0.7);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: var(--bg-card);
+            border: 1px solid #333;
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .nav-btns {
+            position: absolute;
+            bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .export-section {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+
+        .export-section h3 {
+            margin-bottom: 1rem;
+            color: var(--orange);
+        }
+
+        .export-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .export-option {
+            background: var(--bg-dark);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .export-option h4 {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .export-option p {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .export-option code {
+            display: block;
+            background: var(--bg-card);
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            overflow-x: auto;
+        }
+
+        /* Export progress overlay */
+        .export-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .export-overlay.active {
+            display: flex;
+        }
+
+        .export-progress {
+            text-align: center;
+        }
+
+        .export-progress h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .export-progress p {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-bar {
+            width: 400px;
+            height: 8px;
+            background: var(--bg-card);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--orange), var(--bitcoin-orange));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .export-preview {
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .export-preview .slide {
+            transform: scale(0.3);
+            transform-origin: top left;
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .export-buttons button {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+        }
+
+        /* Hidden render container */
+        #renderContainer {
+            position: fixed;
+            left: -9999px;
+            top: 0;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎠 BFI Carousel Generator</h1>
+        <div class="controls">
+            <select id="episodeSelect">
+                <option value="1">Episode 1: Introduction</option>
+                <option value="2">Episode 2: Why HODL'ing Is Irrational</option>
+                <option value="3">Episode 3: Deflationary Mindset</option>
+                <option value="4">Episode 4: Patience Problem</option>
+                <option value="5">Episode 5: Bearer Asset</option>
+                <option value="6">Episode 6: Privacy</option>
+                <option value="7">Episode 7: Custody Tradeoffs</option>
+                <option value="8">Episode 8: Strategy Playbook</option>
+                <option value="9">Episode 9: BlackRock</option>
+                <option value="10">Episode 10: Deferred Compensation</option>
+                <option value="11">Episode 11: ETFs</option>
+                <option value="12">Episode 12: Treasury</option>
+                <option value="13">Episode 13: Credit</option>
+                <option value="14">Episode 14: Pensions</option>
+                <option value="15">Episode 15: Conclusion</option>
+            </select>
+            <button onclick="exportToPDF()" class="primary" id="exportBtn">📄 Export PDF</button>
+            <button onclick="exportImages()" id="exportImgBtn">🖼️ Export Images</button>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h3>One-Click Export</h3>
+        <p>
+            <strong>Export PDF:</strong> Click "Export PDF" to automatically generate a LinkedIn-ready PDF carousel with all 6 slides.
+        </p>
+        <p style="margin-top: 0.5rem;">
+            <strong>Export Images:</strong> Click "Export Images" to download all 6 slides as individual PNG files (1080x1350px).
+        </p>
+        <p style="margin-top: 0.5rem; color: var(--text-dim);">
+            <em>Manual option:</em> Click any slide to view full size, then screenshot with <code>Cmd+Shift+4</code> (Mac) or <code>Win+Shift+S</code> (Windows).
+        </p>
+    </div>
+
+    <!-- Export progress overlay -->
+    <div class="export-overlay" id="exportOverlay">
+        <div class="export-progress">
+            <h2 id="exportTitle">Generating Carousel...</h2>
+            <p id="exportStatus">Rendering slide 1 of 6</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+        <div class="export-preview" id="exportPreview" style="width: 324px; height: 405px; overflow: hidden;">
+            <!-- Current slide preview shown here -->
+        </div>
+    </div>
+
+    <!-- Hidden container for rendering full-size slides -->
+    <div id="renderContainer"></div>
+
+    <div class="carousel-grid" id="carouselGrid">
+        <!-- Slides rendered by JS -->
+    </div>
+
+    <div class="export-section">
+        <h3>Design Specifications for Canva</h3>
+        <div class="export-grid">
+            <div class="export-option">
+                <h4>Canvas Size</h4>
+                <p>1080 x 1350 px (4:5 ratio, optimal for LinkedIn)</p>
+                <code>Custom size → 1080 × 1350</code>
+            </div>
+            <div class="export-option">
+                <h4>Colors</h4>
+                <p>
+                    Background: #1a1a1a<br>
+                    Orange accent: #f97316<br>
+                    Bitcoin orange: #f7931a<br>
+                    Text white: #ffffff<br>
+                    Text gray: #a1a1aa
+                </p>
+            </div>
+            <div class="export-option">
+                <h4>Typography</h4>
+                <p>
+                    Font: Inter (or Montserrat)<br>
+                    Title: 72-96px, 800 weight<br>
+                    Subtitle: 36px, 400 weight<br>
+                    Body: 28-32px, 400 weight<br>
+                    Eyebrow: 22px, 600 weight, uppercase
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full size viewer -->
+    <div class="full-view" id="fullView">
+        <button class="close-btn" onclick="closeFullView()">×</button>
+        <div id="fullSlideContainer"></div>
+        <div class="nav-btns">
+            <button onclick="prevSlide()">← Previous</button>
+            <button onclick="nextSlide()">Next →</button>
+            <button onclick="downloadSlide()" class="primary">Download PNG</button>
+        </div>
+    </div>
+
+    <script>
+        // Carousel data for all episodes
+        const carousels = {
+            1: {
+                title: "Bitcoin for Institutions",
+                subtitle: "The Fundamentals",
+                slides: [
+                    {
+                        type: "hook",
+                        title: "Bitcoin Is For Individuals",
+                        subtitle: "This course presents a thesis that Bitcoin is fundamentally designed for individuals, not institutions.",
+                        note: "Understanding this tension is critical for success."
+                    },
+                    {
+                        type: "content",
+                        eyebrow: "Key Insight",
+                        title: "Ownership Changes Properties",
+                        body: "The power of Bitcoin as capital is fundamentally determined by its owner.",
+                        comparison: {
+                            left: { label: "Individuals", items: ["Full control", "Long time horizons", "Personal conviction"] },
+                            right: { label: "Institutions", items: ["Intermediaries", "Quarterly pressure", "Committee decisions"], highlight: false }
+                        }
+                    },
+                    {
+                        type: "quote",
+                        eyebrow: "Hard Money Principle",
+                        title: "Hard Money Flows Upward",
+                        quote: "Under hard money, capital flows to those who make the best allocation decisions.",
+                        emphasis: "Bitcoin rewards skill, not connections."
+                    },
+                    {
+                        type: "quote",
+                        eyebrow: "The Core Problem",
+                        title: "The Soft Money Trap",
+                        quote: "No group of humans with the power to print money has ever resisted the temptation to do so.",
+                        emphasis: "Bitcoin frees individuals from this tyranny."
+                    },
+                    {
+                        type: "list",
+                        eyebrow: "Foundation",
+                        title: "5 Key Concepts",
+                        items: [
+                            { term: "Hard Money", definition: "Difficult to produce, easy to verify" },
+                            { term: "Bearer Asset", definition: "Ownership by possession" },
+                            { term: "Circular Economy", definition: "BTC-to-BTC exchange" },
+                            { term: "Counterparty Risk", definition: "Third-party failure" },
+                            { term: "Time Preference", definition: "Present vs future valuation" }
+                        ]
+                    },
+                    {
+                        type: "cta",
+                        title: "Want the full breakdown?",
+                        links: [
+                            { icon: "🎓", label: "FREE Interactive Course", sublabel: "bfi-liart.vercel.app", primary: true },
+                            { icon: "📖", label: "Get the Book", sublabel: "Available on Amazon", primary: false },
+                            { icon: "🎬", label: "Watch All 15 Episodes", sublabel: "YouTube Playlist", primary: false }
+                        ]
+                    }
+                ]
+            },
+            2: {
+                title: "Why HODL'ing Is Irrational",
+                subtitle: "And why that irrationality favors individuals",
+                slides: [
+                    {
+                        type: "hook-tombstone",
+                        title: "The Graveyard of Bitcoin Institutions",
+                        tombstones: ["FTX", "Celsius", "Mt. Gox", "BlockFi"],
+                        subtitle: "What do they have in common?"
+                    },
+                    {
+                        type: "quote",
+                        eyebrow: "The Paradox",
+                        title: "Rationality Killed Them",
+                        quote: "Every corporate governance structure is built to prevent 'irrational' long-term holding.",
+                        emphasis: "That's the problem."
+                    },
+                    {
+                        type: "content",
+                        eyebrow: "Definition",
+                        title: "HODL = Willful Irrationality",
+                        body: "HODL'ing requires ignoring quarterly metrics, short-term volatility, and fiduciary 'best practices.'",
+                        emphasis: "Institutions can't model this."
+                    },
+                    {
+                        type: "quote",
+                        eyebrow: "Economic Theory",
+                        title: "The Water/Diamond Paradox",
+                        quote: "Water is essential but cheap. Diamonds are useless but expensive.",
+                        emphasis: "Value comes from marginal utility, not intrinsic worth."
+                    },
+                    {
+                        type: "content",
+                        eyebrow: "The Pattern",
+                        title: "Only Dominant Individuals Succeed",
+                        body: "Saylor at Strategy. Fink at BlackRock.",
+                        emphasis: "Individuals run institutions—or institutions fail at Bitcoin."
+                    },
+                    {
+                        type: "cta",
+                        title: "Want the full breakdown?",
+                        links: [
+                            { icon: "🎓", label: "FREE Interactive Course", sublabel: "bfi-liart.vercel.app", primary: true },
+                            { icon: "📖", label: "Get the Book", sublabel: "Available on Amazon", primary: false },
+                            { icon: "🎬", label: "Watch All 15 Episodes", sublabel: "YouTube Playlist", primary: false }
+                        ]
+                    }
+                ]
+            }
+        };
+
+        // Generate slides 3-15 with placeholder content
+        for (let i = 3; i <= 15; i++) {
+            const titles = {
+                3: "Deflationary Mindset",
+                4: "The Patience Problem",
+                5: "Bitcoin as Bearer Asset",
+                6: "Privacy as a Feature",
+                7: "Custody Tradeoffs",
+                8: "The Strategy Playbook",
+                9: "BlackRock Changed Everything",
+                10: "Deferred Compensation",
+                11: "ETFs & Portfolio Construction",
+                12: "Treasury Strategies",
+                13: "Bitcoin-Backed Credit",
+                14: "Pensions & the Goalie",
+                15: "The Institutional Imperative"
+            };
+
+            carousels[i] = {
+                title: titles[i],
+                subtitle: `Episode ${i}`,
+                slides: [
+                    { type: "hook", title: titles[i], subtitle: "Key insights from this episode", note: "Swipe to explore →" },
+                    { type: "content", eyebrow: "Core Concept", title: "Main Point", body: "Content from episode " + i + " carousel template." },
+                    { type: "quote", eyebrow: "Key Quote", title: "Notable Insight", quote: "Important quote from the episode.", emphasis: "The key takeaway." },
+                    { type: "content", eyebrow: "Application", title: "What This Means", body: "Practical implications for institutional investors." },
+                    { type: "list", eyebrow: "Summary", title: "Key Takeaways", items: [
+                        { term: "Point 1", definition: "First key insight" },
+                        { term: "Point 2", definition: "Second key insight" },
+                        { term: "Point 3", definition: "Third key insight" }
+                    ]},
+                    { type: "cta", title: "Want the full breakdown?", links: [
+                        { icon: "🎓", label: "FREE Interactive Course", sublabel: "bfi-liart.vercel.app", primary: true },
+                        { icon: "📖", label: "Get the Book", sublabel: "Available on Amazon", primary: false }
+                    ]}
+                ]
+            };
+        }
+
+        let currentEpisode = 1;
+        let currentSlideIndex = 0;
+
+        function renderSlide(slide, episodeNum, slideIndex, total) {
+            const isLast = slideIndex === total - 1;
+
+            let contentHtml = '';
+
+            switch (slide.type) {
+                case 'hook':
+                    contentHtml = `
+                        <div class="slide-content" style="text-align: center; align-items: center;">
+                            <div class="slide-title large">${slide.title}</div>
+                            <div class="slide-subtitle">${slide.subtitle}</div>
+                            ${slide.note ? `<div class="slide-body" style="margin-top: 40px; color: var(--orange);">${slide.note}</div>` : ''}
+                        </div>
+                    `;
+                    break;
+
+                case 'hook-tombstone':
+                    contentHtml = `
+                        <div class="slide-content" style="text-align: center; align-items: center;">
+                            <div class="slide-title medium">${slide.title}</div>
+                            <div class="tombstone-list">
+                                ${slide.tombstones.map(t => `<div class="tombstone"><div class="tombstone-name">${t}</div><div class="tombstone-rip">R.I.P.</div></div>`).join('')}
+                            </div>
+                            <div class="slide-subtitle">${slide.subtitle}</div>
+                        </div>
+                    `;
+                    break;
+
+                case 'content':
+                    contentHtml = `
+                        <div class="slide-content">
+                            <div class="slide-eyebrow">${slide.eyebrow}</div>
+                            <div class="slide-title">${slide.title}</div>
+                            <div class="slide-body">${slide.body}</div>
+                            ${slide.emphasis ? `<div class="slide-body emphasis" style="margin-top: 30px;">${slide.emphasis}</div>` : ''}
+                            ${slide.comparison ? `
+                                <div class="comparison-grid">
+                                    <div class="comparison-box ${slide.comparison.left.highlight !== false ? 'highlight-box' : ''}">
+                                        <div class="comparison-label">${slide.comparison.left.label}</div>
+                                        <ul class="comparison-list">
+                                            ${slide.comparison.left.items.map(item => `<li>${item}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                    <div class="comparison-box ${slide.comparison.right.highlight ? 'highlight-box' : ''}">
+                                        <div class="comparison-label">${slide.comparison.right.label}</div>
+                                        <ul class="comparison-list">
+                                            ${slide.comparison.right.items.map(item => `<li>${item}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                    break;
+
+                case 'quote':
+                    contentHtml = `
+                        <div class="slide-content">
+                            <div class="slide-eyebrow">${slide.eyebrow}</div>
+                            <div class="slide-title medium">${slide.title}</div>
+                            <div class="quote-block">
+                                <div class="quote-text">"${slide.quote}"</div>
+                            </div>
+                            ${slide.emphasis ? `<div class="slide-body emphasis">${slide.emphasis}</div>` : ''}
+                        </div>
+                    `;
+                    break;
+
+                case 'list':
+                    contentHtml = `
+                        <div class="slide-content">
+                            <div class="slide-eyebrow">${slide.eyebrow}</div>
+                            <div class="slide-title">${slide.title}</div>
+                            <ul class="concept-list">
+                                ${slide.items.map((item, i) => `
+                                    <li>
+                                        <div class="concept-number">${i + 1}</div>
+                                        <div class="concept-content">
+                                            <strong>${item.term}:</strong>
+                                            <span>${item.definition}</span>
+                                        </div>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    `;
+                    break;
+
+                case 'cta':
+                    contentHtml = `
+                        <div class="slide-content cta-content">
+                            <div class="cta-title">${slide.title}</div>
+                            <div class="cta-links">
+                                ${slide.links.map(link => `
+                                    <div class="cta-link ${link.primary ? 'primary' : ''}">
+                                        <div class="cta-icon">${link.icon}</div>
+                                        <div class="cta-text">
+                                            <strong>${link.label}</strong>
+                                            <span>${link.sublabel}</span>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                    break;
+            }
+
+            return `
+                <div class="slide">
+                    <div class="grid-overlay"></div>
+                    <div class="slide-header">
+                        <div class="logo">BFI</div>
+                        <div class="episode-tag">EP ${episodeNum}</div>
+                    </div>
+                    ${contentHtml}
+                    <div class="slide-footer">
+                        <div class="author">Bitcoin for Institutions • Brian Hirschfield</div>
+                        ${!isLast ? `
+                            <div class="swipe-indicator">
+                                <span>Swipe</span>
+                                <div class="swipe-arrow">→</div>
+                            </div>
+                        ` : `
+                            <div class="swipe-indicator">
+                                <span>${slideIndex + 1}/${total}</span>
+                            </div>
+                        `}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCarousel(episodeNum) {
+            const carousel = carousels[episodeNum];
+            const grid = document.getElementById('carouselGrid');
+            grid.innerHTML = '';
+
+            carousel.slides.forEach((slide, index) => {
+                const preview = document.createElement('div');
+                preview.className = 'slide-preview';
+                preview.innerHTML = `
+                    <h4>Slide ${index + 1}: ${slide.type.charAt(0).toUpperCase() + slide.type.slice(1).replace('-', ' ')}</h4>
+                    <div class="slide-container" onclick="openFullView(${episodeNum}, ${index})">
+                        <div class="slide-scaled">
+                            ${renderSlide(slide, episodeNum, index, carousel.slides.length)}
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(preview);
+            });
+        }
+
+        function openFullView(episodeNum, slideIndex) {
+            currentEpisode = episodeNum;
+            currentSlideIndex = slideIndex;
+            const carousel = carousels[episodeNum];
+            const slide = carousel.slides[slideIndex];
+
+            document.getElementById('fullSlideContainer').innerHTML =
+                renderSlide(slide, episodeNum, slideIndex, carousel.slides.length);
+            document.getElementById('fullView').classList.add('active');
+        }
+
+        function closeFullView() {
+            document.getElementById('fullView').classList.remove('active');
+        }
+
+        function prevSlide() {
+            const carousel = carousels[currentEpisode];
+            currentSlideIndex = (currentSlideIndex - 1 + carousel.slides.length) % carousel.slides.length;
+            openFullView(currentEpisode, currentSlideIndex);
+        }
+
+        function nextSlide() {
+            const carousel = carousels[currentEpisode];
+            currentSlideIndex = (currentSlideIndex + 1) % carousel.slides.length;
+            openFullView(currentEpisode, currentSlideIndex);
+        }
+
+        function downloadSlide() {
+            exportCurrentSlideAsPNG();
+        }
+
+        // ========== AUTOMATED EXPORT FUNCTIONS ==========
+
+        async function exportToPDF() {
+            const episodeNum = parseInt(document.getElementById('episodeSelect').value);
+            const carousel = carousels[episodeNum];
+            const epPadded = String(episodeNum).padStart(2, '0');
+
+            // Show overlay
+            const overlay = document.getElementById('exportOverlay');
+            overlay.classList.add('active');
+
+            // Disable buttons
+            document.getElementById('exportBtn').disabled = true;
+            document.getElementById('exportImgBtn').disabled = true;
+
+            try {
+                const { jsPDF } = window.jspdf;
+                // PDF dimensions for 1080x1350 at 72 DPI = 15" x 18.75"
+                // Using mm: 381mm x 476.25mm, but we'll use points for better control
+                const pdf = new jsPDF({
+                    orientation: 'portrait',
+                    unit: 'px',
+                    format: [1080, 1350]
+                });
+
+                const renderContainer = document.getElementById('renderContainer');
+                const preview = document.getElementById('exportPreview');
+
+                for (let i = 0; i < carousel.slides.length; i++) {
+                    // Update progress
+                    document.getElementById('exportStatus').textContent = `Rendering slide ${i + 1} of ${carousel.slides.length}`;
+                    document.getElementById('progressFill').style.width = `${((i + 1) / carousel.slides.length) * 100}%`;
+
+                    // Render slide at full size
+                    const slideHtml = renderSlide(carousel.slides[i], episodeNum, i, carousel.slides.length);
+                    renderContainer.innerHTML = slideHtml;
+
+                    // Show preview (scaled)
+                    preview.innerHTML = slideHtml;
+
+                    // Wait for fonts and images to load
+                    await new Promise(resolve => setTimeout(resolve, 300));
+
+                    // Capture the slide
+                    const slideElement = renderContainer.querySelector('.slide');
+                    const canvas = await html2canvas(slideElement, {
+                        scale: 2, // Higher quality
+                        useCORS: true,
+                        backgroundColor: '#1a1a1a',
+                        width: 1080,
+                        height: 1350
+                    });
+
+                    // Add to PDF
+                    if (i > 0) {
+                        pdf.addPage([1080, 1350]);
+                    }
+
+                    const imgData = canvas.toDataURL('image/jpeg', 0.95);
+                    pdf.addImage(imgData, 'JPEG', 0, 0, 1080, 1350);
+                }
+
+                // Download PDF
+                document.getElementById('exportTitle').textContent = 'Export Complete!';
+                document.getElementById('exportStatus').textContent = 'Downloading PDF...';
+
+                pdf.save(`bfi_ep${epPadded}_carousel.pdf`);
+
+                // Clean up
+                setTimeout(() => {
+                    overlay.classList.remove('active');
+                    renderContainer.innerHTML = '';
+                }, 1500);
+
+            } catch (error) {
+                console.error('Export failed:', error);
+                alert('Export failed: ' + error.message);
+                overlay.classList.remove('active');
+            }
+
+            // Re-enable buttons
+            document.getElementById('exportBtn').disabled = false;
+            document.getElementById('exportImgBtn').disabled = false;
+        }
+
+        async function exportImages() {
+            const episodeNum = parseInt(document.getElementById('episodeSelect').value);
+            const carousel = carousels[episodeNum];
+            const epPadded = String(episodeNum).padStart(2, '0');
+
+            // Show overlay
+            const overlay = document.getElementById('exportOverlay');
+            overlay.classList.add('active');
+            document.getElementById('exportTitle').textContent = 'Exporting Images...';
+
+            // Disable buttons
+            document.getElementById('exportBtn').disabled = true;
+            document.getElementById('exportImgBtn').disabled = true;
+
+            try {
+                const renderContainer = document.getElementById('renderContainer');
+                const preview = document.getElementById('exportPreview');
+
+                for (let i = 0; i < carousel.slides.length; i++) {
+                    // Update progress
+                    document.getElementById('exportStatus').textContent = `Rendering slide ${i + 1} of ${carousel.slides.length}`;
+                    document.getElementById('progressFill').style.width = `${((i + 1) / carousel.slides.length) * 100}%`;
+
+                    // Render slide at full size
+                    const slideHtml = renderSlide(carousel.slides[i], episodeNum, i, carousel.slides.length);
+                    renderContainer.innerHTML = slideHtml;
+
+                    // Show preview
+                    preview.innerHTML = slideHtml;
+
+                    // Wait for fonts and images
+                    await new Promise(resolve => setTimeout(resolve, 300));
+
+                    // Capture the slide
+                    const slideElement = renderContainer.querySelector('.slide');
+                    const canvas = await html2canvas(slideElement, {
+                        scale: 2,
+                        useCORS: true,
+                        backgroundColor: '#1a1a1a',
+                        width: 1080,
+                        height: 1350
+                    });
+
+                    // Download image
+                    const link = document.createElement('a');
+                    link.download = `bfi_ep${epPadded}_slide_${i + 1}.png`;
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+
+                    // Small delay between downloads
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                }
+
+                document.getElementById('exportTitle').textContent = 'Export Complete!';
+                document.getElementById('exportStatus').textContent = `Downloaded ${carousel.slides.length} images`;
+
+                setTimeout(() => {
+                    overlay.classList.remove('active');
+                    renderContainer.innerHTML = '';
+                }, 1500);
+
+            } catch (error) {
+                console.error('Export failed:', error);
+                alert('Export failed: ' + error.message);
+                overlay.classList.remove('active');
+            }
+
+            // Re-enable buttons
+            document.getElementById('exportBtn').disabled = false;
+            document.getElementById('exportImgBtn').disabled = false;
+        }
+
+        async function exportCurrentSlideAsPNG() {
+            const carousel = carousels[currentEpisode];
+            const epPadded = String(currentEpisode).padStart(2, '0');
+
+            try {
+                const slideElement = document.querySelector('#fullSlideContainer .slide');
+                if (!slideElement) {
+                    alert('Please open a slide in full view first');
+                    return;
+                }
+
+                const canvas = await html2canvas(slideElement, {
+                    scale: 2,
+                    useCORS: true,
+                    backgroundColor: '#1a1a1a'
+                });
+
+                const link = document.createElement('a');
+                link.download = `bfi_ep${epPadded}_slide_${currentSlideIndex + 1}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            } catch (error) {
+                console.error('Download failed:', error);
+                alert('Download failed: ' + error.message);
+            }
+        }
+
+        // ========== EVENT LISTENERS ==========
+
+        document.getElementById('episodeSelect').addEventListener('change', (e) => {
+            renderCarousel(parseInt(e.target.value));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('fullView').classList.contains('active')) {
+                if (e.key === 'Escape') closeFullView();
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            }
+            // Close export overlay with Escape
+            if (e.key === 'Escape') {
+                document.getElementById('exportOverlay').classList.remove('active');
+            }
+        });
+
+        // Initial render
+        renderCarousel(1);
+    </script>
+</body>
+</html>

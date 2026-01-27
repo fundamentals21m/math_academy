@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFI Workflow Manager</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-orange: #f97316;
+            --accent-green: #22c55e;
+            --accent-blue: #3b82f6;
+            --accent-purple: #a855f7;
+            --accent-yellow: #eab308;
+            --accent-red: #ef4444;
+            --border: #30363d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sidebar .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent-orange);
+        }
+
+        /* Calendar */
+        .calendar {
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .calendar-header h3 {
+            font-size: 1rem;
+        }
+
+        .calendar-nav {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .calendar-nav button {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendar-nav button:hover {
+            border-color: var(--accent-orange);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+        }
+
+        .calendar-day-header {
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            border-radius: 6px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .calendar-day:hover {
+            background: var(--bg-secondary);
+        }
+
+        .calendar-day.other-month {
+            color: var(--text-secondary);
+            opacity: 0.5;
+        }
+
+        .calendar-day.today {
+            background: var(--accent-orange);
+            color: white;
+            font-weight: 600;
+        }
+
+        .calendar-day.selected {
+            outline: 2px solid var(--accent-orange);
+            outline-offset: -2px;
+        }
+
+        .calendar-day.has-tasks::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            width: 4px;
+            height: 4px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+        }
+
+        .calendar-day.has-tasks.has-setup::after {
+            background: var(--accent-purple);
+        }
+
+        /* Week selector */
+        .week-selector {
+            margin-bottom: 1.5rem;
+        }
+
+        .week-selector h3 {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .week-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+        }
+
+        .week-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        .week-btn:hover {
+            border-color: var(--accent-orange);
+        }
+
+        .week-btn.active {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+        }
+
+        /* Setup tasks */
+        .setup-section {
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .setup-section h3 {
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .setup-task {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .setup-task:hover {
+            background: var(--bg-secondary);
+        }
+
+        .setup-task.completed {
+            opacity: 0.5;
+        }
+
+        .setup-task.completed .task-name {
+            text-decoration: line-through;
+        }
+
+        .setup-task input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--accent-green);
+        }
+
+        /* Main content */
+        .main {
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .date-display h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .date-display .date-subtitle {
+            color: var(--text-secondary);
+        }
+
+        .quick-nav {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .quick-nav button {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .quick-nav button:hover {
+            border-color: var(--accent-orange);
+        }
+
+        /* Workflow cards */
+        .workflow-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .workflow-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .workflow-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .workflow-header h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .workflow-type {
+            font-size: 1.5rem;
+        }
+
+        .workflow-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .workflow-badge.post { background: rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
+        .workflow-badge.carousel { background: rgba(168, 85, 247, 0.2); color: var(--accent-purple); }
+        .workflow-badge.short { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+        .workflow-badge.setup { background: rgba(234, 179, 8, 0.2); color: var(--accent-yellow); }
+
+        .workflow-body {
+            padding: 1.5rem;
+        }
+
+        .workflow-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Steps */
+        .steps {
+            list-style: none;
+        }
+
+        .step {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+            background: var(--bg-tertiary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .step.completed .step-number {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .step-detail {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .step-code {
+            background: var(--bg-tertiary);
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .step-action {
+            margin-top: 0.75rem;
+        }
+
+        .step-action button {
+            background: var(--accent-orange);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .step-action button:hover {
+            opacity: 0.9;
+        }
+
+        .step-action a {
+            display: inline-block;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-right: 0.5rem;
+        }
+
+        .step-action a:hover {
+            border-color: var(--accent-orange);
+        }
+
+        /* Content preview */
+        .content-preview {
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .content-preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .copy-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+        }
+
+        .copy-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent-orange);
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Progress indicator */
+        .progress-ring {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-ring .label {
+            font-size: 0.875rem;
+        }
+
+        .progress-ring .value {
+            font-weight: 600;
+            color: var(--accent-green);
+        }
+
+        /* Tags */
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.75rem;
+        }
+
+        .tag {
+            background: var(--bg-tertiary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+            <h1>📅 Workflow Manager</h1>
+            <p class="subtitle">Click a date to see tasks and workflows</p>
+
+            <!-- Calendar -->
+            <div class="calendar">
+                <div class="calendar-header">
+                    <h3 id="calendarMonth">January 2026</h3>
+                    <div class="calendar-nav">
+                        <button onclick="prevMonth()">‹</button>
+                        <button onclick="nextMonth()">›</button>
+                    </div>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Week selector -->
+            <div class="week-selector">
+                <h3>Jump to Content Week</h3>
+                <div class="week-buttons" id="weekButtons">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Setup tasks -->
+            <div class="setup-section">
+                <h3>⚙️ Pre-Launch Setup</h3>
+                <div id="setupTasks">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="main">
+            <div class="main-header">
+                <div class="date-display">
+                    <h2 id="selectedDate">Select a Date</h2>
+                    <p class="date-subtitle" id="dateSubtitle">Click a date on the calendar to view workflows</p>
+                </div>
+                <div class="quick-nav">
+                    <button onclick="goToToday()">Today</button>
+                    <button onclick="goToNextTask()">Next Task</button>
+                </div>
+            </div>
+
+            <div id="workflowContent">
+                <div class="empty-state">
+                    <div class="icon">📋</div>
+                    <h3>No Date Selected</h3>
+                    <p>Select a date from the calendar to view the day's workflows and tasks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data
+        const setupTasks = [
+            { id: 'linkedin-profile', name: 'Update LinkedIn profile', completed: false },
+            { id: 'youtube-descriptions', name: 'Update YouTube descriptions', completed: false },
+            { id: 'pinned-comments', name: 'Add pinned comments to videos', completed: false },
+            { id: 'first-carousel', name: 'Create first carousel in Canva', completed: false },
+            { id: 'first-short', name: 'Extract first YouTube Short', completed: false }
+        ];
+
+        const contentSchedule = {
+            // Week 1
+            1: { Mon: [{ type: 'post', ep: 1, variant: 'A' }], Tue: [{ type: 'short', ep: 1, clip: 1 }], Wed: [{ type: 'post', ep: 2, variant: 'B' }], Thu: [{ type: 'carousel', ep: 1 }], Fri: [{ type: 'post', ep: 1, variant: 'C' }] },
+            2: { Mon: [{ type: 'post', ep: 3, variant: 'A' }], Tue: [{ type: 'short', ep: 2, clip: 1 }], Wed: [{ type: 'post', ep: 4, variant: 'B' }], Thu: [{ type: 'carousel', ep: 3 }], Fri: [{ type: 'post', ep: 3, variant: 'C' }] },
+            3: { Mon: [{ type: 'post', ep: 5, variant: 'A' }], Tue: [{ type: 'short', ep: 5, clip: 1 }], Wed: [{ type: 'post', ep: 6, variant: 'B' }], Thu: [{ type: 'post', ep: 7, variant: 'C' }], Fri: [{ type: 'carousel', ep: 5 }] },
+            4: { Mon: [{ type: 'post', ep: 8, variant: 'A' }], Tue: [{ type: 'short', ep: 8, clip: 1 }], Wed: [{ type: 'post', ep: 8, variant: 'B' }], Thu: [{ type: 'post', ep: 8, variant: 'C' }], Fri: [{ type: 'carousel', ep: 8 }] },
+            5: { Mon: [{ type: 'post', ep: 9, variant: 'A' }], Tue: [{ type: 'short', ep: 9, clip: 1 }], Wed: [{ type: 'post', ep: 9, variant: 'B' }], Thu: [{ type: 'post', ep: 9, variant: 'C' }], Fri: [{ type: 'carousel', ep: 9 }] },
+            6: { Mon: [{ type: 'post', ep: 10, variant: 'A' }], Tue: [{ type: 'short', ep: 10, clip: 1 }], Wed: [{ type: 'post', ep: 10, variant: 'B' }], Thu: [{ type: 'carousel', ep: 10 }], Fri: [{ type: 'post', ep: 11, variant: 'C' }] },
+            7: { Mon: [{ type: 'post', ep: 11, variant: 'A' }], Tue: [{ type: 'short', ep: 11, clip: 1 }], Wed: [{ type: 'post', ep: 12, variant: 'B' }], Thu: [{ type: 'post', ep: 12, variant: 'C' }], Fri: [{ type: 'carousel', ep: 11 }] },
+            8: { Mon: [{ type: 'post', ep: 13, variant: 'A' }], Tue: [{ type: 'short', ep: 13, clip: 1 }], Wed: [{ type: 'post', ep: 13, variant: 'B' }], Thu: [{ type: 'post', ep: 13, variant: 'C' }], Fri: [{ type: 'carousel', ep: 13 }] },
+            9: { Mon: [{ type: 'post', ep: 14, variant: 'A' }], Tue: [{ type: 'short', ep: 14, clip: 1 }], Wed: [{ type: 'post', ep: 15, variant: 'B' }], Thu: [{ type: 'post', ep: 15, variant: 'C' }], Fri: [{ type: 'carousel', ep: 14 }] },
+            10: { Mon: [{ type: 'post', ep: 1, variant: 'B' }], Tue: [{ type: 'short', ep: 1, clip: 2 }], Wed: [{ type: 'post', ep: 2, variant: 'A' }], Thu: [{ type: 'carousel', ep: 15 }], Fri: [{ type: 'post', ep: 3, variant: 'B' }] },
+            11: { Mon: [{ type: 'post', ep: 2, variant: 'C' }], Tue: [{ type: 'short', ep: 6, clip: 1 }], Wed: [{ type: 'post', ep: 4, variant: 'A' }], Thu: [{ type: 'carousel', ep: 2 }], Fri: [{ type: 'post', ep: 14, variant: 'C' }] },
+            12: { Mon: [{ type: 'post', ep: 5, variant: 'B' }], Tue: [{ type: 'short', ep: 8, clip: 2 }], Wed: [{ type: 'post', ep: 6, variant: 'A' }], Thu: [{ type: 'carousel', ep: 4 }], Fri: [{ type: 'post', ep: 7, variant: 'A' }] }
+        };
+
+        const workflows = {
+            'linkedin-profile': {
+                title: 'Update LinkedIn Profile',
+                type: 'setup',
+                description: 'Add book and course links to your LinkedIn profile to drive traffic from all your content.',
+                steps: [
+                    { title: 'Go to LinkedIn', detail: 'Open linkedin.com and navigate to your profile' },
+                    { title: 'Edit Headline', detail: 'Add "Author: Bitcoin for Institutions" to your headline', code: 'Author: Bitcoin for Institutions | [Your current title]' },
+                    { title: 'Edit About Section', detail: 'Add the book/course links at the bottom of your About section', code: '📖 BITCOIN FOR INSTITUTIONS\nMy book exploring how institutions can (and can\'t) approach Bitcoin.\n\n🎓 Free Interactive Course: https://bfi-liart.vercel.app\n📕 Get the Book: https://amazon.com/Bitcoin-Institutions-Brian-Hirschfield/dp/B0FCZHXFGS/\n⚡ Buy with Bitcoin: https://zeuspay.com/btc-for-institutions' },
+                    { title: 'Add Featured Section', detail: 'Click "+ Add section" → Featured, then add links to the course and Amazon book page' },
+                    { title: 'Verify', detail: 'View your profile as public to confirm all links work correctly' }
+                ]
+            },
+            'youtube-descriptions': {
+                title: 'Update YouTube Descriptions',
+                type: 'setup',
+                description: 'Add course and book links to all 15 episode descriptions with UTM tracking.',
+                steps: [
+                    { title: 'Open YouTube Studio', detail: 'Go to studio.youtube.com and sign in' },
+                    { title: 'Navigate to Content', detail: 'Click Content in the left sidebar to see all videos' },
+                    { title: 'Edit Each Video', detail: 'For each of the 15 episodes, click the video → Details → Description' },
+                    { title: 'Add Links Block', detail: 'Add this at the TOP of each description (replace [N] with episode number)', code: '🎓 FREE Interactive Course: https://bfi-liart.vercel.app?utm_source=youtube&utm_medium=video&utm_campaign=ep[N]\n📖 Get the Book: https://amazon.com/Bitcoin-Institutions-Brian-Hirschfield/dp/B0FCZHXFGS/\n⚡ Buy with Bitcoin: https://zeuspay.com/btc-for-institutions\n\n---\n\n[Existing description below]' },
+                    { title: 'Save All', detail: 'Click Save on each video after updating' }
+                ]
+            },
+            'pinned-comments': {
+                title: 'Add Pinned Comments',
+                type: 'setup',
+                description: 'Add a pinned comment with resources to each YouTube video.',
+                steps: [
+                    { title: 'Open YouTube Studio', detail: 'Go to studio.youtube.com → Content' },
+                    { title: 'Open Video Comments', detail: 'Click on a video → Comments tab' },
+                    { title: 'Post Comment', detail: 'Post this comment on each video', code: '📌 RESOURCES\n\n🎓 Take the FREE interactive course: https://bfi-liart.vercel.app\n📖 Get the book on Amazon: https://amazon.com/Bitcoin-Institutions-Brian-Hirschfield/dp/B0FCZHXFGS/\n⚡ Buy with Bitcoin: https://zeuspay.com/btc-for-institutions\n\nWhat questions do you have about institutional Bitcoin adoption? Drop them below 👇' },
+                    { title: 'Pin Comment', detail: 'Click the three dots (⋮) on your comment → "Pin"' },
+                    { title: 'Repeat', detail: 'Do this for all 15 episodes' }
+                ]
+            },
+            'first-carousel': {
+                title: 'Create First Carousel',
+                type: 'setup',
+                description: 'Use the carousel generator\'s one-click PDF export to create LinkedIn-ready carousels. No manual screenshots needed.',
+                steps: [
+                    { title: 'Open Carousel Generator', detail: 'Open the visual slide generator in your browser.', code: 'File: carousel-generator.html\n\nFeatures:\n• One-click PDF export (all 6 slides)\n• One-click image export (individual PNGs)\n• Full 1080x1350 resolution\n• Episode selector dropdown' },
+                    { title: 'Select Episode 1', detail: 'Use the dropdown at the top to select "Episode 1: Introduction". You\'ll see 6 slide thumbnails previewing the carousel.' },
+                    { title: 'Click Export PDF', detail: 'Click the orange "📄 Export PDF" button at the top. The generator will automatically render and combine all slides.', code: 'What happens automatically:\n1. Renders each slide at 1080x1350\n2. Captures as high-quality image\n3. Combines into multi-page PDF\n4. Downloads: bfi_ep01_carousel.pdf\n\nProgress bar shows rendering status.\nTakes about 10-15 seconds.' },
+                    { title: 'Verify the PDF', detail: 'Open the downloaded PDF and scroll through all 6 pages to verify the slides look correct.', code: 'Check each slide for:\n• Text is readable and properly positioned\n• Orange accents are visible\n• BFI header appears on each slide\n• Swipe indicator on slides 1-5\n• CTA links readable on final slide' },
+                    { title: 'Get Caption Text', detail: 'Open the carousel markdown file to copy the suggested caption.', code: 'File: carousels/ep01_carousel.md\n\nExample caption:\n"Bitcoin is fundamentally designed for individuals, not institutions.\n\nSwipe through for the 5 key concepts every institutional investor needs to understand →\n\n🎓 FREE Course: bfi-liart.vercel.app\n\n#Bitcoin #InstitutionalBitcoin #BitcoinForInstitutions"' },
+                    { title: 'Post to LinkedIn', detail: 'Upload the PDF as a document post on LinkedIn.', code: 'Steps:\n1. Go to linkedin.com\n2. Click "Start a post"\n3. Click document icon (📄) in toolbar\n4. Upload: bfi_ep01_carousel.pdf\n5. Title: "Bitcoin for Institutions: The Fundamentals"\n6. Paste caption text\n7. Post or schedule' },
+                    { title: 'Add First Comment', detail: 'Immediately add a comment with direct links (keeps main post clean).', code: '📌 Resources:\n\n🎓 FREE Course: https://bfi-liart.vercel.app\n📖 Book: https://amazon.com/Bitcoin-Institutions-Brian-Hirschfield/dp/B0FCZHXFGS/\n⚡ Bitcoin: https://zeuspay.com/btc-for-institutions' },
+                    { title: 'Engage', detail: 'Reply to all comments within first 30-60 minutes to boost algorithm reach.' }
+                ]
+            },
+            'first-short': {
+                title: 'Extract First YouTube Short',
+                type: 'setup',
+                description: 'Extract the first 25-second clip from Episode 1 and upload as a YouTube Short. This establishes the workflow for all future shorts.',
+                steps: [
+                    { title: 'Open Terminal', detail: 'Open Terminal (Mac) or Command Prompt (Windows) and navigate to the BFI YouTube directory.', code: 'cd /Users/brianhirschfield/Claude/math_academy/bfi_youtube' },
+                    { title: 'View Metadata', detail: 'Check the metadata file to see the clip timing and prepared title/description.', code: 'cat output/shorts/metadata/ep01_short_01_metadata.json\n\nExpected output:\n{\n  "episode": 1,\n  "clip": 1,\n  "title": "The Promise of Bitcoin | BFI Ep 1 #Shorts",\n  "description": "Hard money aligns incentives...",\n  "start_time": 0,\n  "end_time": 25,\n  "duration": 25,\n  "tags": ["Bitcoin", "BitcoinForInstitutions", ...]\n}' },
+                    { title: 'Verify Source Video Exists', detail: 'Make sure the Episode 1 video file is present.', code: 'ls -la output/episode_01_video/\n\nShould show: episode_01.mp4' },
+                    { title: 'Install ffmpeg (if needed)', detail: 'ffmpeg is required to extract and convert the video clip.', code: 'Check if installed:\nffmpeg -version\n\nInstall on Mac:\nbrew install ffmpeg\n\nInstall on Windows:\nDownload from ffmpeg.org/download.html\nAdd to PATH' },
+                    { title: 'Extract the Short', detail: 'Run ffmpeg to cut the first 25 seconds and convert to vertical 1080x1920 format.', code: 'ffmpeg -i output/episode_01_video/episode_01.mp4 \\\n  -ss 0 -t 25 \\\n  -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" \\\n  -c:v libx264 -c:a aac \\\n  output/shorts/ep01_short_01.mp4\n\nExplanation:\n• -ss 0: Start at 0 seconds\n• -t 25: Duration of 25 seconds\n• -vf: Video filter for 9:16 vertical format\n• Adds black bars if source is horizontal\n• Output saved to output/shorts/' },
+                    { title: 'Verify Output', detail: 'Check that the short was created and play it to verify quality.', code: 'ls -la output/shorts/ep01_short_01.mp4\n\nPlay with:\nopen output/shorts/ep01_short_01.mp4  # Mac\nstart output/shorts/ep01_short_01.mp4  # Windows\n\nVerify:\n• Video plays correctly\n• Audio is synced\n• Black bars look acceptable\n• Duration is ~25 seconds' },
+                    { title: 'Open YouTube Studio', detail: 'Go to studio.youtube.com and sign in to your channel.' },
+                    { title: 'Upload as Short', detail: 'Click Create → Upload videos → Select the ep01_short_01.mp4 file. YouTube should recognize it as a Short (under 60s, vertical).', code: 'YouTube will show:\n"This video will be uploaded as a Short"\n\nIf not shown, verify:\n• File is under 60 seconds\n• Aspect ratio is 9:16 (vertical)' },
+                    { title: 'Add Title', detail: 'Copy the title from the metadata file.', code: 'Title: The Promise of Bitcoin | BFI Ep 1 #Shorts\n\n(Keep #Shorts at the end for discoverability)' },
+                    { title: 'Add Description', detail: 'Copy the full description from the metadata file. It already includes course/book links with UTM tracking.', code: 'Hard money aligns incentives of savers, entrepreneurs, and planners.\n\nFull episode: Episode 1 of Bitcoin for Institutions\n\n🎓 FREE Interactive Course: https://bfi-liart.vercel.app?utm_source=youtube&utm_medium=shorts&utm_campaign=ep1\n📖 Get the Book: https://zeuspay.com/btc-for-institutions\n\n#Bitcoin #BitcoinForInstitutions #InstitutionalBitcoin #Shorts' },
+                    { title: 'Add Tags', detail: 'Add the tags from the metadata file to help with search discovery.', code: 'Tags:\nBitcoin, BitcoinForInstitutions, InstitutionalBitcoin, Shorts, BitcoinEducation, CorporateBitcoin' },
+                    { title: 'Set Visibility and Publish', detail: 'Set visibility to "Public" and click Publish. The Short will appear in your Shorts shelf and be eligible for the Shorts feed algorithm.' },
+                    { title: 'Verify on Channel', detail: 'Go to your YouTube channel and click the "Shorts" tab to confirm the short appears correctly.' }
+                ]
+            },
+            'post': {
+                title: 'Publish LinkedIn Post',
+                type: 'post',
+                description: 'Copy the pre-written post content and publish to LinkedIn. Each episode has 3 post types: A (Quote), B (Contrarian), C (Question).',
+                steps: [
+                    { title: 'Open Post File', detail: 'Navigate to the post markdown file for this episode and variant.', code: 'File: linkedin_posts/ep[NN]_post_[x].md\n\nVariants:\n• Type A: Quote/insight post\n• Type B: Contrarian/provocative take\n• Type C: Question/engagement post\n\nExample: linkedin_posts/ep01_post_a.md' },
+                    { title: 'Copy Post Content', detail: 'Copy everything under the "## Post Content" section. This is the ready-to-paste LinkedIn post text.', code: 'Structure of each post:\n\n💡 [Key quote or hook]\n\nFrom Episode N of Bitcoin for Institutions: "[Title]"\n\n[Context/body text]\n\n🎓 Course link\n📖 Book links\n\n[Closing question]\n\n---\nHashtags listed separately below' },
+                    { title: 'Open LinkedIn', detail: 'Go to linkedin.com and click "Start a post" in the posting box.' },
+                    { title: 'Paste and Format', detail: 'Paste the post content. LinkedIn will preserve line breaks. Review that emojis and formatting look correct.' },
+                    { title: 'Add Hashtags', detail: 'Add the hashtags from the "## Hashtags" section at the end of your post.', code: 'Recommended hashtags:\n#Bitcoin #InstitutionalBitcoin #BitcoinForInstitutions\n#CorporateTreasury #BitcoinStrategy\n\nUse 3-5 hashtags maximum.\nDo NOT use: #Crypto, #ToTheMoon, #WAGMI' },
+                    { title: 'Schedule or Post', detail: 'Post immediately if it\'s an optimal time, or schedule for later.', code: 'Optimal posting times (US Eastern):\n• 7-8 AM (catches morning commute)\n• 12 PM (lunch break scrolling)\n• 5-6 PM (end of workday)\n\nBest days: Tuesday, Wednesday, Thursday\nAvoid: Weekends (low reach)' },
+                    { title: 'Add First Comment', detail: 'Immediately after posting, add a comment with direct links. This keeps the main post clean.', code: '📌 Links mentioned above:\n\n🎓 FREE Course: https://bfi-liart.vercel.app\n📖 Amazon: https://amazon.com/Bitcoin-Institutions-Brian-Hirschfield/dp/B0FCZHXFGS/\n⚡ Bitcoin: https://zeuspay.com/btc-for-institutions' },
+                    { title: 'Engage Actively', detail: 'Monitor and respond to all comments within the first 30-60 minutes. The LinkedIn algorithm heavily favors posts with early engagement.', code: 'Engagement tips:\n• Reply to every comment (even "Great post!")\n• Ask follow-up questions\n• Like comments from others\n• Tag relevant connections if appropriate\n• Don\'t be defensive with skeptics—engage thoughtfully' }
+                ]
+            },
+            'carousel': {
+                title: 'Create & Post Carousel',
+                type: 'carousel',
+                description: 'Use the carousel generator\'s one-click PDF export. No manual screenshots needed.',
+                steps: [
+                    { title: 'Open Generator & Select Episode', detail: 'Open carousel-generator.html and select the episode from the dropdown.', code: 'File: carousel-generator.html\n\nSelect the correct episode from dropdown.\nPreview thumbnails show all 6 slides.' },
+                    { title: 'Click Export PDF', detail: 'Click the orange "📄 Export PDF" button. All 6 slides are automatically rendered and combined.', code: 'Automatic process:\n1. Renders each slide at 1080x1350\n2. Captures as high-quality image\n3. Combines into PDF\n4. Downloads: bfi_ep[NN]_carousel.pdf\n\nTakes ~10-15 seconds.' },
+                    { title: 'Verify PDF', detail: 'Open the downloaded PDF and check all 6 slides look correct.' },
+                    { title: 'Get Caption', detail: 'Open carousels/ep[NN]_carousel.md for suggested caption text.' },
+                    { title: 'Post to LinkedIn', detail: 'Create post → Document icon → Upload PDF → Add caption.', code: 'Optimal times (US Eastern):\n• 7-8 AM, 12 PM, or 5-6 PM\n• Best days: Tue, Wed, Thu' },
+                    { title: 'Add First Comment', detail: 'Add comment with course/book links immediately after posting.', code: '📌 Resources:\n🎓 https://bfi-liart.vercel.app\n📖 Amazon book link\n⚡ Bitcoin payment link' },
+                    { title: 'Engage', detail: 'Reply to all comments within first 30-60 minutes.' }
+                ]
+            },
+            'short': {
+                title: 'Extract & Upload Short',
+                type: 'short',
+                description: 'Extract a vertical video clip from the episode and upload as a YouTube Short (under 60 seconds).',
+                steps: [
+                    { title: 'Locate Metadata File', detail: 'Find the metadata JSON for this short, which contains the clip timing, title, description, and tags.', code: 'File: output/shorts/metadata/ep[NN]_short_[CC]_metadata.json\n\nExample for Episode 1, Clip 1:\noutput/shorts/metadata/ep01_short_01_metadata.json\n\nContains:\n• start_time: 0\n• end_time: 25\n• title: "The Promise of Bitcoin | BFI Ep 1 #Shorts"\n• description: Full description with links\n• tags: ["Bitcoin", "BitcoinForInstitutions", ...]' },
+                    { title: 'Locate Source Video', detail: 'Find the full episode video file to extract from.', code: 'Source: output/episode_[NN]_video/episode_[NN].mp4\n\nExample:\noutput/episode_01_video/episode_01.mp4' },
+                    { title: 'Extract Clip with ffmpeg', detail: 'Use ffmpeg to cut the clip at the specified times and convert to vertical 9:16 format (1080x1920) for Shorts.', code: 'ffmpeg -i output/episode_01_video/episode_01.mp4 \\\n  -ss [START_TIME] -t [DURATION] \\\n  -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" \\\n  -c:v libx264 -c:a aac \\\n  output/shorts/ep01_short_01.mp4\n\nReplace:\n• [START_TIME] with start_time from JSON (e.g., 0)\n• [DURATION] with (end_time - start_time) (e.g., 25)\n\nThe -vf filter:\n• Scales to fit 1080x1920 (vertical)\n• Adds black padding if needed\n• Maintains aspect ratio' },
+                    { title: 'Review the Clip', detail: 'Play the extracted clip to verify it looks and sounds correct. Check that the padding looks acceptable and audio is synced.' },
+                    { title: 'Open YouTube Studio', detail: 'Go to studio.youtube.com and click "Create" → "Upload videos"' },
+                    { title: 'Upload the Short', detail: 'Select the extracted MP4 file. YouTube will auto-detect it as a Short if under 60 seconds and vertical.', code: 'Requirements for Shorts:\n• Under 60 seconds\n• Vertical (9:16) or square (1:1)\n• Public visibility\n\nYouTube should show "This video will be uploaded as a Short"' },
+                    { title: 'Add Metadata from JSON', detail: 'Copy the title, description, and tags from the metadata JSON file.', code: 'Title: Copy from "title" field\n(Keep under 100 chars, include #Shorts)\n\nDescription: Copy from "description" field\n(Already includes course/book links with UTM)\n\nTags: Add each tag from "tags" array' },
+                    { title: 'Publish', detail: 'Set visibility to "Public" and click Publish. The Short will appear in your channel\'s Shorts shelf and be eligible for the Shorts feed.' }
+                ]
+            }
+        };
+
+        // State
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+        let selectedDate = null;
+        let campaignStartDate = new Date(2026, 0, 27); // Jan 27, 2026 - Week 1 Monday
+
+        // Initialize
+        function init() {
+            renderCalendar();
+            renderWeekButtons();
+            renderSetupTasks();
+            loadSavedState();
+        }
+
+        function renderCalendar() {
+            const grid = document.getElementById('calendarGrid');
+            grid.innerHTML = '';
+
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            document.getElementById('calendarMonth').textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+            // Day headers
+            ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].forEach(day => {
+                const header = document.createElement('div');
+                header.className = 'calendar-day-header';
+                header.textContent = day;
+                grid.appendChild(header);
+            });
+
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            const today = new Date();
+
+            // Previous month days
+            const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+            for (let i = firstDay - 1; i >= 0; i--) {
+                const day = document.createElement('div');
+                day.className = 'calendar-day other-month';
+                day.textContent = prevMonthDays - i;
+                grid.appendChild(day);
+            }
+
+            // Current month days
+            for (let d = 1; d <= daysInMonth; d++) {
+                const day = document.createElement('div');
+                day.className = 'calendar-day';
+                day.textContent = d;
+
+                const date = new Date(currentYear, currentMonth, d);
+
+                if (date.toDateString() === today.toDateString()) {
+                    day.classList.add('today');
+                }
+
+                if (selectedDate && date.toDateString() === selectedDate.toDateString()) {
+                    day.classList.add('selected');
+                }
+
+                const tasks = getTasksForDate(date);
+                if (tasks.length > 0) {
+                    day.classList.add('has-tasks');
+                }
+
+                // Check for setup tasks (before campaign start)
+                if (date < campaignStartDate && date >= new Date(2026, 0, 20)) {
+                    day.classList.add('has-tasks');
+                    day.classList.add('has-setup');
+                }
+
+                day.onclick = () => selectDate(date);
+                grid.appendChild(day);
+            }
+
+            // Next month days
+            const totalCells = grid.children.length;
+            const remaining = 42 - totalCells; // 6 rows of 7
+            for (let i = 1; i <= remaining; i++) {
+                const day = document.createElement('div');
+                day.className = 'calendar-day other-month';
+                day.textContent = i;
+                grid.appendChild(day);
+            }
+        }
+
+        function renderWeekButtons() {
+            const container = document.getElementById('weekButtons');
+            container.innerHTML = '';
+            for (let w = 1; w <= 12; w++) {
+                const btn = document.createElement('button');
+                btn.className = 'week-btn';
+                btn.textContent = `Wk ${w}`;
+                btn.onclick = () => goToWeek(w);
+                container.appendChild(btn);
+            }
+        }
+
+        function renderSetupTasks() {
+            const container = document.getElementById('setupTasks');
+            container.innerHTML = '';
+
+            setupTasks.forEach(task => {
+                const div = document.createElement('div');
+                div.className = 'setup-task' + (task.completed ? ' completed' : '');
+                div.innerHTML = `
+                    <input type="checkbox" id="${task.id}" ${task.completed ? 'checked' : ''}>
+                    <span class="task-name">${task.name}</span>
+                `;
+                div.onclick = (e) => {
+                    if (e.target.tagName !== 'INPUT') {
+                        showSetupWorkflow(task.id);
+                    }
+                };
+                div.querySelector('input').onchange = (e) => {
+                    task.completed = e.target.checked;
+                    saveState();
+                    renderSetupTasks();
+                };
+                container.appendChild(div);
+            });
+        }
+
+        function getTasksForDate(date) {
+            const weekNum = getWeekNumber(date);
+            const dayName = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][date.getDay()];
+
+            if (weekNum > 0 && weekNum <= 12 && contentSchedule[weekNum] && contentSchedule[weekNum][dayName]) {
+                return contentSchedule[weekNum][dayName];
+            }
+            return [];
+        }
+
+        function getWeekNumber(date) {
+            const diffTime = date - campaignStartDate;
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            if (diffDays < 0) return 0;
+            return Math.floor(diffDays / 7) + 1;
+        }
+
+        function selectDate(date) {
+            selectedDate = date;
+            renderCalendar();
+            renderWorkflows(date);
+        }
+
+        function showSetupWorkflow(taskId) {
+            const workflow = workflows[taskId];
+            if (!workflow) return;
+
+            document.getElementById('selectedDate').textContent = workflow.title;
+            document.getElementById('dateSubtitle').textContent = 'Pre-Launch Setup Task';
+
+            const content = document.getElementById('workflowContent');
+            content.innerHTML = renderWorkflowCard(workflow, taskId);
+        }
+
+        function renderWorkflows(date) {
+            const dayName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getDay()];
+            const monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][date.getMonth()];
+
+            document.getElementById('selectedDate').textContent = `${dayName}, ${monthName} ${date.getDate()}`;
+
+            const weekNum = getWeekNumber(date);
+            let subtitle = '';
+            if (weekNum > 0 && weekNum <= 12) {
+                subtitle = `Week ${weekNum} of content campaign`;
+            } else if (date < campaignStartDate) {
+                subtitle = 'Pre-launch setup period';
+            } else {
+                subtitle = 'After campaign period';
+            }
+            document.getElementById('dateSubtitle').textContent = subtitle;
+
+            const content = document.getElementById('workflowContent');
+            const tasks = getTasksForDate(date);
+
+            // Check for pre-launch setup
+            if (date < campaignStartDate && date >= new Date(2026, 0, 20)) {
+                const incompleteTasks = setupTasks.filter(t => !t.completed);
+                if (incompleteTasks.length > 0) {
+                    let html = '<div class="progress-ring"><span class="label">Setup Progress:</span><span class="value">' +
+                        (setupTasks.length - incompleteTasks.length) + '/' + setupTasks.length + ' complete</span></div>';
+                    html += '<div class="workflow-grid">';
+                    incompleteTasks.forEach(task => {
+                        html += renderWorkflowCard(workflows[task.id], task.id);
+                    });
+                    html += '</div>';
+                    content.innerHTML = html;
+                    return;
+                }
+            }
+
+            if (tasks.length === 0) {
+                content.innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">📅</div>
+                        <h3>No Tasks Scheduled</h3>
+                        <p>No content tasks are scheduled for this date.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '<div class="workflow-grid">';
+            tasks.forEach(task => {
+                const workflow = {...workflows[task.type]};
+                workflow.episode = task.ep;
+                workflow.variant = task.variant;
+                workflow.clip = task.clip;
+                html += renderContentWorkflowCard(workflow, task);
+            });
+            html += '</div>';
+            content.innerHTML = html;
+        }
+
+        function renderWorkflowCard(workflow, taskId) {
+            return `
+                <div class="workflow-card">
+                    <div class="workflow-header">
+                        <h3>
+                            <span class="workflow-type">${getTypeIcon(workflow.type)}</span>
+                            ${workflow.title}
+                        </h3>
+                        <span class="workflow-badge ${workflow.type}">${workflow.type.toUpperCase()}</span>
+                    </div>
+                    <div class="workflow-body">
+                        <p class="workflow-description">${workflow.description}</p>
+                        <ul class="steps">
+                            ${workflow.steps.map((step, i) => `
+                                <li class="step">
+                                    <div class="step-number">${i + 1}</div>
+                                    <div class="step-content">
+                                        <div class="step-title">${step.title}</div>
+                                        <div class="step-detail">${step.detail}</div>
+                                        ${step.code ? `<div class="content-preview"><div class="content-preview-header"><span>Content</span><button class="copy-btn" onclick="copyToClipboard(this)">Copy</button></div>${escapeHtml(step.code)}</div>` : ''}
+                                    </div>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderContentWorkflowCard(workflow, task) {
+            const epPadded = String(task.ep).padStart(2, '0');
+            let fileName = '';
+            let fileContent = '';
+
+            if (task.type === 'post') {
+                fileName = `ep${epPadded}_post_${task.variant.toLowerCase()}.md`;
+            } else if (task.type === 'carousel') {
+                fileName = `ep${epPadded}_carousel.md`;
+            } else if (task.type === 'short') {
+                fileName = `ep${epPadded}_short_${String(task.clip).padStart(2, '0')}_metadata.json`;
+            }
+
+            return `
+                <div class="workflow-card">
+                    <div class="workflow-header">
+                        <h3>
+                            <span class="workflow-type">${getTypeIcon(task.type)}</span>
+                            Episode ${task.ep} ${task.type === 'post' ? `Post (Type ${task.variant})` : task.type === 'carousel' ? 'Carousel' : `Short ${task.clip}`}
+                        </h3>
+                        <span class="workflow-badge ${task.type}">${task.type.toUpperCase()}</span>
+                    </div>
+                    <div class="workflow-body">
+                        <p class="workflow-description">${workflow.description}</p>
+                        <div class="tags">
+                            <span class="tag">📄 ${fileName}</span>
+                            <span class="tag">🎬 Episode ${task.ep}</span>
+                        </div>
+                        <ul class="steps">
+                            ${workflow.steps.map((step, i) => `
+                                <li class="step">
+                                    <div class="step-number">${i + 1}</div>
+                                    <div class="step-content">
+                                        <div class="step-title">${step.title}</div>
+                                        <div class="step-detail">${step.detail}</div>
+                                    </div>
+                                </li>
+                            `).join('')}
+                        </ul>
+                        <div class="step-action" style="margin-top: 1rem;">
+                            <a href="${getFilePath(task)}" target="_blank">Open ${fileName}</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getFilePath(task) {
+            const epPadded = String(task.ep).padStart(2, '0');
+            if (task.type === 'post') {
+                return `linkedin_posts/ep${epPadded}_post_${task.variant.toLowerCase()}.md`;
+            } else if (task.type === 'carousel') {
+                return `carousels/ep${epPadded}_carousel.md`;
+            } else if (task.type === 'short') {
+                return `../output/shorts/metadata/ep${epPadded}_short_${String(task.clip).padStart(2, '0')}_metadata.json`;
+            }
+            return '#';
+        }
+
+        function getTypeIcon(type) {
+            const icons = {
+                'post': '📝',
+                'carousel': '🎠',
+                'short': '🎬',
+                'setup': '⚙️'
+            };
+            return icons[type] || '📋';
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function copyToClipboard(btn) {
+            const content = btn.parentElement.parentElement.textContent.replace('Copy', '').trim();
+            navigator.clipboard.writeText(content);
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy', 2000);
+        }
+
+        function prevMonth() {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            renderCalendar();
+        }
+
+        function nextMonth() {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar();
+        }
+
+        function goToToday() {
+            const today = new Date();
+            currentMonth = today.getMonth();
+            currentYear = today.getFullYear();
+            selectDate(today);
+        }
+
+        function goToNextTask() {
+            const today = new Date();
+            let checkDate = new Date(today);
+
+            // Look ahead up to 90 days
+            for (let i = 0; i < 90; i++) {
+                const tasks = getTasksForDate(checkDate);
+                if (tasks.length > 0 && checkDate >= today) {
+                    currentMonth = checkDate.getMonth();
+                    currentYear = checkDate.getFullYear();
+                    selectDate(checkDate);
+                    return;
+                }
+                checkDate.setDate(checkDate.getDate() + 1);
+            }
+        }
+
+        function goToWeek(weekNum) {
+            const weekStart = new Date(campaignStartDate);
+            weekStart.setDate(weekStart.getDate() + (weekNum - 1) * 7);
+            currentMonth = weekStart.getMonth();
+            currentYear = weekStart.getFullYear();
+            selectDate(weekStart);
+
+            // Update active button
+            document.querySelectorAll('.week-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i + 1 === weekNum);
+            });
+        }
+
+        function saveState() {
+            localStorage.setItem('bfi-setup-tasks', JSON.stringify(setupTasks));
+        }
+
+        function loadSavedState() {
+            const saved = localStorage.getItem('bfi-setup-tasks');
+            if (saved) {
+                const savedTasks = JSON.parse(saved);
+                savedTasks.forEach((saved, i) => {
+                    if (setupTasks[i]) {
+                        setupTasks[i].completed = saved.completed;
+                    }
+                });
+                renderSetupTasks();
+            }
+        }
+
+        // Initialize
+        init();
+    </script>
+</body>
+</html>

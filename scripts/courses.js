@@ -21,7 +21,6 @@
  * @property {string} [shortName] - Short name for leaderboard links
  * @property {boolean} [external] - True if link opens in new tab
  * @property {string} [progressGradient] - CSS gradient for progress bar
- * @property {string} [youtubePlaylistUrl] - YouTube playlist URL (shows icon overlay on card)
  */
 
 /** @type {Section[]} */
@@ -143,9 +142,9 @@ export const COURSES = [
     description: "Master machine learning fundamentals with this interactive course based on James et al.'s acclaimed textbook. From linear regression to deep learning, with interactive visualizations.",
     icon: '📊',
     url: 'islr-deploy/',
-    tags: ['13 Chapters', '10 Sections'],
+    tags: ['13 Chapters', '62 Sections'],
     sections: ['prob_stats'],
-    totalSections: 10,
+    totalSections: 62,
     progressPrefix: 'islr:',
     leaderboardUrl: 'islr-deploy/#/leaderboard',
     shortName: 'Statistical Learning',
@@ -164,7 +163,6 @@ export const COURSES = [
     leaderboardUrl: 'https://bfi-liart.vercel.app/#/leaderboard',
     shortName: 'BFI',
     progressGradient: 'linear-gradient(90deg, #f97316, #fbbf24)',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVHBl4fi5SmDiLeccl9hsB2m',
   },
   {
     id: 'bips',
@@ -484,7 +482,6 @@ export const COURSES = [
     leaderboardUrl: 'saylor-diss-deploy/#/leaderboard',
     shortName: 'Saylor Diss',
     progressGradient: 'linear-gradient(90deg, #6366f1, #818cf8)',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVE6me8fF4UWmgm6wEfJgFLo',
   },
 
   // MATH HISTORY
@@ -559,7 +556,6 @@ export const COURSES = [
     leaderboardUrl: 'atlas-shrugged-deploy/#/leaderboard',
     shortName: 'Atlas Shrugged',
     progressGradient: 'linear-gradient(90deg, #ef4444, #f97316)',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLaAxhhFb7OVFUoynHr-Thg3yv1Bf6paNd',
   },
   {
     id: 'man_econ_state',
@@ -765,6 +761,20 @@ export const COURSES = [
     shortName: 'Zeus Wallet',
     progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
   },
+  {
+    id: 'sparrow',
+    title: 'Sparrow Bitcoin Wallet',
+    description: 'A comprehensive course on Sparrow Wallet: Bitcoin security, PSBT transactions, hardware wallet integration, multisig, and privacy-focused self-custody.',
+    icon: '🐦',
+    url: 'https://sparrow-deploy.vercel.app/',
+    tags: ['10 Parts', '44 Sections'],
+    sections: ['featured', 'number_theory'],
+    totalSections: 44,
+    progressPrefix: 'sparrow:',
+    leaderboardUrl: 'https://sparrow-deploy.vercel.app/#/leaderboard',
+    shortName: 'Sparrow Wallet',
+    progressGradient: 'linear-gradient(90deg, #f59e0b, #fbbf24)',
+  },
 
   // GAMES
   {
@@ -807,6 +817,20 @@ export const COURSES = [
     progressPrefix: 'tontines:',
     leaderboardUrl: 'tontines-deploy/#/leaderboard',
     shortName: 'Tontines',
+    progressGradient: 'linear-gradient(90deg, #10b981, #34d399)',
+  },
+  {
+    id: 'dh-taleb',
+    title: 'Dynamic Hedging',
+    description: "Master options risk management with Nassim Taleb's classic. From delta hedging and the Greeks to exotic options, learn the practitioner's approach to managing vanilla and exotic derivatives.",
+    icon: '📈',
+    url: 'https://dh-taleb-deploy.vercel.app/',
+    tags: ['8 Parts', '32 Sections'],
+    sections: ['prob_stats'],
+    totalSections: 32,
+    progressPrefix: 'dh-taleb:',
+    leaderboardUrl: 'https://dh-taleb-deploy.vercel.app/#/leaderboard',
+    shortName: 'Dynamic Hedging',
     progressGradient: 'linear-gradient(90deg, #10b981, #34d399)',
   },
 ];

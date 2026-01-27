@@ -52,7 +52,11 @@ interface AuthContext {
   token?: Record<string, unknown>;
 }
 
-// Config document path: courseConfig/config
+// Config document paths
+// Staging: used by admin GUI for edits
+// Production: used by production hub, only updated via promotion
+const STAGING_PATH = 'courseConfig/staging';
+const PRODUCTION_PATH = 'courseConfig/production';
 
 /**
  * Check rate limit for admin operations
@@ -107,12 +111,9 @@ async function requireCourseAdmin(auth: AuthContext | undefined): Promise<string
 
   const npub = auth.uid;
 
-  // Check if user is in the courseConfig admins
+  // Check if user is in the courseConfig staging admins
   const adminDoc = await admin.firestore()
-    .collection('courseConfig')
-    .doc('config')
-    .collection('admins')
-    .doc(npub)
+    .doc(`${STAGING_PATH}/admins/${npub}`)
     .get();
 
   if (!adminDoc.exists) {
@@ -127,10 +128,41 @@ async function requireCourseAdmin(auth: AuthContext | undefined): Promise<string
 
 /**
  * Get the full course configuration (public read for sections/courses, admin-only for admin list)
+ *
+ * @param environment - 'staging' or 'production'. Defaults based on context:
+ *   - If authenticated admin: defaults to 'staging' (for admin GUI)
+ *   - Otherwise: defaults to 'production' (for public hub)
  */
 export const getCourseConfig = functions.https.onCall(
-  async (_data: unknown, context): Promise<CourseConfig> => {
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+  async (data: { environment?: 'staging' | 'production' } | unknown, context): Promise<CourseConfig> => {
+    // Determine which environment to read from
+    let environment: 'staging' | 'production' = 'production';
+
+    // Parse environment from data if provided
+    if (data && typeof data === 'object' && 'environment' in data) {
+      const env = (data as { environment?: string }).environment;
+      if (env === 'staging' || env === 'production') {
+        environment = env;
+      }
+    }
+
+    // If requesting staging, verify admin access
+    if (environment === 'staging' && context.auth) {
+      const npub = context.auth.uid;
+      const adminDoc = await admin.firestore()
+        .doc(`${STAGING_PATH}/admins/${npub}`)
+        .get();
+      if (!adminDoc.exists) {
+        // Not an admin, fall back to production
+        environment = 'production';
+      }
+    } else if (environment === 'staging' && !context.auth) {
+      // Unauthenticated users cannot access staging
+      environment = 'production';
+    }
+
+    const configPath = environment === 'staging' ? STAGING_PATH : PRODUCTION_PATH;
+    const configRef = admin.firestore().doc(configPath);
 
     // Get sections
     const sectionsSnapshot = await configRef.collection('sections')
@@ -154,10 +186,16 @@ export const getCourseConfig = functions.https.onCall(
     let admins: Admin[] = [];
     if (context.auth) {
       const npub = context.auth.uid;
-      const adminDoc = await configRef.collection('admins').doc(npub).get();
+      // Check staging admins for admin list access
+      const adminDoc = await admin.firestore()
+        .doc(`${STAGING_PATH}/admins/${npub}`)
+        .get();
       if (adminDoc.exists) {
-        // Caller is an admin, return the full admin list
-        const adminsSnapshot = await configRef.collection('admins').get();
+        // Caller is an admin, return the full admin list from staging
+        const adminsSnapshot = await admin.firestore()
+          .doc(STAGING_PATH)
+          .collection('admins')
+          .get();
         admins = adminsSnapshot.docs.map(doc => ({
           npub: doc.id,
           ...doc.data()
@@ -221,7 +259,7 @@ export const updateCourse = functions.https.onCall(
       }
     }
 
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+    const configRef = admin.firestore().doc(STAGING_PATH);
     const courseRef = configRef.collection('courses').doc(courseId);
 
     const courseDoc = await courseRef.get();
@@ -296,7 +334,7 @@ export const createSection = functions.https.onCall(
       .replace(/[^a-z0-9]+/g, '_')
       .replace(/^_|_$/g, '');
 
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+    const configRef = admin.firestore().doc(STAGING_PATH);
     const sectionRef = configRef.collection('sections').doc(sectionId);
 
     // Check if section already exists
@@ -387,7 +425,7 @@ export const updateSection = functions.https.onCall(
       }
     }
 
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+    const configRef = admin.firestore().doc(STAGING_PATH);
     const sectionRef = configRef.collection('sections').doc(sectionId);
 
     const sectionDoc = await sectionRef.get();
@@ -443,7 +481,7 @@ export const deleteSection = functions.https.onCall(
       );
     }
 
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+    const configRef = admin.firestore().doc(STAGING_PATH);
     const sectionRef = configRef.collection('sections').doc(sectionId);
 
     const sectionDoc = await sectionRef.get();
@@ -514,7 +552,7 @@ export const reorderSections = functions.https.onCall(
       );
     }
 
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+    const configRef = admin.firestore().doc(STAGING_PATH);
     const batch = admin.firestore().batch();
 
     // Update order for each section
@@ -567,7 +605,7 @@ export const reorderCourses = functions.https.onCall(
       );
     }
 
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+    const configRef = admin.firestore().doc(STAGING_PATH);
     const batch = admin.firestore().batch();
 
     // Update order for each course
@@ -602,7 +640,7 @@ export const getCourseAdmins = functions.https.onCall(
   ): Promise<{ admins: Admin[] }> => {
     await requireCourseAdmin(context.auth);
 
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+    const configRef = admin.firestore().doc(STAGING_PATH);
     const adminsSnapshot = await configRef.collection('admins').get();
 
     const admins = adminsSnapshot.docs.map(doc => ({
@@ -654,7 +692,7 @@ export const addCourseAdmin = functions.https.onCall(
       sanitizedDisplayName = displayName.trim().slice(0, 100);
     }
 
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+    const configRef = admin.firestore().doc(STAGING_PATH);
     const adminRef = configRef.collection('admins').doc(npub);
 
     // Check if already an admin
@@ -710,7 +748,7 @@ export const removeCourseAdmin = functions.https.onCall(
       );
     }
 
-    const configRef = admin.firestore().collection('courseConfig').doc('config');
+    const configRef = admin.firestore().doc(STAGING_PATH);
     const adminRef = configRef.collection('admins').doc(npub);
 
     const adminDoc = await adminRef.get();

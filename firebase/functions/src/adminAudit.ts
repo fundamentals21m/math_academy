@@ -2,13 +2,13 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
 // Admin action types for audit logging
-type AdminAction = 
-  | 'ban' 
-  | 'unban' 
-  | 'reset_scores' 
-  | 'update_xp' 
-  | 'create_course' 
-  | 'update_course' 
+type AdminAction =
+  | 'ban'
+  | 'unban'
+  | 'reset_scores'
+  | 'update_xp'
+  | 'create_course'
+  | 'update_course'
   | 'delete_course'
   | 'create_section'
   | 'update_section'
@@ -16,7 +16,11 @@ type AdminAction =
   | 'reorder_sections'
   | 'reorder_courses'
   | 'add_course_admin'
-  | 'remove_course_admin';
+  | 'remove_course_admin'
+  | 'promote_to_production'
+  | 'revert_production'
+  | 'promote_vercel_deployment'
+  | 'revert_vercel_deployment';
 
 interface AdminAuditLog {
   id: string;

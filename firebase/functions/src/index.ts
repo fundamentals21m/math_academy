@@ -43,3 +43,15 @@ export {
 
 // Export seed function (one-time use)
 export { seedCourseConfig } from './seedCourseConfig';
+
+// Export deployment functions for staging/production promotion
+export {
+  getDeploymentStatus,
+  promoteToProduction,
+  revertProduction,
+  promoteVercelDeployment,
+  revertVercelDeployment,
+} from './deployment';
+
+// Export migration function (one-time use)
+export { migrateToStagingProd } from './migrateToStagingProd';
