@@ -42,7 +42,7 @@ export default function Theorems() {
       />
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-      <main className="pt-20 pb-12 px-4 lg:pl-80 lg:pr-8">
+      <main className="pt-20 pb-12 px-4 lg:pl-72 lg:pr-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-dark-100 mb-2">
             Theorems & Definitions

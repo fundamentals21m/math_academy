@@ -36,7 +36,7 @@ export default function ChapterQuiz() {
       <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} sidebarOpen={sidebarOpen} />
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-      <main className="pt-20 pb-24 px-4 lg:pl-80 lg:pr-8">
+      <main className="pt-20 pb-24 px-4 lg:pl-72 lg:pr-8">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumb */}
           <nav className="mb-6 flex items-center gap-2 text-sm text-dark-400">
